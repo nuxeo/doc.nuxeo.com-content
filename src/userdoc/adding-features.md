@@ -1644,23 +1644,21 @@ The Marketplace offers packages aimed at developers and other that provide new f
 
 Each package has a dedicated page on the Marketplace, that describes the features the package enables, if there are prerequisites, etc. Here is the information available about the packages from the Marketplace:
 
-*   &nbsp;&nbsp;&nbsp; **Production state**: Indicates if the package is approved by Nuxeo or is still in testing phase.
-*   &nbsp;&nbsp;&nbsp; **Certification status**: Indicates if the packages has been certified by Nuxeo or not.
-*   &nbsp;&nbsp;&nbsp; **Vendor support**: Indicates if the package is covered by Nuxeo Connect support contracts.
-*   &nbsp;&nbsp;&nbsp; **Type**: Possible types are: addons will provide new features, hotfixes provide corrections, and Studio packages install your Studio customizations in your instance.
-*   &nbsp;&nbsp;&nbsp; **Last version**: Most recent version number of the plugin.
-*   &nbsp;&nbsp;&nbsp; **Updated**: Date on which the package was last updated.
-*   &nbsp;&nbsp;&nbsp; **Target platforms**: Nuxeo applications on which you can install the package.
-*   &nbsp;&nbsp;&nbsp; **License**: License applied to the package.
-*   &nbsp;&nbsp;&nbsp; **Categories**: List of categories the package belongs to.
-*   &nbsp;&nbsp;&nbsp; **Rating**: Comments on the package.
-*   &nbsp;&nbsp;&nbsp; **Vendor**: Name of the person or company who developed the package.
-*   &nbsp;&nbsp;&nbsp; **Package dependencies**: Indicates if there are some requirements for the package to be correctly installed.
-*   &nbsp;&nbsp;&nbsp; **Hot-reload support**: Indicates if the plugin is immediately functional (i.e. no server reboot required).
+*   **Production state**: Indicates if the package is approved by Nuxeo or is still in testing phase.
+*   **Certification status**: Indicates if the packages has been certified by Nuxeo or not.
+*   **Vendor support**: Indicates if the package is covered by Nuxeo Connect support contracts.
+*   **Type**: Possible types are: addons will provide new features, hotfixes provide corrections, and Studio packages install your Studio customizations in your instance.
+*   **Last version**: Most recent version number of the plugin.
+*   **Updated**: Date on which the package was last updated.
+*   **Target platforms**: Nuxeo applications on which you can install the package.
+*   **License**: License applied to the package.
+*   **Categories**: List of categories the package belongs to.
+*   **Rating**: Comments on the package.
+*   **Vendor**: Name of the person or company who developed the package.
+*   **Package dependencies**: Indicates if there are some requirements for the package to be correctly installed.
+*   **Hot-reload support**: Indicates if the plugin is immediately functional (i.e. no server reboot required).
 
-Although most packages are installed in a few clicks from the Update Center, some of them require specific installation or configuration steps.&nbsp;Below is the list of available Nuxeo Packages and their documentation.
-
-&nbsp;
+Although most packages are installed in a few clicks from the Update Center, some of them require specific installation or configuration steps. Below is the list of available Nuxeo Packages and their documentation.
 
 Here is a list of Nuxeo Packages available on the Nuxeo Marketplace for the latest version of the Nuxeo Platform.
 
@@ -1774,13 +1772,22 @@ Public
 
 </td><td colspan="1">
 
-[ Documentation ]({{page space='nxdoc710' page='kerberos-authentication'}})
+[Documentation ]({{page space='nxdoc710' page='kerberos-authentication'}})
 
 </td><td colspan="1">
 
 [Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/kerberos-authentication?version=1.4.4)
 
-</td></tr><tr><td colspan="1">Microsft Azure Online Storage</td><td colspan="1">Registered access</td><td colspan="1">&nbsp;</td><td colspan="1">[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage?version=1.0.0)</td></tr><tr><td colspan="1">
+</td></tr><tr><td colspan="1">Microsft Azure Online Storage</td><td colspan="1">Registered access</td><td colspan="1">&nbsp;</td><td colspan="1">[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage?version=1.0.0)</td></tr>
+<tr>
+<td>Nuxeo Adobe CC Connector</td>
+<td>Registered Access</td>
+<td>[Documentation]({{page version='' space='nxdoc' page='nuxeo-adobe-cc-connector'}})</td>
+<td>Replaces Nuxeo InDesign Connector<br/>
+[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace?version=1.2.3)</td>
+</tr>
+
+<tr><td colspan="1">
 
 Nuxeo Agenda
 
@@ -1896,7 +1903,15 @@ Registered access
 
 [Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit?version=1.7.4)
 
-</td></tr><tr><td colspan="1">Nuxeo InDesign Connector</td><td colspan="1">Public</td><td colspan="1">&nbsp;</td><td colspan="1">[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-indesign-connector-marketplace?version=1.0.1)</td></tr><tr><td colspan="1">Nuxeo IMAP Connector</td><td colspan="1">Public</td><td colspan="1">&nbsp;[User documentation]({{page page='nuxeo-imap-connector'}})</td><td colspan="1">[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector?version=1.1.4)</td></tr><tr><td colspan="1">
+</td></tr>
+<tr>
+<td colspan="1">Nuxeo InDesign Connector</td>
+<td colspan="1">Public</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">Deprecated - Replaced by [Nuxeo Adobe CC Connector]({{page version='' space='nxdoc' page='nuxeo-adobe-cc-connector'}})<br/>
+[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-indesign-connector-marketplace?version=1.0.1)</td>
+</tr>
+<tr><td colspan="1">Nuxeo IMAP Connector</td><td colspan="1">Public</td><td colspan="1">&nbsp;[User documentation]({{page page='nuxeo-imap-connector'}})</td><td colspan="1">[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector?version=1.1.4)</td></tr><tr><td colspan="1">
 
 Nuxeo Jenkins Report
 
@@ -1982,9 +1997,9 @@ Public
 
 </td><td colspan="1">
 
-[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication?version=1.1.1) &nbsp;
+[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication?version=1.1.1)
 
-</td></tr><tr><td colspan="1">Nuxeo Showcase Content</td><td colspan="1">Public</td><td colspan="1">&nbsp;</td><td colspan="1">[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-showcase-content?version=1.0.0)</td></tr><tr><td colspan="1">Nuxeo Spreadsheet</td><td colspan="1">Public</td><td colspan="1">&nbsp;[Documentation]({{page space='nxdoc710' page='nuxeo-spreadsheet'}})</td><td colspan="1">[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet?version=1.1.4)</td></tr><tr><td colspan="1">Nuxeo Travel Expenses</td><td colspan="1">Public</td><td colspan="1">&nbsp;</td><td colspan="1">[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-travel-expenses?version=1.0)</td></tr><tr><td colspan="1">
+</td></tr><tr><td colspan="1">Nuxeo Showcase Content</td><td colspan="1">Public</td><td colspan="1">&nbsp;</td><td colspan="1">[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-showcase-content?version=1.0.0)</td></tr><tr><td colspan="1">Nuxeo Spreadsheet</td><td colspan="1">Public</td><td colspan="1">[Documentation]({{page space='nxdoc710' page='nuxeo-spreadsheet'}})</td><td colspan="1">[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet?version=1.1.4)</td></tr><tr><td colspan="1">Nuxeo Travel Expenses</td><td colspan="1">Public</td><td colspan="1">&nbsp;</td><td colspan="1">[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-travel-expenses?version=1.0)</td></tr><tr><td colspan="1">
 
 Nuxeo Virtual Navigation
 
@@ -2346,13 +2361,11 @@ Nuxeo Shared Bookmarks
 
 </td><td colspan="1">
 
-&nbsp;Public
+Public
 
 </td><td colspan="1">
 
-&nbsp;[User Documentation (6.0)]({{page space='userdoc60' page='nuxeo-shared-bookmarks'}})
-
-&nbsp;
+[User Documentation (6.0)]({{page space='userdoc60' page='nuxeo-shared-bookmarks'}})
 
 </td><td colspan="1">
 
