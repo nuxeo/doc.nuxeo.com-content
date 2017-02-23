@@ -2015,7 +2015,7 @@ Public
 
 [Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation?version=1.1.4)
 
-</td></tr><tr><td colspan="1">Nuxeo Vision</td><td colspan="1">Registered access</td><td colspan="1">[Documentation]({{page space='nxdoc710' page='nuxeo-vision'}})</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
+</td></tr><tr><td colspan="1">Nuxeo Vision</td><td colspan="1">Registered access</td><td colspan="1">[Documentation]({{page space='nxdoc710' page='nuxeo-vision'}})</td><td colspan="1">[Released for 7.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision?version=1.0.1)</td></tr><tr><td colspan="1">
 
 Nuxeo Web Mobile
 
