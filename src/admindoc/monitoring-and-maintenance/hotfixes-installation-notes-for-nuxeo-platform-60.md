@@ -361,6 +361,14 @@ The parameter `--accept=true` automatically replies `yes` to any prompt, which m
 
 You can also download and install hotfixes from the **Update Center** in the **Admin** tab.The installation of hotfixes requires the server to be restarted to complete the installation: follow the manual installation and configuration steps required by the installed hotfixes before you restart your server.
 
+## Hotfix 36
+
+### Security Update
+
+A security vulnerability in Nuxeo Platform 6.0 and fixed right away. Nuxeo Platform LTS 2015 and LTS 2016 are not affected. The vulnerability allows a malicious user, with authenticated access to a Nuxeo Platform instance, to upload an arbitrary file to the server where the Nuxeo Platform has write permission. 
+
+We are not aware of any exploitation of this vulnerability to this date and it has not be publicly disclosed. Disclosure will happen March 15. We highly recommend our customers to apply the Hotfix 36 before this date. 
+
 ## Hotfix 34
 
 ### Elasticsearch Configuration
