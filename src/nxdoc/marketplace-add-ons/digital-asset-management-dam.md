@@ -24,199 +24,199 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/PYFVAQ'
     source_link: /pages/viewpage.action?pageId=22380861
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 11:16'
         message: ''
         version: '39'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-03-23 13:33'
         message: ''
         version: '38'
-    - 
+    -
         author: Anonymous
         date: '2014-12-02 19:54'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 14:21'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 13:41'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:34'
         message: Add related pages
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:16'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:12'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:12'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:11'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:11'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:11'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:10'
         message: 'Merging Nuxeo DAM user, admin and dev documentation'
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 17:25'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 16:57'
         message: ''
         version: '25'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-06 14:54'
         message: ''
         version: '24'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-06 14:37'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-05 09:55'
         message: Add installation
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 23:15'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 22:56'
         message: ''
         version: '20'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-03 17:20'
         message: ''
         version: '19'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-03 16:07'
         message: ''
         version: '18'
-    - 
+    -
         author: Thomas Roger
         date: '2014-11-03 15:49'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-07 14:57'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-07 14:15'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-17 09:17'
         message: Migrated to Confluence 4.0
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-17 09:17'
         message: Fixed broken link
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-03 14:46'
         message: >-
             Replaced Mercurial with GitHub and moved page to the technical
             documentation space
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-03 14:46'
         message: Updated link to PDF to download 5.6-SNAPSHOT version
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-21 14:42'
         message: Fixed broken link
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-15 15:11'
         message: Fixed PDF icon not diplayed anymore
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-15 12:18'
         message: ''
         version: '8'
-    - 
+    -
         author: Thomas Roger
         date: '2011-12-06 18:14'
         message: ''
         version: '7'
-    - 
+    -
         author: Thomas Roger
         date: '2011-12-06 18:14'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-16 12:48'
         message: Added PDF download panel
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-08-05 12:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Jane Zupan
         date: '2010-08-06 17:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Jane Zupan
         date: '2010-08-06 17:04'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-08-03 00:40'
         message: ''
@@ -237,7 +237,7 @@ This add-on requires no specific installation steps. It can be installed like an
 
 {{! /multiexcerpt}}
 
-It is also possible to install it from the [Startup wizard]({{page space='ADMINDOC' page='Setup#Setup-module-installat'}}).
+It is also possible to install it from the [Startup wizard]({{page space='admindoc' page='Setup'}}#module-installation).
 
 However some features depend on external software for conversion and transcoding. See the page [Installing and Setting Up Related Software]({{page space='nxdoc' page='installing-and-setting-up-related-software'}}).
 
@@ -273,10 +273,10 @@ If no picture is available on the current page, it shows the icon ![]({{file nam
 
 **To add an annotation on a picture:**
 
-1.  To access to the image view, click on the icon&nbsp;![]({{file name='preview.png' space='userdoc' page='icons-index'}})&nbsp;in the&nbsp;**More**&nbsp;menu.
+1.  To access to the image view, click on the icon&nbsp;![]({{file name='preview.png' space='userdoc' page='icons-index'}}) in the **More** menu.
     A pop up opens.
 2.  Draw a frame on the part of the picture you want to annotate.
-3.  Type your annotation and click on&nbsp;**Submit**.
+3.  Type your annotation and click on **Submit**.
     ![]({{file name='DAM-annotation.png'}} ?w=600,border=true)
     You can see your annotation when the mouse is over the zone you selected, and, in the margin, the list of annotations, and for each, the author, date and time of annotation and the text.
     ![]({{file name='DAM-annotation-rollover.png'}} ?w=600,border=true)
@@ -285,11 +285,11 @@ If no picture is available on the current page, it shows the icon ![]({{file nam
 
 #### Picture Views
 
-When you import a&nbsp;document having the `Picture`&nbsp;facet on your platform, additional formats are available on it.&nbsp;The default ones are:
+When you import a document having the `Picture` facet on your platform, additional formats are available on it. The default ones are:
 
-*   Thumbnail: the picture is converted to JPG and resized to 100px height or width.
-*   Small: the picture is converted to JPG and resized to&nbsp;280 px&nbsp;height or width.&nbsp;
-*   Medium: the picture is converted to JPG and resized to 550 px height or width.
+*   Thumbnail: the picture is converted to JPG and resized to 100 px height or width.
+*   Small: the picture is converted to JPG and resized to 280&nbsp;px height or width.
+*   Medium: the picture is converted to JPG and resized to 550&nbsp;px height or width.
 *   OriginalJpeg: the picture is converted to JPG but the original size is kept. This export is done even if the original picture was a JPG file.
 
 {{#> callout type='tip' }}
@@ -298,11 +298,9 @@ The original and medium pictures can be the same size when you download them if 
 
 {{/callout}}
 
-To download the picture view that you want, click on&nbsp;![]({{file name='download.png' space='userdoc58' page='icons-index'}})&nbsp;in front of it.
+To download the picture view that you want, click on&nbsp;![]({{file name='download.png' space='userdoc' page='icons-index'}}) in front of it.
 
 ![]({{file name='Additionnal Picture Views Download.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=650,border=true)
-
-&nbsp;
 
 {{#> callout type='info' }}
 
@@ -318,7 +316,7 @@ A user interface is added in the admin center so that it is possible to re-compu
 
 Video is a document types dedicated to the management of videos files. It provides the following specific features: A player to view the video from the application, a storyboard to navigate in the video and alternative video formats.
 
-Video documents can be [created]({{page space='userdoc' page='creating-content'}}) and [edited]({{page space='userdoc' page='editing-content'}}) like any other document type. See the page&nbsp;[Supported File Formats]({{page page='supported-file-formats'}})&nbsp;for supported video files.
+Video documents can be [created]({{page space='userdoc' page='creating-content'}}) and [edited]({{page space='userdoc' page='editing-content'}}) like any other document type. See the page [Supported File Formats]({{page page='supported-file-formats'}}) for supported video files.
 
 ![]({{file name='video_document_type.png'}} ?w=600,border=true)
 
@@ -370,37 +368,37 @@ See the page [Supported File Formats]({{page page='supported-file-formats'}}) fo
 
 Some IPTC metadata are stored within dublincore. More information [Binary Metadata]({{page page='binary-metadata'}})
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--schema](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--schema).
+See [http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-6.0/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--schema](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--schema).
 
 #### Facets
 
-*   `Picture`: The facet to put on Document Types that should be considered as Picture . This facet comes with the following schemas:&nbsp;`file`&nbsp;(to store the picture file),&nbsp;`picture`, `image_metadata` and `iptc`.
-*   `MultiviewPicture`: The marker facet to be put on document types already having&nbsp;`Picture`&nbsp;facet to instantiate&nbsp;`MultiviewPictureAdapter`.
+*   `Picture`: The facet to put on Document Types that should be considered as Picture . This facet comes with the following schemas: `file` (to store the picture file), `picture`, `image_metadata` and `iptc`.
+*   `MultiviewPicture`: The marker facet to be put on document types already having `Picture` facet to instantiate `MultiviewPictureAdapter`.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype).
+See [http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-6.0/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype).
 
 #### Document Type
 
-*   `Picture`: This is the default type in Nuxeo that handle picture files. It comes with the&nbsp;`Picture`&nbsp;and `MultiviewPicture` facets.
+*   `Picture`: This is the default type in Nuxeo that handle picture files. It comes with the `Picture` and `MultiviewPicture` facets.
 
-See[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype) .
+See [http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-6.0/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype).
 
 #### Listeners
 
-*   `pictureChangedListener`: Synchronous listener checking if the main Picture file has changed. If so, pre-fills all the picture views with a placeholder and trigger an event&nbsp;`updatePictureview` to notify asynchronous listeners.
+*   `pictureChangedListener`: Synchronous listener checking if the main Picture file has changed. If so, pre-fills all the picture views with a placeholder and trigger an event `updatePictureview` to notify asynchronous listeners.
 *   `pictureViewListener`: Asynchronous listener computing the picture views.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.listeners--listener](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.listeners--listener).
+See [http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-6.0/viewContribution/org.nuxeo.ecm.platform.picture.listeners--listener](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewContribution/org.nuxeo.ecm.platform.picture.listeners--listener).
 
 #### File Manager Plug-in
 
-The plug-in&nbsp;`Imageplugin`&nbsp;is contributed to the File Manager to create&nbsp;`Picture`&nbsp;documents when the imported file mime type matches one of the contributed&nbsp;`image/*` mime types.
+The plug-in `Imageplugin` is contributed to the File Manager to create `Picture` documents when the imported file mime type matches one of the contributed `image/*` mime types.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.filemanager.contrib--plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.filemanager.contrib--plugins).
+See [http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-6.0/viewContribution/org.nuxeo.ecm.platform.picture.filemanager.contrib--plugins](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewContribution/org.nuxeo.ecm.platform.picture.filemanager.contrib--plugins).
 
 #### Picture conversions
 
-Picture conversions are used to generate the picture views of document having the&nbsp;`Picture` facet. Default picture conversions (Thumbnail, Small, Medium and OriginalJpeg) are contributed to the&nbsp;`pictureConversions` extension point. They are marked as&nbsp;`default` and so are always generated, their associated filters are not evaluated.
+Picture conversions are used to generate the picture views of document having the `Picture` facet. Default picture conversions (Thumbnail, Small, Medium and OriginalJpeg) are contributed to the `pictureConversions` extension point. They are marked as `default` and so are always generated, their associated filters are not evaluated.
 
 ### Video
 
@@ -414,41 +412,41 @@ The Nuxeo Platform provides an add-on with the following video features:
 
 *   `video`: Used to store the video info, the transcoded videos and the storyboard.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--schema](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--schema).
+See [http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-6.0/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--schema](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--schema).
 
 #### Facets
 
 *   `Video`: Facet to put on Document Types that should be considered as Video. This facet comes with the following schemas: `file` (to store the video file), `video` and `picture` (to store the preview screenshot).
 *   `HasStoryboard`: Marker facet to be set on types for which you want to generate Storyboard, types on which you already added the `Video` facet.
-*   `HasVideoPreview`: Marker facet to be set on types for which you want to generate a video preview (screenshot), and on which you already added the&nbsp;`Video`&nbsp;facet.
+*   `HasVideoPreview`: Marker facet to be set on types for which you want to generate a video preview (screenshot), and on which you already added the `Video` facet.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype).
+See [http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-6.0/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype).
 
 #### Document Type
 
-*   `Video`: This is the default type in the Nuxeo Platform that handles video files. It comes with the `Video`,&nbsp;`HasStoryboard` and&nbsp;`HasVideoPreview` facets.
+*   `Video`: This is the default type in the Nuxeo Platform that handles video files. It comes with the `Video`, `HasStoryboard` and `HasVideoPreview` facets.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype).
+See [http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-6.0/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype).
 
 #### Listeners
 
-*   `videoChangedListener`: Synchronous listener checking if the main Video file has changed, if so extract the video information (stored in `vid:info`) and trigger and event `videoChanged`&nbsp;to notify asynchronous listeners.
+*   `videoChangedListener`: Synchronous listener checking if the main Video file has changed, if so extract the video information (stored in `vid:info`) and trigger and event `videoChanged` to notify asynchronous listeners.
 *   `videoStoryboardListener`: Asynchronous listener generating the preview screenshots (stored as picture views in the `picture` schema) and the storyboard of the video (stored in `vid:storyboard`).
 *   `videoAutomaticConversions`: Asynchronous listener computing the transcoded videos from the video conversions marked as automatic. Transcoded videos are stored in `vid:transcodedVideos`.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.platform.video.core.listeners--listener](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.platform.video.core.listeners--listener).
+See [http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-6.0/viewContribution/org.nuxeo.platform.video.core.listeners--listener](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewContribution/org.nuxeo.platform.video.core.listeners--listener).
 
 #### File Manager Plug-in
 
-The plug-in `VideoImporter` is contributed to the File Manager to create `Video` documents when the imported file mime type matches&nbsp;`video/*`.
+The plug-in `VideoImporter` is contributed to the File Manager to create `Video` documents when the imported file mime type matches `video/*`.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.video.filemanager.contrib--plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.video.filemanager.contrib--plugins).
+See [http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-6.0/viewContribution/org.nuxeo.ecm.platform.video.filemanager.contrib--plugins](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewContribution/org.nuxeo.ecm.platform.video.filemanager.contrib--plugins).
 
 #### Exposed Extension Points
 
-The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.video.service.VideoService) exposed two extension points:
+The  [`VideoService`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewComponent/org.nuxeo.ecm.platform.video.service.VideoService) exposed two extension points:
 
-*   [`videoConversions`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.9.5/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--videoConversions) : Extension point to contribute video conversions that will be available on the VideoService.
+*   [`videoConversions`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--videoConversions): Extension point to contribute video conversions that will be available on the VideoService.
 
     {{#> panel type='code' heading='Default conributions'}}
 
@@ -462,7 +460,7 @@ The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/vi
     ```
 
     {{/panel}}
-*   [`automaticVideoConversions`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.9.5/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--automaticVideoConversions) : Extension point to contribute which video conversion should be done automatically (through the `videoAutomaticConversions` listener).
+*   [`automaticVideoConversions`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--automaticVideoConversions): Extension point to contribute which video conversion should be done automatically (through the `videoAutomaticConversions` listener).
 
     {{#> panel type='code' heading='Default contributions'}}
 
@@ -482,40 +480,38 @@ The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/vi
 
 *   `audio`: Used to store audio related information.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--schema](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--schema).
+See  [http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-6.0/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--schema](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--schema).
 
 #### Facets
 
-*   `Audio`: Facet to put on document types that should be considered as Audio. This facet comes with the following schemas:&nbsp;`file`&nbsp;(to store the audio file), and&nbsp;`audio`.
+*   `Audio`: Facet to put on document types that should be considered as Audio. This facet comes with the following schemas: `file` (to store the audio file), and `audio`.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype).
+See  [http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-6.0/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype).
 
 #### Document Type
 
 *   `Audio`: This is the default type in the Nuxeo Platform that handles audio files. It comes with the `Audio` facet.
 
-See [http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype).
+See  [http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-6.0/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype).
 
 #### File Manager Plug-in
 
-The plug-in&nbsp;`AudioImporter`&nbsp;is contributed to the File Manager to create&nbsp;`Audio`&nbsp;documents when the imported file mime type matches&nbsp;`audio/*`.
+The plug-in `AudioImporter` is contributed to the File Manager to create `Audio` documents when the imported file mime type matches `audio/*`.
 
-See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.audio.filemanager.contrib--plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.audio.filemanager.contrib--plugins).
-
-&nbsp;
+See  [http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-6.0/viewContribution/org.nuxeo.ecm.platform.audio.filemanager.contrib--plugins](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewContribution/org.nuxeo.ecm.platform.audio.filemanager.contrib--plugins).
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other DAM Documentation'}}
 
-*   [How to Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
-*   [Supported File Formats]({{page page='supported-file-formats'}})
-*   [Nuxeo DAM Compat]({{page page='nuxeo-dam-compat'}})
+- [How to Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
+- [Supported File Formats]({{page page='supported-file-formats'}})
+- [Nuxeo DAM Compat]({{page page='nuxeo-dam-compat'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Installing and Setting Up Related Software]({{page space='admindoc60' page='installing-and-setting-up-related-software'}})
-*   [Events and Listeners]({{page page='events-and-listeners'}})
-*   [Creating, Editing and Deleting Content]({{page space='userdoc60' page='creating-editing-and-deleting-content'}})
+- [Installing and Setting Up Related Software]({{page space='admindoc60' page='installing-and-setting-up-related-software'}})
+- [Events and Listeners]({{page page='events-and-listeners'}})
+- [Creating, Editing and Deleting Content]({{page space='userdoc60' page='creating-editing-and-deleting-content'}})
 
 {{/panel}}</div></div>

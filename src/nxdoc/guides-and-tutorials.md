@@ -97,40 +97,39 @@ history:
 ---
 {{#> panel type='primary'}}
 
-<span style="color: rgb(255,255,255);">Welcome to the Nuxeo Developer Tutorials Section!</span>
+Welcome to the Nuxeo Developer Tutorials Section!
 
-{{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+{{/panel}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Quick Start Series
 
-*   [Quick Start Dev Guide](/x/monZ)
-*   [From the Web UI to Nuxeo Studio](/x/VANc)
-*   [First Steps With Studio: Technical Documentation Tutorial](/x/x4MlAQ)
+- [Quick Start Dev Guide](/x/monZ)
+- [From the Web UI to Nuxeo Studio](/x/VANc)
+- [First Steps With Studio: Technical Documentation Tutorial](/x/x4MlAQ)
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Learn with Videos
 
-*   [What is Nuxeo Studio](https://nuxeo.wistia.com/medias/me59a8g79l)
-*   [Create a Document Type](https://nuxeo.wistia.com/medias/u9gq7octie)
-*   [Branding Your Application with Nuxeo Studio](https://nuxeo.wistia.com/medias/99g2mmcqj5)
+- [What is Nuxeo Studio](https://nuxeo.wistia.com/medias/me59a8g79l)
+- [Create a Document Type](https://nuxeo.wistia.com/medias/u9gq7octie)
+- [Branding Your Application with Nuxeo Studio](https://nuxeo.wistia.com/medias/99g2mmcqj5)
 
 {{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Educational
 
-*   [Simple Workflow Example](/x/KhTF)
-*   [Design Tips](/x/Eg7F)
-*   [Understand Expression and Scripting Languages Used in Nuxeo](/x/L4PZ)
+- [Simple Workflow Example](/x/KhTF)
+- [Design Tips](/x/Eg7F)
+- [Understand Expression and Scripting Languages Used in Nuxeo](/x/L4PZ)
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### How-To Index
 
-*   [How to Define a New Content View](/x/3o1H)
-*   [How to Define a Document Type](/x/nYAV)
-*   [How to Contribute to an Extension](/x/iw7F)
+- [How to Define a New Content View](/x/3o1H)
+- [How to Define a Document Type](/x/nYAV)
+- [How to Contribute to an Extension](/x/iw7F)
 
 {{/panel}}</div></div>
-
-&nbsp;

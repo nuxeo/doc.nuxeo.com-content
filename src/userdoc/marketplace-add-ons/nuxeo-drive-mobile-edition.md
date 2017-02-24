@@ -368,7 +368,7 @@ When you have a network access, you can browse all the platform content (dependi
 
 ### Synchronizing a folder
 
-You can only synchronize spaces on which you have [Write or Manage everything rights]({{page space='USERDOC58' page='Document Management+Concepts#DocumentManagementConcepts-Accessrights'}}).
+You can only synchronize spaces on which you have [Write or Manage everything rights]({{page page='nuxeo-platform-concepts'}}#rights).
 
 You can synchronize folders:
 

@@ -44,7 +44,7 @@ The persistence layer of the Nuxeo Platform repository is configurable. Several 
 The repository stores:
 
 *   **Documents**
-    For the documents, you can either choose the&nbsp;[VCS repository implementation]({{page page='vcs'}})&nbsp;that stores the data on an RDBMS, or the&nbsp;[DBS - MongoDB implementation]({{page page='dbs-mongodb'}}), that stores the data on a MongoDB document-based system.
+    For the documents, you can either choose the [VCS repository implementation]({{page page='vcs'}}) that stores the data on an RDBMS, or the [DBS - MongoDB implementation]({{page page='dbs-mongodb'}}), that stores the data on a MongoDB document-based system.
 
 *   **Binaries**
-    T<span style="line-height: 21.58px;">he[ binary store documentation page]({{page page='binary-store'}}) describes the options available for storing binaries: file system, cloud-based, encrypted.</span>
+    The [binary store documentation page]({{page page='binary-store'}}) describes the options available for storing binaries: file system, cloud-based, encrypted.

@@ -315,11 +315,6 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' }}
-
-This page is being rewritten, you should expect regular updates.
-
-{{/callout}}
 
 ## Architecture
 
@@ -327,24 +322,22 @@ This page is being rewritten, you should expect regular updates.
 
 The Nuxeo Platform stores documents and their property values either in a database (VCS) or in a NoSQL database (DBS). This data is also at the same time indexed in an Elasticsearch index. To query those documents, several approaches are offered by the platform depending on whether you are from a remote application or in some Java code executed server-side. In the end, all the methods lead to two possibilities:
 
-*   Query the data store (VCS or DBS). &nbsp;Queries there are "transactional", which means that the result will reflect exactly the state of the database in the transaction where the query is executed
+*   Query the data store (VCS or DBS). Queries there are "transactional", which means that the result will reflect exactly the state of the database in the transaction where the query is executed
 *   Query the Elasticsearch index. This is the most scalable and efficient way to perform a query. Benchmarks show querying the repository using this Elasticsearch index scales orders of magnitude better than the database.
 
 ### A Query Language
 
-The natural way of expressing a query in the Nuxeo Platform is with [NXQL]({{page page='nxql'}}), the Nuxeo Query Language.&nbsp;
+The natural way of expressing a query in the Nuxeo Platform is with [NXQL]({{page page='nxql'}}), the Nuxeo Query Language.
 
-{{#> panel }}
-
-`SELECT * FROM Document WHERE`
-`dc:contributors = ?` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_&nbsp;&nbsp; -- simple match on a multi-valued field_
-`AND ecm:mixinType != 'Folderish'` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; _-- use facet to remove all folderish documents_
-`AND ecm:mixinType != 'HiddenInNavigation'` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _-- use facet to remove all documents that should be hidden_
-`AND ecm:isCheckedInVersion = 0` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _-- only get checked-out documents_
-`AND ecm:isProxy = 0 AND` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _-- don't return proxies_
-`ecm:currentLifeCycleState != 'deleted'` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _-- don't return documents that are in the trash_
-
-{{/panel}}
+```
+SELECT * FROM Document WHERE
+dc:contributors = ? -- simple match on a multi-valued field
+AND ecm:mixinType != 'Folderish' -- use facet to remove all folderish documents
+AND ecm:mixinType != 'HiddenInNavigation' -- use facet to remove all documents that should be hidden
+AND ecm:isCheckedInVersion = 0 -- only get checked-out documents
+AND ecm:isProxy = 0 AND -- don't return proxies
+ecm:currentLifeCycleState != 'deleted' -- don't return documents that are in the trash
+```
 
 As you may see, there is no security clause, because the repository will always only return documents that the current user can see. Security filtering is built-in, so you don't have to post-filter results returned by a search, even if you use complex custom security policies.
 
@@ -352,7 +345,7 @@ The Nuxeo Platform is also [compatible with the CMISQL]({{page page='cmis'}}) de
 
 ### Page Providers: a Pagination Service&nbsp;
 
-The framework also provides a paginated query system, the Page Providers.&nbsp;Page Providers are a way to expose a query defined in NXQL with additional services: pagination, parameters, maximum number of results, aggregates definition. Page providers are named and declared to the server via a contribution. More information can be found about [the page provider object]({{page page='page-providers'}}). Page providers are used in the platform in many places: Web application for browsing, for dashboards, &hellip;
+The framework also provides a paginated query system, the Page Providers. Page Providers are a way to expose a query defined in NXQL with additional services: pagination, parameters, maximum number of results, aggregates definition. Page providers are named and declared to the server via a contribution. More information can be found about [the page provider object]({{page page='page-providers'}}). Page providers are used in the platform in many places: Web application for browsing, for dashboards, &hellip;
 
 Resources Endpoint are also based on a page provider. By being declarative, page providers are very easy to override. That way, most of the document lists logic of the default application can be redefined just by [overriding the corresponding page provider](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewExtensionPoint/org.nuxeo.ecm.platform.query.api.PageProviderService--providers). You can also build your own application in the same way. Note that in the web application, page providers are associated to a higher concept, the Content View, that wraps all the UI aspects of executing and presenting a search result (see paragraph below).
 
@@ -363,32 +356,39 @@ The following table and schema gives an overview of the different ways of queryi
 ![](https://www.lucidchart.com/publicSegments/view/54c20ae1-0e48-471d-9eea-34930a00596d/image.png ?w=600,border=true)
 
 1.  **Query Endpoint**
-    Client side
-    A resource oriented REST API that allows to execute direct NXQL queries or to use a named page provider that has been declared server side. The API returns serialised JSON documents and offers all the mechanisms provided by Nuxeo Platform Rest API (Content Enricher, Specific headers&hellip;).
-    Example:
 
+    Client side
+
+    A resource oriented REST API that allows to execute direct NXQL queries or to use a named page provider that has been declared server side. The API returns serialised JSON documents and offers all the mechanisms provided by Nuxeo Platform Rest API (Content Enricher, Specific headers&hellip;).
+
+    Example:
     ```
     http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document&pageSize=2&currentPageIndex=1
     ```
-
     Related topics:
-
     *   [Query Endpoint]({{page page='query-endpoint'}})
     *   [Using the REST API with the JavaScript Client](https://github.com/nuxeo/nuxeo-js-client/blob/release-6.0/test/document.js)
-2.  **Command Operations**
-    Client side
-    A set of Automation operations allow to query a page provider that has been declared on the server. Scope is pretty much the same as with the query endpoint, you may prefer using Automation if you are in a Java environment as the Automation Java client is best suited for this use case.
-    Example: TODO sample cURL POST
-    Related topics:
 
+2.  **Command Operations**
+
+    Client side
+
+    A set of Automation operations allow to query a page provider that has been declared on the server. Scope is pretty much the same as with the query endpoint, you may prefer using Automation if you are in a Java environment as the Automation Java client is best suited for this use case.
+
+    Example: TODO sample cURL POST
+
+    Related topics:
     *   [PageProvider Operation definition](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewOperation/Document.PageProvider)
     *   [How to Use the Java Automation Client]({{page page='java-automation-client'}})
     *   [How to use the PageProvider operation with the from the JavaScript client](https://github.com/nuxeo/nuxeo-js-client/blob/release-6.0/test/automation.js) (search for "Document.PageProvider")
-3.  **CMIS**
-    Client side & Server side
-    The Nuxeo Platform is compatible with the CMIS standard. CMIS covers query scope, using CMISQL. It is possible to query the Nuxeo Platform repository using CMISQL in Java server side, or via SOAP and ATOM/PUB bindings remotely.
-    Example:
 
+3.  **CMIS**
+
+    Client side & Server side
+
+    The Nuxeo Platform is compatible with the CMIS standard. CMIS covers query scope, using CMISQL. It is possible to query the Nuxeo Platform repository using CMISQL in Java server side, or via SOAP and ATOM/PUB bindings remotely.
+
+    Example:
     ```
     ItemIterable<QueryResult> results = 
     session.query(
@@ -403,44 +403,46 @@ The following table and schema gives an overview of the different ways of queryi
             Object value = property.getFirstValue();
     }
     ```
-
     Related topics:
-
     *   [Nuxeo CMIS Implementation]({{page page='cmis'}})
     *   [How to Make CMISQL Queries Using Java]({{page page='how-to-make-cmisql-queries-using-java'}})
     *   [Apache OpenCMIS website](http://chemistry.apache.org/)
     *   [Processing a Query With CMIS](http://chemistry.apache.org/java/examples/example-process-query-results.html) in Java
-4.  **PageProvider**
-    Server side
-    Page Providers objects implement the PageProvider interface. It provides in Java all the primitives for getting each documents, pages and related information.
-    Example:
 
+4.  **PageProvider**
+
+    Server side
+
+    Page Providers objects implement the PageProvider interface. It provides in Java all the primitives for getting each documents, pages and related information.
+
+    Example:
     ```
     PageProvider<DocumentModel> pp = (PageProvider<DocumentModel>) ppService.getPageProvider(
             "TREE_CHILDREN_PP", null, null, null, props,
             new Object[] { myDoc.getId() });
     List<DocumentModel> documents = pp.getCurrentPage();
     ```
-
     Related topics:
-
     *   [Page Provider documentation page]({{page page='page-providers'}})
 
 5.  **CoreSession.query**
+
     Server side
-    The CoreSession object is the main server side Java interface for accession among the repository. Among available methods is the&nbsp;`query()` that allows to perform directly an NXQL query and get a list of documentModels (the basic Java wrapping of a Nuxeo Document). In most of the situations it is better to rely on a page provider as it is easier to override, maintain, etc&hellip; but `session.query()` is still an option.
+
+    The CoreSession object is the main server side Java interface for accession among the repository. Among available methods is the `query()` that allows to perform directly an NXQL query and get a list of documentModels (the basic Java wrapping of a Nuxeo Document). In most of the situations it is better to rely on a page provider as it is easier to override, maintain, etc&hellip; but `session.query()` is still an option.
 
 6.  **CoreSession.QueryAndFetch()**
+
     Server side
     TODO
 
 ## {{> anchor 'elasticsearchconfiguration'}}Elasticsearch Configuration
 
-The default configuration uses an embedded Elasticsearch instance that runs&nbsp;in the same JVM as the Nuxeo Platform's one. By default the Elasticsearch indexes will be located in&nbsp;`nxserver/data/elasticsearch`.
+The default configuration uses an embedded Elasticsearch instance that runs in the same JVM as the Nuxeo Platform's one. By default the Elasticsearch indexes will be located in `nxserver/data/elasticsearch`.
 
 {{#> callout type='warning' }}
 
-This embedded mode&nbsp;**is only for testing purpose**&nbsp;and should not be used in production.
+This embedded mode **is only for testing purpose** and should not be used in production.
 
 {{/callout}}
 
@@ -448,7 +450,7 @@ See the [administration documentation to setup and configure an Elasticsearch](/
 
 ## Full-Text Capabilities
 
-Both VCS/DBS &nbsp;implementations and Elasticsearch provide full-text search capabilities. Depending on the back end (Oracle, Postgres, SQL server, &hellip;) capabilities may be slightly different. The Elasticsearch implementation performs bests in terms of relevancy, &nbsp;for configuring dictionaries, running the stemming etc. Thus it is advised to leverage an Elasticsearch page provider when you want to do searches on full text index.
+Both VCS/DBS implementations and Elasticsearch provide full-text search capabilities. Depending on the back end (Oracle, Postgres, SQL server, &hellip;) capabilities may be slightly different. The Elasticsearch implementation performs bests in terms of relevancy, for configuring dictionaries, running the stemming etc. Thus it is advised to leverage an Elasticsearch page provider when you want to do searches on full text index.
 
 More documentation can be found about[ full-text search expressions]({{page page='full-text-queries'}}).
 
@@ -456,11 +458,11 @@ You should also read carefully how you can [tune the full-text index ]({{page pa
 
 ## Facets and Other Aggregates Support
 
-Aggregates are a way to compute additional information on a search result so as to group and count result items and project them against various axis. For instance, "in the search result, 5 of the documents have the value "Specifications" for the field [`dc:nature`](http://dcnature) ". The Elasticsearch page provider implementation provides aggregates support. It is possible to define which aggregates can be requested to Elasticsearch with each queries, and a mechanism is implemented so as to filter following queries with the aggregates system offered by Elasticsearch. &nbsp;It is possible to leverage aggregates both at the API level and in the user interface, where a set of dedicated aggregates widgets has been added. They can be used from Nuxeo Studio.
+Aggregates are a way to compute additional information on a search result so as to group and count result items and project them against various axis. For instance, "in the search result, 5 of the documents have the value "Specifications" for the field [`dc:nature`](http://dcnature) ". The Elasticsearch page provider implementation provides aggregates support. It is possible to define which aggregates can be requested to Elasticsearch with each queries, and a mechanism is implemented so as to filter following queries with the aggregates system offered by Elasticsearch. It is possible to leverage aggregates both at the API level and in the user interface, where a set of dedicated aggregates widgets has been added. They can be used from Nuxeo Studio.
 
-See the&nbsp;[How-to about aggregates widgets]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}}).
+See the [How-to about aggregates widgets]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}}).
 
-![Terms with Directory Widget]({{file name='Screen Shot 2014-11-02 at 19.13.27.png'}} ?w=100,h=54,border=true 'Terms with Directory Widget')&nbsp; &nbsp; &nbsp;![Date Histograms and Date Ranges]({{file name='Screen Shot 2014-11-02 at 21.02.45.png'}} ?w=100,h=71,border=true 'Date Histograms and Date Ranges')&nbsp; &nbsp;![]({{file name='Screen Shot 2014-11-02 at 21.02.54.png'}} ?w=100,border=true,thumbnail=true 'Terms with User & Groups Widget')&nbsp; &nbsp;&nbsp;![Range]({{file name='Screen Shot 2014-11-02 at 21.03.01.png'}} ?w=100,h=41,border=true 'Range')
+![Terms with Directory Widget]({{file name='Screen Shot 2014-11-02 at 19.13.27.png'}} ?w=100,h=54,border=true 'Terms with Directory Widget') ![Date Histograms and Date Ranges]({{file name='Screen Shot 2014-11-02 at 21.02.45.png'}} ?w=100,h=71,border=true 'Date Histograms and Date Ranges') ![]({{file name='Screen Shot 2014-11-02 at 21.02.54.png'}} ?w=100,border=true,thumbnail=true 'Terms with User & Groups Widget') ![Range]({{file name='Screen Shot 2014-11-02 at 21.03.01.png'}} ?w=100,h=41,border=true 'Range')
 
 ## Configuring Search Interfaces in the Nuxeo Platform Back Office: Content Views
 
@@ -475,15 +477,15 @@ The section [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-l
 **In this section:**
 
 *   [NXQL]({{page space='NXDOC60' page='NXQL'}})
-*   [Full-Text Queries]({{page space='NXDOC60' page='Full-Text Queries'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Nuxeo documents can be searched using full-text queries; the standard way to do so is to use the top-right "quick search" box in the Nuxeo Platform. Search queries are expressed in a Nuxeo-defined syntax, described below.</span>
-*   [Page Providers]({{page space='NXDOC60' page='Page Providers'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Page providers allow retrieving items with pagination facilities, they can be used in a non-UI or non-JSF context like event listeners or core services.</span>
-*   [Page Provider Aggregates]({{page space='NXDOC60' page='Page Provider+Aggregates'}})&nbsp;&mdash;&nbsp;<span class="smalltext">When using the Elasticsearch Page Provider, you can define aggregates that will be returned along with the query result.</span>
-*   [Configuring the Elasticsearch Mapping]({{page space='NXDOC60' page='Configuring the+Elasticsearch+Mapping'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This documentation page talks about the many aspects you can tune for improving the search experience for your users when it comes to full-text search. This page is limited to full-text searches querying the Elasticsearch index, which is the recommended index for performing full-text searches.</span>
+*   [Full-Text Queries]({{page space='NXDOC60' page='Full-Text Queries'}})&nbsp;&mdash; Nuxeo documents can be searched using full-text queries; the standard way to do so is to use the top-right "quick search" box in the Nuxeo Platform. Search queries are expressed in a Nuxeo-defined syntax, described below.
+*   [Page Providers]({{page space='NXDOC60' page='Page Providers'}})&nbsp;&mdash; Page providers allow retrieving items with pagination facilities, they can be used in a non-UI or non-JSF context like event listeners or core services.
+*   [Page Provider Aggregates]({{page space='NXDOC60' page='Page Provider+Aggregates'}})&nbsp;&mdash; When using the Elasticsearch Page Provider, you can define aggregates that will be returned along with the query result.
+*   [Configuring the Elasticsearch Mapping]({{page space='NXDOC60' page='Configuring the+Elasticsearch+Mapping'}})&nbsp;&mdash; This documentation page talks about the many aspects you can tune for improving the search experience for your users when it comes to full-text search. This page is limited to full-text searches querying the Elasticsearch index, which is the recommended index for performing full-text searches.
 *   [Elasticsearch Indexing Logic]({{page space='NXDOC60' page='Elasticsearch Indexing+Logic'}})
 *   [How to Configure a New Default Search Form in the Search Tab]({{page space='NXDOC60' page='How to+Configure+a+New+Default+Search+Form+in+the+Search+Tab'}})
 *   [How to Make CMISQL Queries Using Java]({{page space='NXDOC60' page='How to+Make+CMISQL+Queries+Using+Java'}})
-*   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page space='NXDOC60' page='How to+Make+a+Page+Provider+or+Content+View+Query+Elasticsearch+Index'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Learn how to make a content view query Elasticsearch instead of the Core API.</span>
+*   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page space='NXDOC60' page='How to+Make+a+Page+Provider+or+Content+View+Query+Elasticsearch+Index'}})&nbsp;&mdash; Learn how to make a content view query Elasticsearch instead of the Core API.
 *   [How to Configure a Search Filter With Facets and Other Aggregates]({{page space='NXDOC60' page='How to+Configure+a+Search+Filter+With+Facets+and+Other+Aggregates'}})
 *   [Indexing and Querying How-To Index]({{page space='NXDOC60' page='Indexing and+Querying+How-To+Index'}})
-*   [Quick Search]({{page space='NXDOC60' page='Quick Search'}})&nbsp;&mdash;&nbsp;<span class="smalltext">The simple search is configured to work in conjunction with a content view. This section describes the document type and layouts used in the default simple search.</span>
-*   [Moving Load from Database to Elasticsearch]({{page space='NXDOC60' page='Moving Load+from+Database+to+Elasticsearch'}})&nbsp;&mdash;&nbsp;<span class="smalltext">By moving query load from the database to Elasticsearch,&nbsp;applications can dramatically increase performance and scalability.</span>
+*   [Quick Search]({{page space='NXDOC60' page='Quick Search'}})&nbsp;&mdash; The simple search is configured to work in conjunction with a content view. This section describes the document type and layouts used in the default simple search.
+*   [Moving Load from Database to Elasticsearch]({{page space='NXDOC60' page='Moving Load+from+Database+to+Elasticsearch'}})&nbsp;&mdash; By moving query load from the database to Elasticsearch,&nbsp;applications can dramatically increase performance and scalability.

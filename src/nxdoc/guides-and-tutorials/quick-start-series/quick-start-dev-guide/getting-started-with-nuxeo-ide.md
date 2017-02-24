@@ -219,24 +219,24 @@ Here we want to create an operation that indicates the date of renegotiation of 
 
 #### Create your Nuxeo Plugin Project
 
-1.  <span style="color: rgb(50,51,51);">Click on ![]({{file name='NxIDE_button.png'}}) > Nuxeo Plugin Project and click on **Next**.</span>
-2.  <span style="color: rgb(50,51,51);"><span style="color: rgb(50,51,51);">Fill in the Create project wizard:</span></span>
+1.  Click on ![]({{file name='NxIDE_button.png'}}) > Nuxeo Plugin Project and click on **Next**.
+2.  Fill in the Create project wizard:
     *   Project: I will call it `ContractRemindProject` .
     *   Root package: `org.nuxeo.sample`
 3.  Click on **Next**.
-4.  <span style="color: rgb(50,51,51);">Fill in the Maven settings:</span>
-    *   <span style="line-height: 21.58px;">Groupe Id: `org.nuxeo`</span>
+4.  Fill in the Maven settings:
+    *   Groupe Id: `org.nuxeo`
     *   Artifact Id: `ContractRemindProject`
     *   Artifact Version: 1.0-SNAPSHOT
     *   Parent Groupe Id: `org.nuxeo`
     *   Parent Artifact Id: `nuxeo-addons-parent`
     *   Parent version: 6.0
     *   Additional information: `ContractRemindProject`
-5.  <span style="color: rgb(50,51,51);">Click on **Finish**.</span>
+5.  Click on **Finish**.
 
 #### Coding your operation
 
-1.  Click on ![]({{file name='NxIDE_button.png' space='nxdoc58' page='installing-nuxeo-ide'}}) > **Automation** > **Operation** wizard and click on **Next**.
+1.  Click on ![]({{file name='NxIDE_button.png'}}) > **Automation** > **Operation** wizard and click on **Next**.
 2.  Fill in the Create operation wizard:
 
     *   Project: the box is already filled with `ContractRemindProject`.
@@ -301,7 +301,7 @@ public class ContractUpdater {
 
 1.  Click on the Perspective button ![]({{file name='open-perspective.png'}}) at the top right corner of the Eclipse window.
     Two new tabs appear on the left menu.
-2.  Click on the Export Operation button ![]({{file name='export.gif' space='nxdoc58' page='getting-familiar-with-nuxeo-ide'}}) on the Nuxeo Studio tab of the left menu.
+2.  Click on the Export Operation button ![]({{file name='export.gif'}}) on the Nuxeo Studio tab of the left menu.
 3.  Select the Studio project in the drop down menu, and the Eclipse project to look for operation. Then click **Next**.
     ![]({{file name='Screen Shot 2014-10-07 at 11.46.11.png'}} ?w=450,border=true)
     You should now see your operation under the service category in automation. Which means we can now finish our automation chain.
@@ -365,7 +365,7 @@ You know have to create an Event Handlers in order to call your operation when a
 
 Now, you can try it on your server by deploying your changes on your Nuxeo Platform instance, to do so:
 
-1.  In Eclipse, click on the **Refresh** button in the **Nuxeo Server** view (![]({{file name='NxIDE_refresh_button.png' space='idedoc' page='creating-your-first-nuxeo-project'}} ?w=16,h=17)).
+1.  In Eclipse, click on the **Refresh** button in the **Nuxeo Server** view (![]({{file name='refresh.gif'}})).
 
 2.  Go back in the browser, and refresh the [http://localhost:8080/nuxeo/site/test](http://localhost:8080/nuxeo/site/test) page.
 

@@ -27,272 +27,272 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/NYBVAQ'
     source_link: /display/NXDOC60/How+to+Define+a+New+Content+View
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 16:18'
         message: igration of unmigrated content due to installation of a new plugi
         version: '54'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 16:18'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '53'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 16:18'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '52'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 16:18'
         message: link update
         version: '51'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:20'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:20'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '49'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:20'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 17:31'
         message: ''
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-27 17:31'
         message: ''
         version: '46'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-21 13:58'
         message: ''
         version: '45'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-15 17:34'
         message: ''
         version: '44'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-15 15:30'
         message: ''
         version: '43'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-23 17:08'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '42'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-23 17:08'
         message: ''
         version: '41'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-23 17:08'
         message: ''
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 15:35'
         message: ''
         version: '39'
-    - 
+    -
         author: Michaël Vachette
         date: '2014-04-22 09:32'
         message: ''
         version: '38'
-    - 
+    -
         author: Michaël Vachette
         date: '2014-04-22 09:32'
         message: ''
         version: '37'
-    - 
+    -
         author: Michaël Vachette
         date: '2014-04-22 09:30'
         message: ''
         version: '36'
-    - 
+    -
         author: Michaël Vachette
         date: '2014-04-22 09:29'
         message: ''
         version: '35'
-    - 
+    -
         author: Michaël Vachette
         date: '2014-04-22 09:25'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 17:59'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 15:02'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 15:02'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-29 17:23'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-29 17:23'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-29 17:23'
         message: Fixed broken video and some formatting
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 15:56'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 15:56'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 15:56'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 15:56'
         message: Migrated to Confluence 4.0
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 15:56'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-02 17:28'
         message: added related howtos
         version: '22'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-08-30 01:29'
         message: ''
         version: '21'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-08-30 01:28'
         message: ''
         version: '20'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-16 18:38'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-08-06 00:56'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-11 11:20'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-05 16:06'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-05 15:55'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-05 15:52'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-30 14:20'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-17 10:25'
         message: added content view example screencast
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-02-11 06:57'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-02-11 06:54'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-23 16:07'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-18 17:17'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-18 17:12'
         message: added query filter information
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-18 16:05'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-18 16:04'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-18 15:54'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-14 09:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-13 18:08'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-12 18:13'
         message: ''
@@ -325,7 +325,7 @@ So, designing a new content view takes three steps:
 
 ## Set Your Query Filter
 
-You can define the query that will be executed to filter the content repository and display only the documents relevant in the current repository. The query uses&nbsp;[NXQL, the Nuxeo Query Language]({{page page='nxql'}}), a SQL-like query language.
+You can define the query that will be executed to filter the content repository and display only the documents relevant in the current repository. The query uses [NXQL, the Nuxeo Query Language]({{page page='nxql'}}), a SQL-like query language.
 
 When configuring a content view in Studio, a default query filter is pre-filled in, that you can complete with more conditions (or even totally modify if you understand what you are doing). This default query filter is:
 
@@ -345,8 +345,8 @@ You can add as many filter criteria as you need. If the criterion is fixed, such
 
 If the criterion is not a fixed value but depends on the context of the document, you should put "?" as a value and add a query parameter. For instance, if you want to display only the document created by the current user:
 
-1.  add&nbsp;`dc:creator = ?`&nbsp;( or&nbsp;`dc:creator&nbsp;IN (?)`&nbsp;&nbsp;with multivalued parameters)&nbsp;in the query filter,
-2.  add a query parameter with value:&nbsp;`#{currentUser.name`}
+1.  add `dc:creator = ?` (or `dc:creator IN (?)` with multivalued parameters) in the query filter,
+2.  add a query parameter with value: `#{currentUser.name`}
 
 {{#> callout type='tip' }}
 
@@ -372,17 +372,21 @@ More information on NXQL and examples are available on the [NXQL dedicated page]
 You can set a filter form that can be used:
 
 *   to filter the content of the folder,
-*   to&nbsp;[define a new advanced search form]({{page space='nxdoc58' page='configure-a-domain-specific-advanced-search'}}), that could be used on a specific domain for instance.
+*   to [define a new advanced search form]({{page space='nxdoc' page='how-to-configure-a-new-default-search-form-in-the-search-tab'}}), that could be used on a specific domain for instance.
 
 **To design the filter form:**
 
-1.  Check the&nbsp;**Show as filter form**&nbsp;box if you want to create a filter form displayed on top of content table.
+1.  Check the **Show as filter form** box if you want to create a filter form displayed on top of content table.
 
-    &nbsp;
+    {{! multiexcerpt name='filter_form_creation'}}
+    1. Set the number of columns and rows using the *Add column*, *Add row* or *Set Table Size* buttons.
+    2. Drag and drop the widget corresponding to the criterion you want to display from the widget list onto an empty table cell. !STUDIO_drop_search_field.png|border=1,width=550! The widget is added in the content cell.
+    3. Click on the icon !STUDIO_edit_icon.png|border=1! to edit the widget and edit the search field's label, search operator, sort criterion... !STUDIO_widget_search_operator_edition.png|border=1,width=300!
+    4. When done editing, click on the *Save* button.
+    5. Repeat these steps until your form is complete.
+    {{! /multiexcerpt}}
 
-    {{!-- unmigrated-wiki-markup: {multi-excerpt:name=filter_form_creation}# Set the number of columns and rows using the *Add column*, *Add row* or *Set Table Size* buttons. # Drag and drop the widget corresponding to the criterion you want to display from the widget list onto an empty table cell. !STUDIO_drop_search_field.png|border=1,width=550! The widget is added in the content cell. # Click on the icon !STUDIO_edit_icon.png|border=1! to edit the widget and edit the search field's label, search operator, sort criterion... !STUDIO_widget_search_operator_edition.png|border=1,width=300! # When done editing, click on the *Save* button. # Repeat these steps until your form is complete.{multi-excerpt} --}}
-
-2.  Click on the&nbsp;**Save**&nbsp;button to save your changes.
+2.  Click on the **Save** button to save your changes.
 
 ## Configure the Result Layout
 
@@ -390,17 +394,17 @@ Search results, and so content listings, are presented in a table. You can confi
 
 **To configure a result layout:**
 
-1.  Go on the&nbsp;**Results**&nbsp;tab.
+1.  Go on the **Results** tab.
 2.  Set the results parameters you want to be applied (see below for more information on the results parameters).
     ![]({{file name='STUDIO-LayoutParameters.png'}} ?w=350,h=225,border=true)
 3.  Define the information that will be displayed to users in the result table:
-    1.  Set the number of columns and rows using the&nbsp;**Add column**,&nbsp;**Add row**&nbsp;or&nbsp;**Set Table Size**&nbsp;button.
+    1.  Set the number of columns and rows using the **Add column**, **Add row** or **Set Table Size** button.
         The blue first row of the table is the columns title row.
     2.  Drag and drop the widget corresponding to the information you want to display from the widget list onto an empty table cell.
         The widget is added in the content cell. It is also automatically added in the title cell.
         ![]({{file name='STUDIO-tableConfiguration.png'}} ?w=650,h=164,border=true)
-    3.  Edit the title widget by clicking on the icon&nbsp;![]({{file name='STUDIO-WidgetEditIcon.png'}})&nbsp;on the first row. You will also have to give the sort criterion that will be used for that column.
-    4.  Edit the widget information itself by clicking on the icon&nbsp;![]({{file name='STUDIO-WidgetEditIcon.png'}})&nbsp;on the second row.
+    3.  Edit the title widget by clicking on the icon&nbsp;![]({{file name='STUDIO-WidgetEditIcon.png'}}) on the first row. You will also have to give the sort criterion that will be used for that column.
+    4.  Edit the widget information itself by clicking on the icon&nbsp;![]({{file name='STUDIO-WidgetEditIcon.png'}}) on the second row.
     5.  Do it again for each widget you want to drop.
 
         {{#> callout type='tip' }}
@@ -412,7 +416,7 @@ Search results, and so content listings, are presented in a table. You can confi
         If you are editing the advanced search results layout, repeat these steps for the additional results columns that users will be able to select.
 
         {{/callout}}
-4.  When you have configured your default columns and the additional columns, click&nbsp;**Save**.
+4.  When you have configured your default columns and the additional columns, click **Save**.
 
 **Results parameters**
 
@@ -469,32 +473,28 @@ Check the box if you want to display the icons ![]({{file name='DM-list-view-ico
 
 </td></tr></tbody></table></div>
 
-&nbsp;
-
 ## Use The Content View
 
 There are several ways of using the content view you configured in your Nuxeo Platform application.:
 
-*   In the&nbsp;[faceted search]({{page space='userdoc60' page='faceted-search'}})&nbsp;feature, &nbsp;so as to add a new filter set. You just need to click on the "Faceted search" checkbox, in the&nbsp;**Flag**&nbsp;section of the Query&Form Tab of your content view in Studio.
-*   In the&nbsp;[DAM view]({{page space='userdoc60' page='browsing-and-searching-assets'}}), so as to add a new filter set. You just need to click on the DAM checkbox, in the&nbsp;**Flag**&nbsp;section of the Query&Form tab of your content view in Studio.
-*   In any&nbsp;[custom tab]({{page space='studio' page='tabs'}}), using the Content View widget.
+*   In the [faceted search]({{page space='userdoc60' page='faceted-search'}}) feature, so as to add a new filter set. You just need to click on the "Faceted search" checkbox, in the **Flag** section of the Query&Form Tab of your content view in Studio.
+*   In the [DAM view]({{page space='userdoc60' page='browsing-and-searching-assets'}}), so as to add a new filter set. You just need to click on the DAM checkbox, in the **Flag** section of the Query&Form tab of your content view in Studio.
+*   In any [custom tab]({{page space='studio' page='tabs'}}), using the Content View widget.
 
-&nbsp;
+* * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-tos'}}
 
-*   [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
-*   [Configure a Domain Specific Advanced Search]({{page space='nxdoc58' page='configure-a-domain-specific-advanced-search'}})
-*   [undefined]()
-*   [How to Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
+- [How to Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Content Views ]({{page page='content-views'}})
-*   [Content Views in Studio Documentation]({{page space='studio' page='content-views'}})
-*   [Custom Page Providers]({{page page='custom-page-providers'}})
-*   [Documents Display Configuration]({{page page='documents-display-configuration'}})
-*   [Default Search]({{page space='userdoc60' page='default-search'}})
+- [Content Views ]({{page page='content-views'}})
+- [Content Views in Studio Documentation]({{page space='studio' page='content-views'}})
+- [Custom Page Providers]({{page page='custom-page-providers'}})
+- [Documents Display Configuration]({{page page='documents-display-configuration'}})
+- [Default Search]({{page space='userdoc60' page='default-search'}})
 
 {{/panel}}</div></div>
