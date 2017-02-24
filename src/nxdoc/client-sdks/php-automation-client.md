@@ -114,6 +114,8 @@ history:
 ---
 The Nuxeo Automation PHP Client is a PHP client library for Nuxeo Automation API.
 
+It is compatible with Nuxeo Platform LTS 2015, LTS 2016 and latest Fast Tracks.
+
 [Github Website](https://github.com/nuxeo/nuxeo-automation-php-client)
 
 ## Path to the PHP Client (v1.5)
@@ -143,39 +145,6 @@ The old API is still available. Thus you can upgrade the library to the 1.5 vers
 {{/callout}}
 
 ## Getting Started
-
-### Library import
-
-**Manual install**
-
-* [Nuxeo Automation PHP Client 1.5.0](https://github.com/nuxeo/nuxeo-automation-php-client/archive/1.5.0.tar.gz).
-
-**Import Nuxeo Automation PHP Client with:**
-
-Composer:
-
-```
-  "require": {
-    "nuxeo/nuxeo-automation-php-client": "1.5.0"
-  }
-```
-
-### Usage
-
-{{#> callout type='note' }}
-
-The following documentation and samples applies for the 1.5 and newer versions. Calls to the Automation API for previous versions of the client will require adjustments.
-
-{{/callout}}
-
-
-#### Creating a Client
-
-For a given `url`:
-
-```php
-$url = 'http://localhost:8080/nuxeo';
-```
 
 ### Library import
 
