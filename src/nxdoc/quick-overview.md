@@ -169,7 +169,7 @@ The default configuration for Nuxeo Repository is to use a SQL Database and a Fi
     *   Hierarchy
     *   Security
     *   Metadata
-*   Binaries streams are stored in a _"Filesystem like"_&nbsp;storage called "BinaryStore".
+*   Binaries streams are stored in a _"Filesystem like"_ storage called "BinaryStore".
 
 The SQL Database can be:
 
@@ -178,7 +178,7 @@ The SQL Database can be:
 *   MS SQL Server
 *   MySQL
 
-For more details about Nuxeo Repository architecture, please see the&nbsp;[VCS Pages]({{page space='nxdoc58' page='vcs-architecture'}}).
+For more details about Nuxeo Repository architecture, please see the [VCS Pages]({{page space='nxdoc' page='vcs'}}).
 
 ![]({{file name='VCS-mapping.png'}} ?w=650,border=true)
 
@@ -223,7 +223,7 @@ By default, everything is bound to the same SQL database as the repository, but 
 
 ### Calling Nuxeo Services&nbsp;
 
-Nuxeo services&nbsp;are exposed via an HTTP API called [Nuxeo Content Automation.]({{page page='content-automation-concepts'}})
+Nuxeo services are exposed via an HTTP API called [Nuxeo Content Automation.]({{page page='content-automation-concepts'}})
 
 Nuxeo resources (Documents, Users ...) are exposed via a [REST API]({{page page='rest-api'}}).
 
@@ -231,13 +231,13 @@ So, if your external application needs to call the Nuxeo Server you can use plai
 
 ![]({{file name='EndPoints.png'}} ?w=650,border=true)
 
-### Calling External Services from the Nuxeo&nbsp; Platform
+### Calling External Services from the Nuxeo Platform
 
 You can extend the Nuxeo Platform to deploy your own Java Services.
 
 A classical approach is to wrap your calls to external applications inside a [Nuxeo Automation Operation]({{page page='contributing-an-operation'}}).
 
-Once you have this operation,&nbsp;you can use Nuxeo Studio to integrate for example SAP inside your Nuxeo application:
+Once you have this operation, you can use Nuxeo Studio to integrate for example SAP inside your Nuxeo application:
 
 *   Use your external service operations inside a Workflow.
 *   Bind your external service operation on new buttons in the UI.
@@ -250,5 +250,3 @@ An interesting integration point is that you can hook operations or custom code 
 ### Data Integration
 
 In addition of the native HTTP API, the Nuxeo Platform also provides solutions to [import data inside the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}}).
-
-&nbsp;

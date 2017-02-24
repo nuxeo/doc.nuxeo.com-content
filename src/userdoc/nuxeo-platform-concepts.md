@@ -549,7 +549,7 @@ The default search filter provides a faceted search, leveraging the [Elasticsear
 Users can change the way content is presented in the result layout. They can also change the displayed information. At the top right and corner of the results pages, you have different options to display your content list.
 
 *   **Thumbnail view**![]({{file name='DM-icon-view-icon.png' page='icons-index'}}): this view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
-*   **Edit Result Columns**![]({{file name='edit_columns.png' space='userdoc60' page='icons-index'}}): this button lets you change the information displayed in content lists. The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and reorder columns using the vertical arrows.
+*   **Edit Result Columns**![]({{file name='edit_columns.png' space='userdoc' page='icons-index'}}): this button lets you change the information displayed in content lists. The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and reorder columns using the vertical arrows.
 
     {{#> callout type='info' }}
 

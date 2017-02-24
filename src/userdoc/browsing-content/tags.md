@@ -185,7 +185,6 @@ Unlike subjects in the metadata of the document, you don't have to choose tags i
 ![]({{file name='tags-summary-tab.png'}} ?w=650,border=true)
 
 You can then use the tag cloud to find all documents that have the same tags.
-![]({{file name='tag-cloud.png' space='userdoc60' page='browsing-content'}} ?w=350,border=true)
 
 Documents can be tagged in workspaces and in sections. When a document is published, the tags applied in the workspaces are published with the document. Users can add a tag on a document as soon as they can access the document, i.e. as soon as they have reading permissions.
 

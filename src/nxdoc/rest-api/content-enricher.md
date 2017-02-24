@@ -690,7 +690,7 @@ public class ParentDocEnricher extends AbstractJsonEnricher<DocumentModel> { // 
 
 ### Specific Object Content Enricher
 
-Here is a sample to get you started with a content enricher for the object&nbsp;<span style="line-height: 21.58px;">org</span>.nuxeo.ecm.platform.audit.api.LogEntry:
+Here is a sample to get you started with a content enricher for the object `org.nuxeo.ecm.platform.audit.api.LogEntry`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

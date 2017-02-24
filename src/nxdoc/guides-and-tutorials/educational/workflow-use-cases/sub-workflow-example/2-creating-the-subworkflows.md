@@ -158,17 +158,17 @@ We want to keep this workflow generic, remember? So what we will do is setup a w
 3.  Check multi-valued (we may have several assignees).
 4.  Save your modifications.
     Look at the result below:
-    ![]({{file name='subonelevel-variables-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,h=99,border=true)
+    ![]({{file name='subonelevel-variables-tab.png' space='nxdoc' page='2-creating-the-subworkflows'}} ?w=500,h=99,border=true)
 
 ### Activation Tab
 
 We do not want anybody to launch this subworkflow directly, so we will set rules to restrain its visibility.
 
-1.  In the "<span style="color: rgb(67,67,67);">Current document state is</span>" field, type `hideThisWorkflow`.
+1.  In the "Current document state is" field, type `hideThisWorkflow`.
     As this lifecycle state does not exist, this trick will ensure the workflow will never appear in the drop-down list.
 2.  Save your modifications.
     Look at the result below:
-    ![]({{file name='subonelevel-node1-general-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=400,h=280,border=true)
+    ![]({{file name='subonelevel-node1-general-tab.png' space='nxdoc' page='2-creating-the-subworkflows'}} ?w=400,h=280,border=true)
 
 ### Graph Tab
 
@@ -180,7 +180,7 @@ We do not want anybody to launch this subworkflow directly, so we will set rules
 2.  Link the Start node's output to the Accept/Reject node.
 3.  Link the Accept/Reject node's output transitions to the end node.
     Your graph should look like this:
-    ![]({{file name='subaccountingvalidation-wf-graph.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,border=true)
+    ![]({{file name='subaccountingvalidation-wf-graph.png' space='nxdoc' page='2-creating-the-subworkflows'}} ?w=500,border=true)
 
 ### Edit the Accept/Reject Node
 
@@ -190,12 +190,12 @@ Set the following values:
 
 1.  **Title**: First level validation
 2.  **Directive**: Please review this document.
-3.  **<span style="color: rgb(67,67,67);">Assignees expression</span>**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
+3.  **Assignees expression**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
     `@{WorkflowVariables["level1Assignees"]}`
     This calls the corresponding workflow variable that will be set in the parent workflow.
 4.  **Grant permission to task assignees:** Read (in our case we want to make sure the accountants will be able to view the document, not necessarily to modify it).
 5.  Look at the result below:
-    ![]({{file name='subonelevel-node1-general-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,h=350,border=true)
+    ![]({{file name='subonelevel-node1-general-tab.png' space='nxdoc' page='2-creating-the-subworkflows'}} ?w=500,h=350,border=true)
 
 #### Transitions Tab
 
@@ -232,10 +232,10 @@ Here comes another generic workflow. This time again we will setup workflow vari
 
 Same goes for this subworkflow:
 
-1.  In the "<span style="color: rgb(67,67,67);">Current document state is</span>" field, type `hideThisWorkflow`.
+1.  In the "Current document state is" field, type `hideThisWorkflow`.
     As this life cycle state does not exist, the workflow will never appear in the drop-down list.
 2.  Look at the expected result:
-    ![]({{file name='subwf-availability.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=400,h=370,border=true)
+    ![]({{file name='subwf-availability.png' space='nxdoc' page='2-creating-the-subworkflows'}} ?w=400,h=370,border=true)
 3.  Save your modifications.
 
 ### Graph Tab
@@ -250,7 +250,7 @@ Same goes for this subworkflow:
 4.  Link the second Accept/Reject node's validate output transition to the end node.
 5.  Link both Accept/Reject node's reject output transitions to the end node.
     Your graph should look like this:
-    ![]({{file name='subaccountinggm-wf-graph-before-node-edition.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,border=true)
+    ![]({{file name='subaccountinggm-wf-graph-before-node-edition.png' space='nxdoc' page='2-creating-the-subworkflows'}} ?w=500,border=true)
 6.  Save your modifications.
 
 ### Edit the First Accept/Reject Node
@@ -261,12 +261,12 @@ Set the following values:
 
 1.  **Title**: First level validation.
 2.  **Directive**: Please review this document.
-3.  **<span style="color: rgb(67,67,67);">Assignees expression</span>**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
+3.  **Assignees expression**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
     `@{WorkflowVariables["level1Assignees"]}`
     This calls the corresponding workflow variable that will be set in the parent workflow.
 4.  **Grant permission to task assignees:** Read (in our case we want to make sure the accountants will be able to view the document, not necessarily to modify it).
 5.  Look at the expected result:
-    ![]({{file name='subonelevel-node1-general-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,h=350,border=true)
+    ![]({{file name='subonelevel-node1-general-tab.png' space='nxdoc' page='2-creating-the-subworkflows'}} ?w=500,h=350,border=true)
 6.  Save your modifications in the node and on the graph.
 
 ### Edit the Second Accept/Reject Node
@@ -277,18 +277,18 @@ Set the following values:
 
 1.  **Title**: Second level validation
 2.  **Directive**: Please review this document.
-3.  **<span style="color: rgb(67,67,67);">Assignees expression</span>**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
+3.  **Assignees expression**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
     `@{WorkflowVariables["level2Assignees"]}`
     This calls the corresponding workflow variable that will be set in the parent workflow.
 4.  **Grant permission to task assignees:** Read
 5.  Look at the expected result:
-    ![]({{file name='subtwolevels-node2-general-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,h=351,border=true)
+    ![]({{file name='subtwolevels-node2-general-tab.png' space='nxdoc' page='2-creating-the-subworkflows'}} ?w=500,h=351,border=true)
 
 #### Transitions Tab
 
 1.  In the `validate` transition, select the `validateDoc` chain.
     Look at the expected result:
-    ![]({{file name='subtwolevels-node1-transitions-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,h=351,border=true)
+    ![]({{file name='subtwolevels-node1-transitions-tab.png' space='nxdoc' page='2-creating-the-subworkflows'}} ?w=500,h=351,border=true)
 2.  Save your modifications in the node and on the graph.
 
 That's it! Our sub workflows are ready, now only remains the one workflow to rule them all, the main workflow.

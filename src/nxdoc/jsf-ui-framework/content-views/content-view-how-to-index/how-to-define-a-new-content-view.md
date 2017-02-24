@@ -369,7 +369,7 @@ So, designing a new content view takes three steps:
 
 ## {{> anchor 'set-query-filter'}}Set Your Query Filter
 
-You can define the query that will be executed to filter the content repository and display only the documents relevant in the current repository. The query uses&nbsp;[NXQL, the Nuxeo Query Language]({{page page='nxql'}}), a SQL-like query language.
+You can define the query that will be executed to filter the content repository and display only the documents relevant in the current repository. The query uses [NXQL, the Nuxeo Query Language]({{page page='nxql'}}), a SQL-like query language.
 
 When configuring a content view in Studio, a default query filter is pre-filled in, that you can complete with more conditions (or even totally modify if you understand what you are doing). This default query filter is:
 
@@ -389,8 +389,8 @@ You can add as many filter criteria as you need. If the criterion is fixed, such
 
 If the criterion is not a fixed value but depends on the context of the document, you should put "?" as a value and add a query parameter. For instance, if you want to display only the document created by the current user:
 
-1.  add&nbsp;`dc:creator = ?`&nbsp;( or&nbsp;`dc:creator&nbsp;IN (?)`&nbsp;&nbsp;with multivalued parameters)&nbsp;in the query filter,
-2.  add a query parameter with value:&nbsp;`#{currentUser.name`}
+1.  add `dc:creator = ?` (or `dc:creator IN (?)` with multivalued parameters) in the query filter,
+2.  add a query parameter with value: `#{currentUser.name`}
 
 {{#> callout type='tip' }}
 
@@ -421,35 +421,35 @@ You can set a filter form that can be used:
 
 **To design the filter form:**
 
-1.  Check the&nbsp;**Document Content**&nbsp;box if you want to create a filter form displayed on top of content table.
+1.  Check the **Document Content** box if you want to create a filter form displayed on top of content table.
 
     {{! multiexcerpt name='filter_form_creation'}}
     1.  Set the number of columns and rows using the **Add column**, **Add row** or **Set Table Size** buttons.
     2.  Drag and drop the widget corresponding to the criterion you want to display from the widget list onto an empty table cell. ![]({{file name='STUDIO_drop_search_field.png' space='nxdoc' page='how-to-define-a-new-content-view'}} ?w=550,border=true)
         The widget is added in the content cell.
-    3.  Click on the icon ![]({{file name='STUDIO_edit_icon.png' space='nxdoc60' page='how-to-define-a-new-content-view'}} ?w=16,thumbnail=true) to edit the widget and edit the search field's label, search operator, sort criterion...
+    3.  Click on the icon ![]({{file name='STUDIO_edit_icon.png' space='nxdoc' page='how-to-define-a-new-content-view'}} ?w=16,thumbnail=true) to edit the widget and edit the search field's label, search operator, sort criterion...
         ![]({{file name='STUDIO_widget_search_operator_edition.png'}} ?w=350,border=true)
-    4.  When done editing, click on the *Save* button.
+    4.  When done editing, click on the **Save** button.
     5.  Repeat these steps until your form is complete.{{! /multiexcerpt}}
-2.  Click on the&nbsp;**Save**&nbsp;button to save your changes.
+2.  Click on the **Save** button to save your changes.
 
 ## {{> anchor 'configure-result-layout'}}Configure the Result Layout
 
-Search results, and so content listings, are presented in a table. You can configure the columns,and so the information on the documents, that should be displayed in your content view.
+Search results, and so content listings, are presented in a table. You can configure the columns, and so the information on the documents, that should be displayed in your content view.
 
 **To configure a result layout:**
 
-1.  Go on the&nbsp;**Results**&nbsp;tab.
+1.  Go on the **Results** tab.
 2.  Set the results parameters you want to be applied (see below for more information on the results parameters).
     ![]({{file name='STUDIO-LayoutParameters.png'}} ?w=350,h=294,border=true)
 3.  Define the information that will be displayed to users in the result table:
-    1.  Set the number of columns and rows using the&nbsp;**Add Row**,&nbsp;**Add Column**&nbsp;or&nbsp;**Set Table Size**&nbsp;button.
+    1.  Set the number of columns and rows using the **Add Row**, **Add Column** or **Set Table Size** button.
         The blue first row of the table is the columns title row.
     2.  Drag and drop the widget corresponding to the information you want to display from the widget list onto an empty table cell.
         The widget is added in the content cell. It is also automatically added in the title cell.
         ![]({{file name='STUDIO-tableConfiguration.png'}} ?w=650,h=164,border=true)
-    3.  Edit the title widget by clicking on the icon&nbsp;![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}})&nbsp;on the first row. You will also have to give the sort criterion that will be used for that column.
-    4.  Edit the widget information itself by clicking on the icon&nbsp;![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}})&nbsp;on the second row.
+    3.  Edit the title widget by clicking on the icon&nbsp;![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) on the first row. You will also have to give the sort criterion that will be used for that column.
+    4.  Edit the widget information itself by clicking on the icon&nbsp;![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) on the second row.
     5.  Do it again for each widget you want to drop.
 
         {{#> callout type='tip' }}
@@ -461,7 +461,7 @@ Search results, and so content listings, are presented in a table. You can confi
         If you are editing the advanced search results layout, repeat these steps for the additional results columns that users will be able to select.
 
         {{/callout}}
-4.  When you have configured your default columns and the additional columns, click&nbsp;**Save**.
+4.  When you have configured your default columns and the additional columns, click **Save**.
 
 **Results parameters**
 
@@ -506,23 +506,23 @@ See the tutorial [Create a button that triggers the task assignment]({{page page
 
 There are several ways of using the content view you configured in your Nuxeo Platform application:
 
-*   In the&nbsp;[search tab]({{page space='userdoc710' page='searching-the-nuxeo-platform'}})&nbsp;feature, &nbsp;so as to add a new filter set. You just need to click on the **Search content view** checkbox, in the&nbsp;**Flag**&nbsp;section of the Query & form tab of your content view in Studio.
-*   In any&nbsp;[custom tab]({{page space='studio' page='tabs'}}), using the Content View widget.
+*   In the [search tab]({{page space='userdoc710' page='searching-the-nuxeo-platform'}}) feature, so as to add a new filter set. You just need to click on the **Search content view** checkbox, in the **Flag** section of the Query & form tab of your content view in Studio.
+*   In any [custom tab]({{page space='studio' page='tabs'}}), using the Content View widget.
+
+* * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-tos'}}
 
-*   [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
-*   [Configure a Domain Specific Advanced Search]({{page space='nxdoc58' page='configure-a-domain-specific-advanced-search'}})
-*   [undefined]()
-*   [How to Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
+- [How to Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Content Views ]({{page page='content-views'}})
-*   [Content Views in Studio Documentation]({{page space='studio' page='content-views'}})
-*   [Custom Page Providers]({{page page='custom-page-providers'}})
-*   [Documents Display Configuration]({{page page='documents-display-configuration'}})
-*   [Default Search]({{page space='userdoc710' page='default-search'}})
+- [Content Views ]({{page page='content-views'}})
+- [Content Views in Studio Documentation]({{page space='studio' page='content-views'}})
+- [Custom Page Providers]({{page page='custom-page-providers'}})
+- [Documents Display Configuration]({{page page='documents-display-configuration'}})
+- [Default Search]({{page space='userdoc710' page='default-search'}})
 
 {{/panel}}</div></div>

@@ -364,12 +364,10 @@ This is the very first recipe of this cookbook and it will be the basis for the 
 
 {{! multiexcerpt name='recipe-tip'}} {{#> callout type='tip' heading='General Remarks'}}
 
-*   <span style="line-height: 21.58px;">This recipe is not specific to a system or an IDE. You will have to adapt it to your needs. The sole obligation is to use Maven in a console. But, even this part, with experience, could be fitted to your IDE habits if you have any.</span>
+*   This recipe is not specific to a system or an IDE. You will have to adapt it to your needs. The sole obligation is to use Maven in a console. But, even this part, with experience, could be fitted to your IDE habits if you have any.
 *   For any remark about this recipe or about this cookbook, don't hesitate to leave us a comment on this page.
 
 {{/callout}}{{! /multiexcerpt}}
-
-&nbsp;
 
 This recipe is composed of the major steps below:
 
@@ -443,7 +441,7 @@ To create your project structure, follow the steps below.
 
     <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
 
-    `**groupId**`
+    **`groupId`**
 
     </td><td colspan="1">
 
@@ -451,7 +449,7 @@ To create your project structure, follow the steps below.
 
     </td></tr><tr><td colspan="1">
 
-    `**artifactId**`
+    **`artifactId`**
 
     </td><td colspan="1">
 
@@ -702,12 +700,12 @@ The content of this file will be completed in a coming recipe.
 
 *   The given version 1 into the fragment item is important because before Nuxeo Runtime 5.4.2, the bundle dependency management was managed into the MANIFEST.MF. You have from 5.4.2 version of Nuxeo Runtime new items (require, required-by)
 *   If you want your bundle deployed after all other bundles/contributions, you can add a <require>all</require>
-*   If you have this message "_Please update the deployment-fragment.xml in myBundle.jar&nbsp;to use new dependency management_", this is because you didn't specify the fragment version (and maybe let dependency informations into the manifest file.
+*   If you have this message "_Please update the deployment-fragment.xml in myBundle.jar to use new dependency management_", this is because you didn't specify the fragment version (and maybe let dependency informations into the manifest file.
 *   the deployment-fragment.xml file is not required since 5.4.2 if you have no dependency information to transmit to the runtime or pre-deployment actions to execute.
 
 ### Create a "MANIFEST.MF" file
 
-As Nuxeo add-ons are OSGi modules, you need to create a "MANIFEST.MF" file in the "/src/main/resources/META-INF" folder.&nbsp;
+As Nuxeo add-ons are OSGi modules, you need to create a "MANIFEST.MF" file in the "/src/main/resources/META-INF" folder.
 
 Here are the minimal properties the "MANIFEST.MF" file must hold:
 
@@ -766,7 +764,7 @@ The trickiest and most important part of a "MANIFEST.MF" file is its formatting.
 {{/callout}}
 {{! /multiexcerpt}}
 
-### <span style="color: rgb(0,0,0);">Create files for the tests</span>
+### Create files for the tests
 
 #### "log4j.properties"
 
@@ -817,7 +815,7 @@ The most important difference between this content and the one declared in the "
 2.  Copy your brand new jar into the sub-folder "nxserver/plugins/" of your nuxeo application's root folder:
     *   under Windows, assuming that the nuxeo-distribution is installed at the location "C:\Nuxeo\", copy the jar in "C:\Nuxeo\nxserver\plugins\";
     *   under Linux, assuming that the nuxeo-distribution is installed at the location "/opt/nuxeo", copy the jar in "/opt/nuxeo/nxserver/plugins".
-3.  <span style="line-height: 21.58px;">Start your server using the "./nuxeoctl console" command</span>
+3.  Start your server using the "./nuxeoctl console" command.
 
     {{#> callout type='tip' }}
 
@@ -828,13 +826,7 @@ The most important difference between this content and the one declared in the "
     *   in the console if you started your server using the "./nuxeoctl console"
     *   in the file "server.log" located in the "log" folder of your Nuxeo server root folder. This name is found in the list of the bundles deployed by Nuxeo in the very first lines of the logs, just after the line ended by " Preprocessing order:".
 
-&nbsp;
-
-&nbsp;
-
 {{! /multiexcerpt}}
-
-&nbsp;
 
 In the following example, the name of your bundle could be found at the line n&deg;8 of the following print (some lines of the logs have been skip using "[&hellip;]"):
 
@@ -856,31 +848,18 @@ In the following example, the name of your bundle could be found at the line n&d
 
 Now you've got a bundle ready for customization. You can propose your contribution to configuration and use it to improve your Nuxeo instance.
 
-&nbsp;
-
-{{#> callout type='info' }}
-
-As said in the beginning of this recipe, if you have unexpected errors or Nuxeo Application behavior don't forget to check the&nbsp;[FAQ]({{page space='kb'}})&nbsp;and don't forget to leave us a comment about this recipe or about the cookbook!
-
-{{/callout}}
-
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How-To Index ]({{page page='how-to-index'}})
+- [How-To Index ]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Component Model ]({{page page='runtime-and-component-model'}})
-*   [Writing a Bundle Manifest ]({{page page='writing-a-bundle-manifest'}})
+- [Component Model ]({{page page='runtime-and-component-model'}})
+- [Writing a Bundle Manifest ]({{page page='writing-a-bundle-manifest'}})
 
 {{/panel}}
 
-&nbsp;
-
-&nbsp;
 
 </div></div>

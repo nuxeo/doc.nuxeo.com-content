@@ -76,10 +76,10 @@ Annotations are post-it notes that users can add on the picture to comment it or
 
 **To add an annotation on a picture:**
 
-1.  To access to the image view, click on the icon&nbsp;![]({{file name='preview.png' page='icons-index'}})&nbsp;in the&nbsp;**More**&nbsp;menu.
+1.  To access to the image view, click on the icon&nbsp;![]({{file name='preview.png' page='icons-index'}}) in the **More** menu.
     A pop up opens.
 2.  Draw a frame on the part of the picture you want to annotate.
-3.  Type your annotation and click on&nbsp;**Submit**.
+3.  Type your annotation and click on **Submit**.
     ![]({{file name='DAM-annotation.png' space='nxdoc710' page='digital-asset-management-dam'}} ?w=600,border=true)
     You can see your annotation when the mouse is over the zone you selected, and, in the margin, the list of annotations, and for each, the author, date and time of annotation and the text.
     ![]({{file name='DAM-annotation-rollover.png' space='nxdoc710' page='digital-asset-management-dam'}} ?w=600,border=true)
@@ -88,11 +88,11 @@ Annotations are post-it notes that users can add on the picture to comment it or
 
 #### Picture Views
 
-When you import a&nbsp;document having the `Picture` facet on your platform, additional formats are available on it.&nbsp;The default ones are:
+When you import a document having the `Picture` facet on your platform, additional formats are available on it. The default ones are:
 
-*   Thumbnail: the picture is converted to JPG and resized to 100px height or width.
-*   Small: the picture is converted to JPG and resized to&nbsp;280 px&nbsp;height or width.&nbsp;
-*   Medium: the picture is converted to JPG and resized to 550 px height or width.
+*   Thumbnail: the picture is converted to JPG and resized to 100&nbsp;px height or width.
+*   Small: the picture is converted to JPG and resized to 280&nbsp;px height or width.
+*   Medium: the picture is converted to JPG and resized to 550&nbsp;px height or width.
 *   OriginalJpeg: the picture is converted to JPG but the original size is kept. This export is done even if the original picture was a JPG file.
 
 {{#> callout type='tip' }}
@@ -101,7 +101,7 @@ The original and medium pictures can be the same size when you download them if 
 
 {{/callout}}
 
-To download the picture view that you want, click on&nbsp;![]({{file name='download.png' space='userdoc58' page='icons-index'}})&nbsp;in front of it.
+To download the picture view that you want, click on&nbsp;![]({{file name='download.png' space='userdoc' page='icons-index'}}) in front of it.
 
 ![]({{file name='Additionnal Picture Views Download.png' space='nxdoc710' page='digital-asset-management-dam'}} ?w=600,border=true)
 
@@ -119,7 +119,7 @@ A user interface is added in the Admin tab so that it is possible to re-compute 
 
 Video is a document types dedicated to the management of videos files. It provides the following specific features: A player to view the video from the application, a storyboard to navigate in the video and alternative video formats.
 
-Video documents can be [created]({{page page='creating-content'}}) and [edited]({{page page='editing-content'}}) like any other document type. See the page&nbsp;[Supported File Formats]({{page space='nxdoc710' page='supported-file-formats'}})&nbsp;for supported video files.
+Video documents can be [created]({{page page='creating-content'}}) and [edited]({{page page='editing-content'}}) like any other document type. See the page [Supported File Formats]({{page space='nxdoc710' page='supported-file-formats'}}) for supported video files.
 
 ![]({{file name='video_document_type.png' space='nxdoc710' page='digital-asset-management-dam'}} ?w=600,border=true)
 
@@ -161,8 +161,6 @@ See the page [Supported File Formats]({{page space='nxdoc710' page='supported-fi
 ![]({{file name='audio_document_type.png' space='nxdoc710' page='digital-asset-management-dam'}} ?w=600,border=true)
 
 {{! /multiexcerpt}}
-
-{{! Don't put anything here. }}
 
 * * *
 

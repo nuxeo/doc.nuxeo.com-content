@@ -269,8 +269,6 @@ It is possible to add another type of navigation tree based on metadata instead 
 
 The Document Management module includes [tagging of documents]({{page page='tags'}}), which enables users to apply their own labels on documents. The tag cloud lists all tags on documents, with their size growing as the tag is applied on several documents.
 
-![]({{file name='tag-cloud.png' space='userdoc60' page='browsing-content'}} ?w=350,border=true)
-
 To see all documents tagged with the same label, click on the tag in the tag cloud.
 
 ## Browsing Lists of Documents

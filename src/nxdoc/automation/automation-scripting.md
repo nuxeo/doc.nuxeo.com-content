@@ -187,8 +187,6 @@ history:
 
 Extract from the course "[Applying Business Logic](https://university.nuxeo.io/nuxeo/university/#!/course/applying-business-logic)" at [Nuxeo University](https://university.nuxeo.io)
 
-&nbsp;
-
 {{! excerpt}}
 
 Automation Scripting is a Nuxeo module which provides ability to create and contribute Automation chain/operation in JavaScript.
@@ -241,7 +239,7 @@ Nuxeo Automation Scripting allows you to write JavaScript code to use Automation
     ```
 
 *   Passing parameters and variables through the operation context and input.
-*   Using operations/chains as JavaScript functions within this&nbsp;`run()` function
+*   Using operations/chains as JavaScript functions within this `run()` function
 
     ```js
     // For instance, the operation to display JSF messages
@@ -328,19 +326,20 @@ To bind an Automation JavaScript to an action:
 
 ### Automation Chain Binding
 
-*   Automation Scripting scripts can be executed within an Automation Chain, by using the operation `Execution Flow > Run Chain`.&nbsp;The ID must be formatted as `javascript.script_name`.
-    &nbsp;![]({{file name='automation_scripting_chain_binding.png'}} ?w=500,border=true)
-*   Automation Scripting custom scripts can be used as well directly in Automation Chains from the category **Scripting** as follow: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![]({{file name='Screenshot 2015-05-25 18.16.50.png'}} ?w=500)
+*   Automation Scripting scripts can be executed within an Automation Chain, by using the operation `Execution Flow > Run Chain`. The ID must be formatted as `javascript.script_name`.
+    ![]({{file name='automation_scripting_chain_binding.png'}} ?w=500,border=true)
+*   Automation Scripting custom scripts can be used as well directly in Automation Chains from the category **Scripting** as follow:
+    ![]({{file name='Screenshot 2015-05-25 18.16.50.png'}} ?w=500)
 
 ## REST Call
 
-Automation scripts can be called like any operation or chain using the &nbsp;Automation&nbsp;HTTP bridge. See&nbsp;[cURL sample]({{page page='using-curl'}}).
+Automation scripts can be called like any operation or chain using the Automation HTTP bridge. See [cURL sample]({{page page='using-curl'}}).
 
 ## Helpers
 
 Platform Functions Helpers are available in Automation Scripting.
 
-You can use (like in [MVEL expression]({{page space='nxdoc60' page='use-of-mvel-in-automation-chains'}})) functions as follow:
+You can use (like in [MVEL expression]({{page space='nxdoc' page='use-of-mvel-in-automation-chains'}})) functions as follow:
 
 ```
 Fn.getEmail("Administrator")
@@ -376,13 +375,13 @@ ctx.get('var')
 
 Since 7.2, metrics have been added to Automation Scripting services to monitor Nashorn performances with the Nuxeo Platform.
 
-To activate the metrics, set the following variable in&nbsp;`nuxeo.conf`:
+To activate the metrics, set the following variable in `nuxeo.conf`:
 
 ```
 automation.scripting.monitor.enable= true
 ```
 
-Or set the Log4J level to TRACE for&nbsp; [`org.nuxeo.automation.scripting.internals.AutomationScriptingComponent`](http://community.nuxeo.com/api/nuxeo/release-7.10/javadoc/org/nuxeo/automation/scripting/internals/AutomationScriptingComponent.html) .
+Or set the Log4J level to TRACE for  [`org.nuxeo.automation.scripting.internals.AutomationScriptingComponent`](http://community.nuxeo.com/api/nuxeo/release-7.10/javadoc/org/nuxeo/automation/scripting/internals/AutomationScriptingComponent.html) .
 
 This feature gives the ability to get time execution informations through `JMX: org.nuxeo.StopWatch`.
 
@@ -554,16 +553,14 @@ Automation scripting operations can be used as common Automation operations:
     assertEquals("Hello John", result.toString());
     ```
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Automation Scripting in Nuxeo Studio]({{page space='studio' page='automation-scripting'}})
+- [Automation Scripting in Nuxeo Studio]({{page space='studio' page='automation-scripting'}})
 
 {{/panel}}</div><div class="column medium-6">
 
-&nbsp;
+
 
 </div></div>

@@ -358,21 +358,23 @@ This procedure can only be used for **Nuxeo 6.0 and later** versions. **For Nuxe
 1.  In Eclipse, go into the **Help**, **Eclipse Marketplace** menu.
 2.  The Eclipse Marketplace window opens.
     Search for **Nuxeo**, select **Nuxeo IDE** and click on the **Install** button.
-    ![]({{file name='eclipse-marketplace-nx-ide.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=400,border=true)
+    ![]({{file name='eclipse-marketplace-nx-ide.png'}} ?w=400,border=true)
 3.  Nuxeo IDE and Nuxeo Shell are automatically selected and downloaded.
 4.  When Nuxeo IDE and Nuxeo Shell are downloaded, click on the **Next** button.
 5.  Accept license when prompted.
     Installation begins. After a few seconds, a security warning is prompted.
 6.  On the security warning window, click on **OK**.
     Installation continues.
-    ![]({{file name='NxIDE_install6.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=350)
+    ![]({{file name='NxIDE_install6.png'}} ?w=350)
 7.  Restart Eclipse when prompted.
 8.  Nuxeo IDE is installed.
-    A new button is available in the Eclipse toolbar: ![]({{file name='NxIDE_button.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}})
+    A new button is available in the Eclipse toolbar: ![]({{file name='NxIDE_button.png'}})
 9.  Open the Nuxeo perspective:
     Using the open perspective button ![]({{file name='open-perspective.png'}}) or from the Window, Perspective menu.
     Choose the Nuxeo perspective.
+
     ![]({{file name='nuxeo-perspective.png'}})
+
     A new set of tabs will then be available to interact with your projects and your Nuxeo Platform server.
 
 ### From Eclipse Menu
@@ -383,19 +385,21 @@ This procedure can only be used for **Nuxeo 6.0 and later** versions. **For Nuxe
 *   Update site for latest Nuxeo IDE **development** version: [http://community.nuxeo.com/static/nuxeo-ide/dev/site/](http://community.nuxeo.com/static/nuxeo-ide/dev/site/)
 *   Update site for latest Nuxeo IDE **stable** version: [http://community.nuxeo.com/static/nuxeo-ide/stable/site/](http://community.nuxeo.com/static/nuxeo-ide/stable/site/)
 *   Update site **archives** are available in: [http://community.nuxeo.com/static/nuxeo-ide/releases/](http://community.nuxeo.com/static/nuxeo-ide/releases/)
-    ![]({{file name='NxIDE_install1.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=350,border=true)
+    ![]({{file name='NxIDE_install1.png'}} ?w=350,border=true)
 
 4.  If nothing appears, uncheck the **Group items by category** box.
 5.  Check both **Nuxeo IDE** and **Nuxeo Shell** and click **Next.**
-    ![]({{file name='NxIDE_install2.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=400,h=326,border=true)
+    ![]({{file name='NxIDE_install2.png'}} ?w=400,h=326,border=true)
 6.  Follow the wizard: accept license when prompted and click Next until the software is downloaded.
-    ![]({{file name='NxIDE_install6.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=350,border=true)
+    ![]({{file name='NxIDE_install6.png'}} ?w=350,border=true)
 7.  Restart Eclipse when prompted.
-    Nuxeo IDE is installed. A new button is available in the Eclipse toolbar: ![]({{file name='NxIDE_button.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}})
+    Nuxeo IDE is installed. A new button is available in the Eclipse toolbar: ![]({{file name='NxIDE_button.png'}})
 8.  Open the Nuxeo perspective:
-    Using the open perspective button at the top right corner from the Eclipse window ![]({{file name='open-perspective.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}}) or from the Window, Perspective menu.
+    Using the open perspective button at the top right corner from the Eclipse window ![]({{file name='open-perspective.png'}}) or from the Window, Perspective menu.
     Choose the Nuxeo perspective.
+
     ![]({{file name='nuxeo-perspective.png'}})
+
     A new set of tabs will then be available to interact with your projects and your Nuxeo Platform server.
 
 ## Step 2 - Register a Nuxeo Online Services Account
@@ -406,7 +410,7 @@ This procedure can only be used for **Nuxeo 6.0 and later** versions. **For Nuxe
     The Host name is already filled in with Nuxeo Connect address.
 2.  Type your Nuxeo Online Services login and password and click on the **Connect** button.
     The lists of Studio projects associated to your account is displayed. No need to choose something from the list here, it serves only for information purpose.
-    ![]({{file name='NxIDE_pref_connect_account.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=450,border=true)
+    ![]({{file name='NxIDE_pref_connect_account.png'}} ?w=450,border=true)
 3.  Click on **OK**.
     The Preferences window closes.
     You can now go to the "Nuxeo Studio" tab to browse your Studio customizations.
@@ -497,7 +501,6 @@ From a command line:
 6.  Import the project in Eclipse:
     1.  Select **File** / **Import** / **General** / **Existing Projects into Workspace**.
     2.  Browse to your project root folder (`contract-mgt-project`), then click **Finish**.
-        ![]({{file name='eclipse_import_project.png' space='nxdoc' page='getting-started-with-nuxeo-ide'}} ?w=350,border=true)
 7.  Convert the project to a Nuxeo project: right-click on the project name, then choose **Nuxeo** / **Convert to Nuxeo Project**.
 
 #### Code Your Operation
@@ -649,13 +652,13 @@ A unit test comes along in `src/test/java`. You will need it to pass in order to
     }
     ```
 
-2.  Now replace `your.studio.project.symbolic.name` with `studio.extensions.MAVEN-ARTIFACT-ID`. You can find your project's `MAVEN-ARTIFACT-ID` in **Settings** > **Application Information**.</span>
+2.  Now replace `your.studio.project.symbolic.name` with `studio.extensions.MAVEN-ARTIFACT-ID`. You can find your project's `MAVEN-ARTIFACT-ID` in **Settings** > **Application Information**.
 
 If you try running the test (in Eclipse, right-click on your project and choose **Run As, JUnit Test**), you will notice that the test fails because we miss things in our Studio project. We need to add them to make the test pass; that's test driven development.
 
 #### Send the Operation in Studio
 
-1.  Click on the Export Operation button ![]({{file name='export.gif' space='nxdoc58' page='getting-familiar-with-nuxeo-ide'}}) on the Nuxeo Studio tab of the left menu.
+1.  Click on the Export Operation button ![]({{file name='export.gif'}}) on the Nuxeo Studio tab of the left menu.
 2.  Select the Studio project in the drop down menu, and the Eclipse project to look for operation. Then click **Next**.
     ![]({{file name='select_studio_project.png' space='nxdoc' page='getting-started-with-nuxeo-ide'}} ?w=350,border=true)
     You should now see your operation under the service category in automation. Which means we can now finish our automation chain.
@@ -691,7 +694,7 @@ The code can either be tested through unit tests, or manually.
 
 ### **Using Unit** Tests
 
-1.  In Eclipse, click on the **Refresh** button on the Nuxeo Studio tab of the left menu (![]({{file name='NxIDE_refresh_button.png' space='idedoc' page='creating-your-first-nuxeo-project'}} ?w=16,h=17)).
+1.  In Eclipse, click on the **Refresh** button on the Nuxeo Studio tab of the left menu (![]({{file name='refresh.gif'}} ?w=16,h=17)).
 
 2.  Go back to the Project Explorer tab, right-click on your project, and choose **Run As, JUnit Test**.
     The tests should now pass.
@@ -705,38 +708,38 @@ Using unit tests is the recommended way to ensure a feature is working as expect
 At this stage we want to create a new default profile, called "My Projects" that includes the `contract-mgt-project`.
 
 1.  Go into the **Nuxeo Server** tab (on the bottom right).
-2.  Click on the button ![]({{file name='NxIDE_deploy_project_button.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}}) in the tab toolbar. The button tooltip is "Select projects to deploy on server".
+2.  Click on the button ![]({{file name='NxIDE_deploy_project_button.png'}}) in the tab toolbar. The button tooltip is "Select projects to deploy on server".
 3.  Click on **Add**.
-    ![]({{file name='NxIDE_deployment_profile_conf.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=450,border=true)
+    ![]({{file name='NxIDE_deployment_profile_conf.png'}} ?w=450,border=true)
 4.  Enter a name (in the right panel) for your deployment profile. Example: "My Projects&rdquo;.
 5.  In the left panel click on the newly created profile.
 6.  In the right panel, check the projects that will be deployed with this profile.
 7.  If you want the new profile to be the default deployment profile, check it.
 8.  Click on the **OK** button.
 9.  Here is what you should get:
-    ![]({{file name='NxIDE_deployment_profile.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=450,border=true)
-    Now every time you start the Nuxeo server or you click on the **Reload projects on server** button ![]({{file name='NxIDE_refresh_button.png' space='idedoc' page='creating-your-first-nuxeo-project'}} ?w=16,h=17) in the Nuxeo Server tab toolbar, the projects selected in the current profile will be (re)deployed on the server.
+    ![]({{file name='NxIDE_deployment_profile.png'}} ?w=450,border=true)
+    Now every time you start the Nuxeo server or you click on the **Reload projects on server** button ![]({{file name='refresh.gif'}} ?w=16,h=17) in the Nuxeo Server tab toolbar, the projects selected in the current profile will be (re)deployed on the server.
 
 #### Starting the Server
 
 To start the server:
 
-1.  Click on the **Run** button in the toolbar (![]({{file name='NxIDE_start_server_button.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}})).
+1.  Click on the **Run** button in the toolbar (![]({{file name='NxIDE_start_server_button.png'}})).
 2.  Wait until the server starts.
-    ![]({{file name='NxIDE_start_server.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}} ?w=400,border=true)
+    ![]({{file name='NxIDE_start_server.png'}} ?w=400,border=true)
 3.  When done (i.e when the **Stop** button is enabled), open a browser and login using the 'Administrator/Administrator' account.
 
     {{#> callout type='tip' }}
 
-    You can open the browser by clicking the **Browse** button (![]({{file name='NxIDE_browse_button.png' space='nxdoc60' page='getting-started-with-nuxeo-ide'}})).
+    You can open the browser by clicking the **Browse** button (![]({{file name='NxIDE_browse_button.png'}})).
 
     {{/callout}}
-4.  Click on the **Reload projects on server** button in the **Nuxeo Server** tab (![]({{file name='NxIDE_refresh_button.png' space='idedoc' page='creating-your-first-nuxeo-project'}} ?w=16,h=17)).
+4.  Click on the **Reload projects on server** button in the **Nuxeo Server** tab (![]({{file name='refresh.gif'}} ?w=16,h=17)).
 5.  In Nuxeo Platform, create a new contract with the following information:
     *   Title: Maintenance Contract
     *   Contract Owner: Nuxeo
     *   Starting Date: Choose today's dateYou should end up with something like this:
-    ![]({{file name='result.png' space='nxdoc' page='getting-started-with-nuxeo-ide'}} ?w=600,border=true)
+    ![]({{file name='result.png'}} ?w=600,border=true)
 
 {{#> callout type='info' }}
 

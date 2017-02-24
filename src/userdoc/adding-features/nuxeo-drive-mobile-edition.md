@@ -342,8 +342,7 @@ The Drive Mobile Edition application enables you to browse the content of the Nu
 
 When you have a network access, you can browse all the platform content (depending on your permissions). When you're offline, only synchronized content is available from your device.
 
-**To browse online
-**
+**To browse online**
 
 1.  Open the application.
     You are displayed the online Browse interface.
@@ -375,7 +374,7 @@ When you have a network access, you can browse all the platform content (dependi
 
 ### Synchronizing a folder
 
-You can only synchronize spaces on which you have [Edit or Manage everything permissions]({{page space='USERDOC58' page='Document Management+Concepts#DocumentManagementConcepts-Accessrights'}}).
+You can only synchronize spaces on which you have [Edit or Manage everything permissions]({{page version='' space='userdoc' page='managing-permissions'}}).
 
 You can synchronize folders:
 
@@ -416,7 +415,7 @@ The folder disappears from your local folders in your application but it's still
 
 ### Deleting a document
 
-When you [delete documents from the Platform]({{page space='USERDOC58' page='Deleting Content'}}), they are deleted from your local Nuxeo Drive Mobile folder on your application at the next update.
+When you [delete documents from the Platform]({{page space='userdoc' page='deleting-content'}}), they are deleted from your local Nuxeo Drive Mobile folder on your application at the next update.
 
 You can't delete a document from your device, you can only unsynchronize it.
 

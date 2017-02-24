@@ -119,7 +119,7 @@ The [Scheduler Service](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%
 
 ## Scheduler Contribution
 
-To schedule an event, you contribute a `<schedule>` to the `schedule` extension point of the&nbsp;`org.nuxeo.ecm.core.scheduler.SchedulerService` component.
+To schedule an event, you contribute a `<schedule>` to the `schedule` extension point of the `org.nuxeo.ecm.core.scheduler.SchedulerService` component.
 
 {{#> callout type='note' heading='Component name'}}
 
@@ -277,12 +277,10 @@ At 3:15a, every 5 days every month, starting on the first day of the month:
 
 ```
 
-&nbsp;
-
 ## Automation
 
-When using Scheduler to trigger [Automation Chains]({{page space='nxdoc58' page='content-automation'}}) through [Event Listener]({{page page='events-and-listeners'}}) and [Event Handler]({{page space='studio' page='event-handlers'}}), the Core Session cannot be retrieved and cannot be set within the Operation Context&nbsp;_(Core Session is not found)_.
+When using Scheduler to trigger [Automation Chains]({{page version='' space='nxdoc' page='automation-chain'}}) through [Event Listener]({{page page='events-and-listeners'}}) and [Event Handler]({{page space='studio' page='event-handlers'}}), the Core Session cannot be retrieved and cannot be set within the Operation Context _(Core Session is not found)_.
 
-If the need is to execute operations needing an operation context session, the first operation of the chain should be [LoginAs Operation](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Auth.LoginAs):
+If the need is to execute operations needing an operation context session, the first operation of the chain should be [LoginAs Operation](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20DM-7.10/viewOperation/Auth.LoginAs).
 
 It will create a new authenticated session and set the Automation context session accordingly.

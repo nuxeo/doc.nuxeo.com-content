@@ -78,27 +78,27 @@ history:
         version: '1'
 
 ---
-<span style="color: rgb(51,51,51);">The Nuxeo UI uses a variety of web frameworks, each having its own strengths and weaknesses. User interfaces designed in Nuxeo Studio are primarily driven by JSF and Seam, which have a long history and are quite solid but are sometimes tricky to use in elaborate use cases. The Nuxeo Platform includes a widget which integrates the Javascript-based Select2 component with core Nuxeo APIs to enable some very interesting and useful Javascript-based features.</span>
+The Nuxeo UI uses a variety of web frameworks, each having its own strengths and weaknesses. User interfaces designed in Nuxeo Studio are primarily driven by JSF and Seam, which have a long history and are quite solid but are sometimes tricky to use in elaborate use cases. The Nuxeo Platform includes a widget which integrates the Javascript-based Select2 component with core Nuxeo APIs to enable some very interesting and useful Javascript-based features.
 
 ## The select2 Widget
 
-<span class="s1" style="line-height: 21.58px;">The select2 widget uses automation operations to generate suggestions based on user input. By default, the widget can suggest values for directory entries (Vocabularies), Users and Groups, and Documents. In each case an operation is called to which relevant parameters are passed.</span>&nbsp;
+The select2 widget uses automation operations to generate suggestions based on user input. By default, the widget can suggest values for directory entries (Vocabularies), Users and Groups, and Documents. In each case an operation is called to which relevant parameters are passed.
 
-<span class="s1">In the case of a Document selection widget, a page provider is used to retrieve suggestion values.</span>
+In the case of a Document selection widget, a page provider is used to retrieve suggestion values.
 
 The Layout Widget Editor in Nuxeo Studio exposes many parameters commonly used by the suggestion widget. Using the Inline Javascript parameter, it is possible to pass any kind of data or executable code to the widget, including additional parameters that are passed to operations.
 
-## <span class="s1">Example:&nbsp;</span>Select a File in a Selected Folder
+## Example: Select a File in a Selected Folder
 
-<span class="s1">An application has access to a hierarchy of files and folders. In a layout, a user wants to select a folder, and then select a file within that folder. In Nuxeo Studio, it is easy to select a folder or file based on a simple criterion. In order to make a selection based on the value of another object in a layout, the value of the object must be available to use as a parameter.</span>
+An application has access to a hierarchy of files and folders. In a layout, a user wants to select a folder, and then select a file within that folder. In Nuxeo Studio, it is easy to select a folder or file based on a simple criterion. In order to make a selection based on the value of another object in a layout, the value of the object must be available to use as a parameter.
 
-<span class="s1">The value of any object in a layout can be found in the DOM. jQuery can be used to obtain values from the DOM. In this example, the file suggestion is made based on two criteria: the title string entered in the suggestion widget by the user, and the value of the folder selection. The two parameters are passed to the `Repository.PageProvider` operation, which in turn passes the two parameters to a custom page provider.</span>
+The value of any object in a layout can be found in the DOM. jQuery can be used to obtain values from the DOM. In this example, the file suggestion is made based on two criteria: the title string entered in the suggestion widget by the user, and the value of the folder selection. The two parameters are passed to the `Repository.PageProvider` operation, which in turn passes the two parameters to a custom page provider.
 
-## <span class="s1">Setting up the Suggestion Widgets</span>&nbsp;
+## Setting up the Suggestion Widgets
 
-<span class="s1">Add two Single Document Suggestion widgets to a layout. Configure the first one to suggest Folder documents by setting its NXQL Query parameter to `select * from Folder where [dc:title](http://dctitle) ilike '?'`</span>
+Add two Single Document Suggestion widgets to a layout. Configure the first one to suggest Folder documents by setting its NXQL Query parameter to `select * from Folder where [dc:title](http://dctitle) ilike '?'`.
 
-<span class="s1">For the second widget define a custom page provider (see code block) and set the **Document page provider name** parameter to the name of the page provider. In the **Custom Properties Configuration** enter a new parameter `operationId` with value `Repository.PageProvider`.</span>
+For the second widget define a custom page provider (see code block) and set the **Document page provider name** parameter to the name of the page provider. In the **Custom Properties Configuration** enter a new parameter `operationId` with value `Repository.PageProvider`.
 
 {{#> panel type='code' heading='Custom page provider'}}
 
@@ -116,9 +116,9 @@ The Layout Widget Editor in Nuxeo Studio exposes many parameters commonly used b
 
 {{/panel}}
 
-## <span style="color: rgb(0,0,0);">Passing Additional Operation Parameters to select2</span>
+## Passing Additional Operation Parameters to select2
 
-<span class="s1">In most cases a single value is passed to the page provider as a search term. In this case, two values are passed in a string array. This is done in a javascript function entered in the **Inline Javascript** parameter. See code block. The first search term is the `query.term` which is the string entered into the widget by the user. The second search term is the value of the Folder selection, which can be retrieved by jQuery. The two values are appended to a stri</span>ng list and passed to the operation in the `temp.searchTerm` variable. With the function code in place, enter a new parameter in the **Custom Properties Configuration** named `additionalOperationParameters` with the value set to the name of the defined inline function.&nbsp;
+In most cases a single value is passed to the page provider as a search term. In this case, two values are passed in a string array. This is done in a javascript function entered in the **Inline Javascript** parameter. See code block. The first search term is the `query.term` which is the string entered into the widget by the user. The second search term is the value of the Folder selection, which can be retrieved by jQuery. The two values are appended to a string list and passed to the operation in the `temp.searchTerm` variable. With the function code in place, enter a new parameter in the **Custom Properties Configuration** named `additionalOperationParameters` with the value set to the name of the defined inline function.
 
 {{#> panel type='code' heading='Inline Javascript'}}
 
@@ -135,12 +135,10 @@ function additionalParams(temp,params,query){
 
 ## Identifying the First Selection by Its Id in the DOM
 
-<span class="s1">Deploy the layout to a Nuxeo instance. Go to the layout and make a Folder selection. Inspect the source code of the widget and identify the input element by the selected value. Look at its id. Set the expression in the firstSelectionId variable of the additionalParams function to the last part of the id. See illustrations.</span>
+Deploy the layout to a Nuxeo instance. Go to the layout and make a Folder selection. Inspect the source code of the widget and identify the input element by the selected value. Look at its id. Set the expression in the firstSelectionId variable of the additionalParams function to the last part of the id. See illustrations.
 
-<span class="s1">![Making the first selection]({{file name='Screen Shot 2015-05-20 at 4.22.00 PM.png'}} ?w=835,h=519 'Making the first selection')
-</span>
+![Making the first selection]({{file name='Screen Shot 2015-05-20 at 4.22.00 PM.png'}} ?w=835,h=519 'Making the first selection')
 
-<span class="s1">![Identifying the element id]({{file name='Screen Shot 2015-05-20 at 4.22.34 PM.png'}} ?w=835,h=596 'Identifying the element id')</span>
+![Identifying the element id]({{file name='Screen Shot 2015-05-20 at 4.22.34 PM.png'}} ?w=835,h=596 'Identifying the element id')
 
-<span class="s1">![The finished product]({{file name='Screen Shot 2015-05-20 at 4.23.38 PM.png'}} ?w=835,h=519 'The finished product')
-</span>
+![The finished product]({{file name='Screen Shot 2015-05-20 at 4.23.38 PM.png'}} ?w=835,h=519 'The finished product')

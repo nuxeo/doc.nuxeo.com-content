@@ -21,62 +21,62 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/a4CyAQ'
     source_link: /display/NXDOC710/Nuxeo+Platform+User+Registration
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-22 00:45'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-12 15:36'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-12 10:54'
         message: formatting
         version: '10'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-12-11 21:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-12-11 21:03'
         message: ''
         version: '8'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-12-11 21:01'
         message: ''
         version: '7'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-12-11 20:57'
         message: ''
         version: '6'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-12-11 20:56'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-11 14:54'
         message: Merging all docs about Nuxeo Platform User Registration
         version: '4'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-12-10 23:40'
         message: ''
         version: '3'
-    - 
+    -
         author: Maxime Hilaire
         date: '2014-12-10 23:39'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-29 15:58'
         message: ''
@@ -160,8 +160,6 @@ To invite several users at the same time to a space:
 **Bulk invitation form details**
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Fields</th><th colspan="1">Description</th></tr><tr><td colspan="1">List of recipients</td><td colspan="1">The email addresses of the users you want to invite to the space. The email address will be their login. Use a comma (`,`) to separate the emails.</td></tr><tr><td colspan="1">Permission</td><td colspan="1">The access right you want to give the invited users on the space.</td></tr><tr><td colspan="1">Comment</td><td colspan="1">A comment for the invited user to explain why he's invited, for instance. This comment will be in the invitation emails.</td></tr><tr><td colspan="1">Send me a copy</td><td colspan="1">Your email address will be in the Cc recipients of the invitation emails.</td></tr></tbody></table></div>
-
-&nbsp;
 
 ### {{> anchor 'managing-pending-invitations'}}Managing Pending Invitations
 
@@ -253,7 +251,7 @@ The user registration contributes to the `nuxeo-invite` and `nuxeo-webengine-inv
   </extension>
 ```
 
-You can contribute to the default user registration configuration or add your new configuration by adding a specific&nbsp;`name` attribute in the&nbsp;`configuration` tag.&nbsp;
+You can contribute to the default user registration configuration or add your new configuration by adding a specific `name` attribute in the `configuration` tag.
 
 {{#> callout type='info' }}
 
@@ -261,25 +259,23 @@ The invitation UI action uses the `default_registration` name to get the configu
 
 {{/callout}}
 
-<span style="line-height: 21.58px;">Each&nbsp;user invitation request is actually a document stored in a specific container. In the default configuration, requests are stored under</span> `/management`<span style="line-height: 21.58px;">.</span>
+Each user invitation request is actually a document stored in a specific container. In the default configuration, requests are stored under `/management`.
 
-*   The container type is&nbsp;`UserRegistrationContainer`. The folder is created if it does not exist. It has the facet <span style="line-height: 21.58px;">`RegistrationConfiguration` to store&nbsp;</span>the configuration name of the request object.
-*   The user registration request documents have the type&nbsp;`UserRegistration` that store all request metadata (username, email etc) thanks to the <span style="line-height: 21.58px;">`UserInvitation` facet.</span>
+*   The container type is `UserRegistrationContainer`. The folder is created if it does not exist. It has the facet `RegistrationConfiguration` to store the configuration name of the request object.
+*   The user registration request documents have the type `UserRegistration` that store all request metadata (username, email etc) thanks to the `UserInvitation` facet.
 
 ## How to Contribute a New "User Registration Request" Document Type
 
 See the page [How to Contribute a New "User Registration Request" Document Type]({{page page='how-to-contribute-a-new-user-registration-request-document-type'}}).
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Authentication and User Management]({{page page='authentication-and-user-management'}}) (developer documentation)
-*   [How to Contribute a New "User Registration Request" Document Type]({{page page='how-to-contribute-a-new-user-registration-request-document-type'}})
-*   [Managing Users and Groups]({{page space='userdoc710' page='managing-users-and-groups'}}) (user documentation)
-*   [Recommended Configurations]({{page space='admindoc710' page='recommended-configurations'}}) (admin documentation)
+- [Authentication and User Management]({{page page='authentication-and-user-management'}}) (developer documentation)
+- [How to Contribute a New "User Registration Request" Document Type]({{page page='how-to-contribute-a-new-user-registration-request-document-type'}})
+- [Managing Users and Groups]({{page space='userdoc710' page='managing-users-and-groups'}}) (user documentation)
+- [Recommended Configurations]({{page space='admindoc710' page='recommended-configurations'}}) (admin documentation)
 
 {{/panel}}</div><div class="column medium-6">
 

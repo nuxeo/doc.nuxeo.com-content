@@ -40,9 +40,7 @@ history:
         version: '1'
 
 ---
-&nbsp;
-
-Inside Nuxeo Platform, Directories are used to provide a common abstraction on a set of record&nbsp;
+Inside Nuxeo Platform, Directories are used to provide a common abstraction on a set of record
 
 *   that can be stored in different manner
     *   SQL, LDAP, Repository, External Service
@@ -65,16 +63,10 @@ The default Nuxeo UI includes management screens for the directories.
 
 For simplicity reasons, the entry inside the Admin Center is called "Vocabularies", but actually it can manage any kind of Directories (i.e. not only the directories using the vocabulary schema).
 
-To make this easily usable, the platform includes a DirectoryUIManager that uses an &nbsp;[directories extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.directory.ui.DirectoryUIManager--directories) to allow to contribute what directories should be available in the management UI and what layouts should be used.
+To make this easily usable, the platform includes a DirectoryUIManager that uses an [directories extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20DM-7.10/viewExtensionPoint/org.nuxeo.ecm.directory.ui.DirectoryUIManager--directories) to allow to contribute what directories should be available in the management UI and what layouts should be used.
 
 ## Suggest Widgets
 
 Directories can be used as a source of data for Suggest Widgets.
 
-See&nbsp;[Suggestion Widget Types]({{page space='nxdoc58' page='suggestion-widget-types'}}) page for more details.
-
-&nbsp;
-
-&nbsp;
-
-* * *
+See [Suggestion Widget Types]({{page space='nxdoc' page='suggestion-widget-types'}}) page for more details.

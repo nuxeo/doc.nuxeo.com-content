@@ -110,7 +110,7 @@ JSF2 integrates a standard Ajax support. One tag provides Ajax functionality, it
 
 Complete documentation on the tag is available at [http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/f/ajax.html](http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/f/ajax.html)
 
-Always try to use the Ajax library features to help avoiding many calls to the server (ignoreDupResponses, eventsQueue,...), and re-render only needed parts of the page. This will prevent you from problems like " [I Get an Error When I Click on Two Links Quickly]({{page space='nxdoc58' page='i-get-an-error-when-i-click-on-two-links-quickly'}}).
+Always try to use the Ajax library features to help avoiding many calls to the server (ignoreDupResponses, eventsQueue,...), and re-render only needed parts of the page.
 
 ## Submitting the Form When Hitting The "Enter" Key
 
@@ -138,7 +138,7 @@ The browser `form` tag will natively select the first input submit button in the
 
 ### Ajax Re-Rendering
 
-If you need to perform some Ajax re-rendering when submitting this button, they'd better be placed directly on the `f:ajax` tag itself: adding a tag [`a4j:support`](http://a4jsupport) for this inside the `h:commandButton` tag will generates an additional call to the server when using some browsers (visible using Firefox 8.0) and may lead to errors when server is under load.
+If you need to perform some Ajax re-rendering when submitting this button, they'd better be placed directly on the `f:ajax` tag itself: adding a tag `a4j:support` for this inside the `h:commandButton` tag will generates an additional call to the server when using some browsers (visible using Firefox 8.0) and may lead to errors when server is under load.
 
 ### Command Button Visibility
 
