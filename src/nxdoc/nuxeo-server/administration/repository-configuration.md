@@ -444,7 +444,7 @@ The following values for idType are possible:
 
 *   **varchar**: a varchar-based UUID (the default),
 *   **uuid**: a native uuid (only on PostgreSQL ([NXP-4803](https://jira.nuxeo.com/browse/NXP-4803))),
-*   **sequence**: a sequence-based integer (on PostgreSQL ([NXP-10894](https://jira.nuxeo.com/browse/NXP-10894)) and SQL Server 2012 (not Azure) ([NXP-10912](https://jira.nuxeo.com/browse/NXP-10912))). Instead of just `sequence` you can also use `sequence:your_sequence_name` if you want to use another sequence than the default one (`hierarchy_seq`).
+*   **sequence**: a sequence-based integer (on PostgreSQL ([NXP-10894](https://jira.nuxeo.com/browse/NXP-10894)), Oracle ([NXP-13800](https://jira.nuxeo.com/browse/NXP-13800)) and SQL Server 2012 (not Azure) ([NXP-10912](https://jira.nuxeo.com/browse/NXP-10912))). Instead of just `sequence` you can also use `sequence:your_sequence_name` if you want to use another sequence than the default one (`hierarchy_seq`).
 
 When using a sequence, the document ids will be simple incremental small integers instead of randomly-generated UUIDs.
 
