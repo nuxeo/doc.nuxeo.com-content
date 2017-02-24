@@ -552,7 +552,6 @@ There are several ways of using the content view you configured in your Nuxeo Pl
 {{#> panel heading='Related How-tos'}}
 
 - [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
-- [Configure a Domain Specific Advanced Search]({{page space='nxdoc58' page='configure-a-domain-specific-advanced-search'}})
 - [How to Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
 - [How-To Index]({{page page='how-to-index'}})
 

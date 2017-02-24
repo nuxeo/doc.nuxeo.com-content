@@ -285,18 +285,15 @@ This property should always be clicked when you contribute a new virtual navigat
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-tos'}}
 
-*   [undefined]()
-*   [Configure a Domain Specific Advanced Search]({{page space='nxdoc58' page='configure-a-domain-specific-advanced-search'}})
-*   [undefined]()
-*   [How to Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Content Views ]({{page page='content-views'}})
-*   [Content Views in Studio Documentation]({{page space='studio' page='content-views'}})
-*   [Custom Page Providers]({{page page='custom-page-providers'}})
-*   [Documents Display Configuration]({{page page='documents-display-configuration'}})
-*   [Default Search]({{page space='userdoc' page='default-search'}})
+- [Content Views ]({{page page='content-views'}})
+- [Content Views in Studio Documentation]({{page space='studio' page='content-views'}})
+- [Custom Page Providers]({{page page='custom-page-providers'}})
+- [Documents Display Configuration]({{page page='documents-display-configuration'}})
+- [Default Search]({{page space='userdoc' page='default-search'}})
 
 {{/panel}}</div></div>

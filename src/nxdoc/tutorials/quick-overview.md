@@ -158,7 +158,7 @@ The default configuration for Nuxeo Repository is to use a SQL Database and a Fi
     *   Hierarchy
     *   Security
     *   Metadata
-*   Binaries streams are stored in a _"Filesystem like"_&nbsp;storage called "BinaryStore".
+*   Binaries streams are stored in a _"Filesystem like"_ storage called "BinaryStore".
 
 The SQL Database can be:
 
@@ -167,7 +167,7 @@ The SQL Database can be:
 *   MS SQL Server
 *   MySQL
 
-For more details about Nuxeo Repository architecture, please see the&nbsp;[VCS Pages]({{page space='nxdoc58' page='vcs-architecture'}}).
+For more details about Nuxeo Repository architecture, please see the [VCS Pages]({{page space='nxdoc' page='vcs'}}).
 
 ![]({{file name='VCS-mapping.png'}} ?w=650,border=true)
 

@@ -116,13 +116,11 @@ history:
 ---
 {{! excerpt}}
 
-The "Double Click Shield" feature is enabled in the JSF interface and it addresses the issue described in the page [I Get an Error When I Click on Two Links Quickly]({{page space='nxdoc58' page='i-get-an-error-when-i-click-on-two-links-quickly'}}).
+The Double Click Shield prevents a form from being submitted twice. When you click many times on the same button that launches a server-side action, the feature will let the first click launch the action but will prevent any additional click. This is possible thanks to a jQuery plugin which listens to the submit event of a given form.
 
 {{! /excerpt}}
 
-The Double Click Shield prevents a form from being submitted twice. When you click many times on the same button that launches a&nbsp;server-side action, the feature will let the first click launch the action but will prevent any additional click. This is possible thanks to a jQuery plugin which listens to the submit event of a given form.
-
-Through a custom JSF Form Renderer, we add the dedicated CSS style class&nbsp; `<span style="color: rgb(34,34,34);">doubleClickShielded</span>` &nbsp;to all&nbsp;`h:form`&nbsp;handled by Nuxeo. When a page is loaded, the jQuery plugin will then enable the shield on all form flagged with this CSS class. (Note that the shield is not enabled on&nbsp;`a4j:form`&nbsp;since it serializes its submits).
+Through a custom JSF Form Renderer, we add the dedicated CSS style class `doubleClickShielded` to all `h:form` handled by Nuxeo. When a page is loaded, the jQuery plugin will then enable the shield on all form flagged with this CSS class. (Note that the shield is not enabled on `a4j:form` since it serializes its submits).
 
 You can see the shield in action when a "Request in progress" message is displayed at the top right corner of the window:
 
@@ -134,16 +132,16 @@ The shield will intercept the submit event of a form. There are cases where a fo
 
 {{#> callout type='tip' heading='h:commandLink vs. h:commandButton'}}
 
-*   `<span class="il" style="color: rgb(34,34,34);">h</span> <span style="color: rgb(34,34,34);">:</span> <span class="il" style="color: rgb(34,34,34);">commandLink</span>` <span style="color: rgb(34,34,34);">&nbsp;renders a classic HTML `a` link with some custom JSF JavaScript, bound to the click event, that obscurely submits the form in a uncommon way. Then submitting it does&nbsp;**not**&nbsp;fire the submit event.</span>
-*   <span style="color: rgb(34,34,34);">`h:commandButton`&nbsp;renders a HTML `input` tag with&nbsp;`type="submit"`&nbsp;which properly fires the submit event.</span>
+*   `h:commandLink` renders a classic HTML `a` link with some custom JSF JavaScript, bound to the click event, that obscurely submits the form in a uncommon way. Then submitting it does **not** fire the submit event.
+*   `h:commandButton` renders a HTML `input` tag with `type="submit"`which properly fires the submit event.
 
 {{/callout}}
 
-<span style="color: rgb(34,34,34);">When designing your own template, if you'd like to protect a form from double submit, use the&nbsp;</span>&nbsp;`h:commandButton`&nbsp;<span style="color: rgb(34,34,34);">.</span>
+When designing your own template, if you'd like to protect a form from double submit, use the `h:commandButton`.
 
 ## How to Locally Disable the Shield
 
-There are use cases where the shield might break the proper functioning of a form. For instance, if you have a component that needs to perform several Ajax submits. This is the case when using&nbsp;[`rich:fileupload`](http://richfileupload)&nbsp;which performs as many submits as there are files to upload. With the shield enabled, only the first file will be uploaded and the others will be ignored. To address these particular use cases, you can disable the shield on a particular form by adding the&nbsp;`disableDoubleClickShield="true"`&nbsp;attribute.
+There are use cases where the shield might break the proper functioning of a form. For instance, if you have a component that needs to perform several Ajax submits. This is the case when using [`rich:fileupload`](http://richfileupload) which performs as many submits as there are files to upload. With the shield enabled, only the first file will be uploaded and the others will be ignored. To address these particular use cases, you can disable the shield on a particular form by adding the `disableDoubleClickShield="true"` attribute.
 
 {{#> panel type='code' heading='Disabling Double Click Shield on a particular form'}}
 

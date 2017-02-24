@@ -100,13 +100,13 @@ JSF2 integrates a standard Ajax support. One tag provides Ajax functionality, it
 
 Complete documentation on the tag is available at [http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/f/ajax.html](http://docs.oracle.com/javaee/6/javaserverfaces/2.1/docs/vdldocs/facelets/f/ajax.html)
 
-Always try to use the Ajax library features to help avoiding many calls to the server (ignoreDupResponses, eventsQueue,...), and re-render only needed parts of the page. This will prevent you from problems like " [I Get an Error When I Click on Two Links Quickly]({{page space='nxdoc58' page='i-get-an-error-when-i-click-on-two-links-quickly'}}).
+Always try to use the Ajax library features to help avoiding many calls to the server (ignoreDupResponses, eventsQueue,...), and re-render only needed parts of the page.
 
 ## Submitting the Form When Hitting The "Enter" Key
 
 The browser&nbsp;`form`&nbsp;tag will natively select the first input submit button in the form: be aware that tag&nbsp;`a4j:commandLink`&nbsp;is not one of them, so you should replace it with a&nbsp;`h:commandButton`. You will have to use the&nbsp;`f:ajax` element for the submission to be done in Ajax.
 
-## <span style="color: rgb(51,51,51);">Here is an example:</span>
+## Here is an example:
 
 ```js
 <h:form id="#{quickFilterFormId}"
