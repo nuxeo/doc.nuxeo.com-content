@@ -170,7 +170,7 @@ If you have followed the Fast Track releases since Nuxeo Platform 5.6, you can r
 
 ## Installation & Configuration
 
-Follow the [Installation instruction]({{page space='admindoc58' page='installation'}}).
+Follow the [Installation instruction]({{page space='nxdoc' page='installation'}}).
 
 ### Java 7 Required
 
@@ -216,7 +216,7 @@ From Nuxeo Platform 5.7.3, EL expressions in action filters are using a more gen
 
 Content views and page providers have been in place since 5.4.2 to replace old query models and result provider farms, so old classes have been removed for 5.8.
 
-Please follow [detailed upgrade notes]({{page space='admindoc58' page='query-models-and-result-providers-migration-to-content-views-and-page-providers'}}) for these features.
+Please follow [detailed upgrade notes]({{page space='nxdoc' page='query-models-and-result-providers-migration-to-content-views-and-page-providers'}}) for these features.
 
 ## Configuration Migration
 

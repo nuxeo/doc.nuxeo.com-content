@@ -266,7 +266,7 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
     You should end up with something like this on your instance:
     ![]({{file name='conversion.png'}} ?w=450,border=true)
 
-    You can now click on&nbsp;![]({{file name='download.png' space='userdoc58' page='icons-index'}})&nbsp; on the Watermark line to download the watermarked picture:
+    You can now click on&nbsp;![]({{file name='download.png' space='userdoc' page='icons-index'}})&nbsp; on the Watermark line to download the watermarked picture:
     ![]({{file name='Watermark_nuxeo_landscape.jpeg'}} ?w=450,h=301,border=true)
 
 5.  If you need to open a&nbsp;`CoreSession` to retrieve a document, for instance the parent document which will hold the watermark text, you will need two chains, one opening a Transaction / CoreSession, and another one doing the watermarking.

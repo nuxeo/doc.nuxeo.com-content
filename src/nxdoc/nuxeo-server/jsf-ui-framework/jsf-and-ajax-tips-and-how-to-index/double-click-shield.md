@@ -127,7 +127,7 @@ history:
 ---
 {{! excerpt}}
 
-The "Double Click Shield" feature is enabled in the JSF interface and it addresses the issue described in the page [I Get an Error When I Click on Two Links Quickly]({{page space='nxdoc58' page='i-get-an-error-when-i-click-on-two-links-quickly'}}).
+The "Double Click Shield" feature is enabled in the JSF interface and it addresses the issue described in the page [I Get an Error When I Click on Two Links Quickly]({{page space='nxdoc60' page='i-get-an-error-when-i-click-on-two-links-quickly'}}).
 
 {{! /excerpt}}
 

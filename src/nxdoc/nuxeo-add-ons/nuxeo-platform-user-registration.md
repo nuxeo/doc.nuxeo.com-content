@@ -148,7 +148,31 @@ The administrators can set up some configuration directly from the **Admin** > *
 
 Possible configuration options are:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Allow New User Creation</td><td colspan="1">Enables users to invite user that don't have an account on the Platform. A new user account is then created. The new user is not included in any group by default.</td></tr><tr><td colspan="1">Force Rights Assignment</td><td colspan="1">This option is useful when user is manually created at a later time or comes from a computed group.</td></tr><tr><td colspan="1">Direct Validation If User Exists</td><td colspan="1">If a user invites a user that has already been invited to another space and so who already has a account on the Platform, then the administrators don't have to approve the invitation again. It is directly approved by the system.</td></tr><tr><td colspan="1">Local Registration Tab</td><td colspan="1">Displays a User registration requests subtab in the local **Manage** tab of a space, that displays the invitations that were done from the current space and their status.</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Field</th>
+<th colspan="1">Description</th>
+</tr>
+<tr>
+<td colspan="1">Allow New User Creation</td>
+<td colspan="1">Enables users to invite user that don't have an account on the Platform. A new user account is then created. The new user is not included in any group by default.</td>
+</tr>
+<tr>
+<td colspan="1">Force Rights Assignment</td>
+<td colspan="1">This option is useful when user is manually created at a later time or comes from a computed group.</td>
+</tr>
+<tr>
+<td colspan="1">Direct Validation If User Exists</td><td colspan="1">If a user invites a user that has already been invited to another space and so who already has a account on the Platform, then the administrators don't have to approve the invitation again. It is directly approved by the system.</td>
+</tr>
+<tr>
+<td colspan="1">Local Registration Tab</td>
+<td colspan="1">Displays a User registration requests subtab in the local **Manage** tab of a space, that displays the invitations that were done from the current space and their status.</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ## Functional Overview
 
@@ -175,7 +199,52 @@ To invite a user:
 
 **Invitation form details**
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">Email</td><td colspan="1">The email address to which the invitation will be sent.</td></tr><tr><td colspan="1">User name</td><td colspan="1">The username the invited user will use to log in.</td></tr><tr><td colspan="1">First name</td><td colspan="1">The invited user's first name.</td></tr><tr><td colspan="1">Last name</td><td colspan="1">The invited user's last name.</td></tr><tr><td colspan="1">Permission</td><td colspan="1">The access right you want to give the invited user on the space.</td></tr><tr><td colspan="1">Time Frame</td><td colspan="1">Period during which the access right given to the user will be valid.</td></tr><tr><td colspan="1">Groups</td><td colspan="1">The group(s) in which the user will be a member.</td></tr><tr><td colspan="1">Comment</td><td colspan="1">A comment for the invited user to explain why he's invited, for instance. This comment will be in the invitation email.</td></tr><tr><td colspan="1">Send me a copy</td><td colspan="1">Your email address will be in the Cc recipients of the invitation email.</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Field</th>
+<th colspan="1">Description</th>
+</tr>
+<tr>
+<td colspan="1">Email</td>
+<td colspan="1">The email address to which the invitation will be sent.</td>
+</tr>
+<tr>
+<td colspan="1">User name</td>
+<td colspan="1">The username the invited user will use to log in.</td>
+</tr>
+<tr>
+<td colspan="1">First name</td>
+<td colspan="1">The invited user's first name.</td>
+</tr>
+<tr>
+<td colspan="1">Last name</td>
+<td colspan="1">The invited user's last name.</td>
+</tr>
+<tr>
+<td colspan="1">Permission</td>
+<td colspan="1">The access right you want to give the invited user on the space.</td>
+</tr>
+<tr>
+<td colspan="1">Time Frame</td>
+<td colspan="1">Period during which the access right given to the user will be valid.</td>
+</tr>
+<tr>
+<td colspan="1">Groups</td>
+<td colspan="1">The group(s) in which the user will be a member.</td>
+</tr>
+<tr>
+<td colspan="1">Comment</td>
+<td colspan="1">A comment for the invited user to explain why he's invited, for instance. This comment will be in the invitation email.</td>
+</tr>
+<tr>
+<td colspan="1">Send me a copy</td>
+<td colspan="1">Your email address will be in the Cc recipients of the invitation email.</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 #### Inviting Several Users
 
@@ -213,7 +282,7 @@ To accept an invitation:
     You can also see all invitation requests from the **Admin** > **User Registration Requests** tab.
     ![]({{file name='review-user-invitation.png'}} ?w=600,border=true)
 2.  Click on the **Accept**&nbsp;link of the invitation to validate.
-    The invitation now has the state Accepted. Once the user has&nbsp;<span style="line-height: 21.58px;">validated his invitation by clicking a link in the email</span>, you can:
+    The invitation now has the state Accepted. Once the user has validated his invitation by clicking a link in the email, you can:
 
     *   Click on **Revive**.
         It will resend a new mail to the user to remember him he has been invited.
@@ -222,7 +291,7 @@ To accept an invitation:
     *   Click on **Validate**.
         It will finalize the invitation process.![]({{file name='accepted-user-registration.png'}} ?w=600,border=true)
 
-#### <span style="color: rgb(0,0,0);">Rejecting an Invitation</span>
+#### Rejecting an Invitation
 
 To reject an invitation:
 

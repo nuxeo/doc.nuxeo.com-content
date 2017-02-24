@@ -343,8 +343,7 @@ The Drive Mobile Edition application enables you to browse the content of the Nu
 
 When you have a network access, you can browse all the platform content (depending on your permissions). When you're offline, only synchronized content is available from your device.
 
-**To browse online
-**
+**To browse online**
 
 1.  Open the application.
     You are displayed the online Browse interface.
@@ -364,9 +363,7 @@ When you have a network access, you can browse all the platform content (dependi
     Only synchronized folders are available. You can now click on your offline folders to navigate in their content.
 
     {{#> callout type='info' }}
-
     The offline interface displays all Nuxeo Drive synchronized folders, including those synchronized on your desktop. Nuxeo Drive Mobile Edition doesn't restrict the list of synchronized folders to those synchronized from the application.
-
     {{/callout}}
 
     ![]({{file name='ios-drive-local-folder.PNG'}} ?w=650,h=487,border=true)
@@ -376,7 +373,7 @@ When you have a network access, you can browse all the platform content (dependi
 
 ### Synchronizing a folder
 
-You can only synchronize spaces on which you have [Edit or Manage everything permissions]({{page space='USERDOC58' page='Document Management+Concepts'}}#access-rights).
+You can only synchronize spaces on which you have [Edit or Manage everything permissions]({{page space='userdoc' page='managing-permissions'}}).
 
 You can synchronize folders:
 
@@ -417,7 +414,7 @@ The folder disappears from your local folders in your application but it's still
 
 ### Deleting a document
 
-When you [delete documents from the Platform]({{page space='USERDOC58' page='Deleting Content'}}), they are deleted from your local Nuxeo Drive Mobile folder on your application at the next update.
+When you [delete documents from the Platform]({{page space='userdoc' page='deleting-content'}}), they are deleted from your local Nuxeo Drive Mobile folder on your application at the next update.
 
 You can't delete a document from your device, you can only unsynchronize it.
 

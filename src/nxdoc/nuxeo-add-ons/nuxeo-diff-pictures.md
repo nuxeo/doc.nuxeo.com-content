@@ -80,7 +80,7 @@ You can compare documents in any space of the Nuxeo Platform: workspaces, sectio
 3.  Click on the&nbsp;**Compare**&nbsp;button.
     The fields for which there has been changes between the two versions are displayed in a table, with the first version's values on the left and the second version's values on the right.
     ![]({{file name='picture-diff-changes.png'}} ?w=600,border=true)
-4.  To visualize the changes on the picture, click on&nbsp;![]({{file name='action_diff.png' space='userdoc58' page='nuxeo-diff'}})&nbsp;on the right.
+4.  To visualize the changes on the picture, click on&nbsp;![]({{file name='action_diff.png' space='userdoc' page='nuxeo-diff'}})&nbsp;on the right.
     A window pops up showing what's been changed between the two versions.&nbsp;
     ![]({{file name='PictureDiff.png'}} ?w=600,border=true)
 
@@ -93,7 +93,7 @@ Select the documents:&nbsp;
 *   If the pictures are in the same workspace, use the checkboxes and click on&nbsp;**Compare**.&nbsp;
 *   If the pictures are in two different workspaces, add them to the worklist and click on&nbsp;**Compare**.
 
-If you want to visualize the content changes, click on the icon&nbsp;![]({{file name='action_diff.png' space='userdoc58' page='nuxeo-diff'}})&nbsp;on the right.&nbsp;A window pops up showing the differences between the two documents.
+If you want to visualize the content changes, click on the icon&nbsp;![]({{file name='action_diff.png' space='userdoc' page='nuxeo-diff'}})&nbsp;on the right.&nbsp;A window pops up showing the differences between the two documents.
 
 &nbsp;
 
