@@ -158,7 +158,7 @@ history:
         date: '2014-11-06 12:21'
         message: ''
         version: '1'
-next_link: /nxdoc/getting-started-with-nuxeo-generator
+next_link: /nxdoc/getting-started-with-nuxeo-cli
 ---
 This page explains how to start customizing the Nuxeo Platform using Nuxeo Studio. It will guide you through the steps to:
 
@@ -325,6 +325,6 @@ Here we want to create a document type named "Contract" that will hold specific 
 
 You are now ready to use Nuxeo Studio! You can:
 
-*   Go to the next step of this quick start, so as to discover how you can [contribute new features using Java code]({{page page='getting-started-with-nuxeo-generator'}}) to the server.
+*   Go to the next step of this quick start, so as to discover how you can [contribute new features using Java code]({{page page='getting-started-with-nuxeo-cli'}}) to the server.
 *   Go deeper with learning more of Nuxeo Studio and Nuxeo Platform, by following a [complete tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}}).
 {{/callout}}

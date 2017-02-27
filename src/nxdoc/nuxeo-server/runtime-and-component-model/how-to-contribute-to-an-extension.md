@@ -222,7 +222,7 @@ Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](htt
 
 Contributing to an extension using Nuxeo Generator requires more steps that using Nuxeo Studio.
 
-Here we assume that you have installed [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) and follow the [Getting Started guide]({{page page='getting-started-with-nuxeo-generator'}}).
+Here we assume that you have installed [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) and follow the [Getting Started guide]({{page page='getting-started-with-nuxeo-cli'}}).
 
 ### Creating Your XML Extension in Nuxeo Generator
 

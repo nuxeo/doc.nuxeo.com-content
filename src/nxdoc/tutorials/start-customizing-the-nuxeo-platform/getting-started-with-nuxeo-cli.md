@@ -1,12 +1,12 @@
 ---
-title: Getting Started with Nuxeo Generator
+title: Getting Started with Nuxeo CLI
 review:
     comment: ''
     date: '2017-01-17'
     status: ok
 details:
     howto:
-        excerpt: Learn how to start working with Nuxeo Generator.
+        excerpt: Learn how to start working with Nuxeo CLI.
         level: Intermediate
         tool: 'Nuxeo Generator, Nuxeo Studio'
         topics: 'Automation, Layout'

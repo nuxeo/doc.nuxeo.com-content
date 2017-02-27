@@ -104,7 +104,7 @@ history:
         version: '1'
 
 ---
-In this how-to, we consider you already [built your own project]({{page page='getting-started-with-nuxeo-generator'}}) with the necessary commands in the `deployment-fragment.xml` to copy the `web` resources to `$NUXEO/nxserver/nuxeo.war`. As an example, we will explain how to install the [textcolor plug-in](http://www.tinymce.com/wiki.php/Plugin:textcolor).
+In this how-to, we consider you already [built your own project]({{page page='getting-started-with-nuxeo-cli'}}) with the necessary commands in the `deployment-fragment.xml` to copy the `web` resources to `$NUXEO/nxserver/nuxeo.war`. As an example, we will explain how to install the [textcolor plug-in](http://www.tinymce.com/wiki.php/Plugin:textcolor).
 
 # Adding the TinyMCE textcolor Plug-In
 
