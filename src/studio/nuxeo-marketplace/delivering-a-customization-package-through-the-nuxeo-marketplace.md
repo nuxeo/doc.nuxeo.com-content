@@ -20,7 +20,6 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/qIkZAQ'
     source_link: >-
         /display/Studio/Delivering+a+Customization+Package+through+the+Nuxeo+Marketplace
-hidden: true
 history:
     -
         author: Solen Guitter
