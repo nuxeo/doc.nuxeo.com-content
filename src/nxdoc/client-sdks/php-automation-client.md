@@ -112,65 +112,49 @@ history:
         version: '1'
 
 ---
-The Nuxeo Automation PHP Client is a PHP client library for Nuxeo Automation API.
+The [Nuxeo Automation PHP Client](https://github.com/nuxeo/nuxeo-automation-php-client) is a PHP client library for Nuxeo Automation API.
 
-[Github Website](https://github.com/nuxeo/nuxeo-automation-php-client)
+It is compatible with Nuxeo Platform LTS 2015, LTS 2016 and latest Fast Tracks.
 
 ## Path to the PHP Client (v1.5)
 
-Version 1.5.0 introduces a new fluent API:
+Version 1.5.0 introduces a new fluent API. The old API is still available. Thus you can upgrade the library to the 1.5 version and access the new API and features without breaking your application.
 
-version < 1.5.0
-
+{{#> panel type='code' heading='version < 1.5.0'}}
 ```php
 $client = new \Nuxeo\Automation\Client\NuxeoPhpAutomationClient('http://localhost:8080/nuxeo/site/automation');
 $session = $client->getSession('Administrator', 'Administrator');
 $answer = $session->newRequest("Document.Query")->set('params', 'query', "SELECT * FROM Document)->setSchema($propertiesSchema)->sendRequest();
 $documentsArray = $answer->getDocumentList();
 ```
+{{/panel}}
 
-version >= 1.5.0
-
+{{#> panel type='code' heading='version >= 1.5.0'}}
 ```php
 $client = new \Nuxeo\Client\Api\NuxeoClient('http://localhost:8080/nuxeo', 'Administrator', 'Administrator');
 $documents = $client->schemas("*")->automation('Document.Query')->param('query', 'SELECT * FROM Document')->execute(Documents::className);
 ```
-
-{{#> callout type='note' }}
-
-Until this new version, the old API will still be available. Thus you can upgrade the library to the 1.5 (transition) version and access the new API and features without breaking your application.
-
-{{/callout}}
+{{/panel}}
 
 ## Getting Started
 
 ### Library import
 
-**Manual install**
-
-* [Nuxeo Automation PHP Client 1.1.1](https://github.com/nuxeo/nuxeo-automation-php-client/archive/1.1.1.tar.gz).
-* [Nuxeo Automation PHP Client 1.5.0-rc3](https://github.com/nuxeo/nuxeo-automation-php-client/archive/1.5.0-rc3.tar.gz).
-
-**Import Nuxeo Automation PHP Client with:**
+Download the latest stable release [Nuxeo Automation PHP Client 1.5.0](https://github.com/nuxeo/nuxeo-automation-php-client/archive/1.5.0.tar.gz).
 
 Composer:
 
 ```
   "require": {
-    "nuxeo/nuxeo-automation-php-client": "1.5.0-rc3"
+    "nuxeo/nuxeo-automation-php-client": "~1.5.0"
   }
 ```
 
 ### Usage
 
-{{#> callout type='note' }}
+#### Creating a Client
 
 The following documentation and samples applies for the 1.5 and newer versions. Calls to the Automation API for previous versions of the client will require adjustments.
-
-{{/callout}}
-
-
-#### Creating a Client
 
 For a given `url`:
 
@@ -186,9 +170,24 @@ use Nuxeo\Client\Api\NuxeoClient;
 $client = new NuxeoClient($url, 'Administrator', 'Administrator');
 ```
 
+Options:
+
 ```php
 // For defining all schemas
 $client = $client->schemas("*");
+```
+
+```php
+// For changing authentication method
+
+use Nuxeo\Client\Api\Auth\PortalSSOAuthentication;
+use Nuxeo\Client\Api\Auth\TokenAuthentication;
+
+// PortalSSOAuthentication with nuxeo-platform-login-portal-sso
+$client = $client->setAuthenticationMethod(new PortalSSOAuthentication($secret, $username));
+
+// TokenAuthentication
+$client = $client->setAuthenticationMethod(new TokenAuthentication($token));
 ```
 
 #### APIs
@@ -213,8 +212,8 @@ $result = $operation->execute(Documents::className);
 ```
 
 ```php
-use Nuxeo\Client\Api\Objects\Blob;
-use Nuxeo\Client\Api\Objects\Blobs;
+use Nuxeo\Client\Api\Objects\Blob\Blob;
+use Nuxeo\Client\Api\Objects\Blob\Blobs;
 
 // To upload|download blob(s)
 
@@ -234,5 +233,4 @@ $resultBlob = $client->automation('Document.GetBlob')->input('folder/file')->exe
 The main exception type is `Nuxeo\Client\Internals\Spi\NuxeoClientException` and contains:
 
 - The HTTP error status code (666 for internal errors)
-
 - An info message
