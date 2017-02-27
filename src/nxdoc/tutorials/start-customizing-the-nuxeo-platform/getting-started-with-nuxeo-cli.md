@@ -8,12 +8,12 @@ details:
     howto:
         excerpt: Learn how to start working with Nuxeo CLI.
         level: Intermediate
-        tool: 'Nuxeo Generator, Nuxeo Studio'
+        tool: 'Nuxeo CLI, Nuxeo Studio'
         topics: 'Automation, Layout'
 labels:
     - lts2016-ok
     - howto
-    - generator
+    - nuxeo-cli
     - lts2016-ok
 toc: true
 version_override:
@@ -432,15 +432,15 @@ Here we want to add some server side Java logic that will update the contract's 
 * npm 2.12.0+
 
 
-## Step 1 - Install Nuxeo Generator
+## Step 1 - Install Nuxeo CLI
 
 From a command line prompt, type:
 
 ```bash
-$ npm install -g yo generator-nuxeo
+$ npm install -g nuxeo-cli
 ```
 
-The Nuxeo Generator lets you easily scaffold common Nuxeo components like empty projects, Packages, Automation Operations, Services... This saves you time writing boilerplate code to focus on your code instead of the structure.
+Nuxeo CLI lets you easily scaffold common Nuxeo components like empty projects, Packages, Automation Operations, Services... This saves you time writing boilerplate code to focus on your code instead of the structure.
 
 We'll use it to generate a new Nuxeo project and an operation.
 
@@ -468,7 +468,7 @@ From a command line:
 2.  Generate the project structure.
 
     ```bash
-    $ yo nuxeo
+    $ nuxeo bootstrap
     ```
 
 3.  Fill in the prompted parent project creation ("Multi module"):
@@ -532,7 +532,7 @@ From a command line:
 1.  In a terminal, generate an operation code template:
 
     ```bash
-    $ yo nuxeo operation
+    $ nuxeo bootstrap operation
     ```
 
 2.  You are prompted for a few details:

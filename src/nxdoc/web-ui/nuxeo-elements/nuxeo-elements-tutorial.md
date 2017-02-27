@@ -32,7 +32,7 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 *   **[Yeoman](http://yeoman.io/)**  is an opinionated generator that helps kickstart projects. Depending on your needs there are two ways to use it:
 
     *   Under the hood with [Polymer CLI](https://github.com/Polymer/polymer-cli) to scaffold your standalone application. Your application is **hosted outside** the Nuxeo Server and uses it as a service
-    *   Use the [Nuxeo Generator](https://github.com/nuxeo/generator-nuxeo) to scaffold your application **as a Nuxeo Bundle** and deploy it on a Nuxeo Server. Your application is **hosted inside** the Nuxeo Server as a bundle and uses it as a backend.
+    *   Use the [Nuxeo CLI](https://github.com/nuxeo/nuxeo-cli) to scaffold your application **as a Nuxeo Bundle** and deploy it on a Nuxeo Server. Your application is **hosted inside** the Nuxeo Server as a bundle and uses it as a backend.
 
 ## Scaffolding
 
@@ -44,14 +44,14 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
     $ npm install -g gulp
     ```
 
-2.  Install yeoman and nuxeo generator and scaffold the project:
+2.  Install Nuxeo CLI and scaffold the project:
     ```bash
-    $ npm install -g yo generator-nuxeo
+    $ npm install -g nuxeo-cli
     $ mkdir -p nuxeo-elements-sample && cd $_
-    $ yo nuxeo polymer && npm install && bower install
+    $ nuxeo bootstrap polymer package
     ```
 
-    The Nuxeo Generator (`generator-nuxeo`) will ask you several questions about the artifact name, etc.
+    The Nuxeo CLI will ask you several questions about the artifact name, etc.
 
 3.  Run gulp to run the application and see what has been generated.
 
@@ -70,7 +70,7 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 
     {{#> callout type='info' }}
 
-    Do not hesitate to take a look at the others templates available with [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo), especially the `Package Generator` that helps you package your bundles as a [Nuxeo Package]({{page page='creating-nuxeo-packages'}}).
+    Do not hesitate to take a look at the others templates available with [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli), especially the `Package Generator` that helps you package your bundles as a [Nuxeo Package]({{page page='creating-nuxeo-packages'}}).
 
     {{/callout}}
 

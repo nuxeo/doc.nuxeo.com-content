@@ -117,7 +117,7 @@ For more information about the bundle deployment, do not hesitate to read the pa
 <div class="column medium-6">
 {{#> panel heading='Related How-Tos'}}
 
-- [Getting Started with Nuxeo Generator]({{page page='getting-started-with-nuxeo-cli'}})
+- [Getting Started with Nuxeo CLI]({{page page='getting-started-with-nuxeo-cli'}})
 - [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}})
 - [How-To Index]({{page page='how-to-index'}})
 

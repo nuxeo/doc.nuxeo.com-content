@@ -29,18 +29,18 @@ resources to understand how to create and deploy a bundle:
 
 ### Creating an Empty Bundle
 
-To make our life easier, we'll use [Nuxeo Generator]({{page page='getting-started-with-nuxeo-cli'}}). Please
+To make our life easier, we'll use [Nuxeo CLI]({{page page='getting-started-with-nuxeo-cli'}}). Please
 make sure you follow the respective [guide]({{page page='getting-started-with-nuxeo-cli'}}) before proceeding.
 
-Let's start by installing Nuxeo Generator and scaffolding a new bundle:
+Let's start by installing Nuxeo CLI and scaffolding a new bundle:
 
 ```bash
-$ npm install -g yo generator-nuxeo
+$ npm install -g nuxeo-cli
 $ mkdir -p nuxeo-customization-sample && cd $_
-$ yo nuxeo
+$ nuxeo bootstrap
 ```
 
-The generator will then ask you a few questions (for which the default values will suffice). We'll assume that the parent ID
+Nuxeo CLI will then ask you a few questions (for which the default values will suffice). We'll assume that the parent ID
 is `nuxeo-customization-sample`, the project ID is `nuxeo-customization-sample-core` and the project version is
 `1.0-SNAPSHOT`, and that the following folder hierarchy was generated:
 
