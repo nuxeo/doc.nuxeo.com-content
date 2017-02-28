@@ -325,7 +325,7 @@ As you can see in this example, the computer group statically returns `myTestGro
 1.  Bootstrap an empty project with [Nuxeo CLI]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-cli'}})
 2.  Make sure the project is correctly configured to be hot reloaded:
 ```
-yo nuxeo:hotreload configure
+nuxeo hotreload configure
 ```
 3.  Hot reload your project.
 4.  Connect as Administrator into your Nuxeo instance.

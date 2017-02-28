@@ -10,7 +10,7 @@ details:
             Learn how to set a default date on a field at document creation
             using Nuxeo Studio's  event handlers  and  automation chains.
         level: Advanced
-        tool: 'Studio, Nuxeo Generator'
+        tool: 'Studio, Nuxeo CLI'
         topics: 'Layout, Event'
 labels:
     - content-review-lts2016

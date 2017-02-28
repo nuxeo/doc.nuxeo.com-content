@@ -353,11 +353,11 @@ You can see that most of the files listed above are optional or generated. So fo
 
 ## Create an Empty Nuxeo Package
 
-The easiest way to create a package is to use the [Nuxeo Code Generator](https://www.npmjs.com/package/generator-nuxeo).
+The easiest way to create a package is to use the [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli).
 
 ```
 $ mkdir my-project && cd $_
-$ yo nuxeo package
+$ nuxeo bootstrap package
 ```
 
 * **my-project/src/main/resources/package.xml** is your [Package Manifest]({{page page='package-manifest'}}).

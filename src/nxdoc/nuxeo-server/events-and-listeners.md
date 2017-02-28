@@ -203,7 +203,7 @@ Several event listeners exist by default in the nuxeo platform, for instance:
 
 {{#> callout type='tip' }}
 
-Check our [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) to bootstrap your Event Listener.
+Check our [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli) to bootstrap your Event Listener.
 
 {{/callout}}
 

@@ -8,7 +8,7 @@ details:
     howto:
         excerpt: Learn how to override a seam component.
         level: Advanced
-        tool: 'Nuxeo Generator, code'
+        tool: 'Nuxeo CLI, code'
         topics: Seam JSF Webapp
 labels:
     - content-review-lts2016
@@ -78,7 +78,7 @@ history:
 ---
 {{! excerpt}}
 
-This how-to considers you master the creation of the Java plug-in, and you know where to create a Java class. Otherwise please refer to the page [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}}) or use the Nuxeo Generator.
+This how-to considers you master the creation of the Java plug-in, and you know where to create a Java class. Otherwise please refer to the page [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}}) or use the [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli).
 
 {{! /excerpt}}
 

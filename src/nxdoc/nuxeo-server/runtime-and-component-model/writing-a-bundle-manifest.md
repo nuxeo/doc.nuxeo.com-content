@@ -185,7 +185,7 @@ This page gives some rules for writing a bundle's manifest.
 {{! /excerpt}} 
 {{#> callout type='info' }}
 
-Check our [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) to bootstrap your Bundle.
+Check our [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli) to bootstrap your Bundle.
 
 {{/callout}}
 
