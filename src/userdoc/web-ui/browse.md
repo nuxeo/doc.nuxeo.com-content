@@ -145,10 +145,6 @@ Although metadata are not mandatory, filling them in will make your documents ea
 2. Edit the metadata that you want
 3. Once it is done, click on **SAVE**
 
-### Bulk Editing
-
-You can use [Nuxeo Spreadsheet]({{page space='nxdoc' page='nuxeo-spreadsheet'}}) to edit several documents at the same time in your repository as if you were in a spreadsheet-like grid, like copy and paste by dragging the cell's value.
-
 ## Exporting Content
 Users can export documents on their computer. It is possible to export:
 
