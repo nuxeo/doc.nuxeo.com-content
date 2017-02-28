@@ -21,11 +21,9 @@ To create personal documents, follow the same procedure like for [any other docu
 
 A **My Favorites** folder lets you access to your favorites and manage them. Read the [Favorites]({{page page='favorites'}}) documentation page for more information.
 
-SCREENSHOT
-
 ## Access to Collections
 
 A **My Collections** folder lets you access to the collections you have access to and the ones you created.
 Read the [Collections]({{page page='collections-web-ui'}}) documentation page for more information.
 
-SCREENSHOT
+![]({{file name='personal-space-web-ui.png' page='collections-web-ui'}} ?w=600,border=true)

@@ -613,7 +613,7 @@ Draft version 0.0 is not archived and the + behavior described above does not ap
 {{/callout}}
 
 ### Nuxeo Drive Versioning Policy
-
+{{! multiexcerpt name='drive-versioning-policy'}}
 When you edit a document, either from your Nuxeo Drive folder or using the online editing, a [new version]({{page space='USERDOC' page='Editing Content'}}) is automatically created on the Platform and the version number is updated:
 
 *   If you are not the last contributor of the document
@@ -622,13 +622,14 @@ When you edit a document, either from your Nuxeo Drive folder or using the onlin
 Then, if your document's version was 1.0 before modification for instance, it automatically becomes 1.1+ after you edited it from the Nuxeo Drive folder and the 1.1 is archived as it is created. Otherwise, a simple modification is done on the document and logged in the document's History.
 
 See the page [How to Customize Nuxeo Drive Versioning Policy]({{page space='NXDOC' page='How to+Customize+Nuxeo+Drive+Versioning+Policy'}}) to change this behavior.
+{{! /multiexcerpt}}
 
 ### Drag and Drop Versioning Policy
-
+{{! multiexcerpt name='dnd-versioning-policy'}}
 When you drag and drop a document in a workspace its version is 0.0, like every new document created on your platform.
 
 The drag and drop versioning policy uses the minor version incrementation so, if you edit one these documents in local and reupload it with another drag and drop, the version number becomes 0.1+, then 0.2+, etc.
-
+{{! /multiexcerpt}}
 {{! /multiexcerpt}}
 
 ## {{> anchor 'relations'}}Relations

@@ -158,9 +158,9 @@ Only administrators and power users can modify other users' password. However ev
 When you use an external directory for users management, the **Change password** button is not displayed as you cannot edit your password.
 {{/callout}}
 
-SCREENSHOT
-
 To modify a user's password, go to the **Administration** menu > **Users & Groups** and click on the **CHANGE PASSWORD** button.
+
+![]({{file name='change-password-web-ui.png'}} ?w=350,border=true)
 
 #### Deleting a User
 
@@ -243,7 +243,7 @@ Only administrators and power users can modify groups.
 
 Modifying groups most often consists in adding or removing members of the group. The name of the group cannot be changed.
 
-SCREENSHOT
+![]({{file name='edit-group-web-ui.png'}} ?w=350,border=true)
 
 To edit a group, go to the **Administration** menu > **Users & Groups**. Search a group and click on its name to open its card. Click on the **Edit** tab, modify the group's members and click on the **Save** button. The users who are no longer members of the group are denied group's permissions. However they still have their individual permissions.
 
@@ -261,12 +261,8 @@ Only administrators and power users can consult and manage vocabularies.
 
 Vocabularies are the lists of labels used in the application, for instance in drop down lists. A vocabulary is composed of several entries, that are the options in the drop down lists. Some vocabularies are hierarchical, i.e. they have several levels. For instance, the **Subjects** metadata uses a two level vocabulary called `I10nsubjects`. First level is **Topic**. Second level is **Subtopic** and each entry is linked to a **Topic** entry.
 
-SCREENSHOT
-
 {{#> callout type='tip' }}
-
 Although the `I10nsubjects` vocabulary is used in most places to populate the Subject list (on edit forms and search forms for instance), the virtual navigations used the older "topic" and "subtopic" vocabularies. You need to use the same ID in all vocabularies to make the virtual navigations work.
-
 {{/callout}}
 
 Administrators and power users can only modify or delete vocabularies. They cannot create a new vocabulary from the user interface.
@@ -277,12 +273,10 @@ All vocabularies editable from the user interface are listed in the vocabularies
 
 To consult a vocabulary or its entries click on the **Administration** menu > **Vocabularies** submenu and select the vocabulary you want to consult in the drop down list.
 
-SCREENSHOT
+![]({{file name='vocabularies-web-ui.png'}} ?w=600,border=true)
 
 {{#> callout type='info' }}
-
 By default, the labels of default vocabularies entries are the IDs of labels in .properties files of source code.
-
 {{/callout}}
 
 ### Vocabulary Entries Parameters
@@ -293,7 +287,7 @@ By default, the labels of default vocabularies entries are the IDs of labels in 
 
 To add an entry to a vocabulary,click on the **Add Entry** button of the vocabulary, fill in the entry creation form and click on the **Save** button.
 
-SCREENSHOT
+![]({{file name='new-entry-web-ui.png'}} ?w=250,border=true)
 
 The new entry is displayed in the list of the vocabulary entries. It is immediately available in the corresponding drop down list in the user interface.
 

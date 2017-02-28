@@ -216,7 +216,8 @@ At the top of the main view toolbars are displayed according to the content bein
 
 ![]({{file name='results_toolbar.png'}} ?w=77,border=true)
 
-A create button ![]({{file name='create_button.png'}} ?w=25) is also permanently displayed in the bottom right corner of the main view the to let you create or import documents anywhere in the application.
+A create button ![]({{file name='create_button.png'}} ?w=20) is also permanently displayed at the bottom right corner of the main view the to let you create or import documents anywhere in the application.
+
 
 {{! /multiexcerpt}}
 
