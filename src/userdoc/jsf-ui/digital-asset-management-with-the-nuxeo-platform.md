@@ -200,7 +200,7 @@ It is possible to convert the video to various formats from the Web UI user inte
 To convert the video, click on&nbsp;![]({{file name='download.png' space='userdoc' page='icons-index'}}) corresponding to the format you want.
 
 #### Browsing Assets
-
+{{! multiexcerpt name='assets-search'}}
 Once DAM installed and assets documents created, a new search type is displayed in the left menu, the `Assets` search. This search will let you search by assets metadata, such as:
 - Type
 - Format
@@ -216,11 +216,12 @@ The Assets search form offers several search criteria, that you can associate to
 
 **To search documents using detailed criteria:**
 
-* Click on the `Assets` tab.
-* Fill in the form with your criteria and/or select the search criteria corresponding to your needs.
+1. Click on the `Assets` tab.
+2. Fill in the form with your criteria and/or select the search criteria corresponding to your needs.
 <br/>
   The search results will be automatically updated according to the criteria selected.
 
+{{! /multiexcerpt}}
 {{! /multiexcerpt}}
 
 <div class="row" data-equalizer data-equalize-on="medium">

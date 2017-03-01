@@ -74,9 +74,7 @@ NXQL searches cannot be saved.
 
 ## Saving a Search
 
-When you save a search, you save its criteria. This means that the results displayed when you reuse the search may be different from the results at the time you saved the search, as the content of the application may (and probably will) have changed. Saved searches also include the results columns and sort criteria selected when the search was saved.
-
-You can save as many searches you need: Click on the **Save as** button when you are satisfied with your query and results. Then give your search a title and confirm save.
+{{multiexcerpt 'saved-searches' page='search'}}
 
 ![]({{file name='save-search-popup.png'}} ?w=350,border=true)
 
