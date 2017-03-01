@@ -1,5 +1,6 @@
 ---
 title: Managing Permissions
+description: Depending on the document you are on, you can be granted different permissions and be allowed different actions on the document.
 review:
     comment: ''
     date: '2017-01-04'
@@ -7,7 +8,7 @@ review:
 toc: true
 labels:
     - permissions
-tree_item_index: 100
+tree_item_index: 200
 ---
 {{{multiexcerpt 'permissions-without-purge' page='managing-permissions'}}}
 

@@ -1,5 +1,6 @@
 ---
 title: Managing Permissions
+description: Depending on the document you are on, you can be granted different permissions and be allowed different actions on the document.
 review:
     comment: ''
     date: '2017-01-26'
