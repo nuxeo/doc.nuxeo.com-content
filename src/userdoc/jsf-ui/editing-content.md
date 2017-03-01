@@ -589,40 +589,13 @@ When you edit a document, you can decide to save your modifications as a new ver
 
 You have several options regarding the versioning of your document.
 
-Every document holds a version number, which is a piece of information about the evolution of the document. A version number (V.v) is composed of a major version number (V) and a minor version number (v). When a document is created, its version number is 0.0\. Minor version increment are used for secondary changes. Major version increment is usually reserved to significant modifications.
-
 ![]({{file name='version-update.png'}} ?w=297,h=91,border=true)
 
-Let's say that your current document version is 0.1:
-
-*   You can save modifications without creating a new version of the document, as it is not yet ready. The 0.1 version of the document has been modified, so its version number becomes 0.1+ (the + indicates to other users that version 0.1 has been modified).
-
-    {{#> callout type='info' }}
-
-    If you haven't actually done any modification on the document when you click **Save**, the version remains 0.1, you are not added to the contributors of the document and the last modification time is not updated.
-
-    {{/callout}}
-*   You can save the modifications in a new version of the document. The version number will then be 0.2 if you increment minor version, or 1.0 if you save modifications in a major version. The newly created version is automatically archived in the **History** tab so it's not lost when users will edit it.
-
-{{#> callout type='info' heading='Version number 0.0'}}
-
-When a document is created, its version number is 0.0. This is considered as a draft of the document, which will need to be saved into a first version, either minor or major.
-
-Draft version 0.0 is not archived and the + behavior described above does not apply to 0.0 draft.
-
-{{/callout}}
+{{{multiexcerpt 'versioning-example' page='browse'}}}
 
 ### Nuxeo Drive Versioning Policy
-{{! multiexcerpt name='drive-versioning-policy'}}
-When you edit a document, either from your Nuxeo Drive folder or using the online editing, a [new version]({{page space='USERDOC' page='Editing Content'}}) is automatically created on the Platform and the version number is updated:
 
-*   If you are not the last contributor of the document
-*   Or if your last edit is more than an hour ago
-
-Then, if your document's version was 1.0 before modification for instance, it automatically becomes 1.1+ after you edited it from the Nuxeo Drive folder and the 1.1 is archived as it is created. Otherwise, a simple modification is done on the document and logged in the document's History.
-
-See the page [How to Customize Nuxeo Drive Versioning Policy]({{page space='NXDOC' page='How to+Customize+Nuxeo+Drive+Versioning+Policy'}}) to change this behavior.
-{{! /multiexcerpt}}
+{{multiexcerpt 'drive-versioning-policy' page='browse'}}
 
 ### Drag and Drop Versioning Policy
 {{! multiexcerpt name='dnd-versioning-policy'}}
