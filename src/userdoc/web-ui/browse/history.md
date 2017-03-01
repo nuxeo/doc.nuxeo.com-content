@@ -9,7 +9,9 @@ labels:
     - history
 tree_item_index: 200
 ---
-The **History** tab of a document gives you access to the audit trail of the document and its versions, thus ensuring the traceability of documents.
+{{! excerpt}}
+The **History** tab of a document gives you access to the audit trail of the document, thus ensuring the traceability of documents.
+{{! /excerpt}}
 
 All the actions that are done on documents are registered in the document's audit trail in the history tab, with several information, such as the date and time, the user, the comment, etc.
 
