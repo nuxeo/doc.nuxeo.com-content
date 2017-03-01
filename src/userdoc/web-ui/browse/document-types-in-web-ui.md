@@ -1,6 +1,6 @@
 ---
 title: Document Types in Web UI
-description:
+description: The Nuxeo Platform offers different document types such as workspaces, files, notes, pictures, etc.
 review:
     comment: ''
     date: '2017-01-04'
@@ -8,16 +8,19 @@ review:
 toc: true
 labels:
     - history
-tree_item_index: 200
+tree_item_index: 100
 ---
 ## Domain
 
+{{! multiexcerpt name='definition-domain'}}
 Sections, workspaces and templates are grouped in **domains**. A domain can be considered as a mini-application in Nuxeo or a root in the application. Typically, you can use domains to open the application to two or more very different populations of users. For instance, you can have an "intranet" domain and an "extranet" domain. Domains can be totally independent or not, depending on the permissions you set on each domain.
+{{! /multiexcerpt}}
 
 ## Section
 
+{{! multiexcerpt name='definition-section'}}
 When documents are finished and ready, they are published in **sections**. Traditionally opened to a wider audience than workspaces, sections are dedicated to content distribution and communication and are designed for content consultation. That is why users cannot change documents (edit or move them) in sections: documents published in sections are frozen versions of workspace documents.
-
+{{! /multiexcerpt}}
 
 ## Workspace
 
@@ -25,27 +28,30 @@ When documents are finished and ready, they are published in **sections**. Tradi
 
 ### Folder
 
-In workspaces, you can create and manage your documents in folders. A folder works like a workspace, but the documents available for creation are limited. In a folder, you can create: Notes, Files, Collections and Sub-folders.
-
-{{! excerpt}}
+{{! multiexcerpt name='definition-folders-types'}}
+In workspaces, you can create and manage your documents in folders. A folder works like a workspace, but the documents available for creation are limited. In a folder, you can create: notes, files, collections and sub-folders.
 
 There are two types of folders: regular folders and ordered folders. The difference between the two folder types is the way content is sorted.
-
-{{! /excerpt}}
+{{! /multiexcerpt}}
 
 **Regular Folders**
 
-Regular folders, called "Folders", have the same behavior as workspaces. In a regular folder, documents are sorted on the title by default. You can change the sort criterion by clicking on the content table columns title. You can thus sort them on their state, author, etc. In a folder, you can:
+{{! multiexcerpt name='definition-folder'}}
+Regular folders, called "Folders", have the same behavior as workspaces. In a regular folder, documents are sorted on the title by default. You can change the sort criterion by clicking on the content table columns title. You can thus sort them on their state, author, etc.
+{{! /multiexcerpt}}
 
-*   [Create documents]({{page page='browse'}}#creating-content) and do all the actions available on them (edit, approve, manage relations, etc),
-*   [Manage permissions]({{page page='permissions'}}),
-*   [Subscribe to and manage alerts]({{page page='browse#alerts'}}),
-*   [Manage the folder's trash]({{page page='browse'}}#deleting-content).
+In a folder, you can:
+
+*   [Create documents]({{page page='browse'}}#creating-content) and do all the actions available on them (edit, approve, manage relations, etc.)
+*   [Manage permissions]({{page page='permissions'}})
+*   [Subscribe to alerts]({{page page='browse#alerts'}})
+*   [Manage the folder's trash]({{page page='browse'}}#deleting-content)
 
 Like in a workspace, you can use drag & drop to create content in a folder.
 
 **Ordered Folders**
 
+{{! multiexcerpt name='ordered-folders'}}
 In an ordered folder, documents are manually sorted. So, the orders in which documents are listed in the folder doesn't depend on one of its properties (version, author, etc); you decide where it should be displayed in the list. When a document is created, it is added at the end of the list. It is not possible to sort documents automatically by clicking on the columns titles in an ordered folder.
 
 An ordered folder has the same presentation as a regular folder, but it has some additional buttons below the content table:
@@ -62,28 +68,28 @@ To change the content's order, select a document using the checkbox on the left 
 You can move one document at a time. If you select more than one document, the move buttons will deactivate.
 
 {{/callout}}
+{{! /multiexcerpt}}
 
 ### File
 
-{{! excerpt}}
-
+{{! multiexcerpt name='definition-file'}}
 A file document is a basic binary container and is composed of an attached file that you upload on the application. You can upload files of any format.
-
-{{! /excerpt}}
 
 A file is composed of:
 
 *   A title (mandatory),
 *   A description (optional),
 *   An attached file.
+{{! /multiexcerpt}}
 
 ![]({{file name=''}})
 
 **To create a file**, in a workspace, click on ![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=20). On the **Create** popup, click on the desired document. Fill in the document's creation form and click on **Create**.
 
-When the file is created, users can enhance it by [filling its metadata]({{page page='browse'}}#editing-content), adding attached files on it.
+When the file is created, users can enhance it by [filling its properties]({{page page='browse'}}#editing-content), adding attached files on it.
 
 ### Note
+
 The note is a basic rich text container that consists in a text displayed in the **View** tab of the document. The note is usually created using the integrated rich editor, displayed in the note creation form. This editor enables layout modifications on the text.
 
 SCREENSHOT
@@ -94,10 +100,10 @@ A note is composed of the fields below:
 
 Fields | Description
 --- | ---
-Title | Note's title
-Description | Text that explains what the note is about.
-Content | Text of the note created using a rich text editor.
-Format | Format of the automatically created file used to export notes from the Nuxeo Platform.
+Title | The note's title
+Description | The text that explains what the note is about.
+Content | The text of the note created using the rich text editor.
+Format | The format of the automatically created file used to export notes from the Nuxeo Platform.
 
 **To create a note**, in a workspace, click on ![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=20). On the **Create** popup, click on the desired document. Fill in the document's creation form and click on **Create**.
 
@@ -117,27 +123,33 @@ In the **View** tab of the document concerned, click on ![]({{file name='delete_
 
 {{#> callout type='note' heading='Limitations'}}
 - Attached files are not synchronized with [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}).
-- There is no versioning option for the attachments. This means that you need to edit the document and increment its version manually after you updated attachments to make sure they are saved in a new version of the document.
 {{/callout}}
 
 ### Picture
 
-Pictures are specific files. To take into account the specificities of pictures, their Summary tab shows additional pieces of information, such as:
+Pictures are specific files. To take into account the specificities of pictures, their View shows additional pieces of information, such as:
 
-Rotate actions
-The picture's EXIF metadata
-Additional picture views
+- Rotate actions
+- The picture's EXIF metadata
+- Additional picture views
+
+![]({{file name='picsMetadata-webui.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
+
 For more information about picture document, take a look to the [Digital Asset Management page]({{page version='' space='nxdoc' page='digital-asset-management-dam'}}).
 
 ### Video
 
+{{! multiexcerpt name='definition-video'}}
 Video is a document types dedicated to the management of videos files. It provides the following specific features: A player to view the video from the application, a storyboard to navigate in the video and alternative video formats.
 
-For more information about video document, take a look to the [Digital Asset Management page]({{page version='' space='nxdoc' page='digital-asset-management-dam'}}).
+![]({{file name='video_document_type-webui.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
+
+For more information about video document, take a look to the [Digital Asset Management page]({{page page='digital-asset-management-with-the-nuxeo-platform'}}).
+{{! /multiexcerpt}}
 
 ### Audio
 
-Audio is a document types dedicated to audio files management. It provides a player from the document Summary tab to listen to it from the application.
+Audio is a document types dedicated to audio files management. It provides a player from the document View to listen to it from the application.
 
 Audio documents can be [created and edited]({{page page='browse'}}#editing-content) like any other document type. They don't have any specific tab or action available.
 
@@ -147,8 +159,8 @@ For more information about audio document, take a look to the [Digital Asset Man
 
 Templates are the easiest way to automate the creation of workspace tree structures. This is useful in many cases, for example when:
 
-You have many workspaces to create and want them to follow a certain structure of Folders, Files, or any type of documents.
-You want to keep a consistency among different workspaces that users will create. For example, you may want each team's workspace to have a mail folder, a "projects" workspace, etc.
+- You have many workspaces to create and want them to follow a certain structure of Folders, Files, or any type of documents.
+- You want to keep a consistency among different workspaces that users will create. For example, you may want each team's workspace to have a mail folder, a "projects" workspace, etc.
 
 **To create a template:**
 

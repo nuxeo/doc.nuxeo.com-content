@@ -230,7 +230,7 @@ history:
 
 ### Domain
 
-Sections, workspaces and templates are grouped in **domains**. A domain can be considered as a mini-application in Nuxeo or a root in the application. Typically, you can use domains to open the application to two or more very different populations of users. For instance, you can have an "intranet" domain and an "extranet" domain. Domains can be totally independent or not, depending on the permissions you set on each domain.
+{{multiexcerpt 'definition-domain' page='document-types-in-web-ui'}}
 
 ### Workspace
 
@@ -256,17 +256,12 @@ Workspaces management also includes setting [alerts]({{page page='collaborative-
 
 ### Folder
 
-In workspaces, you can create and manage your documents in folders. A folder works like a workspace, but the documents available for creation are limited. In a folder, you can create: notes, files, collections and sub-folders.
-
-{{! excerpt}}
-
-There are two types of folders: regular folders and ordered folders. The difference between the two folder types is the way content is sorted.
-
-{{! /excerpt}}
+{{multiexcerpt 'definition-folders-types' page='document-types-in-web-ui'}}
 
 **Regular Folders**
 
-Regular folders, called "Folders", have the same behavior as workspaces. In a regular folder, documents are sorted on the title by default. You can change the sort criterion by clicking on the content table columns title. You can thus sort them on their state, author, etc. In a folder, you can:
+{{multiexcerpt 'definition-folder' page='document-types-in-web-ui'}}
+In a folder, you can:
 
 *   [Create documents]({{page page='creating-content'}}) and do all the actions available on them (edit, approve, manage relations, etc.)
 *   [Manage permissions]({{page page='managing-permissions'}})
@@ -277,36 +272,11 @@ Like in a workspace, you can use drag & drop to create content in a folder.
 
 **Ordered Folders**
 
-In an ordered folder, documents are manually sorted. So, the order in which documents are listed in the folder doesn't depend on one of its properties (version, author, etc); you decide where it should be displayed in the list. When a document is created, it is added at the end of the list. It is not possible to sort documents automatically by clicking on the columns titles in an ordered folder.
-
-An ordered folder has the same presentation as a regular folder, but it has some additional buttons below the content table:
-
-*   Move up
-*   Move down
-*   Move to top
-*   Move to bottom
-
-To change the content's order, select a document using the checkbox on the left and click on the **move** button you need. The document is moved in the list of documents available in the folder.
-
-{{#> callout type='tip' heading='Moving documents restrictions'}}
-
-You can move one document at a time. If you select more than one document, the move buttons will deactivate.
-
-{{/callout}}
+{{multiexcerpt 'ordered-folders page='document-types-in-web-ui'}}
 
 ### File
 
-{{! excerpt}}
-
-A file document is a basic binary container and is composed of an attached file that you upload on the application. You can upload files of any format.
-
-{{! /excerpt}}
-
-A file is composed of:
-
-*   A title (mandatory),
-*   A description (optional),
-*   An attached file.
+{{multiexcerpt 'definition-file' page='document-types-in-web-ui'}}
 
 ![]({{file name='file-summary.png'}} ?w=650,border=true)
 
@@ -322,11 +292,11 @@ When the file is created, users can enhance it by [filling its metadata]({{page 
 
 ### Note
 
-{{! excerpt}}
+{{! multiexcerpt name='definition-note'}}
 
 The note is a basic rich text container that consists in a text displayed in the **Summary** tab of the document. The note is usually created using the integrated rich editor, displayed in the note creation form. This editor enables layout modifications on the text.
 
-{{! /excerpt}}
+{{! /multiexcerpt}}
 
 ![]({{file name='note.png'}} ?w=600,h=384,border=true)
 
@@ -396,11 +366,11 @@ For more information about attachment documents, read the page [Attachments]({{p
 
 ### Collections
 
-{{! excerpt}}
+{{! multiexcerpt name='definition-collection'}}
 
 [Collections]({{page version='' space='userdoc' page='collections'}}) are a folder-like document in which you can classify existing documents. Documents are not actually copied or moved into the collection, which only holds a link to the document in its original location.
 
-{{! /excerpt}}
+{{! /multiexcerpt}}
 
 It enables you to create your own organization of the content without duplicating content and having the size of the content growing uncontrollably.
 
@@ -410,7 +380,8 @@ The list of collections available to you is available from your Home, in the **C
 
 ### Section
 
-When documents are finished and ready, they are published in **sections**. Traditionally opened to a wider audience than workspaces, sections are dedicated to content distribution and communication and are designed for content consultation. That is why users cannot change documents (edit or move them) in sections: documents published in sections are frozen versions of workspace documents. [Publishing]({{page page='publishing-content'}}) is controlled using a workflow, that requires publishing requests to be [approved]({{page page='publishing-content'}}) so documents can be seen in sections.
+{{multiexcerpt 'definition-section' page='document-types-in-web-ui'}}
+[Publishing]({{page page='publishing-content'}}) is controlled using a workflow, that requires publishing requests to be [approved]({{page page='publishing-content'}}) so documents can be seen in sections.
 
 ### Workspace Template
 
@@ -433,9 +404,7 @@ For more information about picture document, take a look to the [Digital Asset M
 
 ### Video
 
-Video is a document types dedicated to the management of videos files. It provides the following specific features: A player to view the video from the application, a storyboard to navigate in the video and alternative video formats.
-
-For more information about video document, take a look to the [Digital Asset Management page]({{page page='digital-asset-management-with-the-nuxeo-platform'}}).
+{{multiexcerpt 'definition-video' page='document-types-in-web-ui'}}
 
 ### Audio
 
