@@ -1,5 +1,6 @@
 ---
 title: Web UI
+description: Nuxeo Web UI is a standard web application for Nuxeo Server, built upon a framework of Web components, that connects via HTTP and displays the platform features to users.
 review:
     comment: ''
     date: '2017-01-13'
@@ -121,9 +122,11 @@ It leverages the web as a platform and allows enhanced productivity with direct 
 Nuxeo Web UI and Nuxeo Web UI Elements framework make use of the recent W3C standard Web Components and Google Polymer 1.0 framework. The Google Polymer framework comes with polyfills for Web Components, a library that extends the support of web components standard to more browsers.
 
 Supported browsers for Nuxeo Web UI and Nuxeo Web UI Elements are:
+{{! multiexcerpt name='webui-supported-browsers'}}
  - Firefox
  - Chrome
  - Edge
+{{! /multiexcerpt}}
 
 It should also be possible to build applications that support IE11, Safari, Safari Mobile with Nuxeo Web UI Elements.
 {{! /multiexcerpt}}
@@ -135,7 +138,11 @@ Nuxeo Web UI is a responsive application with three main layout regions:
 
 ![]({{file name='web_ui.png'}} ?w=650,border=true)
 
-### Header Toolbar
+1. [The header toolbar](#header-toolbar-functional-overview)
+2. [The side menu](#side-menu-functional-overview)
+3. [The main view](#main-view-functional-overview)
+
+### {{> anchor 'header-toolbar-functional-overview'}} Header Toolbar
 
 ![]({{file name='header_toolbar.png'}} ?w=650,border=true)
 
@@ -143,7 +150,7 @@ Nuxeo Web UI is a responsive application with three main layout regions:
 2.  **Sub-Views**: The sub-views available.
 3.  **Quick search**: Search by keywords or users.
 
-### Side Menu&nbsp;
+### {{> anchor 'side-menu-functional-overview'}} Side Menu&nbsp;
 
 The menu displays different tabs. Clicking on one of them will open a side panel with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area. We will see the description of the main area on the last part of this section.
 
@@ -193,7 +200,7 @@ This new pattern allows to start browsing without changing the context of work.
 
 </td></tr><tr><td colspan="1">![]({{file name='user_menu.png'}})</td><td colspan="1">
 
-**User Settings:** Displays a **Drive** tab to manage the synchronization roots and a **Themes** tab to manage branding.
+**User Settings:** Displays a **Themes** tab to manage branding and possibly other tabs depending on Nuxeo addons installed. For instance when Nuxeo Drive is installed a **Drive** tab is available to manage the user's synchronization roots.
 
 </td></tr><tr><td colspan="1">![]({{file name='administration.png'}})</td><td colspan="1">
 
@@ -201,10 +208,10 @@ This new pattern allows to start browsing without changing the context of work.
 
 </td></tr></tbody></table></div>
 
-### Main View
+### {{> anchor 'main-view-functional-overview'}} Main View
 
 The main view display depends on what has been selected on the side menu. The main view will usually show lists of documents or a document and its details.
-Lists of documents are presented in a table that proposes different functionalities like the infinite scroll instead of pagination, faceted filters in the header, easy columns selection with persistence of user's choice and a great visibility of selected elements.
+Lists of documents are presented in a table that proposes different functionalities like infinite scroll instead of pagination, faceted filters in the header, easy columns selection with persistence of the user's choice and a great visibility of selected elements.
 
 At the top of the main view toolbars are displayed according to the content being displayed:
 
@@ -216,7 +223,7 @@ At the top of the main view toolbars are displayed according to the content bein
 
 ![]({{file name='results_toolbar.png'}} ?w=77,border=true)
 
-A create button ![]({{file name='create_button.png'}} ?w=20) is also permanently displayed at the bottom right corner of the main view the to let you create or import documents anywhere in the application.
+A create button ![]({{file name='create_button.png'}} ?w=20) is also permanently displayed at the bottom right corner of the main view the to let you create or import documents from anywhere in the application.
 
 
 {{! /multiexcerpt}}
