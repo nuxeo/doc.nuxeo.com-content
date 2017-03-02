@@ -196,14 +196,8 @@ history:
 
 ---
 {{! multiexcerpt name='functional-overview'}}
-{{! multiexcerpt name='functional-introduction'}}
-{{! excerpt}}
-
-Collections are a folder-like document in which you can classify existing documents. Documents are not actually copied or moved into the collection, which only holds a link to the document in its original location.
-
-{{! /excerpt}}
-
-It enables you to create your own organization of the content without duplicating content and having the size of the content growing uncontrollably.
+{{multiexcerpt 'definition-collection' page='collections-web-ui'}}
+{{! multiexcerpt name='functional-introduction-jsf-ui'}}
 
 The list of collections available to you is available from your Home, in the **Collections** tab.![]({{file name='collection-home-tab.png'}} ?w=650,border=true)
 
@@ -215,12 +209,10 @@ Click on a document to consult it. You are moved out of the collection to be dis
 ![]({{file name='collections-summary-widget.png'}} ?w=650,border=true)
 {{! /multiexcerpt}}
 
-
 ## Collecting Documents
-{{! multiexcerpt name='collecting'}}
+{{multiexcerpt 'collecting-rights' page='collections-web-ui'}}
 
-You can classify any type of document in a collection. You just need to have Read access to the document to be able to collect it. Collecting a document doesn't give you more permissions on the document: your permissions are the one defined on the original parent of the document.
-
+{{! multiexcerpt name='collecting-jsf-ui'}}
 Documents can be collected:
 
 - Individually by clicking on the icon ![]({{file name='add_to_collection.png' page='icons-index'}}) of the document
@@ -246,9 +238,9 @@ The list of collections the document is available from is displayed on its **Sum
 {{! /multiexcerpt}}
 
 ## Creating Collections
-{{! multiexcerpt name='creating'}}
-Collections can be created in workspaces and folders.
+{{multiexcerpt 'collections-containment-rule' page='collections-web-ui'}}
 
+{{! multiexcerpt name='creating-jsf-ui'}}
 There are two ways to create a collection:
 
 - Like any other document, using the **New** button: Just fill in the creation form and the collection is created in the current workspace / folder.
@@ -272,29 +264,34 @@ Beside the generic permissions, collection have a specific right, called "can co
 {{! /multiexcerpt}}
 
 ## Removing Documents from a Collection
-{{! multiexcerpt name='removing'}}
-To remove a document from a collection, either click on the <span class="s1">icon ![]({{file name='delete.png' page='icons-index'}}) of the collection</span> from the **Summary** tab of the document, or select the document in the collection the checkboxes and click <span class="s1">on the **Remove from collection** button.</span>
+{{! multiexcerpt name='removing-jsf-ui'}}
+To remove a document from a collection, either click on the <span class="s1">icon ![]({{file name='delete.png' page='icons-index'}}) of the collection</span> from the **Summary** tab of the document, or select the document in the collection the checkboxes and click on the **Remove from collection** button.
 
 In both ways the document is immediately removed from the collection.
 {{! /multiexcerpt}}
 
 ## Favorites
-{{! multiexcerpt name='favorites'}}
-Favorites is a particular collection that enables you to bookmark documents. The list of documents bookmarked as favorites is available:
+{{multiexcerpt 'definition-favorites' page='favorites'}}
 
+The list of documents bookmarked as favorites is available:
+{{! multiexcerpt name='favorites-location-jsf-ui'}}
 - From your personal workspace in the **Favorites** collection
     ![]({{file name='Favorites-personal-workspace.png'}} ?w=600,border=true)
 - From your dashboard in a **My Favorites** widget
     ![]({{file name='favorite_widget_dashboard.png'}} ?w=600,border=true)
-
-Bookmarking documents in your favorites can be done like when you add documents to a collection (see previous sections) and selecting the Favorites collection, or using the icon ![]({{file name='pin.png' page='icons-index'}}) from the document itself.
-
 {{! /multiexcerpt}}
+
+{{! multiexcerpt name='bookmarking-favorites-jsf-ui'}}
+Bookmarking documents in your favorites can be done like when you add documents to a collection (see previous sections) and selecting the Favorites collection, or using the icon ![]({{file name='pin.png' page='icons-index'}}) from the document itself.
+{{! /multiexcerpt}}
+
 {{! /multiexcerpt}}
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Collections developer documentation]({{page space='nxdoc' page='collections'}})
+- [Collections in Web UI]({{page version='' space='userdoc' page='collections-web-ui'}})
+- [Favorites in Web UI]({{page version='60' space='userdoc' page='favorites'}})
 
 {{/panel}}</div><div class="column medium-6">
 
