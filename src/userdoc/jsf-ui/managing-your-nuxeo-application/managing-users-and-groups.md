@@ -259,11 +259,11 @@ Users and groups management is available:
 
 ## Managing Users
 
-By default, the Nuxeo Platform has one user, called Administrator, who is the administrator. You must use it to create new users and delegate them permissions.
+{{multiexcerpt 'default-user-Administrator' page='administration'}}
 
 {{#> callout type='info' }}
 
-Users must be at least in "administrators" or "members" group, or one of their sub-groups to be able to browse the application's content.
+{{multiexcerpt 'default-groups-to-browse' page='administration'}}
 
 {{/callout}}
 

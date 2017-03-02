@@ -1,18 +1,18 @@
 ---
 title: Administration
+description:
 review:
     comment: ''
     date: '2017-01-26'
     status: ok
 toc: true
 tree_item_index: 700
-description:
 ---
 This Administration menu presents three different submenus:
+
 - [Analytics](#analytics)
 - [Users & Groups](#users-groups)
 - [Vocabularies](#vocabularies)
-
 
 ## Analytics
 
@@ -32,11 +32,14 @@ The default Activity subtabs are:
 Only administrators and power users can create, edit and delete users and groups. They can create new users and groups, modify their properties or delete them. It is also possible to connect the Platform to an external directory (LDAP directory for instance). Users can only consult users and groups directories.
 
 ### Managing Users
-
+{{! multiexcerpt name='default-user-Administrator'}}
 By default, the Nuxeo Platform has one user, called Administrator, who is the administrator. You must use it to create new users and delegate them permissions.
+{{! /multiexcerpt}}
 
 {{#> callout type='info' }}
+{{! multiexcerpt name='default-groups-to-browse'}}
 Users must be at least in "administrators" or "members" group, or one of their sub-groups to be able to browse the application's content.
+{{! /multiexcerpt}}
 {{/callout}}
 
 **Users's Parameters**
@@ -158,7 +161,7 @@ Only administrators and power users can modify other users' password. However ev
 When you use an external directory for users management, the **Change password** button is not displayed as you cannot edit your password.
 {{/callout}}
 
-To modify a user's password, go to the **Administration** menu > **Users & Groups** and click on the **CHANGE PASSWORD** button.
+To modify a user's password, go to the **Administration** menu > **Users & Groups** and click on the **Change Password** button.
 
 ![]({{file name='change-password-web-ui.png'}} ?w=350,border=true)
 
@@ -170,7 +173,7 @@ Only administrators and power users can delete users.
 Deleting a user is a permanent action.
 {{/callout}}
 
-To delete a user, go to go to the **Administration** menu > **Users & Groups**. Search a user and click on the user's name to open his or her card. Click on **DELETE** at the top-right hand corner and confirm.
+To delete a user, go to go to the **Administration** menu > **Users & Groups**. Search a user and click on the user's name to open his or her card. Click on **Delete** at the top-right hand corner and confirm.
 
 ### Managing Groups
 
@@ -253,7 +256,6 @@ To edit a group, go to the **Administration** menu > **Users & Groups**. Search 
 Only administrators and power users can delete groups.
 
 To delete a group, go to **Administration** menu > **Users & Groups**. Search the group to delete and click on its name to open its card. Click on **Delete** and confirm.
-
 
 ## Vocabularies
 
