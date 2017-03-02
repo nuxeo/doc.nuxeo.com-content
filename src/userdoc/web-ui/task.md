@@ -10,7 +10,7 @@ toc: true
 tree_item_index: 300
 description: Web UI User Documentation about Workflows
 ---
-All the documents evolve according to a defined life cycle. The default life cycle is composed of the following states: Project, Approved, Obsolete and Deleted. There are different ways to make documents evolve through this life cycle. One of the ways is to use a workflow.
+All the documents evolve according to a defined lifecycle. The default lifecycle is composed of the following states: Project, Approved, Obsolete and Deleted. There are different ways to make documents evolve through this lifecycle. One of them is to use a workflow.
 
 Users who are involved in workflows are alerted by email and can have a synthetic view of all their pending tasks on documents in their [dashboard]({{page page='browse'}}#dashboard) or on the **Task** tab. The documents they have to review are listed there.
 
@@ -18,65 +18,50 @@ Users who are involved in workflows are alerted by email and can have a syntheti
 
 A task represents what a workflow instance expects from a user or a group of users. Usually they are expected to give some information through a form and click on a button (like Accept, Reject, Confirm, Notify, Transform, etc.). A task usually has one or several assignees, a title, a directive and an expected date of achievement. The task assignees can be specified directly in the task definition or can be dynamically computed.
 
-### Starting a Task on a Document
+### Starting a Workflow on a Document
 
-You need to have editing or management permissions to start a task on a document.
+You need to have editing or management permissions to start a workflow on a document.
 
 {{{multiexcerpt 'tasks-assigned-to-group' page='Serial Document Workflow'}}}
 
 #### Serial Document Review
 
 1. Go on the document that you want to review.
-
-2. In the process section, on the&nbsp;side menu, select the **Serial document review** from the drop down list and click on **Start**. <br/>
-An info bar is displayed at the top of the document to inform that a process has been started on this document.
-A **Process** button is available in this info bar, it will let you go to the next step of your task.
-![]({{file name='process-review-web-ui.png'}} ?w=500,border=true)
-
-3. Clik on the **Process** button.
-A new section is displayed with a **VIEW GRAPH** button that displays the workflow route in a pop-up window.
-
-4. In the **Participants** field, type the name of a user or a group you want to add on the workflow and select it in the drop down list. Repeat these two steps to add all the participants to the review. Optionally, drag and drop the participants to change their order on the workflow, or the icon ![]({{file name='action-delete.png' page='icons-index'}}) to remove them.
-
+2. In the process section, on the side menu, select the **Serial document review** from the drop down list and click on **Start**.<br/>
+    An info bar is displayed at the top of the document to inform that a process has been started on this document.<br/>
+    A **Process** button is available in this info bar, it will let you handle your task.
+    ![]({{file name='process-review-web-ui.png'}} ?w=500,border=true)
+3. Click on the **Process** button.<br/>
+    A new section is displayed with a **View Graph** button that displays the workflow route in a pop-up window.
+4. In the **Participants** field, type the name of a user or a group you want to add on the workflow and select it in the drop down list. Repeat these two steps to add all the participants to the review. Optionally click or the icon ![]({{file name='action-delete.png' page='icons-index'}}) to remove them.
 5. Select the type of review you want to do:
     - **Simple review**: the document's state will not change;
     - **Validation**: when all the reviewers have approved the document, it goes to the **Approved** lifecycle state.
-
-6. Click on **START THE REVIEW** once everything is ready, to let participants approve or reject the document.![]({{file name='participants-review-web-ui.png'}} ?w=350,border=true)
+6. Click on **Start the review** once everything is ready, to let participants approve or reject the document.![]({{file name='participants-review-web-ui.png'}} ?w=350,border=true)
 
 #### Parallel Document Review
 
 1. Go on the document that you want to review.
-
-2. In the process section, on the&nbsp;side menu, select the **Parallel document review** from the drop down list and click on **Start**. <br/>
-An info bar is displayed at the top of the document to inform that a process has been started on this document.
-A **Process** button is available in this info bar, it will let you go to the next step of your task.
-
-3. Clik on the **Process** button. <br/>
-A new section is displayed with a **VIEW GRAPH** button that displays the workflow route in a pop-up window.
-
-4. In the **Participants** field, type the name of a user or a group you want to add on the workflow and select it in the drop down list. Repeat these two steps to add all the participants to the review. Optionally, drag and drop the participants to change their order on the workflow, or the icon ![]({{file name='action-delete.png' page='icons-index'}}) to remove them.
-
+2. In the process section, on the side menu, select the **Parallel document review** from the drop down list and click on **Start**. <br/>
+    An info bar is displayed at the top of the document to inform that a process has been started on this document.<br/>
+    A **Process** button is available in this info bar, it will let you go to the next step of your task.
+3. Click on the **Process** button. <br/>
+    A new section is displayed with a **View Graph** button that displays the workflow route in a pop-up window.
+4. In the **Participants** field, type the name of a user or a group you want to add on the workflow and select it in the drop down list. Repeat these two steps to add all the participants to the review. Optionally click on the icon ![]({{file name='action-delete.png' page='icons-index'}}) to remove them.
 5. Type a comment for the reviewers, for instance if you want them to pay attention to a specific section of the document.
-
 6. Select the due date by when the participants need to have reviewed the document.
     {{#> callout type='tip' }}
     When the due date is passed, the consultation task is automatically closed to all reviewers that haven't provided their opinion on the document and the workflow goes to the next step: the initiator approval.
     {{/callout}}
-
-7. Click on **START THE REVIEW** to let participants give their opinion on the document. <br/>
+7. Click on **Start the Review** to let participants give their opinion on the document. <br/>
     The document is locked so that only the workflow initiator can edit the document.<br/>
     On the **Task** tab and on the dashboard, the current task and the previous ones are displayed. All reviewers get a Consultation task in their dashboard and task tab.
-
 
 ### Handling Tasks
 
 Once the workflow has been started, users added on the workflow's roadmap can review the document and approve or reject it.
 
-When they have a task on a document, users are displayed it on their [dashboard]({{page page='browsing-content#dashboard'}}) in the **Tasks** gadget and in the **Task** tab.
-> - Choose participants
-> - Give your opinion
-> - Validate the document
+When they have a task on a document, users are displayed it on their [dashboard]({{page page='browse#dashboard'}}) in the **Tasks** gadget and in the **Task** tab.
 
 The participants of a workflow can:
 
@@ -91,18 +76,15 @@ Participants can approve the document when it's their turn, after the previous p
 **To approve or reject the document**:
 
 1. Click on the **Task** tab, all your pending tasks are displayed.
-
 2. Click on the task that you want to process. <br/>
-The document is displayed and a Task resolution section is displayed on the&nbsp;side menu.
-
+The document is displayed and a Task resolution section is displayed on the side menu.
 3. Depending on your opinion on the document, click on one of the buttons available:
     - **Validate**
-      The task is not displayed anymore from the **Workflow** tab and the document. If you originally had read-only access to the document, you can't edit it anymore. The next participant can now review the document and approve or reject it.
+      The task is not displayed anymore in the Tasks tab. If you originally had read-only access to the document, you can't edit it anymore. The next participant can now review the document and approve or reject it.
     - **Reject**
-      The task is not displayed anymore from the Workflow tab and the document. If you originally had read-only access to the document, you can't edit it anymore. The document is automatically sent back to the previous reviewer on the workflow, so he can edit it and approve it again.
+      The task is not displayed anymore in the Tasks tab. If you originally had read-only access to the document, you can't edit it anymore. The document is automatically sent back to the previous reviewer on the workflow, so he can edit it and approve it again.
       When the document is rejected by the first reviewer, the document is sent back to the initiator, who can then either modify the document and resubmit it, or cancel the review.
       ![]({{file name='serial-review-web-ui.png'}} ?w=350,border=true)
-
 
 #### Participating to a Parallel Document Review
 
@@ -114,17 +96,15 @@ After the workflow initiator has started the parallel workflow, two steps need t
 **To approve or reject the document**:
 1. Click on the **Task** tab, all your pending tasks are displayed.
     ![]({{file name='task-menu-web-ui.png'}} ?w=250,border=true)
-
-2. Click on the task that you want to process. The document is displayed and a Task resolution section is displayed on the&nbsp;side menu.
-
+2. Click on the task that you want to process. The document is displayed and a Task resolution section is displayed on the side menu.
 3. Click on one of the buttons to provide your opinion on the document validation:
     - **Approve**: you agree with the document being approved;
     - **Reject**: you think that the document is not ready to be approved;
     - **N/A**: you are not concerned by the document or don't have an opinion about its validation.
 
-Your consultation task is done. The task is removed from your dashboard and your Workflow tab.
+Your consultation task is done. The task is removed from your dashboard and your Tasks tab.
 ![]({{file name='parallel-review-web-ui.png'}} ?w=350,border=true)
 
-### Final Validation of the Document
+**Final Validation of the Document**
 
 When all reviewers have done their consultation task, the document goes back to the initiator of the review so he can see the opinion of the reviewers and approve or reject the document.
