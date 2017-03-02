@@ -121,11 +121,7 @@ history:
 
 ---
 {{! multiexcerpt name='vocabularies-content'}}
-
-Only administrators and power users can consult and manage vocabularies.
-
-Vocabularies are the lists of labels used in the application, for instance in drop down lists. A vocabulary is composed of several entries, that are the options in the drop down lists. Some vocabularies are hierarchical, i.e. they have several levels. For instance, the **Subjects** metadata uses a two level vocabulary called `I10nsubjects`. First level is **Topic**. Second level is **Subtopic** and each entry is linked to a **Topic** entry.
-
+{{multiexcerpt 'vocabularies-intro' page='administration'}}
 ![]({{file name='hierarchical-vocabulary.png'}} ?w=250,border=true)
 
 {{#> callout type='tip' }}
@@ -134,7 +130,7 @@ Although the `I10nsubjects` vocabulary is used in most places to populate the Su
 
 {{/callout}}
 
-Administrators and power users can only modify or delete vocabularies. They cannot create a new vocabulary from the user interface.
+{{multiexcerpt 'vocabularies-management-restrictions' page='administration'}}
 
 ## Consulting Vocabularies
 
@@ -152,6 +148,7 @@ By default, the labels of default vocabularies entries are the IDs of labels in 
 ## Vocabulary Entries Parameters
 
 {{! multiexcerpt name='vocabulary-entries-parameter'}}
+
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Field
@@ -202,6 +199,7 @@ Indicates the rank of the entry in the vocabulary.
 Order is set at `10,000,000` by default.
 
 </td></tr></tbody></table></div>
+
 {{! /multiexcerpt}}
 
 ## Editing Vocabularies

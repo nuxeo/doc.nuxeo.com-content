@@ -259,21 +259,21 @@ To delete a group, go to **Administration** menu > **Users & Groups**. Search th
 
 ## Vocabularies
 
+{{! multiexcerpt name='vocabularies-intro'}}
 Only administrators and power users can consult and manage vocabularies.
 
 Vocabularies are the lists of labels used in the application, for instance in drop down lists. A vocabulary is composed of several entries, that are the options in the drop down lists. Some vocabularies are hierarchical, i.e. they have several levels. For instance, the **Subjects** metadata uses a two level vocabulary called `I10nsubjects`. First level is **Topic**. Second level is **Subtopic** and each entry is linked to a **Topic** entry.
+{{! /multiexcerpt}}
 
-{{#> callout type='tip' }}
-Although the `I10nsubjects` vocabulary is used in most places to populate the Subject list (on edit forms and search forms for instance), the virtual navigations used the older "topic" and "subtopic" vocabularies. You need to use the same ID in all vocabularies to make the virtual navigations work.
-{{/callout}}
-
+{{! multiexcerpt name='vocabularies-management-restrictions'}}
 Administrators and power users can only modify or delete vocabularies. They cannot create a new vocabulary from the user interface.
+{{! /multiexcerpt}}
 
 ### Consulting Vocabularies
 
 All vocabularies editable from the user interface are listed in the vocabularies management interface.
 
-To consult a vocabulary or its entries click on the **Administration** menu > **Vocabularies** submenu and select the vocabulary you want to consult in the drop down list.
+To consult a vocabulary or its entries click on the **Administration** menu&nbsp;> **Vocabularies** submenu and select the vocabulary you want to consult in the drop down list.
 
 ![]({{file name='vocabularies-web-ui.png'}} ?w=600,border=true)
 
