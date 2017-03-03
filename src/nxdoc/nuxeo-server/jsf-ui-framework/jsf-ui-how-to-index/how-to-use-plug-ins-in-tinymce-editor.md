@@ -125,7 +125,7 @@ The general procedure to make a new plug-in available is to apply the initializa
 
     In the sources of the `nuxeo-platform-ui-web` plug-in, TinyMCE files are under `src/main/resources` but it requires an extra command in the `deployment-fragment.xml`:
 
-    `<<span class="pl-ent">copy</span> <span class="pl-e">from</span>= <span class="pl-s1"><span class="pl-pds">"</span>nxwebplatform.tmp/tinymce/<span class="pl-pds">"</span></span> <span class="pl-e">to</span>= <span class="pl-s1"><span class="pl-pds">"</span>nuxeo.war/tinymce/<span class="pl-pds">"</span></span> />`
+    `<copy from= "nxwebplatform.tmp/tinymce/" to= "nuxeo.war/tinymce/" />`
 
     Also, ensure you are requiring `<require>org.nuxeo.ecm.platform.ui</require>` to override the default file.
 
@@ -188,7 +188,7 @@ The general procedure to make a new plug-in available is to apply the initializa
 
 While the development mode is activated, you can use the hot-reload of the files located in `$NUXEO/nxserver/nuxeo.war` to test the customization of TinyMCE in live, without spending time in server restarts.
 
-1.  In [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}}) , set the property `org.nuxeo.dev` to `true`.
+1.  In [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}}), set the property `org.nuxeo.dev` to `true`.
 2.  Start the Nuxeo Platform and in a browser, go to the creation form of a Note document.
 3.  Open the file `$NUXEO/nxserver/nuxeo.war/tinymce/tinymce_init.js` in your favorite JavaScript editor.
 4.  Apply the needed modifications and save the file.

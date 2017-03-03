@@ -298,7 +298,7 @@ Event event = ctx.newEvent("myeventid");
 eventProducer.fireEvent(event);
 ```
 
-You can also have events be sent automatically at regular intervals using the [Scheduling Periodic Events]({{page page='scheduling-periodic-events'}}), see that section for mor
+You can also have events be sent automatically at regular intervals using the [Scheduling Periodic Events]({{page page='scheduling-periodic-events'}}), see that section for more information. 
 
 ## Handling Errors
 

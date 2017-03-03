@@ -64,21 +64,21 @@ Just remember that overriding a default template is risky for maintenance. The o
 
 {{/callout}}
 
-# Step 1: Getting the Name of the Template
+## Step 1: Getting the Name of the Template
 
 Look for the name of the template you want to override and its path on the server. This information is important because the overridden template must have the exact same path and name. When the server has deployed the bundles, the XHTML templates are located under the folder `${nuxeo_server}/nxserver/nuxeo.war/`.
 
-# Step 2: Creating the File in the Bundle
+## Step 2: Creating the File in the Bundle
 
 In your bundle, create a new XHTML file with the exact same name and in the same folder structure as the original one. In usual Nuxeo bundles, the XHTML files are located under `resources/web/nuxeo.war/`.
 
-For this example, we will override the `nuxeo_footer_template.xhtml` template. It is located in the folder ``${nuxeo_server}`/nxserver/nuxeo.war/incl/`.
+For this example, we will override the `nuxeo_footer_template.xhtml` template. It is located in the folder `${nuxeo_server}/nxserver/nuxeo.war/incl/`.
 
 1.  Create a folder `incl/` under `resources/web/nuxeo.war/`.
 2.  Create the overridden template `nuxeo_footer_template.xhtml`.
     ![]({{file name='newTemplate.png'}} ?w=500,border=true)
 
-# Step 3: Deploying the Bundle
+## Step 3: Deploying the Bundle
 
 Once your file is created and modified to suit your needs, you have to deploy it.
 
