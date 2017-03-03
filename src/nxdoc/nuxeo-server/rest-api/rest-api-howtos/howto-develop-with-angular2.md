@@ -177,11 +177,11 @@ But your application also needs a serious back end that will allow you to build 
 
 {{! excerpt}}
 
-[Angular](https://angular.io/) has lots of different stacks, and it can be difficult to find the one that fits our needs. That's why we created a dedicated bootstrap in [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo).
+[Angular](https://angular.io/) has lots of different stacks, and it can be difficult to find the one that fits our needs. That's why we created a dedicated bootstrap in [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli).
 
 {{! /excerpt}}
 
-The `angular` generator plenty of helpful tools:
+Our `angular` bootstrap comes with plenty of helpful tools:
 
 - Full [webpack](https://webpack.github.io/) build module
 - Proxy between the webpack dev server and a running Nuxeo
@@ -197,19 +197,19 @@ The whole tooling suite is based on [AngularClass](https://github.com/AngularCla
 This section will help you to get started on an Angular project. This will be covered in three steps:
 
 - Installing prerequisites
-- Using Nuxeo Generator
+- Using Nuxeo CLI
 - Building a Nuxeo Package that can be deployed on a Nuxeo Platform instance
 
 ### Step 1 - Installing Prerequisites
 
-In order to get a clean installation, we will make use of Yeoman's Angular generator. So let's install it along with its prerequisites:
+In order to get a clean installation, we will make use of Nuxeo CLI. So let's install it along with its prerequisites:
 
 1. Install [Git](https://git-scm.com/).
 2. Install [node.js](https://nodejs.org/) and ensure [NPM](https://www.npmjs.com/) is installed.
-3. In a terminal, use NPM to install the generator:
+3. In a terminal, use NPM to install the CLI tool:
 
   ```bash
-  $ npm install -g yo generator-nuxeo
+  $ npm install -g nuxeo-cli
   ```
 
 ### Step 2 - Bootstrap Nuxeo Bundle and Package
@@ -220,10 +220,10 @@ In order to get a clean installation, we will make use of Yeoman's Angular gener
   $ mkdir my-app && cd $_
   ```
 
-2. Call Nuxeo Generator to generate Angular and a Package modules.
+2. Call Nuxeo CLI to bootstrap Angular application with a Nuxeo Package modules.
 
   ```bash
-  $ yo nuxeo angular2 package
+  $ nuxeo bootstrap angular2 package
   ```
 
   You'll be prompted for some Maven or Name information, then an `npm install` command will be executed automatically to install dependencies.
@@ -298,7 +298,7 @@ There are two possible ways to deploy your application:
 
   This setup is particularly interesting when using a [Nuxeo Cloud](https://www.nuxeo.com/products/nuxeo-cloud/) instance. No setup, no administration needed, and full scalability. By configuring your Nuxeo Platform instance, people will be redirected to your custom interface and the overall setup is transparent. We use this solution for projects like [Nuxeo University](https://university.nuxeo.io).
 
-  If you bootstrapped your project with the `package` generator, simply go to the root of your project, then:
+  If you bootstrapped your project with the Nuxeo's `package`, simply go to the root of your project, then:
 
   ```bash
   $ cd <root_project>

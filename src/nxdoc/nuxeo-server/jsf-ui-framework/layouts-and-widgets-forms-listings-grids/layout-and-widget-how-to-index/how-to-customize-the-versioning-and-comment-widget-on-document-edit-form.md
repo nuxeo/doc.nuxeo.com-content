@@ -9,9 +9,9 @@ details:
         excerpt: >-
             Learn how to customize the versioning and comment widget using XML
             extensions. These examples can be contributed in Nuxeo Studio
-            (Advanced Settings > XML Extensions) or with the Nuxeo Generator.
+            (Advanced Settings > XML Extensions) or with the Nuxeo CLI.
         level: Intermediate
-        tool: 'XML extension, Nuxeo Generator, Studio'
+        tool: 'XML extension, Nuxeo CLI, Studio'
         topics: 'Layout, Versioning, JSF UI, Widget'
 labels:
     - content-review-lts2016
@@ -152,7 +152,7 @@ history:
 ---
 {{! excerpt}}
 
-On documents edit form, a **Comment** textarea is displayed, and this text is visible in the **History** tab. When the document is versionable, versioning options are also displayed. This page provides some examples to customize this behavior using XML extensions. These examples can be contributed [in Nuxeo Studio]({{page page='how-to-contribute-to-an-extension'}}) (Advanced Settings > XML Extensions) or [with the Nuxeo Generator]({{page page='how-to-contribute-to-an-extension'}}).
+On documents edit form, a **Comment** textarea is displayed, and this text is visible in the **History** tab. When the document is versionable, versioning options are also displayed. This page provides some examples to customize this behavior using XML extensions. These examples can be contributed [in Nuxeo Studio]({{page page='how-to-contribute-to-an-extension'}}) (Advanced Settings > XML Extensions) or with [Nuxeo CLI]({{page page='how-to-contribute-to-an-extension'}}).
 
 {{! /excerpt}}
 
@@ -332,17 +332,16 @@ Or you can play with the&nbsp;`hidden` widget mode:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Add a New Widget to the Default Summary Layout]({{page page='how-to-add-a-new-widget-to-the-default-summary-layout'}})
-*   [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
-*   [Customize the Versioning and Comment Widget]()
-*   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Add a New Widget to the Default Summary Layout]({{page page='how-to-add-a-new-widget-to-the-default-summary-layout'}})
+- [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
+- [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [JSF UI Framework]({{page page='jsf-ui-framework'}})
-*   [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
-*   [Layout and Widgets]({{page page='layouts-and-widgets-forms-listings-grids'}})
-*   [Widget Definitions]({{page page='widget-definitions'}})
+- [JSF UI Framework]({{page page='jsf-ui-framework'}})
+- [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
+- [Layout and Widgets]({{page page='layouts-and-widgets-forms-listings-grids'}})
+- [Widget Definitions]({{page page='widget-definitions'}})
 
 {{/panel}}</div></div>

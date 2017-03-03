@@ -135,7 +135,7 @@ The Nuxeo Platform provides the tools for achieving that:
     *   The components each project / client may want to build
 *   Tools to make configuration and extension building easy
     *   Nuxeo Studio: to manage all your business configuration
-    *  Nuxeo Generator: to build extensions
+    *  Nuxeo CLI: to build extensions
 *   A packaging model and deployment system
 
 ![](https://s3.amazonaws.com/media-p.slid.es/uploads/thierrydelprat/images/703090/devpipe.png)

@@ -1,35 +1,25 @@
 ---
-title: Getting Started with Nuxeo Generator
+title: Getting Started with Nuxeo CLI
 review:
     comment: ''
     date: '2017-01-17'
     status: ok
 details:
     howto:
-        excerpt: Learn how to start working with Nuxeo Generator.
+        excerpt: Learn how to start working with Nuxeo CLI.
         level: Intermediate
-        tool: 'Nuxeo Generator, Nuxeo Studio'
+        tool: 'Nuxeo CLI, Nuxeo Studio'
         topics: 'Automation, Layout'
 labels:
     - lts2016-ok
     - howto
-    - generator
+    - nuxeo-cli
     - lts2016-ok
 toc: true
 version_override:
+    'LTS 2016': 810/nxdoc/getting-started-with-nuxeo-ide
     'LTS 2015': 710/nxdoc/getting-started-with-nuxeo-ide
     '6.0': 60/nxdoc/getting-started-with-nuxeo-ide
-confluence:
-    ajs-parent-page-id: '14256538'
-    ajs-parent-page-title: Start Customizing the Nuxeo Platform
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Getting+Started+with+Nuxeo+IDE
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Getting+Started+with+Nuxeo+IDE'
-    page_id: '20518158'
-    shortlink: DhU5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/DhU5AQ'
-    source_link: /display/NXDOC/Getting+Started+with+Nuxeo+IDE
 tree_item_index: 200
 history:
     -
@@ -417,7 +407,7 @@ history:
         date: '2014-11-06 12:25'
         message: ''
         version: '1'
-previous_link: /nxdoc/getting-started-with-nuxeo-studio
+previous_link: /nxdoc/getting-started-with-nuxeo-studio        
 ---
 Here we want to add some server side Java logic that will update the contract's renegotiation date. In our example it will simply take the contract's start date and add three months to it, but you can think of integrating any custom logic in your Java class, including a connection to an external webservice or an ERP.
 
@@ -432,15 +422,15 @@ Here we want to add some server side Java logic that will update the contract's 
 * npm 2.12.0+
 
 
-## Step 1 - Install Nuxeo Generator
+## Step 1 - Install Nuxeo CLI
 
 From a command line prompt, type:
 
 ```bash
-$ npm install -g yo generator-nuxeo
+$ npm install -g nuxeo-cli
 ```
 
-The Nuxeo Generator lets you easily scaffold common Nuxeo components like empty projects, Packages, Automation Operations, Services... This saves you time writing boilerplate code to focus on your code instead of the structure.
+Nuxeo CLI lets you easily scaffold common Nuxeo components like empty projects, Packages, Automation Operations, Services... This saves you time writing boilerplate code to focus on your code instead of the structure.
 
 We'll use it to generate a new Nuxeo project and an operation.
 
@@ -468,7 +458,7 @@ From a command line:
 2.  Generate the project structure.
 
     ```bash
-    $ yo nuxeo
+    $ nuxeo bootstrap
     ```
 
 3.  Fill in the prompted parent project creation ("Multi module"):
@@ -532,7 +522,7 @@ From a command line:
 1.  In a terminal, generate an operation code template:
 
     ```bash
-    $ yo nuxeo operation
+    $ nuxeo bootstrap operation
     ```
 
 2.  You are prompted for a few details:

@@ -10,7 +10,7 @@ details:
             Learn how to set a default date on a field at document creation
             using Nuxeo Studio's  event handlers  and  automation chains.
         level: Advanced
-        tool: 'Studio, Nuxeo Generator'
+        tool: 'Studio, Nuxeo CLI'
         topics: 'Layout, Event'
 labels:
     - content-review-lts2016
@@ -168,15 +168,15 @@ And that's it! Note that the previous parameter will set today's date, but you m
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [Customize the Versioning and Comment Widget]({{page page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
-*   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [Customize the Versioning and Comment Widget]({{page page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
+- [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [JSF UI Framework]({{page page='jsf-ui-framework'}})
-*   [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
-*   [Layout and Widgets]({{page page='layouts-and-widgets-forms-listings-grids'}})
-*   [Widget Definitions]({{page page='widget-definitions'}})
+- [JSF UI Framework]({{page page='jsf-ui-framework'}})
+- [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
+- [Layout and Widgets]({{page page='layouts-and-widgets-forms-listings-grids'}})
+- [Widget Definitions]({{page page='widget-definitions'}})
 
 {{/panel}}</div></div>
