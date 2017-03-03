@@ -755,6 +755,13 @@ It is also important to report the current settings and mapping of an Elasticsea
 ```
 curl localhost:9200/nuxeo/_settings?pretty > /tmp/nuxeo-settings.json
 curl localhost:9200/nuxeo/_mapping?pretty > /tmp/nuxeo-mapping.json
+# misc info and stats on Elasticsearch
+curl localhost:9200 > /tmp/es-info.txt
+curl localhost:9200/_cluster/stats?pretty >> /tmp/es-info.txt
+curl localhost:9200/_nodes/stats?pretty >> /tmp/es-info.txt
+curl localhost:9200/_cat/health?v >> /tmp/es-info.txt
+curl localhost:9200/_cat/nodes?v >> /tmp/es-info.txt
+curl localhost:9200/_cat/indices?v >> /tmp/es-info.txt
 ```
 
 ### Testing an Analyzer
