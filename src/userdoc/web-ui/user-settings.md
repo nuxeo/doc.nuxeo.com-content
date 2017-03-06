@@ -27,6 +27,10 @@ The available themes are:
 - Go to **User Settings** menu > **Themes**.
 - Click on **APPLY** next to the theme that you want to try.
 
+{{#> callout type='note' }}
+Your theme is saved browser-side, which means that if you use another browser you will have the default theme.
+{{/ callout}}
+
 ## Sign Out
 
 **To log out from your instance**:
