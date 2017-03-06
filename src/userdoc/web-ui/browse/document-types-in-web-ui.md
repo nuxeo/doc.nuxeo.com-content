@@ -82,7 +82,7 @@ A file is composed of:
 *   An attached file.
 {{! /multiexcerpt}}
 
-![]({{file name=''}})
+![]({{file name='file-web-ui.png'}} ?w=600,border=true)
 
 **To create a file**, in a workspace, click on ![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=20). On the **Create** popup, click on the desired document. Fill in the document's creation form and click on **Create**.
 
@@ -92,7 +92,7 @@ When the file is created, users can enhance it by [filling its properties]({{pag
 
 The note is a basic rich text container that consists in a text displayed in the **View** tab of the document. The note is usually created using the integrated rich editor, displayed in the note creation form. This editor enables layout modifications on the text.
 
-SCREENSHOT
+![]({{file name='note-web-ui.png'}} ?w=600,border=true)
 
 The default format of the note is HTML. The other formats available are .txt, .xml and Markdown.
 
