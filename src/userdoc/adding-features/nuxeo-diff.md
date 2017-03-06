@@ -13,6 +13,17 @@ labels:
     - excerpt
     - multiexcerpt
 toc: true
+confluence:
+    ajs-parent-page-id: '11043055'
+    ajs-parent-page-title: Adding Features
+    ajs-space-key: USERDOC
+    ajs-space-name: Nuxeo Platform User Documentation
+    canonical: Nuxeo+Diff
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Diff'
+    page_id: '11042953'
+    shortlink: iYCo
+    shortlink_source: 'https://doc.nuxeo.com/x/iYCo'
+    source_link: /display/USERDOC/Nuxeo+Diff
 tree_item_index: 400
 history:
     -

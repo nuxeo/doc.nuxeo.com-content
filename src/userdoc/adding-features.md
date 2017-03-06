@@ -7,10 +7,21 @@ review:
 labels:
     - marketplace
     - multiexcerpt
+confluence:
+    ajs-parent-page-id: '11043048'
+    ajs-parent-page-title: Nuxeo Platform User Documentation
+    ajs-space-key: USERDOC
+    ajs-space-name: Nuxeo Platform User Documentation
+    canonical: Adding+Features
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Adding+Features'
+    page_id: '11043055'
+    shortlink: 74Co
+    shortlink_source: 'https://doc.nuxeo.com/x/74Co'
+    source_link: /display/USERDOC/Adding+Features
 tree_item_index: 2000
 version_override:
-    '6.0': 60/userdoc/marketplace-add-ons
-    '5.8': 58/userdoc/marketplace-add-ons
+  '6.0': 60/userdoc/marketplace-add-ons
+  '5.8': 58/userdoc/marketplace-add-ons
 history:
     -
         author: Manon Lumeau
@@ -35,7 +46,9 @@ history:
     -
         author: Solen Guitter
         date: '2016-07-19 15:14'
-        message: 'Add Nuxeo Web UI, Marklogic Persistence Engine and Nuxeo Connect Report Tools'
+        message: >-
+            Add Nuxeo Web UI, Marklogic Persistence Engine and Nuxeo Connect
+            Report Tools
         version: '332'
     -
         author: Julien Carsique
@@ -875,7 +888,10 @@ history:
     -
         author: Solen Guitter
         date: '2013-11-22 14:53'
-        message: 'Updated comment for Display email in users suggestion, fixed links without version, fixed last released version of semantic entities package'
+        message: >-
+            Updated comment for Display email in users suggestion, fixed links
+            without version, fixed last released version of semantic entities
+            package
         version: '164'
     -
         author: Solen Guitter
@@ -930,7 +946,9 @@ history:
     -
         author: Solen Guitter
         date: '2013-11-07 18:27'
-        message: Added link to admin doc for package Automated document categorization
+        message: >-
+            Added link to admin doc for package Automated document
+            categorization
         version: '153'
     -
         author: Vladimir Pasquier
@@ -1120,7 +1138,9 @@ history:
     -
         author: Solen Guitter
         date: '2013-10-07 16:09'
-        message: Added links to 5.6 doc about Display email in user suggestion package
+        message: >-
+            Added links to 5.6 doc about Display email in user suggestion
+            package
         version: '115'
     -
         author: Solen Guitter
@@ -1410,7 +1430,9 @@ history:
     -
         author: Solen Guitter
         date: '2013-08-06 12:41'
-        message: Added links to Nuxeo Groups and Rights Audit user and admin documentation
+        message: >-
+            Added links to Nuxeo Groups and Rights Audit user and admin
+            documentation
         version: '58'
     -
         author: Thomas Roger
@@ -1465,7 +1487,9 @@ history:
     -
         author: Solen Guitter
         date: '2013-08-05 16:14'
-        message: Added Documentation column with links to user and administration documentation
+        message: >-
+            Added Documentation column with links to user and administration
+            documentation
         version: '47'
     -
         author: Thomas Roger

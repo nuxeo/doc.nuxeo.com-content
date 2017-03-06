@@ -328,7 +328,7 @@ The following table lists current requirements for running the Nuxeo Platform. T
 
 <tr><th colspan="1">Client-Side Requirements</th>
 <td colspan="1">The Nuxeo Platform comes with several applications that are used by business users and that have their own requirements: <ul><li>[JSF UI]({{page page='nuxeo-jsf-ui'}})</li>
-<li>[Web UI]({{page page='web-ui-overview'}})</li>
+<li>[Web UI]({{page page='web-ui'}})</li>
 <li>[Nuxeo Drive]({{page page='nuxeo-drive'}})</li>
 </ul></td>
 <td colspan="1"></td>

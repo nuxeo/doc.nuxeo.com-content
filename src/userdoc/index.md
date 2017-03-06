@@ -178,40 +178,11 @@ history:
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
 
-### Document Management
+### Web UI
 
-This module provides core and advanced document management features.
+Web UI is the new UI for Nuxeo Server. Thanks to its great flexibility, it is the ideal start for any Digital Asset Management, Case Management or Document Management project. Web UI is made with great client side web technology and adopts most recent standards of the Web.
 
-- [Nuxeo Platform Concepts]({{page page='nuxeo-platform-concepts'}})
-- [Browsing Content]({{page page='browsing-content'}})
-
-{{/panel}}
-</div>
-
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-
-### Nuxeo DAM
-
-It provides browsing and edition features adapted to multimedia content.
-
-- [Digital Asset Management with the Nuxeo Platform]({{page page='digital-asset-management-with-the-nuxeo-platform'}})
-- [How to Contribute Picture Conversions]({{page space='nxdoc' page='how-to-contribute-picture-conversions'}})
-
-{{/panel}}
-</div>
-</div>
-
-<div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-
-### [Managing Your Nuxeo Application]({{page page='managing-your-nuxeo-application'}})
-
-Administrators can configure some elements directly from the Nuxeo Platform's user interface.
-
-- [Managing Permissions]({{page page='managing-permissions'}})
-- [Managing Users and Groups]({{page page='managing-users-and-groups'}})
+[Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='web-ui'}})
 
 {{/panel}}
 </div>
@@ -219,13 +190,14 @@ Administrators can configure some elements directly from the Nuxeo Platform's us
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
 
-### [Adding Features]({{page page='adding-features'}})
+### JSF UI
 
-You can download and install optional product plugins from the Nuxeo Marketplace.
+JSF UI offers a complete User Interface for Nuxeo Server, fully extensible and configurable: forms, process, user actions. It is very easy to implement your business process on top of Nuxeo JSF UI with Nuxeo Studio.
 
-- [Nuxeo Drive]({{page page='nuxeo-drive'}})
-- [EasyShare]({{page page='easyshare'}})
-
+[Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='jsf-ui'}})
 {{/panel}}
 </div>
 </div>
+
+
+{{{multiexcerpt 'License' page='NXDOC:index'}}}

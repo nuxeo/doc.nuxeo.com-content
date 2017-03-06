@@ -11,6 +11,17 @@ labels:
     - collection-component
     - multiexcerpt-include
 toc: true
+confluence:
+    ajs-parent-page-id: '16089319'
+    ajs-parent-page-title: Additional Services
+    ajs-space-key: NXDOC
+    ajs-space-name: Nuxeo Platform Developer Documentation
+    canonical: Collections
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Collections'
+    page_id: '19234842'
+    shortlink: GoAlAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/GoAlAQ'
+    source_link: /display/NXDOC/Collections
 tree_item_index: 400
 history:
     -
@@ -147,17 +158,63 @@ history:
 ---
 ## Functional Overview
 
-{{{multiexcerpt 'functional-introduction' page='USERDOC:Collections'}}}
+{{multiexcerpt 'definition-collection' page='USERDOC:collections-web-ui'}}
+
+Depending on your user interface you can access collections by different means.
+
+**Web UI**
+{{{multiexcerpt 'functional-introduction-web-ui' page='USERDOC:collections-web-ui'}}}
+
+**JSF UI**
+{{{multiexcerpt 'functional-introduction-jsf-ui' page='USERDOC:Collections'}}}
+
 ### Collecting Documents
-{{{multiexcerpt 'collecting' page='USERDOC:Collections'}}}
+
+{{multiexcerpt 'collecting-rights' page='USERDOC:collections-web-ui'}}
+
+**Collecting documents in Web UI**
+{{{multiexcerpt 'collecting-web-ui' page='USERDOC:collections-web-ui'}}}
+
+**Collecting documents in JSF UI**
+{{{multiexcerpt 'collecting-jsf-ui' page='USERDOC:Collections'}}}
+
 ### Creating Collections
-{{{multiexcerpt 'creating' page='USERDOC:Collections'}}}
+
+{{multiexcerpt 'collections-containment-rule' page='collections-web-ui'}}
+
+**Creating collections in Web UI**
+{{{multiexcerpt 'creating-web-ui' page='USERDOC:collections-web-ui'}}}
+
+**Creating collections in JSF UI**
+{{{multiexcerpt 'creating-jsf-ui' page='USERDOC:Collections'}}}
+
 ### Sharing a Collection
+
 {{{multiexcerpt 'sharing' page='USERDOC:Collections'}}}
+
 ### Removing Documents from a Collection
-{{{multiexcerpt 'removing' page='USERDOC:Collections'}}}
+
+**Web UI**
+{{{multiexcerpt 'removing-web-ui' page='USERDOC:collections-web-ui'}}}
+
+**JSF UI**
+{{{multiexcerpt 'removing-jsf-ui' page='USERDOC:Collections'}}}
+
 ### Favorites
-{{{multiexcerpt 'favorites' page='USERDOC:Collections'}}}
+
+{{{multiexcerpt 'definition-favorites' page='USERDOC:Favorites'}}}
+
+**On Web UI**
+
+The list of documents bookmarked as favorites is available:
+{{{multiexcerpt 'favorites-location-web-ui' page='USERDOC:Favorites'}}}
+{{{multiexcerpt 'bookmarking-favorites-web-ui' page='USERDOC:Favorites'}}}
+
+**On JSF UI**
+
+The list of documents bookmarked as favorites is available:
+{{{multiexcerpt 'favorites-location-jsf-ui' page='USERDOC:Collections'}}}
+{{{multiexcerpt 'bookmarking-favorites-jsf-ui' page='USERDOC:Collections'}}}
 
 ## Installation & Configuration
 

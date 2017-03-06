@@ -2,7 +2,7 @@
 title: Nuxeo Multi-Tenant
 review:
     comment: ''
-    date: '2017-02-08'
+    date: '2017-02-28'
     status: ok
 labels:
     - lts2016-ok
@@ -10,6 +10,17 @@ labels:
     - multi-tenant
     - excerpt
 toc: true
+confluence:
+    ajs-parent-page-id: '11043055'
+    ajs-parent-page-title: Adding Features
+    ajs-space-key: USERDOC
+    ajs-space-name: Nuxeo Platform User Documentation
+    canonical: Nuxeo+Multi-Tenant
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Multi-Tenant'
+    page_id: '11043208'
+    shortlink: iIGo
+    shortlink_source: 'https://doc.nuxeo.com/x/iIGo'
+    source_link: /display/USERDOC/Nuxeo+Multi-Tenant
 tree_item_index: 1000
 history:
     -
@@ -60,7 +71,9 @@ history:
     -
         author: Solen Guitter
         date: '2013-11-04 23:45'
-        message: Removed related topics from TOC and added precision about members group being optional
+        message: >-
+            Removed related topics from TOC and added precision about members
+            group being optional
         version: '18'
     -
         author: Solen Guitter
@@ -185,8 +198,8 @@ Multi-tenancy is not automatically available on your Nuxeo Platform after the [p
 To activate multi-tenancy:
 
 1.  In the Admin tab, click on the **Tenant isolation** tab.
-2.  Click on the **Enable** button.<br/>
-    Tenant isolation status goes to "enabled".<br/>
+2.  Click on the **Enable** button.
+    Tenant isolation status goes to "enabled".
     You can now [create new tenants](#create-new-tenant).
 
 ## {{> anchor 'create-new-tenant'}}Creating a New Tenant
@@ -218,9 +231,9 @@ It takes two steps to make a user a tenant administrator.
 
 **Step 1: Edit the user's properties to associate them with a tenant:**
 
-1.  Click on the **Admin** main tab, and then on the **Users & groups** tab.
+1.  Click on the **Admin** main tab, and then on the **Users & groups** tab.<br/>
     The members management interface opens on the user directory search form.
-2.  Search a user and click on the user's name to open their card.
+2.  Search a user and click on the user's name to open their card.<br/>
     The user's card is displayed.
 3.  Click on the **Edit** tab.
 4.  In the **Tenant ID** list, select the domain you want the user to be an administrator of.
@@ -232,11 +245,11 @@ It takes two steps to make a user a tenant administrator.
 **Step 2: Declare the user as a tenant administrator:**
 
 1.  On the domain root, click on the **Manage** tab.
-2.  In the first tab **Tenant isolation**, type the username, first name or last name of the user you want to be an administrator.<br/>
+2.  In the first tab **Tenant isolation**, type the username, first name or last name of the user you want to be an administrator.
     The names of the users corresponding to the typed characters are automatically displayed as you type.
     ![]({{file name='multi-tenant-admin-search.png'}} ?w=350,border=true)
 3.  Click on the user you want to give permissions to.
-4.  Click on **Save**.<br/>
+4.  Click on **Save**.
     The user now has access to the tenant administration and to the **Users and groups** and **Vocabularies** tabs of the Admin main tab.
     ![]({{file name='multi-tenant-admin-center.png'}} ?w=450,border=true)
     The user is automatically added in two virtual groups: a **powerusers** group for functional administration and a tenant administrators group for administration features.
@@ -256,6 +269,8 @@ The vocabularies I10subjects and I10coverage are isolated and don't display any 
 
 See the [Managing Vocabularies]({{page page='managing-vocabularies'}}) page.
 
+* * *
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel heading='Related user documentation'}}
@@ -271,6 +286,7 @@ See the [Managing Vocabularies]({{page page='managing-vocabularies'}}) page.
 <div class="column medium-6">
 
 &nbsp;
+
 
 </div>
 </div>

@@ -8,6 +8,17 @@ labels:
     - nuxeo-jenkins-report
     - excerpt
 toc: true
+confluence:
+    ajs-parent-page-id: '11043055'
+    ajs-parent-page-title: Adding Features
+    ajs-space-key: USERDOC
+    ajs-space-name: Nuxeo Platform User Documentation
+    canonical: Nuxeo+Jenkins+Report
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Jenkins+Report'
+    page_id: '14257459'
+    shortlink: M43Z
+    shortlink_source: 'https://doc.nuxeo.com/x/M43Z'
+    source_link: /display/USERDOC/Nuxeo+Jenkins+Report
 tree_item_index: 900
 history:
     -

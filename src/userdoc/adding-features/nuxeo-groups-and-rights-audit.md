@@ -9,6 +9,17 @@ labels:
     - export
     - last-review-20150226
     - excerpt
+confluence:
+    ajs-parent-page-id: '11043055'
+    ajs-parent-page-title: Adding Features
+    ajs-space-key: USERDOC
+    ajs-space-name: Nuxeo Platform User Documentation
+    canonical: Nuxeo+Groups+and+Rights+Audit
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Groups+and+Rights+Audit'
+    page_id: '14257398'
+    shortlink: 9ozZ
+    shortlink_source: 'https://doc.nuxeo.com/x/9ozZ'
+    source_link: /display/USERDOC/Nuxeo+Groups+and+Rights+Audit
 tree_item_index: 700
 history:
     -
@@ -59,9 +70,9 @@ Only administrators can do an audit of the permissions of a folder.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-- [Nuxeo Groups and Rights Audit admin doc]({{page space='nxdoc' page='nuxeo-groups-and-rights-audit'}})
-- [Exporting Documents]({{page page='exporting-documents'}})
-- [Nuxeo Core Import / Export API]({{page space='nxdoc' page='nuxeo-core-import-export-api'}})
+*   [Nuxeo Groups and Rights Audit admin doc]({{page space='nxdoc' page='nuxeo-groups-and-rights-audit'}})
+*   [Exporting Documents]({{page page='exporting-documents'}})
+*   [Nuxeo Core Import / Export API]({{page space='nxdoc' page='nuxeo-core-import-export-api'}})
 
 {{/panel}}</div><div class="column medium-6">
 

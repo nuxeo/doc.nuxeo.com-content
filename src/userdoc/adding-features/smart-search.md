@@ -10,6 +10,17 @@ labels:
     - excerpt
     - multiexcerpt-include
 toc: true
+confluence:
+    ajs-parent-page-id: '11043055'
+    ajs-parent-page-title: Adding Features
+    ajs-space-key: USERDOC
+    ajs-space-name: Nuxeo Platform User Documentation
+    canonical: Smart+Search
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Smart+Search'
+    page_id: '12911433'
+    shortlink: SQPF
+    shortlink_source: 'https://doc.nuxeo.com/x/SQPF'
+    source_link: /display/USERDOC/Smart+Search
 tree_item_index: 1100
 history:
     -
@@ -75,7 +86,7 @@ history:
     -
         author: Manon Lumeau
         date: '2015-11-25 17:18'
-        message: 'replace "access rights" by "permissions"'
+        message: replace "access rights" by "permissions"
         version: '7'
     -
         author: Manon Lumeau

@@ -6,6 +6,17 @@ review:
     status: ok
 toc: true
 hidden: true
+confluence:
+    ajs-parent-page-id: ''
+    ajs-parent-page-title: ''
+    ajs-space-key: USERDOC
+    ajs-space-name: Nuxeo Platform User Documentation
+    canonical: Icons+Index
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Icons+Index'
+    page_id: '16090382'
+    shortlink: DoX1
+    shortlink_source: 'https://doc.nuxeo.com/x/DoX1'
+    source_link: /display/USERDOC/Icons+Index
 history:
     -
         author: Solen Guitter
@@ -105,7 +116,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-10-25 15:44'
-        message: 'Updated lock icon and added "open in a new tab" icon'
+        message: Updated lock icon and added "open in a new tab" icon
         version: '13'
     -
         author: Solen Guitter

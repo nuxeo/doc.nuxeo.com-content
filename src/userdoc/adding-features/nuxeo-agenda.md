@@ -9,6 +9,17 @@ labels:
     - excerpt
     - multiexcerpt
 toc: true
+confluence:
+    ajs-parent-page-id: '11043055'
+    ajs-parent-page-title: Adding Features
+    ajs-space-key: USERDOC
+    ajs-space-name: Nuxeo Platform User Documentation
+    canonical: Nuxeo+Agenda
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Nuxeo+Agenda'
+    page_id: '17793895'
+    shortlink: Z4MPAQ
+    shortlink_source: 'https://doc.nuxeo.com/x/Z4MPAQ'
+    source_link: /display/USERDOC/Nuxeo+Agenda
 tree_item_index: 300
 history:
     -
@@ -88,7 +99,7 @@ In the Agenda gadget, events can be created from the list view only.
 2.  Fill in the event creation form.
     ![]({{file name='agenda-creation-form-gadget.png'}} ?w=300,border=true)
 3.  Click on the **Create** button.
-        The event is displayed in the list of the Incoming events.  
+        The event is displayed in the list of the Incoming events.
 
 **Events properties**
 

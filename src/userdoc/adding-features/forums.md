@@ -9,6 +9,17 @@ labels:
     - excerpt
     - multiexcerpt-include
 toc: true
+confluence:
+    ajs-parent-page-id: '2392395'
+    ajs-parent-page-title: Document Types
+    ajs-space-key: USERDOC
+    ajs-space-name: Nuxeo Platform User Documentation
+    canonical: Forums
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Forums'
+    page_id: '2392376'
+    shortlink: OIEk
+    shortlink_source: 'https://doc.nuxeo.com/x/OIEk'
+    source_link: /display/USERDOC/Forums
 tree_item_index: 650
 history:
     -
