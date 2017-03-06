@@ -37,3 +37,7 @@ Your theme is saved browser-side, which means that if you use another browser yo
 - Go to **User Settings** menu
 - Click on **Sign Out**
 The login page is displayed.
+
+## UI Language
+
+Web UI uses the browser's language. If the language that you have defined in your browser is not available in Web UI, it falls back on English. 
