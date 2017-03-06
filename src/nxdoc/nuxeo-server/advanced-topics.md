@@ -67,3 +67,4 @@ Table of Contents:
 *   [Adding an Antivirus]({{page space='NXDOC' page='Adding an+Antivirus'}})
 *   [Nuxeo Distributions]({{page space='NXDOC' page='Nuxeo Distributions'}})
     *   [Available installers]({{page space='NXDOC' page='Available installers'}})
+*   [Trust Store and Key Store Configuration]({{page space='NXDOC' page='trust-store-and-key-store-configuration'}})
