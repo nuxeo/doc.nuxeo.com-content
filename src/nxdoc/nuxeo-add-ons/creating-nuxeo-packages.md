@@ -355,7 +355,7 @@ You can see that most of the files listed above are optional or generated. So fo
 
 ### From a Maven Multi-Module Project
 
-We assume that you already bootstrap your project with [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli), or your project is following the mecanism describes by [Maven](https://maven.apache.org) as a [multi-module project](https://maven.apache.org/guides/mini/guide-multiple-modules.html).
+We assume that you already bootstrapped your project with [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli), or your project is following the mecanism describes by [Maven](https://maven.apache.org) as a [multi-module project](https://maven.apache.org/guides/mini/guide-multiple-modules.html).
 
 ```bash
 $ cd my-project
