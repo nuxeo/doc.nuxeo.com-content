@@ -2,10 +2,10 @@
 title: Creating Nuxeo Packages
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-03-07'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - marketplace
     - packaging-component
 toc: true
