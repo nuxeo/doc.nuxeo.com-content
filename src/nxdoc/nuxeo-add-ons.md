@@ -600,7 +600,7 @@ Registered access
 [Documentation]({{page version='' space='nxdoc' page='nuxeo-3d'}})
 </td>
 <td colspan="1">
-&nbsp;
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-3d?version=1.0.0)
 </td>
 </tr>
 <tr>
