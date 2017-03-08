@@ -45,7 +45,7 @@ See [https://www.dartlang.org/tools/download.html](https://www.dartlang.org/tool
 
 ### Linux
 
-{{#> panel type='code' heading='Manual install of NodeJS'}}
+{{#> panel type='code' heading='Manual install of Dart'}}
 
 ```bash
 sudo apt-get install apt-transport-https
