@@ -39,16 +39,20 @@ Jenkins step generator (self-updated with installed plugins):
 
 ```
 node('SLAVE') {
+    def mvnHome = tool name: 'maven-3.3', type: 'hudson.tasks.Maven$MavenInstallation'
     try {
-        wrap([$class: 'TimestamperBuildWrapper']) {
-            stage 'checkout'
-            checkout([$class: 'GitSCM', branches: [[name: '*/master']], browser: [$class: 'GithubWeb', repoUrl: 'https://github.com/nuxeo/nuxeo-automation-php-client'], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', depth: 0, noTags: false, reference: '', shallow: false, timeout: 300]], submoduleCfg: [], userRemoteConfigs: [[url: 'git@github.com:nuxeo/nuxeo-automation-php-client.git']]])
-            stage 'build'
-            sh 'echo "Build something"'
-            stage 'tests'
-            sh 'echo "Run some tests"'
+        timeout(30) {
+            timestamps {
+                stage 'checkout' {
+                    git credentialsId: '4691426b-aa51-428b-901d-4e851ee37b01', url: 'git@github.com:nuxeo/nuxeo.git'
+                }
+                stage 'build' {
+                    sh "${mvnHome}/bin/mvn clean install"
+                }
+            }
         }
-    } catch (e) {
+    } catch(e) {
+        currentBuild.result = "FAILURE"
         step([$class: 'ClaimPublisher'])
         throw e
     }
@@ -60,7 +64,7 @@ node('SLAVE') {
 ```
 node('SLAVE') {
     try {
-        wrap([$class: 'TimestamperBuildWrapper']) {
+        timestamps {
             def mvnHome = tool name: 'maven-3.3', type: 'hudson.tasks.Maven$MavenInstallation'
             sh "${mvnHome}/bin/mvn clean install"
         }
