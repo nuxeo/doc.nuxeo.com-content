@@ -515,7 +515,10 @@ Here is a list of the most used parameter types and the string representation fo
 
 *   **stringlist**. Java Type: `org.nuxeo.ecm.automation.core.util.StringList`<br/>
     Known adapters: From string<br/>
-    String representation: Comma separated list of strings. Example: "foo, bar"
+    String representation: Comma separated list of strings. Example: "foo, bar".
+    {{#> callout type='note' }}
+    Starting from **8.10-HF03**, the comma separator can be escaped with the `\` character.
+    {{/callout}}
 
 Of course, when defining the parameter values that will be injected into an operation you can either specify static values (as hard coded strings) or an EL expression to compute the actual values at runtime.
 
