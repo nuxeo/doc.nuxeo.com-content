@@ -632,7 +632,7 @@ From a command line:
 
 Nuxeo CLI automatically created a unit test class for the Operation at `contract-mgt-project/contract-mgt-project-core/src/test/java/com/bigcorp/contractmgt/TestContractUpdater.java`. This test must be made to pass in order to compile and deploy your project.
 
-1. Create a "dummy" component to account for necessary Studio requirements, e.g. `fakestudio-component.xml` at `contract-mgt-project/contract-mgt-project-core/src/main/`.
+1. Create a "dummy" component to account for necessary Studio requirements, e.g. `fakestudio-component.xml` at `contract-mgt-project/contract-mgt-project-core/src/test/resources`.
 
 2. Paste the following into `fakestudio-component.xml`:
 
