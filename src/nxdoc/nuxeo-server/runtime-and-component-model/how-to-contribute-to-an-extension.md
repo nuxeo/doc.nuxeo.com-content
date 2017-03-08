@@ -6,9 +6,9 @@ review:
     status: ok
 details:
     howto:
-        excerpt: Lean how to create an XML extension in Nuxeo Studio and with the Nuxeo Generator and how to override a Nuxeo contribution.
+        excerpt: Lean how to create an XML extension in Nuxeo Studio and with the Nuxeo CLI and how to override a Nuxeo contribution.
         level: Intermediate
-        tool: 'Nuxeo Generator, Studio'
+        tool: 'Nuxeo CLI, Studio'
         topics: Extension point
 labels:
     - lts2016-ok
@@ -149,7 +149,7 @@ history:
 ---
 ## {{> anchor 'finding-extension-point'}}Finding the Extension Point Where to Contribute
 
-Whatever the tools you're using ([Nuxeo Studio](https://www.nuxeo.com/products/studio/) or [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo)), your first step is to find the open door configuration where you want to contribute. We call these open doors **Extension points**.
+Whatever the tools you're using ([Nuxeo Studio](https://www.nuxeo.com/products/studio/) or [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli)), your first step is to find the open door configuration where you want to contribute. We call these open doors **Extension points**.
 Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/).
 
 1.  Click on `Extension points`.
@@ -205,15 +205,15 @@ Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](htt
 
     etc.
 
-## Contributing Using Nuxeo Generator
+## Contributing Using Nuxeo CLI
 
-Contributing to an extension using Nuxeo Generator requires more steps that using Nuxeo Studio.
+Contributing to an extension using Nuxeo Generator requires more steps than using Nuxeo Studio.
 
-Here we assume that you have installed [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) and follow the [Getting Started guide]({{page page='getting-started-with-nuxeo-generator'}}).
+Here we assume that you have installed [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli) and follow the [Getting Started guide]({{page page='getting-started-with-nuxeo-cli'}}) to understand the basics.
 
-### Creating Your XML Extension in Nuxeo Generator
+### Creating Your XML Extension in Nuxeo CLI
 
-Once you have found the extension point you want to contribute to:
+Once you have found the `extension point` you want to contribute to:
 
 1.  Create a file `myproject-servicewhereIcontribute-contribution.xml` into the directory `src/main/resources/OSGI-INF/` of your project.
 2.  Declare an empty component into this file, like that:
@@ -242,7 +242,7 @@ Once you have found the extension point you want to contribute to:
 
 ### Declaring Your Contribution into Your Bundle
 
-In the previous section you have created your configuration. You must now declare your component in your bundle so it's deployed in your Nuxeo server. This declaration is made through the `src/main/resources/META-INF/MANIFEST.MF` file.
+In the previous section you have created your configuration. You must now declare your component in your bundle so it's deployed in your Nuxeo Server. This declaration is made through the `src/main/resources/META-INF/MANIFEST.MF` file.
 
 1.  Create a new parameter, if it does not exist.
     ```

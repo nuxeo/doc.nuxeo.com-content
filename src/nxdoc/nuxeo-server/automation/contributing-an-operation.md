@@ -290,13 +290,13 @@ history:
 
 ---
 
-This page gives all the information necessary for implementing an operation and is a must read for getting a good comprehension of the framework. You should also have a look at [some of our tutorials]({{page page='getting-started-with-nuxeo-generator'}}) that show how to use the Nuxeo Generator to create new operations easily and quickly, using the provided wizard.
+This page gives all the information necessary for implementing an operation and is a must read for getting a good comprehension of the framework. You should also have a look at [some of our tutorials]({{page page='getting-started-with-nuxeo-cli'}}) that show how to use the Nuxeo CLI to create new operations easily and quickly, using the provided wizard.
 
 You can also use the Codenvy factory that we have setup and that offers you [a ready-to-build sample operation](https://codenvy.com/f?id=0djlg2kc332ipv5u), with its unitary test. Just click on **Project** > **Build & Publish** so as to get a JAR of your operation. You can deploy your first operation "SampleOperation" into Nuxeo server in Codenvy by clicking on the green arrow on panel left top.
 
 {{#> callout type='tip' }}
 
-Check our [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) to bootstrap your Operation
+Check [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli) to bootstrap your Operation
 
 {{/callout}} <div style="float:right"><script type="text/javascript" style="Advanced" src="https://codenvy.com/f?id=0djlg2kc332ipv5u"></script></div>
 

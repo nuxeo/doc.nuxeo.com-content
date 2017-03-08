@@ -67,8 +67,8 @@ The available installers can be:
 *   Mac OS X (DMP, APP, PKG),
 *   Specific installers (Homebrew...).
 
-Nuxeo currently maintains a Linux Debian and a Windows installers. They are available for download at [http://www.nuxeo.com/downloads/](http://www.nuxeo.com/downloads/).
-See the [Installation]({{page page='installation'}}) page for a full and up-to-date documentation on the various install solutions.
+Nuxeo currently maintains a Linux Debian and a Windows installers. They are available for download [here](http://www.nuxeo.com/downloads/).
+See the [Installation]({{page page='installation'}}) page for a full and up-to-date documentation on the various installation solutions.
 
 Nuxeo aims at gathering and documenting all contributed install solutions from the user community. Any help about OS-specific cases, recommendations, contributions or feedbacks is very welcome.
 To contribute, you can comment on the relevant documentation page or post to any Nuxeo community channel. See [https://jira.nuxeo.com/browse/NXBT](https://jira.nuxeo.com/browse/NXBT) for issue management.

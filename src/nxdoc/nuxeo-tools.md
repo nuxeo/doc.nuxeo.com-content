@@ -17,9 +17,9 @@ Nuxeo offers a series of tools to help you develop on the Nuxeo Platform and cus
 **[Nuxeo Dev Tools Extension]({{page page='nuxeo-dev-tools-extension'}})**
 {{{excerpt 'nuxeo-dev-tools-extension'}}}
 
-**[Nuxeo Code Generator](https://www.npmjs.com/package/generator-nuxeo)**
+**[Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli)**
 
-Nuxeo Code Generator lets you easily scaffold common Nuxeo components like empty projects, Nuxeo Packages, Automation Operations, Nuxeo Services... This saves you time writing boilerplate code to focus on your code instead of the structure.
+Nuxeo CLI lets you easily scaffold common Nuxeo components like empty projects, Nuxeo Packages, Automation Operations, Nuxeo Services... This saves you time writing boilerplate code to focus on your code instead of the structure.
 
 **[Nuxeo Studio]({{page space='studio' page='nuxeo-studio'}})**
 

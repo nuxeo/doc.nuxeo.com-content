@@ -24,7 +24,7 @@ This kind of document field are defined as reference to external object. For exa
 *   `dc:coverage` is a reference to the "l10ncoverage" directory entry
 *   `dc:nature` is a reference to the "nature" directory entry
 
-### Usage
+## Usage
 
 The document marshalling provides a nice way to get the data referenced by one of its fields in-place.
 
@@ -101,7 +101,7 @@ To load every extended fields of a document, use `fetch.document=properties`.
 
 The Nuxeo Platform provides resolver for document, directory entry, user and group. It also provides Java-to-JSON marshaller for those objects. Therefore, you can fetch any property based on built-in resolvers.
 
-### Updating Document Properties
+## Updating Document Properties
 
 If a field is defined as a reference and if you provide a JSON-to-Java marshaller for the referenced object, you can either update the document using the reference as usual or use the object's JSON to update the corresponding document property.
 
@@ -112,7 +112,7 @@ If a field is defined as a reference and if you provide a JSON-to-Java marshalle
 
 The platform also provides JSON-to-Java for document, directory entry, user and group. Therefore, you can update any field based on the corresponding resolvers using the referenced object JSON.
 
-### Custom Resolver
+## Custom Resolver
 
 When you create a custom resolver, if you want to be able to load the JSON of a referenced object, you have to register a Java-to-JSON marshaller.
 

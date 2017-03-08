@@ -78,37 +78,37 @@ There are multiple ways to build a Nuxeo Package. Focusing on those using the [A
 *   NXR method
     The **recommended** method is to build an NXR corresponding to the wanted result after the package install. Then we operate a comparison between that product and a reference one (usually the Nuxeo CAP), and we finally generate the Nuxeo Package which will perform the wanted install.
 
-    *   PROS
-        Always up-to-date in regards to the dependencies and requirements (other bundles and third-party libraries).
-        Maven is aware of the project dependencies and can **properly order the build** in a multi-module project.
+    *   PROS<br/>
+        Always up-to-date in regards to the dependencies and requirements (other bundles and third-party libraries).<br/>
+        Maven is aware of the project dependencies and can **properly order the build** in a multi-module project.<br/>
         **No maintenance**: changes on transitive dependencies won't break the assembly, code is generic.
-        Perfect size: the package contains the exact **necessary and sufficient** content.
+        Perfect size: the package contains the exact **necessary and sufficient** content.<br/>
         **Factorization**: the NXR can be attached to the reactor for being reused in another assembly.
-    *   CONS
+    *   CONS<br/>
         The drawback is it takes some build time and has a dependency on a whole Nuxeo distribution.
-        **Maximum build time**: the build performs more actions than the other methods and will consume more bandwidth.
+        **Maximum build time**: the build performs more actions than the other methods and will consume more bandwidth.<br/>
         Writing requires Maven knowledge on concepts such as the GAV, the dependency graph, the dependency management, the artifact resolution.
-*   No-NXR method.
+*   No-NXR method.<br/>
     That method is using the same principle for building the Nuxeo Package as for building an NXR, with no final optimization. It is an **acceptable compromise** between speed and quality.
 
-    *   PROS
+    *   PROS<br/>
         It is as much reliable regarding at the dependencies as the above recommended method.
-        Maven is aware of the project dependencies and can **properly order the build** in a multi-module project.
-        **No maintenance**: changes on transitive dependencies won't break the assembly, code is generic.
+        Maven is aware of the project dependencies and can **properly order the build** in a multi-module project.<br/>
+        **No maintenance**: changes on transitive dependencies won't break the assembly, code is generic.<br/>
         **Moderate build time**: faster than the recommended method.
-    *   CONS
-        The drawback is since the solution is empiric, it will likely embed useless files and generate a bigger archive.
-        Biggest size: the package contains the **necessary but also useless** content.
+    *   CONS<br/>
+        The drawback is since the solution is empiric, it will likely embed useless files and generate a bigger archive.<br/>
+        Biggest size: the package contains the **necessary but also useless** content.<br/>
         Writing requires Maven knowledge on concepts such as the GAV, the dependency graph, the dependency management, the artifact resolution.
-*   Explicit method.
+*   Explicit method.<br/>
     That latest method is explicitly listing everything that must be packaged. It is **not recommended** except for specific cases, quick solution or proof of concept.
 
-    *   PROS
-        Easy method: very few code is required, you simply list what you want. It requires absolutely no Maven concept knowledge.
+    *   PROS<br/>
+        Easy method: very few code is required, you simply list what you want. It requires absolutely no Maven concept knowledge.<br/>
         **Minimum build time**: the build is really fast.
-    *   CONS
-        **Maintenance required**: you have to manually update the package assembly every time the dependencies change.
-        You also risk not to see that an indirect dependency has changed and requires some changes on the third-party libraries.
+    *   CONS<br/>
+        **Maintenance required**: you have to manually update the package assembly every time the dependencies change.<br/>
+        You also risk not to see that an indirect dependency has changed and requires some changes on the third-party libraries.<br/>
         Managed size: the package contains exactly what you expect, with **no guarantee of results**.
 
 See [https://github.com/nuxeo/nuxeo-marketplace-sample/](https://github.com/nuxeo/nuxeo-marketplace-sample/) for downloading a project with sample architectures, implementing the three above build methods plus the required modules for testing those Nuxeo Packages with Selenium, WebDriver and Funkload.

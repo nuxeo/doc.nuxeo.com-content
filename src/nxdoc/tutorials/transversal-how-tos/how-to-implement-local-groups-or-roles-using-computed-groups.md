@@ -139,7 +139,7 @@ Development environment requirements:
 
 - A [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) project (for the Workspace modification and User action definition),
 - A [Nuxeo SDK]({{page space='idedoc' page='setting-up-a-nuxeo-sdk'}}) instance ready for test,
-- A Java IDE, like the [Nuxeo Generator]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-generator'}})(for bundle creation and computed group definition).
+- A Java IDE, like the [Nuxeo CLI]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-cli'}})(for bundle creation and computed group definition).
 
 Examples of uses cases for which you will need computed groups:
 
@@ -180,7 +180,7 @@ We can resume the Computed Group Service like that:
 
 ### Preparing the Project
 
-This part assumes you have [Nuxeo Generator]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-generator'}}), a Nuxeo Server associated to a Nuxeo Connect account.
+This part assumes you have [Nuxeo CLI]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-cli'}}), a Nuxeo Server associated to a Nuxeo Connect account.
 
 1.  Create a new Nuxeo Plugin Project.
 2.  Add the following component:
@@ -307,10 +307,10 @@ In the previous section we asked Nuxeo Runtime to register our new computer grou
 
 As you can see in this example, the computer group statically returns `myTestGroup. Let's test your test environment:`
 
-1.  Bootstrap an empty project with [Nuxeo Generator]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-generator'}})
+1.  Bootstrap an empty project with [Nuxeo CLI]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-cli'}})
 2.  Make sure the project is correctly configured to be hot reloaded:
 ```
-yo nuxeo:hotreload configure
+nuxeo hotreload configure
 ```
 3.  Hot reload your project.
 4.  Connect as Administrator into your Nuxeo instance.
