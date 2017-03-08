@@ -326,7 +326,13 @@ When using this solution it is important that Nuxeo installation path contains n
     nuxeoctl.bat --gui=false stop
     ```
 
-8.  Open the `wrapper.conf` file and make sure the `wrapper.console.title` entry does not contain a colon (":") or the `runConsole.bat` execution will fail. In that case, remove the colon or set another title.
+8.  Open the `wrapper.conf` file:
+    - at the end of the file, add a new line among the additional java options to set the `nuxeo.home` environment property. In the example below, Nuxeo is installed in `E:\Nuxeo` and the new line is the 10th wrapper additional option:
+
+    ```
+    wrapper.java.additional.10 = -Dnuxeo.home=E:\\\\Applis\\\\Nuxeo
+    ```
+    - make sure the `wrapper.console.title` entry does not contain a colon (":") or the `runConsole.bat` execution will fail. In that case, remove the colon or set another title.
 9.  Execute your wrapped application as a console application:
 
     ```
