@@ -243,7 +243,7 @@ Client-Side Encryption is safer than Server-Side Encryption. With Client-Side En
 
 {{/callout}}
 
-#### <span style="color: rgb(0,0,0);font-size: 14.0px;">Cache Options</span>
+#### Cache Options
 
 Files retrieved from S3 are cached locally for speed. You can configure the maximum cache size (in bytes or with the standard KB, MB, GB or TB&nbsp;suffixes), the maximum number of files in the cache, and the minimum age (in seconds) a file should have before being eligible for purge (the age is the time since last file access).
 
