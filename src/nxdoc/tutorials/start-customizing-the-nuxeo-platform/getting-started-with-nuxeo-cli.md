@@ -430,38 +430,38 @@ From a command line prompt, type:
 $ npm install -g nuxeo-cli
 ```
 
-Nuxeo CLI lets you easily scaffold common Nuxeo components like empty projects, Packages, Automation Operations, Services... This saves you time writing boilerplate code to focus on your code instead of the structure.
+Nuxeo CLI lets you easily scaffold common Nuxeo components like empty projects, Packages, Automation Operations, Services, etc. This saves you time writing boilerplate code to focus on your code instead of the structure.
 
-We'll use it to generate a new Nuxeo project and an operation.
+We'll use it to generate a new Nuxeo project and a custom operation.
 
 
-## Step 2 - Implement an Operation
+## Step 2 - Implement a Custom Operation
 
-We want to create an operation that indicates the date of renegotiation of a contract, by fetching the document's start date and adding three months to it.
+We want to create an operation that indicates the date of renegotiation of a contract. This will be done by fetching the document's start date and adding three months to it.
 
-An operation is a Java class in which you can put custom business logic. It is usually used on top of existing Studio operations; either when the business logic you need to implement is too complicated to be created and maintained through a regular automation chain, or when the operation does not simply exist yet.
+A custom operation is a Java class in which you can put custom business logic. Custom operations usually serve one of two purposes: to support business logic that is too complex to express via an Automation Chain; or to provide functionality that does not exist within existing operations.
 
-Once created, the operation can be exposed in Nuxeo Studio and used as any other operation, in automation chains and automation scripts. See the [Automation]({{page page='automation'}}) section for more information about operations.
+Once created, the operation can be exposed in Nuxeo Studio and used just like any other operation via automation chains and automation scripts. See the [Automation]({{page page='automation'}}) section for more information about operations.
 
 
 #### Create Your Project
 
 From a command line:
 
-1.  Create an empty folder to store your project.
+1.  Create an empty folder in which to store the project:
 
     ```bash
     $ mkdir contract-mgt-project
     $ cd contract-mgt-project
     ```
 
-2.  Generate the project structure.
+2.  Generate a "Multi module" project structure:
 
     ```bash
     $ nuxeo bootstrap
     ```
 
-3.  Fill in the prompted parent project creation ("Multi module"):
+3.  Fill in the following values, via the prompts provided by the Nuxeo CLI:
 
     ```
     ? Use a parent artifact (for instance your company's BOM or the org.nuxeo.ecm.distribution:nuxeo-distribution POM)? y
@@ -474,7 +474,9 @@ From a command line:
     ? Project description: Contract management parent.
     ```
 
-4.  Fill in the prompted project itself ("Single module"):
+    Once complete, Nuxeo CLI will automatically start the process to create a "Single Module" project (the operation will be implemented here).
+
+4.  Fill in the following values to generate the "Single Module" project:
 
     ```
     ? Project Group id: com.bigcorp.contractmgt
@@ -485,39 +487,39 @@ From a command line:
 
     Now that the project is generated, it can be used in **any IDE**.
 
-5. Import your Nuxeo project into your IDE.
+#### Import the Project Into an IDE
 
-    * Using IntelliJ IDEA
+* Using IntelliJ IDEA
 
-        1. Select **File** / **Open...**.
+    1. Select **File** / **Open...**.
 
-        2. Browse to your project root folder (`contract-mgt-project`), then the `pom.xml` file and click **Open**.
+    2. Browse to your project root folder (`contract-mgt-project`), then the `pom.xml` file and click **Open**.
 
-        3. Choose **Open as Project**.
+    3. Choose **Open as Project**.
 
-    * Using Eclipse
+* Using Eclipse
 
-        1.  Generate Eclipse configuration files.
+    1.  Generate Eclipse configuration files.
 
-            ```bash
-            $ mvn install
+        ```bash
+        $ mvn install
 
-            # The following parameters (downloadSources, downloadJavadocs and useProjectReferences) are optional
-            # For details, see Maven Eclipse Plugin documentation: https://maven.apache.org/plugins/maven-eclipse-plugin/eclipse-mojo.html
-            $ mvn eclipse:clean eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true -Declipse.useProjectReferences=true
+        # The following parameters (downloadSources, downloadJavadocs and useProjectReferences) are optional
+        # For details, see Maven Eclipse Plugin documentation: https://maven.apache.org/plugins/maven-eclipse-plugin/eclipse-mojo.html
+        $ mvn eclipse:clean eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true -Declipse.useProjectReferences=true
 
-            # Linux and OS X users should run the following script to make Eclipse use different build directories than Maven:
-            $ curl -o- https://raw.githubusercontent.com/nuxeo/nuxeo/master/fixeclipse|bash
-            # A cross-platform script is also available for Windows users:
-            # curl -o- https://raw.githubusercontent.com/nuxeo/nuxeo/master/scripts/fixeclipse.py|python
-            ```
+        # Linux and OS X users should run the following script to make Eclipse use different build directories than Maven:
+        $ curl -o- https://raw.githubusercontent.com/nuxeo/nuxeo/master/fixeclipse|bash
+        # A cross-platform script is also available for Windows users:
+        # curl -o- https://raw.githubusercontent.com/nuxeo/nuxeo/master/scripts/fixeclipse.py|python
+        ```
 
-        2.  In Eclipses select **File** / **Import** / **General** / **Existing Projects into Workspace**.
+    2.  In Eclipses select **File** / **Import** / **General** / **Existing Projects into Workspace**.
 
-        3.  Browse to your project root folder (`contract-mgt-project`), then click **Finish**.
-            ![]({{file name='eclipse_import_project.png'}} ?w=400)
+    3.  Browse to your project root folder (`contract-mgt-project`), then click **Finish**.
+        ![]({{file name='eclipse_import_project.png'}} ?w=400)
 
-#### Code Your Operation
+#### Implement Your Operation
 
 1.  In a terminal, generate an operation code template:
 
@@ -547,7 +549,7 @@ From a command line:
 
         2. In Eclipse, then right-click on the project and click Refresh (F5).
 
-4. You get something like this for the operation, in `src/main/java`:
+4. Nuxeo CLI will generate a new Java class for the operation at `contract-mgt-project/contract-mgt-project-core/src/main/java/com/bigcorp/contractmgt/ContractUpdater.java` like so:
 
     ```java
     package com.bigcorp.contractmgt;
@@ -583,7 +585,7 @@ From a command line:
     }
     ```
 
-4.  Time to fill in the skeleton and start coding. Here is the final result:
+4.  Time to fill in the skeleton and start coding! Here is the final result of `ContractUpdater.java`:
 
     ```java
     package com.bigcorp.contractmgt;
@@ -628,9 +630,12 @@ From a command line:
 
 #### Update the Unit Test
 
-A unit test has been created in `src/test/java`. You will need it to pass in order to compile and deploy your project.
+Nuxeo CLI automatically created a unit test class for the Operation at `contract-mgt-project/contract-mgt-project-core/src/test/java/com/bigcorp/contractmgt/TestContractUpdater.java`. This test must be made to pass in order to compile and deploy your project.
 
-1. Create a fake component to help faking Studio, called `fakestudio-component.xml`. Fill it in with:
+1. Create a "dummy" component to account for necessary Studio requirements, e.g. `fakestudio-component.xml` at `contract-mgt-project/contract-mgt-project-core/src/test/resources`.
+
+2. Paste the following into `fakestudio-component.xml`:
+
     ```xml
     <component name="com.nuxeo.studio.fake">
       <alias>org.nuxeo.ecm.directory.sql.storage</alias>
@@ -638,7 +643,7 @@ A unit test has been created in `src/test/java`. You will need it to pass in ord
     </component>
     ```
 
-2.  Replace it with the following code:
+3.  Replace `TestContractUpdater.java` with the following code:
 
     ```java
     package com.bigcorp.contractmgt;
@@ -701,28 +706,28 @@ A unit test has been created in `src/test/java`. You will need it to pass in ord
     }
     ```
 
-3.  Replace the `MAVEN-ARTIFACT-ID` in `studio.extensions.MAVEN-ARTIFACT-ID` with your Studio project's symbolic name.
+4.  Replace "MAVEN-ARTIFACT-ID" in `studio.extensions.MAVEN-ARTIFACT-ID` with your Studio project's symbolic name.
 
-    To get the Maven artifact ID, in Studio, go to **Settings** > **Application Information** and use the value found in the **Maven Artifact id** field.
+    Note: To get the symbolic name go to **Settings** > **Application Information** in Nuxeo Studio and use the value found in the **Maven Artifact id** field.
 
 If you try running the test (in Eclipse, right-click on your project and choose **Run As, JUnit Test**, or **Run TestContractUpdater** in IntelliJ IDEA), you will notice that the test fails because our Studio project is missing a few things. We need to add them to make the test pass.
 
 
 #### Send the Operation to Studio
 
-1. Build a JAR file (without running the tests):
+1. Build a JAR file (without running the tests); from the `contract-mgt-project` folder run:
 
     ```bash
     $ mvn -DskipTests package
     ```
 
-2. Deploy the JAR in your Nuxeo server by copying it to **$NuxeoServer/nxserver/bundles**, then restart your server.
+2. Deploy the JAR (`contract-mgt-project/contract-mgt-project-core/target/contract-mgt-project-core-1.0-SNAPSHOT.jar`) in your Nuxeo server by copying it to **$NuxeoServer/nxserver/bundles**, then restart your server.
 
-3. Start your server and go to the local automation documentation at http://NuxeoServer:8080/nuxeo/site/automation/doc (http://localhost:8080/nuxeo/site/automation/doc typically).
+3. Go to the local automation documentation at `<server>/nuxeo/site/automation/doc` (for example [http://localhost:8080/nuxeo/site/automation/doc](http://localhost:8080/nuxeo/site/automation/doc)).
 
 4. In the Document category click **Contract Updater**, then click on the **JSON definition** link and copy the operation definition.
 
-5. In Nuxeo Studio go to **Settings**&nbsp;> **Registries**&nbsp;> **Automation Operations** and paste the operation definition in an operation definition `"operations": []` and save.
+5. In Nuxeo Studio go to **Settings**&nbsp;> **Registries**&nbsp;> **Automation Operations** and paste the operation definition into the `"operations": []` array, for example:
 
     ```
     { "operations": [
@@ -739,7 +744,7 @@ If you try running the test (in Eclipse, right-click on your project and choose 
     ] }
     ```
 
-The operation is now available in Automation Chain editor, in the Document category.
+The operation is now available in Automation Chain editor, under the Document category.
 
 
 ## Step 3 - Create Your Chain in Nuxeo Studio
@@ -750,7 +755,7 @@ The operation is now available in Automation Chain editor, in the Document categ
 
 2.  Call your chain `ContractUpdater`.
 
-3.  Keep the **Fetch > Context Document(s)** operation and add your own operation, available in **Document > ContractUpdater.**
+3.  Leave the **Fetch > Context Document(s)** operation and add the custom operation, available in **Document > ContractUpdater.**
 
     ![]({{file name='contractUpdater_chain.png'}} ?w=600,border=true)
 
@@ -784,7 +789,7 @@ The code can either be tested through unit tests or manually. You need to bind t
 
 1.  In Nuxeo Studio, under **Source Control** > **Branch Management**, release the most recent commit on your project. This will generate a version of your project that can be accessed by Maven.
 
-2.  It is strongly recommended that you encrypt your Studio password:
+2.  It is strongly recommended that you encrypt your Studio password (aka your Nuxeo Connect account password):
 
     1. Create a master password:
 
@@ -806,13 +811,13 @@ The code can either be tested through unit tests or manually. You need to bind t
         </settingsSecurity>
         ```
 
-    3. Encrypt your server password:
+    3. Encrypt your Studio password:
 
         ```bash
         mvn --encrypt-password
         ```
 
-    4. Enter your studio password at the prompt, and store the encrypted password in your `~/.m2/settings.xml` file as follows. This configures your Maven client to use authentication when accessing the Studio Maven repository.
+    4. Store the encrypted Studio password in your `~/.m2/settings.xml` file as below:
 
         ```xml
         <servers>
@@ -826,7 +831,9 @@ The code can either be tested through unit tests or manually. You need to bind t
         </servers>
         ```
 
-3. In your IDE edit the `pom.xml` file to declare the dependency of the Studio project you just tagged:
+         This configures your Maven client to use authentication when accessing the Studio Maven repository.
+
+3. Edit the `pom.xml` file in `contract-mgt-project/contract-mgt-project-core` to declare the dependency on the Studio project you just made a release of:
 
     ```xml
     <dependencies>
@@ -840,13 +847,13 @@ The code can either be tested through unit tests or manually. You need to bind t
     </dependencies>
     ```
 
-    The `artifactId` is identical to the `MAVEN-ARTIFACT-ID` we referenced before. Use the `version` number from your latest release or tag.
+    The value for `artifactId` is identical to the `MAVEN-ARTIFACT-ID` we referenced before. Use the `version` value from the release you created.
 
-4.  Update the dependencies:
+4.  Update the project dependencies:
 
     * IntelliJ IDEA
 
-        In IntelliJ IDEA, click on **Import Changes** in the Maven's popup.
+        * IntelliJ IDEA will detect the change automatically, click on **Import Changes** in the Maven popup.
 
     * Eclipse
 
@@ -868,11 +875,7 @@ Using unit tests is the recommended way to ensure a feature is working as expect
 
 ### Testing Manually
 
-#### Starting the Server
-
-To start the server:
-
-1.  Start your Nuxeo server. In Nuxeo Platform, update your Studio package from the Update Center.
+1.  Start your Nuxeo server. Update your Studio package from the Update Center.
 
 2.  Create a new Contract with the following information:
     *   Title: Maintenance Contract
