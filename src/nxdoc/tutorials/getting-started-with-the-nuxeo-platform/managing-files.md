@@ -1,8 +1,8 @@
 ---
 title: Managing Files
 review:
-    comment: ''
-    date: '2016-12-20'
+    comment: 'Allow download policy for Administrators'
+    date: '2017-02-21'
     status: ok
 toc: true
 labels:
@@ -231,7 +231,7 @@ Upload a file to your Nuxeo Platform instance, create a contract and attach the 
         .then(contract => {
           console.log('Contract has been created as follows:');
           console.log(contract);
-          console.log(`Blob can be downloaded here: ${contract.get('file:content').data}.\nNote that a file security policy restricts downloads to members of the managers group.\nYou can log in as sconnor / sconnor to download it.`);
+          console.log(`Blob can be downloaded here: ${contract.get('file:content').data}.\nNote that a file security policy restricts downloads to Administrators and members of the managers group.\nYou can log in as sconnor / sconnor to download it.`);
         })
         .catch(error => {
            console.log(error);
@@ -245,7 +245,7 @@ Upload a file to your Nuxeo Platform instance, create a contract and attach the 
     $ node uploadContract.js
     ```
 
-**Note:** You can download the file if you log in as a member of the `managers` group (e.g. by using sconnor / sconnor), otherwise download is forbidden.
+**Note:** You can download the file if you log in as an Administrator or a member of the `managers` group (e.g. by using sconnor / sconnor), otherwise download is forbidden.
 
 {{#> callout type='info' heading='Learn more'}}
 
@@ -393,7 +393,7 @@ The contract for Skynet AI maintenance you just created should contain other fil
     $ node attachFilesToContract.js
     ```
 
-**Note:** You can download the attachments if you log in as a member of the managers group (e.g. by using sconnor / sconnor), otherwise download is forbidden.
+**Note:** You can download the attachments if you log in as an Administrator or a member of the managers group (e.g. by using sconnor / sconnor), otherwise download is forbidden.
 
 {{#> callout type='info' heading='Learn more'}}
 
