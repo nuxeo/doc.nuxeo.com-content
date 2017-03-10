@@ -403,8 +403,8 @@ This requires X11.
 2.  Add the Nuxeo APT repository.
 
     ```bash
-    $ sudo add-apt-repository "deb http://apt.nuxeo.org/ $(lsb_release -cs) releases"
-    $ sudo add-apt-repository "deb http://apt.nuxeo.org/ $(lsb_release -cs) fasttracks"
+    sudo add-apt-repository "deb http://apt.nuxeo.org/ $(lsb_release -cs) releases"
+    sudo add-apt-repository "deb http://apt.nuxeo.org/ $(lsb_release -cs) fasttracks"
     ```
 
     {{#> callout type='tip' }}
@@ -412,8 +412,8 @@ This requires X11.
     If you don't have `add-apt-repository`, which is a non-standard command, issue the following commands:
 
     ```
-    $ sudo echo "deb http://apt.nuxeo.org/ $(lsb_release -cs) releases" > /etc/apt/sources.list.d/nuxeo.list
-    $  sudo echo "deb  http://apt.nuxeo.org/  $(lsb_release -cs) fasttracks" >> /etc/apt/sources.list.d/nuxeo.list
+    sudo echo "deb http://apt.nuxeo.org/ $(lsb_release -cs) releases" > /etc/apt/sources.list.d/nuxeo.list
+    sudo echo "deb  http://apt.nuxeo.org/  $(lsb_release -cs) fasttracks" >> /etc/apt/sources.list.d/nuxeo.list
     ```
 
     {{/callout}}
@@ -452,7 +452,7 @@ Like any Java application you should prevent the JVM Heap to be swapped to disk,
 
 ### Temporary Folder
 
-While setting `nuxeo.tmp.dir` property in nuxeo.conf, we recommend not to use the system temporary folder `/tmp` because this one can be cleaned up by the operating system.&nbsp;This is the case on Red Hat Enterprise Linux in particular, where `systemd-tmpfiles` service is deleting old files from `/tmp`.
+While setting `nuxeo.tmp.dir` property in nuxeo.conf, we recommend not to use the system temporary folder `/tmp` because this one can be cleaned up by the operating system. This is the case on Red Hat Enterprise Linux in particular, where `systemd-tmpfiles` service is deleting old files from `/tmp`.
 
 * * *
 
