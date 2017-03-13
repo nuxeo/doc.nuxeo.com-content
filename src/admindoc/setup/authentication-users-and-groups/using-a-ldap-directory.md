@@ -380,24 +380,7 @@ The wizard enables you to easily setup your LDAP configuration.
     4. Define the default mapping:
         - since the *Administrator* user won't exists anymore, you should assign at least one user to be administrator using `<defaultAdministratorId>`,
         - you can also choose to make all users members of the default "members" group using `<defaultGroup>`.
-5.  Set the correct server:
-    - `<ldapUrl>`
-    - `<bindDn>` and `<bindPassword>`
-6.  Set the correct LDAP config:
-    - `<searchBaseDN>`
-    - `<searchClass>`
-    - `<fieldMapping>`
-7.  If you want Nuxeo to be able to create users in the LDAP directory:
-
-    - make sure the user you use to access LDAP has write access,
-    - define the `<creationBaseDn>` and associated parameters.
-
-8.  Define the default mapping:
-
-    - since the _Administrator_ user won't exists anymore, you should assign at least one user to be administrator using `<defaultAdministratorId>`,
-    - you can also choose to make all users members of the default "members" group using `<defaultGroup>`.
-
-9.  Restart the Nuxeo server, and you should now be able to authenticate against LDAP.
+5.  Restart the Nuxeo server, and you should now be able to authenticate against LDAP.
 
 {{#> callout type='note' }}
 
