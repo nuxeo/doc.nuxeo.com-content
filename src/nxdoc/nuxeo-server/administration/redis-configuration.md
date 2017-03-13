@@ -171,7 +171,8 @@ The `nuxeo.redis.password`, `nuxeo.redis.database` and `nuxeo.redis.timeout` are
 
 `nuxeo.redis.maxIdle` sets the maximum number of Redis idle connections in the pool (available since since 8.2).
 
-When `nuxeo.redis.enabled=true` then the following is automatically activated as well: `repository.clustering.invalidation=redis`.
+When `nuxeo.redis.enabled=true` then the following is automatically activated as well: 
+`nuxeo.work.queuing=redis`.
 (As of Nuxeo Platform 5.8, work queuing is the only use of Redis in the standard Nuxeo modules, so it makes sense to activate both together.)
 
 To activate the Redis [cluster invalidation]({{page page='nuxeo-and-redis'}}#clustering-invalidation) in cluster mode you need to add:
