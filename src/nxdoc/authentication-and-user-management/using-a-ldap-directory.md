@@ -219,13 +219,13 @@ history:
 ---
 In the Nuxeo Platform, users and groups are managed by directories. If you want your Nuxeo instance to use a LDAP directory you will need to:
 
-*   configure a user directory pointing to your LDAP server(s),
-*   configure a group directory pointing to your LDAP server(s) (if you need LDAP groups).
+- configure a user directory pointing to your LDAP server(s),
+- configure a group directory pointing to your LDAP server(s) (if you need LDAP groups).
 
 Of course you can have a specific custom config where:
 
-*   you use a custom user / group schema,
-*   you use several LDAP directories, or a mix of SQL and LDAP directories.
+- you use a custom user / group schema,
+- you use several LDAP directories, or a mix of SQL and LDAP directories.
 
 But for the most common use case, all you want to do is map the default `userDirectory` to your LDAP Server. Since groups are used in Nuxeo to associate permissions with content, fetching groups from LDAP is usually not very efficient: LDAP groups are usually not designed for that.
 
@@ -250,10 +250,10 @@ The same way, you can choose a group from your company's directory, instead of u
 
 1.  Create a file called `default-ldap-users-directory-config.xml` in your config directory:
 
-*   `server/default/deploy/nuxeo.ear/config/` in JBoss,
-*   `nxserver/config/` in Tomcat.
+- `server/default/deploy/nuxeo.ear/config/` in JBoss,
+- `nxserver/config/` in Tomcat.
 
-3.  Then copy this content (make sure it's valid XML, sometimes what you think is a space character is actually a non-breaking space (`U+00A0`) which is invalid in XML):
+2.  Then copy this content (make sure it's valid XML, sometimes what you think is a space character is actually a non-breaking space (`U+00A0`) which is invalid in XML):
 
     ```
     <?xml version="1.0"?>
@@ -386,27 +386,21 @@ The same way, you can choose a group from your company's directory, instead of u
     ```
 
 4.  Then you should edit this file:
+    1.  Set the correct server:
+        - `<ldapUrl>`
+        - `<bindDn>` and `<bindPassword>`
+    2.  Set the correct LDAP config:
+        - `<searchBaseDN>`
+        - `<searchClass>`
+        - `<fieldMapping>`
+    3.  If you want Nuxeo to be able to create users in the LDAP directory:
+        - make sure the user you use to access LDAP has write access,
+        - define the `<creationBaseDn>` and associated parameters.
+    4.  Define the default mapping:
+        - since the _Administrator_ user won't exists anymore, you should assign at least one user to be administrator using `<defaultAdministratorId>`,
+        - you can also choose to make all users members of the default "members" group using `<defaultGroup>`.
 
-1.  Set the correct server:
-
-    *   `<ldapUrl>`
-    *   `<bindDn>` and `<bindPassword>`
-2.  Set the correct LDAP config:
-
-    *   `<searchBaseDN>`
-    *   `<searchClass>`
-    *   `<fieldMapping>`
-3.  If you want Nuxeo to be able to create users in the LDAP directory:
-
-*   make sure the user you use to access LDAP has write access,
-*   define the `<creationBaseDn>` and associated parameters.
-
-5.  Define the default mapping:
-
-*   since the _Administrator_ user won't exists anymore, you should assign at least one user to be administrator using `<defaultAdministratorId>`,
-*   you can also choose to make all users members of the default "members" group using `<defaultGroup>`.
-
-6.  Restart the Nuxeo server, and you should now be able to authenticate against LDAP.
+5.  Restart the Nuxeo server, and you should now be able to authenticate against LDAP.
 
 {{#> callout type='note' }}
 
@@ -416,8 +410,8 @@ If you want to roll back the changes, simply delete the `default-ldap-users-dire
 
 For a more detailed view about possible configuration, see:
 
-*   [LDAPDirectory and associated extension points](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewComponent/org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory),
-*   [UserManager extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewExtensionPoint/org.nuxeo.ecm.platform.usermanager.UserService--userManager).
+- [LDAPDirectory and associated extension points](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewComponent/org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory),
+- [UserManager extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-7.10/viewExtensionPoint/org.nuxeo.ecm.platform.usermanager.UserService--userManager).
 
 The [ldaptools/](https://github.com/nuxeo/nuxeo-services/tree/release-7.10/nuxeo-platform-directory/nuxeo-platform-directory-ldap/ldaptools) folder in source code of the `nuxeo-platform-directory-ldap` module further provides sample LDIF files and OpenLDAP configuration file to help you setup a sample OpenLDAP server you can use as a base setup to build your corporate directory.
 
@@ -493,9 +487,9 @@ Therefore you should apply the changes described below to your existing LDAP con
 
 See attached files for templates of LDAP configuration:
 
-*   [LDAP users configuration]({{file name='default-ldap-users-directory-config.xml'}})
-*   [LDAP groups configuration]({{file name='default-ldap-groups-directory-config.xml'}})
-*   [User manager configuration]({{file name='default-virtual-groups-config.xml'}})
+- [LDAP users configuration]({{file name='default-ldap-users-directory-config.xml'}})
+- [LDAP groups configuration]({{file name='default-ldap-groups-directory-config.xml'}})
+- [User manager configuration]({{file name='default-virtual-groups-config.xml'}})
 
 This method applies to multi-directories too.
 
@@ -517,11 +511,11 @@ In the [Log4J]({{page space='glos' page='log4j'}}) configuration, increase the l
 
 This will give you more informations such as:
 
-*   Is your XML contribution properly loaded?
+- Is your XML contribution properly loaded?
     Search for the component name of your contribution in the log file (for instance `org.nuxeo.ecm.directory.ldap.users`).
-*   Did the LDAP directory initialized?
+- Did the LDAP directory initialized?
     If so, your "servers" extension point is working.
-*   What is the LDAP request sending when you try to log in Nuxeo?
+- What is the LDAP request sending when you try to log in Nuxeo?
     You must be run the same request outside Nuxeo, using your preferred LDAP tool.
 
 [Apache Directory Studio](http://directory.apache.org/studio/) can be used to replicate the LDAP requests sent by Nuxeo to the LDAP server and check their responses. If you seek help on [answers.nuxeo.com](http://answers.nuxeo.com)&nbsp;or [connect.nuxeo.com](http://connect.nuxeo.com)&nbsp;please include the LDIF export of a sample user entry and a sample group entry (if you want to use the LDAP server to resolve the groups).
@@ -532,9 +526,9 @@ This will give you more informations such as:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [How to Configure a Multidirectory for Users and Groups]({{page page='how-to-configure-a-multidirectory-for-users-and-groups'}})
-*   [How to Add Custom LDAP Fields to the UI]({{page page='how-to-add-custom-ldap-fields-to-the-ui'}})
-*   [Data Lists and Directories]({{page page='data-lists-and-directories'}})
+- [How to Configure a Multidirectory for Users and Groups]({{page page='how-to-configure-a-multidirectory-for-users-and-groups'}})
+- [How to Add Custom LDAP Fields to the UI]({{page page='how-to-add-custom-ldap-fields-to-the-ui'}})
+- [Data Lists and Directories]({{page page='data-lists-and-directories'}})
 
 {{/panel}}</div><div class="column medium-6">
 
