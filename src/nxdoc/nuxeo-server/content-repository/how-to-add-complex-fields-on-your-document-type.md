@@ -146,7 +146,7 @@ Let's see how this metadata is defined.
     *   inline: subfields are displayed one after the other on the same line.
 3.  Click on the icon ![]({{file name='layout_table_subwidgets_edit.png' space='userdoc' page='icons-index'}}) to edit the subfields widgets.
 4.  Edit each sub-field widget and click on **Save**.
-    ![]({{file name='edit_subwidget.png' space='studio' page='form-layouts'}} ?w=600,h=230,border=true)
+    ![]({{file name='edit_subwidget.png' space='studio' page='/studio/form-layouts'}} ?w=600,h=230,border=true)
     Modifications are saved.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
