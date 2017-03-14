@@ -59,7 +59,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'drive_faq_page_content' page='NXDOC:Nuxeo Drive FAQ'}}}
+{{{multiexcerpt 'drive_faq_page_content' page='/nxdoc/nuxeo-drive-faq'}}}
 
 * * *
 
