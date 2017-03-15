@@ -563,7 +563,7 @@ The server-side API mainly allows to:
 
 The graph below illustrates the execution process corresponding to the Automation call samples seen earlier: [remote polling](#remote-polling) and [synchronization of a locally created file](#locally-created-file).
 
-![]({{file name='execution_process.jpg'}} ?w=650,border=true)
+![]({{file page='nuxeo-drive' name='execution_process.jpg'}} ?w=650,border=true)
 
 ### Customization
 
