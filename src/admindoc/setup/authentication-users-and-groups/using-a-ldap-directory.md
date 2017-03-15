@@ -23,7 +23,7 @@ confluence:
     source_link: /display/ADMINDOC60/Using+a+LDAP+Directory
 tree_item_index: 100
 version_override:
-  'FT': 'nxdoc/using-a-ldap-directory'
+  'FT': '/nxdoc/using-a-ldap-directory'
   'LTS 2016': 810/nxdoc/using-a-ldap-directory
   'LTS 2015': 710/nxdoc/using-a-ldap-directory
 history:
