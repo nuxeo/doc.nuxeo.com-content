@@ -24,6 +24,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/eYGyAQ'
     source_link: /display/NXDOC710/Using+a+LDAP+Directory
 tree_item_index: 705
+version_override:
+    '60': 60/admindoc/using-a-ldap-directory
 history:
     -
         author: Damien Metzler
@@ -215,7 +217,6 @@ history:
         date: '2011-02-07 18:51'
         message: ''
         version: '1'
-
 ---
 In the Nuxeo Platform, users and groups are managed by directories. If you want your Nuxeo instance to use a LDAP directory you will need to:
 
