@@ -220,12 +220,15 @@ We could extend the Folder document type to inherit its folderish facet. But it 
 4.  In this **Accepted children type** section, select `documentationItem`.
     ![]({{file name='FolderishFacet-3.png'}} ?w=500,h=319,border=true)
 
-</div><div class="column medium-4">{{#> panel type='primary'}} Read more:
-
-*   [Resources in Studio]({{page space='studio' page='resources'}})
-*   [Available Facets]({{page page='available-facets'}})
-
-{{/panel}}</div></div><div class="row"><div class="column medium-8">
+</div><div class="column medium-4">{{#> panel type='primary'}}
+Read more:
+- [Resources in Studio]({{page space='studio' page='resources'}})
+- [Available Facets]({{page page='available-facets'}})
+{{/panel}}
+</div>
+</div>
+<div class="row">
+<div class="column medium-8">
 
 **Defining the folder layouts**
 
@@ -251,11 +254,12 @@ For our container, we need very few metadata, a title and a description are enou
     You only see a documentation item.
     ![]({{file name='tecDocContainer.png'}} ?w=500,h=244,border=true)
 
-</div><div class="column medium-4">{{#> panel type='primary'}} Read more:
-
-*   [Form Layouts in Studio]({{page space='studio' page='form-layouts'}})
-
-{{/panel}}</div></div><div class="row"><div class="column medium-8">
+</div><div class="column medium-4">{{#> panel type='primary'}}
+Read more:
+- [Form Layouts in Studio]({{page space='studio' page='form-layouts'}})
+{{/panel}}
+</div>
+</div><div class="row"><div class="column medium-8">
 
 ## Adapting the Listing in a Folder
 
@@ -362,8 +366,9 @@ To sum up what we saw:
 
 It is now time to add custom behaviors, such as the locking policy we decided initially.
 
-{{/callout}}</div><div class="column medium-4">{{#> panel type='primary'}} Read more:
-
-*   [Content Views in Studio]({{page space='studio' page='content-views'}})
-
-{{/panel}}</div></div>
+{{/callout}}</div><div class="column medium-4">{{#> panel type='primary'}}
+Read more:
+- [Content Views in Studio]({{page space='studio' page='content-views'}})
+{{/panel}}
+</div>
+</div>

@@ -19,12 +19,12 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/uI1kAQ'
     source_link: /display/NXDOC60/Nuxeo+and+Redis
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-06 13:07'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-06 13:06'
         message: ''
@@ -99,8 +99,8 @@ By default Lock managed on documents are stored inside the repository backend.Wh
 
 {{#> panel heading='Related Documentation'}}
 
-*   [Redis Configuration]({{page space='admindoc60' page='redis-configuration'}})
-*   [Work and WorkManager]({{page page='work-and-workmanager'}})
+- [Redis Configuration]({{page space='admindoc60' page='redis-configuration'}})
+- [Work and WorkManager]({{page page='work-and-workmanager'}})
 
 {{/panel}}</div><div class="column medium-6">
 

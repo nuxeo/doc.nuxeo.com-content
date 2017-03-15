@@ -215,8 +215,8 @@ The first step you need to take is to enable the anonymous user.
 
     ```
 
-    *   This file needs to be named `what-you-want-config.xml` and to be deployed under `nxserver/config/`.
-    *   Or you can use template system and copy it into `template/common/config/`.
+    - This file needs to be named `what-you-want-config.xml` and to be deployed under `nxserver/config/`.
+    - Or you can use template system and copy it into `template/common/config/`.
 2.  Restart the application server.&nbsp;
 
     After the server is up and running, when accessing Nuxeo again, the anonymous user will be used and logged into the application.
@@ -233,8 +233,8 @@ If you give Write access to the repository to this user, you will let anyone hav
 
 ## Defining the Login Page for the Anonymous User
 
-*   If you give at least Read Access to the Default Domain for the Anonymous User&nbsp;case, he will be redirected at the root of the Default Domain into the Nuxeo DM view.
-*   If you give no Right Access to the Default Domain for the Anonymous User, he will be redirected to the Home View.
+- If you give at least Read Access to the Default Domain for the Anonymous User&nbsp;case, he will be redirected at the root of the Default Domain into the Nuxeo DM view.
+- If you give no Right Access to the Default Domain for the Anonymous User, he will be redirected to the Home View.
     Anonymous User will have the possibility to access to his content from the Dashboard (gadgets "My Workspace", "My Documents", ...)
 
 * * *
@@ -243,15 +243,15 @@ If you give Write access to the repository to this user, you will let anyone hav
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Implement Local Groups or Roles Using Computed Groups]({{page page='how-to-implement-local-groups-or-roles-using-computed-groups'}})
-*   [How to Let Users Set Rights on Non Folderish Documents]({{page page='how-to-let-users-set-rights-on-non-folderish-documents'}})
-*   [undefined]()
-*   [How-to index ]({{page page='how-to-index'}})
+- [How to Implement Local Groups or Roles Using Computed Groups]({{page page='how-to-implement-local-groups-or-roles-using-computed-groups'}})
+- [How to Let Users Set Rights on Non Folderish Documents]({{page page='how-to-let-users-set-rights-on-non-folderish-documents'}})
+- [undefined]()
+- [How-to index ]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Managing Access Rights]({{page space='userdoc60' page='managing-access-rights'}})
-*   [Working with workspace]({{page space='userdoc60' page='working-with-workspaces'}})
-*   [Nuxeo Platform User Registration]({{page page='nuxeo-platform-user-registration'}})
+- [Managing Access Rights]({{page space='userdoc60' page='managing-access-rights'}})
+- [Working with workspace]({{page space='userdoc60' page='working-with-workspaces'}})
+- [Nuxeo Platform User Registration]({{page page='nuxeo-platform-user-registration'}})
 
 {{/panel}}</div></div>

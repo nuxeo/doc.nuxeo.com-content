@@ -19,6 +19,10 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/x4BVAQ'
     source_link: /display/NXDOC60/Documentation+Item+Implementation
 tree_item_index: 100
+version_override:
+    'FT': '/nxdoc/implementing-documentation-items/'
+    LTS 2016: 810/nxdoc/implementing-documentation-items/
+    LTS 2015: 710/nxdoc/implementing-documentation-items/
 history:
     -
         author: Manon Lumeau
@@ -280,11 +284,11 @@ At this first step, we will create a new document type called `documentationItem
 
 We recommend you first take a look at the [Repository Concepts]({{page page='repository-concepts'}}) page if you are not yet familiar with the Nuxeo Platform.
 
-{{! multiexcerpt name='tuto-item-names-warning'}} {{#> callout type='note' heading='Item names'}}
-
+{{! multiexcerpt name='tuto-item-names-warning'}}
+{{#> callout type='note' heading='Item names'}}
 In this section we provide example names for items. You'll see different names in screen shots. Most of the time a suffix like "tuto" is added. In your Studio project please use the suggested names (or invent your own) and not the ones in screen shots.
-
-{{/callout}}{{! /multiexcerpt}}
+{{/callout}}
+{{! /multiexcerpt}}
 
 ## Declaring the New Document Type
 
@@ -311,8 +315,6 @@ As stated in the introduction of the project, the goal is to manage all kinds of
 
 The new document type is created, it is now time to customize it.
 
-<div class="row"><div class="column medium-8">
-
 ## Defining Properties and Facets
 
 Let's define some properties of the `documentationItem`.
@@ -330,15 +332,9 @@ Let's define some properties of the `documentationItem`.
 
 The documentation item is now available in the correct category and it has some icons. But it does not hold the needed informations (process, nature, binary...).
 
-</div><div class="column medium-4">{{#> panel type='primary'}} Read more:
-
-*   [Available Facets]({{page page='available-facets'}})
-*   [Resources in Studio]({{page space='studio' page='resources'}})
-
-{{/panel}}
-
-
-</div></div><div class="row"><div class="column medium-8">
+**Read more:**
+- [Available Facets]({{page page='available-facets'}})
+- [Resources in Studio]({{page space='studio' page='resources'}})
 
 ## Defining the Metadata
 
@@ -362,11 +358,8 @@ In the Nuxeo Platform metadata are always grouped by schemas. A schema is a set 
 
 In the end the only metadata that is not already available is the "process". So let's create a new metadata in Studio.
 
-</div><div class="column medium-4">{{#> panel type='primary'}} Read more:
-
-*   [Content Repository]({{page page='content-repository'}})
-
-{{/panel}}</div></div><div class="row"><div class="column medium-8">
+**Read more:**
+- [Content Repository]({{page page='content-repository'}})
 
 ### Creating the Schema
 
@@ -404,11 +397,8 @@ Now you add this new schema to the `DocumentationItem` document type:
 
 Nuxeo makes a difference between the content model (what are the document types and metadata?) and the user interface. The metadata is available on the document but we haven't defined how to fill in this metadata.
 
-</div><div class="column medium-4">{{#> panel type='primary'}} Read more:
-
-*   [Schemas in Studio]({{page space='studio' page='schemas'}})
-
-{{/panel}}</div></div><div class="row"><div class="column medium-8">
+**Read more:**
+- [Schemas in Studio]({{page space='studio' page='schemas'}})
 
 ## Showing Metadata in the User Interface
 
@@ -435,11 +425,8 @@ Metadata are displayed in form layouts. A form layout can be generic and reused 
 
 If we look back at what we wanted on the document, we have all the information we wanted but not how we wanted them. Nature and Process should be lists of choices and not simple text boxes.
 
-</div><div class="column medium-4">{{#> panel type='primary'}} Read more:
-
-*   [Form Layouts in Studio]({{page space='studio' page='form-layouts'}})
-
-{{/panel}}</div></div><div class="row"><div class="column medium-8">
+**Read more:**
+- [Form Layouts in Studio]({{page space='studio' page='form-layouts'}})
 
 ### Showing a List of Choices in the UI for a Metadata
 
@@ -463,12 +450,10 @@ In the Nuxeo Platform lists of choices are called vocabularies. A specific secti
 
 Now that you have the two vocabularies, you still have to bind them to the metadata so that the user can select them. This is where we will customize each metadata widget in the creation layout from a simple text to list of choices.
 
-</div><div class="column medium-4">{{#> panel type='primary'}} Read more:
+**Read more:**
+- [How to Add a New Vocabulary]({{page page='how-to-add-a-new-vocabulary'}})
+- [Vocabularies in Studio]({{page space='studio' page='vocabularies'}})
 
-*   [How to Add a New Vocabulary]({{page page='how-to-add-a-new-vocabulary'}})
-*   [Vocabularies in Studio]({{page space='studio' page='vocabularies'}})
-
-{{/panel}}</div></div><div class="row"><div class="column medium-8">
 
 #### Configuring the Nature Widget
 
@@ -505,7 +490,6 @@ Now that you have the two vocabularies, you still have to bind them to the metad
     ![]({{file name='Screen Shot 2013-07-02 at 19.23.26.png'}} ?w=450,border=true)
 
 {{#> callout type='tip' heading='Congratulation'}}
-
 You created a document type that will hold all the information you need to manage your technical documentation items.
 
 To sum up, what we saw:
@@ -514,13 +498,9 @@ To sum up, what we saw:
 *   Metadata are grouped in schemas. Of course, one document can have several schemas.
 *   The content model is different from the user interface. When you add a metadata to a document (through its schemas), you have to add the metadata in the layouts of the document.
 *   You can control how the metadata are filled in directly from the layouts of the document by changing the widget type.
-
 {{/callout}}
 
 The next step is to adapt where the documents are created and how they are displayed when browsing.
 
-</div><div class="column medium-4">{{#> panel type='primary'}} Read more:
-
+**Read more:**
 - [Form Layouts in Studio]({{page space='studio' page='form-layouts'}})
-
-{{/panel}}</div></div>

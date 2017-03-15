@@ -540,8 +540,8 @@ The Nuxeo Platform being flexible, you can use several add-ons together to achie
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
 
-*   [Nuxeo and Redis]({{page page='nuxeo-and-redis'}})
-*   [Nuxeo Clustering Configuration]({{page space='admindoc60' page='nuxeo-clustering-configuration'}})
+- [Nuxeo and Redis]({{page page='nuxeo-and-redis'}})
+- [Nuxeo Clustering Configuration]({{page space='admindoc60' page='nuxeo-clustering-configuration'}})
 
 {{/panel}}</div><div class="column medium-6">
 

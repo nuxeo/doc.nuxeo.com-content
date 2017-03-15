@@ -17,37 +17,37 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/LYFVAQ'
     source_link: /display/NXDOC60/Platform+as+a+Service
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 17:37'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 17:37'
         message: typos and formatting
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 15:13'
         message: ''
         version: '5'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-11-24 16:26'
         message: Typos
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-11-19 23:35'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-11-19 23:34'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-11-19 23:31'
         message: ''
@@ -73,7 +73,7 @@ When building an application you want to deliver as a service, there are several
 *   Customization: Each customer wants to be able to slightly tweak the application to their own requirements
 *   Customization maintenance This point can quickly become a major issue
 
-![](https://www.lucidchart.com/publicSegments/view/544fa30f-4bc0-4db6-b2ca-51d20a005489/image.png)
+![](https://www.lucidchart.com/publicSegments/view/544fa30f-4bc0-4db6-b2ca-51d20a005489/image.png ?w=600,border=true )
 
 ### Subsidiaries / Regional Deployment
 
@@ -87,7 +87,7 @@ Usually the most critical points to handle are:
 *   Maintenance and upgrade: You don't want to multiply maintenance price by the number of logical deployments.
 *   Deployment speed: Deploying a new "instance" should be fast and painless.
 
-![](https://www.lucidchart.com/publicSegments/view/544fa85d-e3b4-44d7-85cf-0f860a008ac6/image.png)
+![](https://www.lucidchart.com/publicSegments/view/544fa85d-e3b4-44d7-85cf-0f860a008ac6/image.png ?w=600,border=true )
 
 ### Projects with Common Requirements
 
@@ -102,7 +102,7 @@ Even if these are separated projects with potentially different life cycles, it 
 *   To mutualize maintenance
 *   To speed up projects deployment
 
-![](https://www.lucidchart.com/publicSegments/view/544fb181-2084-4c5a-a58e-48500a00c2c4/image.png)
+![](https://www.lucidchart.com/publicSegments/view/544fb181-2084-4c5a-a58e-48500a00c2c4/image.png ?w=600,border=true )
 
 ## Why Nuxeo Platform Does Help
 
@@ -111,7 +111,7 @@ All the use cases above have in common that:
 *   You first need to build a common application, ideally without starting from the ground.
 *   You want then to be able to customize it for a project or client, without compromising upgrade possibilities.
 
-![](https://www.lucidchart.com/publicSegments/view/544fbd0c-da60-4f7b-bf54-630f0a005489/image.png)
+![](https://www.lucidchart.com/publicSegments/view/544fbd0c-da60-4f7b-bf54-630f0a005489/image.png ?w=600,border=true )
 
 The Nuxeo Platform provides the tools for achieving that:
 
@@ -136,7 +136,7 @@ This approach exists for a very long time and has the big advantage to provide a
 
 ### nuxeo-multi-tenants
 
-![](https://www.lucidchart.com/publicSegments/view/544ff14a-9d34-4765-a115-21350a004d3d/image.png)
+![](https://www.lucidchart.com/publicSegments/view/544ff14a-9d34-4765-a115-21350a004d3d/image.png ?w=600,border=true )
 
 The `nuxeo-multi-tenants` add-on provides a multi-tenant isolation system that adds to the Nuxeo Platform:
 
@@ -146,7 +146,7 @@ The `nuxeo-multi-tenants` add-on provides a multi-tenant isolation system that a
 
 Depending on the way you define a tenant, you could also use completely separated repositories for each tenants (allowing to have physically separated Databases and BinaryStores).
 
-![](https://www.lucidchart.com/publicSegments/view/544ff2b8-2e80-4037-a0d8-70490a004d3d/image.png)
+![](https://www.lucidchart.com/publicSegments/view/544ff2b8-2e80-4037-a0d8-70490a004d3d/image.png ?w=600,border=true )
 
 ### Limits of the Multi-Tenant Model
 
@@ -200,7 +200,7 @@ As seen earlier, for the classical multi-tenants approach to be really efficient
 
 Basically the idea is that for each client a set of dedicated containers running Nuxeo is used.
 
-![](https://www.lucidchart.com/publicSegments/view/54504e19-f858-4bbe-b483-01650a0090b1/image.png)
+![](https://www.lucidchart.com/publicSegments/view/54504e19-f858-4bbe-b483-01650a0090b1/image.png ?w=600,border=true )
 
 With the container based approach all the problems of a single application with multi-tenants disappear:
 
@@ -223,7 +223,7 @@ Basically, `nuxeo.io` is an infrastructure that provides tools to automate the w
 *   To provision Nuxeo server containers and DB servers containers
 *   To start the containers by deploying the target packages and binding to a URL
 
-![](https://www.lucidchart.com/publicSegments/view/5451062b-bacc-4bec-b865-3b140a008ac6/image.png)
+![](https://www.lucidchart.com/publicSegments/view/5451062b-bacc-4bec-b865-3b140a008ac6/image.png ?w=600,border=true )
 
 Actually nuxeo.io also provides a web portal that can be used to configure and provision Nuxeo instances associated to an application configuration.
 
@@ -239,7 +239,7 @@ This approach allows to optimize the run infrastructure, even when running on vi
 *   Containers can be passivated when not needed anymore
 *   Containers can be restarted very quickly when needed
 
-![](https://www.lucidchart.com/publicSegments/view/545056a0-bc98-464d-9ff2-61b30a0090b1/image.png)
+![](https://www.lucidchart.com/publicSegments/view/545056a0-bc98-464d-9ff2-61b30a0090b1/image.png ?w=600,border=true )
 
 Because lightweight containers are cheaper to create or to shutdown, this 2-level container architecture allows to have a very reactive provision policy so that we can quickly scale the application up or down.
 
@@ -254,7 +254,7 @@ To manage this container factory `nuxeo.io` is based on several key components:
 *   Gogeta: as dynamic load balancer
 *   nuxeo.io manager: the Nuxeo based application used to control the whole system
 
-![](https://www.lucidchart.com/publicSegments/view/5450599b-5a40-4a34-8243-49f40a005489/image.png)
+![](https://www.lucidchart.com/publicSegments/view/5450599b-5a40-4a34-8243-49f40a005489/image.png ?w=600,border=true )
 
 nuxeo.io can run on AWS leveraging RDS and S3 or on Vagrant / VMWare. The full technology stack can be available for on premises installation.
 
@@ -266,7 +266,7 @@ The first service we will introduce (Q4 2014/Q1 2015) is Nuxeo IDM for having a 
 
 We also plan to provide a service gateway so that nuxeo.io based applications can easily leverage Cloud based services like Push, Conversion.
 
-![](https://www.lucidchart.com/publicSegments/view/54510595-bd24-4a69-9151-71340a008ac6/image.png)
+![](https://www.lucidchart.com/publicSegments/view/54510595-bd24-4a69-9151-71340a008ac6/image.png ?w=600,border=true )
 
 ## Examples of nuxeo.io Usage
 
@@ -303,15 +303,9 @@ However, when looking in more details, each region should have access to two rep
 *   A corporate repository, shared across all regions
 *   A local repository, specific to one region
 
-The Nuxeo Platform and nuxeo.io provides the required&nbsp;infrastructure:
+The Nuxeo Platform and nuxeo.io provides the required infrastructure:
 
 *   Platform as a Service
 *   Multi-repositories support
 
-![](https://www.lucidchart.com/publicSegments/view/54511437-a558-457c-a92e-551e0a0090b1/image.png)
-
-&nbsp;
-
-&nbsp;
-
-* * *
+![](https://www.lucidchart.com/publicSegments/view/54511437-a558-457c-a92e-551e0a0090b1/image.png ?w=600,border=true )

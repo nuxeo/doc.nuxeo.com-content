@@ -121,21 +121,21 @@ Computed groups let you define a list of groups to which users will be affected 
 
 Development environment requirements:
 
-*   a [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) project (for the Workspace modification and User action definition),
-*   a [Nuxeo SDK]({{page space='idedoc' page='setting-up-a-nuxeo-sdk'}}) instance ready for test,
-*   [Nuxeo IDE]({{page space='idedoc' page='documentation-center-for-nuxeo-platform-ides'}}) (for bundle creation&nbsp;and computed group definition).
+- a [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) project (for the Workspace modification and User action definition),
+- a [Nuxeo SDK]({{page space='idedoc' page='setting-up-a-nuxeo-sdk'}}) instance ready for test,
+- [Nuxeo IDE]({{page space='idedoc' page='documentation-center-for-nuxeo-platform-ides'}}) (for bundle creation and computed group definition).
 
 Examples of uses cases for which you will need computed groups:
 
-*   delegation management
-*   local groups on a workspace,
-*   group resolved by complex logic more generally.
+- delegation management
+- local groups on a workspace,
+- group resolved by complex logic more generally.
 
 In the coming example we will implement the notion of "local groups" thanks to computed groups. Users with management permission on the workspace will be able to decide who is part of the "validators" group of the workspace by editing one of the metadata of this workspace. Some more complex examples can be thought of. Here is the global strategy to implement this use case:
 
-*   I want to create a virtual group&nbsp;named&nbsp;`$idWorkspace_validator` for each workspace, where `$idWorkspace` is the id of the workspace. Virtual means that the group is not referenced in the group directory. Affectation of users to the group will be resolved by a piece of Java code, just after the user gets authenticated to the system.
-*   Users affected to the `$idWorkspace_validator` group are the ones listed in the `wks:validator` property of the Workspace `$idWorkspace`. `wks:validators` must be added as a property containing the list of user names, on the Workspace type.
-*   I want to create a button on each document whose state is&nbsp;`inProgress`. Clicking on this button starts a simple validation workflow with one validation task assigned to the`&nbsp;_$idWorkspace__validator` group where&nbsp;`$idWorkspace`&nbsp;is the id of the closest parent workspace.
+- I want to create a virtual group named `$idWorkspace_validator` for each workspace, where `$idWorkspace` is the id of the workspace. Virtual means that the group is not referenced in the group directory. Affectation of users to the group will be resolved by a piece of Java code, just after the user gets authenticated to the system.
+- Users affected to the `$idWorkspace_validator` group are the ones listed in the `wks:validator` property of the Workspace `$idWorkspace`. `wks:validators` must be added as a property containing the list of user names, on the Workspace type.
+- I want to create a button on each document whose state is `inProgress`. Clicking on this button starts a simple validation workflow with one validation task assigned to the `_$idWorkspace__validator` group where `$idWorkspace` is the id of the closest parent workspace.
 
 This use case is simple but from this example you can easily implement the delegation feature.
 
@@ -143,46 +143,36 @@ This use case is simple but from this example you can easily implement the deleg
 
 Here, we will just add the `wks:validators` field to the Workspace document type definition and improve the form to let the manager of the workspace set this value.
 
-1.  In Studio, [create a schema]({{page space='studio' page='schemas'}}) with the name&nbsp;`workspace`&nbsp;and prefix&nbsp;`wks`.
-2.  In this schema, define a field&nbsp;`validators` as a list of string.
+1.  In Studio, [create a schema]({{page space='studio' page='schemas'}}) with the name `workspace` and prefix `wks`.
+2.  In this schema, define a field `validators` as a list of string.
 3.  In Studio, create a `Workspace` [document type]({{page space='studio' page='documents'}}) (to override the default Workspace document type set by Nuxeo).
-4.  In the Workspace definition, add the schema&nbsp;`workspace` as an extra schema.
-5.  In the Creation, View and Edition layouts, replace the&nbsp;_Warning...&nbsp;_widget by the&nbsp;`wks:validators`field and set the widget&nbsp;`Multiple Users/Groups suggestion` and force only users suggestions.
+4.  In the Workspace definition, add the schema `workspace` as an extra schema.
+5.  In the Creation, View and Edition layouts, replace the _Warning..._ widget by the `wks:validators`field and set the widget `Multiple Users/Groups suggestion` and force only users suggestions.
 
-Now, you can specify a list of validators into each workspace. Let's make users of this list members of the&nbsp;`$idWorkspace_validator` group.
+Now, you can specify a list of validators into each workspace. Let's make users of this list members of the `$idWorkspace_validator` group.
 
 ## Java-based membership definition
 
 This part is the most interesting part of this presentation, where we see how Computed Group Service is leveraged to have dynamical group definitions.
 
-<div>
-
-<div>We can resume the Computed Group Service like that:</div>
-
-<div>
+We can resume the Computed Group Service like that:
 
 *   You can register a class that implements a method that will be called just after each user connection.
 *   The list of strings returned by your method will be considered as the list of virtual groups the user belongs to.
 
-{{#> callout type='info' }} You should first have a quick first look to the [Java doc of the ComputedGroupService](https://github.com/nuxeo/nuxeo-services/blob/release-6.0/nuxeo-platform-usermanager-core/src/main/java/org/nuxeo/ecm/platform) and the [explorer.nuxeo.org documentation around this service](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewBundle/org.nuxeo.ecm.platform.usermanager) and get back to it after having played this tutorial! {{/callout}}
-
-&nbsp;
-
-</div>
+{{#> callout type='info' }}
+You should first have a quick first look to the [Java doc of the ComputedGroupService](https://github.com/nuxeo/nuxeo-services/blob/release-6.0/nuxeo-platform-usermanager-core/src/main/java/org/nuxeo/ecm/platform) and the [explorer.nuxeo.org documentation around this service](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-6.0/viewBundle/org.nuxeo.ecm.platform.usermanager) and get back to it after having played this tutorial!
+{{/callout}}
 
 ### Preparing the Project
 
 This part assumes you have [IDEDOC]({{page space='idedoc'}}) configured with the Nuxeo SDK associated and Nuxeo Connect account referenced. Please look [this documentation]({{page page='getting-started-with-nuxeo-ide'}}) if you don't.
 
-</div>
 
-<div>
-
-1.  Create a new&nbsp;Nuxeo Plugin Project.
+1.  Create a new Nuxeo Plugin Project.
 2.  Add the following component:
 
     {{#> panel type='code' heading='src/main/resources/OSGI-INF/test-computed-group-contrib.xml'}}
-
     ```html/xml
     <?xml version="1.0"?>
     <component
@@ -208,10 +198,10 @@ This part assumes you have [IDEDOC]({{page space='idedoc'}}) configured with the
 
     {{/panel}}
 
-    &nbsp;
+
 
     *   The first contribution `computer` defines the class that will implement the logic that will return the list of virtual groups the user belongs to.
-    *   The second contribution&nbsp;`computerChain`enables to contribute and chain multiple resolution logics.
+    *   The second contribution `computerChain`enables to contribute and chain multiple resolution logics.
 3.  Don't forget to reference the XML contribution in the `src/main/resources/META-INF/MANIFEST.MF`. The file must be like that:
 
     {{#> panel type='code' heading='MANIFEST.MF'}}
@@ -230,27 +220,26 @@ This part assumes you have [IDEDOC]({{page space='idedoc'}}) configured with the
 
     ```
 
-    {{/panel}} {{#> callout type='warning' }}
-
+    {{/panel}}
+    {{#> callout type='warning' }}
     Don't forget to let the last line empty, without any character.
-
     {{/callout}}
 
-    Now, let's see how to implement the memberhsip logic based on the `wks:validators`&nbsp;property value.
+    Now, let's see how to implement the memberhsip logic based on the `wks:validators` property value.
 
 ### Coding your Computer Group
 
-In the previous section we asked Nuxeo Runtime to register our new computer group. We named the class&nbsp;`org.nuxeo.project.computed.group.ValidatorsGroupComputer_._`
+In the previous section we asked Nuxeo Runtime to register our new computer group. We named the class `org.nuxeo.project.computed.group.ValidatorsGroupComputer_._`
 
-*   So we must first create a class in `src/main/java`, defined in the package&nbsp;`org.nuxeo.project.computed.group`and named _`ValidatorsGroupComputer`._
-*   This class must implement the&nbsp;`GroupComputer` interface. The Nuxeo Platform delivers an abstraction of this class with main class implemented named&nbsp;`AbstractGroupComputer`. We suggest to extend this class.
-*   The main method to implement is the&nbsp;`getGroupsForUser` that returns the list of virtual groups to which the user belongs given as parameter.
-*   The difficulty is that when&nbsp;`getGroupsForUser` is called the user is not yet connected. So you must play with the Unrestricted Runner object.
+*   So we must first create a class in `src/main/java`, defined in the package `org.nuxeo.project.computed.group`and named _`ValidatorsGroupComputer`._
+*   This class must implement the `GroupComputer` interface. The Nuxeo Platform delivers an abstraction of this class with main class implemented named `AbstractGroupComputer`. We suggest to extend this class.
+*   The main method to implement is the `getGroupsForUser` that returns the list of virtual groups to which the user belongs given as parameter.
+*   The difficulty is that when `getGroupsForUser` is called the user is not yet connected. So you must play with the Unrestricted Runner object.
 
 #### `ValidatorGroupComputer` Class Creation
 
 1.  As usual, simply create a class in the `src/main/java`.
-2.  Mark it as extending the&nbsp;`AbstractGroupComputer` class.
+2.  Mark it as extending the `AbstractGroupComputer` class.
     You must have something like that:
 
     {{#> panel type='code' heading='Simple Static Computer Group'}}
@@ -301,9 +290,7 @@ In the previous section we asked Nuxeo Runtime to register our new computer grou
 
 **TEST**
 
-<div>As you can see in this example, the computer group statically returns `myTestGroup`. Let's test your test environment:</div>
-
-<div>
+As you can see in this example, the computer group statically returns `myTestGroup`. Let's test your test environment:
 
 1.  Start your SDK instance from the Nuxeo IDE interface.
     See the page [Getting Started with Nuxeo IDE]({{page page='getting-started-with-nuxeo-ide'}}) for details.
@@ -311,35 +298,32 @@ In the previous section we asked Nuxeo Runtime to register our new computer grou
 3.  Refresh the deployment server.
 4.  Connect as Administrator into your Nuxeo instance.
 5.  Go to **Home** > **Profile**.
-6.  You must see a section virtual user into the main view with the `myTestGroup_&nbsp;_` referenced.
+6.  You must see a section virtual user into the main view with the `myTestGroup_ _` referenced.
 
 If you don't have this please look errors message into your Java project and into the server console.
 
 {{#> callout type='note' }}
-
 If you refresh several times your project in the SDK server, you will see `myTestGroup` as many times as you did refresh. This is because the extension point registering your Computer Group adds your contribution with each refresh. But if you stop and restart the server, your contribution will be deployed once, and `myTestGroup` will be displayed once.
-
 {{/callout}}
 
-Now, we need to replace this static result by a dynamic one that will be the list of `$idWorkspace_validator` where the user is referenced. But when the&nbsp;`getGroupsForUser`method is called, no Session on the Core Repository is available as the user is not yet connected. Here comes the `UnrestrictedRunner` object.
+Now, we need to replace this static result by a dynamic one that will be the list of `$idWorkspace_validator` where the user is referenced. But when the `getGroupsForUser`method is called, no Session on the Core Repository is available as the user is not yet connected. Here comes the `UnrestrictedRunner` object.
 
 Here you can find [the project ready to use]({{file name='test-computed-group-static.zip' space='nxdoc56' page='implementing-local-groups-or-roles-using-computed-groups'}}).
 
-</div>
 
 #### UnrestrictedRunner Object
 
-Extending the `UnrestrictedRunner`&nbsp;object helps you executing code with a session without security constraint, even if you don't have session available.
+Extending the `UnrestrictedRunner` object helps you executing code with a session without security constraint, even if you don't have session available.
 
 How it works:
 
-1.  Define a constructor where you will initialize the parameters&nbsp;needed for your code unrestricted execution.
+1.  Define a constructor where you will initialize the parameters needed for your code unrestricted execution.
 2.  Implement a run method where a `CoreSession` will be available without restriction.
-3.  Execute the&nbsp;`runUnrestricted` method that will execute your run implementation without restriction.
+3.  Execute the `runUnrestricted` method that will execute your run implementation without restriction.
 
 Why do we need of this? Because in our example, we would like to fetch all workspaces where the user about to connect is referenced into the `wks:validators` field.
 
-In other words, we would like to make the following query `SELECT * FROM Workspace WHERE wks:validators = 'theUsername'`,&nbsp;to get the id of each workspace to create the dynamic virtual groups list.&nbsp;Here is the code result:
+In other words, we would like to make the following query `SELECT * FROM Workspace WHERE wks:validators = 'theUsername'`, to get the id of each workspace to create the dynamic virtual groups list. Here is the code result:
 
 {{#> panel type='code' heading='UnrestrictedRunner Example implementation: get Workspace Ids'}}
 
@@ -379,7 +363,7 @@ You will need this pattern several times to implement you Computer Group. So let
 
 In this section we will just merge information from the two previous ones and test it.
 
-Here is the final version of the&nbsp;`ValidatorGroupComputer` class:
+Here is the final version of the `ValidatorGroupComputer` class:
 
 {{#> panel type='code' heading='ValidatorGroupComputer with dynamic groups'}}
 
@@ -466,9 +450,7 @@ public class ValidatorsGroupComputer extends AbstractGroupComputer {
 
 **TEST 1**
 
-<div>As you can see in this example, the computer group statically returns `myTestGroup. Let's test your test environment:`</div>
-
-<div>
+As you can see in this example, the computer group statically returns `myTestGroup. Let's test your test environment:`
 
 *   Stop your server from the Nuxeo IDE interface (if you didn't do it).
 *   Start it again from the Nuxeo IDE interface.
@@ -476,7 +458,7 @@ public class ValidatorsGroupComputer extends AbstractGroupComputer {
 *   Refresh the deployment server.
 *   Connect as Administrator into your Nuxeo instance.
 *   Go to **Home** > **Profile**.
-*   You must see a section virtual user into the main view with no group&nbsp;referenced.
+*   You must see a section virtual user into the main view with no group referenced.
 
 **TEST 2**
 
@@ -489,25 +471,17 @@ public class ValidatorsGroupComputer extends AbstractGroupComputer {
 *   Log out.
 *   Log in as Administrator.
 *   Go to **Home** > **Profile**.
-*   You must see a section virtual user into the main view with one group&nbsp;referenced.
+*   You must see a section virtual user into the main view with one group referenced.
 
 {{#> callout type='info' }}
-
 Why does Administrator log out? Because the resolution of groups are **only during the connection.**
-
 {{/callout}}
-
-&nbsp;
-
-</div>
 
 ## Button Creation
 
 And now we have to create the button that starts the workflow and assign the validation task to the virtual group.
 
-<div>This part is a pure Studio demonstration, just a way of making sure our newly defined group do work :smile::</div>
-
-<div>
+This part is a pure Studio demonstration, just a way of making sure our newly defined group do work :smile:
 
 1.  Create a user action:
 
@@ -521,11 +495,9 @@ And now we have to create the button that starts the workflow and assign the val
     3.  Document > Get Parent : `type = Workspace`.
     4.  Execution Context > Set Context Variable: `name = "validatorGroup", value = "group:@{Document.id}_validator"`.
     5.  Execution Context > Restore Document Input : `name = "documentToValidate"`.
-    6.  Service > Create Task : task name = "Vallidation", directive = "Please Validate the document", variable name for actors prefixed = "validatorGroup", create one task per actor =&nbsp;unchecked
+    6.  Service > Create Task : task name = "Vallidation", directive = "Please Validate the document", variable name for actors prefixed = "validatorGroup", create one task per actor = unchecked
 
 **TEST**
-
-<div>
 
 1.  Stop your server from the Nuxeo IDE interface (if you didn't do it).
 2.  Start it again from the Nuxeo IDE interface.
@@ -550,23 +522,19 @@ Next steps could be:
 *   Add a listener on the Workspace to add an ACE on it to grant read or write right on the workspace for the validator group.
 *   Implement a delegation document type that stores a missing user and a list of delegated users and add a computer group that resolves indirect group assignment through this object.
 
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">{{#> panel heading='Related How-Tos'}}
+
+- [How to Let Users Set Rights on Non Folderish Documents]({{page page='how-to-let-users-set-rights-on-non-folderish-documents'}})
+- [How-to index ]({{page page='how-to-index'}})
+
+{{/panel}}
 </div>
-
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
+- [Managing Access Rights]({{page space='userdoc60' page='managing-access-rights'}})
+- [Working with workspace]({{page space='userdoc60' page='working-with-workspaces'}})
+- [Nuxeo Platform User Registration]({{page page='nuxeo-platform-user-registration'}})
+{{/panel}}
 </div>
-
 </div>
-
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
-
-*   [undefined]()
-*   [How to Let Users Set Rights on Non Folderish Documents]({{page page='how-to-let-users-set-rights-on-non-folderish-documents'}})
-*   [undefined]()
-*   [How-to index ]({{page page='how-to-index'}})
-
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
-
-*   [Managing Access Rights]({{page space='userdoc60' page='managing-access-rights'}})
-*   [Working with workspace]({{page space='userdoc60' page='working-with-workspaces'}})
-*   [Nuxeo Platform User Registration]({{page page='nuxeo-platform-user-registration'}})
-
-{{/panel}}</div></div>
