@@ -14,6 +14,8 @@ labels:
     - migration-sample
 toc: true
 tree_item_index: 130
+version_override:
+    '60': 60/admindoc/using-a-ldap-directory
 history:
     -
         author: Damien Metzler
