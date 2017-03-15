@@ -186,13 +186,13 @@ If you had already upgraded to previous 8.x Fast Track versions, check out the p
 
 Thus the following changes in [nuxeo-distribution](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution):
 
-{{{multiexcerpt 'upgrade-8.10-distributionChanges' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.10-distributionChanges' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ## Installation
 
-{{{multiexcerpt 'upgrade-8.10-installation-requirements' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.10-installation-requirements' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
-{{{multiexcerpt 'upgrade-8.10-installation-elasticsearch-upgrade' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.10-installation-elasticsearch-upgrade' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ## Configuration
 
@@ -261,51 +261,51 @@ Force Automation properties value to be trimmed (default:`false`)
 
 ### Notes
 
-{{{multiexcerpt 'upgrade-8.2-hidden-stacktraces' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.2-hidden-stacktraces' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ## Code Changes&nbsp;
 
 ### Deleted APIs
 
-{{{multiexcerpt 'upgrade-8.2-api-REST-group' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.2-api-REST-group' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ### Deleted Features
 
-{{{multiexcerpt 'upgrade-8.2-remove-annotations' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.2-remove-annotations' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ### Deprecated APIs&nbsp;
 
-{{{multiexcerpt 'upgrade-8.1-api-Environment.getHome' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.1-api-Environment.getHome' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
-{{{multiexcerpt 'upgrade-8.3-api-coreSession_methods' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.3-api-coreSession_methods' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
-{{{multiexcerpt 'upgrade-8.10-deprecated-apis' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.10-deprecated-apis' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ### Select2 Operations Moved
 
-{{{multiexcerpt 'upgrade-8.10-select2-operations-moved' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.10-select2-operations-moved' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ### Nuxeo and iframe
 
-{{{multiexcerpt 'upgrade-8.3-code-iframe' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.3-code-iframe' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ### WorkManager
 
-{{{multiexcerpt 'upgrade-8.3-code-workManager' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.3-code-workManager' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ### REST Workflow
 
-{{{multiexcerpt 'upgrade-8.3-code-RESTWorkflow' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.3-code-RESTWorkflow' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ## Optimizations
 
 ### Nuxeo Drive
 
-{{{multiexcerpt 'upgrade-8.3-optims-drive' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.3-optims-drive' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ### JSF Pages Rendering and Processing
 
-{{{multiexcerpt 'JSF-optimizations' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'JSF-optimizations' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ## Nuxeo Packages
 
@@ -313,25 +313,25 @@ Force Automation properties value to be trimmed (default:`false`)
 
 #### Nuxeo Digital Signature
 
-{{{multiexcerpt 'upgrade-8.10-NuxeoPackages-digital-signature' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.10-NuxeoPackages-digital-signature' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 #### Nuxeo Live Connect
 
-{{{multiexcerpt 'upgrade-8.1-live-connect' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.1-live-connect' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 #### Nuxeo Multi Tenant
 
-{{{multiexcerpt 'upgrade-8.1-multi-tenant' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.1-multi-tenant' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ### New Packages
 
-{{{multiexcerpt 'upgrade-8.3-NuxeoPackages-jsfui' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.3-NuxeoPackages-jsfui' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ### Deprecated Packages
 
-{{{multiexcerpt 'upgrade-8.10-NuxeoPackages-deprecated' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.10-NuxeoPackages-deprecated' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
-{{{multiexcerpt 'upgrade-8.3-NuxeoPackages-webMobile' page='Upgrade from LTS 2015 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-8.3-NuxeoPackages-webMobile' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
 ## Complementary Information
 

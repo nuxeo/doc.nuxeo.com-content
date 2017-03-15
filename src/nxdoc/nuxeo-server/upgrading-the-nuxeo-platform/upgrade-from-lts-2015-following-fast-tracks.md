@@ -453,7 +453,7 @@ The [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxe
 
 ### Code Changes&nbsp;&nbsp;
 
-### Deprecated APIs
+#### Deprecated APIs
 
 {{! multiexcerpt name='upgrade-8.10-deprecated-apis'}}
 
