@@ -61,31 +61,13 @@ history:
 ---
 ## Request all Documents as Administrator
 
-<div class="outline-2">
-
-<div class="outline-3">
-
-&nbsp;
 
 {{#> panel type='code' heading='NXQL'}}
-
 ```sql
 SELECT * FROM Document
 ```
-
 {{/panel}}
 
-&nbsp;
-
-</div>
-
-</div>
-
-<div class="outline-2">
-
-<div class="outline-3">
-
-&nbsp;
 
 {{#> panel type='code' heading='SQL (PostgreSQL dialect)'}}
 
@@ -125,24 +107,16 @@ FROM acls
 WHERE id IN ($1, $2, $3, $4, $5, $6, $7, $8, $9,$10, $11, $12)
 ORDER BY id, pos
 ```
-
 {{/panel}}
 
 The main request use a "UNION ALL" to include proxies in the results. If you don't need the proxies you can add a "`AND [ecm:isProxy](http://ecmisProxy) = 0`" clause to reduce the size of the query.
 
-<div class="outline-text-3">
 
 Note that requests to load fragments (steps 2 to 6) are not needed if the rows are already in the cache.
 
 Note that only prefetched properties are loaded. If you need to access a property that is not prefetched for all your documents, you will have an extra database access for each documents (lazy loading).
 
 There is LIMIT because Page Provider for navigation use paging by default. If you have more than 200 documents in a folder you will not see the total size of results. See [https://jira.nuxeo.com/browse/NXP-9494](https://jira.nuxeo.com/browse/NXP-9494) for more information.
-
-</div>
-
-</div>
-
-<div class="outline-3">
 
 ## List Children of a Folder Ordered by title
 
@@ -156,9 +130,9 @@ WHERE ecm:parentId = ? AND
       ecm:currentLifeCycleState != 'deleted'
 -- defaultSortColumn=dc:title
 ```
+{{/panel}}
 
-{{/panel}}{{#> panel type='code' heading='SQL'}}
-
+{{#> panel type='code' heading='SQL'}}
 ```sql
 SELECT _C1, _C2 FROM (
   SELECT hierarchy.id AS _C1, _F1.title AS _C2
@@ -176,7 +150,6 @@ UNION ALL
 ORDER BY _C2
 LIMIT 201 OFFSET 0
 ```
-
 {{/panel}}
 
 ## Select on a Complex Type
@@ -186,8 +159,9 @@ LIMIT 201 OFFSET 0
 ```sql
 SELECT * FROM Document WHERE files/*/file/name LIKE '%.jpg'
 ```
+{{/panel}}
 
-{{/panel}}{{#> panel type='code' heading='SQL'}}
+{{#> panel type='code' heading='SQL'}}
 
 ```sql
 SELECT DISTINCT _C1 FROM (
@@ -204,20 +178,22 @@ SELECT DISTINCT _C1 FROM (
 -- parameters: $1 = 'files', $2 = 'file' .. $61 = '%.jpg'
 ```
 
-{{/panel}}</div>
+{{/panel}}
 
-</div>
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [VCS]({{page page='vcs'}})
-*   [Configuring MS SQL Server]({{page space='admindoc60' page='configuring-ms-sql-server'}})
-*   [Configuring PostgreSQL]({{page space='admindoc60' page='configuring-postgresql'}})
+- [VCS]({{page page='vcs'}})
+- [Configuring MS SQL Server]({{page space='admindoc60' page='configuring-ms-sql-server'}})
+- [Configuring PostgreSQL]({{page space='admindoc60' page='configuring-postgresql'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
+<div class="column medium-6">
 
 &nbsp;
 
 &nbsp;
 
-</div></div>
+</div>
+</div>
