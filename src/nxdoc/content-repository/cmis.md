@@ -476,15 +476,15 @@ You should probably pipe this through `tidy` if you want a readable output:
 
 The following SOAP endpoints are available:
 
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/RepositoryService?wsdl</span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/DiscoveryService?wsdl</span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/ObjectService?wsdl</span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/NavigationService?wsdl</span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/VersioningService?wsdl</span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/RelationshipService?wsdl</span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/MultiFilingService?wsdl</span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/ACLService?wsdl</span>`
-*   `<span class="nolink">http://localhost:8080/nuxeo/webservices/cmis/PolicyService?wsdl</span>`
+*   `http://localhost:8080/nuxeo/webservices/cmis/RepositoryService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/DiscoveryService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/ObjectService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/NavigationService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/VersioningService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/RelationshipService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/MultiFilingService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/ACLService?wsdl`
+*   `http://localhost:8080/nuxeo/webservices/cmis/PolicyService?wsdl`
 
 Authentication is done using Web Services Security (WSS) UsernameToken.
 
