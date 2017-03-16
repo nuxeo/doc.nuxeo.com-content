@@ -1996,6 +1996,12 @@ Also turning this option to false enable PostgreSQL and Oracle to use an index o
 <td colspan="1">Since Nuxeo 6.0</td>
 </tr>
 <tr>
+<td colspan="1">`org.nuxeo.cmis.proxies`</td>
+<td colspan="1">false</td>
+<td colspan="1">If true, proxies are visible through CMIS. Cannot be `true` if `org.nuxeo.cmis.joins` is `true`.</td>
+<td colspan="1">Since Nuxeo 7.10-HF08 and Nuxeo 8.3</td>
+</tr>
+<tr>
 <td colspan="1">`org.nuxeo.cmis.enableComplexProperties`</td>
 <td colspan="1">false</td>
 <td colspan="1">Since Nuxeo 7.1\. When true, complex properties are exposed as JSON-encoded strings.</td>
