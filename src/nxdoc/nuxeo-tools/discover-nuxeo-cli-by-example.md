@@ -5,7 +5,7 @@ tree_item_index: 300
 toc: true
 review:
     date: '2017-03-15'
-    status: requiresUpdates
+    status: ok
     comment: ''
 
 ---

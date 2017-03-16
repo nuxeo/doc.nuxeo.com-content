@@ -5,7 +5,7 @@ tree_item_index: 100
 toc: true
 review:
     date: '2017-03-15'
-    status: requiresUpdates
+    status: ok
     comment: ''
 
 ---
@@ -108,14 +108,14 @@ $ nuxeo bootstrap multi-module
 
 `multi-module` is the default generator when none is given as a parameter to `nuxeo bootstrap`.
 
+##### Important Note
+
+Using a Maven multiple modules architecture is the recommended way to bootstrap a new project: it allows to generate a Nuxeo Package afterwards to easily deploy your code on a Nuxeo Server instance. If a project is generated using a single module architecture, the Nuxeo Package needs to be created manually.
+
 ##### Parameters
 
 * **Use a parent artifact**: The parent artifact makes your project inherit dependencies, properties and other fields from another project. We recommend to keep the default value and use `org.nuxeo.ecm.distribution:nuxeo-distribution`.
 * **Nuxeo Version**: Asked only if no parent is specified. It specifies which Nuxeo version of the dependency management will be imported.
-
-##### Important Note
-
-Using a Maven multiple modules architecture is the recommended way to bootstrap a new project: it allows to generate a Nuxeo Package afterwards to easily deploy your code on a Nuxeo Server instance. If a project is generated using a single module architecture, the Nuxeo Package needs to be created manually.
 
 #### Empty Nuxeo Project
 
@@ -124,15 +124,14 @@ Set up an empty Nuxeo project; *not recommended for project initialization*.
 ```bash
 $ nuxeo bootstrap single-module
 ```
+##### Important Notes
+
+You should use this command to initiate a project that stands in a single Maven module, without the need to be distributed with a [Nuxeo Package]({{page version='' space='nxdoc' page='creating-nuxeo-packages'}}). Otherwise, use the `multi-module` option instead so that you can generate a Nuxeo Package later on.
 
 ##### Parameters
 
 * **Parent Group / Artifact**: Like in `multi-module`, having a parent artifact enables project inheritance. If you are in a `multi-module`, you must set your parent module. If not, you can use `org.nuxeo.ecm.distribution:nuxeo-distribution` or `org.nuxeo:nuxeo-addons-parent`.
 * **Nuxeo Version**: Asked only if needed, it specifies which Nuxeo version of the dependency management will be imported.
-
-##### Important Notes
-
-This option should not be called directly to bootstrap a new project. Use the `multi-module` option instead so that you can generate a Nuxeo Package later on.
 
 #### Your Own Business Rules or Logic
 
