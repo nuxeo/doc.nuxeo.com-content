@@ -440,7 +440,7 @@ Which returns:
 
 ### AtomPub
 
-You can use a CMIS 1.1 AtomPub client and point it at `<span class="nolink">http://localhost:8080/nuxeo/atom/cmis</span>` .
+You can use a CMIS 1.1 AtomPub client and point it at `http://localhost:8080/nuxeo/atom/cmis` .
 
 If you want to check the AtomPub XML returned using the command line, this can be done using `curl` or `wget`:
 
