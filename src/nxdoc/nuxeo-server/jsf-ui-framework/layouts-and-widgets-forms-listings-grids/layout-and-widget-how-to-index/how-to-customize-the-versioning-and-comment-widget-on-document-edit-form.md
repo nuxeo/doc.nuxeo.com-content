@@ -9,7 +9,7 @@ details:
         excerpt: >-
             Learn how to customize the versioning and comment widget using XML
             extensions. These examples can be contributed in Nuxeo Studio
-            (Advanced Settings > XML Extensions) or with the Nuxeo CLI.
+            (Advanced Settings > XML Extensions) or with Nuxeo CLI.
         level: Intermediate
         tool: 'XML extension, Nuxeo CLI, Studio'
         topics: 'Layout, Versioning, JSF UI, Widget'
