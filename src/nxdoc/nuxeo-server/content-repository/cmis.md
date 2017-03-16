@@ -682,7 +682,7 @@ The following describes how Nuxeo documents are mapped to CMIS objects and vice 
 *   Only Nuxeo documents including the "dublincore" schema are visible in CMIS.
 *   Complex properties are not visible in CMIS by default, as this notion does not exist in CMIS. However, if the server is configured to do so, they can be exposed as JSON-encoded strings (since Nuxeo 7.1, see [NXP-14474](https://jira.nuxeo.com/browse/NXP-14474)).
 *   Dynamic facets are visible as CMIS 1.1 secondary types (since Nuxeo 7.1, see [NXP-15070](https://jira.nuxeo.com/browse/NXP-15070)).
-*   Proxy documents are visible in CMIS in recent versions if the system property `org.nuxeo.cmis.proxies=true` (since Nuxeo 8.3 / Nuxeo 7.10-HF08 (default `false`), see [NXP-17313](https://jira.nuxeo.com/browse/NXP-17313)).
+*   Proxy documents are visible in CMIS if the system property `org.nuxeo.cmis.proxies=true` (since Nuxeo 8.3 / Nuxeo 7.10-HF08 (default `true` since Nuxeo 9.1, `false` in previous versions), see [NXP-17313](https://jira.nuxeo.com/browse/NXP-17313) and [NXP-21828](https://jira.nuxeo.com/browse/NXP-21828)).
 *   Secondary content streams are not visible as renditions. Only the Nuxeo thumbnail and renditions explicitly made available through the Nuxeo RenditionService are visible.
 *   Documents in the Nuxeo trash (those whose `nuxeo:lifecycleState` is `deleted`) are not visible in CMIS, unless an explicit query using the `nuxeo:lifecycleState` property is done.
 
