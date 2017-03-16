@@ -102,13 +102,13 @@ If soft-delete is not enabled, or when the periodic cleanup process for soft-del
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})&nbsp;
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})&nbsp;
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [Deleting Content]({{page space='userdoc60' page='deleting-content'}}) (User documentation)
-*   [Managing Deleted Documents]({{page space='userdoc60' page='managing-deleted-documents'}}) (User documentation)
-*   [Garbage-Collecting Orphaned Binaries]({{page space='admindoc60' page='garbage-collecting-orphaned-binaries'}}) (Admin documentation)
+- [Deleting Content]({{page space='userdoc60' page='deleting-content'}}) (User documentation)
+- [Managing Deleted Documents]({{page space='userdoc60' page='managing-deleted-documents'}}) (User documentation)
+- [Garbage-Collecting Orphaned Binaries]({{page space='admindoc60' page='garbage-collecting-orphaned-binaries'}}) (Admin documentation)
 
 {{/panel}}</div></div>
