@@ -96,18 +96,21 @@ Here are solutions for testing your developments before merging them on the mast
 
 Developers have their own dedicated job for building a branch, testing it and eventually automatically merging it if succeed.
 
-1.  Push your changes to the GitHub Nuxeo repo(s) of your choice under a branch named "feature-NXP-9999-changes-description" (see [Nuxeo common usage and best practices]({{page page='git-usage'}}) about branch naming).
+1.  Push your changes to the GitHub Nuxeo repo(s) of your choice under a branch named "feature-NXP-xxxx-description" (see [Nuxeo common usage and best practices]({{page page='git-usage'}}) about branch naming).
 2.  Create a [new Jenkins job](http://qa.nuxeo.org/jenkins/view/Dashboard/newJob) and choose the "**Nuxeo On-Demand test and push**" template:
 
-    <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">**Name**</td></tr><tr><td colspan="1">
-
-    <div class="help">Name it&nbsp;`ondemand-testandpush-USERNAME[-mavenX]` (for instance: "ondemand-testandpush-jcarsique" or "ondemand-testandpush-jcarsique-maven3"). If you need to create multiple instances, you can add a numbering at the end.</div>
-
-    </td></tr><tr><td colspan="1">**Maven version**</td></tr><tr><td colspan="1">Usually "maven-3.2" or "maven-2.2.1"</td></tr><tr><td colspan="1">**Notification target**</td></tr><tr><td colspan="1">
-
-    <div class="help">E-mail and Jabber ID to send notifications to. If empty, they are automatically retrieved from the logged user. However there's a drawback: When the template is edited, the retrieved user is the system.</div>
-
-    </td></tr></tbody></table></div>
+    <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">**Name**</td></tr>
+    <tr><td colspan="1">
+      <div class="help">Name it `ondemand-testandpush-USERNAME[-suffix]` (for instance: "ondemand-testandpush-jcarsique").</div>
+    </td></tr>
+    <tr><td colspan="1">**Maven version**</td></tr><tr><td colspan="1">Usually "maven-3".</td></tr>
+    <tr><td colspan="1">**JDK**</td></tr><tr><td colspan="1">For instance "java-8-oracle".</td></tr>
+    <tr><td colspan="1">**Notification target**</td></tr>
+    <tr><td colspan="1">
+      <div class="help">E-mail and Jabber ID notification recipients.</div>
+    </td></tr>
+    <tr><td colspan="1">**Default slave**</td></tr><tr><td colspan="1">Can be changed afterwards.</td></tr>
+    </tbody></table></div>
 
     The job is ready for use.
 
@@ -119,19 +122,15 @@ Developers have their own dedicated job for building a branch, testing it and ev
     If true, merge on $PARENT_BRANCH before build then, if merge is successful, run the tests.
     If false, merge will be done after tests.
 
-    </td></tr><tr><td colspan="1">PUSH_IF_SUCCEED</td><td colspan="1">true</td><td colspan="1">Push $PARENT_BRANCH if all build and tests succeed.</td></tr><tr><td colspan="1">CLEAN</td><td colspan="1">true</td><td colspan="1">Whether to clean or not the workspace.</td></tr><tr><td colspan="1">MVN_TARGETS</td><td colspan="1">install</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">MVN_ADDITIONAL_OPTS</td><td colspan="1">`-fae` (Maven 2)
-    `-fae -nsu -npu` (Maven 3)</td><td colspan="1">For instance: `-pl nuxeo-common`, `-rf somemodule` or `-N`</td></tr><tr><td colspan="1">MVN_ADDITIONAL_OPTS2</td><td colspan="1">`-fae`</td><td colspan="1">Maven 2 only.
-    For instance: `-pl nuxeo-distribution-dm -amd` or `-rf somemodule`</td></tr><tr><td colspan="1">PROFILES</td><td colspan="1">
-
-    `-Pqa,all-tests,qansu` (Maven 2)
-
-    `-Pqa,all-tests` (Maven 3)
-
-    </td><td colspan="1">Maven profiles to activate</td></tr><tr><td colspan="1">JDK_PATH</td><td colspan="1">&nbsp;</td><td colspan="1">If not empty, overrides the job configuration.</td></tr><tr><td colspan="1">Slave</td><td colspan="1">ondemand</td><td colspan="1">Default value (ondemand) uses AWS on-demand slave. Other recommended labels are: SLAVE, SLAVE4GB, OSXSLAVE, WINSLAVE</td></tr></tbody></table></div>
+    </td></tr>
+    <tr><td colspan="1">PUSH_IF_SUCCEED</td><td colspan="1">true</td><td colspan="1">Push $PARENT_BRANCH if all build and tests succeed.</td></tr>
+    <tr><td colspan="1">CREATE_PR</td><td colspan="1">true</td><td colspan="1">Create a Pull Request instead of a direct merge.</td></tr>
+    <tr><td colspan="1">CLEAN</td><td colspan="1">true</td><td colspan="1">Whether to clean or not the workspace.</td></tr><tr><td colspan="1">MVN_TARGETS</td><td colspan="1">install</td><td colspan="1"> </td></tr><tr><td colspan="1">MVN_ADDITIONAL_OPTS</td><td colspan="1">`-fae -nsu -Dnuxeo.tests.random.mode=bypass`</td><td colspan="1">For instance: `-pl nuxeo-common`, `-pl -:nuxeo-distribution-dm-webdriver-tests`, `-rf somemodule`, `-N`, `-DskipTests=true`, `-DskipITs=true`, `-Dskip.surefire.tests=true`... Default includes `-fae` (fail at end): fail after the whole build (though skipping modules which dependencies build have failed) instead of fail at first error.</td></tr>
+    <tr><td colspan="1">PROFILES</td><td colspan="1">`-Pqa,itest`</td><td colspan="1">Maven profiles to activate</td></tr><tr><td colspan="1">JDK_PATH</td><td colspan="1"> </td><td colspan="1">If not empty, overrides the job configuration.</td></tr><tr><td colspan="1">Slave</td><td colspan="1">ondemand</td><td colspan="1">Default value (ondemand).</td></tr></tbody></table></div>
 
 ### Configuration Details
 
-You can view the resulting configuration by adding&nbsp;`/config.xml` to the job URL. Here are a few details about the job configuration.
+You can view the resulting configuration by adding `/config.xml` to the job URL. Here are a few details about the job configuration.
 
 #### Discard Old Builds (Log Rotation Strategy)
 
@@ -140,39 +139,17 @@ You can view the resulting configuration by adding&nbsp;`/config.xml` to the job
 *   Days to keep artifacts: **(empty)**
 *   Max # of builds to keep with artifacts: **1**
 
-#### Push Batch Task
-
-Manually perform the push (useful if "PUSH_IF_SUCCEED" was not checked).
-
-{{#> panel type='code' heading='push'}}
-
-```bash
-. scripts/gitfunctions.sh
-gitfa pull --rebase
-! (gitfa status --porcelain | grep -e "^U")
-gitfa push origin $PARENT_BRANCH
-```
-
-{{/panel}}
-
-#### JDK
-
-<span style="color: rgb(0,0,0);">openjdk-7-jdk
-</span>
-
 #### Restrict Where This Project Can Be Run
 
-In order to make your job use a slave created on the cloud, on demand, set the label to&nbsp;`ondemand`.
-
-This behavior is configured in Jenkins using the [Amazon EC2 plugin](https://wiki.jenkins-ci.org/display/JENKINS/Amazon+EC2+Plugin).
+In order to make your job use a slave created on the cloud, on demand, set the label to `ondemand`.
 
 #### Run the Build Against MultiDB
 
 In order to run your build against one or several DB you can use profile and slave parameters.
 
-You need to use customdb profile to init build environment, and then desired profile among : pgsql, mssql, oracle10g, oracle11g, oracle12g, mysql, mongodb...
+You need to use the `customdb` profile to init build environment, and then desired profile among : `pgsql`, `mssql`, `oracle10g`, `oracle11g`, `oracle12g`, `mysql`, `mongodb`...
 
-You also need to use a slave owning the configuration for desired DB, for example&nbsp;MULTIDB_LINUX.
+You also need to use a slave owning the configuration for desired DB, for example `MULTIDB_LINUX`.
 
 ### Build Environment
 
@@ -187,109 +164,153 @@ You also need to use a slave owning the configuration for desired DB, for exampl
 {{#> panel type='code' heading='Shell script'}}
 
 ```bash
+#!/bin/bash -xe
+START=$(date +%s)
+unset DOCKER_HOST
+
+if [ ! -z $JDK_PATH ]; then
+  export JAVA_HOME=$JDK_PATH
+  export PATH=$JDK_PATH/bin:$PATH
+fi
+
 if [ "$CLEAN" = true ] || [ ! -e .git ]; then
   rm -rf * .??*
   git clone git@github.com:nuxeo/nuxeo.git .
 fi
-git checkout $BRANCH || git checkout $PARENT_BRANCH
+git checkout $BRANCH 2>/dev/null || git checkout $PARENT_BRANCH
 
 . scripts/gitfunctions.sh
+if [ "$(type -t shr)" != "function" ]; then 
+  echo ERROR: the current job is not compliant with this version of gitfunctions.sh
+  exit 1
+fi
+
 if [ "$CLEAN" = false ]; then
   gitfa fetch --all
   gitfa checkout $PARENT_BRANCH
   gitfa pull --rebase
-  ! (gitfa status --porcelain | grep -e "^U")
+  ! gitfa -q diff --name-status --diff-filter=U | grep -B1 -e "^U"
 fi
+
 # switch on feature $BRANCH if exists, else falls back on $PARENT_BRANCH
 ./clone.py $BRANCH -f $PARENT_BRANCH
-gitfa rebase $PARENT_BRANCH
-! (gitfa status --porcelain | grep -e "^U")
+gitfa rebase origin/$PARENT_BRANCH
+! gitfa -q diff --name-status --diff-filter=U | grep -B1 -e "^U"
 if [ "$MERGE_BEFORE_BUILD" = true ]; then
-  gitfa checkout $PARENT_BRANCH
-  gitfa pull --rebase
-  gitfa merge $BRANCH --log
-  ! (gitfa status --porcelain | grep -e "^U")
+  shr -a "git checkout $PARENT_BRANCH; git pull --rebase; git merge --no-ff $BRANCH --log"
+  ! gitfa -q diff --name-status --diff-filter=U | grep -B1 -e "^U"
 fi
 
 rm -rf $WORKSPACE/.repository/org/nuxeo/
+echo "Init $(($(date +%s) - $START))" > $WORKSPACE/.ci-metrics
+echo "$(date +%s)" >$WORKSPACE/.ci-metrics-mavenstart
 ```
 
 {{/panel}}
 
-#### Invoke Top-Level Maven Targets (Maven 2)
+#### Invoke Top-Level Maven Targets
 
 {{#> panel type='code' heading='Maven call'}}
 
 ```bash
-Goals: $MVN_TARGETS -Paddons $PROFILES $MVN_ADDITIONAL_OPTS
-JVM options: -Xms1024m -Xmx4096m -XX:MaxPermSize=1024m
+Goals: $MVN_TARGETS -Paddons,distrib $PROFILES $MVN_ADDITIONAL_OPTS
+JVM options: -Xms1024m -Xmx4096m
 ```
 
 {{/panel}}
 
-Use private Maven repository: Maven will store artifacts in `$WORKSPACE/.repository` instead of&nbsp;`~/.m2/repository`.
-
-#### Invoke Top-Level Maven Targets (Maven 2)
-
-{{#> panel type='code' heading='Maven call'}}
-
-```bash
-Goals: $MVN_TARGETS -Pall-distributions $PROFILES $MVN_ADDITIONAL_OPTS2
-POM: nuxeo-distribution/pom.xml
-JVM options: -Xms1024m -Xmx4096m -XX:MaxPermSize=1024m
-```
-
-{{/panel}}
-
-Use private Maven repository: Maven will store artifacts in `$WORKSPACE/.repository` instead of&nbsp;`~/.m2/repository`.
-
-#### Invoke Top-Level Maven Targets (Maven 3)
-
-{{#> panel type='code' heading='Maven call'}}
-
-```bash
-Goals: $MVN_TARGETS -Paddons,distrib,all-distributions $PROFILES $MVN_ADDITIONAL_OPTS
-JVM options: -Xms1024m -Xmx4096m -XX:MaxPermSize=1024m
-```
-
-{{/panel}}
-
-Use private Maven repository: Maven will store artifacts in `$WORKSPACE/.repository` instead of&nbsp;`~/.m2/repository`.
+Use private Maven repository: Maven will store artifacts in `$WORKSPACE/.repository` instead of `~/.m2/repository`.
 
 #### Execute Shell
 
 {{#> panel type='code' heading='Shell script'}}
 
 ```bash
+#!/bin/bash  -xe
+echo "Maven $(($(date +%s) - $(cat $WORKSPACE/.ci-metrics-mavenstart)))" >> $WORKSPACE/.ci-metrics
+rm $WORKSPACE/.ci-metrics-mavenstart
+START=$(date +%s)
+
 . scripts/gitfunctions.sh
-! (grep -hle ".*ERROR.*" nuxeo-distribution/**/log/*.log)
+(! (shopt -s globstar && grep -hle ".*ERROR.*" nuxeo-distribution/**/log/server.log nuxeo-distribution/**/log/console.log nuxeo-distribution/**/log/nuxeo-error.log))
 if [ "$MERGE_BEFORE_BUILD" != true ]; then
-  gitfa checkout $PARENT_BRANCH
-  gitfa pull --rebase
-  gitfa merge $BRANCH --log
-  ! (gitfa status --porcelain | grep -e "^U")
+  shr -a "git checkout $PARENT_BRANCH; git pull --rebase; git merge --no-ff $BRANCH --log"
+  ! gitfa -q diff --name-status --diff-filter=U | grep -B1 -e "^U"
 fi
+
+ROOT="$(basename $WORKSPACE)"
+
+function pr_or_push() {
+  echo "[$1]"
+  local repository=$1
+  if [ "$repository" = "." ] || [ "$repository" = "$ROOT" ]; then
+    repository="nuxeo"
+  fi
+  if [ -z $(git rev-list -1 origin/$PARENT_BRANCH..) ] ; then
+    echo "NOOP"
+  elif [ "$DO_PR" = true ]; then
+    JSON="{
+      \"title\": \"$BRANCH\",
+      \"head\": \"$BRANCH\",
+      \"base\": \"$PARENT_BRANCH\",
+      \"body\": \"PR created from $BUILD_URL\"
+    }"
+    curl -n -XPOST "https://api.github.com/repos/nuxeo/$repository/pulls" -d "$JSON"
+  else
+    git push origin $PARENT_BRANCH
+  fi
+  echo
+}
+
 if [ "$PUSH_IF_SUCCEED" = true ]; then
   if [ "$MERGE_BEFORE_BUILD" = true ]; then
-    echo ****** Pull in case another commit had been pushed during the build
+    echo ****** Pull in case another commit had been pushed during the build
     gitfa pull --rebase
-    ! (gitfa status --porcelain | grep -e "^U")
-  fi
-  echo ***** SUCCEED! PUSHING MERGE *****
-  gitfa push origin $PARENT_BRANCH
+    ! gitfa -q diff --name-status --diff-filter=U | grep -B1 -e "^U"
+  fi
+
+  if $CREATE_PR; then
+    echo ***** SUCCEED! CREATING PULL REQUEST *****
+    DO_PR=true
+  else
+    echo ***** SUCCEED! PUSHING MERGE *****
+    DO_PR=false
+  fi
+
+  shr -a 'pr_or_push $dir'
+  cd ..
 fi
+
+echo "Finalize $(($(date +%s) - $START))" >> $WORKSPACE/.ci-metrics
 ```
 
 {{/panel}}
 
 ### Post Build Actions
 
-1.  **Archive the artifacts**&nbsp;`**/failsafe-reports/*, **/target/*.png, **/target/*.json, **/result-*.html, **/*.log, **/log/*, **/nxserver/config/distribution.properties`.
-2.  Configure the **Jenkins text finder** to browse&nbsp;`nuxeo-distribution/**/log/*.log` looking for&nbsp;`.*ERROR.*` and setting the build as unstable if found.
-3.  **Publish JUnit results report** looking for&nbsp;`**/target/failsafe-reports/*.xml, **/target/surefire-reports/*.xml`.
-4.  **Publish Selenium HTML Report&nbsp;**looking for `nuxeo-distribution/nuxeo-distribution-dm/ftest/selenium/target/results/.` Use&nbsp;`nuxeo-distribution-social-collaboration/ftest/selenium/target/results/` for Social Collaboration tests.
-5.  **Publish Selenium results report** looking for&nbsp;`nuxeo-distribution/**/result*.html`.
-6.  Send to you an email using the **Editable Email Notification**.
-7.  Send to you a **Jabber notification**.
+1. ** Post build task**
+```
+if [ -f .ci-metrics-mavenstart ]; then
+  echo "Maven $(($(date +%s) - $(cat .ci-metrics-mavenstart)))" >> .ci-metrics
+  rm .ci-metrics-mavenstart
+fi
+```
+2. **Scan for compiler warnings**
+Use `Maven` and `javac` parsers on the console. Use `javac` parser on `nuxeo-distribution/**/log/*.log` files.
+3. **Archive the artifacts**
+`**/target/failsafe-reports/*, **/target/*.png, **/target/screenshot*.html, **/target/*.json, **/target/results/result-*.html, **/*.log, nuxeo-distribution/**/log/*, **/nxserver/config/distribution.properties, .ci-metrics`
+4. **Publish JUnit results report**
+`**/target/failsafe-reports/*.xml, **/target/surefire-reports/*.xml, **/target/nxtools-reports/*.xml`
+5. **Set build description**
+`$BRANCH`
+6. Configure the **Jenkins text finder** to browse `nuxeo-distribution/**/log/server.log` looking for `.*ERROR.*` and setting the build as unstable if found.
+7. Send to you an email using the **Editable Email Notification**.
+8. Send to you a **Jabber notification**.
+9. **Trigger parameterized build on other projects**
+```Project: /System/ondemand-testandpush-metrics
+Parameters: 
+JOB=$JOB_NAME
+BUILD=$BUILD_NUMBER
+```
 
 ## GitHub Pull-Requests
