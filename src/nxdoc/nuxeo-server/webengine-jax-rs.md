@@ -501,7 +501,7 @@ Of course as for JAX-RS applications you should specify a Manifest header to dec
 Nuxeo-WebModule: org.nuxeo.ecm.webengine.admin.AdminApp;name=admin;extends=base
 ```
 
-You can see there are some additional attributes in the manifets header: 'name' for the module name and 'extends' if you want to extend another module. The 'name' attribute is mandatory. You can also optionally use the 'headless=true' attribute to avoid displaying your module in the module list on the root index.
+You can see there are some additional attributes in the manifest header: 'name' for the module name and 'extends' if you want to extend another module. The 'name' attribute is mandatory. You can also optionally use the 'headless=true' attribute to avoid displaying your module in the module list on the root index.
 
 If you want to customize how your module is listed in that module index you can define 'shortcuts' in the module.xml file. Like this:
 
