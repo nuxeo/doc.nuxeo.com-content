@@ -620,7 +620,7 @@ Nuxeo Platform Additional Languages<br/>
 `marketplace-lang-ext-incomplete`
 </td>
 <td colspan="1">
-&nbsp;
+Public
 </td>
 <td colspan="1">
 &nbsp;
