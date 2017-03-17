@@ -545,103 +545,105 @@ Prerequisites: having Git installed. For installation and configuration instruct
 To **clone a repository**, do:
 
 ```
-$ git clone git://github.com/nuxeo/nuxeo.git
+git clone git://github.com/nuxeo/nuxeo.git
 
 ```
 
 To **retrieve remote changes**, do:
 
 ```
-$ git fetch
+git fetch
 
 ```
 
 To **update your repository according to remote changes**, do:
 
 ```
-$ git pull --rebase
+git pull --rebase
 
 ```
 
 This is equivalent to:
 
 ```
-$ git fetch && git rebase
+git fetch && git rebase
 
 ```
 
 To **view the current status** of your repository, do:
 
 ```
-$ git status
+git status
 
 ```
 
-To commit local changes to a file, do:
+To **commit local changes** to a file, do:
 
 ```
-$ git commit -m "my commit message" myfile.txt
-
-```
-
-or, if you'd like to handle all modified files at once:
-
-```
-$ git commit -m "my commit message" .
+git commit -m "NXP-xxxx: my commit message" myfile.txt
 
 ```
 
-To push those changes remotely, do:
+or, to **commit all modified files** at once:
 
 ```
-$ git push
+git commit -m "NXP-xxxx: my commit message" -a
+
+```
+
+To **push** those changes remotely, do:
+
+```
+git push
 
 ```
 
 To **view the changeset** of a given commit, do:
 
 ```
-$ git show <commit_identifier>
+git show <commit_identifier>
 
 ```
 
 To **apply a given changeset** to another branch, do:
 
 ```
-$ git cherry-pick <commit_identifier>
+git cherry-pick <commit_identifier>
 
 ```
 
-To **fix mistakes in the last commit** it is possible to use `git commit --amend`.
+To **edit the last commit**:
+
+```
+git commit --amend [...]
+```
 
 Suppose you made a mistake and made a commit with a bad content, and you forgot to reference the JIRA issue in the message:
 
 ```
-$ echo "my awesome content, i hope i did not make any missstake" > some_file.txt
-$ git commit -m "adding my awesome information" some_file.txt
+echo "my awesome content, i hope i did not make any missstake" > some_file.txt
+git commit -m "adding my awesome information" some_file.txt
 
 ```
 
 To fix it just edit the file to replace the faulty line:
 
 ```
-$ echo "my awesome content, i hope i did not make any mistake" > some_file.txt
+echo "my awesome content, i hope i did not make any mistake" > some_file.txt
 
 ```
 
 Then redo the commit with the right commit message:
 
 ```
-$ git commit --amend -m "NXP-123: adding my awesome information" some_file.txt
+git commit --amend -m "NXP-xxxx: adding my awesome information" some_file.txt
 
 ```
-
-&nbsp;
 
 To **undo the last commit** (without having pushed anything to public repo), do:
 
 ```
-$ git reset --soft HEAD~1
+git reset --soft HEAD~1
 
 ```
 
@@ -681,25 +683,54 @@ git reset --soft HEAD~1
 
 ## Nuxeo Common Usage and Best Practices
 
-### Shell Scripts
+### Convenient Shell Scripts
 
-`gitf`, equivalent function to `hgf`, is available at root of Nuxeo in [scripts/gitfunctions.sh](https://github.com/nuxeo/nuxeo/blob/master/scripts/gitfunctions.sh).
+At root of the Nuxeo Platform, the script [scripts/gitfunctions.sh](https://github.com/nuxeo/nuxeo/blob/master/scripts/gitfunctions.sh) provides some convenient Shell functions for use on Nuxeo projects version controlled under Git.
 
 ```
-gitf checkout master
-gitf checkout -b new_branch
-gitfa status -sb
+source <(curl -s https://raw.githubusercontent.com/nuxeo/nuxeo/stable/scripts/gitfunctions.sh)
+# or source /path/to/nuxeo/scripts/gitfunctions.sh
+
+gitf -?
+Usage: gitf [-r] [-q] [-h|-?] <[--] Git instructions>
+Recursively executes the given Git command on the current and its direct children Git repositories.
+
+	-h,-?	Show this help message and exit.
+	-q	Quiet mode (default is verbose).
+	-r	The recurse will continue on all children Git repositories.
+	--	Optional separator between the options and the instructions which may start with a dash.
+
+gitfa -?
+Usage: gitfa [-q] [-h|-?] <[--] Git instructions>
+Recursively executes the given Git command on the current, its direct children Git repositories and browse the child Maven modules of $PARENT_MODULES directories.
+
+	-h,-?	Show this help message and exit.
+	-q	Quiet mode (default is verbose).
+	--	Optional separator between the options and the instructions which may start with a dash.
+	PARENT_MODULES Environment variable. Defaults to 'addons addons-core' if not set.
+	LIST_<parent module> Environment variable that can be set to restrict the children modules to a fixed list. For instance: LIST_ADDONS_CORE="nuxeo-core-storage-marklogic" or LIST_ADDONS="nuxeo-shell nuxeo-quota".
+
+shr -?
+Usage: shr [-a] [-q] [-h|-?] <[--] Shell instructions>
+Recursively executes the given Shell command on the current and its direct children Git repositories.
+
+	-h,-?	Show this help message and exit.
+	-a	The recurse will continue on the child Maven modules of $PARENT_MODULES directories.
+	-q	Quiet mode (default is verbose).
+	--	Optional separator between the options and the instructions which may start with a dash.
+	PARENT_MODULES Environment variable. Defaults to 'addons addons-core' if not set.
+	LIST_<parent module> Environment variable that can be set to restrict the children modules to a fixed list. For instance: LIST_ADDONS_CORE="nuxeo-core-storage-marklogic" or LIST_ADDONS="nuxeo-shell nuxeo-quota".
 ```
 
 ### Main Rules
 
-*   Strictly follow Nuxeo naming policy for branches and tags:
-
-    *   Create dedicated branches named "fix-NXP-1234-some-expected-behavior" or "feature-NXP-1234-some-new-feature" while working.
-    *   When your work is achieved, rebase then merge the branch (see [Isolated testing with ondemand-testandpush jobs]({{page page='isolated-testing'}})). Optionally delete it.
-*   Use the same name for a local branch than its corresponding remote branch.
-*   Always reference JIRA issues in the commit comments.
-*   Commit as a valid author (i.e. "Firstname Lastname <address@somewhere.com>" with "address@somewhere.com" being configured in your GitHub account).
+* Avoid to rewrite Git history on development and maintenance branches.
+* Strictly follow Nuxeo naming policy for branches and tags:
+    * Create dedicated branches named "fix-NXP-1234-some-expected-behavior" or "feature-NXP-1234-some-new-feature" while working.
+    * When your work is achieved, rebase then merge the branch (see [Isolated testing with ondemand-testandpush jobs]({{page page='isolated-testing'}})). Optionally delete it.
+* Use the same name for a local branch than its corresponding remote branch.
+* Always reference JIRA issues in the commit comments.
+* Commit as a valid author (i.e. "Firstname Lastname <address@somewhere.com>" with "address@somewhere.com" being configured in your GitHub account).
 
 ## Advanced Usage and Specific Use Cases
 
@@ -781,23 +812,23 @@ Let's assume that the user name is&nbsp;`contributor` and he's issuing the pull 
 For simple cases, you can locally apply the pull-request as a patch (see [GitHub documentation](https://help.github.com/articles/using-pull-requests#merging-a-pull-request)):
 
 ```bash
-$ git checkout -b fix-NXP-12345-someStuff master
-$ curl -L https://github.com/nuxeo/nuxeo/pull/67.patch | git am
+git checkout -b fix-NXP-12345-someStuff master
+curl -L https://github.com/nuxeo/nuxeo/pull/67.patch | git am
 ```
 
 #### As a branch
 
 ```
 # Fetch is useless if you properly configured remote.origin.fetch at global or repository level
-$ git fetch origin +pull/67/head:pull/67
-$ git checkout pull/67
+git fetch origin +pull/67/head:pull/67
+git checkout pull/67
 ```
 
 #### Fetch the pull request changes
 
 ```bash
-$ git checkout -b fix-NXP-12345-someStuff master
-$ git pull origin pull/67/head
+git checkout -b fix-NXP-12345-someStuff master
+git pull origin pull/67/head
 
 ```
 
@@ -806,13 +837,11 @@ $ git pull origin pull/67/head
 {{#> panel type='code' heading='Alternative command fetching from the contributor\'s repository instead of fetching from the pull request'}}
 
 ```
-$ git checkout -b fix-NXP-12345-someStuff master
-$ git pull https://github.com/contributor/nuxeo.git fix-NXP-12345-someStuff
+git checkout -b fix-NXP-12345-someStuff master
+git pull https://github.com/contributor/nuxeo.git fix-NXP-12345-someStuff
 ```
 
 {{/panel}}
-
-&nbsp;
 
 ### Removing Files from Git History
 
@@ -837,10 +866,10 @@ Here is an example using `hg-fast-export` with Nuxeo DAM Mercurial repository:
 {{#> panel type='code' heading='Migrating from Mercurial to Git'}}
 
 ```
-$ git clone git://repo.or.cz/fast-export.git
-$ git init new-git-repository
-$ cd new-git-repository
-$ /path/to/fast-export/hg-fast-export.sh -r /path/to/old-hg-repository
+git clone git://repo.or.cz/fast-export.git
+git init new-git-repository
+cd new-git-repository
+/path/to/fast-export/hg-fast-export.sh -r /path/to/old-hg-repository
 
 ```
 
@@ -851,7 +880,7 @@ More info in [this blog post](http://hedonismbot.wordpress.com/2008/10/16/hg-fas
 {{#> panel type='code' heading='Post migration cleanup '}}
 
 ```
-$ for i in `git branch | grep -v master`; do git log -1 --pretty="format:$i%x09%s%n" $i | grep '[Tt]ag[g ]' | cut -f 1; done | while read i; do git branch -d $i; done
+for i in `git branch | grep -v master`; do git log -1 --pretty="format:$i%x09%s%n" $i | grep '[Tt]ag[g ]' | cut -f 1; done | while read i; do git branch -d $i; done
 # Replace last occurrence of "-d" with "-D" to force deletion
 
 ```
@@ -863,7 +892,7 @@ $ for i in `git branch | grep -v master`; do git log -1 --pretty="format:$i%x09%
 *   "default" Mercurial branch will be mapped to "master" Git branch. If you were not using the "default" branch but for instance "5.5" or if the "master" should start pointing at "5.5", do:
 
     ```
-    $ git checkout -B master 5.5
+    git checkout -B master 5.5
     # Optionally commit the new branch creation after having updated its content (see below).
 
     ```
@@ -871,7 +900,7 @@ $ for i in `git branch | grep -v master`; do git log -1 --pretty="format:$i%x09%
     {{#> panel type='code' heading='Moving .hgignore to .gitignore'}}
 
     ```
-    $ git mv .hgignore .gitignore
+    git mv .hgignore .gitignore
     # Edit and remove non-Git configuration from .gitignore, such as "syntax:glob".
 
     ```
@@ -879,10 +908,10 @@ $ for i in `git branch | grep -v master`; do git log -1 --pretty="format:$i%x09%
     {{/panel}}{{#> panel type='code' heading='Adding remote repository; pushing branches and tags'}}
 
     ```
-    $ git remote add origin git@github.com:nuxeo/some_repository.git
-    $ git push --all origin
-    $ git push --tags
-    $ git branch --set-upstream master origin/master
+    git remote add origin git@github.com:nuxeo/some_repository.git
+    git push --all origin
+    git push --tags
+    git branch --set-upstream master origin/master
     ```
 
     {{/panel}}
@@ -1081,7 +1110,7 @@ Here is a sample configuration for `.docx` and `.png` files (from [http://git-sc
 
     {{/panel}}
 
-    `$ chmod a+x ~/bin/docx2txt`
+    `chmod a+x ~/bin/docx2txt`
 
 3.  Tell Git which binary files to convert:
 
@@ -1100,8 +1129,8 @@ Here is a sample configuration for `.docx` and `.png` files (from [http://git-sc
 4.  Tell Git how to convert:
 
     ```
-    $ git config --global diff.word.textconv docx2txt
-    $ git config --global diff.exif.textconv exiftool
+    git config --global diff.word.textconv docx2txt
+    git config --global diff.exif.textconv exiftool
     ```
 
 Here are the outputs with and without the above Git attributes:
@@ -1109,7 +1138,7 @@ Here are the outputs with and without the above Git attributes:
 {{#> panel type='code' heading='Default diff on docx'}}
 
 ```text
-$ git show 281e4f470bb0e8fc1d43b9350e72063030d15f66 --oneline  -- nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx
+git show 281e4f470bb0e8fc1d43b9350e72063030d15f66 --oneline  -- nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx
 281e4f4 NXP-9331: Get rid of cyclic dependency by isolating tests in nuxeo-core-convert-plugins-test
 diff --git a/nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx b/nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx
 new file mode 100644
@@ -1120,7 +1149,7 @@ Binary files /dev/null and b/nuxeo-core-convert-plugins-test/src/test/resources/
 {{/panel}}{{#> panel type='code' heading='Smart diff on docx'}}
 
 ```text
-$ git show 281e4f470bb0e8fc1d43b9350e72063030d15f66 --oneline  -- nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx
+git show 281e4f470bb0e8fc1d43b9350e72063030d15f66 --oneline  -- nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx
 281e4f4 NXP-9331: Get rid of cyclic dependency by isolating tests in nuxeo-core-convert-plugins-test
 diff --git a/nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx b/nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx
 new file mode 100644
@@ -1134,7 +1163,7 @@ index 0000000..ad1b4af
 {{/panel}}{{#> panel type='code' heading='Default diff on PNG'}}
 
 ```text
-$ git show 025a2bda872a228d2ee07b8830e2472088ae43a5 --oneline -- nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png
+git show 025a2bda872a228d2ee07b8830e2472088ae43a5 --oneline -- nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png
 025a2bd NXP-15048: Update logo, flavors and login page for new branding
 diff --git a/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png b/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png
 index a28e89d..b38c0e0 100644
@@ -1144,7 +1173,7 @@ Binary files a/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_
 {{/panel}}{{#> panel type='code' heading='Smart diff on PNG'}}
 
 ```text
-$ git show 025a2bda872a228d2ee07b8830e2472088ae43a5 --oneline -- nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png
+git show 025a2bda872a228d2ee07b8830e2472088ae43a5 --oneline -- nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png
 025a2bd NXP-15048: Update logo, flavors and login page for new branding
 diff --git a/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png b/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png
 index a28e89d..b38c0e0 100644
