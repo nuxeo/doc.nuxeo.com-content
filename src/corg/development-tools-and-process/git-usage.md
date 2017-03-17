@@ -805,7 +805,7 @@ git push <remote_repository_alias> :refs/tags/<tag_name>
 
 Sometimes, a pull request needs local changes (to resolve merge or rebase conflicts, to fix or complete the commits, to run tests...). You can get GitHub instructions at the bottom of the pull request page, near the merge button: click on "command line instructions". Here is a summary of those instructions and some alternate commands.
 
-Let's assume that the user name is&nbsp;`contributor` and he's issuing the pull request number&nbsp;`#67` from the branch&nbsp;`fix-NXP-12345-someStuff` in his forked repository [https://github.com/contributor/nuxeo.git](https://github.com/contributor/nuxeo.git) to branch master in [http://github.com/nuxeo/nuxeo.git](http://github.com/nuxeo/nuxeo.git).
+Let's assume that the user name is `contributor` and he's issuing the pull request number `#67` from the branch `fix-NXP-12345-someStuff` in his forked repository [https://github.com/contributor/nuxeo.git](https://github.com/contributor/nuxeo.git) to branch master in [http://github.com/nuxeo/nuxeo.git](http://github.com/nuxeo/nuxeo.git).
 
 #### As a simple patch
 
@@ -991,13 +991,13 @@ git push --tags -f origin
 
 {{#> callout type='warning' }}
 
-If you need to&nbsp;`rebase` (or `pull --rebase`) some local branch (after repositories merge), then you must use the `rebase --preserve-merges` option (or `pull --rebase=preserve`).
+If you need to `rebase` (or `pull --rebase`) some local branch (after repositories merge), then you must use the `rebase --preserve-merges` option (or `pull --rebase=preserve`).
 
 Please disable GitHub email notifications before push and re-enable after push.
 
 {{/callout}}
 
-&nbsp;
+
 
 #### Using Another Local Clone as Staging
 
@@ -1038,7 +1038,7 @@ git fetch -f /path/to/merged-repo some-conflicting-branch:some-conflicting-branc
 
 {{/callout}}
 
-&nbsp;
+
 
 ### Normalize end of lines
 
@@ -1138,7 +1138,7 @@ Here are the outputs with and without the above Git attributes:
 {{#> panel type='code' heading='Default diff on docx'}}
 
 ```text
-git show 281e4f470bb0e8fc1d43b9350e72063030d15f66 --oneline  -- nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx
+$ git show 281e4f470bb0e8fc1d43b9350e72063030d15f66 --oneline  -- nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx
 281e4f4 NXP-9331: Get rid of cyclic dependency by isolating tests in nuxeo-core-convert-plugins-test
 diff --git a/nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx b/nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx
 new file mode 100644
@@ -1149,7 +1149,7 @@ Binary files /dev/null and b/nuxeo-core-convert-plugins-test/src/test/resources/
 {{/panel}}{{#> panel type='code' heading='Smart diff on docx'}}
 
 ```text
-git show 281e4f470bb0e8fc1d43b9350e72063030d15f66 --oneline  -- nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx
+$ git show 281e4f470bb0e8fc1d43b9350e72063030d15f66 --oneline  -- nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx
 281e4f4 NXP-9331: Get rid of cyclic dependency by isolating tests in nuxeo-core-convert-plugins-test
 diff --git a/nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx b/nuxeo-core-convert-plugins-test/src/test/resources/test-docs/hello.docx
 new file mode 100644
@@ -1163,7 +1163,7 @@ index 0000000..ad1b4af
 {{/panel}}{{#> panel type='code' heading='Default diff on PNG'}}
 
 ```text
-git show 025a2bda872a228d2ee07b8830e2472088ae43a5 --oneline -- nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png
+$ git show 025a2bda872a228d2ee07b8830e2472088ae43a5 --oneline -- nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png
 025a2bd NXP-15048: Update logo, flavors and login page for new branding
 diff --git a/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png b/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png
 index a28e89d..b38c0e0 100644
@@ -1173,7 +1173,7 @@ Binary files a/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_
 {{/panel}}{{#> panel type='code' heading='Smart diff on PNG'}}
 
 ```text
-git show 025a2bda872a228d2ee07b8830e2472088ae43a5 --oneline -- nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png
+$ git show 025a2bda872a228d2ee07b8830e2472088ae43a5 --oneline -- nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png
 025a2bd NXP-15048: Update logo, flavors and login page for new branding
 diff --git a/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png b/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/img/nuxeo_logo.png
 index a28e89d..b38c0e0 100644
@@ -1222,12 +1222,12 @@ index a28e89d..b38c0e0 100644
 GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to push files larger than 100 MB.
 Actually, storing binaries in Git is a bad practice. The usage pattern should be reviewed in order to fetch external data from Nexus for instance.
 
-However, if you think you legitimately need to store (fat) binaries in Git, then there are solutions reducing the inconveniences:&nbsp;`git-annex`,&nbsp;`git-fat`, `Git LFS`,&nbsp;`git-bigfiles`,&nbsp;`git-media`,&nbsp;`git-bigstor`,&nbsp;`git-sym`... The three firsts being the most promising.
+However, if you think you legitimately need to store (fat) binaries in Git, then there are solutions reducing the inconveniences: `git-annex`, `git-fat`, `Git LFS`, `git-bigfiles`, `git-media`, `git-bigstor`, `git-sym`... The three firsts being the most promising.
 **Nuxeo choose Git LFS: [https://git-lfs.github.com/](https://git-lfs.github.com/)**
 
 #### Configuration
 
-The following should avoid running&nbsp;`git lfs install` on each Git repository.
+The following should avoid running `git lfs install` on each Git repository.
 
 ```
 git config --global filter.lfs.required true
@@ -1264,4 +1264,4 @@ See [https://shuhrat.github.io/programming/git-lfs-tips-and-tricks.html](https:/
 
 See [https://github.com/bozaro/git-lfs-migrate](https://github.com/bozaro/git-lfs-migrate) to migrate an existing repository.
 
-&nbsp;
+
