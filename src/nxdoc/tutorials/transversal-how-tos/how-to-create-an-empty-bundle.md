@@ -359,7 +359,7 @@ history:
 ---
 {{#> callout type='info' }}
 
-This tutorial remains very interesting as it explains many basics of a Nuxeo module and is IDE agnostic. Yet the common way of initialising a plugin project for Nuxeo Platform is now to use [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli) which provides many bootstraps.
+This tutorial remains very interesting as it explains many basics of a Nuxeo module and is IDE agnostic. Yet the common way of initializing a plugin project for Nuxeo Platform is now to use [Nuxeo CLI]({{page page='nuxeo-cli'}}) which provides many bootstraps.
 
 {{/callout}}
 
@@ -369,7 +369,7 @@ This is the very first recipe of this cookbook and it will be the basis for the 
 
 {{! multiexcerpt name='recipe-tip'}} {{#> callout type='tip' heading='General Remarks'}}
 
-*   This recipe is not specific to a system or an IDE. You will have to adapt it to your needs. The sole obligation is to use Maven available in a console and [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli) installed. But, even this part, with experience, could be fitted to your IDE habits if you have any.
+*   This recipe is not specific to a system or an IDE. You will have to adapt it to your needs. The sole obligation is to use Maven available in a console and [Nuxeo CLI]({{page page='nuxeo-cli'}}) installed. But, even this part, with experience, could be fitted to your IDE habits if you have any.
 *   For any remark about this recipe or about this cookbook, don't hesitate to leave us a comment on this page.
 
 {{/callout}}{{! /multiexcerpt}}
@@ -436,7 +436,7 @@ Nuxeo Server distribution
 
 ## Create the Basic Project Skeleton
 
-To create a basic folder structure, we use the [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli). There is no required location to create your project.
+To create a basic folder structure, we use the [Nuxeo CLI]({{page page='nuxeo-cli'}}). There is no required location to create your project.
 To create your project structure, follow the steps below.
 
 1.  In a console, type: `mkdir cookbook && cd $_`
@@ -501,7 +501,7 @@ After you completed the project creation, you get this folder structure:
 3.  Repositories:
 
     Repository `public` contains all Nuxeo's bundle releases.
-    
+
     ```xml
     <repository>
       <id>public</id>
@@ -516,7 +516,7 @@ After you completed the project creation, you get this folder structure:
     ```
 
     Repository `public-snapshot` contains all Nuxeo's bundle snapshots.
-    
+
     ```xml
     <repository>
       <id>public-snapshot</id>
@@ -532,7 +532,7 @@ After you completed the project creation, you get this folder structure:
     ```
 
     Repository `nuxeo-studio` contains Studio projects.
-    
+
     ```xml
     <repository>
       <id>nuxeo-studio</id>
@@ -679,7 +679,7 @@ In this example, the level is "INFO". If you want more details, downgrade it to 
 
 {{! /multiexcerpt}}
 
-Now you've got a bundle ready for customization. You can start generating more stuff with the [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli) and use it to improve your Nuxeo Server instance.
+Now you've got a bundle ready for customization. You can start generating more stuff with the [Nuxeo CLI]({{page page='nuxeo-cli'}}) and use it to improve your Nuxeo Server instance.
 
 &nbsp;
 
