@@ -807,7 +807,7 @@ Sometimes, a pull request needs local changes (to resolve merge or rebase confli
 
 Let's assume that the user name is `contributor` and he's issuing the pull request number `#67` from the branch `fix-NXP-12345-someStuff` in his forked repository [https://github.com/contributor/nuxeo.git](https://github.com/contributor/nuxeo.git) to branch master in [http://github.com/nuxeo/nuxeo.git](http://github.com/nuxeo/nuxeo.git).
 
-#### As a simple patch
+#### As a Simple Patch
 
 For simple cases, you can locally apply the pull-request as a patch (see [GitHub documentation](https://help.github.com/articles/using-pull-requests#merging-a-pull-request)):
 
@@ -816,7 +816,7 @@ git checkout -b fix-NXP-12345-someStuff master
 curl -L https://github.com/nuxeo/nuxeo/pull/67.patch | git am
 ```
 
-#### As a branch
+#### As a Branch
 
 ```
 # Fetch is useless if you properly configured remote.origin.fetch at global or repository level
@@ -824,7 +824,7 @@ git fetch origin +pull/67/head:pull/67
 git checkout pull/67
 ```
 
-#### Fetch the pull request changes
+#### Fetch the Pull Request Changes
 
 ```bash
 git checkout -b fix-NXP-12345-someStuff master
@@ -832,7 +832,7 @@ git pull origin pull/67/head
 
 ```
 
-#### Fetch the pull request changes (alternative)
+#### Fetch the Pull Request Changes (Alternative)
 
 {{#> panel type='code' heading='Alternative command fetching from the contributor\'s repository instead of fetching from the pull request'}}
 
@@ -1038,15 +1038,13 @@ git fetch -f /path/to/merged-repo some-conflicting-branch:some-conflicting-branc
 
 {{/callout}}
 
+### Normalize End of Lines
 
-
-### Normalize end of lines
-
-#### Per-branch normalization
+#### Per-Branch Normalization
 
 Git allows to apply automatic checks on end of lines depending on the file attributes (see [http://git-scm.com/docs/gitattributes/](http://git-scm.com/docs/gitattributes/)).
 
-{{#> panel type='code' heading='Ensure correct EOL on *.sh and *.bat files'}}
+{{#> panel type='code' heading='Ensure correct EOL on \*.sh and \*.bat files'}}
 
 ```bash
 # End-of-line conversion like in https://raw.githubusercontent.com/nuxeo/nuxeo/master/.gitattributes
@@ -1063,7 +1061,7 @@ git ci -m'Introduce end-of-line normalization'
 
 That will automatically convert end of lines in `*.sh` and `*.bat` files in the branch containing the `.gitattributes` file.
 
-#### Per-repository normalization
+#### Per-Repository Normalization
 
 You can set such an automatic conversion on all branches with the following:
 
@@ -1084,11 +1082,11 @@ Note however that this configuration will likely cause conflicts on merge (or re
 
 {{/callout}}
 
-#### Global enforcement
+#### Global Enforcement
 
 See [Installing Git / Git Global Configuration]({{page page='installing-git'}}) for a setting `core.autocrlf`, `core.safecrlf`... parameters to enforce the EOL checks on all Git repositories.
 
-#### Useful tools
+#### Useful Tools
 
 The following commands are very useful for dealing with EOL: `file`, `unix2dos` and `dos2unix`.
 
@@ -1235,7 +1233,7 @@ git config --global filter.lfs.clean "git-lfs clean %f"
 git config --global filter.lfs.smudge "git-lfs smudge %f"
 ```
 
-#### Batch download
+#### Batch Download
 
 LFS has the batch mode for downloading files from a server. But it does not work on clone and checkout due to limitation of Git&rsquo;s smudge filters. You can skip LFS&rsquo;s smudge filter and fetch LFS objects on demand:
 
@@ -1263,5 +1261,3 @@ Git LFS does not seem very stable yet and it has some inconsistencies with Git w
 See [https://shuhrat.github.io/programming/git-lfs-tips-and-tricks.html](https://shuhrat.github.io/programming/git-lfs-tips-and-tricks.html), [https://github.com/tarmolov/git-hooks-js](https://github.com/tarmolov/git-hooks-js) to configure and share a safety pre-commit hook.
 
 See [https://github.com/bozaro/git-lfs-migrate](https://github.com/bozaro/git-lfs-migrate) to migrate an existing repository.
-
-
