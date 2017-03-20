@@ -609,7 +609,7 @@ Nuxeo Platform Additional Languages<br/>
 `marketplace-lang-ext-incomplete`
 </td>
 <td colspan="1">
-&nbsp;
+Public
 </td>
 <td colspan="1">
 &nbsp;
@@ -720,7 +720,7 @@ Public
 [Documentation]({{page page='nuxeo-spreadsheet'}})
 </td>
 <td colspan="1">
-[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet?version=1.2.2)
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet?version=1.2.4)
 </td>
 </tr>
 <tr>
