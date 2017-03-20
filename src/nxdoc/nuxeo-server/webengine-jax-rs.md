@@ -352,7 +352,7 @@ Nuxeo-WebModule: org.MyApplicationClass
 
 where `org.MyApplicationClass` is the full name of your JAX-RS application class.
 
-Now you simply put your JAR in Nuxeo bundles directory (e.g. <span style="font-family: monospace;"><span style="font-size: 14.0px;line-height: 12.6px;background-color: rgb(248,248,248);">$NUXEO_HOME/nxserver/bundles</span></span>) and your Web Application will be deployed under the URL: [http://localhost:8080/nuxeo/site](http://localhost:8080/nuxeo/site).
+Now you simply put your JAR in Nuxeo bundles directory (e.g. `$NUXEO_HOME/nxserver/bundle`) and your Web Application will be deployed under the URL: [http://localhost:8080/nuxeo/site](http://localhost:8080/nuxeo/site).
 
 ### Example
 
@@ -441,7 +441,7 @@ A WebEngine Application is a regular JAX-RS application plus an object model to 
 
 {{/callout}}
 
-If you'd like your WEB module to be deployed in a distinct JAX-RS application than the default one (handling all webengine modules), you need to decare a host:
+If you'd like your WEB module to be deployed in a distinct JAX-RS application than the default one (handling all WebEngine modules), you need to declare a host:
 
 ```
 Nuxeo-WebModule: org.nuxeo.ecm.webengine.app.WebEngineModule;host=MyHost
