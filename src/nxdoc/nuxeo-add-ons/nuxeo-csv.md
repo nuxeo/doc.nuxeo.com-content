@@ -199,11 +199,11 @@ history:
 ---
 {{! excerpt}}
 
-The [Nuxeo CSV add-on](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv) enables users to proceed to a bulk import of documents in the Nuxeo Platform using a CSV file. This add-on enables users to create documents with their metadata filled in, to import files with their main attachment or to create a tree structure.
+The [Nuxeo CSV addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv) enables users to proceed to a bulk import of documents in the Nuxeo Platform using a CSV file. This addon enables users to create documents with their metadata filled in, to import files with their main attachment or to create a tree structure.
 
 {{! /excerpt}} {{! multiexcerpt name='nuxeo_csv_functional_introduction'}}
 
-Installing this add-on adds a button "Import a CSV file" for all users that have at least the Edit permission on any document in which it is possible to import a file. By default, this means workspaces and folders. If you configured other documents types in which it is possible to import files, then the button "Import a CSV file" can also be available (see the page [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})).
+Installing this addon adds a button "Import a CSV file" for all users that have at least the Edit permission on any document in which it is possible to import a file. By default, this means workspaces and folders. If you configured other documents types in which it is possible to import files, then the button "Import a CSV file" can also be available (see the page [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})).
 
 {{! /multiexcerpt}}
 
@@ -217,7 +217,7 @@ After the package is installed, users have a **Import a CSV file** button availa
 
 ## {{> anchor 'configuration'}}Configuration
 
-The Nuxeo CSV add-on enables users to create file documents and upload their main attachment at the same time. This requires to configure where the server will take the attachments. This is done adding the parameter `nuxeo.csv.blobs.folder` in the server [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) and giving it a value that is a local path to a folder that can be accessed by the server.
+The Nuxeo CSV addon enables users to create file documents and upload their main attachment at the same time. This requires to configure where the server will take the attachments. This is done adding the parameter `nuxeo.csv.blobs.folder` in the server [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) and giving it a value that is a local path to a folder that can be accessed by the server.
 
 ## {{> anchor 'nuxeo-csv-import-file-definition'}}CSV File Definition
 
@@ -306,7 +306,7 @@ Here is an example of a CSV import that creates documents at the root of the wor
 "doc3","Note","Doc 2","A note document, created at the same location as doc1 and doc2"
 ```
 
-You can use the attached file []({{file name='nuxeo-csv-import-sample1.csv'}}) to test Nuxeo CSV to import a tree structure.
+You can use the [attached file]({{file name='nuxeo-csv-import-sample1.csv'}}) to test Nuxeo CSV to import a tree structure.
 
 ### Importing Files
 
@@ -319,7 +319,7 @@ On your CSV file, use the `file:content` property in the first line and the name
 "my-file","File","My file with uploaded attachment","This is a file with its attachment, created using Nuxeo CSV","my-file.doc"
 ```
 
-You can use the attached zip sample []({{file name='Nuxeo-CSV-sample.zip'}}) to test the import of files.
+You can use the [attached ZIP sample]({{file name='Nuxeo-CSV-sample.zip'}}) to test the import of files.
 
 Complex properties (mono and multi-valued) need to be JSON formatted like (see the example below):
 
@@ -330,7 +330,7 @@ Complex properties (mono and multi-valued) need to be JSON formatted like (see t
 "mycomplexfile","ComplexFile","a complex file","My Complex File","joe","12/21/2013","","{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\    "}","[{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\"},{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString2\"}]"
 ```
 
-You can use the attached file []({{file name='docs_ok.csv'}}) to better understand the syntax.
+You can use the [attached file]({{file name='docs_ok.csv'}}) to better understand the syntax.
 
 {{#> callout type='note'}}
 Dates inside a complex type use W3C format and not MM/dd/yyyy as for simple type dates.
