@@ -105,7 +105,7 @@ In the Nuxeo Platform, the WAR file is generated each time you start the server 
 {{/panel}}
 
 *   `org.nuxeo.ecm.webapp.ui` is actually the symbolic name of the bundle we would like to override. You can find this information in the `MANIFEST.MF` file of the bundle.
-*   The `<require>` tag makes sure thatyour bundle will be deployed after the default one. This tag is also used in the contributions to the extension services to be sure that they will be deployed after the bundles listed in the `require` tags.
+*   The `<require>` tag makes sure that your bundle will be deployed after the default one. This tag is also used in the contributions to the extension services to be sure that they will be deployed after the bundles listed in the `require` tags.
 
 *   The `<install>` section describes what should be installed.
 
