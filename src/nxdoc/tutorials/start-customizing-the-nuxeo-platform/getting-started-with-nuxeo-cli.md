@@ -627,92 +627,6 @@ From a command line:
     }
     ```
 
-
-#### Update the Unit Test
-
-Nuxeo CLI automatically created a unit test class for the Operation at `contract-mgt-project/contract-mgt-project-core/src/test/java/com/bigcorp/contractmgt/TestContractUpdater.java`. This test must be made to pass in order to compile and deploy your project.
-
-1. Create a "dummy" component to account for necessary Studio requirements, e.g. `fakestudio-component.xml` at `contract-mgt-project/contract-mgt-project-core/src/test/resources`.
-
-2. Paste the following into `fakestudio-component.xml`:
-
-    ```xml
-    <component name="com.nuxeo.studio.fake">
-      <alias>org.nuxeo.ecm.directory.sql.storage</alias>
-      <alias>org.nuxeo.runtime.started</alias>
-    </component>
-    ```
-
-3.  Replace `TestContractUpdater.java` with the following code:
-
-    ```java
-    package com.bigcorp.contractmgt;
-
-    import static org.junit.Assert.assertEquals;
-    import static org.junit.Assert.assertNotNull;
-    import static org.junit.Assert.assertNull;
-
-    import java.util.Calendar;
-    import java.util.GregorianCalendar;
-    import javax.inject.Inject;
-
-    import org.junit.Test;
-    import org.junit.runner.RunWith;
-    import org.nuxeo.ecm.automation.test.AutomationFeature;
-    import org.nuxeo.ecm.core.api.CoreSession;
-    import org.nuxeo.ecm.core.api.DocumentModel;
-    import org.nuxeo.ecm.core.test.DefaultRepositoryInit;
-    import org.nuxeo.ecm.core.test.annotations.Granularity;
-    import org.nuxeo.ecm.core.test.annotations.RepositoryConfig;
-    import org.nuxeo.runtime.test.runner.Deploy;
-    import org.nuxeo.runtime.test.runner.Features;
-    import org.nuxeo.runtime.test.runner.FeaturesRunner;
-    import org.nuxeo.runtime.test.runner.LocalDeploy;
-
-    @RunWith(FeaturesRunner.class)
-    @Features(AutomationFeature.class)
-    @RepositoryConfig(init = DefaultRepositoryInit.class, cleanup = Granularity.METHOD)
-
-    // Be sure to replace studio.extensions.MAVEN-ARTIFACT-ID
-    // with your Studio project's symbolic name.
-    // You can find it in Studio:
-    // Settings / Application Information / Maven Artifact id field
-    @Deploy({"com.bigcorp.contractmgt.contract-mgt-project-core", "studio.extensions.MAVEN-ARTIFACT-ID"})
-    @LocalDeploy({ "com.bigcorp.contractmgt.contract-mgt-project-core:fakestudio-component.xml" })
-    public class TestContractUpdater {
-          @Inject
-          protected CoreSession session;
-          @Test
-          public void shouldCallTheAutomationChain() {
-              // Create a contract, currently stored in memory
-              DocumentModel doc = session.createDocumentModel("/default-domain", "my-test-doc", ContractUpdater.CONTRACT_TYPE);
-              GregorianCalendar now = new GregorianCalendar();
-              doc.setPropertyValue(ContractUpdater.CONTRACT_START, now);
-
-              // At this stage, the reminder date should be empty
-              assertNull(doc.getPropertyValue(ContractUpdater.CONTRACT_REMINDER));
-
-              // We'll save the document in the database which will
-              // trigger an event handler that sets the reminder date
-              doc = session.createDocument(doc);
-              session.save();
-
-              // Now we'll check that the reminder date is set as expected
-              int currentMonth = now.get(Calendar.MONTH);
-              GregorianCalendar reminder = (GregorianCalendar) doc.getPropertyValue(ContractUpdater.CONTRACT_REMINDER);
-              assertNotNull("Reminder date is not set, check your automation chain.", reminder);
-              assertEquals("Reminder date is not set in three months from now", (((currentMonth + 3) > 12) ? (currentMonth - 9):(currentMonth + 3)), reminder.get(Calendar.MONTH));
-          }
-    }
-    ```
-
-4.  Replace "MAVEN-ARTIFACT-ID" in `studio.extensions.MAVEN-ARTIFACT-ID` with your Studio project's symbolic name.
-
-    Note: To get the symbolic name go to **Settings** > **Application Information** in Nuxeo Studio and use the value found in the **Maven Artifact id** field.
-
-If you try running the test (in Eclipse, right-click on your project and choose **Run As, JUnit Test**, or **Run TestContractUpdater** in IntelliJ IDEA), you will notice that the test fails because our Studio project is missing a few things. We need to add them to make the test pass.
-
-
 #### Send the Operation to Studio
 
 1. Build a JAR file (without running the tests); from the `contract-mgt-project` folder run:
@@ -746,7 +660,6 @@ If you try running the test (in Eclipse, right-click on your project and choose 
 
 The operation is now available in Automation Chain editor, under the Document category.
 
-
 ## Step 3 - Create Your Chain in Nuxeo Studio
 
 **Create an Automation Chain**
@@ -779,11 +692,83 @@ Now create an Event Handler in order to call your operation when a contract is c
 
 Now you can try it on your server either by running the unit tests or by testing manually.
 
-
 ## Step 4 - Test the Code
 
 The code can either be tested through unit tests or manually. You need to bind the Studio project first to have it deployed during the unit tests or on the server when testing manually.
 
+### Update the Unit Test
+
+Nuxeo CLI automatically created a unit test class for the Operation at `contract-mgt-project/contract-mgt-project-core/src/test/java/com/bigcorp/contractmgt/TestContractUpdater.java`. This test must be made to pass in order to compile and deploy your project.
+
+1.  Replace `TestContractUpdater.java` with the following code:
+
+    ```java
+    package com.bigcorp.contractmgt;
+
+    import static org.junit.Assert.assertEquals;
+    import static org.junit.Assert.assertNotNull;
+    import static org.junit.Assert.assertNull;
+
+    import java.util.Calendar;
+    import java.util.GregorianCalendar;
+    import javax.inject.Inject;
+
+    import org.junit.Test;
+    import org.junit.runner.RunWith;
+    import org.nuxeo.ecm.automation.test.AutomationFeature;
+    import org.nuxeo.ecm.core.api.CoreSession;
+    import org.nuxeo.ecm.core.api.DocumentModel;
+    import org.nuxeo.ecm.core.test.DefaultRepositoryInit;
+    import org.nuxeo.ecm.core.test.annotations.Granularity;
+    import org.nuxeo.ecm.core.test.annotations.RepositoryConfig;
+    import org.nuxeo.runtime.test.runner.Deploy;
+    import org.nuxeo.runtime.test.runner.Features;
+    import org.nuxeo.runtime.test.runner.FeaturesRunner;
+    import org.nuxeo.runtime.test.runner.PartialDeploy;
+    import org.nuxeo.runtime.test.runner.TargetExtensions;
+
+    @RunWith(FeaturesRunner.class)
+    @Features(AutomationFeature.class)
+    @RepositoryConfig(init = DefaultRepositoryInit.class, cleanup = Granularity.METHOD)
+
+    // Be sure to replace studio.extensions.MAVEN-ARTIFACT-ID
+    // with your Studio project's symbolic name.
+    // You can find it in Studio:
+    // Settings / Application Information / Maven Artifact id field
+    @Deploy({"com.bigcorp.contractmgt.contract-mgt-project-core"})
+    @PartialDeploy(bundle = "studio.extensions.MAVEN-ARTIFACT-ID", features = { TargetExtensions.Automation.class })
+    public class TestContractUpdater {
+          @Inject
+          protected CoreSession session;
+          @Test
+          public void shouldCallTheAutomationChain() {
+              // Create a contract, currently stored in memory
+              DocumentModel doc = session.createDocumentModel("/default-domain", "my-test-doc", ContractUpdater.CONTRACT_TYPE);
+              GregorianCalendar now = new GregorianCalendar();
+              doc.setPropertyValue(ContractUpdater.CONTRACT_START, now);
+
+              // At this stage, the reminder date should be empty
+              assertNull(doc.getPropertyValue(ContractUpdater.CONTRACT_REMINDER));
+
+              // We'll save the document in the database which will
+              // trigger an event handler that sets the reminder date
+              doc = session.createDocument(doc);
+              session.save();
+
+              // Now we'll check that the reminder date is set as expected
+              int currentMonth = now.get(Calendar.MONTH);
+              GregorianCalendar reminder = (GregorianCalendar) doc.getPropertyValue(ContractUpdater.CONTRACT_REMINDER);
+              assertNotNull("Reminder date is not set, check your automation chain.", reminder);
+              assertEquals("Reminder date is not set in three months from now", (((currentMonth + 3) > 12) ? (currentMonth - 9):(currentMonth + 3)), reminder.get(Calendar.MONTH));
+          }
+    }
+    ```
+
+4.  Replace "MAVEN-ARTIFACT-ID" in `studio.extensions.MAVEN-ARTIFACT-ID` with your Studio project's symbolic name.
+
+    Note: To get the symbolic name go to **Settings** > **Application Information** in Nuxeo Studio and use the value found in the **Maven Artifact id** field.
+
+If you try running the test (in Eclipse, right-click on your project and choose **Run As, JUnit Test**, or **Run TestContractUpdater** in IntelliJ IDEA), you will notice that the test fails because our Studio project is missing a few things. We need to add them to make the test pass.
 
 ### Bind the Studio Project
 
@@ -870,8 +855,7 @@ The code can either be tested through unit tests or manually. You need to bind t
 1. Right-click on your unit test class and choose **Run As, JUnit Test** in Eclipse, or **Run TestContractUpdater** in IntelliJ IDEA.
     The tests should now pass.
 
-Using unit tests is the recommended way to ensure a feature is working as expected. Unit tests are triggered automatically whenever you compile your project using Maven, and as such they help you in maintaining a high quality level.
-
+Using unit tests is the **recommended way** to ensure a feature is working as expected. Unit tests are triggered automatically whenever you compile your project using Maven, and as such they help you in maintaining a high quality level.
 
 ### Testing Manually
 
