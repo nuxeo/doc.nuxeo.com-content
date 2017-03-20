@@ -1,8 +1,8 @@
 ---
 title: How to Override a Template
 review:
-    comment: ''
-    date: '2015-12-01'
+    comment: 'Tutorial followed by Ahmed: OK for LTS 2016'
+    date: '2017-03-20'
     status: ok
 details:
     howto:
@@ -82,7 +82,7 @@ For this example, we will override the `nuxeo_footer_template.xhtml` template. I
 
 Once your file is created and modified to suit your needs, you have to deploy it.
 
-In the Nuxeo Platform, the WAR file is generated each time you start the server by looking into each JAR in `nxserver/bundles` and `nxserver/plugins`. More precisely, this happens because you set an `install` XML tag in the `deployment-fragment.xml` file. Content syntax of the tag is simply Ant. Create a file&nbsp;`deployment-fragment.xml` under `resources/OSGI-INF` _._
+In the Nuxeo Platform, the WAR file is generated each time you start the server by looking into each JAR in `nxserver/bundles` and `nxserver/plugins`. More precisely, this happens because you set an `install` XML tag in the `deployment-fragment.xml` file. Content syntax of the tag is simply Ant. Create a file `deployment-fragment.xml` under `resources/OSGI-INF`.
 
 {{#> panel type='code' heading='deployment-fragment.xml'}}
 
