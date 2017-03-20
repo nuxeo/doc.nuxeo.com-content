@@ -192,7 +192,7 @@ Several event listeners exist by default in the nuxeo platform, for instance:
 
 {{#> callout type='tip' }}
 
-Check our [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli) to bootstrap your Event Listener.
+Check [Nuxeo CLI]({{page page='nuxeo-cli'}}) to bootstrap your Event Listener.
 
 {{/callout}}
 

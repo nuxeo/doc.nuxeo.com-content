@@ -174,7 +174,7 @@ This page gives some rules for writing a bundle's manifest.
 {{! /excerpt}}
 {{#> callout type='info' }}
 
-Check our [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli) to bootstrap your Bundle.
+Check [Nuxeo CLI]({{page page='nuxeo-cli'}}) to bootstrap your Bundle.
 
 {{/callout}}
 

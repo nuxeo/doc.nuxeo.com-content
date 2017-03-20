@@ -342,14 +342,14 @@ You can see that most of the files listed above are optional or generated. So fo
 
 ### From a Maven Multi-Module Project
 
-We assume that you already bootstrapped your project with [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli), or your project is following the mecanism describes by [Maven](https://maven.apache.org) as a [multi-module project](https://maven.apache.org/guides/mini/guide-multiple-modules.html).
+We assume that you already bootstrapped your project with [Nuxeo CLI]({{page page='nuxeo-cli'}}), or your project is following the mechanism describes by [Maven](https://maven.apache.org) as a [multi-module project](https://maven.apache.org/guides/mini/guide-multiple-modules.html).
 
 ```bash
 $ cd my-project
 $ nuxeo bootstrap package
 ```
 
-If you previously generate the project using [Nuxeo CLI](https://www.npmjs.com/package/nuxeo-cli), you'll be only prompted for the package's **name**. Otherwise, as `pom.xml` introspection is not ready yet, you'll be also prompted for:
+If you previously generate the project using [Nuxeo CLI]({{page page='nuxeo-cli'}}), you'll be only prompted for the package's **name**. Otherwise, as `pom.xml` introspection is not ready yet, you'll be also prompted for:
 * **Parent Group id** - root's `pom.xml` `groupId` value.
 * **Parent Artifact id** - root's `pom.xml` `artifactId` value.
 * **Parent Version** - root's `pom.xml` `version` value.
@@ -383,7 +383,7 @@ Then, you can run `maven package` and you'll find your Nuxeo Package ready. You 
 
 ### From a Single Module Project
 
-In case you'd like to create a dedicated package for a single module Maven project; you have to create a separate project that will contain a dependency to your project. Assume that your project has this [GAV](https://maven.apache.org/guides/mini/guide-naming-conventions.html) `com.bigcorp.sample:my-big-project:1.0-SNAPSHOT`.
+In case you'd like to create a dedicated package for a single module Maven project, you have to create a separate project that will contain a dependency to your project. Assume that your project has this [GAV](https://maven.apache.org/guides/mini/guide-naming-conventions.html) `com.bigcorp.sample:my-big-project:1.0-SNAPSHOT`.
 
 ```bash
 $ cd my-project && cd .. # Move to the parent folder of your project root

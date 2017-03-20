@@ -431,7 +431,7 @@ From a command line prompt, type:
 $ npm install -g nuxeo-cli
 ```
 
-Nuxeo CLI lets you easily scaffold common Nuxeo components like empty projects, Packages, Automation Operations, Services, etc. This saves you time writing boilerplate code to focus on your code instead of the structure.
+[Nuxeo CLI]({{page page='nuxeo-cli'}}) lets you easily scaffold common Nuxeo components like empty projects, Packages, Automation Operations, Services, etc. This saves you time writing boilerplate code to focus on your code instead of the structure.
 
 We'll use it to generate a new Nuxeo project and a custom operation.
 
@@ -462,7 +462,7 @@ From a command line:
     $ nuxeo bootstrap
     ```
 
-3.  Fill in the following values, via the prompts provided by the Nuxeo CLI:
+3.  Fill in the following values, via the prompts provided by Nuxeo CLI:
 
     ```
     ? Use a parent artifact (for instance your company's BOM or the org.nuxeo.ecm.distribution:nuxeo-distribution POM)? y

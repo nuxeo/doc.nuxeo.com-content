@@ -166,7 +166,7 @@ But your application also needs a serious back end that will allow you to build 
 
 {{! excerpt}}
 
-[Angular](https://angular.io/) has lots of different stacks, and it can be difficult to find the one that fits our needs. That's why we created a dedicated bootstrap in [Nuxeo Generator](https://www.npmjs.com/package/nuxeo-cli).
+[Angular](https://angular.io/) has lots of different stacks, and it can be difficult to find the one that fits our needs. That's why we created a dedicated bootstrap in [Nuxeo CLI]({{page page='nuxeo-cli'}}).
 
 {{! /excerpt}}
 
