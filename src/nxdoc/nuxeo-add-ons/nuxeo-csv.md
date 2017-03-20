@@ -295,7 +295,7 @@ Here is an example of a CSV import that creates documents at the root of the wor
 "doc3","Note","Doc 2","A note document, created at the same location as doc1 and doc2"
 ```
 
-You can use the attached file []({{file name='nuxeo-csv-import-sample1.csv'}}) to test Nuxeo CSV to import a tree structure.
+You can use the [attached file]({{file name='nuxeo-csv-import-sample1.csv'}}) to test Nuxeo CSV to import a tree structure.
 
 ### Importing Files
 
@@ -308,7 +308,7 @@ On your CSV file, use the `file:content` property in the first line and the name
 "my-file","File","My file with uploaded attachment","This is a file with its attachment, created using Nuxeo CSV","my-file.doc"
 ```
 
-You can use the attached zip sample []({{file name='Nuxeo-CSV-sample.zip'}}) to test the import of files.
+You can use the [attached ZIP sample]({{file name='Nuxeo-CSV-sample.zip'}}) to test the import of files.
 
 Complex properties (mono and multi-valued) need to be JSON formatted like (see the example below):
 
@@ -319,7 +319,7 @@ Complex properties (mono and multi-valued) need to be JSON formatted like (see t
 "mycomplexfile","ComplexFile","a complex file","My Complex File","joe","12/21/2013","","{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\    "}","[{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\"},{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString2\"}]"
 ```
 
-You can use the attached file []({{file name='docs_ok.csv'}}) to better understand the syntax.
+You can use the [attached file]({{file name='docs_ok.csv'}}) to better understand the syntax.
 
 {{#> callout type='note'}}
 Dates inside a complex type use W3C format and not MM/dd/yyyy as for simple type dates.
