@@ -201,6 +201,9 @@ Upgrading from Nuxeo Drive 1.3 to Nuxeo Drive 2 is transparent: Click on the ico
 {{/callout}}
 
 ## Configuration
+Citrix environments are not supported.
+
+## Configuration
 
 ### Settings
 
