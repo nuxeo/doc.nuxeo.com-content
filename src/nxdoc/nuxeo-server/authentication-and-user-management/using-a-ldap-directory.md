@@ -273,9 +273,7 @@ You can also choose a group from your company's directory instead of using the d
 ## Simple Configuration Example
 
 1.  Create a file called `default-ldap-users-directory-config.xml` in your config directory:
-
-    *   `server/default/deploy/nuxeo.ear/config/` in JBoss,
-    *   `nxserver/config/` in Tomcat.
+    *   `nxserver/config/`
 
 2.  Then copy this content (make sure it's valid XML, sometimes what you think is a space character is actually a non-breaking space (`U+00A0`) which is invalid in XML):
 
@@ -408,8 +406,7 @@ You can also choose a group from your company's directory instead of using the d
     </component>
 
     ```
-
-3.  Then you should edit this file:
+    Then you should edit this file:
 
 4.  Set the correct server:
     *   `<ldapUrl>`
