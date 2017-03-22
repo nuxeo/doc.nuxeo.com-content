@@ -68,7 +68,7 @@ history:
 
 Nuxeo IDE is an Eclipse plugin that provides many useful tools for extensions developers such as hot code reload, component wizards and automated dependency management.
 
-More details are available in the [Nuxeo IDE Documentation]({{page space='idedoc' page='documentation-center-for-nuxeo-platform-ides'}}).
+More details are available in the [Nuxeo IDE Documentation]({{page space='idedoc' page='nuxeo-ide'}}).
 
 ## Eclipse configuration files
 
