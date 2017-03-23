@@ -265,6 +265,13 @@ Registered access
 </td>
 </tr>
 <tr>
+<td>MongoDB Audit and Directories<br/>
+`nuxeo-mongodb-ext`</td>
+<td></td>
+<td></td>
+<td>To be released</td>
+</tr>
+<tr>
 <td colspan="1">
 Nuxeo Agenda<br/>
 `nuxeo-agenda`
@@ -750,6 +757,13 @@ Public
 </td>
 </tr>
 <tr>
+<td>Nuxeo Tree Snapshot<br/>
+`nuxeo-tree-snapshot`</td>
+<td>Public</td>
+<td></td>
+<td>[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot?version=1.0.0)</td>
+</tr>
+<tr>
 <td colspan="1">
 Nuxeo Vision<br/>
 `nuxeo-vision`
@@ -809,6 +823,13 @@ Public
 <td colspan="1">
 [Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/platform-explorer?version=1.6.4)
 </td>
+</tr>
+<tr>
+<td>ReactJS Sample<br/>
+`reactjs-sample`</td>
+<td>Registered access</td>
+<td></td>
+<td>[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/reactjs-sample?version=1.0.0)</td>
 </tr>
 <tr>
 <td colspan="1">
