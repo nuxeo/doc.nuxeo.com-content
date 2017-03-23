@@ -135,6 +135,7 @@ To Install Nuxeo Drive on your Linux computer:
     ```
     # Install for local user. See $XDG_CONFIG_DIRS for a system wide install
     # Configure Nuxeo Drive to load at startup
+    mkdir -p ~/.config/autostart
     cat >~/.config/autostart/ndrive.desktop <<EOF
     [Desktop Entry]
     Type=Application
