@@ -114,7 +114,7 @@ To Install Nuxeo Drive on your Linux computer:
   ```
 
   Then finally install the Nuxeo Drive requirements and Nuxeo Drive itself. These are common installation actions, not depending on the package manager.
-  (warning: define the version you want in the DRIVE_VERSION variable, ex: `2.1.113` - [Find the latest Nuxeo Drive release number here](https://github.com/nuxeo/nuxeo-drive/releases/latest)):
+  (warning: define the version you want in the DRIVE_VERSION variable, ex: `release-2.1.113` - [Find the Nuxeo Drive tags list here](https://github.com/nuxeo/nuxeo-drive/tags)):
   ```
   DRIVE_VERSION=release-2.1.113
   sudo pip install -U -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements.txt
