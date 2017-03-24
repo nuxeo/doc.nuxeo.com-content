@@ -730,7 +730,7 @@ Recursively executes the given Shell command on the current and its direct child
     * When your work is achieved, rebase then merge the branch (see [Isolated testing with ondemand-testandpush jobs]({{page page='isolated-testing'}})). Optionally delete it.
 * Use the same name for a local branch than its corresponding remote branch.
 * Always reference JIRA issues in the commit comments.
-* Commit as a valid author (i.e. "Firstname Lastname <address@somewhere.com>" with "address@somewhere.com" being configured in your GitHub account).
+* Commit as a valid author (i.e. "Firstname Lastname \<email address>" with the email address being configured in your GitHub account, no matter if it's public or private).
 
 ## Advanced Usage and Specific Use Cases
 
@@ -805,14 +805,14 @@ git push <remote_repository_alias> :refs/tags/<tag_name>
 
 Sometimes, a pull request needs local changes (to resolve merge or rebase conflicts, to fix or complete the commits, to run tests...). You can get GitHub instructions at the bottom of the pull request page, near the merge button: click on "command line instructions". Here is a summary of those instructions and some alternate commands.
 
-Let's assume that the user name is `contributor` and he's issuing the pull request number `#67` from the branch `fix-NXP-12345-someStuff` in his forked repository [https://github.com/contributor/nuxeo.git](https://github.com/contributor/nuxeo.git) to branch master in [http://github.com/nuxeo/nuxeo.git](http://github.com/nuxeo/nuxeo.git).
+Let's assume that the user name is `contributor` and he's issuing the pull request number `#67` from the branch `fix-NXP-12345-some-stuff` in his forked repository <https://github.com/contributor/nuxeo.git> to branch master in <http://github.com/nuxeo/nuxeo.git>.
 
 #### As a Simple Patch
 
 For simple cases, you can locally apply the pull-request as a patch (see [GitHub documentation](https://help.github.com/articles/using-pull-requests#merging-a-pull-request)):
 
 ```bash
-git checkout -b fix-NXP-12345-someStuff master
+git checkout -b fix-NXP-12345-some-stuff master
 curl -L https://github.com/nuxeo/nuxeo/pull/67.patch | git am
 ```
 
@@ -827,7 +827,7 @@ git checkout pull/67
 #### Fetch the Pull Request Changes
 
 ```bash
-git checkout -b fix-NXP-12345-someStuff master
+git checkout -b fix-NXP-12345-some-stuff master
 git pull origin pull/67/head
 
 ```
@@ -837,8 +837,8 @@ git pull origin pull/67/head
 {{#> panel type='code' heading='Alternative command fetching from the contributor\'s repository instead of fetching from the pull request'}}
 
 ```
-git checkout -b fix-NXP-12345-someStuff master
-git pull https://github.com/contributor/nuxeo.git fix-NXP-12345-someStuff
+git checkout -b fix-NXP-12345-some-stuff master
+git pull https://github.com/contributor/nuxeo.git fix-NXP-12345-some-stuff
 ```
 
 {{/panel}}
