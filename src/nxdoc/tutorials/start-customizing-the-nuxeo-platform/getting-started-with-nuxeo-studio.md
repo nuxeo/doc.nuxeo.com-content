@@ -327,4 +327,5 @@ You are now ready to use Nuxeo Studio! You can:
 
 *   Go to the next step of this quick start, so as to discover how you can [contribute new features using Java code]({{page page='getting-started-with-nuxeo-cli'}}) to the server.
 *   Go deeper with learning more of Nuxeo Studio and Nuxeo Platform, by following a [complete tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}}).
+*   Go deeper with learning how to unit test Nuxeo Studio, by following a [how to]({{page page='how-to-unit-test-studio-bundle'}}).
 {{/callout}}

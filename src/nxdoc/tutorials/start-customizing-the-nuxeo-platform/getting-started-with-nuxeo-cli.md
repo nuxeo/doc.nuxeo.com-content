@@ -855,7 +855,7 @@ If you try running the test (in Eclipse, right-click on your project and choose 
 1. Right-click on your unit test class and choose **Run As, JUnit Test** in Eclipse, or **Run TestContractUpdater** in IntelliJ IDEA.
     The tests should now pass.
 
-Using unit tests is the **recommended way** to ensure a feature is working as expected. Unit tests are triggered automatically whenever you compile your project using Maven, and as such they help you in maintaining a high quality level.
+Using unit tests is the **recommended way** to ensure a feature is working as expected. Unit tests are triggered automatically whenever you build your project using Maven, and as such they help you in maintaining a high quality level.
 
 ### Testing Manually
 
