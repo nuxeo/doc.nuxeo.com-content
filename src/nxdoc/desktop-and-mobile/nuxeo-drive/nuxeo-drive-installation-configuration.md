@@ -68,9 +68,17 @@ To Install Nuxeo Drive on your Linux computer:
 
     First note that Nuxeo Drive uses Extended file attributes through the [xattr](https://pypi.python.org/pypi/xattr/) Python wrapper.
 
-    On FreeBSD, and Mac OS X, xattrs are enabled in the default kernel.
+    On **FreeBSD**, and **Mac OS X**, xattrs are enabled in the default kernel.
 
-    On Linux, depending on the distribution, you may need a special mount option (user_xattr) to enable them for a given file system, e.g.:
+    On **Linux**, depending on the distribution, you _may_ need a special mount option (user_xattr) to enable them for a given file system.
+    
+    Check your current mount, e.g.:
+    ```
+    cat /proc/fs/ext4/sda3/options | grep xattr
+    # "user_xattr" means the file system has xattr already enabled
+    ```
+    
+    If the current mount doesn't have xattr, remount the filesystem with xattr. e.g.:
     ```
     sudo mount -oremount,user_xattr /dev/sda3
     ```
@@ -105,19 +113,13 @@ To Install Nuxeo Drive on your Linux computer:
   sudo yum install python-pip python-devel PyQt4 libffi-devel git
   ```
 
-  Then finally install the Nuxeo Drive requirements and Nuxeo Drive itself. These are common installation actions, not depending on the package manager (warning: define the version you want in the DRIVE_VERSION variable, ex: 2.1.113):
+  Then finally install the Nuxeo Drive requirements and Nuxeo Drive itself. These are common installation actions, not depending on the package manager.
+  (warning: define the version you want in the DRIVE_VERSION variable, ex: `release-2.1.113` - [Find the Nuxeo Drive tags list here](https://github.com/nuxeo/nuxeo-drive/tags)):
   ```
   DRIVE_VERSION=release-2.1.113
   sudo pip install -U -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements.txt
   sudo pip install -U -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/unix-requirements.txt
   sudo pip install -U git+https://github.com/nuxeo/nuxeo-drive.git@$DRIVE_VERSION
-  ```
-  Waiting for [NXDRIVE-62](https://jira.nuxeo.com/browse/NXDRIVE-62) to be resolved you need to run these commands for Nuxeo Drive to work fine:
-  ```
-  # increase inotify file watch limit
-  ofile=/proc/sys/fs/inotify/max_user_instances
-  sudo sh -c "echo 8192 > $ofile"
-  cat $ofile
   ```
 
 2. For now, the systray icon is not visible under Unity desktop. As a consequence, the configuration window only appears at the first launch. If you want to change it, issue the following commands:
@@ -131,7 +133,9 @@ To Install Nuxeo Drive on your Linux computer:
 4.  Now configure automatic start and protocol handler:
 
     ```
-    # See $XDG_CONFIG_DIRS for a system wide install (vs user-specific)
+    # Install for local user. See $XDG_CONFIG_DIRS for a system wide install
+    # Configure Nuxeo Drive to load at startup
+    mkdir -p ~/.config/autostart
     cat >~/.config/autostart/ndrive.desktop <<EOF
     [Desktop Entry]
     Type=Application
@@ -145,9 +149,8 @@ To Install Nuxeo Drive on your Linux computer:
     Comment=
     EOF
 
-    /ndrive.desktop --create-dirs
-
-    # See $XDG_DATA_DIRS for a system wide install (vs user-specific)
+    # Install for local user. See $XDG_DATA_DIRS for a system wide install
+    # Add handler for opening files
     cat >~/.local/share/applications/nxdrive-handler.desktop <<EOF
     [Desktop Entry]
     Type=Application
@@ -199,6 +202,9 @@ When a new version of Nuxeo Drive is available, a message is displayed at the bo
 Upgrading from Nuxeo Drive 1.3 to Nuxeo Drive 2 is transparent: Click on the icon ![]({{file name='nuxeo_drive_systray_icon_update_available_18.png' space='userdoc60' page='nuxeo-drive'}}) and the Update Nuxeo Drive item in the Nuxeo Drive menu to install the new version. After you confirmed the upgrade, Nuxeo Drive will download and restart and your synchronized folders will be automatically recovered.
 
 {{/callout}}
+
+## Limitation
+Citrix environments are not supported.
 
 ## Configuration
 
