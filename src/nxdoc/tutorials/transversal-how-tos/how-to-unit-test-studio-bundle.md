@@ -50,7 +50,7 @@ Adding your credentials allow Maven to be authenticated on Studio while trying t
 1. Open `~/.m2/settings.xml` file with your prefered text editor
 1. Add the following `server` node:
    ```xml
-   <settings ...>
+   <settings>
    ...
      <servers>
      ...
@@ -141,8 +141,8 @@ Adding your credentials allow Maven to be authenticated on Studio while trying t
 
 After understanding the mostly important [@Deploy]({{page space='corg' page='unit-testing'}}) annotation, you should have noticed that deploying a Studio Bundle is not as straight forward because of the way the Studio bundle contribution are packed. The idea behind this annotation is to allow you to select which contributions you want to deploy in your unit test.
 
-For instance, you could want to deploy only [Schema]({{page page='schema-fields'}}), [Document Type](how-to-define-a-document-type) and custom [events listener](events-and-listeners) to ensure your business rules are correctly applied.
-Or, you simply want to ensure your [Automation Scripting](automation-scripting) is doing what you'd expect.
+For instance, you could want to deploy only [Schema]({{page page='schema-fields'}}), [Document Type]({{page page='how-to-define-a-document-type'}}) and custom [events listener]({{page page='events-and-listeners'}}) to ensure your business rules are correctly applied.
+Or, you simply want to ensure your [Automation Scripting]({{page page='automation-scripting'}}) is doing what you'd expect.
 
 ## Testing Content Model
 

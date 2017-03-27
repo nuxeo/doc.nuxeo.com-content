@@ -417,7 +417,7 @@ Here we want to add some server side Java logic that will update the contract's 
 * An IDE that integrates with Maven.
     We provide instructions for [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars) or IntelliJ IDEA
 * Java 8 with JDK
-* Maven 3.3+ (see the Installing Maven section of page [Maven Usage]({{page version='' space='corg' page='maven-usage'}}))
+* Maven 3.3+ (see the Installing Maven section of page [Maven Usage]({{page version='' space='corg' page='maven-usage'}})
 * The latest stable [NodeJS](https://nodejs.org) version should be installed on your machine
 * npm 2.12.0+
 
