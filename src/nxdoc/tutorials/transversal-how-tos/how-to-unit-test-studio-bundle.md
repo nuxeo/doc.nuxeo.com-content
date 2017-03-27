@@ -12,19 +12,8 @@ details:
 labels:
     - howto
     - alerts
-confluence:
-    ajs-parent-page-id: '19235681'
-    ajs-parent-page-title: Transversal How-Tos
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+setup+a+test+SMTP+server
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+setup+a+test+SMTP+server'
-    page_id: '12914573'
-    shortlink: jQ-F
-    shortlink_source: 'https://doc.nuxeo.com/x/jQ-F'
-    source_link: /display/NXDOC/How+to+setup+a+test+SMTP+server
 tree_item_index: 50
-
+toc: true
 ---
 
 {{#> callout type='info' }}
@@ -54,7 +43,7 @@ If you already have a project you can go to the next step.
 
    And process must be exit without errors.
 
-## Add Your Connect's Credentials to Maven
+## Add Your Connect Credentials to Maven
 
 Adding your credentials allow Maven to be authenticated on Studio while trying to grab your project.
 
