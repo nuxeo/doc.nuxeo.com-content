@@ -334,10 +334,12 @@ git config --global alias.st status
 
 These aliases are stored in the ~/.gitconfig file, you can also edit it manually.
 
-Here are some aliases inspired from our Mercurial usage and from our current experience with Git:{{! multiexcerpt name='git-aliases'}}
+Here are some aliases inspired from our Mercurial usage and from our current experience with Git:
+
+{{! multiexcerpt name='git-aliases'}}
 
 ```
-## Before Git 1.8.3 (May 24, 2013), remove the occurrences of `%C(auto)` or replace them with fixed colors such as `%Cgreen`, `%C(bold blue)`...
+# Before Git 1.8.3 (May 24, 2013), remove the occurrences of `%C(auto)` or replace them with fixed colors such as `%Cgreen`, `%C(bold blue)`...
 
 # Simple shortcuts
 `ls = "ls-tree --name-only"`
