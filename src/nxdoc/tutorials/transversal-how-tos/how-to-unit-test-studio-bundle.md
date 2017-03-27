@@ -8,7 +8,8 @@ details:
     howto:
         excerpt: Learn how to unit test a Studio Bundle
         level: Advanced
-        tool: Code
+        tool: Code, Nuxeo Studio
+        topics: Nuxeo Studio, Unit test
 labels:
     - howto
     - alerts
