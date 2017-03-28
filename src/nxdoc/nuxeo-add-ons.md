@@ -344,7 +344,7 @@ Public
 [Documentation]({{page page='nuxeo-csv'}})
 </td>
 <td colspan="1">
-[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv?version=1.5.4)
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv?version=1.5.5)
 </td>
 </tr>
 <tr>
