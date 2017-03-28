@@ -18,14 +18,12 @@ toc: true
 ---
 
 {{#> callout type='info' }}
-
-In this how to, you will learn how to unit test a Studio Bundle from a Java Project. Testing is really important, it ensure your features to still work... BLABLABLA <3
-
+In this how to, you will learn how to unit test a Studio Bundle from a Java Project.
 {{/callout}}
 
 ## Optional - Creating a Bare Project
 
-If you already have a project you can go to the next step.
+If you already have a project you can go to the next section.
 
 1. Install [Nuxeo CLI]({{page page='nuxeo-cli'}}) if not already done.
 1. Create a new bare project:
@@ -35,8 +33,8 @@ If you already have a project you can go to the next step.
    nuxeo bootstrap
    ```
 
-   Do not hesitate to read the dedicated page to [Nuxeo CLI]({{page page='nuxeo-cli'}}) to fill the inputs.
-1. Ensure everything is working
+   Do not hesitate to read the [dedicated page]({{page page='nuxeo-cli'}}) to fill the inputs.
+1. Check that everything is working
 
    ```shell
    mvn install
@@ -46,9 +44,9 @@ If you already have a project you can go to the next step.
 
 ## Add Your Connect Credentials to Maven
 
-Adding your credentials allow Maven to be authenticated on Studio while trying to grab your project.
+Adding your credentials allows Maven to be authenticated on Studio while trying to grab your project.
 
-1. Open `~/.m2/settings.xml` file with your prefered text editor
+1. Open `~/.m2/settings.xml` file with your preferred text editor
 1. Add the following `server` node:
    ```xml
    <settings>
@@ -65,12 +63,12 @@ Adding your credentials allow Maven to be authenticated on Studio while trying t
    ```
 
    {{#> callout type='warning' }}
-   It is recommended to not let your password in clear in a file, and you can encrypt it following the official [password encryption guide](https://maven.apache.org/guides/mini/guide-encryption.html).
+   It is recommended to not let your password in clear in a file, you can encrypt it following the official [password encryption guide](https://maven.apache.org/guides/mini/guide-encryption.html).
    {{/callout}}
 
 ## Adding Nuxeo Studio as Maven Repository
 
-1. Open `./pom.xml` file with your prefered editor
+1. Open `./pom.xml` file with your preferred editor
 1. Check if the following `repository` is present, if not add it:
 
    ```xml
@@ -95,17 +93,17 @@ Adding your credentials allow Maven to be authenticated on Studio while trying t
 
 ## Adding Studio Bundle Dependency
 
-1. Open Nuxeo Studio, and your project that you want to unit test
+1. Open Nuxeo Studio and the project that you want to unit test
 1. Pick your Maven GAV informations in Studio. Go to `Settings` > `Application Information`.
 
    - `groupId`: is the `Maven Group` field
    - `artifactId`: is the `Maven Artifact Id` field
    - `version`: is following this convention `X.Y.W--branch-SNAPSHOT`.
 
-   For instance, if you are working in version `0.0.2-SNAPSHOT` (open `Source Control` -> `Branch Management`) and on branch `master`, the Maven version will be: `0.0.2--master-SNAPSHOT`.
+   For instance, if you are working on version `0.0.2-SNAPSHOT` (open `Source Control` > `Branch Management`) and on branch `master`, the Maven version will be: `0.0.2--master-SNAPSHOT`.
    If you want a released version, the version pattern is much easier: `0.0.2`.
 
-1. Then edit `./pom.xml` file to add a dependency management. It's alway the good practise to set the dependency's version in the parent pom of your project, you can read [Dependency Management](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Management) in the official Maven guide.
+1. Then edit the `./pom.xml` file to add a dependency management. It's recommended to set the dependency's version in the parent pom of your project, you can read [Dependency Management](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Management) in the official Maven guide.
 
    ```xml
    <project>
@@ -123,13 +121,13 @@ Adding your credentials allow Maven to be authenticated on Studio while trying t
    </project>
    ```
 
-1. Add a direct dependency in `./myproject-core/pom.xml` file, or the `pom.xml` of you module in which you'll want to write the unit tests.
+1. Add a direct dependency in `./myproject-core/pom.xml` file, or the `pom.xml` of your module in which you'll want to write the unit tests.
 
    ```xml
    <project>
    ...
      <dependencies>
-       <!-- Notice that we do not need the version here, it's inherited from the parent pom.xml file. -->
+       <!-- Note that we do not need the version here, it's inherited from the parent pom.xml file. -->
        <dependency>
          <groupId>STUDIO_GROUPID</groupId>
          <artifactId>STUDIO_ARTIFACTID</artifactId>
@@ -140,15 +138,15 @@ Adding your credentials allow Maven to be authenticated on Studio while trying t
 
 ## Understanding @PartialDeploy Annotation
 
-After understanding the mostly important [@Deploy]({{page space='corg' page='unit-testing'}}) annotation, you should have noticed that deploying a Studio Bundle is not as straight forward because of the way the Studio bundle contribution are packed. The idea behind this annotation is to allow you to select which contributions you want to deploy in your unit test.
+After understanding the most important [@Deploy]({{page space='corg' page='unit-testing'}}) annotation, you should have noticed that deploying a Studio Bundle is not as straightforward as it sounds because of the way the Studio bundle contribution are packed. The idea behind this annotation is to allow you to select which contributions you want to deploy in your unit test.
 
-For instance, you could want to deploy only [Schema]({{page page='schema-fields'}}), [Document Type]({{page page='how-to-define-a-document-type'}}) and custom [events listener]({{page page='events-and-listeners'}}) to ensure your business rules are correctly applied.
-Or, you simply want to ensure your [Automation Scripting]({{page page='automation-scripting'}}) is doing what you'd expect.
+For instance, you could want to deploy only [Schema]({{page page='schema-fields'}}), [Document Type]({{page page='how-to-define-a-document-type'}}) and custom [events listener]({{page page='events-and-listeners'}}) to make sure that your business rules are correctly applied.
+Or, you simply want to verify that your [Automation Scripting]({{page page='automation-scripting'}}) is doing what you'd expect.
 
 ## Testing Content Model
 
-1. Assume you created a DocType "MyCustomDoc" in your Studio Project
-1. Add following dependency to `./myproject/pom.xml` file:
+1. Assuming you have already created a DocType "MyCustomDoc" in your Studio Project
+1. Add the following dependency to `./myproject/pom.xml` file:
 
    ```xml
    <dependencies>
@@ -191,7 +189,7 @@ Or, you simply want to ensure your [Automation Scripting]({{page page='automatio
    @RunWith(FeaturesRunner.class)
    @Features(PlatformFeature.class)
    @RepositoryConfig(init = DefaultRepositoryInit.class)
-   // Notice the dedicated Annotation; it takes the bundle name and the white listed target extensions list
+   // Note that the dedicated Annotation takes the bundle name and the whitelisted target extensions list
    @PartialDeploy(bundle = "studio.extensions.YOUR_PROJECT_NAME", extensions = { TargetExtensions.ContentModel.class })
    public class MyDocTypeTest {
 
@@ -209,13 +207,13 @@ Or, you simply want to ensure your [Automation Scripting]({{page page='automatio
      }
    }
    ```
-1. Ensure you changed `YOUR_PROJECT_NAME` with the correct one.
-1. And voila; the test must pass and you deployed only stuff needed for tested the `Content Model` category in Studio.
+1. Make sure that you changed the `YOUR_PROJECT_NAME` with the correct one.
+1. And voila! The test must pass and you have only deployed the thing needed for tested the `Content Model` category in Studio.
 
 ## Testing Automation
 
-1. Assume your created an Automation Chain `UpdateTaxes` that calculate `contract:taxes` from `contract:amount`.
-1. Add following dependency to `./myproject/pom.xml` file:
+1. Assuming that you have already created an Automation Chain `UpdateTaxes` that calculate `contract:taxes` from `contract:amount`.
+1. Add the following dependency to `./myproject/pom.xml` file:
    ```xml
    <dependencies>
    ...
@@ -251,7 +249,7 @@ Or, you simply want to ensure your [Automation Scripting]({{page page='automatio
 
       @RunWith(FeaturesRunner.class)
       @Features({ AutomationFeature.class })
-      // In case of Automation, we white listed all Automation extensions (that also contains Content Model)
+      // In the case of Automation, we whitelisted all the Automation extensions (which also contains Content Model)
       @PartialDeploy(bundle = "studio.extensions.YOUR_PROJECT_NAME", extensions = { TargetExtensions.Automation.class })
       public class UpdateTaxesTest {
 
@@ -275,11 +273,11 @@ Or, you simply want to ensure your [Automation Scripting]({{page page='automatio
           }
       }
       ```
-1. Ensure you changed `YOUR_PROJECT_NAME` with the correct one.
+1. Verify that you changed `YOUR_PROJECT_NAME` with the correct one.
 
 ## Testing Automation Scripting
 
-1. Assume your created an Automation Script `SumTaxes` that returns the sum of all taxes.
+1. Assuming that you have already created an Automation Script `SumTaxes` that returns the sum of all taxes.
 1. Create a new test case class `./myproject-core/src/test/java/com/bigcorp/SumTaxes.java`
 1. Add the following content:
 
@@ -324,7 +322,7 @@ Or, you simply want to ensure your [Automation Scripting]({{page page='automatio
               IntStream.range(0, NB_DOCS).forEach(this::createDocument);
               OperationContext ctx = new OperationContext(session);
 
-              // Notice that the Scripting name is prefixed by "javascript.".
+              // Note that the Scripting name is prefixed by "javascript.".
               int taxes = (int) automationService.run(ctx, "javascript.SumTaxes");
               assertEquals(NB_DOCS * TAXES, taxes);
           }
@@ -336,11 +334,11 @@ Or, you simply want to ensure your [Automation Scripting]({{page page='automatio
           }
       }
       ```
-1. Ensure you changed `YOUR_PROJECT_NAME` with the correct one.
+1. Verify that you changed `YOUR_PROJECT_NAME` with the correct one.
 
-## Writing Your Own TargetExtensions class
+## Writing Your Own TargetExtensions Class
 
-If you need to partially deploy others contributions to a specific target; it's possible to create your own `TargetExtension` class
+If you need to partially deploy others contributions to a specific target, it's possible to create your own `TargetExtension` class
 
 1. Create a new class `./myproject-core/src/test/java/com/bigcorp/BigCorpExtension.java`
 1. Add the following content:
@@ -353,7 +351,7 @@ If you need to partially deploy others contributions to a specific target; it's 
       public class BigCorpExtension extends TargetExtensions {
           @Override
           protected void initialize() {
-              // Add white listed targets
+              // Add whitelisted targets
               addTargetExtension("com.bigcorp.component", "target");
               addTargetExtension("com.bigcorp.component", "target-2");
           }
@@ -363,4 +361,4 @@ If you need to partially deploy others contributions to a specific target; it's 
       ```java
       @PartialDeploy(bundle = "studio.extensions.YOUR_PROJECT_NAME", extensions = { BigCorpExtension.class, TargetExtensions.Automation.class })
       ```
-1. And that's all
+1. And that's it!

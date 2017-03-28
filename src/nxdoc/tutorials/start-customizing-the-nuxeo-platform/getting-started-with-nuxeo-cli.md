@@ -417,7 +417,7 @@ Here we want to add some server side Java logic that will update the contract's 
 * An IDE that integrates with Maven.
     We provide instructions for [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars) or IntelliJ IDEA
 * Java 8 with JDK
-* Maven 3.3+ (see the Installing Maven section of page [Maven Usage]({{page version='' space='corg' page='maven-usage'}})
+* Maven 3.3+ (see the Installing Maven section of page [Maven Usage]({{page version='' space='corg' page='maven-usage'}}))
 * The latest stable [NodeJS](https://nodejs.org) version should be installed on your machine
 * npm 2.12.0+
 
@@ -641,7 +641,7 @@ From a command line:
 
 4. In the Document category click **Contract Updater**, then click on the **JSON definition** link and copy the operation definition.
 
-5. In Nuxeo Studio go to **Settings**&nbsp;> **Registries**&nbsp;> **Automation Operations** and paste the operation definition into the `"operations": []` array, for example:
+5. In Nuxeo Studio go to **Settings** > **Registries** > **Automation Operations** and paste the operation definition into the `"operations": []` array, for example:
 
     ```
     { "operations": [
@@ -662,19 +662,19 @@ The operation is now available in Automation Chain editor, under the Document ca
 
 ## Step 3 - Create Your Chain in Nuxeo Studio
 
-**Create an Automation Chain**
+### Create an Automation Chain
 
-1.  In the Studio menu **Automation** > **Automation Chains**, click on **New.**
+1.  In the Studio menu **Automation** > **Automation Chains**, click on **New**.
 
 2.  Call your chain `ContractUpdater`.
 
-3.  Leave the **Fetch > Context Document(s)** operation and add the custom operation, available in **Document > ContractUpdater.**
+3.  Leave the **Fetch > Context Document(s)** operation and add the custom operation, available in **Document > ContractUpdater**.
 
     ![]({{file name='contractUpdater_chain.png'}} ?w=600,border=true)
 
 4.  Click on **Save**.
 
-**Create an Event Handler**
+### Create an Event Handler
 
 Now create an Event Handler in order to call your operation when a contract is created.
 
@@ -734,7 +734,7 @@ Nuxeo CLI automatically created a unit test class for the Operation at `contract
     // Be sure to replace studio.extensions.MAVEN-ARTIFACT-ID
     // with your Studio project's symbolic name.
     // You can find it in Studio:
-    // Settings / Application Information / Maven Artifact id field
+    // Settings > Application Information > Maven Artifact id field
     @Deploy({"com.bigcorp.contractmgt.contract-mgt-project-core"})
     @PartialDeploy(bundle = "studio.extensions.MAVEN-ARTIFACT-ID", features = { TargetExtensions.Automation.class })
     public class TestContractUpdater {
