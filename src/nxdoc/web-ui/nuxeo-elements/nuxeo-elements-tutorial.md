@@ -56,12 +56,14 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 3.  Run gulp to run the application and see what has been generated.
 
     ```bash
-    $ gulp serve
+    $ npm run serve
+    # or, if polymer-cli is installed globally
+    $ polymer serve
     ```
 
-    The produced application includes some sample elements and showcases Google's Material Design through the use of Paper Elements.
+    The produced application based on [Polymer Starter Kit](https://developers.google.com/web/tools/polymer-starter-kit/) can also be extended using the [Polymer CLI](https://github.com/Polymer/polymer-cli). And it helps you as a starting point for building web applications with Polymer and can be deployed like all [Nuxeo Bundles]({{page page='understanding-bundles-deployment'}})
 
-4.  Build the Nuxeo Package containing the Polymer Application.
+4.  Build the Nuxeo Bundle containing the Polymer Application.
 
     ```bash
     $ mvn package
@@ -84,12 +86,12 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
     $ polymer init starter-kit
     ```
 
-    The [Polymer CLI](https://github.com/Polymer/polymer-cli) helps you as a starting point for building web applications with Polymer. It is maintained by the Polymer team.
+    The produced application based on [Polymer Starter Kit](https://developers.google.com/web/tools/polymer-starter-kit/) using [Polymer CLI](https://github.com/Polymer/polymer-cli) can help you as a starting point for building web applications with Polymer.
 
 2.  Serve your application and check out what has been generated.
 
     ```bash
-    $ polymer serve -o
+    $ polymer serve
     ```
 
     **Note:** the README.md includes detailed information about the generated application so it's a good starting point to understand its structure.
