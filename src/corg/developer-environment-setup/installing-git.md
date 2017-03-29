@@ -264,7 +264,7 @@ history:
 ---
 ## Installation
 
-Download available at [http://git-scm.com/download](http://git-scm.com/download)
+Download available at <https://git-scm.com/download>.
 
 ## Creation of a GitHub Account
 
