@@ -591,11 +591,11 @@ You have several options regarding the versioning of your document.
 
 ![]({{file name='version-update.png'}} ?w=297,h=91,border=true)
 
-{{{multiexcerpt 'versioning-example' page='browse'}}}
+{{{multiexcerpt 'versioning-example' page='/userdoc/browse'}}}
 
 ### Nuxeo Drive Versioning Policy
 
-{{multiexcerpt 'drive-versioning-policy' page='browse'}}
+{{multiexcerpt 'drive-versioning-policy' page='/userdoc/browse'}}
 
 ### Drag and Drop Versioning Policy
 {{! multiexcerpt name='dnd-versioning-policy'}}
