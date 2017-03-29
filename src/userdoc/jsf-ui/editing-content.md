@@ -2,7 +2,7 @@
 title: Editing Content
 review:
     comment: ''
-    date: '2017-01-26'
+    date: '2017-03-29'
     status: ok
 labels:
     - editing
@@ -597,12 +597,6 @@ You have several options regarding the versioning of your document.
 
 {{multiexcerpt 'drive-versioning-policy' page='/userdoc/browse'}}
 
-### Drag and Drop Versioning Policy
-{{! multiexcerpt name='dnd-versioning-policy'}}
-When you drag and drop a document in a workspace its version is 0.0, like every new document created on your platform.
-
-The drag and drop versioning policy uses the minor version incrementation so, if you edit one these documents in local and reupload it with another drag and drop, the version number becomes 0.1+, then 0.2+, etc.
-{{! /multiexcerpt}}
 {{! /multiexcerpt}}
 
 ## {{> anchor 'relations'}}Relations
