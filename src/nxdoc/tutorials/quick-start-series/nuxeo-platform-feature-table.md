@@ -18,6 +18,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/ARQ5AQ'
     source_link: /display/NXDOC/Nuxeo+Platform+Feature+Table
 tree_item_index: 1000
+toc: true
 history:
     -
         author: Solen Guitter
@@ -223,6 +224,11 @@ history:
 ---
 This page list the features available on the Nuxeo Platform, either directly in the default distribution (Nuxeo Server) or using addons. It provides links to the relevant documentation and indicates if the features are available without any UI (through the REST API), in [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui) or in [Nuxeo Web UI]({{page page='web-ui'}}).
 
+The tables below use the following notation:
+- &#10003;: Available
+- NR: Not relevant
+- N/A: Not available
+
 ## Document Types
 
 {{! table-filter removed }}
@@ -230,187 +236,195 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <table class="hover">
 <tbody>
 <tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
 </tr>
 <tr>
-<td colspan="1">Agenda</td>
-<td colspan="1">[Nuxeo Agenda](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda)</td>
-<td></td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">[Nuxeo Agenda user documentation]({{page space='userdoc' page='nuxeo-agenda'}})</td>
+    <td colspan="1">Agenda</td>
+    <td colspan="1">[Nuxeo Agenda](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">[Nuxeo Agenda user documentation]({{page space='userdoc' page='nuxeo-agenda'}})</td>
 </tr>
 <tr>
-<td colspan="1">Audio</td>
-<td colspan="1">[Nuxeo DAM](http://www.nuxeo.com/solutions/digital-asset-management/)</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}})</td>
+    <td colspan="1">Audio</td>
+    <td colspan="1">[Nuxeo DAM](http://www.nuxeo.com/solutions/digital-asset-management/)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}})</td>
 </tr>
 <tr>
-<td colspan="1">Box documents</td>
-<td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
+    <td colspan="1">Box documents</td>
+    <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
 </tr>
 <tr>
-<td colspan="1">Collection</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">
-[Developer documentation]({{page page='collections'}})<br/>
-[User documentation]({{page space='userdoc' page='collections'}})
-</td>
+    <td colspan="1">Collection</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">
+    [Developer documentation]({{page page='collections'}})<br/>
+    [User documentation]({{page space='userdoc' page='collections'}})
+    </td>
 </tr>
 <tr>
-<td colspan="1">Domain</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Domain</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">Email folder</td>
-<td colspan="1">[Nuxeo IMAP connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector)</td>
-<td></td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">[Nuxeo IMAP Connector user documentation]({{page space='userdoc' page='nuxeo-imap-connector'}})</td>
+    <td colspan="1">Email folder</td>
+    <td colspan="1">[Nuxeo IMAP connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">[Nuxeo IMAP Connector user documentation]({{page space='userdoc' page='nuxeo-imap-connector'}})</td>
 </tr>
 <tr>
-<td colspan="1">Event</td>
-<td colspan="1">[Nuxeo Agenda](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda)</td>
-<td></td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">[Nuxeo Agenda user documentation]({{page space='userdoc' page='nuxeo-agenda'}})</td>
+    <td colspan="1">Event</td>
+    <td colspan="1">[Nuxeo Agenda](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">[Nuxeo Agenda user documentation]({{page space='userdoc' page='nuxeo-agenda'}})</td>
 </tr>
 <tr>
-<td colspan="1">Dropbox documents</td>
-<td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
+    <td colspan="1">Dropbox documents</td>
+    <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
 </tr>
 <tr>
-<td colspan="1">File</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Files user documentation]({{page space='userdoc' page='document-types'}})</td>
+    <td colspan="1">File</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Files user documentation]({{page space='userdoc' page='document-types'}})</td>
 </tr>
 <tr>
-<td colspan="1">Folder</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Folders user documentation]({{page space='userdoc' page='document-types'}})</td>
+    <td colspan="1">Folder</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Folders user documentation]({{page space='userdoc' page='document-types'}})</td>
 </tr>
 <tr>
-<td colspan="1">Forum</td>
-<td colspan="1">[Nuxeo Forum](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-forum)</td>
-<td></td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">[Forums user documentation]({{page space='userdoc' page='forums'}})<br/>
-{{multiexcerpt 'DeprecatedAddon_8.10' page='generic-multi-excerpts'}}</td>
+    <td colspan="1">Forum</td>
+    <td colspan="1">[Nuxeo Forum](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-forum)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">[Forums user documentation]({{page space='userdoc' page='forums'}})<br/>
+    {{multiexcerpt 'DeprecatedAddon_8.10' page='generic-multi-excerpts'}}</td>
 </tr>
 <tr>
-<td colspan="1">Google Drive documents</td>
-<td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
+    <td colspan="1">Google Drive documents</td>
+    <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
 </tr>
 <tr>
-<td colspan="1">Note</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Notes user documentation]({{page space='userdoc' page='document-types'}})</td>
+    <td colspan="1">Note</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Notes user documentation]({{page space='userdoc' page='document-types'}})</td>
 </tr>
 <tr>
-<td colspan="1">OneDrive documents</td>
-<td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
+    <td colspan="1">OneDrive documents</td>
+    <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
 </tr>
 <tr>
-<td colspan="1">Ordered folder</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Folders user documentation]({{page space='userdoc' page='document-types'}})</td>
+    <td colspan="1">Ordered folder</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Folders user documentation]({{page space='userdoc' page='document-types'}})</td>
 </tr>
 <tr>
-<td colspan="1">Personal workspace</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Personal workspace</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">Picture</td>
-<td colspan="1">[Nuxeo DAM](http://www.nuxeo.com/solutions/digital-asset-management/)</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}})</td>
+    <td colspan="1">Picture</td>
+    <td colspan="1">[Nuxeo DAM](http://www.nuxeo.com/solutions/digital-asset-management/)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}})</td>
 </tr>
 <tr>
-<td colspan="1">Section</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Sections user documentation]({{page space='userdoc' page='publishing-content'}})</td>
+    <td colspan="1">Section</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Sections user documentation]({{page space='userdoc' page='publishing-content'}})</td>
 </tr>
 <tr>
-<td colspan="1">Workspace</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Document Types]({{page space='userdoc' page='document-types'}})</td>
+    <td>Document template</td>
+    <td>[Template Rendering](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>[Template rendering documentation]({{page version='' space='nxdoc' page='template-rendering-addon'}})</td>
 </tr>
 <tr>
-<td colspan="1">Workspace templates</td>
-<td colspan="1">Default distribution</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Workspace</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Document Types]({{page space='userdoc' page='document-types'}})</td>
 </tr>
 <tr>
-<td colspan="1">Video</td>
-<td colspan="1">[Nuxeo DAM](http://www.nuxeo.com/solutions/digital-asset-management/)</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}})</td>
+    <td colspan="1">Workspace templates</td>
+    <td colspan="1">Default distribution</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+    <td colspan="1">Video</td>
+    <td colspan="1">[Nuxeo DAM](http://www.nuxeo.com/solutions/digital-asset-management/)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}})</td>
 </tr>
 </tbody>
 </table>
@@ -422,63 +436,68 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <table class="hover">
 <tbody>
 <tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
 </tr>
 <tr>
-<td colspan="1">Bulk import</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">
-[Document creation user documentation]({{page space='userdoc' page='creating-content'}})<br/
-[How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
+    <td colspan="1">Bulk import</td>
+    <td colspan="1">Default distribution<br/>
+    [Nuxeo CSV](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv)<br/>
+    [Bulk Document Importer](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer)<br/>
+    [Scan Documents Importer](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer)</td>
+    <td>&#10003;<br/>&#10003;<br/>&#10003;<br/>&#10003;</td>
+    <td>&#10003;<br/>&#10003;<br/>N/A<br/>N/A</td>
+    <td>&#10003;<br/>&#10003;<br/>N/A<br/>N/A</td>
+    <td colspan="1">
+    [Document creation user documentation]({{page space='userdoc' page='creating-content'}})<br/>
+    [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})<br/>
+    [Nuxeo CSV documentation]({{page version='' space='nxdoc' page='nuxeo-csv'}})<br/>
+    [Nuxeo Bulk Document Importer documentation]({{page version='' space='nxdoc' page='nuxeo-bulk-document-importer'}})<br/>
+    [Scan Documents Importer documentation]({{page version='' space='nxdoc' page='scan-documents-importer'}})</td>
+</tr>
+<tr>
+    <td colspan="1">Cloud files creation</td>
+    <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">Box, Dropbox, Google Drive, Microsoft OneDrive<br/>
+    [Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})
 </td>
 </tr>
 <tr>
-<td colspan="1">Cloud files creation</td>
-<td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">Box, Dropbox, Google Drive, Microsoft OneDrive<br/>
-[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})
-</td>
+    <td colspan="1">Form</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Document creation user documentation]({{page space='userdoc' page='creating-content'}})</td>
 </tr>
 <tr>
-<td colspan="1">Form</td>
-<td colspan="1">Default distribution</td>
-<td>N/A</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Document creation user documentation]({{page space='userdoc' page='creating-content'}})</td>
+    <td colspan="1">HTML 5 Drag & Drop</td>
+    <td colspan="1">Default distribution</td>
+    <td>NR</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">
+    [User documentation]({{page space='userdoc' page='creating-content#content-creation-dandd'}})<br/>
+    [Drag and Drop Developer documentation]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
+    </td>
 </tr>
 <tr>
-<td colspan="1">HTML 5 Drag & Drop</td>
-<td colspan="1">Default distribution</td>
-<td>N/A</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">
-[User documentation]({{page space='userdoc' page='creating-content#content-creation-dandd'}})<br/>
-[Drag and Drop Developer documentation]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
-</td>
-</tr>
-<tr>
-<td colspan="1">Metadata processing at import</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Binary Metadata]({{page page='binary-metadata'}})</td>
+    <td colspan="1">Metadata processing at import</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Binary Metadata]({{page page='binary-metadata'}})</td>
 </tr>
 </tbody>
 </table>
@@ -490,104 +509,133 @@ This page list the features available on the Nuxeo Platform, either directly in 
 <table class="hover">
 <tbody>
 <tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
 </tr>
 <tr>
-<td colspan="1">Attachments</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Attachments</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">Bulk edit</td>
-<td colspan="1">
-Default distribution<br/>
-[Nuxeo Spreadsheet](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet)
-</td>
-<td>&#10003;</td>
-<td>&#10003;<br/>&#10003;</td>
-<td>V1.0</td>
-<td colspan="1">
-[Document modification user documentation]({{page space='userdoc' page='editing-content'}})<br/>
-[How to Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})
-</td>
+    <td colspan="1">Bulk edit</td>
+    <td colspan="1">
+    Default distribution<br/>
+    [Nuxeo Spreadsheet](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet)
+    </td>
+    <td>&#10003;</td>
+    <td>&#10003;<br/>&#10003;</td>
+    <td>V1.0<br/>&#10003;</td>
+    <td colspan="1">
+    [Document modification user documentation]({{page space='userdoc' page='editing-content'}})<br/>
+    [How to Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})<br/>
+    [Nuxeo Spreadsheet documentation]({{page version='' space='nxdoc' page='nuxeo-spreadsheet'}})
+    </td>
 </tr>
 <tr>
-<td colspan="1">Cloud files edition</td>
-<td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">Box, Dropbox, Google Drive, Microsoft OneDrive<br/>
-[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})
-</td>
+    <td colspan="1">Cloud files edition</td>
+    <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">Box, Dropbox, Google Drive, Microsoft OneDrive<br/>
+    [Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})
+    </td>
 </tr>
 <tr>
-<td colspan="1">Copy/paste/move</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Copying and Moving Documents]({{page space='userdoc' page='editing-content'}})</td>
+    <td colspan="1">Copy/paste/move</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Copying and Moving Documents]({{page space='userdoc' page='editing-content'}})</td>
 </tr>
 <tr>
-<td colspan="1">Edit Form</td>
-<td colspan="1">Default distribution</td>
-<td>N/A</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Edit Form</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">Lock /Unlock</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Lock /Unlock</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">History</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">History</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">Versioning</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">
-[User documentation]({{page space='userdoc' page='editing-content'}})<br/>
-[Developer documentation]({{page page='versioning'}})
-</td>
+    <td colspan="1">Versioning of documents</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">
+    [User documentation]({{page space='userdoc' page='editing-content'}})<br/>
+    [Developer documentation]({{page page='versioning'}})
+    </td>
 </tr>
 <tr>
-<td colspan="1">Version / Document comparison</td>
-<td colspan="1">
-[Nuxeo Diff](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff)<br/>
-[Nuxeo Diff Picture](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures)
-</td>
-<td></td>
-<td>&#10003;<br/>&#10003;</td>
-<td>V2.0<br/>V2.0</td>
-<td colspan="1">
-[Developer documentation]({{page page='nuxeo-diff'}})<br/>
-[User documentation]({{page space='userdoc' page='nuxeo-diff'}})
-</td>
+    <td colspan="1">Versioning of folders</td>
+    <td colspan="1">[Nuxeo Tree Snapshot](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>v2.0</td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Version / Document comparison</td>
+    <td colspan="1">
+    [Nuxeo Diff](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff)<br/>
+    [Nuxeo Diff Picture](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures)
+    </td>
+    <td>N/A</td>
+    <td>&#10003;<br/>&#10003;</td>
+    <td>V2.0<br/>V2.0</td>
+    <td colspan="1">
+    [Developer documentation]({{page page='nuxeo-diff'}})<br/>
+    [User documentation]({{page space='userdoc' page='nuxeo-diff'}})
+    </td>
+</tr>
+<tr>
+    <td>Content transformation</td>
+    <td>Default transformation<br/>
+    Template Rendering<br/>
+    Nuxeo DAM</td>
+    <td>&#10003;<br/>&#10003;<br/>&#10003;</td>
+    <td>&#10003;<br/>&#10003;<br/>&#10003;</td>
+    <td>&#10003;<br/>&#10003;<br/>&#10003;</td>
+    <td>PDF conversion in default distribution<br/>
+    [Template Rendering documentation]({{page version='' space='nxdoc' page='template-rendering-addon'}})<br/>
+    [Nuxeo DAM documentation]({{page version='' space='nxdoc' page='digital-asset-management-dam'}})</td>
+</tr>
+<tr>
+    <td>Electronic signature of documents</td>
+    <td>Digital Signature</td>
+    <td>NR</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td>[Digital Signature documentation]({{page version='' space='nxdoc' page='digital-signature'}})</td>
 </tr>
 </tbody>
 </table>
@@ -598,52 +646,52 @@ Default distribution<br/>
 <table class="hover">
 <tbody>
 <tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
 </tr>
 <tr>
-<td colspan="1">Edit in native application from web application</td>
-<td colspan="1">[Nuxeo Drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive)</td>
-<td>N/A</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">
-[Documentation]({{page page='nuxeo-drive'}})<br/>
-</td>
+    <td colspan="1">Edit in native application from web application</td>
+    <td colspan="1">[Nuxeo Drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">
+    [Documentation]({{page page='nuxeo-drive'}})
+    </td>
 </tr>
 <tr>
-<td colspan="1">Metadata edit from desktop</td>
-<td colspan="1">[Nuxeo Drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive)</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Documentation]({{page page='nuxeo-drive'}})</td>
+    <td colspan="1">Metadata edit from desktop</td>
+    <td colspan="1">[Nuxeo Drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Documentation]({{page page='nuxeo-drive'}})</td>
 </tr>
 <tr>
-<td colspan="1">Offline synchronization</td>
-<td colspan="1">[Nuxeo Drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive)</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Documentation]({{page page='nuxeo-drive'}})</td>
+    <td colspan="1">Offline synchronization</td>
+    <td colspan="1">[Nuxeo Drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Documentation]({{page page='nuxeo-drive'}})</td>
 </tr>
 <tr>
-<td colspan="1">&nbsp;</td>
-<td colspan="1">WebDav</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">
-[User documentation]({{page space='userdoc' page='working-with-webdav'}})<br/>
-[Developer documentation]({{page page='webdav'}})
-</td>
+    <td colspan="1">WebDav protocol</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">
+    [User documentation]({{page space='userdoc' page='working-with-webdav'}})<br/>
+    [Developer documentation]({{page page='webdav'}})
+    </td>
 </tr>
 </tbody>
 </table>
@@ -654,68 +702,70 @@ Default distribution<br/>
 <table class="hover">
 <tbody>
 <tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
 </tr>
 <tr>
-<td colspan="1">Approval workflow</td>
-<td colspan="1">Nuxeo JSF UI</td>
-<td></td>
-<td>&#10003;</td>
-<td>V1.0</td>
-<td colspan="1">
-[User documentation]({{page space='userdoc' page='workflows'}})<br/>
-[Developer documentation]({{page page='workflow'}})<br/>
-[Workflow How-To Index]({{page page='workflow-how-to-index'}})
-</td>
+    <td colspan="1">Approval workflow</td>
+    <td colspan="1">Nuxeo JSF UI</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>V1.0</td>
+    <td colspan="1">
+    [User documentation]({{page space='userdoc' page='workflows'}})<br/>
+    [Developer documentation]({{page page='workflow'}})<br/>
+    [Workflow How-To Index]({{page page='workflow-how-to-index'}})
+    </td>
 </tr>
 <tr>
-<td colspan="1">Parallel workflow</td>
-<td colspan="1">Nuxeo JSF UI</td>
-<td></td>
-<td>&#10003;</td>
-<td>V1.0</td>
-<td colspan="1">
-[User documentation]({{page space='userdoc' page='workflows'}})<br/>
-[Developer documentation]({{page page='workflow'}})<br/>
-[Workflow How-To Index]({{page page='workflow-how-to-index'}})<br/>
-Approval and Parallel workflow may evolve.
-</td>
+    <td colspan="1">Parallel workflow</td>
+    <td colspan="1">Nuxeo JSF UI</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>V1.0</td>
+    <td colspan="1">
+    [User documentation]({{page space='userdoc' page='workflows'}})<br/>
+    [Developer documentation]({{page page='workflow'}})<br/>
+    [Workflow How-To Index]({{page page='workflow-how-to-index'}})<br/>
+    Web UI: Approval and Parallel workflow may evolve.
+    </td>
 </tr>
 <tr>
-<td colspan="1">Content routing</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">
-[User documentation]({{page space='userdoc' page='workflows'}})<br/>
-[Developer documentation]({{page page='workflow'}})<br/>
-[Workflow How-To Index]({{page page='workflow-how-to-index'}})
-</td>
+    <td colspan="1">Content routing</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">
+    [User documentation]({{page space='userdoc' page='workflows'}})<br/>
+    [Developer documentation]({{page page='workflow'}})<br/>
+    [Workflow How-To Index]({{page page='workflow-how-to-index'}})
+    </td>
 </tr>
 <tr>
-<td colspan="1">Workflow analytics</td>
-<td colspan="1">[Nuxeo Review Workflows Dashboards](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-review-workflows-dashboards)</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1"><br/>
-{{multiexcerpt 'DeprecatedAddon_8.10' page='generic-multi-excerpts'}}</td>
+    <td colspan="1">Task dashboard</td>
+    <td colspan="1"></td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>[Tasks in the Web UI]({{page version='' space='userdoc' page='task'}})<br/>
+    [How to set up a task dashboard]({{page version='' space='nxdoc' page='how-to-set-up-a-tasks-dashboard'}})</td>
 </tr>
 <tr>
-<td colspan="1">Task dashboard</td>
-<td colspan="1"></td>
-<td>N/A</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
+    <td colspan="1">Workflow analytics</td>
+    <td colspan="1">[Nuxeo Review Workflows Dashboards](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-review-workflows-dashboards)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">{{multiexcerpt 'DeprecatedAddon_8.10' page='generic-multi-excerpts'}}</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -725,45 +775,53 @@ Approval and Parallel workflow may evolve.
 <table class="hover">
 <tbody>
 <tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
 </tr>
 <tr>
-<td colspan="1">Publication approval workflow</td>
-<td colspan="1">Default distribution</td>
-<td></td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">
-[User documentation]({{page space='userdoc' page='publishing-content'}})<br/>
-[Developer documentation]({{page page='publisher'}})
-</td>
+    <td colspan="1">Publication approval workflow</td>
+    <td colspan="1">Default distribution</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">
+    [User documentation]({{page space='userdoc' page='publishing-content'}})<br/>
+    [Developer documentation]({{page page='publisher'}})
+    </td>
 </tr>
 <tr>
-<td colspan="1">Publication targets</td>
-<td colspan="1">Default distribution</td>
-<td></td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">[Setting Publication Targets](/x/V4Ek)</td>
+    <td>Folder publication</td>
+    <td colspan="1">[Nuxeo Tree Snapshot](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>V2.0</td>
+    <td colspan="1"></td>
 </tr>
 <tr>
-<td colspan="1">Publication to media hosting websites</td>
-<td colspan="1">[Nuxeo Media Publishing](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing)</td>
-<td></td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">Publication of videos to YouTube and Wistia.<br/>
-[Nuxeo Media Publishing documentation]({{page page='nuxeo-media-publishing'}})<br/>
-Still in consideration for Web UI
-</td>
+    <td colspan="1">Preselection of publication targets</td>
+    <td colspan="1">Default distribution</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">[Setting Publication Targets]({{page version='' space='userdoc' page='local-configuration'}}#publication-targets)</td>
+</tr>
+<tr>
+    <td colspan="1">Publication to media hosting websites</td>
+    <td colspan="1">[Nuxeo Media Publishing](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">Publication of videos to YouTube and Wistia.<br/>
+    [Nuxeo Media Publishing documentation]({{page page='nuxeo-media-publishing'}})<br/>
+    Still in consideration for Web UI
+    </td>
 </tr>
 </tbody>
 </table>
@@ -774,80 +832,80 @@ Still in consideration for Web UI
 <table class="hover">
 <tbody>
 <tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
 </tr>
 <tr>
-<td colspan="1">Dashboard (static)</td>
-<td colspan="1">Default distribution</td>
-<td>N/A</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">
-[User documentation]({{page space='userdoc' page='browsing-content'}})<br/>
-[How to Customize the Dashboard]({{page page='how-to-customize-the-dashboard'}})
-</td>
+    <td colspan="1">Dashboard (static)</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">
+    [User documentation]({{page space='userdoc' page='browsing-content'}})<br/>
+    [How to Customize the Dashboard]({{page page='how-to-customize-the-dashboard'}})
+    </td>
 </tr>
 <tr>
-<td colspan="1">Tree structure browsing</td>
-<td colspan="1">Default distribution</td>
-<td>N/A</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Browsing Content]({{page space='userdoc' page='browsing-content'}})</td>
+    <td colspan="1">Tree structure browsing</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Browsing Content]({{page space='userdoc' page='browsing-content'}})</td>
 </tr>
 <tr>
-<td colspan="1">Tags</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>V1.0</td>
-<td colspan="1">
-[Developer documentation]({{page page='tagging'}})<br/>
-[User documentation]({{page space='userdoc' page='tags'}})
-</td>
+    <td colspan="1">Tags</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">
+    [Developer documentation]({{page page='tagging'}})<br/>
+    [User documentation]({{page space='userdoc' page='tags'}})
+    </td>
 </tr>
 <tr>
-<td colspan="1">Virtual navigation</td>
-<td colspan="1">[Nuxeo Virtual Navigation](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation)</td>
-<td></td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">[Nuxeo Virtual Navigation developer documentation]({{page page='nuxeo-virtual-navigation'}})<br/>
-{{multiexcerpt 'DeprecatedAddon_8.10' page='generic-multi-excerpts'}}
-</td>
+    <td colspan="1">Virtual navigation</td>
+    <td colspan="1">[Nuxeo Virtual Navigation](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">[Nuxeo Virtual Navigation developer documentation]({{page page='nuxeo-virtual-navigation'}})<br/>
+    {{multiexcerpt 'DeprecatedAddon_8.10' page='generic-multi-excerpts'}}
+    </td>
 </tr>
 <tr>
-<td colspan="1">Quick access to tasks</td>
-<td colspan="1">[Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui)<br/>
-[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1"></td>
+    <td colspan="1">Quick access to tasks</td>
+    <td colspan="1">[Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui)<br/>
+    [Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1"></td>
 </tr>
 <tr>
-<td colspan="1">Quick access to recently viewed documents</td>
-<td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
-<td></td>
-<td></td>
-<td>&#10003;</td>
-<td colspan="1"></td>
+    <td colspan="1">Quick access to recently viewed documents</td>
+    <td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td colspan="1"></td>
 </tr>
 <tr>
-<td colspan="1">Quick access to expired documents</td>
-<td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
-<td></td>
-<td></td>
-<td>&#10003;</td>
-<td colspan="1"></td>
+    <td colspan="1">Quick access to expired documents</td>
+    <td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td colspan="1"></td>
 </tr>
 </tbody>
 </table>
@@ -858,161 +916,174 @@ Still in consideration for Web UI
 <table class="hover">
 <tbody>
 <tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
 </tr>
 <tr>
-<td colspan="1">Advanced search</td>
-<td colspan="1">&nbsp;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Advanced search</td>
+    <td colspan="1">&nbsp;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">Elasticsearch</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Elasticsearch</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">Faceted search</td>
-<td colspan="1">Default distribution</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">The Search tab default form (Elasticsearch) replaced the old Faceted search package.</td>
+    <td colspan="1">Faceted search</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[JSF UI search documentation]({{page version='' space='userdoc' page='default-search'}})<br/>
+    [Web UI search documentation]({{page version='' space='userdoc' page='search'}})<br/>
+    [How to Configure a Search Filter With Facets and Other Aggregates]({{page version='' space='nxdoc' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})</td>
 </tr>
 <tr>
-<td colspan="1">Full-text search</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Full-text search</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">Asset-dedicated search</td>
-<td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
-<td></td>
-<td></td>
-<td>&#10003;</td>
-<td colspan="1"></td>
+    <td colspan="1">Asset-dedicated search</td>
+    <td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td colspan="1"></td>
 </tr>
 <tr>
-<td colspan="1">Quick search</td>
-<td colspan="1">Default distribution</td>
-<td>N/A</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">Comes with suggestion and Elasticsearch by default.</td>
+    <td colspan="1">Quick search</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">Comes with suggestion and Elasticsearch by default.</td>
 </tr>
 <tr>
-<td colspan="1">Quick search with suggestion</td>
-<td colspan="1">Default distribution</td>
-<td>N/A</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Quick search with suggestion</td>
+    <td colspan="1">Default distribution</td>
+    <td>NR</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 </tbody>
 </table>
 </div>
 
-## Security / Permissions
+## Security and Permissions
 <div class="table-scroll">
 <table class="hover">
 <tbody>
 <tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
 </tr>
 <tr>
-<td colspan="1">Read / Edit / Manage permissions</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">
-[ACLs developer documentation]({{page page='acls'}})<br/>
-[Permissions user documentation]({{page space='userdoc' page='managing-permissions'}})
-</td>
+    <td colspan="1">Read / Edit / Manage permissions</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">
+    [ACLs developer documentation]({{page page='acls'}})<br/>
+    [Permissions user documentation]({{page space='userdoc' page='managing-permissions'}})
+    </td>
 </tr>
 <tr>
-<td colspan="1">Deny permissions</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">Requires configuration</td>
+    <td colspan="1">Deny permissions</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">Requires configuration</td>
 </tr>
 <tr>
-<td colspan="1">User invitations</td>
-<td colspan="1">Default distribution</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">Also available as an independent Nuxeo Package</td>
+    <td colspan="1">User invitations</td>
+    <td colspan="1">Default distribution<br/>
+    [Nuxeo User Registration]</td>
+    <td>&#10003;<br/>N/A</td>
+    <td>&#10003;<br/>&#10003;</td>
+    <td>&#10003;<br/>N/A</td>
+    <td colspan="1"></td>
 </tr>
 <tr>
-<td colspan="1">Time-based permissions</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Time-based permissions</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">Search on permissions</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">Still in consideration for Web UI</td>
+    <td colspan="1">Search on permissions</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">Still in consideration for Web UI</td>
 </tr>
 <tr>
-<td colspan="1">Permission purge</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">Still in consideration for Web UI</td>
+    <td colspan="1">Permission purge</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">Still in consideration for Web UI</td>
 </tr>
 <tr>
-<td colspan="1">Permission Audit</td>
-<td colspan="1">[Nuxeo Groups and Rights Audit](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit)</td>
-<td></td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">
-[Administration documentation]({{page page='nuxeo-groups-and-rights-audit'}})<br/>
-[User documentation]({{page space='userdoc' page='nuxeo-groups-and-rights-audit'}})<br/>
-Still in consideration for Web UI
-</td>
+    <td colspan="1">Permission audit</td>
+    <td colspan="1">[Nuxeo Groups and Rights Audit](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">
+    [Administration documentation]({{page page='nuxeo-groups-and-rights-audit'}})<br/>
+    [User documentation]({{page space='userdoc' page='nuxeo-groups-and-rights-audit'}})<br/>
+    Still in consideration for Web UI
+    </td>
 </tr>
 <tr>
-<td colspan="1">Share with external users</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Permissions user documentation]({{page space='userdoc' page='managing-permissions'}})</td>
+    <td colspan="1">Share with external users</td>
+    <td colspan="1">Default distribution<br/>
+    [EasyShare](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare)</td>
+    <td>&#10003;<br/>N/A</td>
+    <td>&#10003;<br/>&#10003;</td>
+    <td>&#10003;<br/>N/A</td>
+    <td colspan="1">[Permissions user documentation]({{page space='userdoc' page='managing-permissions'}})<br/>
+    [EasyShare documentation]({{page version='' space='userdoc' page='easyshare'}})</td>
+</tr>
+<tr>
+    <td>Multi-tenancy</td>
+    <td>[Nuxeo Multi-tenant](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>v2.0</td>
+    <td>[Nuxeo Multi-tenant documentation]({{page version='' space='userdoc' page='nuxeo-multi-tenant'}})</td>
 </tr>
 </tbody>
 </table>
@@ -1023,31 +1094,52 @@ Still in consideration for Web UI
 <table class="hover">
 <tbody>
 <tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
 </tr>
 <tr>
-<td colspan="1">History</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1"></td>
+    <td colspan="1">Document history</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1"></td>
 </tr>
 <tr>
-<td colspan="1">Activity feed</td>
-<td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
-<td></td>
-<td></td>
-<td>&#10003;</td>
-<td colspan="1"></td>
+    <td colspan="1">Activity feed on document</td>
+    <td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td colspan="1"></td>
+</tr>
+<tr>
+    <td>Global event audit</td>
+    <td>Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1"></td>
+</tr>
+<tr>
+    <td colspan="1">Permission Audit</td>
+    <td colspan="1">Default distribution<br/>
+    [Nuxeo Groups and Rights Audit](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit)</td>
+    <td>N/A<br/>N/A</td>
+    <td>&#10003;<br/>&#10003;</td>
+    <td>N/A<br/>N/A</td>
+    <td colspan="1">
+    [Administration documentation]({{page page='nuxeo-groups-and-rights-audit'}})<br/>
+    [User documentation]({{page space='userdoc' page='nuxeo-groups-and-rights-audit'}})<br/>
+    Still in consideration for Web UI
+</td>
 </tr>
 </tbody>
 </table>
@@ -1058,73 +1150,81 @@ Still in consideration for Web UI
 <table class="hover">
 <tbody>
 <tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
 </tr>
 <tr>
-<td colspan="1">Alerts / Follow</td>
-<td colspan="1">Default distribution</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Collaborative Features - Alerts documentation]({{page space='userdoc' page='collaborative-features#alerts'}})</td>
+    <td colspan="1">Alerts / Follow</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Collaborative Features - Alerts documentation]({{page space='userdoc' page='collaborative-features#alerts'}})</td>
 </tr>
 <tr>
-<td colspan="1">Comments</td>
-<td colspan="1">Default distribution</td>
-<td></td>
-<td>&#10003;</td>
-<td>V2.0</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Comments</td>
+    <td colspan="1">Default distribution</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>V2.0</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">Preview</td>
-<td colspan="1">Default distribution</td>
-<td></td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">
-[User documentation]({{page space='userdoc' page='preview'}})<br/>
-[Developer documentation]({{page page='preview'}})
+    <td colspan="1">Preview</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">
+    [User documentation]({{page space='userdoc' page='preview'}})<br/>
+    [Developer documentation]({{page page='preview'}})
 </td>
 </tr>
 <tr>
-<td colspan="1">Relations</td>
-<td colspan="1">Default distribution</td>
-<td></td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">
-[ User documentation ]({{page space='userdoc' page='editing-content#relations'}})<br/>
-[How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})<br/>
-Still in consideration for Web UI
-</td>
+    <td colspan="1">Relations</td>
+    <td colspan="1">Default distribution</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">
+    [User documentation]({{page space='userdoc' page='editing-content#relations'}})<br/>
+    [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})<br/>
+    Still in consideration for Web UI
+    </td>
 </tr>
 <tr>
-<td colspan="1">Trash</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">
-[User documentation]({{page space='userdoc' page='deleting-content'}})<br/>
-[Developer documentation]({{page page='deleting-documents'}})
-</td>
+    <td colspan="1">Trash</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">
+    [User documentation]({{page space='userdoc' page='deleting-content'}})<br/>
+    [Developer documentation]({{page page='deleting-documents'}})
+    </td>
 </tr>
 <tr>
-<td colspan="1">Thumbnail</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Developer documentation]({{page page='thumbnail'}})</td>
+    <td colspan="1">Thumbnail</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Developer documentation]({{page page='thumbnail'}})</td>
+</tr>
+<tr>
+    <td colspan="1">User profile</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -1135,47 +1235,57 @@ Still in consideration for Web UI
 <table class="hover">
 <tbody>
 <tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
 </tr>
 <tr>
-<td colspan="1">Excel export of content view</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Excel export of content view</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">PDF export of documents</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[User Documentation]({{page space='userdoc' page='exporting-documents'}})</td>
+    <td>Export of a folder structure</td>
+    <td>Default distribution<br/>
+    [Nuxeo File System Exporter](https://connect.nuxeo.com/nuxeo/site/marketplace/package/fs-exporter)</td>
+    <td>&#10003;<br/>&#10003;</td>
+    <td>&#10003;<br/>&#10003;</td>
+    <td>&#10003;<br/>N/A</td>
+    <td>[User Documentation]({{page space='userdoc' page='exporting-documents'}})<br/>
+    [Nuxeo FS Exporter documentation]({{page version='' space='nxdoc' page='nuxeo-file-system-exporter'}})</td>
 </tr>
 <tr>
-<td colspan="1">XML export</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[User Documentation]({{page space='userdoc' page='exporting-documents'}})</td>
+    <td colspan="1">PDF export of documents</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[User Documentation]({{page space='userdoc' page='exporting-documents'}})</td>
 </tr>
 <tr>
-<td colspan="1">Zip export</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[User Documentation]({{page space='userdoc' page='exporting-documents'}})</td>
+    <td colspan="1">XML export</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[User Documentation]({{page space='userdoc' page='exporting-documents'}})</td>
+</tr>
+<tr>
+    <td colspan="1">ZIP export</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[User Documentation]({{page space='userdoc' page='exporting-documents'}})</td>
 </tr>
 </tbody>
 </table>
@@ -1186,148 +1296,146 @@ Still in consideration for Web UI
 <table class="hover">
 <tbody>
 <tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
 </tr>
 <tr>
-<td colspan="1">Advanced search configuration</td>
-<td colspan="1">Default distribution</td>
-<td></td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Advanced search configuration</td>
+    <td colspan="1">Default distribution</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">[Local configuration documentation]({{page version='' space='userdoc' page='local-configuration'}})</td>
 </tr>
 <tr>
-<td colspan="1">Document content configuration</td>
-<td colspan="1">Default distribution</td>
-<td></td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Document content configuration</td>
+    <td colspan="1">Default distribution</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">[Local configuration documentation]({{page version='' space='userdoc' page='local-configuration'}})</td>
 </tr>
 <tr>
-<td colspan="1">Document types configuration</td>
-<td colspan="1">Default distribution</td>
-<td></td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Document types configuration</td>
+    <td colspan="1">Default distribution</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">[Local configuration documentation]({{page version='' space='userdoc' page='local-configuration'}})</td>
 </tr>
 <tr>
-<td colspan="1">Faceted search configuration</td>
-<td colspan="1">[Faceted search](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-faceted-search)</td>
-<td></td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Faceted search configuration</td>
+    <td colspan="1">[Faceted search](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-faceted-search)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">Theme configuration</td>
-<td colspan="1">Default distribution</td>
-<td>N/A</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">Theme configuration defined on a space level for all users in JSF UI, at the application level for the current user in Web UI.</td>
+    <td colspan="1">Theme configuration</td>
+    <td colspan="1">Default distribution</td>
+    <td>NR</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">Theme configuration defined on a space level for all users in JSF UI, at the application level for the current user in Web UI.<br/>
+    [JSF UI Local configuration documentation]({{page version='' space='userdoc' page='local-configuration'}})<br/>
+    [Web UI user settings]({{page version='' space='userdoc' page='user-settings'}})</td>
+</tr>
+<tr>
+    <td>Maximum storage configuration</td>
+    <td>[Nuxeo Quota](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-quota)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td>[Nuxeo Quota documentation]({{page version='' space='nxdoc' page='nuxeo-quota'}})</td>
 </tr>
 </tbody>
 </table>
 </div>
-
-## User-Related Features
-<div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
-</tr>
-<tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
-</tr>
-<tr>
-<td colspan="1">User profile</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-</tbody>
-</table>
-</div>
-
 
 ## Authentication
 <div class="table-scroll">
 <table class="hover">
 <tbody>
 <tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
 </tr>
 <tr>
-<td colspan="1">CAS2 Authentication</td>
-<td colspan="1">[CAS2 Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication)</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[CAS2 Authentication documentation]({{page page='using-cas2-authentication'}})</td>
+    <td colspan="1">CAS2 Authentication</td>
+    <td colspan="1">[CAS2 Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[CAS2 Authentication documentation]({{page page='using-cas2-authentication'}})</td>
 </tr>
 <tr>
-<td colspan="1">Kerberos integration</td>
-<td colspan="1">[Kerberos Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/kerberos-authentication)</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[Kerberos Authentication documentation]({{page page='kerberos-authentication'}})</td>
+    <td colspan="1">Kerberos integration</td>
+    <td colspan="1">[Kerberos Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/kerberos-authentication)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Kerberos Authentication documentation]({{page page='kerberos-authentication'}})</td>
 </tr>
 <tr>
-<td colspan="1">LDAP authentication</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">LDAP authentication</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">SAML 2.0 Authentication</td>
-<td colspan="1">[SAML 2.0 Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication)</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">[SAML 2.0 Authentication documentation]({{page page='saml-20-authentication'}})</td>
+    <td colspan="1">SAML 2.0 Authentication</td>
+    <td colspan="1">[SAML 2.0 Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[SAML 2.0 Authentication documentation]({{page page='saml-20-authentication'}})</td>
 </tr>
 <tr>
-<td colspan="1">Shibboleth integration</td>
-<td colspan="1">
-[Shibboleth Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication)<br/>
-[Shibboleth Invitation Addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-shibboleth-invitation)
+    <td colspan="1">Shibboleth integration</td>
+    <td colspan="1">
+    [Shibboleth Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication)<br/>
+    [Shibboleth Invitation Addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-shibboleth-invitation)
+    </td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">
+    [Shibboleth Authentication admin documentation]({{page page='shibboleth-authentication'}})<br/>
+    [Shibboleth Invitation Addon documentation]({{page page='nuxeo-shibboleth-invitation'}})
 </td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">
-[Shibboleth Authentication admin documentation]({{page page='shibboleth-authentication'}})<br/>
-[Shibboleth Invitation Addon documentation]({{page page='nuxeo-shibboleth-invitation'}})
-</td>
+</tr>
+<tr>
+    <td>OpenID authentication</td>
+    <td>[OpenID Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/openid-authentication)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td></td>
+</tr>
+<tr>
+    <td>2-step authentication</td>
+    <td>[Nuxeo DuoWeb Two Factors Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-duoweb-authentication)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>[Nuxeo DuoWeb Two Factors Authentication documentation]({{page version='' space='nxdoc' page='nuxeo-duoweb-two-factor-authentication'}})</td>
 </tr>
 </tbody>
 </table>
@@ -1338,83 +1446,104 @@ Still in consideration for Web UI
 <table class="hover">
 <tbody>
 <tr>
-<th rowspan="2">Feature</th>
-<th rowspan="2">Comes with</th>
-<th colspan="3">UI possibilities</th>
-<th rowspan="2">Comment</th>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
 </tr>
 <tr>
-<th>API</th>
-<th>JSF UI</th>
-<th>Web UI</th>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
 </tr>
 <tr>
-<td colspan="1">Monitoring</td>
-<td colspan="1">Default distribution, [Nuxeo Datadog reporter](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-datadog-reporter)</td>
-<td></td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td colspan="1">Some monitoring features are available by default in the Admin tab of the Nuxeo Platform. You can complete these features by using addons, such as Nuxeo Datadog reporter.<br/>
-[Metrics and Monitoring admin documentation]({{page page='metrics-and-monitoring'}})<br/>
-[Nuxeo Datadog Reporter documentation]({{page page='nuxeo-datadog-reporter'}})<br/>
-Still in consideration for Web UI
-</td>
+    <td colspan="1">Monitoring</td>
+    <td colspan="1">Default distribution, [Nuxeo Datadog reporter](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-datadog-reporter)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">Some monitoring features are available by default in the Admin tab of the Nuxeo Platform. You can complete these features by using addons, such as Nuxeo Datadog reporter.<br/>
+    [Metrics and Monitoring admin documentation]({{page page='metrics-and-monitoring'}})<br/>
+    [Nuxeo Datadog Reporter documentation]({{page page='nuxeo-datadog-reporter'}})<br/>
+    Monitoring features are still in consideration for Web UI.
+    </td>
 </tr>
 <tr>
-<td colspan="1">Nuxeo Online Services</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>V2.0</td>
-<td colspan="1">`nuxeoctl` command for non UI apps. Admin tab for JSF UI.</td>
+    <td colspan="1">Nuxeo Online Services</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>V2.0</td>
+    <td colspan="1">`nuxeoctl` command for non UI apps. Admin tab for JSF UI.</td>
 </tr>
 <tr>
-<td colspan="1">OAuth configuration</td>
-<td colspan="1">Default distribution</td>
-<td></td>
-<td>&#10003;</td>
-<td>V2.0</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">OAuth configuration</td>
+    <td colspan="1">Default distribution</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>V2.0</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">Password encryption in configuration files</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>N/A</td>
-<td>N/A</td>
-<td colspan="1">[Sensitive Configuration Data Encryption]({{page page='sensitive-configuration-data-encryption'}})</td>
+    <td colspan="1">Password encryption in configuration files</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td colspan="1">[Sensitive Configuration Data Encryption]({{page page='sensitive-configuration-data-encryption'}})</td>
 </tr>
 <tr>
-<td colspan="1">Power users</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Power users</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">Update Center</td>
-<td colspan="1">Default distribution</td>
-<td></td>
-<td>&#10003;</td>
-<td>V2.0</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Update Center</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>V2.0</td>
+    <td colspan="1"></td>
 </tr>
 <tr>
-<td colspan="1">User and Groups</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">User and Groups</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">Vocabularies</td>
-<td colspan="1">Default distribution</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td>&#10003;</td>
-<td colspan="1">&nbsp;</td>
+    <td colspan="1">Vocabularies</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+    <td colspan="1">Environment configuration report</td>
+    <td colspan="1">Default distribution<br/>
+    [Nuxeo Connect Report Tools Web](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td>`nuxeoctl` command in the default distribution<br/>
+    [Nuxeo Connect Report Tools Web documentation]({{page version='' space='nxdoc' page='nuxeo-connect-report-tools'}})</td>
+</tr>
+<tr>
+    <td>Statistics</td>
+    <td>Default distribution<br/>
+    [Nuxeo Quota](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-quota)</td>
+    <td>&#10003;<br/>&#10003;</td>
+    <td>&#10003;<br/>&#10003;</td>
+    <td>&#10003;<br/>N/A</td>
+    <td>[JSF UI Activity tab]({{page version='' space='nxdoc' page='admin-tab-overview'}}#activity)<br/>
+    [Web UI administration]({{page version='' space='userdoc' page='administration'}})<br/>
+    [Nuxeo Quota documentation]({{page version='' space='nxdoc' page='nuxeo-quota'}})</td>
 </tr>
 </tbody>
 </table>
