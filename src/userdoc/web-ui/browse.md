@@ -2,7 +2,7 @@
 title: Browse
 review:
     comment: ''
-    date: '2017-01-04'
+    date: '2017-03-29'
     status: ok
 description:
 toc: true
@@ -220,6 +220,7 @@ On the document itself you can decide to delete the file of your document by cli
 
 ## Versioning
 
+{{! multiexcerpt name='manual-versioning'}}
 {{! multiexcerpt name='versioning-example'}}
 
 Every document holds a version number, which is a piece of information about the evolution of the document. A version number (V.v) is composed of a major version number (V) and a minor version number (v). When a document is created, its version number is 0.0. Minor version increment are used for secondary changes. Major version increment is usually reserved to significant modifications.
@@ -244,11 +245,7 @@ Let's say that your current document version is 0.1:
 2. In the top right section of metadata, click on **Create Version**.
 3. Select the version that you want and click on **Create Version** to confirm.
   ![]({{file name='versions-web-ui.png'}} ?w=350,border=true)
-
-
-### Drag and Drop Versioning Policy
-
-{{{multiexcerpt 'dnd-versioning-policy' page='editing-content' space='userdoc'}}}
+{{! /multiexcerpt}}
 
 ### Nuxeo Drive Versioning Policy
 

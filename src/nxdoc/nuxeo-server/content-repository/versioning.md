@@ -2,7 +2,7 @@
 title: Versioning
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-03-29'
     status: ok
 labels:
     - lts2016-ok
@@ -110,19 +110,38 @@ history:
         version: '1'
 
 ---
-<span style="color: rgb(51,51,51);">The Nuxeo Repository includes a versioning system.&nbsp;</span>At any moment, you can ask the repository to create and archive a version from a document. Versioning can be configured to be automatic (each document modification would create a new version) or on demand (this is bound to a radio button in default UI).
+The Nuxeo Repository includes a versioning system. At any moment, you can ask the repository to create and archive a version from a document. Versioning can be done automatically according to some versioning policies or on demand through the UI.
 
 Each version has:
 
-*   A label,
-*   A major version number,
-*   A minor version number.
+*   A label
+*   A major version number
+*   A minor version number
 
-The versioning service is configurable so you can define the numbering policy.&nbsp;In fact, even the version storage service is pluggable so you can define your own storage for versions.
+The versioning service is configurable so you can define the numbering policy. In fact, even the version storage service is pluggable so you can define your own storage for versions.
 
 ## Functional Overview
 
-{{{multiexcerpt 'versioning' page='USERDOC:Editing Content'}}}
+### Manual versioning
+
+{{{multiexcerpt 'versioning-intro' page='USERDOC:Editing Content'}}}
+
+{{{multiexcerpt name='manual-versioning' page='USERDOC:Browse'}}}
+
+**To create a new version of your document in a JSF application**:
+
+The options are available in the **Edit** tab of the document.
+![]({{file name='version-update.png' space='userdoc' page='editing-content'}} ?w=297,h=91,border=true)
+
+### Automatic versioning
+
+Automatic versioning can be applied on the document, according to policies defined in the application. Each policy can increase the major or the minor number or none of them. The versioning can be applied before of after the actual modification of the document. It is possible to plug your own versioning policies and filters thanks to `policies` and `filters` extension points (See [versioning policies and filters]({{page space='nxdoc' page='versioning#versioning-policies'}}) for more details).
+
+{{#> callout type='note' }}
+The automatic versioning after the modification of the document won't work in a JSF application.
+{{/callout}}
+
+Default policies are included in the application: no versioning will be applied (before and after modification) if the document has the facet `systemDocument`. If not, the minor version will be incremented after modification if the document is of type `Note`, or before modification if the document is of type `File` and the last contributor has changed.
 
 ## Concepts
 
@@ -172,6 +191,68 @@ The initial version number of a freshly created working copy is "0.0".
 When displaying the version number for a Checked Out document, the version number is usually displayed with a "+" following it, to show that it's not the final version number but that the working copy is modified and derived from that version. The final version number will be determined at Check In time. The exception to this display rule is the version "0.0", because displaying "0.0+" would be redundant and misleading as there is actually no previously archived "0.0" version from which it is derived.
 
 The version number is changed by a Check In operation; either the minor version number is incremented, or the major version number is incremented and the minor version number is set to 0.
+
+### {{> anchor 'versioning-policies'}}Versioning policies and filters
+
+The automatic versioning system is based on a combination of policies, where each of them is composed by one or multiple filters. For each versioning policy can be defined the numbering policy (between `NONE`, `MINOR` or `MAJOR`), if the versioning has to be applied before or after the actual modification, and the order in which the policy should be taken into account.
+
+Example :
+
+```xml
+<extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="policies">
+    <policy id="note-and-file-policy" order="1" beforeUpdate="true" increment="MAJOR">
+        <filter-id>note-filter</filter-id>
+        <filter-id>file-filter</filter-id>
+    </policy>
+</extension>
+```
+A versioning filter defines the condition(s) the document has to fulfill so that the versioning can be applied. The standard filter can be composed of the following elements:
+
+
+*   **Type**. On which document type the versioning should be applied
+*   **Schema**. Apply the versioning if the document contains this schema
+*   **Facet**. Apply the versioning if the document contains this facet
+*   **Condition**. Defines a condition in [EL]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo#main-differences-between-languages'}}) to access properties of the document before/after modification
+
+Example:
+
+```xml
+<extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="filters">
+    <filter id="my-standard-filter">
+        <type>MyDocType</type>
+        <schema>MySchema</schema>
+        <facet>MyFacet</facet>
+        <condition>#{previousDocument.foo != currentDocument.foo}</condition>
+    </filter>
+</extension>
+```
+
+If the standard filter is not enough to cover all your requirements, the filter can be customized with a Java class implementing the [VersioningPolicyFilter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/versioning/VersioningPolicyFilter.html) interface to define a particular condition:
+
+```xml
+<filter id="my-class-filter" class="foo.bar.CustomVersioningFilter"/>
+```
+
+### {{> anchor 'source-based-versioning'}}Source based versioning
+
+For source based versioning (like with Nuxeo Drive or the REST API for example), a property is provided in the context data of the document, so it can be accessed in the EL condition.
+
+Example:
+```xml
+<policy id="rest-based-policy" order="1" increment="MINOR">
+    <filter-id>rest-based-versioning-filter</filter-id>
+</policy>
+
+...
+
+<filter id="rest-based-versioning-filter">
+    <condition>#{currentDocument.contextData.source == "REST"}</condition>
+</filter>
+```
+
+For the previous example, to be able to trigger the source versioning through the REST API, the HTTP header `source` is defined (see the [special HTTP headers]({{page page='special-http-headers'}}) page to have all headers available, and [How to Customize Nuxeo Drive Versioning Policy]({{page page='how-to-customize-nuxeo-drive-versioning-policy'}}) page, for more details about source based versioning with Nuxeo Drive).
+
+See the [policies](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--policies) and [filters](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--filters) extension points documentation for more about this, particularly to contribute new policies and filters.
 
 ## Plugging In a New VersioningService Implementation
 

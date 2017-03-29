@@ -412,7 +412,7 @@ In order to determine more easily which of these variables will be usable in you
 
 Please check the [availables variables depending on context](#available-variables-depending-on-context) section for more detailed information.
 
-## What are the Main Differences Between Expression/Scripting Languages?
+## {{> anchor 'main-differences-between-languages'}} What are the Main Differences Between Expression/Scripting Languages?
 
 <div class="table-scroll"><table class="hover">
 <colgroup>

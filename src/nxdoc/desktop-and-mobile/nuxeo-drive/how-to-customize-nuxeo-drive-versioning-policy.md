@@ -2,7 +2,7 @@
 title: How to Customize Nuxeo Drive Versioning Policy
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-03-30'
     status: ok
 details:
     howto:
@@ -79,44 +79,50 @@ history:
 ---
 {{! multiexcerpt name='drive_versioning_policy'}}
 
-{{{multiexcerpt 'drive-versioning' page='USERDOC:Nuxeo Drive'}}}
+{{{multiexcerpt 'drive-versioning' page='NXDOC:Nuxeo Drive'}}}
 
 ## How to Configure the Versioning Delay or Version Increment
 
-You can configure two parameters of Nuxeo Drive versioning policy thanks to the extension point [fileSystemItemFactory](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.drive.adapters--fileSystemItemFactory): the last edit delay until a new version is created and which version increment will occur (minor or major).
+You can contribute a new versioning policy and filter thanks to the extension points [policies](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--policies) and [filters](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--filters) to configure the last edit delay until a new version is created and which version increment will occur (minor or major).
 
 For example, to create a major version if the document is modified 30 minutes after the last change, use this contribution:
 
 ```xml
-  <require>org.nuxeo.drive.adapters</require>
+<require>org.nuxeo.ecm.core.versioning.default-policies</require>
 
-  <extension target="org.nuxeo.drive.service.FileSystemItemAdapterService"
-    point="fileSystemItemFactory">
+<extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="policies">
+    <policy id="versioning-delay" increment="MAJOR" order="40">
+        <filter-id>versioning-delay</filter-id>
+        <filter-id>drive-filter</filter-id>
+    </policy>
+</extension>
 
-    <fileSystemItemFactory class="org.nuxeo.drive.service.impl.DefaultFileSystemItemFactory" name="defaultFileSystemItemFactory" order="40">
-      <parameters>
-        <parameter name="versioningDelay">1800</parameter>
-        <parameter name="versioningOption">MAJOR</parameter>
-      </parameters>
-    </fileSystemItemFactory>
-
-  </extension>
+<extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="filters">
+    <filter id="versioning-delay">
+        <condition>#{currentDocument.dc.modified.time - previousDocument.dc.modified.time >= 1800000}</condition>
+    </filter>
+    <filter id="drive-filter">
+        <condition>#{currentDocument.contextData.source == "drive"}</condition>
+    </filter>
+</extension>
 ```
 
 ## How to Change Nuxeo Drive Versioning Policy
 
-If you need to make more changes on the versioning mechanism in Nuxeo Drive:
 
-1.  Write your own implementation of [VersioningFileSystemItemFactory](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/drive/service/VersioningFileSystemItemFactory.html) interface, and in particular write the expected behavior in the [needsVersioning](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/drive/service/VersioningFileSystemItemFactory.html#needsVersioning%28org.nuxeo.ecm.core.api.DocumentModel%29) method.
-2.  Contribute to the `fileSystemItemFactory` extension point to use your new class:
+If you need to make more changes on the versioning mechanism in Nuxeo Drive, you can write your own implementation of the [VersioningPolicyFilter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/versioning/VersioningPolicyFilter.html) interface, and contribute it to the [filters](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--filters) extension point.
+
 
 ```xml
-  <extension target="org.nuxeo.drive.service.FileSystemItemAdapterService"
-    point="fileSystemItemFactory">
+<extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="policies">
+    <policy id="custom-versioning-policy" increment="MAJOR" order="40">
+        <filter-id>custom-versioning-filter</filter-id>
+    </policy>
+</extension>
 
-    <fileSystemItemFactory class="com.sample.drive.CustomFileSystemItemFactory" name="customFileSystemItemFactory" order="20"/>
-
-  </extension>
+<extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="filters">
+    <filter id="custom-versioning-filter" class="foo.bar.CustomVersioningFilter">
+</extension>
 ```
 
 {{! /multiexcerpt}}

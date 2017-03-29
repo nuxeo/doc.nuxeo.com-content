@@ -2,7 +2,7 @@
 title: Special HTTP Headers
 review:
     comment: ''
-    date: '2017-01-10'
+    date: '2017-03-29'
     status: ok
 labels:
     - lts2016-ok
@@ -153,6 +153,12 @@ In order to have more control over REST API Calls, you can use the following spe
         <td>NONE</td>
         <td>Increment minor or major version and returns versioned document</td>
         <td>`X-Versioning-Option: MAJOR`</td>
+      </tr>
+      <tr>
+        <td>`source`</td>
+        <td></td>
+        <td>Set this property in document context data to be used for automatic source based versioning. See [source based versioning]({{page page='versioning#source-based-versioning'}}) for more details.</td>
+        <td>`source: REST`</td>
       </tr>
       <tr>
         <td>`fetch.document`</td>
