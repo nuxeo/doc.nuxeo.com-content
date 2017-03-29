@@ -135,24 +135,16 @@ Using Homebrew
 brew install node
 ```
 
-Using MacPorts:
-
-{{#> panel type='code' heading='Install NodeJS'}}
+Using MacPorts
 
 ```bash
- sudo port install npm
+sudo port install npm
 ```
-
-{{/panel}}
 
 ## Installing related tools
 
 We need a few tools to be installed:
 
-{{#> panel type='code' heading='Install of related tools'}}
-
 ```bash
 sudo npm -g install yo grunt-cli gulp bower
 ```
-
-{{/panel}}
