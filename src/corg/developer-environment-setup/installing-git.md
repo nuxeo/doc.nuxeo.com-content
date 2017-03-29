@@ -295,9 +295,10 @@ Please don't put accents and such in your username (as well in the commit messag
 
 ### SSH Key
 
-On the GitHub site, click **Account Settings**&nbsp;> Click **SSH Public Keys**&nbsp;> Click **Add another public key** and add your public key there.
+At Nuxeo, we use SSH for data transfer with GitHub. Therefore, you need to configure your SSH key.
+On the GitHub site, click **Account Settings**&nbsp;> Click **SSH Public Keys**&nbsp;> Click **Add another public key** and add your public key there. It will be used for authentication against any Git URL of the form `git@github.com:nuxeo/...`.
 
-It will be used for authentication against any Git URL of the form "`git@github.com:nuxeo/...`".
+If you meet any problem during the configuration, please see GitHub's official documentation [Connecting to GitHub with SSH](https://help.github.com/articles/connecting-to-github-with-ssh/).
 
 ### Global Configuration
 
