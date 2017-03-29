@@ -53,15 +53,23 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 
     Nuxeo CLI will ask you several questions about the artifact name, etc.
 
-3.  Run gulp to run the application and see what has been generated.
+3. Change current directory to `nuxeo-elements-sample-web`, where `gulpfile.js` has been created:
 
     ```bash
-    $ gulp serve
+     $ cd nuxeo-elements-sample-web
+     ```
+
+4.  Run gulp to run the application and see what has been generated:
+
+    ```bash
+    $ npm run serve
+    # or, if polymer-cli is installed globally
+    $ polymer serve
     ```
 
-    The produced application includes some sample elements and showcases Google's Material Design through the use of Paper Elements.
+    The produced application based on [Polymer Starter Kit](https://developers.google.com/web/tools/polymer-starter-kit/) can also be extended using the [Polymer CLI](https://github.com/Polymer/polymer-cli). And it helps you as a starting point for building web applications with Polymer and can be deployed like all [Nuxeo Bundles]({{page page='understanding-bundles-deployment'}}).
 
-4.  Build the Nuxeo Package containing the Polymer Application.
+5.  Build the Nuxeo Bundle containing the Polymer Application:
 
     ```bash
     $ mvn package
@@ -69,9 +77,7 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
     ```
 
     {{#> callout type='info' }}
-
     Do not hesitate to take a look at the others templates available with [Nuxeo CLI]({{page page='nuxeo-cli'}}), especially the `Package Generator` that helps you package your bundles as a [Nuxeo Package]({{page page='creating-nuxeo-packages'}}).
-
     {{/callout}}
 
 ### As a Standalone Polymer Application
@@ -84,12 +90,12 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
     $ polymer init starter-kit
     ```
 
-    The [Polymer CLI](https://github.com/Polymer/polymer-cli) helps you as a starting point for building web applications with Polymer. It is maintained by the Polymer team.
+    The produced application based on [Polymer Starter Kit](https://developers.google.com/web/tools/polymer-starter-kit/) using [Polymer CLI](https://github.com/Polymer/polymer-cli) can help you as a starting point for building web applications with Polymer.
 
 2.  Serve your application and check out what has been generated.
 
     ```bash
-    $ polymer serve -o
+    $ polymer serve
     ```
 
     **Note:** the README.md includes detailed information about the generated application so it's a good starting point to understand its structure.
