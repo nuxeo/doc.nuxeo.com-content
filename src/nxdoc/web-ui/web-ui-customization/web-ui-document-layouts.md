@@ -172,11 +172,30 @@ Once you are all set, you can navigate to the View Designer application to custo
     - The title and description fields
     - Every custom property linked to the document type
   {{/callout}}
-4. In the catalog properties on the left select File > content:blob > view and drag'n'drop it in the main view.
+4. In the catalog properties on the left, select **File > content:blob > view** and drag'n'drop the element in the main view.
+5. Click on Save.
   You now have an upload button on your document layout.
-5. At the top right-hand corner of the View Designer, switch the editor to code editor.
-    You are now in the HTML mode of the View Designer.
-6. Select the 
+6. At the top right-hand corner of the View Designer, switch the editor to code editor.
+    You are now in the HTML mode of the View Designer and you can see the element that you just drag'n'droped on the other editor.
+7. Find the description's element and delete it.
+8. Click on Save to keep your changes.
+
+You now have a document type ready to be used on your Web UI interface, the last thing that you need is an icon to find it easily in your creation popup window.
+
+### Create a Document Type Icon
+To do so, you need to go on the **Resources** tab
+1. Click on the **UI** folder
+2. Click on the **Create** button (ICON), select a folder and name it **Images**
+3. In this **Images** folder, create a `doctypes`folder.
+4. In the **doctypes** click on the **Upload** button (ICON) and select your image.
+  {{#> callout type='note' }}
+  You have to respect the following folder structure, and name the icon as your document type in order to display the icon.
+  {{/callout}}
+
+You can now deploy your project and see what it looks like!
+
+
+
 
 {{#> callout type='note' }}
 For more information about customizing and deployig Web UI, please check the [Customization Tutorial]({{page page='web-ui-customization-tutorial'}}).
