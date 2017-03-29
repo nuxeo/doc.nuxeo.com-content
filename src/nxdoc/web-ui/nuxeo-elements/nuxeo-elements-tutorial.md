@@ -23,28 +23,15 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 ## Requirements
 
 *   **[Node.js](https://nodejs.org/)** is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client-side development is built with Node.js and distributed with npm, the package manager for Node.js. Make sure you download and install your OS-specific version first.
-*   **[Bower](http://bower.io/)** is currently **the** tool for managing web application dependencies. To install it just use:
-
-    ```bash
-    $ npm install -g bower
-    ```
-
-*   **[Yeoman](http://yeoman.io/)**  is an opinionated generator that helps kickstart projects. Depending on your needs there are two ways to use it:
-
-    *   Under the hood with [Polymer CLI](https://github.com/Polymer/polymer-cli) to scaffold your standalone application. Your application is **hosted outside** the Nuxeo Server and uses it as a service
-    *   Use [Nuxeo CLI]({{page page='nuxeo-cli'}}) to scaffold your application **as a Nuxeo Bundle** and deploy it on a Nuxeo Server. Your application is **hosted inside** the Nuxeo Server as a bundle and uses it as a backend.
+*   **[Bower](http://bower.io/)** is currently **the** tool for managing web application dependencies.
+*   **[Nuxeo CLI]({{page page='nuxeo-cli'}})** to scaffold your application **as a Nuxeo Bundle** and deploy it on a Nuxeo Server. Your application is **hosted inside** the Nuxeo Server as a bundle and uses it as a backend.
+*   **[Polymer CLI](https://github.com/Polymer/polymer-cli)** to scaffold your standalone application. Your application is **hosted outside** the Nuxeo Server and uses it as a service
 
 ## Scaffolding
 
 ### As a Nuxeo Bundle
 
-1.  Install [Gulp](http://gulpjs.com/), a JavaScript task runner that lets you automate tasks:
-
-    ```bash
-    $ npm install -g gulp
-    ```
-
-2.  Install Nuxeo CLI and scaffold the project:
+1.  Install Nuxeo CLI and scaffold the project:
     ```bash
     $ npm install -g nuxeo-cli
     $ mkdir -p nuxeo-elements-sample && cd $_
@@ -53,25 +40,31 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 
     Nuxeo CLI will ask you several questions about the artifact name, etc.
 
-3.  Run gulp to run the application and see what has been generated.
+1. Change current directory to `nuxeo-elements-sample-web`:
 
     ```bash
-    $ gulp serve
+     $ cd nuxeo-elements-sample-web
+     ```
+
+1.  Start the application and see what has been generated:
+
+    ```bash
+    $ npm run serve
+    # or, if polymer-cli is installed globally
+    $ polymer serve
     ```
 
-    The produced application includes some sample elements and showcases Google's Material Design through the use of Paper Elements.
+    The produced application based on [Polymer Starter Kit](https://developers.google.com/web/tools/polymer-starter-kit/) can also be extended using the [Polymer CLI](https://github.com/Polymer/polymer-cli). And it helps you as a starting point for building web applications with Polymer and can be deployed like all [Nuxeo Bundles]({{page page='understanding-bundles-deployment'}}).
 
-4.  Build the Nuxeo Package containing the Polymer Application.
+1.  Build the Nuxeo Bundle containing the Polymer Application:
 
     ```bash
     $ mvn package
-    $ cp target/nuxeo-elements-sample-<VERSION>.jar <NUXEO_SERVER>/nxserver/bundles/
+    $ cp target/nuxeo-elements-sample-web-<VERSION>.jar <NUXEO_SERVER>/nxserver/bundles/
     ```
 
     {{#> callout type='info' }}
-
     Do not hesitate to take a look at the others templates available with [Nuxeo CLI]({{page page='nuxeo-cli'}}), especially the `Package Generator` that helps you package your bundles as a [Nuxeo Package]({{page page='creating-nuxeo-packages'}}).
-
     {{/callout}}
 
 ### As a Standalone Polymer Application
@@ -84,12 +77,12 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
     $ polymer init starter-kit
     ```
 
-    The [Polymer CLI](https://github.com/Polymer/polymer-cli) helps you as a starting point for building web applications with Polymer. It is maintained by the Polymer team.
+    The produced application based on [Polymer Starter Kit](https://developers.google.com/web/tools/polymer-starter-kit/) using [Polymer CLI](https://github.com/Polymer/polymer-cli) can help you as a starting point for building web applications with Polymer.
 
 2.  Serve your application and check out what has been generated.
 
     ```bash
-    $ polymer serve -o
+    $ polymer serve
     ```
 
     **Note:** the README.md includes detailed information about the generated application so it's a good starting point to understand its structure.
@@ -179,6 +172,9 @@ Let's plug this application into the Nuxeo instance and change the hardcoded use
 1.  Install Nuxeo elements through Bower:
 
     ```bash
+    # Install bower globally if it is not already done
+    $ npm install -g bower
+    # Add nuxeo-elements as a bower dependency
     $ bower install --save nuxeo/nuxeo-elements
     ```
 
