@@ -111,7 +111,7 @@ The versioning service is configurable so you can define the numbering policy.&n
 
 ## Functional Overview
 
-{{{multiexcerpt 'versioning' page='USERDOC:Editing Content'}}}
+{{{multiexcerpt 'versioning' space='userdoc' version='810' page='editing-content'}}}
 
 ## Concepts
 
