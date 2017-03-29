@@ -53,7 +53,7 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 
     Nuxeo CLI will ask you several questions about the artifact name, etc.
 
-3. Change current directory to `nuxeo-elements-sample-web`, where `gulpfile.js` has been created:
+3. Change current directory to `nuxeo-elements-sample-web`:
 
     ```bash
      $ cd nuxeo-elements-sample-web
