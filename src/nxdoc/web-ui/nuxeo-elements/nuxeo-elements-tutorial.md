@@ -53,7 +53,13 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 
     Nuxeo CLI will ask you several questions about the artifact name, etc.
 
-3.  Run gulp to run the application and see what has been generated.
+3. Change current directory to `nuxeo-elements-sample-web`, where `gulpfile.js` has been created:
+
+    ```bash
+     $ cd nuxeo-elements-sample-web
+     ```
+
+4.  Run gulp to run the application and see what has been generated:
 
     ```bash
     $ npm run serve
@@ -61,9 +67,9 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
     $ polymer serve
     ```
 
-    The produced application based on [Polymer Starter Kit](https://developers.google.com/web/tools/polymer-starter-kit/) can also be extended using the [Polymer CLI](https://github.com/Polymer/polymer-cli). And it helps you as a starting point for building web applications with Polymer and can be deployed like all [Nuxeo Bundles]({{page page='understanding-bundles-deployment'}})
+    The produced application based on [Polymer Starter Kit](https://developers.google.com/web/tools/polymer-starter-kit/) can also be extended using the [Polymer CLI](https://github.com/Polymer/polymer-cli). And it helps you as a starting point for building web applications with Polymer and can be deployed like all [Nuxeo Bundles]({{page page='understanding-bundles-deployment'}}).
 
-4.  Build the Nuxeo Bundle containing the Polymer Application.
+5.  Build the Nuxeo Bundle containing the Polymer Application:
 
     ```bash
     $ mvn package
@@ -71,9 +77,7 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
     ```
 
     {{#> callout type='info' }}
-
     Do not hesitate to take a look at the others templates available with [Nuxeo CLI]({{page page='nuxeo-cli'}}), especially the `Package Generator` that helps you package your bundles as a [Nuxeo Package]({{page page='creating-nuxeo-packages'}}).
-
     {{/callout}}
 
 ### As a Standalone Polymer Application
