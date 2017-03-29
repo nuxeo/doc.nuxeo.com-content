@@ -149,6 +149,35 @@ window.nuxeo.importBlacklist = [
 ];
 ```
 
+## How to Define a New Document Type Layout with the View Designer
+
+When you start your application, the first thing that you probably want to do is to create your own document type to fit your needs. You can create as many document types as you want with Nuxeo Studio and the View Designer.
+
+In this how-to you will learn how to create a document type layout with View Designer from a document type created in Nuxeo Studio.
+
+### Prerequisites
+
+- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Nuxeo Studio
+- Web UI defined as your default user interface
+
+Once you are all set, you can navigate to the View Designer application to customize our layouts.
+
+### Layout Creation
+
+1. Go on the **Layout** tab on the left menu
+2. Under **Local Types** you will find your Contract document type
+3. Five layouts are available for the customization, let's start with the **Create** layout, click on the **CUSTOMIZE** button in the editor.
+  {{#> callout type='tip' }}
+  It automatically creates the nuxeo-contract-create-layout.html file, scaffolding
+    - The title and description fields
+    - Every custom property linked to the document type
+  {{/callout}}
+4. In the catalog properties on the left select File > content:blob > view and drag'n'drop it in the main view.
+  You now have an upload button on your document layout.
+5. At the top right-hand corner of the View Designer, switch the editor to code editor.
+    You are now in the HTML mode of the View Designer.
+6. Select the 
+
 {{#> callout type='note' }}
 For more information about customizing and deployig Web UI, please check the [Customization Tutorial]({{page page='web-ui-customization-tutorial'}}).
 {{/callout}}
