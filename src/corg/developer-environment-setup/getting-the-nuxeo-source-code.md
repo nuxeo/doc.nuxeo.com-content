@@ -225,18 +225,17 @@ Starting from version 5.9.2, Nuxeo requires Maven <span style="color: rgb(34,34,
 
 ### Getting the Development Branch
 
-{{/panel}}{{#> panel type='code' heading='Clone in Read+Write mode'}}
+{{/panel}}{{#> panel type='code' heading='Clone Nuxeo repositories'}}
 
 ```
 git clone git@github.com:nuxeo/nuxeo.git
 cd nuxeo
 python clone.py master -a
-
 ```
 
 {{/panel}} {{#> callout type='note' }}
 
-*   clone.py can be run with Python 2.7.x but not 3.x versions.
+*   Python 2.7 is required. The scripts are not compliant with Python 3.x versions.
 *   Users of MSysGit should run clone.py with option --no_drive_mapping or -n as MSysGit is not able to access dynamically mounted drives. This option is available as of version 5.7.1.
 
 {{/callout}} {{#> callout type='note' }}
