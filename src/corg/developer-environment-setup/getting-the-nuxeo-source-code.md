@@ -225,15 +225,6 @@ Starting from version 5.9.2, Nuxeo requires Maven <span style="color: rgb(34,34,
 
 ### Getting the Development Branch
 
-{{#> panel type='code' heading='Clone in Read-Only mode'}}
-
-```
-git clone git://github.com/nuxeo/nuxeo.git
-cd nuxeo
-python clone.py master -a
-
-```
-
 {{/panel}}{{#> panel type='code' heading='Clone in Read+Write mode'}}
 
 ```
