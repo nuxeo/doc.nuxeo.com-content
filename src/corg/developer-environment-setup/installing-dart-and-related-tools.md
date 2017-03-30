@@ -39,7 +39,7 @@ history:
 
 ---
 
-See <https://www.dartlang.org/tools/download.html>
+See <https://www.dartlang.org/install>
 
 ## Installing Dart
 
