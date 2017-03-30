@@ -39,7 +39,7 @@ history:
 
 ---
 
-See [https://www.dartlang.org/tools/download.html](https://www.dartlang.org/tools/download.html)
+See <https://www.dartlang.org/tools/download.html>
 
 ## Installing Dart
 
@@ -57,20 +57,21 @@ sudo apt-get install dart
 sudo update-alternatives --install /usr/bin/dart dart /usr/lib/dart/bin/dart 0
 sudo update-alternatives --install /usr/bin/pub pub /usr/lib/dart/bin/pub 0
 sudo update-alternatives --install /usr/bin/dart2js dart2js /usr/lib/dart/bin/dart2js 0
-
 ```
 
 {{/panel}}
 
 ### OS X
 
-Using Homebrew
+{{#> panel type='code' heading='Using Homebrew'}}
 
 ```bash
 brew tap dart-lang/dart
 brew install dart --with-dartium
 ```
 
-### Eclipse
+{{/panel}}
 
-Install from [http://www.dartlang.org/eclipse/update/channels/stable/](http://www.dartlang.org/eclipse/update/channels/stable/)
+### Dart Tools
+
+Dart plugins exist for many commonly used IDEs. See <https://www.dartlang.org/tools>
