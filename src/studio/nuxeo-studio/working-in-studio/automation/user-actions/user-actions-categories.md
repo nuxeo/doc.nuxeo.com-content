@@ -500,7 +500,7 @@ This user action category is not yet fully implemented in Studio (available sinc
 
 Technical name: `CONTENT_VIEW_ACTIONS`
 
-![]({{file name='cv_actions.png' space='nxdoc60' page='content-views-display'}})
+![]({{file name='cv_actions.png' space='nxdoc60' page='content-views-display'}} ?w=650,border=true)
 
 {{! /multiexcerpt}}
 
