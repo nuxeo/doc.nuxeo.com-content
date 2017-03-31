@@ -327,7 +327,7 @@ If you refresh several times your project in the SDK server, you will see `myTes
 
 Now, we need to replace this static result by a dynamic one that will be the list of `$idWorkspace_validator` where the user is referenced. But when the `getGroupsForUser`method is called, no Session on the Core Repository is available as the user is not yet connected. You will need to explicitly switch to a privileged user.
 
-Here you can find [the project ready to use]({{file name='test-computed-group-static.zip' space='nxdoc56' page='implementing-local-groups-or-roles-using-computed-groups'}}).
+Here you can find [the project ready to use]({{file name='test-computed-group-static.zip' space='nxdoc' page='how-to-implement-local-groups-or-roles-using-computed-groups'}}).
 
 #### CoreInstance.doPrivileged
 
