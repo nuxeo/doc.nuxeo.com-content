@@ -180,7 +180,10 @@ Once you are all set, you can navigate to the View Designer application to custo
 7. Find the description's element and delete it.
 8. Click on Save to keep your changes.
 
-You now have a document type ready to be used on your Web UI interface, the last thing that you need is an icon to find it easily in your creation popup window.
+You should end up with something like this:
+![]({{file name='main-view-contract-vd.png'}} ?w=350,border=true)
+
+You now have a document type ready to be used on your Web UI interface, the last thing that you need is an icon to easily find your document type in your instance.
 
 ### Create a Document Type Icon
 To do so, you need to go on the **Resources** tab
@@ -190,12 +193,17 @@ To do so, you need to go on the **Resources** tab
 4. In the **doctypes** click on the **Upload** button (ICON) and select your image.
   {{#> callout type='note' }}
   You have to respect the following folder structure, and name the icon as your document type in order to display the icon.
+  ![]({{file name='tree-structure-icon-contract.png'}} ?w=250,border=true)
+  {{/callout}}
+  {{#> callout type='warning' }}
+  Your image needs to be in .svg format.
   {{/callout}}
 
 You can now deploy your project and see what it looks like!
 
+![]({{file name='contract-web-ui.png'}} ?w=350,border=true)
 
-
+* * *
 
 {{#> callout type='note' }}
 For more information about customizing and deployig Web UI, please check the [Customization Tutorial]({{page page='web-ui-customization-tutorial'}}).
