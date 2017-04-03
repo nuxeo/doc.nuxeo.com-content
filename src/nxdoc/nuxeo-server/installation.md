@@ -266,7 +266,6 @@ Installing the Nuxeo Platform is done in a few steps:
     *   [Installing the Nuxeo Platform on Windows]({{page page='installing-the-nuxeo-platform-on-windows'}})
     *   [Installing the Nuxeo Platform on Mac OS]({{page page='installing-the-nuxeo-platform-on-mac-os'}})
     *   [Deploying Nuxeo on Amazon AWS]({{page page='deploying-nuxeo-on-amazon-aws'}})
-    *   [Deploying Nuxeo on CloudFoundry]({{page page='deploying-nuxeo-on-cloudfoundry'}})
     *   [Deploying as a Standard Static WAR]({{page page='deploying-as-a-standard-static-war'}})
 4.  Run the [Configuration Wizard]({{page page='configuration-wizard'}}) (not in the case of a standard static war).
 
