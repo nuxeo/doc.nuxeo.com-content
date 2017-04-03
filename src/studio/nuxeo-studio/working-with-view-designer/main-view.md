@@ -1,5 +1,5 @@
 ---
-title: Main View/Editor
+title: Main View
 review:
     comment: ''
     date: ''
@@ -15,31 +15,30 @@ This feature is available for target platforms Nuxeo Platform LTS 2016 and above
 
 On this main view two editors are available the Code Editor and the Visual Editor.
 
-
 ## Code Editor
 
 The code editor mode is an HTML editor to let you inspect every elements and directly modify your layout. You can delete, modify, update, copy/paste, dragn'n'drop every elements that you want.
 
-The HTML mode includes a few helpers such as auto-completion for document properties, tasks properties, and javascript functions.
+The HTML mode includes a few helpers such as auto-completion for document properties, tasks properties, and javascript functions. The annotation `@doctype` defined in the `<script>` section defined the auto-completion of the editor. 
 
-Don't forget to save your modifications, by clicking on the Save button (ICON) at the top right hand corner of your application.
+Don't forget to save your modifications, by clicking on the Save button ![]({{file name='save-action-vd.png'}} ?w=20,border=true) at the top right hand corner of your application.
 
-SCREENSHOT
+![]({{file name='code-editor-vd.png'}} ?w=650,border=true)
 
 ## Visual Editor
 
 On the Visual Editor you will be able to drag'n'drop elements from the catalog on the right and order them as you wish.
 
-If you click on a particular element you will have the possibility to edit its default properties, the label, etc. on the [properties catalog]({{page page='properties-catalog'}}) on the right. ALSO available HTML side
+If you click on a particular element you will have the possibility to edit its default properties, the label, etc. on the [properties catalog]({{page page='properties-catalog'}}) on the right. This is also available on the HTML side.
 
 **To delete an element**, you can select it on the visual editor and click on the delete icon next to it.
 
-Don't forget to save your modifications, by clicking on the Save button (ICON) at the top right hand corner of your application.
+Don't forget to save your modifications, by clicking on the Save button ![]({{file name='save-action-vd.png'}} ?w=20,border=true) at the top right hand corner of your application.
 
-SCREENSHOT
+![]({{file name='visual-editor-vd.png'}} ?w=650,border=true)
 
 ## Revert to Default View
 
 This action enables you to discard all the modifications that you have done on a layout and revert to the default view.
 
-To do so, click on the revert to default view (ICON) button and confirm your choice on the popup confirmation window. Your layout is back as its initial state, before you click on the CUSTOMIZE button.
+To do so, click on the revert to default view ![]({{file name='revert-action-vd.png'}} ?w=20,border=true) button and confirm your choice on the popup confirmation window. Your layout is back as its initial state, before you click on the CUSTOMIZE button.

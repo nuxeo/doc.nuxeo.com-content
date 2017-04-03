@@ -15,7 +15,7 @@ If you have chosen the Web UI as your default interface you will need to become 
 
 View Designer application is integrated with Nuxeo Studio. and brings with it all the configuration elements needed to quickly and easily create a custom WebUI interface, using Nuxeo Elements and HTML syntax.
 
-SCREENSHOT
+![]({{file name='view-designer.png'}} ?w=600,border=true)
 
 View Designer is for everyone, whether you are a tech-savvy or not. On one hand, View Designer is for non-technical users: it provides an intuitive interface to build a customized application without having any developments skills. If you’re familiar with Nuxeo Studio, then the View Designer will be as easy to master. On the other hand, View Designer is also oriented toward developers because all the layouts are based upon HTML and Nuxeo Elements, so front-end developers are able to create a creative and complex layout.
 
@@ -32,7 +32,6 @@ We divided the documentation in 3 pages to represent the 3 main sections of the 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - HOW TO
--
 
 {{/panel}}
 </div>

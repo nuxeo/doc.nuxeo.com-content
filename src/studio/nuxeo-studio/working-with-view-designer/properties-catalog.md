@@ -26,6 +26,8 @@ The Elements section lists all the elements depending on the document type that 
 
 In every schemas you will find the associated properties and the field format. Two modes are available: View and Edit that you can drag'n'drop in the main view to use it.
 
+![]({{file name='elements-catalog.png'}} ?w=250,border=true)
+
 ### Search
 
 The Search will let you search in all the elements libraries.
@@ -43,4 +45,4 @@ You also have access to Polymer elements and the ones that you have created.
 
 This tab display the properties of the field selected on the editor. Depending of the field selected the properties will not be the same.
 
-SCREENSHOT
+![]({{file name='properties-catalog.png'}} ?w=250,border=true)
