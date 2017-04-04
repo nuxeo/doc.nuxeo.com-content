@@ -795,6 +795,25 @@ GET http://NUXEO_SERVER/nuxeo/api/v1/search/pp/aggregates_1/execute
 }
 ```
 
+{{/panel}}{{#> panel type='code' heading='Using a parameter'}}
+
+```
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/pp/aggregates_1/execute?nature_agg=%5B%22mynaturevalue1%22%5D
+```
+
+{{/panel}}{{#> panel type='code' heading='Using a multi-valued parameter'}}
+
+```
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/pp/default_search/execute?dc_creator_agg=%5B%22user1%22,%22user2%22%5D
+```
+
+{{/panel}}
+{{#> panel type='code' heading='Using several parameters'}}
+
+```
+GET http://NUXEO_SERVER/nuxeo/api/v1/search/pp/default_search/execute?dc_creator_agg=%5B%22user1%22,%22user2%22%5D&dc_nature_agg=%5B%22mynaturevalue1%22%5D
+```
+
 {{/panel}}
 
 ### Managing Saved Searches
