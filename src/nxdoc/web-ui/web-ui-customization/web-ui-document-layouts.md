@@ -153,7 +153,7 @@ window.nuxeo.importBlacklist = [
 
 When you start your application, the first thing that you probably want to do is to create your own document type to fit your needs. You can create as many document types as you want with Nuxeo Studio and the View Designer.
 
-In this how-to you will learn how to create a document type layout with View Designer from a document type created in Nuxeo Studio.
+In this how-to you will learn how to create a document type layout with View Designer from a document type created in Nuxeo Studio and how to add a icon to it.
 
 ### Prerequisites
 
@@ -188,13 +188,11 @@ You now have a document type ready to be used on your Web UI interface, the last
 ### Create a Document Type Icon
 To do so, you need to go on the **Resources** tab
 1. Click on the **UI** folder
-2. Click on the **Create** button (ICON), select a folder and name it **Images**
+2. Click on the **Create** button, select a folder and name it **Images**
 3. In this **Images** folder, create a `doctypes`folder.
-4. In the **doctypes** click on the **Upload** button (ICON) and select your image.
-  {{#> callout type='note' }}
+4. In the **doctypes** click on the **Upload** button and select your image. <br/>
   You have to respect the following folder structure, and name the icon as your document type in order to display the icon.
-  ![]({{file name='tree-structure-icon-contract.png'}} ?w=250,border=true)
-  {{/callout}}
+  ![]({{file name='tree-structure-icon-contract.png'}} ?w=200,border=true)
   {{#> callout type='warning' }}
   Your image needs to be in .svg format.
   {{/callout}}
@@ -203,12 +201,15 @@ You can now deploy your project and see what it looks like!
 
 ![]({{file name='contract-web-ui.png'}} ?w=350,border=true)
 
-* * *
-
-{{#> callout type='note' }}
-For more information about customizing and deployig Web UI, please check the [Customization Tutorial]({{page page='web-ui-customization-tutorial'}}).
-{{/callout}}
-
 {{#> callout type='warning' }}
 The customization of document creation in Web UI is subject to change in the upcoming versions.
 {{/callout}}
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+- [Customization Tutorial]({{page page='web-ui-customization-tutorial'}}).
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>
