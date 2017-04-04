@@ -238,34 +238,6 @@ Nuxeo stores its data in a MongoDB database under the `default` collection. The 
 
 By default MongoDB doesn't require authentication, but you can [enable the client access control](https://docs.mongodb.org/manual/tutorial/enable-authentication/) and create a user with the `dbAdmin` role.
 
-{{#> callout type='warning' heading='User Creation with Nuxeo 8.1 and MongoDB 3.x'}}
-
-If you are using a version 3.x of MongoDB on Nuxeo 8.1, you have to change the authentication schema before creating the users in the database. In these MongoDB versions, the default authentication mechanism is SCRAM-SHA-1 which is not supported by Nuxeo 8.1 where the MongoDB driver only supports MONGO-CR.
-
-Note that if you are upgrading from a MongoDB 2.8 databases, you will be fine as the MONGO-CR credentials were previously created.
-
-**For new MongoDB instance** use the following commands:
-
-```js
-mongo
-use admin
-db.system.version.insert({ "_id" : "authSchema", "currentVersion" : 3 })
-```
-
-**For existing MongoDB instance with users,** you need to remove the user first (make sure you don't need them before) then change the authentication schema using the following commands:
-
-```js
-mongo
-use admin
-db.system.users.remove({})
-db.system.version.remove({})
-db.system.version.insert({ "_id" : "authSchema", "currentVersion" : 3 })
-```
-
-Then restart the server and recreate users.
-
-{{/callout}}
-
 ## Nuxeo Configuration
 
 To activate MongoDB document storage, add the `mongodb` template to your existing list of templates (`nuxeo.templates`) in `nuxeo.conf`.
