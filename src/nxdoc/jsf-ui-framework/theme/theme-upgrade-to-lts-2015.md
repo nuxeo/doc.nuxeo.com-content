@@ -456,7 +456,7 @@ Contributions that were needed on all pages used to be added to the `nuxeo5 incl
 </extension>
 <extension target="org.nuxeo.ecm.platform.WebResources" point="resources">
   <resource name="seamjsf-monitor.js">
-    <path>scripts/seamjsf-monitor.js</path>
+    <uri>scripts/seamjsf-monitor.js</uri>
   </resource>
 </extension>
 ```
