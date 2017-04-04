@@ -189,7 +189,7 @@ Nuxeo stores its information in the configured&nbsp;database, under the&nbsp;`de
 
 By default MongoDB doesn't require authentication, you can [enable the client access control](https://docs.mongodb.org/manual/tutorial/enable-authentication/) and create a user with the `dbAdmin` role.
 
-{{#> callout type='warning' heading='Users creation in versions 3.x and Nuxeo < LTS2015-HF07'}}
+{{#> callout type='warning' heading='Users creation in versions 3.x and Nuxeo below LTS2015-HF07'}}
 
 If you are using a version 3.x of MongoDB, you have to change the authentication schema before creating the users in the database. In those versions, the default authentication mechanism is SCRAM-SHA-1 which is not supported by Nuxeo < LTS 2015 HF07 where the MongoDB driver only supports MONGO-CR.
 
