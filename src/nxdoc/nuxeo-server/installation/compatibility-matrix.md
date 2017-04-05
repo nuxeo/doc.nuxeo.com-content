@@ -160,7 +160,7 @@ Library: 1.5.2<br />
 Cluster: 1.5.2 to 1.7.x<br/>
 **From 8.10:**<br/>
 Library: 2.3.5<br />
-Cluster: 2.3.x</td>
+Cluster: 2.3.x to 2.4.x</td>
 <td colspan="1">Library: 1.5.2<br />
 Cluster: 1.5.2 to 1.7.x</td>
 <td colspan="1">Library: 1.1.2<br />
