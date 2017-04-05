@@ -137,7 +137,7 @@ Let's plug this application into the Nuxeo instance and change the hardcoded use
     Add a new entry to *Drawer content*:
 
     {{#> callout type='note'}}
-    Depending of your setup, links differ if you generated with [Polymer CLI](https://github.com/Polymer/polymer-cli).
+    Depending on your setup, links differ if you generated with [Polymer CLI](https://github.com/Polymer/polymer-cli).
     {{/callout}}
 
     {{#> panel type='code' heading='src/my-app.html'}}
