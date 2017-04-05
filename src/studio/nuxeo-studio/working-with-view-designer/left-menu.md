@@ -38,12 +38,12 @@ Once customized, layouts are displayed with a bold font and an asterisk. (SCREEN
 
 This tab let you customize your application per "UI areas"
 
-- **Dashboard**: You can customize the default WebUI dashboard and edit the default HTML code to include your custom elements.
-- **Document**: You can add, hide or edit the default document view.
-- **Drawer**: You can modify and organize the menus and submenus displayed in the left panel.
-- **Main Content**: You can integrate new custom pages if you need to display specific information, like access to your profile information, the configuration of cloud services or some kind of specific report.
-- **Actions Slots**: This tab also allows you to create and edit document actions.
-- **Translations**: Upload your messages.json file to add a new language to your platform.
+- **Dashboard**: You can customize the default Web UI dashboard and edit the default HTML code to include your custom elements.
+- **Document**: You can add new document pills. Also, hide and override default document pills.
+- **Drawer**: You can create different types of drawer pages. From generic pages to new search forms or browse pages with determined root path. These will add a new left menu item.
+- **Main Content**: You can integrate new custom pages if you need to display specific information, like access to your profile information, the configuration of cloud services or some kind of specific report. Items can be added to Administration or User Menu.
+- **Actions Slots**: This tab also allows you to create and edit user actions to every existing category/area in Web UI.
+- **Translations**: Mange your messages.json files to add a new language to your platform.
 - **Themes**: You can customize your own theme.
 
 ## Resources Tab
@@ -55,6 +55,6 @@ The Resources tab represents the physical view of the package which is going to 
 **To upload a new file**: select the folder where you want to upload it and then click on the upload button ![]({{file name='upload-file-vd.png'}} ?w=18,border=true). A popup window let you select your document in your local files.
 
 **To create a new file**: select the folder where you want to create it and then click on the create button ![]({{file name='create-file-vd.png'}} ?w=18,border=true). A popup window ask you if you want to create an Empty File, an Element or a folder.
-If you select an Element, the architecture is already ready to use.
+If you select an Element, an base template will generate a boilerplate template to start from.
 
 ![]({{file name='popup-creation-element-vd.png'}} ?w=350,border=true)

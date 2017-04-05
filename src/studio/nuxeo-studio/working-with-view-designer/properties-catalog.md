@@ -19,27 +19,27 @@ The right panel displays the element catalog which can be integrated in the docu
 
 ### Elements by fields
 
-The Elements section lists all the elements depending on the document type that you are currently working on, with its:
+The Elements section lists all the elements depending on the annotation defined for the element property that you are currently working on. If using a `@doctype` annotation this will present all:
 - Herited schemas
 - Custom properties
 - Custom external schemas
 
-In every schemas you will find the associated properties and the field format. Two modes are available: View and Edit that you can drag'n'drop in the main view to use it.
+In every schemas you will find the associated properties and the field format. Three modes are available by now: View, Edit and Column that you can drag'n'drop in the main view to use it.
 
 ![]({{file name='elements-catalog.png'}} ?w=250,border=true)
 
 ### Search
 
-The Search will let you search in all the elements libraries.
+The Search will let you search in all the elements catalogs.
 
 Under the search you have the list of all the elements libraries that you have access to.
 Nuxeo Elements has of 3 sets of libraries :
 
 - **Nuxeo Core Elements** represents the core elements to interact with the Nuxeo repository for  the connection, searches, operations, etc.
-- **Nuxeo UI Elements** gather all the interface elements used in the different layouts: the document previewer, datepicker, user / group permission tab among others.
+- **Nuxeo UI Elements** gather all the interface elements used in the different layouts: the document previewer, user / group permission tab among others.
 - **Nuxeo Dataviz Elements** allows you to integrate reports as different charts and histograms, used, for example, to create custom dashboards.
 
-You also have access to Polymer elements and the ones that you have created.
+You also have access to Iron and Paper catalogs and the ones that you have created.
 
 ## Properties
 
