@@ -155,16 +155,16 @@ Information about how to write a template is given in the [custom widget templat
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
 
-*   [Standard Widget Types]({{page page='standard-widget-types'}})
-*   [Custom Widget Types]({{page page='custom-widget-types'}})
-*   [Layout and Widget Modes]({{page page='layout-and-widget-modes'}})
+- [Standard Widget Types]({{page page='standard-widget-types'}})
+- [Custom Widget Types]({{page page='custom-widget-types'}})
+- [Layout and Widget Modes]({{page page='layout-and-widget-modes'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-tos '}}
 
-*   [How to Control the Display Mode of a Widget]({{page page='how-to-control-the-display-mode-of-a-widget'}})
-*   [How to Use a Generic Widget in Layouts]({{page page='how-to-use-a-generic-widget-in-layouts'}})
-*   [How to Refresh the Task Widget on the Summary Tab]({{page page='how-to-refresh-the-task-widget-on-the-summary-tab'}})
-*   [How to Add a New Widget to the Default Summary Layout]({{page page='how-to-add-a-new-widget-to-the-default-summary-layout'}})
-*   [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
+- [How to Control the Display Mode of a Widget]({{page page='how-to-control-the-display-mode-of-a-widget'}})
+- [How to Use a Generic Widget in Layouts]({{page page='how-to-use-a-generic-widget-in-layouts'}})
+- [How to Refresh the Task Widget on the Summary Tab]({{page page='how-to-refresh-the-task-widget-on-the-summary-tab'}})
+- [How to Add a New Widget to the Default Summary Layout]({{page page='how-to-add-a-new-widget-to-the-default-summary-layout'}})
+- [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
 
 {{/panel}}</div></div>
