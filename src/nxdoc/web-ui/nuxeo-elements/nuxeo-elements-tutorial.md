@@ -29,6 +29,10 @@ improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 
 ## Scaffolding
 
+{{#> callout type='note'}}
+We recommend you to use [Nuxeo CLI]({{page page='nuxeo-cli'}}) for scaffolding. Using this setup, you'll not have to take care about packaging and deploying your application in Nuxeo. Use [Polymer CLI](https://github.com/Polymer/polymer-cli) only if you know that your application will live outside the Nuxeo Server.
+{{/callout}}
+
 ### As a Nuxeo Bundle
 
 1.  Install Nuxeo CLI and scaffold the project:
@@ -132,9 +136,13 @@ Let's plug this application into the Nuxeo instance and change the hardcoded use
 
     Add a new entry to *Drawer content*:
 
+    {{#> callout type='note'}}
+    Depending on your setup, links differ if you generated with [Polymer CLI](https://github.com/Polymer/polymer-cli).
+    {{/callout}}
+
     {{#> panel type='code' heading='src/my-app.html'}}
     ```xml
-    <a name="doc-reader" href="/doc-reader">Document Reader</a>
+    <a name="doc-reader" href="/#doc-reader">Document Reader</a>
     ```
     {{/panel}}
 
