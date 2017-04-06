@@ -158,9 +158,9 @@ In this how-to you will learn how to create a document type layout with View Des
 ### Prerequisites
 
 - A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Nuxeo Studio
-- Web UI defined as your default user interface
+- The Web UI addon installed on your instance
 
-Once you are all set, you can navigate to the View Designer application to customize our layouts.
+Once you are all set, you can navigate to the View Designer application to customize your layouts.
 
 ### Layout Creation
 
@@ -183,11 +183,12 @@ Once you are all set, you can navigate to the View Designer application to custo
 You should end up with something like this:
 ![]({{file name='main-view-contract-vd.png'}} ?w=350,border=true)
 
-To display your document type with every translations correctly
+
+The last step is to add your labels to your translations file to display them correctly in the UI. To do so:
 1. Click on the **UI** table
 2. Click on **Translations**
-3. Use the default or create your own language
-4. Create a new entry in the json with key `label.document.type.<document type name>` and the document name as value.
+3. Use the default `messages.json` or create your own language.
+4. Create a new entry in the JSON file with key `label.document.type.<document type name>` and the document type name as value. Here it is `"label.document.type.contract":"Contract"`. 
 
 You now have a document type ready to be used on your Web UI interface, the last thing that you need is an icon to easily find your document type in your instance.
 
