@@ -170,7 +170,7 @@ Once you are all set, you can navigate to the View Designer application to custo
   {{#> callout type='tip' }}
   It automatically creates the nuxeo-contract-create-layout.html file, scaffolding
     - The title and description fields
-    - Every custom property linked to the document type
+    - Every custom schema property linked to the document type
   {{/callout}}
 4. In the catalog properties on the left, select **File > content:blob > view** and drag'n'drop the element in the main view.
 5. Click on Save.
@@ -182,6 +182,12 @@ Once you are all set, you can navigate to the View Designer application to custo
 
 You should end up with something like this:
 ![]({{file name='main-view-contract-vd.png'}} ?w=350,border=true)
+
+To display your document type with every translations correctly
+1. Click on the **UI** table
+2. Click on **Translations**
+3. Use the default or create your own language
+4. Create a new entry in the json with key `label.document.type.<document type name>` and the document name as value.
 
 You now have a document type ready to be used on your Web UI interface, the last thing that you need is an icon to easily find your document type in your instance.
 
