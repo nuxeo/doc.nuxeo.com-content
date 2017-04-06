@@ -357,6 +357,13 @@ The Nuxeo Platform provides a command to automatically install all the available
 
 The parameter `--accept=true` automatically replies `yes` to any prompt, which makes the hotfix installation smoother.
 
+{{#> callout type='warning' }}
+While installing hotfixes, you will see the following message, but you can ignore it and continue.  
+```
+Use of the <copy /> command on JAR files is not recommended, prefer using <update /> command to ensure a safe rollback. (nuxeo-launcher-8.10-HF01-jar-with-dependencies.jar)
+```
+{{/callout}}
+
 ### Installing Hotfixes from the Update Center
 
 You can also download and install hotfixes from the **Update Center** in the **Admin** tab.The installation of hotfixes requires the server to be restarted to complete the installation: follow the manual installation and configuration steps required by the installed hotfixes before you restart your server.
