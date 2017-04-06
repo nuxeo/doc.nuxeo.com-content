@@ -149,10 +149,74 @@ window.nuxeo.importBlacklist = [
 ];
 ```
 
-{{#> callout type='note' }}
-For more information about customizing and deployig Web UI, please check the [Customization Tutorial]({{page page='web-ui-customization-tutorial'}}).
-{{/callout}}
+## How to Define a New Document Type Layout with the View Designer
+
+When you start your application, the first thing that you probably want to do is to create your own document type to fit your needs. You can create as many document types as you want with Nuxeo Studio and the View Designer.
+
+In this how-to you will learn how to create a document type layout with View Designer from a document type created in Nuxeo Studio and how to add a icon to it.
+
+### Prerequisites
+
+- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Nuxeo Studio
+- The Web UI addon installed on your instance
+
+Once you are all set, you can navigate to the View Designer application to customize your layouts.
+
+### Layout Creation
+
+1. Go on the **Layout** tab on the left menu
+2. Under **Local Types** you will find your Contract document type
+3. Five layouts are available for the customization, let's start with the **Create** layout, click on the **CUSTOMIZE** button in the editor.
+  {{#> callout type='tip' }}
+  It automatically creates the nuxeo-contract-create-layout.html file, scaffolding
+    - The title and description fields
+    - Every custom schema property linked to the document type
+  {{/callout}}
+4. In the catalog properties on the left, select **File > content:blob > view** and drag'n'drop the element in the main view.
+5. Click on Save.
+  You now have an upload button on your document layout.
+6. At the top right-hand corner of the View Designer, switch the editor to code editor.
+    You are now in the HTML mode of the View Designer and you can see the element that you just drag'n'droped on the other editor.
+7. Find the description's element and delete it.
+8. Click on Save to keep your changes.
+
+You should end up with something like this:
+![]({{file name='main-view-contract-vd.png'}} ?w=350,border=true)
+
+
+The last step is to add your labels to your translations file to display them correctly in the UI. To do so:
+1. Click on the **UI** table
+2. Click on **Translations**
+3. Use the default `messages.json` or create your own language.
+4. Create a new entry in the JSON file with key `label.document.type.<document type name>` and the document type name as value. Here it is `"label.document.type.contract":"Contract"`. 
+
+You now have a document type ready to be used on your Web UI interface, the last thing that you need is an icon to easily find your document type in your instance.
+
+### Create a Document Type Icon
+To do so, you need to go on the **Resources** tab
+1. Click on the **UI** folder
+2. Click on the **Create** button, select a folder and name it **Images**
+3. In this **Images** folder, create a `doctypes`folder.
+4. In the **doctypes** click on the **Upload** button and select your image. <br/>
+  You have to respect the following folder structure, and name the icon as your document type in order to display the icon.
+  ![]({{file name='tree-structure-icon-contract.png'}} ?w=200,border=true)
+  {{#> callout type='warning' }}
+  Your image needs to be in .svg format.
+  {{/callout}}
+
+You can now deploy your project and see what it looks like!
+
+![]({{file name='contract-web-ui.png'}} ?w=350,border=true)
 
 {{#> callout type='warning' }}
 The customization of document creation in Web UI is subject to change in the upcoming versions.
 {{/callout}}
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+- [Customization Tutorial]({{page page='web-ui-customization-tutorial'}}).
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>
