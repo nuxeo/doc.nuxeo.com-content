@@ -153,7 +153,7 @@ In **Customization**, go to **Page Providers**, click on **New** and name it `Se
 
 **The full text search:**
 ![]({{file name='full-text-vd.png'}} ?w=250, border=true)
-1. Next to **Predicates** clik on **Add**.
+1. Next to **Predicates** click on **Add**.
   A popup window appears.
 1. Click on **Edit binding** and select `schema:system` > `fulltext`
 
