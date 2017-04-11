@@ -133,11 +133,11 @@ It is not possible to customize the screen showing search results in the main co
 
 {{/callout}}
 
-## How to Create a New Search Screen in View Designer
+## HOWTO: Create a New Search Screen in View Designer
 
 After having created your own [document type]({{page page='web-ui-document-layouts'}}#how-to-define-a-new-document-type-layout-with-the-view-designer) you will probably want to create your own search.
 
-In this how to we will learn how to create a new search with an icon in the left menu. The search will be compose of a full text search, a search by date range, a search by owners and finally by tags.
+We will learn how to create a new search with an icon in the left menu. The search will be compose of a full text search, a search by date range, a search by owners and finally by tags.
 
 ### Prerequisites
 - A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Nuxeo Studio
