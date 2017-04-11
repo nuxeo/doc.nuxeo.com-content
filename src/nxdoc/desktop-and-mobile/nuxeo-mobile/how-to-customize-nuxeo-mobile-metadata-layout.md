@@ -1,5 +1,5 @@
 ---
-title: HOWTO: Customize Nuxeo Mobile Metadata Layout
+title: "HOWTO: Customize Nuxeo Mobile Metadata Layout"
 review:
     comment: ''
     date: '2017-04-10'
