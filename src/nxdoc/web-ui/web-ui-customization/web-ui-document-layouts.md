@@ -149,11 +149,11 @@ window.nuxeo.importBlacklist = [
 ];
 ```
 
-## How to Define a New Document Type Layout with the View Designer
+## HOWTO: Define a New Document Type Layout with the View Designer
 
 When you start your application, the first thing that you probably want to do is to create your own document type to fit your needs. You can create as many document types as you want with Nuxeo Studio and the View Designer.
 
-In this how-to you will learn how to create a document type layout with View Designer from a document type created in Nuxeo Studio and how to add a icon to it.
+We will learn how to create a document type layout with View Designer from a document type created in Nuxeo Studio and how to add a icon to it.
 
 ### Prerequisites
 
