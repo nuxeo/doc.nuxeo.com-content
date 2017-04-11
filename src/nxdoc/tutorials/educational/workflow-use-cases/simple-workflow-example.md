@@ -2,7 +2,7 @@
 title: Simple Workflow Example
 review:
     comment: ''
-    date: '2017-01-24'
+    date: '2017-04-11'
     status: ok
 labels:
     - lts2016-ok
@@ -20,257 +20,6 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/KhTF'
     source_link: /display/NXDOC/Simple+Workflow+Example
 tree_item_index: 100
-history:
-    -
-        author: Manon Lumeau
-        date: '2016-01-18 16:06'
-        message: 'eplace "Write" by "Edit"  '
-        version: '50'
-    -
-        author: Manon Lumeau
-        date: '2015-11-06 14:51'
-        message: ''
-        version: '49'
-    -
-        author: Manon Lumeau
-        date: '2015-09-16 08:58'
-        message: ''
-        version: '48'
-    -
-        author: Manon Lumeau
-        date: '2015-09-16 08:57'
-        message: Reverted from v. 45
-        version: '47'
-    -
-        author: Manon Lumeau
-        date: '2015-09-16 08:57'
-        message: ''
-        version: '46'
-    -
-        author: Manon Lumeau
-        date: '2015-09-16 08:56'
-        message: ''
-        version: '45'
-    -
-        author: Manon Lumeau
-        date: '2015-02-26 15:08'
-        message: ''
-        version: '44'
-    -
-        author: Manon Lumeau
-        date: '2015-02-26 14:49'
-        message: ''
-        version: '43'
-    -
-        author: Manon Lumeau
-        date: '2015-02-26 14:48'
-        message: ''
-        version: '42'
-    -
-        author: Manon Lumeau
-        date: '2015-02-26 14:02'
-        message: ''
-        version: '41'
-    -
-        author: Manon Lumeau
-        date: '2015-02-26 13:51'
-        message: ''
-        version: '40'
-    -
-        author: Manon Lumeau
-        date: '2015-02-26 13:13'
-        message: ''
-        version: '39'
-    -
-        author: Manon Lumeau
-        date: '2015-02-26 11:13'
-        message: ''
-        version: '38'
-    -
-        author: Manon Lumeau
-        date: '2015-02-26 10:52'
-        message: ''
-        version: '37'
-    -
-        author: Manon Lumeau
-        date: '2015-02-26 10:40'
-        message: ''
-        version: '36'
-    -
-        author: Manon Lumeau
-        date: '2015-02-26 09:46'
-        message: ''
-        version: '35'
-    -
-        author: Manon Lumeau
-        date: '2015-02-25 17:34'
-        message: ''
-        version: '34'
-    -
-        author: Manon Lumeau
-        date: '2015-02-25 17:19'
-        message: ''
-        version: '33'
-    -
-        author: Manon Lumeau
-        date: '2015-02-25 17:16'
-        message: ''
-        version: '32'
-    -
-        author: Manon Lumeau
-        date: '2015-02-25 16:21'
-        message: ''
-        version: '31'
-    -
-        author: Manon Lumeau
-        date: '2015-02-25 16:06'
-        message: ''
-        version: '30'
-    -
-        author: Manon Lumeau
-        date: '2015-02-25 14:49'
-        message: ''
-        version: '29'
-    -
-        author: Manon Lumeau
-        date: '2015-02-25 14:46'
-        message: ''
-        version: '28'
-    -
-        author: Manon Lumeau
-        date: '2015-02-25 14:10'
-        message: ''
-        version: '27'
-    -
-        author: Manon Lumeau
-        date: '2015-02-25 14:09'
-        message: ''
-        version: '26'
-    -
-        author: Manon Lumeau
-        date: '2015-02-25 13:55'
-        message: ''
-        version: '25'
-    -
-        author: Manon Lumeau
-        date: '2014-12-10 16:36'
-        message: ''
-        version: '24'
-    -
-        author: Harlan Brown
-        date: '2013-10-03 17:42'
-        message: ''
-        version: '23'
-    -
-        author: Harlan Brown
-        date: '2013-10-03 16:24'
-        message: ''
-        version: '22'
-    -
-        author: Solen Guitter
-        date: '2013-09-11 12:26'
-        message: ''
-        version: '21'
-    -
-        author: Solen Guitter
-        date: '2013-09-11 12:25'
-        message: Updated screenshots
-        version: '20'
-    -
-        author: Solen Guitter
-        date: '2013-09-11 12:17'
-        message: ''
-        version: '19'
-    -
-        author: Solen Guitter
-        date: '2013-09-09 18:49'
-        message: ''
-        version: '18'
-    -
-        author: Alain Escaffre
-        date: '2013-05-06 01:28'
-        message: ''
-        version: '17'
-    -
-        author: Alain Escaffre
-        date: '2013-05-06 01:28'
-        message: ''
-        version: '16'
-    -
-        author: Bertrand Chauvin (perso)
-        date: '2013-04-30 15:12'
-        message: Formatting tentative
-        version: '15'
-    -
-        author: Bertrand Chauvin (perso)
-        date: '2013-04-30 14:51'
-        message: Added pre requisites
-        version: '14'
-    -
-        author: Bertrand Chauvin (perso)
-        date: '2013-04-30 14:44'
-        message: ''
-        version: '13'
-    -
-        author: Bertrand Chauvin (perso)
-        date: '2013-04-30 14:36'
-        message: ''
-        version: '12'
-    -
-        author: Bertrand Chauvin (perso)
-        date: '2013-04-30 14:36'
-        message: ''
-        version: '11'
-    -
-        author: Bertrand Chauvin (perso)
-        date: '2013-04-30 14:33'
-        message: ''
-        version: '10'
-    -
-        author: Bertrand Chauvin (perso)
-        date: '2013-04-30 14:30'
-        message: ''
-        version: '9'
-    -
-        author: Bertrand Chauvin (perso)
-        date: '2013-04-29 18:01'
-        message: ''
-        version: '8'
-    -
-        author: Bertrand Chauvin (perso)
-        date: '2013-04-29 17:59'
-        message: ''
-        version: '7'
-    -
-        author: Bertrand Chauvin (perso)
-        date: '2013-04-29 17:59'
-        message: ''
-        version: '6'
-    -
-        author: Bertrand Chauvin (perso)
-        date: '2013-04-29 17:11'
-        message: Headings definition
-        version: '5'
-    -
-        author: Bertrand Chauvin (perso)
-        date: '2013-04-27 16:39'
-        message: Formatting
-        version: '4'
-    -
-        author: Bertrand Chauvin (perso)
-        date: '2013-04-27 16:31'
-        message: Formatting
-        version: '3'
-    -
-        author: Bertrand Chauvin (perso)
-        date: '2013-04-26 16:48'
-        message: Copy from my initial word document
-        version: '2'
-    -
-        author: Alain Escaffre
-        date: '2013-04-23 19:08'
-        message: ''
-        version: '1'
 
 ---
 ## Use Case
@@ -294,6 +43,18 @@ The following operations have to be done in your Nuxeo Platform before following
 *   Create a user group having for id "Internal_Lawyers".
 *   Populate the "Internal_Lawyers" group with at least one user.
 *   Create the user that will launch the workflow.
+
+{{#> callout type='info' }}
+
+Web UI and JSF UI
+
+This tutorial gives all the necessary steps to build the custom workflow template for JSF UI and Web UI.
+* **Web UI** uses forms and layouts design from **View Designer**. The workflow template design, the task description, workflow variables and all the business logic is hold by Nuxeo Studio.
+* **JSF UI** is fully based upon **Nuxeo Studio**
+* The workflow template design, the task description, workflow variables and all the business logic is hold by Nuxeo Studio for both interfaces
+
+{{/callout}}
+
 
 ## Implementation Steps
 
@@ -368,9 +129,11 @@ The form lets the user edit some of the workflow's variables (either at workflow
 
 #### Configuring the Form
 
+##### With Nuxeo Studio and JSF UI
+
 1.  Go back to the &ldquo;Technical validation&rdquo; node.
 2. Click on the **Variables** tab.
-   Add the hoo_comment to the right collumn.
+   Add the hoo_comment to the right column.
    ![]({{file name='Simple_Workflow_006_1.png'}} ?w=600,border=true)
 3.  Click on the **Form** tab.
     A form like the one to edit a document's layout is displayed.
@@ -379,12 +142,32 @@ The form lets the user edit some of the workflow's variables (either at workflow
     *   Change its title for "Head of operations comment".
     *   Select the widget type "Textarea".![](https://www.lucidchart.com/publicSegments/view/54eef75e-7264-45c6-a6ff-48240a004b79/image.png ?w=600,border=true)
 
+##### With View Designer and Web UI
+
+1.  Go back to the &ldquo;Technical validation&rdquo; node.
+2. Click on the **Variables** tab.
+   Add the hoo_comment to the right column.
+   ![]({{file name='Simple_Workflow_006_1.png'}} ?w=600,border=true)
+3.  Save you work
+4.  Click on the **Open View Designer** link.
+   ![]({{file name='link_view_designer.png'}} ?w=600,border=true)
+5.  In the Layout tab, navigate to "Workflows", then "SalesProposalWorkflow" and click on "Technical validation"
+   ![]({{file name='vd_wf_technical_validation_layout1.png'}} ?w=300,border=true)
+    A  page with the Technical validation task layout is displayed. If there is no layout, click on the "*Customize*" button
+    ![]({{file name='vd_wf_technical_validation_layout2.png'}} ?w=600,border=true)
+5.  Delete the properties displayed in the layout using the bin icon once an element is selected
+    ![]({{file name='vd_wf_technical_validation_layout3.png'}} ?w=300,border=true)
+6.  Add a field for the comment of the user who validates: Drag the &ldquo;hoo_comment&rdquo; field from the workflow variables schema from the element catalogue and drop it on the layout, Using the _Edit mode_
+    ![]({{file name='vd_wf_technical_validation_layout4.png'}} ?w=600,border=true)
+7.  Change its title for "Head of operations comment".
+    ![]({{file name='vd_wf_technical_validation_layout5.png'}} ?w=600,border=true)
+
 #### Setting up the Tasks Buttons
 
-The buttons that are shown on the form are configured on the **Resolution Actions** tab. Two are already available because of the template node you chose. You need to add a third one when the document requires juridical expertise.
+In Nuxeo Studio, the buttons that are shown on the form are configured on the **Resolution Actions** tab. Two are already available because of the template node you chose. You need to add a third one when the document requires juridical expertise.
 
 1.  Click on **Add task button**.
-2.  Fill in the button id and label.
+2.  Fill in the button id `requiere_juridical_advice` and label "Require Juridical Advice?".
 3.  Let the box "Generate the condition for the transition" checked.
  ![]({{file name='Simple_Workflow_008_1.png'}} ?w=450,h=316, border=true)
 
@@ -428,6 +211,9 @@ Drag the &ldquo;Approve&rdquo; node from the node template library and drop it o
     ![](https://www.lucidchart.com/publicSegments/view/54eeffd6-6178-4c1e-997e-28dc0a004b79/image.png ?w=450,h=316,border=true)
 
 #### Configuring the Form
+
+##### With Nuxeo Studio and JSF UI
+
 1. Click on the **Variables** tab and add the "juridical_comment" and "hoo_comment" variables to the right column.
   ![]({{file name='Simple_Workflow_015_1.png'}} ?w=600,border=true)
 2.  Click on the **Form** tab.
@@ -437,6 +223,19 @@ Drag the &ldquo;Approve&rdquo; node from the node template library and drop it o
     ![](https://www.lucidchart.com/publicSegments/view/54ef03a2-27f8-4a9a-8ae3-4c3d0a008a99/image.png ?w=450,border=true)
 5.  Click on **Save**.
     ![](https://www.lucidchart.com/publicSegments/view/54ef1cee-7b44-4fd9-81b1-04a30a00c10c/image.png ?w=450,border=true)
+
+##### With View Designer and Web UI
+
+1. Click on the **Variables** tab and add the "juridical_comment" and "hoo_comment" variables to the right column.
+  ![]({{file name='Simple_Workflow_015_1.png'}} ?w=600,border=true)
+2.  Save you work and click on the **Open View Designer** link.
+3.  In the Layout tab, navigate to "Workflows", then "SalesProposalWorkflow" and click on "Juridical Advice". A  page with the Juridical Advice task layout is displayed. If there is no layout, click on the "*Customize*" button
+4.  Delete the properties displayed in the layout using the bin icon once an element is selected
+5.  Add the &ldquo;juridical_comment&rdquo; field the same way you did with the &ldquo;Technical validation&rdquo; node, setting the property as required.
+![]({{file name='vd_wf_technical_validation_layout6.png'}} ?w=300,border=true)
+6.  Add the &ldquo;hoo_comment&rdquo; as well, but make sure to set it as read only by using the _View_ mode.
+![]({{file name='vd_wf_technical_validation_layout7.png'}} ?w=600,border=true)
+7.  Click on **Save**.
 
 #### Connecting the Nodes
 
@@ -464,22 +263,34 @@ The &ldquo;Approve&rdquo; node will once again be the most appropriate. Pick it 
     We will rather use the &ldquo;Assignees expression&rdquo; field and set this variable as value: &ldquo;`@{Document["dc:creator"]}`&rdquo;. This will return the document creator's username.
     Note that there are no specific rights to grant there as in this situation the document will be heading back to its creator.
     ![](https://www.lucidchart.com/publicSegments/view/54ef2737-eb94-4163-ab8a-38890a00c005/image.png ?w=450,border=true)
-
-#### Configuring the Form
-1. Click on the **Variables** tab and add the "sales_comment" and "hoo_comment" variables to the right column.
-![]({{file name='Simple_Workflow_020_1.png'}} ?w=450,border=true,thumbnail=true)
-
-1.  Click on the **Form** tab.
-2.  Add the &ldquo;sales_comment&rdquo; field as well as the &ldquo;hoo_comment&rdquo; field, the latter still in read only mode.
-    ![](https://www.lucidchart.com/publicSegments/view/54ef1cee-7b44-4fd9-81b1-04a30a00c10c/image.png ?w=450,border=true)
-3.  Rename the task.
+6.  Rename the task.
     Calling the task an approval task could lead to confusion for the salesman that wants to submit an updated proposal. Thus, we will rename it.
     1.  Click on the **Resolution Actions** tab.
     2.  Click on the **Add task button** link.
     3.  We will use &ldquo;submit_updated_proposal&rdquo; as the task button's id and &ldquo;Submit updated proposal&rdquo; as label.    
-    ![]({{file name='Simple_Workflow_022_1.png'}} ?w=450,border=true,thumbnail=true)
+        ![]({{file name='Simple_Workflow_022_1.png'}} ?w=450,border=true,thumbnail=true)
     4.  Check the line corresponding to the &ldquo;approve&rdquo; task button and click on the **Delete** link to remove it.
-        ![](https://www.lucidchart.com/publicSegments/view/54ef1f66-c4cc-4052-84c9-790a0a00c10b/image.png ?w=450,border=true)
+            ![](https://www.lucidchart.com/publicSegments/view/54ef1f66-c4cc-4052-84c9-790a0a00c10b/image.png ?w=450,border=true)
+
+#### Configuring the Form
+
+##### With Nuxeo Studio and JSF UI
+
+1. Click on the **Variables** tab and add the "sales_comment" and "hoo_comment" variables to the right column.
+![]({{file name='Simple_Workflow_020_1.png'}} ?w=450,border=true,thumbnail=true)
+2.  Click on the **Form** tab.
+3.  Add the &ldquo;sales_comment&rdquo; field as well as the &ldquo;hoo_comment&rdquo; field, the latter still in read only mode.
+    ![]({{file name='Simple_Workflow_020_1.png'}} ?w=450,border=true,thumbnail=true)
+
+##### With View Designer and Web UI
+
+1. Click on the **Variables** tab and add the "sales_comment" and "hoo_comment" variables to the right column.
+![]({{file name='Simple_Workflow_020_1.png'}} ?w=450,border=true,thumbnail=true)
+2.  Save you work and click on the **Open View Designer** link.
+3.  In the Layout tab, navigate to "Workflows", then "SalesProposalWorkflow" and click on "Proposal Update". A  page with the Proposal Update task layout is displayed. If there is no layout, click on the "*Customize*" button
+4.  Delete the properties displayed in the layout using the bin icon once an element is selected
+5.  Add the &ldquo;sales_comment&rdquo; field as well as the &ldquo;hoo_comment&rdquo; field, the latter still in read only mode.
+    ![]({{file name='vd_wf_technical_validation_layout9.png'}} ?w=600,border=true)
 
 #### Removing the &ldquo;Approve&rdquo; Transition
 
