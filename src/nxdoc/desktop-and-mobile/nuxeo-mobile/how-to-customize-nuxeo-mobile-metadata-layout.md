@@ -1,5 +1,5 @@
 ---
-title: How to Customize Nuxeo Mobile Metadata Layout
+title: HOWTO: Customize Nuxeo Mobile Metadata Layout
 review:
     comment: ''
     date: '2017-04-10'
@@ -115,7 +115,7 @@ Fill it with a JSON object defining what metadata you want to display, such as:
 
 The field can either reference a property of the document, given its xpath, or a top level property of the JSON representation of a Document (from the REST API), such as `versionLabel` or `state`.
 
-Labels are internationalized, so you can fill `messages.json` files within the View Designer, in the UI > Translations tab. It fallbacks on displaying the label key if no label is found.
+Labels are internationalized, so you can fill `messages.json` files within the View Designer, in the **UI** > **Translations** tab. It fallbacks on displaying the label key if no label is found.
 The Mobile application will load the `messages.json` files from the Nuxeo Server after a successful login.
 
 ![]({{file name='ViewDesignerResources.png'}} ?w=650,border=true)
