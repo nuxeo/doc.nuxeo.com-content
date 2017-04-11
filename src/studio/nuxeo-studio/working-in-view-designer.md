@@ -28,9 +28,16 @@ We divided the documentation in 3 pages to represent the 3 main sections of the 
 - The [Main View]({{page page='main-view'}})
 - The [Properties Catalog]({{page page='properties-catalog'}})
 
+* * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other Elasticsearch Documentation'}}
+
+- [How to Define a New Document Type Layout in View Designer]({{page space='nxdoc' page='web-ui-document-layouts'}}#how-to-define-a-new-document-type-layout-with-the-view-designer)
+- [How to Create a New Search Screen in View Designer]({{page space='nxdoc' page='web-ui-search'}}#how-to-create-a-new-search-screen-in-view-designer)
+
+{{/panel}}
 </div>
 <div class="column medium-6">
+
 </div>
 </div>
