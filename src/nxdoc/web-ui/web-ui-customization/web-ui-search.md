@@ -232,6 +232,7 @@ The next step is to add a button in the left menu to display the search screen.
   - name: contract
   - Label: `Contracts`
   - Icon: `icons:assignment`
+1. Expand the **Elements & Attributes** box and check the **Auto** attribute to automatically execute the search each time a param is changed. 
 1. Save your changes, deploy your Studio project on your instance and you're done :)
 
 ![]({{file name='result-search-screen-vd.png'}} ?w=350,border=true)
