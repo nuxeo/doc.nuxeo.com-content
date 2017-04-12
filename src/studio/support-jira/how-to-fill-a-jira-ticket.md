@@ -215,7 +215,14 @@ Additional Participant Groups
 If you are several Connect users working on the same project, select your support group so other users can participate and get alerts on the ticket.
 See the [Additional Participant Groups section](#field-additional-participant-group).
 
-</td></tr><tr><td colspan="1">
+</td></tr>
+<tr>
+<td>Additional Readonly Groups</td>
+<td>If you need some users to be able able to follow the support issues evolutions without opening or modifying tickets, select the read-only group associated to your support group.
+See the [Additional Readonly Groups section](#field-additional-read-only-group).</td>
+</tr>
+
+<tr><td colspan="1">
 
 Reporter
 
@@ -407,6 +414,12 @@ This field is mainly used for statistic purposes, since it enables us to know wh
 This field enables to share a ticket with a group of users. This is particularly useful for customers with several contacts.
 
 The expected group is one of the groups the user is a member of, which can be seen from the user's profile ([https://jira.nuxeo.com/secure/ViewProfile.jspa](https://jira.nuxeo.com/secure/ViewProfile.jspa)), and usually looks like "support-COMPANYNAME".
+
+## {{> anchor 'field-additional-read-only-group'}} Additional Readonly Groups
+
+This field enables to share a ticket with a group of read-only users. These users would typically be IT managers who only need visibility into support issues and do not need to open or modify support tickets.
+
+Read-only groups names usually look like "support-ro-COMPANYNAME".
 
 ## Additional Recommendations
 

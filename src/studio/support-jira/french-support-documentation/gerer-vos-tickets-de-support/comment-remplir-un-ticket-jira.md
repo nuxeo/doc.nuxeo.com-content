@@ -118,7 +118,7 @@ Suivre les recommandations d&eacute;crites ci-dessous permettra d'avoir un d&eac
 
 {{/callout}}
 
-L'&eacute;cran de cr&eacute;ation est compos&eacute; de deux parties : le premier onglet, **Main fields**, pr&eacute;sente les principaux champs &agrave; renseigner (titre, description, criticit&eacute;, version), tandis que le second, **Advanced fields**, propose les champs optionnels ou de moindre importance pour la r&eacute;solution du ticket.
+L'&eacute;cran de cr&eacute;ation est compos&eacute; de deux parties&nbsp;: le premier onglet, **Main fields**, pr&eacute;sente les principaux champs &agrave; renseigner (titre, description, criticit&eacute;, version), tandis que le second, **Advanced fields**, propose les champs optionnels ou de moindre importance pour la r&eacute;solution du ticket.
 
 {{#> callout type='info' }}
 
@@ -126,13 +126,13 @@ Un ticket doit correspondre &agrave; un probl&egrave;me. N'h&eacute;sitez pas &a
 
 {{/callout}}
 
-**Pour cr&eacute;er un ticket JIRA :**
+**Pour cr&eacute;er un ticket JIRA&nbsp;:**
 
 {{! multiexcerpt name='jira-ticket-creation-steps'}}
 
 1. &nbsp;Dans JIRA, cliquez sur le bouton **Cr&eacute;er une demande**.
 2. S&eacute;lectionnez le projet **Support Nuxeo Connect**.
-3. Remplissez les champs aussi pr&eacute;cis&eacute;ment que possible. Selon le type de ticket que vous cr&eacute;ez, les &eacute;l&eacute;ments suivants peuvent &ecirc;tre n&eacute;cessaires :
+3. Remplissez les champs aussi pr&eacute;cis&eacute;ment que possible. Selon le type de ticket que vous cr&eacute;ez, les &eacute;l&eacute;ments suivants peuvent &ecirc;tre n&eacute;cessaires&nbsp;:
 
     * &eacute;tapes &agrave; suivre pour reproduire le probl&egrave;me,
     * copies d'&eacute;cran,
@@ -154,7 +154,7 @@ Voir le paragraphe [Projet](#field-project).
 
 </td></tr><tr><td colspan="1">Type de demande</td><td colspan="1">
 
-S&eacute;lectionnez quel type de ticket vous souhaitez cr&eacute;er et donc ce que vous souhaitez faire : poser une question, signaler une anomalie ou un probl&egrave;me, etc.
+S&eacute;lectionnez quel type de ticket vous souhaitez cr&eacute;er et donc ce que vous souhaitez faire&nbsp;: poser une question, signaler une anomalie ou un probl&egrave;me, etc.
 Voir le paragraphe [Type de demande](#field-issue-type).
 
 </td></tr><tr><td colspan="1">
@@ -195,7 +195,7 @@ Voir le paragraphe [Nuxeo Connect support](#field-nuxeo-connect-support).
 
 </td></tr><tr><td colspan="1">Instance type</td><td colspan="1">
 
-S&eacute;lectionnez quel type d'instance est concern&eacute; par le ticket : une instance de d&eacute;veloppement, un serveur de production, etc.
+S&eacute;lectionnez quel type d'instance est concern&eacute; par le ticket&nbsp;: une instance de d&eacute;veloppement, un serveur de production, etc.
 Voir le paragraphe [Instance Type](#field-instance-type).
 
 </td></tr><tr><th colspan="2">Advanced fields</th></tr><tr><td colspan="1">
@@ -204,7 +204,7 @@ Environnement
 
 </td><td colspan="1">
 
-Donnez autant d'informations que vous le pouvez sur votre environnement : configuration du serveur, y compris le syst&egrave;me d'exploitation et la base de donn&eacute;es, le navigateur, etc.
+Donnez autant d'informations que vous le pouvez sur votre environnement&nbsp;: configuration du serveur, y compris le syst&egrave;me d'exploitation et la base de donn&eacute;es, le navigateur, etc.
 Voir le paragraphe [Environnement](#field-environment).
 
 </td></tr><tr><td colspan="1">
@@ -225,7 +225,14 @@ Additional Participant groups
 Si vous avez plusieurs utilisateurs Connect travaillant sur le m&ecirc;me projet, s&eacute;lectionnez votre groupe de support pour que les autres utilisateurs puissent recevoir des notifications sur le ticket et participer &agrave; son traitement si besoin est.
 Voir le paragraphe [Additional Participant groups](#field-additional-participant-group).
 
-</td></tr><tr><td colspan="1">
+</td></tr>
+<tr>
+<td>Additional Readonly Groups</td>
+<td>Si vous souhaitez ajouter des utilisateurs qui ont besoin de suivre l'état des tickets sans en créer ou modifier eux-mêmes, sélectionnez le groupe "read-only" associé à votre groupe de support.
+Voir le paragraphe [Additional Readonly Groups](#field-additional-read-only-group).</td>
+</tr>
+
+<tr><td colspan="1">
 
 Reporter
 
@@ -241,7 +248,7 @@ Toutes les demandes de support doivent &ecirc;tre faites dans la cat&eacute;gori
 
 ## {{> anchor 'field-issue-type'}}Type de demande
 
-Ce champ indique le type d'incident li&eacute; au ticket cr&eacute;&eacute;. Les choix propos&eacute;s sont :
+Ce champ indique le type d'incident li&eacute; au ticket cr&eacute;&eacute;. Les choix propos&eacute;s sont&nbsp;:
 
 * [Question](#ticket-question): toute question autour de la plateforme Nuxeo,
 * [Anomalie](#ticket-bug): probl&egrave;me li&eacute; &agrave; la plateforme Nuxeo,
@@ -271,29 +278,29 @@ Si l'anomalie n'est pas reproduite sur le site de d&eacute;mo&nbsp;:
 
 En cas de doute, il vaut mieux privil&eacute;gier le type &laquo; Incident &raquo; pour lequel vous devrez fournir plus de d&eacute;tails.
 
-Si l'on se trouve dans le cas d'un bug, il est essentiel de fournir &agrave; l'&eacute;quipe de support un moyen de reproduction de l'anomalie. Vous devez donc indiquer :
+Si l'on se trouve dans le cas d'un bug, il est essentiel de fournir &agrave; l'&eacute;quipe de support un moyen de reproduction de l'anomalie. Vous devez donc indiquer&nbsp;:
 
 * le sc&eacute;nario pas &agrave; pas pour reproduire le bug&nbsp;;
-* puis les logs du serveur : vous pouvez essayer d'extraire la derni&egrave;re stacktrace dans la console ou le fichier server.log ou encore le message affich&eacute; dans l'interface web&nbsp;;
+* puis les logs du serveur&nbsp;: vous pouvez essayer d'extraire la derni&egrave;re stacktrace dans la console ou le fichier server.log ou encore le message affich&eacute; dans l'interface web&nbsp;;
 * et une capture d'&eacute;cran montrant l'interface web avant/apr&egrave;s si c'est pertinent pour le bug remont&eacute;.
 
 Un seul de ces &eacute;l&eacute;ments peut suffire &agrave; l'identification de l'anomalie et &agrave; sa r&eacute;solution, mais mieux le ticket sera d&eacute;crit, plus il sera trait&eacute; rapidement et efficacement.
 
 ### {{> anchor 'ticket-problem'}}Type Incident
 
-Cela concerne un probl&egrave;me directement li&eacute; aux d&eacute;veloppements du client. Dans ce cas, en plus des &eacute;l&eacute;ments &agrave; fournir pour une anomalie, vous devrez :
+Cela concerne un probl&egrave;me directement li&eacute; aux d&eacute;veloppements du client. Dans ce cas, en plus des &eacute;l&eacute;ments &agrave; fournir pour une anomalie, vous devrez&nbsp;:
 
 * fournir les plugins que vous avez d&eacute;velopp&eacute;s ET/OU les d&eacute;veloppements que vous pensez &ecirc;tre li&eacute;s &agrave; l'incident (classes Java, templates, tests unitaires, fichiers de configuration XML),
 * identifier les derniers changements effectu&eacute;s sur la plateforme depuis le dernier moment o&ugrave; &ccedil;a fonctionnait.
 
-Si vous travaillez avec Nuxeo Studio, il est probable que vous allez poursuivre votre travail de configuration pendant la r&eacute;solution du ticket : dans ce cas, il faut que Nuxeo puisse travailler sur une version fig&eacute;e du projet. Pour cela :
+Si vous travaillez avec Nuxeo Studio, il est probable que vous allez poursuivre votre travail de configuration pendant la r&eacute;solution du ticket&nbsp;: dans ce cas, il faut que Nuxeo puisse travailler sur une version fig&eacute;e du projet. Pour cela&nbsp;:
 
 * attachez au ticket JIRA le plugin Studio (fichier .jar) en place au moment des tests,
 * ou posez un tag dans Nuxeo Studio avec le nom du ticket JIRA que vous venez de cr&eacute;er.
 
 En environnement de production, il est important d'identifier la date du probl&egrave;me, pour retrouver les erreurs correspondantes dans les logs.
 
-### {{> anchor 'ticket-improvement'}}Type Am&eacute;lioration
+### {{> anchor 'ticket-improvement'}}Type Amélioration
 
 Une am&eacute;lioration est un comportement qui n'est pas disponible dans la plateforme Nuxeo et que vous souhaiteriez voir impl&eacute;menter. Un ticket de type Am&eacute;lioration vous permet de demander &agrave; l'&eacute;quipe Nuxeo si une nouvelle fonctionnalit&eacute; pourrait &ecirc;tre r&eacute;alis&eacute;. Pour ce type de ticket, seule le descriptif est n&eacute;cessaire, dans lequel vous devez d&eacute;crire le comportement souhait&eacute;.
 
@@ -301,9 +308,9 @@ Une am&eacute;lioration est un comportement qui n'est pas disponible dans la pla
 
 Le client doit indiquer quelle version principale de la plateforme Nuxeo il utilise (6.0, 7.10, etc.), ind&eacute;pendamment des hotfixes install&eacute;s (ce qui sera pr&eacute;cis&eacute; dans l'environnement).
 
-## {{> anchor 'field-severity'}}Criticit&eacute;
+## {{> anchor 'field-severity'}}Criticité
 
-Le client indique ici le niveau de criticit&eacute; du ticket cr&eacute;&eacute; :
+Le client indique ici le niveau de criticit&eacute; du ticket cr&eacute;&eacute;&nbsp;:
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
@@ -373,7 +380,7 @@ Non applicable
 
 La criticit&eacute; ne d&eacute;pend pas de crit&egrave;res de priorisation mais uniquement des termes pr&eacute;cis&eacute;s ci-dessus.
 
-Le d&eacute;tail des d&eacute;lais de r&eacute;ponse et de r&eacute;solution en fonction de la SLA (Service Level Agreement : garantie du niveau de service) est pr&eacute;sent&eacute;e sur cette page : [http://www.nuxeo.com/fr/produits/support/](http://www.nuxeo.com/fr/produits/support/).
+Le d&eacute;tail des d&eacute;lais de r&eacute;ponse et de r&eacute;solution en fonction de la SLA (Service Level Agreement&nbsp;: garantie du niveau de service) est pr&eacute;sent&eacute;e sur cette page&nbsp;: [http://www.nuxeo.com/fr/produits/support/](http://www.nuxeo.com/fr/produits/support/).
 
 ## {{> anchor 'field-nuxeo-connect-support'}}Nuxeo Connect support
 
@@ -385,11 +392,11 @@ Pour les comptes associ&eacute;s &agrave; un seul contrat, un seul choix est dis
 
 Ce champ permet &agrave; l'&eacute;quipe de support de conna&icirc;tre les &eacute;ventuelles contraintes li&eacute;es au type d'instance. Ceci peut avoir une influence sur les recommandations qui vous seront donn&eacute;es.
 
-Les diff&eacute;rents types d'instance sont :
+Les diff&eacute;rents types d'instance sont&nbsp;:
 
-* Development : le sujet du ticket porte sur un environnement de d&eacute;veloppement. Certains crit&egrave;res, comme la conservation des donn&eacute;es, peuvent &ecirc;tre consid&eacute;r&eacute;es comme non critiques sur une instance de d&eacute;veloppement.
-* Testing/QA : le sujet du ticket porte sur un environnement de test, qui a g&eacute;n&eacute;ralement un nombre limit&eacute; d'utilisateurs.
-* Production : le sujet du ticket porte sur un environnement de production. L'&eacute;quipe de support peut &ecirc;tre amen&eacute;e &agrave; proposer une solution de contournement dans un premier temps, afin de d&eacute;bloquer les utilisateurs rapidement, sans attendre de solution &agrave; long terme, qui peut &ecirc;tre plus longue &agrave; mettre en place. L'&eacute;quipe de support peut &eacute;galement vous proposer un appel t&eacute;l&eacute;phonique afin d'obtenir plus d'informations rapidement.
+* Development&nbsp;: le sujet du ticket porte sur un environnement de d&eacute;veloppement. Certains crit&egrave;res, comme la conservation des donn&eacute;es, peuvent &ecirc;tre consid&eacute;r&eacute;es comme non critiques sur une instance de d&eacute;veloppement.
+* Testing/QA&nbsp;: le sujet du ticket porte sur un environnement de test, qui a g&eacute;n&eacute;ralement un nombre limit&eacute; d'utilisateurs.
+* Production&nbsp;: le sujet du ticket porte sur un environnement de production. L'&eacute;quipe de support peut &ecirc;tre amen&eacute;e &agrave; proposer une solution de contournement dans un premier temps, afin de d&eacute;bloquer les utilisateurs rapidement, sans attendre de solution &agrave; long terme, qui peut &ecirc;tre plus longue &agrave; mettre en place. L'&eacute;quipe de support peut &eacute;galement vous proposer un appel t&eacute;l&eacute;phonique afin d'obtenir plus d'informations rapidement.
 
 ## {{> anchor 'field-environment'}}Environnement
 
@@ -409,13 +416,13 @@ A partir de Nuxeo Platform 5.6, le plus simple est de fournir le r&eacute;sultat
     > nuxeoctl.bat showconf
     ```
 
-En plus de ces donn&eacute;es, il peut &ecirc;tre int&eacute;ressant de pr&eacute;ciser les informations suivantes afin que Nuxeo connaisse exactement l'&eacute;tat de votre serveur :
+En plus de ces donn&eacute;es, il peut &ecirc;tre int&eacute;ressant de pr&eacute;ciser les informations suivantes afin que Nuxeo connaisse exactement l'&eacute;tat de votre serveur&nbsp;:
 
-* syst&egrave;me d'exploitation (Redhat EL 5.4 64 bits, Windows 2003 SP2 32 bits, &hellip;) du serveur et du poste client ;
-* navigateur (IE8, Firefox 17, Chrome 23, etc &hellip;) : important pour les probl&egrave;mes li&eacute;s aux postes client ;
-* base de donn&eacute;es utilis&eacute;e (PostgreSQL 9.1, Oracle 11g, etc &hellip;) ;
-* packages additionnels install&eacute;s ;
-* serveur d'application (Tomcat par d&eacute;faut, ou JBoss) ;
+* syst&egrave;me d'exploitation (Redhat EL 5.4 64 bits, Windows 2003 SP2 32 bits, &hellip;) du serveur et du poste client&nbsp;;
+* navigateur (IE8, Firefox 17, Chrome 23, etc &hellip;)&nbsp;: important pour les probl&egrave;mes li&eacute;s aux postes client&nbsp;;
+* base de donn&eacute;es utilis&eacute;e (PostgreSQL 9.1, Oracle 11g, etc &hellip;)&nbsp;;
+* packages additionnels install&eacute;s&nbsp;;
+* serveur d'application (Tomcat par d&eacute;faut, ou JBoss)&nbsp;;
 * niveau de hotfix install&eacute;.
 
 ## {{> anchor 'field-components'}}Composants
@@ -428,15 +435,21 @@ Ce champ est principalement utilis&eacute; &agrave; des fins statistiques, pour 
 
 Ce champ permet de partager un ticket avec un groupe d'utilisateurs. Cette fonctionnalit&eacute; est principalement utilis&eacute;e pour les clients disposant de plusieurs comptes.
 
-Le nom du groupe &agrave; renseigner fait partie des groupes de l'utilisateur, consultable sur son profil ([https://jira.nuxeo.com/secure/ViewProfile.jspa](https://jira.nuxeo.com/secure/ViewProfile.jspa)) et habituellement de la forme &laquo; support-NOMDEMASOCIETE &raquo;.
+Le nom du groupe &agrave; renseigner fait partie des groupes de l'utilisateur, consultable sur son profil ([https://jira.nuxeo.com/secure/ViewProfile.jspa](https://jira.nuxeo.com/secure/ViewProfile.jspa)) et habituellement de la forme &laquo;&nbsp;support-NOMDEMASOCIETE&nbsp;&raquo;.
+
+## {{> anchor 'field-additional-read-only-group'}} Additional Readonly Groups
+
+Ce champ permet de partager un ticket avec un groupe d'utilisateurs en lecture seule. Par exemple avec des responsables d'équipe qui ont besoin de pouvoir voir les points remontés au support mais n'ont pas besoin de pouvoir ouvrir ou modifier des tickets.
+
+Le nom du groupe est habituellement de la forme &laquo;&nbsp;support-ro-NOMDEMASOCIETE&nbsp;&raquo;.
 
 ## Autres recommandations
 
-Quelques conseils pour am&eacute;liorer la qualit&eacute; du ticket :
+Quelques conseils pour am&eacute;liorer la qualit&eacute; du ticket&nbsp;:
 
 * &Eacute;viter de d&eacute;crire le ticket dans un fichier .doc ou .docx, pour que le ticket soit enti&egrave;rement lisible quelque soit le media utilis&eacute; pour sa consultation (navigation sur smartphone, application pour smartphone, tablette, navigation classique sur PC).
 * Ne pas coller des centaines de lignes de logs dans un commentaire et pr&eacute;f&eacute;rer l'attachement des logs en pi&egrave;ce jointe si la trace fait plus d'une vingtaine de lignes.
-* Pour les utilisateurs avanc&eacute;s, ne pas h&eacute;siter &agrave; utiliser les possibilit&eacute;s de formatage offertes par JIRA pour mettre en valeur la description :
+* Pour les utilisateurs avanc&eacute;s, ne pas h&eacute;siter &agrave; utiliser les possibilit&eacute;s de formatage offertes par JIRA pour mettre en valeur la description&nbsp;:
     * texte format&eacute;,
     * code source,
     * lien,
