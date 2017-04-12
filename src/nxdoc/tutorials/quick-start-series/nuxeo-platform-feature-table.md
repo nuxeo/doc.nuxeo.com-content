@@ -1145,6 +1145,129 @@ The tables below use the following notation:
 </table>
 </div>
 
+## Digital Asset Management
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
+</tr>
+<tr>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
+</tr>
+<tr>
+    <td>Metadata extraction</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">IPTC, EXIF, video file metadata, audio file metadata <br/>
+    [Binary Metadata]({{page page='binary-metadata'}})</td>
+</tr>
+<tr>
+    <td>Thumbnail</td>
+    <td colspan="1">Default distribution</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td></td>
+</tr>
+<tr>
+    <td>Video storyboard</td>
+    <td colspan="1">[Nuxeo DAM](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td>[Nuxeo DAM documentation]({{page version='' space='nxdoc' page='digital-asset-management-dam'}})</td>
+</tr>
+<tr>
+    <td>Media dedicated search</td>
+    <td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td colspan="1"></td>
+</tr>
+<tr>
+    <td>Browsing through media thumbnails</td>
+    <td colspan="1">Default distribution</td>
+    <td>NR</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1"></td>
+</tr>
+<tr>
+    <td>Media specific view of documents</td>
+    <td colspan="1">[Nuxeo DAM](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam)</td>
+    <td>NR</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Nuxeo DAM documentation]({{page version='' space='nxdoc' page='digital-asset-management-dam'}})</td>
+</tr>
+<tr>
+    <td>Picture comparison</td>
+    <td>[Nuxeo Diff Pictures](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>V2.0</td>
+    <td>[Developer documentation]({{page page='nuxeo-diff'}})<br/>
+    [User documentation]({{page space='userdoc' page='nuxeo-diff'}})</td>
+</tr>
+<tr>
+    <td>Conversion to additional formats</td>
+    <td>[Nuxeo DAM](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>[Nuxeo DAM documentation]({{page version='' space='nxdoc' page='digital-asset-management-dam'}})<br/>
+    [How to contribute a new video conversion]({{page version='' space='nxdoc' page='how-to-contribute-a-new-video-conversion'}})<br/>
+    [How to contribute picture conversions]({{page version='' space='nxdoc' page='how-to-contribute-picture-conversions'}})</td>
+</tr>
+<tr>
+    <td>Integration with Media processing software</td>
+    <td>[Nuxeo Adobe CC Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>[Nuxeo Adobe CC Connector documentation]({{page version='' space='nxdoc' page='nuxeo-adobe-cc-connector'}})</td>
+</tr>
+<tr>
+    <td>3D files</td>
+    <td>[Nuxeo Platform 3D](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-3d)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>[Nuxeo Platform 3D documentation]({{page version='' space='nxdoc' page='nuxeo-3d'}})</td>
+</tr>
+    <td colspan="1">Computer vision services</td>
+    <td colspan="1">[Nuxeo Vision](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision)</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">Google Vision API<br/>
+    [Nuxeo Vision documentation]({{page version='' space='nxdoc' page='nuxeo-vision'}})<br/>
+    </td>
+</tr>
+<tr>
+    <td colspan="1">Publication to media hosting websites</td>
+    <td colspan="1">[Nuxeo Media Publishing](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">Publication of videos to YouTube and Wistia.<br/>
+    [Nuxeo Media Publishing documentation]({{page page='nuxeo-media-publishing'}})<br/>
+    Still in consideration for Web UI
+    </td>
+</tr>
+</tbody>
+</table>
+</div>
+
 ## Additional Features
 <div class="table-scroll">
 <table class="hover">
