@@ -44,6 +44,3 @@ You'll find here a page per application template, so as to provide you main info
 The available application template descriptions are:
 
 *   [Default configuration templates]({{page space='Studio' page='Default configuration+templates'}})
-*   [Contract management]({{page space='Studio' page='Contract management'}})
-*   [Custom Doc ID Generation]({{page space='Studio' page='Custom Doc+ID+Generation'}})
-*   [Human resources - Vacation request workflow]({{page space='Studio' page='Human resources+-+Vacation+request+workflow'}})
