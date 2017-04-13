@@ -185,7 +185,7 @@ You should end up with something like this:
 
 
 The last step is to add your labels to your translations file to display them correctly in the UI. To do so:
-1. Click on the **UI** table
+1. Click on the **UI** tab (Second tab on the left menu) 
 2. Click on **Translations**
 3. Use the default `messages.json` or create your own language.
 4. Create a new entry in the JSON file with key `label.document.type.<document type name>` and the document type name as value. Here it is `"label.document.type.contract":"Contract"`. 
