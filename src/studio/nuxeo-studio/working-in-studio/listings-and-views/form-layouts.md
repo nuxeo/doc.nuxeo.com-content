@@ -239,6 +239,7 @@ history:
         version: '1'
 
 ---
+
 ## Concept
 
 The form layouts feature enables to design forms and data display screens that you can map to document properties. Read more about [layouts]({{page space='nxdoc' page='layouts-and-widgets-forms-listings-grids'}}). Forms configured on this feature can be referenced in various places:
@@ -247,6 +248,10 @@ The form layouts feature enables to design forms and data display screens that y
 *   From a _layout_ widget
 *   From a _toggleable form_ widget
 *   Directly in your own XHTML templates, if you are a Nuxeo Platform developer
+
+## Pre-Requisites
+
+{{{multiexcerpt 'jsf-ui-target-package-requirement' page='listings-and-views'}}}
 
 ## Form Layout Creation
 

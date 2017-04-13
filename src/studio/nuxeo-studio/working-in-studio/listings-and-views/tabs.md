@@ -206,7 +206,11 @@ The **Tabs** feature is available from Nuxeo Platform 5.6.
 
 {{/callout}}
 
-## Creating a new tab
+## Pre-Requisites
+
+{{{multiexcerpt 'jsf-ui-target-package-requirement' page='listings-and-views'}}}
+
+## Creating a New Tab
 
 **To create a new customized tab:**
 
@@ -215,7 +219,7 @@ The **Tabs** feature is available from Nuxeo Platform 5.6.
     A default grid with two columns is available by default, that you can either fill in or edit.
     You can now define [what will be displayed on your tab](#definition-tab) and [when the tab should be displayed](#enablement-tab).
 
-## {{> anchor 'definition-tab'}}Definition tab
+## {{> anchor 'definition-tab'}}Definition Tab
 
 **The definition tab is used to set up what should be displayed on your tab.
 **
@@ -235,7 +239,7 @@ The **Tabs** feature is available from Nuxeo Platform 5.6.
 
 {{> anchor 'enablement-tab'}}
 
-## Enablement tab
+## Enablement Tab
 
 The enablement tab defines when the tab should be available.
 
@@ -252,9 +256,9 @@ The enablement tab defines when the tab should be available.
     *   In the **Custom EL expression** text box, type an EL expression that should be evaluated for the tab to be displayed.Keep in mind that requirements are cumulative; the tab will be displayed only if all previous conditions defined are met. You may leave fields blank if you do not wish to apply some of the restrictions available.
 2.  Click on **Save** to save your modifications.
 
-## Tab specific widget types
+## Tab Specific Widget Types
 
-### Content view widget type
+### Content View Widget Type
 
 The Content view widget type is available from the menu on the right on the Definition tab. It enables you to display a [content view]({{page space='nxdoc' page='how-to-define-a-new-content-view'}}) defined in the **Listings & Views** > **Content Views** menu item inside the slot in which you drop the widget. You can use any content view previously defined.
 
@@ -262,7 +266,7 @@ The Content view widget type is available from the menu on the right on the Defi
 
 This widget type is usually combined with a tab in order to create specific content tabs, showing for example a substring of documents depending on their lifecycle state. As you can add as many content view widgets as you like, you may achieve various display results that would not have been possible using a single NXQL query.
 
-### Toggleable form widget type
+### Toggleable Form Widget Type
 
 The Toggleable form widget type enables you to display two layouts alternatively, using a predefined user action to switch from one layout to the other.
 
@@ -273,15 +277,15 @@ Typically, this widget can be displayed to enable users to edit a document witho
 *   **Layout(s):** Use the "choose" button to select which [form layout]({{page page='form-layouts'}}) you would like to display as first layout.
 *   **Toggled layout(s):** Use the "choose" button to select which [form layout]({{page page='form-layouts'}}) you would like to display after clicking on the toggle action button.
 
-### Form action(s) widget types
+### Form Action(s) Widget Types
 
 Since version 5.7.1, the Form action(s) widget types enable you to display buttons that interact with a layout form (like save/cancel buttons). Actions can be selected using a category on the "Form actions" widget type and using the action name on the "Form action" widget type.
 
-### Toolbar action(s) widget types
+### Toolbar Action(s) Widget Types
 
 Since version 5.7.1, the Toolbar action(s) widget types enable you to display buttons that do not interact with a layout form. The main difference with form actions is a finer control over forms and labels. Actions can be selected using a category on the "Form actions" widget type and using the action name on the "Form action" widget type.
 
-### Tabs widget types
+### Tabs Widget Types
 
 Since version 5.7.3, the tabs widget types enable you to display tabs within your tabs (aka sub tabs). Here is a sample configuration. The parent tab "MyTab" holds a "Tabs" widget type:
 

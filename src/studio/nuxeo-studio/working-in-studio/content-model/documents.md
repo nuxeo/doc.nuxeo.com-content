@@ -229,6 +229,14 @@ This is where you can define a schema for your document type. It shows:
 
 ## Creation, Edition, View and Header Layout Tabs
 
+{{#> callout type='info' heading='Requirement'}}
+{{! multiexcerpt name='tab-jsf-ui-target-package-requirement'}}
+
+Select the Nuxeo JSF UI target package in your [Application Dependencies]({{page page='application-dependencies'}}) for this feature to be available.
+
+{{! /multiexcerpt}}
+{{/callout}}
+
 On those tabs, you can respectively configure the creation, edition, view and header layouts of the document type you are designing. They work like the [form layouts]({{page page='form-layouts'}}) feature, thus you can follow the same instructions.
 
 However there are a few differences/additional features:
@@ -243,11 +251,19 @@ However there are a few differences/additional features:
 
 ![]({{file name='doc_type_tabs_tab.png' space='nxdoc' page='how-to-define-a-document-type'}} ?w=650,border=true)
 
+{{#> callout type='info' heading='Requirement'}}
+{{{multiexcerpt 'tab-jsf-ui-target-package-requirement' page='documents'}}}
+{{/callout}}
+
 Documents in DM are displayed with a series of tabs to display all the actions that can be done on documents. By default, a new document type will hold all the tabs. From this view in Studio, you can disable some of them, for the document type you are configuring. This is a binary activation/inactivation. If you want to refine the tabs display rules, you can [contribute XML extensions to the action service](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--actions), so as to override existing contributions (for advanced users).
 
 ## {{> anchor 'tabs-content-views'}}Tabs - Content Views
 
 ![]({{file name='doc_type_content_view.png'}} ?w=650,border=true)
+
+{{#> callout type='info' heading='Requirement'}}
+{{{multiexcerpt 'tab-jsf-ui-target-package-requirement' page='documents'}}}
+{{/callout}}
 
 Content view tabs are tabs that display a list of documents in a table, that is the result of an [NXQL]({{page space='nxdoc' page='nxql'}}) query (a content view). You configure the content view with the [content view feature]({{page page='content-views'}}) and just reference it here.
 

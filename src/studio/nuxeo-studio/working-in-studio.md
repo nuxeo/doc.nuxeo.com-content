@@ -95,7 +95,7 @@ In this chapter we will explain each screen exposed by Nuxeo Studio. If you are 
 - [Documents]({{page version='' space='studio' page='documents'}})
 - [Schemas]({{page version='' space='studio' page='schemas'}})
 - [Lifecycle]({{page version='' space='studio' page='life-cycle'}})
-- [Listings & Views](https://doc.nuxeo.com/pages/viewpage.action?pageId=12911803)
+- [Listings & Views]({{page version='' space='studio' page='listings-and-views'}})
 {{/panel}}
 </div>
 
@@ -119,7 +119,7 @@ In this chapter we will explain each screen exposed by Nuxeo Studio. If you are 
 ### Source Control
 
 - [Branch Management]({{page space='Studio' page='Branch Management'}})
-- [Releases & Tags](https://doc.nuxeo.com/pages/viewpage.action?pageId=31032031)
+- [Releases & Tags]({{page version='' space='studio' page='releases-and-tags'}})
 - [Commit Preferences]({{page space='Studio' page='Commit Preferences'}})
 {{/panel}}
 </div>

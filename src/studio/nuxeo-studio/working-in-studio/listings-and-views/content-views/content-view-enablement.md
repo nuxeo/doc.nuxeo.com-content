@@ -44,7 +44,12 @@ history:
         version: '1'
 
 ---
-If you selected the Search content view flag on the Query & form tab of the content view, you get an additional Enablement tab. This tab allows you to define under which circumstances the content view should be displayed in the Search tab drop down list. It shows the options below:
+
+{{#> callout type='info' }}
+{{{multiexcerpt 'jsf-ui-target-package-requirement-in-content-view' page='content-view-query-and-form-tab'}}}
+{{/callout}}
+
+If you selected the Search content view flag on the [Query & form tab of the content view]({{page version='' space='studio' page='content-view-query-and-form-tab'}}), you get an additional Enablement tab. This tab allows you to define under which circumstances the content view should be displayed in the Search tab drop down list. It shows the options below:
 
 *   **Action order**: Select the place of your content view in the Search drop down list. 0 makes the content view the default one.
 *   **Current user is a member of**: Indicate if the user needs to be member of a specific group to be displayed the search form.

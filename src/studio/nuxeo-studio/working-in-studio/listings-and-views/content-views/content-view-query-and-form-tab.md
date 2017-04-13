@@ -224,6 +224,14 @@ This tab lets you define:
 *   [the filtering UI proposed to the end user](#ui-filtering-definition)
 *   Some advanced configuration about filtering
 
+## Pre-Requisites
+
+{{! multiexcerpt name='jsf-ui-target-package-requirement-in-content-view'}}
+
+Select the Nuxeo JSF UI target package in your [Application Dependencies]({{page page='application-dependencies'}}) for the Content View feature to be available.
+
+{{! /multiexcerpt}}
+
 ## Default Filtering Definition
 
 This section explains the following elements of the Query & Form tab:

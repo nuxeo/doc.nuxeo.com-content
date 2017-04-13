@@ -49,6 +49,14 @@ history:
         version: '1'
 
 ---
+{{#> callout type='info' }}
+{{! multiexcerpt name='jsf-ui-target-package-requirement'}}
+
+Select the Nuxeo JSF UI target package in your [Application Dependencies]({{page page='application-dependencies'}}) for this menu item to be available.
+
+{{! /multiexcerpt}}
+{{/callout}}
+
 *   [Content Views]({{page space='Studio' page='Content Views'}})
 *   [Form Layouts]({{page space='Studio' page='Form Layouts'}})
 *   [Search / Advanced Search](https://doc.nuxeo.com/pages/viewpage.action?pageId=20517241)&nbsp;&mdash; The Nuxeo Platform 6.0 Search menu item enables you to set up a new Default Search form to replace the one available in the Nuxeo Platform Search tab. The Advanced search menu item available for previous versions of the platform enables to define a new Advanced search form.

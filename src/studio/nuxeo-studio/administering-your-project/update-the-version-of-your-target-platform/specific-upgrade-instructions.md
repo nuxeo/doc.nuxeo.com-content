@@ -94,7 +94,10 @@ When upgrading your target platform in Studio, Studio will take care of generati
 
 {{! /excerpt}}
 
-&nbsp;
+## Upgrading to LTS 2016
+
+Select the Nuxeo JSF UI target package in your [Application Dependencies]({{page page='application-dependencies'}}) for the content views, layouts, tabs and search customizations to be available.
+
 
 ## {{> anchor 'to-60'}}Upgrading to 6.0
 
@@ -104,7 +107,7 @@ Some packaging changes have occurred for Nuxeo Platform 6.0\. For instance some 
 
 Virtual navigation used to come with the DM package. It is now an independent add-on. To keep your custom virtual navigations you need to:
 
-1.  Check the Virtual navigation target package in Studio
+1.  Check the Virtual navigation target package in Studio.
 2.  Install the Virtual navigation add-on on your Nuxeo Platform.
 
 ### MIgrating Faceted Search Customization
