@@ -936,7 +936,7 @@ sudo ln -s /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/c
       <repositories>
         <repository>
           <id>private-releases</id>
-          <url>http://mavenpriv.in.nuxeo.com/nexus/content/groups/private-releases</url>
+          <url>https://mavenpriv.nuxeo.com/nexus/content/groups/private-releases</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -946,7 +946,7 @@ sudo ln -s /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/c
         </repository>
         <repository>
           <id>private-snapshots</id>
-          <url>http://mavenpriv.in.nuxeo.com/nexus/content/groups/private-snapshots</url>
+          <url>https://mavenpriv.nuxeo.com/nexus/content/groups/private-snapshots</url>
           <releases>
             <enabled>false</enabled>
           </releases>
