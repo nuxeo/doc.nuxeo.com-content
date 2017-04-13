@@ -419,7 +419,7 @@ The expected group is one of the groups the user is a member of, which can be se
 
 This field enables to share a ticket with a group of read-only users. These users would typically be IT managers who only need visibility into support issues and do not need to open or modify support tickets.
 
-Read-only groups names usually look like "support-ro-COMPANYNAME".
+Read-only groups are available for contracts specifying read-only contacts. Read-only group names usually look like "support-ro-COMPANYNAME".
 
 ## Additional Recommendations
 

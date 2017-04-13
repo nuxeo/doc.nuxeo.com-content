@@ -242,11 +242,11 @@ Ce champ est pr&eacute;-rempli avec votre nom d'utilisateur.
 
 </td></tr><tr><td colspan="1">R&eacute;f&eacute;rence SFD</td><td colspan="1">Si vous avez des sp&eacute;cifications fonctionnelles, vous pouvez indiquez leur r&eacute;f&eacute;rence ici pour le reste de votre &eacute;quipe.</td></tr><tr><td colspan="1">Tags</td><td colspan="1">Tapez un mot-cl&eacute; qui peut vous aider &agrave; cat&eacute;goriser vos tickets.</td></tr></tbody></table></div>
 
-## {{> anchor 'field-project'}}Projet
+## Projet {{> anchor 'field-project'}}
 
 Toutes les demandes de support doivent &ecirc;tre faites dans la cat&eacute;gorie **Support Nuxeo Connect**. Si le ticket n'est pas cr&eacute;&eacute; dans la bonne cat&eacute;gorie, le ticket ne sera pas visible par l'&eacute;quipe du Support et ne recevra pas de r&eacute;ponse.
 
-## {{> anchor 'field-issue-type'}}Type de demande
+## Type de demande {{> anchor 'field-issue-type'}}
 
 Ce champ indique le type d'incident li&eacute; au ticket cr&eacute;&eacute;. Les choix propos&eacute;s sont&nbsp;:
 
@@ -257,7 +257,7 @@ Ce champ indique le type d'incident li&eacute; au ticket cr&eacute;&eacute;. Les
 
 Cette identification est importante pour fournir les &eacute;l&eacute;ments n&eacute;cessaires &agrave; la description du ticket, trait&eacute; au paragraphe [Description](#field-description).
 
-## {{> anchor 'field-description'}}Descriptif
+## Descriptif {{> anchor 'field-description'}}
 
 Le contenu de ce champ d&eacute;pend du [type de ticket](#field-issue-type) et est essentiel &agrave; son traitement. Vous devez donc le renseigner avec soin.
 
@@ -439,9 +439,9 @@ Le nom du groupe &agrave; renseigner fait partie des groupes de l'utilisateur, c
 
 ## {{> anchor 'field-additional-read-only-group'}} Additional Readonly Groups
 
-Ce champ permet de partager un ticket avec un groupe d'utilisateurs en lecture seule. Par exemple avec des responsables d'équipe qui ont besoin de pouvoir voir les points remontés au support mais n'ont pas besoin de pouvoir ouvrir ou modifier des tickets.
+Ce champ permet de partager en lecture seule un ticket avec un groupe d'utilisateurs. Par exemple avec des responsables d'équipe qui ont besoin de pouvoir prendre connaissance des points remontés au support sans pour autant ouvrir ou modifier des tickets.
 
-Le nom du groupe est habituellement de la forme &laquo;&nbsp;support-ro-NOMDEMASOCIETE&nbsp;&raquo;.
+Les groupes read-only ne sont disponibles que pour les contrats le précisant. Le nom du groupe est habituellement de la forme &laquo;&nbsp;support-ro-NOMDEMASOCIETE&nbsp;&raquo;.
 
 ## Autres recommandations
 
