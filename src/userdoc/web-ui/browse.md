@@ -18,7 +18,7 @@ In order to help you find the documents that you need, the Nuxeo Platform featur
 ## Browsing Content
 
 ### Side Menu&nbsp;
-The side menu offers two different tabs. Clicking on elements on the left will open a side panel with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area.
+The side menu offers two different tabs. Clicking on elements on the left will open a side panel (also called drawer) with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area.
 This new pattern allows to start browsing without changing the context of work.
 The side menu displays all the domain structure from the root. It enables you to easily access any space in the application structure.
 
