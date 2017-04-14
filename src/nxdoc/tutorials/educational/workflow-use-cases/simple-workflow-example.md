@@ -146,20 +146,20 @@ The form lets the user edit some of the workflow's variables (either at workflow
 
 1.  Go back to the &ldquo;Technical validation&rdquo; node.
 2. Click on the **Variables** tab.
-   Add the hoo_comment to the right column.
+   Add the *hoo_comment* to the right column.
    ![]({{file name='Simple_Workflow_006_1.png'}} ?w=600,border=true)
 3.  Save you work
-4.  Click on the **Open View Designer** link.
+4.  Click on the **Open View Designer** button.
    ![]({{file name='link_view_designer.png'}} ?w=600,border=true)
-5.  In the Layout tab, navigate to "Workflows", then "SalesProposalWorkflow" and click on "Technical validation"
+5.  In the Layout tab, navigate to **Workflows** > **SalesProposalWorkflow** and click on **Technical validation**
    ![]({{file name='vd_wf_technical_validation_layout1.png'}} ?w=300,border=true)
-    A  page with the Technical validation task layout is displayed. If there is no layout, click on the "*Customize*" button
+    A  page with the Technical validation task layout is displayed. If there is no layout, click on the **Customize** button
     ![]({{file name='vd_wf_technical_validation_layout2.png'}} ?w=600,border=true)
-5.  Delete the properties displayed in the layout using the bin icon once an element is selected
+5.  Delete the properties displayed in the layout using the delete icon once an element is selected
     ![]({{file name='vd_wf_technical_validation_layout3.png'}} ?w=300,border=true)
-6.  Add a field for the comment of the user who validates: Drag the &ldquo;hoo_comment&rdquo; field from the workflow variables schema from the element catalogue and drop it on the layout, Using the _Edit mode_
+6.  Add a field for the comment of the user who validates: Drag the *hoo_comment* field from the workflow variables schema from the element catalogue and drop it on the layout, Using the *Edit mode*
     ![]({{file name='vd_wf_technical_validation_layout4.png'}} ?w=600,border=true)
-7.  Change its title for "Head of operations comment".
+7.  Change its title for `Head of operations comment`.
     ![]({{file name='vd_wf_technical_validation_layout5.png'}} ?w=600,border=true)
 
 #### Setting up the Tasks Buttons
@@ -189,7 +189,7 @@ Each button is automatically associated to a transition to define what should be
     Note that you have three transition points on the technical validation node, ready to be pulled to the next nodes.
     ![]({{file name='Simple_Workflow_012.png'}} ?w=200,border=true,thumbnail=true)
 
-### Defining the &ldquo;Juridical Advice&rdquo; Node
+### Defining the "Juridical Advice" Node
 
 Now that we have our &ldquo;Technical validation&rdquo; node set up, we need to create the nodes used for its possible transitions. First comes the &ldquo;Juridical advice&rdquo; node. As most operations have been described before, we will only comment this node&rsquo;s specificities.
 
@@ -199,7 +199,7 @@ Drag the &ldquo;Approve&rdquo; node from the node template library and drop it o
 
 ![](https://www.lucidchart.com/publicSegments/view/54eefcaf-64e8-42a2-ad51-6ed50a00c10c/image.png ?w=300,border=true)
 
-#### Configuring the &ldquo;Juridical Advice&rdquo; Node
+#### Configuring the "Juridical Advice" Node
 
 1.  Open the node properties.
 2.  Rename the node to &ldquo;Juridical advice&rdquo;.
@@ -226,14 +226,14 @@ Drag the &ldquo;Approve&rdquo; node from the node template library and drop it o
 
 ##### With View Designer and Web UI
 
-1. Click on the **Variables** tab and add the "juridical_comment" and "hoo_comment" variables to the right column.
+1. Click on the **Variables** tab and add the *juridical_comment* and *hoo_comment* variables to the right column.
   ![]({{file name='Simple_Workflow_015_1.png'}} ?w=600,border=true)
-2.  Save you work and click on the **Open View Designer** link.
-3.  In the Layout tab, navigate to "Workflows", then "SalesProposalWorkflow" and click on "Juridical Advice". A  page with the Juridical Advice task layout is displayed. If there is no layout, click on the "*Customize*" button
-4.  Delete the properties displayed in the layout using the bin icon once an element is selected
-5.  Add the &ldquo;juridical_comment&rdquo; field the same way you did with the &ldquo;Technical validation&rdquo; node, setting the property as required.
+2.  Save you work and click on the **Open View Designer** button.
+3.  In the Layout tab, navigate to **Workflows** > **SalesProposalWorkflow** and click on **Juridical Advice**. A  page with the Juridical Advice task layout is displayed. If there is no layout, click on the **Customize** button.
+4.  Delete the properties displayed in the layout using the delete icon once an element is selected.
+5.  Add the *juridical_comment* field the same way you did with the *Technical validation* node, setting the property as required.
 ![]({{file name='vd_wf_technical_validation_layout6.png'}} ?w=300,border=true)
-6.  Add the &ldquo;hoo_comment&rdquo; as well, but make sure to set it as read only by using the _View_ mode.
+6.  Add the *hoo_comment* as well, but make sure to set it as read only by using the _View_ mode.
 ![]({{file name='vd_wf_technical_validation_layout7.png'}} ?w=600,border=true)
 7.  Click on **Save**.
 
@@ -244,7 +244,7 @@ Drag the &ldquo;Approve&rdquo; node from the node template library and drop it o
 3.  Pull an arrow from there to the juridical advice node&rsquo;s input point.
     ![]({{file name='Simple_Workflow_018.png'}} ?w=200,border=true,thumbnail=true)
 
-### Defining the &ldquo;Proposal Update&rdquo; Node
+### Defining the "Proposal Update" Node
 
 You will now take care of the &ldquo;Proposal update&rdquo; node, which will be used in case Jack refuses the proposal.
 
@@ -252,7 +252,7 @@ You will now take care of the &ldquo;Proposal update&rdquo; node, which will be 
 
 The &ldquo;Approve&rdquo; node will once again be the most appropriate. Pick it up and drop it on the graph.
 
-#### Configuring the &ldquo;Proposal Update&rdquo; Node
+#### Configuring the "Proposal Update" Node
 
 1.  Open the node properties.
 2.  Rename the node to &ldquo;Proposal update&rdquo;.
@@ -284,15 +284,15 @@ The &ldquo;Approve&rdquo; node will once again be the most appropriate. Pick it 
 
 ##### With View Designer and Web UI
 
-1. Click on the **Variables** tab and add the "sales_comment" and "hoo_comment" variables to the right column.
+1. Click on the **Variables** tab and add the *sales_comment* and *hoo_comment* variables to the right column.
 ![]({{file name='Simple_Workflow_020_1.png'}} ?w=450,border=true,thumbnail=true)
-2.  Save you work and click on the **Open View Designer** link.
-3.  In the Layout tab, navigate to "Workflows", then "SalesProposalWorkflow" and click on "Proposal Update". A  page with the Proposal Update task layout is displayed. If there is no layout, click on the "*Customize*" button
-4.  Delete the properties displayed in the layout using the bin icon once an element is selected
-5.  Add the &ldquo;sales_comment&rdquo; field as well as the &ldquo;hoo_comment&rdquo; field, the latter still in read only mode.
+2.  Save you work and click on the **Open View Designer** button.
+3.  In the Layout tab, navigate to **Workflows** > **SalesProposalWorkflow** and click on **Proposal Update**. A  page with the Proposal Update task layout is displayed. If there is no layout, click on the **Customize** button
+4.  Delete the properties displayed in the layout using the delete icon once an element is selected
+5.  Add the *sales_comment* field as well as the *hoo_comment* field, the latter still in read only mode.
     ![]({{file name='vd_wf_technical_validation_layout9.png'}} ?w=600,border=true)
 
-#### Removing the &ldquo;Approve&rdquo; Transition
+#### Removing the "Approve" Transition
 
 1.  Click on the **Transitions** tab.
     As you may see, deleting the task button in the previous step does not automatically remove the transition as well. We will do it manually then.
