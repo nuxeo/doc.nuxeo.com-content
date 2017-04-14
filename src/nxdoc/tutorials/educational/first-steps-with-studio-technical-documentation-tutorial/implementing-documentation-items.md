@@ -371,11 +371,21 @@ The goal is to manage all kinds of documents like procedures or notices. At this
 
 ## Before You Start
 
+**Recommended Knowledge**<br/>
 We recommend you first take a look at the [Repository Concepts]({{page page='repository-concepts'}}) page if you are not yet familiar with the Nuxeo Platform.
 
 {{! multiexcerpt name='tuto-item-names-warning'}}
 
+**Names**<br/>
 In this section we provide example names for items. You'll see different names in screen shots. Most of the time a suffix like "tuto" is added. In your Studio project please use the suggested names (or invent your own) and not the ones in screen shots.
+
+{{! /multiexcerpt}}
+
+**Studio Project Dependencies**<br/>
+
+{{! multiexcerpt name='check-jsf-ui-dependency'}}
+
+Make sure the Nuxeo JSF UI target package is checked in your project's [Application Dependencies]({{page page='application-dependencies'}}) to get all the needed features in Nuxeo Studio.
 
 {{! /multiexcerpt}}
 

@@ -124,6 +124,10 @@ For this section, it is recommended to take a look at the following guides for a
 
 {{/callout}}
 
+## Before You Start
+
+{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}
+
 ## Create the News Document Type
 
 1.  Create a new document type called `News`.

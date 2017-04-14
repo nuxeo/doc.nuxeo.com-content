@@ -247,6 +247,11 @@ This how-to aims at showing you how to use the different types of aggregates ava
 
 ## Prerequisites
 
+**Studio Project Dependencies**<br/>
+{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}
+
+**Required Studio Elements**
+
 Before starting this how-to you will need to create the following elements in Studio:
 
 *   A Contract document type with 4 metadata: ContractNumber, OperationalHealthRating, RPMNumbers and SCDRelationshipHealthRating. ![]({{file name='schema_contract.png'}} ?w=600,h=115,border=true)

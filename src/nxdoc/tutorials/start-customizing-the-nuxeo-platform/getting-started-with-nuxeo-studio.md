@@ -268,7 +268,9 @@ Here we want to create a document type named "Contract" that will hold specific 
 
 ### Studio Customization
 
-1.  Unfold the **Content Model** item of the Studio tree, click on **Document Types** and click the **New** button.
+1. In the **Settings**&nbsp;> **Application Dependencies** menu, make sure the target package Nuxeo JSF UI is checked.
+
+1.  In the **Customization** menu section unfold the **Content Model** item of the Studio tree, click on **Document Types** and click the **New** button.
 
 2.  Fill in the creation form and click on **Next**:
     *   ID: Contract
