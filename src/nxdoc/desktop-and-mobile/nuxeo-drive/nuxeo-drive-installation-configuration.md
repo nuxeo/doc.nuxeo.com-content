@@ -15,7 +15,7 @@ We provide OS-specific installers for Mac OS X and Windows, available from the N
 For Linux, you need a PyQt4 with WebKit support.
 
 ### Known Working Configurations for OS
-*   Windows:  Windows 7 and 8, 32b and 64b
+*   Windows:  Windows 7, 8, 8.1 and 10 - 32b and 64b
 *   Mac OS: starting from the version 10.8 (Mountain Lion)
 
 
