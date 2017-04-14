@@ -2,7 +2,7 @@
 title: Digital Asset Management (DAM)
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-04-14'
     status: ok
 labels:
     - lts2016-ok
@@ -421,7 +421,11 @@ Locate the operation you wish to use on the **Automation Documentation** page an
 
 ##### Add a Photo Watermark to a Video
 
-To add a company logo to your videos, create a simple Automation Chain in Nuxeo Studio. From the Automation menu, select User Actions and create a new User Action. Add a button in the Contextual Tools category to trigger the Automation Chain. Under the Action Activation menu, select the permissions required to activate the User Action and add the Video document type to the activation conditions. Enter the name of your Automation Chain, and click Create.
+To add a company logo to your videos, create a simple Automation Chain in Nuxeo Studio.
+1.  From the Automation menu, select User Actions and create a new User Action.
+2.  Add a button in the Contextual Tools category to trigger the Automation Chain.
+3.  Under the Action Activation menu, select the permissions required to activate the User Action and add the Video document type to the activation conditions.
+4.  Enter the name of your Automation Chain, and click Create.
 
 Then create your Automation Chain as follows:
 
@@ -456,10 +460,33 @@ To merge two or more videos together sequentially, a User Action can be added to
 
 The resulting video is then automatically downloaded. **The videos you wish to concatenate should all be of the same format.**
 
+##### Slice Videos
+
+You can edit the length of the videos using the Video Slice operations. The following automation chain will download a zip file with 5-second snippets of the original video:
+
+```
+- Context.FetchDocument
+- Video.SliceInParts:
+    duration: 00:00:05
+- Blob.CreateZip:
+    filename: SlicedVideos
+- WebUI.DownloadFile
+```
+
+Or you can specify the start time and duration of the clip and download it directly:
+
+```
+- Context.FetchDocument
+- Video.Slice:
+    duration: 00:00:10
+    encode: 'false'
+    startAt: 00:00:23
+- WebUI.DownloadFile
+```
 
 ##### Extract Video Subtitles
 
-Creating a separate transcript of a Video document is easily done if the video has subtitles. By adding a User Action on all Video documents that triggers the following automation chain, you can instantly download a simple text file of the video's subtitles.
+Creating a separate transcript of a Video document is easily done if the video has subtitles. By adding a User Action that triggers the following automation chain on all Video documents, you can instantly download a simple text file of the video's subtitles.
 
 ```
 - Context.FetchDocument
