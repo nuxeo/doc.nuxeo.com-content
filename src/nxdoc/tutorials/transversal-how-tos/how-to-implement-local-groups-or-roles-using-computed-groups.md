@@ -146,6 +146,21 @@ In this how to, you will learn how to let managers of a workspace determine who 
 
 {{/callout}}
 
+Starting from 8.10 HF-04 you need to add the following contribution.
+
+{{#> panel type='code'}}
+
+```xml
+<extension point="configuration" target="org.nuxeo.runtime.ConfigurationService">
+    <documentation>
+      Allow setting permissions to virtual groups
+    </documentation>
+    <property name="nuxeo.automation.allowVirtualUser">true</property>
+  </extension>
+```
+
+{{/panel}}  
+
 The Nuxeo security system gives you all the tools you need to define security from giving a simple right to a specific user on a document to defining complex use cases. You can basically play with ACLs, granting and denying permissions to users and groups. Groups in Nuxeo are defined by users part of the "powerusers" or "administrators" groups, in the [Admin Center]({{page space='userdoc' page='managing-users-and-groups'}}). But it is also possible to define another category of groups, whose content definition is not "manual": the computed groups.
 
 Computed groups let you define a list of groups to which users will be affected using Java code. There are multiple use cases where you will need this feature. Implementation will require Java development knowledge and if you are familiar with Nuxeo Core Development (CoreSession, DocumentModel, ...), it's better.
