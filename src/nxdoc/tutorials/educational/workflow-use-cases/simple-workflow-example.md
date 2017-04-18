@@ -129,6 +129,8 @@ The form lets the user edit some of the workflow's variables (either at workflow
 
 #### Configuring the Form
 
+The way you process the next step will depend on the UI you chose for your platform:
+
 ##### With Nuxeo Studio and JSF UI
 
 1.  Go back to the &ldquo;Technical validation&rdquo; node.
@@ -212,6 +214,8 @@ Drag the &ldquo;Approve&rdquo; node from the node template library and drop it o
 
 #### Configuring the Form
 
+The way you process the next step will depend on the UI you chose for your platform:
+
 ##### With Nuxeo Studio and JSF UI
 
 1. Click on the **Variables** tab and add the "juridical_comment" and "hoo_comment" variables to the right column.
@@ -273,6 +277,8 @@ The &ldquo;Approve&rdquo; node will once again be the most appropriate. Pick it 
             ![](https://www.lucidchart.com/publicSegments/view/54ef1f66-c4cc-4052-84c9-790a0a00c10b/image.png ?w=450,border=true)
 
 #### Configuring the Form
+
+The way you process the next step will depend on the UI you chose for your platform:
 
 ##### With Nuxeo Studio and JSF UI
 
