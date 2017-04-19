@@ -251,7 +251,7 @@ Of course for the dependencies to be resolved in Eclipse they will have to be lo
 {{#> panel type='code' heading='Full build Nuxeo without running tests'}}
 
 ```
-export MAVEN_OPTS="-Xmx4096m -Xms1024m -XX:MaxPermSize=512m"
+export MAVEN_OPTS="-Xmx4096m -Xms1024m"
 mvn -DskipTests install -Paddons
 (cd nuxeo-distribution ; mvn -DskipTests install)
 ```
