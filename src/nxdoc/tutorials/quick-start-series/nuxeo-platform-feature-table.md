@@ -463,7 +463,7 @@ The tables below use the following notation:
     [Scan Documents Importer documentation]({{page version='' space='nxdoc' page='scan-documents-importer'}})</td>
 </tr>
 <tr>
-    <td colspan="1">Cloud files creation</td>
+    <td colspan="1">Cloud files import</td>
     <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
     <td>N/A</td>
     <td>&#10003;</td>
@@ -1025,7 +1025,7 @@ The tables below use the following notation:
 <tr>
     <td colspan="1">User invitations</td>
     <td colspan="1">Default distribution<br/>
-    [Nuxeo User Registration]</td>
+    [Nuxeo User Registration]({{page version='' space='nxdoc' page='nuxeo-platform-user-registration'}})</td>
     <td>&#10003;<br/>N/A</td>
     <td>&#10003;<br/>&#10003;</td>
     <td>&#10003;<br/>N/A</td>
@@ -1462,12 +1462,12 @@ The tables below use the following notation:
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-    <td colspan="1">Theme configuration</td>
+    <td colspan="1">Theme selection</td>
     <td colspan="1">Default distribution</td>
     <td>NR</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">Theme configuration defined on a space level for all users in JSF UI, at the application level for the current user in Web UI.<br/>
+    <td colspan="1">Theme selection defined on a space level for all users in JSF UI, at the application level for the current user in Web UI.<br/>
     [JSF UI Local configuration documentation]({{page version='' space='userdoc' page='local-configuration'}})<br/>
     [Web UI user settings]({{page version='' space='userdoc' page='user-settings'}})</td>
 </tr>
