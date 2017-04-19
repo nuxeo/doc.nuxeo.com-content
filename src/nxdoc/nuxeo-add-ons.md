@@ -314,7 +314,6 @@ Registered access
 <td colspan="1">
 </td>
 <td colspan="1">
-[Released for 9.1](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report?version=0.1.0)
 Included in the default distribution since Nuxeo Platform 8.10.
 </td>
 </tr>
@@ -330,7 +329,7 @@ Registered access
 [Documentation]({{page page='nuxeo-connect-report-tools'}})
 </td>
 <td colspan="1">
-[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report?version=0.0.1)
+[Released for 9.1](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report-web?version=0.1.0)
 </td>
 </tr>
 <tr>
