@@ -915,7 +915,7 @@ Public
 &nbsp;
 </td>
 <td colspan="1">
-[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering-samples?version=6.6.3)
+[Released for 9.1](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering-samples?version=6.7.0)
 </td>
 </tr>
 </tbody>
