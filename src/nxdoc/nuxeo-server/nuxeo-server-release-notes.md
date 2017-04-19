@@ -13,7 +13,7 @@ This page relates to the release notes of Nuxeo Server and related addons for th
 
 - [9.1 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=17991)
 
-We also provide [instructions for upgrading]({{page page=""}}) (TODO Put corect URL) to the latest release.
+We also provide [instructions for upgrading]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-91'}}) to the latest release.
 
 ## Nuxeo Server
 
