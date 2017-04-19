@@ -49,6 +49,7 @@ This chapter helps setting up a developer environment for working on Nuxeo sourc
 *   [Installing Git]({{page space='CORG' page='Installing Git'}})
 *   [Installing NodeJS and related tools]({{page space='CORG' page='Installing NodeJS+and+related+tools'}})
 *   [Installing Dart and related tools]({{page space='CORG' page='Installing Dart+and+related+tools'}})
+*   [Installing JDK and related tools]({{page space='CORG' page='Installing JDK+and+related+tools'}})
 *   [Getting the Nuxeo Source Code]({{page space='CORG' page='Getting the+Nuxeo+Source+Code'}})
 *   [Eclipse setup]({{page space='CORG' page='Eclipse setup'}})
 *   [Working with multiple versions of Nuxeo sources at the same time]({{page space='CORG' page='Working with+multiple+versions+of+Nuxeo+sources+at+the+same+time'}})
