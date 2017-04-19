@@ -1384,8 +1384,8 @@ By default, all automation executions are 'printable' (appear in logs) when auto
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">`_templateName_.target`</td>
-<td colspan="1">Directory where _templateName_ files will be deployed.</td>
+<td colspan="1">`&lt;templateName&gt;`.target`</td>
+<td colspan="1">Directory where _&lt;templateName&gt;_ files will be deployed.</td>
 <td colspan="1">`server/default/deploy/nuxeo.ear`</td>
 <td colspan="1">&nbsp;</td>
 </tr>
