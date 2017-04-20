@@ -302,12 +302,22 @@ history:
 ---
 Nuxeo supported modules handle English translations for each of their bundles. Other translations are managed on [Crowdin](https://crowdin.net/project/nuxeo) and synchronized automatically with the Nuxeo source code.
 
-Languages that are sufficiently translated are available in the released default distribution. The conditions for a language to be available by default are that it is translated at 95% and approved at 75% minimum. Default languages in Nuxeo Platform LTS 2016 are:
+Languages that are sufficiently translated are available in the released default distribution. The conditions for a language to be available by default are that it is translated at 95% and approved at 75% minimum.
+Default languages in Nuxeo Platform 9.1 are:
 
+**On JSF UI:**
 - Albanian
 - Basque
 - Chinese
 - Dutch
+- English
+- French
+- German
+- Japanese
+- Spanish
+- Swedish
+
+**On Web UI:**
 - English
 - French
 - German
