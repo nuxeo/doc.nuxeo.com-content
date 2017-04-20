@@ -1,8 +1,21 @@
 ---
 title: "HOWTO: Develop with React Redux"
-
+review:
+    comment: ''
+    date: '2017-04-20'
+    status: ok
+details:
+    howto:
+        excerpt: Learn how to develop with React Redux.
+        level: Advanced
+        tool: Code
+        topics: REST API
+labels:
+    - howto
+    - rest-api
+toc: true
 ---
-[React](https://facebook.github.io/react/) by Facebook is view library that popularized the virtual DOM model for building UIs. It promotes HTML and CSS to be written in Javascript giving developers full control of the presentation layer that is often difficult using the native DOM API. Paired with [Redux](http://redux.js.org/), "a predictable state container for JavaScript apps", views can built declaratively.
+[React](https://facebook.github.io/react/) by Facebook is view library that popularized the virtual DOM model for building UIs. It promotes HTML and CSS to be written in JavaScript giving developers full control of the presentation layer that is often difficult using the native DOM API. Paired with [Redux](http://redux.js.org/), "a predictable state container for JavaScript apps", views can built declaratively.
 
 But your application also needs a serious back end that will allow you to build your application quickly and concentrate on features without reinventing the wheel. This is what the Nuxeo Platform provides you with. When users browse your web application, it will actually call the Nuxeo Platform through its [REST API]({{page version='' space='nxdoc' page='rest-api'}}) in order to handle and retrieve content.
 
@@ -18,7 +31,7 @@ Our `React Redux` bootstrap comes with plenty of helpful tools:
 This section will help you to get started on a React project. This will be covered in three steps:
 
 - Installing prerequisites
-- Using Nuxeo CLI
+- Using [Nuxeo CLI]({{page version='' space='nxdoc' page='nuxeo-cli'}})
 - Building a Nuxeo Package that can be deployed on a Nuxeo Platform instance
 
 ### Step 1 - Installing Prerequisites
@@ -48,17 +61,16 @@ In order to get a clean installation, we will make use of Nuxeo CLI. So let's in
 $ mvn clean install -Pmp
 ```
 
-Navigate to reactjs-sample-ftest/target/tomcat
-
-The tomcat folder contains the whole application. From bin folder:
+3. Navigate to reactjs-sample-ftest/target/tomcat
+  The tomcat folder contains the whole application. From bin folder:
 
 ```bash
 $ ./nuxeoctl console
 ```
 
-Go to http://localhost:8080
-Log In with username: Administrator, password: Administrator
-Open http://localhost:8080/nuxeo/sampleUI
+4. Go to http://localhost:8080
+5. Log In with username: Administrator, password: Administrator
+6. Open http://localhost:8080/nuxeo/sampleUI
 
 
 ### Step 3 - Let's code
@@ -97,19 +109,17 @@ $ webpack --watch
 
 ### Step 4 - Extending the UI
 
-Rebuild
+- Rebuild
 
 ```bash
 $ mvn clean install -Pmp
 ```
 
-or bundle javascript files to `reactjs-sample-ftest/target/tomcat/nxserver/nuxeo.war/sampleUI` with webpack.
+- or bundle javascript files to `reactjs-sample-ftest/target/tomcat/nxserver/nuxeo.war/sampleUI` with webpack.
 
 
 {{#> callout type='info' }}
-
 We are always eager to receive feedback on our projects. Please report bugs, wishes or anything related to the nuxeo-angular-sample project at [answers.nuxeo.com](https://answers.nuxeo.com)
-
 {{/callout}}
 
 * * *
