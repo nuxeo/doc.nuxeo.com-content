@@ -1352,13 +1352,13 @@ false
 {{! /multiexcerpt}}</td>
 <td colspan="1">
 
-Enable this mode if you'd like to display automation traces during runtime:
+Enable this mode if you'd like to display automation traces during runtime:<br/>
 
 {{! multiexcerpt name='org.nuxeo.automation.trace-description'}}
 
-* You'll benefit from exhaustive logs to debug all automation chain and/or operation execution.
-* The automation trace mode is disabled by default (not suitable for production).
-* It can be activated through JMX via `org.nuxeo:TracerFactory` MBean during runtime.
+- You'll benefit from exhaustive logs to debug all automation chain and/or operation execution.<br/>
+- The automation trace mode is disabled by default (not suitable for production).<br/>
+- It can be activated through JMX via `org.nuxeo:TracerFactory` MBean during runtime.
 
 {{! /multiexcerpt}}</td>
 <td colspan="1">{{! multiexcerpt name='org.nuxeo.automation.trace-default'}}
@@ -1372,10 +1372,9 @@ false
 `org.nuxeo.automation.trace.printable`
 {{! /multiexcerpt}}</td>
 <td colspan="1">{{! multiexcerpt name='org.nuxeo.automation.trace.printable-description'}}
-By default, all automation executions are 'printable' (appear in logs) when automation trace mode is on.
-
-* You can filter chain and/or operation execution trace printing by setting this property to chain name and/or operation separated by comma.
-* Comment this property to get all automation chains/operations back in printing (by default set to * (star))
+By default, all automation executions are 'printable' (appear in logs) when automation trace mode is on.<br/>
+- You can filter chain and/or operation execution trace printing by setting this property to chain name and/or operation separated by comma.<br/>
+- Comment this property to get all automation chains/operations back in printing (by default set to * (star))
 
 {{! /multiexcerpt}}</td>
 <td colspan="1">{{! multiexcerpt name='org.nuxeo.automation.trace.printable-default'}}
@@ -1384,8 +1383,8 @@ By default, all automation executions are 'printable' (appear in logs) when auto
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">`&lt;templateName&gt;`.target`</td>
-<td colspan="1">Directory where _&lt;templateName&gt;_ files will be deployed.</td>
+<td colspan="1">`templateName.target`</td>
+<td colspan="1">Directory where *templateName* files will be deployed.</td>
 <td colspan="1">`server/default/deploy/nuxeo.ear`</td>
 <td colspan="1">&nbsp;</td>
 </tr>
