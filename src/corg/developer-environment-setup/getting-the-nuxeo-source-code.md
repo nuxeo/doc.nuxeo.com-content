@@ -225,7 +225,7 @@ Starting from version 5.9.2, Nuxeo requires Maven <span style="color: rgb(34,34,
 
 ### Getting the Development Branch
 
-{{/panel}}{{#> panel type='code' heading='Clone Nuxeo repositories'}}
+{{#> panel type='code' heading='Clone Nuxeo Platform repositories'}}
 
 ```
 git clone git@github.com:nuxeo/nuxeo.git
@@ -233,12 +233,16 @@ cd nuxeo
 python clone.py master -a
 ```
 
-{{/panel}} {{#> callout type='note' }}
+{{/panel}}
+
+{{#> callout type='note' }}
 
 *   Python 2.7 is required. The scripts are not compliant with Python 3.x versions.
 *   Users of MSysGit should run clone.py with option --no_drive_mapping or -n as MSysGit is not able to access dynamically mounted drives. This option is available as of version 5.7.1.
 
-{{/callout}} {{#> callout type='note' }}
+{{/callout}}
+
+{{#> callout type='note' }}
 
 Contributing to Nuxeo **does not** require cloning Nuxeo source code: see [Contributing to Nuxeo]({{page space='nxdoc' page='contributing-to-nuxeo'}})
 
@@ -259,29 +263,58 @@ mvn -DskipTests install -Paddons,distrib
 
 If you want to open/edit the projects in Eclipse do the following at the very root of the Git repository:
 
-{{#> panel type='code' heading='Generate Eclipse\'s project files'}}
+Before importing Nuxeo source code in Eclipse, you need to generate Eclipse project files in terminal. Compared to doing
+it in Eclipse, using the command-line makes the process much faster. Please launch the following command at the root of the
+Git repository.
+
+{{#> callout type='note' }}
+
+Don't forget to replace the expression `/path/to/eclipse/workspace` to your real workspace.
+
+{{/callout}}
+
+{{#> panel type='code' heading='Generate Eclipse\'s project files with maven-eclipse-plugin'}}
 
 ```
-# For details, see Maven Eclipse Plugin documentation: https://maven.apache.org/plugins/maven-eclipse-plugin/eclipse-mojo.html
-mvn eclipse:clean eclipse:eclipse -Paddons,distrib [-DdownloadSources=true] [-DdownloadJavadocs=true] [-Declipse.useProjectReferences=true] [-Declipse.workspace=/path/to/eclipse/workspace] -fae -nsu -T 1C
-# Linux and OS X users should then run the following script to make Eclipse use different build directories than Maven:
-./fixeclipse
-# A cross-platform script is also available for Windows users:
-# python scripts/fixeclipse.py
+mvn eclipse:clean eclipse:eclipse \
+    -Paddons,distrib -fae -nsu -T 1C \
+  [ -DdownloadSources=true ] \
+  [ -DdownloadJavadocs=true ] \
+  [ -Declipse.useProjectReferences=true ] \
+  [ -Declipse.workspace=/path/to/eclipse/workspace ]
 ```
 
 {{/panel}}
 
-Then in Eclipse:
+{{#> callout type='note' }}
 
-{{#> panel type='code' heading='Import Nuxeo modules into Eclipse'}}
+For details, see [Maven Eclipse Plugin documentation](https://maven.apache.org/plugins/maven-eclipse-plugin/eclipse-mojo.html).
+
+{{/callout}}
+
+You should then run the following script to make Eclipse use different build directories than Maven:
+
+{{#> panel type='code' heading='Linux and OS X'}}
+
+```
+./fixeclipse
+```
+
+{{/panel}}
+
+{{#> panel type='code' heading='Windows'}}
+
+```
+python scripts/fixeclipse.py
+```
+
+{{/panel}}
+
+Now, you can import Nuxeo modules into Eclipse:
 
 ```
 File -> Import -> General -> Existing Projects into Workspace
-
 ```
-
-{{/panel}}
 
 ### Getting a Maintenance Branch or a Specific Release
 
