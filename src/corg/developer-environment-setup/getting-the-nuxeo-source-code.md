@@ -244,19 +244,18 @@ Contributing to Nuxeo **does not** require cloning Nuxeo source code: see [Contr
 
 {{/callout}}
 
-### Import Nuxeo Source Code in Eclipse
-
-Of course for the dependencies to be resolved in Eclipse they will have to be loaded first in your Maven repository, which you can do by performing at least one build first:
+After having cloned the Nuxeo repository, you need to run a full build in Maven to download all the dependencies.
 
 {{#> panel type='code' heading='Full build Nuxeo without running tests'}}
 
 ```
 export MAVEN_OPTS="-Xmx4096m -Xms1024m"
-mvn -DskipTests install -Paddons
-(cd nuxeo-distribution ; mvn -DskipTests install)
+mvn -DskipTests install -Paddons,distrib
 ```
 
 {{/panel}}
+
+### Import Nuxeo Source Code in Eclipse
 
 If you want to open/edit the projects in Eclipse do the following at the very root of the Git repository:
 
