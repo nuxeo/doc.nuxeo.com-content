@@ -104,10 +104,12 @@ history:
         version: '1'
 
 ---
+{{#> callout type='info' }}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{/callout}}
+
 {{! excerpt}}
-
 When designing a screen or form, you may want to render a part of the page when clicking on a link or when choosing an element in a select. This page explains how this can be done in a XHTML template.
-
 {{! /excerpt}}
 
 This page describes how to do so without having to define a Seam component, keeping the contextual information. This is better for reuse of templates (like in widgets) within the same page, as you do not have to define a new Seam component for every context variable on the page.

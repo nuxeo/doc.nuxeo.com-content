@@ -189,6 +189,10 @@ For instance, when you are editing a document layout, whether it is the creation
 
 ![]({{file name='STUDIO-2.1_widget_editor.png'}} ?w=350,border=true)
 
+{{#> callout type='info' }}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{/callout}}
+
 1.  Unfold the option by clicking on the black arrow,
     ![]({{file name='screenshot_2011-01-11_09.01.44.png'}} ?w=450,border=true)
 2.  Fill the text area with an expression that will control the display of your widget. Here are some samples:

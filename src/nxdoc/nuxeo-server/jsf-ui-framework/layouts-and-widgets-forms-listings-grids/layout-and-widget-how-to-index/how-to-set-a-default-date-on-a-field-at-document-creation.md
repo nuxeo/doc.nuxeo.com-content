@@ -104,10 +104,12 @@ history:
 
 ---
 {{! excerpt}}
-
 A frequent requirement with documents is to set a default date on a field when showing the creation form. This how-to will teach you how to do it easily using Nuxeo Studio's [event handlers]({{page space='studio' page='event-handlers'}}) and [automation chains]({{page space='studio' page='automation'}}).
-
 {{! /excerpt}}
+
+## Before You Start
+
+{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
 
 ## Creating the Event Handler
 

@@ -77,6 +77,10 @@ history:
         version: '1'
 
 ---
+{{#> callout type='info' }}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{/callout}}
+
 HTML5 Drag and Drop enables users to [import documents in a folder]({{page space='userdoc' page='creating-content#content-creation-dandd'}}) and fill in their metadata at the same time.
 
 ![]({{file name='smartDnD_metadata.png' space='userdoc' page='creating-content'}} ?w=650,h=289,border=true)

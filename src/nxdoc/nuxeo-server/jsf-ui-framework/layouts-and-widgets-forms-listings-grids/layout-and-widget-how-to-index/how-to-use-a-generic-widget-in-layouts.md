@@ -83,10 +83,12 @@ history:
         version: '1'
 
 ---
+{{#> callout type='info' }}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{/callout}}
+
 {{! excerpt}}
-
 The Nuxeo Platform framework and its "Layout" module offers many widget types. Some are exposed directly in Studio interface, but some are not. If you want to use one of those existing widgets in Studio when editing a layout, you should drop a _generic widget_ from the "Advanced Widgets" category on the right, as in the screenshot below:
-
 {{! /excerpt}}
 
 ![]({{file name='screenshot_2011-12-02_18.39.20.png'}} ?w=200,border=true,thumbnail=true)
@@ -111,7 +113,10 @@ Let's say that the widget needs to be linked to the metadata description from th
 - [Customize the Versioning and Comment Widget]({{page page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
 - [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 - [How-To Index]({{page page='how-to-index'}})
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+{{/panel}}
+</div>
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 - [JSF UI Framework]({{page page='jsf-ui-framework'}})
 - [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
 - [Layout and Widgets]({{page page='layouts-and-widgets-forms-listings-grids'}})

@@ -150,10 +150,12 @@ history:
         version: '1'
 
 ---
+{{#> callout type='info' }}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{/callout}}
+
 {{! excerpt}}
-
 On documents edit form, a **Comment** textarea is displayed, and this text is visible in the **History** tab. When the document is versionable, versioning options are also displayed. This page provides some examples to customize this behavior using XML extensions. These examples can be contributed [in Nuxeo Studio]({{page page='how-to-contribute-to-an-extension'}}) (Advanced Settings > XML Extensions) or with [Nuxeo CLI]({{page page='how-to-contribute-to-an-extension'}}).
-
 {{! /excerpt}}
 
 When using a **Toggleable Form** (`toggleableLayoutWithForms`) [widget type](http://showcase.nuxeo.com/nuxeo/layoutDemo/toggleableLayoutWidget), these fields can be shown by setting the property **Show Edit Options** (`showEditOptions`) to `true`, and they can be hidden by setting the property to `false`.

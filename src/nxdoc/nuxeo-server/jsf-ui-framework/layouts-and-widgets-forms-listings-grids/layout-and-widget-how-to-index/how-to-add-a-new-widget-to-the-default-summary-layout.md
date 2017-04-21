@@ -92,6 +92,10 @@ This how-to explains how to insert a new widget to the default Summary layout so
 
 {{! /excerpt}}
 
+{{#> callout type='info' }}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{/callout}}
+
 A widget type enables to display [actions]({{page page='actions-links-buttons-icons-tabs-and-more'}}). It takes advantage of the fact that actions needing different kinds of rendering can now be mixed up even if they're using the same [category]({{page page='actions-display'}}). This widget type makes it possible to display a list of actions, but also to include some widget types rendering.
 
 Since the default summary layout contains four widgets displaying actions, it is possible to pile up widgets in them. The available action categories are:
@@ -169,17 +173,17 @@ The action order will make it possible to change the order of appearance of this
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Customize the Dashboard]({{page page='how-to-customize-the-dashboard'}})
-*   [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
-*   [Customize the Versioning and Comment Widget]({{page page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
-*   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Customize the Dashboard]({{page page='how-to-customize-the-dashboard'}})
+- [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
+- [Customize the Versioning and Comment Widget]({{page page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
+- [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [JSF UI Framework]({{page page='jsf-ui-framework'}})
-*   [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
-*   [Layout and Widgets]({{page page='layouts-and-widgets-forms-listings-grids'}})
-*   [Widget Definitions]({{page page='widget-definitions'}})
+- [JSF UI Framework]({{page page='jsf-ui-framework'}})
+- [Form Layouts in Nuxeo Studio]({{page space='studio' page='form-layouts'}})
+- [Layout and Widgets]({{page page='layouts-and-widgets-forms-listings-grids'}})
+- [Widget Definitions]({{page page='widget-definitions'}})
 
 {{/panel}}</div></div>

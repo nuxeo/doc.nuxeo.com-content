@@ -83,6 +83,10 @@ history:
         version: '1'
 
 ---
+{{#> callout type='info' }}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{/callout}}
+
 The Nuxeo UI uses a variety of web frameworks, each having its own strengths and weaknesses. User interfaces designed in Nuxeo Studio are primarily driven by JSF and Seam, which have a long history and are quite solid but are sometimes tricky to use in elaborate use cases. The Nuxeo Platform includes a widget which integrates the Javascript-based Select2 component with core Nuxeo APIs to enable some very interesting and useful Javascript-based features.
 
 ## The select2 Widget
