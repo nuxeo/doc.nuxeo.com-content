@@ -360,11 +360,11 @@ For example, in the configuration file `OSGI-INF/types-contrib.xml` (the name is
 
 ```
 
-We name our schema "sample", and the&nbsp;`.xsd`&nbsp;file is referenced through its path,&nbsp;`schemas/sample.xsd`. The schema is registered through the&nbsp;**schema**&nbsp;extension point of the Nuxeo component&nbsp;[`org.nuxeo.ecm.core.schema.TypeService`&nbsp;](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.core.schema.TypeService). Our own extension component is given a name,&nbsp;`org.nuxeo.project.sample.types`, which is not very important as we only contribute to existing extension points and don't define new ones &mdash; but the name must be new and unique.
+We name our schema "sample", and the `.xsd` file is referenced through its path, `schemas/sample.xsd`. The schema is registered through the **schema** extension point of the Nuxeo component [`org.nuxeo.ecm.core.schema.TypeService`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.core.schema.TypeService). Our own extension component is given a name, `org.nuxeo.project.sample.types`, which is not very important as we only contribute to existing extension points and don't define new ones &mdash; but the name must be new and unique.
 
-Finally, like for all components defining configuration, the component has to registered with the system by referencing it from the&nbsp;`META-INF/MANIFEST.MF`&nbsp;file of the bundle.
+Finally, like for all components defining configuration, the component has to registered with the system by referencing it from the `META-INF/MANIFEST.MF` file of the bundle.
 
-In our example, we tell the system that the&nbsp;`OSGI-INF/types-contrib.xml`&nbsp;file has to be read, by mentioning it in the&nbsp;`Nuxeo-Component`&nbsp;part of the&nbsp;`META-INF/MANIFEST.MF`:
+In our example, we tell the system that the `OSGI-INF/types-contrib.xml` file has to be read, by mentioning it in the `Nuxeo-Component` part of the `META-INF/MANIFEST.MF`:
 
 ```
 Manifest-Version: 1.0

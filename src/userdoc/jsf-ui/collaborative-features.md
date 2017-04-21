@@ -94,7 +94,7 @@ Users with Management everything permission can unlock document on other users' 
 
 ## Versions Management
 
-{{{multiexcerpt 'versioning-intro' page='USERDOC:Editing Content'}}}
+{{{multiexcerpt 'versioning-intro' page='USERDOC:Browse'}}}
 
 See the [Versioning Overview section]({{page page='editing-content#versioning-overview'}}) for more details.
 
