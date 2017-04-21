@@ -475,7 +475,7 @@ Make sure no jobs are still queued or running before starting the upgrade proced
 4.  Update the environment variable `NUXEO_HOME`.
 5.  Update your nuxeo.conf file to make it use your custom configuration, database and data directory.
 
-    *   Report your custom configuration (uncommented lines in the old Nuxeo Platform `nuxeo.conf`) into the nuxeo.conf file of the target Nuxeo&nbsp; Platform version.
+    *   Report your custom configuration (uncommented lines in the old Nuxeo Platform `nuxeo.conf`) into the nuxeo.conf file of the target Nuxeo Platform version.
 
         {{#> callout type='warning' }}
 
@@ -487,13 +487,13 @@ Make sure no jobs are still queued or running before starting the upgrade proced
 6.  [Upgrade your Nuxeo Packages](#marketplace-packages-upgrade).
 7.  [Upgrade and install your Studio project customization](#studio-project-upgrade).
 8.  [Upgrade and install your custom code](#custom-code-up).
-9.  If you have manually copied JARs in `$NUXEO/nxserver/plugins` or&nbsp;`$NUXEO/nxserver/bundles` (like&nbsp;nuxeo-platform-login-cas2 if you are using the CAS2 authentication), install the corresponding new version of the JARs.
+9.  If you have manually copied JARs in `$NUXEO/nxserver/plugins` or `$NUXEO/nxserver/bundles` (like nuxeo-platform-login-cas2 if you are using the CAS2 authentication), install the corresponding new version of the JARs.
 10.  Start the new Nuxeo Platform.
 11.  Check for ERROR or WARN logs in `$NUXEO/log/console.log` or `$NUXEO/log/server.log`, or Nuxeo Runtime startup errors after log `Nuxeo Platform Started`.
 
 ### {{> anchor 'marketplace-packages-upgrade'}}Upgrading Your Nuxeo Packages
 
-1.  Run&nbsp;`nuxeoctl mp-list` to get the list of all downloaded and installed (started state) Nuxeo Packages.
+1.  Run `nuxeoctl mp-list` to get the list of all downloaded and installed (started state) Nuxeo Packages.
 2.  Get the list of all started Nuxeo Packages.
 3.  Run `nuxeoctl mp-install` on each addon that was in started state at step 2.
 
@@ -522,6 +522,13 @@ Since the Platform evolves, you will also need to upgrade your custom code:
     If you run into issues, you know where to search since you already identified where customizations have been done at step 1.
 
 ## Detailed Upgrade by Version
+
+### To Fast Track 9.1 from LTS 2016
+
+See [Upgrade from LTS 2016 to 9.1]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-91'}}) to upgrade to Ftast Track version 9.1 of the Nuxeo Platform.
+
+Release notes:
+- [9.1 release notes]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
 
 ### To LTS 2016 from LTS 2015
 
@@ -578,19 +585,19 @@ See [Upgrade from 5.8 to 6.0]({{page page='upgrade-from-58-to-60'}})
 
 [5.7.1 upgrade notes](https://jira.nuxeo.com/issues/?jql=project%20%3D%20%22NXP%22%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%225.7.1%22%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20ASC%2C%20key%20ASC).
 
-See&nbsp;[Upgrade from 5.6 to 5.8]({{page page='upgrade-from-56-to-58'}}).
+See [Upgrade from 5.6 to 5.8]({{page page='upgrade-from-56-to-58'}}).
 
 ### To 5.6 from 5.5
 
 [Upgrade notes](https://jira.nuxeo.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+in+%28%22NXP%22%2C+%22NXCM%22%29+AND+resolution+%3D+Fixed+AND+fixVersion+%3D+%225.6%22+AND+%28%22Impact+type%22+%3D+%22API+change%22+OR+%22Upgrade+notes%22+is+not+EMPTY%29+ORDER+BY+component+DESC%2C+key+DESC).
 
-See&nbsp;[Upgrade from 5.5 to 5.6]({{page page='upgrade-from-55-to-56'}}).
+See [Upgrade from 5.5 to 5.6]({{page page='upgrade-from-55-to-56'}}).
 
 ### To 5.5 from 5.4.2
 
 [Upgrade notes](https://jira.nuxeo.com/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+in+%28%22NXP%22%2C+%22NXCM%22%29+AND+resolution+%3D+Fixed+AND+fixVersion+%3D+%225.5%22+AND+%28%22Impact+type%22+%3D+%22API+change%22+OR+%22Upgrade+notes%22+is+not+EMPTY%29+ORDER+BY+component+DESC%2C+key+DESC).
 
-See&nbsp;[Upgrade from 5.4.2 to 5.5]({{page page='upgrade-from-542-to-55'}}).
+See [Upgrade from 5.4.2 to 5.5]({{page page='upgrade-from-542-to-55'}}).
 
 ### To 5.4.2 from 5.4.1
 
