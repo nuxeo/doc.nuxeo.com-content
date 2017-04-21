@@ -45,10 +45,9 @@ More information on JIRA ticket [NXP-21408](https://jira.nuxeo.com/browse/NXP-21
 
 #### Orphan Versions Removal
 
-In some cases, versions of some documents where not deleted even when the document itself was removed. The solution chosen to solve this issue has been to add a scheduled cleanup mechanism. The cleanup mechanism does periodic commits, every 1000 documents by default. This value can be changed using the configuration property `org.nuxeo.orphanVersionsCleanup.commitSize`.
+In some cases, versions of some documents where not deleted even when the document itself was removed. The solution chosen to solve this issue has been to add a scheduled cleanup mechanism. The cleanup mechanism does periodic commits, every 1000 documents by default. This value can be changed using the configuration property [`org.nuxeo.orphanVersionsCleanup.commitSize`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-9.1/viewContribution/org.nuxeo.ecm.core.orphanVersionsCleanup--configuration).
 
 More information on JIRA ticket [NXP-14187](https://jira.nuxeo.com/browse/NXP-14187).
-
 
 #### Compatible with CloudFront for Caching Binaries
 
