@@ -367,6 +367,10 @@ A content view is the definition of a list of documents displayed in the interfa
 
 {{! /excerpt}}
 
+{{#> callout type='info' }}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{/callout}}
+
 For example:
 
 *   to display the content listing of folderish document types (Workspace, Section, Folder...),

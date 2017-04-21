@@ -2,7 +2,7 @@
 title: How to Configure a New Default Search Form in the Search Tab
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-04-21'
     status: ok
 details:
     howto:
@@ -83,6 +83,10 @@ history:
         version: '1'
 
 ---
+{{#> callout type='info' }}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{/callout}}
+
 Defining a new search form basically consists in defining a new content view that is flagged as a Search content view.
 
 To set a new search form that will replace the Default search form displayed when you click on the Search tab:

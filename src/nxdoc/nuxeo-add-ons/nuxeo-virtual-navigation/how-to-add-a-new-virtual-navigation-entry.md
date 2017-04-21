@@ -211,8 +211,9 @@ Just follow these steps:
 
 **Required elements**
 
-1.  You need a hierarchical vocabulary: you can [configure one using Studio]({{page page='how-to-add-a-new-vocabulary'}});
-2.  You need to have a [document type]({{page page='how-to-define-a-document-type'}}) that uses the hierarchical vocabulary for filling the value in one of its forms.
+1. You need a hierarchical vocabulary: you can [configure one using Studio]({{page page='how-to-add-a-new-vocabulary'}});
+2. You need to have a [document type]({{page page='how-to-define-a-document-type'}}) that uses the hierarchical vocabulary for filling the value in one of its forms.
+3. In the **Settings** > **Application Dependencies** menu, make sure the target package Nuxeo JSF UI is checked.
 
 ## Configure the Virtual Navigation Query and Link&nbsp;{{> anchor 'configure-virtual-navigation'}}
 

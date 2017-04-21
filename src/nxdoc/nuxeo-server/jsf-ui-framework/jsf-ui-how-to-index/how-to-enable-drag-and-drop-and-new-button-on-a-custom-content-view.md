@@ -75,10 +75,11 @@ To do so, you basically need to create a new tab with some specific properties.
 
 Before you follow the steps below, you should already have configured the items below:
 
-*   A [document type]({{page page='how-to-define-a-document-type'}}) with the following properties:
-    *   Folderish facet
-    *   Accepts children document types (File or extending file)
-*   A [content view]({{page page='how-to-define-a-new-content-view'}}), obviously.
+- In the **Settings**&nbsp;> **Application Dependencies** menu, make sure the target package Nuxeo JSF UI is checked.
+- A [document type]({{page page='how-to-define-a-document-type'}}) with the following properties:
+    - Folderish facet
+    - Accepts children document types (File or extending file)
+- A [content view]({{page page='how-to-define-a-new-content-view'}}), obviously.
 
 ## Setting up Your Custom Tab
 

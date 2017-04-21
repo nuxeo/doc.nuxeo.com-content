@@ -143,6 +143,10 @@ When&nbsp;[configuring a content view]({{page space='studio' page='content-view-
 
 {{! /excerpt}}
 
+{{#> callout type='info' }}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{/callout}}
+
 ## Overriding an Existing Page Provider
 
 See in `nuxeo.conf` the property "`elasticsearch.override.pageproviders`". Uncomment it and pickup some of the mentioned page providers.
