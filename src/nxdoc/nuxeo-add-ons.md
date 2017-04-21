@@ -300,7 +300,7 @@ Public
 [Documentation]({{page page='howto-nuxeo-api-playground'}})
 </td>
 <td colspan="1">
-[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-api-playground?version=1.1.1)
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-api-playground?version=1.1.2)
 </td>
 </tr>
 <tr>
@@ -542,7 +542,7 @@ Public
 [User documentation]({{page space='userdoc' page='nuxeo-jenkins-report'}})
 </td>
 <td colspan="1">
-[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jenkins-report-mp?version=3.8.10)
+[Released for 9.1](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jenkins-report-mp?version=3.9.1)
 </td>
 </tr>
 <tr>
@@ -789,7 +789,7 @@ Public
 [Documentation]({{page version='' space='nxdoc' page='web-ui'}})
 </td>
 <td colspan="1">
-[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui?version=0.8.0)<br/>
+[Released for 9.1](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui?version=0.10.0)<br/>
 Beta version
 </td>
 </tr>
