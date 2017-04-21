@@ -580,24 +580,26 @@ When you navigate from page to page, your selection is not lost and you can bulk
 
 ## {{> anchor 'versioning-overview'}}Versioning Overview
 
-{{! multiexcerpt name='versioning'}}
-{{! multiexcerpt name='versioning-intro'}}
+{{{multiexcerpt 'versioning-functional-overview' page='USERDOC:Browse'}}}
 
-When you edit a document, you can decide to save your modifications as a new version of the document. This enables you and other users to easily revert to a specific version of the document if needed, without having to edit the document. Versions are accessible from the **History** tab of the document.
+**To create a new version of your document**:
+{{! multiexcerpt name='jsf-ui-manual-versioning'}}
+
+1. Click on the **Edit** tab of the document.
+2. At the bottom of the form, in the Update version, select your versioning option and click **Save**.
+    ![]({{file name='version-update.png'}} ?w=297,h=91,border=true)
+    Versions are accessible from the **History** tab of the document.
+
+{{#> callout type='note' }}
+The automatic versioning after the modification of the document won't work in a JSF application.
+{{/callout}}
 
 {{! /multiexcerpt}}
 
-You have several options regarding the versioning of your document.
-
-![]({{file name='version-update.png'}} ?w=297,h=91,border=true)
-
-{{{multiexcerpt 'versioning-example' page='/userdoc/browse'}}}
 
 ### Nuxeo Drive Versioning Policy
 
 {{multiexcerpt 'drive-versioning-policy' page='/userdoc/browse'}}
-
-{{! /multiexcerpt}}
 
 ## {{> anchor 'relations'}}Relations
 

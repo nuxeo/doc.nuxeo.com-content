@@ -220,28 +220,54 @@ On the document itself you can decide to delete the file of your document by cli
 
 ## Versioning
 
-{{! multiexcerpt name='manual-versioning'}}
-{{! multiexcerpt name='versioning-example'}}
+{{! multiexcerpt name='versioning-functional-overview'}}
+{{! multiexcerpt name='versioning-intro'}}
 
-Every document holds a version number, which is a piece of information about the evolution of the document. A version number (V.v) is composed of a major version number (V) and a minor version number (v). When a document is created, its version number is 0.0. Minor version increment are used for secondary changes. Major version increment is usually reserved to significant modifications.
+Document versions enable you and other users to easily revert to a specific version of the document if needed, without having to edit the document. The Nuxeo Platform offers both automatic and manual versioning of documents.
 
-Let's say that your current document version is 0.1:
+{{! /multiexcerpt}}
 
-- You can save modifications without creating a new version of the document, as it is not yet ready. The 0.1 version of the document has been modified, so its version number becomes 0.1+ (the + indicates to other users that version 0.1 has been modified).
-    {{#> callout type='info' }}
-    If you haven't actually done any modification on the document when you click **Save**, the version remains 0.1, you are not added to the contributors of the document and the last modification time is not updated.
-    {{/callout}}
-- You can save the modifications in a new version of the document. The version number will then be 0.2 if you increment minor version or 1.0 if you save modifications in a major version. The newly created version is automatically archived in the **History** tab so it's not lost when users will edit it.
+Every document holds a version number, which is a piece of information about the evolution of the document. A version number (V.v) is composed of a major version number (V) and a minor version number (v). When a document is created, its version number can be 0.0, 0.1 or 1.0 depending on automatic versioning rules. Minor version increment are typically used for secondary changes. Major version increment is usually reserved to significant modifications. When a document is edited without a new version being created, the version number is suffixed with a + (0.1+ for instance), to indicate that the version was modified since it was created.
 
-    {{#> callout type='info' heading='Version number 0.0'}}
-    When a document is created, its version number is 0.0\. This is considered as a draft of the document, which will need to be saved into a first version, either minor or major.
+{{#> callout type='info' heading='Version number 0.0'}}
+Version number 0.0 is considered as a draft of the document, which will need to be saved into a first version, either minor or major.
+Draft version 0.0 is not archived.
+{{/callout}}
 
-    Draft version 0.0 is not archived and the + behavior described above does not apply to 0.0 draft.
-    {{/callout}}
+### Automatic Versioning
+
+Two automatic versioning behaviors are applied by default: one for files (and associated document types) and one for notes.
+
+- Files and other document types with [schema]({{page version='' space='nxdoc' page='repository-concepts'}}#schemas) `file:file`, like pictures, are created in version 0.0. A new minor version is automatically created when you edit a document that was last modified by another user. This minor version holds the modifications of the previous contributor, so that no data is lost. Your changes are applied on top of this version, the version number becoming for instance 0.1+. When you edit a document that was last edited by yourself, no version is automatically saved. You can however decide to manually create a new version of the document.
+
+- For notes, a new version is created for every modification, whether you are the last contributor of the note or not. The created version holds the your changes. When they are created, notes have a version number of 0.1.
+
+This automatic versioning applies in case of:
+- Modification of the main file or its attachments using drag and drop
+- Manual edit of the attachments
+- Modification of the document (main file, properties, attachments) via bulk edit
+
+The following actions don’t trigger the automatic versioning of the document:
+- Tagging the document
+- Adding the document to a collection
+- Changing the relations of the document
+- Commenting the document
+
+### Manual Versioning
+
+You can decide to manually create a new version of the document.
+
+In case of a file document types the automatic version is done first and then the manual version. So if you edit the document and select the option “Increment major version”, a minor version is created and then a major version: the minor version is the automatic one holding the previous contributor’s work, and the major one is the manual version with your modifications. If you select “Increment minor version”, two minor versions are created following the same principle. And if you chose “Skip version increment”, only the automatic versioning behavior is applied and the document version number is 0.1+ for instance.
+
+For notes, if you use the Edit form, only the manual versioning rules applied. Selecting “Increment major version” save your changes in a major version, “Increment minor version” saves them in a minor version and choosing “Skip version increment” doesn’t create a new version and the version number is +ed (0.1+ for instance).
+
 {{! /multiexcerpt}}
 
 **To create a new version of your document**:
-1. Go on the View tab of the desired document.
+
+{{! multiexcerpt name='web-ui-manual-versioning'}}
+
+1. Go on the **View** tab of the desired document.
 2. In the top right section of metadata, click on **Create Version**.
 3. Select the version that you want and click on **Create Version** to confirm.
   ![]({{file name='versions-web-ui.png'}} ?w=350,border=true)
