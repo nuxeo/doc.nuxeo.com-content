@@ -2,10 +2,10 @@
 title: Compatibility Matrix
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-04-21'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - multiexcerpt
 toc: true
 confluence:
@@ -123,12 +123,15 @@ Nuxeo is shipped with an embedded Tomcat server.
 <tbody>
 <tr>
 <th colspan="1">&nbsp;</th>
+<th colspan="1">Nuxeo Platform 9.1</th>
 <th colspan="1">Nuxeo Platform LTS 2016</th>
 <th colspan="1">Nuxeo Platform LTS 2015</th>
 <th colspan="1">Nuxeo Platform 6.0</th>
 </tr>
 <tr>
 <th colspan="1">Redis</th>
+<td colspan="1">2.8.x <br />
+3.0.x</td>
 <td colspan="1">2.8.x <br />
 3.0.x</td>
 <td colspan="1">2.8.x<br />
@@ -150,11 +153,15 @@ More information on the pages [Nuxeo and Redis]({{page page='nuxeo-and-redis'}})
 <tbody>
 <tr>
 <th colspan="1">&nbsp;</th>
+<th colspan="1">Nuxeo Platform 9.1</th>
 <th colspan="1">Nuxeo Platform LTS 2016</th>
 <th colspan="1">Nuxeo Platform LTS 2015</th>
 <th colspan="1">Nuxeo Platform 6.0</th>
 </tr>
 <tr><th colspan="1">Elasticsearch</th>
+<td colspan="1">
+Library: 2.3.5<br />
+Cluster: 2.3.x to 2.4.x</td>
 <td colspan="1">**From 8.1 to 8.3:**<br/>
 Library: 1.5.2<br />
 Cluster: 1.5.2 to 1.7.x<br/>
