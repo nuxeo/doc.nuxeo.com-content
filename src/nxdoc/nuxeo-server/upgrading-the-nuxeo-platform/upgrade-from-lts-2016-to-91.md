@@ -52,8 +52,15 @@ Reindex the full repository following [Rebuilding the repository index page]({{p
 
 ### Code Changes
 
-#### Code Behavior Changes
+#### Automation Scripting
 
+{{! multiexcerpt name='upgrade-9.1-code.defaultValue'}}
+
+Backward Compatibility was broken for 9.1 ([NXP-21508](https://jira.nuxeo.com/browse/NXP-21508)): parameters are no longer extracted from the context of the `params` object when calling the scripting operation. You have to explicitly set each parameter in the operation definition.. Follow [NXP-22190](https://jira.nuxeo.com/browse/NXP-22190) for resolutions.
+
+{{! /multiexcerpt}}
+
+#### Code Behavior Changes
 
 {{! multiexcerpt name='upgrade-9.1-code.defaultValue'}}
 
@@ -84,7 +91,6 @@ See [NXP-21186](https://jira.nuxeo.com/browse/NXP-21186).
 {{! /multiexcerpt}}
 
 #### Operation Changes
-
 
 {{! multiexcerpt name='upgrade-9.1-operation.Server.CreateUser'}}
 
