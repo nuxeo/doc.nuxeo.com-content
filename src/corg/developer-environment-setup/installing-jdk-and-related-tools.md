@@ -3,8 +3,6 @@ title: Installing JDK and related tools
 labels:
     - java
     - jdk
-    - intellij
-    - idea
     - maven
 ---
 
@@ -23,7 +21,7 @@ javac 1.8.0_131
 
 ## Installing Related Tools
 
-You need to install Maven, a project management tool. You also need to install your preferred IDE, such as Eclipse or IntelliJ.
+You need to install Maven, a project management tool.
 
 ### Maven
 
@@ -34,7 +32,3 @@ Using Homebrew
 ```
 brew install maven
 ```
-
-### IntelliJ
-
-Download and install from <https://www.jetbrains.com/idea/download/>. Nuxeo works with both community edition and ultimate edition.
