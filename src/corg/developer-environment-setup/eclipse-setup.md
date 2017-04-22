@@ -64,3 +64,58 @@ history:
         version: '1'
 
 ---
+
+## Install Eclipse
+
+Download and install Eclipse from <https://www.eclipse.org/downloads/>.
+
+### Import Nuxeo Source Code in Eclipse
+
+Before importing Nuxeo source code in Eclipse, you need to generate Eclipse
+project files in terminal. Compared to doing it in Eclipse, using the
+command-line makes the process much faster. Please launch the following command
+at the root of the Git repository.
+
+{{#> panel type='code' heading='Generate Eclipse\'s project files with maven-eclipse-plugin'}}
+
+```
+mvn eclipse:clean eclipse:eclipse \
+    -Paddons,distrib -fae -nsu -T 1C \
+  [ -DdownloadSources=true ] \
+  [ -DdownloadJavadocs=true ] \
+  [ -Declipse.useProjectReferences=true ] \
+  [ -Declipse.workspace=/path/to/eclipse/workspace ]
+```
+
+{{/panel}}
+
+{{#> callout type='note' }}
+
+For details, see [Maven Eclipse Plugin documentation](https://maven.apache.org/plugins/maven-eclipse-plugin/eclipse-mojo.html).
+
+{{/callout}}
+
+You should then run the following script to make Eclipse use different build
+directories than Maven:
+
+{{#> panel type='code' heading='Linux and OS X'}}
+
+```
+./fixeclipse
+```
+
+{{/panel}}
+
+{{#> panel type='code' heading='Windows'}}
+
+```
+python scripts/fixeclipse.py
+```
+
+{{/panel}}
+
+Now, you can import Nuxeo modules into Eclipse:
+
+```
+File -> Import -> General -> Existing Projects into Workspace
+```

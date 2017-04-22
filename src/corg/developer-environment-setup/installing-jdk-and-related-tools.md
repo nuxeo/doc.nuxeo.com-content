@@ -3,7 +3,6 @@ title: Installing JDK and related tools
 labels:
     - java
     - jdk
-    - eclipse
     - intellij
     - idea
     - maven
@@ -35,10 +34,6 @@ Using Homebrew
 ```
 brew install maven
 ```
-
-### Eclipse
-
-Download and install from <https://www.eclipse.org/downloads/>.
 
 ### IntelliJ
 
