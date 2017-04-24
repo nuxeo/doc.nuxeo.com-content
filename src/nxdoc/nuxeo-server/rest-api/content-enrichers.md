@@ -490,7 +490,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 
 {{/panel}}
 
-More details about the thumbnail enricher: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html)
+More details about the thumbnail enricher: [http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/thumbnail/io/ThumbnailJsonEnricher.html](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/thumbnail/io/ThumbnailJsonEnricher.html)
 
 ### ACLs
 
