@@ -205,7 +205,7 @@ You can then use either the [`Document.SetBLob`](http://explorer.nuxeo.com/nuxeo
 
 ## Blob Manager and Blob Providers
 
-At lower level, blobs are managed in the Nuxeo Platform by Blob Providers. Most of the time, blob Java objects implement the interface [`ManagedBlob`](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/core/blob/ManagedBlob.html), that provides the `getKey()` method. This method returns an id for identifying the blob and this id starts by a prefix that gives the Blob Porvider used to retrieve it.
+At lower level, blobs are managed in the Nuxeo Platform by Blob Providers. Most of the time, blob Java objects implement the interface [`ManagedBlob`](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/core/blob/ManagedBlob.html), that provides the `getKey()` method. This method returns an id for identifying the blob and this id starts by a prefix that gives the Blob Provider used to retrieve it.
 
 A **Blob Provider** is a component that provides an **API to read and write binary streams** as well as additional services such as:
 
@@ -221,16 +221,18 @@ As we will see later in this page, the Nuxeo Platform is shipped with several Bl
 *   S3, Azure, ...
 *   Google Drive, Dropbox
 
-A Nuxeo Platform instance can make use of several Blob Providers on the same instance. The BlobManager service is in charge of determining for read and write operations which Blob Provider should be used depending on various parameters.
+As a specialization, a Blob Provider can implement the interface `DocumentBlobProvider` if it is capable of dealing with advanced document-related operations like versioning.
+
+A Nuxeo Platform instance can make use of several Blob Providers on the same instance. The `DocumentBlobManager` service is in charge of determining for read and write operations which Blob Provider should be used depending on various parameters. The `BlobManager` service is then in charge of actualing using the correct `BlobProvider` to do the read/write operation.
 
 A typical low level Java call for creating a file is the following:
 
 ```java
-BlobManager blobManager = Framework.getService(BlobManager.class);
-String key = blobManager.writeBlob(blob, doc);
+DocumentBlobManager blobManager = Framework.getService(DocumentBlobManager.class);
+String key = blobManager.writeBlob(blob, doc, xpath);
 ```
 
-The `BlobManager` service uses the contributed BlobDispatcher class (or the default one) for determining which Blob Provider to use for persisting the blob. It can thus accept the document as a parameter. We will review in a paragraph below how the default BlobDispatcher works.
+The `DocumentBlobManager` service uses the contributed `BlobDispatcher` implementation (or the default one) to determine which Blob Provider to use for persisting the blob. It can therefore accept the document and the blob's xpath as parameters. We will review below how the default BlobDispatcher works.
 
 Bellow is a sequence diagram of what happens when writing a binary stream.
 
@@ -504,7 +506,7 @@ For example, all the videos could be stored somewhere, the attachments in a diff
 {{#> panel type='code' heading='Example Blob Dispatcher Configuration'}}
 
 ```xml
-<extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
+<extension target="org.nuxeo.ecm.core.blob.DocumentBlobManager" point="configuration">
   <blobdispatcher>
     <class>org.nuxeo.ecm.core.blob.DefaultBlobDispatcher</class>
     <property name="dc:format=video">videos</property>
