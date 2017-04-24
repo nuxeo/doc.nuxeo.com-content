@@ -216,7 +216,7 @@ history:
 ---
 ## Metrics
 
-The platform uses [Coda Hale Yammer Metrics](http://metrics.codahale.com/).
+The platform uses [Coda Hale Yammer Metrics](http://metrics.dropwizard.io/).
 
 These metrics are exposed via JMX but can also be reported with CSV files or send to a [Graphite](http://graphite.wikidot.com/) server.
 
