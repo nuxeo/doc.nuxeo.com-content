@@ -140,26 +140,25 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' }}
-
+{{! excerpt}}
 In this how to, you will learn how to let managers of a workspace determine who is part of locally defined groups (local to the workspace). It is like implementing a "role" notion. If you are familiar with [Social Collaboration module]({{page space='userdoc60' page='nuxeo-social-collaboration'}}), you know there are "members" of a social workspace, and "administrators". And that users with the administrator role can define who is a member and who is an administrator. Thanks to this piece of documentation, you will be able to implement the same behavior, but for any "role" you want, and even think of more subtle use cases.
+{{! /excerpt}}
 
-{{/callout}}
-
-Starting from 8.10 HF-04 you need to add the following contribution.
+{{#> callout type='info' }}
+Starting from 8.10 HF-04 you need to configure the virtual groups explicitly. To do so, add the following contribution:
 
 {{#> panel type='code'}}
 
 ```xml
 <extension point="configuration" target="org.nuxeo.runtime.ConfigurationService">
-    <documentation>
-      Allow setting permissions to virtual groups
-    </documentation>
-    <property name="nuxeo.automation.allowVirtualUser">true</property>
-  </extension>
+  <documentation>
+    Allow setting permissions to virtual groups
+  </documentation>
+  <property name="nuxeo.automation.allowVirtualUser">true</property>
+</extension>
 ```
-
 {{/panel}}  
+{{/callout}}
 
 The Nuxeo security system gives you all the tools you need to define security from giving a simple right to a specific user on a document to defining complex use cases. You can basically play with ACLs, granting and denying permissions to users and groups. Groups in Nuxeo are defined by users part of the "powerusers" or "administrators" groups, in the [Admin Center]({{page space='userdoc' page='managing-users-and-groups'}}). But it is also possible to define another category of groups, whose content definition is not "manual": the computed groups.
 
@@ -244,8 +243,8 @@ This part assumes you have [Nuxeo CLI]({{page version='' space='nxdoc' page='get
 
     &nbsp;
 
-    *   The first contribution `computer` defines the class that will implement the logic that will return the list of virtual groups the user belongs to.
-    *   The second contribution&nbsp;`computerChain`enables to contribute and chain multiple resolution logics.
+    - The first contribution `computer` defines the class that will implement the logic that will return the list of virtual groups the user belongs to.
+    - The second contribution&nbsp;`computerChain`enables to contribute and chain multiple resolution logics.
 3.  Don't forget to reference the XML contribution in the `src/main/resources/META-INF/MANIFEST.MF`. The file must be like that:
 
     {{#> panel type='code' heading='MANIFEST.MF'}}
@@ -276,10 +275,10 @@ This part assumes you have [Nuxeo CLI]({{page version='' space='nxdoc' page='get
 
 In the previous section we asked Nuxeo Runtime to register our new computer group. We named the class `org.nuxeo.project.computed.group.ValidatorsGroupComputer_._`
 
-*   So we must first create a class in `src/main/java`, defined in the package `org.nuxeo.project.computed.group`and named `ValidatorsGroupComputer`.
-*   This class must implement the `GroupComputer` interface. The Nuxeo Platform delivers an abstraction of this class with main class implemented named `AbstractGroupComputer`. We suggest to extend this class.
-*   The main method to implement is the `getGroupsForUser` that returns the list of virtual groups to which the user belongs given as parameter.
-*   The difficulty is that when `getGroupsForUser` is called the user is not yet connected. So you must execute code as a privileged user.
+- So we must first create a class in `src/main/java`, defined in the package `org.nuxeo.project.computed.group`and named `ValidatorsGroupComputer`.
+- This class must implement the `GroupComputer` interface. The Nuxeo Platform delivers an abstraction of this class with main class implemented named `AbstractGroupComputer`. We suggest to extend this class.
+- The main method to implement is the `getGroupsForUser` that returns the list of virtual groups to which the user belongs given as parameter.
+- The difficulty is that when `getGroupsForUser` is called the user is not yet connected. So you must execute code as a privileged user.
 
 #### `ValidatorGroupComputer` Class Creation
 
@@ -330,12 +329,11 @@ In the previous section we asked Nuxeo Runtime to register our new computer grou
         }
     }
     ```
-
     {{/panel}}
 
 **TEST**
 
-As you can see in this example, the computer group statically returns `myTestGroup. Let's test your test environment:`
+As you can see in this example, the computer group statically returns `myTestGroup`. Let's test your test environment:`
 
 1.  Bootstrap an empty project with [Nuxeo CLI]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-cli'}})
 2.  Make sure the project is correctly configured to be hot reloaded:
@@ -350,9 +348,7 @@ nuxeo hotreload configure
 If you don't have this please look errors message into your Java project and into the server console.
 
 {{#> callout type='note' }}
-
 If you refresh several times your project in the SDK server, you will see `myTestGroup` as many times as you did refresh. This is because the extension point registering your Computer Group adds your contribution with each refresh. But if you stop and restart the server, your contribution will be deployed once, and `myTestGroup` will be displayed once.
-
 {{/callout}}
 
 Now, we need to replace this static result by a dynamic one that will be the list of `$idWorkspace_validator` where the user is referenced. But when the `getGroupsForUser`method is called, no Session on the Core Repository is available as the user is not yet connected. You will need to explicitly switch to a privileged user.
@@ -368,8 +364,7 @@ Why do we need of this? Because in our example, we would like to fetch all works
 In other words, we would like to make the following query `SELECT * FROM Workspace WHERE wks:validators = 'theUsername'`, to get the id of each workspace to create the dynamic virtual groups list. Here is the code result:
 
 {{#> panel type='code' heading='CoreInstance.doPrivileged Example implementation: get Workspace Ids'}}
-
-```java
+```
 List<String> groupIds = new ArrayList<>();
 CoreInstance.doPrivileged(repositoryName, session -> {
     try (IterableQueryResult results = session.queryAndFetch(query, "NXQL")) {
@@ -380,13 +375,10 @@ CoreInstance.doPrivileged(repositoryName, session -> {
     }
 });
 ```
-
 {{/panel}}
 
 {{#> callout type='info' }}
-
 This code will be used in the Computer Group.
-
 {{/callout}}
 
 You will need this pattern several times to implement you Computer Group. So lets move to the next section and first replace the `getGroupsForUser` method with the dynamic resolution one.
@@ -399,7 +391,7 @@ Here is the final version of the `ValidatorGroupComputer` class:
 
 {{#> panel type='code' heading='ValidatorGroupComputer with dynamic groups'}}
 
-```java
+```
 package org.nuxeo.project.computed.group;
 
 import java.io.Serializable;
@@ -456,12 +448,11 @@ public class ValidatorsGroupComputer extends AbstractGroupComputer {
     }
 }
 ```
-
 {{/panel}}
 
 **TEST 1**
 
-As you can see in this example, the computer group statically returns `myTestGroup. Let's test your test environment:`.
+As you can see in this example, the computer group statically returns `myTestGroup`. Let&#39;s test your test environment:
 
 1.  Restart your server.
 3.  Hot reload your project.
@@ -483,9 +474,7 @@ As you can see in this example, the computer group statically returns `myTestGro
     You must see a section virtual user into the main view with one group referenced.
 
 {{#> callout type='info' }}
-
-Why does Administrator log out? Because the resolution of groups are **only during the connection.**
-
+Why does Administrator log out? Because the resolution of groups are **only during the connection**.
 {{/callout}}
 
 ## Button Creation
@@ -502,10 +491,14 @@ This part is a pure Studio demonstration, just a way of making sure our newly de
     In the Automation Chain definition:
 
     1.  Fetch > Context Document(s).
-    2.  Execution Context > Set Context Variable From Input: `name = "documentToValidate"`.
-    3.  Document > Get Parent : `type = Workspace`.
-    4.  Execution Context > Set Context Variable: `name = "validatorGroup", value = "group:@{Document.id}_validator"`.
-    5.  Execution Context > Restore Document Input : `name = "documentToValidate"`.
+    2.  Execution Context > Set Context Variable From Input:</br>
+        `name = "documentToValidate"`.
+    3.  Document > Get Parent:<br/>
+        `type = Workspace`.
+    4.  Execution Context > Set Context Variable:<br/>
+        `name = "validatorGroup", value = "group:@{Document.id}_validator"`.
+    5.  Execution Context > Restore Document Input:<br/>
+        `name = "documentToValidate"`.
     6.  Service > Create Task : task name = "Vallidation", directive = "Please Validate the document", variable name for actors prefixed = "validatorGroup", create one task per actor = unchecked
 
 **TEST**
