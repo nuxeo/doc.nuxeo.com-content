@@ -184,6 +184,7 @@ The version number is changed by a Check In operation; either the minor version 
 ### {{> anchor 'versioning-policies'}}Versioning Policies and Filters
 
 The automatic versioning system is based on a combination of policies, where each of them is composed by one or multiple filters. Each versioning policy defines:
+- A unique id which allows to override default policies
 - The numbering policy (between `NONE`, `MINOR` or `MAJOR`)
 - If the versioning has to be applied before or after the actual modification
 - The order in which the policy should be taken into account.
@@ -198,6 +199,16 @@ Example:
     </policy>
 </extension>
 ```
+All filters referenced by the policy must match in order to apply the policy.
+
+Setting `NONE` as numbering policy will stop if no policy with a lower order applies.
+
+{{#> callout type='note' }}
+
+Nuxeo reserved order range `[1,10]` to contribute system policies.
+
+{{/callout}}
+
 A versioning filter defines the condition(s) the document has to fulfill so that the versioning can be applied. The standard filter can be composed of the following elements:
 
 *   **Type**: On which document type the versioning applies
@@ -219,6 +230,8 @@ Example:
 ```
 
 If the standard filter is not enough to cover all your requirements, the filter can be customized with a Java class implementing the [VersioningPolicyFilter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/versioning/VersioningPolicyFilter.html) interface to define a particular condition:
+
+Example:
 
 ```xml
 <filter id="my-class-filter" class="foo.bar.CustomVersioningFilter"/>
