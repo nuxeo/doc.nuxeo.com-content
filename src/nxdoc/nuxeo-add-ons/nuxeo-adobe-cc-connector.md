@@ -22,6 +22,11 @@ confluence:
 tree_item_index: 900
 history:
     -
+        author: Andrei Nechaev
+        date: '2016-09-05 14:35'
+        message: 'Adding path for Win OS'
+        version: '20'    
+    -
         author: Anne Jubert
         date: '2016-09-05 14:35'
         message: ''
@@ -139,6 +144,7 @@ Installation is made of two steps:
 1.  Install the [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace) available from the marketplace.
 2.  Install the client side plugin. It is available as a zip on the marketplace page. Unzip the client side plugin in the following location:
     *   On OS X, into `~/Library/Application\ Support/Adobe/CEP/extensions`. We recommend you remove the previous client-side extensions/files. Be sure to close, then open the applications if you had them opened before installing the update.
+    *   On Windows systems, into `C:\Users\<username>\AppData\Roaming\Adobe\<CEPVersion>\extensions\` for User or into `C:\Program Files (x86)\Common Files\Adobe\<CEPVersion>\extensions\` for system.
     *   In your Window/extensions view in the Creative suite, you will now see a "Nuxeo CC" option.
 
 A new extension "Nuxeo CC Connector" is now available on your Photoshop, InDesign or Illustrator application.
