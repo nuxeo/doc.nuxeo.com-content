@@ -253,6 +253,10 @@ The following actions don’t trigger the automatic versioning of the document:
 - Changing the relations of the document
 - Commenting the document
 
+{{#> callout type='info' heading='Version number 0.0'}}
+Automatic versioning is disabled on CMIS connector due to conflict between our specifications and CMIS specifications.
+{{/callout}}
+
 ### Manual Versioning
 
 You can decide to manually create a new version of the document.
