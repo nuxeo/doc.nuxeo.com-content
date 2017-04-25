@@ -1,5 +1,5 @@
 ---
-title: Web UI Translations Management
+title: "HOWTO: Manage Translations"
 review:
     comment: ''
     date: '2017-01-19'
@@ -12,7 +12,7 @@ labels:
     - i18n
     - labels
     - localization
-tree_item_index: 1000
+tree_item_index: 1100
 
 ---
 

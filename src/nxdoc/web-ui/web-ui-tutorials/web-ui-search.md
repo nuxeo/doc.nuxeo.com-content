@@ -1,5 +1,5 @@
 ---
-title: Web UI Searches
+title: "HOWTO: Customize Searches"
 review:
     comment: ''
     date: '2017-01-16'
@@ -10,11 +10,118 @@ labels:
     - nuxeo-web-ui
     - extension
     - search
-tree_item_index: 300
+tree_item_index: 500
 
 ---
+After having created your own [document type]({{page page='web-ui-document-layouts'}}#how-to-define-a-new-document-type-layout-with-the-view-designer) you will probably want to create your own search.
 
-## Overriding Existing Nuxeo Web UI Search
+We will learn how to create a new search screen with an icon in the left menu. The search will be compose of a full text search, a search by date range, a search by owners and finally by tags.
+
+{{#> callout type='note' }}
+View Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
+{{/callout}}
+
+## Prerequisites
+- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Nuxeo Studio
+- The Web UI addon installed on your instance
+
+Once you are all set, you can navigate to Nuxeo Studio to start creating your search.
+
+## Create a Page Provider
+
+The first step is to create a [page provider]({{page page='page-provider' space='studio'}}) in Nuxeo Studio.
+
+In **Customization**, go to **Page Providers**, click on **New** and name it `Search`.
+
+**The full text search:**
+![]({{file name='full-text-vd.png'}} ?w=250, border=true)
+1. Next to **Predicates** click on **Add**.
+  A popup window appears.
+1. Click on **Edit binding** and select `schema:system` > `fulltext`
+
+**The search by date range:**
+![]({{file name='creation-date-range-vd.png'}} ?w=250, border=true)
+1. Next to **Aggregates** click on **Add**
+  A popup window appears.
+1. Fill the popup window like this:
+  <div class="table-scroll">
+  <table class="hover">
+  <tbody>
+  <tr>
+  <th colspan="1">Field</th>
+  <td colspan="1">dc:created</td>
+  </tr>
+  <tr>
+  <th colspan="1">Date Ranges</th><td colspan="1">
+  <ul>
+      <li>Label: `Last year` From: `now-1y` To: `now-1M`</li>
+      <li>Label: `Last month` From: `now-1M` To: `now-7d`</li>
+      <li>Label: `Last week` From: `now-7d` To: `now-24H`</li>
+      <li>Label: `Last 24h` From: `now-24H` To: `now`</li>
+  </ul>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+
+**The search by tags:**
+![]({{file name='tags-search-vd.png'}} ?w=250,border=true)
+  1. Add another new Predicates
+  1. Click on **Edit binding** and select `schema:system` > `tag[]`
+
+**The search by owner of the contract:**
+![]({{file name='contract-owner-vd.png'}} ?w=250,border=true)
+  1. Add another new Predicates
+  1. Click on **Edit binding** and select `schema:contract` > `owner`
+
+You can now save your changes and go to the View Designer.
+
+## Create a Form Layout
+
+In the View Designer, on the **Layout tabs**, under **Page Providers** you will find your page provider created previously.
+
+Click on **Customize**, two layouts are available. Let's edit the **Form** layout.
+
+1. Click on **Form**, then **Customize**.
+    The form layout is now displayed in bold with an asterisk next to it. On the right, in the properties catalog, the elements that we defined in Studio are displayed here.
+2. Expand the first element and drag'n'drop the **View** mode into the editor.
+  Do the same for the three other elements.
+4. Click on the **Full text** one, on the right you can edit the label to display `Full text`.
+
+You now need to add your labels to your translations file to display them correctly in the UI. To do so:
+
+1. Click on the **UI** table
+1. Click on **Translations**
+1. Use the default `messages.json` or create your own language.
+1. Create a new entry in the JSON file with key `label.ui.aggregate.<label>` and the label as value. Here it's:
+    - `"label.ui.aggregate.from_now-1y_to_now-1M":"Last year"`,
+    - `"label.ui.aggregate.from_now-1M_to_now-7d":"Last month"`,
+    - `"label.ui.aggregate.from_now-7d_to_now-24H":"Last week"`,
+    - `"label.ui.aggregate.from_now-24H_to_now":"Last 24H"`
+
+## Create a Drawer
+The next step is to add a button in the left menu to display the search screen.
+
+1. Go to the UI tab in the View Designer and then on **Drawer**
+1. Roll over the Create button and select the Search type ![]({{file name='search-icon-drawer-vd.png'}} ?w=20)
+1. Fill in the page like this:
+  - Name: Contract
+  - Available: enabled
+  - provider: `Search`
+  - schemas: `dublincore`, `contract`
+  - search-name: `search`
+  - name: contract
+  - Label: `Contracts`
+  - Icon: `icons:assignment`
+1. Expand the **Elements & Attributes** box and check the **Auto** attribute to automatically execute the search each time a param is changed.
+1. Save your changes, deploy your Studio project on your instance and you're done :)
+
+![]({{file name='result-search-screen-vd.png'}} ?w=350,border=true)
+
+## Technical Overview
+
+### Overriding Existing Nuxeo Web UI Search
 
 Nuxeo Web UI comes with the *Default Search* and *Expired Search* both plugged on server side page providers [default_search](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-search/nuxeo-search-core/src/main/resources/OSGI-INF/search-pageprovider-contrib.xml#L6) and [expired_search](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-search/nuxeo-search-core/src/main/resources/OSGI-INF/search-pageprovider-contrib.xml#L150) by default.
 
@@ -73,11 +180,11 @@ $NUXEO_SERVER/nxserver/nuxeo.war/ui% tree
 
 Referring to  [Web UI deployment]({{page version='' page='web-ui-deployment'}}) documentation, you can override these [nuxeo-default-search.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/search/nuxeo-default-search.html) and [nuxeo-expired-search.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/search/nuxeo-expired-search.html) in order to customize the *Default Search* and *Expired Search* filter form. To do so, your own marketplace must deploy and override the proper HTML files in `$NUXEO_SERVER/nxserver/nuxeo.war/ui/search`.
 
-## Add New Searches
+### Add New Searches
 
 You can insert a new search in the left drawer menu thanks to the [SEARCH_MENU_BUTTONS]({{page page='web-ui-slots#search_menu_buttons'}}) slot.
 
-### The DAM Example
+#### The DAM Example
 
 The [Nuxeo DAM](https://github.com/nuxeo/nuxeo-dam/blob/8.10/nuxeo-dam-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-dam/nuxeo-dam.html) addon defines its own `Asset Search` with the following:
 ```xml
@@ -117,7 +224,7 @@ label="dam.assets.heading"
 ```
 is the key label to be retrieved from [i18n]({{page page='web-ui-managing-translations'}}) resources to be used as tooltip in the left drawer menu.
 
-### Meaningful Properties When Defining Your Own Search
+#### Meaningful Properties When Defining Your Own Search
 
 As just explained, to create a search, you just need to deploy a new `nuxeo-{searchName}-search.html` element in your `$NUXEO_SERVER/nxserver/nuxeo.war/ui/search` directory. However, it is important that this elements provides the proper information to perform the search.
 
@@ -128,111 +235,5 @@ As just explained, to create a search, you just need to deploy a new `nuxeo-{sea
 | `displayQueue` | boolean property. If true, then the queue will be displayed by default instead of search filters          | [expired_search](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/search/nuxeo-expired-search.html#L119) displays a queue by default |
 
 {{#> callout type='warning' }}
-
 It is not possible to customize the screen showing search results in the main container yet.
-
 {{/callout}}
-
-## HOWTO: Create a New Search Screen in View Designer
-
-After having created your own [document type]({{page page='web-ui-document-layouts'}}#how-to-define-a-new-document-type-layout-with-the-view-designer) you will probably want to create your own search.
-
-We will learn how to create a new search with an icon in the left menu. The search will be compose of a full text search, a search by date range, a search by owners and finally by tags.
-
-### Prerequisites
-- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Nuxeo Studio
-- The Web UI addon installed on your instance
-
-Once you are all set, you can navigate to Nuxeo Studio to start creating your search.
-
-### Create a Page Provider
-
-The first step is to create a [page provider]({{page page='page-provider' space='studio'}}) in Nuxeo Studio.
-
-In **Customization**, go to **Page Providers**, click on **New** and name it `Search`.
-
-**The full text search:**
-![]({{file name='full-text-vd.png'}} ?w=250, border=true)
-1. Next to **Predicates** click on **Add**.
-  A popup window appears.
-1. Click on **Edit binding** and select `schema:system` > `fulltext`
-
-**The search by date range:**
-![]({{file name='creation-date-range-vd.png'}} ?w=250, border=true)
-1. Next to **Aggregates** click on **Add**
-  A popup window appears.
-1. Fill the popup window like this:
-  <div class="table-scroll">
-  <table class="hover">
-  <tbody>
-  <tr>
-  <th colspan="1">Field</th>
-  <td colspan="1">dc:created</td>
-  </tr>
-  <tr>
-  <th colspan="1">Date Ranges</th><td colspan="1">
-  <ul>
-      <li>Label: `Last year` From: `now-1y` To: `now-1M`</li>
-      <li>Label: `Last month` From: `now-1M` To: `now-7d`</li>
-      <li>Label: `Last week` From: `now-7d` To: `now-24H`</li>
-      <li>Label: `Last 24h` From: `now-24H` To: `now`</li>
-  </ul>
-  </td>
-  </tr>
-  </tbody>
-  </table>
-  </div>
-
-**The search by tags:**
-![]({{file name='tags-search-vd.png'}} ?w=250,border=true)
-  1. Add another new Predicates
-  1. Click on **Edit binding** and select `schema:system` > `tag[]`
-
-**The search by owner of the contract:**
-![]({{file name='contract-owner-vd.png'}} ?w=250,border=true)
-  1. Add another new Predicates
-  1. Click on **Edit binding** and select `schema:contract` > `owner`
-
-You can now save your changes and go to the View Designer.
-
-### Create a Form Layout
-
-In the View Designer, on the **Layout tabs**, under **Page Providers** you will find your page provider created previously.
-
-Click on **Customize**, two layouts are available. Let's edit the **Form** layout.
-
-1. Click on **Form**, then **Customize**.
-    The form layout is now displayed in bold with an asterisk next to it. On the right, in the properties catalog, the elements that we defined in Studio are displayed here.
-2. Expand the first element and drag'n'drop the **View** mode into the editor.
-  Do the same for the three other elements.
-4. Click on the **Full text** one, on the right you can edit the label to display `Full text`.
-
-You now need to add your labels to your translations file to display them correctly in the UI. To do so:
-
-1. Click on the **UI** table
-1. Click on **Translations**
-1. Use the default `messages.json` or create your own language.
-1. Create a new entry in the JSON file with key `label.ui.aggregate.<label>` and the label as value. Here it's:
-    - `"label.ui.aggregate.from_now-1y_to_now-1M":"Last year"`,
-    - `"label.ui.aggregate.from_now-1M_to_now-7d":"Last month"`,
-    - `"label.ui.aggregate.from_now-7d_to_now-24H":"Last week"`,
-    - `"label.ui.aggregate.from_now-24H_to_now":"Last 24H"`
-
-### Create a Drawer
-The next step is to add a button in the left menu to display the search screen.
-
-1. Go to the UI tab in the View Designer and then on **Drawer**
-1. Roll over the Create button and select the Search type ![]({{file name='search-icon-drawer-vd.png'}} ?w=20)
-1. Fill in the page like this:
-  - Name: Contract
-  - Available: enabled
-  - provider: `Search`
-  - schemas: `dublincore`, `contract`
-  - search-name: `search`
-  - name: contract
-  - Label: `Contracts`
-  - Icon: `icons:assignment`
-1. Expand the **Elements & Attributes** box and check the **Auto** attribute to automatically execute the search each time a param is changed. 
-1. Save your changes, deploy your Studio project on your instance and you're done :)
-
-![]({{file name='result-search-screen-vd.png'}} ?w=350,border=true)

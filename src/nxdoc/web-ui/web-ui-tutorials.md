@@ -1,5 +1,5 @@
 ---
-title: Web UI Customization
+title: Web UI Tutorials
 review:
     comment: ''
     date: '2017-01-16'

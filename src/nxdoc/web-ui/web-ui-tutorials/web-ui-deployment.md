@@ -1,17 +1,23 @@
 ---
-title: Web UI Deployment
+title: "HOWTO: Deploy Web UI Within a Nuxeo Server"
 review:
     comment: ''
     date: '2017-01-16'
     status: ok
 toc: true
+details:
+    howto:
+        excerpt: Learn how to deploy Web UI within a Nuxeo server.
+        level: Advanced
+        tool: code
+        topics: Web UI
 labels:
     - lts2016-ok
     - nuxeo-web-ui
     - extension
     - marketplace
     - deployment
-tree_item_index: 700
+tree_item_index: 900
 
 ---
 
