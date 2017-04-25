@@ -1,16 +1,22 @@
 ---
-title: Web UI Dashboard
+title: "HOWTO: Customize Dashboard"
 review:
     comment: ''
     date: '2017-01-16'
     status: ok
 toc: true
+details:
+    howto:
+        excerpt: Learn how to customize the Web UI dashboard
+        level: Advanced
+        tool: code
+        topics: Web UI
 labels:
     - lts2016-ok
     - nuxeo-web-ui
     - extension
     - dashboard
-tree_item_index: 500
+tree_item_index: 700
 
 ---
 

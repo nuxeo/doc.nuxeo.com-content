@@ -1,5 +1,5 @@
 ---
-title: Web UI Theme Customization
+title: "HOWTO: Customize Theme"
 review:
     comment: ''
     date: '2017-01-16'
@@ -11,7 +11,7 @@ labels:
     - extension
     - themes
     - appearance
-tree_item_index: 900
+tree_item_index: 1000
 
 ---
 ## Themes
