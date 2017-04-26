@@ -2,7 +2,7 @@
 title: Setting up Your Nuxeo Environment
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-04-20'
     status: ok
 toc: true
 labels:
@@ -360,8 +360,8 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.2.3/nuxeo-jsf-ui-8.10.0/nuxeo-platform-getting-started-1.1.0
-      Packages to download (3):      nuxeo-jsf-ui:8.10.0, nuxeo-dam:6.2.3, nuxeo-platform-getting-started:1.1.0
+      Installation order (3):        nuxeo-dam-6.3.0/nuxeo-jsf-ui-9.1.0/nuxeo-platform-getting-started-1.2.0
+      Packages to download (3):      nuxeo-jsf-ui:9.1.0, nuxeo-dam:6.3.0, nuxeo-platform-getting-started:1.2.0
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -372,9 +372,9 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
     $ docker exec mynuxeo bin/nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.2.3)
-     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-8.10.0)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.1.0)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.0)
+     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-9.1.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.0)
     ```
 
     The installed addons now have the status started.
@@ -457,8 +457,8 @@ To install a Nuxeo Package:
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.2.3/nuxeo-jsf-ui-8.10.0/nuxeo-platform-getting-started-1.1.0
-      Packages to download (3):      nuxeo-jsf-ui:8.10.0, nuxeo-dam:6.2.3, nuxeo-platform-getting-started:1.1.0
+      Installation order (3):        nuxeo-dam-6.3.0/nuxeo-jsf-ui-9.1.0/nuxeo-platform-getting-started-1.2.0
+      Packages to download (3):      nuxeo-jsf-ui:9.1.0, nuxeo-dam:6.3.0, nuxeo-platform-getting-started:1.2.0
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -469,9 +469,9 @@ To install a Nuxeo Package:
     $ nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.2.3)
-     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-8.10.0)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.1.0)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.0)
+     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-9.1.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.0)
     ```
 
     The installed addons now have the status started.
@@ -566,8 +566,8 @@ To install a Nuxeo Package:
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.2.3/nuxeo-jsf-ui-8.10.0/nuxeo-platform-getting-started-1.1.0
-      Packages to download (3):      nuxeo-jsf-ui:8.10.0, nuxeo-dam:6.2.3, nuxeo-platform-getting-started:1.1.0
+      Installation order (3):        nuxeo-dam-6.3.0/nuxeo-jsf-ui-9.1.0/nuxeo-platform-getting-started-1.2.0
+      Packages to download (3):      nuxeo-jsf-ui:9.1.0, nuxeo-dam:6.3.0, nuxeo-platform-getting-started:1.2.0
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -579,17 +579,17 @@ To install a Nuxeo Package:
     $ ./nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.2.3)
-     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-8.10.0)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.1.0)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.0)
+     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-9.1.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.0)
 
     # Windows
     $ .\nuxeoctl.bat mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.2.3)
-     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-8.10.0)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.1.0)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.0)
+     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-9.1.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.0)
     ```
 
     The installed addons now have the status 'started'.
