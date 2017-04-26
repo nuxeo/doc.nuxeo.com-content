@@ -193,7 +193,7 @@ We introduce a new automatic versioning system in 9.1. We deprecated [versioning
 Nuxeo provide a backward compatibility mechanism, but it could be not accurate.
 
 Previous automatic versioning mechanisms were removed or upgraded to new system:
-- file manager and bulk edit don't automatic version since 9.1, you could put back this behavior by contributing a new rule and use [source]({{page page='versioning#source-based-versioning'}}) parameter to restrict versioning to this functionalities (for instance use: `fileimporter-{name-of-your-importer}` or `bulkEdit`)
+- file manager and bulk edit don't automatically version documents since 9.1, you could put back this behavior by contributing a new rule and use [source]({{page page='versioning#source-based-versioning'}}) parameter to restrict versioning to this functionalities (for instance use: `fileimporter-{name-of-your-importer}` or `bulkEdit`)
 - drive is not responsible of automatic versioning anymore. The last contributor rule is now a default policy, and delay rule is introduced by drive and rely on [source]({{page page='versioning#source-based-versioning'}}) parameter mechanism.
 
 {{#> callout type='note' }}
