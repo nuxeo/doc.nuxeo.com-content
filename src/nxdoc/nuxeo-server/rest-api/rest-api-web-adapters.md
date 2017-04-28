@@ -12,8 +12,8 @@ labels:
     - rest-api-component
 toc: true
 version_override:
-    LTS 2015: 710/nxdoc/web-adapters-for-the-rest-api
-    '6.0': 60/nxdoc/web-adapters-for-the-rest-api/
+    'LTS 2015': 710/nxdoc/web-adapters-for-the-rest-api
+    '6.0': 60/nxdoc/web-adapters-for-the-rest-api
 tree_item_index: 600
 history:
     -
