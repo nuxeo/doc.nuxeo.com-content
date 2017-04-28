@@ -305,3 +305,9 @@ More information on JIRA ticket [NXP-21068](https://jira.nuxeo.com/browse/NXP-21
 Deprecated for LTS 2016, Nuxeo Forum has been removed.
 
 More information on JIRA ticket [NXP-21448](https://jira.nuxeo.com/browse/NXP-21448).
+
+### Box API 
+
+Deprecated for LTS 2016, Box API has been removed.
+
+More information on JIRA ticket [NXP_22041](https://jira.nuxeo.com/browse/NXP-22041).
