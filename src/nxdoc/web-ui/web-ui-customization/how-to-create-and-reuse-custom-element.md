@@ -5,6 +5,12 @@ review:
     date: '2017-04-12'
     status: ok
 toc: true
+details:
+    howto:
+        excerpt: Learn how to create and reuse a custom element in View Designer.
+        level: Advanced
+        tool: code
+        topics: Web UI
 labels:
     - lts2016-ok
     - tutorial
@@ -13,7 +19,13 @@ labels:
     - polymer
 tree_item_index: 300
 ---
-In this tutorial you will learn how to create and reuse custom elements with the View Designer.
+{{! excerpt}}
+In this tutorial you will learn how to create and reuse custom elements in View Designer.
+{{! /excerpt}}
+
+{{#> callout type='note' }}
+The View Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
+{{/callout}}
 
 ## Requirements
 
