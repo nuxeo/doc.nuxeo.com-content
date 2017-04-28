@@ -185,7 +185,7 @@ The Nuxeo application allows you to authenticate against a Nuxeo server, browse 
 
 ### Offline mode
 
-Offline mode is not available.
+Offline mode is not available yet.
 
 ### Authenticating
 
