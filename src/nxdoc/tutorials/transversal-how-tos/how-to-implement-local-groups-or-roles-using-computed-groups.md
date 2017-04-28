@@ -148,9 +148,9 @@ In this how to, you will learn how to let managers of a workspace determine who 
 Starting from 8.10 HF-04 you need to configure the virtual groups explicitly. To do so, add the following contribution:
 
 {{#> panel type='code'}}
-
 ```xml
 <extension point="configuration" target="org.nuxeo.runtime.ConfigurationService">
+  <require>org.nuxeo.ecm.core.automation.core.properties</require>
   <documentation>
     Allow setting permissions to virtual groups
   </documentation>
