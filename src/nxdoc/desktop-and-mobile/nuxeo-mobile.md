@@ -183,12 +183,15 @@ The Nuxeo application allows you to authenticate against a Nuxeo server, browse 
 
 ![]({{file name='MobileMenu.jpg'}} ?w=200,h=355,border=true)
 
+### Offline mode
+
+Offline mode is not available.
+
 ### Authenticating
 
 Once the application is installed and opened, indicate the Nuxeo server you want to connect to by filling the HTTP information. For example `http://myserver.nuxeo.com/nuxeo`. As soon as the server is detected, the login page is displayed. Depending on your server configuration, it is the default one or your customized login page providing authentication through CAS, OpenID or another authentication system.
 
 ![]({{file name='MobileServerConnection.PNG'}} ?w=200,h=355,border=true)![]({{file name='MobileLoginPage.jpg'}} ?w=200,h=355,border=true)
-
 
 ### Browsing Content
 
