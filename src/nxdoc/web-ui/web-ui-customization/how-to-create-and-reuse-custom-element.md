@@ -17,7 +17,7 @@ labels:
     - nuxeo-elements
     - nuxeo-ui-elements
     - polymer
-tree_item_index: 300
+tree_item_index: 1200
 ---
 {{! excerpt}}
 In this tutorial you will learn how to create and reuse custom elements in View Designer.
