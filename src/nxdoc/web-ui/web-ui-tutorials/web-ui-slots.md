@@ -5,6 +5,12 @@ review:
     date: '2017-01-16'
     status: ok
 toc: true
+details:
+    howto:
+        excerpt: Learn how to use Nuxeo Slots with Web UI.
+        level: Advanced
+        tool: code
+        topics: Web UI
 labels:
     - lts2016-ok
     - nuxeo-web-ui
