@@ -5,6 +5,12 @@ review:
     date: '2017-01-16'
     status: ok
 toc: true
+details:
+    howto:
+        excerpt: Learn how to customize Web UI and deploy your customization.
+        level: Advanced
+        tool: code
+        topics: Web UI
 labels:
     - lts2016-ok
     - tutorial
