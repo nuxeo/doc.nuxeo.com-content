@@ -5,6 +5,12 @@ review:
     date: '2017-01-19'
     status: ok
 toc: true
+details:
+    howto:
+        excerpt: Learn how to manage translations in Nuxeo Web UI.
+        level: Advanced
+        tool: code
+        topics: Web UI
 labels:
     - lts2016-ok
     - nuxeo-web-ui
