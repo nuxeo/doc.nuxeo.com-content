@@ -5,6 +5,12 @@ review:
     date: '2017-01-16'
     status: ok
 toc: true
+details:
+    howto:
+        excerpt: Learn how to create a new search screen with View Designer.
+        level: Intermediate
+        tool: View Designer, code
+        topics: Web UI, View Designer
 labels:
     - lts2016-ok
     - nuxeo-web-ui
