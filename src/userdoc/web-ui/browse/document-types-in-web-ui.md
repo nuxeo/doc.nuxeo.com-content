@@ -47,7 +47,7 @@ In a folder, you can:
 *   [Subscribe to alerts]({{page page='browse#alerts'}})
 *   [Manage the folder's trash]({{page page='browse'}}#deleting-content)
 
-Like in a workspace, you can use drag & drop to create content in a folder.
+Like in a workspace, you can use drag and drop to create content in a folder.
 
 **Ordered Folders**
 

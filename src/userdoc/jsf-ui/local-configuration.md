@@ -136,7 +136,7 @@ To **prevent new document creation**, on the current space, click on **Manage** 
 
 ### Selecting the Default Document Type
 
-Workspace managers can set the document type that is created when users import documents using the **Import** button or drag & drop. In a workspace, the default document type is file.
+Workspace managers can set the document type that is created when users import documents using the **Import** button or drag and drop. In a workspace, the default document type is file.
 
 To **define the default document type for import**, click on **Manage**&nbsp;> **Local configuration** and, if needed, click on the **Enable** link of the "Document types configuration". The document types configuration form is displayed. By default, all types are allowed. Select the default document type in the drop down list and click on the **Save** button.
 

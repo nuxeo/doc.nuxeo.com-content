@@ -481,7 +481,7 @@ The tables below use the following notation:
     <td colspan="1">[Document creation user documentation]({{page space='userdoc' page='creating-content'}})</td>
 </tr>
 <tr>
-    <td colspan="1">HTML 5 Drag & Drop</td>
+    <td colspan="1">HTML 5 drag and drop</td>
     <td colspan="1">Default distribution</td>
     <td>NR</td>
     <td>&#10003;</td>

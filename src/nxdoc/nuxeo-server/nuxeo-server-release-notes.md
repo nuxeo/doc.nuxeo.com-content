@@ -33,7 +33,7 @@ It makes it easier to test Nuxeo Studio features like Automation Scripting or ev
 
 #### Centralized Automated Versioning Policies
 
-A new extension point has been added to define automated versioning policies. It allows to declare behaviors such as "Version documents each time the current contributor is different than the last one on the document". It also allows to control wether you want to version before or after the modification. All platform code that was triggering specifically hardcoded behaviors has been refactored so that the central policy is applied: Drive, File Manager (Drag'n Drop behaviors), etc.). Only CMIS hasn't been impacted for now due to some difficulties with requirements regarding document checked in or checked out.
+A new extension point has been added to define automated versioning policies. It allows to declare behaviors such as "Version documents each time the current contributor is different than the last one on the document". It also allows to control wether you want to version before or after the modification. All platform code that was triggering specifically hardcoded behaviors has been refactored so that the central policy is applied: Drive, File Manager (drag and drop behaviors), etc.). Only CMIS hasn't been impacted for now due to some difficulties with requirements regarding document checked in or checked out.
 
 More information on JIRA ticket [NXP-21588](https://jira.nuxeo.com/browse/NXP-21588), the [versioning developer documentation]({{page version='' space='nxdoc' page='versioning'}}) or the [user documentation]({{page version='' space='userdoc'}}).
 
@@ -306,7 +306,7 @@ Deprecated for LTS 2016, Nuxeo Forum has been removed.
 
 More information on JIRA ticket [NXP-21448](https://jira.nuxeo.com/browse/NXP-21448).
 
-### Box API 
+### Box API
 
 Deprecated for LTS 2016, Box API has been removed.
 

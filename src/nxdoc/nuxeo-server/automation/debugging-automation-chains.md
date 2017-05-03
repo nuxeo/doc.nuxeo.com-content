@@ -89,7 +89,7 @@ To test it simply:
 1.  Go to your Nuxeo Platform.
 2.  Go the documentation of the chain `FileManager.ImportInSeam`: [http://localhost:8080/nuxeo/site/automation/doc/?id=FileManager.ImportInSeam](http://localhost:8080/nuxeo/site/automation/doc/?id=FileManager.ImportInSeam).
 3.  Enable the traces for this chain, if they are disabled. If they're already enabled, skip to next step.
-4.  On the user interface of the Nuxeo Platform, drop one or a few files in a workspace via the HTML 5 drag'n drop feature and create them directly (smart import).
+4.  On the user interface of the Nuxeo Platform, drop one or a few files in a workspace via the HTML 5 drag and drop feature and create them directly (smart import).
     This action uses in background the chain `FileManager.ImportInSeam`.
 5.  Go to the chain documentation page again: [http://localhost:8080/nuxeo/site/automation/doc/traces?opId=FileManager.ImportInSeam](http://localhost:8080/nuxeo/site/automation/doc/traces?opId=FileManager.ImportInSeam).
 6.  Click on the **Get traces** link.
