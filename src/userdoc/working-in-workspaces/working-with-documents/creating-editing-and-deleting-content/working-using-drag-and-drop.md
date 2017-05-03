@@ -137,13 +137,13 @@ history:
         version: '1'
 
 ---
-The Nuxeo Platform allows the import of documents from your desktop using drag and drop.Drag and drop is based on the HTML 5 standard and is available on all browsers that support the HTML 5 Drag and drop, without extension. Basically, this includes Firefox 3.6+, Chrome10+, Safari 5+, IE 10+ (which means all the browsers supported by Nuxeo Platform 6.0).
+The Nuxeo Platform allows the import of documents from your desktop using drag and drop.Drag and drop is based on the HTML 5 standard and is available on all browsers that support the HTML 5 drag and drop, without extension. Basically, this includes Firefox 3.6+, Chrome10+, Safari 5+, IE 10+ (which means all the browsers supported by Nuxeo Platform 6.0).
 
 It is also possible to move documents and publish them using drag and drop. Based on JavaScript these features are available on all JS-compatible browsers.
 
 ## Creating Documents
 
-You can use Drag and Drop to easily import content into Nuxeo or just to create one document at a time. Two types of import are available:
+You can use drag and drop to easily import content into Nuxeo or just to create one document at a time. Two types of import are available:
 
 *   quick import, that enables to quickly create documents in workspace;
 *   import with metadata, that enables to fill in metadata of the document(s) before they are created in the workspace.

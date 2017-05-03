@@ -8,7 +8,7 @@ details:
     howto:
         excerpt: >-
             This how-to explains the different steps to create and configure an
-            automation chain using Nuxeo Studio. 
+            automation chain using Nuxeo Studio.
         level: Beginner
         tool: Studio
         topics: 'Automation, Event handler, User action'
@@ -31,162 +31,162 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/2IBVAQ'
     source_link: /display/NXDOC60/How+to+Create+an+Automation+Chain
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 16:21'
         message: ink updat
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-03 11:50'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:00'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-17 15:36'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-15 17:53'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-09 14:17'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-09 14:13'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-09 11:54'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-09 11:48'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-09 11:38'
         message: Update links and screenshots
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-25 10:40'
         message: Remove reference to 5.3 and formatting
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 17:18'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 15:11'
         message: Migrated to Confluence 4.0
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 15:11'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-02 15:08'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-01 18:46'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-01 18:45'
         message: updated screenshots and steps with latest UI
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2011-08-06 01:12'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-08-06 00:56'
         message: ''
         version: '14'
-    - 
+    -
         author: Roland Benedetti
         date: '2011-06-19 23:36'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-18 11:46'
         message: added screenshots and reorganized instructions
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-18 10:16'
         message: updated links
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-18 10:08'
         message: added anchors and links
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-30 18:15'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-27 02:29'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-27 00:57'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-27 00:48'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-27 00:47'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-27 00:44'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-27 00:44'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-04-27 00:38'
         message: ''
         version: '2'
-    - 
+    -
         author: Eric Barroca
         date: '2010-04-23 01:56'
         message: ''
@@ -218,7 +218,7 @@ This is done in two steps:
     *   **Context document** will bring either the UI Current document, or the document attached to the event (depending on what you binded your operation chain, see later).
     *   **Fetch Query** will bring back the result of the query as a documents list.
     *   **Get Document** allows to fetch document by path.
-5.  Start to drag'n drop operations in the flow, respecting their input and output types. Leverage context and scripting capabilities to capture and reuse information all along the flow.
+5.  Start to drag and drop operations in the flow, respecting their input and output types. Leverage context and scripting capabilities to capture and reuse information all along the flow.
     ![]({{file name='NXS_automation_add_operation.png'}} ?w=600,border=true)
 
     {{#> callout type='tip' }}

@@ -46,7 +46,7 @@ The File Manager is used for creating documents from simple binaries.
 
 {{! /excerpt}}
 
-From a user perspective, the Nuxeo Platform offers many ways to capture a binary so as to make it a document with a binary property. It can be done from the browser's drag'n drop, from WebDAV, from CMIS, from Nuxeo Drive, &nbsp;...
+From a user perspective, the Nuxeo Platform offers many ways to capture a binary so as to make it a document with a binary property. It can be done from the browser's drag and drop, from WebDAV, from CMIS, from Nuxeo Drive, &nbsp;...
 
 The file manager service is a traditional Nuxeo Platform service that offers some methods that help standardize what happens when a file is captured in the Platform, in regard to:
 
@@ -79,10 +79,10 @@ See also the tutorial on&nbsp;[how to change the default document type used when
 
 {{#> panel heading='Related Documentation'}}
 
-*   [REST API]({{page page='rest-api'}})
-*   [Automation]({{page page='automation'}})
-*   [Versioning]({{page page='versioning'}})
-*   [How to Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
+- [REST API]({{page page='rest-api'}})
+- [Automation]({{page page='automation'}})
+- [Versioning]({{page page='versioning'}})
+- [How to Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
 
 {{/panel}}</div><div class="column medium-6">
 

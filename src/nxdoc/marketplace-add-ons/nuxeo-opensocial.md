@@ -19,47 +19,47 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/1IBVAQ'
     source_link: /display/NXDOC60/Nuxeo+OpenSocial
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-13 08:08'
         message: ''
         version: '9'
-    - 
+    -
         author: Anonymous
         date: '2014-12-02 14:35'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 14:29'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 14:29'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-28 18:45'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-10 17:21'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-10 17:21'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-10 17:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Thomas Roger
         date: '2010-04-21 18:17'
         message: ''
@@ -95,7 +95,7 @@ There are some parameters you can pass to the GWT container, through the `getGwt
 
 Here are the definitions of the different parameters:
 
-*   `dndValidation`: `'true'` if the container should wait the validation of the Drag'n Drop before doing the actual move, `'false'` otherwise. If the parameter is not present, default to `'false'`.
+*   `dndValidation`: `'true'` if the container should wait the validation of the drag and drop before doing the actual move, `'false'` otherwise. If the parameter is not present, default to `'false'`.
 
 *   `showPreferences`: `'true'` if the gadget preferences need to be displayed after adding a gadget, `'false'` otherwise. If the parameter is not present, default to `'true'`.
 

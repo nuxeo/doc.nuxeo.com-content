@@ -123,7 +123,7 @@ Think of all the reasons why you wanted to set up a DMS. Output should be a list
 
 ### Focus One or Two Processes
 
-First choose one or two of those processes and only work on those ones. Stay focus, and work with little groups only. The criteria to choose these groups could be that the group of concerned people is prone to changes.**&nbsp;**Before you select them, each group should have a clear idea of their requirements and&nbsp;even more important, their expectations.
+First choose one or two of those processes and only work on those ones. Stay focus, and work with little groups only. The criteria to choose these groups could be that the group of concerned people is prone to changes. Before you select them, each group should have a clear idea of their requirements and even more important, their expectations.
 
 ### Define Your "Roles" and User Stories for the Considered Processes
 
@@ -147,7 +147,7 @@ Think of how you want to set up the security on your documents. Most standard wa
 
 ## Document Capture
 
-Standard ways are based on forms and drag'n drop, but you may also have some third-party feeding, for instance by a digitalization platform, or from an ERP. You need to clearly identify what will be the most frequent way for your chosen process and pay specific attention to it. We provide tools like [watch folder importers]({{page page='nuxeo-bulk-document-importer'}}), [REST APIs]({{page page='rest-api'}}), standard APIs ([CMIS]({{page page='cmis'}})). If it comes from a third-party system, one of the questions will be "what metadata" are given right at the creation time.
+Standard ways are based on forms and drag and drop, but you may also have some third-party feeding, for instance by a digitalization platform, or from an ERP. You need to clearly identify what will be the most frequent way for your chosen process and pay specific attention to it. We provide tools like [watch folder importers]({{page page='nuxeo-bulk-document-importer'}}), [REST APIs]({{page page='rest-api'}}), standard APIs ([CMIS]({{page page='cmis'}})). If it comes from a third-party system, one of the questions will be "what metadata" are given right at the creation time.
 
 ## Document Metadata and Types
 

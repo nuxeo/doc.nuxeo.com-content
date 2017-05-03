@@ -91,7 +91,7 @@ Here is the use case we want to implement:
     ![]({{file name='Image 20.png'}} ?border=true)
 2.  He assigns permissions "Write" and "Validation" to user Jack:
     ![]({{file name='Image 10.png'}} ?border=true)
-3.  He creates a new document by drag'n drop, this document is in state "Project":
+3.  He creates a new document by drag and drop, this document is in state "Project":
     ![]({{file name='Image 11.png'}} ?border=true)
 4.  He clicks on "Request validation" link, on the top right part of the screen:
     ![]({{file name='screenshot_2011-06-01_15.42.26.png'}})

@@ -22,57 +22,57 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/Q4FVAQ'
     source_link: /pages/viewpage.action?pageId=22380867
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-09-08 09:43'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 15:36'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-21 10:48'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 11:42'
         message: add links
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 11:41'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 11:29'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-21 18:15'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-21 17:40'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Martins
         date: '2014-03-21 17:21'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Martins
         date: '2014-03-21 17:21'
         message: Add related links
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2014-03-21 17:20'
         message: ''
@@ -81,7 +81,7 @@ history:
 ---
 {{! excerpt}}
 
-In this how-to, importing a file can correspond to using the [Drag'n Drop]({{page space='userdoc60' page='working-using-drag-and-drop'}}), using the ["Import a file"]({{page space='userdoc60' page='creating-content'}}) button, or adding a file from [Nuxeo Drive]({{page space='userdoc60' page='nuxeo-drive'}}) or a [WebDAV drive]({{page space='userdoc60' page='working-with-webdav-and-wss'}}).
+In this how-to, importing a file can correspond to using the [drag and drop]({{page space='userdoc60' page='working-using-drag-and-drop'}}), using the ["Import a file"]({{page space='userdoc60' page='creating-content'}}) button, or adding a file from [Nuxeo Drive]({{page space='userdoc60' page='nuxeo-drive'}}) or a [WebDAV drive]({{page space='userdoc60' page='working-with-webdav-and-wss'}}).
 
 {{! /excerpt}}
 
@@ -105,9 +105,9 @@ So, to create a document of your own type that, you have to set the&nbsp;`docTyp
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in developer documentation'}}
 
-*   [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
-*   [Nuxeo CSV]({{page page='nuxeo-csv'}})
-*   [Drag and Drop Service for Content Capture (HTML5-Based)]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
+- [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
+- [Nuxeo CSV]({{page page='nuxeo-csv'}})
+- [Drag and Drop Service for Content Capture (HTML5-Based)]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
 
 {{/panel}}</div><div class="column medium-6">
 
