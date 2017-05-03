@@ -115,10 +115,10 @@ This page will walk you through the different import options and give you the pr
 
 By default, the Nuxeo Platform allows users to import several documents at a time via:
 
-*   The [ Import popup ]({{page space='userdoc' page='creating-content'}})
-*   [ Drag & Drop ]({{page space='userdoc' page='creating-content#content-creation-dandd'}})
-*   [WebDAV]({{page space='userdoc' page='working-with-webdav'}})
-*   [Nuxeo Drive]({{page space='userdoc' page='nuxeo-drive'}}).
+- The [Import popup]({{page space='userdoc' page='creating-content'}})
+- [Drag & Drop]({{page space='userdoc' page='creating-content#content-creation-dandd'}})
+- [WebDAV]({{page space='userdoc' page='working-with-webdav'}})
+- [Nuxeo Drive]({{page space='userdoc' page='nuxeo-drive'}}).
 
 **Import criteria details**
 

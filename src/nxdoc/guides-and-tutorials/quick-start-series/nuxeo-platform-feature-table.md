@@ -80,7 +80,7 @@ history:
 *   [Document creation user documentation]({{page space='userdoc60' page='creating-content'}})
 *   [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
 
-</td></tr><tr><td colspan="1">Form</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">[Document creation user documentation]({{page space='userdoc60' page='creating-content'}})</td></tr><tr><td colspan="1">HTML 5 Drag & Drop</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
+</td></tr><tr><td colspan="1">Form</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">[Document creation user documentation]({{page space='userdoc60' page='creating-content'}})</td></tr><tr><td colspan="1">HTML 5 drag and drop</td><td colspan="1">CAP</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [Drag and Drop User Documentation]({{page space='userdoc60' page='working-using-drag-and-drop'}})
 *   [Drag and Drop Developer documentation]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})

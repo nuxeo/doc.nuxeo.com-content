@@ -476,7 +476,7 @@ Nuxeo applications can be used with the browsers below.
 
 {{! /multiexcerpt}} {{#> callout type='note' }}
 
-Browser extensions for Drag & Drop and Live Edit are available for Internet Explorer and Firefox only.
+Browser extensions for drag and drop and Live Edit are available for Internet Explorer and Firefox only.
 
 {{/callout}}
 

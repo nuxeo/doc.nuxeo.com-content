@@ -182,7 +182,7 @@ Regular folders, called "Folders", have the same behavior as workspaces. In a fo
 *   [Subscribe to and manage alerts]({{page page='alerts'}})
 *   [Manage the folder's trash]({{page page='managing-deleted-documents'}})
 
-Like in a workspace, you can use [drag & drop]({{page page='working-using-drag-and-drop'}}) to create content in a folder.
+Like in a workspace, you can use [drag and drop]({{page page='working-using-drag-and-drop'}}) to create content in a folder.
 
 ## Ordered Folders
 

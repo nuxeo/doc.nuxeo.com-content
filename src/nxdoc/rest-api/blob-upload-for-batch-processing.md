@@ -192,7 +192,7 @@ This way of calling automation operation is actually used in the default UI to m
     *   There is a maximum number of concurrent uploads.
 2.  When upload is finished you can select the operation or chain to execute.
 
-More info about [Drag & Drop configuration]({{page page='drag-and-drop-service-for-content-capture-html5-based'}}).
+More info about [drag and drop configuration]({{page page='drag-and-drop-service-for-content-capture-html5-based'}}).
 
 ### Referencing a Blob From a Batch
 

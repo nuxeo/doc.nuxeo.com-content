@@ -20,32 +20,32 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/F4FVAQ'
     source_link: /display/NXDOC60/Summary+Widget+Types
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 12:21'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 12:16'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-08 16:29'
         message: Added IDs and related topics
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-06 16:00'
         message: add the list of most of default summary widget types
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-06 15:18'
         message: add structure
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-05 17:28'
         message: ''
@@ -86,7 +86,7 @@ This widget type displays the dublincore layout for the current document (in vie
 
 Id: `summary_current_document_files`
 
-This widget type displays attached files to the current document. It also displays a drop zone for Drag & Drop features.
+This widget type displays attached files to the current document. It also displays a drop zone for drag and drop features.
 
 ## Life Cycle State and Version
 
