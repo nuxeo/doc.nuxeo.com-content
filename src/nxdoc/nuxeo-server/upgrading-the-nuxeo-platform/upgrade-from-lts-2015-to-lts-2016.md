@@ -263,6 +263,10 @@ Force Automation properties value to be trimmed (default:`false`)
 
 {{{multiexcerpt 'upgrade-8.2-hidden-stacktraces' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
 
+## Nuxeo Studio Application Dependencies
+
+{{{multiexcerpt 'upgrade-8.10-studio-deps' page='/nxdoc/Upgrade from LTS 2015 following Fast Tracks'}}}
+
 ## Code Changes&nbsp;
 
 ### Deleted APIs

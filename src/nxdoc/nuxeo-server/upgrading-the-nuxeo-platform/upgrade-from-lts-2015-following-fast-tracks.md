@@ -699,6 +699,12 @@ The operations used by select2 widgets have been extracted from the nuxeo-platfo
 
  {{! /multiexcerpt}}
 
+### Nuxeo Studio Application Dependencies
+
+ {{! multiexcerpt name='upgrade-8.10-studio-deps'}}
+ Make sure your Nuxeo Studio project depends on the **Nuxeo JSF UI** target package. See the pages [How to Update the Version of Your Target Platform in Studio]({{page space='studio' page='update-the-version-of-your-target-platform'}}) and [Specific Upgrade Instructions]({{page space='studio' page='specific-upgrade-instructions'}}) for more details.
+ {{! /multiexcerpt}}
+
 ### Nuxeo Packages
 
 #### Packages Updates
@@ -737,6 +743,7 @@ The following addons are deprecated with the release of Nuxeo Platform LTS 2016:
 
 - [Upgrade from LTS 2015 to LTS 2016]({{page page='upgrade-from-lts-2015-to-lts-2016'}})
 - [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}})
+- [How to Update the Version of Your Target Platform in Studio]({{page space='studio' page='update-the-version-of-your-target-platform'}})
 
 {{/panel}}
 </div>
