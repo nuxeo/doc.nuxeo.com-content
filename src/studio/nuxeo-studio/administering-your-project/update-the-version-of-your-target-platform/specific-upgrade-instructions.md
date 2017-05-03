@@ -94,7 +94,7 @@ When upgrading your target platform in Studio, Studio will take care of generati
 
 {{! /excerpt}}
 
-## Upgrading to LTS 2016
+## Upgrading to LTS 2015 and LTS 2016
 
 Select the Nuxeo JSF UI target package in your [Application Dependencies]({{page page='application-dependencies'}}) for the content views, layouts, tabs and search customizations to be available.
 
