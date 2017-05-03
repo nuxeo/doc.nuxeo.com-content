@@ -79,7 +79,7 @@ This widget type displays the dublincore layout for the current document (in vie
 
 Id: `summary_current_document_files`
 
-This widget type displays attached files to the current document. It also displays a drop zone for Drag & Drop features.
+This widget type displays attached files to the current document. It also displays a drop zone for drag and drop features.
 
 ## Lifecycle State and Version
 
@@ -141,8 +141,8 @@ This widget type displays a selector with the list of available workflows that c
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Standard Widget Types]({{page page='standard-widget-types'}})
-*   [Custom Widget Types]({{page page='custom-widget-types'}})
-*   [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
+- [Standard Widget Types]({{page page='standard-widget-types'}})
+- [Custom Widget Types]({{page page='custom-widget-types'}})
+- [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6"></div></div>

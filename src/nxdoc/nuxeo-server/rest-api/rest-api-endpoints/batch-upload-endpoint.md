@@ -513,7 +513,7 @@ Optionally you can use the `fileIdx` path parameter to specify the index of the 
 POST http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileIdx}/execute/{operationId}
 ```
 
-This way of calling an Automation operation is actually used in the default UI to manage Drag & Drop:
+This way of calling an Automation operation is actually used in the default UI to manage drag and drop:
 
 1.  Files are progressively uploaded to the server:
     *   You can drop several sets of files,
@@ -521,7 +521,7 @@ This way of calling an Automation operation is actually used in the default UI t
 
 2.  When upload is finished you can select the operation or chain to execute.
 
-More info about [Drag & Drop configuration]({{page page='drag-and-drop-service-for-content-capture-html5-based'}}).
+More info about [Drag and Drop configuration]({{page page='drag-and-drop-service-for-content-capture-html5-based'}}).
 
 Sample code using the Java client:
 

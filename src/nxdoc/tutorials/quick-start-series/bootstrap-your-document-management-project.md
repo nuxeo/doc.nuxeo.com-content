@@ -220,7 +220,7 @@ Think of how you want to set up the security on your documents. The most standar
 
 ## Document Capture
 
-Standard ways are based on forms and drag'n drop, but you may also have some third-party feeding, for instance by a digitization platform, or from an ERP. You need to clearly identify what will be the most frequent way for your use cases and pay specific attention to it. We provide tools like [watch folder importers]({{page page='nuxeo-bulk-document-importer'}}), [REST APIs]({{page page='rest-api'}}), standard APIs ([CMIS]({{page page='cmis'}})). If it comes from a third-party system, one of the questions will be "which metadata" are given right at the creation time.
+Standard ways are based on forms and drag and drop, but you may also have some third-party feeding, for instance by a digitization platform, or from an ERP. You need to clearly identify what will be the most frequent way for your use cases and pay specific attention to it. We provide tools like [watch folder importers]({{page page='nuxeo-bulk-document-importer'}}), [REST APIs]({{page page='rest-api'}}), standard APIs ([CMIS]({{page page='cmis'}})). If it comes from a third-party system, one of the questions will be "which metadata" are given right at the creation time.
 
 {{#> callout type='info' heading='Related Documentation'}}
 
