@@ -276,7 +276,7 @@ You need to have "edit" or "manage everything" permissions to create documents.
 
 {{! multiexcerpt name='functional_overview'}}
 
-### {{> anchor 'new-button'}}Creating a Document Using the New Button 
+### {{> anchor 'new-button'}}Creating a Document Using the New Button
 
 Creating a document using the **New** button enables you to select the type of document you want to create among all Nuxeo Platform's document types.
 
@@ -438,7 +438,7 @@ Read the [Binary Metadata]({{page space='nxdoc710' page='binary-metadata'}}) doc
 {{#> panel heading='Related How-Tos'}}
 
 - [How to Customize the Bulk Import Form]({{page space='nxdoc710' page='how-to-customize-the-bulk-import-form'}})
-- [How to Enable Drag'n Drop and New Button on a Custom Content View]({{page space='nxdoc710' page='how-to-enable-dragn-drop-and-new-button-on-a-custom-content-view'}})
+- [How to Enable Drag and Drop and New Button on a Custom Content View]({{page space='nxdoc710' page='how-to-enable-dragn-drop-and-new-button-on-a-custom-content-view'}})
 
 {{/panel}}
 </div>

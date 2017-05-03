@@ -230,7 +230,7 @@ This is done in two steps:
     *   **Context document** will bring either the UI Current document, or the document attached to the event (depending on what you binded your operation chain, see later).
     *   **Fetch Query** will bring back the result of the query as a documents list.
     *   **Get Document** allows to fetch document by path.
-5.  Start to drag'n drop operations in the flow, respecting their input and output types. Leverage context and scripting capabilities to capture and reuse information all along the flow.
+5.  Start to drag and drop operations in the flow, respecting their input and output types. Leverage context and scripting capabilities to capture and reuse information all along the flow.
     ![]({{file name='NXS_automation_add_operation.png'}} ?w=600,border=true)
 
     {{#> callout type='tip' }}

@@ -89,7 +89,7 @@ This widget type displays the dublincore layout for the current document (in vie
 
 Id: `summary_current_document_files`
 
-This widget type displays attached files to the current document. It also displays a drop zone for Drag & Drop features.
+This widget type displays attached files to the current document. It also displays a drop zone for drag and drop features.
 
 ## Life Cycle State and Version
 

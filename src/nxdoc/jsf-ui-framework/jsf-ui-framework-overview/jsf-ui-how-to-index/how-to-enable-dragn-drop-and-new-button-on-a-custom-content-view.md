@@ -111,9 +111,9 @@ Now you just need to [hot-reload your Studio project]({{page space='studio' page
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
-*   [Tabs defintion screen in Nuxeo Studio]({{page space='studio' page='tabs'}})
-*   [Content View How-To Index]({{page page='content-view-how-to-index'}})
+- [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
+- [Tabs defintion screen in Nuxeo Studio]({{page space='studio' page='tabs'}})
+- [Content View How-To Index]({{page page='content-view-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">
 

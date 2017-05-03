@@ -212,7 +212,7 @@ history:
 *   [Document creation user documentation]({{page space='userdoc710' page='creating-content'}})
 *   [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
 
-</td></tr><tr><td colspan="1">Cloud files creation</td><td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td><td colspan="1">&nbsp;</td><td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td></tr><tr><td colspan="1">Form</td><td colspan="1">Default distribution</td><td colspan="1">&nbsp;</td><td colspan="1">[Document creation user documentation]({{page space='userdoc710' page='creating-content'}})</td></tr><tr><td colspan="1">HTML 5 Drag & Drop</td><td colspan="1">Default distribution</td><td colspan="1">&nbsp;</td><td colspan="1">
+</td></tr><tr><td colspan="1">Cloud files creation</td><td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td><td colspan="1">&nbsp;</td><td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td></tr><tr><td colspan="1">Form</td><td colspan="1">Default distribution</td><td colspan="1">&nbsp;</td><td colspan="1">[Document creation user documentation]({{page space='userdoc710' page='creating-content'}})</td></tr><tr><td colspan="1">HTML 5 drag and drop</td><td colspan="1">Default distribution</td><td colspan="1">&nbsp;</td><td colspan="1">
 
 *   [User documentation]({{page space='userdoc710' page='creating-content#content-creation-dandd'}})
 *   [Drag and Drop Developer documentation]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
