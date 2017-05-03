@@ -293,7 +293,7 @@ RequestHeader append nuxeo-virtual-host "https://myDomainName/"
 
 ```
 
-This will require you to load and activate the `mod_header` module.
+This will require you to load and activate the `mod_headers` module.
 
 ### Configuring HTTP Cache
 
