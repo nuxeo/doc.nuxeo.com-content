@@ -154,29 +154,28 @@ You can view the list of the Page Providers in the Admin Center/Elasticsearch/Pa
     You are done!
 
 {{#> callout type='note' }}
-
 Elasticsearch indexing is "eventually consistent". This means that depending on your indexing server charge, you may have a small delay before Elasticsearch returns the latest content update/create/delete.
+{{/callout}}
 
-{{/callout}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
+* * *
 
-{{! Please update the label in the Content by Label macro below. }}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
 
 {{#> panel heading='Other pages about Elasticsearch'}}
 
-*   [Moving Load from Database to Elasticsearch]({{page page='moving-load-from-database-to-elasticsearch'}})
-*   [Elasticsearch Setup]({{page space='admindoc60' page='elasticsearch-setup'}})
-*   [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
-*   [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
-
-{{/panel}}</div><div class="column medium-6">
-
-{{! Please update the label and target spaces in the Content by Label macro below. }}
-
+- [Moving Load from Database to Elasticsearch]({{page page='moving-load-from-database-to-elasticsearch'}})
+- [Elasticsearch Setup]({{page space='admindoc60' page='elasticsearch-setup'}})
+- [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
+- [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
+{{/panel}}
+</div>
+<div class="column medium-6">
 {{#> panel heading='Indexing related pages'}}
-
-*   [Full-Text Queries]({{page page='full-text-queries'}})
-*   [How to Configure a New Default Search Form in the Search Tab]({{page page='how-to-configure-a-new-default-search-form-in-the-search-tab'}})
-*   [Content Views]({{page page='content-views'}})
-*   [Page Providers]({{page page='page-providers'}})
-
-{{/panel}}</div></div>
+- [Full-Text Queries]({{page page='full-text-queries'}})
+- [How to Configure a New Default Search Form in the Search Tab]({{page page='how-to-configure-a-new-default-search-form-in-the-search-tab'}})
+- [Content Views]({{page page='content-views'}})
+- [Page Providers]({{page page='page-providers'}})
+{{/panel}}
+</div>
+</div>
