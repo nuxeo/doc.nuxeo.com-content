@@ -2,7 +2,7 @@
 title: Installation
 review:
     comment: ''
-    date: '2016-12-09'
+    date: '2017-05-04'
     status: ok
 labels:
     - lts2016-ok
@@ -261,43 +261,51 @@ history:
 The Nuxeo Platform comes in different packages and can be installed on any operating system. You may have to install:
 
 *   a zip archive (works on any operating system),
-*   a Windows installer (.exe),
+*   a Windows installer (**.exe**),
 *   a virtual machine image (works on any operating system),
-*   a .deb package (works on Linux Debian and Ubuntu).
+*   a **.deb** package (works on Linux Debian and Ubuntu).
 
 ## General Installation Process
 
-Installing the Nuxeo Platform is done in a few steps:
+Installing the Nuxeo Platform requires a few steps:
 
 1.  Have a look at our Hardware and Software Requirements in the section below, as well as our [supported databases]({{page page='supported-databases'}}) and [application servers]({{page page='supported-application-servers'}}). You may also want to read our page regarding [required storage space]({{page page='how-to-estimate-volume-usage'}}).
-2.  [Install and Set up related required software]({{page page='installing-and-setting-up-related-software'}}) (unless you deploy on Amazon where the image already includes it).
+2.  [Install and Set up the related software]({{page page='installing-and-setting-up-related-software'}}) (unless you deploy on Amazon, the image already includes it).
 3.  Install and start the Nuxeo Platform server.
-    To understand how to start a Nuxeo Platform server on those various environments you can read and follow one of our recipes:
+    To understand how to start a Nuxeo Platform server on different environments, you can read and follow one of our recipes:
     *   [Installing the Nuxeo Platform on Linux]({{page page='installing-the-nuxeo-platform-on-linux'}})
     *   [Installing the Nuxeo Platform on Windows]({{page page='installing-the-nuxeo-platform-on-windows'}})
     *   [Installing the Nuxeo Platform on Mac OS]({{page page='installing-the-nuxeo-platform-on-mac-os'}})
     *   [Deploying Nuxeo on Amazon AWS]({{page page='deploying-nuxeo-on-amazon-aws'}})
     *   [Deploying as a Standard Static WAR]({{page page='deploying-as-a-standard-static-war'}})
-4.  Run the [Configuration Wizard]({{page page='configuration-wizard'}}) (not in the case of a standard static war).
+4.  Run the [Configuration Wizard]({{page page='configuration-wizard'}}) (not in the case of a standard static WAR).
 
 ## Hardware and Software Requirements
-The following table lists current requirements for running the Nuxeo Platform. This list is a living one! If you have some constraints that do not fit this grid, do not hesitate to contact the Nuxeo team for evaluating feasibility of running Nuxeo on any other environment, may it be a different JVM, Database, Application server or OS.
+
+The following table lists the _current_ requirements for running the Nuxeo Platform.
+
+If you have some constraints that do not fit this grid, **do not hesitate to contact the Nuxeo team** to evaluate the feasibility of running Nuxeo on any other environment, be it a different JVM, Database, Application server or OS.
 
 <div class="table-scroll">
 <table class="hover">
 <tbody>
 <tr><th colspan="1">Hardware Requirements</th>
-<td colspan="1">Minimum requirement to start a Nuxeo server: 2 CPU, 2&nbsp;Gb RAM, 300&nbsp;Mb of disk-space. </td>
-<td colspan="1">Note: a production-ready setup for the Nuxeo Platform may require several servers and different hardware sizing, depending on your SLA and planned usage. Contact Nuxeo for more information and getting help on sizing your production architecture.</td>
+<td colspan="1">Minimum requirement to start a Nuxeo server:
+<ul>
+<li>2 CPU</li>
+<li>2&nbsp;GB RAM</li>
+<li>300&nbsp;MB of disk space</li>
+</ul></td>
+<td colspan="1">Note: a production-ready setup for the Nuxeo Platform may require several servers and different hardware sizing, depending on your SLA and planned usage. Contact Nuxeo for more information and for assistance with sizing your production architecture.</td>
 </tr>
 
 <tr><th colspan="1">OS</th>
 <td colspan="1"><ul><li>Linux</li><li> macOS</li><li>Windows</li></ul></td>
-<td colspan="1">Note: the only limitation on the OS nature and version is the ability to install the correct version of the required JDK (see below)r. It means that while it is commonly reported to run on recent versions of Ubuntu, RHEL, Debian, CentOS, it can also run on any Linux distribution where it is possible to install the required JDK. You may have to adapt the provided startup shell scripts.</td>
+<td colspan="1">Note: the only limitation on OS nature and version is the ability to install the correct version of the required JDK (see below). It means that while it is commonly reported to run on recent versions of Ubuntu, RHEL, Debian, CentOS, it can also run on any Linux distribution where it is possible to install the required JDK. You may have to adapt the provided startup shell scripts.</td>
 
 <tr><th colspan="1">Java</th>
 <td colspan="1">{{{multiexcerpt 'java_requirement' page='Compatibility Matrix'}}}</td>
-<td colspan="1">See following documentation: <ul><li>[Checking your Java Version]({{page page='installation#java-check'}})</li> <li>[How to Install Java]({{page page='installation#java-install'}})</li></td>
+<td colspan="1">See the following documentation: <ul><li>[Checking your Java Version]({{page page='installation#java-check'}})</li> <li>[How to Install Java]({{page page='installation#java-install'}})</li></td>
 </tr>
 
 <tr><th colspan="1">Application Server</th>
@@ -311,7 +319,7 @@ The following table lists current requirements for running the Nuxeo Platform. T
 </tr>
 
 <tr><th colspan="1">Authentication and User Management</th>
-<td colspan="1">The Nuxeo Platform provides its own users and groups directories and authentication solution. It is also compatible with multiple cloud and enterprise solutions:
+<td colspan="1">The Nuxeo Platform provides its own user and group directories and authentication solutions. It is also compatible with multiple cloud and enterprise solutions:
 <ul>
 <li>LDAP protocol (Open LDAP)</li>
 <li>Active Directory</li>
@@ -330,14 +338,13 @@ The following table lists current requirements for running the Nuxeo Platform. T
 <li>Docker</li>
 <li>pdftohtml</li>
 <li>Ghostscript</li>
-<li>Exiftools</li>
-<li>...</li>
+<li>Exiftool</li>
 </ul></td>
 <td colspan="1">More information on [installing third-party software]({{page page='installing-and-setting-up-related-software'}}).</td>
 </tr>
 
 <tr><th colspan="1">Client-Side Requirements</th>
-<td colspan="1">The Nuxeo Platform comes with several applications that are used by business users and that have their own requirements: <ul><li>[JSF UI]({{page page='nuxeo-jsf-ui'}})</li>
+<td colspan="1">The Nuxeo Platform comes with several applications for business users, which have their own requirements: <ul><li>[JSF UI]({{page page='nuxeo-jsf-ui'}})</li>
 <li>[Web UI]({{page page='web-ui'}})</li>
 <li>[Nuxeo Drive]({{page page='nuxeo-drive'}})</li>
 </ul></td>
@@ -354,8 +361,8 @@ The following table lists current requirements for running the Nuxeo Platform. T
 
 1.  Open a terminal:
 
-    *   On Linux or OS X: open a terminal.
-    *   On Windows: press "windows" key + r, type `cmd` (or `command`) in the Run window and press "OK" or open the **Prompt command** from **Start** > **Programs** > **Accessories** menu.
+    *   On **Linux** or **macOS**: open a terminal.
+    *   On **Windows**: press the "Windows" key + r, type `cmd` (or `command`) in the Run window and press "OK" or open the **Command Prompt** from **Start** > **Programs** > **Accessories**.
 2.  Type `java -version` and press **Enter**.
     If Java is correctly installed on your computer, the name and version of your Java virtual machine is displayed:
 
@@ -366,9 +373,9 @@ The following table lists current requirements for running the Nuxeo Platform. T
 
     ```
 
-    If Java is not installed on you computer, it fails to display the Java version. Then, you need to install Java (see below).
+    If Java is not installed on you computer, it will fail to display the Java version. In this case, install Java (see below).
 
-    If Java is installed but not included in the PATH, it fails to find the Java command. Then, you need to add `$JAVA_HOME/bin/` in your PATH (see [How do I set or change the PATH system variable?](http://www.java.com/en/download/help/path.xml)).
+    If Java is installed but not included in the PATH, it will fail to find the Java command. In that case, you need to add `$JAVA_HOME/bin/` to your PATH (see [How do I set or change the PATH system variable?](http://www.java.com/en/download/help/path.xml)).
 
 {{! /multiexcerpt}}
 
@@ -378,11 +385,15 @@ The following table lists current requirements for running the Nuxeo Platform. T
 
 {{! multiexcerpt name='java-install-linux'}}
 
-For Ubuntu, no Java 8 package is yet available. You can still download [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle website.
+```bash
+sudo apt install openjdk-8-jdk
+
+```
+You can also download [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) from the Oracle website.
 
 {{! /multiexcerpt}}
 
-### For OS X Users
+### For macOS Users
 
 {{! multiexcerpt name='java-install-macos'}}
 
@@ -400,6 +411,6 @@ Java packages and instructions for installation are available from the Oracle we
 **If the required version of Java is not installed on your computer:**
 
 1.  Download it from the Oracle website ([Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)) and choose the appropriate platform for your hardware and Windows version.
-2.  Run the downloaded .exe file and follow the instructions displayed.
+2.  Run the downloaded **.exe** file and follow the instructions displayed.
 
 {{! /multiexcerpt}}
