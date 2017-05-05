@@ -2,7 +2,7 @@
 title: Compatibility Matrix
 review:
     comment: ''
-    date: '2017-04-21'
+    date: '2017-05-05'
     status: ok
 labels:
     - lts2016-ok
@@ -69,13 +69,15 @@ history:
 ---
 ## Java
 
-Java Supported versions: {{! multiexcerpt name='java_requirement'}}JDK 1.8.0_112 (Oracle's JDK or OpenJDK) and greater{{! /multiexcerpt}}
+Supported Java versions: {{! multiexcerpt name='java_requirement'}}**JDK 1.8.0_112** (Oracle's JDK or OpenJDK) and greater{{! /multiexcerpt}}
 
-As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for a given major version, for instance the latest bugfix version of Java 8 was 8u112 (1.8.0_112) at the time of this writing.
+As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for any given major version, for instance the latest bugfix version of Java 8 was 8u112 (1.8.0_112) at the time of this writing.
 
+{{#> callout type='warning'}}
 Java 7 has been declared EOL (End Of Life) by Oracle and should only be used if there is no other recourse. Java 9 EA (Early Access) is not yet supported.
+{{/callout}}
 
-More information on the page [Installation]({{page page='installation'}}).
+More information is available from the [Installation]({{page page='installation'}}) page.
 
 ## Databases
 
@@ -95,14 +97,14 @@ The Nuxeo Platform supports the following databases.
 **Notes**
 
 {{! multiexcerpt name='supported-databases-notes'}}
-The Nuxeo Platform is likely to work with greater versions of related databases. Do not hesitate to inform the Nuxeo support of your attempts with different versions.
-More information on the page [Database Configuration]({{page version='' space='nxdoc' page='database-configuration'}}).<br/>
-Note that Nuxeo Server is shipped embedding H2 database, for quick evaluation purpose. One of the listed databases is required for a production set up or for more serious evaluation like performance testing.
+Nuxeo Platform will likely work with greater versions of the aforementioned databases. Do not hesitate to inform Nuxeo support of your attempts with different versions.
+More information can be found on the [Database Configuration]({{page version='' space='nxdoc' page='database-configuration'}}) page.<br/>
+Note that Nuxeo Server is shipped with an embedded H2 database, for quick evaluation purposes. One of the listed databases is required for a production set up or for a more thorough evaluation, like performance testing.
 {{! /multiexcerpt}}
 
 ## Application Servers
 
-The Nuxeo Platform can be based on [Tomcat](http://tomcat.apache.org/). Supported version is:
+Nuxeo Platform can be based on [Tomcat](http://tomcat.apache.org/). The supported version is:
 
 {{! multiexcerpt name='supported-app-servers-versions'}}
 <ul>
@@ -122,11 +124,11 @@ Nuxeo is shipped with an embedded Tomcat server.
 <table class="hover">
 <tbody>
 <tr>
-<th colspan="1">&nbsp;</th>
-<th colspan="1">Nuxeo Platform 9.1</th>
-<th colspan="1">Nuxeo Platform LTS 2016</th>
-<th colspan="1">Nuxeo Platform LTS 2015</th>
-<th colspan="1">Nuxeo Platform 6.0</th>
+<th colspan="1">Nuxeo Platform Version:</th>
+<th colspan="1">9.1</th>
+<th colspan="1">LTS 2016</th>
+<th colspan="1">LTS 2015</th>
+<th colspan="1">6.0</th>
 </tr>
 <tr>
 <th colspan="1">Redis</th>
@@ -143,7 +145,7 @@ Nuxeo is shipped with an embedded Tomcat server.
 </div>
 {{! /multiexcerpt}}
 
-More information on the pages [Nuxeo and Redis]({{page page='nuxeo-and-redis'}}) and [Redis Configuration]({{page page='redis-configuration'}}).
+More information can be found on the [Nuxeo and Redis]({{page page='nuxeo-and-redis'}}) and [Redis Configuration]({{page page='redis-configuration'}}) pages.
 
 ## Elasticsearch
 
@@ -152,11 +154,11 @@ More information on the pages [Nuxeo and Redis]({{page page='nuxeo-and-redis'}})
 <table class="hover">
 <tbody>
 <tr>
-<th colspan="1">&nbsp;</th>
-<th colspan="1">Nuxeo Platform 9.1</th>
-<th colspan="1">Nuxeo Platform LTS 2016</th>
-<th colspan="1">Nuxeo Platform LTS 2015</th>
-<th colspan="1">Nuxeo Platform 6.0</th>
+<th colspan="1">Nuxeo Platform Version:</th>
+<th colspan="1">9.1</th>
+<th colspan="1">LTS 2016</th>
+<th colspan="1">LTS 2015</th>
+<th colspan="1">6.0</th>
 </tr>
 <tr><th colspan="1">Elasticsearch</th>
 <td colspan="1">
@@ -177,12 +179,12 @@ Cluster: 1.1.2 to 1.7.x</td>
 </table>
 </div>{{! /multiexcerpt}}
 
-More information on the page [Elasticsearch Setup]({{page page='elasticsearch-setup'}}).
+More information can be found on the [Elasticsearch Setup]({{page page='elasticsearch-setup'}}) page.
 
 ## Browsers
 
 {{! multiexcerpt name='supported-browsers'}}
-Depending on the user interface addon or applications you use, the browsers requirements can differ. See the relevant pages:
+Depending on the user interface addon or applications you use, the browser requirements can differ. See the relevant pages:
 - [Nuxeo JSF UI]({{page version='' space='nxdoc' page='nuxeo-jsf-ui'}})
 - [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}})
 {{! /multiexcerpt}}
