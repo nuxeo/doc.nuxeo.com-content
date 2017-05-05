@@ -52,6 +52,7 @@ $ npm install -g nuxeo/nuxeo-cli
 - Declare your new [Nuxeo Service]({{page version='' space='nxdoc' page='runtime-and-component-model'}}).
 - Plug your logic to an existing behavior with the event bus using an [Event Listener]({{page version='' space='nxdoc' page='events-and-listeners'}}).
 - Bootstrap old-fashioned JSF objects like Seam-based UI action or bare Seam bean.
+- Interact with your Nuxeo Studio's project
 
 ## Commands
 
@@ -73,6 +74,14 @@ Then, you will be able to trigger a hot reload using:
 
 ```bash
 $ nuxeo hotreload
+```
+
+### Studio
+
+Connect your Studio project to your bundle dependencies to be able to add it directly in your package or testing that everyhting is working well together.
+
+```bash
+$ nuxeo studio
 ```
 
 ### Bootstrap
@@ -133,7 +142,23 @@ You should use this command to initiate a project that stands in a single Maven 
 * **Parent Group / Artifact**: Like in `multi-module`, having a parent artifact enables project inheritance. If you are in a `multi-module`, you must set your parent module. If not, you can use `org.nuxeo.ecm.distribution:nuxeo-distribution` or `org.nuxeo:nuxeo-addons-parent`.
 * **Nuxeo Version**: Asked only if needed, it specifies which Nuxeo version of the dependency management will be imported.
 
-#### Your Own Business Rules or Logic
+#### Unit Test
+
+Add an empty [Unit Test](https://doc.nuxeo.com/corg/unit-testing/)
+
+```bash
+$ nuxeo bootstrap test-empty
+```
+
+#### Bare Component
+
+Add an empty [Contribution](https://doc.nuxeo.com/nxdoc/contributing-to-nuxeo/)
+
+```bash
+$ nuxeo bootstrap contribution
+```
+
+#### Business Rules or Logic - Automation Operation
 
 Add an empty [Automation Operation]({{page version='' space='nxdoc' page='automation'}}) along with a corresponding unit test.
 
@@ -206,7 +231,7 @@ $ nuxeo bootstrap polymer
 # cd *-web && npm install && bower install
 
 # To run the application in dev mode; with file changes watch:
-$ cd *-web && gulp serve
+$ cd *-web && npm run serve
 ```
 
 #### Empty Angular2 Application
