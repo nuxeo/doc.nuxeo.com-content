@@ -20,6 +20,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/kTalAQ'
     source_link: /display/ADMINDOC710/Backup+and+Restore
 tree_item_index: 200
+toc: true
 version_override:
     'FT': '/nxdoc/backup-and-restore'
     'LTS 2016': 810/nxdoc/backup-and-restore
@@ -149,7 +150,7 @@ If you didn't configure Nuxeo data directory (`nuxeo.data.dir` in `nuxeo.conf`),
 2.  [Configure Nuxeo]({{page page='setup'}}) to use this database and data directory.
 3.  Start Nuxeo.
 
-## {{> anchor 'backingupandrestoringtheauditelasticsearchindex'}}Backing Up and Restoring the Audit Elasticsearch Index
+## Backing Up and Restoring the Audit Elasticsearch Index
 
 If Elasticsearch is used as a backend for audit logs, meaning the following properties are set in&nbsp;`nuxeo.conf`:
 
@@ -161,17 +162,16 @@ audit.elasticsearch.enabled=true
 you need to backup / restore both the `${seqgen.elasticsearch.indexName}`&nbsp;and&nbsp;`${audit.elasticsearch.indexName}`&nbsp;Elasticsearch indexes [defined in nuxeo.conf]({{page page='elasticsearch-setup#configuringnuxeotoaccessthecluster'}}), following the Elasticsearch&nbsp;[Snapshot And Restore](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-snapshots.html) documentation.
 
 {{#> callout type='warning' }}
-
 This is really important if as if you decide to use Elasticsearch as a backend for audit logs it will become the reference (no more SQL backend), so backuping a Nuxeo instance implies backuping the audit Elasticsearch index.
+{{/callout}}
 
-{{/callout}} {{#> callout type='info' }}
+{{#> callout type='info' }}
 
 Reminder: as stated in&nbsp;[Setting up an Elasticsearch Cluster]({{page page='elasticsearch-setup#settingupanelasticsearchcluster'}}), the embedded Elasticsearch mode&nbsp;**is only for testing purpose**&nbsp;and should not be used in production.
 
 Yet if you decide to use it for development or tests, to perform the backup / restore operations you will need to make the embedded Elasticsearch server accept HTTP request on port 9200 by setting `elasticsearch.httpEnabled=true` in `nuxeo.conf`.
 
 Make sure you set back `elasticsearch.httpEnabled=false` when the backup / restore operations are over.
-
 {{/callout}}
 
 ## Additional Information

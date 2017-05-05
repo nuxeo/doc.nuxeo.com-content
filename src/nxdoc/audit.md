@@ -117,13 +117,31 @@ Audit service is mainly a datastore service. It defines a data record structure 
 
 The datastore is built over a relational database backend. The data record structure is defined in Java by the LogEntry and ExtendedInfo java classes.
 
-They are mapped onto the datastore using JPA (Java Persistence API) annotations. Audit service receive events from the Event service. Then the Audit service is filtering and converting them into log entries. The LogEntry class is mainly obtained from the DocumentMessage event type.
+They are mapped onto the datastore using JPA (Java Persistence API) annotations. Audit service receive events from the Event service. Then the Audit service is filtering and converting them into log entries. The `LogEntry` class is mainly obtained from the DocumentMessage event type.
 
 JPA data-mapping configuration is not very flexible whereas Nuxeo Documents and events can have a lot of custom properties.
 
 So, if you want to log some specific event or document properties, the **extendedInfo** allows for a Key/Value type storage that will be associated to the main LogEntry record. These informations are extracted from the event message using EL (Expression Language) expression and stored into a map.
 
-There are three tables used by the Audit Service : NXP_LOGS, NXP_LOGS_EXTINFO and NXP_LOGS_MAPEXTINFOS. NXP_LOGS is the main table, it is used most of the time. The two others are used only when the **extendedInfo** extension point is defined.
+By default, since Nuxeo LTS 2015, the data store relies on the Elasticsearch Back-end. To disable Elasticsearh for Audit logs and use the [Legacy SQL Back-end](#legacy-sql-back-end) please refer to the [Disabling Elasticsearch for Audit Logs]({{page version='710' space='admindoc' page='elasticsearch-setup'}}#disabling-elasticsearch-for-audit-logs) section.
+
+### Elasticsearch Back-end
+
+The audit entries are stored in the Elasticsearch index named by the audit.elasticsearch.indexName property in nuxeo.conf.
+
+{{#> callout type='warning' }}
+Make sure you read the [Backing Up and Restoring the Audit Elasticsearch Index]({{page version='710' space='admindoc' page='backup-and-restore'}}#backing-up-and-restoring-the-audit-elasticsearch-index) section.
+{{/callout}}
+
+Fore more information about the global Elasticsearch setup, see [Elasticsearch Setup]({{page version='710' space='admindoc' page='elasticsearch-setup'}}).
+
+### Legacy SQL Back-end
+
+If Elasticsearch is disabled for Audit logs, the data store is built over a relational database back-end.
+
+The `LogEntry` and `ExtendedInfo` Java classes are mapped onto the datastore using JPA (Java Persistence API) annotations.
+
+There are three tables used by the Audit Service : `NXP_LOGS`, `NXP_LOGS_EXTINFO` and `NXP_LOGS_MAPEXTINFOS`. `NXP_LOGS` is the main table, it is used most of the time. The two others are used only when the **extendedInfo** extension point is defined.
 
 ![]({{file name='diagram.png'}} ?w=600,border=true)
 
