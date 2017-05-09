@@ -365,6 +365,7 @@ In other words, we would like to make the following query `SELECT * FROM Workspa
 
 {{#> panel type='code' heading='CoreInstance.doPrivileged Example implementation: get Workspace Ids'}}
 ```
+List<String> groupIds = new ArrayList<>();
 TransactionHelper.runInTransaction(() -> {
     CoreInstance.doPrivileged(repositoryName, session -> {
         try (IterableQueryResult results = session.queryAndFetch(query, "NXQL")) {
