@@ -365,14 +365,15 @@ In other words, we would like to make the following query `SELECT * FROM Workspa
 
 {{#> panel type='code' heading='CoreInstance.doPrivileged Example implementation: get Workspace Ids'}}
 ```
-List<String> groupIds = new ArrayList<>();
-CoreInstance.doPrivileged(repositoryName, session -> {
-    try (IterableQueryResult results = session.queryAndFetch(query, "NXQL")) {
-        for (Map<String, Serializable> result : results) {
-            String groupId = (String) result.get("ecm:uuid");
-            groupIds.add(groupId);
+TransactionHelper.runInTransaction(() -> {
+    CoreInstance.doPrivileged(repositoryName, session -> {
+        try (IterableQueryResult results = session.queryAndFetch(query, "NXQL")) {
+            for (Map<String, Serializable> result : results) {
+                String groupId = (String) result.get("ecm:uuid");
+                groupIds.add(groupId);
+            }
         }
-    }
+    });
 });
 ```
 {{/panel}}
