@@ -450,7 +450,7 @@ Public
 [Documentation]({{page page='nuxeo-edge-cache'}})
 </td>
 <td colspan="1">
-[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-edge-cache?version=1.0)
+[Released for 9.1](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-edge-cache?version=1.0.1)
 </td>
 </tr>
 <tr>
@@ -511,7 +511,7 @@ Registered access
 [Documentation]({{page page='nuxeo-adobe-cc-connector'}})
 </td>
 <td colspan="1">
-[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace?version=1.2.4)
+[Released for 9.1](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace?version=1.2.6)
 </td>
 </tr>
 <tr>
