@@ -60,9 +60,9 @@ Setting up the development mode can help you hot reload your files. An Ant file 
 
 ## Migration Tool
 
-Using this migration module might be useful when upgrading a Nuxeo application to 6.0\. The released versions of the tool can be found in the Nuxeo Maven repository at [http://maven.nuxeo.org/nexus/content/groups/public/org/nuxeo/jsf2/nuxeo-jsf2-migration/](http://maven.nuxeo.org/nexus/content/groups/public/org/nuxeo/jsf2/nuxeo-jsf2-migration/).
+Using this migration module might be useful when upgrading a Nuxeo application to 6.0\. The last released version of the tool can be found in the Nuxeo Maven repository at [https://maven.nuxeo.org/nexus/content/groups/public/org/nuxeo/jsf2/nuxeo-jsf2-migration/1.3-6033/](https://maven.nuxeo.org/nexus/content/groups/public/org/nuxeo/jsf2/nuxeo-jsf2-migration/1.3-6033/).
 
-The [README file on the GitHub project](https://github.com/nuxeo/nuxeo-jsf2-migration) describes how to use the tool and how to create new rules (if you find it useful for your own migration).
+The [README file on the GitHub project](https://github.com/nuxeo-archives/nuxeo-jsf2-migration/tree/release-1.3-6033) describes how to use the tool and how to create new rules (if you find it useful for your own migration).
 
 {{#> callout type='note' heading='Migrated files'}}
 
