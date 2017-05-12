@@ -52,5 +52,6 @@ In general of if you want to contribute to the Nuxeo Platform as a contributor, 
     *   `nuxeo_cleanups.xml`
     *   `nuxeo_codetemplates.xml`
     *   `nuxeo_formatter.xml`
+    *   `nuxeo.importorder`
 
     These files are also provided in the [Nuxeo GitHub repository](https://github.com/nuxeo/nuxeo/tree/release-5.8/tools).
