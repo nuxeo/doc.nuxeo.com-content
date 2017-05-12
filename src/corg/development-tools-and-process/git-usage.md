@@ -1015,6 +1015,7 @@ git push --all /path/to/foo
 The `foo` repository is now ready for push to remote. Of course, you will often want to finalize the merge first (add modules to a common POM, remove useless `.gitignore`...)
 
 {{#> callout type='warning' }}
+If there was a remote conflicting changes, then you can rebase the new branch(es).
 
 If you had local changes in `foo`, then you may encounter conflicts at push:
 
@@ -1037,6 +1038,67 @@ git fetch -f /path/to/merged-repo some-conflicting-branch:some-conflicting-branc
 ```
 
 {{/callout}}
+
+#### Walking Through History After Merge
+
+After merge, the resulting repository will have two distinct history trees that converge into the future unique history. The drawback is that it is not easy to browse the old history of the imported repository.  
+
+In the following example, we have merged a repository `B` under a new folder `repo-b/` of the repository `A`.
+```
+$ tree -L 2
+.
+├── repo-b/      # Imported content of B, shifted.
+│   ├── pom.xml
+│   └── ...
+├── pom.xml
+└── ...          # Original content of A, unchanged.
+
+$ git show --summary
+commit eb9a482ef762372b7ebc868045aa210a8b553d24
+Merge: cafb9624c 943add6f0
+
+    Merge branch 'master' from multiple repositories
+    Repositories:
+            A
+            B
+
+# cafb9624c is the HEAD of the original content (repo A)
+# 943add6f0 is the HEAD of the imported content (repo B)
+
+$ git log --graph --pretty=format:'%h -%d %s' --simplify-by-decoration
+*   eb9a482ef - (HEAD -> master) Merge branch 'master' from multiple repositories
+|\  
+| * 3d3ebc4a0 - first commit on B
+* cafb9624c - (origin/master) last commit on A
+```
+
+Here are some history browsing Git commands with their behavior regarding the "old" history (before the merge of repositories)
+```
+# To walk through both trees, use --follow starting from a commit post-merge
+
+$ git log --oneline --follow -- pom.xml|grep 3d3ebc4a0
+3d3ebc4a0 NXP-14853: First commit.
+
+$ git log --oneline --follow -- repo-b/pom.xml|grep 3d3ebc4a0
+3d3ebc4a0 NXP-14853: First commit.
+
+$ git log --oneline --follow -- repo-b/pom.xml|wc -l
+476
+$ git log --oneline --follow -- pom.xml|wc -l
+476
+
+# To walk through the old trees, use a pre-merge commit: cafb9624c for repo A and 943add6f0 for repo B
+
+$ git log --oneline cafb9624c --follow -- pom.xml|wc -l
+445
+$ git log --oneline 943add6f0 --follow -- pom.xml|wc -l
+30
+
+# 3d3ebc4a0 is not in the old tree A but in tree B
+$ git log --oneline cafb9624c --follow -- pom.xml|grep 3d3ebc4a0
+$ git log --oneline 943add6f0 --follow -- pom.xml|grep 3d3ebc4a0
+3d3ebc4a0 NXP-14853: First commit.
+```
 
 ### Normalize End of Lines
 
