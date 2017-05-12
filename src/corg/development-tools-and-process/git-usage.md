@@ -1015,7 +1015,7 @@ git push --all /path/to/foo
 The `foo` repository is now ready for push to remote. Of course, you will often want to finalize the merge first (add modules to a common POM, remove useless `.gitignore`...)
 
 {{#> callout type='warning' }}
-If there was a remote conflicting changes, then you can rebase the new branch(es).
+If there was a remote conflicting change, then you can rebase the new branch(es).
 
 If you had local changes in `foo`, then you may encounter conflicts at push:
 
