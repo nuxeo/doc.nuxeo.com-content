@@ -18,7 +18,9 @@ IntelliJ IDEA with your own preferences.
 {{#> callout type='note' }}
 
 We assume that you've cloned the Nuxeo source code successfully. If it's not the
-case, please go back to the previous section to see how to do it.
+case, please go back to the previous section,
+_[Getting the Nuxeo Source Code]({{page page='getting-the-nuxeo-source-code'}})_,
+to see how to do it.
 
 {{/callout}}
 
@@ -31,7 +33,7 @@ Then search `VM options for importer` and set it to:
 
 Now import Nuxeo source code as Maven project. In the default welcome menu,
 choose _Import Project_, then find the Nuxeo root folder and select the POM file
-in `$NX_HOME/pom.xml`. Afterwards, enable Maven import options as the following:
+`pom.xml`. Afterwards, enable Maven import options as the following:
 
 - Import Maven projects automatically
 - Create IntelliJ IDEA modules for a aggregator projects (with 'POM' packaging)
@@ -42,7 +44,10 @@ in `$NX_HOME/pom.xml`. Afterwards, enable Maven import options as the following:
 
 Later, you will need to:
 
-- Choose Maven profiles: default
+- Choose Maven profiles:
+   - A Nuxeo developer will choose the profile `qa` or `qapriv`
+   - Other users will likely choose `Nuxeo`
+   - More advanced options are mentioned in [Configure Repositories]({{page page='maven-usage/#configure-repositories'}})
 - Choose Project SDK: use JDK 8
 - Edit name to create a new IntelliJ project: default
 
@@ -50,7 +55,7 @@ After that, the configuration is finished. IntelliJ will create a project for
 you, the entire process (Maven import) will take a few minutes, please be
 patient.
 
-## Avanced Configurations
+## Advanced Configurations
 
 This section is optional.
 
@@ -72,14 +77,15 @@ with your preferred values:
 ## Configure Nuxeo Code Style
 
 Download and install plugin [Eclipse Code Formatter](https://plugins.jetbrains.com/plugin/6546-eclipse-code-formatter).
-Then, you need to
+Then, you need to configure it using the [tools folder of the top-level repository][nuxeo-tools].
 
 - Enable the plugin
-- Import Eclipse Java Formatter config file from
-  `$NX_HOME/tools/nuxeo_formatter.xml`.
-- Optimize imports from file `$NX_HOME/tools/nuxeo.importorder`
+- Import Eclipse Java Formatter config file from the tools folder of Nuxeo source code
+  `nuxeo/tools/nuxeo_formatter.xml`.
+- Optimize import order from file `nuxeo/tools/nuxeo.importorder`
 
 Congratulations! Now everything is done. Enjoy IntelliJ IDEA, your capable and
 ergonomic IDE!
 
 [idea-download]: https://www.jetbrains.com/idea/download/
+[nuxeo-tools]: https://github.com/nuxeo/nuxeo/tree/master/tools/
