@@ -1,5 +1,5 @@
 ---
-title: Installing JDK and related tools
+title: Installing JDK and Related Tools
 labels:
     - java
     - jdk
