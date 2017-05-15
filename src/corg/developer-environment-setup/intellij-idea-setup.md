@@ -3,11 +3,12 @@ title: IntelliJ IDEA Setup
 labels:
     - intellij
     - idea
+toc: true
 ---
 
 ## Download and Install IntelliJ IDEA
 
-You can [download][idea-download] the latest version of IntelliJ IDEA from Jet
+You can [download](https://www.jetbrains.com/idea/download/) the latest version of IntelliJ IDEA from Jet
 Brains, the official website. It supports all the platforms including Mac OS,
 Windows, and Linux. IntelliJ has two editions: Community Edition and Ultimate
 Edition. Nuxeo sources code work with both of them. Once downloaded, install
@@ -18,16 +19,15 @@ IntelliJ IDEA with your own preferences.
 {{#> callout type='note' }}
 
 We assume that you've cloned the Nuxeo source code successfully. If it's not the
-case, please go back to the previous section,
-_[Getting the Nuxeo Source Code]({{page page='getting-the-nuxeo-source-code'}})_,
+case, please go back to the previous section, [Getting the Nuxeo Source Code]({{page page='getting-the-nuxeo-source-code'}}),
 to see how to do it.
 
 {{/callout}}
 
 Before importing Nuxeo source code, you need to configure the VM options for
 importer to increase the importation capacity. Open IntelliJ, a welcome menu
-will be shown. On the right bottom of menu, click _Configure_ > _Preferences_.
-Then search `VM options for importer` and set it to:
+will be shown. On the right bottom of menu, click **Configure** > **Preferences**.
+Then search _VM options for importer_ and set it to:
 
     -Xms1g -Xmx4g
 
@@ -47,7 +47,7 @@ Later, you will need to:
 - Choose Maven profiles:
    - A Nuxeo developer will choose the profile `qa` or `qapriv`
    - Other users will likely choose `Nuxeo`
-   - More advanced options are mentioned in [Configure Repositories]({{page page='maven-usage/#configure-repositories'}})
+   - More advanced options are mentioned in [Configure Repositories]({{page version='' space='corg' page='maven-usage'}}#configure-repositories)
 - Choose Project SDK: use JDK 8
 - Edit name to create a new IntelliJ project: default
 
@@ -62,7 +62,7 @@ This section is optional.
 ### Customize VM Options
 
 If you want to improve the performance of IntelliJ, you can customize the VM
-options. Click _Help_ > _Edit Custom VM Options..._. If there's no existing
+options. Click **Help** > **Edit Custom VM Options...**. If there's no existing
 configuration file, IntelliJ will help you to create one. Then edit the content
 with your preferred values:
 
@@ -77,7 +77,7 @@ with your preferred values:
 ## Configure Nuxeo Code Style
 
 Download and install plugin [Eclipse Code Formatter](https://plugins.jetbrains.com/plugin/6546-eclipse-code-formatter).
-Then, you need to configure it using the [tools folder of the top-level repository][nuxeo-tools].
+Then, you need to configure it using the [tools folder of the top-level repository](https://github.com/nuxeo/nuxeo/tree/master/tools/).
 
 - Enable the plugin
 - Import Eclipse Java Formatter config file from the tools folder of Nuxeo source code
@@ -86,6 +86,3 @@ Then, you need to configure it using the [tools folder of the top-level reposito
 
 Congratulations! Now everything is done. Enjoy IntelliJ IDEA, your capable and
 ergonomic IDE!
-
-[idea-download]: https://www.jetbrains.com/idea/download/
-[nuxeo-tools]: https://github.com/nuxeo/nuxeo/tree/master/tools/
