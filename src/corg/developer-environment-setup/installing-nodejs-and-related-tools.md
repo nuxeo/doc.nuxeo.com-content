@@ -1,5 +1,5 @@
 ---
-title: Installing NodeJS and related tools
+title: Installing NodeJS and Related Tools
 review:
     comment: ''
     date: ''
@@ -141,7 +141,7 @@ Using MacPorts
 sudo port install npm
 ```
 
-## Installing related tools
+## Installing Related Tools
 
 We need a few tools to be installed:
 
