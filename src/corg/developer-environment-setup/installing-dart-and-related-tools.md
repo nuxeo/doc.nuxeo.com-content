@@ -1,5 +1,5 @@
 ---
-title: Installing Dart and related tools
+title: Installing Dart and Related Tools
 review:
     comment: ''
     date: ''
