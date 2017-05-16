@@ -20,7 +20,7 @@ confluence:
     shortlink: DIBH
     shortlink_source: 'https://doc.nuxeo.com/x/DIBH'
     source_link: /display/CORG/Getting+the+Nuxeo+Source+Code
-tree_item_index: 400
+tree_item_index: 500
 history:
     -
         author: Manon Lumeau

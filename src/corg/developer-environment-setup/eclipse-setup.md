@@ -15,7 +15,7 @@ confluence:
     shortlink: TIeN
     shortlink_source: 'https://doc.nuxeo.com/x/TIeN'
     source_link: /display/CORG/Eclipse+setup
-tree_item_index: 500
+tree_item_index: 600
 history:
     -
         author: Julien Carsique

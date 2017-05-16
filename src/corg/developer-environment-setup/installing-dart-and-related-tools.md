@@ -24,7 +24,8 @@ confluence:
     shortlink: JBw5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/JBw5AQ'
     source_link: /display/CORG/Installing+Dart+and+related+tools
-tree_item_index: 300
+tree_item_index: 400
+toc: true
 history:
     -
         author: Solen Guitter

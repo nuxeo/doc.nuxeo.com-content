@@ -25,6 +25,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/3hY5AQ'
     source_link: /display/CORG/Installing+NodeJS+and+related+tools
 tree_item_index: 200
+toc: true
 history:
     -
         author: Solen Guitter

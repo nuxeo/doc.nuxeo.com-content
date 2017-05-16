@@ -17,7 +17,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/fAQz'
     source_link: >-
         /display/CORG/Working+with+multiple+versions+of+Nuxeo+sources+at+the+same+time
-tree_item_index: 600
+tree_item_index: 800
+toc: true
 history:
     -
         author: Julien Carsique

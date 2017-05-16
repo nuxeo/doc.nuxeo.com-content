@@ -1,9 +1,14 @@
 ---
 title: IntelliJ IDEA Setup
+review:
+    comment: ''
+    date: '2017-05-16'
+    status: ok
 labels:
     - intellij
     - idea
 toc: true
+tree_item_index: 700
 ---
 
 ## Download and Install IntelliJ IDEA

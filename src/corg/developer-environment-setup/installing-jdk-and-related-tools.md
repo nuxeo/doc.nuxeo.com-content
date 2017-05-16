@@ -1,9 +1,15 @@
 ---
 title: Installing JDK and Related Tools
+review:
+    comment: ''
+    date: '2017-05-16'
+    status: ok
 labels:
     - java
     - jdk
     - maven
+tree_item_index: 300
+toc: true
 ---
 
 ## Installing JDK
