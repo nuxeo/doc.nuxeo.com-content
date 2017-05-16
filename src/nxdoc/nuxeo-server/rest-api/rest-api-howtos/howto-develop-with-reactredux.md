@@ -119,7 +119,7 @@ $ mvn clean install -Pmp
 
 
 {{#> callout type='info' }}
-We are always eager to receive feedback on our projects. Please report bugs, wishes or anything related to the nuxeo-angular-sample project at [answers.nuxeo.com](https://answers.nuxeo.com)
+We are always eager to receive feedback on our projects. Please report bugs, wishes or anything related to the reactjs-sample-ui project at [answers.nuxeo.com](https://answers.nuxeo.com)
 {{/callout}}
 
 * * *
