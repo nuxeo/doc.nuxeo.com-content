@@ -297,13 +297,17 @@ history:
 
 ---
 {{! multiexcerpt name='permissions'}}
-{{! multiexcerpt name='permissions-without-purge'}}
+{{! multiexcerpt name='permissions-introduction'}}
 
 A permission is a rule to grant access to a user or set of users to a Nuxeo document. User has a view in the dashboard where he can see the documents on which a permission is set. Managing permissions means granting or denying access permissions in a document or folder.
 
 Some permissions are granted automatically, for example when you create a workflow and grant access to a user on a document for the entire workflow or a particular task.
 
+{{! /multiexcerpt}}
+
 ## Permissions Overview
+
+{{! multiexcerpt name='permissions-overview-table'}}
 
 <div class="table-scroll">
 <table class="hover">
@@ -387,23 +391,35 @@ Some permissions are granted automatically, for example when you create a workfl
 </table>
 </div>
 
+{{! /multiexcerpt}}
+
 ## Managing Permissions on Content
 
 ### Granting Permissions to the Application Users and Groups
 
-To add a permission, at the root of a workspace, a folder or a document, click on the **Permission** tab  **New Permission** and fill in the popup form.
+{{! multiexcerpt name='grant-permissions'}}
 
-![]({{file name='add_permission_popup.png'}} ?w=350,border=true)
+To add a permission, at the root of a workspace, a folder or a document, click on the **Permission** tab  **New Permission** and fill in the popup form.
 
 The new permission is displayed in the **Permissions defined locally** part of the screen.
 
+{{! /multiexcerpt}}
+
+![]({{file name='add_permission_popup.png'}} ?w=350,border=true)
+
 ### Granting Permissions to External Users (Instant Share)
+
+{{! multiexcerpt name='grant-permissions-external-users'}}
 
 You can share documents and folders with people that don't usually have access to the application, using their email.
 
 In the **Permissions Assigned to External Users** part of the screen, click **New** and fill in the popup form. The external person is sent an email notification that contains the link to the document or space. They can access the application only by clicking that link.
 
+{{! /multiexcerpt}}
+
 ![]({{file name='permissions_external_share_popup.png'}} ?w=300,thumbnail=true)
+
+{{! multiexcerpt name='grant-permissions-external-users-notes'}}
 
 **Notes:**
 
@@ -411,6 +427,8 @@ In the **Permissions Assigned to External Users** part of the screen, click **Ne
 *   External users are not created a user account on the application. They do not have login / password credentials. They can only use the link that is sent to them to access the application.
 *   External users have access to the content that was shared with them (either documents or workspaces and their content) and the Search tab.
 *   External users do not benefit from the following features: A personal workspace and the Home tab and its features (dashboard, alerts, users / groups search, etc.).
+
+{{! /multiexcerpt}}
 
 ### Editing Permissions
 
@@ -421,7 +439,6 @@ To edit a permission click on ![]({{file name='editor_area.gif' space='studio' p
 To delete a permission click on ![]({{file name='delete_2.png' page='icons-index'}}) next to the permission you want to delete, click **Ok** on the confirmation popup.
 
 ![]({{file name='delete_permission_popup.png'}} ?w=350,border=true)
-{{! /multiexcerpt}}
 
 ## Auditing and Purging Permissions
 

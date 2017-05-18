@@ -8,18 +8,19 @@ review:
 toc: true
 tree_item_index: 700
 ---
-This Administration menu presents three different submenus:
+This Administration menu presents different submenus:
 
 - [Analytics](#analytics)
 - [Users & Groups](#users-groups)
 - [Vocabularies](#vocabularies)
+- [Audit](#audit)
 
 ## Analytics
 
 This section of the Administration tab enables administrators to have information and statistics on how the application is used.
 
 The default Activity subtabs are:
-- **Document Distribution**:
+- **Document Distribution**: Provides statistics on the documents types, their size and counts.
 
 - **Repository Content**: Provides statistics on the repository, the top downloads, the document created per week, etc. You can filter these statistics on a specific time period.
 
@@ -121,13 +122,15 @@ User must be at least in 'administrators' or 'members' group, or one of their su
 </table>
 </div>
 
-#### Inviting a New User
+<!-- Commenting this section until https://jira.nuxeo.com/browse/NXP-19778 is resolved
+####Inviting a New User
 
 Inviting a new user means creating a user account without setting its password, and having the user validate the invitation.
 
 - To invite a user, go to **Administration** menu > **Users & Groups**. Click on the **New** button and fill in the user creation form and leave **Set user password** to unactive. </br>
   An invitation email is sent to the user at the email address you filled in. The user account is pending the user validation and the user account is not available in the user search results.
 - To validate the invitation, click on the validation link in the invitation email. Define your password and click on the **Submit** button. You are redirected to the login page of the Nuxeo Platform: you can now log in and use the Platform.
+-->
 
 #### Creating a New User Account
 
@@ -303,4 +306,10 @@ Editing a vocabulary entry can be changing its label, making it obsolete or chan
 Deleting a vocabulary entry is a permanent action.
 {{/callout}}
 
-To delete vocabulary entry, click on the **Delete** button ![]({{file name='delete_2.png' space='userdoc' page='icons-index'}}) of the entry to erase and confirm.The entry is permanently erased. The list of the vocabulary entries is displayed.
+To delete vocabulary entry, click on the **Delete** button&nbsp;![]({{file name='delete_web-ui.png' space='userdoc' page='icons-index'}}) of the entry to erase and confirm.The entry is permanently erased. The list of the vocabulary entries is displayed.
+
+## Audit
+
+The Audit view enables you to query the application audit and get reports on the activities and actions on the repository.
+
+![]({{file name='admin-audit-view_web-ui.png'}} ?w=600,border=true)
