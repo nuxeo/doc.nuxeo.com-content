@@ -168,18 +168,23 @@ Nuxeo may use (depending on which distribution or package is installed)&nbsp;the
 
 The licenses used are:
 
-*   AL 1.1:&nbsp;[Apache License v1.1](http://www.apache.org/licenses/LICENSE-1.1)
-*   AL 2.0:&nbsp;[Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+*   AL 1.1: [Apache License v1.1](http://www.apache.org/licenses/LICENSE-1.1)
+*   AL 2.0: [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 *   BSD 2: [BSD 2-Clause License](http://opensource.org/licenses/bsd-license.php)
-*   BSD 3:&nbsp;[BSD 3-Clause License](http://opensource.org/licenses/BSD-3-Clause)
-*   CC BY 2.5:&nbsp;[Creative Commons Attribution License 2.5](http://creativecommons.org/licenses/by/2.5/)
-*   CDDL 1.0:&nbsp;[Common Development and Distribution License v1.0](http://glassfish.java.net/public/CDDLv1.0.html)
-*   CDDL 1.1:&nbsp;[Common Development and Distribution License v1.1](http://glassfish.java.net/public/CDDL+GPL_1_1.html)
-*   EPL 1.0:&nbsp;[Eclipse Public License v1.0](http://www.eclipse.org/legal/epl-v10.html)
+*   BSD 3: [BSD 3-Clause License](http://opensource.org/licenses/BSD-3-Clause)
+*   BSD 4: [BSD 4-Clause License](https://en.wikipedia.org/wiki/BSD_licenses#4-clause)
+*   CC BY 2.5: [Creative Commons Attribution License 2.5](http://creativecommons.org/licenses/by/2.5/)
+*   CDDL 1.0: [Common Development and Distribution License v1.0](http://glassfish.java.net/public/CDDLv1.0.html)
+*   CDDL 1.1: [Common Development and Distribution License v1.1](http://glassfish.java.net/public/CDDL+GPL_1_1.html)
+*   EPL 1.0: [Eclipse Public License v1.0](http://www.eclipse.org/legal/epl-v10.html)
+*   GPL 2: [GNU General Public License v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+*   GPL 2 CPE: [GPL 2 with the Classpath Exception](http://openjdk.java.net/legal/gplv2+ce.html)
+*   GPL 3: [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 *   LGPL 2.1: [GNU Lesser General Public License v2.1](http://www.gnu.org/licenses/lgpl-2.1.html)
-*   LGPL 3:&nbsp;[GNU Lesser General Public License v3](http://www.gnu.org/licenses/lgpl.html)
+*   LGPL 3: [GNU Lesser General Public License v3](http://www.gnu.org/licenses/lgpl.html)
 *   MIT: [MIT License](http://opensource.org/licenses/mit-license.php)
-*   W3C:&nbsp;[W3C Software Notice and License](http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231)
+*   W3C: [W3C Software Notice and License](http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231)
+*   Unicode: [Unicode License Agreement](http://www.unicode.org/copyright.html#License)
 *   PD: Public Domain (not actually a license)
 
 | Jar Name | Project | Version | License |
