@@ -35,7 +35,7 @@ Once you are all set, you can navigate to Nuxeo Studio to start creating your se
 
 ## Create a Page Provider
 
-The first step is to create a [page provider]({{page page='page-provider' space='studio'}}) in Nuxeo Studio.
+The first step is to create a [page provider]({{page version='' space='studio' page='page-providers'}}) in Nuxeo Studio.
 
 In **Customization**, go to **Page Providers**, click on **New** and name it `Search`.
 
