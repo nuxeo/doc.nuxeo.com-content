@@ -1,8 +1,8 @@
 ---
-title: Nuxeo Studio Tutorial
+title: Customizing Nuxeo Platform with Studio and View Designer
 review:
     comment: 'Created Tutorial'
-    date: '2017-04-26'
+    date: '2017-05-23'
     status: ok
 labels:
     - studio
@@ -13,6 +13,10 @@ tree_item_index: 250
 ---
 
 This tutorial introduces you to a few important aspects of **Nuxeo Studio** so that you can take advantage of this great product as quickly as possible.
+
+{{#> callout type='warning' }}
+This tutorial makes use of **View Designer**, a new customization tool for Nuxeo Web UI. **View Designer** is currently available through a limited release. If you don't have access yet and would like to try it out, please contact your Nuxeo representative.
+{{/callout}}
 
 ## Setting Up
 
@@ -45,12 +49,11 @@ $ ./bin/nuxeoctl register
 
 Use your **Nuxeo Online Services** credentials and follow the steps. If you don't have a **NOS** account yet, use the command `register-trial` to sign up for your 30-day free trial.
 
-4.  Install any hotfixes and dependencies needed for the tutorial:
+4.  Install any dependencies needed for the tutorial:
 
 {{#> panel heading='**MAC OS** / **LINUX**'}}
 
 ```bash
-$ ./bin/nuxeoctl mp-hotfix --accept=true
 $ ./bin/nuxeoctl mp-install nuxeo-dam nuxeo-web-ui nuxeo-jsf-ui
 ```
 {{/panel}}
@@ -58,7 +61,6 @@ $ ./bin/nuxeoctl mp-install nuxeo-dam nuxeo-web-ui nuxeo-jsf-ui
 {{#> panel heading='**WINDOWS**'}}
 
 ```bash
-> .\bin\nuxeoctl.bat mp-hotfix --accept=true
 > .\bin\nuxeoctl.bat nuxeo-dam nuxeo-web-ui nuxeo-jsf-ui
 ```
 {{/panel}}
@@ -114,8 +116,6 @@ CREATE SAMPLE USERS
 
 3.  Create a Group, **managers** and add Jane Smith to the group, then create a group **accounting** and add Jon Doe.
 
-4.  On the permissions tab, give both groups the Read & Write permission.
-
 ### Custom Documents
 
 CREATE SAMPLE DOCUMENTS
@@ -159,7 +159,6 @@ Nuxeo Studio allows you to create your own document types and customize the meta
         <td>**Email**</td>
         <td>bjones@company.com</td>
       </tr>
-      <tr>
         <td>**Upload**</td>
         <td>Upload a logo of your choice!</td>
       </tr>
@@ -167,13 +166,15 @@ Nuxeo Studio allows you to create your own document types and customize the meta
   </table>
 </div>
 
-4.  From within your created portfolio, click ![]({{file version='' space='nxdoc' page='web-ui' name='create_button.png'}} ?w=25) again. You'll notice that the only document we can create in a BC Portfolio is **BC Contract**.
+4.  On the Permissions tab, give both groups the Read & Write permission on this document.
+
+5.  From within your created portfolio, click ![]({{file version='' space='nxdoc' page='web-ui' name='create_button.png'}} ?w=25) again. You'll notice that the only document we can create in a BC Portfolio is **BC Contract**.
 
 {{#> callout type='tip' }}
 To modify this constraint, under the **Customization** menu in Studio, select **Content Model** > **Document Types** > **BC Portfolio**. You can then add other document types to the **Accepted Children Types** on the **Definition** tab.
 {{/callout}}
 
-5.  Create a contract with the following metadata:
+6.  Create a contract with the following metadata:
 
 <div class="table-scroll">
   <table class="hover">
@@ -229,7 +230,7 @@ First we'll add a metadatum to our schema to represent the amount to be refunded
 2.  Add a new field to the schema: `refundAmount: Floating point`.
 
 {{#> callout type='tip' }}
-This field is directly related to the **BC Contract** document type, but if you want to create more general properties you can add them to a separate schema (**Customization** > **Content Model** > **Schemas**), or create your own.
+This field is directly related to the **BC Contract** document type, but if you want to create more general properties to be shared with other document types you can add them to a separate schema (**Customization** > **Content Model** > **Schemas**), or create your own.
 {{/callout}}
 
 3.  Save your changes and click on the **Open View Designer** button.
@@ -237,7 +238,7 @@ This field is directly related to the **BC Contract** document type, but if you 
 4.  Drag and drop the new property from **Catalog** in the right menu to the **nuxeo-bccontract-view-layout** and save.
 
 {{#> callout type='tip' }}
-Using the code editor ![]({{file version='' space='nxdoc' page='nuxeo-studio-tutorial' name='code_editor.png'}} ?w=25), you can drag and drop the property into a Polymer `dom-if` template. The one we've created will only appear in the document view layout if the contract has been cancelled.
+Using the code editor ![]({{file version='' space='nxdoc' page='customizing-with-studio-and-view-designer' name='code_editor.png'}} ?w=25), you can drag and drop the property into a Polymer `dom-if` template. The one we've created will only appear in the document view layout if the contract has been cancelled.
 {{/callout}}
 
 ## Automation Chains
@@ -288,7 +289,7 @@ CONFIGURE A WORKFLOW
 
 12. Finally, reorganize the nodes and transitions to implement our new logic, and save. You should have something like this:
 
-![workflow]({{file space='nxdoc' page='nuxeo-studio-tutorial' name='workflow-final.png'}} ?w=350)
+![workflow]({{file space='nxdoc' page='customizing-with-studio-and-view-designer' name='workflow-final.png'}} ?w=350)
 
 ### Task Layouts
 
