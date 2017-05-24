@@ -229,8 +229,6 @@ This page provides several configuration use cases for Elasticsearch.
 
 {{! /excerpt}}
 
-&nbsp;
-
 ## Elasticsearch Supported Versions
 
 The Nuxeo Platform communicates with Elasticsearch using the [transport client JAVA API](http://www.elasticsearch.org/guide/en/elasticsearch/client/java-api/current/client.html#transport-client), as stated in the Elasticsearch documentation: "You are encouraged to use the same version on client and cluster sides. You may hit some incompatibility issues when mixing major versions". `
@@ -241,11 +239,11 @@ We recommend to use the same JVM version for Elasticsearch and Nuxeo.
 
 ## Setting up an Elasticsearch Cluster
 
-The default configuration uses an embedded Elasticsearch instance that runs&nbsp;in the same JVM as the Nuxeo Platform's.
+The default configuration uses an embedded Elasticsearch instance that runs in the same JVM as the Nuxeo Platform's.
 
 {{#> callout type='warning' }}
 
-This embedded mode&nbsp;**is only for testing purpose**&nbsp;and should not be used in production.
+This embedded mode **is only for testing purpose** and should not be used in production.
 
 {{/callout}}
 
@@ -289,7 +287,7 @@ threadpool.bulk.queue_size: 1000
 
 ### Configuring Nuxeo to Access the Cluster
 
-To make the connexion between the Nuxeo Platform instance and the ES cluster edit the&nbsp; [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}}) an set the following options:
+To make the connexion between the Nuxeo Platform instance and the ES cluster edit the [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}}) an set the following options:
 
 ```
 elasticsearch.addressList=somenode:9300,anothernode:9300
@@ -300,12 +298,12 @@ elasticsearch.indexNumberOfReplicas=0
 
 Where:
 
-*   `addressList`&nbsp;points to one or many Elasticsearch nodes. Note that we connect to the API port&nbsp;**9300**&nbsp;and not the HTTP port 9200.
-*   `clusterName`&nbsp;is the cluster name to join,&nbsp;`elasticsearch`&nbsp;being the default cluster name.
-*   `indexName`&nbsp;is the name of the Elasticsearch index.
+*   `addressList` points to one or many Elasticsearch nodes. Note that we connect to the API port **9300** and not the HTTP port 9200.
+*   `clusterName` is the cluster name to join, `elasticsearch` being the default cluster name.
+*   `indexName` is the name of the Elasticsearch index.
 *   `indexNumberOfReplicas` is the number of [replicas](http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/replica-shards.html). By default you have 5 shards and 1 replicas. If you have a single node in your cluster you should set the `indexNumberOfReplicas`to `0`, visit the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/guide/current/scale.html) for more information on shards and replicas.
 
-You can find all the available options in the&nbsp;[nuxeo.defaults](https://github.com/nuxeo/nuxeo-distribution/blob/release-6.0/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/nuxeo.defaults).
+You can find all the available options in the [nuxeo.defaults](https://github.com/nuxeo/nuxeo-distribution/blob/release-6.0/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/nuxeo.defaults).
 
 ## Disabling Elasticsearch
 
@@ -319,7 +317,7 @@ elasticsearch.enabled=false
 
 If you need to re-index the whole repository, you can do this from the **Admin** > **Elasticsearch** > **Administration** tab.
 
-## {{> anchor 'changingelasticsearchmapping'}}Changing the Mapping of the Index
+## Changing the Mapping of the Index
 
 Nuxeo comes with a default mapping that sets the locale for full-text and declares some fields as being date or numeric.
 
@@ -333,7 +331,7 @@ The default mapping is located in the `${NUXEO_HOME}/templates/common-base/nxser
 
 **To override and tune the default mapping:**
 
-1.  [Create a custom template]({{page space='nxdoc' page='configuration-templates'}}) like `myapp` with a `nuxeo.defaults` file that contains:&nbsp;&nbsp;
+1.  [Create a custom template]({{page space='nxdoc' page='configuration-templates'}}) like `myapp` with a `nuxeo.defaults` file that contains:  
 
     ```
     myapp.target=.
@@ -384,7 +382,7 @@ You may want to change the mapping but keep the existing indexed data. You can d
 
 You can even change a mapping without restarting Nuxeo if you use an [alias](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/indices-aliases.html) as the index name.
 
-For instance the Nuxeo Platform will only know the&nbsp;`nuxeo`&nbsp;alias and once your mapping is ready on&nbsp;`nuxeo_v2`&nbsp;you can atomically switch:
+For instance the Nuxeo Platform will only know the `nuxeo` alias and once your mapping is ready on `nuxeo_v2` you can atomically switch:
 
 ```
 curl -XPOST 'localhost:9200/_aliases' -d '{ "actions" : [
@@ -428,7 +426,7 @@ Open at the `lib/log4j.xml` file and uncomment the ELASTIC section:
       </category>
 ```
 
-&nbsp;The `elastic.log` file will contain all the requests done by the Nuxeo Platform to Elasticsearch including the `curl` command ready to be copy/past/debug in a term.
+The `elastic.log` file will contain all the requests done by the Nuxeo Platform to Elasticsearch including the `curl` command ready to be copy/past/debug in a term.
 
 ### Reporting Settings and Mapping
 

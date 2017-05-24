@@ -74,8 +74,6 @@ Here are listed some procedures to extract information of a running Nuxeo instan
 
 {{! /excerpt}}
 
-&nbsp;
-
 ### Nuxeo Configuration and Status
 
 To dump your server configuration and status run
@@ -87,7 +85,7 @@ To dump your server configuration and status run
 
 ### JMX Monitoring
 
-When JMX is enabled (uncomment JMX related lines in [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}})), the Nuxeo Platform exposes [lots of metrics](http://lots%20of%20metrics) accessible in the `"metrics"` domains.
+When JMX is enabled (uncomment JMX related lines in [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}})), the Nuxeo Platform exposes [lots of metrics]({{file name='metrics.odt'}}) accessible in the `"metrics"` domains.
 
 You can use GUI tools like Java Mission Control or VisualVM to introspect these metrics, but if you want to dump all of them to report a problem you can use [jmxterm](http://wiki.cyclopsgroup.org/jmxterm/) (using the same JVM and user as your Nuxeo):
 
@@ -168,35 +166,17 @@ When the JVM is stuck, in addition to thread dump and before restarting, a core 
 
 If you have `gdb` installed, you can generate a core dump without killing the application:
 
-<div>
-
-<div class="syntaxhighlighter nogutter  java">
-
-&nbsp;
-
-<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">
-
-<div class="container" title="Hint: double-click to select code">
-
-<div class="line number1 index0 alt2">`sudo gdb --pid=<PID> --batch -ex generate-core-file -ex detach`</div>
-
-</div>
-
-</td></tr></tbody></table></div>
-
-&nbsp;
-
-</div>
-
-</div>
+```
+sudo gdb --pid=<PID> --batch -ex generate-core-file -ex detach
+```
 
 ### PostgreSQL
 
-Follow the [Nuxeo recommendation ]({{page page='configuring-postgresql#monitoring'}})and perform the [reporting problem procedure]({{page page='configuring-postgresql#reporting-problems'}}). [Pgbadger](https://github.com/dalibo/pgbadger) and [explain](http://explain.depesz.com/) are your friends.
+Follow the [Nuxeo recommendation ]({{page page='configuring-postgresql'}}#monitoring)and perform the [reporting problem procedure]({{page page='configuring-postgresql'}}#reporting-problems). [Pgbadger](https://github.com/dalibo/pgbadger) and [explain](http://explain.depesz.com/) are your friends.
 
 ### Network
 
-Measure the round trip between [Nuxeo and the database]({{page space='nxdoc60' page='tracking-the-performances-of-the-nuxeo-platform#network'}}):
+Measure the round trip between [Nuxeo and the database]({{page version='60' space='nxdoc' page='tracking-the-performances-of-the-nuxeo-platform'}}#network):
 
 ```
 ping -s 8192 <database IP>
@@ -254,9 +234,9 @@ If you think you've found a security issue, please report it privately to [secur
 
 {{#> panel heading='Related Documentation'}}
 
-*   [Monitoring and Maintenance]({{page page='monitoring-and-maintenance'}})
-*   [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
-*   [Transactions and Connections]({{page page='transactions-and-connections'}})
+- [Monitoring and Maintenance]({{page page='monitoring-and-maintenance'}})
+- [Metrics and Monitoring]({{page page='metrics-and-monitoring'}})
+- [Transactions and Connections]({{page page='transactions-and-connections'}})
 
 {{/panel}}</div><div class="column medium-6">
 

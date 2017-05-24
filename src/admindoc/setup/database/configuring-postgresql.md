@@ -670,7 +670,7 @@ checkpoint_completion_target=0.8
 
 ### Index vs Table Scan
 
-The `random_page_cost` parameter influences this query planner's choice. The value to use depends on your disk IO, here are some advices :
+The `random_page_cost` parameter influences this query planner's choice. The value to use depends on your disk IO, here are some advices:
 
 ```
 # random_page_cost = 4 # Slow disk AWS EBS
@@ -695,7 +695,7 @@ The autovacuum is enabled by default since PostgreSQL 8.3.
 
 Exceptionally, a full vacuum can be done at downtime to recover disk space, it should be followed with a `reindexdb` command.
 
-### {{> anchor 'monitoring'}}Monitoring
+### Monitoring
 
 We recommend the following setting to have a meaningful log in production
 
@@ -711,7 +711,7 @@ track_functions=pl
 
 ```
 
-Also to have an effective monitoring you should install the following extensions : pg_stat_statements, pg_buffercache
+Also to have an effective monitoring you should install the following extensions: pg_stat_statements, pg_buffercache
 
 1.  Install postgresql-contrib package.
 
@@ -844,7 +844,7 @@ PostgreSQL is very good, very fast, and is our reference database. To be complet
 
 *   Its full-text engine doesn't know how to do full-text phrase search, which means we have to use a slower and not completely equivalent workaround when phrase search is required ([NXP-6720](https://jira.nuxeo.com/browse/NXP-6720)).
 
-## {{> anchor 'reporting-problems'}}Reporting Problems
+## Reporting Problems
 
 If you have a database configuration problem and you want to fill a JIRA ticket, there are some information to report:
 
@@ -874,14 +874,10 @@ If you have a database configuration problem and you want to fill a JIRA ticket,
 *   Attach the output file located in `/tmp/pgconf.txt` into the JIRA ticket. An example of such a result file is [here]({{file name='pgconf.txt'}}), so that you can check that yours has the correct format.
 *   If you are monitoring the slowest queries (See monitoring section) you can zip and attach the `postgresql` log file to the JIRA ticket.
 
-&nbsp;
 
 * * *
 
-&nbsp;
 
 {{#> panel heading='Related content in this documentation'}}
-
-*   [Connecting Nuxeo to the Database]({{page page='connecting-nuxeo-to-the-database'}})
-
+- [Connecting Nuxeo to the Database]({{page page='connecting-nuxeo-to-the-database'}})
 {{/panel}}

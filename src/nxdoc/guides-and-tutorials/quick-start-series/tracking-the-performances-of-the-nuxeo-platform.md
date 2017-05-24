@@ -217,8 +217,6 @@ history:
 ---
 Managing sizing and performance of any ECM application is a tricky job, because each application is different and many factors must be taken into account.
 
-&nbsp;
-
 {{! excerpt}}
 
 The Nuxeo Platform is designed to optimize performance. As a consequence, continuous performance testing is part of the Nuxeo quality assurance process. Results are based on metrics that focus on user experience, such as application response time. The outcome of this continuous, measured improvement is that the Nuxeo Platform gives rapid response times even under heavy loads, with thousands of concurrent users accessing a repository that stores millions of documents.
@@ -331,7 +329,7 @@ PostgreSQL has more Nuxeo optimizations than other databases. It is the preferre
 
 Tuning is not optional, as Nuxeo does not provide default database configurations for production.
 
-#### {{> anchor 'network'}}Network
+#### Network
 
 The network between the application and the database has an impact on performance.
 
@@ -607,7 +605,7 @@ This benchmark was initially run in 2010 against a Nuxeo 5.3.1.
 #### Steps
 
 1.  Tune the database following tips in the Nuxeo PostgreSQL&nbsp;[FAQ](http://www.nuxeo.org/xwiki/bin/view/FAQ/PostgreSQLSettings).
-2.  Tune Nuxeo DM: for mass import, we disable the fulltext indexing (as described in the ["Mass import specific tuning" section of PostgreSQL configuration page]({{page space='admindoc60' page='configuring-postgresql#mass-import-specific-tuning'}})) and disable the ACL optimization ([NXP-4524](https://jira.nuxeo.org/browse/NXP-4524)).
+2.  Tune Nuxeo DM: for mass import, we disable the fulltext indexing (as described in the ["Mass import specific tuning" section of PostgreSQL configuration page]({{page space='admindoc60' page='configuring-postgresql'}}#mass-import-specific-tuning)) and disable the ACL optimization ([NXP-4524](https://jira.nuxeo.org/browse/NXP-4524)).
 3.  Import content: mass import is done using a multi-threaded importer to create File document with an attached text file randomly generated using a French dictionary. Only a percentage of the text file will be indexed for the full text, this ratio simulate the proportion of text in a binary format.
     [Sources of the nuxeo-platform-importer](https://github.com/nuxeo/nuxeo-platform-importer/blob/release-6.0/README.md)
 4.  Rebuild full-text as described in the ["Mass import specific tuning" FAQ](http://www.nuxeo.org/xwiki/bin/view/FAQ/PostgreSQLSettings).
