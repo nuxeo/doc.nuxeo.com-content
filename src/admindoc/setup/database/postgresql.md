@@ -596,7 +596,7 @@ Most settings have to be changed in the `postgresql.conf` file. Some SQL command
 
 You shouldn't need to change this, because two-phase commit isn't used in basic configurations.
 
-However, if you&nbsp;use XA datasources (see the&nbsp;[JDBC Datasource Configuration]({{page page='jdbc-datasource-configuration'}}) documentation for more on this), you will need to update&nbsp;the default&nbsp;`max_prepared_transactions` settings. You can use the same value as `max_connections`.
+However, if you use XA datasources (see the [JDBC Datasource Configuration]({{page page='jdbc-datasource-configuration'}}) documentation for more on this), you will need to update the default `max_prepared_transactions` settings. You can use the same value as `max_connections`.
 
 ```
 max_prepared_transactions = 100
@@ -640,8 +640,6 @@ com.hp.hpl.jena.db.RDFRDBException: Internal SQL error in driver - org.postgresq
 
 For further details, please see [this url](http://petereisentraut.blogspot.com/2008/03/readding-implicit-casts-in-postgresql.html). You might also be interested in [this migration helper](http://okbob.blogspot.com/2009/02/83-migration-helper.html).
 
-<pre>&nbsp;</pre>
-
 ### Create the Role and Database for Nuxeo
 
 For instance (please change the password and the `nuxeo.conf` file of your instance accordingly):
@@ -666,9 +664,9 @@ Note that using the `UTF8` encoding for your database is important.
 
 {{/callout}}
 
-### Edit the PostgreSQL configuration file to change how the&nbsp;`nuxeo`&nbsp;user authenticates to the database
+### Edit the PostgreSQL configuration file to change how the `nuxeo` user authenticates to the database
 
-Edit the file `pg_hba.conf`, make sure that the&nbsp;`nuxeo` user (or&nbsp;`all` users, if the&nbsp;`nuxeo` user is not individually listed), have an authentication `METHOD` of&nbsp;`md5`, rather than `ident`. Otherwise you will have some `FATAL: Ident authentication failed for user "nuxeo"`&nbsp;errors in the logs.
+Edit the file `pg_hba.conf`, make sure that the&nbsp;`nuxeo` user (or `all` users, if the `nuxeo` user is not individually listed), have an authentication `METHOD` of `md5`, rather than `ident`. Otherwise you will have some `FATAL: Ident authentication failed for user "nuxeo"` errors in the logs.
 
 ```
 # TYPE  DATABASE    USER        CIDR-ADDRESS          METHOD
@@ -679,8 +677,6 @@ local   all         all                               md5
 host    all         all         127.0.0.1/32          md5
 ```
 
-&nbsp;
-
 ## Performance Tuning
 
 ### Shared Buffers and System Cache
@@ -689,14 +685,14 @@ One of the most important thing for PostgreSQL is to have lots of shared buffers
 
 Refer to the section "Adapt your configuration to your hardware" to get the correct value.
 
-If you plan to use 1&nbsp;GB of shared buffers, update the following property in your `postgresql.conf` file:
+If you plan to use 1 GB of shared buffers, update the following property in your `postgresql.conf` file:
 
 ```
 shared_buffers = 1GB
 
 ```
 
-If you use PostgreSQL < 9.3 the shared memory must be available on the system side using `sysctl`, you need to enable a little bit more at the OS level, for instance try 1&nbsp;GB + 128&nbsp;MB:
+If you use PostgreSQL < 9.3 the shared memory must be available on the system side using `sysctl`, you need to enable a little bit more at the OS level, for instance try 1 GB + 128 MB:
 
 ```
 sysctl kernel.shmmax=1207959552
@@ -707,14 +703,14 @@ Then restart the PostgreSQL.
 
 If there is no enough shared memory you will have an explicit error message and you should try with a bigger `kernel.shmmax` value.
 
-Once PostgreSQL starts properly with the chosen&nbsp;`kernel.shmmax`&nbsp;value, it should be registered in the `/etc/sysctl.conf` file by adding the following line.
+Once PostgreSQL starts properly with the chosen `kernel.shmmax` value, it should be registered in the `/etc/sysctl.conf` file by adding the following line.
 
 ```
 kernel.shmmax = <SHMMAX_VALUE>
 
 ```
 
-Using `effective_cache_size`&nbsp;PostgreSQL is informed of how much memory the system will use for disk caching. This is used as a hint when executing queries, note that this memory _is not allocated_ by PostgreSQL itself.
+Using `effective_cache_size` PostgreSQL is informed of how much memory the system will use for disk caching. This is used as a hint when executing queries, note that this memory _is not allocated_ by PostgreSQL itself.
 
 To set `effective_cache_size` value, you need to run your application once and check how much memory is used by system cache. This can be done using the free command and using the `free` value for `-/+ buffers/cache`. Then you can set this value in the configuration:
 
@@ -776,7 +772,7 @@ The autovacuum is enabled by default since PostgreSQL 8.3.
 
 Exceptionally, a full vacuum can be done at downtime to recover disk space, it should be followed with a `reindexdb` command.
 
-### {{> anchor 'monitoring'}}Monitoring
+### Monitoring
 
 We recommend the following setting to have a meaningful log in production
 
@@ -830,7 +826,7 @@ See the PostgreSQL section of the [Monitoring and Maintenance]({{page page='moni
 
 Here are some values that can be used as a starting point for a dedicated server depending on the amount of memory.
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Amount of RAM</th><th colspan="1">4&nbsp;GB</th><th colspan="1">8&nbsp;GB</th><th colspan="1">16&nbsp;GB</th><th colspan="1">32&nbsp;GB</th></tr><tr><td colspan="1">shared_buffers</td><td colspan="1">1GB</td><td colspan="1">2GB</td><td colspan="1">4GB</td><td colspan="1">8GB</td></tr><tr><td colspan="1">effective_cache_size</td><td colspan="1">1536MB</td><td colspan="1">4GB</td><td colspan="1">8GB</td><td colspan="1">16GB</td></tr><tr><td colspan="1">work_mem</td><td colspan="1">12MB</td><td colspan="1">12MB</td><td colspan="1">16MB</td><td colspan="1">20MB</td></tr><tr><td colspan="1">maintenance_work_mem</td><td colspan="1">512MB</td><td colspan="1">1GB</td><td colspan="1">1GB</td><td colspan="1">1GB</td></tr><tr><td colspan="1">max_connections</td><td colspan="1">63</td><td colspan="1">103</td><td colspan="1">153</td><td colspan="1">203</td></tr></tbody></table></div>
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Amount of RAM</th><th colspan="1">4 GB</th><th colspan="1">8 GB</th><th colspan="1">16 GB</th><th colspan="1">32 GB</th></tr><tr><td colspan="1">shared_buffers</td><td colspan="1">1GB</td><td colspan="1">2GB</td><td colspan="1">4GB</td><td colspan="1">8GB</td></tr><tr><td colspan="1">effective_cache_size</td><td colspan="1">1536MB</td><td colspan="1">4GB</td><td colspan="1">8GB</td><td colspan="1">16GB</td></tr><tr><td colspan="1">work_mem</td><td colspan="1">12MB</td><td colspan="1">12MB</td><td colspan="1">16MB</td><td colspan="1">20MB</td></tr><tr><td colspan="1">maintenance_work_mem</td><td colspan="1">512MB</td><td colspan="1">1GB</td><td colspan="1">1GB</td><td colspan="1">1GB</td></tr><tr><td colspan="1">max_connections</td><td colspan="1">63</td><td colspan="1">103</td><td colspan="1">153</td><td colspan="1">203</td></tr></tbody></table></div>
 
 ## Specific Configuration
 
@@ -852,7 +848,7 @@ ALTER TEXT SEARCH CONFIGURATION fr ALTER MAPPING FOR asciihword, asciiword, hwor
 
 Then replace in your `default-repository-config.xml` file the `french` analyzer by the one you just defined (`fr` in this example).
 
-### {{> anchor 'mass-import-tuning'}}Mass Import Specific Tuning
+### Mass Import Specific Tuning
 
 When doing mass import you can disable the full-text trigger and full-text index. They must be dropped after a successful login on a running Nuxeo DM because DDL SQL commands are executed on the first access.
 
@@ -925,7 +921,7 @@ PostgreSQL is very good, very fast, and is our reference database. To be complet
 
 *   Its full-text engine doesn't know how to do full-text phrase search, which means we have to use a slower and not completely equivalent workaround when phrase search is required ([NXP-6720](https://jira.nuxeo.com/browse/NXP-6720)).
 
-## {{> anchor 'reporting-problems'}}Reporting Problems
+## Reporting Problems
 
 If you have a database configuration problem and you want to fill a JIRA ticket, there are some information to report:
 
@@ -961,11 +957,10 @@ If you have a database configuration problem and you want to fill a JIRA ticket,
 *   Attach the output file located in `/tmp/pgconf.txt` into the JIRA ticket. An example of such a result file is [here]({{file name='pgconf.txt'}}), so that you can check that yours has the correct format.
 *   If you are monitoring the slowest queries (See monitoring section) you can zip and attach the `postgresql` log file to the JIRA ticket.
 
-&nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related content in this documentation'}}
 
-*   [Connecting Nuxeo to the Database]({{page page='connecting-nuxeo-to-the-database'}})
+- [Connecting Nuxeo to the Database]({{page page='connecting-nuxeo-to-the-database'}})
 
 {{/panel}}</div><div class="column medium-6">
 

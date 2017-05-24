@@ -99,36 +99,33 @@ history:
         version: '1'
 
 ---
-<div class="outline-text-2">
 
-*   Check that common properties are set as prefetched (see [org.nuxeo.ecm.core.schema.TypeService--configuration](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration)&nbsp;and&nbsp;[org.nuxeo.ecm.core.schema.TypeService--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype)).
-*   If you don't want to match proxies in your query, add a `AND ecm:isProxy = 0` clause.
-*   If you don't use proxies at all, deactivate them at the repository level by adding inside the `<repository>` tag the following:
+-  Check that common properties are set as prefetched (see [org.nuxeo.ecm.core.schema.TypeService--configuration](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration) and [org.nuxeo.ecm.core.schema.TypeService--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype)).
+-  If you don't want to match proxies in your query, add a `AND ecm:isProxy = 0` clause.
+-  If you don't use proxies at all, deactivate them at the repository level by adding inside the `<repository>` tag the following:
 
     ```
     <proxies enabled="false"/>
     ```
 
-*   If you are doing NXQL query that involve custom schema you may need to add custom index to make the request efficient. You can trace the slow NXQL queries using [NXP-14845](https://jira.nuxeo.com/browse/NXP-14845).
-*   Use groups to manage ACL. Adding a user to a group is free, but adding a user in an ACL at the root level has a cost because optimized read ACLs need to be recomputed.
-*   When using Nuxeo in cluster mode, consider using [Redis VCS row cache invalidation]({{page space='NXDOC' page='Nuxeo and+Redis#NuxeoandRedis-VCSRowCacheInvalidation'}}).
-*   Consider disabling the OS swapping (`sudo swapoff -a`) or try to lower the swapiness (`<span class="pln">vm</span>`<span class="pun">.</span><span class="pln">swappiness</span> <span class="pun">=</span><span class="lit">1</span><span class="pln">)</span>
-*   Check the network latency between the application and the database.
-*   [Configure ImageMagick]({{page space='admindoc710' page='installing-and-setting-up-related-software'}}) to use a single thread.
-*   [Monitor](/x/gBDF) everything, JVM, GC, VCS cache hit ratio, database, system.
+-  If you are doing NXQL query that involve custom schema you may need to add custom index to make the request efficient. You can trace the slow NXQL queries using [NXP-14845](https://jira.nuxeo.com/browse/NXP-14845).
+-  Use groups to manage ACL. Adding a user to a group is free, but adding a user in an ACL at the root level has a cost because optimized read ACLs need to be recomputed.
+-  When using Nuxeo in cluster mode, consider using [Redis VCS row cache invalidation]({{page space='NXDOC' page='Nuxeo and+Redis#NuxeoandRedis-VCSRowCacheInvalidation'}}).
+-  Consider disabling the OS swapping (`sudo swapoff -a`) or try to lower the swapiness (`vm.swappiness=1`).
+-  Check the network latency between the application and the database.
+-  [Configure ImageMagick]({{page space='admindoc710' page='installing-and-setting-up-related-software'}}) to use a single thread.
+-  [Monitor](/x/gBDF) everything, JVM, GC, VCS cache hit ratio, database, system.
 
 &nbsp;
 
 * * *
 
-</div>
-
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Managing Performance]({{page page='managing-performance'}})
-*   [Metrics and Monitoring]({{page space='admindoc710' page='metrics-and-monitoring'}})
-*   [Tracking the Performance of the Nuxeo Platform]({{page page='tracking-the-performance-of-the-nuxeo-platform'}})
-*   [Monitoring Slow NXQL Queries]({{page space='admindoc710' page='monitoring-slow-nxql-queries'}})
+- [Managing Performance]({{page page='managing-performance'}})
+- [Metrics and Monitoring]({{page space='admindoc710' page='metrics-and-monitoring'}})
+- [Tracking the Performance of the Nuxeo Platform]({{page page='tracking-the-performance-of-the-nuxeo-platform'}})
+- [Monitoring Slow NXQL Queries]({{page space='admindoc710' page='monitoring-slow-nxql-queries'}})
 
 {{/panel}}</div><div class="column medium-6">
 

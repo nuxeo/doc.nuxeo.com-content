@@ -159,7 +159,7 @@ The following metrics should be considered when qualifying a performance issue.
 
 You can find more information about monitoring Nuxeo in the [Nuxeo Metrics page]({{page space='admindoc710' page='metrics-and-monitoring'}}).
 
-For simple and automatic GC (garbage collection in the JVM) monitoring, see the [Monitoring Page]({{page space='ADMINDOC' page='Monitoring and+Maintenance?src=search#MonitoringandMaintenance-JVMGarbageCollector'}}).
+For simple and automatic GC (garbage collection in the JVM) monitoring, see the [Monitoring Page]({{page version='710' space='admindoc' page='reporting-problems'}}#jvm-garbage-collector).
 
 ### Architecture
 
