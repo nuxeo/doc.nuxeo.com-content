@@ -252,8 +252,6 @@ history:
 ---
 Managing sizing and performance of any ECM application is a tricky job, because each application is different and many factors must be taken into account.
 
-&nbsp;
-
 {{! excerpt}}
 
 The Nuxeo Platform is designed to optimize performance. As a consequence, continuous performance testing is part of the Nuxeo quality assurance process. Results are based on metrics that focus on user experience, such as application response time. The outcome of this continuous, measured improvement is that the Nuxeo Platform gives rapid response times even under heavy loads, with thousands of concurrent users accessing a repository that stores millions of documents.
@@ -300,7 +298,7 @@ However, if you define documents with a lot of meta-data (some people have sever
 *   The database : because queries will be more complex
 *   The display layer : because correctly configuring prefetch will be very important
 
-For configuring the prefetch settings, please see the&nbsp;[configuration extension point of the TypeService](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration).
+For configuring the prefetch settings, please see the [configuration extension point of the TypeService](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration).
 
 The default configuration is adequate for the default Nuxeo ContentViews, but you may need to adjust that for your use cases.
 
@@ -314,7 +312,7 @@ As expected, the number of documents in the repository has an impact on performa
 
 This is a natural impact and you cannot exclude this factor when doing capacity planning.
 
-The good news is that Nuxeo's document repository has been tested successfully with several million&nbsp;documents with a single server.
+The good news is that Nuxeo's document repository has been tested successfully with several million documents with a single server.
 
 #### Concurrent Requests
 
@@ -366,7 +364,7 @@ PostgreSQL has more Nuxeo optimizations than other databases. It is the preferre
 
 Tuning is not optional, as Nuxeo does not provide default database configurations for production.
 
-#### {{> anchor 'network'}}Network
+#### Network
 
 The network between the application and the database has an impact on performance.
 
@@ -631,7 +629,7 @@ Restarting the repository and accessing to the proxy will make the class monitor
 
 ## Some Example Benchmark Results
 
-### 10 Million&nbsp;Documents Injection
+### 10 Million Documents Injection
 
 #### Goals
 
@@ -642,10 +640,10 @@ This benchmark was initially run in 2010 against a Nuxeo 5.3.1.
 #### Steps
 
 1.  Tune the database following tips in the Nuxeo PostgreSQL&nbsp;[FAQ](https://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server).
-2.  Tune Nuxeo: for mass import, we disable the full-text indexing (as described in the ["Mass import specific tuning" section of PostgreSQL configuration page]({{page page='postgresql#-anchor-mass-import-tuning-mass-import-specific-tuning'}})) and disable the ACL optimization ([NXP-4524](https://jira.nuxeo.com/browse/NXP-4524)).
+2.  Tune Nuxeo: for mass import, we disable the full-text indexing (as described in the ["Mass import specific tuning" section of PostgreSQL configuration page]({{page page='postgresql'}}#mass-import-specific-tuning)) and disable the ACL optimization ([NXP-4524](https://jira.nuxeo.com/browse/NXP-4524)).
 3.  Import content: mass import is done using a multi-threaded importer to create File document with an attached text file randomly generated using a French dictionary. Only a percentage of the text file will be indexed for the full text, this ratio simulate the proportion of text in a binary format.
     [Sources of the nuxeo-platform-importer](https://github.com/nuxeo/nuxeo-platform-importer/blob/8.10/README.md)
-4.  Rebuild full text as described in the ["Mass import specific tuning" FAQ](https://doc.nuxeo.com/nxdoc/postgresql/#-anchor-mass-import-tuning-mass-import-specific-tuning).
+4.  Rebuild full text as described in the ["Mass import specific tuning" FAQ]({{page page='postgresql'}}#mass-import-specific-tuning).
 5.  Generate random ACLs on documents. This can be done with a simple scripts that generate SQL inserts into the ACL table.
 6.  Enable the read ACLs optimization, performing the SQL command:
 

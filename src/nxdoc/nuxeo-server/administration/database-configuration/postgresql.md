@@ -567,7 +567,6 @@ Nuxeo supports the following PostgreSQL version:
 
 {{{multiexcerpt 'PostgreSQL-supported' page='Compatibility Matrix'}}}
 
-
 The database needs to be configured to work properly with Nuxeo. Some settings **must** be changed in order for Nuxeo to work. Other settings _should_ be changed in order for Nuxeo to have good performance.
 
 This FAQ will give you some hints to configure your database, but please refer to your DBA or the PostgreSQL documentation for more information ([http://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server](http://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server)).
@@ -711,7 +710,7 @@ The autovacuum is enabled by default in PostgreSQL.
 
 Exceptionally, a full vacuum can be done at downtime to recover disk space, it should be followed with a `reindexdb` command.
 
-### {{> anchor 'monitoring'}}Monitoring
+### Monitoring
 
 We recommend the following setting to have a meaningful log in production
 
@@ -786,7 +785,7 @@ ALTER TEXT SEARCH CONFIGURATION fr ALTER MAPPING FOR asciihword, asciiword, hwor
 
 Then replace in your `default-repository-config.xml` file the `french` analyzer by the one you just defined (`fr` in this example).
 
-### {{> anchor 'mass-import-tuning'}}Mass Import Specific Tuning
+### Mass Import Specific Tuning
 
 When doing mass import you can disable the full-text trigger and full-text index. They must be dropped after a successful login on a running Nuxeo DM because DDL SQL commands are executed on the first access.
 
@@ -856,7 +855,7 @@ PostgreSQL is very good, very fast, and is our reference database. To be complet
 
 *   Its full-text engine doesn't know how to do full-text phrase search, which means we have to use a slower and not completely equivalent workaround when phrase search is required ([NXP-6720](https://jira.nuxeo.com/browse/NXP-6720)).
 
-## {{> anchor 'reporting-problems'}}Reporting Problems
+## Reporting Problems
 
 If you have a database configuration problem and you want to fill a JIRA ticket, there are some information to report:
 

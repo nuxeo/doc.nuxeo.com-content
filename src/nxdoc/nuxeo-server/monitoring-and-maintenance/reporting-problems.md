@@ -161,7 +161,6 @@ Here are listed some procedures to extract information of a running Nuxeo instan
 
 {{! /excerpt}}
 
-&nbsp;
 
 ## Nuxeo Configuration and Status
 
@@ -261,7 +260,7 @@ sudo gdb --pid=<PID> --batch -ex generate-core-file -ex detach
 
 ## PostgreSQL
 
-Follow the [Nuxeo recommendation ]({{page page='postgresql#monitoring'}})and perform the [reporting problem procedure]({{page page='postgresql#reporting-problems'}}). [Pgbadger](https://github.com/dalibo/pgbadger) and [explain](http://explain.depesz.com/) are your friends.
+Follow the [Nuxeo recommendation ]({{page page='postgresql'}}#monitoring)and perform the [reporting problem procedure]({{page page='postgresql'}}#reporting-problems). [Pgbadger](https://github.com/dalibo/pgbadger) and [explain](http://explain.depesz.com/) are your friends.
 
 ## Elasticsearch
 
@@ -279,7 +278,7 @@ curl "localhost:9200/_cat/nodes?v"
 curl "localhost:9200/_cat/indices?v"
 ```
 
-In addition If the problem is related to unexpected search results or errors, follow this procedure: [Reporting Settings and Mapping]({{page page='elasticsearch-setup#-anchor-reportingproblem-reporting-settings-and-mapping'}})
+In addition If the problem is related to unexpected search results or errors, follow this procedure: [Reporting Settings and Mapping]({{page page='elasticsearch-setup'}}#reporting-settings-and-mapping)
 
 ## Network
 

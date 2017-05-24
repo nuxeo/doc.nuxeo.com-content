@@ -168,7 +168,7 @@ The following metrics should be considered when qualifying a performance issue.
 
 You can find more information about monitoring Nuxeo in the [Nuxeo Metrics page]({{page page='metrics-and-monitoring'}}).
 
-For simple and automatic GC (garbage collection in the JVM) monitoring, see the [Monitoring Page]({{page space='ADMINDOC' page='Monitoring and+Maintenance?src=search#MonitoringandMaintenance-JVMGarbageCollector'}}).
+For simple and automatic GC (garbage collection in the JVM) monitoring, see the [Monitoring Page]({{page version='810' space='nxdoc' page='reporting-problems'}}#jvm-garbage-collector).
 
 ### Architecture
 
@@ -230,8 +230,7 @@ You may very well have at some point more requests than available threads: that'
 
 When the database connection pool size is too high, you can end up in a situation where the database cannot provide anymore connections or transactions. In this case you will start having JDBC errors coming from the pools saying that transaction or connection was refused by the server.
 
-**Pool Starvation
-**
+**Pool Starvation**
 
 When the HTTP thread pool size is too large in proportion to the database connection pool, you can end up in a situation where HTTP requests:
 
