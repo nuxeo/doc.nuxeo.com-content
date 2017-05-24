@@ -470,9 +470,7 @@ This page provides several configuration use cases for Elasticsearch.
 
 {{! /excerpt}}
 
-&nbsp;
-
-## {{> anchor 'settingupanelasticsearchcluster'}}Setting up an Elasticsearch Cluster
+## Setting up an Elasticsearch Cluster
 
 ### Elasticsearch Supported Versions
 
@@ -482,11 +480,11 @@ The Nuxeo Platform communicates with Elasticsearch using the [transport client J
 
 We recommend to use the same JVM version for all Elasticsearch nodes and Nuxeo.
 
-The default configuration uses an embedded Elasticsearch instance that runs&nbsp;in the same JVM as the Nuxeo Platform's.
+The default configuration uses an embedded Elasticsearch instance that runs in the same JVM as the Nuxeo Platform's.
 
 {{#> callout type='warning' }}
 
-This embedded mode&nbsp;**is only for testing purpose**&nbsp;and should not be used in production.
+This embedded mode **is only for testing purpose** and should not be used in production.
 
 {{/callout}}
 
@@ -531,7 +529,7 @@ Increase the bulk queue size In`/etc/elasticsearch/elasticsearch.yml` configurat
 threadpool.bulk.queue_size: 500
 ```
 
-## {{> anchor 'configuringnuxeotoaccessthecluster'}}Configuring Nuxeo to Access the Cluster
+## Configuring Nuxeo to Access the Cluster
 
 Nuxeo manages 3 Elasticsearch indexes:
 
@@ -539,7 +537,7 @@ Nuxeo manages 3 Elasticsearch indexes:
 *   The audit logs index to store audit entries, this index is a primary storage and can not be rebuild.
 *   A sequence index used to serve unique value that can be used as primary keys, this index is also a primary storage.
 
-To make the connection between the Nuxeo Platform instance and the ES cluster check&nbsp;the following options in the&nbsp; `nuxeo.conf` &nbsp;file and edit if you need to change the default value:
+To make the connection between the Nuxeo Platform instance and the ES cluster check the following options in the `nuxeo.conf` file and edit if you need to change the default value:
 
 ```
 elasticsearch.addressList=somenode:9300,anothernode:9300
@@ -552,20 +550,20 @@ seqgen.elasticsearch.indexName=${elasticsearch.indexName}-uidgen
 
 Where:
 
-*   `elasticsearch.addressList`&nbsp;points to one or many Elasticsearch nodes. Note that Nuxeo connects to the API port&nbsp;**9300**&nbsp;and not the HTTP port 9200.
-*   `elasticsearch.clusterName`&nbsp;is the cluster name to join,&nbsp;`elasticsearch`&nbsp;being the default cluster name.
-*   `elasticsearch.indexName`&nbsp;is the name of the Elasticsearch index for the default document repository.
-*   `elasticsearch.indexNumberOfReplicas` is the number of [replicas](http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/replica-shards.html). By default you have 5 shards and 1 replicas. If you have a single node in your cluster you should set the `indexNumberOfReplicas`to `0`. Visit the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/guide/current/scale.html) for more information on shards and replicas.
-*   `audit.elasticsearch.indexName`&nbsp;is the name of the Elasticsearch index for audit logs.
-*   `seqgen.elasticsearch.indexName`&nbsp;is the name of the Elasticsearch index for the uid sequencer, extensively used for audit logs.
+- `elasticsearch.addressList` points to one or many Elasticsearch nodes. Note that Nuxeo connects to the API port **9300** and not the HTTP port 9200.
+- `elasticsearch.clusterName` is the cluster name to join, `elasticsearch` being the default cluster name.
+- `elasticsearch.indexName` is the name of the Elasticsearch index for the default document repository.
+- `elasticsearch.indexNumberOfReplicas` is the number of [replicas](http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/replica-shards.html). By default you have 5 shards and 1 replicas. If you have a single node in your cluster you should set the `indexNumberOfReplicas`to `0`. Visit the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/guide/current/scale.html) for more information on shards and replicas.
+- `audit.elasticsearch.indexName` is the name of the Elasticsearch index for audit logs.
+- `seqgen.elasticsearch.indexName` is the name of the Elasticsearch index for the uid sequencer, extensively used for audit logs.
 
-You can find all the available options in the&nbsp;[nuxeo.defaults](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/nuxeo.defaults).
+You can find all the available options in the [nuxeo.defaults](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/nuxeo.defaults).
 
 #### Configuring access to the cluster through Elasticsearch Shield plugin
 
 With [Shield plugin for Elasticsearch](https://www.elastic.co/guide/en/shield/current/introduction.html), it is possible to configure authentication to access the cluster, and then prevent unauthorized access to it.
 
-The configuration is done by editing the&nbsp; `nuxeo.conf` &nbsp;file and set the following values:
+The configuration is done by editing the `nuxeo.conf` file and set the following values:
 
 ```
 elasticsearch.shield.enabled=true
@@ -575,7 +573,7 @@ elasticsearch.shield.password=nuxeo
 To inform the Nuxeo Platform that authentication is needed on the cluster, the `elasticsearch.shield.enabled` property has to be set to `true` (authentication is disabled by default).
 
 The Nuxeo Platform has to be associated to a user who is authorized to access the Elasticsearch cluster.
-The credentials are provided with the `elasticsearch.shield.username` and `elasticsearch.shield.password` properties. 
+The credentials are provided with the `elasticsearch.shield.username` and `elasticsearch.shield.password` properties.
 
 ## Disabling Elasticsearch
 
@@ -585,9 +583,9 @@ Elasticsearch is enabled by default, if you want to disable Elasticsearch indexi
 elasticsearch.enabled=false
 ```
 
-### {{> anchor 'disablingelasticsearchforauditlogs'}}Disabling Elasticsearch for Audit Logs
+### Disabling Elasticsearch for Audit Logs
 
-When Elasticsearch is enabled and&nbsp;the `audit.elasticsearch.enabled` property is set to&nbsp;`true` in `nuxeo.conf`&nbsp;which is the case by default, Elasticsearch&nbsp;is used as a backend for audit logs.
+When Elasticsearch is enabled and the `audit.elasticsearch.enabled` property is set to `true` in `nuxeo.conf` which is the case by default, Elasticsearch is used as a backend for audit logs.
 
 This improves scalability, especially when using Nuxeo Drive with a large set of users.
 
@@ -599,33 +597,33 @@ For this purpose make sure you read the [Backing Up and Restoring the Audit Elas
 
 {{/callout}}
 
-If you want to disable Elasticsearch and use the SQL database&nbsp;as the default backend for audit logs you can simply update this property in&nbsp;`nuxeo.conf`:
+If you want to disable Elasticsearch and use the SQL database as the default backend for audit logs you can simply update this property in `nuxeo.conf`:
 
 ```
 audit.elasticsearch.enabled=false
 ```
 
-## {{> anchor 'triggeringsqltoelasticsearchauditlogsmigration'}}Triggering SQL to Elasticsearch Audit Logs Migration
+## Triggering SQL to Elasticsearch Audit Logs Migration
 
-When upgrading a Nuxeo instance from a version lower than 7.3 to 7.3 or higher, if you decide to use Elasticsearch as a backend for audit logs you need to add the following property to&nbsp;`nuxeo.conf` to trigger the migration of existing audit log entries.
+When upgrading a Nuxeo instance from a version lower than 7.3 to 7.3 or higher, if you decide to use Elasticsearch as a backend for audit logs you need to add the following property to `nuxeo.conf` to trigger the migration of existing audit log entries.
 
 ```
 audit.elasticsearch.migration=true
 ```
 
-This will launch a background job&nbsp;at server startup to migrate data from the&nbsp;`nxp_logs`,&nbsp;`nxp_logs_extinfo` and&nbsp;`nxp_logs_mapextinfo` tables of the SQL database to the `${audit.elasticsearch.indexName}`&nbsp;Elasticsearch index.
+This will launch a background job at server startup to migrate data from the `nxp_logs`, `nxp_logs_extinfo` and `nxp_logs_mapextinfo` tables of the SQL database to the `${audit.elasticsearch.indexName}` Elasticsearch index.
 
-Migration uses batch processing. The number of log entries processed per batch can be configured by adding the folllowing property to&nbsp;`nuxeo.conf`:
+Migration uses batch processing. The number of log entries processed per batch can be configured by adding the folllowing property to `nuxeo.conf`:
 
 ```
 audit.elasticsearch.migration.batchSize=5000
 ```
 
-Default value is 1000\. As an example, we successfully tested migration of 22.000.000 log entries with an average speed of 1500 entries / second using&nbsp;`audit.elasticsearch.migration.batchSize=10000`&nbsp;on a Linux virtual machine with two cores, 4 GB RAM, a local PostgreSQL instance and an embedded Elasticsearch instance.
+Default value is 1000\. As an example, we successfully tested migration of 22.000.000 log entries with an average speed of 1500 entries / second using `audit.elasticsearch.migration.batchSize=10000` on a Linux virtual machine with two cores, 4 GB RAM, a local PostgreSQL instance and an embedded Elasticsearch instance.
 
-Once the migration is done you should remove the&nbsp;`audit.elasticsearch.migration` property from&nbsp;`nuxeo.conf`, else you wil see a warning about it in the logs.
+Once the migration is done you should remove the `audit.elasticsearch.migration` property from `nuxeo.conf`, else you wil see a warning about it in the logs.
 
-## {{> anchor 'rebuildingtheindex'}}Rebuilding the Repository Index
+## Rebuilding the Repository Index
 
 If you need to reindex the whole repository, you can do this from the **Admin** > **Elasticsearch** > **Admin** tab.
 
@@ -646,7 +644,7 @@ You can fine tune the indexing process using the following options:
     elasticsearch.reindex.bucketWriteSize=50
     ```
 
-## {{> anchor 'changingelasticsearchmapping'}}Changing the Mappings and Settings of Indexes
+## Changing the Mappings and Settings of Indexes
 
 ### Updating the Repository Index Configuration
 
@@ -662,7 +660,7 @@ The default mapping is located in the `${NUXEO_HOME}/templates/common-base/nxser
 
 **To override and tune the default mapping:**
 
-1.  [Create a custom template]({{page page='configuration-templates'}}) like `myapp` with a `nuxeo.defaults` file that contains:&nbsp;&nbsp;
+1.  [Create a custom template]({{page page='configuration-templates'}}) like `myapp` with a `nuxeo.defaults` file that contains:
 
     ```
     myapp.target=.
@@ -710,7 +708,7 @@ Here the index is a primary storage and you can not rebuild it. So we need a too
     ./stream2es es --source http://localhost:9200/nuxeo-audit --target http://localhost:9200/nuxeo-audit2 --replace
     ```
 
-## {{> anchor 'conf_multi_repositories'}}Configuration for Multi Repositories
+## Configuration for Multi Repositories
 
 You need to define an index for each repository. This is done by adding an `elasticSearchIndex` contribution.
 
@@ -746,9 +744,9 @@ Open at the `lib/log4j.xml` file and uncomment the ELASTIC section:
       </category>
 ```
 
-&nbsp;The `elastic.log` file will contain all the requests done by the Nuxeo Platform to Elasticsearch including the `curl` command ready to be copy/past/debug in a term.
+The `elastic.log` file will contain all the requests done by the Nuxeo Platform to Elasticsearch including the `curl` command ready to be copy/past/debug in a term.
 
-### {{> anchor 'reportingproblem'}}Reporting Settings and Mapping
+### Reporting Settings and Mapping
 
 It is also important to report the current settings and mapping of an Elasticsearch index (here called `nuxeo`)
 
@@ -797,7 +795,6 @@ You can use the [esync tool](https://github.com/nuxeo/esync) to compare both con
 
 This tool is a read-only standalone tool, it requires both access to the database and Elasticsearch (using transport client on port 9300).
 
-&nbsp;
 
 * * *
 
