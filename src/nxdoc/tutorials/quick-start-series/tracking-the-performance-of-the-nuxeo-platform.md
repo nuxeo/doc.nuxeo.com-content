@@ -264,7 +264,6 @@ history:
 ---
 Managing sizing and performance of any ECM application is a tricky job, because each application is different and many factors must be taken into account.
 
-&nbsp;
 
 {{! excerpt}}
 
@@ -326,7 +325,7 @@ As expected, the number of documents in the repository has an impact on performa
 
 This is a natural impact and you cannot exclude this factor when doing capacity planning.
 
-The good news is that Nuxeo's document repository has been tested successfully with several million&nbsp;documents with a single server.
+The good news is that Nuxeo's document repository has been tested successfully with several million documents with a single server.
 
 #### Concurrent Requests
 
@@ -482,10 +481,10 @@ To do so, we use small benchmark tests that are automatically run every night by
 
 This fast bench enables to check core and UI regressions on a simple case.
 
-*   Hudson benching job
-*   Daily bench report
-*   Daily bench monitoring report
-*   Benching script sources
+- Hudson benching job
+- Daily bench report
+- Daily bench monitoring report
+- Benching script sources
 
 This allows us, for example, to quickly detect when a template has been wrongly modified and lets us quickly correct it before the faulty changeset becomes hidden by hundreds of other modifications.
 
@@ -503,10 +502,10 @@ In order to correctly size your Nuxeo Platform-based ECM application, you should
 
 You have to define your needs and hypotheses for any factor that can impact the platform performance:
 
-*   Target number of documents in the repository
-*   Target security policy
-*   Target filing plan and ACLs inheritance logic
-*   Target request/s
+- Target number of documents in the repository
+- Target security policy
+- Target filing plan and ACLs inheritance logic
+- Target request/s
 
 ### Set up Performance Testing From the Beginning
 
@@ -516,9 +515,9 @@ Start with simple benchmark tests (based on the ones provided by Nuxeo) on a raw
 
 Using this approach will help you:
 
-*   Detect a performance issue as soon as possible
-*   Correct small problems when they are still small
-*   Avoid having a lot of mistakes to correct just before going to production
+- Detect a performance issue as soon as possible
+- Correct small problems when they are still small
+- Avoid having a lot of mistakes to correct just before going to production
 
 You can leverage all the standard tests we provide and also the Hudson integration if you want to use Hudson as CI chain provider.
 
@@ -532,7 +531,7 @@ When needed, you can use these results to interpolate results from your tests.
 
 ### Benchmarking Tools
 
-We use&nbsp;[FunkLoad](http://funkload.nuxeo.org/)&nbsp;for performance testing. This tools enables us to produce quickly new scenarios.
+We use [FunkLoad](http://funkload.nuxeo.org/) for performance testing. This tools enables us to produce quickly new scenarios.
 Here are the main advantages:
 
 *   An HTTP proxy recorder generates the initial bench script.
@@ -565,7 +564,7 @@ We also use Nuxeo Platform addon tools like [`nuxeo-platform-importer`](https://
 
 ### Metrics to Monitor During a Bench
 
-*   CPU: The iowait or percent of time that CPU is idle during which the system has outstanding disk I/O request can be useful to identify an I/O&nbsp; bottleneck. On multi CPUs, if only one of the CPU is used at 100%, it may be the cause of an overloaded garbage collector.
+*   CPU: The iowait or percent of time that CPU is idle during which the system has outstanding disk I/O request can be useful to identify an I/O bottleneck. On multi CPUs, if only one of the CPU is used at 100%, it may be the cause of an overloaded garbage collector.
 *   JVM Garbage Collector throughput: this is the percentage of total time of the JVM not spent in garbage collection.
 *   Disk utilization: to check for device saturation
 *   Size of connection pools (HTTP, database)
@@ -577,7 +576,7 @@ We also use Nuxeo Platform addon tools like [`nuxeo-platform-importer`](https://
 
 You can also use other tools to get more information:
 
-*   [Oracle flight recording]({{page page='710/admindoc/reporting-problems#oracle-jvm-flight-recording'}})
+*   [Oracle flight recording]({{page version='' space='nxdoc' page='reporting-problems'}}#oracle-jvm-flight-recording)
 *   [Nuxeo Slow NXQL Queries]({{page page='monitoring-slow-nxql-queries'}})
 *   [PostgreSQL monitoring]({{page space='ADMINDOC' page='Configuring PostgreSQL'}})
 *   [sysstat sar](http://pagesperso-orange.fr/sebastien.godard/) and [atop](http://www.atoptool.nl/) to monitoring the system activity (CPU, disk, network,&nbsp; memory ...).
@@ -643,7 +642,7 @@ Restarting the repository and accessing to the proxy will make the class monitor
 
 ## Some Example Benchmark Results
 
-### 10 Million&nbsp;Documents Injection
+### 10 Million Documents Injection
 
 #### Goals
 
@@ -654,10 +653,10 @@ This benchmark was initially run in 2010 against a Nuxeo 5.3.1.
 #### Steps
 
 1.  Tune the database following tips in the Nuxeo PostgreSQL&nbsp;[FAQ](https://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server).
-2.  Tune Nuxeo: for mass import, we disable the full-text indexing (as described in the ["Mass import specific tuning" section of PostgreSQL configuration page]({{page page='postgresql#-anchor-mass-import-tuning-mass-import-specific-tuning'}})) and disable the ACL optimization ([NXP-4524](https://jira.nuxeo.com/browse/NXP-4524)).
+2.  Tune Nuxeo: for mass import, we disable the full-text indexing (as described in the ["Mass import specific tuning" section of PostgreSQL configuration page]({{page page='postgresql'}}#mass-import-specific-tuning)) and disable the ACL optimization ([NXP-4524](https://jira.nuxeo.com/browse/NXP-4524)).
 3.  Import content: mass import is done using a multi-threaded importer to create File document with an attached text file randomly generated using a French dictionary. Only a percentage of the text file will be indexed for the full text, this ratio simulate the proportion of text in a binary format.
     [Sources of the nuxeo-platform-importer](https://github.com/nuxeo/nuxeo-platform-importer/blob/master/README.md)
-4.  Rebuild full text as described in the ["Mass import specific tuning" FAQ](https://doc.nuxeo.com/nxdoc/postgresql/#-anchor-mass-import-tuning-mass-import-specific-tuning).
+4.  Rebuild full text as described in the ["Mass import specific tuning" FAQ]({{page version='' space='nxdoc' page='postgresql'}}#mass-import-specific-tuning).
 5.  Generate random ACLs on documents. This can be done with a simple scripts that generate SQL inserts into the ACL table.
 6.  Enable the read ACLs optimization, performing the SQL command:
 
@@ -698,9 +697,9 @@ Show that the Nuxeo Platform can handle very large volume by leveraging sharding
 
 #### About the Bench
 
-The bench started as the 2010 bench with 10 million&nbsp;documents, we simply use a recent Nuxeo Platform as well as more recent hardware.
+The bench started as the 2010 bench with 10 million documents, we simply use a recent Nuxeo Platform as well as more recent hardware.
 
-We were easily able to inject 100 million&nbsp;documents inside a single document repository at a constant throughput. Then, we used the multi-repository feature as well as Elasticsearch integration to shard 1 billion document across ten repositories with a single index.
+We were easily able to inject 100 million documents inside a single document repository at a constant throughput. Then, we used the multi-repository feature as well as Elasticsearch integration to shard 1 billion document across ten repositories with a single index.
 
 More details about how the bench was done can be found on the blog post ["One Billion Documents, Testing the Limits of Nuxeo"](http://www.nuxeo.com/blog/one-billion-documents/).
 
