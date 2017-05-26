@@ -130,7 +130,7 @@ In a Windows environment, Nuxeo recommends to use cygwin shell to avoid all form
 2.  You can get the new resource doing a standard GET (actually the JSON object was already returned in previous response):
 
     ```
-    curl -X GET -u Administrator:Administrator  http://demo.nuxeo.com/nuxeo/api/v1/path/default-domain/newDoc
+    curl -X GET -u Administrator:Administrator  http://nightly.nuxeo.com/nuxeo/api/v1/path/default-domain/newDoc
     ```
 
 3.  Now, "lock" this document we have just created by calling an Automation operation from command API on the document resource.
