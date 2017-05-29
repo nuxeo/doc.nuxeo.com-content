@@ -34,7 +34,7 @@ First, we'll set up the Nuxeo Platform so it's ready for you to configure.
 
 DOWNLOAD AND REGISTER THE NUXEO PLATFORM
 
-1.  [Download Nuxeo Platform](http://cdn.nuxeo.com/nuxeo-8.10/nuxeo-server-8.10-tomcat.zip) and unzip the archive.
+1.  [Download Nuxeo Platform](https://www.nuxeo.com/downloads/) and unzip the archive.
 
 2.  Set the platform to **Dev Mode**: open `NUXEO_HOME/bin/nuxeo.conf` and set `org.nuxeo.dev` to `true`.
 
