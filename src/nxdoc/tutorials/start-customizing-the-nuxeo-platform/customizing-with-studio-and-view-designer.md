@@ -18,6 +18,14 @@ This tutorial introduces you to a few important aspects of **Nuxeo Studio** so t
 This tutorial makes use of **View Designer**, a new customization tool for Nuxeo Web UI. **View Designer** is currently available through a limited release. If you don't have access yet and would like to try it out, please contact your Nuxeo representative.
 {{/callout}}
 
+## Introduction
+
+We've implemented a very simple workflow on the BCContract document type, `BCContractCancel_WF` allowing any BigCorp employee to cancel a contract. Once launched, the request will pass through a manager to confirm the cancellation.
+
+BigCorp now needs another feature added to the workflow: have someone from Accounting specify the amount to refund to the client, with a full refund automatically granted to cancellations that occur within 10 days of signing.
+
+In the steps below, we will show you how to add custom schemas, automation chains and workflow steps to fulfill this feature request.
+
 ## Setting Up
 
 First, we'll set up the Nuxeo Platform so it's ready for you to configure.
@@ -210,14 +218,6 @@ To modify this constraint, under the **Customization** menu in Studio, select **
     </tbody>
   </table>
 </div>
-
-## Introduction
-
-We've implemented a very simple workflow on the BCContract document type, `BCContractCancel_WF` allowing any BigCorp employee to cancel a contract. Once launched, the request will pass through a manager to confirm the cancellation.
-
-BigCorp now needs another feature added to the workflow: have someone from Accounting specify the amount to refund to the client, with a full refund automatically granted to cancellations that occur within 10 days of signing.
-
-In the steps below, we will show you how to add custom schemas, automation chains and workflow steps to fulfill this feature request.
 
 ## Schemas
 
@@ -451,4 +451,3 @@ CUSTOMIZE THE LOGIN PAGE
 {{#> callout type='tip' }}
 Our teams are working round the clock to improve the themes and styling of Web UI so that you can apply your own branding. Check in again soon to see the improvements we've made and to further customize your Nuxeo application.
 {{/callout}}
-
