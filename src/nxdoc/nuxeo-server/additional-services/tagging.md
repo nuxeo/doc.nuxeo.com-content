@@ -167,13 +167,13 @@ To disable the duplication of tags on versions and proxies, the `TaggedVersionLi
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
-*   [Publisher]({{page page='publisher'}})
-*   [Versioning]({{page page='versioning'}})
-*   [Events and Listeners]({{page page='events-and-listeners'}})
+- [Publisher]({{page page='publisher'}})
+- [Versioning]({{page page='versioning'}})
+- [Events and Listeners]({{page page='events-and-listeners'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
 
-*   [Tags]({{page space='userdoc' page='tags'}})
-*   [Publishing Content]({{page space='userdoc' page='publishing-content'}})
+- [Tags]({{page space='userdoc' page='tags'}})
+- [Publishing Content]({{page space='userdoc' page='publishing-content'}})
 
 {{/panel}}</div></div>
