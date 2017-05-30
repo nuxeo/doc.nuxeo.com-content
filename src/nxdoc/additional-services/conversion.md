@@ -231,8 +231,8 @@ point="converter">
 
 &nbsp;
 
-*   [How to Automatically Convert a Document to PDF]({{page page='how-to-automatically-convert-a-document-to-pdf'}})
-*   [Conversion How-To Index]({{page page='conversion-how-to-index'}})
+- [How to Automatically Convert a Document to PDF]({{page page='how-to-automatically-convert-a-document-to-pdf'}})
+- [Conversion How-To Index]({{page page='conversion-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">
 
@@ -240,6 +240,6 @@ point="converter">
 
 {{#> panel heading='Related pages in other documentation'}}
 
-*   [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
+- [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
 
 {{/panel}}</div></div>
