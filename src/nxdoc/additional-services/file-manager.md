@@ -167,10 +167,10 @@ See also the tutorial on&nbsp;[how to change the default document type used when
 
 {{#> panel heading='Related Documentation'}}
 
-*   [REST API]({{page page='rest-api'}})
-*   [Automation]({{page page='automation'}})
-*   [Versioning]({{page page='versioning'}})
-*   [How to Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
+- [REST API]({{page page='rest-api'}})
+- [Automation]({{page page='automation'}})
+- [Versioning]({{page page='versioning'}})
+- [How to Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
 
 {{/panel}}</div><div class="column medium-6">
 
