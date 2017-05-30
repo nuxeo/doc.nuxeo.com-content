@@ -225,10 +225,10 @@ The collection reference is available in the event context map. For example, wit
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
 
-*   [Collections user documentation]({{page space='userdoc60' page='collections'}})
-*   [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
-*   [Nuxeo Drive user documentation]({{page space='userdoc60' page='nuxeo-drive'}})
-*   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+- [Collections user documentation]({{page space='userdoc60' page='collections'}})
+- [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+- [Nuxeo Drive user documentation]({{page space='userdoc60' page='nuxeo-drive'}})
+- [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
 
 {{/panel}}</div><div class="column medium-6">
 
