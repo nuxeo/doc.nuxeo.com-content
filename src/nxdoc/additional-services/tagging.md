@@ -130,13 +130,13 @@ To disable the duplication of tags on versions and proxies, the&nbsp;[`org.nuxeo
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
-*   [Publisher]({{page page='publisher'}})
-*   [Versioning]({{page page='versioning'}})
-*   [Events and Listeners]({{page page='events-and-listeners'}})
+- [Publisher]({{page page='publisher'}})
+- [Versioning]({{page page='versioning'}})
+- [Events and Listeners]({{page page='events-and-listeners'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
 
-*   [Tags]({{page space='userdoc60' page='tags'}})
-*   [Publishing Documents]({{page space='userdoc60' page='publishing-documents'}})
+- [Tags]({{page space='userdoc60' page='tags'}})
+- [Publishing Documents]({{page space='userdoc60' page='publishing-documents'}})
 
 {{/panel}}</div></div>
