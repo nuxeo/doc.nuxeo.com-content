@@ -159,7 +159,7 @@ The `<script>` must define a `run()` function that returns a boolean:
 *   **Blob** (Blob): the blob itself.
 *   **CurrentUser** (NuxeoPrincipal): the current user.
 *   **Reason** (String): the download "reason", which gives an indication of the source of the download:
-    *   `download`: basic servlet download, restlet download or&nbsp;documentActions.download.
+    *   `download`: file downloads from the download servlet, Automation, WebEngine, REST API, Seam or Restlets.
     *   `picture`: downloadPicture codec (the XPath is then one of&nbsp;OriginalJpeg:content, Medium:content,&nbsp;Small:content,&nbsp;Thumbnail:content,&nbsp;etc.).
     *   `thumbnail`: downloadThumbnail codec.
     *   `clipboardZip`: worklist ZIP export.
@@ -169,7 +169,7 @@ The `<script>` must define a `run()` function that returns a boolean:
     *   `operation`: Automation operation (WebUI.DownloadFile /&nbsp;Seam.DownloadFile).
     *   `rendition`: rendition.
     *   `templateRendition`: template rendition.
-    *   `webengine`: WebEngine blob responses. Includes [REST API]({{page page='rest-api'}}) calls.
+    *   `webengine`: WebEngine JSON responses. Includes Automation and [REST API]({{page page='rest-api'}}) calls.
     *   `contentDiff`: content diff display.
     *   `tile`: image tiling display.
     *   `preview`: preview display restlet.
