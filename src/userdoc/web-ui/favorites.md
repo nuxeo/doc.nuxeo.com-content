@@ -20,11 +20,11 @@ The list of documents bookmarked as favorites is available:
 - On the dashboard in the **Favorite Item** widget
   ![]({{file name='dashboard-favorites-web-ui.png'}} ?w=450,border=true)
 - On the **Favorites** Tab in the side menu
-  ![]({{file name='favorites-tab-web-ui.png'}} ?w=250,border=true)
+  ![]({{file name='favorites-tab-web-ui.png'}} ?w=300,border=true)
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='bookmarking-favorites-web-ui'}}
-Bookmarking documents in your favorites can be done like when you add documents to a [collection]({{page version='' space='userdoc' page='collections-web-ui'}}) and selecting the Favorites collection, or using the Favorites icon ![]({{file name='favorites.png' space='nxdoc' page='web-ui'}} ?w=20) from the document itself.
+Bookmarking documents in your favorites can be done like when you add documents to a [collection]({{page version='' space='userdoc' page='collections-web-ui'}}) and selecting the Favorites collection, or using the Favorites icon&nbsp;![]({{file name='avorites-icon_web-ui.png' page='icons-index'}} ?w=18) from the document itself.
 
 Once the document is added to your favorites, it will be available in the dashboard and in the Favorites tab.
 {{! /multiexcerpt}}
@@ -35,6 +35,6 @@ Your Favorites are saved browser-side, which means that if you use another brows
 
 {{! multiexcerpt name='remove-favorites-web-ui'}}
 **To remove a document from Favorites, you can:**
-- Click on the delete icon ![]({{file name='delete.png' space='userdoc' page='icons-index'}} ?w=20) next to it in the **Favorites** tab
-- Or, unselect the Favorites icon ![]({{file name='favorites.png' space='nxdoc' page='web-ui'}} ?w=20) from the document itself
+- Click on the delete icon&nbsp;![]({{file name='delete-circle-icon_web-ui.png' space='userdoc' page='icons-index'}} ?w=20) next to it in the **Favorites** tab
+- Or, unselect the Favorites icon ![]({{file name='favorites-selected-icon_web-ui.png' page='icons-index'}} ?w=18) from the document itself
 {{! /multiexcerpt}}

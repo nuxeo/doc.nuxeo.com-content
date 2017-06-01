@@ -84,7 +84,7 @@ A file is composed of:
 
 ![]({{file name='file-web-ui.png'}} ?w=600,border=true)
 
-**To create a file**, in a workspace, click on ![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=20). On the **Create** popup, click on the desired document. Fill in the document's creation form and click on **Create**.
+**To create a file**, in a workspace, click on ![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=30). On the **Create** popup, click on the desired document. Fill in the document's creation form and click on **Create**.
 
 When the file is created, users can enhance it by [filling its properties]({{page page='browse'}}#editing-content), adding attached files on it.
 
@@ -105,7 +105,7 @@ Description | The text that explains what the note is about.
 Content | The text of the note created using the rich text editor.
 Format | The format of the automatically created file used to export notes from the Nuxeo Platform.
 
-**To create a note**, in a workspace, click on ![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=20). On the **Create** popup, click on the desired document. Fill in the document's creation form and click on **Create**.
+**To create a note**, in a workspace, click on ![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=30). On the **Create** popup, click on the desired document. Fill in the document's creation form and click on **Create**.
 
 You can also create a note by importing a .txt, a .html or a .xml file [using drag and drop]({{page page='browse'}}#importing-documents-using-drag-and-drop).
 When the note is created, users can enhance it by attaching files on it or just [editing it]({{page page='browse'}}#editing-content).
@@ -119,7 +119,7 @@ It is possible to add attachments to [Files](#file) and [Notes](#note) using the
 In the **View** tab of the document concerned, drag and drop the attachment in the field or click on **Add a file** and a popup lets you select the attachment from your computer.
 
 **To remove attachment:**
-In the **View** tab of the document concerned, click on ![]({{file name='delete_2.png' page='icons-index'}}) next to the attachment concerned. The attachment is immediately deleted.
+In the **View** tab of the document concerned, click on ![]({{file name='delete_web-ui.png' page='icons-index'}}) next to the attachment concerned. The attachment is immediately deleted.
 
 {{#> callout type='note' heading='Limitations'}}
 - Attached files are not synchronized with [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}).

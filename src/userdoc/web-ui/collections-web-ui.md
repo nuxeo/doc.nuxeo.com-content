@@ -38,16 +38,19 @@ You can classify any type of document in a collection. You just need to have Rea
 {{! multiexcerpt name='collecting-web-ui'}}
 Documents can be collected:
 
-- Individually by clicking on the icon ![]({{file name='add-to-collection-web-ui.png' page='icons-index' space='userdoc'}} ?w=16) of the document
+- Individually by clicking on the icon&nbsp;![]({{file name='add-to-collection-web-ui.png' page='icons-index' space='userdoc'}} ?w=16) of the document
   ![]({{file name='add-to-collection-web-ui.png'}} ?w=250,border=true)
-- By batch by selecting documents from their parent and clicking on the **Add to collection** button.
+- By batch by selecting documents from a list of documents and clicking on the icon&nbsp;![]({{file name='add-to-collection-web-ui.png' page='icons-index' space='userdoc'}}) in the selection header.
 
 In both cases you can select the collection by:
 - Browsing the collections in the list
 - Starting to type the collection name and select it
 - Typing a new collection name to create it.
 
-The list of collections the document is available from is displayed on its **View** tab
+The list of collections the document is available from is displayed on its **View** tab.
+
+![]({{file name='collections-doc-widget_web-ui.png'}} ?w=300,border=true)
+
 {{! /multiexcerpt}}
 
 ## Creating Collections
@@ -57,27 +60,33 @@ Collections can be created in workspaces and folders.
 
 {{! multiexcerpt name='creating-web-ui'}}
 There are two ways to create a collection:
-- Like any other document, using the button&nbsp;![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=20): Just fill in the creation form and the collection is created in the current workspace / folder.
-  ![]({{file name='new-collection-web-ui.png'}} ?w=250,border=true)
-- Directly from the **Add to collection** popup: collections about to be created are displayed with the icon ![]({{file name='add-new-collection-web-ui.png'}} ?w=20), while existing collections are displayed in the drop down list. The collection is created in your personal workspaces, in a **My Collections** folder.
+- Like any other document, using the button&nbsp;![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=30): Just fill in the creation form and the collection is created in the current workspace / folder.
+  ![]({{file name='new-collection-web-ui.png'}} ?w=400,border=true)
+- Directly from the **Add to collection** popup: collections about to be created are displayed with the icon ![]({{file name='add-icon_web-ui.png' page='icons-index'}} ?w=20), while existing collections are displayed in the drop down list.
+The collection is created in your personal workspaces, in a **My Collections** folder.
 {{! /multiexcerpt}}
 
 ## Sharing Collections
+
 {{{multiexcerpt 'sharing' page='userdoc/collections'}}}
 
 ## Removing Documents from Collections
+
 {{! multiexcerpt name='removing-web-ui'}}
-To remove a document from a collection, the first option is to click on the icon ![]({{file name='delete.png' page='icons-index'}}) of the collection from the document view.
 
-The second option is to:
-1. Go to the **Collections** tab in your side menu
-2. Click on the collection name that you want to manage
-3. In the view, click on the document that you want to remove
-4. In the second panel of the side menu, click on the icon ![]({{file name='delete.png' page='icons-index'}}) to remove it from the collection.
+To remove a document from a collection click on the icon&nbsp;![]({{file name='delete.png' page='icons-index'}}) of the collection from the document view.
 
-![]({{file name='remove-from-collection-web-ui.png'}} ?w=250,border=true)
+![]({{file name='collections-doc-widget_web-ui.png'}} ?w=300,border=true)
 
-In both ways the document is immediately removed from the collection.
+To remove several documents from a collection:
+1. Go to the **Collections** tab in your side menu.
+2. Click on the collection name that you want to manage.
+3. Select the documents to remove using the checkboxes.
+4. In the selection header, click on the Remove from collection icon&nbsp;![]({{file name='delete-circle-icon_web-ui.png' page='icons-index'}}).
+
+![]({{file name='remove-from-collection-web-ui.png'}} ?w=600,border=true)
+
+In both ways documents are immediately removed from the collection.
 {{! /multiexcerpt}}
 * * *
 

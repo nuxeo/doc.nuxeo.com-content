@@ -120,7 +120,7 @@ along with the other picture properties.
 
 Nuxeo Slots are an important mechanism to extend Nuxeo Web UI. Here we're going to contribute a new action to the [DOCUMENT_ACTIONS]({{page page='web-ui-slots'}}/#document_actions) slot, which will be displayed whenever a user browses to a document.
 
-![]({{file name='DOCUMENT_ACTIONS.png'}} ?w=600,border=true)
+![]({{file name='DOCUMENT_ACTIONS.png' page='web-ui-slots'}} ?w=600,border=true)
 
 {{#> callout type='note' heading='Nuxeo Slots'}}
 Please refer to the [Nuxeo Slots documentation]({{page page='web-ui-slots'}}) for information about slots and how to contribute to them.

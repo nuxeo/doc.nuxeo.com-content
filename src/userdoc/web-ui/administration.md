@@ -8,18 +8,19 @@ review:
 toc: true
 tree_item_index: 700
 ---
-This Administration menu presents three different submenus:
+This Administration menu presents different submenus:
 
 - [Analytics](#analytics)
 - [Users & Groups](#users-groups)
 - [Vocabularies](#vocabularies)
+- [Audit](#audit)
 
 ## Analytics
 
 This section of the Administration tab enables administrators to have information and statistics on how the application is used.
 
 The default Activity subtabs are:
-- **Document Distribution**:
+- **Document Distribution**: Provides statistics on the documents types, their size and counts.
 
 - **Repository Content**: Provides statistics on the repository, the top downloads, the document created per week, etc. You can filter these statistics on a specific time period.
 
@@ -121,6 +122,7 @@ User must be at least in 'administrators' or 'members' group, or one of their su
 </table>
 </div>
 
+<!-- Commenting this section until https://jira.nuxeo.com/browse/NXP-19778 is resolved
 #### Inviting a New User
 
 Inviting a new user means creating a user account without setting its password, and having the user validate the invitation.
@@ -128,12 +130,13 @@ Inviting a new user means creating a user account without setting its password, 
 - To invite a user, go to **Administration** menu > **Users & Groups**. Click on the **New** button and fill in the user creation form and leave **Set user password** to unactive. </br>
   An invitation email is sent to the user at the email address you filled in. The user account is pending the user validation and the user account is not available in the user search results.
 - To validate the invitation, click on the validation link in the invitation email. Define your password and click on the **Submit** button. You are redirected to the login page of the Nuxeo Platform: you can now log in and use the Platform.
+-->
 
 #### Creating a New User Account
 
 When you create a new user account immediately, you choose and set the user's password.
 
-To create a user, go to the **Administration** menu > **Users & groups**. Click on the **New** button and fill in the user creation form and active the **Set user password**.
+To create a user, go to the **Administration** menu&nbsp;> **Users & groups**. Click on the **New** button and fill in the user creation form and active the **Set user password**.
 
 {{#> callout type='tip' }}
 If you need to create several users check the box **Create another** next to the **Create** button at the end of the creation form. The user is saved and the user creation form is displayed so you can immediately create another user.
@@ -151,7 +154,7 @@ You cannot edit the username, as it is the ID of the user on the application.
 When you are using an external directory for users management, the Edit button is not displayed as you cannot edit the users' properties (managed directly from the directory).
 {{/callout}}
 
-To modify a user's properties, go to the **Administration** menu > **Users & Groups**. Search a user and click on the user's name to open his or her card. Edit it by modifying the fields in the modification form.
+To modify a user's properties, go to the **Administration** menu&nbsp;> **Users & Groups**. Search a user and click on the user's name to open his or her card. Edit it by modifying the fields in the modification form.
 
 #### Changing a User's Password
 
@@ -161,7 +164,7 @@ Only administrators and power users can modify other users' password. However ev
 When you use an external directory for users management, the **Change password** button is not displayed as you cannot edit your password.
 {{/callout}}
 
-To modify a user's password, go to the **Administration** menu > **Users & Groups** and click on the **Change Password** button.
+To modify a user's password, go to the **Administration** menu&nbsp;> **Users & Groups** and click on the **Change Password** button.
 
 ![]({{file name='change-password-web-ui.png'}} ?w=350,border=true)
 
@@ -173,7 +176,7 @@ Only administrators and power users can delete users.
 Deleting a user is a permanent action.
 {{/callout}}
 
-To delete a user, go to go to the **Administration** menu > **Users & Groups**. Search a user and click on the user's name to open his or her card. Click on **Delete** at the top-right hand corner and confirm.
+To delete a user, go to go to the **Administration** menu&nbsp;> **Users & Groups**. Search a user and click on the user's name to open his or her card. Click on **Delete** at the top-right hand corner and confirm.
 
 ### Managing Groups
 
@@ -232,7 +235,7 @@ Users that belong to the group.
 
 Only administrators and power users can create groups of users.
 
-To create a group of users, go to **Administration** menu > **Users & Groups** > click on the **New** button and select Group from the drop down list. Fill in the creation form and save.
+To create a group of users, go to **Administration** menu&nbsp;> **Users & Groups** > click on the **New** button and select Group from the drop down list. Fill in the creation form and save.
 
 {{#> callout type='tip' }}
 
@@ -248,14 +251,14 @@ Modifying groups most often consists in adding or removing members of the group.
 
 ![]({{file name='edit-group-web-ui.png'}} ?w=350,border=true)
 
-To edit a group, go to the **Administration** menu > **Users & Groups**. Search a group and click on its name to open its card. Click on the **Edit** tab, modify the group's members and click on the **Save** button. The users who are no longer members of the group are denied group's permissions. However they still have their individual permissions.
+To edit a group, go to the **Administration** menu&nbsp;> **Users & Groups**. Search a group and click on its name to open its card. Click on the **Edit** tab, modify the group's members and click on the **Save** button. The users who are no longer members of the group are denied group's permissions. However they still have their individual permissions.
 
 
 #### Deleting a Group
 
 Only administrators and power users can delete groups.
 
-To delete a group, go to **Administration** menu > **Users & Groups**. Search the group to delete and click on its name to open its card. Click on **Delete** and confirm.
+To delete a group, go to **Administration** menu&nbsp;> **Users & Groups**. Search the group to delete and click on its name to open its card. Click on **Delete** and confirm.
 
 ## Vocabularies
 
@@ -287,7 +290,7 @@ By default, the labels of default vocabularies entries are the IDs of labels in 
 
 ### Adding a Vocabulary Entry
 
-To add an entry to a vocabulary,click on the **Add Entry** button of the vocabulary, fill in the entry creation form and click on the **Save** button.
+To add an entry to a vocabulary, click on the **Add Entry** button of the vocabulary, fill in the entry creation form and click on the **Save** button.
 
 ![]({{file name='new-entry-web-ui.png'}} ?w=250,border=true)
 
@@ -303,4 +306,10 @@ Editing a vocabulary entry can be changing its label, making it obsolete or chan
 Deleting a vocabulary entry is a permanent action.
 {{/callout}}
 
-To delete vocabulary entry, click on the **Delete** button ![]({{file name='delete_2.png' space='userdoc' page='icons-index'}}) of the entry to erase and confirm.The entry is permanently erased. The list of the vocabulary entries is displayed.
+To delete vocabulary entry, click on the **Delete** button&nbsp;![]({{file name='delete_web-ui.png' space='userdoc' page='icons-index'}}) of the entry to erase and confirm.The entry is permanently erased. The list of the vocabulary entries is displayed.
+
+## Audit
+
+The Audit view enables you to query the application audit and get reports on the activities and actions on the repository.
+
+![]({{file name='admin-audit-view_web-ui.png'}} ?w=600,border=true)
