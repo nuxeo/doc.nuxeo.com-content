@@ -16,12 +16,10 @@ The available themes are:
 
 - Default
 - Dark
-- Garden
 - Kawaii
 - Light
-- Ocean
 
-![]({{file name='light-theme.png' space='nxdoc' page='web-ui-theme-customization'}} ?w=800,border=true)
+![]({{file name='light-theme.png' space='nxdoc' page='web-ui-theme-customization'}} ?w=600,border=true)
 
 **To change your theme**:
 - Go to **User Settings** menu > **Themes**.
@@ -40,4 +38,4 @@ The login page is displayed.
 
 ## UI Language
 
-Web UI uses the browser's language. If the language that you have defined in your browser is not available in Web UI, it falls back on English. 
+Web UI uses the browser's language. If the language that you have defined in your browser is not available in Web UI, it falls back on English.
