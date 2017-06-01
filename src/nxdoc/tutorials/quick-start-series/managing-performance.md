@@ -223,9 +223,13 @@ In general the rule-of-thumb is that for each running Tomcat HTTP thread:
 *   You will need one connection from VCS to access the repository;
 *   You may need one connection from the generic pool to access an other datasource.
 
-This means that for a typical configuration, you will have: `maxThreads = nuxeo.vcs.max-pool-size = nuxeo.db.max-pool-size`.
+This means that for a typical configuration, you will have: `maxThreads = nuxeo.vcs.max-pool-size`.
 
-If you are using Nuxeo in cluster mode you must ensure that: `(nuxeo.vcs.max-pool-size + nuxeo.db.max-pool-size)*number_of_nodes <= Maximum concurrent connections and transactions for the DB server`.
+- If you are not using Nuxeo in cluster mode you must ensure that: `nuxeo.vcs.max-pool-size + 1 (lock management) < nuxeo.db.max-pool-size`.
+
+- If you are using Nuxeo in cluster mode you must ensure that: `nuxeo.vcs.max-pool-size + 1 (cluster connection) + 1 (lock management) < nuxeo.db.max-pool-size`.
+
+Usually `nuxeo.db.max-pool-size` is set to `nuxeo.vcs.max-pool-size` + 10% to handle any thread requesting a DB connection but not a VCS connection (VCS is used to manipulate the repository).
 
 Failure to set the DB server's in-bound connections to a large enough number to accommodate all possible connections from all running Nuxeo nodes, can create a bottleneck and severely impact performance.
 
