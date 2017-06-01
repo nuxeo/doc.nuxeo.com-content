@@ -1,21 +1,27 @@
 ---
-title: Web UI Slots
+title: "HOWTO: Customize Slots"
 review:
     comment: ''
     date: '2017-01-16'
     status: ok
 toc: true
+details:
+     howto:
+         excerpt: Learn how to use Nuxeo Slots with Web UI.
+         level: Advanced
+         tool: code
+         topics: Web UI
 labels:
     - lts2016-ok
     - nuxeo-web-ui
     - extension
     - nuxeo-slot
     - nuxeo-slot-content
-tree_item_index: 600
+tree_item_index: 800
 
 ---
 
-## What Are Nuxeo Slots?
+## Concept
 
 Nuxeo slots are mechanisms which extend part of the Nuxeo Web UI. A couple of `nuxeo-slots` are hardcoded in the web-ui source code in order to insert your own HTML elements and extend the Web UI to meet your specific needs.
 

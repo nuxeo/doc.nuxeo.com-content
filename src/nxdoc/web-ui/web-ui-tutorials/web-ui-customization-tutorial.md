@@ -5,13 +5,19 @@ review:
     date: '2017-01-16'
     status: ok
 toc: true
+details:
+   howto:
+         excerpt: Learn how to customize your workflow tasks
+         level: Advanced
+         tool: code
+         topics: Web UI
 labels:
     - lts2016-ok
     - tutorial
     - nuxeo-web-ui
     - customization
     - polymer
-tree_item_index: 1100
+tree_item_index: 300
 
 ---
 
