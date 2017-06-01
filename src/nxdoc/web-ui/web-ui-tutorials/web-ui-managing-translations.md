@@ -1,10 +1,16 @@
 ---
-title: Web UI Translations Management
+title: "HOWTO: Manage Translations"
 review:
     comment: ''
     date: '2017-01-19'
     status: ok
 toc: true
+details:
+     howto:
+         excerpt: Learn how to manage translations in Nuxeo Web UI.
+         level: Advanced
+         tool: code
+         topics: Web UI
 labels:
     - lts2016-ok
     - nuxeo-web-ui
@@ -12,7 +18,7 @@ labels:
     - i18n
     - labels
     - localization
-tree_item_index: 1000
+tree_item_index: 1100
 
 ---
 

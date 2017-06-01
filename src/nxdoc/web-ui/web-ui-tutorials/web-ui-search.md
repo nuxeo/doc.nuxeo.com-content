@@ -1,16 +1,22 @@
 ---
-title: Web UI Searches
+title: "HOWTO: Customize Searches"
 review:
     comment: ''
     date: '2017-01-16'
     status: ok
 toc: true
+details:
+     howto:
+         excerpt: Learn how to create a new search screen with View Designer.
+         level: Intermediate
+         tool: View Designer, code
+         topics: Web UI, View Designer
 labels:
     - lts2016-ok
     - nuxeo-web-ui
     - extension
     - search
-tree_item_index: 300
+tree_item_index: 500
 
 ---
 

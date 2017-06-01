@@ -1,17 +1,23 @@
 ---
-title: Web UI Theme Customization
+title: "HOWTO: Customize Theme"
 review:
     comment: ''
     date: '2017-01-16'
     status: ok
 toc: true
+details:
+     howto:
+         excerpt: Learn how to customize themes in Nuxeo Web UI.
+         level: Advanced
+         tool: code
+         topics: Web UI
 labels:
     - lts2016-ok
     - nuxeo-web-ui
     - extension
     - themes
     - appearance
-tree_item_index: 900
+tree_item_index: 1000
 
 ---
 ## Themes
