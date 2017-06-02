@@ -70,7 +70,7 @@ You now have a document type ready to be used on your Web UI interface, the last
 To do so, you need to go on the **Resources** tab
 1. Click on the **UI** folder
 2. Click on the **Create** button, select a folder and name it **images**
-3. In this **Images** folder, create a `doctypes`folder.
+3. In this **images** folder, create a `doctypes`folder.
 4. In the **doctypes** click on the **Upload** button and select your image. <br/>
   You have to respect the following folder structure, and name the icon as your document type in lowercase in order to display the icon.
   ![]({{file name='tree-structure-icon-contract.png'}} ?w=200,border=true)
@@ -80,7 +80,7 @@ To do so, you need to go on the **Resources** tab
 
 You can now deploy your project and see what it looks like!
 
-![]({{file name='contract-web-ui.png'}} ?w=350,border=true)
+![]({{file name='contract-web-ui-810.png'}} ?w=350,border=true)
 
 ## Technical Overview
 
