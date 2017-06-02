@@ -14,6 +14,7 @@ This Administration menu presents different submenus:
 - [Users & Groups](#users-groups)
 - [Vocabularies](#vocabularies)
 - [Audit](#audit)
+- [Cloud Services](#cloud-services)
 
 ## Analytics
 
@@ -313,3 +314,9 @@ To delete vocabulary entry, click on the **Delete** button&nbsp;![]({{file name=
 The Audit view enables you to query the application audit and get reports on the activities and actions on the repository.
 
 ![]({{file name='admin-audit-view_web-ui.png'}} ?w=600,border=true)
+
+## Cloud Services
+
+The Cloud Services view enables you to set up the connection to external cloud services, typically for [Nuxeo Live Connect]({{page version='' space='nxdoc' page='nuxeo-live-connect'}}).
+
+![]({{file name='cloud-services.png'}} ?w=600,border=true)
