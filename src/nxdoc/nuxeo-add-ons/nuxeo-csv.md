@@ -207,11 +207,25 @@ Installing this addon adds a button "Import a CSV file" for all users that have 
 
 {{! /multiexcerpt}}
 
+{{#> callout type='info' }}
+
+Web UI and JSF UI
+
+This page gives all the necessary steps to import content with the CSV addon from JSF UI and Web UI.
+
+{{/callout}}
+
 ## Installation
 
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
-After the package is installed, users have a **Import a CSV file** button available in workspaces, folders and in any document where they can import files.
+### With Web UI
+After the package is installed, a new tab called **CSV** is available in the default creation form.
+
+![]({{file name='nuxeo-csv-button-webui.png'}} ?w=350,border=true)
+
+### With JSF UI
+With JSF UI, users have a **Import a CSV file** button available in the folder toolbar of the workspaces, folders and in any document where they can import files.
 
 ![]({{file name='nuxeo-csv-button.png'}} ?w=350,border=true)
 
@@ -259,12 +273,6 @@ In the example above:
 
 - `name` must be a unique value. If a CSV file contains more than one line with the same `name` only a single document with that name will be imported.
 
-{{#> callout type='note' }}
-
-Nuxeo CSV does support complex properties but not blob definition.
-
-{{/callout}}
-
 ## Using Nuxeo CSV
 
 ### Basic Import
@@ -274,20 +282,47 @@ To import documents using Nuxeo CSV:
 1.  Prepare the CSV file that defines the documents to import, following the rules explained in the [CSV file definition section](#nuxeo-csv-import-file-definition).
     Some specific use cases are explained below.
 2.  In the Nuxeo Platform, go on the workspace or folder you want to import documents into.
-3.  Click on the **Import a CSV file** button in the workspace or folder you want to import documents into.
+3.  To select the CSV file :
+   * With Web UI, click on the **+ rounded button** displayed on the bottom right side, and open the CSV tab. Then you can either drag n drop your CSV file of select it manually.
+   ![]({{file name='nuxeo-csv-plus.png'}} ?w=550)  
+   * With JSF UI, click on the **Import a CSV file** button in the workspace or folder you want to import documents into.
 4.  Browse and select your CSV file.
-    ![]({{file name='CSV Importer beginning.png'}} ?w=550)
+<table style="width:100%">
+  <tr>
+    <th>Web UI</th>
+    <th>JSF UI</th>
+  </tr>
+  <tr>
+    <td>![]({{file name='nuxeo-csv-file-selected.png'}} ?w=550) </td>
+    <td>![]({{file name='CSV Importer beginning.png'}} ?w=550)</td>
+  </tr>
+</table>
 5.  Optionally check the box **<span style="color: rgb(68,68,68);">Send me the import report by email</span>** if you want to receive an email when the import is done which shows how the import went. This is useful in case of imports that take a long time.
 6.  Optionally check the box **Enable document import mode** if you want to import documents while maintaining original UUID, creation date, modification date, author and contributors.
 7.  Click on the **Process** button.
     The import starts. You can either:
 
-    *   wait for the import to be completed.
+    *   Wait for the import to be completed.
         When it is completed, a report of the import is displayed ;
-        ![]({{file name='CSV Importer Imported.png'}} ?w=550,border=true)
-    *   start a new import;
-    *   browse the application.If you checked the box ** Send me the import report by email >** , you receive an email once the import is completed.
+<table style="width:100%">
+  <tr>
+    <th>Web UI</th>
+    <th>JSF UI</th>
+  </tr>
+  <tr>
+    <td>![]({{file name='nuxeo-csv-results-webui.png'}} ?w=550,border=true)</td>
+    <td>![]({{file name='CSV Importer Imported.png'}} ?w=550,border=true)</td>
+  </tr>
+</table>
+    *   Start a new import;
+    *   Browse the application.If you checked the box ** Send me the import report by email >** , you receive an email once the import is completed.
     ![]({{file name='CSVImporteremail.png'}} ?w=400,border=true)
+
+    {{#> callout type='warning' }}
+
+    If you get an error with the CSV import, Web UI doesn't currently display the detailed report table in the CSV import result interface. This feature is currently being developed by the Nuxeo development team in order to homogenize the interface between Web UI and JSF UI
+
+    {{/callout}}
 
 ### Importing a Document Tree Structure
 
@@ -321,16 +356,44 @@ On your CSV file, use the `file:content` property in the first line and the name
 
 You can use the [attached ZIP sample]({{file name='Nuxeo-CSV-sample.zip'}}) to test the import of files.
 
-Complex properties (mono and multi-valued) need to be JSON formatted like (see the example below):
+### Import complex property values
 
-```csv
-"name","type","dc:description","dc:title","dc:contributors","dc:issued","note:note","complexTest:complexItem","complexTest:listItem"
-"myfile","File","a simple file","My File","contributor1|contributor2|contributor3","10/01/2010","","",""
-"mynote","Note","a simple note","My Note","bender|leela|fry","12/12/2012","note content","",""
-"mycomplexfile","ComplexFile","a complex file","My Complex File","joe","12/21/2013","","{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\    "}","[{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\"},{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString2\"}]"
+Complex properties (mono and multi-valued) need to be JSON formatted. To do so, we advise you to use the JSON Export action from the [Nuxeo Dev Tool Browser extension]({{page page='nuxeo-dev-tools-extension'}}).
+
+Let's illustrate it with a multivalued complex property called `product:composition` with two items (`material` and `percentage` as string fields). Then the CSV file should be structured like:
+
+```
+"name","type","dc:title","product:price","product:reference","product:year","product:season","product:colors","file:content","product:composition"
+"shoes/shoes-428608_640","product","Shoes #1","67$","DTYIUUB","2013","spring","black|green","Shoes/shoes-428608_640.jpg","[{\"material\":\"coton\",\"percentage\":\"89\"},{\"material\":\"jean\",\"percentage\":\"11\"}]"
 ```
 
-You can use the [attached file]({{file name='docs_ok.csv'}}) to better understand the syntax.
+{{#> callout type='note'}}
+Quotes should be escaped with `\` when using JSON format with complex properties
+{{/callout}}
+
+In this case, the JSON export of the imported document is :
+
+```
+ (...)
+ "product:composition": [
+     {
+       "material": "coton",
+       "percentage": "89"
+     },
+     {
+       "material": "jean",
+       "percentage": "11"
+     }
+   ],
+   "product:year": "2013",
+   "product:colors": [
+     "black",
+     "green"
+   ],
+   "product:season": "spring",
+(...)
+```
+
 
 {{#> callout type='note'}}
 Dates inside a complex type use W3C format and not MM/dd/yyyy as for simple type dates.
