@@ -241,7 +241,7 @@ This page details standard architecture options to deploy a Nuxeo cluster.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Before Reading'}}
-This page assumes you are already familiar with the different components of a Nuxeo cluster. If not, you should have a look at our [Nuxeo architecture introduction]({{page page='nuxeo-architecture-introduction'}}) page first.
+This page assumes you already are familiar with the different components of a Nuxeo cluster. If not, you should have a look at our [Nuxeo architecture introduction]({{page page='nuxeo-architecture-introduction'}}) page first.
 {{/callout}}
 
 ## High Availability Production Architecture
@@ -258,7 +258,7 @@ The standard Nuxeo cluster architecture providing high availability is composed 
 
 ### Deploying in Cloud or Container Based Deployment
 
-This diagram translates perfectly to an on premise deployment using a container based technology like docker and we provide a ready to use docker image for Nuxeo Server.
+This diagram translates perfectly to an on premise deployment using a container based technology like docker and we provide a ready to use [docker image]({{page version='' space='nxdoc' page='setting-up-your-nuxeo-environment'}}#docker) for Nuxeo Server.
 
 Nuxeo Platform also makes it easy to deploy in the cloud since:
 - We are standard based
@@ -279,7 +279,7 @@ For instance considering Amazon AWS as a possible cloud infrastructure provider:
 The same idea is true for all the cloud specific services like provisioning and monitoring. We try to provide everything so that the deployment in the target IaaS is easy and painless:
 
 - Nuxeo is packaged (among other options) as Debian packages or a docker image
-    - We can easily setup Nuxeo on top of AMI
+    - We can easily setup Nuxeo on top of Amazon Machine Images
     - We can use CloudFormation and we provide a template for it
 - Nuxeo exposes its metrics via JMX
     - CloudWatch can monitor Nuxeo
@@ -289,7 +289,7 @@ The same idea is true for all the cloud specific services like provisioning and 
 
 ### Compact Deployment With High Availability
 
-A frequent question is to know whether some applications can be merged on the same machine. Answer is yes! We will show such an option here and explain the design choices.
+A frequent question is to know whether some applications can be merged on the same machine or not. The answer is yes! We will show such an option here and explain the design choices.
 
 ![]({{file name='nuxeo-cluster-compact-architecture.png'}} ?border=true)
 <!-- Source: https://www.lucidchart.com/documents/edit/0eb7242e-9a34-4d1f-8568-9682f8ab26a8 -->
@@ -310,7 +310,7 @@ Providing transparent upgrades without service interruption using a very limited
 In this architecture:
 1. A load balancer with sticky sessions is used.
 1. A total of two machines are prepared for the application cluster. Each machine holds a Nuxeo server node, a Redis node, and a reverse proxy. More machines can be added later for scalability purpose.
-1. Since we have two Redis nodes, we take advantage from it to configure Redis in <a href="https://redis.io/topics/replication" target="_blank">master / slave mode</a>.
+1. Since we have two Redis nodes, we take advantage from it to configure Redis in [master / slave mode](https://redis.io/topics/replication).
 1. A single Elasticsearch node is used.
 
 #### Limitations
@@ -325,12 +325,12 @@ The database server is the most impacting of the two, as having it fail means no
 - Use a distributed / failsafe database like MongoDB
 
 ###### Elasticsearch Server
-Some features won't be available in your application during an Elasticsearch downtime: search screens and views that depend on the Elasticsearch index mainly. But even in a hard failure situation leading to complete data loss, it will not be that impacting as long as you configure your Nuxeo server to store audit and sequences in the database: after reinstalling Elasticsearch the document index can be rebuilt easily using Nuxeo server.
+Some features won't be available in your application during an Elasticsearch downtime: search screens and views that depend on the Elasticsearch index mainly. But even in a hard failure situation leading to complete data loss, it will not be that impacting as long as you configure your Nuxeo Server to store audit and sequences in the database: after reinstalling Elasticsearch the document index can be rebuilt easily using Nuxeo Server.
 
 #### Redis in Master / Slave Mode
-Redis server is known to be very resilient, and is less impacting when failing ; this is why we considered deploying it in master / slave mode in our architecture schema. If it ever fails, consequences will be rather low as it mainly stores transient data, but you would still lose pending asynchronous jobs in the process. Losing these jobs will result in a loss of features in the application, but will not prevent it from working overall.
+Redis server is known to be very resilient, and is less impacting when failing; this is why we considered deploying it in master / slave mode in our architecture schema. If it ever fails, consequences will be rather low as it mainly stores transient data, but you would still lose pending asynchronous jobs in the process. Losing these jobs will result in a loss of features in the application, but will not prevent it from working overall.
 
-Depending on the importance of these jobs in your application (for instance they could be considered mission critical in a DAM application), you have options to provide high availability using Redis. You can refer to our [Nuxeo architecture introduction]({{page page='nuxeo-architecture-introduction'}}#redis-failover-options) page for details. Remember that if choosing sentinel you will need at least 3 Redis nodes to prevent the split-brain problem.
+Depending on the importance of these jobs in your application (for instance they could be considered mission critical in a DAM application), you have options to provide high availability using Redis. You can refer to our [Nuxeo architecture introduction]({{page page='nuxeo-cluster-architecture-introduction'}}#redis) page for details. Remember that if choosing sentinel you will need at least 3 Redis nodes to prevent the split-brain problem.
 
 * * *
 
