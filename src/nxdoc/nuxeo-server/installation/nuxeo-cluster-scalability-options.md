@@ -18,7 +18,7 @@ This page describes how your Nuxeo cluster can scale depending on your needs.
 
 ## Scaling out Processing
 
-Nuxeo server by itself allows to scale out processing: you can add new nodes as the number of requests increase.
+Nuxeo Server by itself allows to scale out processing: you can add new nodes as the number of requests increase.
 ![]({{file name='scaling-out-processing.png'}} ?border=true)
 <!-- Source: https://www.lucidchart.com/documents/edit/0eb7242e-9a34-4d1f-8568-9682f8ab26a8 -->
 
@@ -71,13 +71,13 @@ For instance a file having the following checksum: `38c8a503c45169a0668c4ef0c2dc
 - That means we reach a total of 1 679 616 folder combinations in total (36^4),
 - If we store only 1000 files per folder, we are already way over a billion and a half files stored (1 679 616 000).
 
-Even older filesystems have no performance problem until 10 000 files per folder, which gives you a lot of latitude. Past a certain point, you may wish however to lower costs by distributing files between different hardware solutions. This can easily be achieved by adding repositories in your application, and we describe this solution in the "scaling database storage" below.
+Even older filesystems have no performance problem until 10 000 files per folder, which gives you a lot of latitude. Past a certain point, you may wish however to lower costs by distributing files between different hardware solutions. This can easily be achieved by adding repositories in your application, and we describe this solution in the [scaling database storage](#scaling-database-storage) below.
 
 ### Scaling Database Storage
 
 #### NoSQL Databases
 
-One the key advantages of NoSQL databases like MongoDB is that they allow to scale out by simply adding nodes to the cluster and natively offer sharding on the nodes.
+One of the key advantages of NoSQL databases, like MongoDB, is that they allow to scale out by simply adding nodes to the cluster and natively offer sharding on the nodes.
 
 #### Relational Databases
 

@@ -22,8 +22,8 @@ This page introduces the principles and components of a Nuxeo cluster. If you ar
 
 ## Cluster Basics
 Setting up a Nuxeo cluster consists in answering two main constraint types, independently or in combination:
-1. **Scalability** - My setup has to scale easily without sacrificing performances to adapt to a varying load.
-1. **High Availability** - When something goes wrong, I should be able to restore service quickly, losing as little data as possible in the process.
+1. **Scalability** - The setup has to scale easily without sacrificing performances to adapt to a varying load.
+1. **High Availability** - When something goes wrong, you should be able to restore service quickly, losing as little data as possible in the process.
 
 In order to scale out and provide high availability (HA), Nuxeo provides a simple clustering solution. When cluster mode is enabled, you can have several Nuxeo server nodes connected to the same components, and you can then simply add more Nuxeo server nodes if you need to serve more requests.
 
@@ -44,9 +44,9 @@ We will explain the role of each component below.
 
 ## Load Balancers
 
-The load balancers are used to allocate load between the Nuxeo nodes. They can possibly be configured to redirect some particular queries to specific nodes. The latter can be interesting in some use cases: 
+The load balancers are used to allocate load between the Nuxeo nodes. They can possibly be configured to redirect some particular queries to specific nodes. The latter can be interesting in some use cases:
 - When using Nuxeo Drive to make sure that even during an unexpected activity peak only specific nodes can possibly slow down, while keeping usual performances for the other activities.
-- When having adapted hardware with nodes dedicated to heavy processing like video conversion. 
+- When having adapted hardware with nodes dedicated to heavy processing like video conversion.
 
 Load balancing can be managed by software or hardware, but in all cases (even if you use Nuxeo as a bare server without a UI) the only constraint we ask for is to have a load balancer configured with sticky sessions.
 
@@ -66,7 +66,7 @@ Additionally, when some clients use a WAN to access the server, the reverse prox
 
 ## Nuxeo Server
 
-Nuxeo server can be installed in a variety of ways, including a docker container, a VM image, a debian repository, or a simple cross-platform zip file. It is distributed in a prepackaged Tomcat server that includes Nuxeo, a transaction manager (JTA), a pool manager (JCA). The WAR file is generated dynamically upon each Nuxeo server restart, allowing easy configuration changes and customization deployment. Further information on this subject can be found in the [Understanding Bundles Deployment]({{page page='understanding-bundles-deployment'}}) documentation.
+Nuxeo server can be installed in a variety of ways, including a docker container, a VM image, a debian repository, or a simple cross-platform zip file. It is distributed in a prepackaged Tomcat server that includes Nuxeo, a transaction manager (JTA) and a pool manager (JCA). The WAR file is generated dynamically upon each Nuxeo server restart, allowing easy configuration changes and customization deployment. Further information on this subject can be found in the [Understanding Bundles Deployment]({{page page='understanding-bundles-deployment'}}) documentation.
 
 Nuxeo server can be deployed anywhere, including as an embedded tool. Having a lightweight embedded Nuxeo server is a solution commonly used for unit testing or offline access. For the latter, the Nuxeo server would be embedded client side (for instance in a tablet) to allow offline access, and would synchronize with a central Nuxeo server when going back online.
 
@@ -74,13 +74,13 @@ For a high availability cluster, a minimum of two Nuxeo server nodes is required
 
 ## Database
 
-The database is a core component for your Nuxeo cluster infrastructure, since it will store the document hierarchy, all document properties, and will be used as well for various queries. Nuxeo supports many databases, both NoSQL and relational ones. Among them, MongoDB and PostgreSQL are the ones that provide the best overall performances currently for Nuxeo usage. 
+The database is a core component for your Nuxeo cluster infrastructure, since it will store the document hierarchy, all document properties, and will be used as well for various queries. Nuxeo supports many databases, both NoSQL and relational ones. Among them, MongoDB and PostgreSQL are the ones that provide the best overall performances currently for Nuxeo usage.
 
 Each database has its own solutions for high availability, therefore we may not recommend a specific option here. You may however refer to our [database configuration]({{page page='database-configuration'}}) documentation for further details.
 
 ## Elasticsearch
 
-Elasticsearch is used to relieve the database from the costliest operations. 
+Elasticsearch is used to relieve the database from the costliest operations.
 - It keeps indexes on the documents in order to allow blazingly fast searches and modern search options like real time filtering (aka facets), even on very high volumes.
 - It stores the documents audit log. Since every operation on a document in Nuxeo is stored for possible audit purpose, the corresponding table would grow very rapidly and possibly reach millions of tuples when stored in the database. Using Elasticsearch, this is not a problem anymore.
 - It scales horizontally and provides constant performance even with growing content size.
@@ -91,7 +91,7 @@ Elasticsearch remains an optional component and can be deactivated if needed. Bu
 Note that **you always need to have an odd number of machines for Redis and Elasticsearch** (3, 5, 7...). It is required in order to safely handle failover when a network partioning error occurs.
 
 
-Imagine that your cluster gets cut in half: 2 nodes on side A cannot communicate anymore with the third node on side B. In this situation, if the master node is the one isolated on side B, failover can be achieved properly because a majority (the 2 nodes on side A) can elect a new master node between them and keep service available.<br /><br /> 
+Imagine that your cluster gets cut in half: 2 nodes on side A cannot communicate anymore with the third node on side B. In this situation, if the master node is the one isolated on side B, failover can be achieved properly because a majority (the 2 nodes on side A) can elect a new master node between them and keep service available.<br /><br />
 
 If you had 4 nodes in the same situation, service wouldn't be available anymore because a majority could not be obtained when voting. This is known as the split-brain problem. This also means that the minimum number of nodes to obtain high availability is of 3.
 {{/callout}}
@@ -104,14 +104,13 @@ Redis can also serve as a centralized caching tool, allowing to share cache betw
 
 For high availability, a Redis cluster with a minimum of three nodes is required (for the same reasons than Elasticsearch). Two options exist to handle automatic failover:
 
-<!-- Anchor used in standard high availability nuxeo cluster archi page --> <a name="redis-failover-options"></a>
 ### Redis Sentinel
 
 Redis Sentinel is the open source option to provide automatic Redis node failover. Nuxeo server's API has been adapted to be used with Redis Sentinel, and some of our customers happily use it in production. Before choosing it though, you need to know that RedisLabs (creators of Redis) do not officially support it, which means that in case of a problem we will not be able to provide support either.
 
 ### Redis Entreprise
 
-Redis Entreprise is our recommendation for a high availability Redis cluster, as it gets support from RedisLabs. You may visit the RedisLabs website for more information about the product.
+Redis Entreprise is our recommendation for a high availability Redis cluster, as it gets support from RedisLabs. You may visit the [RedisLabs website](https://redislabs.com/why-redis/redis-enterprise/) for more information about the product.
 
 ## File System
 
@@ -125,9 +124,9 @@ This means you can define _"where you want to manage your data"_ and because the
 
 ### Document Storage
 
-You can configure
+You can configure:
 
-- Where you store the Document metadata and hierarchy
+- Where you store the document metadata and hierarchy
     - SQL Database (PostgresSQL, Oracle, MSSQL, MySQL, Amazon RDS)
     - MongoDB
 - Where you store the binary streams (the files you attach to documents)
