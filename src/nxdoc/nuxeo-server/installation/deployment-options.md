@@ -11,6 +11,8 @@ labels:
     - architecture
 toc: true
 tree_item_index: 100
+version_override:
+  'FT': /nxdoc/standard-high-availability-nuxeo-cluster-architecture
 history:
     -
         author: Manon Lumeau
