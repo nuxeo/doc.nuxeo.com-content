@@ -5,7 +5,7 @@ labels:
     - deployment
     - architecture
 review:
-    date: '2017-05-30'
+    date: '2017-06-06'
     status: ok
     comment: ''
 toc: true
@@ -18,7 +18,7 @@ This page describes how your Nuxeo cluster can scale depending on your needs.
 
 ## Scaling out Processing
 
-Nuxeo Server by itself allows to scale out processing: you can add new nodes as the number of requests increase.
+Nuxeo Server by itself allows you to scale out processing: you can add new nodes as the number of requests increase.
 ![]({{file name='scaling-out-processing.png'}} ?border=true)
 <!-- Source: https://www.lucidchart.com/documents/edit/0eb7242e-9a34-4d1f-8568-9682f8ab26a8 -->
 
@@ -38,7 +38,7 @@ When correctly configured, most databases can handle a heavy load of store and r
 So, a first solution to scale out the storage layer is to split the work between:
 
 - The database
-    - Focus on Store & Retrieve operation
+    - Focus on Store & Retrieve operations
     - Small technical queries
 - Elasticsearch index
     - Handle complex search used to build the screens
@@ -46,7 +46,7 @@ So, a first solution to scale out the storage layer is to split the work between
 
 At the Nuxeo level, directing a query to the repository database or to Elasticsearch is just a matter of configuration: code and query remain the same. You can refer to the [moving load from database to Elasticsearch]({{page page='moving-load-from-database-to-elasticsearch'}}) page for details.
 
-This approach allows to leverage Elasticsearch capabilities to its fullest:
+This approach allows you to leverage Elasticsearch capabilities to its fullest:
 
 - Very fast query engine with advanced querying options
 - Capability to scale out easily
@@ -64,9 +64,9 @@ Nuxeo natively deduplicates files attached to your documents, which makes the ne
 
 When storing files in the cloud using for instance the native Amazon S3 connector we provide, you don't need to worry about how files will be distributed on the filesystem.
 
-When storing files on premise, Nuxeo arranges to maximize performances by distributing files in subfolders. A md5 checksum of the file is calculated, and the file is stored in a two level folder structure named after the first characters of the checksum.
+When storing files on premise, Nuxeo arranges to maximize performances by distributing files in subfolders. A md5 checksum of the file is calculated, and the file is stored in a two-level folder structure named after the first characters of the checksum.
 
-For instance a file having the following checksum: `38c8a503c45169a0668c4ef0c2dc12ec` would be stored in a `38`/`c8` folder structure. The number of characters used for the folder naming is easily configurable, although it's unlikely you will need more than the two characters used by default:
+For example, a file having the following checksum: `38c8a503c45169a0668c4ef0c2dc12ec` would be stored in a `38`/`c8` folder structure. The number of characters used for the folder naming is easily configurable, although it's unlikely you will need more than the two characters used by default:
 - Each folder level is made of 1296 combinations (36 * 36 characters),
 - That means we reach a total of 1 679 616 folder combinations in total (36^4),
 - If we store only 1000 files per folder, we are already way over a billion and a half files stored (1 679 616 000).
@@ -87,9 +87,9 @@ Unlike NoSQL databases, relational database nodes can't simply be added to handl
 - Leveraging replicated ReadOnly SQL DB nodes is complex in terms of transaction management
 
 However, the Nuxeo Platform does provide a way to scale out the data: using several repositories.
-The idea is that a single Nuxeo application can be bound to several repositories, each repository being a database instance and a file storage solution. So, if one application is connected to two repositories, the data will be partitioned between two couples (ex: (DB+FS) + (DB+S3)).
+The idea is that a single Nuxeo application can be bound to several repositories, each repository being a database instance and a file storage solution. So if one application is connected to two repositories, the data will be partitioned between two couples (ex: (DB+FS) + (DB+S3)).
 
-The repositories are like mount points: The default configuration is to have only one repository named "Default Repository" and mounted under `/default/`. But you can add new repositories as needed. These new repositories will appear inside the application as several content roots. This typically means that when accessing a document, you have to know what is the host repository.
+The repositories are like mount points: The default configuration is to have only one repository named "Default Repository" and mounted under `/default/`. But you can add new repositories as needed. These new repositories will appear inside the application as several content roots. This typically means that when accessing a document, you have to know what the host repository is.
 
 Typical use cases for data partitioning include:
 

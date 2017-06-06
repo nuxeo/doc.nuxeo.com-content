@@ -2,7 +2,7 @@
 title: Nuxeo and Redis
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-06-06'
     status: ok
 labels:
     - lts2016-ok
@@ -111,7 +111,7 @@ The idea is that, at least for now, Redis is not a hard requirement for running 
 
 {{#> callout type='info' }}
 
-Nuxeo can use Redis to store both data to be persisted (jobs list for instance) and transient data (cache data for instance). After a normal cluster shutdown, you can flush (erase) the transient data in Redis. Note however that Nuxeo can not work with a Redis configured as [LRU cache](http://redis.io/topics/lru-cache), there should be no eviction under memory pressure.
+Nuxeo can use Redis to store both data to be persisted (e.g. jobs list) and transient data (e.g. cache data). After a normal cluster shutdown, you can flush (erase) the transient data in Redis. Note however that Nuxeo can not work with a Redis configured as an [LRU cache](http://redis.io/topics/lru-cache); there should be no eviction under memory pressure.
 
 {{/callout}}
 
