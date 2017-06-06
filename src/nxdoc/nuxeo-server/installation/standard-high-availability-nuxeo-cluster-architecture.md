@@ -3,7 +3,7 @@ title: Standard High Availability Nuxeo Cluster Architecture
 description: This page details standard architecture options to deploy a Nuxeo cluster.
 review:
     comment: ''
-    date: '2017-05-30'
+    date: '2017-06-06'
     status: ok
 labels:
     - lts2016-ok
@@ -249,22 +249,22 @@ This page assumes you already are familiar with the different components of a Nu
 ![]({{file name='nuxeo-cluster-logical-architecture.png'}} ?border=true)
 
 The standard Nuxeo cluster architecture providing high availability is composed of:
-1. Two load balancers in front with sticky sessions handle incoming requests and direct them to the appropriate Nuxeo server nodes.
+1. Two load balancers in front with sticky sessions handling incoming requests and directing them to the appropriate Nuxeo server nodes.
 1. A reverse proxy to protect each Nuxeo server node (usually Apache or Nginx).
-1. At least two Nuxeo server nodes are available. You can add any number of nodes to scale out performances.
-1. At least three nodes are available for the Elasticsearch cluster. Same for Redis. Contrarily to Nuxeo server nodes, these two components always require an odd number of nodes to avoid the split-brain problem, which means you need to add nodes by batches of two minimum when wishing to scale out performances.
+1. At least two Nuxeo server nodes. You can add any number of nodes to scale out performances.
+1. At least three nodes for the Elasticsearch cluster, same for Redis. Contrarily to Nuxeo server nodes, these two components always require an odd number of nodes to avoid the split-brain problem, which means you need to add nodes by batches of two minimum when wishing to scale out performances.
 1. A database system providing high availability. Each solution has its own options for this, therefore we can't go into further details here.
 1. A shared file system that is used to store binary files.
 
 ### Deploying in Cloud or Container Based Deployment
 
-This diagram translates perfectly to an on premise deployment using a container based technology like docker and we provide a ready to use [docker image]({{page version='' space='nxdoc' page='setting-up-your-nuxeo-environment'}}#docker) for Nuxeo Server.
+This diagram translates perfectly to an on-premise deployment using a container-based technology like docker and we provide a ready-to-use [docker image]({{page version='' space='nxdoc' page='setting-up-your-nuxeo-environment'}}#docker) for Nuxeo Server.
 
 Nuxeo Platform also makes it easy to deploy in the cloud since:
-- We are standard based
-- The pluggable component model (extension points) allows to easily change backend implementation when needed.
+- We are standard-based
+- The pluggable component model (extension points) allows you to easily change backend implementation when needed.
 
-For instance considering Amazon AWS as a possible cloud infrastructure provider:
+For example, considering Amazon AWS as a possible cloud infrastructure provider:
 
 ![]({{file name='aws-deployment.png'}} ?border=true)
 <!-- Source: https://www.lucidchart.com/documents/edit/0eb7242e-9a34-4d1f-8568-9682f8ab26a8 -->
@@ -289,7 +289,7 @@ The same idea is true for all the cloud specific services like provisioning and 
 
 ### Compact Deployment With High Availability
 
-A frequent question is to know whether some applications can be merged on the same machine or not. The answer is yes! We will show such an option here and explain the design choices.
+A frequently asked question is whether some applications can be merged on the same machine or not. The answer is yes! We will show such an option here and explain the design choices.
 
 ![]({{file name='nuxeo-cluster-compact-architecture.png'}} ?border=true)
 <!-- Source: https://www.lucidchart.com/documents/edit/0eb7242e-9a34-4d1f-8568-9682f8ab26a8 -->
@@ -315,10 +315,10 @@ In this architecture:
 
 #### Limitations
 ##### Potential Single Point of Failures
-Two potential single point of failures exist in this architecture: the Elasticsearch server and the database server.
+Two potential single points of failure exist in this architecture: the Elasticsearch server and the database server.
 
 ###### Database Server
-The database server is the most impacting of the two, as having it fail means not being able to store or retrieve documents anymore. To prevent the database server from becoming a single point of failure, you have several options:
+The database server is the most impacting of the two; if it fails, you won't able to store or retrieve documents anymore. To prevent the database server from becoming a single point of failure, you have several options:
 
 - Use database replication
 - Use a clusterized database (like Oracle RAC)

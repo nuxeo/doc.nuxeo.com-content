@@ -2,7 +2,7 @@
 title: Nuxeo Clustering Configuration
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-06-06'
     status: ok
 labels:
     - lts2016-ok
