@@ -321,16 +321,39 @@ On your CSV file, use the `file:content` property in the first line and the name
 
 You can use the [attached ZIP sample]({{file name='Nuxeo-CSV-sample.zip'}}) to test the import of files.
 
-Complex properties (mono and multi-valued) need to be JSON formatted like (see the example below):
+### Import complex property values
 
-```csv
-"name","type","dc:description","dc:title","dc:contributors","dc:issued","note:note","complexTest:complexItem","complexTest:listItem"
-"myfile","File","a simple file","My File","contributor1|contributor2|contributor3","10/01/2010","","",""
-"mynote","Note","a simple note","My Note","bender|leela|fry","12/12/2012","note content","",""
-"mycomplexfile","ComplexFile","a complex file","My Complex File","joe","12/21/2013","","{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\    "}","[{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString1\"},{\"arrayProp\":[\"1\"],\"boolProp\":true,\"stringProp\":\"testString2\"}]"
+Complex properties (mono and multi-valued) need to be JSON formatted. To do so, we advise you to use the JSON Export action from the Nuxeo Dev Tool Browser extension.
+
+Let's illustrate it with a multivalued complex property called `product:composition` with two items (`material` and `percentage` as string fields). Then the CSV file should be structured like:
+
+```
+"name","type","dc:title","product:price","product:reference","product:year","product:season","product:colors","file:content","product:composition"
+"shoes/shoes-428608_640","product","Shoes #1","67$","DTYIUUB","2013","spring","black|green","Shoes/shoes-428608_640.jpg","[{\"material\":\"coton\",\"percentage\":\"89\"},{\"material\":\"jean\",\"percentage\":\"11\"}]"
 ```
 
-You can use the [attached file]({{file name='docs_ok.csv'}}) to better understand the syntax.
+In this case, the JSON export of the imported document is :
+
+```
+(...)
+"product:composition": [
+      {
+        "material": "coton",
+        "percentage": "89"
+      },
+      {
+        "material": "jean",
+        "percentage": "11"
+      }
+    ],
+    "product:year": "2013",
+    "product:colors": [
+      "black",
+      "green"
+    ],
+    "product:season": "spring",
+(...)
+```
 
 {{#> callout type='note'}}
 Dates inside a complex type use W3C format and not MM/dd/yyyy as for simple type dates.
