@@ -23,6 +23,10 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/GoAO'
     source_link: /display/NXDOC/Deployment+Options
 tree_item_index: 1240
+version_override:
+  'LTS 2016': 810/nxdoc/deployment-options
+  'LTS 2015': 710/nxdoc/deployment-options
+  '6.0': 60/nxdoc/deployment-options
 history:
     -
         author: Manon Lumeau
