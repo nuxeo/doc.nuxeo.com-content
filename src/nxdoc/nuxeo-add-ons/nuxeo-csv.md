@@ -207,9 +207,7 @@ Installing this addon adds a button "Import a CSV file" for all users that have 
 
 {{! /multiexcerpt}}
 
-{{#> callout type='info' }}
-
-Web UI and JSF UI
+{{#> callout type='info' heading='Web UI and JSF UI' }}
 
 This page gives all the necessary steps to import content with the CSV addon from JSF UI and Web UI.
 
@@ -220,14 +218,14 @@ This page gives all the necessary steps to import content with the CSV addon fro
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
 ### With Web UI
-After the package is installed, a new tab called **CSV** is available in the default creation form.
+After the package is installed, a new tab called **CSV** is available on the default creation form.
 
-![]({{file name='nuxeo-csv-button-webui.png'}} ?w=350,border=true)
+![]({{file name='nuxeo-csv-button-webui.png'}} ?w=450,border=true)
 
 ### With JSF UI
-With JSF UI, users have a **Import a CSV file** button available in the folder toolbar of the workspaces, folders and in any document where they can import files.
+Users have an **Import a CSV file** button available in the folder toolbar of the workspaces, folders and in any document where they can import files.
 
-![]({{file name='nuxeo-csv-button.png'}} ?w=350,border=true)
+![]({{file name='nuxeo-csv-button.png'}} ?w=450,border=true)
 
 ## {{> anchor 'configuration'}}Configuration
 
@@ -282,28 +280,23 @@ To import documents using Nuxeo CSV:
 1.  Prepare the CSV file that defines the documents to import, following the rules explained in the [CSV file definition section](#nuxeo-csv-import-file-definition).
     Some specific use cases are explained below.
 2.  In the Nuxeo Platform, go on the workspace or folder you want to import documents into.
-3.  To select the CSV file :
-   * With Web UI, click on the **+ rounded button** displayed on the bottom right side, and open the CSV tab. Then you can either drag n drop your CSV file of select it manually.
-   ![]({{file name='nuxeo-csv-plus.png'}} ?w=550)  
+3.  To select the CSV file:
+   * With Web UI, click on the **Create** displayed on the bottom right side, and open the CSV tab. Then you can either drag n drop your CSV file of select it manually.
+   ![]({{file name='nuxeo-csv-plus.png'}} ?w=450)  
    * With JSF UI, click on the **Import a CSV file** button in the workspace or folder you want to import documents into.
 4.  Browse and select your CSV file.
-<table style="width:100%">
-  <tr>
-    <th>Web UI</th>
-    <th>JSF UI</th>
-  </tr>
-  <tr>
-    <td>![]({{file name='nuxeo-csv-file-selected.png'}} ?w=550) </td>
-    <td>![]({{file name='CSV Importer beginning.png'}} ?w=550)</td>
-  </tr>
-</table>
-5.  Optionally check the box **<span style="color: rgb(68,68,68);">Send me the import report by email</span>** if you want to receive an email when the import is done which shows how the import went. This is useful in case of imports that take a long time.
+
+|Web UI|JSF UI|
+|------|------|
+|![]({{file name='nuxeo-csv-file-selected.png'}} ?w=450,border=true)|![]({{file name='CSV Importer beginning.png'}} ?w=450,border=true)|
+
+
+5.  Optionally check the box **Send me the import report by email** if you want to receive an email when the import is done which shows how the import went. This is useful in case of imports that take a long time.
 6.  Optionally check the box **Enable document import mode** if you want to import documents while maintaining original UUID, creation date, modification date, author and contributors.
 7.  Click on the **Process** button.
     The import starts. You can either:
 
-    *   Wait for the import to be completed.
-        When it is completed, a report of the import is displayed ;
+    - Wait for the import to be completed. When it is completed, a report of the import is displayed;
 <table style="width:100%">
   <tr>
     <th>Web UI</th>
@@ -314,17 +307,16 @@ To import documents using Nuxeo CSV:
     <td>![]({{file name='CSV Importer Imported.png'}} ?w=550,border=true)</td>
   </tr>
 </table>
-    *   Start a new import;
-    *   Browse the application.If you checked the box ** Send me the import report by email >** , you receive an email once the import is completed.
+
+    - Start a new import;
+    - Browse the application. If you checked the box **Send me the import report by email**, you receive an email once the import is completed.
     ![]({{file name='CSVImporteremail.png'}} ?w=400,border=true)
 
     {{#> callout type='warning' }}
-
-    If you get an error with the CSV import, Web UI doesn't currently display the detailed report table in the CSV import result interface. This feature is currently being developed by the Nuxeo development team in order to homogenize the interface between Web UI and JSF UI
-
+    If you get an error with the CSV import, Web UI doesn't currently display the detailed report table in the CSV import result interface. This feature is currently being developed by the Nuxeo development team in order to homogenize the interface between Web UI and JSF UI.
     {{/callout}}
 
-### Importing a Document Tree Structure
+### Import a Document Tree Structure
 
 It is possible to import a hierarchy of documents using Nuxeo CSV. To do that, the `name` property is used to determine where the document should be created in the hierarchy of documents you are importing: its `name` is composed of the names of its parents separated by `/`, forming a path.
 
@@ -343,7 +335,7 @@ Here is an example of a CSV import that creates documents at the root of the wor
 
 You can use the [attached file]({{file name='nuxeo-csv-import-sample1.csv'}}) to test Nuxeo CSV to import a tree structure.
 
-### Importing Files
+### Import Files
 
 It is possible to create documents of type File and to upload their main attachment using Nuxeo CSV. This requires that your administrator [enabled it in the server configuration](#configuration) and to put the binary files in a folder that can be accessed by the server.
 
@@ -356,9 +348,9 @@ On your CSV file, use the `file:content` property in the first line and the name
 
 You can use the [attached ZIP sample]({{file name='Nuxeo-CSV-sample.zip'}}) to test the import of files.
 
-### Import complex property values
+### Import Complex Property Values
 
-Complex properties (mono and multi-valued) need to be JSON formatted. To do so, we advise you to use the JSON Export action from the [Nuxeo Dev Tool Browser extension]({{page page='nuxeo-dev-tools-extension'}}).
+Complex properties (mono and multi-valued) need to be JSON formatted. To do so, we advise you to use the JSON Export action from the [Nuxeo Dev Tools Extension]({{page page='nuxeo-dev-tools-extension'}}).
 
 Let's illustrate it with a multivalued complex property called `product:composition` with two items (`material` and `percentage` as string fields). Then the CSV file should be structured like:
 
@@ -371,7 +363,7 @@ Let's illustrate it with a multivalued complex property called `product:composit
 Quotes should be escaped with `\` when using JSON format with complex properties
 {{/callout}}
 
-In this case, the JSON export of the imported document is :
+In this case, the JSON export of the imported document is:
 
 ```
  (...)
@@ -394,13 +386,12 @@ In this case, the JSON export of the imported document is :
 (...)
 ```
 
-
 {{#> callout type='note'}}
 Dates inside a complex type use W3C format and not MM/dd/yyyy as for simple type dates.
 More information on the [W3C documentation](https://www.w3.org/TR/NOTE-datetime).
 {{/callout}}
 
-### Setting Lifecycle State When Creating Documents
+### Set Lifecycle State When Creating Documents
 
 It is possible to set the lifecycle state when the document is created through Nuxeo CSV, using the `ecm:currentLifeCycleState` property. This property is ignored when updating documents.
 
