@@ -199,11 +199,11 @@ Registration using `nuxeoctl` requires an Internet connection.
 Since 8.3, the `nuxeoctl` script allows you to register your instance using an existing Nuxeo Online Services or to subscribe to a trial as you register your instance.
 
 ```
-//Linux and Mac OS
+// Linux and Mac OS
 // You don't have a Nuxeo Online Service account
-$ ./$NUXEO_HOME/bin/nuxeoctl register-trial
+$ $NUXEO_HOME/bin/nuxeoctl register-trial
 // OR you already have a Nuxeo Online Service account
-$ nuxeoctl register
+$ $NUXEO_HOME/bin/nuxeoctl register
 
 // Windows
 // You don't have a Nuxeo Online Service account
