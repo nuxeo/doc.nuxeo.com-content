@@ -49,7 +49,7 @@ Once you are all set, you can navigate to the View Designer application to custo
 1. In the catalog properties on the left, select **File > content:blob > view** and drag and drop the element in the main view.
 1. Click on **Save**.
   {{#> callout type='note' }}
-  As you've modified one of the layout of your document type, you'll need to modify the others to correctly display your Contract on your instance.
+  When customizing a document type, you need to create all layouts in the View Designer in order to display the relevant properties.
   {{/callout}}
 1. Click on the **Edit** layout and then on the **CUSTOMIZE** button.
 1. Modify and/or delete fields as you wish them to be displayed when editing your document and click on **Save**.
