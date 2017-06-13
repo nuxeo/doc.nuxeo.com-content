@@ -459,7 +459,7 @@ Nuxeo for Salesforce<br/>
 `nuxeo-salesforce`
 </td>
 <td colspan="1">
-Public
+Registered access
 </td>
 <td colspan="1">
 [Documentation]({{page page='nuxeo-for-salesforce'}})
