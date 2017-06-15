@@ -2,7 +2,7 @@
 title: "HOWTO: Customize Workflow Tasks"
 review:
     comment: ''
-    date: 2017-01-16S
+    date: '2017-01-16'
     status: ok
 toc: true
 details:
