@@ -1,7 +1,7 @@
 ---
 title: "Nuxeo CLI Roadmap"
 description: See what evolutions and improvements are planned for Nuxeo CLI
-tree_item_index: 10
+tree_item_index: 400
 toc: false
 review:
     comment: ''
