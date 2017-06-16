@@ -128,6 +128,9 @@ The [Nuxeo Adobe CC Connector addon](https://connect.nuxeo.com/nuxeo/site/market
 
 ![]({{file name='NuxeoCCConnector.png'}} ?w=200,h=303,border=true)
 
+## Roadmap
+<iframe src="https://ext.prodpad.com/ext/roadmap/d0643a44cd1e962554922cc57e6d9f4da101ddbc" height="900" width="100%"></iframe>
+
 ## Requirements
 
 Nuxeo Adobe CC Connector is compliant with Adobe CC 2015 and 2017.
