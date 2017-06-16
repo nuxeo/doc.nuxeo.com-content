@@ -128,9 +128,6 @@ The [Nuxeo Adobe CC Connector addon](https://connect.nuxeo.com/nuxeo/site/market
 
 ![]({{file name='NuxeoCCConnector.png'}} ?w=200,h=303,border=true)
 
-## Roadmap
-<iframe src="https://ext.prodpad.com/ext/roadmap/d0643a44cd1e962554922cc57e6d9f4da101ddbc" height="900" width="100%"></iframe>
-
 ## Requirements
 
 Nuxeo Adobe CC Connector is compliant with Adobe CC 2015 and 2017.
@@ -197,6 +194,12 @@ Depending on the Adobe application some actions are available on the asset view:
 Updated documents in the Nuxeo instance or in an Adobe application will be replicated everywhere. A red icon indicates that synchronization to the server has to be done.
 
 ![]({{file name='NuxeoCCConnector_sync_required.png'}} ?w=400,h=376,border=true)
+
+## Roadmap
+
+Below are the evolutions and improvements planned on Nuxeo Adobe CC Connector.
+
+<iframe src="https://ext.prodpad.com/ext/roadmap/d0643a44cd1e962554922cc57e6d9f4da101ddbc" height="900" width="100%"></iframe>
 
 * * *
 
