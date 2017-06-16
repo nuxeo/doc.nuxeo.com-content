@@ -1,5 +1,6 @@
 ---
 title: "Nuxeo CLI Roadmap"
+description: See what evolutions and improvements are planned for Nuxeo CLI
 tree_item_index: 10
 toc: false
 review:
@@ -11,5 +12,7 @@ labels:
     - nuxeo-cli
     - roadmap
 ---
+
+Below are the evolutions and improvements planned on Nuxeo CLI.
 
 <iframe src="https://ext.prodpad.com/ext/roadmap/28226162001d984065181315a29fa454b4e2ab19" height="900" width="100%"></iframe>
