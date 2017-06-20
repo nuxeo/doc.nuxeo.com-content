@@ -226,6 +226,12 @@ window.nuxeo.importBlacklist = [
 The customization of document creation in Web UI is subject to change in the upcoming versions.
 {{/callout}}
 
+{{#> callout type='info' heading='Learn more'}}
+
+*   [Document and Workflow Task Layouts with Nuxeo Studio Designer course from Nuxeo University](https://university.nuxeo.com/store/187249-document-and-workflow-task-layouts-with-nuxeo-studio-designer)
+
+{{/callout}}  
+
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}

@@ -62,3 +62,9 @@ Features include:
 * The extension is only active when a Nuxeo instance in the current active tab.
 * The Hot Reload and Go To Studio buttons are only active when a Studio project is associated with the current Nuxeo server.
 * [CORS config]({{page page='cross-origin-resource-sharing-cors'}}) must be activated in your Nuxeo server to connect to your repository on API Playground.
+
+{{#> callout type='info' heading='Learn more'}}
+
+*   [Nuxeo Dev Tools course from Nuxeo University](https://university.nuxeo.com/store/199348-nuxeo-dev-tools)
+
+{{/callout}}
