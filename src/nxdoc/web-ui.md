@@ -306,3 +306,9 @@ The main area is reserved for displaying the current page's content. Our router 
 
 ![]({{file name='Web UI search page.png'}} ?w=959,h=614,border=true)
 &nbsp;
+
+{{#> callout type='info' heading='Learn more'}}
+
+*   [WebUI Stack Introduction from Nuxeo University](https://university.nuxeo.com/store/174605-webui-stack-introduction)
+
+{{/callout}}

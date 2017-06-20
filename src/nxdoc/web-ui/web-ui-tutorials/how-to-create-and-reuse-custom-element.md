@@ -61,3 +61,9 @@ Now, go to your `contract` document type, on the view layout to use your element
 1. Save your changes and deploy your studio project, you're done :)
 
   You can now reuse your element as much as you want, for example on the other layouts of your contract document, it will always be available in the **Project Elements** library.
+
+  {{#> callout type='info' heading='Learn more'}}
+
+  *   [Document and Workflow Task Layouts with Nuxeo Studio Designer course from Nuxeo University](https://university.nuxeo.com/store/187249-document-and-workflow-task-layouts-with-nuxeo-studio-designer)
+
+  {{/callout}}

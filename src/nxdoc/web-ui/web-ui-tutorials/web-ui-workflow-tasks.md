@@ -107,3 +107,9 @@ In the `$NUXEO_SERVER/nxserver/nuxeo.war/ui/` directory, you can see:
 ```
 
 By convention, a `$NUXEO_SERVER/nxserver/nuxeo.war/ui/workflow/{worfklowName}/nuxeo-{taskId}-layout.html` file defines the form layout of the task with task ID `{taskId}` for the workflow `{worfklowName}`.
+
+{{#> callout type='info' heading='Learn more'}}
+
+*   [Document and Workflow Task Layouts with Nuxeo Studio Designer course from Nuxeo University](https://university.nuxeo.com/store/187249-document-and-workflow-task-layouts-with-nuxeo-studio-designer)
+
+{{/callout}} 

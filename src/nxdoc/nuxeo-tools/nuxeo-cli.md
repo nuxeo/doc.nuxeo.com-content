@@ -276,6 +276,12 @@ Discover a ready-to-use Nuxeo Project to help you understand tricky components l
 $ nuxeo sample
 ```
 
+{{#> callout type='info' heading='Learn more'}}
+
+*   [Nuxeo Dev Tools course from Nuxeo University](https://university.nuxeo.com/store/199348-nuxeo-dev-tools)
+
+{{/callout}}
+
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium">
