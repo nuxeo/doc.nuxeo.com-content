@@ -21,6 +21,10 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/VYBOAQ'
     source_link: /display/ADMINDOC60/Using+Shibboleth
 tree_item_index: 300
+version_override:
+    'FT': '/nxdoc/shibboleth-authentication'
+    'LTS 2016': 810/nxdoc/shibboleth-authentication
+    'LTS 2015': 710/nxdoc/shibboleth-authentication
 history:
     -
         author: Solen Guitter
