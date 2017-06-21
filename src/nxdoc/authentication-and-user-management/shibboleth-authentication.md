@@ -23,6 +23,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/3jalAQ'
     source_link: /display/NXDOC710/Shibboleth+Authentication
 tree_item_index: 710
+version_override:
+  '6.0': /60/admindoc/using-shibboleth
 history:
     -
         author: Solen Guitter
