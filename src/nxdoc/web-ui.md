@@ -309,6 +309,6 @@ The main area is reserved for displaying the current page's content. Our router 
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [WebUI Stack Introduction from Nuxeo University](https://university.nuxeo.com/store/174605-webui-stack-introduction)
+*   [Web UI Stack Introduction from Nuxeo University](https://university.nuxeo.com/store/174605-webui-stack-introduction)
 
 {{/callout}}
