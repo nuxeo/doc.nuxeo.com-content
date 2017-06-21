@@ -12,6 +12,8 @@ labels:
     - shibboleth-component
 toc: true
 tree_item_index: 190
+version_override:
+  '6.0': /60/admindoc/using-shibboleth
 history:
     -
         author: Solen Guitter
