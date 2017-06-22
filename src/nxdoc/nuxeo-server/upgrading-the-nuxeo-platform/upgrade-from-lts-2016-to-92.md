@@ -15,15 +15,11 @@ tree_item_index: 96
 
 ### Installation and Configuration
 
-{{#> callout type='warning' }}
-
-Reindex the full repository following [Rebuilding the repository index page]({{page anchor='rebuildingtheindex-rebuilding-the-repository-index' page='elasticsearch-setup'}}), or using [Nuxeo Dev Tools Extension]({{page page='nuxeo-dev-tools-extension'}}). See [NXP-21279](https://jira.nuxeo.com/browse/NXP-21279).
-
-{{/callout}}
+{{{multiexcerpt 'upgrade-9.1-reindex-warning' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 #### Requirements
 
-- MySQL >= 5.6.4 is required. See [NXP-21338](https://jira.nuxeo.com/browse/NXP-21338)
+{{{multiexcerpt 'upgrade-9.1-installation-requirements' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 #### Parameters to Update
 
@@ -63,71 +59,83 @@ Reindex the full repository following [Rebuilding the repository index page]({{p
 </table>
 </div>
 
+### Nuxeo Studio Application Dependencies
+
+{{{multiexcerpt 'upgrade-9.1-studio-deps' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
 ### Code Changes
+
+#### Automation Scripting
+
+{{{multiexcerpt 'upgrade-9.1-code.es-backward-compat' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 #### Code Behavior Changes
 
-{{{multiexcerpt 'upgrade-9.1-code.defaultValue' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-code.defaultValue' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
-{{{multiexcerpt 'upgrade-9.1-code.platform.el' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-code.platform.el' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
-{{{multiexcerpt 'upgrade-9.1-code.elasticsearchfeature' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-code.elasticsearchfeature' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
-{{{multiexcerpt 'upgrade-9.2-code.blobinfo' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.2-code.blobinfo' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
-{{{multiexcerpt 'upgrade-9.2-code.nuxeoctl.register.trial' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.2-code.nuxeoctl.register.trial' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
-{{{multiexcerpt 'upgrade-9.2-code.oauth' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.2-code.oauth' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 #### Operation Changes
 
-{{{multiexcerpt 'upgrade-9.1-operation.Server.CreateUser' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-operation.Server.CreateUser' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
-{{{multiexcerpt 'upgrade-9.1-operation.Tag.Suggestion' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-operation.Tag.Suggestion' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
-{{{multiexcerpt 'upgrade-9.1-operation.addPermission' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-operation.addPermission' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 #### Deprecated APIs
 
 ##### Automatic Versioning
 
-{{{multiexcerpt 'upgrade-9.1-deprecated.automatic-versioning' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-deprecated.automatic-versioning' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 ##### Fields file:filename and common:size Removed
 
-{{{multiexcerpt 'upgrade-9.1-deprecated.filecommon' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-deprecated.filecommon' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 ##### FileManager Can Now Prevent Overwriting Existing Document
 
-{{{multiexcerpt 'upgrade-9.1-deprecated.filemanager' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-deprecated.filemanager' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 ##### BlobDispatcher Can Now Dispatch Depending on Document's XPath
 
-{{{multiexcerpt 'upgrade-9.1-deprecated.blobdispatcher' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-deprecated.blobdispatcher' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 ##### Scoped DocumentModel Context Data
 
-{{{multiexcerpt 'upgrade-9.1-deprecated.document.context' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-deprecated.document.context' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 ##### LoginScreenHelper Mobile Methods
 
-{{{multiexcerpt 'upgrade-9.1-deprecated.mobile.helper' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-deprecated.mobile.helper' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 ##### Oauth2Client
 
-{{{multiexcerpt 'upgrade-9.1-operation.Server.CreateUser' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-operation.Server.CreateUser' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
+{{{multiexcerpt 'upgrade-9.2-deprecated.oauth2' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 ### Addons
 
-#### Nuxeo Drive
+#### Nuxeo Drive - Server APIs Changes
 
-{{{multiexcerpt 'upgrade-9.1-addons.drive.apis' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-addons.drive.apis' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
-{{{multiexcerpt 'upgrade-9.1-addons.drive.sync.root' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+#### Nuxeo Drive - Synchronization Root Behavior
+
+{{{multiexcerpt 'upgrade-9.1-addons.drive.sync.root' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 #### Segment.io
 
-{{{multiexcerpt 'upgrade-9.2-addons.segmentio' page='/nxdoc/Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.2-addons.segmentio' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 ### Complementary Information
 
