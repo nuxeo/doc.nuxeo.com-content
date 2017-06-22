@@ -51,6 +51,11 @@ tree_item_index: 96
 <th colspan="1">Reference</th>
 </tr>
 <tr>
+<td colspan="1">`nuxeo.automation.scripting.inline-context-in-params`</td>
+<td colspan="1">Default Value to `false`</td>
+<td colspan="1">[NXP-22190](https://jira.nuxeo.com/browse/NXP-22190)</td>
+</tr>
+<tr>
 <td colspan="1">`nuxeo.automation.allowVirtualUser`</td>
 <td colspan="1">Default Value to `false`</td>
 <td colspan="1">[NXP-21889](https://jira.nuxeo.com/browse/NXP-21889)</td>
@@ -67,7 +72,7 @@ tree_item_index: 96
 
 #### Automation Scripting
 
-{{{multiexcerpt 'upgrade-9.1-code.es-backward-compat' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-code.scripts-backward-compat' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 #### Code Behavior Changes
 
