@@ -60,9 +60,11 @@ Make sure your Nuxeo Studio project depends on the **Nuxeo JSF UI** target packa
 
 #### Automation Scripting
 
-{{! multiexcerpt name='upgrade-9.1-code.es-backward-compat'}}
+{{! multiexcerpt name='upgrade-9.1-code.scripts-backward-compat'}}
 
 Backward Compatibility was broken for 9.1 ([NXP-21508](https://jira.nuxeo.com/browse/NXP-21508)): parameters are no longer extracted from the context of the `params` object when calling the scripting operation. You have to explicitly set each parameter in the operation definition. Follow [NXP-22190](https://jira.nuxeo.com/browse/NXP-22190) for resolution.
+
+Started from 9.2: you can set the parameter `nuxeo.automation.scripting.inline-context-in-params` to `true` in order to get back compatibility with scripts created before 9.1.
 
 {{! /multiexcerpt}}
 
@@ -286,6 +288,11 @@ See [NXP-21676](https://jira.nuxeo.com/browse/NXP-21676).
 <th colspan="1">Parameter</th>
 <th colspan="1">Default</th>
 <th colspan="1">Reference</th>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.automation.scripting.inline-context-in-params`</td>
+<td colspan="1">Default Value to `false`</td>
+<td colspan="1">[NXP-22190](https://jira.nuxeo.com/browse/NXP-22190)</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.automation.allowVirtualUser`</td>
