@@ -129,6 +129,16 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 09
+
+### Traffic encryption in Elasticsearch
+This hotfix brings a new default template for the Elasticsearch configuration to enable traffic encryption with the following properties:
+```
+    elasticsearch.shield.keystore.path
+    elasticsearch.shield.keystore.password
+```
+If you have customized the template `templates/common-base/nxserver/config/elasticsearch-config.xml.nxftl`, please report the changes from this [diff](https://github.com/nuxeo/nuxeo/commit/035174c9645eb1689d6216dda85202efe7f8be47) to your custom template.
+
 ## Hotfix 01
 
 ### DBS Cache Configuration
