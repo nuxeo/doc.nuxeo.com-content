@@ -12,17 +12,20 @@ tree_item_index: 95
 
 ## From LTS 2016 to 9.1
 
+{{! multiexcerpt name='upgrade-9.1-reindex-warning'}}
+
 {{#> callout type='warning' }}
 
 Reindex the full repository following [Rebuilding the repository index page]({{page anchor='rebuildingtheindex-rebuilding-the-repository-index' page='elasticsearch-setup'}}), or using [Nuxeo Dev Tools Extension]({{page page='nuxeo-dev-tools-extension'}}). See [NXP-21279](https://jira.nuxeo.com/browse/NXP-21279).
 
 {{/callout}}
 
+{{! /multiexcerpt}}
+
 ### Installation and Configuration
 
-{{! multiexcerpt name='upgrade-9.1-installation-requirements'}}
-
 #### Requirements
+{{! multiexcerpt name='upgrade-9.1-installation-requirements'}}
 
 - MySQL >= 5.6.4 is required. See [NXP-21338](https://jira.nuxeo.com/browse/NXP-21338)
 
@@ -57,7 +60,7 @@ Make sure your Nuxeo Studio project depends on the **Nuxeo JSF UI** target packa
 
 #### Automation Scripting
 
-{{! multiexcerpt name='upgrade-9.1-code.defaultValue'}}
+{{! multiexcerpt name='upgrade-9.1-code.es-backward-compat'}}
 
 Backward Compatibility was broken for 9.1 ([NXP-21508](https://jira.nuxeo.com/browse/NXP-21508)): parameters are no longer extracted from the context of the `params` object when calling the scripting operation. You have to explicitly set each parameter in the operation definition. Follow [NXP-22190](https://jira.nuxeo.com/browse/NXP-22190) for resolution.
 
@@ -194,14 +197,14 @@ See [NXP-21891](https://jira.nuxeo.com/browse/NXP-21891).
 
 {{! multiexcerpt name='upgrade-9.1-deprecated.automatic-versioning'}}
 
-We introduce a new automatic versioning system in 9.1. We deprecated [versioningRules](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--versioningRules) extension point. You now have to use new extension points, see [documentation]({{page page='versioning#versioning-policies'}}).
+We introduced a new automatic versioning system in 9.1. We deprecated [versioningRules](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--versioningRules) extension point. You now have to use new extension points, see [documentation]({{page page='versioning#versioning-policies'}}).
 
-Nuxeo provide a backward compatibility mechanism, but it could be not accurate.
+Nuxeo provides a backward compatibility mechanism, but it could be not accurate.
 
 Previous automatic versioning mechanisms were removed or upgraded to new system:
 
-- file manager and bulk edit don't automatically version documents since 9.1, you could put back this behavior by contributing a new rule and use [source]({{page page='versioning#source-based-versioning'}}) parameter to restrict versioning to this functionalities (for instance use: `fileimporter-{name-of-your-importer}` or `bulkEdit`)
-- drive is not responsible of automatic versioning anymore. The last contributor rule is now a default policy, and delay rule is introduced by drive and rely on [source]({{page page='versioning#source-based-versioning'}}) parameter mechanism.
+- File manager and bulk edit don't automatically version documents since 9.1, you could put back this behavior by contributing a new rule and use [source]({{page page='versioning#source-based-versioning'}}) parameter to restrict versioning to this functionalities (for instance use: `fileimporter-{name-of-your-importer}` or `bulkEdit`)
+- Nuxeo Drive is not responsible of automatic versioning anymore. The last contributor rule is now a default policy, and delay rule is introduced by Nuxeo Drive and rely on [source]({{page page='versioning#source-based-versioning'}}) parameter mechanism.
 
 {{#> callout type='note' }}
 
@@ -212,7 +215,8 @@ All configuration parameters relative to automatic versioning were removed witho
 It's the case for:
 
 - `nuxeo.drive.force.versioning`
-- versioningDelay and versioningOption used in `DefaultFileSystemItemFactory`, note that `VersioningFileSystemItemFactory` is deprecated.
+- `versioningDelay` and `versioningOption` used in `DefaultFileSystemItemFactory`. <br/>
+Note that `VersioningFileSystemItemFactory` is deprecated.
 
 {{! /multiexcerpt}}
 
@@ -300,19 +304,19 @@ See [NXP-21676](https://jira.nuxeo.com/browse/NXP-21676).
 
 {{! multiexcerpt name='upgrade-9.2-code.blobinfo'}}
 
-- Use `org.nuxeo.ecm.core.blob.BlobInfo` instead of the old `org.nuxeo.ecm.core.blob.BlobManager.BlobInfo`. See [NXP-22217](https://jira.nuxeo.com/browse/NXP-22217);
+- Use `org.nuxeo.ecm.core.blob.BlobInfo` instead of the old `org.nuxeo.ecm.core.blob.BlobManager.BlobInfo`. See [NXP-22217](https://jira.nuxeo.com/browse/NXP-22217).
 
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='upgrade-9.2-code.nuxeoctl.register.trial'}}
 
-- The `register-trial` command read parameters: `./nuxectl register-trial [<firstname> <lastname> <email> <company> <project>]`. See [NXP-22550](https://jira.nuxeo.com/browse/NXP-22550).
+- The `register-trial` command reads parameters: `./nuxectl register-trial [<firstname> <lastname> <email> <company> <project>]`. See [NXP-22550](https://jira.nuxeo.com/browse/NXP-22550).
 
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='upgrade-9.2-code.oauth'}}
 
-- Parameters `state` and `redirect_uri` are now madatory for security reason. See [NXP-22183](https://jira.nuxeo.com/browse/NXP-22183) and [NXP-22186](https://jira.nuxeo.com/browse/NXP-22186).
+- Parameters `state` and `redirect_uri` are now mandatory for security reason. See [NXP-22183](https://jira.nuxeo.com/browse/NXP-22183) and [NXP-22186](https://jira.nuxeo.com/browse/NXP-22186).
 
 {{! /multiexcerpt}}
 
@@ -322,7 +326,7 @@ See [NXP-21676](https://jira.nuxeo.com/browse/NXP-21676).
 
 {{! multiexcerpt name='upgrade-9.2-deprecated.oauth2'}}
 
-Deprecated constructor `OAuth2Client(String name, String id, String secret)`. See [NXP-22183](https://jira.nuxeo.com/browse/NXP-22183).
+- Constructor `OAuth2Client(String name, String id, String secret)` is deprecated. See [NXP-22183](https://jira.nuxeo.com/browse/NXP-22183).
 
 {{! /multiexcerpt}}
 
@@ -332,7 +336,7 @@ Deprecated constructor `OAuth2Client(String name, String id, String secret)`. Se
 
 {{! multiexcerpt name='upgrade-9.2-addons.segmentio'}}
 
-Nuxeo Segment.io plugin is now alignedd on `com.github.segmentio:analytics:1.0.7`, thus it has received a big update and break backward compatibility. See [NXP-22462](https://jira.nuxeo.com/browse/NXP-22462) and [NXP-22212](https://jira.nuxeo.com/browse/NXP-22212).
+Nuxeo Segment.io plugin is now aligned on `com.github.segmentio:analytics:1.0.7`, thus it has received a big update and breaks backward compatibility. See [NXP-22462](https://jira.nuxeo.com/browse/NXP-22462) and [NXP-22212](https://jira.nuxeo.com/browse/NXP-22212).
 
 {{! /multiexcerpt}}
 
