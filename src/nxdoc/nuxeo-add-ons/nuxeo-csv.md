@@ -220,7 +220,7 @@ This page gives all the necessary steps to import content with the CSV addon fro
 ### With Web UI
 After the package is installed, a new tab called **CSV** is available on the default creation form.
 
-![]({{file name='nuxeo-csv-button-webui2.png'}} ?w=450,border=true)
+![]({{file name='nuxeo-csv-button-webui.png'}} ?w=450,border=true)
 
 ### With JSF UI
 Users have an **Import a CSV file** button available in the folder toolbar of the workspaces, folders and in any document where they can import files.
@@ -288,7 +288,7 @@ To import documents using Nuxeo CSV:
 
 |Web UI|JSF UI|
 |------|------|
-|![]({{file name='nuxeo-csv-file-selected2.png'}} ?w=450,border=true)|![]({{file name='CSV Importer beginning.png'}} ?w=450,border=true)|
+|![]({{file name='nuxeo-csv-file-selected.png'}} ?w=450,border=true)|![]({{file name='CSV Importer beginning.png'}} ?w=450,border=true)|
 
 
 5.  Optionally check the box **Send me the import report by email** if you want to receive an email when the import is done which shows how the import went. This is useful in case of imports that take a long time.
@@ -303,7 +303,7 @@ To import documents using Nuxeo CSV:
     <th>JSF UI</th>
   </tr>
   <tr>
-    <td>![]({{file name='nuxeo-csv-results-webui2.png'}} ?w=550,border=true)</td>
+    <td>![]({{file name='nuxeo-csv-results-webui.png'}} ?w=550,border=true)</td>
     <td>![]({{file name='CSV Importer Imported.png'}} ?w=550,border=true)</td>
   </tr>
 </table>
