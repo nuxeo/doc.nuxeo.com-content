@@ -91,7 +91,7 @@ ERROR [RuntimeService] NUXEO INSTANCE STOPPING
 Stopping Nuxeo instance due to threshold exceeded (TOTAL_COMMITS > 100000) after failed registration checks
 ```
 The current limits of use are:
-- 100 000 transaction commits
+- 100,000 transaction commits
 - 10 concurrent sessions (a session correspond to an access to the core)
 
 If the expiration date is close (less than 15 days), a warning will be displayed and indicate how many days are left before expiration.
@@ -131,7 +131,7 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ## Hotfix 09
 
-### Traffic encryption in Elasticsearch
+### Traffic Encryption in Elasticsearch
 This hotfix brings a new default template for the Elasticsearch configuration to enable traffic encryption with the following properties:
 ```
     elasticsearch.shield.keystore.path
