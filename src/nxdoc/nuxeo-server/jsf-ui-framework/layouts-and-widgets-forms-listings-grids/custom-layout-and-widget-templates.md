@@ -526,7 +526,7 @@ The empty field definition in the subwidget is used to specify that each element
 
 ### Lists of Lists
 
-A builtin template has been added to handle sublists: the original "list" widget is equivalent to a widget of type "template" using the file `/widgets/list_widget_template.xhtml`. To handle the sublist, this template needs to be changed. The file `list_subwidget_template.xhtml` is available for it.
+A builtin template has been added to handle sublists: the original "list" widget is equivalent to a widget of type "template" using the file `/widgets/list_widget_template.xhtml`.
 
 To handle a sublist property, you can use take example on this definition:
 
@@ -536,24 +536,19 @@ To handle a sublist property, you can use take example on this definition:
     <field>company:employees</field>
   </fields>
   <subWidgets>
-    <widget name="employee" type="template">
+    <widget name="employee" type="complex">
       <labels>
         <label mode="any"></label>
       </labels>
-      <properties mode="any">
-        <property name="template">
-          /widgets/complex_list_item_widget_template.xhtml
-        </property>
-      </properties>
       <!-- subwidgets for complex -->
       <subWidgets>
-        <widget name="phoneNumbers" type="template">
+        <widget name="phoneNumbers" type="list">
           <fields>
             <field>phoneNumbers</field>
           </fields>
           <properties mode="any">
-            <property name="template">
-              /widgets/list_subwidget_template.xhtml
+            <property name="listTemplateItem">
+              #{nxd:propertyDefaultValue('company:employees/phoneNumbers')}
             </property>
           </properties>
           <subWidgets>
