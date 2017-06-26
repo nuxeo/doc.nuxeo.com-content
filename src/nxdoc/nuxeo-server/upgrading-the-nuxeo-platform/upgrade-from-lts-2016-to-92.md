@@ -17,6 +17,8 @@ tree_item_index: 96
 
 {{{multiexcerpt 'upgrade-9.1-reindex-warning' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
+{{{multiexcerpt 'upgrade-9.2-new.directories.mongodb' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
 #### Requirements
 
 {{{multiexcerpt 'upgrade-9.1-installation-requirements' page='Upgrade from LTS 2016 following Fast Tracks'}}}
