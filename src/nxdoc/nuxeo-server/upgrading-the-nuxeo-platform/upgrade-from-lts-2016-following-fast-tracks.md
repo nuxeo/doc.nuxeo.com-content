@@ -273,15 +273,6 @@ See [NXP-21676](https://jira.nuxeo.com/browse/NXP-21676).
 
 ## From 9.1 to 9.2
 
-{{! multiexcerpt name='upgrade-9.2-new.directories.mongodb'}}
-
-{{#> callout type='warning' }}
-
-Directories are now stored in MongoDB when enabling `mongodb` template. See [NXP-21582](https://jira.nuxeo.com/browse/NXP-21582).
-{{/callout}}
-
-{{! /multiexcerpt}}
-
 {{! multiexcerpt name='9.1-to-9.2-upgrade-page'}}
 
 ### Installation and Configuration
@@ -311,6 +302,16 @@ Directories are now stored in MongoDB when enabling `mongodb` template. See [NXP
 </tbody>
 </table>
 </div>
+
+{{! /multiexcerpt}}
+
+### Data
+
+#### Directories
+
+{{! multiexcerpt name='upgrade-9.2-new.directories.mongodb'}}
+
+Directories are now stored in MongoDB when enabling the `mongodb` template. See [NXP-21582](https://jira.nuxeo.com/browse/NXP-21582).
 
 {{! /multiexcerpt}}
 
