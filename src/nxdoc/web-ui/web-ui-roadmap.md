@@ -4,7 +4,7 @@ description: See what evolutions and improvements are planned for Nuxeo Web UI
 tree_item_index: 400
 review:
     comment: ''
-    date: '2017-01-13'
+    date: '2017-06-27'
     status: ok
 toc: true
 labels:
