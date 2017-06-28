@@ -325,6 +325,7 @@ This file is for illustration and contains many more options than are necessary 
         activeTimeoutMinutes="5" />
       <clustering id="12345" delay="1000" enabled="true" />
       <idType>varchar</idType>
+      <childNameUniqueConstraintEnabled>true</childNameUniqueConstraintEnabled>
       <schema>
         <field type="largetext">note</field>
       </schema>
@@ -460,6 +461,16 @@ The following values for idType are possible:
 When using a sequence, the document ids will be simple incremental small integers instead of randomly-generated UUIDs.
 
 Note that switching this option to a new value will require a full dump, manual conversion and restore of your database, so it should be specified before starting Nuxeo for the first time.
+
+## Child Name Unique Constraint
+
+Low-level database constraints that disallow multiple children with the same name can be enabled:
+
+```xml
+<childNameUniqueConstraintEnabled>true</childNameUniqueConstraintEnabled>
+```
+
+This is available and enabled by default on PostgreSQL since Nuxeo 9.2 ([NXP-22421](https://jira.nuxeo.com/browse/NXP-22421)).
 
 ## Indexing Options
 
