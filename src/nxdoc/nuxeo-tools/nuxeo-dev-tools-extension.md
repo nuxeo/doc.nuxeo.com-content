@@ -55,6 +55,11 @@ Features include:
 * One-click JSON export of document in current active tab
     ![JSON Export of a document using the Nuxeo Dev Tools extension]({{file name='nuxeo-dev-tools-extension-json-export.png'}} ?w=600,border=true)
 
+{{#> callout type='info' heading='Learn more'}}
+
+*   [Nuxeo Dev Tools course from Nuxeo University](https://university.nuxeo.com/store/199348-nuxeo-dev-tools)
+
+{{/callout}}
 
 ## Limitations
 
@@ -68,9 +73,3 @@ Features include:
 Planned improvements for the browser extension:
 
 <iframe src="https://ext.prodpad.com/ext/roadmap/3cb7ad79a0f9fce3382633f486d40cfa15430ece" height="210" width="100%"></iframe>
-
-{{#> callout type='info' heading='Learn more'}}
-
-*   [Nuxeo Dev Tools course from Nuxeo University](https://university.nuxeo.com/store/199348-nuxeo-dev-tools)
-
-{{/callout}}
