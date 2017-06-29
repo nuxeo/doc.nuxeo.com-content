@@ -4,7 +4,7 @@ description: See what evolutions and improvements are planned for Nuxeo Web UI
 tree_item_index: 400
 review:
     comment: ''
-    date: '2017-06-27'
+    date: '2017-06-29'
     status: ok
 toc: true
 labels:
@@ -14,4 +14,4 @@ labels:
 
 Below are the evolutions and improvements planned on Web UI.
 
-<iframe src="https://ext.prodpad.com/ext/roadmap/1bbe64ec750e5e559daf4df9545bb8167b43d2d5" height="900" width="100%"></iframe>
+<iframe src="https://ext.prodpad.com/ext/roadmap/a9cc2a012e76debc4af4c06f0d998405591979b3" height="2000" width="100%" frameBorder="0"></iframe>
