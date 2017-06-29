@@ -554,6 +554,17 @@ To set this limit you need to add a `maxResults` parameter to `coreQueryPageProv
 
 *   `PAGE_SIZE`: this is useful when you are interested in a single page or if you don't need a total count.
 
+{{#> callout type='info' }}
+
+Note that when using an Elasticsearch page provider, the `maxResults` limit is not taken in account because the total number of results is always available.
+
+That being said for performance reason by default Elasticsearch does not allow you to do unlimited deep scrolling on results.
+Only the `index.max_result_window` (which defaults to 10000) results are accessible. Content view will not allow you to access pages out of this window to prevent errors.
+
+If you change the Elasticsearch configuration you can adapt the Nuxeo limit by contributing the property `org.nuxeo.elasticsearch.provider.maxResultWindow` to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
+
+{{/callout}}
+
 ###### whereClause element
 
 This kind of core query can also perform a more complex form of query, using a document model to store query parameters. Using a document model makes it easy to:
