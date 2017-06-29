@@ -155,6 +155,14 @@ The platform will use the [DefaultSearchRequestFilter](https://github.com/nuxeo/
 }
 ```
 
+{{#> callout type='warning' }}
+
+The security filtering takes in account only the ACL security and security policy that is expressible in NXQL.
+If you use a custom security policy that is not expressible in NXQL you should not enable the Nuxeo Elasticsearch passthrough.
+
+{{/callout}}
+
+
 ### Audit Index
 
 The platform only allows Administrator users to query the audit index.
@@ -212,6 +220,7 @@ The [RoutingAuditRequestFilter](https://github.com/nuxeo/nuxeo-platform-document
 - [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
 - [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
 - [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
+- [Security Policy Service]({{page page='security-policy-service'}})
 
 {{/panel}}</div><div class="column medium-6">
 
