@@ -418,7 +418,7 @@ history:
 ---
 {{#> callout type='info' }}
 
-Content Views can be configured using Studio, check out the&nbsp;[Content Views]({{page space='studio' page='content-views'}}) documentation.
+Content Views can be configured using Studio, check out the [Content Views]({{page space='studio' page='content-views'}}) documentation.
 
 {{/callout}}
 
@@ -503,7 +503,7 @@ The `coreQueryPageProvider` element makes it possible to define what query will 
 
 ###### parameter and property elements
 
-The `coreQueryPageProvider`&nbsp;element accepts any number of property elements, defining needed context variables for the page provider to perform its work. The&nbsp;`coreSession` property is mandatory for a core query to be processed and is bound to the core session proxy named&nbsp;`documentManager` available in a default Nuxeo application.
+The `coreQueryPageProvider` element accepts any number of property elements, defining needed context variables for the page provider to perform its work. The `coreSession` property is mandatory for a core query to be processed and is bound to the core session proxy named `documentManager` available in a default Nuxeo application.
 
 It also accepts any number of `parameter` elements, where order of definition matters: this EL expression will be resolved when performing the query, replacing the `?` characters it holds.
 
@@ -511,19 +511,19 @@ The main difference between `properties` and `parameters` is that properties wil
 
 ###### sort elements
 
-The&nbsp;`sort` element defines the default sort, that can be changed later through the interface. There can be any number of&nbsp;`sort` elements. The `sortInfosBinding` element can also be defined: it can resolve an EL expression in case the sort infos are held by a third party instance (document, Seam component...) and will be used instead of the default sort information if not null or empty. The EL expression can either resolve to a list of `org.nuxeo.ecm.core.api.SortInfo` instances, or a list of map items using keys `sortColumn` (with a String value) and `sortAscending` (with a boolean value).
+The `sort` element defines the default sort, that can be changed later through the interface. There can be any number of `sort` elements. The `sortInfosBinding` element can also be defined: it can resolve an EL expression in case the sort infos are held by a third party instance (document, Seam component...) and will be used instead of the default sort information if not null or empty. The EL expression can either resolve to a list of `org.nuxeo.ecm.core.api.SortInfo` instances, or a list of map items using keys `sortColumn` (with a String value) and `sortAscending` (with a boolean value).
 
 ###### quickFilter elements
 
-Since version 8.10, the&nbsp;`quickFilter` element enables to refine the results obtained by a search. There can be any number of&nbsp;`quickFilter` elements. Each quick filter is composed of a&nbsp;`clause` element which enables to extend the query, and additional&nbsp;`sort` elements.  
+Since version 8.10, the `quickFilter` element enables to refine the results obtained by a search. There can be any number of `quickFilter` elements. Each quick filter is composed of a `clause` element which enables to extend the query, and additional `sort` elements.  
 The quick filters appears in the interface as buttons where each action on a button enables or disables its associated quick filter.
 In the previous example, activating "myQuickFilter" will display the children of the current document with the titles "Title1" or "Title2". The search results will be ordered by creator.
 
 ###### pageSize elements
 
-The&nbsp;`pageSize` element defines the default page size, it can also be changed later. The `pageSizeBinding` element can also be defined: it can resolve an EL expression in case the page size is held by a third party instance (document, Seam component...), and will be used instead of the default page size if not null.
+The `pageSize` element defines the default page size, it can also be changed later. The `pageSizeBinding` element can also be defined: it can resolve an EL expression in case the page size is held by a third party instance (document, Seam component...), and will be used instead of the default page size if not null.
 
-The optional `maxPageSize` element can be placed at the same level than `pageSize`. It makes it possible to define the maximum page size so that the content view does not overload the server when retrieving a large number of items. When not set, the default value "1000" will be used: even when asking for all the results with a page size with value "0" (when exporting the content view in CSV format for instance), only 1000 items will be returned. This is configurable by [contributing the property&nbsp;`nuxeo.pageprovider.default-max-page-size`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewContribution/org.nuxeo.ecm.core.query.properties--configuration) to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
+The optional `maxPageSize` element can be placed at the same level than `pageSize`. It makes it possible to define the maximum page size so that the content view does not overload the server when retrieving a large number of items. When not set, the default value "1000" will be used: even when asking for all the results with a page size with value "0" (when exporting the content view in CSV format for instance), only 1000 items will be returned. This is configurable by [contributing the property `nuxeo.pageprovider.default-max-page-size`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewContribution/org.nuxeo.ecm.core.query.properties--configuration) to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
 
 ###### {{> anchor 'maxresults'}} maxResults elements
 
@@ -534,6 +534,17 @@ To set this limit you need to add a `maxResults` parameter to `coreQueryPageProv
 *   `DEFAULT_NAVIGATION_RESULTS`: Used by most of the navigation page provider. The default is 200 and it can be overridden by [contributing the property `org.nuxeo.ecm.platform.query.nxql.defaultNavigationResults`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewContribution/org.nuxeo.ecm.platform.query.api.PageProviderService--configuration) to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
 
 *   `PAGE_SIZE`: this is useful when you are interested in a single page or if you don't need a total count.
+
+{{#> callout type='info' }}
+
+Note that when using an Elasticsearch page provider, the `maxResults` limit is not taken in account because the total number of results is always available.
+
+That being said for performance reason by default Elasticsearch does not allow you to do unlimited deep scrolling on results.
+Only the `index.max_result_window` (which defaults to 10000) results are accessible. Content view will not allow you to access pages out of this window to prevent errors.
+
+If you change the Elasticsearch configuration you can adapt the Nuxeo limit by contributing the property `org.nuxeo.elasticsearch.provider.maxResultWindow` to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202016-8.10/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
+
+{{/callout}}
 
 ###### whereClause element
 
@@ -599,11 +610,11 @@ Here is an example of such a registration:
 
 The above definition holds a `whereClause` element, stating the search document type and predicates explaining how the document model properties will be translated into a NXQL query. It can also state a `fixedPart` element that will added as to the query string. This fixed part can also take parameters using the '?' character and `parameter` elements. It can also accept "named parameters", e.g. parameters prefixed by a comma, that can also match the search document model properties (for instance: `SELECT * FROM Document WHERE [dc:title](http://dctitle) = :[searchdoc:title](http://searchdoctitle)` ).
 
-The&nbsp;`fixedPart` element also accepts attributes to better control its behaviour:
+The `fixedPart` element also accepts attributes to better control its behaviour:
 
-*   `statement` makes is possible to declare the select statement to use (as contrary to the&nbsp;`pattern` element, the&nbsp;`fixedPart` element is not supposed to hold the select statement). This optional parameter default to "Select * from document" for default core page providers.
+*   `statement` makes is possible to declare the select statement to use (as contrary to the `pattern` element, the `fixedPart` element is not supposed to hold the select statement). This optional parameter default to "Select * from document" for default core page providers.
 *   `escapeParameters` is a boolean value that allows to avoid escaping parameters when building the fixed part (defaults to true).
-*   `quoteParameters` is a boolean value that allows to avoid adding quotes around the parameter (defaults to true). This is useful when parameters actually hold a complete predicate, for instance (and in this case, the&nbsp;`escapeParameters` element must also be set to true.
+*   `quoteParameters` is a boolean value that allows to avoid adding quotes around the parameter (defaults to true). This is useful when parameters actually hold a complete predicate, for instance (and in this case, the `escapeParameters` element must also be set to true.
 
 {{#> callout type='info' }}
 
@@ -617,7 +628,7 @@ Note that when using an Elasticsearch page provider you can use [NXQL hints]({{p
 
 {{/callout}}
 
-Attributes&nbsp;`escapeParameters` and&nbsp;`quoteParameters` are also accepted on the `pattern` element.
+Attributes `escapeParameters` and `quoteParameters` are also accepted on the `pattern` element.
 
 It might be useful to add the ContentViewDisplay facet (this facet includes the [`content_view_display` schema, using the `cvd` prefix](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-dm/nuxeo-platform-webapp-types/src/main/resources/schemas/content_view_display.xsd)) to the definition of the `AdvandedSearch` document type, when configuring one of the elements described below: `pageSizeBinding`, `sortInfosBinding
 `, `resultColumns` or `resultLayout`.
@@ -660,7 +671,7 @@ Sample declaration:
 </contentView>
 ```
 
-&nbsp;
+
 
 ### The Content View Result Layouts
 
@@ -817,7 +828,7 @@ If a cache key is given, but no cache size is set, "5" will be used by default. 
 
 Caching is done by a Seam component named [`contentViewActions`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewSeamComponent/seam:contentViewActions) . Although the cache key, cache size and events configurations handle the most common use cases, it is sometimes useful to call this bean methods directly when forcing a refresh.
 
-The `refresh` and `reset` elements configurations make it possible to refresh/reset this content view when receiving the listed Seam event names. Only&nbsp;`documentChanged` and `documentChildrenChanged` are handled by default, but it is possible to react to new events by adding a method with an observer on this event on a custom Seam component, and call the method `contentViewActions.refreshOnSeamEvent(String seamEventName)` or `contentViewActions.resetPageProviderOnSeamEvent(String seamEventName)`.
+The `refresh` and `reset` elements configurations make it possible to refresh/reset this content view when receiving the listed Seam event names. Only `documentChanged` and `documentChildrenChanged` are handled by default, but it is possible to react to new events by adding a method with an observer on this event on a custom Seam component, and call the method `contentViewActions.refreshOnSeamEvent(String seamEventName)` or `contentViewActions.resetPageProviderOnSeamEvent(String seamEventName)`.
 
 Refresh will keep current settings, and will force the query to be done again. Reset will delete content views completely from the cache, and force complete re-generation of the content view, its provider, and the search document model if set.
 
@@ -849,15 +860,13 @@ Here is the default configuration of content views for Nuxeo folderish documents
 
 ```
 
-The `document_content` content view will be displayed on this folder default view, and the&nbsp;`document_trash_content` content view will be displayed on the Trash tab.
+The `document_content` content view will be displayed on this folder default view, and the `document_trash_content` content view will be displayed on the Trash tab.
 
 The `category` attribute is filled from XHTML templates to render all content views defined in a given category.
 
-The&nbsp;`showInExportView` attribute is used to check whether this content view should be displayed in the document export view (and PDF export).
+The `showInExportView` attribute is used to check whether this content view should be displayed in the document export view (and PDF export).
 
 If several content views are filled in the same category, both will be displayed on the same page.
-
-&nbsp;
 
 * * *
 
