@@ -214,7 +214,7 @@ elements so it should be one of the first elements you declare in your applicati
 
 There is now a connection to the Nuxeo instance. Note that you will need to define a [Cross-Origin Resource Sharing (CORS)
 configuration]({{page page='cross-origin-resource-sharing-cors'}}) before going any further. Here's a sample configuration
-file, that you should copy to `NUXEO_HOME/nxserver/config`:
+file, that you should copy to `NUXEO_HOME/nxserver/config/cors-config.xml`:
 
 ```xml
 <component name="org.nuxeo.corsi.demo">
@@ -242,7 +242,7 @@ relevant from our document. For example:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```xml
-<h2>Title: [[document.title]]</h3>
+<h2>Title: [[document.title]]</h2>
 <p>ID: [[document.uid]]</p>
 <p>Repository: [[document.repository]]</p>
 <p>State: [[document.state]]</p>
@@ -339,7 +339,7 @@ named `targetPath`:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```xml
-<nuxeo-document id="doc" auto doc-path="[[targetPath]]" response={{document}}></nuxeo-document>
+<nuxeo-document id="doc" auto doc-path="[[targetPath]]" response=\{{document}}></nuxeo-document>
 ```
 {{/panel}}
 
