@@ -93,7 +93,7 @@ The class must be registered through the [`policies`](http://explorer.nuxeo.org/
 A security policy has two important aspects, materialized by different methods of the interface:
 
 *   how security is checked on a given document (method `checkPermission`),
-*   how security is applied to NXQL, CMISQL and Elasticsearch Passthrough searches (methods&nbsp;`getQueryTransformer`).
+*   how security is applied to NXQL, CMISQL and Elasticsearch Passthrough searches (methods `getQueryTransformer`).
 
 ### Document Security Check
 
@@ -109,7 +109,7 @@ All NXQL queries have ACL-based security automatically applied with the `Browser
 
 A security policy can modify this behavior but only by adding new restrictions in addition to the ACLs. To do so, it can simply implement the `checkPermission` described above, but this gets very costly for big searches. The efficient approach is to make `isExpressibleInQuery` return `true` and implement `getQueryTransformer`.
 
-The `getQueryTransformer(repositoryName)`&nbsp;method returns a `SQLQuery.Transformer` instance, which is a class with one `transform` method taking a NXQL query in the form of a `org.nuxeo.ecm.core.query.sql.model.SQLQuery` abstract syntax tree. It should transform this tree in order to add whatever restrictions are needed. Note that ACL checks will always be applied after this transformation.
+The `getQueryTransformer(repositoryName)` method returns a `SQLQuery.Transformer` instance, which is a class with one `transform` method taking a NXQL query in the form of a `org.nuxeo.ecm.core.query.sql.model.SQLQuery` abstract syntax tree. It should transform this tree in order to add whatever restrictions are needed. Note that ACL checks will always be applied after this transformation.
 
 {{#> callout type='info' heading='Unrestricted sessions'}}
 
@@ -119,14 +119,14 @@ If the query has been called in the context of an unrestricted session, the prin
 
 ### CMISQL Security Check
 
-Since Nuxeo 5.6.0-HF21 and Nuxeo 5.7.2, all CMISQL queries also require implementation of the relevant&nbsp; `getQueryTransformer`&nbsp;API in order to secure CMIS-based searches.
+Since Nuxeo 5.6.0-HF21 and Nuxeo 5.7.2, all CMISQL queries also require implementation of the relevant  `getQueryTransformer` API in order to secure CMIS-based searches.
 
-The&nbsp;`getQueryTransformer(repositoryName, "CMISQL")`&nbsp;method returns a&nbsp;`SecurityPolicy.QueryTransformer`&nbsp;instance, which is a class with one&nbsp;`transform`&nbsp;method taking a query in the form of `String`. It should transform this query in order to add whatever restrictions are needed (this will require parsing the CMISQL and adding whatever clauses are needed). Note that ACL checks will always be applied after this transformation.
+The `getQueryTransformer(repositoryName, "CMISQL")` method returns a `SecurityPolicy.QueryTransformer` instance, which is a class with one `transform` method taking a query in the form of `String`. It should transform this query in order to add whatever restrictions are needed (this will require parsing the CMISQL and adding whatever clauses are needed). Note that ACL checks will always be applied after this transformation.
 
 
 ### Elasticsearch Passthrough Check
 
-Nuxeo [Elasticsearch Passthrough]({{page page='elasticsearch-passthrough'}}) add filters to take in account ACL security and security policy that are expressible in NXQL (`isExpressibleInQuery` returns `true`).
+Nuxeo [Elasticsearch Passthrough]({{page page='elasticsearch-passthrough'}}) adds filters to take in account ACL security and security policy that are expressible in NXQL (`isExpressibleInQuery` returns `true`).
 
 {{#> callout type='warning' }}
 
@@ -228,4 +228,4 @@ public class NoFileSecurityPolicy extends AbstractSecurityPolicy implements Secu
 
 ### CMISQL Security Checks
 
-To find examples of security policies using CMISQL query transformers, please check the&nbsp; [`TitleFilteringSecurityPolicy2`](https://github.com/nuxeo/nuxeo-chemistry/blob/master/nuxeo-opencmis-tests/src/test/java/org/nuxeo/ecm/core/opencmis/impl/TitleFilteringSecurityPolicy2.java) in the unit tests.
+To find examples of security policies using CMISQL query transformers, please check the  [`TitleFilteringSecurityPolicy2`](https://github.com/nuxeo/nuxeo-chemistry/blob/master/nuxeo-opencmis-tests/src/test/java/org/nuxeo/ecm/core/opencmis/impl/TitleFilteringSecurityPolicy2.java) in the unit tests.
