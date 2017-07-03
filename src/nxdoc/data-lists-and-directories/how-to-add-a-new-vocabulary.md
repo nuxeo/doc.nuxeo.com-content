@@ -261,16 +261,16 @@ There are 3 types of vocabulary:
 
 {{! /multiexcerpt}}
 
-<span style="color: rgb(0,0,0);font-size: 20.0px;line-height: 1.5;">Creating a New Vocabulary</span>
+## Creating a New Vocabulary
 
-1.  Click on the&nbsp;**Vocabularies**&nbsp;item of the Studio menu.
+1.  Click on the **Vocabularies** item of the Studio menu.
 
     {{#> callout type='info' }}
 
     For an exhaustive presentation of the vocabulary configuration, see the [Vocabularies]({{page space='studio' page='vocabularies'}}) page.
 
     {{/callout}}
-2.  Click on the&nbsp;**New**&nbsp;button.
+2.  Click on the **New** button.
 3.  Fill in the ID and vocabulary type and click on the **Next** button.
     ![]({{file name='STUDIO-vocabulary-type-selection.png'}} ?w=350,border=true)
 4.  Fill in the values like you want.
@@ -281,7 +281,7 @@ There are 3 types of vocabulary:
     Click on **Import CSV** to import content from a .csv file instead of typing each entry manually. See example files:[ simple-vocabulary.csv]({{file name='simple-vocabulary.csv' space='studio' page='vocabularies'}}) and []({{file name='hierarchical-vocabulary.csv' space='studio' page='vocabularies'}}).
 
     {{/callout}}
-5.  Click on the **Save&nbsp;**button.
+5.  Click on the **Save** button.
     You can now use the vocabulary on [layouts]({{page page='layout-and-widget-how-to-index'}}) to populate drop-down lists. After you deploy your customization on your Nuxeo Platform, the vocabulary is [available in the Admin Center]({{page space='userdoc60' page='managing-vocabularies'}}) so power users and administrators can easily add new entries to the vocabulary.
 
 &nbsp;
@@ -290,16 +290,12 @@ There are 3 types of vocabulary:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Howtos'}}
 
-*   <div class="details">[Add a New Virtual Navigation Entry]({{page space='NXDOC' page='Add a+New+Virtual+Navigation+Entry'}})</div>
-
-*   <div>[Adding a New Vocabulary]({{page space='NXDOC' page='Adding a+New+Vocabulary'}})</div>
-
-*   <div>[Translating a Vocabulary]({{page space='NXDOC' page='Translating a+Vocabulary'}})</div>
-
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Tutorials'}}
-
+*   [Add a New Virtual Navigation Entry]({{page space='nxdoc' page='how-to-add-a-new-virtual-navigation-entry'}})
+*   [Adding a New Vocabulary]({{page space='NXDOC' page='how-to-add-a-new-vocabulary'}})
+*   [Translating a Vocabulary]({{page space='NXDOC' page='how-to-translate-a-vocabulary'}})
+{{/panel}}</div><div class="column medium-6">
+{{#> panel heading='Related Tutorials'}}
 *   [Data Lists and Directories]({{page page='data-lists-and-directories'}})
 *   [Declaring Vocabularies]({{page space='studio' page='declaring-vocabularies'}})
 *   [Managing Vocabularies]({{page space='userdoc60' page='managing-vocabularies'}})
-
 {{/panel}}</div></div>
