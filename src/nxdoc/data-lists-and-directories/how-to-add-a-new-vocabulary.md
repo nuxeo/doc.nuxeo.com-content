@@ -265,7 +265,7 @@ There are 3 types of vocabulary:
 
 {{! /multiexcerpt}}
 
-<span style="color: rgb(0,0,0);font-size: 20.0px;line-height: 1.5;">Creating a New Vocabulary</span>
+## Creating a New Vocabulary
 
 1.  Click on the&nbsp;**Vocabularies**&nbsp;item of the Studio menu.
 
@@ -294,13 +294,13 @@ There are 3 types of vocabulary:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Howtos'}}
 
-*   [Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
-*   [Translating a Vocabulary]({{page page='how-to-translate-a-vocabulary'}})
+- [Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
+- [Translating a Vocabulary]({{page page='how-to-translate-a-vocabulary'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Tutorials'}}
 
-*   [Data Lists and Directories]({{page page='data-lists-and-directories'}})
-*   [Declaring Vocabularies]({{page space='studio' page='declaring-vocabularies'}})
-*   [Managing Vocabularies]({{page space='userdoc710' page='managing-vocabularies'}})
+- [Data Lists and Directories]({{page page='data-lists-and-directories'}})
+- [Declaring Vocabularies]({{page space='studio' page='declaring-vocabularies'}})
+- [Managing Vocabularies]({{page space='userdoc710' page='managing-vocabularies'}})
 
 {{/panel}}</div></div>
