@@ -600,14 +600,16 @@ On the document creation form, a Box button enables you to browse your Box conte
 
 1.  Go to [https://app.box.com/developers/services](https://app.box.com/developers/services).
 2.  Click on **Create a Box Application**.
-3.  Enter the name of your application and select **Create Application**.
-5.  In **redirect_uri** set the following URL, adapting the hostname and port to your case: [https://nuxeo-server:8080/nuxeo/site/oauth2/box/callback](https://nuxeo-server:8080/nuxeo/site/oauth2/box/callback) .
+3.  Select the **Custom App** application type.
+4.  In the Authentication Method screen, select **Standard OAuth 2.0 (User Authentication)**.
+5.  Enter the name of your application and select **Create Application**.
+6.  In **redirect_uri** set the following URL, adapting the hostname and port to your case: [https://nuxeo-server:8080/nuxeo/site/oauth2/box/callback](https://nuxeo-server:8080/nuxeo/site/oauth2/box/callback) .
 
     {{#> callout type='info' }}
     Please note that Box allows HTTP only for localhost. For all other sites HTTPS must be used. See [HTTP and HTTPS Reverse-Proxy Configuration](/x/GAFc).
     {{/callout}}
-6.  Copy the client_id and client_secret.
-7.  Click on button **Save Application**.
+7.  Copy the client_id and client_secret.
+8.  Click on button **Save Application**.
 
 
 &nbsp;
