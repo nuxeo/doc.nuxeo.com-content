@@ -176,5 +176,5 @@ docker.build('nuxeo-qaimage-php-client', 'docker/qa').inside {
 ### Get Git Current Branch
 
 ```
-def branch = sh(script: 'rev=$(git rev-parse HEAD); git name-rev $rev | awk \'{ print $2}\'', returnStdout: true)
+def branch = sh(script: 'rev=$(git name-rev --name-only HEAD)', returnStdout: true)
 ```
