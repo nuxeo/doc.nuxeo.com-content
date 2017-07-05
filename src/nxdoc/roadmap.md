@@ -2,24 +2,22 @@
 title: Nuxeo Roadmap
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-07-05'
     status: ok
 labels:
-    - home
+    - roadmap
 is_overview: true
-
 tree_item_index: 790
-
 ---
-Global Nuxeo Roadmap puts the emphasis on 
+The Global Nuxeo Roadmap focuses on: 
 
-- keeping up the pace with technological innovation
-- keeping improving scalability and resilience of Nuxeo Server,
-- providing greater UX for all Nuxeo apps 
-- providing online tooling to build content flavored business applications
-- Keep improving DAM capabilities
+- keeping up with technological innovation
+- Improving scalability and resilience of Nuxeo Server,
+- Providing greater UX for all Nuxeo apps 
+- Providing online tooling to build content flavored business applications
+- Improving DAM capabilities
 
-Those objectives help our product managers prioritize the roadmap of each of our products. See links here-after for accessing a specific roadmap.
+These objectives help our Product Managers prioritize ideas in the different product roadmaps. You can view our individual product roadmaps below.
 {{{multiexcerpt 'ProdpadFeedback' page='generic-multi-excerpts'}}}
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
