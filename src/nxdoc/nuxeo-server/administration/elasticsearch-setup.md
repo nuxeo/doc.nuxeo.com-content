@@ -575,6 +575,8 @@ To inform the Nuxeo Platform that authentication is needed on the cluster, the `
 The Nuxeo Platform has to be associated to a user who is authorized to access the Elasticsearch cluster.
 The credentials are provided with the `elasticsearch.shield.username` and `elasticsearch.shield.password` properties.
 
+You can also enable encryption traffic inside your cluster by setting up SSL support. This configuration can be done by setting the node’s keystore path and password with the following properties: `elasticsearch.shield.keystore.path` and `elasticsearch.shield.keystore.password`. (For more information on setting up encryption traffic, see [How to secure communications in your Elasticsearch cluster](https://www.elastic.co/guide/en/shield/current/securing-communications.html)) 
+
 ## Disabling Elasticsearch
 
 Elasticsearch is enabled by default, if you want to disable Elasticsearch indexing and search you can simply add the following option to the `nuxeo.conf`:
