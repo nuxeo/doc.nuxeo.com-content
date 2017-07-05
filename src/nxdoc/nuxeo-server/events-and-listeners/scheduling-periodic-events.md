@@ -26,6 +26,11 @@ confluence:
 tree_item_index: 200
 history:
     -
+        author: Wojciech Kocik
+        date: '2017-07-05 12:00'
+        message: wrong tag in xml
+        version: '18'
+    -
         author: Vladimir Pasquier
         date: '2015-09-22 03:24'
         message: dding warning info related to Automation usage for Schedule
@@ -148,7 +153,7 @@ Here is an example contribution:
   <extension target="org.nuxeo.ecm.core.scheduler.SchedulerService"
       point="schedule">
     <schedule id="monthly_stuff">
-      <eventId>doStuff</eventId>
+      <event>doStuff</event>
       <eventCategory>default</eventCategory>
       <!-- Every first of the month at 3am -->
       <cronExpression>0 0 3 1 * ?</cronExpression>
