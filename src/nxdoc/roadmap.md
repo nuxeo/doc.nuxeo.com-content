@@ -20,7 +20,7 @@ Global Nuxeo Roadmap puts the emphasis on
 - Keep improving DAM capabilities
 
 Those objectives help our product managers prioritize the roadmap of each of our products. See links here-after for accessing a specific roadmap.
-You can also give us your feedback and suggestions through our [customer feedback portal](https://portal.prodpad.com/25470).
+{{{multiexcerpt 'ProdpadFeedback' page='generic-multi-excerpts'}}}
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}

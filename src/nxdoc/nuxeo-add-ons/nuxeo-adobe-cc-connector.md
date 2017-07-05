@@ -198,7 +198,7 @@ Updated documents in the Nuxeo instance or in an Adobe application will be repli
 ## Roadmap
 
 Below are the evolutions and improvements planned on Nuxeo Adobe CC Connector.
-
+{{{multiexcerpt 'ProdpadFeedback' page='generic-multi-excerpts'}}}
 <iframe src="https://ext.prodpad.com/ext/roadmap/d0643a44cd1e962554922cc57e6d9f4da101ddbc" height="900" width="100%"></iframe>
 
 * * *
