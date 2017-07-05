@@ -13,11 +13,12 @@
     "co": "^4.6.0",
     "lodash.defaultsdeep": "^4.6.0",
     "node-yaml-config": "0.0.4",
-    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v8.0.3",
+    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v8.0.10",
     "thenify": "^3.2.1"
   },
   "devDependencies": {
     "browser-sync": "^2.18.8",
+    "bs-fullscreen-message": "^1.1.0",
     "mkdirp": "^0.5.1",
     "tape": "^4.6.3",
     "taper": "^0.5.0"
