@@ -109,17 +109,17 @@ To Install Nuxeo Drive on your Linux computer:
   Then finally install the Nuxeo Drive requirements and Nuxeo Drive itself. These are common installation actions, not depending on the package manager.
   (warning: define the version you want in the DRIVE_VERSION variable, ex: `release-2.1.113` - [Find the Nuxeo Drive tags list here](https://github.com/nuxeo/nuxeo-drive/tags)):
   ```
-# For Drive < 2.2.227:
-DRIVE_VERSION=release-2.1.113
-pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements.txt
-pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/unix-requirements.txt
-pip install git+https://github.com/nuxeo/nuxeo-drive.git@$DRIVE_VERSION
+  # For Drive < 2.2.227:
+  DRIVE_VERSION=release-2.1.113
+  pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements.txt
+  pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/unix-requirements.txt
+  pip install git+https://github.com/nuxeo/nuxeo-drive.git@$DRIVE_VERSION
 
-# For Drive >= 2.2.227:
-DRIVE_VERSION=release-2.2.323
-pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements.txt
-pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements-unix.txt
-pip install git+https://github.com/nuxeo/nuxeo-drive.git@$DRIVE_VERSION
+  # For Drive >= 2.2.227:
+  DRIVE_VERSION=release-2.2.323
+  pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements.txt
+  pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements-unix.txt
+  pip install git+https://github.com/nuxeo/nuxeo-drive.git@$DRIVE_VERSION
   ```
 
 2. For now, the systray icon is not visible under Unity desktop. As a consequence, the configuration window only appears at the first launch. If you want to change it, issue the following commands:
