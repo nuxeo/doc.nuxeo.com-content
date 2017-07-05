@@ -31,7 +31,7 @@ These objectives help our Product Managers prioritize ideas in the different pro
 {{#> panel type='secondary' match_height='true'}}
 ### Developer Tooling
 
-- [Nuxeo Studio]({{page page='nuxeo-studio-roadmap'}})
+- [Nuxeo Studio]({{page space='studio' page='nuxeo-studio-roadmap'}})
 - [Nuxeo CLI]({{page page='nuxeo-cli-roadmap'}})
 - [Nuxeo Dev Tools Extension]({{page page='nuxeo-dev-tools-extension'}}#roadmap)
 
