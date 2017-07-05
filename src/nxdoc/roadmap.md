@@ -8,7 +8,7 @@ labels:
     - home
 is_overview: true
 
-tree_item_index: 100
+tree_item_index: 10000
 
 ---
 Global Nuxeo Roadmap puts the emphasis on 
