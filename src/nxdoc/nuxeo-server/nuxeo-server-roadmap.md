@@ -15,5 +15,5 @@ labels:
 
 Below are the evolutions and improvements planned for Nuxeo Server.
 {{{multiexcerpt 'ProdpadFeedback' page='generic-multi-excerpts'}}}
-<iframe src="https://ext.prodpad.com/ext/roadmap/d5be04d67e35a7dad7f0ea00660912fd18ffd3b1" height="4000" width="100%"></iframe>
+<iframe src="https://ext.prodpad.com/ext/roadmap/d5be04d67e35a7dad7f0ea00660912fd18ffd3b1" height="2000" width="100%" frameBorder="0"></iframe>
 
