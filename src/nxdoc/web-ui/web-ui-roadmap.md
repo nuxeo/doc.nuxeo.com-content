@@ -12,7 +12,7 @@ labels:
 
 ---
 
-Below are the evolutions and improvements planned on Web UI.
+Below are the evolutions and improvements planned for Web UI.
 {{{multiexcerpt 'ProdpadFeedback' page='generic-multi-excerpts'}}}
 
 <iframe src="https://ext.prodpad.com/ext/roadmap/a9cc2a012e76debc4af4c06f0d998405591979b3" height="2000" width="100%" frameBorder="0"></iframe>
