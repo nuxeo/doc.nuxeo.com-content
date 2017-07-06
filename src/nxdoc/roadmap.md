@@ -12,8 +12,8 @@ tree_item_index: 790
 The Global Nuxeo Roadmap focuses on: 
 
 - Keeping up with technological innovation
-- Improving scalability and resilience of Nuxeo Server,
-- Providing greater UX for all Nuxeo apps 
+- Improving scalability and resilience of Nuxeo Server
+- Providing better UX for all Nuxeo apps 
 - Providing online tooling to build content flavored business applications
 - Improving DAM capabilities
 
