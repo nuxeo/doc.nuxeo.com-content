@@ -47,6 +47,7 @@ if (!branch) {
 // Get 404 info page
 const content_404 = fs.readFileSync(path.join(__dirname, '404.html'));
 
+// Initialize Browsersync and webpack
 const sync = browser_sync.create();
 
 const get_filter = file => {
