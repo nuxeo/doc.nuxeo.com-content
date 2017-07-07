@@ -13,22 +13,8 @@ default:
             -
                 space_path: admindoc
                 space_name: Nuxeo Installation and Administration
-        versions:
-            -
-                label: FT
-            -
-                label: LTS 2016
-                url_path: '810'
-            -
-                is_current_version: true
-                label: LTS 2015
-                url_path: '710'
-            -
-                label: '6.0'
-                url_path: '60'
-            -
-                label: '5.8'
-                url_path: '58'
+        branch: '710'
+        dev_browser_path: nxdoc
 
 development:
     isDev: true
