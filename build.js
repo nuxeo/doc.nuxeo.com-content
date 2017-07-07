@@ -19,13 +19,14 @@ const builder_lib = require('nuxeo-docs-builder');
 const pre_builder = builder_lib.pre_builder;
 const builder = builder_lib.builder;
 
+
 // Working copy
 const target_repo_path = path.join(__dirname, 'src');
 const source_repo_path = __dirname;
 const target_repo_site = path.join(__dirname, 'site');
 
 error('target_repo_src: %s', target_repo_path);
-exec("git branch | grep ^\\* | grep -oE '[a-zA-Z0-9_-]+$'", {encoding: 'utf8'})
+exec("git branch | grep ^\\* | grep -oE '[a-zA-Z0-9_-]+$'", {encoding: 'utf8', cwd: __dirname})
 .then((branch_data) => {
     let branch;
     if (branch_data && branch_data[0] && typeof branch_data[0] === 'string') {
@@ -51,4 +52,7 @@ exec("git branch | grep ^\\* | grep -oE '[a-zA-Z0-9_-]+$'", {encoding: 'utf8'})
         error(err);
         throw err;
     });
+})
+.catch((err) => {
+    error('Could not get current branch: %s', err);
 });

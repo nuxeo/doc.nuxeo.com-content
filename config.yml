@@ -19,6 +19,7 @@ default:
             -
                 space_path: studio
                 space_name: Nuxeo Online Services
+        branch: 'static'
 
 development:
     isDev: true
