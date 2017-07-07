@@ -21,7 +21,7 @@ confluence:
     shortlink: hYPjAQ
     shortlink_source: 'https://doc.nuxeo.com/x/hYPjAQ'
     source_link: /display/NXDOC/Nuxeo+Elements
-tree_item_index: 200
+tree_item_index: 300
 history:
     -
         author: Manon Lumeau
@@ -35,7 +35,6 @@ history:
         version: '1'
 
 ---
-
 **Nuxeo Elements** is a set of libraries of web components leveraging emerging Web standards, built upon the same goals
 of simplicity and pluggability. Although still a work in progress, Nuxeo Elements already provides the means to build custom
 content-centric front-end applications, while taking full advantage of the technologies under the Web Components umbrella.

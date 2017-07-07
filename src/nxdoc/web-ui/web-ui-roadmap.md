@@ -1,7 +1,6 @@
 ---
-title: "Web UI Roadmap"
+title: Web UI Roadmap
 description: See what evolutions and improvements are planned for Nuxeo Web UI
-tree_item_index: 400
 review:
     comment: ''
     date: '2017-06-29'
@@ -9,7 +8,7 @@ review:
 toc: true
 labels:
     - roadmap
-
+tree_item_index: 500
 ---
 
 Below are the evolutions and improvements planned for Web UI.
