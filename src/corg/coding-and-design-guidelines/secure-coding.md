@@ -92,9 +92,8 @@ The coding workflow itself provides a Security Code Review post hoc:
 
 Automatic Code Review:
 
-*   [https://sonarcloud.io/organizations/nuxeo/projects](https://sonarcloud.io/organizations/nuxeo/projects)The SonarQube Nuxeo projects are configured with Nuxeo and FindBugs rules, including security checks (see [sonar-to-identify-security-vulnerabilities](http://www.sonarqube.org/sonar-to-identify-security-vulnerabilities/) and [SONAR/Security related rules](http://docs.sonarqube.org/display/SONAR/Security-related+rules) ).
-*   [https://www.codacy.com/](https://www.codacy.com/app/juliencarsique_548/nuxeo/dashboard)
-    That tool especially looks at JavaScript and CSS code (but also Python and PHP). Since the current "security level" is at 100%: no regression is allowed.
+- [https://sonarcloud.io/organizations/nuxeo/projects](https://sonarcloud.io/organizations/nuxeo/projects): The SonarQube Nuxeo projects are configured with Nuxeo and FindBugs rules, including security checks (see [sonar-to-identify-security-vulnerabilities](http://www.sonarqube.org/sonar-to-identify-security-vulnerabilities/) and [SONAR/Security related rules](http://docs.sonarqube.org/display/SONAR/Security-related+rules)).
+- [https://www.codacy.com/](https://www.codacy.com/app/juliencarsique_548/nuxeo/dashboard): That tool especially looks at JavaScript and CSS code (but also Python and PHP). Since the current "security level" is at 100%: no regression is allowed.
 
 Since the security also depends on the underlying third-party libraries, they must be kept consistent and up-to-date:
 
