@@ -1,6 +1,13 @@
 'use strict';
 /* eslint-env es6 */
 
+// Set Debugging up
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
+if (!process.env.DEBUG) {
+    process.env.DEBUG = 'docs-server*,*:info,*:error';
+}
+
 // Spawns a dev server with Metalsmith & Webpack live reloading via Browsersync
 const debug_lib = require('debug');
 const debug = debug_lib('docs-server');
@@ -12,12 +19,6 @@ const strip_ansi = require('strip-ansi');
 
 const thenify = require('thenify');
 const exec = thenify(require('child_process').exec);
-
-// Set Debugging up
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-if (!process.env.DEBUG) {
-    process.env.DEBUG = 'docs-server*,*:info,*:error';
-}
 
 const fs = require('fs');
 const path = require('path');
@@ -43,10 +44,8 @@ if (!branch) {
     throw new Error('Could not get current branch from `config.yml` site.branch');
 }
 
-// Copy initial build index page
-const initial_build_path = path.join(__dirname, 'site', dev_browser_path);
-mkdirp(initial_build_path);
-fs.writeFileSync(path.join(initial_build_path, 'index.html'), fs.readFileSync(path.join(__dirname, 'initial_build.html')));
+// Get 404 info page
+const content_404 = fs.readFileSync(path.join(__dirname, '404.html'));
 
 // Initialize Browsersync and webpack
 const sync = browser_sync.create();
@@ -125,4 +124,17 @@ sync.init({
             }
         }
     ]
+}
+, (err, bs) => {
+    if (err) {
+        error(err);
+    }
+    bs.addMiddleware('*', (req, res) => {
+        // res.writeHead(302, {
+        //     "location": "404.html"
+        // });
+        // res.end("Redirecting!");
+        res.write(content_404);
+        res.end();
+    });
 });

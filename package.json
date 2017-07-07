@@ -38,7 +38,7 @@
     "copy_assets:default": "mkdir -p ./site/assets/`./node_modules/nuxeo-docs-builder/bin/version-path` && cp -r ./assets/* ./site/assets/`./node_modules/nuxeo-docs-builder/bin/version-path`",
     "copy_assets:module": "cp -r ./node_modules/nuxeo-docs-builder/assets/* ./site/assets/",
     "metalsmith": "node .",
-    "server": "browser-sync start --server site --startPath nxdoc --browser=$npm_package_config_browser",
+    "server": "browser-sync start --server site --browser=$npm_package_config_browser",
     "server_reload": "browser-sync reload",
     "yaml_lint": "js-yaml -t > /dev/null"
   },
