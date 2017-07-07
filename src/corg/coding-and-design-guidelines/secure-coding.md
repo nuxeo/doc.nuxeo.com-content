@@ -90,11 +90,9 @@ The coding workflow itself provides a Security Code Review post hoc:
 *   Security Hotfixes: there is no absolutely secured code but known vulnerabilities and weaknesses: when a new one is discovered, it is immediately fixed as an emergency, customers are warned about it, then the fix is made available for all users through a public Security Hotfix.
 *   LTS/FT release cycle + code freeze durations: code lives for a long time in the Fast Track cycle (and for a short while in "code freeze" within Fast Track) so the Nuxeo and community developers should have enough spare time to properly review it and raise issues.
 
-Automatic Code Review (work in progress):
+Automatic Code Review:
 
-*   [sonar.nuxeo.org
-    ](http://sonar.nuxeo.org)The SonarQube is configured with Nuxeo and FindBugs rules, including security checks (see&nbsp;[sonar-to-identify-security-vulnerabilities](http://www.sonarqube.org/sonar-to-identify-security-vulnerabilities/) and&nbsp;[SONAR/Security related rules](http://docs.sonarqube.org/display/SONAR/Security-related+rules) ).
-    Temporarily deactivated since Nuxeo 6.0 and replaced with a raw analysis, [sonar.nuxeo.org](http://sonar.nuxeo.org) is being upgraded for compliance with Maven 3 and Java 8.
+*   [https://sonarcloud.io/organizations/nuxeo/projects](https://sonarcloud.io/organizations/nuxeo/projects)The SonarQube Nuxeo projects are configured with Nuxeo and FindBugs rules, including security checks (see [sonar-to-identify-security-vulnerabilities](http://www.sonarqube.org/sonar-to-identify-security-vulnerabilities/) and [SONAR/Security related rules](http://docs.sonarqube.org/display/SONAR/Security-related+rules) ).
 *   [https://www.codacy.com/](https://www.codacy.com/app/juliencarsique_548/nuxeo/dashboard)
     That tool especially looks at JavaScript and CSS code (but also Python and PHP). Since the current "security level" is at 100%: no regression is allowed.
 
