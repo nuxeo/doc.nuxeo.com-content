@@ -11,4 +11,6 @@ tree_item_index: 750
 
 Below are listed the evolutions and improvements planned for Nuxeo Studio.
 
-<iframe src="https://ext.prodpad.com/ext/roadmap/daab7b71f1d13f88b90b998727f4aa9ed1ff20ed" height="2000" width="100%" frameborder="0"></iframe>
+You can also give us your feedback and suggestions through our [https://portal.prodpad.com/25470](feedback portal).
+
+<iframe src="https://ext.prodpad.com/ext/roadmap/d134d35c1ec6f8301047ad64137226cdc8a8812e" height="2000" width="100%"></iframe>
