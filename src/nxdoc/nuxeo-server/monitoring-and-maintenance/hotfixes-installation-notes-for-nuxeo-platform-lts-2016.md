@@ -130,7 +130,10 @@ Registration tokens are valid until your current contract's expiration date. Whe
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
 ## Hotfix 10
-If you are using Nuxeo JSF UI, you must upgrade the package `nuxeo-jsf-ui` to version 8.10.1 to keep the workflows working.
+If you are using Nuxeo JSF UI, you must upgrade the package `nuxeo-jsf-ui` to version 8.10.1 to keep the workflows working. Run the following command from the command line to upgrade the installed packages:
+```
+./nuxeoctl mp-upgrade
+```
 
 ## Hotfix 09
 
