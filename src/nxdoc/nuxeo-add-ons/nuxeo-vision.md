@@ -2,7 +2,7 @@
 title: Nuxeo Vision
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-07-10'
     status: ok
 labels:
     - lts2016-ok
@@ -124,40 +124,48 @@ history:
         version: '1'
 
 ---
-The [Nuxeo Vision](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision) addon provides a gateway to computer vision services. Currently it supports the Google Vision API but other services can be easily integrated as they become available. This gateway provides a wide range of features including shape recognition, auto-classification of images, OCR, face detection and more.
-
-See [https://cloud.google.com/vision/](https://cloud.google.com/vision/) for more information.
+The [Nuxeo Vision](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision) addon provides a gateway to computer vision services. Currently it supports the Google Vision API and Amazon Rekognition API. Other services can be easily integrated as they become available. These external services allow you to understand the content of an image by encapsulating powerful machine learning models. This gateway provides a wide range of features including shape recognition, auto-classification of images, OCR, face detection and more.
 
 ## Installation and Configuration
 
-### Installation
-
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
-### Google Account Configuration
+To install the Nuxeo Vision Package, you have several options:
+- From the Nuxeo Marketplace: install [the Nuxeo Vision package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision).
+- From the Nuxeo server web UI "Admin / Update Center / Packages from Nuxeo Marketplace"
+- From the command line: `nuxeoctl mp-install nuxeo-vision`
 
-Follow the instructions at [https://cloud.google.com/vision/docs/getting-started](https://cloud.google.com/vision/docs/getting-started).
+### Google Vision Configuration
+- Configure a [Google service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount)
+- As of march 2nd 2016, billing must be activated in your google account in order to use the Vision API
+- Upload the JSON key file on your instance
+- Edit nuxeo.conf and add your service account credential key
+```
+org.nuxeo.vision.google.credential=[key_goes_here]
+```
 
-### Nuxeo Platform Configuration
+See [https://cloud.google.com/vision/](https://cloud.google.com/vision/) for more information.
 
-Once you have a google service account credential file:
-
-1.  Upload the JSON credential file on your Nuxeo Instance, at the same location as the instance's nuxeo.conf file.
-2.  Edit [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) and set the credential file path:
-
-    ```
-    org.nuxeo.vision.google.credential=PATH_TO_JSON_CREDENTIAL_FILE
-    ```
+### AWS Rekognition Configuration
+- Configure a key/secret pair in the [AWS console](http://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html)
+- Check the [FAQ](https://aws.amazon.com/rekognition/faqs/) to see in which regions the API is available
+- Edit nuxeo.conf with the suitable information
+```
+org.nuxeo.vision.default.provider=aws
+org.nuxeo.vision.aws.region=
+org.nuxeo.vision.aws.key=
+org.nuxeo.vision.aws.secret=
+```
 
 ## Functional Overview
 
-By default, the Computer Vision Service is called every time the main binary file of a picture or video document is updated. Classification labels are stored in the Tags property and OCRed text in the `dc:source` property.
+By default, the Computer Vision Service is called every time the main binary file of a picture or video document is updated. Classification labels are stored in the Tags property.
 
-![]({{file name='Google-Cloud-Vision-Screenshot-Savannah.png'}} ?w=500,border=true)
+![]({{file name='Google-Cloud-Vision-Screenshot-Church.png'}} ?w=500,border=true)
 
 For videos, the platform uses the images of the storyboard.
 
-![]({{file name='Google-Cloud-Vision-Video.png'}} ?w=500,border=true)
+![]({{file name='Google-Cloud-Vision-Video-WebUI.png'}} ?w=500,border=true)
 
 ## Customization
 
@@ -236,5 +244,6 @@ The API has some known and documented [best practices](https://cloud.google.com/
 
 *   There is limitation to the size of the image you send to the API: "Image files sent to the Google Cloud Vision API should not exceed 4 MB".&nbsp;There also is a limitation when you send a list of images (max. 8MB). This is an important information to handle before requesting data. And this is why, if you look at the original chain, it actually takes the &ldquo;Medium&rdquo; conversion, which is a JPEG we can assume is always smaller than 4MB. You also should read the limitations in terms of maximum number of images/second, etc.
 *   Not all image formats are handled. TIFF for example is not handled.
+*   Amazon Rekognition doesn't provide text-recognition services (OCR)
 
 Also, as it is a cloud service, these limitations will surely evolve, change, maybe depending on a subscription, etc.
