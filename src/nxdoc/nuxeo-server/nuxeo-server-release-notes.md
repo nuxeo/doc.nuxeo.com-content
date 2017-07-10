@@ -292,6 +292,17 @@ Random English content can now be generated using the random importer.
 
 More information on JIRA ticket [NXP-21260](https://jira.nuxeo.com/browse/NXP-21260).
 
+### Web UI
+
+#### Better Task View
+
+Task view has been improved:
+  - New task layout: More readable task detail, preview on the right, flatter design
+  - Task queue: Optimization of the information available to the user
+  - Tasks Listing Dashboard : File name and path info have been added 
+
+More information on JIRA ticket [NXP-22591](https://jira.nuxeo.com/browse/NXP-22591).
+
 ### JSF UI
 
 #### Custom Mobile Banner
