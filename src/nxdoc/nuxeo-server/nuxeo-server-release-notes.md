@@ -148,6 +148,22 @@ Directory interface now has a MongoDB implementation.
 
 More information on JIRA ticket [NXP-17742](https://jira.nuxeo.com/browse/NXP-17742).
 
+#### NEW Generic Directories References
+A new descriptor for references in directories has been added (their description used to be specific to the SQL implementation of directories). Example: 
+```xml
+<references> 
+        <reference field="groups" directory="groupDirectory" 
+                   name="user2group" source="userId" 
+                   target="groupId" dataFile="user2group.csv"/> 
+</references> 
+```
+
+This reference is generic and can be used with SQL and MongoDB implementation. 
+
+
+More information on JIRA ticket [NXP-22411](https://jira.nuxeo.com/browse/NXP-22411).
+
+
 ### Audit
 
 #### MongoDB Audit Backend
