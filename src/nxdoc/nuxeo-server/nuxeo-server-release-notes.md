@@ -107,7 +107,7 @@ More information on JIRA ticket [NXP-19373](https://jira.nuxeo.com/browse/NXP-19
 
 #### Optimized Number of Read When Writing
 
-The number of read requests required to create documents has been reduced to the strictly required using cache. As a consequence CPU is no longer the limiting factor of bulk-intensive import scenarii.
+The number of read requests required to create documents has been reduced to the strictly required using cache. As a consequence CPU is no longer the limiting factor of bulk-intensive import scenari.
 
 More information on JIRA ticket [NXP-20595](https://jira.nuxeo.com/browse/NXP-20595).
 
@@ -120,6 +120,10 @@ A new PubSubService is available, providing cross-instance publish/subscribe met
 More information on JIRA ticket [NXP-21800](https://jira.nuxeo.com/browse/NXP-21800).
 
 ### Directory
+
+#### NEW administrators group members have access to protected directories 
+
+Directories access protected by giving `Read`permission to group __Nobody__ are now accessible by members of the group administrators.
 
 #### MongoDB Directory Implementation
 
