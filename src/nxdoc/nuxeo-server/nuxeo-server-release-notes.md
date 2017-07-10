@@ -300,11 +300,17 @@ A new search result view has been added on the main search. It displays items on
 
 More information on JIRA ticket [NXP-22567](https://jira.nuxeo.com/browse/NXP-22567).
 
-#### Results Highlight in Suggestion Search
+#### NEW Results Highlight in Suggestion Search
 
 When doing a quick search in the suggestion box, Web UI now displays the matched terms and metadata so as to understand why the result item is returned.  
 
 More information on JIRA ticket [NXP-22566](https://jira.nuxeo.com/browse/NXP-22566).
+
+#### NEW Justified Thumbnails Grid
+
+A new view for media search results has been added with justified display of thumbnails that keep their original ratio and with metadata displayed on hover. Goal is to improve user experience for users that spend a lot of time searching for visual media (images, video) in the repository.
+
+More information on JIRA ticket [NXP-22474](https://jira.nuxeo.com/browse/NXP-22474).
 
 #### NEW Better Task View
 
