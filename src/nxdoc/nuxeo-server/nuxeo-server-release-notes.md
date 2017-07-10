@@ -300,6 +300,12 @@ A new search result view has been added on the main search. It displays items on
 
 More information on JIRA ticket [NXP-22567](https://jira.nuxeo.com/browse/NXP-22567).
 
+#### Results Highlight in Suggestion Search
+
+When doing a quick search in the suggestion box, Web UI now displays the matched terms and metadata so as to understand why the result item is returned.  
+
+More information on JIRA ticket [NXP-22566](https://jira.nuxeo.com/browse/NXP-22566).
+
 #### NEW Better Task View
 
 Task view has been improved:
