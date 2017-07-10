@@ -162,55 +162,32 @@ You can drop any file type in Nuxeo.
 
 Here are some examples of most commonly used item types and their output in Nuxeo:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-
-Item type
-
-</th><th colspan="1">
-
-Document created in Nuxeo
-
-</th></tr><tr><td colspan="1">
-
-Folder
-
-</td><td colspan="1">
-
-Folder
-
-</td></tr><tr><td colspan="1">
-
-Microsoft Office file
-
-</td><td colspan="1">
-
-File
-
-</td></tr><tr><td colspan="1">
-
-OpenOffice.file
-
-</td><td colspan="1">
-
-File
-
-</td></tr><tr><td colspan="1">
-
-.txt file
-
-</td><td colspan="1">
-
-Note
-
-</td></tr><tr><td colspan="1">
-
-Picture (.jpg, .png, etc)
-
-</td><td colspan="1">
-
-Picture
-
-</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+  <th colspan="1">Item type</th>
+  <th colspan="1">Document created in Nuxeo</th>
+</tr>
+<tr>
+  <td colspan="1">Microsoft Office file</td>
+  <td colspan="1">File</td>
+</tr>
+<tr>
+  <td colspan="1">OpenOffice.file</td>
+  <td colspan="1">File</td>
+</tr>
+<tr>
+  <td colspan="1">.txt file</td>
+  <td colspan="1">Note</td>
+</tr>
+<tr>
+  <td colspan="1">Picture (.jpg, .png, etc)</td>
+  <td colspan="1">Picture</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 {{! /multiexcerpt}}
 
