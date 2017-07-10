@@ -294,7 +294,13 @@ More information on JIRA ticket [NXP-21260](https://jira.nuxeo.com/browse/NXP-21
 
 ### Web UI
 
-#### Better Task View
+#### NEW New List Item View with Search Results Highlight
+
+A new search result view has been added on the main search. It displays items on the full width of the panel, in the same style as a web search engine such as Google, with searched terms highlighted in the context of the original text wrapping them.
+
+More information on JIRA ticket [NXP-22567](https://jira.nuxeo.com/browse/NXP-22567).
+
+#### NEW Better Task View
 
 Task view has been improved:
   - New task layout: More readable task detail, preview on the right, flatter design
@@ -302,6 +308,7 @@ Task view has been improved:
   - Tasks Listing Dashboard : File name and path info have been added 
 
 More information on JIRA ticket [NXP-22591](https://jira.nuxeo.com/browse/NXP-22591).
+
 
 ### JSF UI
 
