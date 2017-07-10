@@ -10,4 +10,6 @@ toc: true
 
 Below are listed the evolutions and improvements planned for the Nuxeo Online Services portal.
 
-<iframe src="https://ext.prodpad.com/ext/roadmap/c80e7d2d9b70ada7b0c31b0f7fa09d07afe9098d" height="2000" width="100%"></iframe>
+You can also give us your feedback and suggestions through our [https://portal.prodpad.com/25470](feedback portal).
+
+<iframe src="https://ext.prodpad.com/ext/roadmap/4713f120ba7e9e27f0290042aa2da545030d8d03" height="900" width="100%"></iframe>
