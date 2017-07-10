@@ -82,7 +82,7 @@ To start the workflow graph:
 
 1.  Click on the **Graph** tab.
 2. By default, Studio adds the Start and Stop nodes automatically. If not,  drag and drop the Start node on the graph.
-    ![](https://www.lucidchart.com/publicSegments/view/54ede03e-bcb8-4715-a9f3-1f500a008a99/image.png ?w=250,border=true)
+    ![](https://www.lucidchart.com/publicSegments/view/54ede03e-bcb8-4715-a9f3-1f500a008a99)
 
 ### Defining the Technical Validation Step
 
