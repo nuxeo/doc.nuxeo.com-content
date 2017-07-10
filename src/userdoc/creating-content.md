@@ -322,10 +322,6 @@ Here are some examples of most commonly used item types and their output in Nuxe
 <th colspan="1">Document created in Nuxeo</th>
 </tr>
 <tr>
-<td colspan="1">Folder</td>
-<td colspan="1">Folder</td>
-</tr>
-<tr>
 <td colspan="1">Microsoft Office file</td>
 <td colspan="1">File</td>
 </tr>
