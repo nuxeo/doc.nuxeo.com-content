@@ -117,6 +117,15 @@ The number of read requests required to create documents has been reduced to the
 
 More information on JIRA ticket [NXP-20595](https://jira.nuxeo.com/browse/NXP-20595).
 
+#### NEW Database-level Integrity Constraints for PostgreSQL
+
+When using PostgreSQL, stricter database-level checks are now enabled to prevent rare document name collisions due to concurrent writes. Behavior can be controlled in the repository configuration file using 
+
+```xml
+	<childNameUniqueConstraintEnabled>true</childNameUniqueConstraintEnabled>
+```
+More information on JIRA ticket [NXP-22421](https://jira.nuxeo.com/browse/NXP-22421).
+
 ### Core Events
 
 A new PubSubService is available, providing cross-instance publish/subscribe methods:
