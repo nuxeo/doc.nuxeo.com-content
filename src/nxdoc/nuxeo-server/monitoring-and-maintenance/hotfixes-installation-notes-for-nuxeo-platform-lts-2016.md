@@ -129,6 +129,9 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 10
+If you are using Nuxeo JSF UI, you must upgrade the package `nuxeo-jsf-ui` to version 8.10.1 to keep the workflows working.
+
 ## Hotfix 09
 
 ### Traffic Encryption in Elasticsearch
