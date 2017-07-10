@@ -252,7 +252,7 @@ The tables below use the following notation:
 <tr>
     <td colspan="1">Box documents</td>
     <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
-    <td>&#10003</td>
+    <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">[Nuxeo Live Connect documentation]({{page page='nuxeo-live-connect'}})</td>
@@ -523,7 +523,7 @@ The tables below use the following notation:
     </td>
     <td>&#10003;</td>
     <td>&#10003;<br/>&#10003;</td>
-    <td>V1.0<br/>&#10003;</td>
+    <td>V2.0<br/>&#10003;</td>
     <td colspan="1">
     [Document modification user documentation]({{page space='userdoc' page='editing-content'}})<br/>
     [How to Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})<br/>
@@ -588,7 +588,7 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Tree Snapshot](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot)</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>v2.0</td>
+    <td>V2.0</td>
     <td></td>
 </tr>
 <tr>
@@ -706,7 +706,7 @@ The tables below use the following notation:
     <td colspan="1">Nuxeo JSF UI</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>V1.0</td>
+    <td>&#10003;</td>
     <td colspan="1">
     [User documentation]({{page space='userdoc' page='workflows'}})<br/>
     [Developer documentation]({{page page='workflow'}})<br/>
@@ -719,7 +719,7 @@ The tables below use the following notation:
     <td colspan="1">Nuxeo JSF UI</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>V1.0</td>
+    <td>&#10003;</td>
     <td colspan="1">
     [User documentation]({{page space='userdoc' page='workflows'}})<br/>
     [Developer documentation]({{page page='workflow'}})<br/>
@@ -1077,7 +1077,7 @@ The tables below use the following notation:
     <td>[Nuxeo Multi-tenant](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>v2.0</td>
+    <td>V2.0</td>
     <td>[Nuxeo Multi-tenant documentation]({{page version='' space='userdoc' page='nuxeo-multi-tenant'}})</td>
  </tr>
 </tbody>
