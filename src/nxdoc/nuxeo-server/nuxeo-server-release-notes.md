@@ -97,6 +97,12 @@ A check on the existence of users an groups referenced with this operation is pe
 
 More information on JIRA ticket [NXP-21559](https://jira.nuxeo.com/browse/NXP-21559).
 
+#### NEW Attribute "perDocumentQuery" of facet definition can be overridden
+
+It is possible to change the value of the attribute perDocumentQuery of a facet that has been contributed in the built-in distribution.
+
+More information on JIRA ticket [NXP-22603](https://jira.nuxeo.com/browse/NXP-22603)
+
 ### Core Storage
 
 #### New Oracle JDBC Driver (ojdbc7) Compatibility
@@ -124,6 +130,8 @@ More information on JIRA ticket [NXP-21800](https://jira.nuxeo.com/browse/NXP-21
 #### NEW administrators group members have access to protected directories 
 
 Directories access protected by giving `Read`permission to group __Nobody__ are now accessible by members of the group administrators.
+
+More information on JIRA ticket [NXP-22609](https://jira.nuxeo.com/browse/NXP-22609)
 
 #### MongoDB Directory Implementation
 
