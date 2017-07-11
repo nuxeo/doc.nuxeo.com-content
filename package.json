@@ -13,13 +13,12 @@
     "co": "^4.6.0",
     "lodash.defaultsdeep": "^4.6.0",
     "node-yaml-config": "0.0.4",
-    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v8.0.11",
+    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v8.0.12",
     "thenify": "^3.2.1"
   },
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "bs-fullscreen-message": "^1.1.0",
-    "mkdirp": "^0.5.1",
     "tape": "^4.6.3",
     "taper": "^0.5.0"
   },
@@ -34,6 +33,7 @@
     "poststart": "npm run copy_assets && npm run verify",
     "predev": "npm install",
     "dev": "node dev-server",
+    "dev:no-clean": "node dev-server --no-clean",
     "copy_assets": "npm run copy_assets:default && npm run copy_assets:module",
     "copy_assets:default": "mkdir -p ./site/assets/`./node_modules/nuxeo-docs-builder/bin/version-path` && cp -r ./assets/* ./site/assets/`./node_modules/nuxeo-docs-builder/bin/version-path`",
     "copy_assets:module": "cp -r ./node_modules/nuxeo-docs-builder/assets/* ./site/assets/",
