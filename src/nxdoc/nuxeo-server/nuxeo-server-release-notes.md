@@ -115,11 +115,17 @@ More information on JIRA ticket [NXP-21456](https://jira.nuxeo.com/browse/NXP-21
 
 ### Core Storage
 
-#### New SSL Support for Marklogic
+#### NEW SSL Support for Marklogic
 
 When using the Marklogic Connector for Nuxeo, connection is now secured with SSL.
 
 More information on JIRA ticket [NXP-21818](https://jira.nuxeo.com/browse/NXP-21818).
+
+#### Improved Performance on Scrolling API with Marklogic
+
+Scroll API (that allows to fetch many documents in a row) has been re-implemented on Marklogic connector. Elastiscsearch re-indexation rate has been increased from 642 documents / seconds to 2418 documents / seconds, i.e +375%.
+
+More information on JIRA ticket [NXP-21824](https://jira.nuxeo.com/browse/NXP-21824).
 
 #### New Oracle JDBC Driver (ojdbc7) Compatibility
 
