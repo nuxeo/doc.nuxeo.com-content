@@ -70,17 +70,21 @@ It is now possible to use the XPath of the binary that is being stored to determ
 
 More information on JIRA ticket [NXP-21891](https://jira.nuxeo.com/browse/NXP-21891).
 
-#### Change Token for Optimistic Locking
+#### NEW Change Token for Optimistic Locking
 
 New API:
 
 - `DocumentModel.getChangeToken()`
 
-New behavior:
+New behaviors:
 
 - Calling `doc.putContextData(CoreSession.CHANGE_TOKEN, token)` then `CoreSession.saveDocument(doc)` will check the change token and raise ConcurrentUpdateException in case of mismatch.
 
-More information on JIRA ticket [NXP-19435](https://jira.nuxeo.com/browse/NXP-19435).
+- Calling doc.putContextData(CoreSession.USER_CHANGE, Boolean.TRUE) then CoreSession.saveDocument(doc) will flag the save as a "user change".
+
+The change token returned to the user-level API DocumentModel.getChangeToken() is now a mix of a system change token (updated at every change) and a user change token (updated at every user change). A "user change" is a change initiated by a user-level operation, which is defined as a document save that passes a previous change token using doc.putContextData(CoreSession.CHANGE_TOKEN, token), or that marks the save as an explicit user change using doc.putContextData(CoreSession.USER_CHANGE, Boolean.TRUE).
+
+More information on JIRA tickets [NXP-19435](https://jira.nuxeo.com/browse/NXP-19435) and [NXP-22019](https://jira.nuxeo.com/browse/NXP-22019).
 
 #### Disable Delta Computation
 
