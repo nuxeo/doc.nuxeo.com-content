@@ -103,6 +103,16 @@ It is possible to change the value of the attribute perDocumentQuery of a facet 
 
 More information on JIRA ticket [NXP-22603](https://jira.nuxeo.com/browse/NXP-22603)
 
+#### NEW Document Properties Deprecation
+
+A new extension point "deprecation" has been added to the Schema service for configuring deprecated fields and their optional fall-back. A warning is logged when a deprecated field is used in the application, and if the fall-back is configured, values are set and get from that fall-back field.
+
+```xml
+<property schema="common" name="size" deprecated="true" />
+<property schema="file" name="filename" fallback="content/name" />
+```
+More information on JIRA ticket [NXP-21456](https://jira.nuxeo.com/browse/NXP-21456)
+
 ### Core Storage
 
 #### New Oracle JDBC Driver (ojdbc7) Compatibility
