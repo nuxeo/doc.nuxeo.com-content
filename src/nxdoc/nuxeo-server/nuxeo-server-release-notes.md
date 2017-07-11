@@ -152,11 +152,11 @@ Directories access protected by giving `Read`permission to group __Nobody__ are 
 
 More information on JIRA ticket [NXP-22609](https://jira.nuxeo.com/browse/NXP-22609)
 
-#### MongoDB Directory Implementation
+#### NEW MongoDB Directory Implementation
 
-Directory interface now has a MongoDB implementation.
+Directory interface now has a MongoDB implementation included in the default distribution.
 
-More information on JIRA ticket [NXP-17742](https://jira.nuxeo.com/browse/NXP-17742).
+More information on JIRA ticket [NXP-21582](https://jira.nuxeo.com/browse/NXP-21582).
 
 #### NEW Generic Directories References
 A new descriptor for references in directories has been added (their description used to be specific to the SQL implementation of directories). Example: 
@@ -364,7 +364,7 @@ Task view has been improved:
 More information on JIRA ticket [NXP-22591](https://jira.nuxeo.com/browse/NXP-22591).
 
 
-#### Default Workflows
+#### NEW Default Workflows
 
 Default Workflows (serie and parallel review) have been added to Web UI.
 
