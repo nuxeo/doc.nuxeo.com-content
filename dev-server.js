@@ -8,11 +8,16 @@ if (!process.env.DEBUG) {
     process.env.DEBUG = 'docs-server*,*:info,*:error';
 }
 
+// check for no-clean switch
+const no_clean = !!process.argv.find(val => val === '--no-clean');
+
 // Spawns a dev server with Metalsmith & Webpack live reloading via Browsersync
 const debug_lib = require('debug');
 const debug = debug_lib('docs-server');
 const error = debug_lib('docs-server:error');
 const info = debug_lib('docs-server:info');
+
+info('no-clean', no_clean);
 
 const browser_sync = require('browser-sync');
 const strip_ansi = require('strip-ansi');
@@ -25,7 +30,6 @@ const path = require('path');
 const yaml_config = require('node-yaml-config');
 const co = require('co');
 const extend = require('lodash.defaultsdeep');
-const mkdirp = require('mkdirp').sync;
 const {pre_builder, builder} = require('nuxeo-docs-builder');
 
 // Working copy
@@ -98,7 +102,9 @@ const build_docs = () => {
 };
 
 // Run full build to start
-build_docs();
+if (!no_clean) {
+    build_docs();
+}
 
 // Run Browsersync for server and watching
 // Use webpack dev middleware for Hot Module Replacement
