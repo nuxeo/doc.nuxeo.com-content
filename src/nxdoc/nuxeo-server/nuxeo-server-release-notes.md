@@ -273,6 +273,14 @@ Static WAR generation has been fixed and added back to continuous integration. N
 
 More information on JIRA ticket [NXP-21659](https://jira.nuxeo.com/browse/NXP-21659).
 
+### User workspace
+
+#### More Robust User Workspace Name Definition
+
+We now generate the user workspace name based on the user id with no possible collision, using an escaping mechanism that escapes the few unwanted characters in paths and URLS (slash, backslash, ?, &, @, ; ) using a ~ and an hex code. If a user workspace was created previously, it will still be recognized and used; this applies only to new user workspaces.
+
+More information on JIRA ticket [NXP-21807](https://jira.nuxeo.com/browse/NXP-21807).
+
 ## Addons
 
 ### Imaging
