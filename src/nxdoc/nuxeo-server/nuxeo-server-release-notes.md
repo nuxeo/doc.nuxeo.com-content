@@ -290,6 +290,12 @@ More information on JIRA ticket [NXP-21676](https://jira.nuxeo.com/browse/NXP-21
 
 #### Amazon Rekognition
 
+### Live Connect
+
+#### Dropbox V2 Implementation
+
+Live Connect plugin now leverages Dropbox V2 API fo integration with Nuxeo TODO
+
 [Nuxeo Vision]({{page version='' space='nxdoc' page='nuxeo-vision'}}), the computer vision gateway, can now use Amazon Rekognition in addition to Google Vision. The automation operation `VisionOp` now includes a new parameter `provider` that allows to specifically call a given provider.
 
 More information on JIRA ticket [NXP-21851](https://jira.nuxeo.com/browse/NXP-21851).
@@ -319,6 +325,7 @@ More information on JIRA ticket [NXP-21260](https://jira.nuxeo.com/browse/NXP-21
 
 ### Web UI
 
+
 #### NEW New List Item View with Search Results Highlight
 
 A new search result view has been added on the main search. It displays items on the full width of the panel, in the same style as a web search engine such as Google, with searched terms highlighted in the context of the original text wrapping them.
@@ -346,6 +353,12 @@ Task view has been improved:
 
 More information on JIRA ticket [NXP-22591](https://jira.nuxeo.com/browse/NXP-22591).
 
+
+#### Default Workflows
+
+Default Workflows (serie and parallel review) have been added to Web UI.
+
+More information on JIRA ticket [NXP-21518](https://jira.nuxeo.com/browse/NXP-21518).
 
 ### JSF UI
 
