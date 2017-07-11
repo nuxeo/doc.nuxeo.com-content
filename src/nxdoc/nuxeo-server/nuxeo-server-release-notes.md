@@ -215,6 +215,12 @@ More information on JIRA ticket [NXP-20665](https://jira.nuxeo.com/browse/NXP-20
 
 More information on JIRA ticket [NXP-21828](https://jira.nuxeo.com/browse/NXP-21828).
 
+#### NEW maxItems Parameter in CMIS Query is Now Supported
+
+Thanks to this parameter, when using the ES implementation of CMIS bridge, you can get a certain amount of documents without loading the entire result set at once.
+
+More information on JIRA ticket [NXP-21877](https://jira.nuxeo.com/browse/NXP-21877).
+
 ### Query
 
 #### Search with Highlighted Results
