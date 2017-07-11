@@ -41,7 +41,7 @@ Source Markdown and HTML files for content.
 [Read the page about writing documentation, markdown and handlebars](https://github.com/nuxeo/doc.nuxeo.com/blob/master/docs/writing-documentation.md)
 
 ### `./verify/...`
-Verification tests specific to this repository ost building.
+Verification tests specific to this repository post build.
 
 
 # Trouble shooting
