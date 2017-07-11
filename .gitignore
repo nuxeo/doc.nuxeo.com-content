@@ -38,3 +38,6 @@ npm-debug.log.*
 
 # Generated nginx redirects file
 redirects.txt
+
+# Temp ignore for package lock
+/package-lock.json
