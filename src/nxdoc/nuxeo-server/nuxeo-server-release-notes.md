@@ -217,7 +217,7 @@ More information on JIRA ticket [NXP-21828](https://jira.nuxeo.com/browse/NXP-21
 
 #### NEW maxItems Parameter in CMIS Query is Now Supported
 
-Thanks to this parameter, when using the ES implementation of CMIS bridge, you can get a certain amount of documents without loading the entire result set at once.
+Thanks to this parameter, when using the ES implementation of CMIS bridge, you can get a certain amount of documents without loading the entire result set at once. Implementation over Core in case of DBS as also been improved consequently.
 
 More information on JIRA ticket [NXP-21877](https://jira.nuxeo.com/browse/NXP-21877).
 
