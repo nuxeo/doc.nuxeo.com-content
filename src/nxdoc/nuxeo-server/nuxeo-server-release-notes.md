@@ -275,7 +275,7 @@ More information on JIRA ticket [NXP-21659](https://jira.nuxeo.com/browse/NXP-21
 
 ### User workspace
 
-#### More Robust User Workspace Name Definition
+#### NEW More Robust User Workspace Name Definition
 
 We now generate the user workspace name based on the user id with no possible collision, using an escaping mechanism that escapes the few unwanted characters in paths and URLS (slash, backslash, ?, &, @, ; ) using a ~ and an hex code. If a user workspace was created previously, it will still be recognized and used; this applies only to new user workspaces.
 
