@@ -25,40 +25,40 @@ tree_item_index: 1000
 Nuxeo Web UI provides several themes to change the look and feel of the UI. For the moment, they mostly provide color schemes applied to UI elements and a background image for some themes.
 
 The available themes are:
-- default
-- dark
-- light
-- garden
-- kawaii
+- Nuxeo (default)
+- Dark
+- Light
+- Kawaii
 
 ### Customization
 
-In the current version it's not possible to contribute new themes, however the existing ones can be overridden with a contribution.
+All the resources for each theme are located on the `/themes/{name}` folder, where `name` is the name of the theme and have the following files:
 
-To customize one of the provided themes you can simply deploy and override theme resources as described in [How to deploy additional Web UI resources]({{page page='web-ui-deployment#deploy_or_override'}}).
+- `/themes/{name}/theme.html` style definitions that allow customizing colors, fonts, or any other CSS properties for most elements used in the Web UI.
 
-Taking `resources/web/nuxeo.war/ui/` as our base path, these are the available resources for each theme:
+- `/themes/{name}/preview.jpg` preview image that is displayed on the themes chooser page.
 
-- `/styles/{name}-theme.html` style definitions that allow customizing colors, fonts, or any other CSS properties for most elements used in the Web UI.
-- `/images/themes/{name}-theme.jpg` preview image that is displayed on the themes chooser page.
-- `/images/themes/{name}.png` image used as background (available for some themes only).
+- `/themes/{name}/logo.png` image used as application logo.
 
-{{#> callout type='note'}}
-Besides the background images `/images/themes/{name}.png` you can also add any images to `/images/themes/` and reference them in your `/styles/{name}-theme.html` styles resources.
-{{/callout}}
+- `/themes/{name}/background.png` image used as background (optional, available for some themes only).
+
+To add a new theme or customize one of the provided ones you can simply deploy and override theme resources as described in [How to deploy additional Web UI resources]({{page page='web-ui-deployment#deploy_or_override'}}).
 
 
-### How to Customize a Theme
+### How to Creage a Theme
 
-This example provides an walk-through on how to override the `light` theme in Web UI.
+This example provides an walk-through on how to create a new theme and add it as a contribution to the Web UI.
+We will create our new theme called `new-light` theme, which is base on the provider `light` theme with some customizations.
 
 {{#> panel type='code' heading='Without any customization the theme looks like this:'}}
 ![]({{file name='light-theme.png'}} ?w=800,border=true)
 {{/panel}}
 
-Make a local copy of the theme `/styles/light-theme.html` then make the following changes to it:
+Make a copy of the `light` folder on `/themes` directory and name it `new-light`. Then make the following changes to it:
 
-{{#> panel type='code' heading='Change default font import from `Roboto` to `Gabriela`'}}
+Edit the `theme.html`:
+
+{{#> panel type='code' heading='Add the font import on top of the file'}}
 ```css
 <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
 ```
@@ -79,29 +79,13 @@ Make a local copy of the theme `/styles/light-theme.html` then make the followin
 {{/panel}}
 
 
-{{#> panel type='code' heading='Change background to use a custom image'}}
-```css
-  html, body {
-    ...
-    background: url(../images/themes/custom-background.jpg) repeat;
-    ...
-  }
-```
-{{/panel}}
-
-
-{{#> callout type='note'}}
-The image `custom-background.jpg` needs to be contributed to `/images/themes/` in your bundle so it can be referenced in styles.
-{{/callout}}
-
-
 {{#> panel type='code' heading='Change some colors'}}
 ```css
   :root {
     ...
     --nuxeo-badge-background: Tomato;
     ...
-    --nuxeo-header-background: #CFD8DC;
+    --nuxeo-app-header-background: #CFD8DC;
     ...
     --nuxeo-sidebar-background: #58597a;
     ...
@@ -111,15 +95,46 @@ The image `custom-background.jpg` needs to be contributed to `/images/themes/` i
 ```
 {{/panel}}
 
+{{#> panel type='code' heading='Change background to use a custom image'}}
+```css
+  :root {
+  --nuxeo-page-background: url(themes/new-light/background.png) repeat;
+  }
+```
+{{/panel}}
+
+
+And add a `background.png` image to `/themes/new-light` to use as background.
+
+
+Now, to make the new theme avaliable, you need to add the new-light theme as a [slot]({{page page='web-ui-slots'}}) contribution, using the  [THEMES]({{page page='web-ui-slots#themes'}}) slot as follows:
+
+```xml
+<nuxeo-slot-content name="new-light-theme" slot="THEMES" order="50">
+  <template>
+    <nuxeo-theme name="new-light"></nuxeo-theme>
+  </template>
+</nuxeo-slot-content>
+```
+
+Where `properties
+name="new-light"
+`
+must match the name of the directory we created for the theme.
+
+Furthermore, the `name` property is used to define the `i18n` label for the theme name based on the following convention:
+```json
+"theme.{themeName}":"name of the theme"
+```
+
+For the current example, with `search-name="assets"`, add the following entry to the `messages.json` file:
+```json
+"theme.new-light":"New Light"
+```
+
+For more information about `i18n` translations, refer to [Managing Translations]({{page page='web-ui-managing-translations'}})
+
+
 {{#> panel type='code' heading='After customization the `light` theme will look like this:'}}
 ![]({{file name='custom-theme.png'}} ?w=800,border=true)
 {{/panel}}
-
-Finally you just need to contribute the preview image (that appears in the `Themes` page in the Web UI) with the same name as the theme being overridden, in this case `/images/themes/light-theme.jpg`.
-
-{{#> callout type='warning'}}
-
-Note that we are making some improvements in themes and styling in general.
-The process to make contributions related to themes customization are subject to change until the release of a later Web UI version.
-
-{{/callout}}

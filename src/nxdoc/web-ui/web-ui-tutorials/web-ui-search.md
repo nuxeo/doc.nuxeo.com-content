@@ -129,7 +129,7 @@ The next step is to add a button in the left menu to display the search screen.
 
 ### Overriding Existing Nuxeo Web UI Search
 
-Nuxeo Web UI comes with the *Default Search* and *Expired Search* both plugged on server side page providers [default_search](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-search/nuxeo-search-core/src/main/resources/OSGI-INF/search-pageprovider-contrib.xml#L6) and [expired_search](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-search/nuxeo-search-core/src/main/resources/OSGI-INF/search-pageprovider-contrib.xml#L150) by default.
+Nuxeo Web UI comes with the *Default Search* and *Expired Search* both plugged on server side page providers [default_search](https://github.com/nuxeo/nuxeo/blob/9.2/nuxeo-features/nuxeo-search/nuxeo-search-core/src/main/resources/OSGI-INF/search-pageprovider-contrib.xml#L6) and [expired_search](https://github.com/nuxeo/nuxeo/blob/9.2/nuxeo-features/nuxeo-search/nuxeo-search-core/src/main/resources/OSGI-INF/search-pageprovider-contrib.xml#L150) by default.
 
 | Default search                                             | Expired search                                             |
 |:-----------------------------------------------------------|:-----------------------------------------------------------|
@@ -147,7 +147,7 @@ The search form itself has 2 rendering modes:
 
 A toggle button allows you to switch between `filter mode` and `queue mode`.
 
-The search form is a dynamically loaded element. For instance, [nuxeo-default-search.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/search/nuxeo-default-search.html) contributes the *Default Search* and the [nuxeo-expired-search.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/search/nuxeo-expired-search.html) contributes the *Expired Search*.
+The search form is a dynamically loaded element. For instance, [nuxeo-default-search-form.html](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/elements/search/default/nuxeo-default-search-form.html) and [nuxeo-default-search-results.html](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/elements/search/default/nuxeo-default-search-results.html) contribute the *Default Search* form and results layouts and the [nuxeo-expired-search-form.html](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/elements/search/expired/nuxeo-expired-search-form.html) and [nuxeo-expired-search-results.html](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/elements/search/expired/nuxeo-expired-search-results.html) contribute the *Expired Search* form and results layouts.
 
 ```
 $NUXEO_SERVER/nxserver/nuxeo.war/ui% tree
@@ -174,49 +174,67 @@ $NUXEO_SERVER/nxserver/nuxeo.war/ui% tree
 ├── nuxeo-user-group-management
 │   ├── ...
 ├── search
-│   ├── nuxeo-assets-search.html
-│   ├── nuxeo-default-search.html
-│   ├── nuxeo-expired-search.html
 │   ├── nuxeo-saved-search-actions.html
 │   ├── nuxeo-search-form.html
-│   └── nuxeo-search-results.html
+│   ├── default
+│   │   ├── nuxeo-default-search-form.html
+│   │   ├── nuxeo-default-search-results.html
+│   ├── expired
+│   │   ├── nuxeo-expired-search-form.html
+│   │   ├── nuxeo-expired-search-results.html
 ├── ...
 ...
 ```
 
-Referring to  [Web UI deployment]({{page version='' page='web-ui-deployment'}}) documentation, you can override these [nuxeo-default-search.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/search/nuxeo-default-search.html) and [nuxeo-expired-search.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/search/nuxeo-expired-search.html) in order to customize the *Default Search* and *Expired Search* filter form. To do so, your own marketplace must deploy and override the proper HTML files in `$NUXEO_SERVER/nxserver/nuxeo.war/ui/search`.
+Referring to  [Web UI deployment]({{page version='' page='web-ui-deployment'}}) documentation, you can override these [nuxeo-default-search.html](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/elements/search/default/nuxeo-default-search-form.html) and [nuxeo-expired-search-form.html](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/elements/search/expired/nuxeo-expired-search-form.html) in order to customize the *Default Search* and *Expired Search* filter form. To do so, your own marketplace must deploy and override the proper HTML files in `$NUXEO_SERVER/nxserver/nuxeo.war/ui/search`.
 
 ### Add New Searches
 
-You can insert a new search in the left drawer menu thanks to the [SEARCH_MENU_BUTTONS]({{page page='web-ui-slots#search_menu_buttons'}}) slot.
+You can insert a new search in the left drawer menu the same exact way you insert any slot contribution to it, by using the [DRAWER_ITEMS]({{page page='web-ui-slots#drawer_pages'}}) slot.
 
 #### The DAM Example
 
-The [Nuxeo DAM](https://github.com/nuxeo/nuxeo-dam/blob/8.10/nuxeo-dam-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-dam/nuxeo-dam.html) addon defines its own `Asset Search` with the following:
+The [Nuxeo DAM](https://github.com/nuxeo/nuxeo-dam/blob/9.2/nuxeo-dam-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-dam/nuxeo-dam.html) addon defines its own `Asset Search` with the following:
 ```xml
-<nuxeo-slot-content name="damSearchMenuButtons" slot="SEARCH_MENU_BUTTONS">
+<nuxeo-slot-content name="damSearchMenuButtons" slot="DRAWER_ITEMS" order="45">
   <template>
-    <nuxeo-menu-icon id="assetsSearchButton" name="assetsSearch" route="search:assets" icon="icons:perm-media" label="dam.assets.heading">
+    <nuxeo-menu-icon id="assetsSearchButton" name="assetsSearch" icon="icons:perm-media" label="dam.assets.heading">
     </nuxeo-menu-icon>
   </template>
 </nuxeo-slot-content>
 ```
 
-Here are some explanations about `nuxeo-menu-icon` properties:
+And the corresponding [DRAWER_PAGE]({{page page='web-ui-slots#drawer_page'}}) slot, containing a `nuxeo-search-form` element.
+```xml
+<nuxeo-slot-content name="damSearchMenuButtons" slot="DRAWER_PAGES">
+  <template>
+    <nuxeo-search-form name="assetsSearch" search-name="assets" auto display-auto-control
+                       provider="assets_search"
+                       schemas="dublincore,common,uid,thumbnail"></nuxeo-search-form>
+  </template>
+</nuxeo-slot-content>
+```
+Here are some explanations about `nuxeo-menu-icon` and `nuxeo-search-form` properties:
 
 ```properties
-route="search:assets"
+name="assets"
 ```
 
-will trigger a navigation to `/search/assets`.
+The `name`property links the `nuxeo-menu-icon`to the `nuxeo-search-form`, so that clicking the former will trigger the latter to show.
 
-Navigating to `/search/assets` will display the search filters form defined by [nuxeo-assets-search.html](https://github.com/nuxeo/nuxeo-dam/blob/8.10/nuxeo-dam-web-ui/src/main/resources/web/nuxeo.war/ui/search/nuxeo-assets-search.html) in the left drawer menu content. Note that this is only possible because it is convention-based:
- - [nuxeo-assets-search.html](https://github.com/nuxeo/nuxeo-dam/blob/8.10/nuxeo-dam-web-ui/src/main/resources/web/nuxeo.war/ui/search/nuxeo-assets-search.html) is deployed in the `$NUXEO_SERVER/nxserver/nuxeo.war/ui/search` directory.
- - the name of [nuxeo-assets-search.html](https://github.com/nuxeo/nuxeo-dam/blob/8.10/nuxeo-dam-web-ui/src/main/resources/web/nuxeo.war/ui/search/nuxeo-assets-search.html) is in the form `nuxeo-{searchName}-search.html` where `{searchName}` is `assets` and matches the second part of the routing directive:
+```properties
+search-name="assets"
+```
+The `search-name` property defines the name of the search and it is used to support the for the dynamic loading of the search-form as follows:
+
+
+Navigating to `/search/assets` will display the search form and searh results defined by [nuxeo-assets-search-form.html](https://github.com/nuxeo/nuxeo-dam/blob/9.2/nuxeo-dam-web-ui/src/main/resources/web/nuxeo.war/ui/search/assets/nuxeo-assets-search-form.html) and [nuxeo-assets-search-results.html](https://github.com/nuxeo/nuxeo-dam/blob/9.2/nuxeo-dam-web-ui/src/main/resources/web/nuxeo.war/ui/search/assets/nuxeo-assets-search-results.html). This is only possible because they follow the following convention:
+ - they are both located on the `$NUXEO_SERVER/nxserver/nuxeo.war/ui/search/assets` which has the same name as the `search-name` property
+ - the name of [nuxeo-assets-search-form.html](https://github.com/nuxeo/nuxeo-dam/blob/9.2/nuxeo-dam-web-ui/src/main/resources/web/nuxeo.war/ui/search/assets/nuxeo-assets-search-form.html) and [nuxeo-assets-search-results.html](https://github.com/nuxeo/nuxeo-dam/blob/9.2/nuxeo-dam-web-ui/src/main/resources/web/nuxeo.war/ui/search/assets/nuxeo-assets-search-results.html) are in the form `nuxeo-{searchName}-search-form.html` and `nuxeo-{searchName}-search-results.html` respectively where `{searchName}` is `assets`, matching the `search-name` property of the `nuxeo-search-form` element, and are both placed on the `assets` directoy mentioned above.
+
  ```properties
- route="search:assets"
+ search-name="assets"
  ```
- on the `nuxeo-menu-icon`.
 
  Please refer to the [Web UI routing]({{page page='web-ui-routing'}}) documentation for further details.
 
@@ -232,14 +250,10 @@ is the key label to be retrieved from [i18n]({{page page='web-ui-managing-transl
 
 #### Meaningful Properties When Defining Your Own Search
 
-As just explained, to create a search, you just need to deploy a new `nuxeo-{searchName}-search.html` element in your `$NUXEO_SERVER/nxserver/nuxeo.war/ui/search` directory. However, it is important that this elements provides the proper information to perform the search.
+As just explained, to create a search, you just need to deploy a new `nuxeo-{searchName}-search.html` element in your `$NUXEO_SERVER/nxserver/nuxeo.war/ui/search/{searchName}` directory and add it as a slot contribution using the `nuxeo-searh-form` element. However, it is important that these elements provides the proper information to perform the search.
 
 | Property       | Description                                                                                               | Example                                                                                                                                     |
 |:---------------|:----------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------|
-| `provider`     | the name of the page provider to be used, defined server side                                              | [default_search](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/search/nuxeo-default-search.html#L147) page provider               |
-| `schemas`      | a comma-separated value list of schema names to be fetched when loading documents retrieved by the search | [schemas](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/search/nuxeo-default-search.html#L167) needed for default search          |
-| `displayQueue` | boolean property. If true, then the queue will be displayed by default instead of search filters          | [expired_search](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/search/nuxeo-expired-search.html#L119) displays a queue by default |
-
-{{#> callout type='warning' }}
-It is not possible to customize the screen showing search results in the main container yet.
-{{/callout}}
+| [provider](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/elements/search/nuxeo-search-form.html#L383)    | the name of the page provider to be used, defined server side                                              | [default_search](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/elements/nuxeo-web-ui-bundle.html#L315) page provider               |
+| [schemas](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/elements/search/nuxeo-search-form.html#L402)      | a comma-separated value list of schema names to be fetched when loading documents retrieved by the search | [schemas](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/elements/nuxeo-web-ui-bundle.html#L315) needed for default search          |
+| [queue](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/elements/search/nuxeo-search-form.html#L408) | boolean property. If true, then the queue will be displayed by default instead of search filters          | [expired_search](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/elements/nuxeo-web-ui-bundle.html#L325) displays a queue by default |
