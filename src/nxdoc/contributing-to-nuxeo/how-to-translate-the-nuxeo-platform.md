@@ -1,8 +1,8 @@
 ---
-title: How to Translate the Nuxeo Platform
+title: "HOWTO: Translate the Nuxeo Platform"
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-07-11'
     status: ok
 details:
     howto:
@@ -331,9 +331,9 @@ Here are some instructions to help you contributing or changing translations, in
 
 ## Instructions for Translators
 
-### Editing on Crowdin (Non-English Translations)
+### Translating Labels
 
-[Join the Nuxeo project on Crowdin](http://crowdin.net/project/nuxeo/invite).
+Labels translation are managed on Crowdin. To translate Nuxeo labels or change a translation, you need to [join the Nuxeo project on Crowdin](http://crowdin.net/project/nuxeo/invite).
 
 If you are not familiar with Crowdin, take a look at their [quick start guide](http://crowdin.net/page/quick-start) [.](http://crowdin.net/project/nuxeo/invite)
 Basically here are the steps to contribute:
@@ -344,7 +344,7 @@ By default, new users have the translator status. It means you can propose new t
 
 Now here's a couple of tips:
 
-*   **Some phrases have placeholders** in them (like {0}). These are placeholders for values that are added later. E.g. a name: &ldquo;Hello, {0}&rdquo;, could be &ldquo;Hello, Peter&rdquo; on the website. They must remain in the translation as well, although placement may vary.
+*   **Some phrases have placeholders** in them (like `{0}`). These are placeholders for values that are added later. E.g. a name: &ldquo;Hello, {0}&rdquo;, could be &ldquo;Hello, Peter&rdquo; on the website. They must remain in the translation as well, although placement may vary.
 
 *   **If the context of a label is unclear**, please request the context from the Nuxeo team. These comments are also visible for anyone else that translates or approves translations.
 
@@ -356,7 +356,7 @@ Please contact one or several managers of the project if you'd like to contribut
 
 Nuxeo developers will perform the additional steps for this language to be added to the Nuxeo source code (see [NXP-19840](https://jira.nuxeo.com/browse/NXP-19840) as a reference, for instance).
 
-### Manual Editing (English Translations)
+### Editing English Labels
 
 {{{multiexcerpt 'translation-contribution-with-github' page='Contributing to Nuxeo'}}}
 
@@ -477,20 +477,19 @@ The `require` tag ensures that you are contributing to existing files, already c
   to="nuxeo.war/WEB-INF/classes/messages_xx_XX.properties"/>
 ```
 
-You can also use the require tag to control ordering of contributions to the final&nbsp;`nuxeo.war/WEB-INF/classes/messages_xx_XX.properties` file, so that you can override values for existing translations: if a duplicate key is present in the final file, the last value will be taken into account.
+You can also use the require tag to control ordering of contributions to the final `nuxeo.war/WEB-INF/classes/messages_xx_XX.properties` file, so that you can override values for existing translations: if a duplicate key is present in the final file, the last value will be taken into account.
 
 ### Adding a New Language to a Nuxeo Application
 
-You can add your new properties file similarly, you just need to modify the `deployment-fragment.xml` file adding a new entry with your locale:
-
-```xml
-<extension target="faces-config#APPLICATION_LOCALE">
-  <locale-config>
-    <supported-locale>xx_XX</supported-locale>
-  </locale-config>
-</extension>
-
-```
+1. Add the new `messages_xx_XX.properties` file in `src/main/resources/web/nuxeo.war/WEB-INF/classes/`.
+1. Modify the `deployment-fragment.xml` file adding a new entry with your locale:
+  ```xml
+  <extension target="faces-config#APPLICATION_LOCALE">
+    <locale-config>
+      <supported-locale>xx_XX</supported-locale>
+    </locale-config>
+  </extension>
+  ```
 
 ### Understanding Locale and Lookup of Translations
 
@@ -542,7 +541,7 @@ Since a Nuxeo application is composed of several bundles, which can contribute t
 
 Only the master branch is handled by Crowdin: changes to translation files in maintenance branches will have to be committed manually in GitHub.
 
-*   The generated aggregate file at [https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/src/main/resources/crowdin/messages.properties](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/src/main/resources/crowdin/messages.properties) is generated from all supported Nuxeo modules that hold a crowdin.ini file, referencing the relative path to their messages_en_US.properties file.
+*   The generated aggregate file at [https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/src/main/resources/crowdin/messages.properties](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/src/main/resources/crowdin/messages.properties) is generated from all supported Nuxeo modules that hold a `crowdin.ini` file, referencing the relative path to their messages_en_US.properties file.
     Here is a sample `crowdin.ini` file content:
 
     ```
@@ -550,7 +549,7 @@ Only the master branch is handled by Crowdin: changes to translation files in ma
     en_US=src/main/resources/OSGI-INF/l10n/messages_en_US.properties
     ```
 
-    So to add or remove a module translation files to the main aggregated file, you should just add or remove the crowdin.ini file from the root of the module.
+    So to add or remove a module translation files to the main aggregated file, you should just add or remove the `crowdin.ini` file from the root of the module.
 
 *   This file is generated daily and pushed to Crowdin as the new "reference" file: you should not make any manual changes to it, otherwise they will be lost at next automatic update. You should modify the original `messages_en_US.properties` file instead.
 *   If the aggregated file holds duplicate keys, or syntax errors, it will not be pushed to Crowdin (unit tests are run on the lang-ext module before pushing).
@@ -578,8 +577,6 @@ An export of translations files from Crowdin requires the project to be "built" 
 The job at [http://qa.nuxeo.org/jenkins/job/nuxeo-crowdin-synchro-check-master/](http://qa.nuxeo.org/jenkins/job/nuxeo-crowdin-synchro-check-master/) generates the aggregated messages.properties file and runs unit tests on it: this helps detecting duplicate entries in the aggregated file.
 
 The job at [https://qapriv.nuxeo.org/jenkins/job/trigger-sync-nuxeo-crowdin/](https://qapriv.nuxeo.org/jenkins/job/trigger-sync-nuxeo-crowdin/) (requires authentication) triggers the daily synchronizations from/to Nuxeo/Crowdin. This synchronization can also be triggered manually by running the job at [https://qapriv.nuxeo.org/jenkins/job/sync-nuxeo-crowdin/](https://qapriv.nuxeo.org/jenkins/job/sync-nuxeo-crowdin/) (requires authentication).
-
-&nbsp;
 
 * * *
 
