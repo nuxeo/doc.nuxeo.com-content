@@ -115,6 +115,12 @@ More information on JIRA ticket [NXP-21456](https://jira.nuxeo.com/browse/NXP-21
 
 ### Core Storage
 
+#### New SSL Support for Marklogic
+
+When using the Marklogic Connector for Nuxeo, connection is now secured with SSL.
+
+More information on JIRA ticket [NXP-21818](https://jira.nuxeo.com/browse/NXP-21818).
+
 #### New Oracle JDBC Driver (ojdbc7) Compatibility
 
 The new Oracle JDBC Driver OJBC7 can be used with Oracle 12c.
@@ -343,7 +349,6 @@ More information on JIRA ticket [NXP-21260](https://jira.nuxeo.com/browse/NXP-21
 
 ### Web UI
 
-
 #### NEW New List Item View with Search Results Highlight
 
 A new search result view has been added on the main search. It displays items on the full width of the panel, in the same style as a web search engine such as Google, with searched terms highlighted in the context of the original text wrapping them.
@@ -395,6 +400,11 @@ Dots in the breadcrumb allow to move to parent folder.
 ![Breadcrumbs update for 9.1]({{file name='9.1-nuxeo-jsf-breadcrumbs.png'}} ?w=600,border=true)
 
 More information on JIRA ticket [NXP-21068](https://jira.nuxeo.com/browse/NXP-21068).
+
+#### NEW Integer Constraint Correctly Formated in JSF UI
+
+When a property is of type Integer and constraint check is enabled, message on the widget is:
+ "'abc' is not a number. Example: 99".
 
 ## Farewell
 
