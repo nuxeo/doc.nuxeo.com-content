@@ -19,6 +19,15 @@ We also provide [instructions for upgrading]({{page version='' space='nxdoc' pag
 
 ### Runtime
 
+#### Graceful Shutdown in Tomcat
+
+
+#### NEW Backing Service
+
+The infrastructure was added for plugging some initial external services availability checks *before* starting the runtime. First use case was to add a check for MongoDB  or Postgres availability, when the MongoDB or Postgres template is used. In case it is not available, the nuxeo-launcher is interrupted.
+
+More information on JIRA ticket [NXP-21532](https://jira.nuxeo.com/browse/NXP-21532).
+
 #### Test @PartialDeploy Annotation
 
 The new Test `@PartialDeploy` annotation allows you to select exactly which contributions you want to deploy from a component.
