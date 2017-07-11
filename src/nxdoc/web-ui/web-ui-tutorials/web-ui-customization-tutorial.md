@@ -101,7 +101,7 @@ For example, one might want to change the layout to create a user or add layouts
 we're going to change the view layout for the `Picture` document type, so that it displays the number of available additional
 formats in the *properties* card.
 
-To override or contribute new layouts for a document type, we must add a file with the name of the layout that needs to be created or overridden to the `document/{type}` folder. In this case, we need to create the folder `resources/web/nuxeo.war/ui/document/picture` and take the original [nuxeo-picture-view-layout.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/document/picture/nuxeo-picture-view-layout.html) and add a new `div` element to hold the number of additional formats, which is the piece of information we wanted to add:
+To override or contribute new layouts for a document type, we must add a file with the name of the layout that needs to be created or overridden to the `document/{type}` folder. In this case, we need to create the folder `resources/web/nuxeo.war/ui/document/picture` and take the original [nuxeo-picture-view-layout.html](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/elements/document/picture/nuxeo-picture-view-layout.html) and add a new `div` element to hold the number of additional formats, which is the piece of information we wanted to add:
 
 {{#> panel type='code' heading='resources/web/nuxeo.war/ui/document/picture/nuxeo-picture-view-layout.html'}}
 ```xml
