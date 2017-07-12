@@ -137,7 +137,7 @@ To install the Nuxeo Vision Package, you have several options:
 
 ### Google Vision Configuration
 - Configure a [Google service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount)
-- As of march 2nd 2016, billing must be activated in your google account in order to use the Vision API
+- As of march 2<sup>nd</sup>, 2016, billing must be activated in your google account in order to use the Vision API
 - Upload the JSON key file on your instance
 - Edit nuxeo.conf and add your service account credential key
 ```
