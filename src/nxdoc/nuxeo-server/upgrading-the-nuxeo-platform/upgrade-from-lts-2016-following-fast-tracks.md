@@ -313,6 +313,9 @@ See [NXP-21676](https://jira.nuxeo.com/browse/NXP-21676).
 
 Directories are now stored in MongoDB when enabling the `mongodb` template. See [NXP-21582](https://jira.nuxeo.com/browse/NXP-21582).
 
+With `mongodb` template enabled, if you contribute directories to `org.nuxeo.ecm.directory.sql.SQLDirectoryFactory`, you must use `org.nuxeo.ecm.directory.GenericDirectory` instead. See [NXP-19175](https://jira.nuxeo.com/browse/NXP-19175).
+
+If you want to keep some directories outside MongoDB, you have to also deploy `sql` template.
 {{! /multiexcerpt}}
 
 ### Code Changes
@@ -321,19 +324,19 @@ Directories are now stored in MongoDB when enabling the `mongodb` template. See 
 
 {{! multiexcerpt name='upgrade-9.2-code.blobinfo'}}
 
-- Use `org.nuxeo.ecm.core.blob.BlobInfo` instead of the old `org.nuxeo.ecm.core.blob.BlobManager.BlobInfo`. See [NXP-22217](https://jira.nuxeo.com/browse/NXP-22217).
+- Class `org.nuxeo.ecm.core.blob.BlobManager.BlobInfo` moved to `org.nuxeo.ecm.core.blob.BlobInfo`. See [NXP-22217](https://jira.nuxeo.com/browse/NXP-22217).
 
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='upgrade-9.2-code.nuxeoctl.register.trial'}}
 
-- The `register-trial` command reads parameters: `./nuxectl register-trial [<firstname> <lastname> <email> <company> <project>]`. See [NXP-22550](https://jira.nuxeo.com/browse/NXP-22550).
+- In `nuxeoctl`, the `register-trial` command reads parameters: `./nuxectl register-trial [<firstname> <lastname> <email> <company> <project>]`. See [NXP-22550](https://jira.nuxeo.com/browse/NXP-22550).
 
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='upgrade-9.2-code.oauth'}}
 
-- Parameters `state` and `redirect_uri` are now mandatory for security reason. See [NXP-22183](https://jira.nuxeo.com/browse/NXP-22183) and [NXP-22186](https://jira.nuxeo.com/browse/NXP-22186).
+- During Oauth2 challenge (as identity provider), parameters `state` and `redirect_uri` are now mandatory for security reason. See [NXP-22183](https://jira.nuxeo.com/browse/NXP-22183) and [NXP-22186](https://jira.nuxeo.com/browse/NXP-22186).
 
 {{! /multiexcerpt}}
 
