@@ -252,11 +252,11 @@ More information on JIRA ticket [NXP-16831](https://jira.nuxeo.com/browse/NXP-16
 
 ### Elasticsearch
 
-#### Shield Support
+####  NEW Shield Support
 
-Elasticsearch Shield support has been added. It is possible to configure authentication credentials [in nuxeo.conf]({{page version='' space='nxdoc' page='configuration-parameters-index-nuxeoconf'}}) (`elasticsearch.shield.enabled`, `elasticsearch.shield.username`, `elasticsearch.shield.password`).
+Elasticsearch Shield support has been added. It is possible to configure authentication credentials [in nuxeo.conf]({{page version='' space='nxdoc' page='configuration-parameters-index-nuxeoconf'}}) (`elasticsearch.shield.enabled`, `elasticsearch.shield.username`, `elasticsearch.shield.password`). It also includes support of SSL encryption of the traffic.
 
-More information on JIRA ticket [NXP-21208](https://jira.nuxeo.com/browse/NXP-21208) and the [Elasticsearch Shield documentation]({{page version='' space='nxdoc' page='elasticsearch-setup'}}#configuring-access-to-the-cluster-through-elasticsearch-shield-plugin) for more information.
+More information on JIRA ticket [NXP-21208](https://jira.nuxeo.com/browse/NXP-21208) and [NXP-22042](https://jira.nuxeo.com/browse/NXP-22042)and the [Elasticsearch Shield documentation]({{page version='' space='nxdoc' page='elasticsearch-setup'}}#configuring-access-to-the-cluster-through-elasticsearch-shield-plugin) for more information.
 
 #### Use Elasticsearch Tools with Embedded Deployment of ES
 
