@@ -297,6 +297,22 @@ From the KeyValueService one can acquire a named KeyValueStore, whose API is cur
 
 More information on JIRA ticket [NXP-21870](https://jira.nuxeo.com/browse/NXP-21870).
 
+### oAuth
+
+### REST API Endpoints for oAuth tokens and oAuth Providers Management
+
+Endpoints to CRUD  oAuth tokens and providers (in respect to permission) have been added:
+ - GET oauth2/provider: returns the list of registered oauth2 service providers
+ - POST oauth2/provider: creates a new oauth2 service provider
+ - PUT oauth2/provider/<providerName>: updates an oauth2 service provider
+ - DELETE oauth2/provider/<providerName>: deletes an oauth2 service provider
+ - GET oauth2/token: to list all stored tokens for all users
+ - GET oauth2/token/<providerName>/<nxLogin>: to retrieve a stored token
+ - PUT oauth2/token/<providerName>/<nxLogin>: to update a stored token
+ - DELETE oauth2/token//<providerName>/<nxLogin>: to delete a stored token
+
+More information on JIRA ticket [NXP-20884](https://jira.nuxeo.com/browse/NXP-20884).
+
 ### Packaging
 
 #### Static WAR Generation
