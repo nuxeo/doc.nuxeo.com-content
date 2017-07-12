@@ -2,7 +2,7 @@
 title: Database Configuration
 review:
     comment: ''
-    date: '2016-12-23'
+    date: '2017-07-12'
     status: ok
 labels:
     - lts2016-ok
@@ -159,6 +159,7 @@ This takes two steps:
     *   [Oracle ]({{page page='oracle'}})
     *   [Microsoft SQL Server ]({{page page='microsoft-sql-server'}})
     *   [MySQL]({{page page='mysql'}})
+    *   [MariaDB]({{page page='mariadb'}})
     *   [MongoDB]({{page page='mongodb'}})
     *   [MarkLogic]({{page page='marklogic'}})
 2.  [Connect Nuxeo to the database]({{page page='connecting-nuxeo-to-the-database'}}).
