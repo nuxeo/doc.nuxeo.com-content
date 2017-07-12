@@ -2,7 +2,7 @@
 title: Supported Databases
 review:
     comment: ''
-    date: ''
+    date: '2017-07-12'
     status: ok
 labels:
     - lts2015-ok
@@ -145,28 +145,54 @@ history:
 
 &nbsp;The Nuxeo Platform supports the following databases.
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">&nbsp;</th><th colspan="1">PostgreSQL</th><th colspan="1">MySQL</th><th colspan="1">Oracle</th><th colspan="1">SQL Server</th><th colspan="1">MongoDB</th></tr><tr><th colspan="1">Nuxeo Platform LTS 2015</th><td colspan="1">{{! multiexcerpt name='7.10-postgreSQL-supported'}}9.3
-9.4{{! /multiexcerpt}}</td><td colspan="1">{{! multiexcerpt name='7.10-mySQL-supported'}}5.6
-5.7 (upcoming){{! /multiexcerpt}}</td><td colspan="1">{{! multiexcerpt name='7.10-oracle-supported'}}11g
-12c{{! /multiexcerpt}}</td><td colspan="1">{{! multiexcerpt name='7.10-SQLserver-supported'}}2012
-2012 (Azure){{! /multiexcerpt}}</td><td colspan="1">{{! multiexcerpt name='7.10-mongoDB-supported'}}2.8
-3.0
-3.2 (Since 7.10-HF07){{! /multiexcerpt}}</td></tr><tr><th colspan="1">Nuxeo Platform 6.0</th><td colspan="1">9.3
-9.4</td><td colspan="1">5.6
-5.7 (upcoming)</td><td colspan="1">11g
-12c</td><td colspan="1">2012
-2012 (Azure)</td><td colspan="1">2.6</td></tr><tr><th colspan="1">Nuxeo Platform 5.8</th><td colspan="1">8.4
-9.0
-9.1
-9.2
-9.3</td><td colspan="1">5.1
-5.5
-5.5 (Amazon RDS)</td><td colspan="1">10
-11
-11 (Amazon RDS)</td><td colspan="1">2008
-2008r2
-2012
-2012 (Azure)</td><td colspan="1">-</td></tr></tbody></table></div>
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th colspan="1">&nbsp;</th>
+        <th colspan="1">PostgreSQL</th>
+        <th colspan="1">MySQL</th>
+        <th colspan="1">MariaDB</th>
+        <th colspan="1">Oracle</th>
+        <th colspan="1">SQL Server</th>
+        <th colspan="1">MongoDB</th>
+      </tr>
+      <tr>
+        <th colspan="1">Nuxeo Platform LTS 2015</th>
+        <td colspan="1">{{! multiexcerpt name='7.10-postgreSQL-supported'}}9.3,
+          9.4{{! /multiexcerpt}}</td>
+        <td colspan="1">{{! multiexcerpt name='7.10-mySQL-supported'}}5.6,
+          5.7 (upcoming){{! /multiexcerpt}}</td>
+        <td colspan="1">{{! multiexcerpt name='7.10-MariaDB-supported'}}10.1
+          {{! /multiexcerpt}}</td>
+        <td colspan="1">{{! multiexcerpt name='7.10-oracle-supported'}}11g,
+          12c{{! /multiexcerpt}}</td>
+        <td colspan="1">{{! multiexcerpt name='7.10-SQLserver-supported'}}2012,
+          2012 (Azure){{! /multiexcerpt}}</td>
+        <td colspan="1">{{! multiexcerpt name='7.10-mongoDB-supported'}}2.8, 3.0,
+          3.2 (Since 7.10-HF07){{! /multiexcerpt}}</td>
+      </tr>
+      <tr>
+        <th colspan="1">Nuxeo Platform 6.0</th>
+        <td colspan="1">9.3, 9.4</td>
+        <td colspan="1">5.6, 5.7 (upcoming)</td>
+        <td colspan="1">-</td>
+        <td colspan="1">11g, 12c</td>
+        <td colspan="1">2012, 2012 (Azure)</td>
+        <td colspan="1">2.6</td>
+      </tr>
+      <tr>
+        <th colspan="1">Nuxeo Platform 5.8</th>
+        <td colspan="1">8.4, 9.0, 9.1, 9.2, 9.3</td>
+        <td colspan="1">5.1, 5.5, 5.5 (Amazon RDS)</td>
+        <td colspan="1">-</td>
+        <td colspan="1">10, 11, 11 (Amazon RDS)</td>
+        <td colspan="1">2008, 2008r2, 2012, 2012 (Azure)</td>
+        <td colspan="1">-</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 **Notes**
 
