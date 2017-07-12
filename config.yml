@@ -12,6 +12,19 @@ default:
                 space_name: Nuxeo Installation and Administration
         branch: '60'
         dev_browser_path: nxdoc
+        versions:
+            -
+                label: FT
+            -
+                label: LTS 2016
+                url_path: '810'
+            -
+                label: LTS 2015
+                url_path: '710'
+            -
+                is_current_version: true
+                label: '6.0'
+                url_path: '60'
 
 development:
     isDev: true
