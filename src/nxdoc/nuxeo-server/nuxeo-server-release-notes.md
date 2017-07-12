@@ -258,11 +258,18 @@ Elasticsearch Shield support has been added. It is possible to configure authent
 
 More information on JIRA ticket [NXP-21208](https://jira.nuxeo.com/browse/NXP-21208) and [NXP-22042](https://jira.nuxeo.com/browse/NXP-22042)and the [Elasticsearch Shield documentation]({{page version='' space='nxdoc' page='elasticsearch-setup'}}#configuring-access-to-the-cluster-through-elasticsearch-shield-plugin) for more information.
 
+#### Elasticsearch PageProvider limits navigation to 10k Documents (Configurable)
+
+The page provider navigation is now limited to the first 10k documents (this is the default maximum result window defined in Elasticsearch). 
+When there is more than 10k results there is no more button to go to the last page or to go to a next page above this range. 
+The limit of 10k can be changed using the configuration service by setting the property: org.nuxeo.elasticsearch.provider.maxResultWindow.
+
 #### Use Elasticsearch Tools with Embedded Deployment of ES
 
 It is now possible to use Elasticsearch tools to inspect (like elasticsearch-head) and query (like mirage) on Nuxeo index when Elasticsearch is embedded.
 
 More information on JIRA ticket [NXP-21455](https://jira.nuxeo.com/browse/NXP-21455).
+
 
 ### User Manager
 
@@ -299,7 +306,7 @@ More information on JIRA ticket [NXP-21870](https://jira.nuxeo.com/browse/NXP-21
 
 ### oAuth
 
-### REST API Endpoints for oAuth tokens and oAuth Providers Management
+### NEW REST API Endpoints for oAuth tokens and oAuth Providers Management
 
 Endpoints to CRUD  oAuth tokens and providers (in respect to permission) have been added:
  - GET oauth2/provider: returns the list of registered oauth2 service providers
@@ -357,9 +364,11 @@ More information on JIRA ticket [NXP-21676](https://jira.nuxeo.com/browse/NXP-21
 
 ### Live Connect
 
-#### Dropbox V2 Implementation
+#### NEW Dropbox API V2 Implementation
 
-Live Connect plugin now leverages Dropbox V2 API fo integration with Nuxeo TODO
+Live Connect plugin now leverages Dropbox V2 API for integration with Nuxeo in Live Connect add-on. 
+
+More information on JIRA ticket [NXP-22384](https://jira.nuxeo.com/browse/NXP-NXP-22384).
 
 [Nuxeo Vision]({{page version='' space='nxdoc' page='nuxeo-vision'}}), the computer vision gateway, can now use Amazon Rekognition in addition to Google Vision. The automation operation `VisionOp` now includes a new parameter `provider` that allows to specifically call a given provider.
 
