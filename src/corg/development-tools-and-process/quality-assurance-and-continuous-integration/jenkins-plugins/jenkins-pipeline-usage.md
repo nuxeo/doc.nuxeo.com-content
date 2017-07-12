@@ -59,6 +59,23 @@ node('SLAVE') {
 }
 ```
 
+## Checkout
+
+Setting up Additional Behaviours for the SCM checkout step of a Multibranch Pipeline doesn't work for now: 
+- this is tracked by https://issues.jenkins-ci.org/browse/JENKINS-37658
+- the workaround is https://support.cloudbees.com/hc/en-us/articles/226122247-How-to-Customize-Checkout-for-Pipeline-Multibranch
+
+For instance, if you need to add the "Clean before checkout" behaviour, no point adding it in the job's configuration but apply the following change in your Jenkinsfile:
+
+```
+-                    checkout scm
++                    checkout([$class: 'GitSCM',
++                        branches: [[name: env.BRANCH_NAME]],
++                        extensions: [[$class: 'CleanBeforeCheckout']],
++                        userRemoteConfigs: [[url: 'git@github.com:nuxeo/nuxeo-mobile.git']]
++                    ])
+```
+
 ## Maven build
 
 ```
