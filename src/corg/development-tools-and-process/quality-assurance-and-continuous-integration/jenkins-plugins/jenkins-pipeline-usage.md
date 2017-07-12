@@ -4,6 +4,7 @@ review:
     comment: ''
     date: ''
     status: ok
+toc: true
 confluence:
     ajs-parent-page-id: '12913959'
     ajs-parent-page-title: Jenkins plugins
