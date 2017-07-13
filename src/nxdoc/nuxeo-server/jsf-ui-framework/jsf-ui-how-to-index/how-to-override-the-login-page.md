@@ -129,7 +129,7 @@ In order to be sure that your JSP page will override the default one, a modifica
 We want our bundle to be loaded after this module because our custom login page will override the default login page. To achieve this, add the following requirement in the `deployment-fragment.xml`, at the top of the file, just after the `<fragment>` tag.
 
 ```
-<require>org.nuxeo.ecm.webapp.ui</require>
+<require>org.nuxeo.ecm.platform.web.common</require>
 
 ```
 
