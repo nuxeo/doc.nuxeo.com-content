@@ -138,7 +138,7 @@ In the chains run on nodes (Input chain, output chain, transition and escalation
 *   `nodeStartTime`: The time when the node was started, useful for example when computing a due date (Eg: MVEL Due date expression: `nodeStartTime.days(8)`)
 *   `nodeEndTime`: The time when the node was ended.
 *   `nodeLastActor`: The last actor on the node. Useful for instance to know who closed a task when the task was assigned to a group.
-*   `CurrentUser.originatingUser`: All the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). This variable allows you to fetch the current user.
+*   `CurrentUser.getActingUser()`: All the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). This function returns the ID of the actual user performing the task.
 *   `ChainParameters`: A hashmap, used like this: `ChainParameters['my_chain_parameter']`. Since 5.7.2, all chains are able to contain parameters as operation to be used from the automation context along their execution.
 *   `workflowInstanceId`: The id of the workflow instance.
 *   `NodeVariables["tasks"]`: Holds information about all tasks created by a node. Is a list of objects of type [TaskInfo](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/platform/routing/core/impl/GraphNode.TaskInfo.html). You can iterate on this list and fetch for every task: the lifecycle state (ended or not), the user who ended the task, the comment if any, and the id of the button the user clicked to complete the task (status).
