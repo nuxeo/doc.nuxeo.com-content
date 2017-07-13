@@ -52,7 +52,7 @@ defined by [routing.html](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/element
 
 ## Routing Behavior
 
-The [Nuxeo.RoutingBehavior](ttps://github.com/nuxeo/nuxeo-ui-elements/blob/1.0/nuxeo-routing-behavior.html) is a behavior which provides convenient methods such as [urlFor](https://github.com/nuxeo/nuxeo-ui-elements/blob/1.0/nuxeo-routing-behavior.html#L32) to insert inner links in the Web UI.
+The [Nuxeo.RoutingBehavior](https://github.com/nuxeo/nuxeo-ui-elements/blob/1.0/nuxeo-routing-behavior.html) is a behavior which provides convenient methods such as [urlFor](https://github.com/nuxeo/nuxeo-ui-elements/blob/1.0/nuxeo-routing-behavior.html#L32) to insert inner links in the Web UI.
 
 For instance, [nuxeo-document-tree.html](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/elements/nuxeo-document-tree/nuxeo-document-tree.html#L158) which is the navigation tree in the left menu uses `urlFor` on each tree node to navigate to the associated document.
 
