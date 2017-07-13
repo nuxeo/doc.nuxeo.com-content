@@ -230,7 +230,7 @@ history:
     You just need to use a node variable called "comment" and you'll find all the comments stored in the Event log, on the "Workflow task completed" event.
 
 *   {{> anchor 'current-user-variable'}}**How can I get the current user name in an operation executed by the workflow?**
-    All the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). In order to fetch the current user, you have to use: `CurrentUser.originatingUser==null ? CurrentUser.name : CurrentUser.originatingUser`.
+    All the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). In order to fetch the current user id, you can to use: `CurrentUser.getActingUser()`.
 
 *   **Is the availability filter configured on the workflow also evaluated when the workflow is started using the operation "StartWorkflow"?**
     No, this filter is actually an [Action Filter](/x/EYAO) used to control the visibility of workflow models in the list of workflows displayed by the widget type "Workflow Process".
