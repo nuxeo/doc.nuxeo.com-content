@@ -448,6 +448,11 @@ Task view has been improved:
 
 More information on JIRA ticket [NXP-22591](https://jira.nuxeo.com/browse/NXP-22591).
 
+#### NEW Storyboard on Video Layout
+
+The story board has been added to Web UI view of videos.
+
+More information on JIRA ticket [ELEMENTS-358](https://jira.nuxeo.com/browse/ELEMENTS-358)
 
 #### NEW Default Workflows
 
