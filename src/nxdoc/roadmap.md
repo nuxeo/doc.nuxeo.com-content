@@ -9,11 +9,11 @@ labels:
 is_overview: true
 tree_item_index: 790
 ---
-The Global Nuxeo Roadmap focuses on: 
+The Global Nuxeo Roadmap focuses on:
 
 - Keeping up with technological innovation
 - Improving scalability and resilience of Nuxeo Server
-- Providing better UX for all Nuxeo apps 
+- Providing better UX for all Nuxeo apps
 - Providing online tooling to build content flavored business applications
 - Improving DAM capabilities
 
@@ -51,7 +51,7 @@ These objectives help our Product Managers prioritize ideas in the different pro
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Mobile
+### Mobile and Desktop
 
 - [Nuxeo Mobile]({{page page='nuxeo-mobile-roadmap'}})
 - [Nuxeo Drive]({{page page='nuxeo-drive-roadmap'}})
@@ -60,5 +60,3 @@ These objectives help our Product Managers prioritize ideas in the different pro
 </div>
 
 </div>
-
-

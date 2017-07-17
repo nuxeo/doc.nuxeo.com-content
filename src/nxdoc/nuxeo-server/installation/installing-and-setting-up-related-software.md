@@ -830,7 +830,8 @@ The following software are already included when using the .exe installer:
 *   ImageMagick
 *   pdftohtml
 *   ghostscript
-*   Exiftool.
+*   Exiftool
+*   OpenJDK 8 JDK.
 
 The installer does not install them globally in Windows: they are available from the `3rdparty` folder of the server tree and added to the `PATH` by the nuxeoctl.bat script.
 

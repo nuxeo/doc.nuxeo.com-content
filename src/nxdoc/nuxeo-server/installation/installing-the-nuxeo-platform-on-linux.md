@@ -344,7 +344,10 @@ Installing the Nuxeo Platform using the APT sources for Debian and Ubuntu instal
 
 {{#> callout type='note' }}
 
-Because no Java 8 package is available before Ubuntu 14.10, Java is not installed automatically with the Nuxeo Platform starting from version 7.2\. You need to install it manually before installing the Nuxeo Platform. See the page [Installation]({{page page='installation'}}).
+On Debian 8 (jessie), the openjdk-8-jdk is not available in the default repositories. Before installing the nuxeo package, you will need to:
+*  add the jessie-backports repository (`deb http://httpredir.debian.org/debian jessie-backports main`) to your `/etc/apt/sources.list`
+*  refresh your package list (`apt-get update`)
+*  install the package (`apt-get install -t jessie-backports openjdk-8-jdk`)
 
 {{/callout}}
 
@@ -352,12 +355,12 @@ You can either install the Nuxeo Platform using the OS graphical user interface 
 
 You will need to know two things first:
 
-*   the codename of your distribution (eg **trusty** for Ubuntu 14.04 LTS)
+*   the codename of your distribution (eg **xenial** for Ubuntu 16.04 LTS)
 *   which kind of Nuxeo release you want to install (Long Term Support, Fast Track or SNAPSHOT; see the page [Nuxeo Release Cycle]({{page space='main' page='nuxeo-release-cycle'}}) for more details).
 
 {{#> callout type='tip' }}
 
-For the examples below, let's say you are using Ubuntu 14.04 LTS ("trusty") and want to install the Nuxeo latest Fast Track release (from the "fasttracks" APT repository; for&nbsp;LTS you would replace "fasttracks" with "releases").
+For the examples below, let's say you are using Ubuntu 16.04 LTS ("xenial") and want to install the Nuxeo latest Fast Track release (from the "fasttracks" APT repository; for&nbsp;LTS you would replace "fasttracks" with "releases").
 
 {{/callout}}
 
@@ -373,7 +376,7 @@ This requires X11.
 
 1.  Edit the **Software sources**: using the Unity Dash, running `gksudo software-properties-gtk`, or browsing the `System/Administration/Software Sources` Gnome 2 menu.
 2.  Download [the Nuxeo key](http://apt.nuxeo.org/nuxeo.key) and import it in the **Authentication** tab.
-3.  Add the Nuxeo APT repository: on the **Other Software** tab, add `deb http://apt.nuxeo.org/ trusty releases` and `deb http://apt.nuxeo.org/ trusty fasttracks` to the sources. (if you're using another version of Ubuntu, replace trusty by the adequate name, for instance *raring* for Ubuntu 13.04)
+3.  Add the Nuxeo APT repository: on the **Other Software** tab, add `deb http://apt.nuxeo.org/ xenial releases` and `deb http://apt.nuxeo.org/ xenial fasttracks` to the sources. (if you're using another version of Ubuntu, replace trusty by the adequate name, for instance *zesty* for Ubuntu 17.04)
 4.  Click on that link to install Nuxeo: [apt://nuxeo](apt://nuxeo).
 5.  Follow the instructions displayed.
     If it's your first install, you can configure:
