@@ -487,6 +487,11 @@ When a property is of type Integer and constraint check is enabled, message on t
 
 More information on JIRA ticket [NXP-21880](https://jira.nuxeo.com/browse/NXP-21880).
 
+#### NEW CentOS Specific Image Build
+
+The script to build the official docker image now also allows to build specifically an image on top of Cent OS.
+
+More information on JIRA ticket [NXP-21995](https://jira.nuxeo.com/browse/NXP-21995).
 
 ## Farewell
 
