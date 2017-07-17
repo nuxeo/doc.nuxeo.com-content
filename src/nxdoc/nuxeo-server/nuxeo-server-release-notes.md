@@ -19,8 +19,10 @@ We also provide [instructions for upgrading]({{page version='' space='nxdoc' pag
 
 ### Runtime
 
-#### Graceful Shutdown in Tomcat
+#### NEW Graceful Shutdown in Tomcat
+Runtime behavior has been cleaned up so that it is now possible when shutting down tomcat to make sure that all asynchronous work has been either processed or task has been persisted.
 
+More information on JIRA ticket [NXP-21969](https://jira.nuxeo.com/browse/NXP-21969).
 
 #### NEW Backing Service
 
@@ -83,8 +85,9 @@ New behaviors:
 - Calling doc.putContextData(CoreSession.USER_CHANGE, Boolean.TRUE) then CoreSession.saveDocument(doc) will flag the save as a "user change".
 
 The change token returned to the user-level API DocumentModel.getChangeToken() is now a mix of a system change token (updated at every change) and a user change token (updated at every user change). A "user change" is a change initiated by a user-level operation, which is defined as a document save that passes a previous change token using doc.putContextData(CoreSession.CHANGE_TOKEN, token), or that marks the save as an explicit user change using doc.putContextData(CoreSession.USER_CHANGE, Boolean.TRUE).
+The system change token is such that every modification to a document (whether done by the system or by a user) now increments a system value called the "system change token".
 
-More information on JIRA tickets [NXP-19435](https://jira.nuxeo.com/browse/NXP-19435) and [NXP-22019](https://jira.nuxeo.com/browse/NXP-22019).
+More information on JIRA tickets [NXP-19435](https://jira.nuxeo.com/browse/NXP-19435) and [NXP-22019](https://jira.nuxeo.com/browse/NXP-22019) and [NXP-22259](https://jira.nuxeo.com/browse/NXP-22259).
 
 #### Disable Delta Computation
 
