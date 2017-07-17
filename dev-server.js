@@ -74,13 +74,11 @@ const build_docs = () => {
     co(function *() {
         // Pre-build
         const pre_build = [
-            pre_builder(target_repo_path)
+            pre_builder({branch, repo_id: '', source_path: target_repo_path})
         ];
         const metadata = {};
         const pre_build_result = yield pre_build;
-        pre_build_result.forEach(function (data) {
-            extend(metadata, data);
-        });
+        pre_build_result.forEach(data => extend(metadata, data));
 
         // Build
         yield builder(target_repo_path, metadata, target_repo_site, {branch, repo_id: '', repo_path: source_repo_path});
