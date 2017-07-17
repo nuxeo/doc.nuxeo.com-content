@@ -21,6 +21,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/0AB9'
     source_link: /display/NXDOC/Configuration+Templates
 tree_item_index: 200
+toc: true
 version_override:
     'LTS 2015': 710/admindoc/configuration-templates
     '6.0': 60/admindoc/configuration-templates
@@ -137,13 +138,13 @@ Here are the templates provided by default:
 *   [**`default`**]({{page page='connecting-nuxeo-to-the-database'}}): default Nuxeo configuration template for test purpose;
 *   [**`https`**]({{page page='http-and-https-reverse-proxy-configuration'}}): (not recommended) template to make the server listen to port 443 (HTTPS);
 *   [**`postgresql`**]({{page page='postgresql'}}): PostgreSQL configuration template;
-*   postgresql-quartz-cluster
+*   postgresql-quartz-cluster;
 *   [**`mssql`**]({{page page='microsoft-sql-server'}}): MS SQL Server configuration template;
-*   mssql-quartz-cluster
+*   mssql-quartz-cluster;
 *   [**`mysql`**]({{page page='mysql'}}): MySQL configuration template;
-*   [**`mariadb`**]({{page page='mariadb'}}): MariaDB configuration template (since Nuxeo FT 9.1; for older versions of Nuxeo the `mysql` template should be used).
+*   [**`mariadb`**]({{page page='mariadb'}}): MariaDB configuration template (since Nuxeo FT 9.1; for older versions of Nuxeo the `mysql` template should be used);
 *   [**`oracle`**]({{page page='oracle'}}): Oracle configuration template;
-*   `oracle-quartz-cluster`
+*   `oracle-quartz-cluster`;
 *   `custom`: sample custom templates. Of course, this template is empty by default. One should copy it outside `$NUXEO_HOME` and adapt to his needs. See related section below.
 
     {{#> callout type='tip' }}
