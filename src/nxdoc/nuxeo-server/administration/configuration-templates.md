@@ -2,7 +2,7 @@
 title: Configuration Templates
 review:
     comment: ''
-    date: '2017-07-12'
+    date: '2017-07-17'
     status: ok
 labels:
     - content-review-lts2016
@@ -143,6 +143,7 @@ Here are the templates provided by default:
 *   mssql-quartz-cluster;
 *   [**`mysql`**]({{page page='mysql'}}): MySQL configuration template;
 *   [**`mariadb`**]({{page page='mariadb'}}): MariaDB configuration template (since Nuxeo FT 9.1; for older versions of Nuxeo the `mysql` template should be used);
+*   [**`mongodb`**]({{page page='mongodb'}}): MongoDB configuration template;
 *   [**`oracle`**]({{page page='oracle'}}): Oracle configuration template;
 *   `oracle-quartz-cluster`;
 *   `custom`: sample custom templates. Of course, this template is empty by default. One should copy it outside `$NUXEO_HOME` and adapt to his needs. See related section below.
