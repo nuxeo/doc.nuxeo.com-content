@@ -552,7 +552,7 @@ See the page [Binary Metadata]({{page page='binary-metadata'}}) for more informa
 
 ### Migrating Theme and Web Resources
 
-Please refer to the dedicated documentation at [Theme Upgrade to LTS 2015]({{page page='theme-upgrade-to-lts-2015'}}).
+Please refer to the dedicated documentation at [Theme Upgrade to LTS 2015]({{page version='710' space='nxdoc' page='theme-upgrade-to-lts-2015'}}).
 
 ### Migrating Inline JavaScript Declarations
 
