@@ -306,6 +306,11 @@ More information on JIRA ticket [NXP-21870](https://jira.nuxeo.com/browse/NXP-21
 
 ### oAuth
 
+### NEW Nuxeo Platform as oAuth Provider
+There was a first implementation of the oAuth flow for using Nuxeo as a oAuth provider. It has been deeply reviewed and completed for being closer to the specifications and for implementing the best security practices. As a result, the Nuxeo Mobile application will now use the oAuth flow to access content stored in the Nuxeo repository.
+
+More information on JIRA tickets linked to the following epic: [NXP-21721](https://jira.nuxeo.com/browse/NXP-21721).
+
 ### NEW REST API Endpoints for oAuth tokens and oAuth Providers Management
 
 Endpoints to CRUD  oAuth tokens and providers (in respect to permission) have been added:
