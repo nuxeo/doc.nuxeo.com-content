@@ -399,7 +399,7 @@ If you already understand theme concepts, maybe you'd like to check [Theme and S
 
 {{#> callout type='info' }}
 
-Since 7.4, theme related configuration has changed: refer to [Theme Upgrade to LTS 2015]({{{page version='710' space='nxdoc' page='theme-upgrade-to-lts-2015'}}) for migration instructions.
+Since 7.4, theme related configuration has changed: refer to [Theme Upgrade to LTS 2015]({{page version='710' space='nxdoc' page='theme-upgrade-to-lts-2015'}}) for migration instructions.
 
 {{/callout}}
 
