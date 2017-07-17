@@ -19,6 +19,11 @@ We also provide [instructions for upgrading]({{page version='' space='nxdoc' pag
 
 ### Runtime
 
+#### NEW Runtime Components Lifecycle Refactored
+The runtime behaviour has been refactored so as to provide a cleaner lifecycle to its components. This (big) change is pretty transparent for now but will allow to provide new features to the runtime in the next releases.
+
+More information on JIRA ticket [NXP-19326](https://jira.nuxeo.com/browse/NXP-19326).
+
 #### NEW Graceful Shutdown in Tomcat
 Runtime behavior has been cleaned up so that it is now possible when shutting down tomcat to make sure that all asynchronous work has been either processed or task has been persisted.
 
