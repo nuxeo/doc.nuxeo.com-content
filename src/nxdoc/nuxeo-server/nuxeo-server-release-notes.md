@@ -179,7 +179,7 @@ A new PubSubService is available, providing cross-instance publish/subscribe met
 
 More information on JIRA ticket [NXP-21800](https://jira.nuxeo.com/browse/NXP-21800).
 
-### Directory
+### directory
 
 #### NEW administrators group members have access to protected directories 
 
@@ -352,7 +352,7 @@ More information on JIRA ticket [NXP-21807](https://jira.nuxeo.com/browse/NXP-21
 
 ## Addons
 
-### Lambda Integration
+### NEW Lambda Integration
 
 A new addon has been implemented that allows to leverage Amazon Lambdas for efficient asynchronous computing. The initial use case is to offload the PictureViews generation (generating several rendition with different size of the same source image) but the module has been designed to be used for other kind of processing.
 
@@ -477,6 +477,16 @@ More information on JIRA ticket [NXP-21068](https://jira.nuxeo.com/browse/NXP-21
 
 When a property is of type Integer and constraint check is enabled, message on the widget is:
  "'abc' is not a number. Example: 99".
+
+
+ ### Packaging
+
+ ####  NEW Official Docker Image is Compatible with OpenShift
+
+ The script to build the official docker image has been improved so that the image can be launched from Open Shift that imposes some specific security constraints.
+
+More information on JIRA ticket [NXP-21880](https://jira.nuxeo.com/browse/NXP-21880).
+
 
 ## Farewell
 
