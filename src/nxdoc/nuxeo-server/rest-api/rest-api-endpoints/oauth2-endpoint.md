@@ -179,7 +179,7 @@ GET https://NUXEO_SERVER/nuxeo/api/v1/oauth2/provider/googledrive/token
 ```
 {{/panel}}
 
-## Reading, updating and deletong OAuth2 tokens
+## Reading, Updating and Deleting OAuth2 Tokens
 
 The following resources are available for managing tokens:
 
