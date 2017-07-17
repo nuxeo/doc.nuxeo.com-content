@@ -20,11 +20,13 @@ We also provide [instructions for upgrading]({{page version='' space='nxdoc' pag
 ### Runtime
 
 #### NEW Runtime Components Lifecycle Refactored
+
 The runtime behaviour has been refactored so as to provide a cleaner lifecycle to its components. This (big) change is pretty transparent for now but will allow to provide new features to the runtime in the next releases.
 
 More information on JIRA ticket [NXP-19326](https://jira.nuxeo.com/browse/NXP-19326).
 
 #### NEW Graceful Shutdown in Tomcat
+
 Runtime behavior has been cleaned up so that it is now possible when shutting down tomcat to make sure that all asynchronous work has been either processed or task has been persisted.
 
 More information on JIRA ticket [NXP-21969](https://jira.nuxeo.com/browse/NXP-21969).
@@ -349,6 +351,13 @@ We now generate the user workspace name based on the user id with no possible co
 More information on JIRA ticket [NXP-21807](https://jira.nuxeo.com/browse/NXP-21807).
 
 ## Addons
+
+### Lambda Integration
+
+A new addon has been implemented that allows to leverage Amazon Lambdas for efficient asynchronous computing. The initial use case is to offload the PictureViews generation (generating several rendition with different size of the same source image) but the module has been designed to be used for other kind of processing.
+
+More information on the [readme](https://github.com/nuxeo/nuxeo-lambda/blob/master/Readme.md) and on the JIRA ticket [NXP-21922](https://jira.nuxeo.com/browse/NXP-21922).
+
 
 ### Imaging
 
