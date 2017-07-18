@@ -21,25 +21,25 @@ We also provide [instructions for upgrading]({{page version='' space='nxdoc' pag
 
 ### Runtime
 
-#### Runtime Components Lifecycle Refactored <!--since '9.2'-->
+#### Runtime Components Lifecycle Refactored {{since '9.2'}}
 
 The runtime behavior has been refactored so as to provide a cleaner lifecycle to its components. This (big) change is pretty transparent for now but will allow to provide new features to the runtime in the next releases.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-19326](https://jira.nuxeo.com/browse/NXP-19326).
 
-#### Graceful Shutdown in Tomcat <!--since '9.2'-->
+#### Graceful Shutdown in Tomcat {{since '9.2'}}
 
 Runtime behavior has been cleaned up: when shutting down Tomcat it is now possible to make sure that all asynchronous work has been either processed or task has been persisted.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21969](https://jira.nuxeo.com/browse/NXP-21969).
 
-#### Backing Service <!--since '9.2'-->
+#### Backing Service {{since '9.2'}}
 
 We added the infrastructure for plugging some initial checks on external services availability *before* starting the runtime. The first use case is to add a check for MongoDB  or PostgreSQL availability, when the MongoDB or PostgreSQL template is used. In case it is not available, the nuxeo-launcher is interrupted.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21532](https://jira.nuxeo.com/browse/NXP-21532).
 
-#### Test @PartialDeploy Annotation  <!--since '9.1'-->
+#### Test @PartialDeploy Annotation  {{since '9.1'}}
 
 The new Test `@PartialDeploy` annotation allows you to select exactly which contributions you want to deploy from a component.
 
@@ -51,37 +51,37 @@ It makes it easier to test Nuxeo Studio features like Automation Scripting or ev
 
 ### Core Repository
 
-#### Centralized Automated Versioning Policies  <!--since '9.1'-->
+#### Centralized Automated Versioning Policies  {{since '9.1'}}
 
 A new extension point has been added to define automated versioning policies. It allows to declare behaviors such as "Version documents each time the current contributor is different than the last one on the document". It also allows to control wether you want to version before or after the modification. All platform code that was triggering specifically hardcoded behaviors has been refactored so that the central policy is applied: Drive, File Manager (drag and drop behaviors), etc.). Only CMIS hasn't been impacted for now due to some difficulties with requirements regarding document checked in or checked out.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21588](https://jira.nuxeo.com/browse/NXP-21588), the [versioning developer documentation]({{page version='' space='nxdoc' page='versioning'}}) or the [user documentation]({{page version='' space='userdoc'}}).
 
-#### More Permissions Returned in the Permissions Enricher  <!--since '9.1'-->
+#### More Permissions Returned in the Permissions Enricher  {{since '9.1'}}
 
 All visible permissions and more core permissions are included by the [Permissions enricher](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BasePermissionsJsonEnricher.html). Permission enricher can be used to know what permissions the authenticated user has on the document.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21408](https://jira.nuxeo.com/browse/NXP-21408) and the [Content Enricher documentation]({{page version='' space='nxdoc' page='content-enrichers'}}).
 
-#### Orphan Versions Removal  <!--since '9.1'-->
+#### Orphan Versions Removal  {{since '9.1'}}
 
 In some cases, versions of some documents where not deleted even when the document itself was removed. The solution chosen to solve this issue has been to add a scheduled cleanup mechanism. The cleanup mechanism does periodic commits, every 1000 documents by default. This value can be changed using the configuration property [`org.nuxeo.orphanVersionsCleanup.commitSize`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-9.1/viewContribution/org.nuxeo.ecm.core.orphanVersionsCleanup--configuration).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-14187](https://jira.nuxeo.com/browse/NXP-14187).
 
-#### Compatible with CloudFront for Caching Binaries  <!--since '9.1'-->
+#### Compatible with CloudFront for Caching Binaries  {{since '9.1'}}
 
 When using S3 it is possible to redirect signed CloudFront URLs instead of directly S3 ones, so as to benefit from AWS world wild content caching service.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-20219](https://jira.nuxeo.com/browse/NXP-20219).
 
-#### Leverage Blob's XPath in Dispatching Rules  <!--since '9.1'-->
+#### Leverage Blob's XPath in Dispatching Rules  {{since '9.1'}}
 
 It is now possible to use the XPath of the binary that is being stored to determine where the binary should be stored. This typically allows to store thumbnails in a different backend than the main file. The DefaultBlobDispatcher can now match blob XPath using the syntax `blob:xpath=my/xpath` and a new glob operator `~` is available to allow matching things like `blob:xpath~files/*/file`.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21891](https://jira.nuxeo.com/browse/NXP-21891).
 
-#### Change Token for Optimistic Locking <!--since '9.2'-->
+#### Change Token for Optimistic Locking {{since '9.2'}}
 
 New API:
 
@@ -98,37 +98,37 @@ The change token returned to the user-level API `DocumentModel.getChangeToken()`
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-19435](https://jira.nuxeo.com/browse/NXP-19435) and [NXP-22019](https://jira.nuxeo.com/browse/NXP-22019) and [NXP-22259](https://jira.nuxeo.com/browse/NXP-22259).
 
-#### Disable Delta Computation  <!--since '9.1'-->
+#### Disable Delta Computation  {{since '9.1'}}
 
 By adding the new option `org.nuxeo.core.delta.disabled=true` in the `nuxeo.conf` file, the delta calculation used by the [Nuxeo Quota addon]({{page version='' space='nxdoc' page='nuxeo-quota'}}) can be skipped. This can improve the performance of mass import.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-20892](https://jira.nuxeo.com/browse/NXP-20892).
 
-#### API for Permission Purge  <!--since '9.1'-->
+#### API for Permission Purge  {{since '9.1'}}
 
 An operation `PermissionsPurge` has been added for triggering a permission purge for a given principal. This allows you to do an integration with your identity management system so as to remove any permission to a user that would be leaving your organization in the same time you would disable his credentials.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-20844](https://jira.nuxeo.com/browse/NXP-20844).
 
-#### Date Fields Export with Millisecond Precision  <!--since '9.1'-->
+#### Date Fields Export with Millisecond Precision  {{since '9.1'}}
 
 The XML Core IO format and the JSON serialization now include milliseconds information for all date properties.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21607](https://jira.nuxeo.com/browse/NXP-21607).
 
-#### User Existence Is Checked on Document.AddPermission Operation  <!--since '9.1'-->
+#### User Existence Is Checked on Document.AddPermission Operation  {{since '9.1'}}
 
 A check on the existence of users an groups referenced with this operation is performed before doing the assignment. An exception is raised otherwise.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21559](https://jira.nuxeo.com/browse/NXP-21559).
 
-#### Attribute "perDocumentQuery" of Facet Definition Can Be Overridden <!--since '9.2'-->
+#### Attribute "perDocumentQuery" of Facet Definition Can Be Overridden {{since '9.2'}}
 
 It is now possible to change the value of the attribute `perDocumentQuery` of a facet that has been contributed in the built-in distribution.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22603](https://jira.nuxeo.com/browse/NXP-22603)
 
-#### New Document Properties Deprecation <!--since '9.2'-->
+#### New Document Properties Deprecation {{since '9.2'}}
 
 A new extension point "deprecation" has been added to the Schema service to configure deprecated fields and their optional fall-back. A warning is logged when a deprecated field is used in the application, and if the fall-back is configured, values are set and gotten from that fall-back field.
 
@@ -141,31 +141,31 @@ A new extension point "deprecation" has been added to the Schema service to conf
 
 ### Core Storage
 
-#### SSL Support for MarkLogic <!--since '9.2'-->
+#### SSL Support for MarkLogic {{since '9.2'}}
 
 When using the [MarkLogic Connector for Nuxeo](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-marklogic-connector), connection is now secured with SSL.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21818](https://jira.nuxeo.com/browse/NXP-21818).
 
-#### Improved Performance on Scrolling API with MarkLogic <!--since '9.2'-->
+#### Improved Performance on Scrolling API with MarkLogic {{since '9.2'}}
 
 Scroll API (that allows to fetch many documents in a row) has been re-implemented on [Marklogic connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-marklogic-connector). Elastiscsearch re-indexation rate has been increased from 642 documents/second to 2,418 documents/second, i.e +&nbsp;375%.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21824](https://jira.nuxeo.com/browse/NXP-21824).
 
-#### New Oracle JDBC Driver (ojdbc7) Compatibility  <!--since '9.1'-->
+#### New Oracle JDBC Driver (ojdbc7) Compatibility  {{since '9.1'}}
 
 The new Oracle JDBC Driver OJBC7 can be used with Oracle 12c.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-19373](https://jira.nuxeo.com/browse/NXP-19373).
 
-#### Optimized Number of Read When Writing  <!--since '9.1'-->
+#### Optimized Number of Read When Writing  {{since '9.1'}}
 
 The number of read requests required to create documents has been reduced to the strictly required using cache. As a consequence CPU is no longer the limiting factor of bulk-intensive import scenari.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-20595](https://jira.nuxeo.com/browse/NXP-20595).
 
-#### Database-Level Integrity Constraints for PostgreSQL <!--since '9.2'-->
+#### Database-Level Integrity Constraints for PostgreSQL {{since '9.2'}}
 
 When using PostgreSQL, stricter database-level checks are now enabled to prevent rare document name collisions due to concurrent writes. Behavior can be controlled in the repository configuration file using
 
@@ -175,7 +175,7 @@ When using PostgreSQL, stricter database-level checks are now enabled to prevent
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22421](https://jira.nuxeo.com/browse/NXP-22421).
 
-### Core Events  <!--since '9.1'-->
+### Core Events  {{since '9.1'}}
 
 A new PubSubService is available, providing cross-instance publish/subscribe methods:
 - `publish(topic, message)` sends a message to the given topic
@@ -185,19 +185,19 @@ A new PubSubService is available, providing cross-instance publish/subscribe met
 
 ### Directory
 
-#### administrators Group Members Have Access to Protected Directories <!--since '9.2'-->
+#### administrators Group Members Have Access to Protected Directories {{since '9.2'}}
 
 Directories access protected by giving `Read`permission to group Nobody are now accessible by members of the group administrators.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22609](https://jira.nuxeo.com/browse/NXP-22609)
 
-#### New MongoDB Directory Implementation <!--since '9.2'-->
+#### New MongoDB Directory Implementation {{since '9.2'}}
 
 Directory interface now has a MongoDB implementation included in the default distribution.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21582](https://jira.nuxeo.com/browse/NXP-21582).
 
-#### Generic Directories References <!--since '9.2'-->
+#### Generic Directories References {{since '9.2'}}
 
 A new descriptor for references in directories has been added (their description used to be specific to the SQL implementation of directories). Example:
 
@@ -215,7 +215,7 @@ This reference is generic and can be used with SQL and MongoDB implementations.
 
 ### Audit
 
-#### MongoDB Audit Backend  <!--since '9.1'-->
+#### MongoDB Audit Backend  {{since '9.1'}}
 
 A MongoDB backend has been implemented with the purpose of being able to install the Nuxeo Platform without requiring an additional relation database.
 
@@ -223,26 +223,26 @@ A MongoDB backend has been implemented with the purpose of being able to install
 
 ### CMIS
 
-#### Relax Mode  <!--since '9.1'-->
+#### Relax Mode  {{since '9.1'}}
 
 Some constraints of CMIS can be bypassed. To do so use the runtime property `nuxeo.dontFollowCmisSpec=true`.
 This way, for instance, multiple "contains" can be used in the CMISQL query while the standard forbids it.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-19858](https://jira.nuxeo.com/browse/NXP-19858).
 
-#### Change Token  <!--since '9.1'-->
+#### Change Token  {{since '9.1'}}
 
 Change Token [specified](http://docs.oasis-open.org/cmis/CMIS/v1.1/cs01/CMIS-v1.1-cs01.html#x1-1610003) in CMIS 1.1 as optional has been implemented.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-20665](https://jira.nuxeo.com/browse/NXP-20665).
 
-#### Proxies Are Visible by Default  <!--since '9.1'-->
+#### Proxies Are Visible by Default  {{since '9.1'}}
 
 `org.nuxeo.cmis.proxies=true` is now the default.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21828](https://jira.nuxeo.com/browse/NXP-21828).
 
-#### maxItems Parameter in CMIS Query Is Now Supported <!--since '9.2'-->
+#### maxItems Parameter in CMIS Query Is Now Supported {{since '9.2'}}
 
 When using the ES implementation of CMIS bridge, using the parameter `maxItems` allows you to get a certain amount of documents without loading the entire result set at once. Implementation over Core in case of DBS has also been improved consequently.
 
@@ -250,7 +250,7 @@ When using the ES implementation of CMIS bridge, using the parameter `maxItems` 
 
 ### Query
 
-#### Search with Highlighted Results  <!--since '9.1'-->
+#### Search with Highlighted Results  {{since '9.1'}}
 
 It is now possible to configure a page provider so as to get highlighted search result, in order to display the paragraph wrapping a given full-text searched term, in the search result. The [Search endpoint]({{page version='' space='nxdoc' page='search-endpoints'}}) and PageProvider operation have been updated accordingly. Checkout the [polymer sample](https://github.com/nuxeo-sandbox/nuxeo-highlight-showcase) that showcases this new capability of the API to know more about it. Since Nuxeo Platform 9.2, this is used by default [in Nuxeo Web UI](#nuxeo-web-ui).
 
@@ -258,7 +258,7 @@ It is now possible to configure a page provider so as to get highlighted search 
 
 ### Conversion
 
-#### PDF Export of a Note  <!--since '9.1'-->
+#### PDF Export of a Note  {{since '9.1'}}
 
 It is now possible to export a Note with its embedded images as a PDF.
 
@@ -266,13 +266,13 @@ It is now possible to export a Note with its embedded images as a PDF.
 
 ### Elasticsearch
 
-#### Shield Support <!--since '9.2'-->
+#### Shield Support {{since '9.2'}}
 
 Elasticsearch Shield support has been added since Nuxeo Platform 9.1. It is possible to configure authentication credentials [in nuxeo.conf]({{page version='' space='nxdoc' page='configuration-parameters-index-nuxeoconf'}}) (`elasticsearch.shield.enabled`, `elasticsearch.shield.username`, `elasticsearch.shield.password`). It also includes support of SSL encryption of the traffic since Nuxeo Platform 9.2.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21208](https://jira.nuxeo.com/browse/NXP-21208) and [NXP-22042](https://jira.nuxeo.com/browse/NXP-22042)and the [Elasticsearch Shield documentation]({{page version='' space='nxdoc' page='elasticsearch-setup'}}#configuring-access-to-the-cluster-through-elasticsearch-shield-plugin) for more information.
 
-#### Elasticsearch PageProvider Limits Navigation to 10k Documents (Configurable) <!--since '9.2'-->
+#### Elasticsearch PageProvider Limits Navigation to 10k Documents (Configurable) {{since '9.2'}}
 
 The page provider navigation is now limited to the first 10k documents. This is the default maximum result window defined in Elasticsearch.
 
@@ -281,7 +281,7 @@ The limit of 10k can be changed using the configuration service by contributing 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22063](https://jira.nuxeo.com/browse/NXP-22063)
 
-#### Use Elasticsearch Tools with Embedded Deployment of ES  <!--since '9.1'-->
+#### Use Elasticsearch Tools with Embedded Deployment of ES  {{since '9.1'}}
 
 It is now possible to use Elasticsearch tools to inspect (like elasticsearch-head) and query (like mirage) on Nuxeo index when Elasticsearch is embedded.
 
@@ -289,7 +289,7 @@ It is now possible to use Elasticsearch tools to inspect (like elasticsearch-hea
 
 ### User Manager
 
-#### New Operations  <!--since '9.1'-->
+#### New Operations  {{since '9.1'}}
 
 New automation operations are available:
 - `User.CreateOrUpdate`
@@ -302,7 +302,7 @@ The `Services.Query` operation has been renamed `User.Query`.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-21627](https://jira.nuxeo.com/browse/NXP-21627) and [NXP-21962](https://jira.nuxeo.com/browse/NXP-21962).
 
-### FileManager  <!--since '9.1'-->
+### FileManager  {{since '9.1'}}
 
 A new parameter allows to avoid overriding an existing folder.
 
@@ -310,7 +310,7 @@ A new parameter allows to avoid overriding an existing folder.
 
 ### Redis
 
-#### Key Value Store  <!--since '9.1'-->
+#### Key Value Store  {{since '9.1'}}
 
 A new Key/Value store has been added to the Core API and implemented in the Redis addon.
 From the KeyValueService one can acquire a named KeyValueStore, whose API is currently:
@@ -322,13 +322,13 @@ From the KeyValueService one can acquire a named KeyValueStore, whose API is cur
 
 ### OAuth
 
-### Nuxeo Platform as OAuth Provider <!--since '9.2'-->
+### Nuxeo Platform as OAuth Provider {{since '9.2'}}
 
 There was a first implementation of the OAuth flow to use Nuxeo as an OAuth provider. It has been deeply reviewed and completed to be closer to the specifications and to implement the best security practices. As a result, the [Nuxeo Mobile application]({{page version='' space='nxdoc' page='nuxeo-mobile'}}) will now use the OAuth flow to access content stored in the Nuxeo repository.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA epic [NXP-21721](https://jira.nuxeo.com/browse/NXP-21721).
 
-### REST API Endpoints for OAuth Tokens and OAuth Providers Management <!--since '9.2'-->
+### REST API Endpoints for OAuth Tokens and OAuth Providers Management {{since '9.2'}}
 
 Endpoints to CRUD  OAuth tokens and providers (in respect to permission) have been added:
 
@@ -345,14 +345,14 @@ Endpoints to CRUD  OAuth tokens and providers (in respect to permission) have be
 
 ### Packaging
 
-#### Static WAR Generation  <!--since '9.1'-->
+#### Static WAR Generation  {{since '9.1'}}
 Static WAR generation has been fixed and added back to continuous integration. Nuxeo static WAR can be deployed as a standard web application on a Tomcat server.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21659](https://jira.nuxeo.com/browse/NXP-21659).
 
 ### User workspace
 
-#### More Robust User Workspace Name Definition <!--since '9.2'-->
+#### More Robust User Workspace Name Definition {{since '9.2'}}
 
 We now generate the user workspace name based on the user id with no possible collision. We use an escaping mechanism that escapes the few unwanted characters in paths and URLs (slash, backslash, `?`, `&`, `@`, `&`) using a `~` and an hex code. This applies only to new user workspaces; If a user workspace was created previously, it will still be recognized and used.
 
@@ -360,7 +360,7 @@ We now generate the user workspace name based on the user id with no possible co
 
 ## Addons
 
-### Lambda Integration <!--since '9.2'-->
+### Lambda Integration {{since '9.2'}}
 
 A new addon has been implemented that allows to leverage Amazon Lambdas for efficient asynchronous computing. The initial use case is to offload the Picture Views generation (generating several renditions with different sizes of the same source image), but the module has been designed to be used for other kinds of processing.
 
@@ -368,19 +368,19 @@ A new addon has been implemented that allows to leverage Amazon Lambdas for effi
 
 ### Imaging
 
-#### Disabling Default Picture Conversions  <!--since '9.1'-->
+#### Disabling Default Picture Conversions  {{since '9.1'}}
 
 Default picture conversions can now be disabled by using the `enabled` attribute on the [PictureConversions extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.picture.ImagingComponent--pictureConversions) contributions.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21311](https://jira.nuxeo.com/browse/NXP-21311).
 
-### Binary Metadata  <!--since '9.1'-->
+### Binary Metadata  {{since '9.1'}}
 
 [Binary metadata]({{page version='' space='nxdoc' page='binary-metadata'}}) allows to extract and write back metadata on binaries (ex: EXIF metadata). The module no more tries to update the binary when the content is managed externally, for instance when using [Nuxeo Live Connect]({{page version='' space='nxdoc' page='nuxeo-live-connect'}}).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-20282](https://jira.nuxeo.com/browse/NXP-20282).
 
-### Nuxeo Drive  <!--since '9.1'-->
+### Nuxeo Drive  {{since '9.1'}}
 
 Root registrations are not copied when a document and its children are copied.
 In 9.1 and later, by default, we reset the synchronization root registrations on a copied document and its children. In LTS 2016 and earlier the previous behavior is kept.
@@ -389,7 +389,7 @@ In 9.1 and later, by default, we reset the synchronization root registrations on
 
 ### Nuxeo Vision
 
-#### Amazon Rekognition  <!--since '9.1'-->
+#### Amazon Rekognition  {{since '9.1'}}
 
 [Nuxeo Vision]({{page version='' space='nxdoc' page='nuxeo-vision'}}), the computer vision gateway, can now use Amazon Rekognition in addition to Google Vision. The automation operation `VisionOp` now includes a new parameter `provider` that allows to specifically call a given provider.
 
@@ -397,13 +397,13 @@ In 9.1 and later, by default, we reset the synchronization root registrations on
 
 ### Live Connect
 
-#### Dropbox API V2 Implementation <!--since '9.2'-->
+#### Dropbox API V2 Implementation {{since '9.2'}}
 
 [Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect) now leverages the Dropbox API v2.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22384](https://jira.nuxeo.com/browse/NXP-NXP-22384).
 
-### Nuxeo CSV Web UI Port  <!--since '9.1'-->
+### Nuxeo CSV Web UI Port  {{since '9.1'}}
 
 [Nuxeo CSV]({{page version='' space='nxdoc' page='nuxeo-csv'}}) can now be used from [Web UI]({{page version='' space='userdoc' page='web-ui'}}). The feature is available from the import pop-up, in a new "CSV" tab.
 
@@ -411,7 +411,7 @@ In 9.1 and later, by default, we reset the synchronization root registrations on
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21484](https://jira.nuxeo.com/browse/NXP-21484).
 
-### Nuxeo Template Rendering Web UI Port  <!--since '9.1'-->
+### Nuxeo Template Rendering Web UI Port  {{since '9.1'}}
 
 [The template Rendering plugin]({{page version='' space='nxdoc' page='template-rendering-addon'}}) has been ported to Web UI. It has also been simplified. It is now designed to be used mostly in some situations where the Web UI has been tailored to your use cases. A user action looks up for matching templates and lets user choose one if there are several. If the template has some parameters, that action will asks the user those parameters, otherwise it will generate the rendition and fire a download. It is possible to easily override the template look up logic as well as the rendition chain that is used.
 
@@ -419,7 +419,7 @@ In 9.1 and later, by default, we reset the synchronization root registrations on
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21486](https://jira.nuxeo.com/browse/NXP-21486).
 
-### Nuxeo Platform Importer - English Dictionary for Random Import  <!--since '9.1'-->
+### Nuxeo Platform Importer - English Dictionary for Random Import  {{since '9.1'}}
 
 Random English content can now be generated using the random importer.
 
@@ -427,7 +427,7 @@ Random English content can now be generated using the random importer.
 
 ### Nuxeo Web UI {{> anchor 'nuxeo-web-ui'}}
 
-#### New List Item View with Search Results Highlight <!--since '9.2'-->
+#### New List Item View with Search Results Highlight {{since '9.2'}}
 
 A new search result view has been added on the main search. It displays items on the full width of the panel, in the same style as a web search engine such as Google, with searched terms highlighted in the context of the original text wrapping them.
 
@@ -435,7 +435,7 @@ A new search result view has been added on the main search. It displays items on
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22567](https://jira.nuxeo.com/browse/NXP-22567).
 
-#### Results Highlight in Suggestion Search <!--since '9.2'-->
+#### Results Highlight in Suggestion Search {{since '9.2'}}
 
 When doing a quick search in the suggestion box, Web UI now displays the matched terms and metadata so as to understand why the result item is returned.  
 
@@ -443,7 +443,7 @@ When doing a quick search in the suggestion box, Web UI now displays the matched
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22566](https://jira.nuxeo.com/browse/NXP-22566).
 
-#### Justified Thumbnails Grid <!--since '9.2'-->
+#### Justified Thumbnails Grid {{since '9.2'}}
 
 A new view for media search results has been added, with justified display of thumbnails that keep their original ratio and metadata displayed on hover. The goal is to improve user experience for users that spend a lot of time searching for visual media (images, video) in the repository.
 
@@ -451,7 +451,7 @@ A new view for media search results has been added, with justified display of th
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22474](https://jira.nuxeo.com/browse/NXP-22474).
 
-#### Improved Task View <!--since '9.2'-->
+#### Improved Task View {{since '9.2'}}
 
 Task view has been improved:
 
@@ -463,7 +463,7 @@ Task view has been improved:
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22591](https://jira.nuxeo.com/browse/NXP-22591).
 
-#### Storyboard on Video Layout <!--since '9.2'-->
+#### Storyboard on Video Layout {{since '9.2'}}
 
 The storyboard has been added to Web UI view of videos.
 
@@ -471,7 +471,7 @@ The storyboard has been added to Web UI view of videos.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [ELEMENTS-358](https://jira.nuxeo.com/browse/ELEMENTS-358)
 
-#### Default Workflows independent from Nuxeo JSF UI <!--since '9.2'-->
+#### Default Workflows independent from Nuxeo JSF UI {{since '9.2'}}
 
 Default Workflows (serial and parallel reviews) have been added to Nuxeo Web UI and do not require Nuxeo SJF UI anymore.
 
@@ -479,7 +479,7 @@ Default Workflows (serial and parallel reviews) have been added to Nuxeo Web UI 
 
 ### Nuxeo JSF UI
 
-#### Custom Mobile Banner  <!--since '9.1'-->
+#### Custom Mobile Banner  {{since '9.1'}}
 
 A Custom Banner has been added so as to let the user open the [Nuxeo mobile application]({{page version='' space='nxdoc' page='nuxeo-mobile'}}) when browsing the JSF UI from an Android or iOS mobile device.
 
@@ -487,7 +487,7 @@ A Custom Banner has been added so as to let the user open the [Nuxeo mobile appl
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21679](https://jira.nuxeo.com/browse/NXP-21679).
 
-#### Breadcrumb: Browse Parent Folder  <!--since '9.1'-->
+#### Breadcrumb: Browse Parent Folder  {{since '9.1'}}
 
 Dots in the breadcrumb allow to move to parent folder.
 
@@ -495,20 +495,20 @@ Dots in the breadcrumb allow to move to parent folder.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21068](https://jira.nuxeo.com/browse/NXP-21068).
 
-#### Integer Constraint Correctly Formatted in JSF UI <!--since '9.2'-->
+#### Integer Constraint Correctly Formatted in JSF UI {{since '9.2'}}
 
 When a property is of type Integer and the constraint check is enabled, message on the widget is:
  "'abc' is not a number. Example: 99".
 
 ### Packaging
 
-#### Official Docker Image is Compatible with OpenShift <!--since '9.2'-->
+#### Official Docker Image is Compatible with OpenShift {{since '9.2'}}
 
 The script to build the official Docker image has been improved so that the image can be launched from Open Shift, which imposes some specific security constraints.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21880](https://jira.nuxeo.com/browse/NXP-21880).
 
-#### CentOS Specific Image Build <!--since '9.2'-->
+#### CentOS Specific Image Build {{since '9.2'}}
 
 The script to build the official Docker image now also allows to build specifically an image on top of CentOS.
 
@@ -516,13 +516,13 @@ The script to build the official Docker image now also allows to build specifica
 
 ## Farewell
 
-### Nuxeo Forum  <!--since '9.1'-->
+### Nuxeo Forum  {{since '9.1'}}
 
 Deprecated for LTS 2016, Nuxeo Forum has been removed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21448](https://jira.nuxeo.com/browse/NXP-21448).
 
-### Box API  <!--since '9.1'-->
+### Box API  {{since '9.1'}}
 
 Deprecated for LTS 2016, Box API has been removed.
 
