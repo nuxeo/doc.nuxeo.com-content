@@ -45,7 +45,7 @@ All the resources for each theme are located on the `/themes/{name}` folder, whe
 To add a new theme or customize one of the provided ones you can simply deploy and override theme resources as described in [How to deploy additional Web UI resources]({{page page='web-ui-deployment#deploy_or_override'}}).
 
 
-### How to Creage a Theme
+### How to Create a Theme
 
 This example provides an walk-through on how to create a new theme and add it as a contribution to the Web UI.
 We will create our new theme called `new-light` theme, which is base on the provider `light` theme with some customizations.
