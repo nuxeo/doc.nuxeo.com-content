@@ -336,7 +336,7 @@ There are no properties for this slot.
 
 ##### THEMES {{> anchor 'themes'}}
 
-The **THEMES** slot allows to define additional themes for the user interface, selectable in the themes page(accessible from the user menu).
+The **THEMES** slot allows to define additional themes for the user interface, selectable in the themes page (accessible from the user menu).
 
 ![]({{file name='THEMES.png'}} ?w=400,border=true)
 
