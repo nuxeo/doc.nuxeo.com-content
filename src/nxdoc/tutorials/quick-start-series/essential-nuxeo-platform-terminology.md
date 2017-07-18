@@ -4,6 +4,8 @@ review:
     comment: ''
     date: '2016-12-08'
     status: ok
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
     - lts2016-ok
     - bootstrap

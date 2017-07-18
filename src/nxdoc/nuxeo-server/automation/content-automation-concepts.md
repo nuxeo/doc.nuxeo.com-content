@@ -13,6 +13,8 @@ labels:
     - multiexcerpt
     - excerpt
 toc: true
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '18451738'
     ajs-parent-page-title: Automation

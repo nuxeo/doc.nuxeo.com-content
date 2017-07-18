@@ -6,6 +6,8 @@ review:
     status: ok
 labels:
     - lts2016-ok
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '19235677'
     ajs-parent-page-title: Quick Start Series

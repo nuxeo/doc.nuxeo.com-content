@@ -10,6 +10,8 @@ details:
         level: Beginner
         tool: Nuxeo Studio
         topics: 'Document type, Style'
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
     - howto
     - studio

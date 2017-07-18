@@ -10,6 +10,8 @@ labels:
     - nuxeo-drive
     - nuxeo-drive-component
 toc: true
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '31033323'
     ajs-parent-page-title: Desktop and Mobile

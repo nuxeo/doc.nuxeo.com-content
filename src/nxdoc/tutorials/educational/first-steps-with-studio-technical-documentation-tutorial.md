@@ -8,6 +8,8 @@ labels:
     - lts2016-ok
     - tutorial
     - excerpt
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '19235679'
     ajs-parent-page-title: Educational

@@ -8,6 +8,8 @@ labels:
     - lts2016-ok
     - excerpt
 toc: true
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '19235786'
     ajs-parent-page-title: Workflow Use Cases

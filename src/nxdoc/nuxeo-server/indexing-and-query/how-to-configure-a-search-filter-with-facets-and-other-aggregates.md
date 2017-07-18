@@ -10,6 +10,8 @@ details:
         level: Intermediate
         tool: Studio
         topics: 'Content View, Elasticsearch, Query, Widget'
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
     - lts2016-ok
     - elasticsearch
