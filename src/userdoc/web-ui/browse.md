@@ -26,7 +26,7 @@ The side menu displays all the domain structure from the root. It enables you to
 
 {{{multiexcerpt 'intro-dashboard' page='browsing-content'}}}
 
-![]({{file version='' space='nxdoc' page='web-ui-dashboard' name='DASHBOARD.png'}})
+![]({{file version='' space='nxdoc' page='web-ui-dashboard' name='DASHBOARD.png'}} ?w=600,border=true)
 
 To access your dashboard, click on the icon on the top left hand corner of your platform.
 
@@ -34,17 +34,17 @@ To access your dashboard, click on the icon on the top left hand corner of your 
 
 Users can change the way content is presented in the folderish repositories (workspaces, folders, sections) and search results.They can also change the displayed information.
 
-#### Changing the View Mode
+#### Changing View Mode
 Two views of the content lists are available on the top right corner of your workspace
 
-- Table View ![]({{file name='table-view-web-ui.png' page='icons-index'}} ?w=30)(default view): This view displays the title of the documents with a small icon (that depends on the type of document or main attachment type) and a set of metadata in a table
+- Table View ![]({{file name='table-view-web-ui.png' page='icons-index'}} ?w=20) (default view): This view displays the title of the documents with a small icon (that depends on the type of document or main attachment type) and a set of metadata in a table
 
-- Grid View ![]({{file name='grid-view-web-ui.png' page='icons-index'}} ?w=30): This view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
+- Grid View ![]({{file name='grid-view-web-ui.png' page='icons-index'}} ?w=20): This view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
 
 #### Changing Displayed Information
 Lists of documents, whether in grid view or thumbnail view, show some information about the documents, like their title, the last contributor, their lifecycle state, etc. Users can change the information displayed, i.e. the columns for the list view or the information below the document thumbnail in thumbnail view.
 
-To change the information displayed in content views, click on the icon ![]({{file name='manage_collection.png' page='icons-index'}} ?w=20). A pop-up is displayed: select the information that you want to be displayed among the list.
+To change the information displayed in content views, click on the icon&nbsp;![]({{file name='manage_collection_web-ui.png' page='icons-index'}} ?w=20). A pop-up is displayed: select the information that you want to be displayed among the list.
 
 ![]({{file name='columns-settings-web-ui.png'}} ?w=250,border=true)
 
@@ -67,12 +67,12 @@ Some actions or features are accessible using access keys:
 {{{multiexcerpt 'intro-creating-content'}}}
 
 ### Creating a Document Using the Create Button
-Creating a document using the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=20) enables you to select the type of document you want to create among all Nuxeo Platform's document types.
+Creating a document using the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=30) enables you to select the type of document you want to create among all Nuxeo Platform's document types.
 
 ![]({{file name='creation-popup-web-ui.png'}} ?w=450,border=true)
 
 To create a document using the **Create** button:
-1. Click on the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=20) and click on the desired document.
+1. Click on the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=30) and click on the desired document.
 2. Fill in the document's creation form and click on the **Create** button.
 
 The View tab of the document is displayed.
@@ -185,12 +185,12 @@ The XML export of a document enables users to get a folder for the exported docu
 *   A document.xml file holding the document's various information (the applied access rights, the document's metadata, its path)
 *   A .blob file that holds the binary content of the document. This blob is referenced in the document.xml file
 
-To **get the XML export of a document**, from the document, click on the icon ![]({{file name='export-web-ui.png' space='userdoc' page='icons-index'}} ?w=16) and select **ZIP Export** ![]({{file name='zip_export.png' page='icons-index'}}).
+To **get the XML export of a document**, from the document, click on the icon&nbsp;![]({{file name='export-web-ui.png' space='userdoc' page='icons-index'}} ?w=16) and select **ZIP Export**.
 
 ![]({{file name='available-exports-web-ui.png'}} ?w=350,border=true)
 
 {{#> callout type='tip' }}
-If you're only interested in the XML file of the document, click on ![]({{file name='file.gif' page='icons-index'}}) **XML Export**. The XML file should open in a new tab or window (depending on your browser's preferences).
+If you're only interested in the XML file of the document, click on **XML Export**. The XML file should open in a new tab or window (depending on your browser's preferences).
 {{/callout}}
 
 When you unzip it, you get a folder named from the document, that contains a document.xml file and .blob for each attachment of the document.
@@ -199,10 +199,10 @@ When you unzip it, you get a folder named from the document, that contains a doc
 
 It is possible to export a whole workspace, section or folder in a zipped XML folder. This specific export enables users to import the folder back, with the same access rights definition.
 
-To **get the XML export of a folder**, from the folder (or workspace or section), click on the icon ![]({{file name='export-web-ui.png' space='userdoc' page='icons-index'}} ?w=16) and select **ZIP Export** ![]({{file name='zip_export.png' page='icons-index'}}) on the popup window.
+To **get the XML export of a folder**, from the folder (or workspace or section), click on the icon&nbsp;![]({{file name='export-web-ui.png' space='userdoc' page='icons-index'}} ?w=16) and select **ZIP Export** on the popup window.
 
 {{#> callout type='tip' }}
-If you're only interested in the XML definition of the folder, click on ![]({{file name='file.gif' page='icons-index'}}) **XML Export**. The XML file should open in a new tab or window (depending on your browser's preferences).
+If you're only interested in the XML definition of the folder, click on **XML Export**. The XML file should open in a new tab or window (depending on your browser's preferences).
 {{/callout}}
 
 When you unzip it, you get a folder named from the document, that contains a document.xml file and .blob for each attachment of the document.
@@ -210,13 +210,13 @@ When you unzip it, you get a folder named from the document, that contains a doc
 ## Deleting Content
 Only users with "Edit" or "Manage everything" [permissions]({{page version='' space='userdoc' page='managing-permissions'}}) can delete documents from a space.
 
-### From the Workspace View
+### From Workspace View
 
-To delete one or several documents, select them in your workspace and click on the delete icon ![]({{file name='delete_2.png' page='icons-index'}} ?w=12) in the selection toolbar.
+To delete one or several documents, select them in your workspace and click on the delete icon&nbsp;![]({{file name='delete_web-ui.png' page='icons-index'}} ?w=18) in the selection toolbar.
 
-### From the Document View
+### From Document View
 
-On the document itself you can decide to delete the file of your document by clicking on the Delete icon ![]({{file name='delete_2.png' page='icons-index'}} ?w=12) next to its title and add a new one.
+On the document itself you can decide to delete the file of your document by clicking on the Delete icon&nbsp;![]({{file name='delete_web-ui.png' page='icons-index'}} ?w=18) next to its title and add a new one.
 
 ## Versioning
 
@@ -293,20 +293,20 @@ See the page [How to Customize Nuxeo Drive Versioning Policy]({{page space='NXDO
 ## Document Actions
 
 The document actions toolbar displays all the actions available for the current document.
-![]({{file name='document_toolbar.png' page='web-ui' space='nxdoc'}} ?w=800, border=true)
+![]({{file name='document_toolbar.png' page='web-ui' space='nxdoc'}} ?w=600, border=true)
 
 ### Share a Document
 
-The button ![]({{file name='share.png' page='icons-index' space='userdoc'}}) gives you the permanent link to the document concerned, in order to easily share it.
+The button ![]({{file name='share_web-ui.png' page='icons-index' space='userdoc'}}) gives you the permanent link to the document concerned, in order to easily share it.
 
 ### Alerts
 {{{multiexcerpt 'alert-functional' page='collaborative-features'}}}
 
 ### Lock / Unlock
 
-When you need to work on a document for some time, you don't want other users to edit it at the same time and disturb your own work. This is typically the case where you lock the document by clicking the icon ![]({{file name='unlocked-web-ui.png' space='userdoc' page='icons-index'}} ?w=16).
+When you need to work on a document for some time, you don't want other users to edit it at the same time and disturb your own work. This is typically the case where you lock the document by clicking the icon&nbsp;![]({{file name='unlocked-web-ui.png' space='userdoc' page='icons-index'}} ?w=16).
 
-A locked document remains visible to other users but only the locker and users with Manage everything permission can edit it. Other users can see the document locked through the orange icon ![]({{file name='locked-web-ui.png' space='userdoc' page='icons-index'}} ?w=16). A tooltip indicates who locked the document and when.
+A locked document remains visible to other users but only the locker and users with Manage everything permission can edit it. Other users can see the document locked through the icon&nbsp;![]({{file name='locked-web-ui.png' space='userdoc' page='icons-index'}} ?w=16). A tooltip indicates who locked the document and when.
 
 Users with Management everything permission can unlock document on other users' behalf so a document does not remains locked during the locker's vacation and blocks other user's work, for instance.
 

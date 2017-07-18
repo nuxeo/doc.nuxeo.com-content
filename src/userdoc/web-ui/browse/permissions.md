@@ -10,7 +10,37 @@ labels:
     - permissions
 tree_item_index: 200
 ---
-{{{multiexcerpt 'permissions-without-purge' page='managing-permissions'}}}
+{{{multiexcerpt 'permissions-introduction' page='managing-permissions'}}}
+
+## Permissions Overview
+
+{{{multiexcerpt 'permissions-overview-table' page='managing-permissions'}}}
+
+## Managing Permissions on Content
+
+### Granting Permissions to the Application Users and Groups
+
+{{{multiexcerpt 'grant-permissions' page='managing-permissions'}}}
+
+![]({{file name='add_permission_popup_web-ui.png'}} ?w=350,border=true)
+
+### Granting Permissions to External Users (Instant Share)
+
+{{{multiexcerpt 'grant-permissions-external-users' page='managing-permissions'}}}
+
+![]({{file name='permissions_external_share_popup_web-ui.png'}} ?w=300,thumbnail=true)
+
+{{{multiexcerpt 'grant-permissions-external-users-notes' page='managing-permissions'}}}
+
+### Editing Permissions
+
+To edit a permission click on ![]({{file name='edit-icon_web-ui.png' page='icons-index'}}) next to it, from there you can modify the permission and/or the date frame.
+
+### Deleting Permissions
+
+To delete a permission click on ![]({{file name='delete_web-ui.png' page='icons-index'}}) next to the permission you want to delete, click **Ok** on the confirmation popup.
+
+![]({{file name='delete_permission_popup_web-ui.png'}} ?w=350,border=true)
 
 * * *
 

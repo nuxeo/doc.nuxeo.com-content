@@ -20,7 +20,7 @@ tree_item_index: 700
 
 ---
 
-The Web UI dashboard is the default starting page of the application and is defined by [nuxeo-home.html](https://github.com/nuxeo/nuxeo-web-ui/blob/0.8/elements/nuxeo-home.html).
+The Web UI dashboard is the default starting page of the application and is defined by [nuxeo-home.html](https://github.com/nuxeo/nuxeo-web-ui/blob/1.0/elements/nuxeo-home.html).
 
 ![]({{file name='DASHBOARD.png'}} ?w=600,border=true)
 

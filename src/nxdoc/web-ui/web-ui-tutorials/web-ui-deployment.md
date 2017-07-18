@@ -21,7 +21,7 @@ tree_item_index: 900
 
 ---
 
-This documentation explains the Web UI deployment within a Nuxeo server. The [Web UI marketplace](https://github.com/nuxeo/plugin-nuxeo-web-ui/tree/0.8.0) installs the needed resources in `$NUXEO_SERVER/nxserver/nuxeo.war/ui` to run the Web UI.
+This documentation explains the Web UI deployment within a Nuxeo server. The [Web UI marketplace](https://github.com/nuxeo/plugin-nuxeo-web-ui/tree/1.0) installs the needed resources in `$NUXEO_SERVER/nxserver/nuxeo.war/ui` to run the Web UI.
 
 ## Structure
 
@@ -78,23 +78,23 @@ $NUXEO_SERVER/nxserver/nuxeo.war/ui% tree
 ```
 
 About the Web UI structure:
-- the [index.jsp](https://github.com/nuxeo/plugin-nuxeo-web-ui/blob/8.10/nuxeo-web-ui/src/main/resources/web/nuxeo.war/ui/index.jsp) serves the Web UI.
+- the [index.jsp](https://github.com/nuxeo/plugin-nuxeo-web-ui/blob/1.0/nuxeo-web-ui/src/main/resources/web/nuxeo.war/ui/index.jsp) serves the Web UI.
 - the `elements.html` is a vulcanized file which groups the structural code of the Web UI.
 - the `nuxeo-home.html` is the element that renders the home dashboard of the Web UI (see the [dashboard]({{page page='dashboard'}}) documentation to put your custom dashboard in place).
 - the `document` directory provides the layout elements to create, view, edit, import etc. the data of a given document type. In the above snippet, we see elements to provide layouts for documents of type *File*, *Folder* and *Note*. The convention is `nuxeo-{documentType}-{mode}-layout.html` where:
   * {documentType} is the document type i.e. *Folder*, *Note*, *Note*, etc.
   * {mode} is the layout mode i.e. *Create*, *View* , *Edit*, *Import*, etc.
   See the [layout elements]({{page page='web-ui-layouts'}}) documentation for further details.
-- the `i18n` directory provides internationalization files to translate Web UI labels (See the [managing translation]({{page page='managing-translation'}}) documentation).
-- the `workflow` directory providers the layout elements to complete workflow tasks.  See the [workflow tasks]({{page page='web-uiworkflow-tasks'}}) documentation for further details.
+- the `i18n` directory provides internationalization files to translate Web UI labels (See the [managing translation]({{page version='' space='nxdoc' page='web-ui-managing-translations'}}) documentation).
+- the `workflow` directory providers the layout elements to complete workflow tasks.  See the [workflow tasks]({{page version='' space='nxdoc' page='web-ui-workflow-tasks'}}) documentation for further details.
 
 ## How to Deploy Additional Web UI Resources{{> anchor 'deploy_or_override'}}
 
 In order to extend the Web UI (outside Studio), you'll need to create your own marketplace which will deploy your own resources in `$NUXEO_SERVER/nxserver/nuxeo.war/ui`.
 
-Let's have a look at the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon. Nuxeo Drive defines among others a [nuxeo-drive-web-ui](https://github.com/nuxeo/nuxeo-drive-server/tree/8.10/nuxeo-drive-web-ui) bundle deployed in a server by its [marketplace](https://github.com/nuxeo/marketplace-drive/tree/1.6.3).
+Let's have a look at the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon. Nuxeo Drive defines among others a [nuxeo-drive-web-ui](https://github.com/nuxeo/nuxeo-drive-server/tree/9.2/nuxeo-drive-web-ui) bundle deployed in a server by its [marketplace](https://github.com/nuxeo/marketplace-drive/tree/1.7.1).
 
-First important point is the [nuxeodrive-webresources-contrib.xml](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/OSGI-INF/nuxeodrive-webresources-contrib.xml#L16) file which provides the following contribution:
+First important point is the [nuxeodrive-webresources-contrib.xml](https://github.com/nuxeo/nuxeo-drive-server/blob/9.2/nuxeo-drive-web-ui/src/main/resources/OSGI-INF/nuxeodrive-webresources-contrib.xml#L16) file which provides the following contribution:
 
 ```xml
 <component name="org.nuxeo.drive.web.ui.resources.contrib">
@@ -118,23 +118,23 @@ First important point is the [nuxeodrive-webresources-contrib.xml](https://githu
 </component>
 ```
 
-This makes [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html) accessible in the [index.jsp](https://github.com/nuxeo/plugin-nuxeo-web-ui/blob/8.10/nuxeo-web-ui/src/main/resources/web/nuxeo.war/ui/index.jsp#L80) (deployed in `$NUXEO_SERVER/nxserver/nuxeo.war/ui/` and is the access point of the Web UI). Of course, this extension is declared in the [nuxeo-drive-web-ui's OSGI bundle MANIFEST](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/META-INF/MANIFEST.MF#L7) like any other Nuxeo extension.
+This makes [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/9.2/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html) accessible in the [index.jsp](https://github.com/nuxeo/plugin-nuxeo-web-ui/blob/1.0/nuxeo-web-ui/src/main/resources/web/nuxeo.war/ui/index.jsp) (deployed in `$NUXEO_SERVER/nxserver/nuxeo.war/ui/` and is the access point of the Web UI). Of course, this extension is declared in the [nuxeo-drive-web-ui's OSGI bundle MANIFEST](https://github.com/nuxeo/nuxeo-drive-server/blob/9.2/nuxeo-drive-web-ui/src/main/resources/META-INF/MANIFEST.MF#L7) like any other Nuxeo extension.
 
 {{#> callout type='warning' }}
 
-The requirement on `org.nuxeo.web.ui.resources` is important as it ensures your extension is deployed after the [Web UI](https://github.com/nuxeo/plugin-nuxeo-web-ui/blob/master/nuxeo-web-ui/src/main/resources/OSGI-INF/webresources-contrib.xml#L3). This is how you'll be able to potentially override/redefine part of the default Web UI such as the [dashboard]({{page page='web-ui-dashboard'}}).
+The requirement on `org.nuxeo.web.ui.resources` is important as it ensures your extension is deployed after the [Web UI](https://github.com/nuxeo/plugin-nuxeo-web-ui/blob/1.0/nuxeo-web-ui/src/main/resources/OSGI-INF/webresources-contrib.xml#L3). This is how you'll be able to potentially override/redefine part of the default Web UI such as the [dashboard]({{page page='web-ui-dashboard'}}).
 
 {{/callout}}
 
-Note that [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html) defines mostly slot contents (see the [Web UI slot documentation]({{page page='web-ui-slots'}}) but it also includes [import of new elements](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html#L15) used in declared slot contents and brought by the addon itself:
+Note that [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/9.2/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html) defines mostly slot contents (see the [Web UI slot documentation]({{page page='web-ui-slots'}}) but it also includes [import of new elements](https://github.com/nuxeo/nuxeo-drive-server/blob/9.2/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html#L15) used in declared slot contents and brought by the addon itself:
 
 ```
 <link rel="import" href="nuxeo-drive-edit-button.html">
 ```
 
-For the rest, all [other Drive Web UI resources](https://github.com/nuxeo/nuxeo-drive-server/tree/8.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive) will be deployed in the `$NUXEO_SERVER/nxserver/nuxeo.war/` directory thanks to the [deployment fragment](https://github.com/nuxeo/nuxeo-drive-server/blob/8.10/nuxeo-drive-web-ui/src/main/resources/OSGI-INF/deployment-fragment.xml#L6).
+For the rest, all [other Drive Web UI resources](https://github.com/nuxeo/nuxeo-drive-server/tree/9.2/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive) will be deployed in the `$NUXEO_SERVER/nxserver/nuxeo.war/` directory thanks to the [deployment fragment](https://github.com/nuxeo/nuxeo-drive-server/blob/9.2/nuxeo-drive-web-ui/src/main/resources/OSGI-INF/deployment-fragment.xml#L6).
 
-Finally, the [Nuxeo Drive Marketplace](https://github.com/nuxeo/marketplace-drive/tree/1.6.3) has the proper [assembly.xml](https://github.com/nuxeo/marketplace-drive/blob/1.6.3/marketplace/src/main/assemble/assembly.xml#L131) in order to deploy its Web UI resources.
+Finally, the [Nuxeo Drive Marketplace](https://github.com/nuxeo/marketplace-drive/tree/1.7.1) has the proper [assembly.xml](https://github.com/nuxeo/marketplace-drive/blob/1.7.1/marketplace/src/main/assemble/assembly.xml#L131) in order to deploy its Web UI resources.
 
 {{#> callout type='warning' }}
 

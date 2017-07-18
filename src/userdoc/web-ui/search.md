@@ -26,7 +26,7 @@ Typing keywords in the search field and pressing the "Enter" key triggers a full
 
 1. Type your keywords in the quick search field.
     Matching documents are suggested as you type.
-    ![]({{file name='simple_search_suggestion-web-ui.png'}} ?w=350,border=true)
+    ![]({{file name='simple_search_suggestion-web-ui.png'}} ?w=550,border=true)
 2. Click on the document's name to open it.
 
 When you start typing words in the quick search field, in the top right corner of the page, you are displayed some results as you type. This is the suggestion search. You can type words or dates in this field. Results include three types of items:
