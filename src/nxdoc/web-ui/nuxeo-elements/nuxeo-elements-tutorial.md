@@ -142,7 +142,7 @@ Let's plug this application into the Nuxeo instance and change the hardcoded use
 
     {{#> panel type='code' heading='src/my-app.html'}}
     ```xml
-    <a name="doc-reader" href="/#doc-reader">Document Reader</a>
+    <a name="doc-reader" href="#/doc-reader">Document Reader</a>
     ```
     {{/panel}}
 
@@ -188,8 +188,8 @@ Let's plug this application into the Nuxeo instance and change the hardcoded use
 
     This adds `nuxeo-elements` as a dependency in `bower.json` and downloads the latest release from our GitHub [repository](https://github.com/nuxeo/nuxeo-elements) into `bower_components`.
 
-2.  Import the Nuxeo elements we need, in this case [nuxeo-connection](https://elements.nuxeo.com/elements/nuxeo-connection)
-    and [nuxeo-document](https://elements.nuxeo.com/elements/nuxeo-document), into `doc-reader`:
+2.  Import the Nuxeo elements we need, in this case [nuxeo-connection](https://www.webcomponents.org/element/nuxeo/nuxeo-elements/elements/nuxeo-connection)
+    and [nuxeo-document](https://www.webcomponents.org/element/nuxeo/nuxeo-elements/elements/nuxeo-document), into `doc-reader`:
 
     {{#> panel type='code' heading='src/my-doc-reader.html'}}
     ```xml
@@ -214,7 +214,7 @@ elements so it should be one of the first elements you declare in your applicati
 
 There is now a connection to the Nuxeo instance. Note that you will need to define a [Cross-Origin Resource Sharing (CORS)
 configuration]({{page page='cross-origin-resource-sharing-cors'}}) before going any further. Here's a sample configuration
-file, that you should copy to `NUXEO_HOME/nxserver/config`:
+file, that you should copy to `NUXEO_HOME/nxserver/config/cors-config.xml`:
 
 ```xml
 <component name="org.nuxeo.corsi.demo">
@@ -242,7 +242,7 @@ relevant from our document. For example:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```xml
-<h2>Title: [[document.title]]</h3>
+<h2>Title: [[document.title]]</h2>
 <p>ID: [[document.uid]]</p>
 <p>Repository: [[document.repository]]</p>
 <p>State: [[document.state]]</p>
@@ -264,7 +264,7 @@ Your application should now look something like this:
 We now want to display the children of our current document. The most efficient way of doing it is by using a `Page Provider`,
 which enables paginated queries. **Nuxeo Elements** provide one such data element which mediates the usage of page providers.
 
-Let's import the [nuxeo-page-provider](https://elements.nuxeo.com/elements/nuxeo-page-provider) in our element:
+Let's import the [nuxeo-page-provider](https://www.webcomponents.org/element/nuxeo/nuxeo-elements/elements/nuxeo-page-provider) in our element:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```xml
@@ -325,7 +325,7 @@ Let's install Nuxeo UI Elements through Bower:
 $ bower install --save nuxeo/nuxeo-ui-elements
 ```
 
-And now we must import the [nuxeo-path-suggestion](https://elements.nuxeo.com/elements/nuxeo-path-suggestion) element,
+And now we must import the [nuxeo-path-suggestion](https://www.webcomponents.org/element/nuxeo/nuxeo-ui-elements/elements/nuxeo-path-suggestion) element,
 which is a UI element that allows the user to pick a valid document path and also features auto-completion:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
@@ -339,7 +339,7 @@ named `targetPath`:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```xml
-<nuxeo-document id="doc" auto doc-path="[[targetPath]]" response={{document}}></nuxeo-document>
+<nuxeo-document id="doc" auto doc-path="[[targetPath]]" response=\{{document}}></nuxeo-document>
 ```
 {{/panel}}
 
@@ -375,7 +375,7 @@ Our element is now interactive and much more useful:
 
 There are two elements that are perfect for listing documents: `nuxeo-data-list` and `nuxeo-data-table`. We will now use `nuxeo-data-table` to display our document's children along with their respective icons and last modified date.
 
-Let's start by importing [nuxeo-data-table](https://elements.nuxeo.com/elements/nuxeo-data-table) into our element:
+Let's start by importing [nuxeo-data-table](https://www.webcomponents.org/element/nuxeo/nuxeo-ui-elements/elements/nuxeo-data-table) into our element:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```xml
@@ -439,7 +439,7 @@ Your app should look like this now:
 Our awesome app is now able to browse any folder and list its children. What would make it even more awesome would be
 to be able to upload files to the current folder. Thanks to our UI elements, this is easy to achieve.
 
-Let's start by importing [nuxeo-file](https://elements.nuxeo.com/elements/nuxeo-file) into our element, which is a widget
+Let's start by importing [nuxeo-file](https://www.webcomponents.org/element/nuxeo/nuxeo-ui-elements/elements/nuxeo-file) into our element, which is a widget
 for uploading files:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}

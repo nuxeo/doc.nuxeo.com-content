@@ -201,7 +201,6 @@ history:
 ---
 We reference here sample JSON objects expected by the Resources Endpoints, that you may want to use and adapt when doing POST and PUT. You can experiment Nuxeo API and see the list of endpoints on the [Nuxeo API Playground](http://nuxeo.github.io/api-playground/).
 
-<a name="document"></a>
 
 ## document
 
@@ -324,7 +323,7 @@ A PUT request is even simpler : you only need to send the entity type and the me
 }
 ```
 
-{{/panel}}{{! /multiexcerpt}}<a name="directoryEntry"></a>
+{{/panel}}{{! /multiexcerpt}}
 
 ## directoryEntry
 
@@ -344,8 +343,6 @@ A PUT request is even simpler : you only need to send the entity type and the me
 The list of properties depends on the schema of the directory. See the [developer documentation]({{page page='data-lists-and-directories'}}) for more information.
 
 [Directories are documented]({{page page='data-lists-and-directories'}}) in the developer section. To create a new vocabulary (a directory specialized for combo boxes component), you can use [the vocabulary feature of Nuxeo Studio]({{page page='how-to-add-a-new-vocabulary'}}).
-
-<a name="directoryEntries"></a>
 
 ## directoryEntries
 
@@ -384,8 +381,6 @@ The list of properties depends on the schema of the directory. See the [develope
 }
 ```
 
-<a name="group"></a>
-
 ## group
 
 ```js
@@ -397,8 +392,6 @@ The list of properties depends on the schema of the directory. See the [develope
   "memberGroups": []
 }
 ```
-
-<a name="user"></a>
 
 ## user
 
@@ -460,8 +453,6 @@ The list of properties depends on the schema of the directory. See the [develope
 
 *   **extendedGroups**: this section gathers the explicit groups and the computed groups (See an [exemple of using the computed groups]({{page page='how-to-implement-local-groups-or-roles-using-computed-groups'}})). This section is computed server-side and is not taken into account when posting a user object.
 
-<a name="acl"></a>
-
 ## acl
 
 {{#> panel type='code' heading='GET Request Response '}}
@@ -502,7 +493,7 @@ The list of properties depends on the schema of the directory. See the [develope
 }
 ```
 
-{{/panel}}<a name="workflow"></a>
+{{/panel}}
 
 ## workflow
 
@@ -557,7 +548,7 @@ When doing a POST request to start a workflow, you only need to specify a few el
 }
 ```
 
-{{/panel}}<a name="task"></a>
+{{/panel}}
 
 ## task
 

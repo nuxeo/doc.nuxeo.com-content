@@ -535,7 +535,7 @@ The tables below use the following notation:
     </td>
     <td>&#10003;</td>
     <td>&#10003;<br/>&#10003;</td>
-    <td>V1.0<br/>&#10003;</td>
+    <td>V2.0<br/>&#10003;</td>
     <td colspan="1">
     [Document modification user documentation]({{page space='userdoc' page='editing-content'}})<br/>
     [How to Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})<br/>
@@ -600,7 +600,7 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Tree Snapshot](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot)</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>v2.0</td>
+    <td>V2.0</td>
     <td></td>
 </tr>
 <tr>
@@ -714,10 +714,10 @@ The tables below use the following notation:
 </tr>
 <tr>
     <td colspan="1">Approval workflow</td>
-    <td colspan="1">Nuxeo JSF UI</td>
+    <td colspan="1">Default distribution</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>V1.0</td>
+    <td>&#10003;</td>
     <td colspan="1">
     [User documentation]({{page space='userdoc' page='workflows'}})<br/>
     [Developer documentation]({{page page='workflow'}})<br/>
@@ -726,15 +726,14 @@ The tables below use the following notation:
 </tr>
 <tr>
     <td colspan="1">Parallel workflow</td>
-    <td colspan="1">Nuxeo JSF UI</td>
+    <td colspan="1">Default distribution</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>V1.0</td>
+    <td>&#10003;</td>
     <td colspan="1">
     [User documentation]({{page space='userdoc' page='workflows'}})<br/>
     [Developer documentation]({{page page='workflow'}})<br/>
     [Workflow How-To Index]({{page page='workflow-how-to-index'}})<br/>
-    Web UI: Approval and Parallel workflow may evolve.
     </td>
 </tr>
 <tr>
@@ -961,6 +960,14 @@ The tables below use the following notation:
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
+  <td>Search highlights</td>
+  <td>Nuxeo Web UI</td>
+  <td>&#10003;</td>
+  <td>N/A</td>
+  <td>&#10003;</td>
+  <td></td>
+</tr>
+<tr>
     <td colspan="1">Asset-dedicated search</td>
     <td colspan="1">[Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)</td>
     <td>&#10003;</td>
@@ -1082,7 +1089,7 @@ The tables below use the following notation:
     <td>[Nuxeo Multi-tenant](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>v2.0</td>
+    <td>V2.0</td>
     <td>[Nuxeo Multi-tenant documentation]({{page version='' space='userdoc' page='nuxeo-multi-tenant'}})</td>
 </tr>
 </tbody>
@@ -1182,7 +1189,7 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo DAM](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>N/A</td>
+    <td>&#10003;</td>
     <td>[Nuxeo DAM documentation]({{page version='' space='nxdoc' page='digital-asset-management-dam'}})</td>
 </tr>
 <tr>

@@ -21,7 +21,7 @@ confluence:
     shortlink: AYxH
     shortlink_source: 'https://doc.nuxeo.com/x/AYxH'
     source_link: /display/NXDOC/Connecting+Nuxeo+to+the+Database
-tree_item_index: 700
+tree_item_index: 800
 version_override:
     'LTS 2015': 710/admindoc/connecting-nuxeo-to-the-database
     '6.0': 60/admindoc/connecting-nuxeo-to-the-database

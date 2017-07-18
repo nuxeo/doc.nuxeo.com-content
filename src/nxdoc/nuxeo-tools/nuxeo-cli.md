@@ -78,7 +78,7 @@ $ nuxeo hotreload
 
 ### Studio
 
-Connect your Studio project to your bundle dependencies to be able to add it directly in your package or testing that everyhting is working well together.
+Connect your Studio project to your bundle dependencies to be able to add it directly in your package or testing that everything is working well together.
 
 ```bash
 $ nuxeo studio
@@ -275,6 +275,12 @@ Discover a ready-to-use Nuxeo Project to help you understand tricky components l
 ```bash
 $ nuxeo sample
 ```
+
+{{#> callout type='info' heading='Learn more'}}
+
+*   [Nuxeo Dev Tools course from Nuxeo University](https://university.nuxeo.com/store/199348-nuxeo-dev-tools)
+
+{{/callout}}
 
 * * *
 

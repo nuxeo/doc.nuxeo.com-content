@@ -8,7 +8,8 @@ default:
             -
                 space_path: userdoc
                 space_name: Nuxeo Platform User Documentation
-
+        branch: master
+        dev_browser_path: nxdoc
         versions:
             -
                 label: FT
@@ -22,9 +23,5 @@ default:
             -
                 label: '6.0'
                 url_path: '60'
-            -
-                label: '5.8'
-                url_path: '58'
-
 development:
     isDev: true

@@ -179,7 +179,7 @@ The following metrics should be considered when qualifying a performance issue.
 
 You can find more information about monitoring Nuxeo in the [Nuxeo Metrics page]({{page page='metrics-and-monitoring'}}).
 
-For simple and automatic GC (garbage collection in the JVM) monitoring, see the [Monitoring Page]({{page space='ADMINDOC' page='Monitoring and+Maintenance?src=search#MonitoringandMaintenance-JVMGarbageCollector'}}).
+For simple and automatic GC (garbage collection in the JVM) monitoring, see the [Monitoring Page]({{page version='' space='nxdoc' page='reporting-problems'}}#jvm-garbage-collector).
 
 ### Architecture
 
@@ -223,9 +223,13 @@ In general the rule-of-thumb is that for each running Tomcat HTTP thread:
 *   You will need one connection from VCS to access the repository;
 *   You may need one connection from the generic pool to access an other datasource.
 
-This means that for a typical configuration, you will have: `maxThreads = nuxeo.vcs.max-pool-size = nuxeo.db.max-pool-size`.
+This means that for a typical configuration, you will have: `maxThreads = nuxeo.vcs.max-pool-size`.
 
-If you are using Nuxeo in cluster mode you must ensure that: `(nuxeo.vcs.max-pool-size + nuxeo.db.max-pool-size)*number_of_nodes <= Maximum concurrent connections and transactions for the DB server`.
+- If you are not using Nuxeo in cluster mode you must ensure that: `nuxeo.vcs.max-pool-size + 1 (lock management) < nuxeo.db.max-pool-size`.
+
+- If you are using Nuxeo in cluster mode you must ensure that: `nuxeo.vcs.max-pool-size + 1 (cluster connection) + 1 (lock management) < nuxeo.db.max-pool-size`.
+
+Usually `nuxeo.db.max-pool-size` is set to `nuxeo.vcs.max-pool-size` + 10% to handle any thread requesting a DB connection but not a VCS connection (VCS is used to manipulate the repository).
 
 Failure to set the DB server's in-bound connections to a large enough number to accommodate all possible connections from all running Nuxeo nodes, can create a bottleneck and severely impact performance.
 
@@ -241,8 +245,7 @@ You may very well have at some point more requests than available threads: that'
 
 When the database connection pool size is too high, you can end up in a situation where the database cannot provide anymore connections or transactions. In this case you will start having JDBC errors coming from the pools saying that transaction or connection was refused by the server.
 
-**Pool Starvation
-**
+**Pool Starvation**
 
 When the HTTP thread pool size is too large in proportion to the database connection pool, you can end up in a situation where HTTP requests:
 

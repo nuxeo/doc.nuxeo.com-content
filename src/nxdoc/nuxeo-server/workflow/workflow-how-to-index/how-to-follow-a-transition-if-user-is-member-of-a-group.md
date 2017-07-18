@@ -89,7 +89,7 @@ Fn.getPrincipal(workflowInitiator).isMemberOf("managers")
 
 ```
 
-This expression will be true if the workflowInitiator is a member of the managers group. Replace the group by the one you need and "workflowInitiator" by any other user you would need. If you need to filter on the current user, you can use `CurrentUser.originatingUser` as stated in the page [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}}).
+This expression will be true if the workflowInitiator is a member of the managers group. Replace the group by the one you need and "workflowInitiator" by any other user you would need. If you need to filter on the current user, you can use `CurrentUser.getActingUser()` as stated in the page [Variables Available in the Automation Context]({{page page='variables-available-in-the-automation-context'}}).
 
 
 * * *

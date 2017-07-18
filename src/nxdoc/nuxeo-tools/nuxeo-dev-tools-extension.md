@@ -3,7 +3,7 @@ title: Nuxeo Dev Tools Extension
 description: The Nuxeo Dev Tools extension places some of the more commonly performed actions in the Nuxeo Platform at the administrator's fingertips in a convenient browser popup window.
 
 review:
-    date: '2016-12-02'
+    date: '2017-06-27'
     status: ok
     comment: ''
 labels:
@@ -55,6 +55,11 @@ Features include:
 * One-click JSON export of document in current active tab
     ![JSON Export of a document using the Nuxeo Dev Tools extension]({{file name='nuxeo-dev-tools-extension-json-export.png'}} ?w=600,border=true)
 
+{{#> callout type='info' heading='Learn more'}}
+
+*   [Nuxeo Dev Tools course from Nuxeo University](https://university.nuxeo.com/store/199348-nuxeo-dev-tools)
+
+{{/callout}}
 
 ## Limitations
 
@@ -62,3 +67,11 @@ Features include:
 * The extension is only active when a Nuxeo instance in the current active tab.
 * The Hot Reload and Go To Studio buttons are only active when a Studio project is associated with the current Nuxeo server.
 * [CORS config]({{page page='cross-origin-resource-sharing-cors'}}) must be activated in your Nuxeo server to connect to your repository on API Playground.
+
+## Roadmap
+
+Planned improvements for the browser extension:
+
+
+<iframe src="https://ext.prodpad.com/ext/roadmap/3cb7ad79a0f9fce3382633f486d40cfa15430ece" height="210" width="100%"></iframe>
+{{{multiexcerpt 'ProdpadFeedback' page='generic-multi-excerpts'}}}

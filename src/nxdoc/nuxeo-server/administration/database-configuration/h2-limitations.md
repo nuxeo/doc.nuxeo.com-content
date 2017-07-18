@@ -20,7 +20,7 @@ confluence:
     shortlink: NoCe
     shortlink_source: 'https://doc.nuxeo.com/x/NoCe'
     source_link: /display/NXDOC/H2+Limitations
-tree_item_index: 800
+tree_item_index: 900
 version_override:
     'LTS 2015': 710/admindoc/h2-limitations
     '6.0': 60/admindoc/h2-limitations

@@ -309,3 +309,9 @@ Components deployment is linear, so if you want to override an existing configur
        </extension>
     </component>
     ```
+
+    {{#> callout type='info' heading='Learn more'}}
+
+    *   [Handling Service Extension Points from Nuxeo University](https://university.nuxeo.com/store/167395-handling-service-extension-points)
+
+    {{/callout}}

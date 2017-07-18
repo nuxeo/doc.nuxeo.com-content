@@ -14,10 +14,9 @@ To be able to synchronize folders on your computer, you need to install the Nuxe
 We provide OS-specific installers for Mac OS X and Windows, available from the Nuxeo Drive tab of the Home.
 For Linux, you need a PyQt4 with WebKit support.
 
-### Known Working Configurations for OS
-*   Windows:  Windows 7, 8, 8.1 and 10 - 32b and 64b
-*   Mac OS: starting from the version 10.8 (Mountain Lion)
+### Support
 
+See this up-to-date [support page](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/support.md) to know what OS vendor and version we are supporting; but also the Python version we are currently using.
 
 ## Installation
 
@@ -33,9 +32,9 @@ After Nuxeo Drive has been installed on the server, a Nuxeo Drive tab in the use
 
 If you try to synchronize a folder and you haven't installed the Nuxeo Drive client yet or haven't provided your credentials to the Nuxeo Drive client, you are automatically directed to the Nuxeo Drive home tab to install it.
 
-#### Installing Nuxeo Drive on Mac OS X
+#### Installing Nuxeo Drive on macOS
 
-1.  Download the installer (.dmg file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](http://community.nuxeo.com/static/drive/latest/nuxeo-drive.dmg).
+1.  Download the installer (`.dmg` file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](http://community.nuxeo.com/static/drive/latest/nuxeo-drive.dmg).
 2.  Run the installer: drag and drop the Nuxeo Drive icon in the Applications directory.
     ![]({{file name='Drive-dmg-installer.png' page='nuxeo-drive'}} ?w=400,border=true)
     Nuxeo Drive is now installed on your computer.
@@ -44,7 +43,7 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 
 #### Installing Nuxeo Drive on Windows
 
-1.  Download the Windows installer (.msi file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](http://community.nuxeo.com/static/drive/latest/nuxeo-drive.msi).
+1.  Download the Windows installer (`.msi` file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](http://community.nuxeo.com/static/drive/latest/nuxeo-drive.msi).
 2.  Run the installer: indicate where Nuxeo Drive should be installed (typically `C:\Program Files (x86)`) and click **Next** until the installation process is done.
     Nuxeo Drive is now installed on your computer.
 
@@ -56,7 +55,7 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 3.  You now need to [start Nuxeo Drive](#starting-nuxeo-drive) to use it.
     A new Nuxeo Drive folder will be created by the system in your local Documents folder (`C:\Users\USER\Documents\`). This is the place where synchronized documents will be stored on your computer.
 
-#### Installing Nuxeo Drive on Ubuntu/Debian (and Other Linux Variants)
+#### Installing Nuxeo Drive on Ubuntu/Debian (and Other GNU/Linux Variants)
 
 The .deb package of the client is not yet available. In the mean time you can manually install the development version. Has been reported to work on: Ubuntu >= 12.04.
 
@@ -68,9 +67,9 @@ To Install Nuxeo Drive on your Linux computer:
 
     First note that Nuxeo Drive uses Extended file attributes through the [xattr](https://pypi.python.org/pypi/xattr/) Python wrapper.
 
-    On **FreeBSD**, and **Mac OS X**, xattrs are enabled in the default kernel.
+    On **FreeBSD**, and **macOS**, xattrs are enabled in the default kernel.
 
-    On **Linux**, depending on the distribution, you _may_ need a special mount option (user_xattr) to enable them for a given file system.
+    On **GNU/Linux**, depending on the distribution, you _may_ need a special mount option (`user_xattr`) to enable them for a given file system.
     
     Check your current mount, e.g.:
     ```
@@ -83,9 +82,9 @@ To Install Nuxeo Drive on your Linux computer:
     sudo mount -oremount,user_xattr /dev/sda3
     ```
 
-2. **Python 2.7 or higher**
+2. **Python 2.7**
 
-    Nuxeo Drive uses some packages, which are only compatible from python **version 2.7**. If this excludes using the standard python installation of certain OS distributions, you may still install python 2.7 (or higher) [manually from the download pages]( https://www.python.org/downloads/) on your system. However, this may break other tools in your environment, who need to be consistent with the default python packages. Using [Anaconda](http://continuum.io/downloads) to switch between different python installs/environments may help in this case.
+    Nuxeo Drive uses some packages, which are only compatible from python **version 2.7**. If this excludes using the standard python installation of certain OS distributions, you may still install python 2.7 [manually from the download pages]( https://www.python.org/downloads/) on your system. However, this may break other tools in your environment, who need to be consistent with the default python packages. Using [Anaconda](http://continuum.io/downloads) to switch between different python installs/environments may help in this case.
 
 3. **pip**
 
@@ -93,12 +92,6 @@ To Install Nuxeo Drive on your Linux computer:
   ```
   sudo pip install -U pip
   ```
-4. **cffi**
-
-    Make sure that the latest version of [cffi](https://pypi.python.org/pypi/cffi) is installed.
-    ```
-    sudo pip install -U cffi
-    ```
 
 **Installation**
 
@@ -116,10 +109,17 @@ To Install Nuxeo Drive on your Linux computer:
   Then finally install the Nuxeo Drive requirements and Nuxeo Drive itself. These are common installation actions, not depending on the package manager.
   (warning: define the version you want in the DRIVE_VERSION variable, ex: `release-2.1.113` - [Find the Nuxeo Drive tags list here](https://github.com/nuxeo/nuxeo-drive/tags)):
   ```
+  # For Drive < 2.2.227:
   DRIVE_VERSION=release-2.1.113
-  sudo pip install -U -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements.txt
-  sudo pip install -U -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/unix-requirements.txt
-  sudo pip install -U git+https://github.com/nuxeo/nuxeo-drive.git@$DRIVE_VERSION
+  pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements.txt
+  pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/unix-requirements.txt
+  pip install git+https://github.com/nuxeo/nuxeo-drive.git@$DRIVE_VERSION
+
+  # For Drive >= 2.2.227:
+  DRIVE_VERSION=release-2.2.323
+  pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements.txt
+  pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements-unix.txt
+  pip install git+https://github.com/nuxeo/nuxeo-drive.git@$DRIVE_VERSION
   ```
 
 2. For now, the systray icon is not visible under Unity desktop. As a consequence, the configuration window only appears at the first launch. If you want to change it, issue the following commands:
@@ -173,7 +173,7 @@ After you installed Nuxeo Drive, you need to start it manually.
 
 Start Nuxeo Drive like any other application:
 
-*   On Mac OS X, Nuxeo Drive is in the Applications directory.
+*   On macOS, Nuxeo Drive is in the Applications directory.
 
     {{#> callout type='note' }}
 
@@ -204,6 +204,7 @@ Upgrading from Nuxeo Drive 1.3 to Nuxeo Drive 2 is transparent: Click on the ico
 {{/callout}}
 
 ## Limitation
+
 Citrix environments are not supported.
 
 ## Configuration
@@ -218,7 +219,7 @@ Citrix environments are not supported.
 2.  Click on the icon ![]({{file name='drive-settings-icon.png' page='nuxeo-drive'}}) and on the **Settings** menu item.
     The Settings window is displayed.
 
-**On Mac OS X / Linux**
+**On macOS / GNU/Linux**
 
 1.  Click on the the icon ![]({{file name='drive_online.png' page='nuxeo-drive'}}) in the systray.
 2.  Click on the icon ![]({{file name='drive-settings-icon.png' page='nuxeo-drive'}}) and on the **Settings** menu item.
@@ -426,7 +427,7 @@ To uninstall Nuxeo Drive from your computer, you need to remove the following it
 *   The Nuxeo Drive client application
 *   The Nuxeo Drive local folder, **only if you want to get rid of all the synchronized files and folders**.
 
-### Uninstalling Nuxeo Drive on Mac OS X
+### Uninstalling Nuxeo Drive on macOS
 
 To uninstall Nuxeo Drive:
 
@@ -474,7 +475,7 @@ At this point you have uninstalled the Nuxeo Drive program and its configuration
 
 {{/callout}}
 
-### Uninstalling Nuxeo Drive on Linux
+### Uninstalling Nuxeo Drive on GNU/Linux
 
 To uninstall Nuxeo Drive:
 

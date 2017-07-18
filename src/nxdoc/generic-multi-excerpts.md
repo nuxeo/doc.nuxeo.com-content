@@ -96,6 +96,10 @@ This addon is deprecated since Nuxeo Platform LTS 2016.
 This addon requires no specific installation steps. It can be installed like any other package with [nuxeoctl command line]({{page page='installing-a-new-package-on-your-instance'}}#installing-a-package-using-the-nuxeoctl-script) or [from the Update Center]({{page page='installing-a-new-package-on-your-instance'}}#installing-a-package-from-the-admin-tab).
 {{! /multiexcerpt}}
 
+{{! multiexcerpt name='ProdpadFeedback'}}
+You can also give us your feedback and suggestions through our [feedback portal](https://portal.prodpad.com/25470).
+{{! /multiexcerpt}}
+
 &nbsp;
 
 &nbsp;

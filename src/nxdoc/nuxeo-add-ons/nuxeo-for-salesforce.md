@@ -2,7 +2,7 @@
 title: Nuxeo for Salesforce
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-07-11'
     status: ok
 labels:
     - lts2016-ok
@@ -282,6 +282,7 @@ Although the Canvas app can be displayed within this new environment, it will st
 
 ### Nuxeo Platform Configuration
 
+<!--
 1.  Authorize the framing of your Nuxeo server inside Salesforce.
     Since Nuxeo 8.3, for clickjacking protection the framing is restricted. To unrestrict it, [create a new XML extension]({{page page='how-to-contribute-to-an-extension'}}) containing:
 
@@ -292,6 +293,13 @@ Although the Canvas app can be displayed within this new environment, it will st
       <header name="X-Frame-Options" enabled="false"/>
       </extension>
     ```
+-->
+
+1.  To authorize the framing of your Nuxeo server inside Salesforce, edit your `nuxeo.conf` file by adding the following line (no value expected):
+
+```
+nuxeo.frame.options =
+```
 
 2.  Set up the HTTPS configuration.
     Salesforce requires the Nuxeo server to be accessed through HTTPS. Follow this&nbsp;[documentation]({{page page='http-and-https-reverse-proxy-configuration'}})&nbsp;to configure your reverse proxy for production purpose. For a dev or test environment, you can configure your Nuxeo server in HTTPS directly with the following configuration parameters example:
@@ -473,7 +481,7 @@ function getProperties(doc, sfobject){
 }
 ```
 
-{{/panel}} {{#> callout type='warning' heading='Studio'}}
+{{/panel}} {{#> callout type='tip' heading='Customization with Nuxeo Studio'}}
 
 Those two operations can be overriden inside a Nuxeo Studio project easily by creating two operations for instance: `SFGetChildren` and `FetchSFObject`.
 
@@ -517,7 +525,7 @@ function run(input, params) {
 }
 ```
 
-{{/panel}} {{#> callout type='warning' heading='Studio'}}
+{{/panel}} {{#> callout type='tip' heading='Customization with Nuxeo Studio'}}
 
 Those two operations can be overriden inside a Nuxeo Studio project easily by creating two operations for instance: `SFGetChildren` and `FetchSFObject`.
 

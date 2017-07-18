@@ -19,7 +19,7 @@ confluence:
     shortlink: 4YTjAQ
     shortlink_source: 'https://doc.nuxeo.com/x/4YTjAQ'
     source_link: /display/NXDOC/MarkLogic
-tree_item_index: 600
+tree_item_index: 700
 history:
     -
         author: Solen Guitter

@@ -35,7 +35,7 @@ Once you are all set, you can navigate to Nuxeo Studio to start creating your se
 
 ## Create a Page Provider
 
-The first step is to create a [page provider]({{page page='page-provider' space='studio'}}) in Nuxeo Studio.
+The first step is to create a [page provider]({{page version='' space='studio' page='page-providers'}}) in Nuxeo Studio.
 
 In **Customization**, go to **Page Providers**, click on **New** and name it `Search`.
 
@@ -91,7 +91,7 @@ Click on **Customize**, two layouts are available. Let's edit the **Form** layou
 
 1. Click on **Form**, then **Customize**.
     The form layout is now displayed in bold with an asterisk next to it. On the right, in the properties catalog, the elements that we defined in Studio are displayed here.
-2. Expand the first element and drag'n'drop the **View** mode into the editor.
+2. Expand the first element and drag'n'drop the **Edit** mode into the editor.
   Do the same for the three other elements.
 4. Click on the **Full text** one, on the right you can edit the label to display `Full text`.
 

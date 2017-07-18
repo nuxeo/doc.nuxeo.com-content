@@ -21,7 +21,7 @@ confluence:
     shortlink: hYPjAQ
     shortlink_source: 'https://doc.nuxeo.com/x/hYPjAQ'
     source_link: /display/NXDOC/Nuxeo+Elements
-tree_item_index: 200
+tree_item_index: 300
 history:
     -
         author: Manon Lumeau
@@ -35,7 +35,6 @@ history:
         version: '1'
 
 ---
-
 **Nuxeo Elements** is a set of libraries of web components leveraging emerging Web standards, built upon the same goals
 of simplicity and pluggability. Although still a work in progress, Nuxeo Elements already provides the means to build custom
 content-centric front-end applications, while taking full advantage of the technologies under the Web Components umbrella.
@@ -65,22 +64,22 @@ This element uses a "conceptual singleton" (MonoState Pattern) so once it's conf
 attributes, all the other elements just need to use `<nuxeo-connection/>` to retrieve this "shared" instance. Since this
 is a singleton, we ensure there's only one Nuxeo client shared by all the instances of our element.
 
-There are three libraries covered by the Nuxeo Elements family, which can be explored in the [Nuxeo Elements Catalog](https://elements.nuxeo.com/).
+There are three libraries covered by the Nuxeo Elements family, which can be explored in the [Nuxeo Elements Catalog](https://www.webcomponents.org/author/nuxeo).
 These are:
 
-- [Nuxeo (Core) Elements](https://elements.nuxeo.com/browse?package=nuxeo-elements) ([GitHub](https://github.com/nuxeo/nuxeo-elements)):
-  a library of core data elements that allows connecting to the server and enables CRUD on Nuxeo resources and the execution
+- [Nuxeo (Core) Elements](https://www.webcomponents.org/element/nuxeo/nuxeo-elements) ([GitHub](https://github.com/nuxeo/nuxeo-elements)):
+  A library of core data elements that allows connecting to the server and enables CRUD on Nuxeo resources and the execution
   of operations and queries using page providers. You can install it with bower:
   ```
   $ bower install --save nuxeo/nuxeo-elements
   ```
-- [Nuxeo UI Elements](https://elements.nuxeo.com/browse?package=nuxeo-ui-elements) ([GitHub](https://github.com/nuxeo/nuxeo-ui-elements)):
-  provides elements for displaying data and interacting with the user. It can be installed with bower:
+- [Nuxeo UI Elements](https://www.webcomponents.org/element/nuxeo/nuxeo-ui-elements) ([GitHub](https://github.com/nuxeo/nuxeo-ui-elements)):
+  Provides elements for displaying data and interacting with the user. It can be installed with bower:
   ```
   $ bower install --save nuxeo/nuxeo-ui-elements
   ```
-- {{> anchor 'nuxeo-dataviz-elements'}}[Nuxeo Dataviz Elements](https://elements.nuxeo.com/browse?package=nuxeo-dataviz-elements) ([github](https://github.com/nuxeo/nuxeo-dataviz-elements)):
-  a library of data visualization elements targeted at building rich dashboards. It can be installed with bower:
+- {{> anchor 'nuxeo-dataviz-elements'}}[Nuxeo Dataviz Elements](https://www.webcomponents.org/element/nuxeo/nuxeo-dataviz-elements) ([github](https://github.com/nuxeo/nuxeo-dataviz-elements)):
+  A library of data visualization elements targeted at building rich dashboards. It can be installed with bower:
   ```
   $ bower install --save nuxeo/nuxeo-dataviz-elements
   ```

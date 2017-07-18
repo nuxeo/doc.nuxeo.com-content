@@ -39,20 +39,26 @@ Once you are all set, you can navigate to the View Designer application to custo
 ### Create a New Layout
 
 1. Go on the **Layout** tab on the left menu
-2. Under **Local Types** you will find your Contract document type
-3. Five layouts are available for the customization, let's start with the **Create** layout, click on the **CUSTOMIZE** button in the editor.
+1. Under **Local Types** you will find your Contract document type
+1. Five layouts are available for the customization, let's start with the **Create** layout, click on the **CUSTOMIZE** button in the editor.
   {{#> callout type='tip' }}
-  It automatically creates the nuxeo-contract-create-layout.html file, scaffolding
+  It automatically creates the nuxeo-contract-create-layout.html file, scaffolding:
     - The title and description fields
     - Every custom schema property linked to the document type
   {{/callout}}
-4. In the catalog properties on the left, select **File > content:blob > view** and drag'n'drop the element in the main view.
-5. Click on Save.
+1. In the catalog properties on the left, select **File > content:blob > view** and drag and drop the element in the main view.
+1. Click on Save.
+  {{#> callout type='note' }}
+  When customizing a document type, you need to create all layouts in the View Designer in order to display the relevant properties.
+  {{/callout}}
+1. Click on the **Edit** layout and then on the **CUSTOMIZE** button.
+1. Modify and/or delete fields as you wish them to be displayed when editing your document and click on **Save**.
+1. Do the same two last steps with the **Metadata** and **View** layouts and don't forget to save.<br/>
   You now have an upload button on your document layout.
-6. At the top right-hand corner of the View Designer, switch the editor to code editor.
-    You are now in the HTML mode of the View Designer and you can see the element that you just drag'n'droped on the other editor.
-7. Find the description's element and delete it.
-8. Click on Save to keep your changes.
+1. At the top right-hand corner of the View Designer, switch the editor to code editor.
+    You are now in the HTML mode of the View Designer and you can see the element that you just drag and droped on the other editor.
+1. Find the description's element and delete it.
+1. Click on Save to keep your changes.
 
 You should end up with something like this:
 ![]({{file name='main-view-contract-vd.png'}} ?w=350,border=true)
@@ -69,10 +75,10 @@ You now have a document type ready to be used on your Web UI interface, the last
 ### Create a Document Type Icon
 To do so, you need to go on the **Resources** tab
 1. Click on the **UI** folder
-2. Click on the **Create** button, select a folder and name it **Images**
+2. Click on the **Create** button, select a folder and name it **images**
 3. In this **Images** folder, create a `doctypes`folder.
 4. In the **doctypes** click on the **Upload** button and select your image. <br/>
-  You have to respect the following folder structure, and name the icon as your document type in order to display the icon.
+  You have to respect the following folder structure, and name the icon as your document type in lowercase in order to display the icon.
   ![]({{file name='tree-structure-icon-contract.png'}} ?w=200,border=true)
   {{#> callout type='warning' }}
   Your image needs to be in .svg format.
@@ -219,6 +225,12 @@ window.nuxeo.importBlacklist = [
 {{#> callout type='warning' }}
 The customization of document creation in Web UI is subject to change in the upcoming versions.
 {{/callout}}
+
+{{#> callout type='info' heading='Learn more'}}
+
+*   [Document and Workflow Task Layouts with Nuxeo Studio Designer course from Nuxeo University](https://university.nuxeo.com/store/187249-document-and-workflow-task-layouts-with-nuxeo-studio-designer)
+
+{{/callout}}  
 
 * * *
 
