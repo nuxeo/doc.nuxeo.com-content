@@ -85,7 +85,7 @@ About the Web UI structure:
   * {documentType} is the document type i.e. *Folder*, *Note*, *Note*, etc.
   * {mode} is the layout mode i.e. *Create*, *View* , *Edit*, *Import*, etc.
   See the [layout elements]({{page page='web-ui-layouts'}}) documentation for further details.
-- the `i18n` directory provides internationalization files to translate Web UI labels (See the [managing translation]({{page version=' space='nxdoc' page='web-ui-managing-translations'}}) documentation).
+- the `i18n` directory provides internationalization files to translate Web UI labels (See the [managing translation]({{page version='' space='nxdoc' page='web-ui-managing-translations'}}) documentation).
 - the `workflow` directory providers the layout elements to complete workflow tasks.  See the [workflow tasks]({{page version='' space='nxdoc' page='web-ui-workflow-tasks'}}) documentation for further details.
 
 ## How to Deploy Additional Web UI Resources{{> anchor 'deploy_or_override'}}
