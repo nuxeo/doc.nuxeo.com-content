@@ -22,7 +22,7 @@ tree_item_index: 1100
 
 ---
 
-Nuxeo Web UI supports element internationalization. Every element that displays text to the user must extend the [I18nBehavior](https://github.com/nuxeo/nuxeo-ui-elements/blob/1.0/nuxeo-i18n-behavior.html, which provides the `i18n` method to dynamically load labels according to the current locale.
+Nuxeo Web UI supports element internationalization. Every element that displays text to the user must extend the [I18nBehavior](https://github.com/nuxeo/nuxeo-ui-elements/blob/1.0/nuxeo-i18n-behavior.html), which provides the `i18n` method to dynamically load labels according to the current locale.
 
 ```xml
 <span>[[i18n('label.app.usersAndGroups')]]</span>
