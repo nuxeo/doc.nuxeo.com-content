@@ -9,6 +9,8 @@ labels:
     - concepts
     - excerpt
 toc: true
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '950287'
     ajs-parent-page-title: Content Repository

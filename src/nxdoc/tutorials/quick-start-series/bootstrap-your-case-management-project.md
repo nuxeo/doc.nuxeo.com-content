@@ -4,6 +4,8 @@ review:
     comment: 'Will need to be reviewed again when Web UI 1.0 is mainstream'
     date: '2016-02-01'
     status: ok
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
     - lts2016-ok
     - bootstrap

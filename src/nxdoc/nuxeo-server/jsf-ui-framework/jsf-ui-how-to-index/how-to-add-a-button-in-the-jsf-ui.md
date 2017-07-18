@@ -14,6 +14,8 @@ details:
         level: Beginner
         tool: 'Studio, XML extension'
         topics: 'Automation, Extension, Tab, User action, JSF UI'
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
     - content-review-lts2016
     - howto

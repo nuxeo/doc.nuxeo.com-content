@@ -10,6 +10,8 @@ labels:
     - mongodb
     - mongodb-component
 toc: true
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '3342340'
     ajs-parent-page-title: Database Configuration

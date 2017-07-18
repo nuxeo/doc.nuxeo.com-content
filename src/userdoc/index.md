@@ -5,6 +5,8 @@ review:
     date: '2017-01-25'
     status: ok
 is_overview: true
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''

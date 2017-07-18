@@ -9,6 +9,8 @@ labels:
     - last-review-20150128
     - home
 is_overview: true
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '7209076'
     ajs-parent-page-title: Tutorials
