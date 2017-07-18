@@ -67,4 +67,4 @@ For instance, [nuxeo-document-tree.html](https://github.com/nuxeo/nuxeo-web-ui/b
 
 Another example use case of the routing mechanism are:
  - the [USER_MENU]({{page page='web-ui-slots#user_menu'}}) slot
- - when [adding a new search]({{page page='web-ui-search'}})
+ - when [adding a new search]({{page version='' space='nxdoc' page='web-ui-search'}})
