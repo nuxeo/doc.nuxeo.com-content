@@ -309,13 +309,32 @@ See [NXP-21676](https://jira.nuxeo.com/browse/NXP-21676).
 
 #### Directories
 
+##### SQL Directories
+
+{{! multiexcerpt name='upgrade-9.2-sql-template-required'}}
+
+If you did not use an explicit SQL configuration template (`postgresql`, `mssql`, `mysql` or `mariadb`), you must add the new `sql` template in your nuxeo.conf, in addition to the `default` template. You should at least have:
+
+```
+nuxeo.templates=default,sql
+```
+
+{{! /multiexcerpt}}
+
+##### MongoDB Directories
+
 {{! multiexcerpt name='upgrade-9.2-new.directories.mongodb'}}
 
-Directories are now stored in MongoDB when enabling the `mongodb` template. See [NXP-21582](https://jira.nuxeo.com/browse/NXP-21582).
+Directories are now stored in MongoDB when enabling the `mongodb` template. You don't need to install the addon [Nuxeo MongoDB Audit and Directories](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mongodb-ext) anymore, which is only needed for Audit now. See [NXP-21582](https://jira.nuxeo.com/browse/NXP-21582).
 
-With `mongodb` template enabled, if you contribute directories to `org.nuxeo.ecm.directory.sql.SQLDirectoryFactory`, you must use `org.nuxeo.ecm.directory.GenericDirectory` instead. See [NXP-19175](https://jira.nuxeo.com/browse/NXP-19175).
+**Migrating your directories to MongoDB**
 
-If you want to keep some directories outside MongoDB, you have to also deploy `sql` template.
+To migrate your custom directories to MongoDB, enable the `mongodb` template and use the extension point `org.nuxeo.ecm.directory.GenericDirectory` instead of `org.nuxeo.ecm.directory.sql.SQLDirectoryFactory`. See [NXP-19175](https://jira.nuxeo.com/browse/NXP-19175).
+
+**Using MongoDB with SQL directories**
+
+If you want to keep your custom SQL directories, contribute them to the extension point `org.nuxeo.ecm.directory.sql.SQLDirectoryFactory`.
+
 {{! /multiexcerpt}}
 
 ### Code Changes
