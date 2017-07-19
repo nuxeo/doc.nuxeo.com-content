@@ -37,48 +37,12 @@ DOWNLOAD AND REGISTER THE NUXEO PLATFORM
 
 1.  [Download Nuxeo Platform](https://www.nuxeo.com/downloads/) and unzip the archive.
 
-2.  Set the platform to **Dev Mode**: open `NUXEO_HOME/bin/nuxeo.conf` and set `org.nuxeo.dev` to `true`.
-
-3.  Register your instance:
-
-{{#> panel heading='**MAC OS** / **LINUX**'}}
-
-```bash
-$ chmod +x ./bin/nuxeoctl
-$ ./bin/nuxeoctl register
-```
-{{/panel}}
-
-{{#> panel heading='**WINDOWS**'}}
-
-```bash
-> .\bin\nuxeoctl.bat register
-```
-{{/panel}}
-
-Use your **Nuxeo Online Services** credentials and follow the steps. If you don't have a **NOS** account yet, use the command `register-trial` to sign up for your 30-day free trial.
-
-4.  Install any dependencies needed for the tutorial:
-
-{{#> panel heading='**MAC OS** / **LINUX**'}}
-
-```bash
-$ ./bin/nuxeoctl mp-install nuxeo-dam nuxeo-web-ui nuxeo-jsf-ui
-```
-{{/panel}}
-
-{{#> panel heading='**WINDOWS**'}}
-
-```bash
-> .\bin\nuxeoctl.bat nuxeo-dam nuxeo-web-ui nuxeo-jsf-ui
-```
-{{/panel}}
-
-5.  Start Nuxeo Server:
+2.  Start Nuxeo Server:
 
 {{#> panel heading='**MAC OS** / **Linux**'}}
 
 ```bash
+$ chmod +x ./bin/nuxeoctl
 $ ./bin/nuxeoctl console
 ```
 {{/panel}}
@@ -94,9 +58,16 @@ $ ./bin/nuxeoctl console
 
 1.  Open Chrome or Firefox and navigate to [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
 
-2.  Follow the steps in Nuxeo Platform Wizard to complete the installation. You don't need to register or select any more addons. The server will restart at the end.
+2.  Follow the steps in Nuxeo Platform Wizard to complete the installation.
 
-3.  While you're waiting for your server to restart, install [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) for Chrome or Firefox.
+3.  Use your **Nuxeo Online Services** credentials to register your instance. If you don't have a **NOS** account yet, you can sign up for your 30-day free trial through the wizard.
+
+4.  Be sure to select the addons needed for this Tutorial:
+    *  DAM
+    *  JSF UI
+    *  WEB UI
+
+5. The server will restart at the end. While you're waiting for your server to restart, install [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) for Chrome or Firefox.
 
 
 ### Template
@@ -109,17 +80,17 @@ INSTALL THE GETTING STARTED TEMPLATE
 
 3.  Log into Studio with your **NOS** credentials.
 
-4.  Under the **Customization** menu in Studio, select **External Templates** and install the **Nuxeo Training: Getting Started** template.
+4.  Under the **Configuration** menu in Studio, select **External Templates** and install the **Nuxeo Training: Getting Started** template.
 
 5.  From Nuxeo Platform, open [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) again and click the **Hot Reload** button to update your instance with configurations from the template.
 
 6.  Finally, log out of Nuxeo Platform and log back in again. Your Studio tutorial environment is now ready!
 
-### Users & Groups
+### Users and Groups
 
 CREATE SAMPLE USERS
 
-1.  Click on **Administration** ![Administration]({{file space='nxdoc' page='web-ui' name='administration.png'}} ?w=25), then **Users & Groups**.
+1.  Click on **Administration** ![Administration]({{file space='nxdoc' page='web-ui-overview' name='administration.png'}} ?w=25), then **Users & Groups**.
 
 2.  Click on **New** to create two new Users, **Jon Doe** and **Jane Smith**, setting passwords that you'll remember.
 
@@ -131,11 +102,11 @@ CREATE SAMPLE DOCUMENTS
 
 Nuxeo Studio allows you to create your own document types and customize the metadata for each one. Let's take a look at one of the customized document types that we created for this tutorial.
 
-1.  Click on **Browse** ![Browse]({{file space='nxdoc' page='web-ui' name='browse.png'}} ?w=25) and select **Domain** > **Workspaces** in the drawer panel from the side menu.
+1.  Click on **Browse** ![Browse]({{file space='nxdoc' page='web-ui-overview' name='browse.png'}} ?w=25) and select **Domain** > **Workspaces** in the drawer panel from the side menu.
 
-2.  Click on the **Create** ![]({{file version='' space='nxdoc' page='web-ui' name='create_button.png'}} ?w=25) button and create a workspace named **BigCorp**.
+2.  Click on the **Create** ![]({{file version='' space='nxdoc' page='web-ui-overview' name='create_button.png'}} ?w=25) button and create a workspace named **BigCorp**.
 
-3.  Click on ![]({{file version='' space='nxdoc' page='web-ui' name='create_button.png'}} ?w=25) again to create a BC Portfolio with the following metadata:
+3.  Click on ![]({{file version='' space='nxdoc' page='web-ui-overview' name='create_button.png'}} ?w=25) again to create a BC Portfolio with the following metadata:
 
 <div class="table-scroll">
   <table class="hover">
@@ -177,10 +148,10 @@ Nuxeo Studio allows you to create your own document types and customize the meta
 
 4.  On the Permissions tab, give both groups the Read & Write permission on this document.
 
-5.  From within your created portfolio, click ![]({{file version='' space='nxdoc' page='web-ui' name='create_button.png'}} ?w=25) again. You'll notice that the only document we can create in a BC Portfolio is **BC Contract**.
+5.  From within your created portfolio, click ![]({{file version='' space='nxdoc' page='web-ui-overview' name='create_button.png'}} ?w=25) again. You'll notice that the only document we can create in a BC Portfolio is **BC Contract**.
 
 {{#> callout type='tip' }}
-To modify this constraint, under the **Customization** menu in Studio, select **Content Model** > **Document Types** > **BC Portfolio**. You can then add other document types to the **Accepted Children Types** on the **Definition** tab.
+To modify this constraint, under the **Configuration** menu in Studio, select **Content Model** > **Document Types** > **BC Portfolio**. You can then add other document types to the **Accepted Children Types** on the **Definition** tab.
 {{/callout}}
 
 6.  Create a contract with the following metadata:
@@ -220,27 +191,54 @@ To modify this constraint, under the **Customization** menu in Studio, select **
   </table>
 </div>
 
+You should have something that looks like this:
+
+![BC Portfolio with BC Contract]({{file space='nxdoc' page='customizing-with-studio-and-view-designer' name='bcportfolio_with_contract.png'}} ?w=600)
+
+Now we can tinker with our Workflow!
+
 ## Schemas
 
 CONFIGURE A NEW FIELD ON A CUSTOM DOCUMENT
 
-First we'll add a metadatum to our schema to represent the amount to be refunded.
+First we'll need to add a metadatum to our schema to represent the **amount to be refunded**.
 
-1.  In Studio, under the **Customization** menu, select **Content Model** > **Document Types** > **BCContract**, then click on the **Schema** tab.
+1.  In Studio, under the **Configuration** menu, select **Content Model** > **Document Types** > **BCContract**, then click on the **Schema** tab.
 
 2.  Add a new field to the schema: `refundAmount: Floating point`.
 
 {{#> callout type='tip' }}
-This field is directly related to the **BC Contract** document type, but if you want to create more general properties to be shared with other document types you can add them to a separate schema (**Customization** > **Content Model** > **Schemas**), or create your own.
+This field is directly related to the **BC Contract** document type, but if you want to create more general properties to be shared with other document types you can add them to a separate schema (**Configuration** > **Content Model** > **Schemas**), or create your own.
 {{/callout}}
 
 3.  Save your changes and click on the **Open View Designer** button.
 
-4.  Drag and drop the new property from **Catalog** in the right menu to the **nuxeo-bccontract-view-layout** and save.
+4.  Drag and drop the new property from **Catalog** in the right menu to the **nuxeo-bccontract-view-layout**, then save.
 
 {{#> callout type='tip' }}
 Using the code editor ![]({{file version='' space='nxdoc' page='customizing-with-studio-and-view-designer' name='code_editor.png'}} ?w=25), you can drag and drop the property into a Polymer `dom-if` template. The one we've created will only appear in the document view layout if the contract has been cancelled.
 {{/callout}}
+
+
+```html
+<template is="dom-if" if="[[document.properties.bccontract:cancelled]]">
+  <div role="widget">
+    <label>Refund Amount</label>
+    <div>[[document.properties.bccontract:refundAmount]]</div>
+  </div>
+  <div role="widget">
+    <nuxeo-tag class="cancelled">Cancelled</nuxeo-tag>
+  </div>
+  <div role="widget">
+    <label>Cancellation Date</label>
+    <div>[[formatDate(document.properties.bccontract:cancellationDate)]]</div>
+  </div>
+  <div role="widget">
+    <label>Refund Amount</label>
+    <div>€ [[document.properties.bccontract:refundAmount]]</div>
+  </div>
+</template>
+```
 
 ## Automation Chains
 
@@ -248,7 +246,7 @@ CREATE A SIMPLE AUTOMATION CHAIN
 
 Now let's create two simple automation chains to handle each refund case.
 
-1.  Under **Automation** > **Automation Chains**, click on **New** to create a new automation chain, `BCContract_CancelFullRefund_AC`.
+1.  In **Studio** under **Automation** > **Automation Chains**, click on **New** to create a new automation chain, `BCContract_CancelFullRefund_AC`.
 
 2.  Drag and drop the **Document** > **Document.SetProperty** operation to the chain.
 
@@ -290,7 +288,7 @@ CONFIGURE A WORKFLOW
 
 12. Finally, reorganize the nodes and transitions to implement our new logic, and save. You should have something like this:
 
-![workflow]({{file space='nxdoc' page='customizing-with-studio-and-view-designer' name='workflow-final.png'}} ?w=350)
+![workflow]({{file space='nxdoc' page='customizing-with-studio-and-view-designer' name='workflow-final.png'}} ?w=450)
 
 ### Task Layouts
 
@@ -302,9 +300,11 @@ A few final touches to customize user interaction with our workflow.
 
 2.  Click on the **Enter Refund Amount** task layout to configure it.
 
-3.  From the catalog, select **task** > **variables** > **refundAmount : double** > **edit** to add the input widget.
+3.  From the catalog, select **task** > **variables** > **refundAmount : double** > **edit** to add the input widget, then save.
 
-Return to Nuxeo Platform and perform another hot reload to deploy all your changes. Try launching the **Cancel Contract** process from your document. You'll have to log in again as the other users you've created in order to complete all the tasks.
+Return to Nuxeo Platform and perform another hot reload to deploy all your changes. Try creating documents with different signature dates and launching the **Cancel Contract** process from each one. You will have to log in as the other users you've created in order to complete all the tasks.
+
+![Start Process]({{file space='nxdoc' page='customizing-with-studio-and-view-designer' name='start_process.png'}} ?w=600)
 
 ## Search
 
@@ -347,13 +347,13 @@ You can add to the query filter to further tailor your search results. Try filte
         <td>1,000</td>
       </tr>
       <tr>
-        <td>Silver (€1,000 - 5,000)</td>
+        <td>Silver (€1,001 - 5,000)</td>
         <td>1,001</td>
         <td>5,000</td>
       </tr>
       <tr>
-        <td>Gold (€5,000 +)</td>
-        <td>5000</td>
+        <td>Gold (€5,001 +)</td>
+        <td>5,001</td>
         <td></td>
       </tr>
     </tbody>
@@ -370,9 +370,9 @@ In **View Designer**, scroll down the **Layouts** menu to **Page Providers**, se
 
 1.  Drag the search elements from the menu on the right into the form and modify the labels as needed.
 
-2.  Then open **results** and save to instantiate the search results layout.
+2.  Then open **results** and drag columns from the menu on the right to customize your search results layout.
 
-3.  From the **UI** menu, select **Drawer** and hover over ![]({{file version='' space='nxdoc' page='web-ui' name='create_button.png'}} ?w=25) to select the Search drawer. Then fill in the form:
+3.  From the **UI** menu, select **Left Menu Items** and hover over ![]({{file version='' space='nxdoc' page='web-ui-overview' name='create_button.png'}} ?w=25) to select the Search drawer. Then fill in the form:
 
 <div class="table-scroll">
   <table class="hover">
@@ -386,22 +386,6 @@ In **View Designer**, scroll down the **Layouts** menu to **Page Providers**, se
         <td>***enabled***</td>
       </tr>
       <tr>
-        <td>provider</td>
-        <td>`dublincore`, `bcsalescommon`, `bccontract`</td>
-      </tr>
-      <tr>
-        <td>search-name</td>
-        <td>`contract`</td>
-      </tr>
-      <tr>
-        <td>auto</td>
-        <td>`enabled`</td>
-      </tr>
-      <tr>
-        <td>name</td>
-        <td>**contract**</td>
-      </tr>
-      <tr>
         <td>Label</td>
         <td>**Contract Search**</td>
       </tr>
@@ -412,6 +396,22 @@ In **View Designer**, scroll down the **Layouts** menu to **Page Providers**, se
       <tr>
         <td>Order</td>
         <td>Enter a number to indicate the icon's position in the left menu.</td>
+      </tr>
+      <tr>
+        <td>provider</td>
+        <td>`contract`</td>
+      </tr>
+      <tr>
+        <td>schemas</td>
+        <td>`dublincore`, `bcsalescommon`, `bccontract`</td>
+      </tr>
+      <tr>
+        <td>search-name</td>
+        <td>**contract**</td>
+      </tr>
+      <tr>
+        <td>auto</td>
+        <td>`enabled`</td>
       </tr>
     </tbody>
   </table>
@@ -430,7 +430,7 @@ In **View Designer**, scroll down the **Layouts** menu to **Page Providers**, se
 Return to Nuxeo Platform, perform a hot reload and your customized search should be available. Create a few contracts and test your new Search.
 
 {{#> callout type='tip' }}
-Try customizing your search to filter contract types or owners.
+Try customizing your search to filter contract types or owners, then try modifying the columns in your search results layout in order to display more relevant contract information.
 {{/callout}}
 
 ## Branding
@@ -441,7 +441,7 @@ By now, I'm sure you've noticed our custom login page with the ever-conspicuous 
 
 CUSTOMIZE THE LOGIN PAGE
 
-1.  In Studio, select **Branding** from the **Customization** menu, then **New**. Enter a name for your theme.
+1.  In Studio, select **Branding** from the **Configuration** menu, then **New**. Enter a name for your theme.
 
 2.  On the tab **Login Page**, Select a background image or a background colors that matches your company's color scheme.
 
