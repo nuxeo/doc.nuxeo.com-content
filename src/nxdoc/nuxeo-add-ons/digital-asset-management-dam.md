@@ -2,7 +2,7 @@
 title: Digital Asset Management (DAM)
 review:
     comment: ''
-    date: '2017-04-14'
+    date: '2017-07-19'
     status: ok
 labels:
     - lts2016-ok
@@ -479,7 +479,7 @@ Or you can specify the start time and duration of the clip and download it direc
 - Context.FetchDocument
 - Video.Slice:
     duration: 00:00:10
-    encode: 'false'
+    encode: 'true'
     startAt: 00:00:23
 - WebUI.DownloadFile
 ```
