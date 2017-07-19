@@ -9,4 +9,4 @@ description: Web UI User Documentation
 tree_item_index: 100
 ---
 
-{{{multiexcerpt 'webui-functional-overview' space='nxdoc' page='Web UI'}}}
+{{{multiexcerpt 'webui-functional-overview' space='nxdoc' page='Web UI Overview'}}}
