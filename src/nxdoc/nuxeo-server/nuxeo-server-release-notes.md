@@ -130,7 +130,7 @@ It is now possible to change the value of the attribute `perDocumentQuery` of a 
 
 #### New Document Properties Deprecation {{since '9.2'}}
 
-A new extension point "deprecation" has been added to the Schema service to configure deprecated fields and their optional fall-back. A warning is logged when a deprecated field is used in the application, and if the fall-back is configured, values are set and gotten from that fall-back field.
+A new extension point [`deprecation`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--deprecation) has been added to the Schema service to configure deprecated fields and their optional fall-back. A warning is logged when a deprecated field is used in the application, and if the fall-back is configured, values are set and gotten from that fall-back field.
 
 ```xml
 <property schema="common" name="size" deprecated="true" />
@@ -187,7 +187,7 @@ A new PubSubService is available, providing cross-instance publish/subscribe met
 
 #### administrators Group Members Have Access to Protected Directories {{since '9.2'}}
 
-Directories access protected by giving `Read`permission to group Nobody are now accessible by members of the group administrators.
+Directories access protected by giving `Read` permission to group "Nobody" are now accessible by members of the group "administrators".
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22609](https://jira.nuxeo.com/browse/NXP-22609)
 
@@ -330,7 +330,7 @@ There was a first implementation of the OAuth flow to use Nuxeo as an OAuth prov
 
 ### REST API Endpoints for OAuth Tokens and OAuth Providers Management {{since '9.2'}}
 
-Endpoints to CRUD  OAuth tokens and providers (in respect to permission) have been added:
+Endpoints to CRUD OAuth tokens and providers (in respect to permission) have been added:
 
  - `GET oauth2/provider`: Returns the list of registered OAuth2 service providers
  - `POST oauth2/provider`: Creates a new OAuth2 service provider
