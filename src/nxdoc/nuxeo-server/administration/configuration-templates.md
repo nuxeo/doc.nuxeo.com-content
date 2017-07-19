@@ -134,19 +134,20 @@ Templates are located in the "templates" directory (`$NUXEO_HOME/templates`). To
 
 Here are the templates provided by default:
 
-*   `common`: common template used by other templates;
-*   [**`default`**]({{page page='connecting-nuxeo-to-the-database'}}): default Nuxeo configuration template for test purpose;
-*   [**`https`**]({{page page='http-and-https-reverse-proxy-configuration'}}): (not recommended) template to make the server listen to port 443 (HTTPS);
-*   [**`postgresql`**]({{page page='postgresql'}}): PostgreSQL configuration template;
-*   postgresql-quartz-cluster;
-*   [**`mssql`**]({{page page='microsoft-sql-server'}}): MS SQL Server configuration template;
-*   mssql-quartz-cluster;
-*   [**`mysql`**]({{page page='mysql'}}): MySQL configuration template;
-*   [**`mariadb`**]({{page page='mariadb'}}): MariaDB configuration template (since Nuxeo FT 9.1; for older versions of Nuxeo the `mysql` template should be used);
-*   [**`mongodb`**]({{page page='mongodb'}}): MongoDB configuration template;
-*   [**`oracle`**]({{page page='oracle'}}): Oracle configuration template;
+*   `common`: Common template used by other templates
+*   [**`default`**]({{page page='connecting-nuxeo-to-the-database'}}): default Nuxeo configuration template for test purpose
+*   `sql`: Configuration template for SQL directories (since 9.2)
+*   [**`https`**]({{page page='http-and-https-reverse-proxy-configuration'}}): (not recommended) Template to make the server listen to port 443 (HTTPS)
+*   [**`postgresql`**]({{page page='postgresql'}}): PostgreSQL configuration template
+*   `postgresql-quartz-cluster`
+*   [**`mssql`**]({{page page='microsoft-sql-server'}}): MS SQL Server configuration template
+*   `mssql-quartz-cluster`
+*   [**`mysql`**]({{page page='mysql'}}): MySQL configuration template
+*   [**`mariadb`**]({{page page='mariadb'}}): MariaDB configuration template (since Nuxeo FT 9.1; for older versions of Nuxeo the `mysql` template should be used)
+*   [**`mongodb`**]({{page page='mongodb'}}): MongoDB configuration template
+*   [**`oracle`**]({{page page='oracle'}}): Oracle configuration template
 *   `oracle-quartz-cluster`;
-*   `custom`: sample custom templates. Of course, this template is empty by default. One should copy it outside `$NUXEO_HOME` and adapt to his needs. See related section below.
+*   `custom`: Sample custom templates. Of course, this template is empty by default. One should copy it outside `$NUXEO_HOME` and adapt to their needs. See related section below.
 
     {{#> callout type='tip' }}
 

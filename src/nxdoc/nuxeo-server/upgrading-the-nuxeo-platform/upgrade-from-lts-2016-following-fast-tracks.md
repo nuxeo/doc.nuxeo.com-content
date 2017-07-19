@@ -329,7 +329,7 @@ Directories are now stored in MongoDB when enabling the `mongodb` template. You 
 
 **Migrating your directories to MongoDB**
 
-To migrate your custom directories to MongoDB, enable the `mongodb` template and use the extension point `org.nuxeo.ecm.directory.GenericDirectory` instead of `org.nuxeo.ecm.directory.sql.SQLDirectoryFactory`. See [NXP-19175](https://jira.nuxeo.com/browse/NXP-19175).
+To migrate your custom directories to MongoDB, enable the `mongodb` template and use the extension point [`org.nuxeo.ecm.directory.GenericDirectory`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.directory.GenericDirectory--directories) instead of [`org.nuxeo.ecm.directory.sql.SQLDirectoryFactory`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-9.2/viewExtensionPoint/org.nuxeo.ecm.directory.sql.SQLDirectoryFactory--directories). See [NXP-19175](https://jira.nuxeo.com/browse/NXP-19175).
 
 **Using MongoDB with SQL directories**
 
@@ -355,13 +355,13 @@ If you want to keep your custom SQL directories, contribute them to the extensio
 
 {{! multiexcerpt name='upgrade-9.2-code.oauth'}}
 
-- During Oauth2 challenge (as identity provider), parameters `state` and `redirect_uri` are now mandatory for security reason. See [NXP-22183](https://jira.nuxeo.com/browse/NXP-22183) and [NXP-22186](https://jira.nuxeo.com/browse/NXP-22186).
+- During OAuth2 challenge (as identity provider), parameters `state` and `redirect_uri` are now mandatory for security reason. See [NXP-22183](https://jira.nuxeo.com/browse/NXP-22183) and [NXP-22186](https://jira.nuxeo.com/browse/NXP-22186).
 
 {{! /multiexcerpt}}
 
 #### Deprecated APIs
 
-##### Oauth2Client
+##### OAuth2Client
 
 {{! multiexcerpt name='upgrade-9.2-deprecated.oauth2'}}
 
