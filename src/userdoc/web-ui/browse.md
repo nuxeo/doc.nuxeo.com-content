@@ -17,7 +17,7 @@ In order to help you find the documents that you need, the Nuxeo Platform featur
 
 ## Browsing Content
 
-### Side Menu&nbsp;
+### Side Menu
 The side menu offers two different tabs. Clicking on elements on the left will open a side panel (also called **Drawer**) with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area.
 This new pattern allows to start browsing without changing the context of work.
 The side menu displays all the domain structure from the root. It enables you to easily access any space in the application structure.
@@ -67,12 +67,12 @@ Some actions or features are accessible using access keys:
 {{{multiexcerpt 'intro-creating-content'}}}
 
 ### Creating a Document Using the Create Button
-Creating a document using the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=30) enables you to select the type of document you want to create among all Nuxeo Platform's document types.
+Creating a document using the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30) enables you to select the type of document you want to create among all Nuxeo Platform's document types.
 
 ![]({{file name='creation-popup-web-ui.png'}} ?w=450,border=true)
 
 To create a document using the **Create** button:
-1. Click on the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=30) and click on the desired document.
+1. Click on the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30) and click on the desired document.
 2. Fill in the document's creation form and click on the **Create** button.
 
 The View tab of the document is displayed.
@@ -293,7 +293,7 @@ See the page [How to Customize Nuxeo Drive Versioning Policy]({{page space='NXDO
 ## Document Actions
 
 The document actions toolbar displays all the actions available for the current document.
-![]({{file name='document_toolbar.png' page='web-ui' space='nxdoc'}} ?w=600, border=true)
+![]({{file name='document_toolbar.png' page='web-ui-overview' space='nxdoc'}} ?w=600, border=true)
 
 ### Share a Document
 

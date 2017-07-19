@@ -58,7 +58,7 @@ Collections can be created in workspaces and folders.
 
 {{! multiexcerpt name='creating-web-ui'}}
 There are two ways to create a collection:
-- Like any other document, using the button&nbsp;![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=30): Just fill in the creation form and the collection is created in the current workspace / folder.
+- Like any other document, using the button&nbsp;![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30): Just fill in the creation form and the collection is created in the current workspace / folder.
   ![]({{file name='new-collection-web-ui.png'}} ?w=400,border=true)
 - Directly from the **Add to collection** popup: collections about to be created are displayed with the icon ![]({{file name='add-icon_web-ui.png' page='icons-index'}} ?w=20), while existing collections are displayed in the drop down list. The collection is created in your personal workspaces, in a **My Collections** folder.
 {{! /multiexcerpt}}

@@ -84,7 +84,7 @@ A file is composed of:
 
 ![]({{file name='file-web-ui.png'}} ?w=600,border=true)
 
-**To create a file**, in a workspace, click on ![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=30). On the **Create** popup, click on the desired document. Fill in the document's creation form and click on **Create**.
+**To create a file**, in a workspace, click on ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30). On the **Create** popup, click on the desired document. Fill in the document's creation form and click on **Create**.
 
 When the file is created, users can enhance it by [filling its properties]({{page page='browse'}}#editing-content), adding attached files on it.
 
@@ -105,7 +105,7 @@ Description | The text that explains what the note is about.
 Content | The text of the note created using the rich text editor.
 Format | The format of the automatically created file used to export notes from the Nuxeo Platform.
 
-**To create a note**, in a workspace, click on ![]({{file name='create_button.png' space='nxdoc' page='web-ui'}} ?w=30). On the **Create** popup, click on the desired document. Fill in the document's creation form and click on **Create**.
+**To create a note**, in a workspace, click on ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30). On the **Create** popup, click on the desired document. Fill in the document's creation form and click on **Create**.
 
 You can also create a note by importing a .txt, a .html or a .xml file [using drag and drop]({{page page='browse'}}#importing-documents-using-drag-and-drop).
 When the note is created, users can enhance it by attaching files on it or just [editing it]({{page page='browse'}}#editing-content).
