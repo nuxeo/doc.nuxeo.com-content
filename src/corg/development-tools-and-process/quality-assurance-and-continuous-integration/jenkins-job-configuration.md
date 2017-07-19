@@ -4,6 +4,8 @@ review:
     comment: ''
     date: ''
     status: ok
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '3868997'
     ajs-parent-page-title: Quality Assurance and Continuous Integration

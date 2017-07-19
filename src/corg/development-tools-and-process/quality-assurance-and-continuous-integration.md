@@ -5,6 +5,8 @@ review:
     date: ''
     status: ok
 toc: true
+notes: >-
+    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '3868947'
     ajs-parent-page-title: Development Tools and Process
