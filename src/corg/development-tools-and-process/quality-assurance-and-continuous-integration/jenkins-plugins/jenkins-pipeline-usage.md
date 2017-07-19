@@ -17,12 +17,12 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/4YzjAQ'
     source_link: /display/CORG/Jenkins+Pipeline+usage
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-09 08:10'
         message: ''
         version: '2'
-    - 
+    -
         author: Pierre-Gildas Millon
         date: '2016-09-08 14:44'
         message: ''
@@ -62,7 +62,7 @@ node('SLAVE') {
 
 ## Checkout
 
-Setting up Additional Behaviours for the SCM checkout step of a Multibranch Pipeline doesn't work for now: 
+Setting up Additional Behaviours for the SCM checkout step of a Multibranch Pipeline doesn't work for now:
 - this is tracked by https://issues.jenkins-ci.org/browse/JENKINS-37658
 - the workaround is https://support.cloudbees.com/hc/en-us/articles/226122247-How-to-Customize-Checkout-for-Pipeline-Multibranch
 
@@ -75,6 +75,16 @@ For instance, if you need to add the "Clean before checkout" behaviour, no point
 +                        extensions: [[$class: 'CleanBeforeCheckout']],
 +                        userRemoteConfigs: [[url: 'git@github.com:nuxeo/nuxeo-mobile.git']]
 +                    ])
+```
+
+To completely wipe the workspace and start from scratch, you can use the `WipeWorkspace` extension:
+
+```
+checkout([$class: 'GitSCM',
+    branches: [[name: env.BRANCH_NAME]],
+    extensions: [[$class: 'WipeWorkspace']],
+    userRemoteConfigs: [[url: 'git@github.com:nuxeo/nuxeo-mobile.git']]
+])
 ```
 
 ## Maven build
