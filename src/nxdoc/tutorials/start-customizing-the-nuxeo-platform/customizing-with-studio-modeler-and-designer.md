@@ -1,5 +1,5 @@
 ---
-title: Customizing Nuxeo Platform with Studio and View Designer
+title: Customizing Nuxeo Platform with Studio Modeler and Designer
 review:
     comment: 'Created Tutorial'
     date: '2017-05-23'
