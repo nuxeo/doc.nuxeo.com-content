@@ -78,7 +78,7 @@ Started from 9.2: you can set the parameter `nuxeo.automation.scripting.inline-c
 
 {{! multiexcerpt name='upgrade-9.1-code.platform.el'}}
 
-- Elasticsearch artifact has been renamed from `org.nuxeo.ecm.platform:nuxeo-platform-el` to `org.nuxeo.ecm.core:nuxeo-core-el`. See [NXP-21713](https://jira.nuxeo.com/browse/NXP-21713).
+- Expression Language artifact has been renamed from `org.nuxeo.ecm.platform:nuxeo-platform-el` to `org.nuxeo.ecm.core:nuxeo-core-el`. See [NXP-21713](https://jira.nuxeo.com/browse/NXP-21713).
 
 {{! /multiexcerpt}}
 
