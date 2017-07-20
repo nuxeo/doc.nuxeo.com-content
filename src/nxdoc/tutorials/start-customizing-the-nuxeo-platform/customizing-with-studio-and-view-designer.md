@@ -8,7 +8,6 @@ labels:
     - studio
     - customization
 toc: true
-hidden: true
 tree_item_index: 250
 
 ---
