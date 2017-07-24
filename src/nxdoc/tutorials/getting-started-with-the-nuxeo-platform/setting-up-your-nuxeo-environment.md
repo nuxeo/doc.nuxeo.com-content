@@ -361,7 +361,7 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
     ```
     Dependency resolution:
       Installation order (3):        nuxeo-dam-6.3.1/nuxeo-jsf-ui-9.2.0/nuxeo-web-ui-1.1.2/nuxeo-platform-getting-started-1.2.1
-      Packages to download (3):      nuxeo-jsf-ui:9.2.0, nuxeo-web-ui-1.1.2, nuxeo-dam:6.3.1, nuxeo-platform-getting-started:1.2.1
+      Packages to download (3):      nuxeo-jsf-ui:9.2.0, nuxeo-web-ui:1.1.2, nuxeo-dam:6.3.1, nuxeo-platform-getting-started:1.2.1
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -374,7 +374,7 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
     Local packages:
      addon     started	nuxeo-dam (id: nuxeo-dam-6.3.1)
      addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-9.2.0)
-     addon     started  nuxeo-web-ui (id: nuxeo-web-ui-1.1.2)
+     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-1.1.2)
      addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.1)
     ```
 
@@ -459,7 +459,7 @@ To install a Nuxeo Package:
     ```
     Dependency resolution:
       Installation order (3):        nuxeo-dam-6.3.1/nuxeo-jsf-ui-9.2.0/nuxeo-web-ui-1.1.2/nuxeo-platform-getting-started-1.2.1
-      Packages to download (3):      nuxeo-jsf-ui:9.2.0, nuxeo-web-ui-1.1.2, nuxeo-dam:6.3.1, nuxeo-platform-getting-started:1.2.1
+      Packages to download (3):      nuxeo-jsf-ui:9.2.0, nuxeo-web-ui:1.1.2, nuxeo-dam:6.3.1, nuxeo-platform-getting-started:1.2.1
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -472,7 +472,7 @@ To install a Nuxeo Package:
     Local packages:
      addon     started	nuxeo-dam (id: nuxeo-dam-6.3.1)
      addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-9.2.0)
-     addon     started  nuxeo-web-ui (id: nuxeo-web-ui-1.1.2)
+     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-1.1.2)
      addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.1)
     ```
 
@@ -569,7 +569,7 @@ To install a Nuxeo Package:
     ```
     Dependency resolution:
       Installation order (3):        nuxeo-dam-6.3.1/nuxeo-jsf-ui-9.2.0/nuxeo-web-ui-1.1.2/nuxeo-platform-getting-started-1.2.1
-      Packages to download (3):      nuxeo-jsf-ui:9.2.0, nuxeo-web-ui, nuxeo-dam:6.3.1, nuxeo-platform-getting-started:1.2.1
+      Packages to download (3):      nuxeo-jsf-ui:9.2.0, nuxeo-web-ui:1.1.2, nuxeo-dam:6.3.1, nuxeo-platform-getting-started:1.2.1
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -583,7 +583,7 @@ To install a Nuxeo Package:
     Local packages:
      addon     started	nuxeo-dam (id: nuxeo-dam-6.3.1)
      addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-9.2.0)
-     addon     started  nuxeo-web-ui (id: nuxeo-web-ui-1.1.2)
+     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-1.1.2)
      addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.1)
 
     # Windows
