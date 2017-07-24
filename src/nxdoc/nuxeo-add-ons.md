@@ -205,7 +205,7 @@ Registered access
 </tr>
 <tr>
 <td colspan="1">
-
+EasyShare
 <br/>
 `easyshare`
 </td>
@@ -546,7 +546,7 @@ Public
 [User documentation]({{page space='userdoc' page='nuxeo-jenkins-report'}})
 </td>
 <td colspan="1">
-[Released for 9.1](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jenkins-report-mp?version=3.9.1)
+[Released for 9.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jenkins-report-mp?version=3.9.2)
 </td>
 </tr>
 <tr>
@@ -793,8 +793,7 @@ Public
 [Documentation]({{page version='' space='nxdoc' page='web-ui'}})
 </td>
 <td colspan="1">
-[Released for 9.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui?version=1.1.2)<br/>
-Beta version
+[Released for 9.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui?version=1.1.2)
 </td>
 </tr>
 <tr>
