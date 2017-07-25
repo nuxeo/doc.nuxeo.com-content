@@ -38,8 +38,8 @@ Once you are all set, you can navigate to the View Designer application to custo
 
 ### Create a New Layout
 
-1. Go on the **Layout** tab on the left menu
-1. Under **Local Types** you will find your Contract document type
+1. Go on the **Layouts** tab on the left menu
+1. Under **Local Types** you will find your `Contract` document type
 1. Five layouts are available for the customization, let's start with the **Create** layout, click on the **CUSTOMIZE** button in the editor.
   {{#> callout type='tip' }}
   It automatically creates the nuxeo-contract-create-layout.html file, scaffolding:

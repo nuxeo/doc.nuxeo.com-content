@@ -11,6 +11,7 @@ labels:
     - nuxeo-elements
     - polymer-guide
 is_overview: true
+tree_item_index: 300
 section_parent: web-ui
 ---
 <div class="row" data-equalizer data-equalize-on="medium">
