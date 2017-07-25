@@ -37,13 +37,14 @@ Once you are all set, you can navigate to Nuxeo Studio to start creating your se
 
 The first step is to create a [page provider]({{page version='' space='studio' page='page-providers'}}) in Nuxeo Studio.
 
-In **Customization**, go to **Page Providers**, click on **New** and name it `Search`.
+In **Configuration**, go to **Page Providers**, click on **New** and name it `Search`.
 
 **The full text search:**
 ![]({{file name='full-text-vd.png'}} ?w=250, border=true)
 1. Next to **Predicates** click on **Add**.
   A popup window appears.
 1. Click on **Edit binding** and select `schema:system` > `fulltext`
+1. Save your changes.
 
 **The search by date range:**
 ![]({{file name='creation-date-range-vd.png'}} ?w=250, border=true)
@@ -83,17 +84,22 @@ In **Customization**, go to **Page Providers**, click on **New** and name it `Se
 
 You can now save your changes and go to the View Designer.
 
-## Create a Form Layout
+## Create a Search Layout
 
-In the View Designer, on the **Layout tabs**, under **Page Providers** you will find your page provider created previously.
+In the View Designer, on the **Layouts tab**, under **Page Providers** you will find your page provider created previously.
 
-Click on **Customize**, two layouts are available. Let's edit the **Form** layout.
+Click on your page provider, two layouts are available. Let's edit the **Form** layout first.
 
-1. Click on **Form**, then **Customize**.
-    The form layout is now displayed in bold with an asterisk next to it. On the right, in the properties catalog, the elements that we defined in Studio are displayed here.
-2. Expand the first element and drag'n'drop the **Edit** mode into the editor.
+1. Click on **form**, then **Customize**.
+    The form layout is now displayed in bold. On the right, in the properties catalog, the elements that we defined in Studio are displayed here.
+1. Expand the first element and drag'n'drop the **Edit** mode into the editor.
   Do the same for the three other elements.
-4. Click on the **Full text** one, on the right you can edit the label to display `Full text`.
+1. Once it's done, click on the **Full text** element on the main view, you can edit the label in the left catalog to display `Full text`. You can do the same with the other elements.
+
+Let's customize the **results** layout now.
+
+1. Click on **results**, then **Customize**.
+1. It automatically creates the result view by default. Leave it like this and click on **Save**.
 
 You now need to add your labels to your translations file to display them correctly in the UI. To do so:
 
@@ -106,21 +112,21 @@ You now need to add your labels to your translations file to display them correc
     - `"label.ui.aggregate.from_now-7d_to_now-24H":"Last week"`,
     - `"label.ui.aggregate.from_now-24H_to_now":"Last 24H"`
 
-## Create a Drawer
+## Create a New Left Menu Item
 The next step is to add a button in the left menu to display the search screen.
 
-1. Go to the UI tab in the View Designer and then on **Drawer**
+1. Go to the UI tab in the View Designer and then on **Left Menu Items**
 1. Roll over the Create button and select the Search type ![]({{file name='search-icon-drawer-vd.png'}} ?w=20)
 1. Fill in the page like this:
   - Name: Contract
   - Available: enabled
+  - Label: `Contracts`
+  - Icon: `icons:assignment`
   - provider: `Search`
   - schemas: `dublincore`, `contract`
   - search-name: `search`
-  - name: contract
-  - Label: `Contracts`
-  - Icon: `icons:assignment`
-1. Expand the **Elements & Attributes** box and check the **Auto** attribute to automatically execute the search each time a param is changed.
+  - auto: enabled
+
 1. Save your changes, deploy your Studio project on your instance and you're done :)
 
 ![]({{file name='result-search-screen-vd.png'}} ?w=350,border=true)

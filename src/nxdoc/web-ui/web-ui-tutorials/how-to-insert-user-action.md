@@ -36,7 +36,8 @@ The View Designer is not available for everyone yet, but if you can't wait any l
 
 ## Create an Automation Chain
 
-1. In the left menu, click on Automation and then on Automation Chains.
+On Nuxeo Studio side:
+1. Go on **Configuration** > **Automation** and then on **Automation Chains**.
 1. Click on the **New** button.
 1. Give your automation chain an ID `validateDocument` and click on the **Next** button.
   ![]({{file name='NXS-automation-create.png' page='how-to-create-an-automation-chain'}} ?w=350,border=true)
@@ -50,7 +51,7 @@ You should end up with something like this:
 
 Now that your automation chain is ready, you will need to bind it to an action.
 
-On View Designer, go on the UI tab:
+On View Designer, go on the **UI** tab:
 1. In Actions, click on the **Create** button.
 1. Fill in the creation form as shown bellow:
   ![]({{file version='810' space='nxdoc' page='how-to-insert-user-action' name='validate-action-button-VD.png'}} ?w=650,border=true)
