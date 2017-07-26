@@ -222,7 +222,7 @@ Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](htt
 
 Contributing to an extension using Nuxeo CLI requires more steps than using Nuxeo Studio.
 
-Here we assume that you have installed [Nuxeo CLI]({{page page='nuxeo-cli'}}) and follow the [Getting Started guide]({{page page='getting-started-with-nuxeo-cli'}}) to understand the basics.
+Here we assume that you have installed [Nuxeo CLI]({{page page='nuxeo-cli'}}) and follow the page [Develop with Nuxeo Platform]({{page page='develop-with-nuxeo-platform'}}) to understand the basics.
 
 ### Creating Your XML Extension in Nuxeo CLI
 

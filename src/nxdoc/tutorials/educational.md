@@ -17,7 +17,7 @@ confluence:
     shortlink: X4MlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/X4MlAQ'
     source_link: /display/NXDOC/Educational
-tree_item_index: 500
+tree_item_index: 600
 history:
     -
         author: Manon Lumeau
@@ -42,5 +42,4 @@ history:
 *   [Workflow Use Cases]({{page space='NXDOC' page='Workflow Use+Cases'}})
 *   [How to Publish a News Feature in Workspaces]({{page space='NXDOC' page='How to+Publish+a+News+Feature+in+Workspaces'}})&nbsp;&mdash;&nbsp; This how-to explains how to add a&nbsp;small "News" feature to your Nuxeo Platform for enabling News content publishing at workspace level, using only Nuxeo Studio.
 *   [Design Tips]({{page space='NXDOC' page='Design Tips'}})&nbsp;&mdash;&nbsp; Nuxeo Studio is a very powerful tool. The direct consequence is that there are very often several solutions to one problematic. This section aims at providing tooltips to help you choosing the right solution depending on your needs.
-*   [How to Customize Email Templates]({{page space='NXDOC' page='How to+Customize+Email+Templates'}})&nbsp;&mdash;&nbsp;Default templates for mail notifications can be overridden. 
-
+*   [How to Customize Email Templates]({{page space='NXDOC' page='How to+Customize+Email+Templates'}})&nbsp;&mdash;&nbsp;Default templates for mail notifications can be overridden.

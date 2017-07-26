@@ -289,7 +289,7 @@ $ nuxeo sample
 {{#> panel heading='Related Documentation'}}
 
 - [Discover Nuxeo CLI by Example]({{page page='discover-nuxeo-cli-by-example'}})
-- [Getting Started with Nuxeo CLI]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-cli'}})
+- [Develop with Nuxeo Platform]({{page version='' space='nxdoc' page='develop-with-nuxeo-platform'}})
 - [Create Nuxeo Packages]({{page version='' space='nxdoc' page='creating-nuxeo-packages'}})
 
 {{/panel}}

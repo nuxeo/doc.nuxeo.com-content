@@ -1,5 +1,5 @@
 ---
-title: Getting Started with the Nuxeo Platform
+title: Discover Nuxeo Platform APIs
 review:
     comment: ''
     date: '2016-12-20'

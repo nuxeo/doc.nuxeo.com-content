@@ -29,6 +29,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/CBU5AQ'
     source_link: /display/NXDOC/Getting+Started+with+Nuxeo+Studio
 tree_item_index: 100
+hidden: true
 history:
     -
         author: Solen Guitter
@@ -160,7 +161,7 @@ history:
         date: '2014-11-06 12:21'
         message: ''
         version: '1'
-next_link: /nxdoc/getting-started-with-nuxeo-cli
+next_link: /nxdoc/develop-with-nuxeo-platform/
 ---
 This page shows you how to start customizing the Nuxeo Platform using Nuxeo Studio. You'll see how to:
 

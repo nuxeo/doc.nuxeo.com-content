@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Nuxeo CLI
+title: Develop with Nuxeo Platform
 review:
     comment: ''
     date: '2017-01-17'
@@ -20,7 +20,7 @@ version_override:
     'LTS 2016': 810/nxdoc/getting-started-with-nuxeo-ide
     'LTS 2015': 710/nxdoc/getting-started-with-nuxeo-ide
     '6.0': 60/nxdoc/getting-started-with-nuxeo-ide
-tree_item_index: 200
+tree_item_index: 300
 history:
     -
         author: Thibaud Arguillere
@@ -406,14 +406,13 @@ history:
         author: Manon Lumeau
         date: '2014-11-06 12:25'
         message: ''
-        version: '1'
-previous_link: /nxdoc/getting-started-with-nuxeo-studio        
+        version: '1'        
 ---
 Here we want to add some server side Java logic that will update the contract's renegotiation date. In our example it will simply take the contract's start date and add three months to it, but you can think of integrating any custom logic in your Java class, including a connection to an external webservice or an ERP.
 
 ## Prerequisites
 
-* A Contract document type created at the [previous step]({{page page='getting-started-with-nuxeo-studio'}})
+* A Contract document type created on this [page]({{page page='getting-started-with-nuxeo-studio'}})
 * An IDE that integrates with Maven.
     We provide instructions for [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars) or IntelliJ IDEA
 * Java 8 with JDK
