@@ -125,6 +125,7 @@ Nuxeo is shipped with an embedded Tomcat server.
 <tbody>
 <tr>
 <th colspan="1">Nuxeo Platform Version:</th>
+<th colspan="1">9.2</th>
 <th colspan="1">9.1</th>
 <th colspan="1">LTS 2016</th>
 <th colspan="1">LTS 2015</th>
@@ -133,11 +134,21 @@ Nuxeo is shipped with an embedded Tomcat server.
 <tr>
 <th colspan="1">Redis</th>
 <td colspan="1">2.8.x <br />
-3.0.x</td>
+3.0.x <br />
+3.2.x <br />
+4.0.x</td>
 <td colspan="1">2.8.x <br />
-3.0.x</td>
+3.0.x <br />
+3.2.x <br />
+4.0.x</td>
+<td colspan="1">2.8.x <br />
+3.0.x <br />
+3.2.x <br />
+4.0.x</td>
 <td colspan="1">2.8.x<br />
-3.0.x</td>
+3.0.x <br />
+3.2.x <br />
+4.0.x</td>
 <td colspan="1">2.8</td>
 </tr>
 </tbody>
