@@ -397,6 +397,17 @@ This requires X11.
 
 {{! multiexcerpt name='apt-repo-install-terminal'}}
 
+    {{#> callout type='tip' }}
+
+    The GnuPG package may be missing since Debian Stretch (9):
+    
+    ```
+    sudo apt-get install gnupg
+    ```
+
+    {{/callout}}
+
+
 1.  Import the Nuxeo key.
 
     ```bash
