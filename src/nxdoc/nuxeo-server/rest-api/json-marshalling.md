@@ -424,7 +424,7 @@ The JSON generation and parsing is based on [Jackson](https://github.com/FasterX
 
 **Check out our detailed documentation on JSON Marshalling:**
 
-- [JSON Marshallers Provided by the Nuxeo Platform]({{page page='json-marshallers-provided-by-nuxeo'}})
+- [JSON Marshallers Provided by the Nuxeo Platform]({{page page='default-json-marshallers'}})
 - [Enriching, Extending and Overriding Existing Marshallers]({{page page='enriching-extending-overriding-marshallers'}})
 - [Creating Your Own Marshaller]({{page page='creating-your-own-marshaller'}})
 - [Parameterizing and Reusing Marshallers]({{page page='parameterizing-reusing-marshallers'}})
