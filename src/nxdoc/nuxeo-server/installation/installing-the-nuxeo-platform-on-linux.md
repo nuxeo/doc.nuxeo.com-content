@@ -451,7 +451,7 @@ This requires X11.
 Like any Java application you should prevent the JVM Heap to be swapped to disk, this will crush server performance. You have two options here:
 
 *   Disable the swap with `sudo swapoff -a` you&rsquo;ll need to edit your `/etc/fstab`to disable swap permanently. Note that before doing this you need to make sure that you have enough memory for all the processes that run on the server (Nuxeo JVM, converters, other custom process and the OS).
-*   Limit the swapiness of the OS using `sysctl` to set `vm.swappiness =&nbsp;1`.
+*   Limit the swapiness of the OS using `sysctl` to set `vm.swappiness=1`.
 
 ### Temporary Folder
 
