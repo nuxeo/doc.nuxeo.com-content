@@ -117,7 +117,7 @@ In order to have more control over REST API Calls, you can use the following spe
       </tr>
       <tr>
         <td>`properties`</td>
-        <td> &#42; </td>
+        <td>  </td>
         <td>Filter properties so the returned document contains only data from the specified schemas</td>
         <td>`properties: dublincore, file` <br/>
         (`*` Returns data from all schemas)</td>
