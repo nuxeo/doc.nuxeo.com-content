@@ -199,13 +199,13 @@ Example:
     </policy>
 </extension>
 ```
-All filters referenced by the policy must match in order to apply the policy.
+Filters referenced by the policy are OR-ed. At least one filter has to match in order to apply the policy.
 
 Setting `NONE` as numbering policy will stop if no policy with a lower order applies.
 
 {{#> callout type='note' }}
 
-Nuxeo reserved order range `[1,10]` to contribute system policies.
+Nuxeo reserved order range `[1,10]` to contribute system policies. Notice that default contributions are also provided with a higher range; these are not system policies and as such have a lower impact, making them easier to be overriden.
 
 {{/callout}}
 
