@@ -109,11 +109,7 @@ history:
 
 ### Linux
 
-{{#> callout type='warning' }}
-
-NodeJS available in Debian repositories is deprecated, you must manually install v4.4.2
-
-{{/callout}}{{#> panel type='code' heading='Manual install of NodeJS'}}
+{{#> panel type='code' heading='Manual install of NodeJS'}}
 
 ```bash
 cd /tmp
