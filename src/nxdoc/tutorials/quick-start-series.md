@@ -22,7 +22,7 @@ confluence:
     shortlink: XYMlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/XYMlAQ'
     source_link: /display/NXDOC/Quick+Start+Series
-tree_item_index: 400
+tree_item_index: 500
 history:
     -
         author: Solen Guitter
@@ -96,9 +96,9 @@ You don't know how to get your project started? Here are some tips for you.
 
 Here are some resources to help you start your Nuxeo Platform application:
 
-- [Getting Started with the Nuxeo Platform]({{page page='getting-started-with-the-nuxeo-platform'}})
-- [Quick Start Dev Guide]({{page page='start-customizing-the-nuxeo-platform'}})
-- [First Steps With Studio: Technical Documentation Tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}})
+- [Discover Nuxeo Platform APIs]({{page page='discover-nuxeo-platform-apis'}})
+- [Configure Nuxeo Platform]({{page page='configure-nuxeo-platform'}})
+- [Develop with Nuxeo Platform]({{page page='develop-with-nuxeo-platform'}})
 
 {{/panel}}
 </div>

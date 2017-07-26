@@ -192,7 +192,7 @@ my-project
 {{#> panel heading='Related Documentation'}}
 
 - [Nuxeo CLI]({{page page='nuxeo-cli'}})
-- [Getting Started with Nuxeo CLI]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-cli'}})
+- [Develop with Nuxeo Platform]({{page version='' space='nxdoc' page='develop-with-nuxeo-platform'}})
 - [Create Nuxeo Packages]({{page version='' space='nxdoc' page='creating-nuxeo-packages'}})
 
 {{/panel}}

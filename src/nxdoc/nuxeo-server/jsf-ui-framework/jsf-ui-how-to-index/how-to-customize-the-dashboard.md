@@ -115,7 +115,7 @@ history:
 ---
 ## Adding a New Entry in the Default Dashboard
 
-Goal: Displaying the list of documents of type `Contract` recently updated [(assuming you already defined documents of type&nbsp;`Contract`]({{page page='getting-started-with-nuxeo-studio'}})).
+Goal: Displaying the list of documents of type `Contract` recently updated [(assuming you already defined documents of type `Contract`]({{page page='getting-started-with-nuxeo-studio'}})).
 
 ### Creating the Content View
 

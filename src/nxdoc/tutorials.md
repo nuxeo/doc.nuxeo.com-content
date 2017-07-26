@@ -132,11 +132,11 @@ history:
 </div>
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Quick Start Series
+### Getting Started
 
-- [Getting Started with the Nuxeo Platform]({{page page='getting-started-with-the-nuxeo-platform'}})
-- [Quick Start Dev Guide]({{page page='start-customizing-the-nuxeo-platform'}})
-- [Quick Overview]({{page page='quick-overview'}})
+- [Discover Nuxeo Platform APIs]({{page page='discover-nuxeo-platform-apis'}})
+- [Configure Nuxeo Platform]({{page page='configure-nuxeo-platform'}})
+- [Develop with Nuxeo Platform]({{page page='develop-with-nuxeo-platform'}})
 {{/panel}}</div><div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
 ### Educational

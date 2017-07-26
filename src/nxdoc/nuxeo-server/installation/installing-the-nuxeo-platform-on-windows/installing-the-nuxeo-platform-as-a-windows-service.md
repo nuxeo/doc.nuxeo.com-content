@@ -576,6 +576,6 @@ You may want to have a look at [http://msdn2.microsoft.com/en-US/library/system.
 
 - [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
 - [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
-- [Quick Start Dev Guide]({{page page='start-customizing-the-nuxeo-platform'}})
+- [Discover Nuxeo Platform APIs]({{page page='discover-nuxeo-platform-apis'}})
 
 {{/panel}}</div></div>

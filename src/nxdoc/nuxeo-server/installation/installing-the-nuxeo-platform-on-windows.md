@@ -345,6 +345,6 @@ The Nuxeo Platform is available as ready-to-use 64b virtual machine images from 
 
 - [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
 - [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
-- [Quick Start Dev Guide]({{page page='start-customizing-the-nuxeo-platform'}})
+- [Discover Nuxeo Platform APIs]({{page page='discover-nuxeo-platform-apis'}})
 
 {{/panel}}</div></div>

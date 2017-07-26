@@ -648,7 +648,7 @@ Nuxeo Platform Getting Started<br/>
 Registered access
 </td>
 <td colspan="1">
-[Associated tutorial]({{page version='' space='nxdoc' page='getting-started-with-the-nuxeo-platform'}})
+[Associated tutorial]({{page version='' space='nxdoc' page='discover-nuxeo-platform-apis'}})
 </td>
 <td colspan="1">
 [Released for 9.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-getting-started?version=1.2.1)

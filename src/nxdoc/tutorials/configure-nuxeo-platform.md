@@ -1,5 +1,5 @@
 ---
-title: Customizing Nuxeo Platform with Studio Modeler and Designer
+title: Configure Nuxeo Platform
 review:
     comment: 'Created Tutorial'
     date: '2017-05-23'
@@ -8,8 +8,7 @@ labels:
     - studio
     - customization
 toc: true
-tree_item_index: 250
-
+tree_item_index: 200
 ---
 
 This tutorial introduces you to a few important aspects of **Nuxeo Studio** so that you can take advantage of this great product as quickly as possible.
@@ -192,7 +191,7 @@ To modify this constraint, under the **Configuration** menu in Studio, select **
 
 You should have something that looks like this:
 
-![BC Portfolio with BC Contract]({{file space='nxdoc' page='customizing-with-studio-and-view-designer' name='bcportfolio_with_contract.png'}} ?w=600)
+![BC Portfolio with BC Contract]({{file name='bcportfolio_with_contract.png'}} ?w=600)
 
 Now we can tinker with our Workflow!
 
@@ -215,7 +214,7 @@ This field is directly related to the **BC Contract** document type, but if you 
 4.  Drag and drop the new property from **Catalog** in the right menu to the **nuxeo-bccontract-view-layout**, then save.
 
 {{#> callout type='tip' }}
-Using the code editor ![]({{file version='' space='nxdoc' page='customizing-with-studio-and-view-designer' name='code_editor.png'}} ?w=25), you can drag and drop the property into a Polymer `dom-if` template. The one we've created will only appear in the document view layout if the contract has been cancelled.
+Using the code editor ![]({{file name='code_editor.png'}} ?w=25), you can drag and drop the property into a Polymer `dom-if` template. The one we've created will only appear in the document view layout if the contract has been cancelled.
 {{/callout}}
 
 
@@ -287,7 +286,7 @@ CONFIGURE A WORKFLOW
 
 12. Finally, reorganize the nodes and transitions to implement our new logic, and save. You should have something like this:
 
-![workflow]({{file space='nxdoc' page='customizing-with-studio-and-view-designer' name='workflow-final.png'}} ?w=450)
+![workflow]({{file name='workflow-final.png'}} ?w=450)
 
 ### Task Layouts
 
@@ -303,7 +302,7 @@ A few final touches to customize user interaction with our workflow.
 
 Return to Nuxeo Platform and perform another hot reload to deploy all your changes. Try creating documents with different signature dates and launching the **Cancel Contract** process from each one. You will have to log in as the other users you've created in order to complete all the tasks.
 
-![Start Process]({{file space='nxdoc' page='customizing-with-studio-and-view-designer' name='start_process.png'}} ?w=600)
+![Start Process]({{file name='start_process.png'}} ?w=600)
 
 ## Search
 
@@ -371,7 +370,7 @@ In **View Designer**, scroll down the **Layouts** menu to **Page Providers**, se
 
 2.  Then open **results** and drag columns from the menu on the right to customize your search results layout.
 
-3.  From the **UI** menu, select **Left Menu Items** and hover over ![]({{file version='' space='nxdoc' page='web-ui-overview' name='create_button.png'}} ?w=25) to select the Search drawer. Then fill in the form:
+3.  From the **UI** menu, select **Left Menu Items** and hover over ![]({{file name='create_button.png'}} ?w=25) to select the Search drawer. Then fill in the form:
 
 <div class="table-scroll">
   <table class="hover">
