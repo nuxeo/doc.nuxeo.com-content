@@ -17,7 +17,7 @@ labels:
     - lts2016-ok
 toc: true
 version_override:
-    'FT': 'nxdoc/getting-started-with-nuxeo-cli'
+    'FT': 'nxdoc/develop-with-nuxeo-platform'
     LTS 2015: 710/nxdoc/getting-started-with-nuxeo-ide
     '6.0': 60/nxdoc/getting-started-with-nuxeo-ide
 tree_item_index: 200

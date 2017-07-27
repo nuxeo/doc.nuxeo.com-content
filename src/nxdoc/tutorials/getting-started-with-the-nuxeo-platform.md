@@ -7,6 +7,8 @@ review:
 labels:
     - lts2016-ok
 tree_item_index: 100
+version_override:
+  'FT': 'nxdoc/discover-nuxeo-platform'
 history:
     -
         author: Solen Guitter
