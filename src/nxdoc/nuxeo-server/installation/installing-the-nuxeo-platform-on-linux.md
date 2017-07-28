@@ -387,26 +387,20 @@ This requires X11.
 6.  Open a browser and type the URL <a>http://localhost:8080/nuxeo/.</a>
     The [startup wizard]({{page page='configuration-wizard'}}) is displayed so you can setup your Nuxeo platform and select the module you want to install.
 
-&nbsp;
-
 {{! /multiexcerpt}}
 
-&nbsp;
 
 ### From the Terminal
 
 {{! multiexcerpt name='apt-repo-install-terminal'}}
 
-    {{#> callout type='tip' }}
 
-    The GnuPG package may be missing since Debian Stretch (9):
-    
-    ```
-    sudo apt-get install gnupg
-    ```
-
-    {{/callout}}
-
+{{#> callout type='tip' }}
+The GnuPG package may be missing since Debian Stretch (9):
+```
+sudo apt-get install gnupg
+```
+{{/callout}}
 
 1.  Import the Nuxeo key.
 
@@ -431,6 +425,7 @@ This requires X11.
     ```
 
     {{/callout}}
+
 3.  Update your APT cache.
 
     ```bash
