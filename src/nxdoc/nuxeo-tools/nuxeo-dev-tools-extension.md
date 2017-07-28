@@ -74,4 +74,5 @@ Planned improvements for the browser extension:
 
 
 <iframe src="https://ext.prodpad.com/ext/roadmap/3cb7ad79a0f9fce3382633f486d40cfa15430ece" height="210" width="100%"></iframe>
-{{{multiexcerpt 'ProdpadFeedback' page='generic-multi-excerpts'}}}
+
+You can also give us your feedback and suggestions through our [feedback portal](https://portal.prodpad.com/40c295d6-739d-11e7-9e52-06df22ffaf6f).
