@@ -452,7 +452,7 @@ ${workflowDocuments[0].property}`
 
 {{! multiexcerpt name='el-language-jsf'}}
 {{#> callout type='note' heading='About EL language'}}
-EL language relates to the JSF UI. If you intend on using it, please make sure you installed the `nuxeo-jsf-ui` package in Nuxeo Platform and that you selected it in your application dependencies screen in Nuxeo Studio.
+EL language relates to the JSF UI. If you intend on using it, please make sure you installed the `nuxeo-jsf-ui` package in Nuxeo Platform and that you selected it in your application definition screen in Nuxeo Studio.
 {{/callout}}
 {{! /multiexcerpt}}
 

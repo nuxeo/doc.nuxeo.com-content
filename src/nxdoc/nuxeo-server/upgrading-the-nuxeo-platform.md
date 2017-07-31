@@ -484,7 +484,7 @@ Make sure no jobs are still queued or running before starting the upgrade proced
 
 To upgrade your Nuxeo Studio project:
 
-1.  in the Nuxeo Studio **Settings**, change your target platform from the **Application Dependencies** menu.
+1.  in the Nuxeo Studio **Settings**, change your target platform from the **Application Definition** menu.
 2.  In **Source Control** > **Branch Management**, click on the **Tag** button of the last commit (or of the last relevant commit) to save your Studio project state in a new version.
 3.  Install the newly tagged version of your Project on your platform by running `nuxeoctl mp-install StudioProjectName-tagName`.
 
