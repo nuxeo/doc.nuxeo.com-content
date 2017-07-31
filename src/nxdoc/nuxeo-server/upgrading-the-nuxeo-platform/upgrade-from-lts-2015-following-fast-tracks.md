@@ -699,7 +699,7 @@ The operations used by select2 widgets have been extracted from the nuxeo-platfo
 
  {{! /multiexcerpt}}
 
-### Nuxeo Studio Application Dependencies
+### Nuxeo Studio Application Definition
 
  {{! multiexcerpt name='upgrade-8.10-studio-deps'}}
  Make sure your Nuxeo Studio project depends on the **Nuxeo JSF UI** target package. See the pages [How to Update the Version of Your Target Platform in Studio]({{page space='studio' page='update-the-version-of-your-target-platform'}}) and [Specific Upgrade Instructions]({{page space='studio' page='specific-upgrade-instructions'}}) for more details.

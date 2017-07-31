@@ -385,7 +385,7 @@ In this section we provide example names for items. You'll see different names i
 
 {{! multiexcerpt name='check-jsf-ui-dependency'}}
 
-Make sure the Nuxeo JSF UI target package is checked in your project's [Application Dependencies]({{page page='application-dependencies'}}) to get all the needed features in Nuxeo Studio.
+Make sure the Nuxeo JSF UI target package is checked in your project's [Application Definition]({{page space='studio' page='application-definition'}}) to get all the needed features in Nuxeo Studio.
 
 {{! /multiexcerpt}}
 
