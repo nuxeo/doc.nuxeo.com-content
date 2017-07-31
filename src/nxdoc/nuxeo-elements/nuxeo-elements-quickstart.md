@@ -103,9 +103,9 @@ history:
 ---
 ## Requirements
 
-*   [Node.js](https://nodejs.org/)&nbsp;is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client side development is built with Node.js and distributed with npm, the package manager for node, so just make sure you download and install your OS specific version first.
+*   [Node.js](https://nodejs.org/) is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client side development is built with Node.js and distributed with npm, the package manager for node, so just make sure you download and install your OS specific version first.
 
-*   [Bower](http://bower.io/) is currently **the&nbsp;**tool for managing web application dependencies. To install it just use:
+*   [Bower](http://bower.io/) is currently **the** tool for managing web application dependencies. To install it just use
 
     ```bash
     npm install -g bower
@@ -147,7 +147,7 @@ Let's build a very simple application showcasing usage of the `nuxeo-connection`
     gulp serve
     ```
 
-    **Note:&nbsp;**the README.md includes detailed information about the generated application so it's a good starting point to understand its structure.
+    **Note:** the README.md includes detailed information about the generated application so it's a good starting point to understand its structure.
 
     ![]({{file name='polymer_app_sample.png'}} ?w=600,border=true)
 
@@ -202,7 +202,7 @@ There is now a connection to the Nuxeo instance. Note that you will need to defi
 
 ### Retrieving Users
 
-Replace the hard-coded user listing with actual data: use the **nuxeo-resource&nbsp;**element and Nuxeo's REST API, namely the `/api/v1/user/search` endpoint, and to retrieve a list of users.
+Replace the hard-coded user listing with actual data: use the **nuxeo-resource** element and Nuxeo's REST API, namely the `/api/v1/user/search` endpoint, and to retrieve a list of users.
 
 ```xml
 <section data-route="users">
