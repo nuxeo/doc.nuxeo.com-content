@@ -213,13 +213,13 @@ Just follow these steps:
 
 1. You need a hierarchical vocabulary: you can [configure one using Studio]({{page page='how-to-add-a-new-vocabulary'}});
 2. You need to have a [document type]({{page page='how-to-define-a-document-type'}}) that uses the hierarchical vocabulary for filling the value in one of its forms.
-3. In the **Settings** > **Application Dependencies** menu, make sure the target package Nuxeo JSF UI is checked.
+3. In the **Settings** > **Application Definition** menu, make sure the target package Nuxeo JSF UI is checked.
 
-## Configure the Virtual Navigation Query and Link&nbsp;{{> anchor 'configure-virtual-navigation'}}
+## Configure the Virtual Navigation Query and Link {{> anchor 'configure-virtual-navigation'}}
 
 **To create a new virtual navigation:**
 
-1.  Make sure you have **enabled** Virtual Navigation in your **application dependencies**.
+1.  Make sure you have **enabled** Virtual Navigation in your **Application Definition**.
 2.  Unfold the **Listings & Views** menu entry and click on **Virtual Navigations**.
     The list of existing custom virtual navigations is displayed.
 3.  Click on the **New** button.

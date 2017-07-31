@@ -73,7 +73,7 @@ tree_item_index: 96
 </table>
 </div>
 
-### Nuxeo Studio Application Dependencies
+### Nuxeo Studio Application Definition
 
 {{{multiexcerpt 'upgrade-9.1-studio-deps' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 

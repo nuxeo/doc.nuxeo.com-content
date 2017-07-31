@@ -200,9 +200,9 @@ This how-to requires knowledge about:
 *   [Content views]({{page page='how-to-define-a-new-content-view'}}).
 
 <br />
-Customization done in this how-to relates to the Nuxeo Platform's JSF UI. Before continuing: 
+Customization done in this how-to relates to the Nuxeo Platform's JSF UI. Before continuing:
 
-*   Make sure to select JSF UI in Nuxeo Studio's [application dependencies]({{page space='studio' page='application-dependencies'}}) screen.
+*   Make sure to select JSF UI in Nuxeo Studio's [application definition]({{page space='studio' page='application-definition'}}) screen.
 *   [Install the nuxeo-jsf-ui package]({{page page='installing-a-new-package-on-your-instance'}}) in your Nuxeo Platform instance.
 
 {{/callout}}
@@ -315,10 +315,10 @@ In content views the way to fetch all documents for which the "recall date" is o
 
     {{#> callout type='tip' }}
 
-    You will probably want to add other criteria to you query filter: 
-    *   Adding `ecm:currentLifeCycleState` will only fetch documents in the appropriate lifecycle state. 
-    *   Adding `ecm:path` will only fetch documents located at the specified folder. 
-    
+    You will probably want to add other criteria to you query filter:
+    *   Adding `ecm:currentLifeCycleState` will only fetch documents in the appropriate lifecycle state.
+    *   Adding `ecm:path` will only fetch documents located at the specified folder.
+
     You may refer to the [NXQL]({{page page='nxql'}}) documentation for an exhaustive options list.
 
     {{/callout}}
