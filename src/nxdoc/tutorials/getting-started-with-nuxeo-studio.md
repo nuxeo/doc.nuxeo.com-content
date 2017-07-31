@@ -217,7 +217,7 @@ Our firs goal is to change the logo displayed in the banner of the Nuxeo Platfor
 
 **Change the logo:**
 
-1.  In Studio's menu, under **Customization**, click on the **Branding** section.
+1.  In Studio's menu, under **Configuration**, click on the **Branding** section.
 2.  Click on the **New** button.
 3.  In Feature ID field, type "MyBranding" and click on the **Next** button.
 
@@ -245,7 +245,7 @@ Here we want to create a custom document type named "Contract" that will hold sp
 
 ### Studio Customization
 
-1.  In Studio's menu, under **Customization**, click on the **Content Model** section, then **Document Types**. Click on the **New** button.
+1.  In Studio's menu, under **Configuration**, click on the **Content Model** section, then **Document Types**. Click on the **New** button.
 2.  Fill in the creation form as follows and click on **Next**:
       **ID**: Contract
       **Extends**: File

@@ -220,4 +220,4 @@ function assertResult(result) {
 
 Sometimes you might need to create automation operations or chains that shouldn't be accessible to everybody. Nuxeo Studio allows you to apply restrictions to them.
 
-In the **Customization** menu, choose **Advanced Settings** > **Web Services Filtering** and create a new filter. You can then choose to restrict or disable operations and chains.
+In the **Configuration** menu, choose **Advanced Settings** > **Web Services Filtering** and create a new filter. You can then choose to restrict or disable operations and chains.
