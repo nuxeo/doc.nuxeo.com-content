@@ -9,7 +9,7 @@ details:
         excerpt: >-
             If you installed the Nuxeo CSV add-on from the Nuxeo Marketplace,
             you'll probably want to enable CSV import on the document types you
-            defined. Here is how to do that. 
+            defined. Here is how to do that.
         level: Beginner
         tool: Studio
         topics: 'Document type, Nuxeo CSV'
@@ -31,79 +31,79 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/qoGyAQ'
     source_link: /display/NXDOC710/How+to+Enable+CSV+Import+on+a+Custom+Document+Type
 history:
-    - 
+    -
         author: Frantz Fischer
         date: '2016-04-12 07:40'
         message: ''
         version: '15'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-13 13:31'
         message: improved path description to 'XML extension'
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:30'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 18:05'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 00:57'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 00:56'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-16 16:18'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 15:03'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-13 18:09'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-13 18:08'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-13 18:02'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-13 17:48'
         message: Added related content
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-13 17:46'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-12 11:32'
         message: >-
             Use several <type> tags instead of <rule> to enable CSV import on
-            several doc types 
+            several doc types
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-12 11:02'
         message: ''
@@ -118,7 +118,7 @@ If you installed the Nuxeo CSV add-on from the Nuxeo Marketplace, you'll probabl
 
 {{! /excerpt}}
 
-1.  In [Studio]({{page space='studio'}}), on the left side, under **Customization**, in the **Advanced Settings** menu, click on **XML Extensions**.
+1.  In [Studio]({{page space='studio'}}), on the left side, under **Configuration**, in the **Advanced Settings** menu, click on **XML Extensions**.
 2.  Click on **New** to create a new extension.
 3.  Give it an ID and click on **Next**.
 
