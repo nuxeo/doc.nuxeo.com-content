@@ -232,7 +232,7 @@ This is where you can define a schema for your document type. It shows:
 {{#> callout type='info' heading='Requirement'}}
 {{! multiexcerpt name='tab-jsf-ui-target-package-requirement'}}
 
-Select the Nuxeo JSF UI target package in your [Application Dependencies]({{page page='application-dependencies'}}) for this feature to be available.
+Select the Nuxeo JSF UI target package in your [Application Definition]({{page page='application-definition'}}) for this feature to be available.
 
 {{! /multiexcerpt}}
 {{/callout}}

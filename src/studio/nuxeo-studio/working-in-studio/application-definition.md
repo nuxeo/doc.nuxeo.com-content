@@ -1,5 +1,5 @@
 ---
-title: Application Dependencies
+title: Application Definition
 review:
     comment: ''
     date: ''
@@ -54,9 +54,9 @@ history:
         version: '1'
 
 ---
-The Application Dependencies page enables you to manage the requirements of your Nuxeo Studio project and your application.
+The Application Definition page enables you to manage the requirements of your Nuxeo Studio project and your application.
 
-![]({{file name='application-dependencies.png'}} ?w=650,border=true)
+![]({{file name='application-definition.png'}} ?w=650,border=true)
 
 *   **Target Platform:** The target platform of the customization. For more information about target platform see the</span> [Upgrade Instructions]({{page page='specific-upgrade-instructions'}}) page.
 *   **Target Packages:** The list of additional packages that bring additional features to your application and need to be installed on your instance.
