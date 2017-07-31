@@ -84,7 +84,7 @@ history:
 
 {{! multiexcerpt name='application-template-import'}}
 
-1.  Go to **Customization** > **External Templates**
+1.  Go to **Configuration** > **External Templates**
     All the available templates are displayed. If a template is not compatible with your project target version (ex: Nuxeo DM 5.4.0, Nuxeo DM 5.4.2), it is displayed with a little sign ![]({{file name='unabled_small.png'}} ?w=16,h=16) that says "not compatible".
 
 2.  Click on the **Details** link of the template that you're interested in to check what the template includes.
