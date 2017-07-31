@@ -123,7 +123,7 @@ If you installed the Nuxeo CSV add-on from the Nuxeo Marketplace, you'll probabl
 
 {{! /excerpt}}
 
-1.  In [Studio]({{page space='studio'}}), on the left side, under **Customization**, in the **Advanced Settings** menu, click on **XML Extensions**.
+1.  In [Studio]({{page space='studio'}}), on the left side, under **Configuration**, in the **Advanced Settings** menu, click on **XML Extensions**.
 2.  Click on **New** to create a new extension.
 3.  Give it an ID and click on **Next**.
 

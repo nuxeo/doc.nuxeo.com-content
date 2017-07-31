@@ -27,7 +27,7 @@ Refer to the [CORS documentation]({{page version='' space='nxdoc' page='cross-or
 
 ### Practice - CORS Configuration
 
-1.  In **Nuxeo Studio** under **Customization**, select **Advanced Settings** > **XML Extensions**.
+1.  In **Nuxeo Studio** under **Configuration**, select **Advanced Settings** > **XML Extensions**.
 2.  Create an XML extension, `RestApiTutorial`, which:
       - only allows requests from https://foobar.com and its subdomains
       - supports the following methods: `GET, PUT, POST, DELETE, HEAD, OPTIONS`
