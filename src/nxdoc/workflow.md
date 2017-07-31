@@ -214,7 +214,7 @@ They are also available as an application template in Nuxeo Studio so as to enab
 
 ![]({{file name='Screenshot 2015-06-02 11.27.17.png'}} ?w=600,border=true)
 
-It is possible to import this package from your Studio project : Go to **Customization** > **External Templates** > **<span style="color: rgb(67,67,67);">Default Nuxeo Platform Workflows Configuration</span>**&nbsp;and click on **Import**.
+It is possible to import this package from your Studio project : Go to **Configuration** > **External Templates** > **<span style="color: rgb(67,67,67);">Default Nuxeo Platform Workflows Configuration</span>**&nbsp;and click on **Import**.
 
 See the page [Serial Document Workflow]({{page space='userdoc710' page='serial-document-workflow'}}) and [Parallel Document Workflow]({{page space='userdoc710' page='parallel-document-workflow'}}) for more details about showcased default workflows.
 
