@@ -194,7 +194,7 @@ With Nuxeo Studio, you can configure as many virtual navigation views as you nee
 
 **To create a new virtual navigation:**
 
-1.  Make sure you have **enabled** Virtual Navigation in your **application dependencies**.
+1.  Make sure you have **enabled** Virtual Navigation in your **Application Definition**.
 2.  Unfold the **Listings & Views** menu entry and click on **Virtual Navigations**.
     The list of existing custom virtual navigations is displayed.
 3.  Click on the **New** button.
