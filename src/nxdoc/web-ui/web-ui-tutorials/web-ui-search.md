@@ -37,7 +37,7 @@ Once you are all set, you can navigate to Nuxeo Studio to start creating your se
 
 The first step is to create a [page provider]({{page version='' space='studio' page='page-providers'}}) in Nuxeo Studio.
 
-In **Customization**, go to **Page Providers**, click on **New** and name it `Search`.
+In **Configuration**, go to **Page Providers**, click on **New** and name it `Search`.
 
 **The full text search:**
 ![]({{file name='full-text-vd.png'}} ?w=250, border=true)
