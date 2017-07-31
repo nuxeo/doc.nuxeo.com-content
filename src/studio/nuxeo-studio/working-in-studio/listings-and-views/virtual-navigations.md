@@ -66,7 +66,7 @@ A virtual navigation is a [content view]({{page page='content-views'}}) whose fi
 
 ## Pre-Requisites
 
-You need to select the Virtual Navigation target package in your [Application Dependencies]({{page page='application-dependencies'}}) for this menu entry to be available.
+You need to select the Virtual Navigation target package in your [Application Definition]({{page page='application-definition'}}) for this menu entry to be available.
 
 ## Definition Tab
 

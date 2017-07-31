@@ -228,7 +228,7 @@ This tab lets you define:
 
 {{! multiexcerpt name='jsf-ui-target-package-requirement-in-content-view'}}
 
-Select the Nuxeo JSF UI target package in your [Application Dependencies]({{page page='application-dependencies'}}) for the Content View feature to be available.
+Select the Nuxeo JSF UI target package in your [Application Definition]({{page page='application-definition'}}) for the Content View feature to be available.
 
 {{! /multiexcerpt}}
 

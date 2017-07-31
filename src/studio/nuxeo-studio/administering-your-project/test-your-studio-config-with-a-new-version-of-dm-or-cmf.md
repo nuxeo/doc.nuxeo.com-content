@@ -38,7 +38,7 @@ history:
 Let's suppose you are currently using Nuxeo 5.4.1 with a configuration achieved in Studio, and the 5.4.2 RC has been announced on Nuxeo website. RC means "Release candidate". It means it is very close to what will be release soon, but that feedback from community is accepted to improve the quality of the release. If you want to try it, just follow those steps:
 
 *   Make a backup of your config to be able to switch back easily later on : go to "versions" link and click on the "tag" button, on the right. Give the name "config ok with 5.4.1" (for instance).
-*   Switch your configuration to 5.4.2 by going to "Settings > Application Dependencies" and choose Nuxeo 5.4.2
+*   Switch your configuration to 5.4.2 by going to **Settings** > **Application Definition** and choose Nuxeo 5.4.2
 *   Now startup your 5.4.2 DM instance, in the startup wizzard, at step 5 (when it asks you to create a connect account), click on the link that says that you already have an account and fill in your connect id and password, then choose your project (you might have only one).
 *   Restart the server (if it doesn't restart automatically)
 *   Go to the admin center > update center and update your studio configuration

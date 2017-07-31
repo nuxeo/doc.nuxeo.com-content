@@ -129,7 +129,7 @@ In this chapter we will explain each screen exposed by Nuxeo Studio. If you are 
 ### Settings
 
 - [Application Information]({{page space='Studio' page='Application Information'}})
-- [Application Dependencies]({{page space='Studio' page='Application Dependencies'}})
+- [Application Definition]({{page space='Studio' page='application-definition'}})
 - [Registries]({{page space='Studio' page='Registries'}})
 
 {{/panel}}

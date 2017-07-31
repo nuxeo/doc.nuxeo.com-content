@@ -96,7 +96,7 @@ When upgrading your target platform in Studio, Studio will take care of generati
 
 ## Upgrading to LTS 2015 and LTS 2016
 
-Select the Nuxeo JSF UI target package in your [Application Dependencies]({{page page='application-dependencies'}}) for the content views, layouts, tabs and search customizations to be available.
+Select the Nuxeo JSF UI target package in your [Application Definition]({{page page='application-definition'}}) for the content views, layouts, tabs and search customizations to be available.
 
 
 ## {{> anchor 'to-60'}}Upgrading to 6.0
@@ -126,7 +126,7 @@ In Studio your content views automatically gets a **FACETED_SEARCH*** flag. Unch
 
 If you want to keep your faceted search left tab in the Workspace main tab:
 
-*   In Studio check the Faceted search target package in the Application Dependencies section.
+*   In Studio check the Faceted search target package in the Application Definition section.
     The Faceted search flag is available and checked on your content views.
 *   In your Nuxeo Platform instance, install the Faceted search add-on.
 
@@ -134,7 +134,7 @@ If you want to keep your faceted search left tab in the Workspace main tab:
 
 Pictures were previously coming with the Document Management module, but are now available as part of the DAM add-on. When you migrate your project to 6.0, you need to:
 
-1.  Select the DAM target package in the Studio Application Dependencies section.
+1.  Select the DAM target package in the Studio Application Definition section.
 2.  On your Nuxeo Platform instance, you need to install the DAM add-on.
 
 ### Migrating a DAM Project

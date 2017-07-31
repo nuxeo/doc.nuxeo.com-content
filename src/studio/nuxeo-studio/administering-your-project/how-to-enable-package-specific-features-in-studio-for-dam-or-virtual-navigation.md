@@ -69,7 +69,7 @@ Nuxeo Studio enables specific features for the packages you want to deploy on to
 
 ## How to Choose a Package in My Settings?
 
-To choose a package in Studio, you should go to **Settings**&nbsp;> **Application Dependencies**&nbsp;> **Target Packages**.
+To choose a package in Studio, you should go to **Settings** > **Application Definition**> **Target Packages**.
 
 ![]({{file name='Screenshot_20_06_13_17_16.png'}} ?w=650,h=356,border=true)
 
