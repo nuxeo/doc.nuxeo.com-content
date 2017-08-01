@@ -119,9 +119,13 @@ Nuxeo is shipped with an embedded Tomcat server.
 <tr>
 <th colspan="1">Redis</th>
 <td colspan="1">2.8.x <br />
-3.0.x</td>
+3.0.x<br />
+3.2.x<br />
+4.0.x</td>
 <td colspan="1">2.8.x<br />
-3.0.x</td>
+3.0.x<br />
+3.2.x<br />
+4.0.x</td>
 <td colspan="1">2.8</td>
 </tr>
 </tbody>
