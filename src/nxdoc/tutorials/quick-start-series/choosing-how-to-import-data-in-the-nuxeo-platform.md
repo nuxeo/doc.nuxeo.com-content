@@ -2,7 +2,7 @@
 title: Choosing How to Import Data in the Nuxeo Platform
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-08-01'
     status: ok
 labels:
     - lts2016-ok
@@ -242,3 +242,9 @@ You can straightly use the REST API and implement the importing logic you need f
 ### Using the Bare Java API
 
 You can use the CoreSession object in a server-side deployed custom Java component and implement the importing logic you need from there. We also provide a default [import/export format]({{page page='nuxeo-core-import-export-api'}}) for the repository with piping logic.
+
+{{#> callout type='info' heading='Learn more'}}
+
+*   [Data Capture from Nuxeo University](https://university.nuxeo.com/store/220415-data-capture)
+
+{{/callout}}
