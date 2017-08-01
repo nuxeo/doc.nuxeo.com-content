@@ -143,7 +143,7 @@ For a robust production instance, the first point is always necessary, which mea
 
 ## Configuring Redis
 
-The Nuxeo Platform supports the following Redis versions: 2.8.x and 3.0.x.
+The Nuxeo Platform supports the following Redis versions: 2.8.x, 3.0.x, 3.2.x and 4.0.x.
 
 The following Redis configuration points should be checked:
 
