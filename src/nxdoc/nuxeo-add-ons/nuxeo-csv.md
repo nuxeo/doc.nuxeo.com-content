@@ -2,7 +2,7 @@
 title: Nuxeo CSV
 review:
     comment: ''
-    date: '2017-01-23'
+    date: '2017-08-01'
     status: ok
 labels:
     - lts2016-ok
@@ -515,3 +515,9 @@ Note that the event raised by this CSV import is a **creation event**, not an im
 {{/panel}}
 </div>
 </div>
+
+{{#> callout type='info' heading='Learn more'}}
+
+*   [Data Capture / Nuxeo CSV from Nuxeo University](https://university.nuxeo.com/store/220415-data-capture)
+
+{{/callout}}
