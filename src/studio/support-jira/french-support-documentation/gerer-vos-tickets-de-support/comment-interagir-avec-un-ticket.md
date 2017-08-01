@@ -42,49 +42,49 @@ history:
         version: '1'
 
 ---
-Voici une repr&eacute;sentation simplifi&eacute;e du workflow de traitement d'un ticket :
+Voici une représentation simplifiée du workflow de traitement d'un ticket :
 
 ![]({{file name='workflow_fr.png'}} ?w=400,border=true)
 
-Tout au long du traitement du ticket, celui-ci sera assign&eacute; &agrave; une personne de Nuxeo, en charge de fournir les r&eacute;ponses.
+Tout au long du traitement du ticket, celui-ci sera assigné à une personne de Nuxeo, en charge de fournir les réponses.
 
-## &Eacute;tat Ouvert
+## État Ouvert
 
-Il s'agit de l'&eacute;tat initial du ticket. Cela indique &agrave; l'&eacute;quipe de Support qu'elle doit prendre en charge le ticket. A partir de cet &eacute;tat, plusieurs actions sont possibles, qui vont amener le ticket dans un nouvel &eacute;tat.
+Il s'agit de l'état initial du ticket. Cela indique à l'équipe de Support qu'elle doit prendre en charge le ticket. A partir de cet état, plusieurs actions sont possibles, qui vont amener le ticket dans un nouvel état.
 
-Apr&egrave;s une premi&egrave;re analyse, l'&eacute;quipe de Support va passer le ticket dans l'un des &eacute;tats suivants :
+Après une première analyse, l'équipe de Support va passer le ticket dans l'un des états suivants :
 
-*   &laquo; En cours &raquo;, indiquant que le probl&egrave;me remont&eacute; est reproduit et que le ticket est en cours de traitement ;
-*   &laquo; Acknowledged &raquo;, pour indiquer que le probl&egrave;me a bien &eacute;t&eacute; constat&eacute;, que tous les &eacute;l&eacute;ments n&eacute;cessaires au traitement sont pr&eacute;sents et signaler que la r&eacute;solution aura lieu ult&eacute;rieurement (escalade) ;
-*   &laquo; En attente de feedback &raquo;, quand le support a pos&eacute; des questions compl&eacute;mentaires pour mieux comprendre les questions ou probl&egrave;mes remont&eacute;s ;
-*   &laquo; R&eacute;solu &raquo; quand le support fournit une r&eacute;ponse consid&eacute;r&eacute;e comme satisfaisante.
+- **En cours**, indiquant que le problème remonté est reproduit et que le ticket est en cours de traitement ;
+- **Acknowledged**, pour indiquer que le problème a bien été constaté, que tous les éléments nécessaires au traitement sont présents et signaler que la résolution aura lieu ultérieurement (escalade) ;
+- **En attente de feedback**, quand le support a posé des questions complémentaires pour mieux comprendre les questions ou problèmes remontés ;
+- **Résolu**, quand le support fournit une réponse considérée comme satisfaisante.
 
-## &Eacute;tat En attente de feedback
+## État En attente de feedback
 
-Cet &eacute;tat indique que l'&eacute;quipe de Support est en attente d'une action de votre part, suite aux questions qui ont &eacute;t&eacute; pos&eacute;es :
+Cet état indique que l'équipe de Support est en attente d'une action de votre part, suite aux questions qui ont été posées :
 
-*   si vous fournissez toutes les r&eacute;ponses aux questions pos&eacute;es par l'&eacute;quipe de Support, vous devez activer le bouton &laquo; Give Feedback &raquo; pour que le ticket retourne sous la surveillance du support ;
-*   si vous ne fournissez qu'une r&eacute;ponse partielle ou bien si vous indiquez que vous allez continuer votre investigation, le ticket doit rester dans l'&eacute;tat &laquo; En attente de feedback &raquo; jusqu'&agrave; la fourniture de tous les &eacute;l&eacute;ments n&eacute;cessaires &agrave; la poursuite du traitement ;
-*   dernier cas, il se peut que les questions du support vous aiguille vers une solution : dans ce cas, vous devez directement fermer le ticket avec un commentaire.
+- Si vous fournissez toutes les réponses aux questions posées par l'équipe de Support, vous devez activer le bouton "Give Feedback" pour que le ticket retourne sous la surveillance du support ;
+- Si vous ne fournissez qu'une réponse partielle ou bien si vous indiquez que vous allez continuer votre investigation, le ticket doit rester dans l'état "En attente de feedback" jusqu'à la fourniture de tous les éléments nécessaires à la poursuite du traitement ;
+- Dernier cas, il se peut que les questions du support vous aiguille vers une solution : dans ce cas, vous devez directement fermer le ticket avec un commentaire.
 
-Comme conclusion, ne pas activer le bouton &laquo; Give Feedback &raquo; tant que tous les &eacute;l&eacute;ments de r&eacute;ponse n'ont pas &eacute;t&eacute; fournis.
+Comme conclusion, ne pas activer le bouton "Give Feedback" tant que tous les éléments de réponse n'ont pas été fournis.
 
-## &Eacute;tat R&eacute;solu
+## État Résolu
 
-Quand le Support a r&eacute;pondu &agrave; la question initialement pos&eacute;e ou fourni une correction pour une anomalie, il marque le ticket comme r&eacute;solu. C'est alors au client d'intervenir :
+Quand le Support a répondu à la question initialement posée ou fourni une correction pour une anomalie, il marque le ticket comme résolu. C'est alors au client d'intervenir :
 
-*   Si la r&eacute;ponse fournie n'est pas satisfaisante ou ne corrige pas le probl&egrave;me, vous devez rouvrir le ticket en pr&eacute;cisant ce qui ne convient pas.
-*   Si vous validez la solution propos&eacute;e, vous devez fermer la demande.
+- Si la réponse fournie n'est pas satisfaisante ou ne corrige pas le problème, vous devez rouvrir le ticket en précisant ce qui ne convient pas.
+- Si vous validez la solution proposée, vous devez fermer la demande.
 
-Quand vous avez valid&eacute; la r&eacute;ponse propos&eacute;e, le ticket ne doit pas &ecirc;tre utilis&eacute; pour poser de nouvelles questions et soumettre de nouvelles anomalies, ni rouvrir la demande. Il reste ferm&eacute; et les nouvelles demandes doivent faire l'objet d'un nouveau ticket afin que le ticket ne traite que d'un sujet unique.
+Quand vous avez validé la réponse proposée, le ticket ne doit pas être utilisé pour poser de nouvelles questions et soumettre de nouvelles anomalies, ni rouvrir la demande. Il reste fermé et les nouvelles demandes doivent faire l'objet d'un nouveau ticket afin que le ticket ne traite que d'un sujet unique.
 
-Vous pourrez toutefois demander un court compl&eacute;ment de r&eacute;ponse en commentaire, et ce sans rouvrir le ticket.
+Vous pourrez toutefois demander un court complément de réponse en commentaire, et ce sans rouvrir le ticket.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Pages connexes'}}
 
-*   [Comment remplir un ticket Jira]({{page space='connect' page='comment-remplir-un-ticket-jira'}})
-*   [Suivi des tickets client]({{page space='connect' page='suivi-des-tickets-client'}})
-*   [Gérer vos tickets de support]({{page space='connect' page='gandeacuterer-vos-tickets-de-support'}})
+- [Comment remplir un ticket Jira]({{page space='connect' page='comment-remplir-un-ticket-jira'}})
+- [Suivi des tickets client]({{page space='connect' page='suivi-des-tickets-client'}})
+- [Gérer vos tickets de support]({{page space='connect' page='gandeacuterer-vos-tickets-de-support'}})
 
 {{/panel}}</div><div class="column medium-6">
 
