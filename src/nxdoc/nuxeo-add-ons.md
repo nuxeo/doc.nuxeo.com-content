@@ -304,7 +304,7 @@ Public
 [Documentation]({{page page='howto-nuxeo-api-playground'}})
 </td>
 <td colspan="1">
-[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-api-playground?version=1.1.2)
+[Released for 9.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-api-playground?version=1.2.1)
 </td>
 </tr>
 <tr>
