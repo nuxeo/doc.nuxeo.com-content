@@ -362,7 +362,7 @@ This file is for illustration and contains many more options than are necessary 
 <pool minPoolSize="0" maxPoolSize="20"
   blockingTimeoutMillis="100"
   idleTimeoutMinutes="10"
-  idleTimeoutMinutes="10" />
+  activeTimeoutMinutes="5" />
 
 ```
 
