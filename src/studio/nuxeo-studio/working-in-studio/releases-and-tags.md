@@ -57,7 +57,7 @@ The releases and tags tab allows to list each and every releases and tags that w
 
 ![]({{file name='Screen Shot 2016-03-22 at 00.05.22.png'}} ?w=650,border=true)
 
-**Download Package**: You can install a release via the Update Center if your Nuxeo Platform instance is connected to internet, or by downloading the release package from this tab and then ask the administrator of the instance to install it locally using nuxeoctl or the update center / local package tab.
+**Download Package**: You can downloading the release package and ask the administrator of the instance to install it via the Update Center if your Nuxeo Platform instance is connected to internet, or using `nuxeoctl`. See the page [Installing a New Package on Your Instance]({{page version='' space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
 
 ## Tags Tab
 
@@ -69,7 +69,7 @@ The releases and tags tab allows to list each and every releases and tags that w
 
 **Download JAR:** Download the JAR
 
-**Download Package:** You can download the tag package from this tab and then ask the administrator of the instance to install it locally using nuxeoctl or the update center / local package tab.
+**Download Package:** You can download the tag package from this tab and then ask the administrator of the instance to install it via the Update Center if your Nuxeo Platform instance is connected to internet, or using `nuxeoctl`. See the page [Installing a New Package on Your Instance]({{page version='' space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
 
 {{#> callout type='warning' }}
 

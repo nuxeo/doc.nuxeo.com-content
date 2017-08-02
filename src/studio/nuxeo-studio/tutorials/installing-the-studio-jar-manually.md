@@ -245,15 +245,15 @@ history:
 
 In some situations, your Nuxeo Platform doesn't have access to internet. For deploying your Studio customization, you need to install the JAR in the correct place on the Nuxeo Platform folder layout and restart your server. See details below.
 
-1.  Click on the icon ![]({{file name='edit_wiz.png' page='studio-icons-index'}}) and then on the **Download** link.
-    This will download the latest "trunk" configuration.
-    For a specific release, you should go to **Source Control** > **Releases and Tags**, Select the version you want and click on **Download**.
-2.  Accept to download the JAR.
-3.  Copy it to the plugins folder of your Nuxeo Platform instance: `$NUXEO_HOME/nxserver/plugins`
-4.  Restart your server.
+1.  Click on your project's name and then on the **Download Package** item.
+  ![]({{file name='studio-project-name-menu.png'}} ?w=300,border=true)
+    A snapshot package of your project is generated as a ZIP file.
+    To download a specific version of the Studio project, go to **Source Control**&nbsp;> **Releases and Tags**, select the version you want and click on **Download**.
+1.  Download the ZIP.
+1. Install the Studio package:
+  * Using the `nuxeoctl mp-install` command and provide the path to the ZIP as the package name
+  * From the **Admin**&nbsp;> **Update Center**&nbsp;> **Local Packages**, using the **Upload a Package** button.
+
+  See the page [Installing a New Package on Your Instance]({{page version='' space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
 
 {{! /excerpt}}
-
-&nbsp;
-
-&nbsp;
