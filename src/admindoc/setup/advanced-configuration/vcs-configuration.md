@@ -360,14 +360,17 @@ This file is for illustration and contains many more options than are necessary 
 
 ```xml
 <pool minPoolSize="0" maxPoolSize="20"
-  blockingTimeoutMillis="100" idleTimeoutMinutes="10" />
+  blockingTimeoutMillis="100"
+  idleTimeoutMinutes="10"
+  idleTimeoutMinutes="10" />
 
 ```
 
 *   **minPoolSize**: the minimum pool size (default is **0**). See `nuxeo.vcs.min-pool-size` in `nuxeo.conf`.
-*   **maxPoolSize**: the maximum pool size, above which connections will be refused (default is **20**).See `nuxeo.vcs.max-pool-size` in `nuxeo.conf`.
+*   **maxPoolSize**: the maximum pool size, above which connections will be refused (default is **20**). See `nuxeo.vcs.max-pool-size` in `nuxeo.conf`.
 *   **blockingTimeoutMillis**: the maximum time (in milliseconds) the pool will wait for a new connection to be available before deciding that it cannot answer a connection request (pool saturated).
 *   **idleTimeoutMinutes**: the time (in minutes) after which an unused pool connection will be destroyed.
+*   **activeTimeoutMinutes**: the time (in minutes) after which a connection is killed even if it is still active. This is used to avoid connection leaks. This should always be set higher than the Nuxeo transaction timeout.
 
 ## Clustering Options
 
