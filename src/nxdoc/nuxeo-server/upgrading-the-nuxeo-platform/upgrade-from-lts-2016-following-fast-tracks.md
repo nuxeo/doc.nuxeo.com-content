@@ -290,6 +290,11 @@ See [NXP-21676](https://jira.nuxeo.com/browse/NXP-21676).
 <th colspan="1">Reference</th>
 </tr>
 <tr>
+<td colspan="1">`org.nuxeo.runtime.reload_strategy`</td>
+<td colspan="1">Default Value to `restart`</td>
+<td colspan="1">[NXP-19326](https://jira.nuxeo.com/browse/NXP-19326)</td>
+</tr>
+<tr>
 <td colspan="1">`nuxeo.automation.scripting.inline-context-in-params`</td>
 <td colspan="1">Default Value to `false`</td>
 <td colspan="1">[NXP-22190](https://jira.nuxeo.com/browse/NXP-22190)</td>
@@ -302,6 +307,14 @@ See [NXP-21676](https://jira.nuxeo.com/browse/NXP-21676).
 </tbody>
 </table>
 </div>
+
+{{! /multiexcerpt}}
+
+#### Nuxeo.conf
+
+{{! multiexcerpt name='upgrade-9.2-nuxeo.conf'}}
+
+Add the following parameter in order to keep consistency with the previous Hot Reload strategy: `org.nuxeo.runtime.reload_strategy=unstash`
 
 {{! /multiexcerpt}}
 

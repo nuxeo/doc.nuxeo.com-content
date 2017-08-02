@@ -21,6 +21,10 @@ tree_item_index: 96
 
 {{{multiexcerpt 'upgrade-9.1-installation-requirements' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
+#### Nuxeo.conf
+
+{{{multiexcerpt 'upgrade-9.2-nuxeo.conf' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
 #### Parameters to Update
 
 <div class="table-scroll">
