@@ -336,7 +336,9 @@ GET /api/v1/path/default-domain/workspaces/myworkspace/myNewDoc/@blob/file:conte
 ```
 ## Learn More
 
-*   Follow the course [Importing Files with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/importing-files-rest-api) and [Data Capture / REST API Import](https://university.nuxeo.com/store/220415-data-capture) at [Nuxeo University](https://university.nuxeo.com) at [Nuxeo University](https://university.nuxeo.com).
+*   Follow the courses [Importing Files with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/importing-files-rest-api) and [Data Capture / REST API Import](https://university.nuxeo.com/store/220415-data-capture) at [Nuxeo University](https://university.nuxeo.com).
+
+* * * 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='REST API how-tos'}}
 
