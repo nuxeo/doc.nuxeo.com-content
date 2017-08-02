@@ -116,7 +116,7 @@ history:
 ---
 
 The Nuxeo Platform provides tools and APIs to import content:
-* From 10s of documents to billions of them, with import rates such as 10&nbsp;000s of documents per second
+* From 10s of documents to billions of them, with import rates such as 10,000s of documents per second
 * With or without metadata
 * Handling security, lifecycle and other system properties if necessary.
 

@@ -163,8 +163,6 @@ If you don't want to use Studio and prefer using your IDE, you can just [add a c
 
 {{/callout}}
 
-&nbsp;
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
