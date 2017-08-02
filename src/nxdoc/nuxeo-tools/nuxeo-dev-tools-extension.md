@@ -33,8 +33,8 @@ You can install it directly from the [Chrome Web Store](https://chrome.google.co
 Alternatively you can build from our GitHub repository:
 
 ```
-$ git clone git@github.com:nuxeo/nuxeo-chrome-extension.git
-$ cd nuxeo-chrome-extension
+$ git clone git@github.com:nuxeo/nuxeo-browser-extension.git
+$ cd nuxeo-browser-extension
 $ npm install && bower install
 $ gulp build:<browser>
 ```
