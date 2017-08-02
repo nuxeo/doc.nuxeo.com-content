@@ -245,11 +245,12 @@ Once you have found the `extension point` you want to contribute to:
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
 
-           <!-- target and point value is given by the extension point definition -->
-            <extension target="name.of.the.component.where.the.service.isdeclared" point="pointNameIntoThisComponent">
-              <!-- here you put your configuration XML fragment
-              ...
-            </extension>
+      <!-- target and point value is given by the extension point definition -->
+      <extension target="name.of.the.component.where.the.service.isdeclared" point="pointNameIntoThisComponent">
+        <!-- here you put your configuration XML fragment
+          ...
+        <-->
+        </extension>
     </component>
     ```
 
@@ -306,6 +307,7 @@ Components deployment is linear, so if you want to override an existing configur
        <extension target="name.of.the.component.where.the.service.isdeclared" point="pointNameIntoThisComponent">
          <!-- here you put your configuration XML fragment
             ...
+         <-->
        </extension>
     </component>
     ```
