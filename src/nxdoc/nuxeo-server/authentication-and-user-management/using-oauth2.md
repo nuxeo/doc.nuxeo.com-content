@@ -70,8 +70,8 @@ Nuxeo tries to stay very close to the ["OAuth 2.0 Authorization Framework"](http
 
 The RFC describes two endpoints:
 
-* An [Authorization Endpoint](#authorization-endpoint) used by the client to obtain authorization from the resource owner via user-agent redirection,
-* A [Token Endpoint](#token-endpoint) used by the client to exchange an authorization code for a reusable access token.
+* An [Authorization endpoint](#authorization-endpoint) used by the client to obtain authorization from the resource owner via user-agent redirection
+* A [Token endpoint](#token-endpoint) used by the client to exchange an authorization code for a reusable access token
 
 
 ## Installation
@@ -80,25 +80,24 @@ OAuth 2 is natively supported by the Nuxeo Platform, which means there is no bun
 
 ## Client Registration
 
-Nuxeo allows you to register an OAuth 2 client by specifying an arbitrary name, a client ID, eventually a client secret and a list of redirect URIs. To register your own:
+Nuxeo allows you to register an OAuth 2 client by specifying an arbitrary name, a client ID, possibly a client secret and a list of redirect URIs. To register your own:
 
-1. Go to the Nuxeo Platform web interface, then browse to the **Admin Center** > **Cloud Services**&nbsp;> **Consumers** tab.
-2. Provide a name, a client ID, eventually a client secret, at least one redirect URI and save.
+1. Go to the Nuxeo Platform web interface, then browse to the **Admin Center**&nbsp;> **Cloud Services**&nbsp;> **Consumers** tab.
+2. Provide a name, a client ID, possibly a client secret, at least one redirect URI and save.
+  ![]({{file name='OAuth2-Consumer.png'}} ?w=500,border=true)
+  The OAuth 2 endpoints are now ready to be used.
 
-The OAuth 2 endpoints are now ready to be used.
-
-![]({{file name='OAuth2-Consumer.png'}} ?w=500,border=true)
 
 ## OAuth 2 Flow
 
-Here is how Nuxeo handles the OAuth 2 flow to authorize your **application** to access to a **protected Nuxeo resource** on behalf of a **user**.
+Here is how Nuxeo handles the OAuth 2 flow to authorize your **application** to access a **protected Nuxeo resource** on behalf of a **user**.
 
 ![]({{file name='Nuxeo-OAuth2-Flow.png'}} ?w=500,border=true)
 
 ## Authorization Endpoint
 
 ```
-GET https://<NUXEO_SERVER>/nuxeo/oauth2/authorize?response_type=code&client_id=myApp
+GET https://NUXEO_SERVER/nuxeo/oauth2/authorize?response_type=code&client_id=myApp
 ```
 
 **Query parameters:**
@@ -122,13 +121,13 @@ GET https://<NUXEO_SERVER>/nuxeo/oauth2/authorize?response_type=code&client_id=m
                 <td>`client_id`</td>
                 <td>string</td>
                 <td>**Yes**</td>
-                <td>An enabled client identification.</td>
+                <td>An enabled client identification</td>
             </tr>
             <tr>
                 <td>`redirect_uri`</td>
                 <td>string</td>
                 <td>No</td>
-                <td>Absolute URI to return the user to after authorization is complete.</td>
+                <td>The absolute URI to return the user to after authorization is complete</td>
             </tr>
             <tr>
                 <td>`state`</td>
@@ -140,7 +139,7 @@ GET https://<NUXEO_SERVER>/nuxeo/oauth2/authorize?response_type=code&client_id=m
                 <td>`scope`</td>
                 <td>string</td>
                 <td>No</td>
-                <td>Ignored in our implementation.</td>
+                <td>Ignored in our implementation</td>
             </tr>
             <tr>
                 <td>`code_challenge`</td>
@@ -152,14 +151,14 @@ GET https://<NUXEO_SERVER>/nuxeo/oauth2/authorize?response_type=code&client_id=m
                 <td>`code_challenge_method`</td>
                 <td>string</td>
                 <td>No</td>
-                <td>Code verifier transformation method: "S256" or "plain".</td>
+                <td>The code verifier transformation method: "S256" or "plain".</td>
             </tr>
         </tbody>
     </table>
 </div>
 
 {{#> callout type='note' }}
-User authorization is handled by accessing to `https://<NUXEO_SERVER>/nuxeo/oauth2Grant.jsp`. That lets you customize the way you want your users to let your application get authorized.
+User authorization is handled by accessing `https://NUXEO_SERVER/nuxeo/oauth2Grant.jsp`. That lets you customize the way you want your users to let your application get authorized.
 {{/callout}}
 
 {{#> callout type='warning' }}
@@ -172,7 +171,7 @@ The `code_challenge` and `code_challenge_method` parameters must be used with a 
 ### Requesting an Access Token
 
 ```
-POST https://<NUXEO_SERVER>/nuxeo/oauth2/token?grant_type=authorization_code&client_id=myApp&code=authorizationCode
+POST https://NUXEO_SERVER/nuxeo/oauth2/token?grant_type=authorization_code&client_id=myApp&code=authorizationCode
 ```
 
 **Query parameters:**
@@ -202,13 +201,13 @@ POST https://<NUXEO_SERVER>/nuxeo/oauth2/token?grant_type=authorization_code&cli
 <td>`client_secret`</td>
 <td>string</td>
 <td>No</td>
-<td>Client's secret.</td>
+<td>The client's secret</td>
 </tr>
 <tr>
 <td>`code`</td>
 <td>string</td>
 <td>**Yes**</td>
-<td>The authorization code received from the Authorization endpoint.</td>
+<td>The authorization code received from the Authorization endpoint</td>
 </tr>
 <tr>
 <td>`redirect_uri`</td>
@@ -245,7 +244,7 @@ Content-Type: application/json;charset=ISO-8859-1
 ### Refreshing an Access Token
 
 ```
-POST https://<NUXEO_SERVER>/nuxeo/oauth2/token?grant_type=refresh_token&client_id=myApp&refresh_token=refreshToken
+POST https://NUXEO_SERVER/nuxeo/oauth2/token?grant_type=refresh_token&client_id=myApp&refresh_token=refreshToken
 ```
 
 **Query parameters:**
@@ -275,13 +274,13 @@ POST https://<NUXEO_SERVER>/nuxeo/oauth2/token?grant_type=refresh_token&client_i
             <td>`client_secret`</td>
             <td>string</td>
             <td>No</td>
-            <td>Client's secret.</td>
+            <td>The client's secret</td>
         </tr>
         <tr>
             <td>`refresh_token`</td>
             <td>string</td>
             <td>**Yes**</td>
-            <td>A refresh token bound to the same client.</td>
+            <td>A refresh token bound to the same client</td>
         </tr>
     </tbody>
     </table>
@@ -308,11 +307,11 @@ Content-Type: application/json;charset=ISO-8859-1
 Once you obtain an access token it can be used to access the protected Nuxeo resources with a request header or a query parameter. Like below using `curl`:
 
 ```
-curl -H "Authorization: Bearer <ACCESS_TOKEN>" https://<NUXEO_SERVER>/nuxeo/api/v1/path/default-domain
+curl -H "Authorization: Bearer ACCESS_TOKEN" https://NUXEO_SERVER/nuxeo/api/v1/path/default-domain
 ```
 
 ```
-curl https://<NUXEO_SERVER>/nuxeo/api/v1/path/default-domain?access_token=<ACCESS_TOKEN>
+curl https://NUXEO_SERVER/nuxeo/api/v1/path/default-domain?access_token=ACCESS_TOKEN
 ```
 
 * * *
