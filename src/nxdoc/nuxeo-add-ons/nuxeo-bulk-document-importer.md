@@ -366,6 +366,14 @@ Allows a non uniform distribution of the number of nodes per folder:
 
 N/A: no default value, the parameter is required.
 
+## Listeners/Event Handlers
+
+When importing with a sidecar metadata (see below), the default importer first creates a document with the title (and the file when importing the leaf), _then_ applies the metadata. This means the `about to create` and `document created` events triggered during importation will have their fields set to `null` (or set to their default values, if any). It is only in the `before document modification` and/or `document modified` events that the fields will be set.
+
+Also, the importer triggers the `documentImportedWithPlatformImporter` event once the document has been imported and fully set up. This event would be a good place to setup related fields/behaviors while being certain all the data has been set.
+
+If the configuration has listeners handling these events, then it must be careful, for example when testing if a field is `null` in `about to create` and/or `document created`. Depending on the context (creation by the importer _vs_ creation in the UI for example) it may be normal or not to have a field whose value is `null`.
+
 ## Extend
 
 You can easily write your own importer, extending the  [`org.nuxeo.ecm.platform.importer.base.GenericMultiThreadedImporter`](http://community.nuxeo.com/api/nuxeo/release-8.2/javadoc/org/nuxeo/ecm/platform/importer/base/class-use/GenericMultiThreadedImporter.html) class.
@@ -597,6 +605,10 @@ One of these 'tools' is so called the 'factory', and it is used when performing 
 ### filter
 
 Another 'tool' that is used is the 'filter'. More than one 'filter' can be provided to a 'factory' and their scope is to handle the events that are raised during the import. Usually it is better to block all the events that are raised during and after the import of a document (the import of a document can be translated in creating a Nuxeo document model and saving properties on it, which often causes the raise of events), in order to increase the performance of the import.
+
+Notice the events are blocked for the whole system, so this feature will be used during mass import, while the system is not yet in produciton for example.
+
+Also, filters cannot be configured via an XML extension, but can be used in your own code extending the imporoter (you can find an example in the code of the random importer)
 
 ### Thread Policy
 
