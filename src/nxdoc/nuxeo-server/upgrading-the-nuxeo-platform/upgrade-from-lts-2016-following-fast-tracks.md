@@ -310,11 +310,11 @@ See [NXP-21676](https://jira.nuxeo.com/browse/NXP-21676).
 
 {{! /multiexcerpt}}
 
-#### Nuxeo.conf
+#### nuxeo.conf
 
 {{! multiexcerpt name='upgrade-9.2-nuxeo.conf'}}
 
-Add the following parameter in order to keep consistency with the previous Hot Reload strategy: `org.nuxeo.runtime.reload_strategy=unstash`
+Add the following parameter in order to keep consistency with the previous hot-reload strategy: `org.nuxeo.runtime.reload_strategy=unstash`.
 
 {{! /multiexcerpt}}
 

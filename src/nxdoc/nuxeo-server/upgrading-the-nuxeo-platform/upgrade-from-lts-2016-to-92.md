@@ -21,7 +21,7 @@ tree_item_index: 96
 
 {{{multiexcerpt 'upgrade-9.1-installation-requirements' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
-#### Nuxeo.conf
+#### nuxeo.conf
 
 {{{multiexcerpt 'upgrade-9.2-nuxeo.conf' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
@@ -53,6 +53,11 @@ tree_item_index: 96
 <th colspan="1">Parameter</th>
 <th colspan="1">Default</th>
 <th colspan="1">Reference</th>
+</tr>
+<tr>
+<td colspan="1">`org.nuxeo.runtime.reload_strategy`</td>
+<td colspan="1">Default Value to `restart`</td>
+<td colspan="1">[NXP-19326](https://jira.nuxeo.com/browse/NXP-19326)</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.automation.scripting.inline-context-in-params`</td>
