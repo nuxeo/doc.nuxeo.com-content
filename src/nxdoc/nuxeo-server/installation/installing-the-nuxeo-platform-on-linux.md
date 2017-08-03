@@ -309,7 +309,7 @@ On Linux, you can install the Nuxeo Platform using the packages below:
 
 {{{multiexcerpt 'requirements-intro' page='Installation'}}}
 
-Check out the [Installation]({{page page='installation'}})&nbsp;for detailed steps to check your Java version and install it.
+Check out the [Installation]({{page page='installation'}}) for detailed steps to check your Java version and install it.
 
 ## Installing the Nuxeo Platform from the ZIP Archive
 
@@ -345,13 +345,11 @@ You will need to know two things first:
 
 {{#> callout type='tip' }}
 
-For the examples below, let's say you are using Ubuntu 14.04 LTS ("trusty") and want to install the Nuxeo latest Fast Track release (from the "fasttracks" APT repository; for&nbsp;LTS you would replace "fasttracks" with "releases").
+For the examples below, let's say you are using Ubuntu 14.04 LTS ("trusty") and want to install the Nuxeo latest Fast Track release (from the "fasttracks" APT repository; for LTS you would replace "fasttracks" with "releases").
 
 {{/callout}}
 
 ### Using the Graphical User Interface
-
-&nbsp;
 
 {{! multiexcerpt name='apt-repo-install-UI'}} {{#> callout type='note' }}
 
@@ -372,20 +370,26 @@ This requires X11.
 6.  Open a browser and type the URL <a>http://localhost:8080/nuxeo/.</a>
     The [startup wizard]({{page page='configuration-wizard'}}) is displayed so you can setup your Nuxeo platform and select the module you want to install.
 
-&nbsp;
-
 {{! /multiexcerpt}}
-
-&nbsp;
 
 ### From the Terminal
 
 {{! multiexcerpt name='apt-repo-install-terminal'}}
 
+{{#> callout type='tip' }}
+
+The GnuPG package may be missing since Debian Stretch (9):
+
+```
+$ sudo apt-get install gnupg
+```
+
+{{/callout}}
+
 1.  Import the Nuxeo key.
 
     ```bash
-    wget -q -O- http://apt.nuxeo.org/nuxeo.key | sudo apt-key add -
+    $ wget -q -O- http://apt.nuxeo.org/nuxeo.key | sudo apt-key add -
     ```
 
 2.  Add the Nuxeo APT repository.
@@ -401,20 +405,20 @@ This requires X11.
 
     ```
     $ sudo echo "deb http://apt.nuxeo.org/ $(lsb_release -cs) releases" > /etc/apt/sources.list.d/nuxeo.list
-    $  sudo echo "deb  http://apt.nuxeo.org/  $(lsb_release -cs) fasttracks" >> /etc/apt/sources.list.d/nuxeo.list
+    $ sudo echo "deb  http://apt.nuxeo.org/  $(lsb_release -cs) fasttracks" >> /etc/apt/sources.list.d/nuxeo.list
     ```
 
     {{/callout}}
 3.  Update your APT cache.
 
     ```bash
-    sudo apt-get update
+    $ sudo apt-get update
     ```
 
 4.  Install the Nuxeo Platform.
 
     ```bash
-    sudo apt-get install nuxeo
+    $ sudo apt-get install nuxeo
     ```
 
 5.  Follow the instructions displayed. If it's your first install, you can configure:
@@ -436,11 +440,11 @@ This requires X11.
 Like any Java application you should prevent the JVM Heap to be swapped to disk, this will crush server performance. You have two options here:
 
 *   Disable the swap with `sudo swapoff -a` you&rsquo;ll need to edit your `/etc/fstab`to disable swap permanently. Note that before doing this you need to make sure that you have enough memory for all the processes that run on the server (Nuxeo JVM, converters, other custom process and the OS).
-*   Limit the swapiness of the OS using `sysctl` to set `vm.swappiness =&nbsp;1`.
+*   Limit the swapiness of the OS using `sysctl` to set `vm.swappiness=1`.
 
 ### Temporary Folder
 
-While setting `nuxeo.tmp.dir` property in nuxeo.conf, we recommend not to use the system temporary folder `/tmp` because this one can be cleaned up by the operating system.&nbsp;This is the case on Red Hat Enterprise Linux in particular, where `systemd-tmpfiles` service is deleting old files from `/tmp`.
+While setting `nuxeo.tmp.dir` property in nuxeo.conf, we recommend not to use the system temporary folder `/tmp` because this one can be cleaned up by the operating system. This is the case on Red Hat Enterprise Linux in particular, where `systemd-tmpfiles` service is deleting old files from `/tmp`.
 
 * * *
 
