@@ -338,19 +338,6 @@ Here is an example of a CSV import that creates documents at the root of the wor
 
 You can use the [attached file]({{file name='nuxeo-csv-import-sample1.csv'}}) to test Nuxeo CSV to import a tree structure.
 
-### Importing Files
-
-It is possible to create documents of type File and to upload their main attachment using Nuxeo CSV. This requires that your administrator [enabled it in the server configuration](#configuration) and to put the binary files in a folder that can be accessed by the server.
-
-On your CSV file, use the `file:content` property in the first line and the name of your file on the document definition line.
-
-```csv
-"name","type","dc:title","dc:description","file:content"
-"my-file","File","My file with uploaded attachment","This is a file with its attachment, created using Nuxeo CSV","my-file.doc"
-```
-
-You can use the [attached ZIP sample]({{file name='Nuxeo-CSV-sample.zip'}}) to test the import of files.
-
 ### Import complex property values
 
 Complex properties (mono and multi-valued) need to be JSON formatted. To do so, we advise you to use the JSON Export action from the [Nuxeo Dev Tool Browser extension]({{page page='nuxeo-dev-tools-extension'}}).
@@ -395,6 +382,110 @@ Dates inside a complex type use W3C format and not MM/dd/yyyy as for simple type
 More information on the [W3C documentation](https://www.w3.org/TR/NOTE-datetime).
 {{/callout}}
 
+### Importing Files
+
+ Importing files through Nuxeo CSV requires that your administrator [enabled it in the server configuration](#configuration) and to put the binary files in a folder that can be accessed by the server.
+
+#### Main Attachment
+
+It is possible to create documents of type File and to upload their main attachment using Nuxeo CSV.
+
+On your CSV file, use the `file:content` property in the first line and the name of your file on the document definition line.
+
+```csv
+"name","type","dc:title","dc:description","file:content"
+"my-file","File","My file with uploaded attachment","This is a file with its attachment, created using Nuxeo CSV","my-file.doc"
+```
+
+You can use the [attached ZIP sample]({{file name='Nuxeo-CSV-sample.zip'}}) to test the import of files.
+
+#### Files Attachment
+
+Since 8.10-HF12, it is also possible to create documents and set their files attachment using Nuxeo CSV.
+
+Setting the files attachement requires you to write a JSON formatted complex property. The JSON format is the following:
+
+```json
+[
+    {
+        "file": {
+            "mime-type": "text/plain",
+            "content": "first_file.txt"
+        }
+    },
+    {
+        "file": {
+            "mime-type": "application/pdf",
+            "content": "my_pdf.pdf"
+        }
+    },
+    {
+        "file": {
+            "name": "custom_name.pdf",
+
+            "content": "another_pdf.pdf"
+        }
+    }
+]
+```
+
+In the JSON above:
+
+* `content` is the relative path of the File to import, located in the configured folder.
+* `name` overrides the name of the Blob, by default the name of the imported File. Optional.
+* `mime-type` set the mime type of the Blob. Optional.
+
+On your CSV file, use the `file:files` property in the first line and the JSON formatted complex property, such as:
+
+```csv
+"name","type","dc:title","file:files"
+"my-file","File","My file with files attachment","[{ \"file\": { \"mime-type\": \"text/plain\", \"content\": \"first_file.txt\" }}, { \"file\": { \"mime-type\": \"application/pdf\", \"content\": \"my_pdf.pdf\" }}, { \"file\": { \"name\": \"custom_name.pdf\", \"content\": \"another_pdf.pdf\" }}]"
+```
+
+#### Complex Property
+
+Since 8.10-HF12, it is also possible to create documents and import a File in a complex property.
+
+For instance, assuming you have a schema named `foo` with a complex property named `complex` containing a string property `str` and a content property `file`:
+
+```xml
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://nuxeo.ecm.csv.test/schemas/foo/"
+  xmlns:foo="http://nuxeo.ecm.csv.test/schemas/foo/">
+
+  <xs:include schemaLocation="core-types.xsd" />
+
+  <xs:complexType name="complexType">
+    <xs:sequence>
+      <xs:element name="str" type="xs:string"/>
+      <xs:element name="file" type="foo:content"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="complex" type="foo:complexType"/>
+
+</xs:schema>
+```
+
+The JSON formatted property will be:
+
+```json
+{
+    "str": "a string",
+    "file": {
+        "mime-type": "text/plain",
+        "content": "first_file.txt"
+    }
+}
+```
+
+On your CSV file, use the `foo:complex` property in the first line and the JSON formatted complex property, such as:
+
+```csv
+"name","type","dc:title","foo:complex"
+"my-foo-file","FooFile","My file with complex property","{ \"str\": \"a string\", \"file\": { \"mime-type\": \"text/plain\", \"content\": \"first_file.txt\" }}"
+```
 
 ### Setting Lifecycle State When Creating Documents
 
@@ -408,6 +499,8 @@ It is possible to set the lifecycle state when the document is created through N
 ### Events
 
 Note that the event raised by this CSV import is a **creation event**, not an import one. An import event means that for the Nuxeo Platform, a full and ready Nuxeo document is imported. Here based on some data, a new Nuxeo document is created.
+
+* * *
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
