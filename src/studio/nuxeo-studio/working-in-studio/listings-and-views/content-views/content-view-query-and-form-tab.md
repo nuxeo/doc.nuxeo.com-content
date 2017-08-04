@@ -299,10 +299,10 @@ Here are some examples.
 <th colspan="1">Query parameter</th>
 </tr>
 <tr>
-<td colspan="1">Keeping the documents created by the current user</td><
-td colspan="1">`dc:creator = ?`</td>
-<td colspan="1">`#{currentUser.name}`</td><
-/tr>
+<td colspan="1">Keeping the documents created by the current user</td>
+<td colspan="1">`dc:creator = ?`</td>
+<td colspan="1">`#{currentUser.name}`</td>
+</tr>
 <tr>
 <td colspan="1">Keeping the children documents of the currently displayed document</td>
 <td colspan="1">`ecm:parentId = ?`</td>
