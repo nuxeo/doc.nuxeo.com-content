@@ -20,7 +20,7 @@ confluence:
     shortlink: 6TalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/6TalAQ'
     source_link: /display/ADMINDOC710/H2+Limitations
-tree_item_index: 700
+tree_item_index: 800
 version_override:
     'FT': '/nxdoc/h2-limitations'
     'LTS 2016': 810/nxdoc/h2-limitations
