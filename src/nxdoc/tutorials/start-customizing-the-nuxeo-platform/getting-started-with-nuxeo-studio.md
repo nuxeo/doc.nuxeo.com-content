@@ -269,10 +269,10 @@ Here we want to create a document type named "Contract" that will hold specific 
     Your document type is created.
 
 3.  Fill in the [**Definition** tab]({{page space='studio' page='documents'}}):
-    ![]({{file name='definition_contract.png'}} ?w=600,h=365,border=true)
+    ![]({{file page='/nxdoc/getting-started-with-nuxeo-studio' name='definition_contract.png'}} ?w=600,h=365,border=true)
 
 4.  Fill in the [**Schema** tab]({{page space='studio' page='schemas'}}) with the following metadata:
-    ![]({{file name='schema_contract.png'}} ?w=600,border=true)
+    ![]({{file page='/nxdoc/getting-started-with-nuxeo-studio' name='schema_contract.png'}} ?w=600,border=true)
 
 5.  Specify the [form that will be used to create the document (aka creation layout)]({{page space='studio' page='form-layouts'}}):
 
@@ -281,7 +281,7 @@ Here we want to create a document type named "Contract" that will hold specific 
     2.  Drag and drop the fields "Owner", "Start" and "Policy" from the schema Contract to the grid.
 
     3.  Click on&nbsp;![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) if you want to edit their label and click on the popup **Save** button.
-        ![]({{file name='creation_layout_contract.png'}} ?w=580,border=true)
+        ![]({{file page='/nxdoc/getting-started-with-nuxeo-studio' name='creation_layout_contract.png'}} ?w=580,border=true)
 
 6.  On the Edit layout (the form used to update the metadata of the document):
 
@@ -292,7 +292,7 @@ Here we want to create a document type named "Contract" that will hold specific 
     3.  Drag and drop the field Reminder from the schema Contract to the grid.
 
     4.  Click on&nbsp;![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) if you want to edit the widget label and click on the popup **Save** button.
-        ![]({{file name='edit_layout_contract.png'}} ?w=600,border=true)
+        ![]({{file page='/nxdoc/getting-started-with-nuxeo-studio' name='edit_layout_contract.png'}} ?w=600,border=true)
 
 7.  On the View Layout click on the button **Import Layout** and select **Import 'edit' layout**.
 

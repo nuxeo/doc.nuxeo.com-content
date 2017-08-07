@@ -757,8 +757,7 @@ The operation is now available in Automation Chain editor, under the Document ca
 2.  Call your chain `ContractUpdater`.
 
 3.  Leave the **Fetch > Context Document(s)** operation and add the custom operation, available in **Document > ContractUpdater.**
-
-    ![]({{file name='contractUpdater_chain.png'}} ?w=600,border=true)
+    ![]({{file page='/nxdoc/develop-with-nuxeo-platform' name='contractUpdater_chain.png'}} ?w=450,border=true)
 
 4.  Click on **Save**.
 
