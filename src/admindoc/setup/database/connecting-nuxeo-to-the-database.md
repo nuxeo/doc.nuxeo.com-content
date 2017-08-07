@@ -21,7 +21,7 @@ confluence:
     shortlink: 0TalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/0TalAQ'
     source_link: /display/ADMINDOC710/Connecting+Nuxeo+to+the+Database
-tree_item_index: 600
+tree_item_index: 700
 version_override:
     'FT': '/nxdoc/connecting-nuxeo-to-the-database'
     'LTS 2016': 810/nxdoc/connecting-nuxeo-to-the-database

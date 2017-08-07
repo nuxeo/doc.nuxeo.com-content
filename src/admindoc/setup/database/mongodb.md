@@ -21,7 +21,7 @@ confluence:
     shortlink: 6DalAQ
     shortlink_source: 'https://doc.nuxeo.com/x/6DalAQ'
     source_link: /display/ADMINDOC710/MongoDB
-tree_item_index: 500
+tree_item_index: 600
 version_override:
     'FT': '/nxdoc/mongodb'
     'LTS 2016': 810/nxdoc/mongodb

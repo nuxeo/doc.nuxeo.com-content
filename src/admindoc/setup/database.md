@@ -145,6 +145,8 @@ This takes two steps:
     *   [Oracle ]({{page page='oracle'}})
     *   [MS SQL Server ]({{page page='microsoft-sql-server'}})
     *   [MySQL ]({{page page='mysql'}})
+    *   [MariaDB]({{page page='mariadb'}})
+    *   [MongoDB]({{page page='mongodb'}})
 2.  [Connect Nuxeo to the database]({{page page='connecting-nuxeo-to-the-database'}}).
 
 &nbsp;
