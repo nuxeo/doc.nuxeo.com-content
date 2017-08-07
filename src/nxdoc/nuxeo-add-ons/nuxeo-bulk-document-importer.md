@@ -327,17 +327,115 @@ The importer requires a lot of memory. Make sure your maximum heap size is set a
 
 ### REST API
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Resource URL</th><th colspan="1">Description</th><th colspan="1">Output</th></tr><tr><td colspan="1">`GET nuxeo/site/randomImporter/run`</td><td colspan="1">Random text generator for load testing</td><td colspan="1">text/plain; charset=UTF-8</td></tr><tr><td colspan="1">`GET nuxeo/site/fileImporter/run`</td><td colspan="1">Default file importer</td><td colspan="1">text/plain; charset=UTF-8</td></tr><tr><td colspan="1">`GET nuxeo/site/fileImporter/log`</td><td colspan="1">Get current log buffer content</td><td colspan="1">text/plain; charset=UTF-8</td></tr><tr><td colspan="1">`GET nuxeo/site/fileImporter/logActivate`</td><td colspan="1">Activate logging</td><td colspan="1">text/plain; charset=UTF-8</td></tr><tr><td colspan="1">`GET nuxeo/site/fileImporter/logDesactivate`</td><td colspan="1">Deactivate logging</td><td colspan="1">text/plain; charset=UTF-8</td></tr><tr><td colspan="1">`GET nuxeo/site/fileImporter/status`</td><td colspan="1">Get importer thread status</td><td colspan="1">
-
-text/plain; charset=UTF-8
-
-"Running" or "Not Running"
-
-</td></tr><tr><td colspan="1">`GET nuxeo/site/fileImporter/kill`</td><td colspan="1">Stop the importer thread if running</td><td colspan="1">text/plain; charset=UTF-8</td></tr><tr><td colspan="1">`GET nuxeo/site/fileImporter`</td><td colspan="1">Displays a user interface letting the user to set the parameters</td><td colspan="1">(html)</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+  <tr>
+    <th colspan="1">Resource URL</th>
+    <th colspan="1">Description</th>
+    <th colspan="1">Output</th>
+  </tr>
+  <tr>
+    <td colspan="1">`GET nuxeo/site/randomImporter/run`</td>
+    <td colspan="1">Random text generator for load testing</td>
+    <td colspan="1">text/plain; charset=UTF-8</td>
+  </tr>
+  <tr>
+    <td colspan="1">`GET nuxeo/site/fileImporter/run`</td>
+    <td colspan="1">Default file importer</td>
+    <td colspan="1">text/plain; charset=UTF-8</td>
+  </tr>
+  <tr>
+    <td colspan="1">`GET nuxeo/site/fileImporter/log`</td>
+    <td colspan="1">Get current log buffer content</td>
+    <td colspan="1">text/plain; charset=UTF-8</td>
+  </tr>
+  <tr>
+    <td colspan="1">`GET nuxeo/site/fileImporter/logActivate`</td>
+    <td colspan="1">Activate logging</td>
+    <td colspan="1">text/plain; charset=UTF-8</td></tr>
+  <tr>
+    <td colspan="1">`GET nuxeo/site/fileImporter/logDesactivate`</td>
+    <td colspan="1">Deactivate logging</td>
+    <td colspan="1">text/plain; charset=UTF-8</td>
+  </tr>
+  <tr>
+    <td colspan="1">`GET nuxeo/site/fileImporter/status`</td>
+    <td colspan="1">Get importer thread status</td>
+    <td colspan="1">text/plain; charset=UTF-8 <br />"Running" or "Not Running"</td>
+  </tr>
+  <tr>
+    <td colspan="1">`GET nuxeo/site/fileImporter/kill`</td>
+    <td colspan="1">Stop the importer thread if running</td>
+    <td colspan="1">text/plain; charset=UTF-8</td>
+  </tr>
+  <tr>
+    <td colspan="1">`GET nuxeo/site/fileImporter`</td>
+    <td colspan="1">Displays a user interface letting the user to set the parameters</td>
+    <td colspan="1">(html)</td>
+  </tr>
+</tbody>
+</table>
+</div>
 
 #### fileImporter/run
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">`leafType`</td><td colspan="1">null</td><td colspan="1">Leaf type used by the `documentModelFactory` for the import.</td></tr><tr><td colspan="1">`folderishType`</td><td colspan="1">null</td><td colspan="1">Folderish type used by the `documentModelFactory` for the import.</td></tr><tr><td colspan="1">`inputPath`</td><td colspan="1">N/A</td><td colspan="1">Root path to import (local to the server).</td></tr><tr><td colspan="1">`targetPath`</td><td colspan="1">N/A</td><td colspan="1">Target path in Nuxeo</td></tr><tr><td colspan="1">`skipRootContainerCreation`</td><td colspan="1">false</td><td colspan="1">If true the root container won't be created</td></tr><tr><td colspan="1">`batchSize`</td><td colspan="1">5</td><td colspan="1">Number of documents that will be created before doing a commit</td></tr><tr><td colspan="1">`nbThreads`</td><td colspan="1">5</td><td colspan="1">Maximum number of importer threads that can be allocated</td></tr><tr><td colspan="1">`interactive`</td><td colspan="1">false</td><td colspan="1"> </td></tr><tr><td colspan="1">`transactionTimeout`</td><td colspan="1">600</td><td colspan="1">Timeout for the transaction (in seconds). Can be increased when importing very big files for example</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+  <tr>
+    <th colspan="1">Parameter</th>
+    <th colspan="1">Default value</th>
+    <th colspan="1">Description</th>
+  </tr>
+  <tr>
+    <td colspan="1">`leafType`</td>
+    <td colspan="1">null</td>
+    <td colspan="1">Leaf type used by the `documentModelFactory` for the import.</td>
+  </tr>
+  <tr>
+    <td colspan="1">`folderishType`</td>
+    <td colspan="1">null</td>
+    <td colspan="1">Folderish type used by the `documentModelFactory` for the import.</td>
+  </tr>
+  <tr>
+    <td colspan="1">`inputPath`</td>
+    <td colspan="1">N/A</td>
+    <td colspan="1">Root path to import (local to the server).</td>
+  </tr>
+  <tr>
+    <td colspan="1">`targetPath`</td>
+    <td colspan="1">N/A</td>
+    <td colspan="1">Target path in Nuxeo</td>
+  </tr>
+  <tr>
+    <td colspan="1">`skipRootContainerCreation`</td>
+    <td colspan="1">false</td>
+    <td colspan="1">If true the root container won't be created</td>
+  </tr>
+  <tr>
+    <td colspan="1">`batchSize`</td>
+    <td colspan="1">5</td>
+    <td colspan="1">Number of documents that will be created before doing a commit</td>
+  </tr>
+  <tr>
+    <td colspan="1">`nbThreads`</td>
+    <td colspan="1">5</td>
+    <td colspan="1">Maximum number of importer threads that can be allocated</td>
+  </tr>
+  <tr>
+    <td colspan="1">`interactive`</td>
+    <td colspan="1">false</td>
+    <td colspan="1"> </td>
+  </tr>
+  <tr>
+    <td colspan="1">`transactionTimeout`</td>
+    <td colspan="1">600</td>
+    <td colspan="1">Timeout for the transaction (in seconds). Can be increased when importing very big files for example</td>
+  </tr>
+</tbody>
+</table>
+</div>
 
 N/A: no default value, the parameter is required.
 
@@ -354,25 +452,103 @@ With the following contribution you can configure the importer to work in non-bu
 
 #### randomImporter/run
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">`targetPath`</td><td colspan="1">N/A</td><td colspan="1">Target path in Nuxeo</td></tr><tr><td colspan="1">`skipRootContainerCreation`</td><td colspan="1"> </td><td colspan="1"> </td></tr><tr><td colspan="1">`batchSize`</td><td colspan="1"> </td><td colspan="1">Number of documents that will be created before doing a commit</td></tr><tr><td colspan="1">`nbThreads`</td><td colspan="1"> </td><td colspan="1">Maximum number of importer threads that can be allocated</td></tr><tr><td colspan="1">`interactive`</td><td colspan="1"> </td><td colspan="1"> </td></tr><tr><td colspan="1">`nbNodes`</td><td colspan="1">N/A</td><td colspan="1">Number of nodes to create</td></tr><tr><td colspan="1">`fileSizeKB`</td><td colspan="1"> </td><td colspan="1"> </td></tr><tr><td colspan="1">`onlyText`</td><td colspan="1">true</td><td colspan="1"> </td></tr><tr><td colspan="1">`blockSyncPostCommitProcessing`</td><td colspan="1"> </td><td colspan="1"> </td></tr><tr><td colspan="1">`blockAsyncProcessing`</td><td colspan="1"> </td><td colspan="1"> </td></tr><tr><td colspan="1">`bulkMode`</td><td colspan="1">true</td><td colspan="1"> </td></tr><tr><td colspan="1">`blockIndexing`</td><td colspan="1">false</td><td colspan="1">When indexing is blocked, the import will be faster and the reindexing can be done after the mass import.</td></tr><tr><td colspan="1">`nonUniform`</td><td colspan="1">false</td><td colspan="1">
-
-Allows a non uniform distribution of the number of nodes per folder:
-
-*   A small number of nodes (~= 1) 10% of the time.
-*   A big number of nodes (~= 5000) 10% of the time.
-*   A random variation of the default number of nodes ( ~= 100) 80% of the time.
-
-</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+  <tr>
+    <th colspan="1">Parameter</th>
+    <th colspan="1">Default value</th>
+    <th colspan="1">Description</th>
+  </tr>
+  <tr>
+    <td colspan="1">`targetPath`</td>
+    <td colspan="1">N/A</td>
+    <td colspan="1">Target path in Nuxeo</td>
+  </tr>
+  <tr>
+    <td colspan="1">`skipRootContainerCreation`</td>
+    <td colspan="1"> </td>
+    <td colspan="1"> </td>
+  </tr>
+  <tr>
+    <td colspan="1">`batchSize`</td>
+    <td colspan="1"> </td>
+    <td colspan="1">Number of documents that will be created before doing a commit</td>
+  </tr>
+  <tr>
+    <td colspan="1">`nbThreads`</td>
+    <td colspan="1"> </td>
+    <td colspan="1">Maximum number of importer threads that can be allocated</td>
+  </tr>
+  <tr>
+    <td colspan="1">`interactive`</td>
+    <td colspan="1"> </td>
+    <td colspan="1"> </td>
+  </tr>
+  <tr>
+    <td colspan="1">`nbNodes`</td>
+    <td colspan="1">N/A</td>
+    <td colspan="1">Number of nodes to create</td>
+  </tr>
+  <tr>
+    <td colspan="1">`fileSizeKB`</td>
+    <td colspan="1"> </td>
+    <td colspan="1"> </td>
+  </tr>
+  <tr>
+    <td colspan="1">`onlyText`</td>
+    <td colspan="1">true</td>
+    <td colspan="1"> </td>
+  </tr>
+  <tr>
+    <td colspan="1">`blockSyncPostCommitProcessing`</td>
+    <td colspan="1"> </td>
+    <td colspan="1"> </td>
+  </tr>
+  <tr>
+    <td colspan="1">`blockAsyncProcessing`</td>
+    <td colspan="1"> </td>
+    <td colspan="1"> </td>
+  </tr>
+  <tr>
+    <td colspan="1">`bulkMode`</td>
+    <td colspan="1">true</td>
+    <td colspan="1"> </td>
+  </tr>
+  <tr>
+    <td colspan="1">`blockIndexing`</td>
+    <td colspan="1">false</td>
+    <td colspan="1">When indexing is blocked, the import will be faster and the reindexing can be done after the mass import.</td>
+  </tr>
+  <tr>
+    <td colspan="1">`nonUniform`</td>
+    <td colspan="1">false</td>
+    <td colspan="1">Allows a non uniform distribution of the number of nodes per folder:
+      <ul>
+        <li>A small number of nodes (~= 1) 10% of the time.</li>
+        <li>A big number of nodes (~= 5000) 10% of the time.</li>
+        <li>A random variation of the default number of nodes ( ~= 100) 80% of the time.</li>
+      </ul>
+  </td>
+  </tr>
+</tbody>
+</table>
+</div>
 
 N/A: no default value, the parameter is required.
 
 ## Listeners/Event Handlers
 
-When importing with a sidecar metadata (see below), the default importer first creates a document with the title (and the file when importing the leaf), _then_ applies the metadata. This means the `about to create` and `document created` events triggered during importation will have their fields set to `null` (or set to their default values, if any). It is only in the `before document modification` and/or `document modified` events that the fields will be set.
+When importing with a sidecar metadata (see the [Importer and Metadata section](#importer-and-metadata)), the default importer works in two steps:
 
-Also, the importer triggers the `documentImportedWithPlatformImporter` event once the document has been imported and fully set up. This event would be a good place to setup related fields/behaviors while being certain all the data has been set.
+1. It creates a document with the title (and the file when importing the leaf)
+1. It applies the metadata
 
-If the configuration has listeners handling these events, then it must be careful, for example when testing if a field is `null` in `about to create` and/or `document created`. Depending on the context (creation by the importer _vs_ creation in the UI for example) it may be normal or not to have a field whose value is `null`.
+This means the `about to create` and `document created` events triggered during the step 1 will set the metadata fields to `null` (or to their default values, if any). It is only at the second step, with the events `before document modification` and/or `document modified`, that the metadata values are set.
+
+Also, the importer triggers the `documentImportedWithPlatformImporter` event once the document has been imported and fully set up. This event would be a good place to set up related fields/behaviors while being certain all the data have been set.
+
+If your configuration has listeners handling the events `about to create` and `document created`, then you must be careful, for example when testing if a field is `null` in `about to create` and/or `document created`. Depending on the context (creation by the importer vs creation in the UI for example) it may be normal or not to have a field whose value is `null`.
 
 ## Extend
 
@@ -407,7 +583,7 @@ To be sure to be able to leverage multi-threading, you can either:
 *   Ensure the source filesystem is a tree with at least two levels
 *   Change the importer threading policy.
 
-## Importer and Metadata
+## {{> anchor 'importer-and-metadata'}} Importer and Metadata
 
 The default importer provides three classes to read the source files as well as metadata:
 
