@@ -240,7 +240,7 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 </div><div class="column medium-6">
 
-![]({{file name='logo_studio.png'}} ?w=450,border=true)
+![]({{file page='/nxdoc/from-the-jsf-ui-to-nuxeo-studio' name='logo_studio.png'}} ?w=450,border=true)
 
 </div></div>
 
@@ -256,7 +256,7 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 </div><div class="column medium-6">
 
-![]({{file name='FileCreateScreen_studio.png'}} ?w=400,border=true)
+![]({{file page='/nxdoc/from-the-jsf-ui-to-nuxeo-studio' name='FileCreateScreen_studio.png'}} ?w=400,border=true)
 
 </div></div>
 
@@ -272,7 +272,7 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 </div><div class="column medium-6">
 
-![]({{file name='metadata_view_studio.png'}} ?w=400,border=true)
+![]({{file page='/nxdoc/from-the-jsf-ui-to-nuxeo-studio' name='metadata_view_studio.png'}} ?w=400,border=true)
 
 </div></div>
 
@@ -288,7 +288,7 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 </div><div class="column medium-6">
 
-![]({{file name='metadata_edit_studio.png'}} ?w=400,border=true)
+![]({{file page='/nxdoc/from-the-jsf-ui-to-nuxeo-studio' name='metadata_edit_studio.png'}} ?w=400,border=true)
 
 </div></div>
 
@@ -304,7 +304,7 @@ The Nuxeo Platform is designed to enable you to customize it, either by modifyin
 
 </div><div class="column medium-6">
 
-![]({{file name='Summary_tab_studio.png'}} ?w=400,border=true)
+![]({{file page='/nxdoc/from-the-jsf-ui-to-nuxeo-studio' name='Summary_tab_studio.png'}} ?w=400,border=true)
 
 </div></div>
 
@@ -322,7 +322,7 @@ Choosing what tabs should be displayed or not is done on a per document type bas
 
 </div><div class="column medium-6">
 
-![]({{file name='FileCreateScreen_studio.png'}} ?w=400,border=true)
+![]({{file page='/nxdoc/from-the-jsf-ui-to-nuxeo-studio' name='FileCreateScreen_studio.png'}} ?w=400,border=true)
 
 </div></div>
 
@@ -338,7 +338,7 @@ Choosing what tabs should be displayed or not is done on a per document type bas
 
 </div><div class="column medium-6">
 
-![]({{file name='search_tab_studio.png'}} ?w=400,border=true)
+![]({{file page='/nxdoc/from-the-jsf-ui-to-nuxeo-studio' name='search_tab_studio.png'}} ?w=400,border=true)
 
 </div></div>
 
@@ -354,9 +354,9 @@ Choosing what tabs should be displayed or not is done on a per document type bas
 
 </div><div class="column medium-6">
 
-![]({{file name='containerContentview_studio1.png'}} ?w=400,border=true)
+![]({{file page='/nxdoc/from-the-jsf-ui-to-nuxeo-studio' name='containerContentview_studio1.png'}} ?w=400,border=true)
 
-![]({{file name='containerContentview_studio2.png'}} ?w=400,border=true)
+![]({{file page='/nxdoc/from-the-jsf-ui-to-nuxeo-studio' name='containerContentview_studio2.png'}} ?w=400,border=true)
 
 </div></div>
 
@@ -372,9 +372,9 @@ Choosing what tabs should be displayed or not is done on a per document type bas
 
 </div><div class="column medium-6">
 
-![]({{file name='Vocabulary_studio.png'}} ?w=400,border=true)
+![]({{file page='/nxdoc/from-the-jsf-ui-to-nuxeo-studio' name='Vocabulary_studio.png'}} ?w=400,border=true)
 
-![]({{file name='Vocabulary_studio2.png'}} ?w=400,border=true)
+![]({{file page='/nxdoc/from-the-jsf-ui-to-nuxeo-studio' name='Vocabulary_studio2.png'}} ?w=400,border=true)
 
 </div></div>
 
@@ -390,7 +390,7 @@ Choosing what tabs should be displayed or not is done on a per document type bas
 
 </div><div class="column medium-6">
 
-![]({{file name='workflow_studio.png'}} ?w=400,border=true)
+![]({{file page='/nxdoc/from-the-jsf-ui-to-nuxeo-studio' name='workflow_studio.png'}} ?w=400,border=true)
 
 </div></div>
 

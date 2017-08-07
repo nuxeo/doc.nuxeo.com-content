@@ -249,14 +249,16 @@ This how-to aims at showing you how to use the different types of aggregates ava
 
 Before starting this how-to you will need to create the following elements in Studio:
 
-*   A Contract document type with 4 metadata: ContractNumber, OperationalHealthRating, RPMNumbers and SCDRelationshipHealthRating.&nbsp;![]({{file name='schema_contract.png'}} ?w=600,h=115,border=true)
+*   A Contract document type with 4 metadata: ContractNumber, OperationalHealthRating, RPMNumbers and SCDRelationshipHealthRating.&nbsp;
+    ![]({{file page='/nxdoc/how-to-configure-a-search-filter-with-facets-and-other-aggregates' name='schema_contract.png'}} ?w=600,h=115,border=true)
 
     {{#> callout type='info' }}
 
     See the how-to [How to Define a Document Type]({{page page='how-to-define-a-document-type'}}) for more detailed steps.
 
     {{/callout}}
-*   A simple vocabulary&nbsp;**Rating** assigned to the OperationalHealthRating and SCDRelationshipHealthRating elements**:** ![]({{file name='vocabulary_rating.png'}} ?w=450,border=true)
+*   A simple vocabulary&nbsp;**Rating** assigned to the **OperationalHealthRating** and **SCDRelationshipHealthRating** elements:
+    ![]({{file page='/nxdoc/how-to-configure-a-search-filter-with-facets-and-other-aggregates' name='vocabulary_rating.png'}} ?w=450,border=true)
 
     {{#> callout type='info' }}
 
@@ -266,14 +268,14 @@ Before starting this how-to you will need to create the following elements in St
 
 You should end up with something like this:
 
-![]({{file name='query_form.png'}} ?w=600,border=true)
+![]({{file page='/nxdoc/how-to-configure-a-search-filter-with-facets-and-other-aggregates' name='query_form.png'}} ?w=600,border=true)
 
 ## Creating a New Search Content View with Aggregates
 
 1.  Go to **Listing and Views** > **Content Views**.
 2.  Create a new content view called **Contracts**.
 3.  Fill in the Query & form page like this:
-    ![]({{file name='content_view.png'}} ?w=600,border=true)
+    ![]({{file page='/nxdoc/how-to-configure-a-search-filter-with-facets-and-other-aggregates' name='content_view.png'}} ?w=600,border=true)
 
 Now that you have created your content view, you can customize it by adding different types of widgets and aggregates depending on your needs in the Search Layout part of the page.
 
@@ -386,8 +388,7 @@ This aggregate allows you to define a set of ranges and works as the date range 
 
 7.  Click on **Go back to previous page**.
 
-### **Deploying Changes on Your Nuxeo Platform Instance
-**
+### Deploying Changes on Your Nuxeo Platform Instance
 
 1.  Go to your Nuxeo Platform instance,
 2.  Connect as Administrator with Administrator password,
@@ -401,10 +402,10 @@ This aggregate allows you to define a set of ranges and works as the date range 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Elasticsearch Setup]({{page space='admindoc710' page='elasticsearch-setup'}})
-*   [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
-*   [Aggregate Widget Types]({{page page='aggregate-widget-types'}})
-*   [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+- [Elasticsearch Setup]({{page space='admindoc710' page='elasticsearch-setup'}})
+- [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
+- [Aggregate Widget Types]({{page page='aggregate-widget-types'}})
+- [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 
 {{/panel}}</div><div class="column medium-6">
 

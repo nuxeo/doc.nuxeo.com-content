@@ -338,12 +338,12 @@ Here we want to add some server side Java logic that will update the contract's 
 
 ## Prerequisites
 
-*   A Contract document type created at the [previous step]({{page page='getting-started-with-nuxeo-studio'}})
-*   [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars)
-*   The latest stable [NodeJS](https://nodejs.org) version should be installed on your machine
-*   Java 8 with JDK
-*   A Nuxeo SDK: [Nuxeo Platform 8.1 SDK](http://cdn.nuxeo.com/nuxeo-8.1/nuxeo-cap-8.1-tomcat-sdk.zip)
-*   npm 2.12.0+
+- A Contract document type created at the [previous step]({{page page='getting-started-with-nuxeo-studio'}})
+- [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars)
+- The latest stable [NodeJS](https://nodejs.org) version should be installed on your machine
+- Java 8 with JDK
+- A Nuxeo SDK: [Nuxeo Platform 8.1 SDK](http://cdn.nuxeo.com/nuxeo-8.1/nuxeo-cap-8.1-tomcat-sdk.zip)
+- npm 2.12.0+
 
 ## Step 1 - Install Nuxeo IDE
 
@@ -461,7 +461,7 @@ From a command line:
 
 3.  Fill in the prompted parent project creation ("Multi module"):
 
-    ```bash
+    ```
     ? Use a parent artifact (for instance your company's BOM or the org.nuxeo.ecm.distribution:nuxeo-distribution POM)? y
     ? Parent Group id: org.nuxeo.ecm.distribution
     ? Parent Artifact id: nuxeo-distribution
@@ -669,8 +669,8 @@ If you try running the test (in Eclipse, right-click on your project and choose 
 
 1.  In the Studio menu **Automation** > **Automation Chains**, click on **New.**
 2.  Call your chain `ContractUpdater`.
-3.  Keep the **Fetch > Context Document(s)** operation and add your own operation, available in **Document > ContractUpdater.**
-    **![]({{file name='contractUpdater_chain.png' space='nxdoc' page='getting-started-with-nuxeo-ide'}} ?w=450,border=true)
+3.  Keep the **Fetch > Context Document(s)** operation and add your own operation, available in **Document > ContractUpdater**.
+    ![]({{file page='/nxdoc/develop-with-nuxeo-platform' name='contractUpdater_chain.png'}} ?w=450,border=true)
     **
 4.  Click on **Save**.
 
