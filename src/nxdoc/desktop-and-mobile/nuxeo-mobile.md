@@ -167,9 +167,15 @@ The minimum required version of Android 4.4.
 
 ### Nuxeo Platform Requirements
 
-The Nuxeo mobile application is compliant with Nuxeo Platform 8.3, Nuxeo LTS 2015 with hotfix 12 and Nuxeo LTS 2016.
+The Nuxeo mobile application is compliant with all Nuxeo Platform versions as of LTS 2015 HF12.
 
 See the [Limitations](#limitations) section for previous hotfixes of Nuxeo Platform LTS 2015.
+
+Since Nuxeo Platform 9.2, the Nuxeo mobile application uses an OAuth 2 flow to authorize against the platform. If not already done, you need to [register]({{page page='using-oauth2#client-registration'}}) an OAuth 2 Client on your Nuxeo Platform with the following attributes:
+
+* Name: Nuxeo Mobile
+* Client Id: `nuxeo-mobile`
+* Redirect URIs: `nuxeo://authorize`
 
 ## Installation
 
@@ -181,7 +187,7 @@ The Nuxeo **Android** application can be installed from [Google Play](https://pl
 
 The Nuxeo application allows you to authenticate against a Nuxeo server, browse and search the Nuxeo repository In addition you can manage your favorite documents and access your shared/personal collections. It provides a menu giving access to all menu entries, except when you are browsing.
 
-![]({{file name='MobileMenu.jpg'}} ?w=200,h=355,border=true)
+![]({{file name='mobile-menu.png'}} ?w=200,h=355,border=true)
 
 ### Offline mode
 
@@ -191,7 +197,7 @@ Offline mode is not available yet.
 
 Once the application is installed and opened, indicate the Nuxeo server you want to connect to by filling the HTTP information. For example `http://myserver.nuxeo.com/nuxeo`. As soon as the server is detected, the login page is displayed. Depending on your server configuration, it is the default one or your customized login page providing authentication through CAS, OpenID or another authentication system.
 
-![]({{file name='MobileServerConnection.PNG'}} ?w=200,h=355,border=true)![]({{file name='MobileLoginPage.jpg'}} ?w=200,h=355,border=true)
+![]({{file name='mobile-connection.png'}} ?w=200,h=355,border=true)![]({{file name='mobile-login-page.png'}} ?w=200,h=355,border=true)
 
 ### Browsing Content
 
@@ -201,7 +207,7 @@ The **Browse** menu enables you to browse your documents. The thumbnail of the d
 *   Add to/Remove from favorites (see below for details)
 *   Add to Collections
 
-![]({{file name='ActionsbySliding.jpg'}} ?w=200,h=355,border=true)
+![]({{file name='mobile-actions-sliding.png'}} ?w=200,h=355,border=true)
 
 For any non folderish document, such as notes and files typically, some information is displayed on the view layout:&nbsp;
 
@@ -212,13 +218,13 @@ For any non folderish document, such as notes and files typically, some informat
 
 If the PDF preview is available, tap the thumbnail zone to preview it. If the document is a text document with several pages, you can navigate through it.
 
-![]({{file name='MobileBrowsing.jpg'}} ?w=200,h=356,border=true)&nbsp; &nbsp;&nbsp;![]({{file name='MobileDocumentView.jpg'}} ?w=200,h=356,border=true)&nbsp; &nbsp; ![]({{file name='MobilePreview.jpg'}} ?w=200,h=355,border=true)
+![]({{file name='mobile-browse.png'}} ?w=200,h=356,border=true)&nbsp; &nbsp;&nbsp;![]({{file name='mobile-document-view.png'}} ?w=200,h=356,border=true)&nbsp; &nbsp; ![]({{file name='mobile-document-preview'}} ?w=200,h=355,border=true)
 
 ### Favorites
 
 You are able to mark as favorite the list of documents you are interested in. "Add to" and "Remove from" favorites actions are available for all document types whether the document is folderish or not. Select the "..." action available on the toolbar. Favorite documents are available directly from the **Favorites** menu.
 
-![]({{file name='Favorites.png'}} ?w=200,h=357,border=true)&nbsp;&nbsp;![]({{file name='AddToFavorites.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;![]({{file name='RemoveFromFavorites.png'}} ?w=200,h=357,border=true)
+![]({{file name='mobile-favorites.png'}} ?w=200,h=357,border=true)&nbsp;&nbsp;![]({{file name='mobile-add-favorite.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;![]({{file name='mobile-remove-favorite.png'}} ?w=200,h=357,border=true)
 
 ### Collections
 
@@ -226,19 +232,19 @@ The dedicated menu entry enables you to directly access collections: Shared and 
 
 Browsing your repository, you can add a document to one or several collections. Once you have selected the list of collections, you can view them and uncheck some.
 
-&nbsp;![]({{file name='CollectionsBrowsing.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;&nbsp;![]({{file name='SelectCollections.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp; &nbsp;&nbsp;![]({{file name='ViewSelectedCollections.png'}} ?w=200,h=357,border=true)
+&nbsp;![]({{file name='mobile-collections.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;&nbsp;![]({{file name='mobile-select-collections.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp; &nbsp;&nbsp;![]({{file name='mobile-view-selected-collections.png'}} ?w=200,h=357,border=true)
 
 ### Share / Open in
 
 You are able to **share** any document through messages, mail.... any available application on your phone for that purpose. The Share action is available on the toolbar of the document view, besides the filename.In addition, you are able to **Open directly** documents on your phone by tapping on the document link above the thumbnail.
 
-![]({{file name='OpenDocument.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;![]({{file name='OpenIn.jpg'}} ?w=200,h=355,border=true)
+![]({{file name='mobile-open-in-download.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;![]({{file name='mobile-open-in.png'}} ?w=200,h=355,border=true)
 
 ### Search
 
 The **Search** menu enables you to query documents on their title and content, by performing a full-text search.&nbsp;{{{multiexcerpt 'full-text-search-user-desc' page='USERDOC:Quick Search'}}}A list of matching documents is provided and you can directly have access them. Once on a document, tap the back icon to go back to search results.
 
-![]({{file name='MobileSearch.jpg'}} ?w=200,h=355,border=true)
+![]({{file name='mobile-search.png'}} ?w=200,h=355,border=true)
 
 ### Personal Workspace
 
