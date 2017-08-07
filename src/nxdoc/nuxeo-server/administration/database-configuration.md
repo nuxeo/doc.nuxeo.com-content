@@ -146,10 +146,9 @@ This takes two steps:
 1.  Configure the database:
     *   [PostgreSQL ]({{page page='postgresql'}})
     *   [Oracle ]({{page page='oracle'}})
+    *   [MariaDB]({{page page='mariadb'}})
     *   [Microsoft SQL Server ]({{page page='microsoft-sql-server'}})
     *   [MySQL]({{page page='mysql'}})
     *   [MongoDB]({{page page='mongodb'}})
     *   [MarkLogic]({{page page='marklogic'}})
 2.  [Connect Nuxeo to the database]({{page page='connecting-nuxeo-to-the-database'}}).
-
-&nbsp;

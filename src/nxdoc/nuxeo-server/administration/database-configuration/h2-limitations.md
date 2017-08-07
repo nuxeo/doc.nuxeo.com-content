@@ -9,7 +9,7 @@ labels:
     - h2
     - database
     - limitations
-tree_item_index: 800
+tree_item_index: 900
 version_override:
     LTS 2015: 710/admindoc/h2-limitations
     '6.0': 60/admindoc/h2-limitations

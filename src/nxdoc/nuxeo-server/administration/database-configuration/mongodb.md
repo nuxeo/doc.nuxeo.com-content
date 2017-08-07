@@ -10,7 +10,7 @@ labels:
     - mongodb
     - mongodb-component
 toc: true
-tree_item_index: 500
+tree_item_index: 600
 version_override:
     LTS 2015: 710/admindoc/mongodb
 history:
