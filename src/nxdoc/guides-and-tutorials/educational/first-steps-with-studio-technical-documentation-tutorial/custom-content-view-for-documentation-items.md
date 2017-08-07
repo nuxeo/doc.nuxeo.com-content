@@ -252,7 +252,7 @@ In the Nuxeo Platform everything is a document. Folders or workspaces are docume
     *   Feature ID: `TechnicalDocumentationContainer`
     *   Extends: Nothing
     *   Label: `Technical Documentation Folder`
-        ![]({{file name='container_doctype.png'}} ?w=400,border=true)
+        ![]({{file page='/nxdoc/custom-content-view-for-documentation-items' name='container_doctype.png'}} ?w=400,border=true)
 
 **Note:**
 
@@ -266,7 +266,7 @@ We could extend the Folder document type to inherit its folderish facet. But it 
     It automatically adds an **Accepted children type** section. No children are selected by default.
     The **Show Create Child Action** box is checked.
 4.  In this **Accepted children type** section, select `documentationItem`.
-    ![]({{file name='FolderishFacet-3.png'}} ?w=500,h=319,border=true)
+    ![]({{file page='/nxdoc/custom-content-view-for-documentation-items' name='FolderishFacet-3.png'}} ?w=500,h=319,border=true)
 
 **Read more:**
 
@@ -334,11 +334,11 @@ We also want to be able to filter the documents inside our folder.
 1.  In the Search layout part of the form, leave **Display the form as a filter** checked and choose **Unfolded filter**.
 2.  In the Search layout, drag and drop the "Full Text" built-in widget.
 3.  Drag and drop the Nature metadata from the `quality` schema.
-    ![]({{file name='natureFilter.png'}} ?w=500,border=true)
+    ![]({{file page='/nxdoc/custom-content-view-for-documentation-items' name='natureFilter.png'}} ?w=500,border=true)
 4.  Edit the Nature widget.
     1.  Select the widget type "Single directory suggestion" and choose the vocabulary `qualNat`.
     2.  Keep the `=` operator.
-        ![]({{file name='natureVoc.png'}} ?w=400,border=true)
+        ![]({{file page='/nxdoc/custom-content-view-for-documentation-items' name='natureVoc.png'}} ?w=400,border=true)
 5.  Click on **Save**.
 
 ### Defining the Results Layout
@@ -361,7 +361,7 @@ We also want to be able to filter the documents inside our folder.
     *   **Built-in Widgets**&nbsp;> **Lifecycle state**
     *   **Built-in Widgets**&nbsp;> **Version**
 4.  Click on the icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) to edit the columns labels. For instance you don't want a label for the Icon and document type column.
-    ![]({{file name='container_content_view.png'}} ?w=600,border=true)
+    ![]({{file page='/nxdoc/custom-content-view-for-documentation-items' name='container_content_view.png'}} ?w=600,border=true)
 5.  Click on **Save**.
     We now have a new content view available but we need to use it with the `TechnicalDocumentationContainer`.
 
@@ -371,7 +371,7 @@ We also want to be able to filter the documents inside our folder.
 2.  Click on the **Tabs** tab.
 3.  Click on the **Content Views** sub-tab.
 4.  In the **Main content** field select the content view `TechnicalDocListing`.
-    ![]({{file name='DefaultContentViewContainer.png'}} ?w=600,border=true)
+    ![]({{file page='/nxdoc/custom-content-view-for-documentation-items'  name='DefaultContentViewContainer.png'}} ?w=600,border=true)
 5.  Click on **Save**.
 
 ### Testing Your Changes
