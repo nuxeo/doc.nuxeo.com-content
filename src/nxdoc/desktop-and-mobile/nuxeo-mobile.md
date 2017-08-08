@@ -168,13 +168,13 @@ The Nuxeo **Android** application can be installed from [Google Play](https://pl
 
 The Nuxeo application allows you to authenticate against a Nuxeo server, browse and search the Nuxeo repository. In addition you can manage your favorite documents and access your shared/personal collections. It provides a menu giving access to all menu entries, except when you are browsing.
 
-![]({{file name='mobile-menu.jpg'}} ?w=200,h=355,border=true)
+![]({{file name='mobile-menu.png'}} ?w=200,h=355,border=true)
 
 ### Authenticating
 
 Once the application is installed and opened, indicate the Nuxeo server you want to connect to by filling the HTTP information. For example `http://myserver.nuxeo.com/nuxeo`. As soon as the server is detected, the login page is displayed. Depending on your server configuration, it is the default one or your customized login page providing authentication through CAS, OpenID or another authentication system.
 
-![]({{file name='mobile-connection.PNG'}} ?w=200,h=355,border=true)&nbsp; &nbsp;![]({{file name='mobile-login-page.jpg'}} ?w=200,h=355,border=true)
+![]({{file name='mobile-connection.png'}} ?w=200,h=355,border=true)&nbsp; &nbsp;![]({{file name='mobile-login-page.png'}} ?w=200,h=355,border=true)
 
 
 ### Browsing Content
@@ -185,7 +185,7 @@ The **Browse** menu enables you to browse your documents. The thumbnail of the d
 *   Add to/Remove from favorites (see below for details)
 *   Add to Collections
 
-![]({{file name='mobile-actions-sliding.jpg'}} ?w=200,h=355,border=true)
+![]({{file name='mobile-actions-sliding.png'}} ?w=200,h=355,border=true)
 
 For any non folderish document, such as notes and files typically, some information is displayed on the view layout:
 
@@ -196,7 +196,7 @@ For any non folderish document, such as notes and files typically, some informat
 
 If the PDF preview is available, tap the thumbnail zone to preview it. If the document is a text document with several pages, you can navigate through it.
 
-![]({{file name='mobile-browse.jpg'}} ?w=200,h=356,border=true)&nbsp; &nbsp;![]({{file name='mobile-document-view.jpg'}} ?w=200,h=356,border=true)&nbsp; &nbsp;![]({{file name='mobile-document-preview.jpg'}} ?w=200,h=355,border=true)
+![]({{file name='mobile-browse.png'}} ?w=200,h=356,border=true)&nbsp; &nbsp;![]({{file name='mobile-document-view.png'}} ?w=200,h=356,border=true)&nbsp; &nbsp;![]({{file name='mobile-document-preview.png'}} ?w=200,h=355,border=true)
 
 ### Favorites
 
@@ -216,13 +216,13 @@ Browsing your repository, you can add a document to one or several collections. 
 
 You are able to **share** any document through messages, mail.... any available application on your phone for that purpose. The Share action is available on the toolbar of the document view, besides the filename.In addition, you are able to **Open directly** documents on your phone by tapping on the document link above the thumbnail.
 
-![]({{file name='mobile-open-in-download.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;![]({{file name='mobile-open-in.jpg'}} ?w=200,h=355,border=true)
+![]({{file name='mobile-open-in-download.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;![]({{file name='mobile-open-in.png'}} ?w=200,h=355,border=true)
 
 ### Search
 
 The **Search** menu enables you to query documents on their title and content, by performing a full-text search. {{{multiexcerpt 'full-text-search-user-desc' page='USERDOC:Quick Search'}}}A list of matching documents is provided and you can directly have access them. Once on a document, tap the back icon to go back to search results.
 
-![]({{file name='mobile-search.jpg'}} ?w=200,h=355,border=true)
+![]({{file name='mobile-search.png'}} ?w=200,h=355,border=true)
 
 ### Personal Workspace
 
