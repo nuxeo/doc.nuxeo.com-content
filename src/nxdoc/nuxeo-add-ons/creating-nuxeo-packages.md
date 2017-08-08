@@ -362,10 +362,10 @@ $ cd my-project
 $ nuxeo bootstrap package
 ```
 
-If you previously generate the project using [Nuxeo CLI]({{page page='nuxeo-cli'}}), you'll be only prompted for the package's **name**. Otherwise, as `pom.xml` introspection is not ready yet, you'll be also prompted for:
-* **Parent Group id** - root's `pom.xml` `groupId` value.
-* **Parent Artifact id** - root's `pom.xml` `artifactId` value.
-* **Parent Version** - root's `pom.xml` `version` value.
+If you previously generated the project using [Nuxeo CLI]({{page page='nuxeo-cli'}}), then you will be prompted only for the **package name**. Otherwise, you will also be prompted for:
+* **Parent Group ID** - root POM `groupId` value.
+* **Parent Artifact ID** - root POM `artifactId` value.
+* **Parent Version** - root POM `version` value.
 
 ```plain
      info You'll be prompted for generation of:
@@ -392,11 +392,13 @@ If you previously generate the project using [Nuxeo CLI]({{page page='nuxeo-cli'
 * **my-project/src/main/resources/package.xml** is your [Package Manifest]({{page page='package-manifest'}}).
 * **my-project/src/main/resources/install.xml** is your [Scripting Commands Descriptor]({{page page='scripting-commands'}}).
 
-Then, you can run `maven package` and you'll find your Nuxeo Package ready. You can deploy it following those instructions about [installing a Nuxeo Package](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/).
+Run `mvn package` to generate your Nuxeo Package and read [installing a Nuxeo Package](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/) to deploy it.
 
-### From a Single Module Project
+### From a Maven Single Module Project
 
-In case you'd like to create a dedicated package for a single module Maven project, you have to create a separate project that will contain a dependency to your project. Assume that your project has this [GAV](https://maven.apache.org/guides/mini/guide-naming-conventions.html) `com.bigcorp.sample:my-big-project:1.0-SNAPSHOT`.
+In order to create a dedicated package for a Maven single module project, you have to create a separate project that will contain a dependency to your project. 
+
+The following example assumes that your project's [GAV](https://maven.apache.org/guides/mini/guide-naming-conventions.html) is `com.bigcorp.sample:my-big-project:1.0-SNAPSHOT`.
 
 ```bash
 $ cd my-project && cd .. # Move to the parent folder of your project root
@@ -404,7 +406,7 @@ $ mkdir my-project-package && cd $_ # Create a dedicated folder
 $ nuxeo bootstrap package # Bootstrap package
 ```
 
-You will be prompted for parent artifact informations; if your company is having a [BOM](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html) you should know what to fill. Otherwise you can follow this example using `nuxeo-distribution`, it will brings all Nuxeo's dependency at once:
+You will be prompted for parent artifact informations; if your company is having a [BOM](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html) you should know what to fill. Otherwise you can follow this example using `nuxeo-distribution`, it will brings all Nuxeo dependencies at once:
 
 ```plain
      info You'll be prompted for generation of:
@@ -443,7 +445,8 @@ You just created an empty package; without any additional dependency for now. Ed
   </dependencies>
 ```
 
-Then, you can run `mvn package` and you'll find your Nuxeo Package ready. You can deploy it following those instructions about [installing a Nuxeo Package](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/).
+Run `mvn package` to generate your Nuxeo Package and read [installing a Nuxeo Package](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/) to deploy it.
+
 
 ## The Package Manifest
 
