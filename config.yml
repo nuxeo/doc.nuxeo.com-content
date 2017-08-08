@@ -14,7 +14,7 @@ default:
                 space_path: admindoc
                 space_name: Nuxeo Installation and Administration
         branch: '710'
-        dev_browser_path: nxdoc
+        dev_browser_path: '710/nxdoc'
         versions:
             -
                 label: FT
