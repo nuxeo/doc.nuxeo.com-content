@@ -4,6 +4,7 @@ review:
     comment: ''
     date: ''
     status: ok
+toc: true
 confluence:
     ajs-parent-page-id: '9275231'
     ajs-parent-page-title: Working on Nuxeo sources
@@ -84,13 +85,13 @@ history:
         version: '1'
 
 ---
-## Release process
+## Release Process
 
 Here is an overview of the release tooling and process at Nuxeo.
 
 Manual testing, code review, issue management and team collaboration are not mentioned in this document.
 
-### Release the Nuxeo Platform, including main Addons and Nuxeo Packages
+### Release the Nuxeo Platform, including Main Addons and Nuxeo Packages
 
 First check the source code is releasable:
 
@@ -117,13 +118,13 @@ All addons listed in [org.nuxeo:nuxeo-addons-parent:pom](https://github.com/nuxe
 
 All Nuxeo Packages listed in [marketplace.ini](https://github.com/nuxeo/integration-scripts/blob/master/marketplace.ini) are also released along with the platform.
 
-### Release other addons and libraries
+### Release Other Addons and Libraries
 
 All other addons than those listed in [https://github.com/nuxeo/addons/blob/master/pom.xml](https://github.com/nuxeo/addons/blob/master/pom.xml) are individually released using [IT-release-on-demand-addon](https://qa.nuxeo.org/jenkins/job/Deploy/job/IT-release-on-demand-addon/).
 
 ### Update the Documentation
 
-[Javadoc and Taglibs](http://community.nuxeo.com/api/) are updated by [https://qa.nuxeo.org/jenkins/job/nuxeo-doc/.](https://qa.nuxeo.org/jenkins/job/nuxeo-doc/)
+[Javadoc and Taglibs](http://community.nuxeo.com/api/) are updated by [https://qa.nuxeo.org/jenkins/job/Misc/job/nuxeo-community-doc/](https://qa.nuxeo.org/jenkins/job/Misc/job/nuxeo-community-doc/).
 
 [Platform Explorer](http://explorer.nuxeo.org/) is upgraded and updated with an export from the released distribution, using [the platform-explorer addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/platform-explorer).
 
@@ -135,7 +136,7 @@ Here are the main scripts used for the release processes:
 *   [https://github.com/nuxeo/nuxeo/blob/master/scripts/release_mp.py](https://github.com/nuxeo/nuxeo/blob/master/scripts/release_mp.py)
 *   [https://github.com/nuxeo/integration-scripts/](https://github.com/nuxeo/integration-scripts/)
 
-## Version policy (Git branching model)
+## Version Policy (Git Branching Model)
 
 Here is the version policy applied at Nuxeo during development, maintenance and release.
 
@@ -143,63 +144,63 @@ There are a few variants in the release process (such as the onestep mode which 
 
 The Nuxeo Packages and the individual addons are released following the same model.
 
-### Main branches
+### Main Branches
 
 The main active branches are:
 
-*   unstable development branch:&nbsp;`master`
+*   unstable development branch: `master`
 *   validated development branches: `x.y.z-SNAPSHOT`
-*   stable maintenance branches:&nbsp;`x.y.z`
-*   specific development branches:&nbsp;`fix-NXP-9999-someIssue`,&nbsp;`feature-NXP-9999-someFeature`
+*   stable maintenance branches: `x.y.z`
+*   specific development branches: `fix-NXP-9999-someIssue`, `feature-NXP-9999-someFeature`
 
-### Technical steps to release LTS&nbsp;`6.0` from branch&nbsp;`master` (version `6.0-SNAPSHOT`)
+### Technical Steps to Release LTS `6.0` from Branch `master` (version `6.0-SNAPSHOT`)
 
 1.  Prepare the release
-    1.  checkout&nbsp;`master`
-    2.  from `master`: create and checkout maintenance branch&nbsp;`6.0`
-    3.  on&nbsp;`6.0`: replace versions in code:&nbsp;`6.0-SNAPSHOT` =>&nbsp;`6.0`
-    4.  on&nbsp;`6.0`: commit changes
-    5.  on&nbsp;`6.0`: tag&nbsp;`release-6.0`
-    6.  on&nbsp;`6.0`: replace versions in code:&nbsp;`6.0` =>&nbsp;`6.0-HF01-SNAPSHOT`
-    7.  on&nbsp;`6.0`: commit changes
+    1.  checkout `master`
+    2.  from `master`: create and checkout maintenance branch `6.0`
+    3.  on `6.0`: replace versions in code: `6.0-SNAPSHOT` => `6.0`
+    4.  on `6.0`: commit changes
+    5.  on `6.0`: tag `release-6.0`
+    6.  on `6.0`: replace versions in code: `6.0` => `6.0-HF01-SNAPSHOT`
+    7.  on `6.0`: commit changes
     8.  checkout `master`
-    9.  on `master`: replace versions in code:&nbsp;`6.0-SNAPSHOT` => `7.1-SNAPSHOT`
-    10.  on&nbsp;`master`: commit changes
-    11.  checkout&nbsp;`release-6.0`
-    12.  on&nbsp;`release-6.0`: build and deploy to staging repositories
+    9.  on `master`: replace versions in code: `6.0-SNAPSHOT` => `7.1-SNAPSHOT`
+    10.  on `master`: commit changes
+    11.  checkout `release-6.0`
+    12.  on `release-6.0`: build and deploy to staging repositories
 2.  Perform the release
-    1.  publish branches&nbsp;`master` and&nbsp;`6.0`
-    2.  publish tag&nbsp;`release-6.0`
-    3.  checkout&nbsp;`release-6.0`
-    4.  on&nbsp;`release-6.0`: deploy to public repositories
+    1.  publish branches `master` and `6.0`
+    2.  publish tag `release-6.0`
+    3.  checkout `release-6.0`
+    4.  on `release-6.0`: deploy to public repositories
 
-### Technical steps&nbsp;to release FT `7.1` from branch&nbsp;`master` (version `7.1-SNAPSHOT`)
+### Technical Steps to Release FT `7.1` from Branch `master` (version `7.1-SNAPSHOT`)
 
 1.  Prepare the release
-    1.  checkout&nbsp;`master`
+    1.  checkout `master`
     2.  from `master`: create and checkout release branch `7.1`
-    3.  on `7.1`: replace versions in code: `7.1-SNAPSHOT` =>&nbsp;`7.1`
+    3.  on `7.1`: replace versions in code: `7.1-SNAPSHOT` => `7.1`
     4.  on `7.1`: commit changes
-    5.  on `7.1`: tag&nbsp;`release-7.1`
+    5.  on `7.1`: tag `release-7.1`
     6.  checkout `master`
     7.  on `master`: replace versions in code: `7.1-SNAPSHOT` => `7.2-SNAPSHOT`
-    8.  on&nbsp;`master`: commit changes
-    9.  delete branch&nbsp;`7.1`
-    10.  checkout&nbsp;`release-7.1`
-    11.  on&nbsp;`release-7.1`: build and deploy to staging repositories
+    8.  on `master`: commit changes
+    9.  delete branch `7.1`
+    10.  checkout `release-7.1`
+    11.  on `release-7.1`: build and deploy to staging repositories
 2.  Perform the release
     1.  publish branch `master`
-    2.  publish tag&nbsp;`release-7.1`
-    3.  checkout&nbsp;`release-7.1`
-    4.  on&nbsp;`release-7.1`: deploy to public repositories
+    2.  publish tag `release-7.1`
+    3.  checkout `release-7.1`
+    4.  on `release-7.1`: deploy to public repositories
 
 ### Maintenance and Development
 
-Technical steps to fix NXP-9999 on current&nbsp;`master` development branch (version `7.3-SNAPSHOT`) with a backport to&nbsp;`6.0` maintenance branch (version `6.0-HF15-SNAPSHOT`):
+Technical steps to fix NXP-9999 on current `master` development branch (version `7.3-SNAPSHOT`) with a backport to `6.0` maintenance branch (version `6.0-HF15-SNAPSHOT`):
 
 1.  Prepare the fix
 
-    1.  checkout&nbsp;`master`
+    1.  checkout `master`
     2.  from `master`: create and checkout maintenance branch `fix-NXP-9999-someFix`
     3.  on `fix-NXP-9999-someFix`: fix the issue
     4.  on `fix-NXP-9999-someFix`: commit changes
@@ -209,23 +210,19 @@ Technical steps to fix NXP-9999 on current&nbsp;`master` development branch (ver
     2.  from `6.0`: create and checkout maintenance branch `fix-NXP-9999-6.0-someFix`
     3.  on `fix-NXP-9999-6.0-someFix`: cherry pick the changes from `fix-NXP-9999-someFix`
     4.  on `fix-NXP-9999-6.0-someFix`: commit changes
-    5.  publish branch&nbsp;`fix-NXP-9999-6.0-someFix`
+    5.  publish branch `fix-NXP-9999-6.0-someFix`
 3.  Test and Publish the fix
     That is done by the Continuous Integration, see [Isolated Testing]({{page page='isolated-testing'}}) ("Test&Push" jobs). Depending on the options, the process looks like:
 
-    1.  checkout&nbsp;`fix-NXP-9999-someFix`
-    2.  on `fix-NXP-9999-someFix`:&nbsp; rebase on&nbsp;`master` (parent branch)
+    1.  checkout `fix-NXP-9999-someFix`
+    2.  on `fix-NXP-9999-someFix`: rebase on `master` (parent branch)
     3.  on `fix-NXP-9999-someFix`: build and test
-    4.  checkout&nbsp;`master`
+    4.  checkout `master`
     5.  on `master`: merge `fix-NXP-9999-someFix`
-    6.  publish branch&nbsp;`master`
+    6.  publish branch `master`
 4.  Test and Publish the backport
-    1.  Repeat step 3 with branch `fix-NXP-9999-6.0-someFix` and parent branch&nbsp;`6.0`
+    1.  Repeat step 3 with branch `fix-NXP-9999-6.0-someFix` and parent branch `6.0`
 
 Feature development follows the same process (without backport of course): step 1, step 3.
 
 Maintenance and development branches are preferably updated against their parent branch with a rebase rather than a merge.
-
-&nbsp;
-
-&nbsp;
