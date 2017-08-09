@@ -302,7 +302,7 @@ As stated in the introduction of the project, the goal is to manage all kinds of
 4.  Choose what document type it extends. Here we need to have something holding a binary file with metadata, life cycle, version and validation. This is very similar to the "File" document type. So let's extend this one to have the same facets and schemas (it is still possible to add new schemas later).
 5.  Type a label for the end user in the Nuxeo Platform: `Technical documentation item`.
 6.  Click on **Next**.
-    ![]({{file name='Screenshot_02_07_13_15_42.png'}} ?w=500,h=345,border=true)
+    ![]({{file page='/nxdoc/implementing-documentation-items' name='new_document_type_popup.png'}} ?w=500,h=353,border=true)
     The `documentationItem` document type is created.
 7.  Click on the **Save** button.
 
@@ -349,7 +349,7 @@ To be able to describe and find the document, the following metadata should be a
 
 In the Nuxeo Platform metadata are always grouped by schemas. A schema is a set of metadata that make sense together. A document very often has several schemas of metadata. In Studio, look at the bottom of the Definition tab: there are already several inherited schemas. Once again, this is because `DocumentationItem` extends `File`.
 
-![]({{file name='inheritedSchemas-2.png'}} ?w=550,border=true)
+![]({{file page='/nxdoc/implementing-documentation-items' name='inheritedSchemas-2.png'}} ?w=550,border=true)
 
 *   `common` and `uid` are schemas used by the system.
 *   `file` is a schema defined to hold a binary file. This exactly what we need.
@@ -366,8 +366,8 @@ In the end the only metadata that is not already available is the "process". So 
 In Studio, each document type has its own dedicated schema. It can be found in the Schema tab, next to the Definition tab. The "process" metadata can be a generic metadata in a technical documentation management app. So let's create a generic schema in the Schemas item on the menu of Nuxeo Studio.
 
 1.  Click on **Content Model** > **Schemas**.
-    ![]({{file name='Screenshot_02_07_13_15_57.png'}} ?w=500,h=118,border=true)
 2.  Click on the **New** button.
+    ![]({{file page='/nxdoc/implementing-documentation-items' name='genericSchema.png'}} ?w=500,border=true)
 3.  Name the schema `quality` as processes are often managed by quality departments. The idea here to have a schema that could have several metadata of the same domain.
 4.  Choose a shorter name for the prefix: `qa`.
 5.  Click on **Next** to validate the schema creation.
@@ -382,7 +382,7 @@ Now you add this new schema to the `DocumentationItem` document type:
 3.  Expend **Add extra schemas to this document type**.
 4.  In the left list select the `quality` schema.
 5.  Add it to the right list.
-    ![]({{file name='inheritSchema.png'}} ?w=500,h=128,border=true)
+    ![]({{file page='/nxdoc/implementing-documentation-items' name='inheritSchema.png'}} ?w=500,border=true)
 6.  Click on **Save**.
     The schema is now available on the document type. So every metadata added to the schema will automatically be added to the document.
 
@@ -391,8 +391,8 @@ Now you add this new schema to the `DocumentationItem` document type:
 1.  In Studio, go to the `quality` schema.
 2.  Add a new field and name it `process`.
 3.  Select the **String** type.
+    ![]({{file page='/nxdoc/implementing-documentation-items' name='schema_field.png'}} ?w=600,border=true)
 4.  A document is only related to one process, so we do not check **Multi-Valued**.
-    ![]({{file name='Screenshot_02_07_13_16_18.png'}} ?w=600,border=true)
 5.  Click on **Save**.
 
 Nuxeo makes a difference between the content model (what are the document types and metadata?) and the user interface. The metadata is available on the document but we haven't defined how to fill in this metadata.
@@ -411,6 +411,7 @@ Metadata are displayed in form layouts. A form layout can be generic and reused 
     You can see that the layout is already filled with a minimum set of metadata.
 3.  Click on the icon ![]({{file name='delete.gif' space='studio' page='studio-icons-index'}}) of the WARNING row and confirm deletion.
 4.  Select the `quality` schema in the right drop down list.
+    ![]({{file page='/nxdoc/implementing-documentation-items' name='creation_layout_schemas_list.png'}} ?w=600,border=true)
 5.  Drag the `process` metadata from the list and drop it on a row of the layout.
     The widget edition pop-up displays several options for the widget you just dropped.
 6.  Leave the default values for now, and click on **Save**.
@@ -419,7 +420,7 @@ Metadata are displayed in form layouts. A form layout can be generic and reused 
 8.  In the `dublincore` schema, drag and drop the `Nature` metadata on a row and save default values.
 9.  In the `file` schema, drag and drop the `content` metadata and save default values.
     In the end you should have a creation layout looking like:
-    ![]({{file name='Screenshot_02_07_13_18_07.png'}} ?w=500,h=273,border=true)
+    ![]({{file page='/nxdoc/implementing-documentation-items' name='creation_layout.png'}} ?w=500,h=273,border=true)
     Which will give, once deployed on the server:
     ![]({{file name='Screenshot_02_07_13_18_10.png'}} ?w=400,border=true)
 
@@ -446,7 +447,7 @@ In the Nuxeo Platform lists of choices are called vocabularies. A specific secti
     We need a two-level vocabulary as they are processes and sub-processes.
 2.  By default, you already have two levels. You can add several roots (processes) and children for each roots (sub-subprocesses).
     In the end, you can have something like that (please note that these are dummy processes):
-    ![]({{file name='Screenshot_02_07_13_19_02.png'}} ?w=600,border=true)
+    ![]({{file page='/nxdoc/implementing-documentation-items' name='vocabulary_definition_nature.png'}} ?w=600,border=true)
 
 Now that you have the two vocabularies, you still have to bind them to the metadata so that the user can select them. This is where we will customize each metadata widget in the creation layout from a simple text to list of choices.
 
@@ -462,7 +463,7 @@ Now that you have the two vocabularies, you still have to bind them to the metad
 3.  In the Layout Widget Editor, select the widget type **Vocabulary**.
 4.  In the **Edit properties** part, select the vocabulary `qualNat`.
 5.  You can make the nature field required if you want to by selecting **Yes** in the **Required** drop down list.
-    ![]({{file name='Screenshot_02_07_13_19_14.png'}} ?w=450,border=true)
+    ![]({{file page='/nxdoc/implementing-documentation-items' name='widget_editor_process.png'}} ?w=400,border=true)
 6.  Click on **Save**.
 
 #### Configuring the **Process Widget**
@@ -478,8 +479,8 @@ Now that you have the two vocabularies, you still have to bind them to the metad
 
 1.  Click on the View Layout tab, and click on **Import Layout** > **Import 'create' layout**.
     It imports what you did on the creation layout, so that you are able to see on the **Summary** tab the metadata of your document.
+    ![]({{file page='/nxdoc/implementing-documentation-items' name='import_layout_button.png'}} ?w=500,border=true)
 2.  Do the same thing on the Edit Layout tab.
-    ![]({{file name='Screenshot_02_07_13_19_18.png'}} ?w=500,h=231,border=true)
 3.  Click on **Save**.
 
 ## Testing Your Changes
