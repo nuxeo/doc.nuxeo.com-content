@@ -392,11 +392,11 @@ If you previously generated the project using [Nuxeo CLI]({{page page='nuxeo-cli
 * **my-project/src/main/resources/package.xml** is your [Package Manifest]({{page page='package-manifest'}}).
 * **my-project/src/main/resources/install.xml** is your [Scripting Commands Descriptor]({{page page='scripting-commands'}}).
 
-Run `mvn package` to generate your Nuxeo Package and read [installing a Nuxeo Package](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/) to deploy it.
+Run `mvn package` to generate your Nuxeo Package and read [installing a Nuxeo Package]({{page version='' space='nxdoc' page='installing-a-new-package-on-your-instance'}}) to deploy it.
 
 ### From a Maven Single Module Project
 
-In order to create a dedicated package for a Maven single module project, you have to create a separate project that will contain a dependency to your project. 
+In order to create a dedicated package for a Maven single module project, you have to create a separate project that will contain a dependency to your project.
 
 The following example assumes that your project's [GAV](https://maven.apache.org/guides/mini/guide-naming-conventions.html) is `com.bigcorp.sample:my-big-project:1.0-SNAPSHOT`.
 
@@ -445,7 +445,7 @@ You just created an empty package; without any additional dependency for now. Ed
   </dependencies>
 ```
 
-Run `mvn package` to generate your Nuxeo Package and read [installing a Nuxeo Package](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/) to deploy it.
+Run `mvn package` to generate your Nuxeo Package and read [installing a Nuxeo Package]({{page version='' space='nxdoc' page='installing-a-new-package-on-your-instance'}}) to deploy it.
 
 
 ## The Package Manifest
@@ -482,14 +482,14 @@ Here is the list of properties available to install scripts:
 *   **package.name:** The Package name.
 *   **package.version:** The Package version.
 *   **package.root:** The root folder of the package (the folder containing the exploded zip).
-*   **env.server.home:** Since 5.5\. The Nuxeo server home. (`$NUXEO_HOME`).
-*   **env.home:** The Nuxeo Runtime Environment home. (`$NUXEO_HOME/server/default/data/NXRuntime` on JBoss, `$NUXEO_HOME/nxserver on Tomcat`).
+*   **env.server.home:** Since 5.5\. The Nuxeo server home (`$NUXEO_HOME`).
+*   **env.home:** The Nuxeo Runtime Environment home (`$NUXEO_HOME/server/default/data/NXRuntime` on JBoss, `$NUXEO_HOME/nxserver` on Tomcat).
 *   **env.ear:** JBoss only. The nuxeo.ear directory (`$NUXEO_HOME/server/default/deploy/nuxeo.ear`).
-*   **env.lib:** The Nuxeo lib directory ( [`nuxeo.ear/lib`](http://nuxeo.ear/lib) on JBoss, `$NUXEO_HOME/nxserver/lib` on Tomcat).
+*   **env.lib:** The Nuxeo lib directory (`nuxeo.ear/lib` on JBoss, `$NUXEO_HOME/nxserver/lib` on Tomcat).
 *   **env.syslib:** The host application lib directory (`$NUXEO_HOME/lib`).
-*   **env.bundles:** The Nuxeo bundles directory ( [`nuxeo.ear/bundles`](http://nuxeo.ear/bundles) on JBoss, `$NUXEO_HOME/nxserver/bundles` on Tomcat).
-*   **env.config:** The Nuxeo _config_ `directory ([nuxeo.ear/config](http://nuxeo.ear/config)` on JBoss, `$NUXEO_HOME/nxserver/config` on Tomcat).
-*   **env.templates:** The configuration templates directory. (`$NUXEO_HOME/templates`).
+*   **env.bundles:** The Nuxeo bundles directory (`nuxeo.ear/bundles` on JBoss, `$NUXEO_HOME/nxserver/bundles` on Tomcat).
+*   **env.config:** The Nuxeo _config_ directory (`nuxeo.ear/config` on JBoss, `$NUXEO_HOME/nxserver/config` on Tomcat).
+*   **env.templates:** The configuration templates directory (`$NUXEO_HOME/templates`).
 *   **env.hostapp.name:** The host application name (Tomcat or JBoss)
 *   **env.hostapp.version:** The host application version (e.g. Tomcat or JBoss version)
 *   **sys.timestamp:** The timestamp when the install task was created - a string in the format `yyMMddHHmmss`.
