@@ -8,16 +8,8 @@ labels:
     - amazon-s3
     - amazon-cloudfront
     - binary-manager
-    - multiexcerpt-include
 toc: true
 tree_item_index: 100
-history:
-    -
-        author: Arnaud Kervern
-        date: '2013-01-04 10:51'
-        message: ''
-        version: '1'
-
 ---
 The CloudFrontBinaryManager is a Nuxeo Binary Manager that lets you store Nuxeo's binaries in an [Amazon S3](http://aws.amazon.com/s3/) bucket and lets you download them from an [Amazon CloudFront CDN](https://aws.amazon.com/cloudfront/) using signed URLs.
 
@@ -25,7 +17,7 @@ The CloudFrontBinaryManager is a Nuxeo Binary Manager that lets you store Nuxeo'
 
 You should be familiar with:
 
-- [Nuxeo S3 Binary Manager]({{page page='amazon-s3-online-storage'}}) installed and configurated.
+- [Nuxeo S3 Binary Manager]({{page page='amazon-s3-online-storage'}}) installed and configured
 
 - [Serving Private Content through CloudFront](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html)
 
@@ -39,26 +31,25 @@ You should be familiar with:
 
 ### Serving S3 Content
 
-Following [Using CloudFront with Amazon S3](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/MigrateS3ToCloudFront.html#adding-cloudfront-to-s3) documentation to create a web distribution bound to S3.
+Follow [Using CloudFront with Amazon S3](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/MigrateS3ToCloudFront.html#adding-cloudfront-to-s3) documentation page to create a web distribution bound to S3.
 
-Mandatory Settings:
+Mandatory settings:
 
-- **Restrict Bucket Access**: `true`. It must be enable as we are going to serve private content and sign URLs.
+- **Restrict Bucket Access**: `true`. Must be enabled to serve private content and sign URLs.
 
 - **Query String Forwarding and Caching**: `whitelist`.
-
-  ```text
+  ```
   response-content-type
   response-content-disposition
   ```
 
-  To get correct response `content-type` and `content-disposition` headers.
+To get correct response `content-type` and `content-disposition` headers.
 
-- **Restrict Viewer Access**: `Yes`. To require signed URLs to access objects in the bucket.
+- **Restrict Viewer Access**: `Yes`. Requires signed URLs to access objects in the bucket.
 
-Recommended Settings, in order to ease configuration:
+Recommended settings in order to ease configuration:
 
-- **Restrict Bucket Access**: `Yest`. Restricts Bucket access to only CloudFront origin.
+- **Restrict Bucket Access**: `Yes`. Restricts Bucket access to only CloudFront origin.
 
 - **Origin Access Identity**: `Create a New Identity`. Creates a dedicated Identity between the distribution and S3.
 
@@ -66,11 +57,11 @@ Recommended Settings, in order to ease configuration:
 
 ## Nuxeo Configuration
 
-In order to configure the package, you will need to provide values for the configuration parameters that define your S3 credentials, bucket.
+In order to configure the package, you will need to provide values for the configuration parameters that define your S3 credentials bucket.
 
-Assume that you already have a bucket: `nuxeo_bucket` with minimal configuration:
+Assuming that you already have a bucket `nuxeo_bucket` with minimal configuration:
 
-```text
+```
 nuxeo.s3storage.bucket=nuxeo_bucket
 nuxeo.s3storage.awsid=your_AWS_ACCESS_KEY_ID
 nuxeo.s3storage.awssecret=your_AWS_SECRET_ACCESS_KEY
@@ -79,13 +70,13 @@ nuxeo.s3storage.awssecret=your_AWS_SECRET_ACCESS_KEY
 nuxeo.s3storage.directdownload=true
 ```
 
-Read [Nuxeo S3 Binary Manager]({{page page='amazon-s3-online-storage'}}) page to go further in the configuration, if needed.
+If you want to go further, please read the [Nuxeo S3 Binary Manager]({{page page='amazon-s3-online-storage'}}) page.
 
 ### Specifying Your Amazon CloudFront Parameters
 
 In `nuxeo.conf`, add the following lines:
 
-```text
+```
 # Use CloudFrontBinaryManager
 nuxeo.core.binarymanager=org.nuxeo.ecm.core.storage.sql.CloudFrontBinaryManager
 
