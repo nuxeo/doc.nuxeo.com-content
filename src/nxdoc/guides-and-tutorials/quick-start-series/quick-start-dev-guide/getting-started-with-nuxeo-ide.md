@@ -347,8 +347,7 @@ Step 1: Create an automation chain
 1.  In Studio (left menu), Click on **Automation** > **Automation Chains** > **New.**
     I will call it `ContractUpdater`.
 2.  Keep the **Fetch > Context Document(s)** operation and add your own operation that you will find in **Document > ContractUpdater.**
-    **![]({{file name='Screen Shot 2014-10-07 at 17.26.49.png'}} ?w=650,h=271,border=true)
-    **
+    ![]({{file page='/nxdoc/develop-with-nuxeo-platform' name='contractUpdater_chain.png'}} ?w=450,border=true)
 3.  Click on **Save**.
 
 Step 2: Create an Event Handler
