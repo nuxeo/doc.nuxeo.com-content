@@ -23,10 +23,6 @@ You should be familiar with:
 
 - Be in possession of your [CloudFront Key Pairs](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html#private-content-creating-cloudfront-key-pairs)
 
-## Installation
-
-{{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
-
 ## Distribution Configuration
 
 ### Serving S3 Content
