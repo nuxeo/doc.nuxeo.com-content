@@ -109,7 +109,7 @@ history:
 
 ### Linux
 
-{{#> panel type='code' heading='Manual install of NodeJS'}}
+Manual install of NodeJS:
 
 ```bash
 cd /tmp
@@ -122,17 +122,15 @@ sudo make install
 
 ```
 
-{{/panel}}
-
 ### OS X
 
-Using Homebrew
+Using Homebrew:
 
 ```bash
 brew install node
 ```
 
-Using MacPorts
+Using MacPorts:
 
 ```bash
 sudo port install npm
