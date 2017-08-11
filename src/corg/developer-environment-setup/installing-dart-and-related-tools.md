@@ -44,16 +44,23 @@ See <https://www.dartlang.org/install>
 
 ## Installing Dart
 
+Modules based on Dart require the version 1.23.x. Once installed, verify the version in a terminal:
+
+```
+$ pub version
+Pub 1.23.0
+```
+
 ### Linux
 
-{{#> panel type='code' heading='Manual install of Dart'}}
+{{#> panel type='code' heading='Using APT'}}
 
 ```bash
 sudo apt-get install apt-transport-https
 sudo sh -c 'curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -'
 sudo sh -c 'curl https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_stable.list > /etc/apt/sources.list.d/dart_stable.list'
 sudo apt-get update
-sudo apt-get install dart
+sudo apt-get install dart=1.23.0-1
 
 sudo update-alternatives --install /usr/bin/dart dart /usr/lib/dart/bin/dart 0
 sudo update-alternatives --install /usr/bin/pub pub /usr/lib/dart/bin/pub 0
@@ -62,16 +69,36 @@ sudo update-alternatives --install /usr/bin/dart2js dart2js /usr/lib/dart/bin/da
 
 {{/panel}}
 
+See https://www.dartlang.org/install/linux for other Linux install options.
+
 ### OS X
 
 {{#> panel type='code' heading='Using Homebrew'}}
 
 ```bash
-brew tap dart-lang/dart
-brew install dart --with-dartium
+brew tap dart-lang/homebrew-dart
+brew install https://raw.githubusercontent.com/dart-lang/homebrew-dart/b55507ab62b2e724b62e58a8e5363a726e34b7e7/dart.rb --with-dartium
 ```
 
 {{/panel}}
+
+See https://www.dartlang.org/install/mac for other Mac install options.
+
+### Windows
+
+{{#> panel type='code' heading='Using Chocolatey'}}
+
+See https://chocolatey.org/install to install Chocolatey, a package manager for Windows.
+
+```bash
+choco install dart-sdk -version 1.23.0
+choco install dartium  -version 1.23.0
+```
+
+{{/panel}}
+
+See https://www.dartlang.org/install/windows for other Windows install options.
+
 
 ### Dart Tools
 
