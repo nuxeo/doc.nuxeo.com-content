@@ -113,9 +113,9 @@ history:
 
 ```bash
 cd /tmp
-wget http://nodejs.org/dist/v4.4.2/node-v4.4.2.tar.gz
-tar -xzf node-v4.4.2.tar.gz
-cd node-v4.4.2
+wget http://nodejs.org/dist/v6.4.0/node-v6.4.0.tar.gz
+tar -xzf node-v6.4.0.tar.gz
+cd node-v6.4.0
 ./configure
 make
 sudo make install
