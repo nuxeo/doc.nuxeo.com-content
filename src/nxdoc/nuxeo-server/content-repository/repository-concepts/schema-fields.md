@@ -40,7 +40,7 @@ The Nuxeo Platform internal data model is based on the following data types:
 - `String`: a Unicode string value.
 - `Long`: a 64-bit signed integer.
 - `Double`: a double-precision 64-bit IEEE 754 floating point number.
-- `Boolean`: a boolean.
+- `Boolean`: a [boolean data type](https://en.wikipedia.org/wiki/Boolean_data_type "Wikipedia Boolean data type article").
 - `Calendar`: a date, more specifically an instant in time with milliseconds resolution.
 
 ### Calendar Timezone
