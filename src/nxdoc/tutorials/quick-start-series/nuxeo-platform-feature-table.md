@@ -1380,7 +1380,7 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
+    <td>N/A</td>
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
