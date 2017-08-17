@@ -197,7 +197,7 @@ Want to go further? Have a look at [How to Work with Maintenance Branches]({{pag
 
 - [Commit Preferences]({{page page='commit-preferences'}})
 - [Branch Management]({{page page='branch-management'}})
-- [Working in Studio]({{page page='working-in-studio'}})
+- [Working in Studio Modeler]({{page page='working-in-studio'}})
 
 {{/panel}}
 </div>

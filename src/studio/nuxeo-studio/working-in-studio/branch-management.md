@@ -257,7 +257,7 @@ When a release is performed, the next version can be updated. If you are in adva
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Commit Preferences]({{page page='commit-preferences'}})
-- [Working in Studio]({{page page='working-in-studio'}})
+- [Working in Studio Modeler]({{page page='working-in-studio'}})
 - [Maven Integration]({{page page='maven-integration'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-to'}}

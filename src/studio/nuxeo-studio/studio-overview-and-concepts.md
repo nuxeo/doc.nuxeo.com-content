@@ -112,6 +112,13 @@ Nuxeo Studio facilitates not only the customization but also the deployment of t
 
 Finally, Nuxeo Studio makes it easier to upgrade your Nuxeo-based applications, as Nuxeo Studio guarantees forward compatibility with the next release of Nuxeo Platform.
 
+Nuxeo Studio is composed of two parts:
+* Studio Modeler, where you configure your content models, business workflows and JSF UI customizations
+* Studio Designer, where you configure your forms and layouts designs for Web UI
+
+{{{multiexcerpt 'Designer-restricted-access-note' page='generic-multi-excerpts' space='nxdoc'}}}
+
+
 ## Why Use Nuxeo Studio
 
 Because Nuxeo Studio is a graphical tool, you can define all your document types, views, forms, workflows without writing code or XML configuration. You can then focus on your business logic what your users need instead of spending time on development issues.
@@ -142,6 +149,6 @@ Using Nuxeo Studio you can:
 Here are a list of resources to start working with Nuxeo Studio:
 
 *   [Getting Started With Nuxeo Studio videos](https://university.nuxeo.io/nuxeo/university/#!/course/getting-started-nuxeo-studio): Our Nuxeo University course dedicated to the discovery of Nuxeo Studio
-*   [Working in Studio]({{page page='working-in-studio'}}): This section of the documentation provides screen by screen descriptions of the tool
+*   [Working in Studio Modeler]({{page page='working-in-studio'}}): This section of the documentation provides screen by screen descriptions of the tool
 *   [Essential Nuxeo Platform Terminology]({{page space='nxdoc' page='essential-nuxeo-platform-terminology'}}): Get familiar with the concepts and terms used in the Platform
 *   [Quick Start Dev Guide]({{page space='nxdoc' page='start-customizing-the-nuxeo-platform'}}): Start a Nuxeo Platform customization project using Nuxeo Studio and Nuxeo Generator

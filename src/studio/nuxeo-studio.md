@@ -53,7 +53,7 @@ Get an overview of what can be done with Nuxeo Studio and how you can create you
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
-### [Working with Studio]({{page page='working-in-studio'}})
+### [Working with Studio Modeler]({{page page='working-in-studio'}})
 
 In this chapter we will explain each screen exposed by Nuxeo Studio. If you are blocked in your configuration process on a specific screen!
 

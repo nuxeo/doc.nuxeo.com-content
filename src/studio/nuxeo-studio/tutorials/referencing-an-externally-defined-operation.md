@@ -150,9 +150,9 @@ We provide explanations on how to implement a custom operation. Pre-requisites a
 
 {{! /excerpt}}
 
-Basically, to enable a custom in your Studio project, you need to:
+Basically, to enable a custom operation in your Studio project, you need to:
 
-1.  [implement an operation]({{page space='nxdoc' page='contributing-an-operation'}}).
+1.  [Implement an operation]({{page space='nxdoc' page='contributing-an-operation'}}).
 2.  Import its definition in Studio to be able to use it in the Content Automation Chain editor.
     An operation definition can be serialized in JSON and uploaded in this format in Studio. As a consequence, the new operation will appear aside built-in operations, in the operation browser in a location that depends on the Operation category you defined.
 

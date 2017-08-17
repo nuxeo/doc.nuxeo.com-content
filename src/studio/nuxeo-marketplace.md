@@ -206,7 +206,7 @@ Each package has a dedicated page on the Marketplace, that describes the feature
 *   **Production state**: Indicates if the package is approved by Nuxeo or is still in testing phase.
 *   **Certification status**: Indicates if the packages has been certified by Nuxeo or not.
 *   **Vendor support**: Indicates if the package is covered by Nuxeo Connect support contracts.
-*   **Type**: Possible types are: add-ons will provide new features, hot-fixes provide corrections, and studio packages install your Studio customizations in your instance.
+*   **Type**: Possible types are: add-ons will provide new features, hot-fixes provide corrections, and Studio packages install your Studio customizations in your instance.
 *   **Last version**: Most recent version number of the plug-in.
 *   **Updated**: Date on which the package was last updated.
 *   **Target platforms**: Nuxeo applications on which you can install the package.
