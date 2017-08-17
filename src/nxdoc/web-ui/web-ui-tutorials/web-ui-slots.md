@@ -130,7 +130,7 @@ The `DOCUMENT_ACTIONS` has therefore the following:
 | `clipboard` | The application clipboard content. |
 
 {{#> callout type='info' }}
-Discover how to [insert a new user action on Web UI with View Designer]({{page version='' space='nxdoc' page='how-to-insert-user-action'}}).
+  Discover how to [insert a new user action on Web UI with Studio Designer]({{page version='' space='nxdoc' page='how-to-insert-user-action'}}).
 {{/callout}}
 
 #### DOCUMENT_VIEWS_ITEMS and DOCUMENT_VIEWS_PAGES{{> anchor 'document_view_items'}}

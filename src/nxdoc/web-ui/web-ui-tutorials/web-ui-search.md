@@ -7,10 +7,10 @@ review:
 toc: true
 details:
     howto:
-        excerpt: Learn how to create a new search screen with View Designer.
+        excerpt: Learn how to create a new search screen with Studio Designer.
         level: Intermediate
-        tool: View Designer, code
-        topics: Web UI, View Designer
+        tool: Studio Designer, code
+        topics: Web UI, Studio Designer
 labels:
     - lts2016-ok
     - nuxeo-web-ui
@@ -24,7 +24,7 @@ After having created your own [document type]({{page page='web-ui-document-layou
 We will learn how to create a new search screen with an icon in the left menu. The search will be compose of a full text search, a search by date range, a search by owners and finally by tags.
 
 {{#> callout type='note' }}
-View Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
+Studio Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
 {{/callout}}
 
 ## Prerequisites
@@ -43,12 +43,12 @@ In **Configuration**, go to **Page Providers**, click on **New** and name it `Se
 ![]({{file name='full-text-vd.png'}} ?w=250, border=true)
 1. Next to **Predicates** click on **Add**.
   A popup window appears.
-1. Click on **Edit binding** and select `schema:system` > `fulltext`
+1. Click on **Edit binding** and select `schema:system`&nbsp;> `fulltext`.
 1. Save your changes.
 
 **The search by date range:**
 ![]({{file name='creation-date-range-vd.png'}} ?w=250, border=true)
-1. Next to **Aggregates** click on **Add**
+1. Next to **Aggregates** click on **Add**.
   A popup window appears.
 1. Fill the popup window like this:
   <div class="table-scroll">
@@ -74,25 +74,25 @@ In **Configuration**, go to **Page Providers**, click on **New** and name it `Se
 
 **The search by tags:**
 ![]({{file name='tags-search-vd.png'}} ?w=250,border=true)
-  1. Add another new Predicates
-  1. Click on **Edit binding** and select `schema:system` > `tag[]`
+  1. Add another new Predicates.
+  1. Click on **Edit binding** and select `schema:system`&nbsp;> `tag[]`.
 
 **The search by owner of the contract:**
 ![]({{file name='contract-owner-vd.png'}} ?w=250,border=true)
-  1. Add another new Predicates
-  1. Click on **Edit binding** and select `schema:contract` > `owner`
+  1. Add another new Predicates.
+  1. Click on **Edit binding** and select `schema:contract`&nbsp;> `owner`.
 
-You can now save your changes and go to the View Designer.
+You can now save your changes and go to the Studio Designer.
 
 ## Create a Search Layout
 
-In the View Designer, on the **Layouts tab**, under **Page Providers** you will find your page provider created previously.
+In the Studio Designer, on the **Layouts** tab, under **Page Providers** you will find your page provider created previously.
 
 Click on your page provider, two layouts are available. Let's edit the **Form** layout first.
 
 1. Click on **form**, then **Customize**.
     The form layout is now displayed in bold. On the right, in the properties catalog, the elements that we defined in Studio are displayed here.
-1. Expand the first element and drag'n'drop the **Edit** mode into the editor.
+1. Expand the first element and drag and drop the **Edit** mode into the editor.
   Do the same for the three other elements.
 1. Once it's done, click on the **Full text** element on the main view, you can edit the label in the left catalog to display `Full text`. You can do the same with the other elements.
 
@@ -103,20 +103,20 @@ Let's customize the **results** layout now.
 
 You now need to add your labels to your translations file to display them correctly in the UI. To do so:
 
-1. Click on the **UI** table
-1. Click on **Translations**
+1. Click on the **UI** table.
+1. Click on **Translations**.
 1. Use the default `messages.json` or create your own language.
 1. Create a new entry in the JSON file with key `label.ui.aggregate.<label>` and the label as value. Here it's:
-    - `"label.ui.aggregate.from_now-1y_to_now-1M":"Last year"`,
-    - `"label.ui.aggregate.from_now-1M_to_now-7d":"Last month"`,
-    - `"label.ui.aggregate.from_now-7d_to_now-24H":"Last week"`,
+    - `"label.ui.aggregate.from_now-1y_to_now-1M":"Last year"`
+    - `"label.ui.aggregate.from_now-1M_to_now-7d":"Last month"`
+    - `"label.ui.aggregate.from_now-7d_to_now-24H":"Last week"`
     - `"label.ui.aggregate.from_now-24H_to_now":"Last 24H"`
 
 ## Create a New Left Menu Item
 The next step is to add a button in the left menu to display the search screen.
 
-1. Go to the UI tab in the View Designer and then on **Left Menu Items**
-1. Roll over the Create button and select the Search type ![]({{file name='search-icon-drawer-vd.png'}} ?w=20)
+1. Go to the UI tab in the Studio Designer and then on **Left Menu Items**.
+1. Roll over the Create button and select the Search type ![]({{file name='search-icon-drawer-vd.png'}} ?w=20).
 1. Fill in the page like this:
   - Name: Contract
   - Available: enabled

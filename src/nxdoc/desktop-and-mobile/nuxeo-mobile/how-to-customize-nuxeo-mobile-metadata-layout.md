@@ -61,9 +61,9 @@ The mobile application tries to retrieve the "metadata" layout for a given docum
 
 ## How to Configure the Layout
 
-The customization can be done in the View Designer, but "manually" for now.
+The customization can be done in the Studio Designer, but "manually" for now.
 
-Assuming you have a custom document type `SuperFile`, in the resources tab of the View Designer, add a new file named `nuxeo-superfile-metadata-layout.json`.
+Assuming you have a custom document type `SuperFile`, in the **Resources** tab of the Designer, add a new file named `nuxeo-superfile-metadata-layout.json`.
 
 Fill it with a JSON object defining what metadata you want to display, such as:
 
@@ -115,7 +115,7 @@ Fill it with a JSON object defining what metadata you want to display, such as:
 
 The field can either reference a property of the document, given its xpath, or a top level property of the JSON representation of a Document (from the REST API), such as `versionLabel` or `state`.
 
-Labels are internationalized, so you can fill `messages.json` files within the View Designer, in the **UI** > **Translations** tab. It fallbacks on displaying the label key if no label is found.
+Labels are internationalized, so you can fill `messages.json` files within the Designer, in the **UI**&nbsp;> **Translations** tab. It fallbacks on displaying the label key if no label is found.
 The Mobile application will load the `messages.json` files from the Nuxeo Server after a successful login.
 
 ![]({{file name='ViewDesignerResources.png'}} ?w=650,border=true)
@@ -141,7 +141,7 @@ The following types can be displayed in the app. Note that we also handle "List 
 
 ## Limitations
 
-This is still a work in progress, and the JSON format of the layout may change in the future, especially when the View Designer will generate it.
+This is still a work in progress, and the JSON format of the layout may change in the future, especially when the Studio Designer will generate it.
 
 Field types not handled right now (won't display anything):
 - content type
