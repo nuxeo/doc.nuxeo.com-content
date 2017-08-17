@@ -26,7 +26,7 @@ A page provider corresponds to the query part of a [content view]({{page page='c
 1. [Query filter](#query-filter)
 2. [Predicates](#predicates)
 3. [Aggregates](#aggregates)
-4. [Quick Filters](#quick-filters) 
+4. [Quick Filters](#quick-filters)
 
 ## Creating a Page Provider
 Click on **New** to create a page provider.
@@ -89,3 +89,6 @@ More information can be found in the [page provider aggregates]({{page space='nx
 
 #### Multi Repository
 When having multiple repositories, this option can be activated to search all of them at once. Can only be activated if you use the Elasticsearch index for your page provider.
+
+#### Generate Usage Statistics
+This option enables to include the current page provider into account in the search statistics available from the **Admin**&nbsp;> **Activity**&nbsp;> **Search Analytics** tab. It is available starting from Nuxeo Platform LTS 2015.

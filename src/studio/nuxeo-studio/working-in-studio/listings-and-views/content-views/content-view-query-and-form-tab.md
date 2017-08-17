@@ -249,6 +249,8 @@ Here are the fields you can play with:
 
 Starting from Nuxeo Platform 6.0, Elasticsearch is embedded in the platform. Check this box to be able to use the Elasticsearch aggregates widgets in the form definition.
 
+A new advanced option is available: Generate Usage Statistics. It enables to include the current content view into account in the search statistics available from the **Admin**&nbsp;> **Activity**&nbsp;> **Search Analytics** tab. This option is available starting from Nuxeo Platform LTS 2015.
+
 ### Query Filter Field
 
 Defining the query lets you define the list of documents you want to show in your content view if no information is set by the Nuxeo user.
