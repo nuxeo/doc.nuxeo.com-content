@@ -104,13 +104,13 @@ Some of this content is outdated and needs to be reviewed.
 
 {{/callout}}
 
-## Use a4j:region&nbsp;to Speed up Ajax Rendering
+## Use a4j:region to Speed up Ajax Rendering
 
 Wrap JSF components that are affected by rerender targets or&nbsp;`a4j:support`&nbsp;tags with a&nbsp;`a4j:region renderRegionOnly="true"`&nbsp;in order to both lower the network bandwidth usage and the CPU pressure on the server since a much smaller part of the JSF tree will be processed:
 
 TODO: add an example here
 
-## Use a4j:outputPanel as&nbsp;Target of Rerender Clauses
+## Use a4j:outputPanel as Target of Rerender Clauses
 
 If you have JSF elements with dynamic render clause that are evaluated to false in the first page rendering, a4j reRendering will fail to make them appear afterward since will not be present in the JSF rendering tree. Wrapping them with a&nbsp;`a4j:outputPanel`&nbsp;that holds the reRender target id will solve the issue.
 
@@ -124,7 +124,7 @@ If the&nbsp;[`a4j:outputPanel`](http://a4joutputPanel)&nbsp;tag will contain div
 
 See the reference documentation at&nbsp;[http://docs.jboss.org/richfaces/latest_3_3_X/en/devguide/html/a4j_outputPanel.html](http://docs.jboss.org/richfaces/latest_3_3_X/en/devguide/html/a4j_outputPanel.html)
 
-## [a4j:commandLink](http://a4jcommandLink) Does Not Behave&nbsp;Like h:commandLink
+## [a4j:commandLink](http://a4jcommandLink) Does Not Behave Like h:commandLink
 
 For instance if you naively replace&nbsp;`h:commandLink`&nbsp;by&nbsp;[`a4j:commandLink`](http://a4jcommandLink)&nbsp;in the sort column links of a document listings you can get no effect on the first click (but works the second time but with the wrong arrow position).
 
