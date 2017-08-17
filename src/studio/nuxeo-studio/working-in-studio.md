@@ -1,5 +1,5 @@
 ---
-title: Working in Studio
+title: Working in Studio Modeler
 review:
     comment: ''
     date: ''
@@ -85,7 +85,7 @@ history:
         version: '1'
 
 ---
-In this chapter we will explain each screen exposed by Nuxeo Studio. If you are blocked in your configuration process on a specific screen, here you go!
+In this chapter we will explain each screen exposed by Studio Modeler. If you are blocked in your configuration process on a specific screen, here you go!
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">

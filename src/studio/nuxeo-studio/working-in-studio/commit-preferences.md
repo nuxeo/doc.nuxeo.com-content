@@ -145,7 +145,7 @@ This page allows the user to define the commit policy that is applied when the u
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-- [Working in Studio]({{page page='working-in-studio'}})
+- [Working in Studio Modeler]({{page page='working-in-studio'}})
 - [Branch Management]({{page page='branch-management'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-to'}}

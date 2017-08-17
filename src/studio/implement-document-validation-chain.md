@@ -112,7 +112,7 @@ Here is the result of the validation we want to achieve on the document's metada
 
 ![]({{file name='Image 48.png'}} ?border=true,thumbnail=true)
 
-{{#> panel heading='To implement the validation chain:'}}
+**To implement the validation chain:**
 
 1.  Declare the action by clicking on **User Actions** in the Studio tree (see also [how to create a new action]({{page space='nxdoc' page='how-to-create-an-automation-chain#automation-chain-binding-button'}})).
 2.  Fill in the filtering information.
@@ -128,8 +128,6 @@ Here is the result of the validation we want to achieve on the document's metada
     *   a validation chain, that executes the PDF conversion chain at some point.
         See below for each chain configuration.
         ![]({{file name='Image 47.png'}} ?border=true,thumbnail=true)
-
-{{/panel}}
 
 ##### The pdf conversion subchain parameters
 

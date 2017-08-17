@@ -181,7 +181,7 @@ history:
 
 Read more about documents, properties and schemas in the [Essential Nuxeo Platform Terminology]({{page space='nxdoc' page='essential-nuxeo-platform-terminology'}}).
 
-## Creating a Document Type
+## {{> anchor 'creating-a-document-type'}}Creating a Document Type
 
 To create a document type, click on button "**New**".
 
@@ -203,14 +203,14 @@ if you don't find the default type you are looking for, you can add it [using th
 
 ![]({{file name='doc_definition_tab.png' space='nxdoc' page='how-to-define-a-document-type'}} ?w=650,border=true)
 
-*   **Extends**: See the [undefined](#creating-a-document-type) section of this page.
-*   **Label**: See the [undefined](#creating-a-document-type) section of this page.
+*   **Extends**: See the [Creating a Document Type](#creating-a-document-type) section of this page.
+*   **Label**: See the [Creating a Document Type](#creating-a-document-type) section of this page.
 *   **Category**: The category defines in which column the document type appears on the "new Document" pop up in Nuxeo DM. If you don't want to use the default categories, you can add a new one [using the custom document category registry]({{page page='registries'}}).
     ![]({{file name='available-documents-workspace.png' space='userdoc' page='creating-content'}} ?w=500,h=216,border=true)
 *   **Icon**: The icon that will be displayed in the default list view. Note that you can upload new icons on the [resources]({{page page='resources'}}) section.
 *   **Large Icon**: The icon that will be displayed in the "Available document types" pop-up and the [Icon view]({{page space='userdoc58' page='changing-workspace-content-presentation'}}) (view available up to Nuxeo Platform 5.8). Note that you can upload new icons on the& [resources]({{page page='resources'}}) section.
 *   **Default view**: The default JSF view. This is a technical attribute that you probably don't want to change (will be moved in an advanced section in the future).
-*   **Lifecycle**: the lifecycle the document will follow. You can use a lifecycle that [you defined]({{page page='life-cycle'}}) in Studio.
+*   **Lifecycle**: the lifecycle the document will follow. You can use a lifecycle that [you defined]({{page page='life-cycle'}}) in Studio Modeler.
 *   **Container types**:The document types selected here are the ones from which it will be possible to create the document type being designed.
 *   **Accepted children types**: The document types selected here will be creatable just under the document type being designed. This attribute only appears for document types that have the "folderish" facet.
 *   **Document Facets**: Read the page [Available Facets]({{page space='nxdoc' page='available-facets'}}) for better understanding of what facets are and which ones are available. If you don't find the facet you are looking for, you can add it [using the custom facet registry]({{page page='registries'}}).

@@ -312,7 +312,7 @@ In our scenario, the search screen is put in production while the development of
 
 - [Commit Preferences]({{page page='commit-preferences'}})
 - [Branch Management]({{page page='branch-management'}})
-- [Working in Studio]({{page page='working-in-studio'}})
+- [Working in Studio Modeler]({{page page='working-in-studio'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 

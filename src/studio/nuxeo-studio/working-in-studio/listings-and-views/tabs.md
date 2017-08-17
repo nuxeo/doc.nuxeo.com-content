@@ -214,7 +214,7 @@ The **Tabs** feature is available from Nuxeo Platform 5.6.
 
 **To create a new customized tab:**
 
-1.  In the the **Listings & Views** item of the Studio tree, click on **Tabs** and click the **New** button.
+1.  In the the **Listings & Views** item of the Studio Modeler tree, click on **Tabs** and click the **New** button.
 2.  On the creation form, type the name of the tab.
     A default grid with two columns is available by default, that you can either fill in or edit.
     You can now define [what will be displayed on your tab](#definition-tab) and [when the tab should be displayed](#enablement-tab).

@@ -141,7 +141,7 @@ history:
         version: '1'
 
 ---
-In various places of Nuxeo Studio (User Actions, Workflow, Event Handlers, ...) you'll find the same kind of screen where you can configure the set of conditions for which something is displayed/ran/not filtered...
+In various places of Studio Modeler (User Actions, Workflow, Event Handlers, ...) you'll find the same kind of screen where you can configure the set of conditions for which something is displayed/ran/not filtered...
 
 Depending on where the filtering option appears, the current document, or the document, may refer to:
 
@@ -150,7 +150,7 @@ Depending on where the filtering option appears, the current document, or the do
 *   The document(s) bound to the workflow
 *   The document(s) that are in input of the operation (Filter list operation)
 
-Below is a sample of such a screen. In this section, we review the list of all possible filtering options that you may find in Studio.
+Below is a sample of such a screen. In this section, we review the list of all possible filtering options that you may find in Studio Modeler.
 
 ![]({{file name='Sample filtering screen.png'}} ?w=400,border=true)
 
@@ -162,7 +162,7 @@ Below is a sample of such a screen. In this section, we review the list of all p
 
     {{#> callout type='info' heading='How to get the path of a document'}}
 
-    You can easily get the path of a document in Nuxeo DM by watching its URL.
+    You can easily get the path of a document in Nuxeo Platform by watching its URL.
 
     For instance, if URL of the document is "https://myserverhost/nuxeo/nxpath/default/default-domain/workspaces/billing-activity-reports/2011/April", then path of the "April" folder is : `/default-domain/workspaces/billing-activity-reports/2011/April`.
 
