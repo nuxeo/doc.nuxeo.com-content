@@ -83,11 +83,7 @@ history:
 
 This page lists some good practices to follow to ensure correct rendering, HTML and testing.
 
-{{! /excerpt}} {{#> callout type='warning' }}
-
-Some of this content is outdated and needs to be reviewed.
-
-{{/callout}}
+{{! /excerpt}}
 
 ## Use a4j:region to Speed up Ajax Rendering
 
