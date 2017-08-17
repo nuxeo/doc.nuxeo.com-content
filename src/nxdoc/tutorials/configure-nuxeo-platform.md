@@ -14,7 +14,7 @@ tree_item_index: 200
 This tutorial introduces you to a few important aspects of **Nuxeo Studio** so that you can take advantage of this great product as quickly as possible.
 
 {{#> callout type='warning' }}
-This tutorial makes use of **View Designer**, a new customization tool for Nuxeo Web UI. **View Designer** is currently available through a limited release. If you don't have access yet and would like to try it out, please contact your Nuxeo representative.
+This tutorial makes use of **Nuxeo Studio Designer**, a new customization tool for Nuxeo Web UI. **Studio Designer** is currently available through a limited release. If you don't have access yet and would like to try it out, please contact your Nuxeo representative.
 {{/callout}}
 
 ## Introduction
@@ -209,7 +209,7 @@ First we'll need to add a metadatum to our schema to represent the **amount to b
 This field is directly related to the **BC Contract** document type, but if you want to create more general properties to be shared with other document types you can add them to a separate schema (**Configuration** > **Content Model** > **Schemas**), or create your own.
 {{/callout}}
 
-3.  Save your changes and click on the **Open View Designer** button.
+3.  Save your changes and click on the **Designer** button.
 
 4.  Drag and drop the new property from **Catalog** in the right menu to the **nuxeo-bccontract-view-layout**, then save.
 
@@ -294,7 +294,7 @@ CONFIGURE THE DIALOG FOR EACH TASK
 
 A few final touches to customize user interaction with our workflow.
 
-1.  Open **View Designer** and scroll down the **Layouts** menu to open up our workflow layouts.
+1.  Open **Designer** and scroll down the **Layouts** menu to open up our workflow layouts.
 
 2.  Click on the **Enter Refund Amount** task layout to configure it.
 
@@ -364,7 +364,7 @@ You can add to the query filter to further tailor your search results. Try filte
 
 CUSTOMIZE A SEARCH
 
-In **View Designer**, scroll down the **Layouts** menu to **Page Providers**, select **contract** and open **form** to configure the form layout.
+In **Studio Designer**, scroll down the **Layouts** menu to **Page Providers**, select **contract** and open **form** to configure the form layout.
 
 1.  Drag the search elements from the menu on the right into the form and modify the labels as needed.
 
@@ -441,7 +441,7 @@ CUSTOMIZE THE LOGIN PAGE
 
 1.  In Studio, select **Branding** from the **Configuration** menu, then **New**. Enter a name for your theme.
 
-2.  On the tab **Login Page**, Select a background image or a background colors that matches your company's color scheme.
+2.  On the tab **Login Page**, select a background image or a background colors that matches your company's color scheme.
 
 3.  Select a logo to be displayed within the Login box.
 

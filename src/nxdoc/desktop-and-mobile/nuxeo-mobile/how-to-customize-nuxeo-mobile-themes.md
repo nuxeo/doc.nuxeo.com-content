@@ -74,9 +74,9 @@ A theme object looks like:
 
 ## How to Configure the Themes
 
-The customization can be done in the View Designer, but "manually" for now.
+The customization can be done in the Studio Designer, but "manually" for now.
 
-In the resources tab of the View Designer, create a new folder `mobile` inside the `ui` folder. Then, create a `config.json` file inside the `mobile` folder.
+In the **Resources** tab of the Designer, create a new folder `mobile` inside the `ui` folder. Then, create a `config.json` file inside the `mobile` folder.
 
 Fill it with a JSON object defining the themes:
 

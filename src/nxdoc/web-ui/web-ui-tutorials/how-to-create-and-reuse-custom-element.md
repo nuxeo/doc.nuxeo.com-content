@@ -7,7 +7,7 @@ review:
 toc: true
 details:
     howto:
-        excerpt: Learn how to create and reuse a custom element in View Designer.
+        excerpt: Learn how to create and reuse a custom element in Studio Designer.
         level: Advanced
         tool: code
         topics: Web UI
@@ -20,32 +20,32 @@ labels:
 tree_item_index: 1200
 ---
 {{! excerpt}}
-In this tutorial you will learn how to create and reuse custom elements in View Designer.
+In this tutorial you will learn how to create and reuse custom elements in Studio Designer.
 {{! /excerpt}}
 
 {{#> callout type='note' }}
-The View Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
+The Studio Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
 {{/callout}}
 
 ## Requirements
 
-- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Nuxeo Studio
+- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Studio Modeler
 - The Web UI addon installed on your instance
 
 ## Create an Element
 We are going to start by adding a `validation` schema to our Contract document type.
 
-In Nuxeo Studio, go to **Configuration** > **Content Model** > **Schemas**
+In Studio Modeler, go to **Configuration**&nbsp;> **Content Model**&nbsp;> **Schemas**
 1. Click on **New** and name it `validation`.
 1. Add a field `validated` as a boolean.
 1. Save your changes.
 
-Go to the View Designer on the **Resources** tab.
+Go to the Studio Designer on the **Resources** tab.
 1. Create a folder called `elements`.
 1. In it, create an element called `my-validation-element`.
-  ![]({{file name='create-element-VD.png'}} ?w=150,border=true)
+  ![]({{file name='create-element-VD.png'}} ?w=200,border=true)
 1. Edit the layout of the element by adding the validation schema.
-  ![]({{file name='schema-annotations-VD.png'}} ?w=150,border=true)
+  ![]({{file name='schema-annotations-VD.png'}} ?w=200,border=true)
 1. In the HTML editor, replace the lines describing the title and description by the following to call your `validation` element:
   ```
   <div role="widget">

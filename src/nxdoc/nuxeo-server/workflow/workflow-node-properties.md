@@ -106,7 +106,7 @@ Node variables are persisted on the node document. These are metadata stored on 
 
 ### Principle
 
-At low level, there is only one type of node and the workflow engine behavior will change depending on the value of the properties of this node. In the [Nuxeo Studio designer]({{page space='studio' page='workflow'}}), you will find several kinds of node, that are actually just some sort of presets on top of the generic node. There are more than 40 parameters that can be configured on a node. They are all stored on the "route_node" schema of the "RouteNode" document.
+At low level, there is only one type of node and the workflow engine behavior will change depending on the value of the properties of this node. In the [Nuxeo Studio Modeler]({{page space='studio' page='workflow'}}), you will find several kinds of node, that are actually just some sort of presets on top of the generic node. There are more than 40 parameters that can be configured on a node. They are all stored on the "route_node" schema of the "RouteNode" document.
 
 Workflow variables are also available on the node properties, in a schema named `var_$WorkflowModelName`.
 
