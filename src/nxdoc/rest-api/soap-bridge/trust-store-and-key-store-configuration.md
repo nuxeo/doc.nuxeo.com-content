@@ -90,6 +90,18 @@ javax.net.ssl.trustStore
 
 </td></tr><tr><td colspan="1">
 
+Trust Store Password
+
+</td><td colspan="1">
+
+`javax.net.ssl.trustStorePassword`
+
+</td><td colspan="1">
+
+&nbsp;
+
+</td></tr><tr><td colspan="1">
+
 Trust Store Type
 
 </td><td colspan="1">
