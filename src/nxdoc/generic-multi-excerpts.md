@@ -100,6 +100,12 @@ This addon requires no specific installation steps. It can be installed like any
 You can also give us your feedback and suggestions through our [feedback portal](https://portal.prodpad.com/25470).
 {{! /multiexcerpt}}
 
+{{! multiexcerpt name='Designer-restricted-access-note'}}
+{{#> callout type='note' }}
+The Studio Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
+{{/callout}}
+{{! /multiexcerpt}}
+
 &nbsp;
 
 &nbsp;

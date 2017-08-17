@@ -22,9 +22,7 @@ tree_item_index: 1300
 In this tutorial you will learn how to insert a user action on your instance using Studio Designer, to easily validate documents.
 {{! /excerpt}}
 
-{{#> callout type='note' }}
-The Studio Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
-{{/callout}}
+{{{multiexcerpt 'Designer-restricted-access-note' page='generic-multi-excerpts'}}}
 
 ## Requirements
 
