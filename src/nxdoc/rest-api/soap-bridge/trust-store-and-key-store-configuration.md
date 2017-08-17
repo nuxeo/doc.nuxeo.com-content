@@ -82,7 +82,7 @@ Trust Store Path
 
 </td><td colspan="1">
 
-javax.net.ssl.trustStore
+`javax.net.ssl.trustStore`
 
 </td><td colspan="1">
 
@@ -106,7 +106,7 @@ Trust Store Type
 
 </td><td colspan="1">
 
-javax.net.ssl.keyStoreType
+`javax.net.ssl.keyStoreType`
 
 </td><td colspan="1">
 
@@ -118,7 +118,7 @@ Key Store Path
 
 </td><td colspan="1">
 
-javax.net.ssl.keyStore
+`javax.net.ssl.keyStore`
 
 </td><td colspan="1">
 
@@ -130,7 +130,7 @@ Key Store Password
 
 </td><td colspan="1">
 
-javax.net.ssl.keyStorePassword
+`javax.net.ssl.keyStorePassword`
 
 </td><td colspan="1">
 
