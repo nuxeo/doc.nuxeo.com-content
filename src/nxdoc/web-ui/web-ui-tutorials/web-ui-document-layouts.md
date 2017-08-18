@@ -23,9 +23,7 @@ Layouts are used to display a document's metadata in different use cases. It's b
 
 A given document type can have multiple layouts: a `create` and `edit` layout to set its schema fields when creating or editing the document, a `view` layout to simply display field values and any other layouts according to the application(s) where these are used. In our previous metamodel driven UI, these were known as `modes` and a single layout definition could be rendered in different modes.
 
-{{#> callout type='note' }}
-The Studio Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
-{{/callout}}
+{{{multiexcerpt 'Designer-restricted-access-note' page='generic-multi-excerpts'}}}
 
 In this tutorial you will learn how to create a document type layout with Studio Designer from a document type created in Studio Modeler and how to add a icon to it.
 

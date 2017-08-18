@@ -23,9 +23,7 @@ After having created your own [document type]({{page page='web-ui-document-layou
 
 We will learn how to create a new search screen with an icon in the left menu. The search will be compose of a full text search, a search by date range, a search by owners and finally by tags.
 
-{{#> callout type='note' }}
-Studio Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
-{{/callout}}
+{{{multiexcerpt 'Designer-restricted-access-note' page='generic-multi-excerpts'}}}
 
 ## Prerequisites
 - A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Studio Modeler

@@ -20,9 +20,7 @@ labels:
 tree_item_index: 600
 
 ---
-{{#> callout type='note' }}
-The Studio Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
-{{/callout}}
+{{{multiexcerpt 'Designer-restricted-access-note' page='generic-multi-excerpts'}}}
 
 In this tutorial you will learn how to create a custom workflow tasks layout in Studio Designer. We'll be using a custom validation workflow template linked to the Contract document type.
 
