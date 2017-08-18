@@ -24,7 +24,7 @@ Nuxeo Web UI was designed with composition in mind, built with some application-
 
 ## Dynamic Imports
 
-The ability to load custom elements dynamically provides a simple customization mechanism where elements are loaded from known conventional paths on demand. While this approach isn't appropriate for producing incremental layouts, it is simple and effective for use cases such as document layouts, where the underlying HTML can be managed by tools like our `View Designer`, or where we expect a high degree of customization like in the home [dashboard]({{page page='dashboard'}}).
+The ability to load custom elements dynamically provides a simple customization mechanism where elements are loaded from known conventional paths on demand. While this approach isn't appropriate for producing incremental layouts, it is simple and effective for use cases such as document layouts, where the underlying HTML can be managed by tools like our **Studio Designer**, or where we expect a high degree of customization like in the home [dashboard]({{page page='dashboard'}}).
 
 Since Nuxeo Web UI is basically a web client of our APIs and built as a single-page web application it consists mostly of static resources hosted by our container and loaded from `/nuxeo.war/ui`. This means that developers should be able to simply override these resources in order to customize the application. To override an existing element we just need to override its HTML file, causing this new declaration to be loaded instead, similar to overriding XHTML templates in our JSF UI - for further information on deploying custom resources please refer to our [deployment]({{page page='web-ui-deployment'}}) page.
 
