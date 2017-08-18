@@ -23,9 +23,7 @@ tree_item_index: 1200
 In this tutorial you will learn how to create and reuse custom elements in Studio Designer.
 {{! /excerpt}}
 
-{{#> callout type='note' }}
-The Studio Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
-{{/callout}}
+{{{multiexcerpt 'Designer-restricted-access-note' page='generic-multi-excerpts'}}}
 
 ## Requirements
 
