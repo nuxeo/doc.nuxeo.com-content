@@ -7,10 +7,10 @@ review:
 toc: true
 details:
      howto:
-         excerpt: Learn how to use document layouts with Web UI and View Designer
+         excerpt: Learn how to use document layouts with Web UI and Studio Designer
          level: Intermediate
-         tool: View designer, code
-         topics: Web UI, View Designer
+         tool: Studio Designer, code
+         topics: Web UI, Studio Designer
 labels:
     - lts2016-ok
     - nuxeo-web-ui
@@ -24,59 +24,59 @@ Layouts are used to display a document's metadata in different use cases. It's b
 A given document type can have multiple layouts: a `create` and `edit` layout to set its schema fields when creating or editing the document, a `view` layout to simply display field values and any other layouts according to the application(s) where these are used. In our previous metamodel driven UI, these were known as `modes` and a single layout definition could be rendered in different modes.
 
 {{#> callout type='note' }}
-The View Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
+The Studio Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
 {{/callout}}
 
-In this tutorial you will learn how to create a document type layout with View Designer from a document type created in Nuxeo Studio and how to add a icon to it.
+In this tutorial you will learn how to create a document type layout with Studio Designer from a document type created in Studio Modeler and how to add a icon to it.
 
 ### Prerequisites
 
-- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Nuxeo Studio
+- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Studio Modeler
 - The Web UI addon installed on your instance
 
-Once you are all set, you can navigate to the View Designer application to customize your layouts.
+Once you are all set, you can navigate to the Studio Designer application to customize your layouts.
 
 ### Create a New Layout
 
-1. Go on the **Layout** tab on the left menu
-1. Under **Local Types** you will find your Contract document type
+1. Go on the **Layout** tab on the left menu.
+1. Under **Local Types** you will find your Contract document type.
 1. Five layouts are available for the customization, let's start with the **Create** layout, click on the **CUSTOMIZE** button in the editor.
   {{#> callout type='tip' }}
   It automatically creates the nuxeo-contract-create-layout.html file, scaffolding:
     - The title and description fields
     - Every custom schema property linked to the document type
   {{/callout}}
-1. In the catalog properties on the left, select **File > content:blob > view** and drag and drop the element in the main view.
+1. In the catalog properties on the left, select **File**&nbsp;> **content:blob**&nbsp;> **view** and drag and drop the element in the main view.
 1. Click on **Save**.
   {{#> callout type='note' }}
-  When customizing a document type, you need to create all layouts in the View Designer in order to display the relevant properties.
+  When customizing a document type, you need to create all layouts in the Studio Designer in order to display the relevant properties.
   {{/callout}}
 1. Click on the **Edit** layout and then on the **CUSTOMIZE** button.
 1. Modify and/or delete fields as you wish them to be displayed when editing your document and click on **Save**.
 1. Do the same two last steps with the **Metadata** and **View** layouts and don't forget to save.
   <br/>
   You now have an upload button on your document layout.
-1. At the top right-hand corner of the View Designer, switch the editor to code editor.
-    You are now in the HTML mode of the View Designer and you can see the element that you just drag and droped on the other editor.
+1. At the top right-hand corner of the Studio Designer, switch the editor to code editor.
+    You are now in the HTML mode of the Studio Designer and you can see the element that you just drag and dropped on the other editor.
 1. Find the description's element and delete it.
 1. Click on Save to keep your changes.
 
-You should end up with something like this:
-![]({{file name='main-view-contract-vd.png'}} ?w=350,border=true)
+  You should end up with something like this:
+  ![]({{file name='main-view-contract-vd.png'}} ?w=350,border=true)
 
 
 The last step is to add your labels to your translations file to display them correctly in the UI. To do so:
-1. Click on the **UI** tab (Second tab on the left menu)
-2. Click on **Translations**
+1. Click on the **UI** tab (second tab on the left menu).
+2. Click on **Translations**.
 3. Use the default `messages.json` or create your own language.
 4. Create a new entry in the JSON file with key `label.document.type.<document type name>` and the document type name as value. Here it is `"label.document.type.contract":"Contract"`.
 
 You now have a document type ready to be used on your Web UI interface, the last thing that you need is an icon to easily find your document type in your instance.
 
 ### Create a Document Type Icon
-To do so, you need to go on the **Resources** tab
-1. Click on the **UI** folder
-2. Click on the **Create** button, select a folder and name it **images**
+To do so, you need to go on the **Resources** tab.
+1. Click on the **UI** folder.
+2. Click on the **Create** button, select a folder and name it **images**.
 3. In this **images** folder, create a `doctypes`folder.
 4. In the **doctypes** click on the **Upload** button and select your image. <br/>
   You have to respect the following folder structure, and name the icon as your document type in lowercase in order to display the icon.

@@ -20,7 +20,6 @@ toc: true
 
 Since the version 1.9.0 on iOS and 1.6.0 on Android, the Nuxeo Mobile application comes with 4 predefined themes that can be overridden from the server itself.
 
-
 ## Configuration Format
 
 Themes are configured in a `themes` entry of a more generic JSON configuration object for the mobile application.
@@ -74,9 +73,9 @@ A theme object looks like:
 
 ## How to Configure the Themes
 
-The customization can be done in the View Designer, but "manually" for now.
+The customization can be done in the Studio Designer, but "manually" for now.
 
-In the resources tab of the View Designer, create a new folder `mobile` inside the `ui` folder. Then, create a `config.json` file inside the `mobile` folder.
+In the **Resources** tab of the Studio Designer, create a new folder `mobile` inside the `ui` folder. Then, create a `config.json` file inside the `mobile` folder.
 
 Fill it with a JSON object defining the themes:
 

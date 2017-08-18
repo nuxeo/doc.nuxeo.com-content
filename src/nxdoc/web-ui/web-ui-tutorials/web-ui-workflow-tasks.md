@@ -21,20 +21,20 @@ tree_item_index: 600
 
 ---
 {{#> callout type='note' }}
-The View Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
+The Studio Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
 {{/callout}}
 
-In this tutorial you will learn how to create a custom workflow tasks layout in View Designer. We'll be using a custom validation workflow template linked to the Contract document type.
+In this tutorial you will learn how to create a custom workflow tasks layout in Studio Designer. We'll be using a custom validation workflow template linked to the Contract document type.
 
 ## Prerequisites
-- A [Contract document type]({{page version='810' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Nuxeo Studio
+- A [Contract document type]({{page version='810' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Studio Modeler
 - Web UI addon installed on your instance
-- View Designer enabled on your Studio project
+- Studio Designer enabled on your Studio project
 
 ## Create a Workflow Template
-First, we need to create a new workflow template in Nuxeo Studio. This workflow will be applied to the Contract document type.
+First, we need to create a new workflow template in Studio Modeler. This workflow will be applied to the Contract document type.
 
-1. Go to **Workflow** > **Process Definitions** and click on **New**.
+1. Go to **Workflow**&nbsp;> **Process Definitions** and click on **New**.
   ![]({{file name='create-wf-studio.png'}} ?w=350,border=true)
 1. On the **Activation** tab, next to the field **Current document has one of the types**, select the Contract local type and move it from left to right.
 Now we will add a custom workflow variable called **Type** to specify which type of contract you are validating.
@@ -63,9 +63,9 @@ We will finish our Nuxeo Studio configuration by creating a vocabulary for the T
 3. Save your modifications.
 
 ## Create a Task layout
-We can now customize our layout on View Designer.
+We can now customize our layout on Studio Designer.
 
-1. On the **Layouts** tab, go to the **Workflows** menu and click on _Contract Validation task_ and then on **CUSTOMIZE**.
+1. On the **Layouts** tab, go to the **Workflows** menu and click on **Contract Validation task** and then on **CUSTOMIZE**.
   The workflow layout works as the document type layout, you can browse the element catalog and switch editors between code and visual.
 1. You can start by reorder the properties on the visual editor to end up with something like this:
   ![]({{file name='workflow-process-VD.png'}} ?w=350,border=true)

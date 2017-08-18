@@ -7,10 +7,10 @@ review:
 toc: true
 details:
     howto:
-        excerpt: Learn how to create a new search screen with View Designer.
+        excerpt: Learn how to create a new search screen with Studio Designer.
         level: Intermediate
-        tool: View Designer, code
-        topics: Web UI, View Designer
+        tool: Studio Designer, code
+        topics: Web UI, Studio Designer
 labels:
     - lts2016-ok
     - nuxeo-web-ui
@@ -24,30 +24,30 @@ After having created your own [document type]({{page page='web-ui-document-layou
 We will learn how to create a new search screen with an icon in the left menu. The search will be compose of a full text search, a search by date range, a search by owners and finally by tags.
 
 {{#> callout type='note' }}
-View Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
+Studio Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
 {{/callout}}
 
 ## Prerequisites
-- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Nuxeo Studio
+- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Studio Modeler
 - The Web UI addon installed on your instance
 
-Once you are all set, you can navigate to Nuxeo Studio to start creating your search.
+Once you are all set, you can navigate to Studio Modeler to start creating your search.
 
 ## Create a Page Provider
 
-The first step is to create a [page provider]({{page version='' space='studio' page='page-providers'}}) in Nuxeo Studio.
+The first step is to create a [page provider]({{page version='' space='studio' page='page-providers'}}) in Studio Modeler.
 
-In **Customization**, go to **Page Providers**, click on **New** and name it `Search`.
+In **Configuration**, go to **Page Providers**, click on **New** and name it `Search`.
 
 **The full text search:**
 ![]({{file name='full-text-vd.png'}} ?w=250, border=true)
 1. Next to **Predicates** click on **Add**.
   A popup window appears.
-1. Click on **Edit binding** and select `schema:system` > `fulltext`
+1. Click on **Edit binding** and select `schema:system`&nbsp;> `fulltext`.
 
 **The search by date range:**
 ![]({{file name='creation-date-range-vd.png'}} ?w=250, border=true)
-1. Next to **Aggregates** click on **Add**
+1. Next to **Aggregates** click on **Add**.
   A popup window appears.
 1. Fill the popup window like this:
   <div class="table-scroll">
@@ -73,32 +73,32 @@ In **Customization**, go to **Page Providers**, click on **New** and name it `Se
 
 **The search by tags:**
 ![]({{file name='tags-search-vd.png'}} ?w=250,border=true)
-  1. Add another new Predicates
-  1. Click on **Edit binding** and select `schema:system` > `tag[]`
+  1. Add another new Predicates.
+  1. Click on **Edit binding** and select `schema:system`&nbsp;> `tag[]`.
 
 **The search by owner of the contract:**
 ![]({{file name='contract-owner-vd.png'}} ?w=250,border=true)
-  1. Add another new Predicates
-  1. Click on **Edit binding** and select `schema:contract` > `owner`
+  1. Add another new Predicates.
+  1. Click on **Edit binding** and select `schema:contract`&nbsp;> `owner`.
 
-You can now save your changes and go to the View Designer.
+You can now save your changes and go to the Studio Designer.
 
 ## Create a Form Layout
 
-In the View Designer, on the **Layout tabs**, under **Page Providers** you will find your page provider created previously.
+In the Studio Designer, on the **Layout tabs**, under **Page Providers** you will find your page provider created previously.
 
 Click on **Customize**, two layouts are available. Let's edit the **Form** layout.
 
 1. Click on **Form**, then **Customize**.
     The form layout is now displayed in bold with an asterisk next to it. On the right, in the properties catalog, the elements that we defined in Studio are displayed here.
-2. Expand the first element and drag'n'drop the **Edit** mode into the editor.
+2. Expand the first element and drag and drop the **Edit** mode into the editor.
   Do the same for the three other elements.
 4. Click on the **Full text** one, on the right you can edit the label to display `Full text`.
 
 You now need to add your labels to your translations file to display them correctly in the UI. To do so:
 
-1. Click on the **UI** table
-1. Click on **Translations**
+1. Click on the **UI** table.
+1. Click on **Translations**.
 1. Use the default `messages.json` or create your own language.
 1. Create a new entry in the JSON file with key `label.ui.aggregate.<label>` and the label as value. Here it's:
     - `"label.ui.aggregate.from_now-1y_to_now-1M":"Last year"`,
@@ -109,8 +109,8 @@ You now need to add your labels to your translations file to display them correc
 ## Create a Drawer
 The next step is to add a button in the left menu to display the search screen.
 
-1. Go to the UI tab in the View Designer and then on **Drawer**
-1. Roll over the Create button and select the Search type ![]({{file name='search-icon-drawer-vd.png'}} ?w=20)
+1. Go to the **UI** tab in the Studio Designer and then on **Drawer**.
+1. Roll over the Create button and select the Search type ![]({{file name='search-icon-drawer-vd.png'}} ?w=20).
 1. Fill in the page like this:
   - Name: Contract
   - Available: enabled
