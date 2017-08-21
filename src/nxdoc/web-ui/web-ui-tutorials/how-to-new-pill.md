@@ -2,21 +2,20 @@
 title: "HOWTO: Insert a New Pill"
 review:
     comment: ''
-    date: '2017-01-16'
+    date: '2017-08-21'
     status: ok
 toc: true
 details:
      howto:
-         excerpt: Learn how to customize your workflow tasks
-         level: Advanced
-         tool: code
+         excerpt: Learn how to insert a new pill
+         level: Intermediate
+         tool: Designer
          topics: Web UI
 labels:
     - lts2016-ok
     - nuxeo-web-ui
-    - extension
-    - workflow
-    - task
+    - pill
+    - page-provider
 tree_item_index: 1400
 ---
 {{#> callout type='note' }}
