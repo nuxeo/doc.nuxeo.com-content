@@ -301,7 +301,8 @@ You then have to manage security for this access, since there is no authenticati
 
 ```
 metrics.csv.enabled=true
-metrics.csv.period=10
+# The amount of time in second between metrics publication
+metrics.csv.period=30
 # This will create a sub directory metrics-TIMESTAMP
 metrics.csv.dir=${nuxeo.log.dir}
 ```
@@ -312,7 +313,8 @@ metrics.csv.dir=${nuxeo.log.dir}
 metrics.graphite.enabled=true
 metrics.graphite.host=localhost
 metrics.graphite.port=2003
-metrics.graphite.period=10
+# The amount of time in second between metrics publication
+metrics.graphite.period=30
 ```
 
 ![]({{file name='graphite-reporting.png'}} ?w=500,h=398,border=true)
