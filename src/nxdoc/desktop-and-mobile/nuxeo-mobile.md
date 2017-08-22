@@ -199,7 +199,16 @@ Offline mode is not available yet.
 
 Once the application is installed and opened, indicate the Nuxeo server you want to connect to by filling the HTTP information. For example `http://myserver.nuxeo.com/nuxeo`. As soon as the server is detected, the login page is displayed. Depending on your server configuration, it is the default one or your customized login page providing authentication through CAS, OpenID or another authentication system.
 
-![]({{file name='mobile-connection.png'}} ?w=200,h=355,border=true)&nbsp; &nbsp;![]({{file name='mobile-login-page.png'}} ?w=200,h=355,border=true)
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='mobile-connection.png'}} ?w=200,h=355,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-login-page.png'}} ?w=200,h=355,border=true)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Browsing Content
 
@@ -220,13 +229,33 @@ For any non folderish document, such as notes and files typically, some informat
 
 If the PDF preview is available, tap the thumbnail zone to preview it. If the document is a text document with several pages, you can navigate through it.
 
-![]({{file name='mobile-browse.png'}} ?w=200,h=356,border=true)&nbsp; &nbsp;![]({{file name='mobile-document-view.png'}} ?w=200,h=356,border=true)&nbsp; &nbsp;![]({{file name='mobile-document-preview.png'}} ?w=200,h=355,border=true)
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='mobile-browse.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-document-view.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-document-preview.png'}} ?w=200,border=true)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Favorites
 
 You are able to mark as favorite the list of documents you are interested in. "Add to" and "Remove from" favorites actions are available for all document types whether the document is folderish or not. Select the "..." action available on the toolbar. Favorite documents are available directly from the **Favorites** menu.
 
-![]({{file name='mobile-favorites.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;![]({{file name='mobile-add-favorite.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;![]({{file name='mobile-remove-favorite.png'}} ?w=200,h=357,border=true)
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='mobile-favorites.png'}} ?w=200,h=357,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-add-favorite.png'}} ?w=200,h=357,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-remove-favorite.png'}} ?w=200,h=357,border=true)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Collections
 
@@ -234,13 +263,33 @@ The dedicated menu entry enables you to directly access collections: Shared and 
 
 Browsing your repository, you can add a document to one or several collections. Once you have selected the list of collections, you can view them and uncheck some.
 
-![]({{file name='mobile-collections.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;![]({{file name='mobile-select-collections.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;![]({{file name='mobile-view-selected-collections.png'}} ?w=200,h=357,border=true)
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='mobile-collections.png'}} ?w=200,h=357,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-select-collections.png'}} ?w=200,h=357,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-view-selected-collections.png'}} ?w=200,h=357,border=true)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+
 
 ### Share / Open in
 
 You are able to **share** any document through messages, mail.... any available application on your phone for that purpose. The Share action is available on the toolbar of the document view, besides the filename. In addition, you are able to **Open directly** documents on your phone by tapping on the document link above the thumbnail.
 
-![]({{file name='mobile-open-in-download.png'}} ?w=200,h=357,border=true)&nbsp; &nbsp;![]({{file name='mobile-open-in.png'}} ?w=200,h=355,border=true)
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='mobile-open-in-download.png'}} ?w=200,h=357,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-open-in.png'}} ?w=200,h=355,border=true)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Search
 
