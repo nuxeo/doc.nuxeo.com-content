@@ -220,7 +220,7 @@ For any non folderish document, such as notes and files typically, some informat
 
 If the PDF preview is available, tap the thumbnail zone to preview it. If the document is a text document with several pages, you can navigate through it.
 
-![]({{file name='mobile-browse.png'}} ?w=200,h=356,border=true)&nbsp; &nbsp;![]({{file name='mobile-document-view.png'}} ?w=200,h=356,border=true)&nbsp; &nbsp;![]({{file name='mobile-document-preview'}} ?w=200,h=355,border=true)
+![]({{file name='mobile-browse.png'}} ?w=200,h=356,border=true)&nbsp; &nbsp;![]({{file name='mobile-document-view.png'}} ?w=200,h=356,border=true)&nbsp; &nbsp;![]({{file name='mobile-document-preview.png'}} ?w=200,h=355,border=true)
 
 ### Favorites
 
