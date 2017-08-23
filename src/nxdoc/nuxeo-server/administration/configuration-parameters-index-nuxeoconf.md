@@ -2238,6 +2238,42 @@ Example: https://my.nuxeo.com/</td>
 <td colspan="1">Since 6.0</td>
 </tr>
 <tr>
+<td colspan="1">`nuxeo.user.anonymous.enable`</td>
+<td colspan="1">When LDAP is enabled and this parameter is set to `true`, allow anonymous login with `Guest` user</td>
+<td colspan="1">`false`</td>
+<td colspan="1">Since 6.0</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.user.emergency.enable`</td>
+<td colspan="1">When LDAP is enabled and this parameter is set to `true` declare an emergency user to connect to Nuxeo in case of LDAP issues</td>
+<td colspan="1">`false`</td>
+<td colspan="1">Since 6.0</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.user.emergency.username`</td>
+<td colspan="1">The username of emergency user when `nuxeo.user.emergency.enable` is set to `true`</td>
+<td colspan="1">`MyAdministrator`</td>
+<td colspan="1">Since 6.0</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.user.emergency.password`</td>
+<td colspan="1">The password of emergency user when `nuxeo.user.emergency.enable` is set to `true`</td>
+<td colspan="1">`secret`</td>
+<td colspan="1">Since 6.0</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.user.emergency.firstname`</td>
+<td colspan="1">The firstname of emergency user when `nuxeo.user.emergency.enable` is set to `true`</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">Since 6.0</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.user.emergency.lastname`</td>
+<td colspan="1">The lastname of emergency user when `nuxeo.user.emergency.enable` is set to `true`</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">Since 6.0</td>
+</tr>
+<tr>
 <td colspan="1">`nuxeo.picture.migration.enabled`</td>
 <td colspan="1">`true`</td>
 <td colspan="1">When set to `false` allows to disable the picture migration that is run on startup and that can be slow on big volume.</td>
