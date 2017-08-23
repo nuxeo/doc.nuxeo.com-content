@@ -189,7 +189,7 @@ Installing the Nuxeo Platform using the [`.zip` package](http://www.nuxeo.com/do
       chmod +x ./bin/nuxeoctl
       ./bin/nuxeoctl start --gui
       ```
-3.  In a browser, go to [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
+3.  In a browser, go to `http://NUXEO_SERVER/nuxeo`.
 4.  Fill in the information in the configuration wizard steps.
 5.  At the **Nuxeo Online Services** step, provide your Nuxeo Online Services credentials. If you don't have an account, you can register for a free 30-day trial offer:
   - Provide a valid email address
@@ -234,7 +234,7 @@ On the **Main Pages** tab:
 
 In [**Nuxeo Dev Tools**](https://doc.nuxeo.com/nxdoc/nuxeo-dev-tools-extension/) extension, simply click on the **Hot Reload** button. Otherwise...
 
-1.  Go to your Nuxeo Platform instance, typically available at [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
+1.  Go to your Nuxeo Platform instance, typically available at `http://NUXEO_SERVER/nuxeo`.
 2.  Connect with login/password Administrator/Administrator.
 3.  Click on **ADMIN** > **Update Center** > **Nuxeo Studio**.
 4.  Click on the **Update** button. Your logo is updated.

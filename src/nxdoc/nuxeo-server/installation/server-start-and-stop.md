@@ -277,7 +277,7 @@ Nuxeo applications are started using scripts.
 3.  Click on the **Start** button.
     Starting the Nuxeo server takes between 30 sec and several minutes, depending on your hardware.
     When the server is started, the **Start** button becomes a **Stop** button.
-4.  Open a browser and type the URL [http://localhost:8080/nuxeo/](http://localhost:8080/nuxeo/).
+4.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
     If the server is started for the first time after the installation, the [startup wizard]({{page page='configuration-wizard'}}) is displayed so you can select what module you want to install on the platform and help you configure it. Otherwise, the login page is displayed so you can use the application.
 
 ### Mac OS X {{> anchor 'start-macos'}}
@@ -301,7 +301,7 @@ Nuxeo applications are started using scripts.
     Starting the Nuxeo server takes between 30 sec and several minutes, depending on your hardware.
     When the server is started, the **Start** button becomes a **Stop** button.
 
-2.  Open a browser and type the URL [http://localhost:8080/nuxeo/](http://localhost:8080/nuxeo/).
+2.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
     If the server is started for the first time after the installation, the [startup wizard]({{page page='configuration-wizard'}}) is displayed so you can select what module you want to install on the platform and help you configure it. Otherwise, the login page is displayed so you can use the application.
 
 #### Using the nuxeoctl Script
@@ -331,7 +331,7 @@ Nuxeo applications are started using scripts.
     *   In the folder `C:\Nuxeo application\bin\`, double-click on `nuxeoctl.bat`.The Nuxeo Control Panel opens and the server starts.
     Starting the Nuxeo server takes between a few seconds and several minutes, depending on your hardware.
     When the server is started, the **Start** button becomes a **Stop** button.
-2.  Open a browser and type the URL [http://localhost:8080/nuxeo/](http://localhost:8080/nuxeo/).
+2.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
     If the server is started for the first time after the installation, the [startup wizard]({{page page='configuration-wizard'}}) is displayed so you can select what module you want to install on the platform and help you configure it. Otherwise, the login page is displayed so you can use the application.
 
 {{! multiexcerpt name='infos_windows'}} {{#> callout type='info' }}

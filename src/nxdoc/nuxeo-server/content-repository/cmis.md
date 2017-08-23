@@ -437,7 +437,7 @@ Nuxeo supports CMIS through the following modules:
 
 ## Usage
 
-The following documentation uses `http://localhost:8080/nuxeo` as the URL of the Nuxeo server but you can replace it with `http://your-instance-url/nuxeo` if you have another instance available.
+The following documentation uses `http://localhost:8080/nuxeo` as the URL of the Nuxeo server but you can replace it with `http://NUXEO_SERVER/nuxeo` if you have another instance available.
 
 You can access the different services from the following URLs:
 

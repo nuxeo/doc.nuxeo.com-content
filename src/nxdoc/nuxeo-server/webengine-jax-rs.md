@@ -354,7 +354,7 @@ Nuxeo-WebModule: org.MyApplicationClass
 
 where `org.MyApplicationClass` is the full name of your JAX-RS application class.
 
-Now you simply put your JAR in Nuxeo bundles directory (e.g. `$NUXEO_HOME/nxserver/bundle`) and your Web Application will be deployed under the URL: [http://localhost:8080/nuxeo/site](http://localhost:8080/nuxeo/site).
+Now you simply put your JAR in Nuxeo bundles directory (e.g. `$NUXEO_HOME/nxserver/bundle`) and your Web Application will be deployed under the URL: `http://NUXEO_SERVER/nuxeo`.
 
 ### Example
 
@@ -656,7 +656,7 @@ To define a module you need to create a `module.xml` file and put it in the root
 
 ```
 
-This module file is declaring a module named `Admin` with path `/admin`. The module path is relative to the WebEngine servlet so the full URL of this module will be [http://localhost:8080/nuxeo/site/admin](http://localhost:8080/nuxeo/site/admin).
+This module file is declaring a module named `Admin` with path `/admin`. The module path is relative to the WebEngine servlet so the full URL of this module will be `http://localhost:8080/nuxeo/site/admin`.
 
 You notice there is a third required attribute `root-type`. This attribute is used to locate the module entry point.
 

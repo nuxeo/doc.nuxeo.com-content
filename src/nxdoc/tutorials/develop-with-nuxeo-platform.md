@@ -636,7 +636,7 @@ From a command line:
 
 2. Deploy the JAR (`contract-mgt-project/contract-mgt-project-core/target/contract-mgt-project-core-1.0-SNAPSHOT.jar`) in your Nuxeo server by copying it to **$NuxeoServer/nxserver/bundles**, then restart your server.
 
-3. Go to the local automation documentation at `<server>/nuxeo/site/automation/doc` (for example [http://localhost:8080/nuxeo/site/automation/doc](http://localhost:8080/nuxeo/site/automation/doc)).
+3. Go to the local automation documentation at `<server>/nuxeo/site/automation/doc` (for example `http://NUXEO_SERVER/nuxeo/site/automation/doc`).
 
 4. In the Document category click **Contract Updater**, then click on the **JSON definition** link and copy the operation definition.
 

@@ -70,7 +70,7 @@ $ ./nuxeoctl console
 
 4. Go to http://localhost:8080
 5. Log In with username: Administrator, password: Administrator
-6. Open http://localhost:8080/nuxeo/sampleUI
+6. Open http://NUXEO_SERVER/nuxeo/sampleUI
 
 
 ### Step 3 - Let's code

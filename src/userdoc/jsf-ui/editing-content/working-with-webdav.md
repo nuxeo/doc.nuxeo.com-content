@@ -252,7 +252,7 @@ The first time you do the mapping, make sure that you have already logged in to 
 1.  Open the Windows Explorer.
 2.  Click **Map network drive**.
 3.  Choose a Drive letter.
-4.  In **Folder**, type the address of your Nuxeo application adding the **site/dav/** suffix, for instance "[http://localhost:8080/nuxeo/site/dav/](http://localhost:8080/nuxeo/site/dav/)".
+4.  In **Folder**, type the address of your Nuxeo application adding the **site/dav/** suffix, for instance `http://NUXEO_SERVER/nuxeo/site/dav/`.
     Make sure **Connect using different credentials** is selected.
     ![]({{file name='map-network-drive-wss.png'}} ?w=450)
 5.  Click on **Finish**.
@@ -262,7 +262,7 @@ The first time you do the mapping, make sure that you have already logged in to 
 #### Connecting to the Nuxeo Platform from Mac OS Finder
 
 1.  From the Finder open the **Connect to Server** popup.
-2.  Type the address of your Nuxeo application adding the **site/dav/** suffix, for instance "[http://localhost:8080/nuxeo/site/dav/](http://localhost:8080/nuxeo/site/dav/)".
+2.  Type the address of your Nuxeo application adding the **site/dav/** suffix, for instance `http://NUXEO_SERVER/nuxeo/site/dav/`.
 3.  A connect window opens.Type your login and your password and click on the **OK** button.
 
 #### Connecting to the Nuxeo Platform from Linux

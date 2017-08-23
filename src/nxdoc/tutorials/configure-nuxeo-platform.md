@@ -54,7 +54,7 @@ $ ./bin/nuxeoctl console
 
 ### Wizard
 
-1.  Open Chrome or Firefox and navigate to [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
+1.  Open Chrome or Firefox and navigate to `http://NUXEO_SERVER/nuxeo`.
 
 2.  Follow the steps in Nuxeo Platform Wizard to complete the installation.
 
