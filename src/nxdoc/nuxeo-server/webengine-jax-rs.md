@@ -395,7 +395,7 @@ Nuxeo-WebModule: org.nuxeo.example.MyWebApp
 
 ```
 
-Build your application JAR and put it into your Nuxeo bundles directory. After starting the server you will have a new web page available at [http://localhost:8080/nuxeo/site/mysite](http://localhost:8080/nuxeo/site/mysite).
+Build your application JAR and put it into your Nuxeo bundles directory. After starting the server you will have a new web page available at `http://NUXEO_SERVER/nuxeo/site/mysite`.
 
 ### Automatic Discovery of JAX-RS Resources at Runtime
 
@@ -584,7 +584,7 @@ public class MyWebAppRoot {
 
 ```
 
-If your are logged as Guest and you go to [http://localhost:8080/nuxeo/site/mysite](http://localhost:8080/nuxeo/site/mysite) you will see a message like: _Hello Guest!_
+If your are logged as Guest and you go to `http://NUXEO_SERVER/nuxeo/site/mysite` you will see a message like: _Hello Guest!_
 
 {{#> callout type='note' }}
 
@@ -656,7 +656,7 @@ To define a module you need to create a `module.xml` file and put it in the root
 
 ```
 
-This module file is declaring a module named `Admin` with path `/admin`. The module path is relative to the WebEngine servlet so the full URL of this module will be `http://localhost:8080/nuxeo/site/admin`.
+This module file is declaring a module named `Admin` with path `/admin`. The module path is relative to the WebEngine servlet so the full URL of this module will be `http://NUXEO_SERVER/nuxeo/site/admin`.
 
 You notice there is a third required attribute `root-type`. This attribute is used to locate the module entry point.
 
