@@ -151,7 +151,7 @@ A new extension "Nuxeo CC Connector" is now available on your Photoshop, InDesig
 A connection to your Nuxeo server must be implemented. Go to the settings part of the connect and fill the following information:
 
 *   Choose between HTTP and HTTPS
-*   Type your Nuxeo server address: [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo) for example
+*   Type your Nuxeo server address: `http://NUXEO_SERVER/nuxeo` for example
 *   Type your login and password
 
 ## Functional Overview

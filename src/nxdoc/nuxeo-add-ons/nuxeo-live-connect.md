@@ -470,7 +470,7 @@ On the document creation form, a Google Drive button enables you to browse your 
 
     - Choose **Web Application**.
     - For **Authorized JavaScript origins** set the URL of your server. Ex: [http://localhost:8080](http://localhost:8080/)
-    - For **Authorized redirect URIs** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/googledrive/callback](http://localhost:8080/nuxeo/site/oauth2/googledrive/callback)
+    - For **Authorized redirect URIs** set the following URL, adapting the hostname and port to your case: `http://NUXEO_SERVER/nuxeo/site/oauth2/googledrive/callback`
 
 The console redirects you to a page where you can see the client id and secret id values. You will need them in the next steps.
 
@@ -537,7 +537,7 @@ On the document creation form, a Dropbox button enables you to browse your Dropb
 6.  Enter the name of your application.
 7.  Click on the button **Create app**.
 8.  From the **Settings** tab, copy the App key and App secret.
-9.  In the **OAuth 2** > **Redirect URIs** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/dropbox/callback](http://nuxeo-server:8080/nuxeo/site/oauth2/dropbox/callback).
+9.  In the **OAuth 2** > **Redirect URIs** set the following URL, adapting the hostname and port to your case: `http://NUXEO_SERVER/nuxeo/site/oauth2/dropbox/callback`.
 
 {{#> callout type='info' }}
 

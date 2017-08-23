@@ -70,13 +70,13 @@ To Install Nuxeo Drive on your Linux computer:
     On **FreeBSD**, and **macOS**, xattrs are enabled in the default kernel.
 
     On **GNU/Linux**, depending on the distribution, you _may_ need a special mount option (`user_xattr`) to enable them for a given file system.
-    
+
     Check your current mount, e.g.:
     ```
     cat /proc/fs/ext4/sda3/options | grep xattr
     # "user_xattr" means the file system has xattr already enabled
     ```
-    
+
     If the current mount doesn't have xattr, remount the filesystem with xattr. e.g.:
     ```
     sudo mount -oremount,user_xattr /dev/sda3
@@ -251,7 +251,7 @@ When you add a new account you need to provide the following information:
 *   **Name**: Give a name to the Nuxeo Drive account you are setting.
     This is helpful when you use Nuxeo Drive with several applications.
 *   **Folder**: Select where you want your Nuxeo Drive folder to be created.
-*   **URL**: Type the URL of your Nuxeo application, with the `/nuxeo` suffix ( `http://www.mynuxeoapp.com/nuxeo`for instance).
+*   **URL**: Type the URL of your Nuxeo application, with the `/nuxeo` suffix ( `http://NUXEO_SERVER/nuxeo`for instance).
 *   **Username**: Type your username to the Nuxeo Platform application.
 *   **Password**: Type your password to the Nuxeo Platform application.
 

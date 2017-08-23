@@ -470,8 +470,8 @@ try {
 CoreIO default XML exports as bound using Restlet framework that is [still available](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.restAPI.service.PluggableRestletService--restlets) even if this has been superseded via JAX-RS.
 
 *   Export a single document as XML:
-    `http://{server}:{port}/nuxeo/restAPI/{repository}/{uuid}/export?format=XML`
+    `http://NUXEO_SERVER/nuxeo/restAPI/{repository}/{uuid}/export?format=XML`
 *   Export a single document as XML + blobs in a ZIP:
-    `http://{server}:{port}/nuxeo/restAPI/{repository}/{uuid}/export?format=ZIP`
+    `http://NUXEO_SERVER/nuxeo/restAPI/{repository}/{uuid}/export?format=ZIP`
 *   Export a document tree as XML + blobs in a &nbsp;ZIP:
-    `http://{server}:{port}/nuxeo/restAPI/{repository}/{uuid}/exportTree`
+    `http://NUXEO_SERVER/nuxeo/restAPI/{repository}/{uuid}/exportTree`
