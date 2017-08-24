@@ -14,11 +14,7 @@ tree_item_index: 95
 
 {{! multiexcerpt name='upgrade-9.1-reindex-warning'}}
 
-{{#> callout type='warning' }}
-
 Reindex the full repository following [Rebuilding the repository index page]({{page anchor='rebuildingtheindex-rebuilding-the-repository-index' page='elasticsearch-setup'}}), or using [Nuxeo Dev Tools Extension]({{page page='nuxeo-dev-tools-extension'}}). See [NXP-21279](https://jira.nuxeo.com/browse/NXP-21279).
-
-{{/callout}}
 
 {{! /multiexcerpt}}
 
@@ -276,6 +272,12 @@ See [NXP-21676](https://jira.nuxeo.com/browse/NXP-21676).
 {{! multiexcerpt name='9.1-to-9.2-upgrade-page'}}
 
 ### Installation and Configuration
+
+{{! multiexcerpt name='upgrade-9.2-drop-change-token'}}
+
+With VCS, delete the column `hierarchy.changetoken` in order to let it recreated with the correct type. For instance: `ALTER TABLE hierarchy DROP COLUMN changetoken`. See [NXP-22259](https://jira.nuxeo.com/browse/NXP-22259).
+
+{{! /multiexcerpt}}
 
 {{! multiexcerpt name='upgrade-9.2-new.parameters'}}
 
