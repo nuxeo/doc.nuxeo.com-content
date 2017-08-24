@@ -2272,13 +2272,13 @@ Example: https://my.nuxeo.com/</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.user.anonymous.enable`</td>
-<td colspan="1">When LDAP is enabled and this parameter is set to `true`, allow anonymous login with `Guest` user</td>
+<td colspan="1">When LDAP is enabled and this parameter is set to `true`, allows anonymous login with `Guest` user</td>
 <td colspan="1">`false`</td>
 <td colspan="1">Since 6.0</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.user.emergency.enable`</td>
-<td colspan="1">When LDAP is enabled and this parameter is set to `true` declare an emergency user to connect to Nuxeo in case of LDAP issues</td>
+<td colspan="1">When LDAP is enabled and this parameter is set to `true`, declares an emergency user to connect to Nuxeo in case of LDAP issues</td>
 <td colspan="1">`false`</td>
 <td colspan="1">Since 6.0</td>
 </tr>
