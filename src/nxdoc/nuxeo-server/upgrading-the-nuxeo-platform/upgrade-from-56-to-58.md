@@ -212,7 +212,7 @@ BEGIN nx_init_ancestors; END;
 
 From Nuxeo Platform 5.7.3, EL expressions in action filters are using a more generic context to allow better filtering expressions. Please follow the upgrade notes of [NXP-10566](https://jira.nuxeo.com/browse/NXP-10566).
 
-### Document context used in Action Filters
+### Document Context Used in Action Filters
 
 From Nuxeo Platform 5.8, the document used to evaluate action filters using the category `CREATE_DOCUMENT_FORM` is the `changeableDocument` (document being created) instead of the `currentDocument` (parent of the document being created), see [NXP-12605](https://jira.nuxeo.com/browse/NXP-12605).
 
