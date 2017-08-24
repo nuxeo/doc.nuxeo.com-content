@@ -214,10 +214,10 @@ From Nuxeo Platform 5.7.3, EL expressions in action filters are using a more gen
 
 ### Document context used in Action Filters
 
-From Nuxeo Platform 5.8, the document used to evaluate action filters using the category `CREATE_DOCUMENT_FORM` (controlling buttons available on a document creation page) is the `changeableDocument` (document being created) instead of the `currentDocument` (parent of the document being created), see [NXP-12605](https://jira.nuxeo.com/browse/NXP-12605).
+From Nuxeo Platform 5.8, the document used to evaluate action filters using the category `CREATE_DOCUMENT_FORM` is the `changeableDocument` (document being created) instead of the `currentDocument` (parent of the document being created), see [NXP-12605](https://jira.nuxeo.com/browse/NXP-12605).
 
-In particular, if you were configuring permission checks, they will now fail since the document to be created does not have any security context available for the check until the document is created in the repository - see details at [NXP-21465](https://jira.nuxeo.com/browse/NXP-21465).
-A workaround for upgrade is to define EL expressions instead, like `#{documentManager.hasPermission(currentDocument.ref, 'Perm1')}`, for instance.
+Permission checks will now fail because there are no security checks on the document until it is created in the repository - see details at [NXP-21465](https://jira.nuxeo.com/browse/NXP-21465).
+As a workaround, you can define EL expressions, such as `#{documentManager.hasPermission(currentDocument.ref, 'Perm1')}`.
 
 ### Query Models and Result Provider Farms Removal
 
