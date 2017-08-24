@@ -253,9 +253,9 @@ Although the Canvas app can be displayed within this new environment, it will st
 2.  Go on&nbsp;**Setup**&nbsp;(top right).
 3.  Go to&nbsp;**Build** > **Create** > **Apps**.
 4.  Click the **New** button under&nbsp;**Connected Apps**&nbsp;named `Nuxeo`&nbsp;(it MUST be named "Nuxeo"):
-    1.  Enable OAuth&nbsp;settings and set the callback URL:&nbsp; `<span class="nolink">https://NUXEO_URL/nuxeo/picker/callback/callback.html</span>` [.](https://NUXEO_URL/nuxeo/picker/callback/callback.html)
+    1.  Enable OAuth&nbsp;settings and set the callback URL:&nbsp; `https://NUXEO_SERVER/nuxeo/picker/callback/callback.html</span>` [.](https://NUXEO_SERVER/nuxeo/picker/callback/callback.html)
     2.  Add all available **Scopes**.
-    3.  Enable Force.com Canvas and set the App URL&nbsp; `<span class="nolink">https://NUXEO_URL/nuxeo/picker</span>/`
+    3.  Enable Force.com Canvas and set the App URL&nbsp; `<span class="nolink">https://NUXEO_SERVER/nuxeo/picker</span>/`
     4.  Select **OAuth Webflow** for **Access Method**.
     5.  Configure **Canvas App locations**&nbsp;by adding&nbsp;**Layouts and Mobile Cards**.
 5.  Save the "Nuxeo" Connected App.
@@ -296,13 +296,13 @@ Although the Canvas app can be displayed within this new environment, it will st
     ```
     Service Name=salesforce
     CliendID=YOUR_SALESFORCE_CONSUMER_KEY
-    User Authorization URL=https://NUXEO_URL/nuxeo/picker/callback/callback.html
+    User Authorization URL=https://NUXEO_SERVER/nuxeo/picker/callback/callback.html
     ```
 
 4.  Set up your browser to access Nuxeo for Salesforce from within Salesforce.
     If you're using&nbsp;Firefox&nbsp;browser, you don't need to configure it. However with Chrome, here are the guidelines to allow the access:
     1.  Authorize&nbsp;`Popups`&nbsp;from Salesforce (to allow OAuth execution).
-    2.  Go to&nbsp; `[https://NUXEO_URL/nuxeo](https://nuxeo_url:8443/nuxeo)&nbsp;`&nbsp;and allow Chrome&nbsp;to access in HTTPS your Nuxeo server.
+    2.  Go to `https://NUXEO_SERVER/nuxeo` and allow Chrome to access in HTTPS your Nuxeo server.
 
 ## Synchronization - Salesforce vs Nuxeo
 

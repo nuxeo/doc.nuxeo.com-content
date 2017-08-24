@@ -192,7 +192,7 @@ Here is a sample configuration:
         <parameter name="title">label.publication.tree.remote.sections</parameter>
         <parameter name="userName">Administrator</parameter>
         <parameter name="password">Administrator</parameter>
-        <parameter name="baseURL">http://myserver:8080/nuxeo/site/remotepublisher/</parameter>
+        <parameter name="baseURL">http://NUXEO_SERVER/nuxeo/site/remotepublisher/</parameter>
         <parameter name="targetTree">ServerRemoteTree</parameter>
         <parameter name="originalServer">localserver</parameter>
         <parameter name="enableSnapshot">true</parameter>

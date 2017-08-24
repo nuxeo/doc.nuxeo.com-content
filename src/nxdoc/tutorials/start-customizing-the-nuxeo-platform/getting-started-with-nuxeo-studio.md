@@ -171,7 +171,7 @@ Installing the Nuxeo Platform using the [.zip package](http://www.nuxeo.com/down
 
 2. Double click on the `Start Nuxeo.command` file (or the `Start Nuxeo.bat` file for Windows users) to start the server.
 
-3. In a browser, go to [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
+3. In a browser, go to `http://NUXEO_SERVER/nuxeo`.
 
 4. Fill in the information in the configuration wizard steps.
 
@@ -242,7 +242,7 @@ Goal is to change the logo displayed in the banner of the Nuxeo Platform applica
 
 ### Deploying Changes on Your Nuxeo Platform Instance
 
-1.  Go to your Nuxeo Platform instance, typically available at [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
+1.  Go to your Nuxeo Platform instance, typically available at `http://NUXEO_SERVER/nuxeo`.
 
 2.  Connect as Administrator with Administrator password.
 
@@ -300,7 +300,7 @@ Here we want to create a document type named "Contract" that will hold specific 
 
 ### Deploying Changes on Your Nuxeo Platform Instance
 
-1.  Go to your Nuxeo Platform instance, typically available at [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
+1.  Go to your Nuxeo Platform instance, typically available at `http://NUXEO_SERVER/nuxeo`.
 
 2.  Connect as Administrator with Administrator password.
 

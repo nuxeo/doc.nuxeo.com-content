@@ -172,7 +172,7 @@ The Nuxeo application allows you to authenticate against a Nuxeo server, browse 
 
 ### Authenticating
 
-Once the application is installed and opened, indicate the Nuxeo server you want to connect to by filling the HTTP information. For example `http://myserver.nuxeo.com/nuxeo`. As soon as the server is detected, the login page is displayed. Depending on your server configuration, it is the default one or your customized login page providing authentication through CAS, OpenID or another authentication system.
+Once the application is installed and opened, indicate the Nuxeo server you want to connect to by filling the HTTP information. For example `http://NUXEO_SERVER/nuxeo`. As soon as the server is detected, the login page is displayed. Depending on your server configuration, it is the default one or your customized login page providing authentication through CAS, OpenID or another authentication system.
 
 ![]({{file name='mobile-connection.png'}} ?w=200,h=355,border=true)&nbsp; &nbsp;![]({{file name='mobile-login-page.png'}} ?w=200,h=355,border=true)
 

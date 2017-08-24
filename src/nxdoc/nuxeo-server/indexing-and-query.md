@@ -357,7 +357,7 @@ The following table and schema gives an overview of the different ways of queryi
     **Example:**
 
     ```
-    http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document&pageSize=2&currentPageIndex=1
+    http://http://NUXEO_SERVER/nuxeo/site/api/v1/query?query=select * from Document&pageSize=2&currentPageIndex=1
     ```
 
     **Related topics**:

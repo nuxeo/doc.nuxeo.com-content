@@ -161,9 +161,9 @@ After the package is installed, two new OAuth2 service providers are added to Nu
 
     c.  Choose **Web Application.**
 
-    d.  For **Authorized JavaScript origins** set the URL of your server. Ex [http://localhost:8080](http://localhost:8080.)
+    d.  For **Authorized JavaScript origins** set the URL of your server. Ex `http://NUXEO_SERVER`.
 
-    e.  For **Authorized redirect URIs** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/YouTube/callback](http://localhost:8080/nuxeo/site/oauth2/YouTube/callback).
+    e.  For **Authorized redirect URIs** set the following URL, adapting the hostname and port to your case: `http://NUXEO_SERVER/nuxeo/site/oauth2/YouTube/callback`.
 
 
 **Step 2: Configuring the Nuxeo Platform**
@@ -192,7 +192,7 @@ OAuth2 is not yet available for all Wistia accounts. Until it is, [contact Wisti
 
 3.  Fill in the required fields.
 
-    a.  For **Callback URL** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/Wistia/callback](http://localhost:8080/nuxeo/site/oauth2/Wistia/callback).
+    a.  For **Callback URL** set the following URL, adapting the hostname and port to your case: `http://lNUXEO_SERVER/nuxeo/site/oauth2/Wistia/callback`.
 
     b.  Set permissions to **all:all.**
 

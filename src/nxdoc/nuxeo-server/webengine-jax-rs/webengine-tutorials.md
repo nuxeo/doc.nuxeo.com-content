@@ -136,28 +136,28 @@ You should download the binaries and sources (https://maven.nuxeo.org/nexus/inde
 
 This tutorial demonstrates how to handle requests. This is the simplest object. It requires only one java class which represents the Resource (the entry point).
 
-You can access the tutorial sample at:  [http://localhost:8080/nuxeo/site/samples/hello](http://localhost:8080/nuxeo/site/samples/hello)
+You can access the tutorial sample at:  `http://NUXEO_SERVER/nuxeo/site/samples/hello`
 
 ##### [Tutorial 2]({{page page='using-freemarker-template-language-ftl'}}) - Using Templates
 
 This tutorial demonstrates how to use templates to render dynamic content.
 
-You can access the tutorial sample at: [http://localhost:8080/nuxeo/site/samples/templating](http://localhost:8080/nuxeo/site/samples/templating)
+You can access the tutorial sample at: `http://NUXEO_SERVER/nuxeo/site/samples/templating`
 
 ##### [Tutorial 3]({{page page='web-object-model'}}) - Web Object Model
 
 This tutorial demonstrates the basics of the WebEngine Object Model. You can see how to create new Module Resources, Object Resources, Adapter Resources and views.
 
-You can access the tutorial sample at: [http://localhost:8080/nuxeo/site/samples/basics](http://localhost:8080/nuxeo/site/samples/basics)
+You can access the tutorial sample at: `http://NUXEO_SERVER/nuxeo/site/samples/basics`
 
 ##### [Tutorial 4]({{page page='working-with-documents'}}) - Working with Documents
 
 This tutorial demonstrates how to access Nuxeo Platform Documents through WebEngine.
-You can access the tutorial sample at: [http://localhost:8080/nuxeo/site/samples/documents](http://localhost:8080/nuxeo/site/samples/documents)
+You can access the tutorial sample at: `http://NUXEO_SERVER/nuxeo/site/samples/documents`
 
 ##### [Tutorial 5]({{page page='module-extensibility'}}) - Module Extensibility
 
 This tutorial demonstrates how modules can be extended and how the links you are using in your templates can
 be managed to create easy to maintain and modular applications.
 
-You can access the tutorial sample at: [http://localhost:8080/nuxeo/site/samples/extended](http://localhost:8080/nuxeo/site/samples/extended)
+You can access the tutorial sample at: `http://NUXEO_SERVER/nuxeo/site/samples/extended`
