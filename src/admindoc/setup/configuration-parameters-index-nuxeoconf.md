@@ -2097,16 +2097,84 @@ Enable/Disable multi-line strings escaped with a trailing \ when using `Document
 
 `org.nuxeo.cmis.joins`
 
-</td><td colspan="1">false</td><td colspan="1">Since Nuxeo 6.0\. When true, CMISQL JOINs are allowed if VCS is used.</td></tr><tr><td colspan="1">`nuxeo.logs.viewer.max.lines.count`</td><td colspan="1">1500</td><td colspan="1">Since Nuxeo 6.0\. Configure the number of lines displayed for each server log files in the Admin tab > Monitoring > Logs tab</td></tr><tr><td colspan="1">`org.nuxeo.ecm.platform.query.nxql.defaultNavigationResults`</td><td colspan="1">200</td><td colspan="1">Since Nuxeo 5.6\. [Maximum number of results for page providers]({{page space='nxdoc60' page='content-views#maxresults'}}).</td></tr><tr><td colspan="1">`nuxeo.text.annotations`</td><td colspan="1">false</td><td colspan="1">Since Nuxeo 6.0\. When true, enable the annotations also on text files, otherwise annotations are only available on images.</td></tr><tr><td colspan="1">`nuxeo.security.allowNegativeACL`</td><td colspan="1">false</td><td colspan="1">Since Nuxeo 6.0\. When true, enables adding negative ACL (deny permissions) in the UI, otherwise only grant permissions are available.</td></tr><tr><td colspan="1">`nuxeo.redis.enabled`</td><td colspan="1">false</td><td colspan="1">Set to true to activate Redis.</td></tr><tr><td colspan="1">`nuxeo.redis.host`</td><td colspan="1">redishost</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.redis.port`</td><td colspan="1">6379</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.redis.password`</td><td colspan="1">&nbsp;</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.redis.database`</td><td colspan="1">0</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.redis.prefix`</td><td colspan="1">nuxeo:</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.redis.timeout`</td><td colspan="1">2000</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">`nuxeo.redis.maxTotal`</td><td colspan="1">16</td><td colspan="1">The maximum size of the Redis connections pool. (Since Nuxeo 6.0-HF27)</td></tr><tr><td colspan="1">`nuxeo.redis.maxIdle`</td><td colspan="1">8</td><td colspan="1">The maximum number of Redis idle connections in the pool. (Since Nuxeo 6.0-HF27)</td></tr>
+</td>
+<td colspan="1">false</td>
+<td colspan="1">Since Nuxeo 6.0\. When true, CMISQL JOINs are allowed if VCS is used.</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.logs.viewer.max.lines.count`</td>
+<td colspan="1">1500</td>
+<td colspan="1">Since Nuxeo 6.0\. Configure the number of lines displayed for each server log files in the Admin tab > Monitoring > Logs tab</td>
+</tr>
+<tr>
+<td colspan="1">`org.nuxeo.ecm.platform.query.nxql.defaultNavigationResults`</td>
+<td colspan="1">200</td>
+<td colspan="1">Since Nuxeo 5.6\. [Maximum number of results for page providers]({{page space='nxdoc60' page='content-views#maxresults'}}).</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.text.annotations`</td>
+<td colspan="1">false</td>
+<td colspan="1">Since Nuxeo 6.0\. When true, enable the annotations also on text files, otherwise annotations are only available on images.</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.security.allowNegativeACL`</td>
+<td colspan="1">false</td>
+<td colspan="1">Since Nuxeo 6.0\. When true, enables adding negative ACL (deny permissions) in the UI, otherwise only grant permissions are available.</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.redis.enabled`</td>
+<td colspan="1">false</td>
+<td colspan="1">Set to true to activate Redis.</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.redis.host`</td>
+<td colspan="1">redishost</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.redis.port`</td>
+<td colspan="1">6379</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.redis.password`</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.redis.database`</td>
+<td colspan="1">0</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.redis.prefix`</td>
+<td colspan="1">nuxeo:</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.redis.timeout`</td>
+<td colspan="1">2000</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.redis.maxTotal`</td>
+<td colspan="1">16</td>
+<td colspan="1">The maximum size of the Redis connections pool. (Since Nuxeo 6.0-HF27)</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.redis.maxIdle`</td>
+<td colspan="1">8</td>
+<td colspan="1">The maximum number of Redis idle connections in the pool. (Since Nuxeo 6.0-HF27)</td>
+</tr>
 <tr>
 <td colspan="1">`nuxeo.user.anonymous.enable`</td>
-<td colspan="1">When LDAP is enabled and this parameter is set to `true`, allow anonymous login with `Guest` user</td>
+<td colspan="1">When LDAP is enabled and this parameter is set to `true`, allows anonymous login with `Guest` user</td>
 <td colspan="1">`false`</td>
 <td colspan="1">Since 6.0</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.user.emergency.enable`</td>
-<td colspan="1">When LDAP is enabled and this parameter is set to `true` declare an emergency user to connect to Nuxeo in case of LDAP issues</td>
+<td colspan="1">When LDAP is enabled and this parameter is set to `true`, declares an emergency user to connect to Nuxeo in case of LDAP issues</td>
 <td colspan="1">`false`</td>
 <td colspan="1">Since 6.0</td>
 </tr>
