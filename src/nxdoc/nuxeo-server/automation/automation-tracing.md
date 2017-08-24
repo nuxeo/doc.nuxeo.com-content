@@ -191,7 +191,7 @@ The Automation Trace mode can be activated through JMX via `org.nuxeo:TracerFact
 
 {{#> callout type='tip' }}
 
-You can also activate the traces (and download them for each chain) from the dynamical documentation of Automation module : [http://localhost:8080/nuxeo/site/automation/doc](http://localhost:8080/nuxeo/site/automation/doc) (you should adapt server name and port number).
+You can also activate the traces (and download them for each chain) from the dynamical documentation of Automation module: `http://NUXEO_SERVER/nuxeo/site/automation/doc` (you should adapt server name and port number).
 
 {{/callout}}
 

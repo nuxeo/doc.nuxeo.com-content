@@ -115,11 +115,11 @@ This first contribution only defines the provider, but not the _client name_ or 
 In your identity provider configuration, set up the Authorized Redirect URI to the Nuxeo server. For a local Nuxeo instance using GoogleOpenIDConnect for instance this would be:
 - With JSF UI:
     ```
-    http://localhost:8080/nuxeo/nxstartup.faces?provider=GoogleOpenIDConnect&forceAnonymousLogin=true
+    http://NUXEO_SERVER/nuxeo/nxstartup.faces?provider=GoogleOpenIDConnect&forceAnonymousLogin=true
     ```
 - With Web UI:
     ```
-    http://localhost:8080/nuxeo/ui/?provider=GoogleOpenIDConnect&forceAnonymousLogin=true
+    http://NUXEO_SERVER/nuxeo/ui/?provider=GoogleOpenIDConnect&forceAnonymousLogin=true
     ```
 
 ### Appending Provider Secrets

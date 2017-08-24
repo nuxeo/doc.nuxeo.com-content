@@ -47,7 +47,7 @@ This how to requires knowledge about:
 The PDF conversion operations are not available in Nuxeo Studio "out-of-the-box". You need to import them following these steps:
 
 1. Connect to your Nuxeo instance.
-2. Go to your instance's automation documentation (/site/automation/doc). If you run Nuxeo in a local environment, the classic URL is http://localhost:8080/nuxeo/site/automation/doc.
+2. Go to your instance's automation documentation (/site/automation/doc). If you run Nuxeo in a local environment, the classic URL is `http://NUXEO_SERVER/nuxeo/site/automation/doc`.
 3. In the Conversion part, and click on the operation you want to use, here the operations **PDF: Encrypt Read Only** and **PDF: Watermark with Image**.
 ![]({{file name='conversion-operation-automation-doc.png'}} ?w=200,border=true)
 4. On each operation page, click on the **JSON definition** link and copy the operation definition.

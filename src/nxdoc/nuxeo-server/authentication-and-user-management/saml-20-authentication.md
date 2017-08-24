@@ -192,10 +192,10 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 1.  Configure your Identity Provider:
     1.  Map user email to NameID metadata (check documentation of your IdP for doing so).
     2.  Declare your Nuxeo Platform server as a Service Provider:
-        *   Either by uploading the generated XML metadata file available at [http://HOSTNAME:8080/nuxeo/saml/metadata](http://localhost:8080/nuxeo/saml/metadata).
+        *   Either by uploading the generated XML metadata file available at `http://NUXEO_SERVER/nuxeo/saml/metadata`.
         *   Or by configuring it manually on the IdP. In that case, you should use as the SAML consumer endpoints:
-            - `http://<nuxeo_url>/nuxeo/nxstartup.faces` if you have the JSF UI (or both UIs)
-            - `http://<nuxeo_url>/nuxeo/ui` if you are using the web UI alone
+            - `http://NUXEO_SERVER/nuxeo/nxstartup.faces` if you have the JSF UI (or both UIs)
+            - `http://NUXEO_SERVER/nuxeo/ui` if you are using the web UI alone
 1.  Optionally generate a keystore for enabling encryption. If you want to enable signing and/or encryption (not mandatory with some IdP) you have to generate a keystore and add the proper configuration to `nxserver/config` (ex: `saml-keystore-config.xml`):
 
     ```xml
@@ -231,7 +231,7 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 
     You can find other use cases and more extensive documentation about keytool [here](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html).
 
-    After having set up the Java KeyStore and updating the SAML keystore configuration with the proper aliases(key) and passwords the metadata generated at [http://localhost:8080/nuxeo/saml/metadata](http://localhost:8080/nuxeo/saml/metadata)&nbsp;should include the correct X509 certificate data.
+    After having set up the Java KeyStore and updating the SAML keystore configuration with the proper aliases(key) and passwords the metadata generated at `http://NUXEO_SERVER/nuxeo/saml/metadata` should include the correct X509 certificate data.
 
 {{! /excerpt}}
 

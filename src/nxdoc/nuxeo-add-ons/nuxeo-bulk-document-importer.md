@@ -289,13 +289,13 @@ The file importer comes as a Java library (with the Nuxeo Runtime Service) and a
 
 To import the folder `/path/to/import` into the workspace `/default-domain/workspaces/some-workspace` while monitoring the import logs from a REST client, use the following HTTP GET queries:
 
-*   `GET [http://localhost:8080/nuxeo/site/fileImporter/logActivate](http://localhost:8080/nuxeo/site/fileImporter/logActivate)`
-*   `GET [http://localhost:8080/nuxeo/site/fileImporter/run?targetPath=/default-domain/workspaces/some-workspace&inputPath=/path/to/import&batchSize=10&interactive=false&nbThreads](http://localhost:8080/nuxeo/site/fileImporter/run?targetPath=/default-domain/workspaces/some-workspace&inputPath=/path/to/import&batchSize=10&interactive=false&nbThreads)`
-*   `GET [http://localhost:8080/nuxeo/site/fileImporter/log](http://localhost:8080/nuxeo/site/fileImporter/log)`
+*   `GET http://NUXEO_SERVER/nuxeo/site/fileImporter/logActivate`
+*   `GET http://NUXEO_SERVER/nuxeo/site/fileImporter/run?targetPath=/default-domain/workspaces/some-workspace&inputPath=/path/to/import&batchSize=10&interactive=false&nbThreads`
+*   `GET http://NUXEO_SERVER/nuxeo/site/fileImporter/log`
 
 {{#> callout type='tip' }}
 
-A basic user interface is provided when using just <span class="nolink">[http://localhost:8080/nuxeo/site/fileImporter](http://localhost:8080/nuxeo/site/fileImporter)</span> in a browser.
+A basic user interface is provided when using just `http://NUXEO_SERVER/nuxeo/site/fileImporter` in a browser.
 
 {{/callout}}
 

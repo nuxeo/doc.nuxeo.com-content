@@ -196,26 +196,26 @@ The REST API provides synchronous and asynchronous conversions.
 Synchronous conversions are retrieved through the&nbsp;`@convert` adapter.
 
 ```
-GET http://localhost:8080/nuxeo/api/v1/path/{docPath}/@convert?converter=any2pdf
-GET http://localhost:8080/nuxeo/api/v1/path/{docPath}/@blob/file:content/@convert?converter=any2pdf
+GET http://NUXEO_SERVER/nuxeo/api/v1/path/{docPath}/@convert?converter=any2pdf
+GET http://NUXEO_SERVER/nuxeo/api/v1/path/{docPath}/@blob/file:content/@convert?converter=any2pdf
 ```
 
 To convert using a named converter:
 
 ```
-GET http://localhost:8080/nuxeo/api/v1/path/{docPath}/@convert?converter=any2pdf
+GET http://NUXEO_SERVER/nuxeo/api/v1/path/{docPath}/@convert?converter=any2pdf
 ```
 
 To convert using a destination mime type:
 
 ```
-GET http://localhost:8080/nuxeo/api/v1/path/{docPath}/@convert?type=application%2Fpdf
+GET http://NUXEO_SERVER/nuxeo/api/v1/path/{docPath}/@convert?type=application%2Fpdf
 ```
 
 To convert using a format (destination extension):
 
 ```
-GET http://localhost:8080/nuxeo/api/v1/path/{docPath}/@convert?format=pdf
+GET http://NUXEO_SERVER/nuxeo/api/v1/path/{docPath}/@convert?format=pdf
 ```
 
 All those conversions can be also used with a POST request on the&nbsp;`@convert` adapter (with&nbsp;`async` param to&nbsp;`false`).
@@ -225,8 +225,8 @@ All those conversions can be also used with a POST request on the&nbsp;`@convert
 Scheduling an asynchronous conversion is done by using a POST request on the&nbsp;`@convert` adapter and setting the form param `async` to `true`, otherwise the conversion will be done synchronously.
 
 ```
-POST http://localhost:8080/nuxeo/api/v1/path/{docPath}/@convert
-POST http://localhost:8080/nuxeo/api/v1/path/{docPath}/@blob/file:content/@convert
+POST http://NUXEO_SERVER/nuxeo/api/v1/path/{docPath}/@convert
+POST http://NUXEO_SERVER/nuxeo/api/v1/path/{docPath}/@blob/file:content/@convert
 ```
 
 Parameters
@@ -304,7 +304,7 @@ The `pollingURL` is used to get the status of a scheduled conversion, it's part 
 The `resultURL` is used to get the result of the conversion, it's part of the new `conversion` endpoint.
 
 ```
-GET http://localhost:8080/nuxeo/api/v1/conversion/id/poll
+GET http://NUXEO_SERVER/nuxeo/api/v1/conversion/id/poll
 ```
 
 It returns a HTTP code 200 with the following data:
@@ -321,7 +321,7 @@ It returns a HTTP code 200 with the following data:
 To retrieve a conversion result, use the provided `resultURL`:
 
 ```
-GET http://localhost:8080/nuxeo/api/v1/conversion/id/result
+GET http://NUXEO_SERVER/nuxeo/api/v1/conversion/id/result
 ```
 
 Returns the result of the conversion, or HTTP code 404 if there is no conversion matching the id or if there is no result yet (conversion not completed).
