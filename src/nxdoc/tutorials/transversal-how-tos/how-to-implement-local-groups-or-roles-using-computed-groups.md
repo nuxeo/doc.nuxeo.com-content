@@ -251,7 +251,7 @@ In the previous section we asked Nuxeo Runtime to register our new computer grou
 *   The main method to implement is the `getGroupsForUser` that returns the list of virtual groups to which the user belongs given as parameter.
 *   The difficulty is that when `getGroupsForUser` is called the user is not yet connected. So you must execute code as a privileged user.
 
-#### `ValidatorGroupComputer` Class Creation
+#### `ValidatorsGroupComputer` Class Creation
 
 1.  As usual, simply create a class in the `src/main/java`.
 2.  Mark it as extending the `AbstractGroupComputer` class.
@@ -363,13 +363,13 @@ This code will be used in the Computer Group.
 
 You will need this pattern several times to implement you Computer Group. So lets move to the next section and first replace the `getGroupsForUser` method with the dynamic resolution one.
 
-#### `ValidatorGroupComputer` Class with Dynamic Group List Resolution
+#### `ValidatorsGroupComputer` Class with Dynamic Group List Resolution
 
 In this section we will just merge information from the two previous ones and test it.
 
-Here is the final version of the `ValidatorGroupComputer` class:
+Here is the final version of the `ValidatorsGroupComputer` class:
 
-{{#> panel type='code' heading='ValidatorGroupComputer with dynamic groups'}}
+{{#> panel type='code' heading='ValidatorsGroupComputer with dynamic groups'}}
 
 ```java
 package org.nuxeo.project.computed.group;
