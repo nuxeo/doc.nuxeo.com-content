@@ -428,9 +428,9 @@ Note this is only interesting when using a page provider, defined server side.
 {{#> panel type='code' heading='Examples'}}
 
 ```
-http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document
+http://NUXEO_SERVER/nuxeo/site/api/v1/query?query=select * from Document
 
-http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document&pageSize=2&currentPageIndex=1
+http://NUXEO_SERVER/nuxeo/site/api/v1/query?query=select * from Document&pageSize=2&currentPageIndex=1
 ```
 
 {{/panel}}
@@ -534,7 +534,7 @@ Here are different use cases when defining page providers and making it possible
 {{#> panel type='code' heading='Example'}}
 
 ```
-http://localhost:8080/nuxeo/site/api/v1/query/latest_docs
+http://NUXEO_SERVER/nuxeo/site/api/v1/query/latest_docs
 
 ```
 
@@ -557,7 +557,7 @@ http://localhost:8080/nuxeo/site/api/v1/query/latest_docs
 {{#> panel type='code' heading='Example'}}
 
 ```
-http://localhost:8080/nuxeo/site/api/v1/query/tree_children?queryParams=47dd6d8d-d8d0-4a09-9e3e-e30fc8877df1
+http://NUXEO_SERVER/nuxeo/site/api/v1/query/tree_children?queryParams=47dd6d8d-d8d0-4a09-9e3e-e30fc8877df1
 
 ```
 
@@ -578,7 +578,7 @@ http://localhost:8080/nuxeo/site/api/v1/query/tree_children?queryParams=47dd6d8d
 {{#> panel type='code' heading='Example'}}
 
 ```
-http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_and_desc?title=mytitle&desc=mydesc
+http://NUXEO_SERVER/nuxeo/site/api/v1/query/docs_by_title_and_desc?title=mytitle&desc=mydesc
 
 ```
 
@@ -601,8 +601,8 @@ http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_and_desc?title=mytit
 {{#> panel type='code' heading='Example'}}
 
 ```
-http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_if_any?title=mytitle
-http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_if_any
+http://NUXEO_SERVER/nuxeo/site/api/v1/query/docs_by_title_if_any?title=mytitle
+http://NUXEO_SERVER/nuxeo/site/api/v1/query/docs_by_title_if_any
 ```
 
 {{/panel}}
@@ -634,7 +634,7 @@ Assuming a document type NamedParamDoc, with associated schema with prefix `np`,
 {{#> panel type='code' heading='Example'}}
 
 ```
-http://localhost:8080/nuxeo/site/api/v1/query/docs_by_title_complex?np%3Atitle=mytitle&np%3AisCheckedIn=true
+http://NUXEO_SERVER/nuxeo/site/api/v1/query/docs_by_title_complex?np%3Atitle=mytitle&np%3AisCheckedIn=true
 ```
 
 {{/panel}}

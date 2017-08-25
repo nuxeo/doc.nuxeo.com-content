@@ -353,7 +353,7 @@ This requires X11.
     *   the port,
     *   the database (a preconfigured PostgreSQL database is suggested by default).
         The platform is installed as a service. It is automatically started and set to automatically start at boot.
-6.  Open a browser and type the URL <a>http://localhost:8080/nuxeo/.</a>
+6.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo`.
     The [startup wizard]({{page space='nxdoc' page='configuration-wizard'}}) is displayed so you can setup your Nuxeo platform and select the module you want to install.
 
 {{! /multiexcerpt}}
@@ -404,7 +404,7 @@ This requires X11.
 
     The platform is installed as a service. It is automatically started and set to automatically start at boot.
 
-6.  Open a browser and type the URL [http://localhost:8080/nuxeo/](http://localhost:8080/nuxeo/). The [startup wizard]({{page page='setup#setup-wizard'}}) is displayed so you can setup your Nuxeo platform and select the module you want to install.
+6.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo`. The [startup wizard]({{page page='setup#setup-wizard'}}) is displayed so you can setup your Nuxeo platform and select the module you want to install.
 
 {{! /multiexcerpt}}
 

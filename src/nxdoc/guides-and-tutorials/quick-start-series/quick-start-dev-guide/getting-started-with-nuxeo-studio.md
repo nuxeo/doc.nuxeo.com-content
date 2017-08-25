@@ -175,7 +175,7 @@ Installing the Nuxeo Platform using the [.zip package](http://www.nuxeo.com/down
 
 1.  Unzip the .zip archive using your favorite tool.
 2.  Click on the Start Nuxeo.command to start the server.
-3.  In a browser, go to [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
+3.  In a browser, go to `http://NUXEO_SERVER/nuxeo`.
 4.  Fill in the information in the configuration wizard steps.
 5.  At the Nuxeo Connect step, provide your Nuxeo Online Services credentials if you already have a Nuxeo Online Services account or register to the 30-day trial offer.
 
@@ -224,7 +224,7 @@ Goal is to change the logo displayed in the banner of the Nuxeo Platform applica
 
 ### Deploying Changes on Your Nuxeo Platform Instance
 
-1.  Go to your Nuxeo Platform instance, typically available at[http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
+1.  Go to your Nuxeo Platform instance, typically available at `http://NUXEO_SERVER/nuxeo`.
 2.  Connect as Administrator with Administrator password.
 3.  Click on **Admin Center**&nbsp;> **Update Center**&nbsp;> **Nuxeo Studio**.
 4.  Click on the **Update** button.
@@ -263,7 +263,7 @@ Here we want to create a document type "Contract" that will hold specific metada
 
 ### Deploying Changes on Your Nuxeo Platform Instance
 
-1.  Go to your Nuxeo Platform instance, typically available at [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
+1.  Go to your Nuxeo Platform instance, typically available at `http://NUXEO_SERVER/nuxeo`.
 2.  Connect as Administrator with Administrator password.
 3.  Click on **Admin Center**&nbsp;> **Update Center**&nbsp;> **Nuxeo Studio**.
 4.  Click on the **Update** button.

@@ -22,184 +22,184 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/gIGyAQ'
     source_link: /display/NXDOC710/Nuxeo+Bulk+Document+Importer
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-10 14:26'
         message: erge ADMINDOC with NXDOC
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 15:15'
         message: ''
         version: '35'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-13 15:42'
         message: phrasing
         version: '34'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-13 15:40'
         message: 'code blocks: uses Java syntax highlighting'
         version: '33'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-13 14:41'
         message: >-
             Moved section about 'Nuxeo replication' to same page 5.8 (version of
             deprecation)
         version: '32'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-13 14:15'
         message: fixes TOC overlay
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-16 17:36'
         message: ''
         version: '30'
-    - 
+    -
         author: Stuart Miller
         date: '2014-10-24 18:42'
         message: typo
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-07 14:18'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-07 14:17'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-07 14:16'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-13 16:38'
         message: ''
         version: '25'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-25 19:32'
         message: Migrated to Confluence 4.0
         version: '24'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-25 19:32'
         message: ''
         version: '23'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-08-30 13:49'
         message: ''
         version: '22'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-06-17 17:42'
         message: ''
         version: '21'
-    - 
+    -
         author: Julien Carsique
         date: '2011-05-18 11:15'
         message: update links
         version: '20'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-21 20:02'
         message: ''
         version: '19'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 12:38'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 14:43'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:28'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:24'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:16'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:15'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:10'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:51'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:06'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:21'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:02'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:24'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:12'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:01'
         message: ''
@@ -222,20 +222,21 @@ The file importer comes as a Java library (with the Nuxeo Runtime Service) and a
 
 To import the folder&nbsp;`/path/to/import`&nbsp;into the workspace&nbsp;`/default-domain/workspaces/some-workspace`&nbsp;while monitoring the import logs from a REST client, use the following HTTP GET queries:
 
-*   `GET [http://localhost:8080/nuxeo/site/fileImporter/logActivate](http://localhost:8080/nuxeo/site/fileImporter/logActivate)`
-*   `GET [http://localhost:8080/nuxeo/site/fileImporter/run?targetPath=/default-domain/workspaces/some-workspace&inputPath=/path/to/import&batchSize=10&interactive=false&nbThreads](http://localhost:8080/nuxeo/site/fileImporter/run?targetPath=/default-domain/workspaces/some-workspace&inputPath=/path/to/import&batchSize=10&interactive=false&nbThreads)`
-*   `GET [http://localhost:8080/nuxeo/site/fileImporter/log](http://localhost:8080/nuxeo/site/fileImporter/log)`
+*   `GET http://NUXEO_SERVER/nuxeo/site/fileImporter/logActivate`
+*   `GET http://NUXEO_SERVER/nuxeo/site/fileImporter/run?targetPath=/default-domain/workspaces/some-workspace&inputPath=/path/to/import&batchSize=10&interactive=false&nbThreads`
+*   `GET http://NUXEO_SERVER/nuxeo/site/fileImporter/log`
 
 {{#> callout type='tip' }}
 
-A basic user interface is provided when using just <span class="nolink">[http://localhost:8080/nuxeo/site/fileImporter](http://localhost:8080/nuxeo/site/fileImporter)</span> in a browser.
+A basic user interface is provided when using just `http://NUXEO_SERVER/nuxeo/site/fileImporter` in a browser.
 
 {{/callout}}
 
 To execute these HTTP queries you can either use a browser with an active Nuxeo session (JSESSIONID cookie) or use a third party stateless HTTP client with HTTP Basic Authentication. This is an example with the curl command line client:
 
 ```
-$ curl --basic -u 'Administrator:Administrator' "http://localhost:8080/nuxeo/site/fileImporter/log"
+$ curl --basic -u 'Administrator:Administrator' "
+http://localhost:8080/nuxeo/site/fileImporter/log"
 ```
 
 Don't forget to put the URL in quotes if it includes special shell characters such as&nbsp;`&`. You can also use the generic HTTP GUI client from the rest-client Java project:&nbsp;[https://github.com/wiztools/rest-client](https://github.com/wiztools/rest-client).&nbsp;

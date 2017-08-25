@@ -145,7 +145,7 @@ If you want to reverse a change on a cell, click right on the cell concerned and
 
 ## Standalone Mode
 
-A standalone mode is accessible through this URL: https:/nuxeo-platform-url/nuxeo/spreadsheet/, where you have to enter a NXQL query to fetch your documents. From this URL you can do all the same actions than on your Nuxeo Platform instance.  
+A standalone mode is accessible through this URL: `https://NUXEO_SERVER/nuxeo/spreadsheet/`, where you have to enter a NXQL query to fetch your documents. From this URL you can do all the same actions than on your Nuxeo Platform instance.  
 
 ![]({{file name='standalone_spreadsheet.png'}} ?w=650,border=true)
 

@@ -77,7 +77,7 @@ Since Nuxeo Platform 5.8, the framework provides an easy way to get the trace of
 
 Although this feature is always usable, even out of Nuxeo Studio context, it is particularly useful when implementing automation chains using Nuxeo Studio.
 
-You can go to the automation documentation on your server: [http://localhost:8080/nuxeo/site/automation/doc](http://localhost:8080/nuxeo/site/automation/doc)
+You can go to the automation documentation on your server: `http://NUXEO_SERVER/nuxeo/site/automation/doc`
 
 You see the list of all operations, and all chains that are declared on your server. Any chain that you have designed using Studio should be declared there. For each chain, you see a &nbsp;"trace" section. From there, you can enable the trace (actually it enables it globally), and you can download traces, either light (if not enable) or full.&nbsp;
 
@@ -86,11 +86,11 @@ You see the list of all operations, and all chains that are declared on your ser
 To test it simply:
 
 1.  Go to your Nuxeo Platform.
-2.  Go the documentation of the chain `FileManager.ImportInSeam`: [http://localhost:8080/nuxeo/site/automation/doc/?id=FileManager.ImportInSeam](http://localhost:8080/nuxeo/site/automation/doc/?id=FileManager.ImportInSeam).
+2.  Go the documentation of the chain `FileManager.ImportInSeam`: `http://NUXEO_SERVER/nuxeo/site/automation/doc/?id=FileManager.ImportInSeam`.
 3.  Enable the traces for this chain, if they are disabled. If they're already enabled, skip to next step.
 4.  On the user interface of the Nuxeo Platform, drop one or a few files in a workspace via the HTML 5 drag and drop feature and create them directly (smart import).
     This action uses in background the chain `FileManager.ImportInSeam`.
-5.  Go to the chain documentation page again:&nbsp;[http://localhost:8080/nuxeo/site/automation/doc/traces?opId=FileManager.ImportInSeam](http://localhost:8080/nuxeo/site/automation/doc/traces?opId=FileManager.ImportInSeam).
+5.  Go to the chain documentation page again: `http://NUXEO_SERVER/nuxeo/site/automation/doc/traces?opId=FileManager.ImportInSeam`.
 6.  Click on the **Get traces** link.
     The latest execution of the chain, with all the parameters values, is displayed in your browser (or downloaded on your computer, depending on your browser's settings).
 

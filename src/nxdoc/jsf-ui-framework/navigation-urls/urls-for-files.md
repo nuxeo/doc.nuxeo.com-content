@@ -164,8 +164,8 @@ history:
 
 The default URL patterns for downloading files from within the JSF environment are:
 
-- `http://{server}:{port}/nuxeo/nxfile/{repository}/{uuid}/blobholder:{blobIndex}/{fileName}`
-- `http://{server}:{port}/nuxeo/nxfile/{repository}/{uuid}/{propertyXPath}/{fileName}`
+- `http://NUXEO_SERVER/nuxeo/nxfile/{repository}/{uuid}/blobholder:{blobIndex}/{fileName}`
+- `http://NUXEO_SERVER/nuxeo/nxfile/{repository}/{uuid}/{propertyXPath}/{fileName}`
 
 Where:
 
@@ -182,21 +182,21 @@ Where:
 Here are some examples:
 
 - The main file of the document:
-    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496`
+    `http://NUXEO_SERVER/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496`
 - The main file of the document with a different name:
-    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:0/mydocument.pdf`
+    `http://NUXEO_SERVER/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:0/mydocument.pdf`
 - An attached file of the document:
-    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:1`
+    `http://NUXEO_SERVER/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:1`
 - A file stored in the given property:
-    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/myschema:content`
+    `http://NUXEO_SERVER/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/myschema:content`
 - A file stored in the given complex property, downloaded with a specific filename:
-    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/files:files/0/file/myimage.png`
+    `http://NUXEO_SERVER/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/files:files/0/file/myimage.png`
 - The main file of the document inside the browser instead of being downloaded:&nbsp;
-    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496?inline=true`
+    `http://NUXEO_SERVER/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496?inline=true`
 
 For Picture document type, a similar system is available to be able to get the attachments depending on the view name:
 
-- `http://{server}:{port}/nuxeo/nxpicsfile/{repository}/{uuid}/{viewName}:content/{fileName}`
+- `http://NUXEO_SERVER/nuxeo/nxpicsfile/{repository}/{uuid}/{viewName}:content/{fileName}`
 
 where, by default,&nbsp;`viewName`&nbsp;can be Original, OriginalJpeg, Medium, Thumbnail.
 
@@ -234,11 +234,11 @@ rendered="#{not empty currentDocument.files.files}">
 
 ```
 
-This gives you get URLs of the form:
+This gives you the URLs of the form:
 
 ```
-http://localhost:8080/nuxeo/nxfile/default/8f5aca13-e9d9-4b7b-a1d9-a1dcd74cc709/blobholder:0/mainfile.jpg
-http://localhost:8080/nuxeo/nxfile/default/47ad14f2-c7a6-4a3f-8e4b-6c2cf1458f5a/files:files/0/file/firstfile.jpg
+http://NUXEO_SERVER/nuxeo/nxfile/default/8f5aca13-e9d9-4b7b-a1d9-a1dcd74cc709/blobholder:0/mainfile.jpg
+http://NUXEO_SERVER/nuxeo/nxfile/default/47ad14f2-c7a6-4a3f-8e4b-6c2cf1458f5a/files:files/0/file/firstfile.jpg
 
 ```
 

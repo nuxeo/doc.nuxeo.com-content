@@ -111,7 +111,7 @@ Elasticsearch exposes a search API to request indexes with HTTP requests (see [E
 
 Concretely, HTTP requests are not sent to the Elasticsearch&nbsp;back end&nbsp;but addressed to the Nuxeo Platform which will rework the query to add a filter according to a Principal and forward them to the Elasticsearch cluster.
 
-The Nuxeo Elasticsearch passthrough is available at&nbsp;**<span class="nolink">http://my-nuxeo-server:8080/nuxeo/site/es</span>**<span class="nolink">.</span>
+The Nuxeo Elasticsearch passthrough is available at `http://NUXEO_SERVER/nuxeo/site/es`.
 
 ## <span class="nolink">Requirement</span>
 

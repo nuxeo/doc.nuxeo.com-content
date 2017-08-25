@@ -156,7 +156,7 @@ Please refer to the tag library documentation available at [http://community.nux
 
 You can also visit the [Layout Showcase](http://showcase.nuxeo.com/nuxeo/layoutDemo) to get a visual tour of the most common widget types.
 
-All widgets types available on your Nuxeo application are listed at [http://localhost:8080/nuxeo/site/layout-manager/widget-types](http://localhost:8080/nuxeo/site/layout-manager/widget-types).
+All widgets types available on your Nuxeo application are listed at `http://NUXEO_SERVER/nuxeo/site/layout-manager/widget-types`.
 
 Here is some documentation about the most common widget types that are used in the application:
 
