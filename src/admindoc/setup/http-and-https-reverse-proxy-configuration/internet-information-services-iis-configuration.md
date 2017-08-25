@@ -80,7 +80,7 @@ Requirements:
 2.  Download the [Nuxeo Windows distribution](http://community.nuxeo.com/static/releases/) (.exe).
 3.  [Install the Nuxeo Platform]({{page page='installing-the-nuxeo-platform-on-windows'}}).
 4.  [Start the Nuxeo instance]({{page page='server-start-and-stop#start-windows'}}).
-5.  Open the Browser from the Windows Server (firewalls must be enabled) at the address [localhost:8080/nuxeo](http://localhost:8080/nuxeo).
+5.  Open the Browser from the Windows Server (firewalls must be enabled) at the address `http://NUXEO_SERVER/nuxeo`.
 6.  [Configure the server]({{page page='setup#wizard'}}), but in General Settings, replace IP Address 0.0.0.0 by 127.0.0.1 to limit Tomcat to local answers.
 
 ### Enabling Web Server (IIS)

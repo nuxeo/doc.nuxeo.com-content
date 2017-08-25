@@ -248,7 +248,7 @@ This also means, most of the Shell commands are implemented as remote Automation
 
 {{#> callout type='info' heading='Downloads'}}
 
-The Nuxeo Shell is available at the Admin Center, in the "Monitoring" tab and also as a WebEngine site at [http://host:port/nuxeo/site/shell](http://hostport).
+The Nuxeo Shell is available at the Admin Center, in the "Monitoring" tab and also as a WebEngine site at [http://NUXEO_SERVER/nuxeo/site/shell](http://hostport).
 
 Nuxeo Shell can be installed in Eclipse adding the following repository: Nuxeo ECR - [http://osgi.nuxeo.org/p2/ecr/ide/](http://osgi.nuxeo.org/p2/ecr/ide/), then install "ECR Shell Feature".
 
@@ -413,7 +413,7 @@ To connect to a remote Nuxeo Server you must specify the Automation Service URL.
 This URL is in the form:
 
 ```
-http://host:port/nuxeo/site/automation
+http://NUXEO_SERVER/nuxeo/site/automation
 ```
 
 For example, in the case of a local server your URL will be:

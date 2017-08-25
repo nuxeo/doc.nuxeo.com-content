@@ -292,8 +292,8 @@ and combination would work.
 The enrichers can be called the same way by passing GET parameters.
 
 ```
-http://localhost:8080/nuxeo/site/api/v1/path/default-domain/workspaces?enrichers.document=enricher1,enricher2
-http://localhost:8080/nuxeo/site/api/v1/path/default-domain/workspaces?enrichers.document=enricher1&enrichers.document=enricher2
+http://NUXEO_SERVER/nuxeo/site/api/v1/path/default-domain/workspaces?enrichers.document=enricher1,enricher2
+http://NUXEO_SERVER/nuxeo/site/api/v1/path/default-domain/workspaces?enrichers.document=enricher1&enrichers.document=enricher2
 ```
 
 ## Default Content Enrichers

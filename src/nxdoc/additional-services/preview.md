@@ -142,11 +142,11 @@ When previewing a document, the logic executed goes through several layers (from
 *   **A preview Restlet**, that is in charge of handling caching logic when delivering the HTML preview for a given document. The Restlet URL follows the pattern below:
 
     ```
-    http://{server}:{port}/nuxeo/restAPI/preview/{server_name}/{document_uuid}/{previewfield}/
+    http://NUXEO_SERVER/nuxeo/restAPI/preview/{server_name}/{document_uuid}/{previewfield}/
 
     ```
 
-    An example could be  [`http://localhost:8080/nuxeo/restAPI/preview/default/cf5d81c5-e880-4f8a-9520-bf63e670260e/file:content/`](http://localhost:8080/nuxeo/restAPI/preview/default/cf5d81c5-e880-4f8a-9520-bf63e670260e/file:content/) .
+    An example could be  `http://localhost:8080/nuxeo/restAPI/preview/default/cf5d81c5-e880-4f8a-9520-bf63e670260e/file:content/`.
 
     It gets the HTLM preview by getting the `HtmlPreviewAdapter` from the documentModel.
 

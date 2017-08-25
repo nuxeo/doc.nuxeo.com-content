@@ -215,13 +215,13 @@ See [GitHub Readme](https://github.com/nuxeo/nuxeo-salesforce) for the Dev proje
     ```
     ID=salesforce
     CliendID=YOUR_SALESFORCE_CONSUMER_KEY
-    User Authorization URL=https://NUXEO_URL/nuxeo/picker/callback/callback.html
+    User Authorization URL=https://NUXEO_SERVER/nuxeo/picker/callback/callback.html
     ```
 
 3.  Set up your browser to access Nuxeo for Salesforce from within Salesforce.
     If you're using Firefox browser, you don't need to configure it. However with Chrome, here are the guidelines to allow the access:
     1.  Authorize `Popups` from Salesforce (to allow OAuth execution).
-    2.  Go to [`https://NUXEO_URL:8443/nuxeo`](https://NUXEO_URL:8443/nuxeo) and allow Chrome to access in HTTPS your Nuxeo server.
+    2.  Go to `https://NUXEO_SERVER/nuxeo` and allow Chrome to access in HTTPS your Nuxeo server.
 
 ### Salesforce Configuration
 
@@ -234,9 +234,9 @@ You can also set it up directly from your Salesforce dashboard. Note that these 
 3.  Go to **Build**&nbsp;> **Create**&nbsp;> **Apps**.
 4.  Click the **New** button under **Connected Apps** named `Nuxeo` (it MUST be named "Nuxeo"):
 
-    1.  Enable OAuth settings and set the callback URL: `https://NUXEO_URL/nuxeo/picker/callback/callback.html`
+    1.  Enable OAuth settings and set the callback URL: `https://NUXEO_SERVER/nuxeo/picker/callback/callback.html`
     2.  Add all available Scopes.
-    3.  Enable Force.com Canvas and set the App URL `https://NUXEO_URL/nuxeo/picker`.
+    3.  Enable Force.com Canvas and set the App URL `https://NUXEO_SERVER/nuxeo/picker`.
     4.  Select **OAuth Webflow** for **Access Method**.
     5.  Configure **Canvas App locations** and add **Layouts and Mobile Cards**.
 5.  Save the "Nuxeo" Connected App.

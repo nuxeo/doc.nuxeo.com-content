@@ -311,7 +311,7 @@ Google Drive documents can be searched in the Nuxeo Platform like any other docu
 
     1.  Choose **Web Application**.
     2.  For **Authorized JavaScript origins** set the URL of your server. Ex: [http://localhost:8080](http://localhost:8080/)
-    3.  For **Authorized redirect URIs** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/googledrive/callback](http://localhost:8080/nuxeo/site/oauth2/googledrive/callback)
+    3.  For **Authorized redirect URIs** set the following URL, adapting the hostname and port to your case: `http://NUXEO_SERVER/nuxeo/site/oauth2/googledrive/callback`
 
 The console redirects you to a page where you can see the client id and secret id values. You will need them in the next steps.
 
@@ -360,7 +360,7 @@ Dropbox documents can be searched in the Nuxeo Platform like any other document:
 6.  Enter the name of your application.
 7.  Click on the button **Create app**.
 8.  From the **Settings** tab, copy the App key and App secret.
-9.  In the **OAuth 2** > **Redirect URIs** set the following URL, adapting the hostname and port to your case: [http://localhost:8080/nuxeo/site/oauth2/dropbox/callback](http://localhost:8080/nuxeo/site/oauth2/dropbox/callback).
+9.  In the **OAuth 2** > **Redirect URIs** set the following URL, adapting the hostname and port to your case: `http://NUXEO_SERVER/nuxeo/site/oauth2/dropbox/callback`.
 10.  In **Drop-ins domains** set the domain name of your site.
 
 {{#> callout type='info' }}
@@ -412,7 +412,7 @@ Box documents can be searched in the Nuxeo Platform like any other document: the
 2.  Click on **Create a Box Application**.
 3.  Enter the name of your application and select **Box Content**.
 4.  Click on **Configure your application**.
-5.  In **redirect_uri** set the following URL, adapting the hostname and port to your case: [https://localhost:8080/nuxeo/site/oauth2/box/callback](https://localhost:8080/nuxeo/site/oauth2/box/callback).
+5.  In **redirect_uri** set the following URL, adapting the hostname and port to your case: `http://NUXEO_SERVER/nuxeo/site/oauth2/box/callback`.
 6.  Copy the client_id and client_secret.
 7.  Click on button **Save Application**.
 

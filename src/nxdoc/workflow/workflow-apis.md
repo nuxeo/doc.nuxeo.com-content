@@ -126,7 +126,7 @@ The framework provides a few interesting Automation operation, in the category "
 Since 7.2, the framework provides a new REST API to initiate and run worflows. Endpoints documentation is available on:
 
 *   the [API Playground](http://nuxeo.github.io/api-playground/) (see this [documentation]({{page version='710' space='nxdoc' page='use-nuxeo-api-playground-to-discover-the-api'}}) to add the needed contribution to be able to browse your local instance)
-*   the REST API explorer of your instance at [http://localhost:8080/nuxeo/api/v1/doc](http://localhost:8080/nuxeo/api/v1/doc)
+*   the REST API explorer of your instance at `http://NUXEO_SERVER/nuxeo/api/v1/doc`
 
 A client sample [nuxeo-travel-expenses](https://github.com/nuxeo/nuxeo-travel-expenses) (available on [GitHub](https://github.com/nuxeo/nuxeo-travel-expenses)) based on Web Components and [Polymer framework](https://www.polymer-project.org) demonstrates how to use the workflow REST API.
 
