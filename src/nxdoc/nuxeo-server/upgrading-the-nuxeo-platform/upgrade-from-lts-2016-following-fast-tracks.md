@@ -275,7 +275,7 @@ See [NXP-21676](https://jira.nuxeo.com/browse/NXP-21676).
 
 {{! multiexcerpt name='upgrade-9.2-drop-change-token'}}
 
-With VCS, delete the column `hierarchy.changetoken` in order to let it recreated with the correct type. For instance: `ALTER TABLE hierarchy DROP COLUMN changetoken`. See [NXP-22259](https://jira.nuxeo.com/browse/NXP-22259).
+With VCS, delete the column `hierarchy.changetoken` so that it is regenerated with the correct type. For instance: `ALTER TABLE hierarchy DROP COLUMN changetoken`. See [NXP-22259](https://jira.nuxeo.com/browse/NXP-22259).
 
 {{! /multiexcerpt}}
 
