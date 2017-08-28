@@ -19,6 +19,12 @@ Discover which changes we brought in our recent Nuxeo Studio updates.
 {{{multiexcerpt 'summary-v66' page='2017-08-08-studio-66'}}}
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;[Learn more]({{page page='2017-08-08-studio-66'}})
 
+## Bug Notices
+
+### August 29, 2017
+{{{multiexcerpt 'summary-v68-1' page='2017-08-29-studio-68-1'}}}
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;[Learn more]({{page page='2017-08-29-studio-68-1'}})
+
 {{! multiexcerpt name='studio-feedback'}}
 
 ## We Want Your Feedback!
