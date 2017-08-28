@@ -20,57 +20,57 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/WgFFAQ'
     source_link: /display/USERDOC60/Nuxeo+-+BIRT+Integration
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 15:23'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-09 16:29'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 11:43'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-29 09:57'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-28 14:20'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-19 17:22'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-19 15:46'
         message: 'Removed related topics from TOC, updated screenshots'
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-07 15:52'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-07 15:17'
         message: Fixed required module and capitalized titles
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-07 15:13'
         message: Add link to package on the Marketplace
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-18 10:50'
         message: ''
@@ -292,7 +292,7 @@ Unlike for notes and files (which are the most common default Nuxeo documents), 
 
 #### Generating a Report
 
-Generating a report means filling in the available parameters on the report's **Preview** tab with values meeting your criteria and getting the results. By default, the report is generated in HTML in the **Preview** tab of the report. However, you can also generate the report in PDF format from this URL: [`http://localhost:8080/nuxeo/site/reports/REPORT_KEY/pdf`](http://localhost:8080/nuxeo/site/reports/REPORT_KEY/pdf) . The `REPORT_KEY` can be found in the **Summary** tab of the report.
+Generating a report means filling in the available parameters on the report's **Preview** tab with values meeting your criteria and getting the results. By default, the report is generated in HTML in the **Preview** tab of the report. However, you can also generate the report in PDF format from this URL: `http://NUXEO_SERVER/nuxeo/site/reports/REPORT_KEY/pdf`. The `REPORT_KEY` can be found in the **Summary** tab of the report.
 
 {{#> callout type='tip' }}
 
@@ -300,7 +300,7 @@ Instead of the Report Key metadata, you can use the report ID. To know the ID of
 
 1.  Click on the icon ![]({{file name='share.png' page='icons-index'}}).
     A window pops up that displays the permalink to the report.
-2.  In the URL, copy the ID of the document, which is between `default/` and `/view_documents?`. In this example URL, the ID is in bold: "`http://localhost:8080/nuxeo/nxdoc/default/**e1f6d76f-405b-43d1-bb36-f7d8cd4068ba**/view_documents?tabId=&conversationId=0NXMAIN`".
+2.  In the URL, copy the ID of the document, which is between `default/` and `/view_documents?`. In this example URL, the ID is in bold: `http://NUXEO_SERVER/nuxeo/nxdoc/default/**e1f6d76f-405b-43d1-bb36-f7d8cd4068ba**/view_documents?tabId=&conversationId=0NXMAIN`.
 
 {{/callout}}
 

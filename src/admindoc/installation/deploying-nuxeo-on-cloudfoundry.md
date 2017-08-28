@@ -262,4 +262,4 @@ Before the above Tomcat 7 instance can be set up as a full &ldquo;standalone&rdq
 
 Once deployed and started, Nuxeo CoreServer does not provide a web-accessible graphical user interface (because the CoreServer version doesn't have those), but it can be addressed through a CMIS client like the Apache CMIS Workbench available at</a> [http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html](http://chemistry.apache.org/java/developing/tools/dev-tools-workbench.html) .
 
-It must point to Nuxeo, whose CMIS address is described by the Nuxeo startup page, usually it is of the form [http://localhost:8080/nuxeo/atom/cmis](http://localhost:8080/nuxeo/atom/cmis) . The default Nuxeo user/password is Administrator/Administrator.
+It must point to Nuxeo, whose CMIS address is described by the Nuxeo startup page, usually it is of the form `http://NUXEO_SERVER/nuxeo/atom/cmis`. The default Nuxeo user/password is Administrator/Administrator.

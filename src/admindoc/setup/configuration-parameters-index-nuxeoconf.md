@@ -1557,7 +1557,7 @@ Since Nuxeo 5.8\. Database timeout after which connections not in use are remove
 
 </td><td colspan="1">
 
-[http://localhost:8080/nuxeo](http://localhost:8080/nuxeo)
+`http://NUXEO_SERVER/nuxeo`
 
 </td><td colspan="1">
 
@@ -1569,7 +1569,7 @@ Application URL (without final slash), should be the public URL of your server (
 
 </td><td colspan="1">
 
-[http://localhost:8080/nuxeo](http://localhost:8080/nuxeo)
+`http://NUXEO_SERVER/nuxeo`
 
 </td><td colspan="1">
 

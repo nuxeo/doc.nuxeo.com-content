@@ -446,7 +446,7 @@ history:
 ---
 {{! excerpt}}
 
-Nuxeo REST API is available on a Nuxeo Platform server at the following URL:&nbsp;`http://localhost:8080/nuxeo/api/v1/*`. We made available an [API playground](http://nuxeo.github.io/api-playground/) to help you understand the endpoints and have a try:
+Nuxeo REST API is available on a Nuxeo Platform server at the following URL: `http://NUXEO_SERVER/nuxeo/api/v1/*`. We made available an [API playground](http://nuxeo.github.io/api-playground/) to help you understand the endpoints and have a try:
 
 [![]({{file name='Screen Shot 2014-07-03 at 01.22.40.png'}} ?w=500,h=257,border=true)](http://nuxeo.github.io/api-playground/#/)
 

@@ -63,7 +63,7 @@ Nuxeo allows you to register client, to specify an arbitrary name, a clientId an
 ### Requesting an Authorization Code
 
 ```
-GET https://<nuxeoserver>/oauth2/authorization
+GET https://NUXEO_SERVER/oauth2/authorization
 ```
 
 **Query parameters:**
@@ -130,7 +130,7 @@ string
 
 </td></tr></tbody></table></div>{{#> callout type='note' }}
 
-User authentication is handled by accessing to `https://<nuxeoserver>/nuxeo/oauth2Grant.jsp` which is behind the default [ `NuxeoAuthenticationFilter`]({{page page='authentication#nuxeoauthenticationfilter'}}). That lets you customize the way you want your users to identify themselves.
+User authentication is handled by accessing to `https://NUXEO_SERVER/nuxeo/oauth2Grant.jsp` which is behind the default [ `NuxeoAuthenticationFilter`]({{page page='authentication#nuxeoauthenticationfilter'}}). That lets you customize the way you want your users to identify themselves.
 
 {{/callout}}
 
@@ -139,7 +139,7 @@ User authentication is handled by accessing to `https://<nuxeoserver>/nuxeo/oaut
 ### Requesting an Access Token
 
 ```
-GET https://<nuxeoserver>/oauth2/token
+GET https://NUXEO_SERVER/oauth2/token
 ```
 
 **Query parameters:**
@@ -224,7 +224,7 @@ Pragma: no-cache
 ### Refreshing an Access Token
 
 ```
- GET https://<nuxeoserver>/oauth2/token
+ GET https://NUXEO_SERVER/oauth2/token
 ```
 
 **Query parameters:**
@@ -299,7 +299,7 @@ Pragma: no-cache
 Once you have a valid access token, you have to pass it in each requests as an Authorization header. Like below using curl:
 
 ```
-curl -H "Authorization: Bearer gsQwO6X4zdOOegaR1EZEpRNJ2LK6J8d6" http://<nuxeoserver>/nuxeo/nxdoc/default/d3db3184-c444-40a4-b838-dfde41ba06a4/view_documents
+curl -H "Authorization: Bearer gsQwO6X4zdOOegaR1EZEpRNJ2LK6J8d6" http://NUXEO_SERVER/nuxeo/nxdoc/default/d3db3184-c444-40a4-b838-dfde41ba06a4/view_documents
 ```
 
 * * *

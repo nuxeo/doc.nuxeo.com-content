@@ -212,7 +212,7 @@ Or you can use the following endpoint URL into your browser (Administrator role 
 {{#> panel type='code' heading='Type into your browser address'}}
 
 ```
-http://localhost:8080/nuxeo/site/automation/doc/toggleStackDisplay
+http://NUXEO_SERVER/nuxeo/site/automation/doc/toggleStackDisplay
 ```
 
 {{/panel}}

@@ -366,7 +366,7 @@ Now, you can try it on your server by deploying your changes on your Nuxeo Platf
 
 1.  In Eclipse, click on the **Refresh** button in the **Nuxeo Server** view (![]({{file name='refresh.gif'}})).
 
-2.  Go back in the browser, and refresh the [http://localhost:8080/nuxeo/site/test](http://localhost:8080/nuxeo/site/test) page.
+2.  Go back in the browser, and refresh the `http://NUXEO_SERVER/nuxeo/site/test` page.
 
 You should end up with something like this:
 

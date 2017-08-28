@@ -115,7 +115,7 @@ Installing the Nuxeo Platform using the [.zip package](http://www.nuxeo.com/down
 
 1.  Unzip the .zip archive using your favorite tool.
 2.  Click on the Start Nuxeo.command to start the server.
-3.  In a browser, go to [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo).
+3.  In a browser, go to `http://NUXEO_SERVER/nuxeo`.
 4.  Fill in the information in the configuration wizard steps.
 5.  At the Nuxeo Connect step, provide your Nuxeo Online Services credentials if you already have a Nuxeo Online Services account or register to the 30-day trial offer.
 
