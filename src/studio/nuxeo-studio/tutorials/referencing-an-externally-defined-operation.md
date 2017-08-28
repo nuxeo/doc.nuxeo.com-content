@@ -170,7 +170,7 @@ Basically, to enable a custom operation in your Studio project, you need to:
 
     {{/callout}} {{#> callout type='tip' }}
 
-    You can get the full JSON definition of your operation on the operation documentation, on your deployment. Go to the following URL: [`http://localhost:8080/nuxeo/site/automation/doc`](http://localhost:8080/nuxeo/site/automation/doc) . The served page builds dynamically the operations documentation. You will find your operation(s) there. Once on the documentation of the operation, in the "LINKS" section, click on the `JSON definition` link. Note that this link is not available on Nuxeo DM 5.3.2 and previous versions.
+    You can get the full JSON definition of your operation on the operation documentation, on your deployment. Go to the following URL: `http://NUXEO_SERVER/nuxeo/site/automation/doc`. The served page builds dynamically the operations documentation. You will find your operation(s) there. Once on the documentation of the operation, in the "LINKS" section, click on the `JSON definition` link. Note that this link is not available on Nuxeo DM 5.3.2 and previous versions.
 
     {{/callout}}
 4.  Once the JSON is ok, save and you are done!
