@@ -177,7 +177,7 @@ After you installed Nuxeo Drive, you need to start it manually and provide the a
     An authentication window pops up.
     ![]({{file name='drive-local-authentication.png'}} ?w=300,h=282,border=true)
 2.  Type the path where you want your Nuxeo Drive folder to be created.
-3.  Type the URL of your Nuxeo application, with the `/nuxeo/` suffix ( [`http://www.mynuxeoapp.com/nuxeo`](http://www.mynuxeoapp.com/nuxeo) for instance), your username and your password.
+3.  Type the URL of your Nuxeo application, with the `/nuxeo/` suffix (`http://NUXEO_SERVER/nuxeo` for instance), your username and your password.
 4.  Click on **OK**.
     Nuxeo Drive immediately starts synchronizing the Nuxeo workspaces or folders you [indicated as synchronized](#synchronizing-workspaces-root) in the Nuxeo Platform. It will automatically update content when there is a modification on the server.
     In the Nuxeo Drive tab in your Home, an authentication token corresponding to the computer you are synchronizing from is displayed. The list of synchronized folders is displayed in the **Synchronization roots** section of the tab.

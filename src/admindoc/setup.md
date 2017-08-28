@@ -374,7 +374,7 @@ The Nuxeo Platform provides you with easy access to the configuration of your Nu
 
 ## Initial Setup of the Nuxeo Platform with the Startup Wizard&nbsp;{{> anchor 'wizard'}}
 
-The first time you start the Nuxeo Platform and go the URL [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo), a Startup Wizard will guide you to the main configuration steps and enable you to choose which add-ons you want to enable on the Platform. For each step, a default setting is proposed that enables you to test the application. You can change this default configuration to adapt it to specific environments.
+The first time you start the Nuxeo Platform and go the URL `http://NUXEO_SERVER/nuxeo`, a Startup Wizard will guide you to the main configuration steps and enable you to choose which add-ons you want to enable on the Platform. For each step, a default setting is proposed that enables you to test the application. You can change this default configuration to adapt it to specific environments.
 
 The settings defined during the initial setup can be changed afterward [using the Admin tab](#setup-admincenter) or by [editing Nuxeo's configuration file]({{page page='configuration-parameters-index-nuxeoconf'}}) manually. Add-ons can also be added or removed afterwards from the Admin tab.
 

@@ -131,9 +131,9 @@ The Nuxeo Platform exposes counters, probes and stopwatch via [nuxeo-runtime-man
 
 The Nuxeo Platform provides an URL for monitoring the server status. This method is actually also used by the Launcher to follow the server startup status, after checking the Java process status.
 
-*   [http://localhost:8080/nuxeo/runningstatus](http://localhost:8080/nuxeo/runningstatus) will be available at last. While it isn't reachable, the server is stopped or still starting.
-*   [http://localhost:8080/nuxeo/runningstatus?info=started](http://localhost:8080/nuxeo/runningstatus?info=started) returns `true` if the server finished starting and the Nuxeo runtime is fine with its components.
-*   [http://localhost:8080/nuxeo/runningstatus?info=summary&key=xxx](http://localhost:8080/nuxeo/runningstatus?info=summary&key=xxx) returns `true` or `false` (see "info=started") and a detailed summary about components. Access to this URL is restricted by an access key configurable in `nuxeo.conf` (see `"server.status.key"` in [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})).
+*   `http://NUXEO_SERVER/nuxeo/runningstatus` will be available at last. While it isn't reachable, the server is stopped or still starting.
+*   `http://NUXEO_SERVER/nuxeo/runningstatus?info=started` returns `true` if the server finished starting and the Nuxeo runtime is fine with its components.
+*   `http://NUXEO_SERVER/nuxeo/runningstatus?info=summary&key=xxx` returns `true` or `false` (see "info=started") and a detailed summary about components. Access to this URL is restricted by an access key configurable in `nuxeo.conf` (see `"server.status.key"` in [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})).
 
 {{#> panel type='code' heading='Sample output if something was wrong at startup (for instance, missing RelationService)'}}
 

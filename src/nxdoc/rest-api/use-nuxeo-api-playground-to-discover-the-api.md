@@ -183,7 +183,7 @@ We made an API Playground available that offers an interactive way to discover t
 
 ## Functional Overview
 
-Nuxeo API Playground can be used online at [http://nuxeo.github.io/api-playground/](http://nuxeo.github.io/api-playground/) or locally at [http://localhost:8080/nuxeo/playground](http://localhost:8080/nuxeo/playground.) after you install the Nuxeo Package on your server (see the [Installation and Configuration](#install-config) section).
+Nuxeo API Playground can be used online at [http://nuxeo.github.io/api-playground/](http://nuxeo.github.io/api-playground/) or locally at `http://NUXEO_SERVER/nuxeo/playground` after you install the Nuxeo Package on your server (see the [Installation and Configuration](#install-config) section).
 
 Note that the online version proposes to connect the API Playground to our demo.nuxeo.com instance by default, but you can use it with your own Nuxeo server.
 
@@ -304,7 +304,7 @@ Because the Nuxeo API Playground currently uses the old API, you need to some co
 
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
-After you installed the Nuxeo Package, go to `http://localhost:8080/nuxeo/playground` to use the API Playground. Note that it suggest to log in to the public website demo.nuxeo.com by default. Make sure you change the URL to use your server's (`http://localhost:8080/nuxeo/` by default).
+After you installed the Nuxeo Package, go to `http://NUXEO_SERVER/nuxeo/playground` to use the API Playground. Note that it suggest to log in to the public website demo.nuxeo.com by default. Make sure you change the URL to use your server's (`http://NUXEO_SERVER/nuxeo` by default).
 
 ### {{> anchor 'enable-batch-upload'}}Enabling Batch Upload
 

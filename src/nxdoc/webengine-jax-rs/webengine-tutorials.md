@@ -18,102 +18,102 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/H4BVAQ'
     source_link: /display/NXDOC60/WebEngine+Tutorials
 history:
-    - 
+    -
         author: Anonymous
         date: '2014-08-25 14:02'
         message: emove 5.4 referenc
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 17:06'
         message: Migrated to Confluence 4.0
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 17:06'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-05-17 10:13'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-05-16 17:53'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-05-16 17:51'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-05-16 17:40'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2011-01-08 12:39'
         message: ''
         version: '13'
-    - 
+    -
         author: Julien Carsique
         date: '2010-11-16 16:44'
         message: 'Updating the WebEngine sample paths '
         version: '12'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2010-10-22 19:00'
         message: 'Updating the WebEngine sample paths '
         version: '11'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 12:22'
         message: ''
         version: '10'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 12:21'
         message: ''
         version: '9'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 12:19'
         message: ''
         version: '8'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 12:18'
         message: ''
         version: '7'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:40'
         message: ''
         version: '6'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:35'
         message: ''
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:32'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:31'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 15:35'
         message: ''
@@ -132,28 +132,28 @@ You should download the binaries and sources (https://maven.nuxeo.org/nexus/inde
 
 This tutorial demonstrates how to handle requests. This is the simplest object. It requires only one java class which represents the Resource (the entry point).
 
-You can access the tutorial sample at:&nbsp; [http://localhost:8080/nuxeo/site/samples/hello](http://localhost:8080/nuxeo/site/samples/hello)
+You can access the tutorial sample at:&nbsp; `http://NUXEO_SERVER/nuxeo/site/samples/hello`
 
 ##### [Tutorial 2]({{page page='using-freemarker-template-language-ftl'}}) - Using Templates
 
 This tutorial demonstrates how to use templates to render dynamic content.
 
-You can access the tutorial sample at: [http://localhost:8080/nuxeo/site/samples/templating](http://localhost:8080/nuxeo/site/samples/templating)
+You can access the tutorial sample at: `http://NUXEO_SERVER/nuxeo/site/samples/templating`
 
 ##### [Tutorial 3]({{page page='web-object-model'}}) - Web Object Model
 
 This tutorial demonstrates the basics of the WebEngine Object Model. You can see how to create new Module Resources, Object Resources, Adapter Resources and views.
 
-You can access the tutorial sample at: [http://localhost:8080/nuxeo/site/samples/basics](http://localhost:8080/nuxeo/site/samples/basics)
+You can access the tutorial sample at: `http://NUXEO_SERVER/nuxeo/site/samples/basics`
 
 ##### [Tutorial 4]({{page page='working-with-documents'}}) - Working with Documents
 
 This tutorial demonstrates how to access Nuxeo Platform Documents through WebEngine.
-You can access the tutorial sample at: [http://localhost:8080/nuxeo/site/samples/documents](http://localhost:8080/nuxeo/site/samples/documents)
+You can access the tutorial sample at: `http://NUXEO_SERVER/nuxeo/site/samples/documents`
 
 ##### [Tutorial 5]({{page page='module-extensibility'}}) - Module Extensibility
 
 This tutorial demonstrates how modules can be extended and how the links you are using in your templates can
 be managed to create easy to maintain and modular applications.
 
-You can access the tutorial sample at: [http://localhost:8080/nuxeo/site/samples/extended](http://localhost:8080/nuxeo/site/samples/extended)
+You can access the tutorial sample at: `http://NUXEO_SERVER/nuxeo/site/samples/extended`

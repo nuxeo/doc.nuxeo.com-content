@@ -363,7 +363,7 @@ By default all the chains and operations that are not UI related are accessible 
 
 ### Example - Getting the Automation Service.
 
-Let say the service is bound to [http://localhost:8080/nuxeo/site/automation](http://localhost:8080/nuxeo/site/automation). Then to get the service description you should do:
+Let say the service is bound to `http://NUXEO_SERVER/nuxeo/site/automation`. Then to get the service description you should do:
 
 ```
 GET http://localhost:8080/nuxeo/site/automation
@@ -422,11 +422,11 @@ You can see the automation service is returning the registry of operations and c
 
 Each operation and chain signature is fully described to be able to do operation validation on client side, for instance. Also some additional information that can be used in an UI is provided (operation label, full description, operation category etc.).
 
-The `url` property of an operation (or automation chain) is the relative path to use to execute the operation. For example if the service URL is `http://localhost:8080/nuxeo/site/automation` and the `Blob.Attach` operation has the `url` `Blob.Attach` then the full URL to that operation will be: `http://localhost:8080/nuxeo/site/automation/Blob.Attach`.
+The `url` property of an operation (or automation chain) is the relative path to use to execute the operation. For example if the service URL is `http://NUXEO_SERVER/nuxeo/site/automation` and the `Blob.Attach` operation has the `url` `Blob.Attach` then the full URL to that operation will be: `http://NUXEO_SERVER/nuxeo/site/automation/Blob.Attach`.
 
 The `paths` property is used to specify various relative paths (relative to the automation service) of services exposed by the automation server. In the above example you can see that the "login" service is using the relative path "login".
 
-This service can be used to sign-in and check if the username/password is valid. To use this service you should do a POST to the login URL (e.g. `http://localhost:8080/nuxeo/site/automation/login`) using basic authentication. If authentication fails you will receive a 401 HTTP response. Otherwise the 200 code is returned.
+This service can be used to sign-in and check if the username/password is valid. To use this service you should do a POST to the login URL (e.g. `http://NUXEO_SERVER/nuxeo/site/automation/login`) using basic authentication. If authentication fails you will receive a 401 HTTP response. Otherwise the 200 code is returned.
 
 The login service can be used to do (and check) a user login. Note that `WWW-Authenticate` server response is not yet implemented so you need to send the basic authentication header in each call if you are not using cookies (in that case you only need once to authenticate - for example using the login service).
 
