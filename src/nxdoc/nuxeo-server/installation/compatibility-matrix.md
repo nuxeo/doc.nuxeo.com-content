@@ -166,12 +166,16 @@ More information can be found on the [Nuxeo and Redis]({{page page='nuxeo-and-re
 <tbody>
 <tr>
 <th colspan="1">Nuxeo Platform Version:</th>
+<th colspan="1">9.2</th>
 <th colspan="1">9.1</th>
 <th colspan="1">LTS 2016</th>
 <th colspan="1">LTS 2015</th>
 <th colspan="1">6.0</th>
 </tr>
 <tr><th colspan="1">Elasticsearch</th>
+<td colspan="1">
+Library: 2.3.5<br />
+Cluster: 2.3.x to 2.4.x</td>
 <td colspan="1">
 Library: 2.3.5<br />
 Cluster: 2.3.x to 2.4.x</td>
