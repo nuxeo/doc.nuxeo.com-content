@@ -362,6 +362,10 @@ NUXRequest *request = [session requestQuery:@"select * from Document where ecm:m
 
 The goal of a `nodeBlock` is to return an array of documents that you want to get as the content of a node. Note that `nodeBlock` is executed in a separate thread, so if you want to get documents from a request, you have to start it **synchronously**.
 
+{{#> callout type='tip' }}
+While you are online, the same block is called each time you get content.
+{{/callout}}
+
 ### Blob LRU cache
 
 We provide a LRU cache to easily store your blob with an API-oriented `NUXEntity` or digest. You can change the maximum size and maximum items in cache. Size is defined in bytes.
