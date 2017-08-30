@@ -168,8 +168,8 @@ The generic properties for all directories are:
 *   `readOnly`: If the directory should be read-only. (Default is `false`.)
 *   `substringMatchType`: How a non-exact match is done; possible values are `subany`, `subinitial` or `subfinal`; this is used in most UI searches. (Default is `subinitial`.)
 *   `table`: The table in which the data are stored. (SQL only, defaults to the directory name.)
-*   `reference`: The definition of a reference to an other directory.
-*   `inverseReference`: The definition of an inverse reference to an other directory.
+*   `reference`: The definition of a reference to another directory.
+*   `inverseReference`: The definition of an inverse reference to another directory.
 
 The following control how data are initially loaded into the directory:
 
@@ -454,11 +454,11 @@ This code is part of [nuxeo-directory-addons](https://github.com/nuxeo/nuxeo-dir
 
 ## References Between Directories
 
-### Generic directory references
+### Generic Directory References
 
 References between directories can be defined at the generic directory level so it can be used whatever implementation had been chosen for directories. This definition is an abstraction of the specific `tableReference` for SQL and `ldapReference` for LDAP.
 
-Example :
+Example:
 
 ```html/xml
 <extension target="org.nuxeo.ecm.directory.GenericDirectory"
@@ -479,7 +479,7 @@ Example :
 ```
 
 
-### LDAP directory references
+### LDAP Directory References
 
 Directory references leverage two common ways of string relationship in LDAP directories.
 
