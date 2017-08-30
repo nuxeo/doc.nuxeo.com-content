@@ -168,6 +168,8 @@ The generic properties for all directories are:
 *   `readOnly`: If the directory should be read-only. (Default is `false`.)
 *   `substringMatchType`: How a non-exact match is done; possible values are `subany`, `subinitial` or `subfinal`; this is used in most UI searches. (Default is `subinitial`.)
 *   `table`: The table in which the data are stored. (SQL only, defaults to the directory name.)
+*   `reference`: The definition of a reference to an other directory.
+*   `inverseReference`: The definition of an inverse reference to an other directory.
 
 The following control how data are initially loaded into the directory:
 
@@ -452,9 +454,36 @@ This code is part of [nuxeo-directory-addons](https://github.com/nuxeo/nuxeo-dir
 
 ## References Between Directories
 
+### Generic directory references
+
+References between directories can be defined at the generic directory level so it can be used whatever implementation had been chosen for directories. This definition is an abstraction of the specific `tableReference` for SQL and `ldapReference` for LDAP.
+
+Example :
+
+```html/xml
+<extension target="org.nuxeo.ecm.directory.GenericDirectory"
+    point="directories">
+  <directory name="userDirectory" extends="template-directory">
+    <schema>users</schema>
+    <idField>username</idField>
+    <passwordField>password</passwordField>
+    ...
+    <references>
+      <reference field="groups" directory="groupDirectory"
+                 name="user2group" source="userId"
+                 target="groupId" dataFile="user2group.csv"/>
+    </references>
+    ...
+  </directory>
+</extension>
+```
+
+
+### LDAP directory references
+
 Directory references leverage two common ways of string relationship in LDAP directories.
 
-### Static Reference as a DN-Valued LDAP Attribute
+#### Static Reference as a DN-Valued LDAP Attribute
 
 The static reference strategy is to apply when a multi-valued attribute stores the exhaustive list of distinguished names of reference entries, for example the uniqueMember of the `groupOfUniqueNames` object.
 
@@ -466,7 +495,7 @@ The static reference strategy is to apply when a multi-valued attribute stores t
 
 The `staticAttributeId` attribute contains directly the value which can be read and manipulated.
 
-### Dynamic Reference as a ldapUrl-Valued LDAP Attribute
+#### Dynamic Reference as a ldapUrl-Valued LDAP Attribute
 
 The dynamic attribute strategy is used when a potentially multi-value attribute stores a LDAP URL intensively, for example the `memberURL`'s attribute of the `groupOfURL` object class.
 
@@ -479,7 +508,7 @@ The dynamic attribute strategy is used when a potentially multi-value attribute 
 
 The value contained in `dynamicAttributeId` looks like `ldap:///ou=groups,dc=example,dc=com??subtree?(cn=sub*)` and will be resolved by dynamical queries to get all values. The `forceDnConsistencyCheck` attribute will check that the value got through the dynamic resolution correspond to the attended format. Otherwise, the value will be ignored. Use this check when you are not sure of the validity of the distinguished name.
 
-### LDAP Tree Reference
+#### LDAP Tree Reference
 
 The LDAP tree reference can be used to resolve children in the LDAP tree hierarchy.
 
