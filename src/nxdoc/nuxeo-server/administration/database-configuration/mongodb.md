@@ -259,7 +259,7 @@ Then restart the server and recreate users.
 
 To activate MongoDB document storage, add the `mongodb` template to your existing list of templates (`nuxeo.templates`) in `nuxeo.conf`.
 
-If you also want to activate audit and directories storage, you need to install the [MongoDB extension addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mongodb-ext). This addon includes `mongodb-audit` and `mongodb-directory` templates in order to store respectively audit or directories data into MongoDB. For example :
+If you also want to activate audit and directories storage, you need to install the [MongoDB extension addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mongodb-ext). This addon includes `mongodb-audit` and `mongodb-directory` templates in order to store respectively audit or directories data in MongoDB. For example:
  
  ```text
  nuxeo.templates=default,mongodb,mongodb-audit,mongodb-directory
