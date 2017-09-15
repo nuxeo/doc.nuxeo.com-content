@@ -56,31 +56,37 @@ history:
         version: '1'
 
 ---
-Some features in Nuxeo products you will configure with Studio are restricted to very specific groups or users. To make sure that users are not blocked by a missing group that the functional administrators would have forgotten to create, Studio enables you to configure users and groups that will automatically be created by the system.
-The "members" and "administrators" groups are typically groups created by the system and used for default permissions, for instance. This feature is also very useful when you want to prepare a demo and be sure that you just need to deploy your plugin to have everything ready.
+Some features in Nuxeo Platform are restricted to very specific groups or users and will need to be configured through Nuxeo Studio. To make sure that users are not blocked by a missing group that the functional administrators would have forgotten to create, Studio enables you to configure users and groups that will automatically be created by the system.
+The "members" and "administrators" groups are groups created by the system and used for default permissions, for instance. This feature is also very useful when you want to prepare a demo and be sure that you just need to deploy your plugin to have everything ready.
 
 The steps to add a new user or a new group are basically the same.
 
+**To add a user or group:**
 
-{{#> panel heading='To add a user or group:'}}
 1. In the left menu, click **Roles and Permissions** and **Users & Groups**.
-<ul>
-<li>If users and groups have already been created, the Users tab is displayed with already existing users listed. Jump to step 3 to add new users.</li>
-<li>If users and groups haven't been defined yet, a **Create** button is displayed. Continue to step 2 to create  default users and groups.</li>
-</ul>
-2. If no user and group have been defined, click on the **Create** button.
+
+  1. If users and groups have already been created, The list of already existing users is displayed. Jump to step 3 to add new users.
+
+  1. If users and groups haven't been defined yet, a **Create** button is displayed. Continue to step 2 to create default users and groups.
+
+1. If no user and group have been defined, click on the **Create** button.
     The "Administrator" user and the groups "members" and "administrators" are automatically created by the system. You can now add new default users and groups.
-3. In the Users or Groups tab, click the **Add** button.
-4. In the window that pops up, type the new user's or group's name. ![]({{file name='STUDIO-UsersGroups.png'}} ?w=600)
-5. Edit the user's or group properties (see below for more details).
-6. Click **Save**. {{#> callout type='note' }}
+
+1. In the Users or Groups tab, click the **Add** button.
+
+1. In the window that pops up, type the new user's or group's name.
+    ![]({{file name='STUDIO-UsersGroups.png'}} ?w=600)
+
+1. Edit the user's or group properties (see below for more details).
+
+1. Click **Save**.
+    {{#> callout type='note' }}
     When you deploy your customizations, you will need to empty your database to enable the creation of these users and groups. Until you do so, you will only have the users and groups of a default Nuxeo application.
     {{/callout}}
+
     {{#> callout type='warning' }}
     If you choose a Creation Policy of "Always", then at each reload or restart the Studio-defined users and groups will **completely replace** anything you may have changed from Nuxeo. Any updates, additions or removals done from Nuxeo will be lost.
     {{/callout}}
-{{/panel}}
-
 
 **Users properties**
 
@@ -146,7 +152,7 @@ Groups
 
 </td><td colspan="1">
 
-Use the > and < arrows to add or remove the user from one of the predefined groups.
+Use the `>` and `<` arrows to add or remove the user from one of the predefined groups.
 
 </td></tr></tbody></table></div>
 
@@ -182,6 +188,6 @@ Users
 
 </td><td colspan="1">
 
-Use the > and < arrows to add or remove predefined users from the group by default.
+Use the `>` and `<` arrows to add or remove predefined users from the group by default.
 
 </td></tr></tbody></table></div>
