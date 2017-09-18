@@ -95,9 +95,9 @@ User actions are meant to execute a predefined action or list of actions (namely
 
 ![]({{file name='creating-user-action-form.png'}} ?w=300,h=293,border=true)
 
-*   **`Feature ID`** : the unique id of the user action.
-*   `**Label**` : the name that will be displayed on screen.
-*   `**Category**` : defines where the action will be placed on screen. Note that certain categories only appear in specific screens; for instance the "Document creation form" category will only be visible on document creation.
+*   **`Feature ID`**: the unique id of the user action.
+*   **`Label`**: the name that will be displayed on screen.
+*   **`Category`**: defines where the action will be placed on screen. Note that certain categories only appear in specific screens; for instance the "Document creation form" category will only be visible on document creation.
 
 ## Editing a User Action
 
@@ -105,8 +105,8 @@ User actions are meant to execute a predefined action or list of actions (namely
 
 ![]({{file name='action-definition.png'}} ?w=300,h=147,border=true)
 
-*   `**Order**` : set a higher value to move the action further to the right. Default actions order starts at 10.
-*   **`Immediate`** : checking this box will cause the action to be executed without prior validation. It is usually preferable to leave it unchecked.
+*   **`Order`**: set a higher value to move the action further to the right. Default actions order starts at 10.
+*   **`Immediate`**: checking this box will cause the action to be executed without prior validation. It is usually preferable to leave it unchecked.
 
 ### Action Activation
 
@@ -116,7 +116,7 @@ See the [Filtering Options Reference Page]({{page page='filtering-options-refere
 
 ### Action Execution
 
-*   `**Select an existing operation**` : the selected automation chain will be executed when the user clicks on the action defined in the User Action definition section. The "Edit" button can be used in order to edit an existing automation chain, and the "Create" button to create a new automation chain that will be associated to this user action.
+*   **`Select an existing operation`**: the selected automation chain will be executed when the user clicks on the action defined in the User Action definition section. The "Edit" button can be used in order to edit an existing automation chain, and the "Create" button to create a new automation chain that will be associated to this user action.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in Studio documentation'}}
 
