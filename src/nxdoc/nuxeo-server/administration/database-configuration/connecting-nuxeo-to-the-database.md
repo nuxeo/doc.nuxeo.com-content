@@ -279,12 +279,12 @@ By default, the "default" template is enabled on your Nuxeo server (see the [Dat
 
     {{#> callout type='warning' heading='For Windows users'}}
 
-    &nbsp;Do not use Office writers, nor Notepad.
+    Do not use Office writers, nor Notepad.
 
     Wordpad is fine, Notepad+\+ and SciTE are good text editors, there are a lot of [other text editors](http://en.wikipedia.org/wiki/List_of_text_editors).
 
     {{/callout}}
-2.  If needed, uncomment or edit the `nuxeo.templates` parameter and replace `default` with the wanted database template's name (see below).
+2.  If needed, uncomment or edit the `nuxeo.templates` parameter and replace `default` with the wanted database template's name (see [Database Templates section](#database-templates)).
 3.  Uncomment or edit the parameters below and provide their values:
     *   `nuxeo.db.name`
     *   `nuxeo.db.user`
@@ -304,11 +304,9 @@ These are the minimum required parameters to enable the Nuxeo server to communic
 
 The default available database templates are:
 
-*   [Default](#default)
-*   [PostgreSQL (recommended)](#postgresql)
-*   [Oracle](#oracle)
-*   [Microsoft SQL Server](#mssql)
-*   [MySQL](#mysql)
+{{multiexcerpt 'default-configuration-templates' page='configuration-templates'}}}
+
+The most commonly used templates are described below. For more information read the page [Configuration Templates]({{page version='810' space='nxdoc' page='configuration-templates'}}).
 
 ### {{> anchor 'default'}}Default
 
@@ -364,13 +362,9 @@ See the page [Microsoft SQL Server]({{page page='microsoft-sql-server'}}) for mo
 *   Repository backend: MySQL XA
 *   Services backend: MySQL XA
 
-The JDBC driver (dowloadable from [http://www.mysql.com/downloads/connector/j/](http://www.mysql.com/downloads/connector/j/)) is included in Nuxeo applications and is located in&nbsp;`$NUXEO/lib/`.
+The JDBC driver (dowloadable from [http://www.mysql.com/downloads/connector/j/](http://www.mysql.com/downloads/connector/j/)) is included in Nuxeo applications and is located in `$NUXEO/lib/`.
 
-We recommend using a near-infinite [wait_timeout](http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_wait_timeout) in the MySQL server configuration. See the page&nbsp;[MySQL]({{page page='mysql'}}) for more information on the database configuration.
-
-&nbsp;
-
-&nbsp;
+We recommend using a near-infinite [wait_timeout](http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_wait_timeout) in the MySQL server configuration. See the page [MySQL]({{page page='mysql'}}) for more information on the database configuration.
 
 * * *
 
@@ -383,8 +377,6 @@ We recommend using a near-infinite [wait_timeout](http://dev.mysql.com/doc/refma
 - [PostgreSQL]({{page page='postgresql'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 &nbsp;
 
