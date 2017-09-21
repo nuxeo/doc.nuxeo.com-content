@@ -17,7 +17,7 @@ This page covers the principles and components that can be included in a product
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Before Reading'}}
-This page introduces the principles and components of a Nuxeo cluster. If you are looking for architecture examples, please head to the [standard high availability Nuxeo cluster architecture]({{page page='nuxeo-architecture-introduction'}}) page instead.
+This page introduces the principles and components of a Nuxeo cluster. If you are looking for architecture examples, please head to the [standard high availability Nuxeo cluster architecture]({{page page='nuxeo-cluster-architecture-introduction'}}) page instead.
 {{/callout}}
 
 ## Cluster Basics
