@@ -262,7 +262,7 @@ By default, the "default" template is enabled on your Nuxeo server (see the [Dat
 
 1.  Open your `nuxeo.conf` file with a text editor.
     {{{multiexcerpt 'nuxeo-conf-editor-warning' page='Setup'}}}
-2.  If needed, uncomment or edit the `nuxeo.templates` parameter and replace `default` with the wanted database template's name (see below).
+2.  If needed, uncomment or edit the `nuxeo.templates` parameter and replace `default` with the wanted database template's name (see [Database Templates section](#database-templates)).
 3.  Uncomment or edit the parameters below and provide their values:
     *   `nuxeo.db.name`
     *   `nuxeo.db.user`
@@ -282,11 +282,9 @@ These are the minimum required parameters to enable the Nuxeo server to communic
 
 The default available database templates are:
 
-*   [undefined](#default)
-*   [postgresql (recommended)](#postgresql)
-*   [undefined](#oracle)
-*   [undefined](#mssql)
-*   [undefined](#mysql)
+{{{multiexcerpt 'default-configuration-templates' page='configuration-templates'}}}
+
+The most commonly used templates are described below. For more information read the page [Configuration Templates]({{page version='710' space='nxdoc' page='configuration-templates'}}).
 
 ### {{> anchor 'default'}}default
 
