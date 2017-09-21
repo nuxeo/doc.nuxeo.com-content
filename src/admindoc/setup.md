@@ -372,7 +372,7 @@ history:
 ---
 The Nuxeo Platform provides you with easy access to the configuration of your Nuxeo server, thanks to the Admin tab and the Startup Wizard. For advanced configuration or a simple review, manual edition of Nuxeo's configuration file, called `nuxeo.conf`, and a [template system]({{page page='configuration-templates'}}) is also available.
 
-## Initial Setup of the Nuxeo Platform with the Startup Wizard&nbsp;{{> anchor 'wizard'}}
+## Initial Setup of the Nuxeo Platform with the Startup Wizard {{> anchor 'wizard'}}
 
 The first time you start the Nuxeo Platform and go the URL `http://NUXEO_SERVER/nuxeo`, a Startup Wizard will guide you to the main configuration steps and enable you to choose which add-ons you want to enable on the Platform. For each step, a default setting is proposed that enables you to test the application. You can change this default configuration to adapt it to specific environments.
 
@@ -486,19 +486,18 @@ You can report to the [Configuration Parameters Index (nuxeo.conf)]({{page page=
 
 ## Manual Edition of Nuxeo Configuration File nuxeo.conf {{> anchor 'conf-manual-edition'}}
 
-By default, the `nuxeo.conf` file is located in `$NUXEO_HOME/bin`. If you installed your application using the Windows installer, the configuration is located in `%APPDATA%\Nuxeo\conf` (check the page&nbsp;[Where Are the Log and Configuration Files in Windows?]({{page page='where-are-the-log-and-configuration-files-in-windows'}}) for more information). If you plan to use the application in production, you should [move the configuration file outside the Nuxeo home directory]({{page page='recommended-configurations'}}), to make upgrades easier and more secured: your data and configuration won't risk to be overridden or lost.
+By default, the `nuxeo.conf` file is located in `$NUXEO_HOME/bin`. If you installed your application using the Windows installer, the configuration is located in `%APPDATA%\Nuxeo\conf` (check the page [Where Are the Log and Configuration Files in Windows?]({{page page='where-are-the-log-and-configuration-files-in-windows'}}) for more information). If you plan to use the application in production, you should [move the configuration file outside the Nuxeo home directory]({{page page='recommended-configurations'}}), to make upgrades easier and more secured: your data and configuration won't risk to be overridden or lost.
 
-{{! multiexcerpt name='nuxeo-conf-editor-warning'}} {{#> callout type='warning' heading='For Windows users'}}
+{{! multiexcerpt name='nuxeo-conf-editor-warning'}}
+{{#> callout type='warning' heading='For Windows users'}}
 
-&nbsp;Do not use Office writers, nor Notepad.
-
+Do not use Office writers, nor Notepad.
 Wordpad is fine, Notepad+\+ and SciTE are good text editors, there are a lot of [other text editors](http://en.wikipedia.org/wiki/List_of_text_editors).
 
-{{/callout}}{{! /multiexcerpt}}
+{{/callout}}
+{{! /multiexcerpt}}
 
 You can report to the [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}}) for the list of available paramaters.
-
-&nbsp;
 
 * * *
 
