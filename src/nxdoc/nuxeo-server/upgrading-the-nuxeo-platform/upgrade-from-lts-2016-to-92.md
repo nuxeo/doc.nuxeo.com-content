@@ -15,9 +15,7 @@ tree_item_index: 96
 
 ### Installation and Configuration
 
-* {{{multiexcerpt 'upgrade-9.1-reindex-warning' page='Upgrade from LTS 2016 following Fast Tracks'}}}
-
-* {{{multiexcerpt 'upgrade-9.2-drop-change-token' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-9.1-reindex-warning' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 #### Requirements
 

@@ -274,7 +274,7 @@ See [NXP-21676](https://jira.nuxeo.com/browse/NXP-21676).
 ### Installation and Configuration
 
 {{! multiexcerpt name='upgrade-9.2-drop-change-token'}}
-
+<!-- This paragraph is specific to the upgrade from 9.1 to 9.2. Do not report on page Upgrade from LTS 2016 to latest Fast Track.-->
 With VCS, delete the column `hierarchy.changetoken` so that it is regenerated with the correct type. For instance: `ALTER TABLE hierarchy DROP COLUMN changetoken`. See [NXP-22259](https://jira.nuxeo.com/browse/NXP-22259).
 
 {{! /multiexcerpt}}
