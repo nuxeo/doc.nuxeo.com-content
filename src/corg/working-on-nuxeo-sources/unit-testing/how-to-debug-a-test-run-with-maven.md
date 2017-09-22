@@ -144,17 +144,14 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' }}
 
-{{{multiexcerpt 'what-is-nuxeo-platform' page='NXDOC:Generic Multi-Excerpts'}}}
 
-{{/callout}}
+Due to different class loading rules and test order, test results might change if you run them inside Eclipse or with Maven. Note however that such cases raise an issue in the way the tests are written.
 
-Due to different class loading rules and tests ordering, results from test might change if you run them inside Eclipse or with Maven. Note however that such cases raise an issue in the way the tests are written and should encourage to rewrite them.
+### Using Eclipse to debug tests run with Maven
+To debug the `MySuperClassTest` class:
 
-Using Eclipse to debug tests run with Maven is easy. Say you want to debug the `MySuperClassTest` class:
-
-1.  Start the Maven test just for this class in debug mode:
+1.  Start the Maven test for this class only, in debug mode:
 
     ```
     mvn -Dtest=MySuperClassTest -Dmaven.surefire.debug test
@@ -163,8 +160,8 @@ Using Eclipse to debug tests run with Maven is easy. Say you want to debug the `
 
     The test will wait for Eclipse to connect.
 
-2.  Open the _Debug_ Configuration of Eclipse and set up a remote application on port 5005\. Run the configuration, the test will resume. You can use break points and all the usual features of Eclipse debugging.
+2.  Open the **Debug Configuration** in Eclipse and set up a remote application on port 5005\. Run the configuration. The test will resume. You can use break points and all the usual features of Eclipse debugging.
 
-More goodies and information are available on the [maven-surefire-plugin page](http://maven.apache.org/plugins/maven-surefire-plugin/index.html).
+More information is available on the [maven-surefire-plugin page](http://maven.apache.org/plugins/maven-surefire-plugin/index.html).
 
 &nbsp;
