@@ -204,7 +204,7 @@ history:
 ---
 ## Overview
 
-The Nuxeo Test Framework is based on JUnit4 and provides features like:
+The Nuxeo Test Framework is based on JUnit4 and provides features such as:
 
 *   Test configuration through annotations,
 *   Embedded Nuxeo Runtime,
@@ -212,13 +212,11 @@ The Nuxeo Test Framework is based on JUnit4 and provides features like:
 *   [Guice](http://code.google.com/p/google-guice/) injection of Nuxeo services and other configuration objects (injection is available only in test classes),
 *   High extensibility and test configuration re-usability.
 
-At the time of this writing, the test framework depends on JUnit 4.7, Guice 1.0 and WebDriver 0.9.7376.
+At the time of this writing, the test framework depends on JUnit 4.12, Guice 3.0 and WebDriver 0.6.
 
 To use the test framework you must launch your test using the Nuxeo JUnit4 runner: [`FeaturesRunner`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/FeaturesRunner.html) .
 
 Example:
-
-&nbsp;
 
 ```
 import org.nuxeo.runtime.test.runner.FeaturesRunner;
@@ -250,57 +248,53 @@ The [`org.nuxeo.runtime:nuxeo-runtime-test`](https://maven.nuxeo.org/nexus/index
 
 {{/panel}}
 
-If you want to use core features, then you need to put a dependency to [`org.nuxeo.ecm.core:nuxeo-core-test`](https://maven.nuxeo.org/nexus/index.html#nexus-search;gav%7Eorg.nuxeo.ecm.core%7Enuxeo-core-test%7E%7E%7E%7E) .
-If you want to use platform features, then you need [`org.nuxeo.ecm.platform:nuxeo-platform-test`](https://maven.nuxeo.org/nexus/index.html#nexus-search;gav%7Eorg.nuxeo.ecm.platform%7Enuxeo-platform-test%7E%7E%7E%7E) .
-And if you want all Nuxeo features, then you need [`org.nuxeo.ecm.platform:nuxeo-features-test`](https://maven.nuxeo.org/nexus/index.html#nexus-search;gav%7Eorg.nuxeo.ecm.platform%7Enuxeo-features-test%7E%7E%7E%7E) .
+Depending on which features you want to use, you can also add the following dependencies:
+* Core features: [`org.nuxeo.ecm.core:nuxeo-core-test`](https://maven.nuxeo.org/nexus/index.html#nexus-search;gav%7Eorg.nuxeo.ecm.core%7Enuxeo-core-test%7E%7E%7E%7E)
+* Platform features [`org.nuxeo.ecm.platform:nuxeo-platform-test`](https://maven.nuxeo.org/nexus/index.html#nexus-search;gav%7Eorg.nuxeo.ecm.platform%7Enuxeo-platform-test%7E%7E%7E%7E)
+* All Nuxeo features [`org.nuxeo.ecm.platform:nuxeo-features-test`](https://maven.nuxeo.org/nexus/index.html#nexus-search;gav%7Eorg.nuxeo.ecm.platform%7Enuxeo-features-test%7E%7E%7E%7E)
 
 ### Test Features
 
-To configure the way the tests are launched, the Nuxeo test framework is using the concept of test features. A test feature is a special class that is notified by the runner about the different lifecycle events of the execution so that it may customize the way the test is setup or test methods are run. Test features are configurable through annotations. Each test feature is able to use its own defined annotations to configure the test. Also a feature may provide additional objects to be injected in tests using Guice.
+The Nuxeo test framework uses special classes called test features to configure how tests are run. The test runner notifies the test feature of the different lifecycle events in the execution. The test setup or method is then customized accordingly. Test features are configurable through annotations and each test feature can use its own defined annotations to configure the test. A feature may provide additional objects to be injected in tests using Guice.
 
 Here are some commonly used features:
 
-*   [`org.nuxeo.runtime.test.runner.web.WebDriverFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/web/WebDriverFeature.html)
-*   [`org.nuxeo.runtime.test.runner.RuntimeFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/RuntimeFeature.html)
-*   [`org.nuxeo.runtime.test.runner.JettyFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/JettyFeature.html)
-*   [`org.nuxeo.ecm.core.test.CoreFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/test/CoreFeature.html)
-*   [`org.nuxeo.ecm.platform.test.PlatformFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/test/PlatformFeature.html)
-*   [`org.nuxeo.ecm.webengine.test.WebEngineFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/webengine/test/WebEngineFeature.html)
-*   [`org.nuxeo.runtime.test.runner.distrib.DistributionFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/distrib/DistributionFeature.html)
+[`org.nuxeo.runtime.test.runner.web.WebDriverFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/web/WebDriverFeature.html)
+[`org.nuxeo.runtime.test.runner.RuntimeFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/RuntimeFeature.html)
+[`org.nuxeo.runtime.test.runner.JettyFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/JettyFeature.html)
+[`org.nuxeo.ecm.core.test.CoreFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/test/CoreFeature.html)
+[`org.nuxeo.ecm.platform.test.PlatformFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/test/PlatformFeature.html)
+[`org.nuxeo.ecm.webengine.test.WebEngineFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/webengine/test/WebEngineFeature.html)
+[`org.nuxeo.runtime.test.runner.distrib.DistributionFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/distrib/DistributionFeature.html)
 
 See the [`org.nuxeo.runtime.test.runner.RunnerFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/RunnerFeature.html) implementations for a full list.
 
-To configure your test to use a specific test feature, you must add the `@Features` annotation on your test class and specify the feature (or the list of features you need). Example:
+To configure your test to use a specific test feature, add the `@Features` annotation on your test class and specify the feature (or the list of features) needed.
 
-&nbsp;
+Example:
 
 ```
 @RunWith(FeaturesRunner.class)
 @Features(RuntimeFeature.class)
 public class MyTest {
-	...
+  ...
 }
-
 ```
 
 Example on using multiple features:
-
-&nbsp;
-
 ```
 @RunWith(FeaturesRunner.class)
 @Features({RuntimeFeature.class, WebDriverFeature.class})
 public class MyTest {
-	...
+  ...
 }
-
 ```
 
-The list of configuration annotations provided by features will be&nbsp;precised for each feature when available.
+The list of configuration annotations provided by features will be specified for each feature when available.
 
 ### Injection
 
-Injection is available only in test classes. You cannot use injection in Nuxeo code since the Nuxeo Platform doesn't support injection yet. The FeaturesRunner instance is provided by default through Guice injection so in your test case you can access the runner in that way:
+Injection is available only in test classes. You cannot use injection in Nuxeo code since the Nuxeo Platform doesn't support injection. The FeaturesRunner instance is provided by default through Guice injection, so that in your test case you can access the runner like so:
 
 ```
 @RunWith(FeaturesRunner.class)
@@ -312,55 +306,49 @@ public class MyTest {
     public void doSomeTest() { ... }
     ...
 }
-
 ```
 
-Features may provide more injectable objects. The complete list of these objects will be precised for each feature when available.
+Features may provide more injectable objects. The complete list of these objects will be specified for each feature when available.
 
 ## Features
 
-Test features may require other test features. This means that using a feature will automatically include all the required features. So, it's redundant to specify features that are anyway included by other features specified on your test. For example the features declaration in the following code is useless since the `CoreFeature` requires the `RuntimeFeature` (and thus includes it automatically).
+Test features may require other test features. This means that using a feature will automatically include all the required features. So it's redundant to specify features that are already included by other features specified in your test. For example, the features declaration in the following code is useless: the `CoreFeature` requires the `RuntimeFeature` (so it's already included).
 
 ```
 @RunWith(FeaturesRunner.class)
 @Features({RuntimeFeature.class, CoreFeature.class})
 public class MyTest {
-	...
+  ...
 }
-
 ```
 
-So, the correct usage of the `CoreFeature` is:
+The correct usage of the `CoreFeature`:
 
 ```
 @RunWith(FeaturesRunner.class)
 @Features(CoreFeature.class)
 public class MyTest {
-	...
+  ...
 }
-
 ```
 
-As said before each feature provides its own configuration annotations and a list of services or objects available through Guice injection.
-
-In the next sections we will describe each feature and specify how it can be used, which are the annotations provided provided for configuration and which are the injectable objects provided by the feature.
+Each feature provides its own configuration annotations and a list of services or objects available through Guice injection.
 
 ### WebDriver Feature
 
-The main purpose of this feature is to start a WebDriver before the tests are launched and stop it at the end of the tests.
+Starts WebDriver before the tests are launched and stops it at the end of the tests.
 
 #### Requirements
 
-The WebDriver feature is a top level feature so it is not requiring other features.
+Top-level feature; does not require other features.
 
 #### Configuration
 
-*   `**@Browser**` - to configure the WebDriver instance.
-
+*   `@Browser` - configures the WebDriver instance.
     *   BrowserFamily type - the driver type. Can be one of: FIREFOX, IE, CHROME, HTML_UNIT, HTML_UNIT_JS.
     *   Class factory - optional driver factory class to create custom drivers.
 
-*   `**@HomePage**` - to specify the home page (the entry point in the site to test)
+*   `@HomePage` - to specify the home page (the entry point in the site to test)
     *   Class page - the page to use as the home page
     *   String url - the URL to be bound to the home page (the site home URL)
 
@@ -372,7 +360,7 @@ The WebDriver feature is a top level feature so it is not requiring other featur
 
 #### Usage
 
-WebDriver should be used in conjunction with Page Provider pattern. Below you can see a simple example of testing the Google search. First, we need to create a page object corresponding to the Google home:
+WebDriver should be used in conjunction with the Page Provider pattern. Below is an example that tests Google search. First, we need to create a page object corresponding to the Google home:
 
 ```
 public class GoogleHomePage extends WebPage {
@@ -385,22 +373,23 @@ public class GoogleHomePage extends WebPage {
         return getPage(SearchResultPage.class);
     }
 }
-
 ```
 
-When using the page factory pattern you should extend the abstract WebPage provided by the Nuxeo test framework which already has the driver instance inject inside. The WebPage abstraction is also providing helper methods to quickly access WebDriver find methods (you also have a "wait until element is found" mechanism to block the test until the page is loaded and the given element is found). From a WebPage object you can instantiate other page objects by calling `getPage(MyPage.class)`. Pages instantiated this way will be injected using the Guice injector of the runner. Note that pages retrieved this way are cached so you don't need to cache them in a local variable in the test method.
+When using the page factory pattern you should extend the abstract WebPage provided by the Nuxeo test framework which already has the driver instance injected inside. The WebPage abstraction also provides helper methods to quickly access WebDriver find methods (you also have a "wait until element is found" mechanism to block the test until the page is loaded and the given element is found).
+
+From a WebPage object you can instantiate other page objects by calling `getPage(MyPage.class)`. Pages instantiated this way will be injected with the Guice injector of the runner. Note that pages retrieved this way are cached so you don't need to cache them in a local variable in the test method.
 
 When using the page factory pattern you must expose your site's functionality through page objects. The page objects are not the equivalent of a real web page. They should be used to map services offered by a WebPage and not the entire web page. For example you can design your home page to allow access to other standard 'sections' (i.e. pages) of your application like the log-in/log-out functionality, the menu etc. So typically a home page will provide methods to access sub pages of your WEB application and/or global functionality existing on the home page.
 
-In our example the home page is providing a way to do a search.
+In our example, the home page provides a way of doing a search.
 
 {{#> callout type='note' }}
 
-**W**hen testing web applications you **must** put all the details of web page mapping (like accessing elements in the DOM, doing clicks, filling forms etc.) in your web page implementation. You must not directly access these details from the test itself. This technique ensures that when you refactor a functionality of your web site you should only update the corresponding web page in your tests and not all the tests classes.
+When testing web applications you **must** put all the details of web page mapping (like accessing elements in the DOM,  clicking, filling in forms etc.) in your web page implementation. You shouldn't access these details directly from the test itself. This technique ensures that when you refactor a functionality of your web site you should only update the corresponding web page in your tests and not all the tests classes.
 
 {{/callout}}
 
-Now that we defined our home page, let's define the search result page that is returned by the search method. This page give access to the search result.
+Now that we've defined our home page, let's define the search result page that is returned by the search method. This page gives access to the search result.
 
 ```
 public class SearchResultPage extends WebPage {
@@ -410,7 +399,6 @@ public class SearchResultPage extends WebPage {
         return firstLink.getText();
     }
 }
-
 ```
 
 The search result page provides a method that returns the first link text in the search result.
@@ -435,23 +423,23 @@ public class WebTest {
 
 ```
 
-By using WebDriver Feature in conjunction with WebEngineFeature you can test Nuxeo WebEngine modules that are deployed by the test framework without the need to point to an external URL. We will see this later in WebEngine Feature usage.
+By using the WebDriver Feature in conjunction with the WebEngine Feature you can test Nuxeo WebEngine modules that are deployed by the test framework without the need to point to an external URL. We will see this later in WebEngine Feature usage.
 
 ### Runtime Feature
 
-This is one of the most useful features when testing Nuxeo applications. The main purpose of this feature is to start a Nuxeo Test Server before the tests are launched and stop it at the end of the tests. So all the tests launched by the test unit will run inside the same instance of Nuxeo Runtime.
+Starts a Nuxeo Test Server before the tests are launched and stops it at the end of the tests. All the tests launched by the test unit will run inside the same instance of Nuxeo Runtime.
 
 #### Requirements
 
-The Runtime feature is a top level feature so it is not requiring other features. After starting the server all runtime bundles are deployed by the feature.
+Top-level feature, does not require other features. After starting the server, all runtime bundles are deployed by the feature.
 
 #### Configuration
 
-*   **@Deploy**&nbsp;- deploys a bundle (or an XML component from the given bundle) into the running server.
-    *   String[] value - the path of the bundle (or contribution). The path format is "`symbolicName:path`" where `symbolicName` is the bundle symbolic name and the optional path is a path relative to the bundle root of the XML component to deploy. If no path is specified the entire bundle will be deployed.
+*   `@Deploy` - deploys a bundle (or an XML component from the given bundle) in the running server.
+    *   String[] value - the path of the bundle (or contribution). The path format is "`symbolicName:path`" where `symbolicName` is the bundle symbolic name and the optional path is a path relative to the bundle root of the XML component to deploy. If no path is specified, the entire bundle will be deployed.
         Example: "`org.nuxeo.runtime`", "`org.nuxeo.runtime:OSGI-INF/my-component.xml`" etc.
-*   **@LocalDeploy**&nbsp;- deploys a test XML component as part of an existing bundle into the running server. This is useful to deploy test contributions that are not part from a real bundle.
-    *   String[] value - same as for the `@Deploy` annotation. The difference is that the `symbolicName` will be the one of the target bundle, and the path is required and should point to a test resource.
+*   `@LocalDeploy` - deploys a test XML component as part of an existing bundle in the running server. This is useful to deploy test contributions that are not part of a real bundle.
+    *   String[] value - same as for the `@Deploy` annotation. The difference is that the `symbolicName` will be that of the target bundle, and the path is required and should point to a test resource.
 
 #### Injectable Objects
 
@@ -459,7 +447,7 @@ All Nuxeo services deployed using `@Deploy` and `@LocalDeploy` annotations will 
 
 #### Usage
 
-Here is an example on how to test for the presence of a Nuxeo service:
+Example of how to test for the presence of a Nuxeo service:
 
 ```
 @RunWith(FeaturesRunner.class)
@@ -476,7 +464,7 @@ public class ServiceTest {
 
 ```
 
-Here is another example on how to use the `@Deploy` annotations to deploy additional bundles and components:
+Example of how to use the `@Deploy` annotations to deploy additional bundles and components:
 
 ```
 @RunWith(FeaturesRunner.class)
@@ -499,27 +487,27 @@ The `@Deploy` annotations will install the core schema bundle into the running s
 
 {{#> callout type='note' }}
 
-You must never deploy bundles using the RuntimeHarness API. You must always use `@Deploy` annotations to do this. However this can be useful when writing custom features but use it with care.
+You should never deploy bundles using the RuntimeHarness API. Always use `@Deploy` annotations to do this. It can be useful when writing custom features but it should be used with care.
 
 {{/callout}}
 
 ### Jetty Feature
 
-The main purpose of this feature is to start a Jetty server embedded in Nuxeo Test Server before the tests are launched and stop it at the end of the tests. This feature extends the Runtime feature and adds the `nuxeo-runtime-jetty-adapter` to the deployments.
+Starts a Jetty server embedded in the Nuxeo Test Server before the tests are launched and stops it at the end of the tests. This feature extends the Runtime feature and adds the `nuxeo-runtime-jetty-adapter` to the deployments.
 
 #### Requirements
 
-The Jetty feature requires Runtime Feature
+Requires Runtime Feature
 
 #### Configuration
 
 *   `@Jetty` - configures the Jetty server
-    *   String host default "localhost" - the host to bind to.
-    *   int port default 8080 - the port to bind to.
-    *   String config - optional attribute to specify a custom jetty.xml configuration file.
-    *   boolean propagateNaming default false - allow runtime fixture get access to the web-app naming context
+    *   String `host` default "localhost" - the host to bind to.
+    *   int `port` default 8080 - the port to bind to.
+    *   String `config` - optional attribute to specify a custom jetty.xml configuration file.
+    *   boolean `propagateNaming` default false - allow runtime fixture get access to the web-app naming context
 
-If no custom configuration is specified the default one will be used (that also contains data-source JNDI bindings for various Nuxeo services).
+If no custom configuration is specified the default will be used (which also contains data-source JNDI bindings for various Nuxeo services).
 
 #### Injectable Objects
 
@@ -543,10 +531,9 @@ public class JettyTest {
     }
 
 }
-
 ```
 
-You may also want your request being enrolled in transaction. Then you should use the Jetty Transactional Feature instead. You should in that case instruct the JVM to use Nuxeo's naming factory by adding the following `src/test/resources/jndi.properties` file in your project.
+If you want your tests to be run in a transaction context, you should use the Jetty Transactional Feature and instruct the JVM to use Nuxeo's naming factory by adding the following `src/test/resources/jndi.properties` file in your project.
 
 ```
 java.naming.factory.initial=org.nuxeo.runtime.jtajca.NamingContextFactory
@@ -555,23 +542,21 @@ java.naming.factory.url.pkgs=org.nuxeo.runtime.jtajca
 
 ### Transactional Feature
 
-If you want your tests to be ran in a transaction context, you should use the Transactional Feature.
+Runs tests in a transaction context.
 
 #### Requirements
 
-The Transactional Feature is included by the Core Feature so you should only need to use it explicitly if you don't use Core Feature.
-
-&nbsp;
+The Transactional Feature is included in the Core Feature so you should only need to use it explicitly if you don't use Core Feature.
 
 #### Configuration
 
 *   `@TransactionalConfig`
 
-    *   boolean autostart true - injects a new transaction before executing each test
+    *   boolean `autostart` true - injects a new transaction before executing each test
 
 ### Core Feature
 
-This feature deploys the required Nuxeo core bundles and resources and configures a repository to be used by tests.
+Deploys the required Nuxeo core bundles and resources and configures a repository to be used by tests.
 
 #### Requirements
 
@@ -580,8 +565,8 @@ The feature requires Runtime Feature and Transactional Feature.
 #### Configuration
 
 *   `@RepositoryConfig` - configures a Nuxeo Repository
-    *   Class init - a `RepositoryInit` class to be used to initialize the repository content.
-    *   Granularity cleanup - the scope of the initialization done by the init class. Can be one of CLASS or METHOD. If METHOD is used the intialization will be done before each test method call. The default is CLASS but this may change in the future so you should always be explicit.
+    *   Class `init` - a `RepositoryInit` class to be used to initialize the repository content.
+    *   Granularity cleanup - the scope of the initialization done by the `init` class. Can be one of CLASS or METHOD. If METHOD is used the initialization will be done before each test method call. The default is CLASS but this may change in the future so you should always be explicit.
 
 #### Injectable Objects
 
@@ -606,7 +591,7 @@ public class SimpleSession {
 
 ```
 
-This will start a nuxeo repository and will create a CoreSession (using the "Administrator" user) and will initialize the repository using the DefaultRepositoryInit initializer only once (CLASS level) before running the test.
+This starts a Nuxeo repository, creates a CoreSession (using the "Administrator" user) and initializes the repository using the DefaultRepositoryInit initializer only once (CLASS level) before running the test.
 
 <span style="font-size: 16.0px;">Platform Feature</span>
 
@@ -614,7 +599,7 @@ This feature extends the Core Feature and adds deployment of basic Nuxeo service
 
 #### Requirements
 
-The feature requires Core Feature.
+Requires Core Feature.
 
 #### Configuration
 
@@ -626,13 +611,13 @@ None
 
 ### WebEngine Feature
 
-This feature extends the Platform Feature and adds deployment of WebEngine core bundles (including Administration module). Also it is adding the WebDriver and Jetty features. You should use this feature when testing WebEngine UI.
+Extends the Platform Feature and adds deployment of WebEngine core bundles (including Administration module). Also adds the WebDriver and Jetty features. You should use this feature when testing WebEngine UI.
 
 #### Requirements
 
-The feature requires Platform Feature, WebDriver Feature and Jetty Feature
+Requires Platform Feature, WebDriver Feature and Jetty Feature
 
-This feature may not work directly from Eclipse since it requires on its classpath the final WebEngine JARs - as they are built with Maven - to have generated type definitions in the META-INF directory. This will be fixed later in WebEngine.
+May not work directly from Eclipse since it requires on its classpath the final WebEngine JARs -- as they are built with Maven -- to have generated type definitions in the META-INF directory. This will be fixed later in WebEngine.
 
 #### Configuration
 
@@ -669,23 +654,23 @@ public class WebEngineTest {
 
 ```
 
-This test will start a nuxeo with Jetty enabled at port 8082 - so WebEngine root will be located at [http://localhost:8082](http://localhost:8082). The `@HomePage` used by WebDriver feature will point to the embeded WebEngine root.
+This test will start a Nuxeo with Jetty enabled at port 8082 - so WebEngine root will be located at [http://localhost:8082](http://localhost:8082). The `@HomePage` used by WebDriver feature will point to the embedded WebEngine root.
 
-You can see that this test respect the page factory pattern we discussed above: the web mapping details are done inside the web page implementations. The test is not aware about the page structure - it is only using well named methods to access different fucntionality.
+This test respects the page factory pattern we discussed above: the web mapping details are inside the web page implementations. The test is not aware of the page structure -- it only uses well-named methods to access different functionalities.
 
-If you want to have a look on all these classes you can find this test in nuxeo-features-test
+If you want to have a look at these classes you can find this test in [`nuxeo-features-test`](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-features-test/src/main/java/org/nuxeo/ecm/webengine/test).
 
 ### Automation Feature
 
-A simple feature that extends Platform Feature and adds Nuxeo Automation bundles (`org.nuxeo.ecm.automation.core` and `org.nuxeo.ecm.automation.feature`).
+Extends Platform Feature and adds Nuxeo Automation bundles (`org.nuxeo.ecm.automation.core` and `org.nuxeo.ecm.automation.feature`).
 
 ### Dummy Client Login Feature
 
-A feature to login any username without any check against usermanager. Useful for low levels unit tests such as in directory, wherer it's not possible to add a dependency on usermanager or for test that don't setup directories. Then each authenticated users will be available as usual in the stack&nbsp;`ClientLoginModule.getCurrentPrincipal();`
+Login with any username without any check against `usermanager`. Useful for low levels unit tests such as in directory, where it's not possible to add a dependency to `usermanager` or for tests that don't setup directories. Each authenticated user will be available in the stack&nbsp;`ClientLoginModule.getCurrentPrincipal();`
 
-By default only the group `Everyone` is added to each users and it is not possible to add other groups.
+By default only the group `Everyone` is added to each user and it is not possible to add other groups.
 
-To use it, just add the following dependency :&nbsp;
+To use it, just add the following dependency:
 
 ```
 <dependency>
@@ -698,7 +683,7 @@ To use it, just add the following dependency :&nbsp;
 
 #### Requirements
 
-Add the following dependency to use it :&nbsp;
+Add the following dependency to use it:
 
 ```
 <dependency>
@@ -718,8 +703,6 @@ Add the following dependency to use it :&nbsp;
 </dependency>
 ```
 
-&nbsp;
-
 #### Configuration
 
 None
@@ -730,7 +713,7 @@ None
 
 #### Usage
 
-```java
+```
 @RunWith(FeaturesRunner.class)
 @Features(ClientLoginFeature.class)
 public class TestDummyLogInClientModule {
@@ -748,9 +731,9 @@ public class TestDummyLogInClientModule {
 
 ### LogCapture Feature
 
-A feature to make assertion on Log4j output.
+A feature to make assertions on Log4j output.
 
-A Log4j appender is&nbsp;initialized&nbsp;and configured with the running Log4j instance. When any Log4j log method is called, the appender captures the logs if the logs match the configured filter. It's then possible to get the captured logs or assert if there is any captured log.
+A Log4j appender is initialized and configured with the running Log4j instance. When any Log4j log method is called, the appender captures the logs if the logs match the configured filter. It's then possible to get the captured logs or assert if there is any captured log.
 
 #### Requirements
 
@@ -758,8 +741,8 @@ None
 
 #### Configuration
 
-*   `@LogCaptureFeature.FilterOn` - uses and configures the default filter. There are two parameters, `logLevel`, and `loggerName`. You can use either both or only one of them.
-*   `@LogCaptureFeature.FilterWith`&nbsp;- configures the filter the logs has to match to be part of the results.
+*   `@LogCaptureFeature.FilterOn` - uses and configures the default filter. There are two parameters, `logLevel`, and `loggerName`. You can use one or both.
+*   `@LogCaptureFeature.FilterWith` - configures the filter the logs have to match to be part of the results.
 
 **Injectable Objects**
 
@@ -767,7 +750,7 @@ None
 
 **Usage**
 
-```java
+```
 @RunWith(FeaturesRunner.class)
 @Features({ CoreFeature.class, LogCaptureFeature.class })
 @Deploy({ "org.nuxeo.ecm.automation.core" })
@@ -795,7 +778,7 @@ public class TestRestoreInputFromScriptAndLogOperation {
     }
 
     @Test
-	@LogCaptureFeature.FilterWith(TestRestoreInputFromScriptAndLogOperation.MyLogFilter.class)
+    @LogCaptureFeature.FilterWith(TestRestoreInputFromScriptAndLogOperation.MyLogFilter.class)
     public void testRestoreInput() throws Exception {
         DocumentModel doc = session.createDocumentModel("/", "test", "File");
         doc.setPropertyValue("dc:title", "test");
@@ -817,10 +800,10 @@ public class TestRestoreInputFromScriptAndLogOperation {
         logCaptureResult.assertHasEvent();
     }
 
-	@Test
+    @Test
     @LogCaptureFeature.FilterOn(logLevel = "ERROR", loggerName = "loggerName")
     public void testLogLevelAndLoggerName() throws NoLogCaptureFilterException{
-      	DocumentModel doc = session.createDocumentModel("/", "test", "File");
+        DocumentModel doc = session.createDocumentModel("/", "test", "File");
         doc.setPropertyValue("dc:title", "test");
         doc = session.createDocument(doc);
         OperationContext ctx = new OperationContext(session);
@@ -843,11 +826,11 @@ public class TestRestoreInputFromScriptAndLogOperation {
 
 ### Theme Feature
 
-A simple feature that extends WebEngine Feature and adds Nuxeo Theme deployment.
+Extends WebEngine Feature and adds Nuxeo Theme deployment.
 
 #### Requirements
 
-The feature requires WebEngine Feature.
+Requires WebEngine Feature.
 
 #### Configuration
 
@@ -856,54 +839,15 @@ None
 #### Injectable Objects
 
 None
-
-### Nuxeo Distribution Feature
-
-This feature is still in development so it is not usable for now.
-A feature that replace the RuntimeFeature to run tests on real Nuxeo distributions. This feature is using nuxeo-distribution-tools to build and launch a Nuxeo distribution.
-
-#### Requirements
-
-This is a top level feature.
-
-#### Configuration
-
-*   `@NuxeoDistribution` - the distribution configuration
-    *   String profile - the profile name. Example: core-1.6.1-SNAPSHOT, core-1.6.0 etc.
-    *   String config - custom profile configuration - to be used to specify custom profiles.
-    *   String host - the host to listen to.
-    *   String port - the HTTP port to bind to.
-    *   boolean useCache - whether ot not to cache the build. The default is true.
-    *   boolean offline - puts Maven offline.
-    *   String updatePolicy - snapshot update policy to be used by Maven. Default is "daily"
-
-#### Injectable Objects
-
-All deployed Nuxeo services.
-
-#### Usage
-
-This can be used for example to decorate existing test and launch them in an integration environment over a real Nuxeo distribution.
-
-```
-@RunWith(FeaturesRunner.class)
-@Features(DistributionFeature.class)
-@NuxeoDistribution(profile=core-5.3.0)
-public class NuxeoSuiteTest extends RepositoryTest {
-}       
-
-```
-
-This test decorates an existing test (that may have different feature configuration to be run by developer). The `DistributionFeature` will remove the original features and configurations and will run the test under the integration test configuration.
 
 ### Mockito Feature
 
 You can access services in your test by:
 
-*   calling Framework.getService(MyService.class)
-*   Use Guice @Inject annotation
+*   calling `Framework.getService(MyService.class)`
+*   Use Guice `@Inject` annotation
 
-This feature let you override a service, and replace it by a mock.
+This feature lets you override a service, and replace it with a mock.
 
 #### Requirements
 
@@ -911,9 +855,9 @@ None.
 
 #### Configuration
 
-*   Use the `MockitoFeature`.
-*   Use `@Mock` annotation on yout test class attribute, so that the Mockito initialiser does its job.
-*   Use `@RuntimeService` annotation (org.nuxeo.runtime.mockito) on the same test class attribute (injects a mock in that field and binds it to the the service manager).
+*   `MockitoFeature`.
+*   Use `@Mock` annotation on your test class attribute, so that the Mockito initializer does its job.
+*   Use `@RuntimeService` annotation (`org.nuxeo.runtime.mockito`) on the same test class attribute (injects a mock in the field and binds it to the the service manager).
 
 #### Injectable Objects
 
@@ -923,7 +867,7 @@ All deployed Nuxeo services.
 
 In the following example we replace the `Directory Service` by a mock.
 
-```java
+```
 @RunWith(FeaturesRunner.class)
 @Features({ MockitoFeature.class })
 public class ProjectInitializerTest {
@@ -934,7 +878,7 @@ public class ProjectInitializerTest {
 
 ## Creating Custom Features
 
-When you are writing generic services that you export to other bundles you may want to provide a specific feature for you services to help others testing code depending on your service. In most cases the feature will only extend an existing feature by adding new deployments. This is the case for example of the Platform Feature (not that a feature must implement the RunnerFeature interface - in our case we extend SimpleFeature which is an empty feature):
+When you are writing generic services that you export to other bundles you may want to provide a specific feature for you services to help others test code depending on your service. In most cases the feature will only extend an existing feature by adding new deployments. This is the case for example of the Platform Feature (not that a feature must implement the RunnerFeature interface -- in our case we extend SimpleFeature which is an empty feature):
 
 ```
 @Deploy({
@@ -951,12 +895,11 @@ When you are writing generic services that you export to other bundles you may w
 @Features(CoreFeature.class)
 public class PlatformFeature extends SimpleFeature {
 }
-
 ```
 
-To list the required you must use the `@Features` annotation on your own feature. You noticed that `@Deploy` annotation is supported on features too (this is not the case of other annotations - in fact it depends on how the feature that provide the annotation is scanning for them).
+To list the required features you must use the `@Features` annotation on your own feature. `@Deploy` annotation is supported on features too (this is not the case for other annotations -- in fact it depends on how the feature that provides the annotation is scanning for them).
 
-If you need more control you can refer to sources and/or existing feature implementations. Below you can find some typical use case you may need when implementing a feature:
+If you need more control you can refer to sources and/or existing feature implementations. Below you can find some typical use cases you may need when implementing a feature:
 
 ### Custom Configuration Annotations and Guice Injection Providers
 
@@ -980,7 +923,7 @@ public class MyFeature extends SimpleFeature {
 
 ```
 
-Usually annotations should be collected in the initialize method. The configure method is called after the start method and before the Guice injector is created.
+Annotations should be collected in the initialize method. The configure method is called after the start method and before the Guice injector is created.
 
 ### Dynamic Bundle Deployment
 
@@ -1005,9 +948,9 @@ public class MyFeature extends SimpleFeature {
 
 ```
 
-As you see you must add the requirement on the RuntimeFeature since you need to access to bundle deployment which is provided by this feature.
+As you see you must add the requirement on the RuntimeFeature since you need to access the bundle deployment which is provided by this feature.
 
-Even if it is possible - you must not access the underlying Runtime Harness directly from the test - this will make your test non portable. You will not be able to use it with Distribution Feature for example. The Runtime Harness is safe to be accessed only from features that depends on Runtime feature.
+Even if it is possible, you must not access the underlying Runtime Harness directly from the test. This will make your test non-portable. You will not be able to use it with the Distribution Feature for example. The Runtime Harness is safe to be accessed only from features that depend on the Runtime feature.
 
 ### Patch Nuxeo Server Home Directory
 
@@ -1026,4 +969,4 @@ public class MyFeature extends SimpleFeature implements WorkingDirectoryConfigur
 
 ```
 
-Again, this feature is depending on the Runtime Feature. It is adding a working directory configurator in the initialization part which will be called when the framework is started and before bundles are deployed. No need to unregister the configurator.
+This feature depends on the Runtime Feature. It adds a working directory configurator in the initialization part which will be called when the framework is started and before bundles are deployed. No need to unregister the configurator.
