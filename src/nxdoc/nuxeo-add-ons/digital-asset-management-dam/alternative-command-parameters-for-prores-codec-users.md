@@ -64,8 +64,8 @@ From our experience and our customers feedback, the mp4 conversion used by defau
 
     <command enabled="true" name="ffmpeg-tomp4">
       <commandLine>ffmpeg</commandLine>
-      <parameterString> -i #{inFilePath} -acodec libfaac -pix_fmt yuv420p -vcodec libx264 -r 29.97 -v 0 #{outFilePath}</parameterString>
-      <winParameterString> -i #{inFilePath} -acodec libfaac -pix_fmt yuv420p -vcodec libx264 -r 29.97 -v 0 #{outFilePath}</winParameterString>
+      <parameterString> -i #{inFilePath} -acodec aac -strict -2 -pix_fmt yuv420p -vcodec libx264 -r 29.97 -v 0 #{outFilePath}</parameterString>
+      <winParameterString> -i #{inFilePath} -acodec aac -strict -2 -pix_fmt yuv420p -vcodec libx264 -r 29.97 -v 0 #{outFilePath}</winParameterString>
       <installationDirective>You need to install ffmpeg from http://ffmpeg.org (apt-get install ffmpeg)
       </installationDirective>
     </command>
