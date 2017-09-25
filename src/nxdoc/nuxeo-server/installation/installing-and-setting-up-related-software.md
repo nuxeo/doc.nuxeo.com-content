@@ -617,54 +617,6 @@ Hopefully you can control the number of threads used by ImageMagick either by:
 *   adding an environment variable `export MAGICK_THREAD_LIMIT=1` in the nuxeo user `.bash_profile`.
 {{! /multiexcerpt}}
 
-### Additional Formats Support for FFmpeg
-
-Some video formats may not be supported when installing the FFmpeg package from your distribution's repository. You may encounter issues similar to these:
-
-{{#> panel type='code' heading='Common issue with libfaac encoder'}}
-
-```
-Unknown encoder 'libfaac'
-```
-
-{{/panel}}
-
-{{#> panel type='code' heading='Missing format error seen in the server.log file'}}
-
-```
-ERROR [AbstractWork] Exception during work: VideoConversionWork(e8cd9e57-c3ff-41b5-8f85-741c013417bf, /videoAutomaticConversions:27369901578782.273532597, Progress(?%, ?/0), Transcoding)
-org.nuxeo.ecm.core.convert.api.ConversionException: Error while converting via CommandLineService
-    at org.nuxeo.ecm.platform.convert.plugins.CommandLineBasedConverter.execOnBlob(CommandLineBasedConverter.java:166)
-    at org.nuxeo.ecm.platform.convert.plugins.CommandLineBasedConverter.convert(CommandLineBasedConverter.java:93)
-    at org.nuxeo.ecm.core.convert.service.ConversionServiceImpl.convert(ConversionServiceImpl.java:246)
-```
-
-{{/panel}}
-
-Ubuntu for instance does not supply FFmpeg with libfaac (AAC format) support. So you must compile FFmpeg from sources with `--enable-libfaac` option.
-Or run [the Nuxeo script for compiling FFmpeg](https://github.com/nuxeo/ffmpeg-nuxeo). **You should build the FFmpeg executable on a separate machine than your Nuxeo Platform server machine, and then install the result on the machine where you set up Nuxeo Platform.**
-You can do it manually as follow, but the recommended way is to use our "in-docker-build": [https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg](https://github.com/nuxeo/nuxeo-tools-docker/tree/master/ffmpeg).
-
-Other options are:
-
-- Following the instructions from [the FFmpeg Compilation Guide for Ubuntu](http://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu) adding the `--enable-libfaac` and `--enable-nonfree` compile options.
-
-For a manual build:
-
-1.  Install the [multiverse package repositories](https://help.ubuntu.com/community/Repositories/CommandLine) (required for the script to work).
-2.  Issue the following commands:
-
-    ```bash
-    $ cd /tmp
-    $ git clone https://github.com/nuxeo/ffmpeg-nuxeo
-    $ cd ffmpeg-nuxeo
-    $ sudo ./build-all.sh true
-    ```
-
-{{#> callout type='warning' }}
-Running the FFMmpeg build script on the same machine than where you installed the Nuxeo Platform would result in uninstalling existing Nuxeo already installed with the Debian package along with its data.
-{{/callout}}
-
 ### CCExtractor Installation
 
 {{{multiexcerpt 'ccextractor-intro' page='installing-and-setting-up-related-software'}}}
