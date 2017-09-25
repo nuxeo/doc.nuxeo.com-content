@@ -218,7 +218,7 @@ To use the test framework you must launch your test using the Nuxeo JUnit4 runne
 
 Example:
 
-```
+```java
 import org.nuxeo.runtime.test.runner.FeaturesRunner;
 
 @RunWith(FeaturesRunner.class)
@@ -273,7 +273,7 @@ To configure your test to use a specific test feature, add the `@Features` annot
 
 Example:
 
-```
+```java
 @RunWith(FeaturesRunner.class)
 @Features(RuntimeFeature.class)
 public class MyTest {
@@ -282,7 +282,7 @@ public class MyTest {
 ```
 
 Example on using multiple features:
-```
+```java
 @RunWith(FeaturesRunner.class)
 @Features({RuntimeFeature.class, WebDriverFeature.class})
 public class MyTest {
@@ -296,7 +296,7 @@ The list of configuration annotations provided by features will be specified for
 
 Injection is available only in test classes. You cannot use injection in Nuxeo code since the Nuxeo Platform doesn't support injection. The FeaturesRunner instance is provided by default through Guice injection, so that in your test case you can access the runner like so:
 
-```
+```java
 @RunWith(FeaturesRunner.class)
 public class MyTest {
     @Inject
@@ -314,7 +314,7 @@ Features may provide more injectable objects. The complete list of these objects
 
 Test features may require other test features. This means that using a feature will automatically include all the required features. So it's redundant to specify features that are already included by other features specified in your test. For example, the features declaration in the following code is useless: the `CoreFeature` requires the `RuntimeFeature` (so it's already included).
 
-```
+```java
 @RunWith(FeaturesRunner.class)
 @Features({RuntimeFeature.class, CoreFeature.class})
 public class MyTest {
@@ -324,7 +324,7 @@ public class MyTest {
 
 The correct usage of the `CoreFeature`:
 
-```
+```java
 @RunWith(FeaturesRunner.class)
 @Features(CoreFeature.class)
 public class MyTest {
@@ -362,7 +362,7 @@ Top-level feature; does not require other features.
 
 WebDriver should be used in conjunction with the Page Provider pattern. Below is an example that tests Google search. First, we need to create a page object corresponding to the Google home:
 
-```
+```java
 public class GoogleHomePage extends WebPage {
     @FindBy(how = How.NAME, using = "q")
     private WebElement search;
@@ -391,7 +391,7 @@ When testing web applications you **must** put all the details of web page mappi
 
 Now that we've defined our home page, let's define the search result page that is returned by the search method. This page gives access to the search result.
 
-```
+```java
 public class SearchResultPage extends WebPage {
     @FindBy(how = How.CLASS_NAME, using = "l")
     private WebElement firstLink;
@@ -405,7 +405,7 @@ The search result page provides a method that returns the first link text in the
 
 Now we can write our Google search test like this:
 
-```
+```java
 @RunWith(FeaturesRunner.class)
 @Features(WebDriverFeature.class)
 @HomePage(type=MyHomePage.class, url="http://www.google.com")
@@ -449,7 +449,7 @@ All Nuxeo services deployed using `@Deploy` and `@LocalDeploy` annotations will 
 
 Example of how to test for the presence of a Nuxeo service:
 
-```
+```java
 @RunWith(FeaturesRunner.class)
 @Features(RuntimeFeature.class)
 public class ServiceTest {
@@ -466,7 +466,7 @@ public class ServiceTest {
 
 Example of how to use the `@Deploy` annotations to deploy additional bundles and components:
 
-```
+```java
 @RunWith(FeaturesRunner.class)
 @Features(RuntimeFeature.class)
 @Deploy("org.nuxeo.ecm.core.schema")
@@ -517,7 +517,7 @@ None.
 
 Starts Nuxeo server + embedded Jetty on port 9090:
 
-```
+```java
 @RunWith(FeaturesRunner.class)
 @Features(JettyFeature.class)
 @Jetty(port=9090)
@@ -535,7 +535,7 @@ public class JettyTest {
 
 If you want your tests to be run in a transaction context, you should use the Jetty Transactional Feature and instruct the JVM to use Nuxeo's naming factory by adding the following `src/test/resources/jndi.properties` file in your project.
 
-```
+```java
 java.naming.factory.initial=org.nuxeo.runtime.jtajca.NamingContextFactory
 java.naming.factory.url.pkgs=org.nuxeo.runtime.jtajca
 ```
@@ -574,7 +574,7 @@ The feature requires Runtime Feature and Transactional Feature.
 
 #### Usage
 
-```
+```java
 @RunWith(FeaturesRunner.class)
 @Features(CoreFeature.class)
 @RepositoryConfig(init = DefaultRepositoryInit.class, cleanup = Granularity.CLASS)
@@ -629,7 +629,7 @@ None
 
 #### Usage
 
-```
+```java
 @RunWith(FeaturesRunner.class)
 @Features(WebEngineFeature.class)
 @Browser(type=BrowserFamily.FIREFOX)
@@ -713,7 +713,7 @@ None
 
 #### Usage
 
-```
+```java
 @RunWith(FeaturesRunner.class)
 @Features(ClientLoginFeature.class)
 public class TestDummyLogInClientModule {
@@ -750,7 +750,7 @@ None
 
 **Usage**
 
-```
+```java
 @RunWith(FeaturesRunner.class)
 @Features({ CoreFeature.class, LogCaptureFeature.class })
 @Deploy({ "org.nuxeo.ecm.automation.core" })
@@ -867,7 +867,7 @@ All deployed Nuxeo services.
 
 In the following example we replace the `Directory Service` by a mock.
 
-```
+```java
 @RunWith(FeaturesRunner.class)
 @Features({ MockitoFeature.class })
 public class ProjectInitializerTest {
@@ -880,7 +880,7 @@ public class ProjectInitializerTest {
 
 When you are writing generic services that you export to other bundles you may want to provide a specific feature for you services to help others test code depending on your service. In most cases the feature will only extend an existing feature by adding new deployments. This is the case for example of the Platform Feature (not that a feature must implement the RunnerFeature interface -- in our case we extend SimpleFeature which is an empty feature):
 
-```
+```java
 @Deploy({
     "org.nuxeo.ecm.platform.api",
     "org.nuxeo.ecm.platform.content.template",
@@ -903,7 +903,7 @@ If you need more control you can refer to sources and/or existing feature implem
 
 ### Custom Configuration Annotations and Guice Injection Providers
 
-```
+```java
 public class MyFeature extends SimpleFeature {
     protected MyConfiguration config = null;
     // create config. object from annotations
@@ -927,7 +927,7 @@ Annotations should be collected in the initialize method. The configure method i
 
 ### Dynamic Bundle Deployment
 
-```
+```java
 @Features(RuntimeFeature.class)
 public class MyFeature extends SimpleFeature {
     protected MyConfiguration config = null;
@@ -954,7 +954,7 @@ Even if it is possible, you must not access the underlying Runtime Harness direc
 
 ### Patch Nuxeo Server Home Directory
 
-```
+```java
 @Features(RuntimeFeature.class)
 public class MyFeature extends SimpleFeature implements WorkingDirectoryConfigurator {
     // add a work directory configurator on the harness
