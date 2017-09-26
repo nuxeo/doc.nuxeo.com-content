@@ -5,9 +5,9 @@ title: How to upgrade Tomcat in Nuxeo 8.10 on Windows ?
 As a prerequisite, the machine on which you will upgrade Tomcat using this procedure must have an internet access.
 
 The steps to upgrade Tomcat 7.0.69 delivered with Nuxeo 8.10 installers to a later revision are the following:
-*   `Install Cygwin` minimal setup including bash, cp, mv, mktemp, sed, grep, cut, rm , mkdir, curl, wget, perl… 
-*   You must have a recent `JDK 8` for Windows 64 bits already installed.
-*   Finally, `upgrade Tomcat`
+1. `Install Cygwin` minimal setup including bash, cp, mv, mktemp, sed, grep, cut, rm , mkdir, curl, wget, perl… 
+2. You must have a recent `JDK 8` for Windows 64 bits already installed.
+3. Finally, `upgrade Tomcat`
 
 ## How to install the required Cygwin minimal setup on Windows ?
 Cygwin bash is the preferred bash environment in which to run bash script for Nuxeo.
@@ -25,6 +25,9 @@ then accept the software dependencies and install the Cygwin tools and utilities
 
 ## How to upgrade Tomcat ?
 
+Download the script directly from [this link](upgrade_tomcat7.sh)
+and save it as `c:\temp\upgrade_tomcat7.sh`
+
 Assuming you have:
 * the upgrade bash script upgrade_tomcat7.sh on your Windows machine as `c:\temp\upgrade_tomcat7.sh`
 * Cygwin installed under `c:\cygwin64`
@@ -39,6 +42,7 @@ cd /cygdrive/c/nuxeo-server-8.10-tomcat
 cp /cygdrive/c/temp/upgrade_tomcat7.sh .
 # NOTICE THAT THE FOLLOWING USES A WINDOWS-like PATH SYNTAX with / instead of \ (not a Cygwin path syntax)
 ./upgrade_tomcat7.sh c:/nuxeo-server-8.10-tomcat
+rm ./upgrade_tomcat7.sh
 ```
 
 ## How to check Tomcat new revision is installed and launched ?
