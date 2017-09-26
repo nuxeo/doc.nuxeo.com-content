@@ -338,7 +338,7 @@ On Windows, it is possible to start Nuxeo as a service. Please report the [Insta
 1.  Launch a command prompt and go to the `/bin` directory of your Nuxeo application.
 
     ```
-    cd $NUXEO_HOME/bin
+    cd %NUXEO_HOME%/bin
     ```
 
 2.  Execute the `nuxeoctl.bat` script with the `start` command.
