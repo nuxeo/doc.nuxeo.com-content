@@ -127,6 +127,7 @@ Supported browsers for Nuxeo Web UI and Nuxeo Web UI Elements are:
 {{! multiexcerpt name='webui-supported-browsers'}}
  - Google Chrome
  - Firefox
+ - Safari
  - Edge
  - Internet Explorer 11
 {{! /multiexcerpt}}
