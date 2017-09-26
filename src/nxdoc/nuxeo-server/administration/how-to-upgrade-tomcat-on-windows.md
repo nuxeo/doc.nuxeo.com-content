@@ -41,7 +41,7 @@ cp /cygdrive/c/temp/upgrade_tomcat7.sh .
 ./upgrade_tomcat7.sh c:/nuxeo-server-8.10-tomcat
 ```
 
-## How to check Tomcat new version is installed and launched ?
+## How to check Tomcat new revision is installed and launched ?
 ```
 nuxeoctl console
 ```
