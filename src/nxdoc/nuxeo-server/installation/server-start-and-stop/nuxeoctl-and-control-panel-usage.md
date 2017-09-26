@@ -341,8 +341,6 @@ nuxeoctl mp-add|mp-install|mp-uninstall|mp-remove|mp-set|mp-request [command par
 
 nuxeoctl register [<username> [<project> [<type> <description>] [<pwd>]]]
 
-nuxeoctl register-trial [<email> <company> <project> <description> [<pwd>]]
-
 nuxeoctl pack <target> [-d [<categories>]|-q]
 ```
 
@@ -553,10 +551,6 @@ Useful for starting Nuxeo as a service.</td>
 <tr>
 <td colspan="1">`register`</td>
 <td colspan="1">Register the server with an existing Nuxeo Online Service account.</td>
-</tr>
-<tr>
-<td colspan="1">`register-trial`</td>
-<td colspan="1">Create an Nuxeo Online Service trial account and register the server.</td>
 </tr>
 <tr>
 <td colspan="1">`mp-list`</td>
