@@ -68,7 +68,7 @@ You can also use the rendering context from the server side using the `CtxBuilde
 ```java
 Product product = ...;
 RenderindContext ctx = CtxBuilder.param("loadProductDescription", Boolean.TRUE).get();
-String json = MarshallingHelper.objectToJson(product, ctx);
+String json = MarshallerHelper.objectToJson(product, ctx);
 ```
 
 {{/panel}}

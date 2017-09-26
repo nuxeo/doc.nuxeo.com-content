@@ -199,16 +199,16 @@ The marshalling service provides an extension point : [`org.nuxeo.ecm.core.io.Ma
 
     You can use the Nuxeo Platform marshalling service outside the web context. The simplest way is to use `org.nuxeo.ecm.core.io.registry.MarshallerHelper`.
 
-    {{#> panel type='code' heading='MarshallingHelper - Java-to-JSON'}}
+    {{#> panel type='code' heading='MarshallerHelper - Java-to-JSON'}}
 
     ```java
     Product product = ...;
-    String json = MarshallingHelper.objectToJson(product, CtxBuilder.get());
+    String json = MarshallerHelper.objectToJson(product, CtxBuilder.get());
     ```
 
     {{/panel}}
 
-    The `MarshallingHelper` class is a helper to use the `MarshallingRegistry` service. This service provides multiple ways to get marshallers depending on your needs.
+    The `MarshallerHelper` class is a helper to use the `MarshallingRegistry` service. This service provides multiple ways to get marshallers depending on your needs.
 
     {{#> panel type='code' heading='MarshallingRegistry - Java-to-JSON'}}
 
