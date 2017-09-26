@@ -95,6 +95,10 @@ history:
         message: ''
         version: '1'
 ---
+{{#> callout type='tip'}}
+Follow the related [video course and exercises](https://university.nuxeo.com/store/174605-webui-stack-introduction) on Nuxeo University.
+{{/callout}}
+
 Nuxeo Web UI is a standard base web application for Nuxeo Server that connects via HTTP and displays all the features of the platform to the users. Customizable, scalable and built upon a framework of Web components, it allows Nuxeo Platform developers to build their own front-end application using these components. The [Nuxeo Web UI addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) is available in beta version on [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/).
 ![]({{file name='web_ui_with_side_panel.png'}} ?w=650,border=true)
 
@@ -305,9 +309,3 @@ The main area is reserved for displaying the current page's content. Our router 
 
 ![]({{file name='Web UI search page.png'}} ?w=959,h=614,border=true)
 &nbsp;
-
-{{#> callout type='info' heading='Learn more'}}
-
-*   [Web UI Stack Introduction from Nuxeo University](https://university.nuxeo.com/store/174605-webui-stack-introduction)
-
-{{/callout}}

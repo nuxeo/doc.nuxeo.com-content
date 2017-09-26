@@ -197,6 +197,10 @@ history:
         version: '1'
 
 ---
+{{#> callout type='tip'}}
+Follow the related [video course and exercises](https://university.nuxeo.com/store/220415-data-capture) on Nuxeo University.
+{{/callout}}
+
 {{! excerpt}}
 
 The [Nuxeo CSV addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv) enables users to proceed to a bulk import of documents in the Nuxeo Platform using a CSV file. This addon enables users to create documents with their metadata filled in, to import files with their main attachment or to create a tree structure.
@@ -496,13 +500,8 @@ It is possible to set the lifecycle state when the document is created through N
 
 Note that the event raised by this CSV import is a **creation event**, not an import one. An import event means that for the Nuxeo Platform, a full and ready Nuxeo document is imported. Here based on some data, a new Nuxeo document is created.
 
-{{#> callout type='info' heading='Learn more'}}
 
-*   [Data Capture / Nuxeo CSV from Nuxeo University](https://university.nuxeo.com/store/220415-data-capture)
-
-{{/callout}}
-
-* * * 
+* * *
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">

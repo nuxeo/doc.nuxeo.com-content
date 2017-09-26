@@ -11,6 +11,10 @@ labels:
 tree_item_index: 200
 
 ---
+{{#> callout type='tip'}}
+Follow the related [video course and exercises](https://university.nuxeo.com/store/199348-nuxeo-dev-tools) on Nuxeo University.
+{{/callout}}
+
 {{! excerpt}}
 
 The Nuxeo Dev Tools browser extension places some of the more commonly performed actions in the Nuxeo Platform at the administrator's fingertips in a popup window in Google Chrome or Mozilla Firefox.
@@ -80,9 +84,3 @@ Planned improvements for the browser extension:
 <iframe src="https://ext.prodpad.com/ext/roadmap/3cb7ad79a0f9fce3382633f486d40cfa15430ece" height="210" width="100%"></iframe>
 
 You can also give us your feedback and suggestions through our [feedback portal](https://portal.prodpad.com/40c295d6-739d-11e7-9e52-06df22ffaf6f).
-
-{{#> callout type='info' heading='Learn more'}}
-
-*   [Nuxeo Dev Tools course from Nuxeo University](https://university.nuxeo.com/store/199348-nuxeo-dev-tools)
-
-{{/callout}}

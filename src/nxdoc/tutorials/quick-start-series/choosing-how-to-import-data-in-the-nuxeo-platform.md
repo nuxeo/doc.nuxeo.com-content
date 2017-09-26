@@ -115,6 +115,10 @@ history:
 
 ---
 
+{{#> callout type='tip'}}
+Follow the related [video course and exercises](https://university.nuxeo.com/store/220415-data-capture) on Nuxeo University.
+{{/callout}}
+
 The Nuxeo Platform provides tools and APIs to import content:
 * From 10s of documents to billions of them, with import rates such as 10,000s of documents per second
 * With or without metadata
@@ -242,9 +246,3 @@ You can straightly use the REST API and implement the importing logic you need f
 ### Using the Bare Java API
 
 You can use the CoreSession object in a server-side deployed custom Java component and implement the importing logic you need from there. We also provide a default [import/export format]({{page page='nuxeo-core-import-export-api'}}) for the repository with piping logic.
-
-{{#> callout type='info' heading='Learn more'}}
-
-*   [Data Capture from Nuxeo University](https://university.nuxeo.com/store/220415-data-capture)
-
-{{/callout}}

@@ -282,6 +282,10 @@ history:
         version: '1'
 
 ---
+{{#> callout type='tip'}}
+Follow the related [video course and exercises](https://university.nuxeo.com/store/220415-data-capture) on Nuxeo University.
+{{/callout}}
+
 {{! multiexcerpt name='bulk-importer'}}
 
 Available for any Nuxeo platform-based application, the [Bulk document importer package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer) enables mass document import in a Nuxeo repository. A single HTTP query launches a full, multi-threaded import from the server file system.
@@ -820,9 +824,3 @@ This class will be the base class for the import, and the method that instantiat
 ## Download
 
 To download `nuxeo-importer-core`, check the [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer) or, if needed, download a more recent version of the JAR (to be installed by hand) from [the Nuxeo Maven repository](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;quick~nuxeo-importer-core).
-
-{{#> callout type='info' heading='Learn more'}}
-
-*   [Data Capture / Nuxeo Bulk Importer from Nuxeo University](https://university.nuxeo.com/store/220415-data-capture)
-
-{{/callout}}

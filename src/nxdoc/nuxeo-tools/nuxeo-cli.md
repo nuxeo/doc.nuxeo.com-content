@@ -9,6 +9,10 @@ review:
     comment: ''
 
 ---
+{{#> callout type='tip'}}
+Follow the related [video course and exercises](https://university.nuxeo.com/store/199348-nuxeo-dev-tools) on Nuxeo University.
+{{/callout}}
+
 {{! excerpt}}
 
 Nuxeo CLI aims at making the whole development process easier with bootstraps for common Nuxeo components, sample projects to help you understand the hood and with the ability to trigger a hot reload of your developments in a running Nuxeo Server.
@@ -275,12 +279,6 @@ Discover a ready-to-use Nuxeo Project to help you understand tricky components l
 ```bash
 $ nuxeo sample
 ```
-
-{{#> callout type='info' heading='Learn more'}}
-
-*   [Nuxeo Dev Tools course from Nuxeo University](https://university.nuxeo.com/store/199348-nuxeo-dev-tools)
-
-{{/callout}}
 
 * * *
 

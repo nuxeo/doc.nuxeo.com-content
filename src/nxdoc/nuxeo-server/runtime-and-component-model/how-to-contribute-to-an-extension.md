@@ -160,6 +160,10 @@ history:
         version: '1'
 
 ---
+{{#> callout type='tip'}}
+Follow the related [video course and exercises](https://university.nuxeo.com/store/167395-handling-service-extension-points) on Nuxeo University.
+{{/callout}}
+
 ## {{> anchor 'finding-extension-point'}}Finding the Extension Point Where to Contribute
 
 Whatever the tools you're using ([Nuxeo Studio](https://www.nuxeo.com/products/studio/) or [Nuxeo CLI]({{page page='nuxeo-cli'}})), your first step is to find the open door configuration where you want to contribute. We call these open doors **Extension points**.
@@ -311,9 +315,3 @@ Components deployment is linear, so if you want to override an existing configur
        </extension>
     </component>
     ```
-
-    {{#> callout type='info' heading='Learn more'}}
-
-    *   [Handling Service Extension Points from Nuxeo University](https://university.nuxeo.com/store/167395-handling-service-extension-points)
-
-    {{/callout}}

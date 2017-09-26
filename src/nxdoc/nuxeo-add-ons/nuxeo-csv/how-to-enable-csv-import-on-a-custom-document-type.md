@@ -115,6 +115,10 @@ history:
         version: '1'
 
 ---
+{{#> callout type='tip'}}
+Follow the related [video course and exercises](https://university.nuxeo.com/store/220415-data-capture) on Nuxeo University.
+{{/callout}}
+
 {{{excerpt 'NXDOC:Nuxeo CSV'}}}
 
 {{! excerpt}}
@@ -156,13 +160,6 @@ If you installed the Nuxeo CSV add-on from the Nuxeo Marketplace, you'll probabl
 If you don't want to use Studio and prefer using your IDE, you can just [add a contribution]({{page page='how-to-contribute-to-an-extension'}}) with the XML above.
 
 {{/callout}}
-
-{{#> callout type='info' heading='Learn more'}}
-
-*   [Data Capture / Nuxeo CSV from Nuxeo University](https://university.nuxeo.com/store/220415-data-capture)
-
-{{/callout}}
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}

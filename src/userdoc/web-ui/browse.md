@@ -11,6 +11,11 @@ labels:
     - drag-and-drop
 tree_item_index: 100
 ---
+
+{{#> callout type='tip' }}
+Follow the related [video course and exercises](https://university.nuxeo.com/store/220415-data-capture) on Nuxeo University.
+{{/callout}}
+
 {{! excerpt}}
 In order to help you find the documents that you need, the Nuxeo Platform features several options to access, create and edit documents.
 {{! /excerpt}}
@@ -111,12 +116,6 @@ It is possible to do a drag and drop import of documents with an additional step
 4. Once it's done click on **CREATE**.
 
 The file is created with the filled in properties.
-
-{{#> callout type='info' heading='Learn more'}}
-
-*   [Data Capture / Web UI Bulk Import from Nuxeo University](https://university.nuxeo.com/store/220415-data-capture)
-
-{{/callout}}
 
 ### Creating Content Using Nuxeo Drive
 

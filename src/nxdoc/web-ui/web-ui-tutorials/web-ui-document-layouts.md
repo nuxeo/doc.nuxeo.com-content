@@ -19,6 +19,10 @@ labels:
 tree_item_index: 400
 
 ---
+{{#> callout type='tip'}}
+Follow the related [video course and exercises](https://university.nuxeo.com/store/187249-document-and-workflow-task-layouts-with-nuxeo-studio-designer) on Nuxeo University. 
+{{/callout}}  
+
 Layouts are used to display a document's metadata in different use cases. It's basically a group of widgets and specifies how these widgets are assembled and displayed.
 
 A given document type can have multiple layouts: a `create` and `edit` layout to set its schema fields when creating or editing the document, a `view` layout to simply display field values and any other layouts according to the application(s) where these are used. In our previous metamodel driven UI, these were known as `modes` and a single layout definition could be rendered in different modes.
@@ -228,11 +232,6 @@ window.nuxeo.importBlacklist = [
 The customization of document creation in Web UI is subject to change in the upcoming versions.
 {{/callout}}
 
-{{#> callout type='info' heading='Learn more'}}
-
-*   [Document and Workflow Task Layouts with Nuxeo Studio Designer course from Nuxeo University](https://university.nuxeo.com/store/187249-document-and-workflow-task-layouts-with-nuxeo-studio-designer)
-
-{{/callout}}  
 
 * * *
 

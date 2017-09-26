@@ -148,6 +148,10 @@ history:
 previous_link: /nxdoc/using-renditions
 next_link: /nxdoc/using-automation
 ---
+{{#> callout type='tip'}}
+Follow the related [video course and exercises](https://university.nuxeo.com/store/155930-workflow-engine) on Nuxeo University.
+{{/callout}}
+
 {{! excerpt}}
 
 Learn how to manage a contract validation workflow using the REST API. Log in as different users to see the whole process and process tasks.
@@ -409,9 +413,3 @@ This time a task has been assigned to the `managers` group (represented by Sarah
 
 *   Validating the contract triggered some logic automatically: the contract's expiration date has been set to one year from now, the contract's state is now `running`.
 *   Instead of completing the task programmatically, you could have used direct links instead. Keep in mind that these links need to be sent using a POST call.
-
-{{#> callout type='info' heading='Learn more'}}
-
-*   [Playing with Workflow Buttons and Transitions video from Nuxeo University](https://university.nuxeo.com/store/155930-workflow-engine)
-
-{{/callout}}
