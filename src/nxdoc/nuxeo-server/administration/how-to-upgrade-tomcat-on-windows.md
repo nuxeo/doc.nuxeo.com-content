@@ -2,7 +2,9 @@
 title: How to upgrade Tomcat in Nuxeo 8.10 on Windows ?
 ---
 
-The steps to upgrade Tomcat 7.0.69 delivered with Nuxeo 8.10 installers to a later version are the following:
+As a prerequisite, the machine on which you will upgrade Tomcat using this procedure must have an internet access.
+
+The steps to upgrade Tomcat 7.0.69 delivered with Nuxeo 8.10 installers to a later revision are the following:
 *   `Install Cygwin` minimal setup including bash, cp, mv, mktemp, sed, grep, cut, rm , mkdir, curl, wget, perl… 
 *   You must have a recent `JDK 8` for Windows 64 bits already installed.
 *   Finally, `upgrade Tomcat`
