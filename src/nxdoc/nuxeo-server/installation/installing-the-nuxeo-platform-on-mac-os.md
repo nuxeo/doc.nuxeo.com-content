@@ -171,14 +171,14 @@ history:
 ---
 On Mac OS, you can install the Nuxeo Platform using two different packages:
 
-*   The .zip archive
-*   The virtual machine image
+*   The `nuxeo-server-<version>-tomcat.zip` archive
+*   The virtual machine image (VirtualBox or VMware)
 
 ## Checking Requirements
 
 {{{multiexcerpt 'requirements-intro' page='Installation'}}}
 
-Check out the [Installation]({{page page='installation'}})&nbsp;for detailed steps to check your Java version and install it.
+Check out the [Installation page]({{page page='installation'}}) for detailed steps to check your Java version and install it.
 
 ## Installing the Nuxeo Platform From the .zip Archive
 
@@ -193,21 +193,15 @@ You want to do a complete installation, compatible for a production environment?
 
 ## Installing the Nuxeo Platform Using Homebrew
 
-<div>If you are not familiar with Homebrew, you can have a look at&nbsp;[their documentation](http://brew.sh/).&nbsp;</div>
+If you are not familiar with Homebrew, you can have a look at&nbsp;[their documentation](http://brew.sh/).
 
-<div>**To install Nuxeo using Homebrew:**</div>
-
-<div>
+To install Nuxeo using Homebrew:
 
 ```
 brew install nuxeo
 ```
 
-&nbsp;
-
-</div>
-
-<div>The nuxeo.conf file will be in located in &nbsp;`/usr/local/etc/nuxeo.conf`. You can now start your server&nbsp;with&nbsp;[nuxeoctl]({{page page='nuxeoctl-and-control-panel-usage'}})&nbsp;as it is added in your PATH.</div>
+The nuxeo.conf file will be in located in `/usr/local/etc/nuxeo.conf`. You can now start your server with [nuxeoctl]({{page page='nuxeoctl-and-control-panel-usage'}}) as it is added in your PATH.
 
 ## Installing the Nuxeo Platform Using Docker
 
@@ -221,15 +215,22 @@ You can also have a look to [Setting up your Nuxeo]({{page page='setting-up-your
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Next Steps'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Next Steps'}}
 
 - [Setup Best Practices]({{page page='setup-best-practices'}})
 - [Server Start and Stop]({{page page='server-start-and-stop'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
+{{/panel}}
+</div>
+<div class="column medium-6">
+{{#> panel heading='Getting Familiar with the Nuxeo Platform'}}
 
 - [From the JSF UI to Nuxeo Studio]({{page page='from-the-jsf-ui-to-nuxeo-studio'}})
 - [Essential Nuxeo Platform Terminology]({{page page='essential-nuxeo-platform-terminology'}})
 - [Discover Nuxeo Platform APIs]({{page page='discover-nuxeo-platform-apis'}})
 
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>
