@@ -159,14 +159,14 @@ history:
 ---
 On Mac OS, you can install the Nuxeo Platform using two different packages:
 
-*   The .zip archive
-*   The virtual machine image
+*   The `nuxeo-server-<version>-tomcat.zip` archive
+*   The virtual machine image (VirtualBox or VMware)
 
 ## Checking Requirements
 
 {{{multiexcerpt 'requirements-intro' page='Installation'}}}
 
-Check out the [Installation]({{page page='installation'}})&nbsp;for detailed steps to check your Java version and install it.
+Check out the [Installation page]({{page page='installation'}}) for detailed steps to check your Java version and install it.
 
 ## Installing the Nuxeo Platform From the .zip Archive
 
@@ -181,21 +181,15 @@ You want to do a complete installation, compatible for a production environment?
 
 ## Installing the Nuxeo Platform Using Homebrew
 
-<div>If you are not familiar with Homebrew, you can have a look at&nbsp;[their documentation](http://brew.sh/).&nbsp;</div>
+If you are not familiar with Homebrew, you can have a look at [their documentation](http://brew.sh/).
 
-<div>**To install Nuxeo using Homebrew:**</div>
-
-<div>
+**To install Nuxeo using Homebrew:**
 
 ```
 brew install nuxeo
 ```
 
-&nbsp;
-
-</div>
-
-<div>The nuxeo.conf file will be in located in &nbsp;`/usr/local/etc/nuxeo.conf`. You can now start your server&nbsp;with&nbsp;[nuxeoctl]({{page page='nuxeoctl-and-control-panel-usage'}})&nbsp;as it is added in your PATH.</div>
+The nuxeo.conf file will be in located in &nbsp;`/usr/local/etc/nuxeo.conf`. You can now start your server with [nuxeoctl]({{page page='nuxeoctl-and-control-panel-usage'}}) as it is added in your PATH.
 
 ## Installing the Nuxeo Platform Using Docker
 
