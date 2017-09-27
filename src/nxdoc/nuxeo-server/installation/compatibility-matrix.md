@@ -90,7 +90,7 @@ The Nuxeo Platform supports the following databases.
 <li>{{! multiexcerpt name='MySQL-supported'}}MySQL 5.7{{! /multiexcerpt}}</li>
 <li>{{! multiexcerpt name='Oracle-supported'}}Oracle 12c{{! /multiexcerpt}}</li>
 <li>{{! multiexcerpt name='PostgreSQL-supported'}}PostgreSQL 9.6{{! /multiexcerpt}}</li>
-<li>{{! multiexcerpt name='SQLserver-supported'}}SQL Server 2008{{! /multiexcerpt}}</li>
+<li>{{! multiexcerpt name='SQLserver-supported'}}SQL Server 2014{{! /multiexcerpt}}</li>
 </ul>
 {{! /multiexcerpt}}
 
