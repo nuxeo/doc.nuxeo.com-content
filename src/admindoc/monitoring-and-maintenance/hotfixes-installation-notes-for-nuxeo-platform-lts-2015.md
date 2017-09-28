@@ -198,6 +198,16 @@ Use of the <copy /> command on JAR files is not recommended, prefer using <updat
 You can also download and install hotfixes from the **Update Center** in the **Admin** tab.The installation of hotfixes requires the server to be restarted to complete the installation: follow the manual installation and configuration steps required by the installed hotfixes before you restart your server.
 {{! /multiexcerpt}}
 
+## Hotfix 31
+
+### Deactivation of emergency user
+
+The activation by default of the emergency user has been considered as a security issue. Therefore the hotfix 31 has disabled it by changing the property `nuxeo.user.emergency.enable`. To recover the previous behavior, add the following line in your nuxeo.conf
+```
+nuxeo.user.emergency.enable=true
+```
+
+
 ## Hotfix 20
 
 ### Rebuilding READ ACL Cache
