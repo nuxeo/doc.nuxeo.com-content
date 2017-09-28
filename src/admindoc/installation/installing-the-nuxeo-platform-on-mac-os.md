@@ -141,7 +141,7 @@ history:
 ---
 On Mac OS, you can install the Nuxeo Platform using two different packages:
 
-*   the .zip archive,
+*   the `nuxeo-server-<version>-tomcat.zip` archive,
 *   the virtual machine image.
 
 ## Checking Requirements
