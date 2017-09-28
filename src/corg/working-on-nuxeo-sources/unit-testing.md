@@ -259,13 +259,13 @@ The Nuxeo test framework uses special classes called test features to configure 
 
 Here are some commonly used features:
 
-[`org.nuxeo.runtime.test.runner.web.WebDriverFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/web/WebDriverFeature.html)
-[`org.nuxeo.runtime.test.runner.RuntimeFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/RuntimeFeature.html)
-[`org.nuxeo.runtime.test.runner.JettyFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/JettyFeature.html)
-[`org.nuxeo.ecm.core.test.CoreFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/test/CoreFeature.html)
-[`org.nuxeo.ecm.platform.test.PlatformFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/test/PlatformFeature.html)
-[`org.nuxeo.ecm.webengine.test.WebEngineFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/webengine/test/WebEngineFeature.html)
-[`org.nuxeo.runtime.test.runner.distrib.DistributionFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/distrib/DistributionFeature.html)
+- [`org.nuxeo.runtime.test.runner.web.WebDriverFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/web/WebDriverFeature.html)
+- [`org.nuxeo.runtime.test.runner.RuntimeFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/RuntimeFeature.html)
+- [`org.nuxeo.runtime.test.runner.JettyFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/JettyFeature.html)
+- [`org.nuxeo.ecm.core.test.CoreFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/test/CoreFeature.html)
+- [`org.nuxeo.ecm.platform.test.PlatformFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/test/PlatformFeature.html)
+- [`org.nuxeo.ecm.webengine.test.WebEngineFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/webengine/test/WebEngineFeature.html)
+- [`org.nuxeo.runtime.test.runner.distrib.DistributionFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/distrib/DistributionFeature.html)
 
 See the [`org.nuxeo.runtime.test.runner.RunnerFeature`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/RunnerFeature.html) implementations for a full list.
 
