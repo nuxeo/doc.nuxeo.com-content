@@ -212,7 +212,7 @@ The Nuxeo Test Framework is based on JUnit4 and provides features such as:
 *   [Guice](http://code.google.com/p/google-guice/) injection of Nuxeo services and other configuration objects (injection is available only in test classes),
 *   High extensibility and test configuration re-usability.
 
-At the time of this writing, the test framework depends on JUnit 4.12, Guice 3.0 and WebDriver 0.6.
+At the time of writing, the test framework depends on JUnit 4.12, Guice 3.0, WebDriver 2.53.0 and HTML Unit Driver 2.20.
 
 To use the test framework you must launch your test using the Nuxeo JUnit4 runner: [`FeaturesRunner`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/test/runner/FeaturesRunner.html) .
 
