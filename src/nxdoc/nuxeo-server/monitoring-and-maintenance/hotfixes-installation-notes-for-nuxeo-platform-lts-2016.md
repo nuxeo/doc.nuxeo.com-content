@@ -129,6 +129,18 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 15
+
+### Security issue on MS Windows
+
+Windows users need to upgrade the Tomcat version to protect against a potential CSRF token leak in the default manager applications distributed with Tomcat. Follow this procedure to upgrade Tomcat to version 7.0.81, version recommended by [NXP-19726](https://jira.nuxeo.com/browse/NXP-19726):
+1. Download the PowerShell script [upgrade_tomcat7.ps1](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common-base/client/scripts/upgrade_tomcat7.ps1)
+2. In a PowerShell session, run the following command where NUXEO_HOME is the path to your Nuxeo instance
+```
+upgrade_tomcat7.ps1 NUXEO_HOME 7.0.81
+```
+
+
 ## Hotfix 10
 
 ### Package Upgrade
