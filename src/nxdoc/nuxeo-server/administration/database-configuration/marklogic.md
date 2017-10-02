@@ -150,6 +150,11 @@ Once you installed the Nuxeo MarkLogic addon, set up the access to the MarkLogic
 *   `nuxeo.marklogic.port`: The MarkLogic XDBC App Server port, defaults to `8010`
 *   `nuxeo.marklogic.user`: The MarkLogic user to login to App Server, defaults to `nuxeo`
 *   `nuxeo.marklogic.password`: The user password, defaults to `password`
+*   `nuxeo.marklogic.ssl`: The SSL switcher, defaults to false, set it to true to enable ssl encryption to your MarkLogic server
+
+{{#> callout type='note' heading='SSL tunnel'}}
+The SSL mechanism relies on the JVM truststore. Your MarkLogic server certificate must be valid or you need to import your certificate into the [JVM truststore](https://docs.oracle.com/cd/E19830-01/819-4712/ablqw/index.html).
+{{/callout}}
 
 The package installation added the `marklogic` template to your existing list of templates (`nuxeo.templates`) in `nuxeo.conf`.
 
