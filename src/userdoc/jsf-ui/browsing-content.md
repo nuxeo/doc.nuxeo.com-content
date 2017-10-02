@@ -312,7 +312,7 @@ Here are some tips on how to leverage all the navigation means provided by the N
 
 **Going Back to a Previous Page**
 
-Due to [technical reasons]({{page space='nxdoc' page='back-and-next-buttons-paradigm-and-jsf-in-the-nuxeo-platform'}}), it is recommended to NOT use the browser's Back and Next buttons to navigate in the Platform. There are several ways to go back to a previous page. For example, to go up one level in the platform structure, the easiest way is to click the breadcrumbs.
+Due to [technical reasons]({{page space='nxdoc' page='jsf-ui-framework-overview'}}#back-and-next-buttons-paradigm-and-jsf-in-the-nuxeo-platform), it is recommended to NOT use the browser's Back and Next buttons to navigate in the Platform. There are several ways to go back to a previous page. For example, to go up one level in the platform structure, the easiest way is to click the breadcrumbs.
 
 ![]({{file name='breadcrumbs.png'}} ?border=true)
 
