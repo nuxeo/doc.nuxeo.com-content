@@ -1274,6 +1274,18 @@ Replaces `nuxeo.server.tomcat-admin.port`. This is only useful if you have anoth
 <td colspan="1">Since Nuxeo 5.6</td>
 </tr>
 <tr>
+<td colspan="1">`nuxeo.server.tomcat_error.show_report`</td>
+<td colspan="1">Tomcat report displayed or not on Tomcat error page.</td>
+<td colspan="1">false</td>
+<td colspan="1">Since Nuxeo 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.server.tomcat_error.show_server_info`</td>
+<td colspan="1">Tomcat version info (as Tomcat server version) displayed or not on Tomcat error page.</td>
+<td colspan="1">false</td>
+<td colspan="1">Since Nuxeo 9.3</td>
+</tr>
+<tr>
 <td colspan="1">`nuxeo.server.https.port`</td>
 <td colspan="1">Server HTTPS listen port.<br/>
 This is only useful if you have modified the application server to use HTTPS.</td>
