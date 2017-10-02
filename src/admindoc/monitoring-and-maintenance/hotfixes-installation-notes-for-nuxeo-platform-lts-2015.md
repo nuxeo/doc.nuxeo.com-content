@@ -200,9 +200,9 @@ You can also download and install hotfixes from the **Update Center** in the **A
 
 ## Hotfix 31
 
-### Deactivation of emergency user
+### Deactivation of Emergency User
 
-The activation by default of the emergency user has been considered as a security issue. Therefore the hotfix 31 has disabled it by changing the property `nuxeo.user.emergency.enable`. To recover the previous behavior, add the following line in your nuxeo.conf
+The activation by default of the emergency user has been considered as a security issue. Therefore the hotfix 31 has disabled it by changing the property `nuxeo.user.emergency.enable`. To recover the previous behavior, add the following line in your `nuxeo.conf` file:
 ```
 nuxeo.user.emergency.enable=true
 ```
