@@ -1,5 +1,5 @@
 ---
-title: Workflow Use Cases
+title: Workflows
 review:
     comment: ''
     date: '2017-01-24'
@@ -18,7 +18,7 @@ confluence:
     shortlink: yoMlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/yoMlAQ'
     source_link: /display/NXDOC/Workflow+Use+Cases
-tree_item_index: 400
+tree_item_index: 600
 history:
     -
         author: Manon Lumeau

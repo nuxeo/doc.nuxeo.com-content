@@ -23,7 +23,7 @@ confluence:
     shortlink: uAAt
     shortlink_source: 'https://doc.nuxeo.com/x/uAAt'
     source_link: /display/NXDOC/Tracking+the+Performance+of+the+Nuxeo+Platform
-tree_item_index: 800
+tree_item_index: 200
 history:
     -
         author: Stuart Miller

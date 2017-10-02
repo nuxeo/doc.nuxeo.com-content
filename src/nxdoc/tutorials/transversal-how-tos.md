@@ -1,5 +1,5 @@
 ---
-title: Transversal How-Tos
+title: Learning with Examples
 review:
     comment: ''
     date: '2017-01-20'
@@ -17,7 +17,7 @@ confluence:
     shortlink: YYMlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/YYMlAQ'
     source_link: /display/NXDOC/Transversal+How-Tos
-tree_item_index: 700
+tree_item_index: 900
 history:
     -
         author: Manon Lumeau

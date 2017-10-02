@@ -123,6 +123,34 @@ history:
         version: '1'
 
 ---
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-4">
+{{#> panel type='secondary' match_height='true'}}
+**Discover Nuxeo Platform APIs**<br/>
+<br/>
+This tutorial will guide you on a tour of the Nuxeo Platform and its features through its APIs. <br/>
+<br/>
+[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='discover-nuxeo-platform-apis'}})
+{{/panel}}
+</div>
+<div class="column medium-4">
+{{#> panel type='secondary' match_height='true' }}
+**Configure Nuxeo Platform**<br/>
+<br/>
+This tutorial introduces you to a few important aspects of **Nuxeo Studio** so that you can take advantage of this great product as quickly as possible.<br/>
+<br/>
+[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='configure-nuxeo-platform'}})
+{{/panel}}
+</div>
+<div class="column medium-4">
+{{#> panel type='secondary' match_height='true'}}
+**Develop with Nuxeo Platform**<br/>
+<br/>
+[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='develop-with-nuxeo-platform'}})
+{{/panel}}
+</div>
+</div>
 <div class="column">
 {{#> panel type='primary'}}
 
@@ -130,27 +158,3 @@ history:
 
 {{/panel}}
 </div>
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-### Getting Started
-
-- [Discover Nuxeo Platform APIs]({{page page='discover-nuxeo-platform-apis'}})
-- [Configure Nuxeo Platform]({{page page='configure-nuxeo-platform'}})
-- [Develop with Nuxeo Platform]({{page page='develop-with-nuxeo-platform'}})
-{{/panel}}</div><div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-### Educational
-
-- [Simple Workflow Example]({{page page='simple-workflow-example'}})
-- [Design Tips]({{page page='design-tips'}})
-- [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
-{{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-### How-To Index
-
-- [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
-- [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
-- [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
-{{/panel}}</div><div class="column medium-6">
-
-</div></div>
