@@ -23,7 +23,7 @@ confluence:
     shortlink: SAcuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/SAcuAQ'
     source_link: /display/NXDOC/Essential+Nuxeo+Platform+Terminology
-tree_item_index: 300
+tree_item_index: 800
 history:
     -
         author: Solen Guitter

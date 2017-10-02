@@ -21,7 +21,7 @@ confluence:
     source_link: /display/NXDOC/From+the+JSF+UI+to+Nuxeo+Studio
 version_override:
     '6.0': '60/nxdoc/from-the-web-ui-to-nuxeo-studio'
-tree_item_index: 1100
+tree_item_index: 500
 history:
     -
         author: Solen Guitter

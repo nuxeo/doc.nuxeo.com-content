@@ -24,7 +24,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/L4PZ'
     source_link: >-
         /display/NXDOC/Understand+Expression+and+Scripting+Languages+Used+in+Nuxeo
-tree_item_index: 300
+tree_item_index: 900
 history:
     -
         author: Solen Guitter

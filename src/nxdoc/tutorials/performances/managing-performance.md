@@ -19,7 +19,7 @@ confluence:
     shortlink: 9oMlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/9oMlAQ'
     source_link: /display/NXDOC/Managing+Performance
-tree_item_index: 900
+tree_item_index: 100
 history:
     -
         author: Solen Guitter
