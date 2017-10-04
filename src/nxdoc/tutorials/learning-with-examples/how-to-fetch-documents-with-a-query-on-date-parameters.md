@@ -32,7 +32,7 @@ confluence:
     shortlink: D4CE
     shortlink_source: 'https://doc.nuxeo.com/x/D4CE'
     source_link: /display/NXDOC/How+to+Fetch+Documents+with+a+Query+on+Date+Parameters
-tree_item_index: 100
+tree_item_index: 200
 history:
     -
         author: Solen Guitter

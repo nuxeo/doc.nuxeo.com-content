@@ -27,7 +27,7 @@ confluence:
     shortlink: X4YlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/X4YlAQ'
     source_link: /display/NXDOC/How+to+Override+a+Seam+Component
-tree_item_index: 700
+tree_item_index: 1100
 history:
     -
         author: Anahide Tchertchian

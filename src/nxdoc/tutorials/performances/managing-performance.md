@@ -156,7 +156,7 @@ What you are testing, and how you are testing it?  Consider the following elemen
 
 Having this information will help identify the part of the platform you are putting pressure on, and provide insight into how to reproduce the issue, which is an important step in identifying the underlying cause(s), setting up targeted monitoring, and qualifying potential resolutions.
 
-### Metrics & Measurements
+### Metrics &Amp; Measurements
 
 Performance is relative &ndash; if something appears slow, we need to define what "slow" means for your application.
 
