@@ -23,7 +23,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/x4MlAQ'
     source_link: >-
         /display/NXDOC/First+Steps+With+Studio%3A+Technical+Documentation+Tutorial
-tree_item_index: 200
+tree_item_index: 1200
 history:
     -
         author: Manon Lumeau

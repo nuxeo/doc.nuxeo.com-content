@@ -31,7 +31,7 @@ confluence:
     shortlink: kwBu
     shortlink_source: 'https://doc.nuxeo.com/x/kwBu'
     source_link: /display/NXDOC/How+to+create+an+empty+bundle
-tree_item_index: 600
+tree_item_index: 700
 history:
     -
         author: Manon Lumeau

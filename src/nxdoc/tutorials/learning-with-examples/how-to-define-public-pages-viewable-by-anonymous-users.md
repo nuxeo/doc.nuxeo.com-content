@@ -27,7 +27,7 @@ confluence:
     shortlink: qwQz
     shortlink_source: 'https://doc.nuxeo.com/x/qwQz'
     source_link: /pages/viewpage.action?pageId=3343531
-tree_item_index: 200
+tree_item_index: 300
 history:
     -
         author: Solen Guitter
