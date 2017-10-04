@@ -97,7 +97,7 @@ Here are solutions for testing your developments before merging them on the mast
 Developers have their own dedicated job for building a branch, testing it and eventually automatically merging it if succeed.
 
 1.  Push your changes to the GitHub Nuxeo repo(s) of your choice under a branch named "feature-NXP-xxxx-description" (see [Nuxeo common usage and best practices]({{page page='git-usage'}}) about branch naming).
-2.  Create a [new Jenkins job](http://qa.nuxeo.org/jenkins/view/Dashboard/newJob) and choose the "**Nuxeo On-Demand test and push**" template:
+2.  Create a [new Jenkins job](https://qa.nuxeo.org/jenkins/job/TestAndPush/newJob) and choose the "**Nuxeo On-Demand test and push**" template:
 
     <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">**Name**</td></tr>
     <tr><td colspan="1">
