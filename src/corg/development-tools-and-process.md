@@ -78,6 +78,3 @@ This chapter describes common development tools and useful complementary tools t
 *   [Code Quality with IDE Plugins]({{page space='CORG' page='Code Quality+with+IDE+Plugins'}})
 *   [Docker usages]({{page space='CORG' page='Docker usages'}})
 
-## Other documentation
-
-See: [http://doc.nuxeo.org/5.3/books/nuxeo-book/html/ch55.html](http://doc.nuxeo.org/5.3/books/nuxeo-book/html/ch55.html)
