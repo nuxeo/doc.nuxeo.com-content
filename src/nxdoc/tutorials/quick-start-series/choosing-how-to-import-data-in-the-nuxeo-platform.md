@@ -20,7 +20,7 @@ confluence:
     shortlink: YIcPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/YIcPAQ'
     source_link: /display/NXDOC/Choosing+How+to+Import+Data+in+the+Nuxeo+Platform
-tree_item_index: 600
+tree_item_index: 700
 history:
     -
         author: Manon Lumeau

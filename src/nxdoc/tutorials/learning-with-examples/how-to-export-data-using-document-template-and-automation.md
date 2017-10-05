@@ -34,7 +34,7 @@ confluence:
     shortlink: GQFV
     shortlink_source: 'https://doc.nuxeo.com/x/GQFV'
     source_link: /display/NXDOC/How+to+Export+Data+Using+Document+Template+and+Automation
-tree_item_index: 500
+tree_item_index: 600
 history:
     -
         author: Manon Lumeau

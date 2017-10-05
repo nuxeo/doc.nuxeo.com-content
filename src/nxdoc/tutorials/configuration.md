@@ -1,5 +1,5 @@
 ---
-title: Design Tips
+title: Configuration
 review:
     comment: ''
     date: '2017-01-25'
@@ -18,7 +18,7 @@ confluence:
     shortlink: Eg7F
     shortlink_source: 'https://doc.nuxeo.com/x/Eg7F'
     source_link: /display/NXDOC/Design+Tips
-tree_item_index: 600
+tree_item_index: 700
 history:
     -
         author: Manon Lumeau

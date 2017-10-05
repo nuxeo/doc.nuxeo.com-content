@@ -31,7 +31,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/l4fZ'
     source_link: >-
         /display/NXDOC/How+to+Implement+Local+Groups+or+Roles+Using+Computed+Groups
-tree_item_index: 400
+tree_item_index: 500
 history:
     -
         author: Solen Guitter

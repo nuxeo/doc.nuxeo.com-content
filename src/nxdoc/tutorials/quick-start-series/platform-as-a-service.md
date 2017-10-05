@@ -21,7 +21,7 @@ confluence:
     shortlink: oxg5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/oxg5AQ'
     source_link: /display/NXDOC/Platform+as+a+Service
-tree_item_index: 100
+tree_item_index: 400
 history:
     -
         author: Solen Guitter

@@ -25,7 +25,7 @@ confluence:
     shortlink: jQ-F
     shortlink_source: 'https://doc.nuxeo.com/x/jQ-F'
     source_link: /display/NXDOC/How+to+setup+a+test+SMTP+server
-tree_item_index: 300
+tree_item_index: 400
 history:
     -
         author: Vladimir Pasquier

@@ -20,7 +20,7 @@ confluence:
     shortlink: O4vZ
     shortlink_source: 'https://doc.nuxeo.com/x/O4vZ'
     source_link: /display/NXDOC/Bootstrap+Your+Document+Management+Project
-tree_item_index: 100
+tree_item_index: 200
 history:
     -
         author: Solen Guitter
