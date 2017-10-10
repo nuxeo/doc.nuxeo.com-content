@@ -22,7 +22,7 @@ confluence:
     shortlink: DowZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/DowZAQ'
     source_link: /display/NXDOC/Quick+Overview
-tree_item_index: 100
+tree_item_index: 50
 history:
     -
         author: Alain Escaffre

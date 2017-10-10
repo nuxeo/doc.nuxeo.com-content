@@ -1,5 +1,5 @@
 ---
-title: Configuration
+title: Configuration Tips
 review:
     comment: ''
     date: '2017-01-25'

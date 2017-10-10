@@ -17,7 +17,7 @@ labels:
     - extension
     - nuxeo-slot
     - nuxeo-slot-content
-tree_item_index: 800
+tree_item_index: 700
 
 ---
 ## Concept

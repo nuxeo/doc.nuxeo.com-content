@@ -16,7 +16,7 @@ labels:
     - nuxeo-web-ui
     - extension
     - dashboard
-tree_item_index: 700
+tree_item_index: 800
 
 ---
 
@@ -33,3 +33,13 @@ It is composed of four sections:
 ## Overriding the Dashboard
 
 To use your own dashboard, you can deploy and override `nuxeo-home.html` in your own bundle as described in [How to Deploy Additional Web UI Resources]({{page page='web-ui-deployment'}}#deploy_or_override).
+
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+- [HOWTO: Create Custom Dashboard Entries]({{page version='' space='nxdoc' page='howto-create-custom-dashboard-entries'}})
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>

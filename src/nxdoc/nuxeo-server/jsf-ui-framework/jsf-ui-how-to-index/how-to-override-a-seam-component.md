@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to override a seam component.
         level: Advanced
         tool: 'Nuxeo CLI, code'
-        topics: Seam JSF Webapp
+        topics: JSF UI, Seam JSF Webapp
 labels:
     - content-review-lts2016
     - seam

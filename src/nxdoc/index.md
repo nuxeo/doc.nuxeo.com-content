@@ -477,12 +477,13 @@ Here are some key pages to customize the back office of the Nuxeo Platform:
 
 </div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
-### Tutorials
+### Getting Started
 
 This section is intended to provide you with end-to-end recipes for achieving your customization goals of the Nuxeo Platform.
 
-- [How-To Index]({{page page='how-to-index'}})
-- [Quick Start Series]({{page page='quick-start-series'}})
+- [Discover Nuxeo Platform APIs]({{page version='' space='nxdoc' page='discover-nuxeo-platform-apis'}})
+- [Configure Nuxeo Platform]({{page version='' space='nxdoc' page='configure-nuxeo-platform'}})
+- [Develop with Nuxeo Platform]({{page version='' space='nxdoc' page='develop-with-nuxeo-platform'}})
 
 {{/panel}}</div></div>
 
