@@ -563,19 +563,22 @@ You can find all the available options in the [nuxeo.defaults](https://github.co
 
 With [Shield plugin for Elasticsearch](https://www.elastic.co/guide/en/shield/current/introduction.html), it is possible to configure authentication to access the cluster, and then prevent unauthorized access to it.
 
-The configuration is done by editing the `nuxeo.conf` file and set the following values:
-
-```
-elasticsearch.shield.enabled=true
-elasticsearch.shield.username=nuxeo
-elasticsearch.shield.password=nuxeo
-```
 To inform the Nuxeo Platform that authentication is needed on the cluster, the `elasticsearch.shield.enabled` property has to be set to `true` (authentication is disabled by default).
 
 The Nuxeo Platform has to be associated to a user who is authorized to access the Elasticsearch cluster.
 The credentials are provided with the `elasticsearch.shield.username` and `elasticsearch.shield.password` properties.
 
-You can also enable encryption traffic inside your cluster by setting up SSL support. This configuration can be done by setting the node’s keystore path and password with the following properties: `elasticsearch.shield.keystore.path` and `elasticsearch.shield.keystore.password`. (For more information on setting up encryption traffic, see [How to secure communications in your Elasticsearch cluster](https://www.elastic.co/guide/en/shield/current/securing-communications.html)) 
+It is also **mandatory** when using Shield authentication to enable encryption traffic inside your cluster by setting up SSL support. This configuration can be done by setting the node’s keystore path and password with the following properties: `elasticsearch.shield.keystore.path` and `elasticsearch.shield.keystore.password`. (For more information on setting up encryption traffic, see [How to secure communications in your Elasticsearch cluster](https://www.elastic.co/guide/en/shield/current/securing-communications.html)) 
+
+The configuration is done by editing the `nuxeo.conf` file and set these properties:
+
+```
+elasticsearch.shield.enabled=true
+elasticsearch.shield.username=nuxeo
+elasticsearch.shield.password=nuxeo
+elasticsearch.shield.keystore.path=/path/to/keystore
+elasticsearch.shield.keystore.password=myPassword
+```
 
 ## Disabling Elasticsearch
 
