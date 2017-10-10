@@ -365,7 +365,7 @@ However, there are some impacts in moving a synchronous listener to an asynchron
 
 The beginning of an integration with [RabbitMQ](https://www.rabbitmq.com/) is available [in the nuxeo-sandbox GitHub repository](https://github.com/nuxeo-sandbox/nuxeo-rabbitmq). While it would require more implementation work for being used in a production environment, it provides a good sample of how to integrate with an external event bus.
 
-## Performances and Monitoring&nbsp;
+## Performances and Monitoring
 
 Using listeners, especially synchronous ones, may impact the global performance. Typically, having synchronous listeners that do long processing will reduce the scalability of the system.
 

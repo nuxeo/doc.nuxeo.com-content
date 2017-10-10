@@ -1,5 +1,5 @@
 ---
-title: Quick Start Series
+title: Best Practices
 review:
     comment: ''
     date: '2015-12-01'

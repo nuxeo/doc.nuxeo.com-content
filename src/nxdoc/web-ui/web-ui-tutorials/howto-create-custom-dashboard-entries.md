@@ -1,5 +1,5 @@
 ---
-title: How to Create Custom Dashboards
+title: "HOWTO: Create Custom Dashboard Entries"
 review:
     comment: ''
     date: '2016-12-08'
@@ -122,3 +122,12 @@ The quickest way to start building a dashboard is to use the [Polymer Generator]
     Once Polyserve is up and running we can finally see our custom element's demo at:&nbsp;[http://localhost:3000/components/nuxeo-dataviz-sample/demo/](http://localhost:3000/components/nuxeo-dataviz-sample/demo/)
 
     ![]({{file page='data-visualization' name='dataviz_custom_element_demo.png'}} ?w=326,h=293,border=true)
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+
+- [HOWTO: Create Custom Dashboard]({{page version='' space='nxdoc' page='howto-create-custom-dashboard'}})
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>

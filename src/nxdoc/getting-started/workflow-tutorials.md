@@ -1,5 +1,5 @@
 ---
-title: Workflows
+title: Workflow Tutorials
 review:
     comment: ''
     date: '2017-01-24'
