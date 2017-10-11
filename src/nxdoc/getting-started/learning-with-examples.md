@@ -56,12 +56,22 @@ history:
         version: '1'
 
 ---
-*   [HOWTO: Unit Test a Studio Bundle]({{page space='nxdoc' page='how-to-unit-test-studio-bundle'}}) &mdash; <span class="smalltext">In this how-to we will see how to unit test a Studio bundle from a new bundle.</span>
-*   [HOWTO: Fetch Documents with a Query on Date Parameters]({{page space='NXDOC' page='How to+Fetch+Documents+with+a+Query+on+Date+Parameters'}}) &mdash; <span class="smalltext">In this how-to we will see how to make it possible to process a list of document depending on a date parameter. An example would be how to display or do an operation on all documents expiring in less than 3 months.</span>
-*   [HOWTO: Define Public Pages (Viewable by Anonymous Users)](/pages/viewpage.action?pageId=3343531) &mdash; <span class="smalltext">To make some pages or parts of the repository visible to people without requiring them to be authenticated to the Platform, follow the following steps.</span>
-*   [HOWTO: setup a test SMTP server]({{page space='NXDOC' page='How to+setup+a+test+SMTP+server'}})
-*   [HOWTO: Implement Local Groups or Roles Using Computed Groups]({{page space='NXDOC' page='How to+Implement+Local+Groups+or+Roles+Using+Computed+Groups'}})
-*   [HOWTO: Export Data Using Document Template and Automation]({{page space='NXDOC' page='How to+Export+Data+Using+Document+Template+and+Automation'}}) &mdash; <span class="smalltext">In a few steps, we will show how to generate a CSV file that lists all the documents of your Nuxeo Platform repository and some metadata.</span>
-*   [HOWTO: Create an Empty Bundle]({{page space='NXDOC' page='How to+create+an+empty+bundle'}})
-*   [HOWTO: Override a Seam Component]({{page space='NXDOC' page='How to+Override+a+Seam+Component'}}) &mdash; <span class="smalltext">This how-to considers you master the creation of the Java plug-in, and you know where to create a Java class. Otherwise please refer to the page [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}}) or use [Nuxeo CLI]({{page page='how-to-contribute-to-an-extension'}}).
-*   [HOWTO: Create Custom Dashboards]({{page page='howto-create-custom-dashboards'}})
+<div class="row" data-equalizer data-equalize-on="medium">
+
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### HOWTO: Publish a News Features in Workspaces
+</br>
+This how-to explains how to add a small "News" feature to your Nuxeo Platform for enabling News content publishing at workspace level, using only Nuxeo Studio.
+
+</br>
+[Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='nxdoc' page='how-to-publish-a-news-feature-in-workspaces'}})
+{{/panel}}
+
+</div>
+
+<div class="column medium-6">
+
+</div>
+
+</div>
