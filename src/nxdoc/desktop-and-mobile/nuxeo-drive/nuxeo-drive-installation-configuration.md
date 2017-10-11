@@ -14,7 +14,7 @@ To be able to synchronize folders on your computer, you need to install the Nuxe
 We provide OS-specific installers for Mac OS X and Windows, available from the Nuxeo Drive tab of the Home.
 For Linux, you need a PyQt4 with WebKit support.
 {{#> callout type='note' }}
-GNU/Linux support for Nuxeo Drive is fragile and currently depends on several obsolete modules. Keep an eye on our [roadmap]({{page page='nuxeo-drive-roadmap'}}) for developments and the [deployment instructions on Github](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/deployment.md) for more information.
+GNU/Linux support for Nuxeo Drive is fragile and currently depends on several obsolete modules. Keep an eye on our [roadmap]({{page page='nuxeo-drive-roadmap'}}) for developments and the [deployment instructions on GitHub](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/deployment.md) for more information.
 {{/callout}}
 
 ### Support
