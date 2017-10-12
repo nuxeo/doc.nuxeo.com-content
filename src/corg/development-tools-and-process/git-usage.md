@@ -982,10 +982,10 @@ git reflog expire --expire=now --all
 git gc --aggressive --prune=now
 git fsck
 # Check outgoing changes
-git push --all --prune -n origin 2>&1 | grep -E "deleted|rejected"
+git push --all -n origin 2>&1 | grep -E "deleted|rejected"
 # Merge remote changes per branch if necessary; see also git-up command to update all local branches
 # Push changes
-git push --all --prune origin
+git push --all origin
 git push --tags -f origin
 ```
 
