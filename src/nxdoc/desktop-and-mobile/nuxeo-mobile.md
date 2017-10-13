@@ -193,11 +193,13 @@ The Nuxeo application allows you to authenticate against a Nuxeo server, browse 
 
 ### Offline mode
 
-Offline mode is not available yet.
+When your phone loses network connection or when you turn it on airplane mode, an offline mode is now available.
+
+![]({{file name='mobile-offline-mode.png'}} ?w=200,h=357,border=true)
 
 ### Authenticating
 
-Once the application is installed and opened, indicate the Nuxeo server you want to connect to by filling the HTTP information. For example `http://myserver.nuxeo.com/nuxeo`. As soon as the server is detected, the login page is displayed. Depending on your server configuration, it is the default one or your customized login page providing authentication through CAS, OpenID or another authentication system.
+Once the application is installed and opened, indicate the Nuxeo server you want to connect to by filling the HTTP information. For example `http://NUXEO_SERVER/nuxeo`. As soon as the server is detected, the login page is displayed. Depending on your server configuration, it is the default one or your customized login page providing authentication through CAS, OpenID or another authentication system.
 
 <div>
 <table class="hover" style="border: 0px;">
@@ -256,6 +258,13 @@ You are able to mark as favorite the list of documents you are interested in. "A
 </tbody>
 </table>
 </div>
+
+### Recently Viewed
+
+The **Recently Viewed** entry displays the last 20 documents viewed on your Nuxeo Mobile application. From this entry you can tap on document to enter workspace or display the document. Actions on documents are available by **sliding** to share, add to your favorites or add to a collections your documents.
+
+![]({{file name='mobile-recently-viewed.png'}} ?w=200,h=357,border=true)
+
 
 ### Collections
 
