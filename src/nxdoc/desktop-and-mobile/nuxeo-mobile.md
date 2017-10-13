@@ -195,7 +195,16 @@ The Nuxeo application allows you to authenticate against a Nuxeo server, browse 
 
 When your phone loses network connection or when you turn it on airplane mode, an offline mode is now available.
 
-![]({{file name='mobile-offline-mode.png'}} ?w=200,h=357,border=true)
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='mobile-offline-mode.png'}} ?w=200,h=355,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-offline-mode-refresh.png'}} ?w=200,h=355,border=true)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ### Authenticating
 
@@ -243,6 +252,10 @@ If the PDF preview is available, tap the thumbnail zone to preview it. If the do
 </table>
 </div>
 
+{{#> callout type='tip' }}
+When previewing a document, you can hide the top bar by taping the screen.
+{{/callout}}
+
 ### Favorites
 
 You are able to mark as favorite the list of documents you are interested in. "Add to" and "Remove from" favorites actions are available for all document types whether the document is folderish or not. Select the "..." action available on the toolbar. Favorite documents are available directly from the **Favorites** menu.
@@ -261,7 +274,7 @@ You are able to mark as favorite the list of documents you are interested in. "A
 
 ### Recently Viewed
 
-The **Recently Viewed** entry displays the last 20 documents viewed on your Nuxeo Mobile application. From this entry you can tap on document to enter workspace or display the document. Actions on documents are available by **sliding** to share, add to your favorites or add to a collections your documents.
+The **Recently Viewed** entry displays the last 20 documents viewed on your Nuxeo Mobile application. From this entry you can tap on a document to enter a workspace or display the document. Actions on documents are available by **sliding** to share, add to your favorites or add a document to a collections.
 
 ![]({{file name='mobile-recently-viewed.png'}} ?w=200,h=357,border=true)
 
@@ -287,14 +300,18 @@ Browsing your repository, you can add a document to one or several collections. 
 
 ### Share / Open in
 
-You are able to **share** any document through messages, mail.... any available application on your phone for that purpose. The Share action is available on the toolbar of the document view, besides the filename. In addition, you are able to **Open directly** documents on your phone by tapping on the document link above the thumbnail.
+You are able to **share** any document through messages, mail, Slack, Twitter, Facebook.... any available application on your phone for that purpose. The **Share** button is available on the toolbar of the document view, next to the filename.
+
+![]({{file name='mobile-share-action.png'}} ?w=200,h=355,border=true)
+
+In addition, you are able to **Open directly** documents on your phone by downloading them first and then choose the action that you want. To do so click on the **Download** button below the thumbnail view.
 
 <div>
 <table class="hover" style="border: 0px;">
 <tbody>
 <tr>
 <td colspan="1"><b>![]({{file name='mobile-open-in-download.png'}} ?w=200,h=357,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-open-in.png'}} ?w=200,h=355,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-open-action.png'}} ?w=200,h=355,border=true)</b></td>
 </tr>
 </tbody>
 </table>
