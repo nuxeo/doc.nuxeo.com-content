@@ -245,7 +245,7 @@ This page details standard architecture options to deploy a Nuxeo cluster.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Before Reading'}}
-This page assumes you already are familiar with the different components of a Nuxeo cluster. If not, you should have a look at our [Nuxeo architecture introduction]({{page page='nuxeo-architecture-introduction'}}) page first.
+This page assumes you already are familiar with the different components of a Nuxeo cluster. If not, you should have a look at our [Nuxeo architecture introduction]({{page page='nuxeo-cluster-architecture-introduction'}}) page first.
 {{/callout}}
 
 ## High Availability Production Architecture
