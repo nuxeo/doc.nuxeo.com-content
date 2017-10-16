@@ -300,7 +300,7 @@ history:
         version: '1'
 
 ---
-Nuxeo supported modules handle English translations for each of their bundles. Other translations are managed on [Crowdin](https://crowdin.net/project/nuxeo) and synchronized automatically with the Nuxeo source code.
+Nuxeo supported modules handle English translations for each of their bundles. Other translations are managed on [Crowdin](https://crowdin.net/projects/nuxeo) and synchronized automatically with the Nuxeo source code.
 
 Languages that are sufficiently translated are available in the released default distribution. The conditions for a language to be available by default are that it is translated at 95% and approved at 75% minimum.
 Default languages in Nuxeo Platform 9.1 are:
@@ -333,7 +333,7 @@ Here are some instructions to help you contributing or changing translations, in
 
 ### Translating Labels
 
-Labels translation are managed on Crowdin. To translate Nuxeo labels or change a translation, you need to [join the Nuxeo project on Crowdin](http://crowdin.net/project/nuxeo/invite).
+Labels translation are managed on Crowdin. To translate Nuxeo labels or change a translation, you need to join the [Nuxeo JSF UI](http://crowdin.net/project/nuxeo/invite) or [Nuxeo Web UI](http://crowdin.net/project/nuxeo-web-ui/invite) project on Crowdin.
 
 If you are not familiar with Crowdin, take a look at their [quick start guide](http://crowdin.net/page/quick-start) [.](http://crowdin.net/project/nuxeo/invite)
 Basically here are the steps to contribute:
