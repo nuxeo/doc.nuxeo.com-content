@@ -2,7 +2,7 @@
 title: Nuxeo Drive FAQ
 review:
     comment: ''
-    date: ''
+    date: '2017-10-12'
     status: ok
 labels:
     - nuxeo-drive
@@ -88,43 +88,46 @@ This page non exhaustively lists frequently asked questions about Nuxeo Drive
 
 ## How to Configure the Synchronization Delay
 
-Since the version `1.3.1216` of Nuxeo Drive client, the synchronization delay is 30 seconds (5 seconds in the previous releases). There are two ways to change this value:
+Since the version `1.3.1216` of Nuxeo Drive client, the synchronization delay is 30 seconds (5 seconds in the previous releases). There are three ways to change this value:
 
-*   For test purpose, run Drive in console mode with the `--delay` parameter:
+1. For test purpose, run Nuxeo Drive in console mode with the `--delay` parameter:
 
-    ```bash
-    ndrive --log-level-file=INFO --delay=90
-    ```
+```bash
+ndrive --delay=120
+```
 
-*   Add a `config.ini` file in the folder `C:\Users\<username>\.nuxeo-drive` with the following lines:
+2. Add a `config.ini` file in the folder `C:\Users\<username>\.nuxeo-drive` with the following lines:
 
-    ```text
-    [DEFAULT]
-    env=longDelay
+```text
+[DEFAULT]
+env=longDelay
 
-    [longDelay]
-    delay=120
-    ```
+[longDelay]
+delay=120
+```
+This example sets the delay to 120 seconds by activating the `longDelay` setting environment.
 
-    This example sets the delay to 120 seconds by activating the `longDelay` setting environment.
+3. Finally, if you want to change the delay for all the Nuxeo Drive clients, you can update the `delay` setting of the [Nuxeo Drive global configuration]({{page space='nxdoc710' page='how-to-configure-nuxeo-drive-globally'}}).
 
 ## How to Change the Log Verbosity
 
-The simplest way is through the Advanced tab of the Settings panel.
+1. The simplest way is through the Advanced tab of the Settings panel.
 
-This can also done as for the previous paragraph by adding the following lines in the `config.ini` file:
+2. This can also done as for the previous paragraph by adding the following lines in the `config.ini` file:
 
-*   Increase log verbosity:
+    * Increase log verbosity:
 
     ```
     log-level-file=TRACE
     ```
 
-*   Decrease log verbosity:
+    *   Decrease log verbosity:
 
     ```
     log-level-file=ERROR
     ```
+
+3. Finally, if you want to change the log verbosity for all the Nuxeo Drive clients, you can update the `log_level_file` setting of the [Nuxeo Drive global configuration]({{page space='nxdoc710' page='how-to-configure-nuxeo-drive-globally'}}).
 
 ## How to Change the Synchronization Folder
 
@@ -193,6 +196,7 @@ This is defined by the [FOLDER_ITEM_CHILDREN](https://github.com/nuxeo/nuxeo-dri
 
 *   [Nuxeo Drive user documentation]({{page page='nuxeo-drive'}})
 *   [Nuxeo Drive developer documentation]({{page space='nxdoc710' page='nuxeo-drive'}})
+*   [How to Configure Nuxeo Drive Globally]({{page space='nxdoc710' page='how-to-configure-nuxeo-drive-globally'}})
 *   [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page space='nxdoc710' page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
 *   [Nuxeo Drive Update Site]({{page space='nxdoc710' page='nuxeo-drive-update-site'}})
 
