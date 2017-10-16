@@ -81,7 +81,7 @@ The participants of a workflow can:
 
 Participants can approve the document when it's their turn, after the previous participant on the workflow has approved it. Participants automatically get Edit permission on the document for the time they have a task to perform on the document, if they had Read permission or no access to the document.
 
-#### Participating to a Serial Document Review
+#### Participating in a Serial Document Review
 
 **To approve or reject the document**:
 
@@ -97,7 +97,7 @@ Participants can approve the document when it's their turn, after the previous p
       When the document is rejected by the first reviewer, the document is sent back to the initiator, who can then either modify the document and resubmit it, or cancel the review.
       ![]({{file name='serial-review-web-ui.png'}} ?w=300,border=true)
 
-#### Participating to a Parallel Document Review
+#### Participating in a Parallel Document Review
 
 After the workflow initiator has started the parallel workflow, two steps need to be completed:
 
