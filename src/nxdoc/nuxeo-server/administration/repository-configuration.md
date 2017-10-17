@@ -651,7 +651,7 @@ A few pseudo-SQL statements can be used to provide addition logging actions:
 *   `LOG.DEBUG message`: logs the message at DEBUG level in the standard logger,
 *   `LOG.INFO message`: logs the message at INFO level in the standard logger,
 *   `LOG.ERROR message`: logs the message at ERROR level in the standard logger,
-*   `LOG.FATAL message`: logs the message at ERROR level in the standard logger and throws an exception that will stop database initialization and make it unusable by Nuxeo.
+*   `LOG.FATAL message`: logs the message at FATAL level in the standard logger and throws an exception that will stop database initialization and make it unusable by Nuxeo.
 
 To initialize the database, the statements of the following categories are executed in this order:
 
