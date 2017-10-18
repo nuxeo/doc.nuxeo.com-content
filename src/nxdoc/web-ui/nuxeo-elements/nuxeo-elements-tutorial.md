@@ -134,7 +134,7 @@ Let's plug this application into the Nuxeo instance and change the hardcoded use
 
     {{#> panel type='code' heading='src/my-app.html'}}
     ```xml
-    <a name="doc-reader" href="/doc-reader">Document Reader</a>
+    <a name="doc-reader" href="#/doc-reader">Document Reader</a>
     ```
     {{/panel}}
 
