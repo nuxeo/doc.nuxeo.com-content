@@ -224,11 +224,11 @@ Nuxeo instance, either by `path` or `id`. This document relies on [two REST API 
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
 ```xml
-<nuxeo-document id="doc" auto doc-path="/default-domain" response="\{{document}}"></nuxeo-document>
+<nuxeo-document id="doc" auto doc-path="/default-domain/" response="\{{document}}"></nuxeo-document>
 ```
 {{/panel}}
 
-The property `document` is now bound to the response of our `nuxeo-document`. Because the `auto` property is set, `/default-domain`
+The property `document` is now bound to the response of our `nuxeo-document`. Because the `auto` property is set, `/default-domain/`
 will be retrieved automatically. We can now add some other elements to our template to display any information we find
 relevant from our document. For example:
 
@@ -335,7 +335,7 @@ named `targetPath`:
 ```
 {{/panel}}
 
-We have to update the element's prototype to declare this new property, which will hold `/default-domain` as the default
+We have to update the element's prototype to declare this new property, which will hold `/default-domain/` as the default
 path:
 
 {{#> panel type='code' heading='src/my-doc-reader.html'}}
@@ -343,7 +343,7 @@ path:
 properties: {
   targetPath: {
     type: String,
-    value: '/default-domain'
+    value: '/default-domain/'
   }
 },
 ```
@@ -502,7 +502,7 @@ For reference, here is the final code of the `doc-reader` element:
 <link rel="import" href="../bower_components/nuxeo-ui-elements/nuxeo-data-table/iron-data-table.html">
 <link rel="import" href="../bower_components/nuxeo-ui-elements/widgets/nuxeo-file.html">
 
-<dom-module id=" doc-reader">
+<dom-module id="doc-reader">
   <template>
     <style include="shared-styles">
       :host {
@@ -572,11 +572,11 @@ For reference, here is the final code of the `doc-reader` element:
 
   <script>
     Polymer({
-      is: ' doc-reader',
+      is: 'doc-reader',
       properties: {
         targetPath: {
           type: String,
-          value: '/default-domain'
+          value: '/default-domain/'
         },
         blob: {
           type: Object,
