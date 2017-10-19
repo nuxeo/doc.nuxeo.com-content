@@ -997,6 +997,12 @@ Please disable GitHub email notifications before push and re-enable after push.
 
 {{/callout}}
 
+{{#> callout type='warning' }}
+
+After the merge, the Jenkins job running on your repository will probably add comments on JIRA issues referenced in the rewritten history: these comments could be nice to have, but if you do not want them, you should disable the "Update relevant JIRA issues" options on the job, at its first run after the merge.
+
+{{/callout}}
+
 
 
 #### Using Another Local Clone as Staging
