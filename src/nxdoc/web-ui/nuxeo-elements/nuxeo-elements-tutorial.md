@@ -241,7 +241,7 @@ relevant from our document. For example:
 <h3>Contributors:</h3>
 <ul>
   <template is="dom-repeat" items="[[document.properties.dc:contributors]]" as="contributor">
-    <ul>[[contributor]]</ul>
+    <li>[[contributor]]</li>
   </template>
 </ul>
 ```
@@ -296,7 +296,7 @@ to display the children, as follows:
 <h3>Children:</h3>
 <ul>
   <template is="dom-repeat" items="[[children]]" as="child">
-    <ul>[[child.title]]</ul>
+    <li>[[child.title]]</li>
   </template>
 </ul>
 ```
@@ -545,7 +545,7 @@ For reference, here is the final code of the `doc-reader` element:
           <h3>Contributors:</h3>
           <ul>
             <template is="dom-repeat" items="[[document.properties.dc:contributors]]" as="contributor">
-              <ul>[[contributor]]</ul>
+              <li>[[contributor]]</li>
             </template>
           </ul>
         </div>
