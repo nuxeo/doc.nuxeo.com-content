@@ -139,7 +139,7 @@ tree_item_index: 300
   </table>
 </div>
 
-## Task extended fields
+## Task Extended Fields
 
 You can use [the following fetch properties]({{page version='' space='nxdoc' page='document-json-extended-fields'}}) to resolve some fields when retrieving tasks:
 
