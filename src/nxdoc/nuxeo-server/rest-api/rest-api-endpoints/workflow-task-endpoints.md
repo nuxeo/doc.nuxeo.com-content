@@ -139,6 +139,35 @@ tree_item_index: 300
   </table>
 </div>
 
+## Task extended fields
+
+You can use [the following fetch properties]({{page version='' space='nxdoc' page='document-json-extended-fields'}}) to resolve some fields when retrieving tasks:
+
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th class="small-7">Fetch Property</th>
+        <th class="small-5">Description</th>
+      </tr>
+      <tr>
+        <td class="small-7">`targetDocumentIds`</td>
+        <td class="small-5">Resolves the document targeted by the task</td>
+      </tr>
+      <tr>
+        <td class="small-7">`actors`</td>
+        <td class="small-5">Resolves the actors of a task</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+Example:
+
+```
+curl -X GET 'http://localhost:8080/nuxeo/api/v1/task?userId={userId}' -H 'X-NXfetch.task: targetDocumentIds,actors' -u user:password
+```
+
 ## Parallel Review Example
 
 Below is an example of how to start a Parallel Review Workflow and complete it with Nuxeo REST API.
