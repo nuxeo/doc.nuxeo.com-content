@@ -317,7 +317,7 @@ Nuxeo offers an API Playground, an interactive way to discover the Nuxeo Platfor
 
 Nuxeo API Playground can be used [online](http://nuxeo.github.io/api-playground/) or locally at `http://NUXEO_SERVER/nuxeo/playground` after you install the Nuxeo Package on your server (see the [Installation and Configuration](#install-config) section).
 
-Note that the online version of API Playground connects to our [demo.nuxeo.com](demo.nuxeo.com) instance by default, but you can use it with your own Nuxeo server.
+Note that the online version of API Playground connects to our `https://demo.nuxeo.com` instance by default, but you can use it with your own Nuxeo server.
 
 ![]({{file name='playground_server_login_box.png'}} ?w=500,border=true)
 
