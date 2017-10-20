@@ -134,9 +134,9 @@ There are several ways to execute a request. You can start it asynchrounously, s
 #import <NuxeoSDK/NUXSession.h>
 ```
 
-The [NUXSession](https://github.com/nuxeo/nuxeo-sdk-ios/blob/release-6.0/NuxeoSDK/NuxeoSDK/Classes/NUXSession.h) object's goal is to handle remote server connectivity, authentication and default behaviors.
+The [NUXSession](https://github.com/nuxeo/nuxeo-sdk-ios/blob/master/NuxeoSDK/NuxeoSDK/Classes/NUXSession.h) object's goal is to handle remote server connectivity, authentication and default behaviors.
 
-Do not hesitate to take a look at [the NUXSession tests]([https://github.com/nuxeo/nuxeo-sdk-ios/blob/release-6.0/NuxeoSDK/NuxeoSDKTests/Classes/NUXSessionTests.m](https://github.com/nuxeo/nuxeo-sdk-ios/blob/release-6.0/NuxeoSDK/NuxeoSDKTests/Classes/NUXSessionTests.m)) hosted in GitHub.
+Do not hesitate to take a look at [the NUXSession tests](https://github.com/nuxeo/nuxeo-sdk-ios/blob/master/NuxeoSDK/NuxeoSDKTests/Classes/NUXSessionTests.m) hosted in GitHub.
 
 #### Shared Session
 
@@ -183,7 +183,7 @@ You can also change some default behavior. For instance, you can add some reques
 #import <NuxeoSDK/NUXRequest.h>
 ```
 
-The [NUXRequest](https://github.com/nuxeo/nuxeo-sdk-ios/blob/release-6.0/NuxeoSDK/NuxeoSDK/Classes/Requests/NUXRequest.h) object exposes Nuxeo concepts like schema, adaptors, categories at a document level on top of HTTP stuff like methods, headers, data. NUXRequest is built using a NUXSession.
+The [NUXRequest](https://github.com/nuxeo/nuxeo-sdk-ios/blob/master/NuxeoSDK/NuxeoSDK/Classes/Requests/NUXRequest.h) object exposes Nuxeo concepts like schema, adaptors, categories at a document level on top of HTTP stuff like methods, headers, data. NUXRequest is built using a NUXSession.
 
 ```
 NUXRequest *request = [[NUXRequest alloc] initWithSession:aSession];
@@ -218,7 +218,7 @@ NUXRequest *request = [[NUXRequest alloc] initWithSession:aSession];
 { // Do some stuff executed on failure }];
 ```
 
-Do not hesitate to take a look at [the NUXRequest tests](https://github.com/nuxeo/nuxeo-sdk-ios/blob/release-6.0/NuxeoSDK/NuxeoSDKTests/Classes/NUXRequestTests.m) hosted in GitHub.
+Do not hesitate to take a look at [the NUXRequest tests](https://github.com/nuxeo/nuxeo-sdk-ios/blob/master/NuxeoSDK/NuxeoSDK/Classes/Requests/NUXRequest.m) hosted in GitHub.
 
 ### Response Handling
 
@@ -279,7 +279,7 @@ NSData *data = [NUXJSONSerializer dataWithEntity:entity error:&error];
 
 To allow your class to be persisted, don't forget to implement `NUXEntityPersistable` protocol.
 
-Do not hesitate to take a look at [the NUXJSONSerializer tests](https://github.com/nuxeo/nuxeo-sdk-ios/blob/release-6.0/NuxeoSDK/NuxeoSDKTests/Classes/NUXJSONSerializerTests.m) hosted in GitHub.
+Do not hesitate to take a look at [the NUXJSONSerializer tests](https://github.com/nuxeo/nuxeo-sdk-ios/blob/master/NuxeoSDK/NuxeoSDKTests/Classes/NUXJSONSerializerTests.m) hosted in GitHub.
 
 ### Convenience Category to Generate Common Requests
 
@@ -289,7 +289,7 @@ import <NuxeoSDK/NUXSession+requests.h>
 
 To ease the request generation on some common requests like fetchDocument, get document children, query, etc., we added a category which adds these methods to a `NUXSession` object.
 
-Here is a sample of convenience method, but do not hesitate to look at the [NUXSession+requests.h](https://github.com/nuxeo/nuxeo-sdk-ios/blob/release-6.0/NuxeoSDK/NuxeoSDK/Classes/NUXSession+requests.h) file itself.
+Here is a sample of convenience method, but do not hesitate to look at the [NUXSession+requests.h](https://github.com/nuxeo/nuxeo-sdk-ios/blob/master/NuxeoSDK/NuxeoSDK/Classes/NUXSession+requests.h) file itself.
 
 ```
 // Prefilled request messages
@@ -303,7 +303,7 @@ request = [session requestChildren: @"uid|path"];
 ```
 
 
-Do not hesitate to take a look at [the NUXSession tests](https://github.com/nuxeo/nuxeo-sdk-ios/blob/release-6.0/NuxeoSDK/NuxeoSDKTests/Classes/NUXSessionTests.m) hosted in GitHub.
+Do not hesitate to take a look at [the NUXSession tests](https://github.com/nuxeo/nuxeo-sdk-ios/blob/master/NuxeoSDK/NuxeoSDKTests/Classes/NUXSessionTests.m) hosted in GitHub.
 
 ## Automation Requests
 
@@ -388,4 +388,4 @@ We provide a LRU cache to easily store your blob with an API-oriented `NUXEntity
  [[NUXBlobStore instance] removeBlob:digest];
 ```
 
-Do not hesitate to take a look at [the NUXBlobStore tests](https://github.com/nuxeo/nuxeo-sdk-ios/blob/release-6.0/NuxeoSDK/NuxeoSDKTests/Classes/NUXBlobStoreTests.m) hosted in GitHub.
+Do not hesitate to take a look at [the NUXBlobStore tests](https://github.com/nuxeo/nuxeo-sdk-ios/blob/master/NuxeoSDK/NuxeoSDK/Classes/Blob/NUXBlobStore.m) hosted in GitHub.
