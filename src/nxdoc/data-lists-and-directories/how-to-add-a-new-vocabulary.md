@@ -282,10 +282,10 @@ There are 3 types of vocabulary:
 
     {{#> callout type='tip' }}
 
-    Click on **Import CSV** to import content from a .csv file instead of typing each entry manually. See example files:[ simple-vocabulary.csv]({{file name='simple-vocabulary.csv' space='studio' page='vocabularies'}}) and []({{file name='hierarchical-vocabulary.csv' space='studio' page='vocabularies'}}).
+    Click on **Import CSV** to import content from a .csv file instead of typing each entry manually. See example files:[ simple-vocabulary.csv]({{file name='simple-vocabulary.csv' space='studio' version='' page='vocabularies'}}) and [hierarchical-vocabulary.csv]({{file name='hierarchical-vocabulary.csv' space='studio' version='' page='vocabularies'}}).
 
     {{/callout}}
-5.  Click on the **Save&nbsp;**button.
+5.  Click on the **Save** button.
     You can now use the vocabulary on [layouts]({{page page='layout-and-widget-how-to-index'}}) to populate drop-down lists. After you deploy your customization on your Nuxeo Platform, the vocabulary is [available in the Admin Center]({{page space='userdoc710' page='managing-vocabularies'}}) so power users and administrators can easily add new entries to the vocabulary.
 
 &nbsp;
