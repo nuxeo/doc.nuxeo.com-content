@@ -309,7 +309,7 @@ We need two rules for this node: one that reminds Jane to review the document ev
         Message:**
         This is a friendly automated reminder.
         Please remember that you should review the following press release:
-        <a href="${docUrl}">${Document['dc:title']}</a>
+        ${Document['dc:title']}
 
         **Subject:**
         [Reminder] Please review ${Document['dc:title']}
