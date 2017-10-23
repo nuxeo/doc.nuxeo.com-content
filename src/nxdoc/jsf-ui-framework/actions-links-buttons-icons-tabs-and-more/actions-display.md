@@ -102,9 +102,9 @@ The available categories are listed below and can also be found by checking acti
 
 ## CAP Categories
 
-{{{multiexcerpt 'CAP-actions-categories-1' page='Studio:User actions categories'}}}
+{{{multiexcerpt 'CAP-actions-categories-1' space='studio' page='User actions categories'}}}
 
-{{{multiexcerpt 'CAP-actions-categories-2' page='Studio:User actions categories'}}}
+{{{multiexcerpt 'CAP-actions-categories-2' space='studio' page='User actions categories'}}}
 
 ## CAP Advanced Categories
 
@@ -133,11 +133,11 @@ This category is used for tabs displayed on every document.
 
 ```
 
-{{{multiexcerpt 'CAP-advanced-actions-categories' page='Studio:User actions categories'}}}
+{{{multiexcerpt 'CAP-advanced-actions-categories' space='studio' page='User actions categories'}}}
 
 ## DAM Categories
 
-{{{multiexcerpt 'DAM-actions-categories' page='Studio:User actions categories'}}}
+{{{multiexcerpt 'DAM-actions-categories' space='studio' page='User actions categories'}}}
 
 ## {{> anchor 'adapt-templates-to-display-action'}}Adapting Templates to Display an Action
 
