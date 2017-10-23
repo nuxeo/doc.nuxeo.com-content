@@ -242,12 +242,12 @@ By default MongoDB doesn't require authentication, but you can [enable the clien
 
 ## Nuxeo Configuration
 
-To activate MongoDB document and directories storage (as of Nuxeo FT 9.2), add the `mongodb` template to your existing list of templates (`nuxeo.templates`) in `nuxeo.conf`. Including the `mongodb-audit` template for the MongoDB Extension addon will also activate audit storage.
+To activate MongoDB document and directories storage (as of Nuxeo FT 9.2), add the `mongodb` template to your existing list of templates (`nuxeo.templates`) in `nuxeo.conf`. Including the `mongodb-audit` template will also activate audit storage.
 
 For older versions of Nuxeo, if you want to activate audit and directories storage, you need to install the [MongoDB extension addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mongodb-ext). This addon includes `mongodb-audit` and `mongodb-directory` templates in order to store respectively audit or directories data in MongoDB. For example:
 
 ```text
-nuxeo.templates=default,mongodb,mongodb-audit,mongodb-directory
+nuxeo.templates=default,mongodb,mongodb-audit
 ```
 
 If you are not using the MongoDB extension addon for older versions of Nuxeo, you **must keep** the template corresponding to your SQL database in `nuxeo.templates`. For instance you could have:
@@ -287,10 +287,40 @@ See the [MongoDB Connection String URI Format](http://docs.mongodb.org/manual/re
 It is possible to use MongoDB's [GridFS](https://docs.mongodb.org/manual/core/gridfs/) mechanism to store binary files inside MongoDB instead of the default filesystem mechanism of Nuxeo. This is activated by adding `gridfsbinaries` to the templates, for instance:
 
 ```text
-nuxeo.templates=postgresql,mongodb,gridfsbinaries
+nuxeo.templates=mongodb,gridfsbinaries
 ```
 
 When doing this, binaries will be stored in the `default.fs` GridFS bucket, which means that in native MongoDB the collections `default.fs.files` and `default.fs.chunks` will be used. See the [GridFS Reference](https://docs.mongodb.org/manual/reference/gridfs/) for more details about MongoDB's GridFS implementation.
+
+## Connection pool configuration
+
+Nuxeo has `MongoDBConnectionService` to instantiate MongoDB connections in the platform. This service holds all connections to MongoDB. A default connection filled with `nuxeo.mongodb.server` and `nuxeo.mongodb.dbname` from `nuxeo.conf` will be contributed  with id `default`.
+
+If the service doesn't have a registered connection for the given id, it will return the default one.
+
+You can customize connections used depending the feature. To do that, you need to contribute a connection to the service as below:
+
+```
+<component name="[COMPONENT_NAME]">
+
+  <extension target="org.nuxeo.runtime.mongodb.MongoDBComponent" point="connection">
+    <connection id="[CONNECTION_ID]">
+      <server>mongodb://...</server>
+      <dbname>...</dbname>
+    </connection>
+  </extension>
+
+</component>
+```
+
+Here's a list on how features resolve their connection:
+
+| Feature    | Connection id                     |
+| ---------- | --------------------------------- |
+| Audit      | `audit`                           |
+| Directory  | `directory/[DIRECTORY_NAME]`      |
+| Repository | `repository/[REPOSITORY_NAME]`    |
+| GridFS     | `blobProvider/[BLOB_PROVIDER_ID]` |
 
 
 * * *
