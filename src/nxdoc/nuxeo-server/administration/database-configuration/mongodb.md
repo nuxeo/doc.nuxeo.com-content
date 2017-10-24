@@ -242,7 +242,7 @@ By default MongoDB doesn't require authentication, but you can [enable the clien
 
 ## Nuxeo Configuration
 
-To activate MongoDB document and directories storage (as of Nuxeo FT 9.2), add the `mongodb` template to your existing list of templates (`nuxeo.templates`) in `nuxeo.conf`. Including the `mongodb-audit` template will also activate audit storage.
+To activate MongoDB document and directories storage (as of Nuxeo FT 9.2), add the `mongodb` template to your existing list of templates (`nuxeo.templates`) in `nuxeo.conf`. Including the `mongodb-audit` template that will also activate audit storage.
 
 For older versions of Nuxeo, if you want to activate audit and directories storage, you need to install the [MongoDB extension addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mongodb-ext). This addon includes `mongodb-audit` and `mongodb-directory` templates in order to store respectively audit or directories data in MongoDB. For example:
 
@@ -292,13 +292,13 @@ nuxeo.templates=mongodb,gridfsbinaries
 
 When doing this, binaries will be stored in the `default.fs` GridFS bucket, which means that in native MongoDB the collections `default.fs.files` and `default.fs.chunks` will be used. See the [GridFS Reference](https://docs.mongodb.org/manual/reference/gridfs/) for more details about MongoDB's GridFS implementation.
 
-## Connection pool configuration
+## Connection Pool Configuration
 
 Nuxeo has `MongoDBConnectionService` to instantiate MongoDB connections in the platform. This service holds all connections to MongoDB. A default connection filled with `nuxeo.mongodb.server` and `nuxeo.mongodb.dbname` from `nuxeo.conf` will be contributed  with id `default`.
 
 If the service doesn't have a registered connection for the given id, it will return the default one.
 
-You can customize connections used depending the feature. To do that, you need to contribute a connection to the service as below:
+You can customize the connections used depending on the feature. To do so, you need to contribute a connection to the service as below:
 
 ```
 <component name="[COMPONENT_NAME]">
@@ -313,7 +313,7 @@ You can customize connections used depending the feature. To do that, you need t
 </component>
 ```
 
-Here's a list on how features resolve their connection:
+Here's a list of how features resolve their connection:
 
 | Feature    | Connection id                     |
 | ---------- | --------------------------------- |
