@@ -167,7 +167,7 @@ In the Settings screen, you can switch to another folder by clicking on the `...
 You only need to make sure that:
 
 *   [Redis]({{page space='nxdoc' page='redis-configuration'}}) is enabled.
-*   The `$DATA_DIR/transientstores/default` directory is shared by all the Nuxeo instances, see the [related documentation]({{page space='ADMINDOC' page='Nuxeo Clustering+Configuration#NuxeoClusteringConfiguration-TransientStore'}}) for details.
+*   The `$DATA_DIR/transientstores/default` directory is shared by all the Nuxeo instances, see the [related documentation]({{page space='nxdoc' page='nuxeo-clustering-configuration'}}#transient-store) for details.
 
 ### Nuxeo 7.4 and lower
 
