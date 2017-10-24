@@ -193,7 +193,7 @@ To submit a document to publication, you need the following permissions:
 
 You can submit a document in several sections. The publishing workflows in the different sections are independent. The document can be published in a section and rejected in another one. The list of the sections in which you can publish a document is defined by your permissions.
 
-To** submit a document to publishing, from the **Publish** tab of the document in the workspace, select:
+To submit a document to publishing, from the **Publish** tab of the document in the workspace, select:
 
 *   the domain you want to publish the document in
 *   the rendition that should be published, typically no rendition (same document format as in the workspace) or a PDF version of the document.
@@ -227,7 +227,7 @@ Users with edit and management permissions in the section can approve the publis
 
 When a document is submitted to publication in a section in which you have management permissions, it is displayed in your dashboard. You must then approve or reject the document.
 
-To** publish a document**, click on the **Home** main tab (the **Dashboard** tab is automatically selected. The pending documents are displayed in your tasks). Click on the pending document and go to the **Publishing** part at the bottom of the tab, with has a **Reject** and a **Publish** buttons.
+To **publish a document**, click on the **Home** main tab (the **Dashboard** tab is automatically selected. The pending documents are displayed in your tasks). Click on the pending document and go to the **Publishing** part at the bottom of the tab, with has a **Reject** and a **Publish** buttons.
 
 ![]({{file name='publish-approval-form.png'}} ?w=650,border=true)
 
