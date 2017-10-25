@@ -186,11 +186,11 @@ The following elements are not available on the published document:
 To submit a document to publication, you need the following permissions:
 
 *   At least "Edit" on the workspace from which you want to publish
-*   At least "Can ask for publishing" on the section into which you want to publish the document
+*   At least "Read" and "Can ask for publishing" on the section into which you want to publish the document (Read permission is usually inherited from the user’s group permissions).
 
 You can submit a document in several sections. The publishing workflows in the different sections are independent. The document can be published in a section and rejected in another one. The list of the sections in which you can publish a document is defined by your permissions.
 
-To** submit a document to publishing,** fromthe **Publish** tab of the document in the workspace, select:
+To **submit a document to publishing**, from the **Publish** tab of the document in the workspace, select:
 
 *   The domain you want to publish the document in
 *   The rendition that should be published, typically no rendition (same document format as in the workspace) or a PDF version of the document.
@@ -224,7 +224,7 @@ Users with edit and management permissions in the section can approve the publis
 
 When a document is submitted to publication in a section in which you have management permissions, it is displayed in your dashboard. You must then approve or reject the document.
 
-To** publish a document**, click on the **Home** main tab (the **Dashboard** tab is automatically selected. The pending documents are displayed in your tasks). Click on the pending document and go to the **Publishing** part at the bottom of the tab, with has a **Reject** and a **Publish** buttons.
+To **publish a document**, click on the **Home** main tab (the **Dashboard** tab is automatically selected. The pending documents are displayed in your tasks). Click on the pending document and go to the **Publishing** part at the bottom of the tab, with has a **Reject** and a **Publish** buttons.
 
 ![]({{file name='publish-approval-form.png'}} ?w=650,border=true)
 
@@ -253,7 +253,7 @@ In the workspace, the fact that publishing was rejected is logged in the History
 
 Users with Edit permissions can easily publish a new version of a document that has already been published. Republishing is available after the published document has been edited, with or without version increment.
 
-To** republish a document**, in the workspace, open the document to republish and click on the **Publish** tab. The list of sections in which the document is published is displayed and a Republish button is displayed next to the Unpublish button. Click on the **Republish** button corresponding to the section in which you want to publish a new version of the document. The latest version of the document is immediately available from the section. It replaced the previously published version in the section.
+To **republish a document**, in the workspace, open the document to republish and click on the **Publish** tab. The list of sections in which the document is published is displayed and a Republish button is displayed next to the Unpublish button. Click on the **Republish** button corresponding to the section in which you want to publish a new version of the document. The latest version of the document is immediately available from the section. It replaced the previously published version in the section.
 
 **Unpublishing Documents**
 
@@ -261,7 +261,7 @@ Only users with editing or management permissions can unpublish a document from 
 
 Unpublishing a document deletes the document from the section, but it does not delete the workspace document.
 
-To** unpublish a document from a section**, in the **Content** tab of the section, check the box in front of the document's name and click on the **Unpublish** button. The document is unpublished and does not appear in the section. The original document in the workspace is not deleted.
+To **unpublish a document from a section**, in the **Content** tab of the section, check the box in front of the document's name and click on the **Unpublish** button. The document is unpublished and does not appear in the section. The original document in the workspace is not deleted.
 
 ### Media Publishing
 
