@@ -189,7 +189,7 @@ The following elements are not available on the published document:
 To submit a document to publication, you need the following permissions:
 
 *   at least "Edit" on the workspace from which you want to publish
-*   at least "Can ask for publishing" on the section into which you want to publish the document
+*   at least "Read" and "Can ask for publishing" on the section into which you want to publish the document (Read permission is usually inherited from the user’s group permissions). 
 
 You can submit a document in several sections. The publishing workflows in the different sections are independent. The document can be published in a section and rejected in another one. The list of the sections in which you can publish a document is defined by your permissions.
 
