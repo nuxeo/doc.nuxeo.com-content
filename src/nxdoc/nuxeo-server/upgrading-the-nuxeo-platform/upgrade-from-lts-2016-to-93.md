@@ -40,6 +40,11 @@ tree_item_index: 96
 <td colspan="1">New Default Value to `true`</td>
 <td colspan="1">[NXP-21828](https://jira.nuxeo.com/browse/NXP-21828)</td>
 </tr>
+<tr>
+<td colspan="1">`nuxeo.works.total.default.scheduled.count`</td>
+<td colspan="1">Renamed to `nuxeo.works.total.default.scheduled`</td>
+<td colspan="1">[NXP-21828](https://jira.nuxeo.com/browse/NXP-22996)</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -85,6 +90,8 @@ tree_item_index: 96
 
 {{{multiexcerpt 'upgrade-9.2-sql-template-required' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
+{{{multiexcerpt 'upgrade-9.3-behavior.sqldirectories' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
 ##### MongoDB Directories
 
 {{{multiexcerpt 'upgrade-9.2-new.directories.mongodb' page='Upgrade from LTS 2016 following Fast Tracks'}}}
@@ -109,6 +116,14 @@ tree_item_index: 96
 
 {{{multiexcerpt 'upgrade-9.2-code.oauth' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
+{{{multiexcerpt 'upgrade-9.3-behavior.WebException' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
+{{{multiexcerpt 'upgrade-9.3-behavior.PageProvider' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
+{{{multiexcerpt 'upgrade-9.3-behavior.espassthrough' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
+{{{multiexcerpt 'upgrade-9.3-behavior.complexlist' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
 #### Operation Changes
 
 {{{multiexcerpt 'upgrade-9.1-operation.Server.CreateUser' page='Upgrade from LTS 2016 following Fast Tracks'}}}
@@ -117,7 +132,13 @@ tree_item_index: 96
 
 {{{multiexcerpt 'upgrade-9.1-operation.addPermission' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
+{{{multiexcerpt 'upgrade-9.3-operations.facets' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
 #### Deprecated APIs
+
+##### Nuxeoctl register-trial
+
+{{{multiexcerpt 'upgrade-9.3-deprecated.nuxeoctltrial' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 ##### Automatic Versioning
 
@@ -148,6 +169,10 @@ tree_item_index: 96
 {{{multiexcerpt 'upgrade-9.1-operation.Server.CreateUser' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 {{{multiexcerpt 'upgrade-9.2-deprecated.oauth2' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
+##### WebException
+
+{{{multiexcerpt 'upgrade-9.3-deprecated.WebException' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 ### Addons
 
