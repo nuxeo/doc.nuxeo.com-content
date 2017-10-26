@@ -399,6 +399,127 @@ Nuxeo Segment.io plugin is now aligned on `com.github.segmentio:analytics:1.0.7`
 - [Upgrade notes for 9.2](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%229.2%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 - [Release notes for 9.2]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
 
+## From 9.2 to 9.3
+
+### Installation and Configuration
+
+#### New Parameters
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Parameter</th>
+<th colspan="1">Modification</th>
+<th colspan="1">Reference</th>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.server.tomcat_error.show_report`</td>
+<td colspan="1">New Default Value to `false`</td>
+<td colspan="1">[NXP-22592](https://jira.nuxeo.com/browse/NXP-22592)</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.server.tomcat_error.show_report_info`</td>
+<td colspan="1">New Default Value to `false`</td>
+<td colspan="1">[NXP-22592](https://jira.nuxeo.com/browse/NXP-22592)</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.faceted.tag.service.enabled`</td>
+<td colspan="1">New Default Value to `false`</td>
+<td colspan="1">[NXP-21651](https://jira.nuxeo.com/browse/NXP-21651)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+#### Parameters to Update
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Parameter</th>
+<th colspan="1">Modification</th>
+<th colspan="1">Reference</th>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.works.total.default.scheduled.count`</td>
+<td colspan="1">Renamed to `nuxeo.works.total.default.scheduled`</td>
+<td colspan="1">[NXP-21828](https://jira.nuxeo.com/browse/NXP-22996)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### Data
+
+#### MongoDB and SQL Directories
+
+{{! multiexcerpt name='upgrade-9.3-behavior.sqldirectories'}}
+
+MongoDB can store Nuxeo directories. By default when `mongodb` template is enabled, directories are stored in MongoDB. If you want to keep your directories in your SQL database, check the following ticket: [NXP-22785](https://jira.nuxeo.com/browse/NXP-22785)
+
+{{! /multiexcerpt}}
+
+### Code Changes
+
+#### Code Behavior Changes
+
+{{! multiexcerpt name='upgrade-9.3-behavior.WebException'}}
+
+- A new `statusCode` field has been added to `NuxeoException` to specify which HTTP code should be returned in case the exception is thrown, default to `500`. [NXP-21776](https://jira.nuxeo.com/browse/NXP-21776)
+
+{{! /multiexcerpt}}
+
+{{! multiexcerpt name='upgrade-9.3-behavior.PageProvider'}}
+
+- New `org.nuxeo.ecm.platform.query.api.PageProvider#getResultsCountLimit` method to access the limit of number of results beyond which the page provider may not be able to compute the result count. [NXP-23202](https://jira.nuxeo.com/browse/NXP-23202)
+
+{{! /multiexcerpt}}
+
+{{! multiexcerpt name='upgrade-9.3-behavior.espassthrough'}}
+
+- When requesting Elasticsearch using HTTP passthrough requests, uses of query_string or simple_query_string must be adapted to use field `all_field` explicitly instead of relying on the default `_all` field which is now disabled. [NXP-23059](https://jira.nuxeo.com/browse/NXP-23059)
+
+{{! /multiexcerpt}}
+
+{{! multiexcerpt name='upgrade-9.3-behavior.complexlist'}}
+
+- Setting the value of a complex property now overwrites any previous values, and does not do a partial update anymore. [NXP-19261](https://jira.nuxeo.com/browse/NXP-19261)
+
+{{! /multiexcerpt}}
+
+#### Operation Changes
+
+{{! multiexcerpt name='upgrade-9.3-operations.facets'}}
+
+- Operations `Document.CopySchema`, `Document.AddFacet` and `Document.RemoveFacet` have a new parameter `save` to force a session save or not. [NXP-22912](https://jira.nuxeo.com/browse/NXP-22912)
+
+{{! /multiexcerpt}}
+
+#### Deprecated APIs
+
+##### Nuxeoctl register-trial
+
+{{! multiexcerpt name='upgrade-9.3-deprecated.nuxeoctltrial'}}
+
+Command `nuxeoctl register-trial` has been deprecated. [NXP-23122](https://jira.nuxeo.com/browse/NXP-23122)
+
+{{! /multiexcerpt}}
+
+##### WebException
+
+{{! multiexcerpt name='upgrade-9.3-deprecated.WebException'}}
+
+`WebException` (and most subclasses) has been deprecated, `NuxeoException` (and subclasses) are now the exceptions to be thrown. [NXP-21776](https://jira.nuxeo.com/browse/NXP-21776)
+
+{{! /multiexcerpt}}
+
+### Complementary Information
+
+- [Upgrade notes for 9.3](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%229.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+- [Release notes for 9.3]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
+
 {{! /multiexcerpt}}
 
 
