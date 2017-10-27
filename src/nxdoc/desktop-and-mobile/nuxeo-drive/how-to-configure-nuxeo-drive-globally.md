@@ -16,13 +16,12 @@ labels:
     - nuxeo-drive-component
 toc: true
 tree_item_index: 300
-
 ---
 
 Since 8.10-HF17, some settings used by Nuxeo Drive can be configured globally from the Nuxeo server.
 
 They are set in a JSON configuration file located in the `drive` template of the [nuxeo-drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive) package.
-They can be changed by updating the `$NUXEO_SERVER/templates/drive/nxserver/nuxeo.war/drive/config.json` file and and will be taken into account by the Nuxeo Drive clients shortly.
+They can be changed by updating the `$NUXEO_SERVER/templates/drive/nxserver/nuxeo.war/drive/config.json` file and will be taken into account by the Nuxeo Drive clients shortly.
 
 The configuration file is available through HTTP at `$NUXEO_URL/drive/config.json`.
 
