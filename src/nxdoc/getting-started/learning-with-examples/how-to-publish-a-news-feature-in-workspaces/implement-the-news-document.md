@@ -119,17 +119,19 @@ In this section, we will:
 
 For this section, it is recommended to take a look at the following guides for a step-by-step approach:
 
-*   [How to define a document type]({{page page='how-to-define-a-document-type'}})
-*   [Use Content Automation]({{page page='how-to-define-a-new-content-view'}})
+- [HOWTO: Define a document type]({{page page='how-to-define-a-document-type'}})
+- [HOWTO: Customize Document Layouts]({{page page='web-ui-document-layouts'}})
+- [Use Content Automation]({{page page='how-to-define-a-new-content-view'}})
 
 {{/callout}}
 
 ## Before You Start
 
-{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}
+{{multiexcerpt 'check-jsf-ui-dependency' page='/810/nxdoc/implementing-documentation-items'}}
 
 ## Create the News Document Type
 
+On Studio Modeler:
 1.  Create a new document type called `News`.
 
     {{#> callout type='tip' }}
@@ -146,7 +148,22 @@ For this section, it is recommended to take a look at the following guides for a
     *   **Edit layout** metadata: import Creation layout (it is the same).
     *   **View layout** metadata: import Creation layout and add `dc:valid` as DateTime widget on a third row.
 
-    The `News` document type is now created. However, there is no way to access the creation form for now.
+You can now click on the button **Configure Layouts in Designer** to switch to Studio Designer.
+
+1. Configure the 5 layouts (Create, Edit, Import, Metadata and View).
+    You can modify them by drag and dropping the field that you want from the catalog on the right.
+1. Click on **Save**.
+
+The last step is to add your labels to your translations file to display them correctly in the UI.
+
+To do so:
+
+1. Click on the UI tab (second tab on the left menu).
+1. Click on Translations.
+    Use the default messages.json or create your own language.
+1. Create a new entry in the JSON file with key `label.document.type.<document type name>` and the document type name as value. Here it is `"label.document.type.news":"News"`.
+
+The `News` document type is now created. However, there is no way to access the creation form for now.
 
 ## Create the Structure Template for News Folder to Be Available Automatically
 
