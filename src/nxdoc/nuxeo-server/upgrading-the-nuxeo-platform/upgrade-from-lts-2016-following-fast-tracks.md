@@ -415,17 +415,17 @@ Nuxeo Segment.io plugin is now aligned on `com.github.segmentio:analytics:1.0.7`
 </tr>
 <tr>
 <td colspan="1">`nuxeo.server.tomcat_error.show_report`</td>
-<td colspan="1">New Default Value to `false`</td>
+<td colspan="1">Default Value to `false`</td>
 <td colspan="1">[NXP-22592](https://jira.nuxeo.com/browse/NXP-22592)</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.server.tomcat_error.show_report_info`</td>
-<td colspan="1">New Default Value to `false`</td>
+<td colspan="1">Default Value to `false`</td>
 <td colspan="1">[NXP-22592](https://jira.nuxeo.com/browse/NXP-22592)</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.faceted.tag.service.enabled`</td>
-<td colspan="1">New Default Value to `false`</td>
+<td colspan="1">Default Value to `false`</td>
 <td colspan="1">[NXP-21651](https://jira.nuxeo.com/browse/NXP-21651)</td>
 </tr>
 </tbody>

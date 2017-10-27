@@ -1,6 +1,6 @@
 ---
-title: Upgrade from LTS 2016 to 9.2
-description: Instructions to upgrade your Nuxeo Platform instance from LTS 2016 version to Fast Track 9.2.
+title: Upgrade from LTS 2016 to 9.3
+description: Instructions to upgrade your Nuxeo Platform instance from LTS 2016 version to Fast Track 9.3.
 review:
     comment: ''
     date: '2017-04-03'
@@ -11,7 +11,7 @@ toc: true
 tree_item_index: 96
 ---
 
-## From LTS 2016 to 9.2
+## From LTS 2016 to 9.3
 
 ### Installation and Configuration
 
@@ -73,6 +73,21 @@ tree_item_index: 96
 <td colspan="1">`nuxeo.automation.allowVirtualUser`</td>
 <td colspan="1">Default Value to `false`</td>
 <td colspan="1">[NXP-21889](https://jira.nuxeo.com/browse/NXP-21889)</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.faceted.tag.service.enabled`</td>
+<td colspan="1">Default Value to `false`</td>
+<td colspan="1">[NXP-21651](https://jira.nuxeo.com/browse/NXP-21651)</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.server.tomcat_error.show_report`</td>
+<td colspan="1">Default Value to `false`</td>
+<td colspan="1">[NXP-22592](https://jira.nuxeo.com/browse/NXP-22592)</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.server.tomcat_error.show_report_info`</td>
+<td colspan="1">Default Value to `false`</td>
+<td colspan="1">[NXP-22592](https://jira.nuxeo.com/browse/NXP-22592)</td>
 </tr>
 </tbody>
 </table>
