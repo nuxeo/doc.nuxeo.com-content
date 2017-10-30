@@ -819,9 +819,14 @@ curl -L https://github.com/nuxeo/nuxeo/pull/67.patch | git am
 #### As a Branch
 
 ```
-# Fetch is useless if you properly configured remote.origin.fetch at global or repository level
+# Fetch details are needed only if you didn't configure remote.origin.fetch at global or repository level
 git fetch origin +pull/67/head:pull/67
+
+# Pull requests can be checkouted like a standard branch
 git checkout pull/67
+
+# You can list the modified files and open them in your preferred IDE (here using Eclipse for a PR on master)
+git logone origin/master.. --name-only --pretty="format:" | xargs eclipse
 ```
 
 #### Fetch the Pull Request Changes
