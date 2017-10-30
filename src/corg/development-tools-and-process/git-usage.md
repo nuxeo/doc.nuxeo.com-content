@@ -826,7 +826,7 @@ git fetch origin +pull/67/head:pull/67
 git checkout pull/67
 
 # You can list the modified files and open them in your preferred IDE (here using Eclipse for a PR on master)
-git logone origin/master.. --name-only --pretty="format:" | xargs eclipse
+git log origin/master.. --name-only --format="" | xargs eclipse
 ```
 
 #### Fetch the Pull Request Changes
