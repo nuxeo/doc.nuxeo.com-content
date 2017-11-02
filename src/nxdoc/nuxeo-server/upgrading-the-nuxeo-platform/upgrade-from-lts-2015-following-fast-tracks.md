@@ -327,6 +327,16 @@ On 7.10-HF12, optimizations are disabled by default. You can add the following c
 
 Reference JIRA issue: [NXP-17690](https://jira.nuxeo.com/browse/NXP-17690)
 
+From Nuxeo versions 9.3, 8.10-HF18 and 7.10-HF34, additional optimizations were done on vocabulary pages, when showing lots of entries, similar to optimizations previously done for document listings rendering.
+
+{{#> callout type='info' }}
+
+These optimizations are not activated by default from 8.10-HF18 and 7.10-HF34. You can add the following contribution to your application to enable them: [enable-jsf-vocabularies-optims-config.xml](https://jira.nuxeo.com/secure/attachment/66096/enable-jsf-vocabularies-optims-config.xml).
+
+{{/callout}}
+
+Reference JIRA issue: [NXP-23394](https://jira.nuxeo.com/browse/NXP-23394)
+
 {{! /multiexcerpt}}
 
 ### Complementary Information&nbsp;
