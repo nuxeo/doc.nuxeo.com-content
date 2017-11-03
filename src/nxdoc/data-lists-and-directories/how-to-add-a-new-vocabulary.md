@@ -282,7 +282,7 @@ There are 3 types of vocabulary:
 
     {{#> callout type='tip' }}
 
-    Click on **Import CSV** to import content from a .csv file instead of typing each entry manually. See example files:[ simple-vocabulary.csv]({{file name='simple-vocabulary.csv' space='studio' version='' page='vocabularies'}}) and [hierarchical-vocabulary.csv]({{file name='hierarchical-vocabulary.csv' space='studio' version='' page='vocabularies'}}).
+    Click on **Import CSV** to import content from a .csv file instead of typing each entry manually. See example files:[ simple-vocabulary.csv]({{file name='simple-vocabulary.csv' page='/studio/vocabularies'}}) and [hierarchical-vocabulary.csv]({{file name='hierarchical-vocabulary.csv' page='/studio/vocabularies'}}).
 
     {{/callout}}
 5.  Click on the **Save** button.
