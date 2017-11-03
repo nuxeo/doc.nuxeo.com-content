@@ -217,4 +217,4 @@ Header edit Set-Cookie ^(.*)$ $1;Secure
 
 ### Use mod_security
 
-[http://www.modsecurity.org/](http://www.modsecurity.org/)
+https://www.modsecurity.org/
