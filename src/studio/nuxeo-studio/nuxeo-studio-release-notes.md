@@ -11,6 +11,10 @@ tree_item_index: 730
 
 Discover which changes we brought in our recent Nuxeo Studio updates.
 
+## November 5, 2017
+{{{multiexcerpt 'summary-v73' page='2017-11-05-studio-73'}}}
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;[Learn more]({{page page='2017-11-05-studio-73'}})
+
 ## October 10, 2017
 {{{multiexcerpt 'summary-v71' page='2017-10-10-studio-71'}}}
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;[Learn more]({{page page='2017-10-10-studio-71'}})
