@@ -134,17 +134,16 @@ If you have any questions, feel free to contact our support team via a dedicated
 ### Security Issue on MS Windows
 
 Windows users need to upgrade the Tomcat version to protect against a potential CSRF token leak in the default manager applications distributed with Tomcat. Follow this procedure to upgrade Tomcat to version `7.0.81`, version recommended by [NXP-19726](https://jira.nuxeo.com/browse/NXP-19726):
-1. Open a PowerShell session
-2. Ensure you can run "java" and "jar" with the current "$env:Path" environment variable or set the "$env:Path" as needed.
-3. Set the ExecutionPolicy to "Unrestricted" (see [MicroSoft usage notes](https://go.microsoft.com/fwlink/?LinkID=135170))
-4. run the script using the following command line format (using full path to NUXEO_HOME)
+1. Open a PowerShell session.
+2. Ensure you can run "java" and "jar" with the current `$env:Path` environment variable or set the `$env:Path` as needed.
+3. Set the `ExecutionPolicy` to "Unrestricted" (see [Microsoft usage notes](https://go.microsoft.com/fwlink/?LinkID=135170)).
+4. Run the script using the following command line format (using full path to `NUXEO_HOME`):
 ```
 upgrade_tomcat7.ps1 NUXEO_HOME 7.0.81
 ```
-(The script is available under NUXEO_HOME\templates\common-base\client\scripts when distributed by Hotfix 15, while the source of the script is available on [github](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common-base/client/scripts/upgrade_tomcat7.ps1))
-
-5. Restore the ExecutionPolicy to your default level
-6. exit the PowerShell session
+(The script is available under `NUXEO_HOME\templates\common-base\client\scripts` when distributed by Hotfix 15, while the source of the script is available on [GitHub](https://github.com/nuxeo/nuxeo/blob/8.10/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common-base/client/scripts/upgrade_tomcat7.ps1)).
+5. Restore the ExecutionPolicy to your default level.
+6. Exit the PowerShell session.
 
 
 ## Hotfix 10
