@@ -18,21 +18,20 @@ When using the Elasticsearch Page Provider, you can use the [Elasticsearch highl
 The fields that can be highlighted have to be fulltext analyzed by Elasticsearch, so the mapping has to be modified accordingly. For example, to enable highlight on words in the content of a file, contained in the `ecm:binaryText` field, the mapping has been modified as such since 9.2:
 
 ```
-"ecm:binarytext" : {
-        "type" : "string",
-        "include_in_all" : true,
-        "analyzer" : "fulltext"
-},
-
+    "ecm:binarytext": {
+      "type": "text",
+      "analyzer": "fulltext",
+      "copy_to": "all_field"
+    },
 ```
 
 Enabling such fulltext analyzer on `ecm:binaryText` is not free in term of indexing performances and you might want to disable it if you don't need this feature by setting the `ecm:binaryText` mapping back to:
 
 ```
 "ecm:binarytext" : {
-   "type" : "string",
-   "index" : "no",
-   "include_in_all" : true
+   "type" : "keyword",
+   "index" : false,
+   "copy_to" : "all_field"
 },
 ```
 

@@ -137,7 +137,7 @@ The platform will use the [DefaultSearchRequestFilter](https://github.com/nuxeo/
 ```js
 {
     "query": {
-        "filtered": {
+        "bool": {
             "filter": {
                 "terms": {
                     "ecm:acl": [
@@ -147,7 +147,7 @@ The platform will use the [DefaultSearchRequestFilter](https://github.com/nuxeo/
                     ]
                 }
             },
-            "query": {
+            "must": {
                 "match_all": {}
             }
         }

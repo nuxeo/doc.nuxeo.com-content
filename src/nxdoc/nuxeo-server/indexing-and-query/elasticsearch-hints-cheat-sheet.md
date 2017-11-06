@@ -90,7 +90,7 @@ This page lists interesting use cases of Elasticsearch Hints.
 
 *   Drop any string field on your content view
 *   Use the following values for the ES hints configuration:
-    *   Index: `_all`
+    *   Index: `all_field`
     *   Analyzer: `fulltext`
     *   Operator: `fuzzy`
 
@@ -101,7 +101,50 @@ This page lists interesting use cases of Elasticsearch Hints.
 
 ## Using the Common Operator on the Main Attachment Content
 
-{{{multiexcerpt 'common-operator-main-attachment' page='Configuring the Elasticsearch Mapping'}}}
+Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) in [Nuxeo University](https://university.nuxeo.com)
+
+Suppose you want to be able to search using the [common operator](https://www.elastic.co/guide/en/elasticsearch/reference/1.5/query-dsl-common-terms-query.html) on your documents' main attachment content. This Elasticsearch operator is interesting for two reasons:
+
+*   The common operator can be seen as an alternative to the full-text search.
+    One notable difference is that it allows to search on terms that would have been removed by the full-text analyzer. If I absolutely want to search for the &ldquo;Not Beyond Space Travel Agencies&rdquo;, I&rsquo;d like to be able to search for the &ldquo;Not&rdquo; keyword.
+*   The common operator is smart. It divides query terms between those which are rare into the index, and those which are commonly found into it.
+    Rare terms will get a boost, common terms will be lowered. Let's say you have lots of contracts in your repository, and you search for "confidentiality clause". If both query terms were considered of same importance, most relevant results might be drowned. The common operator will understand that the term "confidentiality" is rare and boost it, while lowering the importance of the "clause" term, that is common. This will help you getting the most relevant results first.
+
+To implement this use case:
+
+*   In the `analyzer` configuration, add an analyzer that will be used to index the main attachment's content:
+
+```js
+"my_attachment_analyzer" : {
+  "type" : "custom",
+    "filter" : [
+      "word_delimiter_filter",
+      "lowercase",
+      "asciifolding"
+    ],
+  "tokenizer" : "standard"
+}
+```
+*   In the `properties` configuration, update the `ecm:binarytext` field mapping configuration to the following:
+
+```js
+"ecm:binarytext" : {
+  "type" : "text",
+  "analyzer": "fulltext",
+  "copy_to": "all_field",
+  "fields": 
+    "common" : {
+      "type": "text",
+      "analyzer" : "my_attachment_analyzer",
+      "include_in_all" : false
+    }
+  }
+}
+```
+
+You can now configure hints in Nuxeo Studio using the common operator when querying on the `ecm:binarytext.common` index.
+
+
 
 ### Nuxeo Studio Configuration
 

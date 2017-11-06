@@ -192,49 +192,91 @@ This documentation page talks about the many aspects you can tune for improving 
 
 {{! /excerpt}}
 
-Nuxeo comes with a default mapping that can work with custom fields of your schemas, but in a limited way. To leverage the search capabilities of Elasticsearch you need to define your own mapping, for instance in the following cases:
-
-*   use of a non English or a custom analyzer
-*   use a specific NXQL operators on a custom field: `ILIKE`, `ecm:fulltext.custom`, `STARTSWITH`
-*   exclude field from the full-text search
-*   sort on a custom field that may not exist
-
-To do this you need to create your own [custom template that redefines the Elasticsearch mapping]({{page page='elasticsearch-setup'}}#changingelasticsearchmapping). This way the mapping reference stay on the Nuxeo configuration side and you should not update the mapping directly on the Elasticsearch side.
-
-Nuxeo updates the mapping on Elasticsearch only when:
-*  the Elasticsearch index does not exist
-*  a full repository reindexing is performed
-
-## Customizing the Language
-
-The Nuxeo code uses a full-text analyzer named `fulltext`. This is an alias that points to the `en_fulltext` analyzer by default.
-
-To change it to the French analyzer for instance, move the following line into the `fr_fulltext`:
-
-```
- "alias" : "fulltext"
-```
-
 {{#> callout type='warning' }}
 
-If you dump the mapping from the Elasticsearch HTTP API (or using an Elasticsearch plug-in like head or kopf), you will see that alias are replaced by the target.
+This documentation page apply only to Nuxeo >= 9.3 with Elasticsearch >= 5.6.
 
 {{/callout}}
 
+Nuxeo comes with a default mapping that can work with custom fields of your schemas, but in a limited way. To leverage the search capabilities of Elasticsearch you need to define your own mapping, for instance in the following cases:
+
+*   use of a non English or a custom analyzer
+*   use a specific NXQL operators on a custom field: `LIKE`, `ILIKE`, `ecm:fulltext.custom`, `STARTSWITH`
+*   exclude field from the full-text search
+
+To do this you need to create your own [custom template that redefines the Elasticsearch mapping]({{page page='elasticsearch-setup'}}#changingelasticsearchmapping).
+This way the mapping reference stay on the Nuxeo configuration side and you should not update the mapping directly on the Elasticsearch side.
+
+Nuxeo updates the mapping and setting on Elasticsearch only when:
+*  the Elasticsearch index does not exist
+*  a full repository re-indexing is performed
+
+## Customizing the Language
+
+The Nuxeo code and mapping use a full-text analyzer named `fulltext`, this analyzer is defined in the settings file as an english analyzer.
+
+You can reconfigure the `fulltext` analyzer to match your language and requirements. Note that a `fulltext_fr` is provided as a French analyzer example.
+
+
+## Include/Excluding a Field from the Full-Text Search
+
+Since Nuxeo 9.3 and the switch to Elasticsearch 5.6, there is no more default `_all` field. This field is going to be deprecated in Elasticsearch 6.0.
+
+The default fulltext field now relies on a custom field named `all_field`.
+
+The default mapping contains a dynamic template that copies any text fields into this `all_field`.
+
+This means that:
+
+* if you don't set an explicit mapping for a text field it will be part of the `all_field`.
+
+* if you set an explicit mapping for a text field you need to choose:
+
+  - To include the field to the default fulltext using the `copy_to` option:
+  ```
+  "my:field" : {
+    "type" : "keyword",
+    "copy_to" : "all_field"
+  }
+  ```
+  - To not include the field to the default fulltext by omitting the copy option:
+  ```
+   "my:unsearchable_field" : {
+      "type" : "keyword"
+   }
+  ```
+
+## Making LIKE Work
+
+The `LIKE` query can be translated to `match_phrase_prefix` for right truncation, this requires a text field defined as:
+```
+"my:field" : {
+  "type" : "text",
+  "copy_to" : "all_field"
+}
+```
+
+If the field is also used for sorting results it need to have a special `fielddata`  option:
+```
+"my:field" : {
+  "type" : "text",
+  "copy_to" : "all_field",
+  "fielddata" : true
+}
+
+```
+
 ## Making ILIKE Work - Case Insensitive Search
 
-To do case insensitive search using an `ILIKE` operation you need to declare your field as a `multi_field` with a `lowercase` index like this:
+To do case insensitive search using an `ILIKE` operation you need to declare your field as a multi field with a `lowercase` field like this:
 
 ```
 "my:field" : {
-  "type" : "multi_field",
+  "type" : "keyword",
+  "copy_to" : "all_field",
   "fields" : {
-    "my:field" : {
-      "include_in_all" : "true",
-      "type" : "string"
-    },
     "lowercase" : {
-      "type": "string",
+      "type": "text",
       "analyzer" : "lowercase_analyzer"
     }
   }
@@ -243,20 +285,16 @@ To do case insensitive search using an `ILIKE` operation you need to declare you
 
 ## Making STARTSWITH Work with a Custom Field
 
-To use a `STARTSWITH` operator on a field with a path pattern like a hierarchical vocabulary. Turn your field into a `multi_field` and a `children` sub field:
+To use a `STARTSWITH` operator on a field with a path pattern like a hierarchical vocabulary. Turn your field into a multi field with a `children` sub field:
 
 ```
 "my:field" : {
-  "type" : "multi_field",
+  "type" : "keyword",
   "fields" : {
-    "my:field" : {
-      "index" : "not_analyzed",
-      "type" : "string"
-    },
     "children" : {
+      "type" : "text",
       "search_analyzer" : "keyword",
-      "index_analyzer" : "path_analyzer",
-      "type" : "string"
+      "analyzer" : "path_analyzer"
     }
   }
 }
@@ -264,52 +302,20 @@ To use a `STARTSWITH` operator on a field with a path pattern like a hierarchica
 
 ## Adding a New Full-Text Field
 
-To use the full-text search syntax on a custom field you need to create a `multi_field` with a `fulltext` index like this:
+To use the full-text search syntax on a custom field you need to create a multi field with a `fulltext` index like this:
 
 ```
 "my:text" : {
-  "type" : "multi_field",
+  "type" : "keyword",
+  "copy_to" : "all_field",
   "fields" : {
-    "my:text" : {
-      "include_in_all" : "true",
-      "type" : "string"
-    },
-    "fulltext" : {
-      "type": "string",
+      "fulltext" : {
+      "type": "text",
       "analyzer" : "fulltext"
     }
   }
 }
 
-```
-
-{{#> callout type='tip' }}
-
-Note that if you:
-
-*   don't perform non fulltext search on this field
-*   don't use this field with a `IS NULL` or `IS NOT NULL`operation
-*   don't sort on this field
-
-Then you can disable the default index on the field by adding after the second
-```
-"my:text" : {
-    "index" : "no",
-    ...
-},
-```
-
-{{/callout}}
-
-## Excluding a Field from the Full-Text Search
-
-Suppose you want to exclude `my:secret` field from the `ecm:fulltext` search:
-
-```
- "my:secret" : {
-    "type" : "string",
-    "include_in_all" : false
- }
 ```
 
 ## Use a NGram Index for Efficient Left Truncature Search
@@ -348,19 +354,15 @@ Then use it in the mapping:
    "properties" : {
 ...
       "dc:title" : {
-         "type" : "multi_field",
+         "type" : "text",
          "fields" : {
-           "dc:title" : {
-             "index" : "not_analyzed",
-             "type" : "string"
-           },
            "fulltext" : {
-             "boost": 2,
-             "type": "string",
-             "analyzer" : "fulltext"
+             "type": "text",
+             "analyzer" : "fulltext",
+             "boost": 2
            },
            "ngram": {
-             "type": "string",
+             "type": "text",
              "analyzer": "ngram_analyzer"
            }
          }
@@ -379,56 +381,6 @@ Using:
 SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.ngram) ANALYZER(lowercase_analyzer) OPERATOR(match) */ dc:title = 'Foo'"));
 ```
 
-## Index the Main Attachment Content for Use with the Common Operator
-
-{{! multiexcerpt name='common-operator-main-attachment'}}{{> wistia_video id='nvdt4nzdq9'}}
-Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) in [Nuxeo University](https://university.nuxeo.com)
-
-Suppose you want to be able to search using the [common operator](https://www.elastic.co/guide/en/elasticsearch/reference/1.5/query-dsl-common-terms-query.html) on your documents' main attachment content. This Elasticsearch operator is interesting for two reasons:
-
-*   The common operator can be seen as an alternative to the full-text search.
-    One notable difference is that it allows to search on terms that would have been removed by the full-text analyzer. If I absolutely want to search for the &ldquo;Not Beyond Space Travel Agencies&rdquo;, I&rsquo;d like to be able to search for the &ldquo;Not&rdquo; keyword.
-*   The common operator is smart. It divides query terms between those which are rare into the index, and those which are commonly found into it.
-    Rare terms will get a boost, common terms will be lowered. Let's say you have lots of contracts in your repository, and you search for "confidentiality clause". If both query terms were considered of same importance, most relevant results might be drowned. The common operator will understand that the term "confidentiality" is rare and boost it, while lowering the importance of the "clause" term, that is common. This will help you getting the most relevant results first.
-
-To implement this use case:
-
-*   In the `analyzer` configuration, add an analyzer that will be used to index the main attachment's content:
-
-```js
-"my_attachment_analyzer" : {
-  "type" : "custom",
-    "filter" : [
-      "word_delimiter_filter",
-      "lowercase",
-      "asciifolding"
-    ],
-  "tokenizer" : "standard"
-}
-```
-*   In the `properties` configuration, update the `ecm:binarytext` field mapping configuration to the following:
-
-```js
-"ecm:binarytext" : {
-  "type" : "multi_field",
-  "fields" : {
-    "ecm:binarytext" : {
-      "type" : "string",
-      "index" : "no",
-      "include_in_all" : true
-    },
-    "common" : {
-      "type": "string",
-      "analyzer" : "my_attachment_analyzer",
-      "include_in_all" : false
-    }
-  }
-}
-```
-
-You can now configure hints in Nuxeo Studio using the common operator when querying on the `ecm:binarytext.common` index.
-
-{{! /multiexcerpt}}
 
 * * *
 
