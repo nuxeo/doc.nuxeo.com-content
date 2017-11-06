@@ -394,9 +394,9 @@ There are 3 steps shown by 3 tabs to brand your application:
 
 ![]({{file name='branding_tabs.png'}} ?w=310,h=42)
 
-*   The [**Main Pages**](#mainp)tab will let you manage the global rendering of your application
+*   The [**Main Pages**](#mainp) tab will let you manage the global rendering of your application
 *   The [**Login Page**](#login) tab will let you manage the login page rendering
-*   The [**Custom CSS**](#css)will let you define your CSS rules that will be applied on each page of Nuxeo
+*   The [**Custom CSS**](#css) will let you define your CSS rules that will be applied on each page of Nuxeo
 
 {{> anchor 'mainpages'}}
 
