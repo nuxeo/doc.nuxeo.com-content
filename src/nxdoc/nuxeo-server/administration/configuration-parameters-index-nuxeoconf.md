@@ -2193,6 +2193,12 @@ Example: https://my.nuxeo.com/</td>
 <td colspan="1">Since 6.0</td>
 </tr>
 <tr>
+<td colspan="1">`elasticsearch.client`</td>
+<td colspan="1">Choose between TransportClient and RestClient protocols</td>
+<td colspan="1">`TransportClient`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
 <td colspan="1">`elasticsearch.indexName`</td>
 <td colspan="1">Name of the Elasticsearch index for the default document repository</td>
 <td colspan="1">`nuxeo`</td>
@@ -2200,13 +2206,14 @@ Example: https://my.nuxeo.com/</td>
 </tr>
 <tr>
 <td colspan="1">`elasticsearch.addressList`</td>
-<td colspan="1">Comma separated list of Elasticsearch nodes, if empty use a local in JVM node (not for production)</td>
+<td colspan="1">For TransportClient protocol a comma separated list of Elasticsearch node `host:port`.</td>
+For RestClient protocol a comma separated list of URL. If empty an in JVM embedded Elasticsearch node is used, the embedded node is only for testing and it is not supported for production
 <td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
 <td colspan="1">`elasticsearch.clusterName`</td>
-<td colspan="1">Name of the Elasticsearch cluster to join</td>
+<td colspan="1">Name of the Elasticsearch cluster to join when using a TranportClient protocol</td>
 <td colspan="1">`nuxeoCluster`</td>
 <td colspan="1">&nbsp;</td>
 </tr>
