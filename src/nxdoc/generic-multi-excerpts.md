@@ -87,7 +87,7 @@ This addon requires no specific installation steps. It can be installed like any
 
 {{! multiexcerpt name='Designer-restricted-access-note'}}
 {{#> callout type='note' }}
-The Studio Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
+Studio Designer is available as a public Beta version.
 {{/callout}}
 {{! /multiexcerpt}}
 
