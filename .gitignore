@@ -3,6 +3,8 @@ logs
 *.log
 
 .DS_Store
+.idea
+*.iml
 
 # Runtime data
 pids
