@@ -39,8 +39,10 @@ Alternatively you can build from our GitHub repository:
 ```
 $ git clone git@github.com:nuxeo/nuxeo-browser-extension.git
 $ cd nuxeo-browser-extension
-$ npm install && bower install
+$ npm install
 $ gulp build:<browser>
+# or
+$ npm run build
 ```
 
 ## Features
