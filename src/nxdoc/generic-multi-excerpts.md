@@ -102,7 +102,7 @@ You can also give us your feedback and suggestions through our [feedback portal]
 
 {{! multiexcerpt name='Designer-restricted-access-note'}}
 {{#> callout type='note' }}
-The Studio Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
+Studio Designer is available as a public Beta version.
 {{/callout}}
 {{! /multiexcerpt}}
 
