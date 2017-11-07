@@ -109,7 +109,7 @@ Nuxeo Platform is a set of server and client side software artifacts and tools t
 
 Main components of the Nuxeo Platform are:
 
-- The **Nuxeo Server**, that runs on top of the Java Virtual Machine, with different deployment options. The Nuxeo Server exposes a modular set of features via a REST API. The Nuxeo Package system allows to easily define what bundles are deployed on the Nuxeo Server. Nuxeo Server is often called Nuxeo Platform as a shortcut, and because it is clearly the most important asset of the Nuxeo Platform, embedding a fully featured repository, a content transformation grid and a workflow engine. The Nuxeo Server is [benchmarked](https://benchmark.nuxeo.com) continuously to guarantee performance expectations
+- The **Nuxeo Server**, that runs on top of the Java Virtual Machine, with different deployment options. The Nuxeo Server exposes a modular set of features via a REST API. The Nuxeo Package system allows to easily define what bundles are deployed on the Nuxeo Server. Nuxeo Server is often called Nuxeo Platform as a shortcut, and because it is clearly the most important asset of the Nuxeo Platform, embedding a fully featured repository, a content transformation grid and a workflow engine. The Nuxeo Server is [benchmarked](https://benchmarks.nuxeo.com) continuously to guarantee performance expectations
 
 - **Nuxeo Web UI**: a flexible and pluggable content browser that allows users to perform usual content management operations in a highly productive style: browse, search, upload, preview, download, resolve tasks etc... WEB UI's strength is its capability of be heavily customised for taking into account your application's data model and custom business process.
 
