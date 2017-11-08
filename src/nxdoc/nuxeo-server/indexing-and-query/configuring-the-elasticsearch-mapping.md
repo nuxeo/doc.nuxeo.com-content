@@ -194,7 +194,7 @@ This documentation page talks about the many aspects you can tune for improving 
 
 {{#> callout type='warning' }}
 
-This documentation page apply only to Nuxeo >= 9.3 with Elasticsearch >= 5.6.
+This documentation page apply only to Nuxeo Platform version greater or equal to **9.3** with Elasticsearch version greater or equal to **5.6**.
 
 {{/callout}}
 
@@ -208,12 +208,12 @@ To do this you need to create your own [custom template that redefines the Elast
 This way the mapping reference stay on the Nuxeo configuration side and you should not update the mapping directly on the Elasticsearch side.
 
 Nuxeo updates the mapping and setting on Elasticsearch only when:
-*  the Elasticsearch index does not exist
-*  a full repository re-indexing is performed
+*  The Elasticsearch index does not exist
+*  A full repository re-indexing is performed
 
 ## Customizing the Language
 
-The Nuxeo code and mapping use a full-text analyzer named `fulltext`, this analyzer is defined in the settings file as an english analyzer.
+The Nuxeo code and mapping use a full-text analyzer named `fulltext`, this analyzer is defined in the settings file as an English analyzer.
 
 You can reconfigure the `fulltext` analyzer to match your language and requirements. Note that a `fulltext_fr` is provided as a French analyzer example.
 
@@ -256,7 +256,7 @@ The `LIKE` query can be translated to `match_phrase_prefix` for right truncation
 }
 ```
 
-If the field is also used for sorting results it need to have a special `fielddata`  option:
+If the field is also used for sorting results, it needs to have a special `fielddata`  option:
 ```
 "my:field" : {
   "type" : "text",
@@ -285,7 +285,7 @@ To do case insensitive search using an `ILIKE` operation you need to declare you
 
 ## Making STARTSWITH Work with a Custom Field
 
-To use a `STARTSWITH` operator on a field with a path pattern like a hierarchical vocabulary. Turn your field into a multi field with a `children` sub field:
+To use a `STARTSWITH` operator on a field with a path pattern like a hierarchical vocabulary. Turn your field into a multi field with a `children` subfield:
 
 ```
 "my:field" : {

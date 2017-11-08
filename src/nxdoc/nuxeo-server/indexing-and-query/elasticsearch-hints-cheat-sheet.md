@@ -9,7 +9,6 @@ labels:
     - elasticsearch
     - elasticsearch-component
     - excerpt
-    - multiexcerpt-include
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -132,7 +131,7 @@ To implement this use case:
   "type" : "text",
   "analyzer": "fulltext",
   "copy_to": "all_field",
-  "fields": 
+  "fields":
     "common" : {
       "type": "text",
       "analyzer" : "my_attachment_analyzer",

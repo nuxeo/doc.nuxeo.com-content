@@ -674,7 +674,7 @@ The default mapping is located in the `${NUXEO_HOME}/templates/common-base/nxser
 
 **To override and tune the default mapping:**
 
-Since Nuxeo 9.3 instead of overriding the Extension point you can simply override the default mapping or settings JSON files:
+Since Nuxeo 9.3, instead of overriding the extension point you can simply override the default mapping or settings JSON files:
 
 1.  [Create a custom template]({{page page='configuration-templates'}}) like `myapp` with a `nuxeo.defaults` file that contains:
 
