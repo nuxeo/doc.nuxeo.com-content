@@ -430,23 +430,12 @@ It is probably easier to start from the default Nuxeo 9.3 configuration and migr
 
 Since Nuxeo 9.3, you can configure the settings and mapping by overriding JSON files in your custom template:
 
-<<<<<<< Updated upstream
 - the default settings is located in `templates/common-base/nxserver/config/elasticsearch-doc-settings.json.nxftl`
   the important changes is that settings no longer supports an analyzer alias (the `fulltext` alias need to be removed)
 
 - the default mapping is located in `templates/common-base/nxserver/config/elasticsearch-doc-mapping.json`
   the important changes are:
     - type `string` must be rewritten to `keyword` (in place of `not_analyzed` string) or `text` (the `analyzed` string version)
-=======
-- The default settings is located in `templates/common-base/nxserver/config/elasticsearch-doc-settings.json.nxftl`.
-  The important changes are:
-    - Settings can no longer contain index directives (remove any `index.*` properties)
-    - Settings no longer supports an analyzer alias (the `fulltext` alias need to be removed)
-
-- The default mapping is locate in `templates/common-base/nxserver/config/elasticsearch-doc-mapping.json`.
-  The important changes are:
-    - Type `string` must be rewritten to `keyword` (in place of `not_analyzed` string) or `text` (the `analyzed` string version)
->>>>>>> Stashed changes
     - `not_analyzed` is deprecated type it should be replaced by `keyword`
     - Type `multi_field` does not exists anymore, it must be rewritten as type `keyword` or `text`
     - `_all` is disabled. A custom `all_field` is used instead, by default all string fields are copied to this field, to not index a field this requires to add a mapping without the `"copy_to": "all_field"` instruction.
