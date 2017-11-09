@@ -107,12 +107,6 @@ tree_item_index: 96
 
 #### Directories
 
-##### SQL Directories
-
-{{{multiexcerpt 'upgrade-9.2-sql-template-required' page='Upgrade from LTS 2016 following Fast Tracks'}}}
-
-{{{multiexcerpt 'upgrade-9.3-behavior.sqldirectories' page='Upgrade from LTS 2016 following Fast Tracks'}}}
-
 ##### MongoDB Directories
 
 {{{multiexcerpt 'upgrade-9.2-new.directories.mongodb' page='Upgrade from LTS 2016 following Fast Tracks'}}}
