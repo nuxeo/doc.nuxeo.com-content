@@ -21,10 +21,9 @@ Reindex the full repository following [Rebuilding the repository index page]({{p
 ### Installation and Configuration
 
 #### Requirements
+
 {{! multiexcerpt name='upgrade-9.1-installation-requirements'}}
-
-- MySQL >= 5.6.4 is required. See [NXP-21338](https://jira.nuxeo.com/browse/NXP-21338)
-
+- **MySQL** >= 5.6.4 is required. See [NXP-21338](https://jira.nuxeo.com/browse/NXP-21338)
 {{! /multiexcerpt}}
 
 #### Parameters to Update
@@ -403,6 +402,12 @@ Nuxeo Segment.io plugin is now aligned on `com.github.segmentio:analytics:1.0.7`
 
 ### Installation and Configuration
 
+#### Requirements
+
+{{! multiexcerpt name='upgrade-9.3-installation-requirements'}}
+- **ElasticSearch** >= 5.6.x is required.
+{{! /multiexcerpt}}
+
 #### New Parameters
 
 <div class="table-scroll">
@@ -453,6 +458,79 @@ Nuxeo Segment.io plugin is now aligned on `com.github.segmentio:analytics:1.0.7`
 
 ### Data
 
+#### Elasticsearch
+
+{{! multiexcerpt name='upgrade-9.3-installation-elasticsearch-upgrade'}}
+
+Elasticsearch 5.6.x is required, follow those necessary steps to upgrade:
+
+1. Upgrade Elasticsearch version
+1. Update your custom settings and mapping to follow new Elasticsearch rules
+1. Re-index the repository to apply the new settings and mapping
+1. Update your custom code that query Elasticsearch directly
+
+##### Upgrade Elasticsearch Version
+
+In order to upgrade your cluster to 5.6.x, please follow the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html).
+This will requires a [full cluster restart upgrade](https://www.elastic.co/guide/en/elasticsearch/reference/current/restart-upgrade.html).
+
+#####  Update Your Custom Elasticsearch Settings and Mapping
+
+If you have a custom configuration for Elasticsearch it needs to be adapted to follow the new 5.6 rules.
+It is probably easier to start from the default Nuxeo 9.3 configuration and migrate your necessary change instead of modifying your existing contribution directly.
+
+Since Nuxeo 9.3, you can configure the settings and mapping by overriding JSON files in your custom template:
+
+- the default settings is located in `templates/common-base/nxserver/config/elasticsearch-doc-settings.json.nxftl`
+  the important changes is that settings no longer supports an analyzer alias (the `fulltext` alias need to be removed)
+
+- the default mapping is located in `templates/common-base/nxserver/config/elasticsearch-doc-mapping.json`
+  the important changes are:
+  - type `string` must be rewritten to `keyword` (in place of `not_analyzed` string) or `text` (the `analyzed` string version)
+  - `not_analyzed` is deprecated type it should be replaced by `keyword`
+  - Type `multi_field` does not exists anymore, it must be rewritten as type `keyword` or `text`
+  - `_all` is disabled. A custom `all_field` is used instead, by default all string fields are copied to this field, to not index a field this requires to add a mapping without the `"copy_to": "all_field"` instruction.
+  - Text field used for sorting or aggregating must be of type `keyword` or `text` with `fielddata=true` property
+  - Text field used with NXQL `LIKE` requires a `text` field, if the field is also used for sorting it must be `fielddata`, for instance `dc:title`:
+  ```
+      "dc:title": {
+        "type": "text",
+        "copy_to": "all_field",
+        "fielddata": true,
+        "fields": {
+          "fulltext": {
+            "type": "text",
+            "analyzer": "fulltext"
+          }
+        }
+      },
+  ```
+  - Highlight must be done on `text` field with a `fulltext` analyzer.
+
+##### Re-Index the Repository
+
+The new mapping and setting for the repository index must be applied, this means that the entire repository must be re-indexed.
+
+When using the JSF UI this can be done from the `Admin > Elasticsearch > Admin` page.
+
+Or this can be done via REST:
+
+```
+curl -v -X POST 'http://localhost:8080/nuxeo/site/automation/Elasticsearch.Index' -u Administrator:Administrator -H 'content-type: application/json+nxrequest' -d '{"params":{},"context":{}}'
+```
+
+##### Update Your Custom Code That Query Elasticsearch Directly
+
+Any custom native queries done using the passthrough or code need to be reviewed to follow Elasticsearch 5 query format,
+for instance:
+
+- `filtered` query must be replaced with `bool` query
+- `not` filter should be replaced with a `bool` query
+- Aggregate `size=0` to get all buckets is not anymore supported the size must be explicitly defined (> 0)
+- There is no more default `_all` field. `query_string` and `simple_query_string` must use the new custom `all_field` field.
+
+{{! /multiexcerpt}}
+
 #### MongoDB and SQL Directories
 
 {{! multiexcerpt name='upgrade-9.3-behavior.sqldirectories'}}
@@ -489,6 +567,12 @@ MongoDB can store Nuxeo directories. By default when `mongodb` template is enabl
 
 {{! /multiexcerpt}}
 
+{{! multiexcerpt name='upgrade-9.3-behavior.NuxeoGroupImpl'}}
+
+- `NuxeoGroupImpl` class has been moved to `org.nuxeo.ecm.platform.usermanager` package, code relying on it must be updated. [NXP-20619](https://jira.nuxeo.com/browse/NXP-20619)
+
+{{! /multiexcerpt}}
+
 #### Operation Changes
 
 {{! multiexcerpt name='upgrade-9.3-operations.facets'}}
@@ -498,6 +582,14 @@ MongoDB can store Nuxeo directories. By default when `mongodb` template is enabl
 {{! /multiexcerpt}}
 
 #### Deprecated APIs
+
+##### Group Entity-type (REST)
+
+{{! multiexcerpt name='upgrade-9.3-deprecated.groupentity'}}
+
+The `groupname` and `grouplabel` properties at the root are deprecated. `id` property must be used instead of `groupname`. Both are now part of the `properties` field with all others group schema properties. [NXP-22542](https://jira.nuxeo.com/browse/NXP-22542)
+
+{{! /multiexcerpt}}
 
 ##### Nuxeoctl register-trial
 
@@ -524,82 +616,6 @@ Command `nuxeoctl register-trial` has been deprecated. [NXP-23122](https://jira.
 
 
 {{! multiexcerpt name='9.2-to-9.3-upgrade-page'}}
-## From 9.2 to 9.3
-
-### Installation and Configuration
-
-{{! multiexcerpt name='upgrade-8.10-installation-elasticsearch-upgrade'}}
-#### Elasticsearch Upgrade
-
-A new version of Elasticsearch is required, here are the necessary steps to upgrade:
-- Upgrade Elasticsearch version
-- Update your custom settings and mapping to follow new Elasticsearch rules
-- Re-index the repository to apply the new settings and mapping
-- Update your custom code that query Elasticsearch directly
-
-**Upgrade Elasticsearch Version**
-
-Upgrading Elasticsearch to 5.6.x is required.
-
-In order to upgrade your cluster to 5.6.x, please follow the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html).
-This will requires a [full cluster restart upgrade](https://www.elastic.co/guide/en/elasticsearch/reference/current/restart-upgrade.html).
-
-**Update Your Custom Elasticsearch Settings and Mapping**
-
-If you have a custom configuration for Elasticsearch it needs to be adapted to follow the new 5.6 rules.
-It is probably easier to start from the default Nuxeo 9.3 configuration and migrate your necessary change instead of modifying your existing contribution directly.
-
-Since Nuxeo 9.3, you can configure the settings and mapping by overriding JSON files in your custom template:
-
-- the default settings is located in `templates/common-base/nxserver/config/elasticsearch-doc-settings.json.nxftl`
-  the important changes is that settings no longer supports an analyzer alias (the `fulltext` alias need to be removed)
-
-- the default mapping is located in `templates/common-base/nxserver/config/elasticsearch-doc-mapping.json`
-  the important changes are:
-    - type `string` must be rewritten to `keyword` (in place of `not_analyzed` string) or `text` (the `analyzed` string version)
-    - `not_analyzed` is deprecated type it should be replaced by `keyword`
-    - Type `multi_field` does not exists anymore, it must be rewritten as type `keyword` or `text`
-    - `_all` is disabled. A custom `all_field` is used instead, by default all string fields are copied to this field, to not index a field this requires to add a mapping without the `"copy_to": "all_field"` instruction.
-    - Text field used for sorting or aggregating must be of type `keyword` or `text` with `fielddata=true` property
-    - Text field used with NXQL `LIKE` requires a `text` field, if the field is also used for sorting it must be `fielddata`, for instance `dc:title`:
-    ```
-        "dc:title": {
-          "type": "text",
-          "copy_to": "all_field",
-          "fielddata": true,
-          "fields": {
-            "fulltext": {
-              "type": "text",
-              "analyzer": "fulltext"
-            }
-          }
-        },
-    ```
-    - Highlight must be done on `text` field with a `fulltext` analyzer.
-
-**Re-Index the Repository**
-
-The new mapping and setting for the repository index must be applied, this means that the entire repository must be re-indexed.
-
-When using the JSF UI this can be done from the `Admin > Elasticsearch > Admin` page.
-
-Or this can be done via REST:
-```
-curl -v -X POST 'http://localhost:8080/nuxeo/site/automation/Elasticsearch.Index' -u Administrator:Administrator -H 'content-type: application/json+nxrequest' -d '{"params":{},"context":{}}'
-```
-
-**Update Your Custom Code That Query Elasticsearch Directly**
-
-Any custom native queries done using the passthrough or code need to be reviewed to follow Elasticsearch 5 query format,
-for instance:
-
-- `filtered` query must be replaced with `bool` query
-- `not` filter should be replaced with a `bool` query
-- Aggregate `size=0` to get all buckets is not anymore supported the size must be explicitly defined (> 0)
-- There is no more default `_all` field. `query_string` and `simple_query_string` must use the new custom `all_field` field.
-
-
-{{! /multiexcerpt}}
 
 
 {{! /multiexcerpt}}
