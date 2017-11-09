@@ -531,14 +531,6 @@ for instance:
 
 {{! /multiexcerpt}}
 
-#### MongoDB and SQL Directories
-
-{{! multiexcerpt name='upgrade-9.3-behavior.sqldirectories'}}
-
-MongoDB can store Nuxeo directories. By default when `mongodb` template is enabled, directories are stored in MongoDB. If you want to keep your directories in your SQL database, check the following ticket: [NXP-22785](https://jira.nuxeo.com/browse/NXP-22785)
-
-{{! /multiexcerpt}}
-
 ### Code Changes
 
 #### Code Behavior Changes
