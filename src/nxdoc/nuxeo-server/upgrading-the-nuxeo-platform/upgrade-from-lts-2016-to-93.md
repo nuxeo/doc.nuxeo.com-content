@@ -21,6 +21,8 @@ tree_item_index: 96
 
 {{{multiexcerpt 'upgrade-9.1-installation-requirements' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
+{{{multiexcerpt 'upgrade-9.3-installation-requirements' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
 #### nuxeo.conf
 
 {{{multiexcerpt 'upgrade-9.2-nuxeo.conf' page='Upgrade from LTS 2016 following Fast Tracks'}}}
@@ -99,6 +101,10 @@ tree_item_index: 96
 
 ### Data
 
+#### ElasticSearch
+
+{{{multiexcerpt 'upgrade-9.3-installation-elasticsearch-upgrade' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
 #### Directories
 
 ##### SQL Directories
@@ -138,6 +144,8 @@ tree_item_index: 96
 {{{multiexcerpt 'upgrade-9.3-behavior.espassthrough' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 {{{multiexcerpt 'upgrade-9.3-behavior.complexlist' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
+{{{multiexcerpt 'upgrade-9.3-behavior.NuxeoGroupImpl' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 #### Operation Changes
 
@@ -188,6 +196,10 @@ tree_item_index: 96
 ##### WebException
 
 {{{multiexcerpt 'upgrade-9.3-deprecated.WebException' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
+##### Group Entity-type (REST)
+
+{{{multiexcerpt 'upgrade-9.3-deprecated.groupentity' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 ### Addons
 
