@@ -405,7 +405,7 @@ Nuxeo Segment.io plugin is now aligned on `com.github.segmentio:analytics:1.0.7`
 #### Requirements
 
 {{! multiexcerpt name='upgrade-9.3-installation-requirements'}}
-- **ElasticSearch** >= 5.6.x is required.
+- **Elasticsearch** >= 5.6.x is required.
 {{! /multiexcerpt}}
 
 #### New Parameters
@@ -450,7 +450,7 @@ Nuxeo Segment.io plugin is now aligned on `com.github.segmentio:analytics:1.0.7`
 <tr>
 <td colspan="1">`nuxeo.works.total.default.scheduled.count`</td>
 <td colspan="1">Renamed to `nuxeo.works.total.default.scheduled`</td>
-<td colspan="1">[NXP-21828](https://jira.nuxeo.com/browse/NXP-22996)</td>
+<td colspan="1">[NXP-22996](https://jira.nuxeo.com/browse/NXP-22996)</td>
 </tr>
 </tbody>
 </table>
@@ -462,17 +462,17 @@ Nuxeo Segment.io plugin is now aligned on `com.github.segmentio:analytics:1.0.7`
 
 {{! multiexcerpt name='upgrade-9.3-installation-elasticsearch-upgrade'}}
 
-Elasticsearch 5.6.x is required, follow those necessary steps to upgrade:
+Elasticsearch 5.6.x is required. Follow those necessary steps to upgrade:
 
 1. Upgrade Elasticsearch version
 1. Update your custom settings and mapping to follow new Elasticsearch rules
 1. Re-index the repository to apply the new settings and mapping
-1. Update your custom code that query Elasticsearch directly
+1. Update your custom code that queries Elasticsearch directly
 
 ##### Upgrade Elasticsearch Version
 
 In order to upgrade your cluster to 5.6.x, please follow the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html).
-This will requires a [full cluster restart upgrade](https://www.elastic.co/guide/en/elasticsearch/reference/current/restart-upgrade.html).
+This will require a [full cluster restart upgrade](https://www.elastic.co/guide/en/elasticsearch/reference/current/restart-upgrade.html).
 
 #####  Update Your Custom Elasticsearch Settings and Mapping
 
@@ -481,17 +481,17 @@ It is probably easier to start from the default Nuxeo 9.3 configuration and migr
 
 Since Nuxeo 9.3, you can configure the settings and mapping by overriding JSON files in your custom template:
 
-- the default settings is located in `templates/common-base/nxserver/config/elasticsearch-doc-settings.json.nxftl`
-  the important changes is that settings no longer supports an analyzer alias (the `fulltext` alias need to be removed)
+- The default settings is located in `templates/common-base/nxserver/config/elasticsearch-doc-settings.json.nxftl`.
+  The important changes are that settings no longer supports an analyzer alias (the `fulltext` alias need to be removed).
 
-- the default mapping is located in `templates/common-base/nxserver/config/elasticsearch-doc-mapping.json`
-  the important changes are:
-  - type `string` must be rewritten to `keyword` (in place of `not_analyzed` string) or `text` (the `analyzed` string version)
+- The default mapping is located in `templates/common-base/nxserver/config/elasticsearch-doc-mapping.json`.
+  The important changes are:
+  - Type `string` must be rewritten to `keyword` (in place of `not_analyzed` string) or `text` (the `analyzed` string version)
   - `not_analyzed` is deprecated type it should be replaced by `keyword`
   - Type `multi_field` does not exists anymore, it must be rewritten as type `keyword` or `text`
-  - `_all` is disabled. A custom `all_field` is used instead, by default all string fields are copied to this field, to not index a field this requires to add a mapping without the `"copy_to": "all_field"` instruction.
+  - `_all` is disabled. A custom `all_field` is used instead. By default all string fields are copied to this field, to not index a field this requires to add a mapping without the `"copy_to": "all_field"` instruction.
   - Text field used for sorting or aggregating must be of type `keyword` or `text` with `fielddata=true` property
-  - Text field used with NXQL `LIKE` requires a `text` field, if the field is also used for sorting it must be `fielddata`, for instance `dc:title`:
+  - Text field used with NXQL `LIKE` requires a `text` field. If the field is also used for sorting it must be `fielddata`. For instance `dc:title`:
   ```
       "dc:title": {
         "type": "text",
@@ -511,7 +511,7 @@ Since Nuxeo 9.3, you can configure the settings and mapping by overriding JSON f
 
 The new mapping and setting for the repository index must be applied, this means that the entire repository must be re-indexed.
 
-When using the JSF UI this can be done from the `Admin > Elasticsearch > Admin` page.
+When using the JSF UI this can be done from the **Admin**&nbsp;> **Elasticsearch**&nbsp;> **Admin** page.
 
 Or this can be done via REST:
 
@@ -521,8 +521,7 @@ curl -v -X POST 'http://localhost:8080/nuxeo/site/automation/Elasticsearch.Index
 
 ##### Update Your Custom Code That Query Elasticsearch Directly
 
-Any custom native queries done using the passthrough or code need to be reviewed to follow Elasticsearch 5 query format,
-for instance:
+Any custom native queries done using the passthrough or code need to be reviewed to follow Elasticsearch 5 query format, for instance:
 
 - `filtered` query must be replaced with `bool` query
 - `not` filter should be replaced with a `bool` query
@@ -537,31 +536,25 @@ for instance:
 
 {{! multiexcerpt name='upgrade-9.3-behavior.WebException'}}
 
-- A new `statusCode` field has been added to `NuxeoException` to specify which HTTP code should be returned in case the exception is thrown, default to `500`. [NXP-21776](https://jira.nuxeo.com/browse/NXP-21776)
+- A new `statusCode` field has been added to `NuxeoException` to specify which HTTP code should be returned in case the exception is thrown, default to `500`. See [NXP-21776](https://jira.nuxeo.com/browse/NXP-21776).
 
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='upgrade-9.3-behavior.PageProvider'}}
 
-- New `org.nuxeo.ecm.platform.query.api.PageProvider#getResultsCountLimit` method to access the limit of number of results beyond which the page provider may not be able to compute the result count. [NXP-23202](https://jira.nuxeo.com/browse/NXP-23202)
-
-{{! /multiexcerpt}}
-
-{{! multiexcerpt name='upgrade-9.3-behavior.espassthrough'}}
-
-- When requesting Elasticsearch using HTTP passthrough requests, uses of query_string or simple_query_string must be adapted to use field `all_field` explicitly instead of relying on the default `_all` field which is now disabled. [NXP-23059](https://jira.nuxeo.com/browse/NXP-23059)
+- New `org.nuxeo.ecm.platform.query.api.PageProvider#getResultsCountLimit` method to access the limit of number of results beyond which the page provider may not be able to compute the result count. See [NXP-23202](https://jira.nuxeo.com/browse/NXP-23202).
 
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='upgrade-9.3-behavior.complexlist'}}
 
-- Setting the value of a complex property now overwrites any previous values, and does not do a partial update anymore. [NXP-19261](https://jira.nuxeo.com/browse/NXP-19261)
+- Setting the value of a complex property now overwrites any previous values, and does not do a partial update anymore. See [NXP-19261](https://jira.nuxeo.com/browse/NXP-19261).
 
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='upgrade-9.3-behavior.NuxeoGroupImpl'}}
 
-- `NuxeoGroupImpl` class has been moved to `org.nuxeo.ecm.platform.usermanager` package, code relying on it must be updated. [NXP-20619](https://jira.nuxeo.com/browse/NXP-20619)
+- `NuxeoGroupImpl` class has been moved to `org.nuxeo.ecm.platform.usermanager` package. The code relying on it must be updated. See [NXP-20619](https://jira.nuxeo.com/browse/NXP-20619).
 
 {{! /multiexcerpt}}
 
@@ -569,7 +562,7 @@ for instance:
 
 {{! multiexcerpt name='upgrade-9.3-operations.facets'}}
 
-- Operations `Document.CopySchema`, `Document.AddFacet` and `Document.RemoveFacet` have a new parameter `save` to force a session save or not. [NXP-22912](https://jira.nuxeo.com/browse/NXP-22912)
+- Operations `Document.CopySchema`, `Document.AddFacet` and `Document.RemoveFacet` have a new parameter `save` to force a session save or not. See [NXP-22912](https://jira.nuxeo.com/browse/NXP-22912).
 
 {{! /multiexcerpt}}
 
@@ -579,7 +572,7 @@ for instance:
 
 {{! multiexcerpt name='upgrade-9.3-deprecated.groupentity'}}
 
-The `groupname` and `grouplabel` properties at the root are deprecated. `id` property must be used instead of `groupname`. Both are now part of the `properties` field with all others group schema properties. [NXP-22542](https://jira.nuxeo.com/browse/NXP-22542)
+The `groupname` and `grouplabel` properties at the root are deprecated. `id` property must be used instead of `groupname`. Both are now part of the `properties` field with all others group schema properties. See [NXP-22542](https://jira.nuxeo.com/browse/NXP-22542).
 
 {{! /multiexcerpt}}
 
@@ -587,7 +580,7 @@ The `groupname` and `grouplabel` properties at the root are deprecated. `id` pro
 
 {{! multiexcerpt name='upgrade-9.3-deprecated.nuxeoctltrial'}}
 
-Command `nuxeoctl register-trial` has been deprecated. [NXP-23122](https://jira.nuxeo.com/browse/NXP-23122)
+The command `nuxeoctl register-trial` has been deprecated. See [NXP-23122](https://jira.nuxeo.com/browse/NXP-23122).
 
 {{! /multiexcerpt}}
 
@@ -595,7 +588,7 @@ Command `nuxeoctl register-trial` has been deprecated. [NXP-23122](https://jira.
 
 {{! multiexcerpt name='upgrade-9.3-deprecated.WebException'}}
 
-`WebException` (and most subclasses) has been deprecated, `NuxeoException` (and subclasses) are now the exceptions to be thrown. [NXP-21776](https://jira.nuxeo.com/browse/NXP-21776)
+`WebException` (and most subclasses) has been deprecated, `NuxeoException` (and subclasses) are now the exceptions to be thrown. See [NXP-21776](https://jira.nuxeo.com/browse/NXP-21776).
 
 {{! /multiexcerpt}}
 

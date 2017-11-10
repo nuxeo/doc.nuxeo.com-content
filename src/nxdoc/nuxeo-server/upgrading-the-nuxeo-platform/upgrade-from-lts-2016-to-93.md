@@ -45,7 +45,7 @@ tree_item_index: 96
 <tr>
 <td colspan="1">`nuxeo.works.total.default.scheduled.count`</td>
 <td colspan="1">Renamed to `nuxeo.works.total.default.scheduled`</td>
-<td colspan="1">[NXP-21828](https://jira.nuxeo.com/browse/NXP-22996)</td>
+<td colspan="1">[NXP-22996](https://jira.nuxeo.com/browse/NXP-22996)</td>
 </tr>
 </tbody>
 </table>
@@ -101,7 +101,7 @@ tree_item_index: 96
 
 ### Data
 
-#### ElasticSearch
+#### Elasticsearch
 
 {{{multiexcerpt 'upgrade-9.3-installation-elasticsearch-upgrade' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
@@ -134,8 +134,6 @@ tree_item_index: 96
 {{{multiexcerpt 'upgrade-9.3-behavior.WebException' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 {{{multiexcerpt 'upgrade-9.3-behavior.PageProvider' page='Upgrade from LTS 2016 following Fast Tracks'}}}
-
-{{{multiexcerpt 'upgrade-9.3-behavior.espassthrough' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 {{{multiexcerpt 'upgrade-9.3-behavior.complexlist' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
