@@ -377,6 +377,17 @@ By default four probes are defined:
 *   `ldapDirectory`: check LDAP connectivity,
 *   `remoteSQLStorageSession`: number of remove VCS client connected (only used in VCS client/server mode that is not enabled by default).
 
+Probes can be also run as part of the healthCheck when invoking the Status servlet.
+By default the following probes are enabled for the check:
+* `s3BinaryManagerStatus`
+*   `runtimeStatus`
+*   `elasticSearchStatus`
+*   `ldapDirectories`
+*   `repositoryStatus`
+
+Probes can be enabled/disabled for the healthCheck using the [ `healthCheck` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--healthCheck).   
+
+
 ### Monitoring Using JMX Access
 
 You can use JVisualVM or similar tool to access Nuxeo JMX interface. See the section [Enabling JMX Access](#enabling-jmx).
