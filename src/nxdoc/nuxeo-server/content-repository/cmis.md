@@ -10,6 +10,7 @@ labels:
     - soap
     - blogs
     - cmis-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950287'
@@ -24,404 +25,402 @@ confluence:
     source_link: /display/NXDOC/CMIS
 tree_item_index: 800
 history:
-    -
+    - 
         author: Lise Kemen
         date: '2016-10-10 08:28'
         message: ''
         version: '80'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-08 13:09'
         message: ''
         version: '79'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-08 13:04'
         message: ''
         version: '78'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-08-02 15:18'
         message: ''
         version: '77'
-    -
+    - 
         author: Florent Guillaume
         date: '2016-03-29 15:56'
         message: proxies visible in CMIS
         version: '76'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-12-09 14:58'
         message: details
         version: '75'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-10-22 15:26'
         message: NXP-18219 AtomPub CMIS 1.0
         version: '74'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-10-13 14:52'
         message: ''
         version: '73'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-09 07:36'
         message: ''
         version: '72'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-08 15:28'
         message: Add use case video and reorganize resources section
         version: '71'
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-25 08:49'
         message: ''
         version: '70'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-02-19 09:54'
         message: ''
         version: '69'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-02-19 09:41'
         message: ''
         version: '68'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-02-19 09:40'
         message: ''
         version: '67'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-02-19 09:39'
         message: ''
         version: '66'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-02-19 09:38'
         message: ''
         version: '65'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-02-19 09:37'
         message: ''
         version: '64'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-02-19 09:33'
         message: ''
         version: '63'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-02-19 09:32'
         message: ''
         version: '62'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-02-19 09:32'
         message: ''
         version: '61'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-02-19 09:31'
         message: ''
         version: '60'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-01-09 11:27'
         message: 'complex props, secondary types'
         version: '59'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-26 09:58'
-        message: >-
-            Replace demo.nuxeo.com with online trial, update URLs and format
-            toc
+        message: 'Replace demo.nuxeo.com with online trial, update URLs and format toc'
         version: '58'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-11-04 15:16'
         message: ''
         version: '57'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-10-14 01:59'
         message: ACLs/Joins capabilities
         version: '56'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-10-14 01:42'
         message: ''
         version: '55'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-10-14 01:41'
         message: 'Added nuxeo:pos'
         version: '54'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-09-07 20:01'
         message: ''
         version: '53'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-09-05 17:42'
         message: ''
         version: '52'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-23 19:01'
         message: ''
         version: '51'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-23 09:46'
         message: typo
         version: '50'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-07-22 18:30'
         message: ''
         version: '49'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-07-22 18:26'
         message: ''
         version: '48'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-06-25 12:11'
         message: ''
         version: '47'
-    -
+    - 
         author: Michaël Vachette
         date: '2014-03-20 18:26'
         message: ''
         version: '46'
-    -
+    - 
         author: Michaël Vachette
         date: '2014-03-20 18:26'
         message: ''
         version: '45'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-20 18:41'
         message: ''
         version: '44'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-20 18:40'
         message: Removed obsolete information
         version: '43'
-    -
+    - 
         author: Florent Guillaume
         date: '2013-02-14 16:48'
         message: ''
         version: '42'
-    -
+    - 
         author: Florent Guillaume
         date: '2013-02-14 16:46'
         message: ''
         version: '41'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-14 11:18'
         message: Migrated to Confluence 4.0
         version: '40'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-14 11:18'
         message: ''
         version: '39'
-    -
+    - 
         author: Florent Guillaume
         date: '2012-07-02 11:52'
         message: ''
         version: '38'
-    -
+    - 
         author: Florent Guillaume
         date: '2012-06-20 16:11'
         message: Note that complex properties are not exposed.
         version: '37'
-    -
+    - 
         author: Florent Guillaume
         date: '2012-02-01 16:31'
         message: ''
         version: '36'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-12-21 19:38'
-        message: hg -> github
+        message: 'hg -> github'
         version: '35'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-12-21 19:37'
         message: 'added 5.5 nuxeo:isCheckedIn and nuxeo:parentId'
         version: '34'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-07-18 15:34'
         message: ''
         version: '33'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-06-15 18:15'
         message: ''
         version: '32'
-    -
+    - 
         author: Olivier Grisel
         date: '2011-04-29 12:12'
         message: ''
         version: '31'
-    -
+    - 
         author: Olivier Grisel
         date: '2011-04-29 12:04'
         message: ''
         version: '30'
-    -
+    - 
         author: Olivier Grisel
         date: '2011-04-29 12:04'
         message: ''
         version: '29'
-    -
+    - 
         author: Olivier Grisel
         date: '2011-04-29 12:03'
         message: link to CMISQL from within Nuxeo
         version: '28'
-    -
+    - 
         author: Olivier Grisel
         date: '2011-04-29 11:58'
         message: ''
         version: '27'
-    -
+    - 
         author: Olivier Grisel
         date: '2011-04-27 22:43'
         message: ''
         version: '26'
-    -
+    - 
         author: Olivier Grisel
         date: '2011-04-27 17:16'
         message: ''
         version: '25'
-    -
+    - 
         author: Olivier Grisel
         date: '2011-04-27 17:14'
         message: format
         version: '24'
-    -
+    - 
         author: Olivier Grisel
         date: '2011-04-27 17:11'
         message: added section on nuxeo specific system properties
         version: '23'
-    -
+    - 
         author: Olivier Grisel
         date: '2011-04-19 15:37'
         message: ''
         version: '22'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-04-15 11:36'
         message: ''
         version: '21'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-04-15 11:24'
         message: ''
         version: '20'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-03-17 17:08'
         message: ''
         version: '19'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-03-17 17:01'
-        message: doesn't belong here
+        message: "doesn't belong here"
         version: '18'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-03-15 14:16'
         message: ''
         version: '17'
-    -
+    - 
         author: Julien Carsique
         date: '2011-03-04 14:30'
         message: add webengine admin url for cmis
         version: '16'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-02-25 15:32'
         message: ''
         version: '15'
-    -
+    - 
         author: Florent Guillaume
         date: '2010-11-25 15:45'
         message: ''
         version: '14'
-    -
+    - 
         author: Florent Guillaume
         date: '2010-11-09 19:54'
         message: Updated for OpenCMIS
         version: '13'
-    -
+    - 
         author: Florent Guillaume
         date: '2010-10-23 15:49'
         message: ''
         version: '12'
-    -
+    - 
         author: Jane Zupan
         date: '2010-10-22 22:17'
         message: ''
         version: '11'
-    -
+    - 
         author: Florent Guillaume
         date: '2010-10-01 11:32'
         message: ''
         version: '10'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 22:54'
         message: ''
         version: '9'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 22:53'
         message: ''
         version: '8'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 22:53'
         message: ''
         version: '7'
-    -
+    - 
         author: Florent Guillaume
         date: '2010-05-26 23:00'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2010-05-20 18:26'
         message: formatting and typos
         version: '5'
-    -
+    - 
         author: Eric Barroca
         date: '2010-04-29 11:43'
         message: ''
         version: '4'
-    -
+    - 
         author: Eric Barroca
         date: '2010-04-29 11:42'
         message: ''
         version: '3'
-    -
+    - 
         author: Florent Guillaume
         date: '2010-04-28 14:49'
         message: ''
         version: '2'
-    -
+    - 
         author: Admin name placeholder
         date: '2010-03-01 13:36'
         message: ''

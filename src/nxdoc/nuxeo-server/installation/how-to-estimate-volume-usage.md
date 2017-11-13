@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Get some guidelines to estimate the required size for disk and
-            database.
+        excerpt: Get some guidelines to estimate the required size for disk and database.
         level: Intermediate
         tool: ''
         topics: Database
@@ -17,6 +15,7 @@ labels:
     - database
     - howto
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
@@ -31,81 +30,81 @@ confluence:
     source_link: /display/NXDOC/How+to+Estimate+Volume+Usage
 tree_item_index: 1400
 version_override:
-    'LTS 2015': 710/admindoc/how-to-estimate-disk-database-and-elasticsearch-usage
+    LTS 2015: 710/admindoc/how-to-estimate-disk-database-and-elasticsearch-usage
     '6.0': 60/admindoc/how-to-estimate-disk-database-and-elasticsearch-usage
     '5.8': 58/admindoc/how-to-estimate-disk-database-and-elasticsearch-usage
 history:
-    -
+    - 
         author: Alain Escaffre
         date: '2016-07-22 13:10'
         message: ''
         version: '15'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-25 10:32'
         message: ''
         version: '14'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-23 14:01'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-27 15:31'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-07 14:12'
         message: 'Add titles, reorganize some content, fix typos'
         version: '11'
-    -
+    - 
         author: Julien Carsique
         date: '2015-04-02 14:29'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-16 10:25'
         message: Typos
         version: '9'
-    -
+    - 
         author: Benoit Delbosc
         date: '2014-12-15 14:42'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-26 17:13'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-26 17:12'
         message: Add links
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-05 12:03'
         message: ''
         version: '5'
-    -
+    - 
         author: Julien Carsique
         date: '2012-03-17 01:23'
         message: ''
         version: '4'
-    -
+    - 
         author: Julien Carsique
         date: '2012-03-17 01:23'
         message: ''
         version: '3'
-    -
+    - 
         author: Julien Carsique
         date: '2011-07-15 19:02'
         message: ''
         version: '2'
-    -
+    - 
         author: Julien Carsique
         date: '2011-06-14 15:29'
         message: ''

@@ -12,6 +12,7 @@ labels:
     - nuxeo-dotnet-client
     - netcore
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16091040'
@@ -26,152 +27,152 @@ confluence:
     source_link: /display/NXDOC/.NET+Client
 tree_item_index: 400
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-05 13:45'
         message: ''
         version: '30'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-04 16:36'
         message: ''
         version: '29'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-01-28 15:35'
         message: ''
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-14 17:17'
         message: Steps formatting
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-14 17:00'
         message: ''
         version: '26'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-09 10:08'
         message: ''
         version: '25'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-09 10:01'
         message: ''
         version: '24'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-12-08 10:16'
         message: Formatting
         version: '23'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 17:34'
         message: ''
         version: '22'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 17:00'
         message: ''
         version: '21'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 16:57'
         message: ''
         version: '20'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 16:52'
         message: ''
         version: '19'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 16:32'
         message: ''
         version: '18'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 16:00'
         message: ''
         version: '17'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 15:58'
         message: ''
         version: '16'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 14:58'
         message: ''
         version: '15'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 14:56'
         message: ''
         version: '14'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 14:51'
         message: ''
         version: '13'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 14:37'
         message: ''
         version: '12'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 14:33'
         message: ''
         version: '11'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 12:59'
         message: ''
         version: '10'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 12:37'
         message: ''
         version: '9'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 12:22'
         message: ''
         version: '8'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 12:08'
         message: ''
         version: '7'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 11:50'
         message: ''
         version: '6'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 11:49'
         message: ''
         version: '5'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 11:13'
         message: ''
         version: '4'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 11:01'
         message: ''
         version: '3'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 10:29'
         message: ''
         version: '2'
-    -
+    - 
         author: Gabriel Barata
         date: '2015-12-07 10:06'
         message: ''

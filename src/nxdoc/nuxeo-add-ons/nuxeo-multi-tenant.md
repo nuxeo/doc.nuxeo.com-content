@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - multi-tenant
     - excerpt-include
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons
@@ -21,22 +22,22 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Multi-Tenant
 tree_item_index: 2300
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-31 14:50'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-16 17:29'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-06 12:20'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-05 15:43'
         message: ''

@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to let managers of a workspace determine who is part of
-            locally defined groups (local to the workspace).
+        excerpt: Learn how to let managers of a workspace determine who is part of locally defined groups (local to the workspace).
         level: Advanced
         tool: Studio
         topics: Permissions
@@ -17,6 +15,7 @@ labels:
     - howto
     - access-right
     - studio
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '19235681'
@@ -24,116 +23,114 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Implement+Local+Groups+or+Roles+Using+Computed+Groups
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Implement+Local+Groups+or+Roles+Using+Computed+Groups
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Implement+Local+Groups+or+Roles+Using+Computed+Groups'
     page_id: '14256023'
     shortlink: l4fZ
     shortlink_source: 'https://doc.nuxeo.com/x/l4fZ'
-    source_link: >-
-        /display/NXDOC/How+to+Implement+Local+Groups+or+Roles+Using+Computed+Groups
+    source_link: /display/NXDOC/How+to+Implement+Local+Groups+or+Roles+Using+Computed+Groups
 tree_item_index: 500
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-04-14 14:39'
         message: ''
         version: '21'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-01-18 16:52'
         message: 'replace "Write" by "Edit"    '
         version: '20'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-01-18 16:50'
         message: Reverted from v. 17
         version: '19'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-01-18 16:50'
         message: 'replace "Write" by "Edit"    '
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-08 14:53'
         message: link update
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-09 16:49'
         message: Update link to Social Collaboration to point to 6.0
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-12 12:20'
         message: Remove link
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-30 14:00'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-11 14:57'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 22:19'
         message: ''
         version: '12'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-19 14:47'
         message: ''
         version: '11'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-18 16:57'
         message: ''
         version: '10'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-18 16:49'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-22 11:34'
         message: ''
         version: '8'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-07-21 12:44'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-12 14:49'
         message: ''
         version: '6'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2013-07-11 12:27'
         message: ''
         version: '5'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-07-11 01:01'
         message: ''
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-07-11 01:01'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-07-11 00:59'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-05 19:02'
         message: ''

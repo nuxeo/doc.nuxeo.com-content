@@ -6,6 +6,7 @@ review:
     status: ok
 labels:
     - content-review-lts2016
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '3866685'
     ajs-parent-page-title: Installation
@@ -19,17 +20,17 @@ confluence:
     source_link: /display/NXDOC/Installation+Next+Steps
 hidden: true
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-07-25 14:57'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2016-07-22 13:25'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2016-07-22 13:25'
         message: ''

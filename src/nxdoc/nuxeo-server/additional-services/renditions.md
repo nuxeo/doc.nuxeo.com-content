@@ -11,6 +11,7 @@ labels:
     - rendition
     - excerpt
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -25,42 +26,42 @@ confluence:
     source_link: /display/NXDOC/Renditions
 tree_item_index: 1000
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2015-11-30 14:47'
         message: ''
         version: '8'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-11-30 14:46'
         message: ''
         version: '7'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-11-13 15:08'
         message: Add storeByDefault
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2015-03-16 09:10'
         message: Add links and related pages
         version: '5'
-    -
+    - 
         author: Thomas Roger
         date: '2015-03-13 13:41'
         message: ''
         version: '4'
-    -
+    - 
         author: Thomas Roger
         date: '2015-03-13 11:09'
         message: ''
         version: '3'
-    -
+    - 
         author: Thomas Roger
         date: '2015-03-13 10:48'
         message: ''
         version: '2'
-    -
+    - 
         author: Thomas Roger
         date: '2015-03-10 14:39'
         message: ''

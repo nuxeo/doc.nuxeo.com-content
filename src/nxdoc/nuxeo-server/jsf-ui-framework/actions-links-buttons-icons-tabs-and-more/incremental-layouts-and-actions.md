@@ -10,6 +10,7 @@ labels:
     - incremental-layout
     - layout-widgets-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950289'
     ajs-parent-page-title: 'Actions (Links, Buttons, Icons, Tabs and More)'
@@ -23,37 +24,37 @@ confluence:
     source_link: /display/NXDOC/Incremental+Layouts+and+Actions
 tree_item_index: 600
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-31 13:17'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-10 18:42'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-20 15:59'
         message: Added related topics
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-13 09:48'
         message: ''
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-01-10 13:55'
         message: 'NXDOC-227: explain how to configure incremental layouts'
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-20 15:38'
         message: better title to avoid special chars
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-12 18:14'
         message: ''

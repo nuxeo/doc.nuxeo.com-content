@@ -9,6 +9,7 @@ labels:
     - page-provider
     - query-pageprovider-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -23,142 +24,142 @@ confluence:
     source_link: /display/NXDOC/Page+Providers
 tree_item_index: 300
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-01 09:49'
         message: ''
         version: '28'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-12-08 13:29'
         message: ''
         version: '27'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-29 09:31'
         message: ''
         version: '26'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-29 09:28'
         message: ''
         version: '25'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-29 09:26'
         message: ''
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2015-05-29 09:18'
         message: Titile capitalization
         version: '23'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-28 16:01'
         message: ''
         version: '22'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-03-31 12:40'
         message: ''
         version: '21'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-17 15:54'
         message: merge custom page providers doc
         version: '20'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-17 14:12'
         message: remove hardcoded links to confluence pages...
         version: '19'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-17 14:10'
         message: wording
         version: '18'
-    -
+    - 
         author: Benoit Delbosc
         date: '2014-11-25 14:54'
         message: ''
         version: '17'
-    -
+    - 
         author: Benoit Delbosc
         date: '2014-11-25 10:45'
         message: ''
         version: '16'
-    -
+    - 
         author: Benoit Delbosc
         date: '2014-11-25 10:35'
         message: ''
         version: '15'
-    -
+    - 
         author: Benoit Delbosc
         date: '2014-11-25 10:31'
         message: ''
         version: '14'
-    -
+    - 
         author: Benoit Delbosc
         date: '2014-11-25 10:31'
         message: ''
         version: '13'
-    -
+    - 
         author: Benoit Delbosc
         date: '2014-11-25 10:08'
         message: ''
         version: '12'
-    -
+    - 
         author: Benoit Delbosc
         date: '2014-11-25 10:07'
         message: ''
         version: '11'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-09-23 08:04'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-17 17:07'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-13 16:58'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-13 16:58'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-13 16:57'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 16:30'
         message: Added related topics
         version: '5'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-26 18:05'
         message: Migrated to Confluence 4.0
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-26 18:05'
         message: ''
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-26 17:28'
         message: ''
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-26 17:28'
         message: ''

@@ -8,6 +8,7 @@ labels:
     - content-review-lts2016
     - shell
     - shell-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '4687648'
@@ -22,91 +23,91 @@ confluence:
     source_link: /display/NXDOC/Built-in+Commands
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/admindoc/built-in-commands
+    LTS 2015: 710/admindoc/built-in-commands
     '6.0': 60/admindoc/built-in-commands
     '5.8': 58/admindoc/built-in-commands
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-07 14:57'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-15 16:20'
         message: Migrated to Confluence 4.0
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-15 16:20'
         message: Fixed typos
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-15 16:08'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-15 15:32'
         message: Added related pages
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-15 15:10'
         message: Fixed wrong links
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-03 12:32'
         message: ''
         version: '11'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2011-01-04 00:06'
         message: ''
         version: '10'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 10:13'
         message: ''
         version: '9'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 10:08'
         message: ''
         version: '8'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 08:31'
         message: ''
         version: '7'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 00:10'
         message: ''
         version: '6'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 00:08'
         message: ''
         version: '5'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 00:07'
         message: ''
         version: '4'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 00:01'
         message: ''
         version: '3'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-23 22:30'
         message: ''
         version: '2'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-23 22:18'
         message: ''

@@ -9,6 +9,7 @@ labels:
     - howto
     - webengine
     - webengine-component
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '3343141'
     ajs-parent-page-title: WebEngine Tutorials
@@ -22,27 +23,27 @@ confluence:
     source_link: /display/NXDOC/Working+with+Documents
 tree_item_index: 400
 history:
-    -
+    - 
         author: Damien Metzler
         date: '2015-10-20 14:09'
         message: ''
         version: '5'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-21 11:54'
         message: Migrated to Confluence 4.0
         version: '4'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-21 11:54'
         message: ''
         version: '3'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-20 16:35'
         message: ''
         version: '2'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-20 16:34'
         message: ''

@@ -9,6 +9,7 @@ labels:
     - shell
     - shell-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950334'
     ajs-parent-page-title: Additional UI Frameworks
@@ -22,52 +23,52 @@ confluence:
     source_link: /display/NXDOC/Extending+The+Shell
 tree_item_index: 200
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-07-20 13:23'
         message: emove children display macr
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-05 16:38'
         message: Added excerpts
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-05 16:18'
         message: ''
         version: '8'
-    -
+    - 
         author: Florent Guillaume
         date: '2010-12-28 17:50'
         message: Migrated to Confluence 4.0
         version: '7'
-    -
+    - 
         author: Florent Guillaume
         date: '2010-12-28 17:50'
         message: ''
         version: '6'
-    -
+    - 
         author: Florent Guillaume
         date: '2010-12-28 17:50'
         message: ''
         version: '5'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 23:11'
         message: ''
         version: '4'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 15:46'
         message: ''
         version: '3'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 15:44'
         message: ''
         version: '2'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 15:42'
         message: ''

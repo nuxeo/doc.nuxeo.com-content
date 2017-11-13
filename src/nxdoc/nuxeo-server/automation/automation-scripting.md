@@ -12,6 +12,7 @@ labels:
     - scripting
     - automation-component
     - university
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '18451738'
@@ -26,182 +27,182 @@ confluence:
     source_link: /display/NXDOC/Automation+Scripting
 tree_item_index: 400
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-11 08:19'
         message: ''
         version: '36'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-10 15:38'
         message: ''
         version: '35'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-10 15:04'
         message: ''
         version: '34'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-05 13:42'
         message: ''
         version: '33'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-09 15:52'
         message: ''
         version: '32'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-04-29 09:15'
         message: 'Video added '
         version: '31'
-    -
+    - 
         author: Michael Gena
         date: '2016-03-25 16:04'
         message: ''
         version: '30'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-03 16:02'
         message: ''
         version: '29'
-    -
+    - 
         author: Alain Escaffre
         date: '2016-01-27 13:45'
         message: ''
         version: '28'
-    -
+    - 
         author: Alain Escaffre
         date: '2016-01-27 13:44'
         message: ''
         version: '27'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-11-19 16:05'
         message: ''
         version: '26'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-29 08:39'
         message: format
         version: '25'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-10-28 15:52'
         message: ''
         version: '24'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-10-12 09:06'
         message: ''
         version: '23'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-10-12 09:04'
         message: Removed empty macro
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-29 13:01'
         message: Fix requirements section
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-29 12:54'
         message: Add requirement section
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-29 12:43'
         message: Clean up lists formatting
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-29 12:36'
         message: Code blocks formatting
         version: '18'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-07-06 14:53'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2015-06-02 08:02'
         message: format
         version: '16'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-06-01 15:54'
         message: ''
         version: '15'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-27 12:57'
         message: ''
         version: '14'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-27 12:53'
         message: ''
         version: '13'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-26 12:44'
         message: ''
         version: '12'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-25 18:38'
         message: ''
         version: '11'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-25 18:34'
         message: ''
         version: '10'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-25 18:31'
         message: ''
         version: '9'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-25 18:29'
         message: ''
         version: '8'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-25 18:28'
         message: ''
         version: '7'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-25 18:28'
         message: ''
         version: '6'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-25 16:34'
         message: ''
         version: '5'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-25 16:33'
         message: ''
         version: '4'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-25 16:31'
         message: ''
         version: '3'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-25 16:26'
         message: ''
         version: '2'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-25 16:25'
         message: ''

@@ -4,12 +4,14 @@ review:
     comment: ''
     date: '2017-03-29'
     status: ok
-description:
+description: null
 toc: true
 labels:
     - creation
     - drag-and-drop
+    - content-review-lts2017
 tree_item_index: 100
+
 ---
 
 {{#> callout type='tip' }}

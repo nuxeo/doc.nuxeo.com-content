@@ -1,14 +1,16 @@
 ---
 title: Configure Nuxeo Platform
 review:
-    comment: 'Created Tutorial'
+    comment: Created Tutorial
     date: '2017-05-23'
     status: ok
 labels:
     - studio
     - customization
+    - content-review-lts2017
 toc: true
 tree_item_index: 200
+
 ---
 
 This tutorial introduces you to a few important aspects of **Nuxeo Studio** so that you can take advantage of this great product as quickly as possible.

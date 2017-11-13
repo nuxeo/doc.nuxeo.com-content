@@ -10,6 +10,7 @@ labels:
     - scripting
     - todo
     - packaging-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3342859'
@@ -23,179 +24,177 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/IgIz'
     source_link: /display/NXDOC/Scripting+Commands
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-04-22 09:44'
         message: ''
         version: '35'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-31 14:28'
         message: ''
         version: '34'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-06 16:20'
         message: 'Formatting, update Astract Command location and links'
         version: '33'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-06 15:36'
         message: Added TOC
         version: '32'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-14 11:52'
         message: ''
         version: '31'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-14 11:52'
         message: ''
         version: '30'
-    -
+    - 
         author: Julien Carsique
         date: '2012-09-04 18:08'
         message: ''
         version: '29'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-06-28 16:55'
         message: ''
         version: '28'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-06-12 18:07'
         message: ''
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-21 12:01'
         message: Updated mercurial link to github URL
         version: '26'
-    -
+    - 
         author: Julien Carsique
         date: '2011-02-09 12:24'
-        message: >-
-            add info about module containing AbstractCommand to extend for
-            implementing new marketplace package commands
+        message: add info about module containing AbstractCommand to extend for implementing new marketplace package commands
         version: '25'
-    -
+    - 
         author: Julien Carsique
         date: '2011-02-03 18:25'
         message: updated pointer to list of context variables
         version: '24'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 11:12'
         message: ''
         version: '23'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 02:19'
         message: ''
         version: '22'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 02:08'
         message: ''
         version: '21'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 02:04'
         message: ''
         version: '20'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 01:55'
         message: ''
         version: '19'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 01:54'
         message: ''
         version: '18'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 01:50'
         message: ''
         version: '17'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 01:49'
         message: ''
         version: '16'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 01:46'
         message: ''
         version: '15'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 01:45'
         message: ''
         version: '14'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 01:44'
         message: ''
         version: '13'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 01:39'
         message: ''
         version: '12'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 01:36'
         message: ''
         version: '11'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 01:30'
         message: ''
         version: '10'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 01:24'
         message: ''
         version: '9'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-08 01:11'
         message: ''
         version: '8'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 22:49'
         message: ''
         version: '7'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 22:46'
         message: ''
         version: '6'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 18:19'
         message: ''
         version: '5'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 18:06'
         message: ''
         version: '4'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 17:12'
         message: ''
         version: '3'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 16:35'
         message: ''
         version: '2'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 11:26'
         message: ''

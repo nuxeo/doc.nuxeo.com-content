@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - multiexcerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
@@ -21,46 +22,46 @@ confluence:
     source_link: /display/NXDOC/Compatibility+Matrix
 tree_item_index: 200
 version_override:
-    'LTS 2015': 710/admindoc/supported-application-servers
+    LTS 2015: 710/admindoc/supported-application-servers
     '6.0': 60/admindoc/supported-application-servers
     '5.8': 58/admindoc/supported-application-servers
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-05 09:10'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-05 09:08'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-05 09:05'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-05 09:05'
         message: Add MarkLogic
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-16 11:57'
         message: ''
         version: '4'
-    -
+    - 
         author: Florent Guillaume
         date: '2016-05-16 10:27'
         message: Details about Java versions supported.
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-13 15:17'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-13 14:21'
         message: ''

@@ -6,6 +6,7 @@ review:
     status: ok
 labels:
     - templates
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '2392395'
     ajs-parent-page-title: Document Types
@@ -19,82 +20,82 @@ confluence:
     source_link: /display/USERDOC/Using+Workspace+Templates
 tree_item_index: 300
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-08 15:00'
         message: ink updat
         version: '16'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-11-25 17:02'
-        message: replace "access rights" by "permissions"
+        message: 'replace "access rights" by "permissions"'
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-04 00:26'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-22 15:44'
         message: '5.8: removed website / blog document types that are now in an addon'
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-02 17:49'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2012-01-23 12:35'
         message: Migrated to Confluence 4.0
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2012-01-23 12:35'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-24 10:46'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2011-06-06 14:57'
         message: ''
         version: '8'
-    -
+    - 
         author: Julie Allouch
         date: '2010-12-23 16:54'
         message: ''
         version: '7'
-    -
+    - 
         author: Julie Allouch
         date: '2010-12-23 16:53'
         message: ''
         version: '6'
-    -
+    - 
         author: whajeri
         date: '2010-12-23 10:03'
         message: ''
         version: '5'
-    -
+    - 
         author: whajeri
         date: '2010-12-22 17:02'
         message: ''
         version: '4'
-    -
+    - 
         author: whajeri
         date: '2010-12-22 15:21'
         message: ''
         version: '3'
-    -
+    - 
         author: whajeri
         date: '2010-12-22 12:45'
         message: ''
         version: '2'
-    -
+    - 
         author: whajeri
         date: '2010-12-22 11:40'
         message: ''

@@ -15,6 +15,7 @@ labels:
     - content-view
     - howto
     - studio
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '19235663'
@@ -29,332 +30,332 @@ confluence:
     source_link: /display/NXDOC/How+to+Define+a+New+Content+View
 tree_item_index: 100
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-08-26 13:24'
         message: ''
         version: '66'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-08-26 13:22'
         message: ''
         version: '65'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-09 15:41'
         message: ''
         version: '64'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-04-27 13:33'
         message: ''
         version: '63'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-04-27 13:32'
         message: ''
         version: '62'
-    -
+    - 
         author: Michael Gena
         date: '2016-04-26 09:05'
         message: ''
         version: '61'
-    -
+    - 
         author: Michael Gena
         date: '2016-04-26 08:57'
         message: ''
         version: '60'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-12-02 13:11'
         message: ''
         version: '59'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-12-01 17:15'
         message: ''
         version: '58'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-12-01 17:08'
         message: ''
         version: '57'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-12 20:04'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '56'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-12 20:04'
         message: Remove links to deprecated pages
         version: '55'
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-02 17:09'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '54'
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-02 17:09'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '53'
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-02 17:09'
         message: change level to beginner
         version: '52'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-26 17:06'
         message: link update
         version: '51'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 22:20'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '50'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 22:20'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '49'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 22:20'
         message: ''
         version: '48'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-27 17:31'
         message: ''
         version: '47'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-27 17:31'
         message: ''
         version: '46'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-21 13:58'
         message: ''
         version: '45'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-15 17:34'
         message: ''
         version: '44'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-15 15:30'
         message: ''
         version: '43'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-07-23 17:08'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '42'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-07-23 17:08'
         message: ''
         version: '41'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-07-23 17:08'
         message: ''
         version: '40'
-    -
+    - 
         author: Solen Guitter
         date: '2014-06-12 15:35'
         message: ''
         version: '39'
-    -
+    - 
         author: Michaël Vachette
         date: '2014-04-22 09:32'
         message: ''
         version: '38'
-    -
+    - 
         author: Michaël Vachette
         date: '2014-04-22 09:32'
         message: ''
         version: '37'
-    -
+    - 
         author: Michaël Vachette
         date: '2014-04-22 09:30'
         message: ''
         version: '36'
-    -
+    - 
         author: Michaël Vachette
         date: '2014-04-22 09:29'
         message: ''
         version: '35'
-    -
+    - 
         author: Michaël Vachette
         date: '2014-04-22 09:25'
         message: ''
         version: '34'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-10 17:59'
         message: ''
         version: '33'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-02 15:02'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '32'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-02 15:02'
         message: ''
         version: '31'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-29 17:23'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '30'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-29 17:23'
         message: ''
         version: '29'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-29 17:23'
         message: Fixed broken video and some formatting
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2011-09-06 15:56'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2011-09-06 15:56'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '26'
-    -
+    - 
         author: Solen Guitter
         date: '2011-09-06 15:56'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '25'
-    -
+    - 
         author: Solen Guitter
         date: '2011-09-06 15:56'
         message: Migrated to Confluence 4.0
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2011-09-06 15:56'
         message: ''
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2011-09-02 17:28'
         message: added related howtos
         version: '22'
-    -
+    - 
         author: Alain Escaffre
         date: '2011-08-30 01:29'
         message: ''
         version: '21'
-    -
+    - 
         author: Alain Escaffre
         date: '2011-08-30 01:28'
         message: ''
         version: '20'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-16 18:38'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2011-08-06 00:56'
         message: ''
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2011-07-11 11:20'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2011-07-05 16:06'
         message: ''
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2011-07-05 15:55'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2011-07-05 15:52'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2011-06-30 14:20'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2011-05-17 10:25'
         message: added content view example screencast
         version: '12'
-    -
+    - 
         author: Alain Escaffre
         date: '2011-02-11 06:57'
         message: ''
         version: '11'
-    -
+    - 
         author: Alain Escaffre
         date: '2011-02-11 06:54'
         message: ''
         version: '10'
-    -
+    - 
         author: Alain Escaffre
         date: '2011-01-23 16:07'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-18 17:17'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-18 17:12'
         message: added query filter information
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-18 16:05'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-18 16:04'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-18 15:54'
         message: ''
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2011-01-14 09:04'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-13 18:08'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-12 18:13'
         message: ''

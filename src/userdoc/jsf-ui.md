@@ -8,11 +8,12 @@ labels:
     - concepts
     - home
     - search
+    - content-review-lts2017
 description: JSF UI User Documentation
 tree_item_index: 200
 version_override:
-  '810': '810/userdoc'
-  
+    '810': 810/userdoc
+
 ---
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">

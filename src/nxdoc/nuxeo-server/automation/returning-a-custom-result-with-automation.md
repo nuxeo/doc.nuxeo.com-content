@@ -9,36 +9,36 @@ labels:
     - automation
     - automation-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '18451738'
     ajs-parent-page-title: Automation
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Returning+a+Custom+Result+with+Automation
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Returning+a+Custom+Result+with+Automation
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Returning+a+Custom+Result+with+Automation'
     page_id: '12913601'
     shortlink: wQvF
     shortlink_source: 'https://doc.nuxeo.com/x/wQvF'
     source_link: /display/NXDOC/Returning+a+Custom+Result+with+Automation
 tree_item_index: 1200
 history:
-    -
+    - 
         author: Thierry Martins
         date: '2015-12-07 09:59'
         message: emove old class usag
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-20 17:18'
         message: ''
         version: '3'
-    -
+    - 
         author: Thierry Martins
         date: '2013-02-05 11:17'
         message: ''
         version: '2'
-    -
+    - 
         author: Thierry Martins
         date: '2013-02-05 10:58'
         message: ''

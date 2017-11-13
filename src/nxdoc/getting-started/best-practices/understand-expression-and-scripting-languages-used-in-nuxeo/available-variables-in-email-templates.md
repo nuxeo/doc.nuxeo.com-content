@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - variable
     - email
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '14254895'
@@ -15,104 +16,103 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Available+Variables+in+Email+Templates
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Available+Variables+in+Email+Templates
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Available+Variables+in+Email+Templates'
     page_id: '14256091'
     shortlink: 24fZ
     shortlink_source: 'https://doc.nuxeo.com/x/24fZ'
     source_link: /display/NXDOC/Available+Variables+in+Email+Templates
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-09 15:42'
         message: ''
         version: '19'
-    -
+    - 
         author: Gildas Lefevre
         date: '2016-05-02 19:04'
         message: ''
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-08 09:42'
         message: Fix typo in workflowDocuments example
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-27 13:45'
         message: 'User doc reorganization: fix link to alerts'
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-29 14:00'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-29 13:57'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-29 13:37'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-29 13:37'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-25 12:37'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-02 15:57'
         message: ''
         version: '10'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-07-11 01:34'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-09 12:07'
         message: Format
         version: '8'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-08 16:50'
         message: ''
         version: '7'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-08 16:48'
         message: ''
         version: '6'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-08 16:48'
         message: ''
         version: '5'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-08 16:47'
         message: ''
         version: '4'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-08 15:22'
         message: ''
         version: '3'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-08 15:22'
         message: ''
         version: '2'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-07-08 15:21'
         message: ''

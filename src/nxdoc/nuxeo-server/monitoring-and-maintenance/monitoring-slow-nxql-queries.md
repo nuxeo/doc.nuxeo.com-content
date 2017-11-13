@@ -9,6 +9,7 @@ labels:
     - nxql
     - monitoring
     - monitoring-component
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance
@@ -22,46 +23,46 @@ confluence:
     source_link: /display/NXDOC/Monitoring+Slow+NXQL+Queries
 tree_item_index: 900
 version_override:
-    'LTS 2015': 710/admindoc/monitoring-slow-nxql-queries
+    LTS 2015: 710/admindoc/monitoring-slow-nxql-queries
     '6.0': 60/admindoc/monitoring-slow-nxql-queries
     '5.8': 58/admindoc/monitoring-slow-nxql-queries
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-28 09:15'
         message: dd Since 8.3 mentio
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-28 07:32'
         message: ''
         version: '7'
-    -
+    - 
         author: Kevin Leturc
         date: '2016-06-27 12:18'
         message: ''
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-29 09:46'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-14 08:54'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-14 08:52'
         message: ''
         version: '3'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-01-13 08:15'
         message: ''
         version: '2'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-01-12 16:16'
         message: ''

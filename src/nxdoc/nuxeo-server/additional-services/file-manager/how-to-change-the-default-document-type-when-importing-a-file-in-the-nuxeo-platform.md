@@ -1,7 +1,5 @@
 ---
-title: >-
-    How to Change the Default Document Type When Importing a File in the Nuxeo
-    Platform?
+title: How to Change the Default Document Type When Importing a File in the Nuxeo Platform?
 review:
     comment: ''
     date: '2016-12-13'
@@ -13,6 +11,7 @@ labels:
     - document-type
     - file-upload-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235627'
     ajs-parent-page-title: File Manager
@@ -25,77 +24,77 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/IYwZAQ'
     source_link: /pages/viewpage.action?pageId=18451489
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-09-08 09:42'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-30 15:37'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-07 15:12'
         message: link update
         version: '13'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-10-13 10:42'
         message: ''
         version: '12'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-10-13 10:41'
         message: ''
         version: '11'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-10-13 10:37'
         message: ''
         version: '10'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-07-21 10:48'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-18 11:42'
         message: add links
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-18 11:41'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-18 11:29'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-21 18:15'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-21 17:40'
         message: ''
         version: '4'
-    -
+    - 
         author: Thierry Martins
         date: '2014-03-21 17:21'
         message: ''
         version: '3'
-    -
+    - 
         author: Thierry Martins
         date: '2014-03-21 17:21'
         message: Add related links
         version: '2'
-    -
+    - 
         author: Thierry Martins
         date: '2014-03-21 17:20'
         message: ''

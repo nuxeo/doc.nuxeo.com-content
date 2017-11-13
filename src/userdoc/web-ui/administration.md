@@ -1,12 +1,15 @@
 ---
 title: Administration
-description:
+description: null
 review:
     comment: ''
     date: '2017-01-26'
     status: ok
 toc: true
 tree_item_index: 700
+labels:
+    - content-review-lts2017
+
 ---
 This Administration menu presents different submenus:
 

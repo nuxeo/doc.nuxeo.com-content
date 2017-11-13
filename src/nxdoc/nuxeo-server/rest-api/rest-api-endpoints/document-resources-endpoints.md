@@ -9,6 +9,7 @@ labels:
     - endpoint
     - rest-api
     - rest-api-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'
@@ -23,67 +24,67 @@ confluence:
     source_link: /display/NXDOC/Document+Resources+Endpoints
 tree_item_index: 100
 history:
-    -
+    - 
         author: Kevin Leturc
         date: '2016-06-21 08:51'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-29 09:10'
         message: ''
         version: '12'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2014-09-11 18:27'
         message: ''
         version: '11'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-07-21 10:35'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-18 12:22'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-02 10:38'
         message: ''
         version: '8'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-07-01 00:34'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-15 15:48'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-15 11:29'
         message: ''
         version: '5'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-11-14 01:25'
         message: ''
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-11-14 00:52'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-11-14 00:51'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-11-14 00:49'
         message: ''

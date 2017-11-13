@@ -8,7 +8,9 @@ review:
 toc: true
 labels:
     - roadmap
+    - content-review-lts2017
 tree_item_index: 500
+
 ---
 
 Below are the evolutions and improvements planned for Web UI.

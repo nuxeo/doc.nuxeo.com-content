@@ -9,6 +9,7 @@ labels:
     - vocabulary
     - directory
     - directory-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '4688939'
@@ -23,17 +24,17 @@ confluence:
     source_link: /display/NXDOC/Directory+and+UI
 tree_item_index: 400
 history:
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-04-20 14:18'
         message: ''
         version: '3'
-    -
+    - 
         author: Thierry Delprat
         date: '2015-03-19 14:35'
         message: ''
         version: '2'
-    -
+    - 
         author: Thierry Delprat
         date: '2015-03-19 14:31'
         message: ''

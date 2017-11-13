@@ -9,6 +9,7 @@ labels:
     - elasticsearch
     - query-pageprovider-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -16,70 +17,69 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Moving+Load+from+Database+to+Elasticsearch
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Moving+Load+from+Database+to+Elasticsearch
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Moving+Load+from+Database+to+Elasticsearch'
     page_id: '23366423'
     shortlink: F4tkAQ
     shortlink_source: 'https://doc.nuxeo.com/x/F4tkAQ'
     source_link: /display/NXDOC/Moving+Load+from+Database+to+Elasticsearch
 tree_item_index: 700
 history:
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-05-22 07:11'
         message: ''
         version: '12'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-05-22 06:58'
         message: Add deactivating database fulltext section
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-08 08:52'
         message: ''
         version: '10'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-04-07 09:13'
         message: Add deactivating database fulltext section
         version: '9'
-    -
+    - 
         author: Bob Canaway
         date: '2015-03-23 18:19'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2015-03-18 09:14'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2015-03-18 09:11'
         message: fix links
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2015-03-18 09:08'
         message: ''
         version: '5'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-03-17 08:40'
         message: ''
         version: '4'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-03-17 08:36'
         message: ''
         version: '3'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-02-23 10:25'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-23 09:27'
         message: ''

@@ -7,6 +7,7 @@ review:
 toc: true
 labels:
     - lts2016-ok
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '3866685'
     ajs-parent-page-title: Installation
@@ -20,26 +21,26 @@ confluence:
     source_link: /display/NXDOC/Configuration+Wizard
 tree_item_index: 1000
 version_override:
-    'LTS 2015': 710/admindoc/setup
+    LTS 2015: 710/admindoc/setup
     '6.0': 60/admindoc/setup
     '5.8': 58/admindoc/setup
 history:
-    -
+    - 
         author: Alain Escaffre
         date: '2016-03-23 11:16'
         message: ''
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2016-03-23 11:03'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2016-03-23 10:36'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2016-03-23 10:35'
         message: ''

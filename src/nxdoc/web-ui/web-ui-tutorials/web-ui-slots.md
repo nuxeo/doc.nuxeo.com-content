@@ -1,5 +1,5 @@
 ---
-title: "HOWTO: Customize Slots"
+title: 'HOWTO: Customize Slots'
 review:
     comment: ''
     date: '2017-01-16'
@@ -17,6 +17,7 @@ labels:
     - extension
     - nuxeo-slot
     - nuxeo-slot-content
+    - content-review-lts2017
 tree_item_index: 700
 
 ---

@@ -8,6 +8,7 @@ labels:
     - search
     - suggestion-search
     - quick-search
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '2392416'
@@ -22,127 +23,127 @@ confluence:
     source_link: /display/USERDOC/Quick+Search
 tree_item_index: 200
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-20 15:04'
         message: ''
         version: '25'
-    -
+    - 
         author: Solen Guitter
         date: '2015-07-27 15:09'
         message: Remove Search on dates section (not relevant anymore)
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2015-06-03 09:15'
         message: ''
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-20 14:41'
         message: ''
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-09 23:03'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-09 23:03'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-20 15:18'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2014-02-19 19:34'
         message: Fixed date search description
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2014-02-19 16:48'
         message: Added precision about keyword suggestion search
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-27 16:20'
         message: No Search button anymore in simple search
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-20 14:47'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-28 15:33'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-21 12:05'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-30 21:42'
         message: Updated screenshots for 5.8
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-17 18:12'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-30 16:17'
         message: Removed related topics from TOC
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-21 19:21'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-21 19:21'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-21 19:20'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-21 19:06'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-21 18:59'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-21 18:42'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-21 18:33'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-21 18:18'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-21 17:44'
         message: ''

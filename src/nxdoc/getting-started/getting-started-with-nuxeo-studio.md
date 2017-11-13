@@ -10,12 +10,12 @@ details:
         level: Beginner
         tool: Nuxeo Studio
         topics: 'Document type, Style'
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
     - howto
     - studio
     - lts2016-ok
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '14256538'
@@ -31,137 +31,138 @@ confluence:
 tree_item_index: 100
 hidden: true
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-07 09:23'
         message: ''
         version: '26'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-07 09:12'
         message: 'NXDOC-857: remove nuxeo.io'
         version: '25'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-05-06 13:02'
         message: ''
         version: '24'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-05-06 12:53'
         message: ''
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2016-04-14 12:39'
         message: Update Studio menu labels
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-31 15:41'
         message: Fix links
         version: '21'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-31 09:26'
         message: Fix links
         version: '20'
-    -
+    - 
         author: Julie Allouch
         date: '2016-03-29 19:51'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-02 09:32'
         message: ''
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-02 09:31'
         message: ''
         version: '17'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2016-01-07 11:00'
         message: Update titles to fix anchor links
         version: '16'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-10-01 15:51'
         message: ''
         version: '15'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-10-01 15:51'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-03 07:39'
         message: ''
         version: '13'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-07-31 13:50'
         message: ''
         version: '12'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-07-31 13:20'
         message: ''
         version: '11'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-12-29 16:26'
         message: ''
         version: '10'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-07 10:48'
         message: ''
         version: '9'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-07 10:48'
         message: ''
         version: '8'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-07 10:47'
         message: ''
         version: '7'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-07 10:44'
         message: ''
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-07 10:44'
         message: ''
         version: '5'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-07 10:39'
         message: ''
         version: '4'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-07 10:35'
         message: ''
         version: '3'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-06 12:23'
         message: ''
         version: '2'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-06 12:21'
         message: ''
         version: '1'
 next_link: /nxdoc/develop-with-nuxeo-platform/
+
 ---
 This page shows you how to start customizing the Nuxeo Platform using Nuxeo Studio. You'll see how to:
 

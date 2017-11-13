@@ -6,7 +6,9 @@ review:
     status: ok
 labels:
     - performances
+    - content-review-lts2017
 tree_item_index: 800
+
 ---
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">

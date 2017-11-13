@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - excerpt
     - multiexcerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '17794754'
@@ -15,91 +16,90 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Nuxeo+Platform+6.0+Packaging+Changes+and+Deprecations
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Nuxeo+Platform+6.0+Packaging+Changes+and+Deprecations
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Platform+6.0+Packaging+Changes+and+Deprecations'
     page_id: '20518793'
     shortlink: iRc5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/iRc5AQ'
     source_link: /display/NXDOC/Nuxeo+Platform+6.0+Packaging+Changes+and+Deprecations
 version_override:
-    'LTS 2015': 710/admindoc/nuxeo-platform-60-packaging-changes-and-deprecations
+    LTS 2015: 710/admindoc/nuxeo-platform-60-packaging-changes-and-deprecations
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-27 15:05'
         message: ''
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-30 15:53'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2015-06-29 13:45'
         message: Fix link to Social Collaboration migration script
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-14 14:24'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-22 14:30'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-22 14:25'
         message: Add link to Social Collaboration migration script and readme
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-28 18:32'
         message: link to virtual nav addon
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-14 17:47'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-14 17:46'
         message: typo
         version: '8'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-11-14 17:45'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-14 17:39'
         message: Add details about faceted search and dam
         version: '6'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-11-14 17:24'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-14 17:17'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-14 17:15'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-14 17:15'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-14 17:05'
         message: ''

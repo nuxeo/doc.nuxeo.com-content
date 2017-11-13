@@ -1,19 +1,19 @@
 ---
-title: "HOWTO: Customize Nuxeo Mobile Metadata Layout"
+title: 'HOWTO: Customize Nuxeo Mobile Metadata Layout'
 review:
     comment: ''
     date: '2017-04-10'
     status: ok
 details:
     howto:
-        excerpt: >-
-            This how-to explains how to customize Nuxeo Mobile metadata layout.
+        excerpt: This how-to explains how to customize Nuxeo Mobile metadata layout.
         level: Intermediate
         tool: JSON Extention
-        topics: 'Nuxeo Mobile'
+        topics: Nuxeo Mobile
 labels:
     - nuxeo-mobile
     - howto
+    - content-review-lts2017
 toc: true
 
 ---

@@ -1,5 +1,5 @@
 ---
-title: "HOWTO: Create and Reuse a Custom element"
+title: 'HOWTO: Create and Reuse a Custom element'
 review:
     comment: ''
     date: '2017-04-12'
@@ -17,7 +17,9 @@ labels:
     - nuxeo-elements
     - nuxeo-ui-elements
     - polymer
+    - content-review-lts2017
 tree_item_index: 1200
+
 ---
 {{#> callout type='tip'}}
 Follow the related [video course and exercises](https://university.nuxeo.com/store/187249-document-and-workflow-task-layouts-with-nuxeo-studio-designer) on Nuxeo University.

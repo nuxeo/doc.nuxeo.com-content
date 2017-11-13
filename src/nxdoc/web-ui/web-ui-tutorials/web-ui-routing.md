@@ -10,6 +10,7 @@ labels:
     - nuxeo-web-ui
     - extension
     - routing
+    - content-review-lts2017
 tree_item_index: 200
 
 ---

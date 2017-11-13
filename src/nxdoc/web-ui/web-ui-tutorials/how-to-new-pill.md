@@ -1,22 +1,24 @@
 ---
-title: "HOWTO: Insert a New Pill"
+title: 'HOWTO: Insert a New Pill'
 review:
     comment: ''
     date: '2017-08-21'
     status: ok
 toc: true
 details:
-     howto:
-         excerpt: Learn how to insert a new pill on your custom document type
-         level: Intermediate
-         tool: Designer
-         topics: Web UI
+    howto:
+        excerpt: Learn how to insert a new pill on your custom document type
+        level: Intermediate
+        tool: Designer
+        topics: Web UI
 labels:
     - lts2016-ok
     - nuxeo-web-ui
     - page-provider
     - pill
+    - content-review-lts2017
 tree_item_index: 1400
+
 ---
 {{#> callout type='note' }}
 The View Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.

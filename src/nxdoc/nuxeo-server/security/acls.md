@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - acl
     - security-component
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '20515363'
     ajs-parent-page-title: Security
@@ -21,12 +22,12 @@ confluence:
     source_link: /display/NXDOC/ACLs
 tree_item_index: 100
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-01-18 14:51'
         message: eplace
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-09-19 12:16'
         message: ''

@@ -9,6 +9,7 @@ labels:
     - elasticsearch
     - elasticsearch-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -23,52 +24,52 @@ confluence:
     source_link: /display/NXDOC/Elasticsearch+Hints+Cheat+Sheet
 tree_item_index: 900
 history:
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-12-16 10:07'
         message: ormattin
         version: '10'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-12-16 10:06'
         message: Add note about common operator
         version: '9'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-12-15 10:33'
         message: Improve explanations
         version: '8'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-12-14 17:10'
         message: fix analyzer name
         version: '7'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-12-14 10:32'
         message: ''
         version: '6'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-12-11 16:16'
         message: fix anchor
         version: '5'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-12-11 16:14'
         message: Added common operator on main attachment config
         version: '4'
-    -
+    - 
         author: Michaël Vachette
         date: '2015-08-04 12:28'
         message: ''
         version: '3'
-    -
+    - 
         author: Michaël Vachette
         date: '2015-08-04 11:49'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-08-04 10:08'
         message: ''

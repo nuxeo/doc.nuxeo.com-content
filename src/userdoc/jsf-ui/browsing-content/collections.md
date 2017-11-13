@@ -9,6 +9,7 @@ labels:
     - collection
     - excerpt
     - multiexcerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '2392400'
@@ -23,172 +24,172 @@ confluence:
     source_link: /display/USERDOC/Collections
 tree_item_index: 100
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2015-11-23 14:07'
         message: ''
         version: '34'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-07 12:07'
         message: ''
         version: '33'
-    -
+    - 
         author: Solen Guitter
         date: '2015-07-07 14:11'
         message: Add screenshots for favorites
         version: '32'
-    -
+    - 
         author: Solen Guitter
         date: '2015-07-07 14:02'
         message: ''
         version: '31'
-    -
+    - 
         author: Solen Guitter
         date: '2015-07-07 13:10'
         message: 'NXDOC-614: merge Collections and Favorites page, update'
         version: '30'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 11:50'
         message: ''
         version: '29'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 11:47'
         message: ''
         version: '28'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 11:47'
         message: ''
         version: '27'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 11:28'
         message: ''
         version: '26'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 11:26'
         message: ''
         version: '25'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 11:22'
         message: ''
         version: '24'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 11:14'
         message: ''
         version: '23'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 11:11'
         message: ''
         version: '22'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 11:10'
         message: ''
         version: '21'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 11:06'
         message: ''
         version: '20'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 11:06'
         message: ''
         version: '19'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 11:04'
         message: ''
         version: '18'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 11:04'
         message: ''
         version: '17'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 10:56'
         message: ''
         version: '16'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-28 10:55'
         message: ''
         version: '15'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-27 18:26'
         message: ''
         version: '14'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-12 13:50'
         message: ''
         version: '13'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-07-04 17:06'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2014-06-11 14:05'
         message: ''
         version: '11'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-06-10 11:26'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2014-04-17 15:25'
         message: ''
         version: '9'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-17 12:15'
         message: ''
         version: '8'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-16 17:00'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-04-10 16:01'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2014-04-09 15:37'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-04-08 17:39'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-27 17:37'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-27 15:44'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-27 15:43'
         message: ''

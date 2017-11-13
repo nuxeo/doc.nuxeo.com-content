@@ -9,6 +9,7 @@ labels:
     - workflow
     - subworkflow
     - sub-workflow
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '14257562'
@@ -22,103 +23,104 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/vY3Z'
     source_link: /display/NXDOC/2-+Creating+the+Subworkflows
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-24 13:37'
         message: ''
         version: '19'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-24 13:29'
         message: ''
         version: '18'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-24 10:02'
         message: ''
         version: '17'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-12-10 16:41'
         message: TOC
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2014-06-12 11:46'
         message: Fixed broken links
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-09 16:10'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-09 16:10'
         message: Fixed formatting and typos
         version: '13'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-08 13:56'
         message: Fixed error
         version: '12'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-08 12:06'
         message: ''
         version: '11'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-08 11:14'
         message: ''
         version: '10'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-08 11:09'
         message: ''
         version: '9'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-08 11:00'
         message: ''
         version: '8'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-08 10:22'
         message: ''
         version: '7'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 19:50'
         message: ''
         version: '6'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 19:48'
         message: ''
         version: '5'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 18:48'
         message: ''
         version: '4'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 18:45'
         message: ''
         version: '3'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 18:45'
         message: ''
         version: '2'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 18:45'
         message: ''
         version: '1'
 previous_link: /nxdoc/1-creating-the-expense-document-type
 next_link: /nxdoc/3-creating-the-main-workflow
+
 ---
 {{#> callout type='info' }}
 

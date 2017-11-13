@@ -9,6 +9,7 @@ labels:
     - howto
     - webengine
     - webengine-component
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '3343141'
     ajs-parent-page-title: WebEngine Tutorials
@@ -22,42 +23,42 @@ confluence:
     source_link: /display/NXDOC/Web+Object+Model
 tree_item_index: 300
 history:
-    -
+    - 
         author: Damien Metzler
         date: '2015-10-20 14:08'
         message: ''
         version: '8'
-    -
+    - 
         author: Damien Metzler
         date: '2015-10-20 14:07'
         message: ''
         version: '7'
-    -
+    - 
         author: Damien Metzler
         date: '2015-10-20 14:07'
         message: ''
         version: '6'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-21 11:46'
         message: Migrated to Confluence 4.0
         version: '5'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-21 11:46'
         message: ''
         version: '4'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-21 11:42'
         message: ''
         version: '3'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-21 11:31'
         message: ''
         version: '2'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-20 16:33'
         message: ''

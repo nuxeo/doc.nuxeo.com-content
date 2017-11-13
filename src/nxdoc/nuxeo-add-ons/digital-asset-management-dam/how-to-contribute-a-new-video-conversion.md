@@ -6,14 +6,11 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to contribute a new video conversion to convert a video to
-            WebM format.
+        excerpt: Learn how to contribute a new video conversion to convert a video to WebM format.
         level: Advanced
         tool: 'XML extension, Code'
         topics: 'Conversion, DAM'
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
     - lts2016-ok
     - howto
@@ -22,6 +19,7 @@ labels:
     - video
     - convert-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3866704'
@@ -29,44 +27,43 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Contribute+a+New+Video+Conversion
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+a+New+Video+Conversion
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+a+New+Video+Conversion'
     page_id: '20517029'
     shortlink: pRA5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/pRA5AQ'
     source_link: /display/NXDOC/How+to+Contribute+a+New+Video+Conversion
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-09-08 13:03'
         message: ''
         version: '7'
-    -
+    - 
         author: Thomas Roger
         date: '2015-10-13 09:28'
         message: ''
         version: '6'
-    -
+    - 
         author: Thomas Roger
         date: '2015-10-13 09:25'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 22:20'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-21 12:10'
         message: 'Fix typos and formatting, categorize howto'
         version: '3'
-    -
+    - 
         author: Thomas Roger
         date: '2014-10-21 11:59'
         message: ''
         version: '2'
-    -
+    - 
         author: Thomas Roger
         date: '2014-10-21 11:58'
         message: ''

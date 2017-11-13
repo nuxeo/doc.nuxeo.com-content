@@ -9,6 +9,7 @@ labels:
     - widget-types
     - layout-widgets-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3868345'
@@ -23,42 +24,42 @@ confluence:
     source_link: /display/NXDOC/Decoration+Widget+Types
 tree_item_index: 600
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-31 09:39'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-31 14:19'
         message: Update table of contents look
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-08 16:48'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-08 16:47'
         message: Added related topics
         version: '5'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-06 15:18'
         message: add right menu
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-06 15:01'
         message: wording
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-05 17:50'
         message: add container and dropZone widget types
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-05 17:29'
         message: ''

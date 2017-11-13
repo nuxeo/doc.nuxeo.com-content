@@ -11,6 +11,7 @@ labels:
     - blob-manager-component
     - multiexcerpt
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '20515468'
@@ -25,157 +26,157 @@ confluence:
     source_link: /display/NXDOC/File+Storage
 tree_item_index: 100
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-22 11:14'
         message: ''
         version: '31'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-22 10:10'
         message: ''
         version: '30'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-15 13:57'
         message: ''
         version: '29'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-12-14 13:13'
         message: Formatting
         version: '28'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-14 12:39'
         message: ''
         version: '27'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-12-14 11:11'
         message: formatting
         version: '26'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 22:57'
         message: ''
         version: '25'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 22:47'
         message: ''
         version: '24'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 22:42'
         message: ''
         version: '23'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 22:41'
         message: ''
         version: '22'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 22:39'
         message: ''
         version: '21'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 22:20'
         message: ''
         version: '20'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 22:13'
         message: ''
         version: '19'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 22:06'
         message: ''
         version: '18'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 22:05'
         message: ''
         version: '17'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 22:01'
         message: ''
         version: '16'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 22:00'
         message: ''
         version: '15'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 21:59'
         message: ''
         version: '14'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 21:58'
         message: ''
         version: '13'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 21:53'
         message: ''
         version: '12'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 21:34'
         message: ''
         version: '11'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-12-13 21:28'
         message: ''
         version: '10'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-09-16 09:07'
         message: ''
         version: '9'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-12-10 17:00'
         message: TOC
         version: '8'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-10-09 18:56'
         message: ''
         version: '7'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-10-09 18:53'
         message: ''
         version: '6'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-10-09 18:52'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-30 12:20'
         message: Added TOC
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-29 18:26'
         message: Typos
         version: '3'
-    -
+    - 
         author: Thierry Delprat
         date: '2014-01-28 17:27'
         message: ''
         version: '2'
-    -
+    - 
         author: Thierry Delprat
         date: '2014-01-28 16:57'
         message: ''

@@ -11,6 +11,7 @@ labels:
     - multiexcerpt
     - multiexcerpt-include
     - excerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '11043048'
@@ -25,242 +26,242 @@ confluence:
     source_link: /display/USERDOC/Creating+Content
 tree_item_index: 600
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-11 08:49'
         message: ix broken excerp
         version: '48'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-29 15:58'
         message: Fix Nuxeo CSV broken excerpt
         version: '47'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-29 15:57'
         message: Fix broken excerpts (migration from ADMINDOC to NXDOC)
         version: '46'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-08 11:11'
         message: ''
         version: '45'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-08 11:11'
         message: ''
         version: '44'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-08 11:11'
         message: ''
         version: '43'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-08 11:10'
         message: ''
         version: '42'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-08 11:10'
         message: ''
         version: '41'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-08 11:09'
         message: ''
         version: '40'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-08 11:05'
         message: link update
         version: '39'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-07 15:10'
         message: ''
         version: '38'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-07 11:04'
         message: ''
         version: '37'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-07 10:49'
         message: ''
         version: '36'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-04 10:39'
         message: ''
         version: '35'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-11-25 13:33'
         message: ''
         version: '34'
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-09 16:07'
         message: Update link to point to Nuxeo Drive doc instead of Live Edit
         version: '33'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-13 12:41'
         message: ''
         version: '32'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-10 15:25'
         message: ''
         version: '31'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-10 15:24'
         message: ''
         version: '30'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-19 18:10'
         message: ''
         version: '29'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-19 18:08'
         message: ''
         version: '28'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-19 18:05'
         message: ''
         version: '27'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-19 18:01'
         message: ''
         version: '26'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-19 18:01'
         message: ''
         version: '25'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-19 17:59'
         message: ''
         version: '24'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-19 17:59'
         message: ''
         version: '23'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-19 17:27'
         message: ''
         version: '22'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-19 17:27'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2014-06-19 16:36'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-26 12:24'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2014-02-24 14:48'
         message: ''
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2014-02-03 15:19'
         message: Formatting
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-31 14:06'
         message: ''
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-31 14:06'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-22 17:53'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2012-06-19 15:04'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2012-06-19 15:04'
         message: Added link
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-23 10:26'
         message: Added related content
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-23 10:22'
         message: Added related content
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-23 10:18'
         message: Added toc
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2011-06-06 11:32'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2011-06-06 11:32'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2010-12-01 11:17'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2010-09-30 17:45'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2010-09-30 11:50'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2010-09-30 11:49'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2010-05-10 18:36'
         message: fixed broken links
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2010-04-27 11:05'
         message: ''

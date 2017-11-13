@@ -8,8 +8,10 @@ labels:
     - lts2016-ok
     - client
     - deprecated
+    - content-review-lts2017
 toc: true
 tree_item_index: 1000
+
 ---
 
 * [Java Automation Client]({{page space='NXDOC' page='Java Automation Client'}}):</br>

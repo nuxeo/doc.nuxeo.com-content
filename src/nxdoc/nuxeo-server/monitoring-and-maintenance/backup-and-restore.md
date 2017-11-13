@@ -8,6 +8,7 @@ labels:
     - content-review-lts2016
     - backup
     - nxdoc-742
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance
@@ -21,111 +22,111 @@ confluence:
     source_link: /display/NXDOC/Backup+and+Restore
 tree_item_index: 200
 version_override:
-    'LTS 2015': 710/admindoc/backup-and-restore
+    LTS 2015: 710/admindoc/backup-and-restore
     '6.0': 60/admindoc/backup-and-restore
     '5.8': 58/admindoc/backup-and-restore
 history:
-    -
+    - 
         author: Alain Escaffre
         date: '2016-03-23 13:41'
         message: ''
         version: '21'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-10-05 08:18'
         message: ''
         version: '20'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-10-05 08:08'
         message: ''
         version: '19'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-07-01 13:00'
         message: ''
         version: '18'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-06-30 10:16'
         message: ''
         version: '17'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-06-24 15:35'
         message: ''
         version: '16'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-06-24 13:13'
         message: ''
         version: '15'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-06-26 16:00'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-30 10:22'
         message: Added links
         version: '13'
-    -
+    - 
         author: Julien Carsique
         date: '2013-10-28 00:32'
         message: ''
         version: '12'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-10-27 22:34'
         message: ''
         version: '11'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-10-27 22:34'
         message: ''
         version: '10'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-10-27 22:33'
         message: ''
         version: '9'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-10-27 22:09'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-14 17:29'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2011-12-10 19:02'
         message: Migrated to Confluence 4.0
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2011-12-10 19:02'
         message: ''
         version: '5'
-    -
+    - 
         author: Julien Carsique
         date: '2011-06-06 15:52'
         message: ''
         version: '4'
-    -
+    - 
         author: Julien Carsique
         date: '2011-06-06 15:49'
         message: ''
         version: '3'
-    -
+    - 
         author: Florent Guillaume
         date: '2010-06-17 16:52'
         message: ''
         version: '2'
-    -
+    - 
         author: Admin name placeholder
         date: '2010-03-01 00:58'
         message: ''

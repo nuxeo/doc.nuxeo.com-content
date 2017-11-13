@@ -13,6 +13,7 @@ details:
 labels:
     - lts2016-ok
     - howto
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '20517820'
     ajs-parent-page-title: JSF UI How-To Index
@@ -26,22 +27,22 @@ confluence:
     source_link: /display/NXDOC/How+to+Make+JSF+UI+the+Default+UI
 tree_item_index: 1800
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 09:39'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-01 09:21'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-01 09:20'
         message: ''
         version: '2'
-    -
+    - 
         author: Antoine Taillefer
         date: '2016-09-01 09:15'
         message: ''

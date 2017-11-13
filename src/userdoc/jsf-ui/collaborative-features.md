@@ -12,6 +12,7 @@ labels:
     - excerpt
     - multiexcerpt-include
     - excerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '11043048'
@@ -26,52 +27,52 @@ confluence:
     source_link: /display/USERDOC/Collaborative+Features
 tree_item_index: 1000
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2015-09-07 09:55'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-27 13:36'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-27 13:35'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-27 13:34'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-27 13:29'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-27 13:26'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-27 13:26'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-27 13:25'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-27 10:05'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-27 08:46'
         message: ''

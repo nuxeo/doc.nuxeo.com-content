@@ -1,6 +1,6 @@
 ---
 title: Managing Permissions
-description: Depending on the document you are on, you can be granted different permissions and be allowed different actions on the document.
+description: 'Depending on the document you are on, you can be granted different permissions and be allowed different actions on the document.'
 review:
     comment: ''
     date: '2017-01-04'
@@ -8,7 +8,9 @@ review:
 toc: true
 labels:
     - permissions
+    - content-review-lts2017
 tree_item_index: 200
+
 ---
 {{{multiexcerpt 'permissions-introduction' page='managing-permissions'}}}
 

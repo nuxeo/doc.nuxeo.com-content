@@ -12,6 +12,7 @@ labels:
     - vcs
     - configuration
     - nxdoc-752
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
@@ -26,161 +27,161 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Clustering+Configuration
 tree_item_index: 1300
 version_override:
-    'LTS 2015': 710/admindoc/nuxeo-clustering-configuration
+    LTS 2015: 710/admindoc/nuxeo-clustering-configuration
     '6.0': 60/admindoc/nuxeo-clustering-configuration
     '5.8': 58/admindoc/nuxeo-clustering-configuration
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 12:05'
         message: ''
         version: '31'
-    -
+    - 
         author: Solen Guitter
         date: '2016-07-05 08:17'
         message: ''
         version: '30'
-    -
+    - 
         author: Frantz Fischer
         date: '2016-07-04 13:21'
         message: ''
         version: '29'
-    -
+    - 
         author: Frantz Fischer
         date: '2016-07-04 13:18'
         message: ''
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-17 09:14'
         message: ''
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-17 09:13'
         message: Remove duplicated content
         version: '26'
-    -
+    - 
         author: Harlan Brown
         date: '2016-05-16 17:08'
         message: Clarification for Quartz usage
         version: '25'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-09 12:16'
         message: Typos
         version: '24'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-25 10:30'
         message: ''
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-01 16:31'
         message: ''
         version: '22'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-12-09 13:45'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-27 15:35'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-10 16:02'
         message: Add Redis server in requirements + links
         version: '19'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-09-28 14:12'
         message: ''
         version: '18'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-09-28 14:10'
         message: ''
         version: '17'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-12-04 11:34'
         message: ''
         version: '16'
-    -
+    - 
         author: Benoit Delbosc
         date: '2014-11-28 17:21'
         message: Add requirement for Elasticsearch
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-28 14:48'
         message: Formatting
         version: '14'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2014-09-03 11:35'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2014-04-29 09:50'
         message: ''
         version: '12'
-    -
+    - 
         author: Brendan Coveney
         date: '2014-04-25 21:45'
         message: ''
         version: '11'
-    -
+    - 
         author: Thierry Delprat
         date: '2014-04-25 21:39'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2013-12-04 11:11'
         message: ' shared tmp dir explanations'
         version: '9'
-    -
+    - 
         author: Thierry Martins
         date: '2013-11-07 16:53'
         message: additional info about the data in cluster env
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-14 17:17'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-06 11:25'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-15 15:58'
         message: Fixed typo
         version: '5'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2013-06-27 16:12'
         message: ''
         version: '4'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2013-06-27 15:59'
         message: ''
         version: '3'
-    -
+    - 
         author: Guillaume Renard
         date: '2013-05-31 16:45'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2013-05-30 11:41'
         message: ''

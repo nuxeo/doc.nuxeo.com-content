@@ -7,6 +7,9 @@ review:
 toc: true
 tree_item_index: 200
 description: Web UI user documentation about Search
+labels:
+    - content-review-lts2017
+
 ---
 {{! excerpt}}
 The Nuxeo Platform provides different to search your documents. A Search tab in the side menu and a quick search at the top of the page.

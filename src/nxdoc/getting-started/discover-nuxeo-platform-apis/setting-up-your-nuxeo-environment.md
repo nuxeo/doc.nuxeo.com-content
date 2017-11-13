@@ -7,6 +7,7 @@ review:
 toc: true
 labels:
     - lts2016-ok
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '29460589'
     ajs-parent-page-title: Getting Started with the Nuxeo Platform
@@ -20,277 +21,278 @@ confluence:
     source_link: /display/NXDOC/Setting+up+Your+Nuxeo+Environment
 tree_item_index: 100
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-10-05 12:53'
         message: ''
         version: '54'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2016-10-05 12:48'
         message: ''
         version: '53'
-    -
+    - 
         author: Solen Guitter
         date: '2016-10-05 12:40'
         message: ''
         version: '52'
-    -
+    - 
         author: Solen Guitter
         date: '2016-10-05 12:01'
         message: ''
         version: '51'
-    -
+    - 
         author: Solen Guitter
         date: '2016-10-05 11:44'
         message: ''
         version: '50'
-    -
+    - 
         author: Solen Guitter
         date: '2016-10-03 15:36'
         message: ''
         version: '49'
-    -
+    - 
         author: Arnaud Kervern
         date: '2016-09-21 19:30'
         message: ''
         version: '48'
-    -
+    - 
         author: Arnaud Kervern
         date: '2016-09-21 19:25'
         message: ''
         version: '47'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-21 12:47'
         message: ''
         version: '46'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-15 08:26'
         message: ''
         version: '45'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2016-09-07 08:36'
         message: ''
         version: '44'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-02 15:43'
         message: ''
         version: '43'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-02 15:31'
-        message: naming nuxeo container at dl&start step
+        message: 'naming nuxeo container at dl&start step'
         version: '42'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-12 15:30'
         message: ''
         version: '41'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-11 13:38'
         message: ''
         version: '40'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-11 10:28'
         message: ''
         version: '39'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-09 14:26'
         message: ''
         version: '38'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-09 13:53'
         message: ''
         version: '37'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-09 08:02'
         message: ''
         version: '36'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-08 16:26'
         message: ''
         version: '35'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-08 16:24'
         message: ''
         version: '34'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-08 16:10'
         message: ''
         version: '33'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-08 15:06'
         message: ''
         version: '32'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-02 14:39'
         message: ''
         version: '31'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-02 14:15'
         message: ''
         version: '30'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-01 13:31'
         message: ''
         version: '29'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-01 13:27'
         message: ''
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-27 09:34'
         message: ''
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-27 09:08'
         message: ''
         version: '26'
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-24 10:45'
         message: ''
         version: '25'
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-23 16:24'
         message: ''
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-11 08:35'
         message: ''
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-09 15:14'
         message: ''
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-09 15:13'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-09 15:11'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2016-04-12 13:30'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2016-04-12 07:38'
         message: ''
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2016-04-11 08:35'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2016-04-07 15:36'
         message: ''
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-08 10:56'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-08 09:05'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-08 08:58'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-07 15:59'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-07 15:42'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-04 16:52'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-04 16:51'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-04 15:41'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-04 15:38'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-04 15:26'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-04 15:26'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-18 12:58'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-18 10:40'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-18 10:33'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-17 16:22'
         message: ''
         version: '1'
 next_link: /nxdoc/setting-up-your-javascript-environment
+
 ---
 {{! excerpt}}
 

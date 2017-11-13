@@ -17,6 +17,7 @@ labels:
     - content-view
     - studio
     - virtual-navigation-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '20517205'
@@ -24,169 +25,168 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Add+a+New+Virtual+Navigation+Entry
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Add+a+New+Virtual+Navigation+Entry
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Add+a+New+Virtual+Navigation+Entry'
     page_id: '3342808'
     shortlink: 2AEz
     shortlink_source: 'https://doc.nuxeo.com/x/2AEz'
     source_link: /display/NXDOC/How+to+Add+a+New+Virtual+Navigation+Entry
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-09 13:37'
         message: ''
         version: '32'
-    -
+    - 
         author: Solen Guitter
         date: '2016-04-14 16:08'
         message: Fix Studio menu label
         version: '31'
-    -
+    - 
         author: Ronan Daniellou
         date: '2015-11-18 14:50'
-        message: Moved description to "Nuxeo Virtual Navigation" page.
+        message: 'Moved description to "Nuxeo Virtual Navigation" page.'
         version: '30'
-    -
+    - 
         author: Ronan Daniellou
         date: '2015-11-18 14:28'
         message: Fixes layout + adds Nuxeo TOC
         version: '29'
-    -
+    - 
         author: Vincent Dutat
         date: '2015-11-09 22:21'
         message: ''
         version: '28'
-    -
+    - 
         author: Vincent Dutat
         date: '2015-11-09 22:20'
         message: ''
         version: '27'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-10-14 13:20'
         message: ''
         version: '26'
-    -
+    - 
         author: Arnaud Kervern
         date: '2015-10-13 16:30'
         message: ''
         version: '25'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 21:58'
         message: ''
         version: '24'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-15 17:39'
         message: ''
         version: '23'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-15 17:37'
         message: ''
         version: '22'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-15 14:49'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2014-06-12 15:18'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-10 18:03'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-02 15:06'
         message: ''
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-29 17:23'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2011-09-06 16:48'
         message: Migrated to Confluence 4.0
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2011-09-06 16:48'
         message: Added related tutorials
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2011-09-02 17:54'
         message: ''
         version: '14'
-    -
+    - 
         author: Darcy Carrié
         date: '2011-02-08 15:13'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-19 10:25'
         message: fixed typoes
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-19 08:52'
         message: link update
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-18 17:17'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-18 11:11'
         message: ''
         version: '9'
-    -
+    - 
         author: Alain Escaffre
         date: '2011-01-14 09:20'
         message: ''
         version: '8'
-    -
+    - 
         author: Alain Escaffre
         date: '2011-01-14 09:18'
         message: ''
         version: '7'
-    -
+    - 
         author: Alain Escaffre
         date: '2011-01-14 09:18'
         message: ''
         version: '6'
-    -
+    - 
         author: Alain Escaffre
         date: '2011-01-14 09:17'
         message: ''
         version: '5'
-    -
+    - 
         author: Alain Escaffre
         date: '2010-07-05 15:04'
         message: ''
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2010-07-05 15:00'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2010-07-05 14:52'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2010-07-05 14:15'
         message: ''

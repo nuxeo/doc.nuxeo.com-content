@@ -10,6 +10,7 @@ labels:
     - binary-metadata
     - binary-metadata-component
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -24,277 +25,277 @@ confluence:
     source_link: /display/NXDOC/Binary+Metadata
 tree_item_index: 900
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-10-03 14:57'
         message: ''
         version: '55'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-04-20 14:23'
         message: 'javadoc links updated '
         version: '54'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-09 15:38'
         message: ''
         version: '53'
-    -
+    - 
         author: Andre Justo
         date: '2015-10-13 10:01'
         message: updated BinaryMetadataProcessor method signatures
         version: '52'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-25 13:07'
         message: ''
         version: '51'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-10 15:43'
         message: ''
         version: '50'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-10 15:43'
         message: ''
         version: '49'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-26 12:41'
         message: ''
         version: '48'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-05-26 12:40'
         message: ''
         version: '47'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-15 12:58'
         message: Add links to explorer and javadoc
         version: '46'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-03-26 14:03'
         message: ''
         version: '45'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-03-12 15:09'
         message: ''
         version: '44'
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-18 09:25'
         message: format
         version: '43'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-02-17 10:21'
         message: ''
         version: '42'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-02-17 10:08'
         message: ''
         version: '41'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-02-17 09:53'
         message: Add default metadata mapping contribution
         version: '40'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-19 18:19'
         message: ''
         version: '39'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-16 16:33'
         message: ''
         version: '38'
-    -
+    - 
         author: Bob Canaway
         date: '2015-01-15 15:09'
         message: ''
         version: '37'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-13 13:14'
         message: ''
         version: '36'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-09 09:34'
         message: Title capitalization
         version: '35'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 17:29'
         message: ''
         version: '34'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 17:27'
         message: ''
         version: '33'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-01-08 17:21'
         message: ''
         version: '32'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 17:17'
         message: ''
         version: '31'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 17:14'
         message: ''
         version: '30'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 17:13'
         message: ''
         version: '29'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 17:09'
         message: ''
         version: '28'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 17:06'
         message: ''
         version: '27'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 17:00'
         message: ''
         version: '26'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 17:00'
         message: ''
         version: '25'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-01-08 16:48'
         message: ''
         version: '24'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 16:46'
         message: ''
         version: '23'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 16:40'
         message: ''
         version: '22'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-01-08 16:39'
         message: ''
         version: '21'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 16:34'
         message: ''
         version: '20'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 16:31'
         message: ''
         version: '19'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 16:30'
         message: ''
         version: '18'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 16:29'
         message: ''
         version: '17'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 16:28'
         message: ''
         version: '16'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-08 16:28'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-07 08:54'
         message: format
         version: '14'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-06 15:49'
         message: ''
         version: '13'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-06 15:39'
         message: ''
         version: '12'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-05 19:15'
         message: ''
         version: '11'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-05 19:06'
         message: ''
         version: '10'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-05 16:28'
         message: ''
         version: '9'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-05 16:26'
         message: ''
         version: '8'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-05 16:21'
         message: ''
         version: '7'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-05 16:17'
         message: ''
         version: '6'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-05 16:16'
         message: ''
         version: '5'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-05 16:15'
         message: ''
         version: '4'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-05 16:04'
         message: ''
         version: '3'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-05 16:03'
         message: ''
         version: '2'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-01-05 16:01'
         message: ''

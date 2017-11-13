@@ -7,6 +7,8 @@ review:
     date: '2017-03-15'
     status: ok
     comment: ''
+labels:
+    - content-review-lts2017
 
 ---
 

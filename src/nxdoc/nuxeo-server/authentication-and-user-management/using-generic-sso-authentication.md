@@ -6,6 +6,9 @@ review:
     status: ok
 toc: true
 tree_item_index: 140
+labels:
+    - content-review-lts2017
+
 ---
 
 This plugin assumes Nuxeo is behind an authenticating reverse proxy that transmits user identity using HTTP headers. For instance, you will configure this plugin if an Apache reverse proxy using client certificates does the authentication or for SSO system - example Central Authentication System V2.

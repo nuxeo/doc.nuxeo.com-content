@@ -7,8 +7,9 @@ review:
 labels:
     - lts2016-ok
     - authentication
+    - content-review-lts2017
 version_override:
-    'LTS 2015': 710/nxdoc/authenticating-the-requests/
+    LTS 2015: 710/nxdoc/authenticating-the-requests/
     '6.0': 60/nxdoc/authenticating-the-requests/
 confluence:
     ajs-parent-page-id: '13664833'
@@ -23,47 +24,47 @@ confluence:
     source_link: /display/NXDOC/Authenticating+the+Requests
 tree_item_index: 700
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-30 12:46'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-12 10:22'
         message: ''
         version: '8'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-09-22 00:26'
         message: ''
         version: '7'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-09-22 00:25'
         message: ''
         version: '6'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-09-22 00:24'
         message: ''
         version: '5'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-07-01 08:46'
         message: ''
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-07-03 02:37'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-02-10 18:25'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-02-10 16:46'
         message: ''

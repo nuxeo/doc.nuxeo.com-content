@@ -5,6 +5,7 @@ review:
     date: '2017-07-17'
     status: ok
 labels:
+    - content-review-lts2017
 toc: true
 tree_item_index: 10000
 

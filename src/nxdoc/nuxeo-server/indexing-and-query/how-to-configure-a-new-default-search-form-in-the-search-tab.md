@@ -16,67 +16,66 @@ labels:
     - content-view
     - query
     - search-tab-component
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '4687860'
     ajs-parent-page-title: Indexing and Query
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Configure+a+New+Default+Search+Form+in+the+Search+Tab
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Configure+a+New+Default+Search+Form+in+the+Search+Tab
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Configure+a+New+Default+Search+Form+in+the+Search+Tab'
     page_id: '20517112'
     shortlink: _BA5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/_BA5AQ'
-    source_link: >-
-        /display/NXDOC/How+to+Configure+a+New+Default+Search+Form+in+the+Search+Tab
+    source_link: /display/NXDOC/How+to+Configure+a+New+Default+Search+Form+in+the+Search+Tab
 tree_item_index: 1300
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-24 15:50'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 22:22'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-19 16:39'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-28 11:12'
         message: Add link to Search screen description
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-28 11:11'
         message: Add link
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-28 11:10'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-27 17:43'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-27 17:41'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-27 17:40'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-23 19:19'
         message: ''

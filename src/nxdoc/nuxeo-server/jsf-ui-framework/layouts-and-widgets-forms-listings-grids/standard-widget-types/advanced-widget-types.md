@@ -10,6 +10,7 @@ labels:
     - select2
     - layout-widgets-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3868345'
@@ -24,52 +25,52 @@ confluence:
     source_link: /display/NXDOC/Advanced+Widget+Types
 tree_item_index: 900
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-01 08:55'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-31 14:20'
         message: Update table of contents look
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-08 17:27'
         message: Added related topics
         version: '8'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-18 01:09'
         message: add usage of set variable wdget (selection options cache)
         version: '7'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-06 19:41'
         message: insert anchors
         version: '6'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-06 19:26'
         message: more fixes of anchor links
         version: '5'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-06 19:25'
         message: fix link with anchor
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-06 19:22'
         message: add advanced widget types
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-06 15:18'
         message: add structure
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-05 17:29'
         message: ''

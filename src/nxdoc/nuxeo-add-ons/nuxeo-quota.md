@@ -9,6 +9,7 @@ labels:
     - quota
     - marketplace-package
     - quotas-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -23,137 +24,137 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Quota
 tree_item_index: 2500
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-09 12:03'
         message: ''
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-12 07:55'
         message: ''
         version: '26'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-12 07:54'
         message: ''
         version: '25'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-05-11 15:21'
         message: Fix images size
         version: '24'
-    -
+    - 
         author: Anne Jubert
         date: '2016-05-11 15:09'
         message: ''
         version: '23'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-04-29 16:17'
         message: ''
         version: '22'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-09-24 12:43'
         message: ''
         version: '21'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-09-24 12:40'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-30 23:17'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-11 19:09'
         message: ''
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-20 14:28'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-20 14:28'
         message: ''
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2013-02-28 18:51'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2013-02-28 18:37'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2013-02-28 18:37'
         message: ''
         version: '13'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-02-28 18:16'
         message: ''
         version: '12'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-02-28 18:11'
         message: ''
         version: '11'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-02-28 18:03'
         message: ''
         version: '10'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-02-28 18:00'
         message: ''
         version: '9'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-02-28 17:54'
         message: ''
         version: '8'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-02-28 17:42'
         message: ''
         version: '7'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-02-28 17:09'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2013-02-28 17:08'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2013-02-28 17:07'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2013-02-27 20:43'
         message: ''
         version: '3'
-    -
+    - 
         author: Julien Carsique
         date: '2012-09-11 18:12'
         message: Migrated to Confluence 4.0
         version: '2'
-    -
+    - 
         author: Julien Carsique
         date: '2012-09-11 18:12'
         message: ''

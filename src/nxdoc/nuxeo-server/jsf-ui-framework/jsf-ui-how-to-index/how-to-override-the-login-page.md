@@ -16,6 +16,7 @@ labels:
     - login-page
     - theme
     - login-page-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'
@@ -30,57 +31,57 @@ confluence:
     source_link: /display/NXDOC/How+to+Override+the+Login+Page
 tree_item_index: 300
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 10:07'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 10:03'
         message: Update how-to topics
         version: '10'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-10-14 15:36'
         message: ''
         version: '9'
-    -
+    - 
         author: Arnaud Kervern
         date: '2015-10-13 09:16'
         message: ''
         version: '8'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-01-13 10:32'
         message: ''
         version: '7'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-01-13 10:05'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-06 11:09'
         message: ''
         version: '5'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-05 17:22'
         message: ''
         version: '4'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-05 16:48'
         message: ''
         version: '3'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-05 16:46'
         message: 'NXDOC-363: How to override the login page'
         version: '2'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-05 16:23'
         message: ''

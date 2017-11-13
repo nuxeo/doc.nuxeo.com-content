@@ -9,13 +9,14 @@ details:
         excerpt: Learn how to override a seam component.
         level: Advanced
         tool: 'Nuxeo CLI, code'
-        topics: JSF UI, Seam JSF Webapp
+        topics: 'JSF UI, Seam JSF Webapp'
 labels:
     - content-review-lts2016
     - seam
     - howto
     - seam-jsf-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235681'
     ajs-parent-page-title: Transversal How-Tos
@@ -29,47 +30,47 @@ confluence:
     source_link: /display/NXDOC/How+to+Override+a+Seam+Component
 tree_item_index: 1100
 history:
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-12-08 11:16'
         message: ''
         version: '9'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-04 18:15'
         message: ''
         version: '8'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-19 15:58'
         message: ''
         version: '7'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-19 15:57'
         message: ''
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-18 17:21'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-06-27 15:06'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-06-27 12:09'
         message: ''
         version: '3'
-    -
+    - 
         author: Thierry Martins
         date: '2014-05-26 17:59'
         message: ''
         version: '2'
-    -
+    - 
         author: Thierry Martins
         date: '2014-05-26 17:50'
         message: ''

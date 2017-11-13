@@ -6,7 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: Learn how to use the "Double Click Shield" feature.
+        excerpt: 'Learn how to use the "Double Click Shield" feature.'
         level: Advanced
         tool: Code
         topics: 'JSF, Ajax, jQuery'
@@ -19,6 +19,7 @@ labels:
     - jsf
     - seam-jsf-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '9830458'
@@ -33,92 +34,92 @@ confluence:
     source_link: /display/NXDOC/Double+Click+Shield
 tree_item_index: 300
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-14 13:31'
         message: ''
         version: '18'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-10-13 16:28'
         message: ''
         version: '17'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-18 11:25'
         message: ''
         version: '16'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-17 15:55'
         message: ''
         version: '15'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-17 15:53'
         message: ''
         version: '14'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-17 15:31'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-23 18:33'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-23 16:15'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-23 16:14'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-23 15:45'
         message: Added TOC
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-07 15:35'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-12 16:47'
         message: ''
         version: '7'
-    -
+    - 
         author: Guillaume Renard
         date: '2013-10-31 16:05'
         message: ''
         version: '6'
-    -
+    - 
         author: Guillaume Renard
         date: '2013-10-31 15:42'
         message: ''
         version: '5'
-    -
+    - 
         author: Guillaume Renard
         date: '2013-10-31 15:39'
         message: ''
         version: '4'
-    -
+    - 
         author: Guillaume Renard
         date: '2013-10-31 15:39'
         message: ''
         version: '3'
-    -
+    - 
         author: Guillaume Renard
         date: '2013-10-31 15:23'
         message: NXDOC-264
         version: '2'
-    -
+    - 
         author: Guillaume Renard
         date: '2013-10-31 14:32'
         message: ''

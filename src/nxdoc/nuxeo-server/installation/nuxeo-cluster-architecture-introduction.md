@@ -4,12 +4,14 @@ description: This page covers the elements that can be included in a production-
 labels:
     - deployment
     - architecture
+    - content-review-lts2017
 review:
     date: '2017-06-06'
     status: ok
     comment: ''
 toc: true
 tree_item_index: 1220
+
 ---
 
 {{! excerpt}}

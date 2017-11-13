@@ -6,6 +6,7 @@ review:
     status: ok
 labels:
     - lts2016-ok
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '7209076'
     ajs-parent-page-title: Tutorials
@@ -19,37 +20,37 @@ confluence:
     source_link: /display/NXDOC/Transversal+How-Tos
 tree_item_index: 900
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-08-16 09:41'
         message: emove deleted page
         version: '7'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-08-16 09:39'
         message: remove deleted page
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-07-20 12:28'
         message: remove children display macro
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-18 15:49'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-06-12 15:24'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-05-06 00:21'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-05-04 00:36'
         message: ''

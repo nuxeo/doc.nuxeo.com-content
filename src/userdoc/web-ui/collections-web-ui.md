@@ -7,6 +7,9 @@ review:
 toc: true
 tree_item_index: 500
 description: Web UI user documentation about Collections
+labels:
+    - content-review-lts2017
+
 ---
 {{! multiexcerpt name='definition-collection'}}
 

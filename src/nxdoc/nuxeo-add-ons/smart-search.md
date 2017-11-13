@@ -10,6 +10,7 @@ labels:
     - smart-search
     - smart-search-component
     - multiexcerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -24,212 +25,212 @@ confluence:
     source_link: /display/NXDOC/Smart+Search
 tree_item_index: 3400
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-30 14:32'
         message: ''
         version: '42'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-04-29 16:31'
         message: ''
         version: '41'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-02-11 10:06'
         message: ''
         version: '40'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2016-02-11 08:13'
         message: 'NXP-18626: adapt github links to modules merge'
         version: '39'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2016-02-11 08:11'
         message: 'NXP-18626: adapt github links to modules merge'
         version: '38'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-02-10 13:53'
         message: 'Formatting '
         version: '37'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-02-10 13:45'
         message: Merging Admin and User part on NXDOC
         version: '36'
-    -
+    - 
         author: Solen Guitter
         date: '2016-01-25 16:53'
         message: Fix related pages
         version: '35'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2016-01-18 10:13'
         message: 'NXDOC-666: update doc to fit latest changes'
         version: '34'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-12-24 10:44'
         message: Formatting
         version: '33'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-12-24 10:43'
         message: ''
         version: '32'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-12-24 10:41'
         message: Formatting
         version: '31'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-12-24 10:32'
         message: 'Formatting '
         version: '30'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-31 14:31'
         message: Update table of contents look
         version: '29'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-05 18:56'
         message: Remove link to advanced search page (obsolete)
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2013-12-12 15:33'
         message: Updated excerpt
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-13 16:52'
         message: Updated links
         version: '26'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 18:22'
         message: ''
         version: '25'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 18:19'
         message: ''
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2013-02-18 19:04'
         message: ''
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2013-02-18 18:54'
         message: ''
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-11 22:23'
         message: Migrated to Confluence 4.0
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-11 22:23'
         message: Updated links to current snapshot
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-21 11:40'
         message: Updated 5.4 mercurial link to 5.6 snapshot github URL
         version: '19'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-14 17:14'
         message: ''
         version: '18'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-14 12:22'
         message: ''
         version: '17'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 19:28'
         message: ''
         version: '16'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 19:15'
         message: ''
         version: '15'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 19:14'
         message: ''
         version: '14'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 19:06'
         message: ''
         version: '13'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 19:00'
         message: ''
         version: '12'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 18:59'
         message: ''
         version: '11'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 18:58'
         message: ''
         version: '10'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 18:57'
         message: ''
         version: '9'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 18:34'
         message: ''
         version: '8'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 18:29'
         message: ''
         version: '7'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 16:58'
         message: ''
         version: '6'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 16:58'
         message: ''
         version: '5'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 16:57'
         message: ''
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 15:26'
         message: ''
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 15:25'
         message: ''
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-12 15:36'
         message: ''

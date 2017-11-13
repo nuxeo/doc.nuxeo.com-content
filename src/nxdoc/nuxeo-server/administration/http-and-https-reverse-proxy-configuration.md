@@ -15,6 +15,7 @@ labels:
     - proxy
     - nxdoc-740
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -22,214 +23,213 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: HTTP+and+HTTPS+Reverse-Proxy+Configuration
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/HTTP+and+HTTPS+Reverse-Proxy+Configuration
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/HTTP+and+HTTPS+Reverse-Proxy+Configuration'
     page_id: '6029592'
     shortlink: GAFc
     shortlink_source: 'https://doc.nuxeo.com/x/GAFc'
     source_link: /display/NXDOC/HTTP+and+HTTPS+Reverse-Proxy+Configuration
 tree_item_index: 600
 version_override:
-    'LTS 2015': 710/admindoc/http-and-https-reverse-proxy-configuration
+    LTS 2015: 710/admindoc/http-and-https-reverse-proxy-configuration
     '6.0': 60/admindoc/http-and-https-reverse-proxy-configuration
     '5.8': 58/admindoc/http-and-https-reverse-proxy-configuration
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-09-29 09:44'
         message: ''
         version: '40'
-    -
+    - 
         author: Gildas Lefevre
         date: '2016-09-28 13:50'
         message: ''
         version: '39'
-    -
+    - 
         author: Gildas Lefevre
         date: '2016-09-28 13:41'
         message: Add configuration between ELB and Apache
         version: '38'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-01 16:31'
         message: ''
         version: '37'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-12-21 21:13'
         message: ''
         version: '36'
-    -
+    - 
         author: Mathieu Guillaume
         date: '2015-12-08 11:37'
         message: ''
         version: '35'
-    -
+    - 
         author: Mathieu Guillaume
         date: '2015-12-08 11:28'
         message: ''
         version: '34'
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-24 08:42'
         message: Add link to page Special HTTP Headers
         version: '33'
-    -
+    - 
         author: Thierry Martins
         date: '2015-11-23 09:58'
         message: ''
         version: '32'
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-23 09:52'
         message: Format cleanup
         version: '31'
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-23 09:45'
         message: Titile capitalization
         version: '30'
-    -
+    - 
         author: Thierry Martins
         date: '2015-11-20 13:48'
         message: ''
         version: '29'
-    -
+    - 
         author: Thierry Martins
         date: '2015-11-20 13:45'
         message: ''
         version: '28'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-11-16 20:55'
         message: ''
         version: '27'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-11-16 20:54'
         message: ''
         version: '26'
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-09 15:55'
         message: Removing link Live Edit page
         version: '25'
-    -
+    - 
         author: Mathieu Guillaume
         date: '2015-09-18 08:17'
         message: ''
         version: '24'
-    -
+    - 
         author: Vincent Dutat
         date: '2015-06-16 18:18'
         message: ''
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-08 09:26'
         message: ''
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-19 10:36'
         message: fix deployment-fragment.xml name
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-28 13:55'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-28 00:14'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2014-04-16 10:52'
         message: ''
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-04 10:43'
         message: ''
         version: '17'
-    -
+    - 
         author: Julien Carsique
         date: '2014-03-03 18:33'
         message: ''
         version: '16'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2014-03-03 18:22'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-14 11:34'
         message: ''
         version: '14'
-    -
+    - 
         author: Thierry Delprat
         date: '2013-11-13 12:01'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-10 17:02'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-11 12:01'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-11 12:00'
         message: Formatting
         version: '10'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-07-11 01:11'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2013-05-15 11:17'
         message: Added related pages
         version: '8'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2012-09-10 12:22'
         message: Migrated to Confluence 4.0
         version: '7'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2012-09-10 12:22'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2011-07-27 15:10'
         message: ''
         version: '5'
-    -
+    - 
         author: Julien Carsique
         date: '2011-03-24 16:20'
         message: missing ProxyPreserveHost
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-11 12:22'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-03 17:23'
         message: ''
         version: '2'
-    -
+    - 
         author: Quentin Lamerand
         date: '2011-03-03 16:00'
         message: ''

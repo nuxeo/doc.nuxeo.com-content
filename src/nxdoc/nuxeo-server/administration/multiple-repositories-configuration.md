@@ -7,6 +7,7 @@ review:
 toc: true
 labels:
     - lts2016-ok
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
@@ -20,65 +21,65 @@ confluence:
     source_link: /display/NXDOC/Multiple+Repositories+Configuration
 tree_item_index: 1200
 version_override:
-    'LTS 2015': 710/admindoc/multiple-repositories-configuration
+    LTS 2015: 710/admindoc/multiple-repositories-configuration
     '6.0': 60/admindoc/multiple-repositories-configuration
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-10-10 07:35'
         message: ix link to multi repositories con
         version: '12'
-    -
+    - 
         author: Ronan Daniellou
         date: '2016-08-22 13:20'
-        message: Fixes "blockTimeoutMillis" -> "blockingTimeoutMillis"
+        message: 'Fixes "blockTimeoutMillis" -> "blockingTimeoutMillis"'
         version: '11'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-25 16:41'
         message: ''
         version: '10'
-    -
+    - 
         author: Antoine Taillefer
         date: '2016-03-18 09:39'
         message: ''
         version: '9'
-    -
+    - 
         author: Michaël Vachette
         date: '2015-09-03 12:40'
         message: ''
         version: '8'
-    -
+    - 
         author: Michaël Vachette
         date: '2015-09-03 12:36'
         message: ''
         version: '7'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-05-05 12:56'
         message: typo
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2015-05-05 10:12'
         message: 'Format steps, add related documentation'
         version: '5'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-05-04 15:59'
         message: Add a note about Elasticsearch multi repo conf
         version: '4'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-05-04 15:38'
         message: clearer paths
         version: '3'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-05-04 15:35'
         message: ''
         version: '2'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-05-04 15:34'
         message: ''

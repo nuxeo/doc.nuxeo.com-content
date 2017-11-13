@@ -10,6 +10,7 @@ labels:
     - vcs
     - fulltext
     - vcs-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -24,276 +25,276 @@ confluence:
     source_link: /display/NXDOC/Repository+Configuration
 tree_item_index: 1500
 version_override:
-    'LTS 2015': 710/admindoc/vcs-configuration
+    LTS 2015: 710/admindoc/vcs-configuration
     '6.0': 60/admindoc/vcs-configuration
     '5.8': 58/admindoc/vcs-configuration
 history:
-    -
+    - 
         author: Alain Escaffre
         date: '2016-03-23 23:09'
         message: ''
         version: '54'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-12-09 16:04'
         message: ''
         version: '53'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-12-03 10:06'
         message: ''
         version: '52'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-12-02 12:41'
         message: ddlMode and improved SQL statements
         version: '51'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-05-22 07:02'
         message: Link to ES doc for searchDisabled
         version: '50'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-04-07 08:58'
         message: Update for searchDisabled option
         version: '49'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-12-10 15:55'
         message: ''
         version: '48'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-24 16:39'
         message: formatting
         version: '47'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-24 16:31'
         message: Removed 5.4 and 5.5 references
         version: '46'
-    -
+    - 
         author: Solen Guitter
         date: '2014-06-18 14:25'
         message: ''
         version: '45'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-03-13 16:02'
         message: better real-life example
         version: '44'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-03-13 16:01'
         message: NXP-11551
         version: '43'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-14 17:19'
         message: ''
         version: '42'
-    -
+    - 
         author: Florent Guillaume
         date: '2013-09-05 16:01'
         message: ''
         version: '41'
-    -
+    - 
         author: Florent Guillaume
         date: '2013-09-05 15:56'
         message: ''
         version: '40'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-06 11:25'
         message: ''
         version: '39'
-    -
+    - 
         author: Florent Guillaume
         date: '2013-05-15 19:11'
         message: ''
         version: '38'
-    -
+    - 
         author: Florent Guillaume
         date: '2013-05-15 18:06'
         message: ''
         version: '37'
-    -
+    - 
         author: Thierry Martins
         date: '2012-09-25 16:14'
         message: Migrated to Confluence 4.0
         version: '36'
-    -
+    - 
         author: Thierry Martins
         date: '2012-09-25 16:14'
         message: 'add sample to exclude a blob from file:content in fulltext conf'
         version: '35'
-    -
+    - 
         author: Florent Guillaume
         date: '2012-09-11 17:13'
         message: ''
         version: '34'
-    -
+    - 
         author: Thierry Martins
         date: '2012-04-13 16:57'
         message: presentation of usersSeparator attribute
         version: '33'
-    -
+    - 
         author: Antoine Taillefer
         date: '2012-04-02 13:25'
         message: ''
         version: '32'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-14 15:28'
         message: replaced 5.4.3 with 5.5
         version: '31'
-    -
+    - 
         author: Thierry Martins
         date: '2011-09-13 16:18'
         message: ''
         version: '30'
-    -
+    - 
         author: Thierry Martins
         date: '2011-08-22 18:38'
         message: documentation about fulltext types exclusion/inclusion
         version: '29'
-    -
+    - 
         author: Thierry Martins
         date: '2011-08-22 18:32'
         message: ''
         version: '28'
-    -
+    - 
         author: Thierry Martins
         date: '2011-05-16 14:44'
         message: ''
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-04 17:24'
         message: ''
         version: '26'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-01-04 15:40'
         message: ''
         version: '25'
-    -
+    - 
         author: Thierry Martins
         date: '2011-01-03 14:34'
         message: add the attribute readAclMaxSize
         version: '24'
-    -
+    - 
         author: Florent Guillaume
         date: '2010-12-28 14:46'
         message: ''
         version: '23'
-    -
+    - 
         author: Florent Guillaume
         date: '2010-12-28 14:38'
         message: ''
         version: '22'
-    -
+    - 
         author: Florent Guillaume
         date: '2010-12-16 12:00'
         message: ''
         version: '21'
-    -
+    - 
         author: Thierry Martins
         date: '2010-11-05 11:26'
         message: ''
         version: '20'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 14:56'
         message: ''
         version: '19'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 14:42'
         message: ''
         version: '18'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 10:27'
         message: ''
         version: '17'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 10:23'
         message: ''
         version: '16'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 10:13'
         message: ''
         version: '15'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 09:13'
         message: ''
         version: '14'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 09:09'
         message: ''
         version: '13'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 08:54'
         message: ''
         version: '12'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 08:50'
         message: ''
         version: '11'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 20:10'
         message: ''
         version: '10'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 20:04'
         message: ''
         version: '9'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 19:20'
         message: ''
         version: '8'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 19:01'
         message: ''
         version: '7'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:38'
         message: ''
         version: '6'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:22'
         message: ''
         version: '5'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:17'
         message: ''
         version: '4'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:11'
         message: ''
         version: '3'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:09'
         message: ''
         version: '2'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:00'
         message: ''

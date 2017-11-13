@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to customize the dashboard by adding new entries or
-            completely override the default dashboard.
+        excerpt: Learn how to customize the dashboard by adding new entries or completely override the default dashboard.
         level: Advanced
         tool: 'Studio, Code'
         topics: JSF UI
@@ -17,6 +15,7 @@ labels:
     - howto
     - dashboard
     - actions-filters-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'
@@ -31,82 +30,82 @@ confluence:
     source_link: /display/NXDOC/How+to+Customize+the+Dashboard
 tree_item_index: 500
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 09:50'
         message: pdate how-to topic
         version: '16'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-21 10:04'
         message: ''
         version: '15'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-21 10:03'
         message: ''
         version: '14'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-10-15 13:51'
         message: ''
         version: '13'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-10-13 12:57'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-12 12:48'
         message: ''
         version: '11'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-01-13 10:07'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-14 14:57'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-10 23:52'
         message: formatting steps
         version: '8'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-10 14:47'
         message: ''
         version: '7'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-10 14:32'
         message: ''
         version: '6'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-10 11:46'
         message: How to override the default Dashboard
         version: '5'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-07 17:47'
         message: Work in progress
         version: '4'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-07 15:00'
         message: ''
         version: '3'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-07 14:59'
         message: ''
         version: '2'
-    -
+    - 
         author: Gildas Lefevre
         date: '2014-11-07 14:58'
         message: ''

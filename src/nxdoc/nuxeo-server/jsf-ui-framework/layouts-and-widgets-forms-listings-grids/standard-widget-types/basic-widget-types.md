@@ -9,6 +9,7 @@ labels:
     - widget-types
     - layout-widgets-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3868345'
@@ -23,42 +24,42 @@ confluence:
     source_link: /display/NXDOC/Basic+Widget+Types
 tree_item_index: 200
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-31 09:07'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-31 14:13'
         message: Update table of contents look
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-08-25 11:28'
         message: Remove 5.4.2 reference
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-08 15:43'
         message: 'Formatting, related topics'
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-07 19:05'
         message: Added anchor
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-05 17:53'
         message: add link for template widget type
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-05 17:45'
         message: remove container widget type
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-05 17:27'
         message: ''

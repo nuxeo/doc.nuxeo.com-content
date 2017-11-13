@@ -9,6 +9,7 @@ labels:
     - shell
     - shell-component
     - nxdoc-750
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '4687635'
@@ -23,62 +24,62 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Shell+Batch+Mode
 tree_item_index: 200
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-29 11:47'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-07 14:58'
         message: ''
         version: '11'
-    -
+    - 
         author: Julien Carsique
         date: '2015-01-22 09:45'
         message: ''
         version: '10'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-12-10 16:19'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-15 12:15'
         message: Added TOC
         version: '8'
-    -
+    - 
         author: Florent Guillaume
         date: '2012-08-13 12:44'
         message: Migrated to Confluence 4.0
         version: '7'
-    -
+    - 
         author: Florent Guillaume
         date: '2012-08-13 12:44'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-15 16:15'
         message: Added related pages
         version: '5'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2011-01-03 18:31'
         message: ''
         version: '4'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 15:20'
         message: ''
         version: '3'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 15:17'
         message: ''
         version: '2'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 12:43'
         message: ''

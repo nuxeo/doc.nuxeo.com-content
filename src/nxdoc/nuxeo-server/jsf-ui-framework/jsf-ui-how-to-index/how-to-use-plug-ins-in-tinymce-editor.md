@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to customize TinyMCE by adding new plug-ins. We will use
-            the textcolor plug-in as an example.
+        excerpt: Learn how to customize TinyMCE by adding new plug-ins. We will use the textcolor plug-in as an example.
         level: Intermediate
         tool: Code
         topics: 'Plug-ins, TinyMCE, JSF UI'
@@ -17,6 +15,7 @@ labels:
     - howto
     - tinymce
     - tinymce-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'
@@ -24,80 +23,79 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Use+Plug-Ins+in+TinyMCE+Editor
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Use+Plug-Ins+in+TinyMCE+Editor
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Use+Plug-Ins+in+TinyMCE+Editor'
     page_id: '20519593'
     shortlink: qRo5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/qRo5AQ'
     source_link: /display/NXDOC/How+to+Use+Plug-Ins+in+TinyMCE+Editor
 tree_item_index: 1000
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 09:49'
         message: pdate how-to topic
         version: '14'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-09 13:56'
         message: ''
         version: '13'
-    -
+    - 
         author: Arnaud Kervern
         date: '2016-04-06 14:32'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-30 13:55'
         message: ''
         version: '11'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-01-13 10:31'
         message: ''
         version: '10'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-01-13 10:11'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 11:40'
         message: Add link to nuxeo.conf page
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 11:29'
         message: ''
         version: '7'
-    -
+    - 
         author: Thierry Martins
         date: '2014-11-29 22:06'
         message: ''
         version: '6'
-    -
+    - 
         author: Thierry Martins
         date: '2014-11-28 19:45'
         message: ''
         version: '5'
-    -
+    - 
         author: Thierry Martins
         date: '2014-11-28 19:37'
         message: wip
         version: '4'
-    -
+    - 
         author: Thierry Martins
         date: '2014-11-27 14:14'
         message: ''
         version: '3'
-    -
+    - 
         author: Thierry Martins
         date: '2014-11-26 19:02'
         message: ''
         version: '2'
-    -
+    - 
         author: Thierry Martins
         date: '2014-11-26 16:33'
         message: ''

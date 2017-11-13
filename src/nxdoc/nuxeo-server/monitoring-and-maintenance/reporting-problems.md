@@ -7,6 +7,7 @@ review:
 toc: true
 labels:
     - lts2016-ok
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance
@@ -20,146 +21,146 @@ confluence:
     source_link: /display/NXDOC/Reporting+Problems
 tree_item_index: 1100
 version_override:
-    'LTS 2015': 710/admindoc/reporting-problems
+    LTS 2015: 710/admindoc/reporting-problems
     '6.0': 60/admindoc/reporting-problems
     '5.8': 58/admindoc/reporting-problems
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-09 14:04'
         message: ''
         version: '28'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-29 09:50'
         message: ''
         version: '27'
-    -
+    - 
         author: Benoit Delbosc
         date: '2016-02-12 08:53'
         message: ''
         version: '26'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-01-27 11:08'
         message: ''
         version: '25'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-01-27 11:00'
         message: ''
         version: '24'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-01-27 10:38'
         message: ''
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-03 15:16'
         message: ''
         version: '22'
-    -
+    - 
         author: Vincent Dutat
         date: '2015-09-24 18:04'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2015-06-05 09:23'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2015-06-05 09:22'
         message: Title format and typo
         version: '19'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-06-04 09:42'
         message: Add an ES reporting procedure
         version: '18'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-03-23 13:22'
         message: ''
         version: '17'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-03-18 09:23'
         message: ''
         version: '16'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-03-18 09:22'
         message: Reverted from v. 13
         version: '15'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-03-18 09:21'
         message: ''
         version: '14'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-03-18 08:35'
         message: ''
         version: '13'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-03-18 08:33'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2015-03-16 09:11'
         message: ''
         version: '11'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-03-13 08:48'
         message: ''
         version: '10'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-03-02 12:42'
         message: ''
         version: '9'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-02-18 09:16'
         message: ''
         version: '8'
-    -
+    - 
         author: Vincent Dutat
         date: '2015-02-16 17:41'
         message: ''
         version: '7'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-02-09 15:12'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-05 15:49'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-05 14:10'
         message: Add related topics
         version: '4'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-02-04 11:09'
         message: ''
         version: '3'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-02-04 11:01'
         message: ''
         version: '2'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-02-04 10:36'
         message: ''

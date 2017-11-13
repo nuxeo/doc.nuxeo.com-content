@@ -6,6 +6,7 @@ review:
     status: ok
 labels:
     - content-review-lts2016
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '4687444'
     ajs-parent-page-title: Contributing to Nuxeo
@@ -19,77 +20,77 @@ confluence:
     source_link: /pages/viewpage.action?pageId=950314
 tree_item_index: 100
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-02 15:15'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-02 15:15'
         message: ''
         version: '14'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-10-26 16:20'
         message: ''
         version: '13'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-10-26 16:09'
         message: ''
         version: '12'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-10-26 16:08'
         message: ''
         version: '11'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-10-26 16:07'
         message: ''
         version: '10'
-    -
+    - 
         author: Julien Carsique
         date: '2010-10-19 12:05'
         message: ''
         version: '9'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-10-13 18:42'
         message: ''
         version: '8'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-10-11 23:54'
         message: ''
         version: '7'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-10-11 23:53'
         message: ''
         version: '6'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-10-11 23:52'
         message: ''
         version: '5'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-10-11 23:45'
         message: ''
         version: '4'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-10-11 23:30'
         message: ''
         version: '3'
-    -
+    - 
         author: Thierry Delprat
         date: '2010-10-11 23:25'
         message: ''
         version: '2'
-    -
+    - 
         author: Admin name placeholder
         date: '2010-03-01 01:23'
         message: ''

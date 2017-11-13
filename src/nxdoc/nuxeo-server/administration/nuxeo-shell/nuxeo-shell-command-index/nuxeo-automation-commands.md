@@ -10,6 +10,7 @@ labels:
     - automation
     - shell-component
     - nxdoc-751
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '4687648'
     ajs-parent-page-title: Nuxeo Shell Command Index
@@ -23,76 +24,76 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Automation+Commands
 tree_item_index: 400
 version_override:
-    'LTS 2015': 710/admindoc/nuxeo-automation-commands
+    LTS 2015: 710/admindoc/nuxeo-automation-commands
     '6.0': 60/admindoc/nuxeo-automation-commands
     '5.8': 58/admindoc/nuxeo-automation-commands
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-31 15:06'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-12 11:25'
         message: ''
         version: '13'
-    -
+    - 
         author: Karl Harris
         date: '2013-06-11 17:55'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2013-02-13 14:26'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2013-02-13 14:26'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-15 16:11'
         message: Migrated to Confluence 4.0
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-15 16:11'
         message: Added related pages
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-15 16:10'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-15 16:06'
         message: 'Fixed wrong links, removed html and fixed typos'
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-02 17:53'
         message: ''
         version: '5'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2011-01-04 00:18'
         message: ''
         version: '4'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 10:10'
         message: ''
         version: '3'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 08:36'
         message: ''
         version: '2'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-23 22:19'
         message: ''

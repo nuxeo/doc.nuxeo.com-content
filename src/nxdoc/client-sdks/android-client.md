@@ -9,6 +9,7 @@ labels:
     - mobile
     - android
     - client
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '16091040'
     ajs-parent-page-title: Client SDKs
@@ -22,7 +23,7 @@ confluence:
     source_link: /display/NXDOC/Android+Client
 tree_item_index: 550
 history:
-    -
+    - 
         author: Alain Escaffre
         date: '2013-10-27 21:29'
         message: ''

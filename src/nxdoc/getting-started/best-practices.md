@@ -8,9 +8,9 @@ labels:
     - content-review-lts2016
     - last-review-20150128
     - home
+    - content-review-lts2017
 is_overview: true
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '7209076'
     ajs-parent-page-title: Tutorials
@@ -24,32 +24,32 @@ confluence:
     source_link: /display/NXDOC/Quick+Start+Series
 tree_item_index: 500
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-10-06 08:41'
         message: eplace From JSF UI bu Getting Started with the Nuxeo Platfor
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-12 15:20'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-28 14:45'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-18 16:59'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-05-04 00:40'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-05-04 00:33'
         message: ''

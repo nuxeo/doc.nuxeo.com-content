@@ -7,7 +7,9 @@ review:
 toc: true
 labels:
     - lts2016-ok
+    - content-review-lts2017
 tree_item_index: 200
+
 ---
 
 ## Why Polymer?

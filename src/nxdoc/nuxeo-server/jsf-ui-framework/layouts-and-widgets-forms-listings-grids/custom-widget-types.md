@@ -9,6 +9,7 @@ labels:
     - widget
     - layout-widgets-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950330'
@@ -23,132 +24,132 @@ confluence:
     source_link: /display/NXDOC/Custom+Widget+Types
 tree_item_index: 500
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-31 13:40'
         message: ''
         version: '26'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-12-08 14:15'
         message: ''
         version: '25'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-12-08 14:12'
         message: ''
         version: '24'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-09-16 12:21'
         message: ''
         version: '23'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-09 13:56'
         message: 'NXDOC-427: mention template for dev mode'
         version: '22'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-11-04 17:16'
         message: update TOC panel
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2014-08-25 12:03'
         message: Update Sample JSON export URLs with 5.8 instead of 5.4
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-09 14:49'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-09 14:45'
         message: 'Removed before 5.5 sections, fixed  JSON export URLs, formatting '
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 16:16'
         message: ''
         version: '17'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-12-04 18:01'
         message: edit layout showcase link
         version: '16'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-11-14 19:39'
         message: Migrated to Confluence 4.0
         version: '15'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-11-14 19:39'
         message: ''
         version: '14'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-11-14 19:38'
         message: update export urls since 5.5
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-14 15:29'
         message: replaced 5.4.3 with 5.5
         version: '12'
-    -
+    - 
         author: Thierry Delprat
         date: '2011-09-29 15:35'
         message: ''
         version: '11'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-07-19 17:52'
         message: ''
         version: '10'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-26 19:13'
         message: ''
         version: '9'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-26 19:12'
         message: ''
         version: '8'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-26 19:12'
         message: ''
         version: '7'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-26 19:11'
         message: ''
         version: '6'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-26 19:10'
         message: ''
         version: '5'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-26 19:09'
         message: ''
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-26 18:52'
         message: ''
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-26 18:34'
         message: ''
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-12 15:11'
         message: ''

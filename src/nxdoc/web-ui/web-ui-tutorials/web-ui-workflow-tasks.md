@@ -1,8 +1,8 @@
 ---
-title: "HOWTO: Customize Workflow Tasks"
+title: 'HOWTO: Customize Workflow Tasks'
 review:
     comment: ''
-    date: '2017-01-16S'
+    date: 2017-01-16S
     status: ok
 toc: true
 details:
@@ -17,6 +17,7 @@ labels:
     - extension
     - workflow
     - task
+    - content-review-lts2017
 tree_item_index: 600
 
 ---

@@ -1,5 +1,5 @@
 ---
-title: "HOWTO: Customize Dashboard"
+title: 'HOWTO: Customize Dashboard'
 review:
     comment: ''
     date: '2017-01-16'
@@ -16,6 +16,7 @@ labels:
     - nuxeo-web-ui
     - extension
     - dashboard
+    - content-review-lts2017
 tree_item_index: 800
 
 ---

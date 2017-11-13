@@ -1,5 +1,5 @@
 ---
-title: "HOWTO: Customize Document Layouts"
+title: 'HOWTO: Customize Document Layouts'
 review:
     comment: ''
     date: '2017-01-02'
@@ -9,13 +9,14 @@ details:
     howto:
         excerpt: Learn how to use document layouts with Web UI and Studio Designer
         level: Intermediate
-        tool: Studio Designer, code
-        topics: Web UI, Studio Designer
+        tool: 'Studio Designer, code'
+        topics: 'Web UI, Studio Designer'
 labels:
     - view-designer
     - nuxeo-web-ui
     - extension
     - layouts
+    - content-review-lts2017
 tree_item_index: 400
 
 ---

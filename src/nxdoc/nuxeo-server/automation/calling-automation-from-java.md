@@ -9,6 +9,7 @@ labels:
     - automation
     - automation-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '18451738'
@@ -23,52 +24,52 @@ confluence:
     source_link: /display/NXDOC/Calling+Automation+from+Java
 tree_item_index: 700
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-03-23 15:43'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2014-04-10 17:54'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-04-10 17:50'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-04-07 11:04'
         message: ''
         version: '7'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-04-02 02:49'
         message: ''
         version: '6'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-10-23 12:15'
         message: ''
         version: '5'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-10-23 12:09'
         message: ''
         version: '4'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-10-23 12:02'
         message: ''
         version: '3'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-10-23 11:56'
         message: ''
         version: '2'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2013-10-23 11:29'
         message: ''

@@ -12,6 +12,7 @@ labels:
     - excerpt
     - multiexcerpt-include
     - multiexcerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '18451738'
     ajs-parent-page-title: Automation
@@ -25,47 +26,47 @@ confluence:
     source_link: /display/NXDOC/Automation+Tracing
 tree_item_index: 1000
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-07-25 15:59'
         message: ix broken excerp
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-04-10 17:54'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-27 15:41'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-27 15:40'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-27 15:40'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-27 15:40'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-27 15:33'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-11-26 00:14'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-11-26 00:13'
         message: ''

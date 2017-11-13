@@ -1,5 +1,5 @@
 ---
-title: "HOWTO: Customize Searches"
+title: 'HOWTO: Customize Searches'
 review:
     comment: ''
     date: '2017-01-16'
@@ -9,13 +9,14 @@ details:
     howto:
         excerpt: Learn how to create a new search screen with Studio Designer.
         level: Intermediate
-        tool: Studio Designer, code
-        topics: Web UI, Studio Designer
+        tool: 'Studio Designer, code'
+        topics: 'Web UI, Studio Designer'
 labels:
     - lts2016-ok
     - nuxeo-web-ui
     - extension
     - search
+    - content-review-lts2017
 tree_item_index: 500
 
 ---

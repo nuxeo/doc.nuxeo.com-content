@@ -1,5 +1,5 @@
 ---
-title: "HOWTO: Customize Theme"
+title: 'HOWTO: Customize Theme'
 review:
     comment: ''
     date: '2017-01-16'
@@ -17,6 +17,7 @@ labels:
     - extension
     - themes
     - appearance
+    - content-review-lts2017
 tree_item_index: 1000
 
 ---
