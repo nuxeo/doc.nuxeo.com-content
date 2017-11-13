@@ -17,6 +17,7 @@ labels:
     - document-type
     - studio
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950287'
@@ -24,105 +25,104 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Add+Complex+Fields+on+Your+Document+Type
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Add+Complex+Fields+on+Your+Document+Type
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Add+Complex+Fields+on+Your+Document+Type'
     page_id: '8684439'
     shortlink: l4OE
     shortlink_source: 'https://doc.nuxeo.com/x/l4OE'
     source_link: /display/NXDOC/How+to+Add+Complex+Fields+on+Your+Document+Type
 tree_item_index: 1200
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-02 08:52'
         message: pdate schema sectio
         version: '19'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-10-29 15:42'
         message: ''
         version: '18'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-10-29 15:38'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 21:47'
         message: ''
         version: '16'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-09 11:15'
         message: ''
         version: '15'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-08 18:07'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-08 18:06'
         message: Formatting
         version: '13'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-08 17:56'
         message: ''
         version: '12'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-08 16:45'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-04 11:11'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-04 11:04'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-04 11:04'
         message: Formatting
         version: '8'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-07-02 16:02'
         message: ''
         version: '7'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-07-01 18:06'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2014-06-12 11:54'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-02 14:50'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2011-10-05 12:05'
         message: Migrated to Confluence 4.0
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2011-10-05 12:05'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2011-10-05 11:30'
         message: ''

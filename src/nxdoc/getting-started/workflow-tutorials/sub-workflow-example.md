@@ -10,6 +10,7 @@ labels:
     - subworkflow
     - sub-workflow
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235786'
     ajs-parent-page-title: Workflow Use Cases
@@ -23,87 +24,87 @@ confluence:
     source_link: /display/NXDOC/Sub+Workflow+Example
 tree_item_index: 200
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-02 17:15'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-09 16:10'
         message: ''
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-08 16:47'
         message: Fixed typos
         version: '15'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-08 14:01'
         message: Removed restrictions
         version: '14'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-08 11:41'
         message: ''
         version: '13'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 19:29'
         message: ''
         version: '12'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 19:15'
         message: ''
         version: '11'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 18:56'
         message: ''
         version: '10'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 18:53'
         message: ''
         version: '9'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 18:50'
         message: ''
         version: '8'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 18:49'
         message: ''
         version: '7'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 18:46'
         message: ''
         version: '6'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 18:42'
         message: ''
         version: '5'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 18:17'
         message: ''
         version: '4'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 16:55'
         message: ''
         version: '3'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 16:52'
         message: ''
         version: '2'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 16:49'
         message: ''

@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to use a customized layout on the Metadata edit of Nuxeo
-            Drive.
+        excerpt: Learn how to use a customized layout on the Metadata edit of Nuxeo Drive.
         level: Intermediate
         tool: Studio
         topics: 'Layout, Nuxeo Drive'
@@ -18,56 +16,56 @@ labels:
     - nuxeo-drive
     - layout
     - nuxeo-drive-component
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '14257229'
     ajs-parent-page-title: Nuxeo Drive
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Customize+the+Drive+Metadata+Edit+Layouts
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Customize+the+Drive+Metadata+Edit+Layouts
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Customize+the+Drive+Metadata+Edit+Layouts'
     page_id: '26317380'
     shortlink: RJKRAQ
     shortlink_source: 'https://doc.nuxeo.com/x/RJKRAQ'
     source_link: /display/NXDOC/How+to+Customize+the+Drive+Metadata+Edit+Layouts
 tree_item_index: 500
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-21 15:31'
         message: ''
         version: '8'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-21 10:16'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-13 12:06'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-08 09:26'
         message: Add screenshot of how-to result
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-08 09:16'
         message: Add link
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-08 08:59'
         message: fix typo
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-08 08:50'
         message: Add related pages
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-08 08:43'
         message: ''

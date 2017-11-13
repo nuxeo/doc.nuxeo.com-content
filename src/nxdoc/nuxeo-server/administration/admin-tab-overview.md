@@ -9,6 +9,7 @@ labels:
     - admin-center
     - admin-center-component
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -23,190 +24,190 @@ confluence:
     source_link: /display/NXDOC/Admin+Tab+Overview
 tree_item_index: 2000
 version_override:
-    'LTS 2015': 710/admindoc/admin-tab-overview
+    LTS 2015: 710/admindoc/admin-tab-overview
     '6.0': 60/admindoc/admin-tab-overview
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-07-22 15:54'
         message: ''
         version: '37'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-24 14:52'
         message: ''
         version: '36'
-    -
+    - 
         author: Alain Escaffre
         date: '2016-03-23 11:17'
         message: ''
         version: '35'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-24 15:24'
         message: ''
         version: '34'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-04 09:26'
         message: ''
         version: '33'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-03 15:21'
         message: 'Add Activity new subtabs, fix tabs capitalization'
         version: '32'
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-27 10:57'
         message: Add new Permission tab
         version: '31'
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-26 16:35'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '30'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-12 15:04'
         message: ''
         version: '29'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-21 11:09'
         message: format
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-21 11:02'
         message: ''
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-21 10:42'
         message: ''
         version: '26'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-28 23:25'
         message: ''
         version: '25'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-28 18:42'
         message: ''
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-28 18:41'
         message: ''
         version: '23'
-    -
+    - 
         author: Thomas Roger
         date: '2014-09-03 15:26'
-        message: Add "Logs" documentation to monitoring
+        message: 'Add "Logs" documentation to monitoring'
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-15 12:12'
         message: 'NXP-13560 : Themes tab not available anymore since 5.9.5'
         version: '21'
-    -
+    - 
         author: Julien Carsique
         date: '2014-05-06 19:07'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-04 23:23'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-30 16:12'
         message: ''
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-16 16:49'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-16 16:48'
         message: Updated screenshots for coming 5.8
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-06 11:25'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2012-12-07 18:04'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2012-12-07 18:03'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2012-12-07 17:55'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2012-12-07 16:42'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2012-12-07 16:42'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2012-04-12 17:41'
         message: Migrated to Confluence 4.0
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2012-04-12 17:41'
         message: Updated tabs list with Social Collaboration and 5.5 screenshots.
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2011-06-07 15:07'
         message: added 5.4.2 new Admin Center tabs
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-03 17:04'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-03 16:35'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-03 15:58'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2010-11-08 15:37'
         message: Admin Center sections description
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2010-11-08 14:52'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2010-11-05 16:31'
         message: ''

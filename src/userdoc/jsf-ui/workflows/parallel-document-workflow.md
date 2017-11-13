@@ -9,6 +9,7 @@ labels:
     - parallel-workflow
     - excerpt
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '2392410'
@@ -23,47 +24,47 @@ confluence:
     source_link: /display/USERDOC/Parallel+Document+Workflow
 tree_item_index: 200
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2015-11-25 17:32'
         message: ew Edit permissio
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-21 21:51'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-21 21:42'
         message: Fix missing excerpts
         version: '7'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-09-21 09:06'
         message: ''
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-09-18 16:27'
         message: ''
         version: '5'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-09-18 16:23'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-09 08:54'
         message: Add precisions about lock status during workflow
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-25 14:41'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-25 13:54'
         message: ''

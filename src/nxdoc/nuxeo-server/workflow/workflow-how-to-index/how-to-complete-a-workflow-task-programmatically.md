@@ -17,196 +17,196 @@ labels:
     - howto
     - community-links
     - workflow-component
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235619'
     ajs-parent-page-title: Workflow How-To Index
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Complete+a+Workflow+Task+Programmatically
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Complete+a+Workflow+Task+Programmatically
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Complete+a+Workflow+Task+Programmatically'
     page_id: '12915574'
     shortlink: dhPF
     shortlink_source: 'https://doc.nuxeo.com/x/dhPF'
     source_link: /display/NXDOC/How+to+Complete+a+Workflow+Task+Programmatically
 tree_item_index: 300
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-09 14:14'
         message: ''
         version: '36'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-04-20 09:35'
         message: ''
         version: '35'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-05 18:15'
         message: Fix links to point to latest version
         version: '34'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-09 17:34'
         message: ''
         version: '33'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-09 16:19'
         message: ''
         version: '32'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-13 13:46'
         message: ''
         version: '31'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-13 13:45'
         message: Updated links
         version: '30'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-10-30 12:11'
         message: ''
         version: '29'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-18 14:55'
         message: ''
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2013-05-16 15:00'
         message: ''
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2013-04-22 15:08'
         message: ''
         version: '26'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:57'
         message: ''
         version: '25'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:49'
         message: ''
         version: '24'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:46'
         message: ''
         version: '23'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:46'
         message: ''
         version: '22'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:45'
         message: ''
         version: '21'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:44'
         message: ''
         version: '20'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:41'
         message: ''
         version: '19'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:39'
         message: ''
         version: '18'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:38'
         message: ''
         version: '17'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:37'
         message: ''
         version: '16'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:28'
         message: ''
         version: '15'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:25'
         message: ''
         version: '14'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:24'
         message: ''
         version: '13'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:20'
         message: ''
         version: '12'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:19'
         message: ''
         version: '11'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:16'
         message: ''
         version: '10'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 17:13'
         message: ''
         version: '9'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 15:26'
         message: ''
         version: '8'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 15:22'
         message: ''
         version: '7'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 15:11'
         message: ''
         version: '6'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 15:00'
         message: ''
         version: '5'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 14:56'
         message: ''
         version: '4'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 14:55'
         message: ''
         version: '3'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 14:53'
         message: ''
         version: '2'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-04-19 14:37'
         message: ''

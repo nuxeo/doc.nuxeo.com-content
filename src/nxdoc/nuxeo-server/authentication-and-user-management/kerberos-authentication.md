@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - kerberos-authentication-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -21,62 +22,62 @@ confluence:
     source_link: /display/NXDOC/Kerberos+Authentication
 tree_item_index: 195
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-09 14:38'
         message: ''
         version: '12'
-    -
+    - 
         author: Thomas Roger
         date: '2016-03-22 10:58'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-27 15:01'
         message: ''
         version: '10'
-    -
+    - 
         author: Damien Metzler
         date: '2015-10-20 12:59'
         message: ''
         version: '9'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-09-22 00:44'
         message: ''
         version: '8'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-09-22 00:35'
         message: ''
         version: '7'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-09-22 00:34'
         message: ''
         version: '6'
-    -
+    - 
         author: Alain Escaffre
         date: '2015-09-22 00:33'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-27 16:31'
         message: Add note about required configuration before installation
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-10 22:04'
         message: Add links
         version: '3'
-    -
+    - 
         author: Mathieu Guillaume
         date: '2014-11-07 15:12'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-07 14:49'
         message: ''

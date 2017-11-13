@@ -8,6 +8,7 @@ labels:
     - easyshare
     - excerpt
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '11043055'
@@ -22,102 +23,102 @@ confluence:
     source_link: /display/USERDOC/EasyShare
 tree_item_index: 200
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-08 17:17'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-08 16:29'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-08 16:27'
         message: 'Easy Share folder now use the collection system '
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-26 10:24'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '17'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-09-24 09:04'
         message: ''
         version: '16'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-12-18 13:53'
         message: Formatting
         version: '15'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-03 17:56'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2014-06-30 18:00'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2014-06-30 17:59'
         message: ''
         version: '12'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-06-23 10:40'
         message: ''
         version: '11'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-06-23 10:32'
         message: ''
         version: '10'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-06-11 15:29'
         message: ''
         version: '9'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-06-10 18:02'
         message: ''
         version: '8'
-    -
+    - 
         author: Julien Carsique
         date: '2014-05-22 16:06'
         message: ''
         version: '7'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-05-22 12:18'
         message: ''
         version: '6'
-    -
+    - 
         author: Julien Carsique
         date: '2014-05-06 14:26'
         message: ''
         version: '5'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-05-06 13:31'
         message: ''
         version: '4'
-    -
+    - 
         author: Mike Obrebski
         date: '2014-03-06 21:55'
         message: ''
         version: '3'
-    -
+    - 
         author: Mike Obrebski
         date: '2014-03-06 18:15'
         message: ''
         version: '2'
-    -
+    - 
         author: Mike Obrebski
         date: '2014-03-06 17:40'
         message: ''

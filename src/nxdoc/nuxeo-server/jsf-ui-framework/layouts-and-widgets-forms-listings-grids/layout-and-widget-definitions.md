@@ -9,6 +9,7 @@ labels:
     - link-update
     - home
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950330'
     ajs-parent-page-title: 'Layouts and Widgets (Forms, Listings, Grids)'
@@ -22,142 +23,142 @@ confluence:
     source_link: /display/NXDOC/Layout+and+Widget+Definitions
 tree_item_index: 100
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-07-20 13:20'
         message: emove children display macr
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-08 10:52'
         message: ''
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-07 16:40'
         message: ''
         version: '26'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-07 16:40'
         message: ''
         version: '25'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-07 16:39'
         message: ''
         version: '24'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-20 15:40'
         message: ''
         version: '23'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-05 14:23'
         message: ''
         version: '22'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-05 14:02'
         message: add links to subpages
         version: '21'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-04 14:39'
         message: better intro + display child pages in table of contents
         version: '20'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-04 13:54'
         message: 'remove content moved to subpages '
         version: '19'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-03 16:52'
         message: ''
         version: '18'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-03 16:52'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-13 14:11'
         message: ''
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 16:04'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-11 21:23'
         message: Migrated to Confluence 4.0
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-11 21:23'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2012-07-06 11:12'
         message: 'Added TOC, related pages and missing links'
         version: '12'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-06-04 14:02'
         message: ''
         version: '11'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-05-21 15:29'
         message: ''
         version: '10'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2012-05-21 15:11'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-21 11:04'
         message: Updated 5.4 mercurial link to 5.6 snapshot github URL
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-07 19:04'
         message: ''
         version: '7'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 15:53'
         message: ''
         version: '6'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 15:52'
         message: ''
         version: '5'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-13 15:50'
         message: ''
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-12 15:18'
         message: ''
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-12 15:07'
         message: ''
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-12 15:03'
         message: ''

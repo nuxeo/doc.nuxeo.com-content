@@ -9,6 +9,7 @@ labels:
     - mongodb
     - mongodb-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '20515468'
@@ -23,62 +24,62 @@ confluence:
     source_link: /display/NXDOC/DBS
 tree_item_index: 300
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-05 08:48'
         message: pdate lin
         version: '12'
-    -
+    - 
         author: Kevin Leturc
         date: '2016-08-04 15:14'
         message: ''
         version: '11'
-    -
+    - 
         author: Kevin Leturc
         date: '2016-08-04 13:17'
         message: ''
         version: '10'
-    -
+    - 
         author: Kevin Leturc
         date: '2016-08-04 12:28'
         message: ''
         version: '9'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-12-09 15:09'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-14 15:17'
         message: ''
         version: '7'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-10-13 15:41'
         message: ''
         version: '6'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-08-11 13:59'
         message: ''
         version: '5'
-    -
+    - 
         author: Florent Guillaume
         date: '2015-08-11 13:40'
         message: ''
         version: '4'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-11-04 16:09'
         message: ''
         version: '3'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-11-04 16:09'
         message: ''
         version: '2'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-11-04 15:56'
         message: ''

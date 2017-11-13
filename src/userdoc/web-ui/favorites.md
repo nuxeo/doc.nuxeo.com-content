@@ -4,11 +4,13 @@ review:
     comment: ''
     date: '2017-01-26'
     status: ok
-description:
+description: null
 toc: true
 labels:
     - favorites
+    - content-review-lts2017
 tree_item_index: 400
+
 ---
 
 {{! multiexcerpt name='definition-favorites'}}

@@ -9,6 +9,7 @@ labels:
     - document-content-view
     - web-ui-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '6029663'
     ajs-parent-page-title: Documents Display Configuration
@@ -22,37 +23,37 @@ confluence:
     source_link: /display/NXDOC/Document+Content+Views
 tree_item_index: 300
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-31 15:37'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-10 18:39'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-17 17:12'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-13 17:42'
         message: Formatting
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-12 18:47'
         message: Fix related topics box (by label)
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-12 18:43'
         message: add related labels
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-12 18:11'
         message: ''

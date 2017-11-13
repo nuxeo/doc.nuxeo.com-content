@@ -1,13 +1,14 @@
 ---
 title: Nuxeo Media Publishing
 review:
-    comment: 'update youtube configuration part'
+    comment: update youtube configuration part
     date: '2017-01-16'
     status: ok
 labels:
     - lts2016-ok
     - media-publishing-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -20,99 +21,99 @@ confluence:
     shortlink: vAOIAQ
     shortlink_source: 'https://doc.nuxeo.com/x/vAOIAQ'
     source_link: /display/NXDOC/Nuxeo+Media+Publishing
-tree_item_index: 2200    
+tree_item_index: 2200
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-08-16 10:02'
         message: ''
         version: '19'
-    -
+    - 
         author: Vincent Dutat
         date: '2016-02-10 18:28'
         message: ''
         version: '18'
-    -
+    - 
         author: Vincent Dutat
         date: '2016-02-10 18:25'
         message: ''
         version: '17'
-    -
+    - 
         author: Vincent Dutat
         date: '2016-02-10 18:20'
         message: ''
         version: '16'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-10-15 12:42'
         message: ''
         version: '15'
-    -
+    - 
         author: Andre Justo
         date: '2015-10-13 11:51'
         message: ''
         version: '14'
-    -
+    - 
         author: Andre Justo
         date: '2015-10-13 10:49'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2015-07-06 12:27'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2015-07-06 12:23'
         message: add link
         version: '11'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-07-01 08:53'
         message: ''
         version: '10'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-07-01 08:53'
         message: ''
         version: '9'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-06-30 16:51'
         message: ''
         version: '8'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-06-30 16:48'
         message: ''
         version: '7'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-06-30 16:19'
         message: ''
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-06-29 16:28'
         message: ''
         version: '5'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-06-29 16:27'
         message: ''
         version: '4'
-    -
+    - 
         author: Andre Justo
         date: '2015-06-24 10:19'
         message: ''
         version: '3'
-    -
+    - 
         author: Andre Justo
         date: '2015-06-24 10:18'
         message: ''
         version: '2'
-    -
+    - 
         author: Andre Justo
         date: '2015-06-24 10:16'
         message: ''

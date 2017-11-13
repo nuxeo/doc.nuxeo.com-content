@@ -1,5 +1,5 @@
 ---
-title: How to Contribute a New "User Registration Request" Document Type
+title: 'How to Contribute a New "User Registration Request" Document Type'
 review:
     comment: ''
     date: '2016-12-06'
@@ -15,6 +15,7 @@ labels:
     - howto
     - user-registration
     - user-registration-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '18450090'
@@ -28,17 +29,17 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/_YJdAQ'
     source_link: /pages/viewpage.action?pageId=22905593
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-04-14 15:18'
         message: ix Studio menu labe
         version: '3'
-    -
+    - 
         author: Gildas Lefevre
         date: '2015-12-08 22:38'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-12 15:34'
         message: ''

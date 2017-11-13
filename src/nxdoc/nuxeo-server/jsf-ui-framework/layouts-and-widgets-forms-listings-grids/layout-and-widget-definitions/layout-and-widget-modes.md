@@ -10,6 +10,7 @@ labels:
     - widget
     - layout-widgets-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '3868333'
     ajs-parent-page-title: Layout and Widget Definitions
@@ -23,47 +24,47 @@ confluence:
     source_link: /display/NXDOC/Layout+and+Widget+Modes
 tree_item_index: 300
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-30 15:58'
         message: ''
         version: '9'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-08 17:36'
         message: 'NXDOC-286: give example for mode configuration with expressions'
         version: '8'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-08 16:18'
         message: 'NXDOC-286: cosmit'
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-08-25 14:01'
         message: Remove 5.4 reference
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-07 18:30'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-07 18:29'
         message: 'Added related topics and links, removed 5.4.2 mentions'
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-20 15:18'
         message: ''
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-05 14:24'
         message: ''
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-04 14:18'
         message: ''

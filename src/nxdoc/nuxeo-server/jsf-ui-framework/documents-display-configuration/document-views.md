@@ -10,6 +10,7 @@ labels:
     - document-tab
     - web-ui-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '6029663'
     ajs-parent-page-title: Documents Display Configuration
@@ -23,57 +24,57 @@ confluence:
     source_link: /display/NXDOC/Document+Views
 tree_item_index: 100
 history:
-    -
+    - 
         author: Andre Justo
         date: '2015-10-13 13:43'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-13 17:28'
         message: Added link
         version: '10'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-12 18:41'
         message: better excerpt
         version: '9'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-03 16:23'
         message: better title
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 16:35'
         message: ''
         version: '7'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-01 12:36'
         message: Migrated to Confluence 4.0
         version: '6'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-04-01 12:36'
         message: removin coretype from ui type definition
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2011-02-24 17:37'
         message: ''
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-07-28 17:54'
         message: ''
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-07-28 17:53'
         message: ''
         version: '2'
-    -
+    - 
         author: Admin name placeholder
         date: '2010-03-01 00:54'
         message: ''

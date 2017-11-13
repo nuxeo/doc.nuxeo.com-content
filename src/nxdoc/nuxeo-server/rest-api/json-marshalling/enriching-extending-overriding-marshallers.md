@@ -1,5 +1,5 @@
 ---
-title: Enriching, Extending and Overriding Existing Marshallers
+title: 'Enriching, Extending and Overriding Existing Marshallers'
 review:
     comment: ''
     date: '2017-01-04'
@@ -9,6 +9,7 @@ labels:
     - rest-api
     - json
     - marshalling
+    - content-review-lts2017
 toc: true
 tree_item_index: 200
 

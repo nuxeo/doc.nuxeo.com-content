@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to add a JSF form validation to a JSF component to
-            validate a field.
+        excerpt: Learn how to add a JSF form validation to a JSF component to validate a field.
         level: Advanced
         tool: Code
         topics: 'Layout, JSF UI, Validation'
@@ -18,6 +16,7 @@ labels:
     - jsf
     - howto
     - seam-jsf-component
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '9830458'
     ajs-parent-page-title: JSF and Ajax Tips and How-To Index
@@ -31,152 +30,152 @@ confluence:
     source_link: /display/NXDOC/How+to+Add+a+JSF+Form+Validation
 tree_item_index: 800
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 10:09'
         message: ''
         version: '30'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-12-08 11:24'
         message: ''
         version: '29'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 22:02'
         message: ''
         version: '28'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-18 11:05'
         message: ''
         version: '27'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-17 17:37'
         message: ''
         version: '26'
-    -
+    - 
         author: Vincent Dutat
         date: '2014-07-17 00:59'
-        message: link to "Cross validation with JSF"
+        message: 'link to "Cross validation with JSF"'
         version: '25'
-    -
+    - 
         author: Solen Guitter
         date: '2014-02-17 09:35'
         message: ''
         version: '24'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-04 17:37'
         message: ''
         version: '23'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 16:52'
         message: ''
         version: '22'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 16:52'
         message: ''
         version: '21'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 14:43'
         message: ''
         version: '20'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 10:27'
         message: ''
         version: '19'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 10:24'
         message: ''
         version: '18'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 10:14'
         message: ''
         version: '17'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 09:14'
         message: ''
         version: '16'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 09:09'
         message: ''
         version: '15'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 08:54'
         message: ''
         version: '14'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 08:51'
         message: ''
         version: '13'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 07:55'
         message: ''
         version: '12'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 07:54'
         message: ''
         version: '11'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 07:53'
         message: ''
         version: '10'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 20:11'
         message: ''
         version: '9'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 20:05'
         message: ''
         version: '8'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 19:21'
         message: ''
         version: '7'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 19:01'
         message: ''
         version: '6'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:39'
         message: ''
         version: '5'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:23'
         message: ''
         version: '4'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:18'
         message: ''
         version: '3'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:11'
         message: ''
         version: '2'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:00'
         message: ''

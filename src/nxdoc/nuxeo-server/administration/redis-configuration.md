@@ -9,6 +9,7 @@ labels:
     - redis
     - clustering
     - multiexcerpt-include
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
@@ -22,101 +23,101 @@ confluence:
     source_link: /display/NXDOC/Redis+Configuration
 tree_item_index: 1100
 version_override:
-    'LTS 2015': 710/admindoc/redis-configuration
+    LTS 2015: 710/admindoc/redis-configuration
     '6.0': 60/admindoc/redis-configuration
     '5.8': 58/admindoc/redis-configuration
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-13 15:15'
         message: se excerpt for compatibility version
         version: '19'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-04-25 15:51'
         message: ''
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-03 13:55'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-08 13:25'
         message: ''
         version: '16'
-    -
+    - 
         author: Antoine Taillefer
         date: '2016-02-04 12:49'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2016-01-11 15:45'
         message: Update Redis version (3.0 instead of 2.8)
         version: '14'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-12-16 15:05'
         message: ''
         version: '13'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-12-16 15:03'
         message: ''
         version: '12'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-12-16 15:01'
         message: ''
         version: '11'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-12-09 13:43'
         message: ''
         version: '10'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-12-09 13:37'
         message: ''
         version: '9'
-    -
+    - 
         author: Maxime Hilaire
         date: '2015-08-03 15:14'
         message: ''
         version: '8'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2015-05-18 14:18'
         message: ''
         version: '7'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2015-05-18 14:13'
         message: ''
         version: '6'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-11-12 12:03'
         message: Info about prefix.
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2013-12-04 13:31'
         message: use Nuxeo Platform 5.8 instead of Nuxeo 5.8
         version: '4'
-    -
+    - 
         author: Florent Guillaume
         date: '2013-11-14 17:49'
         message: ''
         version: '3'
-    -
+    - 
         author: Florent Guillaume
         date: '2013-11-14 17:38'
         message: ''
         version: '2'
-    -
+    - 
         author: Florent Guillaume
         date: '2013-11-14 16:50'
         message: ''

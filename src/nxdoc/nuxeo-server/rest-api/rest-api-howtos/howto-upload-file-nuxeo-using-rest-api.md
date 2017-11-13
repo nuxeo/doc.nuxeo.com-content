@@ -1,14 +1,12 @@
 ---
-title: "HOWTO: Upload a File in Nuxeo Using REST API"
+title: 'HOWTO: Upload a File in Nuxeo Using REST API'
 review:
     comment: ''
     date: '2017-08-01'
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to import a file using the Batch processing endpoint of
-            the REST API.
+        excerpt: Learn how to import a file using the Batch processing endpoint of the REST API.
         level: Advanced
         tool: Code
         topics: 'Import, REST API'
@@ -21,107 +19,105 @@ labels:
     - file-upload-component
     - university
     - excerpt
+    - content-review-lts2017
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint
+    LTS 2015: 710/nxdoc/how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint
     '6.0': 60/nxdoc/how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint/
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: >-
-        How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
+    canonical: How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint'
     page_id: '19793389'
     shortlink: 7QUuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/7QUuAQ'
-    source_link: >-
-        /display/NXDOC/How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
+    source_link: /display/NXDOC/How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
 tree_item_index: 200
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-30 12:28'
         message: ''
         version: '17'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-11-03 11:25'
         message: ''
         version: '16'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-10-19 16:11'
         message: ''
         version: '15'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-10-19 16:03'
         message: ''
         version: '14'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-10-19 15:57'
         message: course title
         version: '13'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-10-19 09:16'
         message: Added video
         version: '12'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-10-07 09:28'
         message: ''
         version: '11'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-10-06 16:21'
         message: ''
         version: '10'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-10-06 16:02'
         message: ''
         version: '9'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-10-06 14:31'
         message: ''
         version: '8'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-09-14 10:20'
         message: ''
         version: '7'
-    -
+    - 
         author: Antoine Taillefer
         date: '2015-09-14 10:17'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 21:45'
         message: ''
         version: '5'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-08 17:53'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-08 14:47'
         message: Add related how-tos
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-18 12:25'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-07-03 01:07'
         message: ''

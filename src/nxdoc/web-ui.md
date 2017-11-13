@@ -10,9 +10,11 @@ labels:
     - web-ui-customization
     - nuxeo-elements
     - polymer-guide
+    - content-review-lts2017
 is_overview: true
 tree_item_index: 300
 section_parent: web-ui
+
 ---
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">

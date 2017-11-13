@@ -6,6 +6,7 @@ review:
     status: ok
 labels:
     - content-review-lts2016
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '4687444'
     ajs-parent-page-title: Contributing to Nuxeo
@@ -19,22 +20,22 @@ confluence:
     source_link: /display/NXDOC/How+to+Submit+a+Bug+Report
 tree_item_index: 300
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2013-12-11 09:40'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2013-12-11 09:40'
         message: ''
         version: '3'
-    -
+    - 
         author: Laurent Doguin
         date: '2013-12-10 14:45'
         message: ''
         version: '2'
-    -
+    - 
         author: Laurent Doguin
         date: '2013-12-10 14:39'
         message: ''

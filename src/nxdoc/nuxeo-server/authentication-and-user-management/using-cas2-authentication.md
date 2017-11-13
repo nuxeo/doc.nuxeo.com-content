@@ -11,6 +11,7 @@ labels:
     - link-update
     - anonymous
     - cas-authentication-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089115'
@@ -25,152 +26,152 @@ confluence:
     source_link: /display/NXDOC/Using+CAS2+Authentication
 tree_item_index: 195
 history:
-    -
+    - 
         author: Frantz Fischer
         date: '2016-07-01 09:24'
         message: ''
         version: '30'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-21 08:40'
         message: Fix page layout to use 2/3 layout
         version: '29'
-    -
+    - 
         author: Damien Metzler
         date: '2015-10-20 12:48'
         message: ''
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-27 12:08'
         message: ''
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-14 16:42'
         message: Added TOC
         version: '26'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-23 10:45'
         message: ''
         version: '25'
-    -
+    - 
         author: Thierry Delprat
         date: '2013-09-20 21:57'
         message: ''
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-03 15:41'
         message: Migrated to Confluence 4.0
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-03 15:41'
         message: ''
         version: '22'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 18:37'
         message: ''
         version: '21'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 18:30'
         message: ''
         version: '20'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 18:29'
         message: ''
         version: '19'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 18:28'
         message: ''
         version: '18'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 18:26'
         message: ''
         version: '17'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 18:26'
         message: ''
         version: '16'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 18:17'
         message: ''
         version: '15'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 18:04'
         message: ''
         version: '14'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 17:46'
         message: ''
         version: '13'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 17:41'
         message: ''
         version: '12'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 17:40'
         message: ''
         version: '11'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 17:39'
         message: ''
         version: '10'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 17:28'
         message: ''
         version: '9'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 17:23'
         message: ''
         version: '8'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 17:18'
         message: ''
         version: '7'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 17:05'
         message: ''
         version: '6'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 17:05'
         message: ''
         version: '5'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 16:59'
         message: ''
         version: '4'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 16:55'
         message: ''
         version: '3'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 16:51'
         message: ''
         version: '2'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2010-12-16 16:50'
         message: ''

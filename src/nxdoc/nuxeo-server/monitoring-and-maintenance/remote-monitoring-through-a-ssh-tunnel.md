@@ -9,50 +9,50 @@ labels:
     - monitoring
     - ssh
     - monitoring-component
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Remote+Monitoring+Through+a+SSH+Tunnel
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Remote+Monitoring+Through+a+SSH+Tunnel
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Remote+Monitoring+Through+a+SSH+Tunnel'
     page_id: '10387597'
     shortlink: jYCe
     shortlink_source: 'https://doc.nuxeo.com/x/jYCe'
     source_link: /display/NXDOC/Remote+Monitoring+Through+a+SSH+Tunnel
 tree_item_index: 600
 version_override:
-    'LTS 2015': 710/admindoc/remote-monitoring-through-a-ssh-tunnel
+    LTS 2015: 710/admindoc/remote-monitoring-through-a-ssh-tunnel
     '6.0': 60/admindoc/remote-monitoring-through-a-ssh-tunnel
     '5.8': 58/admindoc/remote-monitoring-through-a-ssh-tunnel
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-15 11:59'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2012-04-18 10:40'
         message: Migrated to Confluence 4.0
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2012-04-18 10:40'
         message: Moved page in Admin doc and fixed steps format
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2012-04-18 10:40'
         message: ''
         version: '3'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2012-04-17 16:19'
         message: ''
         version: '2'
-    -
+    - 
         author: Stéphane Lacoin
         date: '2012-04-17 15:22'
         message: ''

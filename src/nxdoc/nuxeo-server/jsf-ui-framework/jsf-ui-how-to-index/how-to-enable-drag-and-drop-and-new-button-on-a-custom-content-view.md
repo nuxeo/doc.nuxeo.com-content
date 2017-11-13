@@ -14,50 +14,49 @@ labels:
     - content-review-lts2016
     - howto
     - content-view
+    - content-review-lts2017
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/how-to-enable-dragn-drop-and-new-button-on-a-custom-content-view
+    LTS 2015: 710/nxdoc/how-to-enable-dragn-drop-and-new-button-on-a-custom-content-view
 confluence:
     ajs-parent-page-id: '20517820'
     ajs-parent-page-title: JSF UI How-To Index
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Enable+Drag%27n+Drop+and+New+Button+on+a+Custom+Content+View
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Enable+Drag%27n+Drop+and+New+Button+on+a+Custom+Content+View
+    canonical: 'How+to+Enable+Drag%27n+Drop+and+New+Button+on+a+Custom+Content+View'
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Enable+Drag%27n+Drop+and+New+Button+on+a+Custom+Content+View'
     page_id: '26313229'
     shortlink: DYKRAQ
     shortlink_source: 'https://doc.nuxeo.com/x/DYKRAQ'
-    source_link: >-
-        /display/NXDOC/How+to+Enable+Drag%27n+Drop+and+New+Button+on+a+Custom+Content+View
+    source_link: '/display/NXDOC/How+to+Enable+Drag%27n+Drop+and+New+Button+on+a+Custom+Content+View'
 tree_item_index: 1600
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 09:42'
         message: pdate how-to topic
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-08-03 09:58'
         message: ''
         version: '5'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-21 10:07'
         message: ''
         version: '4'
-    -
+    - 
         author: Thierry Martins
         date: '2015-07-21 16:15'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2015-07-21 16:06'
         message: ''
         version: '2'
-    -
+    - 
         author: Thierry Martins
         date: '2015-07-20 09:17'
         message: ''

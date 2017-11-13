@@ -1,5 +1,5 @@
 ---
-title: "HOWTO: Deploy Web UI Within a Nuxeo Server"
+title: 'HOWTO: Deploy Web UI Within a Nuxeo Server'
 review:
     comment: ''
     date: '2017-01-16'
@@ -17,6 +17,7 @@ labels:
     - extension
     - marketplace
     - deployment
+    - content-review-lts2017
 tree_item_index: 900
 
 ---

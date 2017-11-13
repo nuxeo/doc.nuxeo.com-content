@@ -7,6 +7,7 @@ review:
 labels:
     - multiexcerpt
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '11043048'
@@ -14,40 +15,39 @@ confluence:
     ajs-space-key: USERDOC
     ajs-space-name: Nuxeo Platform User Documentation
     canonical: Digital+Asset+Management+with+the+Nuxeo+Platform
-    canonical_source: >-
-        https://doc.nuxeo.com/display/USERDOC/Digital+Asset+Management+with+the+Nuxeo+Platform
+    canonical_source: 'https://doc.nuxeo.com/display/USERDOC/Digital+Asset+Management+with+the+Nuxeo+Platform'
     page_id: '26312925'
     shortlink: 3YCRAQ
     shortlink_source: 'https://doc.nuxeo.com/x/3YCRAQ'
     source_link: /display/USERDOC/Digital+Asset+Management+with+the+Nuxeo+Platform
 tree_item_index: 1800
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-04-20 08:00'
         message: ''
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-04-19 15:36'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2016-04-18 17:49'
         message: Add note about annotations removed from 8.2
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-27 12:48'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2015-07-10 09:30'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2015-07-10 09:30'
         message: ''

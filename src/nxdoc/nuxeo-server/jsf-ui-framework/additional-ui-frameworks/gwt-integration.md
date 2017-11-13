@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - gwt-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950334'
@@ -22,87 +23,87 @@ confluence:
     source_link: /display/NXDOC/GWT+Integration
 tree_item_index: 100
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-31 14:32'
         message: pdate table of contents loo
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2014-08-25 10:44'
         message: Remove 5.3 reference
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-05 17:42'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-05 16:17'
         message: Formatting
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-04 10:57'
         message: Migrated to Confluence 4.0
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-04 10:57'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-04 10:52'
         message: ''
         version: '11'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 22:43'
         message: ''
         version: '10'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 22:04'
         message: ''
         version: '9'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 22:01'
         message: ''
         version: '8'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 21:57'
         message: ''
         version: '7'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 15:41'
         message: ''
         version: '6'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 15:40'
         message: ''
         version: '5'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-21 15:09'
         message: ''
         version: '4'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-21 14:56'
         message: ''
         version: '3'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-21 14:55'
         message: ''
         version: '2'
-    -
+    - 
         author: Admin name placeholder
         date: '2010-03-01 01:36'
         message: ''

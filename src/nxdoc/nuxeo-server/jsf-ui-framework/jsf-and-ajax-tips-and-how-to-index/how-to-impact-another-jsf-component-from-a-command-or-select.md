@@ -16,6 +16,7 @@ labels:
     - seam-jsf-component
     - jsf
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '9830458'
@@ -23,81 +24,79 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Impact+Another+JSF+Component+from+a+Command+or+Select
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Impact+Another+JSF+Component+from+a+Command+or+Select
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Impact+Another+JSF+Component+from+a+Command+or+Select'
     page_id: '20519998'
     shortlink: Phw5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/Phw5AQ'
-    source_link: >-
-        /display/NXDOC/How+to+Impact+Another+JSF+Component+from+a+Command+or+Select
+    source_link: /display/NXDOC/How+to+Impact+Another+JSF+Component+from+a+Command+or+Select
 tree_item_index: 900
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 10:10'
         message: ''
         version: '14'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2016-01-06 10:26'
         message: ''
         version: '13'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-10-07 13:02'
         message: fotrmat
         version: '12'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-10-07 13:01'
         message: add bulk edit example
         version: '11'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-08-18 09:58'
         message: 'NXDOC-649: add checkbox rerender example'
         version: '10'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-08-18 09:35'
         message: 'NXDOC-649: fix first example, ajaxifying it'
         version: '9'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-07-31 16:47'
-        message: fix subimtChanges -> submitValue
+        message: 'fix subimtChanges -> submitValue'
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-09 17:06'
         message: fix typo
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-09 17:04'
         message: link update
         version: '6'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-09 16:58'
         message: ''
         version: '5'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-09 16:25'
         message: 'NXDOC-363 : add howtos about selectionActions helpers'
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-09 15:57'
         message: 'NXDOC-363: start doc about value holder tag usage'
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-01 14:52'
         message: ''
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-01 14:52'
         message: ''

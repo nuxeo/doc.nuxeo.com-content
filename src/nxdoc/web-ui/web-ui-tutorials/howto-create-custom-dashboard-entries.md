@@ -1,5 +1,5 @@
 ---
-title: "HOWTO: Create Custom Dashboard Entries"
+title: 'HOWTO: Create Custom Dashboard Entries'
 review:
     comment: ''
     date: '2016-12-08'
@@ -19,8 +19,10 @@ labels:
     - project-structure
     - pom_xml
     - howto
+    - content-review-lts2017
 toc: true
 tree_item_index: 900
+
 ---
 ## Building Custom Dashboards
 

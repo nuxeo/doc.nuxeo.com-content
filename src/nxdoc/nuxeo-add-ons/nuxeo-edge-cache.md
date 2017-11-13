@@ -7,8 +7,10 @@ review:
 labels:
     - lts2016-ok
     - edge-cache
+    - content-review-lts2017
 toc: true
 tree_item_index: 1650
+
 ---
 {{! excerpt}}
 [Nuxeo Edge Cache](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-edge-cache) allows you to cache binaries from your Nuxeo server on an Edge Cache server closer to your clients. It can act like a Content Delivery Network, to improve the speed of your downloads.

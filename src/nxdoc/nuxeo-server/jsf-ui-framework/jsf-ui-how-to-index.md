@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - index
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950313'
     ajs-parent-page-title: Nuxeo JSF UI
@@ -22,47 +23,47 @@ tree_item_index: 300
 version_override:
     '6.0': 60/nxdoc/web-ui-how-to-index
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-09-09 14:38'
         message: 'everted from v. '
         version: '9'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-09-09 13:32'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 10:09'
-        message: Rename page (Web UI -> JSF UI)
+        message: 'Rename page (Web UI -> JSF UI)'
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 10:09'
-        message: Update filter (Web UI -> JSF UI)
+        message: 'Update filter (Web UI -> JSF UI)'
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-01-13 10:28'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-03 15:59'
         message: ''
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-11-24 16:54'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-06 11:10'
         message: ''
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-11-04 15:55'
         message: ''

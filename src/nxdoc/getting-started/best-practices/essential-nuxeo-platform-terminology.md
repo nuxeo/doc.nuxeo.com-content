@@ -4,13 +4,13 @@ review:
     comment: ''
     date: '2016-12-08'
     status: ok
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
     - lts2016-ok
     - bootstrap
     - excerpt
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '19235677'
@@ -25,57 +25,57 @@ confluence:
     source_link: /display/NXDOC/Essential+Nuxeo+Platform+Terminology
 tree_item_index: 800
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-26 15:24'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-24 10:11'
         message: ''
         version: '10'
-    -
+    - 
         author: Bob Canaway
         date: '2014-09-24 03:49'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-23 18:27'
         message: Added TOC
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-18 10:51'
         message: ''
         version: '7'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-07-15 07:42'
         message: ''
         version: '6'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-07-15 07:28'
         message: ''
         version: '5'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-07-15 07:16'
         message: ''
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-07-15 00:46'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-07-15 00:45'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-07-15 00:44'
         message: ''

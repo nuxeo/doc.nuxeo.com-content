@@ -9,6 +9,7 @@ labels:
     - filter
     - el
     - actions-filters-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950289'
@@ -23,92 +24,92 @@ confluence:
     source_link: /display/NXDOC/Filters+and+Access+Controls
 tree_item_index: 400
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-08-17 10:05'
         message: emove deleted pag
         version: '18'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2016-06-24 10:26'
         message: add tip to help debugging filters
         version: '17'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-09 13:54'
         message: ''
         version: '16'
-    -
+    - 
         author: Vincent Dutat
         date: '2016-03-30 18:19'
         message: ''
         version: '15'
-    -
+    - 
         author: Vincent Dutat
         date: '2016-03-30 18:19'
         message: ''
         version: '14'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-01-19 10:37'
         message: 'replace "Write" by "Edit"     '
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-15 11:42'
         message: Update related pages
         version: '12'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-10-13 14:30'
         message: ''
         version: '11'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-02-12 10:05'
         message: ''
         version: '10'
-    -
+    - 
         author: Vincent Dutat
         date: '2015-01-17 03:22'
         message: ''
         version: '9'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-05 18:51'
         message: 'NXDOC-222: mention currentUser availability in action context'
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-20 15:46'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-20 15:45'
         message: ''
         version: '6'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-20 19:19'
         message: add more info about context + filters without actions
         version: '5'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-20 15:38'
         message: ''
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-16 18:57'
         message: remove deprecated warning for 5.8
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-16 18:56'
         message: move content from parent page + add wip warning
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-03 16:27'
         message: ''

@@ -10,6 +10,7 @@ labels:
     - document-template
     - template-rendering-addon-component
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -24,147 +25,147 @@ confluence:
     source_link: /display/NXDOC/Template+Rendering+Addon
 tree_item_index: 3500
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-01 10:01'
         message: ''
         version: '29'
-    -
+    - 
         author: Vincent Dutat
         date: '2016-07-26 17:31'
         message: ''
         version: '28'
-    -
+    - 
         author: Karin Touchie
         date: '2016-05-27 09:51'
         message: ''
         version: '27'
-    -
+    - 
         author: Karin Touchie
         date: '2016-05-27 09:50'
         message: ''
         version: '26'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-12-10 13:23'
         message: Adding borders on pictures
         version: '25'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-12-09 10:32'
         message: mention old doctypes are read only
         version: '24'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-12-09 09:42'
         message: Mention template rendering samples and its content
         version: '23'
-    -
+    - 
         author: Guillaume Renard
         date: '2015-12-08 18:24'
         message: ''
         version: '22'
-    -
+    - 
         author: Guillaume Renard
         date: '2015-12-08 18:08'
         message: ''
         version: '21'
-    -
+    - 
         author: Guillaume Renard
         date: '2015-12-08 16:49'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-10 08:42'
         message: ''
         version: '19'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-11-06 10:03'
         message: Added details about JXLS
         version: '18'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-11-06 09:44'
         message: Upate xdocreport links
         version: '17'
-    -
+    - 
         author: Thierry Martins
         date: '2015-11-05 15:40'
         message: ''
         version: '16'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-08-27 13:20'
         message: ''
         version: '15'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2015-07-15 12:33'
         message: Added explanations on options
         version: '14'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-12-15 17:44'
         message: ''
         version: '13'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-12-15 17:42'
         message: ''
         version: '12'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-12-15 17:39'
         message: ''
         version: '11'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-12-15 17:34'
         message: ''
         version: '10'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-12-15 17:31'
         message: ''
         version: '9'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-10-20 09:59'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-22 18:18'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-06-11 14:12'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-17 09:37'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-17 09:37'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-04 23:41'
         message: Added related content
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-04 23:38'
         message: Added screenshots
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-04 23:20'
         message: ''

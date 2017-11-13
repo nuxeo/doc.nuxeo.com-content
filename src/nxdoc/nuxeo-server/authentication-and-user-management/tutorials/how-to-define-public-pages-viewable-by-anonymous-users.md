@@ -15,6 +15,7 @@ labels:
     - anonymous
     - howto
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '19235681'
@@ -29,177 +30,177 @@ confluence:
     source_link: /pages/viewpage.action?pageId=3343531
 tree_item_index: 300
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-08 14:54'
         message: ink updat
         version: '35'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-29 08:16'
         message: Add link
         version: '34'
-    -
+    - 
         author: Joshua Fletcher
         date: '2015-10-28 23:08'
         message: 'In fact the first option did not work at all, but Studio works.'
         version: '33'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-12 12:20'
         message: Remove link
         version: '32'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-11 14:58'
         message: ''
         version: '31'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-19 14:43'
         message: ''
         version: '30'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-19 14:36'
         message: ''
         version: '29'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-19 14:35'
         message: ''
         version: '28'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-18 14:38'
         message: ''
         version: '27'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-18 14:27'
         message: ''
         version: '26'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-18 14:22'
         message: ''
         version: '25'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-23 12:20'
         message: ''
         version: '24'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-04 17:44'
         message: ''
         version: '23'
-    -
+    - 
         author: Benjamin Jalon
         date: '2011-10-26 16:42'
         message: ''
         version: '22'
-    -
+    - 
         author: Benjamin Jalon
         date: '2011-10-26 16:42'
         message: ''
         version: '21'
-    -
+    - 
         author: Benjamin Jalon
         date: '2011-10-26 16:17'
         message: ''
         version: '20'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-08-04 12:15'
         message: ''
         version: '19'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 16:43'
         message: ''
         version: '18'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 14:43'
         message: ''
         version: '17'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 10:27'
         message: ''
         version: '16'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 10:24'
         message: ''
         version: '15'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 10:14'
         message: ''
         version: '14'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 09:14'
         message: ''
         version: '13'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 09:09'
         message: ''
         version: '12'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 08:54'
         message: ''
         version: '11'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-22 08:51'
         message: ''
         version: '10'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 20:11'
         message: ''
         version: '9'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 20:05'
         message: ''
         version: '8'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 19:21'
         message: ''
         version: '7'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 19:01'
         message: ''
         version: '6'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:39'
         message: ''
         version: '5'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:23'
         message: ''
         version: '4'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:18'
         message: ''
         version: '3'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:11'
         message: ''
         version: '2'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-07-21 18:00'
         message: ''

@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - excerpt
     - multiexcerpt-include
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950332'
     ajs-parent-page-title: Developer Documentation Center
@@ -22,105 +23,105 @@ confluence:
 section_parent: addons
 tree_item_index: 500
 version_override:
-    'LTS 2015': 710/nxdoc/marketplace-add-ons
+    LTS 2015: 710/nxdoc/marketplace-add-ons
     '6.0': 60/nxdoc/marketplace-add-ons
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-10-05 09:33'
         message: emove filter search
         version: '20'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-10-05 09:22'
         message: Reverted from v. 17
         version: '19'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-10-05 09:20'
         message: ''
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-27 14:59'
         message: ''
         version: '17'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-09-26 16:12'
         message: ''
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-26 13:27'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-26 09:45'
         message: Add Nuxeo Forum
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-23 14:48'
         message: Update for coming 8.4 release
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-23 13:20'
         message: Added ID
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-23 12:59'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 13:51'
         message: Change visibility of Nuxeo Adobe CC Connector
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-05 09:13'
         message: Add link to MarkLogic documentation
         version: '9'
-    -
+    - 
         author: Julien Carsique
         date: '2016-07-27 09:51'
         message: API Playground 1.1.1 (Nx 8.3)
         version: '8'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-07-25 13:55'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2015-09-21 20:24'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-03 14:36'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-06 16:54'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-06 16:54'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-17 00:10'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-05 17:55'
         message: ''

@@ -4,12 +4,14 @@ description: This page describes how your Nuxeo cluster can scale depending on y
 labels:
     - deployment
     - architecture
+    - content-review-lts2017
 review:
     date: '2017-06-06'
     status: ok
     comment: ''
 toc: true
 tree_item_index: 1260
+
 ---
 
 {{! excerpt}}

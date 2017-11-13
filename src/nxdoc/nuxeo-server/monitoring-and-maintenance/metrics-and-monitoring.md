@@ -10,6 +10,7 @@ labels:
     - performance
     - monitoring-component
     - multiexcerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950318'
@@ -24,201 +25,201 @@ confluence:
     source_link: /display/NXDOC/Metrics+and+Monitoring
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/admindoc/metrics-and-monitoring
+    LTS 2015: 710/admindoc/metrics-and-monitoring
     '6.0': 60/admindoc/metrics-and-monitoring
     '5.8': 58/admindoc/metrics-and-monitoring
 history:
-    -
+    - 
         author: Anahide Tchertchian
         date: '2016-07-08 16:17'
         message: 'XDOC-840: document action service metric'
         version: '39'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-25 16:45'
         message: ''
         version: '38'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-02-25 10:31'
         message: ''
         version: '37'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-02-25 10:29'
         message: ''
         version: '36'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-02-25 10:29'
         message: ''
         version: '35'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-24 15:23'
         message: ''
         version: '34'
-    -
+    - 
         author: Benoit Delbosc
         date: '2016-02-24 11:28'
         message: Update admin center activity view
         version: '33'
-    -
+    - 
         author: Benoit Delbosc
         date: '2016-01-27 12:41'
         message: Move list of metrics before how to report them
         version: '32'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-01-27 11:23'
         message: ''
         version: '31'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-10-14 09:33'
         message: ''
         version: '30'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-10-14 09:33'
         message: ''
         version: '29'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-10-14 09:26'
         message: ''
         version: '28'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-10-13 14:37'
         message: ''
         version: '27'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-10-13 14:35'
         message: ''
         version: '26'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-10-13 14:34'
         message: Update metrics list for 7.10
         version: '25'
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-19 14:37'
         message: Update related pages
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-26 12:49'
         message: Fix metrics.graphite.port to 2003 instead of 2030
         version: '23'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-12-05 16:15'
         message: ''
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2014-08-29 15:31'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2014-08-29 15:29'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2014-08-29 15:28'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2014-08-29 15:13'
         message: ''
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2013-12-18 17:07'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-14 17:28'
         message: Added TOC
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-15 15:56'
         message: Fixed broken link to Diamond and added related topics
         version: '15'
-    -
+    - 
         author: Benoit Delbosc
         date: '2013-06-27 17:31'
         message: ''
         version: '14'
-    -
+    - 
         author: Benoit Delbosc
         date: '2013-06-27 17:31'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2013-06-18 14:35'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2013-03-26 22:31'
         message: ''
         version: '11'
-    -
+    - 
         author: Benoit Delbosc
         date: '2013-03-25 14:58'
         message: ''
         version: '10'
-    -
+    - 
         author: Benoit Delbosc
         date: '2013-03-25 14:46'
         message: ''
         version: '9'
-    -
+    - 
         author: Benoit Delbosc
         date: '2013-03-21 11:27'
         message: ''
         version: '8'
-    -
+    - 
         author: Benoit Delbosc
         date: '2013-03-21 11:26'
         message: ''
         version: '7'
-    -
+    - 
         author: Benoit Delbosc
         date: '2013-03-19 15:55'
         message: ''
         version: '6'
-    -
+    - 
         author: Benoit Delbosc
         date: '2013-03-19 15:53'
         message: ''
         version: '5'
-    -
+    - 
         author: Benoit Delbosc
         date: '2013-03-19 15:46'
         message: ''
         version: '4'
-    -
+    - 
         author: Benoit Delbosc
         date: '2013-03-19 15:33'
         message: ''
         version: '3'
-    -
+    - 
         author: Benoit Delbosc
         date: '2013-03-19 15:24'
         message: ''
         version: '2'
-    -
+    - 
         author: Benoit Delbosc
         date: '2013-03-19 15:16'
         message: ''

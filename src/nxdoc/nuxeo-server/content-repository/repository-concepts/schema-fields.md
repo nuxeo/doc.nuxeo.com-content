@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - schema-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950302'
@@ -21,17 +22,17 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/rxM5AQ'
     source_link: /display/NXDOC/Schema+Fields
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-12 08:34'
         message: pdate related page
         version: '3'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-11-04 14:55'
         message: ''
         version: '2'
-    -
+    - 
         author: Florent Guillaume
         date: '2014-11-04 14:53'
         message: ''

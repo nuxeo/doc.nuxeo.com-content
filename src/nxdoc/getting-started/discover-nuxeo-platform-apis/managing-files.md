@@ -1,12 +1,13 @@
 ---
 title: Managing Files
 review:
-    comment: 'Allow download policy for Administrators'
+    comment: Allow download policy for Administrators
     date: '2017-02-21'
     status: ok
 toc: true
 labels:
     - lts2016-ok
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '29460589'
     ajs-parent-page-title: Getting Started with the Nuxeo Platform
@@ -20,133 +21,134 @@ confluence:
     source_link: /display/NXDOC/Managing+Files
 tree_item_index: 500
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-10-05 11:53'
         message: ''
         version: '25'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-21 12:39'
         message: ''
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-21 10:09'
         message: ''
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-21 10:05'
         message: ''
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-20 15:27'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-20 15:09'
         message: Fix contract to attach files to
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-20 13:07'
         message: remove uploadedFiles.forEach section
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-20 07:40'
         message: ''
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-19 15:43'
         message: ''
         version: '17'
-    -
+    - 
         author: Arnaud Kervern
         date: '2016-09-07 09:15'
         message: ''
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-02 15:50'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-17 09:03'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-17 09:03'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-12 15:28'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-12 15:27'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-12 15:24'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-12 14:25'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-12 14:24'
         message: ''
         version: '8'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2016-08-10 07:55'
         message: ''
         version: '7'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2016-08-02 14:46'
         message: add attachment
         version: '6'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2016-08-02 12:51'
         message: ''
         version: '5'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2016-08-01 17:15'
         message: ''
         version: '4'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2016-08-01 09:59'
         message: ''
         version: '3'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2016-07-19 17:11'
         message: ''
         version: '2'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2016-07-19 12:41'
         message: ''
         version: '1'
 previous_link: /nxdoc/handling-permissions
 next_link: /nxdoc/retrieving-audit-log
+
 ---
 {{! excerpt}}
 

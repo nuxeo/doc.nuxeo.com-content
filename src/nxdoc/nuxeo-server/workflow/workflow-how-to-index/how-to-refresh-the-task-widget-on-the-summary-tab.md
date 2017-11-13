@@ -17,53 +17,51 @@ labels:
     - workflow
     - workflow-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235619'
     ajs-parent-page-title: Workflow How-To Index
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Refresh+the+Task+Widget+on+the+Summary+Tab
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Refresh+the+Task+Widget+on+the+Summary+Tab
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Refresh+the+Task+Widget+on+the+Summary+Tab'
     page_id: '12915679'
     shortlink: 3xPF
     shortlink_source: 'https://doc.nuxeo.com/x/3xPF'
     source_link: /display/NXDOC/How+to+Refresh+the+Task+Widget+on+the+Summary+Tab
 tree_item_index: 500
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-24 09:11'
-        message: >-
-            eplace operation User Interface >Refresh with User Interface > Raise
-            Seam event
+        message: 'eplace operation User Interface >Refresh with User Interface > Raise Seam event'
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 21:49'
         message: ''
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-09 18:08'
         message: ''
         version: '5'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-09 18:01'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-17 22:32'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-04-22 11:45'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-04-22 11:42'
         message: ''

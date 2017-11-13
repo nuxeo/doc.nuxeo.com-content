@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Leans how to customize the document validation error messages and
-            how to add new references validation on document types.
+        excerpt: Leans how to customize the document validation error messages and how to add new references validation on document types.
         level: Advanced
         tool: Code Editor
         topics: 'Document Type, Validation'
@@ -16,6 +14,7 @@ labels:
     - lts2016-ok
     - howto
     - schema-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950287'
@@ -30,52 +29,52 @@ confluence:
     source_link: /display/NXDOC/How+to+Customize+Document+Validation
 tree_item_index: 1500
 history:
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-10-29 20:23'
         message: ''
         version: '10'
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-10-29 20:23'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-20 08:07'
         message: Fix field name formatting and typos
         version: '8'
-    -
+    - 
         author: Nicolas Chapurlat
         date: '2015-10-19 09:23'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-12 17:07'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-12 11:11'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-12 11:10'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-12 11:10'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-12 11:06'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-12 11:04'
         message: ''

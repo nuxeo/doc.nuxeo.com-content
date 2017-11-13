@@ -10,6 +10,7 @@ labels:
     - rest-api
     - endpoint
     - oauth2
+    - content-review-lts2017
 toc: true
 tree_item_index: 500
 

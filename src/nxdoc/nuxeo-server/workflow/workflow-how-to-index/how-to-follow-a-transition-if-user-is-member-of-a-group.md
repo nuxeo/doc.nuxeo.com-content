@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to follow a transition if the user is member of a
-            particular group.
+        excerpt: Learn how to follow a transition if the user is member of a particular group.
         level: Advanced
         tool: Studio
         topics: 'Workflow, Transition'
@@ -20,56 +18,56 @@ labels:
     - studio
     - workflow-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235619'
     ajs-parent-page-title: Workflow How-To Index
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Follow+a+Transition+If+User+Is+Member+of+a+Group
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Follow+a+Transition+If+User+Is+Member+of+a+Group
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Follow+a+Transition+If+User+Is+Member+of+a+Group'
     page_id: '14257859'
     shortlink: w47Z
     shortlink_source: 'https://doc.nuxeo.com/x/w47Z'
     source_link: /display/NXDOC/How+to+Follow+a+Transition+If+User+Is+Member+of+a+Group
 tree_item_index: 800
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 21:51'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-10 10:44'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-10 10:44'
         message: ''
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-09 18:16'
         message: ''
         version: '5'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-09 18:14'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-26 16:03'
         message: ''
         version: '3'
-    -
+    - 
         author: Frédéric Vadon
         date: '2013-08-12 10:42'
         message: ''
         version: '2'
-    -
+    - 
         author: Frédéric Vadon
         date: '2013-08-12 10:41'
         message: ''

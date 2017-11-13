@@ -9,6 +9,7 @@ labels:
     - workflow
     - escalation
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '19235786'
@@ -23,117 +24,117 @@ confluence:
     source_link: /display/NXDOC/Workflow+Escalation+Rules+Example
 tree_item_index: 300
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-08 15:26'
         message: emove mentions of 5.7.
         version: '23'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-12-10 16:44'
         message: ''
         version: '22'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-09-18 23:31'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-11 12:28'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-26 16:25'
         message: ''
         version: '19'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-16 10:24'
         message: Simplified example to avoid using the cancel workflow operation
         version: '18'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-14 10:17'
         message: Added smtp server pre requisite
         version: '17'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-13 11:53'
         message: ''
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-08 16:27'
         message: Added required section
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-08 16:11'
         message: typos
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-08 16:08'
         message: Fixed typos and formated steps
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-08 14:52'
         message: ''
         version: '12'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-08 13:43'
         message: 'Added how to achieve, fixed typos'
         version: '11'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 18:19'
         message: Added pre requisites
         version: '10'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 15:39'
         message: Fixed typo
         version: '9'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 15:28'
         message: ''
         version: '8'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 15:25'
         message: ''
         version: '7'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 15:22'
         message: Removed restrictions
         version: '6'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 15:11'
         message: ''
         version: '5'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-07 12:32'
         message: ''
         version: '4'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-06 18:31'
         message: Fixed typos
         version: '3'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-06 18:28'
         message: ''
         version: '2'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2013-08-06 18:28'
         message: ''

@@ -11,6 +11,7 @@ labels:
     - workflow
     - workflow-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '12913723'
@@ -25,67 +26,67 @@ confluence:
     source_link: /display/NXDOC/Workflow+Node+Properties
 tree_item_index: 500
 history:
-    -
+    - 
         author: Alain Escaffre
         date: '2015-09-29 14:46'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-31 13:58'
         message: ''
         version: '12'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-10-31 14:06'
         message: ''
         version: '11'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-10-31 13:52'
         message: ''
         version: '10'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-10-31 11:30'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-31 09:38'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-31 09:37'
         message: Fixed link
         version: '7'
-    -
+    - 
         author: Mariana Cedica
         date: '2013-10-30 19:19'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-21 11:23'
         message: Formatting
         version: '5'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-10-19 12:37'
         message: ''
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-10-19 12:31'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-10-19 12:29'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-10-19 12:24'
         message: ''

@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - acl
     - security-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -22,51 +23,51 @@ confluence:
     source_link: /display/NXDOC/Read+ACLs
 tree_item_index: 1800
 version_override:
-    'LTS 2015': 710/admindoc/read-acls
+    LTS 2015: 710/admindoc/read-acls
     '6.0': 60/admindoc/read-acls
     '5.8': 58/admindoc/read-acls
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-27 08:12'
         message: ix typ
         version: '9'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-29 10:03'
         message: 'Fix link '
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2016-01-08 09:37'
         message: ''
         version: '7'
-    -
+    - 
         author: Benoit Delbosc
         date: '2016-01-06 14:13'
         message: add a note on how to rebuild the read acls
         version: '6'
-    -
+    - 
         author: Benoit Delbosc
         date: '2015-05-06 08:55'
         message: Add note about vacuum procedure and Elasticsearch alternative
         version: '5'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-12-10 15:58'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-25 10:44'
         message: ''
         version: '3'
-    -
+    - 
         author: Thierry Martins
         date: '2013-11-22 16:56'
         message: ''
         version: '2'
-    -
+    - 
         author: Thierry Martins
         date: '2013-11-22 16:49'
         message: ''

@@ -9,6 +9,7 @@ labels:
     - nuxeo-spreadsheet
     - spreadsheet-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -23,87 +24,87 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Spreadsheet
 tree_item_index: 2700
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-09 09:29'
         message: ''
         version: '17'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-09-29 14:18'
         message: ''
         version: '16'
-    -
+    - 
         author: Nelson Silva
         date: '2014-12-16 10:35'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-16 10:33'
         message: format
         version: '14'
-    -
+    - 
         author: Nelson Silva
         date: '2014-12-15 12:13'
         message: Add vocabulary enrichers info
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-28 00:24'
         message: ''
         version: '12'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-10 11:00'
         message: ''
         version: '11'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-07 10:27'
         message: ''
         version: '10'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-07 10:04'
         message: ''
         version: '9'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-06 22:06'
         message: ''
         version: '8'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-11-06 18:57'
         message: ''
         version: '7'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-06 15:35'
         message: ''
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-06 10:27'
         message: ''
         version: '5'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-06 10:26'
         message: ''
         version: '4'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-06 10:25'
         message: ''
         version: '3'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-06 10:24'
         message: ''
         version: '2'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-11-06 10:23'
         message: ''

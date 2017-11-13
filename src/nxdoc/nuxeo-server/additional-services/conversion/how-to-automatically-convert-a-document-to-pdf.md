@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to convert automatically a document into PDF using Nuxeo
-            Studio.
+        excerpt: Learn how to convert automatically a document into PDF using Nuxeo Studio.
         level: Intermediate
         tool: Studio
         topics: 'Document type, Automation, Conversion'
@@ -18,136 +16,136 @@ labels:
     - conversion
     - excerpt
     - multiexcerpt-include
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235645'
     ajs-parent-page-title: Conversion
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Automatically+Convert+a+Document+to+PDF
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Automatically+Convert+a+Document+to+PDF
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Automatically+Convert+a+Document+to+PDF'
     page_id: '8683647'
     shortlink: f4CE
     shortlink_source: 'https://doc.nuxeo.com/x/f4CE'
     source_link: /display/NXDOC/How+to+Automatically+Convert+a+Document+to+PDF
 tree_item_index: 100
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2015-11-03 10:30'
         message: ''
         version: '24'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-11-03 10:28'
         message: ''
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-05 15:38'
         message: ''
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-01 22:05'
         message: ''
         version: '21'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-18 12:22'
         message: ''
         version: '20'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-16 10:23'
         message: ''
         version: '19'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-16 10:23'
         message: ''
         version: '18'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-15 17:50'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-02 16:51'
         message: ''
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2014-07-09 15:29'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2014-06-12 15:21'
         message: ''
         version: '14'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-03-31 22:00'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2013-07-17 18:38'
         message: Added excerpt
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-05 10:41'
         message: Migrated to Confluence 4.0
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-05 10:41'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2011-09-06 15:55'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2011-09-02 17:05'
         message: added related howtos
         version: '8'
-    -
+    - 
         author: Alain Escaffre
         date: '2011-08-30 19:30'
         message: ''
         version: '7'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-30 16:01'
         message: ''
         version: '6'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-30 15:58'
         message: ''
         version: '5'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-30 15:58'
         message: ''
         version: '4'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-30 15:57'
         message: ''
         version: '3'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-30 15:57'
         message: ''
         version: '2'
-    -
+    - 
         author: Frédéric Vadon
         date: '2011-08-30 15:57'
         message: ''

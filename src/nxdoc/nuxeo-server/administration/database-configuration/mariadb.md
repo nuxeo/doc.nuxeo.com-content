@@ -9,6 +9,7 @@ labels:
     - database
     - mariadb
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 tree_item_index: 500
 

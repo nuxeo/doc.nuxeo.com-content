@@ -11,6 +11,7 @@ labels:
     - scheduler
     - core-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950283'
@@ -25,87 +26,87 @@ confluence:
     source_link: /display/NXDOC/Scheduling+Periodic+Events
 tree_item_index: 200
 history:
-    -
+    - 
         author: Vladimir Pasquier
         date: '2015-09-22 03:24'
         message: dding warning info related to Automation usage for Schedule
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-31 14:04'
         message: Update table of contents look
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2014-08-25 10:28'
         message: Remove 5.4 reference
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 16:50'
         message: Added link to the explorer
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 16:50'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-26 14:44'
         message: ''
         version: '12'
-    -
+    - 
         author: Julien Carsique
         date: '2013-08-09 12:47'
         message: ''
         version: '11'
-    -
+    - 
         author: Julien Carsique
         date: '2013-08-08 16:39'
         message: ''
         version: '10'
-    -
+    - 
         author: Florent Guillaume
         date: '2013-08-08 15:20'
         message: ''
         version: '9'
-    -
+    - 
         author: Thibaud Arguillere
         date: '2013-08-08 03:31'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2013-02-25 11:00'
         message: Added TOC and a note about component name change
         version: '7'
-    -
+    - 
         author: Damien Metzler
         date: '2013-02-24 11:02'
         message: ''
         version: '6'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-04-29 12:53'
         message: Migrated to Confluence 4.0
         version: '5'
-    -
+    - 
         author: Florent Guillaume
         date: '2011-04-29 12:53'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-04 09:52'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2011-03-04 09:51'
         message: ''
         version: '2'
-    -
+    - 
         author: Florent Guillaume
         date: '2010-12-24 15:44'
         message: ''

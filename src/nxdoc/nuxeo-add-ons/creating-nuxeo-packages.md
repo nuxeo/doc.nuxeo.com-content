@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - marketplace
     - packaging-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -22,274 +23,272 @@ confluence:
     source_link: /display/NXDOC/Creating+Nuxeo+Packages
 tree_item_index: 200
 history:
-    -
+    - 
         author: Arnaud Kervern
         date: '2016-08-16 09:45'
         message: ''
         version: '54'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-09 13:54'
         message: ''
         version: '53'
-    -
+    - 
         author: Alain Escaffre
         date: '2016-03-23 15:53'
         message: ''
         version: '52'
-    -
+    - 
         author: Julien Carsique
         date: '2016-01-15 10:26'
         message: ''
         version: '51'
-    -
+    - 
         author: Ronan Daniellou
         date: '2016-01-15 10:13'
-        message: Typo 'you package' -> your
+        message: "Typo 'you package' -> your"
         version: '50'
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-30 08:58'
         message: ''
         version: '49'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-10-14 12:36'
         message: ''
         version: '48'
-    -
+    - 
         author: Julien Carsique
         date: '2015-10-13 17:02'
         message: ''
         version: '47'
-    -
+    - 
         author: Julien Carsique
         date: '2015-10-13 16:57'
         message: ''
         version: '46'
-    -
+    - 
         author: Julien Carsique
         date: '2015-10-13 14:25'
         message: ''
         version: '45'
-    -
+    - 
         author: Julien Carsique
         date: '2015-09-28 14:26'
         message: ''
         version: '44'
-    -
+    - 
         author: Julien Carsique
         date: '2015-09-28 14:25'
         message: ''
         version: '43'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-30 14:07'
         message: ''
         version: '42'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2014-11-14 14:59'
         message: ''
         version: '41'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2014-11-14 14:59'
         message: ''
         version: '40'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2014-11-14 14:58'
         message: ''
         version: '39'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2014-11-14 14:56'
         message: ''
         version: '38'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2014-11-14 14:55'
         message: Added link to NX IDE wizard page
         version: '37'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-23 11:13'
         message: ''
         version: '36'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-15 10:48'
         message: ''
         version: '35'
-    -
+    - 
         author: Julien Carsique
         date: '2014-09-12 15:26'
         message: 'NXDOC-122: use configuration template instead of form'
         version: '34'
-    -
+    - 
         author: Julien Carsique
         date: '2014-09-12 15:21'
         message: 'NXDOC-380: JIRA macro is broken'
         version: '33'
-    -
+    - 
         author: Julien Carsique
         date: '2014-09-12 15:14'
         message: ''
         version: '32'
-    -
+    - 
         author: Julien Carsique
         date: '2014-09-12 15:13'
         message: 'NXDOC-122: ParametrizedCopy'
         version: '31'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-20 15:12'
         message: Added TOC
         version: '30'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-17 00:05'
         message: ''
         version: '29'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-17 00:05'
         message: ''
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-14 15:28'
         message: Migrated to Confluence 4.0
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2011-11-14 15:28'
         message: replaced 5.4.3 with 5.5
         version: '26'
-    -
+    - 
         author: Julien Carsique
         date: '2011-08-16 19:02'
-        message: >-
-            NXP-6139 - add the templates folder as an env variable to the Update
-            Center installer framework
+        message: NXP-6139 - add the templates folder as an env variable to the Update Center installer framework
         version: '25'
-    -
+    - 
         author: whajeri
         date: '2010-11-15 11:18'
         message: ''
         version: '24'
-    -
+    - 
         author: whajeri
         date: '2010-11-15 11:17'
         message: ''
         version: '23'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-10-06 08:26'
         message: ''
         version: '22'
-    -
+    - 
         author: Stéfane Fermigier
         date: '2010-10-06 08:24'
         message: ''
         version: '21'
-    -
+    - 
         author: Eric Barroca
         date: '2010-08-16 17:20'
         message: ''
         version: '20'
-    -
+    - 
         author: Jane Zupan
         date: '2010-08-12 00:42'
         message: ''
         version: '19'
-    -
+    - 
         author: Alain Escaffre
         date: '2010-08-10 02:53'
         message: ''
         version: '18'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 17:18'
         message: ''
         version: '17'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 16:35'
         message: ''
         version: '16'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 16:30'
         message: ''
         version: '15'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 16:25'
         message: ''
         version: '14'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 15:45'
         message: ''
         version: '13'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 14:49'
         message: ''
         version: '12'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 12:41'
         message: ''
         version: '11'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 12:32'
         message: ''
         version: '10'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 12:19'
         message: ''
         version: '9'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 11:58'
         message: ''
         version: '8'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 11:57'
         message: ''
         version: '7'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 11:51'
         message: ''
         version: '6'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 11:38'
         message: ''
         version: '5'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 11:24'
         message: ''
         version: '4'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 11:19'
         message: ''
         version: '3'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 10:55'
         message: ''
         version: '2'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-07-07 10:39'
         message: ''

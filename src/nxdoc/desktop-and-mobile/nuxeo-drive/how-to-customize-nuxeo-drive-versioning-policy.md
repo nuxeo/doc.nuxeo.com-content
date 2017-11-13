@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            This how-to explains how to change Nuxeo Drive's default versioning
-            policy.
+        excerpt: "This how-to explains how to change Nuxeo Drive's default versioning policy."
         level: Intermediate
         tool: XML Extention
         topics: 'Nuxeo Drive, Versioning'
@@ -20,6 +18,7 @@ labels:
     - nuxeo-drive-component
     - multiexcerpt-include
     - multiexcerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '14257229'
@@ -27,50 +26,49 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Customize+Nuxeo+Drive+Versioning+Policy
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Customize+Nuxeo+Drive+Versioning+Policy
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Customize+Nuxeo+Drive+Versioning+Policy'
     page_id: '23365773'
     shortlink: jYhkAQ
     shortlink_source: 'https://doc.nuxeo.com/x/jYhkAQ'
     source_link: /display/NXDOC/How+to+Customize+Nuxeo+Drive+Versioning+Policy
 tree_item_index: 400
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-08 15:19'
         message: ''
         version: '8'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-04-21 09:58'
         message: 'javadoc links updated  '
         version: '7'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-21 15:30'
         message: ''
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-06-09 08:53'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-14 09:57'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-09 08:43'
         message: fix link
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-09 08:42'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-06 16:32'
         message: ''

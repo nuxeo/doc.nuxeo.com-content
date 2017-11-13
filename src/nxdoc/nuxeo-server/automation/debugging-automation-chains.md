@@ -10,6 +10,7 @@ labels:
     - trace
     - automation-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '18451738'
     ajs-parent-page-title: Automation
@@ -23,47 +24,47 @@ confluence:
     source_link: /display/NXDOC/Debugging+Automation+Chains
 tree_item_index: 900
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-07 09:19'
         message: ix typ
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-26 15:16'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-26 14:45'
         message: 'Fixed typos and links, reorganized steps'
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2013-11-26 10:37'
         message: ''
         version: '6'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-11-26 00:39'
         message: ''
         version: '5'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-11-26 00:29'
         message: ''
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-11-26 00:15'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-11-26 00:07'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-11-25 23:56'
         message: ''

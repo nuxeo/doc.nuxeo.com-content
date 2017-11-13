@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to customize the relations predicates and add new types of
-            relations.
+        excerpt: Learn how to customize the relations predicates and add new types of relations.
         level: Beginner
         tool: Nuxeo Platform
         topics: Vocabulary
@@ -17,6 +15,7 @@ labels:
     - relation
     - vocabulary
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '2392405'
     ajs-parent-page-title: Managing Vocabularies
@@ -29,27 +28,27 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/lhk5AQ'
     source_link: /display/USERDOC/How+to+Add+New+Relation+Types
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-31 12:41'
         message: 'ser doc reorganization: fix link to relation'
         version: '5'
-    -
+    - 
         author: Thierry Martins
         date: '2014-11-24 19:14'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-24 19:05'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-24 18:57'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2014-11-24 18:57'
         message: ''

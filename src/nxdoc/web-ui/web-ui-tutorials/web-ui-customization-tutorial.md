@@ -17,6 +17,7 @@ labels:
     - nuxeo-web-ui
     - customization
     - polymer
+    - content-review-lts2017
 tree_item_index: 300
 
 ---

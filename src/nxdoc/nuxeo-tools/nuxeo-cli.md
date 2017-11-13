@@ -1,12 +1,14 @@
 ---
 title: Nuxeo CLI
-description: Nuxeo CLI aims at making the whole development process easier with bootstraps, sample projects and hot reload of your developments.
+description: 'Nuxeo CLI aims at making the whole development process easier with bootstraps, sample projects and hot reload of your developments.'
 tree_item_index: 100
 toc: true
 review:
     date: '2017-03-15'
     status: ok
     comment: ''
+labels:
+    - content-review-lts2017
 
 ---
 {{#> callout type='tip'}}

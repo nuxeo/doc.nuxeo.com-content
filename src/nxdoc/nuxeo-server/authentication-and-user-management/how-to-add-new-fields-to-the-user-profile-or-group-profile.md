@@ -6,12 +6,14 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            This page provides a turnkey solution to add new fields to the user profile or group.
+        excerpt: This page provides a turnkey solution to add new fields to the user profile or group.
         level: Intermediate
         tool: XML configuration
         topics: 'LDAP, Multidirectory'
 tree_item_index: 400
+labels:
+    - content-review-lts2017
+
 ---
 
 Users and groups profile are defined by schemas. The default user schema is:

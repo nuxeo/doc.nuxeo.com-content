@@ -1,6 +1,6 @@
 ---
 title: Document Types in Web UI
-description: The Nuxeo Platform offers different document types such as workspaces, files, notes, pictures, etc.
+description: 'The Nuxeo Platform offers different document types such as workspaces, files, notes, pictures, etc.'
 review:
     comment: ''
     date: '2017-01-04'
@@ -8,7 +8,9 @@ review:
 toc: true
 labels:
     - history
+    - content-review-lts2017
 tree_item_index: 100
+
 ---
 ## Domain
 

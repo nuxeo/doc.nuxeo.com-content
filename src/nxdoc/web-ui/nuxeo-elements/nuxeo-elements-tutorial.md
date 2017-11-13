@@ -12,6 +12,7 @@ labels:
     - nuxeo-ui-elements
     - polymer
     - polymer-starter-kit
+    - content-review-lts2017
 tree_item_index: 200
 
 ---

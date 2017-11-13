@@ -10,101 +10,101 @@ labels:
     - layout-widgets-component
     - limitations
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '3868345'
     ajs-parent-page-title: Standard Widget Types
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Default+Widget+Types+Known+Limitations
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Default+Widget+Types+Known+Limitations
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Default+Widget+Types+Known+Limitations'
     page_id: '12915525'
     shortlink: RRPF
     shortlink_source: 'https://doc.nuxeo.com/x/RRPF'
     source_link: /display/NXDOC/Default+Widget+Types+Known+Limitations
 tree_item_index: 100
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-31 09:50'
         message: ''
         version: '17'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-03-18 09:29'
         message: 'NXP-3427: remove limitation on file upload inside lists'
         version: '16'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-08 16:52'
         message: 'NXDOC-286: remove limitations not valid on 7.1 + wording'
         version: '15'
-    -
+    - 
         author: Guillaume Renard
         date: '2014-11-14 17:28'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-17 10:42'
         message: Fixed broken link
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-10 10:10'
         message: ''
         version: '12'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-03-07 12:09'
         message: 'NXDOC-300: Explain how sub files can be managed in widget templates'
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-08 17:31'
         message: Formatting
         version: '10'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-06 14:26'
         message: mention file widget limitation inside lists
         version: '9'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-04 17:56'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 16:20'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 16:19'
         message: Added related topics
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 16:19'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2013-04-19 14:49'
         message: ''
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-04-18 11:27'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-04-18 11:27'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-04-18 11:24'
         message: ''

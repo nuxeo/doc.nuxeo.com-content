@@ -9,6 +9,7 @@ labels:
     - layout
     - web-ui-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '6029663'
     ajs-parent-page-title: Documents Display Configuration
@@ -22,62 +23,62 @@ confluence:
     source_link: /display/NXDOC/Document+Layouts
 tree_item_index: 200
 history:
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-12-09 13:39'
         message: 'XDOC-427: document fallback on document layout mode ta'
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2014-08-25 12:00'
         message: Remove 5.4 references
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-13 17:39'
         message: formatting
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-13 17:38'
         message: Removed mentions to 5.4.2 and older versions
         version: '9'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-12 17:55'
         message: better sample conf
         version: '8'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-12 17:47'
         message: add anchor for display
         version: '7'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-12 17:43'
         message: update + add document layout tags
         version: '6'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-03 16:24'
         message: better title
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-04 16:05'
         message: ''
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-03-01 15:55'
         message: Migrated to Confluence 4.0
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2011-03-01 15:55'
         message: ''
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2010-10-12 15:08'
         message: ''

@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to declare and add the CSS and JavaScript ressources in
-            your templates.
+        excerpt: Learn how to declare and add the CSS and JavaScript ressources in your templates.
         level: Advanced
         tool: Code editor
         topics: Theme
@@ -22,97 +20,96 @@ labels:
     - link-update
     - themes-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235625'
     ajs-parent-page-title: Theme How-To Index
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Declare+the+CSS+and+JavaScript+Resources+Used+in+Your+Templates
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Declare+the+CSS+and+JavaScript+Resources+Used+in+Your+Templates
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Declare+the+CSS+and+JavaScript+Resources+Used+in+Your+Templates'
     page_id: '4689203'
     shortlink: M41H
     shortlink_source: 'https://doc.nuxeo.com/x/M41H'
-    source_link: >-
-        /display/NXDOC/How+to+Declare+the+CSS+and+JavaScript+Resources+Used+in+Your+Templates
+    source_link: /display/NXDOC/How+to+Declare+the+CSS+and+JavaScript+Resources+Used+in+Your+Templates
 tree_item_index: 300
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-02-09 15:14'
         message: ''
         version: '16'
-    -
+    - 
         author: Lise Kemen
         date: '2015-10-13 13:51'
         message: ''
         version: '15'
-    -
+    - 
         author: Lise Kemen
         date: '2015-10-13 13:48'
         message: ''
         version: '14'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-08-05 09:46'
         message: 'NXDOC-577: add ref to the nxr tag lib doc'
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-04 08:29'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-04 08:29'
         message: Formatting
         version: '11'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-08-03 13:10'
         message: 'NXDOC-577: cleanup'
         version: '10'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2015-08-03 13:09'
         message: 'NXDOC-577: update theme doc'
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-10-03 15:13'
         message: ''
         version: '8'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-17 12:17'
         message: ''
         version: '7'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-16 17:29'
         message: ''
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-09-16 16:37'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-06 17:18'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-06 15:21'
         message: ''
         version: '3'
-    -
+    - 
         author: Jean-Marc Orliaguet
         date: '2011-01-07 21:29'
         message: ''
         version: '2'
-    -
+    - 
         author: Jean-Marc Orliaguet
         date: '2011-01-07 21:29'
         message: ''

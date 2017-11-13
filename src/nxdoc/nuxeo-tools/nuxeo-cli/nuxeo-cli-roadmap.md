@@ -1,5 +1,5 @@
 ---
-title: "Nuxeo CLI Roadmap"
+title: Nuxeo CLI Roadmap
 description: See what evolutions and improvements are planned for Nuxeo CLI
 tree_item_index: 400
 toc: false
@@ -7,10 +7,12 @@ review:
     comment: ''
     date: '2017-06-16'
     status: ok
-details:
+details: null
 labels:
     - nuxeo-cli
     - roadmap
+    - content-review-lts2017
+
 ---
 
 Below are the evolutions and improvements planned for Nuxeo CLI.

@@ -6,8 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to use all operations that offers PDF tools operations from Nuxeo Studio: Watermarks, page numbers, document merging...
+        excerpt: 'Learn how to use all operations that offers PDF tools operations from Nuxeo Studio: Watermarks, page numbers, document merging...'
         level: Intermediate
         tool: Studio
         topics: 'Document type, Automation, Conversion'
@@ -16,8 +15,10 @@ labels:
     - howto
     - conversion
     - pdf
+    - content-review-lts2017
 toc: true
 tree_item_index: 150
+
 ---
 
 {{! excerpt}}

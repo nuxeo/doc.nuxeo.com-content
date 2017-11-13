@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - delete
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950318'
@@ -21,36 +22,36 @@ confluence:
     source_link: /display/NXDOC/Garbage-Collecting+Orphaned+Binaries
 tree_item_index: 1000
 version_override:
-    'LTS 2015': 710/admindoc/garbage-collecting-orphaned-binaries
+    LTS 2015: 710/admindoc/garbage-collecting-orphaned-binaries
     '6.0': 60/admindoc/garbage-collecting-orphaned-binaries
     '5.8': 58/admindoc/garbage-collecting-orphaned-binaries
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-09 14:00'
         message: ''
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-29 09:47'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2015-12-08 14:24'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-31 15:02'
         message: Fix broken anchors
         version: '3'
-    -
+    - 
         author: Julien Carsique
         date: '2015-02-16 13:33'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2015-01-23 13:58'
         message: ''

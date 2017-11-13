@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - rest-api
     - endpoint
+    - content-review-lts2017
 toc: true
 tree_item_index: 100
 

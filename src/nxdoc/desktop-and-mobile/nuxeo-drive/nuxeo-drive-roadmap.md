@@ -1,15 +1,17 @@
 ---
-title: "Nuxeo Drive Roadmap"
+title: Nuxeo Drive Roadmap
 description: See what evolutions and improvements are planned on Nuxeo Drive
 review:
     comment: ''
     date: '2017-06-16'
     status: ok
-details:
+details: null
 labels:
     - drive-roadmap
     - roadmap
+    - content-review-lts2017
 toc: true
+
 ---
 
 Below is the list of evolutions and improvements planned for Nuxeo Drive.

@@ -6,7 +6,10 @@ review:
     status: ok
 toc: true
 tree_item_index: 600
-description:
+description: null
+labels:
+    - content-review-lts2017
+
 ---
 
 The personal workspace menu gives you a direct access to your collections and personal documents. Personal spaces can only be accessed by their owner, by default. You can of course share the access to your personal space with other users.

@@ -9,6 +9,7 @@ labels:
     - shell
     - shell-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '4687725'
     ajs-parent-page-title: Extending The Shell
@@ -22,52 +23,52 @@ confluence:
     source_link: /display/NXDOC/Shell+Documentation
 tree_item_index: 400
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-31 14:40'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2013-09-05 16:37'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-13 22:18'
         message: Migrated to Confluence 4.0
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2012-09-13 22:18'
         message: 'Updated broken links '
         version: '7'
-    -
+    - 
         author: Florent Guillaume
         date: '2012-08-13 12:44'
         message: Added related pages
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-15 16:44'
         message: Added related pages
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2012-05-14 17:59'
         message: Fixed broken links to the Shell Admin Doc
         version: '4'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 18:55'
         message: ''
         version: '3'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 16:24'
         message: ''
         version: '2'
-    -
+    - 
         author: Bogdan Stefanescu
         date: '2010-11-24 15:45'
         message: ''

@@ -1,5 +1,5 @@
 ---
-title: "HOWTO: Develop with React Redux"
+title: 'HOWTO: Develop with React Redux'
 review:
     comment: ''
     date: '2017-04-20'
@@ -13,7 +13,9 @@ details:
 labels:
     - howto
     - rest-api
+    - content-review-lts2017
 toc: true
+
 ---
 [React](https://facebook.github.io/react/) by Facebook is view library that popularized the virtual DOM model for building UIs. It promotes HTML and CSS to be written in JavaScript giving developers full control of the presentation layer that is often difficult using the native DOM API. Paired with [Redux](http://redux.js.org/), "a predictable state container for JavaScript apps", views can built declaratively.
 

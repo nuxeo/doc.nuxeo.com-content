@@ -12,6 +12,7 @@ labels:
     - sample
     - assembly
     - nxr
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3342859'
@@ -25,57 +26,57 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/F4eo'
     source_link: /display/NXDOC/Packaging+examples
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-11-30 09:20'
         message: 'XDOC-658: Marketplace packages are now called Nuxeo Package'
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2015-10-15 12:09'
         message: Add TOC
         version: '10'
-    -
+    - 
         author: Julien Carsique
         date: '2015-10-13 14:15'
         message: ''
         version: '9'
-    -
+    - 
         author: Julien Carsique
         date: '2015-10-13 13:59'
         message: ''
         version: '8'
-    -
+    - 
         author: Julien Carsique
         date: '2015-04-08 14:50'
         message: ''
         version: '7'
-    -
+    - 
         author: Julien Carsique
         date: '2013-02-08 14:40'
         message: ''
         version: '6'
-    -
+    - 
         author: Julien Carsique
         date: '2012-09-10 19:50'
         message: Migrated to Confluence 4.0
         version: '5'
-    -
+    - 
         author: Julien Carsique
         date: '2012-09-10 19:50'
         message: ''
         version: '4'
-    -
+    - 
         author: Julien Carsique
         date: '2012-09-10 19:01'
         message: ''
         version: '3'
-    -
+    - 
         author: Julien Carsique
         date: '2012-09-10 19:00'
         message: ''
         version: '2'
-    -
+    - 
         author: Julien Carsique
         date: '2012-09-10 18:14'
         message: ''

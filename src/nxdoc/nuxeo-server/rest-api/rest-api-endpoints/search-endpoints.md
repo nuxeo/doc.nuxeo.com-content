@@ -6,10 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            This how-to provides some examples of how to use the REST API to
-            query the Nuxeo repository, as well as to save these queries and
-            later reproduce them.
+        excerpt: 'This how-to provides some examples of how to use the REST API to query the Nuxeo repository, as well as to save these queries and later reproduce them.'
         level: Advanced
         tool: Code
         topics: 'Query, REST API'
@@ -23,6 +20,7 @@ labels:
     - query-pageprovider-component
     - university
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'
@@ -37,122 +35,122 @@ confluence:
     source_link: /display/NXDOC/Search+Endpoint
 tree_item_index: 200
 history:
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-29 13:26'
         message: ''
         version: '24'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-29 13:25'
         message: ''
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-29 13:14'
         message: ''
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-29 12:53'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-29 12:52'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-29 09:44'
         message: 'Fix formatting in endpoint, parameters and properties tables'
         version: '19'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 15:06'
         message: ''
         version: '18'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 15:05'
         message: ''
         version: '17'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 14:57'
         message: ''
         version: '16'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 14:36'
         message: ''
         version: '15'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 14:22'
         message: ''
         version: '14'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 14:18'
         message: ''
         version: '13'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 14:17'
         message: ''
         version: '12'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 14:13'
         message: ''
         version: '11'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 14:00'
         message: ''
         version: '10'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 13:35'
         message: ''
         version: '9'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 12:03'
         message: ''
         version: '8'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 11:44'
         message: ''
         version: '7'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 11:38'
         message: ''
         version: '6'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 11:38'
         message: ''
         version: '5'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 11:37'
         message: ''
         version: '4'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 11:35'
         message: ''
         version: '3'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 11:28'
         message: ''
         version: '2'
-    -
+    - 
         author: Gabriel Barata
         date: '2016-08-26 11:19'
         message: ''

@@ -9,6 +9,7 @@ labels:
     - endpoint
     - rest-api
     - rest-api-component
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API
@@ -22,37 +23,37 @@ confluence:
     source_link: /display/NXDOC/Contributing+a+New+Endpoint
 tree_item_index: 700
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-30 13:20'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2013-10-30 13:19'
         message: ''
         version: '6'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-10-29 01:40'
         message: ''
         version: '5'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-10-29 01:38'
         message: ''
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-10-29 01:38'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-10-29 01:38'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2013-09-25 16:57'
         message: ''

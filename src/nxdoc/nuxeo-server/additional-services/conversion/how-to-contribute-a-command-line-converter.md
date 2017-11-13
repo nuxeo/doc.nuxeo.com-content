@@ -15,6 +15,7 @@ labels:
     - howto
     - conversion
     - convert-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '19235645'
@@ -22,20 +23,19 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Contribute+a+Command+Line+Converter
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+a+Command+Line+Converter
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+a+Command+Line+Converter'
     page_id: '22905742'
     shortlink: joNdAQ
     shortlink_source: 'https://doc.nuxeo.com/x/joNdAQ'
     source_link: /display/NXDOC/How+to+Contribute+a+Command+Line+Converter
 tree_item_index: 200
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2014-12-16 17:51'
         message: dd related page
         version: '2'
-    -
+    - 
         author: Thomas Roger
         date: '2014-12-16 17:07'
         message: ''

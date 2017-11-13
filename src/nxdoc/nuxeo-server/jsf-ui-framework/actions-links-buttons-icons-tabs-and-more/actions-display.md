@@ -10,6 +10,7 @@ labels:
     - action
     - actions-filters-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950289'
@@ -24,67 +25,67 @@ confluence:
     source_link: /display/NXDOC/Actions+Display
 tree_item_index: 500
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-01 08:52'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2015-08-31 14:24'
         message: Update table of contents look
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2014-09-16 17:11'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-10 18:29'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2014-03-10 18:29'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-13 15:58'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-13 15:47'
         message: Put list of all action categories
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2014-01-13 10:50'
         message: 'Added related topics, fixed typos'
         version: '6'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2014-01-10 12:19'
         message: ''
         version: '5'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-20 19:36'
         message: 'update doc, add TODO for unfinished work'
         version: '4'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-16 18:58'
         message: ''
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-16 18:55'
         message: add content from parent page + wip warning
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2013-12-16 14:54'
         message: ''
