@@ -2,10 +2,10 @@
 title: Implement the News Document
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-11-09'
     status: ok
 labels:
-    - lts2016-ok
+    - lts2017-ok
     - tuto-document-type
     - tuto-user-action
 toc: true
@@ -25,7 +25,7 @@ history:
     -
         author: Manon Lumeau
         date: '2016-04-28 12:57'
-        message: 'ix Studio menu label     '
+        message: ix Studio menu label
         version: '17'
     -
         author: Solen Guitter
@@ -127,18 +127,22 @@ For this section, it is recommended to take a look at the following guides for a
 
 ## Before You Start
 
-{{multiexcerpt 'check-jsf-ui-dependency' page='/810/nxdoc/implementing-documentation-items'}}
+{{! multiexcerpt name='check-jsf-ui-dependency'}}
+
+Make sure the Nuxeo JSF UI target package is checked in your project's [Application Definition]({{page space='studio' page='application-definition'}}) to get all the needed features in Studio Modeler.
+
+{{! /multiexcerpt}}
 
 ## Create the News Document Type
 
-On Studio Modeler:
+**On Studio Modeler**
+
 1.  Create a new document type called `News`.
 
     {{#> callout type='tip' }}
-
     A document type must have a container. However if you do not want your document type to be displayed in the available document list window, you can select Document type as the container.
-
     {{/callout}}
+
 2.  On the **Definition** tab, ensure that the our News document extends the **Document** type.    
 3.  On the **Schema** tab:
     *   Add the `files` schema (necessary so that pictures that are uploaded with a HTML widget are stored).
@@ -150,13 +154,13 @@ On Studio Modeler:
 
 You can now click on the button **Configure Layouts in Designer** to switch to Studio Designer.
 
+**On Studio Designer**
+
 1. Configure the 5 layouts (Create, Edit, Import, Metadata and View).
     You can modify them by drag and dropping the field that you want from the catalog on the right.
 1. Click on **Save**.
 
-The last step is to add your labels to your translations file to display them correctly in the UI.
-
-To do so:
+The last step is to add your labels to your translations file to display them correctly in the UI:
 
 1. Click on the UI tab (second tab on the left menu).
 1. Click on Translations.
@@ -166,6 +170,8 @@ To do so:
 The `News` document type is now created. However, there is no way to access the creation form for now.
 
 ## Create the Structure Template for News Folder to Be Available Automatically
+
+**On Studio Modeler**
 
 1.  Create a new Structure Template:
     *   **ID**: Workspace

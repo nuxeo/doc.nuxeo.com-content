@@ -84,7 +84,7 @@ history:
 
 ---
 {{#> callout type='info' }}
-{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='/nxdoc/implement-the-news-document'}}}
 {{/callout}}
 
 {{! excerpt}}

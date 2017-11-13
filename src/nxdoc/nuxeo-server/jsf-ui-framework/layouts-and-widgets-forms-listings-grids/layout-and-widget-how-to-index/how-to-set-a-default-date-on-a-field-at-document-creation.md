@@ -109,7 +109,7 @@ A frequent requirement with documents is to set a default date on a field when s
 
 ## Before You Start
 
-{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='/nxdoc/implement-the-news-document'}}}
 
 ## Creating the Event Handler
 

@@ -78,7 +78,7 @@ history:
 
 ---
 {{#> callout type='info' }}
-{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='/nxdoc/implement-the-news-document'}}}
 {{/callout}}
 
 HTML5 Drag and Drop enables users to [import documents in a folder]({{page space='userdoc' page='creating-content#content-creation-dandd'}}) and fill in their metadata at the same time.

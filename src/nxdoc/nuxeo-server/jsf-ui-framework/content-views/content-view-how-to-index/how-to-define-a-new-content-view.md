@@ -368,7 +368,7 @@ A content view is the definition of a list of documents displayed in the interfa
 {{! /excerpt}}
 
 {{#> callout type='info' }}
-{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='implement-the-news-document'}}}
 {{/callout}}
 
 For example:

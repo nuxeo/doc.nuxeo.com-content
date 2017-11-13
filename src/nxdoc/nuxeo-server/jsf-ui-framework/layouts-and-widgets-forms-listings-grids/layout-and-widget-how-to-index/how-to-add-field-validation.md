@@ -150,7 +150,7 @@ Let's take the example of the validation of a phone number field in creation and
 
 ## Before You Start
 
-{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='/nxdoc/implement-the-news-document'}}}
 
 ## Nuxeo Studio: Parametrization
 

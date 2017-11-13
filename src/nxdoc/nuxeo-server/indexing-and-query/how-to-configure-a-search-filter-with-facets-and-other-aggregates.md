@@ -250,7 +250,7 @@ This how-to aims at showing you how to use the different types of aggregates ava
 ## Prerequisites
 
 **Studio Project Dependencies**<br/>
-{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='implement-the-news-document'}}}
 
 **Required Studio Elements**
 

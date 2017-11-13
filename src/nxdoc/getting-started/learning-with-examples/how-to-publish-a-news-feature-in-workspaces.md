@@ -2,12 +2,13 @@
 title: How to Publish a News Feature in Workspaces
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-11-09'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2017-ok
     - tutorial
-    - studio
+    - Designer
+    - Modeler
     - excerpt
 toc: true
 notes: >-
@@ -127,7 +128,7 @@ history:
 
 {{! excerpt}}
 
-This how-to explains how to add a small "News" feature to your Nuxeo Platform for enabling News content publishing at workspace level, using only Nuxeo Studio.
+This how-to explains how to add a small "News" feature to your Nuxeo Platform for enabling News content publishing at workspace level, using Studio Modeler and Studio Designer.
 
 {{! /excerpt}}
 
@@ -144,7 +145,7 @@ This how-to explains how to add a small "News" feature to your Nuxeo Platform fo
 
 It is composed of a title that can be edited using a HTML Widget. The HTML widget in Nuxeo applications has the ability to upload pictures for the rich content, providing the target type has the "files" schema: this one will be added to our `News` type.
 
-When they are published, `News` must be sorted by their publishing date. Considering what "publishing" means here, the publishing date is the time when it was approved. We will store that information on the default Dublin Core field `dc:valid` , which accepts a date.
+When they are published, `News` must be sorted by their publishing date. Considering what "publishing" means here, the publishing date is the time when it was approved. We will store that information on the default dublincore field `dc:valid`, which accepts a date.
 
 **News tab**
 
