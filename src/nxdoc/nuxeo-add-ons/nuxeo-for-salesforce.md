@@ -25,202 +25,202 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+for+Salesforce
 tree_item_index: 1800
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-11 15:26'
         message: ix format and lin
         version: '40'
-    - 
+    -
         author: Anne Jubert
         date: '2016-07-11 15:21'
         message: ''
         version: '39'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-29 09:41'
         message: ''
         version: '38'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-29 08:03'
         message: ''
         version: '37'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-28 19:41'
         message: ''
         version: '36'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-28 19:39'
         message: ''
         version: '35'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-28 15:36'
         message: ''
         version: '34'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-28 15:34'
         message: ''
         version: '33'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-28 15:21'
         message: ''
         version: '32'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2016-06-16 15:30'
         message: ''
         version: '31'
-    - 
+    -
         author: Joshua Fletcher
         date: '2016-02-05 00:35'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-04 09:43'
         message: ''
         version: '29'
-    - 
+    -
         author: Joshua Fletcher
         date: '2015-12-30 22:48'
         message: Improve SFDC docs.
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-21 16:43'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-16 14:54'
         message: ''
         version: '26'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-12-15 21:17'
         message: ''
         version: '25'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-12-15 21:13'
         message: ''
         version: '24'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-12-15 21:11'
         message: ''
         version: '23'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-12-15 21:06'
         message: ''
         version: '22'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-12-15 21:05'
         message: ''
         version: '21'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-12-15 20:55'
         message: ''
         version: '20'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-12-15 20:52'
         message: ''
         version: '19'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-12-15 20:50'
         message: ''
         version: '18'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-12-15 20:50'
         message: ''
         version: '17'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-12-15 20:49'
         message: ''
         version: '16'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-12-15 20:48'
         message: ''
         version: '15'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-12-15 20:48'
         message: ''
         version: '14'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-12-15 20:47'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 09:43'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages, format'
         version: '12'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-11-05 21:44'
         message: ''
         version: '11'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-11-05 21:40'
         message: ''
         version: '10'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-10-13 17:47'
         message: ''
         version: '9'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-10-09 20:38'
         message: ''
         version: '8'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-10-06 19:12'
         message: ''
         version: '7'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-10-06 17:39'
         message: ''
         version: '6'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-10-06 17:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-09-28 20:01'
         message: ''
         version: '4'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-09-28 19:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-09-28 19:47'
         message: ''
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-09-28 19:32'
         message: ''
@@ -240,8 +240,6 @@ See [GitHub Readme](https://github.com/nuxeo/nuxeo-salesforce) for the Dev proje
 ## Functional Overview Video
 
 {{> wistia_video id='9pfro1cpv1'}}
-
-&nbsp;
 
 ## Installation and Configuration
 
@@ -265,9 +263,9 @@ Although the Canvas app can be displayed within this new environment, it will st
 2.  Go on&nbsp;**Setup**&nbsp;(top right).
 3.  Go to&nbsp;**Build** > **Create** > **Apps**.
 4.  Click the **New** button under&nbsp;**Connected Apps**&nbsp;named `Nuxeo`&nbsp;(it MUST be named "Nuxeo"):
-    1.  Enable OAuth&nbsp;settings and set the callback URL:&nbsp; `<span class="nolink">https://NUXEO_URL/nuxeo/picker/callback/callback.html</span>` [.](https://NUXEO_URL/nuxeo/picker/callback/callback.html)
+    1.  Enable OAuth&nbsp;settings and set the callback URL:&nbsp; `https://NUXEO_URL/nuxeo/picker/callback/callback.html` [.](https://NUXEO_URL/nuxeo/picker/callback/callback.html)
     2.  Add all available **Scopes**.
-    3.  Enable Force.com Canvas and set the App URL&nbsp; `<span class="nolink">https://NUXEO_URL/nuxeo/picker</span>/`
+    3.  Enable Force.com Canvas and set the App URL&nbsp; `https://NUXEO_URL/nuxeo/picker`
     4.  Select **OAuth Webflow** for **Access Method**.
     5.  Configure **Canvas App locations**&nbsp;by adding&nbsp;**Layouts and Mobile Cards**.
 5.  Save the "Nuxeo" Connected App.
@@ -305,11 +303,13 @@ nuxeo.frame.options =
 
     ```
     nuxeo.server.https.port=8443
-    nuxeo.server.https.keystoreFile=/Users/vpasquier/.keystore
+    nuxeo.server.https.keystoreFile=/Users/vpasquier/nuxeo.keystore
     nuxeo.server.https.keystorePass=******
     ```
 
-    You can setup the keystore by following the&nbsp;[Oracle documentation](https://docs.oracle.com/cd/E19509-01/820-3503/ggfen/index.html).
+    Don't forget to include the `https` template in the `nuxeo.template` parameter of your `nuxeo.conf` file.
+
+    You can setup the keystore by following the&nbsp;[Oracle documentation](https://docs.oracle.com/cd/E19509-01/820-3503/ggfen/index.html) or directly run `keytool -genkey -v -keystore nuxeo.keystore -alias tomcat -keyalg RSA -keysize 2048 -validity 10000`.
 
 3.  Add the following configuration parameter (in&nbsp;**Admin**&nbsp;>&nbsp;**Cloud Services&nbsp;**>**&nbsp;Service Providers&nbsp;**>&nbsp;**OAuth2 Service Providers**&nbsp;>&nbsp;**Add**):
 
@@ -322,7 +322,7 @@ nuxeo.frame.options =
 4.  Set up your browser to access Nuxeo for Salesforce from within Salesforce.
     If you're using&nbsp;Firefox&nbsp;browser, you don't need to configure it. However with Chrome, here are the guidelines to allow the access:
     1.  Authorize&nbsp;`Popups`&nbsp;from Salesforce (to allow OAuth execution).
-    2.  Go to&nbsp; `[https://NUXEO_URL/nuxeo](https://nuxeo_url:8443/nuxeo)&nbsp;`&nbsp;and allow Chrome&nbsp;to access in HTTPS your Nuxeo server.
+    2.  Go to&nbsp; `[https://NUXEO_URL/nuxeo]&nbsp;`&nbsp;and allow Chrome&nbsp;to access in HTTPS your Nuxeo server.
 
 ## Synchronization - Salesforce vs Nuxeo
 
