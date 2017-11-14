@@ -26,42 +26,42 @@ version_override:
     '6.0': 60/admindoc/supported-application-servers
     '5.8': 58/admindoc/supported-application-servers
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-05 09:10'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-05 09:08'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-05 09:05'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-05 09:05'
         message: Add MarkLogic
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-16 11:57'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2016-05-16 10:27'
         message: Details about Java versions supported.
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-13 15:17'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-13 14:21'
         message: ''
@@ -87,7 +87,7 @@ The Nuxeo Platform supports the following databases.
 <ul>
 <li>{{! multiexcerpt name='MariaDB-supported'}}MariaDB 10.1{{! /multiexcerpt}}</li>
 <li>{{! multiexcerpt name='MarkLogic-supported'}} MarkLogic 8.0 {{! /multiexcerpt}}</li>
-<li>{{! multiexcerpt name='MongoDB-supported'}}MongoDB 3.2{{! /multiexcerpt}}</li>
+<li>{{! multiexcerpt name='MongoDB-supported'}}MongoDB 3.4{{! /multiexcerpt}}</li>
 <li>{{! multiexcerpt name='MySQL-supported'}}MySQL 5.7{{! /multiexcerpt}}</li>
 <li>{{! multiexcerpt name='Oracle-supported'}}Oracle 12c{{! /multiexcerpt}}</li>
 <li>{{! multiexcerpt name='PostgreSQL-supported'}}PostgreSQL 9.6{{! /multiexcerpt}}</li>
@@ -109,7 +109,7 @@ Nuxeo Platform can be based on [Tomcat](http://tomcat.apache.org/). The supporte
 
 {{! multiexcerpt name='supported-app-servers-versions'}}
 <ul>
-<li>Tomcat 7.0.69</li>
+<li>Tomcat 8.5.23</li>
 </ul>
 {{! /multiexcerpt}}
 
@@ -126,6 +126,7 @@ Nuxeo is shipped with an embedded Tomcat server.
 <tbody>
 <tr>
 <th colspan="1">Nuxeo Platform Version:</th>
+<th colspan="1">9.3</th>
 <th colspan="1">9.2</th>
 <th colspan="1">9.1</th>
 <th colspan="1">LTS 2016</th>
@@ -134,6 +135,10 @@ Nuxeo is shipped with an embedded Tomcat server.
 </tr>
 <tr>
 <th colspan="1">Redis</th>
+<td colspan="1">2.8.x <br />
+3.0.x <br />
+3.2.x <br />
+4.0.x</td>
 <td colspan="1">2.8.x <br />
 3.0.x <br />
 3.2.x <br />
