@@ -2,7 +2,7 @@
 title: Nuxeo for Salesforce
 review:
     comment: ''
-    date: '2017-07-11'
+    date: '2017-11-14'
     status: ok
 labels:
     - lts2016-ok
