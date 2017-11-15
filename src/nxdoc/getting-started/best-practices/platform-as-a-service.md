@@ -204,7 +204,7 @@ With Nuxeo, you have the option of using a per-tenant repository, but in this ca
 
 As long as the data isolation is handled at application level, you can not rely on system-level backup restore tool, at least, not if you want to restore a data from a particular tenant without restoring the data for all tenants.
 
-## Containerized isolation
+## Containerized Isolation
 
 ### How Containers Can Help
 
@@ -230,11 +230,11 @@ That's because we are convinced that this approach has much more value that "sta
 
 ### A Container Factory with Openshift
 
-[Openshift](https://www.openshift.com/) is the container application platform made by RedHat. It relies on [Kubernetes](https://kubernetes.io/) and then is able to run and schedule containers on a cluster of nodes. 
+[Openshift](https://www.openshift.com/) is the container application platform made by RedHat. It relies on [Kubernetes](https://kubernetes.io/) and is able to run and schedule containers on a cluster of nodes.
 
 Openshift also adds a specific build workflow that allows to build source code and convert it in Docker image.
 
-Basically, with that infrastructure, one can provide a way:
+With that infrastructure, one can provide a way:
 
 * to define an application configuration by selecting a Studio project, a set of additional packages and a base Nuxeo image
 * to provision the Nuxeo server containers and every backing service containers (MongoDB, PostgreSQL, Elasticsearch...)
@@ -252,7 +252,7 @@ This approach allows to optimize the run infrastructure, even when running on vi
 
 Because lightweight containers are cheaper to create or to shutdown, this 2-level container architecture allows to have a very reactive provision policy so that we can quickly scale the application up or down.
 
-## Examples of Nuxeo+Openshift Usage
+## Examples of Nuxeo + Openshift Usage
 
 ### Developments and Test Environment
 
