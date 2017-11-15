@@ -182,9 +182,9 @@ The automation chain to configure is finally:
     name: pdfblob
 - Context.PopDocument
 - Document.SetBlob:
-    file: "myDocumentSchema:pdffile"
+    file: "@{Context[\"pdfblob\"}"
     save: "true"
-    xpath: "@{Context[\"pdfblob\"}"
+    xpath: "myDocumentSchema:pdffile"
 ```
 
 * * *
