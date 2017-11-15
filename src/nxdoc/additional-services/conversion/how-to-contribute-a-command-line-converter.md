@@ -131,13 +131,13 @@ The output of this operation will be the converted image.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Automatically Convert a Document to PDF]({{page page='how-to-automatically-convert-a-document-to-pdf'}})
-*   [How to Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [How to Automatically Convert a Document to PDF]({{page page='how-to-automatically-convert-a-document-to-pdf'}})
+- [How to Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [Conversion]({{page page='conversion'}})
-*   [Automation]({{page page='automation'}})
+- [Conversion]({{page page='conversion'}})
+- [Automation]({{page page='automation'}})
 
 {{/panel}}</div></div>
