@@ -276,7 +276,7 @@ Create a new contract in Nuxeo Platform.
       'bccontract:startDate': '2050-12-25',
       'bccontract:expirationDate': '2055-12-31',
       'bccontract:type': 'maintenance',
-      'bcsalescommon:amount': '10.000'
+      'bcsalescommon:amount': '10000'
     }
     };
 
