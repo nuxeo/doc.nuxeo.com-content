@@ -188,7 +188,7 @@ The server checks the status of all the probes that are registred to be evaluate
           }
           ```
    A probe is only run if the last execution time was more than 20s ago. For intervals less than 20s, the last execution status is returned as part of the response.
-   See  details about ( [probes in Metrics and monitoring ]({{page page='metrics-and-monitoring'}})) for the list of probes evaluated for the healthCheck and  how to contribute new checks.          
+   See  details about ( [probes in Metrics and monitoring ]({{page page='metrics-and-monitoring'}}#probes)) for the list of probes evaluated for the healthCheck and  how to contribute new checks.          
 *   `http://NUXEO_SERVER/nuxeo/runningstatus?info=probe&key=xxx`  where key can be any probe registered to be evaluated for the health check returns 200 OK if the check passes  
 *   `http://NUXEO_SERVER/nuxeo/runningstatus?info=started` returns `true` if the server finished starting and the Nuxeo runtime is fine with its components.
 *   `http://NUXEO_SERVER/nuxeo/runningstatus?info=summary&key=xxx` returns `true` or `false` (see "info=started") and a detailed summary about components. Access to this URL is restricted by an access key configurable in `nuxeo.conf` (see `"server.status.key"` in [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})).
