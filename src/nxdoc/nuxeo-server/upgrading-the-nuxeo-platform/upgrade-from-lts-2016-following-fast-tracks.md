@@ -473,8 +473,20 @@ Elasticsearch 5.6.x is required. Follow those necessary steps to upgrade:
 
 ##### Upgrade Elasticsearch Version
 
-In order to upgrade your cluster to 5.6.x, please follow the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html).
-This will require a [full cluster restart upgrade](https://www.elastic.co/guide/en/elasticsearch/reference/current/restart-upgrade.html).
+If your indices have been created with LTS 2016 they are in Elasticsearch 2.x format and can be read by Elasticsearch 5.6,
+in this case follow the [full cluster restart upgrade procedure](https://www.elastic.co/guide/en/elasticsearch/reference/current/restart-upgrade.html).
+
+If your indices have been created **before** LTS 2016 they are in Elasticsearch 1.x format and Elasticsearch 5.x will not start,
+in this case an index need to be migrated to the new Elasticsearch 5.x format:
+
+- The repository index named `nuxeo` by default doesn't need this migration because the repository will be re-indexed in the next step,
+  so once this index has been backed up you can delete it.
+- The sequence index named `nuxeo-uidgen` cannot be migrated because the `_source` field is disabled, Nuxeo will take care to re-create this index at startup,
+  so once this index has been backed up you can delete it.
+- The audit index named `nuxeo-audit` need to be migrated. Follow the [reindex upgrade procedure](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/reindex-upgrade.html).
+
+Please refer to [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) for more information on upgrading your Elasticsearch cluster.
+
 
 #####  Update Your Custom Elasticsearch Settings and Mapping
 
