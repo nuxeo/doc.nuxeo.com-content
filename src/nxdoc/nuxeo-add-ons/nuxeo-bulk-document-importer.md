@@ -785,7 +785,7 @@ One of these 'tools' is so called the 'factory', and it is used when performing 
 
 Another 'tool' that is used is the 'filter'. More than one 'filter' can be provided to a 'factory' and their scope is to handle the events that are raised during the import. Usually it is better to block all the events that are raised during and after the import of a document (the import of a document can be translated in creating a Nuxeo document model and saving properties on it, which often causes the raise of events), in order to increase the performance of the import.
 
-Notice the events are blocked for the whole system, so this feature will be used during mass import, while the system is not yet in produciton for example.
+Notice the events are blocked for the whole system, so this feature will be used during mass import, while the system is not yet in production for example.
 
 Also, filters cannot be configured via an XML extension, but can be used in your own code extending the imporoter (you can find an example in the code of the random importer)
 
