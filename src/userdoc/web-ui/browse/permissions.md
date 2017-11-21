@@ -30,7 +30,7 @@ tree_item_index: 200
 
 {{{multiexcerpt 'grant-permissions-external-users' page='managing-permissions'}}}
 
-![]({{file name='permissions_external_share_popup_web-ui.png'}} ?w=300,thumbnail=true)
+![]({{file name='permissions_external_share_popup_web-ui.png'}} ?w=350,border=true)
 
 {{{multiexcerpt 'grant-permissions-external-users-notes' page='managing-permissions'}}}
 

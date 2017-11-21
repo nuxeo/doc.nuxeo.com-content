@@ -17,6 +17,8 @@ This Administration menu presents different submenus:
 - [Users & Groups](#users-groups)
 - [Vocabularies](#vocabularies)
 - [Audit](#audit)
+- [Cloud Services](#cloud-services)
+- [NXQL Search](#nxql-search)
 
 ## Analytics
 
@@ -31,7 +33,7 @@ The default Activity subtabs are:
 
 - **Workflow**: Provides statistics on tasks, like the average duration of a workflow, the actions per users, etc.
 
-## Users & Groups
+## Users and Groups
 
 Only administrators and power users can create, edit and delete users and groups. They can create new users and groups, modify their properties or delete them. It is also possible to connect the Platform to an external directory (LDAP directory for instance). Users can only consult users and groups directories.
 
@@ -316,3 +318,21 @@ To delete vocabulary entry, click on the **Delete** button&nbsp;![]({{file name=
 The Audit view enables you to query the application audit and get reports on the activities and actions on the repository.
 
 ![]({{file name='admin-audit-view_web-ui.png'}} ?w=600,border=true)
+
+## Cloud Services
+
+This section of the Admin tab enables administrators to manage the authentication with other applications using OAuth protocol.
+
+![]({{file name='web-ui-cloud-services-tab.png' }} ?w=600,border=true)
+
+The **Services Providers** and **Services Providers Tokens** tabs enable to declare external applications to which the Nuxeo Platform will connect.
+
+If you want to work with the [Nuxeo Live Connect]({{page version='' space='nxdoc' page='nuxeo-live-connect'}}) addon, this is where you will need to set up your configuration.
+
+## NXQL Search
+
+[NXQL search]({{page space='nxdoc' page='nxql'}}) enables you to query the content of the platform using [Nuxeo query language]({{page space='nxdoc' page='nxql'}}), giving you access to as many criteria as you need.
+
+![]({{file name='web-ui-nxql-search.png'}} ?w=600,border=true)
+
+For more information about NXQL search, read the [following documentation]({{page version='' space='nxdoc' page='nxql'}}).
