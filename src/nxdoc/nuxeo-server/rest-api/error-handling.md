@@ -27,72 +27,72 @@ confluence:
     source_link: /display/NXDOC/Web+Exceptions+-+Errors
 tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-29 14:05'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-29 13:31'
         message: format
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 15:17'
         message: Formatting and spelling
         version: '12'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-21 12:02'
         message: ''
         version: '11'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-21 12:01'
         message: ''
         version: '10'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-21 11:27'
         message: ''
         version: '9'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-21 00:36'
         message: ''
         version: '8'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-21 00:10'
         message: ''
         version: '7'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-21 00:00'
         message: ''
         version: '6'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-20 23:59'
         message: ''
         version: '5'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-20 23:59'
         message: ''
         version: '4'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-20 23:58'
         message: ''
         version: '3'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-20 23:49'
         message: adding web exception documentation
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-20 23:41'
         message: ''
@@ -130,11 +130,6 @@ Simple mode is activated by default. The extended mode can be configured through
         <td>'exception' (in the case of exceptions)</td>
       </tr>
       <tr>
-        <td>`code`</td>
-        <td>string</td>
-        <td>The technical exception identity (Java class)</td>
-      </tr>
-      <tr>
         <td>`status`</td>
         <td>integer</td>
         <td>The HTTP status of the error response</td>
@@ -169,7 +164,6 @@ Here is an example of an exception when fetching a missing document.
 ```json
 {
   "entity-type": "exception",
-  "code": "org.nuxeo.ecm.webengine.model.exceptions.WebResourceNotFoundException",
   "status": 404,
   "message": "Failed to get document /wrongID"
 }
@@ -182,7 +176,6 @@ Here is an example of an exception when fetching a missing document.
 ```json
 {
   "entity-type": "exception",
-  "code": "org.nuxeo.ecm.webengine.model.exceptions.WebResourceNotFoundException",
   "status": 404,
   "message": "Failed to get document /wrongID",
   "stacktrace": "org.nuxeo.ecm.webengine.WebException: Failed to get document /wrongID\n\tat org.nuxeo.ecm.webengine.WebException.newException(WebException.java[.........]",
@@ -241,3 +234,28 @@ To toggle the display mode (simple or extended) during runtime execution, you ca
     ```
 
     {{/panel}}
+
+## Custom HTTP Status Code
+
+Since Nuxeo Platform 9.3, you can customize the HTTP status code returned by the Nuxeo Platform when throwing a `NuxeoException`.
+
+Default subclasses of `NuxeoException` are already mapped to the right HTTP status code, such as:
+
+* `DocumentNotFoundException`: 404
+* `DocumentSecurityException`: 403
+* `ConcurrentUpdateException`: 409
+* `WebResourceNotFoundException`: 404
+* ...
+
+The `NuxeoException` class supports new constructors where you can specify a status code that will be used as the response HTTP status code. The mapping of the `NuxeoException#statusCode` with the response HTTP status code is done by the `WebEngineExceptionMapper` class.
+
+For instance, calling a REST API endpoint where a listener throws the following exception will lead to a response with its HTTP status code set to `409`.
+
+```java
+...
+    public void handleEvent(Event event) {
+        ...
+        throw new NuxeoClientException("there is a conflict!", 409);
+    }
+...
+```
