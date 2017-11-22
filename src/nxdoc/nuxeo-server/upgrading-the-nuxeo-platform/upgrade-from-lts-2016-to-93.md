@@ -107,6 +107,15 @@ tree_item_index: 96
 
 {{{multiexcerpt 'upgrade-9.3-installation-elasticsearch-upgrade' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
+#### Keeping Old Tags
+
+{{{multiexcerpt 'upgrade-9.3-keeping-tags' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
+#### Tag Migration
+
+{{{multiexcerpt 'upgrade-9.3-tags-migration' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
+
 #### Directories
 
 ##### MongoDB Directories

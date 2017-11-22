@@ -544,6 +544,36 @@ Any custom native queries done using the passthrough or code need to be reviewed
 
 {{! /multiexcerpt}}
 
+#### {{> anchor 'keeping-old-tags'}} Keeping Old Tags
+
+{{! multiexcerpt name='upgrade-9.3-keeping-tags'}}
+
+The tag implementation has changed in 9.3. If you want to keep your old tags, add the following contribution:
+  ```xml
+  <require>org.nuxeo.ecm.platform.tag.service.migrator</require>
+  <extension target="org.nuxeo.runtime.migration.MigrationService" point="configuration">
+    <migration id="tag-storage">
+      <defaultState>relations</defaultState>
+    </migration>
+  </extension>
+  ```
+If you want to migrate tags to the new storage model, follow the [Tag migrations steps](#tag-migration).
+{{! /multiexcerpt}}
+
+#### {{> anchor 'tag-migration'}} Tag Migration
+
+{{! multiexcerpt name='upgrade-9.3-tags-migration'}}
+
+To migrate tags to the new storage model:
+
+1. Follow the step from section [Keeping old tags](#keeping-old-tags).
+
+1. In the Nuxeo Platform's JSF UI, go to **Admin**&nbsp;> **System Information**&nbsp;> **Migration**, click the button **Migrate tags from relations to facets** and wait until migration is completed.
+
+1. Remove the contribution added at step 1.
+
+{{! /multiexcerpt}}
+
 ### Code Changes
 
 #### Code Behavior Changes
@@ -571,6 +601,7 @@ Any custom native queries done using the passthrough or code need to be reviewed
 - `NuxeoGroupImpl` class has been moved to `org.nuxeo.ecm.platform.usermanager` package. The code relying on it must be updated. See [NXP-20619](https://jira.nuxeo.com/browse/NXP-20619).
 
 {{! /multiexcerpt}}
+
 
 #### Operation Changes
 
