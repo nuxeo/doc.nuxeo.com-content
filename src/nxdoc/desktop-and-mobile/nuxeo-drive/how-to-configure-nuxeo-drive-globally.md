@@ -2,7 +2,7 @@
 title: How to Configure Nuxeo Drive Globally
 review:
     comment: ''
-    date: '2017-10-11'
+    date: '2017-11-23'
     status: ok
 details:
     howto:
@@ -10,7 +10,7 @@ details:
         level: Intermediate
         topics: 'Nuxeo Drive'
 labels:
-    - lts2017-ok
+    - lts2016-ok
     - howto
     - nuxeo-drive
     - nuxeo-drive-component
@@ -18,16 +18,16 @@ toc: true
 tree_item_index: 300
 ---
 
-Since 8.10-HF17, some settings used by Nuxeo Drive can be configured globally from the Nuxeo server.
+Since 8.10-HF20, some settings used by Nuxeo Drive can be configured globally from the Nuxeo server.
 
 They are set in a JSON configuration file located in the `drive` template of the [nuxeo-drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive) package.
-They can be changed by updating the `$NUXEO_SERVER/templates/drive/nxserver/nuxeo.war/drive/config.json` file and will be taken into account by the Nuxeo Drive clients shortly.
+They can be changed by updating the `$NUXEO_SERVER/templates/drive/nxserver/config/nuxeo-drive-config.json` file and restarting the server, after which they will be taken into account by the Nuxeo Drive clients shortly.
 
-The configuration file is available through HTTP at `$NUXEO_URL/drive/config.json`.
+The configuration is available in the JSON format through a `GET` request to `$NUXEO_URL/api/v1/drive/configuration`.
 
 Note that these settings can be overridden locally through the `config.ini` file.
 
-Here is what the default `config.json` file looks like:
+Here is what the default `nuxeo-drive-config.json` file looks like:
 
 ```json
 {
