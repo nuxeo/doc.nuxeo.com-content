@@ -12,7 +12,7 @@ labels:
 
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/store/199348-nuxeo-dev-tools) on Nuxeo University.
+Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/83/NuxeoDevTools) on Nuxeo University.
 {{/callout}}
 
 {{! excerpt}}

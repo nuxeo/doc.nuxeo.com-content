@@ -111,7 +111,7 @@ history:
 
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/store/220415-data-capture) on Nuxeo University.
+Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) on Nuxeo University.
 {{/callout}}
 
 {{{excerpt 'NXDOC:Nuxeo CSV'}}}
