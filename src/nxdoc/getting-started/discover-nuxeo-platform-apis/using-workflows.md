@@ -151,7 +151,7 @@ next_link: /nxdoc/using-automation
 
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/store/155930-workflow-engine) on Nuxeo University.
+Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/39/WorkflowEngine) on Nuxeo University.
 {{/callout}}
 
 {{! excerpt}}
@@ -230,7 +230,7 @@ Start a workflow on a contract, leveraging the contract validation workflow prov
 {{#> callout type='info' heading='Learn more'}}
 
 *   [Workflow developer documentation]({{page page='workflow'}})
-*   [Workflow Engine course on Nuxeo University](https://university.nuxeo.com/store/155930-workflow-engine)
+*   [Workflow Engine course on Nuxeo University](https://university.nuxeo.com/learn/public/course/view/elearning/39/WorkflowEngine)
 
 {{/callout}}
 
@@ -325,7 +325,7 @@ When the workflow started, a verification was performed that determined no amoun
 {{#> callout type='info' heading='Learn more'}}
 
 *   [About Tasks]({{page page='about-tasks'}})
-*   [Assigning Workflow Tasks video from Nuxeo University](https://university.nuxeo.com/store/155930-workflow-engine)
+*   [Assigning Workflow Tasks video from Nuxeo University](https://university.nuxeo.com/learn/public/course/view/elearning/39/WorkflowEngine)
 
 {{/callout}}
 

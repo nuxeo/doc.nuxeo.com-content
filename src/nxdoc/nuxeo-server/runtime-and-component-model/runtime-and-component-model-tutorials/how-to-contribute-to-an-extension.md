@@ -160,7 +160,7 @@ history:
 
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/store/167395-handling-service-extension-points) on Nuxeo University.
+Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/70/HandlingServiceExtensionPoints) on Nuxeo University.
 {{/callout}}
 
 ## {{> anchor 'finding-extension-point'}}Finding the Extension Point Where to Contribute
