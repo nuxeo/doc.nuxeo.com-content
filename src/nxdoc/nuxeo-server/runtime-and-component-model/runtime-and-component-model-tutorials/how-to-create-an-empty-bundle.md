@@ -662,7 +662,7 @@ In this example, the level is "INFO". If you want more details, downgrade it to 
 
     In the `/target` folder of your project, you get a *JAR* file whose name is formed like that: `cookbook-core-1.0-SNAPSHOT.jar`.
 
-2.  Copy your brand new jar into the sub-folder "nxserver/plugins/" of your Nuxeo Server's root folder:
+2.  Copy your brand new jar into the sub-folder "nxserver/bundles/" of your Nuxeo Server's root folder:
     *   under Windows, assuming that the Nuxeo Server Distribution is installed at the location "C:\Nuxeo\", copy the jar in `C:\Nuxeo\nxserver\bundles\`;
     *   under Linux, assuming that the Nuxeo Server Distribution is installed at the location "/opt/nuxeo", copy the jar in `/opt/nuxeo/nxserver/bundles`.
 3.  Start your server using the `./bin/nuxeoctl console` command
