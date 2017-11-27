@@ -481,16 +481,16 @@ The console redirects you to a page where you can see the client id and secret i
 4.  Set the client id and client secret values with the one you got on the previous step.
 5.  Make sure the **Enabled** box is checked.
 6.  Save.
-7.  Now go to the&nbsp;**HOME**&nbsp;tab and click&nbsp;**Cloud Services**&nbsp;tab and click the&nbsp;**Connect to Google Drive**&nbsp;button or just create a new Google Drive document
+7.  Now go to the **HOME** tab and click **Cloud Services** tab and click the **Connect to Google Drive** button or just create a new Google Drive document
 
 You are ready to use it, just go in the workspace section and create a file object: you can use the Google Drive file picker
 
 
 ## Live Connect For Dropbox
 
-### Functional Overview&nbsp;
+### Functional Overview
 
-#### JSF UI&nbsp;
+#### JSF UI
 
 ##### Creating New Dropbox Documents
 
@@ -510,7 +510,7 @@ This option is available for the following Nuxeo document types:
 Dropbox documents can be searched in the Nuxeo Platform like any other document: their content is indexed in the platform, as well as their metadata. They are displayed in search results like a Nuxeo document. Their thumbnail is provided by Dropbox.
 {{! /multiexcerpt}}
 
-#### Web UI&nbsp;
+#### Web UI
 
 ##### Creating New Dropbox Documents
 On the document creation form, a Dropbox button enables you to browse your Dropbox content and select a document stored there.
@@ -547,7 +547,6 @@ Please note that Dropbox only allows http for localhost. For all other sites htt
 To enable additional users on your application, go to **Settings** > **Development users** and click on **Enable additional users.**
 {{/callout}}
 
-&nbsp;
 
 **Step 2: Configuring the Nuxeo Platform**
 
@@ -561,9 +560,9 @@ To enable additional users on your application, go to **Settings** > **Developme
 
 ## Live Connect For Box
 
-### Functional Overview&nbsp;&nbsp;
+### Functional Overview
 
-#### JSF UI&nbsp;&nbsp;
+#### JSF UI
 
 ##### Creating New Box Documents
 
@@ -583,7 +582,7 @@ This option is available for the following Nuxeo document types:
 Box documents can be searched in the Nuxeo Platform like any other document: their content is indexed in the platform, as well as their metadata. They are displayed in search results like a Nuxeo document. Their thumbnail is provided by Box.
 {{! /multiexcerpt}}
 
-#### Web UI&nbsp;&nbsp;
+#### Web UI
 
 ##### Creating New Box Documents
 On the document creation form, a Box button enables you to browse your Box content and select a document stored there.
@@ -610,9 +609,6 @@ On the document creation form, a Box button enables you to browse your Box conte
 7.  Copy the client_id and client_secret.
 8.  Click on button **Save Application**.
 
-
-&nbsp;
-
 **Step 2: Configuring the Nuxeo Platform**
 
 1.  Install the package Nuxeo Live Connect if it is not already installed.
@@ -628,9 +624,9 @@ On the document creation form, a Box button enables you to browse your Box conte
 
 Live Connect for OneDrive is compatible with Nuxeo Platform 8.2+.
 
-### Functional Overview&nbsp;&nbsp;&nbsp;
+### Functional Overview
 
-#### JSF UI&nbsp;&nbsp;&nbsp;
+#### JSF UI
 
 ##### Creating New OneDrive Documents
 
@@ -650,7 +646,7 @@ This option is available for the following Nuxeo document types:
 OneDrive documents can be searched in the Nuxeo Platform like any other document: their content is indexed in the platform, as well as their metadata. They are displayed in search results like a Nuxeo document. Their thumbnail is provided by OneDrive.
 {{! /multiexcerpt}}
 
-#### Web UI&nbsp;&nbsp;&nbsp;
+#### Web UI
 
 ##### Creating New OneDrive Documents
 On the document creation form, a OneDrive button enables you to browse your OneDrive content and select a document stored there.
@@ -672,7 +668,6 @@ On the document creation form, a OneDrive button enables you to browse your OneD
 6.  On **Platforms**, click on **Add Platform** and then select **Web**. In **Redirect URIs** set the following URL, adapting the hostname and port to your case: `http://nuxeo-server:8080/nuxeo/site/oauth2/onedrive/callback`.
 7.  Click on **Save**.
 
-&nbsp;
 
 **Step 2: Configuring the Nuxeo Platform**
 
@@ -703,12 +698,9 @@ For OneDrive for Business follow steps [here](https://dev.onedrive.com/app-regis
   While registering your app, at the **Add properties** step, please follow this example to fill in the pop-up and adapt the hostname and port to your case:
     - SIGN-ON URL: `http://nuxeo-server:8080/nuxeo/site/oauth2/onedrive/callback`
     - APP ID URI: `http://nuxeo-server:8080/nuxeo/site/oauth2/onedrive`
-  &nbsp;
 
   While setting your application **delegated permissions**, you need to check `Read user profiles`, `Read and write user files` and `Read and write items in all site collections` boxes for an Office 365 SharePoint Online application.
   {{/callout}}
-
-&nbsp;
 
 **Step 2: Configuring the Nuxeo Platform**
 
