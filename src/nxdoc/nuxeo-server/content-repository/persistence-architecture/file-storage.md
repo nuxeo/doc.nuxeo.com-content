@@ -297,21 +297,7 @@ Reads content stored on an external file system.
 
 [Configuration]({{page page='file-storage'}}#external-file-system)
 
-</td></tr><tr><td colspan="1">
-
-SQL
-
-</td><td colspan="1">
-
-org.nuxeo.ecm.core.
-
-storage.sql.SQLBinaryManager
-
-</td><td colspan="1">
-
-Stores binaries as SQL BLOB objects in a SQL database.
-
-</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>
+</td></tr></tbody></table></div>
 
 To register a new Blob Provider, use the [`blobprovider`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.blob.BlobManager--configuration)&nbsp;extension point with the Java class for your Blob Provider:
 
@@ -480,7 +466,21 @@ Reads and writes content into MongoDB Binary Manager
 
 &nbsp;
 
-</td></tr></tbody></table></div>
+</td></tr><tr><td colspan="1">
+
+SQL
+
+</td><td colspan="1">
+
+org.nuxeo.ecm.core.
+
+storage.sql.SQLBinaryManager
+
+</td><td colspan="1">
+
+Stores binaries as SQL BLOB objects in a SQL database.
+
+</td><td colspan="1">[Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-sql)</td></tr></tbody></table></div>
 
 ## Blob Dispatcher and HSM
 
