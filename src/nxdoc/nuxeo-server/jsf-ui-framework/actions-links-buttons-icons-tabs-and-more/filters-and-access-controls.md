@@ -8,7 +8,7 @@ labels:
     - content-review-lts2016
     - filter
     - el
-    - actions-filters-component
+    - action
     - content-review-lts2017
 toc: true
 confluence:
