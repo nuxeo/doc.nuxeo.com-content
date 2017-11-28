@@ -4,6 +4,7 @@ description: This page describes how your Nuxeo cluster can scale depending on y
 labels:
     - deployment
     - architecture
+    - cluster
     - content-review-lts2017
 review:
     date: '2017-06-06'

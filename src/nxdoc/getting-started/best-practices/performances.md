@@ -7,6 +7,7 @@ review:
 labels:
     - performances
     - content-review-lts2017
+    - home
 tree_item_index: 800
 
 ---

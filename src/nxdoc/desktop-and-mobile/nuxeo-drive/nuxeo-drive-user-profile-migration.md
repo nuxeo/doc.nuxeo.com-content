@@ -6,6 +6,7 @@ review:
     status: ok
 labels:
     - nuxeo-drive-component
+    - nuxeo-drive
     - content-review-lts2017
 toc: true
 tree_item_index: 350

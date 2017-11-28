@@ -11,6 +11,7 @@ labels:
     - nuxeo-elements
     - polymer-guide
     - content-review-lts2017
+    - home
 is_overview: true
 tree_item_index: 300
 section_parent: web-ui

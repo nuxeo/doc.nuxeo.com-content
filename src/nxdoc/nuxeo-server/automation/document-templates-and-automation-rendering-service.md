@@ -11,7 +11,6 @@ labels:
     - template
     - operation
     - automation
-    - automation-component
     - content-review-lts2017
 toc: true
 confluence:
@@ -27,32 +26,32 @@ confluence:
     source_link: /display/NXDOC/Document+Templates+and+Automation+Rendering+Service
 tree_item_index: 1300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 10:10'
         message: ix formatting issue
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 13:47'
         message: Update table of contents look
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 00:38'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 10:58'
         message: ''
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 10:57'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 10:57'
         message: ''

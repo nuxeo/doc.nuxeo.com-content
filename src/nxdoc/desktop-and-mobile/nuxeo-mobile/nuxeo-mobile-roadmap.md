@@ -9,6 +9,7 @@ details: null
 labels:
     - mobile-roadmap
     - roadmap
+    - nuxeo-mobile
     - content-review-lts2017
 toc: true
 

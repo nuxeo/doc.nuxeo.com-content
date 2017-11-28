@@ -15,7 +15,6 @@ labels:
     - howto
     - automation
     - studio
-    - automation-component
     - excerpt
     - multiexcerpt-include
     - content-review-lts2017
@@ -32,77 +31,77 @@ confluence:
     source_link: /display/NXDOC/How+to+Fetch+a+Document+by+Its+ID+or+Path
 tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-15 17:25'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 16:51'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 15:32'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:48'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-09 14:43'
         message: Formatting and link update
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-01 17:43'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-01 14:53'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-31 15:47'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-31 15:33'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 18:41'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-06 08:08'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-06 08:08'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-27 02:43'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-27 02:26'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2010-07-27 02:24'
         message: ''

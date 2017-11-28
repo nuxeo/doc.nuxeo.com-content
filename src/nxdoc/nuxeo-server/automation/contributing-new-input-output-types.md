@@ -8,7 +8,7 @@ labels:
     - lts2016-ok
     - codec
     - marshalling
-    - automation-component
+    - automation
     - excerpt
     - content-review-lts2017
 confluence:
@@ -24,12 +24,12 @@ confluence:
     source_link: /display/NXDOC/Contributing+New+Input-Output+Types
 tree_item_index: 1100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-31 17:54'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 09:34'
         message: ''

@@ -7,7 +7,6 @@ review:
 labels:
     - lts2016-ok
     - automation
-    - automation-component
     - excerpt
     - multiexcerpt-include
     - content-review-lts2017
@@ -24,37 +23,37 @@ confluence:
     source_link: /display/NXDOC/Automation
 tree_item_index: 900
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 10:52'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-09 14:32'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-01 10:43'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:47'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:46'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:39'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 21:37'
         message: ''

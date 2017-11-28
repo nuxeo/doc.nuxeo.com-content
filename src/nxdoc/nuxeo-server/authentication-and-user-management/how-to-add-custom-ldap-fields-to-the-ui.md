@@ -14,7 +14,7 @@ labels:
     - lts2016-ok
     - ldap
     - howto
-    - authentation
+    - authentication
     - user-profile-component
     - migration-sample
     - excerpt
@@ -32,62 +32,62 @@ confluence:
     source_link: /display/NXDOC/How+to+Add+Custom+LDAP+Fields+to+the+UI
 tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 14:26'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-02 16:31'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:05'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 11:23'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 17:38'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 10:44'
         message: Added related pages
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-01-17 12:41'
         message: Migrated to Confluence 4.0
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-01-17 12:41'
         message: ''
         version: '5'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2011-01-14 11:42'
         message: ''
         version: '4'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2011-01-14 11:34'
         message: ''
         version: '3'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2011-01-13 18:27'
         message: ''
         version: '2'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2011-01-13 18:26'
         message: ''

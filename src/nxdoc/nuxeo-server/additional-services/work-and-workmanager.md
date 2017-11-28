@@ -7,7 +7,6 @@ review:
 labels:
     - lts2016-ok
     - workmanager
-    - cluster
     - node
     - work-manager-component
     - content-review-lts2017
@@ -25,52 +24,52 @@ confluence:
     source_link: /display/NXDOC/Work+and+WorkManager
 tree_item_index: 1100
 history:
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-06-24 13:29'
         message: ''
         version: '10'
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-06-24 13:28'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 14:25'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-20 14:31'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-22 11:56'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-02-04 14:43'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-04 14:08'
         message: 'Updated links, added TOC'
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 18:49'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 18:42'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 17:53'
         message: ''

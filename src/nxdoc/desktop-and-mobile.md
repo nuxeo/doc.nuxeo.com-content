@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - content-review-lts2017
+    - home
 is_overview: true
 confluence:
     ajs-parent-page-id: '950332'
@@ -22,12 +23,12 @@ confluence:
 section_parent: desktop-mob
 tree_item_index: 400
 history:
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-06-15 11:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-15 15:36'
         message: ''
