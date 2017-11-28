@@ -163,8 +163,16 @@ The **directory** element must contain a number of important sub-elements:
 *   `querySizeLimit`: The maximum number of results that the queries on this directory should return. If there are more results than this, an exception will be raised;
 *   `dataFile`: File from which data is read to populate the table, depending on the following element;
 *   `createTablePolicy`: Indicates how the `dataFile` will be used to populate the table. Three values are allowed: **never** if the `dataFile` is never used (the default), **on_missing_columns** if the `dataFile` is used to create missing columns (when the table is created or each time a new column is added, due to a schema change), **always** if the `dataFile` is used to create the table as each restart of the application server;
-*   `cacheTimeout`: The timeout (in seconds) after which an entry is not kept in the cache anymore. The default is 0 which means never time out;
-*   `cacheMaxSize`: The maximum number of entries in the cache. The default is 0 and means to not use entries caching at all;
+*   `cacheTimeout`: The timeout (in seconds) after which an entry is not kept in the cache anymore. The default is 0 which means never time out;    
+    {{#> callout type='note' }}
+    It is deprecated since LTS 2015 and should be replace by the usage of `cacheEntryName` and `cacheEntryWithoutReferencesName` where max size and TTL (equivalent to timeout) can be configured.
+    {{/callout}}
+*   `cacheMaxSize`: The maximum number of entries in the cache. The default is 0, which means to not use caching. (SQL only)
+    {{#> callout type='note' }}
+    Also deprecated since LTS 2015.
+    {{/callout}}
+*   `cacheEntryName`: The name of the cache (from the CacheService) containing full entries. (SQL/LDAP only)
+*   `cacheEntryWithoutReferencesName`: The name of the cache (from the CacheService) containing entries without references. (SQL/LDAP only)
 *   `readOnly`: If the directory should be read-only;
 *   `substringMatchType`: How a non-exact match is done, possible values are `subany`, `subinitial` or `subfinal`; this is used in most UI searches.
 
@@ -181,20 +189,31 @@ The following are used only if the directory is used for authentication:
     ```
     <?xml version="1.0"?>
     <component name="com.example.project.directories.sql">
-      <extension target="org.nuxeo.ecm.directory.sql.SQLDirectoryFactory"
-          point="directories">
+      <extension target="org.nuxeo.ecm.directory.sql.SQLDirectoryFactory" point="directories">
         <directory name="continent">
           <schema>vocabulary</schema>
           <dataSource>java:/nxsqldirectory</dataSource>
-          <cacheTimeout>3600</cacheTimeout>
-          <cacheMaxSize>1000</cacheMaxSize>
+          <cacheEntryName>continent-entry-cache</cacheEntryName>
+          <cacheEntryWithoutReferencesName>continent-entry-cache-without-references</cacheEntryWithoutReferencesName>
 
-    <table>continent</table>
+          <table>continent</table>
           <idField>id</idField>
           <autoincrementIdField>false</autoincrementIdField>
           <dataFile>directories/continent.csv</dataFile>
           <createTablePolicy>on_missing_columns</createTablePolicy>
         </directory>
+      </extension>
+      <extension target="org.nuxeo.ecm.core.cache.CacheService" point="caches">
+        <cache name="continent-entry-cache">
+          <ttl>20</ttl><!-- minutes -->
+          <option name="maxSize">100</option>
+          <option name="concurrencyLevel">500</option>
+        </cache>
+        <cache name="continent-entry-cache-without-references">
+          <ttl>20</ttl><!-- minutes -->
+          <option name="maxSize">100</option>
+          <option name="concurrencyLevel">500</option>
+        </cache>
       </extension>
     </component>
     ```
@@ -247,7 +266,15 @@ Once you have declared the server, you can define new LDAP **directories**. The 
     *   `subfinal`: wildcard is added after the string (baz*). This is the default behavior;
 *   `readOnly`: Boolean value. When set to false, this parameter allows to create new entries or modify existing ones in the LDAP server;
 *   `cacheTimeout`: Cache timeout in seconds;
-*   `cacheMaxSize`: Maximum number of cached entries before global invalidation;
+    {{#> callout type='note' }}
+    It is deprecated since LTS 2015 and should be replace by the usage of `cacheEntryName` and `cacheEntryWithoutReferencesName` where max size and TTL (equivalent to timeout) can be configured.
+    {{/callout}}
+    *   `cacheMaxSize`: Maximum number of cached entries before global invalidation;
+    {{#> callout type='note' }}
+    Also deprecated since LTS 2015.
+    {{/callout}}
+*   `cacheEntryName`: The name of the cache (from the CacheService) containing full entries. (SQL/LDAP only)
+*   `cacheEntryWithoutReferencesName`: The name of the cache (from the CacheService) containing entries without references. (SQL/LDAP only)
 *   `creationBaseDn`: Entry point in the server's LDAP tree structure where new entries will be created. Useless to provide if the `readOnly` attribute is set to true;
 *   `creationClass`: Use as many tag as needed to specify which classes are used to define new people entries in the LDAP server.
     Example:
@@ -271,8 +298,8 @@ Once you have declared the server, you can define new LDAP **directories**. The 
 
           <readOnly>false</readOnly>
 
-          <cacheTimeout>3600</cacheTimeout>
-          <cacheMaxSize>1000</cacheMaxSize>
+          <cacheEntryName>ldap-user-entry-cache</cacheEntryName>
+          <cacheEntryWithoutReferencesName>ldap-user-entry-cache-without-references</cacheEntryWithoutReferencesName>
 
           <creationBaseDn>ou=people,dc=example,dc=com</creationBaseDn>
           <creationClass>top</creationClass>
@@ -280,6 +307,19 @@ Once you have declared the server, you can define new LDAP **directories**. The 
           <creationClass>organizationalPerson</creationClass>
           <creationClass>inetOrgPerson</creationClass>
         </directory>
+      </extension>
+      <extension target="org.nuxeo.ecm.core.cache.CacheService" point="caches">
+        <cache name="ldap-user-entry-cache">
+          <option name="maxSize">${nuxeo.cache.maxsize}</option>
+          <ttl>${nuxeo.cache.ttl}</ttl><!-- minutes -->
+          <option name="concurrencyLevel">${nuxeo.cache.concurrencylevel}</option>
+        </cache>
+
+        <cache name="ldap-user-entry-cache-without-references">
+          <option name="maxSize">${nuxeo.cache.maxsize}</option>
+          <ttl>${nuxeo.cache.ttl}</ttl><!-- minutes -->
+          <option name="concurrencyLevel">${nuxeo.cache.concurrencylevel}</option>
+        </cache>
       </extension>
     </component>
 
