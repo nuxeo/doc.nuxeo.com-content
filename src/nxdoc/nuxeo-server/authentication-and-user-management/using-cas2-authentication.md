@@ -9,7 +9,6 @@ labels:
     - cas2
     - authentication
     - link-update
-    - anonymous
     - cas-authentication-component
     - content-review-lts2017
 toc: true
