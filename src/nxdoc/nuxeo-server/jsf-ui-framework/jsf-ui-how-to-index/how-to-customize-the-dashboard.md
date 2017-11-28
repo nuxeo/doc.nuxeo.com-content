@@ -14,7 +14,7 @@ labels:
     - content-review-lts2016
     - howto
     - dashboard
-    - actions-filters-component
+    - action
     - content-review-lts2017
 toc: true
 confluence:
