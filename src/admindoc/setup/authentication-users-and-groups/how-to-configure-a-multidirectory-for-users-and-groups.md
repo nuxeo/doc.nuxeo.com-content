@@ -147,10 +147,9 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
       <substringMatchType>subany</substringMatchType>
       <readOnly>true</readOnly>
       <!-- comment <cache* /> tags to disable the cache -->
-      <!-- cache timeout in seconds -->
-      <cacheTimeout>3600</cacheTimeout>
-      <!-- maximum number of cached entries before global invalidation -->
-      <cacheMaxSize>1000</cacheMaxSize>
+      <cacheEntryName>ldap-user-entry-cache</cacheEntryName>
+      <cacheEntryWithoutReferencesName>ldap-user-entry-cache-without-references</cacheEntryWithoutReferencesName>
+
       <!--
            If the id field is not returned by the search, we set it with the searched entry, probably the login.
            Before setting it, you can change its case. Accepted values are 'lower' and 'upper',
@@ -186,10 +185,8 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
       <searchScope>subtree</searchScope>
       <readOnly>true</readOnly>
       <!-- comment <cache* /> tags to disable the cache -->
-      <!-- cache timeout in seconds -->
-      <cacheTimeout>3600</cacheTimeout>
-      <!-- maximum number of cached entries before global invalidation -->
-      <cacheMaxSize>1000</cacheMaxSize>
+      <cacheEntryName>ldap-group-entry-cache</cacheEntryName>
+      <cacheEntryWithoutReferencesName>ldap-group-entry-cache-without-references</cacheEntryWithoutReferencesName>
 
       <!-- Maximum number of entries returned by the search -->
       <querySizeLimit>200</querySizeLimit>
@@ -220,7 +217,7 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
       <schema>user</schema>
       <dataSource>jdbc/nxsqldirectory</dataSource>
 
-<table>users</table>
+      <table>users</table>
       <idField>username</idField>
       <passwordField>password</passwordField>
       <passwordHashAlgorithm>SSHA</passwordHashAlgorithm>
@@ -229,6 +226,8 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
       <dataFile>users.csv</dataFile>
       <createTablePolicy>on_missing_columns</createTablePolicy>
       <querySizeLimit>50</querySizeLimit>
+      <cacheEntryName>user-entry-cache</cacheEntryName>
+      <cacheEntryWithoutReferencesName>user-entry-cache-without-references</cacheEntryWithoutReferencesName>
       <references>
         <inverseReference field="groups" directory="sqlGroupDirectory"
           dualReferenceField="members" />
@@ -238,14 +237,13 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
       <schema>group</schema>
       <dataSource>jdbc/nxsqldirectory</dataSource>
 
-<table>groups</table>
+      <table>groups</table>
       <idField>groupname</idField>
       <dataFile>groups.csv</dataFile>
       <createTablePolicy>on_missing_columns</createTablePolicy>
       <autoincrementIdField>false</autoincrementIdField>
-      <!-- Add 10 min cache to avoid refetching the groups during login -->
-      <cacheTimeout>360</cacheTimeout>
-      <cacheMaxSize>1000</cacheMaxSize>
+      <cacheEntryName>group-entry-cache</cacheEntryName>
+      <cacheEntryWithoutReferencesName>group-entry-cache-without-references</cacheEntryWithoutReferencesName>
       <references>
         <tableReference field="members" directory="multiUserDirectory"
           table="user2group" sourceColumn="groupId" targetColumn="userId" schema="user2group"
