@@ -15,7 +15,7 @@ labels:
     - lts2016-ok
     - nuxeo-web-ui
     - extension
-    - themes
+    - theme
     - appearance
     - content-review-lts2017
 tree_item_index: 1000

@@ -18,7 +18,6 @@ labels:
     - howto
     - theme
     - link-update
-    - themes
     - excerpt
     - content-review-lts2017
 confluence:

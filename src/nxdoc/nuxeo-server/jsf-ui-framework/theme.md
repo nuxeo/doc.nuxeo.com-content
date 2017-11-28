@@ -8,7 +8,6 @@ labels:
     - lts2016-ok
     - theme
     - link-update
-    - themes
     - excerpt
     - content-review-lts2017
 toc: true
