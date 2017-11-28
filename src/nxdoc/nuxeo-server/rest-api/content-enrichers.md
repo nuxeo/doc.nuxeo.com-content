@@ -9,7 +9,6 @@ labels:
     - link-update
     - rest-api
     - enricher
-    - rest-api-component
     - university
     - content-review-lts2017
 toc: true
@@ -29,277 +28,277 @@ confluence:
     source_link: /display/NXDOC/Content+Enricher
 tree_item_index: 400
 history:
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-08-16 09:46'
         message: ''
         version: '55'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-08-16 09:45'
         message: ''
         version: '54'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-08-16 09:42'
         message: ''
         version: '53'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-29 16:18'
         message: Add missing excerpts for page Leaning the REST API
         version: '52'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-04 08:30'
         message: Add since 8.3 mention on Tags
         version: '51'
-    - 
+    -
         author: Guillaume Renard
         date: '2016-07-01 13:02'
         message: ''
         version: '50'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-02 09:49'
         message: ''
         version: '49'
-    - 
+    -
         author: Guillaume Renard
         date: '2016-06-01 09:39'
         message: ''
         version: '48'
-    - 
+    -
         author: Guillaume Renard
         date: '2016-06-01 09:03'
         message: ''
         version: '47'
-    - 
+    -
         author: Guillaume Renard
         date: '2016-06-01 09:02'
         message: Reverted from v. 44
         version: '46'
-    - 
+    -
         author: Guillaume Renard
         date: '2016-06-01 09:00'
         message: ''
         version: '45'
-    - 
+    -
         author: Guillaume Renard
         date: '2016-06-01 08:57'
         message: ''
         version: '44'
-    - 
+    -
         author: Guillaume Renard
         date: '2016-06-01 08:54'
         message: ''
         version: '43'
-    - 
+    -
         author: Guillaume Renard
         date: '2016-06-01 08:52'
         message: ''
         version: '42'
-    - 
+    -
         author: Guillaume Renard
         date: '2016-06-01 08:48'
         message: ''
         version: '41'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-05-03 13:02'
         message: ''
         version: '40'
-    - 
+    -
         author: Thomas Roger
         date: '2015-11-04 13:32'
         message: ''
         version: '39'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-11-02 18:49'
         message: ''
         version: '38'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-11-02 18:39'
         message: ''
         version: '37'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-02 15:57'
         message: ''
         version: '36'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-19 16:09'
         message: ''
         version: '35'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-19 16:06'
         message: Added video
         version: '34'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-10-13 14:47'
         message: ''
         version: '33'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2015-10-13 14:44'
         message: ''
         version: '32'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-09-16 10:11'
         message: Fix header format
         version: '31'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-09-10 19:08'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-08 07:40'
         message: Format
         version: '29'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-07 09:37'
         message: Added how to call enrichers section
         version: '28'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-07 09:28'
         message: Fixed typo
         version: '27'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-07 09:28'
         message: Fixed contributing your enricher section
         version: '26'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-04 09:00'
         message: Fixed formatting and unneeded text
         version: '25'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-04 08:59'
         message: 'Added how to contribute an enricher, fixed XML'
         version: '24'
-    - 
+    -
         author: Thomas Roger
         date: '2015-08-05 09:39'
         message: ''
         version: '23'
-    - 
+    -
         author: Thomas Roger
         date: '2015-08-05 09:38'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2015-05-04 09:03'
         message: 'Add links to javadoc, and children and permission enrichers in additional enrichers sections'
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-30 15:54'
         message: 'Update response examples from 7.2, add breadcrumb enricher'
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-30 09:58'
         message: Replacing deprecated headers X-NXContext-Category and X-NXDocumentProperties by X-NXenrichers.document and X-NXproperties
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-30 09:26'
         message: typo
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-16 10:48'
         message: ''
         version: '17'
-    - 
+    -
         author: Nelson Silva
         date: '2014-12-16 10:30'
         message: ''
         version: '16'
-    - 
+    -
         author: Nelson Silva
         date: '2014-12-15 10:21'
         message: Add parameters and vocabulary enricher
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-10-06 11:35'
         message: ''
         version: '14'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-10-02 14:04'
         message: ''
         version: '13'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-10-02 14:02'
         message: Add preview content enricher
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 15:09'
         message: Formatting
         version: '11'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-08-20 11:08'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-28 09:23'
         message: formatting
         version: '9'
-    - 
+    -
         author: Vincent Dutat
         date: '2014-07-24 17:55'
         message: ''
         version: '8'
-    - 
+    -
         author: Vincent Dutat
         date: '2014-07-24 17:49'
         message: ''
         version: '7'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-07-24 17:15'
         message: little update on content enrich
         version: '6'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-07-24 15:54'
         message: renaming rest contrib into content enrich
         version: '5'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-07-24 14:18'
         message: ''
         version: '4'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-07-22 11:05'
         message: ''
         version: '3'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2014-07-22 11:03'
         message: Rest Contributors
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 00:58'
         message: ''

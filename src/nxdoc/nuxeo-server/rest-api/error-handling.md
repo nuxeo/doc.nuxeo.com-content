@@ -8,7 +8,6 @@ labels:
     - lts2016-ok
     - exception
     - rest-api
-    - rest-api-component
     - content-review-lts2017
 toc: true
 version_override:

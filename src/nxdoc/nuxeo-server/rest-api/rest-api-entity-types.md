@@ -9,7 +9,6 @@ labels:
     - rest-api
     - blogs
     - endpoint
-    - rest-api-component
     - multiexcerpt
     - content-review-lts2017
 toc: true
@@ -26,172 +25,172 @@ confluence:
     source_link: /display/NXDOC/REST+API+Entity+Types
 tree_item_index: 200
 history:
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-04-26 16:54'
         message: ''
         version: '34'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-14 13:01'
         message: Added multivalued / complex / complex multivalued property management syntax
         version: '33'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-21 23:57'
         message: ''
         version: '32'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-07-30 14:32'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-29 13:03'
         message: Update related pages
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-29 13:01'
         message: Add acl section
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-23 15:27'
         message: Add Workflow POST request and Task PUT request
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-23 13:34'
         message: Add task and workflow entity types
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-21 14:02'
         message: Add anchors
         version: '26'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-03-27 09:31'
         message: Added POST / PUT request body for document
         version: '25'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-10-17 14:59'
         message: ''
         version: '24'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-10-17 14:59'
         message: added group entity
         version: '23'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-30 16:00'
         message: ''
         version: '22'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-18 02:54'
         message: ''
         version: '21'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-17 14:39'
         message: ''
         version: '20'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-17 14:38'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-17 14:26'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-09 18:12'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-09 18:11'
         message: Added TOC and related topics
         version: '16'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-06-06 20:57'
         message: ''
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-06 19:02'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-06 19:02'
         message: ''
         version: '13'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-06 18:55'
         message: ''
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-06 18:40'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-06 18:40'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-06 18:39'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-06 17:46'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-06 17:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-06 17:43'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-06 17:42'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-06 16:53'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-06 12:26'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-06 12:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-06-06 12:15'
         message: ''

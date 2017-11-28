@@ -9,7 +9,6 @@ labels:
     - link-update
     - rest-api
     - webengine
-    - rest-api-component
     - content-review-lts2017
 toc: true
 version_override:
@@ -28,92 +27,92 @@ confluence:
     source_link: /display/NXDOC/Web+Adapters+for+the+REST+API
 tree_item_index: 600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-29 16:15'
         message: dd missing excerpts for page Leaning the REST AP
         version: '18'
-    - 
+    -
         author: Damien Metzler
         date: '2016-02-24 08:40'
         message: ''
         version: '17'
-    - 
+    -
         author: Arnaud Kervern
         date: '2015-10-15 13:02'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-14 13:58'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-29 09:05'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-29 09:05'
         message: Add examples from page Document Resources Endpoints
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-23 09:58'
         message: Add task and workflow web adapters
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-22 14:29'
         message: page formatting
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-22 14:28'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-22 14:27'
         message: 'Add convert, rendition and search web adapters and related documentation'
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-03 08:56'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-03 08:55'
         message: ''
         version: '7'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-02 17:58'
         message: ''
         version: '6'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-02 17:34'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-02 17:32'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-02 17:23'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-02 16:56'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-03 00:51'
         message: ''

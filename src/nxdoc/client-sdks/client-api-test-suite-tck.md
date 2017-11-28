@@ -9,7 +9,7 @@ labels:
     - automation
     - todo
     - link-update
-    - rest-api-component
+    - rest-api
     - excerpt
     - content-review-lts2017
 toc: true
@@ -26,152 +26,152 @@ confluence:
     source_link: /pages/viewpage.action?pageId=14255551
 tree_item_index: 700
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-03 10:07'
         message: ''
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 11:32'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 11:31'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 17:30'
         message: formatting
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 12:06'
         message: Formatting
         version: '26'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-10-30 14:45'
         message: ''
         version: '25'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-16 17:00'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-23 13:31'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-30 12:14'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-30 12:14'
         message: Changed title
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-30 12:08'
         message: ''
         version: '20'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-26 15:43'
         message: ''
         version: '19'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-26 15:41'
         message: ''
         version: '18'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-26 15:39'
         message: ''
         version: '17'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-25 18:04'
         message: ''
         version: '16'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-25 18:03'
         message: ''
         version: '15'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-25 18:02'
         message: ''
         version: '14'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-25 17:58'
         message: ''
         version: '13'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-25 17:53'
         message: ''
         version: '12'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-25 17:30'
         message: ''
         version: '11'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-25 17:19'
         message: ''
         version: '10'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-07-25 15:00'
         message: 'JS -> JavaScript'
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2013-07-25 14:27'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-11 17:20'
         message: Added TOC and fixed heading levels
         version: '7'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-08 15:26'
         message: ''
         version: '6'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-07-02 14:57'
         message: ''
         version: '5'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-07-02 01:02'
         message: ''
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-07-02 00:58'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-07-02 00:36'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2013-06-26 17:54'
         message: ''

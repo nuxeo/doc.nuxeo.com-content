@@ -8,7 +8,7 @@ labels:
     - content-review-lts2016
     - curl
     - client
-    - rest-api-component
+    - rest-api
     - excerpt
     - multiexcerpt
     - content-review-lts2017
@@ -25,87 +25,87 @@ confluence:
     source_link: /display/NXDOC/Using+cURL
 tree_item_index: 800
 history:
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-10-07 12:55'
         message: 'ix the Lock url by adding a missing "/'
         version: '17'
-    - 
+    -
         author: Laurent Doguin
         date: '2013-12-18 15:24'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-14 15:03'
         message: ''
         version: '15'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-10-23 14:30'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-30 15:08'
         message: ''
         version: '13'
-    - 
+    -
         author: Arnaud Kervern
         date: '2012-09-03 16:55'
         message: Migrated to Confluence 4.0
         version: '12'
-    - 
+    -
         author: Arnaud Kervern
         date: '2012-09-03 16:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-06-23 18:31'
         message: "example is not working when using '*' - server side exception"
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 15:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 15:10'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 14:11'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 14:11'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-08-03 14:10'
         message: ''
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-19 12:16'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-19 12:15'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-19 12:08'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-19 11:55'
         message: ''
