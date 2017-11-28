@@ -239,8 +239,6 @@ Example template directory (SQL for this example, see below for the SQL-specific
 <extension target="org.nuxeo.ecm.directory.sql.SQLDirectoryFactory"
     point="directories">
   <directory name="template-directory" template="true">
-    <cacheTimeout>3600</cacheTimeout>
-    <cacheMaxSize>1000</cacheMaxSize>
     <dataSource>java:/nxsqldirectory</dataSource>
     <autoincrementIdField>false</autoincrementIdField>
     <createTablePolicy>on_missing_columns</createTablePolicy>
@@ -290,14 +288,26 @@ Example:
     <directory name="continent">
       <schema>vocabulary</schema>
       <dataSource>java:/nxsqldirectory</dataSource>
-      <cacheTimeout>3600</cacheTimeout>
-      <cacheMaxSize>1000</cacheMaxSize>
+      <cacheEntryName>continent-entry-cache</cacheEntryName>
+      <cacheEntryWithoutReferencesName>continent-entry-cache-without-references</cacheEntryWithoutReferencesName>
       <table>continent</table>
       <idField>id</idField>
       <autoincrementIdField>false</autoincrementIdField>
       <dataFile>directories/continent.csv</dataFile>
       <createTablePolicy>on_missing_columns</createTablePolicy>
     </directory>
+  </extension>
+  <extension target="org.nuxeo.ecm.core.cache.CacheService" point="caches">
+    <cache name="continent-entry-cache">
+      <ttl>20</ttl><!-- minutes -->
+      <option name="maxSize">100</option>
+      <option name="concurrencyLevel">500</option>
+    </cache>
+    <cache name="continent-entry-cache-without-references">
+      <ttl>20</ttl><!-- minutes -->
+      <option name="maxSize">100</option>
+      <option name="concurrencyLevel">500</option>
+    </cache>
   </extension>
 </component>
 ```
@@ -370,8 +380,8 @@ Example:
       <passwordField>password</passwordField>
       <substringMatchType>subany</substringMatchType>
       <readOnly>false</readOnly>
-      <cacheTimeout>3600</cacheTimeout>
-      <cacheMaxSize>1000</cacheMaxSize>
+      <cacheEntryName>ldap-user-entry-cache</cacheEntryName>
+      <cacheEntryWithoutReferencesName>ldap-user-entry-cache-without-references</cacheEntryWithoutReferencesName>
 
       <searchBaseDn>ou=people,dc=example,dc=com</searchBaseDn>
       <searchClass>person</searchClass>
@@ -384,6 +394,19 @@ Example:
       <creationClass>organizationalPerson</creationClass>
       <creationClass>inetOrgPerson</creationClass>
     </directory>
+  </extension>
+  <extension target="org.nuxeo.ecm.core.cache.CacheService" point="caches">
+    <cache name="ldap-user-entry-cache">
+      <option name="maxSize">${nuxeo.cache.maxsize}</option>
+      <ttl>${nuxeo.cache.ttl}</ttl><!-- minutes -->
+      <option name="concurrencyLevel">${nuxeo.cache.concurrencylevel}</option>
+    </cache>
+
+    <cache name="ldap-user-entry-cache-without-references">
+      <option name="maxSize">${nuxeo.cache.maxsize}</option>
+      <ttl>${nuxeo.cache.ttl}</ttl><!-- minutes -->
+      <option name="concurrencyLevel">${nuxeo.cache.concurrencylevel}</option>
+    </cache>
   </extension>
 </component>
 
