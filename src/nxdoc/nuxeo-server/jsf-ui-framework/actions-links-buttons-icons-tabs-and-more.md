@@ -7,7 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - user-action
-    - action-category
+    - action
     - home
     - excerpt
     - content-review-lts2017
