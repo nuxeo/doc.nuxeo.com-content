@@ -9,7 +9,7 @@ labels:
     - tuto-override-doc-type
     - tuto-document-type
     - workspace
-    - tuto-content-view
+    - content-view
     - content-review-lts2017
 toc: true
 confluence:
@@ -25,52 +25,52 @@ confluence:
     source_link: /display/NXDOC/Add+a+News+Content+View+on+Workspaces
 tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-16 17:27'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-16 17:23'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-16 17:22'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-16 17:15'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 00:54'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:38'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:38'
         message: added tip on widget style
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:31'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:26'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:19'
         message: ''

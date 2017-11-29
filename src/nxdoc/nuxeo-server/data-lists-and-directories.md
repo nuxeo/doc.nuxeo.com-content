@@ -8,7 +8,7 @@ labels:
     - lts2016-ok
     - ldap
     - sql
-    - directory
+    - directory-component
     - vocabulary
     - multiexcerpt-include
     - content-review-lts2017
@@ -26,82 +26,82 @@ confluence:
     source_link: /display/NXDOC/Data+Lists+and+Directories
 tree_item_index: 1400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-03 15:53'
         message: ''
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2015-07-20 09:45'
         message: ''
         version: '15'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-03-19 14:15'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 15:03'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 11:11'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-19 11:11'
         message: Merging Data Lists and Directories and Directories and Vocabularies pages
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-10 14:50'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 12:35'
         message: formatting
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-27 17:58'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-27 17:58'
         message: Added links to the Explorer and some formatting
         version: '7'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-08-26 22:56'
         message: ''
         version: '6'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-08-26 22:50'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-29 14:54'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-29 14:54'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-29 12:38'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-28 19:23'
         message: ''

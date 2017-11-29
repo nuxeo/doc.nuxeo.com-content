@@ -14,7 +14,6 @@ labels:
     - lts2016-ok
     - rest-api
     - workflow
-    - workflow-component
     - excerpt
     - content-review-lts2017
 toc: true

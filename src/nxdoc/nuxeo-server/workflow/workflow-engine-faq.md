@@ -8,7 +8,6 @@ labels:
     - lts2016-ok
     - faq
     - workflow
-    - workflow-component
     - content-review-lts2017
 confluence:
     ajs-parent-page-id: '12913723'
@@ -23,152 +22,152 @@ confluence:
     source_link: /display/NXDOC/Workflow+Engine+FAQ
 tree_item_index: 1200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-17 12:23'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-17 12:23'
         message: Remove 5.5 question
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-17 12:22'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-17 12:22'
         message: 'Remove "since 5.7.2"'
         version: '27'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-06-23 20:48'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 13:46'
         message: ''
         version: '25'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-08-06 18:04'
         message: ''
         version: '24'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-08-06 18:03'
         message: ''
         version: '23'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-08-06 13:58'
         message: Updated escalation answer
         version: '22'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-07-11 10:50'
         message: ''
         version: '21'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-07-11 10:39'
         message: ''
         version: '20'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-07-11 10:29'
         message: ''
         version: '19'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-07-09 18:06'
         message: ''
         version: '18'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-08 16:26'
         message: Added anchor to be used for linkback
         version: '17'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-07-03 16:59'
         message: ''
         version: '16'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-06-27 17:17'
         message: ''
         version: '15'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-06-27 17:16'
         message: ''
         version: '14'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-05-27 14:26'
         message: ''
         version: '13'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-05-27 14:25'
         message: ''
         version: '12'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-05-27 14:25'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 17:59'
         message: ''
         version: '10'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-01-24 12:37'
         message: ''
         version: '9'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-01-02 15:34'
         message: ''
         version: '8'
-    - 
+    -
         author: Mariana Cedica
         date: '2012-11-22 14:06'
         message: ''
         version: '7'
-    - 
+    -
         author: Mariana Cedica
         date: '2012-11-22 14:03'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-21 01:33'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-21 01:33'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-21 01:33'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-21 01:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2012-09-21 01:30'
         message: ''

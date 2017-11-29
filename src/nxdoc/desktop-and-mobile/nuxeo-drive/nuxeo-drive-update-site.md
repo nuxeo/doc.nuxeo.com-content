@@ -7,7 +7,6 @@ review:
 labels:
     - lts2016-ok
     - nuxeo-drive
-    - nuxeo-drive-component
     - multiexcerpt
     - content-review-lts2017
 toc: true
@@ -24,67 +23,67 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Drive+Update+Site
 tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-21 12:51'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-01 15:02'
         message: Update section Using a Custom Update Site to use update-site-url instead of org.nuxeo.drive.update.site.url
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-21 15:25'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-09 07:56'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-09 07:53'
         message: Format toc and update related pages
         version: '9'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-06-08 14:18'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-01 12:24'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-01 10:20'
         message: ''
         version: '6'
-    - 
+    -
         author: Antoine Taillefer
         date: '2014-06-30 15:27'
         message: ''
         version: '5'
-    - 
+    -
         author: Antoine Taillefer
         date: '2014-06-30 15:24'
         message: ''
         version: '4'
-    - 
+    -
         author: Antoine Taillefer
         date: '2014-06-30 15:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Antoine Taillefer
         date: '2014-06-30 14:57'
         message: ''
         version: '2'
-    - 
+    -
         author: Antoine Taillefer
         date: '2014-06-30 14:12'
         message: ''

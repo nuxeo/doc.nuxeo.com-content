@@ -5,7 +5,6 @@ review:
     date: '2016-12-20'
     status: ok
 labels:
-    - nuxeo-drive-component
     - nuxeo-drive
     - content-review-lts2017
 toc: true

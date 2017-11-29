@@ -8,6 +8,7 @@ labels:
     - studio
     - customization
     - content-review-lts2017
+    - tutorial
 toc: true
 tree_item_index: 200
 

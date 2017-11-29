@@ -7,7 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - todo
-    - translations-component
+    - translation
     - nxdoc-697
     - excerpt
     - content-review-lts2017
@@ -24,22 +24,22 @@ confluence:
     source_link: /display/NXDOC/Labels+and+Translations+Management
 tree_item_index: 1300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 14:09'
         message: ix formatting issue
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 16:42'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 00:11'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-05 23:57'
         message: ''

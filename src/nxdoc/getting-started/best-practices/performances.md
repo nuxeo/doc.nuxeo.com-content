@@ -5,7 +5,7 @@ review:
     date: '2017-10-02'
     status: ok
 labels:
-    - performances
+    - performance
     - content-review-lts2017
     - home
 tree_item_index: 800

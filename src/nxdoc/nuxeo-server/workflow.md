@@ -7,7 +7,6 @@ review:
 labels:
     - lts2016-ok
     - workflow
-    - workflow-component
     - content-review-lts2017
 toc: true
 confluence:
@@ -23,172 +22,172 @@ confluence:
     source_link: /display/NXDOC/Workflow
 tree_item_index: 1100
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-17 11:47'
         message: ''
         version: '34'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 16:35'
         message: ''
         version: '33'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-28 09:40'
         message: 'Fix Studio menu label     '
         version: '32'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-28 09:30'
         message: 'Fix Studio menu label     '
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-27 13:21'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-27 13:17'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-04 08:45'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-04 08:37'
         message: ''
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-03 12:53'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-03 09:38'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-03 09:24'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-19 09:37'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-23 11:27'
         message: ''
         version: '22'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-23 00:29'
         message: ''
         version: '21'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-23 00:24'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-19 14:14'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-19 12:34'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-19 10:50'
         message: ''
         version: '17'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-30 12:25'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-28 10:46'
         message: ''
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 14:58'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 14:57'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 11:02'
         message: Added children pages
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 14:15'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 14:15'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 14:09'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 14:09'
         message: ''
         version: '8'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 14:08'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 14:04'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 14:01'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-06 16:45'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-18 14:57'
         message: ''
         version: '3'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-06-21 10:53'
         message: ''
         version: '2'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:29'
         message: ''

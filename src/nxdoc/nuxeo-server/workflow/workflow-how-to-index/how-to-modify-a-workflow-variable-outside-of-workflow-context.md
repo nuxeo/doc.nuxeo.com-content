@@ -16,7 +16,6 @@ labels:
     - event
     - listener
     - howto
-    - workflow-component
     - excerpt
     - content-review-lts2017
 confluence:
@@ -32,87 +31,87 @@ confluence:
     source_link: /display/NXDOC/How+to+Modify+a+Workflow+Variable+outside+of+Workflow+Context
 tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 16:37'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 16:13'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 15:37'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-18 14:56'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-16 15:06'
         message: ''
         version: '13'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:58'
         message: ''
         version: '12'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:58'
         message: ''
         version: '11'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:55'
         message: ''
         version: '10'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:48'
         message: ''
         version: '9'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:45'
         message: ''
         version: '8'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:42'
         message: ''
         version: '6'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:42'
         message: ''
         version: '5'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:38'
         message: ''
         version: '4'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:36'
         message: ''
         version: '3'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:34'
         message: ''
         version: '2'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-02-08 16:30'
         message: ''

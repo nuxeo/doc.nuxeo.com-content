@@ -15,7 +15,6 @@ labels:
     - howto
     - nuxeo-drive
     - layout
-    - nuxeo-drive-component
     - content-review-lts2017
 confluence:
     ajs-parent-page-id: '14257229'
@@ -30,42 +29,42 @@ confluence:
     source_link: /display/NXDOC/How+to+Customize+the+Drive+Metadata+Edit+Layouts
 tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-21 15:31'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-21 10:16'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-13 12:06'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-08 09:26'
         message: Add screenshot of how-to result
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-08 09:16'
         message: Add link
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-08 08:59'
         message: fix typo
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-08 08:50'
         message: Add related pages
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-08 08:43'
         message: ''

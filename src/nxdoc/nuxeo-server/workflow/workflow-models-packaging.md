@@ -7,7 +7,6 @@ review:
 labels:
     - lts2016-ok
     - workflow
-    - workflow-component
     - excerpt
     - content-review-lts2017
 confluence:
@@ -23,62 +22,62 @@ confluence:
     source_link: /display/NXDOC/Workflow+Models+Packaging
 tree_item_index: 200
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-29 14:45'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-18 16:05'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-31 10:24'
         message: ''
         version: '10'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-30 16:26'
         message: ''
         version: '9'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-30 15:09'
         message: ''
         version: '8'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-10-30 12:37'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 10:27'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-19 12:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 15:04'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 15:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 15:01'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-18 15:00'
         message: ''

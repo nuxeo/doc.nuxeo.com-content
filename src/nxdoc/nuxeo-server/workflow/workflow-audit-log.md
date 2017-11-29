@@ -9,7 +9,6 @@ labels:
     - workflow
     - audit
     - elasticsearch
-    - workflow-component
     - excerpt
     - content-review-lts2017
 toc: true
@@ -26,122 +25,122 @@ confluence:
     source_link: /display/NXDOC/Workflow+Audit+Log
 tree_item_index: 1000
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-16 09:57'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-15 11:59'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-13 10:09'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-13 09:55'
         message: Fix some formatting issues
         version: '21'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-10-02 16:12'
         message: ''
         version: '20'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 15:10'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-09-29 14:31'
         message: ''
         version: '18'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 11:49'
         message: ''
         version: '17'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 11:46'
         message: ''
         version: '16'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 11:40'
         message: ''
         version: '15'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 11:39'
         message: ''
         version: '14'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 10:27'
         message: ''
         version: '13'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 10:26'
         message: ''
         version: '12'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 10:25'
         message: ''
         version: '11'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 10:20'
         message: ''
         version: '10'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 10:19'
         message: ''
         version: '9'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 10:18'
         message: ''
         version: '8'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 09:24'
         message: ''
         version: '7'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-29 08:58'
         message: ''
         version: '6'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-28 15:48'
         message: ''
         version: '5'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-28 15:47'
         message: ''
         version: '4'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-28 15:44'
         message: ''
         version: '3'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-28 15:43'
         message: ''
         version: '2'
-    - 
+    -
         author: Guillaume Renard
         date: '2015-09-28 14:18'
         message: ''

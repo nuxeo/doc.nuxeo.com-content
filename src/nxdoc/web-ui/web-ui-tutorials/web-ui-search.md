@@ -15,7 +15,7 @@ labels:
     - lts2016-ok
     - nuxeo-web-ui
     - extension
-    - search
+    - search-tab-component
     - content-review-lts2017
 tree_item_index: 500
 

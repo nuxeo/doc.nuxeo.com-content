@@ -7,7 +7,6 @@ review:
 labels:
     - lts2016-ok
     - vcs
-    - clustering
     - acl
     - vcs-component
     - content-review-lts2017
@@ -25,92 +24,92 @@ confluence:
     source_link: /display/NXDOC/VCS+Tables
 tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 15:16'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 13:42'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-29 12:56'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-10 13:51'
         message: ''
         version: '15'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-09 15:54'
         message: details
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 17:04'
         message: TOC
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-25 11:30'
         message: Removed 5.4 and 5.5 references
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-11 17:56'
         message: ''
         version: '11'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-01-07 15:30'
         message: typo
         version: '10'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-10-31 13:56'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-19 14:58'
         message: Formatting
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:49'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-09 09:58'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-09 09:58'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 17:19'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 17:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 16:38'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 16:28'
         message: ''

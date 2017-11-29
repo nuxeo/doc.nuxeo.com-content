@@ -9,7 +9,7 @@ labels:
     - lts2016-ok
     - web-ui-customization
     - nuxeo-elements
-    - polymer-guide
+    - polymer
     - content-review-lts2017
     - home
 is_overview: true
