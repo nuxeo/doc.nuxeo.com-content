@@ -54,8 +54,9 @@ Once you become more familiar with Polymer we strongly recommend reading our [Po
 
 ## Other Useful Resources
 
- - [Codelabs](https://codelabs.developers.google.com/polymer-summit)
+ - [Codelabs Polymer 1](https://codelabs.developers.google.com/polymer-summit)
  "Google codelabs provide guided, tutorial, hands-on coding experiences. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application."
+ - [Codelabs Polymer 2](https://codelabs.developers.google.com/polymer-summit-2017)
  - [Polycasts](https://www.youtube.com/playlist?list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN)
   "Learn about the basic building blocks that make up a Polymer application, and see how to compose those elements into buttery smooth mobile experiences. The future of front end development is all here, on the Polycasts playlist!"
  - [Web Component Tester](https://github.com/Polymer/web-component-tester)
