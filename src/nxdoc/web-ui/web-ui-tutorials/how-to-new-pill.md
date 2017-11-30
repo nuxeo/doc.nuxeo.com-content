@@ -13,7 +13,9 @@ details:
         topics: Web UI
 labels:
     - lts2016-ok
-    - nuxeo-web-ui
+    - nuxeo-web-ui  
+    - nuxeo-elements
+    - nuxeo-ui-elements
     - page-provider
     - pill
     - content-review-lts2017

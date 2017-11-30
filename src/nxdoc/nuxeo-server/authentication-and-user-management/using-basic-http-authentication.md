@@ -8,6 +8,7 @@ toc: true
 tree_item_index: 110
 labels:
     - content-review-lts2017
+    - authentication
 
 ---
 This plugin supports standard HTTP Basic Authentication. By default, this plugin only generates the authentication prompt on configured URLs.

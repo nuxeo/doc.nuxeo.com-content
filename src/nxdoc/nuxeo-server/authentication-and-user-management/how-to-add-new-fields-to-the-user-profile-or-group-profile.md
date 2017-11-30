@@ -13,6 +13,7 @@ details:
 tree_item_index: 400
 labels:
     - content-review-lts2017
+    - authentication
 
 ---
 

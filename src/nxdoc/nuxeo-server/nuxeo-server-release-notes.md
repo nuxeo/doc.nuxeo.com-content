@@ -6,6 +6,7 @@ review:
     status: ok
 labels:
     - content-review-lts2017
+    - release-notes
 toc: true
 tree_item_index: 10000
 

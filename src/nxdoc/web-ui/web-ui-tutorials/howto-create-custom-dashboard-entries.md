@@ -16,7 +16,9 @@ labels:
     - manifest
     - bundle
     - customization
-    - project-structure
+    - project-structure  
+    - nuxeo-elements
+    - nuxeo-ui-elements
     - pom_xml
     - howto
     - content-review-lts2017

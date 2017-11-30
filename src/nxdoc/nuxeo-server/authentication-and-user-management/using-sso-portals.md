@@ -8,6 +8,7 @@ toc: true
 tree_item_index: 145
 labels:
     - content-review-lts2017
+    - authentication
 
 ---
 This plugin provides a way to handle identity propagation between an external application and Nuxeo. It was coded to propagate user identify between a JSR168 portal and a Nuxeo server. The goal is to let the external application (ex: the portal) call the Nuxeo API _"on behalf"_ of the interactive users. This ensures that:

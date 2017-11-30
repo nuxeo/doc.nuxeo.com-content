@@ -8,6 +8,8 @@ toc: true
 labels:
     - lts2016-ok
     - nuxeo-web-ui
+    - nuxeo-elements
+    - nuxeo-ui-elements
     - extension
     - layouts
     - content-review-lts2017

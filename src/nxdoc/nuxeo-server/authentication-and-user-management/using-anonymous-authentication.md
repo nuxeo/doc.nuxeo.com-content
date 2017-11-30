@@ -8,6 +8,7 @@ toc: true
 tree_item_index: 120
 labels:
     - content-review-lts2017
+    - authentication
 
 ---
 This plugin provides anonymous authentication. Users are automatically logged as a configurable Anonymous user. This module also includes additional actions (to be able to login when already logged as Anonymous) and a dedicated Exception handling (to automatically redirect Anonymous users to login screen after a security error).
