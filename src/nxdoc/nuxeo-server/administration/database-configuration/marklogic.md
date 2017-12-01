@@ -135,12 +135,12 @@ return xdmp:document-insert("[PATH]", text { $module }, $permissions)
 
 See the matrix above for variables:
 
-| Module | Content | Permission | Path |
-| ------ | ------- | ---------- | ---- |
-| patch.xqy | [Here](https://github.com/nuxeo/nuxeo-core-storage-marklogic/blob/8.10/src/main/resources/patch.xqy) | `nuxeo-writer` | /ext/nuxeo/patch.xqy |
-| set-lock.xqy | [Here](https://github.com/nuxeo/nuxeo-core-storage-marklogic/blob/8.10/src/main/resources/set-lock.xqy) | `nuxeo-writer` | /ext/nuxeo/set-lock.xqy |
+| Module          | Content                                                                                                      | Permission     | Path                       |
+|:----------------|:-------------------------------------------------------------------------------------------------------------|:---------------|:---------------------------|
+| patch.xqy       | [Here](https://github.com/nuxeo/nuxeo-core-storage-marklogic/blob/8.10/src/main/resources/patch.xqy)       | `nuxeo-writer` | /ext/nuxeo/patch.xqy       |
+| set-lock.xqy    | [Here](https://github.com/nuxeo/nuxeo-core-storage-marklogic/blob/8.10/src/main/resources/set-lock.xqy)    | `nuxeo-writer` | /ext/nuxeo/set-lock.xqy    |
 | remove-lock.xqy | [Here](https://github.com/nuxeo/nuxeo-core-storage-marklogic/blob/8.10/src/main/resources/remove-lock.xqy) | `nuxeo-writer` | /ext/nuxeo/remove-lock.xqy |
-| extract.xqy | [Here](https://github.com/nuxeo/nuxeo-core-storage-marklogic/blob/8.10/src/main/resources/extract.xqy) | `nuxeo-reader` | /ext/nuxeo/extract.xqy |
+| extract.xqy     | [Here](https://github.com/nuxeo/nuxeo-core-storage-marklogic/blob/8.10/src/main/resources/extract.xqy)     | `nuxeo-reader` | /ext/nuxeo/extract.xqy     |
 
 ## Configuration
 
@@ -176,26 +176,33 @@ In order to properly work, MarkLogic needs a range element index for each elemen
 
 We also use range index in order to query some elements. To leverage on range indexes, we need to use a different kind of MarkLogic function during NXQL -> MarkLogic query conversion.
 In order to enable this behavior, you need to add the Nuxeo element in repository configuration.
-You need to use `range-element-index` to declare a Nuxeo element to be queried with the range index behavior. The element name in repository configuration are the Nuxeo ones, for example we declare `ecm:uuid` in the repository configuration and we create `ecm__id` in MarkLogic. Below the default configuration of repository:
+You need to use `range-element-index` to declare a Nuxeo element to be queried with the range index behavior. The element name in repository configuration are the Nuxeo ones, for example we declare `ecm:parentId` in the repository configuration and we create `ecm__parentId` in MarkLogic. Below the default configuration of repository:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.storage.marklogic.MarkLogicRepositoryService" point="repository">
   <repository name="test" label="MarkLogic Repository">
     ...
     <range-element-indexes>
-      <range-element-index type="string">ecm:uuid</range-element-index>
+      <range-element-index type="string">ecm:id</range-element-index>
       <range-element-index type="string">ecm:parentId</range-element-index>
-      <range-element-index type="string">ecm:ancestorId</range-element-index>
-      <range-element-index type="string">ecm:versionVersionableId</range-element-index>
+      <range-element-index type="string">ecm:ancestorIds</range-element-index>
+      <range-element-index type="string">ecm:versionSeriesId</range-element-index>
       <range-element-index type="string">ecm:proxyTargetId</range-element-index>
-      <range-element-index type="string">ecm:proxyVersionableId</range-element-index>
-      <range-element-index type="string">ecm:__read_acl</range-element-index> <!-- Technical element -->
+      <range-element-index type="string">ecm:proxySeriesId</range-element-index>
+      <range-element-index type="string">ecm:racl</range-element-index> <!-- Technical element -->
       <range-element-index type="string">ecm:name</range-element-index>
       <range-element-index type="string">ecm:primaryType</range-element-index>
-      <range-element-index type="string">ecm:currentLifeCycleState</range-element-index>
+      <range-element-index type="string">ecm:lifeCycleState</range-element-index>
+      <range-element-index type="string">dc:title</range-element-index>
+      <range-element-index type="dateTime">dc:created</range-element-index>
       <range-element-index type="dateTime">dc:modified</range-element-index>
       <range-element-index type="string">rend:renditionName</range-element-index>
+      <range-element-index type="dateTime">rend:modificationDate</range-element-index>
+      <range-element-index type="dateTime">rend:sourceModificationDate</range-element-index>
       <range-element-index type="string">collectionMember:collectionIds</range-element-index>
+      <range-element-index type="dateTime">nt:dueDate</range-element-index>
+      <range-element-index type="dateTime">dc:issued</range-element-index>
+      <range-element-index type="string">webc:name</range-element-index>
     </range-element-indexes>
     ...
   </repository>
@@ -204,30 +211,34 @@ You need to use `range-element-index` to declare a Nuxeo element to be queried w
 
 Here's a list of basic Nuxeo elements needing a range element index:
 
-| Nuxeo Element | MarkLogic Element | Scalar Type |
-| ------------- | ----------------- | ----------- |
-| ecm:uuid | ecm\_\_id | string |
-| ecm:parentId | ecm\_\_parentId | string |
-| ecm:ancestorId | ecm\_\_ancestorIds\_\_item | string |
-| ecm:versionVersionableId | ecm\_\_versionSeriesId | string |
-| ecm:proxyTargetId | ecm\_\_proxyTargetId | string |
-| ecm:proxyVersionableId | ecm\_\_proxyVersionSeriesId | string |
-| ecm:__read_acl | ecm\_\_racl | string |
-| ecm:name | ecm\_\_name | string |
-| ecm:primaryType | ecm\_\_primaryType | string |
-| ecm:currentLifeCycleState | ecm\_\_lifeCycleState | string |
-| rend:renditionName | rend\_\_renditionName | string |
-| collectionMember:collectionIds | collectionMember\_\_collectionIds\_\_item | string |
-| created | created | dateTime |
-| replaced | replaced | dateTime |
-| version-id | version-id | long |
-| begin | begin | dateTime |
-| end | end | dateTime |
-| dc:created | dc\_\_created | dateTime |
-| dc:modified | dc\_\_modified | dateTime |
-| length | length | long |
-| rend:modificationDate | rend\_\_modificationDate | dateTime |
-| rend:sourceModificationDate | rend\_\_sourceModificationDate | dateTime |
+| Nuxeo Element (NXQL name)                      | MarkLogic Element                         | Scalar Type |
+|:-----------------------------------------------|:------------------------------------------|:------------|
+| ecm:id (ecm:uuid)                              | ecm\_\_id                                 | string      |
+| ecm:parentId                                   | ecm\_\_parentId                           | string      |
+| ecm:ancestorId                                 | ecm\_\_ancestorIds\_\_item                | string      |
+| ecm:versionSeriesId (ecm:versionVersionableId) | ecm\_\_versionSeriesId                    | string      |
+| ecm:proxyTargetId                              | ecm\_\_proxyTargetId                      | string      |
+| ecm:proxyVersionableId                         | ecm\_\_proxyVersionSeriesId               | string      |
+| ecm:__read_acl                                 | ecm\_\_racl                               | string      |
+| ecm:name                                       | ecm\_\_name                               | string      |
+| ecm:primaryType                                | ecm\_\_primaryType                        | string      |
+| ecm:currentLifeCycleState                      | ecm\_\_lifeCycleState                     | string      |
+| dc:title                                       | dc\_\_title                               | string      |
+| dc:created                                     | dc\_\_created                             | dateTime    |
+| dc:modified                                    | dc\_\_modified                            | dateTime    |
+| rend:renditionName                             | rend\_\_renditionName                     | string      |
+| rend:modificationDate                          | rend\_\_modificationDate                  | dateTime    |
+| rend:sourceModificationDate                    | rend\_\_sourceModificationDate            | dateTime    |
+| collectionMember:collectionIds                 | collectionMember\_\_collectionIds\_\_item | string      |
+| nt:dueDate                                     | nt\_\_dueDate                             | dateTime    |
+| dc:issued                                      | dc\_\_issued                              | dateTime    |
+| webc:name                                      | webc\_\_name                              | string      |
+| created                                        | created                                   | dateTime    |
+| replaced                                       | replaced                                  | dateTime    |
+| version-id                                     | version-id                                | long        |
+| begin                                          | begin                                     | dateTime    |
+| end                                            | end                                       | dateTime    |
+| length                                         | length                                    | long        |
 
 In order to create these indexes, go to your MarkLogic server configuration, under your database you'll find `Element Range Indexes`. In this section you can create a range element index for each elements with the correct scalar type. Leave `namespace uri` empty, set `range value positions` to false, and `invalid values` to ignore.
 
