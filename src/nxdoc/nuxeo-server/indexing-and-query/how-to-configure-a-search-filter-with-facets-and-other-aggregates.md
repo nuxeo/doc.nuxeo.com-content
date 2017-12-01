@@ -17,7 +17,7 @@ labels:
     - content-view
     - howto
     - aggregate
-    - query
+    - query-pageprovider-component
     - aggregate-search-widget-component
     - content-review-lts2017
 toc: true
@@ -34,192 +34,192 @@ confluence:
     source_link: /display/NXDOC/How+to+Configure+a+Search+Filter+With+Facets+and+Other+Aggregates
 tree_item_index: 1600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 12:53'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-15 08:22'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 15:47'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-06 14:31'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:24'
         message: ''
         version: '34'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-25 14:25'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 16:41'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 11:15'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 11:07'
         message: Reduced max width of screenshots
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-18 15:37'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-10 10:43'
         message: ''
         version: '28'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-04 00:08'
         message: ''
         version: '27'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-04 00:08'
         message: ''
         version: '26'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-03 17:25'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 16:10'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 16:09'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 16:08'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 16:08'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 16:08'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 16:08'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 16:07'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 16:07'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 16:07'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 16:07'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 16:06'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 16:00'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 15:58'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 15:53'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 15:53'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 15:50'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 15:50'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 15:50'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 15:50'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 15:49'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 15:49'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 11:55'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 11:54'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 11:47'
         message: ''

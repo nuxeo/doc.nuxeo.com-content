@@ -16,7 +16,6 @@ labels:
     - elasticsearch
     - search-tab-component
     - saved-search
-    - query
     - query-pageprovider-component
     - university
     - excerpt

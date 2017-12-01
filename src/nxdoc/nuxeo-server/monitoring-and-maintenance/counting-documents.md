@@ -6,7 +6,7 @@ review:
     status: ok
 labels:
     - content-review-lts2016
-    - dataviz-component
+    - data-visualization-component
     - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950318'
@@ -25,32 +25,32 @@ version_override:
     '6.0': 60/admindoc/counting-documents
     '5.8': 58/admindoc/counting-documents
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-29 09:44'
         message: ix link
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-29 09:43'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-03 14:22'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-29 21:23'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-29 18:05'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 22:40'
         message: ''

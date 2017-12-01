@@ -7,7 +7,7 @@ review:
 labels:
     - lts2016-ok
     - database
-    - sqlserver
+    - sql
     - multiexcerpt-include
     - content-review-lts2017
 toc: true
@@ -28,247 +28,247 @@ version_override:
     '6.0': 60/admindoc/configuring-ms-sql-server
     '5.8': 58/admindoc/configuring-ms-sql-server
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 10:03'
         message: ''
         version: '49'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-13 14:42'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-13 14:41'
         message: ''
         version: '47'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-11 09:12'
         message: ''
         version: '46'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-09 13:58'
         message: ''
         version: '45'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-04 13:43'
         message: ''
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-25 10:05'
         message: ''
         version: '43'
-    - 
+    -
         author: Thierry Martins
         date: '2014-10-31 15:14'
         message: title capitalization
         version: '42'
-    - 
+    -
         author: Thierry Martins
         date: '2014-10-31 15:07'
         message: stopwords conf
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-13 17:39'
         message: Updated supported versions for 6.0
         version: '40'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-25 14:56'
         message: Remove 5.4 reference
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-24 15:50'
         message: ''
         version: '38'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-19 19:41'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-25 11:26'
         message: Fixed formatting
         version: '36'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-09-24 18:11'
         message: ''
         version: '35'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-09-11 18:27'
         message: ''
         version: '34'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-09-11 17:55'
         message: Add isolation information and lock escalation
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-23 14:09'
         message: ''
         version: '32'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-07-18 16:00'
         message: format
         version: '31'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-07-18 15:59'
         message: supported versions
         version: '30'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-07-18 15:55'
         message: collation stuff
         version: '29'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-07-17 16:50'
         message: added analyzer config
         version: '28'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-04-11 15:37'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '27'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-04-11 15:37'
         message: ''
         version: '26'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2012-11-09 12:19'
         message: ''
         version: '25'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2012-11-09 12:13'
         message: ''
         version: '24'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2012-11-09 12:09'
         message: ''
         version: '23'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-06-04 14:05'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '22'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-06-04 14:05'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '21'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-06-04 14:05'
         message: Migrated to Confluence 4.0
         version: '20'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-06-04 14:05'
         message: added WITH ROLLBACK IMMEDIATE
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 12:14'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 11:19'
         message: Added related pages
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2012-03-28 18:28'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 09:50'
         message: ''
         version: '15'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-09-01 11:21'
         message: ''
         version: '14'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-07-29 18:42'
         message: require a CS collation
         version: '13'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-07-28 17:07'
         message: ''
         version: '12'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-07-28 17:02'
         message: update on db collation
         version: '11'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-07-28 16:46'
         message: Update for read acls optimization
         version: '10'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2011-03-08 20:42'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 17:22'
         message: ''
         version: '8'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-29 11:34'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-29 18:18'
         message: 'moved driver information to [NXDOC:Configuring Nuxeo EP]'
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-29 12:23'
         message: Add jdbc driver information
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-08-20 12:45'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-08-20 12:40'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-08-20 12:34'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-08-20 12:29'
         message: ''

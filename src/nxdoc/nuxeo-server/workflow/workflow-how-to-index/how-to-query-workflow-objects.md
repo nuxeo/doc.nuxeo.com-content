@@ -12,7 +12,7 @@ details:
         topics: 'Workflow, NXQL, Query'
 labels:
     - lts2016-ok
-    - query
+    - query-pageprovider-component
     - persistence
     - nxql
     - workflow
