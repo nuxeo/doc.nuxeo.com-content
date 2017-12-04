@@ -101,6 +101,13 @@ In some cases, versions of some documents where not deleted even when the docume
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-14187](https://jira.nuxeo.com/browse/NXP-14187).
 
+#### Document Initialization (Empty Document) REST endpoint {{since '9.3'}}
+
+A new web adapter allows returning an empty document model so as to get default values (and listeners impact on emptyDocumentCreated event) client side. The adapter is named @emptyWithDefault. 
+It can be used as `/@emptyWithDefault?emptyDocType=File&emptyDocName=toto` or as `path/{docPath}/@emptyWithDefault`, `id/{docId}/@emptyWithDefault?emptyDocType=File&emptyDocName=toto` 
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23156](https://jira.nuxeo.com/browse/NXP-23156).
+
 #### Compatible with CloudFront for Caching Binaries  {{since '9.1'}}
 
 When using S3 it is possible to redirect signed CloudFront URLs instead of directly S3 ones, so as to benefit from AWS world wild content caching service.
@@ -136,11 +143,18 @@ The {{Document.Update}} operation has been updated so that it is possible to use
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22751](https://jira.nuxeo.com/browse/NXP-22751).
 
-#### Ability to set change token from REST API  {{since '9.3'}}
+#### Ability to set change token from REST API {{since '9.3'}}
 
 When sending an update to a document with the REST API, the JSON can now include a {{changeToken}} field (as a toplevel field), with the same value that was retrieved previously when reading the document. A 409 will then be returned if the update is in conflict server-side.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22254](https://jira.nuxeo.com/browse/NXP-22254).
+#### Retention Flag {{since '9.3'}}
+
+A new method has been added to the CoreSession so as to set a flag `ecm:isRetentionActive` on a document in order to specify it is in retention: 
+`session.setRetentionActive(doc.getRef(), true);` 
+An event `retentionActiveChanged` is sent and an entry is logged in the audit trail when the method is called. 
+When a document is in retention, it can't be deleted using the delete API. The retention flag needs to be set to false prior to deletion. This can only be done by users with WriteSecurity permission.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23165](https://jira.nuxeo.com/browse/NXP-23165).
 
 #### Allow for the Document to Not Be Saved In The Add/Remove Facet Operations  {{since '9.3'}}
 
@@ -279,6 +293,12 @@ Directory interface now has a MongoDB implementation included in the default dis
 A property has been added to keep directories in SQL when using MongoDB `nuxeo.mongodb.directories.enabled` (that must be set to true for keeping directories on SQL).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23190](https://jira.nuxeo.com/browse/NXP-23190).
+
+#### Default Caching Configuration for Directories {{since '9.3'}}
+
+If a cache name is not defined in the directory description, a cache named `directoryname-cache` will be created with the values of the default-cache.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-17982](https://jira.nuxeo.com/browse/NXP-17982).
 
 #### Generic Directories References {{since '9.2'}}
 
@@ -460,6 +480,23 @@ Elasticsearch's Nuxeo Platform dependence is now on version 5.6 of the search en
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22812](https://jira.nuxeo.com/browse/NXP-22812).
 
+#### ES Rest client supports TLS and BasicAuth {{since '9.3'}}
+
+The ElasticSearchClient Extension point can be configured to enable Basic Auth: 
+```xml
+<elasticSearchClient class="org.nuxeo.elasticsearch.clientESRestClientFactory"> 
+<option name="addressList">localhost:9300</option> 
+<option name="username">jdoe</option> 
+<option name="password">secret</option> 
+</elasticSearchClient> 
+```
+and SSL using `keystore.path` and `keystore.password` options. 
+
+Socket and connection timeout are also configurable with `socket.timeout.ms` and `connection.timeout.ms`.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23060](https://jira.nuxeo.com/browse/NXP-23060).
+
+
 #### Shield Support {{since '9.2'}}
 
 Elasticsearch Shield support has been added since Nuxeo Platform 9.1. It is possible to configure authentication credentials [in nuxeo.conf]({{page version='' space='nxdoc' page='configuration-parameters-index-nuxeoconf'}}) (`elasticsearch.shield.enabled`, `elasticsearch.shield.username`, `elasticsearch.shield.password`). It also includes support of SSL encryption of the traffic since Nuxeo Platform 9.2.
@@ -467,6 +504,17 @@ Elasticsearch Shield support has been added since Nuxeo Platform 9.1. It is poss
 Warning: in 9.3 this feature has been removed as Elasticsearch implementation was migrated to 5.X. A compatibility with X-Pack will be added later.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21208](https://jira.nuxeo.com/browse/NXP-21208) and [NXP-22042](https://jira.nuxeo.com/browse/NXP-22042)and the [Elasticsearch Shield documentation]({{page version='' space='nxdoc' page='elasticsearch-setup'}}#configuring-access-to-the-cluster-through-elasticsearch-shield-plugin) for more information.
+
+
+#### Re-indexing Without Downtime {{since '9.3'}}
+
+Reindexing the repository can be done with no downtime as new parameters have been added to the index descriptor: 
+
+- manageAlias=true: Nuxeo will manages 2 aliases: one for searching using the name of the contrib (default to "nuxeo"), one for writing with a "-write" suffix ("nuxeo-write"), both aliases will point to the same index ("nuxeo-0000"). When reindexing the repository a new index is created ("nuxeo-0001") and the write alias is updated to use it, the search alias stay on the previous index ("nuxeo-0000"). Once indexing is termintated the search alias is updated to point to the new index (nuxeo-0001). It is up to the adminitrator to clean old non used index (keep the 2 last created for instance) 
+
+- writeAlias: When specified the write is done on this alias, nuxeo will not manage any aliases. The use case is for managing time based index for audit, one can create a new index every month the search alias can point to multiple indexes.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-191902](https://jira.nuxeo.com/browse/NXP-191902).
 
 #### Elasticsearch PageProvider Limits Navigation to 10k Documents (Configurable) {{since '9.2'}}
 
@@ -624,6 +672,12 @@ https://nightly.nuxeo.com/nuxeo/nxbigblob/4db11225407dad8432e75ba2d2778a49
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23062](https://jira.nuxeo.com/browse/NXP-23062).
 
+#### Add a Comment While Updating a Document Through the REST API {{since '9.3'}}
+
+An update comment can now be passed through the `Update-Comment` header when updating a document through the REST API. Comment will be added to the Audit log.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23319](https://jira.nuxeo.com/browse/NXP-23319).
+
 #### Jersay client handler {{since '9.3'}}
 
 REST API Client handler now uses Apache's Jersey implementation while it was using the JDK one previously. It provides stricter behaviors leading to better resilience.
@@ -638,13 +692,31 @@ documentUrl enricher now takes into account the application that has been set as
 
 ### User Management
 
-####  nuxeo.user.emergency.enable Disabled By Default {{since '9.3'}}
+#### nuxeo.user.emergency.enable Disabled By Default {{since '9.3'}}
 
 Virtual emergency user that was available by default when using LDAP for authentication is disabled by default for security reason.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22888](https://jira.nuxeo.com/browse/NXP-22888).
 
+#### Improve LDAP directory Performance When Using Cache {{since '9.3'}}
+
+LDAP connector has been optimized.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-19848](https://jira.nuxeo.com/browse/NXP-19848).
+
 ### Packaging
+
+#### Tomcat 8.5.23 {{since '9.3'}}
+
+Tomcat Server has been upgraded to version 8.5.23
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-20370](https://jira.nuxeo.com/browse/NXP-20370).
+
+#### Improved Tomcat Configurability {{since '9.3'}}
+
+More configuration is allowed on the embedded Tomcat http pool: number of http threads and queue size. This allows to avoid DOS. We also give in server.xml an exemple of configuration with two http pools, one for Drive one for other web requests.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23318](https://jira.nuxeo.com/browse/NXP-23318).
 
 #### Static WAR Generation {{since '9.1'}}
 Static WAR generation has been fixed and added back to continuous integration. Nuxeo static WAR can be deployed as a standard web application on a Tomcat server.
@@ -688,12 +760,35 @@ A new layout has been implemented for pictures so as to display all picture rela
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-20282](https://jira.nuxeo.com/browse/NXP-20282).
 
-### Nuxeo Drive  {{since '9.1'}}
+### Nuxeo Drive  
+
+#### Server Side Configuration Of Drive Clients
+
+Some properties of the Drive clients can now be configured (and updated) from the server for all Drive clients: 
+```json
+{ 
+"delay": 30, 
+"ignored_prefixes": [".", "icon\r", "thumbs.db", "desktop.ini", "~$"], 
+"ignored_suffixes": [".bak", ".crdownload", ".lock", ".nxpart", ".part", ".partial", ".swp", ".tmp", "~", ".dwl", ".dwl2"], 
+"ignored_files": ["^atmp\\d+$"], 
+"log_level_file": "DEBUG", 
+"timeout": 30, 
+"handshake_timeout": 60, 
+"beta_channel": false, 
+"update_check_delay": 3600, 
+"ui": "web" 
+} 
+```
+Do not hesitate to give some feedback if you see some additional properties that would be useful to add here.
+
+
+#### Do Not Copy Registrations When Copying a Folder {{since '9.1'}}
 
 Root registrations are not copied when a document and its children are copied.
 In 9.1 and later, by default, we reset the synchronization root registrations on a copied document and its children. In LTS 2016 and earlier the previous behavior is kept.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21676](https://jira.nuxeo.com/browse/NXP-21676).
+
 
 ### Nuxeo Vision
 
@@ -803,6 +898,13 @@ A new view for media search results has been added, with justified display of th
 ![Web UI 9.2 media justified grid]({{file name='9.2-assets-justified-grid.png'}} ??w=400,border=true)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22474](https://jira.nuxeo.com/browse/NXP-22474).
+
+#### Bulk Download Action on Document Selection {since '9.3'}}
+
+A new action is available in the bulk selection actions list, that allows to bulk download selected content in a single zip downloaded asynchronously. The main file is added to the zip for each selected document. When it comes to folders, content is recursively resolved up to a configurable level.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23095](https://jira.nuxeo.com/browse/NXP-23095).
+
 
 #### Improved Task View {{since '9.2'}}
 
