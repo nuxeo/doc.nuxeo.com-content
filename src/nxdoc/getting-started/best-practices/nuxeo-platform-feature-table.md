@@ -295,7 +295,7 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo IMAP connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector)</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>N/A</td>
+    <td>LTS&nbsp;2018</td>
     <td colspan="1">[Nuxeo IMAP Connector user documentation]({{page space='userdoc' page='nuxeo-imap-connector'}})</td>
 </tr>
 <tr>
@@ -825,7 +825,7 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Media Publishing](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>N/A</td>
+    <td>LTS&nbsp;2018</td>
     <td colspan="1">Publication of videos to YouTube and Wistia.<br/>
     [Nuxeo Media Publishing documentation]({{page page='nuxeo-media-publishing'}})<br/>
     Still in consideration for Web UI
@@ -1331,7 +1331,7 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>N/A</td>
+    <td>LTS&nbsp;2018</td>
     <td colspan="1">
     [User documentation]({{page space='userdoc' page='editing-content#relations'}})<br/>
     [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})<br/>
@@ -1343,7 +1343,7 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>&#10003;</td>
+    <td>LTS&nbsp;2018</td>
     <td colspan="1">
     [User documentation]({{page space='userdoc' page='deleting-content'}})<br/>
     [Developer documentation]({{page page='deleting-documents'}})
@@ -1389,7 +1389,7 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>N/A</td>
+    <td>LTS&nbsp;2018</td>
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
@@ -1644,7 +1644,7 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2018</td>
+    <td>N/A</td>
     <td colspan="1"></td>
 </tr>
 <tr>
