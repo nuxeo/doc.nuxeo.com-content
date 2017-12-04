@@ -47,6 +47,12 @@ Runtime reload strategy has been set by default to `standby` and can be changed 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22546](https://jira.nuxeo.com/browse/NXP-22546).
 
+#### Update Mechanism WHen Reloading Components {{since '9.3'}}
+
+Hot-reload has been optimized so as to limit the number of components that are reloaded, also making sure that they are loaded only once during the process.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23166](https://jira.nuxeo.com/browse/NXP-23166).
+
 #### Graceful Shutdown in Tomcat {{since '9.2'}}
 
 Runtime behavior has been cleaned up: when shutting down Tomcat it is now possible to make sure that all asynchronous work has been either processed or task has been persisted.
@@ -234,6 +240,12 @@ When using PostgreSQL, stricter database-level checks are now enabled to prevent
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22421](https://jira.nuxeo.com/browse/NXP-22421).
 
+#### Database-Level Integrity Constraints for PostgreSQL BIS {{since '9.3'}}
+
+When using Postgres, a UNIQUE INDEX has been added on several tables preventing from having twice the same entry: the list of contributors, as well as the hierarchy tables.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [XP-23198](https://jira.nuxeo.com/browse/NXP-23198).
+
 #### Exception When Using S3 storage With an Empty AWS_ACCESS_KEY_ID {{since '9.3}}
 
 A more meaningful error is thrown when the platform doesn't find AWS_ACCESS_KEY_ID when starting.
@@ -261,6 +273,12 @@ Directories access protected by giving `Read` permission to group "Nobody" are n
 Directory interface now has a MongoDB implementation included in the default distribution.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21582](https://jira.nuxeo.com/browse/NXP-21582).
+
+#### Simple Property to Switch Back to SQL Directories when MongoDB is Used
+
+A property has been added to keep directories in SQL when using MongoDB `nuxeo.mongodb.directories.enabled` (that must be set to true for keeping directories on SQL).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23190](https://jira.nuxeo.com/browse/NXP-23190).
 
 #### Generic Directories References {{since '9.2'}}
 
@@ -314,11 +332,25 @@ Some metrics of the Work manager added during this LTS 2017 cycle has been renam
 
 ### Audit
 
-#### MongoDB Audit Backend  {{since '9.1'}}
+#### MongoDB Audit Backend {{since '9.1'}}
 
 A MongoDB backend has been implemented with the purpose of being able to install the Nuxeo Platform without requiring an additional relation database. Since 9.3, the implementation is available by default and doesn't require to install any addon.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-21500](https://jira.nuxeo.com/browse/NXP-21500) and [NXP-22247](https://jira.nuxeo.com/browse/NXP-22247) .
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-21500](https://jira.nuxeo.com/browse/NXP-21500) and [NXP-22247](https://jira.nuxeo.com/browse/NXP-22247).
+
+
+#### Audit Writer Based on nuxeo-stream {{since '9.3'}}
+
+A new audit synchronous listener and writer based on Nuxeo Stream is activated by default. This provides a more reliable and performant solution than the previous audit bulk writer. 
+The old implementation can still be used with the following option: `nuxeo.stream.audit.enabled = false.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-22109](https://jira.nuxeo.com/browse/NXP-22109).
+
+#### New Audit APIs getLatestLogId and getLogEntriesAfter {{since '9.3'}}
+
+Two new methods have been added to the Audit service: `getLatestLogId` and `getLogEntriesAfter`
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-21661](https://jira.nuxeo.com/browse/NXP-21661).
 
 ### CMIS
 
@@ -380,6 +412,45 @@ It is now possible to export a Note with its embedded images as a PDF.
 ffmpeg embedded aac encoder is now used instead of libfaac, simplifying the set up phase.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22777](https://jira.nuxeo.com/browse/NXP-22777).
+
+### Rendition
+
+#### defaultRendition extension point to Rendition service {{since '9.3'}}
+
+In the same way we are able to easily customize the download service's permission extension point (described in https://doc.nuxeo.com/nxdoc/file-download-security-policies/), a new extension point allows to dynamically evaluate a default rendition to be generated for a given document. This evaluation is based on the JVM Nashorn javascript engine and looks like: 
+
+```xml
+<extension target="org.nuxeo.ecm.platform.rendition.service.RenditionService" 
+point="defaultRendition"> 
+<defaultRendition name="nxDefaultRendition"> 
+<script language="JavaScript"> 
+function run() { 
+if (Reason == 'download') { 
+if (Document.getType() == "File") { 
+return 'mainBlob'; 
+} else if (Document.getType() == 'Folder') { 
+return ''; 
+} else { 
+return 'xmlExport'; 
+} 
+} else { 
+return ''; 
+} 
+} 
+</script> 
+</defaultRendition> 
+</extension> 
+```
+This default rendition is now used for bulk downloading documents. This way, users can easily customize how a document type can be rendered within the context of a bulk download. For instance, within a zip resulting from a bulk download, documents without any blob attached can be xml rendered, Picture documents will have their main blob rendered, Note will be rendered as PDF, etc.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23258](https://jira.nuxeo.com/browse/NXP-23258).
+
+
+#### Operation to Bulk Download the Main Rendition {{since '9.3'}}
+
+The Blob.BulkDownload operation allows to bulk download all the main renditions provided by each of the documents set in the input of that operation. It returns an asynchronous blob information.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23063](https://jira.nuxeo.com/browse/NXP-23063).
 
 ### Elasticsearch
 
@@ -522,7 +593,36 @@ Endpoints to CRUD OAuth tokens and providers (in respect to permission) have bee
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-20884](https://jira.nuxeo.com/browse/NXP-20884).
 
+### Transient Store
+
+#### Transient Store based on Key/Value Service and Blob Provider {{since '9.3'}}
+
+The transient store has been re-implemented on top of the KeyValueService and a BlobProvider so as to remove the dependency on Redis (when no service makes use of it anymore).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21871](https://jira.nuxeo.com/browse/NXP-21871).
+
 ### REST API
+
+#### Asynchronous download {{since '9.3'}}
+
+A new asynchronous download mechanism has been introduced. It allows getting a status of the asynchronous preparation of the blob to download, before downloading it for real. For instance when calling the operation Blob.BulkDownload answer will first be : `"key":"4db11225407dad8432e75ba2d2778a49","completed":false,"progress":0`. 
+
+
+Then calling `blobstatus enpoint with the provided key `https://nightly.nuxeo.com/nuxeo/nxblobstatus/4db11225407dad8432e75ba2d2778a49` 
+gives an updated result: 
+
+```json
+{"key":"4db11225407dad8432e75ba2d2778a49","completed":true,"progress":100} 
+```
+
+When completed, one can call the download servlet with the same key: 
+```json
+{ 
+https://nightly.nuxeo.com/nuxeo/nxbigblob/4db11225407dad8432e75ba2d2778a49 
+} 
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23062](https://jira.nuxeo.com/browse/NXP-23062).
 
 #### Jersay client handler {{since '9.3'}}
 
@@ -569,11 +669,18 @@ A new addon has been implemented that allows to leverage Amazon Lambdas for effi
 
 ### Imaging
 
-#### Disabling Default Picture Conversions  {{since '9.1'}}
+#### Disabling Default Picture Conversions {{since '9.1'}}
 
 Default picture conversions can now be disabled by using the `enabled` attribute on the [PictureConversions extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.picture.ImagingComponent--pictureConversions) contributions.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21311](https://jira.nuxeo.com/browse/NXP-21311).
+
+#### New Layout For Picture Document Type {{since '9.3'}}
+
+A new layout has been implemented for pictures so as to display all picture related metadata (IPTC, technical information, etc.).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23064](https://jira.nuxeo.com/browse/NXP-23064).
+
 
 ### Binary Metadata  {{since '9.1'}}
 
