@@ -10,6 +10,7 @@ labels:
     - jetty
     - tomcat
     - packaging-component
+    - ataillefer
     - nuxeo-distribution-tools
     - ant-assembly-maven-plugin
     - distributions-component

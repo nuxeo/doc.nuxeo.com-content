@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - operation
     - rest-api
+    - troger
     - automation
     - excerpt
     - content-review-lts2017

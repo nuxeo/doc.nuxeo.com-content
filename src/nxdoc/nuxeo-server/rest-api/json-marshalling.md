@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - marshalling
     - json
+    - troger
     - link-update
     - rest-api
     - content-review-lts2017

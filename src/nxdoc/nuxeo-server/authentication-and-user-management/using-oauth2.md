@@ -7,7 +7,7 @@ review:
 labels:
     - lts2016-ok
     - oauth
-    - oauth-component
+    - ataillefer
     - authentication
     - content-review-lts2017
 toc: true

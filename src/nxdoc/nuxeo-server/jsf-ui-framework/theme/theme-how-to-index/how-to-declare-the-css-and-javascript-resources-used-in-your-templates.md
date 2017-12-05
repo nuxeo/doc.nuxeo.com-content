@@ -14,6 +14,7 @@ labels:
     - lts2016-ok
     - css
     - javascript
+    - troger
     - template
     - howto
     - theme

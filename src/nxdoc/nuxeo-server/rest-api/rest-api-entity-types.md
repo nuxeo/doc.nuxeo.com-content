@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - rest-api
+    - troger
     - blogs
     - endpoint
     - multiexcerpt

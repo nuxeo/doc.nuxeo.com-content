@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - automation
     - javascript
+    - troger
     - link-update
     - scripting
     - university

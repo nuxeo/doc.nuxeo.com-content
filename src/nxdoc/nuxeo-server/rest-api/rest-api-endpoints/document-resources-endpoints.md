@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - endpoint
     - rest-api
+    - troger
     - content-review-lts2017
 toc: true
 confluence:

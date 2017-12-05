@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - link-update
     - rest-api
+    - troger
     - enricher
     - university
     - content-review-lts2017

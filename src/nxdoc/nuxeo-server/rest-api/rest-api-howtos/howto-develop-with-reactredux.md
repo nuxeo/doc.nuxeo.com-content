@@ -13,6 +13,7 @@ details:
 labels:
     - howto
     - rest-api
+    - troger
     - content-review-lts2017
 toc: true
 

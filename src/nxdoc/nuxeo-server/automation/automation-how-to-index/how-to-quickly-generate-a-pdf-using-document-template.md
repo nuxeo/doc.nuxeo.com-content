@@ -15,6 +15,7 @@ labels:
     - howto
     - automation
     - conversion
+    - troger
     - excerpt
     - multiexcerpt-include
     - content-review-lts2017

@@ -10,6 +10,7 @@ labels:
     - todo
     - link-update
     - rest-api
+    - troger
     - excerpt
     - content-review-lts2017
 toc: true

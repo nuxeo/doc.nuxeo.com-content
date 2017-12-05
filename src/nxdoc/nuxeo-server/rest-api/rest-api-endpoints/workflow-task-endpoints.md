@@ -13,7 +13,7 @@ details:
 labels:
     - lts2016-ok
     - rest-api
-    - workflow
+    - troger
     - excerpt
     - content-review-lts2017
 toc: true

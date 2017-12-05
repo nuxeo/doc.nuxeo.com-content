@@ -10,6 +10,7 @@ labels:
     - import
     - marketplace-package
     - nuxeo-csv
+    - troger
     - csv-importer-component
     - content-review-lts2017
 toc: true
@@ -26,172 +27,172 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+CSV
 tree_item_index: 1200
 history:
-    - 
+    -
         author: Karin Touchie
         date: '2016-10-07 12:19'
         message: dd Import Mode option to CSV importe
         version: '34'
-    - 
+    -
         author: Frantz Fischer
         date: '2016-07-29 10:32'
         message: ''
         version: '33'
-    - 
+    -
         author: Frantz Fischer
         date: '2016-07-29 10:23'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2016-06-23 08:34'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2016-06-10 09:06'
         message: Update installation excerpt
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 12:32'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-30 08:21'
         message: ''
         version: '28'
-    - 
+    -
         author: Karin Touchie
         date: '2016-05-27 14:46'
         message: ''
         version: '27'
-    - 
+    -
         author: Karin Touchie
         date: '2016-05-27 14:39'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-15 08:35'
         message: ''
         version: '25'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-11-30 08:55'
         message: 'Added event section: creation event, not import event'
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-25 17:25'
         message: new Edit permission
         version: '23'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-11-18 15:25'
         message: Fixes layout by extracting text from multiexcerpt macro.
         version: '22'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-13 13:54'
         message: 'Basic import now heading3 => appears in TOC'
         version: '21'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-13 13:46'
         message: phrasing
         version: '20'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-13 13:39'
         message: '1st -> first'
         version: '19'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-10-13 13:38'
         message: '1st -> first'
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-05 13:56'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-29 12:55'
         message: Add link to configuration section
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2015-05-04 09:53'
         message: Title capitalization
         version: '15'
-    - 
+    -
         author: Thomas Roger
         date: '2015-04-30 10:12'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-04 15:10'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 00:54'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 00:46'
         message: Merging admin and user doc
         version: '11'
-    - 
+    -
         author: Thomas Roger
         date: '2014-08-21 11:30'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-17 16:33'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-12 11:06'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-12 18:30'
         message: Removed related pages from TOC
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-05 15:10'
         message: Added zip sample fro file import
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-05 15:08'
         message: 'Added sample 1. '
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-02 20:08'
         message: Added related pages
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-02 19:44'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-02 19:40'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-19 16:02'
         message: ''

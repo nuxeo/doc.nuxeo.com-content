@@ -16,6 +16,7 @@ labels:
     - howto
     - dam
     - conversion
+    - troger
     - video
     - convert-component
     - excerpt
@@ -33,37 +34,37 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/pRA5AQ'
     source_link: /display/NXDOC/How+to+Contribute+a+New+Video+Conversion
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-09-08 13:03'
         message: ''
         version: '7'
-    - 
+    -
         author: Thomas Roger
         date: '2015-10-13 09:28'
         message: ''
         version: '6'
-    - 
+    -
         author: Thomas Roger
         date: '2015-10-13 09:25'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:20'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-21 12:10'
         message: 'Fix typos and formatting, categorize howto'
         version: '3'
-    - 
+    -
         author: Thomas Roger
         date: '2014-10-21 11:59'
         message: ''
         version: '2'
-    - 
+    -
         author: Thomas Roger
         date: '2014-10-21 11:58'
         message: ''

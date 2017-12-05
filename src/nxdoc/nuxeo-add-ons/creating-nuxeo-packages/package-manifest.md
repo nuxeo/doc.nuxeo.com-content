@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - packaging-component
+    - ataillefer
     - todo
     - content-review-lts2017
 confluence:
@@ -21,107 +22,107 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/HgIz'
     source_link: /display/NXDOC/Package+Manifest
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-22 09:41'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-23 10:44'
         message: 'Remove link to page "Creating Marketplace Packages", formatting'
         version: '20'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-19 15:32'
         message: ''
         version: '19'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-19 15:28'
         message: ''
         version: '18'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-19 15:23'
         message: ''
         version: '17'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-19 15:18'
         message: ''
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-19 15:11'
         message: ''
         version: '15'
-    - 
+    -
         author: Julien Carsique
         date: '2015-11-19 14:38'
         message: ''
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2015-09-25 15:22'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-21 12:00'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-21 12:00'
         message: Fixed link format
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2011-11-16 18:50'
         message: ''
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2011-02-03 18:40'
         message: updated pointer to explanation of each package property
         version: '9'
-    - 
+    -
         author: whajeri
         date: '2010-11-12 13:03'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-06 08:27'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-10-06 08:27'
         message: ''
         version: '6'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-08 01:59'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-07-07 21:58'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-07 16:22'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-07 16:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-07 11:25'
         message: ''

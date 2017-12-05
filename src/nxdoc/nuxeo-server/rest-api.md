@@ -8,7 +8,7 @@ labels:
     - lts2016-ok
     - url
     - rest-api
-    - last-review-20150422
+    - troger
     - university
     - excerpt
     - multi-excerpt

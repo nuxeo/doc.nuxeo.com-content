@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - logs
     - audit
+    - ataillefer
     - nxdoc-743
     - content-review-lts2017
 confluence:
@@ -27,77 +28,77 @@ version_override:
     '6.0': 60/admindoc/purging-audit-logs-nxp_logs
     '5.8': 58/admindoc/purging-audit-logs-nxp_logs
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 10:00'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-02 16:27'
         message: 'remove <span> '
         version: '14'
-    - 
+    -
         author: Vincent Dutat
         date: '2015-05-14 18:52'
         message: ''
         version: '13'
-    - 
+    -
         author: Vincent Dutat
         date: '2015-05-14 18:44'
         message: ''
         version: '12'
-    - 
+    -
         author: Vincent Dutat
         date: '2015-05-14 18:43'
         message: ''
         version: '11'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-02-05 08:54'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-24 10:29'
         message: ''
         version: '9'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-01-23 14:08'
         message: ''
         version: '8'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-01-23 14:07'
         message: Add oracle procedure
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-25 16:14'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-15 11:56'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-06-17 12:22'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-06-17 12:22'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 15:11'
         message: Added related pages
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-14 11:41'
         message: ''

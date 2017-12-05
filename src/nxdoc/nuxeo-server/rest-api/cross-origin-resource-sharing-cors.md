@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - cors
     - rest-api
+    - troger
     - content-review-lts2017
 toc: true
 confluence:

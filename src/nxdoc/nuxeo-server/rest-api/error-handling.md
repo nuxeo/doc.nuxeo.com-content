@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - exception
     - rest-api
+    - troger
     - content-review-lts2017
 toc: true
 version_override:

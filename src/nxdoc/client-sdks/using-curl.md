@@ -9,6 +9,7 @@ labels:
     - curl
     - client
     - rest-api
+    - troger
     - excerpt
     - multiexcerpt
     - content-review-lts2017
