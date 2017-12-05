@@ -15,6 +15,7 @@ labels:
     - howto
     - layout
     - action
+    - atchertchian
     - studio
     - content-review-lts2017
 confluence:
@@ -30,92 +31,92 @@ confluence:
     source_link: /display/NXDOC/How+to+Add+a+New+Action+Category+on+a+Document+Tab
 tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 13:40'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-14 16:02'
         message: Fix Studio menu label
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-07 11:01'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 22:33'
         message: ''
         version: '15'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 12:12'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-17 17:03'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-17 17:01'
         message: ''
         version: '12'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-05-14 11:05'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 17:51'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-20 15:58'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 17:31'
         message: 'Added excerpt, formatting'
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 15:16'
         message: Migrated to Confluence 4.0
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 15:16'
         message: Added related tutorials
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-02 16:49'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-02 12:19'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-12 12:31'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-12 12:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-07-11 19:06'
         message: ''

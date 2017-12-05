@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - nuxeo-jenkins-report
+    - atchertchian
     - content-review-lts2017
 toc: true
 confluence:
@@ -22,42 +23,42 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Jenkins+Report
 tree_item_index: 2000
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 14:42'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 14:38'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 14:38'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 15:56'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-04 14:36'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 15:10'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-16 17:29'
         message: Removed related topics from TOC
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 17:44'
         message: ''

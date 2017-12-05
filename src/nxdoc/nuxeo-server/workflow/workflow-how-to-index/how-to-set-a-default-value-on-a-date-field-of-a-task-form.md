@@ -13,6 +13,7 @@ details:
 labels:
     - lts2016-ok
     - workflow
+    - grenard
     - howto
     - excerpt
     - content-review-lts2017
@@ -29,32 +30,32 @@ confluence:
     source_link: /display/NXDOC/How+to+Set+a+Default+Value+on+a+Date+Field+of+a+Task+Form
 tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:49'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 18:07'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 18:07'
         message: ''
         version: '4'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-11-15 21:11'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 22:40'
         message: Added excerpt
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-31 10:44'
         message: ''

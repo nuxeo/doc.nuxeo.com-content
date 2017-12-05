@@ -8,6 +8,8 @@ labels:
     - lts2016-ok
     - webengine
     - webengine-component
+    - home
+    - mlumeau
     - nxDocTeam
     - nxProduct
     - content-review-lts2017
@@ -24,112 +26,112 @@ confluence:
     source_link: /display/NXDOC/WebEngine+Tutorials
 tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-12 09:49'
         message: dd link to atatched sample
         version: '22'
-    - 
+    -
         author: Damien Metzler
         date: '2015-10-20 14:32'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-25 14:02'
         message: Remove 5.4 reference
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 17:06'
         message: Migrated to Confluence 4.0
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 17:06'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-05-17 10:13'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-05-16 17:53'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-05-16 17:51'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2011-05-16 17:40'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2011-01-08 12:39'
         message: ''
         version: '13'
-    - 
+    -
         author: Julien Carsique
         date: '2010-11-16 16:44'
         message: 'Updating the WebEngine sample paths '
         version: '12'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2010-10-22 19:00'
         message: 'Updating the WebEngine sample paths '
         version: '11'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 12:22'
         message: ''
         version: '10'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 12:21'
         message: ''
         version: '9'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 12:19'
         message: ''
         version: '8'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 12:18'
         message: ''
         version: '7'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:40'
         message: ''
         version: '6'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:35'
         message: ''
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:32'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:31'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 15:35'
         message: ''

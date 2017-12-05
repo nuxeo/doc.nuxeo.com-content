@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - query-pageprovider-component
+    - kleturc
     - content-review-lts2017
 toc: true
 confluence:
@@ -22,297 +23,297 @@ confluence:
     source_link: /display/NXDOC/Indexing+and+Query
 tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-28 12:58'
         message: ''
         version: '59'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-22 17:16'
         message: ''
         version: '58'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 14:42'
         message: ''
         version: '57'
-    - 
+    -
         author: Benoit Delbosc
         date: '2014-11-10 11:26'
         message: ''
         version: '56'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-07 10:21'
         message: ''
         version: '55'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 14:23'
         message: ''
         version: '54'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 14:17'
         message: ''
         version: '53'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 14:07'
         message: ''
         version: '52'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 14:06'
         message: Merging tables cells
         version: '51'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 12:03'
         message: ''
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-03 09:51'
         message: ''
         version: '49'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-02 22:56'
         message: ''
         version: '48'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 22:31'
         message: ''
         version: '47'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 22:17'
         message: ''
         version: '46'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 22:15'
         message: ''
         version: '45'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 22:09'
         message: ''
         version: '44'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 22:07'
         message: ''
         version: '43'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 22:03'
         message: ''
         version: '42'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 21:53'
         message: ''
         version: '41'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 21:52'
         message: ''
         version: '40'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 21:34'
         message: ''
         version: '39'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 21:33'
         message: ''
         version: '38'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 21:06'
         message: ''
         version: '37'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 19:14'
         message: ''
         version: '36'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 19:12'
         message: ''
         version: '35'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 19:05'
         message: ''
         version: '34'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 19:04'
         message: ''
         version: '33'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 16:03'
         message: ''
         version: '32'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-02 15:41'
         message: ''
         version: '31'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-30 16:52'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-30 10:11'
         message: typos and format
         version: '29'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-29 11:10'
         message: ''
         version: '28'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-29 10:56'
         message: ''
         version: '27'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-29 09:47'
         message: ''
         version: '26'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-29 09:19'
         message: ''
         version: '25'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-29 00:43'
         message: ''
         version: '24'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-29 00:38'
         message: ''
         version: '23'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-29 00:27'
         message: ''
         version: '22'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-29 00:26'
         message: ''
         version: '21'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-29 00:23'
         message: ''
         version: '20'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-29 00:08'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-29 00:06'
         message: ''
         version: '18'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-29 00:00'
         message: ''
         version: '17'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-28 18:09'
         message: ''
         version: '16'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-28 17:07'
         message: ''
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-10-28 17:06'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 14:25'
         message: ''
         version: '13'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-04 14:48'
         message: ''
         version: '12'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-04 14:48'
         message: link to search screen doc + rephrase
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 18:25'
         message: Added children pages and excerpts
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 17:46'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 19:19'
         message: Migrated to Confluence 4.0
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 19:19'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-02 18:16'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-24 17:22'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-24 14:50'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-11-29 10:42'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-11-29 10:35'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-11-29 10:32'
         message: ''

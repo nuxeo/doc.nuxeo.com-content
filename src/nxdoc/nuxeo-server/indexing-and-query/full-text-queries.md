@@ -9,6 +9,7 @@ labels:
     - nxql
     - full-text
     - query-pageprovider-component
+    - kleturc
     - content-review-lts2017
 toc: true
 confluence:

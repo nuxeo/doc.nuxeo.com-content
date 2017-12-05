@@ -10,6 +10,7 @@ labels:
     - tuto-document-type
     - workspace
     - content-view
+    - atchertchian
     - content-review-lts2017
 toc: true
 confluence:

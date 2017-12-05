@@ -17,6 +17,7 @@ labels:
     - howto
     - layout
     - layout-widgets-component
+    - atchertchian
     - excerpt
     - content-review-lts2017
 confluence:
@@ -32,52 +33,52 @@ confluence:
     source_link: /display/NXDOC/How+to+Add+a+New+Widget+to+the+Default+Summary+Layout
 tree_item_index: 500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 10:04'
         message: pdate how-to topic
         version: '10'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-10-13 12:44'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:26'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:55'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-12 18:03'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-12 14:56'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-11 18:24'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-07-17 17:17'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 17:40'
         message: ''
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-03 16:46'
         message: ''

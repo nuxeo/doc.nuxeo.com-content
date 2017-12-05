@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - faq
     - workflow
+    - grenard
     - content-review-lts2017
 confluence:
     ajs-parent-page-id: '12913723'

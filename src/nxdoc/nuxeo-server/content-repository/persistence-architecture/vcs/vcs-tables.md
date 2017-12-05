@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - vcs
     - acl
+    - bdelbosc
     - vcs-component
     - content-review-lts2017
 toc: true

@@ -9,6 +9,7 @@ labels:
     - simple-search
     - query-pageprovider-component
     - search-tab-component
+    - atchertchian
     - nxdoc-450
     - link-update
     - content-review-lts2017

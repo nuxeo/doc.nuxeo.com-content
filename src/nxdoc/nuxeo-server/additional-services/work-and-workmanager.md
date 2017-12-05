@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - workmanager
+    - bdelbosc
     - node
     - work-manager-component
     - content-review-lts2017

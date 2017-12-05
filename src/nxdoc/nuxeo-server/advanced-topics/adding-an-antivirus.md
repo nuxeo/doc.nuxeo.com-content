@@ -8,6 +8,7 @@ labels:
     - content-review-lts2016
     - antivirus
     - architecture
+    - fguillaume
     - nxdoc-744
     - excerpt
     - content-review-lts2017
@@ -25,52 +26,52 @@ confluence:
     source_link: /display/NXDOC/Adding+an+Antivirus
 tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 15:31'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-08 14:29'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-08 14:23'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 14:36'
         message: Update table of contents look
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-08 13:27'
         message: typo
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-08 12:32'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-08 12:30'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-08 12:29'
         message: Added related topics
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-08 12:00'
         message: Formatting
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2014-01-08 11:40'
         message: ''

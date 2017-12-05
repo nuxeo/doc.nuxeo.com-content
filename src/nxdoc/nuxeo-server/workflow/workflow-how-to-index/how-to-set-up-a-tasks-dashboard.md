@@ -15,6 +15,7 @@ labels:
     - task
     - dashboard
     - workflow
+    - grenard
     - howto
     - excerpt
     - content-review-lts2017

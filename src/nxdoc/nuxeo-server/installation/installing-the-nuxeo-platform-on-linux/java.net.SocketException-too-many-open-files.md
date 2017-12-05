@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2017
     - install-linux
+    - mguillaume
 toc: true
 tree_item_index: 300
 

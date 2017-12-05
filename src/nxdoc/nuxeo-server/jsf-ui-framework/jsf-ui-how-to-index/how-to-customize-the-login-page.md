@@ -13,6 +13,7 @@ details:
 labels:
     - lts2016-ok
     - login-page
+    - akervern
     - howto
     - theme
     - login-page-component
@@ -30,212 +31,212 @@ confluence:
     source_link: /display/NXDOC/How+to+Customize+the+Login+Page
 tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 09:58'
         message: pdate how-to topic
         version: '42'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-02-09 15:18'
         message: ''
         version: '41'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-08-03 12:17'
         message: ''
         version: '40'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:33'
         message: ''
         version: '39'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:04'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 12:02'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 12:01'
         message: add link to the explorer
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 11:42'
         message: ''
         version: '35'
-    - 
+    -
         author: Gildas Lefevre
         date: '2014-11-05 15:24'
         message: 'NXDOC-363: Split the page in two, a beginner page and an advanced one'
         version: '34'
-    - 
+    -
         author: Gildas Lefevre
         date: '2014-11-05 12:18'
         message: 'NXDOC-363: Update How-tos'
         version: '33'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-11-04 16:18'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-03 15:39'
         message: ''
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-17 12:13'
         message: ''
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 17:43'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 17:41'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 12:03'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 11:59'
         message: ''
         version: '26'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-04 16:12'
         message: ''
         version: '25'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-07-13 17:24'
         message: ''
         version: '24'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-07-13 17:23'
         message: ''
         version: '23'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-04 11:36'
         message: ''
         version: '22'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-12-04 11:32'
         message: ''
         version: '21'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-08-18 16:50'
         message: ''
         version: '20'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-07-27 17:08'
         message: ''
         version: '19'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 16:58'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 14:43'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:28'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:24'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:16'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:15'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:10'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:51'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:06'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:21'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:02'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:24'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:12'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:01'
         message: ''

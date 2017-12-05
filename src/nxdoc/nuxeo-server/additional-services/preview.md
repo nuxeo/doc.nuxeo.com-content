@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - preview
+    - gbarata
     - link-update
     - preview-component
     - multiexcerpt
@@ -25,82 +26,82 @@ confluence:
     source_link: /display/NXDOC/Preview
 tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-20 13:58'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 15:21'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-07 15:18'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-09 12:36'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-09 12:36'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-09 12:36'
         message: Add functional overview
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 16:06'
         message: 'fix broken link, formatting'
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-06 11:25'
         message: Formatting and reorganization
         version: '9'
-    - 
+    -
         author: Frédéric Vadon
         date: '2014-06-04 11:16'
         message: ''
         version: '8'
-    - 
+    -
         author: Frédéric Vadon
         date: '2014-06-04 11:14'
         message: ''
         version: '7'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-09 18:36'
         message: ''
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-09 03:24'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-09 03:21'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-09 03:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-09 03:14'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-09 03:10'
         message: ''

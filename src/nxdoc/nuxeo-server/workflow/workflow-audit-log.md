@@ -8,7 +8,7 @@ labels:
     - lts2016-ok
     - workflow
     - audit
-    - ataillefer
+    - grenard
     - elasticsearch
     - excerpt
     - content-review-lts2017

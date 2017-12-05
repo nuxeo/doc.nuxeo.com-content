@@ -9,6 +9,7 @@ labels:
     - howto
     - webengine
     - webengine-component
+    - dmetzler
     - content-review-lts2017
 confluence:
     ajs-parent-page-id: '3343141'
@@ -23,32 +24,32 @@ confluence:
     source_link: /display/NXDOC/Module+Extensibility
 tree_item_index: 500
 history:
-    - 
+    -
         author: Damien Metzler
         date: '2015-10-20 14:11'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 17:09'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-07 17:09'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:59'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:58'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:34'
         message: ''

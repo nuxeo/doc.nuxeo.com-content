@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - install-linux
+    - mguillaume
     - content-review-lts2017
 confluence:
     ajs-parent-page-id: '9274334'
@@ -25,32 +26,32 @@ version_override:
     '6.0': 60/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-systemd
     '5.8': 58/admindoc/configuring-the-nuxeo-platform-as-a-daemon-with-systemd
 history:
-    - 
+    -
         author: Mathieu Guillaume
         date: '2016-02-09 14:21'
         message: ''
         version: '6'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2015-12-08 11:00'
         message: Added NUXEO_CONF variable
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2015-09-21 14:00'
         message: Avoid stop/restart during manual restart
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2015-07-15 12:55'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2015-07-15 12:52'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2015-07-15 12:47'
         message: ''

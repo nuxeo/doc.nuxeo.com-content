@@ -16,6 +16,7 @@ labels:
     - persistence
     - nxql
     - workflow
+    - kleturc
     - link-update
     - howto
     - community-links

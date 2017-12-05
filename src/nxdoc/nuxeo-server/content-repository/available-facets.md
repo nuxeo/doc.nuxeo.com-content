@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - facet
     - core-component
+    - fguillaume
     - content-review-lts2017
 toc: true
 confluence:
@@ -23,187 +24,187 @@ confluence:
     source_link: /display/NXDOC/Available+Facets
 tree_item_index: 500
 history:
-    - 
+    -
         author: Estelle Giuly
         date: '2016-09-29 15:02'
         message: dd BigFolder in available facet
         version: '37'
-    - 
+    -
         author: Thomas Roger
         date: '2014-12-05 16:14'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:40'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-27 11:33'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-04 16:53'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-04 16:51'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:55'
         message: Removed related topics from TOC
         version: '31'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-07-18 15:01'
         message: ''
         version: '30'
-    - 
+    -
         author: Mariana Cedica
         date: '2013-07-18 15:00'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-01 12:04'
         message: Added related topics
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-01 12:02'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-01 12:02'
         message: Reordered facets in alphabetical order
         version: '26'
-    - 
+    -
         author: Thomas Roger
         date: '2013-06-28 12:11'
         message: ''
         version: '25'
-    - 
+    -
         author: Thomas Roger
         date: '2012-10-18 18:10'
         message: ''
         version: '24'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-24 12:27'
         message: Migrated to Confluence 4.0
         version: '23'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-24 12:27'
         message: ''
         version: '22'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-24 12:27'
         message: ''
         version: '21'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-08-24 12:26'
         message: added SystemDocument
         version: '20'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-05-24 14:43'
         message: ''
         version: '19'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 16:53'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 14:43'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:27'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:24'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:14'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:14'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:09'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:51'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:05'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:21'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:01'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:23'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:11'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:00'
         message: ''

@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - action
+    - atchertchian
     - action-type
     - actions-filters-component
     - excerpt
@@ -25,42 +26,42 @@ confluence:
     source_link: /display/NXDOC/Standard+Action+Types
 tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 09:36'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 14:22'
         message: Update table of contents look
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 18:30'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-20 15:22'
         message: Formatting
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-17 17:53'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-17 17:53'
         message: add more infor about default action types
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-16 19:35'
         message: add rough list of standard action types + wip warning
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-16 14:44'
         message: ''

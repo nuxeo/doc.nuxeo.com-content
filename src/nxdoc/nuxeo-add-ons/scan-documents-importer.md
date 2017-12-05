@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - scan-documents-importer
+    - ajusto
     - update-needed
     - multiexcerpt-include
     - content-review-lts2017
@@ -24,82 +25,82 @@ confluence:
     source_link: /display/NXDOC/Scan+Documents+Importer
 tree_item_index: 3200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 12:36'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-04 15:42'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-26 16:24'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-26 16:22'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '13'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-24 08:05'
         message: Removed 5.9.x references
         version: '12'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-10-09 15:40'
         message: Added sample configuration
         version: '11'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-10-09 15:14'
         message: Reverted from v. 8
         version: '10'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-10-09 15:13'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-08 09:57'
         message: typo
         version: '8'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-10-08 08:47'
         message: Started xml mapping
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-10-07 16:47'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-10-07 16:47'
         message: Added link to java mapper class example
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-10-07 16:29'
         message: Added link to add-on configuration example
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-10-07 16:27'
         message: Added installation instructions
         version: '3'
-    - 
+    -
         author: Thomas Roger
         date: '2014-04-02 12:05'
         message: ''
         version: '2'
-    - 
+    -
         author: Thomas Roger
         date: '2014-04-02 12:02'
         message: ''

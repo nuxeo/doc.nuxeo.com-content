@@ -14,6 +14,7 @@ labels:
     - lts2016-ok
     - transition
     - workflow
+    - grenard
     - howto
     - studio
     - excerpt

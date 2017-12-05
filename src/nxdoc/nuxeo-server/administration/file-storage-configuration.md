@@ -9,6 +9,7 @@ labels:
     - blob-storage
     - binary-manager
     - blob-manager-component
+    - fguillaume
     - multiexcerpt-include
     - content-review-lts2017
 toc: true
@@ -27,107 +28,107 @@ tree_item_index: 800
 version_override:
     LTS 2015: 710/admindoc/blob-storage-configuration
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 14:35'
         message: ''
         version: '21'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 14:35'
         message: ''
         version: '20'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 14:34'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 14:30'
         message: ''
         version: '18'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 14:28'
         message: ''
         version: '17'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 14:28'
         message: ''
         version: '16'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-13 22:59'
         message: ''
         version: '15'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-13 22:54'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-13 22:51'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-10 08:11'
         message: Fix typo and formatting
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-11-09 15:48'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-11-09 15:41'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-01 12:07'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-01 09:58'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-01 09:56'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-29 12:34'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-06-29 09:35'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-06-23 13:04'
         message: link to aes
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-06-23 13:03'
         message: link to S3
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-06-23 13:01'
         message: link to DefaultBinaryManager﻿ page
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-06-23 12:43'
         message: ''

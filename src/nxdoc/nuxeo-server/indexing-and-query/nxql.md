@@ -8,6 +8,7 @@ labels:
     - content-review-lts2016
     - nxql
     - query-pageprovider-component
+    - kleturc
     - content-review-lts2017
 toc: true
 confluence:

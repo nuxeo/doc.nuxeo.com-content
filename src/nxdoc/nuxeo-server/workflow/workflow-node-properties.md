@@ -9,6 +9,7 @@ labels:
     - todo
     - node
     - workflow
+    - grenard
     - excerpt
     - content-review-lts2017
 toc: true

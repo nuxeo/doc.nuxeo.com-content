@@ -13,6 +13,7 @@ details:
 labels:
     - content-review-lts2016
     - workflow
+    - grenard
     - routing
     - scripting
     - howto
@@ -32,52 +33,52 @@ confluence:
     source_link: /pages/viewpage.action?pageId=12912851
 tree_item_index: 600
 history:
-    - 
+    -
         author: Vincent Dutat
         date: '2016-01-06 21:17'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-03 09:16'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:50'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 18:09'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-09 18:04'
         message: ''
         version: '6'
-    - 
+    -
         author: Frédéric Vadon
         date: '2013-08-01 07:51'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 22:33'
         message: Added excerpt
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-04 21:28'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-04 20:28'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-01-04 17:33'
         message: ''

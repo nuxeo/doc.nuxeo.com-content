@@ -15,6 +15,7 @@ labels:
     - howto
     - template
     - seam-jsf-component
+    - atchertchian
     - content-review-lts2017
 toc: true
 confluence:
@@ -30,27 +31,27 @@ confluence:
     source_link: /display/NXDOC/How+to+Override+a+Template
 tree_item_index: 900
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 10:07'
         message: pdate how-to topic
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:10'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-07 14:47'
         message: 'format steps, add links'
         version: '3'
-    - 
+    -
         author: Gildas Lefevre
         date: '2014-11-07 10:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Gildas Lefevre
         date: '2014-11-06 18:35'
         message: ''

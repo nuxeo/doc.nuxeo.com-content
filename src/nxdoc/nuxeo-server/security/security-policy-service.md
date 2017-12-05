@@ -10,6 +10,7 @@ labels:
     - security-policy
     - community-links
     - acl
+    - bdelbosc
     - security-component
     - excerpt
     - content-review-lts2017
@@ -27,52 +28,52 @@ confluence:
     source_link: /display/NXDOC/Security+Policy+Service
 tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-05 18:34'
         message: ix links to point to latest versio
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-27 11:12'
         message: Fixed typos
         version: '9'
-    - 
+    -
         author: Damien Metzler
         date: '2014-02-26 11:53'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 15:54'
         message: Updated links
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 18:26'
         message: Formatting
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-27 15:23'
         message: Added TOC
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-08-13 12:09'
         message: adding cmisql
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-11 22:25'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-11 22:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-12-28 17:15'
         message: ''

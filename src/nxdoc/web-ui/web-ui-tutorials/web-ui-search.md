@@ -16,6 +16,7 @@ labels:
     - nuxeo-web-ui
     - extension
     - search-tab-component
+    - atchertchian
     - content-review-lts2017
 tree_item_index: 500
 

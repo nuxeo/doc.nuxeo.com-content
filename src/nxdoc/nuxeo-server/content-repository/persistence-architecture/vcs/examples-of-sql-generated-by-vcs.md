@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - vcs
+    - fguillaume
     - nxql
     - sql
     - vcs-component
@@ -25,62 +26,62 @@ confluence:
     source_link: /display/NXDOC/Examples+of++SQL+Generated+by+VCS
 tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 09:27'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 15:37'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 15:36'
         message: Formatting cleanup
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 15:35'
         message: ''
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-10-13 15:15'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 08:44'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 17:21'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-10 17:21'
         message: TOC
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:52'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:50'
         message: Removed related topics from TOC
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 17:20'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 16:50'
         message: ''

@@ -9,6 +9,7 @@ tree_item_index: 200
 labels:
     - content-review-lts2017
     - authentication
+    - dmetzler
 
 ---
 This plugin uses JCIFS to handle NTLM authentication. If you have troubles with latest version of IE on POST requests, please see [JCIFS instructions](http://jcifs.samba.org/src/docs/ntlmhttpauth.html#post).

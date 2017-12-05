@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - security-component
+    - fguillaume
     - multiexcerpt-include
     - content-review-lts2017
 toc: true
@@ -23,12 +24,12 @@ confluence:
     source_link: /display/NXDOC/Security
 tree_item_index: 1200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-02 14:11'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-09-19 10:58'
         message: ''

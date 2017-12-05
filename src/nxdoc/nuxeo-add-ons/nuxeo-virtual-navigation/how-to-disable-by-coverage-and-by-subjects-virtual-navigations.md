@@ -15,9 +15,9 @@ labels:
     - virtual-navigation
     - howto
     - content-view
+    - atchertchian
     - extension-point
     - vocabulary
-    - tmartins
     - studio
     - virtual-navigation-component
     - excerpt

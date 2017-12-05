@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - workflow
+    - grenard
     - excerpt
     - content-review-lts2017
 confluence:

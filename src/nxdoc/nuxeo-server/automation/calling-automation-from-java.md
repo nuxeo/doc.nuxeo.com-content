@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - automation
+    - vpasquier
     - excerpt
     - content-review-lts2017
 toc: true

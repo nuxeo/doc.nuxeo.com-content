@@ -9,6 +9,7 @@ labels:
     - howto
     - webengine
     - webengine-component
+    - dmetzler
     - content-review-lts2017
 confluence:
     ajs-parent-page-id: '3343141'
@@ -23,37 +24,37 @@ confluence:
     source_link: /display/NXDOC/Hello+World
 tree_item_index: 100
 history:
-    - 
+    -
         author: Damien Metzler
         date: '2015-10-20 14:05'
         message: ''
         version: '7'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:41'
         message: Migrated to Confluence 4.0
         version: '6'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:40'
         message: ''
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:40'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:20'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:19'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:33'
         message: ''

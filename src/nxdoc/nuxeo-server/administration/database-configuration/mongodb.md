@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - dbs
     - mongodb
+    - kleturc
     - mongodb-component
     - content-review-lts2017
 toc: true
@@ -27,197 +28,197 @@ tree_item_index: 600
 version_override:
     LTS 2015: 710/admindoc/mongodb
 history:
-    - 
+    -
         author: Florent Guillaume
         date: '2016-09-22 14:07'
         message: ongodb-quartz-cluste
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-05 09:24'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-13 14:42'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-08 16:44'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-08 16:38'
         message: ''
         version: '35'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-03-08 10:50'
         message: ''
         version: '34'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-03-08 10:44'
         message: ''
         version: '33'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-03-08 10:16'
         message: ''
         version: '32'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-03-08 10:14'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-08 09:51'
         message: Move warning about user creation in Confiiguration section
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-08 09:35'
         message: Update supported versions
         version: '29'
-    - 
+    -
         author: Benoit Delbosc
         date: '2016-03-07 09:53'
         message: 8.2 support mongo 3.2
         version: '28'
-    - 
+    -
         author: Gildas Lefevre
         date: '2016-03-04 20:59'
         message: ''
         version: '27'
-    - 
+    -
         author: Gildas Lefevre
         date: '2016-03-04 16:36'
         message: ''
         version: '26'
-    - 
+    -
         author: Gildas Lefevre
         date: '2016-03-04 16:27'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-28 13:46'
         message: ''
         version: '24'
-    - 
+    -
         author: Julien Carsique
         date: '2016-01-19 13:44'
         message: 'NXP-18773: restored MongoDB parameters'
         version: '23'
-    - 
+    -
         author: Julien Carsique
         date: '2016-01-19 13:43'
         message: Reverted from v. 20
         version: '22'
-    - 
+    -
         author: Julien Carsique
         date: '2016-01-19 10:58'
         message: 'NXP-18773: changed MongoDB parameters'
         version: '21'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-09 13:44'
         message: added gridfs
         version: '20'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-04 13:44'
         message: ''
         version: '19'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-04 13:41'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-12 08:48'
         message: 'Update link, cleanup page format, update related pages'
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-14 09:10'
         message: ''
         version: '16'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-10-13 15:42'
         message: ''
         version: '15'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-10-09 14:50'
         message: ''
         version: '14'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-10-09 14:48'
         message: Emphasis on the URI connection options
         version: '13'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-08-11 13:41'
         message: ''
         version: '12'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-07-01 14:39'
         message: Added nuxeo.mongodb.dbname and detailed server syntax
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-10-08 10:58'
         message: ''
         version: '10'
-    - 
+    -
         author: Rémi Cattiau
         date: '2014-10-07 02:22'
         message: As requested by Brendan
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-08-05 12:47'
         message: ''
         version: '8'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-07-30 17:31'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-30 14:35'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-23 19:47'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-23 19:46'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-12 15:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-04 17:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-06-04 17:25'
         message: ''

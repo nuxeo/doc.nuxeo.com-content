@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - redis
     - clustering
+    - bdelbosc
     - multiexcerpt-include
     - content-review-lts2017
 confluence:
@@ -27,97 +28,97 @@ version_override:
     '6.0': 60/admindoc/redis-configuration
     '5.8': 58/admindoc/redis-configuration
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-13 15:15'
         message: se excerpt for compatibility version
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-25 15:51'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-03 13:55'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2016-02-08 13:25'
         message: ''
         version: '16'
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-02-04 12:49'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-11 15:45'
         message: Update Redis version (3.0 instead of 2.8)
         version: '14'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-12-16 15:05'
         message: ''
         version: '13'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-12-16 15:03'
         message: ''
         version: '12'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-12-16 15:01'
         message: ''
         version: '11'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-12-09 13:43'
         message: ''
         version: '10'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-12-09 13:37'
         message: ''
         version: '9'
-    - 
+    -
         author: Maxime Hilaire
         date: '2015-08-03 15:14'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-05-18 14:18'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2015-05-18 14:13'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-11-12 12:03'
         message: Info about prefix.
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-04 13:31'
         message: use Nuxeo Platform 5.8 instead of Nuxeo 5.8
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 17:49'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 17:38'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-11-14 16:50'
         message: ''
@@ -183,7 +184,7 @@ The `nuxeo.redis.password`, `nuxeo.redis.database` and `nuxeo.redis.timeout` are
 
 `nuxeo.redis.maxIdle` sets the maximum number of Redis idle connections in the pool (available since since 8.2).
 
-When `nuxeo.redis.enabled=true` then the following is automatically activated as well: 
+When `nuxeo.redis.enabled=true` then the following is automatically activated as well:
 `nuxeo.work.queuing=redis`.
 (As of Nuxeo Platform 5.8, work queuing is the only use of Redis in the standard Nuxeo modules, so it makes sense to activate both together.)
 

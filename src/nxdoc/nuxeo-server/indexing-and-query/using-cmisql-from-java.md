@@ -15,6 +15,7 @@ labels:
     - howto
     - query-pageprovider-component
     - cmis
+    - fguillaume
     - cmis-component
     - content-review-lts2017
 confluence:

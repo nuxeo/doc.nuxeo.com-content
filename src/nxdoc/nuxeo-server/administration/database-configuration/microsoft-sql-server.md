@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - database
+    - kleturc
     - sql
     - multiexcerpt-include
     - content-review-lts2017

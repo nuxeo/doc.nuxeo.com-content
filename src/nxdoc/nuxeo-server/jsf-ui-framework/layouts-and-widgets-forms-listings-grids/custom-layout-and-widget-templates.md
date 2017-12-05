@@ -9,6 +9,7 @@ labels:
     - summary-layout
     - widget
     - layout-widgets-component
+    - atchertchian
     - excerpt
     - content-review-lts2017
 toc: true
@@ -25,122 +26,122 @@ confluence:
     source_link: /display/NXDOC/Custom+Layout+and+Widget+Templates
 tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 14:30'
         message: ''
         version: '24'
-    - 
+    -
         author: Vincent Dutat
         date: '2016-02-12 03:21'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 12:21'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-09 10:21'
         message: ''
         version: '21'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 17:58'
         message: 'NXDOC-286: fix link'
         version: '20'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 17:55'
         message: 'NXDOC-286: remove the outdated and now useless complex widget type example'
         version: '19'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 17:51'
         message: 'NXDOC-286: update layout templates examples'
         version: '18'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 17:40'
         message: 'NXDOC-286: update layout templates examples'
         version: '17'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-11-04 17:17'
         message: update TOC panel
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-22 15:42'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-22 15:41'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-08 17:58'
         message: 'Formatting, removed 5.3.0 sections'
         version: '13'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-12 17:29'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 16:09'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-11 21:33'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-11 21:33'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-06 10:00'
         message: 'Added TOC and related pages '
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-04 14:07'
         message: ''
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-04 14:05'
         message: ''
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-06-04 14:02'
         message: ''
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-04-18 18:56'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2011-03-01 16:05'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2010-10-12 15:21'
         message: ''
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2010-10-12 15:16'
         message: ''

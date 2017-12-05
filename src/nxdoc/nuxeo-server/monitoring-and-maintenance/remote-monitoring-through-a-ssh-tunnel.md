@@ -9,6 +9,7 @@ labels:
     - monitoring
     - ssh
     - monitoring-component
+    - bdelbosc
     - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950318'
@@ -27,32 +28,32 @@ version_override:
     '6.0': 60/admindoc/remote-monitoring-through-a-ssh-tunnel
     '5.8': 58/admindoc/remote-monitoring-through-a-ssh-tunnel
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-15 11:59'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-04-18 10:40'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-04-18 10:40'
         message: Moved page in Admin doc and fixed steps format
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-04-18 10:40'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2012-04-17 16:19'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2012-04-17 15:22'
         message: ''

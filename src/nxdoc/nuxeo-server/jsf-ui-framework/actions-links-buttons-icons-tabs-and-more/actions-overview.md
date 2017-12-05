@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - action
+    - atchertchian
     - actions-filters-component
     - excerpt
     - content-review-lts2017
@@ -24,87 +25,87 @@ confluence:
     source_link: /display/NXDOC/Actions+Overview
 tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-15 13:41'
         message: ''
         version: '17'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-10-13 13:46'
         message: ''
         version: '16'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-10-13 13:45'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-02 11:20'
         message: ''
         version: '14'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-02 11:16'
         message: 'NXDOC-222: mention require element or action override'
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 18:31'
         message: ''
         version: '12'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-02-04 18:21'
         message: fix label example
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-20 15:12'
         message: ''
         version: '10'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 19:32'
         message: mention fallback on link when missing type
         version: '9'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 18:09'
         message: add info that properties can contain EL expressions
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 18:01'
         message: wording
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 18:01'
         message: wording
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 18:00'
         message: add more action samples
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 17:38'
         message: cleanup forgotten tes content
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-20 17:37'
         message: give better examples
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-17 18:09'
         message: adding content from parent page (action registration)
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-16 14:44'
         message: ''

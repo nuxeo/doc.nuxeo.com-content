@@ -14,6 +14,7 @@ labels:
     - howto
     - lts2016-ok
     - content-view
+    - atchertchian
     - automation
     - studio
     - excerpt
@@ -32,152 +33,152 @@ confluence:
     source_link: /display/NXDOC/How+to+Fetch+Documents+with+a+Query+on+Date+Parameters
 tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-26 17:15'
         message: ''
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-12 17:40'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-12 17:26'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-12 17:19'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-12 17:17'
         message: Add screen shots
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-12 17:07'
         message: More detailed steps and link update
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-29 15:42'
         message: fix formatting
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-29 15:40'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-31 17:48'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-12 15:23'
         message: ''
         version: '21'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-03-31 22:00'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 18:02'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 18:02'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-29 17:23'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 18:40'
         message: Added excerpt
         version: '16'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-12-22 16:14'
         message: Migrated to Confluence 4.0
         version: '15'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-12-22 16:14'
         message: typo
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-06 15:52'
         message: Added related tutorials
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-09-02 16:17'
         message: added related howtos
         version: '12'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-24 18:10'
         message: ''
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-08-23 12:02'
         message: ''
         version: '10'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-23 11:30'
         message: ''
         version: '9'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-23 11:30'
         message: ''
         version: '8'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-23 11:28'
         message: ''
         version: '7'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-23 11:25'
         message: ''
         version: '6'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-22 19:43'
         message: ''
         version: '5'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-22 18:45'
         message: ''
         version: '4'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-22 18:44'
         message: ''
         version: '3'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-22 15:48'
         message: ''
         version: '2'
-    - 
+    -
         author: Frédéric Vadon
         date: '2011-08-22 11:56'
         message: ''

@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - license
+    - fguillaume
     - excerpt
     - content-review-lts2017
 confluence:
@@ -22,127 +23,127 @@ confluence:
     source_link: /display/NXDOC/Licenses
 tree_item_index: 800
 history:
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-29 12:37'
         message: pache License onl
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-28 09:26'
         message: ''
         version: '24'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-28 00:24'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-20 10:05'
         message: ''
         version: '22'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-15 18:29'
         message: ''
         version: '21'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-14 04:45'
         message: ''
         version: '20'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-14 04:40'
         message: ''
         version: '19'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-14 04:40'
         message: ''
         version: '18'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-14 04:27'
         message: ''
         version: '17'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-14 04:07'
         message: ''
         version: '16'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-14 03:17'
         message: ''
         version: '15'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-14 02:59'
         message: ''
         version: '14'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-14 02:20'
         message: ''
         version: '13'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-14 01:25'
         message: ''
         version: '12'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-14 01:06'
         message: ''
         version: '11'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-12 18:50'
         message: ''
         version: '10'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-12 17:56'
         message: ''
         version: '9'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-12 17:34'
         message: ''
         version: '8'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-12 17:17'
         message: ''
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-12 16:47'
         message: ''
         version: '6'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-12 16:16'
         message: ''
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-12 16:04'
         message: ''
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-12 16:03'
         message: ''
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-12 16:01'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2012-10-12 15:57'
         message: ''

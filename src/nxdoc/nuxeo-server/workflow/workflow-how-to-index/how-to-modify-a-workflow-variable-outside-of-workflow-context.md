@@ -13,6 +13,7 @@ details:
 labels:
     - lts2016-ok
     - workflow
+    - grenard
     - event
     - listener
     - howto

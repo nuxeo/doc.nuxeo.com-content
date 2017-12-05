@@ -9,6 +9,7 @@ labels:
     - saml-component
     - migration-sample
     - authentication
+    - dmetzler
     - content-review-lts2017
 toc: true
 confluence:

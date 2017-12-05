@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - elasticsearch
     - aggregate
+    - grenard
     - aggregates-widgets-component
     - excerpt
     - content-review-lts2017
@@ -25,82 +26,82 @@ confluence:
     source_link: /display/NXDOC/Aggregate+Widget+Types
 tree_item_index: 800
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 09:09'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 09:05'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-04 13:30'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-04 13:25'
         message: Update links labels
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-16 12:20'
         message: ''
         version: '12'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 17:03'
         message: 'NXDOC-427: add links to layout demo for some aggregate widget types'
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-11-10 00:15'
         message: ''
         version: '10'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-07 15:36'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-07 15:32'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-07 15:13'
         message: ''
         version: '7'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-07 10:50'
         message: ''
         version: '6'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-07 10:47'
         message: ''
         version: '5'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-06 18:19'
         message: ''
         version: '4'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-06 18:11'
         message: ''
         version: '3'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-06 17:34'
         message: ''
         version: '2'
-    - 
+    -
         author: Guillaume Renard
         date: '2014-11-06 11:36'
         message: ''

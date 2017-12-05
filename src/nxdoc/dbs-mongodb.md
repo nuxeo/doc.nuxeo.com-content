@@ -22,7 +22,7 @@ confluence:
     source_link: /display/NXDOC/DBS+-+MongoDB
 hidden: true
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-04 13:05'
         message: ''

@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - postgresql
     - database
+    - kleturc
     - multiexcerpt-include
     - content-review-lts2017
 toc: true
@@ -28,547 +29,547 @@ version_override:
     '6.0': 60/admindoc/configuring-postgresql
     '5.8': 58/admindoc/configuring-postgresql
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-02 09:11'
         message: ''
         version: '109'
-    - 
+    -
         author: Florent Guillaume
         date: '2016-08-16 14:50'
         message: remove mention of single datasource
         version: '108'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-13 14:40'
         message: ''
         version: '107'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-25 16:07'
         message: ''
         version: '106'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-04 09:51'
         message: ''
         version: '105'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-14 10:17'
         message: ''
         version: '104'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-14 10:16'
         message: ''
         version: '103'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-14 10:15'
         message: ''
         version: '102'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-14 10:14'
         message: ''
         version: '101'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-09 14:22'
         message: details
         version: '100'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-04 13:42'
         message: ''
         version: '99'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-14 14:36'
         message: ''
         version: '98'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-10-01 16:00'
         message: ''
         version: '97'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2015-07-22 17:36'
         message: ''
         version: '96'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-25 10:04'
         message: ''
         version: '95'
-    - 
+    -
         author: Julien Carsique
         date: '2015-03-24 11:05'
         message: ''
         version: '94'
-    - 
+    -
         author: Maxime Hilaire
         date: '2015-03-23 22:30'
         message: ''
         version: '93'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-02-18 14:05'
         message: max_prepared_transactions clarification
         version: '92'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-05 15:49'
         message: ''
         version: '91'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-12 18:00'
         message: ''
         version: '90'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-12 09:54'
         message: ''
         version: '89'
-    - 
+    -
         author: Joshua Fletcher
         date: '2014-12-11 02:09'
         message: "PG doesn't support \"m\" or \"g\" for these values, you need to use \"MB\" or \"GB\". This part of the doc was a little confusing as a new user."
         version: '88'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-13 17:34'
         message: Updated supported versions for 6.0
         version: '87'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-24 15:26'
         message: Moved limitations from independent page into postgreSQL page
         version: '86'
-    - 
+    -
         author: Solen Guitter
         date: '2014-04-17 10:04'
         message: ''
         version: '85'
-    - 
+    -
         author: Florent Guillaume
         date: '2014-04-11 20:16'
         message: ''
         version: '84'
-    - 
+    -
         author: Julien Carsique
         date: '2014-03-25 14:11'
         message: ''
         version: '83'
-    - 
+    -
         author: Julien Carsique
         date: '2014-03-25 14:09'
         message: ''
         version: '82'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-18 11:08'
         message: ''
         version: '81'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-11-25 16:57'
         message: ''
         version: '80'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-11-21 11:10'
         message: ''
         version: '79'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-11-20 15:33'
         message: ''
         version: '78'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-11-20 15:01'
         message: ''
         version: '77'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-11-20 14:41'
         message: ''
         version: '76'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-11-20 14:28'
         message: ''
         version: '75'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-11-20 14:26'
         message: update recommendations
         version: '74'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-11-20 12:53'
         message: Update recommendation
         version: '73'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-11-20 11:24'
         message: ''
         version: '72'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-10-22 12:36'
         message: ''
         version: '71'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 16:42'
         message: Added PostgreSQL version 9.3.
         version: '70'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-10 16:49'
         message: ''
         version: '69'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-09-27 17:32'
         message: ''
         version: '68'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-06-06 18:49'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '67'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-06-06 18:49'
         message: ''
         version: '66'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-06-06 18:40'
         message: ''
         version: '65'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 11:36'
         message: ''
         version: '64'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-05-03 10:42'
         message: ''
         version: '63'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-05-03 10:26'
         message: Update the reporting problems procedure
         version: '62'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-05-03 10:22'
         message: ''
         version: '61'
-    - 
+    -
         author: Benoit Delbosc
         date: '2013-05-03 09:38'
         message: ''
         version: '60'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-01-26 18:03'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '59'
-    - 
+    -
         author: Florent Guillaume
         date: '2013-01-26 18:03'
         message: ''
         version: '58'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-10-02 18:08'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '57'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-10-02 18:08'
         message: more reporting stats
         version: '56'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-09-24 14:51'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '55'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-09-24 14:51'
         message: Migrated to Confluence 4.0
         version: '54'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-09-24 14:51'
         message: ''
         version: '53'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-08-30 14:05'
         message: ''
         version: '52'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-07-04 12:02'
         message: update mass import index creation for 5.5
         version: '51'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-07-02 15:01'
         message: ''
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 12:10'
         message: ''
         version: '49'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-10 11:16'
         message: Added related pages
         version: '48'
-    - 
+    -
         author: Mariana Cedica
         date: '2012-03-15 12:59'
         message: ''
         version: '47'
-    - 
+    -
         author: Mariana Cedica
         date: '2012-03-15 12:57'
         message: ''
         version: '46'
-    - 
+    -
         author: stan
         date: '2012-02-22 18:24'
         message: ''
         version: '45'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-01-27 11:51'
         message: Adding postgresql 8.4 unaccent contrib compilation
         version: '44'
-    - 
+    -
         author: Benoit Delbosc
         date: '2012-01-12 10:44'
         message: adding more sql for reporting pb
         version: '43'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-12-13 18:31'
         message: ''
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2011-12-10 09:42'
         message: ''
         version: '41'
-    - 
+    -
         author: Solen Guitter
         date: '2011-10-28 10:59'
         message: ''
         version: '40'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-10-27 10:48'
         message: explain how to log slow queries
         version: '39'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-10-12 10:31'
         message: Adding index information when reporting problem.
         version: '38'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-10-12 10:27'
         message: ''
         version: '37'
-    - 
+    -
         author: Julien Carsique
         date: '2011-08-11 18:20'
         message: ''
         version: '36'
-    - 
+    -
         author: Florent Guillaume
         date: '2011-08-03 12:11'
         message: ''
         version: '35'
-    - 
+    -
         author: Laurent Doguin
         date: '2011-08-02 14:44'
         message: add accent unsensitive search configuration details
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-01 09:53'
         message: ''
         version: '33'
-    - 
+    -
         author: Wojciech Sulejman
         date: '2011-03-08 20:41'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-04 17:22'
         message: ''
         version: '31'
-    - 
+    -
         author: Benoit Delbosc
         date: '2011-02-11 11:27'
         message: 'Add SQL queries to get user count, index ratio and cpu speed'
         version: '30'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-11-16 16:05'
         message: ''
         version: '29'
-    - 
+    -
         author: Olivier Grisel
         date: '2010-11-16 15:51'
         message: ''
         version: '28'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-29 18:13'
         message: moved driver information to NXDOC/Configuring+Nuxeo+EP
         version: '27'
-    - 
+    -
         author: Julien Carsique
         date: '2010-10-29 12:14'
         message: Add jdbc driver information
         version: '26'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-09-26 18:49'
         message: ''
         version: '25'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-08-25 15:07'
         message: ''
         version: '24'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-08-25 15:04'
         message: "put Two-phase commit first as it's the most common error"
         version: '23'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-08-13 15:32'
         message: ''
         version: '22'
-    - 
+    -
         author: Florent Guillaume
         date: '2010-08-13 15:28'
         message: ''
         version: '21'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 15:28'
         message: ''
         version: '20'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 15:25'
         message: ''
         version: '19'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 14:42'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:27'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:23'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:13'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:13'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:08'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:54'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:50'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:10'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:04'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:20'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:01'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:38'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:22'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:17'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:11'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:09'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:00'
         message: ''

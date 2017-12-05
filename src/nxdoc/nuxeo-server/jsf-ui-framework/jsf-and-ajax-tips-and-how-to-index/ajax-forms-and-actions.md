@@ -18,6 +18,7 @@ labels:
     - howto
     - jsf
     - seam-jsf-component
+    - atchertchian
     - excerpt
     - content-review-lts2017
 toc: true
@@ -34,62 +35,62 @@ confluence:
     source_link: /display/NXDOC/Ajax+Forms+and+Actions
 tree_item_index: 200
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 15:32'
         message: ''
         version: '12'
-    - 
+    -
         author: Gildas Lefevre
         date: '2014-11-04 17:20'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-18 11:19'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-17 16:20'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 15:38'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-23 15:38'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-07 15:35'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-16 09:48'
         message: Fixed typos
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-07-15 10:52'
         message: ''
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-02-06 18:50'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-02-06 18:50'
         message: ''
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2012-02-06 17:57'
         message: ''

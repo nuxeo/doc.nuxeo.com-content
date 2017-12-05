@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - transaction
     - logs
+    - bdelbosc
     - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950318'
@@ -26,102 +27,102 @@ version_override:
     '6.0': 60/admindoc/transactions-and-connections
     '5.8': 58/admindoc/transactions-and-connections
 history:
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-09 13:12'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-05 10:30'
         message: typos
         version: '19'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2014-09-03 11:32'
         message: ''
         version: '18'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2014-09-03 11:19'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-15 12:02'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-15 12:00'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-15 11:02'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-15 11:01'
         message: ''
         version: '13'
-    - 
+    -
         author: Julien Carsique
         date: '2012-10-14 23:00'
         message: ''
         version: '12'
-    - 
+    -
         author: Olivier Grisel
         date: '2012-10-14 16:26'
         message: ''
         version: '11'
-    - 
+    -
         author: Olivier Grisel
         date: '2012-10-14 16:19'
         message: use JVisualVM as suggested JMX browser
         version: '10'
-    - 
+    -
         author: Olivier Grisel
         date: '2012-10-12 18:31'
         message: ''
         version: '9'
-    - 
+    -
         author: Olivier Grisel
         date: '2012-10-12 18:30'
         message: ''
         version: '8'
-    - 
+    -
         author: Thierry Delprat
         date: '2012-10-12 18:27'
         message: ''
         version: '7'
-    - 
+    -
         author: Thierry Delprat
         date: '2012-10-12 18:27'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2012-10-12 18:26'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2012-10-12 18:24'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2012-10-12 18:23'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2012-10-12 18:22'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéphane Lacoin
         date: '2012-10-12 15:36'
         message: ''

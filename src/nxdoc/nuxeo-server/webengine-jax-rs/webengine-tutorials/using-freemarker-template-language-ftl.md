@@ -9,6 +9,7 @@ labels:
     - howto
     - webengine
     - webengine-component
+    - dmetzler
     - content-review-lts2017
 confluence:
     ajs-parent-page-id: '3343141'
@@ -23,32 +24,32 @@ confluence:
     source_link: /pages/viewpage.action?pageId=3343202
 tree_item_index: 200
 history:
-    - 
+    -
         author: Damien Metzler
         date: '2015-10-20 14:06'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2010-11-16 16:44'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2010-11-16 16:44'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:41'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-21 11:24'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-07-20 16:33'
         message: ''

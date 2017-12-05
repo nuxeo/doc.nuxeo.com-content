@@ -8,6 +8,7 @@ labels:
     - content-review-lts2016
     - todo
     - certificate
+    - fguillaume
     - content-review-lts2017
 toc: true
 confluence:
@@ -23,22 +24,22 @@ confluence:
     source_link: /display/NXDOC/Trust+Store+and+Key+Store+Configuration
 tree_item_index: 300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-15 12:47'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-04 15:39'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-28 18:04'
         message: Migrated to Confluence 4.0
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2012-09-28 18:04'
         message: ''

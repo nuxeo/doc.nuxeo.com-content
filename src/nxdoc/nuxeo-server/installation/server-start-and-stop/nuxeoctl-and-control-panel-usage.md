@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - nuxeoctl
     - launcher
+    - akervern
     - nuxeolauncher
     - bootstrap-component
     - content-review-lts2017
@@ -28,247 +29,247 @@ version_override:
     '6.0': 60/admindoc/nuxeoctl-and-control-panel-usage
     '5.8': 58/admindoc/nuxeoctl-and-control-panel-usage
 history:
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-10-05 15:16'
         message: ''
         version: '49'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-09-29 15:30'
         message: 'Update help to reflect NXP-15037, NXP-14019 and others'
         version: '48'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-07-11 08:59'
         message: ''
         version: '47'
-    - 
+    -
         author: Julien Carsique
         date: '2016-03-04 15:02'
         message: ''
         version: '46'
-    - 
+    -
         author: Julien Carsique
         date: '2016-03-01 16:16'
         message: NXP-19071 --set option
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-27 13:33'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '44'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-27 13:29'
         message: Reverted from v. 41
         version: '43'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-26 14:26'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '42'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-25 08:21'
         message: ''
         version: '41'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-24 09:48'
         message: ''
         version: '40'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-21 17:48'
         message: ''
         version: '39'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-21 17:46'
         message: ''
         version: '38'
-    - 
+    -
         author: Julien Carsique
         date: '2014-11-25 10:49'
         message: ''
         version: '37'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 18:23'
         message: Add note about start command on windows
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 16:16'
         message: update toc style
         version: '35'
-    - 
+    -
         author: Julien Carsique
         date: '2014-10-24 14:50'
         message: ''
         version: '34'
-    - 
+    -
         author: Julien Carsique
         date: '2014-10-24 14:14'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-01 10:59'
         message: ''
         version: '32'
-    - 
+    -
         author: Thierry Martins
         date: '2014-08-29 17:00'
         message: ''
         version: '31'
-    - 
+    -
         author: Julien Carsique
         date: '2014-05-23 13:26'
         message: new option --debug-launcher
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-27 10:14'
         message: ''
         version: '29'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2014-01-10 15:52'
         message: Added mp-set command information
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:23'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:22'
         message: Added TOC
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-14 17:21'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-18 14:31'
         message: ''
         version: '24'
-    - 
+    -
         author: Julien Carsique
         date: '2013-03-26 12:09'
         message: ''
         version: '23'
-    - 
+    -
         author: Julien Carsique
         date: '2012-12-05 18:25'
         message: '--nodeps tip'
         version: '22'
-    - 
+    -
         author: Julien Carsique
         date: '2012-12-05 18:20'
         message: add mp-show description
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-05 16:48'
         message: Migrated to Confluence 4.0
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-05 16:48'
         message: ''
         version: '19'
-    - 
+    -
         author: Julien Carsique
         date: '2012-06-01 17:20'
         message: "NXP-9408 - add 'dc' option"
         version: '18'
-    - 
+    -
         author: Julien Carsique
         date: '2012-05-31 12:20'
         message: 'NXP-9268 - new mp-* commands and options'
         version: '17'
-    - 
+    -
         author: Mathieu Guillaume
         date: '2012-03-10 10:22'
         message: ''
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-17 14:54'
         message: add marketplace package commands
         version: '15'
-    - 
+    -
         author: Benjamin Jalon
         date: '2012-01-06 11:57'
         message: ''
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-06 11:47'
         message: ''
         version: '13'
-    - 
+    -
         author: Julien Carsique
         date: '2012-01-06 11:46'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-14 15:27'
         message: replaced 5.4.3 with 5.5
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2011-07-28 12:49'
         message: exit code values
         version: '10'
-    - 
+    -
         author: Julien Carsique
         date: '2011-07-28 11:36'
         message: ''
         version: '9'
-    - 
+    -
         author: Julien Carsique
         date: '2011-07-28 10:55'
         message: debug and quiet options
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-04-21 15:07'
         message: updated link to configuration page
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 18:58'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2011-03-11 18:57'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2011-03-11 18:55'
         message: NXP-6488 - add wizard command
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 18:47'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 16:37'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-11 15:48'
         message: ''

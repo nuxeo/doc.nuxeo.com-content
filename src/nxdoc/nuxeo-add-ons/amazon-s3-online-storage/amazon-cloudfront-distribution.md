@@ -6,6 +6,7 @@ review:
     status: ok
 labels:
     - amazon-s3
+    - fguillaume
     - amazon-cloudfront
     - binary-manager
     - content-review-lts2017

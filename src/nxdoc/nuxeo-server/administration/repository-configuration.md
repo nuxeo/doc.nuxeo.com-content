@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - binary-manager
     - vcs
+    - fguillaume
     - fulltext
     - vcs-component
     - content-review-lts2017

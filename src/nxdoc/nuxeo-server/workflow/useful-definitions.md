@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - workflow
+    - grenard
     - concept
     - excerpt
     - multiexcerpt-include

@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - quota
+    - fdavid
     - marketplace-package
     - quotas-component
     - content-review-lts2017

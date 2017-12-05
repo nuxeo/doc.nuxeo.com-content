@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - content-view
+    - atchertchian
     - content-views-component
     - excerpt
     - content-review-lts2017
@@ -24,67 +25,67 @@ confluence:
     source_link: /display/NXDOC/Content+Views+Display
 tree_item_index: 100
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-10-13 15:08'
         message: everted from v. 1
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-08 15:01'
         message: Replaced link to GitHub by the Explorer
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-08 14:31'
         message: 'Update related pages, format screenshots'
         version: '11'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-05 19:11'
         message: 'NXDOC-222: finish doc about cv selection actions + mention bad practice about template override'
         version: '10'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-02 11:28'
         message: 'NXDOC-222: remove leftover copy/paste'
         version: '9'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-02 11:19'
         message: 'NXDOC-222: complete the "content view actions" section'
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 20:33'
         message: 'NXDOC-222: save work about content view actions conf'
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 19:29'
         message: ''
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 19:21'
         message: 'NXDOC-222: add plan'
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 19:17'
         message: Reverted from v. 2
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 19:16'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 18:58'
         message: 'NXDOC-222: Copy/paste old rendering section content'
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-01 18:56'
         message: ''

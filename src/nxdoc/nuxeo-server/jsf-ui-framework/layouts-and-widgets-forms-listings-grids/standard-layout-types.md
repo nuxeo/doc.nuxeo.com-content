@@ -8,6 +8,7 @@ labels:
     - content-review-lts2016
     - layout
     - layout-widgets-component
+    - atchertchian
     - excerpt
     - content-review-lts2017
 toc: true
@@ -24,12 +25,12 @@ confluence:
     source_link: /display/NXDOC/Standard+Layout+Types
 tree_item_index: 200
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 19:21'
         message: 'XDOC-427: document default layout type'
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-08 17:10'
         message: ''

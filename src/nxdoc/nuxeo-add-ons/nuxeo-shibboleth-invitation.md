@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - shibboleth-component
+    - fdavid
     - github-readme
     - content-review-lts2017
 toc: true
@@ -23,12 +24,12 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Shibboleth+Invitation
 tree_item_index: 2600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-30 09:46'
         message: ''
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2015-09-28 20:08'
         message: ''

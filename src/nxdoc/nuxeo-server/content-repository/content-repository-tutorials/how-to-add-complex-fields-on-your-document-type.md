@@ -13,6 +13,7 @@ details:
 labels:
     - content-review-lts2016
     - schema-component
+    - fguillaume
     - howto
     - document-type
     - studio

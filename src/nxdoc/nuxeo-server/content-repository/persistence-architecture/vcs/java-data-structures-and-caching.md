@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - vcs
+    - fguillaume
     - cache
     - vcs-component
     - content-review-lts2017
@@ -23,32 +24,32 @@ confluence:
     source_link: /display/NXDOC/Java+Data+Structures+and+Caching
 tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 13:08'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-10 14:07'
         message: Adding related pages
         version: '5'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-12-09 15:20'
         message: details
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-04 15:52'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 17:21'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-04-08 16:52'
         message: ''

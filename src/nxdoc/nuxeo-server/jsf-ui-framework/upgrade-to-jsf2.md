@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - seam-jsf-component
+    - atchertchian
     - excerpt
     - content-review-lts2017
 toc: true
@@ -23,37 +24,37 @@ confluence:
     source_link: /display/NXDOC/Upgrade+to+JSF2
 tree_item_index: 400
 history:
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 15:26'
         message: ''
         version: '7'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 15:01'
         message: 'NXDOC-363: rename chapter to avoid bug on anchor'
         version: '6'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 15:00'
         message: 'NXDOC-362: remove doc unrelated to JSF2 migration'
         version: '5'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 14:22'
         message: 'NXDOC-363: document low level changes'
         version: '4'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-09 14:05'
         message: 'NXDOC-363: document changes on ajax status'
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-05 18:17'
         message: move JSF2 upgrade page to NXDOC
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2014-12-05 18:17'
         message: ''

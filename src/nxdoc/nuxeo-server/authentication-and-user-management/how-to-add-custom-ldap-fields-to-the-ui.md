@@ -15,6 +15,7 @@ labels:
     - ldap
     - howto
     - authentication
+    - dmetzler
     - user-profile-component
     - migration-sample
     - excerpt

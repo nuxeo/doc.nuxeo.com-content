@@ -13,6 +13,7 @@ details:
 labels:
     - lts2016-ok
     - theme
+    - atchertchian
     - style
     - howto
     - style-css-component
@@ -31,82 +32,82 @@ confluence:
     source_link: /display/NXDOC/How+to+Override+a+Default+Style
 tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-02-09 15:11'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-15 13:47'
         message: ''
         version: '15'
-    - 
+    -
         author: Lise Kemen
         date: '2015-10-13 13:24'
         message: ''
         version: '14'
-    - 
+    -
         author: Lise Kemen
         date: '2015-10-13 13:23'
         message: ''
         version: '13'
-    - 
+    -
         author: Lise Kemen
         date: '2015-10-13 13:23'
         message: ''
         version: '12'
-    - 
+    -
         author: Lise Kemen
         date: '2015-10-13 13:11'
         message: ''
         version: '11'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-08-03 12:18'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-31 09:29'
         message: ''
         version: '9'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-07-30 12:01'
         message: 'NXDOC-577: fix alternative example'
         version: '8'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2015-07-30 12:00'
         message: 'NXDOC-577: upgrade how to after theme removal'
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-10-03 15:38'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-17 12:21'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 17:27'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-06 15:17'
         message: Formatting
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-03 18:45'
         message: remove list of how tos
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-12-03 16:30'
         message: ''

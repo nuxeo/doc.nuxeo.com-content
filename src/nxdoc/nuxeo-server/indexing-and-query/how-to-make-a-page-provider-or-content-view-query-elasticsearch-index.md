@@ -14,8 +14,10 @@ labels:
     - content-review-lts2016
     - elasticsearch
     - content-view
+    - atchertchian
     - howto
     - query-pageprovider-component
+    - kleturc
     - university
     - excerpt
     - content-review-lts2017

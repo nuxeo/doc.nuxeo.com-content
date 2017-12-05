@@ -15,6 +15,7 @@ labels:
     - howto
     - link-update
     - permission
+    - fguillaume
     - content-review-lts2017
 toc: true
 confluence:
@@ -30,52 +31,52 @@ confluence:
     source_link: /display/NXDOC/How+to+Grant+the+Edit+Permission+without+the+Remove+Permission
 tree_item_index: 400
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-18 15:36'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-18 14:30'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-18 14:09'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-18 11:16'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-18 11:09'
         message: ''
         version: '6'
-    - 
+    -
         author: Ronan Daniellou
         date: '2016-01-11 09:55'
         message: "Added a 'heading' for the procedure (prevents TOC being empty)"
         version: '5'
-    - 
+    -
         author: Ronan Daniellou
         date: '2016-01-11 09:51'
         message: Added Nuxeo TOC panel
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-09 13:45'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Martins
         date: '2015-04-09 09:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Martins
         date: '2015-04-09 09:43'
         message: ''

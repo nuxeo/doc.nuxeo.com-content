@@ -19,6 +19,7 @@ labels:
     - howto
     - layout
     - layout-widgets-component
+    - atchertchian
     - content-review-lts2017
 toc: true
 confluence:
@@ -34,67 +35,67 @@ confluence:
     source_link: /display/NXDOC/How+to+Set+a+Default+Date+on+a+Field+at+Document+Creation
 tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 15:43'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-28 12:54'
         message: 'Fix images '
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-28 12:50'
         message: 'Fix Studio menu label      '
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-15 09:24'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-12-01 21:52'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-12 15:47'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-11 15:24'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-10 17:30'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 17:42'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-17 18:46'
         message: Added excerpt
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 13:50'
         message: ''
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-01 12:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-01 11:43'
         message: ''

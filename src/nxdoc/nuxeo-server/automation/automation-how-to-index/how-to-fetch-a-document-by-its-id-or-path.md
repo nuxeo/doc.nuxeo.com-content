@@ -14,6 +14,7 @@ labels:
     - lts2016-ok
     - howto
     - automation
+    - vpasquier
     - studio
     - excerpt
     - multiexcerpt-include

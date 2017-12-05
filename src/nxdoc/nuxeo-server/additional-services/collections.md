@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - collection
+    - grenard
     - collection-component
     - multiexcerpt-include
     - content-review-lts2017

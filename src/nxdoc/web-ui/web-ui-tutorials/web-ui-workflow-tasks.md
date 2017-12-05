@@ -15,6 +15,7 @@ labels:
     - lts2016-ok
     - nuxeo-web-ui
     - extension
+    - grenard
     - workflow
     - task
     - content-review-lts2017

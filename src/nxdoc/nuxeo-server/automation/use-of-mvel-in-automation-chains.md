@@ -9,6 +9,7 @@ labels:
     - mvel
     - scripting
     - automation
+    - vpasquier
     - excerpt
     - content-review-lts2017
 toc: true
