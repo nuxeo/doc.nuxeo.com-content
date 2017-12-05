@@ -182,7 +182,6 @@ Note: Default value is `true`, the document is saved by default to maintain comp
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22912](https://jira.nuxeo.com/browse/NXP-22912).
 
-
 #### Disable Delta Computation  {{since '9.1'}}
 
 By adding the new option `org.nuxeo.core.delta.disabled=true` in the `nuxeo.conf` file, the delta calculation used by the [Nuxeo Quota addon]({{page version='' space='nxdoc' page='nuxeo-quota'}}) can be skipped. This can improve the performance of mass import.
@@ -474,9 +473,9 @@ It is now possible to export a Note with its embedded images as a PDF.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-16831](https://jira.nuxeo.com/browse/NXP-16831).
 
-#### ffmpeg Embedded aac Encoder Instead of libfaac {{since '9.3'}}
+#### FFmpeg Embedded AAC Encoder Instead of libfaac {{since '9.3'}}
 
-ffmpeg embedded aac encoder is now used instead of libfaac, simplifying the set up phase.
+FFmpeg embedded AAC encoder is now used instead of libfaac, simplifying the set up phase.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22777](https://jira.nuxeo.com/browse/NXP-22777).
 
@@ -551,7 +550,6 @@ Elasticsearch Shield support has been added since Nuxeo Platform 9.1. It is poss
 Warning: in 9.3 this feature has been removed as Elasticsearch implementation was migrated to 5.X. A compatibility with X-Pack will be added later.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-21208](https://jira.nuxeo.com/browse/NXP-21208) and [NXP-22042](https://jira.nuxeo.com/browse/NXP-22042), and the [Elasticsearch Shield documentation]({{page version='' space='nxdoc' page='elasticsearch-setup'}}#configuring-access-to-the-cluster-through-elasticsearch-shield-plugin) for more information.
-
 
 #### Re-indexing Without Downtime {{since '9.3'}}
 
@@ -751,7 +749,7 @@ An update comment can now be passed through the `Update-Comment` header when upd
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23319](https://jira.nuxeo.com/browse/NXP-23319).
 
-#### Jersay Client Handler {{since '9.3'}}
+#### Jersey Client Handler {{since '9.3'}}
 
 REST API Client handler now uses Apache's Jersey implementation while it was using the JDK one previously. It provides stricter behaviors leading to better resilience.
 
@@ -782,6 +780,8 @@ LDAP connector has been optimized.
 #### New Migration Service {{since '9.3'}}
 
 A new migration service defines a series of states that a migration can take and allows service aware of this migration to read and write accordingly in the former or new way, depending on the status of the migration. The goal of this service is to standardize how future migrations will be processed within the Nuxeo Platform. The first use case of this new service is the migration of the Tag Service implementation.
+
+![Migration tab]({{file name='9.3-migration-tab.png'}} ?w=300,border=true)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-19412](https://jira.nuxeo.com/browse/NXP-19412).
 
@@ -840,6 +840,8 @@ Default picture conversions can now be disabled by using the `enabled` attribute
 
 A new layout has been implemented for pictures so as to display all picture related metadata (IPTC, technical information, etc.).
 
+![Picture document type layout]({{file name='9.3-picture-layout.png'}} ?w=500,border=true)
+
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23064](https://jira.nuxeo.com/browse/NXP-23064).
 
 
@@ -851,7 +853,7 @@ A new layout has been implemented for pictures so as to display all picture rela
 
 ### Nuxeo Drive  
 
-#### Server Side Configuration Of Drive Clients {{since '9.3'}}
+#### Server-Side Configuration Of Drive Clients {{since '9.3'}}
 
 Some properties of the Drive clients can now be configured (and updated) from the server for all Drive clients:
 
@@ -906,7 +908,7 @@ In 9.1 and later, by default, we reset the synchronization root registrations on
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21484](https://jira.nuxeo.com/browse/NXP-21484).
 
-#### CSV importer report {{since '9.3'}}
+#### CSV Importer Report {{since '9.3'}}
 
 The Web UI integration of CSV importer now displays the import report to the user.
 
@@ -960,6 +962,8 @@ Random English content can now be generated using the random importer.
 
 [EasyShare addon]({{page version='' space='nxdoc' page='easyshare'}}) has been ported to Web UI.
 
+![Nuxeo EasyShare]({{file name='9.3-nuxeo-easyshare.png'}} ?w=500,border=true)
+
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22923](https://jira.nuxeo.com/browse/NXP-22923).
 
 ### Quota
@@ -988,7 +992,7 @@ Loading time of Nuxeo Web UI on Firefox, Internet Explorer and Edge has been imp
 
 A new search result view has been added on the main search. It displays items on the full width of the panel, in the same style as a web search engine such as Google, with searched terms highlighted in the context of the original text wrapping them.
 
-![Web UI 9.2 faceted search results hightlights]({{file name='9.2-faceted-search-results-hightlight.png'}} ??w=500,border=true)
+![Web UI 9.2 faceted search results hightlights]({{file name='9.2-faceted-search-results-hightlight.png'}} ?w=500,border=true)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22567](https://jira.nuxeo.com/browse/NXP-22567).
 
@@ -996,7 +1000,7 @@ A new search result view has been added on the main search. It displays items on
 
 When doing a quick search in the suggestion box, Web UI now displays the matched terms and metadata so as to understand why the result item is returned.  
 
-![Web UI 9.2 suggestion search results hightlights]({{file name='9.2-suggestion-search-results-highlight.png'}} ??w=400,border=true)
+![Web UI 9.2 suggestion search results hightlights]({{file name='9.2-suggestion-search-results-highlight.png'}} ?w=400,border=true)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22566](https://jira.nuxeo.com/browse/NXP-22566).
 
@@ -1004,7 +1008,7 @@ When doing a quick search in the suggestion box, Web UI now displays the matched
 
 A new view for media search results has been added, with justified display of thumbnails that keep their original ratio and metadata displayed on hover. The goal is to improve user experience for users that spend a lot of time searching for visual media (images, video) in the repository.
 
-![Web UI 9.2 media justified grid]({{file name='9.2-assets-justified-grid.png'}} ??w=400,border=true)
+![Web UI 9.2 media justified grid]({{file name='9.2-assets-justified-grid.png'}} ?w=400,border=true)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22474](https://jira.nuxeo.com/browse/NXP-22474).
 
@@ -1019,6 +1023,8 @@ It is now possible to easily and immediately scroll a whole result set of docume
 
 A new action is available in the bulk selection actions list, that allows to bulk download selected content in a single ZIP downloaded asynchronously. The main file is added to the ZIP for each selected document. When it comes to folders, content is recursively resolved up to a configurable level.
 
+![Bulk download in Web UI]({{file name='9.3-bulk-download.png'}} ?w=500,border=true)
+
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23095](https://jira.nuxeo.com/browse/NXP-23095).
 
 #### Improved Task View {{since '9.2'}}
@@ -1029,7 +1035,7 @@ Task view has been improved:
 - Task queue: Optimization of the information available to the user
 - Tasks Listing Dashboard: File name and path info have been added
 
-![Web UI 9.2 improved task view]({{file name='9.2-improved-workflow-task.png'}} ??w=500,border=true)
+![Web UI 9.2 improved task view]({{file name='9.2-improved-workflow-task.png'}} ?w=500,border=true)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22591](https://jira.nuxeo.com/browse/NXP-22591).
 
@@ -1037,11 +1043,15 @@ Task view has been improved:
 
 The folder view (and view of other folderish documents) has been improved so that more space is dedicated to the content listing of the folder while displaying metadata of the folder above the listing.
 
+![Folder view with Details folded]({{file name='9.3-folder-view-folded.png'}} ?w=500,border=true)
+
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22997](https://jira.nuxeo.com/browse/NXP-22997).
 
 #### Better Document Edit User Experience {{since '9.3'}}
 
 More space has been dedicated to metadata edit experience, by using a pop-in that displays metadata edit page full screen.
+
+![Edit popup]({{file name='9.3-edit-popup.png'}} ?w=500,border=true)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22989](https://jira.nuxeo.com/browse/NXP-22989).
 
@@ -1049,13 +1059,15 @@ More space has been dedicated to metadata edit experience, by using a pop-in tha
 
 The storyboard has been added to Web UI view of videos.
 
-![Web UI 9.2 video storyboard]({{file name='9.2-video-storyboard-webui.png'}} ??w=500,border=true)
+![Web UI 9.2 video storyboard]({{file name='9.2-video-storyboard-webui.png'}} ?w=500,border=true)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [ELEMENTS-358](https://jira.nuxeo.com/browse/ELEMENTS-358)
 
 #### NXQL Search For administators Users {{since '9.3'}}
 
 The Nuxeo Web UI Admin menu now shows a NXQL search menu, enabling administrators to query documents in NXQL for more flexibility.
+
+![NXQL search in Nuxeo Web UI]({{file name='9.3-NXQL-search-web-ui.png'}} ?w=00,border=true)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22766](https://jira.nuxeo.com/browse/NXP-22766).
 
