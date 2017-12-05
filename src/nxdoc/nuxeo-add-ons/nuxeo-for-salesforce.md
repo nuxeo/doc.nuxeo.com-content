@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - salesforce-component
+    - vpasquier
     - link-update
     - excerpt
     - multiexcerpt-include

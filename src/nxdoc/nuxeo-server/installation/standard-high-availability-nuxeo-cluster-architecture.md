@@ -8,6 +8,7 @@ review:
 labels:
     - lts2016-ok
     - deployment
+    - bchauvin
     - cluster
     - architecture
     - content-review-lts2017

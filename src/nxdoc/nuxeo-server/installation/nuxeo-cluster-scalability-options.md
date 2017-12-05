@@ -3,6 +3,7 @@ title: Nuxeo Cluster Scalability Options
 description: This page describes how your Nuxeo cluster can scale depending on your needs.
 labels:
     - deployment
+    - bchauvin
     - architecture
     - cluster
     - content-review-lts2017

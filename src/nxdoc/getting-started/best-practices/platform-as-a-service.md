@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - deployment
+    - mcedica
     - architecture
     - excerpt
     - content-review-lts2017
@@ -24,47 +25,47 @@ confluence:
     source_link: /display/NXDOC/Platform+as+a+Service
 tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-07 09:56'
         message: ''
         version: '9'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-10-13 13:46'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 17:37'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 17:37'
         message: typos and formatting
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-28 15:13'
         message: ''
         version: '5'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-11-24 16:26'
         message: Typos
         version: '4'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-11-19 23:35'
         message: ''
         version: '3'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-11-19 23:34'
         message: ''
         version: '2'
-    - 
+    -
         author: Thierry Delprat
         date: '2014-11-19 23:31'
         message: ''

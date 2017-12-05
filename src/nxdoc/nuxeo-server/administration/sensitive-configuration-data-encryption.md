@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - encryption
+    - jcarsique
     - link-update
     - content-review-lts2017
 toc: true
@@ -26,97 +27,97 @@ version_override:
     LTS 2015: 710/admindoc/sensitive-configuration-data-encryption
     '6.0': 60/admindoc/sensitive-configuration-data-encryption
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-09 13:59'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-25 11:17'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-03 10:35'
         message: ''
         version: '17'
-    - 
+    -
         author: Julien Carsique
         date: '2016-03-01 18:23'
         message: NXP-19071 --set option
         version: '16'
-    - 
+    -
         author: Julien Carsique
         date: '2016-03-01 17:32'
         message: NXP-19071 --set option
         version: '15'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-22 11:17'
         message: ''
         version: '14'
-    - 
+    -
         author: Julien Carsique
         date: '2015-10-22 10:44'
         message: Reverted from v. 11
         version: '13'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-10-22 10:30'
         message: Explain values can be encrypted from prompt
         version: '12'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-31 10:34'
         message: ''
         version: '11'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-31 10:04'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-25 07:51'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-25 07:49'
         message: Add related doc
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-24 14:27'
         message: ''
         version: '7'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-24 14:04'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-24 13:29'
         message: ''
         version: '5'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-24 12:58'
         message: ''
         version: '4'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-24 12:57'
         message: ''
         version: '3'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-24 12:57'
         message: ''
         version: '2'
-    - 
+    -
         author: Julien Carsique
         date: '2015-08-24 12:18'
         message: ''

@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - shell
+    - jcarsique
     - shell-component
     - excerpt
     - content-review-lts2017
@@ -24,57 +25,57 @@ confluence:
     source_link: /display/NXDOC/Shell+Namespaces
 tree_item_index: 300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-31 14:40'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 14:35'
         message: Update table of contents look
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-05 16:36'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-05 16:36'
         message: Added TOC
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 16:44'
         message: Migrated to Confluence 4.0
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 16:44'
         message: Added related pages
         version: '6'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-28 14:16'
         message: ''
         version: '5'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 23:46'
         message: ''
         version: '4'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 23:33'
         message: ''
         version: '3'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 23:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2010-11-24 23:09'
         message: ''

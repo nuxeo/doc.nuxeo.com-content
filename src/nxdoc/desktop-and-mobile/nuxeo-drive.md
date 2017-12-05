@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - link-update
     - nuxeo-drive
+    - yachour
     - content-review-lts2017
 toc: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.

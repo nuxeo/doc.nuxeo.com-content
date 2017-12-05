@@ -10,6 +10,7 @@ labels:
     - sql
     - directory-component
     - vocabulary
+    - tmartins
     - multiexcerpt-include
     - content-review-lts2017
 toc: true

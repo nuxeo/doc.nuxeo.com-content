@@ -15,6 +15,7 @@ labels:
     - link-update
     - howto
     - nuxeo-drive
+    - yachour
     - multiexcerpt-include
     - multiexcerpt
     - content-review-lts2017

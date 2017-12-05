@@ -14,6 +14,7 @@ labels:
     - lts2016-ok
     - howto
     - nuxeo-drive
+    - yachour
     - layout
     - content-review-lts2017
 confluence:

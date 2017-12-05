@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - shell
+    - jcarsique
     - shell-component
     - content-review-lts2017
 toc: true
@@ -27,27 +28,27 @@ version_override:
     '6.0': 60/admindoc/configuration-commands
     '5.8': 58/admindoc/configuration-commands
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 15:07'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 16:13'
         message: Migrated to Confluence 4.0
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-15 16:13'
         message: Fixed wrong links and added related pages
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 12:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Bogdan Stefanescu
         date: '2011-01-04 00:13'
         message: ''

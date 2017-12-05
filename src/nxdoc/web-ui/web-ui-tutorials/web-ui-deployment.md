@@ -16,7 +16,6 @@ labels:
     - nuxeo-web-ui
     - extension
     - marketplace
-    - deployment
     - content-review-lts2017
 tree_item_index: 900
 

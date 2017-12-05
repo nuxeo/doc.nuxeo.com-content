@@ -16,6 +16,7 @@ labels:
     - howto
     - i18n
     - translation
+    - sguitter
     - excerpt
     - content-review-lts2017
 confluence:

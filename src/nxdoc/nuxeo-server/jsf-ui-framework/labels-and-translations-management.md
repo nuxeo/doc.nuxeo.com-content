@@ -8,6 +8,7 @@ labels:
     - content-review-lts2016
     - todo
     - translation
+    - sguitter
     - nxdoc-697
     - excerpt
     - content-review-lts2017

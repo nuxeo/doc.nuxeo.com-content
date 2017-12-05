@@ -12,6 +12,7 @@ details:
         topics: Nuxeo Mobile
 labels:
     - nuxeo-mobile
+    - yachour
     - howto
     - content-review-lts2017
 toc: true

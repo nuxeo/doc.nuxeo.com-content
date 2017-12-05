@@ -3,6 +3,7 @@ title: Nuxeo Cluster Architecture Introduction
 description: This page covers the elements that can be included in a production-ready Nuxeo cluster architecture.
 labels:
     - deployment
+    - bchauvin
     - architecture
     - cluster
     - content-review-lts2017
