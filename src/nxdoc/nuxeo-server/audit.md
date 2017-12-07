@@ -346,6 +346,8 @@ A post commit asynchronous listener is defined and an Event Bundle, which is an 
 
 [More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--listener)
 
+Note that since 9.3 by default this listener is overridden by the [Nuxeo Stream audit writer]({{page page='nuxeo-stream'}}).
+
 ### Queues
 
 It is also possible to configure queues used by the Audit Service. Each queue is using a separate queue and a single thread for logging. The extension point used to define the queues' parameters is `queue` for the `org.nuxeo.ecm.core.work.service` target.
