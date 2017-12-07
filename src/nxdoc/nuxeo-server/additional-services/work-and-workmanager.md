@@ -234,3 +234,9 @@ Then the "background processing nodes" are on the contrary, configured to consum
   <queue id="HeavyProcessing" processing="true"/>
 </extension>
 ```
+
+## Stream WorkManager
+
+An alternative WorkManager has been introduced in Nuxeo 9.3 based on Nuxeo Stream.
+
+Visit the ({{page page='nuxeo-stream'}}) for more information.

@@ -2343,6 +2343,110 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 <td colspan="1">`10`</td>
 <td colspan="1">Since 8.10-HF01</td>
 </tr>
+<tr>
+<td colspan="1">`kafka.enabled`</td>
+<td colspan="1">Switch the default Stream configuration to Apache Kafka</td>
+<td colspan="1">`false`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.zkServers`</td>
+<td colspan="1">host:port comma separated list of Kafka Zookeepers</td>
+<td colspan="1">`localhost:2181`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.bootstrap.servers`</td>
+<td colspan="1">host:port comma separated list of Kafka Brokers</td>
+<td colspan="1">`localhost:9092`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.topicPrefix`</td>
+<td colspan="1">The prefix applied to any Kafka Topic</td>
+<td colspan="1">`nuxeo-`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.request.timeout.ms`</td>
+<td colspan="1">Maximum time to wait for a response</td>
+<td colspan="1">`65000`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.max.poll.interval.ms`</td>
+<td colspan="1">Maximum delay between poll invocation</td>
+<td colspan="1">`60000`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.max.poll.records`</td>
+<td colspan="1">Maximum number of records to read per poll</td>
+<td colspan="1">`5`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.session.timeout.ms`</td>
+<td colspan="1">Timeout used to detect worker failures</td>
+<td colspan="1">`50000`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.heartbeat.interval.ms`</td>
+<td colspan="1">Heartbeat interval</td>
+<td colspan="1">`2000`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+
+<tr>
+<td colspan="1">`nuxeo.stream.chronicle.retention.duration`</td>
+<td colspan="1">Default retention for Chronicle Queue Log, default to 4 days.</td>
+<td colspan="1">`4d`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.audit.enabled`</td>
+<td colspan="1">Enable the Nuxeo Stream Audit Writer implementation</td>
+<td colspan="1">`true`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.audit.log.config`</td>
+<td colspan="1">The Log configuration to use for the Stream Audit Writer</td>
+<td colspan="1">`audit`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.audit.batch.size`</td>
+<td colspan="1">The entries batch size to submit the the audit backend</td>
+<td colspan="1">`25`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.audit.batch.threshold.ms`</td>
+<td colspan="1">Do not wait more than this threshold if the batch is not full</td>
+<td colspan="1">`500`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.work.enabled`</td>
+<td colspan="1">Supersed the default WorkManager with the Sream WorkManager</td>
+<td colspan="1">`false`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.work.log.config`</td>
+<td colspan="1">The Log configuration to use for the Stream WorkManager</td>
+<td colspan="1">`work`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.work.over.provisioning.factor`</td>
+<td colspan="1">The factor to use on the Work Thread pool size to get the number of Log partition.</td>
+<td colspan="1">`3`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+
 </tbody>
 </table>
 </div>
