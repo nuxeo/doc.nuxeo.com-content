@@ -564,7 +564,8 @@ Public
 [Documentation]({{page page='nuxeo-jsf-ui'}})
 </td>
 <td colspan="1">
-[Released for 9.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui?version=9.3.0)
+[Released for 9.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui?version=9.3.0)<br/>
+Deprecated since 9.3
 </td>
 </tr>
 <tr>

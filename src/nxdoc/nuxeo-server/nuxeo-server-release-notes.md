@@ -982,6 +982,12 @@ The size is expressed in bytes but can use a suffix like KB, MB, GB or TB.
 
 ### Nuxeo Web UI {{> anchor 'nuxeo-web-ui'}}
 
+#### Nuxeo Web UI Becomes the Default UI {{since '9.3'}}
+
+With Nuxeo Platform 9.3 Nuxeo Web UI becomes the default UI of the Platform.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23087](https://jira.nuxeo.com/browse/NXP-23087).
+
 #### Improved Performance {{since '9.3'}}
 
 Loading time of Nuxeo Web UI on Firefox, Internet Explorer and Edge has been improved.
@@ -1063,7 +1069,7 @@ The storyboard has been added to Web UI view of videos.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [ELEMENTS-358](https://jira.nuxeo.com/browse/ELEMENTS-358)
 
-#### NXQL Search For administators Users {{since '9.3'}}
+#### NXQL Search For Administator Users {{since '9.3'}}
 
 The Nuxeo Web UI Admin menu now shows a NXQL search menu, enabling administrators to query documents in NXQL for more flexibility.
 
@@ -1097,7 +1103,7 @@ The following elements now enable to display a custom message when the value is 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [ELEMENTS-353](https://jira.nuxeo.com/browse/ELEMENTS-353).
 
-#### Default Workflows independent from Nuxeo JSF UI {{since '9.2'}}
+#### Default Workflows Independent from Nuxeo JSF UI {{since '9.2'}}
 
 Default Workflows (serial and parallel reviews) have been added to Nuxeo Web UI and do not require Nuxeo SJF UI anymore.
 
@@ -1156,9 +1162,13 @@ When a property is of type Integer and the constraint check is enabled, message 
 
 #### New Access Simple Access URL for JSF Application {{since '9.3'}}
 
-When the nuxeo-jsf-ui package is installed, the JSF UI can now be accessed via `http://SERVER_URL/nuxeo/jsf`.
+When the nuxeo-jsf-ui package is installed, the JSF UI can now be accessed via `http://SERVER_URL/nuxeo/jsf`. This enables an easy access to Nuxeo JSF UI even though Nuxeo Web UI is now the default UI of the Platform.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23376](https://jira.nuxeo.com/browse/NXP-23376).
+
+#### Nuxeo JSF UI Released as Deprecated {{since '9.3'}}
+
+With Nuxeo Platform 9.3, [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui) has been released as deprecated. It will be released with Nuxeo Platform LTS 2017 and supported for 3 years, according to our support policy.
 
 ### Metrics
 
