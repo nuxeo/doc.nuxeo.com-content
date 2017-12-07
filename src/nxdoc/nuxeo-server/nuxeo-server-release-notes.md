@@ -1168,7 +1168,7 @@ When the nuxeo-jsf-ui package is installed, the JSF UI can now be accessed via `
 
 #### Nuxeo JSF UI Released as Deprecated {{since '9.3'}}
 
-With Nuxeo Platform 9.3, [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui) has been released as deprecated. It will be released with Nuxeo Platform LTS 2017 and supported for 3 years, according to our support policy.
+With Nuxeo Platform 9.3, [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui) has been released as deprecated. It will be released one last time with Nuxeo Platform LTS 2017 and supported for 3 years, according to our support policy.
 
 ### Metrics
 
