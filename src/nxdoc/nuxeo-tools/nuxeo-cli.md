@@ -10,6 +10,7 @@ review:
 labels:
     - content-review-lts2017
     - nuxeo-cli
+    - akervern
 
 ---
 {{#> callout type='tip'}}

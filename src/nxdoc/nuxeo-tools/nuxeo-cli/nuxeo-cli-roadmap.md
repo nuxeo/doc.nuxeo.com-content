@@ -11,6 +11,7 @@ details: null
 labels:
     - nuxeo-cli
     - roadmap
+    - bchauvin
     - content-review-lts2017
 
 ---

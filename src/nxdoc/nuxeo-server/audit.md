@@ -7,7 +7,7 @@ review:
 labels:
     - lts2016-ok
     - audit
-    - ataillefer
+    - fdavid
     - audit-component
     - content-review-lts2017
 toc: true
