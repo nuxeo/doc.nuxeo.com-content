@@ -8,7 +8,7 @@ labels:
     - lts2016-ok
     - localization
     - translation
-    - sguitter
+    - mlumeau
     - index
     - excerpt
     - content-review-lts2017

@@ -12,6 +12,7 @@ labels:
     - polymer
     - content-review-lts2017
     - home
+    - mlumeau
 is_overview: true
 tree_item_index: 300
 section_parent: web-ui

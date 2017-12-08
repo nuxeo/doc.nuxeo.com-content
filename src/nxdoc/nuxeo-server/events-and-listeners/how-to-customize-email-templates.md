@@ -15,6 +15,7 @@ labels:
     - howto
     - link-update
     - mail-template
+    - bchauvin
     - alert
     - notification
     - studio
@@ -34,92 +35,92 @@ confluence:
     source_link: /display/NXDOC/How+to+Customize+Email+Templates
 tree_item_index: 1000
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 10:11'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-08 09:40'
         message: Fix broken link
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-29 13:16'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-29 11:14'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-29 11:13'
         message: merging page with Create a mail template
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-28 16:43'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-28 16:42'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-17 11:33'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 15:58'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 15:58'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-05-22 12:06'
         message: Added link to list of notification templates in Explorer
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-03 16:03'
         message: Migrated to Confluence 4.0
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-03 16:03'
         message: Added link to related howto
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-12-27 19:15'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-12-27 19:15'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-12-27 19:09'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-12-21 19:19'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-12-21 19:19'
         message: ''

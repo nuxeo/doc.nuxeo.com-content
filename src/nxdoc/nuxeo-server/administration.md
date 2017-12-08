@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - content-review-lts2017
     - home
+    - mlumeau
 is_overview: true
 confluence:
     ajs-parent-page-id: '31033314'

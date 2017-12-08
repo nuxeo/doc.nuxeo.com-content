@@ -10,6 +10,7 @@ labels:
     - multiexcerpt-include
     - content-review-lts2017
     - home
+    - mlumeau
 confluence:
     ajs-parent-page-id: '950332'
     ajs-parent-page-title: Developer Documentation Center

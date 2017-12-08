@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - admin-center
+    - bchauvin
     - update-center
     - admin-center-component
     - multiexcerpt-include
@@ -30,162 +31,162 @@ version_override:
     '6.0': 60/admindoc/installing-a-new-package-on-your-instance
     '5.8': 58/admindoc/installing-a-new-package-on-your-instance
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-04 15:32'
         message: ove nuxeoctl instructions u
         version: '32'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-22 09:21'
         message: 'Fix links '
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-21 16:03'
         message: ''
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-11 13:50'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-11 13:42'
         message: ''
         version: '28'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-11 13:40'
         message: ''
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-11 13:39'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-11 13:32'
         message: 'Merge install and uninstall package '
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-26 14:08'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-26 13:41'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 18:27'
         message: Add note about dependencies in offline mode
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 18:09'
         message: ''
         version: '21'
-    - 
+    -
         author: Thierry Martins
         date: '2014-11-24 18:00'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 17:54'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 17:49'
         message: Add nuxeoctl steps and related pages
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 16:14'
         message: Update screenshot for offline and Marketplace installation steps
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 15:10'
         message: Screenshot update
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-24 14:13'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-16 16:58'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-19 15:33'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-19 15:02'
         message: Added offline installation steps
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-14 12:09'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-14 12:00'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-14 12:00'
         message: Updated steps
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-07 18:04'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-07 17:22'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-07 17:22'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-07 17:22'
         message: Migrated to Confluence 4.0
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-07 17:22'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-07 15:08'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-15 12:07'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-05 16:52'
         message: ''

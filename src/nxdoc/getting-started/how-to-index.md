@@ -9,6 +9,7 @@ labels:
     - migration-sample
     - content-review-lts2017
     - home
+    - mlumeau
 confluence:
     ajs-parent-page-id: '7209076'
     ajs-parent-page-title: Tutorials
