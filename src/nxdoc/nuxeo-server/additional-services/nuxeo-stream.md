@@ -2,7 +2,7 @@
 title: Nuxeo Stream
 review:
     comment: ''
-    date: ''
+    date: '2017-12-07'
     status: ok
 labels:
     - lts2017-ok
@@ -15,9 +15,9 @@ Nuxeo Stream provides a Log storage abstraction and a Stream processing pattern.
 
 {{! /excerpt}}
 
-## Log and Stream processing
+## Log and Stream Processing
 
-A log is a storage abstraction, it is an append only sequence of record ordered by time.
+A log is a storage abstraction, it is an append-only sequence of record ordered by time.
 This simple concept is at the heart of many data intensive applications. It brings fault tolerance, durability, immutability and ordering to distributed system.
 
 When the processing of log records is expected to give near real time feedback and the number of records is unbounded this is called stream processing.
@@ -26,7 +26,7 @@ Nuxeo uses a pattern called computation for stream processing, it enables to com
 
 Visit the [nuxeo-stream README](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-runtime/nuxeo-stream) for more details.
 
-## Stream library
+## Stream Library
 
 The `nuxeo-stream` module provides a log based broker message passing system with a computation stream pattern.
 
@@ -36,7 +36,7 @@ The underlying log solution relies:
 
 - either on [Chronicle Queue](https://github.com/OpenHFT/Chronicle-Queue) which is a high performance off-Heap queue library, there is no broker to install, it relies entirely on OS memory mapped file.
 
-- either on  [Apache Kafka](https://kafka.apache.org/) which is a distributed streaming platform.
+- either on [Apache Kafka](https://kafka.apache.org/) which is a distributed streaming platform.
 
 The Chronicle Queue implementation can be used when producers and consumers are on the same node,
 for distributed support Kafka is needed.
@@ -47,13 +47,13 @@ Please visit the [Kafka page]({{page page='kafka'}}) for more information.
 
 The `nuxeo-runtime-stream` module provides an integration of `nuxeo-stream` with Nuxeo by exposing two services:
 
-### Kafka configuration service
+### Kafka Configuration Service
 
 This service enable to register Kafka and Zookeeper access, along with Kafka properties for consumer and producers.
 
 Please visit the [Kafka page]({{page page='kafka'}}) for more information.
 
-### Nuxeo Stream service
+### Nuxeo Stream Service
 
 This `StreamService` service provides:
 
@@ -70,16 +70,16 @@ This `StreamService` service provides:
 
 The Nuxeo stream service is used in different locations.
 
-### Stream Audit writer
+### Stream Audit Writer
 
 Used by default since Nuxeo 9.3. The events that need to be traced in the audit are collected by a sync listener.
 When the transaction is committed, events are written as JSON into an audit Log.
 A StreamProcessor takes the audit Log as input and send the entries in batch to the Audit backend.
 
 This brings:
-- reliability: the entries are first persisted to the log and can be processed later even
+- Reliability: the entries are first persisted to the log and can be processed later even
   if the audit backend is not reachable or if the application crash.
-- performance: the entries are sent to the audit backend at a constant and optimal throughput,
+- Performance: the entries are sent to the audit backend at a constant and optimal throughput,
   not tied to the application activity.
 
 The Stream audit writer can be configured with the following options:
@@ -103,7 +103,7 @@ work can be queued into a Log without worries about the memory limits.
 
 Kafka is required to enable distributed work in cluster mode.
 
-To scale horizontally so adding Nuxeo node supports more load,
+To scale horizontally, so adding Nuxeo node supports more load,
 the number of Log partitions that fix the maximum concurrency must be greater than the thread pool size of a single node.
 This strategy is called partition over provisioning.
 
@@ -130,15 +130,15 @@ nuxeo.stream.work.over.provisioning.factor=3
 {{#> callout type='warning' }}
 The behavior of the Stream WorkManager is slightly different than the default WorkManager:
 
-- works are immutable: they can not be used as a storage for result, the repository or the transient store should be used instead.
-- works can not be listed or loaded on demand because this can not scale
-- works with the same id are executed only once, this make work idempotent for free
-- at the moment the number of Running works is only an estimation, scheduled and completed metrics are reliable.
+- Works are immutable: they can not be used as a storage for result, the repository or the transient store should be used instead
+- Works can not be listed or loaded on demand because this can not scale
+- Works with the same id are executed only once, this make work idempotent for free
+- At the moment the number of Running works is only an estimation, scheduled and completed metrics are reliable
 
 This requires some work and WorkManager usage adaptations, this is still a work in progress.
 {{/callout}}
 
-### Stream importer
+### Stream Importer
 
 The `nuxeo-importer-stream` which is part of the `nuxeo-platform-importer` addon use Log to run document importer.
 
