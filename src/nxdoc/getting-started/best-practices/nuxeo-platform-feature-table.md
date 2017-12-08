@@ -610,7 +610,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>LTS&nbsp;2018</td>
-    <td></td>
+    <td>[Documentation]({{page page='nuxeo-tree-snapshot'}})</td>
 </tr>
 <tr>
     <td colspan="1">Version / Document comparison</td>
