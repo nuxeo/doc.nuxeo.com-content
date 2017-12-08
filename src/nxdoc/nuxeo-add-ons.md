@@ -774,7 +774,7 @@ Public
 <td>Nuxeo Tree Snapshot<br/>
 `nuxeo-tree-snapshot`</td>
 <td>Public</td>
-<td></td>
+<td>[Documentation]({{page page='nuxeo-tree-snapshot'}})</td>
 <td>[Released for 9.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot?version=1.1.2)</td>
 </tr>
 <tr>
