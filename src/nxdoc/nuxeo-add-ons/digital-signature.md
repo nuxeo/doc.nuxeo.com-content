@@ -2,14 +2,14 @@
 title: Digital Signature
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-11'
     status: ok
 labels:
     - lts2016-ok
     - digital-signature
     - ataillefer
     - digital-signature-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -87,6 +87,8 @@ history:
 
 ---
 {{! excerpt}}
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 The [Digital Signature add-on](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-signature) introduces PDF signing capabilities to the Nuxeo Platform. This add-on also provides generation of user certificates, which are required for document signing.
 
@@ -329,9 +331,7 @@ Though it could work for small-scale deployments, this approach is not recommend
 
     ```
 
-2.  Put the extension in the `config` directory of your server:
-    *   `$NUXEO/nxserver/config` for a Tomcat distribution,
-    *   `$NUXEO/server/default/deploy/nuxeo.ear/config` for a JBoss distribution.
+2.  Put the extension in the `$NUXEO_HOME/nxserver/config` directory of your server.
 
 #### Setting up the Company Information for New Certificates
 
@@ -356,9 +356,7 @@ Another extension provides general company information used in all certificates,
 
     ```
 
-2.  Put the extension in the `config` directory of your server:
-    *   `$NUXEO/nxserver/config` for a Tomcat distribution,
-    *   `$NUXEO/server/default/deploy/nuxeo.ear/config` for a JBoss distribution.
+2.  Put the extension in the `$NUXEO_HOME/nxserver/config` directory of your server.
 
 ## Use
 
