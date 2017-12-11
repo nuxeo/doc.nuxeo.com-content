@@ -2,7 +2,7 @@
 title: Using OpenID / OAuth2 in Login Screen
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-11'
     status: ok
 labels:
     - lts2016-ok
@@ -12,7 +12,7 @@ labels:
     - openid-component
     - excerpt
     - link-update
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089115'
@@ -86,7 +86,7 @@ history:
 ---
 {{! excerpt}}
 
-You can use any OpenID / OAuth2 identity provider in the authentication chain. A Nuxeo addon, [OpenID Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/openid-authentication), is available to make this possible.
+You can use any OpenID / OAuth 2 identity provider in the authentication chain. A Nuxeo addon, [OpenID Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/openid-authentication), is available to make this possible.
 
 The default behavior is to display a sign-in button per identity provider to start the authentication challenge, then building the expected `UserIdentificationInfo` with the provided `UserInfo`.
 
@@ -96,13 +96,13 @@ By default, the username resolved with the identity provider user information mu
 
 ## Installation
 
-The Nuxeo addon [OpenID Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/openid-authentication) enables you to use OpenID Connect, the identity layer on top of the OAuth 2.0 protocol, and so to use OAuth2 providers as Identity providers.
+The Nuxeo addon [OpenID Authentication](https://connect.nuxeo.com/nuxeo/site/marketplace/package/openid-authentication) enables you to use OpenID Connect, the identity layer on top of the OAuth 2.0 protocol, and so to use OAuth 2 providers as identity providers.
 
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
 ## Configuration
 
-### Declaring a New IdentityProvider in Nuxeo
+### Declaring a New Identity Provider in Nuxeo
 
 ```xml
 <extension point="providers" target="org.nuxeo.ecm.platform.oauth2.openid.OpenIDConnectProviderRegistry">
@@ -137,7 +137,7 @@ In your identity provider configuration, set up the Authorized Redirect URI to t
 
 ### Appending Provider Secrets
 
-Set up the following values in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) depending on your target provider. You can only set the ones you need.
+Set up the following values in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file depending on your target provider. You only need to set the ones related to your new provider.
 
 ```
 # Github
@@ -167,7 +167,7 @@ nuxeo.openid.facebook.client.secret=
 
 ### UserInfo Mapping
 
-Each identity provider has its own way to handle user identity in his `UserInfo` endpoint. You may need to add your own mapping class.
+Each identity provider has its own way to handle user identity in its `UserInfo` endpoint. You may need to add your own mapping class.
 
 You just have to extend the `org.nuxeo.ecm.platform.oauth2.openid.auth.OpenIDUserInfo` class with the expected fields. Do not forget to set it in your provider contribution.
 
@@ -177,15 +177,15 @@ You can take a look to our implementation like [`org.nuxeo.ecm.platform.oauth2.o
 
 By default we provide two username resolvers.
 
-One is based on the email field (`org.nuxeo.ecm.platform.oauth2.openid.auth.EmailBasedUserResolver`). The second one that handles username by concatenating the provider id and the user's subject field (`org.nuxeo.ecm.platform.oauth2.openid.auth.StoredUserInfoResolver`).
+One is based on the email field: `org.nuxeo.ecm.platform.oauth2.openid.auth.EmailBasedUserResolver`. The second one handles username by concatenating the provider id and the user's subject field: `org.nuxeo.ecm.platform.oauth2.openid.auth.StoredUserInfoResolver`.
 
 You can easily add your own by extending the`org.nuxeo.ecm.platform.oauth2.openid.auth.UserResolver` class.
 
 ## Others Parameters
 
-You have the possibility to change some behaviors by adding the following parameters in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}):
+You can change some behaviors by adding the following parameters in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file:
 
-*   `nuxeo.skip.oauth.token.state.check` (default: `false`): Whether to skip checking if the provider response contains the correct OAuth2 state. Default value if recommended for security.
+*   `nuxeo.skip.oauth.token.state.check` (default: `false`): Whether to skip checking if the provider response contains the correct OAuth 2 state. Default value if recommended for security.
 *   `nuxeo.oauth.auth.create.user` (default: `false`): Create user on request if not exists.
 
 * * *
@@ -193,9 +193,9 @@ You have the possibility to change some behaviors by adding the following parame
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 
-{{#> panel heading='Other OAuth / OPenID Related Documentation'}}
+{{#> panel heading='Other OAuth 2 / OPenID Related Documentation'}}
 
-- [Using OAuth2]({{page page='using-oauth2'}})
+- [Using OAuth 2]({{page page='using-oauth2'}})
 
 {{/panel}}
 </div>
