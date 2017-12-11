@@ -2,17 +2,17 @@
 title: Configuration Parameters Index (nuxeo.conf)
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-11'
     status: ok
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - nuxeo_conf
     - properties
     - templates
     - launcher
     - akervern
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
