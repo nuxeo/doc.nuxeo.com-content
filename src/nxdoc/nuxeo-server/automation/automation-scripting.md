@@ -2,7 +2,7 @@
 title: Automation Scripting
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-12-11'
     status: ok
 labels:
     - lts2016-ok
@@ -12,7 +12,7 @@ labels:
     - link-update
     - scripting
     - university
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '18451738'
@@ -209,9 +209,8 @@ history:
         version: '1'
 
 ---
-{{> wistia_video id='nygm75sevd'}}
 
-Extract from the course "[Applying Business Logic](https://university.nuxeo.com/learn/public/course/view/elearning/46/ApplyingBusinessLogic)" at [Nuxeo University](https://university.nuxeo.com)
+{{#> callout type='tip'}} Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/46/ApplyingBusinessLogic) on Nuxeo University. {{/callout}}
 
 {{! excerpt}}
 
@@ -318,7 +317,33 @@ If one of your Automation chain or operation contains dashes (`-`) in their name
 
 The following code example is bound to a simple action button, renames all selected documents with the value "test" as `dc:title` or displays a warning JSF message (depending on the number of the selected documents).
 
-![]({{file name='Screenshot 2015-07-06 16.21.48.png'}} ?w=500,h=439,border=true)
+```js
+function run(input, params) {
+    var docs = Seam.GetSelectedDocuments(input, {});
+    /* Description: Fetch the documents selected in the current folder listing */
+    if (docs.length > 3) {
+        var index;
+        for (index = 0; index < docs.length; ++index) {
+            Document.SetProperty(input, {
+                /* required: true - type: string */
+                "xpath": "dc:title",
+                /* required: false - type: boolean */
+                "save": true,
+                /* required: false - type: serializable */
+                "value": "test"
+            });
+        }
+        WebUI.Refresh(input, {});
+    } else {
+        WebUI.AddMessage(input, {
+            /* required: true - type: string */
+            "message": "DISPLAY IT",
+            /* required: true - type: string */
+            "severity": "WARN"
+        });
+    }
+}
+```
 
 As a result, once the Automation Scripting code has been bound to a simple action button, we can rename all the selected documents or display a warning message.
 
@@ -366,7 +391,7 @@ input = Document.Update(input, {
 
 ```js
 var properties = {};
-properties["my:teamMembers"]=input["my:teamMembers"];
+properties["my:teamMembers"] = input["my:teamMembers"];
 properties["my:teamMembers"].push({"firstName": "Clark", "lastName": "Wayne"});
 input = Document.Update(input, {
   'properties': properties;
@@ -492,66 +517,12 @@ print(file);
 
 ## Advanced Use
 
-### Using the Automation Scripting Service
-
-The [AutomationScriptingService](https://cdn.rawgit.com/nuxeo/nuxeo/master/nuxeo-features/nuxeo-automation/nuxeo-automation-scripting/src/main/java/org/nuxeo/automation/scripting/api/AutomationScriptingService.java) provides API to run your JavaScript codes within the Nuxeo Automation engine:
-
-{{#> panel type='code' heading='AutomationScriptingService'}}
-
-```java
-package org.nuxeo.automation.scripting.api;
-
-import javax.script.ScriptException;
-
-import org.nuxeo.automation.scripting.internals.ScriptRunner;
-import org.nuxeo.ecm.core.api.CoreSession;
-
-public interface AutomationScriptingService {
-.....
-
-	/**
- 	* Run Automation Scripting with given 'JavaScript' InputStream and CoreSession.
- 	* @param in
- 	* @param session
- 	* @throws ScriptException
- 	*/
-	void run(InputStream in, CoreSession session) throws ScriptException, OperationException;
-
-	/**
- 	* Run Automation Scripting for a given 'JavaScript' script and CoreSession.
- 	* @param script
- 	* @param session
- 	* @throws ScriptException
- 	*/
-	void run(String script, CoreSession session) throws ScriptException, OperationException;
-
-......
-}
-```
-
-{{/panel}}
-
-Usage:
-
-{{#> panel type='code' heading='Example'}}
-
-```java
-ScriptRunner runner = scriptingService.getRunner(session);
-assertNotNull(runner);
-
-InputStream stream = this.getClass().getResourceAsStream("/simpleAutomationScript.js");
-assertNotNull(stream);
-runner.run(stream);
-```
-
-{{/panel}}
-
 ### Contributing Automation Scripting Operations
 
 Automation scripting operation is made through an XML contribution on the [`operation` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.automation.scripting.internals.AutomationScriptingComponent--operation):
 
 ```xml
-<extension target="org.nuxeo.automation.scripting.AutomationScriptingComponent" point="operation">
+<extension target="org.nuxeo.automation.scripting.internals.AutomationScriptingComponent" point="operation">
   <scriptedOperation id="Scripting.TestBlob">
 
     <!-- Define input type (input field in the run function) -->
@@ -591,61 +562,63 @@ Automation scripting operation is made through an XML contribution on the [`oper
           print("title:"+blob.filename);
           return newDoc;
       }
-    ]]></script>
+    </script>
   </scriptedOperation>
 </extension>
 ```
 
-Automation scripting operations can be used as common Automation operations:
+### Using Automation Scripting Operations in Chains
 
-*   Using it within chains, for instance:
+{{#> panel type='code' heading='The JavaScript Operation Definition'}}
 
-    {{#> panel type='code' heading='The JavaScript Operation Definition'}}
-
-    ```xml
-    <scriptedOperation id="javascript.HelloWorld">
-      <inputType>string</inputType>
-      <outputType>string</outputType>
-      <param name="lang" type="string"/>
-      <script>
-        function run(input, params) {
-          if (params.lang === "fr") {
-            return "Bonjour " + input;
-          } else {
-            return "Hello " + input;
-          }
+```xml
+<scriptedOperation id="javascript.HelloWorld">
+    <inputType>string</inputType>
+    <outputType>string</outputType>
+    <param name="lang" type="string"/>
+    <script>
+    function run(input, params) {
+        if (params.lang === "fr") {
+        return "Bonjour " + input;
+        } else {
+        return "Hello " + input;
         }
-      </script>
-    </scriptedOperation>
-    ```
+    }
+    </script>
+</scriptedOperation>
+```
 
-    {{/panel}}{{#> panel type='code' heading='The Chain Definition'}}
+{{/panel}}
+{{#> panel type='code' heading='The Chain Definition'}}
 
-    ```xml
-    <extension point="chains" target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
-      <chain id="Scripting.ChainedHello">
-        <operation id="javascript.HelloWorld">
-          <param type="string" name="lang">fr</param>
-        </operation>
-        <operation id="javascript.HelloWorld">
-          <param type="string" name="lang">en</param>
-        </operation>
-      </chain>
-    </extension>
-    ```
+```xml
+<extension point="chains" target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
+    <chain id="Scripting.ChainedHello">
+    <operation id="javascript.HelloWorld">
+        <param type="string" name="lang">fr</param>
+    </operation>
+    <operation id="javascript.HelloWorld">
+        <param type="string" name="lang">en</param>
+    </operation>
+    </chain>
+</extension>
+```
 
-    {{/panel}}
-*   Using it directly from the [Automation Service]({{page page='calling-automation-from-java'}}):
+{{/panel}}
 
-    ```java
-    OperationContext ctx = new OperationContext(session);
-    Map<String, Object> params = new HashMap<>();
+### Running Automation Scripting Operations
 
-    params.put("lang", "en");
-    ctx.setInput("John");
-    Object result = automationService.run(ctx, "Scripting.HelloWorld", params);
-    assertEquals("Hello John", result.toString());
-    ```
+Automation Scripting Operations can be used directly from the [Automation Service]({{page page='calling-automation-from-java'}}):
+
+```java
+OperationContext ctx = new OperationContext(session);
+Map<String, Object> params = new HashMap<>();
+
+params.put("lang", "en");
+ctx.setInput("John");
+Object result = automationService.run(ctx, "Scripting.HelloWorld", params);
+assertEquals("Hello John", result.toString());
+```
 
 * * *
 

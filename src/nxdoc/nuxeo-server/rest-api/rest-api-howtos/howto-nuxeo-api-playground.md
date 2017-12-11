@@ -2,7 +2,7 @@
 title: 'HOWTO: Nuxeo API Playground'
 review:
     comment: ''
-    date: '2017-01-12'
+    date: '2017-12-12'
     status: ok
 details:
     howto:
@@ -21,7 +21,7 @@ labels:
     - excerpt
     - multiexcerpt
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 version_override:
     LTS 2015: 710/nxdoc/use-nuxeo-api-playground-to-discover-the-api
@@ -342,13 +342,13 @@ We use the API to create/read/update documents. But to do so, you need to know w
 
 ![]({{file name='playground_data_structures_section..png'}} ?w=300,h=116,border=true)
 
-For example, to get information about the `userWorkspaceRoot` document:
+For example, to get information about the `UserWorkspaceRoot` document:
 
-1.  In **Types**, click on the `userWorkspaceRoot` document type.
+1.  In **Types**, click on the `UserWorkspaceRoot` document type.
     ![]({{file name='playground_document_type_properties.png'}} ?w=300,border=true,thumbnail=true)
     The schemas and facets of the document are displayed.
 2.  Click on the icon ![]({{file name='playground_sitemap_icon.png'}}).
-    The complete inheritance structure of `userWorkspaceRoot` is displayed.
+    The complete inheritance structure of `UserWorkspaceRoot` is displayed.
     ![]({{file name='playground_inheritance_structure.png'}} ?w=500,border=true)
 3.  Click on one of the schema names, like **dublincore** for instance, to see its structure.
     ![]({{file name='playground_schema_structure.png'}} ?w=500,border=true)

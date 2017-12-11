@@ -2,14 +2,14 @@
 title: Error Handling
 review:
     comment: ''
-    date: '2017-01-10'
+    date: '2017-12-12'
     status: ok
 labels:
     - lts2016-ok
     - exception
     - rest-api
     - troger
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 version_override:
     LTS 2015: 710/nxdoc/web-exceptions-errors
@@ -194,14 +194,6 @@ Here is an example of an exception when fetching a missing document.
 }
 ```
 
-{{#> callout type='note' }}
-
-The Automation Client requires the full stack trace by default. So compatibility has been kept and all automation client calls will activate the extended mode.
-
-All calls with accepted media type `application/json+nxentity` will activate stack trace display.
-
-{{/callout}}
-
 ### Mode Activation API
 
 For testing purposes, you can activate the extended mode by adding this code snippet:
@@ -255,7 +247,7 @@ For instance, calling a REST API endpoint where a listener throws the following 
 ...
     public void handleEvent(Event event) {
         ...
-        throw new NuxeoClientException("there is a conflict!", 409);
+        throw new NuxeoException("there is a conflict!", 409);
     }
 ...
 ```

@@ -2,7 +2,7 @@
 title: Content Enrichers
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-12-11'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - troger
     - enricher
     - university
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 version_override:
     LTS 2015: 710/nxdoc/content-enricher

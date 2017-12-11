@@ -2,7 +2,7 @@
 title: REST API Web Adapters
 review:
     comment: ''
-    date: '2017-01-11'
+    date: '2018-01-15'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - rest-api
     - troger
     - webengine
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 version_override:
     LTS 2015: 710/nxdoc/web-adapters-for-the-rest-api

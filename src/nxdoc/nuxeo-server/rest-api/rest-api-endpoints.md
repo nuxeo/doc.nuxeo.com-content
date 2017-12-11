@@ -2,14 +2,14 @@
 title: REST API Endpoints
 review:
     comment: ''
-    date: '2017-01-06'
+    date: '2018-01-15'
     status: ok
 labels:
     - lts2016-ok
     - rest-api
     - troger
     - endpoint
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 tree_item_index: 100
 
@@ -108,7 +108,7 @@ Perform CRUD operations on Nuxeo resources in REST style. The following resource
       </tr>
     </tbody>
   </table>
-</div>    
+</div>
 
 ## Command Endpoint
 

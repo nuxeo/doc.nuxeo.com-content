@@ -2,7 +2,7 @@
 title: JavaScript Client
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2018-01-15'
     status: ok
 labels:
     - lts2016-ok
@@ -13,7 +13,7 @@ labels:
     - nuxeo-js
     - javascript-client-component
     - link-update
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16091040'

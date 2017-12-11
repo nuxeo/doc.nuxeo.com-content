@@ -2,7 +2,7 @@
 title: Command Resource Endpoints
 review:
     comment: ''
-    date: '2017-01-09'
+    date: '2017-12-11'
     status: ok
 labels:
     - lts2016-ok
@@ -12,7 +12,7 @@ labels:
     - automation
     - endpoint
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'
@@ -614,14 +614,13 @@ Example:
 
 ### Exception
 
-The **exception** JSON entities have an `exception` entity type and contain information about the exception including the server stack trace.
+The **exception** JSON entities have an `exception` entity type and contain information about the exception including the server stack trace if the extended mode is activated, see [Error Handling]({{page page='error-handling'}})
 
 Example:
 
 ```
 {
   "entity-type": "exception",
-  "type": "org.nuxeo.ecm.automation.OperationException",
   "status": 500,
   "message": "Failed to execute operation: Blob.Attach",
   "stack": "org.nuxeo.ecm.automation.OperationException: Failed to invoke operation Blob.Attach\n\tat org.nuxeo.ecm.automation.core.impl.InvokableMethod.invoke(InvokableMethod.java:143)\n\t ..."

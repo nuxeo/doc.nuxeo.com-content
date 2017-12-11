@@ -2,7 +2,7 @@
 title: How to Declare the CSS and JavaScript Resources Used in Your Templates
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2018-01-15'
     status: ok
 details:
     howto:
@@ -20,7 +20,7 @@ labels:
     - theme
     - link-update
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '19235625'
     ajs-parent-page-title: Theme How-To Index

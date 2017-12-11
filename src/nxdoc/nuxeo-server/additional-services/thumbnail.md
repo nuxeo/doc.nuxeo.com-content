@@ -2,7 +2,7 @@
 title: Thumbnail
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2018-01-16'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - troger
     - community-links
     - thumbnail-service-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -239,7 +239,7 @@ Here are the different components of the thumbnail feature:
 
 Here are Nuxeo thumbnail factory implementations on GitHub:
 
-* [`ThumbnailDocumentFactory`](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-thumbnail/src/main/java/org/nuxeo/ecm/platform/thumbnail/factories/ThumbnailDocumentFactory.java)
+* [`ThumbnailDocumentFactory`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-thumbnail/src/main/java/org/nuxeo/ecm/platform/thumbnail/factories/ThumbnailDocumentFactory.java)
 * [`ThumbnailVideoFactory`](https://github.com/nuxeo/nuxeo-platform-video/blob/master/nuxeo-platform-video-core/src/main/java/org/nuxeo/ecm/platform/video/adapter/ThumbnailVideoFactory.java)
 * [`ThumbnailAudioFactory`](https://github.com/nuxeo/nuxeo-platform-audio/blob/master/nuxeo-platform-audio-core/src/main/java/org/nuxeo/ecm/platform/audio/extension/ThumbnailAudioFactory.java)
 * [`ThumbnailPictureFactory`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-platform-imaging/nuxeo-platform-imaging-core/src/main/java/org/nuxeo/ecm/platform/picture/thumbnail/ThumbnailPictureFactory.java)
@@ -263,7 +263,7 @@ A thumbnail factory can be registered using the following example extension:
 The above thumbnail factories will be used to compute and fetch specific thumbnails for folderish documents on one hand, and audio documents on the other hand. Here are their properties:
 
 * `docType`: string identifying the related document type. In the example, the type is "Audio".
-* `facet`: string identifying the related document facet. In the example, the facet is "Folderish".
+* `facet`: string identifying the related document facet.
 * `factoryClass`: string representing the class name of the factory to use.
 
 Each factory should implement the interface [`ThumbnailFactory`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/thumbnail/class-use/ThumbnailFactory.html) . This interface contract contains two methods to implement:
@@ -386,21 +386,21 @@ Blob getDefaultThumbnail(DocumentModel doc) {
     if (iconPath == null) {
         return null;
     }
-    FacesContext ctx = FacesContext.getCurrentInstance();
-    if (ctx == null) {
-        return null;
-    }
+
     try {
-        InputStream iconStream = ctx.getExternalContext().getResourceAsStream(
-                iconPath);
-        if (iconStream != null) {
-            return new FileBlob(iconStream);
+        File iconFile = FileUtils.getResourceFileFromContext("nuxeo.war" + File.separator + iconPath);
+        if (iconFile.exists()) {
+            MimetypeRegistry mimetypeRegistry = Framework.getService(MimetypeRegistry.class);
+            String mimeType = mimetypeRegistry.getMimetypeFromFile(iconFile);
+            if (mimeType == null) {
+                mimeType = mimetypeRegistry.getMimetypeFromFilename(iconPath);
+            }
+            return Blobs.createBlob(iconFile, mimeType);
         }
     } catch (IOException e) {
-        log.warn(String.format(
-                "Could not fetch the thumbnail blob from icon path '%s'",
-                iconPath), e);
+        log.warn(String.format("Could not fetch the thumbnail blob from icon path '%s'", iconPath), e);
     }
+
     return null;
 }
 ```

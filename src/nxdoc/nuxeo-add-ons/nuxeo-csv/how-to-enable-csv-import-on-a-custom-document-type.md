@@ -2,7 +2,7 @@
 title: How to Enable CSV Import on a Custom Document Type
 review:
     comment: ''
-    date: '2017-08-01'
+    date: '2018-01-15'
     status: ok
 details:
     howto:
@@ -16,7 +16,7 @@ labels:
     - troger
     - howto
     - csv-importer-component
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '14255163'
     ajs-parent-page-title: Nuxeo CSV
