@@ -2,7 +2,7 @@
 title: How to Automatically Convert a Document to PDF
 review:
     comment: ''
-    date: '2016-12-09'
+    date: '2017-12-12'
     status: ok
 details:
     howto:
@@ -17,7 +17,7 @@ labels:
     - troger
     - excerpt
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '19235645'
     ajs-parent-page-title: Conversion

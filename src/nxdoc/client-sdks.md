@@ -70,6 +70,5 @@ The platform already provides multiple clients for accessing the platform remote
 *   [iOS Client]({{page space='NXDOC' page='iOS Client'}})
 *   [Android Client]({{page space='NXDOC' page='android-client'}})
 *   [PHP Automation Client]({{page space='NXDOC' page='PHP Automation+Client'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A PHP automation client is made available on GitHub. You can use it and ask for commit rights on the project if you want to improve it or fix a bug. The project contains the library and some sample use cases.</span>
-*   [Client API Test suite (TCK)](/pages/viewpage.action?pageId=14255551)&nbsp;&mdash;&nbsp;<span class="smalltext">This chapter provides a test suite that can be used to test the implementation of an automation client library.</span>
 *   [Using cURL]({{page space='NXDOC' page='Using cURL'}})&nbsp;&mdash;&nbsp;<span class="smalltext">In this example we are using the UNIX curl command line tool to demonstrate how to invoke remote operations.</span>
 {{! /multiexcerpt}}

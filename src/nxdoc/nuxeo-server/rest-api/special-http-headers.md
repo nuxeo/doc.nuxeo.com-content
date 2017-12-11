@@ -2,7 +2,7 @@
 title: Special HTTP Headers
 review:
     comment: ''
-    date: '2017-03-29'
+    date: '2018-01-15'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - rest-api
     - troger
     - nxdoc-730
-    - content-review-lts2017
+    - lts2017-ok
 toc: false
 confluence:
     ajs-parent-page-id: '13664833'

@@ -2,7 +2,7 @@
 title: How to Use PDF conversion operations with Nuxeo Studio
 review:
     comment: ''
-    date: '2016-11-24'
+    date: '2018-01-15'
     status: ok
 details:
     howto:
@@ -16,7 +16,7 @@ labels:
     - conversion
     - troger
     - pdf
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 tree_item_index: 150
 
@@ -26,7 +26,7 @@ tree_item_index: 150
 
 If the main document format stored in the Nuxeo repository is PDF, it should be convenient to manipulate it without having to use a desktop software. Nuxeo gives the opportunity to safely and automatically execute PDF operations from the Nuxeo interface.
 
-In this tutorial we will implement a document management security politic that requires to control each downloaded PDF files with a "confidential" watermark and ask for a password in order to open the document.  
+In this tutorial we will implement a document management security politic that requires to control each downloaded PDF files with a "confidential" watermark and ask for a password in order to open the document.
 
 Nuxeo integrates PDF tools operations, under the **Conversion** category so that all this can be done easily from automation chains.
 
@@ -106,7 +106,7 @@ The PDF conversion operations are not available in Nuxeo Studio "out-of-the-box"
         "required" : false,
         "widget" : null,
         "order" : 0,
-        "values" : [ "file:content" ]   
+        "values" : [ "file:content" ]
                     } ]
     },
      {
@@ -133,7 +133,7 @@ The PDF conversion operations are not available in Nuxeo Studio "out-of-the-box"
         "widget" : null,
         "order" : 0,
         "values" : [ ]} ]
-    }   
+    }
         ]
     }
     ```
@@ -177,6 +177,8 @@ The automation chain should be:
     xpath: "file:content"
 - WebUI.DownloadFile
 ```
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 Now, plug the automation chain to a button called `safeDownloadButton` available:
 * in the contextual tools

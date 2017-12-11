@@ -2,7 +2,7 @@
 title: 'HOWTO: Upload a File in Nuxeo Using REST API'
 review:
     comment: ''
-    date: '2017-08-01'
+    date: '2017-12-12'
     status: ok
 details:
     howto:
@@ -20,7 +20,7 @@ labels:
     - file-upload-component
     - university
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 version_override:
     LTS 2015: 710/nxdoc/how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint

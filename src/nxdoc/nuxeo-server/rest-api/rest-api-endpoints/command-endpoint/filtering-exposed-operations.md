@@ -2,7 +2,7 @@
 title: Filtering Exposed Operations
 review:
     comment: ''
-    date: '2017-01-09'
+    date: '2017-12-12'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - troger
     - automation
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '3342491'
     ajs-parent-page-title: Command Endpoint

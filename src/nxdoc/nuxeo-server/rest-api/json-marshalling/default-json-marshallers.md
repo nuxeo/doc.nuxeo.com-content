@@ -2,7 +2,7 @@
 title: Default JSON Marshallers
 review:
     comment: ''
-    date: '2017-01-11'
+    date: '2017-12-12'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - troger
     - json
     - marshalling
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 tree_item_index: 100
 
@@ -33,7 +33,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [DocumentModelJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/document/DocumentModelJsonWriter.html)
+          [DocumentModelJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/document/DocumentModelJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a document as JSON. It is enrichable and extendable.<br />
@@ -59,7 +59,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-        [BasePermissionsJsonEnricher](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BasePermissionsJsonEnricher.html)
+        [BasePermissionsJsonEnricher](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BasePermissionsJsonEnricher.html)
         </td>
         <td class="small-7">
         Enriches a document, adding user's permissions to the document. Activated with `enrichers.document=permissions`.
@@ -67,7 +67,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-        [BreadcrumbJsonEnricher](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BreadcrumbJsonEnricher.html)
+        [BreadcrumbJsonEnricher](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/BreadcrumbJsonEnricher.html)
         </td>
         <td class="small-7">
         Enriches a document, adding the parent's documents. Activated with `enrichers.document=breadcrumb`.
@@ -75,7 +75,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-        [ChildrenJsonEnricher](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/ChildrenJsonEnricher.html)
+        [ChildrenJsonEnricher](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/ChildrenJsonEnricher.html)
         </td>
         <td class="small-7">
         Enriches a document, adding the children documents. Activated with `enrichers.document=children`.
@@ -83,7 +83,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-        [ContextualParametersJsonEnricher](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/ContextualParametersJsonEnricher.html)
+        [ContextualParametersJsonEnricher](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/enrichers/ContextualParametersJsonEnricher.html)
         </td>
         <td class="small-7">
         Enriches a document with free key/value pair. Only from the server side.<br />
@@ -94,7 +94,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-        [PreviewJsonEnricher](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/platform/preview/io/PreviewJsonEnricher.html)
+        [PreviewJsonEnricher](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/preview/io/PreviewJsonEnricher.html)
         </td>
         <td class="small-7">
         Enriches a document, adding the URL of its preview. Activated with `enrichers.document=preview`.
@@ -102,7 +102,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-        [ThumbnailJsonEnricher](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html)
+        [ThumbnailJsonEnricher](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html)
         </td>
         <td class="small-7">
         Enriches a document, adding the URL of its thumbnail. Activated with `enrichers.document=thumbnail`.
@@ -123,7 +123,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-        [DocumentModelListJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/document/DocumentModelListJsonWriter.html)
+        [DocumentModelListJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/document/DocumentModelListJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a list of documents as JSON. Supports paginated lists and provides pagination information. Delegates the document's writing to the Nuxeo Platform.
@@ -144,7 +144,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [ACPJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/document/ACPJsonWriter.html)
+          [ACPJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/document/ACPJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a set of access rights as JSON. Enrichable and extendable.
@@ -167,7 +167,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [DocumentTypeJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/types/DocumentTypeJsonWriter.html)
+          [DocumentTypeJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/types/DocumentTypeJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a document's type as JSON. Enrichable and extendable. Delegates the writing of the type's schemas to the Nuxeo Platform.
@@ -188,7 +188,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [DocumentTypeListJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/types/DocumentTypeListJsonWriter.html)
+          [DocumentTypeListJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/types/DocumentTypeListJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a list of document types as JSON. Supports paginated lists and provides pagination information. Delegates the type's writing to the Nuxeo Platform.
@@ -211,7 +211,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [FacetJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/types/FacetJsonWriter.html)
+          [FacetJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/types/FacetJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a document's facet as JSON. Enrichable and extendable. Delegates the writing of the facet's schemas to the Nuxeo Platform.
@@ -232,7 +232,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [FacetListJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/types/FacetListJsonWriter.html)
+          [FacetListJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/types/FacetListJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a list of facets as JSON. Supports paginated lists and provides pagination information. Delegates the facet's writing to the Nuxeo Platform.
@@ -255,7 +255,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [SchemaJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/types/SchemaJsonWriter.html)
+          [SchemaJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/types/SchemaJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a schema as JSON. It is enrichable and extendable.
@@ -276,7 +276,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [SchemaListJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/types/SchemaListJsonWriter.html)
+          [SchemaListJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/types/SchemaListJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a list of schemas as JSON. Supports paginated lists and provides pagination information. Delegates the schema's writing to the Nuxeo Platform.
@@ -299,7 +299,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [ConstraintJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/validation/ConstraintJsonWriter.html)
+          [ConstraintJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/validation/ConstraintJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a validation constraint as JSON. Enrichable and extendable.
@@ -320,7 +320,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [ConstraintListJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/validation/ConstraintListJsonWriter.html)
+          [ConstraintListJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/validation/ConstraintListJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a list of constraints as JSON. Supports paginated lists and provides pagination information. Delegates the constraint's writing to the Nuxeo Platform.
@@ -341,7 +341,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [DocumentValidationReportJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/validation/DocumentValidationReportJsonWriter.html)
+          [DocumentValidationReportJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/validation/DocumentValidationReportJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a validation report as JSON. Enrichable and extendable. Delegates the constraint's writing to the Nuxeo Platform.
@@ -364,7 +364,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [NuxeoPrincipalJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoPrincipalJsonWriter.html)
+          [NuxeoPrincipalJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoPrincipalJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a user as JSON. Enrichable and extendable.
@@ -385,7 +385,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [NuxeoPrincipalListJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoPrincipalListJsonWriter.html)
+          [NuxeoPrincipalListJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoPrincipalListJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a list of users as JSON. Supports paginated lists and provides pagination information. Delegates the user's writing to the Nuxeo Platform.
@@ -408,7 +408,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [NuxeoGroupJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoGroupJsonWriter.html)
+          [NuxeoGroupJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoGroupJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a group as JSON. It is enrichable and extendable.
@@ -429,7 +429,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [NuxeoGroupListJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoGroupListJsonWriter.html)
+          [NuxeoGroupListJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoGroupListJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a list of groups as JSON. Supports paginated lists and provides pagination information. Delegates the group's writing to the Nuxeo Platform.
@@ -452,7 +452,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [DirectoryEntryJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/directory/io/DirectoryEntryJsonWriter.html)
+          [DirectoryEntryJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/directory/io/DirectoryEntryJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a directory entry as JSON. Enrichable and extendable.<br />
@@ -477,7 +477,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [DirectoryEntryListJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/directory/io/DirectoryEntryListJsonWriter.html)
+          [DirectoryEntryListJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/directory/io/DirectoryEntryListJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a list of directory entries as JSON. Supports paginated lists and provides pagination information. Delegates the directory entries writing to the Nuxeo Platform.
@@ -500,7 +500,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [LogEntryJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/platform/audit/io/LogEntryJsonWriter.html)
+          [LogEntryJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/audit/io/LogEntryJsonWriter.html)
         </td>
         <td class="small-7">
         Writes an audit entry to JSON. Enrichable and extendable.
@@ -521,7 +521,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [LogEntryListJsonWriter](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/platform/audit/io/LogEntryListJsonWriter.html)
+          [LogEntryListJsonWriter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/audit/io/LogEntryListJsonWriter.html)
         </td>
         <td class="small-7">
         Writes a list of audit entries to JSON. Enrichable and extendable. Delegates the entries writing to the Nuxeo Platform.
@@ -596,7 +596,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [DocumentModelJsonReader](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/document/DocumentModelJsonReader.html)
+          [DocumentModelJsonReader](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/document/DocumentModelJsonReader.html)
         </td>
         <td class="small-7">
         Reads a document from JSON. Supports either reference or JSON object for extended fields value.<br />
@@ -618,7 +618,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [DocumentModelListJsonReader](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/core/io/marshallers/json/document/DocumentModelListJsonReader.html)
+          [DocumentModelListJsonReader](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/io/marshallers/json/document/DocumentModelListJsonReader.html)
         </td>
         <td class="small-7">
         Reads a list of document from JSON. Delegates the document's reading to the Nuxeo Platform.
@@ -641,7 +641,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [NuxeoPrincipalJsonReader](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoPrincipalJsonReader.html)
+          [NuxeoPrincipalJsonReader](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoPrincipalJsonReader.html)
         </td>
         <td class="small-7">
         Reads a user from JSON.
@@ -662,7 +662,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [NuxeoPrincipalListJsonReader](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoPrincipalListJsonReader.html)
+          [NuxeoPrincipalListJsonReader](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoPrincipalListJsonReader.html)
         </td>
         <td class="small-7">
         Reads a list of users from JSON. Delegates the user's reading to the Nuxeo Platform.
@@ -685,7 +685,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [NuxeoGroupJsonReader](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoGroupJsonReader.html)
+          [NuxeoGroupJsonReader](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoGroupJsonReader.html)
         </td>
         <td class="small-7">
         Reads a group from JSON.
@@ -706,7 +706,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [NuxeoGroupListJsonReader](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoGroupListJsonReader.html)
+          [NuxeoGroupListJsonReader](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/usermanager/io/NuxeoGroupListJsonReader.html)
         </td>
         <td class="small-7">
         Reads a list of groups from JSON. Delegates the group's reading to the Nuxeo Platform.
@@ -729,7 +729,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [DirectoryEntryJsonReader](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/directory/io/DirectoryEntryJsonReader.html)
+          [DirectoryEntryJsonReader](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/directory/io/DirectoryEntryJsonReader.html)
         </td>
         <td class="small-7">
         Reads a directory entry from JSON.
@@ -750,7 +750,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-          [DirectoryEntryListJsonReader](http://community.nuxeo.com/api/nuxeo/7.2/javadoc/org/nuxeo/ecm/directory/io/DirectoryEntryListJsonReader.html)
+          [DirectoryEntryListJsonReader](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/directory/io/DirectoryEntryListJsonReader.html)
         </td>
         <td class="small-7">
         Reads a list of directory entries from JSON. Delegates the directory entries reading to the Nuxeo Platform.

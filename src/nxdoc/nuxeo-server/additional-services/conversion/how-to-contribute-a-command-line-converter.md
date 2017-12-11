@@ -2,7 +2,7 @@
 title: How to Contribute a Command Line Converter
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2018-01-15'
     status: ok
 details:
     howto:
@@ -16,7 +16,7 @@ labels:
     - conversion
     - troger
     - convert-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235645'

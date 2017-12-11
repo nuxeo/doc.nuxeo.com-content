@@ -2,7 +2,7 @@
 title: Using cURL
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2018-01-16'
     status: ok
 labels:
     - content-review-lts2016
@@ -12,7 +12,7 @@ labels:
     - troger
     - excerpt
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '16091040'
     ajs-parent-page-title: Client SDKs

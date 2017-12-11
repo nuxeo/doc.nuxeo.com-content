@@ -2,14 +2,14 @@
 title: Document Resources Endpoints
 review:
     comment: ''
-    date: '2017-01-06'
+    date: '2017-12-12'
     status: ok
 labels:
     - lts2016-ok
     - endpoint
     - rest-api
     - troger
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'

@@ -2,7 +2,7 @@
 title: 'HOWTO: Develop with Angular2'
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-12-12'
     status: ok
 labels:
     - lts2016-ok
@@ -14,7 +14,7 @@ labels:
     - nuxeo-js
     - javascript-client-component
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 version_override:
     LTS 2015: 710/nxdoc/developing-with-angularjs/
@@ -298,7 +298,7 @@ There are two possible ways to deploy your application:
 
   ![Angular Embedded Application]({{file name='Nuxeo and AngularJS - Embedded Web Application - New Page.png'}})
 
-  This setup is particularly interesting when using a [Nuxeo Cloud](https://www.nuxeo.com/products/nuxeo-cloud/) instance. No setup, no administration needed, and full scalability. By configuring your Nuxeo Platform instance, people will be redirected to your custom interface and the overall setup is transparent. We use this solution for projects like [Nuxeo University](https://university.nuxeo.io).
+  This setup is particularly interesting when using a [Nuxeo Cloud](https://www.nuxeo.com/products/nuxeo-cloud/) instance. No setup, no administration needed, and full scalability. By configuring your Nuxeo Platform instance, people will be redirected to your custom interface and the overall setup is transparent.
 
   If you bootstrapped your project with the Nuxeo's `package`, simply go to the root of your project, then:
 
@@ -323,12 +323,6 @@ There are two possible ways to deploy your application:
   ![Angular External Application]({{file name='Nuxeo%20and%20AngularJS%20-%20External%20Application%20-%20New%20Page.png'}})
 
   By doing so, you can put your web application wherever you want it to be; this can be on a totally separate server if need be.
-
-{{#> callout type='info' }}
-
-We are always eager to receive feedback on our projects. Please report bugs, wishes or anything related to the nuxeo-angular-sample project at [answers.nuxeo.com](https://answers.nuxeo.com)
-
-{{/callout}}
 
 * * *
 

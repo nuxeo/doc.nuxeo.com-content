@@ -2,7 +2,7 @@
 title: Document JSON and Extended Fields
 review:
     comment: ''
-    date: '2017-01-11'
+    date: '2017-12-12'
     status: ok
 labels:
     - content-review-lts2016
@@ -10,7 +10,7 @@ labels:
     - troger
     - json
     - marshalling
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 tree_item_index: 500
 
@@ -41,9 +41,9 @@ $ curl -X GET 'http://localhost:8080/nuxeo/site/api/v1/path/to/my/document?prope
 {{/panel}}{{#> panel type='code' heading='Resulting JSON'}}
 
 ```js
-{  
-  "entity-type":"document",
-  "properties":{  
+{
+  "entity-type": "document",
+  "properties": {
     "dc:creator": "johnd",
     ...
   },
@@ -64,32 +64,31 @@ $ curl -X GET 'http://localhost:8080/nuxeo/site/api/v1/path/to/my/document?prope
 {{/panel}}{{#> panel type='code' heading='Resulting JSON'}}
 
 ```js
-{  
-  "entity-type":"document",
-  "properties":{  
-    "dc:creator":{  
-      "entity-type":"user",
-      "id":"johndoe",
-      "properties":{  
-        "firstName":"John",
-        "lastName":"Doe",
-        "password":"",
-        "groups":[  
+{
+  "entity-type": "document",
+  "properties": {
+    "dc:creator": {
+      "entity-type": "user",
+      "id": "johndoe",
+      "properties": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "groups": [
           "members"
         ],
-        "company":"Nuxeo",
-        "email":"jown.doe@nuxeo.com",
-        "username":"johnd"
+        "company": "Nuxeo",
+        "email": "jown.doe@nuxeo.com",
+        "username": "johnd"
       },
-      "extendedGroups":[  
-        {  
-          "name":"members",
-          "label":"Members group",
-          "url":"group/members"
+      "extendedGroups": [
+        {
+          "name": "members",
+          "label": "Members group",
+          "url": "group/members"
         }
       ],
-      "isAdministrator":false,
-      "isAnonymous":false
+      "isAdministrator": false,
+      "isAnonymous": false
     },
     ...
   },
