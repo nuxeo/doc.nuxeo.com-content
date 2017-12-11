@@ -2,7 +2,7 @@
 title: Contributing to Nuxeo
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-11'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - akervern
     - link-update
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950332'
@@ -388,7 +388,7 @@ Nuxeo is highly modularized and as a consequence, it is totally possible to deve
 6.  You can ask for a code review in the [nuxeo-dev mailing list](mailto:nuxeo-dev@lists.nuxeo.com).
 7.  [Package your plugin as a Nuxeo Package]({{page page='creating-nuxeo-packages'}}), if you want it to be on [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/)  Plus it will be much easier for people to install it.
 
-In addition to code conventions and development good practices above-mentioned, wen creating a new module you should also take the following recommendations into considerations:
+In addition to code conventions and development good practices above-mentioned, when creating a new module you should also take the following recommendations into considerations:
 
 *   Align your code on a recent released version or on the latest development version.
 *   Provide a **clean POM** (well indented, no duplication, inheriting nuxeo-ecm POM, ...).

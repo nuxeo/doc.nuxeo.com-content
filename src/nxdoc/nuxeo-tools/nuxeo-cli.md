@@ -4,9 +4,9 @@ description: 'Nuxeo CLI aims at making the whole development process easier with
 tree_item_index: 100
 toc: true
 review:
-    date: '2017-03-15'
-    status: ok
-    comment: ''
+    date: '2017-12-11'
+    status: 'requiresUpdates'
+    comment: 'Requires update about Studio synchronization'
 labels:
     - content-review-lts2017
     - nuxeo-cli
