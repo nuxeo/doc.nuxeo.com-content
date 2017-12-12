@@ -17,7 +17,7 @@ labels:
     - scripting
     - howto
     - automation
-    - vpasquier
+    - fdavid
     - studio
     - excerpt
     - content-review-lts2017

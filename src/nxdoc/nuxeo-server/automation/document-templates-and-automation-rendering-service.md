@@ -11,7 +11,7 @@ labels:
     - template
     - operation
     - automation
-    - vpasquier
+    - fdavid
     - content-review-lts2017
 toc: true
 confluence:

@@ -7,7 +7,7 @@ review:
 labels:
     - lts2016-ok
     - automation
-    - vpasquier
+    - fdavid
     - excerpt
     - multiexcerpt-include
     - content-review-lts2017

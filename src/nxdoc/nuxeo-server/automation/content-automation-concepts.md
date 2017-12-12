@@ -8,7 +8,7 @@ labels:
     - lts2016-ok
     - link-update
     - automation
-    - vpasquier
+    - fdavid
     - todo
     - multiexcerpt
     - excerpt

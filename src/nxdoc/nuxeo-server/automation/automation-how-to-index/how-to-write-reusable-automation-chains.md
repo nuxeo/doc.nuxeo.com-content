@@ -14,7 +14,7 @@ labels:
     - lts2016-ok
     - howto
     - automation
-    - vpasquier
+    - fdavid
     - excerpt
     - multiexcerpt-include
     - content-review-lts2017

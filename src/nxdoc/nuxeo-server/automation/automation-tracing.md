@@ -7,7 +7,7 @@ review:
 labels:
     - lts2016-ok
     - automation
-    - vpasquier
+    - fdavid
     - trace
     - excerpt
     - multiexcerpt-include

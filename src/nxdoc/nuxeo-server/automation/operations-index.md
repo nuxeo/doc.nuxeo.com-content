@@ -8,7 +8,7 @@ labels:
     - lts2016-ok
     - operation
     - automation
-    - vpasquier
+    - fdavid
     - excerpt
     - content-review-lts2017
 confluence:
