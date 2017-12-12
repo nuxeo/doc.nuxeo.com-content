@@ -287,5 +287,5 @@ On the **Edit Layout** tab, we can customize the form used to update the metadat
 
 You are now ready to use Nuxeo Studio! You can:
 *   Go to the next step of this quick start, to discover how you can [contribute new features using Java code]({{page page='getting-started-with-nuxeo-generator'}}) to the server.
-*   Learn more about Nuxeo Studio and Nuxeo Platform, by following a [complete tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}}).
+*   Learn more about Nuxeo Studio and Nuxeo Platform, by following a [complete tutorial]({{page page='configure-nuxeo-platform'}}).
 {{/callout}}
