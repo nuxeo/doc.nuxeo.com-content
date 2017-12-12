@@ -7,7 +7,7 @@ review:
 labels:
     - lts2016-ok
     - php
-    - pabgrall
+    - pgmillon
     - client
     - php-client-component
     - content-review-lts2017
