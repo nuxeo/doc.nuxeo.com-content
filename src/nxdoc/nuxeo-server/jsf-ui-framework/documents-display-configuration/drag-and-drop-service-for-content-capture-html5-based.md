@@ -8,7 +8,7 @@ labels:
     - lts2016-ok
     - drag-and-drop
     - import
-    - vpasquier
+    - ataillefer
     - automation
     - file-upload-component
     - content-review-lts2017
