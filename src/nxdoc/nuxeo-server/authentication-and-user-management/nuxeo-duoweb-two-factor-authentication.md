@@ -2,13 +2,13 @@
 title: Nuxeo DuoWeb Two-Factor Authentication
 review:
     comment: ''
-    date: '2016-12-08'
+    date: '2017-12-12'
     status: ok
 labels:
     - lts2016-ok
     - duo-web-authentication-addon
-    - akervern
-    - content-review-lts2017
+    - vpasquier
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons
