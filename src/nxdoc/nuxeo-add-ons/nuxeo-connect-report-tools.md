@@ -7,7 +7,7 @@ review:
 toc: true
 labels:
     - lts2016-ok
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons
@@ -21,27 +21,27 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Connect+Report+Tools
 tree_item_index: 3600
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-21 12:22'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-21 11:53'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-21 10:06'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-21 09:46'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-21 09:46'
         message: ''

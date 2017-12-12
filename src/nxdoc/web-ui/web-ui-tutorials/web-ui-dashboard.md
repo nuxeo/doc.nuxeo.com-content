@@ -15,6 +15,7 @@ labels:
     - lts2016-ok
     - nuxeo-web-ui
     - nuxeo-elements
+    - nsilva
     - nuxeo-ui-elements
     - extension
     - dashboard

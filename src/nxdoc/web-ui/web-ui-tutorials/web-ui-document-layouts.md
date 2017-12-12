@@ -15,6 +15,7 @@ labels:
     - view-designer
     - nuxeo-web-ui
     - nuxeo-elements
+    - tcardoso
     - nuxeo-ui-elements
     - extension
     - layouts

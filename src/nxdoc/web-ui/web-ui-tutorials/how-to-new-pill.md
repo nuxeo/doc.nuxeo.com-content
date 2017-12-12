@@ -15,6 +15,7 @@ labels:
     - lts2016-ok
     - nuxeo-web-ui  
     - nuxeo-elements
+    - tcardoso
     - nuxeo-ui-elements
     - page-provider
     - pill

@@ -15,6 +15,7 @@ labels:
     - lts2016-ok
     - tutorial
     - nuxeo-elements
+    - nsilva
     - nuxeo-ui-elements
     - polymer
     - content-review-lts2017

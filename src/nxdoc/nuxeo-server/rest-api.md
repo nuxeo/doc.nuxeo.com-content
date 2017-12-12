@@ -8,7 +8,7 @@ labels:
     - lts2016-ok
     - url
     - rest-api
-    - troger
+    - bchauvin
     - university
     - excerpt
     - multi-excerpt

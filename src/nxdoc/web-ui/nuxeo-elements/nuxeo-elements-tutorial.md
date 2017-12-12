@@ -9,6 +9,7 @@ labels:
     - lts2016-ok
     - tutorial
     - nuxeo-elements
+    - nsilva
     - nuxeo-ui-elements
     - polymer
     - polymer-starter-kit

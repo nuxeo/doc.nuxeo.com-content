@@ -14,6 +14,7 @@ details:
 labels:
     - lts2016-ok
     - nuxeo-web-ui
+    - tcardoso
     - extension
     - marketplace
     - content-review-lts2017

@@ -9,6 +9,7 @@ labels:
     - lts2016-ok
     - web-ui-customization
     - nuxeo-elements
+    - nsilva
     - polymer
     - content-review-lts2017
 toc: true

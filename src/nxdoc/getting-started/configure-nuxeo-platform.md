@@ -7,8 +7,9 @@ review:
 labels:
     - studio
     - customization
+    - ktouchie
     - content-review-lts2017
-    - tutorial
+    - howto
 toc: true
 tree_item_index: 200
 

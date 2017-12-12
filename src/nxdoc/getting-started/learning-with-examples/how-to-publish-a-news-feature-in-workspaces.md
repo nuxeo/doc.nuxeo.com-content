@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - tutorial
+    - mlumeau
     - studio
     - excerpt
     - content-review-lts2017
@@ -25,97 +26,97 @@ confluence:
     source_link: /display/NXDOC/How+to+Publish+a+News+Feature+in+Workspaces
 tree_item_index: 500
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-17 14:19'
         message: ''
         version: '19'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-11-16 15:53'
         message: Remove DM mention
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-16 10:21'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-02 17:12'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:27'
         message: Migrated to Confluence 4.0
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 16:27'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 14:44'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 14:43'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-28 14:43'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-27 19:18'
         message: ''
         version: '10'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-27 00:37'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-26 17:53'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-26 17:51'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-26 17:16'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-26 16:50'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-19 08:38'
         message: formatting and typos
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-18 18:32'
         message: fixed typoes
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-18 08:37'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2011-01-18 08:34'
         message: ''

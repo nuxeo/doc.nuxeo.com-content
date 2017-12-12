@@ -8,6 +8,7 @@ notes: Documentation page used by the Marketing team. Check with Marketing befor
 labels:
     - lts2016-ok
     - bootstrap
+    - aescaffre
     - excerpt
     - content-review-lts2017
 toc: true
@@ -24,72 +25,72 @@ confluence:
     source_link: /display/NXDOC/Bootstrap+Your+Case+Management+Project
 tree_item_index: 300
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-08 13:57'
         message: ''
         version: '14'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-12-08 13:55'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-09 16:27'
         message: Removing links to BIRT integration
         version: '12'
-    - 
+    -
         author: Ronan Daniellou
         date: '2015-07-10 10:17'
         message: 'Superfluous "we"'
         version: '11'
-    - 
+    -
         author: Alain Escaffre
         date: '2015-04-07 23:24'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-16 15:50'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-21 11:27'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 10:50'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-18 10:48'
         message: formatting
         version: '6'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-04 00:44'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-29 14:09'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-29 14:03'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-29 13:30'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-29 13:18'
         message: ''

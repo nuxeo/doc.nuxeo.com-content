@@ -14,6 +14,7 @@ details:
 labels:
     - lts2016-ok
     - nuxeo-web-ui
+    - nsilva
     - customization
     - i18n
     - labels

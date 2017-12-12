@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - 3d
+    - mnixo
     - threed
     - content-review-lts2017
 toc: true
@@ -23,77 +24,77 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+3D
 tree_item_index: 3700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-10 07:46'
         message: 'ix excerpts, typos and add lin'
         version: '15'
-    - 
+    -
         author: Tiago Cardoso
         date: '2016-10-09 20:20'
         message: ''
         version: '14'
-    - 
+    -
         author: Miguel Nixo
         date: '2016-10-08 13:33'
         message: ''
         version: '13'
-    - 
+    -
         author: Miguel Nixo
         date: '2016-10-08 13:24'
         message: ''
         version: '12'
-    - 
+    -
         author: Miguel Nixo
         date: '2016-10-08 12:16'
         message: ''
         version: '11'
-    - 
+    -
         author: Miguel Nixo
         date: '2016-10-08 12:14'
         message: ''
         version: '10'
-    - 
+    -
         author: Miguel Nixo
         date: '2016-10-08 12:00'
         message: ''
         version: '9'
-    - 
+    -
         author: Miguel Nixo
         date: '2016-10-08 11:58'
         message: ''
         version: '8'
-    - 
+    -
         author: Miguel Nixo
         date: '2016-10-08 10:48'
         message: ''
         version: '7'
-    - 
+    -
         author: Miguel Nixo
         date: '2016-10-08 10:44'
         message: ''
         version: '6'
-    - 
+    -
         author: Miguel Nixo
         date: '2016-10-08 10:41'
         message: ''
         version: '5'
-    - 
+    -
         author: Miguel Nixo
         date: '2016-10-07 17:58'
         message: ''
         version: '4'
-    - 
+    -
         author: Miguel Nixo
         date: '2016-10-07 17:55'
         message: ''
         version: '3'
-    - 
+    -
         author: Miguel Nixo
         date: '2016-10-07 17:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Miguel Nixo
         date: '2016-10-07 16:29'
         message: ''

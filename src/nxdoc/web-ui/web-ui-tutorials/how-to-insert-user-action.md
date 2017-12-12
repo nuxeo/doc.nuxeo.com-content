@@ -14,6 +14,7 @@ details:
 labels:
     - tutorial
     - nuxeo-elements
+    - tcardoso
     - nuxeo-ui-elements
     - polymer
     - content-review-lts2017

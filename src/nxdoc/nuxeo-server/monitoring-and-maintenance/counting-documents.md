@@ -7,6 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - data-visualization-component
+    - nsilva
     - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950318'

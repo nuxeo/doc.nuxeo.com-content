@@ -16,6 +16,7 @@ labels:
     - tutorial
     - nuxeo-web-ui
     - nuxeo-elements
+    - nsilva
     - nuxeo-ui-elements
     - customization
     - polymer

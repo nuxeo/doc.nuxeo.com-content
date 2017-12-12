@@ -8,6 +8,7 @@ toc: true
 labels:
     - lts2016-ok
     - nuxeo-web-ui
+    - nsilva
     - extension
     - routing
     - content-review-lts2017

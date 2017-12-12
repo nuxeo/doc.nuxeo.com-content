@@ -15,7 +15,7 @@ labels:
     - dev-guide
     - manifest
     - bundle
-    - kleturc
+    - nsilva
     - customization
     - project-structure  
     - nuxeo-elements
