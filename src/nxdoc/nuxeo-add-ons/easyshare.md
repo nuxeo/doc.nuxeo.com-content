@@ -2,14 +2,14 @@
 title: EasyShare
 review:
     comment: ''
-    date: '2017-01-05'
+    date: '2017-12-12'
     status: ok
 labels:
     - lts2016-ok
     - easyshare
     - ataillefer
     - excerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons
@@ -62,9 +62,9 @@ history:
 ---
 {{{excerpt 'USERDOC:EasyShare'}}}
 
-The EasyShare package requires no specific installation steps. It can be installed like any other package&nbsp;[from the Marketplace or from the Admin Center]({{page space='ADMINDOC' page='Installing a+New+Package+on+Your+Instance'}}).
+{{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
-After the package is installed, a new collaborative space is available, called EasyShare folder.
+After the package is installed, a new collaborative space is available, called Easy Share Folder.
 
 ![]({{file name='EasyShare-folder.png'}} ?w=650,h=301,border=true)
 
@@ -74,7 +74,7 @@ After the package is installed, a new collaborative space is available, called E
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about EasyShare'}}
 
-*   [EasyShare user documentation]({{page space='userdoc' page='easyshare'}})
+*   [EasyShare User Documentation]({{page space='userdoc' page='easyshare'}})
 
 {{/panel}}</div><div class="column medium-6">
 
