@@ -2,7 +2,7 @@
 title: Page Provider Aggregates
 review:
     comment: ''
-    date: '2017-01-18'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
@@ -12,7 +12,7 @@ labels:
     - page-provider
     - query-pageprovider-component
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -231,7 +231,6 @@ The type of such aggregate is `terms`. The parameter must be of type `string`.
 It has the following properties:
 
 *   `size` property is set to define how many term buckets should be returned out of the overall terms.
-    **Note**: Set `size` to `0` to get all the buckets (mandatory when the terms aggregate is rendered as a select widget).
 *   `minDocCount` property is set to only return buckets having more document than the defined value (default is 1)
 *   `order` property to order the buckets. Possible values are `count desc`, `count asc`, `term desc`, `term asc`.
 
