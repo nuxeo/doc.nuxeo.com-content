@@ -8,7 +8,7 @@ labels:
     - content-review-lts2016
     - data-visualization-component
     - nsilva
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance
@@ -58,7 +58,7 @@ history:
         version: '1'
 
 ---
-If you want to know how many documents you have in your repository, you can go to the **Admin** tab, and check the **Repository Analytics** subtab in the **Activity** tab.
+If you want to know how many documents you have in your repository, you can go to the **Admintration** menu, and check the **Repository Content** pill in the **Analytics** tab.
 
 You can filter the statisticts on a specific time period.
 
