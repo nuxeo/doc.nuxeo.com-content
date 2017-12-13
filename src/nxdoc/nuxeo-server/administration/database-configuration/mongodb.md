@@ -2,7 +2,7 @@
 title: MongoDB
 review:
     comment: ''
-    date: '2017-07-13'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - mongodb
     - kleturc
     - mongodb-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
@@ -295,7 +295,7 @@ When doing this, binaries will be stored in the `default.fs` GridFS bucket, whic
 
 ## Connection Pool Configuration
 
-Nuxeo has `MongoDBConnectionService` to instantiate MongoDB connections in the platform. This service holds all connections to MongoDB. A default connection filled with `nuxeo.mongodb.server` and `nuxeo.mongodb.dbname` from `nuxeo.conf` will be contributed  with id `default`.
+Nuxeo has `MongoDBConnectionService` to instantiate MongoDB connections in the platform. This service holds all connections to MongoDB. By default, a contribution with id `default` will be contributed to the Nuxeo Platform, filled with `nuxeo.mongodb.server` and `nuxeo.mongodb.dbname` from `nuxeo.conf`.
 
 If the service doesn't have a registered connection for the given id, it will return the default one.
 
