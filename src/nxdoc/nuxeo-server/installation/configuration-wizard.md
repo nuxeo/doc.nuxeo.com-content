@@ -7,6 +7,7 @@ review:
 toc: true
 labels:
     - lts2016-ok
+    - installation
     - content-review-lts2017
     - mlumeau
 confluence:
