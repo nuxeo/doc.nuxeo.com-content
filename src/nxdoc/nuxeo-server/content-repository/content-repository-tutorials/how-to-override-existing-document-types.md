@@ -2,7 +2,7 @@
 title: How to Override Existing Document Types
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-13'
     status: ok
 details:
     howto:
@@ -285,7 +285,41 @@ SuperSpace
 
 The SuperSpace facet is required for children documents to get default notifications configured in the 'Alerts' tab.
 
-</td></tr><tr><td colspan="1">WorkspaceRoot</td><td colspan="1">WorkspaceRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">SuperSpace</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>{{#> callout type='tip' }}
+</td></tr><tr><td colspan="1">
+
+WorkspaceRoot
+
+</td><td colspan="1">
+
+WorkspaceRoot
+
+</td><td colspan="1">
+
+Folder
+
+</td><td colspan="1">
+
+&nbsp;
+
+</td><td colspan="1">
+
+SuperSpace
+
+</td><td colspan="1">
+
+&nbsp;
+
+</td>
+
+</tr></tbody></table></div>
+
+{{#> callout type='info' }}
+
+The Alert tab is currently only available on JSF UI. It is planned to be integrated in Nuxeo Web UI.
+
+{{/callout}}
+
+{{#> callout type='tip' }}
 
 You can also browse the [contributions to the Type extension](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype) for more document types.
 
