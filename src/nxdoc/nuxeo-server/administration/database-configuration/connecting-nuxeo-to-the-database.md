@@ -2,7 +2,7 @@
 title: Connecting Nuxeo to the Database
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - kleturc
     - database
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3342340'
@@ -268,16 +268,6 @@ history:
 ---
 To connect Nuxeo to your database, you need to tell Nuxeo which database template to use and provide the database connection information.
 
-## Connecting Nuxeo to the Database From the Admin Center
-
-1.  In the Admin Center, click on the **Setup** tab of system information section.
-2.  In the **Main information** section, select the target database in the drop down menu.
-    A new **Database Information** section is displayed on the page.
-    ![]({{file name='AdminCenter-database.png'}} ?w=500,border=true)
-3.  Fill in the database connection information.
-4.  Click on the **Save** button displayed below the Email information section.
-5.  Restart your server.
-
 ## Connecting Nuxeo to the Database From the Startup Wizard
 
 The first time you start your Nuxeo server, a wizard is displayed to help you setup your application. One of the steps is about the database: select the database you want to use in the drop down list and provide the connection information to the database.
@@ -298,12 +288,16 @@ By default, the "default" template is enabled on your Nuxeo server (see the [Dat
 
     {{/callout}}
 2.  If needed, uncomment or edit the `nuxeo.templates` parameter and replace `default` with the wanted database template's name (see [Database Templates section](#database-templates)).
-3.  Uncomment or edit the parameters below and provide their values:
-    *   `nuxeo.db.name`
-    *   `nuxeo.db.user`
-    *   `nuxeo.db.password`
-    *   `nuxeo.db.host`
-    *   `nuxeo.db.port`
+3.  Depending on your Database choice, you have to uncomment or edit the parameters below and provide their values:
+    1. SQL Database:
+        *   `nuxeo.db.name`
+        *   `nuxeo.db.user`
+        *   `nuxeo.db.password`
+        *   `nuxeo.db.host`
+        *   `nuxeo.db.port`
+    2. MongoDB Database:
+        *   `nuxeo.mongodb.server`
+        *   `nuxeo.mongodb.name`
 4.  Save your modifications.
 5.  Restart the server.
 
@@ -378,6 +372,18 @@ See the page [Microsoft SQL Server]({{page page='microsoft-sql-server'}}) for mo
 The JDBC driver (dowloadable from [http://www.mysql.com/downloads/connector/j/](http://www.mysql.com/downloads/connector/j/)) is included in Nuxeo applications and is located in&nbsp;`$NUXEO/lib/`.
 
 We recommend using a near-infinite [wait_timeout](http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_wait_timeout) in the MySQL server configuration. See the page&nbsp;[MySQL]({{page page='mysql'}}) for more information on the database configuration.
+
+## Connecting Nuxeo to the Database From the JSF Admin Center
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
+1.  In the Admin Center, click on the **Setup** tab of system information section.
+2.  In the **Main information** section, select the target database in the drop down menu.
+    A new **Database Information** section is displayed on the page.
+    ![]({{file name='AdminCenter-database.png'}} ?w=500,border=true)
+3.  Fill in the database connection information.
+4.  Click on the **Save** button displayed below the Email information section.
+5.  Restart your server.
 
 * * *
 
