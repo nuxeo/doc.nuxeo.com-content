@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - multiexcerpt
     - content-review-lts2017
+    - fguillaume
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
