@@ -16,7 +16,7 @@ labels:
     - document-type
     - gcarlin
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950287'
     ajs-parent-page-title: Content Repository
