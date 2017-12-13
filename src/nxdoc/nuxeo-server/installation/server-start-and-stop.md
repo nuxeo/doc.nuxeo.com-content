@@ -7,7 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
     - gcarlin
 toc: true
 confluence:
