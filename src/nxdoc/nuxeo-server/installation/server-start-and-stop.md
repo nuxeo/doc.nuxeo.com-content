@@ -8,6 +8,7 @@ labels:
     - content-review-lts2016
     - multiexcerpt
     - content-review-lts2017
+    - gcarlin
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
