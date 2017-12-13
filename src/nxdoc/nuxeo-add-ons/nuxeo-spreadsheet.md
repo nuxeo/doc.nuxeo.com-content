@@ -2,7 +2,7 @@
 title: Nuxeo Spreadsheet
 review:
     comment: ''
-    date: '2017-07-11'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - aaraujo
     - spreadsheet-component
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -124,45 +124,13 @@ This add-on allows you to edit data in your repository as if you were in a sprea
 
 Nuxeo Spreadsheet can be used in three different use cases:
 
-## JSF UI
-
-To visualise in a spreadsheet the content of a folder or of the result of a search, click on ![]({{file name='spreadsheet.png'}}).
-
-The spreadsheet editor opens and displays as many line as there are items in the result of the query. The columns that are displayed corresponds to the columns that were displayed on the content view. If you modify the list of columns in the content view clicking on the ![]({{file name='edit_columns.png' space='userdoc' page='icons-index'}}) icon from the content view, this will be reflected on the spreadsheet when re-opening it. The spreadsheet module uses the layout introspection API to be able to list the columns displayed in the content view. A mapping is done for each Layout Widget so as to display an adapted cell editor, among Simple text, DirectoryValue suggest and calendar.
-
-See the [limitations section](#limitations) for details of the mapping.
-
-Results are fetched page per page using the following page provider:
-
-```xml
-<extension target="org.nuxeo.ecm.platform.query.api.PageProviderService"
-  point="providers">
-    <coreQueryPageProvider name="spreadsheet_query">
-      <property name="maxResults">1000</property>
-      <pattern quoteParameters="false" escapeParameters="false">?</pattern>
-      <pageSize>1000</pageSize>
-    </coreQueryPageProvider>
-</extension>
-```
-{{! multiexcerpt name='modify-undo-value-spreadsheet'}}
-**To modify a value**
-
-click on the cell so as to make the editor appears. Once a cell is modified it becomes blue.
-
-You can modify has many cells you want without saving, and click on **Save** when you want to save.
-
-The **Autosave** button allows you to automatically save all the changes done on the spreadsheet.
-
-**To revert a modification**
-
-If you want to reverse a change on a cell, click right on the cell concerned and select **Undo**.
-{{! /multiexcerpt}}
-
 ## Web UI
 
-To visualise in a spreadsheet the content of a folder or of the result of a search, click on ![]({{file space='studio' page='studio-icons-index' name='editor_area.gif'}}) at the top right of your content view.
+To visualise in a spreadsheet the content of a folder or of the result of a search, click on the icon (1) at the top right of your content view.
 
-The spreadsheet editor opens and displays as many line as there are items in the result of the query. The columns that are displayed corresponds to the columns that were displayed on the content view. If you modify the list of columns in the content view clicking on the ![]({{file name='edit_columns.png' space='userdoc' page='icons-index'}}) icon from the content view, this will be reflected on the spreadsheet when re-opening it.
+![]({{file name='spreadsheet-webui.png'}} ?w=650,border=true)
+
+The spreadsheet editor opens and displays as many line as there are items in the result of the query. The columns that are displayed corresponds to the columns that were displayed on the content view. If you modify the list of columns in the content view clicking on the columns icon (2) from the content view, this will be reflected on the spreadsheet when re-opening it.
 
 The columns displayed on the spreadsheet reflects the columns contributed as search results layout on Web UI. For example:
 
@@ -191,6 +159,39 @@ The columns displayed on the spreadsheet reflects the columns contributed as sea
 ```
 {{{multiexcerpt 'modify-undo-value-spreadsheet' page='nuxeo-spreadsheet'}}}
 
+## JSF UI
+
+To visualise in a spreadsheet the content of a folder or of the result of a search, click on ![]({{file name='spreadsheet.png'}}).
+
+The spreadsheet editor opens and displays as many line as there are items in the result of the query. The columns that are displayed corresponds to the columns that were displayed on the content view. If you modify the list of columns in the content view clicking on the ![]({{file name='edit_columns.png' space='userdoc' page='icons-index'}}) icon from the content view, this will be reflected on the spreadsheet when re-opening it. The spreadsheet module uses the layout introspection API to be able to list the columns displayed in the content view. A mapping is done for each Layout Widget so as to display an adapted cell editor, among Simple text, DirectoryValue suggest and calendar.
+
+See the [limitations section](#limitations) for details of the mapping.
+
+Results are fetched page per page using the following page provider:
+
+```xml
+<extension target="org.nuxeo.ecm.platform.query.api.PageProviderService"
+  point="providers">
+    <coreQueryPageProvider name="spreadsheet_query">
+      <property name="maxResults">1000</property>
+      <pattern quoteParameters="false" escapeParameters="false">?</pattern>
+      <pageSize>1000</pageSize>
+    </coreQueryPageProvider>
+</extension>
+```
+{{! multiexcerpt name='modify-undo-value-spreadsheet'}}
+**To modify a value**
+
+Click on the cell so as to make the editor appears. Once a cell is modified it becomes blue.
+
+You can modify has many cells you want without saving, and click on **Save** when you want to save.
+
+The **Autosave** button allows you to automatically save all the changes done on the spreadsheet.
+
+**To revert a modification**
+
+If you want to reverse a change on a cell, click right on the cell concerned and select **Undo**.
+{{! /multiexcerpt}}
 
 ## Standalone Mode
 
@@ -221,7 +222,7 @@ Note that the spreadsheet expects the enricher's name to match the directory nam
 ## Limitations
 
 - The system information in read-only like Modified, Version and State are in grey to disable users to modify them.
-- For more information about the Mapping between listing layouts widgets and the displayed cell types, see [https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/master/src/main/js/app/ui/widgets.js#L57](https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/master/src/main/js/app/ui/widgets.js#L57)
+- For more information about the Mapping between listing layouts widgets and the displayed cell types, see [https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/9.10/nuxeo-platform-spreadsheet-web/src/main/js/app/ui/widgets.js#L64](https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/9.10/nuxeo-platform-spreadsheet-web/src/main/js/app/ui/widgets.js#L64)
 
 The Nuxeo Spreadsheet add-on is done integrating [Handsontable](http://handsontable.com/).
 
