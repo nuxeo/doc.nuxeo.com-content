@@ -3,7 +3,7 @@ title: Web UI Overview
 description: 'Nuxeo Web UI is a standard web application for Nuxeo Server, built upon a framework of Web components, that connects via HTTP and displays the platform features to users.'
 review:
     comment: ''
-    date: '2017-07-07'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - nuxeo-elements
     - nsilva
     - polymer
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 tree_item_index: 100
 confluence:
@@ -99,7 +99,7 @@ history:
 
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/store/174605-webui-stack-introduction) on Nuxeo University.
+Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/76/nuxeo-web-ui-stack-introduction) on Nuxeo University.
 {{/callout}}
 
 Nuxeo Web UI is a standard base web application for Nuxeo Server that connects via HTTP and displays all the features of the platform to the users. Customizable, scalable and built upon a framework of Web components, it allows Nuxeo Platform developers to build their own front-end application using these components. The [Nuxeo Web UI addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) is available in beta version on [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/).
@@ -124,7 +124,14 @@ It leverages the web as a platform and allows enhanced productivity with direct 
 ## Requirements
 
 {{! multiexcerpt name='webui-requirements'}}
-Nuxeo Web UI and Nuxeo Web UI Elements framework make use of the recent W3C standard Web Components and Google Polymer 1.0 framework. The Google Polymer framework comes with polyfills for Web Components, a library that extends the support of web components standard to more browsers.
+Nuxeo Web UI and Nuxeo Web UI Elements framework make use of the recent W3C standard Web Components and Google Polymer 2.0 framework (legacy mode). The Google Polymer framework comes with polyfills for Web Components, a library that extends the support of web components standard to more browsers.
+
+{{#> callout type='warning' heading='Polymer 2.0 legacy mode'}}
+
+Previous versions of Nuxeo Web UI (1.x) relied on Polymer 1 so for compatibility reasons and to ensure a simple incremental upgrade the current version of Nuxeo Web UI is running
+Polymer 2 in legacy mode thus using the Polymer factory method, not the ES6 class-based syntax. Most of the 1.0 APIs are thus still available, as are any new 2.x APIs.
+
+{{/callout}}
 
 Supported browsers for Nuxeo Web UI and Nuxeo Web UI Elements are:
 {{! multiexcerpt name='webui-supported-browsers'}}
@@ -301,7 +308,7 @@ Our Web UI is built itself with Polymer too. Goals were to not only ensure the s
 
 ### Web UI elements
 
-Everything in the web UI is built as a custom element with `<nuxeo-app>` as top level component. This application element acts as application data store / mediator storing context data as properties which are then forwarded through the hierarchy thanks to data binding. To learn more about data binding and its relation to the mediator pattern you can read the&nbsp;[article](http://www.nuxeo.com/blog/polymer-questions-to-bind-or-not-to-bind/) on our "[Polymer](http://www.nuxeo.com/blog/tag/polymer/)" series.
+Everything in the web UI is built as a custom element with `<nuxeo-app>` as top level component. This application element acts as application data store / mediator storing context data as properties which are then forwarded through the hierarchy thanks to data binding. To learn more about data binding and its relation to the mediator pattern you can read the [article](http://www.nuxeo.com/blog/polymer-questions-to-bind-or-not-to-bind/) on our "[Polymer](http://www.nuxeo.com/blog/tag/polymer/)" series.
 
 `<nuxeo-app>` relies on our data elements (`<nuxeo-document>`, `<nuxeo-resource>`, etc..) to fetch application wide data and it is in charge of refreshing this data when changes are made. We are not relying on two way binding in order to keep the data flux manageable thus parent elements act as data stores and children fire events to notify of changes causing data to be refreshed and then propagated down through the DOM tree. Alternative would be to rely on a custom event / action system like many framework do but, although this would avoid the cost inherent to event bubbling, it would make our elements dependent on the the existence of such as bus and introducing framework lock-in.
 
@@ -312,4 +319,3 @@ The drawer's content is managed by `<iron-pages>` which toggles between its chil
 The main area is reserved for displaying the current page's content. Our router relies on [page.js](https://visionmedia.github.io/page.js/) and is in charge of parsing the URL and setting the current page and context data in `<nuxeo-app>` accordingly.
 
 ![]({{file name='Web UI search page.png'}} ?w=959,h=614,border=true)
-&nbsp;
