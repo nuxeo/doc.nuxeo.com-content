@@ -2,13 +2,13 @@
 title: Indexing and Query
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-15'
     status: ok
 labels:
     - content-review-lts2016
     - query-pageprovider-component
     - kleturc
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31033314'
@@ -320,11 +320,6 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' }}
-
-This page is being rewritten, you should expect regular updates.
-
-{{/callout}}
 
 ## Architecture
 
@@ -365,42 +360,44 @@ The following table and schema gives an overview of the different ways of queryi
 
 ![](https://www.lucidchart.com/publicSegments/view/54c12c89-4c18-43f3-bbae-55900a00510f/image.png ?w=650,border=true)
 
-1.  **Query Endpoint (Client side)**
+1.  **Search Endpoint (Client side)**
     A resource oriented REST API that allows to execute direct NXQL queries or to use a named page provider that has been declared server side. The API returns serialised JSON documents and offers all the mechanisms provided by Nuxeo Platform Rest API (Content Enricher, Specific headers&hellip;).
+
     **Example:**
 
     ```
-    http://localhost:8080/nuxeo/site/api/v1/query?query=select * from Document&pageSize=2&currentPageIndex=1
+    http://localhost:8080/nuxeo/site/api/v1/search/lang/NXQL/execute?query=select * from Document&pageSize=2&currentPageIndex=1
     ```
 
     **Related topics**:
 
-    *   [Query Endpoint]({{page page='query-endpoint'}})
-    *   [Using the REST API with the JavaScript Client](https://github.com/nuxeo/nuxeo-js-client/blob/master/test/document.js)
+    *   [Search Resource Endpoint]({{page page='search-endpoints'}})
+    *   [Using the REST API with the clients]({{page page='client-sdks'}})
 2.  **Command Operations (Client side)**
-    A set of Automation operations allow to query a page provider that has been declared on the server. Scope is pretty much the same as with the query endpoint, you may prefer using Automation if you are in a Java environment as the Automation Java client is best suited for this use case.
+    A set of Automation operations allow to query a page provider that has been declared on the server. Scope is pretty much the same as with the search endpoint.
+
     **Example:**
-    TODO sample cURL POST
+
+    ```
+    curl -XPOST -u Administrator:Administrator -H"Content-Type: application/json+nxrequest; charset=UTF-8" http://localhost:8080/nuxeo/site/automation/Repository.PageProvider -d '{"params":{"providerName":"default_document_suggestion"}}'
+    ```
+
     **Related topics**:
-    *   [PageProvider Operation definition](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.PageProvider)
-    *   [How to Use the Java Automation Client]({{page page='java-automation-client'}})
-    *   [How to use the PageProvider operation with the from the JavaScript client](https://github.com/nuxeo/nuxeo-js-client/blob/master/test/automation.js) (search for "Document.PageProvider")
+    *   [PageProvider Operation definition](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Repository.PageProvider)
+    *   [How to use Operations with the Java Client](https://github.com/nuxeo/nuxeo-java-client#operation-api)
+    *   [How to use Operations with the JavaScript client](https://nuxeo.github.io/nuxeo-js-client/latest/Operation.html)
 3.  **CMIS (Client side & Server side)**
     The Nuxeo Platform is compatible with the CMIS standard. CMIS covers query scope, using CMISQL. It is possible to query the Nuxeo Platform repository using CMISQL in Java server side, or via SOAP and ATOM/PUB bindings remotely.
+
     **Example:**
 
     ```
-    ItemIterable<QueryResult> results =
-    session.query(
-    "SELECT
-    * FROM
-    cmis:document"
-    , false);
-    for
-    (QueryResult hit: results) {
-    for(PropertyData<?> property: hit.getProperties())
-    {  String queryName = property.getQueryName();
-            Object value = property.getFirstValue();
+    ItemIterable<QueryResult> results = session.query("SELECT * FROM cmis:document" , false);
+    for (QueryResult hit: results) {
+      for(PropertyData<?> property: hit.getProperties()) {
+        String queryName = property.getQueryName();
+        Object value = property.getFirstValue();
+      }
     }
     ```
 
@@ -412,6 +409,7 @@ The following table and schema gives an overview of the different ways of queryi
     *   [Processing a Query With CMIS](http://chemistry.apache.org/java/examples/example-process-query-results.html) in Java
 4.  **PageProvider (Server side)**
     Page Providers objects implement the PageProvider interface. It provides in Java all the primitives for getting each documents, pages and related information.
+
     **Example**
 
     ```
@@ -426,8 +424,10 @@ The following table and schema gives an overview of the different ways of queryi
     *   [Page Provider documentation page]({{page page='page-providers'}})
 5.  **CoreSession.query (Server side)**
     The CoreSession object is the main server side Java interface for accession among the repository. Among available methods is the `query()` that allows to perform directly an NXQL query and get a list of documentModels (the basic Java wrapping of a Nuxeo Document). In most of the situations it is better to rely on a page provider as it is easier to override, maintain, etc&hellip; but `session.query()` is still an option.
-6.  **CoreSession.QueryAndFetch() (Server side)**
-    TODO
+6.  **CoreSession.queryAndFetch() (Server side)**
+    Like `session.query()`, `CoreSession.queryAndFetch()` provides a way to perform an NXQL query and get an iterable of Java `Map` instead of `DocumentModel`.
+6.  **CoreSession.queryProjection() (Server side)**
+    Methods `queryProjection()` allow to perform an NXQL query in order to get a page of projections as Java `Map`. Note: `query()` allows to get a page too, but you get a `DocumentModelList` as result.
 
 ## {{> anchor 'elasticsearchconfiguration'}}Elasticsearch Configuration
 
