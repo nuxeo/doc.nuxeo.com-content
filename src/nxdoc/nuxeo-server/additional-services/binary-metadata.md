@@ -8,7 +8,7 @@ labels:
     - lts2016-ok
     - link-update
     - binary-metadata
-    - fguillaume
+    - ajusto
     - binary-metadata-component
     - multiexcerpt-include
     - content-review-lts2017
