@@ -609,6 +609,22 @@ Where
 You can find all the available options in the [nuxeo.defaults](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/nuxeo.defaults).
 
 
+#### Index Aliases
+
+Nuxeo supports repository index aliases.  This allows you to distinguish the read index from the write index. To enable this feature set `manageAlias` to `true` in the default template (`elasticsearch-config.xml.nxftl`).
+```
+<elasticSearchIndex name="${elasticsearch.indexName}" type="doc" repository="default" manageAlias="true">
+```
+
+When `manageAlias` is `true`, Nuxeo will manage 2 aliases: one for searching using the name of the contrib (default to `nuxeo`), one for writing with a "-write" suffix (`nuxeo-write`), both aliases will point to the same index (`nuxeo-0000`).  The index name ends with a number and is automatically incremented when a new index is created.
+
+When reindexing the repository, a new index is created (`nuxeo-0001`) and the write alias is updated to use it.  The search alias stays on the previous index (`nuxeo-0000`), it is read-only and can still be used by users.  Once indexing is terminated the search alias is updated to point to the new index (`nuxeo-0001`). An administrator can then backup and delete the old index.
+
+{{#> callout type='warning' }}
+
+If you choose to enable Nuxeo management of index aliases then it is best to leave Nuxeo to manage them. Do not try to manage aliases externally in Elasticsearch at the same time.
+
+{{/callout}}
 ## Disabling Elasticsearch
 
 Elasticsearch is enabled by default, if you want to disable Elasticsearch indexing and search you can simply add the following option to the `nuxeo.conf`:
