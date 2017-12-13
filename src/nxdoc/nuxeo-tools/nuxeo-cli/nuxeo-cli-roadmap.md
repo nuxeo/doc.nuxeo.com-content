@@ -12,7 +12,7 @@ labels:
     - nuxeo-cli
     - roadmap
     - bchauvin
-    - content-review-lts2017
+    - lts2017-ok
 
 ---
 
