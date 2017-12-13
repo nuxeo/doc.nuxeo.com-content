@@ -7,6 +7,8 @@ review:
 toc: true
 labels:
     - lts2016-ok
+    - nuxeo-mobile
+    - yachour
     - content-review-lts2017
 confluence:
     ajs-parent-page-id: '31033323'
