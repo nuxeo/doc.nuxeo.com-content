@@ -184,7 +184,7 @@ Registering your Nuxeo application with [Nuxeo Online Services]({{page space='st
 The registration process only copies a file on your file system. This enables the Nuxeo Online Services portal to identify the instance among all the registered instances. You can register multiple instances.
 
 {{#> callout type='note' no_icon=true}}
-The instance registration is only valid for your current subscription contract dates, and needs to be renewed on a regular basis. Please refer to the registration renewal section for further information.
+The instance registration is only valid for your current subscription contract dates, and needs to be renewed on a regular basis. Please refer to the [registration renewal](#renewal) section for further information.
 {{/callout}}
 
 ## How to Register
@@ -206,7 +206,7 @@ To subscribe to a Nuxeo Online Services trial:
 1.  Go to the [Nuxeo Online Services trial registration form](https://connect.nuxeo.com/register/#/).
 2.  Fill in the form. Provide a valid email address or else registration will not be completed.
 3.  Confirm registration by clicking on the link sent to the email address in the previous step.
-    You can now use the [Nuxeo Platform online](https://www.nuxeo.com/downloads/#online-trial) or [download it](https://www.nuxeo.com/downloads/) if you want to use it on premises.
+    You can now use the Nuxeo Platform [online](https://www.nuxeo.com/downloads/) or [download it](https://www.nuxeo.com/downloads/) if you want to use it on premises.
 
 ### Registering Online Using nuxeoctl {{> anchor 'online-registration'}}
 
@@ -285,8 +285,7 @@ Offline registration can be used when the server does not connect to the Interne
         The registration is approved and the registration summary is displayed. The Nuxeo Online Services registration message is not displayed anymore after you browse the application, although registration cannot be validated on the Nuxeo Online Services server.
         ![]({{file name='AdminCenter-offline-registration-done.png'}} ?w=600,border=true)
 
-## Renewing Registration for Your Nuxeo Instance
-{{> anchor 'renewal'}}
+## Renewing Registration for Your Nuxeo Instance {{> anchor 'renewal'}}
 
 Renewing your Nuxeo instance registration can be done anytime while you have an active Nuxeo Online Services subscription using the `nuxeoctl` script:
 
@@ -319,9 +318,11 @@ $ .\$NUXEO_HOME\bin\nuxeoctl.bat register --renew
 Provided that your instance has internet access, this call can easily be automated using a cron / scheduled task. If for some reason your contract expires before you launch the command above though, you can still register your Nuxeo server instance as a new one by following the [online](#online-registration) of [offline](#offline-registration) registration indications.
 
 {{#> callout type='note' title='Important Note About Hotfixes' no_icon=true}}
-Using hotfixes on your instance requires a valid subscription. If your instance is not registered anymore but still uses hotfixes, you will receive specific warnings in the logs during startup explaining you the situation.
+Using hotfixes on your instance requires a valid subscription.
 
-If this happens, your Nuxeo instance will stop after a certain number of commits or when too many users are connected at the same time. You should make sure to register your instance as soon as you can to prevent this.
+If your instance is not registered anymore but still uses hotfixes, you will receive specific warnings in the logs during startup explaining the situation.<br /><br />
+
+If it happens, your Nuxeo instance will stop after a certain number of commits or when too many users are connected at the same time. You should make sure to register your instance as soon as you can to prevent this.
 {{/callout}}
 
 ## Re-Registering your Nuxeo Instance
