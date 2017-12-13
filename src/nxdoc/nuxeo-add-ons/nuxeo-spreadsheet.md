@@ -7,7 +7,7 @@ review:
 labels:
     - lts2016-ok
     - nuxeo-spreadsheet
-    - nsilva
+    - aaraujo
     - spreadsheet-component
     - excerpt
     - content-review-lts2017
