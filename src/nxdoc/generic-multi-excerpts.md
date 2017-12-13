@@ -117,6 +117,6 @@ The Nuxeo Platform provides a content repository for [document management](http:
 
 {{! /multiexcerpt}}
 
-{{! multiexcerpt name='DeprecatedAddon'}} {{#> callout type='note' }}
+{{! multiexcerpt name='JSF-UI-required'}} {{#> callout type='note' }}
 This requires to have the JSF UI addon installed on your server. 
 {{/callout}}{{! /multiexcerpt}}
