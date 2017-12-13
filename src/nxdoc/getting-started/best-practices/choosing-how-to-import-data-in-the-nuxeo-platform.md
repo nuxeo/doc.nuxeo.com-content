@@ -2,7 +2,7 @@
 title: Choosing How to Import Data in the Nuxeo Platform
 review:
     comment: ''
-    date: '2017-08-01'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
