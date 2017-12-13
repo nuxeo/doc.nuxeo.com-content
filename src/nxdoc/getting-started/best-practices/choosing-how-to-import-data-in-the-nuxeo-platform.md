@@ -7,8 +7,8 @@ review:
 labels:
     - lts2016-ok
     - import
-    - ajusto
-    - content-review-lts2017
+    - gcarlin
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235677'
