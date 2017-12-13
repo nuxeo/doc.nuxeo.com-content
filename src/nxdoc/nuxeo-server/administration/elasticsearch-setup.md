@@ -2,7 +2,7 @@
 title: Elasticsearch Setup
 review:
     comment: ''
-    date: '2017-02-09'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
@@ -10,6 +10,7 @@ labels:
     - elasticsearch-component
     - bdelbosc
     - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'

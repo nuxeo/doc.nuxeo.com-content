@@ -2,7 +2,7 @@
 title: Performance Recommendations
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - performance
     - bdelbosc
     - vcs-component
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '3342350'
     ajs-parent-page-title: VCS
@@ -102,17 +102,21 @@ history:
 
 ---
 
-Here is a non-exhaustive list of recommendations to get better performance from your VCS configuration:
+Here is a non-exhaustive list of recommendations to get better performance:
 
-- Check that common properties are set as prefetched (see [org.nuxeo.ecm.core.schema.TypeService--configuration](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration) and [org.nuxeo.ecm.core.schema.TypeService--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype)).
-- If you don't want to match proxies in your query, add a `AND ecm:isProxy = 0` clause.
-- If you don't use proxies at all, deactivate them at the repository level by adding inside the `<repository>` element the following:
+- For VCS, check that common properties are set as prefetched (see [org.nuxeo.ecm.core.schema.TypeService--configuration](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration) and [org.nuxeo.ecm.core.schema.TypeService--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype)).
+- For VCS, if you don't want to match proxies in your query, add a `AND ecm:isProxy = 0` clause.
+- For VCS, if you don't use proxies at all, deactivate them at the repository level by adding inside the `<repository>` element the following:
     ```xml
     <proxies enabled="false"/>
     ```
 - If you are doing a NXQL query that involves custom schemas you may need to add custom indexes to make the request efficient. You can trace the slow NXQL queries using [NXP-14845](https://jira.nuxeo.com/browse/NXP-14845).
 - Use groups to manage ACLs. Adding a user to a group is free, but adding a user in an ACL at the document root level has a cost because optimized read ACLs need to be recomputed for all documents under the root.
-- When using Nuxeo in cluster mode, consider using [Redis VCS row cache invalidation]({{page page='nuxeo-and-redis'}}#vcs-row-cache-invalidation).
+- For VCS, when using Nuxeo in cluster mode, consider using [Redis VCS row cache invalidation]({{page page='nuxeo-and-redis'}}#vcs-row-cache-invalidation).
+- For VCS, if possible disable the ACL optimization and switch all page providers to Elasticsearch.
+  Look at the [perf template](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/perf).
+- Disable listeners that are not used (see above perf template).
+- Use BIGINT document identifier instead of default UID. This is done by adding a `<idType>sequence</idType>` in the repository contribution).
 - Consider disabling the OS swapping (`sudo swapoff -a`) or try to lower the swapiness (`vm.swappiness=1`).
 - Check the network latency between the application and the database.
 - [Configure ImageMagick]({{page page='installing-and-setting-up-related-software'}}) to use a single thread.

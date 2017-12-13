@@ -2,7 +2,7 @@
 title: Configuring the Elasticsearch Mapping
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
@@ -14,6 +14,7 @@ labels:
     - excerpt
     - multiexcerpt
     - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'

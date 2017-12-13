@@ -2,7 +2,7 @@
 title: Locking vs Permission to Restrict Edit Access to a Document
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - permission
     - acl
     - bdelbosc
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '12914194'
