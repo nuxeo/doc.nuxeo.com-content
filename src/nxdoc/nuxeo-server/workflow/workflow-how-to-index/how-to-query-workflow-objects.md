@@ -2,7 +2,7 @@
 title: How to Query Workflow Objects
 review:
     comment: ''
-    date: '2017-01-20'
+    date: '2017-12-15'
     status: ok
 details:
     howto:
@@ -21,7 +21,7 @@ labels:
     - howto
     - community-links
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235619'
@@ -310,13 +310,13 @@ Since workflows, nodes and task are all documents, the [NXQL]({{page page='nxql'
 {{#> panel type='code' heading='Query all running workflows:'}}
 
 ```sql
-Select * from DocumentRoute where ecm:currentLifeCycleState = 'running'
+SELECT * FROM DocumentRoute WHERE ecm:currentLifeCycleState = 'running'
 ```
 
 {{/panel}}{{#> panel type='code' heading='Query all available workflow models:'}}
 
 ```sql
-Select * from DocumentRoute where ecm:currentLifeCycleState = 'validated'
+SELECT * FROM DocumentRoute WHERE ecm:currentLifeCycleState = 'validated'
 ```
 
 {{/panel}}
@@ -338,23 +338,23 @@ So both workflow and node variables can be queried as any other Nuxeo property.
 {{#> panel type='code' heading='Query all running default serial workflows, having the global variable "initialComment" set to "test"'}}
 
 ```sql
-Select * from DocumentRoute where var_SerialDocumentReview:initiatorComment = 'test'  
+SELECT * FROM DocumentRoute WHERE var_SerialDocumentReview:initiatorComment = 'test'  
 ```
 
-{{/panel}}{{#> panel type='code' heading='Querry all running workflows for a given document'}}
+{{/panel}}{{#> panel type='code' heading='Query all running workflows for a given document'}}
 
 ```sql
-Select * from DocumentRoute where docri:participatingDocuments IN ('$docId') AND ecm:currentLifeCycleState = 'running'
+SELECT * FROM DocumentRoute WHERE docri:participatingDocuments IN ('$docId') AND ecm:currentLifeCycleState = 'running'
 ```
 
 {{/panel}}
 
 ### Querying Workflows Suspended at a given Step
 
-NXQL queries can reference any metadata. Using the [CoreSession#queryAndFetch](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#queryAndFetch%28java.lang.String,%20java.lang.String,%20java.lang.Object...%29) API we can look for workflows suspended on a given step. This will return in an [IterableQueryResult](http://community.nuxeo.com/api/nuxeo/8.10/javadoc/org/nuxeo/ecm/core/api/IterableQueryResult.html) the id of the document representing the workflow document.
+NXQL queries can reference any metadata. Using the [CoreSession#queryAndFetch](https://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#queryAndFetch-java.lang.String-java.lang.String-java.lang.Object...-) API we can look for workflows suspended on a given step. This will return in an [IterableQueryResult](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/IterableQueryResult.html) the id of the document representing the workflow document.
 
 ```sql
-Select ecm:parentId from RouteNode  where rnode:nodeId = 'Task5237' and ecm:currentLifeCycleState = 'suspended'
+SELECT ecm:parentId FROM RouteNode WHERE rnode:nodeId = 'Task5237' AND ecm:currentLifeCycleState = 'suspended'
 ```
 
 where 'Task5237' is the unique id of the node.
@@ -364,7 +364,7 @@ where 'Task5237' is the unique id of the node.
 {{#> panel type='code' heading='Query for all opened tasks'}}
 
 ```sql
-Select * from TaskDoc where ecm:currentLifeCycleState = 'opened'
+SELECT * FROM TaskDoc WHERE ecm:currentLifeCycleState = 'opened'
 ```
 
 {{/panel}}
