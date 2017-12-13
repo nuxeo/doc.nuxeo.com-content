@@ -8,6 +8,7 @@ toc: true
 labels:
     - lts2016-ok
     - content-review-lts2017
+    - aescaffre
 confluence:
     ajs-parent-page-id: '3866685'
     ajs-parent-page-title: Installation
