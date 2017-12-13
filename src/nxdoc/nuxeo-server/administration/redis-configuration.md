@@ -2,7 +2,7 @@
 title: Redis Configuration
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - clustering
     - bdelbosc
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
@@ -134,9 +134,12 @@ Nuxeo instances should be configured with a Redis server (in addition to the reg
     *   Relying on the `RedisCache` as a distributed implementation of the [Nuxeo Drive]({{page page='nuxeo-drive'}}) synchronization roots cache.
     *   [Cluster cache invalidations]({{page page='nuxeo-and-redis'}}#clustering-invalidation)
 
-For a robust production instance, the first point is always necessary, which means that Redis should always be used.
-
+Until Nuxeo 9.10 for a robust production instance, the first point is always necessary, which means that Redis should always be used.
 Visit [the Nuxeo and Redis page]({{page page='nuxeo-and-redis'}}) for more information.
+
+Since Nuxeo 9.10 [Nuxeo Stream]({{page page='nuxeo-stream'}) has been introduced and enables to use an alternative work manager that can rely on Kafka for
+the cluster mode, this cover point 1 and partially point 2 (there is no cache invalidation without Redis).
+
 
 ## Configuring Redis
 
