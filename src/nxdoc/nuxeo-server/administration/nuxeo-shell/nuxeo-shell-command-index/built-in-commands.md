@@ -2,14 +2,14 @@
 title: Built-in Commands
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-13'
     status: ok
 labels:
     - content-review-lts2016
     - shell
     - jcarsique
     - shell-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4687648'
