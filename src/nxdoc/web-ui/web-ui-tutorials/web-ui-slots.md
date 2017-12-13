@@ -14,7 +14,7 @@ details:
 labels:
     - lts2016-ok
     - nuxeo-web-ui
-    - tcardoso
+    - gbarata
     - extension
     - nuxeo-slot
     - nuxeo-slot-content
