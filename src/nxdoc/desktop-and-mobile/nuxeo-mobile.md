@@ -2,14 +2,14 @@
 title: Nuxeo Mobile
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-13'
     status: ok
 toc: true
 labels:
     - lts2016-ok
     - nuxeo-mobile
     - yachour
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '31033323'
     ajs-parent-page-title: Desktop and Mobile
@@ -160,7 +160,7 @@ history:
 
 ### iPhone Requirements
 
-The Nuxeo mobile application is available for iPhones SE, 5/5c/5s, 6/6+, 7/7+ with a minimum version of iOS 8 required.
+The Nuxeo mobile application is available for iPhones SE, 5/5c/5s, 6/6+, 7/7+, 8/8+ and X with a minimum version of iOS 8 required.
 
 ### Android Requirements
 
