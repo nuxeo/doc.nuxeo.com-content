@@ -116,3 +116,7 @@ Studio Designer is available as a public Beta version.
 The Nuxeo Platform provides a content repository for [document management](http://www.nuxeo.com/solutions/document-management/), [digital asset management](http://www.nuxeo.com/solutions/digital-asset-management/) and [case management](http://www.nuxeo.com/solutions/case-management/) business applications.
 
 {{! /multiexcerpt}}
+
+{{! multiexcerpt name='DeprecatedAddon'}} {{#> callout type='note' }}
+This requires to have the JSF UI addon installed on your server. 
+{{/callout}}{{! /multiexcerpt}}
