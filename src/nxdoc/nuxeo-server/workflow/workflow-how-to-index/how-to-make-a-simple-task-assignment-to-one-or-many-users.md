@@ -2,7 +2,7 @@
 title: How to Make a Simple Task Assignment to One or Many Users
 review:
     comment: ''
-    date: '2017-01-20'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
@@ -19,7 +19,7 @@ labels:
     - grenard
     - studio
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '19235619'
     ajs-parent-page-title: Workflow How-To Index
