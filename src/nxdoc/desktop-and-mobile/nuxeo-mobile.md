@@ -194,21 +194,6 @@ The Nuxeo application allows you to authenticate against a Nuxeo server, browse 
 
 ![]({{file name='mobile-menu.png'}} ?w=200,h=355,border=true)
 
-### Offline mode
-
-When your phone loses network connection or when you turn it on airplane mode, an offline mode is now available.
-
-<div>
-<table class="hover" style="border: 0px;">
-<tbody>
-<tr>
-<td colspan="1"><b>![]({{file name='mobile-offline-mode.png'}} ?w=200,h=355,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-offline-mode-refresh.png'}} ?w=200,h=355,border=true)</b></td>
-</tr>
-</tbody>
-</table>
-</div>
-
 ### Authenticating
 
 Once the application is installed and opened, indicate the Nuxeo server you want to connect to by filling the HTTP information. For example `http://NUXEO_SERVER/nuxeo`. As soon as the server is detected, the login page is displayed. Depending on your server configuration, it is the default one or your customized login page providing authentication through CAS, OpenID or another authentication system.
@@ -258,6 +243,12 @@ If the PDF preview is available, tap the thumbnail zone to preview it. If the do
 {{#> callout type='tip' }}
 When previewing a document, you can hide the top bar by taping the screen.
 {{/callout}}
+
+### Search
+
+The **Search** menu enables you to query documents on their title and content, by performing a full-text search. {{{multiexcerpt 'full-text-search-user-desc' page='USERDOC:Quick Search'}}}A list of matching documents is provided and you can directly have access them. Once on a document, tap the back icon to go back to search results.
+
+![]({{file name='mobile-search.png'}} ?w=200,h=355,border=true)
 
 ### Favorites
 
@@ -320,15 +311,24 @@ In addition, you are able to **Open directly** documents on your phone by downlo
 </table>
 </div>
 
-### Search
-
-The **Search** menu enables you to query documents on their title and content, by performing a full-text search. {{{multiexcerpt 'full-text-search-user-desc' page='USERDOC:Quick Search'}}}A list of matching documents is provided and you can directly have access them. Once on a document, tap the back icon to go back to search results.
-
-![]({{file name='mobile-search.png'}} ?w=200,h=355,border=true)
-
 ### Personal Workspace
 
 The personal workspace menu gives you a direct access to your collections and personal documents.
+
+### Offline mode
+
+When your phone loses network connection or when you turn it on airplane mode, an offline mode is now available.
+
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='mobile-offline-mode.png'}} ?w=200,h=355,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-offline-mode-refresh.png'}} ?w=200,h=355,border=true)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ## {{> anchor 'limitations'}}Limitations
 
