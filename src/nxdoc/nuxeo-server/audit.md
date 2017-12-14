@@ -2,14 +2,14 @@
 title: Audit
 review:
     comment: ''
-    date: '2017-01-25'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - audit
     - fdavid
     - audit-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31033314'
@@ -119,7 +119,7 @@ The Audit Service is mainly a data store service. It defines a data record struc
 
 The data record structure is defined in Java by the `LogEntry` and `ExtendedInfo` Java classes. The Audit Service receives events from the Event Service. Then the Audit Service filters and converts them into log entries. The `LogEntry` class is mainly obtained from a `DocumentEventContext`.
 
-Nuxeo documents and events can have a lot of custom properties, so if you want to log some specific events or document properties, the [Extended Info](#extended-info-anchor-extendedinfo-) allows for a Key/Value type storage that will be associated to the main `LogEntry` record. These informations are extracted from the event message using and EL (Expression Language) expression and stored into a map.
+Nuxeo documents and events can have a lot of custom properties, so if you want to log some specific events or document properties, the [Extended Info](#extendedinfo) allows for a Key/Value type storage that will be associated to the main `LogEntry` record. These informations are extracted from the event message using and EL (Expression Language) expression and stored into a map.
 
 By default, since Nuxeo LTS 2015, the data store relies on the [Elasticsearch Back-end](#elasticsearch-back-end). To disable Elasticsearh for Audit logs and use the [Legacy SQL Back-end](#legacy-sql-back-end) please refer to the [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#-anchor-disablingelasticsearchforauditlogs-disabling-elasticsearch-for-audit-logs) section.
 
@@ -145,6 +145,10 @@ There are three tables used by the Audit Service: `NXP_LOGS`, `NXP_LOGS_EXTINFO`
 
 ![]({{file name='diagram.png'}} ?w=600,border=true)
 
+### MongoDB Back-end
+
+The audit entries can also be stored in a MongoDB database. The entries will be stored in the `audit` collection by default. To enable the MongoDB data store in place of the Elasticsearch or SQL ones, activate the `mongodb-audit` template in `nuxeo.conf`.
+
 ## Querying the Audit Data Store
 
 The Service API is composed of three services:
@@ -153,23 +157,18 @@ The Service API is composed of three services:
 * `AuditLogger`: service for adding data into the audit logs. [More details](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.platform.audit.api.AuditLogger).
 * `AuditAdmin`: service for administrating the Audit Service.
 
-A set of methods allows the user to do common queries quiet easily like getting all the log entries for a document, getting a specific log by its id, etc.
+A set of methods allows the user to do common queries quite easily like getting all the log entries for a document, getting a specific log by its id, etc.
 
 ```java
 AuditReader reader = Framework.getService(AuditReader.class);
 
-// Getting of the logs for the document 'doc'
-List<LogEntry> logEntries = reader.getLogEntriesFor(doc.getId());
+// Getting of the logs for the document 'doc' in 'myRepository'
+List<LogEntry> logEntries = reader.getLogEntriesFor(doc.getId(), 'myRepository');
 
-// Same method but with a filter
-FilterMapEntry filter = new FilterMapEntry();
-filter.setColumnName("eventId");
-filter.setOperator("=");
-filter.setQueryParameterName("eventId");
-filter.setObject(DocumentEventTypes.DOCUMENT_CREATED);
-Map<String, FilterMapEntry> filterMap = new HashMap<String, FilterMapEntry>();
-filterMap.put("eventId", filter);
-List<LogEntry> logEntriesFiltered = reader.getLogEntriesFor(doc.getId(), filterMap, true);
+// Same method but with a query builder
+AuditQueryBuilder builder = new AuditQueryBuilder();
+builder.predicates(Predicates.eq("docUUID", doc.getId()), Predicates.eq("repositoryId", 'myRepository'));
+List<LogEntry> logEntriesFiltered = reader.queryLogs(builder);
 ```
 
 You can perform some simple queries using the Elasticsearch API, here is an example of getting all the logs of the category 'MyExport' ordered by the date of the event:
@@ -317,7 +316,7 @@ You can also extend the audit info per event name:
 
 For instance, the above contribution will add `modelId`, `modelName`, `worklowInitiator`, `workflowVarriables` to the `extendedInfo` only for the `afterWorkflowStarted` event.
 
-When the extension point is contributed, the data are stored into the `audit.elasticsearch.indexName` index for the Elastcisearch back-end and into the `NXP_LOGS_EXTINFO` and `NXP_LOGS_MAPEXTINFOS` tables for the legacy SQL back-end.
+When the extension point is contributed, the data are stored into the `audit.elasticsearch.indexName` index for the Elastcisearch back-end, into the `NXP_LOGS_EXTINFO` and `NXP_LOGS_MAPEXTINFOS` tables for the legacy SQL back-end and into the `audit` collection in the `audit` database for the MongoDB back-end.
 
 [More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--extendedInfo)
 
