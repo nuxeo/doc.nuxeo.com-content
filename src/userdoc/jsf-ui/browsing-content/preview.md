@@ -2,13 +2,13 @@
 title: Preview
 review:
     comment: ''
-    date: '2017-01-26'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - preview
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '2392400'
     ajs-parent-page-title: Browsing Content
@@ -212,18 +212,19 @@ history:
 {{! multiexcerpt name='preview_functional_overview'}}
 The preview enables you to see an insight of your document.
 
-The PDF files preview leverages [pdf.js by Mozzilla](https://mozilla.github.io/pdf.js/). Other file types preview leverages the [Nuxeo Platform preview module]({{page space='nxdoc' page='preview'}}).
+The PDF files preview is leveraged by [pdf.js by Mozzilla](https://mozilla.github.io/pdf.js/). The preview of other file types are leveraged by the [Nuxeo Platform preview module]({{page space='nxdoc' page='preview'}}).
 
 Several means to preview documents are available.
 
-*   For office and PDF documents: Click on the icon ![]({{file name='preview.png' space='userdoc' page='icons-index'}}) next to the attachment name on the **Summary** tab.
+*   For office and PDF documents: Click on the ![]({{file name='preview.png' space='userdoc' page='icons-index'}}) icon in the document view.
     The preview opens in a popup window.
     ![]({{file name='DocumentPreviewer2.png' space='userdoc' page='preview'}} ?w=600,h=331,border=true)
 
-*   For all documents on the **Summary** tab of a document, click on **More** > **Preview.**
+*   For all previewable documents, a **Preview** button (![]({{file name='preview.png' space='userdoc' page='icons-index'}}) icon) is available on the Document Actions section area (top right on the Web UI document view). On the JSF UI, you can find this on the **Summary** tab of a document, clicking on **More** > **Preview**.
     The document preview is displayed in a popup window.
     ![]({{file name='preview_popup.png' space='userdoc' page='preview'}} ?w=600,border=true)
-*   You can also preview a document along with its main metadata on the [Info-View pop-up]({{page space='nxdoc' page='how-to-customize-the-info-view-pop-up'}}), accessible from any thumbnail listing.
+    
+*   On the JSF UI, you can also preview a document along with its main metadata on the [Info-View pop-up]({{page space='nxdoc' page='how-to-customize-the-info-view-pop-up'}}), accessible from any thumbnail listing.
     ![]({{file name='info_view_preview.png' space='userdoc' page='preview'}} ?w=600,border=true)
 
 ### Supported Formats and Requirements
