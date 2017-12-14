@@ -2275,6 +2275,19 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
+<td colspan="1">`elasticsearch.restClient.connectionTimeoutMs`</td>
+<td colspan="1">A timeout in milliseconds until a connection is established (RestClient)</td>
+<td colspan="1">`5000`</td>
+<td colspan="1">Since 9.10</td>
+</tr>
+<tr>
+<td colspan="1">`elasticsearch.restClient.socketTimeoutMs`</td>
+<td colspan="1">A maximum period, in milliseconds, of inactivity between two consecutive data packets (RestClient)</td>
+<td colspan="1">`20000`</td>
+<td colspan="1">Since 9.10</td>
+</tr>
+
+<tr>
 <td colspan="1">`nuxeo.directory.type`</td>
 <td colspan="1">Type of directory, used for LDAP or multi-directory configuration. Possible values are `default`, `ldap`, `multi`.</td>
 <td colspan="1">`default`</td>
