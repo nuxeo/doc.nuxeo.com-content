@@ -2,12 +2,12 @@
 title: Simple Workflow Example
 review:
     comment: ''
-    date: '2017-04-11'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:

@@ -2,7 +2,7 @@
 title: How to Follow a Transition If User Is Member of a Group
 review:
     comment: ''
-    date: '2017-01-20'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
@@ -18,7 +18,7 @@ labels:
     - howto
     - studio
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '19235619'
     ajs-parent-page-title: Workflow How-To Index
