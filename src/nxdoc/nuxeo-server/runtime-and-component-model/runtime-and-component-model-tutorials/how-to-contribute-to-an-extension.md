@@ -2,7 +2,7 @@
 title: How to Contribute to an Extension
 review:
     comment: ''
-    date: '2016-12-08'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
@@ -18,7 +18,7 @@ labels:
     - howto
     - runtimecomponent
     - kleturc
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950284'
@@ -271,12 +271,12 @@ In the previous section you have created your configuration. You must now declar
     Bundle-Version: 5.5
     Bundle-Name: jalon-dm-bundle
     Nuxeo-Component: OSGI-INF/extensions/me.jalon.dm.bundle.importer.FileSystemFetcher.xml,
-    &nbsp;OSGI-INF/extensions/com.mycomapny.test.FillIDDocument.xml,
-    &nbsp;OSGI-INF/extensions/com.mycomapny.test.asda.xml
+     OSGI-INF/extensions/com.mycomapny.test.FillIDDocument.xml,
+     OSGI-INF/extensions/com.mycomapny.test.asda.xml
     Bundle-ManifestVersion: 2
     Bundle-SymbolicName: jalon-dm-bundle
     Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-    &nbsp;
+
     ```
     ```
     Manifest-Version: 1.0
@@ -305,13 +305,13 @@ Components deployment is linear, so if you want to override an existing configur
     ```xml
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
-       <require>name.of.the.component.you.want.to.override</require>
+      <require>name.of.the.component.you.want.to.override</require>
 
-       <!-- target and point value is given by the extension point definition -->
-       <extension target="name.of.the.component.where.the.service.isdeclared" point="pointNameIntoThisComponent">
-         <!-- here you put your configuration XML fragment
-            ...
-         <-->
-       </extension>
+      <!-- target and point value is given by the extension point definition -->
+      <extension target="name.of.the.component.where.the.service.isdeclared" point="pointNameIntoThisComponent">
+        <!-- here you put your configuration XML fragment
+          ...
+        <-->
+      </extension>
     </component>
     ```
