@@ -42,7 +42,7 @@ Its main content is composed of:
 </iron-pages>
 ```
 
-On [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L269), you can see the `selected` attributes bound to the [page](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L350) property. When this [page](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#lL350) property changes its value, the [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L270) will display the content element which has the same `name`.
+On [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L270), you can see the `selected` attributes bound to the [page](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L350) property. When this [page](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#lL350) property changes its value, the [iron-pages](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L270) will display the content element which has the same `name`.
 
 For instance, on [nuxeo-home](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-app.html#L274), when clicking a recently viewed document, it will call the [navigateTo](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-home.html#L215) method
 
