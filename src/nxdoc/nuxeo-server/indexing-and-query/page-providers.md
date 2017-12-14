@@ -2,7 +2,7 @@
 title: Page Providers
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-14'
     status: ok
 labels:
     - content-review-lts2016
@@ -10,7 +10,7 @@ labels:
     - query-pageprovider-component
     - kleturc
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -182,10 +182,10 @@ Page provider offers many advantages comparing to hard coded NXQL queries:
 *   Pagination logics do not have to be coded again, the `AbstractPageProvider` implementation already offers corresponding logics.
 *   Code duplication can be prevented, by re-using registered page providers.
 *   Overriding an existing page provider definition is easy.
-*   The default implementation (`CoreQueryPageProvider`) that handles Nuxeo documents can be [switched from VCS (database) to Elasticsearch]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}) by just setting a configuration in the `nuxeo.conf` file.
+*   The default implementation (`CoreQueryDocumentPageProvider`) that handles Nuxeo documents can be [switched from VCS (database) to Elasticsearch]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}) by just setting a configuration in the `nuxeo.conf` file.
 *   When using Elasticsearch, page providers support [aggregation features]({{page page='page-provider-aggregates'}}).
 
-Page providers can be registered on their own service and queried outside of a JSF context. These page providers can also be referenced from [content views]({{page page='content-views'}}), to keep a common definition of the provider.
+Page providers can be registered on their own service and queried outside of an UI context. These page providers can also be referenced from [content views]({{page page='content-views'}}), to keep a common definition of the provider.
 
 {{#> callout type='info' }}
 
@@ -220,11 +220,10 @@ This definition is identical to the one within a content view, except it cannot 
 
 A typical usage of this page provider would be:
 
-```xml
+```java
 PageProviderService ppService = Framework.getService(PageProviderService.class);
-Map<String, Serializable> props = new HashMap<String, Serializable>();
-props.put(CoreQueryDocumentPageProvider.CORE_SESSION_PROPERTY,
-        (Serializable) coreSession);
+Map<String, Serializable> props = new HashMap<>();
+props.put(CoreQueryDocumentPageProvider.CORE_SESSION_PROPERTY, (Serializable) coreSession);
 PageProvider<DocumentModel> pp = (PageProvider<DocumentModel>) ppService.getPageProvider(
         "TREE_CHILDREN_PP", null, null, null, props,
         new Object[] { myDoc.getId() });
@@ -237,8 +236,7 @@ Here you can see that the page provider properties (needed for the query to be e
 A typical usage of this page provider, referenced in a content view, would be:
 
 ```xml
-<extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
-  point="contentViews">
+<extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService" point="contentViews">
 
   <contentView name="TREE_CHILDREN_CV">
     <title>tree children</title>
@@ -257,7 +255,7 @@ A typical usage of this page provider, referenced in a content view, would be:
 
 Here you can see that properties and parameters can be put on the referenced page provider as content views all have a JSF context.
 
-There is also a syntax to reference "named parameters" in the page provider fixed part. This is mostly useful when working with page providers from the [Query Endpoint]({{page page='query-endpoint'}}). You can also find [extensive test cases in the code](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/nuxeo-platform-query-api/src/test/java/org/nuxeo/ecm/platform/query/core/TestPageProviderNamedParameters.java).
+There is also a syntax to reference "named parameters" in the page provider fixed part. This is mostly useful when working with page providers from the [Search Endpoints]({{page page='search-endpoints'}}). You can also find [extensive test cases in the code](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/nuxeo-platform-query-api/src/test/java/org/nuxeo/ecm/platform/query/core/TestPageProviderNamedParameters.java).
 
 ## Custom Page Providers
 
