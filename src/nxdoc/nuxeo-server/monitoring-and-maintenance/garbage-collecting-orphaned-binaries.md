@@ -2,13 +2,13 @@
 title: Garbage-Collecting Orphaned Binaries
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - delete
     - fguillaume
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950318'
@@ -73,20 +73,19 @@ Binary files are not immediately deleted when their containing document is delet
 
 The garbage collection is done by an explicit administration step:
 
-1.  Go to **Admin** > **System Information** > **Repository binaries**.
-2.  Check the <span style="color: rgb(68,68,68);">**Delete orphaned binaries** check box. If you just want to gather statistics about what it going to be deleted, don't check this box and go next step.
-    </span>
+1.  In the JSF UI go to **Admin** > **System Information** > **Repository binaries**.
+2.  Check the **Delete orphaned binaries** check box. If you just want to gather statistics about what it going to be deleted, don't check this box and go to next step.
 3.  Click on **Mark orphaned binaries**.
 
 ## Programmatically - Using the Nuxeo Shell or Java Code
 
 ```java
-import org.nuxeo.ecm.core.blob.BlobManager;
-import org.nuxeo.ecm.core.storage.binary.BinaryManagerStatus;
+import org.nuxeo.ecm.core.blob.DocumentBlobManager;
+import org.nuxeo.ecm.core.blob.binary.BinaryManagerStatus;
 
-BlobManager blobManager = Framework.getService(BlobManager.class);
-if (!blobManager.isBinariesGarbageCollectionInProgress()) {
-    BinaryManagerStatus binaryManagerStatus = blobManager.garbageCollectBinaries(true);
+DocumentBlobManager docBlobManager = Framework.getService(DocumentBlobManager.class);
+if (!docBlobManager.isBinariesGarbageCollectionInProgress()) {
+    BinaryManagerStatus binaryManagerStatus = docBlobManager.garbageCollectBinaries(true);
     println("Orphaned binaries garbage collecting result: " + binaryManagerStatus);
 } else {
     println("Orphaned binaries garbage collecting is already in progress.");

@@ -2,7 +2,7 @@
 title: Binary Metadata
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - ajusto
     - binary-metadata-component
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -309,11 +309,11 @@ history:
 
 A Nuxeo listener watches for document creation/modification and triggers metadata mapping in the following conditions:
 
-*   On document creation, if the attached binary is not empty the listener reads the metadata and updates the document.
+*   On document creation, if the attached binary is not empty, the listener reads the metadata and updates the document.
 *   On document modification:
-    *   If the attached binary is dirty and the document metadata are not dirty, the listener reads the metadata from attached binary to document.
-    *   If the attached binary is dirty and the document metadata are dirty, the listener writes the metadata from the document to the attached binary.
-    *   If the attached binary is not dirty and the document metadata are dirty, the listener writes the metadata from the document to the attached binary.
+    *   If the attached binary has changed and the document metadata has not, the listener reads the metadata from attached binary and stores it into the document.
+    *   If the attached binary has changed and the document metadata also has changed, the listener writes the metadata from the document to the attached binary.
+    *   If the attached binary hasn't changed and the document metadata has changed, the listener writes the metadata from the document to the attached binary.
 
 You can contribute your own metadata mapping and choose to have it applied with the same rules and / or through Nuxeo Automation operations.
 
@@ -418,16 +418,16 @@ If you need to add a new processor:
 
     ```java
     /**
-         * Write given metadata into given blob. Since 7.3 ignorePrefix is added.
+         * Write given metadata into given blob. Since Nuxeo 7.3 ignorePrefix is added.
          *
          * @param blob Blob to write.
          * @param metadata Metadata to inject.
     	 * @param ignorePrefix
-    	 * @return the updated blob, or {@code null} if there was an error (since 7.4)
+         * @return the updated blob, or {@code null} if there was an error (since Nuxeo 7.4)
          */
         public Blob writeMetadata(Blob blob, Map<String, Object> metadata, boolean ignorePrefix);
         /**
-         * Read from a given blob given metadata map. Since 7.3 ignorePrefix is added.
+         * Read from a given blob given metadata map. Since Nuxeo 7.3 ignorePrefix is added.
          *
          * @param blob Blob to read.
          * @param metadata Metadata to extract.
@@ -436,7 +436,7 @@ If you need to add a new processor:
          */
         public Map<String, Object> readMetadata(Blob blob, List<String> metadata, boolean ignorePrefix);
         /**
-         * Read all metadata from a given blob. Since 7.3 ignorePrefix is added.
+         * Read all metadata from a given blob. Since Nuxeo 7.3 ignorePrefix is added.
          *
          * @param blob Blob to read.
     	 * @param ignorePrefix
@@ -445,7 +445,7 @@ If you need to add a new processor:
         public Map<String, Object> readMetadata(Blob blob, boolean ignorePrefix);
     ```
 
-    Here is the [ExifTool example](https://raw.githubusercontent.com/nuxeo/nuxeo-binary-metadata/master/src/main/java/org/nuxeo/binary/metadata/internals/ExifToolProcessor.java) `org.nuxeo.binary.metadata.internals.ExifToolProcessor` and the [command line documentation]({{page page='how-to-contribute-a-command-line-converter'}}) to execute third command lines from the Nuxeo Platform.
+    Here is the [ExifTool example](https://raw.githubusercontent.com/nuxeo/nuxeo-binary-metadata/master/src/main/java/org/nuxeo/binary/metadata/internals/ExifToolProcessor.java) `org.nuxeo.binary.metadata.internals.ExifToolProcessor` and the [command line documentation]({{page page='how-to-contribute-a-command-line-converter'}}) to execute the command lines from the Nuxeo Platform.
 
 ## ExifTool Extraction Example
 
@@ -478,7 +478,7 @@ Metadata extraction example from a PDF file using ExifTool:
 
 ## Metrics
 
-Since 7.2, Metrics have been added to Binary Metadata services to monitor default/custom processor performances with Nuxeo.
+Since Nuxeo 7.2, Metrics have been added to Binary Metadata services to monitor default/custom processor performances with Nuxeo.
 
 To activate it, the following variable in nuxeo.conf must be set:
 
