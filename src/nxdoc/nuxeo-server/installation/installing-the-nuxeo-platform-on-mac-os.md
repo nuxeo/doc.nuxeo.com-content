@@ -2,14 +2,14 @@
 title: Installing the Nuxeo Platform on Mac OS
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - installation
     - pabgrall
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'

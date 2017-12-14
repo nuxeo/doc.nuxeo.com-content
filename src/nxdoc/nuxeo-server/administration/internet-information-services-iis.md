@@ -1,9 +1,9 @@
 ---
 title: Internet Information Services (IIS)
 review:
-    comment: ''
-    date: '2015-12-01'
-    status: ok
+    comment: 'Content to be updated in NXDOC-1431'
+    date: '2017-12-14'
+    status: requiresUpdates
 labels:
     - content-review-lts2016
     - iis
