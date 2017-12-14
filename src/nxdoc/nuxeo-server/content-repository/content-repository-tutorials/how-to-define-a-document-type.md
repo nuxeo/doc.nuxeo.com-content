@@ -16,7 +16,7 @@ labels:
     - document-type
     - gcarlin
     - studio
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950287'
     ajs-parent-page-title: Content Repository
@@ -292,6 +292,9 @@ history:
         version: '1'
 
 ---
+{{#> callout type='tip'}}
+Follow the related [course](https://university.nuxeo.com/learn/public/course/view/elearning/80/document-and-workflow-task-layouts-with-nuxeo-studio-designer) and [exercises](https://university.nuxeo.com/learn/public/course/view/elearning/103/nuxeo-studio-exercises) on Nuxeo University.
+{{/callout}}
 
 ## Introduction
 
@@ -309,13 +312,13 @@ Since content is at the center of customization, the definition of a new documen
 
 ## Nuxeo Studio Modeler and Designer
 
-Nuxeo Studio is divided in two sections :
+Nuxeo Studio is divided in two sections:
 - **Nuxeo Studio Modeler** aims at building the document type definition and structure. More globally, it defines all your custom core components (workflows, lifecycles, document structure, automations...).
 - **Nuxeo Studio Designer** allows you to configure the associated document type layouts for the Web UI application (as it is dedicated to all configuration items linked to the user interface).
 
-Nuxeo Studio Designer is dedicated to configure Web UI : if you need to a create a document type layout for JSF UI, then you will have to use Nuxeo Studio Modeler. In this case, you need to ensure Nuxeo JSF UI is selected as one of the target packages of your application definition (In Settings > Application Definition).
+Nuxeo Studio Designer is dedicated to configure Web UI: if you need to a create a document type layout for JSF UI, then you will have to use Nuxeo Studio Modeler. In this case, you need to ensure Nuxeo JSF UI is selected as one of the target packages of your application definition (to do so go to **Settings** > **Application Definition**).
 
-## Content type definition with Nuxeo Studio Modeler
+## Content Type Definition with Nuxeo Studio Modeler
 
 1.  Open **Nuxeo Studio Modeler**
 2.  Unfold the **Content Model** item of the Studio tree, click on **Document Types** and click the **New** button.
@@ -358,7 +361,7 @@ Nuxeo Studio Designer is dedicated to configure Web UI : if you need to a create
         ![]({{file name='doc_type_schema_tab.png'}} ?w=650,border=true)
 
 
-## Content type layouts with Nuxeo Studio Designer (Web UI)
+## Content Type Layouts with Nuxeo Studio Designer (Web UI)
 
 1. Open Nuxeo Studio Designer.
 
@@ -368,7 +371,7 @@ Nuxeo Studio Designer is dedicated to configure Web UI : if you need to a create
 
   ![]({{file name='local_type_designer.png'}} ?w=300,border=true)
 
-3. Edit the creation layout by selectioning the *create* entry, and press on *Configure* in the lower right corner.
+3. Edit the creation layout by selectioning the **create** entry, and press on **Configure** in the lower right corner.
 4. Drag and drop all the metadata you need into the main central area;
 
   ![]({{file name='doc_type_designer_layout_creation.png'}} ?w=650,border=true)
@@ -384,7 +387,7 @@ Nuxeo Studio Designer is dedicated to configure Web UI : if you need to a create
   {{/callout}}
 
 6. Go to the **Resources** tab
-  1. Create the **images** folder and the **doctypes** subfolder (using the "Create" icon, at the bottom of the left panel)
+  1. Create the *images* folder and the *doctypes* subfolder (using the **Create** icon, at the bottom of the left panel)
 
   ![]({{file name='doc_type_resources.png'}} ?w=300,border=true)
 
@@ -395,12 +398,14 @@ Nuxeo Studio Designer is dedicated to configure Web UI : if you need to a create
 
   ![]({{file name='doc_type_translations_1.png'}} ?w=650,border=true)
 
-  1. For **document type labels** : `"label.document.type.<name_of_your_doctype>" : "<Label of your document type"`
-  2. For **document type property** : `"label.doctype.<name_of_your_doctype>.<name_of_your_property>" : "<Label of your document type property"`
+  1. For **document type labels**:</br>
+      `"label.document.type.<name_of_your_doctype>":"<label_of_your_document_type>"`
+  2. For **document type property**:</br>
+      `"label.doctype.<name_of_your_doctype>.<name_of_your_property>":"<label_of_your_document_type_property>"`
 
     ![]({{file name='doc_type_translations_2.png'}} ?w=650,border=true)
 
-## Content type layouts with Nuxeo Studio Modeler (JSF UI)
+## Content Type Layouts with Nuxeo Studio Modeler (JSF UI)
 
 1.  In the **Tabs** tab:
     1.  Check the default tabs that should not be displayed for your document type.
@@ -418,14 +423,11 @@ Nuxeo Studio Designer is dedicated to configure Web UI : if you need to a create
 
         {{/callout}}
 
-## Content type deployment        
+## Content Type Deployment        
 
 1.  Click on **Save** to save your configuration.
 2.  After you deploy your customization on the your Nuxeo Platform instance, your new document type is displayed in the **Available document type** popup window.
 
-{{#> callout type='tip'}}
-Follow the related [course](https://university.nuxeo.com/learn/public/course/view/elearning/80/document-and-workflow-task-layouts-with-nuxeo-studio-designer) and [exercises](https://university.nuxeo.com/learn/public/course/view/elearning/103/nuxeo-studio-exercises) on Nuxeo University.
-{{/callout}}
 
 * * *
 
