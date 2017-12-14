@@ -9,7 +9,7 @@ labels:
     - link-update
     - nuxeo-drive
     - yachour
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
@@ -831,7 +831,7 @@ On your Home Nuxeo Drive tab, the space is displayed in the "Synchronization roo
 #### Web UI
 
 To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive_unsynced-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
-The icon becomes orange ![]({{file name='drive_synced_under_root-webui.png' page='nuxeo-drive'}} ?w=20). Documents inside the synchronized space have a Drive local edit icon ![]({{file name='drive_edit-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
+The icon becomes pink ![]({{file name='drive_synced_under_root-webui.png' page='nuxeo-drive'}} ?w=20). Documents inside the synchronized space have a Drive local edit icon ![]({{file name='drive_edit-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
 
 {{{multiexcerpt 'drive-content-sync'}}}
 
