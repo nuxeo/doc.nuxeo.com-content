@@ -2,14 +2,14 @@
 title: Field Constraints and Validation
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - link-update
     - schema-component
     - fguillaume
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950287'
@@ -278,7 +278,7 @@ Document validation is a feature which:
 *   Provides the APIs to fetch objects referenced by a document field
 *   Lets you define references to your own business objects
 
-For now, document validation does not:
+Document validation does not:
 
 *   Manage cross field validation
 *   Manage list field size
@@ -293,7 +293,7 @@ Constraints are loaded by Nuxeo Core as Java objects implementing `org.nuxeo.ecm
 {{#> panel type='code' heading='org.nuxeo.ecm.core.schema.types.constraints.Constraint'}}
 
 ```java
-public interface Constraint extends Serializable {
+public interface Constraint {
     boolean validate(Object object);
     String getErrorMessage(Object invalidValue, Locale locale);
     Description getDescription();
@@ -375,16 +375,16 @@ Name: `EnumConstraint`
 
 Parameters:
 
-*   `Values`: A list of possible value for the field
+*   `Values`: A list of possible values for the field
 
 Availability: Any XSD simple type derived from datatype `xsd:string`, `xsd:integer`, `xsd:long` or `xsd:decimal` (or alternatives like `xsd:negativeinteger`).
 
-Behavior: This constraint ensures that the value of a field belongs to a set of values. `null` value is always valid (use the `NotNullConstraint` in combination).
+Behavior: This constraint ensures that the value of a field belongs to a list of values. The `null` value is always valid (use the `NotNullConstraint` in combination).
 
-Example: Preference for use of a hand
+Example: Preference for the choice of a color
 
 ```xml
-<xs:element name="mainColor">
+<xs:element name="color">
   <xs:simpleType>
     <xs:restriction base="xs:string">
       <xs:enumeration value="red" />
@@ -408,11 +408,11 @@ Parameters:
 
 Availability: Any XSD simple type derived from datatype `xsd:string` (or alternatives like `xsd:name`).
 
-Behavior: This constraint ensures that a field contains a given quantity of characters. `null` value is always valid (use the `NotNullConstraint` in combination).
+Behavior: This constraint ensures that a field contains a given number of characters. `null` value is always valid (use the `NotNullConstraint` in combination).
 
 {{#> callout type='warning' }}
 
-`LengthConstraint` may alter the database schema when using an SQL backend. If the `minLenght` is defined, a varchar with the given length will be created.
+`LengthConstraint` may alter the database schema when using an SQL backend. If the `minLength` is defined, a varchar with the given length will be created.
 
 {{/callout}}
 
@@ -568,7 +568,7 @@ Name: `documentResolver`
 
 Parameters:
 
-*   `store`: `id` or `path`. If `id`, a document's id is expected. If `path`, a document's place is expected.
+*   `store`: `id` or `path`. If `id`, a document's id is expected. If `path`, a document's path is expected.
 
 Expected value: a concatenation of repository name and id (ex: `default:45678-5678-45678-2346`) or repository name and path (ex: `default:/domain/places/doc`).
 

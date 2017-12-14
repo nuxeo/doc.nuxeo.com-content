@@ -2,7 +2,7 @@
 title: File Storage Configuration
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-14'
     status: ok
 labels:
     - content-review-lts2016
@@ -11,7 +11,7 @@ labels:
     - blob-manager-component
     - fguillaume
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -145,7 +145,7 @@ This page gives operational information on targeted configurations. For a full u
 
 ## Configuring the Default BlobProvider
 
-The default blobProvider for Nuxeo Platform stores files on the local filesystem at a configurable location and with filenames based on their hash (digest).
+The default blob provider for Nuxeo Platform stores files on the local filesystem at a configurable location and with filenames based on their hash (digest).
 
 {{#> panel type='code' heading='Standard DefaultBinaryManager Configuration'}}
 
@@ -160,7 +160,7 @@ The default blobProvider for Nuxeo Platform stores files on the local filesystem
 
 {{/panel}}
 
-The `path` property is used to specify the filesystem path at which the binaries will be stored. A relative path will be resolved under `$NUXEO/nxserver/data`, but an absolute path can be used as well if needed.
+The `path` property is used to specify the filesystem path at which the binaries will be stored. A relative path will be resolved under `$NUXEO_HOME/nxserver/data`, but an absolute path can be used as well if needed.
 
 The format of the `binaries`&nbsp;(or other configured path) directory is:
 
@@ -201,7 +201,7 @@ You will find existing implementations in the binary store main documentation pa
 *   [the ones that can be configured without additional addon]({{page page='file-storage#filestorage-defaultblobproviders'}})
 *   [the ones that require installation of an addon]({{page page='file-storage#filestorage-additionalblobproviders'}}).
 
-Usually, if you don't use the advanced Blob Dispatcher capabilities, you will need one binary manager per Nuxeo repository.&nbsp;By default Nuxeo uses a binary manager with the same name for each repository, for instance the "default"&nbsp;repository&nbsp;will&nbsp;use the "default" binary manager. For a standard Nuxeo instance with a single repository, this is all taken care of for you in the default template
+Usually, if you don't use the advanced Blob Dispatcher capabilities, you will need one binary manager per Nuxeo repository. By default Nuxeo uses a binary manager with the same name as each repository, for instance the "default" repository will use the "default" binary manager. For a standard Nuxeo instance with a single repository, this is all taken care of for you by the default template.
 
 ## Blob Dispatcher
 

@@ -1,9 +1,9 @@
 ---
 title: Repository Configuration
 review:
-    comment: ''
-    date: '2016-12-07'
-    status: ok
+    comment: 'This page needs to be updated to document DBS configuration and separate SQL-specific options'
+    date: '2017-12-14'
+    status: requiresUpdates
 labels:
     - lts2016-ok
     - binary-manager
@@ -11,7 +11,7 @@ labels:
     - fguillaume
     - fulltext
     - vcs-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'

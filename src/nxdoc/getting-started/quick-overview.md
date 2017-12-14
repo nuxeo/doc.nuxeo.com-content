@@ -2,14 +2,14 @@
 title: Quick Overview
 review:
     comment: ''
-    date: '2017-02-22'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - architecture
     - fguillaume
     - overview
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
@@ -137,9 +137,9 @@ Main components of the Nuxeo Platform are:
 
 - **Build, QA and Performance analysis tooling** All the tooling we use for building, maintaining and testing our software artifacts is free and open source. It is available for your own project, as a great catalyzer of your engineering practices.
 
-- **Nuxeo Studio** and **Nuxeo cli**: Nuxeo Studio is an online application with which you can easily implement project's customisation requirements: content modeling, business logic and user interface design. Nuxeo Studio is much more than a rapid application development tool: it guarantees you that your customisation will be maintained automatically throughout the future releases of Nuxeo Platform components. Nuxeo Cli is a command line tool for helping developers bootstrap their custom modules.
+- **Nuxeo Studio** and **Nuxeo CLI**: Nuxeo Studio is an online application with which you can easily implement project's customisation requirements: content modeling, business logic and user interface design. Nuxeo Studio is much more than a rapid application development tool: it guarantees you that your customisation will be maintained automatically throughout the future releases of Nuxeo Platform components. Nuxeo CLI is a command line tool for helping developers bootstrap their custom modules.
 
-- Additional Client Integrations: Some additional client integrations are available: Adobe CC plugin, Salesforce application, AutoCad Plugin, Slack integration and more.
+- Additional **Client Integrations**: Some additional client integrations are available: Adobe CC plugin, Salesforce application, AutoCad Plugin, Slack integration and more.
 
 - **PaaS** and **Docker Deployment** Tooling
   Nuxeo has strong expertise in deploying Nuxeo Platform instances on docker containers, PaaS style, which you typically want to do if you are building a verticalised application on top of Nuxeo and have multi-tenancy considerations
@@ -152,13 +152,14 @@ You may be interested in using Nuxeo Platform for you project for different use 
 
 ## Technical Overview
 
-### Languages and configuration / customisation principles
-All server part of Nuxeo is written in Java, including plugins, with a bundles and components mechanism for packaging developments. The Web UI (the customizable client web application) is written in JavaScript (using Polymer framework). Default application can be configured using Nuxeo Studio, an online development environment.  It is also possible to write Java plugins.
+### Languages and configuration / customization principles
+
+All server parts of Nuxeo, including plugins, are written in Java, with a mechanism of bundles and components for packaging developments. The Web UI (the customizable client web application) is written in JavaScript (using the Polymer framework). Default application can be configured using Nuxeo Studio, an online development environment.  It is also possible to write Java plugins.
 
 ### Deployment
 
-Nuxeo Server comes bundled with a tomcat server. It requires for production to set up several other components: Elasticsearch, Redis, a relational database or NoSQL store. Deployment options support HA, Failover and can be on premise, or in the cloud, on bare machines, Virtual Machines or Docker containers. For more details about the Nuxeo deployment system, please refer to [pages on Standard High Availability Nuxeo Cluster Architecture]({{page page='standard-high-availability-nuxeo-cluster-architecture'}}).
-Nuxeo bundles can even be started on a JVM directly(i.e without an application sever). This is the deployment mode in all unit tests.
+Nuxeo Server comes bundled with a Tomcat server. It requires for production to set up several other components: Elasticsearch, Redis, a relational (SQL) database or NoSQL store (like MongoDB). Deployment options support HA, failover and can be on-premise, or in the cloud, on bare machines, virtual machines or Docker containers. For more details about the Nuxeo deployment system, please refer to [pages on Standard High Availability Nuxeo Cluster Architecture]({{page page='standard-high-availability-nuxeo-cluster-architecture'}}).
+Nuxeo bundles can even be started on a JVM directly (i.e without an application sever). This is the deployment mode in all unit tests.
 
 ## About Nuxeo Platform Data
 
@@ -166,9 +167,9 @@ Data managed by the Nuxeo Platform includes:
 
 - Documents:
     - Metadata
-    - Binary Streams
+    - Binary files
 - Users, Groups
-- References data
+- Reference data
 - Indexes
 
 ### Document Repository
@@ -185,7 +186,7 @@ It covers:
 
 The default configuration for Nuxeo Repository is to use a SQL Database and a Filesystem storage, as well as an Elasticsearch index (that can be removed from the architecture if necessary):
 
-* To manage hierarchy, security and metadata the Nuxeo repository provides a generic Java interface with two implementations: [VCS]({{page page='VCS'}}) that integrates with SQL databases, or [DBS]({{page page='DBS'}}) that integrates with NoSQL databases. You can easily configure the backend of your choice, among MongoDB, PostgreSQL, Oracle, MySQL Server, MS SQL Server and Marklogic. Implementing a new relational or document backend, if needed, is straightforward.
+* To manage hierarchy, security and metadata the Nuxeo repository provides a generic Java interface with two implementations: [VCS]({{page page='VCS'}}) that integrates with SQL databases, or [DBS]({{page page='DBS'}}) that integrates with NoSQL databases. You can easily configure the backend of your choice, among MongoDB, PostgreSQL, Oracle, MySQL, MariaDB, Microsoft SQL Server and MarkLogic. Implementing a new relational or document backend, if needed, is straightforward.
 
 
 - Binaries streams are stored in a _"Object Store like"_ storage called "BlobProvider". Many implementations are provided out of the box (File System, S3, Azure Blob Storage, JCloud, Google Drive, Dropbox and more) and it is straightforward to add a new implementation.
@@ -212,7 +213,7 @@ The Directories are typically used for storing:
 By default, everything is bound to the same SQL database as the repository, but you can choose:
 
 - To bind some directories to LDAP
-- To bind some directories to an external database (use of XA mode is then required)
+- To bind some directories to an external SQL database
 
 ![]({{file name='DirectoryAbstraction.png'}} ?w=650,border=true)
 
@@ -243,5 +244,6 @@ A standard approach is to wrap your calls to external applications inside a [Nux
 In addition of the native HTTP API, the Nuxeo Platform also provides solutions to [import data inside the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}}).
 
 
-## Customising the Web UI
-The Web UI is written upon Web Components standard and paradigms using Polymer Framework.
+## Customizing the Web UI
+
+The Web UI is written on top of the Web Components standard and the paradigms of the Polymer Framework.
