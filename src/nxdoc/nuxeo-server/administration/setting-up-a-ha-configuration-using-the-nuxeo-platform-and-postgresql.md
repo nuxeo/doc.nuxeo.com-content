@@ -1,9 +1,9 @@
 ---
 title: Setting up a HA Configuration Using the Nuxeo Platform and PostgreSQL
 review:
-    comment: ''
-    date: '2015-12-01'
-    status: ok
+    comment: 'This page needs be updated to take into account modern Nuxeo capabilities'
+    date: '2017-12-14'
+    status: requiresUpdates
 labels:
     - content-review-lts2016
     - ha
@@ -12,7 +12,7 @@ labels:
     - vcs
     - replication
     - postgresql
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
