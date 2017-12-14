@@ -190,7 +190,7 @@ The Nuxeo **Android** application can be installed from [Google Play](https://pl
 
 ## Functional Overview
 
-The Nuxeo application allows you to authenticate against a Nuxeo server, browse and search the Nuxeo repository. In addition you can manage your favorite documents and access your shared/personal collections. It provides a menu giving access to all menu entries, except when you are browsing.
+The Nuxeo application allows you to authenticate against a Nuxeo server, browse and search the Nuxeo repository. In addition, you can manage your favorite documents and access your shared/personal collections. All features listed below are available using the side ("burger") menu.
 
 ![]({{file name='mobile-menu.png'}} ?w=200,h=355,border=true)
 
