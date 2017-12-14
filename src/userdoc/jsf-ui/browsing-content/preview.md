@@ -224,6 +224,7 @@ Several means to preview documents are available.
     The document preview is displayed in a popup window.
     ![]({{file name='preview_popup.png' space='userdoc' page='preview'}} ?w=600,border=true)
     
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 *   On the JSF UI, you can also preview a document along with its main metadata on the [Info-View pop-up]({{page space='nxdoc' page='how-to-customize-the-info-view-pop-up'}}), accessible from any thumbnail listing.
     ![]({{file name='info_view_preview.png' space='userdoc' page='preview'}} ?w=600,border=true)
 
