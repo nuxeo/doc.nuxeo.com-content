@@ -2,7 +2,7 @@
 title: Nuxeo Bulk Document Importer
 review:
     comment: ''
-    date: '2017-08-01'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
