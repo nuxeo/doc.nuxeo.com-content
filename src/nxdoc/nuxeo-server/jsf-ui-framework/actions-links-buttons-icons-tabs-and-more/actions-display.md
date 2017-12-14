@@ -2,7 +2,7 @@
 title: Actions Display
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-14'
     status: ok
 labels:
     - content-review-lts2016
@@ -11,7 +11,7 @@ labels:
     - atchertchian
     - actions-filters-component
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950289'
@@ -170,12 +170,17 @@ Here is a sample widget definition to render actions using category `MY_CATEGORY
 </extension>
 ```
 
-This widget can be displayed on a page directly using the following sample code:
+This widget can be displayed on a page directly using the following sample code, relying on the [`nxl:widget`](http://community.nuxeo.com/api/nuxeo/latest/tlddoc/nxl/widget.html) tag:
 
 ```xml
-
 <div xmlns:nxl="http://nuxeo.org/nxforms/layout">
   <nxl:widget name="userActions" mode="view" value="#{currentDocument}" />
+</div>
+```
+An alternative tag library can also be used for this, as of Nuxeo 8.1:
+```xml
+<div xmlns:nxw="http://nuxeo.org/nxforms/runtime/widget">
+  <nxw:userActions mode="view" value="#{currentDocument}" />
 </div>
 ```
 
@@ -183,10 +188,9 @@ Of course this widget definition can also be included within a layout definition
 
 ### Rendering Actions via Dynamically Computed Widget
 
-It can also be useful to generate the widget definition dynamically from the widget template, by passing the widget properties as tag attributes to the&nbsp; [`nxl:widgetType`](http://nxlwidgetType) tag:
+It can also be useful to generate the widget definition dynamically from the widget template, by passing the widget properties as tag attributes to the [`nxl:widgetType`](http://community.nuxeo.com/api/nuxeo/latest/tlddoc/nxl/widgetType.html) tag:
 
 ```xml
-
 <div xmlns:nxl="http://nuxeo.org/nxforms/layout">
   <nxl:widgetType name="documentActionsWithForms"
     widgetName="documentActionsUpperButtons"
@@ -202,6 +206,22 @@ It can also be useful to generate the widget definition dynamically from the wid
 ```
 
 Notice the tag attribute `widgetProperty_category` used to define the actions category: as widget types also have a notion of category, adding&nbsp;`widgetProperty_` prefix to the attribute makes it possible to explicitly state that this is a widget property.
+
+An alternative tag library can also be used for this, as of Nuxeo 8.1:
+```xml
+<div xmlns:nxwt="http://nuxeo.org/nxforms/runtime/widgettype">
+  <nxwt:documentActionsWithForms
+    widgetName="documentActionsUpperButtons"
+    mode="view"
+    label=""
+    actionStyleClass="button"
+    actionsDisplay="icons"
+    overallDisplay="horizontal_block"
+    widgetProperty_category="MY_CATEGORY"
+    maxActionsNumber="5"
+    value="#{currentDocument}" />
+</div>
+```
 
 See also chapter about [Layout and Widget Display]({{page page='layout-and-widget-display'}}).
 
