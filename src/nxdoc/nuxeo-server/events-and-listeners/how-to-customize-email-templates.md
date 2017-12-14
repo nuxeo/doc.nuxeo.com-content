@@ -2,11 +2,11 @@
 title: How to Customize Email Templates
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
-        excerpt: 'Learn how to create new alert&nbsp;email or override existing alert emails with Nuxeo Studio.'
+        excerpt: 'Learn how to create new alert email or override existing alert emails with Nuxeo Studio.'
         level: Beginner
         tool: Studio
         topics: Alerts
@@ -20,7 +20,7 @@ labels:
     - notification
     - studio
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235679'
@@ -148,17 +148,13 @@ An email template defines the content of an email that is sent to users under pr
 
 Default templates for mail notifications can be overridden. Just follow those steps:
 
-&nbsp;
-
 {{! /excerpt}}
 
 1.  Create a new **Templates** > **Mail** feature in Studio. Choose ID among the ones that are used in the default product, like `subscriptionsUpdated` for instance (see the [list of all alert templates](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.notification.service.NotificationContrib--templates)).
 2.  Fill in the content of the email that you want to be sent.
     ![]({{file name='studio_mailtemplate_content_2.png'}} ?w=600,border=true)
-    If you want to copy from the default content of the template, you can have a look at it from [GitHub](https://github.com/nuxeo/nuxeo-features/tree/master/nuxeo-platform-notification/nuxeo-platform-notification-core/src/main/resources/templates).
+    If you want to copy from the default content of the template, you can have a look at it from [GitHub](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-platform-notification/nuxeo-platform-notification-core/src/main/resources/templates).
 3.  Save.
-
-&nbsp;
 
 ## Making the Document Links in Notification Emails Point to the Web UI
 
