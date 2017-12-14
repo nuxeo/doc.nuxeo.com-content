@@ -45,7 +45,7 @@ history:
 Inside Nuxeo Platform, Directories are used to provide a common abstraction on a set of record
 
 *   that can be stored in different manner
-    *   SQL, LDAP, Repository, External Service
+    *   SQL, noSQL (MongoDB), LDAP, Repository, External Service
 *   that can be of different nature
     *   user, group, simple key/value, complex records
 
@@ -65,7 +65,7 @@ Both Nuxeo JSF UI and Nuxeo Web UI include management screens for the directorie
 
 For simplicity reasons, the entry inside the Admin Center is called "Vocabularies", but actually it can manage any kind of Directories (i.e. not only the directories using the vocabulary schema).
 
-In the Nuxeo JSF UI, to make this easily usable, the platform includes a DirectoryUIManager that uses a [directories extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.directory.ui.DirectoryUIManager--directories) to allow to contribute what directories should be available in the JSF management UI and what layouts should be used.
+In the Nuxeo JSF UI, to make this easily usable, the platform includes a DirectoryUIManager that uses a [directories](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.directory.ui.DirectoryUIManager--directories) extension point to allow to contribute what directories should be available in the JSF management UI and what layouts should be used.
 
 In Nuxeo Web UI, all the directories that are not of type `system` are included by default in the management UI.
 
