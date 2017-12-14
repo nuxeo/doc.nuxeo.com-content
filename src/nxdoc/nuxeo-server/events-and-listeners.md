@@ -2,7 +2,7 @@
 title: Events and Listeners
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - core-component
     - fguillaume
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31033314'
@@ -251,6 +251,12 @@ There are several kinds of listeners:
 *   **synchronous post-commit listeners** are run after the transaction has committed, in a new transaction but in the same thread, this is useful for logging.
 *   **asynchronous listeners** are run after the transaction has committed, in a new transaction and a separate thread, this is useful for any long-running operations whose result doesn't have to be seen immediately in the user interface.
 
+{{#> callout type='info' }}
+
+Note that in a clustered scenario, asynchronous listeners are not necessarily executed on the same Nuxeo instance as the one on which the event was created, they can be executed on any Nuxeo node (unless a specific configuration for the work queues prevents that).
+
+{{/callout}}
+
 ## Processing an Event Using an Event Listener
 
 Here is a simple event listener:
@@ -290,10 +296,10 @@ If a listener expects to observe a document after it has been saved to do things
 
 ## Sending an Event
 
-It is not as common as having new listeners, but sometimes it's useful to send new events. To do this you have to create an event bundle containing the event, then send it to the event producer service:
+It is not as common as having new listeners, but sometimes it's useful to send new events. To do this you have to create an event context referencing the document, create an event in that context, then send it to the event producer service:
 
 ```
-EventProducer eventProducer eventProducer = Framework.getService(EventProducer.class);
+EventProducer eventProducer = Framework.getService(EventProducer.class);
 DocumentEventContext ctx = new DocumentEventContext(session, session.getPrincipal(), doc);
 ctx.setProperty("myprop", "something");
 Event event = ctx.newEvent("myeventid");
@@ -313,8 +319,7 @@ You can use the document context map for this.
 ...
    DocumentEventContext ctx = (DocumentEventContext) event.getContext();
    DocumentModel doc = ctx.getSourceDocument();
-   ScopedMap data = doc.getContextData();
-   data.putScopedValue(MY_ERROR_KEY, "some info");
+   doc.putContextData(MY_ERROR_KEY, "some info");
 ...
 
 ```
@@ -351,23 +356,21 @@ Then the error handling in the UI layer can be managed like this
 
 ## Asynchronous vs Synchronous Listeners
 
-Asynchronous listeners will run as Work instances in a separated WorkManager thread. This means the main transaction, the one that raised the event, won't be blocked by the listener processing.
+Asynchronous listeners will run as Work instances in a separated WorkManager thread or on a separate Nuxeo instance. This means that the main transaction, the one that raised the event, won't be blocked by the listener processing.
 
-Therefore if the processing done by the listener may be long, this is a good candidate for asynchronous processing.
+Therefore if the processing done by the listener may take a long time, this is a good candidate for asynchronous processing.
 
 However, there are some impacts in moving a synchronous listener to an asynchronous one:
 
-*   the listener signature needs to change
-    *   rather than receiving a single event, it will receive an EventBundle that contains all events inside the transaction
-*   because the listener runs in a separated transaction it can not rollback the source transaction (it is too late anyway)
-*   the listener code needs to be aware that it may have to deal with new cases
-    *   typically, the listener may receive an event about a document that has since then been deleted
+*   The listener signature needs to change: rather than receiving a single event, it will receive an EventBundle that contains all events inside the transaction.
+*   Because the listener runs in a separate transaction it cannot rollback the source transaction (it is too late anyway).
+*   The listener code needs to be aware that it may have to deal with new cases; typically, the listener may receive an event about a document that has since been deleted.
 
 ## Forwarding Events to an External Event Bus
 
 The beginning of an integration with [RabbitMQ](https://www.rabbitmq.com/) is available [in the nuxeo-sandbox GitHub repository](https://github.com/nuxeo-sandbox/nuxeo-rabbitmq). While it would require more implementation work for being used in a production environment, it provides a good sample of how to integrate with an external event bus.
 
-## Performances and Monitoring
+## Performance and Monitoring
 
 Using listeners, especially synchronous ones, may impact the global performance. Typically, having synchronous listeners that do long processing will reduce the scalability of the system.
 

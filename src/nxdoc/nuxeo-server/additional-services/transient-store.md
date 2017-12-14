@@ -2,7 +2,7 @@
 title: Transient Store
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - fguillaume
     - link-update
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -84,7 +84,7 @@ history:
 ---
 {{! excerpt}}
 
-A Transient Store allows you to store temporary blobs and associated parameters in a Nuxeo instance but outside of the document repository, thus the "transient" aspect.
+A Transient Store allows you to store temporary blobs and associated parameters (file name, MIME type, etc.) in a Nuxeo instance but outside of the document repository, thus the "transient" aspect.
 
 {{! /excerpt}}
 
@@ -124,7 +124,7 @@ You can configure any number of transient stores with the following extension po
 The `store` element supports two attributes:
 
 *   `name`: Used to identify the store.
-*   `class`: Optionally references an implementation of the `TransientStore` interface (the default is `SimpleTransientStore`).
+*   `class`: Optionally references an implementation of the `TransientStore` interface (the default is `SimpleTransientStore`, or `RedisTransientStore` if Redis is enabled).
 
 The nested configuration elements are:
 
@@ -170,7 +170,9 @@ To retrieve a given transient store, just call `TransientStoreService#getStore(S
 
 ## Implementation
 
-As seen above there are two implementations available in the default Nuxeo platform. They both handle blob storage in the same way but store the parameters differently.
+As seen above there are two default implementations available in the default Nuxeo platform. They both handle blob storage in the same way but store the parameters differently.
+
+A new implementation, `KeyValueBlobTransientStore`, is also available.
 
 ### Blob Storage
 
@@ -195,6 +197,23 @@ In a cluster environment Nuxeo must be configured to use a Redis server and any 
 {{/callout}}
 
 See [NXP-18051](https://jira.nuxeo.com/browse/NXP-18051) for details about the `RedisTransientStore` cluster-aware implementation.
+
+### KeyValueBlobTransientStore
+
+This implementation, available since Nuxeo 9.3, allows you to abstract yourself from Redis and the filesystem, using a Key/Value store for the parameters and a [Blob Provider]({{page page='file-storage'}}#blob-manager-and-blob-providers) for the blobs. It can be set up by defining an XML contribution like:
+
+```xml
+<extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent" point="store">
+  <store name="myname" class="org.nuxeo.ecm.core.transientstore.keyvalueblob.KeyValueBlobTransientStore">
+    <targetMaxSizeMB>-1</targetMaxSizeMB>
+    <absoluteMaxSizeMB>-1</absoluteMaxSizeMB>
+    <firstLevelTTL>240</firstLevelTTL>
+    <secondLevelTTL>10</secondLevelTTL>
+  </store>
+</extension>
+```
+
+It will read and write parameters in a Key/Value store of the same name, and the binaries in a Blob Provider of the same name (`myname` in this example). Both must be configured through their own extension points.
 
 ## Time To Live and Garbage Collector
 

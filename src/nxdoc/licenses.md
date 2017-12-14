@@ -2,14 +2,14 @@
 title: Licenses
 review:
     comment: ''
-    date: '2017-05-18'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - license
     - fguillaume
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950332'
     ajs-parent-page-title: Developer Documentation Center

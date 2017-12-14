@@ -2,7 +2,7 @@
 title: Adding an Antivirus
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-14'
     status: ok
 labels:
     - content-review-lts2016
@@ -11,7 +11,7 @@ labels:
     - fguillaume
     - nxdoc-744
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950333'
@@ -88,16 +88,18 @@ This is a recurrent demand from our customers. So here is a quick guide to add a
 
 One way to implement an antivirus scan for uploaded documents without any significant performance hit at creation time would be to:
 
-1.  implement a new `QuarantineBinaryManager` that would wrap a two instances of `BinaryManager` configured to use two distinct repositories, e.g. `repo-cleared` and r`epo-quarantine;`
-2.  introduce a new dynamic facet with a schema that can store antivirus status and metadata of all the blobs stored on the document.
+1.  configure two `BinaryManager` stores, e.g. `repo-cleared` and `repo-quarantine`,
+2.  define an aspect of each blob that specifies whether it is quarantined or not, for instance the MIME type could contain `";quarantined=true"` if the blob is to be quarantined,
+3.  configure a `BlobDispatcher` to dispatch blobs to the appropriate `BinaryManager` depending on the value of the MIME type.
+4.  optionally define a new facet for documents to contain general information about the quarantine status of the document's blobs, to be reported to the user.
 
-Whenever a new blob is uploaded and attached to a Nuxeo document the `QuarantineBinaryManager` would first delegate the insertion to the `repo-quarantine` instance of `BinaryManager`.
+Whenever a new blob is uploaded and attached to a Nuxeo document the `BlobDispatcher` would first delegate the insertion to the `repo-quarantine` instance of `BinaryManager`.
 
-A new Nuxeo synchronous core [event listener]({{page page='events-and-listeners'}}) would also react to the `aboutToCreate` or `beforeDocumentModification` event and introspect whether one of the blob fields is dirty. If so, the dynamic facet of the document would be updated to mark the new blob as being quarantined for antivirus analysis and a new asynchronous task would be scheduled using the `WorkManager` that would delegate a call to the antivirus service out of transaction and then collect the outcome of the antivirus as follows:
+A new Nuxeo synchronous core [event listener]({{page page='events-and-listeners'}}) would also react to the `aboutToCreate` or `beforeDocumentModification` event and introspect whether one of the blob fields is dirty. If so, the MIME type of the blob would be updated to add `";quarantined=true"` to mark the new blob as being quarantined for antivirus analysis and a new asynchronous task would be scheduled using the `WorkManager` that would delegate a call to the antivirus service out of transaction and then collect the outcome of the antivirus as follows:
 
-*   If the antivirus outcome is negative (no virus detected): the `WorkManager` task would call a new public method of `QuarantineBinaryManager`, for instance named `QuarantineBinaryManager#giveClearance(String blobDigest)`. This method would physically move the blob from the `repo-quarantine` bucket to the `repo-cleared`. The `WorkManager` task would also update the document dynamic facet to inform the user (e.g. with a dedicated blob widget) that the document does not contain a suspect blob.
+*   If the antivirus outcome is negative (no virus detected): the `WorkManager` task would update the blob's MIME type to remove the `";quarantined=true"`, which would instruct the `BlobDipatcher` to move the blob to the `repo-cleared` `BinaryManager`. The `WorkManager` task could also update the document's specific facet to inform the user (e.g. with a dedicated blob widget) that the document does not contain a suspect blob.
 
-*   If the antivirus outcome is positive (a virus is detected in the attached file): the `WorkManager` task would not call the `giveClearance` method and instead just update the metadata fields of the dynamic facet schema to inform the user of the outcome of the analysis. The user could then decide to delete the contaminated blob attachment (or the system could be configured to do it automatically).
+*   If the antivirus outcome is positive (a virus is detected in the attached file), the `WorkManager` task would just update the document facet to inform the user of the outcome of the analysis. The user could then decide to delete the contaminated blob attachment (or the system could be configured to do it automatically).
 
 ## Permissions
 
@@ -107,15 +109,7 @@ Furthermore it would be very useful to make the event listener manage a new loca
 *   Do not disrupt too much any existing Nuxeo components (e.g. Nuxeo Drive <sup><span class="error">[1](#drive)</span></sup>) that usually expect any uploaded blob in a document to be immediately available.
 *   Make it possible for the uploader to introspect the state of the virus analysis by making a custom blob widget.
 
-The management of the dynamic facet, the ACL and the call to the `giveClearance` method should be wrapped in a single `AntivirusVirusAware` document adapter to abstract away all those operations in a simple and clean public API.
-
 Implementing such extensions to the Nuxeo platform is possible but might not be easy for non-core Nuxeo developer.
-
-{{#> callout type='note' }}
-
-The software architecture of binary management has slightly changed. Instead of a binary manager, one should think of a custom Blob Dispatcher. Furthermore, it would make sense in this new architecture to introduce this as a feature of the Blob Manager service.
-
-{{/callout}}
 
 &nbsp;
 

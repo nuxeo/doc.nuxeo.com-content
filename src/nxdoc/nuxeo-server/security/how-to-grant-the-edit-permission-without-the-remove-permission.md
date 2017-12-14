@@ -2,7 +2,7 @@
 title: How to Grant the Edit Permission without the Remove Permission
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
@@ -16,7 +16,7 @@ labels:
     - link-update
     - permission
     - fguillaume
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '20515363'

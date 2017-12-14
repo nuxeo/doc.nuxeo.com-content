@@ -2,14 +2,14 @@
 title: Amazon CloudFront
 review:
     comment: ''
-    date: '2017-08-08'
+    date: '2017-12-13'
     status: ok
 labels:
     - amazon-s3
     - fguillaume
     - amazon-cloudfront
     - binary-manager
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 tree_item_index: 100
 
