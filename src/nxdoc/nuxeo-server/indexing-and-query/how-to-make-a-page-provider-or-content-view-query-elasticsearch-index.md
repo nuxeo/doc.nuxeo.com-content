@@ -2,7 +2,7 @@
 title: How to Make a Page Provider or Content View Query Elasticsearch Index
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
@@ -20,7 +20,7 @@ labels:
     - kleturc
     - university
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '4687860'
     ajs-parent-page-title: Indexing and Query
@@ -138,13 +138,9 @@ history:
 ---
 {{! excerpt}}
 
-When&nbsp;[configuring a content view]({{page space='studio' page='content-view-query-and-form-tab'}})&nbsp;in Nuxeo Studio, you can make it query Elasticsearch instead of the Core API. This may be interesting for performance/scalability reasons as well as for enabling aggregates support. This page lists the required steps:
+When [configuring a content view]({{page space='studio' page='content-view-query-and-form-tab'}}) in Nuxeo Studio, you can make it query Elasticsearch instead of the Core API. This may be interesting for performance/scalability reasons as well as for enabling aggregates support. This page lists the required steps:
 
 {{! /excerpt}}
-
-{{#> callout type='info' }}
-{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
-{{/callout}}
 
 ## Overriding an Existing Page Provider
 
@@ -156,7 +152,9 @@ elasticsearch.override.pageproviders=default_search,document_content,section_con
 
 You can view the list of the Page Providers in the Admin Center/Elasticsearch/Page Provider tab, the `CoreQueryDocumentPageProvider` listed in blue can be overridden by Elasticsearch.
 
-## Configuring a New Content View &nbsp;(and underlying Page Provider) With Nuxeo Studio
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
+## Configuring a New Content View (and underlying Page Provider) With Nuxeo Studio
 
 1.  In Studio, on the content view, on the query & form tab, check "Use Elasticsearch index" and Save.
     ![]({{file name='Studio-content-view-query-definition.png' space='studio' page='content-views'}} ?w=600,border=true)
