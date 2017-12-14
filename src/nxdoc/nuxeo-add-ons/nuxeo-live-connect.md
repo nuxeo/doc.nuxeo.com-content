@@ -2,14 +2,14 @@
 title: Nuxeo Live Connect
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - live-connect-component
     - kleturc
     - university
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -414,56 +414,48 @@ The table below shows the available features for each default implementation.
 
 <sup>*</sup> _Provided by the Nuxeo Platform_
 
-## Live Connect For Google Drive
+## Functional Overview
 
-### Functional Overview
+### Creating New Live Connect Documents
 
-#### JSF UI
-
-##### Creating New Google Drive Documents
-
-On the document creation form, a Google Drive button enables you to browse your Google Drive content and select a document stored there.
-
-![]({{file name='8.2_LiveConnect_file_creation.png'}} ?w=500,h=366,border=true)
-
-This option is available for the following Nuxeo document types:
+The Live Connect Upload action is available for the following Nuxeo document types:
 
 - File
 - Picture
 - Video
 - Audio
 
-##### Editing Content
+On the document creation form, a button with the provider name enables you to browse your content and select a document stored there.
 
+#### Web UI
+
+![]({{file name='LiveConnect-file-creation-webui.png'}} ?w=500,border=true)
+
+#### JSF UI
+
+![]({{file name='8.2_LiveConnect_file_creation.png'}} ?w=500,h=366,border=true)
+
+### Editing Content
+
+For some provider on some file, you can edit document stored on your provider using its native application.
+
+For example, Google Drive provides Google docs, Pixlr... for its native documents type.
 Native documents stored on Google Drive can be edited using the native Google Drive application: Google docs, Pixlr, etc.
 
 ![]({{file name='7.3_LiveConnect_GoogleDrive.png'}} ?w=500,border=true)
 
-You can fill their metadata like any other metadata.
+### Browsing and Searching Content
 
-Content edit actions are tracked in the document history in the Nuxeo Platform and in Google Drive.
+Live Connect documents can be searched in the Nuxeo Platform like any other document: their content is indexed in the platform, as well as their metadata. They are displayed in search results like a Nuxeo document. Their thumbnail is provided by the provider (when feature is available).
 
-##### Browsing and Searching Content
-{{! multiexcerpt name='browsing-searching-content-google'}}
-Google Drive documents can be searched in the Nuxeo Platform like any other document: their content is indexed in the platform, as well as their metadata. They are displayed in search results like a Nuxeo document. Their thumbnail is provided by Google Drive.
-{{! /multiexcerpt}}
-
-#### Web UI
-
-##### Creating New Google Drive Documents
-On the document creation form, a Google Drive button enables you to browse your Google Drive content and select a document stored there.
-
-![]({{file name='LiveConnect-file-creation-webui.png'}} ?w=500,border=true)
-
-##### Browsing and Searching Content
-{{{multiexcerpt 'browsing-searching-content-google'}}}
+## Configuration
 
 ### Setting Up Live Connect for Google Drive
 
 **Step 1: Preparing your application accounts on the Google developer console**
 
-1.  Go to [https://console.developers.google.com/project](https://console.developers.google.com/project).
-2.  Click on **Create Project**.
+1.  Go to [https://console.developers.google.com/apis/dashboard](https://console.developers.google.com/apis/dashboard).
+2.  On the right of Google APIs logo, click on selector in order to create a new project
 3.  Enable Drive API: In **Library** > **Google Apps APIs** click on **Drive API** and then on the **Enable** button at the top of the page.
 4.  Edit your consent screen: In **API Manager** > **Credentials** click on **OAuth consent Screen**, fill the product name (the name of your application). You can also upload a logo, etc. This is what is displayed when the user authenticates through Google.
 5.  Create a new OAuth Client ID: In **APIs & auth** > **Credentials** click on **Create credentials** and select **OAuth client ID**.
@@ -477,49 +469,14 @@ The console redirects you to a page where you can see the client id and secret i
 **Step 2: Configuring the Nuxeo Platform**
 
 1.  Install the package [Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect) if it is not already installed.
-2.  In the Admin tab, go to **Cloud Services** > **Service providers**.
+2.  In the **Administration**, go to **Cloud Services** > **Service providers**.
 3.  In the **OAuth2 Service providers** section, click on the **Modify** button of the **googledrive** service provider.
 4.  Set the client id and client secret values with the one you got on the previous step.
 5.  Make sure the **Enabled** box is checked.
 6.  Save.
-7.  Now go to the **HOME** tab and click **Cloud Services** tab and click the **Connect to Google Drive** button or just create a new Google Drive document
+7.  Now just create a new Google Drive document
 
 You are ready to use it, just go in the workspace section and create a file object: you can use the Google Drive file picker
-
-
-## Live Connect For Dropbox
-
-### Functional Overview
-
-#### JSF UI
-
-##### Creating New Dropbox Documents
-
-On the document creation form, a Dropbox button enables you to browse your Dropbox content and select a document stored there.
-
-![]({{file name='8.2_LiveConnect_file_creation.png'}} ?w=500,h=366,border=true)
-
-This option is available for the following Nuxeo document types:
-
-- File
-- Picture
-- Video
-- Audio
-
-##### Browsing and Searching Content
-{{! multiexcerpt name='browsing-searching-content-dropbox'}}
-Dropbox documents can be searched in the Nuxeo Platform like any other document: their content is indexed in the platform, as well as their metadata. They are displayed in search results like a Nuxeo document. Their thumbnail is provided by Dropbox.
-{{! /multiexcerpt}}
-
-#### Web UI
-
-##### Creating New Dropbox Documents
-On the document creation form, a Dropbox button enables you to browse your Dropbox content and select a document stored there.
-
-![]({{file name='LiveConnect-file-creation-webui.png'}} ?w=500,border=true)
-
-##### Browsing and Searching Content
-{{{multiexcerpt 'browsing-searching-content-dropbox'}}}
 
 ### Setting Up Live Connect for Dropbox
 
@@ -552,46 +509,12 @@ To enable additional users on your application, go to **Settings** > **Developme
 **Step 2: Configuring the Nuxeo Platform**
 
 1.  Install the package Nuxeo Live Connect if it is not already installed.
-2.  In the **ADMIN** tab, go to **Cloud Services** > **Service providers**.
+2.  In the **Administration**, go to **Cloud Services** > **Service providers**.
 3.  In the **OAuth2 Service providers** section click on the **Modify** button of the **dropbox** service provider.
 4.  Paste the Dropbox App key in **ClientID**.
 5.  Paste the Dropbox App secret in **Client Secret**.
 6.  Make sure the **Enabled** box is checked.
-7.  Now go to the **HOME** tab, click on the **Cloud Services** tab and click on the **Connect to Dropbox** button or just create a new Dropbox document.
-
-## Live Connect For Box
-
-### Functional Overview
-
-#### JSF UI
-
-##### Creating New Box Documents
-
-On the document creation form, a Box button enables you to browse your Box content and select a document stored there.
-
-![]({{file name='8.2_LiveConnect_file_creation.png'}} ?w=500,h=366,border=true)
-
-This option is available for the following Nuxeo document types:
-
-- File
-- Picture
-- Video
-- Audio
-
-##### Browsing and Searching Content
-{{! multiexcerpt name='browsing-searching-content-box'}}
-Box documents can be searched in the Nuxeo Platform like any other document: their content is indexed in the platform, as well as their metadata. They are displayed in search results like a Nuxeo document. Their thumbnail is provided by Box.
-{{! /multiexcerpt}}
-
-#### Web UI
-
-##### Creating New Box Documents
-On the document creation form, a Box button enables you to browse your Box content and select a document stored there.
-
-![]({{file name='LiveConnect-file-creation-webui.png'}} ?w=500,border=true)
-
-##### Browsing and Searching Content
-{{{multiexcerpt 'browsing-searching-content-box'}}}
+7.  Now just create a new Dropbox document
 
 ### Setting Up Live Connect for Box
 
@@ -613,51 +536,17 @@ On the document creation form, a Box button enables you to browse your Box conte
 **Step 2: Configuring the Nuxeo Platform**
 
 1.  Install the package Nuxeo Live Connect if it is not already installed.
-2.  In the& **ADMIN** tab, go to **Cloud Services** > **Service providers**.
+2.  In the **Administration**, go to **Cloud Services** > **Service providers**.
 3.  In the **OAuth2 Service providers** section, click on the **Modify** button of the **box** service provider.
 4.  Paste the Box client_id in **ClientID**.
 5.  Paste the Box client_secret in **Client Secret**.
 6.  Make sure the **Enabled** box is checked.
 7.  Save.
-8.  Now go to the **HOME** tab, click on the **Cloud Services** tab and click on **Connect to Box** button or just create a new Box document.
-
-## Live Connect For OneDrive
-
-Live Connect for OneDrive is compatible with Nuxeo Platform 8.2+.
-
-### Functional Overview
-
-#### JSF UI
-
-##### Creating New OneDrive Documents
-
-On the document creation form, a OneDrive button enables you to browse your OneDrive content and select a document stored there.
-
-![]({{file name='8.2_LiveConnect_file_creation.png'}} ?w=500,h=366,border=true)
-
-This option is available for the following Nuxeo document types:
-
-- File
-- Picture
-- Video
-- Audio
-
-##### Browsing and Searching Content
-{{! multiexcerpt name='browsing-searching-content-onedrive'}}
-OneDrive documents can be searched in the Nuxeo Platform like any other document: their content is indexed in the platform, as well as their metadata. They are displayed in search results like a Nuxeo document. Their thumbnail is provided by OneDrive.
-{{! /multiexcerpt}}
-
-#### Web UI
-
-##### Creating New OneDrive Documents
-On the document creation form, a OneDrive button enables you to browse your OneDrive content and select a document stored there.
-
-![]({{file name='LiveConnect-file-creation-webui.png'}} ?w=500,border=true)
-
-##### Browsing and Searching Content
-{{{multiexcerpt 'browsing-searching-content-onedrive'}}}
+8.  Now just create a new Box document
 
 ### Setting Up Live Connect for OneDrive
+
+Live Connect for OneDrive is compatible with Nuxeo Platform 8.2+.
 
 **Step 1: Preparing your application accounts on the OneDrive App console**
 
@@ -673,7 +562,7 @@ On the document creation form, a OneDrive button enables you to browse your OneD
 **Step 2: Configuring the Nuxeo Platform**
 
 1.  Install the package Nuxeo Live Connect if it is not already installed.
-2.  In the **ADMIN** tab, go to **Cloud Services** > **Service providers**.
+2.  In the **Administration**, go to **Cloud Services** > **Service providers**.
 3.  In the **OAuth2 Service providers** section, click on the **Modify** button of the **onedrive** service provider.
 4.  Paste the OneDrive client_id in **ClientID**.
 5.  Paste the OneDrive client_secret in **Client Secret**.
@@ -684,7 +573,7 @@ On the document creation form, a OneDrive button enables you to browse your OneD
     {{/callout}}
 6.  Make sure the **Enabled** box is checked.
 7.  Save.
-8.  Now go to the **HOME** tab, click on the **Cloud Services** tab and click on the **Connect to OneDrive** button or just create a new OneDrive document.
+8.  Now just create a new OneDrive document
 
 ### Setting Up Live Connect for OneDrive for Business
 
@@ -700,21 +589,36 @@ For OneDrive for Business follow steps [here](https://dev.onedrive.com/app-regis
     - SIGN-ON URL: `http://nuxeo-server:8080/nuxeo/site/oauth2/onedrive/callback`
     - APP ID URI: `http://nuxeo-server:8080/nuxeo/site/oauth2/onedrive`
 
-  While setting your application **delegated permissions**, you need to check `Read user profiles`, `Read and write user files` and `Read and write items in all site collections` boxes for an Office 365 SharePoint Online application.
+  If you don't get the pop-up, you need to add a new `Web Platform` under Platform.
+
+  While setting your application **delegated permissions**, you need to check:
+  - `Files.Read`
+  - `Files.Read.All`
+  - `Files.ReadWrite`
+  - `Files.ReadWrite.All`
+  - `Notes.ReadWrite`
+  - `Notes.ReadWrite.All`
+  - `Sites.Read.All`
+  - `Sites.ReadWrite.All`
+  - `User.Read`
+  - `User.ReadBasic.All`
+  - `User.ReadWrite`
+  - `User.Read.All`
+  - `User.ReadWrite.All`
   {{/callout}}
 
 **Step 2: Configuring the Nuxeo Platform**
 
 1.  Install the package Nuxeo Live Connect if it is not already installed.
-2.  In the **ADMIN** tab, go to **Cloud Services** > **Service providers**.
+2.  In the **Administration**, go to **Cloud Services** > **Service providers**.
 3.  In the **OAuth2 Service providers** section click on the **Modify** button of the **onedrive** service provider.
 4.  Paste the OneDrive client_id in **ClientID**.
 5.  Paste the OneDrive client_secret in **Client Secret**.
 6.  Replace Authorization Server URL by `https://login.microsoftonline.com/common/oauth2/authorize?response_type=code`
-7.  Replace Token Server URL by adapting the tenant (`nuxeofr` in the URL provided bellow) in **resource** parameter to your case: `https://login.microsoftonline.com/common/oauth2/token?resource=https%3A%2F%2Fnuxeofr-my.sharepoint.com%2F`
+7.  Replace Token Server URL by adapting the tenant (`nuxeo` in the URL provided bellow) in **resource** parameter to your case: `https://login.microsoftonline.com/common/oauth2/token?resource=https%3A%2F%2Fnuxeo-my.sharepoint.com%2F`
 8.  Make sure the **Enabled** box is checked.
 9.  Save.
-10.  Now go to the **HOME** tab, click on the **Cloud Services** tab and click on the **Connect to OneDrive** button or just create a new OneDrive document.
+10.  Now just create a new OneDrive document
 
 ## Advanced Live Connect Configuration
 
