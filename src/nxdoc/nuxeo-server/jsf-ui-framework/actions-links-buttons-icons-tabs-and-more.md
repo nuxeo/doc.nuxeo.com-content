@@ -2,7 +2,7 @@
 title: 'Actions (Links, Buttons, Icons, Tabs and More)'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-14'
     status: ok
 labels:
     - content-review-lts2016
@@ -11,7 +11,7 @@ labels:
     - atchertchian
     - home
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '16089312'
     ajs-parent-page-title: JSF UI Framework
@@ -214,7 +214,7 @@ history:
 ---
 {{! excerpt}}
 
-Actions usually stand for commands that can be triggered via user interface interaction (buttons, links, etc...). Usually, it will describe a link and other information that may be used to manage its display (the link label and an icon for instance). By extension, actions are also used for conditional rendering and sorting of page fragments (tabs, summary widgets,...).
+In Nuxeo, actions refer to commands that can be triggered via user interface interactions (buttons, links, etc...). Usually, it will describe a link and other information that may be used to manage its display (the link label and an icon for instance). By extension, actions are also used for conditional rendering and sorting of page fragments (tabs, summary widgets,...).
 
 This chapter explains how to define actions and display them in pages.
 
