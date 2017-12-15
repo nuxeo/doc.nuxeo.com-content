@@ -2,7 +2,7 @@
 title: Add a News Content View on Workspaces
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-14'
     status: ok
 labels:
     - content-review-lts2016
@@ -11,7 +11,7 @@ labels:
     - workspace
     - content-view
     - atchertchian
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4689520'
