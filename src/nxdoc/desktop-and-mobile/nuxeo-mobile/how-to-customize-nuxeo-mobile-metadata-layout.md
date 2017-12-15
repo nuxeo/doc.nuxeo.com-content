@@ -2,7 +2,7 @@
 title: 'HOWTO: Customize Nuxeo Mobile Metadata Layout'
 review:
     comment: ''
-    date: '2017-04-10'
+    date: '2017-12-15'
     status: ok
 details:
     howto:
@@ -14,7 +14,7 @@ labels:
     - nuxeo-mobile
     - yachour
     - howto
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 
 ---
