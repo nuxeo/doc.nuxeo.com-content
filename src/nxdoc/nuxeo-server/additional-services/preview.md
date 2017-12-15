@@ -7,7 +7,7 @@ review:
 labels:
     - lts2016-ok
     - preview
-    - gbarata
+    - mnixo
     - link-update
     - preview-component
     - multiexcerpt
