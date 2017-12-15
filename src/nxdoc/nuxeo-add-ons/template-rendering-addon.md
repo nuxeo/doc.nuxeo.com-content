@@ -1,13 +1,13 @@
 ---
 title: Template Rendering Addon
 review:
-    comment: ''
-    date: '2017-01-18'
-    status: ok
+    comment: 'This page needs to be updated to cover the addon''s migration to Web UI and the new simplified process to render documents.'
+    date: '2017-12-14'
+    status: requiresUpdates
 labels:
     - lts2016-ok
     - template-rendering
-    - grenard
+    - gbarata
     - document-template
     - template-rendering-addon-component
     - multiexcerpt-include
