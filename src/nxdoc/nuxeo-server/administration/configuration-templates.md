@@ -2,14 +2,14 @@
 title: Configuration Templates
 review:
     comment: ''
-    date: '2017-07-17'
+    date: '2017-12-15'
     status: ok
 labels:
     - content-review-lts2016
     - templates
     - configuration
     - fdavid
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
