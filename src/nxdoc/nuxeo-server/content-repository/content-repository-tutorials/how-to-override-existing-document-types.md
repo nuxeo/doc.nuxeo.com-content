@@ -16,7 +16,7 @@ labels:
     - document-type
     - gcarlin
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950287'
     ajs-parent-page-title: Content Repository
@@ -323,18 +323,23 @@ The Alert tab is currently only available on JSF UI. It is planned to be integra
 
 You can also browse the [contributions to the Type extension](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype) for more document types.
 
-{{/callout}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
+{{/callout}}
 
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Popular How-Tos'}}
 - [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}})
 - [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
 - [How-To Index]({{page page='how-to-index'}})
-
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
-
+{{/panel}}
+</div>
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 - [Documents in Nuxeo Studio]({{page space='studio' page='documents'}})
 - [Content Repository]({{page page='content-repository'}})
 - [Available Facets]({{page page='available-facets'}})
 - [Lifecycle]({{page space='studio' page='life-cycle'}})
 - [Schemas]({{page space='studio' page='schemas'}})
-
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>
