@@ -7,12 +7,12 @@ review:
 labels:
     - lts2016-ok
     - import
-    - ajusto
+    - gcarlin
     - howto
     - document-type
     - file-upload-component
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '19235627'
     ajs-parent-page-title: File Manager
