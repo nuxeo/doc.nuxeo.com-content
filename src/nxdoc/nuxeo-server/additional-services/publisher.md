@@ -2,7 +2,7 @@
 title: Publisher
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
@@ -14,7 +14,7 @@ labels:
     - publishing-component
     - multiexcerpt-include
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -96,6 +96,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 ## Functional Overview
 
 {{{multiexcerpt 'functional-overview' page='USERDOC:Publishing Content'}}}
@@ -125,7 +127,7 @@ The `PublisherService` deals with three interfaces:
 The `PublisherService` mainly works with three concepts:
 
 *   **factory**: the class which is used to actually create the published document. It also manages the approval / rejection workflow on published documents.
-*   **tree**: a `PublicationTree` instance associated to a name; for instance there is a `SectionPublicationTree` which will publish in Sections, a `LocalFSTree` to publish on the filesystem, etc.
+*   **tree**: a `PublicationTree` instance associated to a name; for instance there is a `SectionPublicationTree` which will publish in Sections.
 *   **tree instance**: an actual publication tree where one defines the factory to use, the underlying tree to use, its name / title, and some parameters described below.
 
 ### Configuring Local Sections Publishing

@@ -2,7 +2,7 @@
 title: Publishing Content
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2017-12-15'
     status: ok
 labels:
     - section
@@ -11,7 +11,7 @@ labels:
     - excerpt
     - excerpt-include
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '11043048'
@@ -152,7 +152,6 @@ The main difference with workspaces is the fact that documents can't be edited i
 
 *   [Relations actions]({{page version='' space='userdoc' page='editing-content'}}#relations)
 *   [Preview]({{page space='USERDOC' page='Preview'}})
-*   [Tagging]({{page space='USERDOC' page='Tags'}})
 *   [Alerts]({{page space='USERDOC' page='Alerts'}})
 
 ### Publishing Documents
