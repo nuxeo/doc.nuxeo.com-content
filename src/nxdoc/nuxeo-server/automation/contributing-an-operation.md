@@ -2,7 +2,7 @@
 title: Contributing an Operation
 review:
     comment: ''
-    date: '2017-05-04'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - automation
     - fdavid
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
@@ -324,7 +324,7 @@ To implement an operation, you need a Java class with the `@Operation` annotatio
 
 You can have multiple executable methods; one method for each type of input/output object supported by an operation. The correct operation method will automatically be selected if the method argument matches the current input object and the return type matches the input required by the next operation in an automation chain.
 
-The `@OperationMethod` annotation also provides an optional priority attribute that can be used to specify which method is preferred over the other matching methods. This situation (having multiple methods that match an execution) can happen if the input and output types are not strictly matched. For example if the input of a method is a DocumentModel object and the input of another method is a DocumentRef object then both methods have the same input signature for the automation framework because DocumentModel and DocumentRef are objects of the same kind - they represent a Nuxeo Document. When you need to treat different Java objects as the same type of input (or output) you must create a type adapter (see the interface `org.nuxeo.ecm.automation.TypeAdapter`) which knows how to convert a given object to another type. Without type adapters, treating different Java objects as the same type of object is not possible.
+The `@OperationMethod` annotation also provides an optional priority attribute that can be used to specify which method is preferred over the other matching methods. This situation (having multiple methods that match an execution) can happen if the input and output types are not strictly matched. For example if the input of a method is a DocumentModel object and the input of another method is a DocumentRef object then both methods have the same input signature for the automation framework because DocumentModel and DocumentRef are objects of the same kind - they represent a Nuxeo Document. When you need to treat different Java objects as the same type of input (or output) you must create a type adapter (see the interface [TypeAdapter](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/automation/TypeAdapter.html)) which knows how to convert a given object to another type. Without type adapters, treating different Java objects as the same type of object is not possible.
 
 Operations can include parameterizable variables so that when a user defines an operation chain, they can define values that will be injected in the operation parameters. To declare parameters you must use the `@Param` annotation.
 

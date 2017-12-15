@@ -2,7 +2,7 @@
 title: Automation
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - fdavid
     - excerpt
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '31033314'
     ajs-parent-page-title: Nuxeo Server
