@@ -3,7 +3,7 @@ title: Standard High Availability Nuxeo Cluster Architecture
 description: This page details standard architecture options to deploy a Nuxeo cluster.
 review:
     comment: ''
-    date: '2017-06-06'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - bchauvin
     - cluster
     - architecture
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
