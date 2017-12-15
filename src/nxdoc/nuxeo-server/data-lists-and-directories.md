@@ -2,7 +2,7 @@
 title: Data Lists and Directories
 review:
     comment: ''
-    date: '2016-12-09'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
@@ -12,7 +12,7 @@ labels:
     - vocabulary
     - tmartins
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31033314'
@@ -530,7 +530,7 @@ The dynamic attribute strategy is used when a potentially multi-valued attribute
 
 ```
 
-The value contained in `dynamicAttributeId` looks like `ldap:///ou=groups,dc=example,dc=com??subtree?(cn=sub*)` and will be resolved by dynamical queries to get all values. 
+The value contained in `dynamicAttributeId` looks like `ldap:///ou=groups,dc=example,dc=com??subtree?(cn=sub*)` and will be resolved by dynamical queries to get all values.
 
 The `forceDnConsistencyCheck` attribute will check that the value got through the reference belongs to the target directory. Otherwise, the value will be ignored. Use this check when you are not sure of the validity of the distinguished name.
 
