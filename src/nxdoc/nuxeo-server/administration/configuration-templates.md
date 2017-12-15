@@ -2,14 +2,14 @@
 title: Configuration Templates
 review:
     comment: ''
-    date: '2017-07-17'
+    date: '2017-12-15'
     status: ok
 labels:
     - content-review-lts2016
     - templates
     - configuration
     - fdavid
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
@@ -139,7 +139,6 @@ Here are the templates provided by default:
 
 *   `common`: Common template used by other templates
 *   [`default`]({{page page='connecting-nuxeo-to-the-database'}}): default Nuxeo configuration template for test purpose
-*   `sql`: Configuration template for SQL directories (since 9.2)
 *   [`https`]({{page page='http-and-https-reverse-proxy-configuration'}}): (not recommended) Template to make the server listen to port 443 (HTTPS)
 *   [`postgresql`]({{page page='postgresql'}}): PostgreSQL configuration template
 *   `postgresql-quartz-cluster`
