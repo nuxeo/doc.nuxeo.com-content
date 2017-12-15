@@ -2,7 +2,7 @@
 title: .NET Client
 review:
     comment: ''
-    date: '2016-12-12'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
@@ -13,7 +13,7 @@ labels:
     - nuxeo-dotnet-client
     - netcore
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16091040'
@@ -202,7 +202,7 @@ Install-Package NuxeoClient –Pre
 
 ### Developing for .NET Core, without Visual Studio
 
-You will need to have .NET Core available in your system in order to run the client. Installation instructions are available for [Linux](https://www.microsoft.com/net/core#linuxredhat), [macOS](https://www.microsoft.com/net/core#macos) and [Windows](https://www.microsoft.com/net/core#windowscmd).
+You will need to have .NET Core available in your system in order to run the client. Installation instructions are available for [Linux](https://www.microsoft.com/net/learn/get-started/linuxredhat), [macOS](https://www.microsoft.com/net/learn/get-started/macos) and [Windows](https://www.microsoft.com/net/learn/get-started/windows).
 
 1.  Add the "NuxeoClient" dependency to your *project.json* file, which should look something like this:
 
@@ -427,8 +427,7 @@ Nuxeo .NET Client's source code is available on [GitHub](https://github.com/nuxe
 
 ### Developing for .NET Core
 
-1.  Install .NET Core in your system. Installation instructions are available for
-[Linux](https://www.microsoft.com/net/core#linuxredhat), [macOS](https://www.microsoft.com/net/core#macos) and [Windows](https://www.microsoft.com/net/core#windowscmd).
+1.  Install .NET Core in your system. Installation instructions are available for [Linux](https://www.microsoft.com/net/learn/get-started/linuxredhat), [macOS](https://www.microsoft.com/net/learn/get-started/macos) and [Windows](https://www.microsoft.com/net/learn/get-started/windows).
 2.  Add the following feeds to NuGet config file:
     *   [https://www.myget.org/F/aspnetvnext/](https://www.myget.org/F/aspnetvnext/)
     *   [https://www.nuget.org/api/v2/](https://www.nuget.org/api/v2/)
