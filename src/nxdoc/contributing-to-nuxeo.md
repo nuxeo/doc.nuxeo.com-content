@@ -5,7 +5,7 @@ review:
     date: '2017-12-11'
     status: ok
 labels:
-    - lts2016-ok
+    - content-review-lts2016
     - git
     - akervern
     - link-update
