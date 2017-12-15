@@ -187,9 +187,6 @@ curl -i -u login:password -F package=@/path/to/MP.zip "https://connect.nuxeo.com
 
 # Delete a package
 curl -i -u login:password -X DELETE "https://connect.nuxeo.com/nuxeo/site/marketplace/delete/PACKAGE_ID"
-
-# List package IDs (not yet available; owner, client or project parameter will be required)
-curl -i -u login:password "https://connect.nuxeo.com/nuxeo/site/marketplace/list?batch=true&client=CLIENT_ID&project=PROJECT_ID&owner=OWNER_ID"
 ```
 
 {{/panel}}
