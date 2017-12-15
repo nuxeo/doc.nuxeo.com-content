@@ -2,7 +2,7 @@
 title: Develop with Nuxeo Platform
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-12-15'
     status: ok
 details:
     howto:
@@ -11,12 +11,11 @@ details:
         tool: 'Nuxeo CLI, Nuxeo Studio'
         topics: 'Automation, Layout'
 labels:
-    - lts2016-ok
     - howto
     - nuxeo-cli
     - bchauvin
     - lts2016-ok
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 version_override:
     LTS 2016: 810/nxdoc/getting-started-with-nuxeo-ide
