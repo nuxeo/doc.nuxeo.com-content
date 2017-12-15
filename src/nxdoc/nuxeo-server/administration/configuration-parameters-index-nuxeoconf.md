@@ -5,7 +5,7 @@ review:
     date: '2017-12-11'
     status: ok
 labels:
-    - lts2016-ok
+    - content-review-lts2016
     - nuxeo_conf
     - properties
     - templates
@@ -25,6 +25,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/QQA7'
     source_link: /pages/viewpage.action?pageId=3866689
 tree_item_index: 100
+toc: true
 version_override:
     LTS 2015: 710/admindoc/configuration-parameters-index-nuxeoconf
     '6.0': 60/admindoc/configuration-parameters-index-nuxeoconf
@@ -1089,7 +1090,9 @@ Wordpad is fine, Notepad++ and SciTE are good text editors, there are lots of [o
 
 Existing configuration parameters are listed in the index section below.
 
-## Admin Center / Setup Tab (Only with Nuxeo JSF UI){{> anchor 'setup-admincenter'}}
+## Admin Center / Setup Tab {{> anchor 'setup-admincenter'}}
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 Administrators can also change the `nuxeo.conf` configuration parameters from the Admin center.
 
