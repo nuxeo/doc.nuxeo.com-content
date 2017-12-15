@@ -2,14 +2,14 @@
 title: Tagging
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - tags
     - tagging-component
     - fdavid
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -120,7 +120,7 @@ The tags are either categorizing the content of the document (labels like "docum
 
 {{! excerpt}}
 
-The tag service uses two important concepts: a **tag** object, and a **tagging** action. Both are represented as Nuxeo documents.
+The tag service uses a [facet]({{page page='available-facets'}}) to represent tags as a document property.
 
 {{! /excerpt}}
 
@@ -131,6 +131,11 @@ A tag holds a label that does not contain any space ("documentmanagement", "weba
 {{{multiexcerpt 'functional-overview' page='USERDOC:Tags'}}}
 
 ## Tag Service Architecture
+
+ {{#> callout type='warning' }}
+ The following paragraph describes the previous tag service architecture that is
+ deprecated since 9.3. 
+ {{/callout}}
 
 The following document types are defined by the tag service.
 
@@ -149,7 +154,6 @@ The tag service allows you to:
 *   Tag and untag a document
 *   Get all the tags for a document
 *   Get all the documents for a tag
-*   Get the tag cloud for a set of documents
 *   Get suggested tags for a given tag prefix
 
 ## Tags, Versions and Proxies
@@ -161,11 +165,11 @@ The tags are duplicated:
 
 When restoring a version, the tags on the live document are also restored from the ones on the version.
 
-Tags can be added and removed independently on live documents, versions and proxies: a tag added on a live document won't be added on all its versions, but only on the versions that will be created after. The same behavior is applied for proxies.
+Tags can be added and removed independently on live documents and versions: a tag added on a live document won't be added on all its versions, but only on the versions that will be created after. 
 
 The logic for the above is in the  [`TaggedVersionListener`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/tag/TaggedVersionListener.html) listener.
 
-### Disabling Tags on Versions and Proxies
+### Disabling Tags on Versions
 
 To disable the duplication of tags on versions and proxies, the `TaggedVersionListener` may be disabled with the following contribution:
 
