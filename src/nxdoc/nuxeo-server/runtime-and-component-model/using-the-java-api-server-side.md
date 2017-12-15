@@ -2,13 +2,13 @@
 title: Using the Java API Server-Side
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - runtimecomponent
     - kleturc
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950284'
@@ -90,7 +90,7 @@ This page explains how to use the Nuxeo Java API.
 
 The Nuxeo Platform contains a built-in notion of service. Services are Java interfaces exposed and implemented by a Component.
 
-From within a Nuxeo Runtime aware context, you can access a service locally (in the same JVM) by simply looking up its interface:
+From within a Nuxeo Runtime aware context, you can access a service locally (in the same JVM) by simply looking up its interface with `Framework#getService(T)`:
 
 ```
 RelationManager rm = Framework.getService(RelationManager.class)
