@@ -14,7 +14,7 @@ labels:
     - howto
     - lts2016-ok
     - content-view
-    - atchertchian
+    - atchertchian-todispatch
     - automation
     - studio
     - excerpt

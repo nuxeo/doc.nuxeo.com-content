@@ -18,7 +18,7 @@ labels:
     - ajax
     - jsf
     - seam-jsf-component
-    - atchertchian
+    - atchertchian-todispatch
     - excerpt
     - content-review-lts2017
 toc: true

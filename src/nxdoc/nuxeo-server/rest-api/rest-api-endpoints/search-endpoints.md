@@ -15,7 +15,7 @@ labels:
     - howto
     - elasticsearch
     - search-tab-component
-    - atchertchian
+    - atchertchian-todispatch
     - saved-search
     - query-pageprovider-component
     - university

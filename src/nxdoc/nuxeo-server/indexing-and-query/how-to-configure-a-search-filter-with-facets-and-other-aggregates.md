@@ -15,7 +15,7 @@ labels:
     - lts2016-ok
     - elasticsearch
     - content-view
-    - atchertchian
+    - atchertchian-todispatch
     - howto
     - aggregate
     - query-pageprovider-component
