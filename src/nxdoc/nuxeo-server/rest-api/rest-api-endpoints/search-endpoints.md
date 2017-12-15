@@ -2,7 +2,7 @@
 title: Search Resource Endpoints
 review:
     comment: ''
-    date: '2017-01-06'
+    date: '2017-12-13'
     status: ok
 details:
     howto:
@@ -15,12 +15,12 @@ labels:
     - howto
     - elasticsearch
     - search-tab-component
-    - atchertchian
+    - gbarata
     - saved-search
     - query-pageprovider-component
     - university
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'
@@ -261,6 +261,18 @@ Searches can be parameterized with execution parameters which can be passed to a
         <td colspan="1">string</td>
         <td colspan="1">Sort order</td>
         <td colspan="1">Examples: `sortOrder="DESC"` or `sortOrder="ASC"`</td>
+      </tr>
+      <tr>
+        <td colspan="1">`offset`</td>
+        <td colspan="1">number</td>
+        <td colspan="1">Current page offset.</td>
+        <td colspan="1">0</td>
+      </tr>
+      <tr>
+        <td colspan="1">`highlight`</td>
+        <td colspan="1">string</td>
+        <td colspan="1">List of fields to highlight.</td>
+        <td colspan="1">Example: `highlight="dc:title.fulltext,dc:description.fulltext"`. Check [Elasticsearch Highlights]({{page page='elasticsearch-highlights'}}) for more details.</td>
       </tr>
       <tr>
         <td colspan="1">`queryParams`</td>
@@ -1061,6 +1073,7 @@ GET http://NUXEO_SERVER/nuxeo/api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362
 - [REST API Entity Types]({{page page='rest-api-entity-types'}})
 - [Page Providers]({{page page='page-providers'}})
 - [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+- [Elasticsearch Highlights]({{page page='elasticsearch-highlights'}})
 
 {{/panel}}</div><div class="column medium-6">
 
