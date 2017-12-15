@@ -6,7 +6,7 @@ toc: true
 review:
     date: '2017-12-11'
     status: 'requiresUpdates'
-    comment: 'Requires update about Studio synchronization'
+    comment: 'This page requires an update on the Studio synchronization section.'
 labels:
     - content-review-lts2017
     - nuxeo-cli

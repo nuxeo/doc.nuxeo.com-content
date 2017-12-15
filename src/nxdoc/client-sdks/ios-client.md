@@ -1,9 +1,9 @@
 ---
 title: iOS Client
 review:
-    comment: 'Requires a complete review to align on latest iOS version'
     date: '2017-12-11'
     status: requiresUpdates
+    comment: 'This page will be reviewed to be aligned on the latest iOS version.'
 labels:
     - lts2016-ok
     - ios
