@@ -149,6 +149,10 @@ The class [ShibbolethGroupComputer](http://community.nuxeo.com/api/nuxeo/9.10/ja
 
 The Shibboleth authentication module is available [as a packaged Nuxeo Addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication) on the Nuxeo marketplace. It can be installed with [nuxeoctl command line]({{page page='installing-a-new-package-on-your-instance'}}#installing-a-package-using-the-nuxeoctl-script) or [from the Update Center]({{page page='installing-a-new-package-on-your-instance'}}#installing-a-package-from-the-admin-tab).
 
+#### Shibboleth groups tab
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 After you installed the package, a new **Shib Goups** tab is available in the **Admin** > **Users & Groups** tab.
 
 ![]({{file name='shib-groups-tab.png'}} ?w=600,border=true)
