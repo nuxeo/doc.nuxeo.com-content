@@ -2,7 +2,7 @@
 title: How to Customize the Drive Metadata Edit Layouts
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-15'
     status: ok
 details:
     howto:
@@ -16,7 +16,7 @@ labels:
     - nuxeo-drive
     - yachour
     - layout
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '14257229'
     ajs-parent-page-title: Nuxeo Drive
