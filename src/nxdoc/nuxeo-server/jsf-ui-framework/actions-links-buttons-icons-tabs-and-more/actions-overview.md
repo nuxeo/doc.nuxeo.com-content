@@ -2,7 +2,7 @@
 title: Actions Overview
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-15'
     status: ok
 labels:
     - content-review-lts2016
@@ -10,7 +10,7 @@ labels:
     - atchertchian
     - actions-filters-component
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950289'
@@ -114,7 +114,7 @@ history:
 ---
 {{! excerpt}}
 
-In this chapter, an action will stand for any kind of command that can be triggered via user interface interaction. In other words, it will describe a link and other information that may be used to manage its display (the link label, an icon, security information for instance).
+In this section, `"action"` refers to any kind of command that is triggered via user interface interactions. In other words, it will describe a link or any other information that may be used to manage its display (the link's label, an icon, or security information for example).
 
 {{! /excerpt}}
 
@@ -124,14 +124,16 @@ In this chapter, an action will stand for any kind of command that can be trigge
 
 Custom actions can be contributed to the actions service, using its extension point. Their description is then available through this service to control where and how they will be displayed.
 
-An action can be registered using the following example extension:
+An action can be registered using the following example contribution:
 
 ```html/xml
 <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
 
-  <action id="newWorkspace" label="command.create.workspace"
-	link="#{documentActions.createDocument('Workspace')}"
-    type="link" icon="/icons/action_add.gif">
+  <action id="newWorkspace"
+    label="command.create.workspace"
+    link="#{documentActions.createDocument('Workspace')}"
+    type="link"
+    icon="/icons/action_add.gif">
     <category>SUBVIEW_UPPER_LIST</category>
     <filter id="newWorkspace">
       <rule grant="true">
@@ -161,9 +163,9 @@ Other elements can be used to define an action. They are listed here but you can
 *   `confirm`: an optional JavaScript confirmation string that can be triggered when executing the command.
 *   `order`: an optional integer used to sort actions within the same category.
 *   `enabled`: a boolean indicating whether the action is currently active. This can be used to disable/hide existing actions when customizing the application.
-*   `immediate`: an optional boolean to execute action immediately, without validating the form.
+*   `immediate`: an optional boolean to execute action immediately, without validating the form (useful for "Cancel" buttons use cases).
 *   `accessKey`: an optional key that can be used for keyboard navigation.
-*   `properties`: a tag that allows to attach any kind of named string, list or map-like property to the action. Most of the above elements are also looked up in properties (label, icon, link, immediate, accessKey). Depending on the type of the action, some custom properties may be available. Properties usually accept EL expressions for dynamic resolution of values. Please refer to the documentation at [http://showcase.nuxeo.com/nuxeo/layoutDemo/linkAction](http://showcase.nuxeo.com/nuxeo/layoutDemo/linkAction) for instance.
+*   `properties`: a tag that allows to attach any kind of named string, list or map-like property to the action. Most of the above elements are also looked up in properties (label, icon, link, immediate, accessKey). Depending on the type of the action, some custom properties may be available. Properties usually accept EL expressions for dynamic resolution of values. Please refer to the documentation at [http://showcase.nuxeo.com/nuxeo/layoutDemo/linkAction](http://showcase.nuxeo.com/nuxeo/layoutDemo/linkAction), for instance.
 
 ## Redefining an Action
 
@@ -196,7 +198,10 @@ Here is a small sample to add a custom confirmation message on an action:
 ```xml
 <extension point="actions" target="org.nuxeo.ecm.platform.actions.ActionService">
 
-  <action id="JenkinsReportSendMail" label="Send Mail" order="0" type="link"
+  <action id="JenkinsReportSendMail"
+    label="Send Mail"
+    order="0"
+    type="link"
     icon="/img/jenkins_send_email.png"
     link="#{operationActionBean.doOperation('JenkinsReportSendMail')}">
     <category>DOCUMENT_UPPER_ACTION</category>
@@ -230,8 +235,12 @@ So tab actions are using the type "[Rest document link](http://showcase.nuxeo.co
 ```xml
 <extension target="org.nuxeo.ecm.platform.actions.ActionService" point="actions">
 
-  <action id="TAB_EDIT" link="/incl/tabs/document_edit.xhtml" order="20"
-    label="action.view.modification" icon="/icons/file.gif" accessKey="e"
+  <action id="TAB_EDIT"
+    link="/incl/tabs/document_edit.xhtml"
+    order="20"
+    label="action.view.modification"
+    icon="/icons/file.gif"
+    accessKey="e"
     type="rest_document_link">
     <category>VIEW_ACTION_LIST</category>
     <filter-id>edit</filter-id>
@@ -244,7 +253,7 @@ So tab actions are using the type "[Rest document link](http://showcase.nuxeo.co
 </extension>
 ```
 
-This action is showing the "Edit" tab on documents. It displays the content of the "/incl/tabs/document_edit.xhtml" template, defines an access key, and specifies that it supports Ajax (in case action is displayed in an ajaxified context).
+This action is showing the "Edit" tab on documents. It displays the content of the ``/incl/tabs/document_edit.xhtml`` template, defines an access key, and specifies that it supports Ajax (in case action is displayed in an ajaxified context).
 
 ### Displaying a Permalink inside a Fancybox
 
@@ -265,7 +274,13 @@ Here is another sample that displays the document permanent link inside a FancyB
 </extension>
 ```
 
-The FancyBox content is defined by "/incl/permalink_box.xhtml". Note that if the fancybox content holds a form, you must make sure that the action is not itself already placed within a bigger form (as nested forms are not supported).
+The FancyBox content is defined by ``/incl/permalink_box.xhtml``.
+
+{{#> callout type='warning'}}
+
+Note that if the fancybox content holds a form, you must make sure that the action is not itself already placed within a bigger form (as nested forms are not supported).
+
+{{/callout}}
 
 &nbsp;
 
