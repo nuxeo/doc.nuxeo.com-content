@@ -2,7 +2,7 @@
 title: Content Automation Concepts
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
@@ -12,7 +12,7 @@ labels:
     - todo
     - multiexcerpt
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
@@ -615,7 +615,7 @@ The Automation module provides several operations to manage the context, under t
 *   **Set Context Variable from Input** (name): Allows to set a variable in the context from what comes in the operation input.
 *   All the "**Restore** ..." operations: Allow to restore in input of the next operation a document, a blob, a list of document, or a list of blobs.
 
-Note that the category of operations "Push & Pop" provides some facilitators for doing the same as with the Execution Context category. It just prevents you from naming the variables, as you play with a stack (you can push / pull / pop on, from and out of the stack). Here there is no specific recommendation, this is just a matter of style! :smile:
+Note that the category of operations "Push & Pop" provides some facilitators for doing the same as with the Execution Context category. It just prevents you from naming the variables, as you play with a stack (you can push / pull / pop on, from and out of the stack). Here there is no specific recommendation, this is just a matter of style!
 
 An example of a situation where you would need to use the context is when you want to implement inheritance. Let's say you want every document to inherit the `dc:source` field value from the parent workspace. You would implement the following chain:
 
@@ -732,10 +732,10 @@ An algorithm equivalent to the chain above would be something like:
 //Note: The following code doesn't match any valid syntax, it is here to illustrate the algorithm logic behind the automation chain "chain8".
 DocumentList list = Nuxeo.query("SELECT * FROM File");
 For (DocumentModel doc:list){
-doc.updatePropertyValue("dc:description","Showing native looping");
+    doc.updatePropertyValue("dc:description","Showing native looping");
 }
 For (DocumentModel doc:list){
-doc.lock("Administrator")
+    doc.lock("Administrator")
 }
 ```
 
@@ -773,16 +773,16 @@ An algorithm equivalent to executing chain would be:
 //Note: The following code doesn't match any valid syntax, it is here to illustrate the algorithm logic behind the automation chain "chain10".
 DocumentList list = Nuxeo.query("SELECT * FROM File");
 For (DocumentModel doc:list){
-sourceValue= doc.getPropertyValue("dc:source");
-doc.updatePropertyValue("dc:description",sourceValue);
-doc.lock;
+    sourceValue= doc.getPropertyValue("dc:source");
+    doc.updatePropertyValue("dc:description",sourceValue);
+    doc.lock;
 }
 // We see that there is only one loop, compared to native looping.
 ```
 
 #### Loop per Page
 
-It is possible to query documents in a paginated style using the **Fetch** > **PageProvider** operation. You can subsequently use the **Execution Flow** > **Run For Each Page** operation to execute a chain as many times as there are pages in the result set. This chain will receive as input a documentList corresponding to the content of each page of the query result set. (TODO: illustrate with an example). This is particularly useful when the number of documents in the query result prevents you from loading all the results in memory, otherwise firing a memory stack overflow.
+It is possible to query documents in a paginated style using the **Fetch** > **PageProvider** operation. You can subsequently use the **Execution Flow** > **Run For Each Page** operation to execute a chain as many times as there are pages in the result set. This chain will receive as input a documentList corresponding to the content of each page of the query result set. This is particularly useful when the number of documents in the query result prevents you from loading all the results in memory, otherwise firing a memory stack overflow.
 
 ### Transaction Management
 
@@ -797,7 +797,7 @@ The one used by default depends on the context of your Automation call:
 *   Workflow: Sometimes the connected user, sometime system (depending on where in the workflow).
 *   Event Handler: The user whose action fired the event.
 
-If inside a chain you need to execute some operations under the identity of another principal, you can use the **Users & Groups > Login As** and **Users & Groups > Logout** operations. All operations in between will be executed under the session of the user id provided as a parameter for Login As (System if none is provided). TODO: explain limitations in terms of documents valid sessions and context.
+If inside a chain you need to execute some operations under the identity of another principal, you can use the **Users & Groups > Login As** and **Users & Groups > Logout** operations. All operations in between will be executed under the session of the user id provided as a parameter for Login As (System if none is provided).
 
 ## Main Automation Categories Available
 

@@ -2,14 +2,14 @@
 title: Automation Chain
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - automation
     - fdavid
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '18451738'
     ajs-parent-page-title: Automation

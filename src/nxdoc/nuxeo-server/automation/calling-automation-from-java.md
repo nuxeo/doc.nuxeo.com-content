@@ -2,14 +2,14 @@
 title: Calling Automation from Java
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - automation
     - fdavid
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '18451738'
@@ -76,7 +76,7 @@ history:
         version: '1'
 
 ---
-On server side, [AutomationService](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/automation/AutomationService.html) can be used to:
+On server side, [AutomationService](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/automation/AutomationService.html) can be used to:
 
 *   Run a contributed chain with chain/operations;
 *   Run a runtime chain created on the fly;
@@ -84,7 +84,7 @@ On server side, [AutomationService](http://community.nuxeo.com/api/nuxeo/5.8/jav
 
 {{! excerpt}}
 
-The Automation service provides chain(s)/operation(s) parameters setting and [OperationContext](http://community.nuxeo.com/api/nuxeo/5.8/javadoc/org/nuxeo/ecm/automation/OperationContext.html) instantiation to inject Automation input(s).
+The Automation service provides chain(s)/operation(s) parameters setting and [OperationContext](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/automation/OperationContext.html) instantiation to inject Automation input(s).
 
 {{! /excerpt}}
 

@@ -2,7 +2,7 @@
 title: How to Create an Automation Chain
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-12-14'
 details:
     howto:
         excerpt: This how-to explains the different steps to create and configure an automation chain using Nuxeo Studio.
@@ -17,7 +17,7 @@ labels:
     - user-action
     - event-handler
     - studio
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235642'

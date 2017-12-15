@@ -17,7 +17,7 @@ labels:
     - fdavid
     - excerpt
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '19235642'
     ajs-parent-page-title: Automation How-To Index
