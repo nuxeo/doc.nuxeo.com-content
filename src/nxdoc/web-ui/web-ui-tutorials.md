@@ -2,14 +2,14 @@
 title: Web UI Tutorials
 review:
     comment: ''
-    date: '2017-01-16'
+    date: '2017-12-15'
     status: ok
 toc: true
 labels:
     - lts2016-ok
     - web-ui-customization
     - nsilva
-    - content-review-lts2017
+    - lts2017-ok
 tree_item_index: 400
 
 ---
