@@ -2,7 +2,7 @@
 title: Setting up Your Nuxeo Environment
 review:
     comment: ''
-    date: '2017-11-21'
+    date: '2017-12-15'
     status: ok
 toc: true
 labels:
@@ -311,7 +311,7 @@ OS: Linux, Mac OS, Windows
 2.  Download and start the Nuxeo Platform:
 
     ```bash
-    $ docker run -ti --name mynuxeo -p 8080:8080 nuxeo/nuxeo:discover-ft
+    $ docker run -ti --name mynuxeo -p 8080:8080 nuxeo/nuxeo:discover-lts
     ```
 
 3.  Register your Nuxeo instance on Nuxeo Online Services:
@@ -362,8 +362,8 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.3.2/nuxeo-web-ui-2.1.3/nuxeo-platform-getting-started-1.2.2
-      Packages to download (3):      nuxeo-web-ui:2.1.3, nuxeo-dam:6.3.2, nuxeo-platform-getting-started:1.2.2
+      Installation order (3):        nuxeo-dam-6.3.3/nuxeo-web-ui-2.2.0/nuxeo-platform-getting-started-1.2.3
+      Packages to download (3):      nuxeo-web-ui:2.2.0, nuxeo-dam:6.3.3, nuxeo-platform-getting-started:1.2.3
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -374,9 +374,9 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
     $ docker exec mynuxeo bin/nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.2)
-     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.1.3)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.2)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.3)
+     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.2.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.3)
     ```
 
     The installed addons now have the status started.
@@ -459,8 +459,8 @@ To install a Nuxeo Package:
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.3.2/nuxeo-web-ui-2.1.3/nuxeo-platform-getting-started-1.2.2
-      Packages to download (3):      nuxeo-web-ui:2.1.3, nuxeo-dam:6.3.2, nuxeo-platform-getting-started:1.2.2
+      Installation order (3):        nuxeo-dam-6.3.3/nuxeo-web-ui-2.2.0/nuxeo-platform-getting-started-1.2.3
+      Packages to download (3):      nuxeo-web-ui:2.2.0, nuxeo-dam:6.3.3, nuxeo-platform-getting-started:1.2.3
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -471,9 +471,9 @@ To install a Nuxeo Package:
     $ nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.2)
-     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.1.3)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.2)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.3)
+     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.2.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.3)
     ```
 
     The installed addons now have the status started.
@@ -568,8 +568,8 @@ To install a Nuxeo Package:
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.3.2/nuxeo-web-ui-2.1.3/nuxeo-platform-getting-started-1.2.2
-      Packages to download (3):      nuxeo-web-ui:2.1.3, nuxeo-dam:6.3.2, nuxeo-platform-getting-started:1.2.2
+      Installation order (3):        nuxeo-dam-6.3.3/nuxeo-web-ui-2.2.0/nuxeo-platform-getting-started-1.2.3
+      Packages to download (3):      nuxeo-web-ui:2.2.0, nuxeo-dam:6.3.3, nuxeo-platform-getting-started:1.2.3
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -581,17 +581,17 @@ To install a Nuxeo Package:
     $ ./nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.2)
-     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.1.3)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.2)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.3)
+     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.2.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.3)
 
     # Windows
     $ .\nuxeoctl.bat mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.2)
-     addon     started  nuxeo-web-ui (id: nuxeo-web-ui-2.1.3)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.2)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.3)
+     addon     started  nuxeo-web-ui (id: nuxeo-web-ui-2.2.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.3)
     ```
 
     The installed addons now have the status 'started'.
