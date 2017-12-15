@@ -1,14 +1,13 @@
 ---
 title: Configure Nuxeo Platform
 review:
-    comment: Created Tutorial
-    date: '2017-05-23'
+    comment: LTS2017 review
+    date: '2017-12-15'
     status: ok
 labels:
     - studio
     - customization
-    - ktouchie
-    - content-review-lts2017
+    - lts2017-ok
     - howto
 toc: true
 tree_item_index: 200
@@ -16,10 +15,6 @@ tree_item_index: 200
 ---
 
 This tutorial introduces you to a few important aspects of **Nuxeo Studio** so that you can take advantage of this great product as quickly as possible.
-
-{{#> callout type='warning' }}
-This tutorial makes use of **Nuxeo Studio Designer**, a new customization tool for Nuxeo Web UI. **Studio Designer** is currently available through a limited release. If you don't have access yet and would like to try it out, please contact your Nuxeo representative.
-{{/callout}}
 
 ## Introduction
 
@@ -66,7 +61,6 @@ $ ./bin/nuxeoctl console
 
 4.  Be sure to select the addons needed for this Tutorial:
     *  DAM
-    *  JSF UI
     *  WEB UI
 
 5. The server will restart at the end. While you're waiting for your server to restart, install [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) for Chrome or Firefox.
@@ -78,15 +72,13 @@ INSTALL THE GETTING STARTED TEMPLATE
 
 1.  Log into Nuxeo Platform with the credentials *Administrator* / *Administrator*.
 
-2.  Open [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) and click on the **Go to Studio** button.
+2.  Open [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) and under **Useful Links**, click on **Go To Studio**.
 
 3.  Log into Studio with your **NOS** credentials.
 
 4.  Under the **Configuration** menu in Studio, select **External Templates** and install the **Nuxeo Training: Getting Started** template.
 
 5.  From Nuxeo Platform, open [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) again and click the **Hot Reload** button to update your instance with configurations from the template.
-
-6.  Finally, log out of Nuxeo Platform and log back in again. Your Studio tutorial environment is now ready!
 
 ### Users and Groups
 
