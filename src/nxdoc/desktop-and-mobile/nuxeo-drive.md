@@ -867,6 +867,12 @@ By default, once you have synchronized a folder all its content (files and folde
 
 Clicking on the **Select sync folders** button in the [Settings window](#open-drive-settings) shows the **Nuxeo Drive Filters** windows from which you can unselect folders to unsynchronize. Unselected folders remain displayed to you can easily reselect and synchronize them back. They are still marked as synchronized on your web UI.
 
+{{#> callout type='warning' }}
+
+Please note that when synchronizing a significant amount of data, it is highly inadvisable to deactivate synchronization of the folders containing this data, to avoid generating conflicts with the server. Versions 2.5.9 and above will not allow to access the "select sync folders" window when such synchronization is running.
+
+{{/callout}}
+
 #### Unsynchronizing Folders (Server)
 
 #### JSF UI
