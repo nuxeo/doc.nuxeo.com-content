@@ -10,7 +10,6 @@ labels:
     - elasticsearch-component
     - bdelbosc
     - university
-    - content-review-lts2017
     - lts2017-ok
 toc: true
 confluence:
