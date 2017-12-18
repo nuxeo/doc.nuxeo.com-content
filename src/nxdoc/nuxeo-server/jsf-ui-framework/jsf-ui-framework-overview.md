@@ -2,7 +2,7 @@
 title: JSF UI Framework Overview
 review:
     comment: ''
-    date: '2015-12-14'
+    date: '2017-12-15'
     status: ok
 tree_item_index: 50
 toc: true
@@ -23,8 +23,8 @@ Nuxeo JSF framework integrates several technologies in order to make the develop
 The Nuxeo JSF stack includes:
 
 *   Mojarra JSF (2.2.6) as MVC and UI component model, including, as of JSF 2 specifications, facelets as rendering engine and templating system,
-*   RichFaces (4.5.0) for high level UI components, including the a4j library for Ajax behaviors support
-*   JBoss Seam (2.3.1) as Web Framework
+*   RichFaces (4.5.12.Final) for high level UI components, including the a4j library for Ajax behaviors support
+*   JBoss Seam (2.3.1.Final) as Web Framework
 
 Inside the Nuxeo Platform, Seam Framework is used only for the JSF (client) layer.
 
@@ -32,30 +32,30 @@ The usage of Seam has several benefits:
 
 *   usage of JSF is simpler,
 *   powerful context management,
-*   dependency injection and Nuxeo Service lookup via injection,
-*   Nuxeo Web Component are easily overridable,
-*   decoupling of Web Components (that can communicate via Seam event bus).
+*   dependency injection and Nuxeo services lookup via injection,
+*   Nuxeo Seam components are easily overridable,
+*   decoupling of Seam components (that can communicate via Seam event bus).
 
 The Nuxeo JSF framework also comes with additional concepts and tools:
 
 *   [Action service]({{page page='actions-links-buttons-icons-tabs-and-more'}}) is used to make buttons, tabs and views configurable.
-*   [Layout]({{page page='layouts-and-widgets-forms-listings-grids'}}) and [Content View]({{page page='content-views'}}) allow to define how you want to see documents and listings.
-*   [URL Service]({{page page='navigation-urls'}}): the Nuxeo Platform provides REST URLs for all pages so that you can bookmark pages or send via email a link to a specific view on a specific document.
-*   [Nuxeo Tag Libraries]({{page page='how-to-register-a-jsf-tag-library'}}): extend existing tags and provides new Document Oriented tags.
-*   [Theme engine]({{page page='theme'}}).
+*   [Layout]({{page page='layouts-and-widgets-forms-listings-grids'}}) and [Content View]({{page page='content-views'}}) services allow to define the rendering of documents and listings.
+*   [URL Service]({{page page='navigation-urls'}}) is used to provide REST URLs for all pages so that you can bookmark pages or send via email a link to a specific view on a specific document.
+*   [Nuxeo Tag Libraries]({{page page='how-to-register-a-jsf-tag-library'}}) extend existing tag libraries and provide new Document Oriented tags.
+*   [Theme engine]({{page page='theme'}}) is used to handle CSS and JavaScript resources needed on a page.
 
 ## Nuxeo JSF Approach
 
-We built Nuxeo JSF framework with two main ideas in mind:
+We built the Nuxeo JSF framework with two main ideas in mind:
 
 *   Make the UI simple,
 *   Make the UI pluggable.
 
-For the first point, we choose to have an "File Explorer" like navigation. So you have tools (tree, breadcrumb, search, tags) to navigate in a document repository and when on a document you can see several views on this document (Summary, Relations, Workflows, Rights, History ...).
+For the first point, we chose to have a "File Explorer" like navigation. So you have tools (tree, breadcrumb, search, tags) to navigate in a document repository and when on a document you can see several views on this document (Summary, Relations, Workflows, Rights, History ...).
 
-We also choose to make the UI very pluggable, because each project needs to have a slightly different UI. In order to achieve that, each page/view is in fact made of several fragments that are assembled based on the context. This means you can easily add, remove or change a button, a link, a tab or a HTML/JSF block. You don't need to change or override the Nuxeo Platform code for that, neither do you need to change the default Nuxeo Platform templates. The assembly of the fragments is governed by "Actions", so you can change the filters and conditions for each fragment. Of course each project also needs to define it's own views on Document, for that we use the Layout and Content View system.
+We also choose to make the UI very pluggable, because each project needs to have a slightly different UI. In order to achieve that, each page/view is in fact made of several fragments that are assembled based on the context. This means you can easily add, remove or change a button, a link, a tab or a HTML/JSF block. You don't need to change or override the Nuxeo Platform code for that, neither do you need to change the default Nuxeo Platform templates. The assembly of the fragments is governed by "Actions", so you can change the filters and conditions for each fragment. Of course each project also needs to define it's own views on documents: for that we use the Layout and Content View system.
 
-All this means that you can start from a standard Nuxeo Platform, and with simple configuration have a custom UI.
+All this means that you can start from a standard Nuxeo Platform, and with simple configuration, you can build a custom UI.
 
 ## JSF Page Layout System Overview
 A Nuxeo Platform page is made up of several layers:
@@ -63,7 +63,7 @@ A Nuxeo Platform page is made up of several layers:
 - Nuxeo Theme (aka NXTheme)
 
     - Defines a page level layout (slots)
-    - Defines CSS resources
+    - Defines CSS and Javascript resources
 - XHTML/facelet
 
     - Fills the NXTheme slots
