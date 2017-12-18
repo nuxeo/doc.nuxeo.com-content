@@ -2,7 +2,7 @@
 title: Batch Upload Resource Endpoint
 review:
     comment: ''
-    date: '2017-08-01'
+    date: '2017-12-28'
     status: ok
 labels:
     - lts2016-ok
@@ -14,7 +14,7 @@ labels:
     - file-upload-component
     - university
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 version_override:
     LTS 2015: 710/nxdoc/blob-upload-for-batch-processing/
@@ -197,22 +197,7 @@ history:
 
 {{! excerpt}}
 
-By default, Automation uses standard HTTP MultiPart Encoding to deal with Blobs.
-
-This doesn't fit in the following situations:
-
-{{! /excerpt}}
-
-*   Your client does not natively support multipart encoding (JavaScript without using a Form)
-*   You have several files to send, but prefer to send them as separated chunks (You have an HTTP proxy that will limit POST size)
-*   You want to upload files as soon as possible and then run the operation when everything has been uploaded on the server (You upload pictures you select from a mobile device)
-
-{{#> callout type='info' }}
-
-Since Nuxeo 7.4 the batch upload API has changed to be exposed as a REST resource endpoint.
-The old API using `/site/automation/batch/upload` is deprecated but kept for backward compatibility.
-
-{{/callout}}
+This endpoint allows to upload a batch of files to a Nuxeo server. The uploaded files can then be used as the input of an Automation operation or a property of a document through the REST API.
 
 ## Batch Upload Endpoint
 
@@ -540,18 +525,22 @@ Sample code using the Java client:
 
 ```java
 // Get a Nuxeo client
-NuxeoClient nuxeoClient = new NuxeoClient(serverURL, username, password);
+NuxeoClient nuxeoClient = new NuxeoClient.Builder().url("http://NUXEO_SERVER/nuxeo")
+                                                   .authentication("Administrator", "Administrator")
+                                                   .connect();
 
 // Upload a file
-BatchUpload batchUpload = nuxeoClient.fetchUploadManager();
-File file = new File("/file/to/upload");
-batchUpload = batchUpload.upload(file.getName(), file.length(), "text/plain", batchUpload.getBatchId(), "0", file);
+BatchUploadManager batchUploadManager = nuxeoClient.batchUploadManager();
+BatchUpload batchUpload = batchUploadManager.createBatch();
+File file = new File("/file/to/upload.txt");
+batchUpload = batchUpload.upload("0", file, file.getName(), "text/plain", file.length());
 
 // Execute an Automation operation with the uploaded file as input
-Operation operation = nuxeoClient.automation("My.Operation")
-                                 .context("contextKey", contextValue)
-                                 .param("paramKey", paramValue);
-batchUpload.execute(operation);
+Document doc = new Document("file", "File");
+doc.set("dc:title", "new title");
+doc = nuxeoClient.repository().createDocumentByPath("/folder_1", doc);
+Blob blob = batchUpload.operation("Blob.AttachOnDocument").param("document", doc).execute();
+
 ```
 
 ### Referencing a Blob from a JSON Document Resource
@@ -575,11 +564,12 @@ Sample code using the Java client:
 ```java
 Document doc = nuxeoClient.repository().fetchDocumentByPath("/my/document/path");
 doc.setPropertyValue("file:content", batchUpload.getBatchBlob());
+doc = doc.updateDocument();
 ```
 
 ## Learn More
 
-*   Follow the courses [Importing Files with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/importing-files-rest-api) and [Data Capture / REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) at [Nuxeo University](https://university.nuxeo.com).
+*   Follow the course [Data Capture / REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) at [Nuxeo University](https://university.nuxeo.com).
 *   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
 
 * * *
@@ -588,6 +578,7 @@ doc.setPropertyValue("file:content", batchUpload.getBatchBlob());
 <div class="column medium-6">
 {{#> panel heading='Related Documentation'}}
 
+- [HOWTO: Upload a File in Nuxeo Using REST API]({{page page='howto-upload-file-nuxeo-using-rest-api'}})
 - [Transient Store]({{page version='' space='nxdoc' page='transient-store'}})
 
 {{/panel}}
