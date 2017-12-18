@@ -9,7 +9,6 @@ labels:
     - elasticsearch
     - elasticsearch-component
     - bdelbosc
-    - content-review-lts2017
     - lts2017-ok
 toc: true
 confluence:

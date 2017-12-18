@@ -5,7 +5,7 @@ review:
     date: '2017-12-13'
     status: ok
 labels:
-    - lts2016-ok
+    - content-review-lts2016
     - configuration
     - alerts
     - logs
