@@ -1,13 +1,14 @@
 ---
 title: Configure Nuxeo Platform
 review:
-    comment: LTS2017 review
+    comment: ''
     date: '2017-12-15'
     status: ok
 labels:
     - studio
     - customization
     - lts2017-ok
+    - ktouchie
     - howto
 toc: true
 tree_item_index: 200
