@@ -7,7 +7,7 @@ review:
 labels:
     - content-review-lts2016
     - nuxeo-elements
-    - nsilva
+    - grenard
     - link-update
     - data-visualization-component
     - university
