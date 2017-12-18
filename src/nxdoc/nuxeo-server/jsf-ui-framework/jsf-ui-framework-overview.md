@@ -2,14 +2,15 @@
 title: JSF UI Framework Overview
 review:
     comment: ''
-    date: '2015-12-14'
-    status: ok
+    date: '2017-12-18'
+    status: not-ok
 tree_item_index: 50
 toc: true
 version_override:
     '6.0': 60/nxdoc/web-ui-framework-overview
 labels:
     - content-review-lts2017
+    - content-review-lts2016
     - seam-jsf-component
     - atchertchian
 
