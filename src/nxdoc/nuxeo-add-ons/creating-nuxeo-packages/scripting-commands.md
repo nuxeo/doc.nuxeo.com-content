@@ -1,9 +1,9 @@
 ---
 title: Scripting Commands
 review:
-    comment: ''
-    date: '2015-12-01'
-    status: ok
+    comment: 'This page is outdated and needs to be reviewed, see [NXDOC-1452](https://jira.nuxeo.com/browse/NXDOC-1452).'
+    date: '2017-12-18'
+    status: requiresUpdates
 labels:
     - content-review-lts2016
     - el
