@@ -112,7 +112,7 @@ Fill it with a JSON object defining what metadata you want to display, such as:
 }
 ```
 
-![]({{file name='ViewDesignerLayout.png'}} ?w=650,border=true)
+![]({{file name='ViewDesignerLayout.png'}} ?w=350,border=true)
 
 The field can either reference a property of the document, given its xpath, or a top level property of the JSON representation of a Document (from the REST API), such as `versionLabel` or `state`.
 
