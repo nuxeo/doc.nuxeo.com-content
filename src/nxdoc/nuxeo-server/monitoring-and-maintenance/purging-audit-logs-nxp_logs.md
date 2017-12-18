@@ -1,9 +1,9 @@
 ---
 title: Purging Audit Logs (NXP_LOGS)
 review:
-    comment: ''
-    date: '2016-12-07'
-    status: ok
+    comment: 'This page only takes into account the audit SQL backend and needs to be updated considering the Elasticsearch backend, see [NXDOC-608](https://jira.nuxeo.com/browse/NXDOC-608) and [NXDOC-743](https://jira.nuxeo.com/browse/NXDOC-743)'
+    date: '2017-12-18'
+    status: requiresUpdates
 labels:
     - lts2016-ok
     - logs
