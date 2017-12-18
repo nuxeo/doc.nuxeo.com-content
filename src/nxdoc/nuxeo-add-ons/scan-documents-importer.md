@@ -10,7 +10,7 @@ labels:
     - ajusto
     - update-needed
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -123,7 +123,7 @@ The [Scan Documents Importer addon](https://connect.nuxeo.com/nuxeo/site/marketp
 
 The scan import process is composed of several elements:
 1. The files to import, classified in a folder structure.
-2. XML files liked to the files to attach its document type and property values
+2. XML files linked to the files to attach its document type and property values
 3. An output folder where XML files are moved once processed by the scan importer.
 
 ![]({{file name='scan_importer.png'}} ?w=500,border=true)
