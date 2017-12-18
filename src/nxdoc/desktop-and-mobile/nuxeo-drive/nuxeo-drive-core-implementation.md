@@ -5,7 +5,7 @@ review:
     date: '2017-12-18'
     status: ok
 labels:
-    - lts2017
+    - lts2017-ok
     - nuxeo-drive
     - mschoentgen
 toc: true
