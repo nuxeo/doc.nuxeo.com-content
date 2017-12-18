@@ -2,10 +2,10 @@
 title: Nuxeo Drive Installation / Configuration
 review:
     comment: ''
-    date: '2016-12-15'
+    date: '2017-12-18'
     status: ok
 labels:
-    - content-review-lts2017
+    - lts2017
     - nuxeo-drive
     - mschoentgen
 toc: true
@@ -41,7 +41,7 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 
 #### Installing Nuxeo Drive on macOS
 
-1.  Download the installer (`.dmg` file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](http://community.nuxeo.com/static/drive/latest/9.3/nuxeo-drive.dmg).
+1.  Download the installer (`.dmg` file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](http://community.nuxeo.com/static/drive/latest/nuxeo-drive.dmg).
 2.  Run the installer: drag and drop the Nuxeo Drive icon in the Applications directory.
     ![]({{file name='Drive-dmg-installer.png' page='nuxeo-drive'}} ?w=400,border=true)
     Nuxeo Drive is now installed on your computer.
@@ -190,7 +190,7 @@ Start Nuxeo Drive like any other application:
 
     {{/callout}}
 *   On Windows, Nuxeo Drive is started from **Start** > **Programs** > **Nuxeo Drive**.
-*   On Linux, press Alt+F2 and enter `ndrive`.
+*   On GNU/Linux, check that `$HOME/.local/bin` is in the `PATH`, then press Alt+F2 and enter `ndrive`.
 
 ### Upgrading Nuxeo Drive
 
@@ -203,16 +203,6 @@ When a new version of Nuxeo Drive is available, a message is displayed at the bo
 3.  Click on the green icon.
     Nuxeo Drive is updated and automatically restarted.
     ![]({{file name='Drive_update_in_progress.png'}} ?w=200,border=true,thumbnail=true)
-
-{{#> callout type='info' heading='Upgrading from Nuxeo Drive 1.3 to Nuxeo Drive 2'}}
-
-Upgrading from Nuxeo Drive 1.3 to Nuxeo Drive 2 is transparent: Click on the icon ![]({{file name='nuxeo_drive_systray_icon_update_available_18.png' space='userdoc60' page='nuxeo-drive'}}) and the Update Nuxeo Drive item in the Nuxeo Drive menu to install the new version. After you confirmed the upgrade, Nuxeo Drive will download and restart and your synchronized folders will be automatically recovered.
-
-{{/callout}}
-
-## Limitation
-
-Citrix environments are not supported.
 
 ## Configuration
 
@@ -258,7 +248,7 @@ When you add a new account you need to provide the following information:
 *   **Name**: Give a name to the Nuxeo Drive account you are setting.
     This is helpful when you use Nuxeo Drive with several applications.
 *   **Folder**: Select where you want your Nuxeo Drive folder to be created.
-*   **URL**: Type the URL of your Nuxeo application, with the `/nuxeo` suffix ( `http://NUXEO_SERVER/nuxeo`for instance).
+*   **URL**: Type the URL of your Nuxeo application, with the `/nuxeo` suffix (`http://NUXEO_SERVER/nuxeo` for instance).
 *   **Username**: Type your username to the Nuxeo Platform application.
 *   **Password**: Type your password to the Nuxeo Platform application.
 
@@ -288,11 +278,12 @@ By default, Nuxeo Drive is available in English and in French.
 
 ## {{> anchor 'nuxeodrive-system-configure-drive'}}Configuration Parameters
 
-Nuxeo Drive has different parameters that you can set up through:
+Nuxeo Drive has different parameters that you can set up through (sorted by priority):
 
-*   The command line
-*   A config.ini file inside the Drive binary folder or the Drive personal folder (.nuxeo-drive)
-*   or with a registry key inside `HKEY_LOCAL_MACHINE\Software\Nuxeo\Drive` (registry since Nuxeo Drive 2.1.331)
+*   Via the REST API endpoint `/drive/configuration` served by the server (since [NXP-22946](https://jira.nuxeo.com/browse/NXP-22946) and Nuxeo Drive 3.0.0);
+*   A `$HOME/.nuxeo-drive/config.ini` file;
+*   With a registry key inside `HKEY_LOCAL_MACHINE\Software\Nuxeo\Drive` (since Nuxeo Drive 2.1.331, Windows only);
+*   The command line;
 
 <div class="table-scroll">
 <table class="hover">
@@ -304,12 +295,12 @@ Nuxeo Drive has different parameters that you can set up through:
 </tr>
 <tr>
 <td colspan="1">`ndrive-home`</td>
-<td colspan="1">`%USER_HOME%/.nuxeo-drive`</td>
+<td colspan="1">`%HOME%/.nuxeo-drive`</td>
 <td colspan="1">Define the personal folder.</td>
 </tr>
 <tr>
 <td colspan="1">`log-level-file`</td>
-<td colspan="1">&nbsp;</td>
+<td colspan="1">DEBUG</td>
 <td colspan="1">Define level for file log. Can be TRACE, DEBUG, INFO, WARNING, ERROR.
 This can also be set up from the Settings window.</td>
 </tr>
@@ -320,18 +311,18 @@ This can also be set up from the Settings window.</td>
 </tr>
 <tr>
 <td colspan="1">`log-filename`</td>
-<td colspan="1">&nbsp;</td>
+<td colspan="1">None</td>
 <td colspan="1">The name of the log file.</td>
 </tr>
 <tr>
 <td colspan="1">`locale`</td>
-<td colspan="1">&nbsp;</td>
+<td colspan="1">en</td>
 <td colspan="1">Set up the language if not already defined.
 This can also be set up by the user from the Settings window.</td>
 </tr>
 <tr>
 <td colspan="1">`force-locale`</td>
-<td colspan="1">&nbsp;</td>
+<td colspan="1">None</td>
 <td colspan="1">Force the reset to the language.</td>
 </tr>
 <tr>
@@ -347,12 +338,12 @@ See [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}}) for more 
 </tr>
 <tr>
 <td colspan="1">`debug`</td>
-<td colspan="1">false</td>
+<td colspan="1">False</td>
 <td colspan="1">Activate the debug window, and debug mode.</td>
 </tr>
 <tr>
 <td colspan="1">`nofscheck`</td>
-<td colspan="1">0</td>
+<td colspan="1">False</td>
 <td colspan="1">Disable the standard check for binding, to allow installation on network filesystem.</td>
 </tr>
 <tr>
@@ -374,7 +365,7 @@ This can also be set up by the user from the Settings window.</td>
 </tr>
 <tr>
 <td colspan="1">`consider-ssl-errors`</td>
-<td colspan="1">false</td>
+<td colspan="1">False</td>
 <td colspan="1">Define if SSL errors should be ignored.</td>
 </tr>
 <tr>
@@ -389,7 +380,7 @@ This can also be set up by the user from the Settings window.</td>
 </tr>
 <tr>
 <td colspan="1">`timeout`</td>
-<td colspan="1">20</td>
+<td colspan="1">30</td>
 <td colspan="1">Define the socket timeout.</td>
 </tr>
 <tr>
@@ -418,9 +409,7 @@ Nuxeo Drive makes an extensive use of audit logs to get a summary of the server-
 
 Since Nuxeo Platform 7.3 we chose to use Elasticsearch as a default back end for audit logs. This improves scalability especially when using Nuxeo Drive with a large set of users.
 
-That's why we strongly recommend to keep this default configuration.
-
-Please read the related sections: [Triggering SQL to Elasticsearch Audit Logs Migration]({{page page='elasticsearch-setup'}}#triggeringsqltoelasticsearchauditlogsmigration) and [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#disablingelasticsearchforauditlogs).
+That's why we **strongly recommend to keep** this default configuration, but you can still [disable Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#disabling-elasticsearch-for-audit-logs).
 
 {{! /multiexcerpt}}
 
@@ -465,7 +454,7 @@ To uninstall Nuxeo Drive:
     2.  Click on **Quit** in the menu.
 
     {{#> callout type='info' }}
-    At this point you can check that there are no `ndrivew.exe` or `ndrive.exe` remaining processes in the **Processes** tab of the **Windows Task Manager** that you can open by typing Ctrl + Shift + Esc.
+    At this point you can check that there are no `ndrivew.exe` remaining processes in the **Processes** tab of the **Windows Task Manager** that you can open by typing Ctrl + Shift + Esc.
     If you find such processes, kill them manually by right-clicking on their name and clicking on **End Process**.
     {{/callout}}
 
