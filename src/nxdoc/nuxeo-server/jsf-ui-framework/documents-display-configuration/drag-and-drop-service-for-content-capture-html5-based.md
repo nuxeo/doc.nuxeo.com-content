@@ -2,7 +2,7 @@
 title: Drag and Drop Service for Content Capture (HTML5-Based)
 review:
     comment: ''
-    date: '2016-12-13'
+    date: '2017-12-28'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - ataillefer
     - automation
     - file-upload-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '6029663'
@@ -178,6 +178,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 Drag and Drop from the Desktop to Nuxeo HTML UI has been available for a long time using a browser plugin.
 
 {{! excerpt}}
