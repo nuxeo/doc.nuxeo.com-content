@@ -6,14 +6,10 @@ review:
     status: ok
 toc: true
 labels:
-<<<<<<< HEAD
-    - lts2016-ok
-=======
     - lts2017-ok
     - web-ui-customization
     - nsilva
     - tcardoso
->>>>>>> updates web-ui-tutorials and how-to-create-and-reuse-custom-element pages
     - lts2017-ok
     - web-ui-customization
     - tcardoso
