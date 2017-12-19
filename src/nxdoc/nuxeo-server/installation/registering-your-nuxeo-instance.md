@@ -206,11 +206,7 @@ To subscribe to a Nuxeo Online Services trial:
 1.  Go to the [Nuxeo Online Services trial registration form](https://connect.nuxeo.com/register/#/).
 2.  Fill in the form. Provide a valid email address or else registration will not be completed.
 3.  Confirm registration by clicking on the link sent to the email address in the previous step.
-<<<<<<< HEAD
     You can now [download](https://www.nuxeo.com/downloads/) the Nuxeo Platform.
-=======
-    You can now use the Nuxeo Platform [online](https://www.nuxeo.com/downloads/) or [download it](https://www.nuxeo.com/downloads/) if you want to use it on premises.
->>>>>>> NXDOC-1418 instance registration
 
 ### Registering Online Using nuxeoctl {{> anchor 'online-registration'}}
 
@@ -324,11 +320,7 @@ Provided that your instance has internet access, this call can easily be automat
 {{#> callout type='note' title='Important Note About Hotfixes' no_icon=true}}
 Using hotfixes on your instance requires a valid subscription.
 
-<<<<<<< HEAD
 If your instance is not registered anymore but still uses hotfixes, you will receive specific warnings in the logs during startup explaining the situation.
-=======
-If your instance is not registered anymore but still uses hotfixes, you will receive specific warnings in the logs during startup explaining the situation.<br /><br />
->>>>>>> NXDOC-1418 instance registration
 
 If it happens, your Nuxeo instance will stop after a certain number of commits or when too many users are connected at the same time. You should make sure to register your instance as soon as you can to prevent this.
 {{/callout}}

@@ -334,7 +334,7 @@ b.  Click on the **Installation of package and dependencies** button.
     A page detailing the packages to be installed is displayed.
 
 c.  Click on the **Confirm install** button at the bottom of the page.
-    ![]({{file name='package-dependencies-installation-confirmation.png'}} ?w=600,border=true)
+    ![]({{file name='package-dependencies-installation-confirmation.png'}} ?w=400,border=true)
 {{/callout}}
 
 Once the installation is done, a confirmation screen is displayed.

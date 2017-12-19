@@ -260,7 +260,7 @@ The default Activity subtabs are:
 
 ## Nuxeo Online Services
 
-You can connect your Nuxeo instance with your [Nuxeo Connect](http://www.nuxeo.com/services/support/) account. This enables you to get a summary of your Nuxeo Online Services registration, and to register your Nuxeo Platform if you haven't done it yet.
+You can connect your Nuxeo instance with your [Nuxeo Online Services](http://www.nuxeo.com/services/support/) account. This enables you to get a summary of your Nuxeo Online Services registration, and to register your Nuxeo Platform if you haven't done it yet.
 
 ![]({{file name='Admin-Center-Connect.png'}} ?w=600,border=true)
 
