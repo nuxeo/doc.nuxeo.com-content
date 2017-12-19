@@ -130,20 +130,6 @@ A tag holds a label that does not contain any space ("documentmanagement", "weba
 
 {{{multiexcerpt 'functional-overview' page='USERDOC:Tags'}}}
 
-## Tag Service Architecture
-
- {{#> callout type='warning' }}
- Since 9.3, the tag service uses the `NXTag` facet. The following paragraph describes the previous tag service architecture that is deprecated since 9.3. 
- {{/callout}}
-
-The following document types are defined by the tag service.
-
-A `Tag` is a document type representing the tag itself (but not its association to specific documents). It contains the usual `dublincore` schema, and in addition has a specific `tag` schema containing a `tag:label` string field.
-
-A `Tagging` is a relation type representing the action of tagging a given document with a tag. (A relation type is a document type extending the default `Relation` document type; it works like a normal document type except that it's not found by NXQL queries on `Document`). The important fields of a `Tagging` document are `relation:source` which is the document id, `relation:target` which is the tag id, and `dc:creator` which is the user doing the tagging action.
-
-Both `Tag` and `Tagging` documents managed by the tag service are _unfiled_, which means that they don't have a parent folder. They are therefore not visible in the normal tree of documents; only queries can find them. In addition they don't have any ACLs set on them, which means that only a superuser (and the tag service internal code) can access them.
-
 ## Tag Service Features
 
 The tag service is accessed through the  [`TagService`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/tag/TagService.html)  interface.
@@ -178,6 +164,19 @@ To disable the duplication of tags on versions and proxies, the `TaggedVersionLi
   <listener name="taggedVersionListener" enabled="false" />
 </extension>
 ```
+## Tag Service Architecture
+
+ {{#> callout type='warning' }}
+ Since 9.3, the tag service uses the `NXTag` facet. The following paragraph describes the previous tag service architecture that is deprecated since 9.3.
+ {{/callout}}
+
+The following document types are defined by the tag service.
+
+A `Tag` is a document type representing the tag itself (but not its association to specific documents). It contains the usual `dublincore` schema, and in addition has a specific `tag` schema containing a `tag:label` string field.
+
+A `Tagging` is a relation type representing the action of tagging a given document with a tag. (A relation type is a document type extending the default `Relation` document type; it works like a normal document type except that it's not found by NXQL queries on `Document`). The important fields of a `Tagging` document are `relation:source` which is the document id, `relation:target` which is the tag id, and `dc:creator` which is the user doing the tagging action.
+
+Both `Tag` and `Tagging` documents managed by the tag service are _unfiled_, which means that they don't have a parent folder. They are therefore not visible in the normal tree of documents; only queries can find them. In addition they don't have any ACLs set on them, which means that only a superuser (and the tag service internal code) can access them.
 
 * * *
 
