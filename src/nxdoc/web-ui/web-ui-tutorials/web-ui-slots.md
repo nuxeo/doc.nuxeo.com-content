@@ -186,7 +186,7 @@ This slot is displayed when selecting one or more children documents of a folder
 |:----------------|:----------------------------------------------|
 | `displayMode`   | The current display mode (e.g., grid, table)  |
 | `selectedItems` | Array of selected  documents.                 |
-| `columns`       | Array with the avaliable table columns        |
+| `columns`       | Array with the available table columns        |
 
 #### RESULTS_ACTIONS {{> anchor 'results_actions'}}
 
@@ -206,7 +206,7 @@ This slot allows to provide additional action buttons on folderish documents or 
 |:----------------|:----------------------------------------------|
 | `displayMode`   | The current display mode (e.g., grid, table)  |
 | `selectedItems` | Array of selected  documents.                 |
-| `columns`       | Array with the avaliable table columns        |
+| `columns`       | Array with the available table columns        |
 
 ### Main Application Menu Slots
 
@@ -305,7 +305,7 @@ Each new item of **CREATE_POPUP_ITEMS** slot triggers a navigation to a page def
 
 #### FILE_UPLOAD_ACTIONS{{> anchor 'file_upload_actions'}}
 
-This slot is used in the [Nuxeo Live Connect]({{page version='' space='nxdoc' page='nuxeo-liveconnect'}}) addon which inserts additional import wizards to upload Files to cloud services.
+This slot is used in the [Nuxeo Live Connect]({{page version='' space='nxdoc' page='nuxeo-live-connect'}}) addon which inserts additional import wizards to upload Files to cloud services.
 
 ![]({{file name='FILE_UPLOAD_ACTIONS.png'}} ?w=400,border=true)
 
@@ -315,7 +315,7 @@ There are no properties for this slot.
 
 ### Search and Collection Browsing Slots
 
-The screen to browse Search results and Collection contents are very similar. When selecting items in the search results or the collection contents, some bulk actions are displayed in a top menu bar (like [BROWSE_ACTIONS](#browse_actions)). These actions can be extended with the following slots.
+The screen to browse Search results and Collection contents are very similar. When selecting items in the search results or the collection contents, some bulk actions are displayed in a top menu bar (like [RESULTS_SELECTION_ACTIONS](#results_selection_actions)). These actions can be extended with the following slots.
 
 #### COLLECTION_ACTIONS{{> anchor 'collection_actions'}}
 
@@ -325,7 +325,7 @@ The screen to browse Search results and Collection contents are very similar. Wh
 
 | Property        | Description                                                                                                                    |
 |:----------------|:-------------------------------------------------------------------------------------------------------------------------------|
-| `collection`    | The currrent document, corresponding to the current opened collection                                                          |
+| `collection`    | The current document, corresponding to the current opened collection                                                          |
 | `items`         | Array of displayed collection members, selected or not. (Note: more members could be loaded if you keep scrolling for results) |
 | `selectedItems` | Array of selected collection members.                                                                                          |
 
