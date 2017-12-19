@@ -133,8 +133,7 @@ A tag holds a label that does not contain any space ("documentmanagement", "weba
 ## Tag Service Architecture
 
  {{#> callout type='warning' }}
- The following paragraph describes the previous tag service architecture that is
- deprecated since 9.3. 
+ Since 9.3, the tag service uses the `NXTag` facet. The following paragraph describes the previous tag service architecture that is deprecated since 9.3. 
  {{/callout}}
 
 The following document types are defined by the tag service.
@@ -165,7 +164,7 @@ The tags are duplicated:
 
 When restoring a version, the tags on the live document are also restored from the ones on the version.
 
-Tags can be added and removed independently on live documents and versions: a tag added on a live document won't be added on all its versions, but only on the versions that will be created after. 
+Tags can be added and removed independently on live documents and versions: a tag added on a live document won't be added on all its versions, but only on the versions that will be created after.
 
 The logic for the above is in the  [`TaggedVersionListener`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/tag/TaggedVersionListener.html) listener.
 
