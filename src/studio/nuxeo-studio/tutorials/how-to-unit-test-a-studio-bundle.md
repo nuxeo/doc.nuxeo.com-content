@@ -25,7 +25,7 @@ In this how to, you will learn how to unit test a Studio Bundle from a Java Proj
 
 If you already have a project you can go to the next section.
 
-1. Install [Nuxeo CLI]({{page page='nuxeo-cli'}}).
+1. Install [Nuxeo CLI]({{page version='' space='nxdoc' page='nuxeo-cli'}}).
 1. Create a new bare project:
 
    ```shell
