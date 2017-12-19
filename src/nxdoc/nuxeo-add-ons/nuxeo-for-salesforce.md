@@ -11,7 +11,7 @@ labels:
     - link-update
     - excerpt
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -319,7 +319,6 @@ nuxeo.frame.options =
     ```
 
 4.  Set up your browser to access Nuxeo for Salesforce from within Salesforce.
-    If you're using Firefox browser, you don't need to configure it. However with Chrome, here are the guidelines to allow the access:
     1.  Authorize `Popups` from Salesforce (to allow OAuth execution).
     2.  Go to `[https://NUXEO_URL/nuxeo]` and allow Chrome to access in HTTPS your Nuxeo server.
 
