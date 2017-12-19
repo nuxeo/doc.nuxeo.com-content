@@ -6,10 +6,10 @@ review:
     status: ok
 toc: true
 labels:
-    - lts2016-ok
+    - lts2017-ok
     - web-ui-customization
     - nsilva
-    - lts2017-ok
+    - tcardoso
 tree_item_index: 400
 
 ---
@@ -21,7 +21,7 @@ In our JSF UI everything was already customizable and pluggable but it leveraged
 
 When building our Web UI we wanted to remove the dependency on this server-side runtime metamodel and make the UI *just* a rich web client of the growing number of available Nuxeo APIs. We really wanted to keep it as simple and familiar to web developers as possible and leverage DOM as the framework and component model.
 
-With Web Components we finally had a way to write interoperable components, so the focus during development of the Web UI was on *composition* over *pluggability*. This led to the development of [Nuxeo UI Elements]({{page page='nuxeo-elements'}}) , a set of custom visual elements that we use to build our new Web UI and which developers can leverage to build their own custom UIs. This is a new approach to UI customization where, according to each use case and the specificities of each application, developers can either build upon our default UI or opt to develop a full custom UI to better address their needs.
+With Web Components we finally had a way to write interoperable components, so the focus during development of the Web UI was also on *composition* instead of just *pluggability*. This led to the development of [Nuxeo UI Elements]({{page page='nuxeo-elements'}}) , a set of custom visual elements that we use to build our new Web UI and which developers can leverage to build their own custom UIs. This is a new approach to UI customization where, according to each use case and the specificities of each application, developers can either build upon our default UI or opt to develop a full custom UI to better address their needs.
 
 The goal however was still to make our default Web UI pluggable and to also allow developers to make their own UIs pluggable. This pluggability not only ensures that developers can easily customize our UI with code or with Studio but it is also essential for addons to add their contributions to the UI.
 
@@ -32,7 +32,7 @@ The simplest customization mechanism is based on the ability to override and/or 
 To override an existing element we just need to override its HTML file thus causing this new declaration to be loaded instead, similar to overriding XHTML templates in our JSF UI.
 Since our UI's resources are loaded from `/nuxeo.war/ui`, developers can simply package their own version of the resources to override in their custom bundle and rely on our deployment fragment processing to unpack them.
 
-This simple customization mechanism is however normally reserved to either lay out elements like [document layouts]({{page page='web-ui-document-layouts'}}) (view, edit, create, etc...), which are not incremental and meant to be produced and managed through Studio to ensure maintainability, or to known application areas with an expected high degree of customization like the home [dashboard]({{page page='web-ui-dashboard'}}).
+This simple customization mechanism is however normally reserved to either layout elements like [document layouts]({{page page='web-ui-document-layouts'}}) (view, edit, create, import and metadata), which are not incremental and meant to be produced and managed through Studio to ensure maintainability, or to known application areas with an expected high degree of customization like the home [dashboard]({{page page='web-ui-dashboard'}}).
 
 ### Slots
 
@@ -50,4 +50,4 @@ Given the declarative nature of HTML, Studio is able to parse and use it as a mo
 
 Studio will provide graphical tooling to help developers customize their applications while still allowing more experienced developers to take full control of the underlying HTML when needed.
 
-Since this HTML is the single reference and definition of the UI contributions, even some hand made modifications to the code are possible without breaking the implicit layout model required by the tools.
+Since this HTML is the single reference and definition of the UI contributions, even some handmade modifications to the code are possible without breaking the implicit layout model required by the tools.
