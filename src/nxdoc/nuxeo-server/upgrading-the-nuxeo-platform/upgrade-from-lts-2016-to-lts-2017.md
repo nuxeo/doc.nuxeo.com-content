@@ -1,9 +1,9 @@
 ---
-title: Upgrade from LTS 2016 to 9.3
-description: Instructions to upgrade your Nuxeo Platform instance from LTS 2016 version to Fast Track 9.3.
+title: Upgrade from LTS 2016 to LTS 2017
+description: Instructions to upgrade your Nuxeo Platform instance from LTS 2016 version to LTS 2017.
 review:
     comment: ''
-    date: '2017-04-03'
+    date: '2017-12-18'
     status: ok
 labels:
     - multiexcerpt
@@ -13,7 +13,7 @@ tree_item_index: 96
 
 ---
 
-## From LTS 2016 to 9.3
+## From LTS 2016 to LTS 2017
 
 ### Installation and Configuration
 
@@ -64,11 +64,6 @@ tree_item_index: 96
 <th colspan="1">Reference</th>
 </tr>
 <tr>
-<td colspan="1">`org.nuxeo.runtime.reload_strategy`</td>
-<td colspan="1">Default Value to `restart`</td>
-<td colspan="1">[NXP-19326](https://jira.nuxeo.com/browse/NXP-19326)</td>
-</tr>
-<tr>
 <td colspan="1">`nuxeo.automation.scripting.inline-context-in-params`</td>
 <td colspan="1">Default Value to `false`</td>
 <td colspan="1">[NXP-22190](https://jira.nuxeo.com/browse/NXP-22190)</td>
@@ -79,9 +74,24 @@ tree_item_index: 96
 <td colspan="1">[NXP-21889](https://jira.nuxeo.com/browse/NXP-21889)</td>
 </tr>
 <tr>
+<td colspan="1">`nuxeo.core.readacl.async.enabled`</td>
+<td colspan="1">Default Value to `true`</td>
+<td colspan="1">[NXP-23788](https://jira.nuxeo.com/browse/NXP-23788)</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.core.readacl.async.threshold`</td>
+<td colspan="1">Default Value to `500`</td>
+<td colspan="1">[NXP-23788](https://jira.nuxeo.com/browse/NXP-23788)</td>
+</tr>
+<tr>
 <td colspan="1">`nuxeo.faceted.tag.service.enabled`</td>
 <td colspan="1">Default Value to `false`</td>
 <td colspan="1">[NXP-21651](https://jira.nuxeo.com/browse/NXP-21651)</td>
+</tr>
+<tr>
+<td colspan="1">`org.nuxeo.runtime.reload_strategy`</td>
+<td colspan="1">Default Value to `restart`</td>
+<td colspan="1">[NXP-19326](https://jira.nuxeo.com/browse/NXP-19326)</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.server.tomcat_error.show_report`</td>
@@ -114,7 +124,6 @@ tree_item_index: 96
 #### Tag Migration
 
 {{{multiexcerpt 'upgrade-9.3-tags-migration' page='Upgrade from LTS 2016 following Fast Tracks'}}}
-
 
 #### Directories
 
@@ -217,6 +226,10 @@ tree_item_index: 96
 #### Segment.io
 
 {{{multiexcerpt 'upgrade-9.2-addons.segmentio' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
+#### Nuxeo Mqueue - deprecated
+
+{{{multiexcerpt 'upgrade-lts-2017-addons.deprecated.mqueues' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 ### Complementary Information
 
