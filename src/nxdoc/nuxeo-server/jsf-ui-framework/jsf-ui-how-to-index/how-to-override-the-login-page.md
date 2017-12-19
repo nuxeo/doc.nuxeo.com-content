@@ -2,8 +2,8 @@
 title: How to Override the Login Page
 review:
     comment: ''
-    date: '2015-12-01'
-    status: not-ok
+    date: '2017-12-11'
+    status: ok
 details:
     howto:
         excerpt: Learn how to override the login page.
@@ -17,7 +17,7 @@ labels:
     - akervern
     - theme
     - login-page-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'

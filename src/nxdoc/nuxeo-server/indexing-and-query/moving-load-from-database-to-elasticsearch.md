@@ -2,7 +2,7 @@
 title: Moving Load from Database to Elasticsearch
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-15'
     status: ok
 labels:
     - content-review-lts2016
@@ -10,7 +10,7 @@ labels:
     - query-pageprovider-component
     - kleturc
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -111,12 +111,12 @@ DocumentModelList docs = session.query(nxql);
 
 Using Elasticsearch you will use a query builder:
 
-```
+```java
 ElasticSearchService ess = Framework.getLocalService(ElasticSearchService.class);
-DocumentModelList docs = ess.query(new NxQueryBuilder(session).nxql(nxql).limit(-1)); // do we need to load all documents ?
+DocumentModelList docs = ess.query(new NxQueryBuilder(session).nxql(nxql).limit(10000));
 ```
 
-The first difference is that using `session.query` all the documents are returned while using Elasticsearch there is a default limit of&nbsp;`10` documents. To get all the documents use a limit of `-1`. Think twice before using the `-1` limit: loading all the documents can affect performance especially if the query is dynamic and can match all the documents in the repository. Note that with a limit set to `0` you can get the total results size (using `docs.totalSize()`) without loading any documents.
+The first difference is that using `session.query`all the documents are returned while using Elasticsearch there is a default limit of `10` documents and a maximum of `10000`, see [index.max_result_window](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html) section. To get all the documents use the [scroll API]({{page page='moving-load-from-database-to-elasticsearch'}}#migrating-a-request-using-scroll-api). Note that with a limit set to `0` you can get the total results size (using `docs.totalSize()`) without loading any documents.
 
 Another difference is that documents that are searchable at time `**t**` may be different between database and Elasticsearch:
 
@@ -125,7 +125,7 @@ Another difference is that documents that are searchable at time `**t**` may be 
 
 For instance migrating this code:
 
-```
+```java
 doc.setPropertyValue("dc:title", "A new title");
 session.saveDocument(doc);
 session.save();
@@ -135,7 +135,7 @@ docs = session.query("SELECT * FROM Document WHERE dc:title = 'A new title'"); /
 
 Can be done like this:
 
-```
+```java
 doc.setPropertyValue("dc:title", "A new title");
 session.saveDocument(doc);
 session.save();
@@ -146,25 +146,25 @@ TransactionHelper.startTransaction();
 esa.prepareWaitForIndexing().get(20, TimeUnit.SECONDS); // wait for indexing
 esa.refresh(); // explicit refresh
 
-ess.query(new NxQueryBuilder(session).nxql("SELECT * FROM Document WHERE dc:title = 'A new title'").limit(-1)); // "doc" is returned
+ess.query(new NxQueryBuilder(session).nxql("SELECT * FROM Document WHERE dc:title = 'A new title'")); // "doc" is returned
 ```
 
 Obviously there is a write overhead here because we are splitting the transaction and explicitly call a refresh. This can be useful for unit test migration but on normal code you have to decide if it make sense to search documents that are probably already loaded in your context.
 
-### Migrating a queryAndFetch Request
+## Migrating a queryAndFetch Request
 
 Replace the code:
 
-```
-        IterableQueryResult rows = session.queryAndFetch("SELECT ecm:uuid, dc:title FROM Document", NXQL.NXQL);
-        ...
+```java
+IterableQueryResult rows = session.queryAndFetch("SELECT ecm:uuid, dc:title FROM Document", NXQL.NXQL);
+...
 ```
 
 With:
 
-```
-        EsResult result = ess.queryAndAggregate(new NxQueryBuilder(session).nxql("SELECT ecm:uuid, dc:title FROM Document").limit(-1));
-        IterableQueryResult rows = result.getRows();
+```java
+EsResult result = ess.queryAndAggregate(new NxQueryBuilder(session).nxql("SELECT ecm:uuid, dc:title FROM Document").limit(10000));
+IterableQueryResult rows = result.getRows();
 ```
 
 And you gain the limit/offset options.
@@ -174,6 +174,43 @@ And you gain the limit/offset options.
 For now the select clause support is limited to scalar properties. See the page [Elasticsearch limitations]({{page space='NXDOC' page='Elasticsearch Indexing+Logic#ElasticsearchIndexingLogic-SearchingandLimitations'}}) for more information.
 
 {{/callout}}
+
+## Migrating a Request using scroll API
+
+Since Elasticsearch 2.x, the engine rejects request where `from + size > 10000`. You can change this value by changing [index.max_result_window](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html), but it is highly unadvised. If you need to get all documents from Elasticsearch, you should use scroll API.
+
+To do that, we can use `ElasticSearchService#scroll(NxQueryBuilder, long)` and `ElasticSearchService#scroll(EsScrollResult)`.
+
+For instance, with the previous query to get documents:
+```java
+ElasticSearchService ess = Framework.getService(ElasticSearchService.class);
+
+// Perform initial search and get first batch of 20 results
+String query = "SELECT * FROM Document WHERE dc:title = 'A new title'";
+EsScrollResult scrollResult = ess.scroll(new NxQueryBuilder(session).nxql(query).limit(20), 10000);
+
+while (!scrollResult.getDocuments().isEmpty()) {
+    DocumentModelList batchOfDocs = scrollResult.getDocuments();
+    for (DocumentModel doc : batchOfDocs) {
+        // Process document
+        ...
+    }
+    // Get next batch of results
+    scrollResult = ess.scroll(scrollResult);
+}
+```
+{{#> callout type='note' }}
+
+Limit given to `NxQueryBuilder` represents the size of each batch retrieved with scroll API. The `keepAlive` parameter in milliseconds only needs to be long enough to perform the next scroll query.
+
+{{/callout}}
+
+In a context of `IterableQueryResult`, you can use `EsIterableQueryResultImpl` class to get an `IterableQueryResult` relying on scroll API. For example:
+```java
+String query = "SELECT ecm:uuid, dc:title FROM Document";
+EsScrollResult scrollResult = ess.scroll(new NxQueryBuilder(session).nxql(query).limit(20), 10000);
+IterableQueryResult rows = new EsIterableQueryResultImpl(ess, scrollResult);
+```
 
 ## Deactivating Database Optimizations
 

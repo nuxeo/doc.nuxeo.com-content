@@ -2,7 +2,7 @@
 title: Elasticsearch Indexing Logic
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - elasticsearch-component
     - bdelbosc
     - university
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -220,7 +220,7 @@ A NXQL query can be translated to Elasticsearch query with some limitations. See
 
 **Operators and Mapping**
 
-Some operators need an explicit mapping to work properly. This is the case for FULLTEXT and ILIKE operators (STARTSWITH for `ecm:path` has a special mapping setup by default). See the page [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}}) for more information.
+Some operators need an explicit mapping to work properly. This is the case for FULLTEXT, LIKE and ILIKE operators (STARTSWITH for `ecm:path` has a special mapping setup by default). See the page [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}}) for more information.
 
 **Security and ACLs**
 

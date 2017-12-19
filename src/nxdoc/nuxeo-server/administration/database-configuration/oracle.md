@@ -2,7 +2,7 @@
 title: Oracle
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - kleturc
     - oracle
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3342340'
@@ -323,6 +323,26 @@ java.sql.SQLException: ORA-29833: indextype does not exist
 ```
 
 In addition, if you want to configure specific lexers or word lists then check [http://download.oracle.com/docs/cd/B19306_01/text.102/b14218/cdatadic.htm](http://download.oracle.com/docs/cd/B19306_01/text.102/b14218/cdatadic.htm) for configuration parameters and syntax. Lexers and word lists are used by the Nuxeo Platform when configured in its `default-repository-config.xml` file.
+
+### Error DRG-50857
+On Oracle 11.2.0.3 and 11.2.0.4, the installation of Oracle Text may fail because some information on the CTXSYS user is not correctly configured. This exception will be thrown in Nuxeo logs:
+```
+org.nuxeo.ecm.core.api.NuxeoException: java.sql.SQLException: Error executing: CREATE INDEX "FULLTEXT_FULLTEXT_IDX" ON "FULLTEXT"("FULLTEXT") INDEXTYPE IS CTXSYS.CONTEXT PARAMETERS(' SYNC (ON COMMIT) TRANSACTIONAL') : ORA-29855: error occurred in the execution of ODCIINDEXCREATE routine
+ORA-20000: Oracle Text error:
+DRG-50857: oracle error in drstldef
+DRG-50858: OCI error: OCI_INVALID_HANDLE
+DRG-50857: oracle error in get functional cache size
+ORA-20000: Oracle Text error:
+DRG-50857: oracle error in drixmd.GetSysParam
+ORA-01403: no data found
+ORA-06512: at "CTXSYS.DRUE", line 160
+ORA-06512: at "CTXSYS.DRVXMD", line 639
+ORA-06512: at line 1
+```
+The following command has to be run with the CTXSYS user to fix the problem:
+```
+INSERT INTO CTX_PARAMETERS (PAR_VALUE,PAR_NAME) VALUES ('20971520','FUNCTIONAL_CACHE_SIZE');
+```
 
 ## DB_BLOCK_SIZE Configuration
 

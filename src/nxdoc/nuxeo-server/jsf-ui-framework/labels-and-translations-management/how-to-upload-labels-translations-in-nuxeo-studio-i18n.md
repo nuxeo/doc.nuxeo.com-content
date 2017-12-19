@@ -2,11 +2,11 @@
 title: How to Upload Labels Translations in Nuxeo Studio (i18n)
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
-        excerpt: Learn how to upload your own translation of labels in Nuxeo Studio.
+        excerpt: Learn how to upload your own translation of labels in Nuxeo Studio Modeler.
         level: Advanced
         tool: Studio
         topics: 'Labels, Localization, Translation'
@@ -18,7 +18,7 @@ labels:
     - sguitter
     - howto
     - studio
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '19235763'
     ajs-parent-page-title: Labels and Translations Management
@@ -124,6 +124,11 @@ history:
         version: '1'
 
 ---
+
+{{#> callout type='info'}}
+This page is about label translation for Nuxeo JSF UI. For Web UI labels, please refer to the page [HOWTO: Manage Translations]({{page version='' space='nxdoc' page='web-ui-managing-translations'}}).
+{{/callout}}
+
 The Nuxeo Platform relies on standard i18n principles for translating text in the user interface. You need to upload a `.properties` file, suffixed with a four-letter locale code depending on the language you target. Studio allows you to upload `.properties` files to be deployed with the customization plugin. It's useful:
 
 *   To translate new labels that appear in the plugin, such as form's fields name, lifecycle transition names, document type names, new vocabularies' labels, etc
@@ -143,7 +148,7 @@ There are no naming rules for i18n keys: you can use the key format that is most
     label.security.permission.validation.document.validated = Document Validated
     label.security.permission.validation.validation.rejected = Document Rejected
     ```
-2.  Go to **Resources** and upload the file in the **i18n files** section.
+2.  In Studio Modeler, go to **Resources** and upload the file in the **i18n files** section.
     ![]({{file name='studio-resource-editor-empty.png'}} ?w=650,border=true)
 3.  Repeat as needed with other languages, adding other files: `messages_fr_FR.properties` (French), `messages_es_ES.properties` (Spanish), `messages_ar_SA.properties` (Arabic), ... (take a look at [How to Translate Nuxeo]({{page page='how-to-translate-the-nuxeo-platform'}}) for a list of all the codes available)
 4.  [Update your Nuxeo instance with your Studio customizations]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).

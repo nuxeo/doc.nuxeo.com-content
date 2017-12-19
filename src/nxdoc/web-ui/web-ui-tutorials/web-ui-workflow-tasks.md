@@ -2,7 +2,7 @@
 title: 'HOWTO: Customize Workflow Tasks'
 review:
     comment: ''
-    date: 2017-01-16S
+    date: 2017-12-14
     status: ok
 toc: true
 details:
@@ -18,15 +18,13 @@ labels:
     - grenard
     - workflow
     - task
-    - content-review-lts2017
+    - lts2017-ok
 tree_item_index: 600
 
 ---
 {{#> callout type='tip'}}
 Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner) on Nuxeo University.
 {{/callout}}
-
-{{{multiexcerpt 'Designer-restricted-access-note' page='generic-multi-excerpts'}}}
 
 In this tutorial you will learn how to create a custom workflow tasks layout in Studio Designer. We'll be using a custom validation workflow template linked to the Contract document type.
 
@@ -58,10 +56,10 @@ We will finish our Studio Modeler configuration by creating a vocabulary for the
   ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='create-voc-studio.png'}} ?w=350,border=true)
 2. Fill in the rows like this:
 
-| Id | Label |
-| --- | --- |
-| full-time-part-time | Full-time and part-time |
-| fixed-terms | Fixed-term |
+| Id                              | Label                                 |
+|:--------------------------------|:--------------------------------------|
+| full-time-part-time             | Full-time and part-time               |
+| fixed-terms                     | Fixed-term                            |
 | freelance-consultant-contractor | Freelancers, consultants, contractors |
 
 3. Save your modifications.
@@ -75,7 +73,12 @@ We can now customize our layout on Studio Designer.
   ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='workflow-process-VD.png'}} ?w=350,border=true)
 1. Switch to editor from visual to code and change the line corresponding to the type field to turn it into a `nuxeo-directory-suggestion` to link the type property to the associated directory:
 ```
-<nuxeo-directory-suggestion role="widget" label="Type" placeholder="Select the contract type..." value="{{task.variables.type}}" directory-name="type" min-chars="0"></nuxeo-directory-suggestion>
+<nuxeo-directory-suggestion role="widget" label="Type"
+    placeholder="Select the contract type..."
+    value="{{task.variables.type}}"
+    directory-name="type"
+    min-chars="0">
+</nuxeo-directory-suggestion>
 ```
 1. Save your changes.  
 

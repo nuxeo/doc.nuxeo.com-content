@@ -2,7 +2,7 @@
 title: Monitoring Slow NXQL Queries
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - monitoring
     - monitoring-component
     - bdelbosc
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance

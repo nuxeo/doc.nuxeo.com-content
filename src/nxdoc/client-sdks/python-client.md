@@ -2,15 +2,15 @@
 title: Python Client
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-18'
     status: ok
 labels:
     - lts2016-ok
+    - lts2017-ok
     - python-client
     - mschoentgen
     - client
     - python-client-component
-    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16091040'

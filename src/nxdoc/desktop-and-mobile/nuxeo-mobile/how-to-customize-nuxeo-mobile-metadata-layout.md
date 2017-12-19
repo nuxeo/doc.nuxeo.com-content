@@ -2,7 +2,7 @@
 title: 'HOWTO: Customize Nuxeo Mobile Metadata Layout'
 review:
     comment: ''
-    date: '2017-04-10'
+    date: '2017-12-15'
     status: ok
 details:
     howto:
@@ -14,7 +14,7 @@ labels:
     - nuxeo-mobile
     - yachour
     - howto
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 
 ---
@@ -112,7 +112,7 @@ Fill it with a JSON object defining what metadata you want to display, such as:
 }
 ```
 
-![]({{file name='ViewDesignerLayout.png'}} ?w=650,border=true)
+![]({{file name='ViewDesignerLayout.png'}} ?w=350,border=true)
 
 The field can either reference a property of the document, given its xpath, or a top level property of the JSON representation of a Document (from the REST API), such as `versionLabel` or `state`.
 

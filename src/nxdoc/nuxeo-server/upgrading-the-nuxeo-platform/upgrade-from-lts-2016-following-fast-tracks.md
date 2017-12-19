@@ -2,11 +2,11 @@
 title: Upgrade from LTS 2016 following Fast Tracks
 review:
     comment: ''
-    date: '2017-04-03'
+    date: '2017-12-11'
     status: ok
 labels:
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
     - upgrade
     - akervern
 toc: true

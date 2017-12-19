@@ -2,7 +2,7 @@
 title: Deploying as a Standard Static WAR
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-11'
     status: ok
 details:
     howto:
@@ -16,7 +16,7 @@ labels:
     - static-war
     - akervern
     - howto
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'

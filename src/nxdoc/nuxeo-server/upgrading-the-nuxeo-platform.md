@@ -2,13 +2,13 @@
 title: Upgrading the Nuxeo Platform
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-11'
     status: ok
 labels:
     - content-review-lts2016
     - upgrade
     - akervern
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31033314'
@@ -484,7 +484,7 @@ Make sure no jobs are still queued or running before starting the upgrade proced
 8.  [Upgrade and install your custom code](#custom-code-up).
 9.  If you have manually copied JARs in `$NUXEO/nxserver/plugins` or `$NUXEO/nxserver/bundles` (like nuxeo-platform-login-cas2 if you are using the CAS2 authentication), install the corresponding new version of the JARs.
 10.  Start the new Nuxeo Platform.
-11.  Check for ERROR or WARN logs in `$NUXEO/log/console.log` or `$NUXEO/log/server.log`, or Nuxeo Runtime startup errors after log `Nuxeo Platform Started`.
+11.  Check for `ERROR` or `WARN` logs in `$NUXEO/log/console.log` or `$NUXEO/log/server.log`, or Nuxeo Runtime startup errors after log `Nuxeo Platform Started`.
 
 ### {{> anchor 'marketplace-packages-upgrade'}}Upgrading Your Nuxeo Packages
 
@@ -518,12 +518,12 @@ Since the Platform evolves, you will also need to upgrade your custom code:
 
 ## Detailed Upgrade by Version
 
-### To Fast Track 9.1 from LTS 2016
+### To Fast Track 9.3 from LTS 2016
 
-See [Upgrade from LTS 2016 to 9.1]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-91'}}) to upgrade to Ftast Track version 9.1 of the Nuxeo Platform.
+See [Upgrade from LTS 2016 to 9.3]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-93'}}) to upgrade to Ftast Track version 9.3 of the Nuxeo Platform.
 
 Release notes:
-- [9.1 release notes]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
+- [9.x release notes]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
 
 ### To LTS 2016 from LTS 2015
 

@@ -2,7 +2,7 @@
 title: Workflow Node Properties
 review:
     comment: ''
-    date: '2016-12-30'
+    date: '2016-12-14'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - workflow
     - grenard
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '12913723'

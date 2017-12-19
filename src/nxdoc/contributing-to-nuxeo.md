@@ -2,15 +2,15 @@
 title: Contributing to Nuxeo
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-11'
     status: ok
 labels:
-    - lts2016-ok
+    - content-review-lts2016
     - git
     - akervern
     - link-update
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950332'
@@ -317,8 +317,8 @@ Nuxeo labels are stored in ASCII files. We use the [UTF-8](http://www.utf8-chart
 
 {{! multiexcerpt name='translation-contribution-with-crowdin'}}
 
-1.  Join the Nuxeo translation group of your choice at [crowdin.net/project/nuxeo](http://crowdin.net/project/nuxeo). Pick a language you want to translate and start by clicking &ldquo;translate&rdquo;.
-2.  In the Crowdin translation view you will find all the phrases to translate to the left. (To view only the ones that still need translation, use the &ldquo;missing translations&rdquo; filter.)
+1.  Join the Nuxeo translation group of your choice at [crowdin.net/profile/nuxeo](https://crowdin.com/profile/nuxeo). Pick a language you want to translate and start by clicking **Translate**.
+2.  In the Crowdin translation view you will find all the phrases to translate to the left. (To view only the ones that still need translation, use the **Untranslated** filter.)
 3.  Click on a phrase you want to translate. You see the original phrase in the top, and a box to fill out your translation beneath.
 4.  Enter the translation and by clicking **Save**, and optionally, if you're a proofreader, you can approve the translation.
 5.  Contact one or several of the Crowdin project managers to [be credited for your contribution](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/CREDITS.txt).
@@ -329,7 +329,8 @@ Nuxeo labels are stored in ASCII files. We use the [UTF-8](http://www.utf8-chart
 
 {{! multiexcerpt name='translation-contribution-with-github'}}
 
-1.  For now, English translations are managed only on GitHub. Looking at the [reference messages.properties](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/src/main/resources/crowdin/messages.properties) file at can help you understand in which GitHub repository or module the original translation is. For instance, look for the following sample lines:
+1.  For now, English translations are managed only on GitHub.
+  * For JSF UI labels, looking at the [reference messages.properties](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/src/main/resources/crowdin/messages.properties) file at can help you understand in which GitHub repository or module the original translation is. For instance, look for the following sample lines:
 
     ```
     ## DO NOT EDIT FOLLOWING LINE
@@ -344,6 +345,8 @@ Nuxeo labels are stored in ASCII files. We use the [UTF-8](http://www.utf8-chart
     ```
 
     If the module is under the `addons` directory, it will be in a specific GitHub repository. Otherwise, it will be in the [main Nuxeo repository](https://github.com/nuxeo/nuxeo).
+
+    * For Web UI labels, edit the [Nuxeo Web UI](https://github.com/nuxeo/nuxeo-web-ui/blob/master/i18n/messages.json) or [Nuxeo UI Elements](https://github.com/nuxeo/nuxeo-ui-elements/blob/master/i18n/messages.json) JSON files.
 
 2.  Use any standard Java i18n tool to edit the files.
 3.  Make a pull-request on [GitHub](https://github.com/nuxeo/).
@@ -388,7 +391,7 @@ Nuxeo is highly modularized and as a consequence, it is totally possible to deve
 6.  You can ask for a code review in the [nuxeo-dev mailing list](mailto:nuxeo-dev@lists.nuxeo.com).
 7.  [Package your plugin as a Nuxeo Package]({{page page='creating-nuxeo-packages'}}), if you want it to be on [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/)  Plus it will be much easier for people to install it.
 
-In addition to code conventions and development good practices above-mentioned, wen creating a new module you should also take the following recommendations into considerations:
+In addition to code conventions and development good practices above-mentioned, when creating a new module you should also take the following recommendations into considerations:
 
 *   Align your code on a recent released version or on the latest development version.
 *   Provide a **clean POM** (well indented, no duplication, inheriting nuxeo-ecm POM, ...).

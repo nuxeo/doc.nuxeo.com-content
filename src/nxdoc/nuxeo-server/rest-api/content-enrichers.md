@@ -797,7 +797,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 
 {{/panel}}
 
-### Tags&nbsp;
+### Tags
 
 {{#> panel type='code' heading='Call Example'}}
 
@@ -846,7 +846,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 
 {{/panel}}
 
-### Running Workflows
+### {{> anchor 'runningWorkflows'}}Running Workflows
 
 {{#> panel type='code' heading='Call Example'}}
 
@@ -920,7 +920,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 
 {{/panel}}
 
-### Runnable Workflows
+### {{> anchor 'runnableWorkflows'}}Runnable Workflows
 
 {{#> panel type='code' heading='Call Example'}}
 

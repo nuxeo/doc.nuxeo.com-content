@@ -6,6 +6,7 @@ review:
     status: ok
 toc: true
 labels:
+    - lts2016-ok
     - lts2017-ok
     - web-ui-customization
     - tcardoso

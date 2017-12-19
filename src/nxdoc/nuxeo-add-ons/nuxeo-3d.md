@@ -2,14 +2,14 @@
 title: Nuxeo 3D
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - 3d
     - mnixo
     - threed
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -129,7 +129,7 @@ The required Docker images are:
 
 * [Blender image](https://hub.docker.com/r/nuxeo/blender/) - This image installs the correct version of Blender with the needed plugins on it.
 
-    [Blender](https://www.blender.org/) is a free and open source 3D content suite. In Nuxeo Platform 3D, it is used to convert several 3D formats to a Collada - as an intermediate format - to be later processed.
+    [Blender](https://www.blender.org/) is a free and open source 3D content suite. In Nuxeo Platform 3D, it is used to convert several 3D formats to Collada - as an intermediate format - to be later processed.
     It is also used to render canonical views that can be defined. These renderings are generated with [Cycles Render Engine](https://www.blender.org/manual/render/cycles/). It allows for a ray-tracing rendering which produces high quality results. In order to convert Blender materials to Cycles materials, a plugin is activated and set up.
     3D content support is therefore limited to Blender support which is best-in-class on the open source landscape.
 
@@ -153,9 +153,9 @@ The supported 3D file formats are:
 - Stl (.stl)
 
 A 3D document is typically composed of a 3D main file and attachments for the 3D assets, such as textures.
-When a main 3D model file is assigned to a 3D document, a processing routine is initiated to extract metadata from the model, create 2D renditions (render views) and build the model's transmission formats. When this processing is completed, the 3D document view shows a 3D preview of the document, the configured render views, the 'transmission formats' details and the files that make up the content of the 3D document. Replacing the main file or the attachments of a 3D document also triggers the processing routine, so that the render views and transmission formats can be updated.
+When a main 3D model file is assigned to a 3D document, a processing routine is initiated to extract metadata from the model, create 2D renditions (render views) and build the model's transmission formats. When this processing is completed, the 3D document view shows a 3D preview of the document, the configured render views, the transmission formats' details and the files that make up the content of the 3D document. Replacing the main file or the attachments of a 3D document also triggers the processing routine, so that the render views and transmission formats can be updated.
 
-To create a 3D document, you can either attach the 3D file as main content of the document and then attach the textures files in the **Files** tab (see the page [Attachments]({{page version='' space='userdoc' page='attachments'}})), or you can directly attach a standalone ZIP file as main content of the 3D document, that holds all the 3D resources for the document. This second way to proceed allows a directory structure inside the ZIP.
+To create a 3D document, you can either attach the 3D file as main content of the document and then attach the textures files, or you can directly attach a standalone ZIP file as main content of the 3D document, that holds all the 3D resources for the document. This second way to proceed allows a directory structure inside the ZIP.
 
 Available features on 3D document type:
 - [Edit metadata]({{page version='' space='userdoc' page='editing-content'}}#edit-metadata-form)

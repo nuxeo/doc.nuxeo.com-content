@@ -2,7 +2,7 @@
 title: 'HOWTO: Customize Theme'
 review:
     comment: ''
-    date: '2017-01-16'
+    date: '2017-12-14'
     status: ok
 toc: true
 details:
@@ -18,7 +18,7 @@ labels:
     - extension
     - theme
     - appearance
-    - content-review-lts2017
+    - lts2017-ok
 tree_item_index: 1000
 
 ---
@@ -68,22 +68,23 @@ Edit the `theme.html`:
 
 {{#> panel type='code' heading='Then change the `--nuxeo-app-font` accordingly'}}
 ```css
-<style is="custom-style">
-  ...
-  :root {
-    --nuxeo-app-font: 'Gabriela', Arial, sans-serif;
+<custom-style>
+  <style is="custom-style">
     ...
-   }
-   ...
-</style>
-
+    html {
+      --nuxeo-app-font: 'Gabriela', Arial, sans-serif;
+      ...
+     }
+     ...
+  </style>
+</custom-style>
 ```
 {{/panel}}
 
 
 {{#> panel type='code' heading='Change some colors'}}
 ```css
-  :root {
+  html {
     ...
     --nuxeo-badge-background: Tomato;
     ...
@@ -99,8 +100,8 @@ Edit the `theme.html`:
 
 {{#> panel type='code' heading='Change background to use a custom image'}}
 ```css
-  :root {
-  --nuxeo-page-background: url(themes/new-light/background.png) repeat;
+  html {
+    --nuxeo-page-background: url(themes/new-light/background.png) repeat;
   }
 ```
 {{/panel}}

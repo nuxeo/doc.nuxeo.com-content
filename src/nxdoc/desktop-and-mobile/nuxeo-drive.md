@@ -2,14 +2,14 @@
 title: Nuxeo Drive
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - link-update
     - nuxeo-drive
     - yachour
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
@@ -831,7 +831,7 @@ On your Home Nuxeo Drive tab, the space is displayed in the "Synchronization roo
 #### Web UI
 
 To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive_unsynced-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
-The icon becomes orange ![]({{file name='drive_synced_under_root-webui.png' page='nuxeo-drive'}} ?w=20). Documents inside the synchronized space have a Drive local edit icon ![]({{file name='drive_edit-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
+The icon becomes pink ![]({{file name='drive_synced_under_root-webui.png' page='nuxeo-drive'}} ?w=20). Documents inside the synchronized space have a Drive local edit icon ![]({{file name='drive_edit-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
 
 {{{multiexcerpt 'drive-content-sync'}}}
 
@@ -866,6 +866,12 @@ There are two ways to desynchronize a folder.
 By default, once you have synchronized a folder all its content (files and folders) are synchronized. But you can deactivate synchronization locally on some folders. This feature enables you to manage the storage space dedicated to the synchronization, which is especially useful if you use a device with a low-storage capacity.
 
 Clicking on the **Select sync folders** button in the [Settings window](#open-drive-settings) shows the **Nuxeo Drive Filters** windows from which you can unselect folders to unsynchronize. Unselected folders remain displayed to you can easily reselect and synchronize them back. They are still marked as synchronized on your web UI.
+
+{{#> callout type='warning' }}
+
+Please note that when synchronizing a significant amount of data, it is highly inadvisable to deactivate synchronization of the folders containing this data, to avoid generating conflicts with the server. Versions 2.5.9 and above will not allow to access the "select sync folders" window when such synchronization is running.
+
+{{/callout}}
 
 #### Unsynchronizing Folders (Server)
 
