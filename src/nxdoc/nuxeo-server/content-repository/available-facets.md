@@ -267,6 +267,10 @@ Marker facet to be set on types which handle a list of picture views. Deprecated
 
 The document won't be full-text indexed.
 
+## NXTag
+
+Facet used by the Tag service to represent tags as a document property.
+
 ## Orderable
 
 This should be set on `Folderish` types for which maintaining the order of children is important. (`CoreSession#orderBefore` can be used only on documents contained in `Orderable` folders.)
@@ -298,5 +302,3 @@ This facet should be set on any type if you want to use it as the task document 
 ## WebView
 
 &nbsp;
-
-* * *
