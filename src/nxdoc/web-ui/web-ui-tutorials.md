@@ -10,9 +10,6 @@ labels:
     - web-ui-customization
     - nsilva
     - tcardoso
-    - lts2017-ok
-    - web-ui-customization
-    - tcardoso
 tree_item_index: 400
 
 ---
