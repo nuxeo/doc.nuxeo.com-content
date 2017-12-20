@@ -27,6 +27,11 @@ confluence:
 tree_item_index: 195
 history:
     -
+        author: Luís Duarte
+        date: '2017-12-20 17:31'
+        message: ''
+        version: '31'
+    -
         author: Frantz Fischer
         date: '2016-07-01 09:24'
         message: ''
@@ -190,6 +195,9 @@ To install the CAS2 authentication plugin:
 2.  Install the [CAS2 Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication).
 3.  Put CAS2 plugin into the authentication chain.{{{multiexcerpt 'authentication_chain_contribution' page='Authentication and User Management'}}}
   Use `CAS2_AUTH`.
+  {{#> callout type='warning' }}
+  In order to allow External Users into your system, make sure `TOKEN_AUTH` plugin **is declared before** `CAS2_AUTH`
+  {{/callout}}
 4.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) called `CAS2-config.xml` with the following content:
 
     ```xml
