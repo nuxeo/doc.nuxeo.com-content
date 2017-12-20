@@ -199,6 +199,8 @@ history:
 
 This endpoint allows to upload a batch of files to a Nuxeo server. The uploaded files can then be used as the input of an Automation operation or a property of a document through the REST API.
 
+{{! /excerpt}}
+
 ## Batch Upload Endpoint
 
 <div class="table-scroll">
