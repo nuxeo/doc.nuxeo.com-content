@@ -152,3 +152,20 @@ Here are a list of resources to start working with Nuxeo Studio:
 *   [Working in Studio Modeler]({{page page='working-in-studio'}}): This section of the documentation provides screen by screen descriptions of the tool
 *   [Essential Nuxeo Platform Terminology]({{page space='nxdoc' page='essential-nuxeo-platform-terminology'}}): Get familiar with the concepts and terms used in the Platform
 *   [Quick Start Dev Guide]({{page space='nxdoc' page='start-customizing-the-nuxeo-platform'}}): Start a Nuxeo Platform customization project using Nuxeo Studio and Nuxeo Generator
+
+## Browser Support
+
+Nuxeo Studio Designer and parts of Modeler make use of the recent W3C standard Web Components and Google Polymer 2.0 framework (legacy mode). The Google Polymer framework comes with polyfills for Web Components, a library that extends the support of web components standard to more browsers.
+Nevertheless, due to browser support to some shadow DOM features and third party libraries used in Nuxeo Studio some browsers are not supported.
+
+Supported browsers are:
+{{! multiexcerpt name='webui-supported-browsers'}}
+ - Google Chrome
+ - Firefox
+{{! /multiexcerpt}}
+
+{{#> callout type='warning' heading='Exceptions on Firefox'}}
+
+Firefox is not fully supported on Nuxeo Studio Designer. Currently, view editors - with widget preview on forms - are not supported.
+
+{{/callout}}
