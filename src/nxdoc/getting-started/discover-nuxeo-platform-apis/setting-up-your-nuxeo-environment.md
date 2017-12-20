@@ -7,7 +7,7 @@ review:
 toc: true
 labels:
     - lts2016-ok
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '29460589'
     ajs-parent-page-title: Getting Started with the Nuxeo Platform
