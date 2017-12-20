@@ -557,11 +557,6 @@ If you installed the Nuxeo DAM addon, you will need these additional requirement
 
 Thumbnails and previews are created when documents are imported into Nuxeo, not on the fly when browsing documents. So in order to check if the third party software work properly on your Nuxeo instance, you must import new documents.
 
-[Installing on Linux](#Installing-on-Linux)
-
-[Installing on macOS and OS X](#Installing-on-macOS-and-OS-X)
-
-[Installing on Windows](#Installing-on-Windows)
 
 ## Installing on Linux  {{> anchor 'Installing-on-Linux'}}
 
@@ -573,7 +568,7 @@ $ sudo apt-get install openjdk-8-jdk imagemagick ufraw poppler-utils libreoffice
 
 {{#> callout type='warning' }}
 
-Installing the FFmpeg package from your distribution's repository may not provide you with support for all video formats. Refer to the [additional formats support for FFmpeg](#additional-formats-support-for-ffmpeg) section for more information.
+Installing the FFmpeg package from your distribution's repository may not provide you with support for all video formats. Refer to the [FFmpeg](#ffmpeg) section for more information.
 
 {{/callout}}
 

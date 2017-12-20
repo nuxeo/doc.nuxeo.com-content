@@ -265,14 +265,14 @@ The Nuxeo Platform comes in different packages and can be installed on many oper
 
 *   a zip archive (works on any operating system that supports a Java Development Kit),
 *   a Windows installer (**.exe**),
-*   a virtual machine image (works on any operating system that supports running WMWare or VirtualBox),
+*   a virtual machine image (works on any operating system that supports running VMware or VirtualBox),
 *   a **.deb** package (works on Linux Debian and Ubuntu).
 
 ## General Installation Process
 
 Installing the Nuxeo Platform requires a few steps:
 
-1.  Have a look at our Hardware and Software Requirements in the section below, as well as our [supported databases]({{page page='compatibility-matrix#databases'}}) and [application servers]({{page page='compatibility-matrix#application-servers'}}). You may also want to read our page regarding [required storage space]({{page page='how-to-estimate-volume-usage'}}).
+1.  Have a look at our Hardware and Software Requirements in the section below, as well as our [supported databases]({{page page='compatibility-matrix'}}#databases) and [application servers]({{page page='compatibility-matrix'}}#application-servers). You may also want to read our page regarding [required storage space]({{page page='how-to-estimate-volume-usage'}}).
 2.  [Install and Set up the related software]({{page page='installing-and-setting-up-related-software'}}) (unless you deploy on Amazon, the image already includes it).
 3.  Install and start the Nuxeo Platform server.
     To understand how to start a Nuxeo Platform server on different environments, you can read and follow one of our recipes:
@@ -308,7 +308,7 @@ If you have some constraints that do not fit this grid, **do not hesitate to con
 
 <tr><th colspan="1">Java</th>
 <td colspan="1">{{{multiexcerpt 'java_requirement' page='Compatibility Matrix'}}}</td>
-<td colspan="1">See the following documentation: <ul><li>[Checking your Java Version]({{page page='installation#java-check'}})</li> <li>[How to Install Java]({{page page='installation#java-install'}})</li></td>
+<td colspan="1">See the following documentation: <ul><li>[Checking your Java Version]({{page page='installation'}}#java-check)</li> <li>[How to Install Java]({{page page='installation'}}#java-install)</li></td>
 </tr>
 
 <tr><th colspan="1">Application Server</th>
