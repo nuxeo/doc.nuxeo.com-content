@@ -288,7 +288,7 @@ You can customize the login page using [Nuxeo Studio]({{page space='studio' page
 
 You can build a custom directory that will wrap your webservice.
 
-You can use the [Nuxeo Directory Connector] (https://github.com/tiry/nuxeo-directory-connector) sample as a starting point.
+You can use the [Nuxeo Directory Connector](https://github.com/tiry/nuxeo-directory-connector) sample as a starting point.
 
 <div class="row" data-equalizer data-equalize-on="medium">
 
