@@ -2,7 +2,7 @@
 title: VCS Tables
 review:
     comment: ''
-    date: '2016-12-08'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - acl
     - bdelbosc
     - vcs-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3342350'

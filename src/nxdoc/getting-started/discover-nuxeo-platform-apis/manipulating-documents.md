@@ -2,12 +2,12 @@
 title: Manipulating Documents
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-15'
     status: ok
 toc: true
 labels:
     - lts2016-ok
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '29460589'
     ajs-parent-page-title: Getting Started with the Nuxeo Platform
@@ -525,7 +525,7 @@ Restore the contract to its previous (`draft`) state.
 
 {{/callout}}
 
-## Querying for Documents
+## Searching for Documents
 
 Find a contract that needs to be deleted: it expired before 2016 and has a limitation clause in its content.
 
@@ -575,7 +575,7 @@ Find a contract that needs to be deleted: it expired before 2016 and has a limit
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [Query Endpoint]({{page page='query-endpoint'}})
+*   [Search Resource Endpoints]({{page page='search-endpoints'}})
 *   [Indexing and Query]({{page page='indexing-and-query'}})
 
 {{/callout}}

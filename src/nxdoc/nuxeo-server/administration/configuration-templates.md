@@ -139,14 +139,15 @@ Here are the templates provided by default:
 
 *   `common`: Common template used by other templates
 *   [`default`]({{page page='connecting-nuxeo-to-the-database'}}): default Nuxeo configuration template for test purpose
-*   `sql`: Configuration template for SQL directories (since 9.2)
 *   [`https`]({{page page='http-and-https-reverse-proxy-configuration'}}): (not recommended) Template to make the server listen to port 443 (HTTPS)
 *   [`postgresql`]({{page page='postgresql'}}): PostgreSQL configuration template
 *   `postgresql-quartz-cluster`
 *   [`mssql`]({{page page='microsoft-sql-server'}}): MS SQL Server configuration template
 *   `mssql-quartz-cluster`
 *   [`mysql`]({{page page='mysql'}}): MySQL configuration template
+*   `mysql-quartz-cluster`
 *   [`mariadb`]({{page page='mariadb'}}): MariaDB configuration template (since Nuxeo FT 9.1; for older versions of Nuxeo the `mysql` template should be used)
+*   `mariadb-quartz-cluster`
 *   [`mongodb`]({{page page='mongodb'}}): MongoDB configuration template
 *   [`oracle`]({{page page='oracle'}}): Oracle configuration template
 *   `oracle-quartz-cluster`;

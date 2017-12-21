@@ -1,9 +1,9 @@
 ---
 title: 'HOWTO: Translate the Nuxeo Platform'
 review:
-    comment: ''
-    date: '2017-07-11'
-    status: ok
+    comment: 'This page is mainly about labels management in Nuxeo JSF UI. An update is planned to include Web UI labels management. See [NXDOC-1436](https://jira.nuxeo.com/browse/NXDOC-1436).'
+    date: '2017-12-14'
+    status: requiresUpdates
 details:
     howto:
         excerpt: Learn how to translate the Nuxeo Platform
@@ -348,7 +348,7 @@ Now here's a couple of tips:
 
 *   **If the context of a label is unclear**, please request the context from the Nuxeo team. These comments are also visible for anyone else that translates or approves translations.
 
-Before every release, the translations are exported from Crowdin to the [nuxeo-platform-lang-ext](https://github.com/nuxeo/nuxeo-platform-lang-ext) addon by Nuxeo.
+Before every release, the translations are exported from Crowdin to the [nuxeo-platform-lang-ext](https://github.com/nuxeo/nuxeo-platform-lang-ext) and [nuxeo-platform-lang-incomplete](https://github.com/nuxeo/nuxeo-platform-lang-ext-incomplete) addons by Nuxeo.
 
 ### Adding a New Language
 
@@ -374,13 +374,13 @@ To test a translation file provided by Crowdin against your Nuxeo server, you ca
     As an alternative, you can pick the current messages.properties file on your server at `$SERVER/nxserver/nuxeo.war/WEB-INF/classes/messages_xx_XX.properties` and edit it manually.
 2.  Start your Nuxeo server in development mode:
 
-    *   Go to **ADMIN** > **Update Center** > **Nuxeo Studio** and click on the dedicated button.
-
-    *   Or add the following to the `$SERVER/bin/nuxeo.conf` file.
+    *   Add the following to the `$SERVER/bin/nuxeo.conf` file.
 
         ```
         org.nuxeo.dev=true
         ```
+
+    *   Or in JSF UI go to **ADMIN**&nbsp;> **Update Center**&nbsp;> **Nuxeo Studio** and click on the dedicated button.
 
 3.  Log in as Administrator.
 4.  Replace the file at `$SERVER/nxserver/nuxeo.war/WEB-INF/classes/messages_xx_XX.properties` by the one you downloaded from Crowdin or edit it.
@@ -405,13 +405,13 @@ Files at `$SERVER/nxserver/nuxeo.war` are re-computed from Nuxeo bundles at each
 If you want to translate or update a specific label you saw in the UI but you can identify it in Crowdin between several messages, follow the steps below:
 
 1.  Activate the Dev mode on your Nuxeo server:
-    1.  Go to **ADMIN** > **Update Center** > **Nuxeo Studio** and click on the dedicated button.
-
-    2.  Or add the following to the `$SERVER/bin/nuxeo.conf` file.
+    *  Add the following to the `$SERVER/bin/nuxeo.conf` file.
 
         ```
         org.nuxeo.dev=true
         ```
+
+    *  Or in JSF UI go to **ADMIN**&nbsp;> **Update Center**&nbsp;> **Nuxeo Studio** and click on the dedicated button.
 
 2.  Log in as Administrator.
 3.  Edit the file `$SERVER/nxserver/nuxeo.war/WEB-INF/classes/messages_xx_XX.properties` and replace the labels you want to identify and translate by their id in order to get something like `action.view.rights.management=action.view.rights.management`.
@@ -571,12 +571,6 @@ Only the master branch is handled by Crowdin: changes to translation files in ma
 An export of translations files from Crowdin requires the project to be "built" first. This build is quite costly on Crowdin side, so it will not be performed more than once every 30 minutes via the API (used by automated synchronization). In this case, you should ask one of the Crowdin project managers to build the project directly on the Crowdin UI (or wait 30 minutes) before launching the synchronization again.
 
 {{/callout}}
-
-### Jenkins Automated Builds
-
-The job at [http://qa.nuxeo.org/jenkins/job/nuxeo-crowdin-synchro-check-master/](http://qa.nuxeo.org/jenkins/job/nuxeo-crowdin-synchro-check-master/) generates the aggregated messages.properties file and runs unit tests on it: this helps detecting duplicate entries in the aggregated file.
-
-The job at [https://qapriv.nuxeo.org/jenkins/job/trigger-sync-nuxeo-crowdin/](https://qapriv.nuxeo.org/jenkins/job/trigger-sync-nuxeo-crowdin/) (requires authentication) triggers the daily synchronizations from/to Nuxeo/Crowdin. This synchronization can also be triggered manually by running the job at [https://qapriv.nuxeo.org/jenkins/job/sync-nuxeo-crowdin/](https://qapriv.nuxeo.org/jenkins/job/sync-nuxeo-crowdin/) (requires authentication).
 
 * * *
 

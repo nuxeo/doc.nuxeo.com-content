@@ -4,11 +4,11 @@ description: Discover how to bootstrap Nuxeo components or a new project using N
 tree_item_index: 300
 toc: true
 review:
-    date: '2017-03-15'
+    date: '2017-12-11'
     status: ok
     comment: ''
 labels:
-    - content-review-lts2017
+    - lts2017-ok
     - nuxeo-cli
     - akervern
 

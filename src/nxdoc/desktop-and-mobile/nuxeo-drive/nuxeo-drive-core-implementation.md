@@ -2,10 +2,10 @@
 title: Nuxeo Drive Core Implementation
 review:
     comment: ''
-    date: '2016-12-15'
+    date: '2017-12-18'
     status: ok
 labels:
-    - content-review-lts2017
+    - lts2017-ok
     - nuxeo-drive
     - mschoentgen
 toc: true

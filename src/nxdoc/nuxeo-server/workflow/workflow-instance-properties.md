@@ -2,7 +2,7 @@
 title: Workflow Instance Properties
 review:
     comment: ''
-    date: '2017-01-20'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - workflow
     - grenard
     - excerpt
-    - content-review-lts2017
+    -  lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '12913723'

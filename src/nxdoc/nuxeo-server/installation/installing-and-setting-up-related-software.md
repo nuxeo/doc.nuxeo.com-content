@@ -2,7 +2,7 @@
 title: Installing and Setting Up Related Software
 review:
     comment: ''
-    date: '2016-12-27'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
@@ -12,7 +12,7 @@ labels:
     - third-party-software
     - multiexcerpt-include
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
@@ -557,7 +557,8 @@ If you installed the Nuxeo DAM addon, you will need these additional requirement
 
 Thumbnails and previews are created when documents are imported into Nuxeo, not on the fly when browsing documents. So in order to check if the third party software work properly on your Nuxeo instance, you must import new documents.
 
-## Linux
+
+## Installing on Linux  {{> anchor 'Installing-on-Linux'}}
 
 Under Debian or Ubuntu, most of these can be installed by the following command:
 
@@ -567,7 +568,7 @@ $ sudo apt-get install openjdk-8-jdk imagemagick ufraw poppler-utils libreoffice
 
 {{#> callout type='warning' }}
 
-Installing the FFmpeg package from your distribution's repository may not provide you with support for all video formats. Refer to the [additional formats support for FFmpeg](#additional-formats-support-for-ffmpeg) section for more information.
+Installing the FFmpeg package from your distribution's repository may not provide you with support for all video formats. Refer to the [FFmpeg](#ffmpeg) section for more information.
 
 {{/callout}}
 
@@ -576,7 +577,7 @@ Installing the FFmpeg package from your distribution's repository may not provid
 {{! multiexcerpt name='libreoffice-5'}}
 **Minimum required version**
 
-The minimum version required is LibreOffice 5. The soffice program must be added to the PATH environment variable.
+The minimum version required is LibreOffice 5. The path to the soffice program must be added to the PATH environment variable.
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='ooo-libreoffice-configuration'}}
@@ -584,7 +585,7 @@ The minimum version required is LibreOffice 5. The soffice program must be added
 
 For preview to work, the server must start LibreOffice. The Nuxeo Platform looks for LibreOffice at different locations on the system. See [PlatformUtils.java definition](https://github.com/nuxeo/jodconverter/blob/3.0-NX/jodconverter-core/src/main/java/org/artofsolving/jodconverter/util/PlatformUtils.java) for searched locations.
 
-If LibreOffice isn't available at one of these locations, you need to add the `soffice` program to your path: Edit the `Path` system variable and add `;OFFICE_INSTALL_DIRECTORY\program`.
+If LibreOffice isn't available at one of these locations, you need to add the path to `soffice` program to your path: Edit the `PATH` environment variable and add `:OFFICE_INSTALL_DIRECTORY/program`.
 
 {{#> callout type='tip' }}
 If not using default install path, you may have to add the path to the executable in your `nuxeo.conf`:
@@ -631,7 +632,7 @@ $ cd nuxeo-tools-docker/ccextractor
 $ sudo ./build-package.sh
 ```
 
-## macOS and OS X
+## Installing on macOS and OS X  {{> anchor 'Installing-on-macOS-and-OS-X'}}
 
 The macOS installation instructions provided use [Homebrew](http://mxcl.github.com/homebrew/).
 
@@ -713,7 +714,7 @@ $ brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype \
 --with-theora --with-tools --with-x265 --with-faac
 ```
 
-This install most libraries. You can of course remove the libraries that are needed for the video files you will be managing. Use `brew info ffmpeg` for details about each library available.
+This installs most libraries. You can of course remove the libraries that are not needed for the video files you will be managing. Use `brew info ffmpeg` for details about each library available.
 
 ### UFRaw
 
@@ -771,7 +772,7 @@ To install CCExtractor using Homebrew:
 $ brew install ccextractor
 ```
 
-## Windows
+## Installing on Windows  {{> anchor 'Installing-on-Windows'}}
 
 The following software are already included when using the .exe installer:
 
@@ -801,7 +802,27 @@ If not already present on the system, you will have the option to automatically 
 
 {{{multiexcerpt 'ooo-libreoffice-installation' page='Installing and Setting up Related Software'}}}
 
-{{{multiexcerpt 'ooo-libreoffice-configuration' page='Installing and Setting up Related Software'}}}
+**Installation location and Path configuration**
+
+For preview to work, the server must start LibreOffice. The Nuxeo Platform looks for LibreOffice at different locations on the system. See [PlatformUtils.java definition](https://github.com/nuxeo/jodconverter/blob/3.0-NX/jodconverter-core/src/main/java/org/artofsolving/jodconverter/util/PlatformUtils.java) for searched locations.
+
+If LibreOffice isn't available at one of these locations, you need to add the path to `soffice` program to your path: Edit the `Path` system variable and add `;OFFICE_INSTALL_DIRECTORY\program`.
+
+{{#> callout type='tip' }}
+If not using default install path, you may have to add the path to the executable in your `nuxeo.conf`:
+
+```
+jod.office.home=disk:\path\to\libreoffice
+```
+
+{{/callout}}
+
+**Non-latin languages configuration**
+
+If you'll be working with non-latin languages:
+
+1.  Start LibreOffice manually.
+2.  Install the additional fonts you may need for non-default languages.
 
 #### pdftohtml
 
@@ -828,7 +849,9 @@ ImageMagick is installed by the Nuxeo Platform Windows installer (.exe), but her
 
 #### Controlling ImageMagick Multi-Threads
 
-{{{multiexcerpt 'imagemagick-multi-threads' page='installing-and-setting-up-related-software'}}}
+By default ImageMagick is multi threaded and will use all the available CPUs. This creates burst of CPU usage, especially when thumbnail is generated concurrently.
+
+Hopefully you can control the number of threads used by ImageMagick by setting a system environment variable `MAGICK_THREAD_LIMIT=1`.
 
 ### Ghostscript
 
@@ -855,7 +878,7 @@ ImageMagick is installed by the Nuxeo Platform Windows installer (.exe), but her
 {{! multiexcerpt name='windows-add-to-path'}}
     1.  Open File Explorer, right-click on "This PC" and click on **Properties**.
 
-    2.  On the System pane select **Advanced system settings**.
+    2.  On the System panel select **Advanced system settings**.
 
     3.  On the **Advanced** tab, click **Environment Variables...** and edit the `PATH` system variable to add the path you copied (use a `;` to separate values).
 {{! /multiexcerpt}}

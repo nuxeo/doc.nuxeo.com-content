@@ -5,14 +5,14 @@ tree_item_index: 400
 toc: false
 review:
     comment: ''
-    date: '2017-06-16'
+    date: '2017-12-13'
     status: ok
 details: null
 labels:
     - nuxeo-cli
     - roadmap
     - bchauvin
-    - content-review-lts2017
+    - lts2017-ok
 
 ---
 

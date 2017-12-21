@@ -2,14 +2,14 @@
 title: Nuxeo Mobile
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-13'
     status: ok
 toc: true
 labels:
     - lts2016-ok
     - nuxeo-mobile
     - yachour
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '31033323'
     ajs-parent-page-title: Desktop and Mobile
@@ -160,7 +160,7 @@ history:
 
 ### iPhone Requirements
 
-The Nuxeo mobile application is available for iPhones SE, 5/5c/5s, 6/6+, 7/7+ with a minimum version of iOS 8 required.
+The Nuxeo mobile application is available for iPhones SE, 5/5c/5s, 6/6+, 7/7+, 8/8+ and X with a minimum version of iOS 8 required.
 
 ### Android Requirements
 
@@ -190,24 +190,9 @@ The Nuxeo **Android** application can be installed from [Google Play](https://pl
 
 ## Functional Overview
 
-The Nuxeo application allows you to authenticate against a Nuxeo server, browse and search the Nuxeo repository. In addition you can manage your favorite documents and access your shared/personal collections. It provides a menu giving access to all menu entries, except when you are browsing.
+The Nuxeo application allows you to authenticate against a Nuxeo server, browse and search the Nuxeo repository. In addition, you can manage your favorite documents and access your shared/personal collections. All features listed below are available using the side ("burger") menu.
 
 ![]({{file name='mobile-menu.png'}} ?w=200,h=355,border=true)
-
-### Offline mode
-
-When your phone loses network connection or when you turn it on airplane mode, an offline mode is now available.
-
-<div>
-<table class="hover" style="border: 0px;">
-<tbody>
-<tr>
-<td colspan="1"><b>![]({{file name='mobile-offline-mode.png'}} ?w=200,h=355,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-offline-mode-refresh.png'}} ?w=200,h=355,border=true)</b></td>
-</tr>
-</tbody>
-</table>
-</div>
 
 ### Authenticating
 
@@ -258,6 +243,12 @@ If the PDF preview is available, tap the thumbnail zone to preview it. If the do
 {{#> callout type='tip' }}
 When previewing a document, you can hide the top bar by taping the screen.
 {{/callout}}
+
+### Search
+
+The **Search** menu enables you to query documents on their title and content, by performing a full-text search. {{{multiexcerpt 'full-text-search-user-desc' page='USERDOC:Quick Search'}}}A list of matching documents is provided and you can directly have access them. Once on a document, tap the back icon to go back to search results.
+
+![]({{file name='mobile-search.png'}} ?w=200,h=355,border=true)
 
 ### Favorites
 
@@ -320,15 +311,24 @@ In addition, you are able to **Open directly** documents on your phone by downlo
 </table>
 </div>
 
-### Search
-
-The **Search** menu enables you to query documents on their title and content, by performing a full-text search. {{{multiexcerpt 'full-text-search-user-desc' page='USERDOC:Quick Search'}}}A list of matching documents is provided and you can directly have access them. Once on a document, tap the back icon to go back to search results.
-
-![]({{file name='mobile-search.png'}} ?w=200,h=355,border=true)
-
 ### Personal Workspace
 
 The personal workspace menu gives you a direct access to your collections and personal documents.
+
+### Offline mode
+
+When your phone loses network connection or when you turn it on airplane mode, an offline mode is now available.
+
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='mobile-offline-mode.png'}} ?w=200,h=355,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-offline-mode-refresh.png'}} ?w=200,h=355,border=true)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ## {{> anchor 'limitations'}}Limitations
 

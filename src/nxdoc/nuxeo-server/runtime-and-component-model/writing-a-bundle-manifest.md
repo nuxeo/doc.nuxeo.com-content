@@ -2,14 +2,14 @@
 title: Writing a Bundle Manifest
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - runtimecomponent
     - kleturc
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950284'
     ajs-parent-page-title: Runtime and Component Model
@@ -200,8 +200,6 @@ Here is some practical information:
 *   Using the manifest you can declare bundle dependencies (so that the bundle can be started only when dependencies are resolved). Also, these dependencies are used to determine the visible class path of your bundle. Classes not specified in dependencies will not be visible to your bundle. Bundle dependencies **are ignored** by Nuxeo Runtime launcher.
 
 In the Nuxeo Platform, the best way to initialize your components (without worrying about dependencies) is to use a lazy loading model - so that a service is initialized at the first call. This method also speed the startup time.
-
-Another method is to use the **FRAMEWORK_STARTED** event for initialization. But this should be used with precaution since its use in Nuxeo doesn't respect OSGi specifications - and may change in future.
 
 Here is an example of a minimal manifest as required by Nuxeo.
 

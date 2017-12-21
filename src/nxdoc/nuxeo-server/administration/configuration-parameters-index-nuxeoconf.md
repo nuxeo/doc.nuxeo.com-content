@@ -2,7 +2,7 @@
 title: Configuration Parameters Index (nuxeo.conf)
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-11'
     status: ok
 labels:
     - content-review-lts2016
@@ -12,7 +12,7 @@ labels:
     - launcher
     - akervern
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
@@ -25,6 +25,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/QQA7'
     source_link: /pages/viewpage.action?pageId=3866689
 tree_item_index: 100
+toc: true
 version_override:
     LTS 2015: 710/admindoc/configuration-parameters-index-nuxeoconf
     '6.0': 60/admindoc/configuration-parameters-index-nuxeoconf
@@ -1070,12 +1071,12 @@ history:
 The Nuxeo Platform reads configuration properties that you can set either:
 
 *   In a nuxeo.conf file
-*   From the Setup tab in the Admin Center
 *   By contributing to the [Configuration Service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute)
+*   From the Setup tab in the Admin Center (if Nuxeo JSF UI is installed)
 
 ## nuxeo.conf File {{> anchor 'conf-manual-edition'}}
 
-Nuxeo Platform reads configuration properties in nuxeo.conf file. Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files. y default, the `nuxeo.conf` file is located in `$NUXEO_HOME/bin`. If you installed your application using the Windows installer, the configuration is located in `%APPDATA%\Nuxeo\conf` (check the page [Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)&nbsp;for more information).
+Nuxeo Platform reads configuration properties in nuxeo.conf file. Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files. By default, the `nuxeo.conf` file is located in `$NUXEO_HOME/bin`. If you installed your application using the Windows installer, the configuration is located in `%APPDATA%\Nuxeo\conf` (check the page [Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)&nbsp;for more information).
 
 If you plan to use the application in production, you should [move the configuration file outside the Nuxeo home directory]({{page page='setup-best-practices'}}), to make upgrades easier and more secured: your data and configuration won't risk to be overridden or lost.
 
@@ -1089,16 +1090,18 @@ Wordpad is fine, Notepad++ and SciTE are good text editors, there are lots of [o
 
 Existing configuration parameters are listed in the index section below.
 
-## Admin Center / Setup Tab{{> anchor 'setup-admincenter'}}
+## Admin Center / Setup Tab {{> anchor 'setup-admincenter'}}
 
-Administrators can also change the nuxeo.conf configuration parameters from the Admin center.
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-**To edit the configuration of the application using the Admin tab:**
+Administrators can also change the `nuxeo.conf` configuration parameters from the Admin center.
+
+**To edit the configuration of the application using the Admin Center:**
 
 1.  Log in with an administrator account.
     Default administrator credentials are:
-    *   login: Administrator
-    *   password: Administrator
+    *   login: `Administrator`
+    *   password: `Administrator`
 2.  Click on the **Admin** tab in the page header.
 3.  Click on the **Setup** tab, edit the configuration you want to change and click on **Save**.
     ![]({{file name='AdminCenter_SetupTab.png' page='admin-tab-overview'}} ?w=650,border=true)
@@ -2271,6 +2274,19 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 <td colspan="1">`false`</td>
 <td colspan="1">&nbsp;</td>
 </tr>
+<tr>
+<td colspan="1">`elasticsearch.restClient.connectionTimeoutMs`</td>
+<td colspan="1">A timeout in milliseconds until a connection is established (RestClient)</td>
+<td colspan="1">`5000`</td>
+<td colspan="1">Since 9.10</td>
+</tr>
+<tr>
+<td colspan="1">`elasticsearch.restClient.socketTimeoutMs`</td>
+<td colspan="1">A maximum period, in milliseconds, of inactivity between two consecutive data packets (RestClient)</td>
+<td colspan="1">`20000`</td>
+<td colspan="1">Since 9.10</td>
+</tr>
+
 <tr>
 <td colspan="1">`nuxeo.directory.type`</td>
 <td colspan="1">Type of directory, used for LDAP or multi-directory configuration. Possible values are `default`, `ldap`, `multi`.</td>

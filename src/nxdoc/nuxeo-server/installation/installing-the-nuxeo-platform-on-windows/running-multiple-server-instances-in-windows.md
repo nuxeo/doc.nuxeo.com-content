@@ -2,14 +2,14 @@
 title: Running Multiple Server Instances in Windows
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-14'
     status: ok
 labels:
     - content-review-lts2016
     - install-windows
     - pabgrall
     - last-review-20141126
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '9274329'
     ajs-parent-page-title: Installing the Nuxeo Platform on Windows

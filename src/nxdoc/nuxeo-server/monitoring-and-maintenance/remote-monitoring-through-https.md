@@ -2,14 +2,14 @@
 title: Remote Monitoring through HTTP/S
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - monitoring-component
     - bdelbosc
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950318'

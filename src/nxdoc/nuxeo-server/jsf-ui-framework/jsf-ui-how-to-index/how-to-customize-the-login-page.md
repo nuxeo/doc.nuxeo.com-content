@@ -2,7 +2,7 @@
 title: How to Customize the Login Page
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-11'
     status: ok
 details:
     howto:
@@ -17,7 +17,7 @@ labels:
     - howto
     - theme
     - login-page-component
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '20517820'
     ajs-parent-page-title: JSF UI How-To Index

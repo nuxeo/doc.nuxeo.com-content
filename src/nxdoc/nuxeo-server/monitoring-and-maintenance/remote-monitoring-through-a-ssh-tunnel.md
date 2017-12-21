@@ -2,7 +2,7 @@
 title: Remote Monitoring Through a SSH Tunnel
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - ssh
     - monitoring-component
     - bdelbosc
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance

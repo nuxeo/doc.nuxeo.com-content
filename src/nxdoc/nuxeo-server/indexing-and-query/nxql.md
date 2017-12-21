@@ -2,14 +2,14 @@
 title: NXQL
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-15'
     status: ok
 labels:
     - content-review-lts2016
     - nxql
     - query-pageprovider-component
     - kleturc
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -900,7 +900,6 @@ The following limitations apply:
     *   `... WHERE tst:value = 1000*1000` (not allowed, right-hand side must be a literal, not an expression)
 *   Aggregates (`COUNT`, `AVERAGE`, `MAX`, `MIN`) are not supported.
 *   `DISTINCT` is supported only for `ecm:uuid`.
-*   `ecm:tag` queries are not supported.
 
 ## {{> anchor 'elasticsearchlimitations'}} Notes about Elasticsearch
 
@@ -932,7 +931,7 @@ Without a proper mapping the following NXQL operators will not work by default:
 
 *   Full-text search: `ecm:fulltext.my:field = 'foo'` works only if there is a multi field `my:field.fulltext` defined in the mapping.
 *   `ILIKE`: `my:field ILIKE 'Foo'` works only if there is a multi field `my:field.lowercase` defined in the mapping.
-*   ``STARTSWITH: ` my:field STARTSWITH` '/foo/bar': works only if there is a multi field `my:field.children` defined with proper analyzer. Note that `ecm:path.children` is already defined in the default mapping..
+*   `STARTSWITH`: `my:field STARTSWITH '/foo/bar'`: works only if there is a multi field `my:field.children` defined with proper analyzer. Note that `ecm:path.children` is already defined in the default mapping..
 
 Visit the [mapping documentation]({{page page='configuring-the-elasticsearch-mapping'}}) for more information.
 
@@ -940,8 +939,8 @@ Visit the [mapping documentation]({{page page='configuring-the-elasticsearch-map
 
 The full-text search is not configured the same way:
 
-*   The `ecm:fulltext` matches the Elasticsearch `_all` field which is the concatenation of all fields. This is different from the NXQL `ecm:fulltext` which matches only some explicit fields. You can [adapt the mapping to exclude some fields]({{page page='elasticsearch-setup'}}).
-*   Custom full-text indexes are not supported. `ecm:fulltext_someindex` will match the `_all` field. It is possible to select a list of field using hints, see below.
+*   The `ecm:fulltext` matches the `all_field` field which is the concatenation of all fields. This is different from the NXQL `ecm:fulltext` which matches only some explicit fields. You can [adapt the mapping to exclude some fields]({{page page='elasticsearch-setup'}}).
+*   Custom full-text indexes are not supported. `ecm:fulltext_someindex` will match the `all_field` field. It is possible to select a list of field using hints, see below.
 *   In addition to the NXQL full-text syntax, it is also possible to use the Elasticsearch [simple query string syntax](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-simple-query-string-query.html#_simple_query_string_syntax).
 
 ### Elasticsearch NXQL Hints
@@ -959,22 +958,21 @@ Where:
 *   `<index-list>` is one or multiple Elasticsearch fields comma separated
 *   `<analyzer>` is the name of an existing Elasticsearch analyzer, only used if the operator can handle it
 *   `<operator>` overrides the NXQL expression operator and is one the following Elasticsearch operators:
-    *   [common](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-common-terms-query.html)
-    *   [fuzzy](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-fuzzy-query.html)
-    *   [match](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-match-query.html)
-    *   [match_phrase](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-match-query.html#_phrase)
-    *   [match_phase_prefix](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-match-query.html#_match_phrase_prefix)
-    *   [multi_match](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-multi-match-query.html)
-    *   [query_string](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-query-string-query.html)
-    *   [simple_query_string](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-simple-query-string-query.html)
-    *   [regex](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-regexp-query.html)
-    *   [wildcard](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-wildcard-query.html)
+    *   [common](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-common-terms-query.html)
+    *   [fuzzy](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-fuzzy-query.html)
+    *   [match](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query.html)
+    *   [match_phrase](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query-phrase.html)
+    *   [match_phase_prefix](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query-phrase-prefix.html)
+    *   [multi_match](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-multi-match-query.html)
+    *   [query_string](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-query-string-query.html)
+    *   [simple_query_string](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-simple-query-string-query.html)
+    *   [regex](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-regexp-query.html)
+    *   [wildcard](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-wildcard-query.html)
     *   [Geo location](https://www.elastic.co/guide/en/elasticsearch/guide/current/geoloc.html) filters:
-        *   [geo_bounding_box](https://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-geo-bounding-box-filter.html)
-        *   [geo_distance](https://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-geo-distance-filter.html)
-        *   [geo_distance_range](https://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-geo-distance-range-filter.html)
-        *   [geo_hash_cell](https://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-geohash-cell-filter.html)
-        *   [geo_shape](https://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-geo-shape-filter.html)
+        *   [geo_bounding_box](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-geo-bounding-box-filter.html)
+        *   [geo_distance](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-geo-distance-filter.html)
+        *   [geo_distance_range](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-geo-distance-range-filter.html)
+        *   [geo_shape](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-geo-shape-filter.html)
 
 Here are some examples of NXQL queries using Elasticsearch hints:
 

@@ -1,9 +1,9 @@
 ---
 title: Nuxeo Elements Quality Assurance
 review:
-    comment: ''
-    date: '2017-01-16'
-    status: ok
+    comment: 'Needs to be updated after migration to Polymer 2.0 legacy API.'
+    date: '2017-12-15'
+    status: requiresUpdates
 toc: true
 labels:
     - lts2016-ok
@@ -12,7 +12,7 @@ labels:
     - testing
     - linting
     - performance
-    - nsilva
+    - gbarata
     - security
     - content-review-lts2017
 tree_item_index: 100
@@ -23,7 +23,7 @@ Using our experience, here we share some best practices and our views on these d
 
 ## Formatting and Linting
 
-A *linter* is a code quality tool that scans your code and flags bugs, unoptimized code and other suspicious constructs. *Linting* is important because it keeps the code clean and enforces a predefined set of rules and good practices. Because JavaScript is a loosely-typed language, it is very easy to introduce bugs in the code. Therefore, a JavaScript linter becomes a crucial tool to help developers identify problems in the code without having to execute it. Our linter of choice is [ESLint](http://eslint.org/), and you can use our Nuxeo Web UI [config file](https://github.com/nuxeo/nuxeo-web-ui/blob/master/.eslintrc.json) as a sample.
+A *linter* is a code quality tool that scans your code and flags bugs, unoptimized code and other suspicious constructs. *Linting* is important because it keeps the code clean and enforces a predefined set of rules and good practices. Because JavaScript is a loosely-typed language, it is very easy to introduce bugs in the code. Therefore, a JavaScript linter becomes a crucial tool to help developers identify problems in the code without having to execute it. Our linter of choice is [ESLint](http://eslint.org/), and you can use our Nuxeo Web UI [config file](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/.eslintrc.json) as a sample.
 
 You can find a quick guide on how to run and setup ESLint in their [online documentation](http://eslint.org/docs/user-guide/getting-started).
 
@@ -89,7 +89,7 @@ Try to use an element only once then pass the result through/between all element
 There are two ways to filter data from the server in order to avoid unnecessary quantity information in response:
 
 - filtering by **schemas**
-- using [**enrichers**](https://doc.nuxeo.com/nxdoc/content-enrichers/)
+- using [**enrichers**]({{page version='' space='nxdoc' page='content-enrichers'}})
 
 ##### Schemas
 
@@ -123,7 +123,7 @@ But we still need a permanent URL of the document for the navigation from this l
 
 ##### Enrichers
 
-The Nuxeo [enrichers](https://doc.nuxeo.com/nxdoc/content-enrichers/) are means to get additional computed documents information by simply setting a [special header](https://doc.nuxeo.com/nxdoc/special-http-headers). And if you cannot fullfil your need with the Nuxeo default headers, you can easily build your own.
+The Nuxeo [enrichers]({{page version='' space='nxdoc' page='content-enrichers'}}) are means to get additional computed documents information by simply setting a [special header]({{page version='' space='nxdoc' page='special-http-headers'}}). And if you cannot fullfil your need with the Nuxeo default headers, you can easily build your own.
 
 For example, to get the permanent URL of a document with the Nuxeo resource elements (`nuxeo-resource` and `nuxeo-operation`), set the `enrichers` property:
 
@@ -146,14 +146,14 @@ You will finally have all the information needed for your listing with a small a
 With Nuxeo platform, you have two ways of fetching data from the server for building listings and searching:
 
 - Via 'direct' queries
-- Via [`pageproviders`](https://doc.nuxeo.com/nxdoc/page-providers/)
+- Via [`pageproviders`]({{page version='' space='nxdoc' page='page-providers'}})
 
-Depending on your environment, you perform searches with Nuxeo Server on top of your **database** (Mysql/MariaDB, Postgresql, MongoDB, Oracle...) or on top of your [**ElasticSearch**](https://doc.nuxeo.com/710/admindoc/elasticsearch-setup/) **(recommended)**.
+Depending on your environment, you perform searches with Nuxeo Server on top of your **database** (Mysql/MariaDB, Postgresql, MongoDB, Oracle...) or on top of your [**ElasticSearch**]({{page version='' space='nxdoc' page='elasticsearch-setup'}}) **(recommended)**.
 
-For Elasticsearch (ES), use `pageproviders` which [can be activated for ES](https://doc.nuxeo.com/710/nxdoc/how-to-make-a-page-provider-or-content-view-query-elasticsearch-index/) via the `nuxeo.conf` file and the following Nuxeo elements with related properties:
+For Elasticsearch (ES), use `pageproviders` which [can be activated for ES]({{page version='' space='nxdoc' page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}) via the `nuxeo.conf` file and the following Nuxeo elements with related properties:
 
-- [`nuxeo-page-provider`](http://nuxeo.github.io/nuxeo-elements/components/nuxeo-elements/#nuxeo-page-provider) with the property `provider` set
-- [`nuxeo-operation`](http://nuxeo.github.io/nuxeo-elements/components/nuxeo-elements/#nuxeo-operation) with the operation [`Repository.PageProvider`](http://explorer.nuxeo.com/nuxeo/site/distribution/cap-8.3/viewOperation/Repository.Query)
+- [`nuxeo-page-provider`](https://www.webcomponents.org/element/nuxeo/nuxeo-elements/elements/nuxeo-page-provider) with the property `provider` set
+- [`nuxeo-operation`](https://www.webcomponents.org/element/nuxeo/nuxeo-elements/elements/nuxeo-operation) with the operation [`Repository.PageProvider`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Repository.Query)
 
 ## Test Strategies
 
@@ -343,7 +343,7 @@ Please refer to this [developer guide](http://nightwatchjs.org/guide) to see how
 With Nuxeo platform, you have two ways to fetch data from the server for building listings and searching:
 
 - Via 'direct' queries
-- Via [`pageproviders`](https://doc.nuxeo.com/nxdoc/page-providers/)
+- Via [`pageproviders`]({{page version='' space='nxdoc' page='page-providers'}})
 
 If your network environment (proxies, firewalls) doesn't allow queries inside URL for `GET` Method for security purpose, you have to avoid the `nuxeo-resource` usage with the endpoint `query` if you want to execute a search via 'direct' queries:
 
@@ -356,4 +356,4 @@ http://NUXEO_SERVER/nuxeo/api/v1/query?currentPageIndex=0&pageSize=10&query=SELE
 **We recommend that you**:
 
 - use page providers in general (see above in `Performance Strategies > Search`)
-- use [`Repository.Query`](http://explorer.nuxeo.com/nuxeo/site/distribution/cap-8.3/viewOperation/Repository.Query) operation with [`nuxeo-operation`](http://nuxeo.github.io/nuxeo-elements/components/nuxeo-elements/#nuxeo-operation) element if you still want to search via 'direct' queries.
+- use [`Repository.Query`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Repository.Query) operation with [`nuxeo-operation`](https://www.webcomponents.org/element/nuxeo/nuxeo-elements/elements/nuxeo-operation) element if you still want to search via 'direct' queries.

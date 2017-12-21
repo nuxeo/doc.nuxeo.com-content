@@ -2,19 +2,19 @@
 title: DBS Cache
 description: DBS cache configuration
 review:
-    date: '2017-01-18'
+    date: '2017-12-15'
     status: ok
     comment: ''
 labels:
-    - content-review-lts2017
     - dbs
     - kleturc
+    - lts2017-ok
 
 ---
 
 Since 8.10 we've added a cache on DBS repositories. At this moment, MongoDB and MarkLogic connectors use this cache by default.
 
-The cache is handled by Guava caches and uses Redis to send invalidations to other nodes in cluster mode.
+The cache is handled by Guava caches and uses PubSubService to send invalidations to other nodes in cluster mode.
 
 The cache is shared between all sessions, invalidations are sent at the end of Nuxeo transaction and received at the begin and the end of Nuxeo transaction.
 

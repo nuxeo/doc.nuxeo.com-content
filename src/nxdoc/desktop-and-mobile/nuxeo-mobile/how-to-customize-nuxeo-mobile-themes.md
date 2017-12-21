@@ -2,7 +2,7 @@
 title: 'HOWTO: Customize Nuxeo Mobile Themes'
 review:
     comment: ''
-    date: '2017-05-12'
+    date: '2017-12-15'
     status: ok
 details:
     howto:
@@ -14,7 +14,7 @@ labels:
     - nuxeo-mobile
     - yachour
     - howto
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 
 ---

@@ -2,14 +2,14 @@
 title: Nuxeo Drive Update Site
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - nuxeo-drive
     - yachour
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '14257229'

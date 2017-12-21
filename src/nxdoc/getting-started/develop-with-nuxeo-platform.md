@@ -2,7 +2,7 @@
 title: Develop with Nuxeo Platform
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-12-15'
     status: ok
 details:
     howto:
@@ -11,12 +11,11 @@ details:
         tool: 'Nuxeo CLI, Nuxeo Studio'
         topics: 'Automation, Layout'
 labels:
-    - lts2016-ok
     - howto
     - nuxeo-cli
     - bchauvin
     - lts2016-ok
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 version_override:
     LTS 2016: 810/nxdoc/getting-started-with-nuxeo-ide
@@ -639,7 +638,7 @@ From a command line:
 
 2. Deploy the JAR (`contract-mgt-project/contract-mgt-project-core/target/contract-mgt-project-core-1.0-SNAPSHOT.jar`) in your Nuxeo server by copying it to **$NuxeoServer/nxserver/bundles**, then restart your server.
 
-3. Go to the local automation documentation at `<server>/nuxeo/site/automation/doc` (for example `http://NUXEO_SERVER/nuxeo/site/automation/doc`).
+3. Go to the local automation documentation at `http://NUXEO_SERVER/nuxeo/site/automation/doc` (for example `http://localhost:8080/nuxeo/site/automation/doc`).
 
 4. In the Document category click **Contract Updater**, then click on the **JSON definition** link and copy the operation definition.
 
@@ -766,7 +765,7 @@ Nuxeo CLI automatically created a unit test class for the Operation at `contract
     }
     ```
 
-4.  Replace "MAVEN-ARTIFACT-ID" in `studio.extensions.MAVEN-ARTIFACT-ID` with your Studio project's symbolic name.
+4.  Replace `MAVEN-ARTIFACT-ID` in `studio.extensions.MAVEN-ARTIFACT-ID` with your Studio project's symbolic name.
 
     Note: To get the symbolic name go to **Settings** > **Application Information** in Nuxeo Studio and use the value found in the **Maven Artifact id** field.
 

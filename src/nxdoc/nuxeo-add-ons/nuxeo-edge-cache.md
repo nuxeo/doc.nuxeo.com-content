@@ -2,13 +2,13 @@
 title: Nuxeo Edge Cache
 review:
     comment: ''
-    date: '2016-12-26'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - edge-cache
     - rcattiau
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 tree_item_index: 1650
 

@@ -2,7 +2,7 @@
 title: Binary Metadata
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - ajusto
     - binary-metadata-component
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -398,7 +398,8 @@ The Nuxeo default contribution for binary metadata processor is ExifTool:
 <extension target="org.nuxeo.binary.metadata"
              point="metadataProcessors">
     <processor id="exifTool"
-               class="org.nuxeo.binary.metadata.internals.ExifToolProcessor"/>
+               class="org.nuxeo.binary.metadata.internals.ExifToolProcessor"
+               prefix="true"/>
   </extension>
 ```
 
@@ -493,7 +494,7 @@ This feature gives the ability to get time execution informations through JMX: `
 ## Default Contribution
 
 *   IPTC schema has been removed from document type Picture
-*   Only `IPTC:Source`, `IPTC:CopyrightNotice`,&nbsp;`IPTC:Description` are stored respectively into `dc:source`,&nbsp;`dc:rights` and `dc:description`.
+*   Only `IPTC:Source`, `IPTC:CopyrightNotice`,&nbsp;`IPTC:Caption-Abstract` are stored respectively into `dc:source`,&nbsp;`dc:rights` and `dc:description`.
 *   Widget&nbsp;`summary_picture_iptc` has been removed from document summary
 *   Mistral engine is removed from metadata extraction of the Nuxeo Platform
 *   EXIF mapping remains identical
@@ -527,7 +528,7 @@ Here is the default metadata mapping contribution in the Nuxeo Platform:
   <metadataMapping id="IPTC" processor="exifTool" blobXPath="file:content" ignorePrefix="false">
     <metadata name="IPTC:Source" xpath="dc:source"/>
     <metadata name="IPTC:CopyrightNotice" xpath="dc:rights"/>
-    <metadata name="IPTC:Description" xpath="dc:description"/>
+    <metadata name="IPTC:Caption-Abstract" xpath="dc:description"/>
   </metadataMapping>
 </extension>
 <extension target="org.nuxeo.binary.metadata"
