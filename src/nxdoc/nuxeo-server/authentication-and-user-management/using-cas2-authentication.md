@@ -27,11 +27,6 @@ confluence:
 tree_item_index: 195
 history:
     -
-        author: Luís Duarte
-        date: '2017-12-20 17:31'
-        message: ''
-        version: '31'
-    -
         author: Frantz Fischer
         date: '2016-07-01 09:24'
         message: ''
