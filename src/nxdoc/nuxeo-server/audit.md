@@ -121,7 +121,7 @@ The data record structure is defined in Java by the `LogEntry` and `ExtendedInfo
 
 Nuxeo documents and events can have a lot of custom properties, so if you want to log some specific events or document properties, the [Extended Info](#extendedinfo) allows for a Key/Value type storage that will be associated to the main `LogEntry` record. These informations are extracted from the event message using and EL (Expression Language) expression and stored into a map.
 
-By default, since Nuxeo LTS 2015, the data store relies on the [Elasticsearch Back-end](#elasticsearch-back-end). To disable Elasticsearh for Audit logs and use the [Legacy SQL Back-end](#legacy-sql-back-end) please refer to the [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#-anchor-disablingelasticsearchforauditlogs-disabling-elasticsearch-for-audit-logs) section.
+By default, since Nuxeo LTS 2015, the data store relies on the [Elasticsearch Back-end](#elasticsearch-back-end). To disable Elasticsearh for Audit logs and use the [Legacy SQL Back-end](#legacy-sql-back-end) please refer to the [Disabling Elasticsearch for Audit Logs]({{page page='elasticsearch-setup'}}#disabling-es-for-audit-logs) section.
 
 ### Elasticsearch Back-end
 
@@ -129,7 +129,7 @@ The audit entries are stored in the Elasticsearch index named by the `audit.elas
 
 {{#> callout type='warning' }}
 
-Make sure you read the [Backing Up and Restoring the Audit Elasticsearch Index]({{page page='backup-and-restore'}}#-anchor-backingupandrestoringtheauditelasticsearchindex-backing-up-and-restoring-the-audit-elasticsearch-index) section.
+Make sure you read the [Backing Up and Restoring the Audit Elasticsearch Index]({{page page='backup-and-restore'}}#backingupandrestoringtheauditelasticsearchindex) section.
 
 {{/callout}}
 
@@ -316,7 +316,7 @@ You can also extend the audit info per event name:
 
 For instance, the above contribution will add `modelId`, `modelName`, `worklowInitiator`, `workflowVarriables` to the `extendedInfo` only for the `afterWorkflowStarted` event.
 
-When the extension point is contributed, the data are stored into the `audit.elasticsearch.indexName` index for the Elastcisearch back-end, into the `NXP_LOGS_EXTINFO` and `NXP_LOGS_MAPEXTINFOS` tables for the legacy SQL back-end and into the `audit` collection in the `audit` database for the MongoDB back-end.
+When the extension point is contributed, the data are stored into the `audit.elasticsearch.indexName` index for the Elasticsearch back-end, into the `NXP_LOGS_EXTINFO` and `NXP_LOGS_MAPEXTINFOS` tables for the legacy SQL back-end and into the `audit` collection in the `audit` database for the MongoDB back-end.
 
 [More details on the explorer.](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--extendedInfo)
 

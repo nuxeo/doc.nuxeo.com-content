@@ -114,10 +114,10 @@ Automation Helpers are stateless tool functions used in MVEL or Javascript Autom
 
 ## Default Automation Helpers
 
-Two helpers are set by default into Nuxeo Platform: "**Fn**" and "**HTTP**".
+Two helpers are set by default into Nuxeo Platform: **Fn** and **HTTP**.
 
 *   **Fn**:
-    Functions of **Fn** helper can be retrieved on this [class](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/features/PlatformFunctions.java). (Fn.getVocabularyLabel(...), Fn.getNextId(), Fn.getEmails(...).....)
+    Functions of **Fn** helper can be retrieved on this [class](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/features/PlatformFunctions.java). (`Fn.getVocabularyLabel(...)`, `Fn.getNextId()`, `Fn.getEmails(...)`, ...)
 
 *   **HTTP**:
     Functions of **HTTP** helper can be used to make remote REST Calls.
@@ -208,7 +208,7 @@ Automation Helpers can be contributed to the Nuxeo Platform easily through exten
 
 ### Custom Contribution
 
-In order to contribute custom Helpers contribution, you have to create your own POJO extending the interface 'org.nuxeo.ecm.automation.context.ContextHelper':
+In order to contribute custom Helpers contribution, you have to create your own POJO extending the interface `org.nuxeo.ecm.automation.context.ContextHelper`:
 
 {{#> panel type='code' heading='XML Contribution'}}
 

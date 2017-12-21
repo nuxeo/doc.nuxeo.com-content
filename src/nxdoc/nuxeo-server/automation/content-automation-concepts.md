@@ -489,14 +489,14 @@ If you need to dynamically define the values of the operation parameters you can
 
 An operation is a Java class with specific annotations, that usually is associated to an action. This action can be triggered by the user either directly through the user interface, or by responding to an event, or by a REST call to a remote server.
 
-The operations an user can invoke usually deal with the document repository (like creating or updating documents), but they can also do some other tasks like sending emails, converting binaries, etc. The Automation service already provides [tens of frequently used operations](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listOperations) that you may need when building your business logic. Developers can [contribute their own operations]({{page page='contributing-an-operation'}}). &nbsp;
+The operations an user can invoke usually deal with the document repository (like creating or updating documents), but they can also do some other tasks like sending emails, converting binaries, etc. The Automation service already provides [tens of frequently used operations](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listOperations) that you may need when building your business logic. Developers can [contribute their own operations]({{page page='contributing-an-operation'}}).
 
 The main elements that compose an operation are:
 
-*   The category, useful for finding the operation in the Studio editor. All operations are grouped in categories depending on what they do (ex: document related, services, blob related, UI related ...);
-*   The input: An operation has an input (provided by the cause);
-*   The parameters: An operation may have zero or more parameters (used to parametrize the way an operation is behaving);
-*   The output: An operation has an output (that can be used by the next operation in the chain as the input).
+*   The category, useful for finding the operation in the Studio editor. All operations are grouped in categories depending on what they do (ex: document related, services, blob related, UI related ...)
+*   The input: An operation has an input (provided by the cause)
+*   The parameters: An operation may have zero or more parameters (used to parametrize the way an operation is behaving)
+*   The output: An operation has an output (that can be used by the next operation in the chain as the input)
 
 ### The Operation Input
 
@@ -523,19 +523,19 @@ Any parameter value can be expressed as a string. The string will be converted i
 
 There are several types of predefined parameters:
 
-*   **string**: any string,
-*   **boolean**: a boolean parameter,
-*   **integer**: an integer number,
-*   **float**: a floating point number,
-*   **date**: a date (in W3C format if it is specified as a string),
-*   **resource**: a URL to a resource,
-*   **properties**: a Java properties content (key=value pairs separated by new lines),
-*   **document**: a Nuxeo Document (use its absolute PATH or its UID when expressing it as a string),
-*   **blob**: a Nuxeo blob (the raw content of the blob in the case of a REST invocation),
-*   **documents**: a list of documents,
-*   **bloblist**: a list of blobs,
-*   any other object that is convertible from a string: you can register new object converters trough the [`adapters`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--adapters) extension point of the [`org.nuxeo.ecm.core.operation.OperationServiceComponent`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.operation.OperationServiceComponent) component;
-*   **an expression**: this represents a MVEL expression (which is compatible with basic EL expressions) that can output dynamic values. When using expressions you must prepend it with the prefix `expr:` or between `@{ }`.
+*   **string**: Any string
+*   **boolean**: A boolean parameter
+*   **integer**: An integer number
+*   **float**: A floating point number
+*   **date**: A date (in W3C format if it is specified as a string)
+*   **resource**: A URL to a resource
+*   **properties**: A Java properties content (key=value pairs separated by new lines)
+*   **document**: A Nuxeo Document (use its absolute PATH or its UID when expressing it as a string)
+*   **blob**: A Nuxeo blob (the raw content of the blob in the case of a REST invocation)
+*   **documents**: A list of documents
+*   **bloblist**: A list of blobs
+*   Any other object that is convertible from a string: you can register new object converters trough the [`adapters`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--adapters) extension point of the [`org.nuxeo.ecm.core.operation.OperationServiceComponent`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.operation.OperationServiceComponent) component
+*   **An expression**: This represents a MVEL expression (which is compatible with basic EL expressions) that can output dynamic values. When using expressions you must prepend it with the prefix `expr:` or between `@{ }`.
     Example:
 
     ```
@@ -546,7 +546,7 @@ There are several types of predefined parameters:
 
     For more details about scripting you can look at the page [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}}).
 
-*   **an expression template**: this is the same as an expression but it will be interpreted as a string (by doing variable substitution). This is very useful when you want to create expressions like this:
+*   **An expression template**: This is the same as an expression but it will be interpreted as a string (by doing variable substitution). This is very useful when you want to create expressions like this:
 
     ```
     expr: SELECT * FROM Document WHERE dc:title LIKE @{mytitle}
@@ -580,7 +580,7 @@ Document > Follow Life Cycle Transition {"value":"approve"}
 
 The framework makes it easy to call automation chains from:
 
-*   <span class="s1">A [user action]({{page space='studio' page='user-actions'}}) (like buttons and links)</span>
+*   A [user action]({{page space='studio' page='user-actions'}}) (like buttons and links)
 *   An [event handler]({{page space='studio' page='event-handlers'}})
 *   An [HTTP client]({{page page='command-endpoint'}}) (REST Bridge)
 *   [Workflows]({{page space='studio' page='node-general-tab'}})
@@ -592,7 +592,7 @@ Any operation parameter accepts dynamic expressions based on the use of MVEL. Th
 
 In the following example, we compute the valid date store on the Dublin Core schema.
 
-{{#> panel type='code' heading='chainA - using dynamical languate for parameter values'}}
+{{#> panel type='code' heading='chainA - using dynamical language for parameter values'}}
 
 ```js
 Fetch > Contextual Document(s)
@@ -857,6 +857,6 @@ All operations there are around running and managing workflow instances. It is a
 
 {{#> callout type='info' }}
 
-Installing some modules from the [Nuxeo Marketplace](http://marketplace.nuxeo.com/) also deploys new operations. This is for instance the case with the Nuxeo Drive add-on, as well as with Template Rendering add-on. You can always check what operations are available on your Nuxeo Platform instance at the following URL: http://nuxeo_host/nuxeo/site/automation/doc.
+Installing some modules from the [Nuxeo Marketplace](http://marketplace.nuxeo.com/) also deploys new operations. This is for instance the case with the Nuxeo Drive add-on, as well as with Template Rendering add-on. You can always check what operations are available on your Nuxeo Platform instance at the following URL: http://NUXEO_SERVER/nuxeo/site/automation/doc.
 
 {{/callout}}

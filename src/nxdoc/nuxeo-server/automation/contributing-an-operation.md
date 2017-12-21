@@ -324,7 +324,7 @@ To implement an operation, you need a Java class with the `@Operation` annotatio
 
 You can have multiple executable methods; one method for each type of input/output object supported by an operation. The correct operation method will automatically be selected if the method argument matches the current input object and the return type matches the input required by the next operation in an automation chain.
 
-The `@OperationMethod` annotation also provides an optional priority attribute that can be used to specify which method is preferred over the other matching methods. This situation (having multiple methods that match an execution) can happen if the input and output types are not strictly matched. For example if the input of a method is a DocumentModel object and the input of another method is a DocumentRef object then both methods have the same input signature for the automation framework because DocumentModel and DocumentRef are objects of the same kind - they represent a Nuxeo Document. When you need to treat different Java objects as the same type of input (or output) you must create a type adapter (see the interface [TypeAdapter](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/automation/TypeAdapter.html)) which knows how to convert a given object to another type. Without type adapters, treating different Java objects as the same type of object is not possible.
+The `@OperationMethod` annotation also provides an optional priority attribute that can be used to specify which method is preferred over the other matching methods. This situation (having multiple methods that match an execution) can happen if the input and output types are not strictly matched. For example if the input of a method is a DocumentModel object and the input of another method is a DocumentRef object then both methods have the same input signature for the automation framework because DocumentModel and DocumentRef are objects of the same kind - they represent a Nuxeo Document. When you need to treat different Java objects as the same type of input (or output) you must create a type adapter (see the interface [TypeAdapter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/automation/TypeAdapter.html)) which knows how to convert a given object to another type. Without type adapters, treating different Java objects as the same type of object is not possible.
 
 Operations can include parameterizable variables so that when a user defines an operation chain, they can define values that will be injected in the operation parameters. To declare parameters you must use the `@Param` annotation.
 
@@ -332,7 +332,7 @@ There is one more annotation provided by the automation service: the `@Context` 
 
 When registering an automation chain, the chain will be checked to find a path from the first operation to the last one to be sure the chain can be executed at runtime. This means identifying at least one method in each operation that matches the signature of the next operation. If such a path cannot be found, an error is thrown (at registration time). For more details on registering an operation chain, see [Automation Chain]({{page page='automation-chain'}}).
 
-To register your operation, create a Nuxeo XML extension and contribute it to the [`operations` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--operations). Example:
+To register your operation, create a Nuxeo XML extension and contribute it to the [`operations` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--operations). Example:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="operations">
@@ -421,18 +421,18 @@ The attributes of the `@Operation` annotation are required by operation chain cr
 
 You can see that the operation above provides three operation methods with different signatures:
 
-*   One that takes a Document and returns a Document object,
-*   One that takes a list of document objects and returns a list of documents,
-*   One that takes a list of document references and returns a list of documents.
+*   One that takes a Document and returns a Document object
+*   One that takes a list of document objects and returns a list of documents
+*   One that takes a list of document references and returns a list of documents
 
 Depending on what the input object is when calling this operation, only one of these methods will be used to do the processing. You'll notice that there is no method taking a document reference. This is because the document reference is automatically adapted into a DocumentModel object when needed, thanks to a dedicated TypeAdapter.
 
 The initial input of an operation (or operation chain) execution is provided by the caller (the one that creates the execution context). The Nuxeo Platform provides several execution contexts:
 
-*   A core event listener that executes operations in response to core events,
-*   An action bean that executes operations in response to the user actions (through the Nuxeo Web Interface),
-*   A JAX-RS resource which executes operations in response to REST calls,
-*   A special listener fired by the workflow service to execute an operation chain.
+*   A core event listener that executes operations in response to core events
+*   An action bean that executes operations in response to the user actions (through the Nuxeo Web Interface)
+*   A JAX-RS resource which executes operations in response to REST calls
+*   A special listener fired by the workflow service to execute an operation chain
 
 Each of these execution contexts provide the initial input for the chain (or operation) to be executed. For example, the core event listener will use the document that is the source of the event as the initial input. The action bean executor will use the document currently opened in the User Interface.
 
@@ -495,28 +495,26 @@ Here's a list of the more commonly used parameter types and the string represent
         <td>`org.nuxeo.ecm.core.api.DocumentModel`</td>
         <td>String, DocumentRef</td>
         <td>
-          Document UID or document absolute path <br /><br />
-          96bfb9cb-a13d-48a2-9bbd-9341fcf24801 <br />
-          /default-domain/workspaces/myws
+          Document UID or document absolute path. For instance `96bfb9cb-a13d-48a2-9bbd-9341fcf24801` or `/default-domain/workspaces/myws`
         </td>
       </tr>
       <tr>
         <td>**documents**</td>
         <td>`org.nuxeo.ecm.core.api.DocumentModelList`</td>
         <td>DocumentRefList, DocumentModel, DocumentRef</td>
-        <td>*No String representation exists. Cannot be used as a parameter value in an XML chain descriptor. You should use EL expressions instead.*</td>
+        <td>No String representation exists. Cannot be used as a parameter value in an XML chain descriptor. You should use EL expressions instead.</td>
       </tr>
       <tr>
         <td>**blob**</td>
         <td>`org.nuxeo.ecm.core.api.Blob`</td>
         <td></td>
-        <td>*No String representation exists. Cannot be used as a parameter value in an XML chain descriptor. You should use EL expressions instead.*</td>
+        <td>No String representation exists. Cannot be used as a parameter value in an XML chain descriptor. You should use EL expressions instead.</td>
       </tr>
       <tr>
         <td>**blobs**</td>
         <td>`org.nuxeo.ecm.automation.core.util.BlobList`</td>
         <td></td>
-        <td>*No String representation exists. Cannot be used as a parameter value in an XML chain descriptor. You should use EL expressions instead.*</td>
+        <td>No String representation exists. Cannot be used as a parameter value in an XML chain descriptor. You should use EL expressions instead.</td>
       </tr>
       <tr>
         <td>**properties**</td>
@@ -535,9 +533,9 @@ Here's a list of the more commonly used parameter types and the string represent
         <td>`org.nuxeo.ecm.automation.core.scripting.Expression`</td>
         <td></td>
         <td>
-          Use the "expr:" prefix before your EL expression. <br /><br />
+          Use the `expr:` prefix before your EL expression. <br />
           `expr: Document.title` <br />
-          *For the complete list of scripting objects and functions see [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}}).*
+          For the complete list of scripting objects and functions see [Use of MVEL in Automation Chains]({{page page='use-of-mvel-in-automation-chains'}}).
         </td>
       </tr>
       <tr>
@@ -575,8 +573,8 @@ Here's a list of the more commonly used parameter types and the string represent
         <td>`org.nuxeo.ecm.automation.core.util.StringList`</td>
         <td>String</td>
         <td>
-          Comma separated list of strings <br /><br />
-          "foo, bar" <br />
+          Comma separated list of strings <br />
+          `foo, bar` <br />
           The comma separator can be escaped with the `\` character.
         </td>
       </tr>
@@ -590,7 +588,7 @@ Of course, when defining the parameter values that will be injected into an oper
 
 Sometimes operations may not require any input. In this case the operation should use a method with no parameters. Such methods will match any input, so it is not recommended to use more than one void method in the same operation, as you cannot know which method will be selected for execution.
 
-For example, the _Log_ operation does not requires an input, since it is only writing in the log:
+For example, the `Log` operation does not requires an input, since it is only writing in the log:
 
 ```java
 import org.apache.commons.logging.Log;
@@ -643,7 +641,7 @@ public class LogOperation {
 
 ```
 
-Also there are rare cases when you don't want to return anything from an operation. In that case the operation method must use the **void** Java keyword and the result of the operation will be the **null** Java object (in the previous example, the _Log_ operation returns no value).
+Also there are rare cases when you don't want to return anything from an operation. In that case the operation method must use the **void** Java keyword and the result of the operation will be the **null** Java object (in the previous example, the `Log` operation returns no value).
 
 ## Aliases
 
