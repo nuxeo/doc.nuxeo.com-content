@@ -633,7 +633,7 @@ Elasticsearch is enabled by default, if you want to disable Elasticsearch indexi
 elasticsearch.enabled=false
 ```
 
-### Disabling Elasticsearch for Audit Logs
+### Disabling Elasticsearch for Audit Logs{{> anchor 'disabling-es-for-audit-logs'}}
 
 When Elasticsearch is enabled and the `audit.elasticsearch.enabled` property is set to `true` in `nuxeo.conf` which is the case by default, Elasticsearch is used as a backend for audit logs.
 

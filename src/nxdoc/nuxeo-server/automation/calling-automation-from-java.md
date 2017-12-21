@@ -78,9 +78,9 @@ history:
 ---
 On server side, [AutomationService](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/automation/AutomationService.html) can be used to:
 
-*   Run a contributed chain with chain/operations;
-*   Run a runtime chain created on the fly;
-*   Run a contributed operation.
+*   Run a contributed chain with chain/operations
+*   Run a runtime chain created on the fly
+*   Run a contributed operation
 
 {{! excerpt}}
 
