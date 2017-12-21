@@ -423,7 +423,7 @@ If you need to add a new processor:
          * @param blob Blob to write.
          * @param metadata Metadata to inject.
     	 * @param ignorePrefix
-         * @return the updated blob, or {@code null} if there was an error (since Nuxeo 7.4)
+         * @return the updated blob, or {@code null} if there was an error
          */
         public Blob writeMetadata(Blob blob, Map<String, Object> metadata, boolean ignorePrefix);
         /**
@@ -478,7 +478,7 @@ Metadata extraction example from a PDF file using ExifTool:
 
 ## Metrics
 
-Since Nuxeo 7.2, Metrics have been added to Binary Metadata services to monitor default/custom processor performances with Nuxeo.
+Metrics have been added to Binary Metadata services to monitor default/custom processor performances with Nuxeo.
 
 To activate it, the following variable in nuxeo.conf must be set:
 
