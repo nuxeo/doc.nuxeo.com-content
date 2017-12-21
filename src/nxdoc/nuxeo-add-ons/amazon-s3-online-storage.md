@@ -151,7 +151,7 @@ nuxeo.s3storage.awssecret=your_AWS_SECRET_ACCESS_KEY
 
 {{#> callout type='info' }}
 
-If your Nuxeo instance runs on Amazon EC2, you can also transparently use IAM instance roles (since Nuxeo 5.9.1), in which case you do not need to specify the AWS ID and secret (the credentials will be fetched automatically from the instance metadata).
+If your Nuxeo instance runs on Amazon EC2, you can also transparently use IAM instance roles, in which case you do not need to specify the AWS ID and secret (the credentials will be fetched automatically from the instance metadata).
 
 {{/callout}}
 
@@ -267,7 +267,7 @@ nuxeo.s3storage.cacheminage=3600
 
 #### Download From S3 Options
 
-Since Nuxeo 7.4, you can configure downloads to be directly served to the user from S3 without going through Nuxeo. To do so, use:
+You can configure downloads to be directly served to the user from S3 without going through Nuxeo. To do so, use:
 
 ```
 nuxeo.s3storage.directdownload=true
