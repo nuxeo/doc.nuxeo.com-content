@@ -41,7 +41,7 @@ tree_item_index: 96
 </tr>
 <tr>
 <td colspan="1">`org.nuxeo.cmis.proxies`</td>
-<td colspan="1">New Default Value to `true`</td>
+<td colspan="1">New default value to `true`</td>
 <td colspan="1">[NXP-21828](https://jira.nuxeo.com/browse/NXP-21828)</td>
 </tr>
 <tr>
@@ -65,42 +65,42 @@ tree_item_index: 96
 </tr>
 <tr>
 <td colspan="1">`nuxeo.automation.scripting.inline-context-in-params`</td>
-<td colspan="1">Default Value to `false`</td>
+<td colspan="1">Default value to `false`</td>
 <td colspan="1">[NXP-22190](https://jira.nuxeo.com/browse/NXP-22190)</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.automation.allowVirtualUser`</td>
-<td colspan="1">Default Value to `false`</td>
+<td colspan="1">Default value to `false`</td>
 <td colspan="1">[NXP-21889](https://jira.nuxeo.com/browse/NXP-21889)</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.core.readacl.async.enabled`</td>
-<td colspan="1">Default Value to `true`</td>
+<td colspan="1">Default value to `true`</td>
 <td colspan="1">[NXP-23788](https://jira.nuxeo.com/browse/NXP-23788)</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.core.readacl.async.threshold`</td>
-<td colspan="1">Default Value to `500`</td>
+<td colspan="1">Default value to `500`</td>
 <td colspan="1">[NXP-23788](https://jira.nuxeo.com/browse/NXP-23788)</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.faceted.tag.service.enabled`</td>
-<td colspan="1">Default Value to `false`</td>
+<td colspan="1">Default value to `false`</td>
 <td colspan="1">[NXP-21651](https://jira.nuxeo.com/browse/NXP-21651)</td>
 </tr>
 <tr>
 <td colspan="1">`org.nuxeo.runtime.reload_strategy`</td>
-<td colspan="1">Default Value to `restart`</td>
+<td colspan="1">Default value to `restart`</td>
 <td colspan="1">[NXP-19326](https://jira.nuxeo.com/browse/NXP-19326)</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.server.tomcat_error.show_report`</td>
-<td colspan="1">Default Value to `false`</td>
+<td colspan="1">Default value to `false`</td>
 <td colspan="1">[NXP-22592](https://jira.nuxeo.com/browse/NXP-22592)</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.server.tomcat_error.show_report_info`</td>
-<td colspan="1">Default Value to `false`</td>
+<td colspan="1">Default value to `false`</td>
 <td colspan="1">[NXP-22592](https://jira.nuxeo.com/browse/NXP-22592)</td>
 </tr>
 </tbody>
@@ -227,18 +227,11 @@ tree_item_index: 96
 
 {{{multiexcerpt 'upgrade-9.2-addons.segmentio' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
-#### Nuxeo Mqueue - deprecated
+#### Nuxeo Mqueue - Deprecated
 
 {{{multiexcerpt 'upgrade-lts-2017-addons.deprecated.mqueues' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
 ### Complementary Information
 
-#### Upgrade notes
-
-- [Upgrade notes for 9.1](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%229.1%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
-- [Upgrade notes for 9.2](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%229.2%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
-
-#### Release notes
-
-- [Release notes for 9.1]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
-- [Release notes for 9.2]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
+- [Upgrade notes for LTS 2017](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%229.1%22%2C%229.2%22%2C%229.3%22%2C%229.10%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+- [Release notes for LTS 2017]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
