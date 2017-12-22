@@ -33,7 +33,7 @@ See this up-to-date [support page](https://github.com/nuxeo/nuxeo-drive/blob/mas
 
 After Nuxeo Drive has been installed on the server, a Nuxeo Drive tab in the user Home, from which you can see what Nuxeo spaces are synchronized with Drive.
 
-![]({{file name='drive-newtab.png'}} ?w=650,border=true)
+![]({{file name='drive-newtab.png'}} ?w=550,border=true)
 
 ### Installing Nuxeo Drive on Your Computer
 
