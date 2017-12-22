@@ -666,12 +666,12 @@ The command `nuxeoctl register-trial` has been deprecated. See [NXP-23122](https
 </tr>
 <tr>
 <td colspan="1">`nuxeo.core.readacl.async.enabled`</td>
-<td colspan="1">Default Value to `true`</td>
+<td colspan="1">Default value to `true`</td>
 <td colspan="1">[NXP-23788](https://jira.nuxeo.com/browse/NXP-23788)</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.core.readacl.async.threshold`</td>
-<td colspan="1">Default Value to `500`</td>
+<td colspan="1">Default value to `500`</td>
 <td colspan="1">[NXP-23788](https://jira.nuxeo.com/browse/NXP-23788)</td>
 </tr>
 </tbody>
@@ -680,7 +680,7 @@ The command `nuxeoctl register-trial` has been deprecated. See [NXP-23122](https
 
 ### Addons
 
-#### nuxeo-mqueues - deprecated
+#### nuxeo-mqueues - Deprecated
 
 {{! multiexcerpt name='upgrade-lts-2017-addons.deprecated.mqueues'}}
 
@@ -690,7 +690,7 @@ The `nuxeo-mqueues` addon is replaced by `nuxeo-stream`. See [NXP-23854](https:/
 
 ### Complementary Information
 
-- [Upgrade notes for LTS 2017](https://jira.nuxeo.com/issues/?jql=project%20in%20(NXP)%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20(%229.10%22)%20AND%20(%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY)%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+- [Upgrade notes for LTS 2017](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%229.10%22%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 - [Release notes for LTS 2017]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
 
 {{! /multiexcerpt}}
