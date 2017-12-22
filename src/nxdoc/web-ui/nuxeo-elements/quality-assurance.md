@@ -202,7 +202,7 @@ setup(function() {
 ```
 
 {{#> callout type='tip' heading='Test Helpers'}}
-Here, the `login` method is part of our [test helpers](https://github.com/nuxeo/nuxeo-elements/blob/master/test/test-helpers.js), which also includes several other support methods. Feel free to import them on your own test suites.
+Here, the `login` method is part of our [test helpers](https://github.com/nuxeo/nuxeo-elements/blob/maintenance-2.2.x/test/test-helpers.js), which also includes several other support methods. Feel free to import them on your own test suites.
 {{/callout}}
 
 Oftentimes you'll want to perform more than one bundle of tests inside the same test file. In this case you can define *inner* test suites, i.e., test suites inside your main test suite. Inside these you should setup the responses that the
@@ -256,7 +256,7 @@ test('it should display collections', function() {
 ```
 
 {{#> callout type='tip' heading='Test Helpers'}}
-Again, the `waitForEvent` method is part of our [test helpers](https://github.com/nuxeo/nuxeo-elements/blob/master/test/test-helpers.js). This method waits for an event to be fired a specific amount of times before returning a promise. Similarly, you can use `waitChanged` to wait for a particular
+Again, the `waitForEvent` method is part of our [test helpers](https://github.com/nuxeo/nuxeo-elements/blob/maintenance-2.2.x/test/test-helpers.js#L35). This method waits for an event to be fired a specific amount of times before returning a promise. Similarly, you can use `waitChanged` to wait for a particular
 property to change on an element, provided that it's set to `notify: true`. Please, check the Polymer documentation on [data-binding](https://www.polymer-project.org/1.0/docs/devguide/data-binding) for more information on this subject.
 {{/callout}}
 
@@ -267,10 +267,9 @@ For more information about how perform test asserts, please check the official [
 You can then run your tests using `polymer test` or run them interactively via `polymer serve`. Check the Polymer documentation on [WCT](https://www.polymer-project.org/1.0/docs/tools/tests) for more on this subject.
 
 For more examples on testing custom elements, please check our repositories:
-- [nuxeo-elements](https://github.com/nuxeo/nuxeo-elements/tree/master/test)
-- [nuxeo-dataviz-elements](https://github.com/nuxeo/nuxeo-dataviz-elements/tree/master/test)
-- [nuxeo-ui-elements](https://github.com/nuxeo/nuxeo-ui-elements/tree/master/test)
-- [nuxeo-web-ui](https://github.com/nuxeo/nuxeo-web-ui/tree/master/test)
+- [nuxeo-elements](https://github.com/nuxeo/nuxeo-elements/tree/maintenance-2.2.x/test)
+- [nuxeo-dataviz-elements](https://github.com/nuxeo/nuxeo-dataviz-elements/tree/maintenance-2.2.x/test)
+- [nuxeo-ui-elements](https://github.com/nuxeo/nuxeo-ui-elements/tree/maintenance-2.2.x/test)
 
 ### Cucumber
 
@@ -299,7 +298,7 @@ this.Then('I can see the administration menu', () => this.ui.drawer.administrati
 
 Cucumber allows for BDD using human-readable specifications. The advantages are two-fold: first, it allows specifications to be implemented by developers, but written in natural language by someone else, such as QA or business analyst; second, it makes error identification simpler for developers and non-developers alike, by showing clearly in plain language what steps failed. Please check [Cucumber](https://cucumber.io/docs/reference) and [Cucumber.js](https://github.com/cucumber/cucumber-js) documentation for more details.
 
-If you're looking for examples of Cucumber tests, check our [Web UI's plugin repository](https://github.com/nuxeo/plugin-nuxeo-web-ui/tree/master/nuxeo-web-ui-ftest/webdriver/test). These rely on [Chimp.js](http://chimp.readme.io), a test automation framework that brings together Cucumber.js, WebdriverIO and Chai. See [Chimp's documentation page](https://chimp.readme.io/docs/tutorial) and [this tutorial](https://chimp.readme.io/docs/tutorial) for more details.
+If you're looking for examples of Cucumber tests, check our [Web UI's plugin repository](https://github.com/nuxeo/plugin-nuxeo-web-ui/tree/2.2_9.10/ftest/web-ui/webdriver/test). These rely on [Chimp.js](http://chimp.readme.io), a test automation framework that brings together Cucumber.js, WebdriverIO and Chai. See [Chimp's documentation page](https://chimp.readme.io/docs/tutorial) and [this tutorial](https://chimp.readme.io/docs/tutorial) for more details.
 
 ### NighwatchJS
 
