@@ -118,6 +118,7 @@ try {
 
 ## Slack Usage
 
+https://jenkins.io/doc/pipeline/steps/slack/
 ```
 try {
     ....
