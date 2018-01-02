@@ -912,7 +912,7 @@ When an NXQL query is processed by an [Elasticsearch PageProvider]({{page page='
     Queries like this will not return any document:
 
     ```
-    files:files/*1/file/name LIKE '%.txt' AND files:files/*1/file/length = 0 dc:subjects/3 = 'foo'
+    files:files/*1/file/name LIKE '%.txt' AND files:files/*1/file/length = 0 AND dc:subjects/3 = 'foo'
     ```
 
     Note that the match any `/*` is supported.
