@@ -253,7 +253,7 @@ private EntityManager em;
 ...
 
 public DocumentRating saveRating(DocumentModel doc, String name, short rating) {
-    DocumentRatingProvider provider = Framework.getLocalService(DocumentRatingProvider)
+    DocumentRatingProvider provider = Framework.getService(DocumentRatingProvider)
     return provider.saveRating(em, doc, name, rating);
   }
 

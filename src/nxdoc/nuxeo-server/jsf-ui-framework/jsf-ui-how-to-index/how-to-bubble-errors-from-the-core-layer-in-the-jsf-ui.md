@@ -164,8 +164,7 @@ Make sure that none of the listeners running before your custom listener modify 
     		if (doc.isProxy() || doc.isVersion()) {
     			return;
     		}
-    		AutomationService service = Framework
-    				.getLocalService(AutomationService.class);
+                AutomationService service = Framework.getService(AutomationService.class);
     		OperationContext automationCtx = new OperationContext();
     		automationCtx.setInput(doc);
     		try {

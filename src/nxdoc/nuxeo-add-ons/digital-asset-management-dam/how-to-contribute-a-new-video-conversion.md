@@ -185,7 +185,7 @@ Assuming `videoDocument`&nbsp;is a Document with the `Video` facet, to launch th
 
 ```java
 DocumentModel videoDocument = ...
-VideoService videoService = Framework.getLocalService(VideoService.class);
+VideoService videoService = Framework.getService(VideoService.class);
 videoService.launchConversion(videoDocument, "WebM 480p");
 ```
 

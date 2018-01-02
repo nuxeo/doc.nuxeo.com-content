@@ -112,7 +112,7 @@ DocumentModelList docs = session.query(nxql);
 Using Elasticsearch you will use a query builder:
 
 ```java
-ElasticSearchService ess = Framework.getLocalService(ElasticSearchService.class);
+ElasticSearchService ess = Framework.getService(ElasticSearchService.class);
 DocumentModelList docs = ess.query(new NxQueryBuilder(session).nxql(nxql).limit(10000));
 ```
 
