@@ -1160,7 +1160,7 @@ import java.util.GregorianCalendar;
 
 import org.codehaus.jackson.JsonGenerator;
 import org.nuxeo.ecm.core.api.CoreInstance;
-import org.nuxeo.ecm.core.api.CoreSession;
+import org.nuxeo.ecm.core.api.CloseableCoreSession;
 import org.nuxeo.ecm.core.api.DocumentModel;
 import org.nuxeo.ecm.core.api.IdRef;
 import org.nuxeo.ecm.core.api.NuxeoPrincipal;
@@ -1183,11 +1183,13 @@ public class LogEntryEnricher extends AbstractJsonEnricher<LogEntry> {
 
     @Override
     public void write(JsonGenerator jsonGenerator, LogEntry logEntry) throws IOException {
-        CoreSession session = CoreInstance.openCoreSession(logEntry.getRepositoryId());
-        DocumentModel targetDocument = session.getDocument(new IdRef(logEntry.getDocUUID()));
-        Date creationDate = ((GregorianCalendar) targetDocument.getPropertyValue("dc:created")).getTime();
-        Date modificationDate = ((GregorianCalendar) targetDocument.getPropertyValue("dc:modified")).getTime();
-
+        Date creationDate;
+        Date modificationDate;
+        try (CloseableCoreSession session = CoreInstance.openCoreSession(logEntry.getRepositoryId())) {
+            DocumentModel doc = session.getDocument(new IdRef(logEntry.getDocUUID()));
+            creationDate = ((GregorianCalendar) doc.getPropertyValue("dc:created")).getTime();
+            modificationDate = ((GregorianCalendar) doc.getPropertyValue("dc:modified")).getTime();
+        }
         jsonGenerator.writeObjectFieldStart(NAME);
         jsonGenerator.writeObjectField("contact", getPrincipalName(logEntry));
         jsonGenerator.writeObjectField("creation", new SimpleDateFormat("yyyy-MM-dd").format(creationDate));
