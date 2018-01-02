@@ -2,13 +2,13 @@
 title: REST API HOWTOs
 review:
     comment: ''
-    date: '2017-01-04'
+    date: '2018-01-02'
     status: ok
 labels:
     - lts2016-ok
     - index
     - mlumeau
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API

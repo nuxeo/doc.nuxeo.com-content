@@ -2,11 +2,11 @@
 title: Tutorials
 review:
     comment: ''
-    date: '2017-10-09'
+    date: '2018-01-02'
     status: ok
 labels:
     - Tutorials
-    - content-review-lts2017
+    - lts2017-ok
     - home
     - mlumeau
 
@@ -18,7 +18,7 @@ labels:
 {{#> panel type='secondary' match_height='true'}}
 ### HOWTO: Contribute to an Extension
 </br>
-This tutorial explains how to add a small "News" feature to your Nuxeo Platform for enabling News content publishing at workspace level, using only Nuxeo Studio.
+This tutorial explains how to create an XML extension in Nuxeo Studio, with the Nuxeo CLI and how to override a Nuxeo contribution.
 
 </br>
 [Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='nxdoc' page='how-to-contribute-to-an-extension'}})

@@ -2,7 +2,7 @@
 title: Essential Nuxeo Platform Terminology
 review:
     comment: ''
-    date: '2016-12-08'
+    date: '2018-01-02'
     status: ok
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
@@ -11,7 +11,7 @@ labels:
     - mlumeau
     - excerpt
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235677'

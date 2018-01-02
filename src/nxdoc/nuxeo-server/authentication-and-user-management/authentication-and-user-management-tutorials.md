@@ -2,10 +2,10 @@
 title: Authentication and User Management Tutorials
 review:
     comment: ''
-    date: '2016-12-23'
+    date: '2018-01-02'
     status: ok
 labels:
-    - content-review-lts2017
+    - lts2017-ok
     - home
     - mlumeau
 
