@@ -6,7 +6,7 @@ review:
     status: ok
 labels:
     - lts2016-ok
-    - content-review-lts2017
+    - lts2017-ok
     - home
     - mlumeau
 is_overview: true
