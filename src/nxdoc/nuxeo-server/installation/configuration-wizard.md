@@ -2,13 +2,13 @@
 title: Configuration Wizard
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2018-01-02'
     status: ok
 toc: true
 labels:
     - lts2016-ok
     - installation
-    - content-review-lts2017
+    - lts2017-ok
     - mlumeau
 confluence:
     ajs-parent-page-id: '3866685'
@@ -27,22 +27,22 @@ version_override:
     '6.0': 60/admindoc/setup
     '5.8': 58/admindoc/setup
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 11:16'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 11:03'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 10:36'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-03-23 10:35'
         message: ''
