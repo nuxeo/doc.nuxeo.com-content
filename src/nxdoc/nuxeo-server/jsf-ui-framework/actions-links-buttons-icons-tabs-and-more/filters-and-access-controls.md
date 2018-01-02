@@ -208,7 +208,7 @@ For instance, `directoriesManagementAccess` makes it possible to control access 
 This can be looked up in the code, by calling the action service, and evaluating the filter given an evaluation context:
 
 ```java
-ActionManager actionManager = Framework.getLocalService(ActionManager.class);
+ActionManager actionManager = Framework.getService(ActionManager.class);
 return actionManager.checkFilter("directoriesManagementAccess", createActionContext(ctx));
 ```
 

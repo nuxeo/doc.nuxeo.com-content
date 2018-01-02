@@ -185,7 +185,7 @@ This query model is designed to perform a query on the Nuxeo Core Repository, us
 Here is a sample JAVA code using this query model:
 
 ```
-QueryModelService qmService = Framework.getLocalService(QueryModelService.class);
+QueryModelService qmService = Framework.getService(QueryModelService.class);
 QueryModelDescriptor qmd = qmService.getQueryModelDescriptor("MY_SEARCH");
 QueryModel qm = new QueryModel(qmd);
 Object[] params = {document.getId()};
@@ -214,7 +214,7 @@ Let's migrate the query model to a page provider:
 Let's also migrate the corresponding JAVA code:
 
 ```
-PageProviderService ppService = Framework.getLocalService(PageProviderService.class);
+PageProviderService ppService = Framework.getService(PageProviderService.class);
 Map<String, Serializable> props = new HashMap<String, Serializable>();
 props.put(CoreQueryDocumentPageProvider.CORE_SESSION_PROPERTY,
         (Serializable) coreSession);

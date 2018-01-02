@@ -207,7 +207,7 @@ All calls with accepted media type `application/json+nxentity` will activate sta
 For testing purposes, you can activate the extended mode by adding this code snippet:
 
 ```
-JsonFactoryManager jsonFactoryManager = Framework.getLocalService(JsonFactoryManager.class);
+JsonFactoryManager jsonFactoryManager = Framework.getService(JsonFactoryManager.class);
 if (!jsonFactoryManager.isStackDisplay()) {
     jsonFactoryManager.toggleStackDisplay();
 }
