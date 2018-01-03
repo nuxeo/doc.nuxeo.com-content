@@ -91,7 +91,7 @@ A third option is to bring changes before sharing the final result.
 
 ![]({{file name='commit-changes.png'}} ?border=true,w=350)
 
-{{#> callout type='note' heading='Do not use Commit & Push'}}
+{{#> callout type='note' heading='Do not use Commit and Push'}}
 Make sure you click the **Commmit** button on the Commit popup. Using the **Commit and Push** button would share all changes with your coworkers right away. You should avoid it until you are ready to end the review.
 {{/callout}}
 
