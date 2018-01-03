@@ -2,13 +2,13 @@
 title: Event and Listener How To Index
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2016-12-23'
     status: ok
 labels:
     - lts2016-ok
     - index
     - mlumeau
-    - lts2017-ok
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950283'
     ajs-parent-page-title: Events and Listeners

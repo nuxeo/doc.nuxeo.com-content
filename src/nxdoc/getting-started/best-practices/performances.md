@@ -2,11 +2,11 @@
 title: Performances
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2017-10-02'
     status: ok
 labels:
     - performance
-    - lts2017-ok
+    - content-review-lts2017
     - home
     - mlumeau
 tree_item_index: 800

@@ -2,13 +2,13 @@
 title: Content Repository
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2015-12-01'
     status: ok
 labels:
     - content-review-lts2016
     - home
     - mlumeau
-    - lts2017-ok
+    - content-review-lts2017
 is_overview: true
 confluence:
     ajs-parent-page-id: '31033314'
@@ -291,7 +291,7 @@ The Nuxeo Repository includes a configurable versioning system. Even the version
 {{#> panel type='secondary' match_height='true'}}
 ### Tutorials
 
-Read our tutorials about document types and document properties customization.
+Read our HOWTOs about document types and document properties customization.
 
 [More <i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page space='NXDOC' page='document-type-how-to-index'}})
 {{/panel}}

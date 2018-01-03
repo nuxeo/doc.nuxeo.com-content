@@ -2,13 +2,14 @@
 title: Best Practices
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2015-12-01'
     status: ok
 labels:
     - content-review-lts2016
+    - last-review-20150128
     - home
     - mlumeau
-    - lts2017-ok
+    - content-review-lts2017
 is_overview: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
