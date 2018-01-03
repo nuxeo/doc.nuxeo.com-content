@@ -162,7 +162,7 @@ The way you process the next step will depend on the UI you chose for your platf
    ![]({{file name='link_view_designer.png'}} ?w=300,border=true)
 5.  In the Layout tab, navigate to **Workflows**&nbsp;> **SalesProposalWorkflow** and click on **Technical validation**.
    ![]({{file name='vd_wf_technical_validation_layout1.png'}} ?w=200,border=true)
-    A  page with the Technical validation task layout is displayed. If there is no layout, click on the **Customize** button.
+    A  page with the Technical validation task layout is displayed. If there is no layout, click on the **Configure** button.
     ![]({{file name='vd_wf_technical_validation_layout2.png'}} ?w=600,border=true)
 5.  Delete the properties displayed in the layout using the delete icon once an element is selected.
     ![]({{file name='vd_wf_technical_validation_layout3.png'}} ?w=600,border=true)
@@ -244,7 +244,7 @@ The way you process the next step will depend on the UI you chose for your platf
 2.  Save you work and click on the **Designer** button.
 3.  In the Layout tab, navigate to **Workflows**&nbsp;> **SalesProposalWorkflow** and click on **Juridical Advice**.
 
-  A page with the Juridical Advice task layout is displayed. If there is no layout, click on the **Customize** button.
+  A page with the Juridical Advice task layout is displayed. If there is no layout, click on the **Configure** button.
 4.  Delete the properties displayed in the layout using the delete icon once an element is selected.
 5.  Add the **juridical_comment** field the same way you did with the **Technical validation** node, setting the property as required.
 ![]({{file name='vd_wf_technical_validation_layout6.png'}} ?w=300,border=true)
@@ -304,7 +304,7 @@ The way you process the next step will depend on the UI you chose for your platf
 1. Click on the **Variables** tab and add the **sales_comment** and **hoo_comment** variables to the right column.
 ![]({{file name='Simple_Workflow_020_1.png'}} ?w=450,border=true,thumbnail=true)
 2.  Save you work and click on the **Designer** button.
-3.  In the **Layout** tab, navigate to **Workflows**&nbsp;> **SalesProposalWorkflow** and click on **Proposal Update**. A page with the Proposal Update task layout is displayed. If there is no layout, click on the **Customize** button
+3.  In the **Layout** tab, navigate to **Workflows**&nbsp;> **SalesProposalWorkflow** and click on **Proposal Update**. A page with the Proposal Update task layout is displayed. If there is no layout, click on the **Configure** button
 4.  Delete the properties displayed in the layout using the delete icon once an element is selected.
 5.  Add the **sales_comment** field as well as the **hoo_comment** field, the latter still in read only mode.
     ![]({{file name='vd_wf_technical_validation_layout9.png'}} ?w=600,border=true)
