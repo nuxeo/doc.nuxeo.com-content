@@ -2,13 +2,13 @@
 title: Getting Started
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2017-01-17'
     status: ok
 labels:
     - lts2016-ok
     - home
     - mlumeau
-    - lts2017-ok
+    - content-review-lts2017
 is_overview: true
 confluence:
     ajs-parent-page-id: '950332'
@@ -24,7 +24,6 @@ confluence:
 section_parent: tutorials
 tree_item_index: 100
 version_override:
-    LTS 2016: 810/nxdoc/tutorials
     LTS 2015: 710/nxdoc/guides-and-tutorials
     '6.0': 60/nxdoc/guides-and-tutorials
     '5.8': 58/nxdoc/dev-cookbook

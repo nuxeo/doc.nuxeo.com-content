@@ -2,13 +2,13 @@
 title: Additional Services
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2016-12-23'
     status: ok
 labels:
     - lts2016-ok
     - home
     - mlumeau
-    - lts2017-ok
+    - content-review-lts2017
 is_overview: true
 confluence:
     ajs-parent-page-id: '31033314'
@@ -55,7 +55,7 @@ history:
         version: '1'
 
 ---
-This section lists additional services and modules that are part of the default distribution of the Nuxeo Platform. You can also refer to the [Nuxeo add-ons page]({{page page='nuxeo-add-ons'}}) to understand how to integrate features offered by additional plugins.
+This section lists additional services and modules that are part of the default distribution of the Nuxeo Platform. You can also refer to the [additional packages section]({{page page='marketplace-add-ons'}}) to understand how to integrate features offered by additional plugins.
 
 <div class="row" data-equalizer data-equalize-on="medium">
 

@@ -2,14 +2,14 @@
 title: Additional UI Frameworks
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2017-01-25'
     status: ok
 labels:
     - lts2016-ok
     - home
     - mlumeau
     - excerpt
-    - lts2017-ok
+    - content-review-lts2017
 is_overview: true
 confluence:
     ajs-parent-page-id: '16089312'

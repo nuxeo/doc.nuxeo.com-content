@@ -2,13 +2,13 @@
 title: Client SDKs
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2016-12-23'
     status: ok
 labels:
     - lts2016-ok
     - home
     - mlumeau
-    - lts2017-ok
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950332'
     ajs-parent-page-title: Developer Documentation Center

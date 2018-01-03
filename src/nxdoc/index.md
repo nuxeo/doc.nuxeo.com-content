@@ -2,14 +2,14 @@
 title: Developer Documentation Center
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2017-01-20'
     status: ok
 labels:
     - lts2016-ok
     - home
     - mlumeau
     - multiexcerpt
-    - lts2017-ok
+    - content-review-lts2017
 is_overview: true
 confluence:
     ajs-parent-page-id: ''

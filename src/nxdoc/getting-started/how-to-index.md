@@ -2,12 +2,12 @@
 title: How-To Index
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2016-12-23'
     status: ok
 labels:
     - lts2016-ok
     - migration-sample
-    - lts2017-ok
+    - content-review-lts2017
     - home
     - mlumeau
 confluence:

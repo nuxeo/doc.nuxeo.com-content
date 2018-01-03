@@ -2,7 +2,7 @@
 title: Web UI
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2017-02-06'
     status: ok
 labels:
     - web-ui
@@ -10,7 +10,7 @@ labels:
     - web-ui-customization
     - nuxeo-elements
     - polymer
-    - lts2017-ok
+    - content-review-lts2017
     - home
     - mlumeau
 is_overview: true
