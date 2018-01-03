@@ -2,7 +2,7 @@
 title: Nuxeo Server
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2017-02-06'
     status: ok
 labels:
     - lts2016-ok
