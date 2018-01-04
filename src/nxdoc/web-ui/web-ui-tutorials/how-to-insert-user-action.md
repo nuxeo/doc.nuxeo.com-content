@@ -25,8 +25,6 @@ tree_item_index: 1300
 In this tutorial you will learn how to insert a user action on your instance using Studio Designer, to easily validate documents.
 {{! /excerpt}}
 
-{{{multiexcerpt 'Designer-restricted-access-note' page='generic-multi-excerpts'}}}
-
 ## Requirements
 
 - Web UI addon installed on your instance.
