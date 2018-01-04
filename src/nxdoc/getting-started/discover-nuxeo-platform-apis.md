@@ -19,6 +19,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/bYjBAQ'
     source_link: /display/NXDOC/Getting+Started+with+the+Nuxeo+Platform
 tree_item_index: 100
+version_override:
+    LTS 2016: 810/nxdoc/getting-started-with-the-nuxeo-platform
 history:
     - 
         author: Solen Guitter
