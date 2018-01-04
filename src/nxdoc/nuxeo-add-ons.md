@@ -313,20 +313,6 @@ Public
 </tr>
 <tr>
 <td colspan="1">
-Nuxeo Connect Report Tools<br/>
-`nuxeo-connect-tools-report`
-</td>
-<td colspan="1">
-Registered access
-</td>
-<td colspan="1">
-</td>
-<td colspan="1">
-Included in the default distribution since Nuxeo Platform 8.10.
-</td>
-</tr>
-<tr>
-<td colspan="1">
 Nuxeo Connect Report Tools Web<br/>
 `nuxeo-connect-tools-report-web`
 </td>
@@ -953,7 +939,7 @@ Public
 
 Use: "In progress for x.y.z (JC)", "Ready for x.y.z" or "Released for x.y.z" or any other relevant comment.
 
-Below is the list of Nuxeo Packages released as deprecated since the previous LTS version, Nuxeo Platform LTS 2015.
+Below is the list of Nuxeo Packages released as deprecated.
 
 <div class="table-scroll">
 <table class="hover">
@@ -963,31 +949,6 @@ Below is the list of Nuxeo Packages released as deprecated since the previous LT
 <th colspan="1">Public / Registered access</th>
 <th colspan="1">Documentation</th>
 <th colspan="1">Comments</th>
-</tr>
-<tr>
-<td colspan="1">
-Nuxeo Box API<br/>
-`nuxeo-box-api`
-</td>
-<td colspan="1">Public</td>
-<td colspan="1">&nbsp;</td>
-<td colspan="1">
-[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-box-api?version=1.3.4)<br/>
-Deprecated since LTS 2016 (8.10)
-</td>
-</tr>
-<tr>
-<td colspan="1">Nuxeo Forum<br/>
-`nuxeo-forum`
-</td>
-<td colspan="1">Public</td>
-<td colspan="1">
-[Documentation]({{page space='userdoc' page='forums'}})
-</td>
-<td colspan="1">
-[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-forum?version=1.0.0)<br/>
-Deprecated since LTS 2016 (8.10)
-</td>
 </tr>
 <tr>
 <td colspan="1">Nuxeo Review Workflows Dashboards<br/>
@@ -1011,18 +972,6 @@ Deprecated since LTS 2016 (8.10)
 <td colspan="1">
 [Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation?version=1.3.3)<br/>
 Deprecated since LTS 2016 (8.10).
-</td>
-</tr>
-<tr>
-<td colspan="1">
-Nuxeo Web Mobile<br/>
-`nuxeo-web-mobile`
-</td>
-<td colspan="1">Public</td>
-<td colspan="1">&nbsp;</td>
-<td colspan="1">
-[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-mobile?version=1.8.2)<br/>
-Deprecated since 8.3.
 </td>
 </tr>
 <tr>
