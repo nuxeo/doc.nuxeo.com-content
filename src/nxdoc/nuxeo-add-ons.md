@@ -519,7 +519,7 @@ Registered access
 [Documentation]({{page page='nuxeo-adobe-cc-connector'}})
 </td>
 <td colspan="1">
-[Released for 9.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace?version=9.3.0)
+[Released for 9.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace?version=1.2.7)
 </td>
 </tr>
 <tr>
@@ -588,7 +588,7 @@ Public
 `nuxeo-lambda-marketplace-package`</td>
 <td>Public</td>
 <td></td>
-<td>[Released for 9.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-lambda-marketplace-package?version=9.3.0)</td>
+<td>[Released for 9.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-lambda-marketplace-package?version=1.0.0)</td>
 </tr>
 <tr>
 <td colspan="1">
