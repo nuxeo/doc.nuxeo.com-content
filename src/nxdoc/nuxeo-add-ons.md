@@ -459,7 +459,7 @@ Registered access
 [Documentation]({{page page='nuxeo-for-salesforce'}})
 </td>
 <td colspan="1">
-[Released for 9.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce?version=1.2.2)
+[Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce?version=1.2.3)
 </td>
 </tr>
 <tr>
@@ -505,7 +505,7 @@ Registered access
 [Documentation]({{page page='nuxeo-adobe-cc-connector'}})
 </td>
 <td colspan="1">
-[Released for 9.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace?version=1.2.7)
+[Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace?version=1.2.8)
 </td>
 </tr>
 <tr>
