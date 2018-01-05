@@ -550,6 +550,19 @@ Public
 </td>
 </tr>
 <tr>
+<td>
+Nuxeo JSF to Web UI<br/>
+`nuxeo-jsf-to-web-ui`
+</td>
+<td>
+Public
+</td>
+<td></td>
+<td colspan="1">
+[Released for 8.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-to-web-ui?version=1.0.0)
+</td>
+</tr>
+<tr>
 <td colspan="1">
 Nuxeo Live Connect<br/>
 `nuxeo-liveconnect`
