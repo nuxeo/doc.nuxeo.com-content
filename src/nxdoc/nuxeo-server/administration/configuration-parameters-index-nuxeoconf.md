@@ -2276,17 +2276,45 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 </tr>
 <tr>
 <td colspan="1">`elasticsearch.restClient.connectionTimeoutMs`</td>
-<td colspan="1">A timeout in milliseconds until a connection is established (RestClient)</td>
+<td colspan="1">A timeout in milliseconds until a connection is established</td>
 <td colspan="1">`5000`</td>
 <td colspan="1">Since 9.10</td>
 </tr>
 <tr>
 <td colspan="1">`elasticsearch.restClient.socketTimeoutMs`</td>
-<td colspan="1">A maximum period, in milliseconds, of inactivity between two consecutive data packets (RestClient)</td>
+<td colspan="1">A maximum period, in milliseconds, of inactivity between two consecutive data packets</td>
 <td colspan="1">`20000`</td>
 <td colspan="1">Since 9.10</td>
 </tr>
-
+<tr>
+<td colspan="1">`elasticsearch.restClient.username`</td>
+<td colspan="1">A username for client basic authentication</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">Since 9.10-HF01</td>
+</tr>
+<tr>
+<td colspan="1">`elasticsearch.restClient.password`</td>
+<td colspan="1">A password for client basic authentication</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">Since 9.10-HF01</td>
+</tr>
+<tr>
+<td colspan="1">`elasticsearch.restClient.keystorePath`</td>
+<td colspan="1">A path to a valid keystore</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">Since 9.10-HF01</td>
+</tr>
+<tr>
+<td colspan="1">`elasticsearch.restClient.keystorePassword`</td>
+<td colspan="1">The keystore password</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">Since 9.10-HF01</td>
+</tr>
+<td colspan="1">`elasticsearch.restClient.keystoreType`</td>
+<td colspan="1">The type of keystore, e.g. jks</td>
+<td colspan="1">Default Java system keystore type</td>
+<td colspan="1">Since 9.10-HF01</td>
+</tr>
 <tr>
 <td colspan="1">`nuxeo.directory.type`</td>
 <td colspan="1">Type of directory, used for LDAP or multi-directory configuration. Possible values are `default`, `ldap`, `multi`.</td>
