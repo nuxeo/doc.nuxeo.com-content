@@ -5,7 +5,7 @@ review:
     date: '2017-02-28'
     status: ok
 labels:
-    - lts2016-ok
+    - lts2017-ok
     - marketplace-package
     - multi-tenant
     - excerpt
@@ -215,7 +215,7 @@ When a global administrator creates a new tenant, he needs to define some elemen
     *   Select the presentation of content lists in the domain.
     *   Select which document types should be available or not in the tenant.
     *   Select the search forms that should be used in the tenant.
-        ![]({{file name='multi-tenant-creation-form.png'}} ?w=550,border=true)
+        ![]({{file name='multi-tenant-creation-form.png'}} ?w=350,border=true)
 3.  Click on **Create**.<br/>
     The **Content** tab of the new tenant is displayed.<br/>
     The tenant is accessible by administrators only. You now need to define who the tenant administrator(s) is or are.
