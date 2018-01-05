@@ -11,12 +11,14 @@ toc: true
 tree_item_index: 10000
 
 ---
-This page relates to the release notes of Nuxeo Server and related addons for the 9.10 cycle, a.k.a LTS 2017 cycle. It will list the improvements and features that are successively shipped with the 9.1, 9.2 and 9.3 releases, before a final update for the LTS 2017. Evolutions are grouped by components.
+This page relates to the release notes of Nuxeo Server and related addons for the 9.10 cycle, a.k.a LTS 2017 cycle. It will list the improvements and features that are successively shipped with the 9.1, 9.2, 9.3 and LTS 2017 releases. Evolutions are grouped by components.
 You can also find detailed JIRA release notes:
 
 - [9.1 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=17991)
 - [9.2 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=18236)
 - [9.3 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=18310)
+- [9.10 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=18106)
+
 
 We also provide [instructions for upgrading]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-93'}}) to the latest release.
 
@@ -340,7 +342,7 @@ An asynchronous infrastructure to process distributed work chains has been writt
 
 It provides two patterns:
 - a batched producer/consumer pattern dedicated to import process
-- a [Stream Computation pattern|https://github.com/nuxeo/nuxeo-mqueues/tree/master/nuxeo-mqueues-core#pattern-4-stream-and-computations] (taken from [Concord Mesos|http://concord.io/docs/guides/concepts.html], Google MillWheel or [Kafka Processor|https://cwiki.apache.org/confluence/display/KAFKA/KIP-28+-+Add+a+processor+client]) to chain tasks
+- a [Stream Computation pattern](https://github.com/nuxeo/nuxeo-mqueues/tree/master/nuxeo-mqueues-core#pattern-4-stream-and-computations) (taken from [Concord Mesos](http://concord.io/docs/guides/concepts.html), Google MillWheel or [Kafka Processor](https://cwiki.apache.org/confluence/display/KAFKA/KIP-28+-+Add+a+processor+client)  to chain tasks
 
 nuxeo-stream is now used for several use cases in the platform, either by default or optionally: Audit (by default), Workers (optionally), Import. More usage will be integrated in the near future.
 
@@ -386,15 +388,17 @@ The old implementation can still be used with the following option: `nuxeo.strea
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22109](https://jira.nuxeo.com/browse/NXP-22109).
 
-#### New Audit APIs getLatestLogId and getLogEntriesAfter {{since '9.3'}}
+#### New Audit APIs getLatestLogId,  getLogEntriesAfter and queryLogs {{since '9.3'}}
 
-Two new methods have been added to the Audit service: `getLatestLogId` and `getLogEntriesAfter`
+Three new methods have been added to the Audit service: `getLatestLogId`, `getLogEntriesAfter` and `queryLogs`
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21661](https://jira.nuxeo.com/browse/NXP-21661).
 
+
+
 #### Audit Storage SPI {{since '9.3'}}
 
-A new interface `AuditStorage` has been added to define a storage back-end abstraction, facilitating the addition of new backends.
+A new interface `AuditStorage` has been added to define a storage back-end abstraction, so as to be able to store audit data in several places easily. A "storage" doesn't implement all the methods of the Audit service, but enough for storing audit entries and scroll them.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23291](https://jira.nuxeo.com/browse/NXP-23291).
 
@@ -822,6 +826,10 @@ Some of the Nuxeo packages now include the list of contributions that they deplo
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23310](https://jira.nuxeo.com/browse/NXP-23310).
 
+### Audit Storage Directory {{since '9.10'}}
+
+A new Audit Storage implementation has been added, that writes and read audit data in an SQL Directory. This addon is available [on the marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-audit-storage-directory).
+
 ### Lambda Integration {{since '9.2'}}
 
 A new addon has been implemented that allows to leverage Amazon Lambdas for efficient asynchronous computing. The initial use case is to offload the Picture Views generation (generating several renditions with different sizes of the same source image), but the module has been designed to be used for other kinds of processing.
@@ -952,11 +960,18 @@ we can now import files in the attachment part of the File document (or any of y
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21486](https://jira.nuxeo.com/browse/NXP-21486).
 
-### Nuxeo Platform Importer - English Dictionary for Random Import  {{since '9.1'}}
+### Nuxeo Platform Importer 
+
+#### English Dictionary for Random Import  {{since '9.1'}}
 
 Random English content can now be generated using the random importer.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21260](https://jira.nuxeo.com/browse/NXP-21260).
+
+#### Nuxeo Importer Stream {{since '9.10'}}
+
+A new addon has been added "nuxeo-platform-importer/nuxeo-importer-stream" that exposes a consumer / producer pattern making use of the nuxeo-stream infrastructure for running massively scalable imports. 
+See the [readme of the addon](https://github.com/nuxeo/nuxeo-platform-importer/tree/master/nuxeo-importer-stream).
 
 ### Nuxeo EasyShare Port {{since '9.3'}}
 
@@ -1193,6 +1208,10 @@ prefix="servers.${hostname}.nuxeo.">
 ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22994](https://jira.nuxeo.com/browse/NXP-22994).
+
+### JSF to Web UI Addon {{since '9.10'}}
+
+This new addon available [on the Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-to-web-ui) allows redirecting JSF URLs to Web UI ones, especially the permanent links. This is useful if you have used the JSF application and now use Web UI and that users have bookmarked some JSF links.
 
 ### New Customer Plugin Sample {{since '9.3'}}
 
