@@ -8,8 +8,10 @@ labels:
     - lts2016-ok
     - marshalling
     - json
+    - troger
     - link-update
-    - rest-api-component
+    - rest-api
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'
@@ -52,9 +54,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-09-15 16:05'
-        message: >-
-            Split table in section JSON Marshallers Provided by the Nuxeo
-            Platform
+        message: Split table in section JSON Marshallers Provided by the Nuxeo Platform
         version: '71'
     -
         author: Solen Guitter
@@ -84,9 +84,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-04-16 15:13'
-        message: >-
-            Add links to javadoc in table JSON Marshallers Provided by the Nuxeo
-            Platform
+        message: Add links to javadoc in table JSON Marshallers Provided by the Nuxeo Platform
         version: '65'
     -
         author: Solen Guitter

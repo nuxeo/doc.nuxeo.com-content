@@ -2,12 +2,14 @@
 title: Polymer Guide
 review:
     comment: ''
-    date: '2017-01-13'
+    date: '2017-12-14'
     status: ok
 toc: true
 labels:
     - lts2016-ok
+    - lts2017-ok
 tree_item_index: 200
+
 ---
 
 ## Why Polymer?
@@ -32,7 +34,7 @@ Generally an element should be:
 
 The overall idea is to spend less time writing complex JavaScript, and rely on composition to create our applications and elements in a more declarative way. The communication between those elements is generally accomplished using data binding and events.
 
-Fortunately Polymer already provides a solid [Elements Catalog](https://elements.polymer-project.org/) that follows these general rules and also addresses the most common patterns used in web development with Web Components. The source code of these elements is available on [GitHub](https://github.com/PolymerElements) and is well documented, making this one of the best resources to learn how to use Polymer.
+Fortunately Polymer already provides a solid [Elements Catalog](https://www.webcomponents.org/collection/Polymer/elements) that follows these general rules and also addresses the most common patterns used in web development with Web Components. The source code of these elements is available on [GitHub](https://github.com/PolymerElements) and is well documented, making this one of the best resources to learn how to use Polymer.
 
 When developing applications with lots of elements and/or involving complex data flows, data binding can become a nightmare very quickly (especially when using two-way binding). There's a nice pattern that we recommend which is well described in this [book sample](http://patternsinpolymer.com/patterns_in_polymer_child_parent_sample_js.pdf).
 
@@ -58,7 +60,5 @@ Once you become more familiar with Polymer we strongly recommend reading our [Po
   "Learn about the basic building blocks that make up a Polymer application, and see how to compose those elements into buttery smooth mobile experiences. The future of front end development is all here, on the Polycasts playlist!"
  - [Web Component Tester](https://github.com/Polymer/web-component-tester)
  "Makes testing your web components a breeze!"
- - [Polymer Themes](https://polymerthemes.com/)
- "Free Polymer Themes & Templates"
  - [Polymer Projects](https://github.com/abdonrd/PolymerProjects)
  "List of projects made with Polymer"

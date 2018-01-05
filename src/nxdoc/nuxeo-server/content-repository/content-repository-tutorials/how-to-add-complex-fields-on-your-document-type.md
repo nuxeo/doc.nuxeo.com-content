@@ -12,11 +12,13 @@ details:
         topics: 'Document type, Schema'
 labels:
     - content-review-lts2016
-    - schema
+    - schema-component
+    - fguillaume
     - howto
     - document-type
     - studio
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950287'
@@ -24,8 +26,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Add+Complex+Fields+on+Your+Document+Type
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Add+Complex+Fields+on+Your+Document+Type
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Add+Complex+Fields+on+Your+Document+Type'
     page_id: '8684439'
     shortlink: l4OE
     shortlink_source: 'https://doc.nuxeo.com/x/l4OE'

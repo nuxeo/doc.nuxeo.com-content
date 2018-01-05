@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to customize startup redirection so users are displayed
-            the default Nuxeo dashboard.
+        excerpt: Learn how to customize startup redirection so users are displayed the default Nuxeo dashboard.
         level: Advanced
         tool: Code editor
         topics: JSF UI
@@ -17,7 +15,9 @@ labels:
     - howto
     - jsf
     - seam-jsf-component
+    - atchertchian
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '20517820'
     ajs-parent-page-title: JSF UI How-To Index

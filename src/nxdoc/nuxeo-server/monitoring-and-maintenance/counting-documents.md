@@ -2,11 +2,13 @@
 title: Counting Documents
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-15'
     status: ok
 labels:
     - content-review-lts2016
-    - dataviz-component
+    - data-visualization-component
+    - nsilva
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance
@@ -20,7 +22,7 @@ confluence:
     source_link: /display/NXDOC/Counting+Documents
 tree_item_index: 800
 version_override:
-    'LTS 2015': 710/admindoc/counting-documents
+    LTS 2015: 710/admindoc/counting-documents
     '6.0': 60/admindoc/counting-documents
     '5.8': 58/admindoc/counting-documents
 history:
@@ -56,7 +58,7 @@ history:
         version: '1'
 
 ---
-If you want to know how many documents you have in your repository, you can go to the **Admin** tab, and check the **Repository Analytics** subtab in the **Activity** tab.
+If you want to know how many documents you have in your repository, you can go to the **Administration** menu, and check the **Repository Content** pill in the **Analytics** tab.
 
 You can filter the statisticts on a specific time period.
 

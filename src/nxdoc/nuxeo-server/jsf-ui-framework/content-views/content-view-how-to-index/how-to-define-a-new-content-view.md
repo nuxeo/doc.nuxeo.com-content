@@ -13,8 +13,10 @@ details:
 labels:
     - lts2016-ok
     - content-view
+    - atchertchian
     - howto
     - studio
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '19235663'

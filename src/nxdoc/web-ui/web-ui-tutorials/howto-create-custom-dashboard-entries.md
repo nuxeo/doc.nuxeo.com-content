@@ -1,9 +1,9 @@
 ---
-title: "HOWTO: Create Custom Dashboard Entries"
+title: 'HOWTO: Create Custom Dashboard Entries'
 review:
-    comment: ''
-    date: '2016-12-08'
-    status: ok
+    comment: 'This page needs be updated to take into account the update to Polymer 2'
+    date: '2017-12-13'
+    status: requiresUpdates
 details:
     howto:
         excerpt: Learn the basics of a Nuxeo module and is IDE agnostic.
@@ -15,22 +15,27 @@ labels:
     - dev-guide
     - manifest
     - bundle
+    - nsilva
     - customization
-    - project-structure
+    - project-structure  
+    - nuxeo-elements
+    - nuxeo-ui-elements
     - pom_xml
     - howto
+    - content-review-lts2017
 toc: true
 tree_item_index: 900
+
 ---
 ## Building Custom Dashboards
 
 {{#> callout type='note' }}
 
-Before building your own custom dashboards please make sure you fulfill the requirements in the [Customize Your App with Nuxeo Elements]({{page page='nuxeo-elements-tutorial'}})&nbsp;page.
+Before building your own custom dashboards please make sure you fulfill the requirements in the [Customize Your App with Nuxeo Elements]({{page page='nuxeo-elements-tutorial'}}) page.
 
 {{/callout}}
 
-The quickest way to start building a dashboard is to use the [Polymer Generator](https://github.com/nuxeo/generator-polymer) to scaffold our custom elements.
+The quickest way to start building a dashboard is to use the [Polymer Generator](https://github.com/polymer/generator-polymer) to scaffold our custom elements.
 
 1.  Generate a `nuxeo-sample` dashboard element:
 
@@ -41,7 +46,7 @@ The quickest way to start building a dashboard is to use the [Polymer Generator]
 
     **Note:** It is a good practice to build dashboards as custom elements since you can then use them anywhere you see fit. But you can also build dashboards as full applications in which case the Yeoman polymer application generator should be used instead.
 
-2.  Once the&nbsp;`nuxeo-sample` element is generated you can install further client side dependencies. In this case you need the Nuxeo Data Visualization Elements and a charting library to produce charts for your dashboard:
+2.  Once the `nuxeo-sample` element is generated you can install further client side dependencies. In this case you need the Nuxeo Data Visualization Elements and a charting library to produce charts for your dashboard:
 
     ```bash
     bower install --save nuxeo/nuxeo-dataviz-elements
@@ -112,14 +117,14 @@ The quickest way to start building a dashboard is to use the [Polymer Generator]
     ```
 
     {{/panel}}
-4.  To checkout your element we recommend using [Polyserve](https://github.com/PolymerLabs/polyserve), a&nbsp;simple web server for using bower components locally, which you can install with:
+4.  To checkout your element we recommend using [Polyserve](https://github.com/PolymerLabs/polyserve), a simple web server for using bower components locally, which you can install with:
 
     ```bash
     npm install -g polyserve
     polyserve -p 3000
     ```
 
-    Once Polyserve is up and running we can finally see our custom element's demo at:&nbsp;[http://localhost:3000/components/nuxeo-dataviz-sample/demo/](http://localhost:3000/components/nuxeo-dataviz-sample/demo/)
+    Once Polyserve is up and running we can finally see our custom element's demo at: [http://localhost:3000/components/nuxeo-dataviz-sample/demo/](http://localhost:3000/components/nuxeo-dataviz-sample/demo/)
 
     ![]({{file page='data-visualization' name='dataviz_custom_element_demo.png'}} ?w=326,h=293,border=true)
 

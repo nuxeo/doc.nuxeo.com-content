@@ -6,10 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to be able to control the display mode of a widget. Nuxeo
-            Studio enables you to implement your requirements using an
-            expression when you configure your widget.
+        excerpt: Learn how to be able to control the display mode of a widget. Nuxeo Studio enables you to implement your requirements using an expression when you configure your widget.
         level: Advanced
         tool: Studio
         topics: 'Layout, Widget'
@@ -22,15 +19,16 @@ labels:
     - layout
     - studio
     - layout-widgets-component
+    - atchertchian
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235623'
-    ajs-parent-page-title: Layout & Widget How-To Index
+    ajs-parent-page-title: 'Layout & Widget How-To Index'
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Control+the+Display+Mode+of+a+Widget
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Control+the+Display+Mode+of+a+Widget
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Control+the+Display+Mode+of+a+Widget'
     page_id: '4689273'
     shortlink: eY1H
     shortlink_source: 'https://doc.nuxeo.com/x/eY1H'

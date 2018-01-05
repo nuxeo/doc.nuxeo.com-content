@@ -6,17 +6,16 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            This how-to provides an example of how to use the workflow REST API.
+        excerpt: This how-to provides an example of how to use the workflow REST API.
         level: Advanced
         tool: Code
         topics: 'Worklow, REST API'
 labels:
     - lts2016-ok
     - rest-api
-    - workflow
-    - workflow-component
+    - troger
     - excerpt
+    - content-review-lts2017
 toc: true
 tree_item_index: 300
 

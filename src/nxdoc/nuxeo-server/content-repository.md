@@ -7,6 +7,8 @@ review:
 labels:
     - content-review-lts2016
     - home
+    - mlumeau
+    - content-review-lts2017
 is_overview: true
 confluence:
     ajs-parent-page-id: '31033314'
@@ -69,7 +71,7 @@ history:
     -
         author: Florent Guillaume
         date: '2014-08-19 18:36'
-        message: Nuxeo EP -> Platform
+        message: 'Nuxeo EP -> Platform'
         version: '36'
     -
         author: Solen Guitter
@@ -99,9 +101,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2013-05-01 13:14'
-        message: >-
-            better default sample + add require on pre-existing types
-            configuration + remove deprecated layouts configuration + format
+        message: better default sample + add require on pre-existing types configuration + remove deprecated layouts configuration + format
         version: '30'
     -
         author: Solen Guitter

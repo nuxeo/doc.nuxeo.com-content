@@ -2,7 +2,7 @@
 title: How to Override Existing Document Types
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-13'
     status: ok
 details:
     howto:
@@ -14,15 +14,16 @@ labels:
     - lts2016-ok
     - howto
     - document-type
+    - gcarlin
     - excerpt
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950287'
     ajs-parent-page-title: Content Repository
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Override+Existing+Document+Types
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Override+Existing+Document+Types
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Override+Existing+Document+Types'
     page_id: '6030167'
     shortlink: VwNc
     shortlink_source: 'https://doc.nuxeo.com/x/VwNc'
@@ -284,22 +285,61 @@ SuperSpace
 
 The SuperSpace facet is required for children documents to get default notifications configured in the 'Alerts' tab.
 
-</td></tr><tr><td colspan="1">WorkspaceRoot</td><td colspan="1">WorkspaceRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">SuperSpace</td><td colspan="1">&nbsp;</td></tr></tbody></table></div>{{#> callout type='tip' }}
+</td></tr><tr><td colspan="1">
+
+WorkspaceRoot
+
+</td><td colspan="1">
+
+WorkspaceRoot
+
+</td><td colspan="1">
+
+Folder
+
+</td><td colspan="1">
+
+&nbsp;
+
+</td><td colspan="1">
+
+SuperSpace
+
+</td><td colspan="1">
+
+&nbsp;
+
+</td>
+
+</tr></tbody></table></div>
+
+{{#> callout type='info' }}
+
+The Alert tab is currently only available on JSF UI. It is planned to be integrated in Nuxeo Web UI.
+
+{{/callout}}
+
+{{#> callout type='tip' }}
 
 You can also browse the [contributions to the Type extension](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype) for more document types.
 
-{{/callout}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
+{{/callout}}
 
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Popular How-Tos'}}
 - [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}})
 - [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
 - [How-To Index]({{page page='how-to-index'}})
-
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
-
+{{/panel}}
+</div>
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 - [Documents in Nuxeo Studio]({{page space='studio' page='documents'}})
 - [Content Repository]({{page page='content-repository'}})
 - [Available Facets]({{page page='available-facets'}})
 - [Lifecycle]({{page space='studio' page='life-cycle'}})
 - [Schemas]({{page space='studio' page='schemas'}})
-
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>

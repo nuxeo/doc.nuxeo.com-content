@@ -2,14 +2,17 @@
 title: Amazon CloudFront
 review:
     comment: ''
-    date: '2017-08-08'
+    date: '2017-12-13'
     status: ok
 labels:
     - amazon-s3
+    - fguillaume
     - amazon-cloudfront
     - binary-manager
+    - lts2017-ok
 toc: true
 tree_item_index: 100
+
 ---
 The CloudFrontBinaryManager is a Nuxeo Binary Manager that lets you store Nuxeo's binaries in an [Amazon S3](http://aws.amazon.com/s3/) bucket and lets you download them from an [Amazon CloudFront CDN](https://aws.amazon.com/cloudfront/) using signed URLs.
 

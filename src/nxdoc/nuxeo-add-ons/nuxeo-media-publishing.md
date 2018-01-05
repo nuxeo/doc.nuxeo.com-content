@@ -1,13 +1,15 @@
 ---
 title: Nuxeo Media Publishing
 review:
-    comment: 'update youtube configuration part'
-    date: '2017-01-16'
+    comment: ''
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - media-publishing-component
+    - ajusto
     - excerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -20,7 +22,7 @@ confluence:
     shortlink: vAOIAQ
     shortlink_source: 'https://doc.nuxeo.com/x/vAOIAQ'
     source_link: /display/NXDOC/Nuxeo+Media+Publishing
-tree_item_index: 2200    
+tree_item_index: 2200
 history:
     -
         author: Manon Lumeau
@@ -147,6 +149,8 @@ Published videos can also be republished or unpublished from the external provid
 ![]({{file name='republish_unpublish.png'}} ?w=600,h=325,border=true)
 
 ## Installation and Configuration
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 This addon requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin tab]({{page page='installing-a-new-package-on-your-instance'}}). However, it requires the installation of the [Digital Asset Management (DAM) addon]({{page page='digital-asset-management-dam'}}) which provides multimedia files (picture, audio and video).
 

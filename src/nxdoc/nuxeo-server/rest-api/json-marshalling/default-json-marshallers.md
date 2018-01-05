@@ -7,8 +7,10 @@ review:
 labels:
     - lts2016-ok
     - rest-api
+    - troger
     - json
     - marshalling
+    - content-review-lts2017
 toc: true
 tree_item_index: 100
 

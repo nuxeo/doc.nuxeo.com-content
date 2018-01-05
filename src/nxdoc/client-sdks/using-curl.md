@@ -8,9 +8,11 @@ labels:
     - content-review-lts2016
     - curl
     - client
-    - rest-api-component
+    - rest-api
+    - troger
     - excerpt
     - multiexcerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '16091040'
     ajs-parent-page-title: Client SDKs
@@ -27,7 +29,7 @@ history:
     -
         author: Benoit Delbosc
         date: '2016-10-07 12:55'
-        message: ix the Lock url by adding a missing "/
+        message: 'ix the Lock url by adding a missing "/'
         version: '17'
     -
         author: Laurent Doguin
@@ -62,7 +64,7 @@ history:
     -
         author: Bogdan Stefanescu
         date: '2011-06-23 18:31'
-        message: example is not working when using '*' - server side exception
+        message: "example is not working when using '*' - server side exception"
         version: '10'
     -
         author: Stéfane Fermigier

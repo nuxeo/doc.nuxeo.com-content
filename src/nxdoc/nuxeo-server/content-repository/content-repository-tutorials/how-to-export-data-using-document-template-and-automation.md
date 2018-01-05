@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to generate a CSV file listing all the documents of your
-            Nuxeo Platform repository.
+        excerpt: Learn how to generate a CSV file listing all the documents of your Nuxeo Platform repository.
         level: Beginner
         tool: Studio
         topics: 'Automation, Document template'
@@ -19,8 +17,10 @@ labels:
     - scripting
     - howto
     - automation
+    - fdavid
     - studio
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '19235681'
@@ -28,8 +28,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Export+Data+Using+Document+Template+and+Automation
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Export+Data+Using+Document+Template+and+Automation
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Export+Data+Using+Document+Template+and+Automation'
     page_id: '5570841'
     shortlink: GQFV
     shortlink_source: 'https://doc.nuxeo.com/x/GQFV'

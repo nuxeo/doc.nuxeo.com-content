@@ -2,14 +2,16 @@
 title: Elasticsearch Passthrough
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - elasticsearch
     - elasticsearch-component
+    - bdelbosc
     - excerpt
     - link-update
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -52,9 +54,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-10-21 15:47'
-        message: >-
-            Fix request filters names and links in Contributing a Custom Index
-            View with a SearchRequestFilter
+        message: Fix request filters names and links in Contributing a Custom Index View with a SearchRequestFilter
         version: '9'
     -
         author: Solen Guitter

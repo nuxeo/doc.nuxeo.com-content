@@ -7,8 +7,10 @@ review:
     comment: ''
 labels:
     - elasticsearch
+    - content-review-lts2017
 tree_item_index: 650
 toc: true
+
 ---
 
 When using the Elasticsearch Page Provider, you can use the [Elasticsearch highlight feature](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/search-request-highlighting.html) to highlight some words in your query results.

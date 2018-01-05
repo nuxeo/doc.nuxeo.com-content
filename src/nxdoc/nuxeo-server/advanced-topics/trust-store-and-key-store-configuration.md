@@ -2,12 +2,14 @@
 title: Trust Store and Key Store Configuration
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-14'
     status: ok
 labels:
     - content-review-lts2016
     - todo
     - certificate
+    - fguillaume
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950296'
@@ -15,8 +17,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Trust+Store+and+Key+Store+Configuration
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Trust+Store+and+Key+Store+Configuration
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Trust+Store+and+Key+Store+Configuration'
     page_id: '11534854'
     shortlink: BgKw
     shortlink_source: 'https://doc.nuxeo.com/x/BgKw'
@@ -47,147 +48,51 @@ history:
 ---
 ## Introduction
 
-When you make Nuxeo discuss with other servers through different APIs, you need to add the authentication certificate and your trust store because:
+When Nuxeo communicates with other servers through network APIs, and you want these communications to be secured, you may need to add authentication certificates to your key store (all the certificates known to the JVM) and trust store (all the certificates that the JVM trusts) because:
 
-*   Establishing connection requires to expose the certificate to the remote server,
-*   the remote server exposes a self-signed certificate or a certificate signed by a certification authority not known by the standard Key Store.
+*   establishing a connection may require (depending on the remote server configuration) to present a local certificate to the remote server, so that it knows the Nuxeo server is legitimate,
+*   the remote server may present a certificate signed by a certification authority (or a self-signed certificate) not known by the standard Java trust store.
 
-When your Nuxeo server establishes a remote connection, the remote server exposes a certificate that is his ID card on the network so the Nuxeo server is assured to communicate with a trusted server. Instead passing through detector to trust it, this certificate has been signed by an authority of certification. The trust store contains all certificates of the authorities that will be trusted by the JVM, especially for SSL connections and more particularly HTTPS connections.
-
-The Key Store will contains all the keys needed by the JVM to be authenticated to a remote server.
-
-There are 2 ways to configure these:
-
-*   setting the Trust Store and the Key Store statically
-*   setting it dynamically
+The Key Store will contain all the keys needed by the JVM to be authenticated to a remote server.
 
 {{#> callout type='note' }}
 
-If you set a custom trust store with your authorities exclusively, **Marketplace, Studio and hot fix distribution integration will not work anymore** since these servers expose certificates available in the default trust store. So I suggest that you [add your certificates to the default one](#addingcertificatestodefaulttruststore).
+If you set a custom trust store with your authorities exclusively, **Marketplace, Studio and hot fix distribution integration will not work anymore** since these servers expose certificates available in the default trust store. So we suggest that you [add your certificates to the default trust store](#addingcertificatestodefaulttruststore).
 
 {{/callout}}
 
 ## {{> anchor 'statictruststore'}}Static Trust Store and Key Store
 
-To set the trust store and key store statically, you just have to add the following parameter into the environment variable:
+To set up the trust store and key store statically, you just have to add the following system properties to Java:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+| What for | Parameter name | Comment |
+| --- | --- | --- |
+| Trust Store Path | `javax.net.ssl.trustStore` | |
+| Trust Store Password | `javax.net.ssl.trustStorePassword` | |
+| Trust Store Type | `javax.net.ssl.keyStoreType` | JKS for instance |
+| Key Store Path | `javax.net.ssl.keyStore` | |
+| Key Store Password | `javax.net.ssl.keyStorePassword` | &nbsp; |
 
-What for
+For instance you can add the following parameters to your `JAVA_OPTS`:
 
-</th><th colspan="1">
+{{#> panel type='code' heading='$NUXEO_HOME/bin/nuxeo.conf'}}
 
-Parameter name
+```
+JAVA_OPTS=$JAVA_OPTS -Djavax.net.ssl.trustStore=/the/path/to/your/trust/store.jks -Djavax.net.ssl.keyStoreType=jks ...
+```
 
-</th><th colspan="1">
+{{/panel}}
 
-Comment
-
-</th></tr><tr><td colspan="1">
-
-Trust Store Path
-
-</td><td colspan="1">
-
-`javax.net.ssl.trustStore`
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-Trust Store Password
-
-</td><td colspan="1">
-
-`javax.net.ssl.trustStorePassword`
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-Trust Store Type
-
-</td><td colspan="1">
-
-`javax.net.ssl.keyStoreType`
-
-</td><td colspan="1">
-
-JKS for instance
-
-</td></tr><tr><td colspan="1">
-
-Key Store Path
-
-</td><td colspan="1">
-
-`javax.net.ssl.keyStore`
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-Key Store Password
-
-</td><td colspan="1">
-
-`javax.net.ssl.keyStorePassword`
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr></tbody></table></div>
-
-So if you want to set them at start time, you can add the following parameter either:
-
-*   into your `JAVA_OPTS`:
-
-    {{#> panel type='code' heading='$NUXEO_HOME/bin/nuxeo.conf'}}
-
-    ```
-    -Djavax.net.ssl.trustStore=/the/path/to/your/trust/store.jks -Djavax.net.ssl.keyStoreType=jks ... etc ...
-
-    ```
-
-    {{/panel}}
-*   or into your Java code:
-
-    {{#> panel type='code' heading='MyClass.java'}}
-
-    ```
-    System.setProperty(
-            "javax.net.ssl.trustStore",
-            "/the/path/to/your/trust/store.jks");
-    System.setProperty(
-            "javax.net.ssl.keyStore",
-            "/the/path/to/your/key/store.jks");
-    System.setProperty("javax.net.ssl.keyStorePassword", "myPassword");
-    ...etc...
-
-    ```
-
-    {{/panel}}
-
-## {{> anchor 'dynamictruststore'}}Dynamic Trust Store
-
-...TODO...
 
 ## {{> anchor 'addingcertificatestodefaulttruststore'}}Adding Your Certificates into the Default Trust Store
 
-You will find the default trust store delivered with your JVM in:
+You will find the default trust store shipped with your JVM in:
 ```
 $JAVA_HOME/lib/security/cacerts
 ```
-For instance in Mac OS, it is in:
+For instance on macOS, it could be:
 ```
-/System/Library/Frameworks/JavaVM.framework/Home/lib/security/cacerts
+/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/security/cacerts
 ```
 
 By default the password for this Trust Store is "changeit".
@@ -200,12 +105,12 @@ So to add your certificates to the default trust store:
     keytool -import -file /path/to/your/certificate.pem -alias NameYouWantToGiveOfYourCertificate -keystore /path/to/the/copy/of/the/default/truststore.jks -storepass changeit
     ```
 
-3.  Set the trust store copy as your either [statically](#statictruststore) or [dynamically](#dynamictruststore).
+3.  Set the trust store copy as your [statically](#statictruststore).
 4.  Restart your Nuxeo instance.
 
 ## Troubles
 
-If your Nuxeo instance cannot access to Connect anymore, the Marketplace and Hot Fixes are no longer automatically available (through the Update Center for instance), this can mean that the trust store does not contain the certificates from the authority that signed Nuxeo Servers certificates.
+If your Nuxeo instance cannot access Connect anymore, or the Marketplace and Hot Fixes are no longer automatically available (through the Update Center for instance), this can mean that the trust store does not contain the certificates from the authority that signed Nuxeo Servers certificates.
 
 If you have the following error in your logs during the connection establishment:
 

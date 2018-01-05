@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - tuto-document-type
     - tuto-user-action
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '4689520'
@@ -22,92 +23,93 @@ confluence:
     source_link: /display/NXDOC/Implement+the+News+Document
 tree_item_index: 100
 history:
-    -
+    - 
         author: Manon Lumeau
         date: '2016-04-28 12:57'
         message: 'ix Studio menu label     '
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-10 09:03'
         message: Update Schema tab step
         version: '16'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-01-18 16:55'
         message: 'replace "Write" by "Edit"    '
         version: '15'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-11-17 14:21'
         message: ''
         version: '14'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-11-16 17:26'
         message: ''
         version: '13'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-11-16 17:25'
         message: ''
         version: '12'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-11-16 16:56'
         message: ''
         version: '11'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-05-06 00:53'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-28 16:29'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-28 16:29'
         message: updated reference howtos
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-28 16:23'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-28 16:21'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-28 16:17'
         message: moving workspace content view section
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2011-01-28 11:22'
         message: added all content type and structure instructions
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2011-01-27 00:25'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2011-01-27 00:25'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2011-01-27 00:09'
         message: ''
         version: '1'
 next_link: /nxdoc/add-a-news-content-view-on-workspaces
+
 ---
 In this section, we will:
 

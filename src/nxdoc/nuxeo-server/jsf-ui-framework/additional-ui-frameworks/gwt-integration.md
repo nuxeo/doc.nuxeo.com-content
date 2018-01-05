@@ -7,7 +7,9 @@ review:
 labels:
     - lts2016-ok
     - gwt-component
+    - troger
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950334'

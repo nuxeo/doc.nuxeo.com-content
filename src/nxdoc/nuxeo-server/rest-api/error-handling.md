@@ -8,10 +8,11 @@ labels:
     - lts2016-ok
     - exception
     - rest-api
-    - rest-api-component
+    - troger
+    - content-review-lts2017
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/web-exceptions-errors
+    LTS 2015: 710/nxdoc/web-exceptions-errors
     '6.0': 60/nxdoc/web-exceptions-errors
 confluence:
     ajs-parent-page-id: '13664833'
@@ -129,11 +130,6 @@ Simple mode is activated by default. The extended mode can be configured through
         <td>'exception' (in the case of exceptions)</td>
       </tr>
       <tr>
-        <td>`code`</td>
-        <td>string</td>
-        <td>The technical exception identity (Java class)</td>
-      </tr>
-      <tr>
         <td>`status`</td>
         <td>integer</td>
         <td>The HTTP status of the error response</td>
@@ -168,7 +164,6 @@ Here is an example of an exception when fetching a missing document.
 ```json
 {
   "entity-type": "exception",
-  "code": "org.nuxeo.ecm.webengine.model.exceptions.WebResourceNotFoundException",
   "status": 404,
   "message": "Failed to get document /wrongID"
 }
@@ -181,7 +176,6 @@ Here is an example of an exception when fetching a missing document.
 ```json
 {
   "entity-type": "exception",
-  "code": "org.nuxeo.ecm.webengine.model.exceptions.WebResourceNotFoundException",
   "status": 404,
   "message": "Failed to get document /wrongID",
   "stacktrace": "org.nuxeo.ecm.webengine.WebException: Failed to get document /wrongID\n\tat org.nuxeo.ecm.webengine.WebException.newException(WebException.java[.........]",
@@ -213,7 +207,7 @@ All calls with accepted media type `application/json+nxentity` will activate sta
 For testing purposes, you can activate the extended mode by adding this code snippet:
 
 ```
-JsonFactoryManager jsonFactoryManager = Framework.getLocalService(JsonFactoryManager.class);
+JsonFactoryManager jsonFactoryManager = Framework.getService(JsonFactoryManager.class);
 if (!jsonFactoryManager.isStackDisplay()) {
     jsonFactoryManager.toggleStackDisplay();
 }
@@ -240,3 +234,28 @@ To toggle the display mode (simple or extended) during runtime execution, you ca
     ```
 
     {{/panel}}
+
+## Custom HTTP Status Code
+
+Since Nuxeo Platform 9.3, you can customize the HTTP status code returned by the Nuxeo Platform when throwing a `NuxeoException`.
+
+Default subclasses of `NuxeoException` are already mapped to the right HTTP status code, such as:
+
+* `DocumentNotFoundException`: 404
+* `DocumentSecurityException`: 403
+* `ConcurrentUpdateException`: 409
+* `WebResourceNotFoundException`: 404
+* ...
+
+The `NuxeoException` class supports new constructors where you can specify a status code that will be used as the response HTTP status code. The mapping of the `NuxeoException#statusCode` with the response HTTP status code is done by the `WebEngineExceptionMapper` class.
+
+For instance, calling a REST API endpoint where a listener throws the following exception will lead to a response with its HTTP status code set to `409`.
+
+```java
+...
+    public void handleEvent(Event event) {
+        ...
+        throw new NuxeoClientException("there is a conflict!", 409);
+    }
+...
+```

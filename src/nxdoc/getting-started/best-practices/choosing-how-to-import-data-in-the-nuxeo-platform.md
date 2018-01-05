@@ -2,11 +2,13 @@
 title: Choosing How to Import Data in the Nuxeo Platform
 review:
     comment: ''
-    date: '2017-08-01'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - import
+    - gcarlin
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235677'
@@ -14,8 +16,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Choosing+How+to+Import+Data+in+the+Nuxeo+Platform
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Choosing+How+to+Import+Data+in+the+Nuxeo+Platform
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Choosing+How+to+Import+Data+in+the+Nuxeo+Platform'
     page_id: '17794912'
     shortlink: YIcPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/YIcPAQ'
@@ -116,7 +117,7 @@ history:
 ---
 
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/store/220415-data-capture) on Nuxeo University.
+Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) on Nuxeo University.
 {{/callout}}
 
 The Nuxeo Platform provides tools and APIs to import content:

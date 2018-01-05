@@ -2,16 +2,16 @@
 title: Nuxeo Drive
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - link-update
     - nuxeo-drive
-    - nuxeo-drive-component
+    - yachour
+    - lts2017-ok
 toc: true
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '31033323'
     ajs-parent-page-title: Desktop and Mobile
@@ -52,9 +52,7 @@ history:
     -
         author: Solen Guitter
         date: '2016-04-01 14:53'
-        message: >-
-            Add default value column, Remove section about beta update site set
-            up though nuxeo.conf
+        message: 'Add default value column, Remove section about beta update site set up though nuxeo.conf'
         version: '137'
     -
         author: Solen Guitter
@@ -259,7 +257,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-09-04 10:35'
-        message: Moved other"
+        message: 'Moved other"'
         version: '96'
     -
         author: Solen Guitter
@@ -839,6 +837,15 @@ On your Home Nuxeo Drive tab, the space is displayed in the "Synchronization roo
 
 ![]({{file name='drive-newtab.png' page='/nxdoc/nuxeo-drive'}} ?w=650,border=true)
 
+#### Web UI
+
+To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive_unsynced-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
+The icon becomes pink ![]({{file name='drive_synced_under_root-webui.png' page='nuxeo-drive'}} ?w=20). Documents inside the synchronized space have a Drive local edit icon ![]({{file name='drive_edit-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
+
+{{{multiexcerpt 'drive-content-sync'}}}
+
+![]({{file name='drive-newtab-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=650,border=true)
+
 
 ### Suspending Synchronization
 
@@ -869,6 +876,12 @@ There are two ways to desynchronize a folder.
 By default, once you have synchronized a folder all its content (files and folders) are synchronized. But you can deactivate synchronization locally on some folders. This feature enables you to manage the storage space dedicated to the synchronization, which is especially useful if you use a device with a low-storage capacity.
 
 Clicking on the **Select sync folders** button in the [Settings window](#open-drive-settings) shows the **Nuxeo Drive Filters** windows from which you can unselect folders to unsynchronize. Unselected folders remain displayed to you can easily reselect and synchronize them back. They are still marked as synchronized on your web UI.
+
+{{#> callout type='warning' }}
+
+Please note that when synchronizing a significant amount of data, it is highly inadvisable to deactivate synchronization of the folders containing this data, to avoid generating conflicts with the server. Versions 2.5.9 and above will not allow to access the "select sync folders" window when such synchronization is running.
+
+{{/callout}}
 
 #### Unsynchronizing Folders (Server)
 

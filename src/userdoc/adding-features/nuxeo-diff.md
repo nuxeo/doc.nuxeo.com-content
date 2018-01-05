@@ -2,7 +2,7 @@
 title: Nuxeo Diff
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2017-12-12'
     status: ok
 labels:
     - history
@@ -12,6 +12,7 @@ labels:
     - nuxeo-diff
     - excerpt
     - multiexcerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '11043055'
@@ -108,6 +109,9 @@ history:
         version: '1'
 
 ---
+
+{{{multiexcerpt 'JSF-UI-required' page='/nxdoc/generic-multi-excerpts'}}}
+
 {{! multiexcerpt name='nuxeo-diff-functional-overview'}}
 {{! excerpt}}
 
@@ -119,11 +123,11 @@ history:
 
 When you compare two documents or versions of a document, the elements below are compared:
 
-*   The metadata (title, coverage, modification date, etc)
-*   The content (note or main attachment depending on the document involved)
-*   The attached files
+*   The metadata (title, coverage, modification date, etc).
+*   The content (note or main attachment depending on the document involved).
+*   The attached files.
 
-The only requirements for Nuxeo Diff to compare files is that their content can be converted into TXT or HTML format, which is the case for PDF and office files using the default converters of the Nuxeo Platform.
+The only requirements for Nuxeo Diff to compare files is that their content can be converted into TXT or HTML format, which is the case for PDF and Office files using the default converters of the Nuxeo Platform.
 
 {{! /multiexcerpt}}
 
@@ -133,7 +137,7 @@ You can compare documents in any space of the Nuxeo Platform: workspaces, sectio
 
 **To compare two versions of a document:**
 
-1.  On the document's **History** tab, click on the **Archived versions** sub-tab.
+1.  On the document's **History** tab, click on the **Archived Versions** sub-tab.
 2.  Select the two versions you want to compare by checking the corresponding boxes.
 3.  Click on the **Compare** button.
     The fields for which there has been changes between the two versions are displayed in a table, with the first version's values on the left and the second version's values on the right.

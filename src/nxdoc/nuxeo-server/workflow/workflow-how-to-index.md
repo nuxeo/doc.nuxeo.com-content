@@ -7,7 +7,9 @@ review:
 labels:
     - lts2016-ok
     - workflow
+    - mlumeau
     - index
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '12913723'
     ajs-parent-page-title: Workflow

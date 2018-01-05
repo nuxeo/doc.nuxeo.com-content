@@ -7,6 +7,8 @@ review:
 labels:
     - lts2016-ok
     - home
+    - mlumeau
+    - content-review-lts2017
 is_overview: true
 confluence:
     ajs-parent-page-id: '950332'
@@ -22,7 +24,7 @@ confluence:
 section_parent: tutorials
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/nxdoc/guides-and-tutorials
+    LTS 2015: 710/nxdoc/guides-and-tutorials
     '6.0': 60/nxdoc/guides-and-tutorials
     '5.8': 58/nxdoc/dev-cookbook
 history:

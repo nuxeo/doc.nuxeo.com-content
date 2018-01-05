@@ -10,7 +10,9 @@ labels:
     - import
     - marketplace-package
     - nuxeo-csv
+    - troger
     - csv-importer-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -93,7 +95,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-10-13 13:54'
-        message: Basic import now heading3 => appears in TOC
+        message: 'Basic import now heading3 => appears in TOC'
         version: '21'
     -
         author: Ronan Daniellou
@@ -103,12 +105,12 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-10-13 13:39'
-        message: 1st -> first
+        message: '1st -> first'
         version: '19'
     -
         author: Ronan Daniellou
         date: '2015-10-13 13:38'
-        message: 1st -> first
+        message: '1st -> first'
         version: '18'
     -
         author: Solen Guitter
@@ -198,7 +200,7 @@ history:
 
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/store/220415-data-capture) on Nuxeo University.
+Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) on Nuxeo University.
 {{/callout}}
 
 {{! excerpt}}

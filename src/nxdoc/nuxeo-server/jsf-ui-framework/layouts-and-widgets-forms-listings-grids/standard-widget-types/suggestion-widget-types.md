@@ -7,9 +7,11 @@ review:
 labels:
     - lts2016-ok
     - widget-types
+    - atchertchian
     - select2
     - suggestion
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3868345'

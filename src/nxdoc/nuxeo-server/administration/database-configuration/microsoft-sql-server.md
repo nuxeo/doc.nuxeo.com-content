@@ -2,13 +2,15 @@
 title: Microsoft SQL Server
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - database
-    - sqlserver
+    - kleturc
+    - sql
     - multiexcerpt-include
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3342340'
@@ -23,7 +25,7 @@ confluence:
     source_link: /display/NXDOC/Microsoft+SQL+Server
 tree_item_index: 300
 version_override:
-    'LTS 2015': 710/admindoc/microsoft-sql-server
+    LTS 2015: 710/admindoc/microsoft-sql-server
     '6.0': 60/admindoc/configuring-ms-sql-server
     '5.8': 58/admindoc/configuring-ms-sql-server
 history:
@@ -357,13 +359,13 @@ By default, recovery model is `full`, so you can get performance issues. You may
 
 **Mode View:**
 
-```
+```sql
 SELECT recovery_model_desc FROM sys.databases WHERE name = 'nuxeo';
 ```
 
 **Mode Update:**
 
-```
+```sql
 USE master;
 ALTER DATABASE nuxeo SET RECOVERY SIMPLE;
 ```
@@ -371,7 +373,7 @@ ALTER DATABASE nuxeo SET RECOVERY SIMPLE;
 ## Full-Text
 
 If you've configured your Nuxeo Platform instance to index full-text using the SQL database (by disabling the default configuration which uses Elasticsearch),
-you will need to make sure that your SQL Server instance has full-text search configured (it's an optional component during installation). See [http://msdn.microsoft.com/en-us/library/ms142571.aspx](http://msdn.microsoft.com/en-us/library/ms142571.aspx) for details.
+you will need to make sure that your SQL Server instance has full-text search configured (it's an optional component during installation). See [https://docs.microsoft.com/en-us/sql/relational-databases/search/full-text-search](https://docs.microsoft.com/en-us/sql/relational-databases/search/full-text-search) for details.
 
 Failing to do this will provoke errors like:
 
@@ -444,7 +446,7 @@ The SQL Server back end comes with ACL (Access Control List) optimization. This 
 
 For long-running instance or if you want to perform a hot backup without these unnecessary data, you can invoke the following stored procedure:
 
-```
+```sql
 USE nuxeo;
 EXEC dbo.nx_vacuum_read_acls;
 
@@ -464,14 +466,14 @@ SQL Server is doing lock escalation: converting many row level locks to page loc
 
 You can have more information on deadlock by enabling the following traces:
 
-```
+```sql
  DBCC TRACEON(1222,-1);
  DBCC TRACEON(1204,-1);
 ```
 
 Then you can try to disable the lock escalation on the table impacted by deadlocks:
 
-```
+```sql
 ALTER TABLE mytable SET (LOCK_ESCALATION=DISABLE)
 ```
 
@@ -479,7 +481,7 @@ ALTER TABLE mytable SET (LOCK_ESCALATION=DISABLE)
 
 SQL Server uses a clustered index to defined how the data is organized physically on disk. Before Nuxeo 5.7 we didn't define a clustered index, so the primary key is used, however this primary key is a random UUID which means that data keeps getting reorganized on disk on practically every insert or delete.
 
-This has been fixed for new instance since Nuxeo 5.7\. For instance created before there are migration script to apply to add these index, see [NXP-10934]({{page space='USERDOC56' page='Drag and+drop+compatibility+table'}}) attachments to get the script.
+This has been fixed for new instance since Nuxeo 5.7\. For instance created before there are migration script to apply to add these index, see [NXP-10934](https://jira.nuxeo.com/browse/NXP-10934) attachments to get the script.
 
 ### Indexes Maintenance
 
@@ -491,8 +493,8 @@ Microsoft SQL Server is a good database however it has a few unfortunate hiccups
 
 Here are some limitations in the context of the Nuxeo Platform:
 
-*   Its [snapshot isolation](http://msdn.microsoft.com/en-us/library/tcbchxcb%28v=vs.80%29.aspx) level is insufficiently isolated and not comparable to other MVCC databases, and may sometimes cause errors during concurrent writes.
-*   It is [infamous](http://stackoverflow.com/questions/872731/sql-server-lock-escalation-issue#872808) for its lock escalation problems that cause no end of troubles and is a very poor locking design in the first place ([MS184286](http://msdn.microsoft.com/en-us/library/ms184286.aspx)).
+*   Its [snapshot isolation](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server) level is insufficiently isolated and not comparable to other MVCC databases, and may sometimes cause errors during concurrent writes.
+*   It is [infamous](http://stackoverflow.com/questions/872731/sql-server-lock-escalation-issue#872808) for its lock escalation problems that cause no end of troubles and is a very poor locking design in the first place ([MS184286](https://msdn.microsoft.com/en-us/library/ms184286.aspx)).
 *   Only one full-text index is allowed per table ([MS187317](http://technet.microsoft.com/en-us/library/ms187317%28v=sql.100%29.aspx)).
 *   Full-text indexing cannot be configured to be done synchronously with transaction commits.
 *   It does not support circular ON CASCADE DELETE constraints ([KB321843](http://support.microsoft.com/kb/321843)).

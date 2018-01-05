@@ -1,15 +1,15 @@
 ---
-title: "Nuxeo Server Roadmap"
+title: Nuxeo Server Roadmap
 description: See what evolutions and improvements are planned for Nuxeo Server
 tree_item_index: 10100
 review:
     comment: ''
-    date: '2017-07-4'
+    date: 2017-07-4
     status: ok
 toc: true
 labels:
     - roadmap
-
+    - content-review-lts2017
 
 ---
 

@@ -14,7 +14,9 @@ labels:
     - lts2016-ok
     - howto
     - conversion
+    - troger
     - convert-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '19235645'
@@ -22,8 +24,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Contribute+a+Command+Line+Converter
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+a+Command+Line+Converter
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+a+Command+Line+Converter'
     page_id: '22905742'
     shortlink: joNdAQ
     shortlink_source: 'https://doc.nuxeo.com/x/joNdAQ'

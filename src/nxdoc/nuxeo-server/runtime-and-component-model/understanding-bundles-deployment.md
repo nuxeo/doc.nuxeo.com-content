@@ -7,8 +7,10 @@ review:
 labels:
     - lts2016-ok
     - deployment
+    - mcedica
     - nuxeoctl
     - runtimecomponent
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950284'

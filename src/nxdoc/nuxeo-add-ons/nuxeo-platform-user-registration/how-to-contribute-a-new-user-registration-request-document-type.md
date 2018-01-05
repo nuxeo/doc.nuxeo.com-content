@@ -1,8 +1,8 @@
 ---
-title: How to Contribute a New "User Registration Request" Document Type
+title: 'How to Contribute a New "User Registration Request" Document Type'
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-15'
     status: ok
 details:
     howto:
@@ -14,7 +14,9 @@ labels:
     - lts2016-ok
     - howto
     - user-registration
+    - fdavid
     - user-registration-component
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '18450090'

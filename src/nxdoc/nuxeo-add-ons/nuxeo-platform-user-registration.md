@@ -7,7 +7,9 @@ review:
 labels:
     - lts2016-ok
     - user-registration
+    - fdavid
     - user-registration-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

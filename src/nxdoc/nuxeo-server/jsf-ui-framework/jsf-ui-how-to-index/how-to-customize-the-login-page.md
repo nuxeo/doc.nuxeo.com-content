@@ -2,7 +2,7 @@
 title: How to Customize the Login Page
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-11'
     status: ok
 details:
     howto:
@@ -13,9 +13,11 @@ details:
 labels:
     - lts2016-ok
     - login-page
+    - akervern
     - howto
     - theme
     - login-page-component
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '20517820'
     ajs-parent-page-title: JSF UI How-To Index
@@ -72,9 +74,7 @@ history:
     -
         author: Gildas Lefevre
         date: '2014-11-05 15:24'
-        message: >-
-            NXDOC-363: Split the page in two, a beginner page and an advanced
-            one
+        message: 'NXDOC-363: Split the page in two, a beginner page and an advanced one'
         version: '34'
     -
         author: Gildas Lefevre

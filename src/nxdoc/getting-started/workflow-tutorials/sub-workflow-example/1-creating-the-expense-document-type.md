@@ -7,8 +7,10 @@ review:
 labels:
     - lts2016-ok
     - workflow
+    - grenard
     - subworkflow
     - sub-workflow
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '14257562'
@@ -16,8 +18,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: 1-+Creating+the+Expense+Document+Type
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/1-+Creating+the+Expense+Document+Type
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/1-+Creating+the+Expense+Document+Type'
     page_id: '14257583'
     shortlink: r43Z
     shortlink_source: 'https://doc.nuxeo.com/x/r43Z'
@@ -94,6 +95,7 @@ history:
         message: ''
         version: '1'
 next_link: /nxdoc/2-creating-the-subworkflows
+
 ---
 {{#> callout type='info' }}
 

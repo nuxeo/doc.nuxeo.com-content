@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn the best practices of Ajax4JSF to ensure correct rendering,
-            HTML and testing.
+        excerpt: 'Learn the best practices of Ajax4JSF to ensure correct rendering, HTML and testing.'
         level: Advanced
         tool: Code
         topics: 'JSF, Ajax'
@@ -20,7 +18,9 @@ labels:
     - howto
     - jsf
     - seam-jsf-component
+    - atchertchian
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '9830458'
@@ -73,9 +73,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2013-04-29 16:44'
-        message: >-
-            NXP-11472: add doc about attribute layout="block" on tag
-            a4j:outputPanel
+        message: 'NXP-11472: add doc about attribute layout="block" on tag a4j:outputPanel'
         version: '4'
     -
         author: Solen Guitter

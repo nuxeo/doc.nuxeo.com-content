@@ -7,19 +7,19 @@ review:
 labels:
     - content-review-lts2016
     - tutorial
+    - mlumeau
     - studio
     - excerpt
+    - content-review-lts2017
 toc: true
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '19235679'
     ajs-parent-page-title: Educational
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Publish+a+News+Feature+in+Workspaces
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Publish+a+News+Feature+in+Workspaces
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Publish+a+News+Feature+in+Workspaces'
     page_id: '4689520'
     shortlink: cI5H
     shortlink_source: 'https://doc.nuxeo.com/x/cI5H'

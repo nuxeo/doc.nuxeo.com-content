@@ -4,13 +4,14 @@ review:
     comment: ''
     date: '2016-12-08'
     status: ok
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
     - lts2016-ok
     - bootstrap
+    - mlumeau
     - excerpt
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '19235677'

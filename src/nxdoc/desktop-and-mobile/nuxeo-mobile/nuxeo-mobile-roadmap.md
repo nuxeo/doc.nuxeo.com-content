@@ -1,15 +1,19 @@
 ---
-title: "Nuxeo Mobile Roadmap"
+title: Nuxeo Mobile Roadmap
 description: See what evolutions and improvements are planned on Nuxeo Mobile
 review:
     comment: ''
-    date: '2017-06-16'
+    date: '2017-12-15'
     status: ok
-details:
+details: null
 labels:
     - mobile-roadmap
     - roadmap
+    - nuxeo-mobile
+    - yachour
+    - lts2017-ok
 toc: true
+
 ---
 
 Below is the list of evolutions and improvements planned for the Nuxeo Mobile applications.

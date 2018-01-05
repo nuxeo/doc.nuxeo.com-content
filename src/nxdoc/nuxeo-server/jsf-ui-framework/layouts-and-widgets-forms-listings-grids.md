@@ -9,8 +9,10 @@ labels:
     - layouts
     - widgets
     - layout-widgets-component
+    - atchertchian
     - excerpt
     - multiexcerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '16089312'
     ajs-parent-page-title: JSF UI Framework

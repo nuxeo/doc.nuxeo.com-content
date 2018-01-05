@@ -11,7 +11,9 @@ labels:
     - community-links
     - url-codec-component
     - seam-jsf-component
+    - atchertchian
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089312'

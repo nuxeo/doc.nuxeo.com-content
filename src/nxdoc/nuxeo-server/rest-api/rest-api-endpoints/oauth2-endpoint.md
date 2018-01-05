@@ -8,8 +8,10 @@ review:
 labels:
     - lts2016-ok
     - rest-api
+    - troger
     - endpoint
     - oauth2
+    - content-review-lts2017
 toc: true
 tree_item_index: 500
 

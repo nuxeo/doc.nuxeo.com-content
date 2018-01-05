@@ -2,7 +2,7 @@
 title: How to Set Up a Tasks Dashboard
 review:
     comment: ''
-    date: '2017-01-20'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
@@ -15,9 +15,10 @@ labels:
     - task
     - dashboard
     - workflow
+    - grenard
     - howto
-    - workflow-component
     - excerpt
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '19235619'
     ajs-parent-page-title: Workflow How-To Index
@@ -108,6 +109,9 @@ history:
         version: '1'
 
 ---
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
 
 In Studio, we provide the Time Off Request template that sets up a workflow for scheduling time off. If you installed this template, you would see that it displays a new tab "Workflow" in which there are the tasks queues related to the time off workflow.

@@ -1,15 +1,17 @@
 ---
 title: iOS Client
 review:
-    comment: ''
-    date: '2016-12-20'
-    status: ok
+    date: '2017-12-11'
+    status: requiresUpdates
+    comment: 'This page will be reviewed to be aligned on the latest iOS version.'
 labels:
     - lts2016-ok
     - ios
+    - akervern
     - client
     - mobile
     - ios-client-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16091040'

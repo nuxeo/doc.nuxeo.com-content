@@ -8,6 +8,7 @@ redirect: nxdoc/dbs
 redirect_source: DBS
 labels:
     - content-review-lts2016
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
@@ -21,7 +22,7 @@ confluence:
     source_link: /display/NXDOC/DBS+-+MongoDB
 hidden: true
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-04 13:05'
         message: ''

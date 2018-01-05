@@ -14,8 +14,10 @@ labels:
     - lts2016-ok
     - howto
     - conversion
+    - troger
     - picture
     - convert-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3866704'
@@ -23,8 +25,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Contribute+Picture+Conversions
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+Picture+Conversions
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+Picture+Conversions'
     page_id: '20519904'
     shortlink: 4Bs5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/4Bs5AQ'

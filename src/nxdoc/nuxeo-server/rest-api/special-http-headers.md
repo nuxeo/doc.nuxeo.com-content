@@ -8,8 +8,9 @@ labels:
     - lts2016-ok
     - http
     - rest-api
-    - rest-api-component
+    - troger
     - nxdoc-730
+    - content-review-lts2017
 toc: false
 confluence:
     ajs-parent-page-id: '13664833'
@@ -77,9 +78,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-04-20 09:53'
-        message: >-
-            Add X-NXproperties and X-NXenrichers.document, replacing deprecated
-            X-NXDocumentProperties and X-NXContext-Category
+        message: 'Add X-NXproperties and X-NXenrichers.document, replacing deprecated X-NXDocumentProperties and X-NXContext-Category'
         version: '5'
     -
         author: Manon Lumeau

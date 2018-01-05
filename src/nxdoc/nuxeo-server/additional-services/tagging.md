@@ -2,12 +2,14 @@
 title: Tagging
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - tags
     - tagging-component
+    - fdavid
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -118,7 +120,7 @@ The tags are either categorizing the content of the document (labels like "docum
 
 {{! excerpt}}
 
-The tag service uses two important concepts: a **tag** object, and a **tagging** action. Both are represented as Nuxeo documents.
+The tag service uses a [facet]({{page page='available-facets'}}) to represent tags as a document property.
 
 {{! /excerpt}}
 
@@ -127,16 +129,6 @@ A tag holds a label that does not contain any space ("documentmanagement", "weba
 ## Functional Overview
 
 {{{multiexcerpt 'functional-overview' page='USERDOC:Tags'}}}
-
-## Tag Service Architecture
-
-The following document types are defined by the tag service.
-
-A `Tag` is a document type representing the tag itself (but not its association to specific documents). It contains the usual `dublincore` schema, and in addition has a specific `tag` schema containing a `tag:label` string field.
-
-A `Tagging` is a relation type representing the action of tagging a given document with a tag. (A relation type is a document type extending the default `Relation` document type; it works like a normal document type except that it's not found by NXQL queries on `Document`). The important fields of a `Tagging` document are `relation:source` which is the document id, `relation:target` which is the tag id, and `dc:creator` which is the user doing the tagging action.
-
-Both `Tag` and `Tagging` documents managed by the tag service are _unfiled_, which means that they don't have a parent folder. They are therefore not visible in the normal tree of documents; only queries can find them. In addition they don't have any ACLs set on them, which means that only a superuser (and the tag service internal code) can access them.
 
 ## Tag Service Features
 
@@ -147,7 +139,6 @@ The tag service allows you to:
 *   Tag and untag a document
 *   Get all the tags for a document
 *   Get all the documents for a tag
-*   Get the tag cloud for a set of documents
 *   Get suggested tags for a given tag prefix
 
 ## Tags, Versions and Proxies
@@ -159,11 +150,11 @@ The tags are duplicated:
 
 When restoring a version, the tags on the live document are also restored from the ones on the version.
 
-Tags can be added and removed independently on live documents, versions and proxies: a tag added on a live document won't be added on all its versions, but only on the versions that will be created after. The same behavior is applied for proxies.
+Tags can be added and removed independently on live documents and versions: a tag added on a live document won't be added on all its versions, but only on the versions that will be created after.
 
 The logic for the above is in the  [`TaggedVersionListener`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/tag/TaggedVersionListener.html) listener.
 
-### Disabling Tags on Versions and Proxies
+### Disabling Tags on Versions
 
 To disable the duplication of tags on versions and proxies, the `TaggedVersionListener` may be disabled with the following contribution:
 
@@ -173,6 +164,19 @@ To disable the duplication of tags on versions and proxies, the `TaggedVersionLi
   <listener name="taggedVersionListener" enabled="false" />
 </extension>
 ```
+## Tag Service Architecture
+
+ {{#> callout type='warning' }}
+ Since 9.3, the tag service uses the `NXTag` facet. The following paragraph describes the previous tag service architecture that is deprecated since 9.3.
+ {{/callout}}
+
+The following document types are defined by the tag service.
+
+A `Tag` is a document type representing the tag itself (but not its association to specific documents). It contains the usual `dublincore` schema, and in addition has a specific `tag` schema containing a `tag:label` string field.
+
+A `Tagging` is a relation type representing the action of tagging a given document with a tag. (A relation type is a document type extending the default `Relation` document type; it works like a normal document type except that it's not found by NXQL queries on `Document`). The important fields of a `Tagging` document are `relation:source` which is the document id, `relation:target` which is the tag id, and `dc:creator` which is the user doing the tagging action.
+
+Both `Tag` and `Tagging` documents managed by the tag service are _unfiled_, which means that they don't have a parent folder. They are therefore not visible in the normal tree of documents; only queries can find them. In addition they don't have any ACLs set on them, which means that only a superuser (and the tag service internal code) can access them.
 
 * * *
 

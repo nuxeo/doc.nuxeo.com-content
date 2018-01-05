@@ -15,8 +15,10 @@ labels:
     - localization
     - howto
     - i18n
-    - translations-component
+    - translation
+    - sguitter
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235763'
     ajs-parent-page-title: Labels and Translations Management

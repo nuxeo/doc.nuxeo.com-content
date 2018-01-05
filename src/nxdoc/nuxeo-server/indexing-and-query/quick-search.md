@@ -7,10 +7,12 @@ review:
 labels:
     - content-review-lts2016
     - simple-search
-    - query
+    - query-pageprovider-component
     - search-tab-component
+    - atchertchian
     - nxdoc-450
     - link-update
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '4687860'
     ajs-parent-page-title: Indexing and Query

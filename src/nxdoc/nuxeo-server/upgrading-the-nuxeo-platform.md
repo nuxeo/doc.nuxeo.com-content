@@ -2,12 +2,13 @@
 title: Upgrading the Nuxeo Platform
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-11'
     status: ok
 labels:
     - content-review-lts2016
     - upgrade
-    - last-review-20141126
+    - akervern
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31033314'
@@ -22,7 +23,7 @@ confluence:
     source_link: /display/NXDOC/Upgrading+the+Nuxeo+Platform
 tree_item_index: 400
 version_override:
-    'LTS 2015': 710/admindoc/upgrading-the-nuxeo-platform
+    LTS 2015: 710/admindoc/upgrading-the-nuxeo-platform
     '6.0': 60/admindoc/upgrading-the-nuxeo-platform
 history:
     -
@@ -53,9 +54,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-11-26 16:03'
-        message: >-
-            NXDOC-658: Marketplace packages are now called Nuxeo Packages, add
-            links to 7.10 release notes and upgrade notes
+        message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages, add links to 7.10 release notes and upgrade notes'
         version: '75'
     -
         author: Solen Guitter
@@ -70,9 +69,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-07-02 16:05'
-        message: >-
-            Removed mp-reset step in  Upgrading Your Nuxeo Marketplace Packages
-            section
+        message: Removed mp-reset step in  Upgrading Your Nuxeo Marketplace Packages section
         version: '72'
     -
         author: Manon Lumeau
@@ -132,9 +129,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-11-07 14:48'
-        message: >-
-            Page formatting, added links to the 5.8 release notes and 5.7.3
-            upgrade notes
+        message: 'Page formatting, added links to the 5.8 release notes and 5.7.3 upgrade notes'
         version: '60'
     -
         author: Solen Guitter
@@ -489,7 +484,7 @@ Make sure no jobs are still queued or running before starting the upgrade proced
 8.  [Upgrade and install your custom code](#custom-code-up).
 9.  If you have manually copied JARs in `$NUXEO/nxserver/plugins` or `$NUXEO/nxserver/bundles` (like nuxeo-platform-login-cas2 if you are using the CAS2 authentication), install the corresponding new version of the JARs.
 10.  Start the new Nuxeo Platform.
-11.  Check for ERROR or WARN logs in `$NUXEO/log/console.log` or `$NUXEO/log/server.log`, or Nuxeo Runtime startup errors after log `Nuxeo Platform Started`.
+11.  Check for `ERROR` or `WARN` logs in `$NUXEO/log/console.log` or `$NUXEO/log/server.log`, or Nuxeo Runtime startup errors after log `Nuxeo Platform Started`.
 
 ### {{> anchor 'marketplace-packages-upgrade'}}Upgrading Your Nuxeo Packages
 
@@ -523,12 +518,12 @@ Since the Platform evolves, you will also need to upgrade your custom code:
 
 ## Detailed Upgrade by Version
 
-### To Fast Track 9.1 from LTS 2016
+### To Fast Track 9.3 from LTS 2016
 
-See [Upgrade from LTS 2016 to 9.1]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-91'}}) to upgrade to Ftast Track version 9.1 of the Nuxeo Platform.
+See [Upgrade from LTS 2016 to 9.3]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-93'}}) to upgrade to Ftast Track version 9.3 of the Nuxeo Platform.
 
 Release notes:
-- [9.1 release notes]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
+- [9.x release notes]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
 
 ### To LTS 2016 from LTS 2015
 

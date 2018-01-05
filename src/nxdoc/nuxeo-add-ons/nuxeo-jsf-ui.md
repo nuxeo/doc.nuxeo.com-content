@@ -9,8 +9,10 @@ labels:
     - jsf
     - todo
     - seam-jsf-component
+    - atchertchian
     - multiexcerpt-include
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089312'

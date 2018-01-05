@@ -2,12 +2,14 @@
 title: Installing the Nuxeo Platform on Windows
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - install-windows
+    - pabgrall
     - multiexcerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
@@ -15,15 +17,14 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Installing+the+Nuxeo+Platform+on+Windows
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Installing+the+Nuxeo+Platform+on+Windows
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Installing+the+Nuxeo+Platform+on+Windows'
     page_id: '9274329'
     shortlink: 2YON
     shortlink_source: 'https://doc.nuxeo.com/x/2YON'
     source_link: /display/NXDOC/Installing+the+Nuxeo+Platform+on+Windows
 tree_item_index: 600
 version_override:
-    'LTS 2015': 710/admindoc/installing-the-nuxeo-platform-on-windows
+    LTS 2015: 710/admindoc/installing-the-nuxeo-platform-on-windows
     '6.0': 60/admindoc/installing-the-nuxeo-platform-on-windows
     '5.8': 58/admindoc/installing-the-nuxeo-platform-on-windows
 history:
@@ -135,9 +136,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-07-03 11:19'
-        message: >-
-            Changed recommended path installation from root of C:\ to root of
-            any disk
+        message: "Changed recommended path installation from root of C:\\ to root of any disk"
         version: '17'
     -
         author: Solen Guitter
@@ -247,7 +246,7 @@ To install the application using the Windows installer (.exe), double-click on t
 
 **Installation path**
 
-On Windows in general, and especially on Windows 7, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,... An installation in another folder could provoke restart issues at end of the [startup wizard steps]({{page page='configuration-wizard'}}).
+On Windows in general, and especially on Windows 7 or later versions, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,... An installation in another folder could provoke restart issues at end of the [startup wizard steps]({{page page='configuration-wizard'}}).
 
 ![]({{file name='DM-Windows_installer.png'}} ?w=300)
 
@@ -280,7 +279,7 @@ Recommended: [7-Zip](http://www.7-zip.org/).
 
 **Installation path**
 
-On Windows in general, and especially on Windows 7, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,... An installation in another folder could provoke restart issues at end of the [startup wizard steps]({{page page='configuration-wizard'}}).
+On Windows in general, and especially on Windows 7 or later versions, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,... An installation in another folder could provoke restart issues at end of the [startup wizard steps]({{page page='configuration-wizard'}}).
 
 **What's next?**
 You want to evaluate the application? You can now [start the server]({{page page='server-start-and-stop'}}).
@@ -290,7 +289,7 @@ You want to do a complete installation, compatible for a production environment?
 
 {{! multiexcerpt name='install-vm'}}
 
-The Nuxeo Platform is available as ready-to-use 64b virtual machine images from [nuxeo.com](http://www.nuxeo.com). VM images are available for VMWare and Virtual Box. They provide a full environment (OS, database&hellip;) and all required dependencies to make the Nuxeo Platform work.
+The Nuxeo Platform is available as ready-to-use 64 bits virtual machine images from [nuxeo.com](http://www.nuxeo.com). VM images are available for VMWare and Virtual Box. They provide a full environment (OS, database&hellip;) and all required dependencies to make the Nuxeo Platform work.
 
 **To install the Nuxeo virtual machine image and start Nuxeo:**
 
@@ -325,7 +324,7 @@ The Nuxeo Platform is available as ready-to-use 64b virtual machine images from 
 
 **Limitations:**
 
-*   As a 64 bit virtual image, it cannot be installed on a 32 bit system.
+*   As a 64 bits virtual image, it cannot be installed on a 32 bit system.
 *   MP4 video conversion is not supported because of distribution rights limitations.
 
 {{! /multiexcerpt}}

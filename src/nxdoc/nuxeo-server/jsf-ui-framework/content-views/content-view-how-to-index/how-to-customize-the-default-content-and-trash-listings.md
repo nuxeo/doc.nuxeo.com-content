@@ -6,25 +6,24 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to customize the default content and trash listings using
-            Nuxeo Studio.
+        excerpt: Learn how to customize the default content and trash listings using Nuxeo Studio.
         level: Intermediate
         tool: Studio
         topics: Content View
 labels:
     - lts2016-ok
     - content-view
+    - atchertchian
     - howto
     - studio
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235663'
     ajs-parent-page-title: Content View How-To Index
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Customize+the+Default+Content+and+Trash+Listings
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Customize+the+Default+Content+and+Trash+Listings
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Customize+the+Default+Content+and+Trash+Listings'
     page_id: '19235716'
     shortlink: hIMlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/hIMlAQ'

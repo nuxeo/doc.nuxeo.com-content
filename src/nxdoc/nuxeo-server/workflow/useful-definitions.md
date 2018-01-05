@@ -2,15 +2,16 @@
 title: Useful Definitions
 review:
     comment: ''
-    date: '2017-01-20'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - workflow
+    - grenard
     - concept
-    - workflow-component
     - excerpt
     - multiexcerpt-include
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '12913723'

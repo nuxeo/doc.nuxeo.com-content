@@ -8,10 +8,11 @@ labels:
     - lts2016-ok
     - automation
     - javascript
+    - troger
     - link-update
     - scripting
-    - automation-component
     - university
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '18451738'
@@ -210,7 +211,7 @@ history:
 ---
 {{> wistia_video id='nygm75sevd'}}
 
-Extract from the course "[Applying Business Logic](https://university.nuxeo.com/store/161508-applying-business-logic)" at [Nuxeo University](https://university.nuxeo.com)
+Extract from the course "[Applying Business Logic](https://university.nuxeo.com/learn/public/course/view/elearning/46/ApplyingBusinessLogic)" at [Nuxeo University](https://university.nuxeo.com)
 
 {{! excerpt}}
 

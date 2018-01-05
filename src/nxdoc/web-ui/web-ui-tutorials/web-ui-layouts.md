@@ -2,14 +2,18 @@
 title: Web UI Layout Elements
 review:
     comment: ''
-    date: '2017-01-16'
+    date: '2017-12-15'
     status: ok
 toc: true
 labels:
     - lts2016-ok
     - nuxeo-web-ui
+    - nuxeo-elements
+    - nsilva
+    - nuxeo-ui-elements
     - extension
     - layouts
+    - lts2017-ok
 tree_item_index: 100
 
 ---

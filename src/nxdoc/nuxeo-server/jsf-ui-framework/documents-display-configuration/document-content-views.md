@@ -8,7 +8,9 @@ labels:
     - lts2016-ok
     - document-content-view
     - web-ui-component
+    - atchertchian
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '6029663'
     ajs-parent-page-title: Documents Display Configuration

@@ -7,7 +7,9 @@ review:
 labels:
     - lts2016-ok
     - theme
+    - atchertchian
     - branding
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950327'
     ajs-parent-page-title: Theme

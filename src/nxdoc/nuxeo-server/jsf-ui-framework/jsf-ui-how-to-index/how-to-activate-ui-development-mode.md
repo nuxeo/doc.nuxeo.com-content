@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to activate the UI development mode to get details about
-            elements in the UI.
+        excerpt: Learn how to activate the UI development mode to get details about elements in the UI.
         level: Beginner
         tool: Code
         topics: JSF UI
@@ -16,6 +14,8 @@ labels:
     - content-review-lts2016
     - howto
     - seam-jsf-component
+    - atchertchian
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '20517820'
     ajs-parent-page-title: JSF UI How-To Index
@@ -37,7 +37,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2015-12-08 11:17'
-        message: change level to "Beginner"
+        message: 'change level to "Beginner"'
         version: '4'
     -
         author: Manon Lumeau

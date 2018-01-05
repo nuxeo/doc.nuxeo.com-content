@@ -1,16 +1,18 @@
 ---
 title: Setting up a HA Configuration Using the Nuxeo Platform and PostgreSQL
 review:
-    comment: ''
-    date: '2015-12-01'
-    status: ok
+    comment: 'This page needs be updated to take into account modern Nuxeo capabilities'
+    date: '2017-12-14'
+    status: requiresUpdates
 labels:
     - content-review-lts2016
     - ha
     - clustering
+    - fguillaume
     - vcs
     - replication
     - postgresql
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -18,16 +20,14 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Setting+up+a+HA+Configuration+Using+the+Nuxeo+Platform+and+PostgreSQL
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Setting+up+a+HA+Configuration+Using+the+Nuxeo+Platform+and+PostgreSQL
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Setting+up+a+HA+Configuration+Using+the+Nuxeo+Platform+and+PostgreSQL'
     page_id: '18449437'
     shortlink: HYQZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/HYQZAQ'
-    source_link: >-
-        https://doc.nuxeo.com/display/NXDOC/Setting+up+a+HA+Configuration+Using+the+Nuxeo+Platform+and+PostgreSQL
+    source_link: 'https://doc.nuxeo.com/display/NXDOC/Setting+up+a+HA+Configuration+Using+the+Nuxeo+Platform+and+PostgreSQL'
 tree_item_index: 1600
 version_override:
-    'LTS 2015': 710/admindoc/setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql
+    LTS 2015: 710/admindoc/setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql
     '6.0': 60/admindoc/setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql
     '5.8': 58/admindoc/setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql
 history:

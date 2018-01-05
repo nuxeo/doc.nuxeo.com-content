@@ -2,11 +2,12 @@
 title: Setting up Your Nuxeo Environment
 review:
     comment: ''
-    date: '2017-07-04'
+    date: '2017-12-15'
     status: ok
 toc: true
 labels:
     - lts2016-ok
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '29460589'
     ajs-parent-page-title: Getting Started with the Nuxeo Platform
@@ -20,277 +21,278 @@ confluence:
     source_link: /display/NXDOC/Setting+up+Your+Nuxeo+Environment
 tree_item_index: 100
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-10-05 12:53'
         message: ''
         version: '54'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2016-10-05 12:48'
         message: ''
         version: '53'
-    -
+    - 
         author: Solen Guitter
         date: '2016-10-05 12:40'
         message: ''
         version: '52'
-    -
+    - 
         author: Solen Guitter
         date: '2016-10-05 12:01'
         message: ''
         version: '51'
-    -
+    - 
         author: Solen Guitter
         date: '2016-10-05 11:44'
         message: ''
         version: '50'
-    -
+    - 
         author: Solen Guitter
         date: '2016-10-03 15:36'
         message: ''
         version: '49'
-    -
+    - 
         author: Arnaud Kervern
         date: '2016-09-21 19:30'
         message: ''
         version: '48'
-    -
+    - 
         author: Arnaud Kervern
         date: '2016-09-21 19:25'
         message: ''
         version: '47'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-21 12:47'
         message: ''
         version: '46'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-15 08:26'
         message: ''
         version: '45'
-    -
+    - 
         author: Bertrand Chauvin
         date: '2016-09-07 08:36'
         message: ''
         version: '44'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-02 15:43'
         message: ''
         version: '43'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-02 15:31'
-        message: naming nuxeo container at dl&start step
+        message: 'naming nuxeo container at dl&start step'
         version: '42'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-12 15:30'
         message: ''
         version: '41'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-11 13:38'
         message: ''
         version: '40'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-11 10:28'
         message: ''
         version: '39'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-09 14:26'
         message: ''
         version: '38'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-09 13:53'
         message: ''
         version: '37'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-09 08:02'
         message: ''
         version: '36'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-08 16:26'
         message: ''
         version: '35'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-08 16:24'
         message: ''
         version: '34'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-08 16:10'
         message: ''
         version: '33'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-08 15:06'
         message: ''
         version: '32'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-02 14:39'
         message: ''
         version: '31'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-02 14:15'
         message: ''
         version: '30'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-01 13:31'
         message: ''
         version: '29'
-    -
+    - 
         author: Solen Guitter
         date: '2016-08-01 13:27'
         message: ''
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-27 09:34'
         message: ''
         version: '27'
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-27 09:08'
         message: ''
         version: '26'
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-24 10:45'
         message: ''
         version: '25'
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-23 16:24'
         message: ''
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-11 08:35'
         message: ''
         version: '23'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-09 15:14'
         message: ''
         version: '22'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-09 15:13'
         message: ''
         version: '21'
-    -
+    - 
         author: Solen Guitter
         date: '2016-05-09 15:11'
         message: ''
         version: '20'
-    -
+    - 
         author: Solen Guitter
         date: '2016-04-12 13:30'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2016-04-12 07:38'
         message: ''
         version: '18'
-    -
+    - 
         author: Solen Guitter
         date: '2016-04-11 08:35'
         message: ''
         version: '17'
-    -
+    - 
         author: Solen Guitter
         date: '2016-04-07 15:36'
         message: ''
         version: '16'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-08 10:56'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-08 09:05'
         message: ''
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-08 08:58'
         message: ''
         version: '13'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-07 15:59'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-07 15:42'
         message: ''
         version: '11'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-04 16:52'
         message: ''
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-04 16:51'
         message: ''
         version: '9'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-04 15:41'
         message: ''
         version: '8'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-04 15:38'
         message: ''
         version: '7'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-04 15:26'
         message: ''
         version: '6'
-    -
+    - 
         author: Solen Guitter
         date: '2016-03-04 15:26'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-18 12:58'
         message: ''
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-18 10:40'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-18 10:33'
         message: ''
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2016-02-17 16:22'
         message: ''
         version: '1'
 next_link: /nxdoc/setting-up-your-javascript-environment
+
 ---
 {{! excerpt}}
 
@@ -309,7 +311,7 @@ OS: Linux, Mac OS, Windows
 2.  Download and start the Nuxeo Platform:
 
     ```bash
-    $ docker run -ti --name mynuxeo -p 8080:8080 nuxeo/nuxeo:discover-ft
+    $ docker run -ti --name mynuxeo -p 8080:8080 nuxeo/nuxeo:discover-lts
     ```
 
 3.  Register your Nuxeo instance on Nuxeo Online Services:
@@ -353,15 +355,15 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
 4.  Install the addons required for this tutorial.
 
     ```
-    $ docker exec -ti mynuxeo bin/nuxeoctl mp-install nuxeo-dam nuxeo-jsf-ui nuxeo-web-ui nuxeo-platform-getting-started
+    $ docker exec -ti mynuxeo bin/nuxeoctl mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
     ```
 
 5.  Validate the dependency resolution step.
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.3.1/nuxeo-jsf-ui-9.2.0/nuxeo-web-ui-1.1.2/nuxeo-platform-getting-started-1.2.1
-      Packages to download (3):      nuxeo-jsf-ui:9.2.0, nuxeo-web-ui:1.1.2, nuxeo-dam:6.3.1, nuxeo-platform-getting-started:1.2.1
+      Installation order (3):        nuxeo-dam-6.3.3/nuxeo-web-ui-2.2.0/nuxeo-platform-getting-started-1.2.3
+      Packages to download (3):      nuxeo-web-ui:2.2.0, nuxeo-dam:6.3.3, nuxeo-platform-getting-started:1.2.3
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -372,10 +374,9 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
     $ docker exec mynuxeo bin/nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.1)
-     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-9.2.0)
-     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-1.1.2)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.1)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.3)
+     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.2.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.3)
     ```
 
     The installed addons now have the status started.
@@ -451,15 +452,15 @@ To install a Nuxeo Package:
 3.  Install the addons required for this tutorial.
 
     ```
-    $ nuxeoctl mp-install nuxeo-dam nuxeo-jsf-ui nuxeo-web-ui nuxeo-platform-getting-started
+    $ nuxeoctl mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
     ```
 
 4.  Validate the dependency resolution step.
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.3.1/nuxeo-jsf-ui-9.2.0/nuxeo-web-ui-1.1.2/nuxeo-platform-getting-started-1.2.1
-      Packages to download (3):      nuxeo-jsf-ui:9.2.0, nuxeo-web-ui:1.1.2, nuxeo-dam:6.3.1, nuxeo-platform-getting-started:1.2.1
+      Installation order (3):        nuxeo-dam-6.3.3/nuxeo-web-ui-2.2.0/nuxeo-platform-getting-started-1.2.3
+      Packages to download (3):      nuxeo-web-ui:2.2.0, nuxeo-dam:6.3.3, nuxeo-platform-getting-started:1.2.3
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -470,10 +471,9 @@ To install a Nuxeo Package:
     $ nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.1)
-     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-9.2.0)
-     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-1.1.2)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.1)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.3)
+     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.2.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.3)
     ```
 
     The installed addons now have the status started.
@@ -558,18 +558,18 @@ To install a Nuxeo Package:
 
     ```
     # Linux and Mac OS
-    $ ./nuxeoctl mp-install nuxeo-dam nuxeo-jsf-ui nuxeo-web-ui nuxeo-platform-getting-started
+    $ ./nuxeoctl mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
 
     # Windows
-    $ .\nuxeoctl.bat mp-install nuxeo-dam nuxeo-jsf-ui nuxeo-web-ui nuxeo-platform-getting-started
+    $ .\nuxeoctl.bat mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
     ```
 
 4.  Validate the dependency resolution step.
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.3.1/nuxeo-jsf-ui-9.2.0/nuxeo-web-ui-1.1.2/nuxeo-platform-getting-started-1.2.1
-      Packages to download (3):      nuxeo-jsf-ui:9.2.0, nuxeo-web-ui:1.1.2, nuxeo-dam:6.3.1, nuxeo-platform-getting-started:1.2.1
+      Installation order (3):        nuxeo-dam-6.3.3/nuxeo-web-ui-2.2.0/nuxeo-platform-getting-started-1.2.3
+      Packages to download (3):      nuxeo-web-ui:2.2.0, nuxeo-dam:6.3.3, nuxeo-platform-getting-started:1.2.3
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -581,19 +581,17 @@ To install a Nuxeo Package:
     $ ./nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.1)
-     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-9.2.0)
-     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-1.1.2)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.1)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.3)
+     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.2.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.3)
 
     # Windows
     $ .\nuxeoctl.bat mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.1)
-     addon     started	nuxeo-jsf-ui (id: nuxeo-jsf-ui-9.2.0)
-     addon     started  nuxeo-web-ui (id: nuxeo-web-ui-1.1.2)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.1)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.3.3)
+     addon     started  nuxeo-web-ui (id: nuxeo-web-ui-2.2.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.2.3)
     ```
 
     The installed addons now have the status 'started'.

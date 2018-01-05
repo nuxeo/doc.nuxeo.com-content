@@ -8,6 +8,9 @@ labels:
     - lts2016-ok
     - saml-component
     - migration-sample
+    - authentication
+    - dmetzler
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

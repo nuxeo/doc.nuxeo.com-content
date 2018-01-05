@@ -2,15 +2,16 @@
 title: Installation
 review:
     comment: ''
-    date: '2017-05-04'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - multiexcerpt
     - multiexcerpt-include
+    - lts2017-ok
+    - pabgrall
 toc: false
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '31033314'
     ajs-parent-page-title: Nuxeo Server
@@ -24,7 +25,7 @@ confluence:
     source_link: /display/NXDOC/Installation
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/admindoc/installation
+    LTS 2015: 710/admindoc/installation
     '6.0': 60/admindoc/installation
     '5.8': 58/admindoc/installation
 history:
@@ -260,18 +261,18 @@ history:
         version: '1'
 
 ---
-The Nuxeo Platform comes in different packages and can be installed on any operating system. You may have to install:
+The Nuxeo Platform comes in different packages and can be installed on many operating systems. You may have to install:
 
-*   a zip archive (works on any operating system),
+*   a zip archive (works on any operating system that supports a Java Development Kit),
 *   a Windows installer (**.exe**),
-*   a virtual machine image (works on any operating system),
+*   a virtual machine image (works on any operating system that supports running VMware or VirtualBox),
 *   a **.deb** package (works on Linux Debian and Ubuntu).
 
 ## General Installation Process
 
 Installing the Nuxeo Platform requires a few steps:
 
-1.  Have a look at our Hardware and Software Requirements in the section below, as well as our [supported databases]({{page page='supported-databases'}}) and [application servers]({{page page='supported-application-servers'}}). You may also want to read our page regarding [required storage space]({{page page='how-to-estimate-volume-usage'}}).
+1.  Have a look at our Hardware and Software Requirements in the section below, as well as our [supported databases]({{page page='compatibility-matrix'}}#databases) and [application servers]({{page page='compatibility-matrix'}}#application-servers). You may also want to read our page regarding [required storage space]({{page page='how-to-estimate-volume-usage'}}).
 2.  [Install and Set up the related software]({{page page='installing-and-setting-up-related-software'}}) (unless you deploy on Amazon, the image already includes it).
 3.  Install and start the Nuxeo Platform server.
     To understand how to start a Nuxeo Platform server on different environments, you can read and follow one of our recipes:
@@ -296,7 +297,7 @@ If you have some constraints that do not fit this grid, **do not hesitate to con
 <ul>
 <li>2 CPU</li>
 <li>2&nbsp;GB RAM</li>
-<li>300&nbsp;MB of disk space</li>
+<li>1&nbsp;GB of disk space</li>
 </ul></td>
 <td colspan="1">Note: a production-ready setup for the Nuxeo Platform may require several servers and different hardware sizing, depending on your SLA and planned usage. Contact Nuxeo for more information and for assistance with sizing your production architecture.</td>
 </tr>
@@ -307,7 +308,7 @@ If you have some constraints that do not fit this grid, **do not hesitate to con
 
 <tr><th colspan="1">Java</th>
 <td colspan="1">{{{multiexcerpt 'java_requirement' page='Compatibility Matrix'}}}</td>
-<td colspan="1">See the following documentation: <ul><li>[Checking your Java Version]({{page page='installation#java-check'}})</li> <li>[How to Install Java]({{page page='installation#java-install'}})</li></td>
+<td colspan="1">See the following documentation: <ul><li>[Checking your Java Version]({{page page='installation'}}#java-check)</li> <li>[How to Install Java]({{page page='installation'}}#java-install)</li></td>
 </tr>
 
 <tr><th colspan="1">Application Server</th>
@@ -364,24 +365,35 @@ If you have some constraints that do not fit this grid, **do not hesitate to con
 1.  Open a terminal:
 
     *   On **Linux** or **macOS**: open a terminal.
-    *   On **Windows**: press the "Windows" key + r, type `cmd` (or `command`) in the Run window and press "OK" or open the **Command Prompt** from **Start** > **Programs** > **Accessories**.
+    *   On **Windows**: press the "Windows" key + r, type `cmd` (or `command`) in the Run window and press "OK" (or open the **Command Prompt** from **Start** > **Programs** > **Accessories** in Windows 7 or entering **Command Prompt** in Cortana in Windows 10)
 2.  Type `java -version` and press **Enter**.
     If Java is correctly installed on your computer, the name and version of your Java virtual machine is displayed:
 
     ```
-    java version "1.8.0_66"
-    Java(TM) SE Runtime Environment (build 1.8.0_66-b17)
-    Java HotSpot(TM) 64-Bit Server VM (build 25.66-b17, mixed mode)
+    java version "1.8.0_112"
+    Java(TM) SE Runtime Environment (build 1.8.0_112-b15)
+    Java HotSpot(TM) 64-Bit Server VM (build 25.112-b15, mixed mode)
 
     ```
+    Check in the output that the JDK version is 64 bits.
 
     If Java is not installed on you computer, it will fail to display the Java version. In this case, install Java (see below).
 
     If Java is installed but not included in the PATH, it will fail to find the Java command. In that case, you need to add `$JAVA_HOME/bin/` to your PATH (see [How do I set or change the PATH system variable?](http://www.java.com/en/download/help/path.xml)).
 
+    To ensure you installed a Java Development Kit environment, type
+    `javac -version` and press **Enter**.
+
+    If you installed a JDK, the javac version is displayed:
+    ```
+    javac 1.8.0_112
+    ```
+
+    If you installed a Java Runtime Environment instead of a Java Development Kit, it will fail to find javac and to display the javac version. In this case, install a Java Development Kit (see below).
+
 {{! /multiexcerpt}}
 
-## Installing Java {{> anchor 'java-install'}}
+## Installing Java Development Kit {{> anchor 'java-install'}}
 
 ### For Linux Users
 

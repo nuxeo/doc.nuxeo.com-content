@@ -7,9 +7,10 @@ review:
 labels:
     - lts2016-ok
     - theme
+    - atchertchian
     - link-update
-    - themes-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089312'
@@ -92,9 +93,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2015-08-12 16:31'
-        message: >-
-            NXP-11439: use "Nuxeo Platform-7.3" instead of "latest" in links to
-            explorer...
+        message: 'NXP-11439: use "Nuxeo Platform-7.3" instead of "latest" in links to explorer...'
         version: '58'
     -
         author: Anahide Tchertchian

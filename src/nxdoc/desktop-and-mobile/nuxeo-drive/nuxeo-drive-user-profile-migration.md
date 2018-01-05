@@ -2,12 +2,15 @@
 title: Nuxeo Drive User Profile Migration
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-15'
     status: ok
 labels:
-    - nuxeo-drive-component
+    - nuxeo-drive
+    - yachour
+    - lts2017-ok
 toc: true
 tree_item_index: 350
+
 ---
 If you need to move your Nuxeo Drive content from one computer to another, we suggest you to just  initiate an empty Nuxeo Drive on the new computer.
 

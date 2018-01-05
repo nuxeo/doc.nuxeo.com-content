@@ -2,21 +2,21 @@
 title: How to Estimate Volume Usage
 review:
     comment: ''
-    date: '2017-01-19'
+    date: '2017-12-15'
     status: ok
 details:
     howto:
-        excerpt: >-
-            Get some guidelines to estimate the required size for disk and
-            database.
+        excerpt: Get some guidelines to estimate the required size for disk and database.
         level: Intermediate
         tool: ''
         topics: Database
 labels:
     - lts2016-ok
     - database
+    - kleturc
     - howto
     - excerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
@@ -31,7 +31,7 @@ confluence:
     source_link: /display/NXDOC/How+to+Estimate+Volume+Usage
 tree_item_index: 1400
 version_override:
-    'LTS 2015': 710/admindoc/how-to-estimate-disk-database-and-elasticsearch-usage
+    LTS 2015: 710/admindoc/how-to-estimate-disk-database-and-elasticsearch-usage
     '6.0': 60/admindoc/how-to-estimate-disk-database-and-elasticsearch-usage
     '5.8': 58/admindoc/how-to-estimate-disk-database-and-elasticsearch-usage
 history:
@@ -157,7 +157,7 @@ There are various configurations and addons providing alternative storage soluti
 
 ### Filesystem
 
-Disk usage by the Nuxeo Platform is stable and about 300&nbsp;MB.
+Disk usage by the Nuxeo Platform is stable and about 1&nbsp;GB.
 
 It is possible to spread the filesystem resources over multiple disks or partitions: binaries, Nuxeo data, cache data, temporary files. See the page [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}}) for their configuration.
 
@@ -176,6 +176,7 @@ The database will store:
 
 *   Extracted text volume x2
 *   Metadata
+*   The audit will grow over time depending on the activity (depending on your configuration).
 
 Note that the volume depends a lot on the backend, some database will not compress data
 other will compress big fields and MongoDB will compress everything.
@@ -185,7 +186,7 @@ other will compress big fields and MongoDB will compress everything.
 *   About 30% of the extracted text volume.
 *   Size will vary according to the number of populated fields and full-text fields.
     Note that the `_source` field that stores the JSON representation of a document is lightly compressed.
-*   The audit index will grow over time depending on the activity.
+*   The audit index will grow over time depending on the activity (depending on your configuration).
 *   Each replica needs the same amount of disk space.
 
 ### Backup

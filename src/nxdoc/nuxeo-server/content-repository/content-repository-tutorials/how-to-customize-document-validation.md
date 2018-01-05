@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Leans how to customize the document validation error messages and
-            how to add new references validation on document types.
+        excerpt: Leans how to customize the document validation error messages and how to add new references validation on document types.
         level: Advanced
         tool: Code Editor
         topics: 'Document Type, Validation'
@@ -16,6 +14,8 @@ labels:
     - lts2016-ok
     - howto
     - schema-component
+    - fguillaume
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950287'

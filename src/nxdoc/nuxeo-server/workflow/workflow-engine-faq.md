@@ -2,13 +2,14 @@
 title: Workflow Engine FAQ
 review:
     comment: ''
-    date: '2017-01-20'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - faq
     - workflow
-    - workflow-component
+    - grenard
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '12913723'
     ajs-parent-page-title: Workflow
@@ -40,7 +41,7 @@ history:
     -
         author: Solen Guitter
         date: '2016-08-17 12:22'
-        message: Remove "since 5.7.2"
+        message: 'Remove "since 5.7.2"'
         version: '27'
     -
         author: Thibaud Arguillere
@@ -225,6 +226,10 @@ history:
          </filter>
      </extension>
     ```
+
+*   **How can I know which Workflows are runnable on a document through the Rest API?**
+
+    While fetching a document from the [Rest API]({{page page='rest-api'}}), you can use the [runnableWorkflows enricher]({{page page='content-enrichers#runnableWorkflows'}}) and check what is returned in `document.contextParameters.runnableWorkflows`.
 
 *   **How can I have all the comments submitted by users when completing tasks logged in by the audit?**
     You just need to use a node variable called "comment" and you'll find all the comments stored in the Event log, on the "Workflow task completed" event.

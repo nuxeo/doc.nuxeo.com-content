@@ -2,12 +2,14 @@
 title: ACLs
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - acl
+    - bdelbosc
     - security-component
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '20515363'
     ajs-parent-page-title: Security

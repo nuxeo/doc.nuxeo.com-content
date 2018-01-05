@@ -2,14 +2,15 @@
 title: Full-Text Queries
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-14'
     status: ok
 labels:
     - content-review-lts2016
     - nxql
     - full-text
-    - query
     - query-pageprovider-component
+    - kleturc
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -172,7 +173,7 @@ The following limitations apply:
 In NXQL the full-text query is part of a WHERE clause that can contain other matches on metadata. Inside the WHERE clause, a full-text query for "something" (as described in the previous section) can be expressed in several ways:
 
 *   `ecm:fulltext = 'something'`
-*   `ecm:fulltext_someindex = 'something'` if an index called "someindex" is configured in the [VCS configuration]({{page page='repository-configuration'}})
+*   `ecm:fulltext_someindex = 'something'` if an index called "someindex" is configured in the [Repository configuration]({{page page='repository-configuration'}}#full-text)
 *   `ecm:fulltext.somefield = 'something'` to search a field called "somefield", using full-text if the VCS configuration contains a single index for it, or if not using fallback to a standard SQL ILIKE query: `somefield ILIKE '%something%'` (ILIKE is a case-independent LIKE). Note that this will have a serious performance impact if no full-text is used, and is provided only to help migrations from earlier versions.
 *   `ecm:fulltext LIKE 'something'` is deprecated but identical to `ecm:fulltext = 'something'`.
 
@@ -185,7 +186,8 @@ With an Elasticsearch page provider, the full-text syntax used is the Elasticsea
 &nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics'}}
-
+- [Repository configuration]({{page page='repository-configuration'}})
+- [DBS]({{page page='dbs'}})
 - [VCS]({{page page='vcs'}})
 - [Monitoring Slow NXQL Queries]({{page page='monitoring-slow-nxql-queries'}})
 - [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})

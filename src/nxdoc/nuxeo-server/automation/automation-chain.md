@@ -2,13 +2,14 @@
 title: Automation Chain
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - automation
-    - automation-component
+    - fdavid
     - excerpt
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '18451738'
     ajs-parent-page-title: Automation
@@ -95,9 +96,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-07-17 12:03'
-        message: >-
-            Added link, formatting, replaced "operation chain" with "automation
-            chain"
+        message: 'Added link, formatting, replaced "operation chain" with "automation chain"'
         version: '7'
     -
         author: Vladimir Pasquier

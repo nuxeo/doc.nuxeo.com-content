@@ -11,8 +11,10 @@ labels:
     - widget
     - scripting
     - layout-widgets-component
+    - atchertchian
     - nxdoc-158
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3868333'

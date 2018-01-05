@@ -8,8 +8,10 @@ labels:
     - content-review-lts2016
     - url
     - url-codec-component
+    - atchertchian
     - blob-manager-component
     - multiexcerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '7209351'
     ajs-parent-page-title: Navigation URLs

@@ -8,11 +8,12 @@ labels:
     - lts2016-ok
     - link-update
     - rest-api
+    - troger
     - webengine
-    - rest-api-component
+    - content-review-lts2017
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/web-adapters-for-the-rest-api
+    LTS 2015: 710/nxdoc/web-adapters-for-the-rest-api
     '6.0': 60/nxdoc/web-adapters-for-the-rest-api
 confluence:
     ajs-parent-page-id: '13664833'
@@ -75,9 +76,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-04-22 14:27'
-        message: >-
-            Add convert, rendition and search web adapters and related
-            documentation
+        message: 'Add convert, rendition and search web adapters and related documentation'
         version: '9'
     -
         author: Solen Guitter

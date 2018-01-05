@@ -7,8 +7,10 @@ review:
 labels:
     - content-review-lts2016
     - content-view
+    - atchertchian
     - content-views-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3345941'
@@ -41,9 +43,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2014-12-05 19:11'
-        message: >-
-            NXDOC-222: finish doc about cv selection actions + mention bad
-            practice about template override
+        message: 'NXDOC-222: finish doc about cv selection actions + mention bad practice about template override'
         version: '10'
     -
         author: Anahide Tchertchian

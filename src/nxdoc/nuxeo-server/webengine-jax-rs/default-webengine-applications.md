@@ -8,6 +8,8 @@ labels:
     - lts2016-ok
     - url
     - webengine-component
+    - dmetzler
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950281'
     ajs-parent-page-title: WebEngine (JAX-RS)

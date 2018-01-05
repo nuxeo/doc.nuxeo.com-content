@@ -2,16 +2,18 @@
 title: Configuring the Elasticsearch Mapping
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - elasticsearch
     - full-text
     - elasticsearch-component
+    - bdelbosc
     - university
     - excerpt
     - multiexcerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -19,8 +21,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Configuring+the+Elasticsearch+Mapping
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Configuring+the+Elasticsearch+Mapping
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Configuring+the+Elasticsearch+Mapping'
     page_id: '20517467'
     shortlink: WxI5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/WxI5AQ'
@@ -105,9 +106,7 @@ history:
     -
         author: Benoit Delbosc
         date: '2015-03-05 16:30'
-        message: >-
-            don't disable default index for fulltext field unless you know how
-            the field is used
+        message: "don't disable default index for fulltext field unless you know how the field is used"
         version: '16'
     -
         author: Solen Guitter

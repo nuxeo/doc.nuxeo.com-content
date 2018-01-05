@@ -7,10 +7,11 @@ review:
 labels:
     - content-review-lts2016
     - rest-api
+    - troger
     - blogs
     - endpoint
-    - rest-api-component
     - multiexcerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'
@@ -33,9 +34,7 @@ history:
     -
         author: Bertrand Chauvin
         date: '2015-10-14 13:01'
-        message: >-
-            Added multivalued / complex / complex multivalued property
-            management syntax
+        message: Added multivalued / complex / complex multivalued property management syntax
         version: '33'
     -
         author: Alain Escaffre

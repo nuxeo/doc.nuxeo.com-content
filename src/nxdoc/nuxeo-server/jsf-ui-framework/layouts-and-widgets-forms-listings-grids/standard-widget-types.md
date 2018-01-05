@@ -9,9 +9,11 @@ labels:
     - summary-layout
     - link-update
     - widget
+    - atchertchian
     - community-links
     - home
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950330'
     ajs-parent-page-title: 'Layouts and Widgets (Forms, Listings, Grids)'

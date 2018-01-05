@@ -7,7 +7,9 @@ review:
 labels:
     - lts2016-ok
     - encryption
+    - jcarsique
     - binary-manager
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -22,7 +24,7 @@ confluence:
     source_link: /display/NXDOC/Implementing+Encryption
 tree_item_index: 1300
 version_override:
-    'LTS 2015': 710/admindoc/implementing-encryption
+    LTS 2015: 710/admindoc/implementing-encryption
     '6.0': 60/admindoc/implementing-encryption
 history:
     -

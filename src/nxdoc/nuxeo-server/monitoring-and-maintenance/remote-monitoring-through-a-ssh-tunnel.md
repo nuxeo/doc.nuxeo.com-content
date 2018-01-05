@@ -2,28 +2,29 @@
 title: Remote Monitoring Through a SSH Tunnel
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - monitoring
     - ssh
     - monitoring-component
+    - bdelbosc
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Remote+Monitoring+Through+a+SSH+Tunnel
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Remote+Monitoring+Through+a+SSH+Tunnel
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Remote+Monitoring+Through+a+SSH+Tunnel'
     page_id: '10387597'
     shortlink: jYCe
     shortlink_source: 'https://doc.nuxeo.com/x/jYCe'
     source_link: /display/NXDOC/Remote+Monitoring+Through+a+SSH+Tunnel
 tree_item_index: 600
 version_override:
-    'LTS 2015': 710/admindoc/remote-monitoring-through-a-ssh-tunnel
+    LTS 2015: 710/admindoc/remote-monitoring-through-a-ssh-tunnel
     '6.0': 60/admindoc/remote-monitoring-through-a-ssh-tunnel
     '5.8': 58/admindoc/remote-monitoring-through-a-ssh-tunnel
 history:

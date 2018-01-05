@@ -10,12 +10,12 @@ details:
         level: Beginner
         tool: Nuxeo Studio
         topics: 'Document type, Style'
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
     - howto
-    - studio
+    - mlumeau
     - lts2016-ok
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '14256538'
@@ -162,6 +162,7 @@ history:
         message: ''
         version: '1'
 next_link: /nxdoc/develop-with-nuxeo-platform/
+
 ---
 This page shows you how to start customizing the Nuxeo Platform using Nuxeo Studio. You'll see how to:
 
@@ -286,5 +287,5 @@ On the **Edit Layout** tab, we can customize the form used to update the metadat
 
 You are now ready to use Nuxeo Studio! You can:
 *   Go to the next step of this quick start, to discover how you can [contribute new features using Java code]({{page page='getting-started-with-nuxeo-generator'}}) to the server.
-*   Learn more about Nuxeo Studio and Nuxeo Platform, by following a [complete tutorial]({{page page='first-steps-with-studio-technical-documentation-tutorial'}}).
+*   Learn more about Nuxeo Studio and Nuxeo Platform, by following a [complete tutorial]({{page page='configure-nuxeo-platform'}}).
 {{/callout}}

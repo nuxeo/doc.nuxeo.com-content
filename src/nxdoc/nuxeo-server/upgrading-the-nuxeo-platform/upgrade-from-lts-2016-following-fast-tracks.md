@@ -2,12 +2,16 @@
 title: Upgrade from LTS 2016 following Fast Tracks
 review:
     comment: ''
-    date: '2017-04-03'
+    date: '2017-12-11'
     status: ok
 labels:
     - multiexcerpt
+    - lts2017-ok
+    - upgrade
+    - akervern
 toc: true
 tree_item_index: 95
+
 ---
 
 ## From LTS 2016 to 9.1
@@ -471,8 +475,20 @@ Elasticsearch 5.6.x is required. Follow those necessary steps to upgrade:
 
 ##### Upgrade Elasticsearch Version
 
-In order to upgrade your cluster to 5.6.x, please follow the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html).
-This will require a [full cluster restart upgrade](https://www.elastic.co/guide/en/elasticsearch/reference/current/restart-upgrade.html).
+If your indices have been created with LTS 2016 they are in Elasticsearch 2.x format and can be read by Elasticsearch 5.6,
+in this case follow the [full cluster restart upgrade procedure](https://www.elastic.co/guide/en/elasticsearch/reference/current/restart-upgrade.html).
+
+If your indices have been created **before** LTS 2016 they are in Elasticsearch 1.x format and Elasticsearch 5.x will not start,
+in this case an index need to be migrated to the new Elasticsearch 5.x format:
+
+- The repository index named `nuxeo` by default doesn't need this migration because the repository will be re-indexed in the next step,
+  so once this index has been backed up you can delete it.
+- The sequence index named `nuxeo-uidgen` cannot be migrated because the `_source` field is disabled, Nuxeo will take care to re-create this index at startup,
+  so once this index has been backed up you can delete it.
+- The audit index named `nuxeo-audit` need to be migrated. Follow the [reindex upgrade procedure](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/reindex-upgrade.html).
+
+Please refer to [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) for more information on upgrading your Elasticsearch cluster.
+
 
 #####  Update Your Custom Elasticsearch Settings and Mapping
 
@@ -530,6 +546,36 @@ Any custom native queries done using the passthrough or code need to be reviewed
 
 {{! /multiexcerpt}}
 
+#### {{> anchor 'keeping-old-tags'}} Keeping Old Tags
+
+{{! multiexcerpt name='upgrade-9.3-keeping-tags'}}
+
+The tag implementation has changed in 9.3. If you want to keep your old tags, add the following contribution:
+  ```xml
+  <require>org.nuxeo.ecm.platform.tag.service.migrator</require>
+  <extension target="org.nuxeo.runtime.migration.MigrationService" point="configuration">
+    <migration id="tag-storage">
+      <defaultState>relations</defaultState>
+    </migration>
+  </extension>
+  ```
+If you want to migrate tags to the new storage model, follow the [Tag migrations steps](#tag-migration).
+{{! /multiexcerpt}}
+
+#### {{> anchor 'tag-migration'}} Tag Migration
+
+{{! multiexcerpt name='upgrade-9.3-tags-migration'}}
+
+To migrate tags to the new storage model:
+
+1. Follow the step from section [Keeping old tags](#keeping-old-tags).
+
+1. In the Nuxeo Platform's JSF UI, go to **Admin**&nbsp;> **System Information**&nbsp;> **Migration**, click the button **Migrate tags from relations to facets** and wait until migration is completed.
+
+1. Remove the contribution added at step 1.
+
+{{! /multiexcerpt}}
+
 ### Code Changes
 
 #### Code Behavior Changes
@@ -557,6 +603,7 @@ Any custom native queries done using the passthrough or code need to be reviewed
 - `NuxeoGroupImpl` class has been moved to `org.nuxeo.ecm.platform.usermanager` package. The code relying on it must be updated. See [NXP-20619](https://jira.nuxeo.com/browse/NXP-20619).
 
 {{! /multiexcerpt}}
+
 
 #### Operation Changes
 

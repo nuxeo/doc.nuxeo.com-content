@@ -8,6 +8,8 @@ labels:
     - lts2016-ok
     - dam-component
     - dam
+    - lmcintyre
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '3866704'
     ajs-parent-page-title: Digital Asset Management (DAM)
@@ -28,7 +30,7 @@ history:
     -
         author: Thibaud Arguillere
         date: '2014-10-24 20:25'
-        message: Tested .ai and .psd files => have thumbnails and previews ok
+        message: 'Tested .ai and .psd files => have thumbnails and previews ok'
         version: '21'
     -
         author: Solen Guitter

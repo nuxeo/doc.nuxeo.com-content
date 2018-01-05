@@ -1,17 +1,19 @@
 ---
 title: Customize Your App with Nuxeo Elements
 review:
-    comment: ''
-    date: '2017-01-16'
-    status: ok
+    comment: 'This tutotrial needs to be reviewed after migration to Polymer 2.0 legacy API.'
+    date: '2017-12-15'
+    status: requiresUpdates
 toc: true
 labels:
     - lts2016-ok
     - tutorial
     - nuxeo-elements
+    - gbarata
     - nuxeo-ui-elements
     - polymer
     - polymer-starter-kit
+    - content-review-lts2017
 tree_item_index: 200
 
 ---

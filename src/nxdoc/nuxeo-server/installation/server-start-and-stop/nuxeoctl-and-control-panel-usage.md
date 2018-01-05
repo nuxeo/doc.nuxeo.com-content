@@ -2,14 +2,16 @@
 title: nuxeoctl and Control Panel Usage
 review:
     comment: ''
-    date: '2017-01-25'
+    date: '2017-12-11'
     status: ok
 labels:
     - lts2016-ok
     - nuxeoctl
     - launcher
+    - akervern
     - nuxeolauncher
     - bootstrap-component
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '6030087'
@@ -23,7 +25,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/FwNc'
     source_link: /display/NXDOC/nuxeoctl+and+Control+Panel+Usage
 version_override:
-    'LTS 2015': 710/admindoc/nuxeoctl-and-control-panel-usage
+    LTS 2015: 710/admindoc/nuxeoctl-and-control-panel-usage
     '6.0': 60/admindoc/nuxeoctl-and-control-panel-usage
     '5.8': 58/admindoc/nuxeoctl-and-control-panel-usage
 history:
@@ -185,12 +187,12 @@ history:
     -
         author: Julien Carsique
         date: '2012-06-01 17:20'
-        message: NXP-9408 - add 'dc' option
+        message: "NXP-9408 - add 'dc' option"
         version: '18'
     -
         author: Julien Carsique
         date: '2012-05-31 12:20'
-        message: NXP-9268 - new mp-* commands and options
+        message: 'NXP-9268 - new mp-* commands and options'
         version: '17'
     -
         author: Mathieu Guillaume
@@ -340,8 +342,17 @@ nuxeoctl mp-reset|mp-purge|mp-hotfix|mp-upgrade [command parameters] [-d [<categ
 nuxeoctl mp-add|mp-install|mp-uninstall|mp-remove|mp-set|mp-request [command parameters] [-d [<categories>]|-q|--clid <arg>|--xml|--json|--nodeps|--relax <true|false|yes|no|ask>|--accept <true|false|yes|no|ask>|-s|-im]
 
 nuxeoctl register [<username> [<project> [<type> <description>] [<pwd>]]]
+        Register an instance with Nuxeo Online Services.
+
+nuxeoctl register --clid <arg>
+        Register an instance according to the given CLID file.
+
+nuxeoctl register --renew [--clid <arg>]
+        Renew an instance registration with Nuxeo Online Services.
 
 nuxeoctl pack <target> [-d [<categories>]|-q]
+
+nuxeoctl connect-report [--output <file>|--gzip <*true|false|yes|no>|--pretty-print <true|*false|yes|no>]
 ```
 
 ### Options
@@ -613,6 +624,10 @@ If uninstalling a package by its ID and other versions of the same package are a
 <tr>
 <td colspan="1">`mp-show`</td>
 <td colspan="1">(Since Nuxeo 5.7.1) Show Marketplace package(s) information. You must provide the package file(s), name(s) or ID(s) as parameter.</td>
+</tr>
+<tr>
+<td colspan="1">`register`</td>
+<td colspan="1">Register your instance with an existing Connect account. You must provide the credentials, the project name or ID, its type and a description.</td>
 </tr>
 </tbody>
 </table>

@@ -8,6 +8,11 @@ tree_item_index: 50
 toc: true
 version_override:
     '6.0': 60/nxdoc/web-ui-framework-overview
+labels:
+    - content-review-lts2017
+    - seam-jsf-component
+    - atchertchian
+
 ---
 The Nuxeo Platform provides a web framework to build business applications for thin clients. This framework is based on the standard JEE view technology: Java Server Faces (JSF).
 
@@ -345,7 +350,7 @@ However, if you think the custom UI is the way to go, we'll be happy to help you
 This chapter presents the limitations to the Seam/JSF web application.
 {{! /excerpt}}
 
-### {{> anchor 'back-next-paradigm'}} Back and Next Buttons Paradigm and JSF in the Nuxeo Platform 
+### {{> anchor 'back-next-paradigm'}} Back and Next Buttons Paradigm and JSF in the Nuxeo Platform
 
 Nuxeo Platform navigation is based solely on the JSF library.
 

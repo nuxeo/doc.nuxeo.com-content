@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to create a validator on a field with Nuxeo Studio and
-            Nuxeo IDE.
+        excerpt: Learn how to create a validator on a field with Nuxeo Studio and Nuxeo IDE.
         level: Advanced
         tool: 'Studio, Nuxeo IDE'
         topics: 'Layout, JSF, Validation'
@@ -19,11 +17,13 @@ labels:
     - howto
     - layout
     - seam-jsf-component
+    - atchertchian
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '19235623'
-    ajs-parent-page-title: Layout & Widget How-To Index
+    ajs-parent-page-title: 'Layout & Widget How-To Index'
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Add+Field+Validation

@@ -7,8 +7,10 @@ review:
 labels:
     - content-review-lts2016
     - shell
+    - jcarsique
     - shell-component
     - nxdoc-750
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '4687635'

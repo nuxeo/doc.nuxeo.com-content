@@ -7,7 +7,9 @@ review:
 labels:
     - content-review-lts2016
     - seam-jsf-component
+    - atchertchian
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950313'

@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Discover the troubleshooting issues that can be encountered with
-            JSF.
+        excerpt: Discover the troubleshooting issues that can be encountered with JSF.
         level: Advanced
         tool: Code
         topics: JSF
@@ -17,6 +15,8 @@ labels:
     - jsf
     - howto
     - seam-jsf-component
+    - atchertchian
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '9830458'

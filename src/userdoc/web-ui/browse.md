@@ -4,16 +4,18 @@ review:
     comment: ''
     date: '2017-03-29'
     status: ok
-description:
+description: null
 toc: true
 labels:
     - creation
     - drag-and-drop
+    - content-review-lts2017
 tree_item_index: 100
+
 ---
 
 {{#> callout type='tip' }}
-Follow the related [video course and exercises](https://university.nuxeo.com/store/220415-data-capture) on Nuxeo University.
+Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) on Nuxeo University.
 {{/callout}}
 
 {{! excerpt}}
@@ -145,7 +147,7 @@ Although properties are not mandatory, filling them in will make your documents 
 
 **To edit a property:**
 
-1. Click on the Edit button
+1. Click on the Edit button in the document actions toolbar ![]({{file name='edit-icon_web-ui.png' page='icons-index'}} ?w=16)
     ![]({{file name='edit-metadata-web-ui.png'}} ?w=250,border=true)
 2. Edit the metadata that you want.
 3. Once it is done, click on **SAVE**
@@ -211,6 +213,25 @@ If you're only interested in the XML definition of the folder, click on **XML Ex
 {{/callout}}
 
 When you unzip it, you get a folder named from the document, that contains a document.xml file and .blob for each attachment of the document.
+
+## Downloading Content
+
+Users can download documents on their computer. It is possible to download:
+- One document at a time
+- An entire workspace, folder, section
+
+**From a Document**
+- Go to the document you want to download
+- Click on the Download button ![]({{file name='download-document-web-ui.png' page='icons-index'}} ?w=25) under the preview of your document.</br>
+  Your document is downloaded on your computer.
+
+**From a Folder**
+- Go to the folder/workspace that you want
+- Select several documents
+  A top bar is displayed with document actions
+- Click on the download button ![]({{file name='download-multiple-documents-web-ui.png' page='icons-index'}} ?w=22)</br>
+  The documents are downloaded as a .zip on your computer.
+
 
 ## Deleting Content
 Only users with "Edit" or "Manage everything" [permissions]({{page version='' space='userdoc' page='managing-permissions'}}) can delete documents from a space.

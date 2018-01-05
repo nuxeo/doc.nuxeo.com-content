@@ -8,8 +8,10 @@ labels:
     - lts2016-ok
     - codec
     - marshalling
-    - automation-component
+    - troger
+    - automation
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '18451738'
     ajs-parent-page-title: Automation

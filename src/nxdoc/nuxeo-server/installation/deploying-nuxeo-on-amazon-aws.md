@@ -7,8 +7,9 @@ review:
 labels:
     - lts2016-ok
     - amazon-aws
+    - mcedica
     - cloud-deployment
-    - mg
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
@@ -23,7 +24,7 @@ confluence:
     source_link: /display/NXDOC/Deploying+Nuxeo+on+Amazon+AWS
 tree_item_index: 700
 version_override:
-    'LTS 2015': 710/admindoc/deploying-nuxeo-on-amazon-aws
+    LTS 2015: 710/admindoc/deploying-nuxeo-on-amazon-aws
     '6.0': 60/admindoc/deploying-nuxeo-on-amazon-aws
     '5.8': 58/admindoc/deploying-nuxeo-on-amazon-aws
 history:

@@ -2,13 +2,15 @@
 title: Nuxeo Diff
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-12'
     status: ok
 labels:
     - lts2016-ok
+    - ataillefer
     - nuxeo-diff
     - link-update
     - diff-component
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -75,6 +77,9 @@ history:
         version: '1'
 
 ---
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 ## Installation
 
 {{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}

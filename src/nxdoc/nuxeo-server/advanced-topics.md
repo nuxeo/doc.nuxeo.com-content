@@ -6,6 +6,9 @@ review:
     status: ok
 labels:
     - lts2016-ok
+    - content-review-lts2017
+    - home
+    - mlumeau
 confluence:
     ajs-parent-page-id: '31033314'
     ajs-parent-page-title: Nuxeo Server

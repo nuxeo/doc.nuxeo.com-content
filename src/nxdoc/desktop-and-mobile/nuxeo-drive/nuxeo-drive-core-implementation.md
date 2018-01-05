@@ -2,11 +2,15 @@
 title: Nuxeo Drive Core Implementation
 review:
     comment: ''
-    date: '2016-12-15'
+    date: '2017-12-18'
     status: ok
 labels:
+    - lts2017-ok
+    - nuxeo-drive
+    - mschoentgen
 toc: true
 tree_item_index: 200
+
 ---
 ## Client Architecture
 

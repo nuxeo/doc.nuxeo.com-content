@@ -7,9 +7,10 @@ review:
 labels:
     - lts2016-ok
     - collection
-    - nuxeo-drive
+    - grenard
     - collection-component
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'

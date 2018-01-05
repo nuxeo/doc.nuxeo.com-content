@@ -9,7 +9,9 @@ labels:
     - layout
     - widget
     - layout-widgets-component
+    - atchertchian
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '3868333'
     ajs-parent-page-title: Layout and Widget Definitions

@@ -6,26 +6,24 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            If you installed the Nuxeo CSV add-on from the Nuxeo Marketplace,
-            you'll probably want to enable CSV import on the document types you
-            defined. Here is how to do that.
+        excerpt: "If you installed the Nuxeo CSV add-on from the Nuxeo Marketplace, you'll probably want to enable CSV import on the document types you defined. Here is how to do that."
         level: Beginner
         tool: Studio
         topics: 'Document type, Nuxeo CSV'
 labels:
     - lts2016-ok
     - nuxeo-csv
+    - troger
     - howto
     - csv-importer-component
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '14255163'
     ajs-parent-page-title: Nuxeo CSV
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Enable+CSV+Import+on+a+Custom+Document+Type
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Enable+CSV+Import+on+a+Custom+Document+Type
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Enable+CSV+Import+on+a+Custom+Document+Type'
     page_id: '17794742'
     shortlink: toYPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/toYPAQ'
@@ -44,7 +42,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-10-13 13:31'
-        message: improved path description to 'XML extension'
+        message: "improved path description to 'XML extension'"
         version: '14'
     -
         author: Solen Guitter
@@ -104,9 +102,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-12-12 11:32'
-        message: >-
-            Use several <type> tags instead of <rule> to enable CSV import on
-            several doc types
+        message: 'Use several <type> tags instead of <rule> to enable CSV import on several doc types'
         version: '2'
     -
         author: Solen Guitter
@@ -116,7 +112,7 @@ history:
 
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/store/220415-data-capture) on Nuxeo University.
+Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) on Nuxeo University.
 {{/callout}}
 
 {{{excerpt 'NXDOC:Nuxeo CSV'}}}

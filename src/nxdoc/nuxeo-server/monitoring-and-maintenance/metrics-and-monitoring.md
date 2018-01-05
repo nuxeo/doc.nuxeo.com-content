@@ -2,14 +2,16 @@
 title: Metrics and Monitoring
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - metrics
     - performance
     - monitoring-component
+    - bdelbosc
     - multiexcerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950318'
@@ -24,7 +26,7 @@ confluence:
     source_link: /display/NXDOC/Metrics+and+Monitoring
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/admindoc/metrics-and-monitoring
+    LTS 2015: 710/admindoc/metrics-and-monitoring
     '6.0': 60/admindoc/metrics-and-monitoring
     '5.8': 58/admindoc/metrics-and-monitoring
 history:
@@ -279,7 +281,7 @@ The default prefix (`servers.${HOSTNAME}.nuxeo`) used by the Graphite reporter i
 
 {{/callout}}
 
-### Reporting Metrics
+### Publishing Metrics
 
 ###### {{> anchor 'enabling-jmx'}}Enabling JMX Reporting
 
@@ -325,9 +327,20 @@ metrics.graphite.period=30
 metrics.tomcat.enabled=true
 ```
 
-Note that period to report metrics are in second.
+###### Reporting Log4j Info
 
-### <span style="line-height: 1.5625;">Graphite Dashboard</span>
+```
+metrics.log4j.enabled=true
+```
+This is very handy to report total number of `ERROR` or `WARN` in the `server.log`.
+
+###### Reporting to Datadog
+
+You can report Nuxeo metrics to Datadog using the package: https://github.com/nuxeo/marketplace-datadog
+
+### Metrics rendering
+
+#### Graphite Dashboard
 
 You can find an example of Graphite dashboard on GitHub: [https://github.com/nuxeo/nuxeo-runtime/blob/master/nuxeo-runtime-metrics/graphite/dashboard.json](https://github.com/nuxeo/nuxeo-runtime/blob/master/nuxeo-runtime-metrics/graphite/dashboard.json).
 
@@ -338,6 +351,11 @@ Here is an extract of what this dashboard looks like when monitoring a daily ben
 ![]({{file name='graphite-nuxeo.png'}} ?w=500,h=198,border=true)
 
 ![]({{file name='graphite-nuxeo2.png'}} ?w=500,h=195,border=true)
+
+#### Grafana
+
+Metrics published to Graphite can also be rendered with [Grafana](https://grafana.com/).
+
 
 ## Monitoring
 
@@ -376,6 +394,17 @@ By default four probes are defined:
 *   `activeRepositorySession`: returns the number of active sessions per repository,
 *   `ldapDirectory`: check LDAP connectivity,
 *   `remoteSQLStorageSession`: number of remove VCS client connected (only used in VCS client/server mode that is not enabled by default).
+
+Probes can also be run as part of the healthCheck when invoking the Status servlet.
+By default the following probes are enabled for the check:
+* `s3BinaryManagerStatus`
+*   `runtimeStatus`
+*   `elasticSearchStatus`
+*   `ldapDirectories`
+*   `repositoryStatus`
+
+Probes can be enabled/disabled for the healthCheck using the [`healthCheck` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.management.CoreManagementComponent--healthCheck).   
+
 
 ### Monitoring Using JMX Access
 

@@ -7,6 +7,9 @@ review:
 toc: true
 tree_item_index: 200
 description: Web UI user documentation about Search
+labels:
+    - content-review-lts2017
+
 ---
 {{! excerpt}}
 The Nuxeo Platform provides different to search your documents. A Search tab in the side menu and a quick search at the top of the page.
@@ -76,6 +79,7 @@ Saved searches are available in the Search tab drop down list. To load a search,
 ### Manage Search
 
 **Share a Search**
+
 Saved searches are private by default. But you can share them by [giving permissions]({{page page='permissions'}}) on them. Select the search that you want to share from the Search tab drop down list and click on the more icon ![]({{file name='more-search-web-ui.png'}} ?w=14) and then on **Share**. The permission pop-up will be displayed.
 
 **Delete a Search**

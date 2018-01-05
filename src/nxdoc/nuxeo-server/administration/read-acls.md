@@ -1,13 +1,15 @@
 ---
-title: Read ACLs
+title: VCS Read ACLs
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - acl
+    - bdelbosc
     - security-component
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -22,7 +24,7 @@ confluence:
     source_link: /display/NXDOC/Read+ACLs
 tree_item_index: 1800
 version_override:
-    'LTS 2015': 710/admindoc/read-acls
+    LTS 2015: 710/admindoc/read-acls
     '6.0': 60/admindoc/read-acls
     '5.8': 58/admindoc/read-acls
 history:
@@ -75,7 +77,7 @@ history:
 ---
 ## ACL Management Modes
 
-Two modes are available to configure the management of ACLs in the Nuxeo Platform. They are activated using the [`aclOptimization`]({{page page='repository-configuration'}}) parameter in the repository configuration.
+Two modes are available to configure the management of ACLs in the Nuxeo Platform when using a VCS repository. They are activated using the [`aclOptimization`]({{page page='repository-configuration'}}) parameter in the repository configuration.
 
 *   ReadACL OFF (`aclOptimization` to false) only writes the permissions in the ACL table. This mode is costless at the write time (document creation, permissions changes) but has an important cost at read time, when filtering the results of a search.
 *   ReadACL ON (`aclOptimization` to true) is the default one in the Nuxeo Platform. It computes the READ ACLs for every document at document creation or permission settings: not only permissions are written in the ACL table, but other tables are updated to provide an efficient cache when launching queries. So this mode is fast at read time, but may be expensive at write time.

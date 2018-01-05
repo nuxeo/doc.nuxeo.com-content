@@ -6,6 +6,10 @@ review:
     status: ok
 labels:
     - Tutorials
+    - content-review-lts2017
+    - home
+    - mlumeau
+
 ---
 
 <div class="row" data-equalizer data-equalize-on="medium">

@@ -2,15 +2,17 @@
 title: Nuxeo Security System
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - security-policy
     - acl
+    - bdelbosc
     - security
     - permission
     - security-component
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '20515363'

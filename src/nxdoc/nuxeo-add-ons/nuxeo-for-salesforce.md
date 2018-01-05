@@ -2,14 +2,16 @@
 title: Nuxeo for Salesforce
 review:
     comment: ''
-    date: '2017-07-11'
+    date: '2017-12-19'
     status: ok
 labels:
     - lts2016-ok
     - salesforce-component
+    - vpasquier
     - link-update
     - excerpt
     - multiexcerpt-include
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -167,9 +169,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-11-30 09:43'
-        message: >-
-            NXDOC-658: Marketplace packages are now called Nuxeo Packages,
-            format
+        message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages, format'
         version: '12'
     -
         author: Vladimir Pasquier
@@ -231,10 +231,8 @@ history:
 {{! excerpt}}
 
 The [Nuxeo for Salesforce addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce) allows Salesforce (SFDC) users to attach documents to their Salesforce Objects (such as Opportunities, Contacts, Accounts...) through the Salesforce UI within a Nuxeo server.
-
 {{! /excerpt}}
 
-&nbsp;
 
 See [GitHub Readme](https://github.com/nuxeo/nuxeo-salesforce) for the Dev project description.
 
@@ -242,17 +240,15 @@ See [GitHub Readme](https://github.com/nuxeo/nuxeo-salesforce) for the Dev proje
 
 {{> wistia_video id='9pfro1cpv1'}}
 
-&nbsp;
-
 ## Installation and Configuration
 
 ### Installation
 
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
-### <span style="line-height: 1.5625;">Salesforce Configuration</span>
+### Salesforce Configuration
 
-In your Salesforce account, you can setup the Nuxeo for Salesforce plugin through the Salesforce Marketplace (In progress).
+In your Salesforce account, you can setup the Nuxeo for Salesforce plugin through the Salesforce Marketplace (in progress).
 
 You can also set it up directly from your Salesforce dashboard. Note that these instructions assume you are using "Salesforce Classic", not the "Lightning Experience".
 
@@ -263,22 +259,22 @@ Although the Canvas app can be displayed within this new environment, it will st
 {{/callout}}
 
 1.  Go in your Salesforce dashboard.
-2.  Go on&nbsp;**Setup**&nbsp;(top right).
-3.  Go to&nbsp;**Build** > **Create** > **Apps**.
-4.  Click the **New** button under&nbsp;**Connected Apps**&nbsp;named `Nuxeo`&nbsp;(it MUST be named "Nuxeo"):
-    1.  Enable OAuth&nbsp;settings and set the callback URL:&nbsp; `<span class="nolink">https://NUXEO_URL/nuxeo/picker/callback/callback.html</span>` [.](https://NUXEO_URL/nuxeo/picker/callback/callback.html)
+2.  Go on **Setup** (top right).
+3.  Go to **Build** > **Create** > **Apps**.
+4.  Click the **New** button under **Connected Apps** named `Nuxeo` (it **MUST** be named "Nuxeo"):
+    1.  Enable OAuth settings and set the callback URL: `https://NUXEO_URL/nuxeo/picker/callback/callback.html` [.](https://NUXEO_URL/nuxeo/picker/callback/callback.html)
     2.  Add all available **Scopes**.
-    3.  Enable Force.com Canvas and set the App URL&nbsp; `<span class="nolink">https://NUXEO_URL/nuxeo/picker</span>/`
+    3.  Enable Force.com Canvas and set the App URL `https://NUXEO_URL/nuxeo/picker`
     4.  Select **OAuth Webflow** for **Access Method**.
-    5.  Configure **Canvas App locations**&nbsp;by adding&nbsp;**Layouts and Mobile Cards**.
+    5.  Configure **Canvas App locations** by adding **Layouts and Mobile Cards**.
 5.  Save the "Nuxeo" Connected App.
-6.  Go to **Build** >&nbsp;**Customize**&nbsp;and choose any SFDC Object, e.g.&nbsp;"Opportunities".
-7.  Click on&nbsp;**Page Layouts**&nbsp;to edit the SFDC Object page layout.
-8.  Add the Nuxeo&nbsp;Canvas App&nbsp;anywhere in the page.
+6.  Go to **Build** > **Customize** and choose any SFDC Object, e.g. "Opportunities".
+7.  Click on **Page Layouts** to edit the SFDC Object page layout.
+8.  Add the Nuxeo Canvas App anywhere in the page.
     *   Hint: choose "Canvas Apps" in the list of available objects.
     *   Tip: if you add a new "Section" you need to save the layout before you can drop the Nuxeo Canvas App.
 9.  Save the layout.
-    Now when an Opportunity is opened the Nuxeo widget will be enabled. You have now access to the consumer key of the nuxeo app, this will be needed in the Nuxeo Platform Configuration part.&nbsp;
+    Now when an Opportunity is opened the Nuxeo widget will be enabled. You have now access to the consumer key of the nuxeo app, this will be needed in the Nuxeo Platform Configuration part.
 
 ### Nuxeo Platform Configuration
 
@@ -302,17 +298,19 @@ nuxeo.frame.options =
 ```
 
 2.  Set up the HTTPS configuration.
-    Salesforce requires the Nuxeo server to be accessed through HTTPS. Follow this&nbsp;[documentation]({{page page='http-and-https-reverse-proxy-configuration'}})&nbsp;to configure your reverse proxy for production purpose. For a dev or test environment, you can configure your Nuxeo server in HTTPS directly with the following configuration parameters example:
+    Salesforce requires the Nuxeo server to be accessed through HTTPS. Follow this [documentation]({{page page='http-and-https-reverse-proxy-configuration'}}) to configure your reverse proxy for production purpose. For a dev or test environment, you can configure your Nuxeo server in HTTPS directly with the following configuration parameters example:
 
     ```
     nuxeo.server.https.port=8443
-    nuxeo.server.https.keystoreFile=/Users/vpasquier/.keystore
+    nuxeo.server.https.keystoreFile=/Users/vpasquier/nuxeo.keystore
     nuxeo.server.https.keystorePass=******
     ```
 
-    You can setup the keystore by following the&nbsp;[Oracle documentation](https://docs.oracle.com/cd/E19509-01/820-3503/ggfen/index.html).
+    Don't forget to include the `https` template in the `nuxeo.template` parameter of your `nuxeo.conf` file.
 
-3.  Add the following configuration parameter (in&nbsp;**Admin**&nbsp;>&nbsp;**Cloud Services&nbsp;**>**&nbsp;Service Providers&nbsp;**>&nbsp;**OAuth2 Service Providers**&nbsp;>&nbsp;**Add**):
+    You can setup the keystore by following the [Oracle documentation](https://docs.oracle.com/cd/E19509-01/820-3503/ggfen/index.html) or directly run `keytool -genkey -v -keystore nuxeo.keystore -alias tomcat -keyalg RSA -keysize 2048 -validity 10000`.
+
+3.  Add the following configuration parameter (in **Admin** > **Cloud Services** > **Service Providers** > **OAuth2 Service Providers** > **Add**):
 
     ```
     Service Name=salesforce
@@ -321,19 +319,18 @@ nuxeo.frame.options =
     ```
 
 4.  Set up your browser to access Nuxeo for Salesforce from within Salesforce.
-    If you're using&nbsp;Firefox&nbsp;browser, you don't need to configure it. However with Chrome, here are the guidelines to allow the access:
-    1.  Authorize&nbsp;`Popups`&nbsp;from Salesforce (to allow OAuth execution).
-    2.  Go to&nbsp; `[https://NUXEO_URL/nuxeo](https://nuxeo_url:8443/nuxeo)&nbsp;`&nbsp;and allow Chrome&nbsp;to access in HTTPS your Nuxeo server.
+    1.  Authorize `Popups` from Salesforce (to allow OAuth execution).
+    2.  Go to `[https://NUXEO_URL/nuxeo]` and allow Chrome to access in HTTPS your Nuxeo server.
 
 ## Synchronization - Salesforce vs Nuxeo
 
 The default behaviour of Nuxeo Salesforce plugin is to bind the current Salesforce Object to a `Workspace` document type and the way the metadata are synchronized. This document type `Workspace` has a new facet `salesforce` to store the SF object id.
 
-Each time a SF user is displaying a SF object in his SF console, Nuxeo is going to create/retrieve the related workspace, listing all its children.&nbsp;
+Each time a SF user is displaying a SF object in his SF console, Nuxeo is going to create/retrieve the related workspace, listing all its children.
 
 ### Default Behavior
 
-The Automation operation script `javascript.FetchSFObject` can be overriden in order to bind the current Salesforce object to a specific document in Nuxeo.&nbsp;
+The Automation operation script `javascript.FetchSFObject` can be overridden in order to bind the current Salesforce object to a specific document in Nuxeo.
 
 {{#> panel type='code' heading='javascript.FetchSFObject'}}
 
@@ -383,12 +380,11 @@ Here is an example of overriding the SF object binding: When I enter my SF objec
 1.  Nuxeo checks if this object is already bound with a Nuxeo document through `sfobject.id`.
 2.  It returns the Nuxeo document if exists.
 3.  If the Nuxeo object doesn't exist, it creates it in the appropriate location:
-    *   If the SF object is an account, place it under the document <span style="line-height: 21.58px;">`/default-domain/workspaces/Custom` or under his parent account.</span>
-    *   <span style="line-height: 21.58px;">If the SF object is an opportunity, place it under his parent account.</span>
-4.  <span style="line-height: 21.58px;">The metadata are synchronized from Salesforce to Nuxeo (checking if metadata have been changed).</span>
+    *   If the SF object is an account, place it under the document `/default-domain/workspaces/Custom` or under his parent account.
+    *   If the SF object is an opportunity, place it under his parent account.
+4.  The metadata are synchronized from Salesforce to Nuxeo (checking if metadata have been changed).
 
-<span style="line-height: 21.58px;">This behavior is implemented by this operation.
-</span>
+This behavior is implemented by this operation.
 
 {{#> panel type='code' heading='New Behavior'}}
 
@@ -483,7 +479,7 @@ function getProperties(doc, sfobject){
 
 {{/panel}} {{#> callout type='tip' heading='Customization with Nuxeo Studio'}}
 
-Those two operations can be overriden inside a Nuxeo Studio project easily by creating two operations for instance: `SFGetChildren` and `FetchSFObject`.
+Those two operations can be overridden inside a Nuxeo Studio project easily by creating two operations for instance: `SFGetChildren` and `FetchSFObject`.
 
 {{/callout}}
 
@@ -527,7 +523,7 @@ function run(input, params) {
 
 {{/panel}} {{#> callout type='tip' heading='Customization with Nuxeo Studio'}}
 
-Those two operations can be overriden inside a Nuxeo Studio project easily by creating two operations for instance: `SFGetChildren` and `FetchSFObject`.
+Those two operations can be overridden inside a Nuxeo Studio project easily by creating two operations for instance: `SFGetChildren` and `FetchSFObject`.
 
 {{/callout}}
 

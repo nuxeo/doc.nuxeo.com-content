@@ -2,12 +2,13 @@
 title: EasyShare
 review:
     comment: ''
-    date: '2016-12-02'
+    date: '2017-12-12'
     status: ok
 labels:
     - easyshare
     - excerpt
     - multiexcerpt-include
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '11043055'
@@ -208,7 +209,7 @@ If you want more information about the future evolutions and improvements, see [
 <div class="column medium-6">
 {{#> panel heading='Related Documentation'}}
 
-- [EasyShare admin documentation]({{page space='nxdoc' page='easyshare'}})
+- [EasyShare Admin Documentation]({{page space='nxdoc' page='easyshare'}})
 - [Collections]({{page page='collections'}})
 
 {{/panel}}

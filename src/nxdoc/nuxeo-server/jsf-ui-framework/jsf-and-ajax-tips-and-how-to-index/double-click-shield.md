@@ -6,7 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: Learn how to use the "Double Click Shield" feature.
+        excerpt: 'Learn how to use the "Double Click Shield" feature.'
         level: Advanced
         tool: Code
         topics: 'JSF, Ajax, jQuery'
@@ -18,7 +18,9 @@ labels:
     - ajax
     - jsf
     - seam-jsf-component
+    - atchertchian
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '9830458'

@@ -2,12 +2,14 @@
 title: Transactions and Connections
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - transaction
     - logs
+    - bdelbosc
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance
@@ -21,7 +23,7 @@ confluence:
     source_link: /display/NXDOC/Transactions+and+Connections
 tree_item_index: 700
 version_override:
-    'LTS 2015': 710/admindoc/transactions-and-connections
+    LTS 2015: 710/admindoc/transactions-and-connections
     '6.0': 60/admindoc/transactions-and-connections
     '5.8': 58/admindoc/transactions-and-connections
 history:

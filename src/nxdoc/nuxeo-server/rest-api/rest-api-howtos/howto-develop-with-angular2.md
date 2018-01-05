@@ -1,5 +1,5 @@
 ---
-title: "HOWTO: Develop with Angular2"
+title: 'HOWTO: Develop with Angular2'
 review:
     comment: ''
     date: '2017-01-17'
@@ -7,15 +7,17 @@ review:
 labels:
     - lts2016-ok
     - rest-api
+    - troger
     - javascript
     - angular2
     - client
     - nuxeo-js
     - javascript-client-component
     - excerpt
+    - content-review-lts2017
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/developing-with-angularjs/
+    LTS 2015: 710/nxdoc/developing-with-angularjs/
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API

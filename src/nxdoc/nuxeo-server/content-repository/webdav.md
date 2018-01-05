@@ -7,8 +7,10 @@ review:
 labels:
     - lts2016-ok
     - webdav
+    - fguillaume
     - webdav-component
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950287'

@@ -7,21 +7,23 @@ review:
 labels:
     - content-review-lts2016
     - authentication
+    - dmetzler
     - authentication-component
     - migration-sample
-redirect: nxdoc/authentication-and-user-management  
+    - content-review-lts2017
+redirect: nxdoc/authentication-and-user-management
 hidden: true
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Authentication%2C+Users+and+Groups
+    canonical: 'Authentication%2C+Users+and+Groups'
     canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Authentication%2C+Users+and+Groups'
     page_id: '950315'
     shortlink: K4AO
     shortlink_source: 'https://doc.nuxeo.com/x/K4AO'
-    source_link: /display/NXDOC/Authentication%2C+Users+and+Groups
+    source_link: '/display/NXDOC/Authentication%2C+Users+and+Groups'
 history:
     -
         author: Manon Lumeau

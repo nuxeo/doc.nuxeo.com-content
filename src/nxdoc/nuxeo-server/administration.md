@@ -6,6 +6,9 @@ review:
     status: ok
 labels:
     - lts2016-ok
+    - content-review-lts2017
+    - home
+    - mlumeau
 is_overview: true
 confluence:
     ajs-parent-page-id: '31033314'
@@ -20,7 +23,7 @@ confluence:
     source_link: /display/NXDOC/Administration
 tree_item_index: 200
 version_override:
-    'LTS 2015': 710/admindoc/setup
+    LTS 2015: 710/admindoc/setup
     '6.0': 60/admindoc/setup
     '5.8': 58/admindoc/setup
 history:

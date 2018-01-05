@@ -6,22 +6,21 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to contribute a new video conversion to convert a video to
-            WebM format.
+        excerpt: Learn how to contribute a new video conversion to convert a video to WebM format.
         level: Advanced
         tool: 'XML extension, Code'
         topics: 'Conversion, DAM'
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
     - lts2016-ok
     - howto
     - dam
     - conversion
+    - troger
     - video
     - convert-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3866704'
@@ -29,8 +28,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Contribute+a+New+Video+Conversion
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+a+New+Video+Conversion
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+a+New+Video+Conversion'
     page_id: '20517029'
     shortlink: pRA5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/pRA5AQ'
@@ -187,7 +185,7 @@ Assuming `videoDocument`&nbsp;is a Document with the `Video` facet, to launch th
 
 ```java
 DocumentModel videoDocument = ...
-VideoService videoService = Framework.getLocalService(VideoService.class);
+VideoService videoService = Framework.getService(VideoService.class);
 videoService.launchConversion(videoDocument, "WebM 480p");
 ```
 

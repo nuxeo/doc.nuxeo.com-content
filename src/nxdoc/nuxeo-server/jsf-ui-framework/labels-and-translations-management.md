@@ -7,9 +7,11 @@ review:
 labels:
     - content-review-lts2016
     - todo
-    - translations-component
+    - translation
+    - sguitter
     - nxdoc-697
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '16089312'
     ajs-parent-page-title: JSF UI Framework

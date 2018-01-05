@@ -6,6 +6,10 @@ review:
     status: ok
 labels:
     - Tutorials
+    - content-review-lts2017
+    - home
+    - mlumeau
+
 ---
 - [How to Export Data Using Document Template and Automation]({{page version='' space='nxdoc' page='how-to-export-data-using-document-template-and-automation'}})
 - [How to Define a Document Type]({{page version='' space='nxdoc' page='how-to-define-a-document-type'}})

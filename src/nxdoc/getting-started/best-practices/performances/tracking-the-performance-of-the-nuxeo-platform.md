@@ -2,14 +2,16 @@
 title: Tracking the Performance of the Nuxeo Platform
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - funkload
     - link-update
     - performance
+    - bdelbosc
     - excerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235677'
@@ -17,8 +19,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Tracking+the+Performance+of+the+Nuxeo+Platform
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Tracking+the+Performance+of+the+Nuxeo+Platform
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Tracking+the+Performance+of+the+Nuxeo+Platform'
     page_id: '2949304'
     shortlink: uAAt
     shortlink_source: 'https://doc.nuxeo.com/x/uAAt'

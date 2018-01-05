@@ -8,9 +8,10 @@ labels:
     - content-review-lts2016
     - last-review-20150128
     - home
+    - mlumeau
+    - content-review-lts2017
 is_overview: true
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '7209076'
     ajs-parent-page-title: Tutorials

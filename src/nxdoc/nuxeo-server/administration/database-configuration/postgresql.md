@@ -2,13 +2,15 @@
 title: PostgreSQL
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - postgresql
     - database
+    - kleturc
     - multiexcerpt-include
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3342340'
@@ -23,7 +25,7 @@ confluence:
     source_link: /display/NXDOC/PostgreSQL
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/admindoc/postgresql
+    LTS 2015: 710/admindoc/postgresql
     '6.0': 60/admindoc/configuring-postgresql
     '5.8': 58/admindoc/configuring-postgresql
 history:
@@ -135,9 +137,7 @@ history:
     -
         author: Joshua Fletcher
         date: '2014-12-11 02:09'
-        message: >-
-            PG doesn't support "m" or "g" for these values, you need to use "MB"
-            or "GB". This part of the doc was a little confusing as a new user.
+        message: "PG doesn't support \"m\" or \"g\" for these values, you need to use \"MB\" or \"GB\". This part of the doc was a little confusing as a new user."
         version: '88'
     -
         author: Solen Guitter
@@ -462,7 +462,7 @@ history:
     -
         author: Florent Guillaume
         date: '2010-08-25 15:04'
-        message: put Two-phase commit first as it's the most common error
+        message: "put Two-phase commit first as it's the most common error"
         version: '23'
     -
         author: Florent Guillaume

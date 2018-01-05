@@ -2,13 +2,15 @@
 title: MySQL
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - database
+    - kleturc
     - mysql
     - multiexcerpt-include
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3342340'
@@ -23,7 +25,7 @@ confluence:
     source_link: /display/NXDOC/MySQL
 tree_item_index: 400
 version_override:
-    'LTS 2015': 710/admindoc/mysql
+    LTS 2015: 710/admindoc/mysql
     '6.0': 60/admindoc/configuring-mysql
     '5.8': 58/admindoc/configuring-mysql
 history:

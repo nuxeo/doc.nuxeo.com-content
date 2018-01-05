@@ -2,12 +2,11 @@
 title: How to Make a Page Provider or Content View Query Elasticsearch Index
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to make a content view query Elasticsearch instead of the Core API.
+        excerpt: Learn how to make a content view query Elasticsearch instead of the Core API.
         level: Beginner
         tool: Studio
         topics: 'Content view, Elasticsearch, Query'
@@ -15,24 +14,24 @@ labels:
     - content-review-lts2016
     - elasticsearch
     - content-view
+    - atchertchian
     - howto
-    - query
     - query-pageprovider-component
+    - kleturc
     - university
     - excerpt
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '4687860'
     ajs-parent-page-title: Indexing and Query
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Make+a+Page+Provider+or+Content+View+Query+Elasticsearch+Index
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Make+a+Page+Provider+or+Content+View+Query+Elasticsearch+Index
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Make+a+Page+Provider+or+Content+View+Query+Elasticsearch+Index'
     page_id: '19235213'
     shortlink: jYElAQ
     shortlink_source: 'https://doc.nuxeo.com/x/jYElAQ'
-    source_link: >-
-        /display/NXDOC/How+to+Make+a+Page+Provider+or+Content+View+Query+Elasticsearch+Index
+    source_link: /display/NXDOC/How+to+Make+a+Page+Provider+or+Content+View+Query+Elasticsearch+Index
 tree_item_index: 1500
 history:
     -
@@ -139,13 +138,9 @@ history:
 ---
 {{! excerpt}}
 
-When&nbsp;[configuring a content view]({{page space='studio' page='content-view-query-and-form-tab'}})&nbsp;in Nuxeo Studio, you can make it query Elasticsearch instead of the Core API. This may be interesting for performance/scalability reasons as well as for enabling aggregates support. This page lists the required steps:
+When [configuring a content view]({{page space='studio' page='content-view-query-and-form-tab'}}) in Nuxeo Studio, you can make it query Elasticsearch instead of the Core API. This may be interesting for performance/scalability reasons as well as for enabling aggregates support. This page lists the required steps:
 
 {{! /excerpt}}
-
-{{#> callout type='info' }}
-{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
-{{/callout}}
 
 ## Overriding an Existing Page Provider
 
@@ -157,7 +152,9 @@ elasticsearch.override.pageproviders=default_search,document_content,section_con
 
 You can view the list of the Page Providers in the Admin Center/Elasticsearch/Page Provider tab, the `CoreQueryDocumentPageProvider` listed in blue can be overridden by Elasticsearch.
 
-## Configuring a New Content View &nbsp;(and underlying Page Provider) With Nuxeo Studio
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
+## Configuring a New Content View (and underlying Page Provider) With Nuxeo Studio
 
 1.  In Studio, on the content view, on the query & form tab, check "Use Elasticsearch index" and Save.
     ![]({{file name='Studio-content-view-query-definition.png' space='studio' page='content-views'}} ?w=600,border=true)
@@ -171,7 +168,7 @@ Elasticsearch indexing is "eventually consistent". This means that depending on 
 
 {{/callout}}{{> wistia_video id='c9lxp69a01'}}
 
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.com)
+Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/learn/public/course/view/elearning/55/WhatsnewinNuxeoPlatformLTS2015%3F) on [Nuxeo University](https://university.nuxeo.com)
 
 &nbsp;
 

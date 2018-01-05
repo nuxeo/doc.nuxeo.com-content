@@ -1,5 +1,5 @@
 ---
-title: "HOWTO: Nuxeo API Playground"
+title: 'HOWTO: Nuxeo API Playground'
 review:
     comment: ''
     date: '2017-01-12'
@@ -14,15 +14,17 @@ labels:
     - lts2016-ok
     - howto
     - rest-api
+    - troger
     - nuxeo-playground
     - cors
     - playground-component
     - excerpt
     - multiexcerpt
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/use-nuxeo-api-playground-to-discover-the-api
+    LTS 2015: 710/nxdoc/use-nuxeo-api-playground-to-discover-the-api
     '6.0': 60/nxdoc/use-nuxeo-api-playground-to-discover-the-api
 confluence:
     ajs-parent-page-id: '13664833'
@@ -30,8 +32,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Use+Nuxeo+API+Playground+to+Discover+the+API
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Use+Nuxeo+API+Playground+to+Discover+the+API
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Use+Nuxeo+API+Playground+to+Discover+the+API'
     page_id: '19793397'
     shortlink: 9QUuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/9QUuAQ'
@@ -141,9 +142,7 @@ history:
     -
         author: Solen Guitter
         date: '2016-02-15 17:11'
-        message: >-
-            Move allowClientGeneratedBatchId setup to configuration section,
-            review command endpoint and batch upload sections
+        message: 'Move allowClientGeneratedBatchId setup to configuration section, review command endpoint and batch upload sections'
         version: '33'
     -
         author: Solen Guitter

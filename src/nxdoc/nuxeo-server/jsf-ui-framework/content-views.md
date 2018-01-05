@@ -8,9 +8,11 @@ labels:
     - lts2016-ok
     - link-update
     - content-view
+    - atchertchian
     - document-content-view
     - content-views-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089312'
@@ -33,9 +35,7 @@ history:
     -
         author: Solen Guitter
         date: '2016-07-07 13:56'
-        message: >-
-            NXDOC-830: update how to configure maxPageSize and
-            DEFAULT_NAVIGATION_RESULTS
+        message: 'NXDOC-830: update how to configure maxPageSize and DEFAULT_NAVIGATION_RESULTS'
         version: '79'
     -
         author: Solen Guitter
@@ -125,9 +125,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2014-12-05 18:37'
-        message: >-
-            NXDOC-222: rename cv actions to cv selection actions to avoid
-            confusion
+        message: 'NXDOC-222: rename cv actions to cv selection actions to avoid confusion'
         version: '61'
     -
         author: Anahide Tchertchian
@@ -157,7 +155,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-08-25 11:59'
-        message: Add doc about listing layouts ending with "2_columns"
+        message: 'Add doc about listing layouts ending with "2_columns"'
         version: '55'
     -
         author: Solen Guitter
@@ -302,9 +300,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2012-01-20 16:59'
-        message: >-
-            adding more examples about search document and result columsn
-            configuration
+        message: adding more examples about search document and result columsn configuration
         version: '26'
     -
         author: Anahide Tchertchian
@@ -349,9 +345,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2011-03-14 18:14'
-        message: >-
-            adding new elements information (max page size, show page size
-            selector, show refresh page)
+        message: 'adding new elements information (max page size, show page size selector, show refresh page)'
         version: '17'
     -
         author: Anahide Tchertchian

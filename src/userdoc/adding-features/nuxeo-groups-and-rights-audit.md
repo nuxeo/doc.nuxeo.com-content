@@ -9,6 +9,7 @@ labels:
     - export
     - last-review-20150226
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '11043055'
     ajs-parent-page-title: Adding Features
@@ -22,27 +23,27 @@ confluence:
     source_link: /display/USERDOC/Nuxeo+Groups+and+Rights+Audit
 tree_item_index: 700
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-02-26 11:07'
         message: ''
         version: '5'
-    -
+    - 
         author: Solen Guitter
         date: '2013-12-20 14:13'
         message: Updated export icon and screenshot
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-07 11:35'
         message: ''
         version: '3'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-06 14:26'
         message: Added export related topics
         version: '2'
-    -
+    - 
         author: Solen Guitter
         date: '2013-08-06 12:17'
         message: ''

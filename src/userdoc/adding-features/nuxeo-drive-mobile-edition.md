@@ -7,6 +7,7 @@ review:
 labels:
     - nuxeo-drive-ios
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '11043055'
@@ -21,252 +22,252 @@ confluence:
     source_link: /display/USERDOC/Nuxeo+Drive+Mobile+Edition
 tree_item_index: 600
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-01 13:16'
         message: ''
         version: '50'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-03-21 15:32'
         message: ''
         version: '49'
-    -
+    - 
         author: Manon Lumeau
         date: '2015-11-25 16:45'
         message: new Edit permission
         version: '48'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-12-08 11:45'
         message: ''
         version: '47'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-06-10 15:08'
         message: ''
         version: '46'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-06-10 14:47'
         message: ''
         version: '45'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-06-10 14:46'
         message: ''
         version: '44'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-06-10 14:46'
         message: ''
         version: '43'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-06-10 14:45'
         message: ''
         version: '42'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-06-10 14:44'
         message: ''
         version: '41'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-06-09 14:28'
         message: ''
         version: '40'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-06-09 11:04'
         message: ''
         version: '39'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-05-27 14:59'
         message: ''
         version: '38'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-05-26 17:15'
         message: ''
         version: '37'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-05-26 17:10'
         message: ''
         version: '36'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-05-26 16:37'
         message: ''
         version: '35'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-05-26 16:09'
         message: ''
         version: '34'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-24 15:47'
         message: ''
         version: '33'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-24 15:46'
         message: ''
         version: '32'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-24 15:45'
         message: ''
         version: '31'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-24 15:40'
         message: ''
         version: '30'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-24 15:30'
         message: ''
         version: '29'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-24 15:28'
         message: ''
         version: '28'
-    -
+    - 
         author: Solen Guitter
         date: '2014-04-24 10:40'
         message: formatte dsteps
         version: '27'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-23 14:35'
         message: ''
         version: '26'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-23 11:57'
         message: ''
         version: '25'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-23 11:56'
         message: ''
         version: '24'
-    -
+    - 
         author: Solen Guitter
         date: '2014-04-23 11:17'
         message: 'Added icons, links, removed drive desktop steps'
         version: '23'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-22 18:05'
         message: ''
         version: '22'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-22 17:20'
         message: ''
         version: '21'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-22 16:02'
         message: ''
         version: '20'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-22 14:46'
         message: ''
         version: '19'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-22 14:39'
         message: ''
         version: '18'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-22 14:35'
         message: ''
         version: '17'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-22 14:21'
         message: ''
         version: '16'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-22 13:44'
         message: ''
         version: '15'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-22 11:46'
         message: ''
         version: '14'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-22 11:46'
         message: ''
         version: '13'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-22 11:41'
         message: ''
         version: '12'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-22 11:10'
         message: ''
         version: '11'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-22 10:35'
         message: ''
         version: '10'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-22 10:26'
         message: ''
         version: '9'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-18 18:03'
         message: ''
         version: '8'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-18 17:56'
         message: ''
         version: '7'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-18 17:52'
         message: ''
         version: '6'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-18 17:40'
         message: ''
         version: '5'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-18 17:36'
         message: ''
         version: '4'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-18 17:31'
         message: ''
         version: '3'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-18 17:28'
         message: ''
         version: '2'
-    -
+    - 
         author: Manon Lumeau
         date: '2014-04-18 15:59'
         message: ''

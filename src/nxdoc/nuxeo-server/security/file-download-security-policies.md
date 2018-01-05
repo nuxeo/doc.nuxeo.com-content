@@ -2,14 +2,16 @@
 title: File Download Security Policies
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - security-policy
     - blob-manager-component
     - security-component
+    - fguillaume
     - university
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '20515363'
@@ -103,7 +105,7 @@ history:
 ---
 {{> wistia_video id='8qt7oqor9j'}}
 
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) on [Nuxeo University](https://university.nuxeo.com)
+Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/learn/public/course/view/elearning/55/WhatsnewinNuxeoPlatformLTS2015%3F) on [Nuxeo University](https://university.nuxeo.com)
 
 In addition to the permissions applying to a document, which restrict access to a document as a whole, it's possible to specify more fine-grained permissions to disallow the download of some file attachments.
 
@@ -115,11 +117,11 @@ If you are looking to dynamically restrict access to whole documents depending o
 
 {{/callout}} {{#> callout type='warning' }}
 
-File download security policies apply to **all** files in the Platform. Your filters need to be specific enough in order to avoid possible side-effects. Make sure to use the [available variables](#available-variables) at your disposal to check you are in the right use case first.
+File download security policies apply to **all** blobs in the Platform. Your security filters need to be specific enough in order to avoid possible side-effects. Make sure to use the [available variables](#available-variables) at your disposal to check you are in the right use case first.
 
-Possible side-effects you may want to check include:
+Possible side-effects you may want to check for include:
 
-*   Show graph feature in a workflow
+*   Show graph feature in a workflow.
 *   User suggestion widget, for instance in the admin tab, users & groups menu, when editing the groups a user belongs to.
 
 {{/callout}}
@@ -149,8 +151,10 @@ The `language` can be any JVM scripting language, the default is "JavaScript".
 
 The `<script>` must define a `run()` function that returns a boolean:
 
-*   `true` means that downloading the blob is not disallowed by this permission,
+*   `true` means that downloading the blob is not forbidden by this permission (but other permission rules could forbid it),
 *   `false` means that downloading the blob is forbidden.
+
+If there are several permissions defined, a single one returning `false` is sufficient to forbid the blob download.
 
 {{> anchor 'available-variables'}}The `run()` method will get called with the following global context (some values may be null for non-standard download methods):
 
@@ -160,13 +164,12 @@ The `<script>` must define a `run()` function that returns a boolean:
 *   **CurrentUser** (NuxeoPrincipal): the current user.
 *   **Reason** (String): the download "reason", which gives an indication of the source of the download:
     *   `download`: file downloads from the download servlet, Automation, WebEngine, REST API, Seam or Restlets.
-    *   `picture`: downloadPicture codec (the XPath is then one of&nbsp;OriginalJpeg:content, Medium:content,&nbsp;Small:content,&nbsp;Thumbnail:content,&nbsp;etc.).
+    *   `picture`: downloadPicture codec (the XPath is then one of OriginalJpeg:content, Medium:content, Small:content, Thumbnail:content, etc.).
     *   `thumbnail`: downloadThumbnail codec.
-    *   `clipboardZip`: worklist ZIP export.
     *   `workListXML`: worklist XML export.
     *   `pdfConversion`: PDF conversion.
     *   `el`: EL-triggered download.
-    *   `operation`: Automation operation (WebUI.DownloadFile /&nbsp;Seam.DownloadFile).
+    *   `operation`: Automation operation (WebUI.DownloadFile / Seam.DownloadFile).
     *   `rendition`: rendition.
     *   `templateRendition`: template rendition.
     *   `webengine`: WebEngine JSON responses. Includes Automation and [REST API]({{page page='rest-api'}}) calls.
@@ -175,8 +178,6 @@ The `<script>` must define a `run()` function that returns a boolean:
     *   `preview`: preview display restlet.
 *   **Rendition** (String): the rendition name, if this is a rendition.
 *   **Infos** (Map): the ExtendedInfos map passed internally to the download method.
-
-If there are several permissions defined, a single one returning false is sufficient to forbid the blob download.
 
 ## Example
 

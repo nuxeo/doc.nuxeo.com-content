@@ -6,6 +6,11 @@ review:
     status: ok
 toc: true
 tree_item_index: 50
+labels:
+    - content-review-lts2017
+    - authentication
+    - dmetzler
+
 ---
 
 Nuxeo Authentication is based on the JAAS standard. Authentication infrastructure is based on two main components:

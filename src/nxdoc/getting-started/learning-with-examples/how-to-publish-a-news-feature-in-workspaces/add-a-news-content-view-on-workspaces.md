@@ -9,7 +9,9 @@ labels:
     - tuto-override-doc-type
     - tuto-document-type
     - workspace
-    - tuto-content-view
+    - content-view
+    - atchertchian
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '4689520'
@@ -17,8 +19,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Add+a+News+Content+View+on+Workspaces
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Add+a+News+Content+View+on+Workspaces
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Add+a+News+Content+View+on+Workspaces'
     page_id: '5570738'
     shortlink: sgBV
     shortlink_source: 'https://doc.nuxeo.com/x/sgBV'

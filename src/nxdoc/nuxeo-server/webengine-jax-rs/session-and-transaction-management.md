@@ -10,6 +10,8 @@ labels:
     - transaction
     - webengine
     - webengine-component
+    - dmetzler
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950281'

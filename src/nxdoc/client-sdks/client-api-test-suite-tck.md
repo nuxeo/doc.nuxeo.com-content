@@ -9,8 +9,10 @@ labels:
     - automation
     - todo
     - link-update
-    - rest-api-component
+    - rest-api
+    - troger
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16091040'
@@ -133,7 +135,7 @@ history:
     -
         author: Florent Guillaume
         date: '2013-07-25 15:00'
-        message: JS -> JavaScript
+        message: 'JS -> JavaScript'
         version: '9'
     -
         author: Julien Carsique

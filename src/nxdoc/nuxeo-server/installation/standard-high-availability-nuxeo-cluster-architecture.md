@@ -3,13 +3,15 @@ title: Standard High Availability Nuxeo Cluster Architecture
 description: This page details standard architecture options to deploy a Nuxeo cluster.
 review:
     comment: ''
-    date: '2017-06-06'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - deployment
-    - clustering
+    - bchauvin
+    - cluster
     - architecture
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
@@ -24,9 +26,9 @@ confluence:
     source_link: /display/NXDOC/Deployment+Options
 tree_item_index: 1240
 version_override:
-  'LTS 2016': 810/nxdoc/deployment-options
-  'LTS 2015': 710/nxdoc/deployment-options
-  '6.0': 60/nxdoc/deployment-options
+    LTS 2016: 810/nxdoc/deployment-options
+    LTS 2015: 710/nxdoc/deployment-options
+    '6.0': 60/nxdoc/deployment-options
 history:
     -
         author: Manon Lumeau

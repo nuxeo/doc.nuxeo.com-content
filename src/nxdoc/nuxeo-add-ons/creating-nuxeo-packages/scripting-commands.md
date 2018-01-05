@@ -1,15 +1,17 @@
 ---
 title: Scripting Commands
 review:
-    comment: ''
-    date: '2015-12-01'
-    status: ok
+    comment: 'This page is outdated and needs to be reviewed, see [NXDOC-1452](https://jira.nuxeo.com/browse/NXDOC-1452).'
+    date: '2017-12-18'
+    status: requiresUpdates
 labels:
     - content-review-lts2016
     - el
     - scripting
     - todo
     - packaging-component
+    - ataillefer
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3342859'
@@ -76,9 +78,7 @@ history:
     -
         author: Julien Carsique
         date: '2011-02-09 12:24'
-        message: >-
-            add info about module containing AbstractCommand to extend for
-            implementing new marketplace package commands
+        message: add info about module containing AbstractCommand to extend for implementing new marketplace package commands
         version: '25'
     -
         author: Julien Carsique

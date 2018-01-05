@@ -7,8 +7,10 @@ review:
 labels:
     - lts2016-ok
     - vcs
+    - fguillaume
     - cache
     - vcs-component
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '3342350'
     ajs-parent-page-title: VCS

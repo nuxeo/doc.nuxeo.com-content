@@ -7,9 +7,11 @@ review:
 labels:
     - content-review-lts2016
     - user-action
-    - action-category
+    - action
+    - atchertchian
     - home
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '16089312'
     ajs-parent-page-title: JSF UI Framework
@@ -76,9 +78,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2013-12-16 19:01'
-        message: >-
-            remove content that was moved to subpages (but keep anchors) + add
-            wip warning
+        message: remove content that was moved to subpages (but keep anchors) + add wip warning
         version: '27'
     -
         author: Solen Guitter

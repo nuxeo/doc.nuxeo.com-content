@@ -7,8 +7,10 @@ review:
 labels:
     - content-review-lts2016
     - shell
+    - jcarsique
     - link-update
     - shell-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -23,7 +25,7 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Shell
 tree_item_index: 2100
 version_override:
-    'LTS 2015': 710/admindoc/nuxeo-shell
+    LTS 2015: 710/admindoc/nuxeo-shell
     '6.0': 60/admindoc/nuxeo-shell
     '5.8': 58/admindoc/nuxeo-shell
 history:

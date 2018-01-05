@@ -8,16 +8,17 @@ labels:
     - content-review-lts2016
     - widget
     - layout-widgets-component
+    - atchertchian
     - limitations
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '3868345'
     ajs-parent-page-title: Standard Widget Types
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Default+Widget+Types+Known+Limitations
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Default+Widget+Types+Known+Limitations
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Default+Widget+Types+Known+Limitations'
     page_id: '12915525'
     shortlink: RRPF
     shortlink_source: 'https://doc.nuxeo.com/x/RRPF'

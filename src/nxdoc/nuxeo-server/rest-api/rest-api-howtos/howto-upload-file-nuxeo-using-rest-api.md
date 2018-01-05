@@ -1,14 +1,12 @@
 ---
-title: "HOWTO: Upload a File in Nuxeo Using REST API"
+title: 'HOWTO: Upload a File in Nuxeo Using REST API'
 review:
     comment: ''
     date: '2017-08-01'
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to import a file using the Batch processing endpoint of
-            the REST API.
+        excerpt: Learn how to import a file using the Batch processing endpoint of the REST API.
         level: Advanced
         tool: Code
         topics: 'Import, REST API'
@@ -16,29 +14,28 @@ labels:
     - lts2016-ok
     - import
     - rest-api
+    - troger
     - howto
     - upload
     - file-upload-component
     - university
     - excerpt
+    - content-review-lts2017
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint
+    LTS 2015: 710/nxdoc/how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint
     '6.0': 60/nxdoc/how-to-upload-a-file-in-nuxeo-platform-using-rest-api-batch-processing-endpoint/
 confluence:
     ajs-parent-page-id: '13664833'
     ajs-parent-page-title: REST API
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: >-
-        How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
+    canonical: How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint'
     page_id: '19793389'
     shortlink: 7QUuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/7QUuAQ'
-    source_link: >-
-        /display/NXDOC/How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
+    source_link: /display/NXDOC/How+to+Upload+a+File+in+Nuxeo+Platform+Using+REST+API+Batch+Processing+Endpoint
 tree_item_index: 200
 history:
     -
@@ -336,9 +333,9 @@ GET /api/v1/path/default-domain/workspaces/myworkspace/myNewDoc/@blob/file:conte
 ```
 ## Learn More
 
-*   Follow the courses [Importing Files with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/importing-files-rest-api) and [Data Capture / REST API Import](https://university.nuxeo.com/store/220415-data-capture) at [Nuxeo University](https://university.nuxeo.com).
+*   Follow the courses [Importing Files with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/importing-files-rest-api) and [Data Capture / REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) at [Nuxeo University](https://university.nuxeo.com).
 
-* * * 
+* * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='REST API how-tos'}}
 

@@ -7,8 +7,10 @@ review:
 labels:
     - lts2016-ok
     - operation
-    - automation-component
+    - automation
+    - fdavid
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '18451738'
     ajs-parent-page-title: Automation

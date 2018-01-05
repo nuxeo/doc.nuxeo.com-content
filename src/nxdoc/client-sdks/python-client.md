@@ -2,11 +2,13 @@
 title: Python Client
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-18'
     status: ok
 labels:
     - lts2016-ok
+    - lts2017-ok
     - python-client
+    - mschoentgen
     - client
     - python-client-component
 toc: true
@@ -23,7 +25,7 @@ confluence:
     source_link: /display/NXDOC/Python+Client
 tree_item_index: 300
 version_override:
-    'LTS 2015': 710/nxdoc/using-a-python-client
+    LTS 2015: 710/nxdoc/using-a-python-client
     '6.0': 60/nxdoc/using-a-python-client
     '5.8': 58/nxdoc/using-a-python-client
 history:
@@ -109,4 +111,4 @@ history:
         version: '1'
 
 ---
-{{{md (file_content url='https://raw.githubusercontent.com/nuxeo/nuxeo-python-client/master/README.md')}}}
+{{{md (file_content url='https://raw.githubusercontent.com/nuxeo/nuxeo-python-client/master/README.rst')}}}

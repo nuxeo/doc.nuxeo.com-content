@@ -1,7 +1,5 @@
 ---
-title: >-
-    Query Models and Result Providers Migration to Content Views and Page
-    Providers
+title: Query Models and Result Providers Migration to Content Views and Page Providers
 review:
     comment: ''
     date: '2017-02-14'
@@ -10,27 +8,25 @@ labels:
     - lts2016-ok
     - multiexcerpt
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '12288891'
     ajs-parent-page-title: Upgrade from 5.6 to 5.8
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: >-
-        Query+Models+and+Result+Providers+Migration+to+Content+Views+and+Page+Providers
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Query+Models+and+Result+Providers+Migration+to+Content+Views+and+Page+Providers
+    canonical: Query+Models+and+Result+Providers+Migration+to+Content+Views+and+Page+Providers
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Query+Models+and+Result+Providers+Migration+to+Content+Views+and+Page+Providers'
     page_id: '24052377'
     shortlink: mQJvAQ
     shortlink_source: 'https://doc.nuxeo.com/x/mQJvAQ'
-    source_link: >-
-        /display/NXDOC/Query+Models+and+Result+Providers+Migration+to+Content+Views+and+Page+Providers
+    source_link: /display/NXDOC/Query+Models+and+Result+Providers+Migration+to+Content+Views+and+Page+Providers
 version_override:
-    'LTS 2015': 710/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
+    LTS 2015: 710/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
     '6.0': 60/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
     '5.8': 58/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2015-04-14 14:46'
         message: ''
@@ -189,7 +185,7 @@ This query model is designed to perform a query on the Nuxeo Core Repository, us
 Here is a sample JAVA code using this query model:
 
 ```
-QueryModelService qmService = Framework.getLocalService(QueryModelService.class);
+QueryModelService qmService = Framework.getService(QueryModelService.class);
 QueryModelDescriptor qmd = qmService.getQueryModelDescriptor("MY_SEARCH");
 QueryModel qm = new QueryModel(qmd);
 Object[] params = {document.getId()};
@@ -218,7 +214,7 @@ Let's migrate the query model to a page provider:
 Let's also migrate the corresponding JAVA code:
 
 ```
-PageProviderService ppService = Framework.getLocalService(PageProviderService.class);
+PageProviderService ppService = Framework.getService(PageProviderService.class);
 Map<String, Serializable> props = new HashMap<String, Serializable>();
 props.put(CoreQueryDocumentPageProvider.CORE_SESSION_PROPERTY,
         (Serializable) coreSession);

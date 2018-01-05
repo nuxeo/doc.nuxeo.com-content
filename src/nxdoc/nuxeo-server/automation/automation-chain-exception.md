@@ -2,17 +2,18 @@
 title: Automation Chain Exception
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - automation
+    - fdavid
     - exception
     - debug
     - trace
     - mvel
-    - automation-component
     - excerpt
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '18451738'
     ajs-parent-page-title: Automation
@@ -174,7 +175,7 @@ Here is the contribution to deploy filters that can be added to decide which cha
 </extension>
 ```
 
-These filters are strictly written in MVEL template or expression starting by '`expr:`'.
+These filters are strictly written in MVEL template or expression starting by `expr:`.
 
 Exception is cached into the operation context and can be used into filters:
 

@@ -7,7 +7,9 @@ review:
 labels:
     - lts2016-ok
     - home
+    - mlumeau
     - multiexcerpt
+    - content-review-lts2017
 is_overview: true
 confluence:
     ajs-parent-page-id: ''

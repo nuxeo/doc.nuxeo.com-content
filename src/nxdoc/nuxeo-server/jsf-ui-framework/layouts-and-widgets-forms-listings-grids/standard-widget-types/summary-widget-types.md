@@ -9,7 +9,9 @@ labels:
     - widget-types
     - summary
     - layout-widgets-component
+    - atchertchian
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3868345'

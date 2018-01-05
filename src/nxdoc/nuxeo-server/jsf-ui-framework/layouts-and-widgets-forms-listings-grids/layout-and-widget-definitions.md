@@ -8,7 +8,9 @@ labels:
     - content-review-lts2016
     - link-update
     - home
+    - mlumeau
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950330'
     ajs-parent-page-title: 'Layouts and Widgets (Forms, Listings, Grids)'

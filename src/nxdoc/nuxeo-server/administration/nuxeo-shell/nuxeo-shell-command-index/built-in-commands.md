@@ -2,12 +2,14 @@
 title: Built-in Commands
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-13'
     status: ok
 labels:
     - content-review-lts2016
     - shell
+    - jcarsique
     - shell-component
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4687648'
@@ -22,7 +24,7 @@ confluence:
     source_link: /display/NXDOC/Built-in+Commands
 tree_item_index: 100
 version_override:
-    'LTS 2015': 710/admindoc/built-in-commands
+    LTS 2015: 710/admindoc/built-in-commands
     '6.0': 60/admindoc/built-in-commands
     '5.8': 58/admindoc/built-in-commands
 history:

@@ -8,12 +8,13 @@ labels:
     - lts2016-ok
     - link-update
     - rest-api
+    - troger
     - enricher
-    - rest-api-component
     - university
+    - content-review-lts2017
 toc: true
 version_override:
-    'LTS 2015': 710/nxdoc/content-enricher
+    LTS 2015: 710/nxdoc/content-enricher
     '6.0': 60/nxdoc/content-enricher
 confluence:
     ajs-parent-page-id: '13664833'
@@ -201,9 +202,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-05-04 09:03'
-        message: >-
-            Add links to javadoc, and children and permission enrichers in
-            additional enrichers sections
+        message: 'Add links to javadoc, and children and permission enrichers in additional enrichers sections'
         version: '21'
     -
         author: Solen Guitter
@@ -213,9 +212,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-04-30 09:58'
-        message: >-
-            Replacing deprecated headers X-NXContext-Category and
-            X-NXDocumentProperties by X-NXenrichers.document and X-NXproperties
+        message: Replacing deprecated headers X-NXContext-Category and X-NXDocumentProperties by X-NXenrichers.document and X-NXproperties
         version: '19'
     -
         author: Solen Guitter
@@ -800,7 +797,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 
 {{/panel}}
 
-### Tags&nbsp;
+### Tags
 
 {{#> panel type='code' heading='Call Example'}}
 
@@ -849,7 +846,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 
 {{/panel}}
 
-### Running Workflows
+### {{> anchor 'runningWorkflows'}}Running Workflows
 
 {{#> panel type='code' heading='Call Example'}}
 
@@ -923,7 +920,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
 
 {{/panel}}
 
-### Runnable Workflows
+### {{> anchor 'runnableWorkflows'}}Runnable Workflows
 
 {{#> panel type='code' heading='Call Example'}}
 
@@ -1199,7 +1196,7 @@ public class LogEntryEnricher extends AbstractJsonEnricher<LogEntry> {
     }
 
     protected String getPrincipalName(LogEntry logEntry) {
-        UserManager userManager = Framework.getLocalService(UserManager.class);
+        UserManager userManager = Framework.getService(UserManager.class);
         NuxeoPrincipal principal = userManager.getPrincipal(logEntry.getPrincipalName());
         String firstName = principal.getFirstName();
         String lastName = principal.getLastName();

@@ -7,10 +7,11 @@ review:
 labels:
     - lts2016-ok
     - conversion
+    - troger
     - convert-component
+    - content-review-lts2017
 toc: true
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '16089319'
     ajs-parent-page-title: Additional Services

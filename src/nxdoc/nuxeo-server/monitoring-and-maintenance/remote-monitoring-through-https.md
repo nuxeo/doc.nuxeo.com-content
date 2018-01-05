@@ -2,12 +2,14 @@
 title: Remote Monitoring through HTTP/S
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - monitoring-component
+    - bdelbosc
     - excerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950318'
@@ -22,12 +24,12 @@ confluence:
     source_link: /pages/viewpage.action?pageId=26317797
 tree_item_index: 500
 version_override:
-    'LTS 2015': 710/admindoc/remote-monitoring-through-https  
+    LTS 2015: 710/admindoc/remote-monitoring-through-https
 history:
     -
         author: Manon Lumeau
         date: '2016-08-02 16:29'
-        message: emove <span>
+        message: 'emove <span>'
         version: '13'
     -
         author: Solen Guitter

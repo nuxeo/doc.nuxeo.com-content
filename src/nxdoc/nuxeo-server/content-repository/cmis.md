@@ -7,9 +7,11 @@ review:
 labels:
     - lts2016-ok
     - cmis
+    - fguillaume
     - soap
     - blogs
     - cmis-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950287'
@@ -137,9 +139,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-12-26 09:58'
-        message: >-
-            Replace demo.nuxeo.com with online trial, update URLs and format
-            toc
+        message: 'Replace demo.nuxeo.com with online trial, update URLs and format toc'
         version: '58'
     -
         author: Florent Guillaume
@@ -254,7 +254,7 @@ history:
     -
         author: Florent Guillaume
         date: '2011-12-21 19:38'
-        message: hg -> github
+        message: 'hg -> github'
         version: '35'
     -
         author: Florent Guillaume
@@ -339,7 +339,7 @@ history:
     -
         author: Florent Guillaume
         date: '2011-03-17 17:01'
-        message: doesn't belong here
+        message: "doesn't belong here"
         version: '18'
     -
         author: Florent Guillaume

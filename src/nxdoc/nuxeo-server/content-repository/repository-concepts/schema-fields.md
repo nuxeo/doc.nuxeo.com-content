@@ -7,7 +7,9 @@ review:
 labels:
     - lts2016-ok
     - schema-component
+    - fguillaume
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950302'

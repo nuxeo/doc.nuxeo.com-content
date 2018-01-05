@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to disable the existing By Coverage and By Subjects
-            virtual navigations with Nuxeo Studio.
+        excerpt: Learn how to disable the existing By Coverage and By Subjects virtual navigations with Nuxeo Studio.
         level: Advanced
         tool: 'Studio, XML extensions'
         topics: 'Content View, Virtual Navigation'
@@ -17,11 +15,13 @@ labels:
     - virtual-navigation
     - howto
     - content-view
+    - atchertchian
     - extension-point
     - vocabulary
     - studio
     - virtual-navigation-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '20517205'
@@ -29,13 +29,11 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Disable+by+Coverage+and+by+Subjects+Virtual+Navigations
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Disable+by+Coverage+and+by+Subjects+Virtual+Navigations
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Disable+by+Coverage+and+by+Subjects+Virtual+Navigations'
     page_id: '6030379'
     shortlink: KwRc
     shortlink_source: 'https://doc.nuxeo.com/x/KwRc'
-    source_link: >-
-        /display/NXDOC/How+to+Disable+by+Coverage+and+by+Subjects+Virtual+Navigations
+    source_link: /display/NXDOC/How+to+Disable+by+Coverage+and+by+Subjects+Virtual+Navigations
 history:
     -
         author: Arnaud Kervern
@@ -85,7 +83,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-01-31 16:38'
-        message: 5.4.3 => 5.5
+        message: '5.4.3 => 5.5'
         version: '19'
     -
         author: Solen Guitter

@@ -7,8 +7,10 @@ review:
 labels:
     - content-review-lts2016
     - deployment
+    - mcedica
     - architecture
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '19235679'
@@ -203,7 +205,7 @@ With Nuxeo, you have the option of using a per-tenant repository, but in this ca
 
 As long as the data isolation is handled at application level, you can not rely on system-level backup restore tool, at least, not if you want to restore a data from a particular tenant without restoring the data for all tenants.
 
-## nuxeo.io: Platform as a Service
+## Containerized Isolation
 
 ### How Containers Can Help
 
@@ -227,77 +229,31 @@ With the container based approach all the problems of a single application with 
 
 That's because we are convinced that this approach has much more value that "standard multi-tenants" that we started investing on the container based approach.
 
-### nuxeo.io: A Container Factory
+### A Container Factory with Openshift
 
-nuxeo.io is the result of the work we have been doing for on the platform as a service approach. It is an application factory relying on a container-based execution grid.
+[Openshift](https://www.openshift.com/) is the container application platform made by RedHat. It relies on [Kubernetes](https://kubernetes.io/) and is able to run and schedule containers on a cluster of nodes.
 
-Basically, `nuxeo.io` is an infrastructure that provides tools to automate the whole process:
+Openshift also adds a specific build workflow that allows to build source code and convert it in Docker image.
 
-*   To define the application configuration by selecting a target platform and the packages to be deployed
-*   To provision Nuxeo server containers and DB servers containers
-*   To start the containers by deploying the target packages and binding to a URL
+With that infrastructure, one can provide a way:
 
-![](https://www.lucidchart.com/publicSegments/view/5451062b-bacc-4bec-b865-3b140a008ac6/image.png)
-
-Actually nuxeo.io also provides a web portal that can be used to configure and provision Nuxeo instances associated to an application configuration.
-
-![](http://arken.io/img/nuxeoioSC3.png)
+* to define an application configuration by selecting a Studio project, a set of additional packages and a base Nuxeo image
+* to provision the Nuxeo server containers and every backing service containers (MongoDB, PostgreSQL, Elasticsearch...)
+* to bind the Nuxeo service to a URL.
 
 ### High-Density Containers
 
-nuxeo.io use the Docker lightweight container technology to multiplex several application containers on a single host.
+Openshift use the Docker lightweight container technology to multiplex several application containers by sharing the underlying infrastructure/VMs.
 
 This approach allows to optimize the run infrastructure, even when running on virtualized environment like AWS:
 
 *   Multiple containers can be run on the same VM
-*   Containers can be passivated when not needed anymore
+*   Containers can be stopped when not needed anymore
 *   Containers can be restarted very quickly when needed
-
-![](https://www.lucidchart.com/publicSegments/view/545056a0-bc98-464d-9ff2-61b30a0090b1/image.png)
 
 Because lightweight containers are cheaper to create or to shutdown, this 2-level container architecture allows to have a very reactive provision policy so that we can quickly scale the application up or down.
 
-### About nuxeo.io Internals
-
-To manage this container factory `nuxeo.io` is based on several key components:
-
-*   Docker: as the lightweight container system
-*   CoreOS: as system host for running the Docker container
-    *   Fleet: as manager to distribute services across the cluster
-    *   etcd: as distributed registry
-*   Gogeta: as dynamic load balancer
-*   nuxeo.io manager: the Nuxeo-based application used to control the whole system
-
-![](https://www.lucidchart.com/publicSegments/view/5450599b-5a40-4a34-8243-49f40a005489/image.png)
-
-nuxeo.io can run on AWS leveraging RDS and S3 or on Vagrant / VMWare. The full technology stack can be available for on premises installation.
-
-### nuxeo.io, IDM and Other Services
-
-We are currently working on adding more services to nuxeo.io so that applications running on nuxeo.io can be even easier to deploy.
-
-One of the services we plan to introduce is Nuxeo IDM for having a central User management service. The idea is to allow to manage all the users from one central location and simply assign them to the different nuxeo.io based applications.
-
-We also plan to provide a service gateway so that nuxeo.io based applications can easily leverage Cloud based services like Push, Conversion.
-
-![](https://www.lucidchart.com/publicSegments/view/54510595-bd24-4a69-9151-71340a008ac6/image.png)
-
-## Examples of nuxeo.io Usage
-
-### Trials
-
-One of the use cases we designed <span style="color: rgb(0,0,0);">nuxeo.io</span> for is also to be able to host the Nuxeo Trial service where users must be able to:
-
-*   Select their target configuration, including an associated Studio project
-*   Start a Nuxeo instance running this configuration, and possibly in several environments
-
-On the Nuxeo side, we must ensure that:
-
-*   We don't run too many containers unless really needed
-    *   Because we do pay the containers to AWS !
-*   We provide a simple UI to manage all that
-
-nuxeo.io provides this service and can be used as is by SaaS providers for similar purpose.
+## Examples of Nuxeo + Openshift Usage
 
 ### Developments and Test Environment
 
@@ -306,7 +262,8 @@ We realized that in some context / company, building the required development en
 *   Having servers or VMs so that developers can test their work
 *   Having servers or VMs to run the acceptance tests
 
-Here again nuxeo.io provides a clean solution, we just need to have the underlying IaaS provider: either AWS, Vagrant or VMWare.
+With Openshift deployment you can deploy one or several Nuxeo environment on the same set of servers, and you can even share the backing service for each Nuxeo environment.
+
 
 ### Subsidiaries / Regional Deployment
 
@@ -317,7 +274,7 @@ However, when looking in more details, each region should have access to two rep
 *   A corporate repository, shared across all regions
 *   A local repository, specific to one region
 
-The Nuxeo Platform and nuxeo.io provides the required infrastructure:
+The Nuxeo Platform and Openshift provides the required infrastructure:
 
 *   Platform as a Service
 *   Multi-repositories support

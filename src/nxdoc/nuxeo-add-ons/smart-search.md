@@ -8,8 +8,10 @@ labels:
     - content-review-lts2016
     - link-update
     - smart-search
+    - atchertchian
     - smart-search-component
     - multiexcerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -453,7 +455,7 @@ As a more complex example, let's have a look at the widget used to add a conditi
 
 It is more complex as some subwidgets should not be shown depending on the chosen operator: when operator "BETWEEN" is selected, all of the three subwidgets should be displayed, whereas when other operators are selected, only the first subwidget should be shown. This is achieved by setting the widget mode according to the selected value.
 
-Let's have a close look at the condition: 
+Let's have a close look at the condition:
 ```
 #{(empty value.conditionalOperator or value.conditionalOperator=='BETWEEN' or value.conditionalOperator=='NOT BETWEEN')?'edit':'hidden'}
 ```

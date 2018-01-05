@@ -2,13 +2,11 @@
 title: Deploying as a Standard Static WAR
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-11'
     status: ok
 details:
     howto:
-        excerpt: >-
-            This page provides instructions to generate a static WAR
-            distribution and deploy it in a Tomcat server.
+        excerpt: This page provides instructions to generate a static WAR distribution and deploy it in a Tomcat server.
         level: Advanced
         tool: Terminal
         topics: 'Distribution, Static WAR'
@@ -16,7 +14,9 @@ labels:
     - lts2016-ok
     - war
     - static-war
+    - akervern
     - howto
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'

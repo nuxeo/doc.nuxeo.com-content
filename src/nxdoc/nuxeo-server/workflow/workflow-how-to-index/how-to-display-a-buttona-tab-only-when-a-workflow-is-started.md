@@ -2,7 +2,7 @@
 title: How to Display a Button/a Tab Only When a Workflow Is Started
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
@@ -13,11 +13,13 @@ details:
 labels:
     - content-review-lts2016
     - workflow
+    - grenard
     - routing
     - scripting
     - howto
     - studio
     - excerpt
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '19235619'
     ajs-parent-page-title: Workflow How-To Index
@@ -83,9 +85,16 @@ history:
         version: '1'
 
 ---
+
+# Web UI
+
+When fetching a document through the [Rest API]({{page page='rest-api'}}), you can use the [runningWorkflows enricher]({{page page='content-enrichers#runningWorkflows'}}) and check that `document.contextParameters.runningWorkflows` is not empty to conditionally display a [Pill]({{page page='how-to-new-pill'}}) or an [Action]({{page page='how-to-insert-user-action'}}).
+
+# JSF UI
+
 {{! excerpt}}
 
-You can use the following custom condition on the user action or the tab filtering conditions, on the field&nbsp;**"Custom EL expression"**:
+You can use the following custom condition on the user action or the tab filtering conditions, on the field **"Custom EL expression"**:
 
 {{! /excerpt}}
 
@@ -93,11 +102,10 @@ You can use the following custom condition on the user action or the tab filteri
 #{routingActions.hasRelatedRoute()}
 ```
 
-&nbsp;
 
 * * *
 
-&nbsp;
+
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 

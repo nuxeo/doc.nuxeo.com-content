@@ -7,6 +7,8 @@ review:
 labels:
     - content-review-lts2016
     - nuxeo-jenkins-report
+    - atchertchian
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

@@ -7,8 +7,10 @@ review:
 labels:
     - lts2016-ok
     - php
+    - pgmillon
     - client
     - php-client-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16091040'
@@ -36,9 +38,7 @@ history:
     -
         author: Frédéric Vadon
         date: '2015-02-19 04:04'
-        message: >-
-            The name of the client changed because of
-            https://github.com/nuxeo/nuxeo-automation-php-client/commit/560874cfd9662b2b464045b19c6819e10a834600
+        message: 'The name of the client changed because of https://github.com/nuxeo/nuxeo-automation-php-client/commit/560874cfd9662b2b464045b19c6819e10a834600'
         version: '15'
     -
         author: Solen Guitter

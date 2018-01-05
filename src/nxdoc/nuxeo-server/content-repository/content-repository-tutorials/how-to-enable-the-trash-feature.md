@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to enable the trash feature on your document type using
-            Nuxeo Studio.
+        excerpt: Learn how to enable the trash feature on your document type using Nuxeo Studio.
         level: Beginner
         tool: Studio
         topics: 'Document type, Life cycle'
@@ -16,9 +14,11 @@ labels:
     - lts2016-ok
     - document-type
     - delete
+    - fguillaume
     - life-cycle
     - howto
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950287'
     ajs-parent-page-title: Content Repository

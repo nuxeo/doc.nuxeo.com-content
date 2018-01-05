@@ -7,6 +7,8 @@ review:
 labels:
     - lts2016-ok
     - bootstrap
+    - aescaffre
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '19235677'
@@ -14,8 +16,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Bootstrap+Your+Document+Management+Project
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Bootstrap+Your+Document+Management+Project
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Bootstrap+Your+Document+Management+Project'
     page_id: '14256955'
     shortlink: O4vZ
     shortlink_source: 'https://doc.nuxeo.com/x/O4vZ'
@@ -85,7 +86,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-07-10 09:38'
-        message: fixes double "you have" string
+        message: 'fixes double "you have" string'
         version: '17'
     -
         author: Solen Guitter

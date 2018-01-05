@@ -7,7 +7,9 @@ review:
 labels:
     - content-review-lts2016
     - shell
+    - jcarsique
     - shell-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '4687648'
@@ -22,7 +24,7 @@ confluence:
     source_link: /display/NXDOC/Filesystem+Commands
 tree_item_index: 200
 version_override:
-    'LTS 2015': 710/admindoc/filesystem-commands
+    LTS 2015: 710/admindoc/filesystem-commands
     '6.0': 60/admindoc/filesystem-commands
     '5.8': 58/admindoc/filesystem-commands
 history:

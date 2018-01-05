@@ -2,13 +2,15 @@
 title: Amazon S3 Online Storage
 review:
     comment: ''
-    date: '2016-12-21'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - amazon-s3
+    - fguillaume
     - binary-manager
     - multiexcerpt-include
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -149,7 +151,7 @@ nuxeo.s3storage.awssecret=your_AWS_SECRET_ACCESS_KEY
 
 {{#> callout type='info' }}
 
-You can also use IAM instance roles (since 5.9.1), in which case you do not need to specify the AWS ID and secret (the credentials will be fetched automatically from the instance metadata).
+If your Nuxeo instance runs on Amazon EC2, you can also transparently use IAM instance roles, in which case you do not need to specify the AWS ID and secret (the credentials will be fetched automatically from the instance metadata).
 
 {{/callout}}
 
@@ -184,15 +186,23 @@ nuxeo.s3storage.region=us-west-1
 nuxeo.s3storage.bucket_prefix=myfolder/
 ```
 
-The region code can be:
+The region code can be found in the [S3 Region Documentation](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region). The default is `us-east-1`. At the time this documentation was written, the list is:
 
-*   For us-east-1 (the default), don't specify this parameter
-*   For us-west-1 (Northern California), use `us-west-1`
-*   For us-west-2 (Oregon), use `us-west-2`
-*   For eu-west-1 (Ireland), use `EU`
-*   For ap-southeast-1 (Singapore), use `ap-southeast-1`
-*   For ap-southeast-2 (Tokyo), use `ap-southeast-2`
-*   For sa-east-1 (Sao Paulo), use `sa-east-1`
+* us-east-1: US East (N. Virginia) (default)
+* us-east-2: US East (Ohio)
+* us-west-1: US West (N. California)
+* us-west-2: US West (Oregon)
+* eu-west-1: EU (Ireland)
+* eu-west-2: EU (London)
+* eu-central-1: EU (Frankfurt)
+* ap-south-1: Asia Pacific (Mumbai)
+* ap-southeast-1: Asia Pacific (Singapore)
+* ap-southeast-2: Asia Pacific (Sydney)
+* ap-northeast-1: Asia Pacific (Tokyo)
+* ap-northeast-2: Asia Pacific (Seoul)
+* sa-east-1: South America (São Paulo)
+* ca-central-1: Canada (Central)
+* cn-northwest-1: China (Ningxia)
 
 You can also use a bucket prefix to localize your binaries within specific S3 folder (the `bucket_prefix` syntax is available since Nuxeo 7.10-HF03, before that you'll need to modify explicitly the binary manager XML file and use `nuxeo.s3storage.bucket.prefix`&nbsp;but this syntax was removed).
 
@@ -203,7 +213,7 @@ With S3 you have the option of storing your data encrypted using [S3 Client-Side
 The S3 Binary Manager can use a keystore containing a keypair, but there are a few caveats to be aware of:
 
 *   The Sun/Oracle JDK doesn't always allow the AES256 cipher which the AWS SDK uses internally. Depending on the US export restrictions for your country, you may be able to modify your JDK to use AES256 by installing the "Java Cryptography Extension Unlimited Strength Jurisdiction Policy Files". See the following link to download the files and installation instructions:
-    [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+    [http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
 
 *   Don't forget to specify the key algorithm if you create your keypair with the `keytool` command, as this won't work with the default (DSA). The S3 Binary Manager has been tested with a keystore generated with this command:
 
@@ -215,7 +225,7 @@ The S3 Binary Manager can use a keystore containing a keypair, but there are a f
 
 {{#> callout type='warning' }}
 
-Don't forget to **make backups of the `/path/to/keystore/file` file** along with the **store password, key alias and key password**. If you lose them (for instance if the EC2 machine hosting the Nuxeo instance with the original keystore is lost) you will lose the ability to recover any encrypted blob from the S3 backet.
+Don't forget to **make backups of the `/path/to/keystore/file` file** along with the **store password, key alias and key password**. If you lose them (for instance if the EC2 machine hosting the Nuxeo instance with the original keystore is lost) you will lose the ability to recover any encrypted blob from the S3 bucket.
 
 {{/callout}}
 
@@ -239,7 +249,7 @@ nuxeo.s3storage.crypt.serverside=true
 
 {{#> callout type='info' }}
 
-Client-Side Encryption is safer than Server-Side Encryption. With Client-Side Encryption an attacker need both access to the _AWS credentials and the key_ to be able to access the unencrypted data while Server-Side Encryption will only require the potential attacker to provide the _AWS credentials_.
+Client-Side Encryption is safer than Server-Side Encryption. With Client-Side Encryption an attacker needs both access to the _AWS credentials and the key_ to be able to access the unencrypted data while Server-Side Encryption will only require the potential attacker to provide the _AWS credentials_.
 
 {{/callout}}
 
@@ -257,7 +267,7 @@ nuxeo.s3storage.cacheminage=3600
 
 #### Download From S3 Options
 
-Since Nuxeo 7.4, you can configure downloads to be directly served to the user from S3 without going through Nuxeo. To do so, use:
+You can configure downloads to be directly served to the user from S3 without going through Nuxeo. To do so, use:
 
 ```
 nuxeo.s3storage.directdownload=true
@@ -295,7 +305,7 @@ You can read more about these parameters on the AWS&nbsp;[ClientConfiguration](h
 To check that installation went well, you can check your startup logs and look for a line like:
 
 ```
-INFO  [S3BinaryManager] Repository 'default' using S3BinaryManager
+INFO  [CachingBinaryManager] Registering binary manager 'default' using S3BinaryManager
 
 ```
 

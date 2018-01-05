@@ -1,18 +1,18 @@
 ---
-title: >-
-    How to Change the Default Document Type When Importing a File in the Nuxeo
-    Platform?
+title: How to Change the Default Document Type When Importing a File in the Nuxeo Platform?
 review:
     comment: ''
-    date: '2016-12-13'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - import
+    - gcarlin
     - howto
     - document-type
     - file-upload-component
     - excerpt
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '19235627'
     ajs-parent-page-title: File Manager
@@ -102,6 +102,7 @@ history:
         version: '1'
 
 ---
+
 {{! excerpt}}
 
 In this how-to, [importing a file]({{page space='userdoc' page='creating-content'}}) can correspond to using the drag and drop, using the Import button, or adding a file from [Nuxeo Drive]({{page page='nuxeo-drive'}}) or a [WebDAV drive]({{page space='userdoc' page='working-with-webdav'}}).
@@ -121,6 +122,18 @@ So, to create a document of your own type, you have to set the `docType` attribu
     <plugin name="DefaultFileImporter" merge="true" docType="MyCustomFileType" />
 </extension>
 ```
+
+{{#> callout type='tip' heading='Go further'}}
+
+This mechanism is also valid with any document type inherited from File, as Picture, Audio or Video.
+
+{{/callout}}
+
+{{#> callout type='info' heading='Learn more'}}
+
+*   [DAM Configuration](https://university.nuxeo.com/learn/public/course/view/elearning/100/dam-configuration) video on Nuxeo University : Learn how to type a file as Picture according to its file extension.
+
+{{/callout}}
 
 * * *
 

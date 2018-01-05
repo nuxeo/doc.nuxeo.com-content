@@ -7,8 +7,10 @@ review:
 labels:
     - content-review-lts2016
     - virtual-navigation
+    - atchertchian
     - virtual-navigation-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

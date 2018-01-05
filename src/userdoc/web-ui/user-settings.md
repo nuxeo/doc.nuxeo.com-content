@@ -6,15 +6,30 @@ review:
     status: ok
 toc: true
 tree_item_index: 800
-description:
+description: null
+labels:
+    - content-review-lts2017
+
 ---
+## Nuxeo Drive
+
+The Nuxeo Drive tab enables you to manage your Nuxeo Drive application. You will be able to see all the spaces you have synchronized with Nuxeo Drive and the tokens connected to your Drive client.
+
+For more information about Nuxeo Drive, read the [following documentation]({{page version='' space='nxdoc' page='nuxeo-drive'}}).
+
+## Profile
+
+The Profile tab enables the user to edit his personal information and his password. You can also see the groups you belong to and your permissions.
+
+![]({{file name='web-ui-profile-tab.png'}} ?w=650,border=true)
+
 ## Themes
 
 Nuxeo Web UI provides several themes to change the look and feel of the UI. For the moment, they mostly provide color schemes applied to UI elements and a background image for some themes.
 
 The available themes are:
 
-- Default
+- Nuxeo (Default)
 - Dark
 - Kawaii
 - Light

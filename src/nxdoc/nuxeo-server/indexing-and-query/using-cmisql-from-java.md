@@ -2,22 +2,22 @@
 title: Using CMISQL from Java
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to make CMISQL queries from Java code inside a Nuxeo
-            bundle.
+        excerpt: Learn how to make CMISQL queries from Java code inside a Nuxeo bundle.
         level: Advanced
         tool: Code
         topics: 'CMIS, Query'
 labels:
     - lts2016-ok
     - howto
-    - query
+    - query-pageprovider-component
     - cmis
+    - fguillaume
     - cmis-component
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '4687860'
     ajs-parent-page-title: Indexing and Query
@@ -134,9 +134,7 @@ history:
     -
         author: Alain Escaffre
         date: '2011-03-31 11:24'
-        message: >-
-            adding link to CMIS specifications for having more information on
-            CMISQL
+        message: adding link to CMIS specifications for having more information on CMISQL
         version: '19'
     -
         author: Stéfane Fermigier
@@ -258,6 +256,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.chemistry.opencmis.commons.enums.CmisVersion;
 import org.apache.chemistry.opencmis.commons.server.CallContext;
+import org.apache.chemistry.opencmis.commons.server.CmisServiceFactory;
 import org.apache.chemistry.opencmis.server.impl.CallContextImpl;
 import org.apache.chemistry.opencmis.server.shared.TempStoreOutputStreamFactory;
 import org.nuxeo.ecm.core.api.CoreSession;
@@ -274,12 +273,13 @@ public class CMISQuery {
         ServletContext servletContext = null; // pass this if available
         HttpServletRequest request = null; // pass this if available
         HttpServletResponse response = null; // pass this if available
+        CmisServiceFactory serviceFactory = new NuxeoCmisServiceFactory();
         TempStoreOutputStreamFactory streamFactory = TempStoreOutputStreamFactory.newInstance(
                 null, THRESHOLD, -1, false);
         CallContextImpl callContext = new CallContextImpl(
                 CallContext.BINDING_LOCAL, CmisVersion.CMIS_1_1,
                 session.getRepositoryName(), servletContext, request, response,
-                new NuxeoCmisServiceFactory(), streamFactory);
+                serviceFactory, streamFactory);
         callContext.put(CallContext.USERNAME, session.getPrincipal().getName());
         return callContext;
     }

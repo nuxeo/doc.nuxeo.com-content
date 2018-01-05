@@ -1,15 +1,16 @@
 ---
 title: Bootstrap Your Case Management Project
 review:
-    comment: 'Will need to be reviewed again when Web UI 1.0 is mainstream'
+    comment: Will need to be reviewed again when Web UI 1.0 is mainstream
     date: '2016-02-01'
     status: ok
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
     - lts2016-ok
     - bootstrap
+    - aescaffre
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '19235677'
@@ -17,8 +18,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Bootstrap+Your+Case+Management+Project
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Bootstrap+Your+Case+Management+Project
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Bootstrap+Your+Case+Management+Project'
     page_id: '16091979'
     shortlink: S4v1
     shortlink_source: 'https://doc.nuxeo.com/x/S4v1'
@@ -43,7 +43,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-07-10 10:17'
-        message: Superfluous "we"
+        message: 'Superfluous "we"'
         version: '11'
     -
         author: Alain Escaffre

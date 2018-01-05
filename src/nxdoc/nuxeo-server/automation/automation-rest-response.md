@@ -2,13 +2,14 @@
 title: Automation REST Response
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - automation
-    - automation-component
+    - fdavid
     - excerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '18451738'
@@ -68,7 +69,7 @@ When calling Automation operations through REST calls, you may want to throw cus
 
 ## Rest Custom Exception in Automation Operation and HTTP Code Error Setting
 
-In order to throw custom exception and http status code, you have to create a custom Exception extending `org.nuxeo.ecm.automation.server.jaxrs.RestOperationException`. You will be able to set the HTTP status code which will be return into the rest call response.
+In order to throw custom exception and HTTP status code, you have to create a custom Exception extending `org.nuxeo.ecm.automation.server.jaxrs.RestOperationException`. You will be able to set the HTTP status code which will be return into the rest call response.
 
 Example:
 
@@ -78,17 +79,19 @@ I have to create an ExceptionTest extending the RestOperationException:
 
 ```java
 /*
- * (C) Copyright 2014 Nuxeo SA (http://nuxeo.com/) and contributors.
+ * (C) Copyright 2017 Nuxeo (http://nuxeo.com/) and others.
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser General Public License
- * (LGPL) version 2.1 which accompanies this distribution, and is available at
- * http://www.gnu.org/licenses/lgpl-2.1.html
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  * Contributors:
  *     vpasquier <vpasquier@nuxeo.com>
@@ -118,23 +121,25 @@ public class ExceptionTest extends RestOperationException {
 
 {{/panel}}
 
-Given a custom operation HttpStatusOperationTest:
+Given a custom operation `HttpStatusOperationTest`:
 
 {{#> panel type='code' heading='HttpStatusOperationTest.java'}}
 
 ```java
 /*
- * (C) Copyright 2014 Nuxeo SA (http://nuxeo.com/) and contributors.
+ * (C) Copyright 2017 Nuxeo (http://nuxeo.com/) and others.
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser General Public License
- * (LGPL) version 2.1 which accompanies this distribution, and is available at
- * http://www.gnu.org/licenses/lgpl-2.1.html
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  * Contributors:
  *     vpasquier <vpasquier@nuxeo.com>
@@ -203,23 +208,25 @@ In case you would like to specify a success HTTP status code in return of your c
 
 Example:
 
-Given a custom operation HttpStatusOperationTest:
+Given a custom operation `HttpStatusOperationTest`:
 
 {{#> panel type='code' heading='HttpStatusOperationTest.java'}}
 
 ```java
 /*
- * (C) Copyright 2014 Nuxeo SA (http://nuxeo.com/) and contributors.
+ * (C) Copyright 2017 Nuxeo (http://nuxeo.com/) and others.
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser General Public License
- * (LGPL) version 2.1 which accompanies this distribution, and is available at
- * http://www.gnu.org/licenses/lgpl-2.1.html
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *
  * Contributors:
  *     vpasquier <vpasquier@nuxeo.com>
@@ -272,13 +279,11 @@ public class HttpStatusOperationTest {
 
 {{/panel}}
 
-I can set into the context the appropriate http status code that will be attached to the rest call response. (here 206)
+I can set into the context the appropriate HTTP status code that will be attached to the rest call response (here 206).
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
-
-{{! Please update the label in the Content by Label macro below. }}
 
 {{#> panel heading='Related Documentation'}}
 
@@ -287,8 +292,6 @@ I can set into the context the appropriate http status code that will be attache
 - [Automation How-To Index]({{page page='automation-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">
-
-{{! Please update the label and target spaces in the Content by Label macro below. }}
 
 {{#> panel heading='Other Related Documentation '}}
 

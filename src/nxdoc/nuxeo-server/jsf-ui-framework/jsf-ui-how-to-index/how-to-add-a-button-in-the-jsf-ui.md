@@ -6,25 +6,22 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to add new buttons at different locations in the JSF UI
-            using user actions and automation (in a document contextual tools or
-            on a document Edit form for instance).
-
+        excerpt: Learn how to add new buttons at different locations in the JSF UI using user actions and automation (in a document contextual tools or on a document Edit form for instance).
         level: Beginner
         tool: 'Studio, XML extension'
         topics: 'Automation, Extension, Tab, User action, JSF UI'
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
     - content-review-lts2016
     - howto
     - automation
     - user-action
     - action
+    - atchertchian
     - studio
     - actions-filters-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'

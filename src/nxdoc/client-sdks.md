@@ -7,6 +7,8 @@ review:
 labels:
     - lts2016-ok
     - home
+    - mlumeau
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950332'
     ajs-parent-page-title: Developer Documentation Center
@@ -21,7 +23,7 @@ confluence:
 section_parent: sdks
 tree_item_index: 600
 version_override:
-    'LTS 2015': 710/nxdoc/clients
+    LTS 2015: 710/nxdoc/clients
     '6.0': 60/nxdoc/clients
     '5.8': 58/nxdoc/clients
 history:

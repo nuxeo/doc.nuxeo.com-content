@@ -1,19 +1,20 @@
 ---
-title: "HOWTO: Customize Nuxeo Mobile Themes"
+title: 'HOWTO: Customize Nuxeo Mobile Themes'
 review:
     comment: ''
-    date: '2017-05-12'
+    date: '2017-12-15'
     status: ok
 details:
     howto:
-        excerpt: >-
-            This how-to explains how to customize Nuxeo Mobile themes.
+        excerpt: This how-to explains how to customize Nuxeo Mobile themes.
         level: Intermediate
         tool: JSON Extention
-        topics: 'Nuxeo Mobile'
+        topics: Nuxeo Mobile
 labels:
     - nuxeo-mobile
+    - yachour
     - howto
+    - lts2017-ok
 toc: true
 
 ---

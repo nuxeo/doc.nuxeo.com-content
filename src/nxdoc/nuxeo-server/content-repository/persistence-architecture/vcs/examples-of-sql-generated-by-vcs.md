@@ -7,9 +7,11 @@ review:
 labels:
     - lts2016-ok
     - vcs
+    - fguillaume
     - nxql
     - sql
     - vcs-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3342350'

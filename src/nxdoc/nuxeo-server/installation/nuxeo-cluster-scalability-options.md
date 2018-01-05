@@ -3,13 +3,17 @@ title: Nuxeo Cluster Scalability Options
 description: This page describes how your Nuxeo cluster can scale depending on your needs.
 labels:
     - deployment
+    - bchauvin
     - architecture
+    - cluster
+    - content-review-lts2017
 review:
-    date: '2017-06-06'
-    status: ok
-    comment: ''
+    date: '2017-12-15'
+    status: requiresUpdates
+    comment: 'Kakfa is now an available option for audit, workmanager or import usage since Nuxeo Server 9.3.'
 toc: true
 tree_item_index: 1260
+
 ---
 
 {{! excerpt}}

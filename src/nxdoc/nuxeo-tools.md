@@ -7,6 +7,9 @@ review:
     comment: ''
 labels:
     - lts2016-ok
+    - home
+    - mlumeau
+    - content-review-lts2017
 section_parent: tools
 tree_item_index: 650
 

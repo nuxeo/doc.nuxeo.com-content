@@ -2,15 +2,17 @@
 title: Java Automation Client
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - automation
+    - kleturc
     - link-update
     - client
     - community-links
     - java-client-component
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-title: Deprecated
@@ -481,7 +483,7 @@ The client library depends on:
 
 Let's take an example and execute the `SELECT * FROM Document` query against a remote Automation server:
 
-```
+```java
 import org.nuxeo.ecm.automation.client.jaxrs.impl.HttpAutomationClient;
 import org.nuxeo.ecm.automation.client.model.Documents;
 import org.nuxeo.ecm.automation.client.Session;
@@ -491,8 +493,9 @@ public static void main(String[] args) throws Exception {
            "http://localhost:8080/nuxeo/site/automation");
 
     Session session = client.getSession("Administrator", "Administrator");
-    Documents docs = (Documents) session.newRequest("Document.Query").set(
-           "query", "SELECT * FROM Document").execute();
+    Documents docs = (Documents) session.newRequest("Repository.Query")
+                                        .set("query", "SELECT * FROM Document")
+                                        .execute();
     System.out.println(docs);
 
     client.shutdown();
@@ -510,10 +513,9 @@ You can see the code above has three distinctive parts:
 
 1.  Before using the Automation client you should first create a new client that is connecting to a remote address you can specify through the constructor URL argument. As the remote server URL you should use the URL of the Automation service.
 
-    ```
+    ```java
     // create a new client instance
     HttpAutomationClient client = new HttpAutomationClient("http://localhost:8080/nuxeo/site/automation");
-
     ```
 
     No connection to the remote service is made at this step. The Automation service definition will be downloaded the first time you create a session.
@@ -530,21 +532,19 @@ You can see the code above has three distinctive parts:
 
 2.  So you create a new session by calling:
 
-    ```
+    ```java
     import org.nuxeo.ecm.automation.client.Session;
 
     Session session = client.getSession("Administrator", "Administrator");
-
     ```
 
     This will authenticate you onto the server using the basic authentication scheme.
 
     If needed, you can use another authentication scheme by setting an interceptor.
 
-    ```
+    ```java
     client.setInterceptor(new PortalSSOAuthInterceptor("nuxeo5secretkey", "Administrator"));
     Session session = client.getSession();
-
     ```
 
     {{#> callout type='note' }}
@@ -561,14 +561,14 @@ Using a session you can now invoke remote operations.
 
 1.  To create a new invocation request you should pass in the right operation or chain ID.
 
-    ```
-    OperationRequest request = session.newRequest("Document.Query");
+    ```java
+    OperationRequest request = session.newRequest("Repository.Query");
 
     ```
 
 2.  Then populate the request with all the required arguments.
 
-    ```
+    ```java
     request.set("query", "SELECT * FROM Document");
 
     ```
@@ -577,7 +577,7 @@ Using a session you can now invoke remote operations.
 
 3.  After having filled all the required request information you can execute the request by calling the execute method.
 
-    ```
+    ```java
     Object result = request.execute();
 
     ```
@@ -619,7 +619,7 @@ The query example is pretty simply. The query operation doesn't need an input ob
 
 If you prefer a most compact notation you can use the [fluent interface](http://en.wikipedia.org/wiki/Fluent_interface) way of calling methods:
 
-```
+```java
 Object result = session.newRequest("OperationId").set("var1", "val1").set("var2", "val2").execute();
 
 ```
@@ -646,7 +646,7 @@ You can see [The Automation Client Service Adapter section](#automation-client-s
 
 {{/callout}}
 
-```
+```java
 import org.nuxeo.ecm.automation.client.model.Document;
 import org.nuxeo.ecm.automation.client.Session; 
 import org.nuxeo.ecm.automation.client.Constants;
@@ -661,13 +661,22 @@ document.set("dc:title", "My File");
 document.set("dc:description", "My Description");
 
 // Create a document of File type by setting the parameter 'properties' with String metadata values delimited by comma ','
-document = (Document) session.newRequest("Document.Create").setHeader(Constants.HEADER_NX_SCHEMAS, "*").setInput(root).set("type", document.getType()).set("name", document.getId()).set("properties", document).execute();
+document = (Document) session.newRequest("Document.Create")
+                             .setHeader(Constants.HEADER_NX_SCHEMAS, "*")
+                             .setInput(root)
+                             .set("type", document.getType())
+                             .set("name", document.getId())
+                             .set("properties", document)
+                             .execute();
 
 // Set another title to update
 document.set("dc:title", "New Title");
 
 // Update the document
-document = (Document) session.newRequest("Document.Update").setInput(document).set("properties", document).execute();
+document = (Document) session.newRequest("Document.Update")
+                             .setInput(document)
+                             .set("properties", document)
+                             .execute();
 
 // Delete the document
 session.newRequest("Document.Delete").setInput(document).execute();
@@ -675,7 +684,7 @@ session.newRequest("Document.Delete").setInput(document).execute();
 
 Operations examples above fetch the document with common properties: `common`, `dublincore`, `file`. If you wish to fetch all properties or a specific schema, you can do as this following example:
 
-```
+```java
 import org.nuxeo.ecm.automation.client.model.Document;
 import org.nuxeo.ecm.automation.client.Session;
 import org.nuxeo.ecm.automation.client.Constants;
@@ -685,18 +694,31 @@ Document document = new Document("myDocument", "File");
 
 // For all operations -> use setHeader method to specify specific schemas or every ones (*)
 
-Document root = (Document) session.newRequest("Document.Fetch").setHeader(Constants.HEADER_NX_SCHEMAS, "*").set("value", "/").execute();
+Document root = (Document) session.newRequest("Document.Fetch")
+                                  .setHeader(Constants.HEADER_NX_SCHEMAS, "*")
+                                  .set("value", "/")
+                                  .execute();
 
-document = (Document) session.newRequest("Document.Create").setHeader(Constants.HEADER_NX_SCHEMAS, "dublincore,blog").setInput(root).set("type", document.getType()).set("name", document.getId()).set("properties", document).execute();
+document = (Document) session.newRequest("Document.Create")
+                             .setHeader(Constants.HEADER_NX_SCHEMAS, "dublincore,blog")
+                             .setInput(root)
+                             .set("type", document.getType())
+                             .set("name", document.getId())
+                             .set("properties", document)
+                             .execute();
 
-document = (Document) session.newRequest("Document.Update").setHeader(Constants.HEADER_NX_SCHEMAS, "dublincore,blog").setInput(document).set("properties", document).execute();
+document = (Document) session.newRequest("Document.Update")
+                             .setHeader(Constants.HEADER_NX_SCHEMAS, "dublincore,blog")
+                             .setInput(document)
+                             .set("properties", document)
+                             .execute();
 ```
 
 {{#> callout type='info' }}
 
 You can fetch all updated properties during the session with the following method of the document:
 
-```
+```java
 // Fetch the dirty properties (updated values) from the document
 PropertyMap dirties = document.getDirties();
 ```
@@ -722,7 +744,7 @@ The example will create a new File document into the root _"/"_ document and the
 
 1.  Get the root document and create a new File document at location `/myfile.`
 
-    ```
+    ```java
     import org.nuxeo.ecm.automation.client.model.Document;
     import org.nuxeo.ecm.automation.client.Session; 
 
@@ -730,7 +752,12 @@ The example will create a new File document into the root _"/"_ document and the
     Document root = (Document) session.newRequest("Document.Fetch").set("value", "/").execute();
 
     // create a file document
-    session.newRequest("Document.Create").setInput(root).set("type", "File").set("name", "myfile").set("properties", "dc:title=My File").execute();
+    session.newRequest("Document.Create")
+           .setInput(root)
+           .set("type", "File")
+           .set("name", "myfile")
+           .set("properties", "dc:title=My File")
+           .execute();
     ```
 
     {{#> callout type='info' }}
@@ -740,15 +767,16 @@ The example will create a new File document into the root _"/"_ document and the
     {{/callout}}
 2.  Now get the file to upload and put it into the newly created document.
 
-    ```
-            File file = getTheFileToUpload();
-            FileBlob fb = new FileBlob(file);
-            fb.setMimeType("text/xml");
-            // uploading a file will return null since we used HEADER_NX_VOIDOP
-            session.newRequest("Blob.Attach").setHeader(
-                    Constants.HEADER_NX_VOIDOP, "true").setInput(fb)
-                    .set("document", "/myfile").execute();
-
+    ```java
+    File file = getTheFileToUpload();
+    FileBlob fb = new FileBlob(file);
+    fb.setMimeType("text/xml");
+    // uploading a file will return null since we used HEADER_NX_VOIDOP
+    session.newRequest("Blob.Attach")
+           .setHeader(Constants.HEADER_NX_VOIDOP, "true")
+           .setInput(fb)
+           .set("document", "/myfile")
+           .execute();
     ```
 
     The last `execute` call will return `null` since the `HEADER_NX_VOIDOP` header was used. This is to avoid receiving back from the server the blob we just uploaded.
@@ -762,44 +790,44 @@ The example will create a new File document into the root _"/"_ document and the
 4.  Then retrieve the blob remote URL from the document metadata. We can use this URL to download the blob.
 
     ```java
-            import org.nuxeo.ecm.automation.client.model.Document;
-            import org.nuxeo.ecm.automation.client.Session;
-            import org.nuxeo.ecm.automation.client.Constants;
+    import org.nuxeo.ecm.automation.client.model.Document;
+    import org.nuxeo.ecm.automation.client.Session;
+    import org.nuxeo.ecm.automation.client.Constants;
 
-            // get the file document where blob was attached
-            Document doc = (Document) session.newRequest(
-                    "Document.Fetch").setHeader(
-                    Constants.HEADER_NX_SCHEMAS, "*").set("value", "/myfile").execute();
-            // get the file content property
-            PropertyMap map = doc.getProperties().getMap("file:content");
-            // get the data URL
-            String path = map.getString("data");
-
+    // get the file document where blob was attached
+    Document doc = (Document) session.newRequest("Document.Fetch")
+                                     .setHeader(Constants.HEADER_NX_SCHEMAS, "*")
+                                     .set("value", "/myfile")
+                                     .execute();
+    // get the file content property
+    PropertyMap map = doc.getProperties().getMap("file:content");
+    // get the data URL
+    String path = map.getString("data");
     ```
 
     You can see we used the special `HEADER_NX_SCHEMAS` header to specify we want all properties of the document to be included in the response.
 
 5.  Now download the file located on the server under the `path` we retrieved from the document properties:
 
-    ```
-            // download the file from its remote location
-            blob = (FileBlob) session.getFile(path);
-            // ... do something with the file
-            // at the end delete the temporary file
-            blob.getFile().delete();
-
+    ```java
+    // download the file from its remote location
+    blob = (FileBlob) session.getFile(path);
+    // ... do something with the file
+    // at the end delete the temporary file
+    blob.getFile().delete();
     ```
 
     We can do the same by invoking the `Blob.Get` operation.
 
-    ```
-            // now test the GetBlob operation on the same blob
-            blob = (FileBlob) session.newRequest("Blob.Get").setInput(doc).set(
-                    "xpath", "file:content").execute();
-            // ... do something with the file
-            // at the end delete the temporary file
-            blob.getFile().delete();
-
+    ```java
+    // now test the GetBlob operation on the same blob
+    blob = (FileBlob) session.newRequest("Blob.Get")
+                             .setInput(doc)
+                             .set("xpath", "file:content")
+                             .execute();
+    // ... do something with the file
+    // at the end delete the temporary file
+    blob.getFile().delete();
     ```
 
 ## {{> anchor 'managing-complex-properties'}}Managing Complex Properties
@@ -842,7 +870,7 @@ Let's see a JSON example of these complex property values:
 
 {{#> panel type='code' heading='creation.json'}}
 
-```
+```json
 [
     {
         "fieldType": "string",
@@ -907,15 +935,17 @@ Let's see a JSON example of these complex property values:
 
 Finally updating a document with the JSON values into its related metadata looks like this.
 
-```
+```java
 // Fetch the document
-Document document = (Document) session.newRequest(DocumentService.GetDocumentChild).setInput(new PathRef("/")).set("name", "testDoc").execute();
+Document document = (Document) session.newRequest(DocumentService.GetDocumentChild)
+                                      .setInput(new PathRef("/"))
+                                      .set("name", "testDoc").execute();
 
 // Send the fields representation as json
 
 // Read the json file
 File fieldAsJsonFile = FileUtils.getResourceFileFromContext("creation.json");
-String fieldsDataAsJSon = FileUtils.readFile(fieldAsJsonFile);
+String fieldsDataAsJSon = org.apache.commons.io.FileUtils.readFileToString(fieldAsJsonFile, Charsets.UTF_8);
 
 // Don't forget to replace CRLF or LF
 fieldsDataAsJSon = fieldsDataAsJSon.replaceAll("\n", "");
@@ -925,7 +955,7 @@ fieldsDataAsJSon = fieldsDataAsJSon.replaceAll("\r", "");
 document.set("ds:fields", fieldsDataAsJSon);
 
 // Document Update
-session.newRequest(UpdateDocument.ID).setInput(document).set("properties",document).execute();
+session.newRequest(UpdateDocument.ID).setInput(document).set("properties", document).execute();
 ```
 
 ## {{> anchor 'managing-business-objects'}}Managing Business Objects
@@ -944,9 +974,9 @@ push : BusinessObject (POJO) -----JSON---> DocumentModelAdapter ----> DocumentMo
 
 Let's see an example.
 
-1.  Create a [Nuxeo Document Model Adapter](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters) registered on server side and which should extend the [`BusinessAdapter`](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-core/src/main/java/org/nuxeo/ecm/automation/core/operations/business/adapter/BusinessAdapter.java) class:
+1.  Create a [Nuxeo Document Model Adapter](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters) registered on server side and which should extend the [`BusinessAdapter`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-core/src/main/java/org/nuxeo/ecm/automation/core/operations/business/adapter/BusinessAdapter.java) class:
 
-    ```
+    ```java
     import org.nuxeo.ecm.automation.core.operations.business.adapter.BusinessAdapter;
     import org.codehaus.jackson.annotate.JsonCreator;
     import org.codehaus.jackson.annotate.JsonProperty;
@@ -1009,7 +1039,7 @@ Let's see an example.
 
 2.  Declare a POJO on client side as following:
 
-    ```
+    ```java
     import org.nuxeo.ecm.automation.client.annotations.EntityType;
 
     //Automation client File pojo example annotated with EntityType setting the adapter server side built previously (just the simple name)
@@ -1077,7 +1107,7 @@ Let's see an example.
 
 3.  Let's see how to map them directly using these operations:
 
-    ```
+    ```java
     import org.nuxeo.ecm.automation.client.jaxrs.spi.JsonMarshalling;
 
     // Let's instiante a BusinessBean 'File':
@@ -1087,17 +1117,23 @@ Let's see an example.
     JsonMarshalling.addMarshaller(PojoMarshaller.forClass(file.getClass()));
 
     // Injecting the BusinessBean 'File' into the operation BusinessCreateOperation let you create a document server side.
-    file = (BusinessBean) session.newRequest("Operation.BusinessCreateOperation").setInput(file).set("name",file.getTitle()).set("parentPath","/").execute();
+    file = (BusinessBean) session.newRequest("Operation.BusinessCreateOperation")
+                                 .setInput(file)
+                                 .set("name", file.getTitle())
+                                 .set("parentPath","/")
+                                 .execute();
 
     // Update document on server (pojo <-> adapter update) using BusinessUpdateOperation
     file.setTitle("Title Updated");
-    file = (BusinessBean) session.newRequest("Operation.BusinessUpdateOperation").setInput(file).execute();
+    file = (BusinessBean) session.newRequest("Operation.BusinessUpdateOperation")
+                                 .setInput(file)
+                                 .execute();
 
     ```
 
 ## GitHub Nuxeo Automation Tests
 
-Here is the complete code of the example. For more examples, see the unit tests in [`nuxeo-automation-test`](https://github.com/nuxeo/nuxeo-features/tree/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test) project.
+Here is the complete code of the example. For more examples, see the unit tests in [`nuxeo-automation-test`](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test) project.
 
 ## {{> anchor 'automation-client-service-adapter'}}Automation Client Service Adapter
 
@@ -1107,8 +1143,8 @@ Nuxeo Automation Client provides an "Adapter Service" to encapsulate business lo
 
 Default services provided:
 
-*   [`DocumentService`](http://community.nuxeo.com/api/nuxeo/7.1/javadoc/org/nuxeo/ecm/automation/client/adapters/DocumentService.html) - ([Class on GitHub](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-client/src/main/java/org/nuxeo/ecm/automation/client/adapters/DocumentService.java)): This API provides access to basic operation like CRUD, lock, version...
-*   [BusinessService](http://community.nuxeo.com/api/nuxeo/7.1/javadoc/org/nuxeo/ecm/automation/client/adapters/BusinessService.html) ([Class on GitHub](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-client/src/main/java/org/nuxeo/ecm/automation/client/adapters/BusinessService.java)): This API provides access to Business Operations.
+*   [`DocumentService`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/automation/client/adapters/DocumentService.html) - ([Class on GitHub](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-client/src/main/java/org/nuxeo/ecm/automation/client/adapters/DocumentService.java)): This API provides access to basic operation like CRUD, lock, version...
+*   [`BusinessService`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/automation/client/adapters/BusinessService.html) ([Class on GitHub](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-client/src/main/java/org/nuxeo/ecm/automation/client/adapters/BusinessService.java)): This API provides access to Business Operations.
 
 ![]({{file name='AdapterService.png'}} ?w=838,h=219,border=true)
 
@@ -1118,7 +1154,7 @@ _[Powered by yFiles](http://www.yworks.com)_
 
 Here is an example of using `DocumentService` API:
 
-```
+```java
 import org.nuxeo.ecm.automation.client.model.Document;
 import org.nuxeo.ecm.automation.client.adapters.DocumentService;
 import org.nuxeo.ecm.automation.client.Session;
@@ -1151,7 +1187,7 @@ myDocument = documentService.getDocument(folder, "*");
 
 Here is an example of using `BusinessService` API (this example is the same previous one with [Business Objects](#managing-business-objects) but this time using `BusinessService`):
 
-```
+```java
 import org.nuxeo.ecm.automation.client.adapters.BusinessService;
 import org.nuxeo.ecm.automation.client.Session;
 
@@ -1173,7 +1209,7 @@ file = (BusinessBean) businessService.update(file);
 
 You can contribute your own adapter service by Java to encapsulate your own business logic.
 
-To achieve this registration, you have to provide an adapter service factory that is going to instantiate your adapter. You can find an example of factory for the [`DocumentService`](http://community.nuxeo.com/api/nuxeo/7.1/javadoc/org/nuxeo/ecm/automation/client/adapters/DocumentService.html) class: [`DocumentServiceFactory`](http://community.nuxeo.com/api/nuxeo/7.1/javadoc/org/nuxeo/ecm/automation/client/adapters/DocumentServiceFactory.html) ([source code on GitHub](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-client/src/main/java/org/nuxeo/ecm/automation/client/adapters/DocumentServiceFactory.java)).
+To achieve this registration, you have to provide an adapter service factory that is going to instantiate your adapter. You can find an example of factory for the [`DocumentService`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/automation/client/adapters/DocumentService.html) class: [`DocumentServiceFactory`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/automation/client/adapters/DocumentServiceFactory.html) ([source code on GitHub](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-client/src/main/java/org/nuxeo/ecm/automation/client/adapters/DocumentServiceFactory.java)).
 
 Here is an example of registration:
 

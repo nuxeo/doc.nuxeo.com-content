@@ -2,12 +2,14 @@
 title: Available Variables in Email Templates
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - variable
-    - email
+    - mail-template
+    - bchauvin
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '14254895'
@@ -15,8 +17,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Available+Variables+in+Email+Templates
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Available+Variables+in+Email+Templates
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Available+Variables+in+Email+Templates'
     page_id: '14256091'
     shortlink: 24fZ
     shortlink_source: 'https://doc.nuxeo.com/x/24fZ'
@@ -129,7 +130,7 @@ In your email templates, you have access to different variables depending if you
 
 {{! /excerpt}}
 
-## Automation Chain "Notification > Send Email" Operation Context
+## Automation Chain "Notification > Document.Mail" Operation Context
 
 Variables that can be used to set up an email in an automation chain.
 
@@ -152,6 +153,8 @@ Variables that can be used to set up an email in an automation chain.
     <br/>value: @{CurrentUser.name}
     1. Then use it in your email template:
     <br />User ${Context['currentUserId']} sent you this email.
+
+    <!-- Related Studio ticket: https://jira.nuxeo.com/browse/NXS-4429 -->
 
     {{/callout}}
 
@@ -191,7 +194,5 @@ Variables that can be used when a notification is set up from a workflow node's 
 - [Alerts]({{page space='userdoc' page='collaborative-features'}}#alerts)
 
 {{/panel}}</div><div class="column medium-6">
-
-&nbsp;
 
 </div></div>

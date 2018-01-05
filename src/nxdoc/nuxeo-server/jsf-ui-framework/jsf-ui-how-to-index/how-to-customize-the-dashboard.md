@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to customize the dashboard by adding new entries or
-            completely override the default dashboard.
+        excerpt: Learn how to customize the dashboard by adding new entries or completely override the default dashboard.
         level: Advanced
         tool: 'Studio, Code'
         topics: JSF UI
@@ -16,7 +14,9 @@ labels:
     - content-review-lts2016
     - howto
     - dashboard
-    - actions-filters-component
+    - action
+    - atchertchian
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'

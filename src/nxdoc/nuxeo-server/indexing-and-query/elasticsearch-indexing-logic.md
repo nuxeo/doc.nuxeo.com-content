@@ -2,13 +2,15 @@
 title: Elasticsearch Indexing Logic
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - elasticsearch
     - elasticsearch-component
+    - bdelbosc
     - university
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -186,7 +188,7 @@ history:
 
 ---
 {{> wistia_video id='d9zcz20s7i'}}
-Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) in [Nuxeo University](https://university.nuxeo.com)
+Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.com/learn/public/course/view/elearning/55/WhatsnewinNuxeoPlatformLTS2015%3F) in [Nuxeo University](https://university.nuxeo.com)
 
 ## Indexing
 
@@ -218,7 +220,7 @@ A NXQL query can be translated to Elasticsearch query with some limitations. See
 
 **Operators and Mapping**
 
-Some operators need an explicit mapping to work properly. This is the case for FULLTEXT and ILIKE operators (STARTSWITH for `ecm:path` has a special mapping setup by default). See the page [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}}) for more information.
+Some operators need an explicit mapping to work properly. This is the case for FULLTEXT, LIKE and ILIKE operators (STARTSWITH for `ecm:path` has a special mapping setup by default). See the page [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}}) for more information.
 
 **Security and ACLs**
 

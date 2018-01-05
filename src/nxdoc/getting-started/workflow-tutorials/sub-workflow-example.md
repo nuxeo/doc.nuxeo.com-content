@@ -7,9 +7,11 @@ review:
 labels:
     - lts2016-ok
     - workflow
+    - grenard
     - subworkflow
     - sub-workflow
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235786'
     ajs-parent-page-title: Workflow Use Cases

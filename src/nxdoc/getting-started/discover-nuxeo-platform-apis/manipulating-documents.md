@@ -2,11 +2,12 @@
 title: Manipulating Documents
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-15'
     status: ok
 toc: true
 labels:
     - lts2016-ok
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '29460589'
     ajs-parent-page-title: Getting Started with the Nuxeo Platform
@@ -83,7 +84,7 @@ history:
     -
         author: Bertrand Chauvin
         date: '2016-09-16 13:42'
-        message: don't put dashes in tel for juridical contact
+        message: "don't put dashes in tel for juridical contact"
         version: '25'
     -
         author: Arnaud Kervern
@@ -118,9 +119,7 @@ history:
     -
         author: Bertrand Chauvin
         date: '2016-08-09 09:24'
-        message: >-
-            Remove amount in contract to be able to launch workflow properly
-            later
+        message: Remove amount in contract to be able to launch workflow properly later
         version: '18'
     -
         author: Bertrand Chauvin
@@ -160,14 +159,12 @@ history:
     -
         author: Bertrand Chauvin
         date: '2016-07-19 13:15'
-        message: >-
-            Use custom clauses (complex multivalued property) instead of
-            updating a simple property
+        message: Use custom clauses (complex multivalued property) instead of updating a simple property
         version: '10'
     -
         author: Bertrand Chauvin
         date: '2016-07-19 10:17'
-        message: Removed permissions mgt => going to a different page
+        message: 'Removed permissions mgt => going to a different page'
         version: '9'
     -
         author: Bertrand Chauvin
@@ -211,6 +208,7 @@ history:
         version: '1'
 previous_link: /nxdoc/setting-up-your-javascript-environment
 next_link: /nxdoc/handling-permissions
+
 ---
 {{! excerpt}}
 
@@ -277,7 +275,8 @@ Create a new contract in Nuxeo Platform.
       'bccontract:signatureDate': '2050-12-24',
       'bccontract:startDate': '2050-12-25',
       'bccontract:expirationDate': '2055-12-31',
-      'bccontract:type': 'maintenance'
+      'bccontract:type': 'maintenance',
+      'bcsalescommon:amount': '10000'
     }
     };
 
@@ -526,7 +525,7 @@ Restore the contract to its previous (`draft`) state.
 
 {{/callout}}
 
-## Querying for Documents
+## Searching for Documents
 
 Find a contract that needs to be deleted: it expired before 2016 and has a limitation clause in its content.
 
@@ -576,7 +575,7 @@ Find a contract that needs to be deleted: it expired before 2016 and has a limit
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [Query Endpoint]({{page page='query-endpoint'}})
+*   [Search Resource Endpoints]({{page page='search-endpoints'}})
 *   [Indexing and Query]({{page page='indexing-and-query'}})
 
 {{/callout}}

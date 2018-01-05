@@ -2,7 +2,7 @@
 title: How to create an empty bundle
 review:
     comment: ''
-    date: '2016-12-08'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
@@ -15,10 +15,12 @@ labels:
     - dev-guide
     - manifest
     - bundle
+    - kleturc
     - customization
     - project-structure
     - pom_xml
     - howto
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235681'
@@ -181,9 +183,7 @@ history:
     -
         author: Wojciech Sulejman
         date: '2011-07-19 15:54'
-        message: >-
-            changed from "bundles" to "plugins" which is the recommended
-            location for custom plugins
+        message: 'changed from "bundles" to "plugins" which is the recommended location for custom plugins'
         version: '35'
     -
         author: Solen Guitter
@@ -384,55 +384,13 @@ This recipe is composed of the major steps below:
 
 ## What You Need
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-
-Tool
-
-</th><th colspan="1">
-
-Version
-
-</th></tr><tr><td colspan="1">
-
-Java
-
-</td><td colspan="1">
-
-[JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-
-</td></tr><tr><td colspan="1">
-
-Maven
-
-</td><td colspan="1">
-
-[3.x](http://maven.apache.org/download.html)
-
-</td></tr><tr><td colspan="1">
-
-NodeJS
-
-</td><td colspan="1">
-
-[6.x](https://nodejs.org/en/)
-
-</td></tr><tr><td colspan="1">
-
-Nuxeo CLI
-
-</td><td colspan="1">
-
-[latest](https://www.npmjs.com/package/nuxeo-cli)
-
-</td></tr><tr><td colspan="1">
-
-Nuxeo Server distribution
-
-</td><td colspan="1">
-
-[Latest LTS](https://www.nuxeo.com/downloads/)
-
-</td></tr></tbody></table></div>
+| Tool                      | Version                                                                       |
+| ------------------------- | ----------------------------------------------------------------------------- |
+| Java                      | [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) |
+| Maven                     | [3.x](http://maven.apache.org/download.html)                                  |
+| NodeJS                    | [6.x](https://nodejs.org/en/)                                                 |
+| Nuxeo CLI                 | [latest](https://www.npmjs.com/package/nuxeo-cli)                             |
+| Nuxeo Server distribution | [Latest LTS](https://www.nuxeo.com/downloads/)                                |
 
 ## Create the Basic Project Skeleton
 
@@ -448,7 +406,7 @@ To create your project structure, follow the steps below.
      info   Parameters: Parent group, Parent artifact, Parent version, Nuxeo version, Project group, Project artifact, Project version, Project description
 ? Parent Group id (use white space to cancel default value.): org.nuxeo
 ? Parent Artifact id: nuxeo-addons-parent
-? Parent Version: 8.3
+? Parent Version: 9.10
 ? Project Group id: org.nuxeo.cookbook
 ? Project Artifact id: cookbook-core
 ? Project version: 1.0-SNAPSHOT
@@ -489,11 +447,11 @@ After you completed the project creation, you get this folder structure:
 
 1.  Nuxeo Addon set as parent to pull all Nuxeo dependencies:
 
-    ```
+    ```xml
     <parent>
     	<groupId>org.nuxeo</groupId>
     	<artifactId>nuxeo-addons-parent</artifactId>
-    	<version>8.3</version>
+	<version>9.10</version>
     </parent>
 
     ```
@@ -663,7 +621,7 @@ In this example, the level is "INFO". If you want more details, downgrade it to 
 
     In the `/target` folder of your project, you get a *JAR* file whose name is formed like that: `cookbook-core-1.0-SNAPSHOT.jar`.
 
-2.  Copy your brand new jar into the sub-folder "nxserver/plugins/" of your Nuxeo Server's root folder:
+2.  Copy your brand new jar into the sub-folder "nxserver/bundles/" of your Nuxeo Server's root folder:
     *   under Windows, assuming that the Nuxeo Server Distribution is installed at the location "C:\Nuxeo\", copy the jar in `C:\Nuxeo\nxserver\bundles\`;
     *   under Linux, assuming that the Nuxeo Server Distribution is installed at the location "/opt/nuxeo", copy the jar in `/opt/nuxeo/nxserver/bundles`.
 3.  Start your server using the `./bin/nuxeoctl console` command

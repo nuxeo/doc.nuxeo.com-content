@@ -2,13 +2,15 @@
 title: Monitoring and Maintenance
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-14'
     status: ok
 labels:
     - content-review-lts2016
     - monitoring
     - datasource
+    - bdelbosc
     - monitoring-component
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31033314'
@@ -23,7 +25,7 @@ confluence:
     source_link: /display/NXDOC/Monitoring+and+Maintenance
 tree_item_index: 300
 version_override:
-    'LTS 2015': 710/admindoc/monitoring-and-maintenance
+    LTS 2015: 710/admindoc/monitoring-and-maintenance
     '6.0': 60/admindoc/monitoring-and-maintenance
     '5.8': 58/admindoc/monitoring-and-maintenance
 history:
@@ -110,7 +112,7 @@ history:
     -
         author: Mathieu Guillaume
         date: '2012-02-09 13:50'
-        message: svn -> hg
+        message: 'svn -> hg'
         version: '9'
     -
         author: Mathieu Guillaume
@@ -165,6 +167,31 @@ The Nuxeo Platform exposes a lot of metrics, either through JMX or through the C
 The Nuxeo Platform provides an URL for monitoring the server status. This method is actually also used by the Launcher to follow the server startup status, after checking the Java process status.
 
 *   `http://NUXEO_SERVER/nuxeo/runningstatus` will be available at last. While it isn't reachable, the server is stopped or still starting.
+The server checks the status of all the probes that are registred to be evaluated for this health check. It returns either:
+     - HTTP 200 if all checks pass and a JSON with the detailed status like:
+     ```json
+         {
+          "s3BinaryManagerStatus":"ok",
+          "runtimeStatus":"ok",
+          "elasticSearchStatus":"ok",
+          "ldapDirectories":"ok",
+          "repositoryStatus":"ok"
+          }
+     ```
+     or
+     - HTTP 500 if at least one check fails:
+          ```json
+         {
+          "s3BinaryManagerStatus":"failed",
+          "runtimeStatus":"ok",
+          "elasticSearchStatus":"ok",
+          "ldapDirectories":"ok",
+          "repositoryStatus":"ok"
+          }
+          ```
+   A probe is only run if the last execution time was more than 20s ago. For intervals less than 20s, the last execution status is returned as part of the response.
+   See  details about ( [probes in Metrics and monitoring ]({{page page='metrics-and-monitoring'}}#probes)) for the list of probes evaluated for the healthCheck and  how to contribute new checks.          
+*   `http://NUXEO_SERVER/nuxeo/runningstatus?info=probe&key=xxx`  where key can be any probe registered to be evaluated for the health check returns 200 OK if the check passes  
 *   `http://NUXEO_SERVER/nuxeo/runningstatus?info=started` returns `true` if the server finished starting and the Nuxeo runtime is fine with its components.
 *   `http://NUXEO_SERVER/nuxeo/runningstatus?info=summary&key=xxx` returns `true` or `false` (see "info=started") and a detailed summary about components. Access to this URL is restricted by an access key configurable in `nuxeo.conf` (see `"server.status.key"` in [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})).
 

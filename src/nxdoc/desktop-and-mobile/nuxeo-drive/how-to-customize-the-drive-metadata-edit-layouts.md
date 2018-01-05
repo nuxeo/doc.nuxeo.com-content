@@ -2,13 +2,11 @@
 title: How to Customize the Drive Metadata Edit Layouts
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-15'
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to use a customized layout on the Metadata edit of Nuxeo
-            Drive.
+        excerpt: Learn how to use a customized layout on the Metadata edit of Nuxeo Drive.
         level: Intermediate
         tool: Studio
         topics: 'Layout, Nuxeo Drive'
@@ -16,16 +14,16 @@ labels:
     - lts2016-ok
     - howto
     - nuxeo-drive
+    - yachour
     - layout
-    - nuxeo-drive-component
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '14257229'
     ajs-parent-page-title: Nuxeo Drive
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Customize+the+Drive+Metadata+Edit+Layouts
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Customize+the+Drive+Metadata+Edit+Layouts
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Customize+the+Drive+Metadata+Edit+Layouts'
     page_id: '26317380'
     shortlink: RJKRAQ
     shortlink_source: 'https://doc.nuxeo.com/x/RJKRAQ'

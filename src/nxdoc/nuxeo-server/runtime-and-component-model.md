@@ -2,12 +2,9 @@
 title: Runtime and Component Model
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-14'
     status: ok
-excerpt: >-
-    This page describes how the Nuxeo Platform is modular, and how
-    bundles, components and extension points relate to each other to let
-    you create a fully customized application.
+excerpt: 'This page describes how the Nuxeo Platform is modular, and how bundles, components and extension points relate to each other to let you create a fully customized application.'
 labels:
     - lts2016-ok
     - extension-point
@@ -15,7 +12,9 @@ labels:
     - bundle
     - runtime
     - runtimecomponent
+    - kleturc
     - excerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31033314'
@@ -343,9 +342,9 @@ One of the main goals of the Nuxeo Platform is to provide an easy and clean way 
 
 For that, Nuxeo Platform provides the following patterns:
 
-*   [Bundle](#bundles): A bundle is a "plugin". It is most of the time a ".jar" file with a specific structure that aims at deploying a new set of features on the Nuxeo server. Thanks to this "bundle" notion, developers can deliver their new features in a standalone JAR that the platform will know how to start. As a result, your customization is also delivered as a plug-in, like the 10s of plug-ins that are part of the Nuxeo ecosystem, and that you can find on [GitHub](https://github.com/nuxeo) or the [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/product/all).
+*   [Bundle](#bundles): A bundle is a "plugin". It is most of the time a ".jar" file with a specific structure that aims at deploying a new set of features on the Nuxeo server. Thanks to this "bundle" notion, developers can deliver their new features in a standalone JAR that the platform will know how to start. As a result, your customization is also delivered as a plug-in, like the tens of plug-ins that are part of the Nuxeo ecosystem, and that you can find on [GitHub](https://github.com/nuxeo) or the [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/product/all).
 *   [Components and services](#components): A component is a software object declared via XML (and that may reference a Java class) that is used to expose some services in the framework. Thanks to this architecture, it is possible to expose a new service anywhere in the Java code executed in the platform. Services are auto-documented: you can see the list on [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listServices).
-*   [Extensions](#extensions): An extension is a mechanism leveraged by the services to let platform users inject customization in the core of the implementation. It is a pattern used frequently on products such as Mozilla, Chrome, or Eclipse. Thanks to this architecture, it is possible to go very deep in product customization only with XML or using our [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) visual environment, without any coding. You can see the list of all extension points in [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listExtensionPoints). Contributions to extensions are delivered in a custom bundle.
+*   [Extensions](#extensions): An extension is a mechanism leveraged by the services to let platform users inject customization in the core of the implementation. It is a pattern used frequently on products such as Mozilla, Chrome, or Eclipse. Thanks to this architecture, it is possible to go very deep in product customization only with XML or using our [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services-portal'}}) visual environment, without any coding. You can see the list of all extension points in [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/listExtensionPoints). Contributions to extensions are delivered in a custom bundle.
 
 Implementing your own _bundle_, your will be able to contribute to existing _extensions_ so as to customize things. For instance, you can:
 
@@ -504,25 +503,25 @@ Here is a simple example:
 ```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl">
+  <documentation>
+    Service to handle conversions
+  </documentation>
+  <implementation class="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"/>
+  <service>
+    <provide interface="org.nuxeo.ecm.core.convert.api.ConversionService"/>
+  </service>
+  <extension-point name="converter">
     <documentation>
-        Service to handle conversions
+      This extension can be used to register new converters
     </documentation>
-    <implementation class="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"/>*
-    <service>
-        <provide interface="org.nuxeo.ecm.core.convert.api.ConversionService"/>*
-    </service>
-    <extension-point name="converter">
-        <documentation>
-            This extension can be used to register new converters
-        </documentation>
-        <object class="org.nuxeo.ecm.core.convert.extension.ConverterDescriptor"/>
-    </extension-point>
-    <extension-point name="configuration">
-        <documentation>
-            This extension can be used to configure conversion service
-        </documentation>
-        <object class="org.nuxeo.ecm.core.convert.extension.GlobalConfigDescriptor"/>
-    </extension-point>
+    <object class="org.nuxeo.ecm.core.convert.extension.ConverterDescriptor"/>
+  </extension-point>
+  <extension-point name="configuration">
+    <documentation>
+      This extension can be used to configure conversion service
+    </documentation>
+    <object class="org.nuxeo.ecm.core.convert.extension.GlobalConfigDescriptor"/>
+  </extension-point>
 </component>
 ```
 
@@ -562,12 +561,12 @@ Here is an example contribution to an extension point:
 ```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.platform.convert.plugins">
-    <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"point="converter">
-        <converter name="zip2html" class="org.nuxeo.ecm.platform.convert.plugins.Zip2HtmlConverter">
-            <destinationMimeType>text/html</destinationMimeType>
-            <sourceMimeType>application/zip</sourceMimeType>
-        </converter>
-    </extension>
+  <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"point="converter">
+    <converter name="zip2html" class="org.nuxeo.ecm.platform.convert.plugins.Zip2HtmlConverter">
+      <destinationMimeType>text/html</destinationMimeType>
+      <sourceMimeType>application/zip</sourceMimeType>
+    </converter>
+  </extension>
 </component>
 ```
 

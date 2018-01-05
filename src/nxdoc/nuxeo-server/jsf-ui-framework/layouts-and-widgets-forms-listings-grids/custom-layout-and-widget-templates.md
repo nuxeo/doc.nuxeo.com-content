@@ -9,7 +9,9 @@ labels:
     - summary-layout
     - widget
     - layout-widgets-component
+    - atchertchian
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950330'
@@ -52,9 +54,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2014-12-08 17:55'
-        message: >-
-            NXDOC-286: remove the outdated and now useless complex widget type
-            example
+        message: 'NXDOC-286: remove the outdated and now useless complex widget type example'
         version: '19'
     -
         author: Anahide Tchertchian

@@ -2,11 +2,13 @@
 title: JDBC Datasource
 review:
     comment: ''
-    date: '2016-12-22'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - datasource
+    - bdelbosc
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -21,7 +23,7 @@ confluence:
     source_link: /display/NXDOC/JDBC+Datasource
 tree_item_index: 1900
 version_override:
-    'LTS 2015': 710/admindoc/jdbc-datasource-configuration
+    LTS 2015: 710/admindoc/jdbc-datasource-configuration
     '6.0': 60/admindoc/jdbc-datasource-configuration
     '5.8': 58/admindoc/jdbc-datasource-configuration
 history:

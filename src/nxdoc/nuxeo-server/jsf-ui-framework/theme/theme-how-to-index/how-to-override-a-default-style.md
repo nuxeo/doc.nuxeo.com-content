@@ -6,19 +6,19 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to override a default style. Here's an how-to taking as
-            example the override of the "feedback message" styling.
+        excerpt: "Learn how to override a default style. Here's an how-to taking as example the override of the \"feedback message\" styling."
         level: Advanced
         tool: Code editor
         topics: 'Theme, Style'
 labels:
     - lts2016-ok
     - theme
+    - atchertchian
     - style
     - howto
     - style-css-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235625'
     ajs-parent-page-title: Theme How-To Index

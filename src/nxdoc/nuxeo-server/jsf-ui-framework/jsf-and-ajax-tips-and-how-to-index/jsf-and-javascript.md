@@ -14,10 +14,12 @@ labels:
     - content-review-lts2016
     - jsf
     - javascript
+    - troger
     - howto
     - todo
     - seam-jsf-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '9830458'
     ajs-parent-page-title: JSF and Ajax Tips and How-To Index

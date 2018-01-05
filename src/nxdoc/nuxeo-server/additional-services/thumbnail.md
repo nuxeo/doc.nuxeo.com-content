@@ -8,8 +8,10 @@ labels:
     - lts2016-ok
     - link-update
     - thumbnail
+    - troger
     - community-links
     - thumbnail-service-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'

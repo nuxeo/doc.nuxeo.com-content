@@ -1,14 +1,16 @@
 ---
 title: Purging Audit Logs (NXP_LOGS)
 review:
-    comment: ''
-    date: '2016-12-07'
-    status: ok
+    comment: 'This page only takes into account the audit SQL backend and needs to be updated considering the Elasticsearch backend, see [NXDOC-608](https://jira.nuxeo.com/browse/NXDOC-608) and [NXDOC-743](https://jira.nuxeo.com/browse/NXDOC-743)'
+    date: '2017-12-18'
+    status: requiresUpdates
 labels:
     - lts2016-ok
     - logs
     - audit
+    - ataillefer
     - nxdoc-743
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance
@@ -22,7 +24,7 @@ confluence:
     source_link: /pages/viewpage.action?pageId=12913040
 tree_item_index: 400
 version_override:
-    'LTS 2015': 710/admindoc/purging-audit-logs-nxp_logs
+    LTS 2015: 710/admindoc/purging-audit-logs-nxp_logs
     '6.0': 60/admindoc/purging-audit-logs-nxp_logs
     '5.8': 58/admindoc/purging-audit-logs-nxp_logs
 history:

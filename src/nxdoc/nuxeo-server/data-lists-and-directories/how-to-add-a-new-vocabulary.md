@@ -2,7 +2,7 @@
 title: How to Add a New Vocabulary
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
@@ -13,10 +13,12 @@ details:
 labels:
     - lts2016-ok
     - vocabulary
+    - tmartins
     - howto
     - studio
     - excerpt
     - multiexcerpt
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '4688939'
     ajs-parent-page-title: Data Lists and Directories
@@ -237,11 +239,11 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' heading='No cache for Studio-created vocabularies'}}
+{{#> callout type='info' heading='Default cache for Studio-created vocabularies'}}
 
-Please be aware there is no cache enabled by default when creating a new vocabulary in Studio (see [NXS-2504](https://jira.nuxeo.com/browse/NXS-2504)).
+Since [NXS-2504](https://jira.nuxeo.com/browse/NXS-2504), the new vocabulary defined in Studio come along with a default cache configuration. The cache name is based on the vocabulary name. `maxSize` attribute is set to 1000, `concurrencyLevel` to 500 and `ttl` to 60.
 
-In order to set up a cache, follow the steps described in [How to Configure a New Directory Cache]({{page page='how-to-configure-a-new-directory-cache'}}).
+In order to set up a cache (or override an existing one), follow the steps described in [How to Configure a New Directory Cache]({{page page='how-to-configure-a-new-directory-cache'}}).
 
 {{/callout}}{{! excerpt}}
 

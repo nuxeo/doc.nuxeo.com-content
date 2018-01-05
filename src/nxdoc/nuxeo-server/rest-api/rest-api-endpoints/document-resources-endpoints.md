@@ -8,7 +8,8 @@ labels:
     - lts2016-ok
     - endpoint
     - rest-api
-    - rest-api-component
+    - troger
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'

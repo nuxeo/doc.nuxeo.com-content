@@ -7,8 +7,10 @@ review:
     status: ok
 labels:
     - multiexcerpt
+    - content-review-lts2017
 toc: true
 tree_item_index: 96
+
 ---
 
 ## From LTS 2016 to 9.3
@@ -104,6 +106,15 @@ tree_item_index: 96
 #### Elasticsearch
 
 {{{multiexcerpt 'upgrade-9.3-installation-elasticsearch-upgrade' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
+#### Keeping Old Tags
+
+{{{multiexcerpt 'upgrade-9.3-keeping-tags' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
+#### Tag Migration
+
+{{{multiexcerpt 'upgrade-9.3-tags-migration' page='Upgrade from LTS 2016 following Fast Tracks'}}}
+
 
 #### Directories
 

@@ -9,8 +9,10 @@ labels:
     - link-update
     - renditions-component
     - rendition
+    - troger
     - excerpt
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'

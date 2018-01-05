@@ -6,6 +6,7 @@ review:
     status: ok
 labels:
     - content-review-lts2016
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950287'
     ajs-parent-page-title: Content Repository
@@ -19,22 +20,22 @@ confluence:
     source_link: /display/NXDOC/Persistence+Architecture
 tree_item_index: 200
 history:
-    -
+    - 
         author: Florent Guillaume
         date: '2014-11-04 16:00'
         message: ''
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-09-19 16:09'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-09-19 16:02'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2014-09-19 15:26'
         message: ''

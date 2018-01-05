@@ -2,13 +2,11 @@
 title: How to Implement Local Groups or Roles Using Computed Groups
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2017-12-13'
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to let managers of a workspace determine who is part of
-            locally defined groups (local to the workspace).
+        excerpt: Learn how to let managers of a workspace determine who is part of locally defined groups (local to the workspace).
         level: Advanced
         tool: Studio
         topics: Permissions
@@ -16,7 +14,9 @@ labels:
     - lts2016-ok
     - howto
     - access-right
+    - fguillaume
     - studio
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235681'
@@ -24,13 +24,11 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Implement+Local+Groups+or+Roles+Using+Computed+Groups
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Implement+Local+Groups+or+Roles+Using+Computed+Groups
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Implement+Local+Groups+or+Roles+Using+Computed+Groups'
     page_id: '14256023'
     shortlink: l4fZ
     shortlink_source: 'https://doc.nuxeo.com/x/l4fZ'
-    source_link: >-
-        /display/NXDOC/How+to+Implement+Local+Groups+or+Roles+Using+Computed+Groups
+    source_link: /display/NXDOC/How+to+Implement+Local+Groups+or+Roles+Using+Computed+Groups
 tree_item_index: 500
 history:
     -
@@ -141,7 +139,7 @@ history:
 
 ---
 {{! excerpt}}
-In this how to, you will learn how to let managers of a workspace determine who is part of locally defined groups (local to the workspace). It is like implementing a "role" notion. If you are familiar with [Social Collaboration module]({{page space='userdoc60' page='nuxeo-social-collaboration'}}), you know there are "members" of a social workspace, and "administrators". And that users with the administrator role can define who is a member and who is an administrator. Thanks to this piece of documentation, you will be able to implement the same behavior, but for any "role" you want, and even think of more subtle use cases.
+In this how to, you will learn how to let managers of a workspace determine who is part of locally defined groups (local to the workspace). It is like implementing a "role" notion. For instance you may want to work with "members" of a workspace, as well as "administrators", and require that users with the administrator role can define who is a member and who is an administrator. This documentation will show you how to implement this kind of behavior, but for any "role" you want, and with even more complex use cases.
 {{! /excerpt}}
 
 {{#> callout type='info' }}
@@ -160,7 +158,7 @@ Starting from 8.10 HF-04 you need to configure the virtual groups explicitly. To
 {{/panel}}  
 {{/callout}}
 
-The Nuxeo security system gives you all the tools you need to define security from giving a simple right to a specific user on a document to defining complex use cases. You can basically play with ACLs, granting and denying permissions to users and groups. Groups in Nuxeo are defined by users part of the "powerusers" or "administrators" groups, in the [Admin Center]({{page space='userdoc' page='managing-users-and-groups'}}). But it is also possible to define another category of groups, whose content definition is not "manual": the computed groups.
+The Nuxeo security system gives you all the tools you need to define security from giving a simple right to a specific user on a document to defining complex use cases. You can basically play with ACLs, granting and denying permissions to users and groups. Groups in Nuxeo are defined by users part of the "powerusers" or "administrators" groups, in the [Admin Center]({{page space='userdoc' page='managing-users-and-groups'}}). But it is also possible to define another category of groups, whose content definition is not "manual": the _computed groups_.
 
 Computed groups let you define a list of groups to which users will be affected using Java code. There are multiple use cases where you will need this feature. Implementation will require Java development knowledge and if you are familiar with Nuxeo Core Development (CoreSession, DocumentModel, ...), it's better.
 
@@ -200,16 +198,16 @@ Now, you can specify a list of validators into each workspace. Let's make users 
 
 This part is the most interesting part of this presentation, where we see how Computed Group Service is leveraged to have dynamical group definitions.
 
-We can resume the Computed Group Service like that:
+We can summarize the Computed Group Service as follows:
 
 - You can register a class that implements a method that will be called just after each user connection.
 - The list of strings returned by your method will be considered as the list of virtual groups the user belongs to.
 
-{{#> callout type='info' }}You should first have a quick first look to the [Javadoc of the ComputedGroupService](https://github.com/nuxeo/nuxeo-services/blob/master/nuxeo-platform-usermanager-core/src/main/java/org/nuxeo/ecm/platform) and the [explorer.nuxeo.org documentation around this service](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewBundle/org.nuxeo.ecm.platform.usermanager) and get back to it after having played this tutorial! {{/callout}}
+{{#> callout type='info' }}You should first have a quick first look to the [Javadoc of the ComputedGroupService](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/computedgroups/ComputedGroupsService.html) and the explorer.nuxeo.org documentation around this service ([computer](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.computedgroups.ComputedGroupsServiceImpl--computer), [computerChain](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.computedgroups.ComputedGroupsServiceImpl--computerChain)) and get back to it after having played this tutorial! {{/callout}}
 
 ### Preparing the Project
 
-This part assumes you have [Nuxeo CLI]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-cli'}}), a Nuxeo Server associated to a Nuxeo Connect account.
+This part assumes you have Nuxeo CLI, and a Nuxeo Server associated to a Nuxeo Connect account.
 
 1.  Create a new Nuxeo Plugin Project.
 2.  Add the following component:
@@ -335,7 +333,7 @@ In the previous section we asked Nuxeo Runtime to register our new computer grou
 
 As you can see in this example, the computer group statically returns `myTestGroup`. Let's test your test environment:`
 
-1.  Bootstrap an empty project with [Nuxeo CLI]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-cli'}})
+1.  Bootstrap an empty project with Nuxeo CLI
 2.  Make sure the project is correctly configured to be hot reloaded:
 ```
 nuxeo hotreload configure

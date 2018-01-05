@@ -2,12 +2,14 @@
 title: Nuxeo and Redis
 review:
     comment: ''
-    date: '2017-06-06'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - redis
+    - bdelbosc
     - rediscomponent
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'

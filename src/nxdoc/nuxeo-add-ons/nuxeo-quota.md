@@ -7,8 +7,10 @@ review:
 labels:
     - lts2016-ok
     - quota
+    - fdavid
     - marketplace-package
     - quotas-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -319,6 +321,22 @@ Here is how the maximum size is calculated. When you select a maximum size on a 
     *   If a child doesn't have a maximum size set, the system checks its children and makes the sum of their maximum sizes to calculate the parent's.
         This is repeated for all workspaces without maximum size, until the system can calculate a maximum size for each child of "The parent".
 3.  The system checks that the size you want to set on your workspace is not bigger than the difference between the parent's limit size and the sum of its children's.
+
+
+## Configuration
+
+### Configure the Nuxeo Quota Maximum Size
+
+The Nuxeo Quota maximum size used to be hardcoded to 999GB. It is now configurable with an extension, for example:
+```
+<require>org.nuxeo.ecm.quota.maxsize.config</require>
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="nuxeo.quota.maxsize">2 TB</property>
+  </extension>
+```
+{{#> callout type='info' }}
+The size is expressed in bytes but you can use a suffix like KB, MB, GB or TB.
+{{/callout}}
 
 
 * * *

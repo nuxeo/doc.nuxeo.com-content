@@ -2,21 +2,21 @@
 title: Returning a Custom Result with Automation
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - automation
-    - automation-component
+    - fdavid
     - excerpt
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '18451738'
     ajs-parent-page-title: Automation
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Returning+a+Custom+Result+with+Automation
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Returning+a+Custom+Result+with+Automation
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Returning+a+Custom+Result+with+Automation'
     page_id: '12913601'
     shortlink: wQvF
     shortlink_source: 'https://doc.nuxeo.com/x/wQvF'

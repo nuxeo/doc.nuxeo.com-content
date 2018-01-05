@@ -14,8 +14,10 @@ labels:
     - content-review-lts2016
     - howto
     - seam-jsf-component
+    - atchertchian
     - jsf
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '9830458'
@@ -23,13 +25,11 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Impact+Another+JSF+Component+from+a+Command+or+Select
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Impact+Another+JSF+Component+from+a+Command+or+Select
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Impact+Another+JSF+Component+from+a+Command+or+Select'
     page_id: '20519998'
     shortlink: Phw5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/Phw5AQ'
-    source_link: >-
-        /display/NXDOC/How+to+Impact+Another+JSF+Component+from+a+Command+or+Select
+    source_link: /display/NXDOC/How+to+Impact+Another+JSF+Component+from+a+Command+or+Select
 tree_item_index: 900
 history:
     -
@@ -65,7 +65,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2015-07-31 16:47'
-        message: fix subimtChanges -> submitValue
+        message: 'fix subimtChanges -> submitValue'
         version: '8'
     -
         author: Solen Guitter

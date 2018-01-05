@@ -2,13 +2,11 @@
 title: How to Customize Nuxeo Drive Versioning Policy
 review:
     comment: ''
-    date: '2017-03-30'
+    date: '2017-12-15'
     status: ok
 details:
     howto:
-        excerpt: >-
-            This how-to explains how to change Nuxeo Drive's default versioning
-            policy.
+        excerpt: "This how-to explains how to change Nuxeo Drive's default versioning policy."
         level: Intermediate
         tool: XML Extention
         topics: 'Nuxeo Drive, Versioning'
@@ -17,9 +15,10 @@ labels:
     - link-update
     - howto
     - nuxeo-drive
-    - nuxeo-drive-component
+    - yachour
     - multiexcerpt-include
     - multiexcerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '14257229'
@@ -27,8 +26,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Customize+Nuxeo+Drive+Versioning+Policy
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Customize+Nuxeo+Drive+Versioning+Policy
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Customize+Nuxeo+Drive+Versioning+Policy'
     page_id: '23365773'
     shortlink: jYhkAQ
     shortlink_source: 'https://doc.nuxeo.com/x/jYhkAQ'

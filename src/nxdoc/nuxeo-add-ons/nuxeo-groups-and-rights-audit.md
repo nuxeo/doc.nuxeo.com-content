@@ -7,7 +7,9 @@ review:
 labels:
     - lts2016-ok
     - nuxeo-groups-rights-audit
+    - tcardoso
     - excerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

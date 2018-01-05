@@ -8,7 +8,9 @@ labels:
     - content-review-lts2016
     - layout
     - layout-widgets-component
+    - atchertchian
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '3868333'
@@ -91,9 +93,7 @@ history:
     -
         author: Anahide Tchertchian
         date: '2013-12-05 14:22'
-        message: >-
-            add info about grid layouts and other kinds of layouts (generic
-            usage)
+        message: add info about grid layouts and other kinds of layouts (generic usage)
         version: '3'
     -
         author: Anahide Tchertchian

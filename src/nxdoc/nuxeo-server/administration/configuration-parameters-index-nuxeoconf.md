@@ -2,7 +2,7 @@
 title: Configuration Parameters Index (nuxeo.conf)
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-11'
     status: ok
 labels:
     - content-review-lts2016
@@ -10,7 +10,9 @@ labels:
     - properties
     - templates
     - launcher
+    - akervern
     - multiexcerpt
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
@@ -23,15 +25,16 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/QQA7'
     source_link: /pages/viewpage.action?pageId=3866689
 tree_item_index: 100
+toc: true
 version_override:
-    'LTS 2015': 710/admindoc/configuration-parameters-index-nuxeoconf
+    LTS 2015: 710/admindoc/configuration-parameters-index-nuxeoconf
     '6.0': 60/admindoc/configuration-parameters-index-nuxeoconf
     '5.8': 58/admindoc/configuration-parameters-index-nuxeoconf
 history:
     -
         author: Ronan Daniellou
         date: '2016-08-22 13:50'
-        message: eeps only FT value for "nuxeo.db.idle-timeout-minutes
+        message: 'eeps only FT value for "nuxeo.db.idle-timeout-minutes'
         version: '207'
     -
         author: Ronan Daniellou
@@ -41,12 +44,12 @@ history:
     -
         author: Ronan Daniellou
         date: '2016-08-22 13:28'
-        message: Adds "nuxeo.db.idle-timeout-minutes" property.
+        message: 'Adds "nuxeo.db.idle-timeout-minutes" property.'
         version: '205'
     -
         author: Ronan Daniellou
         date: '2016-08-17 08:17'
-        message: Adds "nuxeo.db.idle-timeout-minutes" property.
+        message: 'Adds "nuxeo.db.idle-timeout-minutes" property.'
         version: '204'
     -
         author: Florent Guillaume
@@ -166,9 +169,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-12-15 10:18'
-        message: >-
-            Add deprecation on opensocial.gadgets.host and
-            opensocial.gadgets.port
+        message: Add deprecation on opensocial.gadgets.host and opensocial.gadgets.port
         version: '180'
     -
         author: Solen Guitter
@@ -263,7 +264,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-07-03 08:16'
-        message: Added "since" column
+        message: 'Added "since" column'
         version: '161'
     -
         author: Solen Guitter
@@ -273,9 +274,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-07-02 13:11'
-        message: >-
-            NXP-16197: Update default value and description of
-            zip.entry.encoding
+        message: 'NXP-16197: Update default value and description of zip.entry.encoding'
         version: '159'
     -
         author: Antoine Taillefer
@@ -370,7 +369,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-09-22 10:20'
-        message: 5.9.6 -> 6.0
+        message: '5.9.6 -> 6.0'
         version: '140'
     -
         author: Thomas Roger
@@ -490,9 +489,7 @@ history:
     -
         author: Julien Carsique
         date: '2014-02-26 14:10'
-        message: >-
-            NXBT-727, NXBT-724, NXP-8024: add properties for proxy NTLM and
-            proxy PAC
+        message: 'NXBT-727, NXBT-724, NXP-8024: add properties for proxy NTLM and proxy PAC'
         version: '116'
     -
         author: Thierry Martins
@@ -627,9 +624,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-06-28 18:31'
-        message: >-
-            Added Since 5.7.2 mention on nuxeo.jsf.numberOfViewsInSession and
-            nuxeo.jsf.numberOfLogicalViews
+        message: Added Since 5.7.2 mention on nuxeo.jsf.numberOfViewsInSession and nuxeo.jsf.numberOfLogicalViews
         version: '89'
     -
         author: Anahide Tchertchian
@@ -644,16 +639,12 @@ history:
     -
         author: Anahide Tchertchian
         date: '2013-06-17 15:00'
-        message: >-
-            NXP-11129: change property name to
-            studio.snapshot.disablePkgValidation
+        message: 'NXP-11129: change property name to studio.snapshot.disablePkgValidation'
         version: '86'
     -
         author: Anahide Tchertchian
         date: '2013-06-16 16:45'
-        message: >-
-            NXP-11129: document property
-            org.nuxeo.ecm.platform.disableStudioSnapshotPackageValidation
+        message: 'NXP-11129: document property org.nuxeo.ecm.platform.disableStudioSnapshotPackageValidation'
         version: '85'
     -
         author: Solen Guitter
@@ -663,7 +654,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-01-04 12:03'
-        message: Added new 5.7 D&D parameters from 5.6 documentation
+        message: 'Added new 5.7 D&D parameters from 5.6 documentation'
         version: '83'
     -
         author: Anahide Tchertchian
@@ -768,7 +759,7 @@ history:
     -
         author: Mathieu Guillaume
         date: '2011-11-29 13:17'
-        message: Change title so the page is found when searching for "nuxeo.conf"
+        message: 'Change title so the page is found when searching for "nuxeo.conf"'
         version: '62'
     -
         author: Thierry Delprat
@@ -873,9 +864,7 @@ history:
     -
         author: Julien Carsique
         date: '2011-06-07 14:35'
-        message: >-
-            add warning about nuxeo.loopback.url when changing
-            nuxeo.bind.address
+        message: add warning about nuxeo.loopback.url when changing nuxeo.bind.address
         version: '41'
     -
         author: Thierry Martins
@@ -1082,12 +1071,12 @@ history:
 The Nuxeo Platform reads configuration properties that you can set either:
 
 *   In a nuxeo.conf file
-*   From the Setup tab in the Admin Center
 *   By contributing to the [Configuration Service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute)
+*   From the Setup tab in the Admin Center (if Nuxeo JSF UI is installed)
 
 ## nuxeo.conf File {{> anchor 'conf-manual-edition'}}
 
-Nuxeo Platform reads configuration properties in nuxeo.conf file. Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files. y default, the `nuxeo.conf` file is located in `$NUXEO_HOME/bin`. If you installed your application using the Windows installer, the configuration is located in `%APPDATA%\Nuxeo\conf` (check the page [Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)&nbsp;for more information).
+Nuxeo Platform reads configuration properties in nuxeo.conf file. Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files. By default, the `nuxeo.conf` file is located in `$NUXEO_HOME/bin`. If you installed your application using the Windows installer, the configuration is located in `%APPDATA%\Nuxeo\conf` (check the page [Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)&nbsp;for more information).
 
 If you plan to use the application in production, you should [move the configuration file outside the Nuxeo home directory]({{page page='setup-best-practices'}}), to make upgrades easier and more secured: your data and configuration won't risk to be overridden or lost.
 
@@ -1101,16 +1090,18 @@ Wordpad is fine, Notepad++ and SciTE are good text editors, there are lots of [o
 
 Existing configuration parameters are listed in the index section below.
 
-## Admin Center / Setup Tab{{> anchor 'setup-admincenter'}}
+## Admin Center / Setup Tab {{> anchor 'setup-admincenter'}}
 
-Administrators can also change the nuxeo.conf configuration parameters from the Admin center.
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-**To edit the configuration of the application using the Admin tab:**
+Administrators can also change the `nuxeo.conf` configuration parameters from the Admin center.
+
+**To edit the configuration of the application using the Admin Center:**
 
 1.  Log in with an administrator account.
     Default administrator credentials are:
-    *   login: Administrator
-    *   password: Administrator
+    *   login: `Administrator`
+    *   password: `Administrator`
 2.  Click on the **Admin** tab in the page header.
 3.  Click on the **Setup** tab, edit the configuration you want to change and click on **Save**.
     ![]({{file name='AdminCenter_SetupTab.png' page='admin-tab-overview'}} ?w=650,border=true)
@@ -2284,6 +2275,19 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
+<td colspan="1">`elasticsearch.restClient.connectionTimeoutMs`</td>
+<td colspan="1">A timeout in milliseconds until a connection is established (RestClient)</td>
+<td colspan="1">`5000`</td>
+<td colspan="1">Since 9.10</td>
+</tr>
+<tr>
+<td colspan="1">`elasticsearch.restClient.socketTimeoutMs`</td>
+<td colspan="1">A maximum period, in milliseconds, of inactivity between two consecutive data packets (RestClient)</td>
+<td colspan="1">`20000`</td>
+<td colspan="1">Since 9.10</td>
+</tr>
+
+<tr>
 <td colspan="1">`nuxeo.directory.type`</td>
 <td colspan="1">Type of directory, used for LDAP or multi-directory configuration. Possible values are `default`, `ldap`, `multi`.</td>
 <td colspan="1">`default`</td>
@@ -2355,6 +2359,110 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 <td colspan="1">`10`</td>
 <td colspan="1">Since 8.10-HF01</td>
 </tr>
+<tr>
+<td colspan="1">`kafka.enabled`</td>
+<td colspan="1">Switch the default Stream configuration to Apache Kafka</td>
+<td colspan="1">`false`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.zkServers`</td>
+<td colspan="1">host:port comma separated list of Kafka Zookeepers</td>
+<td colspan="1">`localhost:2181`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.bootstrap.servers`</td>
+<td colspan="1">host:port comma separated list of Kafka Brokers</td>
+<td colspan="1">`localhost:9092`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.topicPrefix`</td>
+<td colspan="1">The prefix applied to any Kafka Topic</td>
+<td colspan="1">`nuxeo-`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.request.timeout.ms`</td>
+<td colspan="1">Maximum time to wait for a response</td>
+<td colspan="1">`65000`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.max.poll.interval.ms`</td>
+<td colspan="1">Maximum delay between poll invocation</td>
+<td colspan="1">`60000`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.max.poll.records`</td>
+<td colspan="1">Maximum number of records to read per poll</td>
+<td colspan="1">`5`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.session.timeout.ms`</td>
+<td colspan="1">Timeout used to detect worker failures</td>
+<td colspan="1">`50000`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.heartbeat.interval.ms`</td>
+<td colspan="1">Heartbeat interval</td>
+<td colspan="1">`2000`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+
+<tr>
+<td colspan="1">`nuxeo.stream.chronicle.retention.duration`</td>
+<td colspan="1">Default retention for Chronicle Queue Log, default to 4 days.</td>
+<td colspan="1">`4d`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.audit.enabled`</td>
+<td colspan="1">Enable the Nuxeo Stream Audit Writer implementation</td>
+<td colspan="1">`true`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.audit.log.config`</td>
+<td colspan="1">The Log configuration to use for the Stream Audit Writer</td>
+<td colspan="1">`audit`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.audit.batch.size`</td>
+<td colspan="1">The entries batch size to submit the the audit backend</td>
+<td colspan="1">`25`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.audit.batch.threshold.ms`</td>
+<td colspan="1">Do not wait more than this threshold if the batch is not full</td>
+<td colspan="1">`500`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.work.enabled`</td>
+<td colspan="1">Supersed the default WorkManager with the Sream WorkManager</td>
+<td colspan="1">`false`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.work.log.config`</td>
+<td colspan="1">The Log configuration to use for the Stream WorkManager</td>
+<td colspan="1">`work`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.work.over.provisioning.factor`</td>
+<td colspan="1">The factor to use on the Work Thread pool size to get the number of Log partition.</td>
+<td colspan="1">`3`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+
 </tbody>
 </table>
 </div>

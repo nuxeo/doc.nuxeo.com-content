@@ -9,8 +9,9 @@ labels:
     - mvel
     - scripting
     - automation
-    - automation-component
+    - fdavid
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '18451738'
@@ -143,7 +144,7 @@ history:
     -
         author: Bertrand Chauvin
         date: '2013-12-12 13:23'
-        message: Integrated Benjamin's example from the TMP page
+        message: "Integrated Benjamin's example from the TMP page"
         version: '67'
     -
         author: Solen Guitter

@@ -15,6 +15,7 @@ details:
 labels:
     - content-review-lts2016
     - howto
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'
@@ -29,22 +30,22 @@ confluence:
     source_link: /display/NXDOC/How+to+Debug+Slow+Page+Rendering
 tree_item_index: 1700
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-05 09:42'
         message: pdate how-to topic
         version: '4'
-    -
+    - 
         author: Solen Guitter
         date: '2016-07-12 08:35'
         message: Format
         version: '3'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2016-07-08 17:05'
         message: ''
         version: '2'
-    -
+    - 
         author: Anahide Tchertchian
         date: '2016-07-08 15:18'
         message: ''

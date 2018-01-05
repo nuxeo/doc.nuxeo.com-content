@@ -1,15 +1,17 @@
 ---
 title: Repository Configuration
 review:
-    comment: ''
-    date: '2016-12-07'
-    status: ok
+    comment: 'This page needs to be updated to document DBS configuration and separate SQL-specific options'
+    date: '2017-12-14'
+    status: requiresUpdates
 labels:
     - lts2016-ok
-    - binarymanager
+    - binary-manager
     - vcs
+    - fguillaume
     - fulltext
     - vcs-component
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -24,7 +26,7 @@ confluence:
     source_link: /display/NXDOC/Repository+Configuration
 tree_item_index: 1500
 version_override:
-    'LTS 2015': 710/admindoc/vcs-configuration
+    LTS 2015: 710/admindoc/vcs-configuration
     '6.0': 60/admindoc/vcs-configuration
     '5.8': 58/admindoc/vcs-configuration
 history:

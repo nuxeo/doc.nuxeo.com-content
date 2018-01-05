@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            This how-to provides an example of how to use the REST API to query
-            the Nuxeo repository.
+        excerpt: This how-to provides an example of how to use the REST API to query the Nuxeo repository.
         level: Advanced
         tool: Code
         topics: 'Query, REST API'
@@ -19,8 +17,10 @@ labels:
     - page-provider
     - elasticsearch
     - rest-api
+    - troger
     - query-pageprovider-component
     - link-update
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'

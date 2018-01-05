@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            This page explains how to add the New button on the default Content
-            tab and on a custom tab.  
+        excerpt: 'This page explains how to add the New button on the default Content tab and on a custom tab.  '
         level: Beginner
         tool: Studio
         topics: 'Document type, Tab, User action'
@@ -16,21 +14,21 @@ labels:
     - content-review-lts2016
     - howto
     - action
+    - atchertchian
     - studio
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235610'
     ajs-parent-page-title: Action How-To Index
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Make+the+New+Button+Appear+on+a+Custom+Folderish+Document
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Make+the+New+Button+Appear+on+a+Custom+Folderish+Document
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Make+the+New+Button+Appear+on+a+Custom+Folderish+Document'
     page_id: '3345780'
     shortlink: dA0z
     shortlink_source: 'https://doc.nuxeo.com/x/dA0z'
-    source_link: >-
-        /display/NXDOC/How+to+Make+the+New+Button+Appear+on+a+Custom+Folderish+Document
+    source_link: /display/NXDOC/How+to+Make+the+New+Button+Appear+on+a+Custom+Folderish+Document
 tree_item_index: 100
 history:
     -

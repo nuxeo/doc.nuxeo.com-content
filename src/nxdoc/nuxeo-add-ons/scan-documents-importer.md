@@ -2,13 +2,15 @@
 title: Scan Documents Importer
 review:
     comment: ''
-    date: '2017-01-13'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - scan-documents-importer
+    - ajusto
     - update-needed
     - multiexcerpt-include
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -105,11 +107,38 @@ history:
         version: '1'
 
 ---
+
+{{#> callout type='tip'}}
+Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) on Nuxeo University.
+{{/callout}}
+
 The [Scan Documents Importer addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer) allows to create documents from XML files located on the file system every time a dedicated event is launched. It can therefore be easily configured to import data on a regular basis.
 
 ## Installation
 
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
+
+
+## Import process
+
+The scan import process is composed of several elements:
+1. The files to import, classified in a folder structure.
+2. XML files linked to the files to attach its document type and property values
+3. An output folder where XML files are moved once processed by the scan importer.
+
+![]({{file name='scan_importer.png'}} ?w=500,border=true)
+
+4. Scan importer configurations, declared in an XML extension into Nuxeo Studio
+  1. The import frequency (every 30 seconds or every night for example)
+  2. Specific import sizing information (batch size, number of threads...)
+  3. The document type which should be applied for the folders (Workspace by default) and the files (File by default)
+
+  {{#> callout type='tip'}}
+  If you need to import with specific properties, then you would have to change the default document type applied to the file (`targetLeafType` property in the XML contribution)
+  {{/callout}}
+
+  4. The property mapping between the XML file tags and the Nuxeo document model (XPATH values)
+
 
 ## Configuration
 

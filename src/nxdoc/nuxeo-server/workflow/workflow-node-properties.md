@@ -2,15 +2,16 @@
 title: Workflow Node Properties
 review:
     comment: ''
-    date: '2016-12-30'
+    date: '2016-12-14'
     status: ok
 labels:
     - lts2016-ok
     - todo
     - node
     - workflow
-    - workflow-component
+    - grenard
     - excerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '12913723'

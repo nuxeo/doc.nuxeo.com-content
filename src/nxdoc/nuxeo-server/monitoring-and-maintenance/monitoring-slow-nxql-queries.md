@@ -2,13 +2,15 @@
 title: Monitoring Slow NXQL Queries
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - nxql
     - monitoring
     - monitoring-component
+    - bdelbosc
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance
@@ -22,7 +24,7 @@ confluence:
     source_link: /display/NXDOC/Monitoring+Slow+NXQL+Queries
 tree_item_index: 900
 version_override:
-    'LTS 2015': 710/admindoc/monitoring-slow-nxql-queries
+    LTS 2015: 710/admindoc/monitoring-slow-nxql-queries
     '6.0': 60/admindoc/monitoring-slow-nxql-queries
     '5.8': 58/admindoc/monitoring-slow-nxql-queries
 history:

@@ -15,6 +15,8 @@ labels:
     - howto
     - jsf
     - seam-jsf-component
+    - atchertchian
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '9830458'
     ajs-parent-page-title: JSF and Ajax Tips and How-To Index

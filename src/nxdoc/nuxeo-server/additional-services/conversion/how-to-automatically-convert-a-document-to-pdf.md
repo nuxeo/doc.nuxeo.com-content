@@ -6,9 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to convert automatically a document into PDF using Nuxeo
-            Studio.
+        excerpt: Learn how to convert automatically a document into PDF using Nuxeo Studio.
         level: Intermediate
         tool: Studio
         topics: 'Document type, Automation, Conversion'
@@ -16,16 +14,17 @@ labels:
     - lts2016-ok
     - howto
     - conversion
+    - troger
     - excerpt
     - multiexcerpt-include
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235645'
     ajs-parent-page-title: Conversion
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Automatically+Convert+a+Document+to+PDF
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Automatically+Convert+a+Document+to+PDF
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Automatically+Convert+a+Document+to+PDF'
     page_id: '8683647'
     shortlink: f4CE
     shortlink_source: 'https://doc.nuxeo.com/x/f4CE'
@@ -196,9 +195,9 @@ The automation chain to configure is finally:
     name: pdfblob
 - Context.PopDocument
 - Document.SetBlob:
-    file: "myDocumentSchema:pdffile"
+    file: "@{Context[\"pdfblob\"}"
     save: "true"
-    xpath: "@{Context[\"pdfblob\"}"
+    xpath: "myDocumentSchema:pdffile"
 ```
 
 * * *

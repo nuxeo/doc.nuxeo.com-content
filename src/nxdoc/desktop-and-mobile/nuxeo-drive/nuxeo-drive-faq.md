@@ -6,11 +6,13 @@ review:
     status: ok
 labels:
     - nuxeo-drive
+    - yachour
     - multiexcerpt
     - excerpt
+    - lts2017-ok
 toc: true
 version_override:
-    'LTS 2015': 710/userdoc/nuxeo-drive-faq
+    LTS 2015: 710/userdoc/nuxeo-drive-faq
     '6.0': 60/userdoc/nuxeo-drive-faq
 confluence:
     ajs-parent-page-id: '13664723'
@@ -213,6 +215,7 @@ Currently Nuxeo Drive has some limitations:
 *   Synchronizing very big files may be an issue if your network connection is slow or unstable. This will be improved by uploading files by chunks and allowing to resume uploads, see [NXDRIVE-457](https://jira.nuxeo.com/browse/NXDRIVE-457).
 *   The target use case is not to synchronize a huge tree on a lot of desktops: Nuxeo Drive is not optimized to replicate the Document Repository on each desktop.
 *   Complex synchronization cases where you delete files that are being synchronized.
+*   Drive will generates errors and will ignore files that are duplicates on the server. Thus, it is not recommended to have an extensive usage of Nuxeo Drive with plateform use cases implying file duplicates.
 
 {{! /multiexcerpt}}
 

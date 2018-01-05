@@ -2,13 +2,15 @@
 title: Versioning
 review:
     comment: ''
-    date: '2017-03-29'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - link-update
     - versioning
     - core-component
+    - fguillaume
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950287'
@@ -110,7 +112,7 @@ history:
         version: '1'
 
 ---
-The Nuxeo Repository includes a versioning system. At any moment, you can ask the repository to create and archive a version from a document. Versioning can be done automatically according to some versioning policies or on demand through the UI.
+The Nuxeo Repository includes a versioning system. At any time, you can ask the repository to create and archive a version of a document. Versioning can be done automatically, according to some versioning policies, or on-demand, through the UI.
 
 Each version has:
 
@@ -118,7 +120,7 @@ Each version has:
 *   A major version number
 *   A minor version number
 
-The versioning service is configurable so you can define the numbering policy. In fact, even the version storage service is pluggable so you can define your own storage for versions.
+The versioning service is configurable so you can define the numbering policy.
 
 ## Functional Overview
 
@@ -135,8 +137,8 @@ The versioning service is configurable so you can define the numbering policy. I
 ## Concepts
 
 *   **Placeful**. A placeful document is one which is stored in a folder, and therefore has a parent in which it is visible as a child.
-*   **Placeless**. A placeless document isn't stored in a given folder, it's just available in the storage through its id. Having no parent folder it doesn't inherit any security, so it is usually only accessible by unrestricted code.
-*   **Working Copy**. The document that you edit. It is usually stored in a Workspace's folder but this is just convention. It is also often called the **Live Document**. There is at most one Working Copy per version series. In other systems it is also called the Private Working Copy because only the user that created it can work on it; this is looser in the Nuxeo Platform.
+*   **Placeless**. A placeless document isn't stored in a given folder, it's just available in the storage through its id. Having no parent folder it doesn't inherit any security, so it is usually only accessible by system code.
+*   **Working Copy**. The document that you edit. It is usually stored in a Workspace's folder but this is just convention. It is also often called the **Live Document**. There is at most one Working Copy per version series. In other systems it is also called the Private Working Copy because only the user that created it can work on it; this is less strict in the Nuxeo Platform.
 *   **Version**. An immutable, archived version of a document. It is created from a **working copy** by a **check in** operation.
 *   **Version Number**. The label which is uniquely attached to a version. It formed of two integers separated by a dot, like "2.1". The first integer is the major version number, the second one is the minor version number.
 *   **Major Version**. A version whose minor version number is 0\. It follows that a minor version is a version whose minor version number is not 0.
@@ -165,7 +167,7 @@ From a working copy in the Checked Out state, invoking the Check In operation do
 
 When invoking the Check In operation, a flag is passed to indicate whether a major version or a minor version should be created. Depending on whether the new version should be major or minor, the version number is incremented differently; for instance, starting from a working copy with the version number "2.1" (displayed as "2.1+"), a minor version would be created as "2.2" and a major version as "3.0".
 
-Given a Checked In working copy, invoking the Check Out operation has little visible effect, it's just a state change for the working copy. A "+" is displayed after the version number to make this apparent, see below. If no modification was actually done on the document when the user clicks Save and invokes the Check Out operation, the version working copy remains in the Checked In state: the `dc:contributors` and `dc:modified` fields are not updated and no "+" is displayed next to the version number.
+Given a Checked In working copy, invoking the Check Out operation has little visible effect, it's just a state change for the working copy. A "+" is displayed after the version number to make this apparent, see below.
 
 {{#> callout type='note' }}
 
@@ -185,9 +187,9 @@ The version number is changed by a Check In operation; either the minor version 
 
 The automatic versioning system is based on a combination of policies, where each of them is composed by one or multiple filters. Each versioning policy defines:
 - A unique id which allows to override default policies
-- The numbering policy (between `NONE`, `MINOR` or `MAJOR`)
+- The increment policy (between `NONE`, `MINOR` or `MAJOR`)
 - If the versioning has to be applied before or after the actual modification
-- The order in which the policy should be taken into account.
+- The order in which the policy should be taken into account related to other policies.
 
 Example:
 
@@ -201,11 +203,11 @@ Example:
 ```
 Filters referenced by the policy are OR-ed. At least one filter has to match in order to apply the policy.
 
-Setting `NONE` as numbering policy will stop if no policy with a lower order applies.
+Setting `NONE` as increment policy will stop policies evaluation if no policy with a lower order applies.
 
 {{#> callout type='note' }}
 
-Nuxeo reserved order range `[1,10]` to contribute system policies. Notice that default contributions are also provided with a higher range; these are not system policies and as such have a lower impact, making them easier to be overriden.
+Nuxeo reserved order range `[1,10]` to contribute system policies. Notice that default contributions are also provided with a higher range; these are not system policies and as such have a lower impact, making them easier to be overridden.
 
 {{/callout}}
 
@@ -261,7 +263,3 @@ For more details about source-based versioning with Nuxeo Drive, check out the p
 To contribute new policies and filters, check out the extension points documentation:
 - [policies](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--policies)
 - [filters](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--filters)
-
-## Plugging In a New VersioningService Implementation
-
-For advanced uses, it's possible to plug in a new `VersioningService` implementation to define what happens at creation, save, check in and check out time. See the [VersioningService Javadoc](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/versioning/VersioningService.html) and the [versioningService extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--versioningService) documentation for more about this.

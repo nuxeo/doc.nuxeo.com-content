@@ -2,15 +2,17 @@
 title: Page Provider Aggregates
 review:
     comment: ''
-    date: '2017-01-18'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - elasticsearch
     - aggregate
+    - grenard
     - page-provider
     - query-pageprovider-component
     - excerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -33,9 +35,7 @@ history:
     -
         author: Benoit Delbosc
         date: '2016-08-22 14:19'
-        message: >-
-            remove notion of  month and quarter because they are not real
-            interval
+        message: remove notion of  month and quarter because they are not real interval
         version: '23'
     -
         author: Solen Guitter
@@ -231,7 +231,6 @@ The type of such aggregate is `terms`. The parameter must be of type `string`.
 It has the following properties:
 
 *   `size` property is set to define how many term buckets should be returned out of the overall terms.
-    **Note**: Set `size` to `0` to get all the buckets (mandatory when the terms aggregate is rendered as a select widget).
 *   `minDocCount` property is set to only return buckets having more document than the defined value (default is 1)
 *   `order` property to order the buckets. Possible values are `count desc`, `count asc`, `term desc`, `term asc`.
 

@@ -11,7 +11,8 @@ labels:
     - template
     - operation
     - automation
-    - automation-component
+    - fdavid
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '18451738'
@@ -19,8 +20,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Document+Templates+and+Automation+Rendering+Service
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Document+Templates+and+Automation+Rendering+Service
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Document+Templates+and+Automation+Rendering+Service'
     page_id: '14256377'
     shortlink: _YjZ
     shortlink_source: 'https://doc.nuxeo.com/x/_YjZ'

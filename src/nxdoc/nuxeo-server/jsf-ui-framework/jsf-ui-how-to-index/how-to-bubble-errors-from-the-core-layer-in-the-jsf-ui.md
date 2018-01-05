@@ -6,7 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: Learn how to bubble errors from the core layer in the&nbsp; UI.
+        excerpt: 'Learn how to bubble errors from the core layer in the&nbsp; UI.'
         level: Advanced
         tool: Code editor
         topics: JSF UI
@@ -15,14 +15,15 @@ labels:
     - automation
     - howto
     - seam-jsf-component
+    - atchertchian
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '20517820'
     ajs-parent-page-title: JSF UI How-To Index
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Bubble+Errors+from+the+Core+Layer+in+the+JSF+UI
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Bubble+Errors+from+the+Core+Layer+in+the+JSF+UI
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Bubble+Errors+from+the+Core+Layer+in+the+JSF+UI'
     page_id: '19235489'
     shortlink: oYIlAQ
     shortlink_source: 'https://doc.nuxeo.com/x/oYIlAQ'
@@ -163,8 +164,7 @@ Make sure that none of the listeners running before your custom listener modify 
     		if (doc.isProxy() || doc.isVersion()) {
     			return;
     		}
-    		AutomationService service = Framework
-    				.getLocalService(AutomationService.class);
+                AutomationService service = Framework.getService(AutomationService.class);
     		OperationContext automationCtx = new OperationContext();
     		automationCtx.setInput(doc);
     		try {

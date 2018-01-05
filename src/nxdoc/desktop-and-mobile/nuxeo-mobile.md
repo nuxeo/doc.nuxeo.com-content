@@ -2,11 +2,14 @@
 title: Nuxeo Mobile
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-13'
     status: ok
 toc: true
 labels:
     - lts2016-ok
+    - nuxeo-mobile
+    - yachour
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '31033323'
     ajs-parent-page-title: Desktop and Mobile
@@ -19,132 +22,132 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/TJHZAQ'
     source_link: /display/NXDOC/Nuxeo+Mobile
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-10-05 08:04'
         message: ''
         version: '26'
-    -
+    - 
         author: Anne Jubert
         date: '2016-10-04 09:44'
         message: ''
         version: '25'
-    -
+    - 
         author: Anne Jubert
         date: '2016-10-03 14:29'
         message: ''
         version: '24'
-    -
+    - 
         author: Anne Jubert
         date: '2016-10-03 14:28'
         message: ''
         version: '23'
-    -
+    - 
         author: Anne Jubert
         date: '2016-10-03 14:20'
         message: ''
         version: '22'
-    -
+    - 
         author: Anne Jubert
         date: '2016-10-03 14:18'
         message: ''
         version: '21'
-    -
+    - 
         author: Anne Jubert
         date: '2016-10-03 13:17'
         message: ''
         version: '20'
-    -
+    - 
         author: Anne Jubert
         date: '2016-10-03 13:07'
         message: ''
         version: '19'
-    -
+    - 
         author: Solen Guitter
         date: '2016-09-02 08:24'
         message: ''
         version: '18'
-    -
+    - 
         author: Anne Jubert
         date: '2016-08-31 13:17'
         message: ''
         version: '17'
-    -
+    - 
         author: Anne Jubert
         date: '2016-08-31 13:05'
         message: ''
         version: '16'
-    -
+    - 
         author: Anne Jubert
         date: '2016-08-31 13:01'
         message: ''
         version: '15'
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-20 15:38'
         message: 'Add links, rephrase and reorganise content a bit'
         version: '14'
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-20 12:43'
         message: ''
         version: '13'
-    -
+    - 
         author: Anne Jubert
         date: '2016-06-20 12:37'
         message: ''
         version: '12'
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-20 10:09'
         message: ''
         version: '11'
-    -
+    - 
         author: Anne Jubert
         date: '2016-06-20 10:07'
         message: ''
         version: '10'
-    -
+    - 
         author: Alain Escaffre
         date: '2016-06-19 22:34'
         message: ''
         version: '9'
-    -
+    - 
         author: Anne Jubert
         date: '2016-06-17 19:59'
         message: ''
         version: '8'
-    -
+    - 
         author: Anne Jubert
         date: '2016-06-17 19:57'
         message: ''
         version: '7'
-    -
+    - 
         author: Anne Jubert
         date: '2016-06-17 19:52'
         message: ''
         version: '6'
-    -
+    - 
         author: Anne Jubert
         date: '2016-06-17 14:01'
         message: ''
         version: '5'
-    -
+    - 
         author: Alain Escaffre
         date: '2016-06-16 12:10'
         message: ''
         version: '4'
-    -
+    - 
         author: Anne Jubert
         date: '2016-06-15 13:49'
         message: ''
         version: '3'
-    -
+    - 
         author: Anne Jubert
         date: '2016-06-15 12:48'
         message: ''
         version: '2'
-    -
+    - 
         author: Antoine Taillefer
         date: '2016-06-15 11:30'
         message: ''
@@ -157,7 +160,7 @@ history:
 
 ### iPhone Requirements
 
-The Nuxeo mobile application is available for iPhones SE, 5/5c/5s, 6/6+, 7/7+ with a minimum version of iOS 8 required.
+The Nuxeo mobile application is available for iPhones SE, 5/5c/5s, 6/6+, 7/7+, 8/8+ and X with a minimum version of iOS 8 required.
 
 ### Android Requirements
 
@@ -187,24 +190,9 @@ The Nuxeo **Android** application can be installed from [Google Play](https://pl
 
 ## Functional Overview
 
-The Nuxeo application allows you to authenticate against a Nuxeo server, browse and search the Nuxeo repository. In addition you can manage your favorite documents and access your shared/personal collections. It provides a menu giving access to all menu entries, except when you are browsing.
+The Nuxeo application allows you to authenticate against a Nuxeo server, browse and search the Nuxeo repository. In addition, you can manage your favorite documents and access your shared/personal collections. All features listed below are available using the side ("burger") menu.
 
 ![]({{file name='mobile-menu.png'}} ?w=200,h=355,border=true)
-
-### Offline mode
-
-When your phone loses network connection or when you turn it on airplane mode, an offline mode is now available.
-
-<div>
-<table class="hover" style="border: 0px;">
-<tbody>
-<tr>
-<td colspan="1"><b>![]({{file name='mobile-offline-mode.png'}} ?w=200,h=355,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-offline-mode-refresh.png'}} ?w=200,h=355,border=true)</b></td>
-</tr>
-</tbody>
-</table>
-</div>
 
 ### Authenticating
 
@@ -255,6 +243,12 @@ If the PDF preview is available, tap the thumbnail zone to preview it. If the do
 {{#> callout type='tip' }}
 When previewing a document, you can hide the top bar by taping the screen.
 {{/callout}}
+
+### Search
+
+The **Search** menu enables you to query documents on their title and content, by performing a full-text search. {{{multiexcerpt 'full-text-search-user-desc' page='USERDOC:Quick Search'}}}A list of matching documents is provided and you can directly have access them. Once on a document, tap the back icon to go back to search results.
+
+![]({{file name='mobile-search.png'}} ?w=200,h=355,border=true)
 
 ### Favorites
 
@@ -317,15 +311,24 @@ In addition, you are able to **Open directly** documents on your phone by downlo
 </table>
 </div>
 
-### Search
-
-The **Search** menu enables you to query documents on their title and content, by performing a full-text search. {{{multiexcerpt 'full-text-search-user-desc' page='USERDOC:Quick Search'}}}A list of matching documents is provided and you can directly have access them. Once on a document, tap the back icon to go back to search results.
-
-![]({{file name='mobile-search.png'}} ?w=200,h=355,border=true)
-
 ### Personal Workspace
 
 The personal workspace menu gives you a direct access to your collections and personal documents.
+
+### Offline mode
+
+When your phone loses network connection or when you turn it on airplane mode, an offline mode is now available.
+
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='mobile-offline-mode.png'}} ?w=200,h=355,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-offline-mode-refresh.png'}} ?w=200,h=355,border=true)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ## {{> anchor 'limitations'}}Limitations
 

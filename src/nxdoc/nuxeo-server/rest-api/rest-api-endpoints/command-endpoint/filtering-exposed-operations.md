@@ -8,8 +8,10 @@ labels:
     - lts2016-ok
     - operation
     - rest-api
-    - automation-component
+    - troger
+    - automation
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '3342491'
     ajs-parent-page-title: Command Endpoint
@@ -65,9 +67,7 @@ history:
     -
         author: Solen Guitter
         date: '2013-07-17 14:59'
-        message: >-
-            Added related topics and replaced "operation chain" with "automation
-            chain"
+        message: 'Added related topics and replaced "operation chain" with "automation chain"'
         version: '10'
     -
         author: Stéfane Fermigier

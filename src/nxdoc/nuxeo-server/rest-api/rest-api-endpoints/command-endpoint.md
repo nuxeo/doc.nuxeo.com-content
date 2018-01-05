@@ -7,11 +7,12 @@ review:
 labels:
     - lts2016-ok
     - rest-api
+    - troger
     - todo
     - automation
     - endpoint
-    - automation-component
     - excerpt
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'

@@ -7,11 +7,13 @@ review:
 labels:
     - lts2016-ok
     - dam
+    - lmcintyre
     - picture
     - video
     - audio
     - annotation
     - dam-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -54,7 +56,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-10-12 14:25'
-        message: "Remove DAM compat link, add link to How to Contribute Picture Conversions\uFEFF "
+        message: 'Remove DAM compat link, add link to How to Contribute Picture Conversions﻿ '
         version: '48'
     -
         author: Solen Guitter
@@ -234,9 +236,7 @@ history:
     -
         author: Solen Guitter
         date: '2012-09-03 14:46'
-        message: >-
-            Replaced Mercurial with GitHub and moved page to the technical
-            documentation space
+        message: Replaced Mercurial with GitHub and moved page to the technical documentation space
         version: '12'
     -
         author: Solen Guitter

@@ -7,6 +7,7 @@ review:
 toc: true
 labels:
     - lts2016-ok
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
@@ -20,52 +21,52 @@ confluence:
     source_link: /display/NXDOC/Security+Recommendations
 tree_item_index: 400
 history:
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-20 09:27'
         message: ix ancho
         version: '10'
-    -
+    - 
         author: Solen Guitter
         date: '2016-06-20 09:26'
         message: ''
         version: '9'
-    -
+    - 
         author: Pierre-Gildas Millon
         date: '2016-06-09 12:21'
         message: ''
         version: '8'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-08 12:28'
         message: ''
         version: '7'
-    -
+    - 
         author: Manon Lumeau
         date: '2016-06-08 12:19'
         message: ''
         version: '6'
-    -
+    - 
         author: Julien Carsique
         date: '2016-06-07 13:51'
         message: review
         version: '5'
-    -
+    - 
         author: Pierre-Gildas Millon
         date: '2016-06-07 09:30'
         message: ''
         version: '4'
-    -
+    - 
         author: Pierre-Gildas Millon
         date: '2016-06-03 14:09'
         message: ''
         version: '3'
-    -
+    - 
         author: Pierre-Gildas Millon
         date: '2016-06-03 14:08'
         message: ''
         version: '2'
-    -
+    - 
         author: Pierre-Gildas Millon
         date: '2016-06-03 13:23'
         message: ''

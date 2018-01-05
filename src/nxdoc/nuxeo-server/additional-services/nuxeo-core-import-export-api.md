@@ -2,14 +2,16 @@
 title: Nuxeo Core Import / Export API
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - import
+    - fguillaume
     - export
     - core-io-component
     - excerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -32,7 +34,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-10-15 08:22'
-        message: form -> from
+        message: 'form -> from'
         version: '18'
     -
         author: Ronan Daniellou
@@ -57,7 +59,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-10-14 16:41'
-        message: Fixes "Export Format" anchor link
+        message: 'Fixes "Export Format" anchor link'
         version: '13'
     -
         author: Ronan Daniellou

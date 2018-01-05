@@ -2,7 +2,7 @@
 title: Security Policy Service
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
@@ -10,8 +10,10 @@ labels:
     - security-policy
     - community-links
     - acl
+    - bdelbosc
     - security-component
     - excerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '20515363'

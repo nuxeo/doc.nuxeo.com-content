@@ -9,6 +9,8 @@ labels:
     - howto
     - webengine
     - webengine-component
+    - dmetzler
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '3343141'
     ajs-parent-page-title: WebEngine Tutorials

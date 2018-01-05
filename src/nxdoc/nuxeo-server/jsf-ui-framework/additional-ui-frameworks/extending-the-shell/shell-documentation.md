@@ -7,8 +7,10 @@ review:
 labels:
     - content-review-lts2016
     - shell
+    - jcarsique
     - shell-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '4687725'
     ajs-parent-page-title: Extending The Shell

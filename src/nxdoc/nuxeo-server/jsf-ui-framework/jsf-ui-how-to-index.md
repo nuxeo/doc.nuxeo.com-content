@@ -7,6 +7,8 @@ review:
 labels:
     - lts2016-ok
     - index
+    - mlumeau
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950313'
     ajs-parent-page-title: Nuxeo JSF UI
@@ -35,12 +37,12 @@ history:
     -
         author: Solen Guitter
         date: '2016-09-05 10:09'
-        message: Rename page (Web UI -> JSF UI)
+        message: 'Rename page (Web UI -> JSF UI)'
         version: '7'
     -
         author: Solen Guitter
         date: '2016-09-05 10:09'
-        message: Update filter (Web UI -> JSF UI)
+        message: 'Update filter (Web UI -> JSF UI)'
         version: '6'
     -
         author: Manon Lumeau

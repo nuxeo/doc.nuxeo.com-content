@@ -2,13 +2,15 @@
 title: Workflow Escalation Rules Example
 review:
     comment: ''
-    date: '2017-01-26'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - workflow
+    - grenard
     - escalation
     - excerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235786'

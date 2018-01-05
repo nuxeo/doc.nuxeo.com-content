@@ -2,13 +2,15 @@
 title: DBS
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - mongodb
+    - kleturc
     - mongodb-component
     - excerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '20515468'
@@ -234,7 +236,7 @@ When configured for use with MarkLogic, each Nuxeo document is stored as a singl
 
 ### Schema Properties
 
-For user-defined schemas (and regular Nuxeo schemas, like dublincore), properties are stored as you would expect in JSON (or XML for MarkLogic):
+For user-defined schemas (and regular Nuxeo schemas, like `dublincore`), properties are stored as you would expect in JSON (or XML for MarkLogic):
 
 *   Regular properties directly (like `dc:title` or `dc__title`).
 *   List properties as lists (like `dc:contributors` or `dc__contributors`).
@@ -272,12 +274,6 @@ Due to the nature of the MongoDB storage, we use a transaction model equivalent 
 As MarkLogic relies on DBS, we are currently using the same transactional behavior.
 
 Full-text configuration is fixed to a default useful for evaluation (all textual fields and blobs are indexed), but a production instance should use Elasticsearch with a suitable full-text configuration.
-
-### Not Yet Implemented
-
-The following features are planned but are not yet implemented as of Nuxeo Platform 8.10:
-
-*   tags aren't supported ([NXP-17670](https://jira.nuxeo.com/browse/NXP-17670)).
 
 * * *
 

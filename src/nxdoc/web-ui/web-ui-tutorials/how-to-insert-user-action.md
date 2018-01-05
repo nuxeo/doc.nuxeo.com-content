@@ -1,5 +1,5 @@
 ---
-title: "HOWTO: Insert a User Action"
+title: 'HOWTO: Insert a User Action'
 review:
     comment: ''
     date: '2017-06-15'
@@ -9,14 +9,17 @@ details:
     howto:
         excerpt: Learn how to insert a new user action using the Studio Designer
         level: Intermediate
-        tool:
-        topics: Web UI, Studio Designer
+        tool: null
+        topics: 'Web UI, Studio Designer'
 labels:
     - tutorial
     - nuxeo-elements
+    - tcardoso
     - nuxeo-ui-elements
     - polymer
+    - content-review-lts2017
 tree_item_index: 1300
+
 ---
 {{! excerpt}}
 In this tutorial you will learn how to insert a user action on your instance using Studio Designer, to easily validate documents.

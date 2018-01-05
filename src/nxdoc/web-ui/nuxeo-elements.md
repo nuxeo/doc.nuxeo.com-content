@@ -2,14 +2,16 @@
 title: Nuxeo Elements
 review:
     comment: ''
-    date: '2017-01-13'
+    date: '2017-12-15'
     status: ok
 toc: true
 labels:
     - lts2016-ok
     - nuxeo-elements
+    - nsilva
     - nuxeo-ui-elements
     - nuxeo-dataviz-elements
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '26316892'
     ajs-parent-page-title: Web UI

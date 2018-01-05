@@ -5,8 +5,12 @@ review:
     date: '2017-10-02'
     status: ok
 labels:
-    - performances
+    - performance
+    - content-review-lts2017
+    - home
+    - mlumeau
 tree_item_index: 800
+
 ---
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">

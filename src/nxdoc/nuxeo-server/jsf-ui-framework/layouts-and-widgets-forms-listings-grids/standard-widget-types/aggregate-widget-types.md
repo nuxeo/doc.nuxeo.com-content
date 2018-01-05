@@ -2,14 +2,16 @@
 title: Aggregate Widget Types
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - elasticsearch
     - aggregate
+    - grenard
     - aggregates-widgets-component
     - excerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3868345'

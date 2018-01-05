@@ -2,13 +2,15 @@
 title: Admin Tab Overview
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-14'
     status: ok
 labels:
     - content-review-lts2016
     - admin-center
+    - bchauvin
     - admin-center-component
     - multiexcerpt-include
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -23,7 +25,7 @@ confluence:
     source_link: /display/NXDOC/Admin+Tab+Overview
 tree_item_index: 2000
 version_override:
-    'LTS 2015': 710/admindoc/admin-tab-overview
+    LTS 2015: 710/admindoc/admin-tab-overview
     '6.0': 60/admindoc/admin-tab-overview
 history:
     -
@@ -104,7 +106,7 @@ history:
     -
         author: Thomas Roger
         date: '2014-09-03 15:26'
-        message: Add "Logs" documentation to monitoring
+        message: 'Add "Logs" documentation to monitoring'
         version: '22'
     -
         author: Solen Guitter
@@ -213,6 +215,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 The Admin tab, also called Admin Center, is a space within the Nuxeo Platform that provides administrative services, such as server and application usage summary information, as well as access to upgrades, patches, the Nuxeo Marketplace, and Nuxeo Studio projects. It is available to administrators and power users. Power users have access to a limited set of admin features.
 
 The Admin tab offers access to different kinds of information about your Nuxeo instance. Depending the addons you have installed on the Platform, you may have more or less information, i.e. more or less tabs.
@@ -256,7 +260,7 @@ The default Activity subtabs are:
 
 ## Nuxeo Online Services
 
-You can connect your Nuxeo instance with your [Nuxeo Connect](http://www.nuxeo.com/services/support/) account. This enables you to get a summary of your Nuxeo Online Services registration, and to register your Nuxeo Platform if you haven't done it yet.
+You can connect your Nuxeo instance with your [Nuxeo Online Services](http://www.nuxeo.com/services/support/) account. This enables you to get a summary of your Nuxeo Online Services registration, and to register your Nuxeo Platform if you haven't done it yet.
 
 ![]({{file name='Admin-Center-Connect.png'}} ?w=600,border=true)
 
@@ -265,15 +269,15 @@ You can connect your Nuxeo instance with your [Nuxeo Connect](http://www.nuxeo.c
 
 ## Update Center
 
-This section of the Admin tab provides all the updates you can need (updates and hotfixes, Nuxeo Packages, direct access to your Nuxeo Studio customizations, local packages).
+This section of the Admin tab provides all the updates you can need (updates and hotfixes, Nuxeo Packages, direct access to your Nuxeo Studio configuration, local packages).
 
 ![]({{file name='Admin-Center-updateCenter.png'}} ?w=600,border=true)
 
-*   The **Nuxeo Studio** tab enables you to update your application with your Nuxeo Studio customizations.
+*   The **Nuxeo Studio** tab enables you to update your application with your Nuxeo Studio configuration.
 *   The **Nuxeo Software Updates** tab displays the hotfixes available for your Nuxeo version and the updates for the packages you have installed.
-*   The **Private Packages** tab displays the lists of packages specific to your project, hence private: the Studio customizations and possible packaged customizations done outside Studio.
+*   The **Private Packages** tab displays the lists of packages specific to your project, hence private: the Studio releases and possible packaged customizations done outside Studio.
 *   The **Packages from Nuxeo Marketplace** displays the list of all available packages.
-*   The **Local Packages** tab displays the packages (hotfixes, addons, Studio customization) you have downloaded and that are either ready to be installed or already installed.
+*   The **Local Packages** tab displays the packages (hotfixes, addons, Studio releases) you have downloaded and that are either ready to be installed or already installed.
 
 ## Monitoring
 
@@ -286,7 +290,7 @@ This section of the Admin tab enables administrators to monitor some technical i
 *   The **Nuxeo Event Bus** displays statistics about the processing of listeners.
 *   The **Shell** tab enables users to use the [Nuxeo Shell]({{page page='nuxeo-shell'}}).
 *   The **Logs** tab displays the content of the server log files. You can also download the full log files.
-    **Note:** If the Nuxeo clustering configuration is enabled, only the logs of the node you are connected to will be displayed.
+    Note: If the Nuxeo clustering configuration is enabled, only the logs of the node you are connected to will be displayed.
 
 ## Cloud Services
 
@@ -326,6 +330,6 @@ This tab enables to check and manage the Elasticsearch indexation.
 
 ## Workflow
 
-This section enables administrators to manage the different workflows available (including your customized workflows from Studio) and especially to define for which users the workflow is available.
+This section enables administrators to manage the different workflows available (including your workflows configured in Studio) and especially to define for which users the workflow is available.
 
 ![]({{file name='AdminCenter-workflow-tab.png'}} ?w=600,border=true)

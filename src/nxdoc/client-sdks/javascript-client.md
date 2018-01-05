@@ -7,11 +7,13 @@ review:
 labels:
     - lts2016-ok
     - javascript
+    - troger
     - client
     - sdk
     - nuxeo-js
     - javascript-client-component
     - link-update
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16091040'

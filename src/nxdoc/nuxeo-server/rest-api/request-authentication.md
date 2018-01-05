@@ -7,8 +7,10 @@ review:
 labels:
     - lts2016-ok
     - authentication
+    - dmetzler
+    - content-review-lts2017
 version_override:
-    'LTS 2015': 710/nxdoc/authenticating-the-requests/
+    LTS 2015: 710/nxdoc/authenticating-the-requests/
     '6.0': 60/nxdoc/authenticating-the-requests/
 confluence:
     ajs-parent-page-id: '13664833'

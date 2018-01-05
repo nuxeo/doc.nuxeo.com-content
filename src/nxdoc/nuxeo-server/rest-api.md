@@ -2,20 +2,19 @@
 title: REST API
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - url
     - rest-api
-    - last-review-20150422
-    - rest-api-component
+    - bchauvin
     - university
     - excerpt
     - multi-excerpt
+    - lts2017-ok
 toc: true
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '31033314'
     ajs-parent-page-title: Nuxeo Server
@@ -77,7 +76,7 @@ history:
     -
         author: Bertrand Chauvin
         date: '2015-10-19 15:45'
-        message: localhost -> servername
+        message: 'localhost -> servername'
         version: '92'
     -
         author: Bertrand Chauvin

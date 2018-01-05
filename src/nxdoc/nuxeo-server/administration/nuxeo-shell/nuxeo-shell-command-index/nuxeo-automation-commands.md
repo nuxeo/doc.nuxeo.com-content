@@ -7,9 +7,11 @@ review:
 labels:
     - content-review-lts2016
     - shell
+    - jcarsique
     - automation
     - shell-component
     - nxdoc-751
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '4687648'
     ajs-parent-page-title: Nuxeo Shell Command Index
@@ -23,7 +25,7 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Automation+Commands
 tree_item_index: 400
 version_override:
-    'LTS 2015': 710/admindoc/nuxeo-automation-commands
+    LTS 2015: 710/admindoc/nuxeo-automation-commands
     '6.0': 60/admindoc/nuxeo-automation-commands
     '5.8': 58/admindoc/nuxeo-automation-commands
 history:

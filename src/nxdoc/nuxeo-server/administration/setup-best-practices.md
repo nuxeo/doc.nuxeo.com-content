@@ -2,14 +2,16 @@
 title: Setup Best Practices
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-13'
     status: ok
 labels:
     - content-review-lts2016
     - configuration
     - alerts
     - logs
+    - bdelbosc
     - last-review-20141126
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -24,7 +26,7 @@ confluence:
     source_link: /display/NXDOC/Setup+Best+Practices
 tree_item_index: 500
 version_override:
-    'LTS 2015': 710/admindoc/recommended-configurations
+    LTS 2015: 710/admindoc/recommended-configurations
     '6.0': 60/admindoc/recommended-configurations
     '5.8': 58/admindoc/recommended-configurations
 history:

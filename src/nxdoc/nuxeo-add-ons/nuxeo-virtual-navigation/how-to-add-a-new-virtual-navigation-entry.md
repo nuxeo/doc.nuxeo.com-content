@@ -15,8 +15,10 @@ labels:
     - virtual-navigation
     - howto
     - content-view
+    - atchertchian
     - studio
     - virtual-navigation-component
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '20517205'
@@ -24,8 +26,7 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Add+a+New+Virtual+Navigation+Entry
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Add+a+New+Virtual+Navigation+Entry
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Add+a+New+Virtual+Navigation+Entry'
     page_id: '3342808'
     shortlink: 2AEz
     shortlink_source: 'https://doc.nuxeo.com/x/2AEz'
@@ -44,7 +45,7 @@ history:
     -
         author: Ronan Daniellou
         date: '2015-11-18 14:50'
-        message: Moved description to "Nuxeo Virtual Navigation" page.
+        message: 'Moved description to "Nuxeo Virtual Navigation" page.'
         version: '30'
     -
         author: Ronan Daniellou

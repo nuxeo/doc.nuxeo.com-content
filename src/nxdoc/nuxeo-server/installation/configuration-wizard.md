@@ -7,6 +7,9 @@ review:
 toc: true
 labels:
     - lts2016-ok
+    - installation
+    - content-review-lts2017
+    - mlumeau
 confluence:
     ajs-parent-page-id: '3866685'
     ajs-parent-page-title: Installation
@@ -20,26 +23,26 @@ confluence:
     source_link: /display/NXDOC/Configuration+Wizard
 tree_item_index: 1000
 version_override:
-    'LTS 2015': 710/admindoc/setup
+    LTS 2015: 710/admindoc/setup
     '6.0': 60/admindoc/setup
     '5.8': 58/admindoc/setup
 history:
-    -
+    - 
         author: Alain Escaffre
         date: '2016-03-23 11:16'
         message: ''
         version: '4'
-    -
+    - 
         author: Alain Escaffre
         date: '2016-03-23 11:03'
         message: ''
         version: '3'
-    -
+    - 
         author: Alain Escaffre
         date: '2016-03-23 10:36'
         message: ''
         version: '2'
-    -
+    - 
         author: Alain Escaffre
         date: '2016-03-23 10:35'
         message: ''
@@ -48,11 +51,11 @@ history:
 ---
 The Nuxeo Platform provides you with easy access to the configuration of your Nuxeo server, thanks to the Admin tab and the Startup Wizard. For advanced configuration or a simple review, manual edition of Nuxeo's configuration file, called `nuxeo.conf`, and a [template system]({{page page='configuration-templates'}}) is also available.
 
-## Startup Wizard&nbsp;{{> anchor 'wizard'}}
+## Startup Wizard {{> anchor 'wizard'}}
 
 The first time you start the Nuxeo Platform and go the URL [http://localhost:8080/nuxeo](http://localhost:8080/nuxeo), a Startup Wizard will guide you to the main configuration steps and enable you to choose which addons you want to enable on the Platform. For each step, a default setting is proposed that enables you to test the application. You can change this default configuration to adapt it to specific environments.
 
-The settings defined during the initial setup can be changed afterward [using the Admin tab](#setup-admincenter) or by [editing Nuxeo's configuration file]({{page page='configuration-parameters-index-nuxeoconf'}}) manually. Addons can also be added or removed afterwards from the Admin tab.
+The settings defined during the initial setup can be changed afterward by [editing Nuxeo's configuration file]({{page page='configuration-parameters-index-nuxeoconf'}}) manually. Addons can also be added or removed afterwards with [nuxeoctl]({{page page='nuxeoctl-and-control-panel-usage'}}).
 
 {{#> callout type='tip' }}
 
@@ -68,7 +71,7 @@ This step enables you to change the default IP address of the server and where t
 
 ### Proxy Settings {{> anchor 'proxy-settings'}}
 
-Some features of Nuxeo applications requires to access the Internet. That's the case of the Update Center from which you can access to the Marketplace addons and plugins, updates for your application, your Studio customizations.
+Some features of Nuxeo applications requires to access the Internet. If you have installed Nuxeo JSF UI, that's the case of the Update Center from which you can access to the Marketplace addons and plugins, updates for your application, your Studio customizations.
 
 ![]({{file name='Wizard_proxy_settings.png'}} ?w=550,border=true)
 
@@ -115,7 +118,7 @@ Select the additional features you want to install on the Platform. You can also
 
 {{#> callout type='tip' }}
 
-You can install or uninstall addons afterwards from the [Admin tab]({{page page='admin-tab-overview'}}).
+You can install or uninstall addons afterwards with [nuxeoctl]({{page page='nuxeoctl-and-control-panel-usage'}}).
 
 {{/callout}}
 

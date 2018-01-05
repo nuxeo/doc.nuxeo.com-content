@@ -2,7 +2,7 @@
 title: How to Make a Simple Task Assignment to One or Many Users
 review:
     comment: ''
-    date: '2017-01-20'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
@@ -16,16 +16,17 @@ labels:
     - automation
     - create-task-operation
     - workflow
+    - grenard
     - studio
     - excerpt
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '19235619'
     ajs-parent-page-title: Workflow How-To Index
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Make+a+Simple+Task+Assignment+to+One+or+Many+Users
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Make+a+Simple+Task+Assignment+to+One+or+Many+Users
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Make+a+Simple+Task+Assignment+to+One+or+Many+Users'
     page_id: '3345546'
     shortlink: igwz
     shortlink_source: 'https://doc.nuxeo.com/x/igwz'

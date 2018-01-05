@@ -7,6 +7,8 @@ review:
 labels:
     - content-review-lts2016
     - resources-compatibility
+    - atchertchian
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons

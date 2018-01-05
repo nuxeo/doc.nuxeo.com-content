@@ -7,8 +7,10 @@ review:
 labels:
     - lts2016-ok
     - workflow
+    - grenard
     - subworkflow
     - sub-workflow
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '14257562'
@@ -88,6 +90,7 @@ history:
         message: ''
         version: '1'
 previous_link: /nxdoc/2-creating-the-subworkflows
+
 ---
 {{#> callout type='info' }}
 

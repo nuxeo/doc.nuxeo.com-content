@@ -2,14 +2,15 @@
 title: VCS Tables
 review:
     comment: ''
-    date: '2016-12-08'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - vcs
-    - clustering
     - acl
+    - bdelbosc
     - vcs-component
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3342350'

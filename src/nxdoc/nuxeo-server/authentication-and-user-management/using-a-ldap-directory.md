@@ -8,10 +8,12 @@ labels:
     - lts2016-ok
     - ldap
     - authentication
+    - dmetzler
     - active-directory
     - link-update
     - directory-component
     - migration-sample
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089115'
@@ -179,7 +181,7 @@ history:
     -
         author: Thierry Martins
         date: '2011-09-08 17:42'
-        message: add config for DM >= 5.4.2
+        message: 'add config for DM >= 5.4.2'
         version: '8'
     -
         author: Julien Carsique

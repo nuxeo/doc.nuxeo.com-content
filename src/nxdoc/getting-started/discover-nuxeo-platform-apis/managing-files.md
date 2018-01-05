@@ -1,12 +1,13 @@
 ---
 title: Managing Files
 review:
-    comment: 'Allow download policy for Administrators'
+    comment: Allow download policy for Administrators
     date: '2017-02-21'
     status: ok
 toc: true
 labels:
     - lts2016-ok
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '29460589'
     ajs-parent-page-title: Getting Started with the Nuxeo Platform
@@ -147,6 +148,7 @@ history:
         version: '1'
 previous_link: /nxdoc/handling-permissions
 next_link: /nxdoc/retrieving-audit-log
+
 ---
 {{! excerpt}}
 
@@ -222,7 +224,8 @@ Upload a file to your Nuxeo Platform instance, create a contract and attach the 
             'name': 'awesome-contract',
             'properties': {
               'dc:title': fileName,
-              'file:content': uploadedFile.blob
+              'file:content': uploadedFile.blob,
+              'bcsalescommon:amount': '15000'
             }
           };
 

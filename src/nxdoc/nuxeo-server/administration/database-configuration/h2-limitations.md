@@ -2,13 +2,15 @@
 title: H2 Limitations
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - h2
     - database
+    - kleturc
     - limitations
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '3342340'
     ajs-parent-page-title: Database Configuration
@@ -22,7 +24,7 @@ confluence:
     source_link: /display/NXDOC/H2+Limitations
 tree_item_index: 900
 version_override:
-    'LTS 2015': 710/admindoc/h2-limitations
+    LTS 2015: 710/admindoc/h2-limitations
     '6.0': 60/admindoc/h2-limitations
 history:
     -

@@ -2,12 +2,14 @@
 title: Nuxeo Shibboleth Invitation
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - shibboleth-component
+    - fdavid
     - github-readme
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

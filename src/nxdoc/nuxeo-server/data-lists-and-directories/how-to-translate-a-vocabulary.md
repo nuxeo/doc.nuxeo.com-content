@@ -2,7 +2,7 @@
 title: How to Translate a Vocabulary
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
@@ -13,8 +13,10 @@ details:
 labels:
     - lts2016-ok
     - vocabulary
+    - tmartins
     - howto
     - excerpt
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '4688939'
     ajs-parent-page-title: Data Lists and Directories

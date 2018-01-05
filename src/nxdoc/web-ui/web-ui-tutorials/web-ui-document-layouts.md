@@ -1,5 +1,5 @@
 ---
-title: "HOWTO: Customize Document Layouts"
+title: 'HOWTO: Customize Document Layouts'
 review:
     comment: ''
     date: '2017-01-02'
@@ -9,18 +9,22 @@ details:
     howto:
         excerpt: Learn how to use document layouts with Web UI and Studio Designer
         level: Intermediate
-        tool: Studio Designer, code
-        topics: Web UI, Studio Designer
+        tool: 'Studio Designer, code'
+        topics: 'Web UI, Studio Designer'
 labels:
     - view-designer
     - nuxeo-web-ui
+    - nuxeo-elements
+    - tcardoso
+    - nuxeo-ui-elements
     - extension
     - layouts
+    - content-review-lts2017
 tree_item_index: 400
 
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/store/187249-document-and-workflow-task-layouts-with-nuxeo-studio-designer) on Nuxeo University. 
+Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner) on Nuxeo University.
 {{/callout}}  
 
 Layouts are used to display a document's metadata in different use cases. It's basically a group of widgets and specifies how these widgets are assembled and displayed.

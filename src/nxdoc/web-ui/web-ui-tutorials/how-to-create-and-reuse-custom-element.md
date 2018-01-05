@@ -1,8 +1,8 @@
 ---
-title: "HOWTO: Create and Reuse a Custom element"
+title: 'HOWTO: Create and Reuse a Custom element'
 review:
     comment: ''
-    date: '2017-04-12'
+    date: '2017-12-15'
     status: ok
 toc: true
 details:
@@ -12,22 +12,22 @@ details:
         tool: code
         topics: Web UI
 labels:
-    - lts2016-ok
+    - lts2017-ok
     - tutorial
     - nuxeo-elements
+    - tcardoso
     - nuxeo-ui-elements
     - polymer
 tree_item_index: 1200
+
 ---
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/store/187249-document-and-workflow-task-layouts-with-nuxeo-studio-designer) on Nuxeo University.
+Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner) on Nuxeo University.
 {{/callout}}
 
 {{! excerpt}}
 In this tutorial you will learn how to create and reuse custom elements in Studio Designer.
 {{! /excerpt}}
-
-{{{multiexcerpt 'Designer-restricted-access-note' page='generic-multi-excerpts'}}}
 
 ## Requirements
 
@@ -44,7 +44,7 @@ In Studio Modeler, go to **Configuration**&nbsp;> **Content Model**&nbsp;> **Sch
 
 Go to the Studio Designer on the **Resources** tab.
 1. Create a folder called `elements`.
-1. In it, create an element called `my-validation-element`.
+1. In it, create an element, using the `Sample layout template` called `my-validation-element`.
   ![]({{file name='create-element-VD.png'}} ?w=200,border=true)
 1. Edit the layout of the element by adding the validation schema.
   ![]({{file name='schema-annotations-VD.png'}} ?w=200,border=true)
@@ -59,8 +59,8 @@ Go to the Studio Designer on the **Resources** tab.
 
 ## Reuse an Element
 
-Now, go to your `contract` document type, on the view layout to use your element:
-1. Click on **Customize**.
+Now, go to your `contract` document type, on the `view` layout to use your element:
+1. Click on **Configure**.
 1. Switch to Code Editor at the button of the main view. On the search available in the elements catalog, search `my-validation-element`.
 1. Drag and drop it from the catalog to the editor.
   ![]({{file name='contract-view-layout-element.png'}} ?w=650,border=true)

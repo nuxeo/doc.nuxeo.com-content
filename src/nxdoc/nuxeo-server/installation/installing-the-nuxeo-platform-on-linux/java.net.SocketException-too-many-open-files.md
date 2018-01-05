@@ -2,11 +2,15 @@
 title: java.net.SocketException Too many open files
 review:
     comment: ''
-    date: '2017-02-01'
+    date: '2017-12-14'
     status: ok
 labels:
+    - lts2017-ok
+    - install-linux
+    - mguillaume
 toc: true
 tree_item_index: 300
+
 ---
 
 ## The Symptoms

@@ -2,13 +2,14 @@
 title: Configuration Templates
 review:
     comment: ''
-    date: '2017-07-17'
+    date: '2017-12-15'
     status: ok
 labels:
     - content-review-lts2016
     - templates
     - configuration
-    - jc
+    - fdavid
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
@@ -23,7 +24,7 @@ confluence:
 tree_item_index: 200
 toc: true
 version_override:
-    'LTS 2015': 710/admindoc/configuration-templates
+    LTS 2015: 710/admindoc/configuration-templates
     '6.0': 60/admindoc/configuration-templates
     '5.8': 58/admindoc/configuration-templates
 history:
@@ -138,14 +139,15 @@ Here are the templates provided by default:
 
 *   `common`: Common template used by other templates
 *   [`default`]({{page page='connecting-nuxeo-to-the-database'}}): default Nuxeo configuration template for test purpose
-*   `sql`: Configuration template for SQL directories (since 9.2)
 *   [`https`]({{page page='http-and-https-reverse-proxy-configuration'}}): (not recommended) Template to make the server listen to port 443 (HTTPS)
 *   [`postgresql`]({{page page='postgresql'}}): PostgreSQL configuration template
 *   `postgresql-quartz-cluster`
 *   [`mssql`]({{page page='microsoft-sql-server'}}): MS SQL Server configuration template
 *   `mssql-quartz-cluster`
 *   [`mysql`]({{page page='mysql'}}): MySQL configuration template
+*   `mysql-quartz-cluster`
 *   [`mariadb`]({{page page='mariadb'}}): MariaDB configuration template (since Nuxeo FT 9.1; for older versions of Nuxeo the `mysql` template should be used)
+*   `mariadb-quartz-cluster`
 *   [`mongodb`]({{page page='mongodb'}}): MongoDB configuration template
 *   [`oracle`]({{page page='oracle'}}): Oracle configuration template
 *   `oracle-quartz-cluster`;

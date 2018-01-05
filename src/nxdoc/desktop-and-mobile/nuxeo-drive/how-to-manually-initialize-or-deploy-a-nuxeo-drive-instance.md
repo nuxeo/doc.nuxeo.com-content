@@ -2,13 +2,14 @@
 title: How to Manually Initialize or Deploy a Nuxeo Drive Instance
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
     - nuxeo-drive
-    - nuxeo-drive-component
+    - yachour
     - multiexcerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '14257229'
@@ -16,13 +17,11 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Manually+Initialize+or+Deploy+a+Nuxeo+Drive+Instance
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Manually+Initialize+or+Deploy+a+Nuxeo+Drive+Instance
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Manually+Initialize+or+Deploy+a+Nuxeo+Drive+Instance'
     page_id: '18450728'
     shortlink: KIkZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/KIkZAQ'
-    source_link: >-
-        /display/NXDOC/How+to+Manually+Initialize+or+Deploy+a+Nuxeo+Drive+Instance
+    source_link: /display/NXDOC/How+to+Manually+Initialize+or+Deploy+a+Nuxeo+Drive+Instance
 tree_item_index: 600
 history:
     -

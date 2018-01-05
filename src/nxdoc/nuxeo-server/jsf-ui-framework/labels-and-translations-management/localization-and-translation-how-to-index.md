@@ -8,16 +8,17 @@ labels:
     - lts2016-ok
     - localization
     - translation
+    - mlumeau
     - index
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '19235763'
     ajs-parent-page-title: Labels and Translations Management
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Localization+and+Translation+How-To+Index
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Localization+and+Translation+How-To+Index
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Localization+and+Translation+How-To+Index'
     page_id: '17794454'
     shortlink: loUPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/loUPAQ'

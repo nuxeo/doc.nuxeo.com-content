@@ -7,6 +7,7 @@ review:
 toc: true
 labels:
     - lts2016-ok
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons

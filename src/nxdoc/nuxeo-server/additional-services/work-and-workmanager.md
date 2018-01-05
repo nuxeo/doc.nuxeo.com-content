@@ -2,14 +2,15 @@
 title: Work and WorkManager
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - workmanager
-    - cluster
+    - bdelbosc
     - node
     - work-manager-component
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -89,6 +90,8 @@ The code to be executed asynchronously must be implemented in an [`AbstractWork`
 ### Work Construction
 
 Each Work instance must have a unique id describing the Work in its entirety. The id can either be random (just call the empty `AbstractWork()` constructor), or specified by the caller ( `AbstractWork(id)`).
+
+It is important to note that 2 works with the same id are considered identical, the work manager implementation can skip successive invocation to save resources.
 
 At construction time, the Work instance should also have its `setDocument()` method called to set the repository name and document(s) id(s) that this Work instance is going to be dealing with, and a flag specifying whether the work is actually about a whole subtree under the given document. This is important for monitoring and locking purposes.
 
@@ -233,3 +236,9 @@ Then the "background processing nodes" are on the contrary, configured to consum
   <queue id="HeavyProcessing" processing="true"/>
 </extension>
 ```
+
+## Stream WorkManager
+
+An alternative WorkManager has been introduced in Nuxeo 9.3 based on Nuxeo Stream.
+
+Visit the [Nuxeo Stream]({{page page='nuxeo-stream'}}) for more information.

@@ -2,12 +2,14 @@
 title: Elasticsearch Setup
 review:
     comment: ''
-    date: '2017-02-09'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
     - elasticsearch
     - elasticsearch-component
+    - bdelbosc
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -22,7 +24,7 @@ confluence:
     source_link: /display/NXDOC/Elasticsearch+Setup
 tree_item_index: 1000
 version_override:
-    'LTS 2015': 710/admindoc/elasticsearch-setup
+    LTS 2015: 710/admindoc/elasticsearch-setup
     '6.0': 60/admindoc/elasticsearch-setup
 history:
     -
@@ -38,7 +40,7 @@ history:
     -
         author: Manon Lumeau
         date: '2016-08-02 16:03'
-        message: remove <span>
+        message: 'remove <span>'
         version: '85'
     -
         author: Vincent Dutat
@@ -58,7 +60,7 @@ history:
     -
         author: Thierry Martins
         date: '2016-05-19 12:21'
-        message: Add size to 'indexed terms' query
+        message: "Add size to 'indexed terms' query"
         version: '81'
     -
         author: Solen Guitter
@@ -133,9 +135,7 @@ history:
     -
         author: Benoit Delbosc
         date: '2015-11-20 08:47'
-        message: >-
-            Better explanation on how to create a new template to override the
-            ES mapping
+        message: Better explanation on how to create a new template to override the ES mapping
         version: '66'
     -
         author: Manon Lumeau
@@ -609,6 +609,22 @@ Where
 You can find all the available options in the [nuxeo.defaults](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/nuxeo.defaults).
 
 
+#### Index Aliases
+
+Nuxeo supports repository index aliases.  This allows you to distinguish the read index from the write index. To enable this feature set `manageAlias` to `true` in the default template (`elasticsearch-config.xml.nxftl`).
+```
+<elasticSearchIndex name="${elasticsearch.indexName}" type="doc" repository="default" manageAlias="true">
+```
+
+When `manageAlias` is `true`, Nuxeo will manage 2 aliases: one for searching using the name of the contrib (default to `nuxeo`), one for writing with a "-write" suffix (`nuxeo-write`), both aliases will point to the same index (`nuxeo-0000`).  The index name ends with a number and is automatically incremented when a new index is created.
+
+When reindexing the repository, a new index is created (`nuxeo-0001`) and the write alias is updated to use it.  The search alias stays on the previous index (`nuxeo-0000`), it is read-only and can still be used by users.  Once indexing is terminated the search alias is updated to point to the new index (`nuxeo-0001`). An administrator can then backup and delete the old index.
+
+{{#> callout type='warning' }}
+
+If you choose to enable Nuxeo management of index aliases then it is best to leave Nuxeo to manage them. Do not try to manage aliases externally in Elasticsearch at the same time.
+
+{{/callout}}
 ## Disabling Elasticsearch
 
 Elasticsearch is enabled by default, if you want to disable Elasticsearch indexing and search you can simply add the following option to the `nuxeo.conf`:
@@ -617,7 +633,7 @@ Elasticsearch is enabled by default, if you want to disable Elasticsearch indexi
 elasticsearch.enabled=false
 ```
 
-### Disabling Elasticsearch for Audit Logs
+### Disabling Elasticsearch for Audit Logs{{> anchor 'disabling-es-for-audit-logs'}}
 
 When Elasticsearch is enabled and the `audit.elasticsearch.enabled` property is set to `true` in `nuxeo.conf` which is the case by default, Elasticsearch is used as a backend for audit logs.
 

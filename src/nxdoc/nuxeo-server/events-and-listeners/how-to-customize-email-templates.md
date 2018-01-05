@@ -2,13 +2,11 @@
 title: How to Customize Email Templates
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-14'
     status: ok
 details:
     howto:
-        excerpt: >-
-            Learn how to create new alert&nbsp;email or override existing alert
-            emails with Nuxeo Studio.
+        excerpt: 'Learn how to create new alert email or override existing alert emails with Nuxeo Studio.'
         level: Beginner
         tool: Studio
         topics: Alerts
@@ -17,10 +15,12 @@ labels:
     - howto
     - link-update
     - mail-template
+    - bchauvin
     - alert
     - notification
     - studio
     - excerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '19235679'
@@ -148,44 +148,23 @@ An email template defines the content of an email that is sent to users under pr
 
 Default templates for mail notifications can be overridden. Just follow those steps:
 
-&nbsp;
-
 {{! /excerpt}}
 
 1.  Create a new **Templates** > **Mail** feature in Studio. Choose ID among the ones that are used in the default product, like `subscriptionsUpdated` for instance (see the [list of all alert templates](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.notification.service.NotificationContrib--templates)).
 2.  Fill in the content of the email that you want to be sent.
     ![]({{file name='studio_mailtemplate_content_2.png'}} ?w=600,border=true)
-    If you want to copy from the default content of the template, you can have a look at it from [GitHub](https://github.com/nuxeo/nuxeo-features/tree/master/nuxeo-platform-notification/nuxeo-platform-notification-core/src/main/resources/templates).
+    If you want to copy from the default content of the template, you can have a look at it from [GitHub](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-platform-notification/nuxeo-platform-notification-core/src/main/resources/templates).
 3.  Save.
-
-&nbsp;
 
 ## Making the Document Links in Notification Emails Point to the Web UI
 
-On Nuxeo LTS 2016, in case both `nuxeo-jsf-ui` and `nuxeo-web-ui` packages are installed, the document links in notification emails point to the JSF UI.
-If you want to change this behavior to make them point to the Web UI you need to add the following [XML contribution]({{page page='how-to-contribute-to-an-extension'}}):
-
-```xml
-<component name="org.nuxeo.ecm.platform.url.service.DocumentViewCodecService.codecs.notificationDocId.webui">
-<!-- If you contribute this extension in Nuxeo Studio, start copying from the line below. The component tag is not needed. -->
-  <extension target="org.nuxeo.ecm.platform.url.service.DocumentViewCodecService" point="codecs">
-    <documentViewCodec name="notificationDocId" enabled="true" prefix="doc"
-        class="org.nuxeo.web.ui.url.codec.WebNotificationDocumentIdCodec" priority="1000" />
-  </extension>
-<!-- If you contribute this extension in Nuxeo Studio, stop copying from here. The component tag is not needed. -->
-</component>
-```
-
-Note that the default `priority` value for the JSF UI contribution is 100 and that the highest priority wins.
-
-See [NXP-20929](https://jira.nuxeo.com/browse/NXP-20929) for details.
+{{multiexcerpt 'override-docs-permalinks' page='how-to-make-jsf-ui-the-default-ui'}}
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to setup a test SMTP server]({{page page='how-to-setup-a-test-smtp-server'}})
-- [How to Make Web UI the Default UI]({{page page='how-to-make-web-ui-the-default-ui'}})
+- [How to Make JSF UI the Default UI]({{page page='how-to-make-jsf-ui-the-default-ui'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}

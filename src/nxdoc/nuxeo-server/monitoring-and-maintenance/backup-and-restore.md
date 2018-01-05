@@ -2,12 +2,14 @@
 title: Backup and Restore
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-14'
     status: ok
 labels:
     - content-review-lts2016
     - backup
+    - bdelbosc
     - nxdoc-742
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance
@@ -21,7 +23,7 @@ confluence:
     source_link: /display/NXDOC/Backup+and+Restore
 tree_item_index: 200
 version_override:
-    'LTS 2015': 710/admindoc/backup-and-restore
+    LTS 2015: 710/admindoc/backup-and-restore
     '6.0': 60/admindoc/backup-and-restore
     '5.8': 58/admindoc/backup-and-restore
 history:
@@ -162,7 +164,9 @@ elasticsearch.enabled=true
 audit.elasticsearch.enabled=true
 ```
 
-you need to backup / restore both the `${seqgen.elasticsearch.indexName}`&nbsp;and&nbsp;`${audit.elasticsearch.indexName}`&nbsp;Elasticsearch indexes [defined in nuxeo.conf]({{page page='elasticsearch-setup#configuringnuxeotoaccessthecluster'}}), following the Elasticsearch&nbsp;[Snapshot And Restore](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-snapshots.html) documentation.
+you need to backup / restore `${audit.elasticsearch.indexName}` Elasticsearch index [defined in nuxeo.conf]({{page page='elasticsearch-setup#configuringnuxeotoaccessthecluster'}}), following the Elasticsearch&nbsp;[Snapshot And Restore](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-snapshots.html) documentation.
+
+Note that since Nuxeo 9.10, the sequence index `${seqgen.elasticsearch.indexName}` can be regenerated quickly at startup, so it is not mandatory to backup this index.
 
 {{#> callout type='warning' }}
 
@@ -191,3 +195,12 @@ These two points ensures that no data will be modified (or deleted) after dumpin
 
 *   As VCS uses the digest of the blob, this ensures a document will be stored only once in the blobstore, even if it is uploaded several times.
 *   As VCS doesn't delete blobs once a document is removed from the repository, you should run a clean-up regularly from the [Admin Center]({{page page='admin-tab-overview'}}) in the menu **System Information** / **Repository binaries**.
+
+**Some remarks about Nuxeo Stream**:
+
+Nuxeo 9.10 introduced [Nuxeo Stream]({{page page='nuxeo-stream'}}), it makes sense to backup streams so a restored instance can continue the stream processing.
+
+When the underlying streams are stored using Chronicle Queues files, they are located inside `${nuxeo.data.dir}` and they are already taken in account by the procedure described above,
+
+When the underlying streams are stored using Kafka the case is more complex because records older than backup date need to be discard.
+So restoring means replicate existing topics until the backup date and reconfigure Nuxeo kafka access to use the new topics.

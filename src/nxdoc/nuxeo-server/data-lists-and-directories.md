@@ -2,15 +2,17 @@
 title: Data Lists and Directories
 review:
     comment: ''
-    date: '2016-12-09'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - ldap
     - sql
-    - directory
+    - directory-component
     - vocabulary
+    - tmartins
     - multiexcerpt-include
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31033314'
@@ -53,9 +55,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-09-19 11:11'
-        message: >-
-            Merging Data Lists and Directories and Directories and Vocabularies
-            pages
+        message: Merging Data Lists and Directories and Directories and Vocabularies pages
         version: '11'
     -
         author: Manon Lumeau
@@ -128,6 +128,7 @@ We try to map all data that can be manipulated like record via directories. For 
 Directories comes with several implementations:
 
 *   SQL directories that can map SQL tables,
+*   noSQL directories with an implementation based on MongoDB (since 8.10)
 *   LDAP directories that can map a LDAP server,
 *   Repository Directory that can map to Documents inside the Repository (since 6.0)
 *   Custom directory relying on Directory Connector to map a remote service
@@ -240,8 +241,6 @@ Example template directory (SQL for this example, see below for the SQL-specific
 <extension target="org.nuxeo.ecm.directory.sql.SQLDirectoryFactory"
     point="directories">
   <directory name="template-directory" template="true">
-    <cacheTimeout>3600</cacheTimeout>
-    <cacheMaxSize>1000</cacheMaxSize>
     <dataSource>java:/nxsqldirectory</dataSource>
     <autoincrementIdField>false</autoincrementIdField>
     <createTablePolicy>on_missing_columns</createTablePolicy>
@@ -291,14 +290,26 @@ Example:
     <directory name="continent">
       <schema>vocabulary</schema>
       <dataSource>java:/nxsqldirectory</dataSource>
-      <cacheTimeout>3600</cacheTimeout>
-      <cacheMaxSize>1000</cacheMaxSize>
+      <cacheEntryName>continent-entry-cache</cacheEntryName>
+      <cacheEntryWithoutReferencesName>continent-entry-cache-without-references</cacheEntryWithoutReferencesName>
       <table>continent</table>
       <idField>id</idField>
       <autoincrementIdField>false</autoincrementIdField>
       <dataFile>directories/continent.csv</dataFile>
       <createTablePolicy>on_missing_columns</createTablePolicy>
     </directory>
+  </extension>
+  <extension target="org.nuxeo.ecm.core.cache.CacheService" point="caches">
+    <cache name="continent-entry-cache">
+      <ttl>20</ttl><!-- minutes -->
+      <option name="maxSize">100</option>
+      <option name="concurrencyLevel">500</option>
+    </cache>
+    <cache name="continent-entry-cache-without-references">
+      <ttl>20</ttl><!-- minutes -->
+      <option name="maxSize">100</option>
+      <option name="concurrencyLevel">500</option>
+    </cache>
   </extension>
 </component>
 ```
@@ -371,8 +382,8 @@ Example:
       <passwordField>password</passwordField>
       <substringMatchType>subany</substringMatchType>
       <readOnly>false</readOnly>
-      <cacheTimeout>3600</cacheTimeout>
-      <cacheMaxSize>1000</cacheMaxSize>
+      <cacheEntryName>ldap-user-entry-cache</cacheEntryName>
+      <cacheEntryWithoutReferencesName>ldap-user-entry-cache-without-references</cacheEntryWithoutReferencesName>
 
       <searchBaseDn>ou=people,dc=example,dc=com</searchBaseDn>
       <searchClass>person</searchClass>
@@ -385,6 +396,19 @@ Example:
       <creationClass>organizationalPerson</creationClass>
       <creationClass>inetOrgPerson</creationClass>
     </directory>
+  </extension>
+  <extension target="org.nuxeo.ecm.core.cache.CacheService" point="caches">
+    <cache name="ldap-user-entry-cache">
+      <option name="maxSize">${nuxeo.cache.maxsize}</option>
+      <ttl>${nuxeo.cache.ttl}</ttl><!-- minutes -->
+      <option name="concurrencyLevel">${nuxeo.cache.concurrencylevel}</option>
+    </cache>
+
+    <cache name="ldap-user-entry-cache-without-references">
+      <option name="maxSize">${nuxeo.cache.maxsize}</option>
+      <ttl>${nuxeo.cache.ttl}</ttl><!-- minutes -->
+      <option name="concurrencyLevel">${nuxeo.cache.concurrencylevel}</option>
+    </cache>
   </extension>
 </component>
 
@@ -493,11 +517,11 @@ The static reference strategy is to apply when a multi-valued attribute stores t
 
 ```
 
-The `staticAttributeId` attribute contains directly the value which can be read and manipulated.
+The `staticAttributeId` attribute contains directly the value which is read and manipulated.
 
 #### Dynamic Reference as a ldapUrl-Valued LDAP Attribute
 
-The dynamic attribute strategy is used when a potentially multi-value attribute stores a LDAP URL intensively, for example the `memberURL`'s attribute of the `groupOfURL` object class.
+The dynamic attribute strategy is used when a potentially multi-valued attribute stores a LDAP URL intensively, for example the `memberURL`'s attribute of the `groupOfURL` object class.
 
 ```html/xml
 <ldapReference field="members" directory="userDirectory"
@@ -506,7 +530,9 @@ The dynamic attribute strategy is used when a potentially multi-value attribute 
 
 ```
 
-The value contained in `dynamicAttributeId` looks like `ldap:///ou=groups,dc=example,dc=com??subtree?(cn=sub*)` and will be resolved by dynamical queries to get all values. The `forceDnConsistencyCheck` attribute will check that the value got through the dynamic resolution correspond to the attended format. Otherwise, the value will be ignored. Use this check when you are not sure of the validity of the distinguished name.
+The value contained in `dynamicAttributeId` looks like `ldap:///ou=groups,dc=example,dc=com??subtree?(cn=sub*)` and will be resolved by dynamical queries to get all values.
+
+The `forceDnConsistencyCheck` attribute will check that the value got through the reference belongs to the target directory. Otherwise, the value will be ignored. Use this check when you are not sure of the validity of the distinguished name.
 
 #### LDAP Tree Reference
 
@@ -518,7 +544,7 @@ The LDAP tree reference can be used to resolve children in the LDAP tree hierarc
 
 ```
 
-The field has to be a list of strings. It will resolve children of entries in the current directory, and look them up in the directory specified in the reference.The scope attribute. Available scopes are "onelevel" (default), "subtree". Children with same id than parent will be filtered. An inverse reference can be used to retrieve the parent form the children entries. It will be stored in a list, even if there can be only 0 or 1 parent.
+The field has to be a list of strings. It will resolve children of entries in the current directory, and look them up in the directory specified in the reference. The scope attribute sets the scope of the search for entries. Available scopes are "onelevel" (default), "subtree". Children with same id than parent will be filtered. An inverse reference can be used to retrieve the parent from the children entries. It will be stored in a list, even if there can be only 0 or 1 parent.
 
 {{#> callout type='warning' }}
 

@@ -7,10 +7,11 @@ review:
 labels:
     - lts2016-ok
     - concepts
+    - fguillaume
     - excerpt
+    - content-review-lts2017
 toc: true
-notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '950287'
     ajs-parent-page-title: Content Repository
@@ -122,7 +123,7 @@ history:
     -
         author: Florent Guillaume
         date: '2011-09-13 23:15'
-        message: document repository -> content repository
+        message: 'document repository -> content repository'
         version: '29'
     -
         author: Florent Guillaume

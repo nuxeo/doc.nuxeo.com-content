@@ -2,12 +2,14 @@
 title: Installing the Nuxeo Platform on Mac OS
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2017-12-14'
     status: ok
 labels:
     - lts2016-ok
     - installation
+    - pabgrall
     - multiexcerpt-include
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
@@ -15,15 +17,14 @@ confluence:
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: Installing+the+Nuxeo+Platform+on+Mac+OS
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/Installing+the+Nuxeo+Platform+on+Mac+OS
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Installing+the+Nuxeo+Platform+on+Mac+OS'
     page_id: '9274338'
     shortlink: 4oON
     shortlink_source: 'https://doc.nuxeo.com/x/4oON'
     source_link: /display/NXDOC/Installing+the+Nuxeo+Platform+on+Mac+OS
 tree_item_index: 500
 version_override:
-    'LTS 2015': 710/admindoc/installing-the-nuxeo-platform-on-mac-os
+    LTS 2015: 710/admindoc/installing-the-nuxeo-platform-on-mac-os
     '6.0': 60/admindoc/installing-the-nuxeo-platform-on-mac-os
     '5.8': 58/admindoc/installing-the-nuxeo-platform-on-mac-os
 history:

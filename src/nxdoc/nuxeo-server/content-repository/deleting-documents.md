@@ -9,8 +9,10 @@ labels:
     - delete
     - life-cycle
     - core-component
+    - fguillaume
     - excerpt
     - multiexcerpt-include
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '950287'
@@ -53,9 +55,7 @@ history:
     -
         author: Solen Guitter
         date: '2015-01-23 13:58'
-        message: >-
-            Update related pages, move Garbage-Collecting Orphaned Binaries in
-            ADMINDOC, formatting
+        message: 'Update related pages, move Garbage-Collecting Orphaned Binaries in ADMINDOC, formatting'
         version: '7'
     -
         author: Julien Carsique

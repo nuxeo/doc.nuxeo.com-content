@@ -2,13 +2,15 @@
 title: Elasticsearch Hints Cheat Sheet
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-14'
     status: ok
 labels:
     - content-review-lts2016
     - elasticsearch
     - elasticsearch-component
+    - bdelbosc
     - excerpt
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'
@@ -100,7 +102,7 @@ This page lists interesting use cases of Elasticsearch Hints.
 
 ## Using the Common Operator on the Main Attachment Content
 
-Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.com/store/155923-what-s-new-in-nuxeo-platform-lts-2015) in [Nuxeo University](https://university.nuxeo.com)
+Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.com/learn/public/course/view/elearning/55/WhatsnewinNuxeoPlatformLTS2015%3F) in [Nuxeo University](https://university.nuxeo.com)
 
 Suppose you want to be able to search using the [common operator](https://www.elastic.co/guide/en/elasticsearch/reference/1.5/query-dsl-common-terms-query.html) on your documents' main attachment content. This Elasticsearch operator is interesting for two reasons:
 

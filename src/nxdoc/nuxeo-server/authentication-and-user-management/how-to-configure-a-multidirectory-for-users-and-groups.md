@@ -2,30 +2,30 @@
 title: How to Configure a Multidirectory for Users and Groups
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2017-12-15'
     status: ok
 details:
     howto:
-        excerpt: >-
-            This page provides a turnkey solution to configure a multidirectory.
+        excerpt: This page provides a turnkey solution to configure a multidirectory.
         level: Intermediate
         tool: XML configuration
         topics: 'LDAP, Multidirectory'
 labels:
     - lts2016-ok
     - ldap
+    - fdavid
     - howto
     - directory-component
     - migration-sample
     - excerpt
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '16089115'
     ajs-parent-page-title: Authentication and User Management
     ajs-space-key: NXDOC
     ajs-space-name: Nuxeo Platform Developer Documentation
     canonical: How+to+Configure+a+Multidirectory+for+Users+and+Groups
-    canonical_source: >-
-        https://doc.nuxeo.com/display/NXDOC/How+to+Configure+a+Multidirectory+for+Users+and+Groups
+    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Configure+a+Multidirectory+for+Users+and+Groups'
     page_id: '19793819'
     shortlink: mwcuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/mwcuAQ'
@@ -123,11 +123,9 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
 ```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.directory.multi.storage.users">
-  <implementation class="org.nuxeo.ecm.directory.ldap.LDAPDirectoryDescriptor" />
-  <implementation class="org.nuxeo.ecm.directory.ldap.LDAPServerDescriptor" />
-  <require>org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory</require>
-  <!-- the groups SQL directories are required to make this bundle work -->
-  <require>org.nuxeo.ecm.directory.sql.storage</require>
+
+  <!-- the groups directories are required to make this bundle work -->
+  <require>org.nuxeo.ecm.directory.storage</require>
   <require>org.nuxeo.ecm.platform.usermanager.UserManagerImpl</require>
 
   <extension target="org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory"
@@ -158,10 +156,8 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
       <substringMatchType>subany</substringMatchType>
       <readOnly>true</readOnly>
       <!-- comment <cache* /> tags to disable the cache -->
-      <!-- cache timeout in seconds -->
-      <cacheTimeout>3600</cacheTimeout>
-      <!-- maximum number of cached entries before global invalidation -->
-      <cacheMaxSize>1000</cacheMaxSize>
+      <cacheEntryName>ldap-user-entry-cache</cacheEntryName>
+      <cacheEntryWithoutReferencesName>ldap-user-entry-cache-without-references</cacheEntryWithoutReferencesName>
       <!--
            If the id field is not returned by the search, we set it with the searched entry, probably the login.
            Before setting it, you can change its case. Accepted values are 'lower' and 'upper',
@@ -197,10 +193,8 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
       <searchScope>subtree</searchScope>
       <readOnly>true</readOnly>
       <!-- comment <cache* /> tags to disable the cache -->
-      <!-- cache timeout in seconds -->
-      <cacheTimeout>3600</cacheTimeout>
-      <!-- maximum number of cached entries before global invalidation -->
-      <cacheMaxSize>1000</cacheMaxSize>
+      <cacheEntryName>ldap-group-entry-cache</cacheEntryName>
+      <cacheEntryWithoutReferencesName>ldap-group-entry-cache-without-references</cacheEntryWithoutReferencesName>
 
       <!-- Maximum number of entries returned by the search -->
       <querySizeLimit>200</querySizeLimit>
@@ -223,15 +217,10 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
     </directory>
   </extension>
 
-  <implementation class="org.nuxeo.ecm.directory.sql.SQLDirectoryDescriptor" />
-  <require>org.nuxeo.ecm.directory.sql.SQLDirectoryFactory</require>
-  <extension target="org.nuxeo.ecm.directory.sql.SQLDirectoryFactory"
+  <extension target="org.nuxeo.ecm.directory.GenericDirectory"
     point="directories">
-    <directory name="sqlUserDirectory">
+    <directory name="genericUserDirectory">
       <schema>user</schema>
-      <dataSource>jdbc/nxsqldirectory</dataSource>
-
-<table>users</table>
       <idField>username</idField>
       <passwordField>password</passwordField>
       <passwordHashAlgorithm>SSHA</passwordHashAlgorithm>
@@ -241,30 +230,24 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
       <createTablePolicy>on_missing_columns</createTablePolicy>
       <querySizeLimit>50</querySizeLimit>
       <references>
-        <inverseReference field="groups" directory="sqlGroupDirectory"
+        <inverseReference field="groups" directory="genericGroupDirectory"
           dualReferenceField="members" />
       </references>
     </directory>
-    <directory name="sqlGroupDirectory">
+    <directory name="genericGroupDirectory">
       <schema>group</schema>
-      <dataSource>jdbc/nxsqldirectory</dataSource>
-
-<table>groups</table>
       <idField>groupname</idField>
       <dataFile>groups.csv</dataFile>
       <createTablePolicy>on_missing_columns</createTablePolicy>
       <autoincrementIdField>false</autoincrementIdField>
-      <!-- Add 10 min cache to avoid refetching the groups during login -->
-      <cacheTimeout>360</cacheTimeout>
-      <cacheMaxSize>1000</cacheMaxSize>
       <references>
-        <tableReference field="members" directory="multiUserDirectory"
-          table="user2group" sourceColumn="groupId" targetColumn="userId" schema="user2group"
+        <reference field="members" directory="multiUserDirectory"
+          name="user2group" source="groupId" target="userId" schema="user2group"
           dataFile="user2group.csv" />
-        <tableReference field="subGroups" directory="sqlGroupDirectory"
-          table="group2group" sourceColumn="parentGroupId"
-          targetColumn="childGroupId" schema="group2group" />
-        <inverseReference field="parentGroups" directory="sqlGroupDirectory"
+        <reference field="subGroups" directory="genericGroupDirectory"
+          name="group2group" source="parentGroupId"
+          target="childGroupId" schema="group2group" />
+        <inverseReference field="parentGroups" directory="genericGroupDirectory"
           dualReferenceField="subGroups" />
       </references>
     </directory>
@@ -277,8 +260,8 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
       <schema>user</schema>
       <idField>username</idField>
       <passwordField>password</passwordField>
-      <source name="userSQLsource" creation="true">
-        <subDirectory name="sqlUserDirectory" />
+      <source name="userSource" creation="true">
+        <subDirectory name="genericUserDirectory" />
       </source>
       <source name="userLDAPsource">
         <subDirectory name="ldapUserDirectory" />
@@ -287,8 +270,8 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
     <directory name="multiGroupDirectory">
       <schema>group</schema>
       <idField>groupname</idField>
-      <source name="groupSQLsource" creation="true">
-        <subDirectory name="sqlGroupDirectory" />
+      <source name="groupSource" creation="true">
+        <subDirectory name="genericGroupDirectory" />
       </source>
       <source name="groupLDAPsource">
         <subDirectory name="ldapGroupDirectory" />

@@ -15,6 +15,8 @@ labels:
     - howto
     - template
     - seam-jsf-component
+    - atchertchian
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'

@@ -2,13 +2,15 @@
 title: Internet Information Services (IIS)
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2017-12-15'
     status: ok
 labels:
     - content-review-lts2016
     - iis
     - internet-information-services
+    - pabgrall
     - proxy
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -23,7 +25,7 @@ confluence:
     source_link: /pages/viewpage.action?pageId=14256353
 tree_item_index: 700
 version_override:
-    'LTS 2015': 710/admindoc/internet-information-services-iis-configuration
+    LTS 2015: 710/admindoc/internet-information-services-iis-configuration
     '6.0': 60/admindoc/internet-information-services-iis-configuration
     '5.8': 58/admindoc/internet-information-services-iis-configuration
 history:
@@ -55,7 +57,7 @@ history:
     -
         author: Solen Guitter
         date: '2014-03-25 11:20'
-        message: Added section "Preserving the Host Header"
+        message: 'Added section "Preserving the Host Header"'
         version: '4'
     -
         author: Solen Guitter
@@ -79,19 +81,19 @@ This documentation gives you the guidelines to install a Nuxeo instance on a Win
 Requirements:
 
 *   Windows 2008 or greater
-*   Java 6 or above (for Nuxeo 5.6) and Java 7 or above (for Nuxeo 5.7.1 and greater)
+*   Java 8 or above (for Nuxeo 7.10 and later versions)
 *   IIS 7 or above with ASP.NET role service enabled,
-*   Nuxeo 5.6 or greater installed.
+*   Nuxeo 7.10 or later version installed.
 
 ## Configuration
 
 ### Nuxeo Installation
 
-1.  [Check Java is correctly installed]({{page page='installation'}}).
+1.  [Check Java is correctly installed]({{page page='installation#java-check'}}).
 2.  Download the [Nuxeo Windows distribution](http://www.nuxeo.com/downloads/) (.exe).
 3.  [Install the Nuxeo Platform]({{page page='installing-the-nuxeo-platform-on-windows'}}).
 4.  [Start the Nuxeo instance]({{page page='server-start-and-stop#start-windows'}}).
-5.  Open the Browser from the Windows Server (firewalls must be enabled) at the address `http://NUXEO_SERVER/nuxeo`.
+5.  Open the Browser from the Windows Server (firewalls must be configured so as to allow this) at the address `http://NUXEO_SERVER/nuxeo`.
 6.  [Configure the server]({{page page='configuration-wizard'}}): In **General Settings**, replace IP Address 0.0.0.0 by 127.0.0.1 to limit Tomcat to local answers.
 
 ### Enabling Web Server (IIS)
@@ -163,7 +165,7 @@ Requirements:
 7.  In **Action**:
 
     *   Action type: Rewrite
-    *   `<a>http://127.0.0.1:8080/{R:1</a>}`
+    *   `http://127.0.0.1:8080/{R:1}`
 
 {{#> callout type='info' }}
 
@@ -181,7 +183,7 @@ appcmd.exe set config -section:system.webServer/proxy -preserveHostHeader:true
 
 ### Enhancing the URL MAX Length Parameter
 
-Windows Web Server defines a default limit for URL paramaters. This limit is set to&nbsp;256 characters. In Nuxeo, parameter length can be greater than this default value.
+Windows Web Server defines a default limit for URL parameters. This limit is set to&nbsp;256 characters. In Nuxeo, parameter length can be greater than this default value.
 
 1.  Open the Window registry: Command + R, and type `regedit`.
 2.  Open `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\HTTP\Parameters`.
@@ -194,15 +196,15 @@ Windows Web Server defines a default limit for URL paramaters. This limit is set
 
 ### Testing Your Configuration
 
-We suggest to use a client desktop with Firefox and Firebug installed.
+We suggest to use a client desktop with Firefox and its development tools.
 
-1.  Open Firebug.
-2.  In Firebug, click on the **Net** section.
-3.  Enable the Net feedback.
-4.  Go to [http://iis.servername/nuxeo](http://iis.servername/nuxeo), where `iis.servername` is the name of the server the client can reach.
-5.  Connect as Administrator to Nuxeo.
-    Each line displayed is a request made by the browser.
-6.  Check that each line points to the `iis.servername` and not the 127.0.0.1 address without error (no red lines).
+1.  Open Firefox and hit the `<F12>` key.
+    This action opens the Firefox development tools console.
+2.  Click on the **Network** section.
+3.  Go to [http://iis.servername/nuxeo](http://iis.servername/nuxeo), where `iis.servername` is the name of the server the client can reach.
+4.  Connect as `Administrator` to Nuxeo.
+    Each line displayed in the network console is a request made by the browser.
+5.  Check that each line points to the `iis.servername` and not the 127.0.0.1 address without error.
 
 If you have errors, please check the next section.
 
@@ -214,7 +216,7 @@ If you have errors, please check the next section.
 >
 > There is a problem with the page you are looking for, and it cannot be displayed. When the web server (while acting as a gateway or proxy) contacted the upstream content server, it received an invalid response from the content server.
 
-In the rule you defined the target is&nbsp;[http://internal.address.ip:8080](http://internal.address.ip:8080). This error might occur because the server can't&nbsp;reach this address.
+In the rule you defined the target  as&nbsp;[http://internal.address.ip:8080](http://internal.address.ip:8080). This error might occur because the server cannot&nbsp;reach this address.
 
 ### Error 2
 
@@ -235,4 +237,4 @@ If Nuxeo has a strange behavior, for instance:
 
 These problems may occur because you didn't [enhance the URL MAX Length parameter](#enhancing-the-url-max-length-parameter).
 
-You can look into your firebug if some requests returned a 401, with a "bad url" message.
+You can look into Firefox development tools network console if some requests returned a HTTP&nbsp;401 status, with a "bad url" message.

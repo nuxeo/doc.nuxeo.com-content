@@ -2,12 +2,14 @@
 title: Nuxeo Multi-Tenant
 review:
     comment: ''
-    date: '2017-02-08'
+    date: '2017-12-28'
     status: ok
 labels:
     - lts2016-ok
     - multi-tenant
+    - ataillefer
     - excerpt-include
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons
@@ -43,13 +45,16 @@ history:
         version: '1'
 
 ---
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 {{{excerpt 'USERDOC:Nuxeo Multi-tenant'}}}
 
 ## Installation
 
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
-After you installed it, a tab **Tenant isolation** is available in the Admin Center where you can enable or disable the tenant isolation.
+After you've installed it, a tab **Tenant isolation** is available in the Admin Center where you can enable or disable the tenant isolation.
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">

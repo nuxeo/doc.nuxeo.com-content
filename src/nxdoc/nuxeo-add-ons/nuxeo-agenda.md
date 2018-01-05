@@ -7,6 +7,8 @@ review:
 labels:
     - lts2016-ok
     - nuxeo-agenda
+    - sguitter
+    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

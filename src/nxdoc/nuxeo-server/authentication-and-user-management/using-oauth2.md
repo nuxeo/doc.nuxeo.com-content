@@ -2,12 +2,14 @@
 title: OAuth 2
 review:
     comment: ''
-    date: '2017-07-28'
+    date: '2017-12-11'
     status: ok
 labels:
     - lts2016-ok
     - oauth
-    - oauth-component
+    - ataillefer
+    - authentication
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089115'
@@ -80,13 +82,48 @@ OAuth 2 is natively supported by the Nuxeo Platform, which means there is no bun
 
 ## Client Registration
 
-Nuxeo allows you to register an OAuth 2 client by specifying an arbitrary name, a client ID, possibly a client secret and a list of redirect URIs. To register your own:
+Nuxeo allows you to register an OAuth 2 client by specifying an arbitrary name, a client ID, possibly a client secret and a list of redirect URIs.
+There are two ways of registering a client.
 
-1. Go to the Nuxeo Platform web interface, then browse to the **Admin Center**&nbsp;> **Cloud Services**&nbsp;> **Consumers** tab.
+### Using the REST API
+
+Use the `directory` REST API endpoint to create a new entry in the `oauth2Clients` directory, for instance with `curl`:
+
+```bash
+curl -u Administrator:Administrator \
+  -H 'Content-Type: application/json' \
+  -X POST http://NUXEO_SERVER/nuxeo/api/v1/directory/oauth2Clients \
+  -d @- << EOF
+  {
+    "entity-type": "directoryEntry",
+    "directoryName": "oauth2Clients",
+    "properties": {
+      "name": "My App",
+      "clientId": "myApp",
+      "clientSecret": "secret",
+      "redirectURIs": "https://myapp.mydomain.com/nuxeo-auth-done",
+      "autoGrant": "true",
+      "enabled": "true"
+    }
+  }
+EOF
+```
+
+### Through the Admin Center
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
+1. Go to the Nuxeo Platform web interface, then browse to the **Admin Center** > **Cloud Services** > **Consumers** tab.
 2. Provide a name, a client ID, possibly a client secret, at least one redirect URI and save.
   ![]({{file name='OAuth2-Consumer.png'}} ?w=500,border=true)
-  The OAuth 2 endpoints are now ready to be used.
 
+{{#> callout type='info' }}
+The `Auto-grant` parameter, if checked, allows the OAuth 2 client to bypass the authorization phase, skipping the web page asking the user to allow the application to access the Nuxeo Platform assets. This is the case for the [Mobile application]({{page page='nuxeo-mobile'}}).
+{{/callout}}
+
+
+
+The OAuth 2 endpoints are now ready to be used.
 
 ## OAuth 2 Flow
 
@@ -157,8 +194,8 @@ GET https://NUXEO_SERVER/nuxeo/oauth2/authorize?response_type=code&client_id=myA
     </table>
 </div>
 
-{{#> callout type='note' }}
-User authorization is handled by accessing `https://NUXEO_SERVER/nuxeo/oauth2Grant.jsp`. That lets you customize the way you want your users to let your application get authorized.
+{{#> callout type='info' }}
+If `Auto-grant` is not checked for the OAuth 2 client registered on the server, the user authorization is handled by accessing `https://NUXEO_SERVER/nuxeo/oauth2Grant.jsp`. That lets you customize the way you want your users to let your application get authorized.
 {{/callout}}
 
 {{#> callout type='warning' }}

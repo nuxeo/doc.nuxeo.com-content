@@ -8,8 +8,10 @@ labels:
     - content-review-lts2016
     - action-type
     - action
+    - atchertchian
     - actions-filters-component
     - excerpt
+    - content-review-lts2017
 confluence:
     ajs-parent-page-id: '950289'
     ajs-parent-page-title: 'Actions (Links, Buttons, Icons, Tabs and More)'
