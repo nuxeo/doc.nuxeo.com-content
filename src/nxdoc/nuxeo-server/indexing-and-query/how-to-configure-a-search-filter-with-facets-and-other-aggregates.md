@@ -228,6 +228,10 @@ history:
         version: '1'
 
 ---
+{{#> callout type='info' }}
+This tutorial requires to have the JSF UI addon installed on your server. If you prefer to work with Web UI follow [this tutorial]({{page version='' space='nxdoc' page='web-ui-search'}}).
+{{/callout}}
+
 Aggregation is a function where the data are grouped together according to certain criteria to form a single value of more significant meaning or measurement. Aggregates work as a data analytics tools by building analytic information over a set of documents. One of the most known aggregate is the Term Aggregate as known as facet.
 
 Before you start using aggregates you may want to take a look to the document about the [different type of aggregates supported]({{page page='aggregate-widget-types'}}) and the [Page Provider]({{page page='page-provider-aggregates'}}).
