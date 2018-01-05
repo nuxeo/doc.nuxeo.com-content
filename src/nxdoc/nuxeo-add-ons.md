@@ -574,7 +574,7 @@ Public
 `nuxeo-lambda-marketplace-package`</td>
 <td>Public</td>
 <td></td>
-<td>[Released for 9.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-lambda-marketplace-package?version=1.0.0)</td>
+<td>[Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-lambda-marketplace-package?version=1.0.1)</td>
 </tr>
 <tr>
 <td colspan="1">
