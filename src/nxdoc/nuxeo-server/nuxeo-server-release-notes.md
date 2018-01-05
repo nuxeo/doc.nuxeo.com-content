@@ -1,11 +1,11 @@
 ---
-title: Nuxeo Server 9.3 Release Notes
+title: Nuxeo Server LTS 2017 Release Notes
 review:
     comment: ''
-    date: '2017-12-05'
+    date: '2018-01-05'
     status: ok
 labels:
-    - content-review-lts2017
+    - lts2017-ok
     - release-notes
 toc: true
 tree_item_index: 10000
@@ -20,7 +20,7 @@ You can also find detailed JIRA release notes:
 - [9.10 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=18106)
 
 
-We also provide [instructions for upgrading]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-93'}}) to the latest release.
+We also provide [instructions for upgrading]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-lts-2017'}}) to the latest release.
 
 ## Nuxeo Server
 
@@ -269,7 +269,7 @@ The number of read requests required to create documents has been reduced to the
 When using PostgreSQL, stricter database-level checks are now enabled to prevent rare document name collisions due to concurrent writes. Behavior can be controlled in the repository configuration file using
 
 ```xml
-	<childNameUniqueConstraintEnabled>true</childNameUniqueConstraintEnabled>
+<childNameUniqueConstraintEnabled>true</childNameUniqueConstraintEnabled>
 ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22421](https://jira.nuxeo.com/browse/NXP-22421).
@@ -826,10 +826,6 @@ Some of the Nuxeo packages now include the list of contributions that they deplo
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23310](https://jira.nuxeo.com/browse/NXP-23310).
 
-### Audit Storage Directory {{since '9.10'}}
-
-A new Audit Storage implementation has been added, that writes and read audit data in an SQL Directory. This addon is available [on the marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-audit-storage-directory).
-
 ### Lambda Integration {{since '9.2'}}
 
 A new addon has been implemented that allows to leverage Amazon Lambdas for efficient asynchronous computing. The initial use case is to offload the Picture Views generation (generating several renditions with different sizes of the same source image), but the module has been designed to be used for other kinds of processing.
@@ -960,7 +956,7 @@ we can now import files in the attachment part of the File document (or any of y
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21486](https://jira.nuxeo.com/browse/NXP-21486).
 
-### Nuxeo Platform Importer 
+### Nuxeo Platform Importer
 
 #### English Dictionary for Random Import  {{since '9.1'}}
 
@@ -970,8 +966,10 @@ Random English content can now be generated using the random importer.
 
 #### Nuxeo Importer Stream {{since '9.10'}}
 
-A new addon has been added "nuxeo-platform-importer/nuxeo-importer-stream" that exposes a consumer / producer pattern making use of the nuxeo-stream infrastructure for running massively scalable imports. 
+A new addon has been added, called "nuxeo-importer-stream", that exposes a consumer / producer pattern making use of the nuxeo-stream infrastructure for running massively scalable imports.
 See the [readme of the addon](https://github.com/nuxeo/nuxeo-platform-importer/tree/master/nuxeo-importer-stream).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23560](https://jira.nuxeo.com/browse/NXP-23560).
 
 ### Nuxeo EasyShare Port {{since '9.3'}}
 
@@ -1212,6 +1210,8 @@ prefix="servers.${hostname}.nuxeo.">
 ### JSF to Web UI Addon {{since '9.10'}}
 
 This new addon available [on the Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-to-web-ui) allows redirecting JSF URLs to Web UI ones, especially the permanent links. This is useful if you have used the JSF application and now use Web UI and that users have bookmarked some JSF links.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23440](https://jira.nuxeo.com/browse/NXP-23440).
 
 ### New Customer Plugin Sample {{since '9.3'}}
 
