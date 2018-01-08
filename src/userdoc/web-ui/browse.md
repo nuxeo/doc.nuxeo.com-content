@@ -87,7 +87,9 @@ The View tab of the document is displayed.
 ### Importing Documents Using Drag and Drop
 Drag and drop is based on the HTML 5 standard and is available on all browsers that support the HTML 5 Drag and drop, without extension. Basically, this includes all browsers supported by the Nuxeo Platform and the Web UI:
 
-{{{multiexcerpt 'webui-supported-browsers' space='nxdoc' page='web-ui'}}}
+{{{multiexcerpt 'webui-supported-browsers' space='nxdoc' page='web-ui-overview'}}}
+
+See the [complete requirements]({{page version='' space='nxdoc' page='web-ui-overview'}}#requirements).
 
 You can use drag and drop to easily import content into a workspace or just to create one document at a time. Two types of import are available:
 
