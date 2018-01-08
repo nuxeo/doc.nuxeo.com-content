@@ -1025,7 +1025,7 @@ It is now possible to easily and immediately scroll a whole result set of docume
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22668](https://jira.nuxeo.com/browse/NXP-22668).
 
 
-#### Bulk Download Action on Document Selection {since '9.3'}}
+#### Bulk Download Action on Document Selection {{since '9.3'}}
 
 A new action is available in the bulk selection actions list, that allows to bulk download selected content in a single ZIP downloaded asynchronously. The main file is added to the ZIP for each selected document. When it comes to folders, content is recursively resolved up to a configurable level.
 
