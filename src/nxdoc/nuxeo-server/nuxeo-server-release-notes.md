@@ -1179,9 +1179,14 @@ When the nuxeo-jsf-ui package is installed, the JSF UI can now be accessed via `
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23376](https://jira.nuxeo.com/browse/NXP-23376).
 
-#### Nuxeo JSF UI Released as Deprecated {{since '9.3'}}
+#### Future Deprecation of Nuxeo JSF UI {{since '9.3'}}
 
-With Nuxeo Platform 9.3, [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui) has been released as deprecated. It will be released one last time with Nuxeo Platform LTS 2017 and supported for 3 years, according to our support policy.
+[Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui) will be deprecated and released one last time for LTS 2018, in one year. The end of support is scheduled for end of 2020. Nevertheless, we recommend that you start your new projects based on Nuxeo Platform LTS 2017 using our latest UI, [Nuxeo Web UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui). It brings you:
+* More insurance of browser compatibility in the future
+* A more responsive application
+* More scalability
+* A better UX
+* A guarantee of new features coming over the years, while JSF application developments are frozen
 
 ### Metrics
 
