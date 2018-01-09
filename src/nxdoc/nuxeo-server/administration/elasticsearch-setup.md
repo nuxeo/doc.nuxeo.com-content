@@ -562,7 +562,7 @@ Where:
 - `elasticsearch.addressList` is a comma separated list of URL.
 
 #### Advanced REST Client configuration
-If you have installed [Elasticsearch X-Pack](https://www.elastic.co/guide/en/x-pack/current/installing-xpack.html) you have the possibility to secure communication between Nuxeo and Elasticsearch using the Rest Client (supported since Nuxeo 10.1).
+If you have installed [Elasticsearch X-Pack](https://www.elastic.co/guide/en/x-pack/current/installing-xpack.html) you have the possibility to secure communication between Nuxeo and Elasticsearch using the Rest Client (supported since Nuxeo 9.10-HF01).
 
 For Elasticsearch please follow this guide to [Securing Elasticsearch and Kibana](https://www.elastic.co/guide/en/x-pack/5.6/xpack-security.html).
 
