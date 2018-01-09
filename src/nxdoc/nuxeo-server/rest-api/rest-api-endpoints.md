@@ -134,4 +134,4 @@ The framework makes it easy to [add new custom Java operations]({{page page='con
 
 ## Customizing Nuxeo REST API
 
-Not completely satisfied with what's on offer? See how to [contribute your own endpoint]({{page page='contributing-a-new-endpoint'}})!
+Not completely satisfied with what's on offer? See how to [contribute a REST API endpoint]({{page page='howto-contribute-to-the-rest-api#contributing-a-rest-api-endpoint'}})!
