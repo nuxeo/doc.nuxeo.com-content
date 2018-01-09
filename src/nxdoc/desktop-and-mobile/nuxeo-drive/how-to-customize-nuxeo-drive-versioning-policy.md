@@ -31,7 +31,7 @@ confluence:
     shortlink: jYhkAQ
     shortlink_source: 'https://doc.nuxeo.com/x/jYhkAQ'
     source_link: /display/NXDOC/How+to+Customize+Nuxeo+Drive+Versioning+Policy
-tree_item_index: 400
+tree_item_index: 600
 history:
     -
         author: Solen Guitter

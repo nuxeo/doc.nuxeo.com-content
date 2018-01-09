@@ -15,7 +15,7 @@ labels:
     - nuxeo-drive
     - nuxeo-drive-component
 toc: true
-tree_item_index: 300
+tree_item_index: 500
 
 ---
 
