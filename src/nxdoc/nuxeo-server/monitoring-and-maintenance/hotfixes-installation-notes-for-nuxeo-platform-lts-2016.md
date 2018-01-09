@@ -129,6 +129,16 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 19
+
+### Validation constraint at creation
+
+[NXP-23267](https://jira.nuxeo.com/browse/NXP-23267) has fixed a bug where the validation was not done on all the document fields. For example the validation was working
+- if a field was not present of the creation form, 
+- if the document was created with an Automation call and there was no property for a field with constraint (required field, directory field, etc)
+
+Once the hotfix 19 is applied, you will get a Validation exception whereas before the document was created without any error, which was bad because you defined a constraint on these fields.
+
 ## Hotfix 15
 
 ### Security Issue on MS Windows
