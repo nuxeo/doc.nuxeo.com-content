@@ -8,7 +8,7 @@ labels:
     - nuxeo-drive-component
     - content-review-lts2017
 toc: true
-tree_item_index: 350
+tree_item_index: 400
 
 ---
 If you need to move your Nuxeo Drive content from one computer to another, we suggest you to just  initiate an empty Nuxeo Drive on the new computer.

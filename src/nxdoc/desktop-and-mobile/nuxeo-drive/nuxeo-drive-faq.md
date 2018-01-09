@@ -10,6 +10,7 @@ labels:
     - excerpt
     - content-review-lts2017
 toc: true
+tree_item_index: 900
 version_override:
     LTS 2015: 710/userdoc/nuxeo-drive-faq
     '6.0': 60/userdoc/nuxeo-drive-faq
@@ -25,82 +26,82 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/-4RkAQ'
     source_link: /display/USERDOC/Nuxeo+Drive+FAQ
 history:
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-05-30 17:25'
         message: ''
         version: '16'
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-01-07 10:51'
         message: ''
         version: '15'
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-01-07 10:49'
         message: ''
         version: '14'
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-01-07 10:45'
         message: ''
         version: '13'
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-01-06 16:43'
         message: ''
         version: '12'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-27 13:50'
         message: ''
         version: '11'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-10-27 13:42'
         message: ''
         version: '10'
-    - 
+    -
         author: Thierry Delprat
         date: '2015-10-27 13:41'
         message: ''
         version: '9'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-27 11:37'
         message: ''
         version: '8'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-10-27 11:33'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-09 09:25'
         message: ''
         version: '6'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-06-08 14:33'
         message: ''
         version: '5'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-06-08 14:31'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-20 15:31'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-20 15:26'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-01-20 15:26'
         message: ''
