@@ -530,7 +530,7 @@ EsRejectedExceptionException[rejected execution (queue capacity 50)
 Increase the bulk queue size In`/etc/elasticsearch/elasticsearch.yml` configuration file:
 
 ```
-threadpool.bulk.queue_size: 500
+thread_pool.bulk.queue_size: 500
 ```
 
 ## Configuring Nuxeo to Access the Elasticsearch Cluster
