@@ -155,8 +155,8 @@ Here are a list of resources to start working with Nuxeo Studio:
 
 ## Browser Support
 
-Nuxeo Studio Designer and parts of Modeler make use of the recent W3C standard Web Components and Google Polymer 2.0 framework (legacy mode). The Google Polymer framework comes with polyfills for Web Components, a library that extends the support of web components standard to more browsers.
-Nevertheless, due to browser support to some shadow DOM features and third party libraries used in Nuxeo Studio some browsers are not supported.
+Nuxeo Studio Designer and parts of Modeler make use of the recent W3C standard Web Components and Google Polymer 2.0 framework (legacy mode). The [Google Polymer framework](https://www.polymer-project.org/) comes with [polyfills for Web Components](https://www.webcomponents.org/polyfills), a library that extends the support of web components standard to more browsers.
+Nevertheless, due to browser support to some shadow DOM features and third-party libraries used in Nuxeo Studio, some browsers are not supported.
 
 Supported browsers are:
 {{! multiexcerpt name='webui-supported-browsers'}}
