@@ -830,7 +830,7 @@ Some of the Nuxeo packages now include the list of contributions that they deplo
 
 A new addon has been implemented that allows to leverage Amazon Lambdas for efficient asynchronous computing. The initial use case is to offload the Picture Views generation (generating several renditions with different sizes of the same source image), but the module has been designed to be used for other kinds of processing.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on the [readme](https://github.com/nuxeo/nuxeo-lambda/blob/master/Readme.md) and on the JIRA ticket [NXP-21922](https://jira.nuxeo.com/browse/NXP-21922).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on the [readme](https://github.com/nuxeo/nuxeo-lambda-pictureview-conversion).
 
 ### Imaging
 
