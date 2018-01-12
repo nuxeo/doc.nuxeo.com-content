@@ -23,9 +23,9 @@ tree_item_index: 250
 
 The Nuxeo REST API provides many [endpoints]({{page page='rest-api-endpoints'}}). Moreover, it has been designed to be highly pluggable allowing to contribute your own endpoint whenever required.
 Similarly, you can contribute your own [web adapter]({{page page='rest-api-web-adapters'}}).
-Let's firt see how the REST API works, then how it can be extended.
+Let's first see how the REST API works, then how it can be extended.
 
-## How the REST API works
+## How the REST API Works
 
  The REST API is coded in the [nuxeo-rest-api-server](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/rest-api/nuxeo-rest-api-server) Maven module. It is a [WebEngine]({{page page='webengine-jax-rs'}}) module that:
 
@@ -136,7 +136,7 @@ Thus, any endpoint or web adapter class you add, respectively annotated with `@W
 
 ### Contributing a REST API Endpoint
 
-A REST API endpopint is defined by a class annotated with `@WebObject`.
+A REST API endpoint is defined by a class annotated with `@WebObject`.
 
 In the fragment bundle, all the `@WebObject` annotated classes need to be placed in a package with a name prefixed with the package name of the [APIRoot](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs/APIRoot.java) class, i.e. [org.nuxeo.ecm.restapi.server.jaxrs](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/rest-api/nuxeo-rest-api-server/src/main/java/org/nuxeo/ecm/restapi/server/jaxrs).
 
