@@ -183,19 +183,20 @@ When displaying the version number for a Checked Out document, the version numbe
 
 The version number is changed by a Check In operation; either the minor version number is incremented, or the major version number is incremented and the minor version number is set to 0.
 
-## {{> anchor 'automatic-versioning-system'}}Automatic versioning system
+## {{> anchor 'automatic-versioning-system'}}Automatic Versioning System
 
 The automatic versioning system is based on a combination of policies and filters. Policies state the behavior of desired versioning and filters state whether or not document needs to be versioned.
 
 The automatic system is triggered:
-- after document save in DB for createDocument
-- before document save in DB and after firing beforeDocumentModification event for saveDocument
-- after document save in DB and before firing documentModified event for saveDocument
+- For `createDocument`: after document save in DB
+- For `saveDocument`:
+  - Before document save in DB and after firing `beforeDocumentModification` event
+  - After document save in DB and before firing `documentModified` event
 
 During this call to the automatic versioning system, the engine will search for the first policy whose filter(s) match the current context.
-If a policy is found, the engine will use the increment option to check in the document (unless `increment = NONE`), then exit.
+If a matching policy is found, the engine will use the increment option to check in the document (unless `increment = NONE`), then exit.
 
-The system is not triggered before update if the document is already check in.
+The system is not triggered before update if the document is already checked in.
 
 The system is not triggered after update if a manual versioning is asked (`VersioningService.VERSIONING_OPTION` in document context data).
 
@@ -208,7 +209,7 @@ To contribute new policies and filters, check out the extension points documenta
 Each versioning policy defines:
 - A unique id which allows to override default policies
 - The increment policy (between `NONE`, `MINOR` or `MAJOR`)
-- If the versioning has to be applied before or after the actual modification
+- If the versioning has to be applied before or after the actual modification (`beforeUpdate` defaults to false)
 - The order in which the policy should be taken into account related to other policies.
 
 Example:
@@ -221,13 +222,13 @@ Example:
   </policy>
 </extension>
 ```
-Filters referenced by the policy are AND-ed. All filters must match in order to apply the policy.
+Filters referenced by the policy are AND-ed: All filters must match in order to apply the policy.
 
 Setting `NONE` as increment policy will stop policies evaluation if no policy with a lower order applies.
 
 {{#> callout type='note' }}
 
-Nuxeo reserved order range `[1,10]` to contribute system policies. Notice that default contributions are also provided with a higher range; these are not system policies and as such have a lower impact, making them easier to be overridden.
+Nuxeo reserved order range `[1,10]` to contribute system policies. Notice that default contributions are also provided with a higher range; These are not system policies and as such have a lower impact, making them easier to override.
 
 {{/callout}}
 
@@ -282,24 +283,24 @@ Example:
 
 ### {{> anchor 'source-based-versioning'}}Source-Based Versioning
 
-For source-based versioning (like with [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) or the [REST API]({{page version='' space='nxdoc' page='rest-api'}}) for example), a property is provided in the context data of the document, so it can be accessed in the EL condition.
+For source-based versioning (like with [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) or the [REST API]({{page version='' space='nxdoc' page='rest-api'}}) for example), a property is provided in the context data of the document (`source`), so it can be accessed in the EL condition.
 
 We inject the source context parameter value for:
-- drive
-- rest-api, by getting its value from the [HTTP header]({{page page='special-http-headers'}}) `source`.
-- file importers, the value will be fileimporter-%NAME%
-- bulkEdit feature
+- `drive`
+- REST API, by getting its value from the [HTTP header]({{page page='special-http-headers'}}) `source`.
+- file importers, the value will be `fileimporter-%NAME%`
+- `bulkEdit`
 
 See [the example](#source-based).
 
 For more details about source-based versioning with Nuxeo Drive, check out the page [How to Customize Nuxeo Drive Versioning Policy]({{page page='how-to-customize-nuxeo-drive-versioning-policy'}}).
 
 
-### Automatic versioning example
+### Automatic Versioning Example
 
-#### Default policies
+#### Default Policies
 
-Here below the default versioning policies define in Nuxeo Platform:
+Below are the default versioning policies defined in Nuxeo Platform:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="policies">
@@ -329,21 +330,23 @@ Here below the default versioning policies define in Nuxeo Platform:
 </extension>
 ```
 
-What happens when you save a document using `CoreSession#saveDocument` ?
+What happens when you save a document using `CoreSession#saveDocument`?
 
-Before saving the document in DB, the engine will:
-1. evaluate `no-versioning-for-system-before-update`, if its filter matches (here `system-document`) then no version will be created because policy increment is `NONE`
-if the filter doesn't match, next policy will be evaluated, here `collaborative-save`.
-2. if previous policy doesn't match then next one is evaluated, here `last-contributor-different-filter`, if its filter matches then a `MINOR` version will be created before saving document in DB. The filter matches if the current document has schema file and previous contributor is not the current one.
+1. Before saving the document in DB, the engine will evaluate `no-versioning-for-system-before-update`:
+  * If its filter matches (here `system-document`) then no version will be created because policy increment is `NONE`
+  * If the filter doesn't match, next `beforeUpdate` policy will be evaluated, here `collaborative-save`: If its filter matches then a `MINOR` version will be created before saving document in DB. The filter matches if the current document has schema `file` and previous contributor is not the current one.
+  * If it doesn't match `collaborative-save`, no more policy is found and no versioning is applied.
 
-After saving the document in DB, the engine will evaluate `no-versioning-for-system-after-update`.
-1. If it doesn't match `note-as-wiki` will be evaluated. If document is a Note, a version will be performed.
+2. After saving the document in DB, the engine will evaluate `no-versioning-for-system-after-update`.
+  * If its filter matches (here `system-document`) then no version will be created because policy increment is `NONE`
+  * If it doesn't match, next after update policy will be evaluated, here `note-as-wiki`: If document is a Note, a `MINOR` version will be performed
+  * If it doesn't match `note-as-wiki`, no more policy is found and no versioning is applied.
 
 {{#> callout type='note' }}
-`system-document` is a filter used to not automatically version system document such as workspace or document having SystemDocument facet.
+`system-document` is a filter used to not automatically version system document such as workspace or document having `SystemDocument` facet.
 {{/callout}}
 
-#### Disabling policy
+#### Disabling Policy
 
 In order to disable a built-in policy, you can declare the policy in your component with an empty increment.
 
@@ -359,52 +362,47 @@ In order to disable a built-in policy, you can declare the policy in your compon
 
 In this example will see how we can leverage the source-based versioning to automatically version document handled by a specific layer.
 
-First, define a versioning rule for that:
+1. Define a versioning rule for that:
+  ```xml
+  <component name="">
+    <extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="policies">
+      <policy id="my-source-policy" order="20" increment="MINOR">
+        <filter-id>my-source-versioning-filter</filter-id>
+      </policy>
+    </extension>
 
-```xml
-<component name="">
-  <extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="policies">
-    <policy id="my-source-policy" order="20" increment="MINOR">
-      <filter-id>my-source-versioning-filter</filter-id>
-    </policy>
-  </extension>
+    <extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="filters">
+      <filter id="my-source-versioning-filter">
+        <condition>#{currentDocument.contextData.source == "mySource"}</condition>
+      </filter>
+    </extension>
 
-  <extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="filters">
-    <filter id="my-source-versioning-filter">
-      <condition>#{currentDocument.contextData.source == "mySource"}</condition>
-    </filter>
-  </extension>
+  </component>
+  ```
+2. Use this source to trigger an automatic versioning. Note that in a real case we will provide more conditions on the filter.
+  - From Java API:
+    ```java
+    private CoreSession session;
 
-</component>
-```
+    public DocumentModel updateMyDoc(DocumentModel doc) {
+      // do some stuff on documents
+      doc.putContextData(CoreSession.SOURCE, "mySource");
+      return session.saveDocument(doc);
+    }
+    ```
 
-Then use this source to trigger an automatic versioning. Note that in a real case we will provide more condition on the filter.
-
-- From Java API:
-
-```java
-private CoreSession session;
-
-public DocumentModel updateMyDoc(DocumentModel doc) {
-  // do some stuff on documents
-  doc.putContextData(CoreSession.SOURCE, "mySource");
-  return session.saveDocument(doc);
-}
-```
-
-- From REST:
-
-```bash
-curl -XPUT -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/id/37b1502b-26ff-430f-9f20-4bd0d803191e \
-     -H 'Accept: application/json+nxentity' \
-     -H 'source: mySource' \
-     -d '{
-        "entity-type": "document",
-        "repository": "default",
-        "uid": "37b1502b-26ff-430f-9f20-4bd0d803191e",
-        "properties": {
-            "dc:title": "The new title",
-            "dc:description": "Updated via a very cool and easy REST API",
-        }
-    }'
-```
+  - From REST:
+    ```bash
+    curl -XPUT -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/id/37b1502b-26ff-430f-9f20-4bd0d803191e \
+         -H 'Accept: application/json+nxentity' \
+         -H 'source: mySource' \
+         -d '{
+            "entity-type": "document",
+            "repository": "default",
+            "uid": "37b1502b-26ff-430f-9f20-4bd0d803191e",
+            "properties": {
+                "dc:title": "The new title",
+                "dc:description": "Updated via a very cool and easy REST API",
+            }
+        }'
+    ```
