@@ -2,7 +2,7 @@
 title: 'HOWTO: Insert a New Pill'
 review:
     comment: ''
-    date: '2017-08-21'
+    date: '2018-01-14'
     status: ok
 toc: true
 details:
@@ -23,10 +23,6 @@ labels:
 tree_item_index: 1400
 
 ---
-{{#> callout type='note' }}
-The View Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
-{{/callout}}
-
 In this tutorial you will learn how to add a new pill to your custom document type. This pill will help you to find other contracts created for the same contract owner. To do so, we'll be using a custom page provider linked to the Contract document type.
 
 ## Prerequisites
