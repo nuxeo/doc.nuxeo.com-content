@@ -116,9 +116,6 @@ Nuxeo Studio is composed of two parts:
 * Studio Modeler, where you configure your content models, business workflows and JSF UI customizations
 * Studio Designer, where you configure your forms and layouts designs for Web UI
 
-{{{multiexcerpt 'Designer-restricted-access-note' page='generic-multi-excerpts' space='nxdoc'}}}
-
-
 ## Why Use Nuxeo Studio
 
 Because Nuxeo Studio is a graphical tool, you can define all your document types, views, forms, workflows without writing code or XML configuration. You can then focus on your business logic what your users need instead of spending time on development issues.
