@@ -134,8 +134,8 @@ If you have any questions, feel free to contact our support team via a dedicated
 ### Validation constraint at creation
 
 [NXP-23267](https://jira.nuxeo.com/browse/NXP-23267) has fixed a bug where the validation was not done on all the document fields. For example the validation was not working:
-- if a field was not present on the creation form, 
-- if the document was created by an Automation call and no property were passed for a field with constraint (required field, directory field, etc)
+- if a field was not present on the creation form
+- if the document was created by an Automation call and no properties were passed for a field with constraint (required field, directory field, etc)
 
 Once the hotfix 19 is applied, you will get a Validation exception whereas before the document was created without any error, which was faulty because a constraint was defined on these fields.
 
