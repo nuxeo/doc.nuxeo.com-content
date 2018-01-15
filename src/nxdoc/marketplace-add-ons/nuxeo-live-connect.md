@@ -326,6 +326,10 @@ The console redirects you to a page where you can see the client id and secret i
 
 You are ready to use it, just go in the workspace section and create a file object: you can use the Google Drive file picker
 
+{{#> callout type='note' }}
+To use the Google Drive file picker with Internet Explorer 11, the following URL must be added to IE11's trusted sites zone: https://accounts.google.com.
+{{/callout}}
+
 ## Live Connect For Dropbox
 
 ### Functional Overview
@@ -383,6 +387,11 @@ To enable additional users on your application, go to **Settings** > **Developme
 6.  Make sure the **Enabled** box is checked.
 7.  Now go to the **HOME** tab and click 'Cloud Services' tab and click the **Connect to Dropbox** button or just create a new Dropbox document.
 
+{{#> callout type='note' }}
+To use the Dropbox file picker with Internet Explorer 11, the following URL must be added to IE11's trusted sites zone: https://www.dropbox.com.
+{{/callout}}
+
+
 ## Live Connect For Box
 
 ### Functional Overview
@@ -432,6 +441,27 @@ Please note that Box only allows http for localhost. For all other sites https m
 6.  Make sure the **Enabled** box is checked.
 7.  Save.
 8.  Now go to the **HOME** tab and click **Cloud Services** tab and click the **Connect to Box** button or just create a new Box document.
+
+{{#> callout type='note' }}
+To use the Box file picker with Internet Explorer 11, the following URLs must be added to IE11's trusted sites zone:
+- https://app.box.com
+- https://cdn01.boxcdn.net
+{{/callout}}
+
+
+### Adding trusted sites to Internet Explorer 11
+
+In order to be able to use the external file pickers provided by Live Connect, certain URLs must be added to the list
+of trusted websites. This can be done as follows:
+
+1. go to Settigs
+2. click the Internet Options menu entry
+3. select the Security tab
+4. select the "Trusted sites" zone
+5. click the "Sites" button
+6. add your URL
+
+![]({{file name='adding_trusted_sites_ie11.png'}} ?w=400,border=true)
 
 ## Advanced Live Connect Configuration
 
