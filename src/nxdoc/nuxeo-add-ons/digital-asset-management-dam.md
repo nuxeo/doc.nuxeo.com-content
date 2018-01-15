@@ -362,7 +362,7 @@ See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribut
 
 #### Picture conversions
 
-Picture conversions are used to generate the picture views of document having the&nbsp;`Picture` facet. Default picture conversions (Thumbnail, Small, Medium and OriginalJpeg) are contributed to the&nbsp;`pictureConversions` extension point. They are marked as&nbsp;`default` and so are always generated, their associated filters are not evaluated.
+Picture conversions are used to generate the picture views of document having the&nbsp;`Picture` facet. Default picture conversions (Thumbnail, Small, Medium and OriginalJpeg) are contributed to the&nbsp;`pictureConversions` extension point. They are marked as&nbsp;`default` and so are always generated, their associated filters are not evaluated.  Default picture conversions can be disabled using Nuxeo Studio.
 
 ### Video
 
