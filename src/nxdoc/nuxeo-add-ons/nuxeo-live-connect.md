@@ -476,7 +476,12 @@ The console redirects you to a page where you can see the client id and secret i
 6.  Save.
 7.  Now just create a new Google Drive document
 
-You are ready to use it, just go in the workspace section and create a file object: you can use the Google Drive file picker
+You are ready to use it, just go in the workspace section and create a file object: you can use the Google Drive file picker.
+
+{{#> callout type='note' }}
+To use the Google Drive file picker with Internet Explorer 11, the following URL must be added to IE11's trusted sites
+zone: https://accounts.google.com.
+{{/callout}}
 
 ### Setting Up Live Connect for Dropbox
 
@@ -516,6 +521,11 @@ To enable additional users on your application, go to **Settings** > **Developme
 6.  Make sure the **Enabled** box is checked.
 7.  Now just create a new Dropbox document
 
+{{#> callout type='note' }}
+To use the Dropbox file picker with Internet Explorer 11, the following URL must be added to IE11's trusted sites
+zone: https://www.dropbox.com.
+{{/callout}}
+
 ### Setting Up Live Connect for Box
 
 **Step 1: Preparing your application accounts on the Box App console**
@@ -543,6 +553,13 @@ To enable additional users on your application, go to **Settings** > **Developme
 6.  Make sure the **Enabled** box is checked.
 7.  Save.
 8.  Now just create a new Box document
+
+{{#> callout type='note' }}
+To use the Box file picker with Internet Explorer 11, the following URLs must be added to IE11's trusted sites
+zone:
+- https://app.box.com
+- https://cdn01.boxcdn.net
+{{/callout}}
 
 ### Setting Up Live Connect for OneDrive
 
@@ -574,6 +591,11 @@ Live Connect for OneDrive is compatible with Nuxeo Platform 8.2+.
 6.  Make sure the **Enabled** box is checked.
 7.  Save.
 8.  Now just create a new OneDrive document
+
+{{#> callout type='note' }}
+To use the OneDrive file picker with Internet Explorer 11, the following URL must be added to IE11's trusted sites
+zone: https://api.onedrive.com.
+{{/callout}}
 
 ### Setting Up Live Connect for OneDrive for Business
 
@@ -619,6 +641,20 @@ For OneDrive for Business follow steps [here](https://dev.onedrive.com/app-regis
 8.  Make sure the **Enabled** box is checked.
 9.  Save.
 10.  Now just create a new OneDrive document
+
+### Adding trusted sites to Internet Explorer 11
+
+In order to be able to use the external file pickers provided by Live Connect, certain URLs must be added to the list
+of trusted websites. This can be done as follows:
+
+1. go to Settigs
+2. click the Internet Options menu entry
+3. select the Security tab
+4. select the "Trusted sites" zone
+5. click the "Sites" button
+6. add your URL
+
+![]({{file name='adding_trusted_sites_ie11.png'}} ?w=400,border=true)
 
 ## Advanced Live Connect Configuration
 
