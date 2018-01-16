@@ -2,7 +2,7 @@
 title: 'HOWTO: Insert a New Pill'
 review:
     comment: ''
-    date: '2018-01-14'
+    date: '2017-08-21'
     status: ok
 toc: true
 details:
