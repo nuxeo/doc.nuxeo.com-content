@@ -387,6 +387,7 @@ Or use the `@op` adapter to access operations.
       ```
       /api/v1/id/{docId}/@op/{OperationName}
       ```
+      </br>  
       ```
       /api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
       ```
