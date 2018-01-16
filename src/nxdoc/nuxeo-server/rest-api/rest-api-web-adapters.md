@@ -281,7 +281,8 @@ Default adapters provided by default.
     <td>
       ```
        /api/v1/path/{docId}/@search?fullText=nuxeo&orderBy=dc:title
-
+      ```
+      ```
        /api/v1/path/{pathOfTheDoc}/@search?query=SELECT * FROM File
       ```
     </td>
@@ -385,6 +386,8 @@ Or use the `@op` adapter to access operations.
     <td>
       ```
       /api/v1/id/{docId}/@op/{OperationName}
+      ```
+      ```
       /api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
       ```
     </td>
