@@ -301,11 +301,9 @@ history:
         version: '1'
 
 ---
-{{> wistia_video id='42en4rinfh'}}
-
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/learn/public/course/view/elearning/55/WhatsnewinNuxeoPlatformLTS2015%3F) on [Nuxeo University](https://university.nuxeo.com)
-
-{{! excerpt}}
+{{#> callout type='tip'}}
+Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/55/whats-new-in-nuxeo-platform-lts-2015) on Nuxeo University.
+{{/callout}}
 
 Live Connect allows you to create a content application that handles cloud files (Dropbox, Google Drive, Box, OneDrive...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it. This allows the user to benefit from thumbnailing service, full text, conversions, etc.
 
@@ -642,17 +640,14 @@ For OneDrive for Business follow steps [here](https://dev.onedrive.com/app-regis
 9.  Save.
 10.  Now just create a new OneDrive document
 
-### Adding trusted sites to Internet Explorer 11
+### Adding Trusted Sites to Internet Explorer 11
 
-In order to be able to use the external file pickers provided by Live Connect, certain URLs must be added to the list
-of trusted websites. This can be done as follows:
+In order to be able to use the external file pickers provided by Live Connect, certain URLs must be added to the list of trusted websites. This can be done as follows:
 
-1. go to Settigs
-2. click the Internet Options menu entry
-3. select the Security tab
-4. select the "Trusted sites" zone
-5. click the "Sites" button
-6. add your URL
+1. Go to **Settings**
+1. Click the **Internet Options** menu entry
+1. Go to **Security** > **Trusted sites**
+1. Click on the **Sites** button and add your URL
 
 ![]({{file name='adding_trusted_sites_ie11.png'}} ?w=400,border=true)
 
