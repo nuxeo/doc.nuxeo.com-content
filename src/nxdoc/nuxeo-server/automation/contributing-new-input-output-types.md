@@ -2,7 +2,7 @@
 title: Contributing New Input-Output Types
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2018-01-15'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - troger
     - automation
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '18451738'
     ajs-parent-page-title: Automation
