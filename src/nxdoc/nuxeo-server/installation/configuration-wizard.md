@@ -117,9 +117,7 @@ If you already have a Nuxeo Online Services account, you can register your Nuxeo
 Select the additional features you want to install on the Platform. You can also just keep the naked Nuxeo Server.
 
 {{#> callout type='tip' }}
-
-You can install or uninstall addons afterwards with [nuxeoctl]({{page version='60' space='admindoc' page='nuxeoctl-and-control-panel-usage'}}).
-
+You can install or uninstall addons afterwards with [nuxeoctl]({{page page='nuxeoctl-and-control-panel-usage'}}).
 {{/callout}}
 
 ![]({{file name='Wizard_module_selection.png'}} ?w=550,border=true)

@@ -530,7 +530,7 @@ EsRejectedExceptionException[rejected execution (queue capacity 50)
 Increase the bulk queue size In`/etc/elasticsearch/elasticsearch.yml` configuration file:
 
 ```
-threadpool.bulk.queue_size: 500
+thread_pool.bulk.queue_size: 500
 ```
 
 ## Configuring Nuxeo to Access the Elasticsearch Cluster
@@ -562,26 +562,54 @@ Where:
 - `elasticsearch.addressList` is a comma separated list of URL.
 
 #### Advanced REST Client configuration
+If you have installed [Elasticsearch X-Pack](https://www.elastic.co/guide/en/x-pack/current/installing-xpack.html) you have the possibility to secure communication between Nuxeo and Elasticsearch using the Rest Client (supported since Nuxeo 9.10-HF01).
 
-If you need to use Basic Authentication or X509 certificate you need to override the default template,
-Here are all the available options:
-```
-  <extension target="org.nuxeo.elasticsearch.ElasticSearchComponent" point="elasticSearchClient">
-  <elasticSearchClient class="org.nuxeo.elasticsearch.client.ESRestClientFactory">
-    <option name="addressList">https://somenode:443</option>
-    <!-- basic auth -->
-    <option name="username">scott</option>
-    <option name="password">tiger</option>
-    <!-- use a keystore -->
-    <option name="keystore.path">/usr/lib/jvm/java-8-oracle/jre/lib/security/cacerts</option>
-    <option name="keystore.password">changeit</option>
-    <!-- connection and socket timeout for the rest client -->
-    <option name="connection.timeout.ms">5000</option>
-    <option name="socket.timeout.ms">20000</option>
-  </elasticSearchClient>
-  </extension>
-```
+For Elasticsearch please follow this guide to [Securing Elasticsearch and Kibana](https://www.elastic.co/guide/en/x-pack/5.6/xpack-security.html).
 
+##### Basic Authentication
+If you have chosen to configure [Basic User Authentication](https://www.elastic.co/guide/en/x-pack/5.6/security-getting-started.html) then you can setup Nuxeo using `nuxeo.conf` with the follow properties:
+
+```
+elasticsearch.restClient.username=your_username
+elasticsearch.restClient.password=your_password
+```
+{{#> callout type='tip' }}
+For X-Pack, please follow the Elasticsearch documentation for configuring a user and role, an example could be:
+```
+curl -XPOST -u elastic 'localhost:9200/_xpack/security/role/nuxeo_role' -H "Content-Type: application/json" -d '{
+  "cluster" : [
+    "all"
+  ],
+ "indices" : [
+   {
+     "names" : [ "nuxeo*" ],
+     "privileges" : [ "all" ]
+   }
+ ]
+}'
+```
+Configuring a user for that role could look something like this:
+```
+curl -XPOST -u elastic 'localhost:9200/_xpack/security/user/nuxeo_user' -H "Content-Type: application/json" -d '{
+  "password" : "nuxeo_secret_password",
+  "full_name" : "Nuxeo User",
+  "roles" : [ "nuxeo_role" ]
+}'
+```
+{{/callout}}
+##### SSL/TLS configuration
+If you have chosen to configure [SSL/TLS](https://www.elastic.co/guide/en/x-pack/5.6/ssl-tls.html) then you can setup Nuxeo using `nuxeo.conf` with the following properties:
+```
+elasticsearch.restClient.keystorePath=your_path_to_keystore
+elasticsearch.restClient.keystorePassword=your_password
+elasticsearch.restClient.keystoreType=your_keystore_type
+```
+- `keystoreType` is optional, if unspecified it uses the default Java system keystore type, e.g. jks
+
+{{#> callout type='warning' }}
+
+If you are using SSL then the `elasticsearch.addressList` will need to be updated to include the `https`.
+{{/callout}}
 ### Index names
 
 Nuxeo manages 3 Elasticsearch indexes:

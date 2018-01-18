@@ -3,7 +3,7 @@ title: OAuth2 Resource Endpoint
 description: A REST endpoint to retrieve oauth2 provider data.
 review:
     comment: ''
-    date: '2017-01-09'
+    date: '2018-01-15'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - troger
     - endpoint
     - oauth2
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 tree_item_index: 500
 

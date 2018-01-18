@@ -22,7 +22,7 @@ confluence:
     shortlink: KIkZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/KIkZAQ'
     source_link: /display/NXDOC/How+to+Manually+Initialize+or+Deploy+a+Nuxeo+Drive+Instance
-tree_item_index: 600
+tree_item_index: 800
 history:
     -
         author: Rémi Cattiau

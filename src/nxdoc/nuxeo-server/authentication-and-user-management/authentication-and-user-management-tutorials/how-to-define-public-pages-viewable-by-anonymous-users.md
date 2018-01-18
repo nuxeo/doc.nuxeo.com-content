@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to make some pages visible by anonymous users.
         level: Advanced
         tool: Code
-        topics: 'Access rights, Authentication, LDAP'
+        topics: Access rights, Authentication
 labels:
     - lts2016-ok
     - anonymous
@@ -240,6 +240,9 @@ The first step you need to take is to enable the anonymous user.
     ```
 
     *   This file needs to be named `what-you-want-config.xml` and to be deployed under `nxserver/config/`.
+        {{#> callout type='info' }}
+        Your filename must end with `-config.xml` to work properly.
+        {{/callout}}
     *   Or you can use template system and copy it into `template/common/config/`.
     *   Or you can add the `extension` element [as an **XML Extension** in Nuxeo Studio]({{page page='how-to-contribute-to-an-extension#xml-extension-studio'}}).
 2.  Modify `nuxeo.conf` and set&nbsp;`nuxeo.user.anonymous.enable=true`.

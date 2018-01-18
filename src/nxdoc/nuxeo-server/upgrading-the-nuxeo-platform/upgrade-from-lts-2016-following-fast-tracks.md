@@ -198,7 +198,7 @@ See [NXP-21891](https://jira.nuxeo.com/browse/NXP-21891).
 
 {{! multiexcerpt name='upgrade-9.1-deprecated.automatic-versioning'}}
 
-We introduced a new automatic versioning system in 9.1. We deprecated [versioningRules](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--versioningRules) extension point. You now have to use new extension points, see [documentation]({{page page='versioning#versioning-policies'}}).
+We introduced a new automatic versioning system in 9.1. We deprecated [versioningRules](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--versioningRules) extension point. You now have to use new extension points, see [documentation]({{page page='versioning#automatic-versioning-system'}}).
 
 Nuxeo provides a backward compatibility mechanism, but it could be not accurate.
 
@@ -403,6 +403,8 @@ Nuxeo Segment.io plugin is now aligned on `com.github.segmentio:analytics:1.0.7`
 - [Release notes for 9.2]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
 
 ## From 9.2 to 9.3
+
+{{! multiexcerpt name='9.2-to-9.3-upgrade-page'}}
 
 ### Installation and Configuration
 
@@ -646,8 +648,51 @@ The command `nuxeoctl register-trial` has been deprecated. See [NXP-23122](https
 
 {{! /multiexcerpt}}
 
+## From 9.3 to LTS 2017
 
-{{! multiexcerpt name='9.2-to-9.3-upgrade-page'}}
+{{! multiexcerpt name='9.3-to-lts-2017-upgrade-page'}}
 
+### Installation and Configuration
+
+#### New Parameters
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Parameter</th>
+<th colspan="1">Modification</th>
+<th colspan="1">Reference</th>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.core.readacl.async.enabled`</td>
+<td colspan="1">Default value to `true`</td>
+<td colspan="1">[NXP-23788](https://jira.nuxeo.com/browse/NXP-23788)</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.core.readacl.async.threshold`</td>
+<td colspan="1">Default value to `500`</td>
+<td colspan="1">[NXP-23788](https://jira.nuxeo.com/browse/NXP-23788)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### Addons
+
+#### nuxeo-mqueues - Deprecated
+
+{{! multiexcerpt name='upgrade-lts-2017-addons.deprecated.mqueues'}}
+
+The `nuxeo-mqueues` addon is replaced by `nuxeo-stream`. See [NXP-23854](https://jira.nuxeo.com/browse/NXP-23854).
+
+{{! /multiexcerpt}}
+
+### Complementary Information
+
+- [Upgrade notes for LTS 2017](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%229.10%22%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+- [Release notes for LTS 2017]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
+
+{{! /multiexcerpt}}
 
 {{! /multiexcerpt}}

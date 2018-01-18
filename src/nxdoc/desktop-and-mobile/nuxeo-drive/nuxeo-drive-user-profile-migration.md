@@ -9,7 +9,7 @@ labels:
     - yachour
     - lts2017-ok
 toc: true
-tree_item_index: 350
+tree_item_index: 400
 
 ---
 If you need to move your Nuxeo Drive content from one computer to another, we suggest you to just  initiate an empty Nuxeo Drive on the new computer.

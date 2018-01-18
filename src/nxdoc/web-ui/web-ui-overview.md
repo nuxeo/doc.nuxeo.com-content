@@ -133,16 +133,19 @@ Polymer 2 in legacy mode thus using the Polymer factory method, not the ES6 clas
 
 {{/callout}}
 
-Supported browsers for Nuxeo Web UI and Nuxeo Web UI Elements are:
+The following browsers are supported:
 {{! multiexcerpt name='webui-supported-browsers'}}
- - Google Chrome
- - Firefox
- - Safari
- - Edge
- - Internet Explorer 11
+- Google Chrome
+- Microsoft Edge
+- Mozilla Firefox
+- Microsoft Internet Explorer 11
+- Safari 11+
+- Safari Mobile
+- Chrome Android
 {{! /multiexcerpt}}
 
-It is also possible to build applications that support IE11, Safari, Safari Mobile with Nuxeo Web UI Elements.
+Edge, Firefox, and Chrome are called “evergreen browsers”: they are automatically updated at a high pace. The UI code of the version of Nuxeo relies on Polymer 2, supported by Google on those evergreen browsers. Nuxeo guarantees to support Web UI and fix bugs caused by misuse of the Polymer 2 framework.  Nuxeo cannot guarantee to provide fixes for bugs inherent to the underlying Polymer 2 framework, especially when those bugs will happen with future versions of the above-mentioned browsers.
+Nevertheless, Nuxeo is committed to using the latest supported version of the Polymer 2.X framework, provided by Google to the community, when it helps fixing bugs, especially against evergreen browsers.
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='webui-functional-overview'}}

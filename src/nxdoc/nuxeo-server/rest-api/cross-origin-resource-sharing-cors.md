@@ -2,14 +2,14 @@
 title: Cross-Origin Resource Sharing (CORS)
 review:
     comment: ''
-    date: '2017-01-11'
+    date: '2017-12-11'
     status: ok
 labels:
     - lts2016-ok
     - cors
     - rest-api
     - troger
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'

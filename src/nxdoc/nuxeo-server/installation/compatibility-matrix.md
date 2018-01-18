@@ -127,23 +127,12 @@ Nuxeo is shipped with an embedded Tomcat server.
 <tbody>
 <tr>
 <th colspan="1">Nuxeo Platform Version:</th>
-<th colspan="1">9.3</th>
-<th colspan="1">9.2</th>
-<th colspan="1">9.1</th>
+<th colspan="1">LTS 2017</th>
 <th colspan="1">LTS 2016</th>
 <th colspan="1">LTS 2015</th>
-<th colspan="1">6.0</th>
 </tr>
 <tr>
 <th colspan="1">Redis</th>
-<td colspan="1">2.8.x <br />
-3.0.x <br />
-3.2.x <br />
-4.0.x</td>
-<td colspan="1">2.8.x <br />
-3.0.x <br />
-3.2.x <br />
-4.0.x</td>
 <td colspan="1">2.8.x <br />
 3.0.x <br />
 3.2.x <br />
@@ -156,7 +145,6 @@ Nuxeo is shipped with an embedded Tomcat server.
 3.0.x <br />
 3.2.x <br />
 4.0.x</td>
-<td colspan="1">2.8</td>
 </tr>
 </tbody>
 </table>
@@ -173,23 +161,14 @@ More information can be found on the [Nuxeo and Redis]({{page page='nuxeo-and-re
 <tbody>
 <tr>
 <th colspan="1">Nuxeo Platform Version:</th>
-<th colspan="1">9.3</th>
-<th colspan="1">9.2</th>
-<th colspan="1">9.1</th>
+<th colspan="1">LTS 2017</th>
 <th colspan="1">LTS 2016</th>
 <th colspan="1">LTS 2015</th>
-<th colspan="1">6.0</th>
 </tr>
 <tr><th colspan="1">Elasticsearch</th>
 <td colspan="1">
 Library: 5.6.3<br />
 Cluster: 5.6.x</td>
-<td colspan="1">
-Library: 2.3.5<br />
-Cluster: 2.3.x to 2.4.x</td>
-<td colspan="1">
-Library: 2.3.5<br />
-Cluster: 2.3.x to 2.4.x</td>
 <td colspan="1">**From 8.1 to 8.3:**<br/>
 Library: 1.5.2<br />
 Cluster: 1.5.2 to 1.7.x<br/>
@@ -198,8 +177,6 @@ Library: 2.3.5<br />
 Cluster: 2.3.x to 2.4.x</td>
 <td colspan="1">Library: 1.5.2<br />
 Cluster: 1.5.2 to 1.7.x</td>
-<td colspan="1">Library: 1.1.2<br />
-Cluster: 1.1.2 to 1.7.x</td>
 </tr>
 </tbody>
 </table>

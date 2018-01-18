@@ -813,6 +813,15 @@ In the rest of this documentation, we'll call them all "folder".
 
 Starting from Nuxeo Platform 6.0, you can synchronize spaces on which you have [at least Read permissions]({{page version='' space='userdoc' page='managing-permissions'}}). For older versions of the Nuxeo Platform, you need at least Edit permissions to be able to synchronize a space.
 
+#### Web UI
+
+To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive_unsynced-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
+The icon becomes orange ![]({{file name='drive_synced_under_root-webui.png' page='nuxeo-drive'}} ?w=20). Documents inside the synchronized space have a Drive local edit icon ![]({{file name='drive_edit-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
+
+{{{multiexcerpt 'drive-content-sync'}}}
+
+![]({{file name='drive-newtab-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=650,border=true)
+
 #### JSF UI
 
 To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive_unsynced.png' page='/nxdoc/nuxeo-drive'}}).
@@ -836,6 +845,7 @@ The icon becomes pink ![]({{file name='drive_synced_under_root-webui.png' page='
 {{{multiexcerpt 'drive-content-sync'}}}
 
 ![]({{file name='drive-newtab-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=650,border=true)
+
 
 ### Suspending Synchronization
 
@@ -875,6 +885,13 @@ Please note that when synchronizing a significant amount of data, it is highly i
 
 #### Unsynchronizing Folders (Server)
 
+#### Web UI
+
+Unsynchronizing a folder is only possible from the Nuxeo Platform web interface. You can only unsynchronize the whole synchronized space, i.e. from the synchronization root ![]({{file name='drive_synced_under_root-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
+
+To unsynchronize a space, in the Nuxeo Platform interface, click on the icon ![]({{file name='drive_synced_under_root-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
+The icon becomes gray, indicating that the space is no longer synchronized. The folder and its content is no longer available from your Nuxeo Drive folder and from the Home **Nuxeo Drive** tab.
+
 #### JSF UI
 
 Unsynchronizing a folder is only possible from the Nuxeo Platform web interface. You can only unsynchronize the whole synchronized space, i.e. from the synchronization root ![]({{file name='drive_synced.png' page='/nxdoc/nuxeo-drive'}}): it is not possible to unsynchronize a child ![]({{file name='drive_synced_under_root.png' page='/nxdoc/nuxeo-drive'}}). Clicking on the icon ![]({{file name='drive_synced_under_root.png' page='/nxdoc/nuxeo-drive'}}) brings you back on the space from which the synchronization is done.
@@ -882,12 +899,6 @@ Unsynchronizing a folder is only possible from the Nuxeo Platform web interface.
 To unsynchronize a space, in the Nuxeo Platform interface, click on the icon ![]({{file name='drive_synced.png' page='/nxdoc/nuxeo-drive'}}).
 The icon becomes gray, indicating that the space is no longer synchronized. The folder and its content is no longer available from your Nuxeo Drive folder and from the Home **Nuxeo Drive** tab.
 
-#### Web UI
-
-Unsynchronizing a folder is only possible from the Nuxeo Platform web interface. You can only unsynchronize the whole synchronized space, i.e. from the synchronization root ![]({{file name='drive_synced_under_root-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
-
-To unsynchronize a space, in the Nuxeo Platform interface, click on the icon ![]({{file name='drive_synced_under_root-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
-The icon becomes gray, indicating that the space is no longer synchronized. The folder and its content is no longer available from your Nuxeo Drive folder and from the Home **Nuxeo Drive** tab.
 
 
 ## Managing Documents
@@ -943,9 +954,9 @@ Direct Edit enables you to edit any of your document's content from their Summar
 
 **Direct Edit icon**
 
-JSF UI: ![]({{file name='drive_edit.png' page='/nxdoc/nuxeo-drive'}})
-
 Web UI: ![]({{file name='drive_edit-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20)
+
+JSF UI: ![]({{file name='drive_edit.png' page='/nxdoc/nuxeo-drive'}})
 
 To edit a document locally from the web interface:
 

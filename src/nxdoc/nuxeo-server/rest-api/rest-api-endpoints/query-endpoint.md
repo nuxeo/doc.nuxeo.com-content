@@ -2,7 +2,7 @@
 title: Query Endpoint (Deprecated)
 review:
     comment: ''
-    date: '2017-01-04'
+    date: '2018-01-15'
     status: ok
 details:
     howto:
@@ -20,7 +20,7 @@ labels:
     - troger
     - query-pageprovider-component
     - link-update
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'

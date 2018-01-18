@@ -2,7 +2,7 @@
 title: Parameterizing and Reusing Marshallers
 review:
     comment: ''
-    date: '2017-01-04'
+    date: '2018-01-15'
     status: ok
 labels:
     - content-review-lts2016
@@ -10,7 +10,7 @@ labels:
     - troger
     - json
     - marshalling
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 tree_item_index: 400
 

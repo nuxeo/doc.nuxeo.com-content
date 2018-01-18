@@ -2,7 +2,7 @@
 title: 'HOWTO: Develop with React Redux'
 review:
     comment: ''
-    date: '2017-04-20'
+    date: '2017-12-12'
     status: ok
 details:
     howto:
@@ -14,7 +14,7 @@ labels:
     - howto
     - rest-api
     - troger
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 
 ---

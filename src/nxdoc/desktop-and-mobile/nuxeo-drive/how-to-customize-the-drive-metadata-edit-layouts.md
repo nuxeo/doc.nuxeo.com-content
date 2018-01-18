@@ -28,7 +28,7 @@ confluence:
     shortlink: RJKRAQ
     shortlink_source: 'https://doc.nuxeo.com/x/RJKRAQ'
     source_link: /display/NXDOC/How+to+Customize+the+Drive+Metadata+Edit+Layouts
-tree_item_index: 500
+tree_item_index: 700
 history:
     -
         author: Manon Lumeau

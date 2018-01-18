@@ -2,7 +2,7 @@
 title: Nuxeo CSV
 review:
     comment: ''
-    date: '2017-08-01'
+    date: '2018-01-15'
     status: ok
 labels:
     - lts2016-ok
@@ -12,7 +12,7 @@ labels:
     - nuxeo-csv
     - troger
     - csv-importer-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

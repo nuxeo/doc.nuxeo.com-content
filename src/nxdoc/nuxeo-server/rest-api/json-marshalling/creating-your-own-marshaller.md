@@ -2,7 +2,7 @@
 title: Creating Your Own Marshaller
 review:
     comment: ''
-    date: '2017-01-11'
+    date: '2017-12-11'
     status: ok
 labels:
     - content-review-lts2016
@@ -10,7 +10,7 @@ labels:
     - troger
     - json
     - marshalling
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 tree_item_index: 300
 

@@ -2,14 +2,14 @@
 title: Conversion
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-11'
     status: ok
 labels:
     - lts2016-ok
     - conversion
     - troger
     - convert-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:

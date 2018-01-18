@@ -2,7 +2,7 @@
 title: Authentication and User Management Tutorials
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2018-01-15'
     status: ok
 labels:
     - lts2017-ok
