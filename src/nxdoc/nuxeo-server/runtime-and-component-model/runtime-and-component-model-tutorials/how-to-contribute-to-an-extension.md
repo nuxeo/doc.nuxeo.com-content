@@ -6,7 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: 'Lean how to create an XML extension in Nuxeo Studio, with the Nuxeo CLI and how to override a Nuxeo contribution.'
+        excerpt: 'Learn how to create an XML extension in Nuxeo Studio, with the Nuxeo CLI and how to override a Nuxeo contribution.'
         level: Intermediate
         tool: 'Nuxeo CLI, Studio'
         topics: Extension point

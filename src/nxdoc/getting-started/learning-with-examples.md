@@ -2,11 +2,11 @@
 title: Learning with Examples
 review:
     comment: ''
-    date: '2017-01-20'
+    date: '2018-01-02'
     status: ok
 labels:
     - lts2016-ok
-    - content-review-lts2017
+    - lts2017-ok
     - home
     - mlumeau
 confluence:

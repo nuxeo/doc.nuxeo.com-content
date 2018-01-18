@@ -2,7 +2,7 @@
 title: Layout and Widget Definitions
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2018-01-02'
     status: ok
 labels:
     - content-review-lts2016
@@ -10,7 +10,7 @@ labels:
     - home
     - mlumeau
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950330'
     ajs-parent-page-title: 'Layouts and Widgets (Forms, Listings, Grids)'
