@@ -77,7 +77,9 @@ This page explains what renditions are, how to get them and how to contribute ne
 
 ## Functional Overview
 
-In the Nuxeo Platform, renditions are used for exports. If you are using Web UI, you can find more information [here]({{page USERDOC:Exporting Documents}}), for JSF UI it's [here]({{page USERDOC:Exporting Content}}).
+In the Nuxeo Platform, renditions are used for exports. For more information, discover how it works on:
+- [Web UI]({{page version='' space='userdoc' page='exporting-documents'}})
+- [JSF UI]({{page version='' space='userdoc' page='exporting-content'}})
 
 ## What Are Renditions?
 

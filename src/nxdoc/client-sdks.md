@@ -59,10 +59,9 @@ history:
         version: '1'
 
 ---
-The platform already provides multiple clients for accessing the platform remotely.&nbsp;We also provide [a test suite]({{page page='client-api-test-suite-tck'}}) from which you can get inspiration if you want to write a new client for Nuxeo (for example in Ruby, in Golang, ...) and want to assert your level of compliance.
+The platform already provides multiple clients for accessing the platform remotely.
 
 {{! multiexcerpt name='rest-api-clients'}}
-
 *   [JavaScript Client]({{page space='NXDOC' page='JavaScript Client'}})
 *   [Java Client]({{page space='NXDOC' page='java-client'}})
 *   [Python Client]({{page space='NXDOC' page='Python Client'}})
