@@ -2,7 +2,7 @@
 title: Digital Asset Management (DAM)
 review:
     comment: ''
-    date: '2017-07-19'
+    date: '2018-01-19'
     status: ok
 labels:
     - lts2016-ok
@@ -13,7 +13,7 @@ labels:
     - audio
     - annotation
     - dam-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
