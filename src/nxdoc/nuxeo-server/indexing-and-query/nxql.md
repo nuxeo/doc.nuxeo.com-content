@@ -754,7 +754,7 @@ SELECT * FROM Document WHERE ecm:mixinType IN ('Folderish', 'Downloadable')
 SELECT * FROM Document WHERE ecm:mixinType NOT IN ('Folderish', 'Downloadable')
 SELECT * FROM Document WHERE ecm:currentLifeCycleState = 'project'
 SELECT * FROM Document WHERE ecm:versionLabel = '1.0'
-SELECT * FROM Document WHERE ecm:currentLifeCycleState <> 'deleted'
+SELECT * FROM Document WHERE ecm:isTrashed = 0
 SELECT * FROM Document WHERE ecm:fulltext = 'world'
 SELECT * FROM Document WHERE dc:title = 'hello world 1' ORDER BY ecm:currentLifeCycleState
 SELECT * FROM Document WHERE dc:title = 'hello world 1' ORDER BY ecm:versionLabel

@@ -340,8 +340,8 @@ dc:contributors = ?                          -- simple match on a multi-valued f
 AND ecm:mixinType != 'Folderish'             -- use facet to remove all folderish documents
 AND ecm:mixinType != 'HiddenInNavigation'    -- use facet to remove all documents that should be hidden
 AND ecm:isCheckedInVersion = 0               -- only get checked-out documents
-AND ecm:isProxy = 0 AND                      -- don't return proxies
-ecm:currentLifeCycleState != 'deleted'       -- don't return documents that are in the trash
+AND ecm:isProxy = 0                          -- don't return proxies
+AND ecm:isTrashed = 0                        -- don't return documents that are in the trash
 ```
 
 As you may see, there is no security clause, because the repository will always only return documents that the current user can see. Security filtering is built-in, so you don't have to post-filter results returned by a search, even if you use complex custom security policies.
