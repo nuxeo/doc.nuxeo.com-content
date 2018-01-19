@@ -169,7 +169,7 @@ This operation has the following parameters:
 *   **Query**: optional parameter. By default the query called by the exporter is:
 
     ```sql
-    SELECT * FROM Document ecm:mixinType !='HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState !='deleted'
+    SELECT * FROM Document ecm:mixinType !='HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:isTrashed = 0
     ```
 
     You can define your own query and put it the in the Query parameter.
