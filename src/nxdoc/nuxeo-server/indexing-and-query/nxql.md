@@ -654,6 +654,8 @@ The following properties are not legal as document property names, but are allow
 
 **ecm:currentLifeCycleState**: the document lifecycle state (`DocumentModel.getCurrentLifeCycleState()`).
 
+**ecm:isTrashed**: `1` if the document is in the trash and `0` if not. This can only be compared to `1` or `0`. (Since Nuxeo 10.1)
+
 **ecm:isCheckedIn**: `1` if the document is checked in and `0` if not (the opposite of `DocumentModel.isCheckedOut()`). This can only be compared to `1` or `0`. (Since Nuxeo 5.7.3)
 
 **ecm:isProxy**: `1` for proxies and `0` for non-proxies (`DocumentModel.isProxy()`). This can only be compared to `1` or `0`.
