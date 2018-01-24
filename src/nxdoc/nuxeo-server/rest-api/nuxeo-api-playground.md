@@ -1,15 +1,9 @@
 ---
-title: 'HOWTO: Nuxeo API Playground'
+title: 'Nuxeo API Playground'
 review:
     comment: ''
     date: '2017-12-12'
     status: ok
-details:
-    howto:
-        excerpt: Learn how to use the API Playground and leverage the Nuxeo REST API.
-        level: Advanced
-        tool: Code
-        topics: REST API
 labels:
     - lts2016-ok
     - howto
@@ -37,7 +31,7 @@ confluence:
     shortlink: 9QUuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/9QUuAQ'
     source_link: /display/NXDOC/Use+Nuxeo+API+Playground+to+Discover+the+API
-tree_item_index: 100
+tree_item_index: 750
 history:
     -
         author: Solen Guitter
@@ -307,9 +301,7 @@ history:
 
 ---
 {{! excerpt}}
-
-Nuxeo offers an API Playground, an interactive way to discover the Nuxeo Platform API. This module runs fully client-side in JavaScript. You can use it on any server as long as you deploy a [CORS configuration](#setting-up-cors-configuration) on it.
-
+Nuxeo offers an API Playground, an interactive way to discover the Nuxeo Platform REST API. This module runs fully client-side in JavaScript. You can use it on any server as long as you deploy a [CORS configuration](#setting-up-cors-configuration) on it.
 {{! /excerpt}}
 
 ## Functional Overview
@@ -342,13 +334,13 @@ We use the API to create/read/update documents. But to do so, you need to know w
 
 ![]({{file name='playground_data_structures_section..png'}} ?w=300,h=116,border=true)
 
-For example, to get information about the `UserWorkspaceRoot` document:
+For example, to get information about the `userWorkspaceRoot` document:
 
-1.  In **Types**, click on the `UserWorkspaceRoot` document type.
+1.  In **Types**, click on the `userWorkspaceRoot` document type.
     ![]({{file name='playground_document_type_properties.png'}} ?w=300,border=true,thumbnail=true)
     The schemas and facets of the document are displayed.
 2.  Click on the icon ![]({{file name='playground_sitemap_icon.png'}}).
-    The complete inheritance structure of `UserWorkspaceRoot` is displayed.
+    The complete inheritance structure of `userWorkspaceRoot` is displayed.
     ![]({{file name='playground_inheritance_structure.png'}} ?w=500,border=true)
 3.  Click on one of the schema names, like **dublincore** for instance, to see its structure.
     ![]({{file name='playground_schema_structure.png'}} ?w=500,border=true)

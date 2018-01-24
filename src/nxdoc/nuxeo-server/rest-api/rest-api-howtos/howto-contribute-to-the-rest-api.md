@@ -19,8 +19,8 @@ labels:
 toc: true
 tree_item_index: 250
 version_override:
-    LTS 2016: 810/nxdoc/contributing-a-new-endpoint/
-    LTS 2015: 710/nxdoc/contributing-a-new-endpoint/
+    LTS 2016: 810/nxdoc/contributing-a-new-endpoint
+    LTS 2015: 710/nxdoc/contributing-a-new-endpoint
 ---
 
 The Nuxeo REST API provides many [endpoints]({{page page='rest-api-endpoints'}}). Moreover, it has been designed to be highly pluggable allowing to contribute your own endpoint whenever required.
