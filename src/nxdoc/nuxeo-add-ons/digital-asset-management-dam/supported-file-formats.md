@@ -372,7 +372,7 @@ X
 
 </td><td colspan="1">
 
-&nbsp;
+X
 
 </td><td colspan="1">
 
@@ -396,7 +396,7 @@ X
 
 </td><td colspan="1">
 
-&nbsp;
+X
 
 </td><td colspan="1">
 
@@ -420,7 +420,7 @@ X
 
 </td><td colspan="1">
 
-&nbsp;
+X
 
 </td><td colspan="1">
 
