@@ -474,6 +474,6 @@ The licenses used are:
 | xpp3-1.1.4c.jar |   | 1.1.4c | AL 1.1, BSD 4, Public Domain |
 | xsom-20140925.jar | [XSOM](http://xsom.java.net) | 20140925 | CDDL 1.1, GPL 2 |
 | xstream-1.4.10.jar | [XStream](http://xstream.codehaus.org) | 1.4.10 | BSD 3 |
-| yarfraw-0.92.jar | [YAFRAW](http://yarfraw.sourceforge.net) | 0.92 | AL 2.0 |
+| yarfraw-0.92.jar | [YARFRAW](http://yarfraw.sourceforge.net) | 0.92 | AL 2.0 |
 | zkclient-0.10.jar |   | 0.10 | AL 2.0 |
 | zookeeper-3.4.8.jar |   | 3.4.8 | AL 2.0 |
