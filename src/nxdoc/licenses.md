@@ -181,7 +181,6 @@ The licenses used are:
 *   EPL 1.0: [Eclipse Public License v1.0](http://www.eclipse.org/legal/epl-v10.html)
 *   GPL 2: [GNU General Public License v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 *   GPL 2 CPE: [GPL 2 with the Classpath Exception](http://openjdk.java.net/legal/gplv2+ce.html)
-*   GPL 3: [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 *   LGPL 2.1: [GNU Lesser General Public License v2.1](http://www.gnu.org/licenses/lgpl-2.1.html)
 *   LGPL 3: [GNU Lesser General Public License v3](http://www.gnu.org/licenses/lgpl.html)
 *   MIT: [MIT License](http://opensource.org/licenses/mit-license.php)
@@ -323,6 +322,7 @@ The licenses used are:
 | jaxb-core-2.2.11.jar |   | 2.2.11 | CDDL 1.0, GPL 2 |
 | jaxb-impl-2.2.11.jar | [JAXB RI](http://jaxb.java.net) | 2.2.11 | CDDL 1.0, GPL 2 |
 | jaxen-1.1.6.jar |   | 1.1.6 | BSD 3 |
+| jbig2-imageio-2.99.0-NX1.jar |   | 2.99.0-NX1 | AL 2.0 |
 | jboss-el-1.0_02.CR6.jar | [Seam](http://www.seamframework.org) | 1.0_02.CR6 | LGPL 2.1 |
 | jboss-seam-2.3.1.Final.NX02.jar | [Seam](http://www.seamframework.org) | 2.3.1.Final.NX02 | LGPL 2.1 |
 | jboss-seam-excel-2.3.1.Final.jar | [Seam](http://www.seamframework.org) | 2.3.1.Final | LGPL 2.1 |
@@ -371,7 +371,6 @@ The licenses used are:
 | kafka-clients-1.0.0.jar |   | 1.0.0 | AL 2.0 |
 | kafka_2.11-1.0.0.jar |   | 1.0.0 | AL 2.0 |
 | lang-mustache-client-5.6.3.jar |   | 5.6.3 | AL 2.0 |
-| levigo-jbig2-imageio-1.6.5.jar |   | 1.6.5 | GPL 3 |
 | log4j-api-2.9.1.jar |   | 2.9.1 | AL 2.0 |
 | log4j-core-2.9.1.jar |   | 2.9.1 | AL 2.0 |
 | lucene-analyzers-common-6.6.1.jar |   | 6.6.1 | AL 2.0 |
