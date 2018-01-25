@@ -216,7 +216,7 @@ The licenses used are:
 | asm-5.0.3.jar | [ASM](http://asm.ow2.org) | 5.0.3 | BSD 3 |
 | batik-css-1.7.jar | [Batik](http://xmlgraphics.apache.org/batik/) | 1.7 | AL 2.0 |
 | batik-util-1.7.jar | [Batik](http://xmlgraphics.apache.org/batik/) | 1.7 | AL 2.0 |
-| bcprov-jdk15-1.45.jar | [Bouncy Castle](http://www.bouncycastle.org/java.html) | 1.45 | MIT |
+| bcprov-jdk15on-1.59.jar |   | 1.59 | MIT |
 | c3p0-0.9.1.1.jar | [c3p0](http://sourceforge.net/projects/c3p0/) | 0.9.1.1 | LGPL 2.1 |
 | chemistry-opencmis-client-api-1.0.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.0.0 | AL 2.0 |
 | chemistry-opencmis-client-bindings-1.0.0.jar | [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) | 1.0.0 | AL 2.0 |
@@ -279,7 +279,7 @@ The licenses used are:
 | geronimo-connector-2.2.1-NX1.jar | [Apache Geronimo](http://geronimo.apache.org) | 2.2.1-NX1 | AL 2.0 |
 | geronimo-transaction-2.2.1.jar | [Apache Geronimo](http://geronimo.apache.org) | 2.2.1 | AL 2.0 |
 | google-http-client-1.19.0.jar |   | 1.19.0 | AL 2.0 |
-| google-http-client-jackson-1.19.0.jar |   | 1.19.0 | AL 2.0 |
+| google-http-client-jackson2-1.19.0.jar |   | 1.19.0 | AL 2.0 |
 | google-oauth-client-1.20.0.jar |   | 1.20.0 | AL 2.0 |
 | groovy-all-2.4.12.jar | [Groovy](http://groovy.codehaus.org) | 2.4.12 | AL 2.0 |
 | guava-18.0.jar |   | 18.0 | AL 2.0 |
@@ -348,6 +348,7 @@ The licenses used are:
 | jline-0.9.94.jar | [JLine](http://jline.sourceforge.net) | 0.9.94 | BSD 3 |
 | jmd-0.8.1-tomasol-3e60e36137.jar | [JMD](https://github.com/tomasol/jmd) | 0.8.1-tomasol-3e60e36137 | MIT |
 | jmimemagic-0.1.2.jar | [jMimeMagic](http://jmimemagic.sourceforge.net/index.html) | 0.1.2 | AL 2.0 |
+| jna-4.4.0-1.jar |   | 4.4.0-1 | AL 2.0 |
 | jna-4.4.0.jar |   | 4.4.0 | AL 2.0, LGPL 2.1 |
 | jna-platform-4.4.0.jar |   | 4.4.0 | AL 2.0, LGPL 2.1 |
 | joda-time-2.8.2.jar | [Joda Time](http://joda-time.sourceforge.net) | 2.8.2 | AL 2.0 |
