@@ -156,20 +156,22 @@ You also need to use a slave owning the configuration for desired DB, for exampl
 ### Discard Old Build
 {{#> panel type='code' heading='JenkinsFile'}}
 
-properties([[$class: 'BuildDiscarderProperty',                                                             
+```properties([[$class: 'BuildDiscarderProperty',                                                             
                      strategy: [$class: 'LogRotator', artifactDaysToKeepStr: '',                           
                      artifactNumToKeepStr: '1',                                                            
                      daysToKeepStr: '60',                                                                  
-                     numToKeepStr: '60']]])             
+                     numToKeepStr: '60']]])
+```
 {{/panel}}
 
 #### Abort the Build If It's Stuck + Add Timestamps to the Console Output
 {{#> panel type='code' heading='Jenkinsfile'}}
-timestamps {
+```timestamps {
         timeout(time: 240, unit: 'MINUTES') {
                    // code here
                 }
-           }           
+           }
+ ```
 {{/panel}}
 
 ### Build
