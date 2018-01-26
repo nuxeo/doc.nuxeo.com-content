@@ -167,7 +167,8 @@ properties([[$class: 'BuildDiscarderProperty',                       
 
 #### Abort the Build If It's Stuck + Add Timestamps to the Console Output
 {{#> panel type='code' heading='Jenkinsfile'}}
-```timestamps {
+```
+timestamps {
         timeout(time: 240, unit: 'MINUTES') {
                    // code here
                 }
