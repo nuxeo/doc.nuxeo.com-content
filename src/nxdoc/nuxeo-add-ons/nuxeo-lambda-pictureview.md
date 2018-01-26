@@ -16,6 +16,7 @@ tree_item_index: 2060
 Watch the related courses on Nuxeo University
 - [DAM Architecture course](https://university.nuxeo.com/learn/public/course/view/elearning/98/dam-architecture).
 - [LTS 2017 new feature with Nuxeo Stream and the Lambda integration](https://university.nuxeo.com/learn/public/course/view/elearning/126/lts-2017-new-features) *(min 3'00)*
+![]({{file name='nx_lambda_university.png'}} ?w=300,border=true)
 {{/callout}}
 
 ## {{> anchor 'functional-overview'}}Functional Overview
