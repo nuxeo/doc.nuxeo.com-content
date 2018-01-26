@@ -156,7 +156,8 @@ You also need to use a slave owning the configuration for desired DB, for exampl
 ### Discard Old Build
 {{#> panel type='code' heading='JenkinsFile'}}
 
-```properties([[$class: 'BuildDiscarderProperty',                                                             
+```
+properties([[$class: 'BuildDiscarderProperty',                                                             
                      strategy: [$class: 'LogRotator', artifactDaysToKeepStr: '',                           
                      artifactNumToKeepStr: '1',                                                            
                      daysToKeepStr: '60',                                                                  
