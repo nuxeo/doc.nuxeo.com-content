@@ -132,7 +132,7 @@ Developers have their own dedicated job for building a branch, testing it and ev
 
 You can view the resulting configuration by adding `/config.xml` to the job URL. Here are a few details about the job configuration.
 
-#### Discard Old Builds (Log Rotation Strategy)
+#### Old Builds (Log Rotation Strategy)
 
 *   Days to keep builds: **21**
 *   Max # of builds to keep: **100**
@@ -153,9 +153,23 @@ You also need to use a slave owning the configuration for desired DB, for exampl
 
 ### Build Environment
 
-#### Abort the Build If It's Stuck
+### Discard Old Build
+{{#> panel type='code' heading='Shell script'}}
+properties([[$class: 'BuildDiscarderProperty',                                                             
+                     strategy: [$class: 'LogRotator', artifactDaysToKeepStr: '',                           
+                     artifactNumToKeepStr: '1',                                                            
+                     daysToKeepStr: '60',                                                                  
+                     numToKeepStr: '60']]])
+{{/panel}}
 
-#### Add Timestamps to the Console Output
+#### Abort the Build If It's Stuck + Add Timestamps to the Console Output
+{{#> panel type='code' heading='Shell script'}}
+timestamps {
+        timeout(time: 240, unit: 'MINUTES') {
+                   // code here
+                }
+           }
+{{/panel}}
 
 ### Build
 
