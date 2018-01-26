@@ -160,19 +160,16 @@ properties([[$class: 'BuildDiscarderProperty',
                      strategy: [$class: 'LogRotator', artifactDaysToKeepStr: '',                           
                      artifactNumToKeepStr: '1',                                                            
                      daysToKeepStr: '60',                                                                  
-                     numToKeepStr: '60']]])
-                     
+                     numToKeepStr: '60']]])             
 {{/panel}}
 
 #### Abort the Build If It's Stuck + Add Timestamps to the Console Output
 {{#> panel type='code' heading='Jenkinsfile'}}
-
 timestamps {
         timeout(time: 240, unit: 'MINUTES') {
                    // code here
                 }
-           }
-           
+           }           
 {{/panel}}
 
 ### Build
