@@ -2,61 +2,69 @@
 title: DAM
 review:
     comment: ''
-    date: '2017-10-20'
+    date: '2018-01-30'
     status: ok
 labels:
     - DAM
 is_overview: true
 tree_item_index: 20000
 section_parent: dam
+toc: true
 ---
 <div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
+<div class="column medium-12">
+{{#> panel type='secondary'}}
+## [Upload & Store]({{page page='upload-and-store'}})
 
-### Upload & Store
+- **Bulk Upload**</br>Upload hundreds of any kind of assets at once with bulk upload.
 
-- Bulk Upload (From the platform / From Nuxeo Drive)
-- Supported File format
-- Metadata Extraction (extraction with drag n drop: XMP. Nuxeo knows how to extract and write back metadata on documents and this is configurable with XMP. => HOW TO)
-- Live Connect (Present Use case)
-Store videos in another location than files
+- **Automated Metadata Extraction**</br>The Nuxeo Platform enables to extract information from the uploaded files attached to a document and automatically fill in the document metadata at creation time. This enables you to leverage metadata existing outside the Nuxeo Platform to automatically categorize documents, preventing users from editing document to report these metadata.
 
+- **Nuxeo Live Connect**</br>Nuxeo provides out-of-the-box integration with Box, Google Drive, Dropbox, Microsoft OneDrive, and OneDrive for Business. There’s no need to copy content residing in these file-sharing applications or to convert it to be stored in Nuxeo’s Content Services Platform.
+
+- **Supported File Formats**</br>The Digital Asset Management module supports a large number of file formats (Video, images, PDFs, 3D models, and more).
 {{/panel}}
 </div>
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-### Manage & Organize
 
-- Bulk Edit (Spreadsheet)
-- Versioning
-- Archiving Media ( configure rules to move pictures in an archive folder or change their lifecycle with schedulers and automation modules => How to)
-- Workflows: Juridical validation/ juridical review
+<div class="column medium-12">
+{{#> panel type='secondary'}}
+<div align='right'>
+## [Manage & Organize]({{page page='manage-and-organize'}})
+</div>
+- **Bulk Edit**</br>Nuxeo Spreadsheet add-on allows to bulk edit documents starting from a content view result set, providing a spreadsheet-like user experience. It enables you to add and/or remove metadata (like Nature, Subject, etc.), rename files, add information to a new metadata field, add a description, etc.
 
+- **Versioning**</br>The Nuxeo Repository includes a versioning system. At any time, you can ask the repository to create and archive a version of a document. Versioning can be done automatically, according to some versioning policies, or on-demand, through the UI.
+
+- **Archiving Media**</br>The History tab displays the previous versions of the document that were archived when the document was edited and its version increased. All previous versions can be consulted, restored and/or deleted.
+
+- **Workflows**</br>The Nuxeo workflow engine provides the usual features you would expect from a workflow engine and leverages the main modules of the platform: the repository, the Automation service, layouts for all the user interactions and process implementations. It provides high level features regarding task management such as filterable tasks lists, reminders, task reassignment, task delegation, task reminders.
 {{/panel}}
 </div>
 </div>
+
 <div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-### Search & Find
+<div class="column medium-12">
+{{#> panel type='secondary'}}
+## [Search & Find]({{page page='search-and-find'}})
+- **Search**</br>The search form uses Elasticsearch aggregates for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.
 
-- Search (different search types, with custom metadata in Studio or with thumbnail)
-- Preview (Preview of all doc types, video with story board, Support 3D files
+- **Asset Search**</br>This search will let you search by assets metadata, such as type, format, width, height, etc. The Assets search form offers several search criteria, that you can associate to define your search and find documents.
 
+- **Preview**</br>The preview enables you to see an insight of your document. Nuxeo supports preview for a lot of different files format.
 {{/panel}}
 </div>
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-### Share & Distribute
 
-- Security and access (instant share, security policy, rules on embargo, traceability,
-- Collections
-- Renditions
-- Watermarks
-- Intellectual Property (add schemas that can be linked to contracts)
-- Publish assets to another system (site web)
+<div class="column medium-12">
+{{#> panel type='secondary'}}
+<div align='right'>
+## [Share & Distribute]({{page page='share-and-distribute'}}) </div>
+- **Collections**</br> Collections are a folder-like document in which you can classify existing documents. Documents are not actually copied or moved into the collection, which only holds a link to the document in its original location.
 
+- **Watermarks**</br> Add watermarking to your photo or video to prevent unauthorized distribution of your assets.
+
+- **Security**</br>The Nuxeo repository security relies on a list of unitary permissions that are used within the repository to grant or deny access. Nuxeo Platform comes with a default set of permissions and permissions groups but you can contribute yours too.
+
+- **Publish Assets**</br> Nuxeo Media Publishing is an addon that enables users to publish video documents stored in the Nuxeo repository to external video hosting websites, without leaving the Nuxeo Platform UI.
 {{/panel}}
 </div>
 </div>
