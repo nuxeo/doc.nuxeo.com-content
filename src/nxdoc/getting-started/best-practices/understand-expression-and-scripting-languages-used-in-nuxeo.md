@@ -25,347 +25,347 @@ confluence:
     source_link: /display/NXDOC/Understand+Expression+and+Scripting+Languages+Used+in+Nuxeo
 tree_item_index: 900
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 09:10'
         message: ''
         version: '69'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2016-02-09 15:20'
         message: ''
         version: '68'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-01-18 17:03'
         message: 'replace "Write" by "Edit"     '
         version: '67'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-10 12:11'
         message: ''
         version: '66'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-10 09:27'
         message: Added freemarker link
         version: '65'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2015-09-10 09:26'
         message: Added MVEL link
         version: '64'
-    - 
+    -
         author: Michaël Vachette
         date: '2014-12-30 17:31'
         message: ''
         version: '63'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-10-06 11:26'
         message: ''
         version: '62'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-30 10:42'
         message: ''
         version: '61'
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-29 14:24'
         message: Fix link to JIRA issue and formatting
         version: '60'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-25 11:12'
         message: ''
         version: '59'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-06-23 16:47'
         message: Reverted from v. 56
         version: '58'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-06-23 16:46'
         message: Added anchor
         version: '57'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2014-06-23 16:42'
         message: Updated schema image
         version: '56'
-    - 
+    -
         author: Thierry Martins
         date: '2014-04-16 11:58'
         message: ''
         version: '55'
-    - 
+    -
         author: Vincent Dutat
         date: '2014-04-04 21:16'
         message: ''
         version: '54'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-08 10:44'
         message: ''
         version: '53'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-01-07 23:05'
         message: ''
         version: '52'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-01-07 22:59'
         message: ''
         version: '51'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2014-01-07 22:58'
         message: ''
         version: '50'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-16 12:03'
         message: ''
         version: '49'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-09 11:14'
         message: Removed related topics from TOC
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-09 11:13'
         message: ''
         version: '47'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-09-06 00:20'
         message: ''
         version: '46'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-09-05 20:03'
         message: ''
         version: '45'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-04 18:28'
         message: ''
         version: '44'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-04 17:24'
         message: ''
         version: '43'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-09-04 17:21'
         message: ''
         version: '42'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2013-09-04 17:17'
         message: ''
         version: '41'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-25 17:54'
         message: ''
         version: '40'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-25 17:54'
         message: Reverted from v. 37
         version: '39'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-25 17:53'
         message: Removed JIRA ticket regarding inverted EL filter (fixed)
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-15 11:16'
         message: Fixed typo
         version: '37'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-12 14:05'
         message: ''
         version: '36'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-12 14:01'
         message: ''
         version: '35'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-12 09:55'
         message: Modified event handler example
         version: '34'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 14:51'
         message: ''
         version: '33'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 14:49'
         message: Added filters and widgets available variables
         version: '32'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 13:54'
         message: Added event handlers part
         version: '31'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 11:43'
         message: Added automation chains variables
         version: '30'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 11:06'
         message: Added doc templates variables
         version: '29'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-11 10:20'
         message: Taille des images (spéciale dédicace AE)
         version: '28'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-11 01:34'
         message: ''
         version: '27'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-11 01:34'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-09 12:14'
         message: ''
         version: '25'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-08 16:48'
         message: ''
         version: '24'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-08 14:29'
         message: Formatting
         version: '23'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-07-08 14:24'
         message: Started to add available variables depending on context (with workflow context)
         version: '22'
-    - 
+    -
         author: Karl Harris
         date: '2013-07-03 16:01'
         message: ''
         version: '21'
-    - 
+    -
         author: Karl Harris
         date: '2013-07-03 15:07'
         message: ''
         version: '20'
-    - 
+    -
         author: Karl Harris
         date: '2013-07-03 15:03'
         message: ''
         version: '19'
-    - 
+    -
         author: Karl Harris
         date: '2013-07-03 14:55'
         message: ''
         version: '18'
-    - 
+    -
         author: Karl Harris
         date: '2013-07-03 14:54'
         message: ''
         version: '17'
-    - 
+    -
         author: Karl Harris
         date: '2013-07-03 14:48'
         message: ''
         version: '16'
-    - 
+    -
         author: Karl Harris
         date: '2013-07-03 14:44'
         message: ''
         version: '15'
-    - 
+    -
         author: Karl Harris
         date: '2013-07-03 14:42'
         message: ''
         version: '14'
-    - 
+    -
         author: Karl Harris
         date: '2013-07-03 14:40'
         message: ''
         version: '13'
-    - 
+    -
         author: Karl Harris
         date: '2013-07-03 14:40'
         message: ''
         version: '12'
-    - 
+    -
         author: Alain Escaffre
         date: '2013-07-01 13:49'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-27 11:12'
         message: Fixed typos and format
         version: '10'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-06-13 16:37'
         message: ''
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-06-13 16:34'
         message: ''
         version: '8'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-06-13 16:24'
         message: ''
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-06-13 15:09'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-06-13 14:37'
         message: ''
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-06-13 14:18'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-06-13 14:18'
         message: schema
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-06-13 14:13'
         message: Presentation
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2013-06-13 13:55'
         message: ''
@@ -578,7 +578,6 @@ Please note that:
 
     - `Document['dc:title'] == "myTitle"` will work.
     - `@{Document['dc:title'] == "myTitle"}` will **not** work and generate an error.
-- A bug currently affects Nuxeo Studio in that regard: [NXS-955](https://jira.nuxeo.com/browse/NXS-955)
 
 ### [![]({{file name='ELDependingOnComponent-6.png'}})](#schema-which-el) Filters
 
