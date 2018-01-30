@@ -51,7 +51,7 @@ If a migration script is required, then:
 
 *   Prefix its name with the current Nuxeo version
 *   Attach it to the related JIRA issue
-*   Add it to the source code under nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/bin/upgrade-XX-YY/
+*   Add it to the source code under `nuxeo-distribution/nuxeo-server-tomcat/src/main/resources/tomcat/bin/upgrade-XX-YY/`
 *   Reference it in the relevant sub-page of [Upgrading the Nuxeo Platform]({{page space='nxdoc' page='upgrading-the-nuxeo-platform'}})
 
 In the script header, specify:
