@@ -566,7 +566,6 @@ Please note that:
 
     - `Document['dc:title'] == "myTitle"` will work.
     - `@{Document['dc:title'] == "myTitle"}` will **not** work and generate an error.
-- A bug currently affects Nuxeo Studio in that regard: [NXS-955](https://jira.nuxeo.com/browse/NXS-955)
 
 ### [![]({{file name='ELDependingOnComponent-6.png'}})](#schema-which-el) Filters
 
