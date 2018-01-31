@@ -306,8 +306,40 @@ For setting CI over a standalone Nuxeo Plugin (Addon + Package hosted together i
 
     </td></tr></tbody></table></div>
 
+
 &nbsp;
 
 ### Sandbox Prototypes
 
 &nbsp;
+
+### Build Environment
+
+### Discard Old Build
+{{#> panel type='code' heading='JenkinsFile'}}
+
+```
+properties([[$class: 'BuildDiscarderProperty',                                                            
+                     strategy: [$class: 'LogRotator', artifactDaysToKeepStr: '',                           
+                     artifactNumToKeepStr: '1',                                                            
+                     daysToKeepStr: '60',                                                                  
+                     numToKeepStr: '60']]])
+```
+{{/panel}}
+
+About "Discard Old Build", the properties set in the job are lost when setting properties in the Jenkinsfile.
+
+
+
+
+
+#### Abort the Build If It's Stuck + Add Timestamps to the Console Output
+{{#> panel type='code' heading='Jenkinsfile'}}
+```
+timestamps {
+        timeout(time: 240, unit: 'MINUTES') {
+                   // code here
+                }
+           }
+ ```
+{{/panel}}
