@@ -151,34 +151,7 @@ You need to use the `customdb` profile to init build environment, and then desir
 
 You also need to use a slave owning the configuration for desired DB, for example `MULTIDB_LINUX`.
 
-### Build Environment
-
-### Discard Old Build
-{{#> panel type='code' heading='JenkinsFile'}}
-
-```
-properties([[$class: 'BuildDiscarderProperty',                                                             
-                     strategy: [$class: 'LogRotator', artifactDaysToKeepStr: '',                           
-                     artifactNumToKeepStr: '1',                                                            
-                     daysToKeepStr: '60',                                                                  
-                     numToKeepStr: '60']]])
-```
-{{/panel}}
-
-#### Abort the Build If It's Stuck + Add Timestamps to the Console Output
-{{#> panel type='code' heading='Jenkinsfile'}}
-```
-timestamps {
-        timeout(time: 240, unit: 'MINUTES') {
-                   // code here
-                }
-           }
- ```
-{{/panel}}
-
-### Build
-
-#### Execute Shell
+#### Execute Shell	
 
 {{#> panel type='code' heading='Shell script'}}
 
@@ -199,7 +172,7 @@ fi
 git checkout $BRANCH 2>/dev/null || git checkout $PARENT_BRANCH
 
 . scripts/gitfunctions.sh
-if [ "$(type -t shr)" != "function" ]; then 
+if [ "$(type -t shr)" != "function" ]; then
   echo ERROR: the current job is not compliant with this version of gitfunctions.sh
   exit 1
 fi
@@ -327,7 +300,7 @@ Use `Maven` and `javac` parsers on the console. Use `javac` parser on `nuxeo-dis
 8. Send to you a **Jabber notification**.
 9. **Trigger parameterized build on other projects**
 ```Project: /System/ondemand-testandpush-metrics
-Parameters: 
+Parameters:
 JOB=$JOB_NAME
 BUILD=$BUILD_NUMBER
 ```
