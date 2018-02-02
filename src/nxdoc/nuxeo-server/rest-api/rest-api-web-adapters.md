@@ -234,6 +234,29 @@ Default adapters provided by default.
 
 <table class="hover">
   <tr>
+    <td class="small-2">**@emptyWithDefault**</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>
+      Returns an empty document initialized with default properties. <br />
+      The target document acts as the parent of the empty document. <br />
+      Query parameters: <br />
+      `type`: required, type of the empty document.<br />
+      `name`: optional, name of the empty document. <br />
+      <br />
+      Note that calling `emptyWithDefault` adapter triggers the `emptyDocumentModelCreated` core event, so the returned empty document will have all properties set by listeners listening to `emptyDocumentModelCreated` as well.
+    </td>
+    <td>
+      ```
+      /api/v1/id/{docId}/@emptyWithDefault?type=File&name=test
+      ```
+    </td>
+  </tr>
+</table>
+
+<table class="hover">
+  <tr>
     <td class="small-2">**@pp**</td>
     <td>
       Returns the result of the query corresponding to the named PageProvider. The target Document is used to provide the parameters of the PageProvider (*SearchDocumentModel*).
@@ -387,7 +410,7 @@ Or use the `@op` adapter to access operations.
       ```
       /api/v1/id/{docId}/@op/{OperationName}
       ```
-      </br>  
+      </br>
       ```
       /api/v1/path/{pathOfTheDoc}/@op/Chain.{myChain}
       ```
