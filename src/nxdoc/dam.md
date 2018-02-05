@@ -14,9 +14,9 @@ toc: true
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-12">
 {{#> panel type='secondary'}}
-## [Upload & Store]({{page page='upload-and-store'}})
+## [Upload & Store]({{page page='upload-and-store'}}) ![]({{file name='data-upload.png'}} ?w=40px)
 
-- **Bulk Upload**</br>Upload hundreds of any kind of assets at once with bulk upload.
+- **Bulk Upload**</br>Upload hundreds of any kind of assets at once with Nuxeo Drive, drag and drop, etc.
 
 - **Automated Metadata Extraction**</br>The Nuxeo Platform enables to extract information from the uploaded files attached to a document and automatically fill in the document metadata at creation time. This enables you to leverage metadata existing outside the Nuxeo Platform to automatically categorize documents, preventing users from editing document to report these metadata.
 
@@ -29,7 +29,7 @@ toc: true
 <div class="column medium-12">
 {{#> panel type='secondary'}}
 <div align='right'>
-## [Manage & Organize]({{page page='manage-and-organize'}})
+## ![]({{file name='folders.png'}} ?w=40px) [Manage & Organize]({{page page='manage-and-organize'}})
 </div>
 - **Bulk Edit**</br>Nuxeo Spreadsheet add-on allows to bulk edit documents starting from a content view result set, providing a spreadsheet-like user experience. It enables you to add and/or remove metadata (like Nature, Subject, etc.), rename files, add information to a new metadata field, add a description, etc.
 
@@ -45,7 +45,7 @@ toc: true
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-12">
 {{#> panel type='secondary'}}
-## [Search & Find]({{page page='search-and-find'}})
+## [Search & Find]({{page page='search-and-find'}}) ![]({{file name='window-application-search.png'}} ?w=40px)
 - **Search**</br>The search form uses Elasticsearch aggregates for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.
 
 - **Asset Search**</br>This search will let you search by assets metadata, such as type, format, width, height, etc. The Assets search form offers several search criteria, that you can associate to define your search and find documents.
@@ -57,7 +57,8 @@ toc: true
 <div class="column medium-12">
 {{#> panel type='secondary'}}
 <div align='right'>
-## [Share & Distribute]({{page page='share-and-distribute'}}) </div>
+## ![]({{file name='share.png'}} ?w=40px) [Share & Distribute]({{page page='share-and-distribute'}})
+</div>
 - **Collections**</br> Collections are a folder-like document in which you can classify existing documents. Documents are not actually copied or moved into the collection, which only holds a link to the document in its original location.
 
 - **Watermarks**</br> Add watermarking to your photo or video to prevent unauthorized distribution of your assets.
