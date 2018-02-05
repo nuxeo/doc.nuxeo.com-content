@@ -8,8 +8,8 @@ default:
             -
                 space_path: userdoc
                 space_name: Nuxeo Platform User Documentation
-        branch: master
-        dev_browser_path: nxdoc
+        branch: '910'
+        dev_browser_path: '910/nxdoc'
         versions:
             -
                 label: LTS 2017
