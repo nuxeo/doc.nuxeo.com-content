@@ -12,6 +12,8 @@ default:
         dev_browser_path: '910/nxdoc'
         versions:
             -
+                label: FT
+            -
                 label: LTS 2017
                 url_path: '910'
                 is_current_version: true
