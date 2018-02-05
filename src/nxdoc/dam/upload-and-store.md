@@ -9,30 +9,57 @@ labels:
 tree_item_index: 100
 toc: true
 ---
+
 ## Bulk Upload
 
-### From the platform
+On Nuxeo Platform, different features are available to let you upload and/or create your assets in every possible way.
 
+### From Nuxeo platform
 
+#### Drag and Drop
+
+You can use drag and drop to easily import content into a workspace or just to create one document at a time. It enables you to quickly drag and drop documents in the workspace that you want
+
+You can also drag and drop a file directly in the file view in order to replace the already uploaded file.
+
+![]({{file name='import-popup-web-ui.png' page='userdoc/browse'}} ?w=450,border=true)
+
+#### Import Button
+
+You can also drag and drop one or more files of any type from the Import tab of the creation popup.
+
+From this Import button you will be able to import with properties, which means fill in metadata of the document(s) before they are created in the workspace.
+
+![]({{file name='add-properties-web-ui.png' page='userdoc/browse'}} ?w=450,border=true)
 ### From Nuxeo Drive
 
+You can very easily import document by moving them from a desktop folder to a Nuxeo Drive folder, or creating office files directly in a Nuxeo Drive folder.
 
+Read the [Nuxeo Drive documentation]({{page page='nuxeo-drive'}}) for more information.
 
+SCREENSHOT
 
+## Live Connect
 
-## Supported File format
+Live Connect allows you to create a content application that handles cloud files (Dropbox, Google Drive, Box, OneDrive...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it. This allows the user to benefit from thumbnailing service, full text, conversions, etc.
 
+![]({{file name='LiveConnect-file-creation-webui.png' page='nuxeo-live-connect'}} ?w=450,border=true)
 
+Read the [Nuxeo Live Connect documentation]({{page version='' space='nxdoc' page='nuxeo-live-connect'}}) for more information.
 
+## Automated Metadata Extraction
 
+{{{multiexcerpt 'automated-metadata-extraction-excerpt' page='userdoc/creating-content'}}}
 
-## Metadata Extraction
+Read the [Binary Metadata]({{page space='nxdoc' page='binary-metadata'}}) documentation for more information.
 
-extraction with drag n drop: XMP. Nuxeo knows how to extract and write back metadata on documents and this is configurable with XMP. => HOW TO)
+## Supported File Formats
 
+The Platform Digital Asset Management module supports a large number of file formats. For example:
 
+- **Picture**: JPG, PNG, GIF, PSD, AI, ...
+- **Video**: avi, mp4, WMV, ...
+- **Audio**: mp3, wav, ...
+- **Office**: PDF, Open Office, Microsoft Office, ...
 
-
-
-## Live Connect (Present Use case)
-Store videos in another location than files
+See the full list of supported formats on the [dedicated documentation page]({{page version='' space='nxdoc' page='supported-file-formats'}}).
