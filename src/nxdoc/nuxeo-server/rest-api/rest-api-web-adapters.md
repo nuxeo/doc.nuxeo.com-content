@@ -235,9 +235,6 @@ Default adapters provided by default.
 <table class="hover">
   <tr>
     <td class="small-2">**@emptyWithDefault**</td>
-    <td></td>
-  </tr>
-  <tr>
     <td>
       Returns an empty document initialized with default properties. <br />
       The target document acts as the parent of the empty document. <br />
@@ -247,7 +244,10 @@ Default adapters provided by default.
       <br />
       Note that calling `emptyWithDefault` adapter triggers the `emptyDocumentModelCreated` core event, so the returned empty document will have all properties set by listeners listening to `emptyDocumentModelCreated` as well.
     </td>
-    <td>
+  </tr>
+  <tr>
+    <td></td>
+  <td>
       ```
       /api/v1/id/{docId}/@emptyWithDefault?type=File&name=test
       ```
