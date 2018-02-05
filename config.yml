@@ -12,7 +12,7 @@ default:
         dev_browser_path: nxdoc
         versions:
             -
-                label: FT
+                label: LTS 2017
                 is_current_version: true
             -
                 label: LTS 2016
