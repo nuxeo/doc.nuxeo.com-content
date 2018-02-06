@@ -18,7 +18,7 @@ On Nuxeo Platform, different features are available to let you upload and/or cre
 
 #### Drag and Drop
 
-You can use drag and drop to easily import content into a workspace or just to create one document at a time. It enables you to quickly drag and drop documents in the workspace that you want
+You can use drag and drop to easily import documents into a workspace or just to create one document at a time. It enables you to quickly drag and drop documents in the workspace that you want.
 
 You can also drag and drop a file directly in the file view in order to replace the already uploaded file.
 
@@ -31,7 +31,10 @@ You can also drag and drop one or more files of any type from the Import tab of 
 From this Import button you will be able to import with properties, which means fill in metadata of the document(s) before they are created in the workspace.
 
 ![]({{file name='add-properties-web-ui.png' page='userdoc/browse'}} ?w=450,border=true)
+
 ### From Nuxeo Drive
+
+Nuxeo Drive is a Nuxeo addon that enables the synchronization of folders or workspaces from the Nuxeo Platform with local folder on your computer.
 
 You can very easily import document by moving them from a desktop folder to a Nuxeo Drive folder, or creating office files directly in a Nuxeo Drive folder.
 
@@ -39,9 +42,9 @@ Read the [Nuxeo Drive documentation]({{page page='nuxeo-drive'}}) for more infor
 
 SCREENSHOT
 
-## Live Connect
+## Connect with Dropbox, Google Drive, Box, OneDrive
 
-Live Connect allows you to create a content application that handles cloud files (Dropbox, Google Drive, Box, OneDrive...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it. This allows the user to benefit from thumbnailing service, full text, conversions, etc.
+Nuxeo Live Connect allows you to create a content application that handles cloud files (Dropbox, Google Drive, Box, OneDrive...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it. This allows the user to benefit from thumbnailing service, full text, conversions, etc.
 
 ![]({{file name='LiveConnect-file-creation-webui.png' page='nuxeo-live-connect'}} ?w=450,border=true)
 
@@ -57,9 +60,9 @@ Read the [Binary Metadata]({{page space='nxdoc' page='binary-metadata'}}) docume
 
 The Platform Digital Asset Management module supports a large number of file formats. For example:
 
-- **Picture**: JPG, PNG, GIF, PSD, AI, ...
-- **Video**: avi, mp4, WMV, ...
-- **Audio**: mp3, wav, ...
-- **Office**: PDF, Open Office, Microsoft Office, ...
+- **Picture**: JPG, PNG, GIF, PSD, AI, etc.
+- **Video**: avi, mp4, WMV, etc.
+- **Audio**: mp3, wav, etc.
+- **Office**: PDF, Open Office, Microsoft Office, etc.
 
 See the full list of supported formats on the [dedicated documentation page]({{page version='' space='nxdoc' page='supported-file-formats'}}).

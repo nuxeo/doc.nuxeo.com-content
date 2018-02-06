@@ -11,24 +11,21 @@ is_overview: true
 toc: true
 ---
 
-<div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-12">
-{{#> panel type='secondary' match_height='true'}}
 
 ### Search
 
-- different search types, with custom metadata in Studio or with thumbnail
-
-{{/panel}}
-</div>
+#### Quick Search
 
 
-<div class="column medium-12" align='right'>
-{{#> panel type='secondary' match_height='true'}}
+
+#### Search with Custom Metadata
+
+
+
+
 ### Preview
 
-- Preview of all doc types, video with story board, Support 3D files
-
-{{/panel}}
-</div>
-</div>
+A preview is available for all sort of document types:
+- Storyboard and a video player for videos
+- Audio player
+- 3D files

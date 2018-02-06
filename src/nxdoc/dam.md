@@ -50,7 +50,7 @@ toc: true
 
 - **Asset Search**</br>This search will let you search by assets metadata, such as type, format, width, height, etc. The Assets search form offers several search criteria, that you can associate to define your search and find documents.
 
-- **Preview**</br>The preview enables you to see an insight of your document. Nuxeo supports preview for a lot of different files format.
+- **Preview**</br>The preview enables you to see an insight of your document. Nuxeo supports preview for all sort of files format.
 {{/panel}}
 </div>
 
