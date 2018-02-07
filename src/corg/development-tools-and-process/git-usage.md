@@ -637,19 +637,40 @@ Then redo the commit with the right commit message:
 
 ```
 git commit --amend -m "NXP-xxxx: adding my awesome information" some_file.txt
-
 ```
 
 To **undo the last commit** (without having pushed anything to public repo), do:
 
 ```
-git reset --soft HEAD~1
+# Cancel last commit but keep changes to be commited
+git reset --soft HEAD~
 
+# Cancel last commit and keep changes but not marked for commit
+git reset --mixed HEAD~
+
+# Cancel last commit and discard changes
+git reset --hard HEAD~
 ```
 
-To **merge a branch**, read the documentation at [http://progit.org/book/ch3-2.html](http://progit.org/book/ch3-2.html) or wait for someone to explain it here :wink:
+To **merge a branch**
 
-To **revert some changes**, read the documentation at [http://progit.org/2011/07/11/reset.html](http://progit.org/2011/07/11/reset.html) or wait for someone to explain it here :wink:
+```
+git merge <branch> [--no-ff]
+```
+
+To **rebase** the current branch with its upstream branch
+The local commits can be reworked (squash, edit, move...) during the interactive mode.
+
+```
+git rebase [-i] <upstream>
+```
+
+To **revert some changes**
+
+```
+git revert <commit>...
+```
+
 
 ### Useful Aliases
 
@@ -722,15 +743,26 @@ Recursively executes the given Shell command on the current and its direct child
 	LIST_<parent module> Environment variable that can be set to restrict the children modules to a fixed list. For instance: LIST_ADDONS_CORE="nuxeo-core-storage-marklogic" or LIST_ADDONS="nuxeo-shell nuxeo-quota".
 ```
 
-### Main Rules
+### Main Rules and Good Practices
 
-* Avoid to rewrite Git history on development and maintenance branches.
-* Strictly follow Nuxeo naming policy for branches and tags:
-    * Create dedicated branches named "fix-NXP-1234-some-expected-behavior" or "feature-NXP-1234-some-new-feature" while working.
-    * When your work is achieved, rebase then merge the branch (see [Isolated testing with ondemand-testandpush jobs]({{page page='isolated-testing'}})). Optionally delete it.
-* Use the same name for a local branch than its corresponding remote branch.
-* Always reference JIRA issues in the commit comments.
-* Commit as a valid author (i.e. "Firstname Lastname \<email address>" with the email address being configured in your GitHub account, no matter if it's public or private).
+* Do not rewrite Git history on development and maintenance branches.
+* Branch naming
+    * Strictly follow Nuxeo naming policy for branches and tags
+    * Tags are named `release-<semver>`
+    * Create working branches named as `<TYPE>-<REFERENCE>-<SHORT_DESC>`: `fix-NXP-1234-some-expected-behavior` or "`feature-NXP-1234-some-new-feature`
+    * Use the same name for a local branch than its corresponding remote branch.
+* Commits
+    * Reference JIRA issues in the head of commit comment.
+    * Comment with a first short line, then add optionally an empty line, then as much details as you consider useful
+    * When squashing other author's commits, a mention is welcome: `Co-authored-by: name <name@example.com>`
+    * Commit as a valid author (i.e. "Firstname Lastname \<email address>" with the email address being configured in your GitHub account, no matter if it's public or private).
+* Merging work
+    * Rebase against the upstream then ask for code review with a Pull Request
+    * Consider reworking the branch before review: isolate code cleanup, squash related commits, etc.
+    * When your work is achieved, rebase again then merge the branch (see [Isolated testing with ondemand-testandpush jobs]({{page page='isolated-testing'}})).
+    * Unique and very few commits can be merged as fast-forward, else creating a merge commit is recommended for readability.
+    * Optionally delete the remaining branch, else it will be automatically done after a short while once the related JIRA ticket is resolved.
+
 
 ## Advanced Usage and Specific Use Cases
 
@@ -751,7 +783,11 @@ git push -u origin master
 {{/panel}}{{#> panel type='code' heading='Renaming a branch'}}
 
 ```
+# Rename local branch
 git branch -m <oldname> <newname>
+
+# Rename remote branch. See 'rbranch-rename' alias.
+git push origin origin/<oldname>:refs/heads/<newname> :<oldname>
 ```
 
 {{/panel}}{{#> panel type='code' heading='Removing a local branch'}}
