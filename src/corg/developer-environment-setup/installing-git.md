@@ -343,54 +343,57 @@ Here are some aliases inspired from our Mercurial usage and from our current exp
 # Before Git 1.8.3 (May 24, 2013), remove the occurrences of `%C(auto)` or replace them with fixed colors such as `%Cgreen`, `%C(bold blue)`...
 
 # Simple shortcuts
-`ls = "ls-tree --name-only"`
-`ll = "ls-tree -l"`
-`st = status -sb`
-`ci = commit`
-`co = checkout`
-`br = branch`
-`branches = branch -a`
-`di = diff`
-`dic = diff --staged`
-`id = show -s --pretty=format:'%C(auto)%h%d'`
-`rollback = git reset --soft HEAD^`
+ls = "ls-tree --name-only"
+ll = "ls-tree -l"
+st = status -sb
+ci = commit
+co = checkout
+br = branch
+branches = branch -a
+di = diff
+dic = diff --staged
+id = show -s --pretty=format:'%C(auto)%h%d'
+rollback = git reset --soft HEAD^
 # Because "pull --rebase" and "rebase" are finally more used than "pull" and "merge"
-`pullr = "!git fetch \"$@\" && git rebase --autostash @{push}"`
+pullr = "!git fetch \"$@\" && git rebase --autostash @{push}"
 # Because we sometimes really want a merge
-`pullnor = pull --no-rebase`
+pullnor = pull --no-rebase
 
 # Amend a changeset (less powerful but quicker and easier than the interactive rebase)
- `fix = "!_() { c=$(git rev-parse $1) && git commit --fixup $c && git -c core.editor=cat rebase -i --autosquash --keep-empty --autostash $c~; }; _"`
+ fix = "!_() { c=$(git rev-parse $1) && git commit --fixup $c && git -c core.editor=cat rebase -i --autosquash --keep-empty --autostash $c~; }; _"
 
 # Using ref to upstream branch available since Git 1.7 (@{upstream})
 # Incoming changes
-`in = "!git remote update -p; git log ..@{u}"`
+in = "!git remote update -p; git log ..@{u}"
 # Outgoing changes
-`out = log @{u}..`
+out = log @{u}..
 # Outgoing changes on all remote-tracked branches
-`outall = log --branches --not --remotes=origin`
+outall = log --branches --not --remotes=origin
 # Branch fork point (aka oldest ancestor)
-`oldest-ancestor = !bash -c 'diff -u1 <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\"' -`
+oldest-ancestor = !bash -c 'diff -u1 <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\"' -
 
 # Various log display
-`lg = log --graph --pretty=format:'%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit`
-`glog = log --graph --abbrev-commit --date=relative`
-`logone = log --pretty=format:'%C(auto)%m %h %Cgreen%ad %C(blue)%<(20)%aN %Creset%s %N %C(auto)%d' --left-right --cherry-pick --date=short`
+lg = log --graph --pretty=format:'%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+glog = log --graph --abbrev-commit --date=relative
+logone = log --pretty=format:'%C(auto)%m %h %Cgreen%ad %C(blue)%<(20)%aN %Creset%s %N %C(auto)%d' --left-right --cherry-pick --date=short
 # Latests changes since last pull
-`lc = log --pretty=oneline --abbrev-commit --graph --decorate ORIG_HEAD.. --stat --no-merges`
+lc = log --pretty=oneline --abbrev-commit --graph --decorate ORIG_HEAD.. --stat --no-merges
 # Latest updated branches
-`latest = for-each-ref --count=10 --sort=-committerdate --format='%(committerdate:short) %(refname:short)'`
+latest = for-each-ref --count=10 --sort=-committerdate --format='%(committerdate:short) %(refname:short)'
 # Latest updated local branches
-`latestl = for-each-ref --count=10 --sort=-committerdate refs/heads --format='%(committerdate:short) %(refname:short)'`
+latestl = for-each-ref --count=10 --sort=-committerdate refs/heads --format='%(committerdate:short) %(refname:short)'
 
 # Commits per user
-`who = "shortlog -ne --format='%h %s'"`
+who = "shortlog -ne --format='%h %s'"
 # LoC per user (BSD)
-`authorship = "!git ls-files -z|xargs -0 -n1 -E'\n' -J {} git blame --date short -wCMcp '{}'| perl -pe 's/^.*?\\((.*?) +\\d{4}-\\d{2}-\\d{2} +\\d+\\).*/\\1/'| sort | uniq -c | sort -rn"`
+authorship = "!git ls-files -z|xargs -0 -n1 -E'\n' -J {} git blame --date short -wCMcp '{}'| perl -pe 's/^.*?\\((.*?) +\\d{4}-\\d{2}-\\d{2} +\\d+\\).*/\\1/'| sort | uniq -c | sort -rn"
 # LoC per user (GNU)
-`authorship = "!git ls-files -z|xargs -0 -n1 -E'\n' | git blame --date short -wCMcp -- | perl -pe 's/^.*?\\((.*?) +\\d{4}-\\d{2}-\\d{2} +\\d+\\).*/\\1/'| sort | uniq -c | sort -rn"`
+authorship = "!git ls-files -z|xargs -0 -n1 -E'\n' | git blame --date short -wCMcp -- | perl -pe 's/^.*?\\((.*?) +\\d{4}-\\d{2}-\\d{2} +\\d+\\).*/\\1/'| sort | uniq -c | sort -rn"
 
-# See [https://gist.github.com/jcarsique/24f8dd46d176bb67253e](https://gist.github.com/jcarsique/24f8dd46d176bb67253e) for more aliases.
+rbranch-rename = "!_() { [ \"$#\" -lt 2 ] && echo 'Usage: rbranch-rename [remote] old_branch_name new_branch_name' && exit 1; \
+                       if [ \"$#\" -gt 2 ]; then REMOTE=$1; shift; else REMOTE=origin; fi; git push $REMOTE $REMOTE/$1:refs/heads/$2 :$1; }; _"
+
+# See https://gist.github.com/jcarsique/24f8dd46d176bb67253e for more aliases.
 ```
 {{! /multiexcerpt}}
 
