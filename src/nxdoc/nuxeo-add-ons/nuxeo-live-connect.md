@@ -499,9 +499,9 @@ zone: https://accounts.google.com.
 1.  From the **Settings** tab, copy the App key and App secret.
 1.  In the **OAuth 2** > **Redirect URIs** set the following URL, adapting the hostname and port to your case: `http://NUXEO_SERVER/nuxeo/site/oauth2/dropbox/callback`.
 
-{{#> callout type='info' }}
-Please note that Dropbox only allows http for localhost. For all other sites https must be used. See [HTTP and HTTPS Reverse-Proxy Configuration](/x/GAFc).
-{{/callout}}
+    {{#> callout type='info' }}
+    Please note that Dropbox only allows http for localhost. For all other sites https must be used. See [HTTP and HTTPS Reverse-Proxy Configuration](/x/GAFc).
+    {{/callout}}
 
 1. Fill in your **Chooser/Saver domains** with your domain name.
 
