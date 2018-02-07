@@ -10,6 +10,7 @@ labels:
 toc: true
 tree_item_index: 1200
 version_override:
+    LTS 2017: 910/nxdoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2017
     LTS 2015: 710/admindoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015
     '6.0': 60/admindoc/hotfixes-installation-notes-for-nuxeo-platform-60
 history:
