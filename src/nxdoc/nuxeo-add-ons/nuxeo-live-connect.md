@@ -515,25 +515,26 @@ On the document creation form, a Dropbox button enables you to browse your Dropb
 **Step 1: Preparing your application accounts on the Dropbox App console**
 
 1.  Go to [https://www.dropbox.com/developers/apps](https://www.dropbox.com/developers/apps).
-2.  Click on **Create app**.
-4.  Select **Dropbox API**.
-5.  Select the permission Type **Full Dropbox**.
+1.  Click on **Create app**.
+1.  Select **Dropbox API**.
+1.  Select the permission Type **Full Dropbox**.
 
     {{#> callout type='info' }}
     The **App folder** permission won't work due to limitations in Dropbox API.
     {{/callout}}
 
-6.  Enter the name of your application.
-7.  Click on the button **Create app**.
-8.  From the **Settings** tab, copy the App key and App secret.
-9.  In the **OAuth 2** > **Redirect URIs** set the following URL, adapting the hostname and port to your case: `http://NUXEO_SERVER/nuxeo/site/oauth2/dropbox/callback`.
+1.  Enter the name of your application.
+1.  Click on the button **Create app**.
+1.  From the **Settings** tab, copy the App key and App secret.
+1.  In the **OAuth 2** > **Redirect URIs** set the following URL, adapting the hostname and port to your case: `http://NUXEO_SERVER/nuxeo/site/oauth2/dropbox/callback`.
+
+    {{#> callout type='info' }}
+    Please note that Dropbox only allows http for localhost. For all other sites https must be used. See [HTTP and HTTPS Reverse-Proxy Configuration](/x/GAFc).
+    {{/callout}}
+
+1. Fill in your **Chooser/Saver domains** with your domain name.
 
 {{#> callout type='info' }}
-
-Please note that Dropbox only allows http for localhost. For all other sites https must be used. See [HTTP and HTTPS Reverse-Proxy Configuration](/x/GAFc).
-
-{{/callout}} {{#> callout type='info' }}
-
 To enable additional users on your application, go to **Settings** > **Development users** and click on **Enable additional users.**
 {{/callout}}
 
