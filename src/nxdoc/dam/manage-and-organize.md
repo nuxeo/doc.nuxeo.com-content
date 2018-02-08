@@ -38,9 +38,8 @@ For more information about the versioning system of Nuxeo Platform, read the [Ve
 
 ## Archive Assets
 
-( configure rules to move pictures in an archive folder or change their lifecycle with schedulers and automation modules => How to)
+(configure rules to move pictures in an archive folder or change their lifecycle with schedulers and automation modules => How to)
 
 ## Workflows
 
-
- Juridical validation/ juridical review
+Validate all your assets, videos, audio by every persons on the team, add comments etc.

@@ -16,9 +16,9 @@ toc: true
 {{#> panel type='secondary'}}
 ## [Upload & Store]({{page page='upload-and-store'}}) ![]({{file name='data-upload.png'}} ?w=40px)
 
-- **Bulk Upload**</br>Upload hundreds of any kind of assets at once with Nuxeo Drive, drag and drop, etc.
+- **Bulk Upload**</br>Upload hundreds of any kind of assets at once with drag and drop, Nuxeo Drive, etc.
 
-- **Automated Metadata Extraction**</br>The Nuxeo Platform enables to extract information from the uploaded files attached to a document and automatically fill in the document metadata at creation time. This enables you to leverage metadata existing outside the Nuxeo Platform to automatically categorize documents, preventing users from editing document to report these metadata.
+- **Automated Metadata Extraction**</br>Nuxeo Platform enables to extract information from the uploaded files attached to a document and automatically fill in the document metadata at creation time. This enables you to leverage metadata existing outside the Nuxeo Platform to automatically categorize documents, preventing users from editing document to report these metadata.
 
 - **Nuxeo Live Connect**</br>Nuxeo provides out-of-the-box integration with Box, Google Drive, Dropbox, Microsoft OneDrive, and OneDrive for Business. There’s no need to copy content residing in these file-sharing applications or to convert it to be stored in Nuxeo’s Content Services Platform.
 
