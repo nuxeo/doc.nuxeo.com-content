@@ -42,4 +42,30 @@ For more information about the versioning system of Nuxeo Platform, read the [Ve
 
 ## Workflows
 
-Validate all your assets, videos, audio by every persons on the team, add comments etc.
+
+Workflow integration is a key element of any DAM project. Nuxeo Platform allows you to build simple and complex workflows, integrated to the systems that manage the content as well as external asset providers. DAM workflows includes the following features:
+
+- Comment and annotate a media file
+- Enrich digital assets with automatic label, text or picture detection
+- Collaborate either with external or internal users
+- Create digital assets from a photo editing application
+- Send notification at each step of the workflow
+- Review, validate and reject assets
+- Publish content on public portals
+- Structure digital projects
+
+Let's take a fictive creative review and approval process:
+
+![]({{file name='rainier-creative-review-approval.png'}} ?w=450)
+
+1. Josh is a photographer, and is an external user engaged for a photoshoot to get images for the campaign. He uploads his pictures into Dropbox. Then, Nuxeo Platform automatically indexes them – without moving the images themselves – and adds tags automatically using [Nuxeo Vision]({{page version='' space='nxdoc' page='nuxeo-vision'}}).
+
+1. For the Nuxeo Web UI search, Alice finds the assets she's looking for in the system, picks the shots she likes best, and shares them with the creative team to turn into ads.
+
+1. Bob's been assigned to work on the project, and he gets to work in his favorite tool, Photoshop. He can access the Nuxeo Platform from right within his Adobe Creative applications to create the ads with the [Nuxeo Adobe CC Conector]({{page version='' space='nxdoc' page='nuxeo-adobe-cc-connector'}}), and even send them for review without ever leaving his desktop.
+
+1. His Art Director, Lisa, reviews and annotates content and can send it back to Bob, but once she's satisfied, she can mark it as creative approved.
+
+1. Alice gets a final look and publishes the ads to the brand portal for Rainier's retail customers to pick up.
+
+1. Julie, the Sporting Goods retail marketing manager, logs into the Rainier brand portal, picks the brand she wants and can download the assets she needs right away.
