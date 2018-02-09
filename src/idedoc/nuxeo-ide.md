@@ -42,7 +42,7 @@ history:
 ---
 {{! multiexcerpt name='ide-replaced-by-generator-info'}}
 {{#> callout type='warning'}}
-Nuxeo IDE is being replaced by the [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) and won’t be maintained any longer. You can take a look at the page [Start customizing the Nuxeo Platform]({{page version='' space='nxdoc' page='start-customizing-the-nuxeo-platform'}}) to discover how to use the Nuxeo Generator.
+Nuxeo IDE is being replaced by the [Nuxeo Generator](https://www.npmjs.com/package/generator-nuxeo) and won’t be maintained any longer. You can take a look at the page [Configure Nuxeo Platform]({{page version='' space='nxdoc' page='configure-nuxeo-platform'}}) to discover how to use the Nuxeo Generator.
 {{/callout}}
 {{! /multiexcerpt}}
 
