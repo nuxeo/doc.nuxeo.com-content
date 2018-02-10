@@ -231,8 +231,8 @@ The licenses used are:
 | base64-2.3.8.jar |   | 2.3.8 | PD |
 | batik-css-1.7.jar | [Batik](http://xmlgraphics.apache.org/batik/) | 1.7 | AL 2.0 |
 | batik-util-1.7.jar | [Batik](http://xmlgraphics.apache.org/batik/) | 1.7 | AL 2.0 |
-| bcprov-jdk15-1.45.jar | [Bouncy Castle](http://www.bouncycastle.org/java.html) | 1.45 | MIT |
-| bcprov-jdk15on-1.52.jar |   | 1.52 | MIT |
+| bcpkix-jdk15on-1.59.jar |   | 1.59 | MIT |
+| bcprov-jdk15on-1.59.jar |   | 1.59 | MIT |
 | box-java-sdk-1.1.0.jar |   | 1.1.0 | AL 2.0 |
 | c3p0-0.9.1.1.jar | [c3p0](http://sourceforge.net/projects/c3p0/) | 0.9.1.1 | LGPL 2.1 |
 | carol-2.0.5.jar |   | 2.0.5 | LGPL 2.1 |
@@ -355,8 +355,6 @@ The licenses used are:
 | icu4j-51.1.jar | [ICU](http://site.icu-project.org) | 51.1 | Unicode |
 | ion-java-1.0.2.jar |   | 1.0.2 | AL 2.0 |
 | iri-0.8.jar | [Apache Jena](http://jena.apache.org) | 0.8 | BSD 3 |
-| itext-2.1.7.jar | [iText](http://itextpdf.com) | 2.1.7 | MPL 2.0 |
-| itext-rtf-2.1.7.jar | [iText](http://itextpdf.com) | 2.1.7 | MPL 2.0 |
 | jackson-annotations-2.7.4.jar |   | 2.7.4 | AL 2.0 |
 | jackson-core-2.7.4.jar |   | 2.7.4 | AL 2.0 |
 | jackson-core-asl-1.8.1.jar | [Jackson](http://jackson.codehaus.org) | 1.8.1 | AL 2.0 |
@@ -382,6 +380,7 @@ The licenses used are:
 | jaxb-core-2.2.11.jar |   | 2.2.11 | CDDL 1.0, GPL 2 |
 | jaxb-impl-2.2.11.jar | [JAXB RI](http://jaxb.java.net) | 2.2.11 | CDDL 1.0, GPL 2 |
 | jaxen-1.1.6.jar |   | 1.1.6 | BSD 3 |
+| jbig2-imageio-2.99.0-NX1.jar |   | 2.99.0-NX1 | AL 2.0 |
 | jboss-el-1.0_02.CR6.jar | [Seam](http://www.seamframework.org) | 1.0_02.CR6 | LGPL 2.1 |
 | jboss-logging-3.1.4.GA.jar |   | 3.1.4.GA | AL 2.0 |
 | jboss-seam-2.3.1.Final.NX02.jar | [Seam](http://www.seamframework.org) | 2.3.1.Final.NX02 | LGPL 2.1 |
@@ -452,7 +451,6 @@ The licenses used are:
 | keycloak-tomcat-core-adapter-1.3.1.Final.jar |   | 1.3.1.Final | AL 2.0 |
 | keycloak-tomcat8-adapter-1.3.1.Final.jar |   | 1.3.1.Final | AL 2.0 |
 | lang-mustache-client-5.6.3.jar |   | 5.6.3 | AL 2.0 |
-| levigo-jbig2-imageio-1.6.5.jar |   | 1.6.5 | GPL 3 |
 | log4j-1.2.17.jar |   | 1.2.17 | AL 2.0 |
 | log4j-api-2.9.1.jar |   | 2.9.1 | AL 2.0 |
 | log4j-core-2.9.1.jar |   | 2.9.1 | AL 2.0 |
@@ -502,6 +500,7 @@ The licenses used are:
 | not-yet-commons-ssl-0.3.9.jar |   | 0.3.9 | AL 2.0 |
 | oauth-20090531.jar | [OAuth](http://oauth.net/code/) | 20090531 | AL 2.0 |
 | oauth-provider-20090531.jar | [OAuth](http://oauth.net/code/) | 20090531 | AL 2.0 |
+| openpdf-1.0.5.jar |   | 1.0.5 | LGPL 3, MPL 2.0 |
 | opensaml-2.6.4.jar |   | 2.6.4 | AL 2.0 |
 | openstack-common-1.9.2.jar |   | 1.9.2 | AL 2.0 |
 | openstack-keystone-1.9.2.jar |   | 1.9.2 | AL 2.0 |
@@ -518,6 +517,9 @@ The licenses used are:
 | org.sat4j.pb-2.3.1.jar | [Sat4j](http://www.sat4j.org) | 2.3.1 | EPL 1.0, LGPL 2.1 |
 | oro-2.0.8.jar | [Apache Jakarta ORO](http://jakarta.apache.org/oro/) | 2.0.8 | AL 2.0 |
 | parent-join-client-5.6.3.jar |   | 5.6.3 | AL 2.0 |
+| pdf-html-1.0.5.jar |   | 1.0.5 | LGPL 3, MPL 2.0 |
+| pdf-rtf-1.0.5.jar |   | 1.0.5 | LGPL 3, MPL 2.0 |
+| pdf-xml-1.0.5.jar |   | 1.0.5 | LGPL 3, MPL 2.0 |
 | pdfbox-1.8.9.jar | [Apache PDFBox](http://pdfbox.apache.org) | 1.8.9 | AL 2.0 |
 | percolator-client-5.6.3.jar |   | 5.6.3 | AL 2.0 |
 | persistence-api-1.0.jar | [Java Persistence API](http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html) | 1.0 | CDDL 1.0 |
@@ -600,3 +602,10 @@ The licenses used are:
 | yarfraw-0.92.jar | [YARFRAW](http://yarfraw.sourceforge.net) | 0.92 | AL 2.0 |
 | zkclient-0.10.jar |   | 0.10 | AL 2.0 |
 | zookeeper-3.4.8.jar |   | 3.4.8 | AL 2.0 |
+
+{{#> callout type='note' }}
+
+Nuxeo 9.10 was incorrectly packaged with a GPL 3 version of the levigo-jbig2-imageio 1.6.5 library.
+This has been fixed in Nuxeo 9.10-HF01 by replacing it with the AL 2.0 [Apache jbig2-imageio](https://github.com/apache/pdfbox-jbig2) library.
+
+{{/callout}}
