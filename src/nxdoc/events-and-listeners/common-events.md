@@ -172,8 +172,6 @@ A document waiting for approval has been rejected.
 
 A document has been published (event sent for the base document being published and for the published document).
 
-#### documentUnpublished
-
 #### documentWaitingPublication
 
 A document has been published but is not approved yet (event sent for the base document being published and for the published document)
