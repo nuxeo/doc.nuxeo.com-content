@@ -297,8 +297,8 @@ To import documents using Nuxeo CSV:
 |![]({{file name='nuxeo-csv-file-selected.png'}} ?w=450,border=true)|![]({{file name='CSV Importer beginning.png'}} ?w=450,border=true)|
 
 
-5.  Optionally check the box **Send me the import report by email** if you want to receive an email when the import is done which shows how the import went. This is useful in case of imports that take a long time.
-6.  Optionally check the box **Enable document import mode** if you want to import documents while maintaining original UUID, creation date, modification date, author and contributors.
+5.  Optionally check the box **Receive the import report by email** if you want to receive an email when the import is done which shows how the import went. This is useful in case of imports that take a long time.
+6.  Optionally check the box **Apply Date, Author and Dublin Core metadata** if you want to import documents while maintaining original UUID, creation date, modification date, author and contributors.
 7.  Click on the **Process** button.
     The import starts. You can either:
 
@@ -315,7 +315,7 @@ To import documents using Nuxeo CSV:
 </table>
 
     - Start a new import;
-    - Browse the application. If you checked the box **Send me the import report by email**, you receive an email once the import is completed.
+    - Browse the application. If you checked the box **Receive the import report by email**, you receive an email once the import is completed.
     ![]({{file name='CSVImporteremail.png'}} ?w=400,border=true)
 
     {{#> callout type='warning' }}
