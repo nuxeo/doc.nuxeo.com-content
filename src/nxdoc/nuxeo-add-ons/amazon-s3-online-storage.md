@@ -253,6 +253,12 @@ Client-Side Encryption is safer than Server-Side Encryption. With Client-Side En
 
 {{/callout}}
 
+If you want to use [Server-Side Encryption with AWS KMS–Managed Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html), specify your key with:
+
+```text
+nuxeo.s3storage.crypt.kms.key = your-key-id
+```
+
 #### Cache Options
 
 Files retrieved from S3 are cached locally for speed. You can configure the maximum cache size (in bytes or with the standard KB, MB, GB or TB&nbsp;suffixes), the maximum number of files in the cache, and the minimum age (in seconds) a file should have before being eligible for purge (the age is the time since last file access).
