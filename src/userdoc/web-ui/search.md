@@ -12,7 +12,7 @@ labels:
 
 ---
 {{! excerpt}}
-The Nuxeo Platform provides different to search your documents. A Search tab in the side menu and a quick search at the top of the page.
+The Nuxeo Platform provides different way to search your documents. A Search tab in the side menu and a quick search at the top of the page.
 {{! /excerpt}}
 
 ## Quick Search
