@@ -624,7 +624,7 @@ In this example, the level is "INFO". If you want more details, downgrade it to 
 2.  Copy your brand new jar into the sub-folder "nxserver/bundles/" of your Nuxeo Server's root folder:
     *   under Windows, assuming that the Nuxeo Server Distribution is installed at the location "C:\Nuxeo\", copy the jar in `C:\Nuxeo\nxserver\bundles\`;
     *   under Linux, assuming that the Nuxeo Server Distribution is installed at the location "/opt/nuxeo", copy the jar in `/opt/nuxeo/nxserver/bundles`.
-3.  Start your server using the `./bin/nuxeoctl console` command
+3.  Start your server using the `./bin/nuxeoctl start` command
 
     {{#> callout type='tip' }}
 
@@ -632,7 +632,7 @@ In this example, the level is "INFO". If you want more details, downgrade it to 
 
     {{/callout}}
 4.  Check that your bundle is correctly deployed: check if its SymbolicName (as configured in the `/src/main/resources/META-INF`) appears in the logs. The logs are displayed:
-    *   in the console if you started your server using the `./bin/nuxeoctl console`
+    *   in the console if you started your server using the `./bin/nuxeoctl start`
     *   in the file `server.log` located in the `log` folder of your Nuxeo Server root folder. This name is found in the list of the bundles deployed by Nuxeo in the very first lines of the logs, just after the line ended by `Preprocessing order:`.
 
 {{! /multiexcerpt}}
