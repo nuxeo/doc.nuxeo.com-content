@@ -84,3 +84,11 @@ Registration tokens are valid until your current contract's expiration date. Whe
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
 ## Hotfix 01
+
+### New searchable property in Elasticsearch: ecm:versionVersionableId
+
+With an Elasticsearch NXQL query you can retrieve all versions of a document by version series id. To search existing documents by ecm:versionVersionableId a re-index is required. This could either be done via a full re-index or a re-index of just documents that have versions, using this query:
+```
+SELECT * FROM Document WHERE ecm:isVersion = 1
+```
+
