@@ -41,14 +41,14 @@ DOWNLOAD AND REGISTER THE NUXEO PLATFORM
 
 ```bash
 $ chmod +x ./bin/nuxeoctl
-$ ./bin/nuxeoctl console
+$ ./bin/nuxeoctl start
 ```
 {{/panel}}
 
 {{#> panel heading='**Windows**'}}
 
 ```bash
-> .\bin\nuxeoctl.bat console
+> .\bin\nuxeoctl.bat start
 ```
 {{/panel}}
 
