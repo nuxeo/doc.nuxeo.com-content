@@ -754,7 +754,11 @@ Recursively executes the given Shell command on the current and its direct child
 * Commits
     * Reference JIRA issues in the head of commit comment.
     * Comment with a first short line, then add optionally an empty line, then as much details as you consider useful
-    * When squashing other author's commits, a mention is welcome: `Co-authored-by: name <name@example.com>`
+    * When squashing other author's commits, typically during a PR, mentions are welcome in the commit comment body. For instance: 
+```
+Co-authored-by: @username <username@users.noreply.github.com>
+Reviewed-by: @reviewer_username <reviewer_username@users.noreply.github.com>
+```
     * Commit as a valid author (i.e. "Firstname Lastname \<email address>" with the email address being configured in your GitHub account, no matter if it's public or private).
 * Merging work
     * Rebase against the upstream then ask for code review with a Pull Request
