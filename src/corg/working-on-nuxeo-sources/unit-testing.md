@@ -439,7 +439,7 @@ Top-level feature, does not require other features. After starting the server, a
     *   String value - the path of the bundle (or contribution). The path format is "`symbolicName:path`" where `symbolicName` is the bundle symbolic name and the optional path is a path relative to the bundle root of the XML component to deploy. If no path is specified, the entire bundle will be deployed.
         Example: "`org.nuxeo.runtime`", "`org.nuxeo.runtime:OSGI-INF/my-component.xml`" etc.
 
-Note that @Deploy is repeatable and should be used this way for me readability.
+Note that @Deploy is repeatable and should be used this way for more readability.
 
 #### Injectable Objects
 
@@ -483,7 +483,7 @@ public class DeployTest {
 
 ```
 
-The frist `@Deploy` annotations will install the core schema bundle into the running server and the second `@Deploy` will install the test resource located at `OSGI-INF/my-test-contribution.xml` (the current class loader is used to locate the resource) into the existing `nuxeo-runtime` bundle.
+The first `@Deploy` annotations will install the core schema bundle into the running server and the second `@Deploy` will install the test resource located at `OSGI-INF/my-test-contribution.xml` (the current class loader is used to locate the resource) into the existing `nuxeo-runtime` bundle.
 
 {{#> callout type='note' }}
 
