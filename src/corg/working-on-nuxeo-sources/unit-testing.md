@@ -443,7 +443,7 @@ Note that @Deploy is repeatable and should be used this way for me readability.
 
 #### Injectable Objects
 
-All Nuxeo services deployed using `@Deploy` and `@LocalDeploy` annotations will be available through Guice injector.
+All Nuxeo services deployed using `@Deploy` annotations will be available through Guice injector.
 
 #### Usage
 
@@ -470,7 +470,7 @@ Example of how to use the `@Deploy` annotations to deploy additional bundles and
 @RunWith(FeaturesRunner.class)
 @Features(RuntimeFeature.class)
 @Deploy("org.nuxeo.ecm.core.schema")
-@Deploy("org.nuxeo.rutime.tests:OSGI-INF/my-test-contribution.xml")
+@Deploy("org.nuxeo.rutime:OSGI-INF/my-test-contribution.xml")
 public class DeployTest {
     @Inject
     SchemaManager schemas;
