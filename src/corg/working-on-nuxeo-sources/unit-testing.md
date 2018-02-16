@@ -436,10 +436,10 @@ Top-level feature, does not require other features. After starting the server, a
 #### Configuration
 
 *   `@Deploy` - deploys a bundle (or an XML component from the given bundle) in the running server.
-    *   String[] value - the path of the bundle (or contribution). The path format is "`symbolicName:path`" where `symbolicName` is the bundle symbolic name and the optional path is a path relative to the bundle root of the XML component to deploy. If no path is specified, the entire bundle will be deployed.
+    *   String value - the path of the bundle (or contribution). The path format is "`symbolicName:path`" where `symbolicName` is the bundle symbolic name and the optional path is a path relative to the bundle root of the XML component to deploy. If no path is specified, the entire bundle will be deployed.
         Example: "`org.nuxeo.runtime`", "`org.nuxeo.runtime:OSGI-INF/my-component.xml`" etc.
-*   `@LocalDeploy` - deploys a test XML component as part of an existing bundle in the running server. This is useful to deploy test contributions that are not part of a real bundle.
-    *   String[] value - same as for the `@Deploy` annotation. The difference is that the `symbolicName` will be that of the target bundle, and the path is required and should point to a test resource.
+
+Note that @Deploy is repeatable and should be used this way for me readability.
 
 #### Injectable Objects
 
@@ -470,7 +470,7 @@ Example of how to use the `@Deploy` annotations to deploy additional bundles and
 @RunWith(FeaturesRunner.class)
 @Features(RuntimeFeature.class)
 @Deploy("org.nuxeo.ecm.core.schema")
-@LocalDeploy("org.nuxeo.rutime:OSGI-INF/my-test-contribution.xml")
+@Deploy("org.nuxeo.rutime.tests:OSGI-INF/my-test-contribution.xml")
 public class DeployTest {
     @Inject
     SchemaManager schemas;
@@ -483,7 +483,7 @@ public class DeployTest {
 
 ```
 
-The `@Deploy` annotations will install the core schema bundle into the running server and the `@LocalDeploy` will install the test resource located at `OSGI-INF/my-test-contribution.xml` (the current class loader is used to locate the resource) into the existing `nuxeo-runtime` bundle.
+The frist `@Deploy` annotations will install the core schema bundle into the running server and the second `@Deploy` will install the test resource located at `OSGI-INF/my-test-contribution.xml` (the current class loader is used to locate the resource) into the existing `nuxeo-runtime` bundle.
 
 {{#> callout type='note' }}
 
