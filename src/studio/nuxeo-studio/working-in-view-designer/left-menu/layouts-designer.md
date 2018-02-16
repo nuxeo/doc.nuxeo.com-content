@@ -20,6 +20,33 @@ On documents (local types and built-in types for example), 5 layouts are availab
 
 Once customized, layouts are displayed with a bold font.![]({{file name='edited-layout-vd.png' page='left-menu'}} ?w=80,border=true)
 
+## Configuring Multivalued Fields
+When drag and dropping a multivalued field or a complex multivalued field into a layout, the corresponding element is automatically set to `nuxeo-data-table`. Clicking on the element, then on the pencil icon will allow you to edit it.
+
+![]({{file name='nuxeo-data-table-element.png'}} ?w=344,border=true)
+
+From there, the field (or each sub field in the case of a complex multivalued field) is shown as a table with a column containing the element. Clicking on an element will display its properties on the right side of the screen so that you can configure it.
+
+![]({{file name='table-editor-element-properties.png'}} ?w=624,border=true)
+
+You may edit the field's label directly in the column title. Labels can be translated by entering the `[[i18n('your.translation.key')]]` pattern.
+
+![]({{file name='table-editor-layout-complex-multivalued.png'}} ?w=481,border=true)
+
+{{#> callout type='warning' heading="Don't Add More Fields"}}
+Although the editor allows you to drag and drop additional fields in this context at the moment, you should only edit the existing fields to keep your layout working properly.
+{{/callout}}
+
+Finally, when dealing with complex multivalued fields:
+- Sub fields can be reordered by drag and dropping them around in the layout.
+- A sub field can be deleted by hovering on it and clicking the trash icon.
+
+![]({{file name='table-editor-delete.png'}} ?w=379,border=true)
+
+{{#> callout type='warning' heading='Only Use the Trash Icon'}}
+When hovering on an element in a document or workflow task layout, only the trash icon should be used at the moment. Using the sortable toggle (arrows icon) or the visibility toggle (eye icon) may prevent your layout from working properly.
+{{/callout}}
+
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
