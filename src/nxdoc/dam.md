@@ -1,5 +1,5 @@
 ---
-title: DAM
+title: Digital Asset Management
 review:
     comment: ''
     date: '2018-01-30'
@@ -78,7 +78,7 @@ toc: true
 
 - **Security**</br>The Nuxeo repository security relies on a list of unitary permissions that are used within the repository to grant or deny access. Nuxeo Platform comes with a default set of permissions and permissions groups but you can contribute yours too.
 
-- **Publish Assets**</br> Your documents are meant to be published into digital publication channels, discover how Nuxeo Platform can help you to publish your assets. 
+- **Publish Assets**</br> Your documents are meant to be published into digital publication channels, discover how Nuxeo Platform can help you to publish your assets.
 
 <div align='right'>
 [**Discover**&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='share-and-distribute'}})
