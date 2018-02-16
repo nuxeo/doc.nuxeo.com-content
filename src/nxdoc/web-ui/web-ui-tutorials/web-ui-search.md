@@ -1,5 +1,5 @@
 ---
-title: 'HOWTO: Customize Searches'
+title: 'HOWTO: Configure Searches'
 review:
     comment: ''
     date: '2017-12-14'
@@ -89,15 +89,15 @@ In the Studio Designer, on the **Layouts** tab, under **Page Providers** you wil
 
 Click on your page provider, two layouts are available. Let's edit the **Form** layout first.
 
-1. Click on **form**, then **Customize**.
+1. Click on **form**, then **Configure**.
     The form layout is now displayed in bold. On the right, in the properties catalog, the elements that we defined in Studio are displayed here.
 1. Expand the first element and drag and drop the **Edit** mode into the editor.
   Do the same for the three other elements.
 1. Once it's done, click on the **Full text** element on the main view, you can edit the label in the left catalog to display `Full text`. You can do the same with the other elements.
 
-Let's customize the **results** layout now.
+Let's configure the **results** layout now.
 
-1. Click on **results**, then **Customize**.
+1. Click on **results**, then **Configure**.
 1. It automatically creates the result view by default. Leave it like this and click on **Save**.
 
 You now need to add your labels to your translations file to display them correctly in the UI. To do so:
