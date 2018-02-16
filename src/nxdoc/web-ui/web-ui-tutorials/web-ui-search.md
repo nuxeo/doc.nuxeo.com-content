@@ -130,6 +130,36 @@ The next step is to add a button in the left menu to display the search screen.
 
 ![]({{file name='result-search-screen-vd.png'}} ?w=350,border=true)
 
+## Going Further
+### Visually Configure Table Results Layout
+
+In Studio Designer's layout tab:
+
+1. Go back to your **Search** page provider results layouts configuration. ![]({{file name='pp-results-menu.png'}} ?w=122,border=true)
+1. Edit the table layout configuration. ![]({{file name='pp-results-table-config.png'}} ?w=344,border=true)
+1. You will be taken to the element's configuration. From there, click on the **Switch to Table Editor** icon at the bottom of the page. ![]({{file name='switch-table-editor.png'}} ?w=155,border=true)
+
+You are now in the table editor.
+
+Each result column is shown with the corresponding field and element. Clicking on an element will display its properties on the right side of the screen so that you can configure it.
+
+![]({{file name='pp-table-editor-element-properties.png'}} ?w=621,border=true)
+
+More columns can be added using drag and drop from the catalog on the right side of the screen. For each column, the label can be edited directly and translated by entering the `[[i18n('your.translation.key')]]` pattern.
+
+![]({{file name='pp-table-editor-layout.png'}} ?w=650,border=true)
+
+Columns can be reordered by drag and dropping them around.
+
+Finally, when hovering on a column, you can use additional icons to configure them:
+- ![]({{file name='icon-arrows.png'}} ?w=26,border=true) The arrows icon toggles the possibility to sort results using this column.
+
+- ![]({{file name='icon-eye.png'}} ?w=27,border=true) The eye icon toggles the default visibility of the column. If you make it optional, it won't appear by default but can be made visible by users in Web UI. When made visible, it will be placed exactly where you put it in your configuration.
+
+- ![]({{file name='icon-trash.png'}} ?w=22,border=true) The trash icon deletes the column.
+
+When you are finished, you can save your work using the usual save button on the top right side of the screen.
+
 ## Technical Overview
 
 ### Overriding Existing Nuxeo Web UI Search
