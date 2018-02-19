@@ -269,18 +269,6 @@ Registered access
 </td>
 </tr>
 <tr>
-<td>MongoDB Audit and Directories<br/>
-`nuxeo-mongodb-ext`</td>
-<td colspan="1">
-Public
-</td>
-<td></td>
-<td colspan="1">
-[Released for 9.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mongodb-ext?version=1.1.1)<br />
-Included in the default distribution since Nuxeo Platform 9.3
-</td>
-</tr>
-<tr>
 <td colspan="1">
 Nuxeo Agenda<br/>
 `nuxeo-agenda`
