@@ -490,7 +490,7 @@ Registered access
 [User documentation]({{page page='nuxeo-groups-and-rights-audit'}})
 </td>
 <td colspan="1">
-[Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit?version=1.8.2)
+[Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit?version=1.9.0)
 </td>
 </tr>
 <tr>
@@ -536,7 +536,7 @@ Public
 [User documentation]({{page space='userdoc' page='nuxeo-jenkins-report'}})
 </td>
 <td colspan="1">
-[Released for 9.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jenkins-report-mp?version=3.9.3)
+[Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jenkins-report-mp?version=3.9.10)
 </td>
 </tr>
 <tr>
