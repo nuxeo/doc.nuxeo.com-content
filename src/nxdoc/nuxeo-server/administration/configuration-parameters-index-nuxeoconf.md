@@ -2069,13 +2069,13 @@ Defaults to false on server upgrade, true on new install.</td>
 </tr>
 <tr>
 <td colspan="1">`audit.elasticsearch.migration`</td>
-<td colspan="1">Since Nuxeo 7.3\. See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page space='ADMINDOC' page='Elasticsearch Setup#ElasticsearchSetup-TriggeringSQLtoElasticsearchAuditLogsMigration'}})</td>
+<td colspan="1">Since Nuxeo 7.3\. See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page version='710' space='admindoc' page='elasticsearch-setup'}}#triggering-sql-to-elasticsearch-audit-logs-migration)</td>
 <td colspan="1">false</td>
 <td colspan="1">Since Nuxeo 7.3</td>
 </tr>
 <tr>
 <td colspan="1">`audit.elasticsearch.migration.batchSize`</td>
-<td colspan="1">Since Nuxeo 7.3\. See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page version='' space='nxdoc' page='elasticsearch-setup'}})</td>
+<td colspan="1">Since Nuxeo 7.3\. See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page version='710' space='admindoc' page='elasticsearch-setup'}}#triggering-sql-to-elasticsearch-audit-logs-migration)</td>
 <td colspan="1">1000</td>
 <td colspan="1">Since Nuxeo 7.3</td>
 </tr>
