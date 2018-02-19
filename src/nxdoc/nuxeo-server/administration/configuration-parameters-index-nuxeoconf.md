@@ -1616,7 +1616,7 @@ smtp</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.vcs.ddlmode`</td>
-<td colspan="1">Since Nuxeo 7.10-HF01and Nuxeo 8.1\. What kind of DDL generation is done. See [VCS]({{page version='' space='nxdoc' page='vcs'}}) for details.</td>
+<td colspan="1">Since Nuxeo 7.10-HF01 and Nuxeo 8.1\. What kind of DDL generation is done. See [VCS]({{page version='' space='nxdoc' page='vcs'}}) for details.</td>
 <td colspan="1">execute</td>
 <td colspan="1">Since Nuxeo 7.10-HF01 and Nuxeo 8.1</td>
 </tr>
