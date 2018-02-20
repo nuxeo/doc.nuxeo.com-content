@@ -41,4 +41,4 @@ Don't forget to save your modifications, by clicking on the Save button ![]({{fi
 
 This action enables you to discard all the modifications that you have done on a layout and revert to the default view.
 
-To do so, click on the revert to default view ![]({{file name='revert-action-vd.png'}} ?w=20,border=true) button and confirm your choice on the popup confirmation window. Your layout is back as its initial state, before you click on the CUSTOMIZE button.
+To do so, click on the revert to default view ![]({{file name='revert-action-vd.png'}} ?w=20,border=true) button and confirm your choice on the popup confirmation window. Your layout is back as its initial state, before you click on the CONFIGURE button.
