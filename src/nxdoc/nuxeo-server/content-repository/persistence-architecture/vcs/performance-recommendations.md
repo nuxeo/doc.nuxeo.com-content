@@ -104,7 +104,7 @@ history:
 
 Here is a non-exhaustive list of recommendations to get better performance:
 
-- For VCS, check that common properties are set as prefetched (see [org.nuxeo.ecm.core.schema.TypeService--configuration](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration) and [org.nuxeo.ecm.core.schema.TypeService--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype)).
+- For VCS, check that common properties are set as prefetched (see [org.nuxeo.ecm.core.schema.TypeService--configuration](http://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration) and [org.nuxeo.ecm.core.schema.TypeService--doctype](http://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype)).
 - For VCS, if you don't want to match proxies in your query, add a `AND ecm:isProxy = 0` clause.
 - For VCS, if you don't use proxies at all, deactivate them at the repository level by adding inside the `<repository>` element the following:
     ```xml
@@ -114,7 +114,7 @@ Here is a non-exhaustive list of recommendations to get better performance:
 - Use groups to manage ACLs. Adding a user to a group is free, but adding a user in an ACL at the document root level has a cost because optimized read ACLs need to be recomputed for all documents under the root.
 - For VCS, when using Nuxeo in cluster mode, consider using [Redis VCS row cache invalidation]({{page page='nuxeo-and-redis'}}#vcs-row-cache-invalidation).
 - For VCS, if possible disable the ACL optimization and switch all page providers to Elasticsearch.
-  Look at the [perf template](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/perf).
+  Look at the [perf template](https://github.com/nuxeo/nuxeo/tree/9.10/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/perf).
 - Disable listeners that are not used (see above perf template).
 - Use BIGINT document identifier instead of default UID. This is done by adding a `<idType>sequence</idType>` in the repository contribution).
 - Consider disabling the OS swapping (`sudo swapoff -a`) or try to lower the swapiness (`vm.swappiness=1`).

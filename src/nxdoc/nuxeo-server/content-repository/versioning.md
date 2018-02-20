@@ -201,8 +201,8 @@ The system is not triggered before update if the document is already checked in.
 The system is not triggered after update if a manual versioning is asked (`VersioningService.VERSIONING_OPTION` in document context data).
 
 To contribute new policies and filters, check out the extension points documentation:
-- [policies](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--policies)
-- [filters](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--filters)
+- [policies](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--policies)
+- [filters](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--filters)
 
 ### {{> anchor 'versioning-policies'}}Versioning Policies
 
@@ -239,7 +239,7 @@ A versioning filter defines the condition(s) the document has to fulfill so that
 *   **Type**: On which document type the versioning applies
 *   **Schema**: Apply the versioning if the document contains this schema
 *   **Facet**: Apply the versioning if the document contains this facet
-*   **Condition**: Defines a condition in [EL]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo#main-differences-between-languages'}}) to access properties of the document before/after modification
+*   **Condition**: Defines a condition in [EL]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}}#main-differences-between-languages) to access properties of the document before/after modification
 
 Example:
 
@@ -273,7 +273,7 @@ The example below will be interpreted as:
 ```
 
 
-If the standard filter is not enough to cover all your requirements, the filter can be customized with a Java class implementing the [VersioningPolicyFilter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/versioning/VersioningPolicyFilter.html) interface to define a particular condition:
+If the standard filter is not enough to cover all your requirements, the filter can be customized with a Java class implementing the [VersioningPolicyFilter](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/core/versioning/VersioningPolicyFilter.html) interface to define a particular condition:
 
 Example:
 

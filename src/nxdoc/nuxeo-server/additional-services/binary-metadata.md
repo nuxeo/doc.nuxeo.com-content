@@ -321,7 +321,7 @@ By default the Nuxeo Platform uses [ExifTool](http://www.sno.phy.queensu.ca/%7Ep
 
 ## Contributing Metadata Mappings
 
-Metadata mapping is made through an XML contribution on the [`metadataMappings`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.binary.metadata--metadataMappings) extension point:
+Metadata mapping is made through an XML contribution on the [`metadataMappings`](http://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.binary.metadata--metadataMappings) extension point:
 
 ```xml
    <!-- Map binary metadata to Nuxeo document metadata -->
@@ -349,7 +349,7 @@ This part is only needed if you plan to use your metadata mapping with the stand
 
 {{/callout}}
 
-Metadata rules are defined through an XML contribution on the&nbsp;[`metadataRules`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.binary.metadata--metadataRules) extension point:
+Metadata rules are defined through an XML contribution on the&nbsp;[`metadataRules`](http://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.binary.metadata--metadataRules) extension point:
 
 ```xml
  <!-- Define which mappings will be called by the listener, and under which conditions -->
@@ -415,7 +415,7 @@ If you need to add a new processor:
       </extension>
     ```
 
-2.  Extend [`org.nuxeo.binary.metadata.api.BinaryMetadataProcessor`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/binary/metadata/api/BinaryMetadataProcessor.html) and implement the following methods:
+2.  Extend [`org.nuxeo.binary.metadata.api.BinaryMetadataProcessor`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/binary/metadata/api/BinaryMetadataProcessor.html) and implement the following methods:
 
     ```java
     /**
@@ -446,7 +446,7 @@ If you need to add a new processor:
         public Map<String, Object> readMetadata(Blob blob, boolean ignorePrefix);
     ```
 
-    Here is the [ExifTool example](https://raw.githubusercontent.com/nuxeo/nuxeo-binary-metadata/master/src/main/java/org/nuxeo/binary/metadata/internals/ExifToolProcessor.java) `org.nuxeo.binary.metadata.internals.ExifToolProcessor` and the [command line documentation]({{page page='how-to-contribute-a-command-line-converter'}}) to execute the command lines from the Nuxeo Platform.
+    Here is the [ExifTool example](https://raw.githubusercontent.com/nuxeo/nuxeo-binary-metadata/9.10/src/main/java/org/nuxeo/binary/metadata/internals/ExifToolProcessor.java) `org.nuxeo.binary.metadata.internals.ExifToolProcessor` and the [command line documentation]({{page page='how-to-contribute-a-command-line-converter'}}) to execute the command lines from the Nuxeo Platform.
 
 ## ExifTool Extraction Example
 
@@ -487,7 +487,7 @@ To activate it, the following variable in nuxeo.conf must be set:
 binary.metadata.monitor.enable=true
 ```
 
-Or log4j level to TRACE for [`org.nuxeo.binary.metadata.internals.BinaryMetadataComponent`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/binary/metadata/internals/BinaryMetadataComponent.html) must be set.
+Or log4j level to TRACE for [`org.nuxeo.binary.metadata.internals.BinaryMetadataComponent`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/binary/metadata/internals/BinaryMetadataComponent.html) must be set.
 
 This feature gives the ability to get time execution informations through JMX: `org.nuxeo.StopWatch`.
 

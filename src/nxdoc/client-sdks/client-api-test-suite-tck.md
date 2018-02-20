@@ -220,7 +220,7 @@ Only the first part is strictly necessary.
 
 ##### Java Implementation
 
-[GitHub Link for CRUD operations tests suite](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/RemoteAutomationClientTCK.java#L81-L127)
+[GitHub Link for CRUD operations tests suite](https://github.com/nuxeo-archives/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test/RemoteAutomationClientTCK.java#L81-L127)
 
 ##### JavaScript Implementation
 

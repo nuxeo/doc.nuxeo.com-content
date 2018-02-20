@@ -118,7 +118,7 @@ The general procedure to make a new plug-in available is to apply the initializa
     });
     ```
 
-2.  Copy the pristine version of [tinymce_init.js](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-ui-web/src/main/resources/tinymce/tinymce_init.js)&nbsp;under your project's `src/main/resources/web/nuxeo.war/tinymce`.
+2.  Copy the pristine version of [tinymce_init.js](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-jsf/nuxeo-platform-ui-web/src/main/resources/tinymce/tinymce_init.js)&nbsp;under your project's `src/main/resources/web/nuxeo.war/tinymce`.
 
     {{#> callout type='info' }}
 

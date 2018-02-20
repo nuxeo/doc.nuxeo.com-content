@@ -596,20 +596,20 @@ In widgets, layout, content views and in XHTML templates, you can use the EL exp
     - `#{currentDomain}` - the document's parent domain.
     - `#{currentSuperSpace}` - the document's closest parent having the _"SuperSpace"_ facet.
     - `#{currentWorkspace}` - the document's parent workspace.
-    - `#{documentManager}` - the [CoreSession](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/CoreSession.html) object (see example below)
+    - `#{documentManager}` - the [CoreSession](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/core/api/CoreSession.html) object (see example below)
 -  Some from the native SEAM context:
     -  `#{currentUser}`
     -  `#{currentDate}`
 -  When you are on a document, you can access various information:
     -  the metadata using the following pattern : _myDocument.schema_prefix.property_name_
         Ex: `#{currentDocument.dc.source}`
-    -  the system properties : path, type (of the document), `currentLifeCycleState`, ... `currentDocument` is a "DocumentModel" class, see the [javadoc](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/DocumentModel.html) to check all you can access. One rule is simple: if it is a "getter" you can just type the name. For example: `getType()` --> `currentDocument.type` (first letter is lowercase)
+    -  the system properties : path, type (of the document), `currentLifeCycleState`, ... `currentDocument` is a "DocumentModel" class, see the [javadoc](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/core/api/DocumentModel.html) to check all you can access. One rule is simple: if it is a "getter" you can just type the name. For example: `getType()` --> `currentDocument.type` (first letter is lowercase)
 -  You can do some comparisons, when you need to return a boolean values.
 
     Ex: `#{currentUser.isMemberOf('quality_managers') && (layoutValue.dc.nature=='procedure'||layoutValue.dc.nature=='decree')?'value1':'value2'}`
 -  You may need to use ".toString()" sometimes, depending on what object is returned.
     Ex: on the documentModel javadoc, you can see that "getPath()" method returns a Path object. So if you need the string of the path (for an NXQL query for instance) you need to use the _.toString() method._
--  You also have access to some "functions" that were added by Nuxeo, you can see the list [on the Tag Library Documentation](http://community.nuxeo.com/api/nuxeo/latest/tlddoc/nxd/tld-summary.html) .
+-  You also have access to some "functions" that were added by Nuxeo, you can see the list [on the Tag Library Documentation](http://community.nuxeo.com/api/nuxeo/9.10/tlddoc/nxd/tld-summary.html) .
 
     Ex: `#{nxd:hasPermission (currentDomain, 'Write')}` will return true only if the connected user has the edit permission on the current domain.
 -  The JSTL functions are available, for string manipulation for instance, see the [doc](http://docs.oracle.com/javaee/5/jstl/1.1/docs/tlddocs/fn/tld-summary.html).

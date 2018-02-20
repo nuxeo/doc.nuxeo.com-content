@@ -79,13 +79,13 @@ history:
 ---
 {{! excerpt}}
 
-The [WorkManager](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewService/org.nuxeo.ecm.core.work.api.WorkManager) service allows you to run code later, asynchronously, in a separate thread and transaction.
+The [WorkManager](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewService/org.nuxeo.ecm.core.work.api.WorkManager) service allows you to run code later, asynchronously, in a separate thread and transaction.
 
 {{! /excerpt}}
 
 ## Work Instance
 
-The code to be executed asynchronously must be implemented in an [`AbstractWork`](http://community.nuxeo.com/api/nuxeo/release-8.2/javadoc/org/nuxeo/ecm/core/work/AbstractWork.html) subclass. In theory you could just implement [`Work`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/work/api/Work.html) yourself but this is strongly discouraged, for forward-compatibility reasons.
+The code to be executed asynchronously must be implemented in an [`AbstractWork`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/core/work/AbstractWork.html) subclass. In theory you could just implement [`Work`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/core/work/api/Work.html) yourself but this is strongly discouraged, for forward-compatibility reasons.
 
 ### Work Construction
 
@@ -149,7 +149,7 @@ Every Work instance is queued in a Work Queue. Each queue is associated with a t
 </extension>
 ```
 
-The details of the configuration can be seen in the [extension point documentation](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.work.service--queues). Here we'll concentrate on the important points:
+The details of the configuration can be seen in the [extension point documentation](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.core.work.service--queues). Here we'll concentrate on the important points:
 
 *   The name is a human-readable name, for monitoring purposes.
 *   The categories define which Work instances go to this queue.

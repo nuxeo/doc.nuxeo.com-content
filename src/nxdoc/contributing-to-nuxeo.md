@@ -321,7 +321,7 @@ Nuxeo labels are stored in ASCII files. We use the [UTF-8](http://www.utf8-chart
 2.  In the Crowdin translation view you will find all the phrases to translate to the left. (To view only the ones that still need translation, use the **Untranslated** filter.)
 3.  Click on a phrase you want to translate. You see the original phrase in the top, and a box to fill out your translation beneath.
 4.  Enter the translation and by clicking **Save**, and optionally, if you're a proofreader, you can approve the translation.
-5.  Contact one or several of the Crowdin project managers to [be credited for your contribution](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/CREDITS.txt).
+5.  Contact one or several of the Crowdin project managers to [be credited for your contribution](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/release-9.10/CREDITS.txt).
 
 {{! /multiexcerpt}}
 
@@ -330,7 +330,7 @@ Nuxeo labels are stored in ASCII files. We use the [UTF-8](http://www.utf8-chart
 {{! multiexcerpt name='translation-contribution-with-github'}}
 
 1.  For now, English translations are managed only on GitHub.
-  * For JSF UI labels, looking at the [reference messages.properties](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/master/src/main/resources/crowdin/messages.properties) file at can help you understand in which GitHub repository or module the original translation is. For instance, look for the following sample lines:
+  * For JSF UI labels, looking at the [reference messages.properties](https://github.com/nuxeo/nuxeo-platform-lang-ext/blob/release-9.10/src/main/resources/crowdin/messages.properties) file at can help you understand in which GitHub repository or module the original translation is. For instance, look for the following sample lines:
 
     ```
     ## DO NOT EDIT FOLLOWING LINE
@@ -346,7 +346,7 @@ Nuxeo labels are stored in ASCII files. We use the [UTF-8](http://www.utf8-chart
 
     If the module is under the `addons` directory, it will be in a specific GitHub repository. Otherwise, it will be in the [main Nuxeo repository](https://github.com/nuxeo/nuxeo).
 
-    * For Web UI labels, edit the [Nuxeo Web UI](https://github.com/nuxeo/nuxeo-web-ui/blob/master/i18n/messages.json) or [Nuxeo UI Elements](https://github.com/nuxeo/nuxeo-ui-elements/blob/master/i18n/messages.json) JSON files.
+    * For Web UI labels, edit the [Nuxeo Web UI](https://github.com/nuxeo/nuxeo-web-ui/blob/release-9.10/i18n/messages.json) or [Nuxeo UI Elements](https://github.com/nuxeo/nuxeo-ui-elements/blob/release-9.10/i18n/messages.json) JSON files.
 
 2.  Use any standard Java i18n tool to edit the files.
 3.  Make a pull-request on [GitHub](https://github.com/nuxeo/).

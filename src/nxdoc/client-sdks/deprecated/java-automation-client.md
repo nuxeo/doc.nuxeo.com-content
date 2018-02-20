@@ -638,7 +638,7 @@ If you need different logins then create one session per login. A session is thr
 
 In this example we assume we already have a session instance.
 
-Here is an example with [Document.Create](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Document.Create), [Document.Update](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Document.Update), [Document.Delete](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Document.Delete), [Document.Fetch](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Document.Fetch) operations.
+Here is an example with [Document.Create](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewOperation/Document.Create), [Document.Update](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewOperation/Document.Update), [Document.Delete](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewOperation/Document.Delete), [Document.Fetch](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewOperation/Document.Fetch) operations.
 
 {{#> callout type='info' }}
 
@@ -960,7 +960,7 @@ session.newRequest(UpdateDocument.ID).setInput(document).set("properties", docum
 
 ## {{> anchor 'managing-business-objects'}}Managing Business Objects
 
-It is possible to manage business objects (Plain Old Java Object client side for mapping the [Nuxeo Document Model Adapter](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters) ([Documentation]({{page page='repository-concepts#documentmodel-adapter'}})) server side).
+It is possible to manage business objects (Plain Old Java Object client side for mapping the [Nuxeo Document Model Adapter](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters) ([Documentation]({{page page='repository-concepts#documentmodel-adapter'}})) server side).
 
 Why manage business object? To manipulate business object to avoid _Nuxeo Document_ manipulation on client side:
 
@@ -974,7 +974,7 @@ push : BusinessObject (POJO) -----JSON---> DocumentModelAdapter ----> DocumentMo
 
 Let's see an example.
 
-1.  Create a [Nuxeo Document Model Adapter](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters) registered on server side and which should extend the [`BusinessAdapter`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-core/src/main/java/org/nuxeo/ecm/automation/core/operations/business/adapter/BusinessAdapter.java) class:
+1.  Create a [Nuxeo Document Model Adapter](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters) registered on server side and which should extend the [`BusinessAdapter`](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-features/nuxeo-automation/nuxeo-automation-core/src/main/java/org/nuxeo/ecm/automation/core/operations/business/adapter/BusinessAdapter.java) class:
 
     ```java
     import org.nuxeo.ecm.automation.core.operations.business.adapter.BusinessAdapter;
@@ -1099,8 +1099,8 @@ Let's see an example.
 
     We are going to use two operations for creating/updating process:
 
-    *   [`Business.BusinessCreateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Business.BusinessCreateOperation)
-    *   [`Business.BusinessUpdateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/Business.BusinessUpdateOperation)
+    *   [`Business.BusinessCreateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewOperation/Business.BusinessCreateOperation)
+    *   [`Business.BusinessUpdateOperation`](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewOperation/Business.BusinessUpdateOperation)
     {{#> callout type='info' }}
     See [the Automation Client Service Adapter section](#automation-client-service-adapter) to know how Business operations are wrapped into `BusinessService` adapter and how to use it.
     {{/callout}}
@@ -1133,7 +1133,7 @@ Let's see an example.
 
 ## GitHub Nuxeo Automation Tests
 
-Here is the complete code of the example. For more examples, see the unit tests in [`nuxeo-automation-test`](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test) project.
+Here is the complete code of the example. For more examples, see the unit tests in [`nuxeo-automation-test`](https://github.com/nuxeo/nuxeo/tree/9.10/nuxeo-features/nuxeo-automation/nuxeo-automation-test/src/test/java/org/nuxeo/ecm/automation/server/test) project.
 
 ## {{> anchor 'automation-client-service-adapter'}}Automation Client Service Adapter
 
@@ -1143,8 +1143,8 @@ Nuxeo Automation Client provides an "Adapter Service" to encapsulate business lo
 
 Default services provided:
 
-*   [`DocumentService`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/automation/client/adapters/DocumentService.html) - ([Class on GitHub](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-client/src/main/java/org/nuxeo/ecm/automation/client/adapters/DocumentService.java)): This API provides access to basic operation like CRUD, lock, version...
-*   [`BusinessService`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/automation/client/adapters/BusinessService.html) ([Class on GitHub](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-client/src/main/java/org/nuxeo/ecm/automation/client/adapters/BusinessService.java)): This API provides access to Business Operations.
+*   [`DocumentService`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/automation/client/adapters/DocumentService.html) - ([Class on GitHub](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-features/nuxeo-automation/nuxeo-automation-client/src/main/java/org/nuxeo/ecm/automation/client/adapters/DocumentService.java)): This API provides access to basic operation like CRUD, lock, version...
+*   [`BusinessService`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/automation/client/adapters/BusinessService.html) ([Class on GitHub](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-features/nuxeo-automation/nuxeo-automation-client/src/main/java/org/nuxeo/ecm/automation/client/adapters/BusinessService.java)): This API provides access to Business Operations.
 
 ![]({{file name='AdapterService.png'}} ?w=838,h=219,border=true)
 
@@ -1209,7 +1209,7 @@ file = (BusinessBean) businessService.update(file);
 
 You can contribute your own adapter service by Java to encapsulate your own business logic.
 
-To achieve this registration, you have to provide an adapter service factory that is going to instantiate your adapter. You can find an example of factory for the [`DocumentService`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/automation/client/adapters/DocumentService.html) class: [`DocumentServiceFactory`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/automation/client/adapters/DocumentServiceFactory.html) ([source code on GitHub](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-client/src/main/java/org/nuxeo/ecm/automation/client/adapters/DocumentServiceFactory.java)).
+To achieve this registration, you have to provide an adapter service factory that is going to instantiate your adapter. You can find an example of factory for the [`DocumentService`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/automation/client/adapters/DocumentService.html) class: [`DocumentServiceFactory`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/automation/client/adapters/DocumentServiceFactory.html) ([source code on GitHub](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-features/nuxeo-automation/nuxeo-automation-client/src/main/java/org/nuxeo/ecm/automation/client/adapters/DocumentServiceFactory.java)).
 
 Here is an example of registration:
 

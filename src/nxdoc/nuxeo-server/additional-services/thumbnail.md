@@ -218,31 +218,31 @@ Here are the different components of the thumbnail feature:
 * **Thumbnail service**
 
  The service that handles thumbnail factories contributions.
- * Interface: [`ThumbnailService`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/thumbnail/ThumbnailService.html)
- * Implementation: [`ThumbnailServiceImpl`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/thumbnail/ThumbnailServiceImpl.html)
- * Component: [`org.nuxeo.ecm.core.api.thumbnail.ThumbnailService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.api.thumbnail.ThumbnailService)
- * Extension point: [`thumbnailFactory`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.thumbnail.ThumbnailService--thumbnailFactory)
+ * Interface: [`ThumbnailService`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/core/api/thumbnail/ThumbnailService.html)
+ * Implementation: [`ThumbnailServiceImpl`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/core/api/thumbnail/ThumbnailServiceImpl.html)
+ * Component: [`org.nuxeo.ecm.core.api.thumbnail.ThumbnailService`](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewComponent/org.nuxeo.ecm.core.api.thumbnail.ThumbnailService)
+ * Extension point: [`thumbnailFactory`](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.core.api.thumbnail.ThumbnailService--thumbnailFactory)
 
 * **Default Thumbnail factories**
 
- * [`ThumbnailDocumentFactory`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/thumbnail/factories/ThumbnailDocumentFactory.html): Default thumbnail factory for all non-folderish documents. Returns the main blob converted in thumbnail or get the document's big icon as a  thumbnail.
- * [`ThumbnailPictureFactory`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/picture/thumbnail/ThumbnailPictureFactory.html): Picture thumbnail factory from [DAM]({{page page='digital-asset-management-dam'}}).
- * [`ThumbnailVideoFactory`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/video/adapter/ThumbnailVideoFactory.html): Video thumbnail factory from [DAM]({{page page='digital-asset-management-dam'}}).
- * [`ThumbnailAudioFactory`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/audio/extension/ThumbnailAudioFactory.html): Audio thumbnail factory from [DAM]({{page page='digital-asset-management-dam'}}).
+ * [`ThumbnailDocumentFactory`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/platform/thumbnail/factories/ThumbnailDocumentFactory.html): Default thumbnail factory for all non-folderish documents. Returns the main blob converted in thumbnail or get the document's big icon as a  thumbnail.
+ * [`ThumbnailPictureFactory`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/platform/picture/thumbnail/ThumbnailPictureFactory.html): Picture thumbnail factory from [DAM]({{page page='digital-asset-management-dam'}}).
+ * [`ThumbnailVideoFactory`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/platform/video/adapter/ThumbnailVideoFactory.html): Video thumbnail factory from [DAM]({{page page='digital-asset-management-dam'}}).
+ * [`ThumbnailAudioFactory`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/platform/audio/extension/ThumbnailAudioFactory.html): Audio thumbnail factory from [DAM]({{page page='digital-asset-management-dam'}}).
 
 * **Thumbnail listeners**
 
- * [`UpdateThumbnailListener`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/UpdateThumbnailListener.html): Thumbnail listener handling creation and update of document event to store document thumbnail preview (only for the File document type).
- * [`CheckBlobUpdateListener`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/CheckBlobUpdateListener.html): Thumbnail listener handling document blob update and checking changes. Fires a [`scheduleThumbnailUpdate`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/thumbnail/ThumbnailConstants.EventNames.html#scheduleThumbnailUpdate) event if it's the case that will trigger [`UpdateThumbnailListener`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/UpdateThumbnailListener.html).
+ * [`UpdateThumbnailListener`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/UpdateThumbnailListener.html): Thumbnail listener handling creation and update of document event to store document thumbnail preview (only for the File document type).
+ * [`CheckBlobUpdateListener`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/CheckBlobUpdateListener.html): Thumbnail listener handling document blob update and checking changes. Fires a [`scheduleThumbnailUpdate`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/platform/thumbnail/ThumbnailConstants.EventNames.html#scheduleThumbnailUpdate) event if it's the case that will trigger [`UpdateThumbnailListener`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/UpdateThumbnailListener.html).
 
 {{#> callout type='info' heading='Thumbnail factory on GitHub'}}
 
 Here are Nuxeo thumbnail factory implementations on GitHub:
 
-* [`ThumbnailDocumentFactory`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-thumbnail/src/main/java/org/nuxeo/ecm/platform/thumbnail/factories/ThumbnailDocumentFactory.java)
-* [`ThumbnailVideoFactory`](https://github.com/nuxeo/nuxeo-platform-video/blob/master/nuxeo-platform-video-core/src/main/java/org/nuxeo/ecm/platform/video/adapter/ThumbnailVideoFactory.java)
-* [`ThumbnailAudioFactory`](https://github.com/nuxeo/nuxeo-platform-audio/blob/master/nuxeo-platform-audio-core/src/main/java/org/nuxeo/ecm/platform/audio/extension/ThumbnailAudioFactory.java)
-* [`ThumbnailPictureFactory`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-platform-imaging/nuxeo-platform-imaging-core/src/main/java/org/nuxeo/ecm/platform/picture/thumbnail/ThumbnailPictureFactory.java)
+* [`ThumbnailDocumentFactory`](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-features/nuxeo-thumbnail/src/main/java/org/nuxeo/ecm/platform/thumbnail/factories/ThumbnailDocumentFactory.java)
+* [`ThumbnailVideoFactory`](https://github.com/nuxeo/nuxeo-platform-video/blob/9.10/nuxeo-platform-video-core/src/main/java/org/nuxeo/ecm/platform/video/adapter/ThumbnailVideoFactory.java)
+* [`ThumbnailAudioFactory`](https://github.com/nuxeo/nuxeo-platform-audio/blob/9.10/nuxeo-platform-audio-core/src/main/java/org/nuxeo/ecm/platform/audio/extension/ThumbnailAudioFactory.java)
+* [`ThumbnailPictureFactory`](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-features/nuxeo-platform-imaging/nuxeo-platform-imaging-core/src/main/java/org/nuxeo/ecm/platform/picture/thumbnail/ThumbnailPictureFactory.java)
 
 {{/callout}}
 
@@ -266,14 +266,14 @@ The above thumbnail factories will be used to compute and fetch specific thumbna
 * `facet`: string identifying the related document facet.
 * `factoryClass`: string representing the class name of the factory to use.
 
-Each factory should implement the interface [`ThumbnailFactory`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/thumbnail/class-use/ThumbnailFactory.html) . This interface contract contains two methods to implement:
+Each factory should implement the interface [`ThumbnailFactory`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/core/api/thumbnail/class-use/ThumbnailFactory.html) . This interface contract contains two methods to implement:
 
 * `Blob getThumbnail(DocumentModel doc, CoreSession session)`: gets the document thumbnail (related to the doc type/facet).
 * `Blob computeThumbnail(DocumentModel doc, CoreSession session)`: computes the thumbnail (related to the document type/facet).
 
-The listener [`UpdateThumbnailListener`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/UpdateThumbnailListener.html) is calling `YourFactory#computeThumbnail` that allows developers to compute the document blob when creating a document and after updating it (if the blob related to this document has been changed).
+The listener [`UpdateThumbnailListener`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/UpdateThumbnailListener.html) is calling `YourFactory#computeThumbnail` that allows developers to compute the document blob when creating a document and after updating it (if the blob related to this document has been changed).
 
- When computing your thumbnail, [`UpdateThumbnailListener`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/UpdateThumbnailListener.html) stores it into a specific metadata  `thumb:thumbnail` provided by the following schema:
+ When computing your thumbnail, [`UpdateThumbnailListener`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/platform/thumbnail/listener/UpdateThumbnailListener.html) stores it into a specific metadata  `thumb:thumbnail` provided by the following schema:
 
 ```xml
 <xs:schema xmlns:nxs="http://www.nuxeo.org/ecm/schemas/thumbnail"

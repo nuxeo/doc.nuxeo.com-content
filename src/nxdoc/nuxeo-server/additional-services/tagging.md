@@ -132,7 +132,7 @@ A tag holds a label that does not contain any space ("documentmanagement", "weba
 
 ## Tag Service Features
 
-The tag service is accessed through the  [`TagService`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/tag/TagService.html)  interface.
+The tag service is accessed through the  [`TagService`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/platform/tag/TagService.html)  interface.
 
 The tag service allows you to:
 
@@ -152,7 +152,7 @@ When restoring a version, the tags on the live document are also restored from t
 
 Tags can be added and removed independently on live documents and versions: a tag added on a live document won't be added on all its versions, but only on the versions that will be created after.
 
-The logic for the above is in the  [`TaggedVersionListener`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/tag/TaggedVersionListener.html) listener.
+The logic for the above is in the  [`TaggedVersionListener`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/platform/tag/TaggedVersionListener.html) listener.
 
 ### Disabling Tags on Versions
 

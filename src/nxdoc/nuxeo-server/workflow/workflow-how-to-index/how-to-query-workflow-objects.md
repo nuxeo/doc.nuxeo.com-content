@@ -351,7 +351,7 @@ SELECT * FROM DocumentRoute WHERE docri:participatingDocuments IN ('$docId') AND
 
 ### Querying Workflows Suspended at a given Step
 
-NXQL queries can reference any metadata. Using the [CoreSession#queryAndFetch](https://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#queryAndFetch-java.lang.String-java.lang.String-java.lang.Object...-) API we can look for workflows suspended on a given step. This will return in an [IterableQueryResult](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/IterableQueryResult.html) the id of the document representing the workflow document.
+NXQL queries can reference any metadata. Using the [CoreSession#queryAndFetch](https://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#queryAndFetch-java.lang.String-java.lang.String-java.lang.Object...-) API we can look for workflows suspended on a given step. This will return in an [IterableQueryResult](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/core/api/IterableQueryResult.html) the id of the document representing the workflow document.
 
 ```sql
 SELECT ecm:parentId FROM RouteNode WHERE rnode:nodeId = 'Task5237' AND ecm:currentLifeCycleState = 'suspended'

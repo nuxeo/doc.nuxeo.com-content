@@ -146,7 +146,7 @@ This means that:
 
 ### Symbolic Links to Packages
 
-Symbolic links to both packages (MSI and DMG) of the latest Nuxeo Drive version available for a given version of the Nuxeo Platform, for instance in [http://community.nuxeo.com/static/drive/latest/](http://community.nuxeo.com/static/drive/latest/). This is used for the first download of Nuxeo Drive from the Nuxeo Drive tab of the user's Home on the Nuxeo Platform UI. The download links are generated server-side following this pattern: `<update_site_URL>/latest/<Nuxeo_distribution_version>/nuxeo-drive.<extension>`, for instance `http://community.nuxeo.com/static/drive/latest/5.9.4/nuxeo-drive.msi`.
+Symbolic links to both packages (MSI and DMG) of the latest Nuxeo Drive version available for a given version of the Nuxeo Platform, for instance in [http://community.nuxeo.com/static/drive/latest/](http://community.nuxeo.com/static/drive/latest/). This is used for the first download of Nuxeo Drive from the Nuxeo Drive tab of the user's Home on the Nuxeo Platform UI. The download links are generated server-side following this pattern: `<update_site_URL>/latest/<Nuxeo_distribution_version>/nuxeo-drive.<extension>`, for instance `http://community.nuxeo.com/static/drive/latest/nuxeo-drive.msi`.
 
 {{! /multiexcerpt}}
 

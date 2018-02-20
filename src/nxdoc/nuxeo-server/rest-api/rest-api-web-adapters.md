@@ -380,7 +380,7 @@ Default adapters provided by default.
 
 You can contribute new WebAdapters using WebEngine.
 
-Alternatively, use the `@bo` WebAdapter to leverage standard Nuxeo DocumentModelAdapters which you can define with the [adapter extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters).
+Alternatively, use the `@bo` WebAdapter to leverage standard Nuxeo DocumentModelAdapters which you can define with the [adapter extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters).
 
 <table class="hover">
   <tr>

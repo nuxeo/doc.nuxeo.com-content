@@ -104,8 +104,8 @@ In Studio, you can lock a document or a list of documents using the Document > D
 
 There respective descriptions are available in the Explorer at:
 
-*   [Document.Lock](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.Lock)
-*   [Document.Unlock](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.Unlock)
+*   [Document.Lock](https://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewOperation/Document.Lock)
+*   [Document.Unlock](https://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewOperation/Document.Unlock)
 
 ## Permissions
 
@@ -129,27 +129,27 @@ In Studio, a whole set of operations allow you to you handle permissions on your
 
 - Document > Document.AddPermission<br />
 Recommended operation to add a permission, since it provides all the available parameters including the start and end dates.<br/>
-See [Document.AddPermission](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.AddPermission) on the Explorer
+See [Document.AddPermission](https://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewOperation/Document.AddPermission) on the Explorer
 
 - Document > Document.AddACE<br />
 Allows to add a permission too. This operation is kept for backwards compatibility reasons. You should use the Document.AddPermission operation instead when possible.<br/>
-See [Document.AddACE](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.AddACE) on the Explorer
+See [Document.AddACE](https://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewOperation/Document.AddACE) on the Explorer
 
 - Document > Document.BlockPermissionInheritance<br />
 As the name suggests, blocks permission inheritance on a given ACL.<br/>
-See [Document.BlockPermissionInheritance](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.BlockPermissionInheritance) on the Explorer
+See [Document.BlockPermissionInheritance](https://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewOperation/Document.BlockPermissionInheritance) on the Explorer
 
 - Document > Document.UnblockPermissionInheritance<br />
 Unblocks permission inheritance on a given ACL.<br/>
-See [Document.UnblockPermissionInheritance](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.UnblockPermissionInheritance) on the Explorer
+See [Document.UnblockPermissionInheritance](https://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewOperation/Document.UnblockPermissionInheritance) on the Explorer
 
 - Document > Document.RemoveACL<br />
 Remove completely all entries in a given ACL.<br/>
-See [Document.RemoveACL](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.RemoveACL) on the Explorer
+See [Document.RemoveACL](https://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewOperation/Document.RemoveACL) on the Explorer
 
 - Document > Document.ReplacePermission<br />
 Replace a permission with another for a given user.<br/>
-See [Document.ReplacePermission](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Document.ReplacePermission) on the Explorer
+See [Document.ReplacePermission](https://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewOperation/Document.ReplacePermission) on the Explorer
 
 ## Which One to Choose?
 

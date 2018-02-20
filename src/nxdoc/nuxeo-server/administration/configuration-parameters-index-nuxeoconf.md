@@ -1071,7 +1071,7 @@ history:
 The Nuxeo Platform reads configuration properties that you can set either:
 
 *   In a nuxeo.conf file
-*   By contributing to the [Configuration Service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute)
+*   By contributing to the [Configuration Service](http://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute)
 *   From the Setup tab in the Admin Center (if Nuxeo JSF UI is installed)
 
 ## nuxeo.conf File {{> anchor 'conf-manual-edition'}}
@@ -1117,7 +1117,7 @@ You can also take a look at the following pages for recommendations and examples
 
 ## Configuration Parameters Index
 
-The table below lists the properties that you can set in nuxeo.conf. Properties that can be contributed to the Configuration service are available [from the Nuxeo Platform Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
+The table below lists the properties that you can set in nuxeo.conf. Properties that can be contributed to the Configuration service are available [from the Nuxeo Platform Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
 
 {{! table-filter removed }}
 <div class="table-scroll">

@@ -309,7 +309,7 @@ The target database will be the one you defined in your source Nuxeo instance, a
 
 See [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}}) for more details about these config parameters of the Nuxeo Platform.
 
-If you need to change the values for these paths, setting System properties is not enough: you must add&nbsp;`context-param` entries in the Nuxeo `WEB-INF/web.xml` file (see [JavaDoc of NuxeoStarter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/runtime/deployment/NuxeoStarter.html) for more details).
+If you need to change the values for these paths, setting System properties is not enough: you must add&nbsp;`context-param` entries in the Nuxeo `WEB-INF/web.xml` file (see [JavaDoc of NuxeoStarter](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/runtime/deployment/NuxeoStarter.html) for more details).
 
 
 ## Upgrading or Installing Hotfixes

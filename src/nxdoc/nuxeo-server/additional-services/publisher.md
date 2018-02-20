@@ -120,7 +120,7 @@ The `PublisherService` deals with three interfaces:
 
 *   `PublishedDocument`: represents the published document. It can be created from a `DocumentModel`, a proxy or a file on the filesystem.
 *   `PublicationNode`: represents a Node where you can publish a `DocumentModel`. It can be another `DocumentModel` (mainly Folder / Section) or a directory on the filesystem.
-*   `PublicationTree`: the tree which is used to publish / unpublish documents, to approve / reject publication, list the already published documents in a `PublicationNode`, etc. See the [Javadoc of the PublicationTree](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/publisher/api/PublicationTree.html).
+*   `PublicationTree`: the tree which is used to publish / unpublish documents, to approve / reject publication, list the already published documents in a `PublicationNode`, etc. See the [Javadoc of the PublicationTree](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/platform/publisher/api/PublicationTree.html).
 
 {{! /excerpt}}
 
@@ -134,7 +134,7 @@ The `PublisherService` mainly works with three concepts:
 
 Publishing in local Sections is the default way to publish documents.
 
-Here is the default contribution you can find in [rendition-publisher-contrib.xml](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.rendition.publisher) located in the `nuxeo-platform-rendition-publisher` project:
+Here is the default contribution you can find in [rendition-publisher-contrib.xml](http://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewComponent/org.nuxeo.ecm.platform.rendition.publisher) located in the `nuxeo-platform-rendition-publisher` project:
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.publisher.impl.service.PublisherServiceImpl"

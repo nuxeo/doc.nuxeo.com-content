@@ -441,7 +441,7 @@ Let's describe in more details two different default pages so that you can defin
 
 ### Workspace Page Example
 
-The [Workspace page](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/workspace_page.xhtml) is the standard default page, showing a header and a footer, as well as a left column (showing the import button, document explorer, clipboard...):
+The [Workspace page](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/workspace_page.xhtml) is the standard default page, showing a header and a footer, as well as a left column (showing the import button, document explorer, clipboard...):
 
 ```xml
 <ui:composition template="/pages/basic_page.xhtml"
@@ -479,13 +479,13 @@ The [Workspace page](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-
 </ui:composition>
 ```
 
-*   This template relies on another generic template, [`/pages/basic_page.xhtml`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/basic_page.xhtml) , that defines the global HTML page, and inserts a few templating zones (like `basic body`).
-*   The current page and flavor are retrieved thanks to the themeActions Seam component logics, which rely on _negotiations_ (see below). The corresponding resources will be included in the page head thanks to the [`/incl/page_head.xhtml`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/incl/page_head.xhtml) template.
-*   The template at [`/incl/includes.xhtml`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/incl/includes.xhtml) is also inserted in the page body, and is useful for Drag&Drop features.
+*   This template relies on another generic template, [`/pages/basic_page.xhtml`](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/basic_page.xhtml) , that defines the global HTML page, and inserts a few templating zones (like `basic body`).
+*   The current page and flavor are retrieved thanks to the themeActions Seam component logics, which rely on _negotiations_ (see below). The corresponding resources will be included in the page head thanks to the [`/incl/page_head.xhtml`](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/incl/page_head.xhtml) template.
+*   The template at [`/incl/includes.xhtml`](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-dm/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/incl/includes.xhtml) is also inserted in the page body, and is useful for Drag&Drop features.
 
 ### Popup Page Example
 
-The [Popup page](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/popup_page.xhtml) page is the standard popup page, not showing any header or footer:
+The [Popup page](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/popup_page.xhtml) page is the standard popup page, not showing any header or footer:
 
 ```xml
 <ui:composition template="basic_page.xhtml"
@@ -518,7 +518,7 @@ Default page templates rely on a mechanism to control where resources are includ
 *   declaring CSS resources first in the page head
 *   pushing most of JavaScript resources to end of the page body
 
-This relocation of tags relies on JSF 2 re-target features, and moves around components to place them inside slots defined on the [`/pages/basic_page.xhtml`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/basic_page.xhtml) template.
+This relocation of tags relies on JSF 2 re-target features, and moves around components to place them inside slots defined on the [`/pages/basic_page.xhtml`](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/basic_page.xhtml) template.
 
 By default, standard JavaScript resources like JSF or RichFaces Javascript files, as well as jQuery, are kept at the beginning of the body. However, most of Nuxeo default resources are pushed to the end of the page body. As a consequence, to benefit from these optimizations, inline JavaScript files should be declared using a `h:outputScript` tag instead of a bare `script` HTML tag, using variable `#{pageJsTarget}` as a target attribute:
 
@@ -547,7 +547,7 @@ Resources can be inserted directly inside each template.&nbsp;But some add-ons n
 
 ### Pages
 
-Each page using the `basic_page.xhtml` template needs to have a `page` contribution to the [`pages` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo Platform-7.3/viewExtensionPoint/org.nuxeo.theme.styling.service--pages): this is the main link between the page structure and its branding.
+Each page using the `basic_page.xhtml` template needs to have a `page` contribution to the [`pages` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.theme.styling.service--pages): this is the main link between the page structure and its branding.
 
 Here is an example of the `galaxy/default` default page definition:
 
@@ -578,7 +578,7 @@ Here is an example of the `galaxy/default` default page definition:
 
 ### Resources
 
-Resources that need to be included on a page need to define a `resource` contribution to the&nbsp; [`resources` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-7.3/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources). Resources define mainly a name and a type, here are sample contributions:
+Resources that need to be included on a page need to define a `resource` contribution to the&nbsp; [`resources` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources). Resources define mainly a name and a type, here are sample contributions:
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.WebResources" point="resources">
@@ -612,7 +612,7 @@ Here the resource type is inferred from the resource name extension: it ends by 
 
 ```
 
-Several kinds of URIs are accepted to reference the resource location. Please refer to the [wro4j documentation](https://code.google.com/p/wro4j/wiki/ResourceTypes) or the [extension point documentation](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources) for details.
+Several kinds of URIs are accepted to reference the resource location. Please refer to the [wro4j documentation](https://code.google.com/p/wro4j/wiki/ResourceTypes) or the [extension point documentation](http://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources) for details.
 
 Here files will be retrieved from the generated WAR directory (nuxeo.war)&nbsp; so you should make sure that the `OSGI-INF/deployment-fragment.xml` file of your module copies the files from the JAR there.
 
@@ -657,7 +657,7 @@ When defining styles and JavaScript resources, you do not need to worry about us
 
 ### Resource Bundles
 
-Bundles are a group of ordered resources. Bundles that need to be included on a page need to define a `bundle` contribution to the [`bundles` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-7.3/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--bundle):
+Bundles are a group of ordered resources. Bundles that need to be included on a page need to define a `bundle` contribution to the [`bundles` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--bundle):
 
 ```xml
 <extension target="org.nuxeo.ecm.platform.WebResources" point="bundles">
@@ -753,7 +753,7 @@ Main resources types are `scss`,&nbsp;`css` and `js`. But other types can also b
 
 The notion of _flavor_ makes it possible to switch some elements held by the branding (colors, logo...) without changing the associated styles: negotiators make it possible to compute this flavor depending on the context, so that, for instance, branding can be customized when navigating in some parts of the document hierarchy, relying on Nuxeo local configuration features.
 
-Each flavor needs to have a `flavor` contribution to the [`flavors` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo Platform-7.3/viewExtensionPoint/org.nuxeo.theme.styling.service--flavors).
+Each flavor needs to have a `flavor` contribution to the [`flavors` extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.theme.styling.service--flavors).
 Here is an example of the default flavor:
 
 ```
@@ -812,7 +812,7 @@ Here is an example of the default flavor:
     ```
 
 *   `<label>` and `<palettePreview>` are used to display the flavor in the Theme local configuration.
-*   `<logo>` is used to display the current logo associated to current flavor thanks to the template at [`/incl/nuxeo_logo.xhtml`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/incl/nuxeo_logo.xhtml) (included in Nuxeo default header).
+*   `<logo>` is used to display the current logo associated to current flavor thanks to the template at [`/incl/nuxeo_logo.xhtml`](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-dm/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/incl/nuxeo_logo.xhtml) (included in Nuxeo default header).
 
 SCSS resources referencing variables will need to declare the Sass&nbsp;`processor`&nbsp;to be triggered:
 
@@ -836,11 +836,11 @@ Before 7.4, CSS files referencing flavor variables needed to be referenced as re
 
 ### Processors
 
-Custom processors can be defined and used. Some [default processors](https://code.google.com/p/wro4j/wiki/AvailableProcessors) are also available, you can refer to the [`processors` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-7.3/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--processors) and take example on the custom [FlavorResourceProcessor](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-theme/nuxeo-theme-styling/src/main/java/org/nuxeo/theme/styling/wro/FlavorResourceProcessor.java) implementation and [registration](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-theme/nuxeo-theme-styling/src/main/resources/OSGI-INF/webresources-contrib.xml).
+Custom processors can be defined and used. Some [default processors](https://code.google.com/p/wro4j/wiki/AvailableProcessors) are also available, you can refer to the [`processors` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo Platform-7.3/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--processors) and take example on the custom [FlavorResourceProcessor](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-theme/nuxeo-theme-styling/src/main/java/org/nuxeo/theme/styling/wro/FlavorResourceProcessor.java) implementation and [registration](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-theme/nuxeo-theme-styling/src/main/resources/OSGI-INF/webresources-contrib.xml).
 
 ### {{> anchor 'negotiations'}}Negotiations
 
-You can contribute custom negotiators to the [`negotiations` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-7.3/viewExtensionPoint/org.nuxeo.theme.services.ThemeService--negotiations) to customize current page or flavor logics.
+You can contribute custom negotiators to the [`negotiations` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.theme.services.ThemeService--negotiations) to customize current page or flavor logics.
 
 &nbsp;
 

@@ -519,7 +519,7 @@ print(file);
 
 ### Contributing Automation Scripting Operations
 
-Automation scripting operation is made through an XML contribution on the [`operation` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.automation.scripting.internals.AutomationScriptingComponent--operation):
+Automation scripting operation is made through an XML contribution on the [`operation` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.automation.scripting.internals.AutomationScriptingComponent--operation):
 
 ```xml
 <extension target="org.nuxeo.automation.scripting.internals.AutomationScriptingComponent" point="operation">

@@ -312,7 +312,7 @@ However, if you define documents with a lot of meta-data (some people have sever
 *   The database : because queries will be more complex
 *   The display layer : because correctly configuring prefetch will be very important
 
-For configuring the prefetch settings, please see the&nbsp;[configuration extension point of the TypeService](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration).
+For configuring the prefetch settings, please see the&nbsp;[configuration extension point of the TypeService](http://explorer.nuxeo.org/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--configuration).
 
 The default configuration is adequate for the default Nuxeo ContentViews, but you may need to adjust that for your use cases.
 
@@ -559,9 +559,9 @@ Here are the main advantages:
 
     This makes it easy to create new scenarios.
 
-Also to stress heavily the REST API [we use Gatling](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution/nuxeo-jsf-ui-gatling-tests/).
+Also to stress heavily the REST API [we use Gatling](https://github.com/nuxeo/nuxeo/tree/9.10/nuxeo-distribution/nuxeo-jsf-ui-gatling-tests/).
 
-We also use Nuxeo Platform addon tools like [`nuxeo-platform-importer`](https://github.com/nuxeo/nuxeo-platform-importer/blob/master/README.md) [](https://github.com/nuxeo/nuxeo-platform-importer/blob/release-5.6/README.md)to populate the document base.
+We also use Nuxeo Platform addon tools like [`nuxeo-platform-importer`](https://github.com/nuxeo/nuxeo-platform-importer/blob/9.10/README.md) [](https://github.com/nuxeo/nuxeo-platform-importer/blob/9.10/README.md)to populate the document base.
 
 ### Metrics to Monitor During a Bench
 
@@ -656,7 +656,7 @@ This benchmark was initially run in 2010 against a Nuxeo 5.3.1.
 1.  Tune the database following tips in the Nuxeo PostgreSQL&nbsp;[FAQ](https://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server).
 2.  Tune Nuxeo: for mass import, we disable the full-text indexing (as described in the ["Mass import specific tuning" section of PostgreSQL configuration page]({{page page='postgresql'}}#mass-import-specific-tuning)) and disable the ACL optimization ([NXP-4524](https://jira.nuxeo.com/browse/NXP-4524)).
 3.  Import content: mass import is done using a multi-threaded importer to create File document with an attached text file randomly generated using a French dictionary. Only a percentage of the text file will be indexed for the full text, this ratio simulate the proportion of text in a binary format.
-    [Sources of the nuxeo-platform-importer](https://github.com/nuxeo/nuxeo-platform-importer/blob/master/README.md)
+    [Sources of the nuxeo-platform-importer](https://github.com/nuxeo/nuxeo-platform-importer/blob/9.10/README.md)
 4.  Rebuild full text as described in the ["Mass import specific tuning" FAQ]({{page version='' space='nxdoc' page='postgresql'}}#mass-import-specific-tuning).
 5.  Generate random ACLs on documents. This can be done with a simple scripts that generate SQL inserts into the ACL table.
 6.  Enable the read ACLs optimization, performing the SQL command:

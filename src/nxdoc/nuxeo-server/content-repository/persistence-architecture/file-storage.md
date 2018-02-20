@@ -300,7 +300,7 @@ Reads content stored on an external file system.
 
 </td></tr></tbody></table></div>
 
-To register a new Blob Provider, use the [`blobprovider`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.blob.BlobManager--configuration)&nbsp;extension point with the Java class for your Blob Provider:
+To register a new Blob Provider, use the [`blobprovider`](http://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.core.blob.BlobManager--configuration)&nbsp;extension point with the Java class for your Blob Provider:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
@@ -493,7 +493,7 @@ This is doable thanks to the `BlobDispatcher` class.&nbsp;
 
 ![](https://lh4.googleusercontent.com/z-1wWw7slLbqkaNh0mTiW-7R7ofXPPfIVryLIQSCQqapbM79gctiuNcKauodRx-u9-VpNQShUqrivZ6aY4CuqEA-uRstFRn5XQBrCUnFkMgvx51jxa_1vfq6lO3wdJ2D9Er0rSWXrg ?w=500,border=true)
 
-The role of the blob dispatcher is to decide, based on a blob and its containing document, where the blob's binary is actually going to be stored. The Nuxeo Platform provides a default blob dispatcher ([`org.nuxeo.ecm.core.blob.DefaultBlobDispatcher`](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/blob/DefaultBlobDispatcher.html)) that is easy to configure for most basic needs. But it can be replaced by a custom implementation if needed.
+The role of the blob dispatcher is to decide, based on a blob and its containing document, where the blob's binary is actually going to be stored. The Nuxeo Platform provides a default blob dispatcher ([`org.nuxeo.ecm.core.blob.DefaultBlobDispatcher`](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/core/blob/DefaultBlobDispatcher.html)) that is easy to configure for most basic needs. But it can be replaced by a custom implementation if needed.
 
 {{! multiexcerpt name='BlobDispatch'}}
 

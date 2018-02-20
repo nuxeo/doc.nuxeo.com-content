@@ -141,19 +141,19 @@ Let's define two types of resources to be included later on pages:
 </extension>
 ```
 
-Here the `uri` element is used, so resources will be looked up in the JAR holding the declaration. Please refer to the [`resources` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources) documentation for more details.
+Here the `uri` element is used, so resources will be looked up in the JAR holding the declaration. Please refer to the [`resources` extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/9.10/viewExtensionPoint/org.nuxeo.ecm.platform.WebResources--resources) documentation for more details.
 
 ## Including Resources in a Given Page
 
 {{#> callout type='tip' }}
 
-You can browse the [Nuxeo Resources JSF tag library documentation](http://community.nuxeo.com/api/nuxeo/7.4/tlddoc/nxr/tld-summary.html) to get details on how to use a given resource or bundle in a page.
+You can browse the [Nuxeo Resources JSF tag library documentation](http://community.nuxeo.com/api/nuxeo/9.10/tlddoc/nxr/tld-summary.html) to get details on how to use a given resource or bundle in a page.
 
 {{/callout}}
 
 &nbsp;
 
-Let's consider defining a new page template, using the main page template at [`/pages/basic_page.xhtml`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/basic_page.xhtml):
+Let's consider defining a new page template, using the main page template at [`/pages/basic_page.xhtml`](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/basic_page.xhtml):
 
 ```xml
 <ui:composition template="basic_page.xhtml"
@@ -252,7 +252,7 @@ Similarly, the default bundle named `nuxeo_base`, also defined by component `org
 
 ## Including Resources in a Given Template
 
-When designing a page, you may want to include specific resources. The main page template at [`/pages/basic_page.xhtml`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/basic_page.xhtml) waits for a `pageName` parameter, that will already include resources and bundles contributed through the `page` extension point.
+When designing a page, you may want to include specific resources. The main page template at [`/pages/basic_page.xhtml`](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/basic_page.xhtml) waits for a `pageName` parameter, that will already include resources and bundles contributed through the `page` extension point.
 
 It also inserts additional templating zones to include additional resources, here is a sample usage:
 

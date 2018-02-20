@@ -93,7 +93,7 @@ It is typically used by:
 *   The [Batch Upload API]({{page page='batch-upload-endpoint'}}) to temporarily store a batch of uploaded blobs until they are attached to a document.
 *   The `ConversionService` to store the `BlobHolder` resulting from an [Asynchronous Conversion Work]({{page page='conversion'}}#rest-api-async-conversions).
 
-The [TransientStore](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/transientstore/api/TransientStore.html) API is based on the following methods:
+The [TransientStore](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/core/transientstore/api/TransientStore.html) API is based on the following methods:
 
 ```java
 void putBlobs(String key, List blobs);
@@ -133,7 +133,7 @@ The nested configuration elements are:
 *   `firstLevelTTL`: TTL in minutes of the first level cache.
 *   `secondLevelTTL`: TTL in minutes of the second level cache.
 
-Have a look at the [default transient store configuration](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common/config/transient-store-config.xml.nxftl), defined in a template:
+Have a look at the [default transient store configuration](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common/config/transient-store-config.xml.nxftl), defined in a template:
 
 {{#> panel type='code' heading='Default Transient Store Configuration'}}
 
@@ -186,7 +186,7 @@ In a cluster environment the transient blob storage directory must be shared by 
 
 ### Parameter Storage
 
-The `SimpleTransientStore` implementation relies on Nuxeo's [in-memory cache implementation](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-core/nuxeo-core-cache/src/main/java/org/nuxeo/ecm/core/cache/InMemoryCacheImpl.java) which uses Google's Guava cache. **It is not distributed and not persistent** so should not be used in a clustered setting.
+The `SimpleTransientStore` implementation relies on Nuxeo's [in-memory cache implementation](https://github.com/nuxeo/nuxeo/blob/release-9.10/nuxeo-core/nuxeo-core-cache/src/main/java/org/nuxeo/ecm/core/cache/InMemoryCacheImpl.java) which uses Google's Guava cache. **It is not distributed and not persistent** so should not be used in a clustered setting.
 
 The `RedisTransientStore` relies on [Redis]({{page page='nuxeo-and-redis'}}). **It is distributed and persistent.**
 
