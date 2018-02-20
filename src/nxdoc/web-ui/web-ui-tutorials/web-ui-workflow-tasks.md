@@ -7,7 +7,7 @@ review:
 toc: true
 details:
     howto:
-        excerpt: Learn how to customize your workflow tasks
+        excerpt: Learn how to configure your workflow tasks
         level: Advanced
         tool: code
         topics: Web UI
@@ -65,9 +65,9 @@ We will finish our Studio Modeler configuration by creating a vocabulary for the
 3. Save your modifications.
 
 ## Create a Task layout
-We can now customize our layout on Studio Designer.
+We can now configure our layout on Studio Designer.
 
-1. On the **Layouts** tab, go to the **Workflows** menu and click on _Contract Validation task_ and then on **CUSTOMIZE**.
+1. On the **Layouts** tab, go to the **Workflows** menu and click on _Contract Validation task_ and then on **CONFIGURE**.
   The workflow layout works as the document type layout, you can browse the element catalog and switch editors between code and visual.
 1. You can start by reorder the properties on the visual editor to end up with something like this:
   ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='workflow-process-VD.png'}} ?w=350,border=true)

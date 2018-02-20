@@ -38,13 +38,13 @@ In this tutorial you will learn how to create a document type layout with Studio
 - A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Studio Modeler
 - The Web UI addon installed on your instance
 
-Once you are all set, you can navigate to the Studio Designer to customize your layouts.
+Once you are all set, you can navigate to the Studio Designer to configure your layouts.
 
 ### Create a New Layout
 
 1. Go on the **Layouts** tab on the left menu.
 1. Under **Local Types** you will find your `Contract` document type.
-1. Five layouts are available for the customization. Let's start with the **Create** layout: Click on the **CUSTOMIZE** button in the editor.
+1. Five layouts are available for the configuration. Let's start with the **Create** layout: Click on the **CONFIGURE** button in the editor.
   {{#> callout type='tip' }}
   It automatically creates the `nuxeo-contract-create-layout.html` file, scaffolding:
     - The title and description fields
@@ -53,9 +53,9 @@ Once you are all set, you can navigate to the Studio Designer to customize your 
 1. In the catalog properties on the left, select **File**&nbsp;> **content:blob**&nbsp;> **view** and drag and drop the element in the main view.
 1. Click on Save.
   {{#> callout type='note' }}
-  When customizing a document type, you need to create all layouts in the Studio Designer in order to display the relevant properties.
+  When configuring a document type, you need to create all layouts in the Studio Designer in order to display the relevant properties.
   {{/callout}}
-1. Click on the **Edit** layout and then on the **CUSTOMIZE** button.
+1. Click on the **Edit** layout and then on the **CONFIGURE** button.
 1. Modify and/or delete fields as you wish them to be displayed when editing your document and click on **Save**.
 1. Do the same two last steps with the **Metadata** and **View** layouts and don't forget to save.<br/>
   You now have an upload button on your document layout.
@@ -102,7 +102,7 @@ In Nuxeo Web UI, these different layout/mode combinations have been materialized
 
 By simply following a convention that maps a document type to a set of pre-defined element names, according to the different use cases (modes), our application can dynamically load and instantiate the appropriate element for a given document.
 
-Regions of the UI which require customizable document layouts rely on custom container elements to handle the loading and instantiation of the appropriate layout elements for the given use case, for instance the default document page has two customizable regions by default:
+Regions of the UI which require configurable document layouts rely on custom container elements to handle the loading and instantiation of the appropriate layout elements for the given use case, for instance the default document page has two configurable regions by default:
 
 ![]({{file name='document_page_1.png'}} ?w=400,border=true)
 
@@ -206,7 +206,7 @@ The following is a sample definition of what an `edit` layout element for a `MyD
 </dom-module>
 ```
 
-### Customizing Document Creation
+### Configuring Document Creation
 
 When contributing document types, there are two more contributions that have to be made in order for them to
 be properly displayed in the document creation wizard: add a custom icon and a custom label for each type.
@@ -231,7 +231,7 @@ window.nuxeo.importBlacklist = [
 ```
 
 {{#> callout type='warning' }}
-The customization of document creation in Web UI is subject to change in the upcoming versions.
+The configuration of document creation in Web UI is subject to change in the upcoming versions.
 {{/callout}}
 
 
