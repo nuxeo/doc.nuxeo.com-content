@@ -2,7 +2,7 @@
 title: 'HOWTO: Customize Document Layouts'
 review:
     comment: ''
-    date: '2017-01-02'
+    date: '2018-02-21'
     status: ok
 toc: true
 details:
@@ -27,7 +27,7 @@ tree_item_index: 400
 Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner) on Nuxeo University.
 {{/callout}}  
 
-Layouts are used to display a document's metadata in different use cases. It's basically a group of widgets and specifies how these widgets are assembled and displayed.
+Document type layouts are used to display a document's metadata in Web UI forms. A document layout is structured with document type properties, assembled with several UI elements such as sections, cards, columns etc.
 
 A given document type can have multiple layouts: a `create` and `edit` layout to set its schema fields when creating or editing the document, a `view` layout to simply display field values and any other layouts according to the application(s) where these are used. In our previous metamodel driven UI, these were known as `modes` and a single layout definition could be rendered in different modes.
 
@@ -35,8 +35,47 @@ In this tutorial you will learn how to create a document type layout with Studio
 
 ### Prerequisites
 
-- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Studio Modeler
-- The Web UI addon installed on your instance
+- Make sure that the [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
+
+### Create a Contract Document Type
+
+Here we want to create a custom document type named "Contract" that will hold specific metadata related to the notion of a contract: contract owner, starting date, policy.
+
+
+1.  In Studio Modeler, under **Configuration**, click on the **Content Model** section, then **Document Types**. Click on the **New** button.
+2.  Fill in the creation form as follows and click on **Next**:
+    - **ID**: Contract
+    - **Extends**: File
+    - **Label**: Contract
+    - **Description**: Contract document type for internal use.
+
+    Your document type is created.
+3.  Fill in the [**Definition** tab]({{page space='studio' page='documents'}}):
+![]({{file name='definition_contract.png' page='getting-started-with-nuxeo-studio'}} ?w=600,h=365,border=true)
+4.  Fill in the [**Schema** tab]({{page space='studio' page='schemas'}}) with the following metadata:
+![]({{file name='schema_contract.png' page='getting-started-with-nuxeo-studio'}} ?w=600,border=true)
+
+Now we'll customize the form that's used to **create** the document. On the **Creation Layout** tab:
+
+5.  Click on the ![]({{file name='delete.gif' space='studio' page='studio-icons-index'}}) icon to remove the WARNING and Description widgets.
+6.  Drag and drop the fields **Owner**, **Start** and **Policy** from the schema **Contract** to the grid.
+7.  Click on&nbsp;![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) if you wish to edit a label, then click on **Save** in the popup when you're done.
+
+![]({{file name='creation_layout_contract.png' page='getting-started-with-nuxeo-studio'}} ?w=580,border=true)
+*Creation Layout Tab*
+
+On the **Edit Layout** tab, we can customize the form used to update the metadata of the document:
+
+8.  Click on the button **Import Layout** and select **Import 'create' layout**.
+9.  Click on the button **Add Row**.
+10. Drag and drop the field **Reminder** from the schema **Contract** to the grid.
+11. Click on&nbsp;![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) if you want to edit the widget label, then click on **Save** in the popup when you're done.
+
+![]({{file name='edit_layout_contract.png' page='getting-started-with-nuxeo-studio'}} ?w=600,border=true)
+*Edit Layout Tab*
+
+12. On the View Layout click on the button **Import Layout** and select **Import 'edit' layout**.
+13. Click on **Save**.
 
 Once you are all set, you can navigate to the Studio Designer to configure your layouts.
 
@@ -44,7 +83,7 @@ Once you are all set, you can navigate to the Studio Designer to configure your 
 
 1. Go on the **Layouts** tab on the left menu.
 1. Under **Local Types** you will find your `Contract` document type.
-1. Five layouts are available for the configuration. Let's start with the **Create** layout: Click on the **CONFIGURE** button in the editor.
+1. Five layouts are available for the configuration. Let's start with the **Create** layout: Click on the **Configure** button in the editor.
   {{#> callout type='tip' }}
   It automatically creates the `nuxeo-contract-create-layout.html` file, scaffolding:
     - The title and description fields
@@ -55,11 +94,11 @@ Once you are all set, you can navigate to the Studio Designer to configure your 
   {{#> callout type='note' }}
   When configuring a document type, you need to create all layouts in the Studio Designer in order to display the relevant properties.
   {{/callout}}
-1. Click on the **Edit** layout and then on the **CONFIGURE** button.
+1. Click on the **Edit** layout and then on the **Configure** button.
 1. Modify and/or delete fields as you wish them to be displayed when editing your document and click on **Save**.
 1. Do the same two last steps with the **Metadata** and **View** layouts and don't forget to save.<br/>
   You now have an upload button on your document layout.
-1. At the top right-hand corner of the Studio Designer, switch the editor to code editor.
+1. At the bottom of the editor, switch to code editor.
     You are now in the HTML mode of the Studio Designer and you can see the element that you just drag and dropped on the other editor.
 1. Find the description's element and delete it.
 1. Click on **Save** to keep your changes.
@@ -78,13 +117,13 @@ To do so:
 
   You now have a document type ready to be used on your Web UI interface, the last thing that you need is an icon to easily find your document type in your instance.
 
-### Create a Document Type Icon
+### Create an Icon
 
 To do so, you need to go on the **Resources** tab.
 
 1. Click on the **UI** folder.
 2. Click on the **Create** button, select a folder and name it **images**.
-3. In this **Images** folder, create a `doctypes`folder.
+3. In this **Images** folder, create a `doctypes` folder.
 4. In the **doctypes** click on the **Upload** button and select your image. <br/>
   You have to respect the following folder structure, and name the icon as your document type in lowercase in order to display the icon.
   ![]({{file name='tree-structure-icon-contract.png'}} ?w=200,border=true)
