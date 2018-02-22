@@ -2,7 +2,7 @@
 title: 'HOWTO: Insert a User Action'
 review:
     comment: ''
-    date: '2017-06-15'
+    date: '2018-02-22'
     status: ok
 toc: true
 details:
@@ -17,7 +17,7 @@ labels:
     - tcardoso
     - nuxeo-ui-elements
     - polymer
-    - content-review-lts2017
+    - lts2017-ok
 tree_item_index: 1300
 
 ---
@@ -27,19 +27,18 @@ In this tutorial you will learn how to insert a user action on your instance usi
 
 ## Requirements
 
-- Web UI addon installed on your instance.
-- Studio Designer enabled on your Studio project.
-- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Studio Modeler and [customized on Studio Designer]({{page page='web-ui-document-layouts'}}).
+- A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Studio Modeler.
+- Make sure that the [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
 
 ## Create an Automation Chain
 
-On Modeler side:
-1. Go on **Configuration**&nbsp;> **Automation** and then on **Automation Chains**.
+On Studio Modeler:
+1. Go on **Configuration** > **Automation** and then on **Automation Chains**.
 1. Click on the **New** button.
 1. Give your automation chain an ID `validateDocument` and click on the **Next** button.
   ![]({{file name='NXS-automation-create.png' page='how-to-create-an-automation-chain'}} ?w=350,border=true)
-  The automation chain editor is displayed. The `Fetch&nbsp;> Context Document(s)` is automatically added as the first operation of the chain.
-1. Drag and drop the operation **Document**&nbsp;> **Follow Life Cycle Transition** and set the transition as `approve`.
+  The automation chain editor is displayed. The **Fetch** > **Context Document(s)** is automatically added as the first operation of the chain.
+1. Drag and drop the operation **Document** > **Follow Life Cycle Transition** and set the transition as `approve`.
 1. Click on **Save**.
 
   You should end up with something like this:
