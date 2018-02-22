@@ -29,14 +29,13 @@ Follow the related [video course and exercises](https://university.nuxeo.com/lea
 In this tutorial you will learn how to create a custom workflow tasks layout in Studio Designer. We'll be using a custom validation workflow template linked to the Contract document type.
 
 ## Prerequisites
-- A [Contract document type]({{page page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Studio Modeler
-- Web UI addon installed on your instance
-- Studio Designer enabled on your Studio project
+- A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Studio Modeler.
+- Make sure that the [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
 
 ## Create a Workflow Template
 First, we need to create a new workflow template in Studio Modeler. This workflow will be applied to the Contract document type.
 
-1. Go to **Workflow**&nbsp;> **Process Definitions** and click on **New**.
+1. Go to **Workflow** > **Process Definitions** and click on **New**.
   ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='create-wf-studio.png'}} ?w=350,border=true)
 1. On the **Activation** tab, next to the field **Current document has one of the types**, select the Contract local type and move it from left to right.
 Now we will add a custom workflow variable called **Type** to specify which type of contract you are validating.
