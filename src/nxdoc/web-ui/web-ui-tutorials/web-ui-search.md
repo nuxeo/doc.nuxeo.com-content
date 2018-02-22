@@ -2,7 +2,7 @@
 title: 'HOWTO: Configure Searches'
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2018-02-21'
     status: ok
 toc: true
 details:
@@ -27,14 +27,14 @@ We will learn how to create a new search screen with an icon in the left menu. T
 
 
 ## Prerequisites
-- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Nuxeo Studio
-- The Web UI addon installed on your instance
+- A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Nuxeo Modeler
+- Make sure that the [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
 
 Once you are all set, you can navigate to Nuxeo Studio to start creating your search.
 
 ## Create a Page Provider
 
-The first step is to create a [page provider]({{page version='' space='studio' page='page-providers'}}) in Nuxeo Studio.
+The first step is to create a [page provider]({{page version='' space='studio' page='page-providers'}}) in Studio Modeler.
 
 In **Configuration**, go to **Page Providers**, click on **New** and name it `Search`.
 
@@ -53,6 +53,10 @@ In **Configuration**, go to **Page Providers**, click on **New** and name it `Se
   <div class="table-scroll">
   <table class="hover">
   <tbody>
+  <tr>
+  <th colspan="1">Aggregate Type</th>
+  <td colspan="1">Date Range</td>
+  </tr>
   <tr>
   <th colspan="1">Field</th>
   <td colspan="1">dc:created</td>
@@ -152,11 +156,11 @@ More columns can be added using drag and drop from the catalog on the right side
 Columns can be reordered by drag and dropping them around.
 
 Finally, when hovering on a column, you can use additional icons to configure them:
-- ![]({{file name='icon-arrows.png'}} ?w=26,border=true) The arrows icon toggles the possibility to sort results using this column.
+- ![]({{file name='icon-arrows.png'}} ?w=25) The arrows icon toggles the possibility to sort results using this column.
 
-- ![]({{file name='icon-eye.png'}} ?w=27,border=true) The eye icon toggles the default visibility of the column. If you make it optional, it won't appear by default but can be made visible by users in Web UI. When made visible, it will be placed exactly where you put it in your configuration.
+- ![]({{file name='icon-eye.png'}} ?w=25) The eye icon toggles the default visibility of the column. If you make it optional, it won't appear by default but can be made visible by users in Web UI. When made visible, it will be placed exactly where you put it in your configuration.
 
-- ![]({{file name='icon-trash.png'}} ?w=22,border=true) The trash icon deletes the column.
+- ![]({{file name='icon-trash.png'}} ?w=25) The trash icon deletes the column.
 
 When you are finished, you can save your work using the usual save button on the top right side of the screen.
 

@@ -19,7 +19,7 @@ labels:
     - nuxeo-ui-elements
     - extension
     - layouts
-    - content-review-lts2017
+    - lts2017-ok
 tree_item_index: 400
 
 ---
