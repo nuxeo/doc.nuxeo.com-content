@@ -23,8 +23,6 @@ tree_item_index: 1200
 In this tutorial you will learn how to create and reuse custom elements in Studio Designer.
 {{! /excerpt}}
 
-{{{multiexcerpt 'Designer-restricted-access-note' page='generic-multi-excerpts'}}}
-
 ## Requirements
 
 - A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Studio Modeler
