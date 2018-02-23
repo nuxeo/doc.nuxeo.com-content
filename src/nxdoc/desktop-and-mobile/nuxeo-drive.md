@@ -25,11 +25,6 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Drive
 history:
     -
-        author: Mickaël Schoentgen
-        date: '2018-02-23 10:24'
-        message: 'Remove duplicate Web-UI section, update sync icon and delete conflicts duplicate option'
-        version: '143'
-    -
         author: Solen Guitter
         date: '2016-09-26 12:53'
         message: se tab
