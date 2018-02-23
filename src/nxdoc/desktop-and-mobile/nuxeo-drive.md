@@ -25,6 +25,11 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Drive
 history:
     -
+        author: Mickaël Schoentgen
+        date: '2018-02-23 10:24'
+        message: 'Remove duplicate Web-UI section, update sync icon and delete conflicts duplicate option'
+        version: '143'
+    -
         author: Solen Guitter
         date: '2016-09-26 12:53'
         message: se tab
@@ -816,7 +821,7 @@ Starting from Nuxeo Platform 6.0, you can synchronize spaces on which you have [
 #### Web UI
 
 To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive_unsynced-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
-The icon becomes orange ![]({{file name='drive_synced_under_root-webui.png' page='nuxeo-drive'}} ?w=20). Documents inside the synchronized space have a Drive local edit icon ![]({{file name='drive_edit-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
+The icon becomes ![]({{file name='drive_synced_under_root-webui.png' page='nuxeo-drive'}} ?w=20). Documents inside the synchronized space have a Drive local edit icon ![]({{file name='drive_edit-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
 
 {{{multiexcerpt 'drive-content-sync'}}}
 
@@ -836,15 +841,6 @@ On your Home Nuxeo Drive tab, the space is displayed in the "Synchronization roo
 {{! /multiexcerpt}}
 
 ![]({{file name='drive-newtab.png' page='/nxdoc/nuxeo-drive'}} ?w=650,border=true)
-
-#### Web UI
-
-To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive_unsynced-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
-The icon becomes pink ![]({{file name='drive_synced_under_root-webui.png' page='nuxeo-drive'}} ?w=20). Documents inside the synchronized space have a Drive local edit icon ![]({{file name='drive_edit-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
-
-{{{multiexcerpt 'drive-content-sync'}}}
-
-![]({{file name='drive-newtab-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=650,border=true)
 
 
 ### Suspending Synchronization
@@ -944,7 +940,6 @@ Clicking on the conflict message shows you the details and how to resolve the co
 
 *   **Use local**: The document in your Nuxeo Drive folder overrides the document on the server.
 *   **Use remote**: The document on the server is downloaded in your Nuxeo Drive folder and overrides your local version.
-*   **Duplicate files**: A new document is automatically created for the offline edited document. Its title is suffixed with `__1`: "my document__1.odt" for instance. Two documents are now available in the Nuxeo Platform and in the local Nuxeo Drive folder.
 
 ![]({{file name='drive-resolve-conflicts.png' page='/nxdoc/nuxeo-drive'}} ?w=350,border=true)
 
