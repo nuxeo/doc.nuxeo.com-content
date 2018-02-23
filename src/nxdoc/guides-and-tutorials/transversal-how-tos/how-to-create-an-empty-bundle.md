@@ -354,7 +354,7 @@ history:
 ---
 {{#> callout type='info' }}
 
-This tutorial remains very interesting as it explains many basics of a Nuxeo module and is IDE agnostic. Yet the common way of initialising a plugin project for Nuxeo Platform is now to use [Nuxeo IDE]({{page space='idedoc' page='documentation-center-for-nuxeo-platform-ides'}}) which provides many wizards.
+This tutorial remains very interesting as it explains many basics of a Nuxeo module and is IDE agnostic. Yet the common way of initialising a plugin project for Nuxeo Platform is now to use [Nuxeo CLI]({{page version='' space='nxdoc' page='nuxeo-cli'}}).
 
 {{/callout}}
 
