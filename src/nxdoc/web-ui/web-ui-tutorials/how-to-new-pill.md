@@ -26,9 +26,8 @@ tree_item_index: 1400
 In this tutorial you will learn how to add a new pill to your custom document type. This pill will help you to find other contracts created for the same contract owner. To do so, we'll be using a custom page provider linked to the Contract document type.
 
 ## Prerequisites
-- A [Contract document type]({{page version='810' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Modeler
-- Web UI addon installed on your instance
-- View Designer enabled on your Studio project
+- A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Nuxeo Modeler
+- Make sure that the [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
 
 Once you are all set, you can navigate to Modeler to start creating your search.
 
@@ -39,7 +38,7 @@ Once you are all set, you can navigate to Modeler to start creating your search.
    You should end up with something like this:
 
    ```
-   ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:isTrashed = 0 AND ecm:primaryType='Contract'
+   ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND ecm:primaryType='Contract'
    ```
 
 Now we will add aggregates to customize the search.
