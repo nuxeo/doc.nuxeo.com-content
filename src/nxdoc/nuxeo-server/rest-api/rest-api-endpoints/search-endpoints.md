@@ -445,7 +445,7 @@ Here are different use cases for defining page providers and making it possible 
 <coreQueryPageProvider name="latest_docs">
   <pattern>
     SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation'
-    AND ecm:isCheckedInVersion = 0 AND ecm:isTrashed = 0
+    AND ecm:isVersion = 0 AND ecm:isTrashed = 0
   </pattern>
   <sort column="dc:modified" ascending="false" />
   <pageSize>50</pageSize>
@@ -468,7 +468,7 @@ GET http://NUXEO_SERVER/nuxeo/api/v1/search/pp/latest_docs/execute
   <pattern>
     SELECT * FROM Document WHERE ecm:parentId = ? AND ecm:isProxy = 0
     AND ecm:mixinType = 'Folderish' AND ecm:mixinType != 'HiddenInNavigation'
-    AND ecm:isCheckedInVersion = 0 AND ecm:isTrashed = 0
+    AND ecm:isVersion = 0 AND ecm:isTrashed = 0
   </pattern>
   <sort column="dc:title" ascending="true" />
   <pageSize>50</pageSize>
@@ -544,7 +544,7 @@ Assuming a document type `NamedParamDoc` and the associated schema prefixed `np`
     <predicate parameter="dc:title" operator="=">
       <field name="np:title" />
     </predicate>
-    <predicate parameter="ecm:isCheckedInVersion" operator="=">
+    <predicate parameter="ecm:isVersion" operator="=">
       <field xpath="np:isCheckedIn" />
     </predicate>
   </whereClause>
