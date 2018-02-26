@@ -137,7 +137,7 @@ When they are published, `News` must be sorted by their publishing date. Conside
 To display the published news, we will use a "content view" on a front tab at workspace level. It means that the list of "published news" will be the result of a query. This query looks like "_select all news which are inside this workspace and which are published, ordered by their publishing date_", which can be translated by:
 
 ```
-ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState = 'approved' AND ecm:primaryType ='News' AND ecm:path STARTSWITH ?
+ecm:isVersion = 0 AND ecm:currentLifeCycleState = 'approved' AND ecm:primaryType ='News' AND ecm:path STARTSWITH ?
 ```
 
 where `?` will be replaced by the dynamical expression `#{currentDocument.path}`.

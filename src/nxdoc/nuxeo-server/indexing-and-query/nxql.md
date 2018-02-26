@@ -646,7 +646,9 @@ The following properties are not legal as document property names, but are allow
 
 **ecm:isProxy**: `1` for proxies and `0` for non-proxies (`DocumentModel.isProxy()`). This can only be compared to `1` or `0`.
 
-**ecm:isVersion** or **ecm:isCheckedInVersion**: `1` for versions and `0` for non-version (`DocumentModel.isVersion()`). This can only be compared to `1` or `0`. (The name **ecm:isVersion** is available since Nuxeo 5.7.3)
+**ecm:isVersion**: `1` for versions and `0` for non-version (`DocumentModel.isVersion()`). This can only be compared to `1` or `0`.
+
+**ecm:isCheckedInVersion**: deprecated name for **ecm:isVersion**.
 
 **ecm:versionLabel**: the version label for versions (`DocumentModel.getVersionLabel()` only for a version), `NULL` if it's not a version.
 
@@ -722,8 +724,8 @@ SELECT * FROM Document WHERE dc:created >= TIMESTAMP '2007-03-15 00:00:00'
 SELECT * FROM Document WHERE dc:created >= DATE '2007-02-15' AND dc:created <= DATE '2007-03-15'
 SELECT * FROM Document WHERE my:boolean = 1
 SELECT * FROM Document WHERE ecm:isProxy = 1
-SELECT * FROM Document WHERE ecm:isCheckedInVersion = 1
-SELECT * FROM Document WHERE ecm:isProxy = 0 AND ecm:isCheckedInVersion = 0
+SELECT * FROM Document WHERE ecm:isVersion = 1
+SELECT * FROM Document WHERE ecm:isProxy = 0 AND ecm:isVersion = 0
 SELECT * FROM Document WHERE ecm:uuid = 'c5904f77-299a-411e-8477-81d3102a81f9'
 SELECT * FROM Document WHERE ecm:name = 'foo'
 SELECT * FROM Document WHERE ecm:parentId = '5442fff5-06f1-47c9-ac59-1e10ef8e985b'
@@ -803,7 +805,7 @@ Since Nuxeo 5.7.3 you can match the "checked in" state of a document:
 Since Nuxeo 5.7.3 you can use additional version-related properties:
 
 ```sql
-SELECT * FROM Document WHERE ecm:isVersion = 1                        -- new name for ecm:isCheckedInVersion
+SELECT * FROM Document WHERE ecm:isVersion = 1                        
 SELECT * FROM Document WHERE ecm:isLatestVersion = 1
 SELECT * FROM Document WHERE ecm:isLatestMajorVersion = 1
 SELECT * FROM Document WHERE ecm:versionCreated >= TIMESTAMP '2007-03-15 00:00:00'

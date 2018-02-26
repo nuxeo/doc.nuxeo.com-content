@@ -136,7 +136,7 @@ There is a `LIMIT` in the queries because the Page Provider for navigation uses 
 ```sql
 SELECT * FROM Document
 WHERE ecm:parentId = ? AND
-      ecm:isCheckedInVersion = 0 AND
+      ecm:isVersion = 0 AND
       ecm:mixinType != 'HiddenInNavigation' AND
       ecm:currentLifeCycleState != 'deleted'
 -- defaultSortColumn=dc:title

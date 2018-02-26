@@ -31,7 +31,7 @@ where `myQuery` is a variable containing the query to launch.
 SELECT * FROM Document
 	WHERE ecm:mixinType != 'HiddenInNavigation'
 	AND ecm:isProxy = 0
-	AND ecm:isCheckedInVersion = 0
+	AND ecm:isVersion = 0
 	AND ecm:currentLifeCycleState != 'deleted'
 	AND ecm:fulltext LIKE 'MyKeyword'
 ```
@@ -202,7 +202,7 @@ function assertResult(result) {
   }
 
   if (!queryToLaunch.includes('ecm:isVersion') &&
-      !queryToLaunch.includes('ecm:isCheckedInVersion')
+      !queryToLaunch.includes('ecm:isVersion')
     ) {
     console.log("Exclude archived versions from query.");
     return false;
