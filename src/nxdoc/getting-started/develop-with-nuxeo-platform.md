@@ -18,7 +18,7 @@ labels:
     - lts2017-ok
 toc: true
 version_override:
-    LTS 2016: 810/nxdoc/getting-started-with-nuxeo-ide
+    LTS 2016: 810/nxdoc/start-customizing-the-nuxeo-platform
     LTS 2015: 710/nxdoc/getting-started-with-nuxeo-ide
     '6.0': 60/nxdoc/getting-started-with-nuxeo-ide
 tree_item_index: 300
