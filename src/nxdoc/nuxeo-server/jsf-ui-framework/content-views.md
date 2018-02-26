@@ -463,7 +463,7 @@ The Nuxeo Content View framework makes it possible to define such an object, by 
       <property name="coreSession">#{documentManager}</property>
       <pattern>
         SELECT * FROM Document WHERE ecm:parentId = ?
-        AND ecm:isCheckedInVersion = 0
+        AND ecm:isVersion = 0
         AND ecm:mixinType != 'HiddenInNavigation'
         AND ecm:isTrashed = 0
       </pattern>
@@ -602,7 +602,7 @@ Here is an example of such a registration:
         </predicate>
 
         <fixedPart>
-          ecm:parentId = ? AND ecm:isCheckedInVersion = 0 AND ecm:mixinType !=
+          ecm:parentId = ? AND ecm:isVersion = 0 AND ecm:mixinType !=
           'HiddenInNavigation' AND ecm:isTrashed = 0
         </fixedPart>
 

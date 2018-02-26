@@ -339,7 +339,7 @@ SELECT * FROM Document WHERE
 dc:contributors = ?                          -- simple match on a multi-valued field
 AND ecm:mixinType != 'Folderish'             -- use facet to remove all folderish documents
 AND ecm:mixinType != 'HiddenInNavigation'    -- use facet to remove all documents that should be hidden
-AND ecm:isCheckedInVersion = 0               -- only get checked-out documents
+AND ecm:isVersion = 0               -- only get checked-out documents
 AND ecm:isProxy = 0                          -- don't return proxies
 AND ecm:isTrashed = 0                        -- don't return documents that are in the trash
 ```
