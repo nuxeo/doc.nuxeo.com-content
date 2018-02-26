@@ -39,7 +39,7 @@ history:
         version: '1'
 
 ---
-## How to Tag Your Studio Project&nbsp;
+## How to Tag Your Studio Project
 
 {{! multiexcerpt name='tag'}}
 
@@ -61,13 +61,15 @@ Once you have created a new tag, it will be available from the tags tab on the [
 
 &nbsp;
 
-## How to Release Your Studio Project&nbsp;
+## How to Release Your Studio Project
 
 {{! multiexcerpt name='release'}}
 
 A release is considered as a tested and validated version of your project. Once created, you will be able to use this stable version in production.
 
 {{! /multiexcerpt}}
+
+### From the Studio Modeler
 
 From the Branch Management page:
 
@@ -77,6 +79,64 @@ From the Branch Management page:
     ![]({{file name='create-release.png' page='branch-management'}} ?w=350,border=true)
     All the fields will be pre-filled but you can modify the released version and prepare your next version by checking the Next version box. You will be able to choose the type of your release or to create a custom one with a qualifier.&nbsp;
 
-Once your release is created, it will be available in your instance, in **Update Center**&nbsp;>&nbsp; **Nuxeo Studio.** The released set of corrections is displayed in the&nbsp; **Production mode**&nbsp;section. You can now install like you would&nbsp;[install a nuxeo package]({{page space='nxdoc' page='installing-a-new-package-on-your-instance'}}).&nbsp;
+Once your release is created, it will be available in your instance, in **Update Center**&nbsp;>&nbsp; **Nuxeo Studio.** The release is displayed in the&nbsp; **Production mode**&nbsp;section. You can now install like you would&nbsp;[install any other nuxeo package]({{page space='nxdoc' page='installing-a-new-package-on-your-instance'}}).&nbsp;
 
 ![]({{file name='production_mode_1.0.1.png' page='how-to-implement-features-using-branches'}} ?w=650,border=true)
+
+### With the REST API
+
+To create a release you need:
+
+1.  Your project identifier
+2.  Credentials with write access to the project
+3.  The revision on with the release will be created. This can be master or a feature branch, but not a user branch
+4.  Either the name of the release that will be created, or the type of release you want to create (see below).
+
+{{! multiexcerpt name='release'}}
+
+Versions in Studio must have the following format: `M.m.p[-q]` where:
+
+* M is the _major_ number. It should be incremented when new features are added and APIs were broken
+* m is the _minor_ number. It should be incremented when new features are added and no API was broken
+* p is the _patch_ number. It should be incremented when the release contains only bug fixes
+* q is the _qualifier_ string. It qualifies the release, eg: beta, rc1. Must contain only letters, numbers, '_', '-' or '.'
+
+For automation purposes it might be preferable to ask studio to choose the next version type: `MAJOR`, `MINOR` or `PATCH` instead of specifying a version name. Studio will look for the latest release created in the history of the revision commit and try to release the next version as asked.
+
+{{! /multiexcerpt}}
+
+If the version name specified (or computed by studio) already exists, then the release will not be allowed and will fail.
+
+```
+Request:
+
+POST https://connect.nuxeo.com/nuxeo/site/studio/v2/project/{project_id}/releases
+Authorization: Basic base64({username}:{password})
+Accept: application/json
+Content-Type: application/json
+
+{
+    "revision": "{branch_name}",
+    "versionName": "(M.m.p-q|MAJOR|MINOR|PATCH)"
+}
+
+Response:
+
+Content-Type: application/json
+
+{
+    "version": "M.m.p-q",
+    "bundleSymbolicName": "studio.extensions.{project_id}",
+    "mavenCoordinates": "{project_group_id}:{project_id}:M.m.p-q"
+}
+```
+
+**Example** creating a minor release on master as John Doe on my-project with curl:
+
+```bash
+curl -X POST \
+     -H 'Content-Type: application/json' \
+     -d '{ "revision": "master", "versionName": "MINOR" }' \
+     -u 'jdoe:mypassword' \
+     'https://connect.nuxeo.com/nuxeo/site/studio/v2/project/my-project/releases'
+```
