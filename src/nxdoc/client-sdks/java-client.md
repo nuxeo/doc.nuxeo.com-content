@@ -169,7 +169,7 @@ nuxeoClient = nuxeoClient.enableDefaultCache();
 
 ```java
 // To logout (shutdown the client, headers etc...)
-nuxeoClient = nuxeoClient.logout();
+nuxeoClient.logout();
 ```
 
 #### APIs
