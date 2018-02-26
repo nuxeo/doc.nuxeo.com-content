@@ -127,12 +127,17 @@ Nuxeo is shipped with an embedded Tomcat server.
 <tbody>
 <tr>
 <th colspan="1">Nuxeo Platform Version:</th>
+<th>FT 10.1</th>
 <th colspan="1">LTS 2017</th>
 <th colspan="1">LTS 2016</th>
 <th colspan="1">LTS 2015</th>
 </tr>
 <tr>
 <th colspan="1">Redis</th>
+<td colspan="1">2.8.x <br />
+3.0.x <br />
+3.2.x <br />
+4.0.x</td>
 <td colspan="1">2.8.x <br />
 3.0.x <br />
 3.2.x <br />
@@ -161,11 +166,15 @@ More information can be found on the [Nuxeo and Redis]({{page page='nuxeo-and-re
 <tbody>
 <tr>
 <th colspan="1">Nuxeo Platform Version:</th>
+<th>FT 10.1</th>
 <th colspan="1">LTS 2017</th>
 <th colspan="1">LTS 2016</th>
 <th colspan="1">LTS 2015</th>
 </tr>
 <tr><th colspan="1">Elasticsearch</th>
+<td colspan="1">
+Library: 5.6.3<br />
+Cluster: 5.6.x</td>
 <td colspan="1">
 Library: 5.6.3<br />
 Cluster: 5.6.x</td>
