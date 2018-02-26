@@ -75,7 +75,7 @@ For this section, it is recommended to take a look at the how-tos for a step-by-
 
 1.  Create a new content view called `NewsTab`.
 2.  Give it the following query filter:
-    `ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState = 'approved' AND ecm:primaryType = 'News' AND ecm:path STARTSWITH ?`
+    `ecm:isVersion = 0 AND ecm:currentLifeCycleState = 'approved' AND ecm:primaryType = 'News' AND ecm:path STARTSWITH ?`
     and add the query parameter: `#{currentDocument.path`}
 3.  In the **Results** tab, configure a table with 1 column and 2 two rows. First row is for the title (`dc:title`, with a text widget), second row is for the content (`news:body`, with an HTML widget).
 

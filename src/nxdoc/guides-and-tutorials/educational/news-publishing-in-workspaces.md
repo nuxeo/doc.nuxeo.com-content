@@ -142,8 +142,8 @@ Let's translate this natural language query in a NXQL one (query language in Nux
 *   "_which are published_", will be translated here as "whose state is 'approved'". In NXQL, it gives: `ecm:currentLifeCycleState='approved'`
 *   "_ordered by their publishing date_": the publishing date is here the date when the news' state was changed to 'approved'. This date will be stored in the field `dc:valid`. However, this criteria will not be in our query filter, but it will be configured in the Results configuration.
 
-In the end, our query filter is "`ecm:currentLifeCycleState = 'approved' AND ecm:primaryType ='News' AND ecm:path STARTSWITH ?`" where "?" will be replaced by the dynamical expression "`#{currentDocument.path`}". We will add the following predicate "`ecm:isCheckedInVersion = 0`" so as to be sure we won't select previous versions of a news but only the current one. The very final NXQL expression is then:
-"`ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState = 'approved' AND ecm:primaryType ='News' AND ecm:path STARTSWITH ?`".
+In the end, our query filter is "`ecm:currentLifeCycleState = 'approved' AND ecm:primaryType ='News' AND ecm:path STARTSWITH ?`" where "?" will be replaced by the dynamical expression "`#{currentDocument.path`}". We will add the following predicate "`ecm:isVersion = 0`" so as to be sure we won't select previous versions of a news but only the current one. The very final NXQL expression is then:
+"`ecm:isVersion = 0 AND ecm:currentLifeCycleState = 'approved' AND ecm:primaryType ='News' AND ecm:path STARTSWITH ?`".
 
 Content views configuration allows to define how the result is displayed. The main idea here is to define what information you display for one line of the result. Here we will present the title and the body of the news, one on top of the other, and we will configure the pagination level at 3.
 Note that to be able to declare the content view on the Workspace document type, we will have to re-declare the "Workspace" type in Studio.

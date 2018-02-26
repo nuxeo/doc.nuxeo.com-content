@@ -125,7 +125,7 @@ There is LIMIT because Page Provider for navigation use paging by default. If yo
 ```sql
 SELECT * FROM Document
 WHERE ecm:parentId = ? AND
-      ecm:isCheckedInVersion = 0 AND
+      ecm:isVersion = 0 AND
       ecm:mixinType != 'HiddenInNavigation' AND
       ecm:currentLifeCycleState != 'deleted'
 -- defaultSortColumn=dc:title

@@ -84,7 +84,7 @@ You can define your own `LazyDocumentsList` and register them to the `DocumentPr
 ```
 
 // register a query
-String query = "select * from Document where ecm:mixinType != \"HiddenInNavigation\" AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != \"deleted\" order by dc:modified DESC";
+String query = "select * from Document where ecm:mixinType != \"HiddenInNavigation\" AND ecm:isVersion = 0 AND ecm:currentLifeCycleState != \"deleted\" order by dc:modified DESC";
 docProvider.registerNamedProvider(getNuxeoSession(),"Simple select", query , 10, false, false, null);
 
 // register an operation

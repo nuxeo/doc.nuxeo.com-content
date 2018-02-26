@@ -282,7 +282,7 @@ We want the documentation container to display the list of its children. This is
 1.  Edit the query filter to add a parameter `ecm:parentId= ?`. You should get the filter below:
 
     ```
-    ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted' and ecm:parentId= ?
+    ecm:mixinType != 'HiddenInNavigation' AND ecm:isVersion = 0 AND ecm:currentLifeCycleState != 'deleted' and ecm:parentId= ?
     ```
 
 2.  In the Query parameter, click on **Add** and type the parameter below. It will define what to use as the value for `ecm:parentId= ?` defined above.

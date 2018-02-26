@@ -329,18 +329,18 @@ You can define the query that will be executed to filter the content repository 
 
 When configuring a content view in Studio, a default query filter is pre-filled in, that you can complete with more conditions (or even totally modify if you understand what you are doing). This default query filter is:
 
-<pre>ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted'
+<pre>ecm:mixinType != 'HiddenInNavigation' AND ecm:isVersion = 0 AND ecm:currentLifeCycleState != 'deleted'
 </pre>
 
 This filter:
 
 *   excludes from search results the documents supposed to be hidden in navigation (`ecm:mixinType != 'HiddenInNavigation'`),
 *   and excludes the documents whose lifecycle state is "deleted"(`ecm:currentLifeCycleState != 'deleted'`),
-*   and sets that only the current version of the document should be displayed (`ecm:isCheckedInVersion = 0`) so as to avoid displaying all versions of a same document in the search result.
+*   and sets that only the current version of the document should be displayed (`ecm:isVersion = 0`) so as to avoid displaying all versions of a same document in the search result.
 
 You can add as many filter criteria as you need. If the criterion is fixed, such as a specific lifecycle state or author, you just need to add your filter criterion at the end of the list pre-filled in list. For instance, you could add a criterion saying that you want to exclude from the results the documents created by Administrator:
 
-<pre>ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND dc:creator != 'Administrator'
+<pre>ecm:mixinType != 'HiddenInNavigation' AND ecm:isVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND dc:creator != 'Administrator'
 </pre>
 
 If the criterion is not a fixed value but depends on the context of the document, you should put "?" as a value and add a query parameter. For instance, if you want to display only the document created by the current user:

@@ -219,7 +219,7 @@ Here is the whole contribution of the content view used for the default faceted 
       <whereClause docType="FacetedSearchDefault">
         <fixedPart>
           ecm:mixinType != 'HiddenInNavigation' AND
-          ecm:mixinType != 'HiddenInFacetedSearch' AND ecm:isCheckedInVersion = 0
+          ecm:mixinType != 'HiddenInFacetedSearch' AND ecm:isVersion = 0
           AND ecm:currentLifeCycleState != 'deleted'
         </fixedPart>
         <predicate parameter="ecm:fulltext" operator="FULLTEXT">
