@@ -343,7 +343,7 @@ The natural way of expressing a query in the Nuxeo Platform is with [NXQL]({{pag
 `dc:contributors = ?` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;_&nbsp;&nbsp; -- simple match on a multi-valued field_
 `AND ecm:mixinType != 'Folderish'` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; _-- use facet to remove all folderish documents_
 `AND ecm:mixinType != 'HiddenInNavigation'` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _-- use facet to remove all documents that should be hidden_
-`AND ecm:isCheckedInVersion = 0` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _-- only get checked-out documents_
+`AND ecm:isVersion = 0` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _-- only get checked-out documents_
 `AND ecm:isProxy = 0 AND` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _-- don't return proxies_
 `ecm:currentLifeCycleState != 'deleted'` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; _-- don't return documents that are in the trash_
 
