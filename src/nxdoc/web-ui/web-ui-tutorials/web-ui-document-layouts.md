@@ -33,12 +33,29 @@ A given document type can have multiple layouts: a `create` and `edit` layout to
 
 In this tutorial you will learn how to create a document type layout with Studio Designer from a document type created in Studio Modeler and how to add a icon to it.
 
-### Prerequisites
+## Prerequisites
 
-- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Studio Modeler
-- The Web UI addon installed on your instance
+- Make sure that the [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
 
-Once you are all set, you can navigate to the Studio Designer to customize your layouts.
+## Create a Contract Document Type
+
+Here we want to create a custom document type named "Contract" that will hold specific metadata related to the notion of a contract: contract owner, starting date, policy.
+
+
+1.  In Studio Modeler, under **Configuration**, click on the **Content Model** section, then **Document Types**. Click on the **New** button.
+2.  Fill in the creation form as follows and click on **Next**:
+    - **ID**: Contract
+    - **Extends**: File
+    - **Label**: Contract
+    - **Description**: Contract document type for internal use.
+
+    Your document type is created.
+3.  Fill in the [**Definition** tab]({{page space='studio' page='documents'}}):
+![]({{file name='definition_contract.png' page='/nxdoc/web-ui-document-layout'}} ?w=600,border=true)
+4.  Fill in the [**Schema** tab]({{page space='studio' page='schemas'}}) with the following metadata:
+![]({{file name='schema_contract.png' page='/nxdoc/web-ui-document-layout'}} ?w=600,border=true)
+
+Once you are all set, you can navigate to the Studio Designer to customize your layouts, click on **Configure layouts in Designer** button at the top of the page. 
 
 ### Create a New Layout
 
