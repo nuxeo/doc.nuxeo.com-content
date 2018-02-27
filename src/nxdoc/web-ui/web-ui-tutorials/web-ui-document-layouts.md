@@ -55,9 +55,9 @@ Here we want to create a custom document type named "Contract" that will hold sp
 4.  Fill in the [**Schema** tab]({{page space='studio' page='schemas'}}) with the following metadata:
 ![]({{file name='schema_contract.png' page='/nxdoc/web-ui-document-layout'}} ?w=600,border=true)
 
-Once you are all set, you can navigate to the Studio Designer to customize your layouts, click on **Configure layouts in Designer** button at the top of the page. 
+Once you are all set, you can navigate to the Studio Designer to customize your layouts, click on **Configure layouts in Designer** button at the top of the page.
 
-### Create a New Layout
+## Create a New Layout
 
 1. Go on the **Layouts** tab on the left menu.
 1. Under **Local Types** you will find your `Contract` document type.
@@ -95,7 +95,7 @@ To do so:
 
   You now have a document type ready to be used on your Web UI interface, the last thing that you need is an icon to easily find your document type in your instance.
 
-### Create a Document Type Icon
+## Create a Document Type Icon
 
 To do so, you need to go on the **Resources** tab.
 
