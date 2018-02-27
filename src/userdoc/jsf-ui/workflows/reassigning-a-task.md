@@ -2,7 +2,7 @@
 title: Reassigning a Task
 review:
     comment: ''
-    date: '2017-01-20'
+    date: '2018-02-20'
     status: ok
 labels:
     - lts2016-ok
@@ -22,22 +22,22 @@ confluence:
     source_link: /display/USERDOC/Reassigning+a+Task
 tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 14:20'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-03-10 09:27'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-02 18:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-10 16:41'
         message: ''

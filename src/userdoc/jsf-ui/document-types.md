@@ -2,7 +2,7 @@
 title: Document Types
 review:
     comment: ''
-    date: '2017-01-26'
+    date: '2018-02-26'
     status: ok
 labels:
     - lifecyle

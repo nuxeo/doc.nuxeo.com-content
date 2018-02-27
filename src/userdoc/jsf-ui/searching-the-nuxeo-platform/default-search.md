@@ -2,7 +2,7 @@
 title: Default Search
 review:
     comment: ''
-    date: '2017-01-26'
+    date: '2018-02-26'
     status: ok
 labels:
     - search
@@ -21,132 +21,132 @@ confluence:
     source_link: /display/USERDOC/Default+Search
 tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-27 14:29'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-26 09:35'
         message: ''
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-20 14:22'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-20 12:04'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 16:57'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-19 16:44'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-06 11:18'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-06 11:17'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-20 14:52'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-29 15:58'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-13 16:47'
         message: Added screenshots
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-30 22:48'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-17 18:18'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 16:39'
         message: Updated icons
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 16:14'
         message: Removed related topics from TOC
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:24'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:24'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:24'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:24'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:24'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:23'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:23'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 19:06'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 18:57'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 18:54'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-21 18:54'
         message: ''
