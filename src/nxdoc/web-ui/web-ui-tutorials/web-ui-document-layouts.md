@@ -33,11 +33,11 @@ A given document type can have multiple layouts: a `create` and `edit` layout to
 
 In this tutorial you will learn how to create a document type layout with Studio Designer from a document type created in Studio Modeler and how to add a icon to it.
 
-### Prerequisites
+## Prerequisites
 
 - Make sure that the [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
 
-### Create a Contract Document Type
+## Create a Contract Document Type
 
 Here we want to create a custom document type named "Contract" that will hold specific metadata related to the notion of a contract: contract owner, starting date, policy.
 
@@ -51,35 +51,13 @@ Here we want to create a custom document type named "Contract" that will hold sp
 
     Your document type is created.
 3.  Fill in the [**Definition** tab]({{page space='studio' page='documents'}}):
-![]({{file name='definition_contract.png' page='getting-started-with-nuxeo-studio'}} ?w=600,h=365,border=true)
+![]({{file name='definition_contract.png'}} ?w=600,border=true)
 4.  Fill in the [**Schema** tab]({{page space='studio' page='schemas'}}) with the following metadata:
-![]({{file name='schema_contract.png' page='getting-started-with-nuxeo-studio'}} ?w=600,border=true)
-
-Now we'll customize the form that's used to **create** the document. On the **Creation Layout** tab:
-
-5.  Click on the ![]({{file name='delete.gif' space='studio' page='studio-icons-index'}}) icon to remove the WARNING and Description widgets.
-6.  Drag and drop the fields **Owner**, **Start** and **Policy** from the schema **Contract** to the grid.
-7.  Click on&nbsp;![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) if you wish to edit a label, then click on **Save** in the popup when you're done.
-
-![]({{file name='creation_layout_contract.png' page='getting-started-with-nuxeo-studio'}} ?w=580,border=true)
-*Creation Layout Tab*
-
-On the **Edit Layout** tab, we can customize the form used to update the metadata of the document:
-
-8.  Click on the button **Import Layout** and select **Import 'create' layout**.
-9.  Click on the button **Add Row**.
-10. Drag and drop the field **Reminder** from the schema **Contract** to the grid.
-11. Click on&nbsp;![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) if you want to edit the widget label, then click on **Save** in the popup when you're done.
-
-![]({{file name='edit_layout_contract.png' page='getting-started-with-nuxeo-studio'}} ?w=600,border=true)
-*Edit Layout Tab*
-
-12. On the View Layout click on the button **Import Layout** and select **Import 'edit' layout**.
-13. Click on **Save**.
+![]({{file name='schema_contract.png'}} ?w=600,border=true)
 
 Once you are all set, you can navigate to the Studio Designer to configure your layouts.
 
-### Create a New Layout
+## Create a New Layout
 
 1. Go on the **Layouts** tab on the left menu.
 1. Under **Local Types** you will find your `Contract` document type.
@@ -117,7 +95,7 @@ To do so:
 
   You now have a document type ready to be used on your Web UI interface, the last thing that you need is an icon to easily find your document type in your instance.
 
-### Create an Icon
+## Create an Icon
 
 To do so, you need to go on the **Resources** tab.
 
