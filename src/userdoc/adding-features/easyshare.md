@@ -20,102 +20,102 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/G426AQ'
     source_link: /display/USERDOC710/EasyShare
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 17:17'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 16:29'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 16:27'
         message: 'Easy Share folder now use the collection system '
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2015-11-26 10:24'
         message: 'NXDOC-658: Marketplace packages are now called Nuxeo Packages'
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-09-24 09:04'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-18 13:53'
         message: Formatting
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-03 17:56'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-30 18:00'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-30 17:59'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-23 10:40'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-23 10:32'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-11 15:29'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-06-10 18:02'
         message: ''
         version: '8'
-    - 
+    -
         author: Julien Carsique
         date: '2014-05-22 16:06'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-05-22 12:18'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2014-05-06 14:26'
         message: ''
         version: '5'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-05-06 13:31'
         message: ''
         version: '4'
-    - 
+    -
         author: Mike Obrebski
         date: '2014-03-06 21:55'
         message: ''
         version: '3'
-    - 
+    -
         author: Mike Obrebski
         date: '2014-03-06 18:15'
         message: ''
         version: '2'
-    - 
+    -
         author: Mike Obrebski
         date: '2014-03-06 17:40'
         message: ''
@@ -125,12 +125,6 @@ history:
 {{! excerpt}}The&nbsp; [EasyShare package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare) is an add-on for the Nuxeo platform to enable sharing files from the repository with external users not requiring a login.{{! /excerpt}}
 
 It enables you to create Easy Share folders in which you can either create document or make them available from the folder for public sharing. Anyone having the public URL to the Easy Share folder can then download its content without having to log in to the Nuxeo Platform.
-
-{{#> callout type='info' }}
-
-The EasyShare plugin is not part of the supported list of Nuxeo Packages. It's been developed for internal use and has been made public for the interest of the Nuxeo community. The reason why it is not supported as is, is that it's highly probable that we add the "share via link" feature to the Collection module. Yet you can safely use it for your own sharing use cases.
-
-{{/callout}}
 
 ## Creating an Easy Share Folder
 
