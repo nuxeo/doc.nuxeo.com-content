@@ -363,6 +363,10 @@ For example, sometimes you need to get the children, parents or workflow tasks o
         <td>The tags on the current document</td>
       </tr>
       <tr>
+        <td>`firstAccessibleAncestor`</td>
+        <td>The closest document's ancestor which is used to find what safe document to redirect to when deleting some.</td>
+      </tr>
+      <tr>
         <td>`runningWorkflows`</td>
         <td>Workflow instances running on the current document</td>
       </tr>
@@ -840,6 +844,56 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
       "label": "My Tag",
       "weight": 0
     }]
+  },
+}
+```
+
+{{/panel}}
+
+### First Accessible Ancestor
+
+{{#> panel type='code' heading='Call Example'}}
+
+```
+Request URL:
+http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
+ Request Method: GET
+ Request Headers
+ ...
+ Content-type: application/json+nxentity
+ enrichers.document: firstAccessibleAncestor
+ properties: dublincore
+```
+
+{{/panel}}{{#> panel type='code' heading='JSON Response Example'}}
+
+```
+{
+  "entity-type": "document",
+  "repository": "default",
+  "uid": "4246ca87-c076-4bf4-b62b-0bab9dd21102",
+  "path": "/default-domain/workspaces/Marketing/photo.jpg",
+  "type": "Picture",
+  "state": "project",
+  "parentRef": "036f99ec-a500-4a1e-9d89-e8eb656a0ff7",
+  "isCheckedOut": true,
+  "changeToken": "1426696491000",
+  "title": "photo.jpg",
+  "lastModified": "2015-03-18T16:34:51.00Z",
+  "properties": {
+    "dc:description": "",
+    ...
+  },
+  "facets": [
+    "Versionable",
+    ...
+  ],
+  "contextParameters": {
+    "firstAccessibleAncestor": {
+        "entity-type": "document",
+        "path": "/default-domain/workspaces/Marketing",
+        ...
+    }
   },
 }
 ```
