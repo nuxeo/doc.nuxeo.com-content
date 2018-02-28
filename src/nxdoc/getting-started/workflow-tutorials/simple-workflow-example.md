@@ -157,7 +157,7 @@ The way you process the next step will depend on the UI you chose for your platf
 2. Click on the **Variables** tab.
    Add the **hoo_comment** to the right column.
    ![]({{file name='Simple_Workflow_006_1.png'}} ?w=600,border=true)
-3.  Save you work.
+3.  Save your work.
 4.  Click on the **Designer** button.
    ![]({{file name='link_view_designer.png'}} ?w=300,border=true)
 5.  In the Layout tab, navigate to **Workflows**&nbsp;> **SalesProposalWorkflow** and click on **Technical validation**.
