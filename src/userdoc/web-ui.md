@@ -8,7 +8,7 @@ toc: true
 description: Web UI User Documentation
 tree_item_index: 100
 labels:
-    - content-review-lts2017
+    - lts2017-ok
 
 ---
 {{#> callout type='tip'}}
