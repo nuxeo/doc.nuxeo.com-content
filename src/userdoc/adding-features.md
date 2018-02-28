@@ -19,7 +19,7 @@ confluence:
     shortlink: 74Co
     shortlink_source: 'https://doc.nuxeo.com/x/74Co'
     source_link: /display/USERDOC/Adding+Features
-tree_item_index: 2000
+tree_item_index: 300
 version_override:
     '6.0': 60/userdoc/marketplace-add-ons
     '5.8': 58/userdoc/marketplace-add-ons

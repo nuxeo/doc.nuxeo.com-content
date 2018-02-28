@@ -185,7 +185,7 @@ history:
         message: ''
         version: '1'
 labels:
-    - content-review-lts2017
+    - lts2017-ok
 
 ---
 <div class="row" data-equalizer data-equalize-on="medium">
