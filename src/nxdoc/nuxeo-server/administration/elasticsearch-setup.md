@@ -544,7 +544,7 @@ Where:
 *   `audit.elasticsearch.indexName` is the name of the Elasticsearch index for audit logs.
 *   `seqgen.elasticsearch.indexName` is the name of the Elasticsearch index for the uid sequencer, extensively used for audit logs.
 
-You can find all the available options in the [nuxeo.defaults](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/nuxeo.defaults).
+You can find all the available options in the [nuxeo.defaults](https://github.com/nuxeo/nuxeo/blob/release-8.10/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common-base/nuxeo.defaults).
 
 #### Configuring access to the cluster through Elasticsearch Shield plugin
 
@@ -555,7 +555,7 @@ To inform the Nuxeo Platform that authentication is needed on the cluster, the `
 The Nuxeo Platform has to be associated to a user who is authorized to access the Elasticsearch cluster.
 The credentials are provided with the `elasticsearch.shield.username` and `elasticsearch.shield.password` properties.
 
-Since 8.10-HF09, it is also **mandatory** when using Shield authentication to enable encryption traffic inside your cluster by setting up SSL support. This configuration can be done by setting the node’s keystore path and password with the following properties: `elasticsearch.shield.keystore.path` and `elasticsearch.shield.keystore.password`. (For more information on setting up encryption traffic, see [How to secure communications in your Elasticsearch cluster](https://www.elastic.co/guide/en/shield/current/securing-communications.html)) 
+Since 8.10-HF09, it is also **mandatory** when using Shield authentication to enable encryption traffic inside your cluster by setting up SSL support. This configuration can be done by setting the node’s keystore path and password with the following properties: `elasticsearch.shield.keystore.path` and `elasticsearch.shield.keystore.password`. (For more information on setting up encryption traffic, see [How to secure communications in your Elasticsearch cluster](https://www.elastic.co/guide/en/shield/current/securing-communications.html))
 
 The configuration is done by editing the `nuxeo.conf` file and set these properties:
 
