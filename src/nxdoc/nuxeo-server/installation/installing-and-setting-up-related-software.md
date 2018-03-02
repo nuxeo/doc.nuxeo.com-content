@@ -625,7 +625,7 @@ To generate a package (by default for the latest Ubuntu LTS) issue the following
 
 ```bash
 $ sudo apt-get update
-$ sudo apt-get install docker
+$ sudo apt-get install docker.io
 $ cd /tmp
 $ git clone https://github.com/nuxeo/nuxeo-tools-docker.git
 $ cd nuxeo-tools-docker/ccextractor
