@@ -2,7 +2,7 @@
 title: Branch Management
 review:
     comment: ''
-    date: ''
+    date: '2018-03-02'
     status: ok
 toc: true
 confluence:
@@ -224,7 +224,7 @@ When you click on the name of one of the branches, the list of the commits of th
 
 {{#> callout type='info' }}
 
-The history does not display pending changes that you haven't pushed (this situation can happen when you are in intermediate or advanced mode).
+When using intermediate or advanced commit modes, you need to commit and push your changes before being able to create a tag or a release on this basis.
 
 {{/callout}}
 
@@ -238,17 +238,15 @@ The history does not display pending changes that you haven't pushed (this situa
 
 **Release**:
 
+*   **Current Branch:** Branch from which you are creating the release.
+*   **Commit to Release:** Description of the commit from which the release will be done.
+*   **Latest Release in Branch:** Indicates the last release performed from this branch. Studio will suggest a version number on this basis.
+*   **Release Version:** Select or type the version number that you are going to release.
 *   **Help Version Format:** List of format rules to apply on your releases.
-*   **Help Last releases performed:** List of the last releases you have created.
-*   **Branch:** Name of the branch where you are actually working.
-*   **Commit Released:** Read-only and automatically filled, name of the commit where the release will be done.
-*   **Current Version:** Read-only and automatically filled version number of your branch.
-*   **Released Version:** Type the version that you are going to release.
-*   **Next Version:** The version after the release.
 
 ![]({{file name='create-release.png'}} ?w=350,h=285,border=true)
 
-When a release is performed, the next version can be updated. If you are in advanced mode and your releasing the current branch, a commit to increase the version is staged and you will have to pull it.
+Releases can also be created using a [REST API]({{page page='how-to-tag-or-release-your-nuxeo-studio-project'}}#rest-api).
 
 ## Build Automation
 

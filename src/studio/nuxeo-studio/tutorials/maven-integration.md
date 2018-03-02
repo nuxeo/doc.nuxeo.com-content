@@ -2,7 +2,7 @@
 title: Maven Integration
 review:
     comment: ''
-    date: ''
+    date: '2018-03-02'
     status: ok
 confluence:
     ajs-parent-page-id: '12912677'
@@ -185,15 +185,15 @@ Nuxeo Studio offers a dedicated servlet that provides Maven artifacts for:
 * current snapshot of all common branches of your project
 * current snapshot of all branches of each user's workspace (i.e. the work they are doing on a given branch but haven't yet shared by pushing staged commits).
 
-You can get all available artifact on the following page: [https://connect.nuxeo.com/nuxeo/site/studio/maven/nuxeo-studio/PROJECT_ID](https://connect.nuxeo.com/nuxeo/site/studio/maven/nuxeo-studio/glefevre-SANDBOX/)
+You can get all available artifact on the following page: [https://connect.nuxeo.com/nuxeo/site/studio/maven/nuxeo-studio/PROJECT_ID](https://connect.nuxeo.com/nuxeo/site/studio/maven/nuxeo-studio/PPROJECT_ID/)
 
 You can then easily integrate your Studio configuration to your build process. Of course, all projects exposed through Maven are protected so that only contributors on the project are able to access the project in the Studio Maven repository. Hence you need to declare this "maven repository" on your local Maven settings, with correct credentials.
 
-**This is how to setup the Maven client to be able to access Studio Maven artifacts**
+## Setting up the Maven Client
 
-1.  First you need to tag your project from Studio Client.
-    This will generate a version of your project that can be accessed by Maven.
-2.  Then you need to configure your Maven client to use authentication when accessing the Studio Maven repository. For this, edit (or create if it does not exist) the `~/.m2/settings.xml` file and add the following entry under the settings tag:
+Maven can be setup to add a dependency to a specific release, and to do continuous integration on a branch. In all cases, to be able to access Studio Maven artifacts:
+
+1.  Configure your Maven client to use authentication when accessing the Studio Maven repository. For this, edit (or create if it does not exist) the `~/.m2/settings.xml` file and add the following entry under the settings tag:
 
     ```xml
     <servers>
@@ -208,7 +208,7 @@ You can then easily integrate your Studio configuration to your build process. O
 
     ```
 
-3.  Then in the POM (or a parent POM) where you need to add the dependency to the Studio project you should declare the Studio Maven repository like this:
+2.  Then in the POM (or a parent POM) where you need to add the dependency to the Studio project you should declare the Studio Maven repository like this:
 
     ```xml
     <repositories>
@@ -234,11 +234,28 @@ You can then easily integrate your Studio configuration to your build process. O
     You notice we used the same server ID than in the `settings.xml` file. The repository is located under the same root as Studio client (but using the Maven relative path).
 
     {{/callout}}
-4.  Now you need to declare the dependency in your&nbsp;POM to point to the desired version of your Studio project.
+
+### Setting up Continuous Integration on a Branch
+
+To set up a dependency to the latest snapshot of a Studio branch:
+
+1.  Declare the dependency in your POM to point to the desired branch of your Studio project. This information is available in the **Branch Management** screen, after having selected a branch.
+
+![]({{file name='maven-gav.png'}} ?w=350,border=true)
+
+Project artifact key is presented in the `maven_group:project_id:version` form, available both for the latest changes only available in your own workspace or for the ones that are shared for all users on the branch.
+
+### Adding a Dependency to a Release
+
+To add a Maven dependency on a specific Studio release:
+
+1.  [Create a release]({{page page='how-to-tag-or-release-your-nuxeo-studio-project'}}#release-creation) of your Studio project. This will generate a version of your project that can be accessed by Maven.
+
+2.  Declare the dependency in your POM to point to the desired version of your Studio project.
     The project artifact key will be computed as follow: `maven_group:project_id:version`.
-    *   The&nbsp;`maven_group` defaults to&nbsp;`nuxeo-studio`but can be changed from the **Application Information** view in Studio project. It is recommended to use the pattern _com.mycompany_ for commercial (closed source) projects and _org.mycompany_ for Open Source projects.
-    *   The&nbsp;`project_id`is the ID of you project and is unique between all projects in Studio - you can get you project ID from the **Application Information** view in Studio project - look after **Maven Artifact id** property.
-    *   The&nbsp;`version`is the released version of your project.
+    *   The `maven_group` defaults to `nuxeo-studio` but can be changed from the **Application Information** view in Studio project. It is recommended to use the pattern _com.mycompany_ for commercial (closed source) projects and _org.mycompany_ for Open Source projects.
+    *   The `project_id` is the ID of you project and is unique between all projects in Studio - you can get you project ID from the **Application Information** view in Studio project - look after **Maven Artifact id** property.
+    *   The `version`is the released version of your project.
         Let say you created a release with version number `1.0` and your project ID is `myproject` and you are using the default `nuxeo-studio` group. In that case your Maven dependency will be:
 
         ```xml
@@ -249,6 +266,8 @@ You can then easily integrate your Studio configuration to your build process. O
         </dependency>
 
         ```
+
+## Retrieving Maven Resources
 
 The list of available versions for a given project is visible at:
 ```
