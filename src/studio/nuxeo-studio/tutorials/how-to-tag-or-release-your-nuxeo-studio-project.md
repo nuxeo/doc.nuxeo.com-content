@@ -43,25 +43,23 @@ history:
 
 {{! multiexcerpt name='tag'}}
 
-In order to identify specific state of your work, you may want to tag any given commit. Once created, you will find your tag in the tags list on the&nbsp; [Releases &]({{page page='releases-and-tags'}})[Releases & Tags page]({{file name='tag-release-button.png'}})[ Tags page]({{page page='releases-and-tags'}}), which will allow you to download, revert your working state to that specific tagged state, etc.
+In order to identify specific state of your work, you may want to tag any given commit. Once created, you will find your tag in the tags list on the  [Releases &]({{page page='releases-and-tags'}})[Releases & Tags page]({{file name='tag-release-button.png'}})[ Tags page]({{page page='releases-and-tags'}}), which will allow you to download, revert your working state to that specific tagged state, etc.
 
 {{! /multiexcerpt}}
 
 From the Branch Management page:
 
-1.  Click on the **Tag** button&nbsp;next to the commit that you want to tag.&nbsp;
+1.  Click on the **Tag** button next to the commit that you want to tag.
     ![]({{file name='tag-release-button.png'}} ?w=350,border=true)
 2.  Fill in the pop-up window with a tag name and a description.
-    ![]({{file name='create-tag.png' page='branch-management'}} ?w=350,border=true)&nbsp;
-    The On Commit field is in read-only and&nbsp;automatically filled, it will display the name of the tag where the release is done.
+    ![]({{file name='create-tag.png' page='branch-management'}} ?w=350,border=true)
+    The On Commit field is in read-only and automatically filled, it will display the name of the tag where the release is done.
 3.  Click on **Ok**.
-    Your project is tagged.&nbsp;
+    Your project is tagged.
 
-Once you have created a new tag, it will be available from the tags tab on the [Releases & Tags page]({{page page='releases-and-tags'}}), where you will be available to manage your tags.&nbsp;
+Once you have created a new tag, it will be available from the tags tab on the [Releases & Tags page]({{page page='releases-and-tags'}}), where you will be available to manage your tags.
 
-&nbsp;
-
-## How to Release Your Studio Project
+## {{> anchor 'release-creation'}} How to Release Your Studio Project
 
 {{! multiexcerpt name='release'}}
 
@@ -73,23 +71,21 @@ A release is considered as a tested and validated version of your project. Once 
 
 From the Branch Management page:
 
-1.  Click on the **Release** button next to the commit that you want to release.&nbsp;
+1.  Click on the **Release** button next to the commit that you want to release.
     ![]({{file name='tag-release-button.png'}} ?w=350,border=true)
-2.  Fill in the pop-up window:&nbsp;
+2.  Fill in the pop-up window:
     ![]({{file name='create-release.png' page='branch-management'}} ?w=350,border=true)
-    All the fields will be pre-filled but you can modify the released version and prepare your next version by checking the Next version box. You will be able to choose the type of your release or to create a custom one with a qualifier.&nbsp;
+    All the fields will be pre-filled but you can modify the released version and prepare your next version by checking the Next version box. You will be able to choose the type of your release or to create a custom one with a qualifier.
 
-Once your release is created, it will be available in your instance, in **Update Center**&nbsp;>&nbsp; **Nuxeo Studio.** The release is displayed in the&nbsp; **Production mode**&nbsp;section. You can now install like you would&nbsp;[install any other nuxeo package]({{page space='nxdoc' page='installing-a-new-package-on-your-instance'}}).&nbsp;
+Once your release is created, you can now install like you would [install any other nuxeo package]({{page space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
 
-![]({{file name='production_mode_1.0.1.png' page='how-to-implement-features-using-branches'}} ?w=650,border=true)
-
-### With the REST API
+### {{> anchor 'rest-api'}} With the REST API
 
 To create a release you need:
 
 1.  Your project identifier
 2.  Credentials with write access to the project
-3.  The revision on with the release will be created. This can be master or a feature branch, but not a user branch
+3.  The revision on with the release will be created. This can be master or a feature branch, but not a user workspace branch
 4.  Either the name of the release that will be created, or the type of release you want to create (see below).
 
 {{! multiexcerpt name='release'}}
