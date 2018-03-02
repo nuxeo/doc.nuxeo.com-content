@@ -27,6 +27,11 @@ confluence:
 tree_item_index: 300
 history:
     -
+        author: Pedro Cardoso
+        date: '2018-03-02 12:00'
+        message: Clean links to jar package and samples. 
+        version: '23'
+    -
         author: Solen Guitter
         date: '2016-01-12 09:49'
         message: dd link to atatched sample
@@ -140,11 +145,10 @@ history:
 ---
 In this section we will go deeper into WebEngine model by proposing 5 samples on how to use common WebEngine concepts.
 
-To install the sample modules you need to download the [compiled JAR]({{file name='examples.zip'}}) and copy them to the `$NUXEO_HOME/nxserver/bundles` directory.
+To install the sample modules you need to download the compiled JAR rom our Maven repository:  https://maven.nuxeo.org/nexus/index.html#nexus-search;gav~~nuxeo-webengine-samples*~~~, and copy them to the `$NUXEO_HOME/nxserver/bundles` directory.
 
-To correctly understand the tutorials you need to look into all .java and .ftl files you find in the corresponding sample modules. Each sample is well documented in the corresponding classes using java docs.
+To correctly understand the tutorials you need to look into all .groovy, .xml, and .ftl files you find in the corresponding [sample modules]({{file name='examples.zip'}}).
 
-You should download the binaries and sources (https://maven.nuxeo.org/nexus/index.html#nexus-search;gav~~nuxeo-webengine-samples*~~~) from our Maven repository.
 
 ##### [Tutorial 1]({{page page='hello-world'}}) - Hello World.
 
