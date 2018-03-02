@@ -49,7 +49,7 @@ history:
         version: '1'
 
 ---
-![]({{file name='node-variables-tab.png'}} ?w=500,h=216,border=true)
+![]({{file name='node-variables-tab.png'}} ?w=500,border=true)
 
 **Workflow variables**: you can select the workflow variables that you will need on this node.
 

@@ -69,7 +69,7 @@ history:
         version: '1'
 
 ---
-![]({{file name='workflow-variables-tab.png'}} ?w=500,h=184,border=true)
+![]({{file name='workflow-variables-tab.png'}} ?w=500,border=true)
 
 Variables at workflow level can be used to store information that can be accessed at any time during the workflow, when editing a node properties for example. Those variables will store data that come from user forms or that are computed by automation chains, using from their the `WorkflowVariables[]` object.
 
@@ -82,6 +82,7 @@ Variables at workflow level can be used to store information that can be accesse
 
     *   **Name**: Used to reference the variables later.
     *   **Type**: The type of the value that is going to be stored. This type has an impact on the available widgets in the forms.
+    *   **Edit**: Press this button to decide on [field constraints]({{page space='nxdoc' page='field-constraints-and-validation'}}) to set for this variable.
     *   **Multi-Valued**: Check the box if we need to store multiple values of the same type on this field.
     *   **Default**: The default value of the variable.
 
