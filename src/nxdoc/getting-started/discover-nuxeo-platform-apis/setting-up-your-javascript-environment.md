@@ -2,12 +2,13 @@
 title: Setting up Your JavaScript Environment
 review:
     comment: ''
-    date: '2016-12-20'
+    date: '2018-02-28'
     status: ok
 toc: true
 labels:
     - lts2016-ok
-    - content-review-lts2017
+    - lts2017-ok
+    - notassigned
 confluence:
     ajs-parent-page-id: '29460589'
     ajs-parent-page-title: Getting Started with the Nuxeo Platform
@@ -21,197 +22,197 @@ confluence:
     source_link: /display/NXDOC/Setting+up+Your+JavaScript+Environment
 tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-05 11:46'
         message: ''
         version: '39'
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-03 15:37'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-27 15:54'
         message: ''
         version: '37'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-09-21 19:49'
         message: ''
         version: '36'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-21 12:40'
         message: ''
         version: '35'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-21 09:48'
         message: ''
         version: '34'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-20 15:23'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-19 09:04'
         message: ''
         version: '32'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-19 09:03'
         message: Fix JS
         version: '31'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-09-16 08:48'
         message: Fix code
         version: '30'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-09-07 09:01'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-02 15:48'
         message: ''
         version: '28'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-17 09:03'
         message: Alicia and Sarah should be part of sales group
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-12 15:31'
         message: ''
         version: '26'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-10 07:37'
         message: Add password for users
         version: '25'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-09 17:05'
         message: Added the managers groups creation
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-09 15:01'
         message: Add learn more
         version: '23'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-09 14:23'
         message: Create several users
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-09 13:57'
         message: ''
         version: '21'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-09 12:32'
         message: ''
         version: '20'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-09 09:33'
         message: Reverted from v. 17
         version: '19'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-09 08:07'
         message: Remove Alicia
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-02 14:44'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-01 13:54'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-29 15:45'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-29 15:33'
         message: add password
         version: '14'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-18 15:03'
         message: 'the Nuxeo Platform => Nuxeo Platform'
         version: '13'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-18 14:40'
         message: Fix json examples
         version: '12'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-18 14:28'
         message: use nuxeo js version 2 for 8.x
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-12 11:55'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-11 15:44'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-17 09:47'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-16 14:15'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-16 14:15'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-16 14:14'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-16 13:24'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-16 13:14'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-16 13:09'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-16 13:04'
         message: ''
@@ -232,7 +233,7 @@ Nuxeo JavaScript Client is a library for the Nuxeo Automation and REST API. The 
 
 In this section, you will set up your work environment: install Node.js on your system, install Nuxeo JavaScript Client and prepare a folder on your system in which you will save your JavaScript files.
 
-1.  Install [Node.js.](http://nodejs.org/#download). The minimum required version is v6.5.0.
+1.  Install [Node.js](http://nodejs.org/#download). The minimum required version is v6.5.0.
 
     If you previously installed Node.js, you can check your version with the following command:
     ```

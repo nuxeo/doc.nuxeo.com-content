@@ -2,11 +2,12 @@
 title: Using Automation
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2018-02-28'
     status: ok
 labels:
     - lts2016-ok
-    - content-review-lts2017
+    - lts2017-ok
+    - notassigned
 confluence:
     ajs-parent-page-id: '29460589'
     ajs-parent-page-title: Getting Started with the Nuxeo Platform
@@ -20,92 +21,92 @@ confluence:
     source_link: /display/NXDOC/Using+Automation
 tree_item_index: 900
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-05 15:19'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-05 12:14'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-05 11:59'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-21 12:55'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-21 12:37'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-20 15:31'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-20 15:13'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-20 15:11'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-20 15:10'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-09 08:33'
         message: ''
         version: '9'
-    - 
+    -
         author: Arnaud Kervern
         date: '2016-09-07 09:49'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-02 15:56'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-16 15:51'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-09 07:04'
         message: ''
         version: '5'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-09 07:04'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-09 07:03'
         message: ''
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-05 16:23'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-05 13:48'
         message: ''
