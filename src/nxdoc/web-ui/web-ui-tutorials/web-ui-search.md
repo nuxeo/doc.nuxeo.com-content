@@ -27,7 +27,7 @@ We will learn how to create a new search screen with an icon in the left menu. T
 
 
 ## Prerequisites
-- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Nuxeo Studio
+- A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}) created in Nuxeo Studio
 - The Web UI addon installed on your instance
 
 Once you are all set, you can navigate to Nuxeo Studio to start creating your search.

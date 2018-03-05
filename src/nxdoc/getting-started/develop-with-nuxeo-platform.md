@@ -414,7 +414,7 @@ Here we want to add some server side Java logic that will update the contract's 
 
 ## Prerequisites
 
-* A Contract document type created on this [page]({{page page='getting-started-with-nuxeo-studio'}})
+* A Contract document type created on this [page]({{page version='' space='nxdoc' page='web-ui-document-layouts'}})
 * An IDE that integrates with Maven.
     We provide instructions for [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars) or IntelliJ IDEA
 * Java 8 with JDK
