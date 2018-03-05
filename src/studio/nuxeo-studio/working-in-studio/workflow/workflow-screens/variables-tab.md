@@ -82,7 +82,7 @@ Variables at workflow level can be used to store information that can be accesse
 
     *   **Name**: Used to reference the variables later.
     *   **Type**: The type of the value that is going to be stored. This type has an impact on the available widgets in the forms.
-    *   **Edit**: Press this button to decide on [field constraints]({{page space='nxdoc' page='field-constraints-and-validation'}}) to set for this variable.
+    *   **Edit**: Press this button to decide which [field constraints]({{page space='nxdoc' page='field-constraints-and-validation'}}) to set for this variable.
     *   **Multi-Valued**: Check the box if we need to store multiple values of the same type on this field.
     *   **Default**: The default value of the variable.
 
