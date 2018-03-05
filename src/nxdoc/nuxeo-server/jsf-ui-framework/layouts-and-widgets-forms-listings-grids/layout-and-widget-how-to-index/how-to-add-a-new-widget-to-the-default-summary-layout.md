@@ -92,7 +92,7 @@ This how-to explains how to insert a new widget to the default Summary layout so
 {{! /excerpt}}
 
 {{#> callout type='info' }}
-{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}
 {{/callout}}
 
 A widget type enables to display [actions]({{page page='actions-links-buttons-icons-tabs-and-more'}}). It takes advantage of the fact that actions needing different kinds of rendering can now be mixed up even if they're using the same [category]({{page page='actions-display'}}). This widget type makes it possible to display a list of actions, but also to include some widget types rendering.

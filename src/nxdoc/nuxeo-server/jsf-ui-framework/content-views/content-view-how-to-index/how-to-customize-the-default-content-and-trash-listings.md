@@ -72,7 +72,7 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' }} {{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}} {{/callout}}
+{{#> callout type='info' }} {{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}} {{/callout}}
 {{! excerpt}}
 
 The content displayed in the **Content** tab of a folder is the result of a query that says that we want to display all the documents that:
