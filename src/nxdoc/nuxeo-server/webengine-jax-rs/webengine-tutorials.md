@@ -27,11 +27,6 @@ confluence:
 tree_item_index: 300
 history:
     -
-        author: Pedro Cardoso
-        date: '2018-03-02 12:00'
-        message: Clean links to jar package and samples.
-        version: '23'
-    -
         author: Solen Guitter
         date: '2016-01-12 09:49'
         message: dd link to atatched sample
