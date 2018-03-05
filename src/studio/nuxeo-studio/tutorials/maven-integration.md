@@ -16,6 +16,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/NwAz'
     source_link: /display/Studio/Maven+Integration
 tree_item_index: 500
+toc: true
 history:
     -
         author: Bertrand Chauvin

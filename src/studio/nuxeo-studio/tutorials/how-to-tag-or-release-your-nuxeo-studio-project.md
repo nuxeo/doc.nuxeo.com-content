@@ -69,7 +69,7 @@ A release is considered as a tested and validated version of your project. Once 
 
 ### From the Studio Modeler
 
-From the Branch Management page:
+Go to **Source Control** > **Branch Management**:
 
 1.  Click on the **Release** button next to the commit that you want to release.
     ![]({{file name='tag-release-button.png'}} ?w=350,border=true)
@@ -77,15 +77,15 @@ From the Branch Management page:
     ![]({{file name='create-release.png' page='branch-management'}} ?w=350,border=true)
     All the fields will be pre-filled but you can modify the released version and prepare your next version by checking the Next version box. You will be able to choose the type of your release or to create a custom one with a qualifier.
 
-Once your release is created, you can now install like you would [install any other nuxeo package]({{page space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
+Once your release is created, you can now install it like you would [install any other Nuxeo package]({{page space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
 
-### {{> anchor 'rest-api'}} With the REST API
+### With the REST API
 
 To create a release you need:
 
 1.  Your project identifier
 2.  Credentials with write access to the project
-3.  The revision on with the release will be created. This can be master or a feature branch, but not a user workspace branch
+3.  The revision on which the release will be created. This can be master or a feature branch, but not a user workspace branch
 4.  Either the name of the release that will be created, or the type of release you want to create (see below).
 
 {{! multiexcerpt name='release'}}
@@ -97,11 +97,11 @@ Versions in Studio must have the following format: `M.m.p[-q]` where:
 * p is the _patch_ number. It should be incremented when the release contains only bug fixes
 * q is the _qualifier_ string. It qualifies the release, eg: beta, rc1. Must contain only letters, numbers, '_', '-' or '.'
 
-For automation purposes it might be preferable to ask studio to choose the next version type: `MAJOR`, `MINOR` or `PATCH` instead of specifying a version name. Studio will look for the latest release created in the history of the revision commit and try to release the next version as asked.
+For automation purposes it might be preferable to ask Studio to choose the next version type: `MAJOR`, `MINOR` or `PATCH` instead of specifying a version name. Studio will look for the latest release created in the history of the revision commit and try to release the next version as asked.
 
 {{! /multiexcerpt}}
 
-If the version name specified (or computed by studio) already exists, then the release will not be allowed and will fail.
+If the version name specified (or computed by Studio) already exists, then the release will not be allowed and will fail.
 
 ```
 Request:
