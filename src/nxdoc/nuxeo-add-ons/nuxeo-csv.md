@@ -199,8 +199,18 @@ history:
         version: '1'
 
 ---
+
+{{#> callout type='info'}}
+Watch the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/89/nuxeo-csv-importer) on Nuxeo University.
+![]({{file name='university_csv.png'}} ?w=600,border=true)
+{{/callout}}
+
+
+
+
+
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) on Nuxeo University.
+Follow the related
 {{/callout}}
 
 {{! excerpt}}
