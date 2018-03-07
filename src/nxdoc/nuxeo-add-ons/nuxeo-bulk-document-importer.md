@@ -284,13 +284,11 @@ history:
 ---
 {{#> callout type='info'}}
 Watch the related [video](https://university.nuxeo.com/learn/public/course/view/elearning/90/nuxeo-bulk-importer) on Nuxeo University.
-![]({{file name='bulkimporter_university.png'}} ?w=600,border=true)
+![]({{file name='bulkimporter_university.png'}} ?w=300,border=true)
 {{/callout}}
 
 {{! multiexcerpt name='bulk-importer'}}
-
 Available for any Nuxeo platform-based application, the [Bulk document importer package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer) enables mass document import in a Nuxeo repository. A single HTTP query launches a full, multi-threaded import from the server file system.
-
 {{! /multiexcerpt}}
 
 {{! excerpt}}
