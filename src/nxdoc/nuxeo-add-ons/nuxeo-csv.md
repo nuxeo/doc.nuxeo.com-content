@@ -202,21 +202,11 @@ history:
 
 {{#> callout type='info'}}
 Watch the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/89/nuxeo-csv-importer) on Nuxeo University.
-![]({{file name='university_csv.png'}} ?w=600,border=true)
-{{/callout}}
-
-
-
-
-
-{{#> callout type='tip'}}
-Follow the related
+![]({{file name='university_csv.png'}} ?w=300,border=true)
 {{/callout}}
 
 {{! excerpt}}
-
 The [Nuxeo CSV addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv) enables users to proceed to a bulk import of documents in the Nuxeo Platform using a CSV file. This addon enables users to create documents with their metadata filled in, to import files with their main attachment or to create a tree structure.
-
 {{! /excerpt}} {{! multiexcerpt name='nuxeo_csv_functional_introduction'}}
 
 Installing this addon adds a button "Import a CSV file" for all users that have at least the Edit permission on any document in which it is possible to import a file. By default, this means workspaces and folders. If you configured other documents types in which it is possible to import files, then the button "Import a CSV file" can also be available (see the page [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})).
