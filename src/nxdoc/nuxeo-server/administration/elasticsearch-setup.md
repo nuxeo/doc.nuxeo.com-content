@@ -541,7 +541,7 @@ Nuxeo supports two protocols to access the Elasticsearch cluster: the transport 
 
 Here are the  `nuxeo.conf` options available for the Transport Client protocol:
 ```
-elasticsearch.client=TranportClient
+elasticsearch.client=TransportClient
 elasticsearch.addressList=somenode:9300,anothernode:9300
 elasticsearch.clusterName=elasticsearch
 ```
