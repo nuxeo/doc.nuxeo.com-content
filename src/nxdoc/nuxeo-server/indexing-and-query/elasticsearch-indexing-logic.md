@@ -218,6 +218,12 @@ When indexing a document the Nuxeo Platform sends a JSON representation to be in
 
 A NXQL query can be translated to Elasticsearch query with some limitations. See the page [NXQL documentation.]({{page page='nxql'}})
 
+When the query does not specify an ordering, the results are sorted by descending order of relevance as [described in Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/guide/current/relevance-intro.html).
+There are multiple ways to tune relevance:
+- By updating the mapping to [automatically boost some fields](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/mapping-boost.html).
+- By using NXQL Hint with operator that support field boost notation like `/*+ES: INDEX(dc:title.fulltext^3,dc:description.fulltext) */`
+- By building your elasticsearch query directly and pass a [function to return a score](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-function-score-query.htm).
+
 **Operators and Mapping**
 
 Some operators need an explicit mapping to work properly. This is the case for FULLTEXT, LIKE and ILIKE operators (STARTSWITH for `ecm:path` has a special mapping setup by default). See the page [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}}) for more information.
