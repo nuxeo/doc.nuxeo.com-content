@@ -70,7 +70,7 @@ This application will add into your Nuxeo Studio project the default workflow mo
 
 ## Video Utils
 
-A set of examples to handle videos from the UI: slide, watermark, merge, transform. After modifying a video, the result can be either downloaded, stored in the “attachments” or the “Renditions”, or can be used to automatically create a new Video document.
+A set of examples to handle videos from the UI: slice, watermark, merge, transform. After modifying a video, the result can be either downloaded, stored in the “attachments” or the “Renditions”, or can be used to automatically create a new Video document.
 
 This project should be used as a demo and learning tool. It provides a full working example of video operations that can be performed from the UI, via user friendly dialogs (see the elements in the “video-utils” folder, in Studio Designer).
 
