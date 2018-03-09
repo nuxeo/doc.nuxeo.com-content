@@ -47,7 +47,7 @@ The Application templates below are available to help you discover how the defau
 
 This template is ideal to start with Studio customization and understand how it works. It is imported automatically the first time you have access to your Nuxeo Studio project. It provides a sample demonstrating how to override Nuxeo Server Package document types from Studio and how to contribute some additional configuration.
 
-It overrides the `Domain` and `File` Document types, the WebUI layouts and also shows using (in WebUI) default display of children of a container. It also shows some layout override in JSF
+It overrides the `Domain` and `File` Document types, the Web UI layouts and also shows using (in Web UI) default display of children of a container. It also shows some layout override in JSF
 
 It also provides the default life cycle shipping with the Platform (`default`) as well as the `Domain` Structure Template.
 
@@ -56,22 +56,22 @@ It also provides the default life cycle shipping with the Platform (`default`) a
 
 This application template provides a sample demonstrating how to override DAM Nuxeo Package document types from Studio.
 
-It overrides the `Video` and `Picture` Document type, the Summary tabs (JSF) and the WebUI layouts.
+It overrides the `Video` and `Picture` Document type, the Summary tabs (JSF) and the Web UI layouts.
 
 Please note you need to select the DAM package in the Application Dependencies screen to use this project.
 
 
 ## Default Nuxeo Platform Workflows Configuration
 
-This application will add into your Nuxeo Studio project the default workflow models (Serial and Parallel Reviews) delivered by Nuxeo into the Nuxeo Platform application. Wokflow models are then executed in Nuxeo Platform using Nuxeo Workflow Engine. To modify them go to:
+This application will add into your Nuxeo Studio project the default workflow models (Serial and Parallel Reviews) delivered by Nuxeo into the Nuxeo Platform application. Wokflow models are then executed in Nuxeo Platform using Nuxeo Workflow Engine. To modify them in Studio Designer go to:
 
-`Project > Workflow > Workflow definitions > SerialDocumentReview/ParallelDocumentReview`.
+**Layouts** > **Workflow** > **SerialDocumentReview**/**ParallelDocumentReview**.
 
 
-## Video Utils.
+## Video Utils
 
-A set of examples for handing videos from the UI: Slice, watermark, merge, transform. After modifying a video, the result can be either downloaded, stored in the “attachements” or the “Renditions”, or can be used to automatically create a new Video document.
+A set of examples to handle videos from the UI: slide, watermark, merge, transform. After modifying a video, the result can be either downloaded, stored in the “attachments” or the “Renditions”, or can be used to automatically create a new Video document.
 
-This project should be used as a demo and learning tool. It provides a full working example of video operations that can be performed from the UI, via user friendly dialogs (see the elements in the “video-utils” folder, in Designer.)
+This project should be used as a demo and learning tool. It provides a full working example of video operations that can be performed from the UI, via user friendly dialogs (see the elements in the “video-utils” folder, in Studio Designer).
 
-Please, read the comments in the `videoUtils_README` JavaScript Automation chain for details and usage.
+Please read the comments in the `videoUtils_README` JavaScript Automation chain for details and usage.
