@@ -187,8 +187,10 @@ history:
         version: '1'
 
 ---
-{{> wistia_video id='d9zcz20s7i'}}
-Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.com/learn/public/course/view/elearning/55/WhatsnewinNuxeoPlatformLTS2015%3F) in [Nuxeo University](https://university.nuxeo.com)
+{{#> callout type='tip'}}
+Follow the related [video on Nuxeo University](https://university.nuxeo.com/learn/public/course/view/elearning/55/WhatsnewinNuxeoPlatformLTS2015%3F).
+{{/callout}}
+
 
 ## Indexing
 
