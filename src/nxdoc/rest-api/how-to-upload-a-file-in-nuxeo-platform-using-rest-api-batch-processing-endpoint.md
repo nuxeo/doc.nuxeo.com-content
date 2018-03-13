@@ -4,7 +4,7 @@ title: >-
     Endpoint
 review:
     comment: ''
-    date: ''
+    date: '2018-03-13'
     status: ok
 details:
     howto:
@@ -183,7 +183,7 @@ The content of the file
 Or with curl:
 
 ```
-curl -u Administrator:Administrator -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -F file=@myFile.doc http://<host>:<port>/nuxeo/api/v1/upload/<myBatchId>/0
+curl -u Administrator:Administrator -X POST -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -T myFile.doc http://<host>:<port>/nuxeo/api/v1/upload/<myBatchId>/0
 ```
 
 ### Batch File Verification
@@ -238,7 +238,7 @@ The content of the chunk
 Or with curl:
 
 ```text
-curl -u Administrator:Administrator -H "X-Upload-Type:chunked" -H "X-Upload-Chunk-Index:<i>" -H "X-Upload-Chunk-Count:5" -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -H "X-File-Size:115090" -F file=@<chunk_i> http://<host>:<port>/nuxeo/api/v1/upload/<myBatchId>/0
+curl -u Administrator:Administrator -X POST -H "X-Upload-Type:chunked" -H "X-Upload-Chunk-Index:<i>" -H "X-Upload-Chunk-Count:5" -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -H "X-File-Size:115090" -T <chunk_i> http://<host>:<port>/nuxeo/api/v1/upload/<myBatchId>/0
 ```
 
 Response: there are three cases here.
