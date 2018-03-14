@@ -17,25 +17,6 @@ tree_item_index: 97
 
 ### Installation and Configuration
 
-#### Parameters to Update
-
-<div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-<th colspan="1">Parameter</th>
-<th colspan="1">Modification</th>
-<th colspan="1">Reference</th>
-</tr>
-<tr>
-<td colspan="1">`nuxeo.rest.write.exception.stack.trace`</td>
-<td colspan="1">Renamed to `org.nuxeo.rest.stack.enable`</td>
-<td colspan="1">[NXP-23861](https://jira.nuxeo.com/browse/NXP-23861)</td>
-</tr>
-</tbody>
-</table>
-</div>
-
 #### New Parameters
 
 <div class="table-scroll">
@@ -47,13 +28,8 @@ tree_item_index: 97
 <th colspan="1">Reference</th>
 </tr>
 <tr>
-<td colspan="1">`org.nuxeo.rest.stack.enable`</td>
-<td colspan="1">New Default Value to `false`</td>
-<td colspan="1">[NXP-23861](https://jira.nuxeo.com/browse/NXP-23861)</td>
-</tr>
-<tr>
 <td colspan="1">`nuxeo.server.hsts.enabled`</td>
-<td colspan="1">New Default Value to `false`</td>
+<td colspan="1">Default value to `false`</td>
 <td colspan="1">[NXP-24030](https://jira.nuxeo.com/browse/NXP-24030)</td>
 </tr>
 </tbody>
