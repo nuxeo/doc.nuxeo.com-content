@@ -80,6 +80,10 @@ INSTALL THE GETTING STARTED TEMPLATE
 4.  Under the **Configuration** menu in Studio, select **External Templates** and install the **Nuxeo Training: Getting Started** template by clicking on **Import this package**.
 
 5.  From Nuxeo Platform, open [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) again and click the **Hot Reload** button to update your instance with configurations from the template.
+  {{#> callout type='warning' }}
+  You must have Administrator access and Dev Mode should be activated to use the hot reload.
+  {{/callout}}
+
 
 ### Users and Groups
 
@@ -200,7 +204,7 @@ First we'll need to add a metadatum to our schema to represent the **amount to b
 
 1.  In Studio, under the **Configuration** menu, select **Content Model** > **Document Types** > **BCContract**, then click on the **Schema** tab.
 
-2.  Add a new field to the schema: `refundAmount: Floating point`.
+2.  Add a new field to the schema: `refundAmount` as a Floating point.
 
 {{#> callout type='tip' }}
 This field is directly related to the **BC Contract** document type, but if you want to create more general properties to be shared with other document types you can add them to a separate schema (**Configuration** > **Content Model** > **Schemas**), or create your own.
@@ -208,7 +212,7 @@ This field is directly related to the **BC Contract** document type, but if you 
 
 3.  Save your changes and click on the **Designer** button.
 
-4.  Drag and drop the new property from **Catalog** in the right menu to the **nuxeo-bccontract-view-layout**, then save.
+4.  Go to **Local Types** > **BCCONTRACT** and drag and drop the new property `refundAmount` from **Catalog** in the right menu to the view layout, then save.
 
 {{#> callout type='tip' }}
 Using the code editor ![]({{file name='code_editor.png'}} ?w=25), you can drag and drop the property into a Polymer `dom-if` template. The one we've created will only appear in the document view layout if the contract has been cancelled.
