@@ -363,14 +363,17 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
+{{! excerpt}}
 A content view is the definition of a list of documents displayed in the interface. The lists of documents displayed in the UI are the results of a query which you can customize and the definition of the information displayed on the documents. In Nuxeo applications, content views are used in most cases when there is a list of content.
 
 {{! /excerpt}}
 
 {{#> callout type='info' }}
-{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{! multiexcerpt name='check-jsf-ui-dependency'}}
+Make sure that the Nuxeo JSF UI target package is checked in your project's [Application Definition]({{page space='studio' page='application-definition'}}) to get all the needed features in Nuxeo Studio.
+{{! /multiexcerpt}}
 {{/callout}}
 
 For example:

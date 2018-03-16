@@ -84,7 +84,7 @@ history:
 
 ---
 {{#> callout type='info' }}
-{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}
 {{/callout}}
 
 Defining a new search form basically consists in defining a new content view that is flagged as a Search content view.

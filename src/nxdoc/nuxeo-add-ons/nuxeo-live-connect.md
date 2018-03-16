@@ -301,6 +301,10 @@ history:
         version: '1'
 
 ---
+{{#> callout type='info'}}
+Browsers that block pop-ups may affect the behavior of Nuxeo Live Connect. If you face any difficulties, make sure to check your browser settings.
+{{/callout}}
+
 {{#> callout type='tip'}}
 Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/55/whats-new-in-nuxeo-platform-lts-2015) on Nuxeo University.
 {{/callout}}

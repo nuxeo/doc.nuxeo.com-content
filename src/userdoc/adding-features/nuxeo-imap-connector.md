@@ -189,7 +189,7 @@ The [Nuxeo IMAP Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 
 {{! /excerpt}}
 
-When emails are imported in Nuxeo, some metadata are automatically extracted from the email:
+When emails are imported in Nuxeo, some metadata is automatically extracted from the email:
 
 *   Subject
 *   Sender

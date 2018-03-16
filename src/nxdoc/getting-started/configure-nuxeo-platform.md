@@ -21,7 +21,8 @@ This tutorial introduces you to a few important aspects of **Nuxeo Studio** so t
 
 BigCorp has a very simple workflow on a `BCContract` document type, called `BCContractCancel_WF`, allowing any BigCorp employee to cancel a contract. Once launched, the request will pass through a manager to confirm the cancellation.
 
-BigCorp needs a new feature added to the workflow: have someone from Accounting specify the amount to refund to the client, with a full refund automatically granted to cancellations that occur within 10 days of signing.
+BigCorp needs a new feature added to this workflow: have someone from Accounting specify the amount to refund to the client, with a full refund automatically granted to cancellations that occur within 10 days of signing.
+
 
 In the steps below, we will show you how to add custom schemas, automation chains and workflow steps to fulfill this feature request.
 
@@ -435,7 +436,7 @@ Try customizing your search to filter contract types or owners, then try modifyi
 
 By now, I'm sure you've noticed our custom login page with the ever-conspicuous Big Corp logo. Not a fan? No problem! Let's modify the background image.
 
-### Login page
+### Login Page
 
 CUSTOMIZE THE LOGIN PAGE
 

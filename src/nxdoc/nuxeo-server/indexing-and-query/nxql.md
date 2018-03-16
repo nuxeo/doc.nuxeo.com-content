@@ -529,7 +529,7 @@ An `<op>` can be:
 
 A `<literal>` can be:
 
-*   `<string>`: a string delimited by single quotes (`'`) or for Java compatibility double quotes (`"`). To use the string delimiter itself inside the string, it must be escaped by a backslash ( `\ '` or `\"`) (this is contrary to the standard SQL syntax which would double the delimiter). The backslash itself is also escaped by a backslash ( `\ \` ). The special `\n`, `\r` and `\t` can also be used.
+*   `<string>`: a string delimited by single quotes (`'`) or for Java compatibility double quotes (`"`). To use the string delimiter itself inside the string, it must be escaped by a backslash ( `\'` or `\"`) (this is contrary to the standard SQL syntax which would double the delimiter). The backslash itself is also escaped by a backslash ( `\\` ). The special `\n`, `\r` and `\t` can also be used.
 *   `<integer>`: an integer with optional minus sign.
 *   `<float>`: a float.
 *   `TIMESTAMP <timestamp>`: a timestamp in ISO format _yyyy_ `-` _MM_ `-` _dd_ _hh_ `:` _mm_ `:` _ss_[`.` _sss_] (the space separator can be replaced by a `T`).

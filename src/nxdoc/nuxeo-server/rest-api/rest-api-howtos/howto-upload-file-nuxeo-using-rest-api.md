@@ -2,7 +2,7 @@
 title: 'HOWTO: Upload a File in Nuxeo Using REST API'
 review:
     comment: ''
-    date: '2017-12-12'
+    date: '2018-03-13'
     status: ok
 details:
     howto:
@@ -145,7 +145,7 @@ Before uploading any file or chunk you need to [initialize an upload batch](#bat
 POST http://NUXEO_SERVER/nuxeo/api/v1/upload/
 ```
 
-Or with curl:
+Or with cURL:
 
 ```
 curl -u Administrator:Administrator -X POST http://NUXEO_SERVER/nuxeo/api/v1/upload
@@ -173,10 +173,10 @@ The content of the file
 ...
 ```
 
-Or with curl:
+Or with cURL:
 
 ```
-curl -u Administrator:Administrator -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -F file=@myFile.doc http://NUXEO_SERVER/nuxeo/api/v1/upload/<myBatchId>/0
+curl -u Administrator:Administrator -X POST -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -T myFile.doc http://NUXEO_SERVER/nuxeo/api/v1/upload/<myBatchId>/0
 ```
 
 ### Batch File Verification
@@ -187,7 +187,7 @@ You can verify that the file has actually been uploaded.
 GET /api/v1/upload/<myBatchId>
 ```
 
-Or with curl:
+Or with cURL:
 
 ```
 curl -u Administrator:Administrator -G http://NUXEO_SERVER/nuxeo/api/v1/upload/<myBatchId>
@@ -228,10 +228,10 @@ The content of the chunk
 ...
 ```
 
-Or with curl:
+Or with cURL:
 
 ```text
-curl -u Administrator:Administrator -H "X-Upload-Type:chunked" -H "X-Upload-Chunk-Index:<i>" -H "X-Upload-Chunk-Count:5" -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -H "X-File-Size:115090" -F file=@<chunk_i> http://NUXEO_SERVER/nuxeo/api/v1/upload/<myBatchId>/0
+curl -u Administrator:Administrator -X POST -H "X-Upload-Type:chunked" -H "X-Upload-Chunk-Index:<i>" -H "X-Upload-Chunk-Count:5" -H "X-File-Name:myFile.doc" -H "X-File-Type:application/msword" -H "X-File-Size:115090" -T <chunk_i> http://NUXEO_SERVER/nuxeo/api/v1/upload/<myBatchId>/0
 ```
 
 Response: there are 3 cases here.
@@ -265,7 +265,7 @@ Note the importance here of having saved the batch ID: it can be seen as a _resu
 GET /api/upload/<myBatchId>/0
 ```
 
-Or with curl:
+Or with cURL:
 
 ```
 curl -u Administrator:Administrator -G http://NUXEO_SERVER/nuxeo/api/v1/upload/<myBatchId>/0
@@ -320,7 +320,7 @@ POST /api/v1/path/default-domain/workspaces/myworkspace
 }
 ```
 
-Or with curl:
+Or with cURL:
 
 ```text
 curl -X POST -H 'Content-Type: application/json' -u Administrator:Administrator -d '{"entity-type": "document", "name": "myNewDoc", "type": "File", "properties": {"dc:title": "My new doc", "file:content": {"upload-batch": "<myBatchId>", "upload-fileId": "0"}}}' http://NUXEO_SERVER/nuxeo/api/v1/path/default-domain/workspaces/myworkspace
@@ -333,7 +333,7 @@ GET /api/v1/path/default-domain/workspaces/myworkspace/myNewDoc/@blob/file:conte
 ```
 ## Learn More
 
-*   Follow the courses [Importing Files with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/importing-files-rest-api) and [Data Capture / REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) at [Nuxeo University](https://university.nuxeo.com).
+*   Follow the courses [Importing Files with the REST API](https://university.nuxeo.io/nuxeo/university/#!/course/working-with-nuxeo-platform-rest-api/importing-files-rest-api) and [Importing Documents / REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) at [Nuxeo University](https://university.nuxeo.com).
 
 * * *
 

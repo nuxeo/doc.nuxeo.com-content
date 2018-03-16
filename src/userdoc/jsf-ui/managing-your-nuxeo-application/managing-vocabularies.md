@@ -2,14 +2,14 @@
 title: Managing Vocabularies
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2018-03-08'
     status: ok
 labels:
     - metadata
     - admin-center
     - vocabulary
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '2392402'
@@ -24,97 +24,97 @@ confluence:
     source_link: /display/USERDOC/Managing+Vocabularies
 tree_item_index: 200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-03 15:51'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-09-10 16:40'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-10 18:16'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-20 22:18'
         message: fixed typo
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-04 23:14'
         message: Updated screenshot for 5.8
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-04 23:13'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:52'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-12-03 18:12'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-16 14:42'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-15 16:31'
         message: Migrated to Confluence 4.0
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-15 16:31'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-26 12:19'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 11:19'
         message: Removed 5.4 references
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 18:55'
         message: Added related content
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 18:51'
         message: Added toc
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 15:05'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-24 17:01'
         message: updated with new 5.4.2 main tabs
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-01 11:27'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-23 15:50'
         message: ''
