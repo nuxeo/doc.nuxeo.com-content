@@ -2,7 +2,7 @@
 title: Configure Nuxeo Platform
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2018-03-16'
     status: ok
 labels:
     - studio
@@ -19,7 +19,10 @@ This tutorial introduces you to a few important aspects of **Nuxeo Studio** so t
 
 ## Introduction
 
-BigCorp needs a feature added to an existing workflow: have someone from Accounting specify the amount to refund to the client, with a full refund automatically granted to cancellations that occur within 10 days of signing.
+BigCorp has a very simple workflow on a `BCContract` document type, called `BCContractCancel_WF`, allowing any BigCorp employee to cancel a contract. Once launched, the request will pass through a manager to confirm the cancellation.
+
+BigCorp needs a new feature added to this workflow: have someone from Accounting specify the amount to refund to the client, with a full refund automatically granted to cancellations that occur within 10 days of signing.
+
 
 In the steps below, we will show you how to add custom schemas, automation chains and workflow steps to fulfill this feature request.
 
@@ -71,13 +74,17 @@ INSTALL THE GETTING STARTED TEMPLATE
 
 1.  Log into Nuxeo Platform with the credentials *Administrator* / *Administrator*.
 
-2.  Open [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) and under **Useful Links**, click on **Go To Studio**.
+2.  Open [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) and under **Useful Links**, click on **Go To Studio Project**.
 
 3.  Log into Studio with your **NOS** credentials.
 
-4.  Under the **Configuration** menu in Studio, select **External Templates** and install the **Nuxeo Training: Getting Started** template.
+4.  Under the **Configuration** menu in Studio, select **External Templates** and install the **Nuxeo Training: Getting Started** template by clicking on **Import this package**.
 
 5.  From Nuxeo Platform, open [Nuxeo Dev Tools]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}) again and click the **Hot Reload** button to update your instance with configurations from the template.
+  {{#> callout type='warning' }}
+  You must have Administrator access and Dev Mode should be activated to use the hot reload.
+  {{/callout}}
+
 
 ### Users and Groups
 
@@ -198,7 +205,7 @@ First we'll need to add a metadatum to our schema to represent the **amount to b
 
 1.  In Studio, under the **Configuration** menu, select **Content Model** > **Document Types** > **BCContract**, then click on the **Schema** tab.
 
-2.  Add a new field to the schema: `refundAmount: Floating point`.
+2.  Add a new field to the schema: `refundAmount` as a Floating point.
 
 {{#> callout type='tip' }}
 This field is directly related to the **BC Contract** document type, but if you want to create more general properties to be shared with other document types you can add them to a separate schema (**Configuration** > **Content Model** > **Schemas**), or create your own.
@@ -206,7 +213,7 @@ This field is directly related to the **BC Contract** document type, but if you 
 
 3.  Save your changes and click on the **Designer** button.
 
-4.  Drag and drop the new property from **Catalog** in the right menu to the **nuxeo-bccontract-view-layout**, then save.
+4.  Go to **Local Types** > **BCCONTRACT** and drag and drop the new property `refundAmount` from **Catalog** in the right menu to the view layout, then save.
 
 {{#> callout type='tip' }}
 Using the code editor ![]({{file name='code_editor.png'}} ?w=25), you can drag and drop the property into a Polymer `dom-if` template. The one we've created will only appear in the document view layout if the contract has been cancelled.
@@ -275,9 +282,9 @@ CONFIGURE A WORKFLOW
 
 9.  BigCorp wants all partial refund amounts to be determined by someone on their accounting team, so we'll add `group:accounting` to the field **Assignees**.
 
-10. On the **Variables** tab, ensure that the `refundAmount` variable is editable in this task, then added its widget to the form on the **Form** tab.
+10. On the Variables tab, ensure that the refundAmount variable is editable in this task.
 
-11. On the **Resolution Actions** tab, add a `confirmRefund` button, then link the confirm button to the `BCContract_CancelPartialRefund_AC` automation chain on the **Transitions** tab.
+11. On the **Transitions** tab, add a `confirmRefund` button, then link the confirm button to the `BCContract_CancelPartialRefund_AC` automation chain.
 
 12. Finally, reorganize the nodes and transitions to implement our new logic, and save. You should have something like this:
 
@@ -326,33 +333,32 @@ You can add to the query filter to further tailor your search results. Try filte
 
 4.  Bind the `bcsalescommon:amount` field to the Aggregate, then add some ranges. For example:
 
-<div class="table-scroll">
-  <table class="hover">
-    <tbody>
-      <tr>
-        <th>Label</th>
-        <th>From</th>
-        <th>To</th>
-      </tr>
-      <tr>
-        <td>Basic (up to €1,000)</td>
-        <td>0</td>
-        <td>1,000</td>
-      </tr>
-      <tr>
-        <td>Silver (€1,001 - 5,000)</td>
-        <td>1,001</td>
-        <td>5,000</td>
-      </tr>
-      <tr>
-        <td>Gold (€5,001 +)</td>
-        <td>5,001</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+  <div class="table-scroll">
+    <table class="hover">
+      <tbody>
+        <tr>
+          <th>Label</th>
+          <th>From</th>
+          <th>To</th>
+        </tr>
+        <tr>
+          <td>Basic (up to €1,000)</td>
+          <td>0</td>
+          <td>1,000</td>
+        </tr>
+        <tr>
+          <td>Silver (€1,001 - 5,000)</td>
+          <td>1,001</td>
+          <td>5,000</td>
+        </tr>
+        <tr>
+          <td>Gold (€5,001 +)</td>
+          <td>5,001</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 5.  Save your Page Provider.
 
 ### Search Drawer
