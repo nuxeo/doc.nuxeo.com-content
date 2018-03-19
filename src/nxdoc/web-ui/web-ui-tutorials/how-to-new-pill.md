@@ -33,7 +33,7 @@ Once you are all set, you can navigate to Modeler to start creating your search.
 
 ## Create a Page Provider
 
-1. In Customization, go to **Page Providers**, click on **New** and name it _otherContracts_.
+1. In Studio Modeler, go to Customization, go to **Page Providers**, click on **New** and name it _otherContracts_.
 1. In the Query filter add the following line `AND ecm:primaryType='Contract'`. This will enable to only search contract documents.</br>
    You should end up with something like this:
 
@@ -73,6 +73,16 @@ Now we will add aggregates to customize the search.
   </tbody>
   </table>
   </div>
+1. Save your changes.
+
+### Configure Layouts
+
+Once you are all set, you can navigate to the Studio Designer to configure your layouts.
+1. Go to **Layouts** > **Page Providers** > **otherContracts**
+1. Click on **form**  and then **Configure**, it will automatically create the `nuxeo-othercontracts-search-form` layout.
+1. Do the same with the **result** button, click on **Configure**, the `nuxeo-othercontracts-search-results` layout is created.
+
+### Configure Labels
 
 You now need to add your labels to your translations file to display them correctly in the UI. To do so:
 
