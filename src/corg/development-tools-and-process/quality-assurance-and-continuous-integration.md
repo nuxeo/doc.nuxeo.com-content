@@ -125,25 +125,25 @@ It's as important to follow quality processes on development as to maintain this
 
 Nuxeo products and tools are continuously built over time, at each change and against multiple environments. Nuxeo QA team sets and maintain a QA environment applying CI rules and so providing to developers means to check their code quality and being warned in case of any problem.
 
-*   Maintain a code repository
-    Nuxeo sources repositories on&nbsp;[Mercurial](http://hg.nuxeo.org/)&nbsp;and&nbsp;[Git](http://github.com/nuxeo)&nbsp;are under continuous integration.
+*   Maintain a code repository</br>
+    Nuxeo sources repositories on&nbsp;[Mercurial](http://hg.nuxeo.org/)&nbsp;and&nbsp;[Git](http://github.com/nuxeo)&nbsp;are under continuous integration.</br>
     This includes the Nuxeo Platform, the documentation, the tools and the plugins.
-*   Builds are automated
+*   Builds are automated</br>
     This is done by Jenkins on&nbsp;[Nuxeo QA Unit, Functional and Integration tests](http://qa.nuxeo.org/).
-*   Every commit on mainline is integrated
-    When code is committed, target project is built, as all projects depending on it. The full chain is verified, from build to deployment.
+*   Every commit on mainline is integrated</br>
+    When code is committed, target project is built, as all projects depending on it. The full chain is verified, from build to deployment.</br>
     Mainlines on Nuxeo EP and addons are the main branches in development: 5.1 and 5.2 (resp. 1.4 and 1.5 for associated subtrees). For projects under SubVersion, that means the trunk and, if exists, 5.1 branch.
-*   Everyone can see the results of the latest build
-    Jenkins plugins ensure to warn potential responsible(s) of build fail by mail and jabber, so they can react quickly.
+*   Everyone can see the results of the latest build</br>
+    Jenkins plugins ensure to warn potential responsible(s) of build fail by mail and jabber, so they can react quickly.</br>
     Moreover, every build fail is sent on&nbsp;[ECM QA mailing list](http://lists.nuxeo.com/mailman/listinfo/ecm-qa).
-*   Make it easy to get the latest deliverables
+*   Make it easy to get the latest deliverables</br>
     Nightly builds are done. Produced artifacts are published on our Maven repositories&nbsp;[maven.nuxeo.org](http://maven.nuxeo.org/). Currently managed with Nexus, our repositories store all released artifacts and recent snapshots.
-*   Keep the build fast
-    Continuous Integration is done on multiple servers, more or less powerful, using slaves in order to distribute the load.
+*   Keep the build fast</br>
+    Continuous Integration is done on multiple servers, more or less powerful, using slaves in order to distribute the load.</br>
     Thanks to Maven and to Nuxeo modularity, each module is built separately and as a consequence, quickly.
-*   Test in a clone of the production environment
-    We have two integration levels: unit and functional.
-    First level checks code compilation and runs Unit tests. A lot of Unit tests simulate target environments (with mock objects). Dependent projects/modules are then added to the CI chain.
+*   Test in a clone of the production environment</br>
+    We have two integration levels: unit and functional.</br>
+    First level checks code compilation and runs Unit tests. A lot of Unit tests simulate target environments (with mock objects). Dependent projects/modules are then added to the CI chain.</br>
     Second level runs packaging tools and automated deployment against multiple environments (we aim at covering JVM versions, SQL backends, OS, browsers, performance, ...). Finally we use Selenium tests to check functional integrity. This also indirectly provides a continuous integration on our tools (packaging, convenient scripts...).
 
 ## Quality Directives for Nuxeo Developers
