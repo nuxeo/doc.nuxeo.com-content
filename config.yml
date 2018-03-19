@@ -19,6 +19,9 @@ default:
             -
                 space_path: studio
                 space_name: Nuxeo Online Services
+            -
+                space_path: security
+                space_name: Nuxeo Security Documentation
         branch: 'static'
 
 development:
