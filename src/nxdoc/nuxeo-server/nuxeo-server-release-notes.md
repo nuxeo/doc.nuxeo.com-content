@@ -78,6 +78,63 @@ We also provide [instructions for upgrading]({{page version='' space='nxdoc' pag
 
 ### Nuxeo Web UI {{> anchor 'nuxeo-web-ui'}}
 
+#### Orderable folders  {{since '10.1'}}
+
+Adds support for Orderable Folders.
+Up and down actions available on Orderable Folders. Works with multiple selected documents.
+For this purpose a new operation is available to order child documents.
+Navigation tree now takes into account order on Orderable Folders.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24254](https://jira.nuxeo.com/browse/NXP-24254).
+
+#### Trash flow {{since '10.1'}}
+
+Add trash functionality and management to document deletion. Document deletion moves it to trash.
+In order to manage trash:
+- Documents with Folderish facet added a trash pill to manage deleted documents.
+- New trash search on the main menu. Has a faceted search on path, size, authors, and text.
+Trashed documents can be restore or permanently deleted by users with Manage Everything permission.
+A new EmptyTrash operation allows to permanently delete a Folderish's trash content which is available on the Folderish trash pill UI.
+Finally, a set of functional tests for new trash features.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23798](https://jira.nuxeo.com/browse/NXP-23798).
+
+#### Direct multipart upload with AWS S3 {{since '10.1'}}
+
+New add-on to upload using AWS S3 infrastructure with support for multipart. Allows future integration of other providers.
+Integrated with Web UI upload with real time upload progress.
+To this end, the Upload behavior now supports providers.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24269](https://jira.nuxeo.com/browse/NXP-24269).
+
+#### IMAP Connector {{since '10.1'}}
+
+Nuxeo IMAP Connector add-on is now available on Web UI.
+It is possible to create and configure IMAP folder documents on WebUI.
+IMAP folder, on Web UI, have a sync action to import all unread emails from account.
+This add-on adds a new custom list view for emails on email folder documents.
+Also adds a custom view layout to email message documents with relevant information about the content, senders, receivers, and attachments.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23951](https://jira.nuxeo.com/browse/NXP-23951).
+
+#### User invitation link {{since '10.1'}}
+
+Fixed link on user invitation e-mail that led to "page not found".
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More onJIRA ticket [NXP-24535](https://jira.nuxeo.com/browse/NXP-24535).
+
+#### Remove from Collection {{since '10.1'}}
+
+Remove from Collection on every document type with Collection faceted.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More onJIRA ticket [NXP-24347](https://jira.nuxeo.com/browse/NXP-24347).
+
+#### Close drawer action {{since '10.1'}}
+
+A new close action button was added to hide the drawer. It appears on the middle right side.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More onJIRA ticket [NXP-24082](https://jira.nuxeo.com/browse/NXP-24082).
+
 ### Nuxeo JSF UI
 
 ### Packaging
