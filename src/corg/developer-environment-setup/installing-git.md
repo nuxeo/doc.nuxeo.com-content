@@ -285,10 +285,6 @@ This will be stored in your ~/.gitconfig file.
 
 Contributors don't need a write access to Nuxeo repositories since they will push changes to their own forked repositories and send pull-requests to Nuxeo.
 
-{{/callout}} {{#> callout type='warning' }}
-
-Please don't put accents and such in your username (as well in the commit message) because of [NXBT-907](https://jira.nuxeo.com/browse/NXBT-907).
-
 {{/callout}}
 
 ## Configuration
