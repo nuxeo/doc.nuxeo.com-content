@@ -3,43 +3,28 @@
   "description": "doc.nuxeo.com Content",
   "license": "CC",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": {
     "name": "Andrew Goodricke",
     "email": "github@andrewgoodricke.com",
     "url": "http://andrewgoodricke.com"
   },
   "dependencies": {
-    "co": "^4.6.0",
-    "lodash.defaultsdeep": "^4.6.0",
-    "node-yaml-config": "0.0.4",
-    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v10.0.0",
-    "thenify": "^3.2.1"
+    "js-yaml": "^3.11.0",
+    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v10.1.3"
   },
-  "devDependencies": {
-    "browser-sync": "^2.18.8",
-    "bs-fullscreen-message": "^1.1.0",
-    "tape": "^4.6.3",
-    "taper": "^0.5.0"
-  },
-  "main": "build.js",
   "config": {
     "browser": "chromium-browser"
   },
   "scripts": {
-    "pretest": "npm run yaml_lint config.yml",
-    "verify": "taper verify",
-    "start": "npm run metalsmith",
-    "poststart": "npm run copy_assets && npm run verify",
-    "predev": "npm install",
-    "dev": "node dev-server",
-    "dev:no-clean": "node dev-server --no-clean",
+    "test": "npm run yaml_lint config.yml",
+    "verify": "docs-verify",
+    "predev": "npm ci || npm i",
+    "dev": "docs-dev-server",
+    "dev:no-clean": "docs-dev-server --no-clean",
     "copy_assets": "npm run copy_assets:default && npm run copy_assets:module",
     "copy_assets:default": "mkdir -p ./site/assets/`./node_modules/nuxeo-docs-builder/bin/version-path` && cp -r ./assets/* ./site/assets/`./node_modules/nuxeo-docs-builder/bin/version-path`",
     "copy_assets:module": "cp -r ./node_modules/nuxeo-docs-builder/assets/* ./site/assets/ && cp -r ./node_modules/nuxeo-docs-builder/assets/fonts ./site/assets/css/",
-    "metalsmith": "node .",
-    "server": "browser-sync start --server site --browser=$npm_package_config_browser",
-    "server_reload": "browser-sync reload",
     "yaml_lint": "js-yaml -t > /dev/null"
   },
   "repository": {

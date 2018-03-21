@@ -1,15 +1,18 @@
 default:
-    site:
-        review_period: '13 months'
-        spaces:
-            -
-                space_path: nxdoc
-                space_name: Developer Documentation Center
-            -
-                space_path: userdoc
-                space_name: Nuxeo Platform User Documentation
-        dev_browser_path: nxdoc
-        version:
-            label: FT
+  site:
+    review_period: '13 months'
+    spaces:
+      -
+        space_path: nxdoc
+        space_name: Developer Documentation Center
+      -
+        space_path: userdoc
+        space_name: Nuxeo Platform User Documentation
+    dev_browser_path: nxdoc
+  verify_paths:
+    - nxdoc
+    - userdoc
+    - nxdoc/index.html
 development:
-    isDev: true
+  isDev: true
+  branch_alias: master
