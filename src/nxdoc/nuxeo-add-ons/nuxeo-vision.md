@@ -186,6 +186,7 @@ The default behavior is defined in two automation chains which can be overridden
     ```xml
     <extension target="org.nuxeo.vision.core.service" point="configuration">
     	<configuration>
+            <defaultProviderName>${org.nuxeo.vision.default.provider:=}</defaultProviderName>
     		<pictureMapperChainName>MY_PICTURE_CHAIN</pictureMapperChainName>
     		<videoMapperChainName>MY_VIDEO_CHAIN</videoMapperChainName>
     	</configuration>
