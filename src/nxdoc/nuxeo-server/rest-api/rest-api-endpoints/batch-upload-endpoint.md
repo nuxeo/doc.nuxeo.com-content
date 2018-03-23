@@ -33,11 +33,6 @@ confluence:
 tree_item_index: 400
 history:
     -
-        author: Luís Duarte
-        date: '2018-03-19 11:30'
-        message: 'Add BatchHandler Documentation'
-        version: '33'
-    -
         author: Gabriel Barata
         date: '2016-10-07 17:35'
         message: 'hanged "Dropping a Batch" and added "Deleting a File from a Batch"'
@@ -312,9 +307,9 @@ This request returns a 201 CREATED status code with the following JSON data:
 
 The batch id can be seen as an upload session id, especially for a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}}#-anchor-uploadingafileinchunks-uploading-a-file-in-chunks-resumable-).
 
-#### Using a different Upload Handler
+#### Using a Different Upload Handler
 
-On batch initialization you call
+On batch initialization you call:
 
 ```
 POST http://NUXEO_SERVER/nuxeo/api/v1/upload/<provider>
@@ -379,6 +374,7 @@ The value of the `uploadType` field is `normal` by default, it can be `chunked` 
 
 ### Getting Information about the Batch Files
 
+Two options are available:
 ```
 GET http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}
 ```
@@ -391,13 +387,13 @@ JSON response data:
 [{"name": file1, "size": yyy, "uploadType": "normal"}, {"name": file2, "size": zzz, "uploadType": "normal"}]
 ```
 
-#### OR
+**Or**
 
 ```
 GET http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/info
 ```
 
-Returns a 200 OK status code everytime and contains a structured JSON Object with batch information
+Returns a 200 OK status code everytime and contains a structured JSON Object with batch information.
 
 JSON response data:
 
