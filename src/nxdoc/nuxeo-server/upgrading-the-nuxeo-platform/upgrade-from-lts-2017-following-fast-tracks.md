@@ -9,7 +9,7 @@ labels:
     - upgrade
     - akervern
 toc: true
-tree_item_index: 97
+tree_item_index: 90
 
 ---
 
@@ -42,7 +42,9 @@ tree_item_index: 97
 
 {{! multiexcerpt name='upgrade-10.1-code.jackson'}}
 
-You should now use `com.fasterxml.jackson.core:jackson-*` instead of `net.sf.json-lib:json-lib`. See [NXP-24093](https://jira.nuxeo.com/browse/NXP-24093).
+You should now use `com.fasterxml.jackson.core:jackson-*`, instead of `net.sf.json-lib:json-lib`.
+
+See [NXP-24093](https://jira.nuxeo.com/browse/NXP-24093).
 
 {{! /multiexcerpt}}
 
@@ -50,19 +52,21 @@ You should now use `com.fasterxml.jackson.core:jackson-*` instead of `net.sf.jso
 
 {{! multiexcerpt name='upgrade-10.1-code.csrf-protection'}}
 
-CSRF protection is activated by default and based on the CORS configuration and its allowOrigin and supportedMethods parameters, which by default doesn't allow any cross origin. See [NXP-24331](https://jira.nuxeo.com/browse/NXP-24331).
+CSRF protection is activated by default and based on the CORS configuration, along with its `allowOrigin` and `supportedMethods` parameters, which by default doesn't allow any cross origin.
+
+See [NXP-24331](https://jira.nuxeo.com/browse/NXP-24331).
 
 {{! /multiexcerpt}}
 
-#### Video Conversion listener
+#### Video Conversion Listener
 
 {{! multiexcerpt name='upgrade-10.1-code.video-listeners'}}
 
-The video info (duration, format, etc.) is now computed by an asynchronous work to avoid loading the blob and running ffmpeg-info synchronously. This work, in turn, schedules two asynchronous works to process the video storyboard and conversions.
+The video info (duration, format, etc.) is now computed by an asynchronous work to avoid loading the blob and running `ffmpeg-info` synchronously. This work, schedules two asynchronous works to process the video storyboard and conversions.
 
 Class removed: `VideoAutomaticConversionListener`, `VideoStoryboardListener` and `org.nuxeo.ecm.platform.video.VideoConstants#VIDEO_CHANGED_EVENT` (`videoChanged`).
 
-New Works: `VideoInfoWork` and `VideoStoryboardWork`.
+Class added: `VideoInfoWork` and `VideoStoryboardWork`.
 
 See [NXP-24316](https://jira.nuxeo.com/browse/NXP-24316).
 
@@ -78,7 +82,9 @@ See [NXP-24316](https://jira.nuxeo.com/browse/NXP-24316).
 
 {{! multiexcerpt name='upgrade-10.1-code.rest-stack-trace'}}
 
-- Exception stack trace is no longer written in the response per default. Use parameter `org.nuxeo.rest.stack.enable` to enable it. See [NXP-23861](https://jira.nuxeo.com/browse/NXP-23861).
+- Exception stack trace is no longer written in the response by default. Use parameter `org.nuxeo.rest.stack.enable` to enable it.
+
+See [NXP-23861](https://jira.nuxeo.com/browse/NXP-23861).
 
 {{! /multiexcerpt}}
 
@@ -90,7 +96,9 @@ See [NXP-24316](https://jira.nuxeo.com/browse/NXP-24316).
 
 {{! multiexcerpt name='upgrade-10.1-deprecated.localdeploy'}}
 
-`@LocalDeploy` is now deprecated it must not be used anymore, use `@Deploy` instead that now allows you to deploy local contributions. See [NXP-22544](https://jira.nuxeo.com/browse/NXP-22544).
+`@LocalDeploy` is now deprecated it must not be used anymore, use `@Deploy` instead that now allows you to deploy local contributions.
+
+See [NXP-22544](https://jira.nuxeo.com/browse/NXP-22544).
 
 {{! /multiexcerpt}}
 
@@ -98,7 +106,9 @@ See [NXP-24316](https://jira.nuxeo.com/browse/NXP-24316).
 
 {{! multiexcerpt name='upgrade-10.1-deprecated.coresession-close'}}
 
-CoreSession.close() is deprecated and should not be used anymore. See [NXP-24089](https://jira.nuxeo.com/browse/NXP-24089).
+`CoreSession.close()` is deprecated and should not be used anymore.
+
+See [NXP-24089](https://jira.nuxeo.com/browse/NXP-24089).
 
 {{! /multiexcerpt}}
 
