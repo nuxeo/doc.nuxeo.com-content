@@ -26,11 +26,6 @@ confluence:
 tree_item_index: 1200
 history:
     -
-        author: Luís Duarte
-        date: '2018-03-19 11:15'
-        message: ''
-        version: '12'
-    -
         author: Antoine Taillefer
         date: '2016-02-04 12:56'
         message: ''
@@ -223,7 +218,7 @@ It will read and write parameters in a Key/Value store of the same name, and the
 
 ### BatchHandler
 
-Batch Handlers is a concept introduced in Nuxeo 10.1 which consists of allowing custom upload behaviour to all the batches.
+Batch Handler is a concept introduced in Nuxeo Platform 10.1 Fast Track version, which consists in allowing custom upload behaviour to all the batches.
 
 The previous behaviour is now a provider, which we call "Default". When there is need, you can customize for example the Transient Store to manage your uploads (e.g.: Use a 3rd party cloud provider storage).
 
@@ -238,8 +233,8 @@ boolean completeUpload(String batchId, String fileIdx, BatchFileInfo fileInfo)
 ```
 
 
-#### Contributing your own Handler
-To implement your own handler you just need to implement the interface `BatchHandler` and register it through the extension point `handlers` in `org.nuxeo.ecm.automation.server.BatchManager`.
+#### Contributing Your Own Handler
+To implement your own handler you need to implement the interface `BatchHandler` and register it through the extension point `handlers` in `org.nuxeo.ecm.automation.server.BatchManager`.
 
 e.g.:
 
@@ -285,6 +280,5 @@ It relies on the `transientStoreWorkCache` transient store, also not registered 
 
 For example, the [Asynchronous Conversions]({{page page='conversion'}}#asynchronous-conversions) rely on such instances of `TransientStoreWork` via the `ConversionWork` class.
 
-{{! Don't put anything here. }}
 
 * * *
