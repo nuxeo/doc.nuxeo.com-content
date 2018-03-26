@@ -99,15 +99,48 @@ Finally, a set of functional tests for new trash features.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23798](https://jira.nuxeo.com/browse/NXP-23798).
 
-#### Direct multipart upload with AWS S3 {{since '10.1'}}
+#### Direct Upload to 3rd-Party Service {{since '10.1'}}
 
-New add-on to upload using AWS S3 infrastructure with support for multipart. Allows future integration of other providers.
-Integrated with Web UI upload with real time upload progress.
-To this end, the Upload behavior now supports providers.
+Batch upload refactored to support third party providers.
+It is possible to integrate providers for feature rich and performance upload.
+To this end, the Upload behavior now supports external providers and allows features like progress and multipart.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24269](https://jira.nuxeo.com/browse/NXP-24269).
 
-#### IMAP Connector {{since '10.1'}}
+#### User invitation link {{since '10.1'}}
+
+Fixed link on user invitation e-mail that led to "page not found".
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24535](https://jira.nuxeo.com/browse/NXP-24535).
+
+#### Remove from Collection {{since '10.1'}}
+
+Remove from Collection on every document type with Collection faceted.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24347](https://jira.nuxeo.com/browse/NXP-24347).
+
+#### Close drawer action {{since '10.1'}}
+
+A new close action button was added to hide the drawer. It appears on the middle right side.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24082](https://jira.nuxeo.com/browse/NXP-24082).
+
+#### New languages {{since '10.1'}}
+
+Italian, Dutch and Indonesian languages have been added to Web UI and Nuxeo Elements.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-24451](https://jira.nuxeo.com/browse/NXP-24451) and [NXP-24445](https://jira.nuxeo.com/browse/NXP-24445).
+
+### Nuxeo JSF UI
+
+### Amazon S3 Direct Upload for Web UI
+
+New add-on to upload using AWS S3 infrastructure with support for multipart. Allows future integration of other providers.
+Integrated with Web UI upload with real time upload progress.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24490](https://jira.nuxeo.com/browse/NXP-24490).
+
+### IMAP Connector {{since '10.1'}}
 
 Nuxeo IMAP Connector add-on is now available on Web UI.
 It is possible to create and configure IMAP folder documents on WebUI.
@@ -116,26 +149,6 @@ This add-on adds a new custom list view for emails on email folder documents.
 Also adds a custom view layout to email message documents with relevant information about the content, senders, receivers, and attachments.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23951](https://jira.nuxeo.com/browse/NXP-23951).
-
-#### User invitation link {{since '10.1'}}
-
-Fixed link on user invitation e-mail that led to "page not found".
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More onJIRA ticket [NXP-24535](https://jira.nuxeo.com/browse/NXP-24535).
-
-#### Remove from Collection {{since '10.1'}}
-
-Remove from Collection on every document type with Collection faceted.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More onJIRA ticket [NXP-24347](https://jira.nuxeo.com/browse/NXP-24347).
-
-#### Close drawer action {{since '10.1'}}
-
-A new close action button was added to hide the drawer. It appears on the middle right side.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More onJIRA ticket [NXP-24082](https://jira.nuxeo.com/browse/NXP-24082).
-
-### Nuxeo JSF UI
 
 ### Packaging
 
