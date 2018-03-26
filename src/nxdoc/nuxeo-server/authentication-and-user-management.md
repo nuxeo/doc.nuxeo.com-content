@@ -173,7 +173,7 @@ The login page is not the only way to authenticate a user against the Nuxeo Plat
 *   [NTLM]({{page space='nxdoc' page='NTLM-and-IE-Challenge-Response'}}) (built-in)
 *   Redirecting to a [remote identity management solution](#compatible-idm-solutions) then having the authenticated user be redirected to the Nuxeo Platform (SSO servers, OpenID, Portals, ...) (built-in or addon, depending on the case).
 
-Thanks to the pluggability of the authentication layer (see the [Authentication Chain Principles]({{page page='authentication-chain-principle'}}), it is easy to write a custom authentication protocol when necessary.
+Thanks to the pluggability of the authentication layer (see the [Authentication Chain Principles]({{page page='authentication-chain-principles'}}), it is easy to write a custom authentication protocol when necessary.
 
 ### Compatible IdM Solutions
 
