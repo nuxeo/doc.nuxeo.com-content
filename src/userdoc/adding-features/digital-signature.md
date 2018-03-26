@@ -2,12 +2,12 @@
 title: Digital Signature
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2018-03-26'
     status: ok
 labels:
     - digital-signature
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '11043055'
@@ -22,102 +22,102 @@ confluence:
     source_link: /display/USERDOC/Digital+Signature
 tree_item_index: 100
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-01 15:19'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-24 15:07'
         message: update screenshots
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-24 14:46'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-22 07:33'
         message: update link to blog post
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-10 10:38'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-30 10:37'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-30 10:36'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-30 10:36'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-30 10:36'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-30 10:36'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-30 10:36'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2014-07-30 10:35'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-04 16:10'
         message: Formatting
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-15 15:32'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-15 15:29'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-15 15:05'
         message: 'Moved layout configuration section to NXDOC '
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-14 19:55'
         message: Removed related topics from TOC
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-14 19:55'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-14 18:19'
         message: ''
         version: '2'
-    - 
+    -
         author: Vladimir Pasquier
         date: '2013-10-23 14:22'
         message: ''

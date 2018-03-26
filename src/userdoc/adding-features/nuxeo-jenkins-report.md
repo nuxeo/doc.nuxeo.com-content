@@ -2,12 +2,12 @@
 title: Nuxeo Jenkins Report
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2018-03-26'
     status: ok
 labels:
     - nuxeo-jenkins-report
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '11043055'
@@ -22,48 +22,50 @@ confluence:
     source_link: /display/USERDOC/Nuxeo+Jenkins+Report
 tree_item_index: 900
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-30 14:46'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-25 16:26'
         message: new Edit permission
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-26 09:24'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 11:47'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-20 14:42'
         message: Removed related topics from TOC
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 18:39'
         message: ''
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2013-08-06 17:58'
         message: 'NXDOC-176: review jenkins report doc'
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 17:36'
         message: ''
         version: '1'
 
 ---
+{{{multiexcerpt 'JSF-UI-required' page='/nxdoc/generic-multi-excerpts'}}}
+
 {{! excerpt}}
 
 The [Nuxeo Jenkins Report addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jenkins-report-mp) enables users of the Nuxeo Platform to generate and send reports on the status of the Continuous Integration on Jenkins, directly from the Nuxeo Platform. This addon is for development teams, to help them follow and share the status of their continuous integration, while leveraging the content management features of the Nuxeo Platform.
@@ -185,10 +187,10 @@ After you created and updated the report, you want to share it to the team. The 
 
 To send the report:
 
-1.  Click on the icon ![]({{file name='jenkins_send_email.png'}} ?w=16,thumbnail=true).
+1.  Click on the icon ![]({{file name='jenkins_send_email.png'}} ?w=16).</br>
     A confirmation window pops up. You can see the e-mail address the report will be sent to.
 2.  Click on **OK** to confirm.
-    An email is send the e-mail address. This email includes the information below:
+    An email is sent to the e-mail address. This email includes the information below:
 
     *   The number of failing jobs,
     *   The number of unclaimed jobs,
@@ -200,8 +202,8 @@ To send the report:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Jenkins duty]({{page space='corg' page='jenkins-duty'}})
-*   [Nuxeo Jenkins Report dev documentation]({{page space='nxdoc' page='nuxeo-jenkins-report'}})
+- [Jenkins duty]({{page space='corg' page='jenkins-duty'}})
+- [Nuxeo Jenkins Report dev documentation]({{page space='nxdoc' page='nuxeo-jenkins-report'}})
 
 {{/panel}}</div><div class="column medium-6">
 
