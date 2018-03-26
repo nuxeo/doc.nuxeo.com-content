@@ -7,7 +7,7 @@ review:
 labels:
     - lts2016-ok
     - nuxeo-agenda
-    - sguitter
+    - notassigned
     - content-review-lts2017
 toc: true
 confluence:

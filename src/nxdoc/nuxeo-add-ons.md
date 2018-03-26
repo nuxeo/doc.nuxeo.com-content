@@ -262,7 +262,7 @@ Microsoft Azure Online Storage<br/>
 Registered access
 </td>
 <td colspan="1">
-&nbsp;
+[Documentation]({{page page='microsoft-azure-online-storage'}})
 </td>
 <td colspan="1">
 [Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage?version=1.2.3)
@@ -560,7 +560,9 @@ Public
 <td>Nuxeo Lambda PictureView Conversion<br/>
 `nuxeo-lambda-marketplace-package`</td>
 <td>Public</td>
-<td></td>
+<td>
+[Documentation]({{page page='nuxeo-lambda-pictureview'}})
+</td>
 <td>[Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-lambda-marketplace-package?version=1.0.1)</td>
 </tr>
 <tr>
@@ -752,7 +754,7 @@ Nuxeo Travel Expenses<br/>
 Public
 </td>
 <td colspan="1">
-&nbsp;
+[Documentation]({{page page='data-visualization'}}#travel-expenses-sample-dashboard)
 </td>
 <td colspan="1">
 [Released for 8.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-travel-expenses?version=1.1.2)
@@ -804,7 +806,7 @@ OpenID Authentication<br/>
 Public
 </td>
 <td colspan="1">
-&nbsp;
+[Documentation]({{page page='using-openid-oauth2-in-login-screen'}})
 </td>
 <td colspan="1">
 [Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/openid-authentication?version=1.2.3)
@@ -914,7 +916,7 @@ Template Rendering Samples<br/>
 Public
 </td>
 <td colspan="1">
-&nbsp;
+[Documentation]({{page page='template-rendering-addon'}}#nuxeo-template-rendering-samples)
 </td>
 <td colspan="1">
 [Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering-samples?version=6.7.3)
