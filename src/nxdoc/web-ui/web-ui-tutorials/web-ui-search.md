@@ -25,6 +25,12 @@ After having created your own [document type]({{page page='web-ui-document-layou
 
 We will learn how to create a new search screen with an icon in the left menu. The search will be compose of a full text search, a search by date range, a search by owners and finally by tags.
 
+{{#> callout type='info'}}
+Watch the related courses on Nuxeo University
+- [DAM Architecture course](https://university.nuxeo.com/learn/public/course/view/elearning/134/configurating-searches-in-nuxeo-studio-modeler-designer).
+![]({{file name='web-ui-search-university.png'}} ?w=600,border=true)
+{{/callout}}
+
 
 ## Prerequisites
 - A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Nuxeo Modeler
