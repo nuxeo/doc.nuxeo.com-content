@@ -124,10 +124,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'JSF-UI-required' page='/nxdoc/generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 The [Digital Signature addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-signature) introduces PDF signing capabilities to the Nuxeo Platform. This addon also provides generation of user certificates, which are required for document signing.
-
 {{! /excerpt}}
 
 The Nuxeo Platform Digital Signature addon allows you to:

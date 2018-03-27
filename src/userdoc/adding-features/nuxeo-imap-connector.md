@@ -21,162 +21,162 @@ confluence:
     source_link: /display/USERDOC/Nuxeo+IMAP+Connector
 tree_item_index: 800
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-08 14:36'
         message: ink updat
         version: '32'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-07 10:04'
         message: ''
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-07 10:03'
         message: ''
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-07 10:02'
         message: ''
         version: '29'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-14 19:38'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 12:43'
         message: 'User doc reorganization: fix link to relations'
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-27 13:43'
         message: 'User doc reorganization: fix link to alerts and comments'
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-27 13:43'
         message: 'User doc reorganization: fix link to alerts'
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-06 18:22'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2014-06-11 15:18'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-24 14:20'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:19'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2013-09-30 17:12'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migrated to Confluence 4.0
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Added related pages
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:38'
         message: Added related pages
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-03 17:46'
         message: Added related pages
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-30 17:01'
         message: Added TOC
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:44'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-09 09:48'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 17:09'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 14:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-20 10:41'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-20 10:39'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-23 17:01'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-23 17:00'
         message: added screenshots
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-23 16:31'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-23 14:59'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-21 18:25'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-21 18:19'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-21 18:07'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-14 11:31'
         message: ''
@@ -184,9 +184,7 @@ history:
 
 ---
 {{! excerpt}}
-
 The [Nuxeo IMAP Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector) provides email folders in which you can fetch emails to store and share them in your Nuxeo application. Email folders are not intended to be webmails. It will fetch the unread emails on your email server either when you manually trigger the fetch from Nuxeo interface or automatically at regular intervals.
-
 {{! /excerpt}}
 
 When emails are imported in Nuxeo, some metadata is automatically extracted from the email:
@@ -356,7 +354,7 @@ Password
 
 {{#> callout type='note' }}
 
-If you have set the 2 steps Verification, you need to generate a dedicated password. 
+If you have set the 2 steps Verification, you need to generate a dedicated password.
 
 {{/callout}}</div>
 
