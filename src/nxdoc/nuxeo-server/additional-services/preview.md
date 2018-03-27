@@ -101,7 +101,7 @@ history:
 
 {{{multiexcerpt 'preview_functional_overview' page='USERDOC:Preview'}}}
 
-## Installation & Configuration
+## Installation and Configuration
 
 For all document previews make sure you installed the [related softwares]({{page page='installing-and-setting-up-related-software'}}) corresponding to your document types.
 
