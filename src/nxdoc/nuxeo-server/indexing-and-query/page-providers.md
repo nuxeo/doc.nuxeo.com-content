@@ -175,6 +175,12 @@ Page providers allow retrieving items with pagination facilities, they can be us
 
 For an introduction to content views, please refer to the [Content Views]({{page page='content-views'}}) page.
 
+{{#> callout type='info'}}
+Watch the related courses on Nuxeo University
+- [Configurating Searches with Nuxeo Studio Modeler & Designer](https://university.nuxeo.com/learn/public/course/view/elearning/134/configurating-searches-in-nuxeo-studio-modeler-designer).
+![]({{file name='page-providers-university.png'}} ?w=600,border=true)
+{{/callout}}
+
 ## Standard Page Providers
 
 Page provider offers many advantages comparing to hard coded NXQL queries:
