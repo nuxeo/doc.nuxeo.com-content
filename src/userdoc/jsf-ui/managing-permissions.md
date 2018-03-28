@@ -3,7 +3,7 @@ title: Managing Permissions
 description: 'Depending on the document you are on, you can be granted different permissions and be allowed different actions on the document.'
 review:
     comment: ''
-    date: '2017-01-26'
+    date: '2018-02-26'
     status: ok
 labels:
     - access-rights
@@ -23,272 +23,272 @@ confluence:
     source_link: /display/USERDOC/Managing+Permissions
 tree_item_index: 400
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2016-10-06 21:16'
         message: ''
         version: '54'
-    - 
+    -
         author: Frédéric Vadon
         date: '2016-05-25 20:45'
         message: precise that audit and purge is in the admin center
         version: '53'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-13 12:35'
         message: ''
         version: '52'
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-07 08:30'
         message: ''
         version: '51'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-28 09:54'
         message: ''
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-22 16:33'
         message: ''
         version: '49'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-22 16:32'
         message: ''
         version: '48'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-19 14:47'
         message: ''
         version: '47'
-    - 
+    -
         author: Solen Guitter
         date: '2016-01-18 16:23'
         message: Add permission overview table
         version: '46'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-23 10:16'
         message: 'Change Write to Edit permission '
         version: '45'
-    - 
+    -
         author: Solen Guitter
         date: '2015-10-12 10:55'
         message: ''
         version: '44'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-02 14:19'
         message: ''
         version: '43'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-02 14:10'
         message: ''
         version: '42'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-02 14:10'
         message: ''
         version: '41'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-02 13:54'
         message: ''
         version: '40'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-02 13:53'
         message: ''
         version: '39'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-02 13:53'
         message: ''
         version: '38'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-17 13:15'
         message: ''
         version: '37'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-21 11:12'
         message: ''
         version: '36'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-21 11:11'
         message: ''
         version: '35'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-21 11:05'
         message: ''
         version: '34'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-20 19:10'
         message: ''
         version: '33'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-20 18:51'
         message: ''
         version: '32'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-20 17:56'
         message: ''
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 22:31'
         message: 'Denying access rights now disabled by default, but can be activated through nuxeo.conf'
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2014-08-21 10:25'
         message: wording
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-08-14 16:53'
         message: ''
         version: '28'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-26 17:40'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-26 17:40'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2014-03-26 17:40'
         message: Added anchor to rights inheritance
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:48'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:48'
         message: Removed related topics from TOC
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:48'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migration of unmigrated content due to installation of a new plugin
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migrated to Confluence 4.0
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:38'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-07 14:44'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-07 14:27'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-07 11:40'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-07 11:38'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-30 10:45'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-24 11:44'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-23 17:48'
         message: Fixed broken link to Access rights table
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 11:11'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-09 10:56'
         message: Added toc and related customization content
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 17:09'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 15:03'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2011-01-12 10:29'
         message: added rights prioritization section
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-01 11:25'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-23 15:38'
         message: ''
@@ -404,7 +404,7 @@ The new permission is displayed in the **Permissions defined locally** part of t
 
 {{! /multiexcerpt}}
 
-![]({{file name='add_permission_popup.png'}} ?w=350,border=true)
+![]({{file name='add_permission_popup.png' page='810/userdoc/managing-permissions'}} ?w=350,border=true)
 
 ### Granting Permissions to External Users (Instant Share)
 
@@ -416,7 +416,7 @@ In the **Permissions Assigned to External Users** part of the screen, click **Ne
 
 {{! /multiexcerpt}}
 
-![]({{file name='permissions_external_share_popup.png'}} ?w=300,thumbnail=true)
+![]({{file name='permissions_external_share_popup.png' page='810/userdoc/managing-permissions'}} ?w=300,thumbnail=true)
 
 {{! multiexcerpt name='grant-permissions-external-users-notes'}}
 

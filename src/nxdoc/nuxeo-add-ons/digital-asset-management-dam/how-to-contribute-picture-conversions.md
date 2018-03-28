@@ -2,7 +2,7 @@
 title: How to Contribute Picture Conversions
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2017-12-12'
     status: ok
 details:
     howto:
@@ -17,7 +17,7 @@ labels:
     - troger
     - picture
     - convert-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866704'
@@ -176,7 +176,7 @@ Let's add a new picture conversions called&nbsp;`Large` that will resize the pic
   point="pictureConversions">
 
   <pictureConversion id="Large" description="Large image" tag="large"
-    maxSize="800" order="0" default="false" chainId="Image.Blob.Resize" />
+    maxSize="800" order="0" chainId="Image.Blob.Resize" />
 
 </extension>
 ```
@@ -185,7 +185,6 @@ Let's add a new picture conversions called&nbsp;`Large` that will resize the pic
 
 *   `maxSize`: The maximum size of the width or height of the image (depending of the bigger one on the original image). Not setting the&nbsp;`maxSize`&nbsp;will put the original width and height as expected values.&nbsp;
 *   `order`: The order of this picture conversion in the final list of picture views, smaller first.
-*   `default`: The picture conversions marked as&nbsp;`default` are always generated, they are not filtered. If&nbsp;`false`, the associated filters will be evaluated before the generation (no filter means always generate).
 *   `chainId`: the Automation chain associated to this picture conversion. Here we use the default available chain `Image.Blob.Resize`&nbsp;that will just resize the image according to the `maxSize`&nbsp;attribute. If the&nbsp;`chainId` attribute is not filled, the original `Blob` will be returned and use for the generated picture view.
 
 **Notes on the&nbsp;`chainId` attribute**
@@ -305,13 +304,7 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
 
 ## Filtering Picture Conversions
 
-{{#> callout type='note' }}
-
-Picture conversions marked as `default` cannot be filtered, they are always executed. For instance, all the picture conversions required by the Nuxeo Platform are marked as `default`.
-
-{{/callout}}
-
-Picture conversions (not marked as&nbsp;`default`) can be filtered so that you can choose which picture conversions should be executed on a given document. The filtering is done through standard filters we already use in the Nuxeo Platform.
+Picture conversions can be filtered so that you can choose which picture conversions should be executed on a given document. The filtering is done through standard filters we already use in the Nuxeo Platform.
 
 {{#> callout type='note' }}
 

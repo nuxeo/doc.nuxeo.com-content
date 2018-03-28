@@ -2,7 +2,7 @@
 title: UI Feature Comparison
 review:
     comment: ''
-    date: '2017-02-10'
+    date: '2018-02-26'
     status: ok
 labels:
     - lts2016-ok
@@ -295,7 +295,7 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo IMAP connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector)</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2018</td>
+    <td>&#10003;</td>
     <td colspan="1">[Nuxeo IMAP Connector user documentation]({{page space='userdoc' page='nuxeo-imap-connector'}})</td>
 </tr>
 <tr>
@@ -1343,7 +1343,7 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2018</td>
+    <td>&#10003;</td>
     <td colspan="1">
     [User documentation]({{page space='userdoc' page='deleting-content'}})<br/>
     [Developer documentation]({{page page='deleting-documents'}})

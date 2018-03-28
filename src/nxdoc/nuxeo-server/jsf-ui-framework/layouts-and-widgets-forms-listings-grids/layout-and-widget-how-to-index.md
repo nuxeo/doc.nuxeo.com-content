@@ -2,14 +2,14 @@
 title: 'Layout & Widget How-To Index'
 review:
     comment: ''
-    date: '2016-12-23'
+    date: '2018-01-02'
     status: ok
 labels:
     - lts2016-ok
     - layout
     - index
     - mlumeau
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950330'
     ajs-parent-page-title: 'Layouts and Widgets (Forms, Listings, Grids)'

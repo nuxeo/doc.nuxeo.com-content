@@ -2,14 +2,14 @@
 title: Supported File Formats
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2018-01-24'
     status: ok
 labels:
     - lts2016-ok
     - dam-component
     - dam
     - lmcintyre
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '3866704'
     ajs-parent-page-title: Digital Asset Management (DAM)
@@ -372,7 +372,7 @@ X
 
 </td><td colspan="1">
 
-&nbsp;
+X
 
 </td><td colspan="1">
 
@@ -396,7 +396,7 @@ X
 
 </td><td colspan="1">
 
-&nbsp;
+X
 
 </td><td colspan="1">
 
@@ -420,7 +420,7 @@ X
 
 </td><td colspan="1">
 
-&nbsp;
+X
 
 </td><td colspan="1">
 

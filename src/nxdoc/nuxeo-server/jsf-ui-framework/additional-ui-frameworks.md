@@ -2,14 +2,14 @@
 title: Additional UI Frameworks
 review:
     comment: ''
-    date: '2017-01-25'
+    date: '2018-01-02'
     status: ok
 labels:
     - lts2016-ok
     - home
     - mlumeau
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 is_overview: true
 confluence:
     ajs-parent-page-id: '16089312'
@@ -88,16 +88,6 @@ Nuxeo uses several UI frameworks beside the [JSF technology]({{page page='nuxeo-
 {{! /excerpt}}
 
 <div class="row" data-equalizer data-equalize-on="medium">
-
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-### GWT Integration
-
-GWT is a web toolkit to build rich clients in Java programming language. The Java code is transcoded in JavaScript at build time so the build process generates a fully HTML+JavaScript application ready to be deployed on an HTTP server.
-
-[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page space='NXDOC' page='GWT Integration'}})
-{{/panel}}
-</div>
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}

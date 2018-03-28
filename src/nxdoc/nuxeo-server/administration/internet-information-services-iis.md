@@ -76,6 +76,7 @@ history:
         version: '1'
 
 ---
+{{! multiexcerpt name='internet-information-services-iis-content'}}
 This documentation gives you the guidelines to install a Nuxeo instance on a Windows Server and use IIS as a frontal web server. This documentation is more focused on the IIS configuration. For more details about the installation of the Nuxeo Platform or IIS, please refer to the relevant documentation.
 
 Requirements:
@@ -238,3 +239,4 @@ If Nuxeo has a strange behavior, for instance:
 These problems may occur because you didn't [enhance the URL MAX Length parameter](#enhancing-the-url-max-length-parameter).
 
 You can look into Firefox development tools network console if some requests returned a HTTP&nbsp;401 status, with a "bad url" message.
+{{! /multiexcerpt}}

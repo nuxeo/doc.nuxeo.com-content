@@ -530,7 +530,7 @@ EsRejectedExceptionException[rejected execution (queue capacity 50)
 Increase the bulk queue size In`/etc/elasticsearch/elasticsearch.yml` configuration file:
 
 ```
-threadpool.bulk.queue_size: 500
+thread_pool.bulk.queue_size: 500
 ```
 
 ## Configuring Nuxeo to Access the Elasticsearch Cluster
@@ -541,7 +541,7 @@ Nuxeo supports two protocols to access the Elasticsearch cluster: the transport 
 
 Here are the  `nuxeo.conf` options available for the Transport Client protocol:
 ```
-elasticsearch.client=TranportClient
+elasticsearch.client=TransportClient
 elasticsearch.addressList=somenode:9300,anothernode:9300
 elasticsearch.clusterName=elasticsearch
 ```
@@ -634,7 +634,7 @@ Where
 - `audit.elasticsearch.indexName` is the name of the Elasticsearch index for audit logs.
 - `seqgen.elasticsearch.indexName` is the name of the Elasticsearch index for the uid sequencer, extensively used for audit logs.
 
-You can find all the available options in the [nuxeo.defaults](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-distribution-resources/src/main/resources/templates-tomcat/common-base/nuxeo.defaults).
+You can find all the available options in the [nuxeo.defaults](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common-base/nuxeo.defaults).
 
 
 #### Index Aliases

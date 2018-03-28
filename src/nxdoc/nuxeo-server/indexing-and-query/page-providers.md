@@ -205,8 +205,7 @@ Here is a sample page provider definition:
     <pattern>
       SELECT * FROM Document WHERE ecm:parentId = ? AND ecm:isProxy = 0 AND
       ecm:mixinType = 'Folderish' AND ecm:mixinType != 'HiddenInNavigation'
-      AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState !=
-      'deleted'
+      AND ecm:isVersion = 0 AND ecm:isTrashed = 0
     </pattern>
     <sort column="dc:title" ascending="true" />
     <pageSize>50</pageSize>
@@ -275,8 +274,8 @@ Here is a sample example of a custom page provider configuration:
       <property name="coreSession">#{documentManager}</property>
       <pattern>
         SELECT dc:title FROM Document WHERE ecm:parentId = ? AND
-        ecm:isCheckedInVersion = 0 AND ecm:mixinType != 'HiddenInNavigation'
-        AND ecm:currentLifeCycleState != 'deleted'
+        ecm:isVersion = 0 AND ecm:mixinType != 'HiddenInNavigation'
+        AND ecm:isTrashed = 0
       </pattern>
       <parameter>#{currentDocument.id}</parameter>
       <sort column="dc:title" ascending="true" />
@@ -320,8 +319,8 @@ And setting quoteParameters to false:
   <property name="searchAllRepositories">true</property>
   <pattern quoteParameters="false">
     SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation'
-    AND ecm:isCheckedInVersion = 0
-    AND ecm:currentLifeCycleState != 'deleted'
+    AND ecm:isVersion = 0
+    AND ecm:isTrashed = 0
     AND dc:subjects IN (?)
   </pattern>
   <pageSize>50</pageSize>
@@ -331,7 +330,7 @@ And setting quoteParameters to false:
 Result will be the following query:
 
 ```
-SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND dc:subjects IN ("Art/Architecture", "Art/Culture")
+SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation' AND ecm:isVersion = 0 AND ecm:isTrashed = 0 AND dc:subjects IN ("Art/Architecture", "Art/Culture")
 ```
 
 &nbsp;

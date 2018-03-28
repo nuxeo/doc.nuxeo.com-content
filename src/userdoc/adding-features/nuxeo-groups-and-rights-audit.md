@@ -2,14 +2,13 @@
 title: Nuxeo Groups and Rights Audit
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2018-03-26'
     status: ok
 labels:
     - nuxeo-groups-rights-audit
     - export
-    - last-review-20150226
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '11043055'
     ajs-parent-page-title: Adding Features
@@ -23,33 +22,35 @@ confluence:
     source_link: /display/USERDOC/Nuxeo+Groups+and+Rights+Audit
 tree_item_index: 700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-26 11:07'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-20 14:13'
         message: Updated export icon and screenshot
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-07 11:35'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 14:26'
         message: Added export related topics
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-06 12:17'
         message: ''
         version: '1'
 
 ---
+{{{multiexcerpt 'JSF-UI-required' page='/nxdoc/generic-multi-excerpts'}}}
+
 {{! excerpt}}
 
 The [Nuxeo Groups and Rights Audit addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit) generates an Excel matrix listing every exported documents with permissions for each user.
@@ -71,9 +72,9 @@ Only administrators can do an audit of the permissions of a folder.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [Nuxeo Groups and Rights Audit admin doc]({{page space='nxdoc' page='nuxeo-groups-and-rights-audit'}})
-*   [Exporting Documents]({{page page='exporting-documents'}})
-*   [Nuxeo Core Import / Export API]({{page space='nxdoc' page='nuxeo-core-import-export-api'}})
+- [Nuxeo Groups and Rights Audit admin doc]({{page space='nxdoc' page='nuxeo-groups-and-rights-audit'}})
+- [Exporting Documents]({{page page='exporting-documents'}})
+- [Nuxeo Core Import / Export API]({{page space='nxdoc' page='nuxeo-core-import-export-api'}})
 
 {{/panel}}</div><div class="column medium-6">
 

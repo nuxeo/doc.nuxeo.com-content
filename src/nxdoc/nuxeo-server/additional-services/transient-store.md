@@ -92,6 +92,7 @@ It is typically used by:
 
 *   The [Batch Upload API]({{page page='batch-upload-endpoint'}}) to temporarily store a batch of uploaded blobs until they are attached to a document.
 *   The `ConversionService` to store the `BlobHolder` resulting from an [Asynchronous Conversion Work]({{page page='conversion'}}#rest-api-async-conversions).
+*   The `BatchHandler` contributions that interact with the Transient Store.
 
 The [TransientStore](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/transientstore/api/TransientStore.html) API is based on the following methods:
 
@@ -215,6 +216,43 @@ This implementation, available since Nuxeo 9.3, allows you to abstract yourself 
 
 It will read and write parameters in a Key/Value store of the same name, and the binaries in a Blob Provider of the same name (`myname` in this example). Both must be configured through their own extension points.
 
+### BatchHandler
+
+Batch Handler is a concept introduced in Nuxeo Platform 10.1 Fast Track version, which consists in allowing custom upload behaviour to all the batches.
+
+The previous behaviour is now a provider, which we call "Default". When there is need, you can customize for example the Transient Store to manage your uploads (e.g.: Use a 3rd party cloud provider storage).
+
+#### Interface
+
+```java
+void initialize(String name, Map<String, String> properties);
+String getName();
+Batch newBatch(String batchId);
+Batch getBatch(String batchId);
+boolean completeUpload(String batchId, String fileIdx, BatchFileInfo fileInfo)
+```
+
+
+#### Contributing Your Own Handler
+To implement your own handler you need to implement the interface `BatchHandler` and register it through the extension point `handlers` in `org.nuxeo.ecm.automation.server.BatchManager`.
+
+e.g.:
+
+```xml
+<extension target="org.nuxeo.ecm.automation.server.BatchManager"
+               point="handlers">
+        <batchHandler>
+            <name>foo</name>
+            <class>org.someorg.somepackage.SomeClassThatImplementsBatchHandler</class>
+            <property name="transientStore">${backingTransientStore}</property>
+            <property name="key1">value1</property>
+            <property name="key2">value2</property>
+            ...
+            <property name="keyN">valueN</property>
+        </batchHandler>
+    </extension>
+```
+
 ## Time To Live and Garbage Collector
 
 Entries have a Time To Live (TTL) defined in the transient store configuration.
@@ -242,6 +280,5 @@ It relies on the `transientStoreWorkCache` transient store, also not registered 
 
 For example, the [Asynchronous Conversions]({{page page='conversion'}}#asynchronous-conversions) rely on such instances of `TransientStoreWork` via the `ConversionWork` class.
 
-{{! Don't put anything here. }}
 
 * * *

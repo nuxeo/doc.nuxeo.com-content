@@ -1,8 +1,8 @@
 ---
-title: 'HOWTO: Customize Searches'
+title: 'HOWTO: Configure Searches'
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2018-02-21'
     status: ok
 toc: true
 details:
@@ -27,14 +27,14 @@ We will learn how to create a new search screen with an icon in the left menu. T
 
 
 ## Prerequisites
-- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Nuxeo Studio
-- The Web UI addon installed on your instance
+- A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Nuxeo Modeler
+- Make sure that the [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
 
 Once you are all set, you can navigate to Nuxeo Studio to start creating your search.
 
 ## Create a Page Provider
 
-The first step is to create a [page provider]({{page version='' space='studio' page='page-providers'}}) in Nuxeo Studio.
+The first step is to create a [page provider]({{page version='' space='studio' page='page-providers'}}) in Studio Modeler.
 
 In **Configuration**, go to **Page Providers**, click on **New** and name it `Search`.
 
@@ -53,6 +53,10 @@ In **Configuration**, go to **Page Providers**, click on **New** and name it `Se
   <div class="table-scroll">
   <table class="hover">
   <tbody>
+  <tr>
+  <th colspan="1">Aggregate Type</th>
+  <td colspan="1">Date Range</td>
+  </tr>
   <tr>
   <th colspan="1">Field</th>
   <td colspan="1">dc:created</td>
@@ -89,15 +93,15 @@ In the Studio Designer, on the **Layouts** tab, under **Page Providers** you wil
 
 Click on your page provider, two layouts are available. Let's edit the **Form** layout first.
 
-1. Click on **form**, then **Customize**.
+1. Click on **form**, then **Configure**.
     The form layout is now displayed in bold. On the right, in the properties catalog, the elements that we defined in Studio are displayed here.
 1. Expand the first element and drag and drop the **Edit** mode into the editor.
   Do the same for the three other elements.
 1. Once it's done, click on the **Full text** element on the main view, you can edit the label in the left catalog to display `Full text`. You can do the same with the other elements.
 
-Let's customize the **results** layout now.
+Let's configure the **results** layout now.
 
-1. Click on **results**, then **Customize**.
+1. Click on **results**, then **Configure**.
 1. It automatically creates the result view by default. Leave it like this and click on **Save**.
 
 You now need to add your labels to your translations file to display them correctly in the UI. To do so:
@@ -129,6 +133,36 @@ The next step is to add a button in the left menu to display the search screen.
 1. Save your changes, deploy your Studio project on your instance and you're done :)
 
 ![]({{file name='result-search-screen-vd.png'}} ?w=350,border=true)
+
+## Going Further
+### Visually Configure Table Results Layout
+
+In Studio Designer's layout tab:
+
+1. Go back to your **Search** page provider results layouts configuration. ![]({{file name='pp-results-menu.png'}} ?w=122,border=true)
+1. Edit the table layout configuration. ![]({{file name='pp-results-table-config.png'}} ?w=344,border=true)
+1. You will be taken to the element's configuration. From there, click on the **Switch to Table Editor** icon at the bottom of the page. ![]({{file name='switch-table-editor.png'}} ?w=155,border=true)
+
+You are now in the table editor.
+
+Each result column is shown with the corresponding field and element. Clicking on an element will display its properties on the right side of the screen so that you can configure it.
+
+![]({{file name='pp-table-editor-element-properties.png'}} ?w=621,border=true)
+
+More columns can be added using drag and drop from the catalog on the right side of the screen. For each column, the label can be edited directly and translated by entering the `[[i18n('your.translation.key')]]` pattern.
+
+![]({{file name='pp-table-editor-layout.png'}} ?w=650,border=true)
+
+Columns can be reordered by drag and dropping them around.
+
+Finally, when hovering on a column, you can use additional icons to configure them:
+- ![]({{file name='icon-arrows.png'}} ?w=25) The arrows icon toggles the possibility to sort results using this column.
+
+- ![]({{file name='icon-eye.png'}} ?w=25) The eye icon toggles the default visibility of the column. If you make it optional, it won't appear by default but can be made visible by users in Web UI. When made visible, it will be placed exactly where you put it in your configuration.
+
+- ![]({{file name='icon-trash.png'}} ?w=25) The trash icon deletes the column.
+
+When you are finished, you can save your work using the usual save button on the top right side of the screen.
 
 ## Technical Overview
 

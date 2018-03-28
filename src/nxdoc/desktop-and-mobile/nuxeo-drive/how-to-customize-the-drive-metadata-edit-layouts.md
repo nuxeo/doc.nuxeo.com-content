@@ -77,7 +77,7 @@ You have created your own document types and defined forms and view that show pr
 ![]({{file name='Drive_metadata_edit.png' page='nuxeo-drive'}} ?w=400, border=true)
 
 {{#> callout type='info' }}
-{{{multiexcerpt 'check-jsf-ui-dependency' page='implementing-documentation-items'}}}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}
 {{/callout}}
 
 Obviously you want them to be displayed the same properties as in the Nuxeo Platform web UI.

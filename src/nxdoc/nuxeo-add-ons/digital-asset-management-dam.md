@@ -2,7 +2,7 @@
 title: Digital Asset Management (DAM)
 review:
     comment: ''
-    date: '2017-07-19'
+    date: '2018-01-19'
     status: ok
 labels:
     - lts2016-ok
@@ -13,7 +13,7 @@ labels:
     - audio
     - annotation
     - dam-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -343,7 +343,7 @@ See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribut
 
 #### Document Type
 
-*   `Picture`: This is the default type in Nuxeo that handle picture files. It comes with the&nbsp;`Picture`&nbsp;and `MultiviewPicture` facets.
+*   `Picture`: This is the default type in Nuxeo that handles picture files. It comes with the&nbsp;`Picture`&nbsp;and `MultiviewPicture` facets.
 
 See [http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype) .
 
@@ -362,7 +362,7 @@ See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribut
 
 #### Picture conversions
 
-Picture conversions are used to generate the picture views of document having the&nbsp;`Picture` facet. Default picture conversions (Thumbnail, Small, Medium and OriginalJpeg) are contributed to the&nbsp;`pictureConversions` extension point. They are marked as&nbsp;`default` and so are always generated, their associated filters are not evaluated.
+Picture conversions are used to generate the picture views of document having the&nbsp;`Picture` facet. Default picture conversions (Thumbnail, Small, Medium and OriginalJpeg) are contributed to the&nbsp;`pictureConversions` extension point. They are marked as&nbsp;`default` and so are always generated, their associated filters are not evaluated. If the default conversions are not necessary, they can be disabled using Nuxeo Studio.
 
 ### Video
 

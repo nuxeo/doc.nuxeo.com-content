@@ -23,27 +23,22 @@ labels:
 tree_item_index: 1400
 
 ---
-{{#> callout type='note' }}
-The View Designer is not available for everyone yet, but if you can't wait any longer to try it, do not hesitate to contact your sales representative to enable it on your project.
-{{/callout}}
-
 In this tutorial you will learn how to add a new pill to your custom document type. This pill will help you to find other contracts created for the same contract owner. To do so, we'll be using a custom page provider linked to the Contract document type.
 
 ## Prerequisites
-- A [Contract document type]({{page version='810' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Modeler
-- Web UI addon installed on your instance
-- View Designer enabled on your Studio project
+- A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Nuxeo Modeler
+- Make sure that the [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
 
 Once you are all set, you can navigate to Modeler to start creating your search.
 
 ## Create a Page Provider
 
-1. In Customization, go to **Page Providers**, click on **New** and name it _otherContracts_.
+1. In Studio Modeler, go to Customization, go to **Page Providers**, click on **New** and name it _otherContracts_.
 1. In the Query filter add the following line `AND ecm:primaryType='Contract'`. This will enable to only search contract documents.</br>
    You should end up with something like this:
 
    ```
-   ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND ecm:primaryType='Contract'
+   ecm:mixinType != 'HiddenInNavigation' AND ecm:isVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND ecm:primaryType='Contract'
    ```
 
 Now we will add aggregates to customize the search.
@@ -78,6 +73,16 @@ Now we will add aggregates to customize the search.
   </tbody>
   </table>
   </div>
+1. Save your changes.
+
+### Configure Layouts
+
+Once you are all set, you can navigate to the Studio Designer to configure your layouts.
+1. Go to **Layouts** > **Page Providers** > **otherContracts**
+1. Click on **form**  and then **Configure**, it will automatically create the `nuxeo-othercontracts-search-form` layout.
+1. Do the same with the **result** button, click on **Configure**, the `nuxeo-othercontracts-search-results` layout is created.
+
+### Configure Labels
 
 You now need to add your labels to your translations file to display them correctly in the UI. To do so:
 

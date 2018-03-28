@@ -2,7 +2,7 @@
 title: JSF UI Framework
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2018-01-02'
     status: ok
 labels:
     - content-review-lts2016
@@ -10,7 +10,7 @@ labels:
     - home
     - mlumeau
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 is_overview: true
 confluence:
     ajs-parent-page-id: '31033314'
@@ -87,7 +87,7 @@ history:
 ---
 {{! excerpt}}
 
-This chapter presents the different ways to customize what is displayed on the default application.
+This chapter presents the different ways to customize what is displayed on the JSF UI application.
 
 {{! /excerpt}}
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}

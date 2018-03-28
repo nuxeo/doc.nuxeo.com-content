@@ -169,7 +169,7 @@ This operation has the following parameters:
 *   **Query**: optional parameter. By default the query called by the exporter is:
 
     ```sql
-    SELECT * FROM Document ecm:mixinType !='HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState !='deleted'
+    SELECT * FROM Document ecm:mixinType !='HiddenInNavigation' AND ecm:isVersion = 0 AND ecm:isTrashed = 0
     ```
 
     You can define your own query and put it the in the Query parameter.
@@ -177,7 +177,7 @@ This operation has the following parameters:
 For example if you want to export all the documents even the ones in &ldquo;deleted&rdquo; state you can define this query in the field of the query parameter.
 
 ```sql
-SELECT * FROM Document WHERE ecm:mixinType !='HiddenInNavigation' AND ecm:isCheckedInVersion = 0
+SELECT * FROM Document WHERE ecm:mixinType !='HiddenInNavigation' AND ecm:isVersion = 0
 ```
 
 ## Customization

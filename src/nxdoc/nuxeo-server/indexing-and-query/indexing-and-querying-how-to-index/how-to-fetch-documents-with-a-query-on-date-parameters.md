@@ -301,7 +301,7 @@ In content views the way to fetch all documents for which the "recall date" is o
 1.  On the [ **Query & form** tab of your content view]({{page page='how-to-define-a-new-content-view'}}), define your query filter.
 
     ```
-    ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND mydocumenttype:recall_expiring_date <= DATE ?
+    ecm:mixinType != 'HiddenInNavigation' AND ecm:isVersion = 0 AND mydocumenttype:recall_expiring_date <= DATE ?
 
     ```
 
@@ -344,7 +344,7 @@ The chain will look like that:
 
 ```
 - Document.Query:
-    query: "SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND mydocumenttype:expiring_date <= DATE '@{CurrentDate.format(\"yyyy-MM-dd\")}'"
+    query: "SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation' AND ecm:isVersion = 0 AND ecm:isTrashed = 0 AND mydocumenttype:expiring_date <= DATE '@{CurrentDate.format(\"yyyy-MM-dd\")}'"
     language: NXQL
 - Document.SetLifeCycle:
     value: delete

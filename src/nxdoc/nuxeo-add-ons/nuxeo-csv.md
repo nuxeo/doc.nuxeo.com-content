@@ -2,7 +2,7 @@
 title: Nuxeo CSV
 review:
     comment: ''
-    date: '2017-08-01'
+    date: '2018-01-15'
     status: ok
 labels:
     - lts2016-ok
@@ -12,7 +12,7 @@ labels:
     - nuxeo-csv
     - troger
     - csv-importer-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -199,14 +199,14 @@ history:
         version: '1'
 
 ---
-{{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) on Nuxeo University.
+
+{{#> callout type='info'}}
+Watch the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/89/nuxeo-csv-importer) on Nuxeo University.
+![]({{file name='university_csv.png'}} ?w=300,border=true)
 {{/callout}}
 
 {{! excerpt}}
-
 The [Nuxeo CSV addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv) enables users to proceed to a bulk import of documents in the Nuxeo Platform using a CSV file. This addon enables users to create documents with their metadata filled in, to import files with their main attachment or to create a tree structure.
-
 {{! /excerpt}} {{! multiexcerpt name='nuxeo_csv_functional_introduction'}}
 
 Installing this addon adds a button "Import a CSV file" for all users that have at least the Edit permission on any document in which it is possible to import a file. By default, this means workspaces and folders. If you configured other documents types in which it is possible to import files, then the button "Import a CSV file" can also be available (see the page [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})).
@@ -297,8 +297,8 @@ To import documents using Nuxeo CSV:
 |![]({{file name='nuxeo-csv-file-selected.png'}} ?w=450,border=true)|![]({{file name='CSV Importer beginning.png'}} ?w=450,border=true)|
 
 
-5.  Optionally check the box **Send me the import report by email** if you want to receive an email when the import is done which shows how the import went. This is useful in case of imports that take a long time.
-6.  Optionally check the box **Enable document import mode** if you want to import documents while maintaining original UUID, creation date, modification date, author and contributors.
+5.  Optionally check the box **Receive the import report by email** if you want to receive an email when the import is done which shows how the import went. This is useful in case of imports that take a long time.
+6.  Optionally check the box **Apply Date, Author and Dublin Core metadata** if you want to import documents while maintaining original UUID, creation date, modification date, author and contributors.
 7.  Click on the **Process** button.
     The import starts. You can either:
 
@@ -315,7 +315,7 @@ To import documents using Nuxeo CSV:
 </table>
 
     - Start a new import;
-    - Browse the application. If you checked the box **Send me the import report by email**, you receive an email once the import is completed.
+    - Browse the application. If you checked the box **Receive the import report by email**, you receive an email once the import is completed.
     ![]({{file name='CSVImporteremail.png'}} ?w=400,border=true)
 
     {{#> callout type='warning' }}

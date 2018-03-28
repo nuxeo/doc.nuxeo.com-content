@@ -2,7 +2,7 @@
 title: JSON Marshalling
 review:
     comment: ''
-    date: '2017-01-11'
+    date: '2018-01-15'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - troger
     - link-update
     - rest-api
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'

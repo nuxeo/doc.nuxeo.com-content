@@ -31,7 +31,7 @@ In this tutorial you will learn how to create and reuse custom elements in Studi
 
 ## Requirements
 
-- A [Contract document type]({{page version='' space='nxdoc' page='getting-started-with-nuxeo-studio'}}#step-3-create-a-contract-document-type) created in Studio Modeler
+- A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}) created in Studio Modeler
 - The Web UI addon installed on your instance
 
 ## Create an Element

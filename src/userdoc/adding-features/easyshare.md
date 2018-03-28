@@ -129,12 +129,6 @@ history:
 
 It allows you to create EasyShare folders in which you can either create documents or make them available from the folder for public sharing. Anyone having the public URL to the EasyShare folder can then download its content without having to log in to the Nuxeo Platform.
 
-{{#> callout type='info' }}
-
-The EasyShare plugin is not part of the supported list of Nuxeo Packages. It's been developed for internal use and has been made public for the interest of the Nuxeo community.
-
-{{/callout}}
-
 ## Creating an EasyShare Folder
 
 1.  Navigate to a Workspace and click on the **New** button, then click on EasyShare Folder in the pop-up.

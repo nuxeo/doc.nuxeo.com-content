@@ -86,8 +86,7 @@ The left tree is built using a query that is ran recursively. One of the clauses
       <pattern>
         SELECT * FROM Document WHERE ecm:parentId = ? AND ecm:isProxy = 0 AND
         ecm:mixinType != 'HiddenInNavigation'
-        AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState !=
-        'deleted'
+        AND ecm:isVersion = 0 AND ecm:isTrashed = 0
       </pattern>
       <sort column="dc:title" ascending="true" />
       <pageSize>50</pageSize>

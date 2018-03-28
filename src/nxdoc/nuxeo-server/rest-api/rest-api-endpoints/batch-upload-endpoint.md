@@ -214,16 +214,32 @@ This endpoint allows to upload a batch of files to a Nuxeo server. The uploaded 
         <th colspan="2">Uploading a File</th>
       </tr>
       <tr>
-        <td>POST `/api/v1/upload/`</td>
-        <td>Initializes a batch</td>
+        <td>GET `/api/v1/upload/handlers`</td>
+        <td>Lists all registered batch upload handlers</td>
+      </tr>
+      <tr>
+        <td>POST `/api/v1/upload/new/{handler}`</td>
+        <td>Initializes a new batch associated with the specified handler</td>
       </tr>
       <tr>
         <td>POST `/api/v1/upload/{batchId}/{fileIdx}`</td>
         <td>Uploads a file (see below for details on the [necessary headers](#uploading-a-file))</td>
       </tr>
       <tr>
+        <td>POST `/api/v1/upload/{batchId}/{fileIdx}/complete`</td>
+        <td>Notifies Batch Upload Handler that a file has been uploaded, JSON structure down below</td>
+      </tr>
+      <tr>
         <td>GET `/api/v1/upload/{batchId}`</td>
         <td>Gets information about a batch file</td>
+      </tr>
+      <tr>
+        <td>GET `/api/v1/upload/{batchId}/info`</td>
+        <td>Gets JSON structured information about a batch file</td>
+      </tr>
+      <tr>
+        <td>GET `/api/v1/upload/{batchId}/complete`</td>
+        <td>Notifies the Upload Handler that an upload was complete (not used in default handler)</td>
       </tr>
       <tr>
         <td>GET `/api/v1/upload/{batchId}/{fileIdx}`</td>
@@ -259,6 +275,13 @@ This endpoint allows to upload a batch of files to a Nuxeo server. The uploaded 
         <td>POST `/api/v1/upload/{batchId}/{fileIdx}/execute/{operationId}`</td>
         <td>Executes an Automation chain or operation using a specific file inside the batch as input</td>
       </tr>
+      <tr>
+        <th colspan="2">Deprecated Endpoints (Maintained for Historical reasons)</th>
+      </tr>
+      <tr>
+        <td>POST `/api/v1/upload/`</td>
+        <td>Initializes a batch with the default handler</td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -266,6 +289,7 @@ This endpoint allows to upload a batch of files to a Nuxeo server. The uploaded 
 ## Uploading Files
 
 ### Batch Initialization
+
 
 Before uploading any file, you need to initialize a batch, even if there is only one file to upload.
 
@@ -282,6 +306,17 @@ This request returns a 201 CREATED status code with the following JSON data:
 ```
 
 The batch id can be seen as an upload session id, especially for a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}}#-anchor-uploadingafileinchunks-uploading-a-file-in-chunks-resumable-).
+
+#### Using a Different Upload Handler
+
+On batch initialization you call:
+
+```
+POST http://NUXEO_SERVER/nuxeo/api/v1/upload/<provider>
+```
+
+This will associate all the upload mechanism to this specific provider. We recommend reading documentation regarding the specified provider. To upload several files using different providers, you need to use different batches with different providers.
+
 
 ### Uploading a File {{> anchor 'uploading-a-file'}}
 
@@ -336,8 +371,10 @@ Returns a 201 CREATED status code with the following JSON data:
 
 The value of the `uploadType` field is `normal` by default, it can be `chunked` if the file was [uploaded in chunks](#uploading-a-file-in-chunks).
 
+
 ### Getting Information about the Batch Files
 
+Two options are available:
 ```
 GET http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}
 ```
@@ -348,6 +385,21 @@ JSON response data:
 
 ```javascript
 [{"name": file1, "size": yyy, "uploadType": "normal"}, {"name": file2, "size": zzz, "uploadType": "normal"}]
+```
+
+**Or**
+
+```
+GET http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/info
+```
+
+Returns a 200 OK status code everytime and contains a structured JSON Object with batch information.
+
+JSON response data:
+
+```javascript
+{ "batchId": "<batchId>", "provider": "default", "fileEntries": [{"name": file1, "size": yyy, "uploadType": "normal"}, {"name": file2, "size": zzz, "uploadType": "normal"}] }
+
 ```
 
 ### Getting Information about a Specific Batch File
@@ -571,7 +623,7 @@ doc = doc.updateDocument();
 
 ## Learn More
 
-*   Follow the course [Data Capture / REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) at [Nuxeo University](https://university.nuxeo.com).
+*   Follow the course [Importing Documents / REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) at [Nuxeo University](https://university.nuxeo.com).
 *   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
 
 * * *

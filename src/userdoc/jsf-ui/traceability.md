@@ -2,7 +2,7 @@
 title: Traceability
 review:
     comment: ''
-    date: '2017-01-26'
+    date: '2018-02-26'
     status: ok
 labels:
     - editing
@@ -24,157 +24,157 @@ confluence:
     source_link: /display/USERDOC/Traceability
 tree_item_index: 800
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-25 10:20'
         message: ew Edit permissio
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 12:42'
         message: 'User doc reorganization: fix link to relations'
         version: '30'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-27 13:42'
         message: 'User doc reorganization: fix link to alerts'
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-05 12:56'
         message: ''
         version: '28'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-05 12:55'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-10 14:37'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-10 14:35'
         message: 'NXDOC-637: Review content and make it shorter'
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-02 23:35'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-02 23:34'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2014-02-12 11:54'
         message: ''
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-16 15:07'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-16 15:07'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-16 15:06'
         message: Added related content
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-25 14:47'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:13'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-01 17:05'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-01-17 18:32'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2012-10-02 15:47'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-27 17:59'
         message: Migrated to Confluence 4.0
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-27 17:59'
         message: Added TOC and fixed broken link
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-04-03 16:06'
         message: Upated required rights to restore or delete a version
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-01-18 16:38'
         message: Updated screenshots and added details on restoring archived versions
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-24 10:06'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-06-06 11:46'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-05-31 18:04'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2010-12-01 11:21'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-20 10:39'
         message: link update
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-20 10:38'
         message: link update
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-09-14 15:44'
         message: fixed broken links
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-05-10 18:39'
         message: fixed broken links
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-23 18:11'
         message: ''

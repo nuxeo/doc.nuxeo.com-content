@@ -2,7 +2,7 @@
 title: REST API Entity Types
 review:
     comment: ''
-    date: '2017-01-04'
+    date: '2018-01-15'
     status: ok
 labels:
     - content-review-lts2016
@@ -11,7 +11,7 @@ labels:
     - blogs
     - endpoint
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '13664833'
@@ -207,7 +207,7 @@ We reference here sample JSON objects expected by the Resources Endpoints, that 
 
 {{#> panel type='code' heading='GET Request'}}
 
-```
+```json
 {
   "entity-type": "document",
   "repository": "default",
@@ -279,7 +279,7 @@ When doing a POST request to create a document, you only need to specify a few e
 
 {{#> panel type='code' heading='POST Request Body'}}
 
-```
+```json
 {
   "entity-type": "document",
   "type": "File",
@@ -297,7 +297,7 @@ When doing a POST request to create a document, you only need to specify a few e
       {"firstName": "Chuck", "lastName": "Norris", "birthDate": "1968-12-25"},
       {"firstName": "Bruce", "lastName": "Lee", "birthDate": "1965-10-21"}
     ]
- }
+  }
 }
 ```
 
@@ -308,11 +308,11 @@ When doing a POST request to create a document, you only need to specify a few e
 
 {{! multiexcerpt name='restapi-doc-entity-put'}}
 
-A PUT request is even simpler : you only need to send the entity type and the metadata you wish to update in the properties object.
+A PUT request is even simpler: you only need to send the entity type and the metadata you wish to update in the properties object.
 
 {{#> panel type='code' heading='PUT Request Body'}}
 
-```
+```json
 {
   "entity-type": "document",
   "properties": {
@@ -326,16 +326,16 @@ A PUT request is even simpler : you only need to send the entity type and the me
 
 ## directoryEntry
 
-```
+```json
 {
-    "entity-type": "directoryEntry",
-    "directoryName": "continent",
-    "properties": {
-        "id": "oceania",
-        "obsolete": "0",
-        "ordering": "10000000",
-        "label": "label.directories.continent.oceania"
-    }
+  "entity-type": "directoryEntry",
+  "directoryName": "continent",
+  "properties": {
+    "id": "oceania",
+    "obsolete": "0",
+    "ordering": "10000000",
+    "label": "label.directories.continent.oceania"
+  }
 }
 ```
 
@@ -345,44 +345,43 @@ The list of properties depends on the schema of the directory. See the [develope
 
 ## directoryEntries
 
-```
+```json
 {
-    "entity-type": "directoryEntries",
-    "entries": [{
-        "entity-type": "directoryEntry",
-        "directoryName": "continent",
-        "properties": {
-            "id": "europe",
-            "obsolete": "0",
-            "ordering": "10000000",
-            "label": "label.directories.continent.europe"
-        }
-    }, {
-        "entity-type": "directoryEntry",
-        "directoryName": "continent",
-        "properties": {
-            "id": "africa",
-            "obsolete": "0",
-            "ordering": "10000000",
-            "label": "label.directories.continent.africa"
-        }
-    }, {
-        "entity-type": "directoryEntry",
-        "directoryName": "continent",
-        "properties": {
-            "id": "north-america",
-            "obsolete": "0",
-            "ordering": "10000000",
-            "label": "label.directories.continent.north-america"
-        }
+  "entity-type": "directoryEntries",
+  "entries": [{
+    "entity-type": "directoryEntry",
+    "directoryName": "continent",
+    "properties": {
+      "id": "europe",
+      "obsolete": "0",
+      "ordering": "10000000",
+      "label": "label.directories.continent.europe"
     }
-    }]
+  }, {
+    "entity-type": "directoryEntry",
+    "directoryName": "continent",
+    "properties": {
+      "id": "africa",
+      "obsolete": "0",
+      "ordering": "10000000",
+      "label": "label.directories.continent.africa"
+    }
+  }, {
+    "entity-type": "directoryEntry",
+    "directoryName": "continent",
+    "properties": {
+      "id": "north-america",
+      "obsolete": "0",
+      "ordering": "10000000",
+      "label": "label.directories.continent.north-america"
+    }
+  }]
 }
 ```
 
 ## group
 
-```js
+```json
 {
   "entity-type": "group",
   "groupname": "members",
@@ -394,7 +393,7 @@ The list of properties depends on the schema of the directory. See the [develope
 
 ## user
 
-```
+```json
 {
   "entity-type": "user",
   "id": "Bill",
@@ -411,38 +410,31 @@ The list of properties depends on the schema of the directory. See the [develope
       "hr_operational_managers"
     ]
   },
-  "extendedGroups": [
-    {
-      "name": "members",
-      "label": "Members group",
-      "url": "group/members"
-    },
-    {
-      "name": "ecm-experts",
-      "label": "ECM experts",
-      "url": "group/ecm-experts"
-    },
-    {
-      "name": "hr_operational_managers",
-      "label": "",
-      "url": "group/hr_operational_managers"
-    },
-    {
-      "name": "doc:default:ac6e425b-262b-41ed-bbdd-b79c22d06657_members",
-      "label": "doc:default:ac6e425b-262b-41ed-bbdd-b79c22d06657_members",
-      "url": "group/doc:default:ac6e425b-262b-41ed-bbdd-b79c22d06657_members"
-    },
-    {
-      "name": "doc:default:b6994e9f-636c-484b-bc46-d4fd9071e432_members",
-      "label": "doc:default:b6994e9f-636c-484b-bc46-d4fd9071e432_members",
-      "url": "group/doc:default:b6994e9f-636c-484b-bc46-d4fd9071e432_members"
-    },
-    {
-      "name": "doc:default:ac6e425b-262b-41ed-bbdd-b79c22d06657_administrators",
-      "label": "doc:default:ac6e425b-262b-41ed-bbdd-b79c22d06657_administrators",
-      "url": "group/doc:default:ac6e425b-262b-41ed-bbdd-b79c22d06657_administrators"
-    }
-  ],
+  "extendedGroups": [{
+    "name": "members",
+    "label": "Members group",
+    "url": "group/members"
+  }, {
+    "name": "ecm-experts",
+    "label": "ECM experts",
+    "url": "group/ecm-experts"
+  }, {
+    "name": "hr_operational_managers",
+    "label": "",
+    "url": "group/hr_operational_managers"
+  }, {
+    "name": "doc:default:ac6e425b-262b-41ed-bbdd-b79c22d06657_members",
+    "label": "doc:default:ac6e425b-262b-41ed-bbdd-b79c22d06657_members",
+    "url": "group/doc:default:ac6e425b-262b-41ed-bbdd-b79c22d06657_members"
+  }, {
+    "name": "doc:default:b6994e9f-636c-484b-bc46-d4fd9071e432_members",
+    "label": "doc:default:b6994e9f-636c-484b-bc46-d4fd9071e432_members",
+    "url": "group/doc:default:b6994e9f-636c-484b-bc46-d4fd9071e432_members"
+  }, {
+    "name": "doc:default:ac6e425b-262b-41ed-bbdd-b79c22d06657_administrators",
+    "label": "doc:default:ac6e425b-262b-41ed-bbdd-b79c22d06657_administrators",
+    "url": "group/doc:default:ac6e425b-262b-41ed-bbdd-b79c22d06657_administrators"
+  }],
   "isAdministrator": false,
   "isAnonymous": false
 }
@@ -456,39 +448,28 @@ The list of properties depends on the schema of the directory. See the [develope
 
 {{#> panel type='code' heading='GET Request Response '}}
 
-```
+```json
 {
-    "entity-type": "acls",
-    "acl":
-    [
-        {
-            "name": "local",
-            "ace":
-            [
-                {
-                    "username": "jdoe",
-                    "permission": "ReadWrite",
-                    "granted": true
-                }
-            ]
-        },
-        {
-            "name": "inherited",
-            "ace":
-            [
-                {
-                    "username": "Administrator",
-                    "permission": "Everything",
-                    "granted": true
-                },
-                {
-                    "username": "members",
-                    "permission": "Read",
-                    "granted": true
-                }
-            ]
-        }
-    ]
+  "entity-type": "acls",
+  "acl": [{
+    "name": "local",
+    "ace": [{
+      "username": "jdoe",
+      "permission": "ReadWrite",
+      "granted": true
+    }]
+  }, {
+    "name": "inherited",
+    "ace": [{
+      "username": "Administrator",
+      "permission": "Everything",
+      "granted": true
+    }, {
+      "username": "members",
+      "permission": "Read",
+      "granted": true
+    }]
+  }]
 }
 ```
 
@@ -500,31 +481,29 @@ The list of properties depends on the schema of the directory. See the [develope
 
 {{#> panel type='code' heading='GET Request'}}
 
-```
+```json
 {
-      "entity-type": "workflow",
-      "id": "05fd04ca-9f4f-42e8-89f1-5e529477f8da",
-      "name": "SerialDocumentReview",
-      "title": "wf.serialDocumentReview.SerialDocumentReview",
-      "state": "running",
-      "workflowModelName": "SerialDocumentReview",
-      "initiator": "Administrator",
-      "attachedDocumentIds": [
-        {
-          "id": "4d2a827e-3191-469e-8b61-fe7c07304c2c"
-        }
-      ],
-      "variables": {
-        "validationOrReview": "validation",
-        "participants": [
-          "user:john",
-          "group:mobilityExperts"
-        ],
-        "initiatorComment": "",
-        "index": 0
-      },
-      "graphResource": "http://demo.nuxeo.com/nuxeo/site/api/v1/workflow/05fd04ca-9f4f-42e8-89f1-5e529477f8da/graph"
-    }
+  "entity-type": "workflow",
+  "id": "05fd04ca-9f4f-42e8-89f1-5e529477f8da",
+  "name": "SerialDocumentReview",
+  "title": "wf.serialDocumentReview.SerialDocumentReview",
+  "state": "running",
+  "workflowModelName": "SerialDocumentReview",
+  "initiator": "Administrator",
+  "attachedDocumentIds": [{
+      "id": "4d2a827e-3191-469e-8b61-fe7c07304c2c"
+  }],
+  "variables": {
+    "validationOrReview": "validation",
+    "participants": [
+      "user:john",
+      "group:mobilityExperts"
+    ],
+    "initiatorComment": "",
+    "index": 0
+  },
+  "graphResource": "http://demo.nuxeo.com/nuxeo/site/api/v1/workflow/05fd04ca-9f4f-42e8-89f1-5e529477f8da/graph"
+}
 ```
 
 {{/panel}}
@@ -535,15 +514,13 @@ When doing a POST request to start a workflow, you only need to specify a few el
 
 {{#> panel type='code' heading='POST Request Body'}}
 
-```
+```json
 {
-      "entity-type": "workflow",
-      "workflowModelName": "ParallelDocumentReview",
-      "attachedDocumentIds": [
-        {
-          "id": "95cb364d-8cc7-45b0-b943-e3d68376694b"
-        }
-      ],
+  "entity-type": "workflow",
+  "workflowModelName": "ParallelDocumentReview",
+  "attachedDocumentIds": [{
+    "id": "95cb364d-8cc7-45b0-b943-e3d68376694b"
+  }]
 }
 ```
 
@@ -555,70 +532,59 @@ When doing a POST request to start a workflow, you only need to specify a few el
 
 {{#> panel type='code' heading='GET Request'}}
 
-```
+```json
 {
-      "entity-type": "task",
-      "id": "7bb67cd2-5848-4687-93af-30b3e715453e",
-      "name": "wf.serialDocumentReview.DocumentValidation",
-      "workflowInstanceId": "05fd04ca-9f4f-42e8-89f1-5e529477f8da",
-      "workflowModelName": "SerialDocumentReview",
-      "state": "opened",
-      "directive": "wf.serialDocumentReview.AcceptReject",
-      "created": "2015-02-24T23:12:53.81Z",
-      "dueDate": "2015-03-01T23:12:53.81Z",
-      "nodeName": "Task6d8",
-      "targetDocumentIds": [
-        {
-          "id": "4d2a827e-3191-469e-8b61-fe7c07304c2c"
-        }
-      ],
-      "actors": [
-        {
-          "id": "user:john"
-        }
-      ],
-      "comments": [],
-      "variables": {
-        "comment": "",
-        "participants": [
-          "user:john",
-          "group:mobilityExperts"
-        ],
-        "initiatorComment": ""
-      },
-      "taskInfo": {
-        "taskActions": [
-          {
-            "name": "reject",
-            "url": "http://demo.nuxeo.com/nuxeo/site/api/v1/task/7bb67cd2-5848-4687-93af-30b3e715453e/reject",
-            "label": "wf.serialDocumentReview.Reject"
-          },
-          {
-            "name": "validate",
-            "url": "http://demo.nuxeo.com/nuxeo/site/api/v1/task/7bb67cd2-5848-4687-93af-30b3e715453e/validate",
-            "label": "wf.serialDocumentReview.Validate"
-          }
-        ],
-        "layoutResource": {
-          "name": "Task6d8@taskLayout",
-          "url": "http://demo.nuxeo.com/nuxeo/site//layout-manager/layouts/?layoutName=Task6d8@taskLayout"
-        },
-        "schemas": [
-          {
-            "name": "var_Task6d8",
-            "url": "http://demo.nuxeo.com/nuxeo/site/api/v1/config/schemas/var_Task6d8"
-          },
-          {
-            "name": "dublincore",
-            "url": "http://demo.nuxeo.com/nuxeo/site/api/v1/config/schemas/dublincore"
-          },
-          {
-            "name": "route_node",
-            "url": "http://demo.nuxeo.com/nuxeo/site/api/v1/config/schemas/route_node"
-          }
-        ]
-      }
-    }
+  "entity-type": "task",
+  "id": "7bb67cd2-5848-4687-93af-30b3e715453e",
+  "name": "wf.serialDocumentReview.DocumentValidation",
+  "workflowInstanceId": "05fd04ca-9f4f-42e8-89f1-5e529477f8da",
+  "workflowModelName": "SerialDocumentReview",
+  "state": "opened",
+  "directive": "wf.serialDocumentReview.AcceptReject",
+  "created": "2015-02-24T23:12:53.81Z",
+  "dueDate": "2015-03-01T23:12:53.81Z",
+  "nodeName": "Task6d8",
+  "targetDocumentIds": [{
+    "id": "4d2a827e-3191-469e-8b61-fe7c07304c2c"
+  }],
+  "actors": [{
+    "id": "user:john"
+  }],
+  "comments": [],
+  "variables": {
+    "comment": "",
+    "participants": [
+      "user:john",
+      "group:mobilityExperts"
+    ],
+    "initiatorComment": ""
+  },
+  "taskInfo": {
+    "taskActions": [{
+      "name": "reject",
+      "url": "http://demo.nuxeo.com/nuxeo/site/api/v1/task/7bb67cd2-5848-4687-93af-30b3e715453e/reject",
+      "label": "wf.serialDocumentReview.Reject"
+    }, {
+      "name": "validate",
+      "url": "http://demo.nuxeo.com/nuxeo/site/api/v1/task/7bb67cd2-5848-4687-93af-30b3e715453e/validate",
+      "label": "wf.serialDocumentReview.Validate"
+    }],
+    "layoutResource": {
+      "name": "Task6d8@taskLayout",
+      "url": "http://demo.nuxeo.com/nuxeo/site//layout-manager/layouts/?layoutName=Task6d8@taskLayout"
+    },
+    "schemas": [{
+      "name": "var_Task6d8",
+      "url": "http://demo.nuxeo.com/nuxeo/site/api/v1/config/schemas/var_Task6d8"
+    }, {
+      "name": "dublincore",
+      "url": "http://demo.nuxeo.com/nuxeo/site/api/v1/config/schemas/dublincore"
+    }, {
+      "name": "route_node",
+      "url": "http://demo.nuxeo.com/nuxeo/site/api/v1/config/schemas/route_node"
+    }]
+  }
+}
 ```
 
 {{/panel}}
@@ -634,15 +600,14 @@ In the example below, we'll use the task we got from the GET request above whose
 
 {{#> panel type='code' heading='PUT Request Body'}}
 
-```
+```json
 {
-      "entity-type": "task",
-      "id": "7bb67cd2-5848-4687-93af-30b3e715453e",
-      "variables": {
-        "comment": "Document reviewed and approved on my side.",
-      },
-      }
-    }
+  "entity-type": "task",
+  "id": "7bb67cd2-5848-4687-93af-30b3e715453e",
+  "variables": {
+    "comment": "Document reviewed and approved on my side.",
+  }
+}
 ```
 
 {{/panel}}

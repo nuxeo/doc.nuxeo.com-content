@@ -96,7 +96,8 @@ history:
         date: '2015-09-30 09:40'
         message: ''
         version: '1'
-
+version_override:
+    LTS 2016: 810/nxdoc/web-ui
 ---
 {{#> callout type='tip'}}
 Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/76/nuxeo-web-ui-stack-introduction) on Nuxeo University.

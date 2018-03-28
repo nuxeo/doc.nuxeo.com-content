@@ -2,7 +2,7 @@
 title: Workflow and Task Resources Endpoints
 review:
     comment: ''
-    date: '2017-01-06'
+    date: '2018-01-16'
     status: ok
 details:
     howto:
@@ -15,7 +15,7 @@ labels:
     - rest-api
     - troger
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 tree_item_index: 300
 
@@ -190,7 +190,7 @@ Below is an example of how to start a Parallel Review Workflow and complete it w
     GET http://NUXEO_SERVER/nuxeo/api/v1/id/{documentId}/@task?userId={userId}&workflowInstanceId={workflowId}&workflowModelName=ParallelDocumentReview
     ```
 
-    A task object is returned, with the respective `taskId`. In our case, the first step would return a Choose Participants task, where the user that started the workflow must choose the participants involved in the review. The task can than be completed with a PUT request to the `task` endpoint, the respective action being supplied at the end of the path.
+    A task object is returned, with the respective `taskId`. In our case, the first step would return a Choose Participants task, where the user that started the workflow must choose the participants involved in the review. The task can then be completed with a PUT request to the `task` endpoint, the respective action being supplied at the end of the path.
 
 3.  To start the review, use the `start_review` action in the request.
 
@@ -202,7 +202,6 @@ Below is an example of how to start a Parallel Review Workflow and complete it w
         "variables":{
             "comment":{initial_comment},
             "participants":”{userIds}”,
-            "assignees":"{userIds}",
             "end_date":”{end_date}”
         }
     }
@@ -239,7 +238,7 @@ Below is an example of how to start a Parallel Review Workflow and complete it w
 
 *   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
 *   Checkout the Nuxeo REST API explorer of your instance at `http://NUXEO_SERVER/nuxeo/api/v1/doc`.
-*   A client sample [nuxeo-travel-expenses](https://github.com/nuxeo/nuxeo-travel-expenses) (available on [GitHub](https://github.com/nuxeo/nuxeo-travel-expenses)) based on Web Components and [Polymer](https://www.polymer-project.org) demonstrates how to use the workflow REST API.
+*   A client sample [nuxeo-travel-expenses](https://github.com/nuxeo/nuxeo-travel-expenses) based on Web Components and [Polymer](https://www.polymer-project.org) demonstrates how to use the workflow REST API.
 
 * * *
 

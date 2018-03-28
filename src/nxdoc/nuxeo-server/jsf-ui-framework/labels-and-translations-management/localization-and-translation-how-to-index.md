@@ -2,7 +2,7 @@
 title: Localization and Translation How-To Index
 review:
     comment: ''
-    date: '2016-12-23'
+    date: '2018-01-02'
     status: ok
 labels:
     - lts2016-ok
@@ -11,7 +11,7 @@ labels:
     - mlumeau
     - index
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '19235763'
     ajs-parent-page-title: Labels and Translations Management
@@ -87,8 +87,6 @@ history:
 This section provides how-tos to customize the localization and translation behavior of the Nuxeo Platform.
 
 {{! /excerpt}}
-
-For the different ways to contribute translations, see the page [How to Translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxeo-platform'}}).&nbsp;
 
 &nbsp;
 

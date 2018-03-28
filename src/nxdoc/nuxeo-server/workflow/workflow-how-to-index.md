@@ -2,14 +2,14 @@
 title: Workflow How-To Index
 review:
     comment: ''
-    date: '2016-12-23'
+    date: '2018-01-02'
     status: ok
 labels:
     - lts2016-ok
     - workflow
     - mlumeau
     - index
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '12913723'
     ajs-parent-page-title: Workflow

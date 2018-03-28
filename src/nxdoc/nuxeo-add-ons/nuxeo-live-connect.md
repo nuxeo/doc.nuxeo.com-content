@@ -301,11 +301,13 @@ history:
         version: '1'
 
 ---
-{{> wistia_video id='42en4rinfh'}}
+{{#> callout type='info'}}
+Browsers that block pop-ups may affect the behavior of Nuxeo Live Connect. If you face any difficulties, make sure to check your browser settings.
+{{/callout}}
 
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/learn/public/course/view/elearning/55/WhatsnewinNuxeoPlatformLTS2015%3F) on [Nuxeo University](https://university.nuxeo.com)
-
-{{! excerpt}}
+{{#> callout type='tip'}}
+Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/55/whats-new-in-nuxeo-platform-lts-2015) on Nuxeo University.
+{{/callout}}
 
 Live Connect allows you to create a content application that handles cloud files (Dropbox, Google Drive, Box, OneDrive...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it. This allows the user to benefit from thumbnailing service, full text, conversions, etc.
 
@@ -476,31 +478,38 @@ The console redirects you to a page where you can see the client id and secret i
 6.  Save.
 7.  Now just create a new Google Drive document
 
-You are ready to use it, just go in the workspace section and create a file object: you can use the Google Drive file picker
+You are ready to use it, just go in the workspace section and create a file object: you can use the Google Drive file picker.
+
+{{#> callout type='note' }}
+To use the Google Drive file picker with Internet Explorer 11, the following URL must be added to IE11's trusted sites
+zone: https://accounts.google.com.
+{{/callout}}
 
 ### Setting Up Live Connect for Dropbox
 
 **Step 1: Preparing your application accounts on the Dropbox App console**
 
 1.  Go to [https://www.dropbox.com/developers/apps](https://www.dropbox.com/developers/apps).
-2.  Click on **Create app**.
-4.  Select **Dropbox API**.
-5.  Select the permission Type **Full Dropbox**.
+1.  Click on **Create app**.
+1.  Select **Dropbox API**.
+1.  Select the permission Type **Full Dropbox**.
 
     {{#> callout type='info' }}
     The **App folder** permission won't work due to limitations in Dropbox API.
     {{/callout}}
 
-6.  Enter the name of your application.
-7.  Click on the button **Create app**.
-8.  From the **Settings** tab, copy the App key and App secret.
-9.  In the **OAuth 2** > **Redirect URIs** set the following URL, adapting the hostname and port to your case: `http://NUXEO_SERVER/nuxeo/site/oauth2/dropbox/callback`.
+1.  Enter the name of your application.
+1.  Click on the button **Create app**.
+1.  From the **Settings** tab, copy the App key and App secret.
+1.  In the **OAuth 2** > **Redirect URIs** set the following URL, adapting the hostname and port to your case: `http://NUXEO_SERVER/nuxeo/site/oauth2/dropbox/callback`.
+
+    {{#> callout type='info' }}
+    Please note that Dropbox only allows http for localhost. For all other sites https must be used. See [HTTP and HTTPS Reverse-Proxy Configuration](/x/GAFc).
+    {{/callout}}
+
+1. Fill in your **Chooser/Saver domains** with your domain name.
 
 {{#> callout type='info' }}
-
-Please note that Dropbox only allows http for localhost. For all other sites https must be used. See [HTTP and HTTPS Reverse-Proxy Configuration](/x/GAFc).
-
-{{/callout}} {{#> callout type='info' }}
 
 To enable additional users on your application, go to **Settings** > **Development users** and click on **Enable additional users.**
 {{/callout}}
@@ -515,6 +524,11 @@ To enable additional users on your application, go to **Settings** > **Developme
 5.  Paste the Dropbox App secret in **Client Secret**.
 6.  Make sure the **Enabled** box is checked.
 7.  Now just create a new Dropbox document
+
+{{#> callout type='note' }}
+To use the Dropbox file picker with Internet Explorer 11, the following URL must be added to IE11's trusted sites
+zone: https://www.dropbox.com.
+{{/callout}}
 
 ### Setting Up Live Connect for Box
 
@@ -543,6 +557,13 @@ To enable additional users on your application, go to **Settings** > **Developme
 6.  Make sure the **Enabled** box is checked.
 7.  Save.
 8.  Now just create a new Box document
+
+{{#> callout type='note' }}
+To use the Box file picker with Internet Explorer 11, the following URLs must be added to IE11's trusted sites
+zone:
+- https://app.box.com
+- https://cdn01.boxcdn.net
+{{/callout}}
 
 ### Setting Up Live Connect for OneDrive
 
@@ -574,6 +595,11 @@ Live Connect for OneDrive is compatible with Nuxeo Platform 8.2+.
 6.  Make sure the **Enabled** box is checked.
 7.  Save.
 8.  Now just create a new OneDrive document
+
+{{#> callout type='note' }}
+To use the OneDrive file picker with Internet Explorer 11, the following URL must be added to IE11's trusted sites
+zone: https://api.onedrive.com.
+{{/callout}}
 
 ### Setting Up Live Connect for OneDrive for Business
 
@@ -619,6 +645,17 @@ For OneDrive for Business follow steps [here](https://dev.onedrive.com/app-regis
 8.  Make sure the **Enabled** box is checked.
 9.  Save.
 10.  Now just create a new OneDrive document
+
+### Adding Trusted Sites to Internet Explorer 11
+
+In order to be able to use the external file pickers provided by Live Connect, certain URLs must be added to the list of trusted websites. This can be done as follows:
+
+1. Go to **Settings**
+1. Click the **Internet Options** menu entry
+1. Go to **Security** > **Trusted sites**
+1. Click on the **Sites** button and add your URL
+
+![]({{file name='adding_trusted_sites_ie11.png'}} ?w=400,border=true)
 
 ## Advanced Live Connect Configuration
 

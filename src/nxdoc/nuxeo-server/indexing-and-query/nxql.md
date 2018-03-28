@@ -529,7 +529,7 @@ An `<op>` can be:
 
 A `<literal>` can be:
 
-*   `<string>`: a string delimited by single quotes (`'`) or for Java compatibility double quotes (`"`). To use the string delimiter itself inside the string, it must be escaped by a backslash ( `\ '` or `\"`) (this is contrary to the standard SQL syntax which would double the delimiter). The backslash itself is also escaped by a backslash ( `\ \` ). The special `\n`, `\r` and `\t` can also be used.
+*   `<string>`: a string delimited by single quotes (`'`) or for Java compatibility double quotes (`"`). To use the string delimiter itself inside the string, it must be escaped by a backslash ( `\'` or `\"`) (this is contrary to the standard SQL syntax which would double the delimiter). The backslash itself is also escaped by a backslash ( `\\` ). The special `\n`, `\r` and `\t` can also be used.
 *   `<integer>`: an integer with optional minus sign.
 *   `<float>`: a float.
 *   `TIMESTAMP <timestamp>`: a timestamp in ISO format _yyyy_ `-` _MM_ `-` _dd_ _hh_ `:` _mm_ `:` _ss_[`.` _sss_] (the space separator can be replaced by a `T`).
@@ -654,11 +654,15 @@ The following properties are not legal as document property names, but are allow
 
 **ecm:currentLifeCycleState**: the document lifecycle state (`DocumentModel.getCurrentLifeCycleState()`).
 
+**ecm:isTrashed**: `1` if the document is in the trash and `0` if not. This can only be compared to `1` or `0`. (Since Nuxeo 10.1)
+
 **ecm:isCheckedIn**: `1` if the document is checked in and `0` if not (the opposite of `DocumentModel.isCheckedOut()`). This can only be compared to `1` or `0`. (Since Nuxeo 5.7.3)
 
 **ecm:isProxy**: `1` for proxies and `0` for non-proxies (`DocumentModel.isProxy()`). This can only be compared to `1` or `0`.
 
-**ecm:isVersion** or **ecm:isCheckedInVersion**: `1` for versions and `0` for non-version (`DocumentModel.isVersion()`). This can only be compared to `1` or `0`. (The name **ecm:isVersion** is available since Nuxeo 5.7.3)
+**ecm:isVersion**: `1` for versions and `0` for non-version (`DocumentModel.isVersion()`). This can only be compared to `1` or `0`.
+
+**ecm:isCheckedInVersion**: deprecated name for **ecm:isVersion**.
 
 **ecm:versionLabel**: the version label for versions (`DocumentModel.getVersionLabel()` only for a version), `NULL` if it's not a version.
 
@@ -734,8 +738,8 @@ SELECT * FROM Document WHERE dc:created >= TIMESTAMP '2007-03-15 00:00:00'
 SELECT * FROM Document WHERE dc:created >= DATE '2007-02-15' AND dc:created <= DATE '2007-03-15'
 SELECT * FROM Document WHERE my:boolean = 1
 SELECT * FROM Document WHERE ecm:isProxy = 1
-SELECT * FROM Document WHERE ecm:isCheckedInVersion = 1
-SELECT * FROM Document WHERE ecm:isProxy = 0 AND ecm:isCheckedInVersion = 0
+SELECT * FROM Document WHERE ecm:isVersion = 1
+SELECT * FROM Document WHERE ecm:isProxy = 0 AND ecm:isVersion = 0
 SELECT * FROM Document WHERE ecm:uuid = 'c5904f77-299a-411e-8477-81d3102a81f9'
 SELECT * FROM Document WHERE ecm:name = 'foo'
 SELECT * FROM Document WHERE ecm:parentId = '5442fff5-06f1-47c9-ac59-1e10ef8e985b'
@@ -754,7 +758,7 @@ SELECT * FROM Document WHERE ecm:mixinType IN ('Folderish', 'Downloadable')
 SELECT * FROM Document WHERE ecm:mixinType NOT IN ('Folderish', 'Downloadable')
 SELECT * FROM Document WHERE ecm:currentLifeCycleState = 'project'
 SELECT * FROM Document WHERE ecm:versionLabel = '1.0'
-SELECT * FROM Document WHERE ecm:currentLifeCycleState <> 'deleted'
+SELECT * FROM Document WHERE ecm:isTrashed = 0
 SELECT * FROM Document WHERE ecm:fulltext = 'world'
 SELECT * FROM Document WHERE dc:title = 'hello world 1' ORDER BY ecm:currentLifeCycleState
 SELECT * FROM Document WHERE dc:title = 'hello world 1' ORDER BY ecm:versionLabel
@@ -815,7 +819,7 @@ Since Nuxeo 5.7.3 you can match the "checked in" state of a document:
 Since Nuxeo 5.7.3 you can use additional version-related properties:
 
 ```sql
-SELECT * FROM Document WHERE ecm:isVersion = 1                        -- new name for ecm:isCheckedInVersion
+SELECT * FROM Document WHERE ecm:isVersion = 1
 SELECT * FROM Document WHERE ecm:isLatestVersion = 1
 SELECT * FROM Document WHERE ecm:isLatestMajorVersion = 1
 SELECT * FROM Document WHERE ecm:versionCreated >= TIMESTAMP '2007-03-15 00:00:00'

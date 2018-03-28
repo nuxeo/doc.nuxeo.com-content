@@ -1592,13 +1592,13 @@ smtp</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.vcs.fulltext.disabled`</td>
-<td colspan="1">Since Nuxeo 5.8\. Whether full text indexing and querying should be completely disabled in the repository. See [VCS Configuration]({{page space='admindoc' page='vcs-configuration'}}) for details.</td>
+<td colspan="1">Since Nuxeo 5.8\. Whether full text indexing and querying should be completely disabled in the repository. See [VCS]({{page version='' space='nxdoc' page='vcs'}}) for details.</td>
 <td colspan="1">false</td>
 <td colspan="1">Since Nuxeo 5.8</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.vcs.fulltext.search.disabled`</td>
-<td colspan="1">Since Nuxeo 6.0\. Full text querying from VCS (database backend) is disabled, full text extraction is done. See [VCS Configuration]({{page space='admindoc' page='vcs-configuration'}}) for details.</td>
+<td colspan="1">Since Nuxeo 6.0\. Full text querying from VCS (database backend) is disabled, full text extraction is done. See [VCS]({{page version='' space='nxdoc' page='vcs'}}) for details.</td>
 <td colspan="1">false</td>
 <td colspan="1">Since Nuxeo 6.0</td>
 </tr>
@@ -1610,19 +1610,19 @@ smtp</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.vcs.noddl`</td>
-<td colspan="1">Since Nuxeo 5.8\. Where DDL generation should be disabled in the repository. See [VCS Configuration ]({{page page='vcs'}}) for details.</td>
+<td colspan="1">Since Nuxeo 5.8\. Where DDL generation should be disabled in the repository. See [VCS]({{page version='' space='nxdoc' page='vcs'}}) for details.</td>
 <td colspan="1">false</td>
 <td colspan="1">Since Nuxeo 5.8</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.vcs.ddlmode`</td>
-<td colspan="1">Since Nuxeo 7.10-HF01and Nuxeo 8.1\. What kind of DDL generation is done. See [VCS Configuration]({{page page='vcs'}}) for details.</td>
+<td colspan="1">Since Nuxeo 7.10-HF01 and Nuxeo 8.1\. What kind of DDL generation is done. See [VCS]({{page version='' space='nxdoc' page='vcs'}}) for details.</td>
 <td colspan="1">execute</td>
 <td colspan="1">Since Nuxeo 7.10-HF01 and Nuxeo 8.1</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.vcs.idtype`</td>
-<td colspan="1">Since Nuxeo 5.8\. The type of `id` column. See [VCS Configuration]({{page page='vcs'}}) for details.</td>
+<td colspan="1">Since Nuxeo 5.8\. The type of `id` column. See [VCS]({{page version='' space='nxdoc' page='vcs'}}) for details.</td>
 <td colspan="1">varchar</td>
 <td colspan="1">Since Nuxeo 5.8</td>
 </tr>
@@ -2050,7 +2050,7 @@ Also turning this option to false enable PostgreSQL and Oracle to use an index o
 </tr>
 <tr>
 <td colspan="1">`audit.elasticsearch.enabled`</td>
-<td colspan="1">Since Nuxeo 7.3\. See [Disabling Elasticsearch for Audit Logs]({{page space='ADMINDOC' page='Elasticsearch Setup#ElasticsearchSetup-DisablingElasticsearchforAuditLogs'}}).<br/>
+<td colspan="1">Since Nuxeo 7.3\. See [Disabling Elasticsearch for Audit Logs]({{page version='' space='nxdoc' page='elasticsearch-setup'}}#disabling-elasticsearch-for-audit-logs).<br/>
 Defaults to false on server upgrade, true on new install.</td>
 <td colspan="1">false | true</td>
 <td colspan="1">Since Nuxeo 7.3</td>
@@ -2069,19 +2069,19 @@ Defaults to false on server upgrade, true on new install.</td>
 </tr>
 <tr>
 <td colspan="1">`audit.elasticsearch.migration`</td>
-<td colspan="1">Since Nuxeo 7.3\. See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page space='ADMINDOC' page='Elasticsearch Setup#ElasticsearchSetup-TriggeringSQLtoElasticsearchAuditLogsMigration'}})</td>
+<td colspan="1">Since Nuxeo 7.3\. See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page version='710' space='admindoc' page='elasticsearch-setup'}}#triggering-sql-to-elasticsearch-audit-logs-migration)</td>
 <td colspan="1">false</td>
 <td colspan="1">Since Nuxeo 7.3</td>
 </tr>
 <tr>
 <td colspan="1">`audit.elasticsearch.migration.batchSize`</td>
-<td colspan="1">Since Nuxeo 7.3\. See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page space='ADMINDOC' page='Elasticsearch Setup#ElasticsearchSetup-TriggeringSQLtoElasticsearchAuditLogsMigration'}})</td>
+<td colspan="1">Since Nuxeo 7.3\. See [Triggering SQL to Elasticsearch Audit Logs Migration]({{page version='710' space='admindoc' page='elasticsearch-setup'}}#triggering-sql-to-elasticsearch-audit-logs-migration)</td>
 <td colspan="1">1000</td>
 <td colspan="1">Since Nuxeo 7.3</td>
 </tr>
 <tr>
 <td colspan="1">`elasticsearch.httpReadOnly.baseUrl`</td>
-<td colspan="1">Required when using a standalone Elasticsearch instance. See [Elasticsearch Passthrough]({{page space='NXDOC' page='Elasticsearch Passthrough#ElasticsearchPassthrough-Requirement'}})</td>
+<td colspan="1">Required when using a standalone Elasticsearch instance. See [Elasticsearch Passthrough]({{page version='' space='nxdoc' page='elasticsearch-passthrough'}}@requirement)</td>
 <td colspan="1">http://localhost:9200/</td>
 <td colspan="1">Since Nuxeo 7.10</td>
 </tr>

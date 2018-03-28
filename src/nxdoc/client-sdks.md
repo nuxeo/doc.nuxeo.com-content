@@ -2,13 +2,13 @@
 title: Client SDKs
 review:
     comment: ''
-    date: '2016-12-23'
+    date: '2018-01-02'
     status: ok
 labels:
     - lts2016-ok
     - home
     - mlumeau
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950332'
     ajs-parent-page-title: Developer Documentation Center
@@ -59,10 +59,9 @@ history:
         version: '1'
 
 ---
-The platform already provides multiple clients for accessing the platform remotely.&nbsp;We also provide [a test suite]({{page page='client-api-test-suite-tck'}}) from which you can get inspiration if you want to write a new client for Nuxeo (for example in Ruby, in Golang, ...) and want to assert your level of compliance.
+The platform already provides multiple clients for accessing the platform remotely.
 
 {{! multiexcerpt name='rest-api-clients'}}
-
 *   [JavaScript Client]({{page space='NXDOC' page='JavaScript Client'}})
 *   [Java Client]({{page space='NXDOC' page='java-client'}})
 *   [Python Client]({{page space='NXDOC' page='Python Client'}})
@@ -70,6 +69,5 @@ The platform already provides multiple clients for accessing the platform remote
 *   [iOS Client]({{page space='NXDOC' page='iOS Client'}})
 *   [Android Client]({{page space='NXDOC' page='android-client'}})
 *   [PHP Automation Client]({{page space='NXDOC' page='PHP Automation+Client'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A PHP automation client is made available on GitHub. You can use it and ask for commit rights on the project if you want to improve it or fix a bug. The project contains the library and some sample use cases.</span>
-*   [Client API Test suite (TCK)](/pages/viewpage.action?pageId=14255551)&nbsp;&mdash;&nbsp;<span class="smalltext">This chapter provides a test suite that can be used to test the implementation of an automation client library.</span>
 *   [Using cURL]({{page space='NXDOC' page='Using cURL'}})&nbsp;&mdash;&nbsp;<span class="smalltext">In this example we are using the UNIX curl command line tool to demonstrate how to invoke remote operations.</span>
 {{! /multiexcerpt}}

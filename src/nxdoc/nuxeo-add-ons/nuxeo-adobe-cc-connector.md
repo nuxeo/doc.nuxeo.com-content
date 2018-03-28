@@ -8,6 +8,7 @@ review:
 labels:
     - lts2016-ok
     - content-review-lts2017
+    - lmcintyre
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -22,102 +23,102 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Adobe+CC+Connector
 tree_item_index: 900
 history:
-    - 
+    -
         author: Anne Jubert
         date: '2016-09-05 14:35'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 10:24'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 10:23'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 10:23'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 10:22'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 10:21'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 09:07'
         message: ''
         version: '14'
-    - 
+    -
         author: Anne Jubert
         date: '2016-09-02 13:32'
         message: ''
         version: '13'
-    - 
+    -
         author: Andrei Nechaev
         date: '2016-09-02 13:25'
         message: ''
         version: '12'
-    - 
+    -
         author: Anne Jubert
         date: '2016-09-02 12:43'
         message: ''
         version: '11'
-    - 
+    -
         author: Anne Jubert
         date: '2016-09-02 12:42'
         message: ''
         version: '10'
-    - 
+    -
         author: Anne Jubert
         date: '2016-09-02 12:39'
         message: ''
         version: '9'
-    - 
+    -
         author: Anne Jubert
         date: '2016-09-02 12:29'
         message: ''
         version: '8'
-    - 
+    -
         author: Anne Jubert
         date: '2016-09-02 12:24'
         message: ''
         version: '7'
-    - 
+    -
         author: Anne Jubert
         date: '2016-09-02 12:13'
         message: ''
         version: '6'
-    - 
+    -
         author: Anne Jubert
         date: '2016-09-02 10:14'
         message: ''
         version: '5'
-    - 
+    -
         author: Anne Jubert
         date: '2016-09-02 09:56'
         message: ''
         version: '4'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-30 11:31'
         message: ''
         version: '3'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-30 11:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Anne Jubert
         date: '2016-06-30 10:39'
         message: ''

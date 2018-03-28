@@ -2,7 +2,7 @@
 title: 'Enriching, Extending and Overriding Existing Marshallers'
 review:
     comment: ''
-    date: '2017-01-04'
+    date: '2017-12-12'
     status: ok
 labels:
     - content-review-lts2016
@@ -10,7 +10,7 @@ labels:
     - troger
     - json
     - marshalling
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 tree_item_index: 200
 
@@ -76,10 +76,10 @@ Of course, like any JSON marshaller, you have to register it.
 
 ```xml
 <?xml version="1.0"?>
-    <component name="org.nuxeo.example.marshallers" version="1.0.0">
-        <extension target="org.nuxeo.ecm.core.io.MarshallerRegistry" point="marshallers">
-            <register class="org.nuxeo.example.BreadcrumbJsonEnricher" enable="true" />
-        </extension>
+<component name="org.nuxeo.example.marshallers" version="1.0.0">
+    <extension target="org.nuxeo.ecm.core.io.MarshallerRegistry" point="marshallers">
+        <register class="org.nuxeo.example.BreadcrumbJsonEnricher" enable="true" />
+    </extension>
 </component>
 ```
 

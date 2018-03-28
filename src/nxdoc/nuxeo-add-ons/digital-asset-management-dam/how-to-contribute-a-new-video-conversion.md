@@ -2,7 +2,7 @@
 title: How to Contribute a New Video Conversion
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2018-01-15'
     status: ok
 details:
     howto:
@@ -20,7 +20,7 @@ labels:
     - video
     - convert-component
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866704'

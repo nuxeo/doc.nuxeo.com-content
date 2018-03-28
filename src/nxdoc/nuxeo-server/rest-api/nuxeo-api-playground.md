@@ -1,15 +1,9 @@
 ---
-title: 'HOWTO: Nuxeo API Playground'
+title: 'Nuxeo API Playground'
 review:
     comment: ''
-    date: '2017-01-12'
+    date: '2017-12-12'
     status: ok
-details:
-    howto:
-        excerpt: Learn how to use the API Playground and leverage the Nuxeo REST API.
-        level: Advanced
-        tool: Code
-        topics: REST API
 labels:
     - lts2016-ok
     - howto
@@ -21,7 +15,7 @@ labels:
     - excerpt
     - multiexcerpt
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 version_override:
     LTS 2015: 710/nxdoc/use-nuxeo-api-playground-to-discover-the-api
@@ -37,7 +31,7 @@ confluence:
     shortlink: 9QUuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/9QUuAQ'
     source_link: /display/NXDOC/Use+Nuxeo+API+Playground+to+Discover+the+API
-tree_item_index: 100
+tree_item_index: 750
 history:
     -
         author: Solen Guitter
@@ -307,9 +301,7 @@ history:
 
 ---
 {{! excerpt}}
-
-Nuxeo offers an API Playground, an interactive way to discover the Nuxeo Platform API. This module runs fully client-side in JavaScript. You can use it on any server as long as you deploy a [CORS configuration](#setting-up-cors-configuration) on it.
-
+Nuxeo offers an API Playground, an interactive way to discover the Nuxeo Platform REST API. This module runs fully client-side in JavaScript. You can use it on any server as long as you deploy a [CORS configuration](#setting-up-cors-configuration) on it.
 {{! /excerpt}}
 
 ## Functional Overview

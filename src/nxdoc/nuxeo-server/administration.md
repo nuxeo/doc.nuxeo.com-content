@@ -2,11 +2,11 @@
 title: Administration
 review:
     comment: ''
-    date: '2016-12-23'
+    date: '2018-01-02'
     status: ok
 labels:
     - lts2016-ok
-    - content-review-lts2017
+    - lts2017-ok
     - home
     - mlumeau
 is_overview: true
@@ -60,9 +60,9 @@ history:
 {{#> panel type='secondary' match_height='true'}}
 ### Best Practices and Tutorials
 
-- [Setup best practices]({{page version='' space='nxdoc' page='setup-best-practices'}})
-- [Set up email notifications]({{page version='' space='nxdoc' page='set-up-email-notification'}})
-- [How to change context path]({{page version='' space='nxdoc' page='how-to-change-context-path'}})
+- [Setup Best Practices]({{page version='' space='nxdoc' page='setup-best-practices'}})
+- [Set up Email Notifications]({{page version='' space='nxdoc' page='set-up-email-notification'}})
+- [How to Change Context Path]({{page version='' space='nxdoc' page='how-to-change-context-path'}})
 {{/panel}}
 </div>
 
@@ -70,9 +70,9 @@ history:
 {{#> panel type='secondary' match_height='true'}}
 ### Nuxeo Server Configuration
 
-- [Configuration parameter index]({{page version='' space='nxdoc' page='configuration-parameters-index-nuxeoconf'}})
-- [Configuration templates]({{page version='' space='nxdoc' page='configuration-templates'}})
-- [Repository configuration]({{page version='' space='nxdoc' page='repository-configuration'}})
+- [Configuration Parameter Index]({{page version='' space='nxdoc' page='configuration-parameters-index-nuxeoconf'}})
+- [Configuration Templates]({{page version='' space='nxdoc' page='configuration-templates'}})
+- [Repository Configuration]({{page version='' space='nxdoc' page='repository-configuration'}})
 {{/panel}}
 
 </div>
@@ -85,9 +85,9 @@ history:
 {{#> panel type='secondary' match_height='true'}}
 ### Data Configuration
 
-- [Database configuration]({{page version='' space='nxdoc' page='database-configuration'}})
-- [Elasticsearch configuration]({{page version='' space='nxdoc' page='elasticsearch-setup'}})
-- [Redis configuration]({{page version='' space='nxdoc' page='redis-configuration'}})
+- [Database Configuration]({{page version='' space='nxdoc' page='database-configuration'}})
+- [Elasticsearch Configuration]({{page version='' space='nxdoc' page='elasticsearch-setup'}})
+- [Redis Configuration]({{page version='' space='nxdoc' page='redis-configuration'}})
 {{/panel}}
 </div>
 
@@ -95,8 +95,8 @@ history:
 {{#> panel type='secondary' match_height='true'}}
 ### Security
 
-- [Security recommendations]({{page version='' space='nxdoc' page='security-recommendations'}})
-- [Data encryption]({{page version='' space='nxdoc' page='sensitive-configuration-data-encryption'}})
+- [Security Recommendations]({{page version='' space='nxdoc' page='security-recommendations'}})
+- [Data Encryption]({{page version='' space='nxdoc' page='sensitive-configuration-data-encryption'}})
 - [Implement Encryption]({{page version='' space='nxdoc' page='implementing-encryption'}})
 {{/panel}}
 </div>

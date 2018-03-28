@@ -2,7 +2,7 @@
 title: Renditions
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2018-01-15'
     status: ok
 labels:
     - lts2016-ok
@@ -12,7 +12,7 @@ labels:
     - troger
     - excerpt
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -77,7 +77,9 @@ This page explains what renditions are, how to get them and how to contribute ne
 
 ## Functional Overview
 
-{{{multiexcerpt 'functional-overview' page='USERDOC:Exporting Documents'}}}
+In the Nuxeo Platform, renditions are used for exports. For more information, discover how it works on:
+- [Web UI]({{page version='' space='userdoc' page='exporting-documents'}})
+- [JSF UI]({{page version='' space='userdoc' page='exporting-content'}})
 
 ## What Are Renditions?
 

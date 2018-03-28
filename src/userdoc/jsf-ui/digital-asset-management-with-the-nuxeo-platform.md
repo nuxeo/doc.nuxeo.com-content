@@ -2,12 +2,12 @@
 title: Digital Asset Management with the Nuxeo Platform
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2018-01-19'
     status: ok
 labels:
     - multiexcerpt
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '11043048'
@@ -110,7 +110,7 @@ A user interface is added in the Admin tab so that it is possible to re-compute 
 
 #### Video
 
-Video is a document types dedicated to the management of videos files. It provides the following specific features: A player to view the video from the application, a storyboard to navigate in the video and alternative video formats.
+Video is a document type dedicated to the management of videos files. It provides the following specific features: A player to view the video from the application, a storyboard to navigate in the video and alternative video formats.
 
 Video documents can be [created]({{page page='creating-content'}}) and [edited]({{page page='editing-content'}}) like any other document type. See the page&nbsp;[Supported File Formats]({{page space='nxdoc' page='supported-file-formats'}})&nbsp;for supported video files.
 

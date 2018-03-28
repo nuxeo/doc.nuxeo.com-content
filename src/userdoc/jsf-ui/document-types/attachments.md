@@ -2,7 +2,7 @@
 title: Attachments
 review:
     comment: ''
-    date: '2017-01-26'
+    date: '2018-02-26'
     status: ok
 labels:
     - attachment
@@ -20,37 +20,37 @@ confluence:
     source_link: /display/USERDOC/Attachments
 tree_item_index: 200
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-23 14:11'
         message: ew Edit permissio
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-26 09:15'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-23 13:18'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-23 13:18'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-23 13:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-23 11:04'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-23 11:04'
         message: ''
