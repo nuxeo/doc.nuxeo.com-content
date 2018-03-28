@@ -53,7 +53,7 @@ Add a new command line called&nbsp;`changeFormat` that changes the image format.
 ```xml
 <extension target="org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent"
   point="command">
-  <command name="changeFormat">
+  <command name="changeFormat" enabled="true">
     <commandLine>convert</commandLine>
     <parameterString>#{sourceFilePath} #{targetFilePath}.#{format}
     </parameterString>
