@@ -12,13 +12,12 @@ tree_item_index: 10000
 
 ---
 This page relates to the release notes of Nuxeo Server and related addons for the 10.10 cycle, a.k.a LTS 2018 cycle. It will list the improvements and features that are successively shipped with the 10.1, 10.2, 10.3 and LTS 2018 releases. Evolutions are grouped by components.
+
 You can also find detailed JIRA release notes:
 
 - [10.1 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=18634)
 
-
-
-We also provide [instructions for upgrading]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-lts-2017'}}) to the latest release. (TODO: update with good link)
+We also provide [instructions for upgrading]({{page version='' space='nxdoc' page='upgrade-from-lts-2017-to-10.1'}}) to the latest release.
 
 ## Nuxeo Server
 
@@ -26,21 +25,16 @@ We also provide [instructions for upgrading]({{page version='' space='nxdoc' pag
 
 ### Core Repository
 
-#### Trash State Refactoring {{since '10.1'}}
-
-The repository now uses a specific boolean system property ecm:isTrashed instead of the lifecycle state to denote trashed documents. This property is indexed in Elasticsearch and exported n the default Document object of the Rest API. An automated migration process has been added.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24034](https://jira.nuxeo.com/browse/NXP-24034)
 
 #### Trash, Untrash and EmptyTrash Operations {{since '10.1'}}
 
-Two new operations TrashDocument and UntrashDocument have been added.
+Two new operations `TrashDocument` and `UntrashDocument` have been added.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24282](https://jira.nuxeo.com/browse/NXP-24282) and [NXP-24281](https://jira.nuxeo.com/browse/NXP-24281).
 
 #### New firstAccessibleAncestor REST API Enricher
 
-It is now possible to get the closest document's ancestor of a document using the firstAccessibleAncestor JSON Enricher.
+It is now possible to get the closest document's ancestor of a document using the `firstAccessibleAncestor` JSON Enricher.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24282](https://jira.nuxeo.com/browse/NXP-24282)
 
@@ -52,7 +46,7 @@ Servlet API 3.1 is now used in Nuxeo code.
 
 ### Core Storage
 
-#### KMS keys support on S3 binary store {{since '10.1'}}
+#### KMS Keys Support on S3 Binary Store {{since '10.1'}}
 
 The support for [KMS keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/kms-using-sdks.html#kms-using-sdks-java) for S3 Server-Side Encryption is added.
 
@@ -64,7 +58,7 @@ The support for [KMS keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/kms-u
 
 ### Workflow
 
-#### More Properties On the Task Object {{since '10.1'}}
+#### More Properties on the Task Object {{since '10.1'}}
 When using the rest api, the JSON structure of a Task object now also includes:
 - the workflow initiator
 - the workflow title
@@ -77,41 +71,50 @@ When using the rest api, the JSON structure of a Task object now also includes:
 
 ### WorkManager
 
-#### Error Evet After Successive Failures on a Work {{since '10.1'}}
+#### Error Event After Successive Failures on a Work {{since '10.1'}}
 
-An event "workFailed" is now fired when a work fails several times.
+An event `workFailed` is now fired when a work fails several times.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24126](https://jira.nuxeo.com/browse/NXP-24126).
 
 ###  PubSub
 
-#### PubSub service on Nuxeo Stream {{since '10.1'}}
+#### PubSub Service on Nuxeo Stream {{since '10.1'}}
 
 An implementation of the PubSub service has been provided using Nuxeo Stream. This allows to not rely on Redis for this service that is notably used for cache syncing on the repository in a cluster, as well as for acquiring locks on documents.
 To use it you can apply the following configuration in nuxeo.conf:
 
+```
 nuxeo.pubsub.provider=stream
+```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23799](https://jira.nuxeo.com/browse/NXP-23799).
 
 ### Audit
 
-#### Startswith Operator for Elasticsarch Audit Backend {{since '10.1'}}
-Startswith operator implementation has been completed in Elasticsearch audit backend implementation.
-Ex: {{ .addAndPredicate(new Predicate(new Reference("docPath"), Operator.STARTSWITH, Literals.toLiteral(input.getPath().toString()))) }}
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24386](https://jira.nuxeo.com/browse/NXP-24386).
+#### STARTSWITH Operator Available for All Audit Backend (SQL, MongoDB and Elasticsearch){{since '10.1'}}
+
+Following introduction of `AuditBackend#queryLogs(AuditQueryBuilder)`, we now have an easy way to query audit. We introduced in 10.1 the STARTSWITH operator, we could use it as below:
+
+```
+auditBackend.queryLogs(new AuditQueryBuilder().predicates( //
+                Predicates.eq(LOG_EVENT_ID, "SOMETHING"),
+                Predicates.startsWith(LOG_DOC_PATH, "/myFolder")));
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24386](https://jira.nuxeo.com/browse/NXP-24396).
 
 <!--- ### CMIS -->
 
 ### Query
 
-#### NXQL ecm:isTrashed support
+#### NXQL `ecm:isTrashed` Support
 
-Following evolutions on the trash service, the NXQL property "ecm:isTrashed" has been added to be able to flter queries on trashed or not trashed documents.
+Following evolutions on the trash service, the NXQL property `ecm:isTrashed` has been added to be able to filter queries on trashed or not trashed documents.
 
-#### Some built-in page provides moved to Elasticsearch {{since '10.1'}}
+#### Some Built-In Page Provides Moved to Elasticsearch {{since '10.1'}}
 
-REST_API_SEARCH_ADAPTER and all_collections page providers have been added to the default list of page providers provided by Elasticsearch. If you have defined your own elasticsearch.override.pageproviders then it is recommended to add those two to your list.
+`REST_API_SEARCH_ADAPTER` and `all_collections` page providers have been added to the default list of page providers provided by Elasticsearch. If you have defined your own `elasticsearch.override.pageproviders` then it is recommended to add those two to your list.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24346](https://jira.nuxeo.com/browse/NXP-24346).
 
@@ -121,9 +124,9 @@ REST_API_SEARCH_ADAPTER and all_collections page providers have been added to th
 
 ### Elasticsearch
 
-#### Support of XPack  {{since '10.1'}}
+#### Support of X-Pack {{since '10.1'}}
 
-The use of Elasticsearch X-Pack is now allowed, see documentation.
+The use of Elasticsearch X-Pack is now allowed, [see documentation]({{page version='' space='nxdoc' page='elasticsearch-setup'}}#advanced-rest-client-configuration).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23048](https://jira.nuxeo.com/browse/NXP-23048).
 
@@ -135,13 +138,13 @@ The use of Elasticsearch X-Pack is now allowed, see documentation.
 
 #### Annotation Java Service {{since '10.1'}}
 
-A new annotation service has been added, that stores annotations in the repository.
+A new annotation service has been added, it stores annotations in the repository.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24096](https://jira.nuxeo.com/browse/NXP-24396).
 
 #### Annotation REST API Adapter {{since '10.1'}}
 
-The web adapter “annotation” has been added on the document resource so as to retrieve and set annotations on documents using the REST API.
+The web adapter "annotation" has been added on the document resource so as to retrieve and set annotations on documents using the REST API.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24364](https://jira.nuxeo.com/browse/NXP-24364).
 
@@ -149,10 +152,12 @@ The web adapter “annotation” has been added on the document resource so as t
 
 ### User Registration
 
-#### Stronger Enforcement on goups validation for newly created users  {{since '10.1'}}
+#### Stronger Enforcement on Groups Validation for Newly Created Users {{since '10.1'}}
 
- Non-administrator users can invite only in members of his / her own groups.
- 
+ Non-administrator users can only invite members from their own group(s).
+
+ <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24653](https://jira.nuxeo.com/browse/NXP-24653).
+
 <!--- ### FileManager -->
 
 <!--- ### Redis -->
@@ -163,10 +168,11 @@ The web adapter “annotation” has been added on the document resource so as t
 
 ### Transient Store
 
-#### Batch Handler  {{since '10.1'}}
+#### Batch Handler {{since '10.1'}}
 
-The platform now provides a way to plug custom logics for uploading content to a transient store, by contributing a "Batch Handler".
-```xml
+The platform now provides a way to plug custom logics to upload content to a transient store, by contributing a Batch Handler.
+
+```
 <extension target="org.nuxeo.ecm.automation.server.BatchManager"
 point="handlers">
 <batchHandler>
@@ -180,6 +186,7 @@ point="handlers">
 </batchHandler>
 </extension>
 ```
+
 An S3 implementation of this batch handler has been added, so as to be able to upload to S3 directly and to benefit from S3 accelerated upload infrastructure (See the new addon here after).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24208](https://jira.nuxeo.com/browse/NXP-24208).
@@ -190,7 +197,7 @@ An S3 implementation of this batch handler has been added, so as to be able to u
 
 ### Packaging / Distribution
 
-#### HSTS policy {{since '10.1'}}
+#### HSTS Policy {{since '10.1'}}
 
 The HSTS header is enabled by default when HTTPS is in use. It forces only HTTPS requests.
 
@@ -204,10 +211,9 @@ The HSTS header is enabled by default when HTTPS is in use. It forces only HTTPS
 
 ### Nuxeo Web UI {{> anchor 'nuxeo-web-ui'}}
 
-#### Orderable folders {{since '10.1'}}
+#### Orderable Folders {{since '10.1'}}
 
-Adds support for Orderable Folders.
-Up and down actions available on Orderable Folders. Works with multiple selected documents.
+Orderable Folders are now available in Nuxeo Platform with up and down actions. It works with multiple selected documents.
 For this purpose a new operation is available to order child documents.
 Navigation tree now takes into account order on Orderable Folders.
 
@@ -220,7 +226,7 @@ In order to manage trash:
 - Documents with Folderish facet added a trash pill to manage deleted documents.
 - New trash search on the main menu. Has a faceted search on path, size, authors, and text.
 Trashed documents can be restore or permanently deleted by users with Manage Everything permission.
-A new EmptyTrash operation allows to permanently delete a Folderish's trash content which is available on the Folderish trash pill UI.
+A new `EmptyTrash` operation allows to permanently delete a Folderish trash content which is available on the Folderish trash pill UI.
 Finally, a set of functional tests for new trash features.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23798](https://jira.nuxeo.com/browse/NXP-23798).
@@ -229,11 +235,11 @@ Finally, a set of functional tests for new trash features.
 
 Batch upload refactored to support third party providers.
 It is possible to integrate providers for feature rich and performance upload.
-To this end, the Upload behavior now supports external providers and allows features like progress and multipart.
+To this end, the upload behaviour now supports external providers and allows features like progress and multipart.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24269](https://jira.nuxeo.com/browse/NXP-24269).
 
-#### User invitation link {{since '10.1'}}
+#### User Invitation Link {{since '10.1'}}
 
 Fixed link on user invitation e-mail that led to "page not found".
 
@@ -241,19 +247,19 @@ Fixed link on user invitation e-mail that led to "page not found".
 
 #### Remove from Collection {{since '10.1'}}
 
-Remove from Collection on every document type with Collection faceted.
+The "Remove from Collection" action is now displayed on all document types with the Collection facet.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24347](https://jira.nuxeo.com/browse/NXP-24347).
 
-#### Close drawer action {{since '10.1'}}
+#### Close Drawer Action {{since '10.1'}}
 
-A new close action button was added to hide the drawer. It appears on the middle right side.
+A new close action button has been added to let you hide the drawer. It appears on the middle right side of the drawer.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24082](https://jira.nuxeo.com/browse/NXP-24082).
 
-#### New languages {{since '10.1'}}
+#### New Languages {{since '10.1'}}
 
-Italian, Dutch and Indonesian languages have been added to Web UI and Nuxeo Elements.
+Italian, Dutch and Swedish languages have been added to Web UI and Nuxeo Elements.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-24451](https://jira.nuxeo.com/browse/NXP-24451) and [NXP-24445](https://jira.nuxeo.com/browse/NXP-24445).
 
@@ -261,37 +267,38 @@ Italian, Dutch and Indonesian languages have been added to Web UI and Nuxeo Elem
 
 ### Amazon S3 Direct Upload for Web UI {{since '10.1'}}
 
-New add-on to upload using AWS S3 infrastructure with support for multipart. Allows future integration of other providers.
+New addon to upload using AWS S3 infrastructure with support for multipart. Allows future integration of other providers.
 Integrated with Web UI upload with real time upload progress.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24490](https://jira.nuxeo.com/browse/NXP-24490).
 
-### Arender Connector {{since '10.1'}}
+
+<!---
+### Arender Connector {{since '10.2'}}
 A first implementation of the ARender SPI bridge has been implemented so as to be able to preview content stored in Nuxeo using the [Arender previewer](https://arender.io/). This implementation will be completed for 10.2
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24104](https://jira.nuxeo.com/browse/NXP-24104).
 
+--->
+
 ### IMAP Connector {{since '10.1'}}
 
-Nuxeo IMAP Connector add-on is now available on Web UI.
-It is possible to create and configure IMAP folder documents on WebUI.
-IMAP folder, on Web UI, have a sync action to import all unread emails from account.
-This add-on adds a new custom list view for emails on email folder documents.
-Also adds a custom view layout to email message documents with relevant information about the content, senders, receivers, and attachments.
+Nuxeo IMAP Connector addon is now available on Web UI. You can create and configure IMAP folder documents on WebUI, with a sync action to import all unread emails from account.
+This addon adds a new custom list view for emails on email folder documents and a custom view layout to email message documents with relevant information about the content, senders, receivers and attachments.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23951](https://jira.nuxeo.com/browse/NXP-23951).
 
 ### Drive (Server part)
 
-Drive client part release notes can be found on [GitHub](https://github.com/nuxeo/nuxeo-drive/releases).
+The release notes of the Drive client part can be found on [GitHub](https://github.com/nuxeo/nuxeo-drive/releases).
 
-#### .lnk files ignored {{since '10.1'}}
+#### .lnk Files Ignored {{since '10.1'}}
 
-Windows symlink files ((.lnk)) are now ignored by default
+Windows symlink files `.lnk` are now ignored by default
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24490](https://jira.nuxeo.com/browse/NXP-24490).
 
-#### Full Scan query optimized {{since '10.1'}}
+#### Full Scan Query Optimized {{since '10.1'}}
 
 A great optimisation has been added lowering heavily the charge of the Elasticseach cluster when using Nuxeo Drive with Nuxeo.
 
@@ -301,9 +308,9 @@ A great optimisation has been added lowering heavily the charge of the Elasticse
 
 #### Improve Video Processing {{since '10.1'}}
 
-The video info (duration, format, etc.) is now computed by an asynchronous work to avoid loading the blob and running ffmpeg-info synchronously. This work, in turn, schedules two asynchronous works to process the video storyboard and conversions.
+The video info (duration, format, etc.) is now computed by an asynchronous work to avoid loading the blob and running `ffmpeg-info` synchronously. This work, in turn, schedules two asynchronous works to process the video storyboard and conversions.
 
-As a consequence, the user might not have the video info in the UI immediately after creating / updating a Video document, needing to refresh the page once the asynchronous work is done. This changes allows a better behaviour when bulk importing videos.
+As a consequence, the user might not have the video info in the UI immediately after creating / updating a Video document, needing to refresh the page once the asynchronous work is done. This change allows a better behaviour when bulk importing videos.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24316](https://jira.nuxeo.com/browse/NXP-24316).
 
@@ -311,13 +318,11 @@ As a consequence, the user might not have the video info in the UI immediately a
 
 #### Operation to Recompute Partially Quotas {{since '10.1'}}
 
-A new operation: Quotas.RecomputeStatistics is provided, with optional parameters:
+A new operation: `Quotas.RecomputeStatistics` is provided, with optional parameters:
 - tenantId / username / path (only one allowed)
-- updaterName (defaults to documentsSizeUpdater)
+- updaterName (defaults to `documentsSizeUpdater`)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21017](https://jira.nuxeo.com/browse/NXP-21017).
-
-### Packaging
 
 ## Farewell
 
