@@ -2,7 +2,7 @@
 title: Maven Integration
 review:
     comment: ''
-    date: '2018-03-02'
+    date: '2018-03-29'
     status: ok
 confluence:
     ajs-parent-page-id: '12912677'
@@ -240,33 +240,23 @@ Maven can be setup to add a dependency to a specific release, and to do continuo
 
 To set up a dependency to the latest snapshot of a Studio branch:
 
-1.  Declare the dependency in your POM to point to the desired branch of your Studio project. This information is available in the **Branch Management** screen, after having selected a branch.
+1.  Go to the **Branch Management** screen and select a branch.
 
-![]({{file name='maven-gav.png'}} ?w=350,border=true)
+2. Press the `Maven GAV` button. This button is available both for the latest changes only available in your own workspace or for the ones that are shared for all users on the branch.
 
-Project artifact key is presented in the `maven_group:project_id:version` form, available both for the latest changes only available in your own workspace or for the ones that are shared for all users on the branch.
+![]({{file name='maven-gav.png'}} ?w=650,border=true)
+
+3. Maven coordinates are shown and ready to be copy-pasted in your project's pom.xml.
 
 ### Adding a Dependency to a Release
 
 To add a Maven dependency on a specific Studio release:
 
-1.  [Create a release]({{page page='how-to-tag-or-release-your-nuxeo-studio-project'}}#release-creation) of your Studio project. This will generate a version of your project that can be accessed by Maven.
+1. [Create a release]({{page page='how-to-tag-or-release-your-nuxeo-studio-project'}}#release-creation) of your Studio project. This will generate a version of your project that can be accessed by Maven.
 
-2.  Declare the dependency in your POM to point to the desired version of your Studio project.
-    The project artifact key will be computed as follow: `maven_group:project_id:version`.
-    *   The `maven_group` defaults to `nuxeo-studio` but can be changed from the **Application Information** view in Studio project. It is recommended to use the pattern _com.mycompany_ for commercial (closed source) projects and _org.mycompany_ for Open Source projects.
-    *   The `project_id` is the ID of you project and is unique between all projects in Studio - you can get you project ID from the **Application Information** view in Studio project - look after **Maven Artifact id** property.
-    *   The `version`is the released version of your project.
-        Let say you created a release with version number `1.0` and your project ID is `myproject` and you are using the default `nuxeo-studio` group. In that case your Maven dependency will be:
+2. Go to the [Releases and Tags]({{page page='releases-and-tags'}}) screen.
 
-        ```xml
-        <dependency>
-          <groupId>nuxeo-studio</groupId>
-          <artifactId>myproject</artifactId>
-          <version>1.0</version>
-        </dependency>
-
-        ```
+3. Press the Maven GAV button on the desired release and copy the Maven coordinates in your project's pom.xml file.
 
 ## Retrieving Maven Resources
 
