@@ -28,7 +28,7 @@ We will learn how to create a new search screen with an icon in the left menu. T
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
 - [DAM Architecture course](https://university.nuxeo.com/learn/public/course/view/elearning/134/configurating-searches-in-nuxeo-studio-modeler-designer).
-![]({{file name='web-ui-search-university.png'}} ?w=600,border=true)
+![]({{file name='web-ui-search-university.png'}} ?w=450,border=true)
 {{/callout}}
 
 
