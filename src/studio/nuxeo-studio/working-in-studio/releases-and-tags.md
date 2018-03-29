@@ -2,7 +2,7 @@
 title: Releases & Tags
 review:
     comment: ''
-    date: ''
+    date: '2018-03-29'
     status: ok
 toc: true
 confluence:
@@ -55,9 +55,13 @@ The releases and tags tab allows to list each and every releases and tags that w
 
 {{{multiexcerpt 'release' page='How to Tag or Release Your Nuxeo Studio Project'}}}
 
-![]({{file name='Screen Shot 2016-03-22 at 00.05.22.png'}} ?w=650,border=true)
+![]({{file name='releases-tab.png'}} ?w=650,border=true)
 
-**Download Package**: You can downloading the release package and ask the administrator of the instance to install it via the Update Center if your Nuxeo Platform instance is connected to internet, or using `nuxeoctl`. See the page [Installing a New Package on Your Instance]({{page version='' space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
+**Delete**: Deletes the release. This operation cannot be reverted.
+
+**Maven GAV**: Displays the Maven coordinates so that you can add the release as a dependency on your Java project.
+
+**Download Package**: You can download the release package and ask the administrator of the instance to install it using `nuxeoctl`. See the page [Installing a New Package on Your Instance]({{page version='' space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
 
 ## Tags Tab
 
@@ -69,12 +73,10 @@ The releases and tags tab allows to list each and every releases and tags that w
 
 **Download JAR:** Download the JAR
 
-**Download Package:** You can download the tag package from this tab and then ask the administrator of the instance to install it via the Update Center if your Nuxeo Platform instance is connected to internet, or using `nuxeoctl`. See the page [Installing a New Package on Your Instance]({{page version='' space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
+**Download Package:** You can download the tag package from this tab and then ask the administrator of the instance to install it using `nuxeoctl`. See the page [Installing a New Package on Your Instance]({{page version='' space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
 
 {{#> callout type='warning' }}
-
 This must not be used for production (a tag package is built on demand).
-
 {{/callout}}
 
 **Revert to:** [Revert]({{page page='branch-management#review-branch-commit'}}) to the state in history where the tag is.

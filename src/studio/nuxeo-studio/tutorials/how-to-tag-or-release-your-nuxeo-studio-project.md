@@ -43,7 +43,7 @@ history:
 
 {{! multiexcerpt name='tag'}}
 
-In order to identify specific state of your work, you may want to tag any given commit. Once created, you will find your tag in the tags list on the  [Releases &]({{page page='releases-and-tags'}})[Releases & Tags page]({{file name='tag-release-button.png'}})[ Tags page]({{page page='releases-and-tags'}}), which will allow you to download, revert your working state to that specific tagged state, etc.
+In order to identify specific state of your work, you may want to tag any given commit. Once created, you will find your tag in the tags list on the [Releases & Tags page]({{page page='releases-and-tags'}}), which will allow you to download, revert your working state to that specific tagged state, etc.
 
 {{! /multiexcerpt}}
 
