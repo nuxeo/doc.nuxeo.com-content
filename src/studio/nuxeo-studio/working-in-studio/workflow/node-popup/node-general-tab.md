@@ -158,17 +158,37 @@ history:
 *   **Output operation chain**: The automation chain you specify here will be executed just before the workflow engine leaves the node. If the node is of type Task, that means it's executed after the task created at this step is ended. The list of documents bound to the workflow instance will be the input of the chain. If there is one document, it will still be a list, with one element only.
 *   **Allows incoming connections**: Used only by the graph editor. Check this if you want to be able to draw loops back to this node.
 
-{{#> callout type='info' heading='Getting the first document of the document list in the automation chains ran from a workflow node'}}
+{{! multiexcerpt name='workflow-automation-caveats'}}
+{{#> callout type='info' heading='Automation in Workflows Caveats'}}
 
-As we mentioned above, the workflow engine injects a document list in the automation chain, even when there is only one document. You may have sometime a "Cannot find any valid path in operation chain" exception, because the operation you put in the chain expects **one document** in input and the previous operation gives a list.
+When using automation chains in the context of a workflow, some things are important to remember.
+
+**Getting the first document of the document list in the automation chains ran from a workflow node**
+The workflow engine injects a document list in the automation chain, even when there is only one document. You may have sometime a "Cannot find any valid path in operation chain" exception, because the operation you put in the chain expects **one document** in input and the previous operation gives a list.
 
 You can avoid this situation, when you know you have only one document, by fetching this document first. To do so, you can use:
 
 ```
-Execution Context > Restore input document from a script
+Execution Context > Context.RestoreDocumentInputFromScript
 script: This[0]
 ```
 
 Then, for the rest of the chain, you will have only one document in input transiting from one operation to the other.
 
+**Chains are ran with admin privileges**
+
+Whenever a chain is triggered in the context of a workflow, it is ran with administrator privileges. If your chain needs to be executed with the current user's privileges, it is possible to use:
+
+```
+Users & Groups > Auth.LoginAs:
+name: "@{CurrentUser.name}"
+*More operations*
+Users & Groups > Auth.Logout
+```
+
+**No UI related operations**
+
+It is not possible to use any operation that depends on the user interface inside a chain executed in the context of a workflow. The chain is executed at a very low level and will not have access to it.
+
 {{/callout}}
+{{! /multiexcerpt}}
