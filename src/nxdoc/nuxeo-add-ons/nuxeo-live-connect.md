@@ -666,7 +666,8 @@ On the document creation form, a OneDrive button enables you to browse your OneD
 4.  Copy the **Application ID**.
 5.  **Application Secrets**: Click on **Generate New Password** and copy it.
 6.  On **Platforms**, click on **Add Platform** and then select **Web**. In **Redirect URIs** set the following URL, adapting the hostname and port to your case: `http://nuxeo-server:8080/nuxeo/site/oauth2/onedrive/callback`.
-7.  Click on **Save**.
+7.  In the **Application permissions** section, activate `Files.Read.All` to your security profile,
+8.  Click on **Save**.
 
 **Step 2: Configuring the Nuxeo Platform**
 
