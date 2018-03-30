@@ -180,6 +180,8 @@ Once the addon is installed, you can go to [https://host:port/nuxeo](https://hos
 
 There is no additional configuration step required to start using the addon. Customisation is done via Nuxeo Studio.
 
+When the nuxeo-jsf-ui package is installed, the JSF UI can now be accessed via `http://SERVER_URL/nuxeo/jsf`. This enables an easy access to Nuxeo JSF UI even though Nuxeo Web UI is now the default UI of the Platform.
+
 ## Nuxeo Platform Concepts
 
 {{{multiexcerpt 'functional-overview' page='USERDOC:Nuxeo Platform Concepts'}}}
