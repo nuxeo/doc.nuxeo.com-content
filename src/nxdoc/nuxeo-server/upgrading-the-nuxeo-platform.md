@@ -518,16 +518,22 @@ Since the Platform evolves, you will also need to upgrade your custom code:
 
 ## Detailed Upgrade by Version
 
-### To Fast Track 9.3 from LTS 2016
+### To Fast Track 10.1 from LTS 2017
+See [Upgrade from LTS 2017 to 10.1]({{page version='' space='' page='upgrade-from-lts-2017-to-10.1'}}) to upgrade to the latest Fast Track of Nuxeo Platform.
 
-See [Upgrade from LTS 2016 to 9.3]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-93'}}) to upgrade to Ftast Track version 9.3 of the Nuxeo Platform.
+Release Notes:
+- [10.x Release notes]({{page version='' space='' page='nuxeo-server-release-notes'}})
+
+### To LTS 2017 from LTS 2016
+
+See [Upgrade from LTS 2016 to LTS 2017]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-LTS-2017'}}) to upgrade to the LTS 2017 version or [Upgrade from LTS 2016 following Fast Tracks]({{page version='' space='' page='upgrade-from-lts-2016-following-fast-tracks'}}) to upgrade from a Fast Track version to LTS 2017.
 
 Release notes:
-- [9.x release notes]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
+- [9.x Release notes]({{page version='910' space='nxdoc' page='nuxeo-server-release-notes'}})
 
 ### To LTS 2016 from LTS 2015
 
-See [Upgrade from LTS 2015 to LTS 2016]({{page page='upgrade-from-lts-2015-to-lts-2016'}}) to upgrade directly to the LTS 2016 version or [Upgrade from LTS 2015 following Fast Tracks]({{page page='upgrade-from-lts-2015-following-fast-tracks'}}) to upgrade from a Fast Track version to LTS 2016.
+See [Upgrade from LTS 2015 to LTS 2016]({{page page='upgrade-from-lts-2015-to-lts-2016'}}) to upgrade directly to the LTS 2016 version or [Upgrade from LTS 2015 following Fast Tracks]({{page page='upgrade-from-lts-2015-following-fast-tracks'}})  to upgrade from a Fast Track version to LTS 2016.
 
 Release notes:
 
