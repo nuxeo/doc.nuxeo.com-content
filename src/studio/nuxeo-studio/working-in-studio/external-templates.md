@@ -81,6 +81,12 @@ history:
 ---
 Nuxeo Studio includes an Application Templates library composed of Studio projects or samples that you can use as a basis for your own project. This enables you to import new document types, lifecycles, workflows, features in your project as a template that you can edit to adapt it to your project.
 
+{{#> callout type='info'}}
+Watch the related courses on Nuxeo University
+- [Expert Session on the VideoUtils External Template](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils)
+![]({{file name='university_videoutils.png'}} ?w=450,border=true)
+{{/callout}}
+
 To make Nuxeo Studio discovery easier, we automatically import the [Default configuration]({{page space='Studio' page='Default configuration+templates'}}) template that corresponds to your target application when a Studio project is created. You can then see how the configuration is done and start your project from it.
 
 In the Application Templates library, you will find very complex ready-to-use templates for complete function use cases (such as Human resources - Vacation request workflow) or some unitary cases, such as Custom Doc ID generation or Nuxeo School: Sending emails.
