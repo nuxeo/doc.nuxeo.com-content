@@ -121,6 +121,12 @@ See [http://en.wikipedia.org/wiki/Continuous_Integration](http://en.wikipedia.or
 
 It's as important to follow quality processes on development as to maintain this quality among time. Nuxeo is involved in such practices that will guarantee or reinforce its products quality.
 
+{{#> callout type='info'}}
+Watch the related courses on Nuxeo University
+- [Expert Session on the Nuxeo Software Factory](https://university.nuxeo.com/learn/public/course/view/elearning/136/expert-session-nuxeo-software-factory)
+![]({{file name='software_factory.png'}} ?w=450,border=true)
+{{/callout}}
+
 ## Rules and Means
 
 Nuxeo products and tools are continuously built over time, at each change and against multiple environments. Nuxeo QA team sets and maintain a QA environment applying CI rules and so providing to developers means to check their code quality and being warned in case of any problem.
