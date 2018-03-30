@@ -13,8 +13,19 @@ labels:
     - akervern
 
 ---
+
+{{#> callout type='info'}}
+Watch the related courses on Nuxeo University
+- [Course on Nuxeo CLI](https://university.nuxeo.com/learn/public/course/view/elearning/83/NuxeoDevTools).
+- [Expert Session on Nuxeo Software Factory](https://university.nuxeo.com/learn/public/course/view/elearning/136/expert-session-nuxeo-software-factory)
+![]({{file name='nx_lambda_university.png'}} ?w=450,border=true)
+{{/callout}}
+
+
+
+
 {{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/83/NuxeoDevTools) on Nuxeo University.
+Follow the related  on Nuxeo University.
 {{/callout}}
 
 {{! excerpt}}
