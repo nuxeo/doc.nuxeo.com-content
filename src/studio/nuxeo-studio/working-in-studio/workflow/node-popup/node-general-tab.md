@@ -18,6 +18,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/7gGw'
     source_link: /display/Studio/Node+General+tab
 tree_item_index: 100
+toc: true
 history:
     -
         author: Solen Guitter
@@ -141,6 +142,8 @@ history:
         version: '1'
 
 ---
+## Overview
+
 ![]({{file name='node-general-tab.png'}} ?w=500,h=354,border=true)
 
 *   **Title**: The title of the task, displayed in tasks lists in the user interface as well as directly on top of the task form, where user processes the task. Supports i18n.
@@ -159,21 +162,21 @@ history:
 *   **Allows incoming connections**: Used only by the graph editor. Check this if you want to be able to draw loops back to this node.
 
 {{! multiexcerpt name='workflow-automation-caveats'}}
-{{#> callout type='info' heading='Automation in Workflows Caveats'}}
+## Automation Chain in Workflows
 
 When using automation chains in the context of a workflow, some things are important to remember.
 
 **Getting the first document of the document list in the automation chains ran from a workflow node**
-The workflow engine injects a document list in the automation chain, even when there is only one document. You may have sometime a "Cannot find any valid path in operation chain" exception, because the operation you put in the chain expects **one document** in input and the previous operation gives a list.
+The workflow engine injects a document list in the automation chain, even when there is only one document. You may have sometimes a "Cannot find any valid path in operation chain" exception, because the operation you put in the chain expects **one document** in input and the previous operation gives a list.
 
-You can avoid this situation, when you know you have only one document, by fetching this document first. To do so, you can use:
+You can avoid this situation, when you know that you only have one document, by fetching this document first. To do so, you can use:
 
 ```
 Execution Context > Context.RestoreDocumentInputFromScript
 script: This[0]
 ```
 
-Then, for the rest of the chain, you will have only one document in input transiting from one operation to the other.
+Then, for the rest of the chain, you will have only one document in input transiting from one operation to another.
 
 **Chains are ran with admin privileges**
 
@@ -189,6 +192,4 @@ Users & Groups > Auth.Logout
 **No UI related operations**
 
 It is not possible to use any operation that depends on the user interface inside a chain executed in the context of a workflow. The chain is executed at a very low level and will not have access to it.
-
-{{/callout}}
 {{! /multiexcerpt}}
