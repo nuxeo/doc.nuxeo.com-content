@@ -250,6 +250,12 @@ This page details standard architecture options to deploy a Nuxeo cluster.
 This page assumes you already are familiar with the different components of a Nuxeo cluster. If not, you should have a look at our [Nuxeo architecture introduction]({{page page='nuxeo-cluster-architecture-introduction'}}) page first.
 {{/callout}}
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Expert Session on Disaster Recovery](https://university.nuxeo.com/learn/public/course/view/elearning/137/expert-session-disaster-recovery).
+![]({{file name='university_disaster_recovery.png'}} ?w=450,border=true)
+{{/callout}}
+
 ## High Availability Production Architecture
 
 ![]({{file name='nuxeo-cluster-logical-architecture.png'}} ?border=true)
