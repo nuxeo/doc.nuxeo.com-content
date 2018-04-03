@@ -83,7 +83,7 @@ Nuxeo Studio includes an Application Templates library composed of Studio projec
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
-- [Expert Session on the VideoUtils External Template](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils)
+- [Expert Session on the Video Utils External Template](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils)
 ![]({{file name='university_videoutils.png'}} ?w=450,border=true)
 {{/callout}}
 
