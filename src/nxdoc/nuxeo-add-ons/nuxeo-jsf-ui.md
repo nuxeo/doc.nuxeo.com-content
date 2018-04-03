@@ -2,7 +2,7 @@
 title: Nuxeo JSF UI
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2018-04-03'
     status: ok
 labels:
     - content-review-lts2016
@@ -12,7 +12,7 @@ labels:
     - atchertchian
     - multiexcerpt-include
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089312'
@@ -174,13 +174,11 @@ Nuxeo JSF UI is supported on the following browsers:
 
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
-Once the addon is installed, you can go to [https://host:port/nuxeo](https://hostport) and after authentication, you will be able to browse the JSF UI and start creating content, upload files, browse and search for content.
+Once the addon is installed, you can go to `http://SERVER_URL/nuxeo/jsf` and after authentication, you will be able to browse the JSF UI and start creating content, upload files, browse and search for content.
 
 ## Configuration
 
 There is no additional configuration step required to start using the addon. Customisation is done via Nuxeo Studio.
-
-When the nuxeo-jsf-ui package is installed, the JSF UI can now be accessed via `http://SERVER_URL/nuxeo/jsf`. This enables an easy access to Nuxeo JSF UI even though Nuxeo Web UI is now the default UI of the Platform.
 
 ## Nuxeo Platform Concepts
 
