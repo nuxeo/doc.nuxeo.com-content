@@ -16,6 +16,8 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/qYGE'
     source_link: /display/Studio/External+Templates
 tree_item_index: 900
+labels:
+  - university
 history:
     -
         author: Manon Lumeau

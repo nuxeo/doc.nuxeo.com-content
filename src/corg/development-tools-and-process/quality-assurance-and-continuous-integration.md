@@ -5,6 +5,8 @@ review:
     date: ''
     status: ok
 toc: true
+labels:
+  - university
 notes: >-
     Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
