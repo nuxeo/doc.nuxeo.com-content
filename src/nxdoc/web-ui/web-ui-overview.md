@@ -12,6 +12,7 @@ labels:
     - nsilva
     - polymer
     - lts2017-ok
+    - university
 toc: true
 tree_item_index: 100
 confluence:

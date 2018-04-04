@@ -16,6 +16,7 @@ labels:
     - nuxeo-web-ui
     - tcardoso
     - extension
+    - university
     - search-tab-component
     - lts2017-ok
 tree_item_index: 500

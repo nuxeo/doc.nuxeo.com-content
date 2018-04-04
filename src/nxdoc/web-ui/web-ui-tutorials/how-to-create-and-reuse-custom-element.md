@@ -17,6 +17,7 @@ labels:
     - nuxeo-elements
     - tcardoso
     - nuxeo-ui-elements
+    - university
     - polymer
 tree_item_index: 1200
 

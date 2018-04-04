@@ -17,6 +17,7 @@ labels:
     - howto
     - csv-importer-component
     - lts2017-ok
+    - university
 confluence:
     ajs-parent-page-id: '14255163'
     ajs-parent-page-title: Nuxeo CSV

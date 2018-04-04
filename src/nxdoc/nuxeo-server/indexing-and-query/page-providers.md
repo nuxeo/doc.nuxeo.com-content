@@ -11,6 +11,7 @@ labels:
     - kleturc
     - excerpt
     - lts2017-ok
+    - university
 toc: true
 confluence:
     ajs-parent-page-id: '4687860'

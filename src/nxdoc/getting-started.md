@@ -9,6 +9,7 @@ labels:
     - home
     - mlumeau
     - lts2017-ok
+    - university
 is_overview: true
 confluence:
     ajs-parent-page-id: '950332'

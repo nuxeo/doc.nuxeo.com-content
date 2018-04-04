@@ -11,6 +11,7 @@ labels:
     - update-needed
     - multiexcerpt-include
     - lts2017-ok
+    - university
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'

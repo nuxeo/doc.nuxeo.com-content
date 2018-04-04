@@ -17,6 +17,7 @@ labels:
     - extension
     - grenard
     - workflow
+    - university
     - task
     - lts2017-ok
 tree_item_index: 600

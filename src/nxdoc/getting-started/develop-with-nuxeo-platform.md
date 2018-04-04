@@ -14,6 +14,7 @@ labels:
     - howto
     - nuxeo-cli
     - bchauvin
+    - university
     - lts2016-ok
     - lts2017-ok
 toc: true

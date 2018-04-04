@@ -8,6 +8,7 @@ labels:
     - lts2016-ok
     - lts2017-ok
     - notassigned
+    - university
 confluence:
     ajs-parent-page-id: '29460589'
     ajs-parent-page-title: Getting Started with the Nuxeo Platform

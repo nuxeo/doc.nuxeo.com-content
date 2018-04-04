@@ -19,6 +19,7 @@ labels:
     - nuxeo-ui-elements
     - extension
     - layouts
+    - university
     - lts2017-ok
 tree_item_index: 400
 

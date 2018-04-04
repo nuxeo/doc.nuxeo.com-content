@@ -13,6 +13,7 @@ labels:
     - file-upload-component
     - excerpt
     - lts2017-ok
+    - university
 confluence:
     ajs-parent-page-id: '19235627'
     ajs-parent-page-title: File Manager
@@ -131,7 +132,7 @@ This mechanism is also valid with any document type inherited from File, as Pict
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [DAM Configuration](https://university.nuxeo.com/learn/public/course/view/elearning/100/dam-configuration) video on Nuxeo University : Learn how to type a file as Picture according to its file extension.
+*   [DAM Configuration](https://university.nuxeo.com/learn/public/course/view/elearning/100/dam-configuration) video on Nuxeo University: Learn how to type a file as Picture according to its file extension.
 
 {{/callout}}
 

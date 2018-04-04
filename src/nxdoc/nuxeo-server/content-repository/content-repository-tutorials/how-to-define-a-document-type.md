@@ -17,6 +17,7 @@ labels:
     - gcarlin
     - studio
     - lts2017-ok
+    - university
 confluence:
     ajs-parent-page-id: '950287'
     ajs-parent-page-title: Content Repository
