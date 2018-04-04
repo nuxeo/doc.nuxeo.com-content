@@ -227,7 +227,6 @@ To update a document, use PUT on the document resource and pass a reduced versio
     PUT http://NUXEO_SERVER/nuxeo/api/v1/id/{idOfTheDoc}
     {
         "entity-type": "document",
-        "repository": "default",
         "uid": "37b1502b-26ff-430f-9f20-4bd0d803191e",
         "properties": {
             "dc:title": "The new title",
@@ -240,6 +239,8 @@ To update a document, use PUT on the document resource and pass a reduced versio
 ```
 
 {{/panel}}
+
+The `uid` property is not mandatory but is accepted by the server as it is part of the GET response.
 
 ### Deleting a Document
 
