@@ -1,7 +1,7 @@
 ---
 title: Customize Your App with Nuxeo Elements
 review:
-    comment: 'This tutotrial needs to be reviewed after migration to Polymer 2.0 legacy API.'
+    comment: 'This tutorial needs to be reviewed after migration to Polymer 2.0 legacy API.'
     date: '2017-12-15'
     status: requiresUpdates
 toc: true
