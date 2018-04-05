@@ -88,7 +88,7 @@ On the JSF UI, you can also preview a document along with its main metadata on t
 </td>
 <td colspan="1" style="background-color:white; border-top:1px solid grey;">
 On Web UI, all type of documents can be previewed: Audio, PDF, Office, Video, 3D, etc.</br>
-A **preview button** is also available at the top right-and corner of each document and below the document itself.</br>
+A **preview button** is available at the top right-and corner of each document and below the document itself.</br>
 When you click on it, a popup is displayed previewing your document.</br>
 ![]({{file name='preview-button-web-ui.png'}} ?w=450,border=true)
 </br>
@@ -121,7 +121,8 @@ When you click on it, a popup is displayed previewing your document.</br>
 </td>
 
 <td colspan="1" style="background-color:white; border-top:1px solid grey;">
-**Side Menu**: The side menu offers two different tabs. Clicking on elements on the left will open a side panel (also called Drawer) with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area. This new pattern allows to start browsing without changing the context of work. The side menu displays all the domain structure from the root.
+**Side Menu**: The side menu offers two different tabs.</br>
+Clicking on elements on the left will open a side panel (also called Drawer) with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area. This new pattern allows to start browsing without changing the context of work. The side menu displays all the domain structure from the root.
 ![]({{file name='web_ui_with_side_panel.png' page='nxdoc/web-ui-overview'}} ?w=400,border=true)
 </br>
 **Dashboard**: To access your dashboard, click on the icon on the top left hand corner of your platform. It displays a set of boxes, for example, all the workspaces the user can access, the last documents he modified, the last documents that have been published, the pending tasks, etc.
