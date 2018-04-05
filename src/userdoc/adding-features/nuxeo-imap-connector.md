@@ -2,11 +2,11 @@
 title: Nuxeo IMAP Connector
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2018-04-04'
     status: ok
 labels:
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '11043055'
@@ -207,6 +207,17 @@ The emails imported in the email folder cannot be modified in the Nuxeo Platform
 
 **To create an email folder**
 
+### Web UI
+1. In a workspace click on the **Create** button
+1. Select the Email Folder document type.</br>
+   The email folder creation form is displayed.
+1. Fill in the creation form (see parameters below) and click on the **CREATE** button.
+   ![]({{file name='emailFolder-created-web-ui.png'}} ?w=650,border=true)
+   The **View** tab of the email folder is displayed.
+   You can now fetch emails.
+
+### JSF UI
+
 1.  In a workspace, click on the **New** button.
 2.  In the modal window displayed, click on **Email folder**
     The email folder creation form is displayed.
@@ -214,6 +225,7 @@ The emails imported in the email folder cannot be modified in the Nuxeo Platform
     The **Content** tab of the email folder is displayed.
     ![]({{file name='DM-emailFolder-created.png'}} ?w=650,border=true)
     You can now fetch emails.
+
 
 ### Email folder parameters
 
@@ -428,6 +440,18 @@ Limit of new fetched emails
 
 **To fetch emails:**
 
+### Web UI
+1. In your email client, mark the emails you want to fetch as unread.
+1. Go to your email folder on Nuxeo Platform side.
+   The **View** tab is displayed.
+1. Click on the **Check Email** button.
+   The unread emails are imported in the email folders.
+   ![]({{file name='emailFolder-content-web-ui.png'}} ?w=650,border=true)
+1. To open a mail, click on its subject.
+   ![]({{file name='emailFolder-summary-web-ui.png'}} ?w=650,border=true)
+
+
+### JSF UI
 1.  In your email client, mark the emails you want to fetch as unread.
 2.  In Nuxeo, open the email folder.
     The **Content** tab is displayed.
