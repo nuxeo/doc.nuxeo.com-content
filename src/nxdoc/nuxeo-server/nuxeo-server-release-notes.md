@@ -17,7 +17,7 @@ You can also find detailed JIRA release notes:
 
 - [10.1 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=18634)
 
-We also provide [instructions for upgrading]({{page version='' space='nxdoc' page='upgrade-from-lts-2017-to-10.1'}}) to the latest release.
+We also provide [instructions for upgrading]({{page version='' space='nxdoc' page='upgrade-from-lts-2017-to-101'}}) to the latest release.
 
 ## Nuxeo Server
 
