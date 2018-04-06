@@ -310,6 +310,42 @@ You can also have events be sent automatically at regular intervals using the [S
 
 ## Handling Errors
 
+### Bubbling Errors
+When an event is fired, the Event Service runs every registered listener for this event (ordered by priority - see above). By default, if an error occurs for one listener, it is catched and logged, and the Event Service continues executing the other listeners. In the log, a message writes:
+
+```
+Exception during yourListener sync listener execution, continuing to run other listeners
+```
+
+If you throw an error in your listener and want the Event Service to stop execution and push the error to the caller, use the `Event#markBubbleException` method. In the following example, we have of synchronous event (configured to be triggered only foe `beforeDocumentModification`), and want to be granular and forbid the modification of the `dc:rights` field if the lifecycle state is `"expired"`:
+
+```
+public class MyDoNotModifyRights implements EventListener {
+
+    @Override
+    public void handleEvent(Event event) {
+        
+        // . . . see above: Check doc type, check lifecycle state, ...
+
+        if(doc.getProperty("dc:rights").isDirty()) {
+            // = = = = = = = = = = = = = = = = = = = =
+            // Tell the event the exception must be bubbled
+            event.markBubbleException();
+            // = = = = = = = = = = = = = = = = = = = =
+            throw new NuxeoException("dc:rights cannot be modified for an expired MyDoc");
+        }
+    }
+}
+```
+
+Now, the error logged states the other listeners will not be run:
+
+```
+Exception during yourListener sync listener execution, other listeners will be ignored
+```
+
+### Handling a Listener Error in the UI Layer
+
 Sometimes, you may want to handle errors that occurred in an inline listener in the UI layer. This is a little bit tricky but do-able.
 
 In the listener, you should register the needed information in a place that is shared with the UI layer.
