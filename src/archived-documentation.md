@@ -8,6 +8,8 @@ review:
 toc: true
 ---
 
+![TESTING NX ASSET](nx_asset://f9deecdd-764c-4979-8458-8bc744b145b5)
+
 ## Nuxeo Platform 5.8
 
 - [Nuxeo_Platform_5.8_administration_documentation.pdf]({{file space='main' page='archived-documentation' name='Nuxeo_Platform_5.8_administration_documentation.pdf'}})
