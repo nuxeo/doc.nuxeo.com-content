@@ -24,102 +24,102 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Vision
 tree_item_index: 2900
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-03 08:53'
         message: pdate link to VisionRespons
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-26 09:44'
         message: ''
         version: '19'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2016-05-23 21:29'
         message: ''
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-16 08:40'
         message: ''
         version: '17'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2016-05-13 14:30'
         message: ''
         version: '16'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2016-05-13 14:27'
         message: ''
         version: '15'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2016-05-13 14:26'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-04-29 16:27'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2016-03-22 10:35'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-17 10:15'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-17 09:59'
         message: ''
         version: '10'
-    - 
+    -
         author: Michaël Vachette
         date: '2016-03-16 18:27'
         message: ''
         version: '9'
-    - 
+    -
         author: Julie Allouch
         date: '2016-03-15 22:44'
         message: ''
         version: '8'
-    - 
+    -
         author: Julie Allouch
         date: '2016-03-15 22:42'
         message: ''
         version: '7'
-    - 
+    -
         author: Julie Allouch
         date: '2016-03-15 22:36'
         message: ''
         version: '6'
-    - 
+    -
         author: Melinda Cormier
         date: '2016-03-15 21:10'
         message: ''
         version: '5'
-    - 
+    -
         author: Michaël Vachette
         date: '2016-03-15 18:54'
         message: ''
         version: '4'
-    - 
+    -
         author: Michaël Vachette
         date: '2016-03-15 17:44'
         message: ''
         version: '3'
-    - 
+    -
         author: Michaël Vachette
         date: '2016-03-15 17:43'
         message: ''
         version: '2'
-    - 
+    -
         author: Michaël Vachette
         date: '2016-03-15 17:40'
         message: ''
@@ -127,6 +127,12 @@ history:
 
 ---
 The [Nuxeo Vision](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision) addon provides a gateway to computer vision services. Currently it supports the Google Vision API and Amazon Rekognition API. Other services can be easily integrated as they become available. These external services allow you to understand the content of an image by encapsulating powerful machine learning models. This gateway provides a wide range of features including shape recognition, auto-classification of images, OCR, face detection and more.
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [DAM with Nuxeo Vision](https://university.nuxeo.com/learn/public/course/view/elearning/101/dam-with-nuxeo-vision).
+![]({{file name='university-nuxeo-vision.png'}} ?w=450,border=true)
+{{/callout}}
 
 ## Installation and Configuration
 
