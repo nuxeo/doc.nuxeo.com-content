@@ -45,6 +45,12 @@ history:
 ---
 Since 7.1, there is a new converter class&nbsp;`CommandLineConverter`&nbsp;that can be used to contribute new converters executing a command line. A specific Java class calling the command line is not required anymore.
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [DAM Configuration](https://university.nuxeo.com/learn/public/course/view/elearning/100/dam-configuration).
+![]({{file name='university-dam-configuration.png'}} ?w=450,border=true)
+{{/callout}}
+
 Let's see how we can contribute a new converter changing the format of an image using <span style="color: rgb(0,0,0);">ImageMagick</span>.
 
 ## Contributing the Command Line

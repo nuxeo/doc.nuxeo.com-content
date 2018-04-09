@@ -157,6 +157,12 @@ Picture conversions are used to fill the picture views (stored in the `picture:v
 
 Picture conversions are simple XML contributions done on the&nbsp;[`pictureConversions`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.picture.ImagingComponent--pictureConversions) extension point of the&nbsp;[`org.nuxeo.ecm.platform.picture.ImagingComponent`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.picture.ImagingComponent) component.
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [DAM Configuration](https://university.nuxeo.com/learn/public/course/view/elearning/100/dam-configuration).
+![]({{file name='university-dam-configuration2.png'}} ?w=450,border=true)
+{{/callout}}
+
 Picture conversions are working only on documents having the&nbsp;`Picture` facet.
 
 {{#> callout type='info' }}
