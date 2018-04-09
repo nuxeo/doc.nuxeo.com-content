@@ -14,11 +14,6 @@ toc: true
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-12">
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Nuxeo Digital Asset Management (DAM) Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/97/nuxeo-digital-asset-management-dam-concepts).
-![]({{file name='university-dam.png'}} ?w=450,border=true)
-{{/callout}}
 {{#> panel type='secondary'}}
 ## [Upload & Store]({{page page='upload-and-store'}})
 
@@ -92,3 +87,9 @@ Watch the related courses on Nuxeo University
 {{/panel}}
 </div>
 </div>
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Nuxeo Digital Asset Management (DAM) Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/97/nuxeo-digital-asset-management-dam-concepts).
+![]({{file name='university-dam.png'}} ?w=450,border=true)
+{{/callout}}
