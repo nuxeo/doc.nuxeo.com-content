@@ -13,6 +13,12 @@ tree_item_index: 1100
 
 Nuxeo Stream provides a Log storage abstraction and a Stream processing pattern.
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Expert Session on Disaster Recovery](https://university.nuxeo.com/learn/public/course/view/elearning/126/lts-2017-new-features).
+![]({{file name='university-nuxeo-stream.png'}} ?w=450,border=true)
+{{/callout}}
+
 {{! /excerpt}}
 
 ## Log and Stream Processing
