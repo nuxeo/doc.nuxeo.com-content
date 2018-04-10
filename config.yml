@@ -23,6 +23,6 @@ default:
                 space_path: security
                 space_name: Nuxeo Security Documentation
         branch: 'static'
-
+        dev_browser_path: archived-documentation
 development:
     isDev: true
