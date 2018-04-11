@@ -11,6 +11,14 @@ tree_item_index: 250
 This feature is available for target platforms Nuxeo Platform LTS 2016 and above.
 {{/ callout}}
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Document type layouts](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner)
+- [Course on Searches](https://university.nuxeo.com/learn/public/course/view/elearning/134/configurating-searches-in-nuxeo-studio-modeler-designer)
+![]({{file name='university-search.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
+
 If you have chosen the Web UI as your default interface you will need to become familiar with the Studio Designer in order to customize your interface to fit your needs.
 
 Studio Designer application is integrated with Studio Modeler and brings with it all the configuration elements needed to quickly and easily create a custom WebUI interface, using Nuxeo Elements and HTML syntax.

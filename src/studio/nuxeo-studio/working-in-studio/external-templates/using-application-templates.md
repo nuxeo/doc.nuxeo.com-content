@@ -80,6 +80,13 @@ history:
         version: '1'
 
 ---
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Expert Session on External Templates](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils).
+![]({{file name='university-external-template.png' page='studio/university'}} ?w=450,border=true)
+{{/callout}}
+
 **To import an Application Template:**
 
 {{! multiexcerpt name='application-template-import'}}

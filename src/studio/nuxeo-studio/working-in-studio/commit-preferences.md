@@ -124,6 +124,12 @@ history:
         version: '1'
 
 ---
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Branch Management](https://university.nuxeo.com/learn/public/course/view/elearning/62/understanding-nuxeo-studios-source-control-mechanism).
+![]({{file name='university-source-control.png' page='studio/university'}} ?w=450,border=true)
+{{/callout}}
+
 The commit preferences page lets you define the way you want to work with your co-workers. Some screens and behaviors are conditionned by the save mode that you choose.
 
 ![]({{file name='sources-management.png' page='how-to-collaborate-on-a-studio-project'}} ?w=650,border=true)

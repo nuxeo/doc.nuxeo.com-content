@@ -12,6 +12,12 @@ toc: true
 This feature is available for target platforms Nuxeo Platform LTS 2016 and above.
 {{/callout}}
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Searches with Nuxeo Studio Modeler and Designer](https://university.nuxeo.com/learn/public/course/view/elearning/134/configurating-searches-in-nuxeo-studio-modeler-designer).
+![]({{file name='university-search2018.png' page='studio/university'}} ?w=450,border=true)
+{{/callout}}
+
 Page providers allow retrieving documents with pagination facilities, to build custom document listings and search forms.
 They can be leveraged through the REST API:
 

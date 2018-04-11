@@ -108,6 +108,13 @@ history:
         version: '1'
 
 ---
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Video on Structure Templates](https://university.nuxeo.com/learn/public/course/view/elearning/38/structure-templates)
+![]({{file name='university-structure-templates.png' page='studio/university'}} ?w=450,border=true)
+{{/callout}}
+
 ## Concept
 
 When thinking of the structure of your repository, you might identify block of structures that will always be the same. For instance, when you create a Domain, you get subfolders Workspaces, Sections and Templates. You might also want such behavior when doing case management, so as to organize the structure of your case, ... Structure templates are actually a way of defining an automated structure that is bound to a folderish content type.
