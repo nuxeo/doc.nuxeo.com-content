@@ -22,6 +22,12 @@ You can also find detailed JIRA release notes:
 
 We also provide [instructions for upgrading]({{page version='' space='nxdoc' page='upgrade-from-lts-2016-to-lts-2017'}}) to the latest release.
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [LTS2017 Introduction course](https://university.nuxeo.com/learn/public/course/view/elearning/125/lts-2017-introduction).
+![]({{file name='university-lts2017.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
 ## Nuxeo Server
 
 ### Runtime
