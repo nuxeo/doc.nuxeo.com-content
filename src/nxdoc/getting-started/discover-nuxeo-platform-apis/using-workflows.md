@@ -156,6 +156,14 @@ next_link: /nxdoc/using-automation
 Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/39/WorkflowEngine) on Nuxeo University.
 {{/callout}}
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on the Nuxeo Workflow Engine](https://university.nuxeo.com/learn/public/course/view/elearning/39/WorkflowEngine).
+![]({{file name='university-workflows.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
+
+
 {{! excerpt}}
 
 Learn how to manage a contract validation workflow using the REST API. Log in as different users to see the whole process and process tasks.

@@ -14,9 +14,14 @@ tree_item_index: 100
 
 ---
 
-{{#> callout type='tip' }}
-Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) on Nuxeo University.
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Getting started with Nuxeo WebUI](https://university.nuxeo.com/learn/public/course/view/elearning/92/getting-started-with-nuxeo-web-ui)
+- [Importing Documents in the Nuxeo Platform](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture)
+![]({{file name='university-webui.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
+
+
 
 {{! excerpt}}
 In order to help you find the documents that you need, the Nuxeo Platform features several options to access, create and edit documents.

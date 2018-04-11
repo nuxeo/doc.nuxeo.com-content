@@ -210,6 +210,13 @@ history:
 
 ---
 
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Applying the Business Logic](https://university.nuxeo.com/learn/public/course/view/elearning/46/ApplyingBusinessLogic)
+![]({{file name='university-businesslogic.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
 {{#> callout type='tip'}} Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/46/ApplyingBusinessLogic) on Nuxeo University. {{/callout}}
 
 {{! excerpt}}

@@ -109,8 +109,10 @@ history:
 
 ---
 
-{{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) on Nuxeo University.
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Document Import](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture).
+![]({{file name='university-import.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
 The [Scan Documents Importer addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer) allows to create documents from XML files located on the file system every time a dedicated event is launched. It can therefore be easily configured to import data on a regular basis.

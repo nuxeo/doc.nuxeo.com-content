@@ -293,8 +293,12 @@ history:
         version: '1'
 
 ---
-{{#> callout type='tip'}}
-Follow the related [course](https://university.nuxeo.com/learn/public/course/view/elearning/80/document-and-workflow-task-layouts-with-nuxeo-studio-designer) and [exercises](https://university.nuxeo.com/learn/public/course/view/elearning/103/nuxeo-studio-exercises) on Nuxeo University.
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Document Type Layouts with Studio Designer](https://university.nuxeo.com/learn/public/course/view/elearning/80/document-and-workflow-task-layouts-with-nuxeo-studio-designer)
+- [Exercises on Nuxeo Studio](https://university.nuxeo.com/learn/public/course/view/elearning/103/nuxeo-studio-exercises)
+![]({{file name='university-studio-exercises.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Introduction
