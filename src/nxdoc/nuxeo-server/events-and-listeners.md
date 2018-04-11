@@ -311,20 +311,20 @@ You can also have events be sent automatically at regular intervals using the [S
 ## Handling Errors
 
 ### Bubbling Errors
-When an event is fired, the Event Service runs every registered listener for this event (ordered by priority - see above). By default, if an error occurs for one listener, it is catched and logged, and the Event Service continues executing the other listeners. In the log, a message writes:
+When an event is fired, the Event Service runs every registered listener for this event (ordered by priority - see above). By default, if an error occurs for one listener, it is catched and logged, and the Event Service continues executing the other listeners. In the log, a message is displayed:
 
 ```
 Exception during yourListener sync listener execution, continuing to run other listeners
 ```
 
-If you throw an error in your listener and want the Event Service to stop execution and push the error to the caller, use the `Event#markBubbleException` method. In the following example, we have of synchronous event (configured to be triggered only foe `beforeDocumentModification`), and want to be granular and forbid the modification of the `dc:rights` field if the lifecycle state is `"expired"`:
+If you throw an error in your listener and want the Event Service to stop execution and push the error to the caller, use the `Event#markBubbleException` method. In the following example, we have a synchronous event (configured to be triggered only for `beforeDocumentModification`), and want to be granular and forbid the modification of the `dc:rights` field if the lifecycle state is `"expired"`:
 
 ```
 public class MyDoNotModifyRights implements EventListener {
 
     @Override
     public void handleEvent(Event event) {
-        
+
         // . . . see above: Check doc type, check lifecycle state, ...
 
         if(doc.getProperty("dc:rights").isDirty()) {
