@@ -202,8 +202,9 @@ history:
 ---
 
 {{#> callout type='info'}}
-Watch the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/89/nuxeo-csv-importer) on Nuxeo University.
-![]({{file name='university_csv.png'}} ?w=300,border=true)
+Watch the related courses on Nuxeo University
+- [Nuxeo CSV Importer](https://university.nuxeo.com/learn/public/course/view/elearning/89/nuxeo-csv-importer) on Nuxeo University.
+![]({{file name='university_csv.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
 {{! excerpt}}

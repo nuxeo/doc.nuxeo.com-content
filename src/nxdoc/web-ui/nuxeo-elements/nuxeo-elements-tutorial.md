@@ -22,6 +22,12 @@ This tutorial shows you how to build a simple application base on the Polymer St
 will be able to read documents from a Nuxeo instance.  You'll learn how to create a new element and gradually
 improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 
+{{#> callout type='info'}}
+Watch the related courses on Nuxeo University
+- [Introduction to Nuxeo Elements](https://university.nuxeo.com/learn/public/course/view/elearning/79/introduction-to-nuxeo-elements)
+![]({{file name='university-nuxeo-elements.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
 ## Requirements
 
 *   **[Node.js](https://nodejs.org/)** is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client-side development is built with Node.js and distributed with npm, the package manager for Node.js. Make sure you download and install your OS-specific version first.

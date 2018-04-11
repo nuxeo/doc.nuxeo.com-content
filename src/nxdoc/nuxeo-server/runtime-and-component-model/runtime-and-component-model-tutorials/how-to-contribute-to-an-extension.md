@@ -161,8 +161,11 @@ history:
         version: '1'
 
 ---
-{{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/70/HandlingServiceExtensionPoints) on Nuxeo University.
+
+{{#> callout type='info'}}
+Watch the related courses on Nuxeo University
+- [Course on Handling Service Extension Points](https://university.nuxeo.com/learn/public/course/view/elearning/70/HandlingServiceExtensionPoints)
+![]({{file name='university-extension-points.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
 ## {{> anchor 'finding-extension-point'}}Finding the Extension Point Where to Contribute

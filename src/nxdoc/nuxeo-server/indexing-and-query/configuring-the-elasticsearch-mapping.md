@@ -191,6 +191,12 @@ This documentation page talks about the many aspects you can tune for improving 
 
 {{! /excerpt}}
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Nuxeo Search Basics](https://university.nuxeo.com/learn/public/course/view/elearning/50/nuxeo-search-basics).
+![]({{file name='university-search-basics.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
 {{#> callout type='warning' }}
 
 This documentation page apply only to Nuxeo Platform version greater or equal to **9.3** with Elasticsearch version greater or equal to **5.6**.

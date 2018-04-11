@@ -413,6 +413,14 @@ history:
 ---
 Here we want to add some server side Java logic that will update the contract's renegotiation date. In our example it will simply take the contract's start date and add three months to it, but you can think of integrating any custom logic in your Java class, including a connection to an external webservice or an ERP.
 
+{{#> callout type='info'}}
+Watch the related courses on Nuxeo University
+- [Course on Nuxeo CLI](https://university.nuxeo.com/learn/public/course/view/elearning/83/NuxeoDevTools)
+- [Course on Nuxeo Platform Developer Basics](https://university.nuxeo.com/learn/public/course/view/elearning/11/nuxeo-platform-developer-basics).
+- [Expert Session on Nuxeo Software Factory](https://university.nuxeo.com/learn/public/course/view/elearning/136/expert-session-nuxeo-software-factory)
+![]({{file name='university-nuxeo-cli.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
 ## Prerequisites
 
 * A Contract document type created on this [page]({{page version='' space='nxdoc' page='web-ui-document-layouts'}})

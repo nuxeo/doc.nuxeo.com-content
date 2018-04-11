@@ -200,7 +200,11 @@ history:
 This endpoint allows to upload a batch of files to a Nuxeo server. The uploaded files can then be used as the input of an Automation operation or a property of a document through the REST API.
 
 {{! /excerpt}}
-
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Nuxeo REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/91/nuxeo-rest-api-import).
+![]({{file name='university-rest-api-importer.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
 ## Batch Upload Endpoint
 
 <div class="table-scroll">

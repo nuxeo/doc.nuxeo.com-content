@@ -24,9 +24,11 @@ labels:
 tree_item_index: 400
 
 ---
-{{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner) on Nuxeo University.
-{{/callout}}  
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Document type layouts](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner).
+![]({{file name='university-doc-layouts.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
 
 Document type layouts are used to display a document's metadata in Web UI forms. A document layout is structured with document type properties, assembled with several UI elements such as sections, cards, columns etc.
 

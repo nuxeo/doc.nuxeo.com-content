@@ -44,6 +44,12 @@ The main advantage of this framework-agnostic approach is that these technologie
 DOM to be the "framework" and HTML to define the syntax. Therefore, there's no need for external frameworks for it to work,
 although it should integrate with most frameworks without major problems. Sure, not all browsers fully support the Web Components spec **yet**, but there are polyfills to help in the meantime.
 
+{{#> callout type='info'}}
+Watch the related courses on Nuxeo University
+- [Introduction to Nuxeo Elements](https://university.nuxeo.com/learn/public/course/view/elearning/79/introduction-to-nuxeo-elements)
+![]({{file name='university-nuxeo-elements.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
 Polymer pushes for a very declarative approach to building web applications with the "everything is an element" philosophy.
 This includes both visual and non-visual/data elements, so even non-UI elements can take advantage of data binding in a
 declarative way, making for very concise and clean code.

@@ -90,5 +90,5 @@ toc: true
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University : [Nuxeo Digital Asset Management (DAM) Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/97/nuxeo-digital-asset-management-dam-concepts).
-![]({{file name='university-dam.png'}} ?w=450,border=true)
+![]({{file name='university-dam.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
