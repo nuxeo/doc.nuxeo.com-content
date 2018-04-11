@@ -234,6 +234,12 @@ history:
 ---
 The principal goal is to create feature branches that will enable developers to work on the same branch without impacting the `master` branch. They can work together or on their respective sides and merge their work when the features are done.
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Branch Management](https://university.nuxeo.com/learn/public/course/view/elearning/62/understanding-nuxeo-studios-source-control-mechanism).
+![]({{file name='university-source-control.png' page='studio/university'}} ?w=450,border=true)
+{{/callout}}
+
 ## Before You Start
 
 ### Scenario

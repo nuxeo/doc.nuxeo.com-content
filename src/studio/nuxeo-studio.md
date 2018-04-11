@@ -83,10 +83,10 @@ The goal of this section is to provide ready to use examples. They can be follow
 
 {{/panel}}</div></div>
 
-### An overview of Nuxeo Studio features in this screencast:
-
-{{> wistia_video id='me59a8g79l'}}
-
-Extract from the course ["Getting Started With Nuxeo Studio"](https://university.nuxeo.io/nuxeo/university/#!/course/getting-started-nuxeo-studio) on [Nuxeo University](https://university.nuxeo.io/)
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Learning Plan on Nuxeo Studio](https://university.nuxeo.com/learn/public/learning_plan/view/5/nuxeo-studio-foundations)
+![]({{file name='university-studio-learning-plan.png' page='studio/university'}} ?w=450,border=true)
+{{/callout}}
 
 {{{multiexcerpt 'license' page='NXDOC:Developer Documentation Center'}}}

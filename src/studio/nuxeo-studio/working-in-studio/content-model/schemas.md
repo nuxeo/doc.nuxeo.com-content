@@ -132,6 +132,13 @@ history:
         version: '1'
 
 ---
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Content Model Design](https://university.nuxeo.com/learn/public/course/view/elearning/12/content-model-design-in-nuxeo-studio)
+![]({{file name='university-content-model.png' page='studio/university'}} ?w=450,border=true)
+{{/callout}}
+
 ## Concept
 
 A schema in Nuxeo Studio is dedicated to define a list of metadata. If you are not comfortable with this typical ECM notion, please read more about documents, properties and schemas in the [Essential Nuxeo Platform Terminology]({{page space='nxdoc' page='essential-nuxeo-platform-terminology'}}).

@@ -127,6 +127,14 @@ history:
         version: '1'
 
 ---
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Video on Event Handlers](https://university.nuxeo.com/learn/public/course/view/elearning/48/setting-up-event-handlers)
+- [Video on the Creation and Modification Events](https://university.nuxeo.com/learn/public/course/view/elearning/49/understanding-the-main-creation-and-modification-events)
+- [Getting started with Nuxeo Studio](https://university.nuxeo.com/learn/public/course/view/elearning/10/getting-started-with-nuxeo-studio).
+![]({{file name='university-events.png' page='studio/university'}} ?w=450,border=true)
+{{/callout}}
+
 ## Concept
 
 To let you understand what event handlers are we can do a parallel with:

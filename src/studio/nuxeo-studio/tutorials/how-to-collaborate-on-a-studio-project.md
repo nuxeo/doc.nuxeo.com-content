@@ -146,6 +146,12 @@ This how-to explains how two users can work at the same time on a Studio Project
 
 ![]({{file name='simple_save_mode.png'}} ?w=250,border=true,thumbnail=true)
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Branch Management](https://university.nuxeo.com/learn/public/course/view/elearning/62/understanding-nuxeo-studios-source-control-mechanism).
+![]({{file name='university-source-control.png' page='studio/university'}} ?w=450,border=true)
+{{/callout}}
+
 {{#> callout type='tip' }}
 
 If you are not familiar with the revision control concept, you may want to have a look to the [branch management]({{page page='branch-management'}}) documentation before you start.

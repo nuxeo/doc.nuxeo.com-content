@@ -117,6 +117,13 @@ history:
         version: '1'
 
 ---
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Business Logic Implementation](https://university.nuxeo.com/learn/public/course/view/elearning/46/applying-business-logic)
+- [Getting started with Nuxeo Studio](https://university.nuxeo.com/learn/public/course/view/elearning/10/getting-started-with-nuxeo-studio)
+![]({{file name='university-business-logic.png' page='studio/university'}} ?w=450,border=true)
+{{/callout}}
+
 ## Concept
 
 Concepts about Automation are introduced in the [developer documentation]({{page space='nxdoc' page='content-automation-concepts'}}). You should read them before starting using this feature.

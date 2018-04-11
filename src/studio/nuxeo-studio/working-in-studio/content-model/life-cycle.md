@@ -46,6 +46,13 @@ history:
         version: '1'
 
 ---
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Content Model Design](https://university.nuxeo.com/learn/public/course/view/elearning/12/content-model-design-in-nuxeo-studio)
+![]({{file name='university-content-model.png' page='studio/university'}} ?w=450,border=true)
+{{/callout}}
+
 ## Concept
 
 A lifecycle is a set of **states** and transitions that apply to a document. One of the states is marked as being the "initial state" and is the state of the document when it is created. States that the document can hold depend on the transitions that are set between the states. Default lifecycle in Nuxeo contains following states: project, approved, obsolete. One could see lifecycle just as yet another metadata with a controlled list of values, but actually the framework provides API around lifecycle management, such as ability to "reset" the lifecycle of a document, and ability to "[follow](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.SetLifeCycle)" a transition..

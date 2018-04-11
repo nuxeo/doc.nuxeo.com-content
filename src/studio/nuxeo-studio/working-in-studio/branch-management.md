@@ -190,6 +190,13 @@ history:
         version: '1'
 
 ---
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Branch Management](https://university.nuxeo.com/learn/public/course/view/elearning/62/understanding-nuxeo-studios-source-control-mechanism).
+![]({{file name='university-source-control.png' page='studio/university'}} ?w=450,border=true)
+{{/callout}}
+
 ## Concept
 
 Branch Management editor contains the information related to the branch management of the current project. This is where you can create, manage and delete your branches.

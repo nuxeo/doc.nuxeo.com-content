@@ -116,6 +116,12 @@ history:
 ---
 Our branch management system is inspired from distributed revision control systems. Here are the principles:
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Branch Management](https://university.nuxeo.com/learn/public/course/view/elearning/62/understanding-nuxeo-studios-source-control-mechanism).
+![]({{file name='university-source-control.png' page='studio/university'}} ?w=450,border=true)
+{{/callout}}
+
 ## Branches Principles
 
 Every Studio project is initialized with a `master` branch which is the main branch of your project. It should be used to perform the main release. The `master` branch cannot be removed. You can create as many branches as you need. Typically if you want to start working on a new feature that will take some time and don't want that work to be displayed with the rest of your customization in Studio (and the Platfform) until it is finished, you should create a branch for it. You can also create a maintenance branch to separate maintenance developments from evolution development. A new branch is always based on existing one, so a new branch is not an empty one.
