@@ -152,14 +152,12 @@ previous_link: /nxdoc/using-renditions
 next_link: /nxdoc/using-automation
 
 ---
-{{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/39/WorkflowEngine) on Nuxeo University.
-{{/callout}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [Course on the Nuxeo Workflow Engine](https://university.nuxeo.com/learn/public/course/view/elearning/39/WorkflowEngine).
-![]({{file name='university-workflows.png' page='nxdoc/university'}} ?w=450,border=true)
+- [Course on the Nuxeo Workflow Engine](https://university.nuxeo.com/learn/public/course/view/elearning/39/WorkflowEngine)
+- [Course on the REST API](https://university.nuxeo.com/learn/public/course/view/elearning/66/rest-api).
+![]({{file name='university-restapi.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
 
