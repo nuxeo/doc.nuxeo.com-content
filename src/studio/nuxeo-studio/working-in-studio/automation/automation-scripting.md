@@ -73,7 +73,6 @@ Automation Scripting is a Nuxeo module which provides ability to create and cont
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
 - [Video on Automation Scripting](https://university.nuxeo.com/learn/public/course/view/elearning/47/implementing-your-own-operation-with-automation-scripting)
-- [Getting started with Nuxeo Studio](https://university.nuxeo.com/learn/public/course/view/elearning/10/getting-started-with-nuxeo-studio)
 ![]({{file name='university-scripting.png' page='studio/university'}} ?w=450,border=true)
 {{/callout}}
 

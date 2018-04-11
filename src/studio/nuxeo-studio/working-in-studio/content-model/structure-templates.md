@@ -111,8 +111,8 @@ history:
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [Video on Structure Templates](https://university.nuxeo.com/learn/public/course/view/elearning/38/structure-templates)
-![]({{file name='university-structure-templates.png' page='studio/university'}} ?w=450,border=true)
+- [Course on Content Model Design](https://university.nuxeo.com/learn/public/course/view/elearning/12/content-model-design-in-nuxeo-studio)
+![]({{file name='university-content-model.png' page='studio/university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Concept
