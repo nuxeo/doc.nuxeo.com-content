@@ -253,6 +253,60 @@ e.g.:
     </extension>
 ```
 
+#### Full example
+This example is based of S3DirectBatchHandler which serves the purpose of using S3 as a Transient Store
+
+```xml
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.platform.aws.s3.refstorage" version="1.0.0">
+    <require>org.nuxeo.ecm.core.storage.cloud.managment.contrib</require>
+    <extension target=“org.nuxeo.runtime.kv.KeyValueService" point="configuration">
+        <store name="s3kvs" class=“org.nuxeo.runtime.kv.MemKeyValueStore">
+        </store>
+    </extension>
+    <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
+        <blobprovider name="s3kvs">
+            <class>org.nuxeo.ecm.core.storage.sql.S3BinaryManager</class>
+            <property name="awsid">AWS_KEY_ID</property>
+            <property name="awssecret">AWS_SECRET</property>
+            <property name="region">AWS_REGION</property>
+            <property name="bucket">AWS_BUCKET</property>
+            <property name="bucket.prefix">/</property>
+            <property name="directdownload">true</property>
+            <property name="directdownload.expire">3600</property>
+            <property name="cachesize">100MB</property>
+            <property name="connection.max">50</property>
+            <property name="connection.retry">3</property>
+            <property name="connection.timeout">50000</property>
+            <property name="socket.timeout">50000</property>
+            <property name="transient">true</property>
+        </blobprovider>
+    </extension>
+    <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent" point="store">
+        <store name="s3kvs" class="org.nuxeo.ecm.core.transientstore.keyvalueblob.KeyValueBlobTransientStore">
+            <targetMaxSizeMB>1</targetMaxSizeMB>
+            <absoluteMaxSizeMB>-1</absoluteMaxSizeMB>
+            <firstLevelTTL>120</firstLevelTTL>
+            <secondLevelTTL>10</secondLevelTTL>
+        </store>
+    </extension>
+    <extension target="org.nuxeo.ecm.automation.server.BatchManager"
+               point="handlers">
+        <batchHandler>
+            <name>s3</name>
+            <class>org.nuxeo.ecm.core.storage.sql.S3DirectBatchHandler</class>
+            <property name="transientStore">s3kvs</property>
+            <property name="awsid">AWS_KEY_ID</property>
+            <property name="awssecret">AWS_SECRET</property>
+            <property name="region">AWS_REGION</property>
+            <property name="bucket">BUCKET_NAME</property>
+            <property name="roleArn">ROLE_ARN</property>
+            <property name="s3AccelerationSupported">S3_ACCELERATION</property>
+        </batchHandler>
+    </extension>
+</component>
+```
+
 ## Time To Live and Garbage Collector
 
 Entries have a Time To Live (TTL) defined in the transient store configuration.

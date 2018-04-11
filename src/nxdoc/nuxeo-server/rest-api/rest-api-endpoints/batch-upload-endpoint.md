@@ -307,6 +307,17 @@ This request returns a 201 CREATED status code with the following JSON data:
 
 The batch id can be seen as an upload session id, especially for a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}}#-anchor-uploadingafileinchunks-uploading-a-file-in-chunks-resumable-).
 
+#### Batch Upload Handler Architecture
+Example for Amazon Web Services S3
+
+![]({{file name='s3-direct-batch-upload.png'}} ?border=true)
+
+  1. Client initiates batch
+  2. Request Temporary Credentials and S3 Data
+  3. Upload file to S3 Bucket
+  4. POST file information to Nuxeo
+  5. Attach to Document 
+
 #### Using a Different Upload Handler
 
 On batch initialization you call:
