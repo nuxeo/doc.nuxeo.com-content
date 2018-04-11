@@ -20,11 +20,11 @@ labels:
 <table class="hover">
 <tbody>
 <tr>
-<th width="250" colspan="1">JSF UI</th>
-<th width="250" colspan="1">Web UI</th>
+<th width="250" colspan="1" style="background-color:#ebebeb">JSF UI</th>
+<th width="250" colspan="1" style="background-color:#ebebeb">Web UI</th>
 </tr>
 <tr>
-<td colspan="1" style="background-color:white; border-top:1px solid grey;">
+<td colspan="1" style="background-color:white">
 Create a document using the **New** button to select the type of document you want to create among all Nuxeo Platform's document types.
 
 ![]({{file name='create-button-jsf-ui.png'}} ?w=400,border=true)
@@ -42,7 +42,7 @@ The **Summary** tab of the document is displayed.
 [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='creating-content'}})
 
 </td>
-<td colspan="1" style="background-color:white; border-top:1px solid grey;">
+<td colspan="1" style="background-color:white">
 On Web UI, the Create button ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=20) is available **from any page** in the bottom right corner of the page.
 ![]({{file name='content-view-create-web-ui.png'}} ?w=400,border=true)
 It enables you to select the type of document you want to create among all Nuxeo Platform's document types.
@@ -68,11 +68,11 @@ The View tab of the document is displayed.
 <table class="hover">
 <tbody>
 <tr>
-<th width="250" colspan="1">JSF UI</th>
-<th width="250" colspan="1">Web UI</th>
+<th width="250" colspan="1" style="background-color:#ebebeb">JSF UI</th>
+<th width="250" colspan="1" style="background-color:#ebebeb">Web UI</th>
 </tr>
 <tr>
-<td colspan="1" style="background-color:white; border-top:1px solid grey;">
+<td colspan="1" style="background-color:white">
 For all previewable documents, a **Preview** button (![]({{file name='preview.png' space='userdoc' page='icons-index'}}) icon) is available on the Document Actions section area (top right on the Web UI document view).</br>
 For office and PDF documents: </br>
 Click on the ![]({{file name='preview.png' space='userdoc' page='icons-index'}}) icon in the document view.
@@ -86,7 +86,7 @@ On the JSF UI, you can also preview a document along with its main metadata on t
 </br>
 [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='/userdoc/preview'}})
 </td>
-<td colspan="1" style="background-color:white; border-top:1px solid grey;">
+<td colspan="1" style="background-color:white">
 On Web UI, all type of documents can be previewed: Audio, PDF, Office, Video, 3D, etc.</br>
 A **preview button** is available at the top right-and corner of each document and below the document itself.</br>
 When you click on it, a popup is displayed previewing your document.</br>
@@ -105,11 +105,11 @@ When you click on it, a popup is displayed previewing your document.</br>
 <table class="hover">
 <tbody>
 <tr>
-<th width="250" colspan="1">JSF UI</th>
-<th width="250" colspan="1">Web UI</th>
+<th width="250" colspan="1" style="background-color:#ebebeb">JSF UI</th>
+<th width="250" colspan="1" style="background-color:#ebebeb">Web UI</th>
 </tr>
 <tr>
-<td colspan="1" style="background-color:white; border-top:1px solid grey;">
+<td colspan="1" style="background-color:white">
 **Navigation Tree**: The default navigation tree displayed on the left hand side of the pages is the folders navigation tree. It displays all the domain structure from the root. It enables you to easily access any space in the application structure.
 ![]({{file name='navigation_tree.png' page='userdoc/browsing-content'}} ?w=350,border=true)
 </br>
@@ -120,7 +120,7 @@ When you click on it, a popup is displayed previewing your document.</br>
 [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='browse'}})
 </td>
 
-<td colspan="1" style="background-color:white; border-top:1px solid grey;">
+<td colspan="1" style="background-color:white">
 **Side Menu**: The side menu offers two different tabs.</br>
 Clicking on elements on the left will open a side panel (also called Drawer) with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area. This new pattern allows to start browsing without changing the context of work. The side menu displays all the domain structure from the root.
 ![]({{file name='web_ui_with_side_panel.png' page='nxdoc/web-ui-overview'}} ?w=400,border=true)
@@ -143,11 +143,11 @@ Clicking on elements on the left will open a side panel (also called Drawer) wit
 <table class="hover">
 <tbody>
 <tr>
-<th width="250" colspan="1">JSF UI</th>
-<th width="250" colspan="1">Web UI</th>
+<th width="250" colspan="1" style="background-color:#ebebeb">JSF UI</th>
+<th width="250" colspan="1" style="background-color:#ebebeb">Web UI</th>
 </tr>
 <tr>
-<td colspan="1" style="background-color:white; border-top:1px solid grey;">
+<td colspan="1" style="background-color:white">
 **Default Search**: The Search can be accessed at the top in the three main spaces, select the **Search** tab and it will enable you to search on keywords, metadata and additional criteria such as the location in the application.</br>
 ![]({{file name='search_content_view.png' page='nxdoc/how-to-configure-a-search-filter-with-facets-and-other-aggregates'}} ?w=400,border=true)
 **Quick Search**: The quick search can be accessed from any page. At any time, you can search a document by typing keywords in the search box located at the upper right corner of the page.</br>
@@ -156,7 +156,7 @@ Clicking on elements on the left will open a side panel (also called Drawer) wit
 </br>
 [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='searching-the-nuxeo-platform'}})
 </td>
-<td colspan="1" style="background-color:white; border-top:1px solid grey;">
+<td colspan="1" style="background-color:white">
 **Search Tab**: The Search tab can be accessed from the side menu and enables you to search a document using documents metadata You can for instance select metadata of the searched document or the date of specific events such as publication, creation.</br>
 ![]({{file name='search-tab-web-ui.png' page='userdoc/search'}} ?w=400,border=true)
 **Quick search**: As in JSF UI, the quick search can be accessed from any page. At any time, you can search a document by typing keywords in the search box located at the upper right corner of the page. The keywords will be highlighted in your query results.
@@ -178,11 +178,11 @@ Clicking on elements on the left will open a side panel (also called Drawer) wit
 <table class="hover">
 <tbody>
 <tr>
-<th width="250" colspan="1">JSF UI</th>
-<th width="250" colspan="1">Web UI</th>
+<th width="250" colspan="1" style="background-color:#ebebeb">JSF UI</th>
+<th width="250" colspan="1" style="background-color:#ebebeb">Web UI</th>
 </tr>
 <tr>
-<td colspan="1" style="background-color:white; border-top:1px solid grey;"> Two workflows are available by default on the Nuxeo Platform, the [**serial workflow**]({{page page='serial-document-workflow'}}) and the [**parallel workflow**]({{page page='parallel-document-workflow'}}).
+<td colspan="1" style="background-color:white"> Two workflows are available by default on the Nuxeo Platform, the [**serial workflow**]({{page page='serial-document-workflow'}}) and the [**parallel workflow**]({{page page='parallel-document-workflow'}}).
 </br>
 </br>
 You can start them from any document where you have at least Edit or Manage Everything rights. Go on the document that you want, select the workflow needed and click on **Start**.</br>
@@ -195,7 +195,7 @@ If the task is assigned to you, different options are available. You can accept 
 </br>
 [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='browse'}}#creating-content)
 </td>
-<td colspan="1" style="background-color:white; border-top:1px solid grey;">
+<td colspan="1" style="background-color:white">
 The [**serial workflow**]({{page page='userdoc/task'}}) and the [**parallel workflow**]({{page page='userdoc/task'}}) are also available by default on Web UI. Users who are involved in workflows are alerted by email and can have a synthetic view of all their pending tasks on documents in their dashboard or on the Task tab. The documents they have to review are listed there.</br>
 Go on the document that you want to review and click on ![]({{file name='workflow_web-ui.png' page='icons-index'}}).
 </br>
@@ -221,11 +221,11 @@ If a task has been assigned to you, the pending task will be available in the **
 <table class="hover">
 <tbody>
 <tr>
-<th width="250" colspan="1">JSF UI</th>
-<th width="250" colspan="1">Web UI</th>
+<th width="250" colspan="1" style="background-color:#ebebeb">JSF UI</th>
+<th width="250" colspan="1" style="background-color:#ebebeb">Web UI</th>
 </tr>
 <tr>
-<td colspan="1" style="background-color:white; border-top:1px solid grey;">Users can download documents on their computer. It is possible to download:</br>
+<td colspan="1" style="background-color:white">Users can download documents on their computer. It is possible to download:</br>
 - One document at a time</br>
 - A selection of document</br>
 - An entire workspace, folder, section
@@ -246,7 +246,7 @@ You can export via an **XML export** or a **ZIP Tree XML export**.
 </br>
 [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='exporting-documents'}})
 </td>
-<td colspan="1" style="background-color:white; border-top:1px solid grey;"> As in JSF UI, users can download a single document or a selection of documents on Web UI:
+<td colspan="1" style="background-color:white"> As in JSF UI, users can download a single document or a selection of documents on Web UI:
 </br>
 </br>
 **From a Document**</br>
