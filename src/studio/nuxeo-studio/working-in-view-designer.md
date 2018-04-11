@@ -15,7 +15,7 @@ This feature is available for target platforms Nuxeo Platform LTS 2016 and above
 Watch the related courses on Nuxeo University
 - [Course on Document type layouts](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner)
 - [Course on Searches](https://university.nuxeo.com/learn/public/course/view/elearning/134/configurating-searches-in-nuxeo-studio-modeler-designer)
-![]({{file name='university-search.png' page='nxdoc/university'}} ?w=450,border=true)
+![]({{file name='university-search.png' page='studio/university'}} ?w=450,border=true)
 {{/callout}}
 
 
