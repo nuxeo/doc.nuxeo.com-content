@@ -546,6 +546,12 @@ This page explains the organization and scope of the existing endpoints and othe
 
 {{! /excerpt}}{{! multiexcerpt name='RestAPIIntroduction'}}
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on the REST API](https://university.nuxeo.com/learn/public/course/view/elearning/66/rest-api).
+![]({{file name='university-restapi.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
 ## Scope and Concepts
 
 Nuxeo provides a complete API accessible via HTTP/HTTPS. This API is the best way to remotely integrate portals, workflow engines, ESBs and custom applications written in JavaScript, Ruby, etc, with the Nuxeo Platform repository. See [REST API Endpoints]({{page page='rest-api-endpoints'}}) for more detailed information on the endpoints provided by Nuxeo REST API and how to contribute your own.
