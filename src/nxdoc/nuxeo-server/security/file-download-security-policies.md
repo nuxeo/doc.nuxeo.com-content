@@ -103,9 +103,12 @@ history:
         version: '1'
 
 ---
-{{> wistia_video id='8qt7oqor9j'}}
 
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/learn/public/course/view/elearning/55/WhatsnewinNuxeoPlatformLTS2015%3F) on [Nuxeo University](https://university.nuxeo.com)
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Video on Setting up a File Download Security Policy](https://university.nuxeo.com/learn/public/course/view/elearning/60/setting-up-a-file-download-security-policy).
+![]({{file name='university-security-policy.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
 
 In addition to the permissions applying to a document, which restrict access to a document as a whole, it's possible to specify more fine-grained permissions to disallow the download of some file attachments.
 

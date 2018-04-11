@@ -132,6 +132,12 @@ The Nuxeo Platform allows you to [upload binaries under a given "batch ID"]({{pa
 
 {{! /excerpt}}
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Nuxeo REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/91/nuxeo-rest-api-import).
+![]({{file name='university-rest-api-importer.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
 There are two ways to upload a file:
 
 1.  [In one go](#uploadingafileinonego): the full content of the file is transferred to the server as a binary stream in a single HTTP request. Such an upload is not resumable: in case of interruption you will need to start all over again.

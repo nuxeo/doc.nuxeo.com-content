@@ -142,6 +142,12 @@ When [configuring a content view]({{page space='studio' page='content-view-query
 
 {{! /excerpt}}
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Nuxeo Search Basics](https://university.nuxeo.com/learn/public/course/view/elearning/50/nuxeo-search-basics).
+![]({{file name='university-search-basics.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
 ## Overriding an Existing Page Provider
 
 See in `nuxeo.conf` the property "`elasticsearch.override.pageproviders`". Uncomment it and pickup some of the mentioned page providers.
@@ -165,10 +171,6 @@ You can view the list of the Page Providers in the Admin Center/Elasticsearch/Pa
 {{#> callout type='note' }}
 
 Elasticsearch indexing is "eventually consistent". This means that depending on your indexing server charge, you may have a small delay before Elasticsearch returns the latest content update/create/delete.
-
-{{/callout}}{{> wistia_video id='c9lxp69a01'}}
-
-Extract from the course [What's New in Nuxeo Platform 2015](https://university.nuxeo.com/learn/public/course/view/elearning/55/WhatsnewinNuxeoPlatformLTS2015%3F) on [Nuxeo University](https://university.nuxeo.com)
 
 &nbsp;
 

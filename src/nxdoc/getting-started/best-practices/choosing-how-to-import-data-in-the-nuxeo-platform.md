@@ -117,8 +117,10 @@ history:
 
 ---
 
-{{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) on Nuxeo University.
+{{#> callout type='info'}}
+Watch the related courses on Nuxeo University
+- [Data Capture - Import Strategies](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) on Nuxeo University.
+![]({{file name='university-data-capture.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
 The Nuxeo Platform provides tools and APIs to import content:

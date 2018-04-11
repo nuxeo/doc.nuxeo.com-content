@@ -12,8 +12,10 @@ labels:
 tree_item_index: 200
 
 ---
-{{#> callout type='tip'}}
-Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/83/NuxeoDevTools) on Nuxeo University.
+
+{{#> callout type='info'}}
+Watch the related courses on Nuxeo University
+- [Video on the Nuxeo Browser Extension](https://university.nuxeo.com/learn/public/course/view/elearning/83/NuxeoDevTools)
 {{/callout}}
 
 {{! excerpt}}
