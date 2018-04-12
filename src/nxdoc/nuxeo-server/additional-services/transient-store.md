@@ -253,8 +253,8 @@ e.g.:
     </extension>
 ```
 
-#### Full example
-This example is based of S3DirectBatchHandler which serves the purpose of using S3 as a Transient Store
+#### Full Example
+This example is based on `S3DirectBatchHandler` which serves the purpose of using S3 as a Transient Store
 
 ```xml
 <?xml version="1.0"?>
