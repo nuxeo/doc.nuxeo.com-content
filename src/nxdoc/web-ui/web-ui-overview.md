@@ -105,6 +105,7 @@ Follow the related [video course and exercises](https://university.nuxeo.com/lea
 {{/callout}}
 
 Nuxeo Web UI is a standard base web application for Nuxeo Server that connects via HTTP and displays all the features of the platform to the users. Customizable, scalable and built upon a framework of Web components, it allows Nuxeo Platform developers to build their own front-end application using these components. The [Nuxeo Web UI addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) is available in beta version on [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/).
+
 ![]({{file name='web_ui_with_side_panel.png'}} ?w=650,border=true)
 
 It leverages the web as a platform and allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full screen suggester and several other features built to provide a rich user experience. Here are the most important topics on getting started with Web UI, customizing it and building new web apps using Nuxeo Elements:
@@ -217,7 +218,17 @@ This new pattern allows to start browsing without changing the context of work.
 
 **Clipboard:** Clipboard to copy and move documents
 
-</td></tr><tr><td colspan="1">![]({{file name='user_menu.png'}})</td><td colspan="1">
+</td>
+</tr>
+<tr><td colspan="1">![]({{file name='trash.png'}})</td><td colspan="1">
+
+**Trash:** Search deleted documents using full text and metadata
+
+</td>
+</tr>
+<tr>
+<td colspan="1">![]({{file name='user_menu.png'}})</td>
+<td colspan="1">
 
 **User Settings:** Displays a **Themes** tab to manage branding and possibly other tabs depending on Nuxeo addons installed. For instance when Nuxeo Drive is installed a **Drive** tab is available to manage the user's synchronization roots.
 
