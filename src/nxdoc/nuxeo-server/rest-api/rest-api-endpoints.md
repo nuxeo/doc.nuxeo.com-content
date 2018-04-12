@@ -83,11 +83,12 @@ Perform CRUD operations on Nuxeo resources in REST style. The following resource
       <tr>
         <td class="small-3">**OAuth2**</td>
         <td class="small-3">
-          `/nuxeo/api/v1/oauth2/provider/{providerId}`<br/>
-          `/nuxeo/api/v1/oauth2/provider/{providerId}/token`
+          `/nuxeo/api/v1/oauth2/provider`<br/>
+          `/nuxeo/api/v1/oauth2/client`<br/>
+          `/nuxeo/api/v1/oauth2/token`
         </td>
         <td class="small-6">
-          Retrieve authentication data from OAuth2 provider or get a new access token. See [OAuth2 Resource Endpoint]({{page page='oauth2-endpoint'}}) for more information.</td>
+          CRUD on OAuth2 providers, clients and tokens. See [OAuth2 Resource Endpoint]({{page page='oauth2-endpoint'}}) for more information.</td>
       </tr>
       <tr>
         <td class="small-3">**Workflows and Tasks**</td>
