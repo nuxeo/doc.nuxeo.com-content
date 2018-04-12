@@ -310,7 +310,7 @@ The batch id can be seen as an upload session id, especially for a [resumable up
 #### Batch Upload Handler Architecture
 Example for Amazon Web Services S3
 
-![]({{file name='s3-direct-batch-upload.png'}} ?border=true)
+![]({{file name='s3-direct-batch-upload.png'}})
 
   1. Client initiates batch
   2. Request Temporary Credentials and S3 Data
