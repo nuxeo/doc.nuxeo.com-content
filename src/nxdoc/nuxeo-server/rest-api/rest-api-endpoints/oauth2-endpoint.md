@@ -3,7 +3,7 @@ title: OAuth2 Resource Endpoint
 description: A REST endpoint to retrieve oauth2 provider data.
 review:
     comment: ''
-    date: '2018-01-15'
+    date: '2018-04-12'
     status: ok
 labels:
     - lts2016-ok
@@ -21,7 +21,8 @@ The OAuth2 endpoint allows REST clients to retrieve information about OAuth2 pro
 Several resources are exposed by this endpoint, which allows to:
 
 * Create, read, update and delete OAuth2 providers
-* Get a valid access token for a given provider for the current user
+* Read OAuth2 clients 
+* Get a valid access token for a given provider or client for the current user
 * Read, update and delete OAuth2 tokens
 
 ## CRUD on OAuth2 Providers
@@ -159,11 +160,11 @@ GET https://NUXEO_SERVER/nuxeo/api/v1/oauth2/provider/googledrive
 ```
 {{/panel}}
 
-## Getting an Access Token
+### Getting an Access Token
 
 A valid access token for the current user can be retrieved via `/nuxeo/api/v1/oauth2/provider/{providerId}/token`. If the token currently stored by the Nuxeo server is already expired, a new one will be requested from the service provider.
 
-### Example
+#### Example
 
 {{#> panel type='code' heading='Request'}}
 
@@ -177,6 +178,79 @@ GET https://NUXEO_SERVER/nuxeo/api/v1/oauth2/provider/googledrive/token
 ```json
 {
   "token": "abc57.Gsda..."
+}
+```
+{{/panel}}
+
+## Getting OAuth2 Clients
+
+Information about a particular or all OAuth2 clients can be retrieved through these resources:
+
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th>Path</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>GET `/api/v1/oauth2/client`</td>
+        <td>Gets the list of registered OAuth2 clients.</td>
+      </tr>
+      <tr>
+        <td>GET `/api/v1/oauth2/client/{clientId}`</td>
+        <td>Gets the details for a given client.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+OAuth2 clients have the following properties:
+
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th colspan="1">Property</th>
+        <th colspan="1">Description</th>
+      </tr>
+      <tr>
+        <td colspan="1">`entity-type`</td>
+        <td colspan="1">The entity-type of this object, in this case `oauth2Client`.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`id`</td>
+        <td colspan="1">The client ID.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`name`</td>
+        <td colspan="1">The client name.</td>
+      </tr>
+      <tr>
+        <td colspan="1">`isEnabled`</td>
+        <td colspan="1">`true` if client is enabled; `false` otherwise.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Example
+
+{{#> panel type='code' heading='Request'}}
+
+```
+GET https://NUXEO_SERVER/nuxeo/api/v1/oauth2/client/nuxeo-mobile
+```
+
+{{/panel}}
+
+{{#> panel type='code' heading='Response'}}
+```json
+{
+  "entity-type": "oauth2Client",
+  "id": "nuxeo-mobile",
+  "name": "Nuxeo Mobile",
+  "isEnabled": true
 }
 ```
 {{/panel}}
@@ -197,16 +271,51 @@ The following resources are available for managing tokens:
         <td>Retrieves a list of all stored tokens for all users. Only available to Administrators.</td>
       </tr>
       <tr>
-        <td>GET `/api/v1/oauth2/token/{providerName}/{nxLogin}`</td>
-        <td>Retrieves a stored token for a given service provider and user. Only available to Administrators.</td>
+        <td>GET `/api/v1/oauth2/token/provider`</td>
+        <td>Retrieves all stored tokens for a given service provider and for the current user.</td>
       </tr>
       <tr>
-        <td>PUT `/api/v1/oauth2/token/{providerName}/{nxLogin}`</td>
-        <td>Updates a stored token for a given service provider and user. Only available to Administrators.</td>
+        <td>GET `/api/v1/oauth2/token/{providerName}/{nxLogin}`<br/>
+        (deprecated since 10.2; use the endpoint below instead)</td>
+        <td>Retrieves a stored token for a given service provider and user.</td>
       </tr>
       <tr>
-        <td>DELETE `/api/v1/oauth2/token/{providerName}/{nxLogin}`</td>
-        <td>Deletes a stored token for a given service provider and user. Only available to Administrators.</td>
+        <td>GET `/api/v1/oauth2/token/provider/{providerName}/user/{nxLogin}`</td>
+        <td>Retrieves a stored token for a given service provider and user.</td>
+      </tr>
+      <tr>
+        <td>PUT `/api/v1/oauth2/token/{providerName}/{nxLogin}`<br/>
+        (deprecated since 10.2; use the endpoint below instead)</td></td>
+        <td>Updates a stored token for a given service provider and user.</td>
+      </tr>
+      <tr>
+        <td>PUT `/api/v1/oauth2/token/provider/{providerName}/user/{nxLogin}`</td>
+        <td>Updates a stored token for a given service provider and user.</td>
+      </tr>
+      <tr>
+        <td>DELETE `/api/v1/oauth2/token/{providerName}/{nxLogin}`<br/>
+        (deprecated since 10.2; use the endpoint below instead)</td></td>
+        <td>Deletes a stored token for a given service provider and user.</td>
+      </tr>
+      <tr>
+        <td>DELETE `/api/v1/oauth2/token/provider/{providerName}/user/{nxLogin}`</td>
+        <td>Deletes a stored token for a given service provider and user.</td>
+      </tr>
+      <tr>
+        <td>GET `/api/v1/oauth2/token/client`</td>
+        <td>Retrieves all stored tokens for a given client and for the current user.</td>
+      </tr>
+      <tr>
+        <td>GET `/api/v1/oauth2/token/client/{clientId}/user/{nxLogin}`</td>
+        <td>Retrieves a stored token for a given client and user.</td>
+      </tr>
+      <tr>
+        <td>PUT `/api/v1/oauth2/token/client/{clientId}/user/{nxLogin}`</td>
+        <td>Updates a stored token for a given client and user.</td>
+      </tr>
+      <tr>
+        <td>DELETE `/api/v1/oauth2/token/client/{clientId}/user/{nxLogin}`</td>
+        <td>Deletes a stored token for a given client and user.</td>
       </tr>
     </tbody>
   </table>
@@ -227,7 +336,7 @@ OAuth2 tokens are represented by the following properties:
       </tr>
       <tr>
         <td colspan="1">`clientId`</td>
-        <td colspan="1">The OAuth2 client ID.</td>
+        <td colspan="1">The client ID.</td>
       </tr>
       <tr>
         <td colspan="1">`serviceName`</td>
