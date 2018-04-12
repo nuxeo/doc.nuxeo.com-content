@@ -719,7 +719,7 @@ Nuxeo Sample<br/>
 Public
 </td>
 <td colspan="1">
-&nbsp;
+[Documentation]({{page version='910' space='nxdoc' page='nuxeo-sample-project'}})
 </td>
 <td colspan="1">
 [Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample?version=2.4.3)
