@@ -709,7 +709,7 @@ Nuxeo Sample<br/>
 Public
 </td>
 <td colspan="1">
-&nbsp;
+[Documentation]({{page version='' space='nxdoc' page='nuxeo-sample-project'}})
 </td>
 <td colspan="1">
 [Released for 10.1](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample?version=2.5.0)
