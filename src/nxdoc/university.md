@@ -1,5 +1,5 @@
 ---
-title: University Index
+title: University
 description:
 review:
     comment: ''
@@ -7,4 +7,7 @@ review:
     status: ok
 toc: true
 hidden: true
+tree_item_index: 2000
 ---
+
+![]({{file name='university-lts2017.png'}})
