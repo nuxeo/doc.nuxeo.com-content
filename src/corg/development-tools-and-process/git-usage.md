@@ -889,13 +889,15 @@ git pull https://github.com/contributor/nuxeo.git fix-NXP-12345-some-stuff
 
 {{/panel}}
 
-### Removing Files from Git History
+### Removing Files Or Content From Git History
 
 {{#> callout type='warning' }}
 
 This action modifies the Git history! All commits previously containing the unwanted files will be rewritten.
 
-{{/callout}}{{#> panel type='code' heading='Removing files from Git history'}}
+{{/callout}}
+
+{{#> panel type='code' heading='Removing files from Git history'}}
 
 ```
 git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch files_to_remove' HEAD
@@ -904,6 +906,8 @@ git commit
 ```
 
 {{/panel}}
+
+See also [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) which provides very much faster and somehow simpler (user-friendlier) commands for a few high-level features.
 
 ### Converting a Mercurial Repository to a Git Repository
 
