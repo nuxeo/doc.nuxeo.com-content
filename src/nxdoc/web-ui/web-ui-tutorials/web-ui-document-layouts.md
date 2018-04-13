@@ -24,17 +24,18 @@ labels:
 tree_item_index: 400
 
 ---
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Course on Document type layouts](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner).
-![]({{file name='university-doc-layouts.png' page='nxdoc/university'}} ?w=450,border=true)
-{{/callout}}
 
 Document type layouts are used to display a document's metadata in Web UI forms. A document layout is structured with document type properties, assembled with several UI elements such as sections, cards, columns etc.
 
 A given document type can have multiple layouts: a `create` and `edit` layout to set its schema fields when creating or editing the document, a `view` layout to simply display field values and any other layouts according to the application(s) where these are used. In our previous metamodel driven UI, these were known as `modes` and a single layout definition could be rendered in different modes.
 
 In this tutorial you will learn how to create a document type layout with Studio Designer from a document type created in Studio Modeler and how to add a icon to it.
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Document type layouts](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner).
+![]({{file name='university-doc-layout.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
 
 ## Prerequisites
 

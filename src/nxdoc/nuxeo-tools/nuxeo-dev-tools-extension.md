@@ -12,19 +12,16 @@ labels:
 tree_item_index: 200
 
 ---
+{{! excerpt}}
+The Nuxeo Dev Tools browser extension places some of the more commonly performed actions in the Nuxeo Platform at the administrator's fingertips in a popup window in Google Chrome or Mozilla Firefox.
+{{! /excerpt}}
+
+![Nuxeo Dev Tools extension]({{file name='nuxeo-dev-tools-extension.png'}} ?w=600,border=true)
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
 - [Video on the Nuxeo Browser Extension](https://university.nuxeo.com/learn/public/course/view/elearning/83/NuxeoDevTools)
 {{/callout}}
-
-{{! excerpt}}
-
-The Nuxeo Dev Tools browser extension places some of the more commonly performed actions in the Nuxeo Platform at the administrator's fingertips in a popup window in Google Chrome or Mozilla Firefox.
-
-{{! /excerpt}}
-
-![Nuxeo Dev Tools extension]({{file name='nuxeo-dev-tools-extension.png'}} ?w=600,border=true)
 
 ## Installation
 

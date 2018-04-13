@@ -101,13 +101,6 @@ version_override:
     LTS 2016: 810/nxdoc/web-ui
 ---
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Course on the Web UI Stack](https://university.nuxeo.com/learn/public/course/view/elearning/76/nuxeo-web-ui-stack-introduction).
-- [Course to Start with Web UI](https://university.nuxeo.com/learn/public/course/view/elearning/92/getting-started-with-nuxeo-web-ui).
-![]({{file name='university-webui.png' page='nxdoc/university'}} ?w=450,border=true)
-{{/callout}}
-
 Nuxeo Web UI is a standard base web application for Nuxeo Server that connects via HTTP and displays all the features of the platform to the users. Customizable, scalable and built upon a framework of Web components, it allows Nuxeo Platform developers to build their own front-end application using these components. The [Nuxeo Web UI addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) is available in beta version on [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/).
 
 ![]({{file name='web_ui_with_side_panel.png'}} ?w=650,border=true)
@@ -127,6 +120,13 @@ It leverages the web as a platform and allows enhanced productivity with direct 
 [Customization]({{page page='web-ui-customization'}})
 
 {{/panel}}</div></div>
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on the Web UI Stack](https://university.nuxeo.com/learn/public/course/view/elearning/76/nuxeo-web-ui-stack-introduction).
+- [Course to Start with Web UI](https://university.nuxeo.com/learn/public/course/view/elearning/92/getting-started-with-nuxeo-web-ui).
+![]({{file name='university-webui.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
 
 ## Requirements
 

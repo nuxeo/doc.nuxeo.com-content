@@ -231,15 +231,15 @@ history:
 This tutorial requires to have the JSF UI addon installed on your server. If you prefer to work with Web UI follow [this tutorial]({{page version='' space='nxdoc' page='web-ui-search'}}).
 {{/callout}}
 
+Aggregation is a function where the data are grouped together according to certain criteria to form a single value of more significant meaning or measurement. Aggregates work as a data analytics tools by building analytic information over a set of documents. One of the most known aggregate is the Term Aggregate as known as facet.
+
+Before you start using aggregates you may want to take a look to the document about the [different type of aggregates supported]({{page page='aggregate-widget-types'}}) and the [Page Provider]({{page page='page-provider-aggregates'}}).
+
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
 - [Course on Nuxeo Search Basics](https://university.nuxeo.com/learn/public/course/view/elearning/50/nuxeo-search-basics).
 ![]({{file name='university-search-basics.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
-
-Aggregation is a function where the data are grouped together according to certain criteria to form a single value of more significant meaning or measurement. Aggregates work as a data analytics tools by building analytic information over a set of documents. One of the most known aggregate is the Term Aggregate as known as facet.
-
-Before you start using aggregates you may want to take a look to the document about the [different type of aggregates supported]({{page page='aggregate-widget-types'}}) and the [Page Provider]({{page page='page-provider-aggregates'}}).
 
 Nuxeo Platform supports six different types of aggregates: Terms, Significant Terms, Range, Date Range, Histogram and Date Histogram. This how-to will help you to understand how to use them.
 
