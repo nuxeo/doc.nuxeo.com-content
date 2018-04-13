@@ -15,18 +15,16 @@ labels:
 
 ---
 
+{{! excerpt}}
+Nuxeo CLI aims at making the whole development process easier with bootstraps for common Nuxeo components, sample projects to help you understand the hood and with the ability to trigger a hot reload of your developments in a running Nuxeo Server.
+{{! /excerpt}}
+
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
 - [Course on Nuxeo CLI](https://university.nuxeo.com/learn/public/course/view/elearning/83/NuxeoDevTools).
 - [Expert Session on Nuxeo Software Factory](https://university.nuxeo.com/learn/public/course/view/elearning/136/expert-session-nuxeo-software-factory)
 ![]({{file name='university-nuxeo-cli.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
-
-{{! excerpt}}
-
-Nuxeo CLI aims at making the whole development process easier with bootstraps for common Nuxeo components, sample projects to help you understand the hood and with the ability to trigger a hot reload of your developments in a running Nuxeo Server.
-
-{{! /excerpt}}
 
 ## Installation
 

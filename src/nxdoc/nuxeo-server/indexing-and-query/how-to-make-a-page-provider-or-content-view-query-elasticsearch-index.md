@@ -172,6 +172,7 @@ You can view the list of the Page Providers in the Admin Center/Elasticsearch/Pa
 
 Elasticsearch indexing is "eventually consistent". This means that depending on your indexing server charge, you may have a small delay before Elasticsearch returns the latest content update/create/delete.
 
+{{/callout}}
 &nbsp;
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other pages about Elasticsearch'}}

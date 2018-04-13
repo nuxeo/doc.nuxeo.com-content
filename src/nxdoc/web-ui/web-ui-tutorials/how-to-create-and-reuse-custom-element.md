@@ -22,16 +22,16 @@ labels:
 tree_item_index: 1200
 
 ---
+
+{{! excerpt}}
+In this tutorial you will learn how to create and reuse custom elements in Studio Designer.
+{{! /excerpt}}
+
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
 - [Course on WebUI Stack](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner)
 ![]({{file name='university-webui-stack.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
-
-
-{{! excerpt}}
-In this tutorial you will learn how to create and reuse custom elements in Studio Designer.
-{{! /excerpt}}
 
 ## Requirements
 
