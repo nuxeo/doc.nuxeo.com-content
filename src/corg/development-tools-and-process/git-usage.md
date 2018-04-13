@@ -889,7 +889,7 @@ git pull https://github.com/contributor/nuxeo.git fix-NXP-12345-some-stuff
 
 {{/panel}}
 
-### Removing Files Or Content From Git History
+### Removing Content From Git History
 
 {{#> callout type='warning' }}
 
