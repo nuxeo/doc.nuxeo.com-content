@@ -135,7 +135,7 @@ history:
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
 - [Course on Nuxeo Developer Basics](https://university.nuxeo.com/learn/public/course/view/elearning/11/nuxeo-platform-developer-basics).
-![]({{file name='university-dev.png' page='studio/university'}} ?w=450,border=true)
+![]({{file space='nxdoc' page='university' name='university-dev.png'}} ?w=450,border=true)
 {{/callout}}
 
 {{{multiexcerpt 'license' page='NXDOC:index'}}}

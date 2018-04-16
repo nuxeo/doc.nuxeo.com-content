@@ -149,7 +149,7 @@ This how-to explains how two users can work at the same time on a Studio Project
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
 - [Course on Branch Management](https://university.nuxeo.com/learn/public/course/view/elearning/62/understanding-nuxeo-studios-source-control-mechanism).
-![]({{file name='university-source-control.png' page='studio/university'}} ?w=450,border=true)
+![]({{file version='' space='nxdoc' page='university' name='university-source-control.png'}} ?w=450,border=true)
 {{/callout}}
 
 {{#> callout type='tip' }}

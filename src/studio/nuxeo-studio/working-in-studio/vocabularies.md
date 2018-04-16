@@ -136,7 +136,7 @@ All the elements of the main Vocabulary feature screen are reviewed on this page
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
 - [Course on Content Model Design](https://university.nuxeo.com/learn/public/course/view/elearning/12/content-model-design-in-nuxeo-studio)
-![]({{file name='university-content-model.png' page='studio/university'}} ?w=450,border=true)
+![]({{file version='' space='nxdoc' page='university' name='university-content-model.png'}} ?w=450,border=true)
 {{/callout}}
 
 {{{multiexcerpt '3-types-vocabulary' page='NXDOC:How to add a New Vocabulary'}}}
