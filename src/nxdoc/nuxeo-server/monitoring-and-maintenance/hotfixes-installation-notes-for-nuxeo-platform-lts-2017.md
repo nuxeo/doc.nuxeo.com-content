@@ -83,6 +83,111 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 05
+
+### Old revision
+You must install the last revision of the hotfix 5 for LTS 2017 and remove the revision 1.0.0
+```
+./nuxeoctl mp-install nuxeo-9.10-HF05-1.1.0
+./nuxeo mp-remove nuxeo-9.10-HF05-1.0.0
+```
+### Directory entry format in a data table
+
+The suggestion widgets now initializes using the `selected-item(s)` property of the value one. This is needed to correctly display the entry in a data table by using its label instead of its key.
+It applies to `nuxeo-directory-suggestion`, `nuxeo-user-suggestion` and `nuxeo-document-suggestion` elements.
+If you manually use these widgets in a data table, you have to follow these examples:
+* Multiple suggestion
+```
+<nuxeo-directory-suggestion role="widget" label="[[i18n('label.dublincore.subjects')]]"
+                            directory-name="l10nsubjects"
+                            name="subjects"
+                            selected-items="{{document.properties.dc:subjects}}"
+                            multiple="true"
+                            dbl10n="true"
+                            placeholder="[[i18n('dublincoreEdit.directorySuggestion.placeholder')]]"
+                            min-chars="0">
+</nuxeo-directory-suggestion>
+```
+* Single suggestion
+```
+<nuxeo-directory-suggestion role="widget" label="[[i18n('label.dublincore.coverage')]]"
+                            directory-name="l10ncoverage"
+                            name="coverage"
+                            selected-item="{{document.properties.dc:coverage}}"
+                            dbl10n="true"
+                            placeholder="[[i18n('dublincoreEdit.directorySuggestion.placeholder')]]"
+                            min-chars="0">
+</nuxeo-directory-suggestion>
+```
+## Hotfix 04
+
+### Old revision
+You must install the last revision of the hotfix 4 for LTS 2017 and remove the revision 1.0.0
+```
+./nuxeoctl mp-install nuxeo-9.10-HF04-1.1.0
+./nuxeo mp-remove nuxeo-9.10-HF04-1.0.0
+```
+
+## Hotfix 03
+
+### CSRF Protection for Platform
+
+CSRF protection is activated by default and based on the CORS configuration and its `allowOrigin` and `supportedMethods` parameters, which by default doesn't allow any cross origin.
+
+To activate an insecure configuration that allows any cross origin, use:
+```
+<extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
+    <!-- THIS IS INSECURE -->
+    <corsConfig name="insecure" allowOrigin="*" supportedMethods="GET,HEAD,OPTIONS,POST,PUT,DELETE" >
+      <pattern>/.*</pattern>
+    </corsConfig>
+</extension>
+```
+This configuration may fix the error `HTTP 403 - CSRF check failure`.
+See https://doc.nuxeo.com/nxdoc/cross-origin-resource-sharing-cors/ for more.
+
+### Evolution of the JSON structure of the Task
+
+Fetching a list of tasks now returns more information to the client side.
+When using the REST API, the JSON structure of a Task object now also includes:
+* the workflow initiator
+* the workflow title
+* the workflow life cycle state
+* the graph route URL
+
+### Full name search in User suggestions
+
+The SuggestUserEntries operation performs a full name user search, e.g. typing "John Do" returns the user with first name "John" and last name "Doe".
+
+The previous behavior (not returning any user when typing a full name) can be re-activated by using
+```
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="org.nuxeo.automation.user.suggest.fullname">false</property>
+  </extension>
+```
+In any case, typing "John" still returns the "John Doe" user and possibly other users such as "John Foo". Respectively, typing "Do" returns the "John Doe" user and possibly other users such as "Jack Donald".
+
+
+### Old revision
+You must install the last revision of the hotfix 1 for LTS 2017 and remove the revision 1.0.0 which contained a SNAPSHOT jar for the easyshare module.
+```
+./nuxeoctl mp-install nuxeo-9.10-HF03-1.0.1
+./nuxeo mp-remove nuxeo-9.10-HF03-1.0.0
+```
+
+## Hotfix 02
+
+### Stack trace in REST API exception
+
+The exception stack trace is written if the media type is application/json+nxentity but it can be disabled for security reason with the `nuxeo.rest.write.exception.stack.trace` configuration parameter, which is set to `true` by default.
+
+To disable it, use this code:
+```
+<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+  <property name="nuxeo.rest.write.exception.stack.trace">false</property>
+</extension>
+```
+
 ## Hotfix 01
 
 ### New Searchable Property in Elasticsearch: ecm:versionVersionableId
@@ -92,3 +197,30 @@ With an Elasticsearch NXQL query you can retrieve all versions of a document by 
 SELECT * FROM Document WHERE ecm:isVersion = 1
 ```
 
+### HSTS by default
+
+When HTTPS is enabled (which is the case if a non-0 value is specified for `nuxeo.server.https.port`), HSTS is automatically enabled with the following defaults:
+* nuxeo.server.hsts.maxage=2592000
+* nuxeo.server.hsts.includesubdomains=false
+* nuxeo.server.hsts.preload=false
+
+HSTS can be disabled by specifying:
+*nuxeo.server.hsts.enabled=false
+
+### API to recompute quota for Tenant or User
+
+A new operation is added to the Automation API to recompute quote for tenansts or users: `Quotas.RecomputeStatistics`. 
+It can be called with these optional parameters:
+
+* `tenantId` / `username` / `path` (only one allowed)
+* `updaterName` (defaults to `documentsSizeUpdater`)
+
+
+
+
+### Old revision
+You must install the last revision of the hotfix 1 for LTS 2017 and remove the revision 1.0.0 which contained a SNAPSHOT jar for the easyshare module.
+```
+./nuxeoctl mp-install nuxeo-9.10-HF01-1.0.1
+./nuxeo mp-remove nuxeo-9.10-HF01-1.0.0
+```
