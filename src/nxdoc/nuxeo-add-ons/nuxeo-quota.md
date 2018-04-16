@@ -180,7 +180,7 @@ After you installed Nuxeo Quota, a new tab **Quota / Statistics** is available i
 
 The Quota package allows to define a maximum size on spaces and to display the number of items (workspaces, folders, documents) in a folderish document on the navigation tree.
 
-Administrators are responsible for managing quotas on a global scale. Non-administrator users can manage the size limits of domains and workspaces on which they have Manage everything permission. All users are displayed the size of the document they are on (workspaces, folder, file, note, etc.) and the maximum size allowed (quota) if one has been defined. On a folderish document, such as a workspace, the used space includes the size of all the documents displayed in the Content tab and their versions and the size of the deleted documents (i.e. in the Trash tab of the workspace). On a document of type File for example, the used space is the sum of the size of the current document version (possibly a modified version) and the size of the archived versions of the document.
+Administrators are responsible for managing quotas on a global scale. Non-administrator users can manage the size limits of domains and workspaces on which they have Manage everything permission. All users are displayed the size of the document they are on (workspaces, folder, file, note, etc.) and the maximum size allowed (quota) if one has been defined. On a folderish document, such as a workspace, the used space includes the size of all the documents displayed in the Content tab and their versions and the size of the trashed documents (i.e. in the Trash tab of the workspace). On a document of type File for example, the used space is the sum of the size of the current document version (possibly a modified version) and the size of the archived versions of the document.
 
 {{#> callout type='tip' heading='Used space when the document has only one version'}}
 
@@ -200,7 +200,7 @@ Statistics are available to show users:
 
 *   The list of documents and their size.
 *   The total size of live documents (_i.e._, documents visible in the Content tab of workspaces, sections, folders, etc).
-*   The total size of deleted documents that are still in the trash.
+*   The total size of trashed documents.
 *   The total size of the archived versions for a document.
 
 Statistics help users to understand where space is used. They provide answers to the following questions: does the trash need to be emptied, are there a lot of big archived versions, what are biggest documents?
@@ -261,7 +261,7 @@ Users can see the [statistics](#statistics) of a workspace or a domain as soon a
     ![]({{file name='quota-statistics.png'}} ?w=600,border=true)
     The tab displays:
 
-    *   the repartition of the used space between live document, deleted documents and archived versions.
+    *   the repartition of the used space between live document, trashed documents and archived versions.
     *   the list of the content of the workspace, sorted by size.
 
         {{#> callout type='info' }}

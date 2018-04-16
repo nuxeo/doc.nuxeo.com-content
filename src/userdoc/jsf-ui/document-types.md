@@ -424,6 +424,14 @@ The evolution of a document, each time contributors edit it, constitutes its lif
 
 To change the lifecycle state of a document, you need to submit it to a [workflow]({{page page='workflows'}}).
 
+{{#> callout type='warning' heading='Trash behavior deprecation'}}
+
+Since 10.2, trash management is handled by `ecm:isTrashed` property and related [APIs]({{page page='deleting-documents#putting-the-document-in-the-trash'}}).
+
+Changing the lifecycle state to `deleted` won't contribute to trash feature in future Nuxeo version.
+
+{{/callout}}
+
 ## Containers Logic
 
 When a document is folderish this means its a container in which you can create other documents (workspaces, folders, etc. are folderish documents).

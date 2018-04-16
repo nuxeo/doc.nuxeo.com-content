@@ -99,7 +99,7 @@ if (!docBlobManager.isBinariesGarbageCollectionInProgress()) {
 
 - [Deleting Content]({{page space='userdoc' page='deleting-content'}}) (User documentation)
 - [Deleting Documents]({{page page='deleting-documents'}})
-- [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
+- [How to use Trash Feature]({{page page='how-to-use-trash-feature'}})
 
 {{/panel}}</div><div class="column medium-6">
 </div></div>

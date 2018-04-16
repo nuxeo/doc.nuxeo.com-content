@@ -78,7 +78,7 @@ history:
 The content displayed in the **Content** tab of a folder is the result of a query that says that we want to display all the documents that:
 
 *   are the direct children of the current folder;
-*   are not "deleted";
+*   are not "trashed";
 *   are not hidden in navigation.
 
 {{! /excerpt}}
