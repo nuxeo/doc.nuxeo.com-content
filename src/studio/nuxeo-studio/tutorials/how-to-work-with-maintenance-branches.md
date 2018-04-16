@@ -132,7 +132,7 @@ After you have completed a first version of your project and it goes live, you c
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
 - [Course on Branch Management](https://university.nuxeo.com/learn/public/course/view/elearning/62/understanding-nuxeo-studios-source-control-mechanism).
-![]({{file name='university-source-control.png' page='studio/university'}} ?w=450,border=true)
+![]({{file version='' space='nxdoc' page='university' name='university-source-control.png'}} ?w=450,border=true)
 {{/callout}}
 
 ## Before You Start

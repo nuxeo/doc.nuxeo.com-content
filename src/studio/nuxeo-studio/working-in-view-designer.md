@@ -11,13 +11,6 @@ tree_item_index: 250
 This feature is available for target platforms Nuxeo Platform LTS 2016 and above.
 {{/ callout}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Course on Document type layouts](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner)
-- [Course on Searches](https://university.nuxeo.com/learn/public/course/view/elearning/134/configurating-searches-in-nuxeo-studio-modeler-designer)
-![]({{file name='university-search.png' page='studio/university'}} ?w=450,border=true)
-{{/callout}}
-
 
 If you have chosen the Web UI as your default interface you will need to become familiar with the Studio Designer in order to customize your interface to fit your needs.
 
@@ -35,6 +28,13 @@ We divided the documentation in three pages to represent the three main sections
 - The [Left menu]({{page page='left-menu'}})
 - The [Main View]({{page page='main-view'}})
 - The [Properties Catalog]({{page page='properties-catalog'}})
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Document type layouts](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner)
+- [Course on Searches](https://university.nuxeo.com/learn/public/course/view/elearning/134/configurating-searches-in-nuxeo-studio-modeler-designer)
+![]({{file version='' space='nxdoc' page='university' name='university-search.png'}} ?w=450,border=true)
+{{/callout}}
 
 * * *
 

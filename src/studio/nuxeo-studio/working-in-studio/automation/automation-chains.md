@@ -120,7 +120,7 @@ history:
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
 - [Course on Business Logic Implementation](https://university.nuxeo.com/learn/public/course/view/elearning/46/applying-business-logic)
-![]({{file name='university-business-logic.png' page='studio/university'}} ?w=450,border=true)
+![]({{file version='' space='nxdoc' page='university' name='university-business-logic.png'}} ?w=450,border=true)
 {{/callout}}
 
 ## Concept
