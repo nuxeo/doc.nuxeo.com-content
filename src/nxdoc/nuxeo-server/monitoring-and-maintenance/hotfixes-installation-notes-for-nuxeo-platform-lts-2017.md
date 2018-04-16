@@ -215,9 +215,6 @@ It can be called with these optional parameters:
 * `tenantId` / `username` / `path` (only one allowed)
 * `updaterName` (defaults to `documentsSizeUpdater`)
 
-
-
-
 ### Old revision
 You must install the last revision of the hotfix 1 for LTS 2017 and remove the revision 1.0.0 which contained a SNAPSHOT jar for the easyshare module.
 ```
