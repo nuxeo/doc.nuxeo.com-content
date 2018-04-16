@@ -212,10 +212,16 @@ if you don't find the default type you are looking for, you can add it [using th
 
 *   **Extends**: See the [Creating a Document Type](#creating-a-document-type) section of this page.
 *   **Label**: See the [Creating a Document Type](#creating-a-document-type) section of this page.
-*   **Category**: The category defines in which column the document type appears on the "new Document" pop up in Nuxeo DM. If you don't want to use the default categories, you can add a new one [using the custom document category registry]({{page page='registries'}}).
+*   **Category**: The category defines in which column the document type appears on the "new Document" pop up in Nuxeo Server, when using JSF UI. If you don't want to use the default categories, you can add a new one [using the custom document category registry]({{page page='registries'}}).
     ![]({{file name='available-documents-workspace.png' space='userdoc' page='creating-content'}} ?w=500,h=216,border=true)
-*   **Icon**: The icon that will be displayed in the default list view. Note that you can upload new icons on the [resources]({{page page='resources'}}) section.
-*   **Large Icon**: The icon that will be displayed in the "Available document types" pop-up and the [Icon view]({{page space='userdoc58' page='changing-workspace-content-presentation'}}) (view available up to Nuxeo Platform 5.8). Note that you can upload new icons on the& [resources]({{page page='resources'}}) section.
+*   **Icon**: The icon that will be displayed in the default list view.
+*   **Large Icon**: The icon that will be displayed in the "Available document types" pop-up when using JSF UI and the Icon view (view available up to Nuxeo Platform 5.8).
+*   **SVG Icon**: The icon that will be displayed in the document creation pop-up when using Web UI. If you manually uploaded a SVG icon in the Studio Designer resources tree structure for a given document type, it will take precedence over the configuration made in this field.
+
+{{#> callout type='info'}}
+All icons can be found in the project [resources]({{page page='resources'}}).
+{{/callout}}
+
 *   **Default view**: The default JSF view. This is a technical attribute that you probably don't want to change (will be moved in an advanced section in the future).
 *   **Lifecycle**: the lifecycle the document will follow. You can use a lifecycle that [you defined]({{page page='life-cycle'}}) in Studio Modeler.
 *   **Container types**:The document types selected here are the ones from which it will be possible to create the document type being designed.
