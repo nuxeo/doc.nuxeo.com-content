@@ -10,7 +10,7 @@ labels:
 review:
     date: '2017-12-15'
     status: requiresUpdates
-    comment: 'Kakfa is now an available option for audit, workmanager or import usage since Nuxeo Server 9.3.'
+    comment: 'Kafka is now an available option for audit, workmanager or import usage since Nuxeo Server 9.3.'
 toc: true
 tree_item_index: 1220
 
