@@ -47,10 +47,8 @@ function assertResult(result) {
     return false;
   }
 
-  if (!queryToLaunch.includes('ecm:currentLifeCycleState') ||
-      !queryToLaunch.includes('deleted')
-    ) {
-    console.log("Exclude deleted documents from query.");
+  if (!queryToLaunch.includes('ecm:isTrashed')) {
+    console.log("Exclude trashed documents from query.");
     return false;
   }
 
@@ -72,4 +70,3 @@ function assertResult(result) {
 
   console.log('Congratulations, you have successfully completed this exercise.');
 }
-

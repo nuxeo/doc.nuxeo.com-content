@@ -161,7 +161,7 @@ history:
 
 Only users with "Edit" or "Manage everything" permissions can delete documents from a space.
 
-To delete one or several documents, select them from the **Content** tab of the workspace, click on **Delete** and confirm. The documents are moved to the **Trash** tab of the workspace (available to users with management rights only) and do not appear in the workspace's content list anymore. Their lifecycle state is now "deleted".
+To delete one or several documents, select them from the **Content** tab of the workspace, click on **Delete** and confirm. The documents are moved to the **Trash** tab of the workspace (available to users with management rights only) and do not appear in the workspace's content list anymore. They are now flagged as trashed (`ecm:isTrashed = 1`).
 
 You can also delete documents using right-click on the document's icon from the **Content** tab of the workspace.
 

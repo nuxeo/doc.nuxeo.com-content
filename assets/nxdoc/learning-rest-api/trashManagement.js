@@ -15,7 +15,7 @@ nuxeo.schemas("*");
 // Retrieve a document using its ID or path
 
 
-// Put the document in the "deleted" state
+// Put the document in the "trashed" state
 
 
 // Pass the trashed document to the assertResult method
@@ -28,11 +28,10 @@ DO NOT EDIT BELOW THIS LINE
 ************/
 
 function assertResult(document) {
-  if (document.state !== 'deleted') {
-    console.log("The document is not in the deleted state.");
+  if (document.isTrashed) {
+    console.log("The document is not in the trashed state.");
     return false;
   }
 
   console.log('Congratulations, you have successfully completed this exercise.');
 }
-

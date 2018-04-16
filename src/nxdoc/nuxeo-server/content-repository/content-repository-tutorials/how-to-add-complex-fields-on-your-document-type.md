@@ -165,7 +165,7 @@ Let's see how this metadata is defined.
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
 - [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}})
-- [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
+- [How to use Trash Feature]({{page page='how-to-use-trash-feature'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

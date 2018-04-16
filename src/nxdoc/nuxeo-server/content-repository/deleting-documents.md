@@ -103,11 +103,11 @@ Deleting a document involves several steps before the full document is actually 
 
 ### Putting the Document in the Trash
 
-Putting a document in the trash is done by changing is lifecycle state to **deleted**, by following the **delete** transition of the document's lifecycle. If no such lifecycle exists for the document, then it won't be put in the trash at all but will be immediately permanently deleted using the steps below.
+Putting a document in the trash is done by calling `TrashService` corresponding API. The service will move the corresponding documents (to avoid collision with future document) and change its internal property: `ecm:isTrashed`.
 
 When the trash is purged, all its documents are permanently deleted.
 
-Besides the standard user interface, a document is put in the trash when using WebDAV, Nuxeo Drive, or using the [TrashService.trashDocuments](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/trash/TrashService.html#trashDocuments-java.util.List-) API.
+Besides the standard user interface, a document is put in the trash when using WebDAV, Nuxeo Drive, or using the [TrashService](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/trash/TrashService.html) APIs.
 
 ### Permanently Deleting the Document
 
@@ -142,7 +142,7 @@ If soft-delete is not enabled, or when the periodic cleanup process for soft-del
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-To'}}
 
-- [How to Enable the Trash Feature]({{page page='how-to-enable-the-trash-feature'}})
+- [How to use Trash Feature]({{page page='how-to-use-trash-feature'}})
 - [Action How-To Index]({{page page='action-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}

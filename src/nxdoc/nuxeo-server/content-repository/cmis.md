@@ -684,7 +684,7 @@ The following describes how Nuxeo documents are mapped to CMIS objects and vice 
 *   Dynamic facets are visible as CMIS 1.1 secondary types (since Nuxeo 7.1, see [NXP-15070](https://jira.nuxeo.com/browse/NXP-15070)).
 *   Proxy documents are visible in CMIS if the system property `org.nuxeo.cmis.proxies=true` (since Nuxeo 8.3 / Nuxeo 7.10-HF08 (default `true` since Nuxeo 9.1, `false` in previous versions), see [NXP-17313](https://jira.nuxeo.com/browse/NXP-17313) and [NXP-21828](https://jira.nuxeo.com/browse/NXP-21828)).
 *   Secondary content streams are not visible as renditions. Only the Nuxeo thumbnail and renditions explicitly made available through the Nuxeo RenditionService are visible.
-*   Documents in the Nuxeo trash (those whose `nuxeo:lifecycleState` is `deleted`) are not visible in CMIS, unless an explicit query using the `nuxeo:lifecycleState` property is done.
+*   Documents in the Nuxeo trash (those whose `nuxeo:isTrashed` is `true`) are not visible in CMIS, unless an explicit query using the `nuxeo:isTrashed` property is done.
 
 This mapping may change to be more comprehensive in future Nuxeo Platform versions.
 
@@ -692,8 +692,9 @@ This mapping may change to be more comprehensive in future Nuxeo Platform versio
 
 In addition to the system properties defined in the CMIS specification under the `cmis:` prefix, the Nuxeo Platform adds some additional properties under the `nuxeo:` prefix:
 
+*   `nuxeo:isTrashed`: To access the trashed state of a document. By default only **non-trashed** document will be returned in CMISQL queries unless an explicit `nuxeo:isTrashed` predicate is specifiedin the `WHERE` clause of the query.
 *   `nuxeo:isVersion`: To distinguish between archived (read-only revision) and live documents (that can be edited).
-*   `nuxeo:lifecycleState`: To access the lifecycle state of a document. By default only document in non `deleted` state will be returned in CMISQL queries unless and explicit `nuxeo:lifecycleState` predicate is specified in the `WHERE` clause of the query.
+*   `nuxeo:lifecycleState`: To access the lifecycle state of a document.
 *   `nuxeo:secondaryObjectTypeIds`: Makes it possible to access the facets of a document. Those facets can be static (as defined in the type definitions) or dynamic (each document instance can have declared facets).
 *   `nuxeo:contentStreamDigest`: The low level, MD5 or SHA1 digest of blobs stored in the repository. The algorithm used to compute the digest is dependent on the configuration of the `BinaryManager` component of the Nuxeo repository.
 *   `nuxeo:isCheckedIn`: For live documents, distinguishes between the checked-in and checked-out state.

@@ -564,13 +564,13 @@ Event handlers also give access to the `Event` object, which contains interestin
 
 - `Event.getName()` - returns the event name
 
-For example, if you have a document which can be undeleted, you could update a field in the In the MVEL expression of an Automation Chain called for the "Lifecycle transition event" event:
+For example, if you have a document which can be obsolete, you could update a field in the *In the MVEL* expression of an Automation Chain called for the "Lifecycle transition event" event:
 
 `Document > Update property`
 
-value: `@{Event.context.getProperty("transition") == "undelete" ? true : false}`
+value: `@{Event.context.getProperty("transition") == "obsolete" ? true : false}`
 
-xpath: `mydoc:was_undeleted`
+xpath: `mydoc:was_obsolete`
 
 Please note that:
 
