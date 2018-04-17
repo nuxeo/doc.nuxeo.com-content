@@ -442,7 +442,7 @@ We will now update the contract to add some custom clauses.
 ## Changing the State of a Document
 
 {{#> callout type='warning' heading='Trash Feature usage deprecation'}}
-Since 10.2, the trash management is handled by the `ecm:isTrashed` property and related [APIs]({{page page='deleting-documents#putting-the-document-in-the-trash'}}).
+Since 10.2, the trash management is handled by the `ecm:isTrashed` property and related [APIs]({{page page='deleting-documents'}}#putting-the-document-in-the-trash).
 {{/callout}}
 
 This time we will switch the document to the `deleted` state, then in a second phase restore it to the state it was previously in (`draft` in this case). This can be used to manage a trash feature, by listing all documents not in the `deleted` state when launching queries, or only the ones in this state when looking at the trash.
