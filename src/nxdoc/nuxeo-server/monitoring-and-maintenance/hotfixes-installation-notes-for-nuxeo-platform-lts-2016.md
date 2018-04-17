@@ -130,6 +130,66 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 25
+
+### CSRF Protection for Platform
+
+CSRF protection is activated by default and based on the CORS configuration and its `allowOrigin` and `supportedMethods` parameters, which by default doesn't allow any cross origin.
+
+To activate an insecure configuration that allows any cross origin, use:
+```
+<extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
+    <!-- THIS IS INSECURE -->
+    <corsConfig name="insecure" allowOrigin="*" supportedMethods="GET,HEAD,OPTIONS,POST,PUT,DELETE" >
+      <pattern>/.*</pattern>
+    </corsConfig>
+</extension>
+```
+This configuration may fix the error `HTTP 403 - CSRF check failure`.
+See the [related documentation page]({{page version='' space='nxdoc' page='cross-origin-resource-sharing-cors'}}) for more information.
+
+### Stack Trace in REST API Exception
+
+The exception stack trace is written if the media type is application/json+nxentity but it can be disabled for security reason with the `nuxeo.rest.write.exception.stack.trace` configuration parameter, which is set to `true` by default.
+
+To disable it, use this code:
+```
+<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+  <property name="nuxeo.rest.write.exception.stack.trace">false</property>
+</extension>
+```
+
+## Hotfix 24
+
+### New Searchable Property in Elasticsearch: ecm:versionVersionableId
+
+With an Elasticsearch NXQL query you can retrieve all versions of a document by version series id. To search existing documents by `ecm:versionVersionableId` a re-index is required. This could either be done via a full re-index or a re-index of just documents that have versions, using this query:
+```
+SELECT * FROM Document WHERE ecm:isVersion = 1
+```
+
+## Hotfix 23
+
+### Dirty fields validation at creation
+
+To enable the fix done by [NXP-23267](https://jira.nuxeo.com/browse/NXP-23267) and provided by HF19, you have now to set the `org.nuxeo.core.validate.dirty.only.creation` parameter with `false` value.
+```
+  <require>org.nuxeo.core.validation.create.document.dirty.contrib</require>
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="org.nuxeo.core.validate.dirty.only.creation">false</property>
+  </extension>
+```
+Using this property was added not to break the project which were correctly working with the bug on dirty field validation.
+
+## Hotfix 20
+
+### Read ACL optimization on big volume
+
+This feature is activated by setting the property `nuxeo.core.readacl.async.enabled=true` in nuxeo.conf. Default value is `false`.
+
+When the feature is activated, the Nuxeo property `nuxeo.core.readacl.async.threshold` can be set to a value (`500` by default) above which Read ACL recomputation is done asynchronously.
+
+
 ## Hotfix 19
 
 ### Validation constraint at creation
