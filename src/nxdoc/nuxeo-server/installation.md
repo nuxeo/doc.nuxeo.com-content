@@ -268,6 +268,14 @@ The Nuxeo Platform comes in different packages and can be installed on many oper
 *   a virtual machine image (works on any operating system that supports running VMware or VirtualBox),
 *   a **.deb** package (works on Linux Debian and Ubuntu).
 
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Video on the Installation Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/141/nuxeo-platform-quickstart-installation-concepts)
+- [Screenshare on the Installation Process](https://university.nuxeo.com/learn/public/course/view/elearning/139/nuxeo-platform-quickstart-installation-process).
+![]({{file name='university-installation.png' page='studio/university'}} ?w=450,border=true)
+{{/callout}}
+
 ## General Installation Process
 
 Installing the Nuxeo Platform requires a few steps:
