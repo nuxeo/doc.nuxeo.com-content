@@ -564,7 +564,7 @@ Event handlers also give access to the `Event` object, which contains interestin
 
 - `Event.getName()` - returns the event name
 
-For example, if you have a document which can be obsolete, you could update a field in the *In the MVEL* expression of an Automation Chain called for the "Lifecycle transition event" event:
+For example, if you have a document which can be obsolete, you could update a field in the MVEL expression of an Automation Chain called for the "Lifecycle transition event":
 
 `Document > Update property`
 
@@ -641,8 +641,7 @@ In widgets, layout, content views and in XHTML templates, you can use the EL exp
 <tr>
 <td colspan="1">Email template</td>
 <td colspan="1">FreeMarker</td>
-<td colspan="1">Workflow email notification</td>
-
+<td colspan="1">Workflow email notification</td>  
 <td colspan="1">
 Schema prefixes cannot be used when using the `${workflowDocuments[0].property}` variable.
 

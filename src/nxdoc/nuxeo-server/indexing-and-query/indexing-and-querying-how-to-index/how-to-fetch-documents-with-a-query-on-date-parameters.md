@@ -338,7 +338,7 @@ If you want to make an operation on all the documents that expire soon, you will
 Let's take the example of an automation chain doing the following steps:
 
 1.  Fetching all visible documents whose "expiring date" is outdated;
-2.  Deleting these documents ([moving them to the trash]({{page page='how-to-enable-the-trash-feature'}})).
+2.  Deleting these documents ([moving them to the trash]({{page page='how-to-use-trash-feature'}})).
 
 The chain will look like that:
 

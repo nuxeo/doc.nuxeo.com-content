@@ -1,24 +1,26 @@
 ---
-title: How to use Trash Feature
+title: 'HOWTO: Use the Trash Feature'
 review:
+    comment: ''
+    date: '2018-04-17'
+    status: ok
 details:
     howto:
-        excerpt: Learn how to use trash feature.
-        level: Intermediate
-        tool: '' # TBD
-        topics: '' # TBD
+        excerpt: Learn how to use the trash feature in Nuxeo Platform.
+        level: Advanced
+        tool: 'Code'
+        topics: 'REST API'
 labels:
     - howto
+    - trash-management
 toc: true
-tree_item_index: 2000 # I don't know
-
+tree_item_index: 1300
 ---
-
 ### Java API and General Concepts
 
 Trash feature is managed by [TrashService](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/trash/TrashService.html).
 
-You can easily trash/untrash document model with `trashDocument`/`untrashDocument`. When you trash a document, Nuxeo performs following operations:
+You can easily trash/untrash document model with `trashDocument`/`untrashDocument`. When you trash a document, Nuxeo Server performs the following operations:
 - document is renamed to avoid collision with further document
 - `ecm:isTrashed` property is set to `true`
 - `documentTrashed` is fired
@@ -47,8 +49,4 @@ Example:
 curl -u Administrator:Administrator -XPOST -H "Content-Type: application/json" http://localhost:8080/nuxeo/site/automation/Document.Trash -d '{"input":"doc:/some/document"}'
 ```
 
-The returned JSON document will have `ecm:isTrashed` set to to `true` in its properties.
-
-* * *
-
-&nbsp;
+The returned JSON document will have `ecm:isTrashed` set to `true` in its properties.
