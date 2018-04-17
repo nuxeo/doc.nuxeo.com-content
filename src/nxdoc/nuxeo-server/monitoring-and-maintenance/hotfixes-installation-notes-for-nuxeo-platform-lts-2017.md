@@ -170,7 +170,7 @@ In any case, typing "John" still returns the "John Doe" user and possibly other 
 
 
 ### Old Revision
-You must install the last revision of the hotfix 1 for LTS 2017 and remove the revision 1.0.0 which contained a SNAPSHOT JAR for the Easyshare module.
+You must install the last revision of the hotfix 3 for LTS 2017 and remove the revision 1.0.0 which contained a SNAPSHOT JAR for the Easyshare module.
 ```
 ./nuxeoctl mp-install nuxeo-9.10-HF03-1.0.1
 ./nuxeo mp-remove nuxeo-9.10-HF03-1.0.0
