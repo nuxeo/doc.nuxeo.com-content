@@ -150,7 +150,7 @@ See the [related documentation page]({{page version='' space='nxdoc' page='cross
 
 ### Stack Trace in REST API Exception
 
-The exception stack trace is written if the media type is application/json+nxentity but it can be disabled for security reason with the `nuxeo.rest.write.exception.stack.trace` configuration parameter, which is set to `true` by default.
+The exception stack trace is written if the media type is `application/json+nxentity` but it can be disabled for security reason with the `nuxeo.rest.write.exception.stack.trace` configuration parameter, which is set to `true` by default.
 
 To disable it, use this code:
 ```
@@ -170,7 +170,7 @@ SELECT * FROM Document WHERE ecm:isVersion = 1
 
 ## Hotfix 23
 
-### Dirty fields validation at creation
+### Dirty Fields Validation at Creation
 
 To enable the fix done by [NXP-23267](https://jira.nuxeo.com/browse/NXP-23267) and provided by HF19, you have now to set the `org.nuxeo.core.validate.dirty.only.creation` parameter with `false` value.
 ```
@@ -183,7 +183,7 @@ Using this property was added not to break the project which were correctly work
 
 ## Hotfix 20
 
-### Read ACL optimization on big volume
+### Read ACL Optimization on Big Volume
 
 This feature is activated by setting the property `nuxeo.core.readacl.async.enabled=true` in nuxeo.conf. Default value is `false`.
 
@@ -192,7 +192,7 @@ When the feature is activated, the Nuxeo property `nuxeo.core.readacl.async.thre
 
 ## Hotfix 19
 
-### Validation constraint at creation
+### Validation Constraint at Creation
 
 [NXP-23267](https://jira.nuxeo.com/browse/NXP-23267) has fixed a bug where the validation was not done on all the document fields. For example the validation was not working:
 - if a field was not present on the creation form
