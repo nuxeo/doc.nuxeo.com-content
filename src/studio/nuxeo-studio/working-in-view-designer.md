@@ -16,6 +16,12 @@ If you have chosen the Web UI as your default interface you will need to become 
 
 Studio Designer application is integrated with Studio Modeler and brings with it all the configuration elements needed to quickly and easily create a custom WebUI interface, using Nuxeo Elements and HTML syntax.
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Video on Nuxeo Studio Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/142/nuxeo-platform-quickstart-nuxeo-studio-concepts)
+![]({{file name='university-nuxeo-studio-concepts.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
 ![]({{file name='view-designer.png'}} ?w=600,border=true)
 
 Studio Designer is for everyone, whether you are a tech-savvy or not. On one hand, Studio Designer is for non-technical users: it provides an intuitive interface to build a customized application without having any developments skills. If you’re familiar with Nuxeo Studio Modeler, then the Studio Designer will be as easy to master. On the other hand, Studio Designer is also oriented toward developers because all the layouts are based upon HTML and Nuxeo Elements, so front-end developers are able to create a creative and complex layout.

@@ -106,6 +106,12 @@ Nuxeo Studio is a SaaS (Software as a Service) application allowing you to custo
 
 Nuxeo Studio enables you to configure and design your document types, forms, workflows and everything that builds your business logic.
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Video on Nuxeo Studio Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/142/nuxeo-platform-quickstart-nuxeo-studio-concepts)
+![]({{file name='university-nuxeo-studio-concepts.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
 Nuxeo Studio facilitates not only the customization but also the deployment of the applications you develop. As part of the Nuxeo Online Services offer, Nuxeo Studio is a part of the development cycle and tool offer. Customizations can be deployed in just one click, without even restarting the server. Technically, Studio generate a single JAR file that holds all your customizations.
 
 ![](https://www.lucidchart.com/publicSegments/view/54c64fa0-9150-4b14-b7e0-572f0a009cea/image.png ?w=600,border=true)
