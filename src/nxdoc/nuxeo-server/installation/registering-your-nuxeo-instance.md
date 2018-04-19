@@ -183,6 +183,12 @@ Registering your Nuxeo application with [Nuxeo Online Services]({{page space='st
 
 The registration process only copies a file on your file system. This enables the Nuxeo Online Services portal to identify the instance among all the registered instances. You can register multiple instances.
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Video on Nuxeo Studio Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/142/nuxeo-platform-quickstart-nuxeo-studio-concepts)
+![]({{file name='university-nuxeo-studio-concepts.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
 {{#> callout type='note' no_icon=true}}
 The instance registration is only valid for your current subscription contract dates, and needs to be renewed on a regular basis. Please refer to the [registration renewal](#renewal) section for further information.
 {{/callout}}
