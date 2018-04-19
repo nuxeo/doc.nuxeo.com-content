@@ -47,17 +47,25 @@ Here we want to create a custom document type named "Contract" that will hold sp
 
 
 1.  In Studio Modeler, under **Configuration**, click on the **Content Model** section, then **Document Types**. Click on the **New** button.
-2.  Fill in the creation form as follows and click on **Next**:
+1.  Fill in the creation form as follows and click on **Next**:
     - **ID**: Contract
     - **Extends**: File
     - **Label**: Contract
     - **Description**: Contract document type for internal use.
 
     Your document type is created.
-3.  Fill in the [**Definition** tab]({{page space='studio' page='documents'}}):
+1.  Fill in the [**Definition** tab]({{page space='studio' page='documents'}}):
 ![]({{file name='definition_contract.png'}} ?w=600,border=true)
-4.  Fill in the [**Schema** tab]({{page space='studio' page='schemas'}}) with the following metadata:
-![]({{file name='schema_contract.png'}} ?w=600,border=true)
+1.  Select an icon for your contract document type by clicking on the **SVG Icon** button.</br>
+    From there, you can select any SVG file available in the Studio project resources or upload your own.
+1.  Fill in the [**Schema** tab]({{page space='studio' page='schemas'}}) with the following metadata:
+    - A field **owner** as a _String_
+    - A field **policy** as a _String_
+    - A field **reminder** as a _Date_
+    - A field **start** as a _Date_
+    - A field **endDate** as a _Date_ </br>
+    You should end up with the following screen:
+    ![]({{file name='schema_contract.png'}} ?w=600,border=true)
 
 Once you are all set, you can navigate to the Studio Designer to configure your layouts.
 
@@ -99,23 +107,6 @@ To do so:
 
   You now have a document type ready to be used on your Web UI interface, the last thing that you need is an icon to easily find your document type in your instance.
 
-## Create an Icon
-
-To do so, you need to go on the **Resources** tab.
-
-1. Click on the **UI** folder.
-2. Click on the **Create** button, select a folder and name it **images**.
-3. In this **Images** folder, create a `doctypes` folder.
-4. In the **doctypes** click on the **Upload** button and select your image. <br/>
-  You have to respect the following folder structure, and name the icon as your document type in lowercase in order to display the icon.
-  ![]({{file name='tree-structure-icon-contract.png'}} ?w=200,border=true)
-  {{#> callout type='warning' }}
-  Your image needs to be in .svg format.
-  {{/callout}}
-
-You can now deploy your project and see what it looks like!
-
-![]({{file name='contract-web-ui.png'}} ?w=350,border=true)
 
 ## Technical Overview
 
