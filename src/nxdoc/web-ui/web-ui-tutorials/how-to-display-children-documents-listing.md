@@ -15,7 +15,7 @@ labels:
     - howto
     - studio
 toc: true
-tree_item_index: 800
+tree_item_index: 850
 ---
 
 In Nuxeo Web UI, if you want to build a custom page providers to retrieve children document, typically for a folderish document type for example, you should use predicates instead of query parameters that were used on JSF UI side.
@@ -46,7 +46,7 @@ In this tutorial we want to display interesting business properties when listing
    - **Document Facets**: Document is folderish
 1. Save your changes by clicking on **Save** at the top right corner of the page.
 
-Now go to the Designer side and configure the 5 layouts under your **contractsPortfolio** document type by clicking on **CONFIGURE** on each layout and save your changes.
+Now click on **Configure layouts in Designer** at the top right of the page and configure the 5 layouts under your **contractsPortfolio** document type by clicking on **CONFIGURE** on each layout and save your changes.
 
 
 ## Create a Page Provider
@@ -65,8 +65,10 @@ AND ecm:currentLifeCycleState != 'deleted'
 
 1. Add a predicate on field: `Schema` > `System` > `ParentId` and take note of the name that has been given to it (likely to be `system_parentId`)
 
+![]({{file name='portfolioContent-web-ui-modeler.png'}} ?w=650,border=true)
+
 {{#> callout type='info' }}
-Contrary to JSF UI, parameters are not inserted in the query then resolved using MVEL query parameters. Instead, we use predicates to define parameters and resolve them using JavaScript.
+Contrary to JSF UI, parameters are not inserted in the query then resolved using MVEL query parameters. Instead, we use predicates to define parameters in Modeler and resolve them using JavaScript in Designer.
 {{/callout}}
 
 ## Configure a Listing
@@ -76,6 +78,7 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
 1. On the **results** field, click on **Configure**
 1. On the **table** results listing, click on **Edit**
 1. At the bottom right of the page, click on **Switch to table editor**
+1. Remove the **Modified** and **last Contributor** columns by clicking on the delete icon ![]({{file name='icon-trash.png' page='web-ui-search'}} ?w=20)
 1. In the right column, select **contract** > **owner : string** in _view_ mode and drag and drop it after the title column
 1. Do the same with the **contract** > **policy : string**, **contract** > **start : date** and **contract** > **endDate : date** </br>
 1. On the **Owner** and **Policy** column, click on the eye icon ![]({{file name='icon-eye.png' page='nxdoc/web-ui-search'}} ?w=20).</br>
@@ -102,6 +105,8 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
 1. Add the following line next to the **params** field:</br>
    `{"system_parentId": "[[document.uid]]"}`
 
+   ![]({{file name='portfolioContentListing-web-ui-designer.png'}} ?w=650,border=true)
+
   {{#> callout type='info' heading='Some explanations for params' }}
   - Elements are configured using JavaScript (JS). We are putting a JS object here (`{"key": "value", "anotherKey": "anotherValue"}`) that will be inserted in the element.
   - `system_parentId` is the name of the predicate we defined in Modeler. We are saying here that we want to assign a value to it.
@@ -111,6 +116,10 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
 1. At the bottom of the page, define the activation filter:
 
    - **Document has one of the type**: `contractsPortfolio`
+   ![]({{file name='portfolioContentListing-web-ui-designer-part2.png'}} ?w=650,border=true)
 
 1. Save your modification and deploy your Studio project
   ![]({{file name='contractsportfoliolisting-results.png'}} ?w=650,border=true)
+
+As we modified the **Owner** and **Policy** columns, they are available optionally. By clicking on **Columns Settings** icon, you can decide to display them or not.
+![]({{file name='portfolioContentListing-columns-settings.png'}} ?w=350,border=true)
