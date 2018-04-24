@@ -99,27 +99,93 @@ Deleting a document involves several steps before the full document is actually 
 
 ## Technical Overview
 
-
 ### Trash Management
+
+Trash feature is managed by [TrashService](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/trash/TrashService.html).
 
 #### Trash / Untrash / Purge Document
 
+When you trash (untrash) documents, the TrashService renames the document (to avoid further collision), changes the `isTrashed` property and then fires the `documentTrashed` (`documentUntrashed`) event.
+Once your document is in trashed state, you can untrash it or purge it (remove it).
 
+In order to perform these actions, trash management is exposed as Java API, Automation and REST API.
 
+To use the Java API, as usual you can retrieve the service with `Framework.getService(TrashService.class)` and then access to the following APIs:
+- isTrashed
+- trashDocument / trashDocuments
+- untrashDocument / untrashDocuments
+- canPurgeOrUntrash
+- getAboveDocument - retrieve the first non trashed ancestor
+- purgeDocumentsUnder
+- getDocuments - retrieve all documents from the trash of the current document
 
+To use the trash feature through the REST API, you need to use Automation. Several operations are available to perform trash actions:
+- [TrashDocument](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.Trash) / `Document.Trash`
+- [UntrashDocument](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.Untrash) / `Document.Untrash`
+- [EmptyTrash](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Document.EmptyTrash) / `Document.EmptyTrash`
+
+The enricher FirstAccessibleAncestorJsonEnricher / `firstAccessibleAncestor` allows you to get the the first non trashed ancestor of returned document during a REST call. This is useful when you trashed a document and want to know on which document you might redirect your user for instance.
 
 #### Checking the State
 
+When you're handling `DocumentModel` you can call `isTrashed` method to check the state. `CoreSession` also has this API for convenience.
 
+When you're using the REST API, the return JSON document will have a `isTrashed` property, for instance:
+```json
+{
+  "entity-type":"document",
+  "repository": "REPOSITORY_NAME",
+  "uid": "DOCUMENT_UID",
+  "path": "DOCUMENT_PATH",
+  "type": "DOCUMENT_TYPE",
+  "state": "DOCUMENT_STATE",
+  "parentRef": "PARENT_DOCUMENT_UID",
+  "isCheckedOut": true|false,
+  "changeToken": null|"CHANGE_TOKEN",
+  "isCheckedOut": true|false,
+  "isTrashed": true|false,
+  ...
+  "properties": {
+    ...
+  },
+  ...
+}
+```
 
-
+You can also filter trashed document when running NXQL by using the `ecm:isTrashed` property. For instance, in order to get direct children not trashed:
+```
+SELECT * FROM Document
+  WHERE ecm:parentId = 'DOCUMENT_UID'
+  AND ecm:isProxy = 0
+  AND ecm:mixinType != 'HiddenInNavigation'
+  AND ecm:isVersion = 0
+  AND ecm:isTrashed = 0
+```
 
 #### Migration
 
+**Keeping Old Trash implementation**
 
+The trash implementation has changed in 10.2. If you want to keep previous implementation relying on life cycle state, add the following contribution:
 
+```xml
+  <require>org.nuxeo.ecm.core.trash.service.migrator</require>
+  <extension target="org.nuxeo.runtime.migration.MigrationService" point="configuration">
 
+    <migration id="trash-storage">
+      <defaultState>lifecycle</defaultState>
+    </migration>
 
+  </extension>
+```
+If you want to migrate trash state to the new property model (ecm:isTrashed), follow the Trash migrations steps.
+
+**Trash Migration**
+
+To migrate trash states to the new property model:
+- Follow the step from section Keeping old trash implementation.
+- In the Nuxeo Platform's JSF UI, go to Admin > System Information > Migration, click the button Migrate trashed state from lifecycle to property and wait until migration is completed.
+- Remove the contribution added at step 1.
 
 ### Permanently Deleting Document
 
