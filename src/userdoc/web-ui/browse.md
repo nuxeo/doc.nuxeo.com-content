@@ -238,6 +238,8 @@ Users can download documents on their computer. It is possible to download:
 
 
 ## Deleting Content
+{{! multiexcerpt name='functional-overview-trash-feature'}}
+
 Only users with "Edit" or "Manage everything" [permissions]({{page version='' space='userdoc' page='managing-permissions'}}) can delete documents from a space.
 
 ### From Workspace View
@@ -293,6 +295,8 @@ From this search you can also restore and/or delete permanently document(s) as e
 If you open a document that is already in the trash, an info bar is displayed at the top of the page saying that you are viewing a trashed document. If you have the necessary rights on the document, you can restore and/or delete permanently document(s) as explained above from this info bar.
 
 ![]({{file name='delete-info-bar-web-ui.png'}} ?w=600)
+
+{{! /multiexcerpt}}
 
 
 ## Versioning
