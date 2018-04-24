@@ -2,7 +2,7 @@
 title: Deleting Documents
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2018-04-24'
     status: ok
 labels:
     - lts2016-ok
@@ -12,7 +12,7 @@ labels:
     - fguillaume
     - excerpt
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950287'
@@ -90,26 +90,38 @@ history:
 
 ---
 {{! excerpt}}
-
 Deleting a document involves several steps before the full document is actually deleted from the database and disk. These steps are described below.
-
 {{! /excerpt}}
 
 ## Functional Overview
 
-{{{multiexcerpt 'functional-overview' page='USERDOC:Deleting Content'}}}
+{{{multiexcerpt 'functional-overview-trash-feature' page='userdoc/browse'}}}
 
 ## Technical Overview
 
-### Putting the Document in the Trash
 
-Putting a document in the trash is done by calling `TrashService` corresponding API. The service will move the corresponding documents (to avoid collision with future document) and change its internal property: `ecm:isTrashed`.
+### Trash Management
 
-When the trash is purged, all its documents are permanently deleted.
+#### Trash / Untrash / Purge Document
 
-Besides the standard user interface, a document is put in the trash when using WebDAV, Nuxeo Drive, or using the [TrashService](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/trash/TrashService.html) APIs.
 
-### Permanently Deleting the Document
+
+
+
+#### Checking the State
+
+
+
+
+
+#### Migration
+
+
+
+
+
+
+### Permanently Deleting Document
 
 A permanent delete is done by most Nuxeo APIs, typically [CoreSession.removeDocument](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#removeDocument-org.nuxeo.ecm.core.api.DocumentRef-) or the higher-level APIs that use it like the CMIS bindings or the Automation [Document.Delete](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Delete) operation.
 
