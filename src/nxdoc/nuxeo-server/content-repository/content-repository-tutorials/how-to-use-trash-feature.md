@@ -16,7 +16,7 @@ labels:
 toc: true
 tree_item_index: 1300
 ---
-### Java API and General Concepts
+## Java API and General Concepts
 
 Trash feature is managed by [TrashService](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/trash/TrashService.html).
 
@@ -38,7 +38,7 @@ public void testTrashFeature(TrashService trashService, DocumentModel docModel) 
 
 ```
 
-### REST API
+## REST API
 
 You can use the Trash feature with the Automation REST API.
 
