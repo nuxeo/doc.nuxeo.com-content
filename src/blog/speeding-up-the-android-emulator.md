@@ -9,19 +9,21 @@ tree_item_index: 100
 toc: true
 ---
 
-I have been working on an Android SDK for the [Nuxeo Content Management Platform](https://www.nuxeo.com/products/content-management-platform/) in the past months and have worked more on it lately as we are on our way to making the first official release of this SDK. I wanted to share some feedback on a practical side of Android development related to test and emulation. After a few days of development, I found out that Android Emulator was a pain because it is far too slow.
+I have been working on an Android SDK for the [Nuxeo Content Management Platform](https://www.nuxeo.com/products/content-management-platform/) in the past months, we are on our way to the first official release of this SDK.
 
-First of all it is slow to boot, but even if you use Snapshot to speed up the start, the execution is also very slow, especially when using the debug mode.
+With this milestone approaching, I want to use this as an opportunity to share some feedback on Android development related to test and emulation. After a few days of development, I found out that Android Emulator was a pain because it is far too slow.
 
-Tweaking Qemu parameters did not help significantly, the emulator remains too slow, that's probably why most Android developers seem to use a real device attached via USB.
+First of all, it's slow to boot, but even if you use Snapshot to speed up the start, the execution is also very slow, especially when using the debug mode.
 
-Anyway, I wanted to find a solution, also because I want to be able to do a demonstration of an application via a beamer and don't want to do the demonstration of a slow application.
+Tweaking Qemu parameters did not help significantly, the emulator remains too slow, which is probably why most Android developers tend to use a real device attached via USB.
+
+Anyway, I wanted to find a solution, also because I want to be able to conduct a demonstration of an application via a beamer and I don't want to "showcase" the demonstration of a slow application.
 
 ## Emulation vs. Simulation
 
 I am not an Apple developer, but it looks like the iPhone simulator does not have the same issue as the Android Emulator.
 
-One of the reasons for this is that it does not run a "real emulator", because the CPU instruction used by the iPhone simulator is the same as the one used by the host (x86).
+One of the reasons for this is because it does not run a "real emulator", The CPU instruction used by the iPhone simulator is the same as the one used by the host (x86).
 
 On the contrary, Android Emulator emulates a real ARM processor on top of an x86 processor. This is a lot of overhead.
 
@@ -132,9 +134,9 @@ On the host, open a command line and cd into the android platform-tools director
 This will register your VM as a new device.
 You can now, directly from Eclipse, run and debug your application in the Android x86 VM.
 
-As you will see, the speed improvement is very very significant:
+As you will see, the speed improvement is **very** significant:
 - VM startup takes about 2s rather than 30s
-- Application run and debug is very fast (no lag like when using the ARM emulator).
+- Application run and debug time is very fast (no lag like when using the ARM emulator).
 
 ## Adding a SD card
 You can use the documentation provided by [http://www.android-x86.org/documents/sdcardhowto](http://www.android-x86.org/documents/sdcardhowto).
@@ -166,7 +168,7 @@ Now edit the `menu.lst` file to add the parameter:
 So far, the x86 VM works as expected and outside of the speed I did not notice any real difference.
 All the Android projects have deployed correctly. Android API Sample project runs ok outside of the NDK.
 
-The only visible point is that the Gallery app (Cooliris) is broken, I tested with a nightly build image, and it works a little bit better, but it's still broken.
+The only visible point is that the Gallery app (Cooliris) is broken. I tested it with a nightly build image, and it works a little bit better, but it's still broken.
 
 Another issue is that in about 10% of the cases, the VM does not boot and you have to reset the VM. Since boot is very fast this is not a pain, so I did not investigate further.
 

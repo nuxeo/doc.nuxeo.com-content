@@ -26,13 +26,13 @@ These are not the only UI frameworks you can use with the Nuxeo Platform. Connec
 
 JSF is not inherently a bad framework, it’s very configurable, stable and well structured. But it is an older UI framework and it does have its limitations. The biggest issue with the JSF framework is that it’s a server-side framework.
 
-This means that everything to build the UI is done on the server and streamed back to the application creating a much higher network load. It also means that state is managed on the server as well, using a lot of server memory and making it more challenging to scale the application.
+This means that everything to build the UI is done on the server and streamed back to the application, which create a much higher network load. It also means that the state is managed on the server as well, which uses a lot of server memory and make it more challenging to scale the application.
 
-In addition to these server-side challenges, mixing stateless and stateful approaches to integrate newer UI technologies such as HTML5 and JS components is a bit complex.
+In addition to these server-side challenges, mixing stateless and stateful approaches to integrate newer UI technologies, such as HTML5 and JS components, is a bit complex.
 
 ## New UI Framework Requirements
 
-The client wanted to move away from JSF and the server-side issues it came with. They wanted a UI framework that was modern and leveraged some of the new technologies available today.
+The client wanted to move away from JSF and the server-side issues that came with it. They wanted a UI framework that was modern and leveraged some of the new technologies available today.
 
 Specifically, they were looking for a UI framework that was a single page application - similar to Facebook and other modern web apps. They also wanted to perform the logic and processing on the client-side, delivering only the model data from the server. They wanted a stateless REST-based architecture, something that would be able to easily integrate new HTML5 and JS widgets into their application.
 
@@ -52,9 +52,9 @@ First, it’s a very stable framework - the ecosystem is strong and the tools th
 The original JSF-based presentation of the File browser was pretty plain. To rebuild it using AngularJS, we used the following components:
 
 - Nuxeo module (REST API &amp; JS client)
-- angular-touch - the mechanics for responsive design for mobile devices.
-- angular-ya-treeview - this replaced the existing treeview component with a dynamic one. A few modifications were done to this one, but it was mostly used as is.
-- angular-ui - this included the integration of bootstrap inside angular to make it easier to build the presentation interface.
+- angular-touch: The mechanics for responsive design for mobile devices.
+- angular-ya-treeview: This replaced the existing treeview component with a dynamic one. A few modifications were done to this one, but it was mostly used as is.
+- angular-ui: This included the integration of bootstrap inside angular to make it easier to build the presentation interface.
 
 ## The Change to AngularJS Wasn’t All Sunshine and Roses
 
@@ -62,7 +62,7 @@ While the decision to move to AngularJS was the right one, it didn’t come with
 
 Most of our team came from the Java world, so the switch to JavaScript development, took some adjustment. One of the challenges was that continuous integration isn’t done the same way in Javascript as it is in Java (in Java we use Maven and Jenkins, but in JavaScript it is Bower and Grunt). Continuous integration, which is one of the big selling points for the Nuxeo Platform, is the practice of merging developer working copies into a main line (or trunk) several times a day. This practice is done to help find integration issues as quickly as possible. In this case, we wanted a system for both Java and AngularJS that could be called from Java.
 
-The modularity management was also a bit complicated as was the maintainability of the JavaScript.  With our Java background, we are used to having a compiler and other tools like checkstyle to enforce rules, but Javascript has more freedom. The modularity management challenge is also due to our use of Maven in Java and Bower in JavaScript.
+The modularity management was also a bit complicated, as was the maintainability of the JavaScript. With our Java background, we are used to having a compiler and other tools (like checkstyle) to enforce rules, but Javascript has more freedom. The modularity management challenge is also due to our use of Maven in Java and Bower in JavaScript.
 
 With AngularJS, we could have made a number of calls to the server to get the right data. To simplify development for this project, we minimized the number of REST calls (based on the “page”).
 
