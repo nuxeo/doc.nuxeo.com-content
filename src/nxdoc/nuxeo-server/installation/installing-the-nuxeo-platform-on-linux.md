@@ -311,11 +311,11 @@ history:
         version: '1'
 
 ---
-On Linux, you can install the Nuxeo Platform using the packages below:
+You can install the Nuxeo Platform on Linux using the packages below:
 
-*   the ZIP archive,
-*   the Virtual Machine image,
-*   the Debian package.
+*   the ZIP archive
+*   the Virtual Machine image
+*   the Debian package
 
 ## Checking Requirements
 
@@ -325,14 +325,14 @@ Check out the [Installation]({{page page='installation'}})&nbsp;for detailed ste
 
 ## Installing the Nuxeo Platform from the ZIP Archive
 
-Installing the Nuxeo Platform using the ZIP archive installs the Nuxeo Platform only. External dependencies must be installed separately.
+Installing the Nuxeo Platform using the ZIP archive only installs the Nuxeo Platform. External dependencies must be installed separately.
 
 **To install the Nuxeo Platform ZIP archive:**
 Unzip the [.zip archive](http://www.nuxeo.com/downloads/) using your favorite tool.
 
 **What's next?**
-You want to evaluate the platform? You can now [start the server]({{page page='server-start-and-stop'}}).
-You want to do a complete installation, compatible for a production environment? You should now [prepare your environment]({{page page='setup-best-practices'}}).
+Do you want to evaluate the platform? You can now [start the server]({{page page='server-start-and-stop'}}).
+You want to do a complete installation, that is compatible for a production environment? You should [prepare your environment]({{page page='setup-best-practices'}}) now.
 
 ## Installing a Nuxeo Virtual Machine Image
 
@@ -340,11 +340,11 @@ You want to do a complete installation, compatible for a production environment?
 
 ## Installing the Nuxeo Platform from the APT Repository for Debian and Ubuntu
 
-Installing the Nuxeo Platform using the APT sources for Debian and Ubuntu installs and configures the platform, but it also installs all required dependencies for an optimal use of the platform.
+Installing the Nuxeo Platform using the APT sources for Debian and Ubuntu installs and configures the platform, but it also installs all required dependencies for optimal use of the platform.
 
 {{#> callout type='note' }}
 
-On Debian 8 (jessie), the openjdk-8-jdk is not available in the default repositories. Before installing the nuxeo package, you will need to:
+On Debian 8 (jessie), the openjdk-8-jdk is not available in the default repositories. Before installing the Nuxeo package, you will need to:
 *  add the jessie-backports repository (`deb http://httpredir.debian.org/debian jessie-backports main`) to your `/etc/apt/sources.list`
 *  refresh your package list (`apt-get update`)
 *  install the package (`apt-get install -t jessie-backports openjdk-8-jdk`)
@@ -355,8 +355,8 @@ You can either install the Nuxeo Platform using the OS graphical user interface 
 
 You will need to know two things first:
 
-*   the codename of your distribution (eg **xenial** for Ubuntu 16.04 LTS)
-*   which kind of Nuxeo release you want to install (Long Term Support, Fast Track or SNAPSHOT; see the page [Nuxeo Release Cycle]({{page space='main' page='nuxeo-release-cycle'}}) for more details).
+*   The codename of your distribution (eg **xenial** for Ubuntu 16.04 LTS)
+*   Which kind of Nuxeo release you want to install (Long Term Support, Fast Track or SNAPSHOT; see the page [Nuxeo Release Cycle]({{page space='main' page='nuxeo-release-cycle'}}) for more details).
 
 {{#> callout type='tip' }}
 
@@ -380,10 +380,10 @@ This requires X11.
 4.  Click on that link to install Nuxeo: [apt://nuxeo](apt://nuxeo).
 5.  Follow the instructions displayed.
     If it's your first install, you can configure:
-    *   the bind address,
-    *   the port,
-    *   the database (a preconfigured PostgreSQL database is suggested by default).
-        The platform is installed as a service. It is automatically started and set to automatically start at boot.
+    *   The bind address
+    *   The port
+    *   The database (a preconfigured PostgreSQL database is suggested by default).
+        The platform is installed as a service. It is automatically started and set to automatically start at boot
 6.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
     The [startup wizard]({{page page='configuration-wizard'}}) is displayed so you can setup your Nuxeo platform and select the module you want to install.
 
@@ -454,9 +454,9 @@ sudo apt-get install gnupg
 
 ### Prevent Swapping
 
-Like any Java application you should prevent the JVM Heap to be swapped to disk, this will crush server performance. You have two options here:
+Like any Java application you should prevent the JVM Heap from being swapped to disk, which will crush server performance. You have two options here:
 
-*   Disable the swap with `sudo swapoff -a` you&rsquo;ll need to edit your `/etc/fstab`to disable swap permanently. Note that before doing this you need to make sure that you have enough memory for all the processes that run on the server (Nuxeo JVM, converters, other custom process and the OS).
+*   Disable the swap with `sudo swapoff -a` you'll need to edit your `/etc/fstab` to disable swap permanently. Note that before doing this you need to make sure that you have enough memory for all the processes that run on the server (Nuxeo JVM, converters, other custom process and the OS).
 *   Limit the swapiness of the OS using `sysctl` to set `vm.swappiness=1`.
 
 ### Temporary Folder

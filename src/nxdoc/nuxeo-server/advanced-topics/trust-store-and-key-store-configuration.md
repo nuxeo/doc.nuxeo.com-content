@@ -48,7 +48,7 @@ history:
 ---
 ## Introduction
 
-When Nuxeo communicates with other servers through network APIs, and you want these communications to be secured, you may need to add authentication certificates to your key store (all the certificates known to the JVM) and trust store (all the certificates that the JVM trusts) because:
+When Nuxeo communicates with other servers through network APIs, you may want these communications to be secured. To do so, you may need to add authentication certificates to your key store (all the certificates known to the JVM) and trust store (all the certificates that the JVM trusts) because:
 
 *   establishing a connection may require (depending on the remote server configuration) to present a local certificate to the remote server, so that it knows the Nuxeo server is legitimate,
 *   the remote server may present a certificate signed by a certification authority (or a self-signed certificate) not known by the standard Java trust store.
@@ -57,7 +57,7 @@ The Key Store will contain all the keys needed by the JVM to be authenticated to
 
 {{#> callout type='note' }}
 
-If you set a custom trust store with your authorities exclusively, **Marketplace, Studio and hot fix distribution integration will not work anymore** since these servers expose certificates available in the default trust store. So we suggest that you [add your certificates to the default trust store](#addingcertificatestodefaulttruststore).
+If you set a custom trust store exclusively with your authorities, **Marketplace, Studio and hot fix distribution integration will not work anymore** since these servers expose certificates available in the default trust store. So we suggest that you [add your certificates to the default trust store](#addingcertificatestodefaulttruststore).
 
 {{/callout}}
 
@@ -95,9 +95,9 @@ For instance on macOS, it could be:
 /Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/security/cacerts
 ```
 
-By default the password for this Trust Store is "changeit".
+By default, the password for this Trust Store is "changeit".
 
-So to add your certificates to the default trust store:
+To add your certificates to the default trust store:
 
 1.  Copy the default trust store.
 2.  Launch the following command line to add your certificate to the default trust store copy:
@@ -110,7 +110,7 @@ So to add your certificates to the default trust store:
 
 ## Troubles
 
-If your Nuxeo instance cannot access Connect anymore, or the Marketplace and Hot Fixes are no longer automatically available (through the Update Center for instance), this can mean that the trust store does not contain the certificates from the authority that signed Nuxeo Servers certificates.
+If your Nuxeo instance cannot access Connect anymore, or the Marketplace and Hot Fixes are no longer automatically available (through the Update Center for instance), this can mean that the trust store does not contain the certificates from the authority that signed the Nuxeo Servers certificates.
 
 If you have the following error in your logs during the connection establishment:
 

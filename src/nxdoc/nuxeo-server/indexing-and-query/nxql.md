@@ -556,7 +556,7 @@ The semantics of a few specific operators is described below.
 
 ## List Properties
 
-A Nuxeo property representing a list of simple values (like `dc:subjects`) can be queried as if it represented a simple value, and Nuxeo will automatically expand the query to match any of the value in the list. The following example will find the documents where **any** subject is _foo_:
+A Nuxeo property representing a list of simple values (like `dc:subjects`) can be queried as if it represented a simple value, and Nuxeo will automatically expand the query to match any of the values in the list. The following example will find the documents where **any** subject is _foo_:
 
 ```sql
 SELECT * FROM Document WHERE dc:subjects = 'foo'
@@ -566,7 +566,7 @@ Note that the above does **not** mean to find the documents where the list of su
 
 The above example shows the `=` operator, and the same semantics apply for the operators `IN`, `LIKE` and `ILIKE`.
 
-When using **negative queries**, though, the semantics get a bit more complex. The following example will find the documents where **no** subject is _foo_:
+When using **negative queries**, though, the semantics become a bit more complex. The following example will find the documents where **no** subject is _foo_:
 
 ```sql
 SELECT * FROM Document WHERE dc:subjects <> 'foo'
@@ -606,9 +606,9 @@ SELECT * FROM Document WHERE dc:subjects/* IS NULL
 
 You can refer to complex properties in NXQL, after the `SELECT`, in the `WHERE` clause, and in the `ORDER BY` clause (cf [NXP-4464](https://jira.nuxeo.com/browse/NXP-4464)).
 
-A complex property is a property of a schema containing `<xs:simpleType>` lists, or `<xs:complexType>` subelements or sequences of them.
+A complex property is a property of a schema containing `<xs:simpleType>` lists, or `<xs:complexType>` sub-elements or sequences of them.
 
-For complex subproperties, like the `length` field of the `content` field of the `file` schema, you can refer to:
+For complex sub-properties, like the `length` field of the `content` field of the `file` schema, you can refer to:
 
 *   `content/length` for the value of the subproperty.
 

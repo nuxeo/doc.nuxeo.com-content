@@ -261,7 +261,7 @@ history:
         version: '1'
 
 ---
-The Nuxeo Platform comes in different packages and can be installed on many operating systems. You may have to install:
+The Nuxeo Platform comes in many different packages and can be installed on many operating systems. You may have to install:
 
 *   a zip archive (works on any operating system that supports a Java Development Kit),
 *   a Windows installer (**.exe**),
@@ -295,7 +295,7 @@ Installing the Nuxeo Platform requires a few steps:
 
 The following table lists the _current_ requirements for running the Nuxeo Platform.
 
-If you have some constraints that do not fit this grid, **do not hesitate to contact the Nuxeo team** to evaluate the feasibility of running Nuxeo on any other environment, be it a different JVM, Database, Application server or OS.
+If you have requirements and/or constraints are not reflected below, **do not hesitate to contact the Nuxeo team** to evaluate the feasibility of running Nuxeo on any other environment, be it a different JVM, Database, Application server or OS.
 
 <div class="table-scroll">
 <table class="hover">

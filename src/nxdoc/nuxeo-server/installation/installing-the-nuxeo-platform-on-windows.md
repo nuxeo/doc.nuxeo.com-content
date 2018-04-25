@@ -302,7 +302,7 @@ The Nuxeo Platform is available as ready-to-use 64 bits virtual machine images f
 
     {{/callout}}
 
-    You get a folder with the required file for the virtual machine image to run.
+    You will see a folder with the required file for the virtual machine image to run.
 
 2.  Start the virtual machine image in your virtual machine application by double-clicking on it.
 
