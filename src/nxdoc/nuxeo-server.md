@@ -61,7 +61,9 @@ The Nuxeo Platform comes in different packages and can be installed on any opera
 {{#> panel type='secondary' match_height='true'}}
 ### Administration
 
-Discover some configuration that we recommend to do, especially for advanced testing or before going into production.
+Learn about many of the configurations that we
+recommend, especially for advanced testing or before going
+into production.
 
 [More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='administration'}})
 {{/panel}}
@@ -75,7 +77,7 @@ Discover some configuration that we recommend to do, especially for advanced tes
 {{#> panel type='secondary' match_height='true'}}
 ### REST API
 
-The Nuxeo Platform contains a native REST API to let you build custom interfaces or integrate its functionalities in your applications.
+The Nuxeo Platform contains a native REST API that enables you to build custom interfaces or integrate its functionalities in your applications.
 
 [More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='rest-api'}})
 {{/panel}}
@@ -85,7 +87,7 @@ The Nuxeo Platform contains a native REST API to let you build custom interfaces
 {{#> panel type='secondary' match_height='true'}}
 ### Automation
 
-The main goal of Content Automation is to enable users to rapidly build complex business logic without writing any Java code.
+The goal of Content Automation is to enable users to rapidly build complex business logic without writing any Java code.
 
 [More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='automation'}})
 {{/panel}}

@@ -15,7 +15,7 @@ tree_item_index: 300
 
 ## The Symptoms
 
-On Linux, you might encounter this error a while after having used your Nuxeo instance (esp. with many concurrent HTTP requests on the Tomcat distribution):
+On Linux, you might encounter this error a little while after you've used your Nuxeo instance (esp. with many concurrent HTTP requests on the Tomcat distribution):
 
 ```
 09:02:10,887 ERROR [PoolTcpEndpoint] Endpoint ServerSocket[addr=/0.0.0.0,port=0,localport=8080] ignored exception: java.net.SocketException: Too many open files
@@ -23,7 +23,7 @@ java.net.SocketException: Too many open files
        at java.net.PlainSocketImpl.socketAccept(Native Method)
 ```
 
-To avoid this you have to increase the number of open files in the configuration file of your Linux System. There are two limits. One is global (for all users) and one is a per-user limit (1024 by default).
+To avoid this, you have to increase the number of open files in the configuration file of your Linux System. There are two limits. One is global (for all users) and one is a per-user limit (1024 by default).
 
 ## Count File Descriptors in Use
 
@@ -55,7 +55,7 @@ sudo sysctl fs.file-nr
 
 ## Raising the per-User Limit
 
-On some systems it is possible to use the ulimit -Hn 8192 and ulimit -Sn 4096 commands. However most of the time this is forbidden and you will get an error such as:
+On some systems, it is possible to use the ulimit -Hn 8192 and ulimit -Sn 4096 commands. However, most of the time this is forbidden and you will get an error such as:
 ```
 ulimit: open files: cannot modify limit: Operation not permitted
 ```
@@ -71,7 +71,7 @@ nuxeo           soft    nofile          4096
 nuxeo           hard    nofile          8192
 ```
 
-If you want to raise the limits for all users you can do instead:
+If you want to raise the limits for all users, you can instead do the following:
 
 ```
 *           soft    nofile          4096
@@ -80,7 +80,7 @@ If you want to raise the limits for all users you can do instead:
 
 Once you save file, you may need to logout and login again.
 
-To check whether changes are taken into account, open a new session with the user that starts the nuxeo process. And check that the change has been taken into account:
+To verify if the changes have been taken into account, open a new session with the user that starts the Nuxeo process, and check that the change has been taken into account:
 
 ```
 % su nuxeo

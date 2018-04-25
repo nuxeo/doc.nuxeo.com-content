@@ -249,13 +249,13 @@ The Nuxeo webapp can be virtual hosted behind a HTTP/HTTPS reverse proxy, like A
 
 Virtual hosting provides several advantages:
 
-*   Support for HTTPS
+*   Support for HTTPS:</br>
     HTTPS support in Apache is easy and flexible to setup. Apache can also be used to handle certificate authentication.
 
-*   URL filtering
+*   URL filtering:</br>
     You can use Apache filtering tools to limit the URLs that can be accessed via the reverse proxy.
 
-*   Handle HTTP cache for static resources
+*   Handle HTTP cache for static resources:</br>
     The Nuxeo Platform generates standard HTTP cache headers for all static resources (images, JavaScript...). These resources are by default cached on the client side (in the browser cache). For performance reasons, it can be useful to host these resources in the reverse proxy cache.
 
 This page focuses on the Apache Configuration.
@@ -264,7 +264,7 @@ This page focuses on the Apache Configuration.
 
 Using a reverse proxy can also be a way to optimize uploads and downloads.
 
-When clients access the Nuxeo server via a WAN with low bandwidth, upload and download can take time: this is bad for the server since it consumes resources:
+When clients access the Nuxeo server via a WAN with low bandwidth, upload and download can take time: this is bad for the server since it consumes resources such as:
 
 *   HTTP socket and HTTP thread
 *   Memory
@@ -325,9 +325,9 @@ And if you have a "client denied by server configuration" error, you must check 
 
 ### Reverse Proxy a WebEngine Site to a myexample.com/mysite URL
 
-You need the same configuration from the first section. It is advised to first get it to work before proxying exclusively a WebEngine site.
+You need the same configuration from the first section. It is advised to first get it to work before exclusively proxying a WebEngine site.
 
-A site request queries both from its own URL (/nuxeo/site/mysite) but also gets static resources from the root (/nuxeo/nxthemes ...).
+A site request queries both from its own URL (/nuxeo/site/mysite) but also acquires static resources from the root (/nuxeo/nxthemes ...).
 A rewrite configuration for mysite would look like:
 
 ```
@@ -492,7 +492,7 @@ You can also use Squid or any other caching system that is compliant with the st
 
 ### Configuration Between AWS Elastic Load Balancing (ELB) and Apache
 
-When using Apache as a backend server for ELB, it is really important to pay attention to the configuration of both otherwise you may encounter several performance issues. The ELB is creating connections on the Apache and put them in idle, but if Apache has a way shorter timeout, it will close them before they are actually used. We recommend using a slightly high value for the Apache keep alive timeout than the idle timeout configured on the ELB.
+When using Apache as a backend server for ELB, it is really important to pay attention to the configuration of both, otherwise you may encounter several performance issues. The ELB is creating connections on the Apache and putting them in idle, but if Apache has a much shorter timeout, it will close them before they are actually used. We recommend using a slightly higher value for the Apache keep alive timeout than the idle timeout configured on the ELB.
 
 Here is an example of a configuration on Apache (apache2.conf file) and on ELB:
 
@@ -517,7 +517,7 @@ Configuring Tomcat in HTTPS is not recommended. Please follow instructions above
 
 {{/callout}}
 
-If you need to configure your Nuxeo Tomcat in HTTPS, the platform provides an&nbsp;`HTTPS` configuration template for this purpose:
+If you need to configure your Nuxeo Tomcat in HTTPS, the platform provides an  `HTTPS` configuration template for this purpose:
 
 Add `https` to the `nuxeo.templates` property then edit the related properties.
 
