@@ -474,7 +474,7 @@ Examples:
 
 ### Time Range
 
-Name: `NumericIntervalConstraint`
+Name: `DateIntervalConstraint`
 
 Parameters:
 
