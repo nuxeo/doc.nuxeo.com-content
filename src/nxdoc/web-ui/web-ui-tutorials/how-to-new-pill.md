@@ -25,6 +25,10 @@ tree_item_index: 1400
 ---
 In this tutorial you will learn how to add a new pill to your custom document type. This pill will help you to find other contracts created for the same contract owner. To do so, we'll be using a custom page provider linked to the Contract document type.
 
+{{#> callout type='info' }}
+A pill in Web UI is the equivalent of a tab on JSF UI.
+{{/callout}}
+
 ## Prerequisites
 - A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Nuxeo Modeler
 - Make sure that the [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
