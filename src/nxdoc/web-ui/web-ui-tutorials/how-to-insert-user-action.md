@@ -49,7 +49,7 @@ On Studio Modeler:
 Now that your automation chain is ready, you will need to bind it to an action.
 
 On Studio Designer, go on the **UI** tab:
-1. In **Actions**, click on the **Create** button.
+1. In **Actions**, hover over the **Create** button and select the **Operation** button.
 1. Fill in the creation form as shown below:
   ![]({{file version='810' space='nxdoc' page='how-to-insert-user-action' name='validate-action-button-VD.png'}} ?w=650,border=true)
 1. Fill in the **Filters** section as shown below:
