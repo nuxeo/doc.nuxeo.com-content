@@ -25,6 +25,12 @@ tree_item_index: 1300
 In this tutorial you will learn how to insert a user action on your instance using Studio Designer, to easily validate documents.
 {{! /excerpt}}
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
+![]({{file name='university-quickstart-studio-project.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
 ## Requirements
 
 - A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Studio Modeler.
