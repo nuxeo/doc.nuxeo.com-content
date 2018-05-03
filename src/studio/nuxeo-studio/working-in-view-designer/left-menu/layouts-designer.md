@@ -8,6 +8,15 @@ description:
 toc: true
 tree_item_index: 100
 ---
+<!---
+Initial Excerpt missing
+-->
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
+![]({{file name='university-quickstart-studio-project.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
 
 ![]({{file name='layouts_tab_view_designer.png' page='left-menu'}} ?w=350,border=true)
 
