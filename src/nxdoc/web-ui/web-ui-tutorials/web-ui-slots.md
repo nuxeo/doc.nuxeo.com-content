@@ -19,7 +19,7 @@ labels:
     - nuxeo-slot
     - nuxeo-slot-content
     - lts2017-ok
-tree_item_index: 700
+tree_item_index: 900
 
 ---
 ## Concept

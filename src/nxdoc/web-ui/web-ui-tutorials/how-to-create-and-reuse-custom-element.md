@@ -19,7 +19,7 @@ labels:
     - nuxeo-ui-elements
     - university
     - polymer
-tree_item_index: 1200
+tree_item_index: 500
 
 ---
 

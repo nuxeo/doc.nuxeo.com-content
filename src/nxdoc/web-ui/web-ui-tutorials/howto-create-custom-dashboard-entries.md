@@ -24,7 +24,7 @@ labels:
     - howto
     - content-review-lts2017
 toc: true
-tree_item_index: 900
+tree_item_index: 600
 
 ---
 ## Building Custom Dashboards

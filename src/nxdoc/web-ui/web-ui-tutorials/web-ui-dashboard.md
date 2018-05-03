@@ -20,7 +20,7 @@ labels:
     - extension
     - dashboard
     - lts2017-ok
-tree_item_index: 800
+tree_item_index: 700
 
 ---
 

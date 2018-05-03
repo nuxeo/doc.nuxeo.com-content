@@ -15,7 +15,7 @@ labels:
     - howto
     - studio
 toc: true
-tree_item_index: 850
+tree_item_index: 1200
 ---
 
 In Nuxeo Web UI, if you want to build a custom page providers to retrieve children document, typically for a folderish document type for example, you should use predicates instead of query parameters that were used on JSF UI side.
