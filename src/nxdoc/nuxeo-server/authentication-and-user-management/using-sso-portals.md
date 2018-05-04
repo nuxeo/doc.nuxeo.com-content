@@ -24,9 +24,59 @@ To install this authentication plugin:
 
 1.  Download the [nuxeo-platform-login-portal-sso plugin](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;quick~nuxeo-platform-login-portal-sso).
 2.  Put it in `$TOMCAT_HOME/nxserver/bundles` or `$JBOSS_HOME/server/default/deploy/nuxeo.ear/bundles` and restart the server.
-3.  Put the plugin into the authentication chain.{{{multiexcerpt 'authentication_chain_contribution' page='Authentication and User Management'}}}
-    Use `PORTAL_AUTH`.
-4.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) with the following content:
+3.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) with the following content:
+
+    ```xml
+<component name="com.santander.document-vault.nuxeo.authentication-chain">
+
+  <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
+  <require>org.nuxeo.ecm.restapi.server.auth.config</require>
+  <require>org.nuxeo.ecm.login.token.authentication.contrib</require>
+
+  <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="chain">
+    <authenticationChain>
+      <plugins>
+        <plugin>BASIC_AUTH</plugin>
+        <plugin>ANONYMOUS_AUTH</plugin>
+        <plugin>PORTAL_AUTH</plugin>
+      </plugins>
+    </authenticationChain>
+  </extension>
+
+  <extension
+      target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
+      point="specificChains">
+
+    <specificAuthenticationChain name="Automation">
+      <urlPatterns>
+        <url>(.*)/automation.*</url>
+      </urlPatterns>
+      <replacementChain>
+        <plugin>AUTOMATION_BASIC_AUTH</plugin>
+            <plugin>PORTAL_AUTH</plugin>
+        <plugin>TOKEN_AUTH</plugin>
+      </replacementChain>
+    </specificAuthenticationChain>
+
+    <specificAuthenticationChain name="RestAPI">
+        <urlPatterns>
+            <url>(.*)/api/v.*</url>
+        </urlPatterns>
+        <replacementChain>
+            <plugin>AUTOMATION_BASIC_AUTH</plugin>
+            <plugin>PORTAL_AUTH</plugin>
+            <plugin>TOKEN_AUTH</plugin>
+        </replacementChain>
+    </specificAuthenticationChain>
+  </extension>
+
+</component>
+
+    ```
+
+    **Note:** Your XML extension's name must end with&nbsp;`-config.xml`.
+    
+4.  Create another [XML extension]({{page page='how-to-contribute-to-an-extension'}}) with the following content:
 
     ```xml
     <component name="org.nuxeo.ecm.platform.authenticator.portal.sso.config">
@@ -57,22 +107,13 @@ To install this authentication plugin:
 
 Portal_SSO is integrated in [Nuxeo Java client](http://nuxeo.github.io/nuxeo-java-client/) and in the [Nuxeo-HTTP-Client](https://github.com/nuxeo/nuxeo-http-client/) sample lib.
 
-**Using Nuxeo HTTP Client**
-
-`nuxeo-http-client` is a sample Java client to do REST calls to Nuxeo. You can configure it connect to a server that uses `nuxeo-platform-login-portal-sso` by doing:
-
-```
-NuxeoServer nxServer = new NuxeoServer("http://127.0.0.1:8080/nuxeo");
-nxServer.setAuthType(NuxeoServer.AUTH_TYPE_SECRET);
-nxServer.setSharedSecretAuthentication("Administrator", "nuxeo5secretkey");
-```
-
 **Using Nuxeo Java Client**
 
 Configure it to connect to a server that uses `platform-login-portal-sso` by using an interceptor:
 
 ```java
-client.setAuthenticationMethod( new PortalSSOAuthInterceptor("nuxeo5secretkey", "Administrator") );
+new NuxeoClient.Builder().url(SERVER_URL)
+					.authentication(new PortalSSOAuthInterceptor("Administrator", "nuxeo5secretkey")).connect();
 ```
 
 **Manual HTTP Calls**
