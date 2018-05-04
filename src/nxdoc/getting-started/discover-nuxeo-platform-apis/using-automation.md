@@ -123,6 +123,12 @@ Leverage Automation and trigger business logic to obtain the contract and all of
 
 {{! /excerpt}}
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Automation chains, Automation scripting and Events](https://university.nuxeo.com/learn/public/course/view/elearning/46/automation-chains-automation-scripting-and-events)
+![]({{file name='university-automation.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
+
 **Prerequisites**
 
 *   {{{multiexcerpt 'prerequisite_addon' page='Handling Permissions'}}}
@@ -195,7 +201,6 @@ Automation chains allow you to optimize the number of calls needed to execute bu
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [Applying Business Logic](https://university.nuxeo.com/learn/public/course/view/elearning/46/ApplyingBusinessLogic) course on Nuxeo University
 *   [Content Automation Documentation]({{page page='automation'}})
 
 {{/callout}}
