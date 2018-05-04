@@ -27,51 +27,46 @@ To install this authentication plugin:
 3.  Create an [XML extension]({{page page='how-to-contribute-to-an-extension'}}) with the following content:
 
     ```xml
-<component name="com.santander.document-vault.nuxeo.authentication-chain">
+    <component name="com.santander.document-vault.nuxeo.authentication-chain">
 
-  <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
-  <require>org.nuxeo.ecm.restapi.server.auth.config</require>
-  <require>org.nuxeo.ecm.login.token.authentication.contrib</require>
+      <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
+      <require>org.nuxeo.ecm.restapi.server.auth.config</require>
+      <require>org.nuxeo.ecm.login.token.authentication.contrib</require>
 
-  <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="chain">
-    <authenticationChain>
-      <plugins>
-        <plugin>BASIC_AUTH</plugin>
-        <plugin>ANONYMOUS_AUTH</plugin>
-        <plugin>PORTAL_AUTH</plugin>
-      </plugins>
-    </authenticationChain>
-  </extension>
-
-  <extension
-      target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
-      point="specificChains">
-
-    <specificAuthenticationChain name="Automation">
-      <urlPatterns>
-        <url>(.*)/automation.*</url>
-      </urlPatterns>
-      <replacementChain>
-        <plugin>AUTOMATION_BASIC_AUTH</plugin>
+      <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="chain">
+        <authenticationChain>
+          <plugins>
+            <plugin>BASIC_AUTH</plugin>
+            <plugin>ANONYMOUS_AUTH</plugin>
             <plugin>PORTAL_AUTH</plugin>
-        <plugin>TOKEN_AUTH</plugin>
-      </replacementChain>
-    </specificAuthenticationChain>
+          </plugins>
+        </authenticationChain>
+      </extension>
 
-    <specificAuthenticationChain name="RestAPI">
-        <urlPatterns>
-            <url>(.*)/api/v.*</url>
-        </urlPatterns>
-        <replacementChain>
+      <extension target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService" point="specificChains">
+        <specificAuthenticationChain name="Automation">
+          <urlPatterns>
+            <url>(.*)/automation.*</url>
+          </urlPatterns>
+          <replacementChain>
             <plugin>AUTOMATION_BASIC_AUTH</plugin>
             <plugin>PORTAL_AUTH</plugin>
             <plugin>TOKEN_AUTH</plugin>
-        </replacementChain>
-    </specificAuthenticationChain>
-  </extension>
+          </replacementChain>
+        </specificAuthenticationChain>
 
-</component>
-
+        <specificAuthenticationChain name="RestAPI">
+          <urlPatterns>
+            <url>(.*)/api/v.*</url>
+          </urlPatterns>
+          <replacementChain>
+            <plugin>AUTOMATION_BASIC_AUTH</plugin>
+            <plugin>PORTAL_AUTH</plugin>
+            <plugin>TOKEN_AUTH</plugin>
+          </replacementChain>
+        </specificAuthenticationChain>
+      </extension>
+    </component>
     ```
 
     **Note:** Your XML extension's name must end with&nbsp;`-config.xml`.
@@ -95,7 +90,6 @@ To install this authentication plugin:
         </authenticationPlugin>
       </extension>
     </component>
-
     ```
 
     **Note:** Your XML extension's name must end with&nbsp;`-config.xml`.
