@@ -642,11 +642,11 @@ The following properties are not legal as document property names, but are allow
 
 **ecm:parentId**: the document parent id.
 
-**ecm:path**: the document path (`DocumentModel.getPathAsString()`). This is a synthetic value (computed from the `ecm:name` of the document's ancestors) and therefore cannot be used in all context. It cannot be used in the _<select-clause>_. In the _<where-clause>_ it may only be used with operators `=`, `<>` (or `!=`) and `STARTSWITH`. Using it in the _<order-by-clause>_ carries a large performance penalty when using `CoreSession.query`, and it cannot be used in the _<order-by-clause>_ when using `CoreSession.queryAndFetch`. See also **ecm:ancestorId**.
+**ecm:path**: the document path (`DocumentModel.getPathAsString()`). This is a synthetic value (computed from the `ecm:name` of the document's ancestors) and therefore cannot be used in all contexts. It cannot be used in the `<select-clause>`. In the `<where-clause>` it may only be used with operators `=`, `<>` (or `!=`) and `STARTSWITH`. Using it in the `<order-by-clause>` carries a large performance penalty when using `CoreSession.query`, and it cannot be used in the `<order-by-clause>` when using `CoreSession.queryAndFetch`. See also **ecm:ancestorId**.
 
 **ecm:name**: the document name (`DocumentModel.getName()`).
 
-**ecm:pos**: the document position in its parent, this is `NULL` in non-ordered folders. This is mainly used in the _<order-by-clause>_.
+**ecm:pos**: the document position in its parent, this is `NULL` in non-ordered folders. This is mainly used in the `<order-by-clause>`.
 
 **ecm:primaryType**: the document type (`DocumentModel.getType()`).
 
