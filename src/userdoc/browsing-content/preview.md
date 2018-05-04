@@ -207,7 +207,7 @@ Several means to preview documents are available.
 *   For office and PDF documents: Click on the icon ![]({{file name='preview.png' page='icons-index'}}) next to the attachment name on the **Summary** tab.
     The preview opens in a new browser tab.
     ![]({{file name='DocumentPreviewer2.png'}} ?w=600,h=331,border=true)
-    This preview leverages [pdf.js by Mozzilla](https://mozilla.github.io/pdf.js/).
+    This preview leverages [pdf.js by Mozilla](https://mozilla.github.io/pdf.js/).
 *   For all documents on the **Summary** tab of a document, click on **More** > **Preview.**
     The document preview is displayed in a popup window.
     ![]({{file name='preview_popup.png'}} ?w=600,border=true)
