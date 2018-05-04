@@ -632,11 +632,11 @@ The following properties are not legal as document property names, but are allow
 
 **ecm:parentId**: the document parent id.
 
-**ecm:path**: the document path (`DocumentModel.getPathAsString()`), it cannot be used in the _<select-clause>_, and using it in the&nbsp;_<order-by-clause>_ carries a large performance penalty. May be used only with operators `=`, `<>` and `STARTSWITH`. See also **ecm:ancestorId**.
+**ecm:path**: the document path (`DocumentModel.getPathAsString()`), it cannot be used in the `<select-clause>`, and using it in the `<order-by-clause>` carries a large performance penalty. May be used only with operators `=`, `<>` and `STARTSWITH`. See also **ecm:ancestorId**.
 
 **ecm:name**: the document name (`DocumentModel.getName()`).
 
-**ecm:pos**: the document position in its parent, this is `NULL` in non-ordered folders. This is mainly used in the&nbsp;_<order-by-clause>_.
+**ecm:pos**: the document position in its parent, this is `NULL` in non-ordered folders. This is mainly used in the `<order-by-clause>`.
 
 **ecm:primaryType**: the document type (`DocumentModel.getType()`).
 
