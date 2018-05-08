@@ -2,7 +2,7 @@
 title: Redis Configuration
 review:
     comment: ''
-    date: '2017-12-13'
+    date: '2018-05-08'
     status: ok
 labels:
     - lts2016-ok
@@ -194,7 +194,22 @@ When `nuxeo.redis.enabled=true` then the following is automatically activated as
 To activate the Redis [cluster invalidation]({{page page='nuxeo-and-redis'}}#clustering-invalidation) in cluster mode you need to add:
 
 ```
-repository.clustering.invalidation=redis
+repository.clustering.invalidation=pubsub
+```
+
+You can monitor that your cluster is able to send invalidations request using that command:
+
+```
+redis-cli psubscribe "*"
+```
+
+After editing a document, you should be able to see such message:
+
+```
+1) "pmessage"
+2) "*"
+3) "nuxeo:vcs:default"
+4) "2:\xac\xed\x00\x05sr\x00,org.nuxeo.ecm.core.storage.sql.Invalidations..."​
 ```
 
 
