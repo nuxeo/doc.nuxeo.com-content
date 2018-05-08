@@ -2,7 +2,7 @@
 title: LDAP and Active Directory
 review:
     comment: ''
-    date: '2017-01-06'
+    date: '2018-05-07'
     status: ok
 labels:
     - lts2016-ok
