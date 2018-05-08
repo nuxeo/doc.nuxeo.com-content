@@ -131,7 +131,7 @@ Reference: [http://www.oracle.com/technetwork/articles/java/index-137868.html](h
 
 ### IDE Configuration
 
-The [Code Templates and Formatter configurations]({{page page='eclipse-setup'}}) include some Javadoc rules.
+The [Code Templates and Formatter configurations](https://github.com/nuxeo/nuxeo/tree/master/tools) include some Javadoc rules.
 
 You should configure your IDE to raise warnings on malformed Javadoc comments and to validate tag arguments but to ignore missing Javadoc tags and comments.
 
