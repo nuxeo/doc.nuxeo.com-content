@@ -272,7 +272,59 @@ By default, the platform's administrator is the principal "Administrator". On th
 
 You can also choose a group from your company's directory instead of using the default "administrators" group, to determine the users who will benefit from all the rights in the platform. This is done using the `administratorsGroup` element.
 
-## Simple Configuration Example
+There are 2 ways to configure your LDAP config:
+    *   Defining all OOTB LDAP variables in `nuxeo.conf`
+    *   Contributing the whole XML config file
+
+The first approach allows you to simply reuse the default LDAP configuration template [here](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common/config/default-ldap-users-directory-bundle.xml.nxftl) by providing values for each variable defined in this template. The advantage of that solution is you don't have to deal with future upgrades config changes as you simply define variables in `nuxeo.conf`. If changes may be required then the template will be automatically updated in the future upgrades.
+
+If you need to add other custom setting where the template doesn't define any variable for that config then the second option would be better. You will have to maintain this config file for future nuxeo upgrades.
+
+## Simple configuration Example for LDAP (using `nuxeo.conf`)
+
+Here is the list of variables to define in `nuxeo.conf` to enable your LDAP integration:
+See XML config example below to get values examples.
+
+```
+nuxeo.directory.type=ldap
+nuxeo.ldap.url=
+nuxeo.ldap.binddn=
+nuxeo.ldap.bindpassword=
+nuxeo.ldap.retries=
+nuxeo.ldap.user.searchBaseDn=
+nuxeo.ldap.user.searchClass=
+nuxeo.ldap.user.searchScope=
+nuxeo.ldap.user.searchBehavior=
+nuxeo.ldap.user.searchScope=
+nuxeo.ldap.user.readonly=
+nuxeo.ldap.query.sizeLimit=
+nuxeo.ldap.query.timeLimit=
+nuxeo.ldap.user.mapping.username=
+nuxeo.ldap.user.mapping.password=
+nuxeo.ldap.user.mapping.firstname=
+nuxeo.ldap.user.mapping.lastname=
+nuxeo.ldap.user.mapping.company=
+nuxeo.ldap.user.mapping.email=
+nuxeo.ldap.group.storage=
+nuxeo.ldap.group.searchBaseDn=
+nuxeo.ldap.group.searchFilter=
+nuxeo.ldap.group.searchScope=
+nuxeo.ldap.group.readonly=
+nuxeo.ldap.group.mapping.rdn=
+nuxeo.ldap.group.mapping.name=
+nuxeo.ldap.group.mapping.label=
+nuxeo.ldap.group.mapping.members.staticAttributeId=
+nuxeo.ldap.group.mapping.members.dynamicAttributeId=
+nuxeo.ldap.defaultAdministratorId=
+nuxeo.ldap.defaultMembersGroup=
+nuxeo.user.emergency.enable=
+nuxeo.user.emergency.username=
+nuxeo.user.emergency.password=
+nuxeo.user.emergency.firstname=
+nuxeo.user.emergency.lastname=
+```
+
+## Simple Configuration Example (using XML config)
 
 1.  Create a file called `default-ldap-users-directory-config.xml` in your config directory:
     *   `nxserver/config/`
