@@ -237,8 +237,8 @@ Before you start using aggregates you may want to take a look to the document ab
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [Course on Nuxeo Search Basics](https://university.nuxeo.com/learn/public/course/view/elearning/50/nuxeo-search-basics).
-![]({{file name='university-search-basics.png' page='nxdoc/university'}} ?w=450,border=true)
+- [Configurating Searches in Nuxeo Studio Modeler & Designer](https://university.nuxeo.com/learn/public/course/view/elearning/134/configurating-searches-in-nuxeo-studio-modeler-designer).
+![]({{file name='university-search.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
 Nuxeo Platform supports six different types of aggregates: Terms, Significant Terms, Range, Date Range, Histogram and Date Histogram. This how-to will help you to understand how to use them.
