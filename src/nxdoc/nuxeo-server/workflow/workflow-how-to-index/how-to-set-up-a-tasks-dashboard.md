@@ -174,7 +174,7 @@ We provide some quick steps to follow using [Extension points]({{page page='how-
 
     {{#> callout type='info' }}
 
-    To have a link to the originating document in the content view, you can add a document suggest widget bound to the property `nt:targetDocumentId` (schema task)
+    To have a link to the originating document(s) in the content view, you can add a multiple document suggest widget bound to the property `nt:targetDocumentsIds` (schema task)
 
     {{/callout}}
 5.  **Configure the queues tabs**
