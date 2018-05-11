@@ -69,81 +69,171 @@ history:
         version: '1'
 
 ---
-Nuxeo platform exposes a huge and diversified API which must be kept stable, documented and properly maintained. So there are some required coding style rules about annotations and Javadoc.
+The Nuxeo platform exposes a huge and diversified API which must be kept stable, properly maintained and bug-free, including documentation. The following are some required coding style rules about code and Javadoc.
 
-## `@since`
+## Formatting
 
-New API (public classes and methods) must have an&nbsp;`@since` Javadoc annotation.
+### No tabs, no trailing spaces
 
-### Eclipse configuration
+This avoids changes in diffs when invisible characters change. In Eclipse, you can install the Marketplace package _AnyEdit Tools_ which has tab-related options.
 
-Go to "Window > Preferences > Java > Code Styles > Code Templates".
-In "Comments > Types" and "Comments > Methods", edit and set:
+### Indent and format according to our formal rules
 
-{{#> panel type='code' heading='Types and methods comments code templates'}}
+The format rules are the [Eclipse formatting configuration](https://github.com/nuxeo/nuxeo/blob/master/tools/nuxeo_formatter.xml).
+See [Code Templates and Formatter configurations](https://github.com/nuxeo/nuxeo/tree/master/tools) for more.
 
-```java
-/**
- * ${tags}
- *
- * @since TODO
- */
-```
+This applies also to organizing imports.
 
-{{/panel}}
+This allows for the same automatic formatting for everyone, to avoid gratuitous reformattings every time someone commits.
 
-The following setting can also be useful: go to "Window > Preferences > Java > Editor > Save Actions". Check "Perform the selected actions on save", and only check "additional actions", that should list "Remove trailing white spaces on all lines" ("Configure > Code Organizing"). Other save actions should not be performed automatically: imports or deprecation warning cleanups should ideally be explicit formatting actions from the developer.
+### No automatic formatting on save
 
-### FAQ
+This avoids mixing cleanups with other code changes.
 
-Q: I'm backporting a new API from 5.7 to 5.6 branch, should I put&nbsp;`@since 5.7` or `@since 5.6-HF09`?
-A: Use `@since 5.7`, otherwise backports are a pain when cherry-picking. JIRA is the reference to understand why an&nbsp;`@since 5.7` is visible on a 5.6.0 branch.
+The only allowed exception is for trailing whitespaces, which _may_ be automatically removed at save time. In Eclipse, go to _Preferences_ > _Java_ > _Editor_ > _Save Actions_. Check _Perform the selected actions on save_, and only check _Additional actions_, that should only list _Remove trailing white spaces on all lines_ (configure it in _Configure > Code Organizing_).
 
-Q: When should I add&nbsp;`@since` on other places than new classes and methods?
-A: Wherever it helps. Marking fields or static constants is sometimes useful, especially XMap descriptor fields or event names for instance. And please think of your fellow Studio developers who will need to easily know what is accepted for a given target version.
+## Readability
 
-Q: Do I need to add&nbsp;`@since` on new test methods?
-A: It's not mandatory, but if your editor does it on its own, it won't hurt.
+### The code must be clear, and commented to explain _why_ it does things
 
-## Deprecation
+_What_ the code does should be self-explanatory through proper code organization, method/field/variable naming, etc. A comment with summary of _what_ some code does can still be useful before a code block.
 
-On API changes, forward and backward compliance must be maintained over multiple versions. Help API users and code reviewers to manage the deprecated code using both Java and Javadoc annotations:
+### No wildcard imports
 
-{{#> panel type='code' heading='Method deprecation'}}
+They make searches more difficult, make actual packages difficult to discover for readers outside an IDE, and can cause problem when imported packages have new classes added that are also in another wildcard import.
 
-```java
-/**
- * (...)
- * @deprecated Since 5.6\. Use {@link (...)} instead.
- */
-@Deprecated
-public void oldMethod() {
-```
+### Use static imports for common, well-known things
 
-{{/panel}}
+Some common constants or static methods have names that are unique enough, so that it's worth having shorter code when they're used:
+- `Boolean.TRUE`, `Boolean.FALSE`
+- `StandardCharsets.UTF_8`
+- `Collections` static methods (`emptyList`, `singletonList`, etc.)
+- `Collectors` static methods (`toList`, `toMap`, `groupingBy`, etc.)
 
-Indicate the version of deprecation. That will be used for later removal and help deprecated API users to guess the refactoring priority.
-Points to the new API and usage.
+### No `final` method parameters or local variables
+
+They are eyesores for readers, don't bring much safety if the code is already clear enough, and IDEs often provide enough warnings.
+
+### You can reassign method parameters
+
+It's ok to reassign a method parameter (to "normalize" it on method entry for instance) if it makes the code more readable. Some style guides disallow updating parameters but that's overly strict.
+
+### Use `i++`
+
+Our standard is `i++` (not `++i`) for simple increments. This does not apply when the increment is inside another expression, because obviously the semantics are then different.
+
+### Use all-caps for `static final` fields
+
+These fields are constants and their use should be immediately identifiable as such.
+
+## Maintainability
+
+### Always use braces
+
+Always use `{` `}` and a separate line for `if`/`else` blocks. This avoids hard-to-find bugs and is our formatting style.
+
+### Use `Objects.requireNonNull` for `null` checks
+
+It's better to use this standard method than having custom code. Use a message specific to the checked code.
+
+### No final methods or classes
+
+This hinders reusability. Nuxeo is a platform and we never know when it'll be useful to subclass something.
+
+This rule, and the one below about `private`, does not apply to private projects that are not part of the Nuxeo Platform (like Nuxeo Studio and Nuxeo Connect) where `private` helps with cleanups and there is no third-party compatibility or subclassing issue.
+
+### No `private` or package-private methods or fields.
+
+This hinders reusability, for the same reason as above.
+
+Two exceptions are `log` and `serialVersionUID` which must be `private` because we _want_ subclasses to redefine them.
+
+## Testability
+
+### Always write unit tests
+
+Tests help for development (TDD), and for non-regression.
+
+### Structure code for testing
+
+Don't hesitate to layer your code between different levels of complexity and have internal SPIs to ease testing and mocking.
+
+Your code may have internal hooks to facilitate testing on mock objects if needed and if this doesn't have a large impact on efficiency. However callings things like `Framework.isTestModeSet()` and having different code paths in test mode is not acceptable.
+
+## Debuggability
+
+### Logging
+
+Use logging at critical points in your code.
+- `ERROR` logs for incorrect configuration stuff, or unexpected exceptions.
+- `INFO` logs for rare diagnostics, like startup and initial configuration information.
+- `DEBUG` logs for additional light diagnostics during execution.
+- `TRACE` logs for heavy diagnostics when the expected output is more than a few lines per request.
+
+In particular, `DEBUG` logs are important when interacting with external systems.
+
+Use `if (log.isDebugEnabled())` except if the logged value is a constant string
+(we hope to improve this in the future by switching to `slf4j` for the logging facade).
+
+### Monitoring
+
+Maintain counters about important allocated resources and expose them through the standard monitoring facilities.
 
 ## Javadoc
 
-Reference: [http://www.oracle.com/technetwork/articles/java/index-137868.html](http://www.oracle.com/technetwork/articles/java/index-137868.html)
+Follow the Oracle Javadoc best practices: http://www.oracle.com/technetwork/articles/java/index-137868.html#styleguide
 
-### IDE Configuration
+In particular the first sentence of the Javadoc should be a short verb phrase, using 3rd person (_Gets the foobar_) and not 2nd person (_Get the foobar_), and end with a period.
 
-The [Code Templates and Formatter configurations](https://github.com/nuxeo/nuxeo/tree/master/tools) include some Javadoc rules.
+Also the `@param` and `@return` tags are followed by a sentence fragment which is not capitalized and not ending with a period.
+
+Add `@since` annotations on new public classes, methods or constants (and XMap annotated fields to help Studio integration). For backports of new classes/methods/constants don't change the code, keep the same `@since` annotation as on master. In test code, `@since` is not mandatory but it doesn't hurt.
+
+Do not use the `@author` tag. It is not included when generating the API specification. There's very rarely a single author for a file and the version history (`git blame`) can be used to determine the contributors.
+
+Additionally, the copyright header (not Javadoc but a simple comment) includes a dedicated zone that you can use to highlight your contribution and knowledge on a class.
 
 You should configure your IDE to raise warnings on malformed Javadoc comments and to validate tag arguments but to ignore missing Javadoc tags and comments.
 
-### First Sentence
+## Backports
 
-Write the first sentence as a concise but complete description of the API item <span style="color: rgb(44,45,48);">that can stand on its own</span>.
-<span style="color: rgb(44,45,48);">The sentence ends at the first period that is followed by a blank, a tab or a line terminator, or at the first tag</span>. So, it <span style="color: rgb(44,45,48);">should be a full sentence with a terminating period.
-The sentence should not be written in the imperative mode ("Get the foobar") but as declarative/descriptive ("Gets the foobar.").</span>
+Backports must *never change existing behavior* (except to fix bugs of course). Customers that apply hotfixes need a 100% guarantee that their code will continue to work, even if they are using uncommon or undocumented APIs.
 
-### <span style="color: rgb(44,45,48);">`@author`</span>
+## General Java Best Practices
 
-<span style="color: rgb(44,45,48);">Do not use the `@author` tag. It is not included when generating the API specification. There's very rarely a single author for a file and the version history (`git blame`) can be used for determining the contributors.</span>
+### No `finalize()` method
 
-<span style="color: rgb(44,45,48);">Additionally, the Copyright header (not Javadoc but simple comment) includes a dedicated field that you can use to highlight your contribution and knowledge on a class.
-</span>
+They have a very large impact on GC times.
+
+### Avoid using an array `[]` if a `List` can be used
+
+Lists have many more methods, and the JIT will optimize things anyway.
+
+### Use Streams if it makes the code more readable or less error-prone
+
+Intermediate loop variables or tests add complexity.
+
+### Always use explicit charsets
+
+Always use an explicit `Charset` in `byte[]` to `String` and `String` to `byte[]` conversions. This applies to code like `new String(byte[], Charset)`, `String.getBytes(Charset)`, `IOUtils.toString(InputStream, Charset)`, etc.
+
+The default charset depends on the platform, so code that uses it is not predictable.
+
+## Deprecation
+
+When changing an API, forward and backward compatibility must be maintained over multiple versions. Javadoc `@deprecated` and Java `@Deprecated` annotations must both be used.
+
+{{#> panel type='code' heading='Method deprecation'}}
+```java
+/**
+ * ...
+ * @since 8.1
+ * @deprecated since 9.10. Use {@link #newMethod()} instead.
+ */
+@Deprecated
+public void oldMethod() { }
+```
+{{/panel}}
+
+Always indicate the version since when deprecation happens. This will be used for later removal and help deprecated API users to guess the refactoring priorities.
+Point to the new API and usage.
