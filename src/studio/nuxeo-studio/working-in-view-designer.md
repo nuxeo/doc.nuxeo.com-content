@@ -18,11 +18,10 @@ Studio Designer application is integrated with Studio Modeler and brings with it
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [Video on Nuxeo Studio Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/142/nuxeo-platform-quickstart-nuxeo-studio-concepts)
-![]({{file name='university-nuxeo-studio-concepts.png' page='nxdoc/university'}} ?w=450,border=true)
+- [Course on Document type layouts](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner)
+- [Course on Searches](https://university.nuxeo.com/learn/public/course/view/elearning/134/configurating-searches-in-nuxeo-studio-modeler-designer)
+![]({{file version='' space='nxdoc' page='university' name='university-search.png'}} ?w=450,border=true)
 {{/callout}}
-
-![]({{file name='view-designer.png'}} ?w=600,border=true)
 
 Studio Designer is for everyone, whether you are a tech-savvy or not. On one hand, Studio Designer is for non-technical users: it provides an intuitive interface to build a customized application without having any developments skills. If you’re familiar with Nuxeo Studio Modeler, then the Studio Designer will be as easy to master. On the other hand, Studio Designer is also oriented toward developers because all the layouts are based upon HTML and Nuxeo Elements, so front-end developers are able to create a creative and complex layout.
 
@@ -34,13 +33,6 @@ We divided the documentation in three pages to represent the three main sections
 - The [Left menu]({{page page='left-menu'}})
 - The [Main View]({{page page='main-view'}})
 - The [Properties Catalog]({{page page='properties-catalog'}})
-
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Course on Document type layouts](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner)
-- [Course on Searches](https://university.nuxeo.com/learn/public/course/view/elearning/134/configurating-searches-in-nuxeo-studio-modeler-designer)
-![]({{file version='' space='nxdoc' page='university' name='university-search.png'}} ?w=450,border=true)
-{{/callout}}
 
 * * *
 
