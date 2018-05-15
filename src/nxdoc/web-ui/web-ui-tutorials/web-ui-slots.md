@@ -42,7 +42,13 @@ then you can easily define your own content with:
 ```
 and this content will be inserted in the DOM right before where the `nuxeo-slot` is located.
 
-You can see that `my-element` has its `my-element-property` bound to `aPropertyFromTheSlotModel` which is made available by the `nuxeo-slot` model. The `[[mySlotModel]]` is an object which has a `aPropertyFromTheSlotModel` property. Note that every slot on Web UI exposes a property named `user` by default, which contains the current user object.
+You can see that `my-element` has its `my-element-property` bound to `aPropertyFromTheSlotModel` which is made available by the `nuxeo-slot` model. The `[[mySlotModel]]` is an object which has a `aPropertyFromTheSlotModel` property.
+
+{{#> callout type='info' }}
+
+*   Note that every slot on Web UI exposes a property named `user` by default, which contains the current user object.
+
+{{/callout}}
 
 For a better understanding, please refer to the [DOCUMENT_ACTIONS](#document_actions) and where we concretely detail how additional document actions are added by the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon.
 
@@ -50,12 +56,12 @@ For a better understanding, please refer to the [DOCUMENT_ACTIONS](#document_act
 Here are the `nuxeo-slots` available in the Nuxeo Web UI.
 
 | Slot name                                                                                       | Extension purpose                               | Where                                                                 |
-|:------------------------------------------------------------------------------------------------|:------------------------------------------------|:--------------------------------------------------------------------  |
+|:------------------------------------------------------------------------------------------------|:------------------------------------------------|:----------------------------------------------------------------------|
 | [DOCUMENT_ACTIONS](#document_actions)                                                           | Additional Current document actions             | ![]({{file name='DOCUMENT_ACTIONS.png'}} ?w=100,border=true)          |
 | [DOCUMENT_VIEWS_ITEMS](#document_view_items) <br/> [DOCUMENT_VIEWS_PAGES](#document_view_items) | Additional Current document views               | ![]({{file name='DOCUMENT_VIEWS_ITEMS.png'}} ?w=100,border=true)      |
 | [BLOB_ACTIONS](#blob_actions)                                                                   | Additional Current document blobs actions       | ![]({{file name='BLOB_ACTIONS.png'}} ?w=100,border=true)              |
 | [RESULTS_SELECTION_ACTIONS](#results_selection_actions)                                         | Additional actions for selected items           | ![]({{file name='RESULTS_SELECTION_ACTIONS.png'}} ?w=100,border=true) |
-| [RESULTS_ACTIONS](#results_actions)                                                              | Additional actions/views for results            | ![]({{file name='RESULTS_ACTIONS.png'}} ?w=100,border=true)           |
+| [RESULTS_ACTIONS](#results_actions)                                                             | Additional actions/views for results            | ![]({{file name='RESULTS_ACTIONS.png'}} ?w=100,border=true)           |
 | [ADMINISTRATION_MENU](#administration_menu) <br/> [ADMINISTRATION_PAGES](#administration_menu)  | Additional Administration menu                  | ![]({{file name='ADMINISTRATION_MENU.png'}} ?w=100,border=true)       |
 | [USER_MENU](#user_menu)                                                                         | Additional User menu                            | ![]({{file name='USER_MENU.png'}} ?w=100,border=true)                 |
 | [DRAWER_PAGES](#drawer_pages) <br/> [DRAWER_ITEMS](#drawer_pages) <br/> [PAGES](#drawer_pages)  | Additional main menu items                      | ![]({{file name='DRAWER_PAGES.png'}} ?w=100,border=true)              |
@@ -165,7 +171,7 @@ This slot is available on a current document that has attached blobs. Default ac
 |:-----------|:-----------------------------------------------------------------------------------------------------------------------------------|
 | `document` | The current document.                                                                                                              |
 | `blob`     | The blob description (i.e. `{name: "nuxeo_fact sheet_0.1.png", mime-type: "image/png", encoding: null, digestAlgorithm: "MD5",…}`) |
-| `user`     | The current user                                                                                                           |
+| `user`     | The current user                                                                                                                   |
 | `xpath`    | The blob property xpath                                                                                                            |
 
 #### RESULTS_SELECTION_ACTIONS {{> anchor 'results_selection_actions'}}
@@ -182,11 +188,15 @@ This slot is displayed when selecting one or more children documents of a folder
 
 **Slot Model Properties**
 
-| Property        | Description                                   |
-|:----------------|:----------------------------------------------|
-| `displayMode`   | The current display mode (e.g., grid, table)  |
-| `selectedItems` | Array of selected  documents.                 |
-| `columns`       | Array with the available table columns        |
+| Property        | Description                                  |
+|:----------------|:---------------------------------------------|
+| `baseUrl`       | The base URL of the Nuxeo server             |
+| `nxProvider`    | The name of the page provider                |
+| `displayMode`   | The current display mode (e.g., grid, table) |
+| `selectedItems` | Array of selected documents.                 |
+| `items`         | Array of all loaded documents.               |
+| `columns`       | Array with the available table columns       |
+| `document`      | The current document                         |
 
 #### RESULTS_ACTIONS {{> anchor 'results_actions'}}
 
@@ -202,11 +212,15 @@ This slot allows to provide additional action buttons on folderish documents or 
 
 **Slot Model Properties**
 
-| Property        | Description                                   |
-|:----------------|:----------------------------------------------|
-| `displayMode`   | The current display mode (e.g., grid, table)  |
-| `selectedItems` | Array of selected  documents.                 |
-| `columns`       | Array with the available table columns        |
+| Property        | Description                                                                                                              |
+|:----------------|:-------------------------------------------------------------------------------------------------------------------------|
+| `baseUrl`       | The base URL of the Nuxeo server.                                                                                        |
+| `nxProvider`    | The name of the page provider.                                                                                           |
+| `displayMode`   | The current display mode (e.g., grid, table).                                                                            |
+| `selectedItems` | Array of selected documents.                                                                                             |
+| `items`         | Array of displayed documents, selected or not. (Note: more documents could be loaded if you keep scrolling for results). |
+| `columns`       | Array with the available table columns.                                                                                  |
+| `document`      | The current document.                                                                                                    |
 
 ### Main Application Menu Slots
 
@@ -220,10 +234,15 @@ The `ADMINISTRATION_MENU` and `ADMINISTRATION_PAGES` slot allow you to add addit
 
 **Slot Model Properties**
 
-| Property      | Description           |
-|:--------------|:----------------------|
-| `document`    | The current document. |
-| `currentUser` | The current user.     |
+| Property            | Description                                              |
+|:--------------------|:---------------------------------------------------------|
+| `document`          | The current document.                                    |
+| `tasks`             | Pending tasks assigned to the current user.              |
+| `taskCount`         | Number of pending tasks assigned to the current user.    |
+| `currentTask`       | Current task being processed by the current user if any. |
+| `clipboardDocCount` | Number of documents in the clipboard.                    |
+| `clipboard`         | The clipboard element.                                   |
+| `userWorkspace`     | The user workspace path.                                 |
 
 #### USER_MENU{{> anchor 'user_menu'}}
 
@@ -257,10 +276,15 @@ which will be inserted in [nuxeo-app.html](https://github.com/nuxeo/nuxeo-web-ui
 
 **Slot Model Properties**
 
-| Property      | Description           |
-|:--------------|:----------------------|
-| `document`    | The current document. |
-| `currentUser` | The current user.     |
+| Property            | Description                                              |
+|:--------------------|:---------------------------------------------------------|
+| `document`          | The current document.                                    |
+| `tasks`             | Pending tasks assigned to the current user.              |
+| `taskCount`         | Number of pending tasks assigned to the current user.    |
+| `currentTask`       | Current task being processed by the current user if any. |
+| `clipboardDocCount` | Number of documents in the clipboard.                    |
+| `clipboard`         | The clipboard element.                                   |
+| `userWorkspace`     | The user workspace path.                                 |
 
 #### DRAWER_PAGES and PAGES {{> anchor 'drawer_pages'}}
 
@@ -270,10 +294,15 @@ The `DRAWER_PAGES` allows you to add new items to the main left drawer menu (see
 
 **Slot Model Properties**
 
-| Property      | Description           |
-|:--------------|:----------------------|
-| `document`    | The current document. |
-| `currentUser` | The current user.     |
+| Property            | Description                                              |
+|:--------------------|:---------------------------------------------------------|
+| `document`          | The current document.                                    |
+| `tasks`             | Pending tasks assigned to the current user.              |
+| `taskCount`         | Number of pending tasks assigned to the current user.    |
+| `currentTask`       | Current task being processed by the current user if any. |
+| `clipboardDocCount` | Number of documents in the clipboard.                    |
+| `clipboard`         | The clipboard element.                                   |
+| `userWorkspace`     | The user workspace path.                                 |
 
 ### Document Creation
 
@@ -287,7 +316,7 @@ This slot displays actions when hovering over the bottom right **Floating Action
 
 | Property      | Description                                                              |
 |:--------------|:-------------------------------------------------------------------------|
-| `hostVisible` | Boolean which is true if hovering over the FAB.                             |
+| `hostVisible` | Boolean which is true if hovering over the FAB.                          |
 | `subtypes`    | Array of the document types that can be created in the current location. |
 
 #### CREATE_POPUP_ITEMS and CREATE_POPUP_PAGES{{> anchor 'create_popup_items'}}
@@ -299,9 +328,10 @@ The **CREATE_POPUP_ITEMS** slot allows you to define the additional items on the
 The **CREATE_POPUP_PAGES** slot must define the pages introduced by the **CREATE_POPUP_ITEMS** slot.
 Each new item of **CREATE_POPUP_ITEMS** slot triggers a navigation to a page defined in this slot.
 
-| Property        | Description                                                                                                                    |
-|:----------------|:-------------------------------------------------------------------------------------------------------------------------------|
-| `parent`        | The document that was opened when the pop-up was triggered or the folderish document where it is contained.                         |
+| Property | Description                                                                                                 |
+|:---------|:------------------------------------------------------------------------------------------------------------|
+| `parent` | The document that was opened when the pop-up was triggered or the folderish document where it is contained. |
+| `i18n`   | The i18n function helper to localize labels.                                                                |
 
 #### FILE_UPLOAD_ACTIONS{{> anchor 'file_upload_actions'}}
 
@@ -325,7 +355,7 @@ The screen to browse Search results and Collection contents are very similar. Wh
 
 | Property        | Description                                                                                                                    |
 |:----------------|:-------------------------------------------------------------------------------------------------------------------------------|
-| `collection`    | The current document, corresponding to the current opened collection                                                          |
+| `collection`    | The current document, corresponding to the current opened collection                                                           |
 | `items`         | Array of displayed collection members, selected or not. (Note: more members could be loaded if you keep scrolling for results) |
 | `selectedItems` | Array of selected collection members.                                                                                          |
 
