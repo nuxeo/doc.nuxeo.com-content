@@ -210,13 +210,6 @@ history:
 
 ---
 
-
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Course on Automation chains, Automation scripting and Events](https://university.nuxeo.com/learn/public/course/view/elearning/46/automation-chains-automation-scripting-and-events)
-![]({{file name='university-automation.png' page='nxdoc/university'}} ?w=450,border=true)
-{{/callout}}
-
 {{! excerpt}}
 
 Automation Scripting is a Nuxeo module which provides ability to create and contribute Automation chain/operation in JavaScript.
@@ -228,6 +221,12 @@ This enables you to benefit from:
 *   Loops
 *   Conditions
 *   Smooth Automation implementation maintenance
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Course on Automation chains, Automation scripting and Events](https://university.nuxeo.com/learn/public/course/view/elearning/46/automation-chains-automation-scripting-and-events)
+![]({{file name='university-automation.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
 
 ## Requirements
 
