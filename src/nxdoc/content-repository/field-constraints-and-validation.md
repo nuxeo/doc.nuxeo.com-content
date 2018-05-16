@@ -496,7 +496,7 @@ Parameters:
 
 *   `Minimum`: The start date of the time range, if specified.
 *   `MinimumInclusive`: `true` if the start date is included, `false` otherwise.
-*   `Maximum`: The start date of the time range, if specified.
+*   `Maximum`: The end date of the time range, if specified.
 *   `MaximumInclusive`: `true` if end date is included, `false` otherwise.
 
 Availability: Any XSD simple type derived from datatype `xsd:date` (or alternatives like `xsd:dateTime`).
