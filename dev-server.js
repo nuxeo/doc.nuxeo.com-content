@@ -117,7 +117,7 @@ sync.init({
         {
             match: [
                 path.join(__dirname, 'src', '**', '*'),
-                path.join(__dirname, 'assets', '**', '*'),
+                // path.join(__dirname, 'assets', '**', '*'),
                 path.join(__dirname, 'config.yml')
             ],
             fn: function (event, file) {
