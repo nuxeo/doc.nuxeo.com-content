@@ -2,7 +2,7 @@
 title: Redis Configuration
 review:
     comment: ''
-    date: '2018-05-08'
+    date: '2017-12-13'
     status: ok
 labels:
     - lts2016-ok
