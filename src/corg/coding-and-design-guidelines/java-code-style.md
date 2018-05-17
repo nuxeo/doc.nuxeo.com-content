@@ -187,7 +187,7 @@ In particular the first sentence of the Javadoc should be a short verb phrase, u
 
 Also the `@param` and `@return` tags are followed by a sentence fragment which is not capitalized and not ending with a period.
 
-Add `@since` annotations on new public classes, methods or constants (and XMap annotated fields to help Studio integration). For backports of new classes/methods/constants don't change the code, keep the same `@since` annotation as on master. In test code, `@since` is not mandatory but it doesn't hurt.
+Add `@since` annotations on new public classes, methods or constants.
 
 Do not use the `@author` tag. It is not included when generating the API specification. There's very rarely a single author for a file and the version history (`git blame`) can be used to determine the contributors.
 
@@ -195,9 +195,15 @@ Additionally, the copyright header (not Javadoc but a simple comment) includes a
 
 You should configure your IDE to raise warnings on malformed Javadoc comments and to validate tag arguments but to ignore missing Javadoc tags and comments.
 
-## Backports
+### FAQ about `@since` in Javadoc
 
-Backports must *never change existing behavior* (except to fix bugs of course). Customers that apply hotfixes need a 100% guarantee that their code will continue to work, even if they are using uncommon or undocumented APIs.
+**Q**: I'm backporting a new API from 10.2 to the 9.10 maintenance branch, should I put `@since 10.2` or `@since 9.10-HF08`?
+
+**A**: Use `@since 10.2`, otherwise backports are a pain when cherry-picking. JIRA _fix version_ is the reference to understand why a `@since 10.2` is visible on a 9.10 maintenance branch.
+
+**Q**: When should I add `@since` in other places besides new classes and methods?
+
+**A**: Wherever it helps. Marking fields or static constants is sometimes useful, especially XMap descriptor fields, event names, or other well-known public values (configuration parameters, options, etc.). And please think of your fellow Studio developers who will need to easily know what is accepted for a given target platform version.
 
 ## General Java Best Practices
 
