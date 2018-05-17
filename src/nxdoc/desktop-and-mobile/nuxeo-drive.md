@@ -1008,4 +1008,4 @@ To revoke an authentication token:
 
 ## Customization
 
-You can override classes to implement your own Nuxeo Drive following the [developper guide](https://github.com/nuxeo/nuxeo-drive/blob/master/DEVELOPERS.md).
+You can override classes to implement your own Nuxeo Drive following the [developer guide](https://github.com/nuxeo/nuxeo-drive/blob/master/DEVELOPERS.md).
