@@ -209,6 +209,23 @@ At 3:15a, every 5 days every month, starting on the first day of the month:
 0 15 3 1/5 * ?
 ```
 
+## Scheduler and Events
+
+In order to run the scheduler, you need to register a new event into the **Core Event Registry**.
+Navigate to **Settings** > **Registries** > **Core Events** and add the event you've created in the <*eventId*> tag.
+
+```
+{
+  "events": {
+    "doStuff": "My scheduler event"
+  }
+}
+```
+
+Finally, create a new event handler from **Configuration** > **Automation** > **Event Handlers** and activate the event you've just created:
+
+![]({{file page='nxdoc/scheduling-periodic-events' name='event-handler-scheduler.png'}} ?w=650,border=true)
+
 ## Automation
 
 When using the Scheduler Service to trigger [Automation Chains]({{page page='content-automation-concepts'}}) through [Event Listener]({{page page='events-and-listeners'}}) and [Event Handler]({{page space='studio' page='event-handlers'}}), the Core Session cannot be retrieved and cannot be set within the Operation Context _(Core Session is not found)_.
