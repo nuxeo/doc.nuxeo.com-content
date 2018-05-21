@@ -2,7 +2,7 @@
 title: LDAP and Active Directory
 review:
     comment: ''
-    date: '2018-05-07'
+    date: '2017-01-06'
     status: ok
 labels:
     - lts2016-ok
@@ -273,14 +273,14 @@ By default, the platform's administrator is the principal "Administrator". On th
 You can also choose a group from your company's directory instead of using the default "administrators" group, to determine the users who will benefit from all the rights in the platform. This is done using the `administratorsGroup` element.
 
 There are 2 ways to configure your LDAP config:
-    *   Defining all OOTB LDAP variables in `nuxeo.conf`
+    *   Defining all out-of-the-box LDAP variables in `nuxeo.conf`
     *   Contributing the whole XML config file
 
-The first approach allows you to simply reuse the default LDAP configuration template [here](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common/config/default-ldap-users-directory-bundle.xml.nxftl) by providing values for each variable defined in this template. The advantage of that solution is you don't have to deal with future upgrades config changes as you simply define variables in `nuxeo.conf`. If changes may be required then the template will be automatically updated in the future upgrades.
+The first approach allows you to simply reuse the default LDAP configuration template [here](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common/config/default-ldap-users-directory-bundle.xml.nxftl) by providing values for each variable defined in this template. The advantage of that solution is you don't have to deal with future upgrades config changes as you simply define variables in `nuxeo.conf`. If changes are required then the template will be automatically updated at the future upgrades.
 
-If you need to add other custom setting where the template doesn't define any variable for that config then the second option would be better. You will have to maintain this config file for future nuxeo upgrades.
+If you need to add other custom setting where the template doesn't define any variable for that config then the second option would be better. You will have to maintain this config file for future Nuxeo upgrades.
 
-## Simple configuration Example for LDAP (using `nuxeo.conf`)
+## Simple configuration Example Using `nuxeo.conf` (Recommended)
 
 Here is the list of variables to define in `nuxeo.conf` to enable your LDAP integration:
 See XML config example below to get values examples.
@@ -324,10 +324,10 @@ nuxeo.user.emergency.firstname=
 nuxeo.user.emergency.lastname=
 ```
 
-## Simple Configuration Example (using XML config)
+## Simple Configuration Example Using XML config
 
 1.  Create a file called `default-ldap-users-directory-config.xml` in your config directory:
-    *   `nxserver/config/`
+    - `nxserver/config/`
 
 2.  Then copy this content (make sure it's valid XML, sometimes what you think is a space character is actually a non-breaking space (`U+00A0`) which is invalid in XML):
 
