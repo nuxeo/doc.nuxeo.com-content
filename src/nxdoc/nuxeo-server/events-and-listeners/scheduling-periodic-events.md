@@ -211,17 +211,17 @@ At 3:15a, every 5 days every month, starting on the first day of the month:
 
 ## Scheduler and Events
 
-In order to run the scheduler, you need to register a new event into the *Core Event Registry*. Navigate to *Settings* > *Registries* > *Core Events* and add the event you've created in the *<eventId>* tag.
+In order to run the scheduler, you need to register a new event into the **Core Event Registry**. Navigate to **Settings** > **Registries** > **Core Events** and add the event you've created in the `<eventId>` tag.
 
 ```
 {
   "events": {
-    "doStuff": "My scheduler event",
+    "doStuff": "My scheduler event"
   }
 }
 ```
 
-Finally, create a new event handler from *Configuration* > *Automation* > *Event Handlers* and activate the event you've just created :
+Finally, create a new event handler from **Configuration** > **Automation** > **Event Handlers** and activate the event you've just created:
 
 ![]({{file name='event-handler-scheduler.png'}} ?w=650,border=true)
 
