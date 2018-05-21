@@ -2,7 +2,7 @@
 title: CMIS
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2018-05-21'
     status: ok
 labels:
     - lts2016-ok
@@ -704,13 +704,84 @@ In addition to the system properties defined in the CMIS specification under the
 
 All these properties can be used as regular CMIS properties and in a CMISQL query (in a `SELECT`, `WHERE` or `ORDER BY` clause where relevant), except for `nuxeo:contentStreamDigest` which can only be read in query results or by introspecting the properties of the `ObjectData` representation of a document.
 
-## Resources
+## Use Cases
 
-### Use Case Video
+### Document Capture integration with Ephesoft
 
-Watch this 15 min video presenting a case-processing application leveraging CMIS.
+Ephesoft is an advanced document capture and data extraction solution to help businesses run more efficiently. It automatically classifies and extracts data from any type of document. Ephesoft has an CMIS interface, which ease the integration with Nuxeo. In this case, Ephesoft contains a plugin which makes the integration simple and fast, based exclusively on configuration.
+
+Ephesoft has an CMIS import and CMIS export plugin so that it can ingest documents stored in Nuxeo to extract information, and send back the extraction results to Nuxeo.
+
+#### CMIS Import
+
+Ephesoft monitors a specified folder for a new file (as a hot folder) using a cron job, and process any new document in an Ephesoft batch. Ephesoft uses a "technical" Nuxeo property to tag the document as processed, in order not to process twice the same document (for example, a custom property called `invoice:status` passes from `To process` to `Processed`).
+
+![]({{file name='ephesoft_cmis_import.png'}} ?w=600,border=true)
+
+In this illustration :
+
+| Parameter | Value | Description |
+| --- | --- |
+| Server URL | `http://localhost:8080/nuxeo/atom/cmis` | Nuxeo CMIS URL |
+| Username | `ephesoft` | Username of the technical account to create a connexion between Nuxeo and Ephesoft. This user needs *WRITE* permission on the documents |
+| Password | `mySecretPassword` | Password of the technical account |
+| Repository Id | `default` | Generally `default`. You can read it from the downloaded file when you enter in a web browser the CMIS Server URL |
+| File Extension | `pdf;tif` | Cannot be changed |
+| Folder | `default/domain/workspaces/folder1` | Folder path of the hot folder. The initial `/` *shouldn't be written* |
+| Property | `invoice:status` | Property used by Ephesoft to check which document has been processed |
+| Value | `To process` | Each document with `invoice:status=To Process` will be sent to Ephesoft |
+| New Value | `Processed` | When Ephesoft processes a document, Ephesoft will update the `invoice:status` to `Processed` |
+| CMIS Version | `1.1` | Value of the CMIS implementation |
+| enabled | `true` | To activate the CMIS Import |
+
+{{#> callout type='info' }}
+
+Don't forget to activate the CMIS import by uncommenting the `<import resource="classpath:/META-INF/applicationContext-dcma-mail-import.xml" />` line of the `applicationContext.xml` file as the CMIS import is disabled by default
+
+{{/callout}}
+
+{{#> callout type='warning' }}
+
+With the standard CMIS import addon, you can't keep the original Nuxeo property values from the input to the output. One possible walkaround is to check if the binary you're processing has any file property (contained for example in the EXIF or IPTC format) which you can use to perform a synchronisation process. The best practice is to use the CMIS REST API instead of the CMIS Import addon to get more flexibility.
+
+{{/callout}}
+
+#### CMIS Export
+
+When a document is processed in Ephesoft, it means the platform has classified and extracted the information from the document. Instead of exporting the binary files in a filesystem folder, along with its XML document (corresponding to the field properties), you can export them into Nuxeo with the CMIS export addon. The configuration is quite easy:
+
+1. Activate the CMIS Export in you Ephesoft batch class modules
+2. Map the Ephesoft property fields with the Nuxeo property fields in the `DLF-attributes-mapping.properties`
+
+```
+invoice=Invoice
+invoice.number=invoice:number
+invoice.details=dc:description
+...
+```
+
+3. Configure the CMIS export properties:
+
+![]({{file name='ephesoft_cmis_export.png'}} ?w=600,border=true)
+
+Here is the list of the most important properties:
+
+| Parameter | Value | Description |
+| --- | --- |
+| Cmis Root Folder Name | `default-domain/workspaces/invoices_processed` | Nuxeo Folder where Ephesoft exports the documents and its properties. The initial `/` *shouldn't be written*  |
+| Cmis Upload File Extension | `tif` | It can be either `tif` or `pdf` |
+| Cmis Server URL | `http://localhost:8080/nuxeo/atom/cmis` | Nuxeo CMIS URL |
+| Cmis Server User Name | `ephesoft` | Username of the technical account to create a connexion between Nuxeo and Ephesoft. This user needs *WRITE* permission on the Cmis Root Folder Name` to upload documents |
+| Cmis Server Switch ON/OFF | `ON` | If set to OFF, the CMIS export is disabled |
+| CMIS Export File Name | `$BATCH_IDENTIFIER & _ & $DOCUMENT_ID` | `dc:title` value of the exported document. Any extracted information from the document can be reused with the `$` character |
+
+### Custom CMIS integration
+
+Watch this 15 min video presenting a custom case-processing application, started from scratch, leveraging CMIS.
 
 {{> wistia_video id='rzvybdq540'}}
+
+## Resources
 
 ### Source Code
 
@@ -731,3 +802,4 @@ Watch this 15 min video presenting a case-processing application leveraging CMIS
 *   [CMIS: A Tale of Versioning](http://www.nuxeo.com/blog/cmis-tale-versioning/)
 *   [Direct Document Capture in Nuxeo Using Ephesoft and CMIS](http://www.nuxeo.com/blog/direct-document-capture-nuxeo-using-ephesoft-cmis/)
 *   [Complex Types, Multiple Streams and Renditions in CMIS!](http://www.nuxeo.com/blog/complex-types-multiple-streams-renditions-cmis/)
+*   [Direct Document Capture in Nuxeo Using Ephesoft and CMIS](https://www.nuxeo.com/blog/direct-document-capture-nuxeo-using-ephesoft-cmis/)
