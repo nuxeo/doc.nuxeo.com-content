@@ -1,5 +1,5 @@
 ---
-title: Request Authentication
+title: Authentication
 review:
     comment: ''
     date: '2017-01-11'
@@ -23,7 +23,7 @@ confluence:
     shortlink: 3YcZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/3YcZAQ'
     source_link: /display/NXDOC/Authenticating+the+Requests
-tree_item_index: 700
+tree_item_index: 100
 history:
     -
         author: Solen Guitter

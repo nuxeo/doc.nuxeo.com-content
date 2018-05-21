@@ -22,7 +22,7 @@ confluence:
     shortlink: vIvZ
     shortlink_source: 'https://doc.nuxeo.com/x/vIvZ'
     source_link: /pages/viewpage.action?pageId=14257084
-tree_item_index: 800
+tree_item_index: 600
 history:
     -
         author: Frantz Fischer

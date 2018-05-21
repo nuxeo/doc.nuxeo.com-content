@@ -23,7 +23,7 @@ confluence:
     shortlink: mwM5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/mwM5AQ'
     source_link: /display/NXDOC/Special+HTTP+Headers
-tree_item_index: 300
+tree_item_index: 200
 history:
     -
         author: Thierry Martins

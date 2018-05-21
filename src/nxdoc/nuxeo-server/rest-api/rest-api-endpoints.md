@@ -1,5 +1,5 @@
 ---
-title: REST API Endpoints
+title: Endpoints
 review:
     comment: ''
     date: '2018-01-15'
@@ -11,7 +11,7 @@ labels:
     - endpoint
     - lts2017-ok
 toc: true
-tree_item_index: 100
+tree_item_index: 400
 
 ---
 

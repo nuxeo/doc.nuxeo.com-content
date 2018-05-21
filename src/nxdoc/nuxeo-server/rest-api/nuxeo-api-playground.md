@@ -31,7 +31,7 @@ confluence:
     shortlink: 9QUuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/9QUuAQ'
     source_link: /display/NXDOC/Use+Nuxeo+API+Playground+to+Discover+the+API
-tree_item_index: 750
+tree_item_index: 700
 history:
     -
         author: Solen Guitter

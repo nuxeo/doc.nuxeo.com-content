@@ -1,5 +1,5 @@
 ---
-title: REST API Entity Types
+title: Entity Types
 review:
     comment: ''
     date: '2018-01-15'
@@ -24,7 +24,7 @@ confluence:
     shortlink: '-gEuAQ'
     shortlink_source: 'https://doc.nuxeo.com/x/-gEuAQ'
     source_link: /display/NXDOC/REST+API+Entity+Types
-tree_item_index: 200
+tree_item_index: 300
 history:
     -
         author: Bertrand Chauvin
