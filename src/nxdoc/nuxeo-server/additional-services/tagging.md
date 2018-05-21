@@ -116,7 +116,7 @@ history:
         version: '1'
 
 ---
-The tags are either categorizing the content of the document (labels like "document management", "ECM", "complex Web application", etc., can be thought as tags for Nuxeo), or they reflect the user feeling ("great", "user friendly", "versatile", etc.).
+The tags are either categorizing the content of the document (labels like "document_management", "ECM", "complex_Web_application", etc., can be thought as tags for Nuxeo), or they reflect the user feeling ("great", "user_friendly", "versatile", etc.).
 
 {{! excerpt}}
 
@@ -124,7 +124,14 @@ The tag service uses a [facet]({{page page='available-facets'}}) to represent ta
 
 {{! /excerpt}}
 
-A tag holds a label that does not contain any space ("documentmanagement", "webapplication", etc.). A tagging action is a link between a given document and a tag, and belongs to a given user.
+A tagging action is a link between a given document and a tag, and belongs to a given user.
+A tag holds a label that does not contain:
+- any space
+- slash
+- backslash
+- percent
+- quote
+Characters will be removed by service.
 
 ## Functional Overview
 
