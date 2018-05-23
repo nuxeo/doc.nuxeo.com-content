@@ -82,25 +82,25 @@ history:
 ---
 ## Functional Overview
 
-The File System Exporter package is an add-on for the Nuxeo platform to enable users exporting one chosen root structure of documents from their Nuxeo Platform to a specified File System repository.
+The File System Exporter package is an add-on for the Nuxeo platform to enable users exporting one chosen root structure of documents from their Nuxeo Platform to a specified File System directory.
 
 The installation of the plugin will add a new operation in "Services" called "ExportStructureToFS". This operation must be added to the registries in Studio and then can be used in an automation chain.
 
-In the user interface, users will now see an new action button that will enable them to export the structure with the following parameters defined in Studio:
+In the user interface, users will now see a new action button that allows them to export the structure with the following parameters defined in Studio:
 
 *   Root Path = `/default-domain/`
 *   File System target = `/tmp`
 
 ![]({{file name='Screen Shot 2015-11-18 at 14.27.50.png'}} ?w=650,border=true)
 
-After clicking on the export action, connected user has now access to the entire structure directly on his tmp folder.
+After clicking on the export action, a connected user has now access to the entire structure directly on his tmp folder.
 
 ![]({{file name='Screen Shot 2015-11-18 at 14.29.55.png'}} ?w=650,border=true)
 
 The following rules are implemented by default:
 
-*   All the document are exported&nbsp;
-*   When a document exported already exists in your File System directory, it will be prefixed with a timestamp. In this way, no document will be deleted&nbsp;
+*   All the documents are exported&nbsp;
+*   When an exported document already exists in your File System directory, it will be prefixed with a timestamp. In this way, no document will be deleted&nbsp;
 *   The attached files to a document are exported in the same directory than the document. They are prefixed with the name of the document parent.
 
 ## Installation
@@ -165,7 +165,7 @@ This operation can be called in an automation chain called &ldquo;ExportFS&rdquo
 This operation has the following parameters:
 
 *   **File System Target**: where the export will be done on the File System
-*   **Root&nbsp;** **Path**: the root name of the structure of Nuxeo Platform that will be exported.
+*   **Root&nbsp;** **Path**: the path of the top document in the hierarchy to be exported.
 *   **Query**: optional parameter. By default the query called by the exporter is:
 
     ```sql
@@ -174,7 +174,7 @@ This operation has the following parameters:
 
     You can define your own query and put it the in the Query parameter.
 
-For example if you want to export all the documents even the ones in &ldquo;deleted&rdquo; state you can define this query in the field of the query parameter.
+For example if you want to export all the documents even the ones in &ldquo;deleted&rdquo; state you can define this query in the field of the `Query` parameter.
 
 ```sql
 SELECT * FROM Document WHERE ecm:mixinType !='HiddenInNavigation' AND ecm:isVersion = 0
@@ -188,9 +188,9 @@ If you want to go further you can decide to contribute to the extension point &l
 *   Override existing documents (not using the timestamp prefix anymore)
 *   Create an XML export of each document (done as an example)&nbsp;
 
-The following contribution has already been written:&nbsp;`CustomExporterPlugin`. It launches the default export (export all the documents under root path) and in addition, for each document exported, creates the XML version.
+The following contribution has already been written:&nbsp;`CustomExporterPlugin`. It launches the default export (export all the documents under root path) and in addition, for each exported document, creates the XML version.
 
-You can use it with using the following XML extension in Studio : &nbsp;
+You can use it with the following XML extension in Studio : &nbsp;
 
 ```
 <extension
