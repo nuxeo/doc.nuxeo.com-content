@@ -69,24 +69,24 @@ history:
         version: '1'
 
 ---
-The Nuxeo platform exposes a huge and diversified API which must be kept stable, properly maintained and bug-free, including documentation. The following are some required coding style rules about code and Javadoc.
+The Nuxeo Platform exposes a huge and diversified API which must be kept stable, properly maintained and bug-free, including documentation. The following are some required coding style rules about code and Javadoc.
 
 ## Formatting
 
-### No tabs, no trailing spaces
+### No Tabs, No Trailing Spaces
 
 This avoids changes in diffs when invisible characters change. In Eclipse, you can install the Marketplace package _AnyEdit Tools_ which has tab-related options.
 
-### Indent and format according to our formal rules
+### Indent and Format According to Our Formal Rules
 
 The format rules are the [Eclipse formatting configuration](https://github.com/nuxeo/nuxeo/blob/master/tools/nuxeo_formatter.xml).
 See [Code Templates and Formatter configurations](https://github.com/nuxeo/nuxeo/tree/master/tools) for more.
 
-This applies also to organizing imports.
+This also applies to organizing imports.
 
-This allows for the same automatic formatting for everyone, to avoid gratuitous reformattings every time someone commits.
+It allows the same automatic formatting for everyone, to avoid gratuitous reformattings every time someone commits.
 
-### No automatic formatting on save
+### No Automatic Formatting on Save
 
 This avoids mixing cleanups with other code changes.
 
@@ -94,55 +94,55 @@ The only allowed exception is for trailing whitespaces, which _may_ be automatic
 
 ## Readability
 
-### The code must be clear, and commented to explain _why_ it does things
+### The Code Must Be Clear, and Commented to Explain _why_ It Does Things
 
-_What_ the code does should be self-explanatory through proper code organization, method/field/variable naming, etc. A comment with summary of _what_ some code does can still be useful before a code block.
+_What_ the code does should be self-explanatory through proper code organization, method/field/variable naming, etc. A comment with a summary of _what_ some code does can still be useful before a code block.
 
-### No wildcard imports
+### No Wildcard Imports
 
-They make searches more difficult, make actual packages difficult to discover for readers outside an IDE, and can cause problem when imported packages have new classes added that are also in another wildcard import.
+They make searches more difficult, make actual packages difficult to discover for readers outside an IDE, and can cause a problem when imported packages have new classes added that are also in another wildcard import.
 
-### Use static imports for common, well-known things
+### Use Static Imports for Common, Well-Known Things
 
-Some common constants or static methods have names that are unique enough, so that it's worth having shorter code when they're used:
+Some common constants or static methods have names that are unique enough so that it's worth having a shorter code when they're used:
 - `Boolean.TRUE`, `Boolean.FALSE`
 - `StandardCharsets.UTF_8`
 - `Collections` static methods (`emptyList`, `singletonList`, etc.)
 - `Collectors` static methods (`toList`, `toMap`, `groupingBy`, etc.)
 
-### No `final` method parameters or local variables
+### No `final` Method Parameters or Local Variables
 
 They are eyesores for readers, don't bring much safety if the code is already clear enough, and IDEs often provide enough warnings.
 
-### You can reassign method parameters
+### You Can Reassign Method Parameters
 
-It's ok to reassign a method parameter (to "normalize" it on method entry for instance) if it makes the code more readable. Some style guides disallow updating parameters but that's overly strict.
+It's ok to reassign a method parameter (to "normalize" it on method entry for instance) if it makes the code more readable. Some style guides disallow updating parameters, but that's overly strict.
 
 ### Use `i++`
 
-Our standard is `i++` (not `++i`) for simple increments. This does not apply when the increment is inside another expression, because obviously the semantics are then different.
+Our standard is `i++` (not `++i`) for simple increments. This does not apply when the increment is inside another expression, because the semantics are then different.
 
-### Use all-caps for `static final` fields
+### Use All-Caps for `static final` Fields
 
-These fields are constants and their use should be immediately identifiable as such.
+These fields are constants, and their use should be immediately identifiable as such.
 
 ## Maintainability
 
-### Always use braces
+### Always Use Braces
 
 Always use `{` `}` and a separate line for `if`/`else` blocks. This avoids hard-to-find bugs and is our formatting style.
 
-### Use `Objects.requireNonNull` for `null` checks
+### Use `Objects.requireNonNull` For `null` Checks
 
 It's better to use this standard method than having custom code. Use a message specific to the checked code.
 
-### No final methods or classes
+### No Final Methods or Classes
 
 This hinders reusability. Nuxeo is a platform and we never know when it'll be useful to subclass something.
 
-This rule, and the one below about `private`, does not apply to private projects that are not part of the Nuxeo Platform (like Nuxeo Studio and Nuxeo Connect) where `private` helps with cleanups and there is no third-party compatibility or subclassing issue.
+This rule and the one below about `private` does not apply to private projects that are not part of the Nuxeo Platform (like Nuxeo Studio and Nuxeo Connect) where `private` help with cleanups and there is no third-party compatibility or subclassing issue.
 
-### No `private` or package-private methods or fields.
+### No `private` or Package-Private Methods or Fields.
 
 This hinders reusability, for the same reason as above.
 
@@ -150,15 +150,15 @@ Two exceptions are `log` and `serialVersionUID` which must be `private` because 
 
 ## Testability
 
-### Always write unit tests
+### Always Write Unit Tests
 
 Tests help for development (TDD), and for non-regression.
 
-### Structure code for testing
+### Structure Code for Testing
 
 Don't hesitate to layer your code between different levels of complexity and have internal SPIs to ease testing and mocking.
 
-Your code may have internal hooks to facilitate testing on mock objects if needed and if this doesn't have a large impact on efficiency. However callings things like `Framework.isTestModeSet()` and having different code paths in test mode is not acceptable.
+Your code may have internal hooks to facilitate testing on mock objects if needed and if this doesn't have a significant impact on efficiency. However callings things like `Framework.isTestModeSet()` and having different code paths in test mode is not acceptable.
 
 ## Debuggability
 
@@ -170,7 +170,7 @@ Use logging at critical points in your code.
 - `DEBUG` logs for additional light diagnostics during execution.
 - `TRACE` logs for heavy diagnostics when the expected output is more than a few lines per request.
 
-In particular, `DEBUG` logs are important when interacting with external systems.
+In particular, `DEBUG` logs are essential when interacting with external systems.
 
 Use `if (log.isDebugEnabled())` except if the logged value is a constant string
 (we hope to improve this in the future by switching to `slf4j` for the logging facade).
@@ -195,7 +195,7 @@ Additionally, the copyright header (not Javadoc but a simple comment) includes a
 
 You should configure your IDE to raise warnings on malformed Javadoc comments and to validate tag arguments but to ignore missing Javadoc tags and comments.
 
-### FAQ about `@since` in Javadoc
+### FAQ About `@since` in Javadoc
 
 **Q**: I'm backporting a new API from 10.2 to the 9.10 maintenance branch, should I put `@since 10.2` or `@since 9.10-HF08`?
 
@@ -203,23 +203,23 @@ You should configure your IDE to raise warnings on malformed Javadoc comments an
 
 **Q**: When should I add `@since` in other places besides new classes and methods?
 
-**A**: Wherever it helps. Marking fields or static constants is sometimes useful, especially XMap descriptor fields, event names, or other well-known public values (configuration parameters, options, etc.). And please think of your fellow Studio developers who will need to easily know what is accepted for a given target platform version.
+**A**: Wherever it helps. Marking fields or static constants is sometimes useful, especially XMap descriptor fields, event names, or other well-known public values (configuration parameters, options, etc.). And please think of your fellow Studio developers who will need to easily know what is acceptable for a given target platform version.
 
 ## General Java Best Practices
 
-### No `finalize()` method
+### No `finalize()` Method
 
-They have a very large impact on GC times.
+They have a huge impact on GC times.
 
-### Avoid using an array `[]` if a `List` can be used
+### Avoid Using an Array `[]` If a `List` Can Be Used
 
 Lists have many more methods, and the JIT will optimize things anyway.
 
-### Use Streams if it makes the code more readable or less error-prone
+### Use Streams If It Makes the Code More Readable or Less Error-Prone
 
 Intermediate loop variables or tests add complexity.
 
-### Always use explicit charsets
+### Always Use Explicit Charsets
 
 Always use an explicit `Charset` in `byte[]` to `String` and `String` to `byte[]` conversions. This applies to code like `new String(byte[], Charset)`, `String.getBytes(Charset)`, `IOUtils.toString(InputStream, Charset)`, etc.
 
