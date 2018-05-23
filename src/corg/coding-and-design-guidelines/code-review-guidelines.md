@@ -20,7 +20,7 @@ Important coding standards are described in the [Java Code Style]({{page page='j
 The code must be designed for easy review and for future readers of the commits:
 - Don't mix cleanups/reformatting with actual code.
 - Use several commits for unrelated work.
-- Use only one commit for a related thing. For example, don't have a separate "fix typo" commit if the typo fixed is in another commit of the Pull Request.
+- Use only one commit for related things. For example, don't have a separate "fix typo" commit if the typo fixed is in another commit of the Pull Request.
 - Diffs must be minimal.
 
 ### Write Tests
