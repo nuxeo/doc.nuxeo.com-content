@@ -122,7 +122,7 @@ history:
         version: '1'
 
 ---
-The Amazon S3 Online Storage is a Nuxeo Binary Manager for S3\. It stores Nuxeo's binaries (the attached documents) in an [Amazon S3](http://aws.amazon.com/s3/) bucket.
+The [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage) is a Nuxeo Binary Manager for S3\. It stores Nuxeo's binaries (the attached documents) in an [Amazon S3](http://aws.amazon.com/s3/) bucket.
 
 ## Before You Start
 
@@ -392,3 +392,73 @@ The above configuration uses `nuxeo.conf` properties prefixed with `nuxeo.s3stor
 ```
 
 Note that this needs to override the default configuration present in the default Nuxeo template `default-repository-config.xml.nxftl`, which already defines the standard configuration for the `default` blob provider. You may need to `<require>default-repository-config</require>` in order for the override to be correctly taken into account.
+
+
+## S3 Direct Upload
+
+By default, binaries will be uploaded to the nuxeo server which will then upload them to S3.
+
+Another possibility is for the client to ask the nuxeo server temporary S3 credentials to a second S3 bucket, used as a facade bucket and called transient, where the client (basically Web UI) directly uploads binaries. Then the S3 reference is passed to the server which moves it to its actual S3 bucket.
+
+In order to activate S3 direct upload use these parameters :
+
+```
+nuxeo.s3storage.useDirectUpload=true
+
+nuxeo.s3storage.transient.bucket=
+nuxeo.s3storage.transient.awsid=
+nuxeo.s3storage.transient.awssecret=
+nuxeo.s3storage.transient.region=
+```
+
+S3 direct upload is implemented by a [BatchHandler]({{page space='nxdoc' page='batch-handler'}}) and a [TransientStore]({{page space='nxdoc' page='transient-store'}}) using contributions that can be found in the s3binaries template file [s3directupload-config.xml.nxftl](https://github.com/nuxeo/marketplace-amazon-s3/tree/master/ear/src/main/resources/s3binaries/nxserver/config/s3directupload-config.xml.nxftl)
+
+```xml
+<?xml version="1.0"?>
+<component name="s3DirectUpload" version="1.0.0">
+
+  <require>org.nuxeo.ecm.core.storage.cloud.managment.contrib</require>
+
+  <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent" point="store">
+    <store name="s3TransientStore" class="org.nuxeo.ecm.core.transientstore.keyvalueblob.KeyValueBlobTransientStore">
+      <targetMaxSizeMB>${nuxeo.s3storage.transient.targetMaxSizeMB}</targetMaxSizeMB>
+      <absoluteMaxSizeMB>-1</absoluteMaxSizeMB>
+      <firstLevelTTL>120</firstLevelTTL>
+      <secondLevelTTL>10</secondLevelTTL>
+    </store>
+  </extension>
+
+  <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
+    <blobprovider name="s3TransientStore">
+      <class>org.nuxeo.ecm.core.storage.sql.S3BinaryManager</class>
+      <property name="awsid">${nuxeo.s3storage.transient.awsid}</property>
+      <property name="awssecret">${nuxeo.s3storage.transient.awssecret}</property>
+      <property name="bucket">${nuxeo.s3storage.transient.bucket}</property>
+      <property name="region">${nuxeo.s3storage.transient.region}</property>
+      <property name="bucket.prefix"></property>
+      <property name="cachesize">100MB</property>
+      <property name="connection.max">50</property>
+      <property name="connection.retry">3</property>
+      <property name="connection.timeout">50000</property>
+      <property name="socket.timeout">50000</property>
+	  <!-- this blob provider is used for transient storage -->
+      <property name="transient">true</property>
+    </blobprovider>
+  </extension>
+
+  <extension target="org.nuxeo.ecm.automation.server.BatchManager" point="handlers">
+    <batchHandler>
+      <name>s3</name>
+      <class>org.nuxeo.ecm.core.storage.sql.S3DirectBatchHandler</class>
+      <property name="transientStore">s3TransientStore</property>
+      <property name="awsid">${nuxeo.s3storage.transient.awsid}</property>
+      <property name="awssecret">${nuxeo.s3storage.transient.awssecret}</property>
+      <property name="bucket">${nuxeo.s3storage.transient.bucket}</property>
+      <property name="region">${nuxeo.s3storage.transient.region}</property>
+      <property name="policyTemplate">{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Action":"s3:PutObject","Resource":["arn:aws:s3:::${nuxeo.s3storage.transient.bucket}/*"]}]}</property>
+    </batchHandler>
+  </extension>
+
+</component>
+```
+
