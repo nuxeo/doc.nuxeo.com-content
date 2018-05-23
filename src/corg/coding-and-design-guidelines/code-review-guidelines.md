@@ -5,62 +5,57 @@ review:
     date: ''
     status: ok
 tree_item_index: 300
-history:
-    -
-        author: Florent Guillaume
-        date: '2018-05-11 18:03'
-        message: ''
-        version: '1'
+toc: true
 ---
 Code reviews are a collaborative process between coders and reviewers — this is not a battle. The goal of the reviews is to improve the code quality by having several pairs of eyes on the code, for the benefit of all.
 
-## When creating a Pull Request
+## When Creating a Pull Request
 
-### Follow the coding standards
+### Follow the Coding Standards
 
 Important coding standards are described in the [Java Code Style]({{page page='java-code-style'}}) and [JavaScript Code Style]({{page page='javascript-code-style'}}) pages.
 
-### Design for easy review
+### Design for Easy Review
 
 The code must be designed for easy review and for future readers of the commits:
 - Don't mix cleanups/reformatting with actual code.
 - Use several commits for unrelated work.
-- Use only one commit for related thing. For example don't have a separate "fix typo" commit if the typo fixed is in another commit of the Pull Request.
+- Use only one commit for a related thing. For example, don't have a separate "fix typo" commit if the typo fixed is in another commit of the Pull Request.
 - Diffs must be minimal.
 
-### Write tests
+### Write Tests
 
 Try to test all aspects of the code you write.
 
 For bug fixes, write non-regression tests: the tests must fail before the changes, and work after the changes.
 
-### Re-read yourself
+### Re-read Yourself
 
 Re-read your branch diff yourself before creating a Pull Request by putting yourself in the shoes of a reviewer.
 
 Don't leave things in your code if you _know_ they are going to be commented on by reviewers.
 
-### Use standard branch names
+### Use Standard Branch Names
 
 Use a branch name that obeys the branch naming conventions. These conventions are described in [Git Main Rules and Good Practices]({{page page='git-usage'}}#main-rules-and-good-practices)
 
-### Be careful about backports
+### Be Careful About Backports
 
-#### Never break anything
+#### Never Break Anything
 
 Backports must *never change existing behavior* (except to fix bugs of course). Customers that apply hotfixes need a 100% guarantee that their code will continue to work, even if they are using uncommon or undocumented APIs.
 
-#### Backport the strict minimum
+#### Backport the Strict Minimum
 
 For code that will be backported, in order to minimize regression risks, you should strictly avoid non-useful changes.
 
-#### Isolate backport-specific changes in a separate commit
+#### Isolate Backport-Specific Changes in a Separate Commit
 
 Sometimes, when doing a backport, the code coming from the master branch has to be adjusted to work in the older branch. Try to do these adjustments in a separate backport-specific commit in addition to the cherry-pick, in order for the readers to easily understand what the differences are between the master branch and the older branch. It's better to do this than amend the cherry-pick, as this avoids drowning the backport-specific changes in a much bigger commit.
 
 Note that this applies to logic or behavior changes that would be interesting to a reader, not cosmetic changes like conflict resolution for imports or slightly different exceptions thrown by a method for instance.
 
-## When reviewing Pull Requests
+## When Reviewing Pull Requests
 
 Check that tests are present and cover the changed code.
 
