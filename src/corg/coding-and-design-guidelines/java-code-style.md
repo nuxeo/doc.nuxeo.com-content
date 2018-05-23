@@ -140,7 +140,7 @@ It's better to use this standard method than having custom code. Use a message s
 
 This hinders reusability. Nuxeo is a platform and we never know when it'll be useful to subclass something.
 
-This rule and the one below about `private` does not apply to private projects that are not part of the Nuxeo Platform (like Nuxeo Studio and Nuxeo Connect) where `private` help with cleanups and there is no third-party compatibility or subclassing issue.
+This rule, and the one below about `private`, does not apply to private projects that are not part of the Nuxeo Platform (like Nuxeo Studio and Nuxeo Connect) where `private` helps with cleanups and there is no third-party compatibility or subclassing issue.
 
 ### No `private` or Package-Private Methods or Fields.
 
