@@ -1,5 +1,5 @@
 ---
-title: Search Resource Endpoints
+title: Search
 review:
     comment: ''
     date: '2017-12-13'

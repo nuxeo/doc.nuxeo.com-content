@@ -1,5 +1,5 @@
 ---
-title: Batch Upload Resource Endpoint
+title: Batch Upload
 review:
     comment: ''
     date: '2017-12-28'
@@ -320,7 +320,7 @@ Example for Amazon Web Services S3
   2. Request Temporary Credentials and S3 Data
   3. Upload file to S3 Bucket
   4. POST file information to Nuxeo
-  5. Attach to Document 
+  5. Attach to Document
 
 #### Using a Different Upload Handler
 

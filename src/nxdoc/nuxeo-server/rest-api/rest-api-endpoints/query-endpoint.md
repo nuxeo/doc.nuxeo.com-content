@@ -1,5 +1,5 @@
 ---
-title: Query Endpoint (Deprecated)
+title: Query (Deprecated)
 review:
     comment: ''
     date: '2018-01-15'

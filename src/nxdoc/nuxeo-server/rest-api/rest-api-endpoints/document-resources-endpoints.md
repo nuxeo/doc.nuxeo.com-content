@@ -1,5 +1,5 @@
 ---
-title: Document Resources Endpoints
+title: Document
 review:
     comment: ''
     date: '2017-12-12'

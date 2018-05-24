@@ -1,5 +1,5 @@
 ---
-title: OAuth2 Resource Endpoint
+title: OAuth2
 description: A REST endpoint to retrieve oauth2 provider data.
 review:
     comment: ''
@@ -21,7 +21,7 @@ The OAuth2 endpoint allows REST clients to retrieve information about OAuth2 pro
 Several resources are exposed by this endpoint, which allows to:
 
 * Create, read, update and delete OAuth2 providers
-* Read OAuth2 clients 
+* Read OAuth2 clients
 * Get a valid access token for a given provider or client for the current user
 * Read, update and delete OAuth2 tokens
 
