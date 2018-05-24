@@ -432,8 +432,8 @@ history:
 
 Nuxeo supports CMIS through the following modules:
 
-*   The [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) library (an Apache project to which Nuxeo is a contributor), which is a general-purpose Java library allowing developers to easily write CMIS clients and servers,
-*   Specific Nuxeo OpenCMIS connector bundles, allowing the Nuxeo Platform to be used as a CMIS server with the help of OpenCMIS. The CMIS connector is included in the Nuxeo Platform by default.
+- The [Apache Chemistry OpenCMIS](http://chemistry.apache.org/java/opencmis.html) library (an Apache project to which Nuxeo is a contributor), which is a general-purpose Java library allowing developers to easily write CMIS
+- Specific Nuxeo OpenCMIS connector bundles, allowing the Nuxeo Platform to be used as a CMIS server with the help of OpenCMIS. The CMIS connector is included in the Nuxeo Platform by default.
 
 ## Usage
 
@@ -441,9 +441,9 @@ The following documentation uses `http://localhost:8080/nuxeo` as the URL of the
 
 You can access the different services from the following URLs:
 
-*   Browser Binding root URL: `http://localhost:8080/nuxeo/json/cmis`
-*   AtomPub service document: `http://localhost:8080/nuxeo/atom/cmis`
-*   SOAP WSDL for the repository service: `http://localhost:8080/nuxeo/webservices/cmis/RepositoryService?wsdl`
+- Browser Binding root URL: `http://localhost:8080/nuxeo/json/cmis`
+- AtomPub service document: `http://localhost:8080/nuxeo/atom/cmis`
+- SOAP WSDL for the repository service: `http://localhost:8080/nuxeo/webservices/cmis/RepositoryService?wsdl`
 
 ### JSON
 
@@ -580,8 +580,8 @@ You should probably pipe this through `tidy` if you want a readable output:
 
 **Notes**
 
-*   The `searchAllVersions=true` part is mandatory if you want something equivalent to what you see in Nuxeo (which often contains mostly private working copies).
-*   In order to fetch custom metadata, you must restrict the selection to document types that contain the metadata. For example, if you have a metadata "custom" in a document type "mytype", then your query would be something like:
+- The `searchAllVersions=true` part is mandatory if you want something equivalent to what you see in Nuxeo (which often contains mostly private working copies).
+- In order to fetch custom metadata, you must restrict the selection to document types that contain the metadata. For example, if you have a metadata "custom" in a document type "mytype", then your query would be something like:
 
     ```
     curl -u Administrator:Administrator "http://localhost:8080/nuxeo/atom/cmis/default/query?q=SELECT+cmis:objectId,+mytype:custom+FROM+mytype&searchAllVersions=true"
@@ -591,15 +591,15 @@ You should probably pipe this through `tidy` if you want a readable output:
 
 The following SOAP endpoints are available:
 
-*   `http://localhost:8080/nuxeo/webservices/cmis/RepositoryService?wsdl`
-*   `http://localhost:8080/nuxeo/webservices/cmis/DiscoveryService?wsdl`
-*   `http://localhost:8080/nuxeo/webservices/cmis/ObjectService?wsdl`
-*   `http://localhost:8080/nuxeo/webservices/cmis/NavigationService?wsdl`
-*   `http://localhost:8080/nuxeo/webservices/cmis/VersioningService?wsdl`
-*   `http://localhost:8080/nuxeo/webservices/cmis/RelationshipService?wsdl`
-*   `http://localhost:8080/nuxeo/webservices/cmis/MultiFilingService?wsdl`
-*   `http://localhost:8080/nuxeo/webservices/cmis/ACLService?wsdl`
-*   `http://localhost:8080/nuxeo/webservices/cmis/PolicyService?wsdl`
+- `http://localhost:8080/nuxeo/webservices/cmis/RepositoryService?wsdl`
+- `http://localhost:8080/nuxeo/webservices/cmis/DiscoveryService?wsdl`
+- `http://localhost:8080/nuxeo/webservices/cmis/ObjectService?wsdl`
+- `http://localhost:8080/nuxeo/webservices/cmis/NavigationService?wsdl`
+- `http://localhost:8080/nuxeo/webservices/cmis/VersioningService?wsdl`
+- `http://localhost:8080/nuxeo/webservices/cmis/RelationshipService?wsdl`
+- `http://localhost:8080/nuxeo/webservices/cmis/MultiFilingService?wsdl`
+- `http://localhost:8080/nuxeo/webservices/cmis/ACLService?wsdl`
+- `http://localhost:8080/nuxeo/webservices/cmis/PolicyService?wsdl`
 
 Authentication is done using Web Services Security (WSS) UsernameToken.
 
@@ -692,41 +692,107 @@ This mapping may change to be more comprehensive in future Nuxeo Platform versio
 
 In addition to the system properties defined in the CMIS specification under the `cmis:` prefix, the Nuxeo Platform adds some additional properties under the `nuxeo:` prefix:
 
-*   `nuxeo:isVersion`: To distinguish between archived (read-only revision) and live documents (that can be edited).
-*   `nuxeo:lifecycleState`: To access the lifecycle state of a document. By default only document in non `deleted` state will be returned in CMISQL queries unless and explicit `nuxeo:lifecycleState` predicate is specified in the `WHERE` clause of the query.
-*   `nuxeo:secondaryObjectTypeIds`: Makes it possible to access the facets of a document. Those facets can be static (as defined in the type definitions) or dynamic (each document instance can have declared facets).
-*   `nuxeo:contentStreamDigest`: The low level, MD5 or SHA1 digest of blobs stored in the repository. The algorithm used to compute the digest is dependent on the configuration of the `BinaryManager` component of the Nuxeo repository.
-*   `nuxeo:isCheckedIn`: For live documents, distinguishes between the checked-in and checked-out state.
-*   `nuxeo:parentId`: Like `cmis:parentId` but also available on Document objects (which is possible because the Nuxeo Platform does not have direct multi-filing).
-*   `nuxeo:pathSegment`: The last path segment of the document (`ecm:name` in NXQL).
-*   `nuxeo:pos`: The position of an object in its containing folder, if that folder is ordered, or `null` otherwise.
+- `nuxeo:isVersion`: To distinguish between archived (read-only revision) and live documents (that can be edited).
+- `nuxeo:lifecycleState`: To access the lifecycle state of a document. By default only document in non `deleted` state will be returned in CMISQL queries unless and explicit `nuxeo:lifecycleState` predicate is specified in the `WHERE` clause of the query.
+- `nuxeo:secondaryObjectTypeIds`: Makes it possible to access the facets of a document. Those facets can be static (as defined in the type definitions) or dynamic (each document instance can have declared facets).
+- `nuxeo:contentStreamDigest`: The low level, MD5 or SHA1 digest of blobs stored in the repository. The algorithm used to compute the digest is dependent on the configuration of the `BinaryManager` component of the Nuxeo repository.
+- `nuxeo:isCheckedIn`: For live documents, distinguishes between the checked-in and checked-out state.
+- `nuxeo:parentId`: Like `cmis:parentId` but also available on Document objects (which is possible because the Nuxeo Platform does not have direct multi-filing).
+- `nuxeo:pathSegment`: The last path segment of the document (`ecm:name` in NXQL).
+- `nuxeo:pos`: The position of an object in its containing folder, if that folder is ordered, or `null` otherwise.
 
 All these properties can be used as regular CMIS properties and in a CMISQL query (in a `SELECT`, `WHERE` or `ORDER BY` clause where relevant), except for `nuxeo:contentStreamDigest` which can only be read in query results or by introspecting the properties of the `ObjectData` representation of a document.
 
+## Use Cases
+
+
+### Document Capture Integration with Ephesoft
+
+Ephesoft is an advanced document capture and data extraction solution to help businesses run more efficiently. It automatically classifies and extracts data from any type of document. Ephesoft has a CMIS interface, which ease the integration with Nuxeo.
+
+Ephesoft has a CMIS import plugin and a CMIS export plugin so that it can ingest documents stored in Nuxeo to extract information and send back the extraction results to Nuxeo.
+
+#### CMIS Import
+
+Ephesoft monitors a specified folder for a new file (as a hot folder) using a cron job, and process any new document in an Ephesoft batch. Ephesoft uses a "technical" Nuxeo property to tag the document as processed, in order to not process twice the same document (for example, a custom property called `invoice:status` passes from `To process` to `Processed`).
+
+![]({{file page='nxdoc/cmis' name='ephesoft_cmis_import.png'}} ?w=600,border=true)
+
+In the picture above:
+
+| Parameter | Value | Description |
+| --- | --- |
+| Server URL | `http://localhost:8080/nuxeo/atom/cmis` | Nuxeo CMIS URL |
+| Username | `ephesoft` | Username of the technical account to create a connexion between Nuxeo and Ephesoft. This user needs **WRITE** permission on the documents |
+| Password | `mySecretPassword` | Password of the technical account |
+| Repository Id | `default` | Generally `default`. You can read it from the downloaded file when you enter in a web browser the CMIS Server URL |
+| File Extension | `pdf;tif` | Cannot be changed |
+| Folder | `default/domain/workspaces/folder1` | Folder path of the hot folder. The initial `/` **should not** be written |
+| Property | `invoice:status` | Property used by Ephesoft to check which document has been processed |
+| Value | `To process` | Each document with `invoice:status=To Process` will be sent to Ephesoft |
+| New Value | `Processed` | When Ephesoft processes a document, Ephesoft will update the `invoice:status` to `Processed` |
+| CMIS Version | `1.1` | Value of the CMIS implementation |
+| Enabled | `true` | To activate the CMIS Import |
+
+{{#> callout type='info' }}
+
+Don't forget to activate the CMIS import by uncommenting the `<import resource="classpath:/META-INF/applicationContext-dcma-mail-import.xml" />` line of the `applicationContext.xml` file as the CMIS import is disabled by default.
+
+{{/callout}}
+
+{{#> callout type='warning' }}
+With the standard CMIS import addon, you can't keep the original Nuxeo property values from the input to the output. One possible workaround is to check if the binary you're processing has any file property (contained for example in the EXIF or IPTC format) that you can use to perform a synchronization process. The best practice is to use the CMIS REST API instead of the CMIS Import addon to get more flexibility.
+{{/callout}}
+
+#### CMIS Export
+
+When a document is processed in Ephesoft, it means the platform has classified and extracted the information from the document. Instead of exporting the binary files in a filesystem folder, along with its XML document (corresponding to the field properties), you can export them into Nuxeo with the CMIS export addon. The configuration is quite easy:
+
+1. Activate the CMIS Export in your Ephesoft batch class modules
+1. Map the Ephesoft property fields with the Nuxeo property fields in the `DLF-attributes-mapping.properties`
+```
+invoice=Invoice
+invoice.number=invoice:number
+invoice.details=dc:description
+...
+```
+1. Configure the CMIS export properties:
+
+![]({{file page='nxdoc/cmis' name='ephesoft_cmis_export.png'}} ?w=600,border=true)
+
+Here is the list of the most important properties:
+
+| Parameter | Value | Description |
+| --- | --- |
+| Cmis Root Folder Name | `default-domain/workspaces/invoices_processed` | Nuxeo Folder where Ephesoft exports the documents and its properties. The initial `/` **should not** be written  |
+| Cmis Upload File Extension | `tif` | It can be either `tif` or `pdf` |
+| Cmis Server URL | `http://localhost:8080/nuxeo/atom/cmis` | Nuxeo CMIS URL |
+| Cmis Server User Name | `ephesoft` | Username of the technical account to create a connexion between Nuxeo and Ephesoft. This user needs **WRITE** permission on the `Cmis Root Folder Name` to upload documents |
+| Cmis Server Switch ON/OFF | `ON` | If set to OFF, the CMIS export is disabled |
+| CMIS Export File Name | `$BATCH_IDENTIFIER & _ & $DOCUMENT_ID` | `dc:title` value of the exported document. Any extracted information from the document can be reused with the `$` character |
+
+### Custom CMIS Integration
+
+[Watch this 15 min video](https://nuxeo.wistia.com/medias/rzvybdq540) presenting a custom case-processing application started from scratch, leveraging CMIS.
+
 ## Resources
-
-### Use Case Video
-
-Watch this 15 min video presenting a case-processing application leveraging CMIS.
-
-{{> wistia_video id='rzvybdq540'}}
 
 ### Source Code
 
-*   The Nuxeo OpenCMIS connector source code on GitHub: [https://github.com/nuxeo/nuxeo-chemistry](https://github.com/nuxeo/nuxeo-chemistry).
-*   The Apache Chemistry OpenCMIS source code on Apache's Subversion server: [https://svn.apache.org/repos/asf/chemistry/opencmis/trunk](https://svn.apache.org/repos/asf/chemistry/opencmis/trunk).
+- The Nuxeo OpenCMIS connector source code on GitHub: [https://github.com/nuxeo/nuxeo-chemistry](https://github.com/nuxeo/nuxeo-chemistry).
+- The Apache Chemistry OpenCMIS source code on Apache's Subversion server: [https://svn.apache.org/repos/asf/chemistry/opencmis/trunk](https://svn.apache.org/repos/asf/chemistry/opencmis/trunk).
 
 ### Documentation
 
-*   [CMIS 1.1 (HTML)](http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html),
-*   [CMIS 1.1 (PDF)](http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.pdf) (1.3 MB).
+- [CMIS 1.1 (HTML)](http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html),
+- [CMIS 1.1 (PDF)](http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.pdf) (1.3 MB).
 
 ### Slide Decks
 
-*   [CMIS and Apache Chemistry](http://www.slideshare.net/efge/cmis-and-apache-chemistry-apachecon-2010), ApacheCon 2010 presentation on SlideShare
+- [CMIS and Apache Chemistry](http://www.slideshare.net/efge/cmis-and-apache-chemistry-apachecon-2010), ApacheCon 2010 presentation on SlideShare
 
 ### Blog Posts
 
-*   [CMIS: A Tale of Versioning](http://www.nuxeo.com/blog/cmis-tale-versioning/)
-*   [Direct Document Capture in Nuxeo Using Ephesoft and CMIS](http://www.nuxeo.com/blog/direct-document-capture-nuxeo-using-ephesoft-cmis/)
-*   [Complex Types, Multiple Streams and Renditions in CMIS!](http://www.nuxeo.com/blog/complex-types-multiple-streams-renditions-cmis/)
+- [CMIS: A Tale of Versioning](http://www.nuxeo.com/blog/cmis-tale-versioning/)
+- [Direct Document Capture in Nuxeo Using Ephesoft and CMIS](http://www.nuxeo.com/blog/direct-document-capture-nuxeo-using-ephesoft-cmis/)
+- [Complex Types, Multiple Streams and Renditions in CMIS!](http://www.nuxeo.com/blog/complex-types-multiple-streams-renditions-cmis/)
