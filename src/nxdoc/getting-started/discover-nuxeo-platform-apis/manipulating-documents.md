@@ -299,6 +299,9 @@ Create a new contract in Nuxeo Platform.
       .catch(error => {
         console.log('Apologies, an error occurred.');
         console.log(error);
+        if (error.response) {
+          error.response.json().then(json => console.log(json));
+        }
       });
     ```
 

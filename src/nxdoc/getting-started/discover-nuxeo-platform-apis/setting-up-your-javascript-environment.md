@@ -365,8 +365,12 @@ To create the users:
       .catch(error => {
         console.log('Apologies, an error occurred.');
         console.log(error);
+        if (error.response) {
+          error.response.json().then(json => console.log(json));
+        }
       });
-    ```
+    ```  
+
 
 2.  Save and run:
 
