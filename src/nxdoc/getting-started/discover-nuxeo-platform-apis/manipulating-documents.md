@@ -234,7 +234,7 @@ Create a new contract in Nuxeo Platform.
 
 1.  Create a file called `createContract.js` with the following content:
 
-    ```js
+    ```
     #!/usr/bin/env node
     const Nuxeo = require('nuxeo');
     const nuxeo = new Nuxeo({
@@ -299,6 +299,9 @@ Create a new contract in Nuxeo Platform.
       .catch(error => {
         console.log('Apologies, an error occurred.');
         console.log(error);
+        if (error.response) {
+            error.response.json().then(json => console.log(json));
+       }
       });
     ```
 
