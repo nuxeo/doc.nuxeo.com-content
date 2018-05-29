@@ -238,7 +238,7 @@ See [GitHub Readme](https://github.com/nuxeo/nuxeo-salesforce) for the Dev proje
 
 ## Functional Overview Video
 
-{{> wistia_video id='9pfro1cpv1'}}
+Watch [this video](https://nuxeo.wistia.com/medias/9pfro1cpv1) for a functional overview.
 
 ## Installation and Configuration
 
