@@ -4,11 +4,11 @@ description: 'Nuxeo CLI aims at making the whole development process easier with
 tree_item_index: 100
 toc: true
 review:
-    date: '2017-12-11'
-    status: 'requiresUpdates'
-    comment: 'This page requires an update on the Studio synchronization section.'
+    date: '2018-05-29'
+    status: 'ok'
+    comment: ''
 labels:
-    - content-review-lts2017
+    - lts2017-ok
     - nuxeo-cli
     - akervern
     - university
@@ -91,8 +91,34 @@ $ nuxeo hotreload
 
 Connect your Studio project to your bundle dependencies to be able to add it directly in your package or testing that everything is working well together.
 
+Link your project to Studio:
+
 ```bash
-$ nuxeo studio
+$ nuxeo studio [link]
+```
+
+Unlink your project:
+
+```bash
+$ nuxeo studio unlink
+```
+
+Generate a Java Constant class with Studio's freatures:
+
+```bash
+$ nuxeo studio import
+```
+
+Export your local contributions to your studio project:
+
+```bash
+$ nuxeo studio export
+```
+
+Release your studio project (MINOR or MAJOR) on a given branch:
+
+```bash
+$ nuxeo studio release
 ```
 
 ### Bootstrap
