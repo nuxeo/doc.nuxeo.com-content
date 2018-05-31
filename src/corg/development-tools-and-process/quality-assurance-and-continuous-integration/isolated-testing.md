@@ -97,36 +97,11 @@ Here are solutions for testing your developments before merging them on the mast
 Developers have their own dedicated job for building a branch, testing it and eventually automatically merging it if succeed.
 
 1.  Push your changes to the GitHub Nuxeo repo(s) of your choice under a branch named "feature-NXP-xxxx-description" (see [Nuxeo common usage and best practices]({{page page='git-usage'}}) about branch naming).
-2.  Create a [new Jenkins job](https://qa.nuxeo.org/jenkins/job/TestAndPush/newJob) and choose the "**Nuxeo On-Demand test and push**" template:
-
-    <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">**Name**</td></tr>
-    <tr><td colspan="1">
-      <div class="help">Name it `ondemand-testandpush-USERNAME[-suffix]` (for instance: "ondemand-testandpush-jcarsique").</div>
-    </td></tr>
-    <tr><td colspan="1">**Maven version**</td></tr><tr><td colspan="1">Usually "maven-3".</td></tr>
-    <tr><td colspan="1">**JDK**</td></tr><tr><td colspan="1">For instance "java-8-oracle".</td></tr>
-    <tr><td colspan="1">**Notification target**</td></tr>
-    <tr><td colspan="1">
-      <div class="help">E-mail and Jabber ID notification recipients.</div>
-    </td></tr>
-    <tr><td colspan="1">**Default slave**</td></tr><tr><td colspan="1">Can be changed afterwards.</td></tr>
-    </tbody></table></div>
-
-    The job is ready for use.
-
-3.  Click on **Build with Parameters**.
-4.  Fill the build parameters.
-
-    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Parameter</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">BRANCH</td><td colspan="1">feature-NXROADMAP-131-layouts</td><td colspan="1">Branch to test, fall-backs on $PARENT_BRANCH if not found.</td></tr><tr><td colspan="1">PARENT_BRANCH</td><td colspan="1">master</td><td colspan="1">The branch to fall-back on when $BRANCH is not found. This is also the branch on which $BRANCH is merged (before or after build and tests depending on $MERGE_BEFORE_BUILD value).</td></tr><tr><td colspan="1">MERGE_BEFORE_BUILD</td><td colspan="1">true</td><td colspan="1">
-
-    If true, merge on $PARENT_BRANCH before build then, if merge is successful, run the tests.
-    If false, merge will be done after tests.
-
-    </td></tr>
-    <tr><td colspan="1">PUSH_IF_SUCCEED</td><td colspan="1">true</td><td colspan="1">Push $PARENT_BRANCH if all build and tests succeed.</td></tr>
-    <tr><td colspan="1">CREATE_PR</td><td colspan="1">true</td><td colspan="1">Create a Pull Request instead of a direct merge.</td></tr>
-    <tr><td colspan="1">CLEAN</td><td colspan="1">true</td><td colspan="1">Whether to clean or not the workspace.</td></tr><tr><td colspan="1">MVN_TARGETS</td><td colspan="1">install</td><td colspan="1"> </td></tr><tr><td colspan="1">MVN_ADDITIONAL_OPTS</td><td colspan="1">`-fae -nsu -Dnuxeo.tests.random.mode=bypass`</td><td colspan="1">For instance: `-pl nuxeo-common`, `-pl -:nuxeo-distribution-dm-webdriver-tests`, `-rf somemodule`, `-N`, `-DskipTests=true`, `-DskipITs=true`, `-Dskip.surefire.tests=true`... Default includes `-fae` (fail at end): fail after the whole build (though skipping modules which dependencies build have failed) instead of fail at first error.</td></tr>
-    <tr><td colspan="1">PROFILES</td><td colspan="1">`-Pqa,itest`</td><td colspan="1">Maven profiles to activate</td></tr><tr><td colspan="1">JDK_PATH</td><td colspan="1"> </td><td colspan="1">If not empty, overrides the job configuration.</td></tr><tr><td colspan="1">Slave</td><td colspan="1">ondemand</td><td colspan="1">Default value (ondemand).</td></tr></tbody></table></div>
+2.  Create a [new Jenkins job](https://qa.nuxeo.org/jenkins/job/TestAndPush/newJob) and choose the "**Nuxeo On-Demand test and push**" template
+3. Name it `ondemand-testandpush-USERNAME[-suffix]` (for instance: "ondemand-testandpush-jcarsique").
+4. Configure the parameters and save. The job is ready for use.
+5.  Click on **Build with Parameters**.
+6.  Fill the build parameters. See the help tooltip for details.
 
 ### Configuration Details
 
@@ -278,7 +253,7 @@ echo "Finalize $(($(date +%s) - $START))" >> $WORKSPACE/.ci-metrics
 
 {{/panel}}
 
-### Post Build Actions
+#### Post Build Actions
 
 1. ** Post build task**
 ```
@@ -305,4 +280,83 @@ JOB=$JOB_NAME
 BUILD=$BUILD_NUMBER
 ```
 
-## GitHub Pull-Requests
+### How to Edit the Template
+
+Template plugin documentation: https://go.cloudbees.com/docs/cloudbees-documentation/cje-user-guide/index.html#template
+
+Here is the recommended/easier method for such a change:
+* instantiate a WIP job
+** https://qa.nuxeo.org/jenkins/job/TestAndPush/newJob
+** Nuxeo On-Demand Test and Push
+** https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/configure
+* "detach" the job
+**
+
+        $ ssh jcarsique@qa-ovh-master.nuxeo.com
+        cd .jenkins/jobs/TestAndPush/jobs/feature-NXBT-2318
+        cp config.xml config.xml.bak
+        vi config.xml
+
+** Using VIM to search and remove the XML section used for the templating:
+
+        vi config.xml
+        /cloudbees-template
+        vatd
+        :wq
+
+**
+
+        $ diff --side-by-side --suppress-common-lines config.xml.bak config.xml
+            <com.cloudbees.hudson.plugins.modeling.impl.jobTemplate.J <
+              <instance>					      <
+                <model>TestAndPush/template_ondemand</model>	      <
+                <values class="tree-map">			      <
+                  <entry>					      <
+                    <string>defaultSlave</string>		      <
+                    <string>ondemand</string>			      <
+                  </entry>					      <
+                  <entry>					      <
+                    <string>jdk</string>			      <
+                    <string>java-8-openjdk</string>		      <
+                  </entry>					      <
+                  <entry>					      <
+                    <string>maven</string>			      <
+                    <string>maven-3</string>			      <
+                  </entry>					      <
+                  <entry>					      <
+                    <string>name</string>			      <
+                    <string>feature-NXBT-2318</string>		      <
+                  </entry>					      <
+                  <entry>					      <
+                    <string>notification</string>		      <
+                    <string>pierregautier@nuxeo.com</string>	      <
+                  </entry>					      <
+                </values>					      <
+              </instance>					      <
+            </com.cloudbees.hudson.plugins.modeling.impl.jobTemplate. <
+
+** https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/reload
+* configure the detached job with the UI as wanted to resolve the ticket
+** https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/configure
+** ...
+* Use diff again to get the related XML changes
+
+        jenkins@qa-ovh-master:~/.jenkins/jobs/TestAndPush/jobs/feature-NXBT-2318$ diff --side-by-side --suppress-common-lines config.xml.bak config.xml
+
+* Apply the XML changes on the template
+** https://qa.nuxeo.org/jenkins/job/TestAndPush/job/template_ondemand/configure
+** It is a Groovy transformation that is applied twice: at job creation with some NULL values, then after user edit.  
+=> Handle the null values using conditions or the Elvis operator for instance  
+=> Escape dollar signs with backslashes in XML snippets you copy, so they are not misinterpreted as Groovy expressions  
+=> XML metacharacters like < in expression values are escaped before being emitted to the output. The raw XML has to be wrapped in the xml function or escaped: <, >...  
+See https://go.cloudbees.com/docs/cloudbees-documentation/cje-user-guide/index.html#_groovy_template_transformation
+* Request an administrator for approval of the new script
+** https://qa.nuxeo.org/jenkins/scriptApproval/
+* Reattach the job, regenerate, check if the ticket is properly resolved then cleanup
+** `$ cp config.xml.bak config.xml`
+** https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/reload
+** https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/configure
+** `$ diff --side-by-side --suppress-common-lines config.xml.bak config.xml`
+** https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/delete
+
+
