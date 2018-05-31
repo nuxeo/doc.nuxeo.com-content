@@ -183,7 +183,7 @@ Using this property was added not to break the project which were correctly work
 
 ## Hotfix 20
 
-### Read ACL Optimization on Big Volume
+### Read ACL Optimization on Big Volume for DBS
 
 This feature is activated by setting the property `nuxeo.core.readacl.async.enabled=true` in nuxeo.conf. Default value is `false`.
 
