@@ -240,9 +240,9 @@ Maven can be setup to add a dependency to a specific release, and to do continuo
 
 To set up a dependency to the latest snapshot of a Studio branch:
 
-1.  Go to the **Branch Management** screen and select a branch.
+1. Go to the **Branch Management** screen and select a branch.
 
-2. Press the `Maven GAV` button. This button is available both for the latest changes only available in your own workspace or for the ones that are shared for all users on the branch.
+2. Press the `Maven GAV` button. This button is available both for the latest changes only available in your own workspace (Work In Progress) or for the ones that are shared for all users on the branch (Merged Commits).
 
 ![]({{file name='maven-gav.png'}} ?w=650,border=true)
 

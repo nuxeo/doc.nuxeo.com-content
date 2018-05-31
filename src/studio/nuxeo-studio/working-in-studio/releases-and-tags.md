@@ -59,7 +59,7 @@ The releases and tags tab allows to list each and every releases and tags that w
 
 **Delete**: Deletes the release. This operation cannot be reverted.
 
-**Maven GAV**: Displays the Maven coordinates so that you can add the release as a dependency on your Java project.
+**Maven GAV**: Displays the Maven coordinates so that you can add the release as a dependency on your Java project. Once clicked a popup window is displayed showing the Maven coordinates, ready to be copy-pasted in your project.
 
 **Download Package**: You can download the release package and ask the administrator of the instance to install it using `nuxeoctl`. See the page [Installing a New Package on Your Instance]({{page version='' space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
 
