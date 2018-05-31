@@ -212,7 +212,7 @@ history:
 {{! multiexcerpt name='preview_functional_overview'}}
 The preview enables you to see an insight of your document.
 
-The PDF files preview is leveraged by [pdf.js by Mozilla](https://mozilla.github.io/pdf.js/). The preview of other file types are leveraged by the [Nuxeo Platform preview module]({{page space='nxdoc' page='preview'}}).
+The PDF files preview is leveraged by [pdf.js by Mozilla](https://mozilla.github.io/pdf.js/). The preview of other file types are leveraged by the [Nuxeo Platform preview module](https://github.com/nuxeo-archives/nuxeo-features/tree/release-6.0/nuxeo-platform-preview).
 
 Several means to preview documents are available.
 
