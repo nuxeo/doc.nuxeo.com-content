@@ -103,7 +103,7 @@ Unlink your project:
 $ nuxeo studio unlink
 ```
 
-Generate a Java Constant class with Studio's freatures:
+Generate a Java Constant class with Studio's features:
 
 ```bash
 $ nuxeo studio import
