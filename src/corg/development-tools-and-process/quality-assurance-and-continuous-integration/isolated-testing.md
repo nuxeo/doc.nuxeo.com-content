@@ -126,11 +126,11 @@ You need to use the `customdb` profile to init build environment, and then desir
 
 You also need to use a slave owning the configuration for desired DB, for example `MULTIDB_LINUX`.
 
-#### Execute Shell	
+#### Execute Shell
 
 {{#> panel type='code' heading='Shell script'}}
 
-```bash
+```
 #!/bin/bash -xe
 START=$(date +%s)
 unset DOCKER_HOST
@@ -192,7 +192,7 @@ Use private Maven repository: Maven will store artifacts in `$WORKSPACE/.reposit
 
 {{#> panel type='code' heading='Shell script'}}
 
-```bash
+```
 #!/bin/bash  -xe
 echo "Maven $(($(date +%s) - $(cat $WORKSPACE/.ci-metrics-mavenstart)))" >> $WORKSPACE/.ci-metrics
 rm $WORKSPACE/.ci-metrics-mavenstart
@@ -255,108 +255,112 @@ echo "Finalize $(($(date +%s) - $START))" >> $WORKSPACE/.ci-metrics
 
 #### Post Build Actions
 
-1. ** Post build task**
-```
-if [ -f .ci-metrics-mavenstart ]; then
-  echo "Maven $(($(date +%s) - $(cat .ci-metrics-mavenstart)))" >> .ci-metrics
-  rm .ci-metrics-mavenstart
-fi
-```
-2. **Scan for compiler warnings**
+1. Post build task
+   ```
+   if [ -f .ci-metrics-mavenstart ]; then
+   echo "Maven $(($(date +%s) - $(cat .ci-metrics-mavenstart)))" >> .ci-metrics
+   rm .ci-metrics-mavenstart
+   fi
+   ```
+2. Scan for compiler warnings
 Use `Maven` and `javac` parsers on the console. Use `javac` parser on `nuxeo-distribution/**/log/*.log` files.
-3. **Archive the artifacts**
+3. Archive the artifacts
 `**/target/failsafe-reports/*, **/target/*.png, **/target/screenshot*.html, **/target/*.json, **/target/results/result-*.html, **/*.log, nuxeo-distribution/**/log/*, **/nxserver/config/distribution.properties, .ci-metrics`
-4. **Publish JUnit results report**
+4. Publish JUnit results report
 `**/target/failsafe-reports/*.xml, **/target/surefire-reports/*.xml, **/target/nxtools-reports/*.xml`
-5. **Set build description**
+5. Set build description
 `$BRANCH`
 6. Configure the **Jenkins text finder** to browse `nuxeo-distribution/**/log/server.log` looking for `.*ERROR.*` and setting the build as unstable if found.
 7. Send to you an email using the **Editable Email Notification**.
 8. Send to you a **Jabber notification**.
-9. **Trigger parameterized build on other projects**
-```Project: /System/ondemand-testandpush-metrics
-Parameters:
-JOB=$JOB_NAME
-BUILD=$BUILD_NUMBER
-```
+9. Trigger parameterized build on other projects
+   ```
+   Project: /System/ondemand-testandpush-metrics
+   Parameters:
+   JOB=$JOB_NAME
+   BUILD=$BUILD_NUMBER
+   ```
 
 ### How to Edit the Template
 
 Template plugin documentation: https://go.cloudbees.com/docs/cloudbees-documentation/cje-user-guide/index.html#template
 
 Here is the recommended/easier method for such a change:
-* instantiate a WIP job
-** https://qa.nuxeo.org/jenkins/job/TestAndPush/newJob
-** Nuxeo On-Demand Test and Push
-** https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/configure
-* "detach" the job
-**
+1. instantiate a WIP job:
+    - https://qa.nuxeo.org/jenkins/job/TestAndPush/newJob
+    - Nuxeo On-Demand Test and Push
+    - https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/configure
 
-        $ ssh jcarsique@qa-ovh-master.nuxeo.com
-        cd .jenkins/jobs/TestAndPush/jobs/feature-NXBT-2318
-        cp config.xml config.xml.bak
-        vi config.xml
+1.  "detach" the job:
+    - ```
+      $ ssh jcarsique@qa-ovh-master.nuxeo.com
+      cd .jenkins/jobs/TestAndPush/jobs/feature-NXBT-2318
+      cp config.xml config.xml.bak
+      vi config.xml
+      ```
 
-** Using VIM to search and remove the XML section used for the templating:
+    - Using VIM to search and remove the XML section used for the templating:
+      ```
+      vi config.xml
+      /cloudbees-template
+      vatd
+      :wq
+      ```
+      ```
+      $ diff --side-by-side --suppress-common-lines config.xml.bak config.xml
+          <com.cloudbees.hudson.plugins.modeling.impl.jobTemplate.J <
+            <instance>					      <
+              <model>TestAndPush/template_ondemand</model>	      <
+              <values class="tree-map">			      <
+                <entry>					      <
+                  <string>defaultSlave</string>		      <
+                  <string>ondemand</string>			      <
+                </entry>					      <
+                <entry>					      <
+                  <string>jdk</string>			      <
+                  <string>java-8-openjdk</string>		      <
+                </entry>					      <
+                <entry>					      <
+                  <string>maven</string>			      <
+                  <string>maven-3</string>			      <
+                </entry>					      <
+                <entry>					      <
+                  <string>name</string>			      <
+                  <string>feature-NXBT-2318</string>		      <
+                </entry>					      <
+                <entry>					      <
+                  <string>notification</string>		      <
+                  <string>pierregautier@nuxeo.com</string>	      <
+                </entry>					      <
+              </values>					      <
+           </instance>					      <
+         </com.cloudbees.hudson.plugins.modeling.impl.jobTemplate. <
+      ```
+    - https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/reload
 
-        vi config.xml
-        /cloudbees-template
-        vatd
-        :wq
+1. configure the detached job with the UI as wanted to resolve the ticket:
+    - https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/configure
+    - ...
 
-**
+1. Use diff again to get the related XML changes:
+    ```
+    jenkins@qa-ovh-master:~/.jenkins/jobs/TestAndPush/jobs/feature-NXBT-2318$ diff --side-by-side --suppress-common-lines config.xml.bak config.xml
+    ```
 
-        $ diff --side-by-side --suppress-common-lines config.xml.bak config.xml
-            <com.cloudbees.hudson.plugins.modeling.impl.jobTemplate.J <
-              <instance>					      <
-                <model>TestAndPush/template_ondemand</model>	      <
-                <values class="tree-map">			      <
-                  <entry>					      <
-                    <string>defaultSlave</string>		      <
-                    <string>ondemand</string>			      <
-                  </entry>					      <
-                  <entry>					      <
-                    <string>jdk</string>			      <
-                    <string>java-8-openjdk</string>		      <
-                  </entry>					      <
-                  <entry>					      <
-                    <string>maven</string>			      <
-                    <string>maven-3</string>			      <
-                  </entry>					      <
-                  <entry>					      <
-                    <string>name</string>			      <
-                    <string>feature-NXBT-2318</string>		      <
-                  </entry>					      <
-                  <entry>					      <
-                    <string>notification</string>		      <
-                    <string>pierregautier@nuxeo.com</string>	      <
-                  </entry>					      <
-                </values>					      <
-              </instance>					      <
-            </com.cloudbees.hudson.plugins.modeling.impl.jobTemplate. <
+1. Apply the XML changes on the template:
+  - https://qa.nuxeo.org/jenkins/job/TestAndPush/job/template_ondemand/configure
+  - It is a Groovy transformation that is applied twice: at job creation with some NULL values, then after user edit.  
+    => Handle the null values using conditions or the Elvis operator for instance  
+    => Escape dollar signs with backslashes in XML snippets you copy, so they are not misinterpreted as Groovy expressions  
+    => XML metacharacters like `<` in expression values are escaped before being emitted to the output. The raw XML has to be wrapped in the xml function or escaped: `<`, `>`...  
+    See https://go.cloudbees.com/docs/cloudbees-documentation/cje-user-guide/index.html#_groovy_template_transformation
 
-** https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/reload
-* configure the detached job with the UI as wanted to resolve the ticket
-** https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/configure
-** ...
-* Use diff again to get the related XML changes
+1. Request an administrator for approval of the new script:
+  - https://qa.nuxeo.org/jenkins/scriptApproval/
 
-        jenkins@qa-ovh-master:~/.jenkins/jobs/TestAndPush/jobs/feature-NXBT-2318$ diff --side-by-side --suppress-common-lines config.xml.bak config.xml
-
-* Apply the XML changes on the template
-** https://qa.nuxeo.org/jenkins/job/TestAndPush/job/template_ondemand/configure
-** It is a Groovy transformation that is applied twice: at job creation with some NULL values, then after user edit.  
-=> Handle the null values using conditions or the Elvis operator for instance  
-=> Escape dollar signs with backslashes in XML snippets you copy, so they are not misinterpreted as Groovy expressions  
-=> XML metacharacters like < in expression values are escaped before being emitted to the output. The raw XML has to be wrapped in the xml function or escaped: <, >...  
-See https://go.cloudbees.com/docs/cloudbees-documentation/cje-user-guide/index.html#_groovy_template_transformation
-* Request an administrator for approval of the new script
-** https://qa.nuxeo.org/jenkins/scriptApproval/
-* Reattach the job, regenerate, check if the ticket is properly resolved then cleanup
-** `$ cp config.xml.bak config.xml`
-** https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/reload
-** https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/configure
-** `$ diff --side-by-side --suppress-common-lines config.xml.bak config.xml`
-** https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/delete
-
-
+1. Reattach the job, regenerate, check if the ticket is properly resolved then cleanup:
+  - `$ cp config.xml.bak config.xml`
+  - https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/reload
+  - https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/configure
+  - `$ diff --side-by-side --suppress-common-lines config.xml.bak config.xml`
+  - https://qa.nuxeo.org/jenkins/job/TestAndPush/job/feature-NXBT-2318/delete
