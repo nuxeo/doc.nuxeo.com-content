@@ -83,6 +83,87 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 09
+
+### Trash Flow
+The Trash management is now available in Web UI on 9.10 but is disabled by default. The slot contributions below must be added to enable it.
+```
+<!-- Delete action on the current document -->
+<nuxeo-slot-content name="deleteDocumentAction" slot="DOCUMENT_ACTIONS" order="15">
+  <template>
+    <nuxeo-delete-document-button document="[[document]]"></nuxeo-delete-document-button>
+  </template>
+</nuxeo-slot-content>
+
+<!-- Trash pill to browse trash content of a Folderish -->
+<nuxeo-slot-content name="documentTrashItem" slot="DOCUMENT_VIEWS_ITEMS" order="40">
+  <template>
+    <nuxeo-filter document="[[document]]" facet="Folderish">
+      <template>
+        <nuxeo-page-item name="trash" label="browser.trash"></nuxeo-page-item>
+      </template>
+    </nuxeo-filter>
+  </template>
+</nuxeo-slot-content>
+
+<nuxeo-slot-content name="documentTrashPage" slot="DOCUMENT_VIEWS_PAGES" order="40">
+  <template>
+    <nuxeo-filter document="[[document]]" facet="Folderish">
+      <template>
+        <nuxeo-document-trash-content name="trash" document="[[document]]" provider="advanced_document_trash_content">
+        </nuxeo-document-trash-content>
+      </template>
+    </nuxeo-filter>
+  </template>
+</nuxeo-slot-content>
+
+<!-- New drawer menu item to access new trash search -->
+<nuxeo-slot-content name="trashMenuButton" slot="DRAWER_ITEMS" order="100">
+  <template>
+    <nuxeo-menu-icon name="trash" icon="nuxeo:delete" label="app.trashSearch"></nuxeo-menu-icon>
+  </template>
+</nuxeo-slot-content>
+<nuxeo-slot-content name="trashMenuPage" slot="DRAWER_PAGES">
+  <template>
+    <nuxeo-search-form name="trash" search-name="trash" auto
+                       provider="default_trash_search" schemas="dublincore,common,uid"></nuxeo-search-form>
+  </template>
+</nuxeo-slot-content>
+
+<!-- Make sure the legacy results selection action soft deletes -->
+<nuxeo-slot-content name="deleteSelectionAction" slot="RESULTS_SELECTION_ACTIONS" order="30">
+  <template>
+    <nuxeo-delete-documents-button documents="[[selectedItems]]">
+    </nuxeo-delete-documents-button>
+  </template>
+</nuxeo-slot-content>
+<!-- And we have another one for hard deleting -->
+<nuxeo-slot-content name="hardDeleteSelectionAction" slot="RESULTS_SELECTION_ACTIONS" order="30">
+  <template>
+    <nuxeo-delete-documents-button documents="[[selectedItems]]" hard></nuxeo-delete-documents-button>
+  </template>
+</nuxeo-slot-content>
+
+<!-- Add a new action to untrash trashed documents -->
+<nuxeo-slot-content name="untrashSelectionAction" slot="RESULTS_SELECTION_ACTIONS" order="40">
+  <template>
+    <nuxeo-untrash-documents-button documents="[[selectedItems]]"></nuxeo-untrash-documents-button>
+  </template>
+</nuxeo-slot-content>
+```
+Moreover these new operations are now available:
+- `Document.Trash`: this operation will put the input documents to the trash
+- `Document.Untrash`: this operation will restore the input documents from the trash
+- `Document.EmptyTrash`: this operation allows to permanently delete a Folderish trash content
+
+A `firstAccessibleAncestor` Json Enricher is also available to get the closest document's ancestor used to redirect when deleting a document.
+
+### Forbidden characters in Tag names
+In addition to the characters ' (single quote), \ (backslash), % (percent) and space, that were already forbidden in a tag, the character / (forward slash) is now also forbidden.
+
+All these characters are removed at creation time and when we try to get a tag or update it.
+
+
 ## Hotfix 05
 
 ### Old Revision
