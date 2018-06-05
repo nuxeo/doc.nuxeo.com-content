@@ -154,11 +154,11 @@ The Trash management is now available in Web UI on 9.10 but is disabled by defau
 Moreover these new operations are now available:
 - `Document.Trash`: this operation will put the input documents to the trash
 - `Document.Untrash`: this operation will restore the input documents from the trash
-- `Document.EmptyTrash`: this operation allows to permanently delete a Folderish trash content
+- `Document.EmptyTrash`: this operation allows to delete a Folderish trash content permanently
 
 A `firstAccessibleAncestor` Json Enricher is also available to get the closest document's ancestor used to redirect when deleting a document.
 
-### Forbidden characters in Tag names
+### Forbidden Characters in Tag Names
 In addition to the characters ' (single quote), \ (backslash), % (percent) and space, that were already forbidden in a tag, the character / (forward slash) is now also forbidden.
 
 All these characters are removed at creation time and when we try to get a tag or update it.
