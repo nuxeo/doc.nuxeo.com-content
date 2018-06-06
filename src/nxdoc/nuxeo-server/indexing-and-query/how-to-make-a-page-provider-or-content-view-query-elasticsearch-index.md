@@ -144,7 +144,7 @@ When [configuring a content view]({{page space='studio' page='content-view-query
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
-- [Configurating Searches in Nuxeo Studio Modeler & Designer](https://university.nuxeo.com/learn/public/course/view/elearning/134/configurating-searches-in-nuxeo-studio-modeler-designer).
+- [Configuring Searches in Nuxeo Studio Modeler & Designer](https://university.nuxeo.com/learn/public/course/view/elearning/134/configurating-searches-in-nuxeo-studio-modeler-designer).
 ![]({{file name='university-search.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
