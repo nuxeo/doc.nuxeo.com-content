@@ -96,17 +96,20 @@ Once you are all set, you can navigate to the Studio Designer to configure your 
   You should end up with something like this:
   ![]({{file name='main-view-contract-vd.png'}} ?w=350,border=true)
 
+### Configure Labels
 
-The last step is to add your labels to your translations file to display them correctly in the UI.
+When configuring a document type, a label is required. If you do not create a translation file, Studio uses this label as a fallback option to show your users something clearer.
+
+If you create a translation file for your document type labels by uploading the corresponding files in Designer's **UI** tab, they override the configuration made in the label field.
 
 To do so:
-1. Click on the **UI** tab (second tab on the left menu).
-2. Click on **Translations**.
-3. Use the default `messages.json` or create your own language.
-4. Create a new entry in the JSON file with key `label.document.type.<document type name>` and the document type name as value. Here it is `"label.document.type.contract":"Contract"`.
+1. Click on the **UI** table;
+1. Click on **Translations**
+1. Use the default `messages.json` or create your own language;
+1. Create a new entry in the JSON file with key `label.document.type.<document type name>` and the document type name as value. Here it is `"label.document.type.contract":"Contract"`;
+1. Save your changes.
 
-  You now have a document type ready to be used on your Web UI interface, the last thing that you need is an icon to easily find your document type in your instance.
-
+You now have a document type ready to be used on your Web UI interface, the last thing that you need is an icon to easily find your document type in your instance.
 
 ## Technical Overview
 
