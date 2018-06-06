@@ -452,7 +452,7 @@ history:
 
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
-{{> wistia_video id='me59a8g79l'}}
+{{> wistia_video id='3guyltmivi'}}
 {{/panel}}</div></div>
 
 {{{multiexcerpt 'license' page='NXDOC:index'}}}
