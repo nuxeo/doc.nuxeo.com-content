@@ -28,7 +28,7 @@ We will learn how to create a new search screen with an icon in the left menu. T
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
-- [Course on Searches with Nuxeo Studio Modeler & Designer](https://university.nuxeo.com/learn/public/course/view/elearning/134/configurating-searches-in-nuxeo-studio-modeler-designer)
+- [Course on Searches with Nuxeo Studio Modeler & Designer](https://university.nuxeo.com/learn/public/course/view/elearning/134/configuring-searches-in-nuxeo-studio-modeler-designer)
 - [Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
 ![]({{file name='web-ui-search-university.png'}} ?w=450,border=true)
 {{/callout}}
