@@ -94,10 +94,13 @@ When upgrading your target platform in Studio, Studio will take care of generati
 
 {{! /excerpt}}
 
+## Upgrading to LTS 2016 and LTS 2017
+
+{{{multiexcerpt 'upgrade-9.1-studio-events' page='Upgrade from LTS 2016 following Fast Tracks' space='nxdoc'}}}
+
 ## Upgrading to LTS 2015 and LTS 2016
 
 Select the Nuxeo JSF UI target package in your [Application Definition]({{page page='application-definition'}}) for the content views, layouts, tabs and search customizations to be available.
-
 
 ## {{> anchor 'to-60'}}Upgrading to 6.0
 
