@@ -49,10 +49,42 @@ Reindex the full repository following [Rebuilding the repository index page]({{p
 </table>
 </div>
 
-### Nuxeo Studio Application Definition
+### Nuxeo Studio
+
+#### Application Definition
 
 {{! multiexcerpt name='upgrade-9.1-studio-deps'}}
 Make sure your Nuxeo Studio project depends on the **Nuxeo JSF UI** target package. See the pages [How to Update the Version of Your Target Platform in Studio]({{page space='studio' page='update-the-version-of-your-target-platform'}}) and [Specific Upgrade Instructions]({{page space='studio' page='specific-upgrade-instructions'}}) for more details.
+{{! /multiexcerpt}}
+
+
+#### Event Management Behavior
+
+{{! multiexcerpt name='upgrade-9.1-studio-events'}}
+
+Since 9.10, in the context context of the "empty document created", "about to create", "before document modification" and "document modified" events, the Save parameter has to be turned off as the Nuxeo Server will throw an exception. The following Automation chain operations are concerned:
+
+- Document.Update
+- DocumentMultivaluedProperty.addItem
+- Document.SetProperty
+- Document.RemoveProperty
+- Document.AddItemToListProperty
+
+The corresponding JAVA classes are:
+
+- AddEntryToMultiValuedProperty.java
+- AddFacet.java
+- AddEntryToMultiValuedProperty.java
+- AddFacet.java
+- AddItemToListProperty.java
+- CreateVersion.java
+- RemoveEntryOfMultiValuedProperty.java
+- RemoveFacet.java
+- RemoveItemFromListProperty.java
+- SaveDocument.java
+- SetDocumentProperty.java
+- UpdateDocument.java
+
 {{! /multiexcerpt}}
 
 ### Code Changes
