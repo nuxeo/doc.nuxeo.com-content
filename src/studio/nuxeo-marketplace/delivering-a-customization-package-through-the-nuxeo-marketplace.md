@@ -103,27 +103,29 @@ history:
         version: '1'
 
 ---
-The Nuxeo Marketplace is the channel provided by Nuxeo to distribute addons and patches to the Nuxeo Platform. The [Admin Center]({{page space='nxdoc' page='admin-tab-overview'}}) and the [Control Panel (nuxeoctl)]({{page space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}) provide an integrated way to browse this catalog of add-ons and install them directly from the Nuxeo Platform interface or the server command line. This catalog of packages is public, although some addons require to be a Nuxeo Connect customer to be able to install them.
+The Nuxeo Marketplace is the channel provided by Nuxeo to distribute addons and patches to the Nuxeo Platform. [nuxeoctl]({{page space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}) provides an integrated way to browse this catalog of add-ons and install them. In JSF UI, the [Admin Center]({{page space='nxdoc' page='admin-tab-overview'}}) offers the same features from the Nuxeo Platform interface.
 
-The Nuxeo Marketplace also provides a private channel to distribute packages to a specific audience. Nuxeo Connect users can thus provide their own users with the same trustful, integrated way to browse and install private packages, which are available from the Private packages tab of the Update Center.
+This catalog of packages is public, although some addons require to be a Nuxeo Online Services customer to be able to install them.
+
+The Nuxeo Marketplace also provides a private channel to distribute packages to a specific audience. Nuxeo Online Services users can thus provide their own users with the same trustful, integrated way to browse and install private packages.
 
 ## Example Use Cases
 
 The purpose of the private channel is to enable Nuxeo Platform users who do some customization on the Platform to easily distribute their customization. Here are some examples of how this private channel can be helpful.
 
-For instance, if you do some customization using Nuxeo Studio and some Java customization using the Nuxeo Generator, you can create your Nuxeo Package and let other people (ex: sysadmin) easily install the whole customization through the Admin Center using a single package, instead of installing the Nuxeo Studio customization and the Nuxeo Generator customization. Worth to mention the benefits of using a Nuxeo Package such as target platform validation, various checks, rollback, dependencies or conflicts between packages, ...
+For instance, if you do configuration using Nuxeo Studio and additional Java customization using Nuxeo CLI, you can create your Nuxeo Package and let other people (ex: sysadmin) easily install the whole project using a single package, instead of installing them separately. Once the private package is uploaded on the Nuxeo Marketplace, the application Definition screen in your Nuxeo Studio project lets you bundle them easily.
 
-As an other example, if you created your own application on top of the Nuxeo Platform and distribute to your own clients (that may do Studio customization themselves), you can use this private channel to provide hot fixes of your base application.
+Another example is if you created your own application on top of the Nuxeo Platform and distribute it to your own clients (that may do Studio configuration themselves), you can use this private channel to provide hot fixes of your base application.
 
 ## Who Can Use the Private Marketplace Channel
 
-The Nuxeo Marketplace private channel is available to any Nuxeo Connect user. Nuxeo Connect trial users can also use it.
+The Nuxeo Marketplace private channel is available to any Nuxeo Online Services user. Nuxeo Online Services trial users can also use it.
 
 ## Requirements
 
 The Marketplace private channel can be used to provide any type of customization: simple XML configuration, Java code, configuration templates, libraries, etc. The only requirement is that the customization must be provided [as a Nuxeo Package]({{page space='nxdoc' page='creating-nuxeo-packages'}}).
 
-The target instance(s) can get the package from [Nuxeo Connect](http://connect.nuxeo.com/) (via Internet). Otherwise, you can upload the package via the Local packages tab in the Admin Center or from the server command line with [NuxeoCtl]({{page space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}).
+The target instance(s) can get the package from [Nuxeo Online Services](http://connect.nuxeo.com/) (via Internet). Otherwise, you can upload the package via the Local packages tab in the Admin Center or from the server command line with [NuxeoCtl]({{page space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}).
 
 ## Uploading a Nuxeo Package
 
@@ -131,10 +133,10 @@ The target instance(s) can get the package from [Nuxeo Connect](http://connect.n
 
 **To provide customers with a private package:**
 
-1.  After logging in, browse to [Nuxeo Marketplace upload page](https://connect.nuxeo.com/nuxeo/site/marketplace/upload) or click on the button **Add a package**.
+1.  After logging in, browse to [Nuxeo Marketplace upload page](https://connect.nuxeo.com/nuxeo/site/marketplace/upload) or click on the button **Add your Nuxeo Package to the Marketplace**, located at the bottom of the screen.
 2.  Fill in the form "Upload a Marketplace package" (see below for details).
 3.  Click on the **Submit** button.
-    The package is uploaded. It is now available in the **Private packages** tab of the **Update Center** for the instances that match your package's client(s) and project(s).
+    The package is uploaded. It can be installed using nuxeoctl, and is available in the **Private packages** tab of the **Update Center** when using JSF UI, for the instances that match your package's client(s) and project(s).
     ![]({{file name='Admin-Center-private-packages-tab.png'}} ?w=650,border=true)
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">
@@ -153,7 +155,7 @@ Owner client
 
 </td><td colspan="1">
 
-Select the Nuxeo Connect client who will own the package.
+Select the Nuxeo Online Services client who will own the package.
 
 {{#> callout type='tip' }}
 

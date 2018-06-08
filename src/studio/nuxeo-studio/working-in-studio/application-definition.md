@@ -69,11 +69,13 @@ Watch the related courses on Nuxeo University
 *   **Nuxeo Server Version:** Studio will generate valid configuration for this Nuxeo Server version.
 *   **Packages to Install:** The list of additional dependencies needed to make your application work. Selected dependencies will be automatically installed when you deploy your Nuxeo Studio configuration on your server.
 
-Any public addon available in the <a href="https://marketplace.nuxeo.com" target="_blank">Nuxeo Marketplace</a> can be selected here: type a character to start filtering them. Options are shown with their title and description.
+Any Nuxeo public addon or [private addon you uploaded]({{page page='delivering-a-customization-package-through-the-nuxeo-marketplace'}}) in the <a href="https://marketplace.nuxeo.com" target="_blank">Nuxeo Marketplace</a> can be selected here: type a character to start filtering them. Options are shown with their title and description.
 ![]({{file name='addons-list.png'}} ?w=378,border=true)
 
 Addons that display a `Studio` tag bring additional options into Studio like new screens or options, making their configuration easier.
 ![]({{file name='studio-tag.png'}} ?w=301,border=true)
+
+Addons that display a `Private` tag mean they have been uploaded on the marketplace through the [private channel]({{page page='delivering-a-customization-package-through-the-nuxeo-marketplace'}}). Note that it is not yet possible to choose which version of a private package you want to depend on. Application definition will always add a dependency to the latest available version on the marketplace every time you save your changes.
 
 No change is kept until you manually press the save button, and pending changes are shown so that you can tell what will be added or removed and undo it if necessary.
 ![]({{file name='pending-modifications.png'}} ?w=394,border=true)
