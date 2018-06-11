@@ -105,17 +105,17 @@ history:
 ---
 The Nuxeo Marketplace is the channel provided by Nuxeo to distribute addons and patches to the Nuxeo Platform. [nuxeoctl]({{page space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}) provides an integrated way to browse this catalog of add-ons and install them. In JSF UI, the [Admin Center]({{page space='nxdoc' page='admin-tab-overview'}}) offers the same features from the Nuxeo Platform interface.
 
-This catalog of packages is public, although some addons require to be a Nuxeo Online Services customer to be able to install them.
+This catalog of packages is public, although some addons require a valid Nuxeo Online Services account to be able to install them.
 
-The Nuxeo Marketplace also provides a private channel to distribute packages to a specific audience. Nuxeo Online Services users can thus provide their own users with the same trustful, integrated way to browse and install private packages.
+The Nuxeo Marketplace also provides a private channel to distribute packages to a specific audience. Nuxeo Online Services users can provide their own users with the same safe, integrated method of browsing and installing private packages.
 
 ## Example Use Cases
 
 The purpose of the private channel is to enable Nuxeo Platform users who do some customization on the Platform to easily distribute their customization. Here are some examples of how this private channel can be helpful.
 
-For instance, if you do configuration using Nuxeo Studio and additional Java customization using Nuxeo CLI, you can create your Nuxeo Package and let other people (ex: sysadmin) easily install the whole project using a single package, instead of installing them separately. Once the private package is uploaded on the Nuxeo Marketplace, the application Definition screen in your Nuxeo Studio project lets you bundle them easily.
+For example, if you configure your Nuxeo instance with Nuxeo Studio as well as Nuxeo CLI for additional Java customization, you can create your Nuxeo Package and allow other people (ie/ sysadmin) to install the whole project using a single package, instead of installing them separately. Once the private package is uploaded on Nuxeo Marketplace, the Application Definition screen in your Nuxeo Studio project lets you bundle them easily.
 
-Another example is if you created your own application on top of the Nuxeo Platform and distribute it to your own clients (that may do Studio configuration themselves), you can use this private channel to provide hot fixes of your base application.
+Another example is if you create your own application on top of the Nuxeo Platform and distribute it to your own clients (who may add Studio configurations themselves), you can use this private channel to provide hot fixes of your base application.
 
 ## Who Can Use the Private Marketplace Channel
 
@@ -125,7 +125,7 @@ The Nuxeo Marketplace private channel is available to any Nuxeo Online Services 
 
 The Marketplace private channel can be used to provide any type of customization: simple XML configuration, Java code, configuration templates, libraries, etc. The only requirement is that the customization must be provided [as a Nuxeo Package]({{page space='nxdoc' page='creating-nuxeo-packages'}}).
 
-The target instance(s) can get the package from [Nuxeo Online Services](http://connect.nuxeo.com/) (via Internet). Otherwise, you can upload the package via the Local packages tab in the Admin Center or from the server command line with [NuxeoCtl]({{page space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}).
+The target instance(s) can retrieve the package from Nuxeo Online Services. Otherwise, you can upload the package via the Local packages tab in the Admin Center or from the server command line with [NuxeoCtl]({{page space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}).
 
 ## Uploading a Nuxeo Package
 
@@ -133,7 +133,7 @@ The target instance(s) can get the package from [Nuxeo Online Services](http://c
 
 **To provide customers with a private package:**
 
-1.  After logging in, browse to [Nuxeo Marketplace upload page](https://connect.nuxeo.com/nuxeo/site/marketplace/upload) or click on the button **Add your Nuxeo Package to the Marketplace**, located at the bottom of the screen.
+1.  After logging in, navigate to [Nuxeo Marketplace upload page](https://connect.nuxeo.com/nuxeo/site/marketplace/upload) page or click on the button **Add your Nuxeo Package to the Marketplace**, located at the bottom of the screen.
 2.  Fill in the form "Upload a Marketplace package" (see below for details).
 3.  Click on the **Submit** button.
     The package is uploaded. It can be installed using nuxeoctl, and is available in the **Private packages** tab of the **Update Center** when using JSF UI, for the instances that match your package's client(s) and project(s).
