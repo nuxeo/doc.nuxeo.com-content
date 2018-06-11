@@ -151,7 +151,7 @@ Using Nuxeo Studio you can:
 
 Here are a list of resources to start working with Nuxeo Studio:
 
-*   [Getting Started With Nuxeo Studio videos](https://university.nuxeo.io/nuxeo/university/#!/course/getting-started-nuxeo-studio): Our Nuxeo University course dedicated to the discovery of Nuxeo Studio
+*   [Nuxeo Studio Concepts video](https://university.nuxeo.com/learn/public/course/view/elearning/142/nuxeo-platform-quickstart-nuxeo-studio-concepts): Our Nuxeo University video dedicated to the discovery of Nuxeo Studio
 *   [Working in Studio Modeler]({{page page='working-in-studio'}}): This section of the documentation provides screen by screen descriptions of the tool
 *   [Essential Nuxeo Platform Terminology]({{page space='nxdoc' page='essential-nuxeo-platform-terminology'}}): Get familiar with the concepts and terms used in the Platform
 *   [Quick Start Dev Guide]({{page space='nxdoc' page='start-customizing-the-nuxeo-platform'}}): Start a Nuxeo Platform customization project using Nuxeo Studio and Nuxeo Generator

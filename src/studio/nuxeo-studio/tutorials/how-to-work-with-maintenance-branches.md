@@ -135,9 +135,7 @@ Watch the related courses on Nuxeo University
 ![]({{file version='' space='nxdoc' page='university' name='university-source-control.png'}} ?w=450,border=true)
 {{/callout}}
 
-## Before You Start
-
-### Scenario
+## Scenario
 
 The scenario for this how-to is the following:
 
@@ -149,6 +147,8 @@ The scenario for this how-to is the following:
 *   A second version of the Studio project (1.1.0) is ready that includes both correction sets and some improvements is ready for test and deployment.
 *   After version 1.1.0 of the project is deployed a new maintenance branch is created for bug fixes on that version.
 
+<!-- No need to integrate this prerequisite : there's no link between the how-to and the course, as it just gives an example of the kind of project update. Additionally, the BCContract won't be used anymore in this course, and the University course URL is obsolete
+
 ### Requirements
 
 This how-to requires to have access to the advanced features of Nuxeo. Please contact your sales representative to activate them.
@@ -159,7 +159,7 @@ To help following this how-to we provide you with some correction examples based
 *   Create, Edit and View layouts with at least the fields below:
     *   Title: leave as default
     *   Description: leave as default
-*   "Owner" text widget on the Create layout, using the [contract:owner](http://contractowner) schema field
+*   "Owner" text widget on the Create layout, using the [contract:owner](http://contractowner) schema field-->
 
 ## Creating the Maintenance Branch
 
