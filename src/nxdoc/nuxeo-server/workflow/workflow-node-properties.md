@@ -2,7 +2,7 @@
 title: Workflow Node Properties
 review:
     comment: ''
-    date: '2016-12-14'
+    date: '2017-12-18'
     status: ok
 labels:
     - lts2016-ok
