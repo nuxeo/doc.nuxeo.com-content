@@ -147,19 +147,17 @@ The scenario for this how-to is the following:
 *   A second version of the Studio project (1.1.0) is ready that includes both correction sets and some improvements is ready for test and deployment.
 *   After version 1.1.0 of the project is deployed a new maintenance branch is created for bug fixes on that version.
 
-<!-- No need to integrate this prerequisite : there's no link between the how-to and the course, as it just gives an example of the kind of project update. Additionally, the BCContract won't be used anymore in this course, and the University course URL is obsolete
-
 ### Requirements
 
 This how-to requires to have access to the advanced features of Nuxeo. Please contact your sales representative to activate them.
 
-To help following this how-to we provide you with some correction examples based on the a Contract document type as described in the [Getting Started with Nuxeo Studio]({{page space='nxdoc' page='getting-started-with-nuxeo-studio'}}) how-to. Of course you can do whatever modification on your project, the goal here being to give you guidelines to work with branches for the maintenance of your application. The required properties to complete this how-to using the Contract example are:
+To help following this how-to we provide you with some correction examples based on the a Contract document type as described in [this tutorial]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type). Of course you can do whatever modification on your project, the goal here is to give you guidelines to work with branches for the maintenance of your application. The required properties to complete this how-to using the Contract example are:
 
-*   In the Contract schema, a field `owner` that is a `string`
-*   Create, Edit and View layouts with at least the fields below:
-    *   Title: leave as default
-    *   Description: leave as default
-*   "Owner" text widget on the Create layout, using the [contract:owner](http://contractowner) schema field-->
+- In the Contract schema, a field `owner` that is a `string`
+- Create, Edit and View layouts with at least the fields below:
+    - **Title**: leave as default
+    - **Description**: leave as default
+- "Owner" text widget on the Create layout, using the `contract:owner` schema field
 
 ## Creating the Maintenance Branch
 
