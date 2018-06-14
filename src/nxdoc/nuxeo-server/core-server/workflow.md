@@ -21,7 +21,7 @@ confluence:
     shortlink: OwzF
     shortlink_source: 'https://doc.nuxeo.com/x/OwzF'
     source_link: /display/NXDOC/Workflow
-tree_item_index: 1100
+tree_item_index: 500
 history:
     -
         author: Manon Lumeau

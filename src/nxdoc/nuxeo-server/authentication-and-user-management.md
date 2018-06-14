@@ -30,7 +30,7 @@ confluence:
     shortlink: G4D1
     shortlink_source: 'https://doc.nuxeo.com/x/G4D1'
     source_link: /display/NXDOC/Authentication+and+User+Management
-tree_item_index: 800
+tree_item_index: 500
 history:
     -
         author: Solen Guitter

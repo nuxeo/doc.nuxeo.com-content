@@ -22,7 +22,7 @@ confluence:
     shortlink: Iwo5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/Iwo5AQ'
     source_link: /display/NXDOC/Security
-tree_item_index: 1200
+tree_item_index: 600
 history:
     -
         author: Manon Lumeau

@@ -27,7 +27,7 @@ confluence:
     shortlink: DIAO
     shortlink_source: 'https://doc.nuxeo.com/x/DIAO'
     source_link: /display/NXDOC/Runtime+and+Component+Model
-tree_item_index: 500
+tree_item_index: 100
 history:
     -
         author: Solen Guitter

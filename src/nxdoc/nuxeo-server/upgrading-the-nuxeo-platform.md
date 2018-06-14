@@ -21,7 +21,7 @@ confluence:
     shortlink: sgQz
     shortlink_source: 'https://doc.nuxeo.com/x/sgQz'
     source_link: /display/NXDOC/Upgrading+the+Nuxeo+Platform
-tree_item_index: 400
+tree_item_index: 800
 version_override:
     LTS 2015: 710/admindoc/upgrading-the-nuxeo-platform
     '6.0': 60/admindoc/upgrading-the-nuxeo-platform

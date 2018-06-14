@@ -23,7 +23,7 @@ confluence:
     shortlink: CYAO
     shortlink_source: 'https://doc.nuxeo.com/x/CYAO'
     source_link: /pages/viewpage.action?pageId=950281
-tree_item_index: 1800
+tree_item_index: 900
 history:
     -
         author: Estelle Giuly
