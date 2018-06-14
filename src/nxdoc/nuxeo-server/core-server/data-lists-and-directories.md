@@ -25,7 +25,7 @@ confluence:
     shortlink: K4xH
     shortlink_source: 'https://doc.nuxeo.com/x/K4xH'
     source_link: /display/NXDOC/Data+Lists+and+Directories
-tree_item_index: 1400
+tree_item_index: 800
 history:
     -
         author: Solen Guitter

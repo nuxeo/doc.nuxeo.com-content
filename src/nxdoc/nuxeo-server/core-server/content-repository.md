@@ -21,7 +21,7 @@ confluence:
     shortlink: D4AO
     shortlink_source: 'https://doc.nuxeo.com/x/D4AO'
     source_link: /display/NXDOC/Content+Repository
-tree_item_index: 600
+tree_item_index: 200
 history:
     -
         author: Solen Guitter

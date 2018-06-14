@@ -22,7 +22,7 @@ confluence:
     shortlink: UgYuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/UgYuAQ'
     source_link: /display/NXDOC/Audit
-tree_item_index: 1300
+tree_item_index: 700
 history:
     -
         author: Solen Guitter

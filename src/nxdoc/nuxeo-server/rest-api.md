@@ -26,7 +26,7 @@ confluence:
     shortlink: QYLQ
     shortlink_source: 'https://doc.nuxeo.com/x/QYLQ'
     source_link: /display/NXDOC/REST+API
-tree_item_index: 1000
+tree_item_index: 300
 history:
     -
         author: Solen Guitter

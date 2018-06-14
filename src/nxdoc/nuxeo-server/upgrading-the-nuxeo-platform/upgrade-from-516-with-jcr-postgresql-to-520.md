@@ -20,122 +20,123 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/tQQz'
     source_link: /pages/viewpage.action?pageId=3343541
 tree_item_index: 1300
+hidden: true
 version_override:
     LTS 2015: 710/admindoc/upgrade-from-516-with-jcr-postgresql-to-520
     '6.0': 60/admindoc/upgrade-from-516-with-jcr-postgresql-to-520
     '5.8': 58/admindoc/upgrade-from-516-with-jcr-postgresql-to-520
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2013-07-02 11:42'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-22 17:39'
         message: Migrated to Confluence 4.0
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2012-05-22 17:39'
         message: ''
         version: '21'
-    - 
+    -
         author: Julien Carsique
         date: '2011-06-15 14:01'
         message: ''
         version: '20'
-    - 
+    -
         author: Julien Carsique
         date: '2011-05-06 14:59'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2011-03-03 14:59'
         message: link update
         version: '18'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 14:43'
         message: ''
         version: '17'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:27'
         message: ''
         version: '16'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:24'
         message: ''
         version: '15'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 10:14'
         message: ''
         version: '14'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:14'
         message: ''
         version: '13'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 09:10'
         message: ''
         version: '12'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:55'
         message: ''
         version: '11'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-22 08:51'
         message: ''
         version: '10'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:11'
         message: ''
         version: '9'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 20:05'
         message: ''
         version: '8'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:21'
         message: ''
         version: '7'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 19:01'
         message: ''
         version: '6'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:23'
         message: ''
         version: '4'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:18'
         message: ''
         version: '3'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:12'
         message: ''
         version: '2'
-    - 
+    -
         author: Stéfane Fermigier
         date: '2010-07-21 18:00'
         message: ''
@@ -146,7 +147,7 @@ history:
 
 This article will help you to migrate your data from Nuxeo 5.1.6 to Nuxeo 5.2 in the case you are using JackRabbit with PostgreSQL as backend.
 
-We assume that your Nuxeo 5.1.6 is installed in $JBOSS_516 directory and Nuxeo 5.2 in $JBOSS_52 and you have well configured your Nuxeo 5.2 to work with Jackrabbit/PSQL. 
+We assume that your Nuxeo 5.1.6 is installed in $JBOSS_516 directory and Nuxeo 5.2 in $JBOSS_52 and you have well configured your Nuxeo 5.2 to work with Jackrabbit/PSQL.
 
 The steps to migrate are:
 
@@ -214,7 +215,7 @@ Two main problems occurs are present in the node type definitions from Nuxeo 5.1
 - some document definitions have changed :
     - Workspace type has two new supertypes: `ecmst:publish_ergo` and `ecmst:webcontainer`
     - Forum, Thread and post types use now `ecmdt:Document` as supertype instead of `ecmnt:document`
-    - WikiPage and BlogPost types use `ecmmix:versionable` as supertype instead of `mix:versionable` 
+    - WikiPage and BlogPost types use `ecmmix:versionable` as supertype instead of `mix:versionable`
 
 Editing the custom_nodetypes file is not easy because you have to format this file (tidy -xml ...) to edit it. So we recommend to replace the old custom_nodetypes.xml by the new one, generated from a fresh Nuxeo 5.2 installation.
 

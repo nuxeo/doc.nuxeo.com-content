@@ -24,7 +24,7 @@ confluence:
     shortlink: C4AO
     shortlink_source: 'https://doc.nuxeo.com/x/C4AO'
     source_link: /display/NXDOC/Events+and+Listeners
-tree_item_index: 1500
+tree_item_index: 400
 history:
     -
         author: Arnaud Kervern

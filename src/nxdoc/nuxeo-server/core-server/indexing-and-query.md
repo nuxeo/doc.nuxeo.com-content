@@ -21,7 +21,7 @@ confluence:
     shortlink: 9IdH
     shortlink_source: 'https://doc.nuxeo.com/x/9IdH'
     source_link: /display/NXDOC/Indexing+and+Query
-tree_item_index: 700
+tree_item_index: 300
 history:
     -
         author: Solen Guitter

@@ -22,7 +22,7 @@ confluence:
     shortlink: Go0ZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/Go0ZAQ'
     source_link: /display/NXDOC/Automation
-tree_item_index: 900
+tree_item_index: 400
 history:
     -
         author: Solen Guitter

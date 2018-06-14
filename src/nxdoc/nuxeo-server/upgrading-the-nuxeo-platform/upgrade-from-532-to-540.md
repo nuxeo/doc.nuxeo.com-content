@@ -26,17 +26,17 @@ version_override:
     '6.0': 60/admindoc/upgrade-from-532-to-540
     '5.8': 58/admindoc/upgrade-from-532-to-540
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-14 15:11'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-21 14:27'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2014-01-21 12:13'
         message: ''
