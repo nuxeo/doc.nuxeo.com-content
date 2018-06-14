@@ -138,9 +138,9 @@ Here, there are [no keep alive alternative](http://docs.oracle.com/javase/jndi/t
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-*   [HTTP and HTTPS Reverse-Proxy Configuration]({{page page='http-and-https-reverse-proxy-configuration'}})
-*   [Database]({{page page='database-configuration'}})
-*   [Using a LDAP Directory]({{page page='using-a-ldap-directory'}})
+- [HTTP and HTTPS Reverse-Proxy Configuration]({{page page='http-and-https-reverse-proxy-configuration'}})
+- [Database]({{page page='database-configuration'}})
+- [Using a LDAP Directory]({{page page='using-a-ldap-directory'}})
 
 {{/panel}}</div><div class="column medium-6">
 
