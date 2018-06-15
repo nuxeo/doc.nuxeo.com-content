@@ -261,7 +261,7 @@ Nuxeo applications are started using scripts.
 2.  Start the server using the `nuxeoctl` script (located in the `bin` directory):
 
     ```
-    ./bin/nuxeoctl start --gui
+    ./bin/nuxeoctl start --gui true
     ```
 
     {{#> callout type='tip' }}
@@ -317,7 +317,7 @@ Nuxeo applications are started using scripts.
 2.  Execute the&nbsp;`nuxeoctl` script with the&nbsp;`start` command.
 
     ```
-    ./nuxeoctl start --gui
+    ./nuxeoctl start --gui true
     ```
 
     The Control Panel opens and the server starts.
