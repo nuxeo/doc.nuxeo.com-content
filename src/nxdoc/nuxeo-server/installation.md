@@ -263,18 +263,46 @@ history:
 ---
 The Nuxeo Platform comes in many different packages and can be installed on many operating systems. You may have to install:
 
-*   a zip archive (works on any operating system that supports a Java Development Kit),
-*   a Windows installer (**.exe**),
-*   a virtual machine image (works on any operating system that supports running VMware or VirtualBox),
-*   a **.deb** package (works on Linux Debian and Ubuntu).
+- a zip archive (works on any operating system that supports a Java Development Kit),
+- a Windows installer (**.exe**),
+- a virtual machine image (works on any operating system that supports running VMware or VirtualBox),
+-  a **.deb** package (works on Linux Debian and Ubuntu).
 
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Video on the Installation Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/141/nuxeo-platform-quickstart-installation-concepts)
-- [Screenshare on the Installation Process](https://university.nuxeo.com/learn/public/course/view/elearning/139/nuxeo-platform-quickstart-installation-process).
-![]({{file name='university-installation.png' page='nxdoc/university'}} ?w=450,border=true)
-{{/callout}}
+<div>
+<table style="border-width:0px;">
+<tbody style="border-width:0px;">
+<tr>
+<td colspan="1" style="text-align:center; font-size:200%;">
+
+<b>
+![]({{file page='userdoc/icons-index' name='download-document-web-ui.png'}})</br>
+[Linux]({{page version='' space='nxdoc' page='installing-the-nuxeo-platform-on-linux'}})
+</b>
+</br>
+</td>
+<td colspan="1" style="text-align:center; font-size:200%;">
+
+<b>
+![]({{file page='userdoc/icons-index' name='download-document-web-ui.png'}})</br>
+[macOS]({{page version='' space='nxdoc' page='installing-the-nuxeo-platform-on-mac-os'}})
+</b>
+</br>
+</td>
+<td colspan="1" style="text-align:center; font-size:200%;">
+
+<b>
+![]({{file page='userdoc/icons-index' name='download-document-web-ui.png'}})</br>
+[Windows]({{page version='' space='nxdoc' page='installing-the-nuxeo-platform-on-windows'}})
+</b>
+</br>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
 
 ## General Installation Process
 
@@ -284,27 +312,19 @@ Installing the Nuxeo Platform requires a few steps:
 2.  [Install and Set up the related software]({{page page='installing-and-setting-up-related-software'}}) (unless you deploy on Amazon, the image already includes it).
 3.  Install and start the Nuxeo Platform server.
     To understand how to start a Nuxeo Platform server on different environments, you can read and follow one of our recipes:
+    - [Installing the Nuxeo Platform on Linux]({{page page='installing-the-nuxeo-platform-on-linux'}})
+    - [Installing the Nuxeo Platform on Windows]({{page page='installing-the-nuxeo-platform-on-windows'}})
+    - [Installing the Nuxeo Platform on Mac OS]({{page page='installing-the-nuxeo-platform-on-mac-os'}})
+    - [Deploying Nuxeo on Amazon AWS]({{page page='deploying-nuxeo-on-amazon-aws'}})
+    - [Deploying as a Standard Static WAR]({{page page='deploying-as-a-standard-static-war'}})
+4.  Run the [Configuration Wizard]({{page page='configuration-wizard'}}) (not in the case of a standard static WAR).
 
-<div class="row" data-equalizer data-equalize-on="medium">
-    <div id="quick-access" class="row medium-up-3 space-top-1">
-        <div class="column">
-            <a class="button expanded" href="{{page version='' space='nxdoc' page='installing-the-nuxeo-platform-on-linux'}}">Install the Nuxeo Platform on Linux</a>
-        </div>
-        <div class="column">
-            <a class="button expanded" href="{{page version='' space='nxdoc' page='installing-the-nuxeo-platform-on-mac-os'}}">Install the Nuxeo Platform on macOS</a>
-        </div>
-        <div class="column">
-            <a class="button expanded" href="{{page version='' space='nxdoc' page='installing-the-nuxeo-platform-on-windows'}}">Install the Nuxeo Platform on Windows</a>
-        </div>
-    </div>
-</div>
-
-
-Other options are available:
-- [Deploy Nuxeo on Amazon AWS]({{page page='deploying-nuxeo-on-amazon-aws'}})
-- [Deploy as a Standard Static WAR]({{page page='deploying-as-a-standard-static-war'}})
-
-Once Nuxeo Platform installed, run the [Configuration Wizard]({{page page='configuration-wizard'}}) (not in the case of a standard static WAR).
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Video on the Installation Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/141/nuxeo-platform-quickstart-installation-concepts)
+- [Screenshare on the Installation Process](https://university.nuxeo.com/learn/public/course/view/elearning/139/nuxeo-platform-quickstart-installation-process).
+![]({{file name='university-installation.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
 
 ## Hardware and Software Requirements
 
