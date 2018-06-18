@@ -118,6 +118,7 @@ Hot reload support is controlled by the Nuxeo development mode. This mode can be
 org.nuxeo.dev=true
 
 ```
+{{! multiexcerpt name='JSF-UI-required'}} {{#> callout type='note' }} This requires to have the JSF UI addon installed on your server. {{/callout}}{{! /multiexcerpt}}
 
 Activating this mode can also be done in the Admin Center, in the **Update Center** > **Nuxeo Studio** tab, or in the **System information** > **Setup** tab.
 
