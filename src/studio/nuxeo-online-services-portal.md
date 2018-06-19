@@ -111,14 +111,29 @@ We strongly recommend that you fill in your application detail and target enviro
 
 1.  In **My Application** page, there is a list of your available accounts and projects.
     The information on your applications are displayed.
-2.  To edit application's detail, roll over the tool icon ![]({{file name='CONNECT-tool-icon.png'}}) to display the contextual menu.
-    ![]({{file name='CONNECT-application-view.png'}} ?w=725)
-3.  Click on the edition link, with the edit icon ![]({{file name='CONNECT-edit-icon.png'}}).
+2.  To edit application's detail, roll over the tool icon ![CONNECT Tool Icon](nx_asset://6713b6df-b95d-46fa-9701-ff2795a43873 ?w=25) to display the contextual menu.
+    <!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/NOS/CONNECT    Application View
+    name: CONNECT-application-view.png
+    studio_modeler#screenshot#up_to_date
+    -->
+    ![CONNECT Application View](nx_asset://de7cd58d-7606-4d9a-8f98-0d903f0dd3ce ?w=650,border=true)
+3.  Click on the edition link, with the edit icon ![CONNECT Edit Icon](nx_asset://ce0e3bd8-059d-4c5d-9dbb-54eb806bb3eb ?w=25).
 4.  Fill in or edit the information.
-    ![]({{file name='CONNECT-application-edit.png'}} ?w=400,h=282,border=true)
+    <!--     ### NX_ASSET ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/NOS/CONNECT-application-edit
+        name: CONNECT-application-edit.png
+        studio_modeler#screenshot#to_be_updated
+    -->
+    ![CONNECT Application Edit](nx_asset://7b87837f-2cba-4bb7-84e0-16388f2d009a ?w=350,border=true)
 5.  Click on the **Update** button.
     Information is saved.
-    ![]({{file name='CONNECT-application-edited.png'}} ?w=725)
+    <!--     ### NX_ASSET ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/NOS/Connect Application Edited
+    name: CONNECT-application-edited.png
+    studio_modeler#screenshot#up_to_date
+    -->
+    ![CONNECT Application Edited](nx_asset://640a8741-e75e-46b3-b0ce-68cfe11702f5 ?w=650,border=true)
 
 **RELATED TOPICS**
 
