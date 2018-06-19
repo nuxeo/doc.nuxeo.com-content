@@ -92,19 +92,17 @@ history:
 The Nuxeo Online Services portal gives you access to information about each of your Nuxeo-based applications and the services that have been enabled.
 Available services are:
 
-*   Nuxeo Studio,
-*   support contract (developer or operations).
+- Nuxeo Studio,
+- support contract (developer or operations).
 
 Available information includes:
 
-*   application details (such as the target delivery date),
-*   the target environment,
-*   the registered instances.
+- application details (such as the target delivery date),
+- the target environment,
+- the registered instances.
 
 {{#> callout type='info' }}
-
 We strongly recommend that you fill in your application detail and target environment, as this is information often needed by the support team to resolve any logged issues.
-
 {{/callout}}
 
 **To fill in or edit your application's details and target environment:**
@@ -113,9 +111,9 @@ We strongly recommend that you fill in your application detail and target enviro
     The information on your applications are displayed.
 2.  To edit application's detail, roll over the tool icon ![CONNECT Tool Icon](nx_asset://6713b6df-b95d-46fa-9701-ff2795a43873 ?w=25) to display the contextual menu.
     <!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/NOS/CONNECT    Application View
-    name: CONNECT-application-view.png
-    studio_modeler#screenshot#up_to_date
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/NOS/CONNECT    Application View
+      name: CONNECT-application-view.png
+      studio_modeler#screenshot#up_to_date
     -->
     ![CONNECT Application View](nx_asset://de7cd58d-7606-4d9a-8f98-0d903f0dd3ce ?w=650,border=true)
 3.  Click on the edition link, with the edit icon ![CONNECT Edit Icon](nx_asset://ce0e3bd8-059d-4c5d-9dbb-54eb806bb3eb ?w=25).
