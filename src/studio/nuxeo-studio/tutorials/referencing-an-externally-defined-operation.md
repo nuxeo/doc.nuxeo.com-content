@@ -161,7 +161,7 @@ Basically, to enable a custom operation in your Studio project, you need to:
 **To import the operation definition:**
 
 1.  Make sure you have an [custom operation implemented]({{page space='nxdoc' page='contributing-an-operation'}}) and deployed on the Nuxeo instance where you also deployed your Studio plugin.
-2.  Go to **Advanced settings > Registries > Automation Operations**
+2.  Go to **SETTINGS > Registries > Automation Operations**
 3.  Pay attention to the given sample definition, copy-paste it and adapt to your custom operation (regarding operation ID, parameters type and value, accepted input and output, ...).
 
     {{#> callout type='tip' }}
