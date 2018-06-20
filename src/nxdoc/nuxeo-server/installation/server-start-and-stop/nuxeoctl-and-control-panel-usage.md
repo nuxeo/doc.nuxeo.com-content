@@ -565,7 +565,7 @@ Useful for starting Nuxeo as a service.</td>
 </tr>
 <tr>
 <td colspan="1">`mp-list`</td>
-<td colspan="1">List local Marketplace packages.</td>
+<td colspan="1">List local Marketplace packages (including hotfixes).</td>
 </tr>
 <tr>
 <td colspan="1">`mp-listall`</td>
