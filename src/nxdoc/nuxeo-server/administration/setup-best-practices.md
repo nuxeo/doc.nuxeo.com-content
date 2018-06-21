@@ -220,6 +220,8 @@ By default, `data` and `log` directories are stored inside the Nuxeo tree. To ea
 
 **To move the data and log directories:**
 
+{{{multiexcerpt name='JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
+
 1.  In the Admin tab **System Information** > **Setup** tab, type the path to the location where you want the directories to be stored (see the table below).
 2.  Click on **Save**.
 3.  Restart your server.
