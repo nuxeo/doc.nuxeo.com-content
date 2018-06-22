@@ -578,11 +578,11 @@ Every project super POM should define the following if not defined (or different
   </site>
   <repository>
     <id>public-releases</id>
-    <url>http://maven.in.nuxeo.com/nexus/content/repositories/public-releases</url>
+    <url>https://mavenin.nuxeo.com/nexus/content/repositories/public-releases</url>
   </repository>
   <snapshotRepository>
     <id>public-snapshots</id>
-    <url>http://maven.in.nuxeo.com/nexus/content/repositories/public-snapshots</url>
+    <url>https://mavenin.nuxeo.com/nexus/content/repositories/public-snapshots</url>
     <uniqueVersion>true</uniqueVersion>
   </snapshotRepository>
 </distributionManagement>
