@@ -132,7 +132,12 @@ This workflow will be a wrapper for the subworkflows. So contrarily to the previ
 3.  Link the subworkflow's output transition to the end node.
 4.  Save your modifications.
     Your graph should look like this:
-    ![]({{file name='expensevalidation-wf-before-node-edition.png'}} ?w=400,border=true)
+    <!--     ### NX_ASSET ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/3- Creating the Main Workflow/Expense validation Workflow Before Node Edition
+      name: expensevalidation-wf-before-node-edition.png
+      studio_modeler#screenshot#up_to_date
+    -->
+    ![Expense validation Workflow Before Node Edition](nx_asset://e66a4612-cc80-4783-8966-b40d69562887 ?w=500,border=true)
 
 ### Edit the Sub Workflow Node
 
@@ -146,17 +151,27 @@ Set the following values:
     `@{Document["expense:amount"] < 100 && Document["expense:expensetype"] != 'Misc' ? 'subOneLevelValidation' : 'subTwoLevelsValidation'`}
     This implements our business logic rule, by checking the expense's amount and its type. If under $100 and not in the misc category, then we call a one level validation, otherwise a two-level validation.
     Result below (as seen in the expression editor because it is a rather large expression):
-    ![]({{file name='mainwf-subworkflow-field.png'}} ?w=500,border=true)
+    <!--     ### NX_ASSET ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/3- Creating the Main Workflow/Main Workflow Subworkflow-field
+      name: mainwf-subworkflow-field.png
+      studio_modeler#screenshot#up_to_date
+    -->
+    ![Main Workflow Subworkflow-field](nx_asset://92ae7787-e7b6-40a0-bed5-e45c6cda6755 ?w=500,border=true)
 
 3.  Workflow variables: This field determines which variables we will send to the sub workflow that is called. Note that to be able to use it in your subworkflow, it has to be set in the subworkflow Variables tab; as we did this already in the previous step, we're fine. Each value has to be set on a separate line, so we will fill this field as following:
 
     ```
-    level1Assignees=group:accounting
-    level2Assignees=Eric
+    level1Assignees=@{Fn.concatenateValuesAsNewList(["group:accounting"])}
+    level1Assignees=@{Fn.concatenateValuesAsNewList(["Eric"])}
     ```
 
     Look at the result below:
-    ![]({{file name='mainwf-general-node.png'}} ?w=500,border=true)
+    <!--     ### NX_ASSET ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/3- Creating the Main Workflow/Main Workflow General Node
+      name: mainwf-general-node.png
+      studio_modeler#screenshot#up_to_date
+    -->
+    ![Main Workflow General Node](nx_asset://c7850300-1876-45d4-92c3-b190db43ccec ?w=500,border=true)
 
 4.  Save your modifications in the node and on the graph.
 
