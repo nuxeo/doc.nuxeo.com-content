@@ -2,7 +2,7 @@
 title: 3- Creating the Main Workflow
 review:
     comment: ''
-    date: '2017-01-24'
+    date: '2018-06-27'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - grenard
     - subworkflow
     - sub-workflow
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '14257562'
@@ -93,9 +93,7 @@ previous_link: /nxdoc/2-creating-the-subworkflows
 
 ---
 {{#> callout type='info' }}
-
 This document is part of the [Sub Workflow Example]({{page page='sub-workflow-example'}}) project series.
-
 {{/callout}}
 
 ## What Will We Do In this Step?
@@ -112,7 +110,7 @@ We will create the main workflow that will call a subworkflow depending on the d
     - **(Optional) Description**: Request your expense validation.
 3.  Click on the **Ok** button.
 
-### Activtion Tab
+### Activation Tab
 
 This workflow will be a wrapper for the subworkflows. So contrarily to the previous ones we created, it should be visible to the users.
 
