@@ -71,9 +71,9 @@ When storing files in the cloud using for instance the native Amazon S3 connecto
 When storing files on premise, Nuxeo arranges to maximize performances by distributing files in subfolders. A md5 checksum of the file is calculated, and the file is stored in a two-level folder structure named after the first characters of the checksum.
 
 For example, a file having the following checksum: `38c8a503c45169a0668c4ef0c2dc12ec` would be stored in a `38`/`c8` folder structure. The number of characters used for the folder naming is easily configurable, although it's unlikely you will need more than the two characters used by default:
-- Each folder level is made of 1296 combinations (36 * 36 characters),
-- That means we reach a total of 1 679 616 folder combinations in total (36^4),
-- If we store only 1000 files per folder, we are already way over a billion and a half files stored (1 679 616 000).
+- Each folder level is made of 256 combinations (16 * 16 characters),
+- That means we reach a total of 65536 folder combinations in total (16^4),
+- If we store 1000 files per folder, we are over 65 million files stored (65 536 000).
 
 Even older filesystems have no performance problem until 10 000 files per folder, which gives you a lot of latitude. Past a certain point, you may wish however to lower costs by distributing files between different hardware solutions. This can easily be achieved by adding repositories in your application, and we describe this solution in the [scaling database storage](#scaling-database-storage) below.
 
