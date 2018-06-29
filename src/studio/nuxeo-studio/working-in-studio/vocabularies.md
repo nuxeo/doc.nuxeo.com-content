@@ -149,7 +149,7 @@ In each of these three types of vocabulary you will find identical parameters li
     **Always** means it will override the existing values with the ones that are on Studio. It should be used with a lot of attention, as there is no way to revert, if data has been deleted at deployment.
     **Never** would be used so as to disable the data loading logic temporarily, but would still declare the directory.
 *   **Delete** and **Delete all**: Used to delete the values.
-*   **Import CSV:** Opens a pop-up with inline documentation. You can either import data in Studio from a CSV file **or** references a file that is never "parsed" from Studio (only by your Nuxeo Platform at deployment time). Choose the second option if you have many lines, for a better user experience with your Studio project. The first line of the CSV file is the header that defines the vocabulary fields: id, label, obsolete, ordering, and parent for hierarchical vocabularies. See examples []({{file name='simple-vocabulary.csv'}}) and []({{file name='hierarchical-vocabulary.csv'}}).
+*   **Import CSV:** Opens a pop-up with inline documentation. You can either import data in Studio from a CSV file **or** references a file that is never "parsed" from Studio (only by your Nuxeo Platform at deployment time). Choose the second option if you have many lines, for a better user experience with your Studio project. The first line of the CSV file is the header that defines the vocabulary fields: id, label, obsolete, ordering, and parent for hierarchical vocabularies. See examples [Simple Vocabulary]({{file name='simple-vocabulary.csv'}}) and [Hierarchical Vocabulary]({{file name='hierarchical-vocabulary.csv'}}).
 
 ## **The Simple Vocabulary**
 
