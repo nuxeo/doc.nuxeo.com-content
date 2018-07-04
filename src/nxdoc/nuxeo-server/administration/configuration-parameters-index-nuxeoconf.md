@@ -1887,6 +1887,15 @@ It is also used by default&nbsp;for sensitive configuration data encryption, see
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
+<td colspan="1">`session.config.tracking.mode.cookie`</td>
+<td colspan="1">Session tracking mode.<br/>
+If `true`, prevents Tomcat from appending the `jsessionid` parameter to the URLs, for example a file download URL. Yet, cookies need to be enabled in the browser.<br/>
+Otherwise, the `jsessionid` parameter might be appended to some URLs, for instance when sharing a document permalink to an anonymous user or when clearing the browser's cookies. Yet, cookies don't need to be enabled in the browser.
+</td>
+<td colspan="1">`false`</td>
+<td colspan="1">Since Nuxeo 8.10-HF33</td>
+</tr>
+<tr>
 <td colspan="1">`nuxeo.updatecenter.disabled`</td>
 <td colspan="1">false (unset)</td>
 <td colspan="1">Disables the Update Center feature.</td>
