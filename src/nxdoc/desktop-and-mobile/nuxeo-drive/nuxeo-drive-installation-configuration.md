@@ -327,13 +327,13 @@ This can also be set up by the user from the Settings window.</td>
 </tr>
 <tr>
 <td colspan="1">`update-site-url`</td>
-<td colspan="1">[http://community.nuxeo.com/static/drive/](http://community.nuxeo.com/static/drive/)</td>
+<td colspan="1">[https://community.nuxeo.com/static/drive-updates/](https://community.nuxeo.com/static/drive-updates/)</td>
 <td colspan="1">Configure custom update website.
 See [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}}) for more details.</td>
 </tr>
 <tr>
 <td colspan="1">`beta-update-site-url`</td>
-<td colspan="1">[http://community.nuxeo.com/static/drive-tests/](http://community.nuxeo.com/static/drive-tests/)</td>
+<td colspan="1">[https://community.nuxeo.com/static/drive-udates/](https://community.nuxeo.com/static/drive-updates/)</td>
 <td colspan="1">Configure custom beta update website.</td>
 </tr>
 <tr>
