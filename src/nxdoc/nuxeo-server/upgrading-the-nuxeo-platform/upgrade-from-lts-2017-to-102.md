@@ -1,9 +1,9 @@
 ---
-title: Upgrade from LTS 2017 to FT 10.1
-description: Instructions to upgrade your Nuxeo Platform instance from LTS 2017 version to FT 10.1.
+title: Upgrade from LTS 2017 to FT 10.2
+description: Instructions to upgrade your Nuxeo Platform instance from LTS 2017 version to FT 10.2.
 review:
     comment: ''
-    date: '2018-03-11'
+    date: '2018-07-04'
     status: ok
 labels:
     - multiexcerpt
@@ -12,7 +12,19 @@ tree_item_index: 91
 
 ---
 
-## From LTS 2017 to FT 10.1
+<!--
+{{! multiexcerpt name='9.10-to-10.10-upgrade-page'}} For the general upgrade process, see the page [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}}).
+
+{{! excerpt}}
+
+This chapter highlights some major information about upgrade from Nuxeo Platform LTS 2017 (9.10) to Nuxeo Platform LTS 2018 (10.10). We strongly encourage you to also have a quick read of the upgrade notes.
+
+If you had already upgraded to previous 9.x Fast Track versions, check out the page [Upgrade from LTS 2017 following Fast Tracks]({{page version='' space='nxdoc' page='upgrade-from-lts-2017-to-101'-following-fast-tracks'}}) for upgrade instructions from 10.1 to 10.2, 10.2 to 10.3 or 10.3 to LTS 2018.
+
+{{! /excerpt}}
+-->
+
+## From LTS 2017 to FT 10.2
 
 ### Installation and Configuration
 
