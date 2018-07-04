@@ -2,7 +2,7 @@
 title: Upgrade from LTS 2017 following Fast Tracks
 review:
     comment: ''
-    date: '2018-03-12'
+    date: '2018-07-04'
     status: ok
 labels:
     - multiexcerpt
@@ -116,3 +116,124 @@ See [NXP-24089](https://jira.nuxeo.com/browse/NXP-24089).
 
 - [Upgrade notes for 10.1](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%2210.1%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 - [Release notes for 10.1]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
+
+## From 10.1 to 10.2
+
+### Installation and Configuration
+
+### Requirements
+{{! multiexcerpt name='upgrade-10.2-installation-requirements'}}
+- **Elasticsearch** >= 6.x is required.
+- **Kafka** >= 1.1.0 is required.
+{{! /multiexcerpt}}
+
+
+### Data
+
+#### Elasticsearch
+{{! multiexcerpt name='upgrade-10.2-installation-elasticsearch-upgrade'}}
+Elasticsearch 6.x is required.
+
+See [NXP-24102](https://jira.nuxeo.com/browse/NXP-24499).
+{{! /multiexcerpt}}
+
+### Code Changes
+
+#### Automation Scripting
+
+{{! multiexcerpt name='upgrade-10.2-code.relax-import-constraints'}}
+The import constraints have been relaxed, it's now possible to allow specific Java classes to be used via Automation Scripting, by default we add:
+
+- `java.util.ArrayList`
+- `java.util.Arrays`
+- `java.util.Collections`
+- `java.util.UUID`
+- `org.nuxeo.runtime.transaction.TransactionHelper`
+- `org.nuxeo.ecm.core.api.Blobs`
+- `org.nuxeo.ecm.core.api.impl.blob.StringBlob`
+- `org.nuxeo.ecm.core.api.impl.blob.JSONBlob`
+
+See [NXP-25020](https://jira.nuxeo.com/browse/NXP-25020).
+{{! /multiexcerpt}}
+
+
+#### Code Behavior Changes
+
+{{! multiexcerpt name='upgrade-10.2-code.new-KeyValueStoreUIDSequencer'}}
+- A new `KeyValueStoreUIDSequencer` is available, to store sequences in a key/value store. The store is the same for all sequencers, but they are using different keys, prefixed by the sequencer name.
+  See [NXP-23744](https://jira.nuxeo.com/browse/NXP-23744).
+{{! /multiexcerpt}}
+
+{{! multiexcerpt name='upgrade-10.2-code.KeyValueBlobTransientStore'}}
+- A `KeyValueBlobTransientStore` can now specify the ids of the key/value store and blob provider to use, instead of defaulting to the name of the transient store itself
+  See [NXP-24847](https://jira.nuxeo.com/browse/NXP-24847).
+{{! /multiexcerpt}}
+
+{{! multiexcerpt name='upgrade-10.2-code.documentResolver'}}
+- The following two `documentResolver` restrictions with `idOnly` and `pathOnly` are now possible:
+  ```
+  <xs:restriction base="xs:string" ref:resolver="documentResolver" ref:store="idOnly" />
+  ```
+
+  ```
+  <xs:restriction base="xs:string" ref:resolver="documentResolver" ref:store="pathOnly" />
+  ```
+
+  Their semantics is to store only the id or only the path, without any prefixed repository. When fetching the constraint, the document of the given id or path is resolved in the same repository as the current document.
+
+  See [NXP-22450](https://jira.nuxeo.com/browse/NXP-22450).
+{{! /multiexcerpt}}
+
+{{! multiexcerpt name='upgrade-10.2-api.KeyValueStore'}}
+- New APIs are available on `KeyValueStore`.
+</br>
+  * Optimized storage of Long values:
+    - put(String key, Long value)
+    - put(String key, Long value, long ttl)
+    - getLong(String key)
+    - getLongs(Collection<String> keys)
+
+  * Atomic increment:
+    - addAndGet(String key, long delta)
+
+  See [NXP-23745](https://jira.nuxeo.com/browse/NXP-23745).
+{{! /multiexcerpt}}
+
+{{! multiexcerpt name='upgrade-10.2-code.skipAggregates'}}
+- You can add the skipAggregates=true http header when invoking the search rest endpoint to skip any aggregation computation on a page provider query.
+
+  See [NXP-25158](https://jira.nuxeo.com/browse/NXP-25158).
+{{! /multiexcerpt}}
+
+
+#### Operation changes
+
+{{! multiexcerpt name='upgrade-10.2-operation.SuggestUserEntries'}}
+- Since Nuxeo 10.2 and 9.10-HF03, the `SuggestUserEntries` operation performs a full name user search, e.g. typing "John Do" returns the user with first name "John" and last name "Doe".
+
+  See [NXP-24583](https://jira.nuxeo.com/browse/NXP-25020).
+{{! /multiexcerpt}}
+
+#### Deprecated APIs
+
+##### Enable new TrashService
+{{! multiexcerpt name='upgrade-10.2-deprecated.lifecycle_transition_event'}}
+- The new TrashService fires dedicated events `documentTrashed` and `documentUntrashed` (hold by TrashService interface) instead of `lifecycle_transition_event`. The document model passed in the event won't be saved by Nuxeo at the end.
+
+  See [NXP-24850](https://jira.nuxeo.com/browse/NXP-24850).
+{{! /multiexcerpt}}
+
+### Addons
+
+#### Nuxeo Vision
+
+{{! multiexcerpt name='upgrade-10.2-addons.nuxeo-vision'}}
+- The features to use (and sent to the provider) are no more checked against a predifined list. This allows for using any new feature available without waiting for an update of the plugin. After using such new feature, caller should use the `getNativeObject` method and handle the results based on the provider's documentation.
+
+  See [NXP-24499](https://jira.nuxeo.com/browse/NXP-24499).
+{{! /multiexcerpt}}
+
+
+### Complementary Information
+- [Upgrade notes for 10.2](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%2210.2%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+- [Release notes for 10.2]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
