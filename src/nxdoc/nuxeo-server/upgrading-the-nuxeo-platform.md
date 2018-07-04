@@ -461,6 +461,7 @@ You should have [configured Nuxeo with a specific configuration]({{page page='se
 {{#> callout type='note' heading='Note about Redis jobs '}}
 
 Make sure no jobs are still queued or running before starting the upgrade procedure.
+Make sure all the workflows are finished to avoid issues aftrer the upgrade.
 
 {{/callout}}
 
