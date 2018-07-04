@@ -333,7 +333,7 @@ See [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}}) for more 
 </tr>
 <tr>
 <td colspan="1">`beta-update-site-url`</td>
-<td colspan="1">[https://community.nuxeo.com/static/drive-udates/](https://community.nuxeo.com/static/drive-updates/)</td>
+<td colspan="1">[https://community.nuxeo.com/static/drive-udpates/](https://community.nuxeo.com/static/drive-updates/)</td>
 <td colspan="1">Configure custom beta update website.</td>
 </tr>
 <tr>
