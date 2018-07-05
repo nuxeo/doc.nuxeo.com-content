@@ -123,19 +123,75 @@ See [NXP-24089](https://jira.nuxeo.com/browse/NXP-24089).
 ### Installation and Configuration
 
 #### Requirements
+
 {{! multiexcerpt name='upgrade-10.2-installation-requirements'}}
 - **Elasticsearch** >= 6.x is required.
 - **Kafka** >= 1.1.0 is required.
 {{! /multiexcerpt}}
 
-
 ### Data
 
 #### Elasticsearch
-{{! multiexcerpt name='upgrade-10.2-installation-elasticsearch-upgrade'}}
-Elasticsearch 6.x is required.
 
-See [NXP-24102](https://jira.nuxeo.com/browse/NXP-24102).
+{{! multiexcerpt name='upgrade-10.2-installation-elasticsearch-upgrade'}}
+
+Elasticsearch 6.x is required since Nuxeo 10.2. Follow those necessary steps to upgrade:
+
+1. Upgrade Elasticsearch version
+1. Update your custom settings and mapping to follow new Elasticsearch rules
+1. Re-index the repository to apply the new settings and mapping
+1. Update your custom code that queries Elasticsearch directly
+
+##### Upgrade Elasticsearch Version
+
+If your indices have been created with LTS 2017 they are in Elasticsearch 5.6 format and can be read by Elasticsearch 6.x.
+in this case follow the [full cluster restart upgrade procedure](https://www.elastic.co/guide/en/elasticsearch/reference/current/restart-upgrade.html).
+
+If your indices have been created with LTS 2016 (Elasticsearch 2.x format) or LTS 2015 (1.x format) Elasticsearch 6.x will not start,
+in this case an index need to be migrated to the new Elasticsearch 6.x format:
+- The repository index named `nuxeo` by default doesn't need this migration because the repository will be re-indexed in the next step,
+  so once this index has been backed up you can delete it.
+- The sequence index named `nuxeo-uidgen` cannot be migrated because the `_source` field is disabled, Nuxeo will take care to re-create this index at startup,
+  so once this index has been backed up you can delete it.
+- The audit index named `nuxeo-audit` need to be migrated. Follow the [reindex upgrade procedure](https://www.elastic.co/guide/en/elasticsearch/reference/6.3/reindex-upgrade.html).
+
+Please refer to [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) for more information on upgrading your Elasticsearch cluster.
+
+#####  Update Your Custom Elasticsearch Settings and Mapping
+
+If you have a custom configuration for Elasticsearch it needs to be adapted to follow the new 6.x rules.
+
+Here are the necessary changes to apply on your existing Nuxeo LTS 2017/Elasticsearch 5.6 configuration.
+(If you upgrade from an older configuration refer to the upgrade steps of LTS 2017).
+
+- The default settings is located in `templates/common-base/nxserver/config/elasticsearch-doc-settings.json.nxftl`.
+  - The ngram tokenizer will complain if the difference of `max_gram` and `min_gram`  is greater than one.
+    Either increase the `max_ngram_diff`, either reduce the `max_gram`.
+    Note that the default Nuxeo settings defines an ngram analyzer but it is not used by default.
+- The default mapping is located in `templates/common-base/nxserver/config/elasticsearch-doc-mapping.json`.
+  - `_all` is a deprecated field, Nuxeo uses an explicit `all_field` for this purpose, the line `"_all": {"enabled": false}` must be removed.
+  - Only one Elasticsearch type is supported per index, the line `"mapping.single_type": true` must be removed.
+
+##### Re-Index the Repository
+
+If your indices have been created with LTS 2017 (Elasticsearch 5.6 format) you don't need to run this step.
+
+If you want to apply your new custom settings or mapping you have to re-index the entire repository.
+
+When using the JSF UI this can be done from the **Admin**&nbsp;> **Elasticsearch**&nbsp;> **Admin** page.
+
+Or this can be done via REST:
+
+```
+curl -v -X POST 'http://localhost:8080/nuxeo/site/automation/Elasticsearch.Index' -u Administrator:Administrator -H 'content-type: application/json+nxrequest' -d '{"params":{},"context":{}}'
+```
+
+##### Update Your Custom Code That Query Elasticsearch Directly
+
+Any custom native queries done using the passthrough or code need to be reviewed to follow Elasticsearch 6 query format, for instance:
+
+- query on boolean term must be explicitly use `true` or `false` no more `1` or `0`
+- query must not use the `_type` field.
 {{! /multiexcerpt}}
 
 ### Code Changes
