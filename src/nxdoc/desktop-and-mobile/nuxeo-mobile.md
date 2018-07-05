@@ -190,9 +190,9 @@ The Nuxeo **Android** application can be installed from [Google Play](https://pl
 
 ## Functional Overview
 
-The Nuxeo application allows you to authenticate against a Nuxeo server, browse and search the Nuxeo repository. In addition, you can manage your favorite documents and access your shared/personal collections. All features listed below are available using the side ("burger") menu.
+The Nuxeo application allows you to authenticate against a Nuxeo server, browse and search the Nuxeo repository. In addition, you can manage your favorite documents and access your shared/personal collections. Finally, you can start and process workflows tasks on your assets. All features listed below are available using the side ("burger") menu.
 
-![]({{file name='mobile-menu.png'}} ?w=200,h=355,border=true)
+![]({{file name='mobile-menu.png'}} ?w=200,h=433,border=true)
 
 ### Authenticating
 
@@ -211,13 +211,23 @@ Once the application is installed and opened, indicate the Nuxeo server you want
 
 ### Browsing Content
 
-The **Browse** menu enables you to browse your documents. The thumbnail of the document is displayed whenever it's available, just like on the regular web user interface (see the [Limitations](#limitations) section). Otherwise an icon is displayed. Tap to enter the workspace or see the document. Actions on documents are available by **sliding**:
+The **Browse** menu enables you to browse your documents. The thumbnail of the document is displayed whenever it's available, just like on the regular web user interface (see the [Limitations](#limitations) section). Otherwise an icon is displayed. Tap to enter the workspace or see the document. Actions on documents are available by **taping overflow button**:
 
 *   Share
 *   Add to/Remove from favorites (see below for details)
 *   Add to Collections
+*   Start Process (see below for details about workflows)
 
-![]({{file name='mobile-actions-sliding.png'}} ?w=200,h=355,border=true)
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='mobile-actions-overflow.jpg'}} ?w=200,h=355,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-actions-overflow-menu.png'}} ?w=200,h=355,border=true)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 For any non folderish document, such as notes and files typically, some information is displayed on the view layout:
 
@@ -290,6 +300,10 @@ Browsing your repository, you can add a document to one or several collections. 
 </tbody>
 </table>
 </div>
+
+### Workflows
+User
+
 
 
 ### Share / Open in
