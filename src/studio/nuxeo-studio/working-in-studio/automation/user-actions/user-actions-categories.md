@@ -306,7 +306,7 @@ These categories are available on all Nuxeo Platform modules.
 
 ### {{> anchor 'breadcrumbs_actions'}}Breadcrumbs
 
-Technical name: `BREADCRUMBS_ACTIONS`
+Technical name: `BREADCRUMB_ACTIONS`
 
 Available since Nuxeo Platform 5.9.2.
 
