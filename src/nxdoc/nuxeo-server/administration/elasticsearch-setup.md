@@ -479,8 +479,14 @@ The Nuxeo Platform can communicate with Elasticsearch using 2 different protocol
   (using port 9300 by default), in this case you are encouraged to use the same major version on client and cluster sides as described in the matrix below.
   We recommend to use the same JVM version for all Elasticsearch nodes and Nuxeo.
 - The [HTTP Rest protocol](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/5.6/java-rest-high.html)
-  (using port 9200 by default), which provides looser coupling with Elasticsearch, this protocol is supported since Nuxeo 9.3.
+  (using port 9200 by default), which provides looser coupling with Elasticsearch, this protocol is supported since Nuxeo 9.3,
+  it is the default choice since Nuxeo 10.2.
 
+{{#> callout type='warning' }}
+
+The transport client will be depreciated in Elasticsearch 7.x.
+
+{{/callout}}
 
 {{{multiexcerpt 'elasticsearch_supported_versions' page='Compatibility Matrix'}}}
 
@@ -517,8 +523,10 @@ Consider disabling the OS swapping or using other [Elasticsearch option](https:/
 In `/etc/default/elasticsearch` file you can increase the JVM heap to half of the available OS memory:
 
 ```
-# For a dedicated node with 12g of RAM
-ES_HEAP_SIZE=6g
+# For a dedicated node with 12g of RAM for Elasticsearch < 6
+# ES_HEAP_SIZE=6g
+# For a dedicated node with 12g of RAM for Elasticsearch >= 6
+ES_JAVA_OPTS="-Xms6g -Xmx6g"
 ```
 
 To prevent indexing errors like:
@@ -530,14 +538,29 @@ EsRejectedExceptionException[rejected execution (queue capacity 50)
 Increase the bulk queue size In`/etc/elasticsearch/elasticsearch.yml` configuration file:
 
 ```
-thread_pool.bulk.queue_size: 500
+# For Elasticsearch 2.x
+# threadpool.bulk.queue_size: 500
+# For Elasticsearch 5.6
+# thread_pool.bulk.queue_size: 500
+# For Elasticsearch 6.x
+thread_pool.write.queue_size: 500
 ```
 
 ## Configuring Nuxeo to Access the Elasticsearch Cluster
 
 Nuxeo supports two protocols to access the Elasticsearch cluster: the transport client protocol and the Rest client.
 
-### The Transport Client protocol (default)
+### The REST Client (default)
+This protocol is supported since Nuxeo 9.3:
+```
+elasticsearch.client=RestClient
+elasticsearch.addressList=http://somenode:9200,https://anothernode:443
+```
+Where:
+- `elasticsearch.client` choose the RestClient protocol
+- `elasticsearch.addressList` is a comma separated list of URL.
+
+### The Transport Client protocol
 
 Here are the  `nuxeo.conf` options available for the Transport Client protocol:
 ```
@@ -550,16 +573,6 @@ Where:
 - `elasticsearch.client` choose the TransportClient protocol, this is the default so this option is not required.
 - `elasticsearch.addressList` points to one or many Elasticsearch nodes, this is a comma separated list of `host:port`. Note that the default port for this protocol is **9300** (and not 9200).
 - `elasticsearch.clusterName` is the cluster name to join, `elasticsearch` being the default cluster name.
-
-### The REST Client
-This protocol is supported since Nuxeo 9.3:
-```
-elasticsearch.client=RestClient
-elasticsearch.addressList=http://somenode:9200,https://anothernode:443
-```
-Where:
-- `elasticsearch.client` choose the RestClient protocol
-- `elasticsearch.addressList` is a comma separated list of URL.
 
 #### Advanced REST Client configuration
 If you have installed [Elasticsearch X-Pack](https://www.elastic.co/guide/en/x-pack/current/installing-xpack.html) you have the possibility to secure communication between Nuxeo and Elasticsearch using the Rest Client (supported since Nuxeo 9.10-HF01).

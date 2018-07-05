@@ -166,12 +166,16 @@ More information can be found on the [Nuxeo and Redis]({{page page='nuxeo-and-re
 <tbody>
 <tr>
 <th colspan="1">Nuxeo Platform Version:</th>
+<th>FT 10.2</th>
 <th>FT 10.1</th>
 <th colspan="1">LTS 2017</th>
 <th colspan="1">LTS 2016</th>
 <th colspan="1">LTS 2015</th>
 </tr>
 <tr><th colspan="1">Elasticsearch</th>
+<td colspan="1">
+Library: 6.3.0<br />
+Cluster: 6.2.x to 6.3.x</td>
 <td colspan="1">
 Library: 5.6.3<br />
 Cluster: 5.6.x</td>
@@ -190,6 +194,16 @@ Cluster: 1.5.2 to 1.7.x</td>
 </tbody>
 </table>
 </div>{{! /multiexcerpt}}
+
+{{#> callout type='warning' }}
+Note that there are [known problems](https://jira.nuxeo.com/browse/NXP-25252) on using the following stack:
+- Elasticsearch 6.3.0
+- Java 10
+- Amazon latest generation instance type (c5 or m5)
+
+For now you should either use c4 instance either c5 with java 8.
+{{/callout}}
+
 
 More information can be found on the [Elasticsearch Setup]({{page page='elasticsearch-setup'}}) page.
 
