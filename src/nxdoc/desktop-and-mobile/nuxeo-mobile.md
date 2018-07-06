@@ -2,7 +2,7 @@
 title: Nuxeo Mobile
 review:
     comment: ''
-    date: '2017-12-13'
+    date: '2018-07-06'
     status: ok
 toc: true
 labels:
@@ -242,7 +242,7 @@ If the PDF preview is available, tap the thumbnail zone to preview it. If the do
 <table class="hover" style="border: 0px;">
 <tbody>
 <tr>
-<td colspan="1"><b>![]({{file name='mobile-browse.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-browse.jpg'}} ?w=210,border=true)</b></td>
 <td colspan="1"><b>![]({{file name='mobile-document-view.png'}} ?w=200,border=true)</b></td>
 <td colspan="1"><b>![]({{file name='mobile-document-preview.png'}} ?w=200,border=true)</b></td>
 </tr>
@@ -254,11 +254,27 @@ If the PDF preview is available, tap the thumbnail zone to preview it. If the do
 When previewing a document, you can hide the top bar by taping the screen.
 {{/callout}}
 
+Browsing documents can be made with list view or grid view, allowing to better preview thumbnails. Finally, folder or collection content, as well as search results (see Search section below) can be sorted by alphabetical order ('title') or modification date.
+
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='mobile-browse-grid.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-browse-sort.png'}} ?w=200,border=true)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+{{#> callout type='tip' }}
+Tapping a sort order twice switches between ascendant and descendant sort order{{/callout}}
+
 ### Search
 
 The **Search** menu enables you to query documents on their title and content, by performing a full-text search. {{{multiexcerpt 'full-text-search-user-desc' page='USERDOC:Quick Search'}}}A list of matching documents is provided and you can directly have access them. Once on a document, tap the back icon to go back to search results.
 
-![]({{file name='mobile-search.png'}} ?w=200,h=355,border=true)
+![]({{file name='mobile-search.jpg'}} ?w=200,border=true)
 
 ### Favorites
 
@@ -294,16 +310,75 @@ Browsing your repository, you can add a document to one or several collections. 
 <tbody>
 <tr>
 <td colspan="1"><b>![]({{file name='mobile-collections.png'}} ?w=200,h=357,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-select-collections.png'}} ?w=200,h=357,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-view-selected-collections.png'}} ?w=200,h=357,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-collections.jpg'}} ?w=200,h=357,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-collections-added.png'}} ?w=200,h=357,border=true)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### Capture of documents
+
+Documents such as images, videos, attachments can be shared to Nuxeo.
+On iOS, from the "share" menu associated with a document, add the Nuxeo share destination. On android, the share extension is activated without required .
+
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='mobile-capture-add-nuxeo.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-capture-share-photo.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-capture-share-photo-android.png'}} ?w=200,border=true)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+When capturing a document in Nuxeo, the user can select it's personal space (set by default) or browse folders to select the destination.
+
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='mobile-capture-folder-selection.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-capture-folder-done.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-capture-done.png'}} ?w=200,border=true)</b></td>
 </tr>
 </tbody>
 </table>
 </div>
 
 ### Workflows
-User
+All Nuxeo documents evolve according to defined lifecycle. See [workflows]({{page space='USERDOC' page='workflows'}}) documentation for more details. On mobile, default serial and parallel workflows are implemented.
 
+On documents, document lists or collections, access the contextual menu by clicking the overflow button and click "Start Process" to choose the workflow type. When consulting a document with a task to process, a banner (black in the screenshot below) allows a direct access to the task screen.
+
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='mobile-workflows-start-process.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-workflows-choose-type.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-workflows-asset-task-to-process.png'}} ?w=200,border=true)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+The dedicated "Tasks" entry enables you to directly access the user tasks and process them. A definition of the task, as well as the deadline, participants and document link is displayed. 
+Once mandatory fields are filled, the user can process it (approval, rejection, or any other action defined in this the task).
+
+<div>
+<table class="hover" style="border: 0px;">
+<tbody>
+<tr>
+<td colspan="1"><b>![]({{file name='mobile-workflows-tasks-list.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-workflows-task-view.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>![]({{file name='mobile-workflows-approve-reject.png'}} ?w=200,border=true)</b></td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 ### Share / Open in
@@ -331,7 +406,7 @@ The personal workspace menu gives you a direct access to your collections and pe
 
 ### Offline mode
 
-When your phone loses network connection or when you turn it on airplane mode, an offline mode is now available.
+When your phone loses network connection or when you turn it on airplane mode, an offline banner will be displayed. However, assets won't be loaded nor accessible without connexion.
 
 <div>
 <table class="hover" style="border: 0px;">
