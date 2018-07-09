@@ -163,6 +163,21 @@ Default adapters provided by default.
 
 <table class="hover">
   <tr>
+    <td class="small-2">**@annotation**</td>
+    <td>Returns annotations corresponding to the target Document and file:content blob</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /api/v1/id/{docId}/@audit
+      ```
+    </td>
+  </tr>
+</table>
+
+<table class="hover">
+  <tr>
     <td class="small-2">**@audit**</td>
     <td>Returns audit trail records corresponding to the target Document</td>
   </tr>
@@ -643,6 +658,58 @@ GET http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheDoc}/@search?query=SELE
 
 {{/panel}}
 
+### Getting Annotations - `@annotation`
+
+{{#> panel type='code' heading='Create annotation'}}
+
+```
+POST http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheDoc}/@annotation
+{
+  "entity-type": "annotation",
+  "id": "ID",
+  "documentId": "DOC_ID",
+  "xpath": "file:content",
+  "entity": "ENTITY"
+}
+```
+
+{{/panel}}
+
+{{#> panel type='code' heading='Get annotation'}}
+
+```
+GET http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheDoc}/@annotation/{annotationId}
+```
+
+{{/panel}}
+
+{{#> panel type='code' heading='Get annotations'}}
+
+```
+GET http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheDoc}/@annotation?xpath=file:content
+```
+
+{{/panel}}
+
+{{#> panel type='code' heading='Update annotation'}}
+
+```
+PUT http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheDoc}/@annotation
+{
+  "entity-type": "annotation",
+  "entity": "ENTITY"
+}
+```
+
+{{/panel}}
+
+{{#> panel type='code' heading='Delete annotation'}}
+
+```
+DELETE http://NUXEO_SERVER/nuxeo/site/api/v1/path/{pathOfTheDoc}/@annotation/{annotationId}
+```
+
+{{/panel}}
 
 
 ### Getting a Business Object
