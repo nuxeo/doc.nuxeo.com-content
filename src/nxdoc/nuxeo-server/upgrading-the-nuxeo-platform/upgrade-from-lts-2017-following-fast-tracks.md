@@ -75,16 +75,17 @@ See [NXP-24316](https://jira.nuxeo.com/browse/NXP-24316).
 #### Code Behavior Changes
 
 {{! multiexcerpt name='upgrade-10.1-behavior.field.version.indexed'}}
-
-- `ecm:versionVersionableId` is now indexed by Elasticsearch. See [NXP-24114](https://jira.nuxeo.com/browse/NXP-24114).
+- `ecm:versionVersionableId` is now indexed by Elasticsearch.
+</br>
+  See [NXP-24114](https://jira.nuxeo.com/browse/NXP-24114).
 
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='upgrade-10.1-code.rest-stack-trace'}}
 
 - Exception stack trace is no longer written in the response by default. Use parameter `org.nuxeo.rest.stack.enable` to enable it.
-
-See [NXP-23861](https://jira.nuxeo.com/browse/NXP-23861).
+</br>
+  See [NXP-23861](https://jira.nuxeo.com/browse/NXP-23861).
 
 {{! /multiexcerpt}}
 
@@ -121,7 +122,7 @@ See [NXP-24089](https://jira.nuxeo.com/browse/NXP-24089).
 
 ### Installation and Configuration
 
-### Requirements
+#### Requirements
 {{! multiexcerpt name='upgrade-10.2-installation-requirements'}}
 - **Elasticsearch** >= 6.x is required.
 - **Kafka** >= 1.1.0 is required.
@@ -159,30 +160,15 @@ See [NXP-25020](https://jira.nuxeo.com/browse/NXP-25020).
 
 #### Code Behavior Changes
 
-{{! multiexcerpt name='upgrade-10.2-code.new-KeyValueStoreUIDSequencer'}}
-- A new `KeyValueStoreUIDSequencer` is available, to store sequences in a key/value store. The store is the same for all sequencers, but they are using different keys, prefixed by the sequencer name.
-  See [NXP-23744](https://jira.nuxeo.com/browse/NXP-23744).
+{{! multiexcerpt name='upgrade-10.2-code.TransactionalFeature'}}
+- Some test classes have been moved under `nuxeo-core-io` test part. But `nuxeo-core-io` test module is a dependency of `nuxeo-core-test` (former location) to enforce backward compatibility.
+
+  `TransactionalFeature` has been moved from `nuxeo-core-test` to `nuxeo-runtime-test`:</br>
+    `org.nuxeo.ecm.core.test.TransactionalFeature` becomes `org.nuxeo.runtime.test.runner.TransactionalFeature`
+
+See [NXP-25197](https://jira.nuxeo.com/browse/NXP-25197).
 {{! /multiexcerpt}}
 
-{{! multiexcerpt name='upgrade-10.2-code.KeyValueBlobTransientStore'}}
-- A `KeyValueBlobTransientStore` can now specify the ids of the key/value store and blob provider to use, instead of defaulting to the name of the transient store itself
-  See [NXP-24847](https://jira.nuxeo.com/browse/NXP-24847).
-{{! /multiexcerpt}}
-
-{{! multiexcerpt name='upgrade-10.2-code.documentResolver'}}
-- The following two `documentResolver` restrictions with `idOnly` and `pathOnly` are now possible:
-  ```
-  <xs:restriction base="xs:string" ref:resolver="documentResolver" ref:store="idOnly" />
-  ```
-
-  ```
-  <xs:restriction base="xs:string" ref:resolver="documentResolver" ref:store="pathOnly" />
-  ```
-
-  Their semantics is to store only the id or only the path, without any prefixed repository. When fetching the constraint, the document of the given id or path is resolved in the same repository as the current document.
-
-  See [NXP-22450](https://jira.nuxeo.com/browse/NXP-22450).
-{{! /multiexcerpt}}
 
 {{! multiexcerpt name='upgrade-10.2-api.KeyValueStore'}}
 - New APIs are available on `KeyValueStore`.
@@ -209,28 +195,18 @@ See [NXP-25020](https://jira.nuxeo.com/browse/NXP-25020).
 #### Operation changes
 
 {{! multiexcerpt name='upgrade-10.2-operation.SuggestUserEntries'}}
-- Since Nuxeo 10.2 and 9.10-HF03, the `SuggestUserEntries` operation performs a full name user search, e.g. typing "John Do" returns the user with first name "John" and last name "Doe".
+Since Nuxeo 10.2 and 9.10-HF03, the `SuggestUserEntries` operation performs a full name user search, e.g. typing "John Do" returns the user with first name "John" and last name "Doe".
 
-  See [NXP-24583](https://jira.nuxeo.com/browse/NXP-25020).
+See [NXP-24583](https://jira.nuxeo.com/browse/NXP-25020).
 {{! /multiexcerpt}}
 
 #### Deprecated APIs
 
 ##### Enable new TrashService
 {{! multiexcerpt name='upgrade-10.2-deprecated.lifecycle_transition_event'}}
-- The new TrashService fires dedicated events `documentTrashed` and `documentUntrashed` (hold by TrashService interface) instead of `lifecycle_transition_event`. The document model passed in the event won't be saved by Nuxeo at the end.
+The new TrashService fires dedicated events `documentTrashed` and `documentUntrashed` (hold by TrashService interface) instead of `lifecycle_transition_event`. The document model passed in the event won't be saved by Nuxeo at the end.
 
-  See [NXP-24850](https://jira.nuxeo.com/browse/NXP-24850).
-{{! /multiexcerpt}}
-
-### Addons
-
-#### Nuxeo Vision
-
-{{! multiexcerpt name='upgrade-10.2-addons.nuxeo-vision'}}
-- The features to use (and sent to the provider) are no more checked against a predifined list. This allows for using any new feature available without waiting for an update of the plugin. After using such new feature, caller should use the `getNativeObject` method and handle the results based on the provider's documentation.
-
-  See [NXP-24499](https://jira.nuxeo.com/browse/NXP-24499).
+See [NXP-24850](https://jira.nuxeo.com/browse/NXP-24850).
 {{! /multiexcerpt}}
 
 
