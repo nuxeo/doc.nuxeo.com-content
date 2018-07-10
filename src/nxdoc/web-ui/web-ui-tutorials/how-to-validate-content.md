@@ -59,51 +59,7 @@ This tutorial will demonstrate how to validate the content of a form in Web UI t
     ```
 
 1. Complete the validate function
-```
-validate: function() {
-  // Nuxeo uses Moment.js (https://momentjs.com) to work with dates on the UI side.
-  // We'll leverage this library to do the check.
-  if(moment(this.document.properties['contract:endDate']).isBefore(this.document.properties['contract:startDate'])) {
-    // Set the field in error state to alert user
-    this.$.contractEndDate.invalid = true;
-
-    // Display a message
-    this.$.contractEndDate.errorMessage = "Contract end date should be ulterior to its start date";
-
-    // Validate function expects us to return a boolean
-    // Used to tell if the form should be submitted
-    return false;
-  }
-  return true;
-}
-```
-
-1. Final result should look like:
-
-```
-[...]
-
-<nuxeo-date-picker id="contractStartDate" role="widget" value="\{{document.properties.contract:startDate}}" label="Start Date"></nuxeo-date-picker>
-<nuxeo-date-picker id="contractEndDate" role="widget" value="\{{document.properties.contract:endDate}}" label="End Date"></nuxeo-date-picker>
-
-[...]
-
-<script>
-Polymer({
-  is: 'nuxeo-contract-create-layout',
-  behaviors: [Nuxeo.LayoutBehavior],
-  properties: {
-
-    /**
-       * @doctype contract
-       */
-    document: {
-      type: Object,
-    },
-
-  },
-  // Don't forget to add a comma (,) after the properties object!
-  // We're adding a function to validate form here
+  ```
   validate: function() {
     // Nuxeo uses Moment.js (https://momentjs.com) to work with dates on the UI side.
     // We'll leverage this library to do the check.
@@ -120,15 +76,59 @@ Polymer({
     }
     return true;
   }
-});
-</script>
+  ```
 
-[...]
-```
+1. Final result should look like:
+
+  ```
+  [...]
+
+  <nuxeo-date-picker id="contractStartDate" role="widget" value="\{{document.properties.contract:startDate}}" label="Start Date"></nuxeo-date-picker>
+  <nuxeo-date-picker id="contractEndDate" role="widget" value="\{{document.properties.contract:endDate}}"   label="End Date"></nuxeo-date-picker>
+
+  [...]
+
+  <script>
+  Polymer({
+    is: 'nuxeo-contract-create-layout',
+    behaviors: [Nuxeo.LayoutBehavior],
+    properties: {
+
+      /**
+        * @doctype contract
+        */
+      document: {
+        type: Object,
+      },
+
+    },
+    // Don't forget to add a comma (,) after the properties object!
+    // We're adding a function to validate form here
+    validate: function() {
+      // Nuxeo uses Moment.js (https://momentjs.com) to work with dates on the UI side.
+      // We'll leverage this library to do the check.
+      if(moment(this.document.properties['contract:endDate']).isBefore(this.document.properties['contract:startDate'])) {
+        // Set the field in error state to alert user
+        this.$.contractEndDate.invalid = true;
+
+        // Display a message
+        this.$.contractEndDate.errorMessage = "Contract end date should be ulterior to its start date";
+
+        // Validate function expects us to return a boolean
+        // Used to tell if the form should be submitted
+        return false;
+      }
+      return true;
+    }
+  });
+  </script>
+
+  [...]
+  ```
 
 1. Save and deploy. You can check the result in your form now.
 
-![]({{file name='validation-error.png'}} ?w=250,border=true)
+  ![]({{file name='validation-error.png'}} ?w=250,border=true)
 
 The same operation can be repeated for other layouts (typically the edit or import layouts).
 
@@ -160,11 +160,11 @@ Now we will define the message to display:
 1. Still on Nuxeo Designer side, go to the **UI** tab and then **Translations**
 1. Use the default messages.json or create your own language;
 1. Create a new entry in the JSON file with key `label.error.message.contractEndDateShouldBeAfterStartDate` and your error message as value. Here it is:
-```
-"label.error.message.contractEndDateShouldBeAfterStartDate":"Please make sure that the Contract end date is ulterior to its start date"
-```
+  ```
+  "label.error.message.contractEndDateShouldBeAfterStartDate":"Please make sure that the Contract end date is ulterior to its start date"
+  ```
 1. Save your changes and deploy your Studio project:
 
-![]({{file name='validation-error-translated.png'}} ?w=550,border=true)
+  ![]({{file name='validation-error-translated.png'}} ?w=550,border=true)
 
 Done.
