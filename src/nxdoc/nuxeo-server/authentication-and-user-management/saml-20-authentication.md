@@ -165,8 +165,8 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
     ```
 
     You can find more examples here: [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample).  
-    \
-    :warning: Read-only repositories (for instance LDAP) require `userResolverCreateIfNeeded` and `userResolverUpdate` to be set to **false**: :warning:
+    {{#> callout type='warning' }}</br>
+    Read-only repositories (for instance LDAP) require `userResolverCreateIfNeeded` and `userResolverUpdate` to be set to **false**:
     ```xml
     <component name="org.nuxeo.ecm.platform.login.saml.auth">
         <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
@@ -187,7 +187,8 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
         </extension>
     </component>
     ```
-
+    {{/callout}}
+    
 1.  Configure the user attributes mapping for your identity provider's response. Either add a [XML contribution]({{page page='how-to-contribute-to-an-extension'}}) into your Studio project or in the previous XML component. This mapping configuration can be achieved by providing a JavaScript or Groovy script. A sample is provided below using JavaScript code.
 
     ```xml
