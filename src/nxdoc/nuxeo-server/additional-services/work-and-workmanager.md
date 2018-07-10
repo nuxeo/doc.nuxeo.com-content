@@ -242,3 +242,18 @@ Then the "background processing nodes" are on the contrary, configured to consum
 An alternative WorkManager has been introduced in Nuxeo 9.3 based on Nuxeo Stream.
 
 Visit the [Nuxeo Stream]({{page page='nuxeo-stream'}}) for more information.
+
+## WorkManager API Evolution
+
+It has been decided in version 10.2 to deprecate some of WorkManager original API that cannot scale in distributed environments.
+
+From now, finding a work instance or listing them all is not recommended anymore for using a work instance corresponds to manage the work manually.
+
+Further more it's to be noted that scheduling a work depending on a previous state is not reliable in a distributed environement and should not be used.
+
+Thus we also choose not to provide any replacement, it would come with trade offs on performance and scalability we don't want to make.
+
+In our code base we found usage of these methods were not needed or misuse of the WorkManager API that could be better implemented using other ways.
+
+Common misuses are related to work unicity that's now easily handled using isIdempotent that's fully implemented in the StreamWorkManager and distributed-production-ready.
+
