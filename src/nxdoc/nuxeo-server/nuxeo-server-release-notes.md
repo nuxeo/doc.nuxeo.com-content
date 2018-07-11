@@ -90,8 +90,27 @@ The support for [KMS keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/kms-u
 #### Tenant-isolated directories with MongoDB {{since '10.2'}}
 
 Multi-tenant addon now supports tenant-isolated directories with MongoDB
+
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22682](https://jira.nuxeo.com/browse/NXP-22682)
 
+#### Same Directory Entry ID on Different Tenants {{since '10.2'}}
+
+Unicity check on directory entry has been moved post tenant-specific computation, so that same end user id can be used in two different tenants.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25264](https://jira.nuxeo.com/browse/NXP-25264)
+
+#### LDAP Connection timeout reduced to 1 min {{since '10.2'}}
+
+The pooling connection timeout of the LDAP connections has been reduced from 30 min to 1 min to avoid some performance issues when making a lot of connections with multiple users.
+
+Multi-tenant addon now supports tenant-isolated directories with MongoDB
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25085](https://jira.nuxeo.com/browse/NXP-25085)
+
+#### Filters parameter on Directory.SuggestEntries {{since '10.2'}}
+
+It is now possible to filter directories values on a given column value, so as to implement chain select behaviours for instance. You can use the "filters" parameter, with a serialized property, like: `{"parent": "europe"}`
+
+[NXP-25299](https://jira.nuxeo.com/browse/NXP-25299)
 
 ### Workflow
 
@@ -125,6 +144,12 @@ nuxeo.stream.pubsub.log.codec=avroBinary
 Note that you should not change the codec of an existing stream (Kafka Topic or Chronicle file), this should be done only on new stream.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22597](https://jira.nuxeo.com/browse/NXP-22597) and [NXP-24324](https://jira.nuxeo.com/browse/NXP-24324)
+
+#### Kafka 1.1 {{since '10.2'}}
+
+The Nuxeo Platform now relies on Kafka 1.1.
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25087](https://jira.nuxeo.com/browse/NXP-25087).
+
 
 #### Stream Computations Use Watermark {{since '10.2'}}
 
@@ -245,15 +270,15 @@ A new hint is available that allows to leverage the More Like This query of Elea
 Ex: ```SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.fulltext,dc:description.fulltext) OPERATOR(more_like_this) */ ecm:uuid = '1234' ```
 
 will take the most frequent terms of the title and description of document 1234 and find documents that also match those terms.
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25315](https://jira.nuxeo.com/browse/NXP-25315).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23048](https://jira.nuxeo.com/browse/NXP-23048).
 
 
 <!--- ### Tag Service  -->
 ### Bulk service {{since '10.2'}}
 
-The BulkService is a new Nuxeo Platform service that allows to persist a document set homogenous to an NXQL query (and in the future to a page provider) so as to process an "action" on each of the documents. The service allows to get a status on a given "Bulk".
+The BulkService is a new Nuxeo Platform service that allows to persist a document set homogenous to an NXQL query (and in the future to a page provider) so as to process an "action" on each of the documents. The service allows to get a status on a given "Bulk". It is possible to remotely start a bulk using the ``Bulk.RunAction`` operation that accepts as a parameter the name of the action and an NXQL query for specifying the list of documents on which to run the bulk.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24837](https://jira.nuxeo.com/browse/NXP-24837).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-24837](https://jira.nuxeo.com/browse/NXP-24837) and [NXP-25060](https://jira.nuxeo.com/browse/NXP-25060).
 
 ### Annotations Service
 
@@ -274,6 +299,54 @@ The web adapter "annotation" has been added on the document resource so as to re
 A new configuration property ``nuxeo.annotations.placeless.storage`` is available to change how the annotations are stored.
 If set to ``true`` (default), the annotations are placeless documents.
 If set to ``false``, the annotations are stored in a hidden folder. This folder is created under the domain of the annotated document, or under the root if no domain.
+
+
+### Comment Service
+
+#### New Method for Creating an Answer at A Specific Place {{since '10.2'}}
+
+- API in ``CommentManager`` is able to create sub-comments in a specific location
+- The ``CommentableDocument`` adapter is enriched to provide the above service
+- The ``CommentableDocument`` adapter is enriched to provide the service of creating comments in a specific location using the existing api ``org.nuxeo.ecm.platform.comment.api.CommentManager#createLocatedComment(org.nuxeo.ecm.core.api.DocumentModel, org.nuxeo.ecm.core.api.DocumentModel, java.lang.String)``
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24863](https://jira.nuxeo.com/browse/NXP-24863).
+
+### Automation
+
+#### More Java Objects in Automation Scripting {{since '10.2'}}
+It's now possible to allow specific Java classes to be used via Automation Scripting, by default we add:
+- java.util.ArrayList
+- java.util.Arrays
+- java.util.Collections
+- java.util.UUID
+- org.nuxeo.runtime.transaction.TransactionHelper
+- org.nuxeo.ecm.core.api.Blobs
+- org.nuxeo.ecm.core.api.impl.blob.StringBlob
+- org.nuxeo.ecm.core.api.impl.blob.JSONBlob
+
+Other classes can be added, and previously-allowed ones denied, through:
+```
+  <require>org.nuxeo.automation.scripting.classfilter</require>
+  <extension target="org.nuxeo.automation.scripting.internals.AutomationScriptingComponent" point="classFilter">
+    <classFilter>
+      <allow>com.example.MyClass</allow>
+      <allow>com.example.MyOtherClass</allow>
+      <deny>org.nuxeo.runtime.transaction.TransactionHelper</deny>
+    </classFilter>
+  </extension>
+```
+
+One can use ``<deny>*</deny>`` to disallow all previously-allowed classes.
+
+The default contribution now allows scripting code like:
+
+```
+function run(input, params) {
+    var uuid = java.util.UUID.randomUUID().toString();
+    return org.nuxeo.ecm.core.api.Blobs.createJSONBlob("{'uuid': \"" + uuid + "\"}");
+}
+```
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25020](https://jira.nuxeo.com/browse/25020).
 
 
 ### User Manager
@@ -392,6 +465,43 @@ The HSTS header is enabled by default when HTTPS is in use. It forces only HTTPS
 The Nuxeo Platform now uses version 1.11.323 of the Amazon SDK. This notably allows using AWS Comprehend service.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24981](https://jira.nuxeo.com/browse/NXP-24981).
+
+
+#### JSON output for Log4J {{since '10.2'}}
+
+Required dependencies have been added so that it is possible to configure the logs to be serialized as valid JSON. See sample log4j conf on the linked ticket.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25096](https://jira.nuxeo.com/browse/NXP-25096).
+
+#### JDK Check Enforced in nuxeoctl {{since '10.2'}}
+
+A check on the presence of a JDK per is enforced at startup in nuxeoctl
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21200](https://jira.nuxeo.com/browse/NXP-21200).
+
+#### Making Use of Tomcat 8 Rewrite Valve {{since '10.2'}}
+
+It is now possible to contribute rules to Tomcat Rewrite Valve by leveraging our deployment preprocessor.
+
+Ex (deployment-fragment.xml):
+```
+<?xml version="1.0"?>
+<fragment version="1">
+  <!-- JSF permalink redirect -->
+  <extension target="rewrite#RULE">
+    RewriteRule ^/nxdoc/default/(.*)/view_documents /ui/#!/doc/$1 [NE,R]
+  </extension>
+
+  <!--  ES6 / ES5 code -->
+  <extension target="rewrite#RULE">
+    RewriteCond  %{HTTP_USER_AGENT} .*Chrome.*
+    RewriteRule ^/shop/(.*) /shop/es6-bundled/$1 [L]
+    RewriteRule ^/shop/(.*) /shop/es5-bundled/$1 [L]
+  </extension>
+</fragment>
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25040](https://jira.nuxeo.com/browse/NXP-25040).
 
 <!--- ### User workspace -->
 
