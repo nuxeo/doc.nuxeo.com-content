@@ -25,18 +25,49 @@ We also provide [instructions for upgrading]({{page version='' space='nxdoc' pag
 
 ### Core Repository
 
-
 #### Trash, Untrash and EmptyTrash Operations {{since '10.1'}}
 
 Two new operations `TrashDocument` and `UntrashDocument` have been added.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24282](https://jira.nuxeo.com/browse/NXP-24282) and [NXP-24281](https://jira.nuxeo.com/browse/NXP-24281).
 
-#### New firstAccessibleAncestor REST API Enricher
+#### New Trash Service Enabled {{since '10.2'}}
+
+The new trash service has been enabled by default on the repository. It uses a system property ``ecm:isTrashed`` for labelling a document as being trashed. It also fires dedicated events documentTrashed and documentUntrashed (hold by TrashService interface).A migrator has been implemented for migrating content from the old trash system (relying on lifecycle state)to the new one (relying on the system property ecm:isTrashed). See upgrade notes for more information on migration.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-24850](https://jira.nuxeo.com/browse/NXP-24850) and  [NXP-24035](https://jira.nuxeo.com/browse/NXP-24035)
+
+### ecm:isTrashed in the JSON  {{since '10.2'}}
+ecm:isTrashed  is now in the JSON representation of a Nuxeo Document
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24741](https://jira.nuxeo.com/browse/NXP-24741)
+
+
+#### New firstAccessibleAncestor REST API Enricher {{since '10.1'}}
 
 It is now possible to get the closest document's ancestor of a document using the `firstAccessibleAncestor` JSON Enricher.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24282](https://jira.nuxeo.com/browse/NXP-24282)
+
+#### No Mention of the Repository on a Document Reference {{since '10.2'}}
+
+When referencing a document in a property, we don't need anymore to store the repository id. If the repository id is not there, the same as the referencing document is chosen.
+The following two {{documentResolver}} restrictions with {{idOnly}} and {{pathOnly}} can be used for this:
+```
+<xs:restriction base="xs:string" ref:resolver="documentResolver" ref:store="idOnly" />
+```
+```
+<xs:restriction base="xs:string" ref:resolver="documentResolver" ref:store="pathOnly" />
+```
+Their semantics is to store only the id or only the path, without any prefixed repository. When fetching the constraint, the document of the given id or path is resolved in the same repository as the current document.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22450](https://jira.nuxeo.com/browse/NXP-22450).
+
+#### GetProxies Method on CoreSession {{since '10.2'}}
+
+``getProxies(DocumentRef)`` has been added to the CoreSession to efficiently get proxies, without having to write and run a query.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24922](https://jira.nuxeo.com/browse/NXP-24922).
 
 #### Servlet API 3.1 {{since '10.1'}}
 
@@ -54,7 +85,13 @@ The support for [KMS keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/kms-u
 
  <!--- ### Core Events  -->
 
-<!--- ### Directory -->
+### Directory
+
+#### Tenant-isolated directories with MongoDB {{since '10.2'}}
+
+Multi-tenant addon now supports tenant-isolated directories with MongoDB
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22682](https://jira.nuxeo.com/browse/NXP-22682)
+
 
 ### Workflow
 
@@ -67,7 +104,37 @@ When using the rest api, the JSON structure of a Task object now also includes:
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24476](https://jira.nuxeo.com/browse/NXP-24476).
 
-<!--- ### Nuxeo Streams -->
+### Nuxeo Streams
+
+#### Avro serialization for Nuxeo Log/Stream {{since '10.2'}}
+
+Avro (http://avro.apache.org) has been integrated to the platform: Avro schema store, Nuxeo Document <> Avro format converter so as to be able to use this format for Nuxeo Stream messages. It makes communication with outer world easier (no Nuxeo dependency in the message), makes messages more compact and give backwards / forward compatibility in messages format.
+As a consequence, Nuxeo Stream can now encode record with different codec:
+- ``legacy``: the original format based on java Externalizable
+- ``avro``: avro message with a schema fingerprint header (Nuxeo has an avro ShemaStore service to retrieve schemas).
+- ``avroBinary``: avro message without schema header so more compact
+- ``avroJson``: avro in Json for debug purpose only
+
+You can choose the encoding for the different service using ``nuxeo.conf`` options:
+
+```
+nuxeo.stream.work.log.codec=legacy
+nuxeo.stream.audit.log.codec=legacy
+nuxeo.stream.pubsub.log.codec=avroBinary
+```
+Note that you should not change the codec of an existing stream (Kafka Topic or Chronicle file), this should be done only on new stream.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22597](https://jira.nuxeo.com/browse/NXP-22597) and [NXP-24324](https://jira.nuxeo.com/browse/NXP-24324)
+
+#### Stream Computations Use Watermark {{since '10.2'}}
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22597](https://jira.nuxeo.com/browse/NXP-24641) and [NXP-24324](https://jira.nuxeo.com/browse/NXP-24641)
+
+#### Using The Key as the Kafka Record Key {{since '10.2'}}
+
+When using the Kafka implementation of Nuxeo Stream, the key in the log is now the Kafka key itself, not the hash of it as it was previously (only option for the other backend, Chronicle queue).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24640](https://jira.nuxeo.com/browse/NXP-24640).
 
 ### WorkManager
 
@@ -76,6 +143,37 @@ When using the rest api, the JSON structure of a Task object now also includes:
 An event `workFailed` is now fired when a work fails several times.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24126](https://jira.nuxeo.com/browse/NXP-24126).
+
+#### State Information for the StreamWorkManager {{since '10.2'}}
+
+By using ``nuxeo.stream.work.storestate.enabled=true``, it is now possible to get information of a given work when using the StreamWorkManager
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24397](https://jira.nuxeo.com/browse/NXP-24397).
+
+#### Ability to Cancel a Long-running Work with the StreamWorkManager {{since '10.2'}}
+
+StreamWorkManager is now able to cancel a long-running work, provided the work calls regularly "isSuspending".
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24400](https://jira.nuxeo.com/browse/NXP-24400).
+
+### Scheduler
+
+#### Customisable Job {{since '10.2'}}
+
+It is now possible to specify what Job should be created when using the scheduler thanks to a new attribute "jobFactoryClass":
+```
+<schedule id="testSchedulerSingleExecution"
+    jobFactoryClass="org.nuxeo.ecm.core.scheduler.SingleExecutionEventJobFactory">
+  <event>testSchedulerSingleExecution</event>
+  <cronExpression>* * * * * ?</cronExpression>
+</schedule>
+```
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24540](https://jira.nuxeo.com/browse/NXP-24540).
+
+#### Timezone Sensitive Cron Service {{since '10.2'}}
+
+The scheduler service (Cron) now allows using a timezone on expressions to avoid relying on the time of the server for firing events.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24955](https://jira.nuxeo.com/browse/NXP-24955).
 
 ###  PubSub
 
@@ -112,7 +210,7 @@ auditBackend.queryLogs(new AuditQueryBuilder().predicates( //
 
 Following evolutions on the trash service, the NXQL property `ecm:isTrashed` has been added to be able to filter queries on trashed or not trashed documents.
 
-#### Some Built-In Page Provides Moved to Elasticsearch {{since '10.1'}}
+#### Some Built-In Page Providers Moved to Elasticsearch {{since '10.1'}}
 
 `REST_API_SEARCH_ADAPTER` and `all_collections` page providers have been added to the default list of page providers provided by Elasticsearch. If you have defined your own `elasticsearch.override.pageproviders` then it is recommended to add those two to your list.
 
@@ -124,17 +222,40 @@ Following evolutions on the trash service, the NXQL property `ecm:isTrashed` has
 
 ### Elasticsearch
 
+#### Elasticseach 6.3 {{since '10.2'}}
+
+Elasticsearch 6.3+ is now required. See upgrade instructions.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24102](https://jira.nuxeo.com/browse/NXP-24102).
+
 #### Support of X-Pack {{since '10.1'}}
 
 The use of Elasticsearch X-Pack is now allowed, [see documentation]({{page version='' space='nxdoc' page='elasticsearch-setup'}}#advanced-rest-client-configuration).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23048](https://jira.nuxeo.com/browse/NXP-23048).
 
+### Multi-Region Replication {{since '10.2'}}
+
+A set of add-ons and scripts have been produced for the ability to replicate all the Nuxeo data in near real time into another hosting region, using Kafka streams for the replication. The intent is to be able to recover from a disaster in less than a minute. Contact Nuxeo for more information about it.
+
+### More Like This Hint {{since '10.2'}}
+
+A new hint is available that allows to leverage the More Like This query of Eleasticsearch (https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-mlt-query.html)
+
+Ex: ```SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.fulltext,dc:description.fulltext) OPERATOR(more_like_this) */ ecm:uuid = '1234' ```
+
+will take the most frequent terms of the title and description of document 1234 and find documents that also match those terms.
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25315](https://jira.nuxeo.com/browse/NXP-25315).
+
+
 <!--- ### Tag Service  -->
+### Bulk service {{since '10.2'}}
+
+The BulkService is a new Nuxeo Platform service that allows to persist a document set homogenous to an NXQL query (and in the future to a page provider) so as to process an "action" on each of the documents. The service allows to get a status on a given "Bulk".
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24837](https://jira.nuxeo.com/browse/NXP-24837).
 
 ### Annotations Service
-
-#### New Annotations Service
 
 #### Annotation Java Service {{since '10.1'}}
 
@@ -148,7 +269,28 @@ The web adapter "annotation" has been added on the document resource so as to re
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24364](https://jira.nuxeo.com/browse/NXP-24364).
 
-<!--- ### User Manager -->
+#### Configuration Option for Annotations Location {{since '10.2'}}
+
+A new configuration property ``nuxeo.annotations.placeless.storage`` is available to change how the annotations are stored.
+If set to ``true`` (default), the annotations are placeless documents.
+If set to ``false``, the annotations are stored in a hidden folder. This folder is created under the domain of the annotated document, or under the root if no domain.
+
+
+### User Manager
+
+#### UserGroup.Suggestion Operation Handles Fullname Search {{since '10.2'}}
+
+The SuggestUserEntries operation performs a full name user search, e.g. typing "John Do" returns the user with first name "John" and last name "Doe".
+Typing "John" still returns the "John Doe" user and possibly other users such as "John Foo". Respectively, typing "Do" returns the "John Doe" user and possibly other users such as "Jack Donald".
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24583](https://jira.nuxeo.com/browse/24583).
+
+### Batch upload
+
+#### Optimised Multipart/Form Upload {{since '10.2'}}
+
+When uploading content to Nuxeo using the multi-part/form-data way, no useless copy is made on the way, optimising drastically the upload performance with large videos when using this upload method.
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24384](https://jira.nuxeo.com/browse/NXP-24384).
 
 ### User Registration
 
@@ -164,7 +306,21 @@ The web adapter "annotation" has been added on the document resource so as to re
 
 <!--- ### Key Value Store -->
 
-<!--- ### OAuth -->
+### OAuth
+
+#### Rest API for oAUth 2 Tokens {{since '10.2'}}
+
+Some new endpoints have been added to handle CRUD operations on provider and client oAuth tokens.
+```
+GET/PUT/DELETE /oauth2/token/provider/<providerId>/user/<username> -> perform CRUD on provider tokens
+GET /oauth2/token/provider -> retrieve all provider tokens for current user
+GET/PUT/DELETE /oauth2/token/client/<clientId>/user/<username> -> perform CRUD on client tokens
+GET /oauth2/token/client -> retrieve all client tokens for current user
+GET oauth2/client -> retrieve all oauth2 clients
+GET oauth2/client/<clientId> -> retrieve an oauth2 client
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24578](https://jira.nuxeo.com/browse/NXP-24578).
 
 ### Transient Store
 
@@ -191,8 +347,35 @@ An S3 implementation of this batch handler has been added, so as to be able to u
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24208](https://jira.nuxeo.com/browse/NXP-24208).
 
-<!--- ### REST API -_>
+#### Configurable blobProvider for KeyValueBlob transientStore {{since '10.2'}}
 
+A KeyValueBlobTransientStore can now specify the ids of the key/value store and blob provider to use, instead of defaulting to the name of the transient store itself:
+
+```
+<extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent" point="store">
+<store name="mytransientstore" class="org.nuxeo.ecm.core.transientstore.keyvalueblob.KeyValueBlobTransientStore">
+<property name="keyValueStore">mykeyvaluestore</property>
+<property name="blobProvider">myblobprovider</property>
+...
+</store>
+</extension>
+```
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24847](https://jira.nuxeo.com/browse/NXP-24847).
+
+### REST API
+
+#### Nuxeo Rest API Adapters are Now Overridable {{since '10.2'}}
+
+Nuxeo-AllowOverride: true has been added to the rest module of Nuxeo Platform so that it becomes possible to override an adapter.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24532](https://jira.nuxeo.com/browse/NXP-24532).
+
+
+#### ManagedBlob Decoder {{since '10.2'}}
+
+A generic JSON decoder has been implemented for managed blobs.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24925](https://jira.nuxeo.com/browse/NXP-24925).
 <!--- ### Migration Service -->
 
 ### Packaging / Distribution
@@ -202,6 +385,13 @@ An S3 implementation of this batch handler has been added, so as to be able to u
 The HSTS header is enabled by default when HTTPS is in use. It forces only HTTPS requests.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24254](https://jira.nuxeo.com/browse/NXP-24254).
+
+
+#### AWS Client Upgrade {{since '10.2'}}
+
+The Nuxeo Platform now uses version 1.11.323 of the Amazon SDK. This notably allows using AWS Comprehend service.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24981](https://jira.nuxeo.com/browse/NXP-24981).
 
 <!--- ### User workspace -->
 
@@ -263,14 +453,15 @@ Italian, Dutch and Swedish languages have been added to Web UI and Nuxeo Element
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-24451](https://jira.nuxeo.com/browse/NXP-24451) and [NXP-24445](https://jira.nuxeo.com/browse/NXP-24445).
 
-### Nuxeo JSF UI
+<!-- ### Nuxeo JSF UI -->
 
 ### Amazon S3 Direct Upload for Web UI {{since '10.1'}}
 
 New addon to upload using AWS S3 infrastructure with support for multipart. Allows future integration of other providers.
-Integrated with Web UI upload with real time upload progress.
+Integrated with Web UI upload with real time upload progress. For 10.2 we have added AWS instance role support for better security.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24490](https://jira.nuxeo.com/browse/NXP-24490).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24490](https://jira.nuxeo.com/browse/NXP-24490) and [NXP-24748](https://jira.nuxeo.com/browse/NXP-24748).
+
 
 
 <!---
@@ -280,6 +471,14 @@ A first implementation of the ARender SPI bridge has been implemented so as to b
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24104](https://jira.nuxeo.com/browse/NXP-24104).
 
 --->
+
+### Nuxeo Platform Importer
+
+#### Image and Video capabilities for the Nuxeo Stream Random Importer {{since '10.2'}}
+
+The Nuxeo importer has an option for filling the repository with random content. This content can now be images or videos, randomly produced by watermarking a set of sample media.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24318](https://jira.nuxeo.com/browse/NXP-24318).
 
 ### IMAP Connector {{since '10.1'}}
 
@@ -302,7 +501,7 @@ Windows symlink files `.lnk` are now ignored by default
 
 A great optimisation has been added lowering heavily the charge of the Elasticseach cluster when using Nuxeo Drive with Nuxeo.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24232](https://jira.nuxeo.com/browse/NXP-24232).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24232](https://jira.nuxeo.com/browse/NXP-24232)  and [NXP-24637](https://jira.nuxeo.com/browse/NXP-24637)
 
 ### Nuxo DAM
 
@@ -313,6 +512,14 @@ The video info (duration, format, etc.) is now computed by an asynchronous work 
 As a consequence, the user might not have the video info in the UI immediately after creating / updating a Video document, needing to refresh the page once the asynchronous work is done. This change allows a better behaviour when bulk importing videos.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24316](https://jira.nuxeo.com/browse/NXP-24316).
+
+### Nuxeo Vision
+
+#### All Backend Service features can be leveraged in Nuxeo Vision {{since '10.2'}}
+
+The features to use (and sent to the provider) are no more checked against a predefined list. This allows for using any new feature available without waiting for an update of the plugin. After using such new feature, the caller should use the getNativeObject method and handle the results based on the provider's documentation.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24499](https://jira.nuxeo.com/browse/NXP-NXP-24499).
 
 ### Nuxeo Quota
 
