@@ -69,11 +69,30 @@ Their semantics is to store only the id or only the path, without any prefixed r
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24922](https://jira.nuxeo.com/browse/NXP-24922).
 
-#### Servlet API 3.1 {{since '10.1'}}
+#### KeyValueStoreUIDSequencer {{since '10.2'}}
 
-Servlet API 3.1 is now used in Nuxeo code.
+A new `KeyValueStoreUIDSequencer` is available, to store sequences in a key/value store. The store is the same for all sequencers, but they are using different keys, prefixed by the sequencer name.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24386](https://jira.nuxeo.com/browse/NXP-24386).
+It can be used by doing for example:
+```
+<extension target="org.nuxeo.ecm.core.uidgen.UIDGeneratorService" point="sequencers">
+  <sequencer name="uidgen" class="org.nuxeo.ecm.core.uidgen.KeyValueStoreUIDSequencer" default="true" />
+</extension>
+
+<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+  <!-- this is an example, "sequence" is already the default -->
+  <property name="nuxeo.uidseq.keyvaluestore.name">sequence</property>
+</extension>
+```
+Assuming the following configuration to define a suitable key/value store, for example:
+```
+<extension target="org.nuxeo.runtime.kv.KeyValueService" point="configuration">
+  <store name="sequence" class="org.nuxeo.ecm.core.mongodb.kv.MongoDBKeyValueStore">
+    <property name="collection">sequence</property>
+  </store>
+</extension>
+```
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23744](https://jira.nuxeo.com/browse/NXP-23744).
 
 ### Core Storage
 
@@ -259,11 +278,7 @@ The use of Elasticsearch X-Pack is now allowed, [see documentation]({{page versi
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23048](https://jira.nuxeo.com/browse/NXP-23048).
 
-### Multi-Region Replication {{since '10.2'}}
-
-A set of add-ons and scripts have been produced for the ability to replicate all the Nuxeo data in near real time into another hosting region, using Kafka streams for the replication. The intent is to be able to recover from a disaster in less than a minute. Contact Nuxeo for more information about it.
-
-### More Like This Hint {{since '10.2'}}
+#### More Like This Hint {{since '10.2'}}
 
 A new hint is available that allows to leverage the More Like This query of Eleasticsearch (https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-mlt-query.html)
 
@@ -276,9 +291,9 @@ will take the most frequent terms of the title and description of document 1234 
 <!--- ### Tag Service  -->
 ### Bulk service {{since '10.2'}}
 
-The BulkService is a new Nuxeo Platform service that allows to persist a document set homogenous to an NXQL query (and in the future to a page provider) so as to process an "action" on each of the documents. The service allows to get a status on a given "Bulk". It is possible to remotely start a bulk using the ``Bulk.RunAction`` operation that accepts as a parameter the name of the action and an NXQL query for specifying the list of documents on which to run the bulk.
+The BulkService is a new Nuxeo Platform service that allows to persist a document set homogenous to an NXQL query (and in the future to a page provider) so as to process an "action" on each of the documents. The service allows to get a status on a given "Bulk". It is possible to remotely start a bulk using the ``Bulk.RunAction`` operation that accepts as a parameter the name of the action and an NXQL query for specifying the list of documents on which to run the bulk. A first `Action` has been implemented `SetProperty` that allows to bulk set a some properties values on a set of documents. Actions can be contributed via an extension point.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-24837](https://jira.nuxeo.com/browse/NXP-24837) and [NXP-25060](https://jira.nuxeo.com/browse/NXP-25060).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-24837](https://jira.nuxeo.com/browse/NXP-24837) and [NXP-25060](https://jira.nuxeo.com/browse/NXP-25060) and [NXP-25097](https://jira.nuxeo.com/browse/NXP-25097).
 
 ### Annotations Service
 
@@ -347,7 +362,6 @@ function run(input, params) {
 }
 ```
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25020](https://jira.nuxeo.com/browse/25020).
-
 
 ### User Manager
 
@@ -451,7 +465,23 @@ A generic JSON decoder has been implemented for managed blobs.
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24925](https://jira.nuxeo.com/browse/NXP-24925).
 <!--- ### Migration Service -->
 
-### Packaging / Distribution
+
+#### Key/Value Store: Increment API {{since '10.2'}}
+
+New APIs are available on `KeyValueStore`.
+
+Optimized storage of `Long` values:
+- put(String key, Long value)
+- put(String key, Long value, long ttl)
+- getLong(String key)
+- getLongs(Collection<String> keys)
+
+Atomic increment:
+- addAndGet(String key, long delta)
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23745](https://jira.nuxeo.com/browse/NXP-23745).
+
+### Packaging / Distribution / Miscellaneous
 
 #### HSTS Policy {{since '10.1'}}
 
@@ -502,6 +532,16 @@ Ex (deployment-fragment.xml):
 ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25040](https://jira.nuxeo.com/browse/NXP-25040).
+
+#### Multi-Region Replication {{since '10.2'}}
+
+A set of add-ons and scripts have been produced for the ability to replicate all the Nuxeo data in near real time into another hosting region, using Kafka streams for the replication. The intent is to be able to recover from a disaster in less than a minute. Contact Nuxeo for more information about it.
+
+#### Servlet API 3.1 {{since '10.1'}}
+
+Servlet API 3.1 is now used in Nuxeo code.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24386](https://jira.nuxeo.com/browse/NXP-24386).
 
 <!--- ### User workspace -->
 
@@ -567,20 +607,16 @@ Italian, Dutch and Swedish languages have been added to Web UI and Nuxeo Element
 
 ### Amazon S3 Direct Upload for Web UI {{since '10.1'}}
 
-New addon to upload using AWS S3 infrastructure with support for multipart. Allows future integration of other providers.
+New add-on to upload using AWS S3 infrastructure with support for multipart. Allows future integration of other providers.
 Integrated with Web UI upload with real time upload progress. For 10.2 we have added AWS instance role support for better security.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24490](https://jira.nuxeo.com/browse/NXP-24490) and [NXP-24748](https://jira.nuxeo.com/browse/NXP-24748).
 
+### Arender Connector and Document, Image, Video Annotations {{since '10.2'}}
 
-
-<!---
-### Arender Connector {{since '10.2'}}
-A first implementation of the ARender SPI bridge has been implemented so as to be able to preview content stored in Nuxeo using the [Arender previewer](https://arender.io/). This implementation will be completed for 10.2
+A first implementation of the ARender SPI bridge has been done so as to be able to preview content stored in Nuxeo using the [Arender previewer](https://arender.io/). It allows to preview and annotate content, may it be an office file, an image or a video. A first integration to Web UI is done in the addon, the Arender previewer appears in a new "annotations" tab. Deeper integration will be done in the future. Also, in 10.3, comments made for a given annotation will be synced with Nuxeo Comments. A package is available on the marketplace.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24104](https://jira.nuxeo.com/browse/NXP-24104).
-
---->
 
 ### Nuxeo Platform Importer
 
