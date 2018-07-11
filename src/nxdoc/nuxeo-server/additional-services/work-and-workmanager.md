@@ -245,15 +245,14 @@ Visit the [Nuxeo Stream]({{page page='nuxeo-stream'}}) for more information.
 
 ## WorkManager API Evolution
 
-It has been decided in version 10.2 to deprecate some of WorkManager original API that cannot scale in distributed environments.
+Since Nuxeo 10.2 we have deprecated some of WorkManager original API that cannot scale or are not reliable in distributed environments.
 
-From now, finding a work instance or listing them all is not recommended anymore for using a work instance corresponds to manage the work manually.
-
-Further more it's to be noted that scheduling a work depending on a previous state is not reliable in a distributed environement and should not be used.
-
-Thus we also choose not to provide any replacement, it would come with trade offs on performance and scalability we don't want to make.
+For instance:
+- Retrieving a Work object is not safe, the Work being mutable the returned instance can be different that the scheduled or running one.
+- Listing works in a specific state cannot scale properly when having millions of works and it is not reliable because a work listed as scheduled might be in another state while the list is returned.
+Another problem with these methods is that they provide a way to manage manually the work execution which creates complex and untested (in distributed environments) cases.
 
 In our code base we found usage of these methods were not needed or misuse of the WorkManager API that could be better implemented using other ways.
 
-Common misuses are related to work unicity that's now easily handled using isIdempotent that's fully implemented in the StreamWorkManager and distributed-production-ready.
+Common misuses are related to work unicity that's now handled using `isIdempotent` Work flag that the StreamWorkManager implementation takes in account in a reliable way.
 
