@@ -83,6 +83,19 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 12
+
+### Jsessionid Management in URL
+
+A new system parameter is introduced with the hotfix 12 to handle how the `jsessionid` is propagated during the use of the application. The default behavior makes Tomcat to append the `jsessionid` to the URLs, for example in a file download URL. It can be changed to configure Tomcat with the `COOKIE` session tracking mode. The following line has to be added to your `nuxeo.conf` to enable it:
+```
+session.config.tracking.mode.cookie=true
+```
+If the `COOKIE` mode is:
+- enabled: the `jsessionid` parameter will never be appended to the URLs. Yet, cookies need to be enabled in the brower.
+- disabled: the `jsessionid` parameter might be appended to some URLs, for instance when sharing a document permalink to an anonymous user or when clearing the browser cookies. Yet, cookies don't need to be enabled in the browser.
+
+
 ## Hotfix 09
 
 ### Trash Flow
