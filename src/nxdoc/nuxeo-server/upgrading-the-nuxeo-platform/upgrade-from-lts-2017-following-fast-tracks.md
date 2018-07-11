@@ -153,10 +153,42 @@ The import constraints have been relaxed, it's now possible to allow specific Ja
 - `org.nuxeo.ecm.core.api.Blobs`
 - `org.nuxeo.ecm.core.api.impl.blob.StringBlob`
 - `org.nuxeo.ecm.core.api.impl.blob.JSONBlob`
+- `org.nuxeo.ecm.core.api.NuxeoException`
 
-See [NXP-25020](https://jira.nuxeo.com/browse/NXP-25020).
+See [NXP-25020](https://jira.nuxeo.com/browse/NXP-25020) and [NXP-25211](https://jira.nuxeo.com/browse/NXP-25211).
 {{! /multiexcerpt}}
 
+#### TrashService
+
+{{! multiexcerpt name='upgrade-10.2-deprecated.lifecycle_transition_event'}}
+
+##### API Changes
+The new TrashService fires dedicated events `documentTrashed` and `documentUntrashed` (hold by TrashService interface) instead of `lifecycle_transition_event`. The document model passed in the event won't be saved by Nuxeo at the end.
+
+##### Keeping Old Trash implementation
+The trash implementation has changed in 10.2. If you want to keep previous implementation relying on life cycle state, add the following contribution:
+  ```
+  <require>org.nuxeo.ecm.core.trash.service.migrator</require>
+  <extension target="org.nuxeo.runtime.migration.MigrationService" point="configuration">
+
+    <migration id="trash-storage">
+      <defaultState>lifecycle</defaultState>
+    </migration>
+
+  </extension>
+  ```
+
+If you want to migrate trash state to the new property model (`ecm:isTrashed`), follow the Trash migration steps.
+
+##### Trash Migration
+To migrate trash states to the new property model:
+
+1. Follow the step from section [Keeping old trash implementation](#keeping-old-trash-implementation).
+1. In the Nuxeo Platform's JSF UI, go to **Admin** > **System Information** > **Migration**, click the button Migrate trashed state from lifecycle to property and wait until migration is completed.
+1. Remove the contribution added at step 1.
+
+See [NXP-24850](https://jira.nuxeo.com/browse/NXP-24850).
+{{! /multiexcerpt}}
 
 #### Code Behavior Changes
 
@@ -198,15 +230,6 @@ See [NXP-25197](https://jira.nuxeo.com/browse/NXP-25197).
 Since Nuxeo 10.2 and 9.10-HF03, the `SuggestUserEntries` operation performs a full name user search, e.g. typing "John Do" returns the user with first name "John" and last name "Doe".
 
 See [NXP-24583](https://jira.nuxeo.com/browse/NXP-25020).
-{{! /multiexcerpt}}
-
-#### Deprecated APIs
-
-##### Enable new TrashService
-{{! multiexcerpt name='upgrade-10.2-deprecated.lifecycle_transition_event'}}
-The new TrashService fires dedicated events `documentTrashed` and `documentUntrashed` (hold by TrashService interface) instead of `lifecycle_transition_event`. The document model passed in the event won't be saved by Nuxeo at the end.
-
-See [NXP-24850](https://jira.nuxeo.com/browse/NXP-24850).
 {{! /multiexcerpt}}
 
 
