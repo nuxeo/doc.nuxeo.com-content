@@ -150,3 +150,9 @@ The `nuxeo-importer-stream` which is part of the `nuxeo-platform-importer` addon
 
 Please visit [nuxeo-importer-stream README](https://github.com/nuxeo/nuxeo-platform-importer/tree/master/nuxeo-importer-stream)
 for more information.
+
+### Bulk Action Framework
+
+The Bulk Action Framework is leveraging Nuxeo Streams to be able to run resilient bulk actions on documents.
+Please visit [nuxeo-core-bulk README](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-core/nuxeo-core-bulk)
+for more information.
