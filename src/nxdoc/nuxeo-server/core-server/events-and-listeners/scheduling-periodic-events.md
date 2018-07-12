@@ -127,7 +127,7 @@ To schedule an event, you contribute a `<schedule>` to the [schedule](http://exp
 A schedule is defined by:
 
 *   **id**: an identifier.
-*   **username**: the user under which the event should be executed.
+*   **username**: the user under which the event should be executed. Please, see below "Automation" about the requirement to explicitely call `LoginAs`in an automation chain handling the event.
 *   **event**: the identifier of the event to execute.
 *   **eventCategory**: the event category to use.
 *   **cronExpression**: an expression to specify the schedule.
@@ -147,7 +147,7 @@ Here is an example contribution:
 ```xml
 <extension target="org.nuxeo.ecm.core.scheduler.SchedulerService" point="schedule">
   <schedule id="monthly_stuff">
-    <eventId>doStuff</eventId>
+    <event>doStuff</event>
     <eventCategory>default</eventCategory>
     <!-- Every first of the month at 3am -->
     <cronExpression>0 0 3 1 * ?</cronExpression>
