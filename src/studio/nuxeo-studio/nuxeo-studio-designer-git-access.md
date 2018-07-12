@@ -16,7 +16,10 @@ While this is great, the browser is not a good place to do anything beyond simpl
 
 ## Who Can Use It?
 Studio Designer Git Access is available to any customer benefiting from the branch management feature.
-To activate it, simply request it through a support ticket by indicating who should be given this permission and on which project(s).
+To activate it, simply request it through a support ticket by indicating:
+- Who should be given access
+- Which access these people should obtain (read or write)
+- On which project(s)
 
 ## Feature Scope and Restrictions
 
@@ -31,7 +34,6 @@ To activate it, simply request it through a support ticket by indicating who sho
 - Only **fast-forward changes** can be pushed.
 - Only **Studio Designer files** can be managed. Changes to the Modeler side of your project will automatically be rejected as we currently have no way to ensure the validity of your configuration made through this mean.
 - **We don't and will never allow rewriting history** to make sure you can always revert your project to a working state. Push force for instance will be rejected.
-- **No direct push to master branch**. The flow is to push to feature branches (e.g. `feature/my-feature-name`), then merge them on your master branch.
 - **Creating / Deleting Studio branches from Git is not allowed**. You need to use Studio for this. Reason is Nuxeo Studio manages business logic on top of them.
 - **Creating / Updating / Deleting tags from Git is not allowed**. Releases can be created through Studio’s interface or using a REST API. Again, this is tied to Studio managing business logic on top of this.
 
@@ -40,9 +42,12 @@ To activate it, simply request it through a support ticket by indicating who sho
 
 ## How to Use Git Access
 ### Cloning Your Project
-Cloning your repositories can be done using your Nuxeo Online Services credentials.
+Cloning your repositories can be done using your Nuxeo Online Services credentials. As a prerequisite, a Git client should be installed on your computer.
 
-//TODO describe how UI works once it's done
+Once logged in to Nuxeo Online Services:
+1. Visit the `My Applications` tab
+2. Copy the Git url to clone your project
+3. Clone your project using your Git client (typically `git clone [project URL]`)
 
 {{#> callout type='info' heading='Password Storage'}}
 If you want to avoid typing your password repeatedly, we recommend generating a [token]({{page page='token-management'}}) in your Nuxeo Online Services portal and storing it using Git's standard `.netrc` file mechanism.
@@ -58,13 +63,12 @@ The recommended flow is the following:
 1. Commit and push your changes
 
 {{#> callout type='info' heading='Branch Usage'}}
-It is also possible to use any existing feature branch (feature branches are all named `feature/branch-name`) to push your changes. Nevertheless, we recommend using a dedicated branch to have more control.
+It is also possible to use any existing feature branch (feature branches are all named `feature/branch-name`) or master to push your changes. Nevertheless, we recommend using a dedicated branch to have more control.
 {{/callout}}
-
 
 ### Checking and Integrating the Result
 Have a look at your changes in Studio:
 
 1. Checkout the feature/your-branch-name branch if needed
-1. Pull changes
+1. Pull changes. Studio checks every 10 seconds for new commits to pull.
 1. You can follow the procedure described in the [Studio configuration review how-to]({{page page='how-to-review-nuxeo-studio-configuration'}}) to integrate your changes in the master branch.
