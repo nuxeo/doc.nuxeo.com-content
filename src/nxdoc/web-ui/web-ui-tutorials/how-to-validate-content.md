@@ -1,5 +1,5 @@
 ---
-title: 'HOWTO: Validate the Content of a Form'
+title: 'HOWTO: Validate a Document Type Layout'
 review:
     comment: ''
     date: '2018-06-20'
@@ -7,7 +7,7 @@ review:
 toc: true
 details:
     howto:
-        excerpt: Learn how to validate the content of a form.
+        excerpt: Learn how to validate a document type layout.
         level: Advanced
         tool: code
         topics: Web UI
