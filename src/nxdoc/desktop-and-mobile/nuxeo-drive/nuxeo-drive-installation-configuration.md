@@ -15,8 +15,7 @@ tree_item_index: 100
 
 ## Requirements
 To be able to synchronize folders on your computer, you need to install the Nuxeo Drive client on your computer.
-We provide OS-specific installers for Mac OS X and Windows, available from the Nuxeo Drive tab of the Home.
-For Linux, you need a PyQt4 with WebKit support.
+We provide OS-specific installers for macOS and Windows, available from the Nuxeo Drive tab of the Home.
 {{#> callout type='note' }}
 GNU/Linux support for Nuxeo Drive is fragile and currently depends on several obsolete modules. Keep an eye on our [roadmap]({{page page='nuxeo-drive-roadmap'}}) for developments and the [deployment instructions on GitHub](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/deployment.md) for more information.
 {{/callout}}
@@ -24,6 +23,14 @@ GNU/Linux support for Nuxeo Drive is fragile and currently depends on several ob
 ### Support
 
 See this up-to-date [support page](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/support.md) to know what OS vendor and version we are supporting; but also the Python version we are currently using.
+
+### Authentication
+
+Nuxeo Drive uses the same authentication way as any user would do with its browser. So it can handle basic authentications [available in the platform]({{page page='authentication-and-user-management'}}). But it is missing several protocols that require deep changes in Nuxeo Drive itself, as of now those are not available:
+
+- OAuth 2
+- Kerberos (tracked with the ticket [NXDRIVE-37](https://jira.nuxeo.com/browse/NXDRIVE-37))
+- NTLM (tracked with the ticket [NXDRIVE-875](https://jira.nuxeo.com/browse/NXDRIVE-875))
 
 ## Installation
 
@@ -41,7 +48,7 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 
 #### Installing Nuxeo Drive on macOS
 
-1.  Download the installer (`.dmg` file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](http://community.nuxeo.com/static/drive/latest/nuxeo-drive.dmg).
+1.  Download the installer (`.dmg` file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](https://community.nuxeo.com/static/drive-updates/nuxeo-drive.dmg).
 2.  Run the installer: drag and drop the Nuxeo Drive icon in the Applications directory.
     ![]({{file name='Drive-dmg-installer.png' page='nuxeo-drive'}} ?w=400,border=true)
     Nuxeo Drive is now installed on your computer.
@@ -50,7 +57,7 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 
 #### Installing Nuxeo Drive on Windows
 
-1.  Download the Windows installer (`.msi` file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](http://community.nuxeo.com/static/drive/latest/nuxeo-drive.msi).
+1.  Download the Windows installer (`.exe` file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](https://community.nuxeo.com/static/drive-updates/nuxeo-drive.exe).
 2.  Run the installer: indicate where Nuxeo Drive should be installed (typically `C:\Program Files (x86)`) and click **Next** until the installation process is done.
     Nuxeo Drive is now installed on your computer.
 
@@ -89,41 +96,21 @@ To Install Nuxeo Drive on your Linux computer:
     sudo mount -oremount,user_xattr /dev/sda3
     ```
 
-2. **Python 2.7**
+2. **Python 3**
 
-    Nuxeo Drive uses some packages, which are only compatible from python **version 2.7**. If this excludes using the standard python installation of certain OS distributions, you may still install python 2.7 [manually from the download pages]( https://www.python.org/downloads/) on your system. However, this may break other tools in your environment, who need to be consistent with the default python packages. Using [Anaconda](http://continuum.io/downloads) to switch between different python installs/environments may help in this case.
+    Nuxeo Drive is compatible with python **version 3.6+**. If this excludes using the standard python installation of certain OS distributions, you may still install python 3.7 [manually from the download pages]( https://www.python.org/downloads/) on your system. However, this may break other tools in your environment, who need to be consistent with the default python packages. Using [Anaconda](http://continuum.io/downloads) to switch between different python installs/environments may help in this case.
 
 3. **pip**
 
-  Make sure that the latest version of [pip](http://www.pip-installer.org/) is installed.
+  Make sure that the latest version of [pip](https://www.pip-installer.org/) is installed.
   ```
   sudo pip install -U pip
-  ```
-
-**Installation**
-
-1. Then install the required system and Python packages and the Nuxeo Drive code itself.
-
-  Debian package manager:
-  ```
-  sudo apt-get install python-pip python-dev python-qt4 libffi-dev git
-  ```
-  Redhat package manager (RPM):
-  ```
-  sudo yum install python-pip python-devel PyQt4 libffi-devel git
   ```
 
   Then finally install the Nuxeo Drive requirements and Nuxeo Drive itself. These are common installation actions, not depending on the package manager.
   (warning: define the version you want in the DRIVE_VERSION variable, ex: `release-2.1.113` - [Find the Nuxeo Drive tags list here](https://github.com/nuxeo/nuxeo-drive/tags)):
   ```
-  # For Drive < 2.2.227:
-  DRIVE_VERSION=release-2.1.113
-  pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements.txt
-  pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/unix-requirements.txt
-  pip install git+https://github.com/nuxeo/nuxeo-drive.git@$DRIVE_VERSION
-
-  # For Drive >= 2.2.227:
-  DRIVE_VERSION=release-2.2.323
+  DRIVE_VERSION=release-3.2.0
   pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements.txt
   pip install -r https://raw.github.com/nuxeo/nuxeo-drive/$DRIVE_VERSION/requirements-unix.txt
   pip install git+https://github.com/nuxeo/nuxeo-drive.git@$DRIVE_VERSION
@@ -454,7 +441,7 @@ To uninstall Nuxeo Drive:
     2.  Click on **Quit** in the menu.
 
     {{#> callout type='info' }}
-    At this point you can check that there are no `ndrivew.exe` remaining processes in the **Processes** tab of the **Windows Task Manager** that you can open by typing Ctrl + Shift + Esc.
+    At this point you can check that there are no `ndrive.exe` remaining processes in the **Processes** tab of the **Windows Task Manager** that you can open by typing Ctrl + Shift + Esc.
     If you find such processes, kill them manually by right-clicking on their name and clicking on **End Process**.
     {{/callout}}
 
@@ -463,7 +450,6 @@ To uninstall Nuxeo Drive:
     {{#> callout type='tip' }}
     If you have any problem during the uninstallation process you can try using this [Microsoft tool](https://support.microsoft.com/fr-fr/mats/program_install_and_uninstall) to uninstall Nuxeo Drive properly.
     {{/callout}}
-3.  Waiting for [NXDRIVE-476](https://jira.nuxeo.com/browse/NXDRIVE-476) to be resolved you also need to manually delete the empty `C:\Program Files (x86)\Nuxeo` directory.
 
 {{#> callout type='warning' }}
 
