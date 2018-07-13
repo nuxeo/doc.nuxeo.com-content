@@ -603,6 +603,178 @@ Italian, Dutch and Swedish languages have been added to Web UI and Nuxeo Element
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-24451](https://jira.nuxeo.com/browse/NXP-24451) and [NXP-24445](https://jira.nuxeo.com/browse/NXP-24445).
 
+
+#### User Cloud Settings {{since '10.2'}}
+
+Adds an interface to allow users to manage their Oauth2 tokens. Managing inbound and outbound authorisations.
+[NXP-20773](https://jira.nuxeo.com/browse/NXP-20773) The user has a way to manage all the cloud services permission tokens granted to the Nuxeo account.
+[NXP-22588](https://jira.nuxeo.com/browse/NXP-22588) Users can now manage external applications authorisations with Nuxeo.
+[NXP-24841](https://jira.nuxeo.com/browse/NXP-24841) Improves performance on Cloud Service area to lazy load pages.
+[NXP-24578](https://jira.nuxeo.com/browse/NXP-24578) New  Rest API for oAUth 2 tokens:
+
+Some new endpoints have been added to handle CRUD operations on provider and client oAuth tokens.
+```
+GET/PUT/DELETE /oauth2/token/provider/<providerId>/user/<username> -> perform CRUD on provider tokens
+GET /oauth2/token/provider -> retrieve all provider tokens for current user
+GET/PUT/DELETE /oauth2/token/client/<clientId>/user/<username> -> perform CRUD on client tokens
+GET /oauth2/token/client -> retrieve all client tokens for current user
+GET oauth2/client -> retrieve all oauth2 clients
+GET oauth2/client/<clientId> -> retrieve an oauth2 client
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24252](https://jira.nuxeo.com/browse/NXP-24252)
+
+
+#### Drag and drop {{since '10.2'}}
+
+It is now possible to use drag and drop user interaction to move and copy documents to folders and collections on a listing.
+
+[NXP-24351](https://jira.nuxeo.com/browse/NXP-24351) Enables user to add documents to sibling collections by drag and drop.
+[NXP-24350](https://jira.nuxeo.com/browse/NXP-24350) Enables user to move documents to sibling folders by drag and drop.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22807](https://jira.nuxeo.com/browse/NXP-22807)
+
+#### Document metadata differences {{since '10.2'}}
+
+Documents can be compared to other documents or within its versions. Common schemas are compared. UI is fully responsive and can show only different data or all of it. The comparison UI is fully configurable.
+
+[NXP-24780](https://jira.nuxeo.com/browse/NXP-24780) Allows documents to be selected to compare.
+[NXP-24781](https://jira.nuxeo.com/browse/NXP-24781) Permits user to pick a different version to be compared.
+[NXP-24786](https://jira.nuxeo.com/browse/NXP-24786) Enables switching comparing documents position.
+[NXP-24784](https://jira.nuxeo.com/browse/NXP-24784) Visualizes metadata differences on two documents.
+[NXP-24784](https://jira.nuxeo.com/browse/NXP-24785) Allows custom element to be added to compare different metadata proprieties. Defines custom elements to be used on blobs, document and user references.
+
+#####Default comparsion elements
+Blobs: In case of blobs, the name should be the content for comparison. An action should also be present so that if the MD5 of those blobs is different, the action allows the user to launch a blob content comparison (using ARender comparison).
+
+Document references: should compare the document title
+User references: should compare with the user tag widget
+
+A custom element was introduced to compare documents: `nuxeo-diff`. This element now dynamically loads the file `diff/imports.html`, which imports custom elements from the diff/elements folder and registers them in a global registry using a set of rules. These rules define for what property names or property types should this elements be used to represent the differences (or the raw value in case there are no differences). A sample of a valid `diff/imports.html` follows:
+```
+<link rel="import" href="elements/nuxeo-default-diff.html">
+<link rel="import" href="elements/nuxeo-blob-diff.html">
+<link rel="import" href="elements/nuxeo-dcdescription-diff.html">
+<script>
+  Nuxeo.Diff.registerElement('nuxeo-blob-diff', {type: 'blob'});
+  Nuxeo.Diff.registerElement('nuxeo-dcdescription-diff', {property: 'dc:description'});
+</script>
+```
+These elements are used as children by `nuxeo-object-diff`, which is the element responsible for representing a diff for a given property, loading those elements based on the property name or property type. In case no custom element is registered for the given criteria, the default diff element (named nuxeo-default-diff) is used.
+
+In order to allow the current custom elements to be overridden and new elements to be added, the following files are not vulcanized:
+
+- nuxeo-diff-page.html
+- diff/imports.html
+- diff/elements/.html
+The `nuxeo-diff-page` stamps `nuxeo-diff`, which can be parameterized. `nuxeo-diff` exposes several customization properties, including the headers, enrichers and schemas used to fetch the documents. The headers property can be used to determined whether documents are fetched with or without resolved entities.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22921](https://jira.nuxeo.com/browse/NXP-22921)
+
+
+#### User Cloud Settings {{since '10.2'}}
+
+Introduces new file-based document pill to allow annotations with Arender.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25107](https://jira.nuxeo.com/browse/NXP-25107)
+
+#### New Languages {{since '10.2'}}
+
+Adds Chinese simplified and Hebrew locales for Web UI.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25112](https://jira.nuxeo.com/browse/NXP-25112).
+
+#### Performance improvements {{since '10.2'}}
+
+Several actions to provide better performance on Web UI.
+
+[NXP-25158](https://jira.nuxeo.com/browse/NXP-25158) Enables a way to skip aggregates computation, making the request potentially faster. This is used on a range or pagination queries as there is no need to update aggregates.
+This can be used by adding `skipAggregates=true` as a HTTP header when invoking the search rest endpoint.
+[NXP-25202](https://jira.nuxeo.com/browse/NXP-25202) Adds an initial progress page for fast feedback on loading.
+[NXP-25139](https://jira.nuxeo.com/browse/NXP-25139) Updates cache headers for Web UI static resources.
+[NXP-24820](https://jira.nuxeo.com/browse/NXP-24820) The memory footprint of the WebUI has been reduced.
+[NXP-24422](https://jira.nuxeo.com/browse/NXP-24422) Edge performance was analyse and new improvement actions we planed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25038](https://jira.nuxeo.com/browse/NXP-25038)
+
+#### UX improvements {{since '10.2'}}
+
+On 10.2, several UX improvements were added to Web UI:
+
+[NXP-25021](https://jira.nuxeo.com/browse/NXP-25021) A login banner is displayed when the WebUI session has expired.
+[NXP-25202](https://jira.nuxeo.com/browse/NXP-25202) Adds an initial progress page for fast feedback on loading.
+[NXP-24648](https://jira.nuxeo.com/browse/NXP-24648) Improves UX by notifying user when connection is offline making Web UI not reacting.
+[NXP-24752](https://jira.nuxeo.com/browse/NXP-24752) Introduces mixin that allows selection toolbar appearance and position customisation. Adds theme variable for selection color and uses this by default.
+[NXP-24692](https://jira.nuxeo.com/browse/NXP-24692) To assure the best legibility, the color of the "shortcut" icons was changed to have a high contrast to the background color.
+[NXP-22062](https://jira.nuxeo.com/browse/NXP-22062) Document UIDs on audit log now have a link back to document.
+[NXP-24894](https://jira.nuxeo.com/browse/NXP-24894) Fixes drawer queue keyboard navigation.
+[NXP-24466](https://jira.nuxeo.com/browse/NXP-24466) Document information included in administration audit logs.
+
+
+#### Bugfixes {{since '10.2'}}
+
+On 10.2, several relevante bugfixes were included to Web UI:
+
+[NXP-25310](https://jira.nuxeo.com/browse/NXP-25310) Groups with slash in their name are supported.
+[NXP-24789](https://jira.nuxeo.com/browse/NXP-24789) The access to the user administration is disabled for anonymous users.
+[NXP-25094](https://jira.nuxeo.com/browse/NXP-25094) Makes bulk download notification fixed with no intermittency.
+[NXP-24832](https://jira.nuxeo.com/browse/NXP-24832) Ordered folder support is extended to document types which inherit from OrderedFolder type.
+[NXP-22555](https://jira.nuxeo.com/browse/NXP-22555) `<nuxeo-document-distribution-chart>` not restricted to default-domain anymore..
+
+### Nuxeo Elements {{> anchor 'nuxeo-elements'}}
+
+#### Migration to ES6 {{since '2.3.2'}}
+
+Migrates all elements to ES6 class-based syntax which allows usage of Polymer 2 and move away from Polymer legacy APIs
+
+[ELEMENTS-506](https://jira.nuxeo.com/browse/ELEMENTS-506) Migrates nuxeo-dataviz-elements to ES6.
+[ELEMENTS-505](https://jira.nuxeo.com/browse/ELEMENTS-505) Migrates nuxeo-elements to ES6.
+[ELEMENTS-640](https://jira.nuxeo.com/browse/ELEMENTS-640) Migrates Widgets to ES6 and Polymer 2.
+[ELEMENTS-635](https://jira.nuxeo.com/browse/ELEMENTS-635) Migrates UI Elements behaviors, slots and filters to ES6 and Polymer 2.
+[ELEMENTS-637](https://jira.nuxeo.com/browse/ELEMENTS-637) Migrates Actions and Viewers to ES6 and Polymer 2.
+[ELEMENTS-639](https://jira.nuxeo.com/browse/ELEMENTS-639) Migrates Listing elements to ES6 and Polymer 2.
+[ELEMENTS-636](https://jira.nuxeo.com/browse/ELEMENTS-636) Migrates Document Permissions and User Management to ES6 and Polymer 2.
+[ELEMENTS-638](https://jira.nuxeo.com/browse/ELEMENTS-638) Migrates Demos and Tests to ES6 and Polymer 2.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [ELEMENTS-504](https://jira.nuxeo.com/browse/ELEMENTS-504).
+
+#### Performance improvements {{since '2.3.2'}}
+
+Several actions to provide better performance on Nuxeo Elements.
+
+[ELEMENTS-673](https://jira.nuxeo.com/browse/ELEMENTS-673) Improves performance on lazy loading to not fetch already loaded documents
+[ELEMENTS-701](https://jira.nuxeo.com/browse/ELEMENTS-701) Adds option to skip aggregation computation in nuxeo-page-provider for better performance.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25038](https://jira.nuxeo.com/browse/NXP-25038)
+
+#### UX improvements {{since '2.3.2'}}
+
+Several UX improvements were added to Nuxeo Elements that impact Web UI 10.2:
+
+[ELEMENTS-685](https://jira.nuxeo.com/browse/ELEMENTS-685) Removes background on image previewer and exposes it as an attribute for better visual.
+[ELEMENTS-707](https://jira.nuxeo.com/browse/ELEMENTS-707) Improves requirement symbol on form's labels.
+[ELEMENTS-666](https://jira.nuxeo.com/browse/ELEMENTS-666) Improves nuxeo-user-suggestion UI to make it non-ambiguous.
+[ELEMENTS-622](https://jira.nuxeo.com/browse/ELEMENTS-622) Selection UI improved to be consistent in all view mode.
+[ELEMENTS-687](https://jira.nuxeo.com/browse/ELEMENTS-687) Changes image previewer dragging behaviour to contain image on bounds.
+[ELEMENTS-677](https://jira.nuxeo.com/browse/ELEMENTS-677) Changes blob delete action to distinguish from document trash.
+
+#### Update Nuxeo JS client dependency {{since '2.3.2'}}
+Adapts Element's tests for nuxeo js client 3.6.1
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [ELEMENTS-650](https://jira.nuxeo.com/browse/ELEMENTS-650)
+
+#### Sort aggregates elements {{since '2.3.2'}}
+Aggregation widgets can now be sorted by the label with the *sort-by-label* boolean property. i.e. `<nuxeo-checkbox-aggregation sort-by-label .../>`
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [ELEMENTS-621](https://jira.nuxeo.com/browse/ELEMENTS-621)
+
+#### Elements improvements and additions {{since '2.3.2'}}
+[ELEMENTS-669](https://jira.nuxeo.com/browse/ELEMENTS-669) Introduces new element <nuxeo-tooltip>.
+[ELEMENTS-662](https://jira.nuxeo.com/browse/ELEMENTS-662) Changes `nuxeo-date-picker` element to user vaadin date picker for better browser support.
+[ELEMENTS-662](https://jira.nuxeo.com/browse/ELEMENTS-662) Two new elements, `<nuxeo-directory-checkbox>` (multiple) and `<nuxeo-directory-radio-group>` (single) added to present and select directory entry(ies).
+[ELEMENTS-624](https://jira.nuxeo.com/browse/ELEMENTS-624) Exposes `rows` attribute in nuxeo-textarea element.
+[ELEMENTS-610](https://jira.nuxeo.com/browse/ELEMENTS-610) Replaces video javascript library with browser native video element for to better support browsers.
+
 <!-- ### Nuxeo JSF UI -->
 
 ### Amazon S3 Direct Upload for Web UI {{since '10.1'}}
