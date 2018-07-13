@@ -26,38 +26,35 @@ To activate it, simply request it through a support ticket by indicating:
  Nuxeo Studio Designer Git access has been designed to allow for productivity, while keeping sane restrictions for security and ease of use reasons.
 
 ### What's possible
-- Access to Nuxeo Studio Git repositories through HTTPS protocol
-- Launch git commands on your repositories, with some restrictions
-- Automatic refresh of the Studio project cache when git commands have been launched
+- Access to Nuxeo Studio Git repositories through HTTPS protocol.
+- Leverage the full power of Git locally.
+- Branches can be created and pushed as long as their name starts with `feature/` (similar to Studio).
+- Launch git commands on your repositories, with some restrictions.
 
 ### Restrictions
-- Only **fast-forward changes** can be pushed.
 - Only **Studio Designer files** can be managed. Changes to the Modeler side of your project will automatically be rejected as we currently have no way to ensure the validity of your configuration made through this mean.
 - **We don't and will never allow rewriting history** to make sure you can always revert your project to a working state. Push force for instance will be rejected.
-- **Creating / Deleting Studio branches from Git is not allowed**. You need to use Studio for this. Reason is Nuxeo Studio manages business logic on top of them.
-- **Creating / Updating / Deleting tags from Git is not allowed**. Releases can be created through Studio’s interface or using a REST API. Again, this is tied to Studio managing business logic on top of this.
-
-### Known Limitations
-- No SSH protocol access.
+- **Deleting Studio branches from Git is not allowed**.
+- **Creating / Updating / Deleting tags from Git is not allowed**. Releases can be created through Studio’s interface or using a REST API. This is tied to Studio managing business logic on top of this.
 
 ## How to Use Git Access
 ### Cloning Your Project
-Cloning your repositories can be done using your Nuxeo Online Services credentials. As a prerequisite, a Git client should be installed on your computer.
+As a prerequisite, a Git client should be installed on your computer.
 
 Once logged in to Nuxeo Online Services:
+1. Generate a [personal access token]({{page page='token-management'}}) in the `My Tokens` tab if you don't have one yet. It will be requested as a password to clone the project.
 1. Visit the `My Applications` tab
-2. Copy the Git url to clone your project
-3. Clone your project using your Git client (typically `git clone [project URL]`)
+1. Copy the Git URL to clone your project
+1. On your computer, clone your project using your Git client (typically `git clone [project URL]`). When prompted, use your Nuxeo Online Services username and your personal access token.
 
 {{#> callout type='info' heading='Password Storage'}}
-If you want to avoid typing your password repeatedly, we recommend generating a [token]({{page page='token-management'}}) in your Nuxeo Online Services portal and storing it using Git's standard `.netrc` file mechanism.
+To avoid having to type your token's content repeatedly, we recommend storing it using Git's standard `.netrc` file mechanism.
 {{/callout}}
 
 ### Making Changes
 The recommended flow is the following:
 
-1. In Nuxeo Studio, create a branch for your changes. It will be named `feature/your-branch-name`.
-1. Pull your changes
+1. On your computer, create a branch for your changes. It has to start with `feature/`.
 1. Checkout the `feature/your-branch-name` branch
 1. Make some changes
 1. Commit and push your changes
@@ -70,5 +67,5 @@ It is also possible to use any existing feature branch (feature branches are all
 Have a look at your changes in Studio:
 
 1. Checkout the feature/your-branch-name branch if needed
-1. Pull changes. Studio checks every 10 seconds for new commits to pull.
+1. Pull changes. Studio checks regularly for new commits to pull.
 1. You can follow the procedure described in the [Studio configuration review how-to]({{page page='how-to-review-nuxeo-studio-configuration'}}) to integrate your changes in the master branch.
