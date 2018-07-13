@@ -85,7 +85,7 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ## Hotfix 12
 
-### `jsessionid` Management in URL
+### Jsessionid Management in URL
 
 A new system parameter is introduced with the hotfix 12 to handle how the `jsessionid` is propagated during the use of the application. The default behavior makes Tomcat to append the `jsessionid` to the URLs, for example in a file download URL. It can be changed to configure Tomcat with the `COOKIE` session tracking mode. The following line has to be added to your `nuxeo.conf` to enable it:
 ```
