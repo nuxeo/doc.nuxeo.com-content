@@ -356,7 +356,7 @@ The default mapping is located in the `${NUXEO_HOME}/templates/common-base/nxser
 3.  Update the `nuxeo.conf` to use your custom template
 
     ```
-    nuxeo.templates=default,/etc/nuxeo/myapp
+    nuxeo.templates=default,myapp
     ```
 
 4.  Restart and re-index the entire repository from the Admin tab (see previous section).
