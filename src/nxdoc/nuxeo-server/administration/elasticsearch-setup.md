@@ -733,7 +733,7 @@ Since Nuxeo 9.3, instead of overriding the extension point you can simply overri
 3.  Update the `nuxeo.conf` to use your custom template.
 
     ```
-    nuxeo.templates=default,/etc/nuxeo/myapp
+    nuxeo.templates=default,myapp
     ```
 
 4.  Restart and re-index the entire repository from the Admin tab (see previous section), a re-indexing is needed to apply the new settings and mapping.
