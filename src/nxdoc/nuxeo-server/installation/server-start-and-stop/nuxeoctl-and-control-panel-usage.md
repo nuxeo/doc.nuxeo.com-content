@@ -494,7 +494,7 @@ This option is implicit if `--set` option is not used and there are more or less
 </tr>
 <tr>
 <td colspan="1">`gui`</td>
-<td colspan="1">Deprecated: use `--gui` option instead.</td>
+<td colspan="1">Deprecated: use `start --gui true` option instead.</td>
 </tr>
 <tr>
 <td colspan="1">`start`</td>
