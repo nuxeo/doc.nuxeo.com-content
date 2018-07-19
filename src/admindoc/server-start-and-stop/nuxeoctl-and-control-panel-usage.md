@@ -484,7 +484,7 @@ Print this message.
 
 </td><td colspan="1">
 
-Deprecated: use `--gui` option instead.
+Deprecated: use `start --gui true` option instead.
 
 </td></tr><tr><td colspan="1">
 
