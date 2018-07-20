@@ -301,6 +301,21 @@ Public
 </tr>
 <tr>
 <td colspan="1">
+Nuxeo ARender Connector<br/>
+`nuxeo-arender-connector`
+</td>
+<td colspan="1">
+Public
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-arender-connector'}})
+</td>
+<td colspan="1">
+[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender?version=1.0.0)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Nuxeo Connect Report Tools Web<br/>
 `nuxeo-connect-tools-report-web`
 </td>
@@ -926,7 +941,7 @@ Public
 </table>
 </div>
 
-Use: "In progress for x.y.z (JC)", "Ready for x.y.z" or "Released for x.y.z" or any other relevant comment.
+{{!Use: "In progress for x.y.z (JC)", "Ready for x.y.z" or "Released for x.y.z" or any other relevant comment.}}
 
 Below is the list of Nuxeo Packages released as deprecated.
 
