@@ -387,7 +387,7 @@ The following table and schema gives an overview of the different ways of queryi
     *   [How to use Operations with the Java Client](https://github.com/nuxeo/nuxeo-java-client#operation-api)
     *   [How to use Operations with the JavaScript client](https://nuxeo.github.io/nuxeo-js-client/latest/Operation.html)
 3.  **CMIS (Client side & Server side)**
-    The Nuxeo Platform is compatible with the CMIS standard. CMIS covers query scope, using CMISQL. It is possible to query the Nuxeo Platform repository using CMISQL in Java server side, or via SOAP and ATOM/PUB bindings remotely.
+    The Nuxeo Platform is compatible with the CMIS standard. CMIS covers query scope, using CMISQL. It is possible to query the Nuxeo Platform repository using CMISQL in Java server side, or via JSON-based or AtomPub bindings remotely.
 
     **Example:**
 
