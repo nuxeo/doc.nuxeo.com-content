@@ -317,11 +317,7 @@ With VCS, delete the column `hierarchy.changetoken` so that it is regenerated wi
 
 #### nuxeo.conf
 
-{{! multiexcerpt name='upgrade-9.2-nuxeo.conf'}}
-
 Add the following parameter in order to keep consistency with the previous hot-reload strategy: `org.nuxeo.runtime.reload_strategy=unstash`.
-
-{{! /multiexcerpt}}
 
 ### Data
 
@@ -458,9 +454,18 @@ Nuxeo Segment.io plugin is now aligned on `com.github.segmentio:analytics:1.0.7`
 <td colspan="1">Renamed to `nuxeo.works.total.default.scheduled`</td>
 <td colspan="1">[NXP-22996](https://jira.nuxeo.com/browse/NXP-22996)</td>
 </tr>
+<tr>
+<td colspan="1">`org.nuxeo.runtime.reload_strategy`</td>
+<td colspan="1">Default value to `standby`<br/>`unstash` was removed</td>
+<td colspan="1">[NXP-22546](https://jira.nuxeo.com/browse/NXP-22546)</td>
+</tr>
 </tbody>
 </table>
 </div>
+
+#### nuxeo.conf
+
+It is no longer needed to define `org.nuxeo.runtime.reload_strategy=unstash` (introduced in 9.2), this behavior has been removed in favor of `standby` strategy.
 
 ### Data
 
