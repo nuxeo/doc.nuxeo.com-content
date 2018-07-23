@@ -2500,6 +2500,20 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 <td colspan="1">Since 9.3</td>
 </tr>
 
+<tr>
+<td colspan="1">`org.nuxeo.runtime.reload_strategy`</td>
+<td colspan="1">
+The strategy to use when hot reloading Nuxeo Server.<br/>
+There're two possible values, changing slightly the before/after reload logic:
+<ul>
+<li>`standby`: components are stopped, new/former components are deployed/undeployed, components are started</li>
+<li>`restart`: components are stopped, then de-activated, new/former components are deployed/undeployed, components are activated, then started</li>
+</ul>
+</td>
+<td colspan="1">`standby`</td>
+<td colspan="1">Since 9.2</td>
+</tr>
+
 </tbody>
 </table>
 </div>

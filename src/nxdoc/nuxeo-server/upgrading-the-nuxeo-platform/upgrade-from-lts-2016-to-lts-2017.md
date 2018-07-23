@@ -25,10 +25,6 @@ tree_item_index: 96
 
 {{{multiexcerpt 'upgrade-9.3-installation-requirements' page='Upgrade from LTS 2016 following Fast Tracks'}}}
 
-#### nuxeo.conf
-
-{{{multiexcerpt 'upgrade-9.2-nuxeo.conf' page='Upgrade from LTS 2016 following Fast Tracks'}}}
-
 #### Parameters to Update
 
 <div class="table-scroll">
@@ -90,8 +86,8 @@ tree_item_index: 96
 </tr>
 <tr>
 <td colspan="1">`org.nuxeo.runtime.reload_strategy`</td>
-<td colspan="1">Default value to `restart`</td>
-<td colspan="1">[NXP-19326](https://jira.nuxeo.com/browse/NXP-19326)</td>
+<td colspan="1">Default value to `standby`</td>
+<td colspan="1">[NXP-19326](https://jira.nuxeo.com/browse/NXP-19326)<br/>[NXP-22546](https://jira.nuxeo.com/browse/NXP-22546)</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.server.tomcat_error.show_report`</td>
