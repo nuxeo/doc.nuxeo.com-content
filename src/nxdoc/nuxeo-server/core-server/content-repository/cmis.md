@@ -8,7 +8,6 @@ labels:
     - lts2016-ok
     - cmis
     - fguillaume
-    - soap
     - blogs
     - cmis-component
     - content-review-lts2017
@@ -428,7 +427,7 @@ history:
         version: '1'
 
 ---
-[CMIS](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cmis) is the OASIS specification for content management interoperability. It allows client and servers to talk together in HTTP (REST with JSON, AtomPub or SOAP) using a unified domain model. The latest published version is [CMIS 1.1](http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html).
+[CMIS](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cmis) is the OASIS specification for content management interoperability. It allows client and servers to talk together in HTTP (REST with JSON or AtomPub) using a unified domain model. The latest published version is [CMIS 1.1](http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html).
 
 Nuxeo supports CMIS through the following modules:
 
@@ -443,7 +442,6 @@ You can access the different services from the following URLs:
 
 - Browser Binding root URL: `http://localhost:8080/nuxeo/json/cmis`
 - AtomPub service document: `http://localhost:8080/nuxeo/atom/cmis`
-- SOAP WSDL for the repository service: `http://localhost:8080/nuxeo/webservices/cmis/RepositoryService?wsdl`
 
 ### JSON
 
@@ -589,43 +587,7 @@ You should probably pipe this through `tidy` if you want a readable output:
 
 ### SOAP
 
-The following SOAP endpoints are available:
-
-- `http://localhost:8080/nuxeo/webservices/cmis/RepositoryService?wsdl`
-- `http://localhost:8080/nuxeo/webservices/cmis/DiscoveryService?wsdl`
-- `http://localhost:8080/nuxeo/webservices/cmis/ObjectService?wsdl`
-- `http://localhost:8080/nuxeo/webservices/cmis/NavigationService?wsdl`
-- `http://localhost:8080/nuxeo/webservices/cmis/VersioningService?wsdl`
-- `http://localhost:8080/nuxeo/webservices/cmis/RelationshipService?wsdl`
-- `http://localhost:8080/nuxeo/webservices/cmis/MultiFilingService?wsdl`
-- `http://localhost:8080/nuxeo/webservices/cmis/ACLService?wsdl`
-- `http://localhost:8080/nuxeo/webservices/cmis/PolicyService?wsdl`
-
-Authentication is done using Web Services Security (WSS) UsernameToken.
-
-Here is a working example of a SOAP message to the DiscoveryService:
-
-```xml
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://docs.oasis-open.org/ns/cmis/messaging/200908/">
-  <soapenv:Header>
-    <Security xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
-      <UsernameToken>
-        <Username>Administrator</Username>
-        <Password>Administrator</Password>
-      </UsernameToken>
-    </Security>
-  </soapenv:Header>
-  <soapenv:Body>
-    <ns:query>
-      <ns:repositoryId>default</ns:repositoryId>
-      <ns:statement>SELECT cmis:objectid, dc:title FROM cmis:document WHERE dc:title = 'Workspaces'</ns:statement>
-      <ns:maxItems>20</ns:maxItems>
-      <ns:skipCount>0</ns:skipCount>
-    </ns:query>
-  </soapenv:Body>
-</soapenv:Envelope>
-
-```
+The SOAP endpoints are not available anymore starting with Nuxeo 10.3.
 
 ### CMIS Clients
 
