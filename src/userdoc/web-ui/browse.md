@@ -2,14 +2,14 @@
 title: Browse
 review:
     comment: ''
-    date: '2017-03-29'
+    date: '2018-07-24'
     status: ok
 description: null
 toc: true
 labels:
     - creation
     - drag-and-drop
-    - content-review-lts2017
+    - lts2017-ok
 tree_item_index: 100
 
 ---
@@ -57,7 +57,7 @@ To change the information displayed in content views, click on the icon&nbsp;![]
 
 ![]({{file name='columns-settings-web-ui.png'}} ?w=250,border=true)
 
-Once it's done click on **Close**.
+Once it's done, click on **Close**.
 
 {{#> callout type='info'}}
 The displayed information can also be changed from the [Search view]({{page version='' space='userdoc' page='search'}}).
@@ -155,6 +155,18 @@ Although properties are not mandatory, filling them in will make your documents 
     ![]({{file name='edit-metadata-web-ui.png'}} ?w=250,border=true)
 2. Edit the metadata that you want.
 3. Once it is done, click on **SAVE**
+
+## Comparing Metadata
+
+### Between Documents
+
+1. From a workspace or a folder, select documents where you want to compare their metadata.
+1. 
+
+### Between Versions
+
+
+
 
 ## Exporting Content
 Users can export documents on their computer. It is possible to export:
