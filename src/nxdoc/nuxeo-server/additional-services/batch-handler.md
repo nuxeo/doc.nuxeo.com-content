@@ -5,6 +5,9 @@ review:
     date: '2018-05-23'
     status: ok
     comment: ''
+label:
+    - batch-handler
+    -
 toc: true
 ---
 
@@ -12,7 +15,7 @@ toc: true
 
 Batch Handler is a concept introduced in Nuxeo Platform 10.1 Fast Track version, which consists in allowing custom upload behaviour to all the batches.
 
-The previous behaviour is now a provider, which we call "Default". When there is need, you can customize for example the Transient Store to manage your uploads (e.g.: Use a 3rd party cloud provider storage).
+The previous behaviour is now a provider, which we call "Default". When needed, you can customize the Transient Store to manage your uploads (e.g., Use a 3rd party cloud provider storage).
 
 ## Interface
 
@@ -44,5 +47,4 @@ e.g.:
 </extension>
 ```
 
-A [S3DirectBatchHandler]({{page space='nxdoc' page='amazon-s3-online-storage'}}) is provided and configured in the Nuxeo addon [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage).
-
+A [S3DirectBatchHandler]({{page space='nxdoc' page='amazon-s3-online-storage'}}) is provided and configured in the [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage) addon.

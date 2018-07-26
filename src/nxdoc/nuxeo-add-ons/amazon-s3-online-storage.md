@@ -396,11 +396,11 @@ Note that this needs to override the default configuration present in the defaul
 
 ## S3 Direct Upload
 
-By default, binaries will be uploaded to the nuxeo server which will then upload them to S3.
+By default, binaries are uploaded to the Nuxeo server which upload them to S3.
 
-Another possibility is for the client to ask the nuxeo server temporary S3 credentials to a second S3 bucket, used as a facade bucket and called transient, where the client (basically Web UI) directly uploads binaries. Then the S3 reference is passed to the server which moves it to its actual S3 bucket.
+Another possibility is for the client to ask the Nuxeo server temporary S3 credentials to a second S3 bucket, used as a facade bucket and called transient, where the client (basically Web UI) directly uploads binaries. Then the S3 reference is passed to the server which moves it to its actual S3 bucket.
 
-In order to activate S3 direct upload use these parameters :
+To activate S3 direct upload use these parameters:
 
 ```
 nuxeo.s3storage.useDirectUpload=true
@@ -461,4 +461,3 @@ S3 direct upload is implemented by a [BatchHandler]({{page space='nxdoc' page='b
 
 </component>
 ```
-
