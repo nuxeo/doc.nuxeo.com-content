@@ -301,7 +301,7 @@ Public
 </tr>
 <tr>
 <td colspan="1">
-Nuxeo ARender Connector<br/>
+Nuxeo Annotations with ARender<br/>
 `nuxeo-arender-connector`
 </td>
 <td colspan="1">
