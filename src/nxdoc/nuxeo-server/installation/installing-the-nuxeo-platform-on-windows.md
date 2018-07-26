@@ -289,7 +289,7 @@ You want to do a complete installation, compatible for a production environment?
 
 {{! multiexcerpt name='install-vm'}}
 
-The Nuxeo Platform is available as ready-to-use 64 bits virtual machine images from [nuxeo.com](http://www.nuxeo.com). VM images are available for VMWare and Virtual Box. They provide a full environment (OS, database&hellip;) and all required dependencies to make the Nuxeo Platform work.
+The Nuxeo Platform is available as ready-to-use 64 bits virtual machine images from [nuxeo.com](http://www.nuxeo.com). VM images are available for VMware and Virtual Box. They provide a full environment (OS, database&hellip;) and all required dependencies to make the Nuxeo Platform work.
 
 **To install the Nuxeo virtual machine image and start Nuxeo:**
 
@@ -304,9 +304,15 @@ The Nuxeo Platform is available as ready-to-use 64 bits virtual machine images f
 
     You will see a folder with the required file for the virtual machine image to run.
 
+    {{#> callout type='tip' }}
+
+    If using VMware Player 14 on Windows, you might have to configure your VMware Player network settings for the image to have network connectivity.
+
+    {{/callout}}
+
 2.  Start the virtual machine image in your virtual machine application by double-clicking on it.
 
-    *   For the VMWare package, double-click on the file "nuxeo.vmx".
+    *   For the VMware package, double-click on the file "nuxeo.vmx".
     *   For the OVF package: in VirtualBox, go to the File menu and choose Import Appliance. Then start the imported virtual machine.The VM image starts.
     ![]({{file name='DM-VM-starting.png'}} ?w=350)
     Then, the Nuxeo application automatically starts.
