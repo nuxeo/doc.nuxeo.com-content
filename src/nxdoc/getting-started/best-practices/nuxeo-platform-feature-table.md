@@ -620,7 +620,7 @@ The tables below use the following notation:
     </td>
     <td>N/A</td>
     <td>&#10003;<br/>&#10003;</td>
-    <td>LTS&nbsp;2018<br/>LTS&nbsp;2018</td>
+    <td>&#10003;<br/>LTS&nbsp;2018</td>
     <td colspan="1">
     [Developer documentation]({{page page='nuxeo-diff'}})<br/>
     [User documentation]({{page space='userdoc' page='nuxeo-diff'}})
@@ -1612,7 +1612,7 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2018</td>
+    <td>&#10003;</td>
     <td colspan="1">`nuxeoctl` command for non UI apps. Admin tab for JSF UI.</td>
 </tr>
 <tr>
@@ -1620,7 +1620,7 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2018</td>
+    <td>&#10003;</td>
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
