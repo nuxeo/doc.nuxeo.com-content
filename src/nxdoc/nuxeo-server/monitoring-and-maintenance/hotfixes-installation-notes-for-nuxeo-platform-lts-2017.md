@@ -83,6 +83,25 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 13
+
+### Enable GWT annotations
+
+The GWT annotations are enabled when using the old JSF preview which is enabled by setting the `nuxeo.old.jsf.preview` property to true.
+```
+<require>org.nuxeo.ecm.platform.preview.properties</require>
+<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+  <property name="nuxeo.old.jsf.preview">true</property>
+</extension>
+```
+### Support of read-only directories with SAML authentication
+
+Two new parameters are now available when configuring SAML authentication plugin:
+- `userResolverCreateIfNeeded` to create the user if it does not exist in the directory (default value is `true`)
+- `userResolverUpdate` to update the user if present in the directory (default is value `true`)
+
+When set to true, both parameters require a user directory which is not read-only.
+
 ## Hotfix 12
 
 ### Jsessionid Management in URL
