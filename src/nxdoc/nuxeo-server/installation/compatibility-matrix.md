@@ -2,7 +2,7 @@
 title: Compatibility Matrix
 review:
     comment: ''
-    date: '2017-05-05'
+    date: '2018-07-25'
     status: ok
 labels:
     - lts2016-ok
@@ -76,7 +76,7 @@ Supported Java versions: {{! multiexcerpt name='java_requirement'}}**JDK 1.8.0_1
 As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for any given major version, for instance the latest bugfix version of Java 8 was 8u112 (1.8.0_112) at the time of this writing.
 
 {{#> callout type='warning'}}
-Java 7 has been declared EOL (End Of Life) by Oracle and should only be used if there is no other recourse. Java 9 EA (Early Access) is not yet supported.
+Java 7 has been declared EOL (End Of Life) by Oracle and should only be used if there is no other recourse.
 {{/callout}}
 
 More information is available from the [Installation]({{page page='installation'}}) page.
@@ -127,6 +127,7 @@ Nuxeo is shipped with an embedded Tomcat server.
 <tbody>
 <tr>
 <th colspan="1">Nuxeo Platform Version:</th>
+<th>FT 10.2</th>
 <th>FT 10.1</th>
 <th colspan="1">LTS 2017</th>
 <th colspan="1">LTS 2016</th>
@@ -134,6 +135,10 @@ Nuxeo is shipped with an embedded Tomcat server.
 </tr>
 <tr>
 <th colspan="1">Redis</th>
+<td colspan="1">2.8.x <br />
+3.0.x <br />
+3.2.x <br />
+4.0.x</td>
 <td colspan="1">2.8.x <br />
 3.0.x <br />
 3.2.x <br />
@@ -175,7 +180,7 @@ More information can be found on the [Nuxeo and Redis]({{page page='nuxeo-and-re
 <tr><th colspan="1">Elasticsearch</th>
 <td colspan="1">
 Library: 6.3.0<br />
-Cluster: 6.2.x to 6.3.x</td>
+Cluster: 6.3.x</td>
 <td colspan="1">
 Library: 5.6.3<br />
 Cluster: 5.6.x</td>
