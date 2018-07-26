@@ -207,8 +207,18 @@ Or, you may simply want to verify that your [Automation Scripting]({{page page='
      }
    }
    ```
-1. Make sure that you change the `YOUR_PROJECT_NAME` to the correct one.
+1. Make sure that you change the [`YOUR_PROJECT_NAME`]({{#your-project-name}}) to the correct one.
 1. And voila! The test should pass and you have only deployed what is necessary to test the `Content Model` category in Studio.
+
+{{#> callout type='note' }}
+{{> anchor 'your-project-name'}}
+
+You can find your *YOUR_PROJECT_NAME* opening your studio project, 
+    /META-INF
+        MANIFEST.MF
+            Bundle-SymbolicName:studio.extensions.XXXX
+
+{{/callout}}
 
 ## Testing Automation
 
@@ -273,7 +283,7 @@ Or, you may simply want to verify that your [Automation Scripting]({{page page='
           }
       }
       ```
-1. Verify that you've changed `YOUR_PROJECT_NAME` to the correct one.
+1. Verify that you've changed [`YOUR_PROJECT_NAME`]({{#your-project-name}}) to the correct one.
 
 ## Testing Automation Scripting
 
@@ -334,7 +344,7 @@ Or, you may simply want to verify that your [Automation Scripting]({{page page='
           }
       }
       ```
-1. Verify that you've changed `YOUR_PROJECT_NAME` to the correct one.
+1. Verify that you've changed [`YOUR_PROJECT_NAME`]({{#your-project-name}}) to the correct one.
 
 ## Writing Your Own TargetExtensions Class
 
