@@ -23,10 +23,10 @@ To access it through REST, you can use the [web adapter](https://doc.nuxeo.com/n
 ## Core Implementation
 
 Annotations are stored as placeless document in Nuxeo. Their document type is `Annotation` and main schema is `annotation`. They hold:
-- _document id_
-- _blob xpath_
-- _annotation id_ from external system
-- _entity_ string representation from external system
+- document id
+- blob xpath
+- annotation id (from external system)
+- entity (string representation from external system)
 
 Service uses two page providers, defined as core page provider, to retrieve annotations:
 - GET\_ANNOTATION
