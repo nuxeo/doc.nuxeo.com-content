@@ -135,7 +135,7 @@ See [NXP-24089](https://jira.nuxeo.com/browse/NXP-24089).
 {{! multiexcerpt name='upgrade-10.2-installation-elasticsearch-upgrade'}}
 Elasticsearch 6.x is required.
 
-See [NXP-24102](https://jira.nuxeo.com/browse/NXP-24499).
+See [NXP-24102](https://jira.nuxeo.com/browse/NXP-24102).
 {{! /multiexcerpt}}
 
 ### Code Changes
