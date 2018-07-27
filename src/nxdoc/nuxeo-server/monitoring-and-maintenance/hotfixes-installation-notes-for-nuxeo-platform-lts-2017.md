@@ -85,16 +85,18 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ## Hotfix 13
 
-### Enable GWT annotations
+### Enable GWT Annotations
 
-The GWT annotations are enabled when using the old JSF preview which is enabled by setting the `nuxeo.old.jsf.preview` property to true.
+The GWT annotations are enabled when using the old JSF preview which is enabled by setting up the `nuxeo.old.jsf.preview` property to `true`.
+
 ```
 <require>org.nuxeo.ecm.platform.preview.properties</require>
 <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
   <property name="nuxeo.old.jsf.preview">true</property>
 </extension>
 ```
-### Support of read-only directories with SAML authentication
+
+### Support of Read-Only Directories with SAML Authentication
 
 Two new parameters are now available when configuring SAML authentication plugin:
 - `userResolverCreateIfNeeded` to create the user if it does not exist in the directory (default value is `true`)
