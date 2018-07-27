@@ -487,7 +487,7 @@ The first `@Deploy` annotations will install the core schema bundle into the run
 
 {{#> callout type='note' }}
 
-You should never deploy bundles using the RuntimeHarness API. Always use `@Deploy` annotations to do this. It can be useful when writing custom features but it should be used with care.
+You should never deploy bundles using the RuntimeHarness API. Always use `@Deploy` annotations to do so. The RuntimeHarness API can be useful while writing custom features but it should be used context wisely.
 
 {{/callout}}
 
