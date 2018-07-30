@@ -16,7 +16,6 @@ The Nuxeo Annotations with ARender addon allows users to preview and annotate an
 {{! /excerpt}}
 
 ARender software is made of two pieces:
-
 - Previewer
 - Rendition
 
@@ -25,13 +24,7 @@ ARender rendition server needs to be installed on a dedicated host.
 ARender previewer is extended by Nuxeo to integrate the ARender Previewer with the Nuxeo REST API, it corresponds to [nuxeo-arender-connector-hmi](https://github.com/nuxeo/nuxeo-arender-connector/tree/master/nuxeo-arender-connector-hmi) in ARender Connector. It is built as a war file to deploy.
 
 Here's a chart describing actions during first connection to ARender:
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo Arender Connector/ARender starting flow
-    name: arender-flow.png
-    addons#diagram#up_to_date
---}}
-![ARender Starting Flow](nx_asset://a7219ae8-866b-47bd-b975-3b45aac2a592 ?border=true)
+![]({{file name='arender-flow.png'}} ?w=650,border=true)
 
 
 ## Installation
@@ -46,7 +39,6 @@ To ease deployment, Nuxeo provides two Docker images, one for each piece of ARen
 
 {{#> callout type='info' heading='Docker Images Version'}}
 Docker images have the same version than marketplace packages.
-
 You should always use same version for docker images and marketplace package.
 {{/callout}}
 
@@ -116,6 +108,7 @@ For a on-host installation, you can follow [ARender Documentation](https://arend
 For an embedded installation, you can place your properties files under `NUXEO_HOME/nxserver/config/ARenderConfiguration` folder.
 
 For a Docker installation, you can extends our image and copy your properties file to `/docker-entrypoint-init.d/arender.properties`:
+
 ```
 FROM dockerin-arender.nuxeo.com:443/arender-previewer:MP_VERSION
 
