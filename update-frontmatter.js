@@ -6,7 +6,7 @@ const module_name = 'update-frontmater';
 
 // Set Debugging up
 if (!process.env.DEBUG) {
-    process.env.DEBUG = '*:info,*:error';
+  process.env.DEBUG = '*:info,*:error';
 }
 
 const debug_lib = require('debug');
@@ -19,39 +19,41 @@ const debug = debug_lib(module_name);
 
 const nl = '\n';
 
-const update_frontmatter = (options) => (files, metalsmith, done) => {
-    Object.keys(files).forEach((filename) => {
-        debug(`Processing: ${filename}`);
-        let file = files[filename];
-        file = options.manipulation(file);
-        const contents = file.contents;
-        const frontmatter = Object.assign({}, file);
-        delete frontmatter.contents;
-        delete frontmatter.mode;
-        delete frontmatter.stats;
+const update_frontmatter = options => (files, metalsmith, done) => {
+  Object.keys(files).forEach(filename => {
+    debug(`Processing: ${filename}`);
+    let file = files[filename];
+    file = options.manipulation(file);
+    const contents = file.contents;
+    const frontmatter = Object.assign({}, file);
+    delete frontmatter.contents;
+    delete frontmatter.mode;
+    delete frontmatter.stats;
 
-        const yaml_output = yaml.safeDump(frontmatter, {indent: 4});
+    const yaml_output = yaml.safeDump(frontmatter, { indent: 4 });
 
-        file.contents = Buffer.from(`---${nl}${yaml_output}${nl}---${nl}${contents}`, 'utf8');
-    });
-    done();
+    file.contents = Buffer.from(`---${nl}${yaml_output}${nl}---${nl}${contents}`, 'utf8');
+  });
+  done();
 };
 
 console.time('Update Frontmatter');
 Metalsmith(__dirname)
-.source('./src')
-.use(update_frontmatter({
-    manipulation: (file) => {
+  .source('./src')
+  .use(
+    update_frontmatter({
+      manipulation: file => {
         file.labels = file.labels || [];
         file.labels.push('content-review-lts2017');
 
         return file;
-    }
-}))
-.destination('./src_updated')
-.build((err) => {
+      }
+    })
+  )
+  .destination('./src_updated')
+  .build(err => {
     if (err) {
-        throw err;
+      throw err;
     }
     console.timeEnd('Update Frontmatter');
-});
+  });
