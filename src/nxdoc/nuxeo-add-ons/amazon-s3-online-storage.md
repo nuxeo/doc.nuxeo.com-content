@@ -158,9 +158,11 @@ If your Nuxeo instance runs on Amazon EC2, you can also transparently use IAM in
 &nbsp;
 
 If you are using an S3 compatible storage service, then you will most likely also need to set the endpoint parameter in `nuxeo.conf`
+and you may want (depending on the service vendor, check their documentation) to configure connections to use path-style access for the bucket name:
 
 ```
 nuxeo.s3storage.endpoint=hostname
+nuxeo.s3storage.pathstyleaccess=true
 ```
 
 If you installed the bundle JAR manually instead of using the Nuxeo Package you will also need:
