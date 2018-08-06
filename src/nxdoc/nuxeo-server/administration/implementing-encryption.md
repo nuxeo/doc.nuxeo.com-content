@@ -113,6 +113,12 @@ nuxeo.core.binarymanager_key=keyStoreType=JCEKS,keyStoreFile=/etc/keystore.jceks
 nuxeo.core.binarymanager_key=password=mypassword
 ```
 
+{{#> callout type='note' heading='Encryption Algorithm'}}
+Before Nuxeo 10.3, the encryption used was based on AES/CBC/PKCS5Padding which has been found to be insecure (susceptible to padding oracle attacks).
+Starting with Nuxeo 10.3, a more secure encryption algorithm, AES/GCM/NoPadding, is used. If you're migrating data from an earlier version and therefore still
+need to use the old insecure encryption algorithm, you must add the option `useInsecureCipher=true` to the `nuxeo.core.binarymanager_key` in `nuxeo.conf`.
+{{/callout}}
+
 {{#> callout type='note' heading='Java Cryptographic Extension'}}
 
 By default Oracle Java ships with a Java Cryptographic Extension (JCE) module configured for 128-bit maximum key length, whereas the Nuxeo Platform needs at least 256-bit keys for adequate security of AES.
