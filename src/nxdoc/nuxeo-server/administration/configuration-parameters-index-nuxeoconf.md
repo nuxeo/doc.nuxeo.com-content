@@ -2414,6 +2414,12 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 <td colspan="1">`localhost:9092`</td>
 <td colspan="1">Since 9.3</td>
 </tr>
+<<tr>
+<td colspan="1">`kafka.default.replication.factor`</td>
+<td colspan="1">Default replication factor per partition when creating a new Topic</td>
+<td colspan="1">`1`</td>
+<td colspan="1">Since 10.3</td>
+</tr>
 <tr>
 <td colspan="1">`kafka.topicPrefix`</td>
 <td colspan="1">The prefix applied to any Kafka Topic</td>
