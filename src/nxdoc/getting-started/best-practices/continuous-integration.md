@@ -11,20 +11,30 @@ tree_item_index: 910
 Setting up continuous integration on your project is a good practice to prevent regressions and potential bugs. The earlier you detect a problem, the easier it is to fix it.
 
 {{#> callout type='info'}}
-This page intends to give guidelines on CI chain setup for your project. It won't explain how to do it step by step: too many factors may vary to explain this in a generic way.
+This page intends to give guidelines on bootstrapping CI chain for your project. It won't explain how to do it step by step: too many factors may vary to explain this in a generic way.
 {{/callout}}
 
 # Define Expectations
-Setting up a CI boils down to defining what you want to test: depending on the scope, frequency, project size and other factors the setup might vary into whole different levels. Here are a few options on what you could cover and tools that match the job.
+The architecture to set up depends on:
+- what you want to automate (build, test, verify)
+- when (on commit, by night, on demand, on release)
+- how
+
+Matters the size of the code base, the number of developers, the build frequency, the development flow etc.
 
 # Recommended Tools
+Once you know your expectations, you can get a better idea of the tooling it will require.
+
+Doing CI consists of automating manual tasks, and implicitly involves leveraging the ability add more and more automated tasks such as
+- Quality Assurance tooling
+- Continuous Delivery (e.g. deploying artifacts to a Nexus / artifactory)
+
+Base setup is an environment satisfying the "what you want to automate" requirement, ie "build" or "test" requirements. Nowadays such an environment will likely be provided to the CI system as a Docker image (or composition), and leveraged using a Jenkins like automation tool.
+
 Below are some of the tools Nuxeo usually uses and is familiar with.
 
-## Base (required)
-These tools are required for your CI chain to work, and will also be used to run your unit tests.
-
+## Unit Tests
 - JDK 8: run-time container
-- Jenkins: or a similar automation server software
 - Maven 3: Jenkins slave that runs the build
 
 ## Functional Testing
@@ -34,13 +44,13 @@ These tools are required for your CI chain to work, and will also be used to run
 - Gatling: benchmark testing tools that integrate with Maven
 
 {{#> callout type='tip'}}
-Additional tools can possibly be added for code coverage, code quality testing and so on. Feel free to take a look at [how Nuxeo leverages CI]({{page space="corg" page="quality-assurance-and-continuous-integration"}}) for inspiration.
+Additional tools can possibly be added for code coverage, code quality testing, continuous delivery and so on. Feel free to take a look at [how Nuxeo leverages CI]({{page space="corg" page="quality-assurance-and-continuous-integration"}}) for inspiration.
 {{/callout}}
 
 # Infrastructure Sizing
-Once you know what scope you want for your test coverage, our suggestion would be to build a first job and measure impacts on:
-- Bandwith
-- Disk space
+To get sizing estimates, our suggestion would be to build a first job and measure impacts / footprint on:
+- Network bandwidth
+- Disk usage: space, IO, speed
 - Memory
 - Build duration
 
@@ -49,13 +59,15 @@ From there, ask yourself the following questions:
 - How many commits happen per day?
 - How many developers will you have?
 
-With these numbers, you can get a rough estimate of your needs / costs induced and estimate this against the developers expectations and your quality control requirements.
+With these numbers, you can get a rough estimate of your needs / costs induced and estimate this against the developers expectations and your quality control requirements. Setting up a scalable infrastructure helps to start small, then adapt the sizing as needs evolve.
 
 # Q/A
 ## Can I Put Studio Configuration Under CI?
 Yes you can:
 - [Nuxeo CLI helps testing Studio code]({{page page="nuxeo-cli"}}#studio)
 - [Nuxeo Studio integrates with Maven]({{page space="studio" page="maven-integration"}}).
+
+Studio configuration is exposed as a build resource (Maven artifact or Nuxeo Package).
 
 {{#> callout type='note'}}
 Nuxeo Studio does not provide a hook mechanism that would allow you to trigger CI chain upon a commit. If you like this idea, feel free to <a href="https://app.prodpad.com/ideas/aed8f0f0-9724-11e8-8079-af2a5cff5247/canvas" target="_blank">vote for it</a>!
