@@ -1231,6 +1231,12 @@ WARNING: When changing `nuxeo.bind.address`, you must accordingly change `nuxeo.
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
+<td colspan="1">`nuxeo.server.http.connectionUploadTimeout`</td>
+<td colspan="1">Since 10.3. Configure the Tomcat `connectionUploadTimeout` to specify the timeout, in milliseconds, to use while a data upload is in progress.</td>
+<td colspan="1">60000</td>
+<td colspan="1">Since 10.3</td>
+</tr>
+<tr>
 <td colspan="1">`nuxeo.server.ajp.port`</td>
 <td colspan="1">Server AJP listen port.<br/>
 This is not available on Jetty.</td>
