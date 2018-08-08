@@ -109,7 +109,7 @@ To do so:
 1. Create a new entry in the JSON file with key `label.document.type.<document type name>` and the document type name as value. Here it is `"label.document.type.contract":"Contract"`;
 1. Save your changes.
 
-You now have a document type ready to be used on your Web UI interface, the last thing that you need is an icon to easily find your document type in your instance.
+You now have a document type ready to be used on your Web UI interface!
 
 ## Technical Overview
 
