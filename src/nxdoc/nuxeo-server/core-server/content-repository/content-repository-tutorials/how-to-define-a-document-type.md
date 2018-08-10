@@ -349,7 +349,7 @@ Nuxeo Studio Designer is dedicated to configure Web UI: if you need to a create 
         Your document type is created. You now need to edit it to indicate all its characteristics: layouts, lifecycle, schema, etc.
 
 4.  Fill in the [ **Definition** tab]({{page space='studio' page='documents'}}).
-    ![]({{file name='definition_contract.png'}} ?w=600,border=true)
+    ![]({{file version='' space='nxdoc' page='web-ui-document-layouts' 'definition_contract.png'}} ?w=600,border=true)
 
     {{#> callout type='info' }}
 
@@ -357,7 +357,7 @@ Nuxeo Studio Designer is dedicated to configure Web UI: if you need to a create 
 
     {{/callout}}
 
-5.  To have an icon working on every different views, you need: 
+5.  To have an icon working on every different views, you need:
     - A .png icon for the fields **Icon** and **Large Icon**
     - An .svg icon next to the **SVG Icon** field.</br>
     From **Select Resource** buttons, you can select any PNG/SVG file available in the Studio project resources or upload your own.
