@@ -30,6 +30,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/nYAV'
     source_link: /display/NXDOC/How+to+Define+a+Document+Type
 tree_item_index: 1000
+toc: true
 history:
     -
         author: Manon Lumeau
@@ -348,20 +349,27 @@ Nuxeo Studio Designer is dedicated to configure Web UI: if you need to a create 
         Your document type is created. You now need to edit it to indicate all its characteristics: layouts, lifecycle, schema, etc.
 
 4.  Fill in the [ **Definition** tab]({{page space='studio' page='documents'}}).
-    ![]({{file name='doc_definition_tab.png'}} ?w=650,border=true)
+    ![]({{file name='definition_contract.png'}} ?w=600,border=true)
 
     {{#> callout type='info' }}
 
     Click on the question mark to have more information on each of the parameters.
 
-    {{/callout}} {{#> callout type='tip' }}
+    {{/callout}}
+
+5.  To have an icon working on every different views, you need: 
+    - A .png icon for the fields **Icon** and **Large Icon**
+    - An .svg icon next to the **SVG Icon** field.</br>
+    From **Select Resource** buttons, you can select any PNG/SVG file available in the Studio project resources or upload your own.
+    {{#> callout type='tip' }}
 
     If the icons and lifecycle resources for your document type don't already exist, you can create them from:
 
     *   [ **Resources** Studio tree item]({{page space='studio' page='resources'}}) for icons;
     *   **Content Model** > [**Life Cycles** Studio tree item]({{page space='studio' page='life-cycle'}}) for lifecycle.
         ![]({{file name='lifecycle.png'}} ?w=450,border=true){{/callout}}
-5.  Fill the specific metadata you want in the [**Schema** tab]({{page space='studio' page='schemas'}}).
+
+6.  Fill the specific metadata you want in the [**Schema** tab]({{page space='studio' page='schemas'}}).
     1.  Give your schema a name and a prefix (which are the same as the document type name by default).
     2.  Add your metadata fields. The name and type of the metadata are the minimum required pieces of information required for a field.
         ![]({{file name='doc_type_schema_tab.png'}} ?w=650,border=true)
@@ -392,14 +400,7 @@ Nuxeo Studio Designer is dedicated to configure Web UI: if you need to a create 
 
   {{/callout}}
 
-6. Go to the **Resources** tab
-  1. Create the *images* folder and the *doctypes* subfolder (using the **Create** icon, at the bottom of the left panel)
-
-  ![]({{file name='doc_type_resources.png'}} ?w=300,border=true)
-
-  2. Import your document type icon, in SVG format, in the `/UI/images/doctypes` folder. The SVG file should have the same name as your document type (`my_custom_doctype.svg` for example).
-
-7. Go to **UI** tab, and open the **Translations menu**
+6. Go to **UI** tab, and open the **Translations menu**
 8. Create a  `messages.json` file to translate your document type name and properties
 
   ![]({{file name='doc_type_translations_1.png'}} ?w=650,border=true)

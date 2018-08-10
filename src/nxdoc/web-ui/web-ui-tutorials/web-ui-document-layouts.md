@@ -56,8 +56,10 @@ Here we want to create a custom document type named "Contract" that will hold sp
     Your document type is created.
 1.  Fill in the [**Definition** tab]({{page space='studio' page='documents'}}):
 ![]({{file name='definition_contract.png'}} ?w=600,border=true)
-1.  Select an icon for your contract document type by clicking on the **SVG Icon** button.</br>
-    From there, you can select any SVG file available in the Studio project resources or upload your own.
+1.  Select an icon for your contract document type:
+    - A .png icon for the **Icon** and **Large Icon** fields
+    - An .svg Icon for the **SVG Icon** field.</br>
+    From **Select Resource** buttons, you can select any SVG file available in the Studio project resources or upload your own.
 1.  Fill in the [**Schema** tab]({{page space='studio' page='schemas'}}) with the following metadata:
     - A field **owner** as a _String_
     - A field **policy** as a _String_
