@@ -13,6 +13,7 @@
     "co": "^4.6.0",
     "lodash.defaultsdeep": "^4.6.0",
     "node-yaml-config": "0.0.4",
+    "npm": "^6.3.0",
     "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v10.3.0",
     "thenify": "^3.2.1"
   },

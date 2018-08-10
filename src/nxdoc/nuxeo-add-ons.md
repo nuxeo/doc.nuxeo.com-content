@@ -513,17 +513,17 @@ Registered access
 </tr>
 <tr>
 <td colspan="1">
-Nuxeo Adobe CC Connector<br/>
-`nuxeo-cc-connector-marketplace`
+Nuxeo for Adobe CC<br/>
+`adobe-connector-package`
 </td>
 <td colspan="1">
 Registered access
 </td>
 <td colspan="1">
-[Documentation]({{page page='nuxeo-adobe-cc-connector'}})
+[Documentation]({{page version='' space='nxdoc' page='nuxeo-adobe-cc-connector'}})
 </td>
 <td colspan="1">
-[Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace?version=1.2.8)
+[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace?version=1.2.8)
 </td>
 </tr>
 <tr>
@@ -957,7 +957,9 @@ Public
 </table>
 </div>
 
-{{!Use: "In progress for x.y.z (JC)", "Ready for x.y.z" or "Released for x.y.z" or any other relevant comment.}}
+<!--
+Use: "In progress for x.y.z (JC)", "Ready for x.y.z" or "Released for x.y.z" or any other relevant comment.
+-->
 
 Below is the list of Nuxeo Packages released as deprecated.
 
@@ -969,6 +971,17 @@ Below is the list of Nuxeo Packages released as deprecated.
 <th colspan="1">Public / Registered access</th>
 <th colspan="1">Documentation</th>
 <th colspan="1">Comments</th>
+</tr>
+<tr>
+<td colspan="1">Nuxeo Adobe CC Connector<br/>
+`nuxeo-cc-connector-marketplace`
+</td>
+<td colspan="1">Registered access</td>
+<td colspan="1">[Documentation]({{page page='nuxeo-adobe-cc-connector'}})</td>
+<td colspan="1">
+[Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace?version=1.2.8)<br/>
+Deprecated since LTS 2017 (9.10)
+</td>
 </tr>
 <tr>
 <td colspan="1">Nuxeo Review Workflows Dashboards<br/>
