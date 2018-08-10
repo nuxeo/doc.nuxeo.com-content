@@ -22,11 +22,23 @@ This service provides ways to:
 - Submit a command to be executed.
 - Get the status of a submitted command.
 - Wait for a command to be completely executed.
+- Wait for all running commands to be completely executed (for tests).
+
+The following is an example of use of bulk service:
+
+{{{multiexcerpt 'baf-set-properties-action-java-example' page='bulk-actions-directory'}}}
 
 ## Bulk Automation Operation
 
 It is possible to submit a command through the [Bulk.RunAction](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Bulk.RunAction) automation operation.
 
+{{#> callout type='info' heading='Info'}}
+This is a temporary operation, it will be removed for LTS 2018.
+{{/callout}}
+
+The following is an example of use of operation:
+
+{{{multiexcerpt 'baf-set-properties-action-operation-example' page='bulk-actions-directory'}}}
 
 ## Contributing an Action
 
