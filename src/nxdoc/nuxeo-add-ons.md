@@ -162,6 +162,21 @@ Registered access
 </tr>
 <tr>
 <td colspan="1">
+Amazon S3 Direct Upload for Web UI<br/>
+`amazon-s3-direct-upload`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='amazon-s3-direct-upload'}})
+</td>
+<td colspan="1">
+[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-direct-upload)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Bulk document importer<br/>
 `nuxeo-platform-importer`
 </td>
