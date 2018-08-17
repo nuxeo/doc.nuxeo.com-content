@@ -155,10 +155,10 @@ As Studio projects can be mixed together or involve many functionalities (ex: co
 
 ## Content Model
 
-*   Document types - Document types are probably the main items and should be created first. Naming should start with a capital letter, and if it needs several words, these one should be separated with an underscore: *Contract_Library*.
-*   Schemas - Explicit name (the same as the document type if linked to one) with underscore separating words but all lower case: *contract_library*. You should use a prefix that is either the name or a shorter prefix like *dc* for dublin_core.
-*   Lifecycle - Upper case for each first letter, underscore to separate them. Most of the time a lifecycle is only for one document type, in that case, the lifecycle should name after the doc type with Lifecycle at the end: *Contract_Lifecycle*.
-*   Lifecycle State - all lower case, words separated by underscore. Transitional states and stable states should be distinguished, for instance a document that requires to be corrected and then validated will have the states: *correction* > *validation* > *validated*
+*   **Document types**: Document types are probably the main items and should be created first. Naming should start with a capital letter, and if it needs several words, these one should be separated with an underscore: *Contract_Library*.
+*   **Schemas**: Explicit name (the same as the document type if linked to one) with underscore separating words but all lower case: *contract_library*. You should use a prefix that is either the name or a shorter prefix like *dc* for dublin_core.
+*   **Lifecycle**: Upper case for each first letter, underscore to separate them. Most of the time a lifecycle is only for one document type, in that case, the lifecycle should name after the doc type with Lifecycle at the end: *Contract_Lifecycle*.
+*   **Lifecycle State**: all lower case, words separated by underscore. Transitional states and stable states should be distinguished, for instance a document that requires to be corrected and then validated will have the states: *correction* > *validation* > *validated*
 
 ## Search and Listings
 
