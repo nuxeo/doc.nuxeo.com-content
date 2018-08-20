@@ -295,7 +295,7 @@ history:
 
 ---
 
-{{#> callout type='info' heading='Nuxeo University'}}
+{{#> callout type='info' heading='Nuxeo University' }}
 Watch the related courses on Nuxeo University
 - [Course on Document Type Layouts with Studio Designer](https://university.nuxeo.com/learn/public/course/view/elearning/80/document-and-workflow-task-layouts-with-nuxeo-studio-designer)
 - [Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
@@ -337,6 +337,7 @@ Nuxeo Studio Designer is dedicated to configure Web UI: if you need to a create 
         You can override built-in types definition (File, Folder, ...): just create a type with the same name. See the [dedicated how to override existing document types]({{page page='how-to-override-existing-document-types'}}).
 
         {{/callout}}
+
     2.  Select the document type you want to extend and so inherit from.
 
         {{#> callout type='tip' }}
@@ -348,8 +349,8 @@ Nuxeo Studio Designer is dedicated to configure Web UI: if you need to a create 
         ![]({{file name='doc_type_creation.png'}} ?w=350,border=true)
         Your document type is created. You now need to edit it to indicate all its characteristics: layouts, lifecycle, schema, etc.
 
-4.  Fill in the [ **Definition** tab]({{page space='studio' page='documents'}}).
-    ![]({{file version='' space='nxdoc' page='web-ui-document-layouts' 'definition_contract.png'}} ?w=600,border=true)
+4.  Fill in the [**Definition** tab]({{page space='studio' page='documents'}}).
+    ![]({{file name='definition_contract.png'}} ?w=600,border=true)
 
     {{#> callout type='info' }}
 
@@ -361,13 +362,16 @@ Nuxeo Studio Designer is dedicated to configure Web UI: if you need to a create 
     - A .png icon for the fields **Icon** and **Large Icon**
     - An .svg icon next to the **SVG Icon** field.</br>
     From **Select Resource** buttons, you can select any PNG/SVG file available in the Studio project resources or upload your own.
+
     {{#> callout type='tip' }}
 
     If the icons and lifecycle resources for your document type don't already exist, you can create them from:
 
-    *   [ **Resources** Studio tree item]({{page space='studio' page='resources'}}) for icons;
-    *   **Content Model** > [**Life Cycles** Studio tree item]({{page space='studio' page='life-cycle'}}) for lifecycle.
-        ![]({{file name='lifecycle.png'}} ?w=450,border=true){{/callout}}
+    - [**Resources** Studio tree item]({{page space='studio' page='resources'}}) for icons;
+    - **Content Model** > [**Life Cycles** Studio tree item]({{page space='studio' page='life-cycle'}}) for lifecycle.
+        ![]({{file name='lifecycle.png'}} ?w=450,border=true)
+
+    {{/callout}}
 
 6.  Fill the specific metadata you want in the [**Schema** tab]({{page space='studio' page='schemas'}}).
     1.  Give your schema a name and a prefix (which are the same as the document type name by default).
