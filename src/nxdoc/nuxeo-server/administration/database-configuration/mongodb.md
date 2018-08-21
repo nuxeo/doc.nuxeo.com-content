@@ -239,7 +239,7 @@ When using MongoDB 3.0 or higher we recommend that you configure the [WiredTiger
 
 Nuxeo stores its data in a MongoDB database under the `default` collection. The name of the collection is the Nuxeo repository name. If you have more than one repository configured, other collections with the names of these repositories will be used for storage.
 
-By default MongoDB doesn't require authentication, but you can [enable the client access control](https://docs.mongodb.org/manual/tutorial/enable-authentication/) and create a user with the `dbAdmin` role.
+By default MongoDB doesn't require authentication, but you can [enable the client access control](https://docs.mongodb.org/manual/tutorial/enable-authentication/) and create a user with the `dbOwner` role.
 
 ## Nuxeo Configuration
 
