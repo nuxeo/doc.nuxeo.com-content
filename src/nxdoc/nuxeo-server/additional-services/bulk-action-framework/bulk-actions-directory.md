@@ -12,7 +12,7 @@ toc: true
 
 ## Directory
 
-Nuxeo provides several actions for BAF:
+Nuxeo provides several actions for the Bulk Action Framework:
 
 | Action name                             | Description                                             | Parameters                                            | Java Class                                                                                                                                      |
 | --------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -21,11 +21,11 @@ Nuxeo provides several actions for BAF:
 
 ## Examples
 
-Let's see some examples of use of bulk actions.
+Let's see some examples of bulk actions in use.
 
 ### SetPropertiesAction
 
-The following is an example of use of _setPropertiesAction_ with java service:
+The following example shows how to use `setPropertiesAction` with java service:
 
 {{! multiexcerpt name='baf-set-properties-action-java-example'}}
 ```
