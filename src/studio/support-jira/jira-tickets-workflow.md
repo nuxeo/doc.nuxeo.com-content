@@ -68,7 +68,7 @@ After a first analysis, the Support team makes the ticket go into one of the sta
 
 This status indicates that the Support team needs more elements from you:
 
-*   if you provide all the answers to the Support team's questions, you must click on the **Give Feedback** button so the ticket goes back to the Support team's watch;
+*   if you provide all the answers to the Support team's questions, you must click on the **Give Feedback** button (only visible in **Feedback required** status) so the ticket goes back to the Support team's watch;
 *   if you answer only some of the questions or if you say you'll keep investigating on your side, the ticket must stay in the Feedback required status until all the elements needed to keep processing the ticket are provided;
 *   the questions asked by the Support team can point you to a solution: in that case, you must close the ticket with a comment.
 
