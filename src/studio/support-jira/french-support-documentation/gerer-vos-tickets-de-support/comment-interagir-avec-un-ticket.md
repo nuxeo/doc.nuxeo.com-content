@@ -63,7 +63,7 @@ Après une première analyse, l'équipe de Support va passer le ticket dans l'un
 
 Cet état indique que l'équipe de Support est en attente d'une action de votre part, suite aux questions qui ont été posées :
 
-- Si vous fournissez toutes les réponses aux questions posées par l'équipe de Support, vous devez activer le bouton "Give Feedback" pour que le ticket retourne sous la surveillance du support ;
+- Si vous fournissez toutes les réponses aux questions posées par l'équipe de Support, vous devez activer le bouton "Give Feedback" (seulement visible dans l'état "Feedback required") pour que le ticket retourne sous la surveillance du support ;
 - Si vous ne fournissez qu'une réponse partielle ou bien si vous indiquez que vous allez continuer votre investigation, le ticket doit rester dans l'état "En attente de feedback" jusqu'à la fourniture de tous les éléments nécessaires à la poursuite du traitement ;
 - Dernier cas, il se peut que les questions du support vous aiguille vers une solution : dans ce cas, vous devez directement fermer le ticket avec un commentaire.
 
