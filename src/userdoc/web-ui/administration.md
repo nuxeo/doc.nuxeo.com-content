@@ -14,7 +14,7 @@ labels:
 This Administration menu presents different submenus:
 
 - [Analytics](#analytics)
-- [Users & Groups](#users-groups)
+- [Users & Groups](#users-and-groups)
 - [Vocabularies](#vocabularies)
 - [Audit](#audit)
 - [Cloud Services](#cloud-services)
