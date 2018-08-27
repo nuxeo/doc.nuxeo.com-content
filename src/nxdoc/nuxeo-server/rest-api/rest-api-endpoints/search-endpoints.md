@@ -236,7 +236,7 @@ Searches can be parameterized with execution parameters which can be passed to a
         <td colspan="1">`pageSize`</td>
         <td colspan="1">integer</td>
         <td colspan="1">Number of entries per page</td>
-        <td colspan="1">0 *(no pagination)* The maximum is 1000 by default. See the [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}}) in order to customize it.</td>
+        <td colspan="1">0 *(no pagination)* The maximum is 1000 by default. See the [related page on the Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/server-10.2/viewComponent/org.nuxeo.ecm.core.query.properties) in order to customize it.</td>
       </tr>
       <tr>
         <td colspan="1">`currentPageIndex`</td>
