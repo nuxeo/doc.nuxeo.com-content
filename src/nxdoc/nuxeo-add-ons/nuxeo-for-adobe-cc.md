@@ -42,11 +42,10 @@ For support related to the connector, please contact Nuxeo Support via your regu
 Installation is made of two steps:
 
 1. Install the [server-side Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package) available from the marketplace.
-1. Install the client side plugin on your local computer.
-
-{{#> callout type='info' }}
-If you have previously used a Nuxeo Adobe connector, clear the application preferences by pressing and holding `Alt+Control+Shift` (on Windows) or `Option+Command+Shift` (on macOS) as you start Photoshop/InDesign/Illustrator
-{{/callout}}
+  {{#> callout type='info' }}
+  If you have previously used a Nuxeo Adobe connector, clear the application preferences by pressing and holding `Alt+Control+Shift` (on Windows) or `Option+Command+Shift` (on macOS) as you start Photoshop/InDesign/Illustrator
+  {{/callout}}
+1. Please contact your Nuxeo Administrator for access to the local client side plugin installation.
 
 Once the installation done, a new extension "Nuxeo CC Connector" is available on your Photoshop, InDesign or Illustrator application.
 
@@ -54,41 +53,9 @@ Once the installation done, a new extension "Nuxeo CC Connector" is available on
 
 Once Nuxeo for Adobe CC is properly installed, launch InDesign CC 2018 (licensing dialog does not appear in Photoshop or Illustrator) to see a dialog requesting license information:
 
-<!--     ### NX_ASSET ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe limited assets
-    name: adobe-limited-assets.png
-    addins#popup#up_to_date
--->
-![Adobe limited assets](nx_asset://b7086ff6-2ef3-4188-8cba-da81acfcc1e6 ?w=350,border=true)
+- If you have a license key for Nuxeo CC Connector (provided to you by your Nuxeo Admin), click “Yes” to activate now, or click “No” to activate later.
 
-If you have a license key for Nuxeo CC Connector (provided to you by your Nuxeo Admin), click “Yes” to activate now, or click “No” to activate later.
-
-<!--     ### NX_ASSET ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe License Key
-    name: image15.png
-    addins#popup#up_to_date
--->
-![Adobe License Key](nx_asset://77c13a0c-c96f-4075-b2e0-a13c2fbc1de1 ?w=350,border=true)
-
-To activate your license later, use Activate from InDesign’s Connector menu.
-
-<!--     ### NX_ASSET ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe Link Activate Menu
-    name: adobe-link-activate-menu.png
-    addins#popup#up_to_date
--->
-![Adobe Link Activate Menu](nx_asset://f89bc5fb-f8c5-4976-93e8-a109ceda244d ?w=250,border=true)
-
-To deactivate the current license, use Deactivate from the same location.
-
-<!--     ### NX_ASSET ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe Deactivate License
-    name: adobe-deactivate-license.png
-    addins#popup#up_to_date
--->
-![Adobe Deactivate License](nx_asset://22f4ad21-4ebf-42c6-91e2-418236883a18 ?w=350,border=true)
-
-If you have any further questions about Licensing, please contact Nuxeo at contact@nuxeo.com.
+If you have questions related to licensing, contact your Nuxeo Admin or contact Nuxeo at contact@nxueo.com.
 
 ## Using the Nuxeo CC Connector
 
@@ -225,7 +192,12 @@ Each object comes with a detail view containing:
 - The thumbnail of the asset
 - Filename/title, creator, usage info (mapped to dc:rights) and the lifecycle state.
 
-MISSING SCREENSHOT
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe Ryan Walton Copyright
+    name: adobe-ryan-walton.png
+    addins#screenshot#up_to_date
+--}}
+![Adobe Ryan Walton Copyright](nx_asset://b9a94926-47fc-49cb-ac23-f98e0906a734 ?w=250,border=true)
 
 To download a copy of an asset from Nuxeo CC Connector, click the blue download arrow to the right of the thumbnail to begin the download process. For more information, see Download Options in [Preferences section](#preferences).
 
