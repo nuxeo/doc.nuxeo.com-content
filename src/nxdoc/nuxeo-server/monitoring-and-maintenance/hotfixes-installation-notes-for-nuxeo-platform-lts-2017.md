@@ -104,6 +104,12 @@ Two new parameters are now available when configuring SAML authentication plugin
 
 When set to true, both parameters require a user directory which is not read-only.
 
+## Hotfix 15
+
+### Package not found
+After installing the hotfixes with the command `nuxeoctl mp-hotfix`, you may fall in the exception `org.nuxeo.connect.update.PackageException: Package not found: nuxeo-9.10-HF14-1.0.0 nuxeo-9.10-HF15-1.0.0` when starting Nuxeo. 
+You need to add the parameter `--ignore-missing` to `nuxeoctl` command to be able to successfully start Nuxeo.
+
 ## Hotfix 12
 
 ### Jsessionid Management in URL
