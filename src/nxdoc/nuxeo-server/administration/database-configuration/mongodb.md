@@ -225,7 +225,7 @@ When using MongoDB 3.0 or higher we recommend that you configure the [WiredTiger
 
 Nuxeo stores its data in a MongoDB database under the `default` collection. The name of the collection is the Nuxeo repository name. If you have more than one repository configured, other collections with the names of these repositories will be used for storage.
 
-By default MongoDB doesn't require authentication, but you can [enable the client access control](https://docs.mongodb.org/manual/tutorial/enable-authentication/) and create a user with the `dbAdmin` role.
+By default MongoDB doesn't require authentication, but you can [enable the client access control](https://docs.mongodb.org/manual/tutorial/enable-authentication/) and create a user with the `dbOwner` role.
 
 {{#> callout type='warning' heading='User Creation with Nuxeo 8.1 and MongoDB 3.x'}}
 
@@ -260,7 +260,7 @@ Then restart the server and recreate users.
 To activate MongoDB document storage, add the `mongodb` template to your existing list of templates (`nuxeo.templates`) in `nuxeo.conf`.
 
 If you also want to activate audit and directories storage, you need to install the [MongoDB extension addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mongodb-ext). This addon includes `mongodb-audit` and `mongodb-directory` templates in order to store respectively audit or directories data in MongoDB. For example:
- 
+
  ```text
  nuxeo.templates=default,mongodb,mongodb-audit,mongodb-directory
  ```
