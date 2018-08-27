@@ -2,14 +2,14 @@
 title: Nuxeo Platform User Registration
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2018-08-27'
     status: ok
 labels:
     - lts2016-ok
     - user-registration
     - fdavid
     - user-registration-component
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -117,12 +117,12 @@ history:
 
 ---
 {{! excerpt}}
-
 The [Nuxeo Platform User Registration add-on](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-user-registration) enables users to invite external users to access a specific space of the Platform or a limited set of spaces. The invitations must be approved by an administrator of the Platform.
-
 {{! /excerpt}}
 
 ## Installation
+
+{{{multiexcerpt 'JSF-UI-required' page='Generic Multi-Excerpts'}}}
 
 {{{multiexcerpt 'mp-installation-easy' page='Generic Multi-Excerpts'}}}
 
@@ -182,7 +182,7 @@ The user registration process takes three steps:
 
 1.  A user with Manage everything right [invite](#inviting-users) one or several persons to access a workspace (or another type of space).
 2.  The administrators of the application [review this invitation](#managing-pending-invitations) and approve or reject it.
-3.  If the invitation has been accepted by the administrators, an email is sent the invited user(s) so he validates his invitation.
+3.  If the invitation has been approved by the administrators, an email is sent the invited user(s) so he validates his invitation.
     If the invitation has been rejected, it is canceled.
 
 ### {{> anchor 'inviting-users'}}Inviting Users
@@ -267,7 +267,7 @@ To invite several users at the same time to a space:
 
 ### {{> anchor 'managing-pending-invitations'}}Managing Pending Invitations
 
-When users invite external people to access the Platform, a new user account is created for this new external user. This is why the invitation must be accepted by an administrator before the invitation is actually sent.
+When users invite external people to access the Platform, a new user account is created for this new external user. This is why the invitation must be approved by an administrator before the invitation is actually sent.
 
 Invitations can have different statuses:
 
@@ -276,22 +276,19 @@ Invitations can have different statuses:
 *   Rejected: An administrator has refused the invitation and the creation of the required new user account.
 *   Accepted: The invited user has confirmed he received the invitation by clicking on the validation link in the invitation email.
 
-#### Accepting an Invitation
+#### Approving an Invitation
 
-To accept an invitation:
+To approve an invitation:
 
 1.  Click on the sub tab **User Registration Requests** of the space.
     You can also see all invitation requests from the **Admin** > **User Registration Requests** tab.
     ![]({{file name='review-user-invitation.png'}} ?w=600,border=true)
-2.  Click on the **Accept**&nbsp;link of the invitation to validate.
-    The invitation now has the state Accepted. Once the user has validated his invitation by clicking a link in the email, you can:
+2.  Click on the **Approve**&nbsp;button next to the invitation.</br>
+    Now that the invitation has the state Approved, you can:
 
-    *   Click on **Revive**.
-        It will resend a new mail to the user to remember him he has been invited.
-    *   Click on **Delete**.
-        It will cancel the creation of the account if the user has not already enter his password.
-    *   Click on **Validate**.
-        It will finalize the invitation process.![]({{file name='accepted-user-registration.png'}} ?w=600,border=true)
+    - Click on **Revive**: It will resend a new mail to the user to remember him he has been invited.
+    - Click on **Delete**: It will cancel the creation of the account if the user hasn't already accepted the invitation by entering his password.
+    - Click on **Validate**: It will finalize the invitation process.![]({{file name='accepted-user-registration.png'}} ?w=600,border=true)
 
 #### Rejecting an Invitation
 
@@ -311,6 +308,8 @@ When you have been invited to a workspace, a folder or any type of space in the 
 2.  Create your password by typing it.
     ![]({{file name='invitation-password-creation.png' space='userdoc' page='managing-users-and-groups'}} ?w=300,border=true,thumbnail=true)
 3.  Log in to the Nuxeo Platform.
+
+Once the invited user has validated the invitation by clicking on the invitation link and setting his password, the administrator can see the invitation in **Accepted** state. 
 
 ## Technical Configuration Overview
 
