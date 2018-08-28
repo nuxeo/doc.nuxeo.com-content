@@ -347,6 +347,10 @@ For example, sometimes you need to get the children, parents or workflow tasks o
         <td>List of all children documents</td>
       </tr>
       <tr>
+        <td>`hasContent`</td>
+        <td>Boolean flag indicating whether or not current Folderish or Collection document has children or members</td>
+      </tr>
+      <tr>
         <td>`hasFolderishChild`</td>
         <td>Boolean flag indicating whether or not current document has folderish child document</td>
       </tr>
