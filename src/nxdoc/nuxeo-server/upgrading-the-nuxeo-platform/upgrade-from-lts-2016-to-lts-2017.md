@@ -48,7 +48,7 @@ tree_item_index: 96
 <tr>
 <td colspan="1">`repository.clustering.invalidation`</td>
 <td colspan="1">New default value to `pubsub`</td>
-<td colspan="1">[NXP-22996](https://jira.nuxeo.com/browse/NXP-22996)</td>
+<td colspan="1">[NXP-23055](https://jira.nuxeo.com/browse/NXP-23055)</td>
 </tr>
 </tbody>
 </table>
