@@ -10,7 +10,6 @@ labels:
     - lmcintyre
     - addon
 toc: true
-hidden: true
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons

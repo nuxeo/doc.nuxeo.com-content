@@ -535,10 +535,10 @@ Nuxeo for Adobe CC<br/>
 Registered access
 </td>
 <td colspan="1">
-[Documentation]({{page version='' space='nxdoc' page='nuxeo-adobe-cc-connector'}})
+[Documentation]({{page version='' space='nxdoc' page='nuxeo-for-adobe-cc'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace?version=1.2.8)
+[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package?version=1.0.1)
 </td>
 </tr>
 <tr>
