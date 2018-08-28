@@ -45,6 +45,11 @@ tree_item_index: 96
 <td colspan="1">Renamed to `nuxeo.works.total.default.scheduled`</td>
 <td colspan="1">[NXP-22996](https://jira.nuxeo.com/browse/NXP-22996)</td>
 </tr>
+<tr>
+<td colspan="1">`repository.clustering.invalidation`</td>
+<td colspan="1">New default value to `pubsub`</td>
+<td colspan="1">[NXP-23055](https://jira.nuxeo.com/browse/NXP-23055)</td>
+</tr>
 </tbody>
 </table>
 </div>
