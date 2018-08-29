@@ -52,7 +52,7 @@ Reindex the full repository following [Rebuilding the repository index page]({{p
 ### Nuxeo Studio Application Definition
 
 {{! multiexcerpt name='upgrade-9.1-studio-deps'}}
-Make sure your Nuxeo Studio project depends on the **Nuxeo JSF UI** target package. See the pages [How to Update the Version of Your Target Platform in Studio]({{page page='studio/update-the-version-of-your-target-platform'}}) and [Specific Upgrade Instructions]({{page page='studio/specific-upgrade-instructions'}}) for more details.
+Make sure your Nuxeo Studio project depends on the **Nuxeo JSF UI** target package. See the pages [How to Update the Version of Your Target Platform in Studio](https://doc.nuxeo.com/studio/update-the-version-of-your-target-platform/) and [Specific Upgrade Instructions](https://doc.nuxeo.com/studio/specific-upgrade-instructions/) for more details.
 {{! /multiexcerpt}}
 
 ### Code Changes
