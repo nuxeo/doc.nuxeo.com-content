@@ -85,7 +85,7 @@ We can now configure our layout on Studio Designer.
 ```
 1. Save your changes.  
 
-You can now [deploy your project]({{page space='studio' name='deploying-your-project-in-dev-mode'}}) on your instance and see what it looks like!
+You can now [deploy your project]({{page space='studio' page='deploying-your-project-in-dev-mode'}}) on your instance and see what it looks like!
 ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='contract-validation-process-web-ui.png'}} ?w=350,border=true)
 ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='validation-task-process.png'}} ?w=350,border=true)
 ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='type-field-web-ui.png'}} ?w=350,border=true)
