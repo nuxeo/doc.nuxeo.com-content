@@ -50,8 +50,9 @@ history:
 
 When Nuxeo communicates with other servers through network APIs, you may want these communications to be secured. To do so, you may need to add authentication certificates to your key store (all the certificates known to the JVM) and trust store (all the certificates that the JVM trusts) because:
 
-*   establishing a connection may require (depending on the remote server configuration) to present a local certificate to the remote server, so that it knows the Nuxeo server is legitimate,
-*   the remote server may present a certificate signed by a certification authority (or a self-signed certificate) not known by the standard Java trust store.
+- the remote server may present a certificate signed by a certification authority (or a self-signed certificate) not known by the standard Java trust store (`trustStore`),
+- establishing a connection may require (depending on the remote server configuration) to present a local certificate to the remote server, so that it knows the Nuxeo server is legitimate (`keyStore`).
+
 
 The Key Store will contain all the keys needed by the JVM to be authenticated to a remote server.
 
@@ -65,24 +66,29 @@ If you set a custom trust store exclusively with your authorities, **Marketplace
 
 To set up the trust store and key store statically, you just have to add the following system properties to Java:
 
-| What for | Parameter name | Comment |
-| --- | --- | --- |
-| Trust Store Path | `javax.net.ssl.trustStore` | |
-| Trust Store Password | `javax.net.ssl.trustStorePassword` | |
-| Trust Store Type | `javax.net.ssl.keyStoreType` | JKS for instance |
-| Key Store Path | `javax.net.ssl.keyStore` | |
-| Key Store Password | `javax.net.ssl.keyStorePassword` | &nbsp; |
+| What for             | Parameter name                     | Comment          |
+| -------------------- | ---------------------------------- | ---------------- |
+| Trust Store Path     | `javax.net.ssl.trustStore`         |                  |
+| Trust Store Password | `javax.net.ssl.trustStorePassword` |                  |
+| Trust Store Type     | `javax.net.ssl.trustStoreType`     | JKS for instance |
+| Key Store Path       | `javax.net.ssl.keyStore`           |                  |
+| Key Store Password   | `javax.net.ssl.keyStorePassword`   |                  |
+| Key Store Type       | `javax.net.ssl.keyStoreType`       |     &nbsp;       |
 
 For instance you can add the following parameters to your `JAVA_OPTS`:
 
 {{#> panel type='code' heading='$NUXEO_HOME/bin/nuxeo.conf'}}
-
+</br>
+**`trustStore`**
 ```
-JAVA_OPTS=$JAVA_OPTS -Djavax.net.ssl.trustStore=/the/path/to/your/trust/store.jks -Djavax.net.ssl.keyStoreType=jks ...
+JAVA_OPTS=$JAVA_OPTS -Djavax.net.ssl.trustStore=/the/path/to/your/trust-store.jks -Djavax.net.ssl.trustStoreType=jks -Djavax.net.ssl.trustStorePassword=secret
 ```
-
 {{/panel}}
 
+**`keyStore`**
+```
+JAVA_OPTS=$JAVA_OPTS -Djavax.net.ssl.keyStore=/the/path/to/your/key-store.jks -Djavax.net.ssl.keyStoreType=jks -Djavax.net.ssl.keyStorePassword=secret
+```
 
 ## {{> anchor 'addingcertificatestodefaulttruststore'}}Adding Your Certificates into the Default Trust Store
 
