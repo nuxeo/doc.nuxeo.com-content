@@ -32,6 +32,7 @@ Once customized, layouts are displayed with a bold font.![]({{file name='edited-
 ## Configuring Multivalued Fields
 When drag and dropping a multivalued field or a complex multivalued field into a layout, the corresponding element is automatically set to `nuxeo-data-table`. Clicking on the element, then on the pencil icon will allow you to edit it.
 
+
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Layouts/Data Table Element
     name: nuxeo-data-table-element.png
@@ -39,14 +40,17 @@ When drag and dropping a multivalued field or a complex multivalued field into a
 --}}
 ![Data Table Element](nx_asset://3b5cf8b2-5463-4a0c-9df7-c988a7c8cbbd ?w=340,border=true)
 
+
 From there, the field (or each sub field in the case of a complex multivalued field) is shown as a table with a column containing the element. Clicking on an element will display its properties on the right side of the screen so that you can configure it.
+
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Layouts/Table Editor Element Properties
     name: table-editor-element-properties.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Table Editor Element Properties](nx_asset://babb1664-1dbc-40fd-bd32-984d41f1e583 ?w=624,border=true)
+![Table Editor Element Properties](nx_asset://babb1664-1dbc-40fd-bd32-984d41f1e583 ?w=350,border=true)
+
 
 You may edit the field's label directly in the column title. Labels can be translated by entering the `[[i18n('your.translation.key')]]` pattern.
 
@@ -56,6 +60,7 @@ You may edit the field's label directly in the column title. Labels can be trans
     studio_modeler#screenshot#up_to_date
 --}}
 ![Table Editor Layout Complex Multivalued](nx_asset://bc936282-416d-40fb-986b-9f978f067a70 ?w=480,border=true)
+
 
 {{#> callout type='warning' heading="Don't Add More Fields"}}
 Although the editor allows you to drag and drop additional fields in this context at the moment, you should only edit the existing fields to keep your layout working properly.
