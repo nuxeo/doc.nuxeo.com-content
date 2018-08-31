@@ -220,9 +220,9 @@ This page explains the Query & Form tab in the content view definition.
 
 This tab lets you define:
 
-*   [The usability of the content view in local configuration](#usability-in-local-configuration)
-*   [the filtering UI proposed to the end user](#ui-filtering-definition)
-*   Some advanced configuration about filtering
+- [The usability of the content view in local configuration](#usability-in-local-configuration)
+- [the filtering UI proposed to the end user](#ui-filtering-definition)
+- Some advanced configuration about filtering
 
 ## Pre-Requisites
 
@@ -350,7 +350,12 @@ Note to people familiar with Nuxeo products customization: The syntax that is to
 
 The **Default Sort** field lets you express the default sorting applied to the results list. The end user can choose the sorting in the UI based on column actions. If you want more information about that look [the Result tab documentation]({{page page='content-view-results'}}).
 
-![]({{file name='Default Sorting configuration.png'}} ?w=500,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Content View - Query and Form Tab/Default Sorting Configuration
+    name: Default Sorting configuration.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Default Sorting Configuration](nx_asset://b1bd3693-691e-45d7-a228-3853df41e2ff ?w=500,border=true)
 
 You can sort through:
 
@@ -386,7 +391,12 @@ This section explains the flags section and what the different flags enable.
 *   **Advanced search**: Enables to have the content view available in the [local search configuration of a workspace]({{page space='userdoc' page='local-configuration'}}).
     Since Nuxeo Platform 6.0, this flag is not available anymore. You should use the Search content view flag instead.
 
-![]({{file name='Flag zone.png'}} ?w=600,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Content View - Query and Form Tab/Flag Zone
+    name: Flag zone.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Flag Zone](nx_asset://b7b6982c-3c98-4e6f-a6b7-7916b98f1386 ?w=350,border=true)
 
 {{#> callout type='info' }}
 
@@ -398,6 +408,11 @@ Check out the page [Specific Upgrade Instructions]({{page page='specific-upgrade
 
 This section is focused on the search layout definition:
 
-![]({{file name='Search Layout Fragment.png'}} ?w=600,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Content View - Query and Form Tab/Search Layout Fragment
+    name: Search Layout Fragment.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Search Layout Fragment](nx_asset://1d078664-1126-4d0f-b1b9-f5f70132b6cf ?w=600,border=true)
 
 This is where you define the form, by drag and dropping widgets from the right panel into the form.

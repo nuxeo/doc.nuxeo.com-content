@@ -69,7 +69,13 @@ history:
         version: '1'
 
 ---
-![]({{file name='workflow-activation-tab.png'}} ?w=500,h=280,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Activation Tab/Workflow Activation Tab
+    name: workflow-activation-tab.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Workflow Activation Tab](nx_asset://f0cf363d-9dc7-4542-8901-c09c850ffff3 ?w=500,border=true)
+
 This screen controls when the workflow is displayed in the drop down list that allows to start a workflow on a document. The availability is evaluated against multiple conditions:
 * User permissions
 * Document type

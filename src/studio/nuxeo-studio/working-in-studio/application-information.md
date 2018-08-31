@@ -31,7 +31,12 @@ history:
 ---
 The Application Information page will let you define the way your Studio project is published.
 
-![]({{file name='application_information.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Application Information/Application Information
+    name: application_information.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Application Information](nx_asset://07e6ce77-78b8-4ffd-b290-4defd33a4ddc ?w=650,border=true)
 
 This page displays properties defined for the entire application without any consideration of branches. When a user changes one of these properties, it is defined for every branch and every user. The fields are:
 

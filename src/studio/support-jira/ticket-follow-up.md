@@ -58,13 +58,18 @@ history:
 ---
 In order to make it easy to know which tickets the customer must address, Nuxeo provides two dashboards.
 
-*   The first one is on the Nuxeo Connect homepage, accessible from the URL [https://connect.nuxeo.com/nuxeo/site/connect/dashboard](https://connect.nuxeo.com/nuxeo/site/connect/dashboard). This dashboard displays a "My Tasks" widget that lists all the tickets waiting for the customer's input. More information on what is expected from the customer is displayed on mouseover.
+- The first one is on the Nuxeo Connect homepage, accessible from the URL [https://connect.nuxeo.com/nuxeo/site/connect/dashboard](https://connect.nuxeo.com/nuxeo/site/connect/dashboard). This dashboard displays a "My Tasks" widget that lists all the tickets waiting for the customer's input. More information on what is expected from the customer is displayed on mouseover.
 
-    ![]({{file name='connect_dashboard.png'}} ?w=650,border=true)
+    {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Ticket       follow-up/Connect Dashboard
+    name: connect_dashboard.png
+    studio_modeler#screenshot#up_to_date
+    --}}
+    ![Connect Dashboard](nx_asset://98eaf1bf-3afd-4c2f-9a8c-d9fae3e07a96 ?w=650,border=true)
 
     This widget is only displayed if the customer has pending tickets.
 
-*   The second dashboard is in JIRA at the URL [https://jira.nuxeo.com/secure/Dashboard.jspa](https://jira.nuxeo.com/secure/Dashboard.jspa). Nuxeo offers a customized dashboard, designed to make information related to created tickets more visible, especially regarding tickets that required some input from the customer which are displayed in the "My Support Tasks" gadget (red box).
+- The second dashboard is in JIRA at the URL [https://jira.nuxeo.com/secure/Dashboard.jspa](https://jira.nuxeo.com/secure/Dashboard.jspa). Nuxeo offers a customized dashboard, designed to make information related to created tickets more visible, especially regarding tickets that required some input from the customer which are displayed in the "My Support Tasks" gadget (red box).
 
 **To set this customized dashboard as the default one:**
 
@@ -72,7 +77,12 @@ In order to make it easy to know which tickets the customer must address, Nuxeo 
 2.  In the "Search" field, type "Support" and click on **Search**.
     The results is displayed below the search form.
 3.  Click on the star to make this dashboard the default one and click on the dashboard's name to display the customized dashboard.
-    ![]({{file name='jira_dashboard.png'}} ?w=650,border=true)
+    {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Ticket       follow-up/JIRA Dashboard
+    name: jira_dashboard.png
+    studio_modeler#screenshot#up_to_date
+    --}}
+    ![JIRA Dashboard](nx_asset://e707b480-baee-4460-a120-dac079179df5 ?w=650,border=true)
     Ideally, the "My Support Tasks" gadget must be empty.
 
 

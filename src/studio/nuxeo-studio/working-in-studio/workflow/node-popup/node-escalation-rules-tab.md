@@ -103,7 +103,12 @@ history:
         version: '1'
 
 ---
-![]({{file name='workflow-escalation-tab.png'}} ?w=500,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Node Escalation Rules Tab/Workflow Escalation Tab
+    name: workflow-escalation-tab.png
+    studio_modeler#popup#up_to_date
+--}}
+![Workflow Escalation Tab](nx_asset://986f1115-742d-4326-b735-4384b5018a32 ?w=500,border=true)
 
 Escalation rules allow to execute an [automation chain]({{page space='nxdoc' page='content-automation-concepts'}}), depending on a condition. A scheduler checks every five minutes the condition and executes the chain if the condition is evaluated to true. Please read the escalation service page for [more information and examples of rules]({{page space='nxdoc' page='escalation-service'}}).
 

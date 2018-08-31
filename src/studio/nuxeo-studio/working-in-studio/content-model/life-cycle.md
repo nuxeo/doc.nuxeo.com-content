@@ -59,7 +59,12 @@ A lifecycle is a set of **states** and transitions that apply to a document. One
 
 ## Editing a Lifecycle
 
-![]({{file name='Lifecycle.png'}} ?w=600,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Life-cycle/Lifecycle
+    name: Lifecycle.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Lifecycle](nx_asset://006c0623-cfc0-4b2b-95b2-7d7f75343593 ?w=600,border=true)
 
 * You need to drop one and only one **initial state.**
 * You can drop as many states as you want.

@@ -128,7 +128,12 @@ Please note that there can be only one structure template for each document type
 
 To create a structure template, click on **New**.
 
-![]({{file name='NewStructureTemplate.png'}} ?w=350,h=269,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Structure Templates/New Structure Template
+    name: NewStructureTemplate.png
+    studio_modeler#popup#up_to_date
+--}}
+![New Structure Template](nx_asset://e196a381-b06c-40de-a554-a7dc479531ca ?w=350,border=true)
 
 * **Feature ID**: Technical ID of the feature
 * **Target document type**: This drop down list identifies all the document types of the platform and the one(s) you have created (see [how to override an existing document type]({{page space='nxdoc60' page='how-to-override-existing-document-types'}})).
@@ -137,20 +142,30 @@ To create a structure template, click on **New**.
 
 Once you have selected the target document type and clicked on **Next**, you will see the following pre-built structure.
 
-![]({{file name='StructureTemplate-Domain.png'}} ?w=650,h=195,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Structure Templates/Structure Template Domain
+    name: StructureTemplate-Domain.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Structure Template Domain](nx_asset://e26ccb42-7726-4d69-b498-8057bf109416 ?w=650,border=true)
 
-* **Add**: Add another document type to the structure template.
-* **ACL**:
-    * **Add**: A pop-up window is displayed where you have to manage the permissions to this structure (see the documentation about [permissions]({{page space='userdoc' page='managing-permissions'}})).
-    * **Edit**: Edit an access control.
-    * **Block Inheritance**: Block the permissions inheritance.
-    * **Delete**: Delete an access control (you can select several lines at a time).
+- **Add**: Add another document type to the structure template.
+- **ACL**:
+    - **Add**: A pop-up window is displayed where you have to manage the permissions to this structure (see the documentation about [permissions]({{page space='userdoc' page='managing-permissions'}})).
+    - **Edit**: Edit an access control.
+    - **Block Inheritance**: Block the permissions inheritance.
+    - **Delete**: Delete an access control (you can select several lines at a time).
 
 On every document type that you want to add to your structure, you will have to define the **node properties**.
 
-![]({{file name='StructureTemplate-Workspace.png'}} ?w=650,h=315,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Structure Templates/Structure Template Workspace
+    name: StructureTemplate-Workspace.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Structure Template Workspace](nx_asset://f3ee6e60-c1da-40e8-b067-5928ae04f3db ?w=650,border=true)
 
-* **Node Type**: The ID node.
-* **Node Name**: The name displayed in Studio.
-* **Title**: The name of the document type displayed on your Nuxeo Platform.
-* **Description**: The description of the document type. This description is here for information purposes.
+- **Node Type**: The ID node.
+- **Node Name**: The name displayed in Studio.
+- **Title**: The name of the document type displayed on your Nuxeo Platform.
+- **Description**: The description of the document type. This description is here for information purposes.

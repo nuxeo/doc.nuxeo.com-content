@@ -87,7 +87,12 @@ Nuxeo Studio includes an Application Templates library composed of Studio projec
 Watch the related courses on Nuxeo University
 - [Expert Session on the Video Utils External Template](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils)
 - [Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
-![]({{file name='university_videoutils.png'}} ?w=450,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/External Template/University Videoutils
+    name: university_videoutils.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![University Videoutils](nx_asset://0c9da5ef-bbe6-4bcb-a243-340f048a0aa1 ?w=450,border=true)
 {{/callout}}
 
 To make Nuxeo Studio discovery easier, we automatically import the [Default configuration]({{page space='Studio' page='Default configuration+templates'}}) template that corresponds to your target application when a Studio project is created. You can then see how the configuration is done and start your project from it.
@@ -101,7 +106,12 @@ For each application template you're displayed some a set of information:
 *   **Import this package**: Click on this button to import the package that you want and follow the instructions. This button is displayed only if your Studio project is configured for a compatible target version of the template.
 *   **Details**: Click on this button to be displayed the list of Studio configuration items defined by the template.
 
-![]({{file name='application_templates.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/External Template/Application Templates
+    name: application_templates.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Application Templates](nx_asset://5901fa85-4b6e-4030-8123-ce20c9441fd5 ?w=650,border=true)
 
 For more information about application templates you can see the page [Using Application Templates]({{page page='using-application-templates'}}) and [the detailed documentation for each of them]({{page page='templates-reference'}}).
 

@@ -47,4 +47,9 @@ You need to make sure that your Studio project has a correctly configured target
 
 To change the target platform, for instance to Nuxeo Platform LTS 2017, just follow the steps mentionned on the following screenshot.
 
-![]({{file name='nuxeo_studio_application_definition.png'}} ?border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Update the Version of Your Target Platform/Application Definition Modeler detailed
+    name: nuxeo_studio_application_definition.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Application Definition Modeler detailed](nx_asset://bd6bea5d-9271-43b4-8023-85bbb002fb8a ?w=650,border=true)

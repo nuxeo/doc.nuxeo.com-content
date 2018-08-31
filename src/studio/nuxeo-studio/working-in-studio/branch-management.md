@@ -201,13 +201,23 @@ Watch the related courses on Nuxeo University
 
 Branch Management editor contains the information related to the branch management of the current project. This is where you can create, manage and delete your branches.
 
-![]({{file name='branch-management.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Branch Management/Branch Management
+    name: branch-management.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Branch Management](nx_asset://7fb1a28d-945f-4994-a1db-6634a30525cb ?w=650,border=true)
 
 ## Creating a Branch
 
 Create a branch enables you to [work with a maintenance branch]({{page page='how-to-work-with-maintenance-branches'}}) or to [implement a feature]({{page page='how-to-implement-features-using-branches'}}) without impacting the `master` branch. The **New Branch** button lets you create a branch. Fill in the creation form with a new name for your branch and save. The new branch will be created from the content of the last branch you checked out into your workspace. Creating a branch requires to have access to the advanced features of Nuxeo Studio, please contact your sales representative to activate them.
 
-![]({{file name='create-branch.png'}} ?w=600,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Branch Management/Create Branch
+    name: create-branch.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Create Branch](nx_asset://974fec6a-4065-4373-a4a1-d76b1a99a76b ?w=600,border=true)
 
 ## Managing a Branch
 
@@ -237,11 +247,16 @@ When using intermediate or advanced commit modes, you need to commit and push yo
 
 **Tag**:
 
-*   **Tag Name**: The name of your tag.
-*   **On Commit**: Read-only and automatically filled, name of the tag where the release will be done.
-*   **Description**: The description of the tag. This description is here for information purpose.
+- **Tag Name**: The name of your tag.
+- **On Commit**: Read-only and automatically filled, name of the tag where the release will be done.
+- **Description**: The description of the tag. This description is here for information purpose.
 
-![]({{file name='create-tag.png'}} ?w=350,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Branch Management/Create Tag
+    name: create-tag.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Create Tag](nx_asset://be02b38a-fbc4-4b4e-ab02-e021271d8642 ?w=350,border=true)
 
 **Release**:
 
@@ -251,7 +266,12 @@ When using intermediate or advanced commit modes, you need to commit and push yo
 *   **Release Version:** Select or type the version number that you are going to release.
 *   **Help Version Format:** List of format rules to apply on your releases.
 
-![]({{file name='create-release.png'}} ?w=350,h=285,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Branch Management/Create Release
+    name: create-release.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Create Release](nx_asset://175f2be5-0e16-4cc3-85b2-daa17866ff65 ?w=350,border=true)
 
 Releases can also be created using a [REST API]({{page page='how-to-tag-or-release-your-nuxeo-studio-project'}}#rest-api).
 

@@ -149,10 +149,15 @@ Note that schemas can be defined directly from the **Documents** menu. One would
 
 To create a schema, click on **New**.
 
-![]({{file name='create_doc_schema.png'}} ?w=350,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Schemas/Create schema
+    name: create_doc_schema.png
+    studio_modeler#popup#up_to_date
+--}}
+![Create schema](nx_asset://3224beb7-68b7-4428-8c1c-ae8abea90b04 ?w=350,border=true)
 
-*   **Feature ID**: The id of the schema. Will be used as the technical id of the schema. It should not contain spaces or special characters.
-*   **Schema Prefix**: Prefix of the schema. Prefix is used when referencing a document property (ex: `dc:title` for the Title property in the Dublin Core schema), for instance in an [NXQL]({{page space='nxdoc' page='nxql'}}) query.
+- **Feature ID**: The id of the schema. Will be used as the technical id of the schema. It should not contain spaces or special characters.
+- **Schema Prefix**: Prefix of the schema. Prefix is used when referencing a document property (ex: `dc:title` for the Title property in the Dublin Core schema), for instance in an [NXQL]({{page space='nxdoc' page='nxql'}}) query.
 
 {{#> callout type='note' heading='Schema names and prefixes'}}
 
@@ -164,78 +169,98 @@ We suggest you to use name like **my_schema_name** (lowercase, word separated by
 
 **Advanced configuration**
 
-*   **Mode:**
+- **Mode:**
 
-    *   **Default**: The schema is editable in Nuxeo Studio from scratch, with Studio capabilities
-    *   **Initialize**: The schema is editable in Nuxeo Studio with Studio capabilities, and is pre-initialized from an external resource (see the [Resources]({{page page='resources'}}) section)
-    *   **Import**: The schema is not editable in Nuxeo Studio, it is initialized from an external resource (see the [Resources]({{page page='resources'}}) section) and is deployed with your Nuxeo plugin
-    *   **Reference**: The schema is not editable in Nuxeo Studio, it is initialized from an external resource (see the [Resources]({{page page='resources'}}) section) and is not deployed with Nuxeo plugin. This is useful if the schema is deployed from another Nuxeo plugin but you need to refer it in your project.
-*   **Allow nested complex types:** By default, you can only choose one level of Complex type. If you select this parameter you will have the possibility to have a Complex type at each level of your schema. Make sure that this is useful for your application before choosing it.
+    - **Default**: The schema is editable in Nuxeo Studio from scratch, with Studio capabilities
+    - **Initialize**: The schema is editable in Nuxeo Studio with Studio capabilities, and is pre-initialized from an external resource (see the [Resources]({{page page='resources'}}) section)
+    - **Import**: The schema is not editable in Nuxeo Studio, it is initialized from an external resource (see the [Resources]({{page page='resources'}}) section) and is deployed with your Nuxeo plugin
+    - **Reference**: The schema is not editable in Nuxeo Studio, it is initialized from an external resource (see the [Resources]({{page page='resources'}}) section) and is not deployed with Nuxeo plugin. This is useful if the schema is deployed from another Nuxeo plugin but you need to refer it in your project.
+- **Allow nested complex types:** By default, you can only choose one level of Complex type. If you select this parameter you will have the possibility to have a Complex type at each level of your schema. Make sure that this is useful for your application before choosing it.
 
 ## Editing a Schema
 
 ### Nuxeo Platform LTS 2015 and Later
 
-![]({{file name='custom_doc_schema.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Schemas/Custom Doc Schema
+    name: custom_doc_schema.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Custom Doc Schema](nx_asset://5a6b549f-f0ce-40f5-8793-ee7337c0f38a ?w=650,border=true)
 
 1.  Click on the **Add field** button.
 2.  Fill in the field properties:
-    *   **Field Name**: The name of the field.
+    - **Field Name**: The name of the field.
 
         {{#> callout type='note' }}
 
         You should carefully choose the field/property names, as changing them after going live requires a data migration. Furthermore, Nuxeo Studio doesn't handle property refactoring completely yet.
 
         {{/callout}}
-    *   **Type**: The type of the field. Possible types are:
-        *   **String**: A string of characters
-        *   **Boolean**: True or false field type
-        *   **Integer**: An integer number
-        *   **Floating point**: A fractional number
-        *   **Date**: A date and time value
-        *   **Blob**: The property will be a binary
-        *   **Complex**: A complex type will let you define a complex field like an address storing street, zip code, etc... for instance.
-        *   **Directory**: The values for this field will be taken from a directory.
-        *   **User/Group**: The field values will be users and / or groups.
-        *   **Document**: The field value will the be id of a document.
-    *   **Multi-valued**: Check this box if you want the property to be a list (a list of blobs, a list of booleans, a list of dates, ...).
-    *   **Default Value**: Sets a default value on the property at document creation time.
+    - **Type**: The type of the field. Possible types are:
+        - **String**: A string of characters
+        - **Boolean**: True or false field type
+        - **Integer**: An integer number
+        - **Floating point**: A fractional number
+        - **Date**: A date and time value
+        - **Blob**: The property will be a binary
+        - **Complex**: A complex type will let you define a complex field like an address storing street, zip code, etc... for instance.
+        - **Directory**: The values for this field will be taken from a directory.
+        - **User/Group**: The field values will be users and / or groups.
+        - **Document**: The field value will the be id of a document.
+    - **Multi-valued**: Check this box if you want the property to be a list (a list of blobs, a list of booleans, a list of dates, ...).
+    - **Default Value**: Sets a default value on the property at document creation time.
 3.  Click on the **Edit** button to configure validation rules directly from the schema.
     This prevents you from setting them up later from layout definition screens or automation chains for instance, possibly several times. Setting up validation rules on the schema assures you consistency.
-    ![]({{file name='custom_doc_schema_validation_rules.png'}} ?w=500,border=true)
+    {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Schemas/Custom Doc Schema Validation Rules
+    name: custom_doc_schema_validation_rules.png
+    studio_modeler#screenshot#up_to_date
+    --}}
+    ![Custom Doc Schema Validation Rules](nx_asset://147ba8c7-1ff6-4917-8721-4607147f8e12 ?w=500,border=true)
     Depending on the type of the field, you can have different constraints available.
-    *   **Mandatory**: This field will be be required to create or update the document.
-    *   **Text format** : Indicate if the value for this field should respect a pattern. You can select a predefined pattern in the drop down list (not empty, email address pattern, etc.).
-    *   **Text length**: Indicate the minimum and maximum numbers of characters the value must have for this field.
-    *   **Numeric range**: Indicate the minimum and maximum numeric value for this field.To know more about validation rules, take a look at the page [Field Constraints and Validation]({{page space='nxdoc' page='field-constraints-and-validation'}}).
+    - **Mandatory**: This field will be be required to create or update the document.
+    - **Text format** : Indicate if the value for this field should respect a pattern. You can select a predefined pattern in the drop down list (not empty, email address pattern, etc.).
+    - **Text length**: Indicate the minimum and maximum numbers of characters the value must have for this field.
+    - **Numeric range**: Indicate the minimum and maximum numeric value for this field.To know more about validation rules, take a look at the page [Field Constraints and Validation]({{page space='nxdoc' page='field-constraints-and-validation'}}).
 4.  Click on **Schema** to go back to the schema definition.
-    ![]({{file name='back_to_schema.png'}} ?w=450,border=true)
+    {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Schemas/Back to Schema
+    name: back_to_schema.png
+    studio_modeler#screenshot#up_to_date
+    --}}
+    ![Back to Schema](nx_asset://0c1495a8-2ac9-41e0-b9bb-f4e86de72c11 ?w=450,border=true)
 5.  Add as many fields as needed.
 6.  Save.
 
 ### Nuxeo Platform 6.0 and Older
 
-![]({{file name='custom_doc_schema_6.0.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Schemas/Custom Doc Schema 6.0
+    name: custom_doc_schema_6.0.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Custom Doc Schema 6.0 ](nx_asset://f222e360-bb5b-4c36-9b40-8216857fa723 ?w=650,border=true)
 
 1.  Click on the **Add field** button.
 2.  Fill in the field properties:
-    *   **Field Name**: The name of the field.
+    - **Field Name**: The name of the field.
 
         {{#> callout type='note' }}
 
         You should carefully choose the field/property names, as changing them after going live requires a data migration. Furthermore, Nuxeo Studio doesn't handle property refactoring completely yet.
 
         {{/callout}}
-    *   **Type**: The type of the field. Possible types are:
-        *   **String**: A string of characters
-        *   **Boolean**: True or false field type
-        *   **Integer**: An integer number
-        *   **Floating point**: A fractional number
-        *   **Date**: A date and time value
-        *   **Blob**: The property will be a binary
-        *   **Complex**: A complex type will let you define a complex field like an address storing street, zip code, etc... for instance.
-    *   **Multi-valued**: Check this box if you want the property to be a list (a list of blobs, a list of booleans, a list of dates, ...).
-    *   **Default Value**: Sets a default value on the property at document creation time.
+    - **Type**: The type of the field. Possible types are:
+        - **String**: A string of characters
+        - **Boolean**: True or false field type
+        - **Integer**: An integer number
+        - **Floating point**: A fractional number
+        - **Date**: A date and time value
+        - **Blob**: The property will be a binary
+        - **Complex**: A complex type will let you define a complex field like an address storing street, zip code, etc... for instance.
+    - **Multi-valued**: Check this box if you want the property to be a list (a list of blobs, a list of booleans, a list of dates, ...).
+    - **Default Value**: Sets a default value on the property at document creation time.
 3.  Add as many fields as needed.
 4.  Save.
 

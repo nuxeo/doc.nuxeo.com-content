@@ -153,7 +153,12 @@ In each of these three types of vocabulary you will find identical parameters li
 
 ## **The Simple Vocabulary**
 
-![]({{file name='STUDIO-simple-vocabulary.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Vocabularies/Simple Vocabulary
+    name: STUDIO-simple-vocabulary.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Simple Vocabulary](nx_asset://dc12c731-6e22-4d2f-86cc-ace98baf9050 ?w=650,border=true)
 
 This type enables you to create a simple one-level vocabulary. Make sure to fill in the fields Id and Label correctly, with no special characters in the Id's name.
 
@@ -161,7 +166,12 @@ These fields are the same as those on the [vocabularies management interface]({{
 
 ## **The Child Vocabulary**
 
-![]({{file name='STUDIO-child-vocabulary.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Vocabularies/Child Vocabulary
+    name: STUDIO-child-vocabulary.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Child Vocabulary](nx_asset://362dcac4-7697-4cfd-bbc5-bb79bd553636 ?w=650,border=true)
 
 This type allows you to link vocabularies between them in order to have parent and child vocabularies.
 
@@ -169,7 +179,12 @@ You can't create a Child Vocabulary if you don't have a Parent Vocabulary alread
 
 ## **The Hierarchical Vocabulary**
 
-![]({{file name='NuxeoStudioHierarchicalVocabularyMainView.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Vocabularies/Hierarchical Vocabulary
+    name: STUDIO-hierarchical-vocabulary.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Hierarchical Vocabulary](nx_asset://bf251576-7b53-4a5f-9471-524cce28c3f8 ?w=650,border=true)
 
 This types has more parameters than the others, :
 

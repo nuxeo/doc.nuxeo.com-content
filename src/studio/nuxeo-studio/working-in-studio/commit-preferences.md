@@ -139,12 +139,22 @@ This page allows the user to define the commit policy that is applied when the u
 *   **Simple**: Your local changes are immediately committed and pushed to the common branch when you click on the **Save** button. You don't have any control on commits history. If other users have worked on the project, you are displayed the icon ![]({{file name='pull.png' page='studio-icons-index'}} ?w=32,thumbnail=true) so you can get their modifications.
     This mode is recommended for testing or single dev mode.
 *   **Intermediate**: Your local changes are saved as a work in progress and you need to manually make them available on the common branch by clicking the icon ![]({{file name='commit.png' page='studio-icons-index'}}) and typing a commit message.
-    ![]({{file name='commit-and-push-popup.png'}} ?w=400,border=true)
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Commit Preferences/Commit and Push popup
+        name: commit-and-push-popup.png
+        studio_modeler#popup#up_to_date
+    --}}
+    ![Commit and Push popup](nx_asset://8895bb88-f274-44b2-ba07-0c0308ca5701 ?w=400,border=true)
     If no commit message is explicitly defined by the user, the default message is `Update <Feature type>/<Feature name>`.
     This mode is recommended for developers.
 *   **Advanced**: Your local changes are saved as a work in progress and you need to manually commit them by clicking the icon ![]({{file name='commit.png' page='studio-icons-index'}}). You can then push them to the common branch using the icon ![]({{file name='push.png' page='studio-icons-index'}} ?w=32,thumbnail=true).
 
-    ![]({{file name='advanced_commit-mode-popup.png'}} ?w=400,border=true)
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Commit Preferences/Advanced Commit Mode popup
+        name: advanced_commit-mode-popup.png
+        studio_modeler#popup#up_to_date
+    --}}
+    ![Advanced Commit Mode popup](nx_asset://83870daf-d0d8-4e78-b28a-b542d25cac45 ?w=400,border=true)
 
     If no commit message is explicitly defined by the user, the default message is `Update <Feature type>/<Feature name>`.
     This mode is recommended for developers already familiar with revision control concepts.
