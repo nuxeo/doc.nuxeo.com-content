@@ -399,9 +399,7 @@ This section explains the flags section and what the different flags enable.
 ![Flag Zone](nx_asset://b7b6982c-3c98-4e6f-a6b7-7916b98f1386 ?w=350,border=true)
 
 {{#> callout type='info' }}
-
 Check out the page [Specific Upgrade Instructions]({{page page='specific-upgrade-instructions'}}) migrate your content views to Nuxeo Platform 6.0.
-
 {{/callout}}
 
 ## Search Layout

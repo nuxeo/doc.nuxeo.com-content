@@ -160,11 +160,9 @@ To create a schema, click on **New**.
 - **Schema Prefix**: Prefix of the schema. Prefix is used when referencing a document property (ex: `dc:title` for the Title property in the Dublin Core schema), for instance in an [NXQL]({{page space='nxdoc' page='nxql'}}) query.
 
 {{#> callout type='note' heading='Schema names and prefixes'}}
+  You should carefully choose your schema names and prefixes. There will be many references to them in your project (layouts, automation, NXQL queries). Nuxeo Studio doesn't yet handle completely schema refactoring. Furthermore, once you deployed, if you change a schema name or prefix, you will have to operate a data migration.
 
-You should carefully choose your schema names and prefixes. There will be many references to them in your project (layouts, automation, NXQL queries). Nuxeo Studio doesn't yet handle completely schema refactoring. Furthermore, once you deployed, if you change a schema name or prefix, you will have to operate a data migration.
-
-We suggest you to use name like **my_schema_name** (lowercase, word separated by an underscore) for the feature id and something shorter for the prefix like **msn**. See the [Naming Conventions]({{page page='naming-conventions'}}) page for more tips on ids and names recommendation in Nuxeo Studio.
-
+  We suggest you to use name like **my_schema_name** (lowercase, word separated by an underscore) for the feature id and something shorter for the prefix like **msn**. See the [Naming Conventions]({{page page='naming-conventions'}}) page for more tips on ids and names recommendation in Nuxeo Studio.  
 {{/callout}}
 
 **Advanced configuration**
@@ -191,11 +189,8 @@ We suggest you to use name like **my_schema_name** (lowercase, word separated by
 1.  Click on the **Add field** button.
 2.  Fill in the field properties:
     - **Field Name**: The name of the field.
-
         {{#> callout type='note' }}
-
         You should carefully choose the field/property names, as changing them after going live requires a data migration. Furthermore, Nuxeo Studio doesn't handle property refactoring completely yet.
-
         {{/callout}}
     - **Type**: The type of the field. Possible types are:
         - **String**: A string of characters
@@ -213,9 +208,9 @@ We suggest you to use name like **my_schema_name** (lowercase, word separated by
 3.  Click on the **Edit** button to configure validation rules directly from the schema.
     This prevents you from setting them up later from layout definition screens or automation chains for instance, possibly several times. Setting up validation rules on the schema assures you consistency.
     {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Schemas/Custom Doc Schema Validation Rules
-    name: custom_doc_schema_validation_rules.png
-    studio_modeler#screenshot#up_to_date
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Schemas/Custom Doc Schema Validation Rules
+        name: custom_doc_schema_validation_rules.png
+        studio_modeler#screenshot#up_to_date
     --}}
     ![Custom Doc Schema Validation Rules](nx_asset://147ba8c7-1ff6-4917-8721-4607147f8e12 ?w=500,border=true)
     Depending on the type of the field, you can have different constraints available.
@@ -225,9 +220,9 @@ We suggest you to use name like **my_schema_name** (lowercase, word separated by
     - **Numeric range**: Indicate the minimum and maximum numeric value for this field.To know more about validation rules, take a look at the page [Field Constraints and Validation]({{page space='nxdoc' page='field-constraints-and-validation'}}).
 4.  Click on **Schema** to go back to the schema definition.
     {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Schemas/Back to Schema
-    name: back_to_schema.png
-    studio_modeler#screenshot#up_to_date
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Schemas/Back to Schema
+        name: back_to_schema.png
+        studio_modeler#screenshot#up_to_date
     --}}
     ![Back to Schema](nx_asset://0c1495a8-2ac9-41e0-b9bb-f4e86de72c11 ?w=450,border=true)
 5.  Add as many fields as needed.
@@ -247,9 +242,7 @@ We suggest you to use name like **my_schema_name** (lowercase, word separated by
     - **Field Name**: The name of the field.
 
         {{#> callout type='note' }}
-
         You should carefully choose the field/property names, as changing them after going live requires a data migration. Furthermore, Nuxeo Studio doesn't handle property refactoring completely yet.
-
         {{/callout}}
     - **Type**: The type of the field. Possible types are:
         - **String**: A string of characters
