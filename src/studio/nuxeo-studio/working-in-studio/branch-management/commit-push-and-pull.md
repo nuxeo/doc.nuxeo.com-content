@@ -160,8 +160,8 @@ A conflict happens when two users work in the same version and made different ch
 
 The conflict can happen:
 
-*   When the user shares some changes: Push (or a "Save" in simple mode)
-*   When the user gets some changes: Pull
+- When the user shares some changes: Push (or a "Save" in simple mode)
+- When the user gets some changes: Pull
 
 When a conflict is detected, a dialog window is displayed. It contains, for each file in conflict, the sections affected. User selects the file to keep (the local one, or the version coming from the common branch).
 
@@ -169,4 +169,9 @@ The conflict management is currently a binary choice per file. The user cannot d
 
 After resolving all the conflicts, a push on the common branch might be necessary (depending on when the conflict occurred).
 
-![]({{file name='mergePopup.png'}} ?w=650,h=380,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Commit, Push and Pull/Merge Popup
+    name: mergePopup.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Merge Popup](nx_asset://6eb82721-c84a-49cb-9f91-a110f48743e6 ?w=650,border=true)

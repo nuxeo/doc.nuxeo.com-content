@@ -195,7 +195,12 @@ history:
 ---
 Nuxeo Marketplace is Nuxeo ECM application store. It offers Nuxeo Packages that enable you to easily add features to your Nuxeo application.
 
-![]({{file name='CONNECT-marketplace.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Nuxeo Marketplace/Connect Marketplace
+    name: CONNECT-marketplace.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Connect Marketplace](nx_asset://fe3af2ea-6662-4c02-a86b-1ab6baa1e286 ?w=650,border=true)
 
 The list of available packages is available to everyone, but only Connect subscribers can [install them on their application]({{page space='nxdoc' page='installing-a-new-package-on-your-instance'}}), after they have registered their instances. As a Connect user, you can also comment on packages.
 

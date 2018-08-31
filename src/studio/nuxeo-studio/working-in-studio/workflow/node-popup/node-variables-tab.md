@@ -49,7 +49,12 @@ history:
         version: '1'
 
 ---
-![]({{file name='node-variables-tab.png'}} ?w=500,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Node Variables Tab/Node Variables Tab
+    name: node-variables-tab.png
+    studio_modeler#popup#up_to_date
+--}}
+![Node Variables Tab](nx_asset://689f5fc8-e2c3-4226-b34e-47c8e19849fc ?w=500,border=true)
 
 **Workflow variables**: you can select the workflow variables that you will need on this node.
 

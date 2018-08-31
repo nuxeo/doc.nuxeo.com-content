@@ -62,7 +62,12 @@ It is basically a content view that is preset to be a search content view. So it
 
 Please report to the [Content Views]({{page page='content-views'}}) documentation.
 
-![]({{file name='Studio_search_menu.png'}} ?w=600,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Search - Advanced Search/Search Menu
+    name: Studio_search_menu.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Search Menu](nx_asset://c2187eef-5ab4-4eeb-9d1f-f833ed322189 ?w=600,border=true)
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 

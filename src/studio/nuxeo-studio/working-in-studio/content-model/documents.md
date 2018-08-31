@@ -273,7 +273,12 @@ Documents in DM are displayed with a series of tabs to display all the actions t
 
 ## {{> anchor 'tabs-content-views'}}Tabs - Content Views
 
-![]({{file name='doc_type_content_view.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Documents/Doc type Content View
+    name: doc_type_content_view.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Doc type Content View](nx_asset://9d4d36f1-dc05-4f0c-b1ca-3f16686522aa ?w=650,border=true)
 
 {{#> callout type='info' heading='Requirement'}}
 {{{multiexcerpt 'tab-jsf-ui-target-package-requirement' page='documents'}}}

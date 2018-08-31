@@ -99,24 +99,39 @@ Watch the related courses on Nuxeo University
 
 ## Creating a User Action
 
-![]({{file name='creating-user-action-form.png'}} ?w=300,h=293,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/User Actions/Create User Action form
+    name: creating-user-action-form.png
+    studio_modeler#popup#up_to_date
+--}}
+![Create User Action form](nx_asset://63dafd04-6180-4646-a4a7-9b411259a347 ?w=300,border=true)
 
-*   **`Feature ID`**: the unique id of the user action.
-*   **`Label`**: the name that will be displayed on screen.
-*   **`Category`**: defines where the action will be placed on screen. Note that certain categories only appear in specific screens; for instance the "Document creation form" category will only be visible on document creation.
+- **`Feature ID`**: the unique id of the user action.
+- **`Label`**: the name that will be displayed on screen.
+- **`Category`**: defines where the action will be placed on screen. Note that certain categories only appear in specific screens; for instance the "Document creation form" category will only be visible on document creation.
 
 ## Editing a User Action
 
 ### Action Definition
 
-![]({{file name='action-definition.png'}} ?w=300,h=147,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/User Actions/User Action Definition
+    name: action-definition.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![User Action Definition](nx_asset://3cb99f9d-2a86-4be7-945c-04c66d5f2824 ?w=300,border=true)
 
 *   **`Order`**: set a higher value to move the action further to the right. Default actions order starts at 10.
 *   **`Immediate`**: checking this box will cause the action to be executed without prior validation. It is usually preferable to leave it unchecked.
 
 ### Action Activation
 
-![]({{file name='action-enablement.png'}} ?w=350,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/User Actions/Action Enablement
+    name: action-enablement.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Action Enablement](nx_asset://9b1b276f-0828-417f-9ddc-6ffe417597ce ?w=350,border=true)
 
 See the [Filtering Options Reference Page]({{page page='filtering-options-reference-page'}}).
 

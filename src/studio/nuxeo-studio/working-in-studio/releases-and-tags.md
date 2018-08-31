@@ -55,7 +55,12 @@ The releases and tags tab allows to list each and every releases and tags that w
 
 {{{multiexcerpt 'release' page='How to Tag or Release Your Nuxeo Studio Project'}}}
 
-![]({{file name='releases-tab.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Releases & Tags/Release Tab
+    name: releases-tab.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Release Tab ](nx_asset://e189beb3-48b9-41e5-a4d7-bfdf6c425d70 ?w=650,border=true)
 
 **Delete**: Deletes the release. This operation cannot be reverted.
 
@@ -67,7 +72,12 @@ The releases and tags tab allows to list each and every releases and tags that w
 
 {{{multiexcerpt 'tag' page='How to Tag or Release Your Nuxeo Studio Project'}}}
 
-![]({{file name='tags-tab.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Releases & Tags/Tags Tab
+    name: tags-tab.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Tags Tab](nx_asset://c02c1808-8630-4498-894c-47c829c512cd ?w=650,border=true)
 
 **Delete:** Delete the specific tag
 

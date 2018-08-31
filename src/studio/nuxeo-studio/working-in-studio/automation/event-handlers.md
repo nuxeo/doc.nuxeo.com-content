@@ -146,7 +146,12 @@ You'll read more about event handlers in the [developer documentation]({{page sp
 
 <div>
 
-![]({{file name='EventHandlerCreation.png'}} ?w=500,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Event Handlers/Event Handler Creation
+    name: EventHandlerCreation.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Event Handler Creation](nx_asset://a585c4fa-d4b7-4221-8418-45b1ed378eb8 ?w=500,border=true)
 
 </div>
 
@@ -154,7 +159,12 @@ You'll read more about event handlers in the [developer documentation]({{page sp
 
 ## Editing an Event Handler
 
-![]({{file name='EventHandlerEdition.png'}} ?w=400,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Event Handlers/Event Handler Edition
+    name: EventHandlerEdition.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Event Handler Edition](nx_asset://982a88a2-314d-4729-b8fa-1714eb3bb0c7 ?w=400,border=true)
 
 ### Event Handler Definition
 

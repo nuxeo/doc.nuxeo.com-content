@@ -66,7 +66,12 @@ history:
         version: '1'
 
 ---
-![]({{file name='workflow-graph-tab.png'}} ?w=500,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Graph Tab/Workflow Graph Tab
+    name: workflow-graph-tab.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Workflow Graph Tab](nx_asset://722153f8-ec36-4e2d-9a47-2c7f57317c56 ?w=500,border=true)
 
 The Graph tab is where you define how steps of your workflow are ordered, by dropping nodes and pulling transitions between them. If you let the mouse over a node, you will be displayed an **Edit** button, that allows to edit the properties of the node, in a [multi-tab pop-up]({{page page='node-popup'}}). There are two kinds of nodes: one that creates task, one that is automatic (the workflow engine goes over it and immediately follows one the output transitions).
 

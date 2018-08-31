@@ -63,7 +63,12 @@ history:
 ---
 Resources is a section in Studio where you can upload various files that will be included in the plugin that Studio produces and that will be used by your application at runtime. Resources files are usually referenced from another Studio feature.
 
-![]({{file name='Resources.png'}} ?w=650,h=315,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Resources/Resources
+    name: Resources.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Resources Modeler](nx_asset://7687aacf-732f-4b84-9435-0603621a805b ?w=650,border=true)
 
 **To upload a new resource,** select the **Browse** button, choose your file then click on **Upload**.
 

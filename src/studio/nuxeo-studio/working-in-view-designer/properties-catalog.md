@@ -26,7 +26,12 @@ The Elements section lists all the elements depending on the annotation defined 
 
 In every schemas you will find the associated properties and the field format. Three modes are available by now: View, Edit and Column that you can drag'n'drop in the main view to use it.
 
-![]({{file name='elements-catalog.png'}} ?w=250,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Properties Catalog/Elements Catalog
+    name: elements-catalog.png
+    studio_designer#screenshot#up_to_date
+--}}
+![Elements Catalog](nx_asset://da605a07-ae9d-4bb8-a24e-d25e691b8528 ?w=250,border=true)
 
 ### Search
 
@@ -45,4 +50,9 @@ You also have access to Iron and Paper catalogs and the ones that you have creat
 
 This tab display the properties of the field selected on the editor. Depending of the field selected the properties will not be the same.
 
-![]({{file name='properties-catalog.png'}} ?w=250,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Properties Catalog/Properties Catalog
+    name: properties-catalog.png
+    studio_designer#screenshot#up_to_date
+--}}
+![Properties Catalog ](nx_asset://8f796075-b609-4b13-8748-0002341775d5 ?w=250,border=true)

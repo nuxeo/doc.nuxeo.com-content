@@ -59,9 +59,14 @@ history:
         version: '1'
 
 ---
-![]({{file name='workflow-definition-tab.png'}} ?w=500,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Definition Tab/Workflow Definition Tab
+    name: workflow-definition-tab.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Workflow Definition Tab](nx_asset://76d7df12-3adb-491d-b2dc-5796cb881c94 ?w=500,border=true)
 
-*   **Label**: The label that is displayed in Nuxeo in the drop down list that launches a workflow. Supports [i18n]({{page space='nxdoc' page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}}).
-*   **Icon**: Currently not used.
-*   **Large Icon**: Currently not used.
-*   **Description**: The description should be displayed beside the drop down list that launches a workflow, when the corresponding workflow is selected.
+- **Label**: The label that is displayed in Nuxeo in the drop down list that launches a workflow. Supports [i18n]({{page space='nxdoc' page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}}).
+- **Icon**: Currently not used.
+- **Large Icon**: Currently not used.
+- **Description**: The description should be displayed beside the drop down list that launches a workflow, when the corresponding workflow is selected.

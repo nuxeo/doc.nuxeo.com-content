@@ -75,8 +75,12 @@ The steps to add a new user or a new group are basically the same.
 1. In the Users or Groups tab, click the **Add** button.
 
 1. In the window that pops up, type the new user's or group's name.
-    ![]({{file name='STUDIO-UsersGroups.png'}} ?w=600)
-
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Add predefined users and groups/Users and Groups
+        name: STUDIO-UsersGroups.png
+        studio_modeler#screenshot#up_to_date
+    --}}
+    ![Users and Groups](nx_asset://99afb88c-3d74-4719-beed-a4a26576f0ec ?w=600,border=true)
 1. Edit the user's or group properties (see below for more details).
 
 1. Click **Save**.

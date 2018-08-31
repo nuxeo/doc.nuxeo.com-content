@@ -77,7 +77,12 @@ The first section of the Results tab enables you to define some general configur
 
 ## Results Columns
 
-![]({{file name='Studio-content-view-results-grid.png'}} ?w=600,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Content View - Results/Results Grid
+    name: Studio-content-view-results-grid.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Results Grid](nx_asset://63d46dc0-e96e-4dd6-acec-7ae11aed3ab0 ?w=600,border=true)
 
 To define the results layout:
 

@@ -81,7 +81,12 @@ To create a new permission in Nuxeo:
 2.  Click on the **New** button.
 3.  On the window that pops up give your new permission a Feature ID and click on the **OK** button.
 4.  Select where the permission should be displayed in the drop down menu and click on **Add**.
-    ![]({{file name='create-new-permission.png'}} ?w=650,border=true)
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Add a new Permission in the UI/Create New Permission
+        name: create-new-permission.png
+        studio_modeler#screenshot#up_to_date
+    --}}
+    ![Create New Permission](nx_asset://f7373240-d011-4520-a52b-231d56f4ae3b ?w=650,border=true)
 5.  When you have chosen all the places where the permission should be displayed, click **Save** to save your modifications.
 6. Don't forget to translate the permission label [using an I18N translation file]({{page space='nxdoc' page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}}) if needed.
 

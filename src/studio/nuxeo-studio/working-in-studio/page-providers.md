@@ -28,7 +28,12 @@ They can be leveraged through the REST API:
 
 A page provider corresponds to the query part of a [content view]({{page page='content-views'}}), without the form and result columns configuration. For instance, Web UI makes use of a page provider in order to create the default search form. In the screenshot below, several configuration options are used:
 
-![]({{file name='webui-default-search.png'}} ?border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Page Providers/Web UI Default Search
+    name: webui-default-search.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Web UI Default Search](nx_asset://32d1148d-9c54-4236-b744-3e88d2e68114 ?w=650,border=true)
 
 1. [Query filter](#query-filter)
 2. [Predicates](#predicates)
@@ -38,7 +43,12 @@ A page provider corresponds to the query part of a [content view]({{page page='c
 ## Creating a Page Provider
 Click on **New** to create a page provider.
 
-![]({{file name='create-pp.png'}} ?border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Page Providers/Create Page Providers
+    name: create-pp.png
+    studio_modeler#popup#up_to_date
+--}}
+![Create Page Providers](nx_asset://4af56307-dda8-4b1c-b654-64631b92dcc4 ?w=350,border=true)
 
 A page provider can be created from an existing content view. When selecting this option:
 - The relevant configuration parameters are copied from the selected content view
