@@ -161,7 +161,6 @@ To create a schema, click on **New**.
 
 {{#> callout type='note' heading='Schema names and prefixes'}}
   You should carefully choose your schema names and prefixes. There will be many references to them in your project (layouts, automation, NXQL queries). Nuxeo Studio doesn't yet handle completely schema refactoring. Furthermore, once you deployed, if you change a schema name or prefix, you will have to operate a data migration.
-
   We suggest you to use name like **my_schema_name** (lowercase, word separated by an underscore) for the feature id and something shorter for the prefix like **msn**. See the [Naming Conventions]({{page page='naming-conventions'}}) page for more tips on ids and names recommendation in Nuxeo Studio.  
 {{/callout}}
 
@@ -207,24 +206,14 @@ To create a schema, click on **New**.
     - **Default Value**: Sets a default value on the property at document creation time.
 3.  Click on the **Edit** button to configure validation rules directly from the schema.
     This prevents you from setting them up later from layout definition screens or automation chains for instance, possibly several times. Setting up validation rules on the schema assures you consistency.
-    {{!--     ### nx_asset ###
-        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Schemas/Custom Doc Schema Validation Rules
-        name: custom_doc_schema_validation_rules.png
-        studio_modeler#screenshot#up_to_date
-    --}}
-    ![Custom Doc Schema Validation Rules](nx_asset://147ba8c7-1ff6-4917-8721-4607147f8e12 ?w=500,border=true)
+    ![]({{file name='custom_doc_schema_validation_rules.png'}} ?w=500,border=true)
     Depending on the type of the field, you can have different constraints available.
     - **Mandatory**: This field will be be required to create or update the document.
     - **Text format** : Indicate if the value for this field should respect a pattern. You can select a predefined pattern in the drop down list (not empty, email address pattern, etc.).
     - **Text length**: Indicate the minimum and maximum numbers of characters the value must have for this field.
     - **Numeric range**: Indicate the minimum and maximum numeric value for this field.To know more about validation rules, take a look at the page [Field Constraints and Validation]({{page space='nxdoc' page='field-constraints-and-validation'}}).
 4.  Click on **Schema** to go back to the schema definition.
-    {{!--     ### nx_asset ###
-        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Schemas/Back to Schema
-        name: back_to_schema.png
-        studio_modeler#screenshot#up_to_date
-    --}}
-    ![Back to Schema](nx_asset://0c1495a8-2ac9-41e0-b9bb-f4e86de72c11 ?w=450,border=true)
+    ![]({{file name='back_to_schema.png'}} ?w=450,border=true)
 5.  Add as many fields as needed.
 6.  Save.
 
