@@ -267,7 +267,7 @@ However there are a few differences/additional features:
 
 Documents in DM are displayed with a series of tabs to display all the actions that can be done on documents. By default, a new document type will hold all the tabs. From this view in Studio, you can disable some of them, for the document type you are configuring. This is a binary activation/inactivation. If you want to refine the tabs display rules, you can [contribute XML extensions to the action service](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--actions), so as to override existing contributions (for advanced users).
 
-## {{> anchor 'tabs-content-views'}}Tabs - Content Views
+## Tabs - Content Views
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Documents/Doc type Content View
@@ -292,7 +292,7 @@ Content view tabs are tabs that display a list of documents in a table, that is 
     - **Tab Activation**: (TODO: a specific page for this screen that appears in many places on Studio).
 
 {{#> callout type='info' heading='Using the Tabs feature'}}
-Adding a tab that displays a content view using this feature is easy and straightforward, but you can also use the [Tabs feature]({{page page='tabs'}}) that provides more refinements like the ability to add buttons, other information, wrappers, etc...
+  Adding a tab that displays a content view using this feature is easy and straightforward, but you can also use the [Tabs feature]({{page page='tabs'}}) that provides more refinements like the ability to add buttons, other information, wrappers, etc...
 {{/callout}}
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}

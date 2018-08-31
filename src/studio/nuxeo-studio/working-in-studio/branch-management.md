@@ -232,17 +232,14 @@ Once you have created several branches, different options are available to manag
 
 When you click on the name of one of the branches, the list of the commits of this branch is displayed. For each commit entry you can:
 
-*   **Unfold the commit details:** It displays added, updated and removed configuration including number of "files" (one file = one feature instance of the Studio project).
-*   **Tag**: Create a tag from that commit. See tag section here-after. A tag doesn't produce a snapshotted package that could be installed on a Nuxeo Platform instance.
-*   **Release**: Create a release from that commit. See release section here-after. When performing a release, a package is snapshotted and archived so as to be able to perform a re-installation of that exact same release of your project later.
-*   **Revert:** Revert to this commit. This command allows you to restore a previous state of the project by adding a set of changes which invert the set of changes made after the commit on which you selected.
-
-    <div>The revert command preserves the history and a revert entry unlike a reset command which would remove the set of changes after the commit you may have selected (the reset command is not provided to users).</div>
+- **Unfold the commit details:** It displays added, updated and removed configuration including number of "files" (one file = one feature instance of the Studio project).
+- **Tag**: Create a tag from that commit. See tag section here-after. A tag doesn't produce a snapshotted package that could be installed on a Nuxeo Platform instance.
+- **Release**: Create a release from that commit. See release section here-after. When performing a release, a package is snapshotted and archived so as to be able to perform a re-installation of that exact same release of your project later.
+- **Revert:** Revert to this commit. This command allows you to restore a previous state of the project by adding a set of changes which invert the set of changes made after the commit on which you selected.
+  The revert command preserves the history and a revert entry unlike a reset command which would remove the set of changes after the commit you may have selected (the reset command is not provided to users).
 
 {{#> callout type='info' }}
-
 When using intermediate or advanced commit modes, you need to commit and push your changes before being able to create a tag or a release on this basis.
-
 {{/callout}}
 
 **Tag**:
@@ -260,11 +257,11 @@ When using intermediate or advanced commit modes, you need to commit and push yo
 
 **Release**:
 
-*   **Current Branch:** Branch from which you are creating the release.
-*   **Commit to Release:** Description of the commit from which the release will be done.
-*   **Latest Release in Branch:** Indicates the last release performed from this branch. Studio will suggest a version number on this basis.
-*   **Release Version:** Select or type the version number that you are going to release.
-*   **Help Version Format:** List of format rules to apply on your releases.
+- **Current Branch:** Branch from which you are creating the release.
+- **Commit to Release:** Description of the commit from which the release will be done.
+- **Latest Release in Branch:** Indicates the last release performed from this branch. Studio will suggest a version number on this basis.
+- **Release Version:** Select or type the version number that you are going to release.
+- **Help Version Format:** List of format rules to apply on your releases.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Branch Management/Create Release

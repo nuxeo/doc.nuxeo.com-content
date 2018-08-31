@@ -128,9 +128,7 @@ history:
 
 ---
 {{! excerpt}}
-
 All the elements of the main Vocabulary feature screen are reviewed on this page.
-
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
@@ -144,14 +142,14 @@ Watch the related courses on Nuxeo University
 
 In each of these three types of vocabulary you will find identical parameters like:
 
-*   **Creation Policy**: The Creation Policy defines whether the values are created when the configuration is deployed on a Nuxeo Platform instance.
-    **Don't override existing values** means that it will be deployed only if it has never been deployed before on the instance. If it is already here, it will let the existing values as is.
-    **Always** means it will override the existing values with the ones that are on Studio. It should be used with a lot of attention, as there is no way to revert, if data has been deleted at deployment.
-    **Never** would be used so as to disable the data loading logic temporarily, but would still declare the directory.
-*   **Delete** and **Delete all**: Used to delete the values.
-*   **Import CSV:** Opens a pop-up with inline documentation. You can either import data in Studio from a CSV file **or** references a file that is never "parsed" from Studio (only by your Nuxeo Platform at deployment time). Choose the second option if you have many lines, for a better user experience with your Studio project. The first line of the CSV file is the header that defines the vocabulary fields: id, label, obsolete, ordering, and parent for hierarchical vocabularies. See examples [Simple Vocabulary]({{file name='simple-vocabulary.csv'}}) and [Hierarchical Vocabulary]({{file name='hierarchical-vocabulary.csv'}}).
+- **Creation Policy**: The Creation Policy defines whether the values are created when the configuration is deployed on a Nuxeo Platform instance.
+    - **Don't override existing values** means that it will be deployed only if it has never been deployed before on the instance. If it is already here, it will let the existing values as is.
+    - **Always** means it will override the existing values with the ones that are on Studio. It should be used with a lot of attention, as there is no way to revert, if data has been deleted at deployment.
+    - **Never** would be used so as to disable the data loading logic temporarily, but would still declare the directory.
+- **Delete** and **Delete all**: Used to delete the values.
+- **Import CSV:** Opens a pop-up with inline documentation. You can either import data in Studio from a CSV file **or** references a file that is never "parsed" from Studio (only by your Nuxeo Platform at deployment time). Choose the second option if you have many lines, for a better user experience with your Studio project. The first line of the CSV file is the header that defines the vocabulary fields: id, label, obsolete, ordering, and parent for hierarchical vocabularies. See examples [Simple Vocabulary]({{file name='simple-vocabulary.csv'}}) and [Hierarchical Vocabulary]({{file name='hierarchical-vocabulary.csv'}}).
 
-## **The Simple Vocabulary**
+## The Simple Vocabulary
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Vocabularies/Simple Vocabulary
@@ -164,7 +162,7 @@ This type enables you to create a simple one-level vocabulary. Make sure to fill
 
 These fields are the same as those on the [vocabularies management interface]({{page space='userdoc58' page='managing-vocabularies'}}).
 
-## **The Child Vocabulary**
+## The Child Vocabulary
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Vocabularies/Child Vocabulary
@@ -177,7 +175,7 @@ This type allows you to link vocabularies between them in order to have parent a
 
 You can't create a Child Vocabulary if you don't have a Parent Vocabulary already created to select. Once your Child Vocabulary is created, you can add vocabulary entries and select a Parent for each of them by clicking on **Select** button and choose a Parent in the drop down list.
 
-## **The Hierarchical Vocabulary**
+## The Hierarchical Vocabulary
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Vocabularies/Hierarchical Vocabulary
@@ -186,12 +184,12 @@ You can't create a Child Vocabulary if you don't have a Parent Vocabulary alread
 --}}
 ![Hierarchical Vocabulary](nx_asset://bf251576-7b53-4a5f-9471-524cce28c3f8 ?w=650,border=true)
 
-This types has more parameters than the others, :
+This types has more parameters than the others:
 
-*   **Add Root**: Adds a root value. Adding a value means giving an id, a label and an obsolete field, the same values you would find in the Nuxeo Platform [vocabulary screen edition]({{page space='userdoc' page='managing-vocabularies'}}) interface.
-*   **Add child**: When already on a node, adds a child element. Note that you have to click on the "Set tree depth" button if you want to add more children than the currently set limit.
-*   **Move up** and **Move down**: Used to move the values (that are ordered).
-*   **Set tree depth:** Allows to set more than two degrees of values on a hierarchical vocabulary. Select2 widgets are directly compatible with any levels. If you want to have more than two levels with chain selects, you can read the [Create a n-level select widget how-to]({{page space='nxdoc' page='how-to-create-a-n-level-select-widget'}}).
+- **Add Root**: Adds a root value. Adding a value means giving an id, a label and an obsolete field, the same values you would find in the Nuxeo Platform [vocabulary screen edition]({{page space='userdoc' page='managing-vocabularies'}}) interface.
+- **Add child**: When already on a node, adds a child element. Note that you have to click on the "Set tree depth" button if you want to add more children than the currently set limit.
+- **Move up** and **Move down**: Used to move the values (that are ordered).
+- **Set tree depth:** Allows to set more than two degrees of values on a hierarchical vocabulary. Select2 widgets are directly compatible with any levels. If you want to have more than two levels with chain selects, you can read the [Create a n-level select widget how-to]({{page space='nxdoc' page='how-to-create-a-n-level-select-widget'}}).
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 

@@ -113,9 +113,7 @@ history:
 Escalation rules allow to execute an [automation chain]({{page space='nxdoc' page='content-automation-concepts'}}), depending on a condition. A scheduler checks every five minutes the condition and executes the chain if the condition is evaluated to true. Please read the escalation service page for [more information and examples of rules]({{page space='nxdoc' page='escalation-service'}}).
 
 {{#> callout type='note' heading='Escalation rules and node types'}}
-
 Please note that although this tab appears on every node, escalation rules only apply to nodes awaiting for a user action to be executed (corresponding to the suspended lifecycle state).
-
 {{/callout}}
 
 Multiple escalation rules can be added using the **Add escalation rule** button.

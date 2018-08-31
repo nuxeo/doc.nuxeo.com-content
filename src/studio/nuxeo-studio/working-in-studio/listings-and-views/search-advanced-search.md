@@ -44,15 +44,13 @@ history:
 ---
 
 {{#> callout type='info' }}
-{{{multiexcerpt 'jsf-ui-target-package-requirement' page='listings-and-views'}}}
+  {{{multiexcerpt 'jsf-ui-target-package-requirement' page='listings-and-views'}}}
 {{/callout}}
 
 Default search configuration is defined the Search menu item in Nuxeo Platform 6.0\. For previous version, it is set in the Advanced Search menu entry.
 
 {{! excerpt}}
-
 From Nuxeo Platform 6.0 the Search menu item enables you to set up a new Default Search form to replace the one available in the Nuxeo Platform Search tab. The Advanced search menu item available for previous versions of the platform enables to define a new Advanced search form.
-
 {{! /excerpt}}
 
 It is basically a content view that is preset to be a search content view. So it shows the same tabs and configuration features as a [content view]({{page page='content-views'}}) with the differences below.
