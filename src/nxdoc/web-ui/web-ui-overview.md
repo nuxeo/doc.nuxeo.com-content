@@ -139,7 +139,6 @@ The following browsers are supported:
 - Google Chrome
 - Microsoft Edge
 - Mozilla Firefox
-- Microsoft Internet Explorer 11
 - Safari 11+
 - Safari Mobile
 - Chrome Android
