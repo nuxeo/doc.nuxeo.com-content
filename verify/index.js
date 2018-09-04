@@ -1,5 +1,4 @@
 'use strict';
-/* eslint-env es6 */
 
 const { test } = require('tap');
 const fs = require('fs');

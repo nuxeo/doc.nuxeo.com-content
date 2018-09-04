@@ -1,5 +1,4 @@
 'use strict';
-/* eslint-env es6 */
 /* eslint no-console: 0, new-cap: 0 */
 
 const module_name = 'update-frontmater';
@@ -30,7 +29,7 @@ const update_frontmatter = options => (files, metalsmith, done) => {
     delete frontmatter.mode;
     delete frontmatter.stats;
 
-    const yaml_output = yaml.safeDump(frontmatter, { indent: 4 });
+    const yaml_output = yaml.safeDump(frontmatter, { indent: 2 });
 
     file.contents = Buffer.from(`---${nl}${yaml_output}${nl}---${nl}${contents}`, 'utf8');
   });
