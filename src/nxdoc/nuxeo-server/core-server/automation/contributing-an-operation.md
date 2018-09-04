@@ -306,8 +306,6 @@ history:
 
 This page provides all the information necessary for implementing an operation and is a must-read for getting a good comprehension of the framework. You should also have a look at [Develop with Nuxeo Platform]({{page page='develop-with-nuxeo-platform'}}) which explain how to use Nuxeo CLI in order to create new operations quickly and easily through the provided wizard.
 
-You can use the Codenvy factory that we have setup which provides you with [a ready-to-build sample operation](https://codenvy.com/f?id=0djlg2kc332ipv5u) and unit test. Just click on **Project** > **Build & Publish** to build a JAR from your operation. You can deploy your first operation, "SampleOperation", on Nuxeo server in Codenvy by clicking on the green arrow on the top left panel.
-
 {{#> callout type='tip' }}
 
 Check out [Nuxeo CLI]({{page page='nuxeo-cli'}}) in order to bootstrap your Operation.
