@@ -13,14 +13,13 @@
     "co": "^4.6.0",
     "lodash.defaultsdeep": "^4.6.0",
     "node-yaml-config": "0.0.4",
-    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v10.0.0",
+    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v10.3.0",
     "thenify": "^3.2.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.8",
+    "browser-sync": "^2.24.6",
     "bs-fullscreen-message": "^1.1.0",
-    "tape": "^4.6.3",
-    "taper": "^0.5.0"
+    "tap": "^12.0.1"
   },
   "main": "build.js",
   "config": {
@@ -28,7 +27,7 @@
   },
   "scripts": {
     "pretest": "npm run yaml_lint config.yml",
-    "verify": "taper verify",
+    "verify": "tap verify",
     "start": "npm run metalsmith",
     "poststart": "npm run copy_assets && npm run verify",
     "predev": "npm install",
