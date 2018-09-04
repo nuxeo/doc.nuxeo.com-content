@@ -83,6 +83,18 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 16
+
+### Protection from Local Filesystem CSRF attack
+The hotfix 15 includes a protection against local filesystem CSRF attack which is enabled by default. Unfortunately this protection has side-effects on other features, like Hot-Reload from Nuxeo Dev Tools or SAML authentication. Because of that, Nuxeo has decided to disable the protection by default, considering that the vulnerability is not critical.
+If you need to be protected from local filesystem CSRF attack, then this contribution must be used:
+```
+   <require>org.nuxeo.ecm.platform.ui.web.cors</require>
+   <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+     <property name="nuxeo.cors.allowNullOrigin">false</property>
+   </extension>
+```
+
 ## Hotfix 15
 
 ### Package Not Found
