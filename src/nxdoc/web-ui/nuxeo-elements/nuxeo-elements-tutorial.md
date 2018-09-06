@@ -424,6 +424,12 @@ nuxeo-data-table {
 ```
 {{/panel}}
 
+Let's install PolymerElements Iron-Icons through Bower:
+
+```bash
+$ bower install --save PolymerElements/iron-icons
+```
+
 Finally, we must add a method to our element's prototype to retrieve a document's thumbnail, which will be used by the
 table that we've just added to the template:
 
