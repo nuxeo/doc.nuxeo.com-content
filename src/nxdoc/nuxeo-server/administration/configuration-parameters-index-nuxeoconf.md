@@ -2325,10 +2325,17 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 <td colspan="1">&nbsp;</td>
 <td colspan="1">Since 9.10-HF01</td>
 </tr>
+<tr>
 <td colspan="1">`elasticsearch.restClient.keystoreType`</td>
 <td colspan="1">The type of keystore, e.g. jks</td>
 <td colspan="1">Default Java system keystore type</td>
 <td colspan="1">Since 9.10-HF01</td>
+</tr>
+<tr>
+<td colspan="1">`elasticsearch.index.translog.durability`</td>
+<td colspan="1">The translog durability for Elasticsearch indexes. To reduce disk IO and increase performance this can be tuned to `async`.</td>
+<td colspan="1">`request`</td>
+<td colspan="1">Since 10.3</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.directory.type`</td>

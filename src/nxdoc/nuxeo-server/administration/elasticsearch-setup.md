@@ -546,6 +546,29 @@ Increase the bulk queue size In`/etc/elasticsearch/elasticsearch.yml` configurat
 thread_pool.write.queue_size: 500
 ```
 
+To reduce disk IO you should consider changing the default [translog](https://www.elastic.co/guide/en/elasticsearch/reference/6.3/index-modules-translog.html)
+durability from `request` to `async`.
+Since Nuxeo 10.3 this can be done from `nuxeo.conf`:
+```
+elasticsearch.index.translog.durability=async
+```
+
+If your indexes are already created you need some manual operation to change the translog:
+```
+curl -H "Content-Type: application/json" -XPUT "http://localhost:9200/nuxeo-uidgen/_settings" -d '{
+  "index.translog.durability" : "async"
+}'
+
+curl -H "Content-Type: application/json" -XPUT "http://localhost:9200/nuxeo-audit/_settings" -d '{
+  "index.translog.durability" : "async"
+}'
+
+curl -H "Content-Type: application/json" -XPUT "http://localhost:9200/nuxeo/_settings" -d '{
+  "index.translog.durability" : "async"
+}'
+
+```
+
 ## Configuring Nuxeo to Access the Elasticsearch Cluster
 
 Nuxeo supports two protocols to access the Elasticsearch cluster: the transport client protocol and the Rest client.
