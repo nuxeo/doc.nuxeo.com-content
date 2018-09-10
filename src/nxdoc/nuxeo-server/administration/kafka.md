@@ -17,18 +17,27 @@ Kafka configuration and integration with Nuxeo.
 
 ## Kafka Setup
 
-[Nuxeo Stream]({{page page='nuxeo-stream'}}) (introduced in Nuxeo 9.3) requires [Kafka 1.0.x](https://kafka.apache.org/).
+[Nuxeo Stream]({{page page='nuxeo-stream'}}) (introduced in Nuxeo 9.3) requires [Kafka](https://kafka.apache.org/) to run in cluster mode.
 
-In addition to a Kafka broker access Nuxeo Stream will also require a Zookeeper access.
+Nuxeo only need to talk with Kafka brokers, it does not need to have access to Zookeeper.
+
+Here is the compatibility versions:
+
+{{{multiexcerpt 'kafka_supported_versions' page='Compatibility Matrix'}}}
 
 Kafka broker need to be tuned a bit:
+
+{{#> callout type='warning' }}
+
+It is very important to set properly the `offsets.retention.minutes` see below.
+
+{{/callout}}
 
 
   | Kafka broker options | default | recommended |  Description |
   | --- | ---: | ---: | --- |
   | `offsets.retention.minutes` | `1440` | `20160` |The default offset retention is only 1 day, without activity for this amount of time the current consumer offset position is lost and all messages will be reprocessed. To prevent this we recommend to use a value 2 times bigger as `log.retention.hours`, so by default 14 days or `20160`. See [KAFKA-3806](https://issues.apache.org/jira/browse/KAFKA-3806) for more information. |
   | `log.retention.hours` | `168` | |The default log retention is 7 days. If you change this make sure you update `offset.retention.minutes`.|
-  | `auto.create.topics.enable` |  `true` |  | This is not a requirement for Log, because topic are created from Zookeeper. |
 
 
 ## Kafka Configuration
@@ -78,4 +87,7 @@ Here are some important properties:
   | `default.replication.factor` | `1` | Not a Kafka option, used by the module to set the topic replication factor when creating new topic. |
 
 
+ Most of the above properties can be tuned directly from [nuxeo.conf file]({{page space='nxdoc' page='configuration-parameters-index-nuxeoconf'}}).
+
  Please refer to Kafka document about the [consumer and producer options](https://kafka.apache.org/documentation#configuration) for more information.
+
