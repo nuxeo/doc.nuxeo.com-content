@@ -15,9 +15,20 @@ Kafka configuration and integration with Nuxeo.
 
 {{! /excerpt}}
 
-## Kafka Setup
+## When to use Kafka ?
 
 [Nuxeo Stream]({{page page='nuxeo-stream'}}) (introduced in Nuxeo 9.3) requires [Kafka](https://kafka.apache.org/) to run in cluster mode.
+
+Here are some good use case for Kafka:
+
+- Mass processing like import or slow async processing, to go beyond the boundaries of Redis by not being limited by memory.
+
+- Interoperability with other products or system.
+
+- As [an alternative to Redis]({{page page='kafka'}}#no-redis) to deploy Nuxeo in cluster.
+
+
+## Kafka Setup
 
 Nuxeo only need to talk with Kafka brokers, it does not need to have access to Zookeeper.
 
@@ -27,18 +38,16 @@ Here is the compatibility versions:
 
 Kafka broker need to be tuned a bit:
 
-{{#> callout type='warning' }}
-
-It is very important to set properly the `offsets.retention.minutes` see below.
-
-{{/callout}}
-
-
   | Kafka broker options | default | recommended |  Description |
   | --- | ---: | ---: | --- |
   | `offsets.retention.minutes` | `1440` | `20160` |The default offset retention is only 1 day, without activity for this amount of time the current consumer offset position is lost and all messages will be reprocessed. To prevent this we recommend to use a value 2 times bigger as `log.retention.hours`, so by default 14 days or `20160`. See [KAFKA-3806](https://issues.apache.org/jira/browse/KAFKA-3806) for more information. |
   | `log.retention.hours` | `168` | |The default log retention is 7 days. If you change this make sure you update `offset.retention.minutes`.|
 
+{{#> callout type='warning' }}
+
+Check twice that you set properly the `offsets.retention.minutes`.
+
+{{/callout}}
 
 ## Kafka Configuration
 
@@ -91,3 +100,37 @@ Here are some important properties:
 
  Please refer to Kafka document about the [consumer and producer options](https://kafka.apache.org/documentation#configuration) for more information.
 
+## {{> anchor 'no-redis'}}No Redis Nuxeo cluster
+
+Redis is used for different things in Nuxeo, among them as a default key value provider.
+For now there is only one alternative for this service and it requires to use MongoDB.
+
+Here is a possible "No Redis" Nuxeo cluster configuration:
+```properties
+
+# We use mongodb, this will switch the keyvalue provider and lock manager to mongodb:
+# nuxeo.keyvalue.provider=mongodb
+# nuxeo.lock.manager=mongodb
+nuxeo.templates=mongodb,default
+
+# Enable Kafka
+kafka.enabled=true
+kafka.bootstrap.servers=my-kafka-broker:9092
+
+# Enable the StreamWorkManager
+nuxeo.stream.work.enabled=true
+
+# Use the Stream PubSub provider
+# this will be used by cache and dbs invalidation
+nuxeo.pubsub.provider=stream
+
+# Just to make it clear
+nuxeo.redis.enabled=false
+```
+
+The Kafka topic used by the PubSub Provider don't need to have a 7 days retentions,
+it is used to send instant message and its retention can be reduced at the Kafka level to 2 hours:
+
+```bash
+$KAFKA_HOME/bin/kafka-configs.sh --zookeeper <zk_host> --alter --entity-type topics --entity-name nuxeo-pubsub --add-config retention.ms=7200000
+```
