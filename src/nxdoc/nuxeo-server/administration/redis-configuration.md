@@ -138,7 +138,7 @@ Until Nuxeo 9.10 for a robust production instance, the first point is always nec
 Visit [the Nuxeo and Redis page]({{page page='nuxeo-and-redis'}}) for more information.
 
 Since Nuxeo 9.10 [Nuxeo Stream]({{page page='nuxeo-stream'}}) has been introduced and enables to use an alternative work manager that can rely on Kafka for
-the cluster mode, this cover point 1 and partially point 2 (there is no cache invalidation without Redis).
+the cluster mode, this cover point 1 and for [some configuration]({{page page='kafka'}}#no-redis) point 2.
 
 
 ## Configuring Redis
