@@ -212,6 +212,48 @@ For now you should either use c4 instance either c5 with java 8.
 
 More information can be found on the [Elasticsearch Setup]({{page page='elasticsearch-setup'}}) page.
 
+## Kafka
+
+{{! multiexcerpt name='kafka_supported_versions'}}
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Nuxeo Platform Version:</th>
+<th>FT 10.3</th>
+<th>FT 10.2</th>
+<th>FT 10.1</th>
+<th colspan="1">LTS 2017</th>
+</tr>
+<tr>
+<th colspan="1">Kafka</th>
+<td colspan="1">
+Library: 2.0.0 scala 2.12<br />
+Cluster: 1.x, 2.0.0</td>
+</td>
+<td colspan="1">
+Library: 1.1.0 scala 2.12<br />
+Cluster: 1.x, 2.0.0</td>
+</td>
+<td colspan="1">
+Library: 1.0.0 scala 2.11<br />
+Cluster: 1.x, 2.0.0</td>
+</td>
+
+<td colspan="1">
+Library: 1.0.0 scala 2.11<br />
+Cluster: 1.x, 2.0.0</td>
+</td>
+
+</tr>
+</tbody>
+</table>
+</div>
+{{! /multiexcerpt}}
+
+Kafka supports backward and forward compatibility a cluster >= 1.0.0 works,
+we still advice to use the latest available stable version.
+
 ## Browsers
 
 {{! multiexcerpt name='supported-browsers'}}

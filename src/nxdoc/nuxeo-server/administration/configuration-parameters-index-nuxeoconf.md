@@ -2417,7 +2417,7 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 </tr>
 <tr>
 <td colspan="1">`kafka.zkServers`</td>
-<td colspan="1">host:port comma separated list of Kafka Zookeepers</td>
+<td colspan="1">Deprecated since 10.2, 9.10-HF04, Nuxeo don't need Zookeeper access</td>
 <td colspan="1">`localhost:2181`</td>
 <td colspan="1">Since 9.3</td>
 </tr>
