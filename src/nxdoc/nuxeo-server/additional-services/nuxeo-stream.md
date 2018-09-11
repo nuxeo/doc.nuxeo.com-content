@@ -72,7 +72,7 @@ This `StreamService` service provides:
   By providing a class that define a topology of computations, the service will take care of creating a Pool of thread that run the processing.
 
 
-### Record codec
+### Record Codec
 
 At some point the record object need to be encoded to binary and decoded (aka codec).
 
@@ -80,11 +80,11 @@ The Log API requires a record to extend Java Externalizable, but this does not m
 that interoperability is limited to Java.
 You can choose between different codec:
 
-- `legacy`: default using java Externalizable.
-- `java`: explicitly use java Externalizable.
-- `avroBinary`: use java reflection to extract an [avro](https://avro.apache.org/docs/current/) schema and convert the record to avro.
-- `avro`: use java reflection to convert the record to [avro message](https://avro.apache.org/docs/current/spec.html#single_object_encoding) which is avro binary with a header containing a fingerprint of the schema.
-- `avroConfluent`: same as avro but using the [Confluent Schema Registry](https://docs.confluent.io/current/avro.html#confluent-schema-registry)
+- `legacy`: default using Java Externalizable.
+- `java`: explicitly use Java Externalizable.
+- `avroBinary`: use Java reflection to extract an [Avro](https://avro.apache.org/docs/current/) schema and convert the record to Avro.
+- `avro`: use Java reflection to convert the record to [Avro message](https://avro.apache.org/docs/current/spec.html#single_object_encoding) which is avro binary with a header containing a fingerprint of the schema.
+- `avroConfluent`: same as Avro but using the [Confluent Schema Registry](https://docs.confluent.io/current/avro.html#confluent-schema-registry)
 
 `avro` and `avroConfluent` refer to a schema fingerprint so they are interoperable format
 that support [forward and backward compatibility](https://docs.confluent.io/current/avro.html).
@@ -97,7 +97,7 @@ that contains the following information:
 - `watermark`: an extended timestamp with a sequence
 - `flagAsByte`: a byte representing 8 flags
 
-The avro schema for the computation record is:
+The Avro schema for the computation record is:
 ```json
 {
   "name": "Record",
@@ -131,7 +131,7 @@ The avro schema for the computation record is:
 ```
 
 The content of the computation Record is an array of bytes, this can be
-whatever you like from plain json to avro codec.
+whatever you like from plain JSON to Avro codec.
 
 ## Integration
 
