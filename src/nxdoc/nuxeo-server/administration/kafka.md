@@ -15,11 +15,11 @@ Kafka configuration and integration with Nuxeo.
 
 {{! /excerpt}}
 
-## When to use Kafka ?
+## When to Use Kafka?
 
 [Nuxeo Stream]({{page page='nuxeo-stream'}}) (introduced in Nuxeo 9.3) requires [Kafka](https://kafka.apache.org/) to run in cluster mode.
 
-Here are some good use case for Kafka:
+Here are some good use cases for Kafka:
 
 - Mass processing like import or slow async processing, to go beyond the boundaries of Redis by not being limited by memory.
 
@@ -45,7 +45,7 @@ Kafka broker need to be tuned a bit:
 
 {{#> callout type='warning' }}
 
-Check twice that you set properly the `offsets.retention.minutes`.
+Make sure that you set properly the `offsets.retention.minutes`.
 
 {{/callout}}
 
@@ -100,7 +100,7 @@ Here are some important properties:
 
  Please refer to Kafka document about the [consumer and producer options](https://kafka.apache.org/documentation#configuration) for more information.
 
-## {{> anchor 'no-redis'}}No Redis Nuxeo cluster
+## {{> anchor 'no-redis'}}"No Redis" Nuxeo cluster
 
 Redis is used for different things in Nuxeo, among them as a default key value provider.
 For now there is only one alternative for this service and it requires to use MongoDB.
