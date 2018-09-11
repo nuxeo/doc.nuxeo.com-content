@@ -202,9 +202,9 @@ Once the hotfix 19 is applied, you will get a Validation exception whereas befor
 
 ## Hotfix 18
 
-### Longer column size to store extended infos in the audit
+### Longer Column Size to Store Extended Infos in the Audit
 
-The size of the column `LOG_EXTINFO_STRING` in the table `NXP_LOGS_EXTINFO` has been increased from 255 to 1024 to be able to store longer values in the audit, like big download URLs. This change is not automatically applied to existing database, you must change it manuall with a SQL query:
+The size of the column `LOG_EXTINFO_STRING` in the table `NXP_LOGS_EXTINFO` has been increased from 255 to 1024 to be able to store longer values in the audit, like big download URLs. This change is not automatically applied to existing database, you must change it manually with a SQL query:
 ```
 ALTER TABLE nxp_logs_extinfo ALTER COLUMN log_extinfo_string TYPE character varying(1024);
 ```
