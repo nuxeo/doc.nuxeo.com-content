@@ -554,13 +554,49 @@ The Transactional Feature is included in the Core Feature so you should only nee
 
     *   boolean `autostart` true - injects a new transaction before executing each test
 
+### Runtime Stream Feature
+
+Deploys the required Nuxeo stream bundles and configures a stream implementation to be used by tests.
+
+#### Requirements
+
+The feature requires Runtime Feature.
+
+#### Configuration
+
+This feature doesn't have any _by test_ configuration.
+* `nuxeo.test.stream` - system property to change stream implementation used by tests
+
+### WorkManager Feature
+
+Deploys the required Nuxeo bundles and configures a work manager implementation to be used by tests.
+
+#### Requirements
+
+The feature requires Runtime Stream Feature.
+
+#### Configuration
+
+This feature doesn't have any _by test_ configuration.
+* `nuxeo.test.wokrmanager` - system property to change work manager implementation used by tests
+
+### Core Bulk Feature
+
+Deploys the required Nuxeo bundles for bulk feature (BAF).
+
+The feature leverages Runtime Stream feature to use configured stream implementation during tests.
+
+#### Requirements
+
+The feature requires Runtime Feature, Transactional Feature, Runtime Stream Feature and Core IO Feature.
+
 ### Core Feature
 
 Deploys the required Nuxeo core bundles and resources and configures a repository to be used by tests.
 
 #### Requirements
 
-The feature requires Runtime Feature and Transactional Feature.
+The feature requires Runtime Feature, Transactional Feature and WorkManager Feature.
 
 #### Configuration
 
@@ -593,7 +629,7 @@ public class SimpleSession {
 
 This starts a Nuxeo repository, creates a CoreSession (using the "Administrator" user) and initializes the repository using the DefaultRepositoryInit initializer only once (CLASS level) before running the test.
 
-<span style="font-size: 16.0px;">Platform Feature</span>
+### Platform Feature
 
 This feature extends the Core Feature and adds deployment of basic Nuxeo services like directories, user manager etc.
 
