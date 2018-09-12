@@ -35,7 +35,7 @@ Renditions are alternative representations of a document, or its content such as
 
 In the Nuxeo Platform, renditions are used for exports. Users can export documents on their computer one at a time or an entire workspace, folder or section.
 
-Read the [Exporting Documents]({{page version='' space='userdoc' page='exporting-documents'}}) page for more information.
+Read the [Renditions]({{page version='' space='nxdoc' page='renditions'}}) page for more information.
 
 ##  Watermarks
 
