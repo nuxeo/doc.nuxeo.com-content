@@ -47,14 +47,15 @@ Goal is now to review the asset management branch's content. Let's add it to the
 
 ![]({{file name='merge-branch.png'}} ?border=true,w=600)
 
-The two branches' content is now merged.
+The two branches are now merged.
 
 4. In the branch management screen, select the `master` branch.
-<br/>Changes brought over from the other branch are visible in the **Your Work In Progress** zone and marked in green, meaning that they are only visible from you at this stage until you decide to push them.
+
+<br/>Changes pulled over from the other branch are visible in the **Your Work In Progress** zone and marked in green, meaning that they are only visible from you at this stage until you decide to push them.
 
 ![]({{file name='wip.png'}} ?border=true,w=600)
 
-Should you wish to gather more information about the changes merged, feel free to click on the commits and take a look at the diff provided.
+If you want to have more informations about the changes, click on the corresponding commit.
 
 ### 3. Reviewing and Taking a Decision
 Several decisions are possible at this stage to finish the review:
@@ -76,12 +77,12 @@ Reverting the changes can be done using the **Revert To** button in the merged c
 
 ![]({{file name='revert.png'}} ?border=true,w=600)
 
-A new commit is created to take configuration back to this step.
+A new commit is created to take the configuration back to a previous step.
 2. Push all commits using the green button in the top right corner of the screen.
 
 ![]({{file name='revert-push.png'}} ?border=true,w=600)
 
-Changes are pushed and review is finished.
+Changes are pushed and the review is finished.
 
 #### Amending Configuration
 A third option is to bring changes before sharing the final result.
@@ -92,7 +93,8 @@ A third option is to bring changes before sharing the final result.
 ![]({{file name='commit-changes.png'}} ?border=true,w=350)
 
 {{#> callout type='note' heading='Do not use Commit and Push'}}
-Make sure you click the **Commmit** button on the Commit popup. Using the **Commit and Push** button would share all changes with your coworkers right away. You should avoid it until you are ready to end the review.
+Make sure you click the **Commit** button on the Commit popup.
+<br/>Using the **Commit and Push** button would share all changes with your coworkers right away. You should avoid it until you are ready to end the review.
 {{/callout}}
 
-3. When your changes are finished, push the changes using the green button in the top right corner of the screen. Changes are pushed and review is finished.
+3. When your changes are finished, push the changes using the green button in the top right corner of the screen. Changes are pushed and the review is finished.
