@@ -560,7 +560,7 @@ Deploys the required Nuxeo stream bundles and configures a stream implementation
 
 #### Requirements
 
-The feature requires Runtime Feature.
+It requires Runtime Feature.
 
 #### Configuration
 
@@ -573,7 +573,7 @@ Deploys the required Nuxeo bundles and configures a work manager implementation 
 
 #### Requirements
 
-The feature requires Runtime Stream Feature.
+It requires Runtime Stream Feature.
 
 #### Configuration
 
@@ -584,11 +584,11 @@ This feature doesn't have any _by test_ configuration.
 
 Deploys the required Nuxeo bundles for bulk feature (BAF).
 
-The feature leverages Runtime Stream feature to use configured stream implementation during tests.
+It leverages Runtime Stream feature to use configured stream implementation during tests.
 
 #### Requirements
 
-The feature requires Runtime Feature, Transactional Feature, Runtime Stream Feature and Core IO Feature.
+It requires Runtime Feature, Transactional Feature, Runtime Stream Feature and Core IO Feature.
 
 ### Core Feature
 
