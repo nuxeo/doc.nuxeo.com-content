@@ -258,7 +258,7 @@ Nuxeo Automation Scripting allows you to write JavaScript code to use Automation
     // For instance, the operation to display JSF messages
     WebUI.AddMessage(input, {
         /*required:true - type: string*/
-        'message': "Display It!" ,
+        'message': "Display It!",
         /*required:true - type: string*/
         'severity': "INFO"
     });
@@ -267,16 +267,16 @@ Nuxeo Automation Scripting allows you to write JavaScript code to use Automation
 *   Using `for/if/print` or any other JavaScript feature
 
     ```js
-      if(docs.length > 3){
-        var index;
-        for (index = 0; index < docs.length; ++index) {
-            Document.SetProperty(docs[index], {
-              /*required:true - type: string*/
-              'xpath': "dc:title" ,
-              /*required:false - type: boolean*/
-              'save': true,
-              /*required:false - type: serializable*/
-              'value': "renamed"
+    if(docs.length > 3){
+      var index;
+      for (index = 0; index < docs.length; ++index) {
+        Document.SetProperty(docs[index], {
+          /*required:true - type: string*/
+          'xpath': "dc:title",
+          /*required:false - type: boolean*/
+          'save': true,
+          /*required:false - type: serializable*/
+          'value': "renamed"
         });
       }
     }
@@ -386,7 +386,7 @@ var properties = {
   "my:teamMembers": [{"firstName": "John", "lastName": "Doe"}, {"firstName": "Jane", "lastName": "Smith"}]
 };
 input = Document.Update(input, {
-  'properties': properties;
+  'properties': properties,
   'save': true
 }); 
 ```
@@ -398,7 +398,7 @@ var properties = {};
 properties["my:teamMembers"] = input["my:teamMembers"];
 properties["my:teamMembers"].push({"firstName": "Clark", "lastName": "Wayne"});
 input = Document.Update(input, {
-  'properties': properties;
+  'properties': properties,
   'save': true
 });
 ```
@@ -422,28 +422,28 @@ Fn.getEmail("Administrator")
 ```js
 function run(input, params) {
 
- // nowDate, javascript instantiated date should be ISO stringified as follow
- var nowDate = new Date().toISOString();
+  // nowDate, javascript instantiated date should be ISO stringified as follow
+  var nowDate = new Date().toISOString();
 
- // releaseDate, document property should be formatted and stringified as follow
- var releaseDate = Fn.calendar(input['ncf:releaseDate']).format("yyyy-MM-dd");
+  // releaseDate, document property should be formatted and stringified as follow
+  var releaseDate = Fn.calendar(input['ncf:releaseDate']).format("yyyy-MM-dd");
 
- // Then all comparaisons can be made
- var compare = (nowDate > releaseDate);
- if (compare) {
-   WebUI.AddInfoMessage(
-     input, {
-       'message': 'Now less than release date'
-     }
-   );
- }
- else {
-   WebUI.AddInfoMessage(
-     input, {
-       'message': 'Now greater than release date'
-     }
-   );
- }
+  // Then all comparaisons can be made
+  var compare = (nowDate > releaseDate);
+  if (compare) {
+    WebUI.AddInfoMessage(
+      input, {
+        'message': 'Now less than release date'
+      }
+    );
+  }
+  else {
+    WebUI.AddInfoMessage(
+      input, {
+        'message': 'Now greater than release date'
+      }
+    );
+  }
 }
 ```
 
@@ -464,10 +464,10 @@ function run(input, params) {
 	var nowDate = new Date().toISOString();
 	debugger;
 	WebUI.AddInfoMessage(
-	 input, {
-	   /*required:true - type: string*/
-	   'message': nowDate
-	 }
+	  input, {
+	    /*required:true - type: string*/
+	    'message': nowDate
+	  }
 	);
 }
 ```
@@ -582,11 +582,11 @@ Automation scripting operation is made through an XML contribution on the [`oper
     <param name="lang" type="string"/>
     <script>
     function run(input, params) {
-        if (params.lang === "fr") {
+      if (params.lang === "fr") {
         return "Bonjour " + input;
-        } else {
+      } else {
         return "Hello " + input;
-        }
+      }
     }
     </script>
 </scriptedOperation>
@@ -598,12 +598,12 @@ Automation scripting operation is made through an XML contribution on the [`oper
 ```xml
 <extension point="chains" target="org.nuxeo.ecm.core.operation.OperationServiceComponent">
     <chain id="Scripting.ChainedHello">
-    <operation id="javascript.HelloWorld">
-        <param type="string" name="lang">fr</param>
-    </operation>
-    <operation id="javascript.HelloWorld">
-        <param type="string" name="lang">en</param>
-    </operation>
+        <operation id="javascript.HelloWorld">
+            <param type="string" name="lang">fr</param>
+        </operation>
+        <operation id="javascript.HelloWorld">
+            <param type="string" name="lang">en</param>
+        </operation>
     </chain>
 </extension>
 ```
