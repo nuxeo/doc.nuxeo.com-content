@@ -54,7 +54,9 @@ Below the needed communication (for firewall rules/docker network setup):
 
 {{#> callout type='warning' heading='Prerequisite'}}
 To fetch images, you need to be authenticated to docker repository:
-`docker login dockerin-arender.nuxeo.com:443`
+```
+docker login dockerin-arender.nuxeo.com:443
+```
 {{/callout}}
 
 
