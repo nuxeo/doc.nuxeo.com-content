@@ -145,6 +145,8 @@ You can also use [Special NXQL Properties]({{page page='nxql' space='nxdoc' anch
 
 From this list, you can compose some conditions
 
+<div class="table-scroll">
+
 <table class="hover">
 
 <tbody>
@@ -175,7 +177,7 @@ Document doesn't have the "Retention" facet or its major version is under 1.0
 
 </td></tr><tr><td colspan="1">
 
-User doesn't belong to the `external` group and
+User doesn't belong to the `external` group
 
 </td><td colspan="1">
 
