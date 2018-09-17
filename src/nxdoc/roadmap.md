@@ -2,7 +2,7 @@
 title: Nuxeo Roadmap
 review:
     comment: ''
-    date: '2017-07-05'
+    date: '2018-09-17'
     status: ok
 labels:
     - roadmap
