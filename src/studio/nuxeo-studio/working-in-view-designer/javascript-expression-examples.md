@@ -121,6 +121,24 @@ Group membership
 
 </td></tr></tbody></table></div>
 
+You can get more attributes from the Expression Editor available in Nuxeo Studio Modeler
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Javascript Expression Examples/Javascript Expression Document
+    name: javascript_expressions_document.png
+    studio_designer#screenshot#up_to_date
+--}}
+![Javascript Expression Document](nx_asset://dd577c29-14f4-429a-a9e6-016b0fe0f6dd ?w=650,border=true)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Javascript Expression Examples/Javascript Expression User
+    name: javascript_expressions_user.png
+    studio_designer#screenshot#up_to_date
+--}}
+![Javascript Expression User](nx_asset://b48eed3f-7868-4c9f-9c54-357fb4f11bab ?w=650,border=true)
+
+
+
 {{#> callout type='tip' heading='More options'}}
 You can also use [Special NXQL Properties]({{page page='nxql' space='nxdoc' anchor='special-nxql-properties'}}) to build your expressions, and the  [Functions object]({{page page='use-of-mvel-in-automation-chains' space='nxdoc' anchor='functions'}})
 {{/callout}}
