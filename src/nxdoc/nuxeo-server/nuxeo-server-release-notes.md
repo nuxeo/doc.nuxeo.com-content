@@ -53,7 +53,7 @@ It is now possible to get the closest document's ancestor of a document using th
 #### No Mention of the Repository on a Document Reference {{since '10.2'}}
 
 When referencing a document in a property, we don't need anymore to store the repository id. If the repository id is not there, the same as the referencing document is chosen.
-The following two {{documentResolver}} restrictions with {{idOnly}} and {{pathOnly}} can be used for this:
+The following two `documentResolver` restrictions with `idOnly` and `pathOnly` can be used for this:
 ```
 <xs:restriction base="xs:string" ref:resolver="documentResolver" ref:store="idOnly" />
 ```
@@ -119,18 +119,18 @@ Unicity check on directory entry has been moved post tenant-specific computation
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25264](https://jira.nuxeo.com/browse/NXP-25264)
 
-#### LDAP Connection timeout reduced to 1 min {{since '10.2'}}
+#### Ldap Connection Timeout Reduced to 1 Min {{since '10.2'}}
 
 The pooling connection timeout of the LDAP connections has been reduced from 30 min to 1 min to avoid some performance issues when making a lot of connections with multiple users.
 
-Multi-tenant addon now supports tenant-isolated directories with MongoDB
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25085](https://jira.nuxeo.com/browse/NXP-25085)
 
 #### Filters parameter on Directory.SuggestEntries {{since '10.2'}}
 
 It is now possible to filter directories values on a given column value, so as to implement chain select behaviors for instance. You can use the "filters" parameter, with a serialized property, like: `{"parent": "europe"}`
 
-[NXP-25299](https://jira.nuxeo.com/browse/NXP-25299)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25299](https://jira.nuxeo.com/browse/NXP-25299)
+
 
 ### Workflow
 
