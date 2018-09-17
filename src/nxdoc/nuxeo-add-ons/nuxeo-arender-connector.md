@@ -51,6 +51,13 @@ Below the needed communication (for firewall rules/docker network setup):
 - ARender previewer needs to reach ARender rendition
 - ARender previewer needs to reach Nuxeo
 
+
+{{#> callout type='warning' heading='Prerequisite'}}
+To fetch images, you need to be authenticated to docker repository:
+`docker login dockerin-arender.nuxeo.com:443`
+{{/callout}}
+
+
 ### Embedded Installation - Development
 
 For development purposes, you need to run the Docker image for rendition and bind its port to localhost:
