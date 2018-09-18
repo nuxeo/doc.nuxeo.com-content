@@ -132,6 +132,14 @@ A tag holds a label that does not contain any:
 - percent
 - quote
 
+{{#> callout type='info' }}
+
+Since 10.3, if using the service based on the `NXTag` facet, it is possible to use these characters except the percent when creating tags. 
+This can be enabled or disabled with the following configuration property: `nuxeo.tag.sanitization.enabled`.
+By default they are not usable (`nuxeo.tag.sanitization.enabled=true`).
+
+{{/callout}}
+
 Characters will be removed by service.
 
 ## Functional Overview
