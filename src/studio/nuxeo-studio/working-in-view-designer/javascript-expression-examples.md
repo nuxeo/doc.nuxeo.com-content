@@ -10,12 +10,14 @@ tree_item_index: 400
 ---
 
 Javascript expressions are useful in two main use cases:
-1. If you need to create filter. Filters can be used either from Nuxeo Studio Designer or directly in your code using the [nuxeo-filter](https://www.webcomponents.org/element/nuxeo/nuxeo-ui-elements/elements/nuxeo-filter) element, in the `expression` property. They can be used to determine the suitable conditions to display an action, a menu from the left menu bar, any pages, and more globally, any element.
-2. If you need to implement specific business logic You can use [Javascript expression]({{page page='automation-scripting'}}) in your custom automation chains and also in the Polymer section of you element
+
+1. To create filters that can be used either from Nuxeo Studio Designer or directly in your code using the [nuxeo-filter](https://www.webcomponents.org/element/nuxeo/nuxeo-ui-elements/elements/nuxeo-filter) element, in the `expression` property.</br>
+  They can be used to determine the suitable conditions to display an action, a menu from the left menu bar, any pages, and more globally, any element.
+
+2. To implement specific business logic, you can use [Javascript expression]({{page page='automation-scripting'}}) in your custom automation chains and also in the Polymer section of your element.
 
 
-
-Here is a list of the main Javascript expressions
+Here is a list of the main Javascript expressions:
 
 <div class="table-scroll">
 
@@ -121,29 +123,29 @@ Group membership
 
 </td></tr></tbody></table></div>
 
-You can get more attributes from the Expression Editor available in Nuxeo Studio Modeler
+You can get more attributes from the Expression Editor available in Nuxeo Studio Modeler:
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Javascript Expression Examples/Javascript Expression Document
     name: javascript_expressions_document.png
     studio_designer#screenshot#up_to_date
 --}}
-![Javascript Expression Document](nx_asset://dd577c29-14f4-429a-a9e6-016b0fe0f6dd ?w=650,border=true)
+![Javascript Expression Document](nx_asset://dd577c29-14f4-429a-a9e6-016b0fe0f6dd ?w=450,border=true)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Javascript Expression Examples/Javascript Expression User
     name: javascript_expressions_user.png
     studio_designer#screenshot#up_to_date
 --}}
-![Javascript Expression User](nx_asset://b48eed3f-7868-4c9f-9c54-357fb4f11bab ?w=650,border=true)
+![Javascript Expression User](nx_asset://b48eed3f-7868-4c9f-9c54-357fb4f11bab ?w=450,border=true)
 
 
 
 {{#> callout type='tip' heading='More options'}}
-You can also use [Special NXQL Properties]({{page page='nxql' space='nxdoc' anchor='special-nxql-properties'}}) to build your expressions, and the  [Functions object]({{page page='use-of-mvel-in-automation-chains' space='nxdoc' anchor='functions'}})
+You can also use [Special NXQL Properties]({{page page='nxql' space='nxdoc' anchor='special-nxql-properties'}}) to build your expressions, and the [Functions object]({{page page='use-of-mvel-in-automation-chains' space='nxdoc' anchor='functions'}}).
 {{/callout}}
 
-From this list, you can compose some conditions
+From this list, you can compose some conditions:
 
 <div class="table-scroll">
 
