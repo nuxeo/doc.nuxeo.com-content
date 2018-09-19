@@ -1,377 +1,308 @@
 ---
 title: Understand Expression and Scripting Languages Used in Nuxeo
 review:
-    comment: ''
-    date: '2016-12-06'
-    status: ok
+  comment: ''
+  date: '2016-12-06'
+  status: ok
 labels:
-    - lts2016-ok
-    - el
-    - mvel
-    - freemarker
-    - scripting
-    - content-review-lts2017
+  - lts2016-ok
+  - el
+  - mvel
+  - freemarker
+  - scripting
+  - content-review-lts2017
 toc: true
 confluence:
-    ajs-parent-page-id: '19235679'
-    ajs-parent-page-title: Educational
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Understand+Expression+and+Scripting+Languages+Used+in+Nuxeo
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Understand+Expression+and+Scripting+Languages+Used+in+Nuxeo'
-    page_id: '14254895'
-    shortlink: L4PZ
-    shortlink_source: 'https://doc.nuxeo.com/x/L4PZ'
-    source_link: /display/NXDOC/Understand+Expression+and+Scripting+Languages+Used+in+Nuxeo
+  ajs-parent-page-id: '19235679'
+  ajs-parent-page-title: Educational
+  ajs-space-key: NXDOC
+  ajs-space-name: Nuxeo Platform Developer Documentation
+  canonical: Understand+Expression+and+Scripting+Languages+Used+in+Nuxeo
+  canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Understand+Expression+and+Scripting+Languages+Used+in+Nuxeo'
+  page_id: '14254895'
+  shortlink: L4PZ
+  shortlink_source: 'https://doc.nuxeo.com/x/L4PZ'
+  source_link: /display/NXDOC/Understand+Expression+and+Scripting+Languages+Used+in+Nuxeo
 tree_item_index: 900
 history:
-    -
-        author: Solen Guitter
-        date: '2016-09-01 09:10'
-        message: ''
-        version: '69'
-    -
-        author: Thibaud Arguillere
-        date: '2016-02-09 15:20'
-        message: ''
-        version: '68'
-    -
-        author: Manon Lumeau
-        date: '2016-01-18 17:03'
-        message: 'replace "Write" by "Edit"     '
-        version: '67'
-    -
-        author: Solen Guitter
-        date: '2015-09-10 12:11'
-        message: ''
-        version: '66'
-    -
-        author: Bertrand Chauvin
-        date: '2015-09-10 09:27'
-        message: Added freemarker link
-        version: '65'
-    -
-        author: Bertrand Chauvin
-        date: '2015-09-10 09:26'
-        message: Added MVEL link
-        version: '64'
-    -
-        author: Michaël Vachette
-        date: '2014-12-30 17:31'
-        message: ''
-        version: '63'
-    -
-        author: Manon Lumeau
-        date: '2014-10-06 11:26'
-        message: ''
-        version: '62'
-    -
-        author: Solen Guitter
-        date: '2014-09-30 10:42'
-        message: ''
-        version: '61'
-    -
-        author: Solen Guitter
-        date: '2014-09-29 14:24'
-        message: Fix link to JIRA issue and formatting
-        version: '60'
-    -
-        author: Manon Lumeau
-        date: '2014-06-25 11:12'
-        message: ''
-        version: '59'
-    -
-        author: Bertrand Chauvin
-        date: '2014-06-23 16:47'
-        message: Reverted from v. 56
-        version: '58'
-    -
-        author: Bertrand Chauvin
-        date: '2014-06-23 16:46'
-        message: Added anchor
-        version: '57'
-    -
-        author: Bertrand Chauvin
-        date: '2014-06-23 16:42'
-        message: Updated schema image
-        version: '56'
-    -
-        author: Thierry Martins
-        date: '2014-04-16 11:58'
-        message: ''
-        version: '55'
-    -
-        author: Vincent Dutat
-        date: '2014-04-04 21:16'
-        message: ''
-        version: '54'
-    -
-        author: Solen Guitter
-        date: '2014-01-08 10:44'
-        message: ''
-        version: '53'
-    -
-        author: Thibaud Arguillere
-        date: '2014-01-07 23:05'
-        message: ''
-        version: '52'
-    -
-        author: Thibaud Arguillere
-        date: '2014-01-07 22:59'
-        message: ''
-        version: '51'
-    -
-        author: Thibaud Arguillere
-        date: '2014-01-07 22:58'
-        message: ''
-        version: '50'
-    -
-        author: Alain Escaffre
-        date: '2013-09-16 12:03'
-        message: ''
-        version: '49'
-    -
-        author: Solen Guitter
-        date: '2013-09-09 11:14'
-        message: Removed related topics from TOC
-        version: '48'
-    -
-        author: Solen Guitter
-        date: '2013-09-09 11:13'
-        message: ''
-        version: '47'
-    -
-        author: Thibaud Arguillere
-        date: '2013-09-06 00:20'
-        message: ''
-        version: '46'
-    -
-        author: Thibaud Arguillere
-        date: '2013-09-05 20:03'
-        message: ''
-        version: '45'
-    -
-        author: Alain Escaffre
-        date: '2013-09-04 18:28'
-        message: ''
-        version: '44'
-    -
-        author: Alain Escaffre
-        date: '2013-09-04 17:24'
-        message: ''
-        version: '43'
-    -
-        author: Alain Escaffre
-        date: '2013-09-04 17:21'
-        message: ''
-        version: '42'
-    -
-        author: Thibaud Arguillere
-        date: '2013-09-04 17:17'
-        message: ''
-        version: '41'
-    -
-        author: Bertrand Chauvin
-        date: '2013-07-25 17:54'
-        message: ''
-        version: '40'
-    -
-        author: Bertrand Chauvin
-        date: '2013-07-25 17:54'
-        message: Reverted from v. 37
-        version: '39'
-    -
-        author: Bertrand Chauvin
-        date: '2013-07-25 17:53'
-        message: Removed JIRA ticket regarding inverted EL filter (fixed)
-        version: '38'
-    -
-        author: Solen Guitter
-        date: '2013-07-15 11:16'
-        message: Fixed typo
-        version: '37'
-    -
-        author: Bertrand Chauvin
-        date: '2013-07-12 14:05'
-        message: ''
-        version: '36'
-    -
-        author: Bertrand Chauvin
-        date: '2013-07-12 14:01'
-        message: ''
-        version: '35'
-    -
-        author: Bertrand Chauvin
-        date: '2013-07-12 09:55'
-        message: Modified event handler example
-        version: '34'
-    -
-        author: Bertrand Chauvin
-        date: '2013-07-11 14:51'
-        message: ''
-        version: '33'
-    -
-        author: Bertrand Chauvin
-        date: '2013-07-11 14:49'
-        message: Added filters and widgets available variables
-        version: '32'
-    -
-        author: Bertrand Chauvin
-        date: '2013-07-11 13:54'
-        message: Added event handlers part
-        version: '31'
-    -
-        author: Bertrand Chauvin
-        date: '2013-07-11 11:43'
-        message: Added automation chains variables
-        version: '30'
-    -
-        author: Bertrand Chauvin
-        date: '2013-07-11 11:06'
-        message: Added doc templates variables
-        version: '29'
-    -
-        author: Bertrand Chauvin
-        date: '2013-07-11 10:20'
-        message: Taille des images (spéciale dédicace AE)
-        version: '28'
-    -
-        author: Alain Escaffre
-        date: '2013-07-11 01:34'
-        message: ''
-        version: '27'
-    -
-        author: Alain Escaffre
-        date: '2013-07-11 01:34'
-        message: ''
-        version: '26'
-    -
-        author: Solen Guitter
-        date: '2013-07-09 12:14'
-        message: ''
-        version: '25'
-    -
-        author: Bertrand Chauvin
-        date: '2013-07-08 16:48'
-        message: ''
-        version: '24'
-    -
-        author: Bertrand Chauvin
-        date: '2013-07-08 14:29'
-        message: Formatting
-        version: '23'
-    -
-        author: Bertrand Chauvin
-        date: '2013-07-08 14:24'
-        message: Started to add available variables depending on context (with workflow context)
-        version: '22'
-    -
-        author: Karl Harris
-        date: '2013-07-03 16:01'
-        message: ''
-        version: '21'
-    -
-        author: Karl Harris
-        date: '2013-07-03 15:07'
-        message: ''
-        version: '20'
-    -
-        author: Karl Harris
-        date: '2013-07-03 15:03'
-        message: ''
-        version: '19'
-    -
-        author: Karl Harris
-        date: '2013-07-03 14:55'
-        message: ''
-        version: '18'
-    -
-        author: Karl Harris
-        date: '2013-07-03 14:54'
-        message: ''
-        version: '17'
-    -
-        author: Karl Harris
-        date: '2013-07-03 14:48'
-        message: ''
-        version: '16'
-    -
-        author: Karl Harris
-        date: '2013-07-03 14:44'
-        message: ''
-        version: '15'
-    -
-        author: Karl Harris
-        date: '2013-07-03 14:42'
-        message: ''
-        version: '14'
-    -
-        author: Karl Harris
-        date: '2013-07-03 14:40'
-        message: ''
-        version: '13'
-    -
-        author: Karl Harris
-        date: '2013-07-03 14:40'
-        message: ''
-        version: '12'
-    -
-        author: Alain Escaffre
-        date: '2013-07-01 13:49'
-        message: ''
-        version: '11'
-    -
-        author: Solen Guitter
-        date: '2013-06-27 11:12'
-        message: Fixed typos and format
-        version: '10'
-    -
-        author: Bertrand Chauvin
-        date: '2013-06-13 16:37'
-        message: ''
-        version: '9'
-    -
-        author: Bertrand Chauvin
-        date: '2013-06-13 16:34'
-        message: ''
-        version: '8'
-    -
-        author: Bertrand Chauvin
-        date: '2013-06-13 16:24'
-        message: ''
-        version: '7'
-    -
-        author: Bertrand Chauvin
-        date: '2013-06-13 15:09'
-        message: ''
-        version: '6'
-    -
-        author: Bertrand Chauvin
-        date: '2013-06-13 14:37'
-        message: ''
-        version: '5'
-    -
-        author: Bertrand Chauvin
-        date: '2013-06-13 14:18'
-        message: ''
-        version: '4'
-    -
-        author: Bertrand Chauvin
-        date: '2013-06-13 14:18'
-        message: schema
-        version: '3'
-    -
-        author: Bertrand Chauvin
-        date: '2013-06-13 14:13'
-        message: Presentation
-        version: '2'
-    -
-        author: Bertrand Chauvin
-        date: '2013-06-13 13:55'
-        message: ''
-        version: '1'
-
+  - author: Solen Guitter
+    date: '2016-09-01 09:10'
+    message: ''
+    version: '69'
+  - author: Thibaud Arguillere
+    date: '2016-02-09 15:20'
+    message: ''
+    version: '68'
+  - author: Manon Lumeau
+    date: '2016-01-18 17:03'
+    message: 'replace "Write" by "Edit"     '
+    version: '67'
+  - author: Solen Guitter
+    date: '2015-09-10 12:11'
+    message: ''
+    version: '66'
+  - author: Bertrand Chauvin
+    date: '2015-09-10 09:27'
+    message: Added freemarker link
+    version: '65'
+  - author: Bertrand Chauvin
+    date: '2015-09-10 09:26'
+    message: Added MVEL link
+    version: '64'
+  - author: Michaël Vachette
+    date: '2014-12-30 17:31'
+    message: ''
+    version: '63'
+  - author: Manon Lumeau
+    date: '2014-10-06 11:26'
+    message: ''
+    version: '62'
+  - author: Solen Guitter
+    date: '2014-09-30 10:42'
+    message: ''
+    version: '61'
+  - author: Solen Guitter
+    date: '2014-09-29 14:24'
+    message: Fix link to JIRA issue and formatting
+    version: '60'
+  - author: Manon Lumeau
+    date: '2014-06-25 11:12'
+    message: ''
+    version: '59'
+  - author: Bertrand Chauvin
+    date: '2014-06-23 16:47'
+    message: Reverted from v. 56
+    version: '58'
+  - author: Bertrand Chauvin
+    date: '2014-06-23 16:46'
+    message: Added anchor
+    version: '57'
+  - author: Bertrand Chauvin
+    date: '2014-06-23 16:42'
+    message: Updated schema image
+    version: '56'
+  - author: Thierry Martins
+    date: '2014-04-16 11:58'
+    message: ''
+    version: '55'
+  - author: Vincent Dutat
+    date: '2014-04-04 21:16'
+    message: ''
+    version: '54'
+  - author: Solen Guitter
+    date: '2014-01-08 10:44'
+    message: ''
+    version: '53'
+  - author: Thibaud Arguillere
+    date: '2014-01-07 23:05'
+    message: ''
+    version: '52'
+  - author: Thibaud Arguillere
+    date: '2014-01-07 22:59'
+    message: ''
+    version: '51'
+  - author: Thibaud Arguillere
+    date: '2014-01-07 22:58'
+    message: ''
+    version: '50'
+  - author: Alain Escaffre
+    date: '2013-09-16 12:03'
+    message: ''
+    version: '49'
+  - author: Solen Guitter
+    date: '2013-09-09 11:14'
+    message: Removed related topics from TOC
+    version: '48'
+  - author: Solen Guitter
+    date: '2013-09-09 11:13'
+    message: ''
+    version: '47'
+  - author: Thibaud Arguillere
+    date: '2013-09-06 00:20'
+    message: ''
+    version: '46'
+  - author: Thibaud Arguillere
+    date: '2013-09-05 20:03'
+    message: ''
+    version: '45'
+  - author: Alain Escaffre
+    date: '2013-09-04 18:28'
+    message: ''
+    version: '44'
+  - author: Alain Escaffre
+    date: '2013-09-04 17:24'
+    message: ''
+    version: '43'
+  - author: Alain Escaffre
+    date: '2013-09-04 17:21'
+    message: ''
+    version: '42'
+  - author: Thibaud Arguillere
+    date: '2013-09-04 17:17'
+    message: ''
+    version: '41'
+  - author: Bertrand Chauvin
+    date: '2013-07-25 17:54'
+    message: ''
+    version: '40'
+  - author: Bertrand Chauvin
+    date: '2013-07-25 17:54'
+    message: Reverted from v. 37
+    version: '39'
+  - author: Bertrand Chauvin
+    date: '2013-07-25 17:53'
+    message: Removed JIRA ticket regarding inverted EL filter (fixed)
+    version: '38'
+  - author: Solen Guitter
+    date: '2013-07-15 11:16'
+    message: Fixed typo
+    version: '37'
+  - author: Bertrand Chauvin
+    date: '2013-07-12 14:05'
+    message: ''
+    version: '36'
+  - author: Bertrand Chauvin
+    date: '2013-07-12 14:01'
+    message: ''
+    version: '35'
+  - author: Bertrand Chauvin
+    date: '2013-07-12 09:55'
+    message: Modified event handler example
+    version: '34'
+  - author: Bertrand Chauvin
+    date: '2013-07-11 14:51'
+    message: ''
+    version: '33'
+  - author: Bertrand Chauvin
+    date: '2013-07-11 14:49'
+    message: Added filters and widgets available variables
+    version: '32'
+  - author: Bertrand Chauvin
+    date: '2013-07-11 13:54'
+    message: Added event handlers part
+    version: '31'
+  - author: Bertrand Chauvin
+    date: '2013-07-11 11:43'
+    message: Added automation chains variables
+    version: '30'
+  - author: Bertrand Chauvin
+    date: '2013-07-11 11:06'
+    message: Added doc templates variables
+    version: '29'
+  - author: Bertrand Chauvin
+    date: '2013-07-11 10:20'
+    message: Taille des images (spéciale dédicace AE)
+    version: '28'
+  - author: Alain Escaffre
+    date: '2013-07-11 01:34'
+    message: ''
+    version: '27'
+  - author: Alain Escaffre
+    date: '2013-07-11 01:34'
+    message: ''
+    version: '26'
+  - author: Solen Guitter
+    date: '2013-07-09 12:14'
+    message: ''
+    version: '25'
+  - author: Bertrand Chauvin
+    date: '2013-07-08 16:48'
+    message: ''
+    version: '24'
+  - author: Bertrand Chauvin
+    date: '2013-07-08 14:29'
+    message: Formatting
+    version: '23'
+  - author: Bertrand Chauvin
+    date: '2013-07-08 14:24'
+    message: Started to add available variables depending on context (with workflow context)
+    version: '22'
+  - author: Karl Harris
+    date: '2013-07-03 16:01'
+    message: ''
+    version: '21'
+  - author: Karl Harris
+    date: '2013-07-03 15:07'
+    message: ''
+    version: '20'
+  - author: Karl Harris
+    date: '2013-07-03 15:03'
+    message: ''
+    version: '19'
+  - author: Karl Harris
+    date: '2013-07-03 14:55'
+    message: ''
+    version: '18'
+  - author: Karl Harris
+    date: '2013-07-03 14:54'
+    message: ''
+    version: '17'
+  - author: Karl Harris
+    date: '2013-07-03 14:48'
+    message: ''
+    version: '16'
+  - author: Karl Harris
+    date: '2013-07-03 14:44'
+    message: ''
+    version: '15'
+  - author: Karl Harris
+    date: '2013-07-03 14:42'
+    message: ''
+    version: '14'
+  - author: Karl Harris
+    date: '2013-07-03 14:40'
+    message: ''
+    version: '13'
+  - author: Karl Harris
+    date: '2013-07-03 14:40'
+    message: ''
+    version: '12'
+  - author: Alain Escaffre
+    date: '2013-07-01 13:49'
+    message: ''
+    version: '11'
+  - author: Solen Guitter
+    date: '2013-06-27 11:12'
+    message: Fixed typos and format
+    version: '10'
+  - author: Bertrand Chauvin
+    date: '2013-06-13 16:37'
+    message: ''
+    version: '9'
+  - author: Bertrand Chauvin
+    date: '2013-06-13 16:34'
+    message: ''
+    version: '8'
+  - author: Bertrand Chauvin
+    date: '2013-06-13 16:24'
+    message: ''
+    version: '7'
+  - author: Bertrand Chauvin
+    date: '2013-06-13 15:09'
+    message: ''
+    version: '6'
+  - author: Bertrand Chauvin
+    date: '2013-06-13 14:37'
+    message: ''
+    version: '5'
+  - author: Bertrand Chauvin
+    date: '2013-06-13 14:18'
+    message: ''
+    version: '4'
+  - author: Bertrand Chauvin
+    date: '2013-06-13 14:18'
+    message: schema
+    version: '3'
+  - author: Bertrand Chauvin
+    date: '2013-06-13 14:13'
+    message: Presentation
+    version: '2'
+  - author: Bertrand Chauvin
+    date: '2013-06-13 13:55'
+    message: ''
+    version: '1'
 ---
+
 The Nuxeo platform uses different expression languages and scripting languages (MVEL, EL, Freemarker). The following documentation will help you in understanding which of these languages are available and which variables may be used based on the Nuxeo context you are using.
 
 ## Concept
@@ -384,10 +315,10 @@ Numbers circled in orange specify available contexts. Have a look at the [availa
 
 ## {{> anchor 'what-expression-scripting-language-do-i-need-to-use'}}What Expression/Scripting Language do I Need to Use?
 
--  Operation chains use the [MVEL scripting language](https://github.com/mvel/mvel).
--  Widget fields, the Enablement tabs and the workflow's Availability tab (aka filters) use the EL expression language.
--  Email templates use the [Freemarker templating language](http://freemarker.org/).
--  Document templates can either use the Freemarker or MVEL scripting languages depending on the rendering engine chosen.
+- Operation chains use the [MVEL scripting language](https://github.com/mvel/mvel).
+- Widget fields, the Enablement tabs and the workflow's Availability tab (aka filters) use the EL expression language.
+- Email templates use the [Freemarker templating language](http://freemarker.org/).
+- Document templates can either use the Freemarker or MVEL scripting languages depending on the rendering engine chosen.
 
 ## What Variables Can I Use?
 
@@ -399,13 +330,14 @@ In order to determine more easily which of these variables will be usable in you
 
 - Does a user need to be logged in to execute this operation?
 
-    - No &rarr; Only system variables, like today's date, will be available.
-    - Yes &rarr; Which screen will the user be on when executing this operation?
-        - Depending on the answer, context variables may vary.
+  - No &rarr; Only system variables, like today's date, will be available.
+  - Yes &rarr; Which screen will the user be on when executing this operation?
+    - Depending on the answer, context variables may vary.
+
 - Is a workflow launched on the document?
 
-    - No &rarr; Workflow variables can't be used.
-    -  Yes &rarr; Workflow variables can be used.
+  - No &rarr; Workflow variables can't be used.
+  - Yes &rarr; Workflow variables can be used.
 
 Please check the [availables variables depending on context](#available-variables-depending-on-context) section for more detailed information.
 
@@ -431,9 +363,9 @@ Please check the [availables variables depending on context](#available-variable
 
 <tr>
 <td colspan="1">Expression syntax</td>
-<td colspan="1">`#{myExpression.property}`</td>
-<td colspan="1">`@{myExpression.property}`</td>
-<td colspan="1">`${myExpression.property}`</td>
+<td colspan="1">` #{myExpression.property}`</td>
+<td colspan="1">` @{myExpression.property}`</td>
+<td colspan="1">` ${myExpression.property}`</td>
 </tr>
 
 <tr>
@@ -446,15 +378,13 @@ Please check the [availables variables depending on context](#available-variable
 <tr>
 <td colspan="1">Current document variable</td>
 <td colspan="1">`#{currentDocument.property}`</td>
-<td colspan="1">`@{Document.property}`</td>
+<td colspan="1">` @{Document.property}`</td>
 
 <td colspan="1">
 
-Send mail / doc rendering:`
-${Document.property}`
+Send mail / doc rendering:`${Document.property}`
 
-Workflow email notification:`
-${workflowDocuments[0].property}`
+Workflow email notification:`${workflowDocuments[0].property}`
 
 </td>
 </tr>
@@ -541,26 +471,26 @@ Event handlers also give access to the `Event` object, which contains interestin
 
 - `Event.context.getProperty('property')` - contextual properties. You can replace "property" with:
 
-    - `transition` - the name of the transition followed by the document when a lifecyle change happens.
-        For example, `Event.context.getProperty('transition') == 'undelete'` will allow you to execute actions in case a document is restored from trash.
-    - `category` - the event's category
-    - `sessionId` - the session id
-    - `repositoryName` - the repository name
-    - `comment` - the comment sent by the event
-    - `documentLifeCycle` - the document's current lifecycle state
-    - `parentPath` - The path of the parent (only for the `Empty Document Created` event)
-    - `destinationRef` - the path of the parent
-    - `destinationName` - the name of the parent
+  - `transition` - the name of the transition followed by the document when a lifecyle change happens.
+    For example, `Event.context.getProperty('transition') == 'undelete'` will allow you to execute actions in case a document is restored from trash.
+  - `category` - the event's category
+  - `sessionId` - the session id
+  - `repositoryName` - the repository name
+  - `comment` - the comment sent by the event
+  - `documentLifeCycle` - the document's current lifecycle state
+  - `parentPath` - The path of the parent (only for the `Empty Document Created` event)
+  - `destinationRef` - the path of the parent
+  - `destinationName` - the name of the parent
 
-    {{#> callout type='note' heading='Availability of These Properties'}}
-    Some of these properties are available only for some events.
+  {{#> callout type='note' heading='Availability of These Properties'}}
+  Some of these properties are available only for some events.
 
-    For instance: `parentPath` is available only for "Empty Document Created" (`"emptyDocumentModelCreated"`). `transition` only for "Lifecycle transition event", `destinationName` and `destinationRef` are available for "About to Create" and "Document Created", ...
+  For instance: `parentPath` is available only for "Empty Document Created" (`"emptyDocumentModelCreated"`). `transition` only for "Lifecycle transition event", `destinationName` and `destinationRef` are available for "About to Create" and "Document Created", ...
 
-    To get a list of properties available for an event, you can call `Event.context.getProperties().toString()` (and log the result for instance).
+  To get a list of properties available for an event, you can call `Event.context.getProperties().toString()` (and log the result for instance).
 
-    A list of common events can be found on the [Common Events page]({{page page='common-events'}}).
-    {{/callout}}
+  A list of common events can be found on the [Common Events page]({{page page='common-events'}}).
+  {{/callout}}
 
 - `Event.getName()` - returns the event name
 
@@ -568,7 +498,7 @@ For example, if you have a document which can be obsolete, you could update a fi
 
 `Document > Update property`
 
-value: `@{Event.context.getProperty("transition") == "obsolete" ? true : false}`
+value: ` @{Event.context.getProperty("transition") == "obsolete" ? true : false}`
 
 xpath: `mydoc:was_obsolete`
 
@@ -576,8 +506,8 @@ Please note that:
 
 - In Nuxeo Studio, the event handlers "custom EL expression" field uses MVEL as well. However, you should not format your variables using brackets but directly state them in the field.
 
-    - `Document['dc:title'] == "myTitle"` will work.
-    - `@{Document['dc:title'] == "myTitle"}` will **not** work and generate an error.
+  - `Document['dc:title'] == "myTitle"` will work.
+  - `@{Document['dc:title'] == "myTitle"}` will **not** work and generate an error.
 
 ### [![]({{file name='ELDependingOnComponent-6.png'}})](#schema-which-el) Filters
 
@@ -590,35 +520,37 @@ Please note that:
 In widgets, layout, content views and in XHTML templates, you can use the EL expression language. You have access to all Seam components (see upper how to access them) and should refer to [explorer.nuxeo.org](http://explorer.nuxeo.org) to get an exhaustive list depending on your platform version. Here are a few interesting possibilities you could use to get started:
 
 - Taken from the `NavigationContextBean`Seam component:
-    - `#{changeableDocument}` - the document on screen when showing the creation form.
-    - `#{currentContentRoot}` - the current content root, for instance could be the WorkspaceRoot or the SectionsRoot.
-    - `#{currentDocument}` - the current document.
-    - `#{currentDomain}` - the document's parent domain.
-    - `#{currentSuperSpace}` - the document's closest parent having the _"SuperSpace"_ facet.
-    - `#{currentWorkspace}` - the document's parent workspace.
-    - `#{documentManager}` - the [CoreSession](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/CoreSession.html) object (see example below)
--  Some from the native SEAM context:
-    -  `#{currentUser}`
-    -  `#{currentDate}`
--  When you are on a document, you can access various information:
-    -  the metadata using the following pattern : _myDocument.schema_prefix.property_name_
-        Ex: `#{currentDocument.dc.source}`
-    -  the system properties : path, type (of the document), `currentLifeCycleState`, ... `currentDocument` is a "DocumentModel" class, see the [javadoc](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/DocumentModel.html) to check all you can access. One rule is simple: if it is a "getter" you can just type the name. For example: `getType()` --> `currentDocument.type` (first letter is lowercase)
--  You can do some comparisons, when you need to return a boolean values.
+  - `#{changeableDocument}` - the document on screen when showing the creation form.
+  - `#{currentContentRoot}` - the current content root, for instance could be the WorkspaceRoot or the SectionsRoot.
+  - `#{currentDocument}` - the current document.
+  - `#{currentDomain}` - the document's parent domain.
+  - `#{currentSuperSpace}` - the document's closest parent having the _"SuperSpace"_ facet.
+  - `#{currentWorkspace}` - the document's parent workspace.
+  - `#{documentManager}` - the [CoreSession](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/CoreSession.html) object (see example below)
+- Some from the native SEAM context:
+  - `#{currentUser}`
+  - `#{currentDate}`
+- When you are on a document, you can access various information:
+  - the metadata using the following pattern : _myDocument.schema_prefix.property_name_
+    Ex: `#{currentDocument.dc.source}`
+  - the system properties : path, type (of the document), `currentLifeCycleState`, ... `currentDocument` is a "DocumentModel" class, see the [javadoc](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/DocumentModel.html) to check all you can access. One rule is simple: if it is a "getter" you can just type the name. For example: `getType()` --> `currentDocument.type` (first letter is lowercase)
+- You can do some comparisons, when you need to return a boolean values.
 
-    Ex: `#{currentUser.isMemberOf('quality_managers') && (layoutValue.dc.nature=='procedure'||layoutValue.dc.nature=='decree')?'value1':'value2'}`
--  You may need to use ".toString()" sometimes, depending on what object is returned.
-    Ex: on the documentModel javadoc, you can see that "getPath()" method returns a Path object. So if you need the string of the path (for an NXQL query for instance) you need to use the _.toString() method._
--  You also have access to some "functions" that were added by Nuxeo, you can see the list [on the Tag Library Documentation](http://community.nuxeo.com/api/nuxeo/latest/tlddoc/nxd/tld-summary.html) .
+  Ex: `#{currentUser.isMemberOf('quality_managers') && (layoutValue.dc.nature=='procedure'||layoutValue.dc.nature=='decree')?'value1':'value2'}`
 
-    Ex: `#{nxd:hasPermission (currentDomain, 'Write')}` will return true only if the connected user has the edit permission on the current domain.
--  The JSTL functions are available, for string manipulation for instance, see the [doc](http://docs.oracle.com/javaee/5/jstl/1.1/docs/tlddocs/fn/tld-summary.html).
+- You may need to use ".toString()" sometimes, depending on what object is returned.
+  Ex: on the documentModel javadoc, you can see that "getPath()" method returns a Path object. So if you need the string of the path (for an NXQL query for instance) you need to use the _.toString() method._
+- You also have access to some "functions" that were added by Nuxeo, you can see the list [on the Tag Library Documentation](http://community.nuxeo.com/api/nuxeo/latest/tlddoc/nxd/tld-summary.html) .
 
--  Taken from the `ClipboardActionsBean`Seam component:
-    -  `{#isCurrentWorkListEmpty()}` - checks if the current worklist is empty.
--  Using the `documentManager` object can be useful in some case. For example, in a content view of a folder when you want to display a list of documents that are in its parent:
-    -  The NXQL filter in this example uses the `STARTSWITH` operator, with the `path` property: `. . . AND ecm:path STARTSWITH ?`
-    -  The parameter will the be:
+  Ex: `#{nxd:hasPermission (currentDomain, 'Write')}` will return true only if the connected user has the edit permission on the current domain.
+
+- The JSTL functions are available, for string manipulation for instance, see the [doc](http://docs.oracle.com/javaee/5/jstl/1.1/docs/tlddocs/fn/tld-summary.html).
+
+- Taken from the `ClipboardActionsBean`Seam component:
+  - `{#isCurrentWorkListEmpty()}` - checks if the current worklist is empty.
+- Using the `documentManager` object can be useful in some case. For example, in a content view of a folder when you want to display a list of documents that are in its parent:
+  - The NXQL filter in this example uses the `STARTSWITH` operator, with the `path` property: `. . . AND ecm:path STARTSWITH ?`
+  - The parameter will the be:
     `#{documentManager.getParentDocument(currentDocument.parentRef).path}`
 
 {{{multiexcerpt 'el-language-jsf'}}}
@@ -678,17 +610,17 @@ To use a date field taken from a schema in your template, you need to cast it as
 
 EL expressions can be used to evaluate conditions. A few examples:
 
--  Checking that the current document type is something specific (usually used in filters):
-    `#{currentDocument.type == 'MySpecificDoctype'}`
--  Showing a different pattern based on a boolean condition (true or false):
-    `#{currentDocument.type == 'MySpecificDoctype' ? "Yes it is" : "No it isn't"}`
--  Checking that the worklist is not empty:
-    `#{documentsListsManager.isWorkingListEmpty("CURRENT_SELECTION") == false}`
-</td>
-</tr>
-</tbody>
-</table>
-</div>
+- Checking that the current document type is something specific (usually used in filters):
+  `#{currentDocument.type == 'MySpecificDoctype'}`
+- Showing a different pattern based on a boolean condition (true or false):
+  `#{currentDocument.type == 'MySpecificDoctype' ? "Yes it is" : "No it isn't"}`
+- Checking that the worklist is not empty:
+  `#{documentsListsManager.isWorkingListEmpty("CURRENT_SELECTION") == false}`
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
 
 ## Related Links
 
@@ -696,18 +628,18 @@ You may find more information in these related pages:
 
 - MVEL:
 
-    - [Using MVEL in your automation chains]({{page page='use-of-mvel-in-automation-chains'}})
+  - [Using MVEL in your automation chains]({{page page='use-of-mvel-in-automation-chains'}})
+
 - EL:
 
-    - [Field Binding and Expressions]({{page page='field-binding-and-expressions'}})
-    - [How to Control the Display Mode of a Widget]({{page page='how-to-control-the-display-mode-of-a-widget'}})
+  - [Field Binding and Expressions]({{page page='field-binding-and-expressions'}})
+  - [How to Control the Display Mode of a Widget]({{page page='how-to-control-the-display-mode-of-a-widget'}})
+
 - FreeMarker:
 
-    - [FreeMarker manual](http://freemarker.sourceforge.net/docs/)
+  - [FreeMarker manual](http://freemarker.sourceforge.net/docs/)
 
-
-
-* * *
+---
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">

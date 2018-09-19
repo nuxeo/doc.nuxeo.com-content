@@ -108,7 +108,7 @@ public class ProductJsonReader extends AbstractJsonReader<Product> {
 *   The `priority = Priorities.REFERENCE` parameter defines it as the default one for the `Product` class.
 *   The `AbstractJsonReader` super-class is the JSON-to-Java Marshaller's base class (it has the `@Supports("application/json")` annotation). It helps to write the marshaller and to reuse the existing JSON marshalling.
 
-Each marshaller supports injection of the `RenderingContext` or any Nuxeo service using the `@java.inject.Inject` annotation. The injected objects are inherited while extending an existing class. The `AbstractJsonWriter` and the `AbstractJsonReader` provide the RenderingContext ("ctx" attribute) and the `MarshallingRegistry` ("registry" attribute).
+Each marshaller supports injection of the `RenderingContext` or any Nuxeo service using the ` @java.inject.Inject` annotation. The injected objects are inherited while extending an existing class. The `AbstractJsonWriter` and the `AbstractJsonReader` provide the RenderingContext ("ctx" attribute) and the `MarshallingRegistry` ("registry" attribute).
 
 ### Managing Lists
 
