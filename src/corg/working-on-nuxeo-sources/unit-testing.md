@@ -777,8 +777,8 @@ None
 
 #### Configuration
 
-*   `@LogCaptureFeature.FilterOn` - uses and configures the default filter. There are two parameters, `logLevel`, and `loggerName`. You can use one or both.
-*   `@LogCaptureFeature.FilterWith` - configures the filter the logs have to match to be part of the results.
+*   ` @LogCaptureFeature.FilterOn` - uses and configures the default filter. There are two parameters, `logLevel`, and `loggerName`. You can use one or both.
+*   ` @LogCaptureFeature.FilterWith` - configures the filter the logs have to match to be part of the results.
 
 **Injectable Objects**
 

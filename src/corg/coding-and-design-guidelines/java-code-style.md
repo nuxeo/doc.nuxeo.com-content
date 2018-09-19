@@ -197,9 +197,9 @@ You should configure your IDE to raise warnings on malformed Javadoc comments an
 
 ### FAQ About `@since` in Javadoc
 
-**Q**: I'm backporting a new API from 10.2 to the 9.10 maintenance branch, should I put `@since 10.2` or `@since 9.10-HF08`?
+**Q**: I'm backporting a new API from 10.2 to the 9.10 maintenance branch, should I put ` @since 10.2` or ` @since 9.10-HF08`?
 
-**A**: Use `@since 10.2`, otherwise backports are a pain when cherry-picking. JIRA _fix version_ is the reference to understand why a `@since 10.2` is visible on a 9.10 maintenance branch.
+**A**: Use ` @since 10.2`, otherwise backports are a pain when cherry-picking. JIRA _fix version_ is the reference to understand why a ` @since 10.2` is visible on a 9.10 maintenance branch.
 
 **Q**: When should I add `@since` in other places besides new classes and methods?
 
