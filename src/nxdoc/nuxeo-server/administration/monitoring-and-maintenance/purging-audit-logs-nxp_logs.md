@@ -1,9 +1,5 @@
 ---
 title: Purging Audit Logs (NXP_LOGS)
-review:
-    comment: 'This page only takes into account the audit SQL backend and needs to be updated considering the Elasticsearch backend, see [NXDOC-608](https://jira.nuxeo.com/browse/NXDOC-608) and [NXDOC-743](https://jira.nuxeo.com/browse/NXDOC-743)'
-    date: '2017-12-18'
-    status: requiresUpdates
 labels:
     - lts2016-ok
     - logs
@@ -105,11 +101,15 @@ history:
         version: '1'
 
 ---
-Depending on usage (lots of updates, lots of workflows, lots of logins, ...), the audit tables (`NXP_LOGS` and related tables) can grow very quickly.
+Depending on usage (lots of updates, lots of workflows, lots of logins, ...), the audit storage can grow very quickly.
 
 You can configure the audit to filter what must be recorded, but there is no API or UI to do a cleanup inside the audit tables. Actually, this is not something we forgot, we simply considered that it was safer like that: the Audit Service is here to record activity in the platform, it makes sense that a component cannot easily delete its audit trail.
 
-This means that the cleanup should be done at the SQL level. Since the table structure of `NXP_LOGS`&nbsp;is really obvious, it is an easy job for a database administrator to remove old rows based on the&nbsp;`log_event_date` column which contains a timestamp.
+This means that the cleanup should be done at the Backend level (SQL or Elasticsearch).
+
+## Purging audit with SQL Backend
+
+Since the table structure of `NXP_LOGS`&nbsp;is really obvious, it is an easy job for a database administrator to remove old rows based on the&nbsp;`log_event_date` column which contains a timestamp.
 
 <div class="message-content">
 
@@ -238,8 +238,8 @@ BEGIN
   SET @total = @nblines;
   RAISERROR ('% lines cleanup on table nxp_logs_mapextinfos',0,1,@nblines);
 
-  -- LEVEL 3 cleanup  
-  RAISERROR ('run cleanup on nxp_logs_extinfo level 3',0,1);  
+  -- LEVEL 3 cleanup 
+  RAISERROR ('run cleanup on nxp_logs_extinfo level 3',0,1); 
   DELETE FROM NXP_LOGS_EXTINFO
     WHERE NXP_LOGS_EXTINFO.LOG_EXTINFO_ID IN (SELECT INFO_FK FROM #audit_purge_tmp);
   SET @nblines = @@ROWCOUNT;
@@ -247,7 +247,7 @@ BEGIN
   RAISERROR ('% lines cleanup on table nxp_logs_extinfo' ,0,1,@nblines);
 
   -- LEVEL 1 cleanup
-  RAISERROR ('run cleanup on nxp_logs level 1',0,1);  
+  RAISERROR ('run cleanup on nxp_logs level 1',0,1); 
   DELETE FROM NXP_LOGS
     WHERE NXP_LOGS.LOG_ID IN (SELECT LOG_FK FROM #audit_purge_tmp);
   SET @nblines = @@ROWCOUNT;
@@ -282,7 +282,7 @@ BEGIN
   -- Because nxp_logs_mapextinfos has 2 FK on external tables
   -- we must remove records from this table first
   -- so we need to store the values in a tmp table before
-  INSERT INTO audit_purge_tmp  
+  INSERT INTO audit_purge_tmp 
     SELECT nxp_logs_mapextinfos.log_fk, nxp_logs_mapextinfos.info_fk
       FROM nxp_logs, nxp_logs_extinfo, nxp_logs_mapextinfos
       WHERE nxp_logs.log_event_date < TO_DATE(maxDate, 'YYYY-MM-DD')
@@ -314,6 +314,212 @@ END;
 ```
 
 {{/panel}}
+
+## Purging audit with Elasticsearch Backend
+
+Make sure to stop all Nuxeo instance before proceeding.
+
+### 1. Create a new audit index
+
+Here you need to edit the curl query to match:
+- your elasticsearch server (`localhost:9200`)
+- the name of your new index (`nuxeo-audit-201809`)
+- the number of shards and replicas (1 and 0 here)
+- eventually any custom mapping present in the `extended` map
+
+
+The following query create a new audit index and set a proper setting and mapping for Nuxeo 10.3 (Elasticsearch 6.3):
+
+{{#> panel type='code' heading='Create a new audit index'}}
+
+```json
+curl -XPUT "localhost:9200/nuxeo-audit-201809" -H 'Content-Type: application/json' -d'{
+"settings":
+{
+  "index.translog.durability": "async",
+  "number_of_shards": "1",
+  "number_of_replicas": "0",
+  "analysis": {
+    "filter": {
+      "truncate_filter": {
+        "length": 256,
+        "type": "truncate"
+      },
+      "word_delimiter_filter": {
+        "type": "word_delimiter",
+        "preserve_original": true
+      },
+      "en_stem_filter": {
+        "name": "minimal_english",
+        "type": "stemmer"
+      },
+      "en_stop_filter": {
+        "stopwords": [
+          "_english_"
+        ],
+        "type": "stop"
+      }
+    },
+    "tokenizer": {
+      "path_tokenizer": {
+        "delimiter": "/",
+        "type": "path_hierarchy"
+      }
+    },
+    "analyzer": {
+      "fulltext": {
+        "char_filter": [
+          "html_strip"
+        ],
+        "filter": [
+          "word_delimiter_filter",
+          "lowercase",
+          "en_stop_filter",
+          "en_stem_filter"
+        ],
+        "type": "custom",
+        "tokenizer": "standard"
+      },
+      "path_analyzer": {
+        "type": "custom",
+        "tokenizer": "path_tokenizer"
+      },
+      "default": {
+        "type": "custom",
+        "filter": [
+          "truncate_filter"
+        ],
+        "tokenizer": "keyword"
+      }
+    }
+  }
+},
+"mappings": {"entry" :
+{
+  "dynamic_templates": [
+    {
+      "strings": {
+        "match_mapping_type": "string",
+        "mapping": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    }
+  ],
+  "properties": {
+    "docPath": {
+      "type": "keyword",
+      "fields": {
+        "children": {
+          "type": "text",
+          "analyzer": "path_analyzer"
+        }
+      }
+    },
+    "logDate": {
+      "type": "date"
+    },
+    "eventDate": {
+      "type": "date"
+    },
+    "comment": {
+      "type": "text",
+      "fields": {
+        "fulltext": {
+          "analyzer": "fulltext",
+          "type": "text"
+        }
+      }
+    },
+    "id": {
+      "type": "long"
+    }
+  }
+}
+}}'
+
+```
+
+{{/panel}}
+
+### 2. Re-index and filter
+
+Now we are going to copy the original audit index into the new one.
+And we are going to filter unwanted log entries.
+
+Here you need to edit the curl query to match:
+- your elasticsearch server (`localhost:9200`)
+- the name of your new index (`nuxeo-audit-201809`)
+- the query part to match what you want to purge
+
+
+The following query will purge all log entries related to login and download that are older than 2018-06-01.
+
+{{#> panel type='code' heading='Re-index and filter'}}
+
+```json
+curl -XPOST "localhost:9200/_reindex" -H 'Content-Type: application/json' -d'{
+  "source": {
+    "index": "nuxeo-audit",
+    "query":
+{
+  "bool": {
+    "must_not": [
+      {
+        "bool": {
+          "must": [
+            {
+              "terms": {
+                "eventId": [
+                  "loginSuccess",
+                  "logout",
+                  "loginFailed",
+                  "download"
+                ]
+              }
+            },
+            {
+              "range": {
+                "logDate": {
+                  "lte": "2018-06-01"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+  },
+  "dest": {
+    "index": "nuxeo-audit-201809"
+  }
+}'
+
+```
+
+{{/panel}}
+
+### 3. Update the Nuxeo configuration
+
+Now you can edit the `nuxeo.conf` to update the name of the new elasticsearch audit index:
+
+```bash
+audit.elasticsearch.indexName=nuxeo-audit-201809
+```
+
+
+{{#> callout type='warning' }}
+
+This purge procedure can also be used to upgrade elasticsearch from 5.x or to update the mapping.
+You just need to remove the query part of the re-index command if you don't want to purge at the same time.
+
+{{/callout}}
+
+
+
 
 &nbsp;
 
