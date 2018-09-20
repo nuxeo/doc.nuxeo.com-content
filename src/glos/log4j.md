@@ -62,7 +62,7 @@ See the&nbsp;[Apache Log4J documentation](http://logging.apache.org/log4j/)&nbsp
 **Related pages:**
 
 *   [Logs Analysis]({{page space='nxdoc' page='logs-analysis'}})
-*   [Where are the log and configuration files in Windows?](http://doc.nuxeo.com/x/Nw0z)
+*   [Where are the log and configuration files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)
 *   [Nuxeo Metrics](http://doc.nuxeo.com/x/gBDF)
 
 &nbsp;
