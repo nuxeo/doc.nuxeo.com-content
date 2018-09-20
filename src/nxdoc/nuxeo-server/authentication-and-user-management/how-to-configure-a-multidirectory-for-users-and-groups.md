@@ -131,9 +131,9 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
   <extension target="org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory"
     point="servers">
     <server name="default">
-      <ldapUrl>ldap://ldap.testathon.net:389/</ldapUrl>
-      <bindDn>CN=stuart,OU=users,DC=testathon,DC=net</bindDn>
-      <bindPassword>stuart</bindPassword>
+      <ldapUrl>ldap://ldap.forumsys.com:389/</ldapUrl>
+      <bindDn>cn=read-only-admin,dc=example,dc=com</bindDn>
+      <bindPassword>password</bindPassword>
       <!-- Attempts to get a result when LDAP is temporary unavailable -->
       <retries>5</retries>
     </server>
@@ -146,7 +146,7 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
       <schema>user</schema>
       <idField>username</idField>
       <passwordField>password</passwordField>
-      <searchBaseDn>DC=testathon,DC=net</searchBaseDn>
+      <searchBaseDn>dc=example,dc=com</searchBaseDn>
       <searchClass>person</searchClass>
       <!-- use subtree if the people branch is nested -->
       <searchScope>subtree</searchScope>
@@ -169,10 +169,10 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
       <!-- Time to wait for a search to finish. 0 to wait indefinitely -->
       <queryTimeLimit>0</queryTimeLimit>
 
-      <rdnAttribute>cn</rdnAttribute>
-      <fieldMapping name="username">cn</fieldMapping>
+      <rdnAttribute>uid</rdnAttribute>
+      <fieldMapping name="username">uid</fieldMapping>
       <fieldMapping name="password">userPassword</fieldMapping>
-      <fieldMapping name="firstName">givenName</fieldMapping>
+      <fieldMapping name="firstName">cn</fieldMapping>
       <fieldMapping name="lastName">sn</fieldMapping>
       <fieldMapping name="company">telephoneNumber</fieldMapping>
       <fieldMapping name="email">mail</fieldMapping>
@@ -186,9 +186,9 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
       <server>default</server>
       <schema>group</schema>
       <idField>groupname</idField>
-      <searchBaseDn>OU=groups,DC=testathon,DC=net</searchBaseDn>
+      <searchBaseDn>dc=example,dc=com</searchBaseDn>
       <searchFilter>
-        (|(objectClass=groupOfNames)(objectClass=groupOfURLs))
+        (|(objectClass=groupOfUniqueNames)(objectClass=groupOfURLs))
       </searchFilter>
       <searchScope>subtree</searchScope>
       <readOnly>true</readOnly>
@@ -200,16 +200,16 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
       <querySizeLimit>200</querySizeLimit>
       <!-- Time to wait for a search to finish. 0 to wait indefinitely -->
       <queryTimeLimit>0</queryTimeLimit>
-      <rdnAttribute>cn</rdnAttribute>
+      <rdnAttribute>ou</rdnAttribute>
       <fieldMapping name="groupname">cn</fieldMapping>
       <!-- Add another field to map reel group label -->
-      <fieldMapping name="grouplabel">description</fieldMapping>
+      <fieldMapping name="grouplabel">cn</fieldMapping>
       <references>
         <ldapReference field="members" directory="ldapUserDirectory"
-          forceDnConsistencyCheck="false" staticAttributeId="member"
+          forceDnConsistencyCheck="false" staticAttributeId="uniqueMember"
           dynamicAttributeId="memberURL" />
         <ldapReference field="subGroups" directory="ldapGroupDirectory"
-          forceDnConsistencyCheck="false"  staticAttributeId="member"
+          forceDnConsistencyCheck="false"  staticAttributeId="uniqueMember"
           dynamicAttributeId="memberURL" />
         <inverseReference field="parentGroups" directory="multiGroupDirectory"
           dualReferenceField="subGroups" />
@@ -219,7 +219,7 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
 
   <extension target="org.nuxeo.ecm.directory.GenericDirectory"
     point="directories">
-    <directory name="genericUserDirectory">
+    <directory name="genericUserDirectory" extends="template-user">
       <schema>user</schema>
       <idField>username</idField>
       <passwordField>password</passwordField>
@@ -234,7 +234,7 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
           dualReferenceField="members" />
       </references>
     </directory>
-    <directory name="genericGroupDirectory">
+    <directory name="genericGroupDirectory" extends="template-group">
       <schema>group</schema>
       <idField>groupname</idField>
       <dataFile>groups.csv</dataFile>
