@@ -1,12 +1,15 @@
 ---
 title: Purging Audit Logs (NXP_LOGS)
+review:
+    comment: ''
+    date: '2018-09-21'
+    status: ok
 labels:
     - lts2016-ok
     - logs
     - audit
     - ataillefer
-    - nxdoc-743
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '950318'
     ajs-parent-page-title: Monitoring and Maintenance
@@ -19,6 +22,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/kAnF'
     source_link: /pages/viewpage.action?pageId=12913040
 tree_item_index: 400
+toc: true
 version_override:
     LTS 2015: 710/admindoc/purging-audit-logs-nxp_logs
     '6.0': 60/admindoc/purging-audit-logs-nxp_logs
@@ -107,9 +111,9 @@ You can configure the audit to filter what must be recorded, but there is no API
 
 This means that the cleanup should be done at the Backend level (SQL or Elasticsearch).
 
-## Purging audit with SQL Backend
+## Purging Audit with SQL Backend
 
-Since the table structure of `NXP_LOGS`&nbsp;is really obvious, it is an easy job for a database administrator to remove old rows based on the&nbsp;`log_event_date` column which contains a timestamp.
+Since the table structure of `NXP_LOGS` is really obvious, it is an easy job for a database administrator to remove old rows based on the `log_event_date` column which contains a timestamp.
 
 <div class="message-content">
 
@@ -117,7 +121,7 @@ Since the table structure of `NXP_LOGS`&nbsp;is really obvious, it is an easy jo
 
 {{#> callout type='warning' }}
 
-Please backup your database before proceeding
+Please backup your database before proceeding.
 
 {{/callout}}
 
@@ -131,7 +135,7 @@ Please backup your database before proceeding
 
 {{#> callout type='warning' }}
 
-Keep in mind that these scripts purge all Audit entries, including documents' audit entries (i.e. documents' history)
+Keep in mind that these scripts purge all Audit entries, including documents' audit entries (i.e. documents' history).
 
 {{/callout}}
 
@@ -139,10 +143,10 @@ Keep in mind that these scripts purge all Audit entries, including documents' au
 
 </div>
 
-If you prefer you can find below the source of a PostgreSQL function that can be used to purge Audit entries older than a given date.&nbsp;You can easily adapt it:
+If you prefer you can find below the source of a PostgreSQL function that can be used to purge Audit entries older than a given date. You can easily adapt it:
 
-*   to change the filtering done on audit record to filter,
-*   to match the syntax of other databases than PostgreSQL.
+- to change the filtering done on audit record to filter,
+- to match the syntax of other databases than PostgreSQL.
 
 {{#> panel type='code' heading='nx_audit_purge for PostgreSQL'}}
 
@@ -238,8 +242,8 @@ BEGIN
   SET @total = @nblines;
   RAISERROR ('% lines cleanup on table nxp_logs_mapextinfos',0,1,@nblines);
 
-  -- LEVEL 3 cleanup 
-  RAISERROR ('run cleanup on nxp_logs_extinfo level 3',0,1); 
+  -- LEVEL 3 cleanup
+  RAISERROR ('run cleanup on nxp_logs_extinfo level 3',0,1);
   DELETE FROM NXP_LOGS_EXTINFO
     WHERE NXP_LOGS_EXTINFO.LOG_EXTINFO_ID IN (SELECT INFO_FK FROM #audit_purge_tmp);
   SET @nblines = @@ROWCOUNT;
@@ -247,7 +251,7 @@ BEGIN
   RAISERROR ('% lines cleanup on table nxp_logs_extinfo' ,0,1,@nblines);
 
   -- LEVEL 1 cleanup
-  RAISERROR ('run cleanup on nxp_logs level 1',0,1); 
+  RAISERROR ('run cleanup on nxp_logs level 1',0,1);
   DELETE FROM NXP_LOGS
     WHERE NXP_LOGS.LOG_ID IN (SELECT LOG_FK FROM #audit_purge_tmp);
   SET @nblines = @@ROWCOUNT;
@@ -282,7 +286,7 @@ BEGIN
   -- Because nxp_logs_mapextinfos has 2 FK on external tables
   -- we must remove records from this table first
   -- so we need to store the values in a tmp table before
-  INSERT INTO audit_purge_tmp 
+  INSERT INTO audit_purge_tmp
     SELECT nxp_logs_mapextinfos.log_fk, nxp_logs_mapextinfos.info_fk
       FROM nxp_logs, nxp_logs_extinfo, nxp_logs_mapextinfos
       WHERE nxp_logs.log_event_date < TO_DATE(maxDate, 'YYYY-MM-DD')
@@ -315,20 +319,20 @@ END;
 
 {{/panel}}
 
-## Purging audit with Elasticsearch Backend
+## Purging Audit with Elasticsearch Backend
 
-Make sure to stop all Nuxeo instance before proceeding.
+Make sure to stop all Nuxeo instances before proceeding.
 
-### 1. Create a new audit index
+### 1. Create a New Audit Index
 
-Here you need to edit the curl query to match:
-- your elasticsearch server (`localhost:9200`)
+Here you need to edit the cURL query to match:
+- your Elasticsearch server (`localhost:9200`)
 - the name of your new index (`nuxeo-audit-201809`)
 - the number of shards and replicas (1 and 0 here)
 - eventually any custom mapping present in the `extended` map
 
 
-The following query create a new audit index and set a proper setting and mapping for Nuxeo 10.3 (Elasticsearch 6.3):
+The following query creates a new audit index and set a proper setting and mapping for Nuxeo 10.3 (Elasticsearch 6.3):
 
 {{#> panel type='code' heading='Create a new audit index'}}
 
@@ -443,18 +447,18 @@ curl -XPUT "localhost:9200/nuxeo-audit-201809" -H 'Content-Type: application/jso
 
 {{/panel}}
 
-### 2. Re-index and filter
+### 2. Re-index and Filter
 
 Now we are going to copy the original audit index into the new one.
 And we are going to filter unwanted log entries.
 
-Here you need to edit the curl query to match:
-- your elasticsearch server (`localhost:9200`)
+Here you need to edit the cURL query to match:
+- your Elasticsearch server (`localhost:9200`)
 - the name of your new index (`nuxeo-audit-201809`)
 - the query part to match what you want to purge
 
 
-The following query will purge all log entries related to login and download that are older than 2018-06-01.
+The following query will purge all log entries related to login and download the ones that are older than 2018-06-01.
 
 {{#> panel type='code' heading='Re-index and filter'}}
 
@@ -502,9 +506,9 @@ curl -XPOST "localhost:9200/_reindex" -H 'Content-Type: application/json' -d'{
 
 {{/panel}}
 
-### 3. Update the Nuxeo configuration
+### 3. Update the Nuxeo Configuration
 
-Now you can edit the `nuxeo.conf` to update the name of the new elasticsearch audit index:
+Now you can edit the `nuxeo.conf` to update the name of the new Elasticsearch audit index:
 
 ```bash
 audit.elasticsearch.indexName=nuxeo-audit-201809
@@ -513,7 +517,7 @@ audit.elasticsearch.indexName=nuxeo-audit-201809
 
 {{#> callout type='warning' }}
 
-This purge procedure can also be used to upgrade elasticsearch from 5.x or to update the mapping.
+This purge procedure can also be used to upgrade Elasticsearch from 5.x or to update the mapping.
 You just need to remove the query part of the re-index command if you don't want to purge at the same time.
 
 {{/callout}}
