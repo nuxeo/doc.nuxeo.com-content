@@ -134,21 +134,19 @@ history:
 ---
 ## Logging Configuration
 
-Nuxeo logging is compliant with common Java logging frameworks&nbsp;[Log4J](http://logging.apache.org/log4j),&nbsp;[SLF4J](http://www.slf4j.org/)&nbsp;and&nbsp;[JUL](http://download.oracle.com/javase/6/docs/technotes/guides/logging/index.html).
+Nuxeo logging is compliant with common Java logging frameworks&nbsp;[Log4J](https://logging.apache.org/log4j/1.2/),&nbsp;[Log4j2](https://logging.apache.org/log4j/2.x/),&nbsp;[SLF4J](http://www.slf4j.org/)&nbsp;and&nbsp;[JUL](http://download.oracle.com/javase/6/docs/technotes/guides/logging/index.html).
 
-Logging in Nuxeo is configured through a Log4J XML file: `$NUXEO_HOME/lib/log4j.xml
-`
+Logging in Nuxeo is configured through a Log4J XML file: `$NUXEO_HOME/lib/log4j2.xml`
 
 Editing that file, you can set the logging rules (log level per file and component, files rotation, ...).
 
 Log4J log levels are: ERROR, WARN, INFO, DEBUG and TRACE.
 
-You can increase or decrease the logs for specific services. Here are some useful categories:
+You can increase or decrease the logs for specific services. Here are some useful loggers:
 
-*   `org.nuxeo.runtime.deployment.preprocessor.DeploymentPreprocessor` logs the pre-processing order,
-
-*   `org.nuxeo.osgi.application.loader.FrameworkLoader` writes the configuration summary,
-*   `org.nuxeo.runtime.osgi.OSGiRuntimeService` provides the final startup summary.
+*   `org.nuxeo.runtime.deployment.preprocessor.DeploymentPreprocessor` logs the pre-processing order
+*   `org.nuxeo.osgi.application.loader.FrameworkLoader` writes the configuration summary
+*   `org.nuxeo.runtime.osgi.OSGiRuntimeService` provides the final startup summary
 
 Related pages:
 
@@ -161,23 +159,14 @@ Related pages:
 The log files location depends on the `nuxeo.log.dir` parameter. By default, Nuxeo generates the following log files (also available from the platform [Admin tab]({{page page='admin-tab-overview'}}) and the Control Panel):
 
 *   Launcher logs
-
-    *   nuxeoctl.log
-        Logs activity from NuxeoCtl.
-    *   console.log
-        Logs output written to the console (stdout).
+    *   nuxeoctl.log - Logs activity from NuxeoCtl
+    *   console.log - Logs output written to the console (stdout)
 *   Server logs
-
-    *   server.log
-        Server logs.
-    *   nuxeo-error.log
-        Gathers errors raised to the user.
-    *   stderr.log
-        Gathers errors written to the console (stderr).
-    *   classloader.log
-        Gathers class loading errors from Catalina.
-    *   tomcat.log
-        Gathers Tomcat logs.
+    *   server.log - Server logs
+    *   nuxeo-error.log - Gathers errors raised to the user
+    *   stderr.log - Gathers errors written to the console (stderr)
+    *   classloader.log - Gathers class loading errors from Catalina
+    *   tomcat.log - Gathers Tomcat logs
 
 ### Tomcat Specific
 
