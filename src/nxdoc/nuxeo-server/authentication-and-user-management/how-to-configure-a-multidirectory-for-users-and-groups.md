@@ -100,9 +100,9 @@ This page provides a turnkey solution to configure a multidirectory which respon
 
 This configuration is ready to use, so it is based on a public LDAP server whose main properties are:
 
-*   URL: `ldap://ldap.testathon.net:389/`
-*   Bind user and password: stuart / stuart
-*   Search base DNs for users and groups are entries of `DC=testathon,DC=net`
+*   URL: `ldap://ldap.forumsys.com:389/`
+*   Bind user and password: read-only-admin / password
+*   Search base DNs for users and groups are entries of `dc=example,dc=com`
 
 Moreover a virtual administrator is added to let you log in even if the LDAP configuration is not perfectly working. It lets you browse the users and groups from **Admin Center** > **Users & Groups**.
 
@@ -113,7 +113,7 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
 3.  Start your server.
 4.  Check this multidirectory configuration is working on your Nuxeo Platform instance. For instance:
 
-    *   Log in with stuart / stuart.
+    *   Log in with newton / password.
     *   Log in with MyAdministrator / secret
     *   With any of these two accounts, go to the **Admin** > **Users & Groups** menu to see new users or groups from the LDAP (use `*` to search all users/groups).
 5.  Stop the server and edit the XML file to change the parameters and the field mappings with your specific ones.
