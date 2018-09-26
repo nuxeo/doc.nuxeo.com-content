@@ -138,26 +138,69 @@ In order to configure the package, you will need to provide values for the confi
 
 For the case of a single repository, you can do the configuration using the `nuxeo.conf` properties described below. For more complex setups, you will need to use an XML extension point, see further down for details.
 
-### Specifying Your Amazon S3 Parameters
+### Specifying Your Amazon Credentials and Region
 
 In `nuxeo.conf`, add the following lines:
 
 ```
-nuxeo.s3storage.bucket=your_s3_bucket_name
-nuxeo.s3storage.awsid=your_AWS_ACCESS_KEY_ID
-nuxeo.s3storage.awssecret=your_AWS_SECRET_ACCESS_KEY
+nuxeo.aws.accessKeyId=your_AWS_ACCESS_KEY_ID
+nuxeo.aws.secretKey=your_AWS_SECRET_ACCESS_KEY
+nuxeo.aws.region=your_AWS_REGION
 
 ```
 
 {{#> callout type='info' }}
 
-If your Nuxeo instance runs on Amazon EC2, you can also transparently use IAM instance roles, in which case you do not need to specify the AWS ID and secret (the credentials will be fetched automatically from the instance metadata).
+If your Nuxeo instance runs on Amazon EC2 or Amazon ECS, you can also transparently use IAM instance roles, in which case you do not need to specify the AWS ID and secret (the credentials will be fetched automatically from the instance metadata). The same applies to the region.
 
 {{/callout}}
 
-&nbsp;
+{{#> callout type='note' }}
 
-If you are using an S3 compatible storage service, then you will most likely also need to set the endpoint parameter in `nuxeo.conf`
+If you used explicit configuration, the file `nuxeo.conf` now contains S3 secret access keys, you should protect it from prying eyes.
+
+{{/callout}}
+
+The region code can be found in the [S3 Region Documentation](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region). The default is `us-east-1`. At the time this documentation was written, the list is:
+
+* us-east-1: US East (N. Virginia) (default)
+* us-east-2: US East (Ohio)
+* us-west-1: US West (N. California)
+* us-west-2: US West (Oregon)
+* eu-west-1: EU (Ireland)
+* eu-west-2: EU (London)
+* eu-west-3: EU (Paris)
+* eu-central-1: EU (Frankfurt)
+* ap-south-1: Asia Pacific (Mumbai)
+* ap-southeast-1: Asia Pacific (Singapore)
+* ap-southeast-2: Asia Pacific (Sydney)
+* ap-northeast-1: Asia Pacific (Tokyo)
+* ap-northeast-2: Asia Pacific (Seoul)
+* ap-northeast-3: Asia Pacific (Osaka-Local)
+* sa-east-1: South America (São Paulo)
+* ca-central-1: Canada (Central)
+* cn-north-1: China (Beijing)
+* cn-northwest-1: China (Ningxia)
+
+### Specifying Your Amazon S3 Parameters
+
+You must specify the S3 bucket to use, and optionally a prefix:
+
+```
+nuxeo.s3storage.bucket=your_BUCKET
+# the following is optional
+nuxeo.s3storage.bucket_prefix=yourfolder/
+```
+
+{{#> callout type='info' }}
+
+The bucket name is unique across all of Amazon, you should find something original and specific.
+
+{{/callout}}
+
+The optional bucket prefix is used to localize your binaries within a specific S3 folder (the `bucket_prefix` syntax is available since Nuxeo 7.10-HF03).
+
+If you are using an S3-compatible storage service, then you will most likely also need to set the endpoint parameter in `nuxeo.conf`
 and you may want (depending on the service vendor, check their documentation) to configure connections to use path-style access for the bucket name:
 
 ```
@@ -171,42 +214,12 @@ If you installed the bundle JAR manually instead of using the Nuxeo Package you 
 nuxeo.core.binarymanager=org.nuxeo.ecm.core.storage.sql.S3BinaryManager
 ```
 
-{{#> callout type='info' }}
-
-The bucket name is unique across all of Amazon, you should find something original and specific.
-
-{{/callout}} {{#> callout type='note' }}
-
-The file `nuxeo.conf` now contains S3 secret access keys, you should protect it from prying eyes.
-
-{{/callout}}
-
-You can also add the following optional parameters:
-
+The following are compatibility properties that can still be used but are deprecated (you should use global AWS configuration or IAM instance roles as described above):
 ```
-nuxeo.s3storage.region=us-west-1
-nuxeo.s3storage.bucket_prefix=myfolder/
+nuxeo.s3storage.awsid=your_AWS_ACCESS_KEY_ID
+nuxeo.s3storage.awssecret=your_AWS_SECRET_ACCESS_KEY
+nuxeo.s3storage.region=your_AWS_REGION
 ```
-
-The region code can be found in the [S3 Region Documentation](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region). The default is `us-east-1`. At the time this documentation was written, the list is:
-
-* us-east-1: US East (N. Virginia) (default)
-* us-east-2: US East (Ohio)
-* us-west-1: US West (N. California)
-* us-west-2: US West (Oregon)
-* eu-west-1: EU (Ireland)
-* eu-west-2: EU (London)
-* eu-central-1: EU (Frankfurt)
-* ap-south-1: Asia Pacific (Mumbai)
-* ap-southeast-1: Asia Pacific (Singapore)
-* ap-southeast-2: Asia Pacific (Sydney)
-* ap-northeast-1: Asia Pacific (Tokyo)
-* ap-northeast-2: Asia Pacific (Seoul)
-* sa-east-1: South America (São Paulo)
-* ca-central-1: Canada (Central)
-* cn-northwest-1: China (Ningxia)
-
-You can also use a bucket prefix to localize your binaries within specific S3 folder (the `bucket_prefix` syntax is available since Nuxeo 7.10-HF03, before that you'll need to modify explicitly the binary manager XML file and use `nuxeo.s3storage.bucket.prefix`&nbsp;but this syntax was removed).
 
 #### Client-Side Crypto Options
 
@@ -373,9 +386,9 @@ The above configuration uses `nuxeo.conf` properties prefixed with `nuxeo.s3stor
 <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
   <blobprovider name="default">
     <class>org.nuxeo.ecm.core.storage.sql.S3BinaryManager</class>
-    <property name="awsid">your_AWS_ACCESS_KEY_ID</property>
-    <property name="awssecret">your_AWS_SECRET_ACCESS_KEY</property>
-    <property name="region">us-west-1</property>
+    <property name="awsid">your_AWS_ACCESS_KEY_ID</property> <!-- optional -->
+    <property name="awssecret">your_AWS_SECRET_ACCESS_KEY</property> <!-- optional -->
+    <property name="region">us-west-1</property> <!-- optional -->
     <property name="bucket">your_s3_bucket_name</property>
     <property name="bucket.prefix">myprefix/</property>
     <property name="directdownload">true</property>
@@ -405,13 +418,15 @@ Another possibility is for the client to ask the Nuxeo server temporary S3 crede
 To activate S3 direct upload use these parameters:
 
 ```
-nuxeo.s3storage.useDirectUpload=true
-
-nuxeo.s3storage.transient.bucket=
 nuxeo.s3storage.transient.awsid=
 nuxeo.s3storage.transient.awssecret=
 nuxeo.s3storage.transient.region=
+
+nuxeo.s3storage.useDirectUpload=true
+nuxeo.s3storage.transient.bucket=your_BUCKET
 ```
+
+The id, secret and region are deprecated and should instead be configured through `nuxeo.aws.accessKeyId`, `nuxeo.aws.secretKey` and `nuxeo.aws.region` or through implicit IAM instance roles (see above).
 
 S3 direct upload is implemented by a [BatchHandler]({{page space='nxdoc' page='batch-handler'}}) and a [TransientStore]({{page space='nxdoc' page='transient-store'}}) using contributions that can be found in the s3binaries template file [s3directupload-config.xml.nxftl](https://github.com/nuxeo/marketplace-amazon-s3/tree/master/ear/src/main/resources/s3binaries/nxserver/config/s3directupload-config.xml.nxftl)
 
@@ -433,10 +448,10 @@ S3 direct upload is implemented by a [BatchHandler]({{page space='nxdoc' page='b
   <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
     <blobprovider name="s3TransientStore">
       <class>org.nuxeo.ecm.core.storage.sql.S3BinaryManager</class>
-      <property name="awsid">${nuxeo.s3storage.transient.awsid}</property>
-      <property name="awssecret">${nuxeo.s3storage.transient.awssecret}</property>
+      <property name="awsid">${nuxeo.s3storage.transient.awsid}</property> <!-- optional -->
+      <property name="awssecret">${nuxeo.s3storage.transient.awssecret}</property> <!-- optional -->
+      <property name="region">${nuxeo.s3storage.transient.region}</property> <!-- optional -->
       <property name="bucket">${nuxeo.s3storage.transient.bucket}</property>
-      <property name="region">${nuxeo.s3storage.transient.region}</property>
       <property name="bucket.prefix"></property>
       <property name="cachesize">100MB</property>
       <property name="connection.max">50</property>
@@ -453,10 +468,10 @@ S3 direct upload is implemented by a [BatchHandler]({{page space='nxdoc' page='b
       <name>s3</name>
       <class>org.nuxeo.ecm.core.storage.sql.S3DirectBatchHandler</class>
       <property name="transientStore">s3TransientStore</property>
-      <property name="awsid">${nuxeo.s3storage.transient.awsid}</property>
-      <property name="awssecret">${nuxeo.s3storage.transient.awssecret}</property>
+      <property name="awsid">${nuxeo.s3storage.transient.awsid}</property> <!-- optional -->
+      <property name="awssecret">${nuxeo.s3storage.transient.awssecret}</property>  <!-- optional -->
+      <property name="region">${nuxeo.s3storage.transient.region}</property> <!-- optional -->
       <property name="bucket">${nuxeo.s3storage.transient.bucket}</property>
-      <property name="region">${nuxeo.s3storage.transient.region}</property>
       <property name="policyTemplate">{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Action":"s3:PutObject","Resource":["arn:aws:s3:::${nuxeo.s3storage.transient.bucket}/*"]}]}</property>
     </batchHandler>
   </extension>

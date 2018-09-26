@@ -61,14 +61,16 @@ In order to configure the package, you will need to provide values for the confi
 Assuming that you already have a bucket `nuxeo_bucket` with minimal configuration:
 
 ```
+nuxeo.aws.accessKeyId=your_AWS_ACCESS_KEY_ID
+nuxeo.aws.secretKey=your_AWS_SECRET_ACCESS_KEY
+
 nuxeo.s3storage.bucket=nuxeo_bucket
-nuxeo.s3storage.awsid=your_AWS_ACCESS_KEY_ID
-nuxeo.s3storage.awssecret=your_AWS_SECRET_ACCESS_KEY
 
 # Required prior to 9.3
 nuxeo.s3storage.directdownload=true
 ```
 
+You don't need to specify `nuxeo.aws.accessKeyId` and `nuxeo.aws.secretKey` if you're using IAM instance roles.
 If you want to go further, please read the [Nuxeo S3 Binary Manager]({{page page='amazon-s3-online-storage'}}) page.
 
 ### Specifying Your Amazon CloudFront Parameters
