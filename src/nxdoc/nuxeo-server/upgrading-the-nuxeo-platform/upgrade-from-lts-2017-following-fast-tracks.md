@@ -243,6 +243,10 @@ To migrate trash states to the new property model:
 1. In the Nuxeo Platform's JSF UI, go to **Admin** > **System Information** > **Migration**, click the button Migrate trashed state from lifecycle to property and wait until migration is completed.
 1. Remove the contribution added at step 1.
 
+{{#> callout type='info' heading='Migration Note'}}
+During migration, documents in state `deleted` will receive the `isTrashed` property set to true but migrator will leave document in `deleted` state.
+{{/callout}}
+
 See [NXP-24850](https://jira.nuxeo.com/browse/NXP-24850).
 {{! /multiexcerpt}}
 
