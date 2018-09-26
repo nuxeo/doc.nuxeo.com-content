@@ -284,7 +284,6 @@ Here is the Shell/Batch script usage:
 
 ```
 nuxeoctl <command> [options] [--] [command parameters]
-
 ```
 
 Issue `nuxeoctl help` to print this information.
@@ -357,127 +356,33 @@ nuxeoctl connect-report [--output <file>|--gzip <*true|false|yes|no>|--pretty-pr
 
 ### Options
 
-<div class="table-scroll">
-<table class="hover">
-<tbody>
-<tr>
-<th>Option</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>`-h,--help`</td>
-<td>Show detailed help.</td>
-</tr>
-<tr>
-<td>`-q,--quiet`</td>
-<td>Suppress information messages.</td>
-</tr>
-<tr>
-<td colspan="1">`-d,--debug <categories>`</td>
-<td colspan="1">Activate debug messages.<br/>
-(Since Nuxeo 7.4) `<categories>`: comma-separated Java categories to debug (default: `org.nuxeo.launcher`).</td>
-</tr>
-<tr>
-<td colspan="1">`-dc <categories>`</td>
-<td colspan="1">(Since Nuxeo 5.6) Deprecated: see `<categories>` on `--debug` option.</td>
-</tr>
-<tr>
-<td colspan="1">`--debug-launcher`</td>
-<td colspan="1">(Since Nuxeo 5.9.4) Linux-only. Activate Java debugging mode on the Launcher.</td>
-</tr>
-<tr>
-<td colspan="1">`--clid <arg>`</td>
-<td colspan="1">(Since Nuxeo 6.0) Use the provided instance CLID file.</td>
-</tr>
-<tr>
-<td colspan="1">`--xml`</td>
-<td colspan="1">(Since Nuxeo 5.6) Output XML for `mp-*` commands.</td>
-</tr>
-<tr>
-<td colspan="1">`--json`</td>
-<td colspan="1">(Since Nuxeo 5.6) Output JSON for `mp-*` commands.</td>
-</tr>
-<tr>
-<td colspan="1">`--gui <true|false|yes|no>`</td>
-<td colspan="1">(Since Nuxeo 5.6) Start the Graphical User Interface (aka Nuxeo Control Panel).<br/>
-Default is `true` on Windows and `false` on other platforms.</td>
-</tr>
-<tr>
-<td colspan="1">`--nodeps`</td>
-<td colspan="1">(Since Nuxeo 5.6) Ignore package dependencies and constraints.</td>
-</tr>
-<tr>
-<td colspan="1">`--relax <true|false|yes|no|ask>`</td>
-<td colspan="1">(Since Nuxeo 5.6) Allow relax constraint on current platform (default: `ask`).</td>
-</tr>
-<tr>
-<td colspan="1">`--accept <true|false|yes|no|ask>`</td>
-<td colspan="1">(Since Nuxeo 5.6) Accept, refuse or ask confirmation for all changes (default: `ask`).<br/>
-In non interactive mode, `--accept=true` also sets `--relax=true` if needed.</td>
-</tr>
-<tr>
-<td colspan="1">`-s,--snapshot`</td>
-<td colspan="1">(Since Nuxeo 5.9.1) Allow use of SNAPSHOT Marketplace packages.<br/>
-This option is implicit:
+  | Option                             | default                                                                                              | Since | Description                                                                                                                                                                                                                                                                                                                                                                   |
+  | ---------------------------------- | ---------------------------------------------------------------------------------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | `-h,--help`                        |                                                                                                      |       | Show detailed help.                                                                                                                                                                                                                                                                                                                                                           |
+  | `-q,--quiet`                       |                                                                                                      |       | Suppress information messages.                                                                                                                                                                                                                                                                                                                                                |
+  | `-d,--debug <categories>`          | `org.nuxeo.launcher`                                                                                 | 7.4   | Activate debug messages.<br> `<categories>`: comma-separated Java categories to debug.                                                                                                                                                                                                                                                                                        |
+  | `-dc <categories>`                 |                                                                                                      | 5.6   | Deprecated: see `<categories>` on `--debug` option.                                                                                                                                                                                                                                                                                                                           |
+  | `--debug-launcher`                 |                                                                                                      | 5.9.4 | Linux-only. Activate Java debugging mode on the Launcher.                                                                                                                                                                                                                                                                                                                     |
+  | `--clid <arg>`                     |                                                                                                      | 6.0   | Use the provided instance CLID file.                                                                                                                                                                                                                                                                                                                                          |
+  | `--xml`                            |                                                                                                      | 5.6   | Output XML for `mp-*` commands.                                                                                                                                                                                                                                                                                                                                               |
+  | `--json`                           |                                                                                                      | 5.6   | Output JSON for `mp-*` commands.                                                                                                                                                                                                                                                                                                                                              |
+  | `--gui <true|false|yes|no>`        | `true` on Windows `false` on other platforms                                                         | 5.6   | Start the Graphical User Interface (aka Nuxeo Control Panel).                                                                                                                                                                                                                                                                                                                 |
+  | `--nodeps`                         |                                                                                                      | 5.6   | Ignore package dependencies and constraints.                                                                                                                                                                                                                                                                                                                                  |
+  | `--relax <true|false|yes|no|ask>`  | `ask`                                                                                                | 5.6   | Allow relax constraint on current platform.                                                                                                                                                                                                                                                                                                                                   |
+  | `--accept <true|false|yes|no|ask>` | `ask`                                                                                                | 5.6   | Accept, refuse or ask confirmation for all changes.<br>In non interactive mode, `--accept=true` also sets `--relax=true` if needed.                                                                                                                                                                                                                                           |
+  | `-s,--snapshot`                    |                                                                                                      | 5.9.1 | Allow use of SNAPSHOT Marketplace packages.<br>This option is implicit:<br>* on SNAPSHOT distributions (daily builds),<br>* if the command explicitly requests a SNAPSHOT package.                                                                                                                                                                                            |
+  | `-f,--force`                       |                                                                                                      | 5.9.1 | Deprecated: use `--strict` option instead.                                                                                                                                                                                                                                                                                                                                    |
+  | `--strict`                         |                                                                                                      | 7.4   | Abort in error the start command when a component cannot be activated or if a server is already running.                                                                                                                                                                                                                                                                      |
+  | `-im,--ignore-missing`             |                                                                                                      | 6.0   | Ignore unknown packages on `mp-add`, `mp-install` and `mp-set` commands.                                                                                                                                                                                                                                                                                                      |
+  | `-hdw,--hide-deprecation-warnings` |                                                                                                      | 5.6   | Hide deprecation warnings.                                                                                                                                                                                                                                                                                                                                                    |
+  | `--encrypt <algorithm>`            | `AES/ECB/PKCS5Padding` (Advanced Encryption Standard, Electronic Cookbook Mode, PKCS5-style padding) | 7.4   | Activate encryption on the `config` command.<br>This option can be used on the `encrypt` command to customize the encryption algorithm.<br>`<algorithm>` is a cipher transformation of the form: "algorithm/mode/padding" or "algorithm".                                                                                                                                     |
+  | `--gzip`                           |                                                                                                      |       | Compress the output.                                                                                                                                                                                                                                                                                                                                                          |
+  | `--pretty-print`                   |                                                                                                      |       | Pretty print the output.                                                                                                                                                                                                                                                                                                                                                      |
+  | `--output <file>`                  |                                                                                                      |       | Write output in specified file.                                                                                                                                                                                                                                                                                                                                               |
+  | `--set <template>`                 |                                                                                                      | 7.4   | Set the value for a given key.<br>The value is stored in `nuxeo.conf` by default unless a template name is provided; if so, it is then stored in the template's `nuxeo.defaults` file.<br>If the value is empty (''), then the property is unset.<br>This option is implicit if no `--get` or `--get-regexp` option is used and there are exactly two parameters (key value). |
+  | `--get-regexp`                     |                                                                                                      | 7.4   | Get the value for all keys matching the given regular expression(s).                                                                                                                                                                                                                                                                                                          |
+  | `--get`                            |                                                                                                      | 7.4   | Get the value for a given key.<br>Returns error code **6** if the key was not found.<br>This option is implicit if `--set` option is not used and there are more or less than two parameters.                                                                                                                                                                                 |
 
-*   on SNAPSHOT distributions (daily builds),
-*   if the command explicitly requests a SNAPSHOT package.</td>
-</tr>
-<tr>
-<td colspan="1">`-f,--force`</td>
-<td colspan="1">(Since Nuxeo 5.9.1) Deprecated: use `--strict` option instead.</td>
-</tr>
-<tr>
-<td colspan="1">`--strict`</td>
-<td colspan="1">(Since Nuxeo 7.4) Abort in error the start command when a component cannot be activated or if a server is already running.</td>
-</tr>
-<tr>
-<td colspan="1">`-im,--ignore-missing`</td>
-<td colspan="1">(Since Nuxeo 6.0) Ignore unknown packages on `mp-add`, `mp-install` and `mp-set` commands.</td>
-</tr>
-<tr>
-<td colspan="1">`-hdw,--hide-deprecation-warnings`</td>
-<td colspan="1">(Since Nuxeo 5.6) Hide deprecation warnings.</td>
-</tr>
-<tr>
-<td colspan="1">`--encrypt <algorithm>`</td>
-<td colspan="1">(Since Nuxeo 7.4) Activate encryption on the `config` command.<br/>
-This option can be used on the `encrypt` command to customize the encryption algorithm.<br/>
-`<algorithm>` is a cipher transformation of the form: "algorithm/mode/padding" or "algorithm".<br/>
-Default value is "AES/ECB/PKCS5Padding" (Advanced Encryption Standard, Electronic Cookbook Mode, PKCS5-style padding).</td>
-</tr>
-<tr>
-<td>`--gzip`</td>
-<td>Compress the output.</td>
-</tr>
-<tr>
-<td>`--pretty-print`</td>
-<td>Pretty print the output.</td>
-</tr>
-<tr>
-<td>`--output <file>`</td>
-<td>Write output in specified file.</td>
-</tr>
-<tr>
-<td colspan="1">`--set <template>`</td>
-<td colspan="1">(Since Nuxeo 7.4) Set the value for a given key.<br/>
-The value is stored in `nuxeo.conf` by default unless a template name is provided; if so, it is then stored in the template's `nuxeo.defaults` file.<br/>
-If the value is empty (''), then the property is unset.<br/>
-This option is implicit if no `--get` or `--get-regexp` option is used and there are exactly two parameters (key value).</td>
-</tr>
-<tr>
-<td colspan="1">`--get-regexp`</td>
-<td colspan="1">(Since Nuxeo 7.4) Get the value for all keys matching the given regular expression(s).</td>
-</tr>
-<tr>
-<td colspan="1">`--get`</td>
-<td colspan="1">
-(Since Nuxeo 7.4) Get the value for a given key. Returns error code 6 if the key was not found.<br/>
-This option is implicit if `--set` option is not used and there are more or less than two parameters.</td>
-</tr>
-</tbody>
-</table>
-</div>
 
 ### Commands {{> anchor 'nuxeoctl-commands'}}
 
