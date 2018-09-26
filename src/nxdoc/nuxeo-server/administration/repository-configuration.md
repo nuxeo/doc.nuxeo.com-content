@@ -508,7 +508,7 @@ If you set both included and excluded types, only the included types configurati
 
 *   **disabled**: use **true** to disable full-text support. The default is **false**, _i.e._, fulltext enabled.
 *   **searchDisabled**: use **true** to disable VCS full-text search (based on database backend), the full-text extraction is done and [searchable using Elasticsearch]({{page space='NXDOC' page='Moving Load+from+Database+to+Elasticsearch#MovingLoadfromDatabasetoElasticsearch-DeactivatingDatabaseFull-TextSearch'}}). The default is **false**.
-*   **fieldSizeLimit**: used to specify the maximum size of the full-text that is extracted and indexed. The default is **0**, _i.e._, unlimited.
+*   **fieldSizeLimit**: used to specify the maximum size of the full-text that is extracted and indexed. The default is **131072**, _i.e._, 128 KB. Use 0 to remove any limit (but this will penalize Elasticsearch indexing).
 *   **analyzer**: a full-text analyzer, the content of this attribute depends on the backend used:
     *   H2: a Lucene analyzer, for instance `org.apache.lucene.analysis.fr.FrenchAnalyzer`. The default is an English analyzer.
     *   PostgreSQL: a Text Search configuration, for instance `french`. The default is **english**. See [http://www.postgresql.org/docs/8.3/static/textsearch-configuration.html](http://www.postgresql.org/docs/8.3/static/textsearch-configuration.html)
