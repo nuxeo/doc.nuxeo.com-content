@@ -495,9 +495,13 @@ in this case an index need to be migrated to the new Elasticsearch 5.x format:
 - The audit index named `nuxeo-audit` need to be migrated. Follow the [reindex upgrade procedure](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/reindex-upgrade.html).
 - in case the current `nuxeo-audit` index contains a `dueDate` field (Workflow usage), the format has changed from long to Date. This means the mapping in the target index should have the `dueDate` field type set to Date before reindexing. This could be done by adding the following to the nuxeo mapping or your custom one if needed:
 ```
-    "dueDate": {
-        "type": "date"
-    }
+    "extended": {
+      "properties": {
+        "dueDate": {
+          "type": "date"
+        }
+      }
+    },
 ```
 If not migrated the field will generate errors like the following:
 ```
