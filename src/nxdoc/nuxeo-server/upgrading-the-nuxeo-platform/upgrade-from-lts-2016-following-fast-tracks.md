@@ -503,6 +503,7 @@ If not migrated the field will generate errors like the following:
 ```
 2018-09-18 10:39:40,100 ERROR [AuditLogWriterPool-00,in:168636,inCheckpoint:168617,out:0,lastRead:1537259979915,lastTimer:1537259979752,wm:201491740013363201,loop:1285532,record] [org.nuxeo.elasticsearch.audit.ESAuditBackend] Unable to index audit entry 16 :MapperParsingException[failed to parse [extended.dueDate]]; nested: NumberFormatException[For input string: "2018-09-19T10:39:39.486+02:00"];
 ```
+Please follow the audit purge documentation for further details on how to proceed.
 
 Please refer to [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) for more information on upgrading your Elasticsearch cluster.
 
