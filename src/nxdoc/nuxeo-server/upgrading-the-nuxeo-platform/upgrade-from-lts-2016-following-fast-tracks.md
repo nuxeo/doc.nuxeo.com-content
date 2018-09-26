@@ -493,7 +493,7 @@ in this case an index need to be migrated to the new Elasticsearch 5.x format:
 - The sequence index named `nuxeo-uidgen` cannot be migrated because the `_source` field is disabled, Nuxeo will take care to re-create this index at startup,
   so once this index has been backed up you can delete it.
 - The audit index named `nuxeo-audit` need to be migrated. Follow the [reindex upgrade procedure](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/reindex-upgrade.html).
-- in case the current `nuxeo-audit` index contains a `dueDate` field (Workflow usage), the format has changed from long to Date. This means the mapping in the target index should have the `dueDate` field type set to Date before reindexing. This could be done by adding the following to the nuxeo mapping or your custom one if needed:
+- In case the current `nuxeo-audit` index contains a `dueDate` field (Workflow usage), the format has changed from long to Date. This means the mapping in the target index should have the `dueDate` field type set to Date before reindexing. This could be done by adding the following to the nuxeo mapping or your custom one if needed:
 ```
     "extended": {
       "properties": {
