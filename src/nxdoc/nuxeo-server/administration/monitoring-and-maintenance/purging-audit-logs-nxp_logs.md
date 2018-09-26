@@ -427,6 +427,9 @@ curl -XPUT "localhost:9200/nuxeo-audit-201809" -H 'Content-Type: application/jso
     "eventDate": {
       "type": "date"
     },
+    "dueDate": {
+      "type": "date"
+    },
     "comment": {
       "type": "text",
       "fields": {
