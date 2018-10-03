@@ -839,7 +839,7 @@ A great optimisation has been added lowering heavily the charge of the Elasticse
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24232](https://jira.nuxeo.com/browse/NXP-24232) and [NXP-24637](https://jira.nuxeo.com/browse/NXP-24637)
 
-### Nuxo DAM
+### Nuxeo DAM
 
 #### Improve Video Processing {{since '10.1'}}
 
