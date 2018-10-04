@@ -2,6 +2,9 @@ default:
     site:
         spaces:
             -
+                space_path: client-apps
+                space_name: Nuxeo Desktop and Mobile Documentation
+            -
                 space_path: blog
                 space_name: Nuxeo Technical Blog
             -
