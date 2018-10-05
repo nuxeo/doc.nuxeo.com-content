@@ -255,7 +255,7 @@ Those properties can come from the IdM the Nuxeo Platform is integrated to. To e
 
 You may want to use other authentication protocols and / or identity providers than LDAP/Active Directory. Most of the time, an "authentication plugin" has to be configured. The Nuxeo Platform provides some by default, but you sometimes have to install a specific addon.
 
-**In any case**, you have to configure the "authentication chain", see the [Authentication Chain Principles]({{page page='authentication-chain-principle'}})
+**In any case**, you have to configure the "authentication chain", see the [Authentication Chain Principles]({{page page='authentication-chain-principles'}})
 
 {{! multiexcerpt name='authentication_chain_contribution'}}
 [Contribute an XML extension]({{page page='how-to-contribute-to-an-extension'}}) from the following content. Adapt the `authenticationChain` element content with the list of plugins you want to use.
