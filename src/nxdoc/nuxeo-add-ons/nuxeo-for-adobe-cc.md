@@ -218,7 +218,7 @@ Nuxeo CC Connector Menu Listings (accessed via the burger menu)
 ![](nx_asset://c6d1d869-c0c1-41f9-9d69-82779c45aa7c ?w=350,border=true)
 
 The Nuxeo CC Connector fly out menu has several options to assist the user:
-- **About** takes you to our [website](www.nuxeo.com)
+- **About** takes you to our [website](https://www.nuxeo.com/)
 - **Refresh** re-establishes an updated connection to your current folder
 - **Upload from Disk** opens your System Browser to upload an asset to your current Connector folder
 - **Upload Selected** uploads locally placed assets in InDesign to your current Connector folder (be sure to use “Relink…” as described below once saved)
