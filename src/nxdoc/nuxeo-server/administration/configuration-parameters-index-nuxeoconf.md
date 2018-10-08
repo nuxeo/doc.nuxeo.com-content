@@ -2096,7 +2096,7 @@ Defaults to false on server upgrade, true on new install.</td>
 </tr>
 <tr>
 <td colspan="1">`elasticsearch.httpReadOnly.baseUrl`</td>
-<td colspan="1">Required when using a standalone Elasticsearch instance. See [Elasticsearch Passthrough]({{page version='' space='nxdoc' page='elasticsearch-passthrough'}}@requirement)</td>
+<td colspan="1">Required when using a standalone Elasticsearch instance. See [Elasticsearch Passthrough]({{page version='' space='nxdoc' page='elasticsearch-passthrough'}}#requirement)</td>
 <td colspan="1">http://localhost:9200/</td>
 <td colspan="1">Since Nuxeo 7.10</td>
 </tr>
