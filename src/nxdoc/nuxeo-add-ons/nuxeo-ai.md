@@ -30,7 +30,7 @@ Nuxeo AI package is a core system of streams that allows the Nuxeo Platform
 to interact with AI services, be them external from external suppliers, or internal
 from Nuxeo. These services can be used in a multitude of ways within the platform.
 
-The core of the system is a sequence os processors connected with streams. At the
+The core of the system is a sequence of processors connected with streams. At the
 head of the process there is a filtering system that selects documents to be processed.
 The next step is to call the AI service to apply a classification to the data. The final
 step handles the returned data from the AI service, transforms it to the purpose needed
@@ -55,7 +55,7 @@ provides 4 default document streams that can be activated by configuration:
 * **audio** - When an audio file is added to a document.
 * **text** - When binary text is extracted from a document.
 
-These allow you to quick start your processing chain quickly.
+These allow you to start your processing chain quickly.
 
 ## Extensions
 Core-AI is create with multiple extension points to the several processors. One
@@ -94,7 +94,7 @@ nuxeo.pipes.images.enabled=true
 nuxeo.enrichment.aws.images=true
 ```
 
-The first line indicates to AI-core t to filter documents with images to be sent
+The first line indicates to AI-core to filter documents with images to be sent
 into the images pipe to be processed by an external API. The second line
 activated the enrichment of images by AWS.
 
