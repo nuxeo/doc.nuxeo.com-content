@@ -350,7 +350,7 @@ Nuxeo Studio Designer is dedicated to configure Web UI: if you need to a create 
         Your document type is created. You now need to edit it to indicate all its characteristics: layouts, lifecycle, schema, etc.
 
 4.  Fill in the [**Definition** tab]({{page space='studio' page='documents'}}).
-    ![]({{file name='definition_contract.png'}} ?w=600,border=true)
+    ![]({{file page='web-ui-document-layouts' name='definition_contract.png'}} ?w=600,border=true)
 
     {{#> callout type='info' }}
 
