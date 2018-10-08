@@ -44,10 +44,10 @@ Regular folders, called "Folders", have the same behavior as workspaces. In a re
 
 In a folder, you can:
 
-*   [Create documents]({{page page='browse'}}#creating-content) and do all the actions available on them (edit, approve, manage relations, etc.)
-*   [Manage permissions]({{page page='permissions'}})
-*   [Subscribe to alerts]({{page page='browse#alerts'}})
-*   [Manage the folder's trash]({{page page='browse'}}#deleting-content)
+- [Create documents]({{page page='browse'}}#creating-content) and do all the actions available on them (edit, approve, manage relations, etc.)
+- [Manage permissions]({{page page='permissions'}})
+- [Subscribe to alerts]({{page page='browse#alerts'}})
+- [Manage the folder's trash]({{page page='browse'}}#deleting-content)
 
 Like in a workspace, you can use drag and drop to create content in a folder.
 
@@ -58,18 +58,14 @@ In an ordered folder, documents are manually sorted. So, the orders in which doc
 
 An ordered folder has the same presentation as a regular folder, but it has some additional buttons below the content table:
 
-*   Move up
-*   Move down
-*   Move to top
-*   Move to bottom
+- Move up
+- Move down
+
 
 To change the content's order, select a document using the checkbox on the left and click on the **move** button you need. The document is moved in the list of documents available in the folder.
 
-{{#> callout type='tip' heading='Moving documents restrictions'}}
+You can move groups of documents. Moving groups of documents up or down positions them one row up or one row down. Moving groups does not affect the rest of the order.
 
-You can move one document at a time. If you select more than one document, the move buttons will deactivate.
-
-{{/callout}}
 {{! /multiexcerpt}}
 
 ### File
@@ -79,9 +75,9 @@ A file document is a basic binary container and is composed of an attached file 
 
 A file is composed of:
 
-*   A title (mandatory),
-*   A description (optional),
-*   An attached file.
+- A title (mandatory),
+- A description (optional),
+- An attached file.
 {{! /multiexcerpt}}
 
 ![]({{file name='file-web-ui.png'}} ?w=600,border=true)
