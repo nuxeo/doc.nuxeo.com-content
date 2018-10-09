@@ -17,6 +17,7 @@ toc: true
 ---
 
 Below is the list of evolutions and improvements planned for the Nuxeo Mobile applications.
-{{{multiexcerpt 'ProdpadFeedback' page='generic-multi-excerpts'}}}
+
+You can also give us your feedback and suggestions through our [feedback portal](https://portal.prodpad.com/eecfd20c-c892-11e7-8ae7-0288f735e5b9).
 
 <iframe src="https://ext.prodpad.com/ext/roadmap/5136621672bb96a4b1d09f8bd29c2759a24bbb9a" height="900" width="100%" frameborder="0"></iframe>
