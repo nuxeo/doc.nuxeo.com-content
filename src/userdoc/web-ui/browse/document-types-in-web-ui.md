@@ -61,11 +61,9 @@ An ordered folder has the same presentation as a regular folder, but it has some
 - Move up
 - Move down
 
-
 To change the content's order, select a document using the checkbox on the left and click on the **move** button you need. The document is moved in the list of documents available in the folder.
 
-You can move groups of documents. Moving groups of documents up or down positions them one row up or one row down. Moving groups does not affect the rest of the order.
-
+You can move groups of documents. Moving groups of documents up or down joins the group items and positions them one row up or one row down. Moving groups does not affect the rest of the order.
 {{! /multiexcerpt}}
 
 ### File
