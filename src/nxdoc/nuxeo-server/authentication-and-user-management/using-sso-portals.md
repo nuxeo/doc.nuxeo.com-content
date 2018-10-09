@@ -41,6 +41,7 @@ To install this authentication plugin:
             <\!-\- define here shared secret between the portal and Nuxeo server -->
             <parameter name="secret">nuxeo5secretkey</parameter>
             <parameter name="maxAge">3600</parameter>
+            <parameter name="digestAlgorithm">MD5<parameter>
           </parameters>
         </authenticationPlugin>
       </extension>
@@ -96,13 +97,14 @@ public String makeToken(String timestamp, String random, String secret,
         String user) throws Exception {
     String clearToken = timestamp + ":" + random + ":" + secret + ":"
             + user;
-    byte[] md5 = MessageDigest.getInstance("MD5").digest(
-            clearToken.getBytes());
-    return DatatypeConverter.printBase64Binary(md5);
+    String digestAlgorithm = "MD5"; // or whatever digestAlgorithm was configured on the server
+    byte[] digest = MessageDigest.getInstance(digestAlgorithm).digest(clearToken.getBytes());
+    return DatatypeConverter.printBase64Binary(digest);
 }
 ```
 
-As a validation of your code, check that `makeToken("1324572561000", "qwertyuiop", "secret", "bob")` returns `8y4yXfms/iKge/OtG6d2zg==`.
+As a validation of your code, check that `makeToken("1324572561000", "qwertyuiop", "secret", "bob")` returns `8y4yXfms/iKge/OtG6d2zg==` for the `MD5` algorithm.
+
 
 * * *
 
