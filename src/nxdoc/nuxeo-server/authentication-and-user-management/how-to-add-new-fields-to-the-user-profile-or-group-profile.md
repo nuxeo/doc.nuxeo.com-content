@@ -2,7 +2,7 @@
 title: How to Add New Fields to the User Profile or Group Profile
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2018-10-10'
     status: ok
 details:
     howto:
@@ -12,7 +12,7 @@ details:
         topics: 'LDAP, Multidirectory'
 tree_item_index: 400
 labels:
-    - content-review-lts2017
+    - lts2017-ok
     - authentication
     - dmetzler
 
