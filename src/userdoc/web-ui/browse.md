@@ -418,7 +418,7 @@ When you have several versions of a document, click **Compare Version**  {{!--  
     name: Compare-versions.png
     1.1.3#icon#up_to_date
 --}}
-![Compare Versions](nx_asset://00a30c28-31a8-4a91-b7b1-b39f7c3eff22 ?w=20)to see the differences between document versions.
+![Compare Versions](nx_asset://00a30c28-31a8-4a91-b7b1-b39f7c3eff22 ?w=20)to see the differences between the document versions.
 
 {{#> callout type='info'}}
 By default, you will only see the data that differ from one version to another. Check View all data to see all the properties of the documents.
@@ -439,9 +439,6 @@ You can visualize metadata differences between two documents.
 By default, you will only see the data that differ from one document to another.
 4. Click **View All Data** to display all data for both documents.
 Data that differ from one document to another are highlighted.
-
-
-
 
 
 
