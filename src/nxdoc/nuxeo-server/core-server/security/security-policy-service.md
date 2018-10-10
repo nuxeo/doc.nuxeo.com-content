@@ -144,17 +144,12 @@ To register a security policy, you need to write a contribution specifying the c
 ```
 <?xml version="1.0"?>
 <component name="com.example.myproject.securitypolicy">
-
   <extension target="org.nuxeo.ecm.core.security.SecurityService"
     point="policies">
-
     <policy name="myPolicy"
       class="com.example.myproject.NoFileSecurityPolicy" order="0" />
-
   </extension>
-
 </component>
-
 ```
 
 Here is a sample contributed class:
@@ -175,7 +170,7 @@ public class NoFileSecurityPolicy extends AbstractSecurityPolicy implements Secu
             Principal principal, String permission,
             String[] resolvedPermissions, String[] additionalPrincipals) {
         // Note that doc is NOT a DocumentModel
-        if (doc.getType().getName().equals("File")) {
+        if ("File".equals(doc.getType().getName())) {
             return Access.DENY;
         }
         return Access.UNKNOWN;
@@ -188,12 +183,12 @@ public class NoFileSecurityPolicy extends AbstractSecurityPolicy implements Secu
     }
 
     @Override
-    public boolean isExpressibleInQuery() {
+    public boolean isExpressibleInQuery(String repositoryName) {
         return true;
     }
 
     @Override
-    public SQLQuery.Transformer getQueryTransformer() {
+    public SQLQuery.Transformer getQueryTransformer(String repositoryName) {
         return NO_FILE_TRANSFORMER;
     }
 
