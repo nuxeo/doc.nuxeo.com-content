@@ -391,12 +391,12 @@ See the page [How to Customize Nuxeo Drive Versioning Policy]({{page space='NXDO
 ## Document Actions
 
 The document actions toolbar displays all the actions available for the current document.
-![]({{!--     ### nx_asset ###
+{{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Document Action Toolbar
     name: document-action-toolbar.png
     1.1.3#screenshot#up_to_date
 --}}
-![Document Action Toolbar](nx_asset://3f4d1465-5072-448b-b3b5-08f982925354 ?w=600,border=true))
+![Document Action Toolbar](nx_asset://3f4d1465-5072-448b-b3b5-08f982925354 ?w=600,border=true)
 
 ### Compare
 
