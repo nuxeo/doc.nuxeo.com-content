@@ -396,21 +396,21 @@ The document actions toolbar displays all the actions available for the current 
     name: document-action-toolbar.png
     1.1.3#screenshot#up_to_date
 --}}
-![Document Action Toolbar](nx_asset://3f4d1465-5072-448b-b3b5-08f982925354 ?w=600,border=true)
+![Document Action Toolbar](nx_asset://3f4d1465-5072-448b-b3b5-08f982925354 ?w=600)
 
 ### Compare
 
 #### Compare Versions
 
-When you have several versions of a document, click **Compare Version**  {{!--     ### nx_asset ###
+When you have several versions of a document, click **Compare Version** {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Compare Versions
     name: Compare-versions.png
     1.1.3#icon#up_to_date
 --}}
-![Compare Versions](nx_asset://00a30c28-31a8-4a91-b7b1-b39f7c3eff22 ?w=20)to see the differences between document versions.
+![Compare Versions ](nx_asset://00a30c28-31a8-4a91-b7b1-b39f7c3eff22 ?w=20) to see the differences between document versions.
 
 {{#> callout type='info'}}
-By default, you will only see the data that differ from one version to another. Check View all data to see all the properties of the documents.
+By default, you will only see the data that differ from one version to another. Check **View all data** to see all the properties of the documents.
 {{/callout}}
 
 
