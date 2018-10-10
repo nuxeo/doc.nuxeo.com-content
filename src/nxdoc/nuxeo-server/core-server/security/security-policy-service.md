@@ -2,7 +2,7 @@
 title: Security Policy Service
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2018-10-10'
     status: ok
 labels:
     - lts2016-ok
