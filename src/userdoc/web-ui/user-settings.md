@@ -23,6 +23,10 @@ The Profile tab enables the user to edit his personal information and his passwo
 
 ![]({{file name='web-ui-profile-tab.png'}} ?w=650,border=true)
 
+## Authorized Application
+
+You can grant access to your Nuxeo account to external applications, such as Nuxeo Mobile. The Authorized Application tab displays each application and their Authorization Date. It also enables you to revoke accesses. 
+
 ## Themes
 
 Nuxeo Web UI provides several themes to change the look and feel of the UI. For the moment, they mostly provide color schemes applied to UI elements and a background image for some themes.
