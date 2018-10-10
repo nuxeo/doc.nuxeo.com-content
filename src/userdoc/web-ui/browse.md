@@ -26,6 +26,15 @@ Watch the related courses on Nuxeo University
 
 ## Browsing Content
 
+### Drag and Drop
+
+In the View tab, you can use drag and drop to move documents in workspaces, folders, or collections.
+
+1. In **View**, select the document you want to move. 
+2. Click on selected documents and drag them.
+3. Drop them on the folderish document you want.
+
+
 ### Side Menu
 The side menu offers two different tabs. Clicking on elements on the left will open a side panel (also called **Drawer**) with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area.
 This new pattern allows to start browsing without changing the context of work.
