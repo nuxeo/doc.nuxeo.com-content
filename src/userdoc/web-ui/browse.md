@@ -168,23 +168,23 @@ Although properties are not mandatory, filling them in will make your documents 
 ## Exporting Content
 Users can export documents on their computer. It is possible to export:
 
-*   One document at a time
-*   An entire workspace, folder, section
+- One document at a time
+- An entire workspace, folder, section
 
 ### Exports Available
 
 #### From a Folder
 
-* The **XML export** is a low level export that enables users to either get the XML definition of the document or get a folder for each exported document that contains:
-    *   document.xml file holding the document's metadata and various information such as the applied access rights,
-    *   A .blob file that holds the binary content of the document. This blob is referenced in the document.xml file;
-* The **ZIP export** enables you to export a whole workspace, section or folder in a zipped XML folder. This export is only available on folderish documents.
+- The **XML export** is a low level export that enables users to either get the XML definition of the document or get a folder for each exported document that contains:
+    - document.xml file holding the document's metadata and various information such as the applied access rights,
+    - A .blob file that holds the binary content of the document. This blob is referenced in the document.xml file;
+- The **ZIP export** enables you to export a whole workspace, section or folder in a zipped XML folder. This export is only available on folderish documents.
 
 #### From a Document
 
-*   The **PDF export** enables you to get a PDF version of your document. This export is only available on non-folderish documents.
-*   The **ZIP Export** enables you to get a zipped folder with the documents' main attachment (.pdf, .doc files). This export is only available on non-folderish documents.
-*   The **XML export** is a low level export that enables users to either get the XML definition of the document or get a folder for each exported document that contains:
+- The **PDF export** enables you to get a PDF version of your document. This export is only available on non-folderish documents.
+- The **ZIP Export** enables you to get a zipped folder with the documents' main attachment (.pdf, .doc files). This export is only available on non-folderish documents.
+- The **XML export** is a low level export that enables users to either get the XML definition of the document or get a folder for each exported document that contains:
     *   document.xml file holding the document's metadata and various information such as the applied access rights,
     *   A .blob file that holds the binary content of the document. This blob is referenced in the document.xml file;
 
@@ -271,12 +271,7 @@ Users with "Manage everything" permissions can access the workspace's Trash and 
 1. Click on ![]({{file name='restore-doc-web-ui.png' page='icons-index'}} ?w=18) in the action toolbar at the top of the page.</br>
    Documents are moved back to the **View** tab of the workspace and available to users.
 
-{{!--     ### nx_asset ###
-       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Restore Deleted Content
-       name: restore-content-web-ui.png
-       1.1.3#screenshot#up_to_date
---}}
-![Restore Deleted Content ](nx_asset://8b7bf176-9beb-431f-9b42-ace71cbed3a8 ?w=600,border=true)
+![]({{file name='restore-content-web-ui.png'}} ?w=600)
 
 **Delete Permanently**
 
@@ -284,32 +279,19 @@ Users with "Manage everything" permissions can access the workspace's Trash and 
    The deleted document(s) of the folders are displayed.
 1. Click on the document you want to delete permanently.
   A top bar is displayed at the top of the document.
-1. In **View** click on {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Delete permanently
-    name: delete-permanently-web-ui.png
-    1.1.3#icon#up_to_date
---}}
-![Delete permanently](nx_asset://e07fab13-d0aa-451f-b5cf-a7d578499f9c ?w=20) in the action toolbar at the top of the page.</br>
+1. In **View** click on ![]({{file name='delete-permanently-web-ui.png' page='icons-index'}} ?w=18) in the action toolbar at the top of the page.</br>
 
-
-{{#> callout type='Warning' }}
-Documents are permanently erased from the application. They cannot be restored.
+{{#> callout type='warning' }}
+  Documents are permanently erased from the application. They cannot be restored.
 {{/callout}}
 
-{{!--     ### nx_asset ###
-      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Delete Permanently
-       name: delete-permanently-content-web-ui.png
-       1.1.3#screenshot#up_to_date
---}}
-![Delete Permanently ](nx_asset://eaace42e-3910-43b2-896f-b98d6ef72e82 ?w=600,border=true)
+![]({{file name='delete-permanently-content-web-ui.png'}} ?w=600)
 
 **Empty Trash**
 
 1. Go to the workspace where you want to empty the trash.
 1. Click on the **Trash** view.
-1. Click on the **Empty the trash** button at the top right of the page. ![]({{file name='empty-trash-web-ui.png'}} ?w=70)</br>
-   All deleted documents are permanently erased from the application. They cannot be restored.
-
+1. Click on the **Empty the trash** button at the top right of the page. ![]({{file name='empty-trash-web-ui.png'}} ?w=70)
 
 ### Trash Search
 
