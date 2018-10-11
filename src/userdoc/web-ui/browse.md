@@ -156,6 +156,14 @@ Although properties are not mandatory, filling them in will make your documents 
 2. Edit the metadata that you want.
 3. Once it is done, click on **SAVE**
 
+### Drag and Drop
+
+In a content view, drag and drop is available to move documents from a folderish document to another (like workspaces, folders, or collections).
+
+1. From your folder view, select the document you want to move.
+2. Click on selected documents and drag them.
+3. Drop them on the folderish document you want.
+
 ## Exporting Content
 Users can export documents on their computer. It is possible to export:
 
