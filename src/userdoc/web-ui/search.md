@@ -86,6 +86,9 @@ Saved searches are private by default. But you can share them by [giving permiss
 
 You can manage and delete your saved search from the Search tab drop down list, select the search that you want to manage, click on the Delete button and confirm deletion. Select the search that you want to delete from the Search tab drop down list, click on the more icon ![]({{file name='more-search-web-ui.png'}} ?w=14) and then on **Delete** and confirm.
 
+## Trash Search
+
+Trash Search enables you to find all the documents deleted depending on your access rights. For more information, see [Trash Search]({{page page='browse/#trash-search'}}).
 
 ## Assets Tab
 
