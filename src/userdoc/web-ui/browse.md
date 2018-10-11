@@ -365,25 +365,19 @@ For notes, if you use the Edit form, only the manual versioning rules applied. S
 You can visualize differences between two versions of a document.
 
 1. Go to a versioned document.
-2. In the document action toolbar, click **Compare Version** {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Compare Versions
-    name: Compare-versions.png
-    1.1.3#icon#up_to_date
---}}
-![Compare Versions ](nx_asset://00a30c28-31a8-4a91-b7b1-b39f7c3eff22 ?w=20).
+2. In the document action toolbar, click **Compare Version** ![]({{file space='userdoc' name='compare-icon-web-ui.ng' page='icons-index'}}).
 3. Select versions you want to compare.
 Data that differ from one version to another are displayed.
 4. Click **View All Data** to display all data for both versions of a document.
 Data that differ from one version to another are highlighted.
-
 
 ### Nuxeo Drive Versioning Policy
 
 {{! multiexcerpt name='drive-versioning-policy'}}
 When you edit a document, either from your Nuxeo Drive folder or using the online editing, a new version is automatically created on the Platform and the version number is updated:
 
-*   If you are not the last contributor of the document
-*   Or if your last edit is more than an hour ago
+- If you are not the last contributor of the document
+- Or if your last edit is more than an hour ago
 
 Then, if your document's version was 1.0 before modification for instance, it automatically becomes 1.1+ after you edited it from the Nuxeo Drive folder and the 1.1 is archived as it is created. Otherwise, a simple modification is done on the document and logged in the document's History.
 
@@ -393,26 +387,17 @@ See the page [How to Customize Nuxeo Drive Versioning Policy]({{page space='NXDO
 ## Document Actions
 
 The document actions toolbar displays all the actions available for the current document.
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Document Action Toolbar
-    name: document-action-toolbar.png
-    1.1.3#screenshot#up_to_date
---}}
-![Document Action Toolbar](nx_asset://3f4d1465-5072-448b-b3b5-08f982925354 ?w=600,border=true)
+![]({{file name='document-action-toolbar.png'}} ?w=600,border=true)
 
 ### Compare
 
 #### Compare Versions of a Document
 
-When you have several versions of a document, click **Compare Version**  {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Compare Versions
-    name: Compare-versions.png
-    1.1.3#icon#up_to_date
---}}
-![Compare Versions](nx_asset://00a30c28-31a8-4a91-b7b1-b39f7c3eff22 ?w=20)to see the differences between the document versions.
+When you have several versions of a document, click **Compare Version** ![]({{file space='userdoc' page='icons-index' name='compare-versions-web-ui.png'}} ?w=20) to see the differences between the document versions.
 
 {{#> callout type='info'}}
-By default, you will only see the data that differ from one version to another. Check View all data to see all the properties of the documents.
+By default, you will only see the data that differ from one version to another.</br>
+Enable **View All Data** to see all the properties of the documents.
 {{/callout}}
 
 #### Compare Metadata between Documents
@@ -420,18 +405,11 @@ By default, you will only see the data that differ from one version to another. 
 You can visualize metadata differences between two documents.
 
 1. In a folder, select documents you want to compare.
-2. Click **Compare** {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Compare
-    name: Compare.png
-    1.1.3#icon#up_to_date
---}}
-![Compare](nx_asset://518ac85c-ba2f-4566-8637-f4b1029b0646 ?w=20).
-3. To choose other selected documents, scroll through the list.
-By default, you will only see the data that differ from one document to another.
-4. Click **View All Data** to display all data for both documents.
-Data that differ from one document to another are highlighted.
-
-
+2. Click **Compare** ![]({{file space='userdoc' page='icons-index' name='compare-icon-web-ui.png'}} ?w=20).
+3. To choose other selected documents, scroll through the drop-down list.</br>
+   By default, you will only see the data that differ from one document to another.
+4. Click **View All Data** to display all data for both documents.</br>
+   Data that differ from one document to another are highlighted.
 
 ### Share a Document
 
