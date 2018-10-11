@@ -374,9 +374,9 @@ You can visualize differences between two versions of a document.
 
 1. Go to a versioned document.
 2. In the document action toolbar, click **Compare Version** ![]({{file space='userdoc' name='compare-icon-web-ui.ng' page='icons-index'}}).
-3. Select versions you want to compare.
+3. Select versions you want to compare.</br>
 Data that differ from one version to another are displayed.
-4. Click **View All Data** to display all data for both versions of a document.
+4. Click **View All Data** to display all data for both versions of a document.</br>
 Data that differ from one version to another are highlighted.
 
 ### Nuxeo Drive Versioning Policy
@@ -408,7 +408,7 @@ By default, you will only see the data that differ from one version to another.<
 Enable **View All Data** to see all the properties of the documents.
 {{/callout}}
 
-#### Compare Metadata between Documents
+#### Compare Metadata Between Documents
 
 You can visualize metadata differences between two documents.
 
