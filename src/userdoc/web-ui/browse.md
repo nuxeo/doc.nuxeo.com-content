@@ -156,26 +156,34 @@ Although properties are not mandatory, filling them in will make your documents 
 2. Edit the metadata that you want.
 3. Once it is done, click on **SAVE**
 
+### Drag and Drop
+
+In a content view, drag and drop is available to move documents from a folderish document to another (like workspaces, folders, or collections).
+
+1. From your folder view, select the document you want to move.
+2. Click on selected documents and drag them.
+3. Drop them on the folderish document you want.
+
 ## Exporting Content
 Users can export documents on their computer. It is possible to export:
 
-*   One document at a time
-*   An entire workspace, folder, section
+- One document at a time
+- An entire workspace, folder, section
 
 ### Exports Available
 
 #### From a Folder
 
-* The **XML export** is a low level export that enables users to either get the XML definition of the document or get a folder for each exported document that contains:
-    *   document.xml file holding the document's metadata and various information such as the applied access rights,
-    *   A .blob file that holds the binary content of the document. This blob is referenced in the document.xml file;
-* The **ZIP export** enables you to export a whole workspace, section or folder in a zipped XML folder. This export is only available on folderish documents.
+- The **XML export** is a low level export that enables users to either get the XML definition of the document or get a folder for each exported document that contains:
+    - document.xml file holding the document's metadata and various information such as the applied access rights,
+    - A .blob file that holds the binary content of the document. This blob is referenced in the document.xml file;
+- The **ZIP export** enables you to export a whole workspace, section or folder in a zipped XML folder. This export is only available on folderish documents.
 
 #### From a Document
 
-*   The **PDF export** enables you to get a PDF version of your document. This export is only available on non-folderish documents.
-*   The **ZIP Export** enables you to get a zipped folder with the documents' main attachment (.pdf, .doc files). This export is only available on non-folderish documents.
-*   The **XML export** is a low level export that enables users to either get the XML definition of the document or get a folder for each exported document that contains:
+- The **PDF export** enables you to get a PDF version of your document. This export is only available on non-folderish documents.
+- The **ZIP Export** enables you to get a zipped folder with the documents' main attachment (.pdf, .doc files). This export is only available on non-folderish documents.
+- The **XML export** is a low level export that enables users to either get the XML definition of the document or get a folder for each exported document that contains:
     *   document.xml file holding the document's metadata and various information such as the applied access rights,
     *   A .blob file that holds the binary content of the document. This blob is referenced in the document.xml file;
 
@@ -266,21 +274,23 @@ Users with "Manage everything" permissions can access the workspace's Trash and 
 
 **Delete Permanently**
 
-1. Go to the workspace that you want and click on the **Trash** view.</br>
-   The deleted document(s) of the workspace are displayed.
-1. Select the document(s) that you want to delete permanently
-1. Click on ![]({{file name='delete-permanently-web-ui.png' page='icons-index'}} ?w=18) in the action toolbar at the top of the page.</br>
-   Documents are permanently erased from the application. They cannot be restored.
+1. Go to the folder that you want and click on the **Trash** view.</br>
+   The deleted document(s) of the folders are displayed.
+1. Click on the document you want to delete permanently.
+  A top bar is displayed at the top of the document.
+1. In **View** click on ![]({{file name='delete-permanently-web-ui.png' page='icons-index'}} ?w=18) in the action toolbar at the top of the page.</br>
+
+{{#> callout type='warning' }}
+  Documents are permanently erased from the application. They cannot be restored.
+{{/callout}}
 
 ![]({{file name='delete-permanently-content-web-ui.png'}} ?w=600)
 
 **Empty Trash**
 
-1. Go to the workspace where you want to empty the trash
-1. Click on the **Trash** view
-1. Click on the **Empty the trash** button at the top right of the page. ![]({{file name='empty-trash-web-ui.png'}} ?w=70)</br>
-   All deleted documents are permanently erased from the application. They cannot be restored.
-
+1. Go to the workspace where you want to empty the trash.
+1. Click on the **Trash** view.
+1. Click on the **Empty the trash** button at the top right of the page. ![]({{file name='empty-trash-web-ui.png'}} ?w=70)
 
 ### Trash Search
 
@@ -363,25 +373,19 @@ For notes, if you use the Edit form, only the manual versioning rules applied. S
 You can visualize differences between two versions of a document.
 
 1. Go to a versioned document.
-2. In the document action toolbar, click **Compare Version** {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Compare Versions
-    name: Compare-versions.png
-    1.1.3#icon#up_to_date
---}}
-![Compare Versions ](nx_asset://00a30c28-31a8-4a91-b7b1-b39f7c3eff22 ?w=20).
-3. Select versions you want to compare.
+2. In the document action toolbar, click **Compare Version** ![]({{file space='userdoc' name='compare-icon-web-ui.ng' page='icons-index'}}).
+3. Select versions you want to compare.</br>
 Data that differ from one version to another are displayed.
-4. Click View All Data to display all data for both versions of a document.
+4. Click **View All Data** to display all data for both versions of a document.</br>
 Data that differ from one version to another are highlighted.
-
 
 ### Nuxeo Drive Versioning Policy
 
 {{! multiexcerpt name='drive-versioning-policy'}}
 When you edit a document, either from your Nuxeo Drive folder or using the online editing, a new version is automatically created on the Platform and the version number is updated:
 
-*   If you are not the last contributor of the document
-*   Or if your last edit is more than an hour ago
+- If you are not the last contributor of the document
+- Or if your last edit is more than an hour ago
 
 Then, if your document's version was 1.0 before modification for instance, it automatically becomes 1.1+ after you edited it from the Nuxeo Drive folder and the 1.1 is archived as it is created. Otherwise, a simple modification is done on the document and logged in the document's History.
 
@@ -391,28 +395,29 @@ See the page [How to Customize Nuxeo Drive Versioning Policy]({{page space='NXDO
 ## Document Actions
 
 The document actions toolbar displays all the actions available for the current document.
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Document Action Toolbar
-    name: document-action-toolbar.png
-    1.1.3#screenshot#up_to_date
---}}
-![Document Action Toolbar](nx_asset://3f4d1465-5072-448b-b3b5-08f982925354 ?w=600)
+![]({{file name='document-action-toolbar.png'}} ?w=600,border=true)
 
 ### Compare
 
-#### Compare Versions
+#### Compare Versions of a Document
 
-When you have several versions of a document, click **Compare Version** {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Compare Versions
-    name: Compare-versions.png
-    1.1.3#icon#up_to_date
---}}
-![Compare Versions ](nx_asset://00a30c28-31a8-4a91-b7b1-b39f7c3eff22 ?w=20) to see the differences between document versions.
+When you have several versions of a document, click **Compare Version** ![]({{file space='userdoc' page='icons-index' name='compare-versions-web-ui.png'}} ?w=20) to see the differences between the document versions.
 
 {{#> callout type='info'}}
-By default, you will only see the data that differ from one version to another. Check **View all data** to see all the properties of the documents.
+By default, you will only see the data that differ from one version to another.</br>
+Enable **View All Data** to see all the properties of the documents.
 {{/callout}}
 
+#### Compare Metadata Between Documents
+
+You can visualize metadata differences between two documents.
+
+1. In a folder, select documents you want to compare.
+2. Click **Compare** ![]({{file space='userdoc' page='icons-index' name='compare-icon-web-ui.png'}} ?w=20).
+3. To choose other selected documents, scroll through the drop-down list.</br>
+   By default, you will only see the data that differ from one document to another.
+4. Click **View All Data** to display all data for both documents.</br>
+   Data that differ from one document to another are highlighted.
 
 ### Share a Document
 
