@@ -617,12 +617,11 @@ The tables below use the following notation:
     <td colspan="1">
     [Nuxeo Diff](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff)<br/>
     [Nuxeo Diff Picture](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures)</br>
-    Metadata Diff (Default Distribution)</br>
-    Version Diff (Default Distribution)
+    Metadata Diff (Default Distribution)
     </td>
     <td>N/A</td>
     <td>&#10003;<br/>&#10003;</td>
-    <td>&#10003;<br/>LTS&nbsp;2019<br/>&#10003;<br/>&#10003;</td>
+    <td>&#10003;<br/>LTS&nbsp;2019<br/>&#10003;</td>
     <td colspan="1">
     [Nuxeo Diff Developer documentation]({{page page='nuxeo-diff'}})<br/>
     [Nuxeo Diff User documentation]({{page space='userdoc' page='nuxeo-diff'}})</br>
