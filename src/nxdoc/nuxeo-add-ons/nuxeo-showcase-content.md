@@ -6,12 +6,14 @@ review:
     status: ok
     comment: ''
 toc: true
-hidden: true
+labels:
+    - showcase-content
+    - addon
 tree_item_index: 2610
-
 ---
-
-The Nuxeo Showcase Content addon imports a set of showcase content (Office documents, images, videos) to get to know Nuxeo Platform.
+{{! excerpt}}
+The [Nuxeo Showcase Content](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-showcase-content) addon imports a set of showcase content (Office documents, images, videos) to get to know Nuxeo Platform.
+{{! /excerpt}}
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Showcase Content Example
@@ -20,10 +22,20 @@ The Nuxeo Showcase Content addon imports a set of showcase content (Office docum
 --}}
 ![Showcase Content Example](nx_asset://a63473cb-85ed-4222-8b95-cc0651584611 ?w=600,border=true)
 
-It provides you with :
-- Nuxeo resources: a set of banners, case studies and reports
-- Sample content: notes, PDF and Office documents, pictures, videos
-- A workspace to start create your content
+## Prerequisite
+
+- The [Digital Asset Management]({{page page='digital-asset-management-dam'}}) (DAM) addon must be installed.
+
+## Installation
+
+{{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
+
+## Functional Overview
+
+Once installed, 3 new folders are available on your instance:
+- **Nuxeo resources**: a set of banners, case studies and reports
+- **Sample content**: notes, PDF and Office documents, pictures and videos
+- An empty workspace to let you start creating your content
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Showcase Content
@@ -31,13 +43,4 @@ It provides you with :
     addins#screenshot#up_to_date
 --}}
 
-![Showcase Content ](nx_asset://cd6c3300-45bc-4640-a744-a85ecf0979c7 ?w=600,border=true)
-
-## Prerequisite
-The [Digital Asset Management]({{page page='digital-asset-management-dam'}}) (DAM) add-on must be installed.
-
-## Installation
-{{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
-
-## Configuration
-There is no additional configuration step required to start using the addon.
+![Showcase Content](nx_asset://cd6c3300-45bc-4640-a744-a85ecf0979c7 ?w=600,border=true)
