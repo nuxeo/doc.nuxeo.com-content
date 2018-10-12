@@ -37,7 +37,7 @@ A complete run typically finishes in a couple of minutes or less.
 
 ## How Does it Work?
 ### Launching Migration
-Steps below assume early access is activated on your project. If it's not yet, you can have a look at //TODO how to activate it.
+Steps below assume early access is activated on your project. If it's not yet, you can have a look at [how to activate it]({{page page="early-access-program"}}).
 
 1. Checkout the branch you want to migrate in `Source Control -> Branch Management` screen. If your project does not benefit from branch management, you can skip this step.
 2. Go to the `Configuration -> Migration Services` screen.
@@ -63,9 +63,9 @@ If your project does not benefit from branch management, any change made during 
 ### Where is the result?
 If your project benefits from branch management, result will be put in a dedicated branch. From there, you can easily [review the configuration]({{page page="how-to-review-nuxeo-studio-configuration"}}).
 
-If your project does not benefit from branch management, changes are merged in the master branch right away //TODO you may simply need to pull them.
+If your project does not benefit from branch management, changes are merged in the master branch right away.
 
-No configuration is deleted when the migration is run: we add more, some of it may be slightly updated (typically to put constraints expressed in your layouts only back at schema level as it's a good practice), but we don't remove anything. The JSF UI configuration can be hidden when you are ready to migrate, see the //TODO finalizing migration section.
+No configuration is deleted when the migration is run: we add more, some of it may be slightly updated (typically to put constraints expressed in your layouts only back at schema level as it's a good practice), but we don't remove anything. The JSF UI configuration can be hidden when you are ready to migrate, see the <a href="#finalizing-migration">finalizing migration</a> section.
 
 ## What is Migrated?
 - Document layouts
@@ -99,6 +99,7 @@ If your project benefits from branch management, you can go to the `Settings -> 
 
 If your project doesn't benefit from branch management, changes can be discarded by reverting to the tag made before the migration was triggered.
 
+<a name="#finalizing-migration"></a>
 ## How do I Remove JSF UI Configuration?
 If you are happy with the final result and want to finalize the migration to Web UI, in the branch used to create your release that will be used in production go to the `Settings -> Application Definition` page, remove the JSF UI dependency and save.
 
