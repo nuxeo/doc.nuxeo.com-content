@@ -62,15 +62,15 @@ A theme object looks like:
 }
 ```
 
-* **drawerBackgroundColor**: the background color of the drawer/side menu top part.
-* **drawerTextColor**: the text color of the drawer/side menu top part.
-* **drawerIconColor**: the icon color (for the initial) of the drawer/side menu top part.
-* **navBarBackgroundColor**: the main navigation bar color.
-* **navBarTextColor**: the main navigation bar text color.
-* **pageBackgroundColor**: the global page background color.
-* **sliderBackgroundColor**: the background color of the actions menu when sliding on a document in the list.
-* **actionColor**: the color of actions/links, such as menu actions, document title in listing, ...
-* **activeActionColor**: the color of an active action, such as the selected menu entry, ...
+- **drawerBackgroundColor**: the background color of the drawer/side menu top part.
+- **drawerTextColor**: the text color of the drawer/side menu top part.
+- **drawerIconColor**: the icon color (for the initial) of the drawer/side menu top part.
+- **navBarBackgroundColor**: the main navigation bar color.
+- **navBarTextColor**: the main navigation bar text color.
+- **pageBackgroundColor**: the global page background color.
+- **sliderBackgroundColor**: the background color of the actions menu when sliding on a document in the list.
+- **actionColor**: the color of actions/links, such as menu actions, document title in listing, ...
+- **activeActionColor**: the color of an active action, such as the selected menu entry, ...
 
 
 ## How to Configure the Themes

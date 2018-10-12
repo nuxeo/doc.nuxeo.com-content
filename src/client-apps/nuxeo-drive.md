@@ -766,19 +766,19 @@ Here are the different statuses of Nuxeo Drive:
 <th colspan="1">Status</th>
 </tr>
 <tr>
-<td colspan="1">![]({{file name='drive_offline.png' page='/nxdoc/nuxeo-drive'}})</td>
+<td colspan="1">![]({{file name='drive_offline.png' page='nuxeo-drive'}})</td>
 <td colspan="1">Synchronization is disabled (offline mode or suspended synchronization).</td>
 </tr>
 <tr>
-<td colspan="1">![]({{file name='drive_online.png' page='/nxdoc/nuxeo-drive'}})</td>
+<td colspan="1">![]({{file name='drive_online.png' page='nuxeo-drive'}})</td>
 <td colspan="1">Nuxeo Drive has successfully synchronized.</td>
 </tr>
 <tr>
-<td colspan="1">![]({{file name='drive_transferring.png' page='/nxdoc/nuxeo-drive'}})</td>
+<td colspan="1">![]({{file name='drive_transferring.png' page='nuxeo-drive'}})</td>
 <td colspan="1">Nuxeo Drive is synchronizing with the Nuxeo Platform.</td>
 </tr>
 <tr>
-<td colspan="1">![]({{file name='nuxeo_drive_systray_icon_stopping.png' page='/nxdoc/nuxeo-drive'}})</td>
+<td colspan="1">![]({{file name='nuxeo_drive_systray_icon_stopping.png' page='nuxeo-drive'}})</td>
 <td colspan="1">Your credentials are incorrect.</td>
 </tr>
 </tbody>
@@ -795,8 +795,8 @@ When you install Nuxeo Drive on your computer, it creates a "Nuxeo Drive" folder
 
 Quick access to this folder is possible at any time using the Nuxeo Drive icon:
 
-1.  Right-click on the icon ![]({{file name='drive_online.png' page='/nxdoc/nuxeo-drive'}}) (in the top menu bar on Mac OS X, in the system tray on Windows).
-2.  Click on the icon ![]({{file name='drive_open_drive_folder_icon.png' page='/nxdoc/nuxeo-drive'}}).
+1.  Right-click on the icon ![]({{file name='drive_online.png' page='nuxeo-drive'}}) (in the top menu bar on Mac OS X, in the system tray on Windows).
+2.  Click on the icon ![]({{file name='drive_open_drive_folder_icon.png' page='nuxeo-drive'}}).
     The Nuxeo Drive opens like any folder. You can now browse the Nuxeo synchronized folders from your desktop.
 
 ### {{> anchor 'synchronizing-workspaces-root'}}Marking Workspaces and Folders for Synchronization
@@ -820,14 +820,14 @@ The icon becomes ![]({{file name='drive_synced_under_root-webui.png' page='nuxeo
 
 {{{multiexcerpt 'drive-content-sync'}}}
 
-![]({{file name='drive-newtab-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=650,border=true)
+![]({{file name='drive-newtab-webui.png' page='nuxeo-drive'}} ?w=650,border=true)
 
 #### JSF UI
 
-To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive_unsynced.png' page='/nxdoc/nuxeo-drive'}}).
-The icon becomes green. Documents inside the synchronized space have an icon ![]({{file name='drive_synced_under_root.png' page='/nxdoc/nuxeo-drive'}}) and a Drive local edit icon ![]({{file name='drive_edit.png' page='/nxdoc/nuxeo-drive'}}).
+To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive_unsynced.png' page='nuxeo-drive'}}).
+The icon becomes green. Documents inside the synchronized space have an icon ![]({{file name='drive_synced_under_root.png' page='nuxeo-drive'}}) and a Drive local edit icon ![]({{file name='drive_edit.png' page='nuxeo-drive'}}).
 
-![]({{file name='drive-synchronise-icon.png' page='/nxdoc/nuxeo-drive'}} ?w=650,border=true)
+![]({{file name='drive-synchronise-icon.png' page='nuxeo-drive'}} ?w=650,border=true)
 
 {{! multiexcerpt name='drive-content-sync'}}
 The folder and all its content is now available in your local Nuxeo Drive folder. You can now create, edit, delete documents from your computer. If you only have Read permissions, documents are in read-only mode.
@@ -835,7 +835,7 @@ The folder and all its content is now available in your local Nuxeo Drive folder
 On your Home Nuxeo Drive tab, the space is displayed in the "Synchronization root" section. This is where you can see all the spaces you have synchronized with Nuxeo Drive.
 {{! /multiexcerpt}}
 
-![]({{file name='drive-newtab.png' page='/nxdoc/nuxeo-drive'}} ?w=650,border=true)
+![]({{file name='drive-newtab.png' page='nuxeo-drive'}} ?w=650,border=true)
 
 
 ### Suspending Synchronization
@@ -845,14 +845,14 @@ If a synchronized folder holds big document or a large amount of documents, sync
 **To suspend synchronization:**
 
 1.  Click on the Drive icon in the system tray.
-2.  Click on the icon ![]({{file name='drive-settings-icon.png' page='/nxdoc/nuxeo-drive'}}) and click on the **Suspend** menu item.
+2.  Click on the icon ![]({{file name='drive-settings-icon.png' page='nuxeo-drive'}}) and click on the **Suspend** menu item.
     If Nuxeo Drive is currently synchronizing, synchronization is completed before suspending Nuxeo Drive.
-    The Drive icon becomes grey as long as synchronization is suspended: ![]({{file name='drive_offline.png' page='/nxdoc/nuxeo-drive'}}).
+    The Drive icon becomes grey as long as synchronization is suspended: ![]({{file name='drive_offline.png' page='nuxeo-drive'}}).
 
 **To resume synchronization:**
 
-1.  Click on the Drive icon ![]({{file name='drive_offline.png' page='/nxdoc/nuxeo-drive'}}) in the system tray.
-2.  Click on the icon ![]({{file name='drive-settings-icon.png' page='/nxdoc/nuxeo-drive'}}) and click on the **Resume** menu item.
+1.  Click on the Drive icon ![]({{file name='drive_offline.png' page='nuxeo-drive'}}) in the system tray.
+2.  Click on the icon ![]({{file name='drive-settings-icon.png' page='nuxeo-drive'}}) and click on the **Resume** menu item.
     The Drive icon becomes blue again and synchronization is available again.
 
 ### Unsynchronizing a Folder
@@ -878,16 +878,16 @@ Please note that when synchronizing a significant amount of data, it is highly i
 
 #### Web UI
 
-Unsynchronizing a folder is only possible from the Nuxeo Platform web interface. You can only unsynchronize the whole synchronized space, i.e. from the synchronization root ![]({{file name='drive_synced_under_root-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
+Unsynchronizing a folder is only possible from the Nuxeo Platform web interface. You can only unsynchronize the whole synchronized space, i.e. from the synchronization root ![]({{file name='drive_synced_under_root-webui.png' page='nuxeo-drive'}} ?w=20).
 
-To unsynchronize a space, in the Nuxeo Platform interface, click on the icon ![]({{file name='drive_synced_under_root-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
+To unsynchronize a space, in the Nuxeo Platform interface, click on the icon ![]({{file name='drive_synced_under_root-webui.png' page='nuxeo-drive'}} ?w=20).
 The icon becomes gray, indicating that the space is no longer synchronized. The folder and its content is no longer available from your Nuxeo Drive folder and from the Home **Nuxeo Drive** tab.
 
 #### JSF UI
 
-Unsynchronizing a folder is only possible from the Nuxeo Platform web interface. You can only unsynchronize the whole synchronized space, i.e. from the synchronization root ![]({{file name='drive_synced.png' page='/nxdoc/nuxeo-drive'}}): it is not possible to unsynchronize a child ![]({{file name='drive_synced_under_root.png' page='/nxdoc/nuxeo-drive'}}). Clicking on the icon ![]({{file name='drive_synced_under_root.png' page='/nxdoc/nuxeo-drive'}}) brings you back on the space from which the synchronization is done.
+Unsynchronizing a folder is only possible from the Nuxeo Platform web interface. You can only unsynchronize the whole synchronized space, i.e. from the synchronization root ![]({{file name='drive_synced.png' page='nuxeo-drive'}}): it is not possible to unsynchronize a child ![]({{file name='drive_synced_under_root.png' page='nuxeo-drive'}}). Clicking on the icon ![]({{file name='drive_synced_under_root.png' page='nuxeo-drive'}}) brings you back on the space from which the synchronization is done.
 
-To unsynchronize a space, in the Nuxeo Platform interface, click on the icon ![]({{file name='drive_synced.png' page='/nxdoc/nuxeo-drive'}}).
+To unsynchronize a space, in the Nuxeo Platform interface, click on the icon ![]({{file name='drive_synced.png' page='nuxeo-drive'}}).
 The icon becomes gray, indicating that the space is no longer synchronized. The folder and its content is no longer available from your Nuxeo Drive folder and from the Home **Nuxeo Drive** tab.
 
 
@@ -933,10 +933,10 @@ It can happen that a document is edited by several users locally at more or less
 
 Clicking on the conflict message shows you the details and how to resolve the conflicts.
 
-*   **Use local**: The document in your Nuxeo Drive folder overrides the document on the server.
-*   **Use remote**: The document on the server is downloaded in your Nuxeo Drive folder and overrides your local version.
+- **Use local**: The document in your Nuxeo Drive folder overrides the document on the server.
+- **Use remote**: The document on the server is downloaded in your Nuxeo Drive folder and overrides your local version.
 
-![]({{file name='drive-resolve-conflicts.png' page='/nxdoc/nuxeo-drive'}} ?w=350,border=true)
+![]({{file name='drive-resolve-conflicts.png' page='nuxeo-drive'}} ?w=350,border=true)
 
 ### Online Editing with Direct Edit {{> anchor 'online-editing'}}
 
@@ -944,9 +944,9 @@ Direct Edit enables you to edit any of your document's content from their Summar
 
 **Direct Edit icon**
 
-Web UI: ![]({{file name='drive_edit-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20)
+Web UI: ![]({{file name='drive_edit-webui.png' page='nuxeo-drive'}} ?w=20)
 
-JSF UI: ![]({{file name='drive_edit.png' page='/nxdoc/nuxeo-drive'}})
+JSF UI: ![]({{file name='drive_edit.png' page='nuxeo-drive'}})
 
 To edit a document locally from the web interface:
 
@@ -967,8 +967,8 @@ To edit a document locally from the web interface:
 
 **Direct Edit Limitations**
 
-*   Prior to Nuxeo Platform 6.0, online editing is available only in synchronized folders.
-*   Under Windows, nothing happens if you click on the **Direct Edit icon** without having Drive installed and running on your computer.
+- Prior to Nuxeo Platform 6.0, online editing is available only in synchronized folders.
+- Under Windows, nothing happens if you click on the **Direct Edit icon** without having Drive installed and running on your computer.
 
 ### Renaming Documents
 
@@ -990,9 +990,9 @@ Metadata Edit allows you to edit the metadata of your document from your desktop
 2.  Right-click on the name of the document that you want to edit.
 3.  Click on Nuxeo Drive.
     A window pops up where you can also locked the document, get the permanent link or add your document to your favorites.
-    ![]({{file name='Drive_metadata_view.png' page='/nxdoc/nuxeo-drive'}} ?w=350,border=true)
+    ![]({{file name='Drive_metadata_view.png' page='nuxeo-drive'}} ?w=350,border=true)
 4.  Click on **Edit** and modify your document,
-    ![]({{file name='Drive_metadata_edit.png' page='/nxdoc/nuxeo-drive'}} ?w=350,border=true)
+    ![]({{file name='Drive_metadata_edit.png' page='nuxeo-drive'}} ?w=350,border=true)
 5.  Click on **Save.**
 
 ### Moving Documents
@@ -1001,8 +1001,8 @@ You can move documents either from your local Nuxeo Drive folder or [from the Pl
 
 When you move a document from a Drive-synchronized folder to an unsynchronized one, the behavior is different if you move the document from the Platform or from your local folder.
 
-*   If you move the document from the Platform, the document is not available anymore in your local folder.
-*   If you move the document from your local folder, the document is deleted on the Platform and moved into the folder's trash. In the document's history, the deletion is tagged with the Nuxeo Drive category.
+- If you move the document from the Platform, the document is not available anymore in your local folder.
+- If you move the document from your local folder, the document is deleted on the Platform and moved into the folder's trash. In the document's history, the deletion is tagged with the Nuxeo Drive category.
 
 ### Deleting Documents
 
@@ -1019,8 +1019,8 @@ To revoke an authentication token:
 1.  On the Nuxeo Platform, click on the **Nuxeo Drive** tab (see locations above).
 2.  Click on the **Revoke** button of the token to be revoked. Several elements are displayed to help you identify the right token:
 
-    *   the device description: whether it is a Mac OS client, Windows client, Linux client;
-    *   the creation time: date and time at which the token was created, i.e. the date and time at which you provided it with your credentials.
+    - the device description: whether it is a Mac OS client, Windows client, Linux client;
+    - the creation time: date and time at which the token was created, i.e. the date and time at which you provided it with your credentials.
 3.  In the window that pops up, click on **OK** to confirm.
     The Nuxeo Drive client cannot communicate with the Nuxeo Platform and switches to offline. When you click on the Drive icon, it says "Update credentials (required)".
 

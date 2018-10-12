@@ -14,6 +14,7 @@ tree_item_index: 100
 ---
 
 ## Requirements
+
 To be able to synchronize folders on your computer, you need to install the Nuxeo Drive client on your computer.
 We provide OS-specific installers for macOS and Windows, available from the Nuxeo Drive tab of the Home.
 {{#> callout type='note' }}
@@ -232,18 +233,18 @@ You can use Nuxeo Drive to synchronize content from several Nuxeo Platform appli
 
 When you add a new account you need to provide the following information:
 
-*   **Name**: Give a name to the Nuxeo Drive account you are setting.
+- **Name**: Give a name to the Nuxeo Drive account you are setting.
     This is helpful when you use Nuxeo Drive with several applications.
-*   **Folder**: Select where you want your Nuxeo Drive folder to be created.
-*   **URL**: Type the URL of your Nuxeo application, with the `/nuxeo` suffix (`http://NUXEO_SERVER/nuxeo` for instance).
-*   **Username**: Type your username to the Nuxeo Platform application.
-*   **Password**: Type your password to the Nuxeo Platform application.
+- **Folder**: Select where you want your Nuxeo Drive folder to be created.
+- **URL**: Type the URL of your Nuxeo application, with the `/nuxeo` suffix (`http://NUXEO_SERVER/nuxeo` for instance).
+- **Username**: Type your username to the Nuxeo Platform application.
+- **Password**: Type your password to the Nuxeo Platform application.
 
 The creation of a new account triggers the following actions:
 
-*   A Nuxeo Drive folder is created at the location you chose (see section [Accessing the Nuxeo Drive Folder](#access-local-drive-folder)).
-*   Nuxeo Drive starts synchronizing the Nuxeo workspaces or folders you [indicated as synchronized](#synchronizing-workspaces-root) in the Nuxeo Platform. It will automatically update content when there is a modification on the server.
-*   In the **Nuxeo Drive** tab in your **Home**, an authentication token corresponding to the computer you are synchronizing from is displayed. The list of synchronized folders is displayed in the **Synchronization roots** section of the tab.
+- A Nuxeo Drive folder is created at the location you chose (see section [Accessing the Nuxeo Drive Folder](#access-local-drive-folder)).
+- Nuxeo Drive starts synchronizing the Nuxeo workspaces or folders you [indicated as synchronized](#synchronizing-workspaces-root) in the Nuxeo Platform. It will automatically update content when there is a modification on the server.
+- In the **Nuxeo Drive** tab in your **Home**, an authentication token corresponding to the computer you are synchronizing from is displayed. The list of synchronized folders is displayed in the **Synchronization roots** section of the tab.
     ![]({{file name='drive-newtab.png'}} ?w=650,border=true)
 
 #### Deleting an Account
@@ -267,10 +268,10 @@ By default, Nuxeo Drive is available in English and in French.
 
 Nuxeo Drive has different parameters that you can set up through (sorted by priority):
 
-*   Via the REST API endpoint `/drive/configuration` served by the server (since [NXP-22946](https://jira.nuxeo.com/browse/NXP-22946) and Nuxeo Drive 3.0.0);
-*   A `$HOME/.nuxeo-drive/config.ini` file;
-*   With a registry key inside `HKEY_LOCAL_MACHINE\Software\Nuxeo\Drive` (since Nuxeo Drive 2.1.331, Windows only);
-*   The command line;
+- Via the REST API endpoint `/drive/configuration` served by the server (since [NXP-22946](https://jira.nuxeo.com/browse/NXP-22946) and Nuxeo Drive 3.0.0);
+- A `$HOME/.nuxeo-drive/config.ini` file;
+- With a registry key inside `HKEY_LOCAL_MACHINE\Software\Nuxeo\Drive` (since Nuxeo Drive 2.1.331, Windows only);
+- The command line;
 
 <div class="table-scroll">
 <table class="hover">
