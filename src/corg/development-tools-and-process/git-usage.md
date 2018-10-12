@@ -1212,6 +1212,8 @@ The following commands are very useful for dealing with EOL: `file`, `unix2dos` 
 
 It is possible to tell Git how to convert binary data to a text format that can be compared via the normal diff.
 
+#### PNG and DOCX
+
 Here is a sample configuration for `.docx` and `.png` files (from [http://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes](http://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes)):
 
 1.  Install [`docx2txt`](http://docx2txt.sourceforge.net/) and `exiftool`
@@ -1332,6 +1334,13 @@ index a28e89d..b38c0e0 100644
 ```
 
 {{/panel}}
+
+#### ZIP
+
+    ```
+    git config --global diff.zip.textconv "unzip -c -a"
+    echo "*.zip diff=zip" >> .gitattributes
+    ```
 
 ### Git Large File Storage
 
