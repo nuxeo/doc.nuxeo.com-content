@@ -769,7 +769,7 @@ Nuxeo Showcase Content<br/>
 Public
 </td>
 <td colspan="1">
-&nbsp;
+[Documentation]({{page version='' space='' page='nuxeo-showcase-content'}})
 </td>
 <td colspan="1">
 [Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-showcase-content?version=1.3.1)
