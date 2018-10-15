@@ -64,16 +64,21 @@ If you want to contribute to the default user profile, you can override the `use
 
 In the Nuxeo Platform **user** infos are displayed as follow:
 
-![]({{file name='user_profile.png' space='userdoc' page='nuxeo-platform-concepts'}} ?w=600,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/How to add new fields to the user profile or group profile
+    name: Screenshot 2018-10-10 at 11.02.26.png
+    1.1.3#screenshot#up_to_date
+--}}
+![How to add new fields to the user profile or group profile](nx_asset://ebe8582d-f07a-4c21-83a0-efada9fd3df9 ?w=650,border=true)
 
-{{#> callout type='note' heading='Note'}}
+{{#> callout type='note'}}
 Whenever you contribute to a schema, do not forget the inverse reference field, `groups` in the `user` profile for example.
 {{/callout}}
-
-{{#> callout type='note' heading='Note'}}
+<!--
+{{#> callout type='note'}}
 Following to your custom updates, you might want to [update the user profile interface](https://nuxeo.quandora.com/frontend/q/e701dcb9459f48479d8923295ed16ab1/How-to-override-nuxeo-user-profile-and-nuxeo-user-management-elements)
 {{/callout}}
-
+-->
 The customisation of the groups is similar to the users.
 
 The default **group** schema definition:
@@ -111,11 +116,11 @@ The `group` schema can be extended aswell using an extension.
 </extension>
 ```
 
-{{#> callout type='warning' heading='Warning'}}
+{{#> callout type='warning'}}
 Make sure you have the mandatory fields available for **references** and **inverse references** for the group hierarchy.
 {{/callout}}
 
-{{#> callout type='tip' heading='Tip'}}
+{{#> callout type='tip'}}
 In a more friendly way, you can add your own schemas using [Nuxeo Studio]({{page space='studio' page='schemas'}}).
 {{/callout}}
 
