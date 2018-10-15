@@ -27,7 +27,7 @@ The Profile tab enables the user to edit his personal information and his passwo
 ## Cloud Services
 
 The Cloud Services tab enables you to access cloud services accounts connected to your Nuxeo account. You will be able to see all the services connected along with Nuxeo login, services login, creation date and shared access rights.
-For more information about Cloud Services, read the [following documentation]({{page page='administration/#cloud-services'}}).
+For more information about Cloud Services, read the [following documentation]({{page page='administration'}}#cloud-services).
 
 ## Themes
 
