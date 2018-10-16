@@ -154,6 +154,7 @@ Edge, Firefox, and Chrome are called “evergreen browsers”: they are automati
 Nevertheless, Nuxeo is committed to using the latest supported version of the Polymer 2.X framework, provided by Google to the community, when it helps fixing bugs, especially against evergreen browsers.
 {{! /multiexcerpt}}
 
+
 {{! multiexcerpt name='webui-functional-overview'}}
 ## Functional Overview
 
@@ -202,6 +203,10 @@ This new pattern allows to start browsing without changing the context of work.
 **Expired Queue:** Queue displaying expired documents
 
 </td></tr><tr><td colspan="1">![]({{file name='tasks.png'}})</td><td colspan="1">
+
+**Assets:**  Search multimedia files (pictures, audio and video). Requires DAM add-on installation.
+
+</td></tr><tr><td colspan="1">![]({{file name='assets.png'}})</td><td colspan="1">
 
 **Tasks:** Shows the list of pending workflow tasks
 
@@ -260,7 +265,6 @@ A create button ![]({{file name='create_button.png'}} ?w=20) is also permanently
 
 
 {{! /multiexcerpt}}
-
 ## Technical Overview
 
 Nuxeo Web UI has been built with simplicity and composability in mind. Nuxeo is a content application platform and our goal is to provide tools and components for you to build your own application. With Nuxeo Web UI we wanted to review our approach, make it simpler so anyone familiar with web development couple easily customize it or even just take is as an example of what can be achieved and build their own.

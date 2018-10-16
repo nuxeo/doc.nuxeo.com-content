@@ -2,13 +2,12 @@
 title: Favorites
 review:
     comment: ''
-    date: '2017-01-26'
+    date: '2018-10-15'
     status: ok
 description: null
 toc: true
 labels:
     - favorites
-    - content-review-lts2017
 tree_item_index: 400
 
 ---
@@ -26,7 +25,7 @@ The list of documents bookmarked as favorites is available:
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='bookmarking-favorites-web-ui'}}
-Bookmarking documents in your favorites can be done like when you add documents to a [collection]({{page version='' space='userdoc' page='collections-web-ui'}}) and selecting the Favorites collection, or using the Favorites icon ![]({{file name='favorites-icon_web-ui.png' page='icons-index'}} ?w=18) from the document itself.
+Bookmarking documents in your favorites can be done similarly to adding documents to a [collection]({{page version='' space='userdoc' page='collections-web-ui'}}) and selecting the Favorites collection, or using the Favorites icon ![]({{file name='favorites-icon_web-ui.png' page='icons-index'}} ?w=18) from the document itself.
 
 Once the document is added to your favorites, it will be available in the dashboard and in the Favorites tab.
 {{! /multiexcerpt}}

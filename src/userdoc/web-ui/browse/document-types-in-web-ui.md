@@ -3,12 +3,11 @@ title: Document Types in Web UI
 description: 'The Nuxeo Platform offers different document types such as workspaces, files, notes, pictures, etc.'
 review:
     comment: ''
-    date: '2017-01-04'
+    date: '2018-10-15'
     status: ok
 toc: true
 labels:
     - history
-    - content-review-lts2017
 tree_item_index: 100
 
 ---
@@ -136,7 +135,9 @@ For more information about picture document, take a look to the [Digital Asset M
 ### Video
 
 {{! multiexcerpt name='definition-video'}}
-Video is a document types dedicated to the management of videos files. It provides the following specific features: A player to view the video from the application, a storyboard to navigate in the video and alternative video formats.
+Video is a document type dedicated to the management of videos files. It provides the following specific features:
+- A player to view the video from the application
+- A storyboard to navigate in the video and alternative video formats.
 
 ![]({{file name='video_document_type-webui.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
 
@@ -145,7 +146,7 @@ For more information about video document, take a look to the [Digital Asset Man
 
 ### Audio
 
-Audio is a document types dedicated to audio files management. It provides a player from the document View to listen to it from the application.
+Audio is a document type dedicated to audio files management. It provides a player from the document View to listen to it from the application.
 
 Audio documents can be [created and edited]({{page page='browse'}}#editing-content) like any other document type. They don't have any specific tab or action available.
 

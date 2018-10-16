@@ -2,7 +2,7 @@
 title: Tasks
 review:
     comment: ''
-    date: '2017-01-04'
+    date: '2018-10-15'
     status: ok
 labels:
     - workflow
@@ -14,7 +14,7 @@ description: Web UI User Documentation about Workflows
 ---
 All the documents evolve according to a defined lifecycle. The default lifecycle is composed of the following states: Project, Approved, Obsolete and Deleted. There are different ways to make documents evolve through this lifecycle. One of them is to use a workflow.
 
-Users who are involved in workflows are alerted by email and can have a synthetic view of all their pending tasks on documents in their [dashboard]({{page page='browse'}}#dashboard) or on the **Task** tab. The documents they have to review are listed there.
+Users involved in workflows are alerted by email and can have a synthetic view of all their pending tasks on documents in their [dashboard]({{page page='browse'}}#dashboard) or on the **Task** tab. The documents they have to review are listed there.
 
 {{{multiexcerpt 'default-validation-workflows' page='NXDOC:Workflow'}}}
 
@@ -30,11 +30,11 @@ You need to have editing or management permissions to start a workflow on a docu
 
 1. Go on the document that you want to review.
 2. Click on the icon&nbsp;![]({{file name='workflow_web-ui.png' page='icons-index'}}).
-2. On the pop-up select the **Serial document review** from the drop down list and click on **Start**.<br/>
+2. On the pop-up, select the **Serial document review** from the drop down list and click on **Start**.<br/>
     Two info bars are displayed at the top of the document to inform that a process has been started on this document and that you have a task to process. Clicking the **View Graph** button displays the workflow route in a pop-up window.<br/>
     ![]({{file name='process-serial-review-web-ui.png'}} ?w=500,border=true)
 3. Click on the **Process** button.<br/>
-    You are displayed the task view of the document, that shows:
+    The task view of the document displays:
     - the content of the document
     - the document attachments
     - the task form
@@ -48,11 +48,11 @@ You need to have editing or management permissions to start a workflow on a docu
 
 1. Go on the document that you want to review.
 2. Click on the icon&nbsp;![]({{file name='workflow_web-ui.png' page='icons-index'}}).
-2. On the pop-up select the **Parallel document review** from the drop down list and click on **Start**.<br/>
+2. On the pop-up, select the **Parallel document review** from the drop down list and click on **Start**.<br/>
     Two info bars are displayed at the top of the document to inform that a process has been started on this document and that you have a task to process. Clicking the **View Graph** button displays the workflow route in a pop-up window.<br/>
     ![]({{file name='process-parallel-review-web-ui.png'}} ?w=500,border=true)
 3. Click on the **Process** button. <br/>
-    You are displayed the task view of the document, that shows:
+    The task view of the document displays:
     - the content of the document
     - the document attachments
     - the task form
@@ -71,7 +71,7 @@ You need to have editing or management permissions to start a workflow on a docu
 
 Once the workflow has been started, users added on the workflow's roadmap can review the document and approve or reject it.
 
-When they have a task on a document, users are displayed it on their [dashboard]({{page page='browse#dashboard'}}) in the **Tasks** gadget and in the **Task** tab.
+When users have a task on a document, it displays on their [dashboard]({{page page='browse#dashboard'}}) in the **Tasks** gadget and in the **Task** tab.
 
 ![]({{file name='task-menu-web-ui.png'}} ?w=300,border=true)
 
@@ -111,9 +111,9 @@ After the workflow initiator has started the parallel workflow, two steps need t
     ![]({{file name='task-menu-web-ui.png'}} ?w=300,border=true)
 2. Click on the task that you want to process. The document is displayed and a Task resolution section is displayed on the side menu.
 3. Click on one of the buttons to provide your opinion on the document validation:
-    - **Approve**: you agree with the document being approved;
-    - **Reject**: you think that the document is not ready to be approved;
-    - **N/A**: you are not concerned by the document or don't have an opinion about its validation.
+    - **Approve**: you agree with the document being approved
+    - **Reject**: you think that the document is not ready to be approved
+    - **N/A**: you are not concerned by the document or don't have an opinion about its validation
 
     ![]({{file name='parallel-review-web-ui.png'}} ?w=300,border=true)
 
