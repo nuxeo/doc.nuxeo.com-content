@@ -19,17 +19,20 @@ toc: true
 
 ---
 
-WORK IN PROGRESS
-
-Since the version 1.13.0 on iOS and 1.11.0 on Android, workflows defined from studio can be processed by users from the mobile application. 
+Since the version 1.13.0 on iOS and 1.11.0 on Android, workflows defined in studio can be processed by users from the mobile application. 
 
 To enable the processing of tasks from mobile, there is an additional step to this configuration, to define the layout of these tasks on mobile devices : 
 
 ## Prerequesites
 
-A task layout is defined Studio/Designer. For this how to, we assume that the workflow described through this tutorial [webui workflow tasks tutorial]({{page space='USERDOC' page='workflows'}}) is created.
+A task layout is defined Studio/Designer. For this how to, we assume that the workflow described through this tutorial [webui workflow tasks tutorial]({{page space='STUDIO' page='web-ui-workflow-tasks'}}) is created :
 
-TODO : Add image of task layout
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Mobile/mobile_workflows_WebUI_start
+    name: mobile_WF_webui_layout.png
+    1.13#screenshot#up_to_date
+--}}
+![mobile_workflows_WebUI_start](nx_asset://bf4f6004-b61e-4e48-9042-21451f163579 ?w=400)
 
 ## Layout Format
 
@@ -63,9 +66,16 @@ The list of types is detailed below with an example.
 ## Steps
 
 ### Add a JSON resource
-In the in the **Resources** tab of the Designer, tab, click on the workflow and click on “create” to add an empty file with the name of the related task and the json format :
+In the **Resources** tab of the Designer, tab, click on the workflow and click on “create” to add an empty file with the name of the related task and the json format :
 
-TODO : screenshot 2
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Mobile/HOW_TO_workflows_studio_create_json
+    name: HOW_TO_workflows_studio_create_json.png
+    1.13#screenshot#up_to_date
+--}}
+![HOW_TO_workflows_studio_create_json](nx_asset://ae86da20-cd15-4327-b2b6-a89b4c081f48 ?w=400)
+
+
 
 Note that the name of this file should match the task .html file name.
 
@@ -98,60 +108,54 @@ Add the following content to this file to enable the task to display the directo
 Save then deploy the package.
 
 ### Test your configuration on mobile
-Open Nuxeo Mobile app and set your local url. Note : to get this url you can use this command :
-
-```shell
-ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'
-``` 
-
-and append the port (ex : 172.16.32.75:8080)
+Open Nuxeo Mobile app and set your local url. (can be found on ip tools according to your OS. ex : 172.16.32.75:8080)
 
 Login as administrator ; Assuming you created a document of type “contract” (again, the previous tutorial should be completed), go to this document on mobile and click on the overflow button > start process.
 
-A task is affected to the Administrator user. Display this task layout : it should look likes this :
+A task is affected to the Administrator user. When opening this task, it should look likes this :
 
-TODO : screenshot 3 et 4
-
-## Exhaustive task layout example
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Mobile/HOW_TO_workflows_task_result
+    name: HOW_TO_workflows_task_result.png
+    1.13#screenshot#up_to_date
+--}}
+![HOW_TO_workflows_task_result](nx_asset://5c41d39e-45bd-4272-aa46-58113d4dd1f6 ?w=500)
 
 ## Properties list 
 
 Properties can be added depending on the task type :
 
-
-### For every tasks type : 
+#### For every tasks type
 ```json
 “readonly”:[true/false]
 ```
-
 Used to display informations without letting the user change its value.
-
-### For any of the following tasks : [ user, group, usergroup, directory, document] 
 
 ```json
 “required” : [true, false] 
 ```
-
 the “required” properties makes the task label appended with an asterisk (*) and requires this field to be filled for the task to be completed.
+
+#### For any of tasks user, group, usergroup, directory, document
 
 ```json
 “multivalued” : [true, false] 
 ```
-
 If set to true, the user can choose more than one document, user or value
+
 
 ```json
 “selectedTitle”: string
 ```
-
 Allows to define the selection screen title
 
+
 ```json
-“Type” : [suggest, suggestAll, select]
+“type” : [suggest, suggestAll, select]
 ```
 - For a simple selection (without search capabilities) the “select” type will make this component a selection switch.
-- suggestAll : ?
-- suggest :  ?
+- suggest :  Alllows to search a user, group, etc.
+- suggestAll : Same as suggest but initially displays the whole set of entries.
 
 ```json
 “suggestionPlaceholder”: string
@@ -159,9 +163,14 @@ Allows to define the selection screen title
 Enable to customize the placeholder visible in the search bar
 
 
-### For type “directory” :
-directoryName
-Type (suggest, suggestAll)
+#### For directory type
+```json
+"directoryName" : string
+```
+
+```json
+“type” : [suggest, suggestAll]
+```
 
 
 ## Exhaustive task layout example
@@ -247,7 +256,7 @@ The following json :
                },
                {
                    "label": "Directory with selectable vocabulary",
-                   "field": "type",
+                   "field": "contract_type",
                    "type": "directory",
                    "properties": {
                        "multivalued": false,
@@ -259,7 +268,7 @@ The following json :
                },
                {
                    "label": "Directory with search & suggestion",
-                   "field": "Type",
+                   "field": "contract_type",
                    "type": "directory",
                    "properties": {
                        "multivalued": false,
@@ -272,10 +281,10 @@ The following json :
                },
                {
                    "label": "Document suggestion (add 1 or more)",
-                   "field": "Type",
+                   "field": "contract_type",
                    "type": "directory",
                    "properties": {
-                       "multivalued": false,
+                       "multivalued": true,
                        "type": "suggestAll",
                        "suggestionPlaceholder": "Add 1 or more documents",
                        "required": true,
@@ -290,9 +299,6 @@ The following json :
 ```
 
 
-This gives us the following result in the app:
-
-TODO : add screenshot
 
 For development purposes, you can directly edit the JSON files on your Nuxeo Server. The "task" layout is retrieved each time you view a document.
 
