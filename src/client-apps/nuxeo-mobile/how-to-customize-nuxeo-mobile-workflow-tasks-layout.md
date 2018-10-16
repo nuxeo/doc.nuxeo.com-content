@@ -131,10 +131,14 @@ Properties can be added depending on the task type :
 ```
 Used to display informations without letting the user change its value.
 
+
+
 ```json
 “required” : [true, false] 
 ```
 the “required” properties makes the task label appended with an asterisk (*) and requires this field to be filled for the task to be completed.
+
+
 
 #### For any of tasks user, group, usergroup, directory, document
 
@@ -144,10 +148,12 @@ the “required” properties makes the task label appended with an asterisk (*)
 If set to true, the user can choose more than one document, user or value
 
 
+
 ```json
 “selectedTitle”: string
 ```
 Allows to define the selection screen title
+
 
 
 ```json
@@ -163,14 +169,21 @@ Allows to define the selection screen title
 Enable to customize the placeholder visible in the search bar
 
 
+
 #### For directory type
 ```json
-"directoryName" : string
+“directoryName” : string
 ```
+Define target directory
+
+
 
 ```json
 “type” : [suggest, suggestAll]
 ```
+- suggest :  Alllows to search any of the available values but without displaying the set of entries.
+- suggestAll : Same as suggest but initially displays the whole set of entries.
+
 
 
 ## Exhaustive task layout example
