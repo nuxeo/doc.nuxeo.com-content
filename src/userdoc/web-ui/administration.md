@@ -3,12 +3,11 @@ title: Administration
 description: null
 review:
     comment: ''
-    date: '2017-01-26'
+    date: '2018-10-15'
     status: ok
 toc: true
 tree_item_index: 700
 labels:
-    - content-review-lts2017
 
 ---
 This Administration menu presents different submenus:
@@ -99,7 +98,7 @@ Email
 </td>
 <td colspan="1">
 
-email of the user
+Email of the user
 
 This address is used for [alerts]({{page page='collaborative-features#alerts'}}).
 
@@ -141,7 +140,7 @@ Inviting a new user means creating a user account without setting its password, 
 
 When you create a new user account immediately, you choose and set the user's password.
 
-To create a user, go to the **Administration** menu > **Users & groups**. Click on the **New** button and fill in the user creation form and active the **Set user password**.
+To create a user, go to the **Administration** menu > **Users & groups**. Click on the **New** button and fill in the user creation form and activate the **Set user password**.
 
 {{#> callout type='tip' }}
 If you need to create several users check the box **Create another** next to the **Create** button at the end of the creation form. The user is saved and the user creation form is displayed so you can immediately create another user.

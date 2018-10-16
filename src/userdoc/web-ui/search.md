@@ -2,17 +2,17 @@
 title: Search
 review:
     comment: ''
-    date: '2017-01-04'
+    date: '2018-10-15'
     status: ok
 toc: true
 tree_item_index: 200
 description: Web UI user documentation about Search
 labels:
-    - content-review-lts2017
+
 
 ---
 {{! excerpt}}
-The Nuxeo Platform provides different way to search your documents. A Search tab in the side menu and a quick search at the top of the page.
+The Nuxeo Platform provides different ways to search your documents: a Search tab in the side menu and a quick search at the top of the page.
 {{! /excerpt}}
 
 ## Quick Search
@@ -32,7 +32,7 @@ Typing keywords in the search field and pressing the "Enter" key triggers a full
     ![]({{file name='simple_search_suggestion-web-ui.png'}} ?w=550,border=true)
 2. Click on the document's name to open it.
 
-When you start typing words in the quick search field, in the top right corner of the page, you are displayed some results as you type. This is the suggestion search. You can type words or dates in this field. Results include three types of items:
+When you start typing words in the quick search field, in the top right corner of the page, results are displayed as you type. This is the suggestion search. You can type words or dates in this field. Results include three types of items:
 - Documents
 - User
 - Group

@@ -2,14 +2,13 @@
 title: Browse
 review:
     comment: ''
-    date: '2017-03-29'
+    date: '2018-10-15'
     status: ok
 description: null
 toc: true
 labels:
     - creation
     - drag-and-drop
-    - content-review-lts2017
 tree_item_index: 100
 
 ---
@@ -41,17 +40,17 @@ To access your dashboard, click on the icon on the top left hand corner of your 
 
 ### Browsing Lists of Documents
 
-Users can change the way content is presented in the folderish repositories (workspaces, folders, sections) and search results.They can also change the displayed information.
+Users can change the way content is presented in the folderish repositories (workspaces, folders, sections) and search results. They can also change the displayed information.
 
 #### Changing View Mode
-Two views of the content lists are available on the top right corner of your workspace
+Two views of the content lists are available on the top right corner of your workspace.
 
-- Table View ![]({{file name='table-view-web-ui.png' page='icons-index'}} ?w=20) (default view): This view displays the title of the documents with a small icon (that depends on the type of document or main attachment type) and a set of metadata in a table
+- Table View ![]({{file name='table-view-web-ui.png' page='icons-index'}} ?w=20) (default view): This view displays the title of the documents with a small icon (that depends on the type of document or main attachment type) and a set of metadata in a table.
 
 - Grid View ![]({{file name='grid-view-web-ui.png' page='icons-index'}} ?w=20): This view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
 
 #### Changing Displayed Information
-Lists of documents, whether in grid view or thumbnail view, show some information about the documents, like their title, the last contributor, their lifecycle state, etc. Users can change the information displayed, i.e. the columns for the list view or the information below the document thumbnail in thumbnail view.
+Lists of documents, whether in grid view or thumbnail view, show some information about the documents, like their title, the last contributor,their type, their lifecycle state, etc. Users can change the information displayed, i.e. the columns for the list view or the information below the document thumbnail in thumbnail view.
 
 To change the information displayed in content views, click on the icon&nbsp;![]({{file name='manage_collection_web-ui.png' page='icons-index'}} ?w=20). A pop-up is displayed: select the information that you want to be displayed among the list.
 
@@ -82,7 +81,8 @@ Creating a document using the button ![]({{file name='create_button.png' space='
 
 To create a document using the **Create** button:
 1. Click on the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30) and click on the desired document.
-2. Fill in the document's creation form and click on the **Create** button.
+2. Select
+3. Fill in the document's creation form and click on the **Create** button.
 
 The View tab of the document is displayed.
 
@@ -103,7 +103,7 @@ You can use drag and drop to easily import content into a workspace or just to c
 To import content into Nuxeo, drag an item from your computer and drop it into a workspace. The document is then automatically created in the workspace and its title is the name of the original file, and no properties are filled in.
 
 - You can drag and drop one or more files of any type in Nuxeo, directly in the workspace concerned.
-- You can also drag and drop one or more files of any type from the **Import** tab of the creation popup. On this popup you can also edit the **location** of your import.
+- You can also drag and drop one or more files of any type from the **Import** tab of the creation popup. On this popup you can also edit the **Location** of your import.
   ![]({{file name='import-popup-web-ui.png'}} ?w=450,border=true)
 
 #### Import with Properties
@@ -127,7 +127,7 @@ The file is created with the filled in properties.
 
 {{{excerpt 'userdoc/nuxeo-drive'}}}
 
-You can very easily import document by moving them from a desktop folder to a Nuxeo Drive folder, or creating office files directly in a Nuxeo Drive folder. Read the [Nuxeo Drive documentation]({{page page='nuxeo-drive'}}) for more information.
+You can very easily import document by moving them from a desktop folder to a Nuxeo Drive folder, or creating office files directly in a Nuxeo Drive folder. Read the [Nuxeo Drive documentation]({{page version='' space='client-apps' page='nuxeo-drive'}}) for more information.
 
 ### Automated Metadata Extraction
 
@@ -141,7 +141,7 @@ Editing a document means modifying its content (i.e. the attached file of a file
 
 ### Editing Properties
 
-Properties of the documents, aka metadata, help the document to be more accurately referenced. Some properties are automatically filled in by the system, but most of them need to be filled in by users. When you create a document (file, note, workspace, section, or any other document type), its properties are empty.
+Properties of the documents, a.k.a. metadata, help the document to be more accurately referenced. Some properties are automatically filled in by the system, but most of them need to be filled in by users. When you create a document (file, note, workspace, section, or any other document type), its properties are empty.
 
 The Nuxeo Platform uses Dublin Core metadata by default, although not all of them are necessarily displayed to the user by default. Dublin Core metadata are:
 
@@ -175,8 +175,8 @@ Users can export documents on their computer. It is possible to export:
 #### From a Folder
 
 - The **XML export** is a low level export that enables users to either get the XML definition of the document or get a folder for each exported document that contains:
-    - document.xml file holding the document's metadata and various information such as the applied access rights,
-    - A .blob file that holds the binary content of the document. This blob is referenced in the document.xml file;
+    - a document.xml file holding the document's metadata and various information such as the applied access rights,
+    - a .blob file that holds the binary content of the document. This blob is referenced in the document.xml file;
 - The **ZIP export** enables you to export a whole workspace, section or folder in a zipped XML folder. This export is only available on folderish documents.
 
 #### From a Document
@@ -241,7 +241,12 @@ Users can download documents on their computer. It is possible to download:
 - Go to the folder/workspace that you want
 - Select several documents
   A top bar is displayed with document actions
-- Click on the download button ![]({{file name='download-multiple-documents-web-ui.png' page='icons-index'}} ?w=22)</br>
+- Click on the download button {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Download from a Folder
+    name: download-from-a-folder.png
+    1.1.3#icon#up_to_date
+--}}
+![Download from a Folder](nx_asset://2232eeac-e0d0-49c7-a8b0-53c5f79dcb29 ?w=22)</br>
   The documents are downloaded as a .zip on your computer.
 
 
@@ -270,7 +275,12 @@ Users with "Manage everything" permissions can access the workspace's Trash and 
 1. Click on ![]({{file name='restore-doc-web-ui.png' page='icons-index'}} ?w=18) in the action toolbar at the top of the page.</br>
    Documents are moved back to the **View** tab of the workspace and available to users.
 
-![]({{file name='restore-content-web-ui.png'}} ?w=600)
+   {{!--     ### nx_asset ###
+       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Restore Deleted Content
+       name: restore-content-web-ui.png
+       1.1.3#screenshot#up_to_date
+   --}}
+   ![Restore Deleted Content](nx_asset://8b7bf176-9beb-431f-9b42-ace71cbed3a8 ?w=600)
 
 **Delete Permanently**
 
@@ -284,7 +294,12 @@ Users with "Manage everything" permissions can access the workspace's Trash and 
   Documents are permanently erased from the application. They cannot be restored.
 {{/callout}}
 
-![]({{file name='delete-permanently-content-web-ui.png'}} ?w=600)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Delete Permanently
+    name: delete-permanently-content-web-ui.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Delete Permanently](nx_asset://eaace42e-3910-43b2-896f-b98d6ef72e82 ?w=600)
 
 **Empty Trash**
 
@@ -331,7 +346,7 @@ Two automatic versioning behaviors are applied by default: one for files (and as
 
 - Files and other document types with [schema]({{page version='' space='nxdoc' page='repository-concepts'}}#schemas) `file:file`, like pictures, are created in version 0.0. A new minor version is automatically created when you edit a document that was last modified by another user. This minor version holds the modifications of the previous contributor, so that no data is lost. Your changes are applied on top of this version, the version number becoming for instance 0.1+. When you edit a document that was last edited by yourself, no version is automatically saved. You can however decide to manually create a new version of the document.
 
-- For notes, a new version is created for every modification, whether you are the last contributor of the note or not. The created version holds the your changes. When they are created, notes have a version number of 0.1.
+- For notes, a new version is created for every modification, whether you are the last contributor of the note or not. The created version holds your changes. When they are created, notes have a version number of 0.1.
 
 This automatic versioning applies in case of:
 - Modification of the main file or its attachments using drag and drop
@@ -352,9 +367,7 @@ Automatic versioning is disabled on CMIS connector due to conflict between our s
 
 You can decide to manually create a new version of the document.
 
-In case of a file document types the automatic version is done first and then the manual version. So if you edit the document and select the option “Increment major version”, a minor version is created and then a major version: the minor version is the automatic one holding the previous contributor’s work, and the major one is the manual version with your modifications. If you select “Increment minor version”, two minor versions are created following the same principle. And if you chose “Skip version increment”, only the automatic versioning behavior is applied and the document version number is 0.1+ for instance.
-
-For notes, if you use the Edit form, only the manual versioning rules applied. Selecting “Increment major version” save your changes in a major version, “Increment minor version” saves them in a minor version and choosing “Skip version increment” doesn’t create a new version and the version number is +ed (0.1+ for instance).
+In case of a file document type, the automatic version is done first and then the manual version.
 
 {{! /multiexcerpt}}
 
@@ -389,13 +402,13 @@ When you edit a document, either from your Nuxeo Drive folder or using the onlin
 
 Then, if your document's version was 1.0 before modification for instance, it automatically becomes 1.1+ after you edited it from the Nuxeo Drive folder and the 1.1 is archived as it is created. Otherwise, a simple modification is done on the document and logged in the document's History.
 
-See the page [How to Customize Nuxeo Drive Versioning Policy]({{page space='NXDOC' page='How to+Customize+Nuxeo+Drive+Versioning+Policy'}}) to change this behavior.
+See the page [How to Customize Nuxeo Drive Versioning Policy]({{page version='' space='client-apps' page='how-to-customize-nuxeo-drive-versioning-policy'}}) to change this behavior.
 {{! /multiexcerpt}}
 
 ## Document Actions
 
 The document actions toolbar displays all the actions available for the current document.
-![]({{file name='document-action-toolbar.png'}} ?w=600,border=true)
+![]({{file name='document-action-toolbar.png'}} ?w=650,border=true)
 
 ### Compare
 

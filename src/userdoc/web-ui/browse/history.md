@@ -2,12 +2,11 @@
 title: History
 review:
     comment: ''
-    date: '2017-01-04'
+    date: '2018-10-15'
     status: ok
 toc: true
 labels:
     - history
-    - content-review-lts2017
 tree_item_index: 200
 
 ---

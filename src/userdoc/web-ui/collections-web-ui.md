@@ -2,13 +2,12 @@
 title: Collections
 review:
     comment: ''
-    date: '2017-01-26'
+    date: '2018-10-15'
     status: ok
 toc: true
 tree_item_index: 500
 description: Web UI user documentation about Collections
 labels:
-    - content-review-lts2017
 
 ---
 {{! multiexcerpt name='definition-collection'}}
@@ -48,7 +47,7 @@ Documents can be collected:
 In both cases you can select the collection by:
 - Browsing the collections in the list
 - Starting to type the collection name and select it
-- Typing a new collection name to create it.
+- Typing a new collection name to create it
 
 The list of collections the document is available from is displayed on its **View** tab.
 ![]({{file name='collections-doc-widget_web-ui.png'}} ?w=300,border=true)

@@ -2,13 +2,13 @@
 title: User Settings
 review:
     comment: ''
-    date: '2017-01-26'
+    date: '2018-10-15'
     status: ok
 toc: true
 tree_item_index: 800
 description: null
 labels:
-    - content-review-lts2017
+
 
 ---
 ## Nuxeo Drive
@@ -25,7 +25,7 @@ The Profile tab enables the user to edit his personal information and his passwo
 
 ## Authorized Application
 
-You can grant access to your Nuxeo account to external applications, such as Nuxeo Mobile. The Authorized Application tab displays each application and their Authorization Date. It also enables you to revoke accesses. 
+You can grant access to your Nuxeo account to external applications, such as Nuxeo Mobile. The Authorized Application tab displays each application and their Authorization Date. It also enables you to revoke accesses.
 
 ## Cloud Services
 

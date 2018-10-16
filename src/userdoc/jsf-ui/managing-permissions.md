@@ -412,7 +412,7 @@ The new permission is displayed in the **Permissions defined locally** part of t
 
 You can share documents and folders with people that don't usually have access to the application, using their email.
 
-In the **Permissions Assigned to External Users** part of the screen, click **New** and fill in the popup form. The external person is sent an email notification that contains the link to the document or space. They can access the application only by clicking that link.
+In the **Permissions Assigned to External Users** part of the screen, click **New** and fill in the popup form. The external user receives an email notification that contains the link to the document or space. They can access the application only by clicking that link.
 
 {{! /multiexcerpt}}
 
@@ -423,9 +423,9 @@ In the **Permissions Assigned to External Users** part of the screen, click **Ne
 **Notes:**
 
 *   You can only grant a temporary access to external users.
-*   External users are not created a user account on the application. They do not have login / password credentials. They can only use the link that is sent to them to access the application.
+*   External users have not created a user account on the application. They do not have login / password credentials. They can only use the link that is sent to them to access the application.
 *   External users have access to the content that was shared with them (either documents or workspaces and their content) and the Search tab.
-*   External users do not benefit from the following features: A personal workspace and the Home tab and its features (dashboard, alerts, users / groups search, etc.).
+*   External users do not benefit from the personal workspace, the Home tab and their features (dashboard, alerts, users / groups search, etc.).
 
 {{! /multiexcerpt}}
 

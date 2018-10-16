@@ -213,7 +213,7 @@ The workflow engine provides means to implement most of BPMN concepts: Fork, mer
 
 {{! multiexcerpt name='default-validation-workflows'}}
 
-The Nuxeo Platform proposes two default workflows that showcase the possibilities of the Workflow.
+The Nuxeo Platform offers two default workflows that showcase the possibilities of the Workflow.
 
 * {{{excerpt 'USERDOC:Serial Document Workflow'}}}
 * {{{excerpt 'USERDOC:Parallel Document Workflow'}}}

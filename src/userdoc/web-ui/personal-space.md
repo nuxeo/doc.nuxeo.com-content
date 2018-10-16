@@ -2,13 +2,12 @@
 title: Personal Space
 review:
     comment: ''
-    date: '2017-01-26'
+    date: '2018-10-15'
     status: ok
 toc: true
 tree_item_index: 600
 description: null
 labels:
-    - content-review-lts2017
 
 ---
 
@@ -22,11 +21,11 @@ To create personal documents, follow the same steps as for [any other documents]
 
 ## Accessing Favorites
 
-A **My Favorites** folder lets you access to your favorites and manage them. Read the [Favorites]({{page page='favorites'}}) documentation page for more information.
+A **My Favorites** folder enables you to access your favorites and manage them. Read the [Favorites]({{page page='favorites'}}) documentation page for more information.
 
 ## Accessing Collections
 
-A **My Collections** folder lets you access to the collections you have access to and the ones you created.
+A **My Collections** folder enables you to access the collections you have access to and the ones you created.
 Read the [Collections]({{page page='collections-web-ui'}}) documentation page for more information.
 
 ![]({{file name='personal-space-web-ui.png' page='collections-web-ui'}} ?w=600,border=true)

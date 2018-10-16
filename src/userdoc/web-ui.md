@@ -2,13 +2,13 @@
 title: Web UI
 review:
     comment: ''
-    date: '2017-08-04'
+    date: '2018-10-16'
     status: ok
 toc: true
 description: Web UI User Documentation
 tree_item_index: 100
 labels:
-    - lts2017-ok
+
 
 ---
 {{#> callout type='info' heading='Nuxeo University'}}
@@ -17,4 +17,212 @@ Watch the related courses on Nuxeo University
 ![]({{file name='university-webui.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
-{{{multiexcerpt 'webui-functional-overview' space='nxdoc' page='Web UI Overview'}}}
+{{! multiexcerpt name='webui-functional-overview'}}
+## Functional Overview
+
+Nuxeo Web UI is a responsive application with three main layout regions:
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Web UI
+    name: web_ui.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Web UI ](nx_asset://a47c7600-d8cf-490f-9348-674718f4609a ?w=650,border=true)
+
+1. [The header toolbar](#header-toolbar-functional-overview)
+2. [The side menu](#side-menu-functional-overview)
+3. [The main view](#main-view-functional-overview)
+
+### {{> anchor 'header-toolbar-functional-overview'}} Header Toolbar
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Header toolbar
+    name: header_toolbar.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Header toolbar ](nx_asset://e0b4a47a-e790-4eb0-995c-f07db666e536 ?w=650,border=true)
+
+1.  **Domain**: The title of the selected page / document.
+2.  **Sub-Views**: The sub-views available.
+3.  **Quick search**: Search by keywords or users.
+
+### {{> anchor 'side-menu-functional-overview'}} Side Menu
+
+The menu displays different tabs. Clicking on one of them will open a side panel with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area. We will see the description of the main area on the last part of this section.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Side Menu
+    name: web_ui_with_side_panel.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Side Menu ](nx_asset://93dad9e8-e4da-487d-aae7-addad5d3dc7d ?w=650,border=true)
+
+This new pattern allows to start browsing without changing the context of work.
+
+<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Dashboard Home
+    name: dashboard_home.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Dashboard Home](nx_asset://6945051c-0de3-4235-8af9-792f84a10a03)</td><td colspan="1">
+
+**Dashboard:** Displays the dashboard
+
+</td></tr><tr><td colspan="1">{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Browse Side Menu
+    name: browse.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Browse Side Menu](nx_asset://d2ffbd05-411b-43d8-8ca5-a1304c985319)</td><td colspan="1">
+
+**Browse:** Shows the navigation tree to let you browse your content
+
+</td></tr><tr><td colspan="1">{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Recently Viewed Side Menu
+    name: recently_viewed.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Recently Viewed Side Menu ](nx_asset://4e851002-00cf-4cea-bfde-f1ca1a44025f)</td><td colspan="1">
+
+**Recently Viewed:** Shows the 10 last documents viewed
+
+</td></tr><tr><td colspan="1">{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Searches Side Menu
+    name: searches.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Searches Side Menu ](nx_asset://017b892a-12b9-4ab3-98eb-7b4da8db8d47)</td><td colspan="1">
+
+**Search Filters:** Search content using full text and metadata
+
+</td></tr><tr><td colspan="1">{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Expired Side Menu
+    name: expired.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Expired Side Menu](nx_asset://ff15f0b2-5dc1-443c-8129-c698092fe987)</td><td colspan="1">
+
+**Expired Queue:** Queue displaying expired documents
+
+</td></tr><tr><td colspan="1">{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Assets Side Menu
+    name: assets.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Assets Side Menu](nx_asset://af27a311-732a-43fc-8acc-255cb3122e08)</td><td colspan="1">
+
+**Assets:**  Search multimedia files (pictures, audio and video). Requires DAM add-on installation.
+
+</td></tr><tr><td colspan="1">{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Tasks Searches Side Menu
+    name: tasks.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Tasks Searches Side Menu ](nx_asset://72e22374-dcd7-4fef-9587-69d331fe0515)</td><td colspan="1">
+
+**Tasks:** Shows the list of pending workflow tasks
+
+</td></tr><tr><td colspan="1">{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Favorites Side Menu
+    name: favorites.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Favorites Side Menu ](nx_asset://dae49b7f-0415-4517-8193-20c24bbc2494)</td><td colspan="1">
+
+**Favorites:** The list of documents added to Favorites
+
+</td></tr><tr><td colspan="1">{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Collections Side Menu
+    name: collections.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Collections Side Menu](nx_asset://2170d4f0-fea2-4891-b15e-94ae22df2773)</td><td colspan="1">
+
+**Collections:** The list of collections you can access
+
+</td></tr><tr><td colspan="1">{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Personal Space Side Menu
+    name: personal_space.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Personal Space Side Menu ](nx_asset://b8e216fa-da23-4c6c-bb91-2277eb2dd4cd)</td><td colspan="1">
+
+**Personal Space:** Access to your personal workspace, which is the default location for your Favorites and Collections folders
+
+</td></tr><tr><td colspan="1">{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Clipboard Side Menu
+    name: clipboard.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Clipboard Side Menu](nx_asset://c2cd829c-35e8-4391-aae2-9f47bcc2a41d)</td><td colspan="1">
+
+**Clipboard:** Clipboard to copy and move documents
+
+</td>
+</tr>
+<tr><td colspan="1">{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Trash Search Side Menu
+    name: trash.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Trash Search Side Menu ](nx_asset://a43671a8-e0ab-45da-be51-a914359ae971)</td><td colspan="1">
+
+**Trash:** Search deleted documents using full text and metadata
+
+</td>
+</tr>
+<tr><td colspan="1">{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Administration Side Menu
+    name: administration.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Administration Side Menu](nx_asset://00a08f4c-f5d5-4244-acfb-827b621fb539)</td><td colspan="1">
+
+**Administration:** Displays the **Administration** tab when the user is an administrator
+
+</td></tr><tr>
+<td colspan="1">{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/User Settings Side Menu
+    name: user_menu.png
+    1.1.3#screenshot#up_to_date
+--}}
+![User Settings Side Menu ](nx_asset://d5ccc84d-6e91-4b42-9c97-62abc4f3d961)</td>
+<td colspan="1">
+
+**User Settings:** Displays a **Themes** tab to manage branding and possibly other tabs depending on Nuxeo addons installed. For instance when Nuxeo Drive is installed a **Drive** tab is available to manage the user's synchronization roots.
+
+</td></tr></tbody></table></div>
+
+### {{> anchor 'main-view-functional-overview'}} Main View
+
+The main view display depends on what has been selected on the side menu. The main view will usually show lists of documents or a document and its details.
+Lists of documents are presented in a table that proposes different functionalities like infinite scroll instead of pagination, faceted filters in the header, easy columns selection with persistence of the user's choice and a great visibility of selected elements.
+
+At the top of the main view toolbars are displayed according to the content being displayed:
+
+**Document Actions**: Displays actions available for the current document
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Document Action Toolbar
+    name: document-action-toolbar.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Document Action Toolbar](nx_asset://3f4d1465-5072-448b-b3b5-08f982925354 ?w=650,border=true)
+
+**Results Actions**: Displays actions available for the current result listing
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Results toolbar
+    name: results_toolbar.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Results toolbar](nx_asset://02e544ea-2d35-4f42-ac74-1bdbb3ad616e ?w=77,border=true)
+
+A create button {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Create Button
+    name: create_button.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Create Button](nx_asset://2b093e23-6ed6-4228-943b-9b4655df9273 ?w=20) is also permanently displayed at the bottom right corner of the main view the to let you create or import documents from anywhere in the application.
+
+{{! /multiexcerpt}}
