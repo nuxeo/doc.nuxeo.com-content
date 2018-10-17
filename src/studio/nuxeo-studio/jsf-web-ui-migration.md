@@ -61,11 +61,7 @@ If your project benefits from branch management, any configuration you would do 
 If your project does not benefit from branch management, any change made during the migration will be lost.
 
 ### Where is the result?
-If your project benefits from branch management, result will be put in a dedicated branch. From there, you can easily [review the configuration]({{page page="how-to-review-nuxeo-studio-configuration"}}).
-
-If your project does not benefit from branch management, changes are merged in the master branch right away.
-
-No configuration is deleted when the migration is run: we add more, some of it may be slightly updated (typically to put constraints expressed in your layouts only back at schema level as it's a good practice), but we don't remove anything. The JSF UI configuration can be hidden when you are ready to migrate, see the <a href="#finalizing-migration">finalizing migration</a> section.
+See the <a href="#integrating-changes">integrating changes</a> section.
 
 ## What is Migrated?
 - Document layouts
@@ -89,10 +85,13 @@ When the migration is finished, a report will become available in the migration 
 
 You can access the report to get instantly an understanding of the result, browse and search through it easily in order to find a particular information.
 
+<a name="integrating-changes"></a>
 ### Integrating Changes
 If your project benefits from branch management, result will be put in a dedicated branch, whose name is indicated in the previous migration list. From there, you can easily checkout this branch and [review the configuration]({{page page="how-to-review-nuxeo-studio-configuration"}}).
 
 If it doesn't, changes are already merged into the master branch. You can deploy the configuration and test it at your leisure.
+
+No configuration is deleted when the migration is run: we add more, some of it may be slightly updated (typically to put constraints expressed in your layouts only back at schema level as it's a good practice), but we don't remove anything. The JSF UI configuration can be hidden when you are ready to migrate, see the <a href="#finalizing-migration">finalizing migration</a> section.
 
 ### Discarding Changes
 If your project benefits from branch management, you can go to the `Settings -> Branch Management` screen to delete the branch created by the migration.
