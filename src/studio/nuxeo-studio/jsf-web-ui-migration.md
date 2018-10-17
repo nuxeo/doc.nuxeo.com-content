@@ -48,7 +48,7 @@ Note that if you are using the intermediate or advanced commit modes, you need t
 {{#> callout type='info' heading='migration conditions'}}
 Your branch can be migrated if it fulfills the following conditions:
 1. Target Nuxeo Server version is LTS 2017
-1. Your dependencies include the JSF UI package
+1. Your dependencies include the JSF UI package and the Web UI package
 
 Otherwise, you may visit the `Settings -> Application Definition` page to change your dependencies if needed.
 {{/callout}}
