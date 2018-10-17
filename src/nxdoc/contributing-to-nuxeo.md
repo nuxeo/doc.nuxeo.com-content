@@ -375,7 +375,7 @@ Improving a module is always welcome and is carefully managed by Nuxeo developer
 4.  Read the [Coding and design guidelines]({{page space='corg' page='coding-and-design-guidelines'}}).
 5.  [Fork](http://help.github.com/fork-a-repo/) the project on [GitHub](https://github.com/nuxeo/).
 6.  Do your modifications in a new branch named "FEATURE-the_Jira_issue-a_short_description", respecting the coding and design guidelines. Be sure it doesn't break existing unit tests.
-7.  [Send a pull-request](http://help.github.com/send-pull-requests/).
+7.  [Send a pull-request](https://help.github.com/articles/about-pull-requests/).
 8.  In JIRA, set the ticket to "devReview" state and give a link to your pull request.
 9.  Finally, we can ask for some changes, putting comments on your code, then your branch will be merged by a Nuxeo developer.
 
