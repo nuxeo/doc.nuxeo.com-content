@@ -228,7 +228,7 @@ This new pattern allows to start browsing without changing the context of work.
 
 </td>
 </tr>
-<tr><td colspan="1">![]({{file name='trash.png'}})</td><td colspan="1">
+<tr><td colspan="1">![]({{file name='trash-side-menu.png'}})</td><td colspan="1">
 
 **Trash:** Search deleted documents using full text and metadata
 

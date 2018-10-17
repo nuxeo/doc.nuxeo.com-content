@@ -62,7 +62,7 @@ Once it's done click on **Close**.
 The displayed information can also be changed from the [Search view]({{page version='' space='userdoc' page='search'}}).
 {{/callout}}
 
-The information displayed on content views can be filtered with filters at the top of every columns.
+The information displayed on content views can be filtered with filters at the top of every column.
 
 ### Access Keys
 Some actions or features are accessible using access keys:
@@ -386,7 +386,7 @@ In case of a file document type, the automatic version is done first and then th
 You can visualize differences between two versions of a document.
 
 1. Go to a versioned document.
-2. In the document action toolbar, click **Compare Version** ![]({{file space='userdoc' name='compare-icon-web-ui.ng' page='icons-index'}}).
+2. In the document action toolbar, click **Compare Version** ![]({{file space='userdoc' name='compare-icon-web-ui.png' page='icons-index'}} ?w=20).
 3. Select versions you want to compare.</br>
 Data that differ from one version to another are displayed.
 4. Click **View All Data** to display all data for both versions of a document.</br>
