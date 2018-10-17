@@ -162,7 +162,7 @@ This new pattern allows to start browsing without changing the context of work.
 </tr>
 <tr><td colspan="1">{{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Trash Search Side Menu
-    name: trash.png
+    name: trash-side-menu.png
     1.1.3#screenshot#up_to_date
 --}}
 ![Trash Search Side Menu ](nx_asset://a43671a8-e0ab-45da-be51-a914359ae971)</td><td colspan="1">
