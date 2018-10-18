@@ -762,7 +762,7 @@ An example use case would be if you want for all the documents resulting from a 
 
 ```js
 - Fetch > Query {"query":"SELECT * FROM File"} // Doing a query that will return multiple documents.
-- Execution Flow > Run Document Chain {"id": "chain8"}
+- Execution Flow > Run Document Chain {"id": "chain9"}
 ```
 
 {{/panel}}
