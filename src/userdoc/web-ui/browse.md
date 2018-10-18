@@ -26,6 +26,7 @@ Watch the related courses on Nuxeo University
 ## Browsing Content
 
 ### Side Menu
+
 The side menu offers two different tabs. Clicking on elements on the left will open a side panel (also called **Drawer**) with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area.
 This new pattern allows to start browsing without changing the context of work.
 The side menu displays all the domain structure from the root. It enables you to easily access any space in the application structure.
@@ -43,6 +44,7 @@ To access your dashboard, click on the icon on the top left hand corner of your 
 Users can change the way content is presented in the folderish repositories (workspaces, folders, sections) and search results. They can also change the displayed information.
 
 #### Changing View Mode
+
 Two views of the content lists are available on the top right corner of your workspace.
 
 - Table View ![]({{file name='table-view-web-ui.png' page='icons-index'}} ?w=20) (default view): This view displays the title of the documents with a small icon (that depends on the type of document or main attachment type) and a set of metadata in a table.
@@ -50,7 +52,8 @@ Two views of the content lists are available on the top right corner of your wor
 - Grid View ![]({{file name='grid-view-web-ui.png' page='icons-index'}} ?w=20): This view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
 
 #### Changing Displayed Information
-Lists of documents, whether in grid view or thumbnail view, show some information about the documents, like their title, the last contributor,their type, their lifecycle state, etc. Users can change the information displayed, i.e. the columns for the list view or the information below the document thumbnail in thumbnail view.
+
+Lists of documents, whether in grid view or thumbnail view, show some information about the documents, like their title, the last contributor, their type, their lifecycle state, etc. Users can change the information displayed, i.e. the columns for the list view or the information below the document thumbnail in thumbnail view.
 
 To change the information displayed in content views, click on the icon&nbsp;![]({{file name='manage_collection_web-ui.png' page='icons-index'}} ?w=20). A pop-up is displayed: select the information that you want to be displayed among the list.
 
@@ -65,6 +68,7 @@ The displayed information can also be changed from the [Search view]({{page vers
 The information displayed on content views can be filtered with filters at the top of every column.
 
 ### Access Keys
+
 Some actions or features are accessible using access keys:
 - c: Create
 - d: Dashboard
@@ -72,9 +76,11 @@ Some actions or features are accessible using access keys:
 - shift + /: Search
 
 ## Creating Content
+
 {{{multiexcerpt 'intro-creating-content'}}}
 
 ### Creating a Document Using the Create Button
+
 Creating a document using the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30) enables you to select the type of document you want to create among all Nuxeo Platform's document types.
 
 ![]({{file name='creation-popup-web-ui.png'}} ?w=450,border=true)
@@ -87,6 +93,7 @@ To create a document using the **Create** button:
 The View tab of the document is displayed.
 
 ### Importing Documents Using Drag and Drop
+
 Drag and drop is based on the HTML 5 standard and is available on all browsers that support the HTML 5 Drag and drop, without extension. Basically, this includes all browsers supported by the Nuxeo Platform and the Web UI:
 
 {{{multiexcerpt 'webui-supported-browsers' space='nxdoc' page='web-ui-overview'}}}
@@ -165,6 +172,7 @@ In a content view, drag and drop is available to move documents from a folderish
 3. Drop them on the folderish document you want.
 
 ## Exporting Content
+
 Users can export documents on their computer. It is possible to export:
 
 - One document at a time
@@ -184,8 +192,8 @@ Users can export documents on their computer. It is possible to export:
 - The **PDF export** enables you to get a PDF version of your document. This export is only available on non-folderish documents.
 - The **ZIP Export** enables you to get a zipped folder with the documents' main attachment (.pdf, .doc files). This export is only available on non-folderish documents.
 - The **XML export** is a low level export that enables users to either get the XML definition of the document or get a folder for each exported document that contains:
-    *   document.xml file holding the document's metadata and various information such as the applied access rights,
-    *   A .blob file that holds the binary content of the document. This blob is referenced in the document.xml file;
+    - document.xml file holding the document's metadata and various information such as the applied access rights,
+    - A .blob file that holds the binary content of the document. This blob is referenced in the document.xml file;
 
 
 The exports are available by clicking on the export button ![]({{file name='export-web-ui.png' page='icons-index'}} ?w=16).
@@ -194,15 +202,15 @@ The exports are available by clicking on the export button ![]({{file name='expo
 
 XML export is a low level export that enables users to get a set of information on documents in an XML file. This export type is useful for debugging, and as such, is mainly intended to administrators. You can export:
 
-*   A single document
-*   The structure of a folder
+- A single document
+- The structure of a folder
 
 #### XML Export of a Single Document
 
 The XML export of a document enables users to get a folder for the exported document that contains:
 
-*   A document.xml file holding the document's various information (the applied access rights, the document's metadata, its path)
-*   A .blob file that holds the binary content of the document. This blob is referenced in the document.xml file
+- A document.xml file holding the document's various information (the applied access rights, the document's metadata, its path)
+- A .blob file that holds the binary content of the document. This blob is referenced in the document.xml file
 
 To **get the XML export of a document**, from the document, click on the icon&nbsp;![]({{file name='export-web-ui.png' space='userdoc' page='icons-index'}} ?w=16) and select **ZIP Export**.
 
@@ -241,16 +249,12 @@ Users can download documents on their computer. It is possible to download:
 - Go to the folder/workspace that you want
 - Select several documents
   A top bar is displayed with document actions
-- Click on the download button {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Download from a Folder
-    name: download-from-a-folder.png
-    1.1.3#icon#up_to_date
---}}
-![Download from a Folder](nx_asset://2232eeac-e0d0-49c7-a8b0-53c5f79dcb29 ?w=22)</br>
+- Click on the download button ![]({{file name='download-multiple-documents-web-ui.png' page='icons-index'}} ?w=22)</br>
   The documents are downloaded as a .zip on your computer.
 
 
 ## Deleting Content
+
 {{! multiexcerpt name='functional-overview-trash-feature'}}
 
 Only users with "Edit" or "Manage everything" [permissions]({{page version='' space='userdoc' page='managing-permissions'}}) can delete documents from a space.
@@ -275,12 +279,7 @@ Users with "Manage everything" permissions can access the workspace's Trash and 
 1. Click on ![]({{file name='restore-doc-web-ui.png' page='icons-index'}} ?w=18) in the action toolbar at the top of the page.</br>
    Documents are moved back to the **View** tab of the workspace and available to users.
 
-   {{!--     ### nx_asset ###
-       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Restore Deleted Content
-       name: restore-content-web-ui.png
-       1.1.3#screenshot#up_to_date
-   --}}
-   ![Restore Deleted Content](nx_asset://8b7bf176-9beb-431f-9b42-ace71cbed3a8 ?w=600)
+   ![]({{file name='restore-content-web-ui.png'}} ?w=600)
 
 **Delete Permanently**
 
@@ -294,12 +293,7 @@ Users with "Manage everything" permissions can access the workspace's Trash and 
   Documents are permanently erased from the application. They cannot be restored.
 {{/callout}}
 
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Delete Permanently
-    name: delete-permanently-content-web-ui.png
-    1.1.3#screenshot#up_to_date
---}}
-![Delete Permanently](nx_asset://eaace42e-3910-43b2-896f-b98d6ef72e82 ?w=600)
+![]({{file name='delete-permanently-content-web-ui.png'}} ?w=600)
 
 **Empty Trash**
 
@@ -437,6 +431,7 @@ You can visualize metadata differences between two documents.
 The button ![]({{file name='share_web-ui.png' page='icons-index' space='userdoc'}}) gives you the permanent link to the document concerned, in order to easily share it.
 
 ### Alerts
+
 {{{multiexcerpt 'alert-functional' page='collaborative-features'}}}
 
 ### Lock / Unlock
