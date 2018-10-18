@@ -86,8 +86,8 @@ Creating a document using the button ![]({{file name='create_button.png' space='
 ![]({{file name='creation-popup-web-ui.png'}} ?w=450,border=true)
 
 To create a document using the **Create** button:
-1. Click on the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30) and click on the desired document.
-2. Select
+1. Click on the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30).
+2. Select the desired document.
 3. Fill in the document's creation form and click on the **Create** button.
 
 The View tab of the document is displayed.
