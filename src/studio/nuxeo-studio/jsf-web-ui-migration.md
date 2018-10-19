@@ -33,7 +33,7 @@ No data is deleted when the migration tool is run. If you are not satisfied with
 After a migration run, a detailed report is created so that you can check the results.
 
 ### Fast
-A complete run typically finishes in a couple of minutes or less.
+A complete run typically finishes in a few minutes.
 
 ## How Does it Work?
 ### Launching Migration
@@ -56,9 +56,7 @@ Otherwise, you may visit the `Settings -> Application Definition` page to change
 ### Can I work during the migration?
 Although it is possible, **we recommend not to** work while the migration is happening.
 
-If your project benefits from branch management, any configuration you would do in that time frame would not be taken into account by the migration tool, and could lead to conflicts if you decide to merge changes afterwards.
-
-If your project does not benefit from branch management, any change made during the migration will be lost.
+Any configuration you would do in that time frame would not be taken into account by the migration tool, and could lead to conflicts if you decide to merge changes afterwards.
 
 ### Where is the result?
 See the <a href="#integrating-changes">integrating changes</a> section.
@@ -71,7 +69,7 @@ See the <a href="#integrating-changes">integrating changes</a> section.
 - User actions
 
 ## What is NOT Migrated Currently?
-- Content views that reference a table layout
+- Content views that contain parameters or that reference a table layout
 - Translation files
 - Tabs
 
@@ -87,11 +85,15 @@ You can access the report to get instantly an understanding of the result, brows
 
 <a name="integrating-changes"></a>
 ### Integrating Changes
-If your project benefits from branch management, result will be put in a dedicated branch, whose name is indicated in the previous migration list. From there, you can easily checkout this branch and [review the configuration]({{page page="how-to-review-nuxeo-studio-configuration"}}).
+Result will be put in a dedicated branch, whose name is indicated in the previous migration list.
 
-If it doesn't, changes are already merged into the master branch. You can deploy the configuration and test it at your leisure.
+From there, you can take a look at the result by going into the `Source Control -> Branch Management` menu and switching to the new branch by pressing the `checkout` button on it.
 
-No configuration is deleted when the migration is run: we add more, some of it may be slightly updated (typically to put constraints expressed in your layouts only back at schema level as it's a good practice), but we don't remove anything. The JSF UI configuration can be hidden when you are ready to migrate, see the <a href="#finalizing-migration">finalizing migration</a> section.
+No configuration is deleted when the migration is run: we add more, some of it may be slightly updated (typically to put constraints expressed in your layouts only back at schema level as it's a good practice), but we don't remove anything. The configuration produced can be reviewed and changed if needed, at your own pace.
+
+Merging the changes follows the usual [feature implementation process]({{page page="how-to-implement-features-using-branches"}}). If your project benefits from branch management features, you can also take advantage of the [configuration review process]({{page page="how-to-review-nuxeo-studio-configuration"}}) to ease the merge.
+
+The JSF UI configuration can be hidden when you are ready to migrate, see the <a href="#finalizing-migration">finalizing migration</a> section.
 
 ### Discarding Changes
 If your project benefits from branch management, you can go to the `Settings -> Branch Management` screen to delete the branch created by the migration.
@@ -106,4 +108,12 @@ JSF UI related configuration will be hidden in Studio and kept outside from your
 
 {{#> callout type='info' heading='Nuxeo Server Update'}}
 Remember that these instructions only cover your Nuxeo Studio configuration. You will also need to make sure the proper packages are installed on our Nuxeo Server instance to match your changes.
+{{/callout}}
+
+## Can I launch Migration Multiple Times?
+
+Migration can be launched as many times as you wish: this can allow you to test configuration changes made on your JSF UI configuration or benefit from new features that have been added to the migration tool for instance.
+
+{{#> callout type='warning'}}
+The branch created for the migration will be deleted and created again with every migration attempt, resulting in the loss of any changes made into it that would have not been merged yet.
 {{/callout}}
