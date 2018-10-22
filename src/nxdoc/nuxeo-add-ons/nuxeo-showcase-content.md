@@ -12,7 +12,7 @@ labels:
 tree_item_index: 2610
 ---
 {{! excerpt}}
-The [Nuxeo Showcase Content](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-showcase-content) addon imports a set of showcase content (Office documents, images, videos) to get to know Nuxeo Platform.
+The [Nuxeo Showcase Content](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-showcase-content) addon imports a set of showcase content (Office documents, images, videos) to get to know Nuxeo Platform. You can use the tab **Start Creating Your Content Here** to import and organize your content.  
 {{! /excerpt}}
 
 {{!--     ### nx_asset ###
