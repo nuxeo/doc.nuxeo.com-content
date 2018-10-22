@@ -12,6 +12,16 @@ tree_item_index: 700
 ## About Studio Designer Git Access
 When configuring Web UI, Studio Designer allows to edit the generated files directly and add your custom HTML / JavaScript code. This allows developers to do advanced customization.
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the [Nuxeo Studio Designer Git Access](https://university.nuxeo.com/nuxeo/learn/course/external/view/elearning/160/NuxeoFrontendDevelopment-Howtocreateacustomelement) University video
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/GIT_ACCESS
+    name: Screenshot 2018-10-22 at 15.42.28.png
+    studio_designer#screenshot#up_to_date
+--}}
+![GIT_ACCESS](nx_asset://198d7099-b926-4cb9-ae1e-e12459b39b35 ?w=450,border=true)
+{{/callout}}
+
 While this is great, the browser is not the right place to do anything beyond simple tweaks, and as a developer, we understand that you want to use the tools you are familiar with. Nuxeo Studio Designer Git access aims at solving this problem: you can clone your project, edit it locally with your favorite tools and benefit from advanced Git features, then push your changes back in Nuxeo Studio.
 
 ## Who Can Use It?
@@ -52,9 +62,18 @@ Once logged in to Nuxeo Online Services:
 1. Copy the Git URL to clone your project
 1. On your computer, clone your project using your Git client (typically `git clone [project URL]`). When prompted, use your Nuxeo Online Services username and your personal access token.
 
-{{#> callout type='info' heading='Password Storage'}}
-To avoid having to type your token's content repeatedly, we recommend storing it using Git's standard `.netrc` file mechanism.
+To avoid having to type your token's content repeatedly, we recommend storing it using Git's standard `.netrc` file mechanism. On Linux operating systems, it is generally created under `~/.netrc`. On Windows machines, you have to create a `_netrc` file in `%HOME%` (More information [here](https://stackoverflow.com/questions/6031214/git-how-to-use-netrc-file-on-windows-to-save-user-and-password#6031266)). The file contains the following lines:the following lines:
+```
+machine connect.nuxeo.com
+login yourNOSLoginHere
+password yourTokenHere
+```
+
+{{#> callout type='tip' heading='Security management'}}
+If your computer is compromised or stolen, then it is possible to revoke the token access directly from Nuxeo Online Services: Your password remains safe and no one can use the token to launch commands anymore.
 {{/callout}}
+
+
 
 ### Making Changes
 The recommended flow is the following:
