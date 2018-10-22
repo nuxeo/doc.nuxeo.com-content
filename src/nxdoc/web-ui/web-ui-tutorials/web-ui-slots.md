@@ -55,22 +55,96 @@ For a better understanding, please refer to the [DOCUMENT_ACTIONS](#document_act
 ## Summary
 Here are the `nuxeo-slots` available in the Nuxeo Web UI.
 
-| Slot name                                                                                       | Extension purpose                               | Where                                                                 |
-|:------------------------------------------------------------------------------------------------|:------------------------------------------------|:----------------------------------------------------------------------|
-| [DOCUMENT_ACTIONS](#document_actions)                                                           | Additional Current document actions             | ![]({{file name='DOCUMENT_ACTIONS.png'}} ?w=100,border=true)          |
-| [DOCUMENT_VIEWS_ITEMS](#document_view_items) <br/> [DOCUMENT_VIEWS_PAGES](#document_view_items) | Additional Current document views               | ![]({{file name='DOCUMENT_VIEWS_ITEMS.png'}} ?w=100,border=true)      |
-| [BLOB_ACTIONS](#blob_actions)                                                                   | Additional Current document blobs actions       | ![]({{file name='BLOB_ACTIONS.png'}} ?w=100,border=true)              |
-| [RESULTS_SELECTION_ACTIONS](#results_selection_actions)                                         | Additional actions for selected items           | ![]({{file name='RESULTS_SELECTION_ACTIONS.png'}} ?w=100,border=true) |
-| [RESULTS_ACTIONS](#results_actions)                                                             | Additional actions/views for results            | ![]({{file name='RESULTS_ACTIONS.png'}} ?w=100,border=true)           |
-| [ADMINISTRATION_MENU](#administration_menu) <br/> [ADMINISTRATION_PAGES](#administration_menu)  | Additional Administration menu                  | ![]({{file name='ADMINISTRATION_MENU.png'}} ?w=100,border=true)       |
-| [USER_MENU](#user_menu)                                                                         | Additional User menu                            | ![]({{file name='USER_MENU.png'}} ?w=100,border=true)                 |
-| [DRAWER_PAGES](#drawer_pages) <br/> [DRAWER_ITEMS](#drawer_pages) <br/> [PAGES](#drawer_pages)  | Additional main menu items                      | ![]({{file name='DRAWER_PAGES.png'}} ?w=100,border=true)              |
-| [DOCUMENT_CREATE_ACTIONS](#document_create_actions)                                             | Additional document creation actions            | ![]({{file name='DOCUMENT_CREATE_ACTIONS.png'}} ?w=100,border=true)   |
-| [CREATE_POPUP_ITEMS](#create_popup_items)   <br/> [CREATE_POPUP_PAGES](#create_popup_items)     | Additional items on the creation pop-up         | ![]({{file name='CREATE_POPUP_ITEMS.png'}} ?w=100,border=true)        |
-| [FILE_UPLOAD_ACTIONS](#file_upload_actions)                                                     | Additional document import wizards              | ![]({{file name='FILE_UPLOAD_ACTIONS.png'}} ?w=100,border=true)       |
-| [COLLECTION_ACTIONS](#collection_actions)                                                       | Additional collection members selection actions | ![]({{file name='COLLECTION_ACTIONS.png'}} ?w=100,border=true)        |
-| [ANALYTICS_ITEMS](#analytics_pages) <br/> [ANALYTICS_PAGES](#analytics_pages)                   | Additional analytics pages                      | ![]({{file name='ANALYTICS_ITEMS.png'}} ?w=100,border=true)           |
-| [THEMES](#themes)                                                                               | Additional UI themes                            | ![]({{file name='THEMES.png'}} ?w=100,border=true)                    |
+<div class="table-scroll"><table class="hover">
+  <tbody>
+    <tr>
+      <td colspan="1">**Slot name**</td>
+      <td colspan="1">**Extension purpose**</td>
+      <td colspan="1">**Where**</td>
+   </tr>
+   <tr>
+     <td colspan="1">[DOCUMENT_ACTIONS](#document_actions)</td>
+     <td colspan="1">Additional Current document actions</td>
+     <td colspan="1">![]({{file name='DOCUMENT_ACTIONS.png'}} ?w=100,border=true)</td>
+  </tr>
+  <tr>
+    <td colspan="1">[DOCUMENT_VIEWS_ITEMS](#document_view_items)</td>
+    <td colspan="1">Additional Current document views</td>
+    <td colspan="1">![]({{file name='DOCUMENT_VIEWS_ITEMS.png'}} ?w=100,border=true)</td>
+ </tr>
+ <tr>
+   <td colspan="1">[DOCUMENT_VIEWS_PAGES](#document_view_pages)</td>
+   <td colspan="1">Additional Current content of the "View" pill</td>
+   <td colspan="1">
+     {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Slots/DOCUMENT_VIEWS_PAGES.png
+      name: DOCUMENT_VIEWS_PAGES.png
+      1.1.3#screenshot#up_to_date
+    --}}
+    ![DOCUMENT_VIEWS_PAGES.png](nx_asset://b4ddfb6a-f5df-4e9c-9353-31fd2ddb28df ?w=100,border=true)
+    </td>
+  </tr>
+  <tr>
+    <td colspan="1">[BLOB_ACTIONS](#blob_actions)</td>
+    <td colspan="1">Additional Current document blobs actions</td>
+    <td colspan="1">![]({{file name='BLOB_ACTIONS.png'}} ?w=100,border=true)</td>
+  </tr>
+  <tr>
+    <td colspan="1">[RESULTS_SELECTION_ACTIONS](#results_selection_actions)</td>
+    <td colspan="1">Additional actions for selected items</td>
+    <td colspan="1">![]({{file name='RESULTS_SELECTION_ACTIONS.png'}} ?w=100,border=true)</td>
+  </tr>
+  <tr>
+    <td colspan="1">[RESULTS_ACTIONS](#results_actions)</td>
+    <td colspan="1">Additional actions/views for results</td>
+    <td colspan="1">![]({{file name='RESULTS_ACTIONS.png'}} ?w=100,border=true)</td>
+  </tr>
+  <tr>
+    <td colspan="1">[ADMINISTRATION_MENU](#administration_menu) <br/> [ADMINISTRATION_PAGES](#administration_menu)</td>
+    <td colspan="1">Additional Administration menu</td>
+    <td colspan="1">![]({{file name='ADMINISTRATION_MENU.png'}} ?w=100,border=true)</td>
+  </tr>
+  <tr>
+    <td colspan="1">[USER_MENU](#user_menu)</td>
+    <td colspan="1">Additional User menu</td>
+    <td colspan="1">![]({{file name='USER_MENU.png'}} ?w=100,border=true)</td>
+  </tr>
+  <tr>
+    <td colspan="1">[DRAWER_PAGES](#drawer_pages) <br/> [DRAWER_ITEMS](#drawer_pages) <br/> [PAGES](#drawer_pages)</td>
+    <td colspan="1">Additional main menu items</td>
+    <td colspan="1">![]({{file name='DRAWER_PAGES.png'}} ?w=100,border=true)</td>
+  </tr>
+  <tr>
+    <td colspan="1">[DOCUMENT_CREATE_ACTIONS](#document_create_actions)</td>
+    <td colspan="1">Additional document creation actions</td>
+    <td colspan="1">![]({{file name='DOCUMENT_CREATE_ACTIONS.png'}} ?w=100,border=true)</td>
+  </tr>
+  <tr>
+    <td colspan="1">[CREATE_POPUP_ITEMS](#create_popup_items)   <br/> [CREATE_POPUP_PAGES](#create_popup_items)</td>
+    <td colspan="1">Additional items on the creation pop-up</td>
+    <td colspan="1">![]({{file name='CREATE_POPUP_ITEMS.png'}} ?w=100,border=true)</td>
+  </tr>
+  <tr>
+    <td colspan="1">[FILE_UPLOAD_ACTIONS](#file_upload_actions)</td>
+    <td colspan="1">Additional document import wizards</td>
+    <td colspan="1">![]({{file name='FILE_UPLOAD_ACTIONS.png'}} ?w=100,border=true)</td>
+  </tr>
+  <tr>
+    <td colspan="1">[COLLECTION_ACTIONS](#collection_actions)</td>
+    <td colspan="1">Additional collection members selection actions</td>
+    <td colspan="1">![]({{file name='COLLECTION_ACTIONS.png'}} ?w=100,border=true)</td>
+  </tr>
+  <tr>
+    <td colspan="1">[ANALYTICS_ITEMS](#analytics_pages) <br/> [ANALYTICS_PAGES](#analytics_pages)</td>
+    <td colspan="1">Additional analytics pages</td>
+    <td colspan="1">![]({{file name='ANALYTICS_ITEMS.png'}} ?w=100,border=true)</td>
+  </tr>
+  <tr>
+    <td colspan="1">[THEMES](#themes)</td>
+    <td colspan="1">Additional UI themes</td>
+    <td colspan="1">![]({{file name='THEMES.png'}} ?w=100,border=true)</td>
+  </tr>
+</tbody></table></div>
 
 ## Details
 
@@ -145,13 +219,33 @@ The `DOCUMENT_ACTIONS` has therefore the following:
   The model of every slot exposed by Web UI as the current user available under the `user` property.
 {{/callout}}
 
-#### DOCUMENT_VIEWS_ITEMS and DOCUMENT_VIEWS_PAGES{{> anchor 'document_view_items'}}
+#### DOCUMENT_VIEWS_ITEMS{{> anchor 'document_view_items'}}
 
 The **DOCUMENT_VIEWS_ITEMS** slot allows you to define the available items to navigate the current document views such as *View*, *Permissions* and *History*.
 
 ![]({{file name='DOCUMENT_VIEWS_ITEMS.png'}} ?w=400,border=true)
 
-The **DOCUMENT_VIEWS_PAGES** slot must define the pages introduced by the **DOCUMENT_VIEWS_ITEMS** slot. Each new item of **DOCUMENT_VIEWS_ITEMS** slot triggers a navigation to a page defined in this slot.
+Each new item of **DOCUMENT_VIEWS_ITEMS** slot triggers a navigation to a page defined in this slot.
+
+**Slot Model Properties**
+
+| Property   | Description           |
+|:-----------|:----------------------|
+| `document` | The current document. |
+
+
+#### DOCUMENT_VIEWS_PAGES{{> anchor 'document_view_pages'}}
+
+The **DOCUMENT_VIEWS_PAGES** slot displays the content of the default "View" Pill.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Slots/DOCUMENT_VIEWS_PAGES.png
+    name: DOCUMENT_VIEWS_PAGES.png
+    1.1.3#screenshot#up_to_date
+--}}
+![DOCUMENT_VIEWS_PAGES.png](nx_asset://b4ddfb6a-f5df-4e9c-9353-31fd2ddb28df ?w=400,border=true)
+
+The **DOCUMENT_VIEWS_PAGES** slot define the pages introduced by the **DOCUMENT_VIEWS_ITEMS** slot.
 
 **Slot Model Properties**
 
