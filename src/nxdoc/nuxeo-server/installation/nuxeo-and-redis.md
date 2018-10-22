@@ -184,7 +184,7 @@ It is the one used by the default Transient Store if Redis is enabled.
 
 It allows the parameters associated to the stored blobs to be shared accross cluster nodes.
 
-## Cleanup
+## Clean-up
 
 The following code can be used with the Redis client to delete old workers marked as running:
 ```
@@ -194,7 +194,7 @@ for _,k in ipairs(keys) do
 	redis.call('DEL', k)
 end
 ```
-Copy this code to a file named `delete_running_works.lua`, change the Redis prefix (the code uses the default `nuxeo` prefix) and the cleanup can be done by calling this command:
+Copy this code to a file named `delete_running_works.lua`, change the Redis prefix (the code uses the default `nuxeo` prefix) and the clean-up can be done by calling this command:
 ```
 redis-cli --eval /path/to/delete_running_works.lua
 ```
