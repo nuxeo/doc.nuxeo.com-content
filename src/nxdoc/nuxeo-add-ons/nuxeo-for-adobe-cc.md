@@ -54,7 +54,7 @@ Once Nuxeo for Adobe CC is properly installed, launch InDesign CC 2018 (licensin
 
 - If you have a license key for Nuxeo CC Connector (provided to you by your Nuxeo Admin), click “Yes” to activate now, or click “No” to activate later.
 
-If you have questions related to licensing, contact your Nuxeo Admin or contact Nuxeo at contact@nxueo.com.
+If you have questions related to licensing, contact your Nuxeo Admin, your Nuxeo sales representative or contact Nuxeo at contact@nxueo.com.
 
 ## Using the Nuxeo CC Connector
 
