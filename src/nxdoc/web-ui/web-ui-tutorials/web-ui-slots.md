@@ -27,8 +27,7 @@ tree_item_index: 900
 Nuxeo slots are mechanisms which extend part of the Nuxeo Web UI. A couple of `nuxeo-slots` are hardcoded in the web-ui source code in order to insert your own HTML elements and extend the Web UI to meet your specific needs.
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [WebUI Customization and Nuxeo Frontend Development](https://university.nuxeo.com/learn/course/external/view/elearning/164/webui-customization-and-nuxeo-frontend-development).
+Watch the [WebUI Customization and Nuxeo Frontend Development](https://university.nuxeo.com/learn/course/external/view/elearning/164/webui-customization-and-nuxeo-frontend-development) University course.
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/WEBUI_CUSTOMIZATION_FRONTEND_DEV
     name: Screenshot 2018-10-22 at 14.58.21.png
