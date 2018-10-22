@@ -544,7 +544,7 @@ The tables below use the following notation:
     </td>
     <td>&#10003;</td>
     <td>&#10003;<br/>&#10003;</td>
-    <td>LTS&nbsp;2019<br/>&#10003;</td>
+    <td>LTS&nbsp;2020<br/>&#10003;</td>
     <td colspan="1">
     [Document modification user documentation]({{page space='userdoc' page='editing-content'}})<br/>
     [How to Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})<br/>
@@ -811,7 +811,7 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Tree Snapshot](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2019</td>
+    <td>LTS&nbsp;2020</td>
     <td colspan="1"></td>
 </tr>
 <tr>
@@ -827,7 +827,7 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo Media Publishing](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2019</td>
+    <td>LTS&nbsp;2020</td>
     <td colspan="1">Publication of videos to YouTube and Wistia.<br/>
     [Nuxeo Media Publishing documentation]({{page page='nuxeo-media-publishing'}})<br/>
     Still in consideration for Web UI
@@ -1100,7 +1100,7 @@ The tables below use the following notation:
     <td>[Nuxeo Multi-tenant](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2019</td>
+    <td>LTS&nbsp;2020</td>
     <td>[Nuxeo Multi-tenant documentation]({{page version='' space='userdoc' page='nuxeo-multi-tenant'}})</td>
 </tr>
 </tbody>
@@ -1333,7 +1333,7 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2019</td>
+    <td>LTS&nbsp;2020</td>
     <td colspan="1">
     [User documentation]({{page space='userdoc' page='editing-content#relations'}})<br/>
     [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})<br/>
