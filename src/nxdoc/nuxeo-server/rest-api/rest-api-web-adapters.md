@@ -170,7 +170,7 @@ Default adapters provided by default.
     <td></td>
     <td>
       ```
-      /api/v1/id/{docId}/@audit
+      /api/v1/id/{docId}/@annotation
       ```
     </td>
   </tr>
