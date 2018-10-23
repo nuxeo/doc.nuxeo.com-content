@@ -62,7 +62,7 @@ Once logged in to Nuxeo Online Services:
 1. Copy the Git URL to clone your project
 1. On your computer, clone your project using your Git client (typically `git clone [project URL]`). When prompted, use your Nuxeo Online Services username and your personal access token.
 
-To avoid having to type your token's content repeatedly, we recommend storing it using Git's standard `.netrc` file mechanism. On Linux operating systems, it is generally created under `~/.netrc`. On Windows machines, you have to create a `_netrc` file in `%HOME%` (More information [here](https://stackoverflow.com/questions/6031214/git-how-to-use-netrc-file-on-windows-to-save-user-and-password#6031266)). The file contains the following lines:the following lines:
+To avoid having to type your token's content repeatedly, we recommend storing it using Git's standard `.netrc` file mechanism. On Linux operating systems, it is generally created under `~/.netrc`. On Windows machines, you have to create a `_netrc` file in `%HOME%` (More information [here](https://stackoverflow.com/questions/6031214/git-how-to-use-netrc-file-on-windows-to-save-user-and-password#6031266)). The file contains the following lines:
 ```
 machine connect.nuxeo.com
 login yourNOSLoginHere
@@ -72,7 +72,6 @@ password yourTokenHere
 {{#> callout type='tip' heading='Security management'}}
 If your computer is compromised or stolen, then it is possible to revoke the token access directly from Nuxeo Online Services: Your password remains safe and no one can use the token to launch commands anymore.
 {{/callout}}
-
 
 
 ### Making Changes
