@@ -32,7 +32,6 @@ node_modules
 
 # Build output
 site/
-assets/nx_assets
 
 webpack.stats.json
 
