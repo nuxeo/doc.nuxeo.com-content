@@ -388,7 +388,7 @@ For example, sometimes you need to get the children, parents or workflow tasks o
       </tr>
       <tr>
         <td>`permissions`</td>
-        <td>Current user's persmissions on the current document</td>
+        <td>Current user's permissions on the current document</td>
       </tr>
       <tr>
         <td>`publications`</td>
