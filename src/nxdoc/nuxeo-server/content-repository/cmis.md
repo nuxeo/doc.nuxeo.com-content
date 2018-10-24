@@ -716,7 +716,7 @@ Ephesoft has a CMIS import plugin and a CMIS export plugin so that it can ingest
 
 Ephesoft monitors a specified folder for a new file (as a hot folder) using a cron job, and process any new document in an Ephesoft batch. Ephesoft uses a "technical" Nuxeo property to tag the document as processed, in order to not process twice the same document (for example, a custom property called `invoice:status` passes from `To process` to `Processed`).
 
-![]({{file page='nxdoc/cmis' name='ephesoft_cmis_import.png'}} ?w=600,border=true)
+![]({{file page='/nxdoc/cmis' name='ephesoft_cmis_import.png'}} ?w=600,border=true)
 
 In the picture above:
 
