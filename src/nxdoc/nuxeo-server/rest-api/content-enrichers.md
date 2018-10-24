@@ -391,6 +391,10 @@ For example, sometimes you need to get the children, parents or workflow tasks o
         <td>Current user's persmissions on the current document</td>
       </tr>
       <tr>
+        <td>`publications`</td>
+        <td>Publication count of the current document</td>
+      </tr>
+      <tr>
         <td>`userVisiblePermissions`</td>
         <td>List of permissions available on current document</td>
       </tr>
