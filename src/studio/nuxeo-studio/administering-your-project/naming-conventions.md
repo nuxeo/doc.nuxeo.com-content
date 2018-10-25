@@ -145,24 +145,40 @@ history:
         version: '1'
 
 ---
-This page proposes naming conventions for Studio customization items in order to facilitate usage, maintenance and support. Although not mandatory, we strongly encourage you to follow these conventions, especially if you are a beginner in Studio. For each rule, an example is provided.
+This page offers naming conventions for customizing Studio items to facilitate usage, maintenance and support.
 
-## General rules
+We strongly encourage you to follow these, especially if you are a beginner.
 
-In general, there are items that will be easily seen by end users (document types for instance) and under the hood features (automation chains for instance). For very exposed items, words should be separated by an underscore and begin with a capital letter (*Contract*_*Library*) and for others we will prefer compacity: capital letter for every words but no underscore between them (*SendToValidation* for instance).
+## General rule
 
-As Studio projects can be mixed together or involve many functionalities (ex: contract management, holiday requests...), it is important that items coming from one project or another can be identified easily. The solution is to prefix every item. For example every item that is about contract_management will start with *CM-* and *HR-* will apply for holiday request: *CM-SendToValidation*. Prefixing does not apply to document types, and lifecycles (Content Model section in Studio). This is particularly mandatory when you do a plugin that will become an [Application Template]({{page page='external-templates'}}) that can be imported into other projects.
+Avoid using hyphens (-). They will prevent your items to be usable by automation scripting.
+ 
+<!--In general, there are items that will be easily seen by end users (document types for instance) and under the hood features (automation chains for instance). For very exposed items, words should be separated by an underscore and begin with a capital letter (*Contract*_*Library*) and for others we will prefer compacity: capital letter for every words but no underscore between them (*SendToValidation* for instance).
+
+As Studio projects can be mixed together or involve many functionalities (ex: contract management, holiday requests...), it is important that items coming from one project or another can be identified easily. The solution is to prefix every item. For example every item that is about contract_management will start with *CM-* and *HR-* will apply for holiday request: *CM-SendToValidation*. Prefixing does not apply to document types, and lifecycles (Content Model section in Studio). This is particularly mandatory when you do a plugin that will become an [Application Template]({{page page='external-templates'}}) that can be imported into other projects.-->
 
 ## Content Model
 
-*   **Document types**: Document types are probably the main items and should be created first. Naming should start with a capital letter, and if it needs several words, these one should be separated with an underscore: *Contract_Library*.
+| Item  | Rules | Example   |
+|---|---|---|
+| Document types | First letter of each word capitalized, not separated | ContractLibrary |
+| Schemas | All lowercase, separated by underscore when readability is impacted | contractlibrary  |
+| Properties | All lowercase, not separated | contract  |
+| Lifecycle | First letter of each word capitalized, not separated | ContractLifecycle |
+| Lifecycle state  | All lowercase, not separated   | validated  |
+
+<!--*   **Document types**: Document types are probably the main items and should be created first. Naming should start with a capital letter, and if it needs several words, these one should be separated with an underscore: *Contract_Library*.
 *   **Schemas**: Explicit name (the same as the document type if linked to one) with underscore separating words but all lower case: *contract_library*. You should use a prefix that is either the name or a shorter prefix like *dc* for dublin_core.
 *   **Lifecycle**: Upper case for each first letter, underscore to separate them. Most of the time a lifecycle is only for one document type, in that case, the lifecycle should name after the doc type with Lifecycle at the end: *Contract_Lifecycle*.
-*   **Lifecycle State**: all lower case, words separated by underscore. Transitional states and stable states should be distinguished, for instance a document that requires to be corrected and then validated will have the states: *correction* > *validation* > *validated*
+*   **Lifecycle State**: all lower case, words separated by underscore. Transitional states and stable states should be distinguished, for instance a document that requires to be corrected and then validated will have the states: *correction* > *validation* > *validated*-->
 
-## Search and Listings
+## Listings and Views
 
-Named like under the hood items: explicit name, no word separation but capital first letter and the project prefix. For example, a content view that shows all contracts in validation state would be: *CM-ContractsInValidation*.
+<!--Named like under the hood items: explicit name, no word separation but capital first letter and the project prefix. For example, a content view that shows all contracts in validation state would be: *CM_ContractsInValidation*.-->
+
+| Item  | Rules | Example   |
+|---|---|---|
+| Listings and views | Project prefix, first letter of each word capitalized, underscore between prefix and name only | CM_ContractsInValidation |
 
 ## Automation
 
@@ -170,35 +186,37 @@ Named like under the hood items: explicit name, no word separation but capital f
 
 Automation chain names should contain a verb to describe what they do.
 
-Some automation chains have a UI context, which enables to use UI operations like [Add Info Message](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Seam.AddInfoMessage). These chains should be prefixed with UI. A example of a chain that send a contract to validation from a user action could be: *CM-UI-SendToValidation*.
+Some automation chains have a UI context, which enables to use UI operations like [Add Info Message](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Seam.AddInfoMessage).
 
-Other chains that do not have UI context and are mainly called by event handler or other chains should be prefixed with Sub. Example: *CM-Sub-UpdateAcl*.
+These chains should be prefixed with UI. Example: *CM_UI_SendToValidation*.
 
-Items in automation are clearly under the hood items so it would be explicitly named: no word separation but capital first letter and the project prefix. We also added a few rules to standardized the description.
+Other chains do not have UI context and are mainly called by event handler or other chains. They should be prefixed with Sub. Example: *CM_Sub_UpdateAcl*.
+
+<!--Items in automation are clearly under the hood items so it would be explicitly named: no word separation but capital first letter and the project prefix. We also added a few rules to standardized the description.-->
 
 ### Workflow
 
 When automation chains are steps of a workflow, a good idea is to prefix them with a number so that they are displayed in the same order they will be triggered. Example with a workflow on the lifecycle [Draft <--> Validation --> Validated ]:
 
-*   *CM-01-UI-SendToValidation*
-*   *CM-02-UI-SendToValidated*
-*   *CM-03-UI-SendBackToDraft*
+*   *CM_01_UI_SendToValidation*
+*   *CM_02_UI_SendToValidated*
+*   *CM_02_UI_SendBackToDraft*
 
-Note that *CM-02-UI-SendToValidated* and *CM-02-UI-SendBackToDraft* have the same number as they can be triggered from the same state (Validation).
+Note that *CM_02_UI_SendToValidated* and *CM_02_UI_SendBackToDraft* have the same number as they can be triggered from the same state (Validation).
 
 ### User Actions
 
 User actions should be named after the automation chain they trigger, adding UA- (User Action) after the project prefix (possibly adding the user action category at the end as there can be several user action launching the automation chains).
 
-Example of a user action to send a contract to validation: *CM-UA-SendToValidation*
+Example of a user action to send a contract to validation: *CM_UA_SendToValidation*
 
 ### Event Handlers
 
-Same rule as user actions but with EH instead of UA: *CM-EH-UpdateAclOnContractCreation*
+Same rule as user actions but with EH instead of UA: *CM_EH_UpdateAclOnContractCreation*
 
 ## Miscellaneous
 
-Every other item should follow the rules given at the top of this page.
+Every other item should have the first letter of each word capitalized and preferably not be separated.
 
 Vocabularies should have a name shorter than 13&nbsp;characters, otherwise, it&nbsp;may be too long for some databases
 
