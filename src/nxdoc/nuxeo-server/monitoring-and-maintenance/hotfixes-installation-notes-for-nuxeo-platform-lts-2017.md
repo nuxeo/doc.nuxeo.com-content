@@ -83,6 +83,29 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 20
+
+### New Nuxeo AWS service
+
+A new template `aws` is available, to define the AWS configuration. When activated (which is automatically done by the [amazon-s3-online-storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage?version=1.8.7) package), the following `nuxeo.conf` properties are available:
+```
+nuxeo.aws.accessKeyId
+nuxeo.aws.secretKey
+nuxeo.aws.region
+```
+They are optional, and if not present the default AWS SDK mechanism for configuring them will be used (environment variables, Java system properties, local AWS profile, container-specific configuration (ECS/EC2)). See https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html#credentials-default and https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-region-selection.html#default-region-provider-chain for more information.
+
+Instead of using the template, the service can also be configured manually:
+```
+  <extension target="org.nuxeo.runtime.aws.AWSConfigurationService" point="configuration">
+    <configuration>
+      <accessKeyId>MY_ACCESS_KEY_ID</accessKeyId>
+      <secretKey>MY_SECRET_KEY</secretKey>
+      <region>MY_REGION</region>
+    </configuration>
+  </extension>
+```
+
 ## Hotfix 16
 
 ### Protection from Local Filesystem CSRF Attack
