@@ -25,7 +25,7 @@ Watch the [Web UI Customization and Nuxeo Frontend Development](https://universi
 ## Prerequisites
 
 - A **running instance** of Nuxeo Server on your machine (example: http://localhost:8080/nuxeo/) to deploy your configuration.
-- The **nuxeo CLI** development tool to execute the replication operation. Please refer to [Nuxeo CLI]({{page space='nxdoc' page='nuxeo-cli'}}) to install it on your computer.
+- The **Nuxeo CLI** development tool to execute the replication operation. Please refer to [Nuxeo CLI]({{page space='nxdoc' page='nuxeo-cli'}}) to install it on your computer.
 - A **Studio project** connected to your Nuxeo Server to create the project which will be cloned locally.
 - The **Branch Management** feature activated on your Studio Project. If you don't have it, you can only pull your Studio project without pushing the changes you've made locally. In this case, you have to manally copy your contribution in the Nuxeo Studio Designer interface, in the Resources tab.
 
