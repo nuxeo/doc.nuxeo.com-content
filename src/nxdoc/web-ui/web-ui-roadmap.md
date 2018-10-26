@@ -15,6 +15,6 @@ tree_item_index: 500
 ---
 
 Below are the evolutions and improvements planned for Web UI.
-{{{multiexcerpt 'ProdpadFeedback' page='generic-multi-excerpts'}}}
+You can also give us your feedback and suggestions through our [feedback portal](https://portal.prodpad.com/0a536da6-c3aa-11e7-84d9-06df22ffaf6f).
 
 <iframe src="https://ext.prodpad.com/ext/roadmap/52ab95c1920d4b578ff09e32fc48b17756d56e18" height="2500" width="100%" frameBorder="0"></iframe>
