@@ -20,25 +20,18 @@ labels:
     - nuxeo-slot-content
     - lts2017-ok
 tree_item_index: 900
-
 ---
 ## Concept
 
 Nuxeo slots are mechanisms which extend part of the Nuxeo Web UI. A couple of `nuxeo-slots` are hardcoded in the web-ui source code in order to insert your own HTML elements and extend the Web UI to meet your specific needs.
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the [WebUI Customization and Nuxeo Frontend Development](https://university.nuxeo.com/learn/course/external/view/elearning/164/webui-customization-and-nuxeo-frontend-development) University course.
+Watch the [Web UI Customization and Nuxeo Frontend Development](https://university.nuxeo.com/learn/course/external/view/elearning/164/webui-customization-and-nuxeo-frontend-development) University course.
+![]({{file page='university' name='university-frontend-dev.png'}} ?w=450,border=true)
 {{/callout}}
 
-  {{!--     ### nx_asset ###
-      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/WEBUI_CUSTOMIZATION_FRONTEND_DEV
-      name: Screenshot 2018-10-22 at 14.58.21.png
-      1.1.3#screenshot#up_to_date
-  --}}
-  ![WEBUI_CUSTOMIZATION_FRONTEND_DEV](nx_asset://233ef043-0939-4ff6-88a6-13dcb92660b0 ?w=450,border=true)
-
-
 The concept is simple. Let's assume we introduced the following slot somewhere in the Web UI:
+
 
 ```xml
 <nuxeo-slot slot="MY_SLOT_NAME" model="[[mySlotModel]]"></nuxeo-slot>
@@ -57,9 +50,7 @@ and this content will be inserted in the DOM right before where the `nuxeo-slot`
 You can see that `my-element` has its `my-element-property` bound to `aPropertyFromTheSlotModel` which is made available by the `nuxeo-slot` model. The `[[mySlotModel]]` is an object which has a `aPropertyFromTheSlotModel` property.
 
 {{#> callout type='info' }}
-
-*   Note that every slot on Web UI exposes a property named `user` by default, which contains the current user object.
-
+- Note that every slot on Web UI exposes a property named `user` by default, which contains the current user object.
 {{/callout}}
 
 For a better understanding, please refer to the [DOCUMENT_ACTIONS](#document_actions) and where we concretely detail how additional document actions are added by the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon.
@@ -87,13 +78,7 @@ Here are the `nuxeo-slots` available in the Nuxeo Web UI.
  <tr>
    <td colspan="1">[DOCUMENT_VIEWS_PAGES](#document_view_pages)</td>
    <td colspan="1">Additional Current content of the "View" pill</td>
-   <td colspan="1">
-     {{!--     ### nx_asset ###
-      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Slots/DOCUMENT_VIEWS_PAGES.png
-      name: DOCUMENT_VIEWS_PAGES.png
-      1.1.3#screenshot#up_to_date
-    --}}
-    ![DOCUMENT_VIEWS_PAGES.png](nx_asset://b4ddfb6a-f5df-4e9c-9353-31fd2ddb28df ?w=100,border=true)
+   <td colspan="1">![]({{file name='DOCUMENT_VIEWS_PAGES.png'}} ?w=100,border=true)
     </td>
   </tr>
   <tr>
@@ -132,7 +117,8 @@ Here are the `nuxeo-slots` available in the Nuxeo Web UI.
     <td colspan="1">![]({{file name='DOCUMENT_CREATE_ACTIONS.png'}} ?w=100,border=true)</td>
   </tr>
   <tr>
-    <td colspan="1">[CREATE_POPUP_ITEMS](#create_popup_items)   <br/> [CREATE_POPUP_PAGES](#create_popup_items)</td>
+    <td colspan="1">[CREATE_POPUP_ITEMS](#create_popup_items)<br/>
+                    [CREATE_POPUP_PAGES](#create_popup_items)</td>
     <td colspan="1">Additional items on the creation pop-up</td>
     <td colspan="1">![]({{file name='CREATE_POPUP_ITEMS.png'}} ?w=100,border=true)</td>
   </tr>
@@ -250,12 +236,7 @@ Each new item of **DOCUMENT_VIEWS_ITEMS** slot triggers a navigation to a page d
 
 The **DOCUMENT_VIEWS_PAGES** slot displays the content of the default "View" Pill.
 
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Slots/DOCUMENT_VIEWS_PAGES.png
-    name: DOCUMENT_VIEWS_PAGES.png
-    1.1.3#screenshot#up_to_date
---}}
-![DOCUMENT_VIEWS_PAGES.png](nx_asset://b4ddfb6a-f5df-4e9c-9353-31fd2ddb28df ?w=400,border=true)
+![]({{file name='DOCUMENT_VIEWS_PAGES.png'}} ?w=400,border=true)
 
 The **DOCUMENT_VIEWS_PAGES** slot define the pages introduced by the **DOCUMENT_VIEWS_ITEMS** slot.
 
@@ -283,9 +264,7 @@ This slot is available on a current document that has attached blobs. Default ac
 #### RESULTS_SELECTION_ACTIONS {{> anchor 'results_selection_actions'}}
 
 {{#> callout type='note' }}
-
-*   Until Web-UI version `0.9`, this slot was called `BROWSE_ACTIONS` and its properties may have changed.
-
+- Until Web-UI version `0.9`, this slot was called `BROWSE_ACTIONS` and its properties may have changed.
 {{/callout}}
 
 This slot is displayed when selecting one or more children documents of a folderish current document. It provides bulked actions on the selection such as *Add to collection*, *Delete selected items*, etc.
@@ -307,9 +286,7 @@ This slot is displayed when selecting one or more children documents of a folder
 #### RESULTS_ACTIONS {{> anchor 'results_actions'}}
 
 {{#> callout type='note' }}
-
-*    Until Web-UI version `0.9`, this slot was called `DOCUMENT_LISTING_ACTIONS` and its properties may have changed.
-
+- Until Web-UI version `0.9`, this slot was called `DOCUMENT_LISTING_ACTIONS` and its properties may have changed.
 {{/callout}}
 
 This slot allows to provide additional action buttons on folderish documents or results page such as *grid view*, *table view*, etc.
