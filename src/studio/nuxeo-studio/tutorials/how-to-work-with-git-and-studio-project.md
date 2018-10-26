@@ -91,7 +91,7 @@ git pull feature/new-doctype
 1. Create your custom code.
   - Example: Rework the document type layouts and add some custom client side validations rules  
 
-Once finished, push your contribution:
+Once finished, push your contributions:
 ```
 git add -A
 git commit -m 'New Document Type with Layouts'
