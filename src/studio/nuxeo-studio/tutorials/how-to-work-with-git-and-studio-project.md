@@ -1,5 +1,5 @@
 ---
-title: How to Work with Git and Your Nuxeo Studio Project
+title: How to Develop Faster with Git and Your Nuxeo Studio Project
 description: Learn how to use Studio Designer Git Access to create your Studio Designer contribution
 review:
     date: '2018-10-24'
@@ -9,7 +9,7 @@ toc: true
 tree_item_index: 1000
 ---
 {{! excerpt}}
-Using Git in a Nuxeo Studio project and synchronize your sources with a local instance makes the development process of custom elements (pages, menus, buttons...) faster.
+Using Git in a Nuxeo Studio project and synchronizing your sources with a local instance makes the development process of custom elements (pages, menus, buttons...) faster.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
