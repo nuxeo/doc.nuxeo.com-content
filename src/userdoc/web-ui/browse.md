@@ -67,9 +67,9 @@ The displayed information can also be changed from the [Search view]({{page vers
 
 The information displayed on content views can be filtered with filters at the top of every column.
 
-### Access Keys
+### Keyboard Shortcuts
 
-Some actions or features are accessible using access keys:
+Some actions or features are accessible using keyboard shortcuts:
 - c: Create
 - d: Dashboard
 - s: Search
