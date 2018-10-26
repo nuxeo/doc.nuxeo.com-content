@@ -182,6 +182,7 @@ In a more friendly way, you can add your own schemas using [Nuxeo Studio]({{page
 {{#> panel heading='Related Documentation'}}
 - [Define directories]({{page page='data-lists-and-directories'}}#generic-directory-and-directory-templates)
 - [Define reference and inverse references]({{page page='data-lists-and-directories'}}#defining-inverse-references)
+- [Generic references]({{page page='data-lists-and-directories'}}#generic-directory-references)
 - [Authentication and User Management]({{page version='' space='nxdoc' page='authentication-and-user-management'}})
 - [Managing Users and Groups]({{page version='' space='userdoc' page='managing-users-and-groups'}})
 {{/panel}}
