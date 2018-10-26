@@ -72,7 +72,46 @@ In the Nuxeo Platform **user** infos are displayed as follow:
 ![How to add new fields to the user profile or group profile](nx_asset://ebe8582d-f07a-4c21-83a0-efada9fd3df9 ?w=650,border=true)
 
 {{#> callout type='note'}}
-Whenever you contribute to a schema, do not forget the inverse reference field, `groups` in the `user` profile for example.
+Whenever you contribute to a schema referencing another schema or document, you **must** define the references and inverse references. On that particular case you also have to define **directories** to specify the way schemas are linked to each others. 
+The relation between `user` and `groups` uses a directory called **groupDirectory** defined as follow:
+
+```xml
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.directory.storage">
+  <require>org.nuxeo.ecm.platform.digestauth.config</require>
+  <extension target="org.nuxeo.ecm.directory.GenericDirectory" point="directories">
+  
+    <directory name="groupDirectory" extends="template-group">
+
+      <schema>group</schema>
+      <types>
+        <type>system</type>
+      </types>
+      <idField>groupname</idField>
+      <dataFile>groups.csv</dataFile>
+      <createTablePolicy>on_missing_columns</createTablePolicy>
+      <autoincrementIdField>false</autoincrementIdField>
+
+      <cacheEntryName>group-entry-cache</cacheEntryName>
+      <cacheEntryWithoutReferencesName>group-entry-cache-without-references</cacheEntryWithoutReferencesName>
+
+      <references>
+        <reference field="members" directory="userDirectory"
+                   name="user2group" source="groupId" target="userId"
+                   dataFile="user2group.csv"/>
+  
+        <reference field="subGroups" directory="groupDirectory"
+                   name="group2group" source="parentGroupId"
+                   target="childGroupId"/>
+        <inverseReference field="parentGroups" directory="groupDirectory"
+                          dualReferenceField="subGroups"/>
+      </references>
+  
+    </directory>
+  </extension>
+</component>
+```
+See the related documentation for more infos.
 {{/callout}}
 <!--
 {{#> callout type='note'}}
@@ -117,7 +156,7 @@ The `group` schema can be extended aswell using an extension.
 ```
 
 {{#> callout type='warning'}}
-Make sure you have the mandatory fields available for **references** and **inverse references** for the group hierarchy.
+Make sure you have the mandatory fields configured for **references** and **inverse references** for the group hierarchy.
 {{/callout}}
 
 {{#> callout type='tip'}}
@@ -141,6 +180,8 @@ In a more friendly way, you can add your own schemas using [Nuxeo Studio]({{page
 <div class="column medium-6">
 
 {{#> panel heading='Related Documentation'}}
+- [Define directories]({{page page='data-lists-and-directories'}}#generic-directory-and-directory-templates)
+- [Define reference and inverse references]({{page page='data-lists-and-directories'}}#defining-inverse-references)
 - [Authentication and User Management]({{page version='' space='nxdoc' page='authentication-and-user-management'}})
 - [Managing Users and Groups]({{page version='' space='userdoc' page='managing-users-and-groups'}})
 {{/panel}}
