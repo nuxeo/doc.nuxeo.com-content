@@ -46,7 +46,7 @@ history:
 ---
 
 {{#> callout type='info' }}
-{{{multiexcerpt 'jsf-ui-target-package-requirement-in-content-view' page='content-view-query-and-form-tab'}}}
+Select the Nuxeo JSF UI target package in your [Application Definition]({{page page='application-definition'}}) for the Content View feature to be available.
 {{/callout}}
 
 If you selected the Search content view flag on the [Query & form tab of the content view]({{page version='' space='studio' page='content-view-query-and-form-tab'}}), you get an additional Enablement tab. This tab allows you to define under which circumstances the content view should be displayed in the Search tab drop down list. It shows the options below:

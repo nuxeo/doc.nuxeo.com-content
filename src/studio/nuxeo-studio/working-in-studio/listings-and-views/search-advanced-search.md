@@ -44,7 +44,7 @@ history:
 ---
 
 {{#> callout type='info' }}
-  {{{multiexcerpt 'jsf-ui-target-package-requirement' page='listings-and-views'}}}
+  Select the Nuxeo JSF UI target package in your [Application Definition]({{page page='application-definition'}}) for the Content View feature to be available.
 {{/callout}}
 
 Default search configuration is defined the Search menu item in Nuxeo Platform 6.0\. For previous version, it is set in the Advanced Search menu entry.

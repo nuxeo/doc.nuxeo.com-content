@@ -204,7 +204,7 @@ history:
 ---
 
 {{#> callout type='info' }}
-  {{{multiexcerpt 'jsf-ui-target-package-requirement' page='listings-and-views'}}}
+  Select the Nuxeo JSF UI target package in your [Application Definition]({{page page='application-definition'}}) for the Content View feature to be available.
 {{/callout}}
 
 Content view is the Nuxeo technology used to define a list of documents to display. The Nuxeo Platform uses this technology in these following cases:
