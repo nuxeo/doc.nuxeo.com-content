@@ -85,15 +85,16 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ## Hotfix 20
 
-### New Nuxeo AWS service
+### New Nuxeo AWS Service
 
-A new template `aws` is available, to define the AWS configuration. When activated (which is automatically done by the [amazon-s3-online-storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage?version=1.8.7) package), the following `nuxeo.conf` properties are available:
+A new template `aws` is available, to define the AWS configuration. When activated (which is automatically done by the [amazon-s3-online-storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage) package), the following `nuxeo.conf` properties are available:
 ```
 nuxeo.aws.accessKeyId
 nuxeo.aws.secretKey
 nuxeo.aws.region
 ```
-They are optional, and if not present the default AWS SDK mechanism for configuring them will be used (environment variables, Java system properties, local AWS profile, container-specific configuration (ECS/EC2)). See https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html#credentials-default and https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-region-selection.html#default-region-provider-chain for more information.
+They are optional, and if not present the default AWS SDK mechanism for configuring them will be used (environment variables, Java system properties, local AWS profile, container-specific configuration (ECS/EC2)).</br>
+For more information read the AWS documentation regarding [Credentials](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/credentials.html#credentials-default) and [Region](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-region-selection.html#default-region-provider-chain).
 
 Instead of using the template, the service can also be configured manually:
 ```
