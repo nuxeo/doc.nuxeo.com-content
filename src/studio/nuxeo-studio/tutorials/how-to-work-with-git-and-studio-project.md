@@ -25,9 +25,9 @@ Watch the [Web UI Customization and Nuxeo Frontend Development](https://universi
 ## Prerequisites
 
 - A **running instance** of Nuxeo Server on your machine (example: http://localhost:8080/nuxeo/) to deploy your configuration.
-- The **nuxeo CLI** development tool to execute the replication operation. Please refer to [Nuxeo CLI]({{page space='nxdoc' page='nuxeo-cli'}}) to install it on your computer.
-- A **Studio project** connected to your Nuxeo Server to create the project which will be cloned locally.
-- The **Branch Management** feature activated on your Studio Project. If you don't have it, you can only pull your Studio project without pushing the changes you've made locally. In this case, you have to manally copy your contribution in the Nuxeo Studio Designer interface, in the Resources tab.
+- The **Nuxeo CLI** development tool to execute the replication operation. Please refer to [Nuxeo CLI]({{page space='nxdoc' page='nuxeo-cli'}}) to install it on your computer.
+- A **Studio Project** connected to your Nuxeo Server to create the project which will be cloned locally.
+- The **Branch Management** feature activated on your Studio Project. If you do not have it, you can only pull your Studio project without pushing the changes you have made locally. In this case, you have to manally copy your contribution in the Nuxeo Studio Designer interface, in the Resources tab.
 
 {{#> callout type='info' heading='Git access'}}
 Make sure a token to clone your Studio project has been created by following the instructions on the [Nuxeo Studio Designer Git Access]({{page space='studio' page='nuxeo-studio-designer-git-access'}}) documentation page.
@@ -107,5 +107,5 @@ git push
 As the cache management policy is strict on FT 10.2, you may have to clear you cache to visualize your changes
 {{/callout}}
 
-- A `.gitignore` file can't be added to your project
+- A `.gitignore` file can not be added to your project
 - Make sure that you are not editing the default `nuxeo-<PROJECT-NAME>-bundle.html` file, but the `nuxeo-<PROJECT-NAME>-custom-bundle.html` to make your element imports and your slot contributions
