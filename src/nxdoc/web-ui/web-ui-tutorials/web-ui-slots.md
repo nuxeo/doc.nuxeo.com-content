@@ -326,6 +326,7 @@ The `ADMINISTRATION_MENU` and `ADMINISTRATION_PAGES` slot allow you to add addit
 | `clipboardDocCount` | Number of documents in the clipboard.                    |
 | `clipboard`         | The clipboard element.                                   |
 | `userWorkspace`     | The user workspace path.                                 |
+| `user`              | Current user.                                            |
 
 #### USER_MENU{{> anchor 'user_menu'}}
 
