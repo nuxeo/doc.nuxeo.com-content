@@ -320,7 +320,7 @@ Example for Amazon Web Services S3
   2. Request Temporary Credentials and S3 Data
   3. Upload file to S3 Bucket
   4. POST file information to Nuxeo
-  5. Attach to Document 
+  5. Attach to Document
 
 #### Using a Different Upload Handler
 
@@ -566,8 +566,8 @@ To place the blobs as input, call a specific batch operation by passing the `ope
 
 ```
 POST http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/execute/{operationId}
-Accept: application/json+nxentity, */*
-Content-Type: application/json+nxrequest; charset=UTF-8
+Accept: application/json, */*
+Content-Type: application/json; charset=UTF-8
 ```
 
 ```javascript

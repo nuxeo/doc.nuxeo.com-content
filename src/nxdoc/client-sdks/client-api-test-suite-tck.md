@@ -236,7 +236,7 @@ Host: 127.0.0.1:8080
 Content-Length: 130
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
 Origin: http://127.0.0.1:8080
-Content-Type: application/json+nxrequest
+Content-Type: application/json
 Accept: */*
 X-NXDocumentProperties: dublincore
 X-Requested-With: XMLHttpRequest
@@ -251,7 +251,7 @@ Nuxeo-Transaction-Timeout: 35
 
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
-Content-Type: application/json+nxentity
+Content-Type: application/json
 { "changeToken" : "1372718688038",
   "contextParameters" : {  },
   "entity-type" : "document",
@@ -290,7 +290,7 @@ Host: 127.0.0.1:8080
 Content-Length: 69
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
 Origin: http://127.0.0.1:8080
-Content-Type: application/json+nxrequest
+Content-Type: application/json
 Accept: */*
 X-NXDocumentProperties: dublincore
 X-Requested-With: XMLHttpRequest
@@ -304,7 +304,7 @@ Nuxeo-Transaction-Timeout: 35
 
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
-Content-Type: application/json+nxentity
+Content-Type: application/json
 { "changeToken" : "1372718688058",
   "contextParameters" : {  },
   "entity-type" : "document",
@@ -349,7 +349,7 @@ Host: 127.0.0.1:8080
 Content-Length: 69
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
 Origin: http://127.0.0.1:8080
-Content-Type: application/json+nxrequest
+Content-Type: application/json
 Accept: */*
 X-NXDocumentProperties: dublincore
 X-Requested-With: XMLHttpRequest
@@ -363,7 +363,7 @@ Nuxeo-Transaction-Timeout: 35
 
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
-Content-Type: application/json+nxentity
+Content-Type: application/json
 { "changeToken" : "1372718688083",
   "contextParameters" : {  },
   "entity-type" : "document",
@@ -412,7 +412,7 @@ Host: 127.0.0.1:8080
 Content-Length: 133
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
 Origin: http://127.0.0.1:8080
-Content-Type: application/json+nxrequest
+Content-Type: application/json
 Accept: */*
 X-NXDocumentProperties: dublincore
 X-Requested-With: XMLHttpRequest
@@ -426,7 +426,7 @@ Nuxeo-Transaction-Timeout: 35
 
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
-Content-Type: application/json+nxentity
+Content-Type: application/json
 { "changeToken" : "1372718688104",
   "contextParameters" : {  },
   "entity-type" : "document",
@@ -475,8 +475,8 @@ Content-Type: application/json+nxentity
 ```
 POST /nuxeo/site/automation/Document.Fetch HTTP/1.1
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
-Content-Type: application/json+nxrequest
-Accept: application/json+nxentity, */*
+Content-Type: application/json
+Accept: application/json, */*
 Content-Length: 48
 Host: localhost:8080
 Connection: Keep-Alive
@@ -486,7 +486,7 @@ User-Agent: Apache-HttpClient/4.2.4 (java 1.5)
 
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
-Content-Type: application/json+nxentity
+Content-Type: application/json
 Transfer-Encoding: chunked
 Date: Thu, 25 Jul 2013 14:20:03 GMT
 {
@@ -513,8 +513,8 @@ Date: Thu, 25 Jul 2013 14:20:03 GMT
 ```
 POST /nuxeo/site/automation/Document.GetChildren HTTP/1.1
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
-Content-Type: application/json+nxrequest
-Accept: application/json+nxentity, */*
+Content-Type: application/json
+Accept: application/json, */*
 Content-Length: 82
 Host: localhost:8080
 Connection: Keep-Alive
@@ -531,7 +531,7 @@ User-Agent: Apache-HttpClient/4.2.4 (java 1.5)
 
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
-Content-Type: application/json+nxentity
+Content-Type: application/json
 Transfer-Encoding: chunked
 Date: Thu, 25 Jul 2013 14:20:03 GMT
 {
@@ -621,8 +621,8 @@ Date: Thu, 25 Jul 2013 14:20:03 GMT
 ```
  POST /nuxeo/site/automation/Document.PageProvider HTTP/1.1
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
-Content-Type: application/json+nxrequest
-Accept: application/json+nxentity, */*
+Content-Type: application/json
+Accept: application/json, */*
 Content-Length: 160
 Host: localhost:8080
 Connection: Keep-Alive
@@ -640,7 +640,7 @@ User-Agent: Apache-HttpClient/4.2.4 (java 1.5)
 
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
-Content-Type: application/json+nxentity
+Content-Type: application/json
 Transfer-Encoding: chunked
 Date: Thu, 25 Jul 2013 15:24:47 GMT
 {
@@ -729,14 +729,14 @@ POST /nuxeo/site/automation/FileManager.Import HTTP/1.1
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
 Content-Type: multipart/related;
     boundary="----=_Part_0_1227289322.1374766516160"
-Accept: application/json+nxentity, */*
+Accept: application/json, */*
 Transfer-Encoding: chunked
 Host: localhost:8080
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.2.4 (java 1.5)
 e7
 ------=_Part_0_1227289322.1374766516160
-Content-Type: application/json+nxrequest; charset=UTF-8
+Content-Type: application/json; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 Content-ID: request
 Content-Length: 57
@@ -754,7 +754,7 @@ Content-Length: 16
 
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
-Content-Type: application/json+nxentity
+Content-Type: application/json
 Transfer-Encoding: chunked
 Date: Thu, 25 Jul 2013 15:35:16 GMT
 {
@@ -788,14 +788,14 @@ X-NXVoidOperation: true
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
 Content-Type: multipart/related;
     boundary="----=_Part_1_2072469418.1374766516423"
-Accept: application/json+nxentity, */*
+Accept: application/json, */*
 Transfer-Encoding: chunked
 Host: localhost:8080
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.2.4 (java 1.5)
 
 ------=_Part_1_2072469418.1374766516423
-Content-Type: application/json+nxrequest; charset=UTF-8
+Content-Type: application/json; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 Content-ID: request
 Content-Length: 46
@@ -956,8 +956,8 @@ XXX Commented Http capture
 ```
 POST /nuxeo/site/automation/Document.Create HTTP/1.1
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
-Content-Type: application/json+nxrequest
-Accept: application/json+nxentity, */*
+Content-Type: application/json
+Accept: application/json, */*
 Content-Length: 1484
 Host: localhost:8080
 Connection: Keep-Alive
@@ -975,7 +975,7 @@ User-Agent: Apache-HttpClient/4.2.4 (java 1.5)
 
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
-Content-Type: application/json+nxentity
+Content-Type: application/json
 Transfer-Encoding: chunked
 Date: Thu, 25 Jul 2013 15:45:25 GMT
 {
@@ -1006,8 +1006,8 @@ Date: Thu, 25 Jul 2013 15:45:25 GMT
 ```
 POST /nuxeo/site/automation/Document.Update HTTP/1.1
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
-Content-Type: application/json+nxrequest
-Accept: application/json+nxentity, */*
+Content-Type: application/json
+Accept: application/json, */*
 Content-Length: 465
 Host: localhost:8080
 Connection: Keep-Alive
@@ -1023,7 +1023,7 @@ User-Agent: Apache-HttpClient/4.2.4 (java 1.5)
 
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
-Content-Type: application/json+nxentity
+Content-Type: application/json
 Transfer-Encoding: chunked
 Date: Thu, 25 Jul 2013 15:45:25 GMT
 {
@@ -1117,8 +1117,8 @@ XXX Commented HTTP capture
 ```
  POST /nuxeo/site/automation/Business.BusinessCreateOperation HTTP/1.1
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
-Content-Type: application/json+nxrequest
-Accept: application/json+nxentity, */*
+Content-Type: application/json
+Accept: application/json, */*
 Content-Length: 206
 Host: localhost:8080
 Connection: Keep-Alive
@@ -1144,7 +1144,7 @@ User-Agent: Apache-HttpClient/4.2.4 (java 1.5)
 
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
-Content-Type: application/json+nxentity
+Content-Type: application/json
 Transfer-Encoding: chunked
 Date: Thu, 25 Jul 2013 15:45:45 GMT
 {
@@ -1164,8 +1164,8 @@ Date: Thu, 25 Jul 2013 15:45:45 GMT
 ```
  POST /nuxeo/site/automation/Business.BusinessUpdateOperation HTTP/1.1
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
-Content-Type: application/json+nxrequest
-Accept: application/json+nxentity, */*
+Content-Type: application/json
+Accept: application/json, */*
 Content-Length: 212
 Host: localhost:8080
 Connection: Keep-Alive
@@ -1188,7 +1188,7 @@ User-Agent: Apache-HttpClient/4.2.4 (java 1.5)
 
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
-Content-Type: application/json+nxentity
+Content-Type: application/json
 Transfer-Encoding: chunked
 Date: Thu, 25 Jul 2013 15:45:45 GMT
 {
