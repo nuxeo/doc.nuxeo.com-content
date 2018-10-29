@@ -461,7 +461,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
- Content-type: application/json+nxentity
+ Content-type: application/json
  enrichers.document: thumbnail
  properties: dublincore
 ```
@@ -510,7 +510,7 @@ Request URL: http://NUXEO_SERVER/nuxeo/api/v1/id/036f99ec-a500-4a1e-9d89-e8eb656
 Request Method: GET
 Request Headers
 ...
-Content-type: application/json+nxentity
+Content-type: application/json
 enrichers.document: acls
 properties: dublincore
 ```
@@ -580,7 +580,7 @@ http://localhost:18090/api/v1/repo/test/path/folder_1/photo.jpg
  Request Method: GET
  Request Headers
  ...
- Content-type: application/json+nxentity
+ Content-type: application/json
  enrichers.document: preview
  properties: dublincore
 ```
@@ -630,7 +630,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
- Content-type: application/json+nxentity
+ Content-type: application/json
  enrichers.document: breadcrumb
  properties: dublincore
 ```
@@ -708,7 +708,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
- Content-type: application/json+nxentity
+ Content-type: application/json
  enrichers.document: favorites
  properties: dublincore
 ```
@@ -756,7 +756,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
- Content-type: application/json+nxentity
+ Content-type: application/json
  enrichers.document: collections
  properties: dublincore
 ```
@@ -819,7 +819,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
- Content-type: application/json+nxentity
+ Content-type: application/json
  enrichers.document: tags
  properties: dublincore
 ```
@@ -868,7 +868,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
- Content-type: application/json+nxentity
+ Content-type: application/json
  enrichers.document: firstAccessibleAncestor
  properties: dublincore
 ```
@@ -918,7 +918,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
- Content-type: application/json+nxentity
+ Content-type: application/json
  enrichers.document: runningWorkflows
  properties: dublincore
 ```
@@ -992,7 +992,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
- Content-type: application/json+nxentity
+ Content-type: application/json
  enrichers.document: runnableWorkflows
  properties: dublincore
 ```
@@ -1054,7 +1054,7 @@ http://NUXEO_SERVER/nuxeo/api/v1/id/4246ca87-c076-4bf4-b62b-0bab9dd21102
  Request Method: GET
  Request Headers
  ...
- Content-type: application/json+nxentity
+ Content-type: application/json
  enrichers.document: pendingTasks
  properties: dublincore
 ```

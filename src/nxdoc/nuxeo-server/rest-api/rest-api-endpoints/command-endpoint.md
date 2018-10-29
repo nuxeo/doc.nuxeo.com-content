@@ -453,12 +453,12 @@ An operation can have one of the following outputs:
       <tr>
         <td colspan="1">**document**</td>
         <td class="small-2">A repository document</td>
-        <td colspan="1">Returns a JSON object describing the document. Content-Type is `application/json+nxentity`</td>
+        <td colspan="1">Returns a JSON object describing the document. Content-Type is `application/json`</td>
       </tr>
       <tr>
         <td colspan="1">**document list**</td>
         <td class="small-2">A list of documents</td>
-        <td colspan="1">Returns a JSON object describing the list of documents. Content-Type is `application/json+nxentity`</td>
+        <td colspan="1">Returns a JSON object describing the list of documents. Content-Type is `application/json`</td>
       </tr>
       <tr>
         <td colspan="1">**blob**</td>
@@ -473,7 +473,7 @@ An operation can have one of the following outputs:
       <tr>
         <td colspan="1">**exception**</td>
         <td class="small-2"></td>
-        <td colspan="1">Returns HTTP 400. The content is the server exception encoded as a JSON object. The used Content-Type is `application/json+nxentity`. When an exception occurs, the server tries to return a meaningful status code. If no suitable status code is found, a generic 500 code (server error) is used.</td>
+        <td colspan="1">Returns HTTP 400. The content is the server exception encoded as a JSON object. The used Content-Type is `application/json`. When an exception occurs, the server tries to return a meaningful status code. If no suitable status code is found, a generic 500 code (server error) is used.</td>
       </tr>
     </tbody>
   </table>
@@ -481,7 +481,7 @@ An operation can have one of the following outputs:
 
 ### Document
 
-Each time returned objects are encoded as JSON objects, the `application/json+nxentity` Content-Type is used. Only **document**, **documents** and **exception** objects are encoded as JSON.
+Each time returned objects are encoded as JSON objects, the `application/json` Content-Type is used. Only **document**, **documents** and **exception** objects are encoded as JSON.
 
 A JSON **document** entity contains the minimum required information about the document as top level entries.
 
@@ -524,7 +524,7 @@ Complex properties are represented as embedded JSON objects and list properties 
 
 {{#> callout type='info' }}
 
-All `application/json+nxentity` JSON entities always contains a required top level property: `entity-type`. This property is used to identify which type of object is described:
+All `application/json` JSON entities always contains a required top level property: `entity-type`. This property is used to identify which type of object is described:
 
 *   `document`
 *   `documents`
@@ -743,7 +743,7 @@ Note that `WWW-Authenticate` server response is not yet implemented so you need 
 
 ```
 POST http://NUXEO_SERVER/nuxeo/site/automation/Document.Fetch HTTP/1.1
-Accept: application/json+nxentity, */*
+Accept: application/json, */*
 Content-Type: application/json+nxrequest; charset=UTF-8
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
 Host: localhost:8080
@@ -756,7 +756,7 @@ Here is an example invoking the `Blob.Attach` operation on a document given by i
 
 ```
 POST http://NUXEO_SERVER/nuxeo/site/automation/Blob.Attach HTTP/1.1
-Accept: application/json+nxentity, */*
+Accept: application/json, */*
 Content-Type: multipart/related;
     boundary="----=_Part_0_130438955.1274713628403"; type="application/json+nxrequest"; start="request"
 Authorization: Basic QWRtaW5pc3RyYXRvcjpBZG1pbmlzdHJhdG9y
@@ -786,9 +786,9 @@ Content-ID: input
 ```
 
 In both examples you can see that the following `Accept` header is used:
-`Accept: application/json+nxentity, **/**`.
+`Accept: application/json, **/**`.
 
-This header is necessary because it specifies that the client accept as a response either a JSON encoded entity or a blob that may have any type. The `application/json+nxentity` is the first content type to help the server choose the format of the response when returning an encoded object.
+This header is necessary because it specifies that the client accept as a response either a JSON encoded entity or a blob that may have any type. The `application/json` is the first content type to help the server choose the format of the response when returning an encoded object.
 
 
 ```

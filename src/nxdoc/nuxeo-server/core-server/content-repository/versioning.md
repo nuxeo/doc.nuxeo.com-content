@@ -394,7 +394,7 @@ In this example will see how we can leverage the source-based versioning to auto
   - From REST:
     ```bash
     curl -XPUT -u Administrator:Administrator http://localhost:8080/nuxeo/api/v1/id/37b1502b-26ff-430f-9f20-4bd0d803191e \
-         -H 'Accept: application/json+nxentity' \
+         -H 'Accept: application/json' \
          -H 'source: mySource' \
          -d '{
             "entity-type": "document",

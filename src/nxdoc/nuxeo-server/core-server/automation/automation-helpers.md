@@ -160,7 +160,7 @@ import org.nuxeo.ecm.automation.OperationException;
 String data = "{\"entity-type\": \"document\",\"type\": \"Workspace\",\"name\":\"newName\",\"properties\": {\"dc:title\":\"My title\",\"dc:description\":\" \"}}";
 
 Map<String, String> headers = new HashMap<>();
-headers.put("Content-type", "application/json+nxentity");
+headers.put("Content-type", "application/json");
 Map<String, Object> params = new HashMap<>();
 OperationContext ctx = new OperationContext(session);
 
