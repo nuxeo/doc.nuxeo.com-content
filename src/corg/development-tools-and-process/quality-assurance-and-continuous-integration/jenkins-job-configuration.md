@@ -216,7 +216,7 @@ For setting CI over a common Nuxeo Package with a Maven build:
 For setting CI over a standalone Nuxeo Plugin (Addon + Package hosted together in the same GitHub repository) with a Maven build:
 
 1.  Ensure your code respects the [Maven Coding Rules]({{page page='maven-coding-rules'}});
-2.  Add your plugin in the [Optionals Addons POM](https://github.com/nuxeo/addons/blob/master/pom-optionals.xml);
+2.  Add your plugin in [marketplace.ini](https://github.com/nuxeo/integration-scripts/blob/master/marketplace.ini);
 3.  Create a [new Jenkins job](http://qa.nuxeo.org/jenkins/view/Dashboard/newJob) and choose the "**Nuxeo Plugin**" template:
 
     <div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">**Name**</td></tr><tr><td colspan="1">
