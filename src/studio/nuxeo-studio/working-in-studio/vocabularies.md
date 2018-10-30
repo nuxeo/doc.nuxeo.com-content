@@ -176,12 +176,39 @@ This types has more parameters than the others:
 - **Move up** and **Move down**: Used to move the values (that are ordered).
 - **Set tree depth:** Allows to set more than two degrees of values on a hierarchical vocabulary. Select2 widgets are directly compatible with any levels. If you want to have more than two levels with chain selects, you can read the [Create a n-level select widget how-to]({{page space='nxdoc' page='how-to-create-a-n-level-select-widget'}}).
 
+## Available vocabularies by default
+
+All vocabularies editable from the user interface are listed in the vocabularies management interface.
+
+
+To consult a vocabulary or its entries click on the **Admin > Vocabularies** tab and select the vocabulary you want to consult in the drop down list.
+
+The **Vocabularies** tab is currently only available on JSF UI. It is planned to be integrated in Nuxeo Web UI.
+
+| Vocabulary  | Elements  |
+|---|---|
+| Continent | Lists continents. |
+| Country | Lists countries and parent continents. |
+| Inverse_predicates | Lists inverse predicates that defines relations between documents. JSF only.   |
+| L10ncoverage | Lists countries and their parent continent in english and in french. |
+| L10nsubjects | Lists subjects and their parent subject. |
+| Language | Lists languages. |
+| Nature | Lists several types of documents. |
+| nxtrIndustry  | Lists industries. |
+| Predicates | Lists predicates.  |
+| Subtopic | Lists subtopic and their parent topic. |
+| Topic  | Lists topic. |
+| WorkflowType | Lists types of workflow tasks. |
+
+
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
 - [Managing Vocabularies]({{page space='userdoc' page='managing-vocabularies'}})
 - [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})
 - [How to Add a New Vocabulary]({{page space='nxdoc' page='how-to-add-a-new-vocabulary'}})
 - [How to Translate a Vocabulary]({{page space='nxdoc' page='how-to-translate-a-vocabulary'}})
+
+
 
 {{/panel}}</div><div class="column medium-6">
 
