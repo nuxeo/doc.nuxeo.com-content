@@ -12,7 +12,7 @@ tree_item_index: 1050
 
 ---
 {{! excerpt}}
-The Nuxeo Annotations with ARender addon allows users to preview and annotate any content stored in the Nuxeo repository: Office documents, PDF, images, videos with the ARender previewer, from Arondor.
+The Nuxeo Annotations with ARender addon allows users to preview and annotate any document stored in the Nuxeo repository: Office documents, PDF, images, videos with the ARender previewer, from Arondor.
 {{! /excerpt}}
 
 ARender software is made of two pieces:
@@ -25,7 +25,6 @@ ARender previewer is extended by Nuxeo to integrate the ARender Previewer with t
 
 Here's a chart describing actions during first connection to ARender:
 ![]({{file name='arender-flow.png'}} ?w=650,border=true)
-
 
 ## Installation
 
@@ -123,3 +122,56 @@ FROM dockerin-arender.nuxeo.com:443/arender-previewer:MP_VERSION
 
 COPY arender.properties /docker-entrypoint-init.d/arender.properties
 ```
+
+
+## Functional Overview
+
+Once the ARender addon is properly installed and configured a new tab **Annotations** is available on each document view:
+
+![]({{file name='annotation-tab.png'}} ?w=350)
+
+### Add a New Annotation
+
+You can access the annotations by hovering the dedicated button ![]({{file name='annotation-icon.png'}} ?w=20), a sub menu appears:
+
+![]({{file name='annotation-submenu.png'}} ?w=350,border=true)
+
+Different types of annotations are available:
+
+- A sticky note
+- A text box
+- Highlight text
+- Draw different shapes (arrow, circle, polygon, etc.)
+- Show/Hide annotations
+
+**To add an annotation:**
+
+1. Go to the annotations tab on the document desired.
+1. Click on one of the annotation type that you want, for example a sticky note.</br>
+    An empty box is displayed on your document.
+    ![]({{file name='annotation-sticky-note-empty.png'}} ?w=250,border=true)
+1. Write your annotation.
+1. Click on the Save button ICON in the top bar.
+    Your annotation is displayed.
+    ![]({{file name='annotation-sticky-note-displayed.png'}} ?w=350,border=true)
+
+### Access to the Annotations
+
+Two views are available at the top right:
+![]({{file name='annotation-views.png'}} ?w=150)
+- ![]({{file name='annotation-document-pages-thumbs.png'}} ?w=20): The documents pages thumbs
+- ![]({{file name='annotation-browser-navigation.png'}} ?w=20): The annotation browser
+
+From the annotation browser, you can see the list of all the annotations done on the document you are viewing.
+You can also manage annotations from this view:
+
+- Leave a comment
+- Reply to a comment
+- Delete a comment
+- Accept, reject, cancelled, completed a comment
+
+![]({{file name='annotation-comment-replied.png'}} ?w=350,border=true)
+
+## Going Further
+
+The connector can be customized in many different ways, for example if you want to have the possibility to watermark a document, if you want some actions/tools displayed and/or hidden in the top bar of the annotation screen, etc.
