@@ -490,7 +490,7 @@ Values you put in operations parameters are provided with scripting capability.
 
 When filling in a parameter value (like "value" parameter of "update property" in the case we want to update the title of the a document), there are three options:
 
-*   `Title`: there is no interpretation (default behavior), the parameter is taken "as is", which means that the title will be "Title".
+*   `Title`: There is no interpretation (default behavior), the parameter is taken "as is", which means that the title will be "Title".
 
 *   `expr:Title` starts with a "`expr:`". The system will interpret the value "Title" as a scripting expression. In that case it means that the value of the title will be updated with the content of the variable _Title_
 
@@ -504,7 +504,7 @@ When the script is evaluated, you can use both contextual objects and embedded f
     `expr:Document["dc:title"]`
     You can also use methods provided by the Document Wrapper, see below.
 
-*   **variable_name**: if you set a context variable in a previous operation, you can access it in the parameter value by just referring to its name. In the following sample, if there was a `SetVariable` before in the operation flow that put the path of a document in the variable `path_of_the_workspace`, the parameter's value will be this path.
+*   **variable_name**: If you set a context variable in a previous operation, you can access it in the parameter value by just referring to its name. In the following sample, if there was a `SetVariable` before in the operation flow that put the path of a document in the variable `path_of_the_workspace`, the parameter's value will be this path.
     `expr:path_of_the_workspace`
 
     {{#> callout type='note' }}
@@ -513,50 +513,56 @@ When the script is evaluated, you can use both contextual objects and embedded f
 
     {{/callout}}
 
-*   **Relative paths**: each time you need to use a path expression (whether it is as a direct parameter of an operation, such as move, or in a an NXQL query, for STARTSWITH operator, you can leverage relative path capability:
+*   **Relative paths**: Each time you need to use a path expression (whether it is as a direct parameter of an operation, such as move, or in a an NXQL query, for STARTSWITH operator, you can leverage relative path capability:
 
     *   "." will be replaced by path of input document;
     *   ".." will be replaced by path of parent of input document.
 
-*   **CurrentDate**: you can use the `CurrentDate` object, that will provide various utility methods to get the current date value, see below.
+*   **CurrentDate**: You can use the `CurrentDate` object, that will provide various utility methods to get the current date value, see below.
 
-*   **Context.principal.model.getPropertyValue("schema:field")**: gets the current user property. By default users implements user.xsd schema. So if you want for instance the company name, `Context.principal.model.getPropertyValue("user:company")`. But if your users implements other schemas, you choose your "schema prefix (or name if don't set) : field name"
-*   **CurrentUser.actingUser**: in a workflow context, all the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). This variable allows you to fetch the current user. This can also be useful when the operation "Users and groups > Login as" has been used in order to retrieve the current username.
+*   **Context.principal.model.getPropertyValue("schema:field")**: Returns the current user property. By default users implements user.xsd schema. So if you want for instance the company name, `Context.principal.model.getPropertyValue("user:company")`. But if your users implements other schemas, you choose your "schema prefix (or name if don't set) : field name"
+*   **CurrentUser.actingUser**: In a workflow context, all the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). This variable allows you to fetch the current user. This can also be useful when the operation "Users and groups > Login as" has been used in order to retrieve the current username.
 
     {{#> callout type='info' }}
 
     Note that `currentUser` is an alias for `CurrentUser`.
 
     {{/callout}}
-*   **Event:** in an event handler context, the Event object can be used to access some of the event's properties. For instance **`@{Event.getName()}`** will return the event name.
+*   **Event:** In an event handler context, the Event object can be used to access some of the event's properties. For instance **`@{Event.getName()}`** will return the event name.
 
 ## {{> anchor 'doc-wrapper'}}Document Wrapper
 
 The Document wrapper, used by the system for any document put in scripting context (whether under a variable name, or as the input document ("Document") provides several utility methods:
 
-*   `Document.parent`: returns a document wrapper of the parent of the document;
+*   `Document.parent`: Returns a document wrapper of the parent of the document;
 
-*   `Document.workspace`: returns a document wrapper of the parent workspace of the document;
+*   `Document.workspace`: Returns a document wrapper of the parent workspace of the document;
 
-*   `Document.domain`: returns a document wrapper of the parent domain of the document;
+*   `Document.domain`: Returns a document wrapper of the parent domain of the document;
 
-*   `Document.path`: returns a string representing the value of the path of the document, like "/default-domain/workspaces/my-workspace";
+*   `Document.path`: Returns a string representing the value of the path of the document, like "/default-domain/workspaces/my-workspace";
 
-*   `Document.title`: returns the title of the document;
+*   `Document.title`: Returns the title of the document;
 
-*   `Document.description`: returns the description of the document;
+*   `Document.description`: Returns the description of the document;
 
-*   `Document.type`: returns the Nuxeo EP Document type of the document (like "File", "Folder", ...);
+*   `Document.type`: Returns the Nuxeo EP Document type of the document (like "File", "Folder", ...);
 
-*   `Document.lifeCycle`: returns the current lifecycle state of the document;
+*   `Document.lifeCycle`: Returns the current lifecycle state of the document;
 
-*   `Document.name`: returns the name of the document (last part of the path);
+*   `Document.name`: Returns the name of the document (last part of the path);
 
-*   `Document.versionLabel`: returns the version name of the document (like "1.1"...).
+*   `Document.versionLabel`: Returns the version name of the document (like "1.1"...).
 
 {{#> callout type='info' }}
 
 Note that `currentDocument` is an alias for `Document`.
+
+{{/callout}}
+
+{{#> callout type='info' }}
+
+Also note that we listed here the main accessors. `Documne` is a `DocumentWrapper`and you can also [check the code](https://github.com/nuxeo-archives/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-core/src/main/java/org/nuxeo/ecm/automation/core/scripting/DocumentWrapper.java) to see all the available accessors. For exemple, you also can `hasFacet(String facet)`, `hasSchema(String schemaName)`... Make sure to select the branch corresponding to the version of Nuxeo you are using.
 
 {{/callout}}
 
@@ -621,23 +627,41 @@ Some others can be used when building an NXQL query to express dates relatively 
 
 ## {{> anchor 'fn-object'}}Functions
 
-The Functions object is providing a set of useful functions. This object is named _Fn_ and provide the following functions:
+The Functions object is providing a set of useful functions. This object is named `Fn` and it provides the following functions (the full list can also be checked in [the code](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/features/PlatformFunctions.java), ùakes sure to select the branch of your version):
 
-*   `Fn.getNextId(String key)`: gets a unique value for the given key. Each time this function is called using the same key a different string will be returned.
+*   `Fn.getNextId(String key)`: Returns a unique value for the given key using the default sequencer. Each time this function is called using the same key a different string will be returned.
 
-*   `Fn.getVocabularyLabel(String vocabularyName, String key)`: gets a value from the named vocabulary that is associated with the given key.
+*   `Fn.getNextId(String key, String sequencerName)`: Same as `Fn.getNextId(String key)` but allows for using a specific sequencer.
 
-*   `Fn.getPrincipal(String userName)`: gets a Nuxeo principal object for the given username string.
+*   `Fn.getVocabularyLabel(String vocabularyName, String key)`: Returns a value from the named vocabulary that is associated with the given key.
 
-*   `Fn.getEmail(String userName)`: gets the e-mail of the given username.
+*   `Fn.getPrincipal(String userName)`: Returns a Java `NuxeoPrincipal` object for the given username string.
 
-*   `Fn.getEmails(List<String> userNames)`: gets a list of e-mails for the given user name list.
+*   `Fn.getPrincipalsFromGroup(String group)`: Returns a Java `Set` of `NuxeoPrincipal` for the given group. Also returns the subgroups.
 
-*   `Fn.getPrincipalEmails(List<NuxeoPrincipal> principals)`: the same as above but the input object is a list of Nuxeo principals.
-*   `Fn.concatenateIntoList(List<T> list, Object... values)`: adds the values to the list. If a value is itself an array or a collection, each of its members are added to the list. The list is returned.
-*   `Fn.concatenateValuesAsNewList(Object... values)`: like `concatenateIntoList` but using a newly-created list.
-*   `Fn.htmlEscape(String string)` : gets an escaped version of the string suitable for HTML inclusion.
-*   `Fn.nxqlEscape(String string)` : gets an escaped version of the string suitable for NXQL inclusion inside single quotes (since Nuxeo 7.10).
+*   `Fn.getPrincipalsFromGroup(String group, boolean ignoreGroups)`: Returns a Java `Set` of `NuxeoPrincipal` for the given group. Only the users are returned, not subgroups.
+
+*   `Fn.getEmail(String userName)`: Returns the e-mail of the given username.
+
+*   `Fn.getEmails(List<String> userNames)`: Returns a list of e-mails for the given user name list.
+
+*   `Fn.getEmails(List<String> userNames, boolean usePrefix)`: Returns a list of e-mails for the given user name list. If `userPrefix` is `true`, each item is prefixed with `user:`.
+
+*   `Fn.getPrincipalEmails(List<NuxeoPrincipal> principals)`: Same as above but the input object is a list of Nuxeo principals.
+
+*   `Fn.getEmailsFromGroup(String groupName)`: Returns a list of e-mails of all the users of the group.
+
+*   `Fn.concatenateIntoList(List<T> list, Object... values)`: Adds the values to the list. If a value is itself an array or a collection, each of its members are added to the list. The list is returned.
+
+*   `Fn.concatenateValuesAsNewList(Object... values)`: Same as `concatenateIntoList` but using a newly-created list.
+
+*   `Fn.htmlEscape(String string)` : Returns an escaped version of the string suitable for HTML inclusion.
+
+*   `Fn.nxqlEscape(String string)` : Returns an escaped version of the string suitable for NXQL inclusion inside single quotes.
+
+*   `Fn.documentExists(CoreSession session, String idOrPath)` : Returns `true` if the document exists in te repository.
+
+*   `Fn.getDirService()` : Returns the `DirectoryService`. Requires administration privileges.
 
 ## Nuxeo Environment Properties
 
