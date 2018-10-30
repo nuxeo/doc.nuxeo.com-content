@@ -68,6 +68,16 @@ Features include:
     ![Chrome Omnibox search]({{file name='omnibox.gif'}} ?w=600,border=true)
 * Link to our Customer Feedback Portal from the About page. You can vote for requested features or even suggest your own,       anonymously if you wish.
 
+### Hot Reload
+ By using hot reload, the modifications done on your Studio project will be visible in Web UI.
+ 1. Install the extension, as explained in the section Building from GitHub
+1. In /bin/nuxeo.conf, make sure Dev Mode is enabled.
+1. Start your Nuxeo instance.
+1. Modify your Studio Project.
+1. Go to the browser tab displaying Nuxeo Platform.
+1. In the extension bar, click on the Nuxeo icon.
+1. In the pop-up window, click on Hot Reload.
+
 ## Limitations
 
 * Multiple Nuxeo projects are not supported.
