@@ -561,44 +561,43 @@ Note that `currentDocument` is an alias for `Document`.
 {{/callout}}
 
 {{#> callout type='info' }}
-
-Also note that we listed here the main accessors. `Documne` is a `DocumentWrapper`and you can also [check the code](https://github.com/nuxeo-archives/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-core/src/main/java/org/nuxeo/ecm/automation/core/scripting/DocumentWrapper.java) to see all the available accessors. For exemple, you also can `hasFacet(String facet)`, `hasSchema(String schemaName)`... Make sure to select the branch corresponding to the version of Nuxeo you are using.
-
+Also note that we listed here the main accessors. `Document` is a `DocumentWrapper` and you can also [check the code](https://github.com/nuxeo-archives/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-core/src/main/java/org/nuxeo/ecm/automation/core/scripting/DocumentWrapper.java) to see all the available accessors.</br>
+For example, you can also use `hasFacet(String facet)`, `hasSchema(String schemaName)`, etc. Make sure to select the branch corresponding to the version of Nuxeo you are using.
 {{/callout}}
 
 ## {{> anchor 'date-wrapper'}}Date Wrapper
 
 The Date wrapper is useful to update documents' date properties and to build time-relative NXQL queries.
 
-*   `CurrentDate.date`: returns the date. It is the method to use to update a document date field, like `dc:valid`, or whatever custom date field.
+- `CurrentDate.date`: returns the date. It is the method to use to update a document date field, like `dc:valid`, or whatever custom date field.
 
 Some other methods are provided to display the current date as a string:
 
-*   `CurrentDate.format("_java formatting expression_` `")`: returns the current date in the specified format;
+- `CurrentDate.format("_java formatting expression_` `")`: returns the current date in the specified format;
 
-*   `CurrentDate.time`: returns the date in milliseconds;
+- `CurrentDate.time`: returns the date in milliseconds;
 
-*   `CurrentDate.day`: returns the day of the current time;
+- `CurrentDate.day`: returns the day of the current time;
 
-*   `CurrentDate.month`: returns the month of the current time;
+- `CurrentDate.month`: returns the month of the current time;
 
-*   `CurrentDate.year`: returns the year of the current time;
+- `CurrentDate.year`: returns the year of the current time;
 
-*   `CurrentDate.hour`: returns the hour of the current time;
+- `CurrentDate.hour`: returns the hour of the current time;
 
-*   `CurrentDate.minut`: returns the minutes of the current time;
+- `CurrentDate.minut`: returns the minutes of the current time;
 
-*   `CurrentDate.second`: returns the seconds of the current time;
+- `CurrentDate.second`: returns the seconds of the current time;
 
-*   `CurrentDate.week`: returns the week of the current time.
+- `CurrentDate.week`: returns the week of the current time.
 
 Some others can be used when building an NXQL query to express dates relatively to the current date:
 
-*   `CurrentDate.days(-3)`: returns the current date minus three days;
+- `CurrentDate.days(-3)`: returns the current date minus three days;
 
-*   `CurrentDate.years(10)`: returns the current date plus ten years;
+- `CurrentDate.years(10)`: returns the current date plus ten years;
 
-*   `CurrentDate.months(-5).weeks(2).seconds(23)`: returns the current date minus five months plus two weeks and 23 seconds;
+- `CurrentDate.months(-5).weeks(2).seconds(23)`: returns the current date minus five months plus two weeks and 23 seconds;
 
 *   ...
 
@@ -627,45 +626,45 @@ Some others can be used when building an NXQL query to express dates relatively 
 
 ## {{> anchor 'fn-object'}}Functions
 
-The Functions object is providing a set of useful functions. This object is named `Fn` and it provides the following functions (the full list can also be checked in [the code](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/features/PlatformFunctions.java), ùakes sure to select the branch of your version):
+The Functions object is providing a set of useful functions. This object is named `Fn` and it provides the following functions (the full list can also be checked in [the code](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/features/PlatformFunctions.java), make sure to select the branch of your version):
 
-*   `Fn.getNextId(String key)`: Returns a unique value for the given key using the default sequencer. Each time this function is called using the same key a different string will be returned.
+- `Fn.getNextId(String key)`: Returns a unique value for the given key using the default sequencer. Each time this function is called using the same key a different string will be returned.
 
-*   `Fn.getNextId(String key, String sequencerName)`: Same as `Fn.getNextId(String key)` but allows for using a specific sequencer.
+- `Fn.getNextId(String key, String sequencerName)`: Same as `Fn.getNextId(String key)` but allows for using a specific sequencer.
 
-*   `Fn.getVocabularyLabel(String vocabularyName, String key)`: Returns a value from the named vocabulary that is associated with the given key.
+- `Fn.getVocabularyLabel(String vocabularyName, String key)`: Returns a value from the named vocabulary that is associated with the given key.
 
-*   `Fn.getPrincipal(String userName)`: Returns a Java `NuxeoPrincipal` object for the given username string.
+- `Fn.getPrincipal(String userName)`: Returns a Java `NuxeoPrincipal` object for the given username string.
 
-*   `Fn.getPrincipalsFromGroup(String group)`: Returns a Java `Set` of `NuxeoPrincipal` for the given group. Also returns the subgroups.
+- `Fn.getPrincipalsFromGroup(String group)`: Returns a Java `Set` of `NuxeoPrincipal` for the given group. Also returns the subgroups.
 
-*   `Fn.getPrincipalsFromGroup(String group, boolean ignoreGroups)`: Returns a Java `Set` of `NuxeoPrincipal` for the given group. Only the users are returned, not subgroups.
+- `Fn.getPrincipalsFromGroup(String group, boolean ignoreGroups)`: Returns a Java `Set` of `NuxeoPrincipal` for the given group. Only the users are returned, not subgroups.
 
-*   `Fn.getEmail(String userName)`: Returns the e-mail of the given username.
+- `Fn.getEmail(String userName)`: Returns the e-mail of the given username.
 
-*   `Fn.getEmails(List<String> userNames)`: Returns a list of e-mails for the given user name list.
+- `Fn.getEmails(List<String> userNames)`: Returns a list of e-mails for the given user name list.
 
-*   `Fn.getEmails(List<String> userNames, boolean usePrefix)`: Returns a list of e-mails for the given user name list. If `userPrefix` is `true`, each item is prefixed with `user:`.
+- `Fn.getEmails(List<String> userNames, boolean usePrefix)`: Returns a list of e-mails for the given user name list. If `userPrefix` is `true`, each item is prefixed with `user:`.
 
-*   `Fn.getPrincipalEmails(List<NuxeoPrincipal> principals)`: Same as above but the input object is a list of Nuxeo principals.
+- `Fn.getPrincipalEmails(List<NuxeoPrincipal> principals)`: Same as above but the input object is a list of Nuxeo principals.
 
-*   `Fn.getEmailsFromGroup(String groupName)`: Returns a list of e-mails of all the users of the group.
+- `Fn.getEmailsFromGroup(String groupName)`: Returns a list of e-mails of all the users of the group.
 
-*   `Fn.concatenateIntoList(List<T> list, Object... values)`: Adds the values to the list. If a value is itself an array or a collection, each of its members are added to the list. The list is returned.
+- `Fn.concatenateIntoList(List<T> list, Object... values)`: Adds the values to the list. If a value is itself an array or a collection, each of its members are added to the list. The list is returned.
 
-*   `Fn.concatenateValuesAsNewList(Object... values)`: Same as `concatenateIntoList` but using a newly-created list.
+- `Fn.concatenateValuesAsNewList(Object... values)`: Same as `concatenateIntoList` but using a newly-created list.
 
-*   `Fn.htmlEscape(String string)` : Returns an escaped version of the string suitable for HTML inclusion.
+- `Fn.htmlEscape(String string)`: Returns an escaped version of the string suitable for HTML inclusion.
 
-*   `Fn.nxqlEscape(String string)` : Returns an escaped version of the string suitable for NXQL inclusion inside single quotes.
+- `Fn.nxqlEscape(String string)`: Returns an escaped version of the string suitable for NXQL inclusion inside single quotes.
 
-*   `Fn.documentExists(CoreSession session, String idOrPath)` : Returns `true` if the document exists in te repository.
+- `Fn.documentExists(CoreSession session, String idOrPath)`: Returns `true` if the document exists in the repository.
 
-*   `Fn.getDirService()` : Returns the `DirectoryService`. Requires administration privileges.
+- `Fn.getDirService()`: Returns the `DirectoryService`. Requires administration privileges.
 
 ## Nuxeo Environment Properties
 
-Nuxeo environment properties are accessible in scripts using the `Env` map object. All the properties defined in Nuxeo property files located in Nuxeo `conf` directory are available through the `Env` map. This is very useful when you want to parametrize your operations using values that can be modified later on a running server.
+Nuxeo environment properties are accessible in scripts using the `Env` map object. All the properties defined in Nuxeo property files located in Nuxeo `conf` directory are available through the `Env` map. This is very useful when you want to configure your operations using values that can be modified later on a running server.
 
 For example let's say you want to make an operation that is creating a document and initialize its description from a Nuxeo property named `automation.document.description`.
 
