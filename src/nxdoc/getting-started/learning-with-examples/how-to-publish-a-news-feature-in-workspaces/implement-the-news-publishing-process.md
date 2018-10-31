@@ -2,7 +2,7 @@
 title: 'Implement the News "Publishing" Process'
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2018-10-31'
     status: ok
 labels:
     - lts2016-ok
@@ -85,15 +85,14 @@ history:
         message: ''
         version: '1'
 previous_link: /nxdoc/add-a-news-content-view-on-workspaces
-
 ---
 
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 In this section, we will:
 
-*   Create the `NewsManagement` permission that will be given to user we want to be able to publish news
-*   Create a "Publish news" button that will be available in the folder to enable bulk publishing
+- Create the `NewsManagement` permission that will be given to user we want to be able to publish news
+- Create a "Publish news" button that will be available in the folder to enable bulk publishing
 
 {{#> callout type='info' }}
 
@@ -112,8 +111,8 @@ For this section, it is recommended to take a look at the[ Use Content Automatio
 ## Create the "Publish News" Button
 
 1.  Create a new User Action called "PublishNewsButton". Its properties are:
-    *   **Current user has permission**: `NewsManagement`
-    *   **Current document has type**: `Folder`
+    - **Current user has permission**: `NewsManagement`
+    - **Current document has type**: `Folder`
 2.  Create the operation chain `PublishNewsChain`:
     ```yaml
     - Seam.GetSelectedDocuments

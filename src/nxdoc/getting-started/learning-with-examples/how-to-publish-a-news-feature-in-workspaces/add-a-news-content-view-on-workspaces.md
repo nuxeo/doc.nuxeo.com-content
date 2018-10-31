@@ -2,7 +2,7 @@
 title: Add a News Content View on Workspaces
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2018-10-31'
     status: ok
 labels:
     - content-review-lts2016
@@ -84,15 +84,15 @@ next_link: /nxdoc/implement-the-news-publishing-process
 
 In the section, we will:
 
-*   prepare a new tab for workspaces,
-*   override the default Workspace document type to customize it with the newly created tab.
+- prepare a new tab for workspaces,
+- override the default Workspace document type to customize it with the newly created tab.
 
 {{#> callout type='info' }}
 
 For this section, it is recommended to take a look at the how-tos for a step-by-step approach:
 
-*   [Define a new content view]({{page page='how-to-define-a-new-content-view'}}),
-*   [How to Define a Document Type]({{page page='how-to-define-a-document-type'}}).
+- [Define a new content view]({{page page='how-to-define-a-new-content-view'}}),
+- [How to Define a Document Type]({{page page='how-to-define-a-document-type'}}).
 
 {{/callout}}
 
@@ -117,11 +117,11 @@ The view is done. Now we need to apply it to the Workspace document type. To do 
 ## Override The "Workspace" Document Type
 
 1.  Create a new document type:
-    *   featureID: `Workspace`
-    *   Extends: Folder
+    - featureID: `Workspace`
+    - Extends: Folder
 2.  In the **Definition** tab:
-    *   Accepted Children Type: select Folder, Workspace, Note, File and OrderedFolder.
-    *   Show Create Child Action: checked.
+    - Accepted Children Type: select Folder, Workspace, Note, File and OrderedFolder.
+    - Show Create Child Action: checked.
 3.  In **Tabs** > **Content Views** tab: add a new tab configuration called `News` that uses the `NewsTab` content view and has order 1.
     ![]({{file name='Tabs_ContentViews_Workspace.png'}} ?w=600,h=386,border=true)
 4.  Edit the layouts to remove the default Studio warning.
