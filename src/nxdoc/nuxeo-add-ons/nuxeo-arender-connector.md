@@ -123,10 +123,19 @@ FROM dockerin-arender.nuxeo.com:443/arender-previewer:MP_VERSION
 COPY arender.properties /docker-entrypoint-init.d/arender.properties
 ```
 
+Editing the `arender.properties` file helps you to tailor the Arender interface to fit specific UI and UX needs. Please follow the [ARender configuration guide](https://arender.io/doc/current/documentation/hmi/index-hmi.html).
+
+You can for example:
+
+- Add, remove, move buttons from the ARender interface
+- Modify ARender behaviors on specific user actions (like validating a comment when the user clicks on "Enter" )
+- Reference a new theme (by creating your custom CSS file)
+
+![]({{file name='arender-customized.png'}} ?w=350)
 
 ## Functional Overview
 
-Once the ARender addon is properly installed and configured a new tab **Annotations** is available on each document view:
+Once the ARender addon is properly installed and configured a new **Annotations** pill is available on each document **which have the Picture or Video facet**:
 
 ![]({{file name='annotation-tab.png'}} ?w=350)
 
@@ -146,8 +155,8 @@ Different types of annotations are available:
 
 **To add an annotation:**
 
-1. Go to the annotations tab on the document desired.
-1. Click on one of the annotation type that you want, for example a sticky note.</br>
+1. Go to the annotations pill
+1. Click on an annotation type, like the sticky note.</br>
     An empty box is displayed on your document.
     ![]({{file name='annotation-sticky-note-empty.png'}} ?w=250,border=true)
 1. Write your annotation.
@@ -159,10 +168,15 @@ Different types of annotations are available:
 
 Two views are available at the top right:
 ![]({{file name='annotation-views.png'}} ?w=150)
-- ![]({{file name='annotation-document-pages-thumbs.png'}} ?w=20): The documents pages thumbs
+- ![]({{file name='annotation-document-pages-thumbs.png'}} ?w=20): The documents pages thumbs, opened by default
 - ![]({{file name='annotation-browser-navigation.png'}} ?w=20): The annotation browser
 
-From the annotation browser, you can see the list of all the annotations done on the document you are viewing.
+From the annotation browser, you can see the list of all the annotations done on the document you are viewing, grouped by document pages.
+
+You can search and filter any annotation by expending the following item:
+
+![]({{file name='annotation-search.png'}} ?w=350,border=true)
+
 You can also manage annotations from this view:
 
 - Leave a comment
@@ -174,4 +188,4 @@ You can also manage annotations from this view:
 
 ## Going Further
 
-The connector can be customized in many different ways, for example if you want to have the possibility to watermark a document, if you want some actions/tools displayed and/or hidden in the top bar of the annotation screen, etc.
+The connector can be customized in many different ways, for example if you want to have the possibility to watermark a document with specific stamps, if you want some actions/tools displayed and/or hidden in the top bar of the annotation screen, etc.
