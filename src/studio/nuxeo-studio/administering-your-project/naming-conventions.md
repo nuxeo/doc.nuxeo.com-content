@@ -14,7 +14,7 @@ We strongly encourage you to follow these, especially if you are a beginner.
 
 ## General rule
 
-- Use pascal case naming convention (initial uppercase letter)
+- Use pascal case naming convention (initial uppercase letter).
   - Example: `PascalCase`
 - Avoid using hyphens (-) and use underscore. They will prevent your items to be usable by automation scripting.
 
@@ -25,11 +25,11 @@ We strongly encourage you to follow these, especially if you are a beginner.
 | Item  | Rules | Example   |
 |---|---|---|
 | Document types | Pascal case naming convention | ContractLibrary |
-| External schemas | `SCH_` followed by the schema name | SCH_Validation  |
+| Schemas | Lower case, separated by underscore only if readability is affected | contractlibrary  |
 | Properties | Pascal case naming convention | ContractNumber  |
-| Lifecycle | `LC_` followed by the schema name | LC_Contract |
-| Lifecycle state  | Pascal case naming convention   | validated  |
-| Structure templates  | `ST_` followed by the schema name  | ST_ContractLibrary  |
+| Lifecycle | Pascal case naming convention | ContractLifecycle |
+| Lifecycle state  | All lower case, not separated | validated  |
+| Structure templates | Pascal case naming convention | ContractLibraryStructure  |
 
 
 #### Workflow
