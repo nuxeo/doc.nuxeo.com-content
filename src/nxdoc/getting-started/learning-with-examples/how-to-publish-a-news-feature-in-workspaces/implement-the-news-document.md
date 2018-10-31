@@ -2,7 +2,7 @@
 title: Implement the News Document
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2018-10-31'
     status: ok
 labels:
     - lts2016-ok
@@ -111,18 +111,20 @@ history:
 next_link: /nxdoc/add-a-news-content-view-on-workspaces
 
 ---
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 In this section, we will:
 
-*   Create the News document type,
-*   Create the content template with News Folder,
-*   Add a button dedicated to News creation.
+- Create the News document type,
+- Create the content template with News Folder,
+- Add a button dedicated to News creation.
 
 {{#> callout type='info' }}
 
 For this section, it is recommended to take a look at the following guides for a step-by-step approach:
 
-*   [How to define a document type]({{page page='how-to-define-a-document-type'}})
-*   [Use Content Automation]({{page page='how-to-define-a-new-content-view'}})
+- [How to define a document type]({{page page='how-to-define-a-document-type'}})
+- [Use Content Automation]({{page page='how-to-define-a-new-content-view'}})
 
 {{/callout}}
 
@@ -141,23 +143,23 @@ For this section, it is recommended to take a look at the following guides for a
     {{/callout}}
 2.  On the **Definition** tab, ensure that the our News document extends the **Document** type.    
 3.  On the **Schema** tab:
-    *   Add the `files` schema (necessary so that pictures that are uploaded with a HTML widget are stored).
-    *   Under **Add a custom schema** a field `body` of type `String`.
+    - Add the `files` schema (necessary so that pictures that are uploaded with a HTML widget are stored).
+    - Under **Add a custom schema** a field `body` of type `String`.
 4.  Create the layouts of the document:
-    *   **Creation layout** metadata: `dc:title` as text widget, `news:body` as a HTML text widget.
-    *   **Edit layout** metadata: import Creation layout (it is the same).
-    *   **View layout** metadata: import Creation layout and add `dc:valid` as DateTime widget on a third row.
+    - **Creation layout** metadata: `dc:title` as text widget, `news:body` as a HTML text widget.
+    - **Edit layout** metadata: import Creation layout (it is the same).
+    - **View layout** metadata: import Creation layout and add `dc:valid` as DateTime widget on a third row.
 
     The `News` document type is now created. However, there is no way to access the creation form for now.
 
 ## Create the Structure Template for News Folder to Be Available Automatically
 
 1.  Create a new Structure Template:
-    *   **ID**: Workspace
-    *   **Target Document Type**: Workspace
+    - **ID**: Workspace
+    - **Target Document Type**: Workspace
 2.  Add a new built-in type: Folder
-    *   **Node Name**: NewsFolder
-    *   **Title**: News Folder
+    - **Node Name**: NewsFolder
+    - **Title**: News Folder
     ![]({{file name='structuretemplate_workspace.png'}} ?w=650,border=true)
 
     Now, every time a workspace is created, a folder called "News Folder" will automatically be created in it by the system.
@@ -167,12 +169,12 @@ For this section, it is recommended to take a look at the following guides for a
 Here are the steps to create the button to create news from a Workspace into the News Folder:
 
 1.  Create a new User Action. Its properties:
-    *   **ID**: `CreateNewsButton`
-    *   **Label**: Create news
-    *   **Category**: Folder toolbar
+    - **ID**: `CreateNewsButton`
+    - **Label**: Create news
+    - **Category**: Folder toolbar
 2.  Activation conditions:
-    *   **User has permission**: `Edit`
-    *   **Current document has type**: `Workspace`
+    - **User has permission**: `Edit`
+    - **Current document has type**: `Workspace`
 3.  Create new operation chain `CreateNewsChain`:
     ```yaml
     - Repository.GetDocument:

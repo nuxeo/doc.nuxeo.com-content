@@ -2,7 +2,7 @@
 title: How to Publish a News Feature in Workspaces
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2018-10-31'
     status: ok
 labels:
     - content-review-lts2016
@@ -123,6 +123,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 ## Concept
 
 {{! excerpt}}
