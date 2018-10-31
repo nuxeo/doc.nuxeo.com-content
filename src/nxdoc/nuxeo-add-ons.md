@@ -596,6 +596,7 @@ Nuxeo JSF to Web UI<br/>
 Public
 </td>
 <td>
+[Documentation]({{page page='nuxeo-jsf-to-web-ui'}})
 </td>
 <td >
 [Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-to-web-ui?version=1.2.1)
