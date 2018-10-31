@@ -147,7 +147,7 @@ The default **group** schema definition:
 </xs:schema>
 ```
 
-The `group` schema can be extended aswell using an extension.
+The `group` schema can be extended as well using an extension.
 
 ```xml
 <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
