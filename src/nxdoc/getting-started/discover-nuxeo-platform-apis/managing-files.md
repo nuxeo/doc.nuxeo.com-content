@@ -1,8 +1,8 @@
 ---
 title: Managing Files
 review:
-    comment: Allow download policy for Administrators
-    date: '2017-02-21'
+    comment:
+    date: '2018-10-31'
     status: ok
 toc: true
 labels:

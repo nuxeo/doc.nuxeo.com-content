@@ -1,8 +1,8 @@
 ---
 title: Handling Permissions
 review:
-    comment: Allow download policy for Administrators
-    date: '2017-02-21'
+
+    date: '2018-10-31'
     status: ok
 toc: true
 labels:
@@ -21,107 +21,107 @@ confluence:
     source_link: /display/NXDOC/Handling+Permissions
 tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-05 11:51'
         message: ''
         version: '21'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-21 12:24'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-20 15:26'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-19 13:27'
         message: Use const instead of var
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-17 09:08'
         message: ''
         version: '17'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-17 09:05'
         message: 'occured => occurred'
         version: '16'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-17 08:55'
         message: 'Grant read write to sales, not managers'
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-12 15:35'
         message: ''
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-12 14:01'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-12 09:56'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-12 09:45'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-12 09:44'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-11 15:39'
         message: ''
         version: '9'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-10 07:41'
         message: ''
         version: '8'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-10 07:39'
         message: ''
         version: '7'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-10 07:08'
         message: ''
         version: '6'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-08-08 13:19'
         message: Added check permissions
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-02 16:18'
         message: ''
         version: '4'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-29 14:57'
         message: ''
         version: '3'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-19 11:24'
         message: ''
         version: '2'
-    - 
+    -
         author: Bertrand Chauvin
         date: '2016-07-19 10:20'
         message: ''
