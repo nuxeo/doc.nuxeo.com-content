@@ -72,8 +72,7 @@ Features include:
 By using hot reload, the modifications done on your Studio project will be visible in Web UI.
 
 1. Install the extension, as explained in the section [Building from GitHub](#building-from-github)
-1. In `/bin/nuxeo.conf`, make sure the Dev Mode is enable.</br>
-    If not, stop your server, modify the file by adding the `org.nuxeo.dev=true` line and save it.
+1. Make sure the Dev mode is enabled by checking your `nuxeo.conf` file, or by running .<NUXEO_HOME>/bin/nuxeoctl config (You should have `org.nuxeo.dev=true`)
 1. Start your Nuxeo instance.</br>
 1. Modify your Studio Project.
 1. Go to your running server.
