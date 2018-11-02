@@ -13,6 +13,18 @@ Advanced settings enable you to configure Deployment Extensions, Web Services Fi
 
 To configure the deployment of projects, users can define deployment extensions.
 
+```
+<extension target="pages#PAGES">
+<page view-id="/nxstartup.xhtml"
+action="#{startupHelper.initDomainAndFindStartupPage('Default domain','user_dashboard')}" />
+</extension>
+<extension target="web#SERVLET">
+...
+</extension>
+```
+
+For more information, see [Deployment Fragment Preprocessor]({{page version='' space='nxdoc' page='understanding-bundles-deployment'}}).
+
 {{#> callout type='note'}}
 Extension tags must be written directly at the root, not enclosed by any other tag.
 {{/callout}}
