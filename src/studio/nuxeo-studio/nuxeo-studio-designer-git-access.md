@@ -93,3 +93,15 @@ Have a look at your changes in Studio:
 1. Pull changes.
     Studio regularly checks for new commits to pull.
 1. You can follow the procedure described in the [Studio configuration review how-to]({{page page='how-to-review-nuxeo-studio-configuration'}}) to integrate your changes in the master branch.
+
+<div class="row" data-equalizer data-equalize-on="medium">
+
+<div class="column medium-6">
+
+{{#> panel heading='Related Documentation'}}
+- [How to Develop Faster with Git and Your Nuxeo Studio Project]({{page page='how-to-work-with-git-and-studio-project'}})
+{{/panel}}
+
+</div>
+
+</div>

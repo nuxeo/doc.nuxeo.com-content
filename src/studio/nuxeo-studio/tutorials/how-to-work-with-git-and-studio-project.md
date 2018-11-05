@@ -22,6 +22,18 @@ Watch the [Web UI Customization and Nuxeo Frontend Development](https://universi
 ![WEBUI_CUSTOMIZATION_FRONTEND_DEV](nx_asset://233ef043-0939-4ff6-88a6-13dcb92660b0 ?w=450,border=true)
 {{/callout}}
 
+# Developing Web UI customizations from Nuxeo Studio Designer UI and with Git Access
+
+Nuxeo Studio Designer allows you to easily create standard components as document type layouts, new buttons or search forms. It is recommended **to quick start on Web UI customization** as it manages the relationships between related elements, it creates all the necessary slot contributions and brings autocompletion, etc. 
+
+The Nuxeo Studio Designer configuration is available on the Resources tab. It offers a physical representation of the content which will be deployed in your Nuxeo Server, in the `/nxserver/nuxeo.war/ui` folder. From this location, it is possible to edit the generated elements to fit your needs. Once your work finished, save your changes, and hot reload your Nuxeo instance to deploy your Studio project.
+
+This way of working presents one drawback: you need to hot reload every time you need to check your changes. As a walkaround, you can still directly edit the file deployed on your server, but you need to replicate it in your Studio Configuration so that it is bundled in your Studio Project. To solve this issue, we have created the Nuxeo Studio Designer Git Access.
+
+{{/callout}}
+
+# Working with Git Access
+
 ## Prerequisites
 
 - A **running instance** of Nuxeo Server on your machine (example: http://localhost:8080/nuxeo/) to deploy your configuration.
