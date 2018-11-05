@@ -123,19 +123,19 @@ FROM dockerin-arender.nuxeo.com:443/arender-previewer:MP_VERSION
 COPY arender.properties /docker-entrypoint-init.d/arender.properties
 ```
 
-Editing the `arender.properties` file helps you to tailor the Arender interface to fit specific UI and UX needs. Please follow the [ARender configuration guide](https://arender.io/doc/current/documentation/hmi/index-hmi.html).
+Editing the `arender.properties` file helps you to tailor the ARender interface to fit specific UI and UX needs. Please follow the [ARender configuration guide](https://arender.io/doc/current/documentation/hmi/index-hmi.html).
 
 You can for example:
 
-- Add, remove, move buttons from the ARender interface
-- Modify ARender behaviors on specific user actions (like validating a comment when the user clicks on "Enter" )
+- Add and/or remove buttons from the ARender interface
+- Modify ARender behaviors on specific user actions (like validating a comment when the user clicks on "Enter")
 - Reference a new theme (by creating your custom CSS file)
 
 ![]({{file name='arender-customized.png'}} ?w=350)
 
 ## Functional Overview
 
-Once the ARender addon is properly installed and configured a new **Annotations** pill is available on each document **which have the Picture or Video facet**:
+Once the ARender addon is properly installed and configured a new **Annotations** pill is available on each document with the picture or video facet:
 
 ![]({{file name='annotation-tab.png'}} ?w=350)
 
