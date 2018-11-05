@@ -24,7 +24,7 @@ Watch the [Web UI Customization and Nuxeo Frontend Development](https://universi
 
 # Developing Web UI customizations from Nuxeo Studio Designer UI and with Git Access
 
-Nuxeo Studio Designer allows you to easily create standard components as document type layouts, new buttons or search forms. It is recommended **to quick start on Web UI customization** as it manages the relationships between related elements, it creates all the necessary slot contributions and brings autocompletion, etc. 
+Nuxeo Studio Designer allows you to easily create standard components as document type layouts, new buttons or search forms. It is recommended **to quick start on Web UI customization** as it manages the relationships between related elements, it creates all the necessary slot contributions and brings autocompletion, etc.
 
 The Nuxeo Studio Designer configuration is available on the Resources tab. It offers a physical representation of the content which will be deployed in your Nuxeo Server, in the `/nxserver/nuxeo.war/ui` folder. From this location, it is possible to edit the generated elements to fit your needs. Once your work finished, save your changes, and hot reload your Nuxeo instance to deploy your Studio project.
 
@@ -121,3 +121,15 @@ As the cache management policy is strict on FT 10.2, you may have to clear you c
 
 - A `.gitignore` file can not be added to your project
 - Make sure that you are not editing the default `nuxeo-<PROJECT-NAME>-bundle.html` file, but the `nuxeo-<PROJECT-NAME>-custom-bundle.html` to make your element imports and your slot contributions
+
+<div class="row" data-equalizer data-equalize-on="medium">
+
+<div class="column medium-6">
+
+{{#> panel heading='Related Documentation'}}
+- [Studio Designer Git Access]({{page page='nuxeo-studio-designer-git-access'}})
+{{/panel}}
+
+</div>
+
+</div>
