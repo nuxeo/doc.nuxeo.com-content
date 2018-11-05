@@ -247,7 +247,20 @@ The CSV file used to import documents in the Nuxeo Platform must respect the fol
 *   Other lines define the documents to be imported
 *   Use a comma to separate properties
 *   Values must be between quotes
-*   Dates must use the format MM/dd/yyyy
+*   Dates must be formatted using the W3C format. More information on the [W3C documentation](https://www.w3.org/TR/NOTE-datetime).
+
+{{#> callout type='note'}}
+It is possible to use the old legacy date format (without time information) `MM/dd/yyyy` by setting the configuration property `nuxeo.csv.import.legacyDateFormat` to `true`:
+
+```xml
+<require>org.nuxeo.ecm.csv.core.properties</require>
+
+<extension point="configuration" target="org.nuxeo.runtime.ConfigurationService">
+  <property name="nuxeo.csv.import.legacyDateFormat">true</property>
+</extension>
+```
+{{/callout}}
+
 *   For multi-valued metadata, such as contributors, use a pipe character (`|`) to separate the different values
 *   For vocabularies values, use their id
 *   Lines defining the documents to import must define all properties specified on the first line, even empty ones (by using empty values)
@@ -255,8 +268,8 @@ The CSV file used to import documents in the Nuxeo Platform must respect the fol
 Here is a simple example of the structure of a CSV file:
 
 ```csv
-"name","type","dc:title","dc:description"
-"my-file","File","My file","This is my file's description"
+"name","type","dc:title","dc:description","dc:issued"
+"my-file","File","My file","This is my file's description","2020-10-01T00:00:00"
 ```
 
 In the example above:
@@ -380,11 +393,6 @@ In this case, the JSON export of the imported document is:
    "product:season": "spring",
 (...)
 ```
-
-{{#> callout type='note'}}
-Dates inside a complex type use W3C format and not MM/dd/yyyy as for simple type dates.
-More information on the [W3C documentation](https://www.w3.org/TR/NOTE-datetime).
-{{/callout}}
 
 ### Import Files
 
