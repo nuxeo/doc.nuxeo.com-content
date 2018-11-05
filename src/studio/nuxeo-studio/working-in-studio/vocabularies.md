@@ -183,8 +183,6 @@ All vocabularies editable from the user interface are listed in the vocabularies
 
 To consult a vocabulary or its entries click on the **Admin > Vocabularies** tab and select the vocabulary you want to consult in the drop down list.
 
-The **Vocabularies** tab is currently only available on JSF UI. It is planned to be integrated in Nuxeo Web UI.
-
 | Vocabulary  | Elements  |
 |---|---|
 | Continent | Lists continents. |
