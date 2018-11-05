@@ -154,7 +154,7 @@ Workflow variables are also available on the node properties, in a schema named 
 </tr>
 <tr>
 <td colspan="1">`transitions`</td>
-<td colspan="1">There must be at least one transition. Each transition has the following:</td>
+<td colspan="1">There must be at least one transition. Each transition has the following character `:`</td>
 </tr>
 <tr>
 <td colspan="1">`transition:chain`</td>
