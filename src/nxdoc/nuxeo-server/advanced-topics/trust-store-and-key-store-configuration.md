@@ -48,75 +48,113 @@ history:
 ---
 ## Introduction
 
-When Nuxeo communicates with other servers through network APIs, you may want these communications to be secured. To do so, you may need to add authentication certificates to your key store (all the certificates known to the JVM) and trust store (all the certificates that the JVM trusts) because:
+Communications between a client and a server can be secured using TLS/SSL (TLS is the new version of the standard that was previously called SSL, but the term SSL is still wildly used). This security includes encryption, authentication of the server by the client, and optionally authentication of the client by the server.
 
-- the remote server may present a certificate signed by a certification authority (or a self-signed certificate) not known by the standard Java trust store (`trustStore`),
-- establishing a connection may require (depending on the remote server configuration) to present a local certificate to the remote server, so that it knows the Nuxeo server is legitimate (`keyStore`).
+In Nuxeo, the kinds of communications that can be secured in this manner depend on the services used. Among them one can find:
+- remote HTTPS servers with which Nuxeo needs to communicate (for example Nuxeo Online Services)
+- connection to Elasticsearch
+- connection to MongoDB (since Nuxeo 9.10-HF22)
+- etc.
 
+Each time a connection is made to a remote server using SSL, the remote server's certificate is checked against the **Trust Store** of the client. The Trust Store contains a list of known certificates for various certification authorities. During authentication, the remote server presents a certificate signed by a certification authority (or a self-signed certificate) known by the Trust Store.
 
-The Key Store will contain all the keys needed by the JVM to be authenticated to a remote server.
+Optionally, the server can request that the client authenticate itself to the server by providing a client certificate. The **Key Store** contains the private keys for the certificates that the client can provide to the server upon request.
 
-{{#> callout type='note' }}
+The JVM contains a default Trust Store that contains standard well-known certificates. This can be replaced globally by a custom Trust Store using Java system properties. And for Nuxeo services that have the capability, a specific Trust Store and Key Store can be used for this specific service.
 
-If you set a custom trust store exclusively with your authorities, **Marketplace, Studio and hot fix distribution integration will not work anymore** since these servers expose certificates available in the default trust store. So we suggest that you [add your certificates to the default trust store](#addingcertificatestodefaulttruststore).
+## {{> anchor 'defaulttruststore'}}Default Trust Store
 
-{{/callout}}
+The JVM contains a default Trust Store in:
+```
+$JAVA_HOME/lib/security/cacerts
+```
+This Trust Store contains all the certificates of well-known certification authorities. By default, the password for this Trust Store is "changeit".
 
-## {{> anchor 'statictruststore'}}Static Trust Store and Key Store
+It is not recommended that you modify this default Trust Store, given that it is shipped with your JVM and will be updated with it. Instead you could make a copy and add certificates to the copy, and use the section below to use this copy as your custom global Trust Store.
 
-To set up the trust store and key store statically, you just have to add the following system properties to Java:
+## {{> anchor 'customtruststore'}}Custom Global Trust Store and Key Store
 
-| What for             | Parameter name                     | Comment          |
-| -------------------- | ---------------------------------- | ---------------- |
-| Trust Store Path     | `javax.net.ssl.trustStore`         |                  |
-| Trust Store Password | `javax.net.ssl.trustStorePassword` |                  |
-| Trust Store Type     | `javax.net.ssl.trustStoreType`     | JKS for instance |
-| Key Store Path       | `javax.net.ssl.keyStore`           |                  |
-| Key Store Password   | `javax.net.ssl.keyStorePassword`   |                  |
-| Key Store Type       | `javax.net.ssl.keyStoreType`       |     &nbsp;       |
+To set up a custom global Trust Store and Key Store, you just have to add the following system properties to Java:
 
-For instance you can add the following parameters to your `JAVA_OPTS`:
+| What for             | Parameter name                     |
+| -------------------- | ---------------------------------- |
+| Trust Store Path     | `javax.net.ssl.trustStore`         |
+| Trust Store Password | `javax.net.ssl.trustStorePassword` |
+| Trust Store Type     | `javax.net.ssl.trustStoreType`     |
+| Key Store Path       | `javax.net.ssl.keyStore`           |
+| Key Store Password   | `javax.net.ssl.keyStorePassword`   |
+| Key Store Type       | `javax.net.ssl.keyStoreType`       |
+
+For instance you could add the following parameters to your `JAVA_OPTS`:
 
 {{#> panel type='code' heading='$NUXEO_HOME/bin/nuxeo.conf'}}
 </br>
 **`trustStore`**
 ```
-JAVA_OPTS=$JAVA_OPTS -Djavax.net.ssl.trustStore=/the/path/to/your/trust-store.jks -Djavax.net.ssl.trustStoreType=jks -Djavax.net.ssl.trustStorePassword=secret
+JAVA_OPTS=$JAVA_OPTS -Djavax.net.ssl.trustStore=/path/to/truststore.jks -Djavax.net.ssl.trustStoreType=jks -Djavax.net.ssl.trustStorePassword=changeit
 ```
-{{/panel}}
 
 **`keyStore`**
 ```
-JAVA_OPTS=$JAVA_OPTS -Djavax.net.ssl.keyStore=/the/path/to/your/key-store.jks -Djavax.net.ssl.keyStoreType=jks -Djavax.net.ssl.keyStorePassword=secret
+JAVA_OPTS=$JAVA_OPTS -Djavax.net.ssl.keyStore=/path/to/keystore.jks -Djavax.net.ssl.keyStoreType=jks -Djavax.net.ssl.keyStorePassword=changeit
+{{/panel}}
 ```
 
-## {{> anchor 'addingcertificatestodefaulttruststore'}}Adding Your Certificates into the Default Trust Store
+### Adding Your Certificates to the default Trust Store
 
-You will find the default trust store shipped with your JVM in:
-```
-$JAVA_HOME/lib/security/cacerts
-```
-For instance on macOS, it could be:
-```
-/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/security/cacerts
-```
+To add your certificates to the default Trust Store:
 
-By default the password for this Trust Store is "changeit".
-
-So to add your certificates to the default trust store:
-
-1.  Copy the default trust store.
-2.  Launch the following command line to add your certificate to the default trust store copy:
+1.  Copy the default Trust Store.
+2.  Launch the following command line to add your certificate to the copy:
     ```
-    keytool -import -file /path/to/your/certificate.pem -alias NameYouWantToGiveOfYourCertificate -keystore /path/to/the/copy/of/the/default/truststore.jks -storepass changeit
+    keytool -import -file /path/to/certificate.pem -alias NameYouWantToGiveOfYourCertificate -keystore /path/to/copy/of/default/truststore.jks -storepass changeit
     ```
 
-3.  Set the trust store copy as your [statically](#statictruststore).
+3.  Set the trust store copy as your [custom trust store](#customtruststore).
 4.  Restart your Nuxeo instance.
 
-## Troubles
+## Service-specific Trust Store and Key store
 
-If your Nuxeo instance cannot access Connect anymore, or the Marketplace and Hot Fixes are no longer automatically available (through the Update Center for instance), this can mean that the trust store does not contain the certificates from the authority that signed Nuxeo Servers certificates.
+For some Nuxeo services, it's possible to configure individually a Trust Store and Key Store without touching the global JVM Trust Store and Key Store.
+
+### Elasticsearch
+
+Use the following `nuxeo.conf` properties (since Nuxeo 9.10-HF22):
+
+- `elasticsearch.restClient.truststore.path`
+- `elasticsearch.restClient.truststore.password`
+- `elasticsearch.restClient.truststore.type`
+- `elasticsearch.restClient.keystore.path`
+- `elasticsearch.restClient.keystore.password`
+- `elasticsearch.restClient.keystore.type`
+
+In previous versions of Nuxeo 9.10, you had to use the following properties for the _Trust Store_ (despite their incorrect name):
+
+- `elasticsearch.restClient.keystorePath`
+- `elasticsearch.restClient.keystorePassword`
+- `elasticsearch.restClient.keystoreType`
+
+Before Nuxeo 9.10-HF22, it was not possible to configure the Key Store.
+
+See the [Elasticsearch Configuration]({{page page='elasticsearch-setup'}}) page for more.
+
+### MongoDB
+
+Use the following `nuxeo.conf` properties (since Nuxeo 9.10-HF22):
+
+- `nuxeo.mongodb.ssl=true`
+- `nuxeo.mongodb.truststore.path`
+- `nuxeo.mongodb.truststore.password`
+- `nuxeo.mongodb.truststore.type`
+- `nuxeo.mongodb.keystore.path`
+- `nuxeo.mongodb.keystore.password`
+- `nuxeo.mongodb.keystore.type`
+
+See the [MongoDB Configuration]({{page page='mongodb'}}) page for more.
+
+## Troubleshooting
+
+If your Nuxeo instance cannot access Nuxeo Online Services anymore, or the Marketplace and Hot Fixes are no longer automatically available (through the Update Center for instance), this can mean that the Trust Store does not contain the certificates from the authority that signed the Nuxeo Online Services certificates, which are normally part of the default JVM Trust Store.
 
 If you have the following error in your logs during the connection establishment:
 
@@ -127,7 +165,7 @@ sun.security.validator.ValidatorException: PKIX path building failed: sun.securi
 
 It means that the remote certificate is not trusted.
 
-The following messages mean there is no trust store or key store set for your JVM:
+The following messages mean there is no Trust Store set for your JVM:
 
 ```
 java.lang.RuntimeException: Unexpected error: java.security.InvalidAlgorithmParameterException: the trustAnchors parameter must be non-empty
@@ -157,7 +195,7 @@ Remote host closed connection during handshake
 
 ```
 
-The following error can mean that the set key store is not available:
+The following error can mean that a configured Key Store is not available:
 
 ```
 java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: com.sun.net.ssl.internal.ssl.DefaultSSLContextImpl)

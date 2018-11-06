@@ -597,19 +597,33 @@ curl -XPOST -u elastic 'localhost:9200/_xpack/security/user/nuxeo_user' -H "Cont
 }'
 ```
 {{/callout}}
-##### SSL/TLS configuration
-If you have chosen to configure [SSL/TLS](https://www.elastic.co/guide/en/x-pack/5.6/ssl-tls.html) then you can setup Nuxeo using `nuxeo.conf` with the following properties:
+##### TLS/SSL configuration
+If you have chosen to configure [TLS/SSL](https://www.elastic.co/guide/en/x-pack/5.6/ssl-tls.html) then you can set up Nuxeo using `nuxeo.conf` with the following properties (since Nuxeo 9.10-HF22):
 ```
-elasticsearch.restClient.keystorePath=your_path_to_keystore
-elasticsearch.restClient.keystorePassword=your_password
-elasticsearch.restClient.keystoreType=your_keystore_type
+elasticsearch.restClient.truststore.path
+elasticsearch.restClient.truststore.password
+elasticsearch.restClient.truststore.type
+elasticsearch.restClient.keystore.path
+elasticsearch.restClient.keystore.password
+elasticsearch.restClient.keystore.type
 ```
-- `keystoreType` is optional, if unspecified it uses the default Java system keystore type, e.g. jks
+
+In previous versions of Nuxeo 9.10, you had to use the following properties for the _Trust Store_ (despite their incorrect name):
+
+- `elasticsearch.restClient.keystorePath`
+- `elasticsearch.restClient.keystorePassword`
+- `elasticsearch.restClient.keystoreType`
+
+Before Nuxeo 9.10-HF22, it was not possible to configure the Key Store.
 
 {{#> callout type='warning' }}
 
-If you are using SSL then the `elasticsearch.addressList` will need to be updated to include the `https`.
+If you are using TLS/SSL then the `elasticsearch.addressList` will need to be updated to include `https`.
 {{/callout}}
+
+See the [Trust Store and Key Store Configuration]({{page page='trust-store-and-key-store-configuration'}}) page for more.
+
+
 ### Index names
 
 Nuxeo manages 3 Elasticsearch indexes:
