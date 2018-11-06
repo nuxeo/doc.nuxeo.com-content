@@ -191,6 +191,25 @@ When `nuxeo.redis.enabled=true` then the following is automatically activated as
 `nuxeo.work.queuing=redis`.
 (As of Nuxeo Platform 5.8, work queuing is the only use of Redis in the standard Nuxeo modules, so it makes sense to activate both together.)
 
+### TLS/SSL
+
+If you have chosen to configure TLS/SSL then you can set up Nuxeo using `nuxeo.conf` with the following properties:
+
+```
+nuxeo.redis.ssl=true
+nuxeo.redis.truststore.path
+nuxeo.redis.truststore.password
+nuxeo.redis.truststore.type
+nuxeo.redis.keystore.path
+nuxeo.redis.keystore.password
+nuxeo.redis.keystore.type
+```
+
+See the [Trust Store and Key Store Configuration]({{page page='trust-store-and-key-store-configuration'}}) page for more.
+
+
+### clustering
+
 To activate the Redis [cluster invalidation]({{page page='nuxeo-and-redis'}}#clustering-invalidation) in cluster mode you need to add:
 
 ```
