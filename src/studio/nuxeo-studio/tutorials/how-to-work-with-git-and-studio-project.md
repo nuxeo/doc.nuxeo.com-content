@@ -22,17 +22,13 @@ Watch the [Web UI Customization and Nuxeo Frontend Development](https://universi
 ![WEBUI_CUSTOMIZATION_FRONTEND_DEV](nx_asset://233ef043-0939-4ff6-88a6-13dcb92660b0 ?w=450,border=true)
 {{/callout}}
 
-# Developing Web UI customizations from Nuxeo Studio Designer UI and with Git Access
+## Concept
 
-Nuxeo Studio Designer allows you to easily create standard components as document type layouts, new buttons or search forms. It is recommended **to quick start on Web UI customization** as it manages the relationships between related elements, it creates all the necessary slot contributions and brings autocompletion, etc.
+Nuxeo Studio Designer allows you to easily create standard components as document type layouts, new buttons or search forms. It is recommended to quick start on Web UI customization as it manages the relation between related elements, it creates all the necessary slot contributions and brings autocompletion, etc.
 
-The Nuxeo Studio Designer configuration is available on the Resources tab. It offers a physical representation of the content which will be deployed in your Nuxeo Server, in the `/nxserver/nuxeo.war/ui` folder. From this location, it is possible to edit the generated elements to fit your needs. Once your work finished, save your changes, and hot reload your Nuxeo instance to deploy your Studio project.
+The Nuxeo Studio Designer configuration is available on the [Resources tab]({{page version='' space='studio' page='resources-designer'}}). It offers a physical representation of the content which will be deployed in your Nuxeo Server, in the `/nxserver/nuxeo.war/ui` folder. From this location, it is possible to edit the generated elements to fit your needs. Once your work is done, save your changes, and do a hot reload to deploy your Studio project.
 
-This way of working presents one drawback: you need to hot reload every time you need to check your changes. As a walkaround, you can still directly edit the file deployed on your server, but you need to replicate it in your Studio Configuration so that it is bundled in your Studio Project. To solve this issue, we have created the Nuxeo Studio Designer Git Access.
-
-{{/callout}}
-
-# Working with Git Access
+This process presents one disadvantage: you need to hot reload every time you need to check your changes. As a workaround, you can still directly edit the file deployed on your server, but you need to replicate it in your Studio Configuration so that it is bundled in your Studio Project. To solve this issue, we have created the **Nuxeo Studio Designer Git Access**.
 
 ## Prerequisites
 
@@ -49,7 +45,7 @@ Make sure a token to clone your Studio project has been created by following the
 You must hot-reload your Nuxeo Studio Project once in your local server to allow the resources synchronisation
 {{/callout}}
 
-## Setup your dev environment
+## Setup Your Dev Environment
 
 1. Open https://connect.nuxeo.com/ and navigate to **My Applications** tab
 1. Find your project and copy the Git URL
