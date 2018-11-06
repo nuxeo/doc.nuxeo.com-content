@@ -74,8 +74,7 @@ history:
 ![Workflow Graph Tab](nx_asset://722153f8-ec36-4e2d-9a47-2c7f57317c56 ?w=500,border=true)
 
 The Graph tab is where you define how steps of your workflow are ordered, by dropping nodes and pulling transitions between them.
- If you hover over a node, an **Edit** button will be displayed. It allows you to edit the properties of the node, in a
- [multi-tab pop-up]({{page page='node-popup'}}).
+ If you hover over a node, an **Edit** button will be displayed. It allows you to edit the properties of the node, in a [multi-tab pop-up]({{page page='node-popup'}}).
 
  Two kinds of nodes are available, one creates a user task, the other is automatic (the workflow engine goes over it and immediately follows the output transitions).
 
@@ -83,7 +82,7 @@ On the left side menu of the graph tab, you will find the items below:
 
 *   **Resize graph editor**: It is possible that your graph does not fit in the default allocated design area. Click on **Resize graph editor** to make it larger. A **Reduce size** button will be added in a future version of Nuxeo Studio. Click on **Discard changes** to go back to the current size.
 *   **Clear graph**: Beware, this button will delete all your graph after a warning.
-*   **Node library**: Lists different pre-configured nodes. You can drag'n'drop  and modify them in the design area.
+*   **Node library**: Lists different pre-configured nodes. You can drag'n'drop and modify them in the design area.
 
 ## Node library
 
@@ -94,7 +93,7 @@ On the left side menu of the graph tab, you will find the items below:
 | Node  | Creates an automated task ran by the workflow engine according to an input and an output automation chains.  |
 
 
-### User Tasks 
+### User Tasks
 
 | Type  | Role |
 |---|---|
