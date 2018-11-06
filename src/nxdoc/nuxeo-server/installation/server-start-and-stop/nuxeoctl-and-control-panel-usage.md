@@ -596,6 +596,11 @@ Here are the OS environment variables which are read by `nuxeoctl`.
 </table>
 </div>
 
+Here is the console usage:
+```
+[NUXEO_CONF=/etc/nuxeo/nuxeo.conf] [...] ./nuxeoctl start
+```
+
 ## Java Usage
 
 Launcher can be run as a Java command, without using the Shell (`nuxeoctl`) or Batch (`nuxeoctl.bat`) script.
