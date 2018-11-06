@@ -283,6 +283,23 @@ See the [MongoDB Connection String URI Format](http://docs.mongodb.org/manual/re
 
 {{/callout}}
 
+#### TLS/SSL configuration
+
+If you have chosen to configure TLS/SSL then you can set up Nuxeo using `nuxeo.conf` with the following properties (since Nuxeo 9.10-HF22):
+
+```
+nuxeo.mongodb.ssl=true
+nuxeo.mongodb.truststore.path
+nuxeo.mongodb.truststore.password
+nuxeo.mongodb.truststore.type
+nuxeo.mongodb.keystore.path
+nuxeo.mongodb.keystore.password
+nuxeo.mongodb.keystore.type
+```
+
+See the [Trust Store and Key Store Configuration]({{page page='trust-store-and-key-store-configuration'}}) page for more.
+
+
 ## GridFS
 
 It is possible to use MongoDB's [GridFS](https://docs.mongodb.org/manual/core/gridfs/) mechanism to store binary files inside MongoDB instead of the default filesystem mechanism of Nuxeo. This is activated by adding `gridfsbinaries` to the templates, for instance:
