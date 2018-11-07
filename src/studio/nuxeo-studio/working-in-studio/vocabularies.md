@@ -187,13 +187,12 @@ To consult a vocabulary or its entries click on the **Admin > Vocabularies** tab
 |---|---|
 | Continent | Lists continents. |
 | Country | Lists countries and parent continents. |
-| Inverse_predicates | Lists inverse predicates that defines relations between documents. JSF only.   |
+| Inverse_predicates | Lists inverse predicates that define relations between documents. JSF only.   |
 | L10ncoverage | Lists countries and their parent continent in english and in french. |
 | L10nsubjects | Lists subjects and their parent subject. |
 | Language | Lists languages. |
 | Nature | Lists several types of documents. |
-| nxtrIndustry  | Lists industries. |
-| Predicates | Lists predicates.  |
+| Predicates | Lists predicates that define relations between documents.  |
 | Subtopic | Lists subtopic and their parent topic. |
 | Topic  | Lists topic. |
 | WorkflowType | Lists types of workflow tasks. |
