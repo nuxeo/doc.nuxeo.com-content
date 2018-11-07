@@ -179,7 +179,7 @@ The default configuration for Nuxeo Repository is to use a SQL Database and a Fi
 For more details about Nuxeo Repository and BlobStore, please see the page [File Storage]({{page page='file-storage'}}).
 
 The following schema shows main persisted and indexed data on a typical Nuxeo setup.
-![]({{file page='nxdoc/quick-overview' name='global-architecture'}} ?w=600, border=true)
+![]({{file page='/nxdoc/quick-overview' name='global-architecture.png'}} ?w=600, border=true)
 
 ### Indexes
 
