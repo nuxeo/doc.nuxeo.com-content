@@ -254,6 +254,45 @@ Offline registration can be used when the server does not connect to the Interne
         The registration is approved and the registration summary is displayed. The Nuxeo Online Services registration message is not displayed anymore after you browse the application, although registration cannot be validated on the Nuxeo Online Services server.
         ![]({{file name='AdminCenter-offline-registration-done.png'}} ?w=600,border=true)
 
+## Renewing Registration for Your Nuxeo Instance
+
+Renewing your Nuxeo instance registration can be done anytime while you have an active Nuxeo Online Services subscription using the nuxeoctl script:
+
+1. Make sure your instance is stopped
+
+```
+// Linux and Mac OS
+$ $NUXEO_HOME/bin/nuxeoctl stop
+
+// Windows
+$ .\$NUXEO_HOME\bin\nuxeoctl.bat stop
+```
+
+1. Renew the registration
+
+```
+// Linux and Mac OS
+// Requires an active Nuxeo Online Services subscription
+// An internet connection
+// And that instance is currently registered
+$ $NUXEO_HOME/bin/nuxeoctl register
+
+// Windows
+// Requires an active Nuxeo Online Services subscription
+// An internet connection
+// And that instance is currently registered
+$ .\$NUXEO_HOME\bin\nuxeoctl.bat register
+```
+
+Assuming that your instance has internet access, this call can easily be automated using a cron / scheduled task. If for some reason your contract expires before you launch the command above though, you can still register your Nuxeo server instance as a new one by following the online of offline registration indications.
+
+{{#> callout type='note' title='Important Note About Hotfixes'}}
+Using hotfixes on your instance requires a valid subscription.
+
+If your instance is not registered anymore but still uses hotfixes, you will receive specific warnings in the logs during startup explaining the situation.
+
+If it happens, your Nuxeo instance will stop after a certain number of commits or when too many users are connected at the same time. You should make sure to register your instance as soon as you can to prevent this. {{/callout}}
+
 ## Re-Registering your Nuxeo Instance
 
 {{> anchor 're-registration'}}If you have removed your data from your Nuxeo application, in case of a development instance, for example, you will need to register your instance again.
