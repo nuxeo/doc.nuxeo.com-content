@@ -289,17 +289,7 @@ Offline registration can be used when the server does not connect to the Interne
 
 Renewing your Nuxeo instance registration can be done anytime while you have an active Nuxeo Online Services subscription using the `nuxeoctl` script:
 
-1. Make sure your instance is stopped
-
-```
-// Linux and Mac OS
-$ $NUXEO_HOME/bin/nuxeoctl stop
-
-// Windows
-$ .\$NUXEO_HOME\bin\nuxeoctl.bat stop
-```
-
-2. Renew the registration
+**To renew the registration:**
 
 ```
 // Linux and Mac OS
@@ -307,7 +297,8 @@ $ .\$NUXEO_HOME\bin\nuxeoctl.bat stop
 // An internet connection
 // And that instance is currently registered
 $ $NUXEO_HOME/bin/nuxeoctl register --renew
-
+```
+```
 // Windows
 // Requires an active Nuxeo Online Services subscription
 // An internet connection
