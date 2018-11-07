@@ -192,7 +192,7 @@ To consult a vocabulary or its entries click on the **Admin > Vocabularies** tab
 | L10nsubjects | Lists subjects and their parent subject. |
 | Language | Lists languages. |
 | Nature | Lists several types of documents. |
-| Predicates | Lists predicates that define relations between documents.  |
+| Predicates | Lists predicates that define relations between documents. JSF only. |
 | Subtopic | Lists subtopic and their parent topic. |
 | Topic  | Lists topic. |
 | WorkflowType | Lists types of workflow tasks. |
