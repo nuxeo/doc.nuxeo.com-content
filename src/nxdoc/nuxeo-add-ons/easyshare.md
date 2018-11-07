@@ -62,11 +62,25 @@ history:
 ---
 {{{excerpt 'USERDOC:EasyShare'}}}
 
+
+{{#> callout type='info' heading='Web UI'}}
+EasyShare is now available for Web UI.
+{{/callout}}
+
+
+
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
 After the package is installed, a new collaborative space is available, called Easy Share Folder.
 
-![]({{file name='EasyShare-folder.png'}} ?w=650,h=301,border=true)
+
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Easyshare New folder form
+    name: easyshare-form.png
+    addins#screenshot#up_to_date
+--}}
+![Easyshare New folder form ](nx_asset://be5153d8-a69c-4380-81a7-11bc59ee57f7 ?w=600,border=true)
 
 &nbsp;
 

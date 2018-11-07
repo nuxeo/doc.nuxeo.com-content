@@ -125,6 +125,11 @@ history:
         version: '1'
 
 ---
+
+{{#> callout type='info' heading='Web UI'}}
+EasyShare is now available for Web UI.
+{{/callout}}
+
 {{! excerpt}}The [EasyShare package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare) is an addon for the Nuxeo platform which enables sharing files from the repository with external users not requiring a login.{{! /excerpt}}
 
 It allows you to create EasyShare folders in which you can either create documents or make them available from the folder for public sharing. Anyone having the public URL to the EasyShare folder can then download its content without having to log in to the Nuxeo Platform.
@@ -191,7 +196,13 @@ An email alert is sent to the Contact email of the folder each time a file is do
 
 By clicking on the link to the EasyShare Folder, you access a particular EasyShare folder without having to login to the Nuxeo Platform.
 
-![]({{file name='EasyShare_public_view.png'}} ?w=650,border=true)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Adding features/Easyshare shared folder
+    name: easyshare-shared-folder.png
+    addins#screenshot#up_to_date
+--}}
+![Easyshare shared folder ](nx_asset://4d496c06-a31b-4f65-b93b-0798fe968727 ?w=650,border=true)
 
 ## Future Improvements
 
