@@ -237,6 +237,11 @@ Nuxeo supports the following MongoDB version:
 
 When using MongoDB 3.0 or higher we recommend that you configure the [WiredTiger storage engine](https://docs.mongodb.org/manual/core/wiredtiger/) for better performance of write operations. Please follow [this documentation](https://docs.mongodb.org/manual/tutorial/change-standalone-wiredtiger/) to activate this storage engine.
 
+{{#> callout type='info' }}
+Starting in MongoDB 3.2, the WiredTiger storage engine is the default storage engine.
+{{/callout}}
+
+
 Nuxeo stores its data in a MongoDB database under the `default` collection. The name of the collection is the Nuxeo repository name. If you have more than one repository configured, other collections with the names of these repositories will be used for storage.
 
 By default MongoDB doesn't require authentication, but you can [enable the client access control](https://docs.mongodb.org/manual/tutorial/enable-authentication/) and create a user with the `dbOwner` role.
