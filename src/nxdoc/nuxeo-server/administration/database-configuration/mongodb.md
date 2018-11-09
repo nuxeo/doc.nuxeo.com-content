@@ -235,8 +235,8 @@ Nuxeo supports the following MongoDB version:
 
 ## Installation
 
-When using MongoDB 3.0 or higher the [WiredTiger storage engine](https://docs.mongodb.org/manual/core/wiredtiger/) is the default storage engine for better performance of write operations.</br>
-Please follow [this documentation](https://docs.mongodb.org/manual/tutorial/change-standalone-wiredtiger/) to activate this storage engine.
+When using MongoDB 3.2 or higher the [WiredTiger storage engine](https://docs.mongodb.org/manual/core/wiredtiger/) is the default storage engine.</br>
+Please follow [this documentation](https://docs.mongodb.org/manual/tutorial/change-standalone-wiredtiger/) if you’re running on MongoDB 3.0 to activate this storage engine for better performance of write operations.
 
 Nuxeo stores its data in a MongoDB database under the `default` collection. The name of the collection is the Nuxeo repository name. If you have more than one repository configured, other collections with the names of these repositories will be used for storage.
 
