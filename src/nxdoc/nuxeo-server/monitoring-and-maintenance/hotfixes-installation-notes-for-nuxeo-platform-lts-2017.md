@@ -83,26 +83,6 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
-## Hotfix 21
-
-### New Seam Event
-A new Seam event, `mainTabsChanged`, is thrown when switching between main tabs in the JSF UI. It is not used by default to avoid changes in the default behavior of one's application.
-An example use is to reset the document selection of a content view and can be done with this contribution:
-```
-<require>org.nuxeo.ecm.webapp.documentsLists.DefaultDocumentsLists</require>
-  <extension target="org.nuxeo.ecm.webapp.documentsLists.DocumentsListsService"
-    point="list">
-    <documentsList name="CURRENT_SELECTION">
-      <events>
-        <event>folderishDocumentSelectionChanged</event>
-        <event>searchPerformed</event>
-        <event>mainTabsChanged</event>
-      </events>
-      <isSession>false</isSession>
-    </documentsList>
-  </extension>
-```
-
 ## Hotfix 20
 
 ### New Nuxeo AWS Service
