@@ -1,5 +1,5 @@
 ---
-title: t
+title: Hotfixes Installation Notes for Nuxeo Platform LTS 2017
 review:
     comment: ''
     date: '2018-02-07'
