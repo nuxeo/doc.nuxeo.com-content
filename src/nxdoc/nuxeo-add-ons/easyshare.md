@@ -62,33 +62,32 @@ history:
 ---
 {{{excerpt 'USERDOC:EasyShare'}}}
 
-
-{{#> callout type='info' heading='Web UI'}}
-EasyShare is now available for Web UI.
-{{/callout}}
-
-
-
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
-After the package is installed, a new collaborative space is available, called Easy Share Folder.
+After the package is installed, a new collaborative space is available, called **EasyShare Folder**.
 
+**On JSF UI:**
 
+![]({{file name='EasyShare-folder.png'}} ?w=650,h=301,border=true)
+
+**On Web UI:**
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Easyshare New folder form
     name: easyshare-form.png
     addins#screenshot#up_to_date
 --}}
-![Easyshare New folder form ](nx_asset://be5153d8-a69c-4380-81a7-11bc59ee57f7 ?w=600,border=true)
+![Easyshare New folder form](nx_asset://be5153d8-a69c-4380-81a7-11bc59ee57f7 ?w=600,border=true)
 
-&nbsp;
+{{#> callout type='info' }}
+For more information about the EasyShare package usage, read the [functional documentation]({{page version='' space='userdoc' page='easyshare'}}).
+{{/callout}}
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about EasyShare'}}
 
-*   [EasyShare User Documentation]({{page space='userdoc' page='easyshare'}})
+- [EasyShare User Documentation]({{page space='userdoc' page='easyshare'}})
 
 {{/panel}}</div><div class="column medium-6">
 
