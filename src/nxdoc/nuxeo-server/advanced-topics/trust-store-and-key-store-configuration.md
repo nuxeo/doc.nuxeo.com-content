@@ -154,7 +154,7 @@ See the [MongoDB Configuration]({{page page='mongodb'}}) page for more.
 
 ## Troubleshooting
 
-If your Nuxeo instance cannot access Nuxeo Online Services anymore, or the Marketplace and Hot Fixes are no longer automatically available (through the Update Center for instance), this can mean that the Trust Store does not contain the certificates from the authority that signed the Nuxeo Online Services certificates, which are normally part of the default JVM Trust Store.
+If your Nuxeo instance cannot access Nuxeo Online Services anymore, or the Marketplace and hotfixes are no longer automatically available (through the Update Center for instance), this can mean that the Trust Store does not contain the certificates from the authority that signed the Nuxeo Online Services certificates, which are normally part of the default JVM Trust Store.
 
 If you have the following error in your logs during the connection establishment:
 
