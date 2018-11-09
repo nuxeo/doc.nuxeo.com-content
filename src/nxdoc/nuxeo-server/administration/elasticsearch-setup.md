@@ -633,8 +633,10 @@ curl -XPOST -u elastic 'localhost:9200/_xpack/security/user/nuxeo_user' -H "Cont
 }'
 ```
 {{/callout}}
-##### TLS/SSL configuration
+##### TLS/SSL Configuration
+
 If you have chosen to configure [TLS/SSL](https://www.elastic.co/guide/en/x-pack/5.6/ssl-tls.html) then you can set up Nuxeo using `nuxeo.conf` with the following properties:
+
 ```
 elasticsearch.restClient.truststore.path
 elasticsearch.restClient.truststore.password
