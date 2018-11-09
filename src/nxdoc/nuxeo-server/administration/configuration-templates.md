@@ -155,11 +155,9 @@ Here are the templates provided by default:
 
 {{! /multiexcerpt}}
 
-    {{#> callout type='tip' }}
-
-    For production environment, it is recommended to define your own custom template outside `$NUXEO_HOME`, as for `nuxeo.conf`. It must then be referenced in `nuxeo.conf` with its absolute path.
-
-    {{/callout}}
+{{#> callout type='tip' }}
+For production environment, it is recommended to define your own custom template outside `$NUXEO_HOME`, as for `nuxeo.conf`. It must then be referenced in `nuxeo.conf` with its absolute path.
+{{/callout}}
 
 ## Technical Overview
 
