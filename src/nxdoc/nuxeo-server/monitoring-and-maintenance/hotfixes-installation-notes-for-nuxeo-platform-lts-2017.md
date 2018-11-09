@@ -1,5 +1,5 @@
 ---
-title: t
+title: Hotfixes Installation Notes for Nuxeo Platform LTS 2017
 review:
     comment: ''
     date: '2018-02-07'
@@ -87,7 +87,7 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ### New Seam Event
 A new Seam event, `mainTabsChanged`, is thrown when switching between main tabs in the JSF UI. It is not used by default to avoid changes in the default behavior of one's application.
-A use case is to reset the document selection of a content view. It can be done with this contribution:
+An example use is to reset the document selection of a content view and can be done with this contribution:
 ```
 <require>org.nuxeo.ecm.webapp.documentsLists.DefaultDocumentsLists</require>
   <extension target="org.nuxeo.ecm.webapp.documentsLists.DocumentsListsService"
