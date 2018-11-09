@@ -283,7 +283,7 @@ See the [MongoDB Connection String URI Format](http://docs.mongodb.org/manual/re
 
 {{/callout}}
 
-#### TLS/SSL configuration
+#### TLS/SSL Configuration
 
 If you have chosen to configure TLS/SSL then you can set up Nuxeo using `nuxeo.conf` with the following properties (since Nuxeo 9.10-HF22):
 
