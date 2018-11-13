@@ -90,6 +90,8 @@ You can now [deploy your project]({{page space='studio' page='deploying-your-pro
 ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='validation-task-process.png'}} ?w=350,border=true)
 ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='type-field-web-ui.png'}} ?w=350,border=true)
 
+/*For more information on How to start a workflow on a document, see [Tasks]({{page version='' space='userdoc' page='task'}}).*/
+
 ## Technical Overview
 
 ### Workflow Tasks
