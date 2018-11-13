@@ -14,7 +14,7 @@ description: Web UI User Documentation about Tasks
 ---
 Once a workflow has been started, users added on the workflow's roadmap can review the document and approve or reject it.
 
-/*When users have a task on a document, it displays on their [dashboard]({{page page='browse'}}#dashboard)*/ in the **Tasks** gadget and in the **Task** tab.
+When users have a task on a document, it displays on their [dashboard]({{page page='browse'}}#dashboard) in the **Tasks** gadget and in the **Task** tab.
 
 ![]({{file name='task-menu-web-ui.png'}} ?w=300,border=true)
 
