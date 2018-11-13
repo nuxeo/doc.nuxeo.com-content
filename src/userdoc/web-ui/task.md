@@ -14,7 +14,7 @@ description: Web UI User Documentation about Workflows
 ---
 All the documents evolve according to a defined lifecycle. The default lifecycle is composed of the following states: Project, Approved, Obsolete and Deleted. There are different ways to make documents evolve through this lifecycle. One of them is to use a workflow.
 
-/*Users involved in workflows are alerted by email and can have a synthetic view of all their pending tasks on documents in their [dashboard]({{page page='browse'}}#dashboard)*/ or on the **Task** tab. The documents they have to review are listed there.
+Users involved in workflows are alerted by email and can have a synthetic view of all their pending tasks on documents in their [dashboard]({{page page='browse'}}#dashboard) or on the **Task** tab. The documents they have to review are listed there.
 
 {{{multiexcerpt 'default-validation-workflows' page='NXDOC:Workflow'}}}
 
