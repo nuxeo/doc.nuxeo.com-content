@@ -12,7 +12,7 @@ tree_item_index: 1100
 
 ---
 
-##Working with Sections
+## Working with Sections
 
 When a document is ready for distribution, you must publish it in a section. Sections are spaces dedicated to the distribution of documents to a wider audience.
 
@@ -23,7 +23,7 @@ You are free to organize your section to fit your project or your needs the best
 
 As in workspaces, access to sections is determined by permissions.
 
-##Publishing Documents
+## Publishing Documents
 
 Publishing a document means publishing a version of the document as it is at the time of publication.
 
