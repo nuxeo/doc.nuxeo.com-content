@@ -1,5 +1,5 @@
 ---
-title: Publishing Document
+title: Publishing Documents
 description:
 review:
     comment: ''
@@ -39,14 +39,28 @@ When you publish a document, the following elements are kept from the workspace 
 However, comments are not kept from the workspace document.
 
 **To publish a document**:
-1. From the View of the document in the workspace, click More and select Publish
-1. Enter the section you want to publish the document in
+1. From the View of the document in the workspace, click ![]({{file name='more-three-dots.png'}} ?w=30,border=true) and select **Publish Document**.
+  ![]({{file name='publication-popup.png'}} ?w=500,border=true)
+1. Enter the section you want to publish the document in.
 1. Select the rendition that should be published, typically no rendition (same document format as in the workspace) or a PDF version of the document.
 1. Optional: Create a version.
-1. Click Publish.
+1. Click **Publish**.
 
 **To unpublish a document**:
 
-From the Publication tab of the document in workspaces, click unpublish on  the publication you want to revert.
+From the Publication tab of the document in the workspace, click **Unpublish** on  the publication you want to revert.
 
-To revert all the publication of this document, click Unpublish All.
+To revert all the publication of this document, click **Unpublish All**.
+
+{{! Don't put anything here. }}
+
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
+
+- [Nuxeo Platform Feature Table]({{page space='nxdoc' page='nuxeo-platform-feature-table'}})
+- [Nuxeo Media Publishing]({{page space='nxdoc' page='nuxeo-media-publishing'}})
+
+{{/panel}}</div><div class="column medium-6">
+
+
+</div></div>
