@@ -444,7 +444,7 @@ Nuxeo Drive<br/>
 Public
 </td>
 <td colspan="1">
-[Documentation]({{page page='nuxeo-drive'}})<br/>
+[Documentation]({{space='client-apps' page='nuxeo-drive'}})<br/>
 </td>
 <td colspan="1">
 [Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive?version=1.8.1)
