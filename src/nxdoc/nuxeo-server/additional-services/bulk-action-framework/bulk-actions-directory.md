@@ -59,10 +59,7 @@ curl -X POST -H 'Content-Type: application/json' -u Administrator:Administrator 
             "params":{
                 "query":"SELECT * FROM Document",
                 "action":"setProperties",
-                "parameters":{
-                    "dc:nature":"article",
-                    "dc:subjects":["art/architecture"]
-                }
+                "parameters":"{\"dc:nature\":\"article\",\"dc:subjects\":[\"art\/architecture\"]}"
             }
         }'
 ```

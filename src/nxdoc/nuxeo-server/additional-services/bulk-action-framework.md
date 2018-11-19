@@ -32,10 +32,6 @@ The following is an example of use of bulk service:
 
 It is possible to submit a command through the [Bulk.RunAction](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Bulk.RunAction) automation operation.
 
-{{#> callout type='info' heading='Info'}}
-This is a temporary operation, it will be removed for LTS 2018.
-{{/callout}}
-
 The following is an example of use of operation:
 
 {{{multiexcerpt 'baf-set-properties-action-operation-example' page='bulk-actions-directory'}}}
