@@ -15,6 +15,8 @@ tree_item_index: 200
 
 Editing a document means modifying its content (i.e. the attached file of a file document, the text of a note, etc.), or simply editing the title, description or any property of the document.
 
+You can also edit documents using Nuxeo Drive. For more information, see [Nuxeo Drive Editing Documents]({{page space='client-apps' page='nuxeo-drive/#editing-documents'}}).
+
 ## Editing Properties
 
 Properties of the documents, a.k.a. metadata, help the document to be more accurately referenced. Some properties are automatically filled in by the system, but most of them need to be filled in by users. When you create a document (file, note, workspace, section, or any other document type), its properties are empty.

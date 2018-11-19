@@ -51,6 +51,10 @@ To import content into Nuxeo, drag an item from your computer and drop it into a
 
 #### Import with Properties
 
+{{#> callout type='tip' }}
+You can start adding properties before all the files are uploaded. 
+{{/ callout}}
+
 It is possible to do a drag and drop import of documents with an additional step to fill in some properties. This prevents you from editing the documents after the import is done.
 
 **To import documents with metadata:**

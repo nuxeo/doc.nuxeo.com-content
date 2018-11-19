@@ -14,6 +14,7 @@ tree_item_index: 400
 ---
 Users can download documents on their computer. It is possible to download:
 - One document at a time
+- A collection
 - An entire workspace, folder, section
 
 **From a Document**

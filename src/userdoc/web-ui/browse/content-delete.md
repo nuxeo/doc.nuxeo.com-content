@@ -26,7 +26,7 @@ On the document itself you can decide to delete the file of your document by cli
 
 ## Managing Deleted Documents
 
-Users with "Manage everything" permissions can access the workspace's Trash and perform one of the following actions:
+Users with "ReadWrite" permissions can access the workspace's Trash and perform one of the following actions:
 
 **Restore Document**
 
