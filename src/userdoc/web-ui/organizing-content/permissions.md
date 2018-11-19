@@ -15,7 +15,87 @@ tree_item_index: 400
 
 ## Permissions Overview
 
-{{{multiexcerpt 'permissions-overview-table' page='managing-permissions'}}}
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr><th colspan="1">Permission</th>
+<th colspan="1">Actions in Workspaces</th>
+<th colspan="1">Actions in Sections</th>
+</tr>
+<tr>
+<td colspan="1">Read</td>
+<td colspan="1">
+<ul>
+<li>Consult content</li>
+<li>Comment documents</li>
+<li>Tag documents</li>
+<li>Collect content</li>
+<li>Follow content</li>
+</ul>
+</td>
+<td colspan="1">
+<ul>
+<li>Consult content</li>
+<li>Comment documents</li>
+<li>Tag documents</li>
+<li>Follow content</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1">ReadWrite</td>
+<td colspan="1">
+<ul>
+<li>Create documents</li>
+<li>Edit documents</li>
+<li>Add / remove relations</li>
+<li>Start a workflow</li>
+<li>Delete documents</li>
+<li>+ Read actions</li>
+</ul>
+</td>
+<td colspan="1">
+<ul>
+<li>Create sections</li>
+<li>Unpublish documents</li>
+<li>Delete sub-sections</li>
+<li>+ Read actions</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1">Manage everything</td>
+<td colspan="1">
+<ul>
+<li>Manage permissions</li>
+<li>Set alerts to other users</li>
+<li>Apply a preset look on documents</li>
+<li>Manage deleted documents</li>
+<li>Define publication targets</li>
+<li>+ Edit actions</li>
+<li>+ Read actions</li>
+</ul>
+</td>
+<td colspan="1">
+<ul>
+<li>Manage permissions</li>
+<li>Set alerts to other users</li>
+<li>Apply a preset look on documents</li>
+<li>Manage deleted documents</li>
+<li>+ Edit actions</li>
+<li>+ Read actions</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td colspan="1">Can ask for publishing</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">Submit documents for publishing</td>
+</tr>
+</tbody>
+</table>
+</div>
+
 
 ## Managing Permissions on Content
 
