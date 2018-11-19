@@ -23,6 +23,8 @@ In the Comments section of the Document view, type your comment and click Enter.
 
 ## Replying to a comment
 
+You can reply to your comments and to comments from other users. However, replies cannot be indented further than a 2-level thread.
+
 To reply to a comment, click ![]({{file name='reply.png'}} ?w=20) next to the comment you want to reply to.
 
 Type your comment and click Enter.
@@ -30,6 +32,8 @@ Type your comment and click Enter.
 ![]({{file name='reply-comment.png'}} ?w=300,border=true)
 
 ## Editing a comment or a reply
+
+You cannot edit comments from other users. However, you can reply to them.
 
 To edit a comment or a reply:
 
