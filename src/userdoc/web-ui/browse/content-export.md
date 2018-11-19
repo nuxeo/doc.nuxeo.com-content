@@ -73,3 +73,5 @@ If you're only interested in the XML definition of the folder, click on **XML Ex
 {{/callout}}
 
 When you unzip it, you get a folder named from the document, that contains a document.xml file and .blob for each attachment of the document.
+
+You can also use Nuxeo File System Exporter to export Documents. For more information, see [Nuxeo File System Exporter]({{page version='' space='nxdoc' page='nuxeo-file-system-exporter'}}).
