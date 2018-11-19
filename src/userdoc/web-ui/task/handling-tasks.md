@@ -12,7 +12,7 @@ tree_item_index: 200
 description: Web UI User Documentation about Tasks
 
 ---
-Once a workflow has been started, users added on the workflow's roadmap can review the document and approve or reject it.
+Once a workflow has been started, users added on the workflow can review the document and approve or reject it.
 
 When users have a task on a document, it displays on their [dashboard]({{page page='browse'}}#dashboard) in the **Tasks** gadget and in the **Task** tab.
 
@@ -36,7 +36,7 @@ Participants can approve the document when it's their turn, after the previous p
     The document is displayed and a Task resolution section is displayed on the side menu.
 3. Depending on your opinion on the document, click on one of the buttons available:
     - **Validate**
-      The task is not displayed anymore in the Tasks tab. If you originally had read-only access to the document, you can't erdit it anymore. The next participant can now review the document and approve or reject it.
+      The task is not displayed anymore in the Tasks tab. If you originally had read-only access to the document, you can't edit it anymore. The next participant can now review the document and approve or reject it.
     - **Reject**
       The task is not displayed anymore in the Tasks tab. If you originally had read-only access to the document, you can't edit it anymore. The document is automatically sent back to the previous reviewer on the workflow, so he can edit it and approve it again.
       When the document is rejected by the first reviewer, the document is sent back to the initiator, who can then either modify the document and resubmit it, or cancel the review.
@@ -60,7 +60,7 @@ After the workflow initiator has started the parallel workflow, two steps need t
 
     ![]({{file name='parallel-review-web-ui.png'}} ?w=300,border=true)
 
-Your consultation task is done. The task is removed from your dashboard and your Tasks tab.
+Your review task is done. The task is removed from your dashboard and your Tasks tab.
 
 ### Final Validation of the Document
 
