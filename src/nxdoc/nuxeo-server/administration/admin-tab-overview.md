@@ -254,7 +254,7 @@ The default Activity subtabs are:
 *   **Users Sessions**: Provides information on who is logged in to the Platform.
     {{{multiexcerpt 'users-sessions-tab-details' page='Metrics and Monitoring'}}}
 *   **Events**: Lists the events that occurred on the platform. You can filter this list to only get the events from a specific user or only events from a specific category.
-*   **Background work**: Provides information on the asynchronous tasks performed by the server, such as video conversion when a video is imported.
+*   **Background work**: Provides information on the asynchronous tasks performed by the Work Manager. For each work category there is a queue reporting 3 metrics: the number of works waiting for execution, the number of works currently running and the number of works completed. For instance 'Queue videoConversion (2/4/6)' means that 2 videos are waiting to be converted, 4 videos convesions are in progress and 6 has been converted.
 *   **Repository Analytics**: Provides statistics on the repository. You can filter these statistics on a specific time period.
 *   **Search Analytics**: Provides statistics on the queries done by users and how search filters are used.
 
