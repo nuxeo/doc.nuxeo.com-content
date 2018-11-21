@@ -2490,7 +2490,7 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 </tr>
 <tr>
 <td colspan="1">`kafka.sasl.jaas.config`</td>
-<td colspan="1">JAAS login context parameters for SASL connections in the format used by JAAS configuration files. See [Kafka documentation for more information](https://kafka.apache.org/documentation/#security_sasl_scram_clientconfig)</td>
+<td colspan="1">JAAS login context parameters for SASL connections in the format used by JAAS configuration files. See [Kafka documentation for more information](https://kafka.apache.org/documentation/#security_sasl_scram_clientconfig).</td>
 <td colspan="1"></td>
 <td colspan="1">Since 10.3/9.10-HF22</td>
 </tr>
