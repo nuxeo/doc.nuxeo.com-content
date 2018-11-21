@@ -10,6 +10,7 @@ details:
         level: Beginner
         tool: Studio
         topics: 'Theme, JSF UI'
+notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:
     - branding
     - lts2015-ok
