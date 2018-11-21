@@ -124,7 +124,7 @@ history:
         date: '2010-08-12 01:16'
         message: ''
         version: '1'
-notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
+
 ---
 {{#> callout type='note' }}
 

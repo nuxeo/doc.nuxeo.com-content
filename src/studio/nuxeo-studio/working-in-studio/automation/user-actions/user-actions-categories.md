@@ -294,7 +294,6 @@ history:
         date: '2013-07-26 11:57'
         message: ''
         version: '1'
-  notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 
 ---
 This page describes the list of all user actions categories available, with screenshots of where they are located on the screen.

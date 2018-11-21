@@ -4,7 +4,6 @@ review:
     comment: ''
     date: '2018-03-29'
     status: ok
-notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 toc: true
 confluence:
     ajs-parent-page-id: '12911781'
