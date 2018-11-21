@@ -9,6 +9,7 @@ labels:
     - excerpt
     - content-review-lts2017
 toc: true
+hidden: true
 confluence:
     ajs-parent-page-id: '11043055'
     ajs-parent-page-title: Adding Features
