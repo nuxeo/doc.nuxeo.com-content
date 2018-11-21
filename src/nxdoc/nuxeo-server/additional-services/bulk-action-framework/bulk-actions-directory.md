@@ -32,11 +32,11 @@ The following example shows how to use `setPropertiesAction` with Java Service:
 ```
 // build command
 BulkCommand command = new BulkCommand.Builder(SetPropertiesAction.ACTION_NAME, "SELECT * from Document")
-                                       .repository("default")
-                                       .user("Administrator")
-                                       .param("dc:nature", "article")
-                                       .param("dc:subjects", ImmutableList.of("art/architecture"))
-                                       .build();
+        .repository("default")
+        .user("Administrator")
+        .param("dc:nature", "article")
+        .param("dc:subjects", ImmutableList.of("art/architecture"))
+        .build();
 
 // run command
 BulkService bulkService = Framework.getService(BulkService.class);
@@ -77,15 +77,16 @@ The following example shows how to use `csvExportAction` with Java Service:
 {{! multiexcerpt name='baf-csv-export-action-java-example'}}
 ```
 // build command
+ImmutableList<String> xpaths = ImmutableList.of("file:content/name", "file:content/length");
 BulkCommand command = new BulkCommand.Builder(CSVExportAction.ACTION_NAME, "SELECT * from Document")
-                                       .repository("default")
-                                       .user("Administrator")
-                                       .param(CSVProjectionComputation.PARAM_SCHEMAS, ImmutableList.of("dublincore"))
-                                       .param(CSVProjectionComputation.PARAM_XPATHS, ImmutableList.of("cpx:complex/foo"))
-                                       .param(CSVProjectionComputation.PARAM_LANG, "fr") // default is context Locale
-                                       .param(SortBlob.SORT_PARAMETER, Boolean.FALSE) // default is TRUE
-                                       .param(ZipBlob.ZIP_PARAMETER, Boolean.TRUE) // default is FALSE
-                                       .build();
+        .repository("default")
+        .user("Administrator")
+        .param(CSVProjectionComputation.PARAM_SCHEMAS, ImmutableList.of("dublincore"))
+        .param(CSVProjectionComputation.PARAM_XPATHS, xpaths)
+        .param(CSVProjectionComputation.PARAM_LANG, "fr") // default is context Locale
+        .param(SortBlob.SORT_PARAMETER, Boolean.FALSE) // default is TRUE
+        .param(ZipBlob.ZIP_PARAMETER, Boolean.TRUE) // default is FALSE
+        .build();
 
 
 
@@ -111,7 +112,7 @@ curl -u Administrator:Administrator \
  -d '{"params":{
         "query":"SELECT * FROM Document",
         "action":"csvExport",
-        "parameters":"{\"schemas\":[\"dublincore\"],\"xpaths\":[\"cpx:complex\/foo\"],\"lang\":\"fr\",\"sort\":false,\"zip\":true}"
+        "parameters":"{\"schemas\":[\"dublincore\"],\"xpaths\":[\"file:content\/name\", \"file:content\/length\"],\"lang\":\"fr\",\"sort\":false,\"zip\":true}"
 	    }
      }'
 
