@@ -86,6 +86,7 @@ If you have any questions, feel free to contact our support team via a dedicated
 ## Hotfix 22
 
 ### Configuration for Elasticsearch RestClient Truststore
+
 The following `nuxeo.conf` properties can be set to define appropriate TLS/SSL configuration for the Elasticsearch RestClient:
 - `elasticsearch.restClient.truststore.path`
 - `elasticsearch.restClient.truststore.password`
@@ -99,7 +100,7 @@ The following properties are **deprecated** (they were misnamed and are actually
 - `elasticsearch.restClient.keystorePassword`
 - `elasticsearch.restClient.keystoreType`
 
-If more fine-grained configuration is needed than properties, the following extension point can be used instead:
+If a more fine-grained configuration is needed, the following extension point can be used:
 ```
   <require>org.nuxeo.elasticsearch.defaultConfig</require>
   <extension target="org.nuxeo.elasticsearch.ElasticSearchComponent" point="elasticSearchClient">
@@ -114,7 +115,8 @@ If more fine-grained configuration is needed than properties, the following exte
     </elasticSearchClient>
   </extension>
 ```
-### Configuration for in-flight encryption of MongoDB Client TrustStore
+### Configuration for In-Flight Encryption of MongoDB Client Truststore
+
 The following `nuxeo.conf` properties can be set to define appropriate TLS/SSL configuration for MongoDB:
 - `nuxeo.mongodb.ssl=true`
 - `nuxeo.mongodb.truststore.path`
@@ -124,7 +126,7 @@ The following `nuxeo.conf` properties can be set to define appropriate TLS/SSL c
 - `nuxeo.mongodb.keystore.password`
 - `nuxeo.mongodb.keystore.type`
 
-If more fine-grained configuration is needed than properties, the following extension point can be used instead:
+If a more fine-grained configuration is needed, the following extension point can be used:
 ```
   <require>org.nuxeo.mongodb.connection</require>
   <extension target="org.nuxeo.runtime.mongodb.MongoDBComponent" point="connection">
@@ -141,6 +143,7 @@ If more fine-grained configuration is needed than properties, the following exte
   </extension>
 ```
 ### Configuration for Kafka SASL and TLS authentication
+
 The following `nuxeo.conf` properties can be set to define Kafka SASL and TLS authentication
 ```
 # SASL
