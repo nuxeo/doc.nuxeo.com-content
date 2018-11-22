@@ -241,10 +241,15 @@ To migrate trash states to the new property model:
 
 1. Follow the step from section [Keeping old trash implementation](#keeping-old-trash-implementation).
 1. In the Nuxeo Platform's JSF UI, go to **Admin** > **System Information** > **Migration**, click the button Migrate trashed state from lifecycle to property and wait until migration is completed.
+1. Then perform an Elasticsearch re-indexation of all repository, in the Nuxeo Platform's JSF UI, go to **Admin** > **Elasticsearch** > **Admin**, click the button Re-index repository and wait until re-indexation is completed.
 1. Remove the contribution added at step 1.
 
-{{#> callout type='info' heading='Migration Note'}}
+{{#> callout type='info' heading='Migration Note - 10.2'}}
 During migration, documents in state `deleted` will receive the `isTrashed` property set to true but migrator will leave document in `deleted` state.
+{{/callout}}
+
+{{#> callout type='warning' heading='Migration Note - 10.3'}}
+Migrator behavior has changed in 10.3, now documents in state `deleted` will receive the `isTrashed` property set to true and migrator will follow transition `undelete` if possible, if not it will set `project` state.
 {{/callout}}
 
 See [NXP-24850](https://jira.nuxeo.com/browse/NXP-24850).
