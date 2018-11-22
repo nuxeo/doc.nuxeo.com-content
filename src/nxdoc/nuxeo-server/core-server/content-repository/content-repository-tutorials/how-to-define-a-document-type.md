@@ -4,6 +4,7 @@ review:
     comment: ''
     date: '2017-12-12'
     status: ok
+notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:
     howto:
         excerpt: Learn how to create a new document type using Nuxeo Studio.
