@@ -4,6 +4,7 @@ review:
     comment: ''
     date: '2017-12-14'
     status: ok
+notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:
     - content-review-lts2016
     - page-provider

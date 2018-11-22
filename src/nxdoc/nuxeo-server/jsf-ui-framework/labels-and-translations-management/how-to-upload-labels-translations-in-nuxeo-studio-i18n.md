@@ -4,6 +4,7 @@ review:
     comment: ''
     date: '2017-12-14'
     status: ok
+notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:
     howto:
         excerpt: Learn how to upload your own translation of labels in Nuxeo Studio Modeler.

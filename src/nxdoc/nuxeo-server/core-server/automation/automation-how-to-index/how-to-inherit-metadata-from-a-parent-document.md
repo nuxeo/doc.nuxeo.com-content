@@ -4,6 +4,7 @@ review:
     comment: ''
     date: '2016-12-19'
     status: ok
+notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:
     howto:
         excerpt: 'In this how-to, we will implement an event handler that will listen to the creation of documents. When the created document matches some predefined criteria, the listener will execute a content automation chain. The chain will copy the "source" metadata value from the workspace to the created document.'

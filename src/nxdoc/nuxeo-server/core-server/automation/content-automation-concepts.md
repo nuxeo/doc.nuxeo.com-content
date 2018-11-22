@@ -14,7 +14,6 @@ labels:
     - excerpt
     - lts2017-ok
 toc: true
-notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
     ajs-parent-page-id: '18451738'
     ajs-parent-page-title: Automation
@@ -463,6 +462,7 @@ history:
         date: '2010-06-22 12:11'
         message: ''
         version: '1'
+notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 
 ---
 {{! multiexcerpt name='AutomationIntroduction'}}
