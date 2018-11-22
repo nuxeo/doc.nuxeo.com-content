@@ -3,6 +3,7 @@ title: How to Create an Automation Chain
 review:
     comment: ''
     date: '2017-12-14'
+notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:
     howto:
         excerpt: This how-to explains the different steps to create and configure an automation chain using Nuxeo Studio.

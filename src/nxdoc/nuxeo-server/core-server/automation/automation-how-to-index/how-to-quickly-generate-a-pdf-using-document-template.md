@@ -122,7 +122,7 @@ history:
         date: '2011-01-24 12:07'
         message: ''
         version: '1'
-
+notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 ---
 **Use case**: you want to get a PDF printable version of the data stored on your document as properties.
 

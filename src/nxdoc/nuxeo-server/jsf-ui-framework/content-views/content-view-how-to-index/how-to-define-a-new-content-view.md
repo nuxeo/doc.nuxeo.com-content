@@ -4,6 +4,7 @@ review:
     comment: ''
     date: '2016-12-19'
     status: ok
+notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:
     howto:
         excerpt: Learn how to configure a new content view with Nuxeo Studio.
