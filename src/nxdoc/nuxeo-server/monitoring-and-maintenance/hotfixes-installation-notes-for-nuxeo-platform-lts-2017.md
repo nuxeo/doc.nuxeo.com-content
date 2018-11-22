@@ -83,6 +83,82 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 22
+
+### Configuration for Elasticsearch RestClient Truststore
+The following `nuxeo.conf` properties can be set to define appropriate TLS/SSL configuration for the Elasticsearch RestClient:
+- `elasticsearch.restClient.truststore.path`
+- `elasticsearch.restClient.truststore.password`
+- `elasticsearch.restClient.truststore.type`
+- `elasticsearch.restClient.keystore.path`
+- `elasticsearch.restClient.keystore.password`
+- `elasticsearch.restClient.keystore.type`
+
+The following properties are **deprecated** (they were misnamed and are actually referring to the trustStore, not the keyStore):
+- `elasticsearch.restClient.keystorePath`
+- `elasticsearch.restClient.keystorePassword`
+- `elasticsearch.restClient.keystoreType`
+
+If more fine-grained configuration is needed than properties, the following extension point can be used instead:
+```
+  <require>org.nuxeo.elasticsearch.defaultConfig</require>
+  <extension target="org.nuxeo.elasticsearch.ElasticSearchComponent" point="elasticSearchClient">
+    <elasticSearchClient class="org.nuxeo.elasticsearch.client.ESRestClientFactory">
+      ...
+      <option name="trustStorePath">/path/to/cacerts.jks</option>
+      <option name="trustStorePassword">changeit</option>
+      <option name="trustStoreType">jks</option>
+      <option name="keyStorePath">/path/to/keystore.jks</option>
+      <option name="keyStorePassword">changeit</option>
+      <option name="keyStoreType">jks</option>
+    </elasticSearchClient>
+  </extension>
+```
+### Configuration for in-flight encryption of MongoDB Client TrustStore
+The following `nuxeo.conf` properties can be set to define appropriate TLS/SSL configuration for MongoDB:
+- `nuxeo.mongodb.ssl=true`
+- `nuxeo.mongodb.truststore.path`
+- `nuxeo.mongodb.truststore.password`
+- `nuxeo.mongodb.truststore.type`
+- `nuxeo.mongodb.keystore.path`
+- `nuxeo.mongodb.keystore.password`
+- `nuxeo.mongodb.keystore.type`
+
+If more fine-grained configuration is needed than properties, the following extension point can be used instead:
+```
+  <require>org.nuxeo.mongodb.connection</require>
+  <extension target="org.nuxeo.runtime.mongodb.MongoDBComponent" point="connection">
+    <connection id="default">
+      ...
+      <ssl>true</ssl>
+      <trustStorePath>/path/to/cacerts.jks</trustStorePath>
+      <trustStorePassword>changeit</trustStorePassword>
+      <trustStoreType>jks</trustStoreType>
+      <keyStorePath>/path/to/keystore.jks</keyStorePath>
+      <keyStorePassword>changeit</keyStorePassword>
+      <keyStoreType>jks</keyStoreType>
+    </connection>
+  </extension>
+```
+### Configuration for Kafka SASL and TLS authentication
+The following `nuxeo.conf` properties can be set to define Kafka SASL and TLS authentication
+```
+# SASL
+kafka.sasl.enabled=false
+kafka.security.protocol=SASL_PLAINTEXT
+kafka.sasl.mechanism=SCRAM-SHA-256
+kafka.sasl.jaas.config=org.apache.kafka.common.security.scram.ScramLoginModule required username="kafkaclient1" password="kafkaclient1-secret";
+
+# SSL
+kafka.ssl=false
+kafka.truststore.type=JKS
+kafka.truststore.path=
+kafka.truststore.password=
+kafka.keystore.type=JKS
+kafka.keystore.path=
+kafka.keystore.password=
+```
+
 ## Hotfix 21
 
 ### New Seam Event
