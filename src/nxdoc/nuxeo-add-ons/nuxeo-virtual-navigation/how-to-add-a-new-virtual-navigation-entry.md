@@ -4,6 +4,7 @@ review:
     comment: ''
     date: '2015-12-01'
     status: ok
+notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:
     howto:
         excerpt: Learn how to configure a virtual navigation view with Nuxeo Studio.
