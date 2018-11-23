@@ -96,7 +96,7 @@ tree_item_index: 1000
 </table>
 </div>
 
-
+For more information on Permissions, see their [definitions](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-10.2/viewExtensionPoint/org.nuxeo.ecm.core.security.SecurityService--permissions).
 ## Managing Permissions on Content
 
 ### Granting Permissions to the Application Users and Groups
