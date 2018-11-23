@@ -6,6 +6,7 @@ review:
     status: ok
 notes: >-
     Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+    Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
