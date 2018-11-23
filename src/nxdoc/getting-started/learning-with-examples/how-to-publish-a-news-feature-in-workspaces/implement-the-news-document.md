@@ -179,8 +179,8 @@ Here are the steps to create the button to create news from a Workspace into the
     ```yaml
     - Repository.GetDocument:
         value: ./NewsFolder
-    - WebUI.NavigateTo
-    - WebUI.ShowCreateForm:
+    - Seam.NavigateTo
+    - Seam.ShowCreateForm:
         type: News
     ```
     Now when you click on the **Create News** button, a News document will be created for the Workspace and stored directly in the News folder.
