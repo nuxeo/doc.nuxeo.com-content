@@ -67,6 +67,31 @@ The displayed information can also be changed from the [Search view]({{page vers
 
 The information displayed on content views can be filtered with filters at the top of every column.
 
+
+
+Once in the view of a document, the side details bar can be collapsed by clicking {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Details icon
+    name: details-collapsible-sidebar.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Details icon](nx_asset://52322339-9f6e-44c5-b1ee-9ef3f0519400 ?w=30) at the top of the sidebar.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Document View with sidebar
+    name: view-sidebar.png
+    1.1.3#screenshot#to_be_updated
+--}}
+![Document View with sidebar](nx_asset://5284dbcb-db38-4466-accc-ddaa05c3e29a ?w=600,border=true)
+
+It enables you to have a more focused view on the document preview.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Document view collapsed sidebar
+    name: without-sidebar.png
+    1.1.3#screenshot#to_be_updated
+--}}
+![Document view collapsed sidebar](nx_asset://2df976a7-5f45-4899-86d1-a814b4d88ab9 ?w=600,border=true)
+
 ### Keyboard Shortcuts
 
 Some actions or features are accessible using keyboard shortcuts:
