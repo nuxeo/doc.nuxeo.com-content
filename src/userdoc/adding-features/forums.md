@@ -169,10 +169,10 @@ history:
 
 ## Functional Overview
 
-As for workspaces and sections, the access to a forum is defined by permissions. Forum permissions are the same as workspace permissions. However, in the case of a [moderated topic]({{page page='managing-topics#topic-moderation'}}), some users are declared "moderators" and are in charge of the approval of the topic content.
+As for workspaces and sections, the access to a forum is defined by permissions. Forum permissions are the same as workspace permissions. However, in the case of a [moderated topic]({{page page='managing-topics'}}#topic-moderation), some users are declared "moderators" and are in charge of the approval of the topic content.
 
 Forum creation and edition are available for users with "Edit" and "Manage" permissions.
-Users with "Manage" permissions can also manage the forum like a workspace, i.e. [give users permissions]({{page page='managing-permissions'}}), set [alerts]({{page page='collaborative-features#alerts'}}) and manage the forum's [trash]({{page page='deleting-content'}}).
+Users with "Manage" permissions can also manage the forum like a workspace, i.e. [give users permissions]({{page page='managing-permissions'}}), set [alerts]({{page page='collaborative-features'}}#alerts) and manage the forum's [trash]({{page page='deleting-content'}}).
 
 ### Creating a Forum
 

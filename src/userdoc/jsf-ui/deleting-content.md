@@ -175,10 +175,10 @@ Users with "Manage everything" permissions can access the workspace's **Trash** 
     Documents are moved back to the **Content** tab of the workspace and available to users. They get the "project" lifecycle state, even if their lifecycle state before deletion was "approved".
     ![]({{file name='trash-tab.png' space='userdoc' page='deleting-content'}} ?w=600,border=true)
 *   Erase documents by selecting them and clicking the **Permanent delete** button.
-    Documents are permanently erased from the application. They cannot be restored. The [relations]({{page space='userdoc' page='editing-content#relations'}}) to the deleted documents are deleted.
+    Documents are permanently erased from the application. They cannot be restored. The [relations]({{page space='userdoc' page='editing-content'}}#relations) to the deleted documents are deleted.
     ![]({{file name='trash-tab.png' space='userdoc' page='deleting-content'}} ?w=600,border=true)
 *   Empty the trash by clicking the corresponding button.
-    All deleted documents are permanently erased from the application. They cannot be restored. The [relations]({{page space='userdoc' page='editing-content#relations'}}) to the deleted documents are deleted.
+    All deleted documents are permanently erased from the application. They cannot be restored. The [relations]({{page space='userdoc' page='editing-content'}}#relations) to the deleted documents are deleted.
     ![]({{file name='empty-trash.png' space='userdoc' page='deleting-content'}} ?w=500,h=179,border=true)
 
 {{! /multiexcerpt}}

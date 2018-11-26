@@ -56,7 +56,7 @@ To create a document using the **Create** button:</br>
 The View tab of the document is displayed.
 </br>
 </br>
-[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='browse'}}#creating-content)
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='content-create'}})
 </td>
 </tbody>
 </table>
@@ -117,7 +117,7 @@ When you click on it, a popup is displayed previewing your document.</br>
 ![]({{file name='CAP-dashboard.png' page='userdoc/browsing-content'}} ?w=600,border=true)
 </br>
 </br>
-[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='browse'}})
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='browsing-content'}}#dashboard)
 </td>
 
 <td colspan="1" style="background-color:white">
@@ -129,7 +129,7 @@ Clicking on elements on the left will open a side panel (also called Drawer) wit
 ![]({{file version='' space='nxdoc' page='web-ui-dashboard' name='DASHBOARD.png'}} ?w=400,border=true)
 </br>
 </br>
-[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='browse'}})
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='browse'}}#dashboard)
 </td>
 </td>
 </tbody>
@@ -193,7 +193,7 @@ If the task is assigned to you, different options are available. You can accept 
 ![]({{file version='' space='userdoc' page='serial-document-workflow' name='workflow-choose-reviewers-task-workflow-tab.png'}} ?w=250,border=true)
 </br>
 </br>
-[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='browse'}}#creating-content)
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='content-create'}})
 </td>
 <td colspan="1" style="background-color:white">
 The [**serial workflow**]({{page page='userdoc/task'}}) and the [**parallel workflow**]({{page page='userdoc/task'}}) are also available by default on Web UI. Users who are involved in workflows are alerted by email and can have a synthetic view of all their pending tasks on documents in their dashboard or on the Task tab. The documents they have to review are listed there.</br>
@@ -207,7 +207,7 @@ You now need to select the participants to the review and follow the resolution 
 If a task has been assigned to you, the pending task will be available in the **Tasks** gadget and in the **Task** tab.
 ![]({{file version='' space='userdoc' page='task' name='task-menu-web-ui.png'}} ?w=200,border=true)
 </br>
-[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='browse'}}#creating-content)
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='content-create'}})
 </td>
 </td>
 </tbody>
@@ -264,7 +264,7 @@ You can export via an **XML export** or a **ZIP Tree XML export**.
 
 ![]({{file name='download-button-web-ui.png'}} ?w=350,border=true)
 </br>
-[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='browse'}}#downloading-content)
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='content-download'}})
 </td>
 </td>
 </tbody>

@@ -17,7 +17,7 @@ Content creation and edition, as well as management, works the same way in perso
 
 ## Creating Personal Documents
 
-To create personal documents, follow the same steps as for [any other documents]({{page page ='browse'}}#creating-content) and it will be displayed in your personal space.
+To create personal documents, follow the same steps as for [any other documents]({{page page ='content-create'}}) and it will be displayed in your personal space.
 
 ## Accessing Favorites
 

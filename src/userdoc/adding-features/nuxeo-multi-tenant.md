@@ -24,137 +24,137 @@ confluence:
     source_link: /display/USERDOC/Nuxeo+Multi-Tenant
 tree_item_index: 1000
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-25 16:57'
         message: ''
         version: '27'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 08:59'
         message: ''
         version: '26'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-17 13:26'
         message: Add schema
         version: '25'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-16 14:55'
         message: ''
         version: '24'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-16 14:52'
         message: ''
         version: '23'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-16 14:19'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 11:54'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-08 11:50'
         message: ''
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2013-12-23 11:53'
         message: ''
         version: '19'
-    - 
+    -
         author: Solen Guitter
         date: '2013-11-04 23:45'
         message: Removed related topics from TOC and added precision about members group being optional
         version: '18'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-05 16:15'
         message: ''
         version: '17'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-05 16:15'
         message: ''
         version: '16'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-05 15:47'
         message: ''
         version: '15'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-05 15:45'
         message: Added multi-tenancy activation section
         version: '14'
-    - 
+    -
         author: Solen Guitter
         date: '2013-08-05 15:22'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2013-06-19 16:41'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: Migrated to Confluence 4.0
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:42'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2012-07-24 11:38'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-18 17:06'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-18 16:54'
         message: Added global admin Vs tenant admin section
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-18 11:18'
         message: Added screenshots
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-15 17:42'
         message: Added information on access right management in the tenant
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-15 17:01'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-15 16:55'
         message: Added related content links
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-15 16:32'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2012-06-14 14:17'
         message: ''
@@ -163,7 +163,7 @@ history:
 ---
 {{! excerpt}}
 
-[Nuxeo Multi-tenant](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant) enables to have [domains]({{page page='nuxeo-platform-concepts#available-spaces'}}), or tenants, that are independent from each other, with their own users, vocabulary values etc.
+[Nuxeo Multi-tenant](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant) enables to have [domains]({{page page='nuxeo-platform-concepts'}}#available-spaces), or tenants, that are independent from each other, with their own users, vocabulary values etc.
 
 {{! /excerpt}}
 
