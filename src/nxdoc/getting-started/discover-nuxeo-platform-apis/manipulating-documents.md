@@ -2,7 +2,7 @@
 title: Manipulating Documents
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2018-11-26'
     status: ok
 toc: true
 labels:
@@ -322,7 +322,7 @@ Create a new contract in Nuxeo Platform.
 
 ## Fetching a Document
 
-Documents can be fetched using their id or path.
+Documents can be fetched using their ID or path.
 
 1.  Create a file called `fetchContract.js` with the following content.
 
@@ -442,15 +442,11 @@ We will now update the contract to add some custom clauses.
 
 &nbsp;
 
-## Changing the State of a Document
+## Trashing a Document
 
-{{#> callout type='warning' heading='Trash Feature usage deprecation'}}
-Since 10.2, the trash management is handled by the `ecm:isTrashed` property and related [APIs]({{page page='deleting-documents'}}#putting-the-document-in-the-trash).
-{{/callout}}
+First we will **trash** the document, then in a second phase restore it from the trash.
 
-This time we will switch the document to the `deleted` state, then in a second phase restore it to the state it was previously in (`draft` in this case). This can be used to manage a trash feature, by listing all documents not in the `deleted` state when launching queries, or only the ones in this state when looking at the trash.
-
-**Change document state to 'deleted'**
+**Trashing the document**
 
 1.  Create a file called `trashContract.js` with the following content.
 
@@ -486,9 +482,9 @@ This time we will switch the document to the `deleted` state, then in a second p
     $ node trashContract.js
     ```
 
-**Restore document state to 'draft'**
+**Restore trashed document**
 
-Restore the contract to its previous (`draft`) state.
+Restore the contract from trash.
 
 1.  Create a file called `restoreContract.js` with the following content.
 
@@ -504,16 +500,24 @@ Restore the contract to its previous (`draft`) state.
     });
     var contractToFetch = '/default-domain/workspaces/North America/awesome-tech/skynet-ai-maintenance';
     nuxeo.repository()
-        .fetch(contractToFetch)
-        .then(function(contract) {
-            return contract.followTransition('undelete');
+    // Find the trashed document
+        .query({
+          query: "SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation' AND ecm:isProxy = 0 AND ecm:isVersion = 0 AND ecm:isTrashed = 1 AND ecm:path STARTSWITH '/default-domain/workspaces/North America/awesome-tech/'"
         })
         .then(function(contract) {
-            console.log('Contract state has been changed. Contract is now as follows:');
-            console.log(contract);
+            return contract.entries[0];
+        })
+        // Restore it
+        .then(function(contract) {
+          return nuxeo.operation('Document.Untrash')
+            .input(contract)
+            .execute()
+        })
+        .then(function() {
+          console.log('Success! The contract has been untrashed.');
         })
         .catch(function(error) {
-            console.log('Apologies, an error occurred while changing the contract state.');
+            console.log('Apologies, an error occurred while untrashing the document.');
             console.log(error);
         });
 
