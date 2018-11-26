@@ -364,7 +364,7 @@ You can use drag and drop to easily import content into a workspace or just to c
 
 To import content into Nuxeo, drag an item from your computer and drop it into a workspace. The document is then automatically created in the workspace and its title is the name of the original file, and no metadata is filled in.
 
-You can also drop files in your [worklist]({{page page='editing-content#clipboard-worklist'}}). The document is then created in your personal workspace.
+You can also drop files in your [worklist]({{page page='editing-content'}}#clipboard-worklist). The document is then created in your personal workspace.
 
 You can drag and drop one or more files of any type in Nuxeo.
 

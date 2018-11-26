@@ -299,7 +299,7 @@ The whole set of information about users consists of the items below:
 <tr>
 <td colspan="1">Email</td>
 <td colspan="1">email of the user<br/>
-This address is used for [alerts]({{page page='collaborative-features#alerts'}}).</td>
+This address is used for [alerts]({{page page='collaborative-features'}}#alerts).</td>
 </tr>
 <tr>
 <td colspan="1">Password</td>

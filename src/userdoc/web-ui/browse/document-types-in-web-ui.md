@@ -43,10 +43,10 @@ Regular folders, called "Folders", have the same behavior as workspaces. In a re
 
 In a folder, you can:
 
-- [Create documents]({{page page='browse'}}#creating-content) and do all the actions available on them (edit, approve, manage relations, etc.)
+- [Create documents]({{page page='content-create'}}) and do all the actions available on them (edit, approve, manage relations, etc.)
 - [Manage permissions]({{page page='permissions'}})
-- [Subscribe to alerts]({{page page='browse#alerts'}})
-- [Manage the folder's trash]({{page page='browse'}}#deleting-content)
+- [Subscribe to alerts]({{page page='document-actions'}}#alerts)
+- [Manage the folder's trash]({{page page='content-delete'}})
 
 Like in a workspace, you can use drag and drop to create content in a folder.
 
@@ -81,7 +81,7 @@ A file is composed of:
 
 **To create a file**, in a workspace, click on ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30). On the **Create** popup, click on the desired document. Fill in the document's creation form and click on **Create**.
 
-When the file is created, users can enhance it by [filling its properties]({{page page='browse'}}#editing-content), adding attached files on it.
+When the file is created, users can enhance it by [filling its properties]({{page version='' space='userdoc' page='content-edit'}}), adding attached files on it.
 
 ### Note
 
@@ -102,8 +102,8 @@ Format | The format of the automatically created file used to export notes from 
 
 **To create a note**, in a workspace, click on ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30). On the **Create** popup, click on the desired document. Fill in the document's creation form and click on **Create**.
 
-You can also create a note by importing a .txt, a .html or a .xml file [using drag and drop]({{page page='browse'}}#importing-documents-using-drag-and-drop).
-When the note is created, users can enhance it by attaching files on it or just [editing it]({{page page='browse'}}#editing-content).
+You can also create a note by importing a .txt, a .html or a .xml file [using drag and drop]({{page page='content-create'}}#importing-documents-using-drag-and-drop).
+When the note is created, users can enhance it by attaching files on it or just [editing it]({{page page='content-edit'}}).
 
 #### Attachments
 
@@ -148,7 +148,7 @@ For more information about video document, take a look to the [Digital Asset Man
 
 Audio is a document type dedicated to audio files management. It provides a player from the document View to listen to it from the application.
 
-Audio documents can be [created and edited]({{page page='browse'}}#editing-content) like any other document type. They don't have any specific tab or action available.
+Audio documents can be [created and edited]({{page page='content-edit'}}) like any other document type. They don't have any specific tab or action available.
 
 For more information about audio document, take a look to the [Digital Asset Management page]({{page version='' space='nxdoc' page='digital-asset-management-dam'}}).
 

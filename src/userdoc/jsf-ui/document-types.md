@@ -249,7 +249,7 @@ Content creation and edition, as well as management, works the same way in perso
 
 By default, no workspace is available at workspaces root. Thus, you can create the structure you need for your project, edit it if needed. You can also [set the appropriate permission]({{page page='managing-permissions'}}) for users to be able to collaborate in the workspaces.
 
-Workspaces management also includes setting [alerts]({{page page='collaborative-features#alerts'}}) for users to be informed when content is created or edited in workspaces and handling content deletion.
+Workspaces management also includes setting [alerts]({{page page='collaborative-features'}}#alerts) for users to be informed when content is created or edited in workspaces and handling content deletion.
 
 {{! /multiexcerpt}}
 
@@ -264,7 +264,7 @@ In a folder, you can:
 
 *   [Create documents]({{page page='creating-content'}}) and do all the actions available on them (edit, approve, manage relations, etc.)
 *   [Manage permissions]({{page page='managing-permissions'}})
-*   [Subscribe to and manage alerts]({{page page='collaborative-features#alerts'}})
+*   [Subscribe to and manage alerts]({{page page='collaborative-features'}}#alerts)
 *   [Manage the folder's trash]({{page page='deleting-content'}})
 
 Like in a workspace, you can use drag and drop to create content in a folder.
@@ -283,7 +283,7 @@ To create a file, in the **Content** tab of the workspace, click on **New** butt
 
 {{#> callout type='tip' heading='Other ways to create a file'}}
 
-You can also create a file using the[ **Import** button]({{page page='creating-content#import-button'}}) or using [drag and drop]({{page page='creating-content'}}#drag-and-drop).
+You can also create a file using the[ **Import** button]({{page page='creating-content'}}#import-button) or using [drag and drop]({{page page='creating-content'}}#drag-and-drop).
 
 {{/callout}}
 
@@ -351,11 +351,11 @@ To create a note, in the **Content** tab of the workspace, click on the **New** 
 
 {{#> callout type='tip' heading='Other ways to create a note'}}
 
-You can also create a note by importing a .txt, a .html or a .xml file using [ **Import** button]({{page page='creating-content#import-button'}}) or [drag and drop]({{page page='creating-content'}}#drag-and-drop).
+You can also create a note by importing a .txt, a .html or a .xml file using [ **Import** button]({{page page='creating-content'}}#import-button) or [drag and drop]({{page page='creating-content'}}#drag-and-drop).
 
 {{/callout}}
 
-When the note is created, users can enhance it by adding [comments]({{page page='collaborative-features#comments'}}), attached files on it, or just [editing it]({{page page='editing-content'}}).
+When the note is created, users can enhance it by adding [comments]({{page page='collaborative-features'}}#comments), attached files on it, or just [editing it]({{page page='editing-content'}}).
 
 ### Attachment
 
@@ -426,7 +426,7 @@ To change the lifecycle state of a document, you need to submit it to a [workflo
 
 {{#> callout type='warning' heading='Trash behavior deprecation'}}
 
-Since 10.2, trash management is handled by `ecm:isTrashed` property and related [APIs]({{page page='deleting-documents#putting-the-document-in-the-trash'}}).
+Since 10.2, trash management is handled by `ecm:isTrashed` property and related [APIs]({{page page='deleting-documents'}}#putting-the-document-in-the-trash).
 
 Changing the lifecycle state to `deleted` won't contribute to trash feature in future Nuxeo version.
 
