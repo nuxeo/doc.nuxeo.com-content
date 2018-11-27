@@ -382,7 +382,6 @@ If it happens, your Nuxeo instance will stop after a certain number of commits o
 {{{multiexcerpt 'requires-jsf-ui' page='registering-your-nuxeo-instance'}}}
 
 1.  Log in to the [Nuxeo Online Services portal](https://connect.nuxeo.com).
-1.  Go to the [Nuxeo Online Services portal](https://connect.nuxeo.com).
 1.  Click on the `My Applications` tab
 1.  Click on the application name for which you want to register your Nuxeo Platform to access its settings.
 1.  Click on the `Instances` tab
