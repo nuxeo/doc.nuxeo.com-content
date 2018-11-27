@@ -241,13 +241,13 @@ Offline registration can be used when the server does not connect to the Interne
 2.  From an Internet-connected computer:
 
     1.  Go to the [Nuxeo Online Services portal](https://connect.nuxeo.com).
-    2.  Click on the application title for which you want to register your Nuxeo Platform.
-        ![]({{file name='Nuxeo-Connect-my-applications.png'}} ?w=350)
-    3.  Put your mouse over the icon&nbsp;![]({{file name='tools.png'}}) and click **Add a new instance**.
-        ![]({{file name='AdminCenter-offline-registration-2.png'}} ?w=450,border=true)
-    4.  Fill in the registration form and submit it.
-        The instance is registered. You are given an identifier (CLID) to validate registration from Nuxeo Admin tab.
-    5.  Copy this identifier.
+    2.  Click on the `My Applications` tab
+    3.  Click on the application name for which you want to register your Nuxeo Platform to access its settings.
+    4.  Click on the `Instances` tab
+    5.  Click on the `Register Instance` button
+    6.  Fill in the registration form and submit it.</br>
+        The instance is registered.
+    7.  Copy the identifier (CLID) from the instance you just registered.
 3.  On the offline server:
     1.  In the Admin tab, fill in the instance description, paste the CLID from Nuxeo Online Services and click on the **Register this instance** button.
         ![]({{file name='AdminCenter-offline-registration-3.png'}} ?w=500,border=true)
@@ -274,17 +274,13 @@ $ .\$NUXEO_HOME\bin\nuxeoctl.bat stop
 // Linux and Mac OS
 // Requires an active Nuxeo Online Services subscription
 // An internet connection
-// And that instance is currently registered
 $ $NUXEO_HOME/bin/nuxeoctl register
 
 // Windows
 // Requires an active Nuxeo Online Services subscription
 // An internet connection
-// And that instance is currently registered
 $ .\$NUXEO_HOME\bin\nuxeoctl.bat register
 ```
-
-Assuming that your instance has internet access, this call can easily be automated using a cron / scheduled task. If for some reason your contract expires before you launch the command above though, you can still register your Nuxeo server instance as a new one by following the online of offline registration indications.
 
 {{#> callout type='note' title='Important Note About Hotfixes'}}
 Using hotfixes on your instance requires a valid subscription.
@@ -300,9 +296,10 @@ If it happens, your Nuxeo instance will stop after a certain number of commits o
 **To re-register your instance:**
 
 1.  Log in to the [Nuxeo Online Services portal](http://connect.nuxeo.com).
-2.  In the associated instances, click on your Nuxeo instances link.
-    The page listing the associated instances for your project opens.
-3.  Copy the Identifier of the instance you want to register (Identifier is of the form `dedaf21-be00-412e-b0ab-f2394479d5f8--885dcf60-5a4a-46e8-a904-0123456789ab`).
+1.  Click on the `My Applications` tab
+1.  Click on the application name for which you want to register your Nuxeo Platform to access its settings.
+1.  Click on the `Instances` tab
+1.  Copy the Identifier of the instance you want to register.</br>
     In the Nuxeo Admin tab, paste this identifier in the CLID field and click on the **Register this instance** button.
     ![]({{file name='AdminCenter-offline-registration-3.png'}} ?w=450,border=true)
     Your instance is registered again and the registration summary is displayed.
