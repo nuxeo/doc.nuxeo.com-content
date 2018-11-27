@@ -607,9 +607,13 @@ The contract to delete has been identified as being the `2015 Annual Conference`
             password: 'Administrator'
         }
     });
-    var contractToDelete = '/default-domain/workspaces/North America/Caterer/2015 Annual Conference';
     nuxeo.repository()
-        .delete(contractToDelete)
+        .fetch('/default-domain/workspaces/North America/Caterer/2015 Annual Conference')
+        .then(function(contract) {
+          return nuxeo.operation('Document.Delete')
+            .input(contract)
+            .execute()
+        })
         .then(function(res) {
             console.log('Contract has been deleted permanently. Bye bye contract!')
                 // res.status === 204
