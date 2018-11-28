@@ -4,7 +4,7 @@ review:
     comment: ''
     date: '2018-10-24'
     status: ok
-tree_item_index: 710
+tree_item_index: 850
 toc: true
 ---
 Advanced settings enable you to configure Deployment Extensions, Web Services Filtering and XML Extensions in your Studio project.
@@ -26,14 +26,13 @@ action="#{startupHelper.initDomainAndFindStartupPage('Default domain','user_dash
 For more information, see [Deployment Fragment Preprocessor]({{page version='' space='nxdoc' page='understanding-bundles-deployment'}}).
 
 {{#> callout type='note'}}
-Extension tags must be written directly at the root, not enclosed by any other tag.
+`extension` tags must be written directly at the root, not enclosed by any other tag.
 {{/callout}}
 
-## Web Services filtering
+## Web Services Filtering
 
-Filter automation chains are exposed to clients through REST API. Choose which operations must be protected when accessing them through REST and which must be disabled.
+This menu enables you to filter automation chains exposed to remote clients through REST API. Choose which operations must be protected when accessing them through REST and which must be disabled.
 Operations that are not listed here are by default accessible by everyone remotely through the REST API.
-
 
 {{#> callout type='note'}}
 Only non-UI operations can be exposed through REST. Bindings that have no constraints are ignored.
