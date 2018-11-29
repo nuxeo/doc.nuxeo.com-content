@@ -65,7 +65,7 @@ Once it's done click on **Close**.
 The displayed information can also be changed from the [Search view]({{page version='' space='userdoc' page='search'}}).
 {{/callout}}
 
-The information displayed on content views can be filtered with filters at the top of every column.
+All information displayed on content views, except document titles, can be filtered at the top of every column.
 
 
 
