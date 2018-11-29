@@ -30,7 +30,7 @@ Here's a chart describing actions during first connection to ARender:
 
 There're several ways to install ARender software.
 
-You can install both piece directly on dedicated hosts by following [ARender Documentation](https://arender.io/doc/current/documentation/setup/index-setup.html). Don't forget to take ARender previewer on our [Nexus](https://mavenpriv.nuxeo.com/nexus/#nexus-search;quick~nuxeo-arender-connector-hmi) in order to leverage the connector between ARender previewer and Nuxeo.
+You can install both piece directly on dedicated hosts by following [ARender Documentation](https://arender.io/doc/current4/documentation/setup/index-setup.html). Don't forget to take ARender previewer on our [Nexus](https://mavenpriv.nuxeo.com/nexus/#nexus-search;quick~nuxeo-arender-connector-hmi) in order to leverage the connector between ARender previewer and Nuxeo.
 
 To ease deployment, Nuxeo provides two Docker images, one for each piece of ARender software:
 - `dockerin-arender.nuxeo.com:443/arender-previewer`
@@ -43,7 +43,7 @@ You should always use same version for docker images and marketplace package.
 
 All communications are made over HTTP, we recommend usage of HTTPS for production. Below are the ports of each piece:
 - previewer is reachable on port 8080 when exposed directly by Tomcat, we recommend to setup an Apache or Nginx in front of it
-- rendition is reachable on port 1990
+- rendition is reachable on port 8761
 
 Below the needed communication (for firewall rules/docker network setup):
 - Nuxeo needs to reach ARender previewer
@@ -63,7 +63,7 @@ docker login dockerin-arender.nuxeo.com:443
 
 For development purposes, you need to run the Docker image for rendition and bind its port to localhost:
 ```
-docker run -p 1990:1990 -it -d dockerin-arender.nuxeo.com:443/arender-rendition:MP_VERSION
+docker run -p 8761:8761 -it -d dockerin-arender.nuxeo.com:443/arender-rendition:MP_VERSION
 ```
 Where `MP_VERSION` is the marketplace package version installed on Nuxeo.
 
@@ -71,7 +71,7 @@ Then you need to install [nuxeo-arender-connector](https://connect.nuxeo.com/nux
 
 It installs ARender integration inside Nuxeo and ARender previewer inside the Nuxeo's Tomcat.
 
-If your ARender rendition server doesn't run on same host than Nuxeo's Tomcat, you can change the ARender rendition URL by setting `arender.server.rendition.hosts` in your `nuxeo.conf` (default value is `http://localhost:1990`).
+If your ARender rendition server doesn't run on same host than Nuxeo's Tomcat, you can change the ARender rendition URL by setting `arender.server.rendition.hosts` in your `nuxeo.conf` (default value is `http://localhost:8761`).
 
 ### Docker Installation - Production
 
@@ -100,7 +100,7 @@ GET /arendergwt/weather?format=json
 To update it:
 ```
 POST /arendergwt/weather?format=json
-["https://rendition1:1990", "https://rendition2:1990"]
+["https://rendition1:8761", "https://rendition2:8761"]
 ```
 
 ## Configuration
