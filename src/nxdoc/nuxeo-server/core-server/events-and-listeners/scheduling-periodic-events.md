@@ -231,6 +231,10 @@ When using the Scheduler Service to trigger [Automation Chains]({{page page='con
 
 If the need is to execute operations needing an operation context session, the first operation of the chain should be [LoginAs Operation](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Auth.LoginAs). It will create a new authenticated session and set the Automation context session accordingly.
 
+<aside class="notice">
+Check that *Current document is* is set to *Any* (default value is Regular document)
+</aside>
+
 ## Clustering
 
 Note that when Nuxeo is used in cluster mode, and a proper [cluster-aware Quartz configuration]({{page page='nuxeo-clustering-configuration'}}#quartz-scheduler-cluster-configuration) is done, then a given schedule is triggered only on one of the nodes of the cluster, not on all nodes.
