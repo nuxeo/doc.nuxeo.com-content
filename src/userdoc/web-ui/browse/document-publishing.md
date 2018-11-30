@@ -23,6 +23,9 @@ You are free to organize your section to fit your project or your needs the best
 
 As in workspaces, access to sections is determined by permissions.
 
+You can also define any document type as publish space in the Definition of the document type in the Studio Modeler, by checking **Document is a publish space**.
+![]({{file name='publish-space-studio.png'}} ?w=500,border=true)
+
 ## Publishing Documents
 
 Publishing a document means publishing a version of the document as it is at the time of publication.
