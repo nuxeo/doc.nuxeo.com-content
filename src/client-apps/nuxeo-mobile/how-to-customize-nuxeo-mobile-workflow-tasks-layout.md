@@ -19,13 +19,13 @@ toc: true
 
 ---
 
-Since the version 1.13.0 on iOS and 1.11.0 on Android, workflows defined in studio can be processed by users from the mobile application. 
+Since the version 1.13.0 on iOS and 1.11.0 on Android, workflows defined in Nuxeo Studio can be processed by users from the mobile application.
 
-To enable the processing of tasks from mobile, there is an additional step to this configuration, to define the layout of these tasks on mobile devices : 
+To enable the processing of tasks on mobile devices, the tasks mobile layout need to be defined.
 
-## Prerequesites
+## Prerequisites
 
-A task layout is defined Studio/Designer. For this how to, we assume that the workflow described through this tutorial [webui workflow tasks tutorial]({{page space='STUDIO' page='web-ui-workflow-tasks'}}) is created :
+Before you start, please follow this [how-to]({{page version='' space='nxdoc' page='web-ui-workflow-tasks'}}) to create a complete workflow.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Mobile/mobile_workflows_WebUI_start
@@ -34,39 +34,15 @@ A task layout is defined Studio/Designer. For this how to, we assume that the wo
 --}}
 ![mobile_workflows_WebUI_start](nx_asset://bf4f6004-b61e-4e48-9042-21451f163579 ?w=400)
 
-## Layout Format
+## Define the Task Layout
 
-The format of the layout is simply a JSON object with the list of task fields to display and properties.
+The format of the layout is a JSON object with the list of task fields and properties to display.
 
-The default layout looks like:
-
-```json
-{
-  "name": "task id",
-  "layout": [
-    {
-      "metadata": [
-        {
-          "label": "label name",
-          "field": "studio configured field",
-          "type": "cf available fields...",
-          "properties": {
-            "property1": "value",
-            "etc."
-          }
-        }
-      ]
-    }
-  ]
-}
-```
-The list of types is detailed below with an example. 
- 
-
-## Steps
-
-### Add a JSON resource
-In the **Resources** tab of the Designer, tab, click on the workflow and click on “create” to add an empty file with the name of the related task and the json format :
+On the Studio Designer side:
+1. Go to **Resources** tab
+1. Under **Workflow** section, go to `contractvalidation`
+1. click on **CREATE**</br>
+    A pop-up window appears, select an **Empty File** with the name of the related task and the JSON format.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Mobile/HOW_TO_workflows_studio_create_json
@@ -76,10 +52,12 @@ In the **Resources** tab of the Designer, tab, click on the workflow and click o
 ![HOW_TO_workflows_studio_create_json](nx_asset://ae86da20-cd15-4327-b2b6-a89b4c081f48 ?w=400)
 
 
+{{#> callout type='note' }}
+The name of this file should match the filename of the `.html` task file.
+{{/callout}}
 
-Note that the name of this file should match the task .html file name.
+Add the following content to this file to allow selecting the contract type in the task:
 
-Add the following content to this file to enable the task to display the directory selector : 
 ```json
 {
   "name": "nuxeo-task879",
@@ -96,7 +74,6 @@ Add the following content to this file to enable the task to display the directo
             "placeholder": "Select the contract type...",
             "directoryName": "type",
             "type":"select"
-            
           }
         }
       ]
@@ -105,14 +82,28 @@ Add the following content to this file to enable the task to display the directo
 }
 ```
 
-Save then deploy the package.
+Save and deploy your package.
 
-### Test your configuration on mobile
-Open Nuxeo Mobile app and set your local url. (can be found on ip tools according to your OS. ex : 172.16.32.75:8080)
+## Test Your Configuration
 
-Login as administrator ; Assuming you created a document of type “contract” (again, the previous tutorial should be completed), go to this document on mobile and click on the overflow button > start process.
+Open your Nuxeo Mobile application and set your local URL.</br>
+It can be found on IP tools according to your OS, ex: `http://172.16.32.75:8080`.
 
-A task is affected to the Administrator user. When opening this task, it should look likes this :
+{{#> callout type='warning' }}
+it will work only on Android as iOS will block any http connection except localhost. For iOS, there are third party tools such as https://serveo.net/ and https://ngrok.com/ to easily have a https server.
+{{/callout}}
+
+On your Nuxeo Platform instance:
+1. Create a document type Contract
+1. Start a workflow contractValidation
+1. Assign the review to Administrator.
+
+Once it's done, on your mobile application:
+1. Log in as `Administrator`</br>
+    On the first page you can see your pending tasks.
+1. Go to your task on the contract document   and click on the overflow button > **Start Process**.
+
+A task is assigned to the Administrator. When opening this task, it should look like this:
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Mobile/HOW_TO_workflows_task_result
@@ -121,74 +112,9 @@ A task is affected to the Administrator user. When opening this task, it should 
 --}}
 ![HOW_TO_workflows_task_result](nx_asset://5c41d39e-45bd-4272-aa46-58113d4dd1f6 ?w=500)
 
-## Properties list 
+## Task Layout Example
 
-Properties can be added depending on the task type :
-
-#### For every tasks type
-```json
-“readonly”:[true/false]
-```
-Used to display informations without letting the user change its value.
-
-
-
-```json
-“required” : [true, false] 
-```
-the “required” properties makes the task label appended with an asterisk (*) and requires this field to be filled for the task to be completed.
-
-
-
-#### For any of tasks user, group, usergroup, directory, document
-
-```json
-“multivalued” : [true, false] 
-```
-If set to true, the user can choose more than one document, user or value
-
-
-
-```json
-“selectedTitle”: string
-```
-Allows to define the selection screen title
-
-
-
-```json
-“type” : [suggest, suggestAll, select]
-```
-- For a simple selection (without search capabilities) the “select” type will make this component a selection switch.
-- suggest :  Alllows to search a user, group, etc.
-- suggestAll : Same as suggest but initially displays the whole set of entries.
-
-```json
-“suggestionPlaceholder”: string
-```
-Enable to customize the placeholder visible in the search bar
-
-
-
-#### For directory type
-```json
-“directoryName” : string
-```
-Define target directory
-
-
-
-```json
-“type” : [suggest, suggestAll]
-```
-- suggest :  Alllows to search any of the available values but without displaying the set of entries.
-- suggestAll : Same as suggest but initially displays the whole set of entries.
-
-
-
-## Exhaustive task layout example
-
-The following json :
+Here is an example of an exhaustive task layout.
 
 ```json
 {
@@ -242,7 +168,7 @@ The following json :
                        "multivalued": true,
                        "required": true,
                        "placeholder": "Select reviewers",
-                       "type": "suggestAll"
+                       "type": "suggest"
                    }
                },
                {
@@ -253,7 +179,7 @@ The following json :
                        "multivalued": true,
                        "required": true,
                        "placeholder": "Select reviewers groups",
-                       "type": "suggestAll"
+                       "type": "suggest"
                    }
                },
                {
@@ -264,7 +190,7 @@ The following json :
                        "multivalued": true,
                        "required": true,
                        "placeholder": "Select reviewers groups",
-                       "type": "suggestAll"
+                       "type": "suggest"
                    }
                },
                {
@@ -311,14 +237,13 @@ The following json :
 
 ```
 
+For development purposes, you can directly edit the JSON files on your Nuxeo Server. The _task_ layout is retrieved each time you view a document.
 
-
-For development purposes, you can directly edit the JSON files on your Nuxeo Server. The "task" layout is retrieved each time you view a document.
-
-
+<!--
 ## Limitations
 
 To be completed
+-->
 
 * * *
 
