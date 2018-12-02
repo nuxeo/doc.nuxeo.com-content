@@ -252,12 +252,10 @@ function run(input, params) {
 
 &nbsp;
 
-## Google Vision API Limitations
+## Google Vision and AWS Rekognition API Limitations
 
-The API has some known and documented [best practices](https://cloud.google.com/vision/docs/best-practices) and [limitations](https://cloud.google.com/vision/limits) you should be aware of. For example (as of December 2016):
+* Google Vision API has some known and documented [limitations](https://cloud.google.com/vision/docs/supported-files) you should be aware of. And should also regularly check Google Vision API documentation for changes. For example, at the time the API was first released, the maximum size for an image was 4MB. As of December 2018 it is now 20MB. Also, the first version did no support TIFF, it supports it as of December 2018, etc.
 
-*   There is limitation to the size of the image you send to the API: "Image files sent to the Google Cloud Vision API should not exceed 4 MB".&nbsp;There also is a limitation when you send a list of images (max. 8MB). This is an important information to handle before requesting data. And this is why, if you look at the original chain, it actually takes the &ldquo;Medium&rdquo; conversion, which is a JPEG we can assume is always smaller than 4MB. You also should read the limitations in terms of maximum number of images/second, etc.
-*   Not all image formats are handled. TIFF for example is not handled.
-*   Amazon Rekognition doesn't provide text-recognition services (OCR)
+* Amazon Rekognition doesn't provide text-recognition services (OCR)
 
-Also, as it is a cloud service, these limitations will surely evolve, change, maybe depending on a subscription, etc.
+Also, as these are cloud services, these limitations evolve, change, maybe depending on a subscription, etc.
