@@ -146,15 +146,18 @@ To install the Nuxeo Vision Package, you have several options:
 
 ### Google Vision Configuration
 - Configure a [Google service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount)
-- As of march 2<sup>nd</sup>, 2016, billing must be activated in your google account in order to use the Vision API
+- Google Cloud Computing invoicing changes form time to time: it is likely that you'll need to activate billing on your account.
 - You can generate either an API Key or a Service Account Key (saved as a JSON file)
-- If you created a Service Account Key, install it on your server and edit nuxeo.conf to add the full path to the file:
-```
-org.nuxeo.vision.google.credential=[path_to_credentials_goes_here]
-```
+
+**IMPORTANT**: It is a common Security Best practice to use and API key, we recommand avoiding using a service account.
+
 - If you generated an API key, use the `org.nuxeo.vision.google.key` parameter:
 ```
 org.nuxeo.vision.google.key=[your_api_key_goes_here]
+```
+- If you created a Service Account Key, install it on your server and edit nuxeo.conf to add the full path to the file:
+```
+org.nuxeo.vision.google.credential=[path_to_credentials_goes_here]
 ```
 
 See [https://cloud.google.com/vision/](https://cloud.google.com/vision/) for more information.
@@ -176,7 +179,7 @@ By default, the Computer Vision Service is called every time the main binary fil
 
 ![]({{file name='Google-Cloud-Vision-Screenshot-Church.png'}} ?w=500,border=true)
 
-For videos, the platform uses the images of the storyboard.
+For videos, the platform sends the images of the storyboard to the cloud service.
 
 ![]({{file name='Google-Cloud-Vision-Video-WebUI.png'}} ?w=500,border=true)
 
@@ -215,11 +218,12 @@ The default behavior can also be completely disabled with the following contribu
 
 ## Core Implementation
 
-In order to enable you to build your own custom logic, the addon provides an automation operation, called `VisionOp`. This operation takes a blob or list of blobs as input and calls the Computer Vision service for each one. The list of all the available features can be found at [https://cloud.google.com/vision/reference/rest/v1/images/annotate#Type](https://cloud.google.com/vision/reference/rest/v1/images/annotate#Type).
+#### `VisionOp` operation
+In order to enable you to build your own custom logic, the addon provides an automation operation, called `VisionOp`. This operation takes a blob or list of blobs as input and calls the Computer Vision service for each one.
 
 The result of the operation is stored in a context variable and is an object of type [VisionResponse](https://github.com/nuxeo/nuxeo-vision/blob/master/nuxeo-vision-core/src/main/java/org/nuxeo/vision/core/service/VisionResponse.java).
 
-Here&rsquo;s how the operation is used in the default chain:
+Here is how the operation is used in the default chain:
 
 ```js
 function run(input, params) {
@@ -231,31 +235,46 @@ function run(input, params) {
         maxResults: 5,
         outputVariable: 'annotations'
     });
+    
     var annotations = ctx.annotations;
-    if (annotations === undefined || annotations.length === 0) return;
+    if (annotations === undefined || annotations.length === 0) {
+        return;
+    }
     var textAndLabels = annotations[0];
     // build tag list
     var labels = textAndLabels.getClassificationLabels();
     if (labels !== undefined && labels !== null && labels.length > 0) {
         var tags = [];
         for (var i = 0; i < labels.length; i++) {
-            tags.push(labels[i].getText().replace(/\s/g, '+'));
+            var label = labels[i];
+            var tag = label.getText();
+            if (tag ===undefined || tag ===null) {
+                continue;
+            }
+            tags.push(tag.replace(/[^A-Z0-9]+/ig,'+'));
         }
-        input = Services.TagDocument(input, {
-            'tags': tags
-        });
+        input = Services.TagDocument(input, {'tags': tags});
     }
     input = Document.Save(input, {});
     return input;
 }
 ```
 
+#### Listeners and Events
+When using the _default_ implementation, Nuxeo Vision sends events once the processing is done:
+* After handing a picytire, it sends the `visionOnImageDone` event
+* After processing a video (actually, the video storyboard), it sends the `visionOnVideoDone` event
+
+Listening to these events is a good way to process your own business logic when it depends on the result of the tagging: you are then sure it was processed with no error. If an error occured during the call to the service, these events are not fired and server.lg will contain the error stack.
+
+These events are not sent if automatic processing had been disabled, and they are not sent by the `VisionOp` operation. If you change the behavior, you may want to send the events (this depends on your configuraiton)
+
 &nbsp;
 
 ## Google Vision and AWS Rekognition API Limitations
 
-* Google Vision API has some known and documented [limitations](https://cloud.google.com/vision/docs/supported-files) you should be aware of. And should also regularly check Google Vision API documentation for changes. For example, at the time the API was first released, the maximum size for an image was 4MB. As of December 2018 it is now 20MB. Also, the first version did no support TIFF, it supports it as of December 2018, etc.
+* Google Vision API has some known and documented [limitations](https://cloud.google.com/vision/docs/supported-files) you should be aware of. And should also regularly check Google Vision API documentation for changes. For example, at the time the API was first released, TIFF was not supported. It supports it as of December 2018, etc.
 
-* Amazon Rekognition doesn't provide text-recognition services (OCR)
+* Amazon Rekognition doesn't provide text-recognition services (OCR). nuxeo-vision implements only _labels detection_ and _safe search_.
 
 Also, as these are cloud services, these limitations evolve, change, maybe depending on a subscription, etc.
