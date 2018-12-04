@@ -8,8 +8,7 @@ labels:
     - content-review-6-0
 is_overview: true
 notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
-    Documentation page used on Studio. Check with NOS team before deleting or moving.
+    Documentation page used by NOS and Marketing team. Check with them before deleting or moving.
 confluence:
     ajs-parent-page-id: ''
     ajs-parent-page-title: ''
