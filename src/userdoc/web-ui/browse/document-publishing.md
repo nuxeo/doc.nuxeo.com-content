@@ -49,11 +49,23 @@ However, comments are not kept from the workspace document.
 1. Optional: Create a version.
 1. Click **Publish**.
 
+{{#> callout type='info' }}
+
+Working with Renditions
+
+There are several renditions available for your publications. The list of renditions is configurable. If you select no rendition by selecting None in the list, it implies a publication of the document itself.
+
+Selecting Default rendition implies a format that depends of the document type, schemas and facets at the time of publication.
+
+{{/callout}}
+
 **To unpublish a document**:
 
 From the Publication tab of the document in the workspace, click **Unpublish** on  the publication you want to revert.
 
 To revert all the publication of this document, click **Unpublish All**.
+
+
 
 {{! Don't put anything here. }}
 
