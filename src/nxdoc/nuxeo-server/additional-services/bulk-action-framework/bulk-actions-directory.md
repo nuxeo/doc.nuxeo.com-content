@@ -26,7 +26,7 @@ Let's see some examples of bulk actions in use.
 
 ### SetPropertiesAction
 
-The following example shows how to use `setPropertiesAction` with java service:
+The following example shows how to use `setPropertiesAction` with Java Service:
 
 {{! multiexcerpt name='baf-set-properties-action-java-example'}}
 ```
@@ -68,11 +68,11 @@ curl -u Administrator:Administrator \
 
 ### CSVExportAction
 
-It exports requested documents as a CSV File which can be sorted and ziped.
+It exports requested documents as a CSV File which can be sorted and zipped.
 
 System properties are always exported as first columns, then all the properties from provided schemas and xpaths are exported if they can be found.
 
-The following example shows how to use `csvExportAction` with java service:
+The following example shows how to use `csvExportAction` with Java Service:
 
 {{! multiexcerpt name='baf-csv-export-action-java-example'}}
 ```
@@ -118,7 +118,7 @@ curl -u Administrator:Administrator \
 ```
 {{! /multiexcerpt}}
 
-And then get the status containing the url to the result
+And then get the status containing the URL to the result:
 
 ```
 curl -u Administrator:Administrator \
