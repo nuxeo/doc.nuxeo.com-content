@@ -2,13 +2,13 @@
 title: Nuxeo Vision
 review:
     comment: ''
-    date: '2017-07-10'
+    date: '2018-12-04'
     status: ok
 labels:
     - lts2016-ok
     - link-update
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
     - lmcintyre
 toc: true
 confluence:
@@ -141,31 +141,37 @@ Watch the related courses on Nuxeo University
 
 To install the Nuxeo Vision Package, you have several options:
 - From the Nuxeo Marketplace: install [the Nuxeo Vision package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision).
-- From the Nuxeo server web UI "Admin / Update Center / Packages from Nuxeo Marketplace"
-- From the command line: `nuxeoctl mp-install nuxeo-vision`
+- From the command line: `nuxeoctl mp-install nuxeo-vision`.
+- From the Admin Center on JSF UI, go to **Admin** > **Update Center** > **Packages from Nuxeo Marketplace**.
+
 
 ### Google Vision Configuration
 - Configure a [Google service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount)
-- Google Cloud Computing invoicing changes form time to time: it is likely that you'll need to activate billing on your account.
+- Google Cloud Computing invoicing changes from time to time: it is likely that you'll need to activate billing on your account.
 - You can generate either an API Key or a Service Account Key (saved as a JSON file)
 
-**IMPORTANT**: It is a common Security Best practice to use and API key, we recommand avoiding using a service account.
+{{#> callout type='warning'}}
+
+It is a common Security best practice to use an API key, we recommend avoiding using a service account.
+
+{{/callout}}
 
 - If you generated an API key, use the `org.nuxeo.vision.google.key` parameter:
 ```
 org.nuxeo.vision.google.key=[your_api_key_goes_here]
 ```
-- If you created a Service Account Key, install it on your server and edit nuxeo.conf to add the full path to the file:
+- If you created a Service Account Key, install it on your server and edit your `nuxeo.conf` to add the full path to the file:
 ```
 org.nuxeo.vision.google.credential=[path_to_credentials_goes_here]
 ```
 
-See [https://cloud.google.com/vision/](https://cloud.google.com/vision/) for more information.
+See [Google Documentation about Vision](https://cloud.google.com/vision/) for more information.
 
 ### AWS Rekognition Configuration
+
 - Configure a key/secret pair in the [AWS console](http://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html)
 - Check the [FAQ](https://aws.amazon.com/rekognition/faqs/) to see in which regions the API is available
-- Edit nuxeo.conf with the suitable information
+- Edit `nuxeo.conf` with the suitable information:
 ```
 org.nuxeo.vision.default.provider=aws
 org.nuxeo.vision.aws.region=
@@ -218,7 +224,8 @@ The default behavior can also be completely disabled with the following contribu
 
 ## Core Implementation
 
-#### `VisionOp` operation
+### `VisionOp` Operation
+
 In order to enable you to build your own custom logic, the addon provides an automation operation, called `VisionOp`. This operation takes a blob or list of blobs as input and calls the Computer Vision service for each one.
 
 The result of the operation is stored in a context variable and is an object of type [VisionResponse](https://github.com/nuxeo/nuxeo-vision/blob/master/nuxeo-vision-core/src/main/java/org/nuxeo/vision/core/service/VisionResponse.java).
@@ -260,21 +267,22 @@ function run(input, params) {
 }
 ```
 
-#### Listeners and Events
+### Listeners and Events
+
 When using the _default_ implementation, Nuxeo Vision sends events once the processing is done:
-* After handing a picytire, it sends the `visionOnImageDone` event
-* After processing a video (actually, the video storyboard), it sends the `visionOnVideoDone` event
+- After handing a picture, it sends the `visionOnImageDone` event
+- After processing a video (actually, the video storyboard), it sends the `visionOnVideoDone` event
 
-Listening to these events is a good way to process your own business logic when it depends on the result of the tagging: you are then sure it was processed with no error. If an error occured during the call to the service, these events are not fired and server.lg will contain the error stack.
+Listening to these events is a good way to process your own business logic when it depends on the result of the tagging: you are then sure it was processed with no error. If an error occurred during the call to the service, these events are not fired and `server.log` will contain the error stack.
 
-These events are not sent if automatic processing had been disabled, and they are not sent by the `VisionOp` operation. If you change the behavior, you may want to send the events (this depends on your configuraiton)
-
-&nbsp;
+These events are not sent if automatic processing had been disabled, and they are not sent by the `VisionOp` operation. If you change the behavior, you may want to send the events (this depends on your configuration)
 
 ## Google Vision and AWS Rekognition API Limitations
 
-* Google Vision API has some known and documented [limitations](https://cloud.google.com/vision/docs/supported-files) you should be aware of. And should also regularly check Google Vision API documentation for changes. For example, at the time the API was first released, TIFF was not supported. It supports it as of December 2018, etc.
+- Google Vision API has some known and documented [limitations](https://cloud.google.com/vision/docs/supported-files) you should be aware of.
 
-* Amazon Rekognition doesn't provide text-recognition services (OCR). nuxeo-vision implements only _labels detection_ and _safe search_.
+- You should also regularly check [Google Vision API documentation](https://cloud.google.com/vision/docs/) for changes. For example, at the time the API was first released, TIFF was not supported. It supports it as of December 2018, etc.
+
+- Amazon Rekognition doesn't provide text-recognition services (OCR). Nuxeo Vision implements only _labels detection_ and _safe search_.
 
 Also, as these are cloud services, these limitations evolve, change, maybe depending on a subscription, etc.
