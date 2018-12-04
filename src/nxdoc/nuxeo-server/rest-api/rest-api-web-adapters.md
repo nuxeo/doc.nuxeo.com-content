@@ -228,6 +228,21 @@ Default adapters provided by default.
 
 <table class="hover">
   <tr>
+    <td class="small-2">**@comment**</td>
+    <td>Returns comments corresponding to the target Document</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      ```
+      /api/v1/id/{docId}/@comment
+      ```
+    </td>
+  </tr>
+</table>
+
+<table class="hover">
+  <tr>
     <td class="small-2">**@convert**</td>
     <td>
       Returns the conversion of a blob<br />
