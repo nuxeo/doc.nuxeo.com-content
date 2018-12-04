@@ -174,9 +174,9 @@ See [Google Documentation about Vision](https://cloud.google.com/vision/) for mo
 - Edit `nuxeo.conf` with the suitable information:
 ```
 org.nuxeo.vision.default.provider=aws
-org.nuxeo.vision.aws.region=
-org.nuxeo.vision.aws.key=
-org.nuxeo.vision.aws.secret=
+nuxeo.aws.region=
+nuxeo.aws.accessKeyId=
+nuxeo.aws.secretKey=
 ```
 
 ## Functional Overview
