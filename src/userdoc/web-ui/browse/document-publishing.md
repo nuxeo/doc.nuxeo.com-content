@@ -11,11 +11,9 @@ labels:
 tree_item_index: 1100
 
 ---
-
 ## Working with Sections
 
 When a document is ready for distribution, you must publish it in a section. Sections are spaces dedicated to the distribution of documents to a wider audience.
-
 
 Sections are spaces managed like workspaces. No section is created by default, except the sections root. The main difference with workspaces is the fact that documents can't be edited in sections.
 
@@ -23,7 +21,7 @@ You are free to organize your section to fit your project or your needs the best
 
 As in workspaces, access to sections is determined by permissions.
 
-You can also define any document type as publish space in the Definition of the document type in the Studio Modeler, by checking **Document is a publish space**.
+You can define any document type as publish space by checking **Document is a publish space**, in the Definition screen of your custom document type in Studio Modeler.
 ![]({{file name='publish-space-studio.png'}} ?w=500,border=true)
 
 ## Publishing Documents
@@ -42,10 +40,10 @@ When you publish a document, the following elements are kept from the workspace 
 However, comments are not kept from the workspace document.
 
 **To publish a document**:
-1. From the View of the document in the workspace, click ![]({{file name='more-three-dots.png'}} ?w=30,border=true) and select **Publish Document**.
+1. From the View of the document in the workspace, click![]({{file name='more-three-dots.png'}} ?w=30)in the top action toolbar and select **Publish Document**.
   ![]({{file name='publication-popup.png'}} ?w=500,border=true)
-1. Enter the section you want to publish the document in.
-1. Select the rendition that should be published, typically no rendition (same document format as in the workspace) or a PDF version of the document.
+1. Enter the section where you want to publish the document.
+1. Select the rendition that should be published, for example *None* (same document format as in the workspace) or a PDF version of the document.
 1. Optional: Create a version.
 1. Click **Publish**.
 
@@ -53,7 +51,7 @@ However, comments are not kept from the workspace document.
 
 Working with Renditions
 
-There are several renditions available for your publications. The list of renditions is configurable. If you select no rendition by selecting None in the list, it implies a publication of the document itself.
+There are several renditions available for your publications. This list of renditions is configurable. If you select no rendition by selecting None in the list, it implies a publication of the document itself.
 
 Selecting Default rendition implies a format that depends of the document type, schemas and facets at the time of publication.
 
@@ -61,14 +59,11 @@ Selecting Default rendition implies a format that depends of the document type, 
 
 **To unpublish a document**:
 
-From the Publication tab of the document in the workspace, click **Unpublish** on  the publication you want to revert.
+From the Publication tab of the document in the workspace, click **Unpublish** on the publication you want to revert.
 
 To revert all the publication of this document, click **Unpublish All**.
 
-
-
-{{! Don't put anything here. }}
-
+* * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
