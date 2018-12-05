@@ -115,6 +115,22 @@ This page non exhaustively lists frequently asked questions about Nuxeo Drive
 
 {{! /excerpt}}
 
+## What are the prerequisite Nuxeo versions/hotfixes when using a Drive client version?
+
+In order to be fully compatible with Nuxeo Drive, the  minimum required version of the `nuxeo-drive` server addon is:
+
+  - 7.10: 1.5.7
+  - 8.10: 1.6.6
+  - 9.10: 1.7.3
+  - 10.10: 1.8.1
+
+And the minimum required installed Hot-Fix (HF) is:
+
+| Client | 7.10 | 8.10 | 9.10 | 10.10
+| --- | --- | --- | --- | --- |
+3.x | HF43 | HF33 | HF12 | HF0
+4.0.x | HF47 | HF39 | HF22 | HF0
+
 ## How to Configure the Synchronization Delay
 
 Since the version `1.3.1216` of Nuxeo Drive client, the synchronization delay is 30 seconds (5 seconds in the previous releases). There are three ways to change this value:
