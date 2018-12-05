@@ -72,6 +72,13 @@ It exports requested documents as a CSV File which can be sorted and zipped.
 
 System properties are always exported as first columns, then all the properties from provided schemas and xpaths are exported if they can be found.
 
+For exported multi-valued properties, the values are separated from each other with the pipe `|` character.
+
+```
+... ,dc:contributors, ...
+... , user1 | user2 , ...
+```
+
 The following example shows how to use `csvExportAction` with Java Service:
 
 {{! multiexcerpt name='baf-csv-export-action-java-example'}}
