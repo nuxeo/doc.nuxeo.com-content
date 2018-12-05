@@ -462,18 +462,18 @@ history:
         date: '2010-06-22 12:11'
         message: ''
         version: '1'
-notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
+notes: Documentation page used on Nuxeo Studio and by the Marketing team. Check with them before deleting or moving.
 
 ---
 {{! multiexcerpt name='AutomationIntroduction'}}
 
 **Content Automation** is a Nuxeo service that exposes common actions you do on a Nuxeo application as atomic operations. You can then assemble them to create complex business rules and logic, without writing any Java code. In other words, Content Automation provides a high level API over Nuxeo services &mdash; an API made of operations that can be assembled in more complex automation chains. These operations and chains can be called [locally in Java]({{page page='calling-automation-from-java'}}), or remotely as being exposed via the [REST API]({{page page='command-endpoint'}}). Examples of business logic that you can implement with Automation are:
 
-*   My documents should have a topic field;
-*   Documents should be moved to another department when they are validated;
-*   Procedures should become obsolete after one year;
-*   Only the group &ldquo;validators&rdquo; can see it while the document is not published;
-*   ...
+- My documents should have a topic field;
+- Documents should be moved to another department when they are validated;
+- Procedures should become obsolete after one year;
+- Only the group &ldquo;validators&rdquo; can see it while the document is not published;
+- ...
 
 You can also [create new atomic operations]({{page page='contributing-an-operation'}}) (i.e. write a Java class that defines an operation) and contribute them, in addition to the set of built-in operations.
 
@@ -493,10 +493,10 @@ The operations an user can invoke usually deal with the document repository (lik
 
 The main elements that compose an operation are:
 
-*   The category, useful for finding the operation in the Studio editor. All operations are grouped in categories depending on what they do (ex: document related, services, blob related, UI related ...)
-*   The input: An operation has an input (provided by the cause)
-*   The parameters: An operation may have zero or more parameters (used to parametrize the way an operation is behaving)
-*   The output: An operation has an output (that can be used by the next operation in the chain as the input)
+- The category, useful for finding the operation in the Studio editor. All operations are grouped in categories depending on what they do (ex: document related, services, blob related, UI related ...)
+- The input: An operation has an input (provided by the cause)
+- The parameters: An operation may have zero or more parameters (used to parametrize the way an operation is behaving)
+- The output: An operation has an output (that can be used by the next operation in the chain as the input)
 
 ### The Operation Input
 
@@ -504,8 +504,8 @@ The operation input can be a Document or a Blob (i.e. a file).
 
 The execution context provides the input, which can come from:
 
-*   The user action in the case of a single operation or when it is the first operation in the chain;
-*   The output of the previous operation when executing a chain.
+- The user action in the case of a single operation or when it is the first operation in the chain;
+- The output of the previous operation when executing a chain.
 
 There are some special operations that don't need any input. For example you may want to run a query in the repository. In this case, you don't need an input for your query operation. Thus, operations can accept **void** as an input. To pass a void input to an operation, just use a null value as the input. If an operation doesn't expect any input (i.e, void input) and an input is given, it will be ignored.
 
@@ -523,19 +523,19 @@ Any parameter value can be expressed as a string. The string will be converted i
 
 There are several types of predefined parameters:
 
-*   **string**: Any string
-*   **boolean**: A boolean parameter
-*   **integer**: An integer number
-*   **float**: A floating point number
-*   **date**: A date (in W3C format if it is specified as a string)
-*   **resource**: A URL to a resource
-*   **properties**: A Java properties content (key=value pairs separated by new lines)
-*   **document**: A Nuxeo Document (use its absolute PATH or its UID when expressing it as a string)
-*   **blob**: A Nuxeo blob (the raw content of the blob in the case of a REST invocation)
-*   **documents**: A list of documents
-*   **bloblist**: A list of blobs
-*   Any other object that is convertible from a string: you can register new object converters trough the [`adapters`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--adapters) extension point of the [`org.nuxeo.ecm.core.operation.OperationServiceComponent`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.operation.OperationServiceComponent) component
-*   **An expression**: This represents a MVEL expression (which is compatible with basic EL expressions) that can output dynamic values. When using expressions you must prepend it with the prefix `expr:` or between `@{ }`.
+- **string**: Any string
+- **boolean**: A boolean parameter
+- **integer**: An integer number
+- **float**: A floating point number
+- **date**: A date (in W3C format if it is specified as a string)
+- **resource**: A URL to a resource
+- **properties**: A Java properties content (key=value pairs separated by new lines)
+- **document**: A Nuxeo Document (use its absolute PATH or its UID when expressing it as a string)
+- **blob**: A Nuxeo blob (the raw content of the blob in the case of a REST invocation)
+- **documents**: A list of documents
+- **bloblist**: A list of blobs
+- Any other object that is convertible from a string: you can register new object converters trough the [`adapters`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.operation.OperationServiceComponent--adapters) extension point of the [`org.nuxeo.ecm.core.operation.OperationServiceComponent`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.operation.OperationServiceComponent) component
+- **An expression**: This represents a MVEL expression (which is compatible with basic EL expressions) that can output dynamic values. When using expressions you must prepend it with the prefix `expr:` or between `@{ }`.
     Example:
 
     ```
