@@ -2,7 +2,7 @@
 title: Microsoft SQL Server
 review:
     comment: ''
-    date: '2018-11-20'
+    date: '2017-12-15'
     status: ok
 labels:
     - lts2016-ok
@@ -292,8 +292,8 @@ SELECT collation_name FROM sys.databases WHERE name = 'master'
 
 For instance the following collations have been checked to work correctly:
 
-*   `SQL_Latin1_General_CP1_CI_AS`
-*   `French_CI_AS`
+- `SQL_Latin1_General_CP1_CI_AS`
+- `French_CI_AS`
 
 ## Database Collation
 
@@ -384,7 +384,9 @@ Cannot use a CONTAINS or FREETEXT predicate on table or indexed view 'fulltext' 
 
 ```
 
-{{/panel}}{{#> panel type='code' heading='SQL Server Msg 7616'}}
+{{/panel}}
+
+{{#> panel type='code' heading='SQL Server Msg 7616'}}
 
 ```
 Full-Text Search is not enabled for the current database. Use sp_fulltext_database to enable full-text search for the database. The functionality to disable and enable full-text search for a database is deprecated. Please change your application.
@@ -402,10 +404,12 @@ Impossible d'utiliser le prédicat CONTAINS ou FREETEXT sur table ou vue indexé
 
 ```
 
-{{/panel}}{{#> panel type='code' heading='SQL Server Msg 7616'}}
+{{/panel}}
+
+{{#> panel type='code' heading='SQL Server Msg 7616'}}
 
 ```
-La recherche en texte intégral n'est pas activée dans la base de données en cours. Utilisez sp_fulltext_database pour l'activer sur cette base de données. La fonctionnalité de désactivation et d'activation d'une recherche en texte intégral pour une base de données est désapprouvée. Modifiez votre application.
+La recherche en texte intégral n'est pas activée dans la base de données en cours. Utilisez `sp_fulltext_database` pour l'activer sur cette base de données. La fonctionnalité de désactivation et d'activation d'une recherche en texte intégral pour une base de données est désapprouvée. Modifiez votre application.
 
 ```
 
@@ -454,11 +458,11 @@ EXEC dbo.nx_vacuum_read_acls;
 
 You can also exclude the following tables from your backup:
 
--  `aclr`
--   `aclr_modified`
--   `aclr_permissions`
--   `aclr_user_map`
--   `aclr_user`
+- `aclr`
+- `aclr_modified`
+- `aclr_permissions`
+- `aclr_user_map`
+- `aclr_user`
 
 ### Deadlock and Lock Escalation
 
@@ -477,12 +481,6 @@ Then you can try to disable the lock escalation on the table impacted by deadloc
 ALTER TABLE mytable SET (LOCK_ESCALATION=DISABLE)
 ```
 
-### Clustered Index
-
-SQL Server uses a clustered index to defined how data is organized physically on disk. Before Nuxeo 5.7, we didn't define a clustered index, so the primary key is used, however this primary key is a random UUID which means that data keeps getting reorganized on disk on practically every insert or delete.
-
-For Nuxeo 5.7 instances and above, we define a clustered index. For instances created before, you can run migration scripts to apply these index. For more information,  see [NXP-10934](https://jira.nuxeo.com/browse/NXP-10934), you can find the scripts in the attachments.
-
 ### Indexes Maintenance
 
 If the indexes are fragmented then the query response will be slow and the data storage will require more disk space. Microsoft recommends reorganizing an index with a fragmentation between 5% and 30%, and rebuilding an index with a fragmentation of more than 30%. Database administrators should always make sure that fragmentation of indexes is handled on time.
@@ -493,11 +491,11 @@ Microsoft SQL Server is a good database however it has a few unfortunate hiccups
 
 Here are some limitations in the context of the Nuxeo Platform:
 
-*   Its [snapshot isolation](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server) level is insufficiently isolated and not comparable to other MVCC databases, and may sometimes cause errors during concurrent writes.
-*   It is [infamous](http://stackoverflow.com/questions/872731/sql-server-lock-escalation-issue#872808) for its lock escalation problems that cause no end of troubles and is a very poor locking design in the first place ([MS184286](https://msdn.microsoft.com/en-us/library/ms184286.aspx)).
-*   Only one full-text index is allowed per table ([MS187317](http://technet.microsoft.com/en-us/library/ms187317%28v=sql.100%29.aspx)).
-*   Full-text indexing cannot be configured to be done synchronously with transaction commits.
-*   It does not support circular ON CASCADE DELETE constraints ([KB321843](http://support.microsoft.com/kb/321843)).
+- Its [snapshot isolation](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server) level is insufficiently isolated and not comparable to other MVCC databases, and may sometimes cause errors during concurrent writes.
+- It is [infamous](http://stackoverflow.com/questions/872731/sql-server-lock-escalation-issue#872808) for its lock escalation problems that cause no end of troubles and is a very poor locking design in the first place ([MS184286](https://msdn.microsoft.com/en-us/library/ms184286.aspx)).
+- Only one full-text index is allowed per table ([MS187317](http://technet.microsoft.com/en-us/library/ms187317%28v=sql.100%29.aspx)).
+- Full-text indexing cannot be configured to be done synchronously with transaction commits.
+- It does not support circular ON CASCADE DELETE constraints ([KB321843](http://support.microsoft.com/kb/321843)).
 
 * * *
 
