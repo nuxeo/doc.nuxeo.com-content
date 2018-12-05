@@ -52,6 +52,18 @@ Document title
 
 </td></tr><tr><td colspan="1">
 
+Document id
+
+</td><td colspan="1">
+
+`document.uuid`
+
+</td><td colspan="1">
+
+#{currentDocument.id}
+
+</td></tr><tr><td colspan="1">
+
 Document type
 
 </td><td colspan="1">
