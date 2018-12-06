@@ -1,8 +1,8 @@
 ---
-title: Nuxeo Server 10.2 Fast Track Release Notes
+title: Nuxeo Server 10.3 Fast Track Release Notes
 review:
    comment: ''
-   date: '2018-07-13'
+   date: '2018-12-06'
    status: ok
 labels:
     - lts2017-ok
@@ -738,6 +738,8 @@ On 10.2, several relevante bugfixes were included to Web UI:
 - [NXP-25094](https://jira.nuxeo.com/browse/NXP-25094) Makes bulk download notification fixed with no intermittency.
 - [NXP-24832](https://jira.nuxeo.com/browse/NXP-24832) Ordered folder support is extended to document types which inherit from OrderedFolder type.
 - [NXP-22555](https://jira.nuxeo.com/browse/NXP-22555) `<nuxeo-document-distribution-chart>` not restricted to default-domain anymore..
+
+#### Bugfixes {{since '10.3'}}
 
 ### Nuxeo Elements {{> anchor 'nuxeo-elements'}}
 
