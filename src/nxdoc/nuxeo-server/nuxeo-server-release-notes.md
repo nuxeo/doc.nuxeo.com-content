@@ -739,7 +739,139 @@ On 10.2, several relevante bugfixes were included to Web UI:
 - [NXP-24832](https://jira.nuxeo.com/browse/NXP-24832) Ordered folder support is extended to document types which inherit from OrderedFolder type.
 - [NXP-22555](https://jira.nuxeo.com/browse/NXP-22555) `<nuxeo-document-distribution-chart>` not restricted to default-domain anymore..
 
-#### Bugfixes {{since '10.3'}}
+#### Document Publishing {{since '10.3'}}
+
+Added document publishing capabilities.
+[NXP-24426](https://jira.nuxeo.com/browse/NXP-24426) Publish document on a publishable space.
+[NXP-25687](https://jira.nuxeo.com/browse/NXP-25687) New layout to publications with information on original document.
+[NXP-24434](https://jira.nuxeo.com/browse/NXP-24434) Allows default rendition to be configured as a contribution.
+[NXP-24428](https://jira.nuxeo.com/browse/NXP-24428) List document own publishing items.
+[NXP-24435](https://jira.nuxeo.com/browse/NXP-24435) Republish the newer and latest version.
+[NXP-24432](https://jira.nuxeo.com/browse/NXP-24432) Unpublish documents from original one.
+[NXP-24427](https://jira.nuxeo.com/browse/NXP-24427) RAbility to publish a set of documents in bulk.
+
+#### Comments on Documents {{since '10.3'}}
+
+Allows comments on commentable documents.
+[NXP-25535](https://jira.nuxeo.com/browse/NXP-25537) Added comments and replies on commentable document layout.
+[NXP-25536](https://jira.nuxeo.com/browse/NXP-25536) Allows creation of new comment or reply.
+[NXP-25537](https://jira.nuxeo.com/browse/NXP-25537) Deletion and edition of comments and replies.
+
+#### Machine Learning Suggestions on document creation forms {{since '10.3'}}
+
+Integrates ML custom models suggestion in Web UI to provide predictions. (with `Nuxeo-AI-Core plugin`)
+[NXP-NXP-25565](https://jira.nuxeo.com/browse/NXP-26070) Suggestion integration on form inputs.
+[NXP-26070](https://jira.nuxeo.com/browse/NXP-26070) Suggestions working on multivalue input fields.
+
+#### Delegate and Reassign Tasks {{since '10.3'}}
+
+Migrated missing features from workflow tests to allow delegation and reassign of workflow tasks.
+[NXP-24997](https://jira.nuxeo.com/browse/NXP-24997) Migrated task reassign on workflows.
+[NXP-24998](https://jira.nuxeo.com/browse/NXP-24998) Migrated task delegation on workflows.
+
+#### CSV Export UI {{since '10.3'}}
+
+It exposes CSV export in the UI, allowing users to download a listing in CSV format.
+[NXP-25934](https://jira.nuxeo.com/browse/NXP-25934) Ability to export results and folderish content in CSV.
+
+#### User actions scalability {{since '10.3'}}
+
+Provides a solution for large number of user actions and small screens.
+[NXP-25146](https://jira.nuxeo.com/browse/NXP-25146) Added drop menu for secondary user actions.
+- Three slots, to which actions are contributed, were wrapped in a responsive menu: `DOCUMENT_ACTIONS`, `BLOB_ACTIONS` and `RESULTS_SELECTION_ACTIONS`.
+- Three css variables were added to control the width of these menus, respectively:
+`--nuxeo-browser-actions-menu-max-width`
+`--nuxeo-document-blob-actions-menu-max-width`
+`--nuxeo-results-selection-actions-menu-max-width`
+- These variables can be overridden in the themes.
+
+#### Document Comparison improvements {{since '10.3'}}
+
+Brings small improvements on Document Comparison UI/UX.
+[NXP-25941](https://jira.nuxeo.com/browse/NXP-25941) Leverage Arender difference capabilities on document comparison (Arender addon).
+
+#### Configuration service on Web UI {{since '10.3'}}
+
+Allowing a namespaced properties to configure Web UI.
+Properties can be marked as a list and if defined many times, values will be appended as comma separated values. You can override existing list property with the override attribute:
+```
+  <property name="nuxeo.list.value" list="true">foo</property>
+  <property name="nuxeo.list.value">bar</property>
+  <!-- nuxeo.list.value is now "foo,bar" -->
+  <property name="nuxeo.list.value" override="true">newValue</property>
+  <!-- nuxeo.list.value is now "newValue" -->
+```
+
+We then put properties namespaced with `org.nuxeo.web.ui` into the `Nuxeo.UI.config` javascript namespace that Web UI (and even standalone elements) can access and use them.
+
+[NXP-25678](https://jira.nuxeo.com/browse/NXP-25678) Added a configuration service to allow Web UI properties definition with a namespace.
+[NXP-25512](https://jira.nuxeo.com/browse/NXP-25512) Allows to override/extend fetch properties and enrichers used to browse a document.
+
+
+#### Performance audit system {{since '10.3'}}
+
+Added a performance audit system to measure key metrics.
+[NXP-25303](https://jira.nuxeo.com/browse/NXP-25303) Added performance [marks](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark) to key elements that can be displayed on the UI on demand.
+[NXP-25414](https://jira.nuxeo.com/browse/NXP-25414)
+As relevant metrics we identified those already collected by the devtools of most browsers:
+
+- dom content loaded
+- first contentful paint
+- first pain
+- on load
+
+Additionally, we’re including an experimental set of network metrics, which take all requests performed by the browser into account to compute:
+
+- finish time: time taken to complete all requests since PerformanceTiming.fetchStart
+- request count: the number of requests issued
+- transfer size
+- decoded body size
+
+However, some requests seem to be ignored and not included in the performance entries (https://developer.mozilla.org/en-US/docs/Web/API/Performance/getEntries) on Chrome, which renders this data incomplete in this browser. Furthermore, transfer size and decoded body size cannot be retrieved on Safari and Edge.
+
+We are also storing a set of custom performance marks and measurements, which are aligned with what we want to measure:
+
+- [mark] `nuxeo-app.ready`: marks the moment when the `nuxeo-app` element is ready
+- [mark] `nuxeo-app.page-changed`: marks the last moment where there was a page switch (not set when the first page is loaded, since there is not transition)
+- [mark] `nuxeo-app.page-loaded`: marks the moment where the last dom-change event was fired from within the current page, .i.e, the last moment in which there were changes in the page
+- [measurement] `<page-name>.dom-changed`: a measurement between the moment in which the last `dom-change` event is fired from within the current page and the last `page-change` mark (or PerformanceTiming.fetchStart if `undefined`) - this is mostly helpful for development and debugging purposes
+We added these metrics to the performance analyzer added in NXP-25303. You can try these out by running:
+
+```Nuxeo.Performance.report({networkStats: true});```
+
+#### Performance improvements {{since '10.3'}}
+
+Several actions to provide better performance.
+- [NXP-25385](https://jira.nuxeo.com/browse/NXP-25385) Largely improved caching strategy.
+- [NXP-24880](https://jira.nuxeo.com/browse/NXP-24880) Allows search initialisation to skip aggregation for large repositories.
+- [NXP-25320](https://jira.nuxeo.com/browse/NXP-25320) Aggregation navigation on listing scroll removed by default.
+- [NXP-25302](https://jira.nuxeo.com/browse/NXP-25302) Performance improvements on grid element.
+
+
+
+#### UX improvements {{since '10.3'}}
+
+Continuous effort to improve UI/UX.
+
+- [NXP-25104](https://jira.nuxeo.com/browse/NXP-25104) New improved document layout resolving selection actions ambiguity and improving space usage.
+- [NXP-22453](https://jira.nuxeo.com/browse/NXP-22453) Brings direct links to document tabs and subpages.
+- [NXP-25638](https://jira.nuxeo.com/browse/NXP-25638) Added replace file action to improve preview space.
+- [NXP-25630](https://jira.nuxeo.com/browse/NXP-25630) Improved drop zone ambiguity with live connect.
+- [NXP-25352](https://jira.nuxeo.com/browse/NXP-25352) Several improvements on the drop file element.
+- [NXP-20604](https://jira.nuxeo.com/browse/NXP-20604) On granting permission is now possible to add multiple users or groups.
+- [NXP-25325](https://jira.nuxeo.com/browse/NXP-25325) With auto-search off, pressing enter allows to quickly submit the search.
+- [NXP-25740](https://jira.nuxeo.com/browse/NXP-25740) Picture subtype now inherit Picture view layout.
+- [NXP-25637](https://jira.nuxeo.com/browse/NXP-25637) Improved listing element layout and composition.
+  -- Listing elements (`nuxeo-data-grid`, `nuxeo-data-list`, `nuxeo-data-table` and `nuxeo-justified-grid`) no longer display sorting options nor quick filters (with the exception for `nuxeo-data-table`, which has sorting built-in).
+  -- `nuxeo-results` will now displays sorting and filtering options unless the selected listing element handles sorting and/or filtering by itself, by having `handlesSorting` and/or `handlesFiltering` set to true.
+  -- Consequently, the properties `displaySort`, `sortOptions`, `sortLabel`, `sortSelected` and `displayQuickFilters` were moved from the listing elements to nuxeo-results in Web UI.
+  -- However, to keep compatibility with the previous approach, by still allowing these attributes to be set on the listing elements (a.k.a. views), although we do no encourage it.
+- [NXP-25636](https://jira.nuxeo.com/browse/NXP-25636) Improved document details area to optimize content preview.
+  -- The document details side page of `nuxeo-document-page` is now collapsible, which reflects to an opened attribute of the said element.
+  -- The opened attribute can be toggle in the interface by clicking the information icon on the header of the side pane.
+  Two new css variables were added to control the height of both `nuxeo-document-content` and `nuxeo-document-trash-content`:
+    `--nuxeo-document-content-min-height`
+    `--nuxeo-document-trash-content-min-height`.
 
 ### Nuxeo Elements {{> anchor 'nuxeo-elements'}}
 
@@ -794,6 +926,15 @@ Aggregation widgets can now be sorted by the label with the *sort-by-label* bool
 - [ELEMENTS-662](https://jira.nuxeo.com/browse/ELEMENTS-662) Two new elements, `<nuxeo-directory-checkbox>` (multiple) and `<nuxeo-directory-radio-group>` (single) added to present and select directory entry(ies).
 - [ELEMENTS-624](https://jira.nuxeo.com/browse/ELEMENTS-624) Exposes `rows` attribute in nuxeo-textarea element.
 - [ELEMENTS-610](https://jira.nuxeo.com/browse/ELEMENTS-610) Replaces video javascript library with browser native video element for to better support browsers.
+
+#### UX improvements {{since '2.3.3'}}
+
+[ELEMENTS-736](https://jira.nuxeo.com/browse/ELEMENTS-736) The date format is customizable in WebUI.
+- [ELEMENTS-740](https://jira.nuxeo.com/browse/ELEMENTS-740) Allow share link copied on click.
+- [ELEMENTS-703](https://jira.nuxeo.com/browse/ELEMENTS-703) Added a 100% zoom action on image preview.
+
+#### Elements improvements {{since '2.3.3'}}
+- [ELEMENTS-726](https://jira.nuxeo.com/browse/ELEMENTS-726) Improved document preview performance.
 
 <!-- ### Nuxeo JSF UI -->
 
