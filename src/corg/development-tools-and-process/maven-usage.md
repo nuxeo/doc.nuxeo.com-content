@@ -19,6 +19,11 @@ confluence:
 tree_item_index: 500
 history:
     -
+        author: Quentin Le Henaff
+        date: '2018-12-06 13:15'
+        message: replaces 'mavenin.nuxeo.com' by 'maven.nuxeo.org'
+        version: '49'
+    -
         author: Ronan Daniellou
         date: '2016-06-21 12:03'
         message: eplaces 'maven.in' by 'mavenin
@@ -772,13 +777,13 @@ sudo ln -s /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/c
     <mirror>
       <id>public-releases-mirror</id>
       <name>public releases mirror</name>
-      <url>http://mavenin.nuxeo.com/nexus/content/groups/public</url>
+      <url>http://maven.nuxeo.org/nexus/content/groups/public</url>
       <mirrorOf>public</mirrorOf>
     </mirror>
     <mirror>
       <id>public-snapshots-mirror</id>
       <name>public snapshots mirror</name>
-      <url>http://mavenin.nuxeo.com/nexus/content/groups/public-snapshot</url>
+      <url>http://maven.nuxeo.org/nexus/content/groups/public-snapshot</url>
       <mirrorOf>public-snapshot</mirrorOf>
     </mirror>
   </mirrors>
@@ -876,7 +881,7 @@ sudo ln -s /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/c
       <repositories>
         <repository>
           <id>internal-releases</id>
-          <url>http://mavenin.nuxeo.com/nexus/content/groups/internal-releases</url>
+          <url>http://maven.nuxeo.org/nexus/content/groups/internal-releases</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -886,7 +891,7 @@ sudo ln -s /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/c
         </repository>
         <repository>
           <id>internal-snapshots</id>
-          <url>http://mavenin.nuxeo.com/nexus/content/groups/internal-snapshots</url>
+          <url>http://maven.nuxeo.org/nexus/content/groups/internal-snapshots</url>
           <releases>
             <enabled>false</enabled>
           </releases>
@@ -906,7 +911,7 @@ sudo ln -s /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/c
       <repositories>
         <repository>
           <id>internal-snapshots</id>
-          <url>http://mavenin.nuxeo.com/nexus/content/groups/internal-snapshots</url>
+          <url>http://maven.nuxeo.org/nexus/content/groups/internal-snapshots</url>
           <releases>
             <enabled>false</enabled>
           </releases>
