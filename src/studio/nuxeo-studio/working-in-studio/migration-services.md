@@ -9,7 +9,6 @@ toc: true
 ---
 The JSF UI to Web UI migration tool is a safe and automated way to create, within a few minutes, an equivalent Web UI configuration based on your existing JSF UI configuration.
 
-
 The migration tool reduces dramatically the effort needed to transition to [Web UI]({{page space="nxdoc" page="web-ui"}}), our user interface that uses modern web standard technologies to provide an outstanding user experience.
 
 Running the migration tool does not delete any data. If you are not satisfied with the result, you can:
@@ -106,7 +105,8 @@ If your project does not benefit from branch management, to discard changes, rev
 
 ### Removing JSF UI Configuration
 
-If you are satisfied with the final result, in the branch used to create the release that will be used in production you can finalize the migration to Web UI.
+If you are satisfied with the result, you can finalize the migration to Web UI in the branch where the release used in production will be created.
 
-In **Settings**, click on **Application Definition**, remove the JSF UI dependency and click on Save Changes.
+In **Settings**, click on **Application Definition**, remove the JSF UI dependency and click on **Save Changes**.
+
 JSF UI related configuration will be hidden in Studio and kept outside from your deployed configuration. If you change your mind, just add it back and your JSF UI configuration will be back.
