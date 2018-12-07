@@ -63,12 +63,6 @@ On Studio Designer, go on the **UI** tab:
   Only the users who have Manage Everything permission will see the button.
 1. Save your changes and deploy your project.
 
-  You should end up with something like this:
-  {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Drop down How to button
-    name: drop-down-menu-validate.png
-    1.1.3#screenshot#to_be_updated
---}}
-![Drop down How to button ](nx_asset://3c6c10c4-20cf-4ea9-ba25-cfaa5db79071 ?w=300,border=true)
+![]({{file name='drop-down-menu-validate.png'}} ?w=200,border=true)
 
 On a Contract document type that you want to validate (change status from Project to Approved) click on your brand new **Validate** button and refresh your page, your contract is approved! The button disappeared as the status has changed.
