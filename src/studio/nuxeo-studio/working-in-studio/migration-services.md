@@ -28,13 +28,13 @@ JSF UI to Web UI migration tool is available through our early access program, o
 
 ## What is migrated?
 
-| Migrated items| Not currently migrated |
+| Migrated items | Not currently migrated |
 |----------------|-------------------|
 | Document layouts | Content views that contain query parameters or that reference a table layout |
 | Workflow tasks layouts | Translation files  |
 | Form layouts | Tabs     |
-| Content views that do not reference a table layout |          |
-| User actions |             |
+| Content views that do not reference a table layout |     &nbsp;     |
+| User actions |        &nbsp;    |
 
 This scope is subject to change. Feel free to [let us know about your experience](https://docs.google.com/forms/d/e/1FAIpQLSdoDfpJOnFwkxHAHOk5aq5KHh9myxF6fISugnMzVmvuQSp-fw/viewform?usp=pp_url)
 
@@ -50,8 +50,12 @@ Any configuration you would do in that time frame would not be taken into accoun
 ### Launching Migration
 
 If your project benefit from branch management: In Source Control -> Branch Management, checkout the branch you want to migrate.
-1. Go to  Configuration -> Migration Services.
-1. Press the Start Migration button and confirm.
+1. In **Configuration**, go to **Migration Services**.
+1. Click on **Start Migration**.
+A pop-up appears to ensure you want to start migrating.
+1. Click **OK** to confirm.
+
+![]({{file name='migration-services-jsf-to-web-ui-screen.png'}} ?w=650,border=true)
 
 {{#> callout type='note' }}
 
@@ -70,7 +74,15 @@ The branch created for the migration will be deleted and created again with ever
 ### Reviewing Changes
 
 When the migration is finished, a report is available in **Migration Services**.
-You can access the report to see the result, browse and search through it easily in order to find any particular information.
+
+![]({{file name='migration-services-access-report.png'}} ?w=650,border=true)
+
+Click **Access Report** to see and easily search through the result in order to find any particular information.
+
+
+The report provides a summary of the migration. Details for each component of your project are displayed, with descriptions and recommendations when errors occurred.
+
+It also provides information concerning the migration itself, such as the tool version, source branch, result branch, source tag, destination tag and date.
 
 ### Integrating Changes
 
@@ -88,7 +100,7 @@ The JSF UI configuration can be hidden when you are ready to migrate. For more i
 
 ### Discarding Changes
 
-If your project benefits from branch management, click on **Settings**, go to  **Branch Management** and then delete the branch created by the migration.
+If your project benefits from branch management, click on **Settings**, go to **Branch Management** and then delete the branch created by the migration.
 
 If your project does not benefit from branch management, to discard changes, revert to the tag made before the migration was triggered.
 
