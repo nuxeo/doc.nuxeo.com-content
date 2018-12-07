@@ -22,7 +22,8 @@ Comments (and so annotations) are linked to a specific document (their parent). 
 
 ### Storage
 
-Comments in Nuxeo are stored as regular document of type `Comment`. They hold:
+Comments in Nuxeo are stored as regular document of type `Comment`.</br>
+They hold:
 - parent id
 - ancestor ids
 - author
@@ -40,7 +41,7 @@ Like comments, annotations have the [`Annotation`](http://community.nuxeo.com/ap
 Comments and annotations can have the facet `ExternalEntity`. When they have this facet, it can hold in addition:
 - external entity id
 - external entity
-- external entity origin
+- external entity origin</br>
 With this facet, it is possible to handle external content such as annotations made in [ARender]({{page space='nxdoc' page='nuxeo-arender-connector'}}) for instance.
 
 Comments and annotations are stored in a `Comments` hidden folder under the domain of commented document. If there's no domain, folder is placed under the root.
@@ -111,9 +112,9 @@ List<Annotation> annotations = service.getAnnotations(coreSession, "PARENT_ID", 
 
 ### REST API
 
-Nuxeo provides two web adapters to access comment and annotation services through REST. They are listed on the web adapter [page]({{page space='nxdoc' page='rest-api-web-adapters'}}).
+Nuxeo provides two web adapters to access comment and annotation services through REST. They are listed on the [web adapter page]({{page space='nxdoc' page='rest-api-web-adapters'}}).
 
-#### JSON entity format
+#### JSON Entity Format
 
 Comments are serialized as below:
 ```json
@@ -171,7 +172,7 @@ Comments:
 | Create a comment on document               | POST        | `/@comment`                                | Comment              | Created comment                |
 | Fetch comments of document                 | GET         | `/@comment?pageSize=10&currentPageIndex=0` | /                    | Partial list of comment        |
 | Fetch a comment                            | GET         | `/@comment/{commentId}`                    | /                    | Comment with commentId         |
-| Fetch a comment by its externalentity id   | GET         | `/@comment/external/{entityId}`            | /                    | External comment with entityId |
+| Fetch a comment by its external entity id   | GET         | `/@comment/external/{entityId}`            | /                    | External comment with entityId |
 | Update a comment                           | PUT         | `/@comment/{commentId}`                    | Comment with updates | Updated comment                |
 | Update a comment by its external entity id | PUT         | `/@comment/external/{entityId}`            | Comment with updates | Updated external comment       |
 | Delete a comment                           | DELETE      | `/@comment/{commentId}`                    | /                    | /                              |
@@ -185,7 +186,7 @@ Annotations:
 | Fetch annotations of document                  | GET         | `/@annotation?xpath=file:content`                           | /                       | Annotation of specified blob      |
 | Fetch replies of annotations                   | GET         | `/@annotation/comments?annotationIds=...&annotationIds=...` | /                       | List of replies                   |
 | Fetch an annotation                            | GET         | `/@annotation/{annotationId}`                               | /                       | Annotation with annotationId      |
-| Fetch an annotation by its externalentity id   | GET         | `/@annotation/external/{entityId}`                          | /                       | External annotation with entityId |
+| Fetch an annotation by its external entity id   | GET         | `/@annotation/external/{entityId}`                          | /                       | External annotation with entityId |
 | Update an annotation                           | PUT         | `/@annotation/{annotationId}`                               | Annotation with updates | Updated annotation                |
 | Update an annotation by its external entity id | PUT         | `/@annotation/external/{entityId}`                          | Annotation with updates | Updated external annotation       |
 | Delete an annotation                           | DELETE      | `/@annotation/{annotationId}`                               | /                       | /                                 |
