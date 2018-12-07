@@ -115,19 +115,19 @@ This page non exhaustively lists frequently asked questions about Nuxeo Drive
 
 {{! /excerpt}}
 
-## What are the prerequisite Nuxeo versions/hotfixes when using a Drive client version?
+## What are the required Nuxeo versions/hotfixes when using a Drive client version?
 
 In order to be fully compatible with Nuxeo Drive, the  minimum required version of the `nuxeo-drive` server addon is:
 
-  - 7.10: 1.5.7
-  - 8.10: 1.6.6
-  - 9.10: 1.7.3
-  - 10.10: 1.8.1
+  - **7.10**: 1.5.7
+  - **8.10**: 1.6.6
+  - **9.10**: 1.7.3
+  - **10.10**: 1.8.1
 
-And the minimum required installed Hot-Fix (HF) is:
+And the minimum required installed Hotfix (HF) is:
 
-| Client | 7.10 | 8.10 | 9.10 | 10.10
-| --- | --- | --- | --- | --- |
+ Client | 7.10 | 8.10 | 9.10 | 10.10
+ --- | --- | --- | --- | ---
 3.x | HF43 | HF33 | HF12 | HF0
 4.0.x | HF47 | HF39 | HF22 | HF0
 
