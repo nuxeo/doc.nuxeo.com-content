@@ -533,7 +533,14 @@ Atomic increment:
 
 ### Packaging / Distribution / Miscellaneous
 
-#### nuxeoctl register --offline
+
+#### Java 11 Support {{since '10.3'}}
+
+Nuxeo LTS 2019 is supported on Java 8 and Java 11.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24210](https://jira.nuxeo.com/browse/NXP-24210).
+
+#### nuxeoctl register --offline {{since '10.3'}}
 
 It is now possible to register offline a new instance from the terminal with the following command, that will then start a command line wizard:
 
@@ -1021,7 +1028,6 @@ A first implementation of the ARender SPI bridge has been done so as to be able 
 Nuxeo Server now integrates very well with Office Online via the implementation of the WOPI endpoints. It is now possible to "open" a document stored in Nuxeo via Office 365. The Nuxeo document will be consistently locked and unlocked. Document will be versioned according the centralized versioning policy of Nuxeo. The action remains compatible with the multi-users editing capability of Office 365 Online. The feature has been designed for being able to edit content stored in any binary property of the repository.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23174](https://jira.nuxeo.com/browse/NXP-23174).
-
 
 ### Nuxeo Platform Importer
 
