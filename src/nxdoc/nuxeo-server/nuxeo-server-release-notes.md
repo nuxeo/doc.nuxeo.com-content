@@ -115,6 +115,19 @@ You can change your current engine by following this [documentation](https://dev
 
 ### Directory
 
+#### Improved query API for directories {{since '10.3'}}
+
+New directory query APIs using a QueryBuilder:
+
+```
+Session.query(QueryBuilder, fetchReferences)
+Session.queryIds(QueryBuilder)
+```
+
+It is now possible to use predicate style queries for fetching directory entries.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-19262](https://jira.nuxeo.com/browse/NXP-19262)
+
 #### Tenant-isolated directories with MongoDB {{since '10.2'}}
 
 Multi-tenant addon now supports tenant-isolated directories with MongoDB
