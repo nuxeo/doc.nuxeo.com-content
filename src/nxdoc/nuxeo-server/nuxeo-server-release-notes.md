@@ -519,6 +519,24 @@ A `KeyValueBlobTransientStore` can now specify the ids of the key/value store an
 ```
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24847](https://jira.nuxeo.com/browse/NXP-24847).
 
+### Authentication
+
+#### Stateless authentication with JWT tokens {{since '10.3'}}
+
+There is a new Java API to acquire a JWT token to authorize a user:
+```
+JWTService service = Framework.getService(JWTService.class);
+String token = service.newBuilder().build();
+```
+
+The builder can also be used to add specific claims in the token (only CLAIM_SUBJECT is meaningful to the authenticator for now) and a TTL.
+
+The token should then be propagated and passed by a third-party service wishing to connect to Nuxeo using the `Authorization: Bearer <token>` request header. As a compatibility fallback, the request query parameter `access_token` can also be used.
+
+This solution is compatible with cluster installations.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24734](https://jira.nuxeo.com/browse/NXP-24734).
+
 ### REST API
 
 #### Nuxeo Rest API Adapters are Now Overridable {{since '10.2'}}
@@ -909,7 +927,8 @@ We are also storing a set of custom performance marks and measurements, which ar
 - [measurement] `<page-name>.dom-changed`: a measurement between the moment in which the last `dom-change` event is fired from within the current page and the last `page-change` mark (or PerformanceTiming.fetchStart if `undefined`) - this is mostly helpful for development and debugging purposes
 We added these metrics to the performance analyzer added in NXP-25303. You can try these out by running:
 
-```Nuxeo.Performance.report({networkStats: true});```
+```Nuxeo.Performance.report({networkStats: true});
+```
 
 
 #### New Languages
