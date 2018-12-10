@@ -358,9 +358,10 @@ The BulkService is a new Nuxeo Platform service that allows to persist a documen
 
 #### Annotation Java Service {{since '10.1'}}
 
-A new annotation service has been added, it stores annotations in the repository.
+A new annotation service has been added, it stores annotations in the repository. Furthermore new facet ExternalEntity has been created to handle Annotations or Comments created from an external service like ARender.
+This facet allows to store the serialized entity.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24096](https://jira.nuxeo.com/browse/NXP-24396).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24096](https://jira.nuxeo.com/browse/NXP-24396) and [NXP-24725](https://jira.nuxeo.com/browse/NXP-24725).
 
 #### Annotation REST API Adapter {{since '10.1'}}
 
@@ -1038,9 +1039,9 @@ Integrated with Web UI upload with real time upload progress. For 10.2 we have a
 
 ### ARender Connector and Document, Image, Video Annotations {{since '10.2'}}
 
-A first implementation of the ARender SPI bridge has been done so as to be able to preview content stored in Nuxeo using the [Arender previewer](https://arender.io/). It allows to preview and annotate content, may it be an office file, an image or a video. A first integration to Web UI is done in the addon, the Arender previewer appears in a new "annotations" tab. Deeper integration will be done in the future. Also, in 10.3, comments made for a given annotation will be synced with Nuxeo Comments. A package is available on the marketplace.
+A first implementation of the ARender SPI bridge has been done so as to be able to preview content stored in Nuxeo using the [Arender previewer](https://arender.io/). It allows to preview and annotate content, may it be an office file, an image or a video. A first integration to Web UI is done in the addon, the Arender previewer appears in a new "annotations" tab. Deeper integration will be done in the future. Also, comments made for a given annotation are synced with Nuxeo Comments. A package is available on the marketplace.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24104](https://jira.nuxeo.com/browse/NXP-24104).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24104](https://jira.nuxeo.com/browse/NXP-24104) and [NXP-24724](https://jira.nuxeo.com/browse/NXP-24724).
 
 ### MS Office 356 Integration: WOPI Implementation
 
