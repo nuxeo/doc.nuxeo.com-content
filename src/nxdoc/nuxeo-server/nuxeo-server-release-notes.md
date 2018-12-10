@@ -293,7 +293,14 @@ Following evolutions on the trash service, the NXQL property `ecm:isTrashed` has
 
 <!--- ### Conversion -->
 
-<!--- ### Rendition -->
+### Rendition
+
+#### Renditions on proxy {{since '10.3'}}
+
+Renditions are now returned by Rendition Service on proxy objects. Renditions from the source document are returned.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24636](https://jira.nuxeo.com/browse/NXP-24636).
+
 ### Suggestion Service {{since '10.3'}}
 
 The suggestion bar now uses match_phrase_prefix and is based on the following query:
