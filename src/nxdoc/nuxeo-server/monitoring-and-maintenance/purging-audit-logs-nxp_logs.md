@@ -140,9 +140,9 @@ Keep in mind that these scripts purge all Audit entries, including documents' au
 </div>
 
 If you prefer you can find below the source of a PostgreSQL function that can be used to purge Audit entries older than a given date.&nbsp;You can easily adapt it:
-
-*   to change the filtering done on audit record to filter,
-*   to match the syntax of other databases than PostgreSQL.
+- to change the filtering done on audit record to filter,
+  in this case be careful to add your clauses on the first query used to create a temporary table and also in the last delete query on the `nxp_logs` table.
+- to match the syntax of other databases.
 
 {{#> panel type='code' heading='nx_audit_purge for PostgreSQL'}}
 
@@ -159,6 +159,7 @@ BEGIN
   -- Because nxp_logs_mapextinfos has 2 FK on external tables
   -- we must remove records from this table first
   -- so we need to store the values in a tmp table before
+  -- if you add a custom filter it must also be used on the last delete query
   CREATE TEMP TABLE audit_purge_tmp ON COMMIT DROP AS
     SELECT nxp_logs_mapextinfos.log_fk, nxp_logs_mapextinfos.info_fk
       FROM nxp_logs, nxp_logs_extinfo, nxp_logs_mapextinfos
@@ -184,8 +185,9 @@ BEGIN
 
   -- LEVEL 1 cleanup
   RAISE INFO 'run cleanup on nxp_logs (level 1)';
+  -- use the same custom filter on this query
   DELETE FROM nxp_logs
-    WHERE nxp_logs.log_id IN (SELECT log_fk FROM audit_purge_tmp);
+    WHERE nxp_logs.log_event_date < maxDate::date;
   GET DIAGNOSTICS nblines = ROW_COUNT;
   SELECT nblines+total INTO total;
 
@@ -249,7 +251,7 @@ BEGIN
   -- LEVEL 1 cleanup
   RAISERROR ('run cleanup on nxp_logs level 1',0,1);  
   DELETE FROM NXP_LOGS
-    WHERE NXP_LOGS.LOG_ID IN (SELECT LOG_FK FROM #audit_purge_tmp);
+    WHERE NXP_LOGS.LOG_EVENT_DATE < convert(datetime,@maxDate,112);
   SET @nblines = @@ROWCOUNT;
   SET @total = @nblines+@total;
 
@@ -305,7 +307,7 @@ BEGIN
   -- LEVEL 1 cleanup
   dbms_output.put_line('Run cleanup on nxp_logs (level 1) ...');
   DELETE FROM nxp_logs
-    WHERE nxp_logs.log_id IN (SELECT log_fk FROM audit_purge_tmp);
+    WHERE nxp_logs.log_event_date < TO_DATE(maxDate, 'YYYY-MM-DD');
   nblines := SQL%ROWCOUNT;
   total := total + nblines;
   dbms_output.put_line('Lines cleanup on table nxp_logs: ' || nblines);
