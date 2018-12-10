@@ -291,7 +291,13 @@ Following evolutions on the trash service, the NXQL property `ecm:isTrashed` has
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24346](https://jira.nuxeo.com/browse/NXP-24346).
 
-<!--- ### Conversion -->
+### Conversion
+
+#### Better thumbnail quality {{since '10.3'}}
+
+Thumbnails size has been set to 1000x1000 pixels (previously 350x350).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24717](https://jira.nuxeo.com/browse/NXP-24717).
 
 ### Rendition
 
@@ -1042,7 +1048,7 @@ Nuxeo Server now integrates very well with Office Online via the implementation 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23174](https://jira.nuxeo.com/browse/NXP-23174).
 
-### Simflofy Connector
+### Simflofy Connector {{since '10.3'}}
 
 A blob provider has been implemented for Simflofy, allowing to access from Nuxeo to any content that Simflofy knows how to federate.
 ```
