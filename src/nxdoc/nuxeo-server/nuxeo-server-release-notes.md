@@ -558,6 +558,12 @@ A check on the presence of a JDK per is enforced at startup in nuxeoctl
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21200](https://jira.nuxeo.com/browse/NXP-21200).
 
+
+#### Target Platform filtering on mp-listall command {{since '10.3'}}
+
+mp-listall command has been optimized by listing only relevant packages for the version of the Nuxeo server it is run on.
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22520](https://jira.nuxeo.com/browse/NXP-22520).
+
 #### Making Use of Tomcat 8 Rewrite Valve {{since '10.2'}}
 
 It is now possible to contribute rules to Tomcat Rewrite Valve by leveraging our deployment preprocessor.
