@@ -655,14 +655,6 @@ Servlet API 3.1 is now used in Nuxeo code.
 
 ### Nuxeo Web UI {{> anchor 'nuxeo-web-ui'}}
 
-#### Orderable Folders {{since '10.1'}}
-
-Orderable Folders are now available in Nuxeo Platform with up and down actions. It works with multiple selected documents.
-For this purpose a new operation is available to order child documents.
-Navigation tree now takes into account order on Orderable Folders.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24254](https://jira.nuxeo.com/browse/NXP-24254).
-
 #### Trash {{since '10.1'}}
 
 Add trash functionality and management to document deletion. Document deletion moves it to trash.
@@ -675,69 +667,6 @@ Finally, a set of functional tests for new trash features.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23798](https://jira.nuxeo.com/browse/NXP-23798).
 
-#### Direct Upload to 3rd-Party Service {{since '10.1'}}
-
-Batch upload refactored to support third party providers.
-It is possible to integrate providers for feature rich and performance upload.
-To this end, the upload behaviour now supports external providers and allows features like progress and multipart.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24269](https://jira.nuxeo.com/browse/NXP-24269).
-
-#### User Invitation Link {{since '10.1'}}
-
-Fixed link on user invitation e-mail that led to "page not found".
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24535](https://jira.nuxeo.com/browse/NXP-24535).
-
-#### Remove from Collection {{since '10.1'}}
-
-The "Remove from Collection" action is now displayed on all document types with the Collection facet.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24347](https://jira.nuxeo.com/browse/NXP-24347).
-
-#### Close Drawer Action {{since '10.1'}}
-
-A new close action button has been added to let you hide the drawer. It appears on the middle right side of the drawer.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24082](https://jira.nuxeo.com/browse/NXP-24082).
-
-#### New Languages {{since '10.1'}}
-
-Italian, Dutch and Swedish languages have been added to Web UI and Nuxeo Elements.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-24451](https://jira.nuxeo.com/browse/NXP-24451) and [NXP-24445](https://jira.nuxeo.com/browse/NXP-24445).
-
-
-#### User Cloud Settings {{since '10.2'}}
-
-Adds an interface to allow users to manage their OAuth2 tokens. Managing inbound and outbound authorisations.
-[NXP-20773](https://jira.nuxeo.com/browse/NXP-20773) The user has a way to manage all the cloud services permission tokens granted to the Nuxeo account.
-[NXP-22588](https://jira.nuxeo.com/browse/NXP-22588) Users can now manage external applications authorisations with Nuxeo.
-[NXP-24841](https://jira.nuxeo.com/browse/NXP-24841) Improves performance on Cloud Service area to lazy load pages.
-[NXP-24578](https://jira.nuxeo.com/browse/NXP-24578) New Rest API for OAuth 2 tokens.
-
-Some new endpoints have been added to handle CRUD operations on provider and client OAuth tokens:
-```
-GET/PUT/DELETE /oauth2/token/provider/<providerId>/user/<username> -> perform CRUD on provider tokens
-GET /oauth2/token/provider -> retrieve all provider tokens for current user
-GET/PUT/DELETE /oauth2/token/client/<clientId>/user/<username> -> perform CRUD on client tokens
-GET /oauth2/token/client -> retrieve all client tokens for current user
-GET oauth2/client -> retrieve all oauth2 clients
-GET oauth2/client/<clientId> -> retrieve an oauth2 client
-```
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24252](https://jira.nuxeo.com/browse/NXP-24252)
-
-
-#### Drag and drop {{since '10.2'}}
-
-It is now possible to use drag and drop user interaction to move and copy documents to folders and collections on a listing.
-
-[NXP-24351](https://jira.nuxeo.com/browse/NXP-24351) Enables user to add documents to sibling collections by drag and drop.
-[NXP-24350](https://jira.nuxeo.com/browse/NXP-24350) Enables user to move documents to sibling folders by drag and drop.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22807](https://jira.nuxeo.com/browse/NXP-22807)
-
 #### Document metadata differences {{since '10.2'}}
 
 Documents can be compared to other documents or within its versions. Common schemas are compared. UI is fully responsive and can show only different data or all of it. The comparison UI is fully configurable.
@@ -747,6 +676,8 @@ Documents can be compared to other documents or within its versions. Common sche
 - [NXP-24786](https://jira.nuxeo.com/browse/NXP-24786) Enables switching comparing documents position.
 - [NXP-24784](https://jira.nuxeo.com/browse/NXP-24784) Visualizes metadata differences on two documents.
 - [NXP-24784](https://jira.nuxeo.com/browse/NXP-24785) Allows custom element to be added to compare different metadata proprieties. Defines custom elements to be used on blobs, document and user references.
+- [NXP-25941](https://jira.nuxeo.com/browse/NXP-25941) Leverage Arender difference capabilities on document comparison (Arender addon). {{since '10.3'}}
+
 
 ##### Default comparison elements
 
@@ -780,56 +711,6 @@ The `nuxeo-diff-page` stamps `nuxeo-diff`, which can be parameterized. `nuxeo-di
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24785](https://jira.nuxeo.com/browse/NXP-24785)
 
-
-#### User Cloud Settings {{since '10.2'}}
-
-Introduces new file-based document pill to allow annotations with Arender.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25107](https://jira.nuxeo.com/browse/NXP-25107)
-
-#### New Languages {{since '10.2'}}
-
-Adds Chinese simplified and Hebrew locales for Web UI.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25112](https://jira.nuxeo.com/browse/NXP-25112).
-
-#### Performance improvements {{since '10.2'}}
-
-Several actions to provide better performance on Web UI.
-
-- [NXP-25158](https://jira.nuxeo.com/browse/NXP-25158) Enables a way to skip aggregates computation, making the request potentially faster. This is used on a range or pagination queries as there is no need to update aggregates.
-This can be used by adding `skipAggregates=true` as a HTTP header when invoking the search rest endpoint.
-- [NXP-25202](https://jira.nuxeo.com/browse/NXP-25202) Adds an initial progress page for fast feedback on loading.
-- [NXP-25139](https://jira.nuxeo.com/browse/NXP-25139) Updates cache headers for Web UI static resources.
-- [NXP-24820](https://jira.nuxeo.com/browse/NXP-24820) The memory footprint of the Web UI has been reduced.
-- [NXP-24422](https://jira.nuxeo.com/browse/NXP-24422) Edge performance was analyse and new improvement actions we planed.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25038](https://jira.nuxeo.com/browse/NXP-25038)
-
-#### UX improvements {{since '10.2'}}
-
-On 10.2, several UX improvements were added to Web UI:
-
-- [NXP-25021](https://jira.nuxeo.com/browse/NXP-25021) A login banner is displayed when the WebUI session has expired.
-- [NXP-25202](https://jira.nuxeo.com/browse/NXP-25202) Adds an initial progress page for fast feedback on loading.
-- [NXP-24648](https://jira.nuxeo.com/browse/NXP-24648) Improves UX by notifying user when connection is offline making Web UI not reacting.
-- [NXP-24752](https://jira.nuxeo.com/browse/NXP-24752) Introduces mixin that allows selection toolbar appearance and position customisation. Adds theme variable for selection color and uses this by default.
-- [NXP-24692](https://jira.nuxeo.com/browse/NXP-24692) To assure the best legibility, the color of the "shortcut" icons was changed to have a high contrast to the background color.
-- [NXP-22062](https://jira.nuxeo.com/browse/NXP-22062) Document UIDs on audit log now have a link back to document.
-- [NXP-24894](https://jira.nuxeo.com/browse/NXP-24894) Fixes drawer queue keyboard navigation.
-- [NXP-24466](https://jira.nuxeo.com/browse/NXP-24466) Document information included in administration audit logs.
-
-
-#### Bugfixes {{since '10.2'}}
-
-On 10.2, several relevante bugfixes were included to Web UI:
-
-- [NXP-25310](https://jira.nuxeo.com/browse/NXP-25310) Groups with slash in their name are supported.
-- [NXP-24789](https://jira.nuxeo.com/browse/NXP-24789) The access to the user administration is disabled for anonymous users.
-- [NXP-25094](https://jira.nuxeo.com/browse/NXP-25094) Makes bulk download notification fixed with no intermittency.
-- [NXP-24832](https://jira.nuxeo.com/browse/NXP-24832) Ordered folder support is extended to document types which inherit from OrderedFolder type.
-- [NXP-22555](https://jira.nuxeo.com/browse/NXP-22555) `<nuxeo-document-distribution-chart>` not restricted to default-domain anymore..
-
 #### Document Publishing {{since '10.3'}}
 
 Added document publishing capabilities.
@@ -854,16 +735,24 @@ Integrates ML custom models suggestion in Web UI to provide predictions. (with `
 [NXP-NXP-25565](https://jira.nuxeo.com/browse/NXP-26070) Suggestion integration on form inputs.
 [NXP-26070](https://jira.nuxeo.com/browse/NXP-26070) Suggestions working on multivalue input fields.
 
+#### CSV Export UI {{since '10.3'}}
+
+It exposes CSV export in the UI, allowing users to download a listing in CSV format.
+[NXP-25934](https://jira.nuxeo.com/browse/NXP-25934) Ability to export results and folderish content in CSV.
+
+#### Direct Upload to 3rd-Party Service {{since '10.1'}}
+
+Batch upload refactored to support third party providers.
+It is possible to integrate providers for feature rich and performance upload.
+To this end, the upload behaviour now supports external providers and allows features like progress and multipart.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24269](https://jira.nuxeo.com/browse/NXP-24269).
+
 #### Delegate and Reassign Tasks {{since '10.3'}}
 
 Migrated missing features from workflow tests to allow delegation and reassign of workflow tasks.
 [NXP-24997](https://jira.nuxeo.com/browse/NXP-24997) Migrated task reassign on workflows.
 [NXP-24998](https://jira.nuxeo.com/browse/NXP-24998) Migrated task delegation on workflows.
-
-#### CSV Export UI {{since '10.3'}}
-
-It exposes CSV export in the UI, allowing users to download a listing in CSV format.
-[NXP-25934](https://jira.nuxeo.com/browse/NXP-25934) Ability to export results and folderish content in CSV.
 
 #### User actions scalability {{since '10.3'}}
 
@@ -876,10 +765,51 @@ Provides a solution for large number of user actions and small screens.
 `--nuxeo-results-selection-actions-menu-max-width`
 - These variables can be overridden in the themes.
 
-#### Document Comparison improvements {{since '10.3'}}
+#### Orderable Folders {{since '10.1'}}
 
-Brings small improvements on Document Comparison UI/UX.
-[NXP-25941](https://jira.nuxeo.com/browse/NXP-25941) Leverage Arender difference capabilities on document comparison (Arender addon).
+Orderable Folders are now available in Nuxeo Platform with up and down actions. It works with multiple selected documents.
+For this purpose a new operation is available to order child documents.
+Navigation tree now takes into account order on Orderable Folders.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24254](https://jira.nuxeo.com/browse/NXP-24254).
+
+#### User Cloud Settings {{since '10.2'}}
+
+Adds an interface to allow users to manage their OAuth2 tokens. Managing inbound and outbound authorisations.
+[NXP-20773](https://jira.nuxeo.com/browse/NXP-20773) The user has a way to manage all the cloud services permission tokens granted to the Nuxeo account.
+[NXP-22588](https://jira.nuxeo.com/browse/NXP-22588) Users can now manage external applications authorisations with Nuxeo.
+[NXP-24841](https://jira.nuxeo.com/browse/NXP-24841) Improves performance on Cloud Service area to lazy load pages.
+[NXP-24578](https://jira.nuxeo.com/browse/NXP-24578) New Rest API for OAuth 2 tokens.
+
+Some new endpoints have been added to handle CRUD operations on provider and client OAuth tokens:
+```
+GET/PUT/DELETE /oauth2/token/provider/<providerId>/user/<username> -> perform CRUD on provider tokens
+GET /oauth2/token/provider -> retrieve all provider tokens for current user
+GET/PUT/DELETE /oauth2/token/client/<clientId>/user/<username> -> perform CRUD on client tokens
+GET /oauth2/token/client -> retrieve all client tokens for current user
+GET oauth2/client -> retrieve all oauth2 clients
+GET oauth2/client/<clientId> -> retrieve an oauth2 client
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24252](https://jira.nuxeo.com/browse/NXP-24252)
+
+
+#### Drag and drop {{since '10.2'}}
+
+It is now possible to use drag and drop user interaction to move and copy documents to folders and collections on a listing.
+
+[NXP-24351](https://jira.nuxeo.com/browse/NXP-24351) Enables user to add documents to sibling collections by drag and drop.
+[NXP-24350](https://jira.nuxeo.com/browse/NXP-24350) Enables user to move documents to sibling folders by drag and drop.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22807](https://jira.nuxeo.com/browse/NXP-22807)
+
+
+#### Arender annotation pill {{since '10.2'}}
+
+Introduces new file-based document pill to allow annotations with Arender.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25107](https://jira.nuxeo.com/browse/NXP-25107)
+
 
 #### Configuration service on Web UI {{since '10.3'}}
 
@@ -898,6 +828,57 @@ We then put properties namespaced with `org.nuxeo.web.ui` into the `Nuxeo.UI.con
 [NXP-25678](https://jira.nuxeo.com/browse/NXP-25678) Added a configuration service to allow Web UI properties definition with a namespace.
 [NXP-25512](https://jira.nuxeo.com/browse/NXP-25512) Allows to override/extend fetch properties and enrichers used to browse a document.
 
+
+#### UX improvements
+
+Several UX improvements were added to Web UI:
+- [NXP-24535](https://jira.nuxeo.com/browse/NXP-24535). Fixed link on user invitation e-mail that led to "page not found". {{since '10.1'}}
+- [NXP-24347](https://jira.nuxeo.com/browse/NXP-24347). The "Remove from Collection" action is now displayed on all document types with the Collection facet. {{since '10.1'}}
+- [NXP-24082](https://jira.nuxeo.com/browse/NXP-24082). A new close action button has been added to let you hide the drawer. It appears on the middle right side of the drawer. {{since '10.1'}}
+- [NXP-25021](https://jira.nuxeo.com/browse/NXP-25021) A login banner is displayed when the WebUI session has expired. {{since '10.2'}}
+- [NXP-25202](https://jira.nuxeo.com/browse/NXP-25202) Adds an initial progress page for fast feedback on loading. {{since '10.2'}}
+- [NXP-24648](https://jira.nuxeo.com/browse/NXP-24648) Improves UX by notifying user when connection is offline making Web UI not reacting. {{since '10.2'}}
+- [NXP-24752](https://jira.nuxeo.com/browse/NXP-24752) Introduces mixin that allows selection toolbar appearance and position customisation. Adds theme variable for selection color and uses this by default. {{since '10.2'}}
+- [NXP-24692](https://jira.nuxeo.com/browse/NXP-24692) To assure the best legibility, the color of the "shortcut" icons was changed to have a high contrast to the background color. {{since '10.2'}}
+- [NXP-22062](https://jira.nuxeo.com/browse/NXP-22062) Document UIDs on audit log now have a link back to document. {{since '10.2'}}
+- [NXP-24894](https://jira.nuxeo.com/browse/NXP-24894) Fixes drawer queue keyboard navigation. {{since '10.2'}}
+- [NXP-24466](https://jira.nuxeo.com/browse/NXP-24466) Document information included in administration audit logs. {{since '10.2'}}
+- [NXP-25104](https://jira.nuxeo.com/browse/NXP-25104) New improved document layout resolving selection actions ambiguity and improving space usage. {{since '10.3'}}
+- [NXP-22453](https://jira.nuxeo.com/browse/NXP-22453) Brings direct links to document tabs and subpages. {{since '10.3'}}
+- [NXP-25638](https://jira.nuxeo.com/browse/NXP-25638) Added replace file action to improve preview space. {{since '10.3'}}
+- [NXP-25630](https://jira.nuxeo.com/browse/NXP-25630) Improved drop zone ambiguity with live connect. {{since '10.3'}}
+- [NXP-25352](https://jira.nuxeo.com/browse/NXP-25352) Several improvements on the drop file element. {{since '10.3'}}
+- [NXP-20604](https://jira.nuxeo.com/browse/NXP-20604) On granting permission is now possible to add multiple users or groups. {{since '10.3'}}
+- [NXP-25325](https://jira.nuxeo.com/browse/NXP-25325) With auto-search off, pressing enter allows to quickly submit the search. {{since '10.3'}}
+- [NXP-25740](https://jira.nuxeo.com/browse/NXP-25740) Picture subtype now inherit Picture view layout. {{since '10.3'}}
+- [NXP-25637](https://jira.nuxeo.com/browse/NXP-25637) Improved listing element layout and composition. {{since '10.3'}}
+  -- Listing elements (`nuxeo-data-grid`, `nuxeo-data-list`, `nuxeo-data-table` and `nuxeo-justified-grid`) no longer display sorting options nor quick filters (with the exception for `nuxeo-data-table`, which has sorting built-in).
+  -- `nuxeo-results` will now displays sorting and filtering options unless the selected listing element handles sorting and/or filtering by itself, by having `handlesSorting` and/or `handlesFiltering` set to true.
+  -- Consequently, the properties `displaySort`, `sortOptions`, `sortLabel`, `sortSelected` and `displayQuickFilters` were moved from the listing elements to nuxeo-results in Web UI.
+  -- However, to keep compatibility with the previous approach, by still allowing these attributes to be set on the listing elements (a.k.a. views), although we do no encourage it.
+- [NXP-25636](https://jira.nuxeo.com/browse/NXP-25636) Improved document details area to optimize content preview. {{since '10.3'}}
+  -- The document details side page of `nuxeo-document-page` is now collapsible, which reflects to an opened attribute of the said element.
+  -- The opened attribute can be toggle in the interface by clicking the information icon on the header of the side pane.
+  Two new css variables were added to control the height of both `nuxeo-document-content` and `nuxeo-document-trash-content`:
+    `--nuxeo-document-content-min-height`
+    `--nuxeo-document-trash-content-min-height`.
+
+#### Performance improvements {{since '10.2'}}
+
+Several actions to provide better performance on Web UI.
+
+- [NXP-25158](https://jira.nuxeo.com/browse/NXP-25158) Enables a way to skip aggregates computation, making the request potentially faster. This is used on a range or pagination queries as there is no need to update aggregates. {{since '10.2'}}
+This can be used by adding `skipAggregates=true` as a HTTP header when invoking the search rest endpoint.
+- [NXP-25202](https://jira.nuxeo.com/browse/NXP-25202) Adds an initial progress page for fast feedback on loading. {{since '10.2'}}
+- [NXP-25139](https://jira.nuxeo.com/browse/NXP-25139) Updates cache headers for Web UI static resources. {{since '10.2'}}
+- [NXP-24820](https://jira.nuxeo.com/browse/NXP-24820) The memory footprint of the Web UI has been reduced. {{since '10.2'}}
+- [NXP-24422](https://jira.nuxeo.com/browse/NXP-24422) Edge performance was analyse and new improvement actions we planed. {{since '10.2'}}
+- [NXP-25385](https://jira.nuxeo.com/browse/NXP-25385) Largely improved caching strategy. {{since '10.3'}}
+- [NXP-24880](https://jira.nuxeo.com/browse/NXP-24880) Allows search initialisation to skip aggregation for large repositories. {{since '10.3'}}
+- [NXP-25320](https://jira.nuxeo.com/browse/NXP-25320) Aggregation navigation on listing scroll removed by default. {{since '10.3'}}
+- [NXP-25302](https://jira.nuxeo.com/browse/NXP-25302) Performance improvements on grid element. {{since '10.3'}}
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25038](https://jira.nuxeo.com/browse/NXP-25038)
 
 #### Performance audit system {{since '10.3'}}
 
@@ -928,42 +909,13 @@ We are also storing a set of custom performance marks and measurements, which ar
 - [measurement] `<page-name>.dom-changed`: a measurement between the moment in which the last `dom-change` event is fired from within the current page and the last `page-change` mark (or PerformanceTiming.fetchStart if `undefined`) - this is mostly helpful for development and debugging purposes
 We added these metrics to the performance analyzer added in NXP-25303. You can try these out by running:
 
-```Nuxeo.Performance.report({networkStats: true});
-```
-
-#### Performance improvements {{since '10.3'}}
-
-Several actions to provide better performance.
-- [NXP-25385](https://jira.nuxeo.com/browse/NXP-25385) Largely improved caching strategy.
-- [NXP-24880](https://jira.nuxeo.com/browse/NXP-24880) Allows search initialisation to skip aggregation for large repositories.
-- [NXP-25320](https://jira.nuxeo.com/browse/NXP-25320) Aggregation navigation on listing scroll removed by default.
-- [NXP-25302](https://jira.nuxeo.com/browse/NXP-25302) Performance improvements on grid element.
+```Nuxeo.Performance.report({networkStats: true});```
 
 
+#### New Languages
 
-#### UX improvements {{since '10.3'}}
-
-Continuous effort to improve UI/UX.
-
-- [NXP-25104](https://jira.nuxeo.com/browse/NXP-25104) New improved document layout resolving selection actions ambiguity and improving space usage.
-- [NXP-22453](https://jira.nuxeo.com/browse/NXP-22453) Brings direct links to document tabs and subpages.
-- [NXP-25638](https://jira.nuxeo.com/browse/NXP-25638) Added replace file action to improve preview space.
-- [NXP-25630](https://jira.nuxeo.com/browse/NXP-25630) Improved drop zone ambiguity with live connect.
-- [NXP-25352](https://jira.nuxeo.com/browse/NXP-25352) Several improvements on the drop file element.
-- [NXP-20604](https://jira.nuxeo.com/browse/NXP-20604) On granting permission is now possible to add multiple users or groups.
-- [NXP-25325](https://jira.nuxeo.com/browse/NXP-25325) With auto-search off, pressing enter allows to quickly submit the search.
-- [NXP-25740](https://jira.nuxeo.com/browse/NXP-25740) Picture subtype now inherit Picture view layout.
-- [NXP-25637](https://jira.nuxeo.com/browse/NXP-25637) Improved listing element layout and composition.
-  -- Listing elements (`nuxeo-data-grid`, `nuxeo-data-list`, `nuxeo-data-table` and `nuxeo-justified-grid`) no longer display sorting options nor quick filters (with the exception for `nuxeo-data-table`, which has sorting built-in).
-  -- `nuxeo-results` will now displays sorting and filtering options unless the selected listing element handles sorting and/or filtering by itself, by having `handlesSorting` and/or `handlesFiltering` set to true.
-  -- Consequently, the properties `displaySort`, `sortOptions`, `sortLabel`, `sortSelected` and `displayQuickFilters` were moved from the listing elements to nuxeo-results in Web UI.
-  -- However, to keep compatibility with the previous approach, by still allowing these attributes to be set on the listing elements (a.k.a. views), although we do no encourage it.
-- [NXP-25636](https://jira.nuxeo.com/browse/NXP-25636) Improved document details area to optimize content preview.
-  -- The document details side page of `nuxeo-document-page` is now collapsible, which reflects to an opened attribute of the said element.
-  -- The opened attribute can be toggle in the interface by clicking the information icon on the header of the side pane.
-  Two new css variables were added to control the height of both `nuxeo-document-content` and `nuxeo-document-trash-content`:
-    `--nuxeo-document-content-min-height`
-    `--nuxeo-document-trash-content-min-height`.
+[NXP-24451](https://jira.nuxeo.com/browse/NXP-24451) and [NXP-24445](https://jira.nuxeo.com/browse/NXP-24445) Italian, Dutch and Swedish languages have been added to Web UI and Nuxeo Elements. {{since '10.1'}}
+[NXP-25112](https://jira.nuxeo.com/browse/NXP-25112). Adds Chinese simplified and Hebrew locales for Web UI. {{since '10.2'}}
 
 ### Nuxeo Elements {{> anchor 'nuxeo-elements'}}
 
@@ -988,19 +940,23 @@ Several actions to provide better performance on Nuxeo Elements.
 
 - [ELEMENTS-673](https://jira.nuxeo.com/browse/ELEMENTS-673) Improves performance on lazy loading to not fetch already loaded documents
 - [ELEMENTS-701](https://jira.nuxeo.com/browse/ELEMENTS-701) Adds option to skip aggregation computation in nuxeo-page-provider for better performance.
-
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25038](https://jira.nuxeo.com/browse/NXP-25038)
+- [ELEMENTS-726](https://jira.nuxeo.com/browse/ELEMENTS-726) Improved document preview performance. {{since '2.3.3'}}
 
-#### UX improvements {{since '2.3.2'}}
+#### UX improvements
 
 Several UX improvements were added to Nuxeo Elements that impact Web UI 10.2:
 
-- [ELEMENTS-685](https://jira.nuxeo.com/browse/ELEMENTS-685) Removes background on image previewer and exposes it as an attribute for better visual.
-- [ELEMENTS-707](https://jira.nuxeo.com/browse/ELEMENTS-707) Improves requirement symbol on form's labels.
-- [ELEMENTS-666](https://jira.nuxeo.com/browse/ELEMENTS-666) Improves nuxeo-user-suggestion UI to make it non-ambiguous.
-- [ELEMENTS-622](https://jira.nuxeo.com/browse/ELEMENTS-622) Selection UI improved to be consistent in all view mode.
-- [ELEMENTS-687](https://jira.nuxeo.com/browse/ELEMENTS-687) Changes image previewer dragging behaviour to contain image on bounds.
-- [ELEMENTS-677](https://jira.nuxeo.com/browse/ELEMENTS-677) Changes blob delete action to distinguish from document trash.
+- [ELEMENTS-685](https://jira.nuxeo.com/browse/ELEMENTS-685) Removes background on image previewer and exposes it as an attribute for better visual. {{since '2.3.2'}}
+- [ELEMENTS-707](https://jira.nuxeo.com/browse/ELEMENTS-707) Improves requirement symbol on form's labels. {{since '2.3.2'}}
+- [ELEMENTS-666](https://jira.nuxeo.com/browse/ELEMENTS-666) Improves nuxeo-user-suggestion UI to make it non-ambiguous. {{since '2.3.2'}}
+- [ELEMENTS-622](https://jira.nuxeo.com/browse/ELEMENTS-622) Selection UI improved to be consistent in all view mode. {{since '2.3.2'}}
+- [ELEMENTS-687](https://jira.nuxeo.com/browse/ELEMENTS-687) Changes image previewer dragging behaviour to contain image on bounds. {{since '2.3.2'}}
+- [ELEMENTS-677](https://jira.nuxeo.com/browse/ELEMENTS-677) Changes blob delete action to distinguish from document trash. {{since '2.3.2'}}
+
+- [ELEMENTS-736](https://jira.nuxeo.com/browse/ELEMENTS-736) The date format is customizable in WebUI. {{since '2.3.3'}}
+- [ELEMENTS-740](https://jira.nuxeo.com/browse/ELEMENTS-740) Allow share link copied on click. {{since '2.3.3'}}
+- [ELEMENTS-703](https://jira.nuxeo.com/browse/ELEMENTS-703) Added a 100% zoom action on image preview. {{since '2.3.3'}}
 
 #### Update Nuxeo JS client dependency {{since '2.3.2'}}
 Adapts Element's tests for nuxeo js client 3.6.1
@@ -1019,14 +975,29 @@ Aggregation widgets can now be sorted by the label with the *sort-by-label* bool
 - [ELEMENTS-624](https://jira.nuxeo.com/browse/ELEMENTS-624) Exposes `rows` attribute in nuxeo-textarea element.
 - [ELEMENTS-610](https://jira.nuxeo.com/browse/ELEMENTS-610) Replaces video javascript library with browser native video element for to better support browsers.
 
-#### UX improvements {{since '2.3.3'}}
 
-[ELEMENTS-736](https://jira.nuxeo.com/browse/ELEMENTS-736) The date format is customizable in WebUI.
-- [ELEMENTS-740](https://jira.nuxeo.com/browse/ELEMENTS-740) Allow share link copied on click.
-- [ELEMENTS-703](https://jira.nuxeo.com/browse/ELEMENTS-703) Added a 100% zoom action on image preview.
+### Nuxeo AI {{> anchor 'nuxeo-ai-core'}}
 
-#### Elements improvements {{since '2.3.3'}}
-- [ELEMENTS-726](https://jira.nuxeo.com/browse/ELEMENTS-726) Improved document preview performance.
+#### Documents export for training {{since '10.3'}}
+In order to train a ML Custom Model with proper business data, there is the need to gather and process all the repository documents on the scope of the ML Custom Model.
+This provides a documents dataset export to AI cloud in TFRecord format.
+
+[NXP-25286](https://jira.nuxeo.com/browse/NXP-25286) Document reference to represent Corpus objects.
+[NXP-25295](https://jira.nuxeo.com/browse/NXP-25295) Brings a new Stream processor to transform documents to TFRecord.
+[NXP-25758](https://jira.nuxeo.com/browse/NXP-25758) Made a writer to produce a TFRecord from a collection of documents.
+[NXP-25294](https://jira.nuxeo.com/browse/NXP-25294) Enables a batch processing from an NXQL query and a list of properties to process.
+
+#### Integrate with AI Cloud {{since '10.3'}}
+Provides integration between the Nuxeo server and AI Cloud services to allow dataset exporte to AI Cloud, pushing defined document sets in an reliable and efficient way to be use in ML Custom Model Training.
+
+[NXP-25920](https://jira.nuxeo.com/browse/NXP-25920) Integrates a java client to enable Nuxeo to interact with AI Cloud Services.
+[NXP-26189](https://jira.nuxeo.com/browse/NXP-26189) Provides an Admin page to export dataset to AI Cloud services.
+
+#### Service for configuring and serve Custom Models  {{since '10.3'}}
+Provides the infrastructure to register, manage and serve ML Custom Models. This allows predition metadata and generate suggestions on the UI.
+
+[NXP-25477](https://jira.nuxeo.com/browse/NXP-25477) Adds operation to use all enabled Custom Models.
+[NXP-25476](https://jira.nuxeo.com/browse/NXP-25476) Adds a service to register Custom Models to be served.
 
 <!-- ### Nuxeo JSF UI -->
 
