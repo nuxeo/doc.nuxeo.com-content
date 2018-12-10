@@ -1042,6 +1042,25 @@ Nuxeo Server now integrates very well with Office Online via the implementation 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23174](https://jira.nuxeo.com/browse/NXP-23174).
 
+### Simflofy Connector
+
+A blob provider has been implemented for Simflofy, allowing to access from Nuxeo to any content that Simflofy knows how to federate.
+```
+<component name="com.nuxeo.simflofy.blob.provider.test" version="1.0.0">
+<extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
+  <blobprovider name="testSimflofy">
+    <class>com.nuxeo.simflofy.blob.SimflofyBlobProvider</class>
+    <property name="simflofy.url">http://localhost:8080/simflofy</property>
+    <property name="simflofy.username">admin</property>
+    <property name="simflofy.password">admin</property>
+  </blobprovider>
+</extension>
+</component>
+```
+The Nuxeo connector of Simflofy knows how to create such documents that reference binaries stored in legacy repositories.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24714](https://jira.nuxeo.com/browse/NXP-24714).
+
 ### Nuxeo Platform Importer
 
 #### Image and Video capabilities for the Nuxeo Stream Random Importer {{since '10.2'}}
