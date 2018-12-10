@@ -103,6 +103,14 @@ The support for [KMS keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/kms-u
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22949](https://jira.nuxeo.com/browse/NXP-22949).
 
+
+#### MySQL fulltext table with InnoDB {{since '10.3'}}
+
+Fulltext tables stored in MySQL/MariaDB now use InnoDB engine instead of MyISAM. InnoDB engine is more performant and allow to add foreign constraints on table's properties.
+You can change your current engine by following this [documentation](https://dev.mysql.com/doc/refman/8.0/en/converting-tables-to-innodb.html#innodb-convert-convert)
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-17479](https://jira.nuxeo.com/browse/NXP-17479).
+
  <!--- ### Core Events  -->
 
 ### Directory
@@ -267,6 +275,16 @@ Following evolutions on the trash service, the NXQL property `ecm:isTrashed` has
 <!--- ### Conversion -->
 
 <!--- ### Rendition -->
+### Suggestion Service {{since '10.3'}}
+
+The suggestion bar now uses match_phrase_prefix and is based on the following query:
+```
+SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.fulltext) OPERATOR(match_phrase_prefix) */ ecm:fulltext.dc:title LIKE '?' AND ecm:mixinType !=
+'HiddenInNavigation' AND ecm:isVersion = 0 AND
+ecm:isTrashed = 0 AND ecm:parentId IS NOT NULL
+```
+It is made more robust to plurals, etc.
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-18198](https://jira.nuxeo.com/browse/NXP-18198).
 
 ### Elasticsearch
 
@@ -275,6 +293,7 @@ Following evolutions on the trash service, the NXQL property `ecm:isTrashed` has
 Elasticsearch 6.3+ is now required. See upgrade instructions.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24102](https://jira.nuxeo.com/browse/NXP-24102).
+
 
 #### Support of X-Pack {{since '10.1'}}
 
