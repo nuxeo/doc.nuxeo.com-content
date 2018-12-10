@@ -519,6 +519,24 @@ A `KeyValueBlobTransientStore` can now specify the ids of the key/value store an
 ```
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24847](https://jira.nuxeo.com/browse/NXP-24847).
 
+### Authentication
+
+#### Stateless authentication with JWT tokens {{since '10.3'}}
+
+There is a new Java API to acquire a JWT token to authorize a user:
+```
+JWTService service = Framework.getService(JWTService.class);
+String token = service.newBuilder().build();
+```
+
+The builder can also be used to add specific claims in the token (only CLAIM_SUBJECT is meaningful to the authenticator for now) and a TTL.
+
+The token should then be propagated and passed by a third-party service wishing to connect to Nuxeo using the `Authorization: Bearer <token>` request header. As a compatibility fallback, the request query parameter `access_token` can also be used.
+
+This solution is compatible with cluster installations.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24734](https://jira.nuxeo.com/browse/NXP-24734).
+
 ### REST API
 
 #### Nuxeo Rest API Adapters are Now Overridable {{since '10.2'}}
@@ -813,7 +831,7 @@ Introduces new file-based document pill to allow annotations with Arender.
 
 #### Configuration service on Web UI {{since '10.3'}}
 
-Allowing a namespaced properties to configure Web UI. 
+Allowing a namespaced properties to configure Web UI.
 Properties can be marked as a list and if defined many times, values will be appended as comma separated values. You can override existing list property with the override attribute:
 ```
   <property name="nuxeo.list.value" list="true">foo</property>
@@ -883,8 +901,8 @@ This can be used by adding `skipAggregates=true` as a HTTP header when invoking 
 #### Performance audit system {{since '10.3'}}
 
 Added a performance audit system to measure key metrics.
-[NXP-25303](https://jira.nuxeo.com/browse/NXP-25303) Added performance [marks](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark) to key elements that can be displayed on the UI on demand. 
-[NXP-25414](https://jira.nuxeo.com/browse/NXP-25414) 
+[NXP-25303](https://jira.nuxeo.com/browse/NXP-25303) Added performance [marks](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark) to key elements that can be displayed on the UI on demand.
+[NXP-25414](https://jira.nuxeo.com/browse/NXP-25414)
 As relevant metrics we identified those already collected by the devtools of most browsers:
 
 - dom content loaded
@@ -909,7 +927,8 @@ We are also storing a set of custom performance marks and measurements, which ar
 - [measurement] `<page-name>.dom-changed`: a measurement between the moment in which the last `dom-change` event is fired from within the current page and the last `page-change` mark (or PerformanceTiming.fetchStart if `undefined`) - this is mostly helpful for development and debugging purposes
 We added these metrics to the performance analyzer added in NXP-25303. You can try these out by running:
 
-```Nuxeo.Performance.report({networkStats: true});```
+```Nuxeo.Performance.report({networkStats: true});
+```
 
 
 #### New Languages
@@ -979,7 +998,7 @@ Aggregation widgets can now be sorted by the label with the *sort-by-label* bool
 ### Nuxeo AI {{> anchor 'nuxeo-ai-core'}}
 
 #### Documents export for training {{since '10.3'}}
-In order to train a ML Custom Model with proper business data, there is the need to gather and process all the repository documents on the scope of the ML Custom Model. 
+In order to train a ML Custom Model with proper business data, there is the need to gather and process all the repository documents on the scope of the ML Custom Model.
 This provides a documents dataset export to AI cloud in TFRecord format.
 
 [NXP-25286](https://jira.nuxeo.com/browse/NXP-25286) Document reference to represent Corpus objects.
