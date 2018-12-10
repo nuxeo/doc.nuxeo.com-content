@@ -379,6 +379,25 @@ If set to `false`, the annotations are stored in a hidden folder. This folder is
 
 ### Comment Service
 
+#### REST API for the comment services {{since '10.3'}}
+New REST endpoints have been added for the comment service allowing on a document resource to post and retrieve comments. A comment has the following JSON representation:
+```
+{
+  "id": "00000000-0000-0000-0000-000000000000", // comment id
+  "documentId": "00000000-0000-0000-0000-000000000000", // commented document model id
+  "author": "Joe",
+  "text": "A comment example",
+  "creationdDate": "1970-01-01T00:00:00Z",
+  "modificationDate": "1970-01-01T00:00:00Z",
+  "entityId": "...", // the entity id in external system (present when comment is created from another system)
+  "origin": "...", // the entity origin (present when comment is created from another system)
+  "entity": "..." // the serialized external entity (present when comment is created from another system)
+}
+```
+See details about the endpoints on the linked ticket.
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24746](https://jira.nuxeo.com/browse/NXP-24746).
+
+
 #### New Method for Creating an Answer at a Specific Place {{since '10.2'}}
 
 - API in `CommentManager` is able to create sub-comments in a specific location
