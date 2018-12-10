@@ -346,8 +346,14 @@ will take the most frequent terms of the title and description of document 1234 
 </br>
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25315](https://jira.nuxeo.com/browse/NXP-25315).
 
+### Tag Service
 
-<!--- ### Tag Service  -->
+#### Sanitization {{since '10.3'}}
+
+A new configuration property `nuxeo.tag.sanitization.enabled` has been added to enable/disable tag sanitization (true by default).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25035](https://jira.nuxeo.com/browse/NXP-25035).
+
 ### Bulk service {{since '10.2'}}
 
 The BulkService is a new Nuxeo Platform service that allows to persist a document set homogenous to an NXQL query (and in the future to a page provider) so as to process an "action" on each of the documents. The service allows to get a status on a given "Bulk". It is possible to remotely start a bulk using the `Bulk.RunAction` operation that accepts as a parameter the name of the action and an NXQL query for specifying the list of documents on which to run the bulk. A first `Action` has been implemented `SetProperty` that allows to bulk set a some properties values on a set of documents. Actions can be contributed via an extension point.
@@ -558,7 +564,7 @@ This solution is compatible with cluster installations.
 
 #### SAML: time skew support{{since '10.2'}}
 
-This introduces a new `nuxeo.saml2.skewTimeMs` configuration property to control the clock skew in milliseconds. Default value is 60 * 1000 (1 minute).
+A new `nuxeo.saml2.skewTimeMs` configuration property to control the clock skew in milliseconds has bene introduced. Default value is 60 * 1000 (1 minute).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24766](https://jira.nuxeo.com/browse/NXP-24766).
 
@@ -595,7 +601,6 @@ Atomic increment:
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23745](https://jira.nuxeo.com/browse/NXP-23745).
 
 ### Packaging / Distribution / Miscellaneous
-
 
 #### Java 11 Support {{since '10.3'}}
 
