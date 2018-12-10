@@ -413,6 +413,12 @@ Typing "John" still returns the "John Doe" user and possibly other users such as
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24583](https://jira.nuxeo.com/browse/NXP-24583).
 
+
+#### New APIs with Query Builder support for more complex queries
+In order to remove any post filtering actions, the usermanager component now makes use of the new directory filtering capabilities. Two new apis have been added that takes into account the QueryBuilder object that can be passed for defining the search criteria.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-19264](https://jira.nuxeo.com/browse/NXP-19264).
+
 ### Batch upload
 
 #### Optimised Multipart/Form Upload {{since '10.2'}}
