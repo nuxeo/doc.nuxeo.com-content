@@ -533,6 +533,16 @@ Atomic increment:
 
 ### Packaging / Distribution / Miscellaneous
 
+#### nuxeoctl register --offline
+
+It is now possible to register offline a new instance from the terminal with the following command, that will then start a command line wizard:
+
+```nuxeoctl register --offline
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23815](https://jira.nuxeo.com/browse/NXP-23815).
+
+
 #### HSTS Policy {{since '10.1'}}
 
 The HSTS header is enabled by default when HTTPS is in use. It forces only HTTPS requests.
