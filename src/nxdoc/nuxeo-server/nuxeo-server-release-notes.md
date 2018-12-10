@@ -546,6 +546,15 @@ The Nuxeo Platform now uses version 1.11.323 of the Amazon SDK. This notably all
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24981](https://jira.nuxeo.com/browse/NXP-24981).
 
+####  Log4J 2 {{since '10.3'}}
+
+Nuxeo now uses Log4j 2 as its logging backend instead of Log4j.
+Two logging APIs are generally available in Nuxeo:
+- Commons Logging
+- Log4j 2 API
+SLF4J is still available, but Log4j 2 API are preferred by reason of its lambda support.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23863](https://jira.nuxeo.com/browse/NXP-23863).
 
 #### JSON output for Log4J {{since '10.2'}}
 
