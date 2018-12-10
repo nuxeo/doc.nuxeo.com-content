@@ -50,6 +50,12 @@ It is now possible to get the closest document's ancestor of a document using th
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24282](https://jira.nuxeo.com/browse/NXP-24282)
 
+#### New hasContent enricher {{since '10.3'}}
+
+The enricher hasContent adds a boolean property "hasContent" so as to let the client knows if there are children for the given node saving one call when trying to build hierachical navigation.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24298](https://jira.nuxeo.com/browse/NXP-24298)
+
 #### No Mention of the Repository on a Document Reference {{since '10.2'}}
 
 When referencing a document in a property, we don't need anymore to store the repository id. If the repository id is not there, the same as the referencing document is chosen.
