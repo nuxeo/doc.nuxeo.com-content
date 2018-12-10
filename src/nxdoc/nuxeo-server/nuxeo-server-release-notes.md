@@ -367,6 +367,7 @@ If set to `false`, the annotations are stored in a hidden folder. This folder is
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24863](https://jira.nuxeo.com/browse/NXP-24863).
 
+
 ### Automation
 
 #### More Java Objects in Automation Scripting {{since '10.2'}}
@@ -881,7 +882,8 @@ We are also storing a set of custom performance marks and measurements, which ar
 - [measurement] `<page-name>.dom-changed`: a measurement between the moment in which the last `dom-change` event is fired from within the current page and the last `page-change` mark (or PerformanceTiming.fetchStart if `undefined`) - this is mostly helpful for development and debugging purposes
 We added these metrics to the performance analyzer added in NXP-25303. You can try these out by running:
 
-```Nuxeo.Performance.report({networkStats: true});```
+```Nuxeo.Performance.report({networkStats: true});
+```
 
 #### Performance improvements {{since '10.3'}}
 
@@ -994,6 +996,13 @@ Integrated with Web UI upload with real time upload progress. For 10.2 we have a
 A first implementation of the ARender SPI bridge has been done so as to be able to preview content stored in Nuxeo using the [Arender previewer](https://arender.io/). It allows to preview and annotate content, may it be an office file, an image or a video. A first integration to Web UI is done in the addon, the Arender previewer appears in a new "annotations" tab. Deeper integration will be done in the future. Also, in 10.3, comments made for a given annotation will be synced with Nuxeo Comments. A package is available on the marketplace.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24104](https://jira.nuxeo.com/browse/NXP-24104).
+
+### MS Office 356 Integration: WOPI Implementation
+
+Nuxeo Server now integrates very well with Office Online via the implementation of the WOPI endpoints. It is now possible to "open" a document stored in Nuxeo via Office 365. The Nuxeo document will be consistently locked and unlocked. Document will be versioned according the centralized versioning policy of Nuxeo. The action remains compatible with the multi-users editing capability of Office 365 Online. The feature has been designed for being able to edit content stored in any binary property of the repository.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23174](https://jira.nuxeo.com/browse/NXP-23174).
+
 
 ### Nuxeo Platform Importer
 
