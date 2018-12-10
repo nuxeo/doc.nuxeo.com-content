@@ -103,6 +103,14 @@ The support for [KMS keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/kms-u
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22949](https://jira.nuxeo.com/browse/NXP-22949).
 
+
+#### MySQL fulltext table with InnoDB {{since '10.3'}}
+
+Fulltext tables stored in MySQL/MariaDB now use InnoDB engine instead of MyISAM. InnoDB engine is more performant and allow to add foreign constraints on table's properties.
+You can change your current engine by following this [documentation](https://dev.mysql.com/doc/refman/8.0/en/converting-tables-to-innodb.html#innodb-convert-convert)
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-17479](https://jira.nuxeo.com/browse/NXP-17479).
+
  <!--- ### Core Events  -->
 
 ### Directory
@@ -267,6 +275,16 @@ Following evolutions on the trash service, the NXQL property `ecm:isTrashed` has
 <!--- ### Conversion -->
 
 <!--- ### Rendition -->
+### Suggestion Service {{since '10.3'}}
+
+The suggestion bar now uses match_phrase_prefix and is based on the following query:
+```
+SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.fulltext) OPERATOR(match_phrase_prefix) */ ecm:fulltext.dc:title LIKE '?' AND ecm:mixinType !=
+'HiddenInNavigation' AND ecm:isVersion = 0 AND
+ecm:isTrashed = 0 AND ecm:parentId IS NOT NULL
+```
+It is made more robust to plurals, etc.
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-18198](https://jira.nuxeo.com/browse/NXP-18198).
 
 ### Elasticsearch
 
@@ -275,6 +293,7 @@ Following evolutions on the trash service, the NXQL property `ecm:isTrashed` has
 Elasticsearch 6.3+ is now required. See upgrade instructions.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24102](https://jira.nuxeo.com/browse/NXP-24102).
+
 
 #### Support of X-Pack {{since '10.1'}}
 
@@ -792,7 +811,7 @@ Brings small improvements on Document Comparison UI/UX.
 
 #### Configuration service on Web UI {{since '10.3'}}
 
-Allowing a namespaced properties to configure Web UI. 
+Allowing a namespaced properties to configure Web UI.
 Properties can be marked as a list and if defined many times, values will be appended as comma separated values. You can override existing list property with the override attribute:
 ```
   <property name="nuxeo.list.value" list="true">foo</property>
@@ -811,8 +830,8 @@ We then put properties namespaced with `org.nuxeo.web.ui` into the `Nuxeo.UI.con
 #### Performance audit system {{since '10.3'}}
 
 Added a performance audit system to measure key metrics.
-[NXP-25303](https://jira.nuxeo.com/browse/NXP-25303) Added performance [marks](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark) to key elements that can be displayed on the UI on demand. 
-[NXP-25414](https://jira.nuxeo.com/browse/NXP-25414) 
+[NXP-25303](https://jira.nuxeo.com/browse/NXP-25303) Added performance [marks](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark) to key elements that can be displayed on the UI on demand.
+[NXP-25414](https://jira.nuxeo.com/browse/NXP-25414)
 As relevant metrics we identified those already collected by the devtools of most browsers:
 
 - dom content loaded
