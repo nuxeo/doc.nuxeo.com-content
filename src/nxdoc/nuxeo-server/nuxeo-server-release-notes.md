@@ -556,6 +556,12 @@ This solution is compatible with cluster installations.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24734](https://jira.nuxeo.com/browse/NXP-24734).
 
+#### SAML: time skew support{{since '10.2'}}
+
+This introduces a new `nuxeo.saml2.skewTimeMs` configuration property to control the clock skew in milliseconds. Default value is 60 * 1000 (1 minute).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24766](https://jira.nuxeo.com/browse/NXP-24766).
+
 ### REST API
 
 #### Nuxeo Rest API Adapters are Now Overridable {{since '10.2'}}
