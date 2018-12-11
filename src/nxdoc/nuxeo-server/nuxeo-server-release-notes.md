@@ -31,7 +31,6 @@ As an example, here is the AvroComponent written [before](https://github.com/nux
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25186](https://jira.nuxeo.com/browse/NXP-25186)
 
-
 ### Core Repository
 
 #### Trash, Untrash and EmptyTrash Operations {{since '10.1'}}
@@ -362,9 +361,13 @@ A new configuration property `nuxeo.tag.sanitization.enabled` has been added to 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25035](https://jira.nuxeo.com/browse/NXP-25035).
 
-### Bulk service {{since '10.2'}}
+### Bulk  Service (aka "Bulk Action Framework"){{since '10.2'}}
 
-The BulkService is a new Nuxeo Platform service that allows to persist a document set homogenous to an NXQL query (and in the future to a page provider) so as to process an "action" on each of the documents. The service allows to get a status on a given "Bulk". It is possible to remotely start a bulk using the `Bulk.RunAction` operation that accepts as a parameter the name of the action and an NXQL query for specifying the list of documents on which to run the bulk. A first `Action` has been implemented `SetProperty` that allows to bulk set a some properties values on a set of documents. Actions can be contributed via an extension point.
+The BulkService is a new Nuxeo Platform service that allows to persist a document set homogenous to an NXQL query (and in the future to a page provider) so as to process an "action" on each of the documents. The service allows to get a status on a given "Bulk". It is possible to remotely start a bulk using the `Bulk.RunAction` operation that accepts as a parameter the name of the action and an NXQL query for specifying the list of documents on which to run the bulk. Actions can be contributed via an extension point. [A few actions](https://doc.nuxeo.com/nxdoc/bulk-actions-directory/) are already available such as:
+- `setProperties` that allows to bulk set a some properties values on a set of documents.
+- `automation` that allows to execute an automation chain or script on the set of documents
+- `csvExport` that allows to export in CSV the content of the repository.
+
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-24837](https://jira.nuxeo.com/browse/NXP-24837), [NXP-25060](https://jira.nuxeo.com/browse/NXP-25060) and [NXP-25097](https://jira.nuxeo.com/browse/NXP-25097).
 
