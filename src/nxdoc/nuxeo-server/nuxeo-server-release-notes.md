@@ -1353,6 +1353,11 @@ The features to use (and sent to the provider) are no more checked against a pre
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24499](https://jira.nuxeo.com/browse/NXP-24499).
 
+#### Amazon Implementation does a fallback on environment variables AWS Services configuration keys {{since '10.3'}}
+
+If the keys are not set in nuxeo.conf a lookup is made in the environment. 
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25596](https://jira.nuxeo.com/browse/NXP-25596).
+
 ### Nuxeo Quota
 
 #### Operation to Recompute Partially Quotas {{since '10.1'}}
