@@ -562,7 +562,17 @@ This solution is compatible with cluster installations.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24734](https://jira.nuxeo.com/browse/NXP-24734).
 
-#### SAML: time skew support{{since '10.2'}}
+#### SAML Authentication working with LDAP directories {{since '10.3'}}
+
+Two new parameters are now available when configuring SAML authentication plugin:
+- `userResolverCreateIfNeeded` to create the user if it does not exist in the repository (default value is true)
+- `userResolverUpdate` to update the user if present in the repository (default is value true)
+When set to true, both parameters require a user directory that is not read-only. They should be set to false with readonly directories.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25062](https://jira.nuxeo.com/browse/NXP-25062).
+
+
+#### SAML: time skew support {{since '10.2'}}
 
 A new `nuxeo.saml2.skewTimeMs` configuration property to control the clock skew in milliseconds has bene introduced. Default value is 60 * 1000 (1 minute).
 
@@ -666,7 +676,7 @@ A check on the presence of a JDK per is enforced at startup in nuxeoctl
 mp-listall command has been optimized by listing only relevant packages for the version of the Nuxeo server it is run on.
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22520](https://jira.nuxeo.com/browse/NXP-22520).
 
-#### Tomcat upload time configurable
+#### Tomcat upload time configurable {{since '10.3'}}
 
 Default Tomcat `connectionUploadTimeout` has been set to 1 min and is now configurable in `nuxeo.conf`.
 
