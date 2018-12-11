@@ -680,6 +680,13 @@ Atomic increment:
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23745](https://jira.nuxeo.com/browse/NXP-23745).
 
+### CSV Export Service {{since '10.3'}}
+
+A new service has been added for performing CSV Exports. It is exposed via the Bulk Action Framework as an action (`csvExport`). It provides ability to select schemas and/or XPath properties that should be exported, as well as a few of options, zip, sort and the language in which the vocabularies should be translated at export time. Since it relies on the Bulk Action Framework, it is robust enough to export asynchroneously hundreds of thousands of lines without any difficulties.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25571](https://jira.nuxeo.com/browse/NXP-25571).
+
+
 ### AWS Service {{since '10.3'}}
 
 A new service has been added to retrieve credentials and other configurations information.
@@ -692,6 +699,8 @@ Two new methods are then available to retrieve the information in the code:
 - `NuxeoAWSRegionProvider.getInstance().getRegion()`
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25075](https://jira.nuxeo.com/browse/NXP-25075.
+
+
 
 ### Packaging / Distribution / Miscellaneous
 
