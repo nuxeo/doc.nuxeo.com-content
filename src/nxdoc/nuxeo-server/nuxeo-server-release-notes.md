@@ -377,8 +377,9 @@ It is possible to run a bulk command on a page provider using the REST API:
 | POST| `/nuxeo/api/v1/search/pp/{pageProviderName}/bulk/{actionId}` | Bulk action parameters | Bulk action status|
 | POST| `/nuxeo/api/v1/search/saved/{savedSearchId}/bulk/{actionId}` | Bulk action parameters | Bulk action status|
 
+The Bulk Service uses Avro for encoding all its messages in Nuxeo Streams.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-24837](https://jira.nuxeo.com/browse/NXP-24837), [NXP-25060](https://jira.nuxeo.com/browse/NXP-25060) and [NXP-25097](https://jira.nuxeo.com/browse/NXP-25097), [NXP-25249](https://jira.nuxeo.com/browse/NXP-25249), [NXP-25250](https://jira.nuxeo.com/browse/NXP-25250).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-24837](https://jira.nuxeo.com/browse/NXP-24837), [NXP-25060](https://jira.nuxeo.com/browse/NXP-25060) and [NXP-25097](https://jira.nuxeo.com/browse/NXP-25097), [NXP-25249](https://jira.nuxeo.com/browse/NXP-25249), [NXP-25250](https://jira.nuxeo.com/browse/NXP-25250), [NXP-25301](https://jira.nuxeo.com/browse/NXP-25301).
 
 ### Annotations Service
 
