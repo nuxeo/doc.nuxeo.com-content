@@ -418,8 +418,6 @@ In order to integrate with external collaboration tools, a new generic external 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25070](https://jira.nuxeo.com/browse/NXP-25070).
 
-
-
 ### Automation
 
 #### More Java Objects in Automation Scripting {{since '10.2'}}
@@ -1087,11 +1085,11 @@ Integrated with Web UI upload with real time upload progress. For 10.2 we have a
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24490](https://jira.nuxeo.com/browse/NXP-24490) and [NXP-24748](https://jira.nuxeo.com/browse/NXP-24748).
 
-### ARender Connector and Document, Image, Video Annotations {{since '10.2'}}
+### Document, Image, Video Annotations with ARender Connector {{since '10.2'}}
 
-A first implementation of the ARender SPI bridge has been done so as to be able to preview content stored in Nuxeo using the [Arender previewer](https://arender.io/). It allows to preview and annotate content, may it be an office file, an image or a video. A first integration to Web UI is done in the addon, the Arender previewer appears in a new "annotations" tab. Deeper integration will be done in the future. Also, comments made for a given annotation are synced with Nuxeo Comments. A package is available on the marketplace.
+A first implementation of the ARender SPI bridge has been done so as to be able to preview content stored in Nuxeo using the [Arender previewer](https://arender.io/). It allows to preview and annotate content, may it be an office file, an image or a video. A first integration to Web UI is done in the addon, the Arender previewer appears in a new "annotations" tab.  Also, comments made for a given annotation are synced with Nuxeo Comments. Deeper integration will be done in the future. The connector also exposes an operation for getting an URL that will open a diff view of binary content (`Document.ARenderGetDiffUrl`). A package is available on the marketplace.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24104](https://jira.nuxeo.com/browse/NXP-24104) and [NXP-24724](https://jira.nuxeo.com/browse/NXP-24724).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24104](https://jira.nuxeo.com/browse/NXP-24104),[NXP-24724](https://jira.nuxeo.com/browse/NXP-24724) and [NXP-25071](https://jira.nuxeo.com/browse/NXP-25071).
 
 ### MS Office 356 Integration: WOPI Implementation
 
