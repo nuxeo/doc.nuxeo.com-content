@@ -218,6 +218,12 @@ Note that you should not change the codec of an existing stream (Kafka Topic or 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22597](https://jira.nuxeo.com/browse/NXP-22597) and [NXP-24324](https://jira.nuxeo.com/browse/NXP-24324)
 
+#### Avro Confluent Support {{since '10.3'}}
+
+You can now use Avro Confluent format which is slightly different than the Avro format. It allows to use tools from Confluence, and to query the messages using the `KSQL`.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25538](https://jira.nuxeo.com/browse/NXP-25538).
+
 #### Kafka 2.0 {{since '10.3'}}
 
 The Nuxeo Platform now relies on Kafka 2.0
