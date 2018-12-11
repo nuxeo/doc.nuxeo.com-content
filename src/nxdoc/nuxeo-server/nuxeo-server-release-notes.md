@@ -123,6 +123,11 @@ The support for [KMS keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/kms-u
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22949](https://jira.nuxeo.com/browse/NXP-22949).
 
+#### Compatibility of the S3 Blob Provider with DELL ECS and "pathStyleAccess" S3 option {{since '10.3'}}
+
+Some binary managers S3 compatible require a specific URL which format is now handled by our S3 Blob Provider.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25525](https://jira.nuxeo.com/browse/NXP-25525).
 
 #### MySQL fulltext table with InnoDB {{since '10.3'}}
 
