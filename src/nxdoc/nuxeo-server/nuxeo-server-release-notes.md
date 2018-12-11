@@ -383,7 +383,7 @@ It is possible to run a bulk command on a page provider using the REST API:
 | POST| `/nuxeo/api/v1/search/pp/{pageProviderName}/bulk/{actionId}` | Bulk action parameters | Bulk action status|
 | POST| `/nuxeo/api/v1/search/saved/{savedSearchId}/bulk/{actionId}` | Bulk action parameters | Bulk action status|
 
-The Bulk Service uses Avro for encoding all its messages in Nuxeo Streams.
+The Bulk Service uses Avro for encoding all its messages in Nuxeo Streams. Computations are used for performing the actions which means that all Bulk service commands benefit from a batching and retry policy, configurable.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-24837](https://jira.nuxeo.com/browse/NXP-24837), [NXP-25060](https://jira.nuxeo.com/browse/NXP-25060) and [NXP-25097](https://jira.nuxeo.com/browse/NXP-25097), [NXP-25249](https://jira.nuxeo.com/browse/NXP-25249), [NXP-25250](https://jira.nuxeo.com/browse/NXP-25250), [NXP-25301](https://jira.nuxeo.com/browse/NXP-25301).
 
@@ -1118,7 +1118,13 @@ Provides the infrastructure to register, manage and serve ML Custom Models. This
 
 ### Nuxeo JSF UI
 
-#### Back to GWT annotations
+#### Hebrew translation {{since '10.3'}}
+
+The JSF application has been translated in Hebrew.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25110](https://jira.nuxeo.com/browse/NXP-25110)
+
+#### Back to GWT annotations {{since '10.3'}}
 The legacy annotations module that had been withdrawn is actually back and can be enabled by setting the `nuxeo.old.jsf.preview` property to true.
 
 ```
@@ -1126,6 +1132,8 @@ The legacy annotations module that had been withdrawn is actually back and can b
   <property name="nuxeo.old.jsf.preview">true</property>
 </extension>
 ```
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25110](https://jira.nuxeo.com/browse/NXP-25110)
+
 ### Amazon S3 Direct Upload for Web UI {{since '10.1'}}
 
 New add-on to upload using AWS S3 infrastructure with support for multipart. Allows future integration of other providers.
