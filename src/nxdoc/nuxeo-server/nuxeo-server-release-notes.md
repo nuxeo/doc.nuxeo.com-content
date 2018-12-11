@@ -218,11 +218,11 @@ Note that you should not change the codec of an existing stream (Kafka Topic or 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22597](https://jira.nuxeo.com/browse/NXP-22597) and [NXP-24324](https://jira.nuxeo.com/browse/NXP-24324)
 
-#### Kafka 1.1 {{since '10.2'}}
+#### Kafka 2.0 {{since '10.3'}}
 
-The Nuxeo Platform now relies on Kafka 1.1.
+The Nuxeo Platform now relies on Kafka 2.0
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25087](https://jira.nuxeo.com/browse/NXP-25087).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25600](https://jira.nuxeo.com/browse/NXP-25600).
 
 #### Stream Computations Use Watermark {{since '10.2'}}
 
