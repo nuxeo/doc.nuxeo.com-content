@@ -412,6 +412,13 @@ See details about the endpoints on the linked ticket.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24863](https://jira.nuxeo.com/browse/NXP-24863).
 
+#### External Comment entity facet
+
+In order to integrate with external collaboration tools, a new generic external comment facet has been added to the Comments addon, that allows to deal with comments that are managed by external systems: reference them and even serialise their content. This has been designed for now within the scope of the ARender integration.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25070](https://jira.nuxeo.com/browse/NXP-25070).
+
+
 
 ### Automation
 
