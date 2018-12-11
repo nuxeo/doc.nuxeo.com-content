@@ -622,7 +622,7 @@ Atomic increment:
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23745](https://jira.nuxeo.com/browse/NXP-23745).
 
-### AWS Service
+### AWS Service {{since '10.3'}}
 
 A new service has been added to retrieve credentials and other configurations information.
 A template `aws` is available, to define the AWS configuration. When activated (which is automatically done by the marketplace-amazon-s3 package), the following `nuxeo.conf` properties are available:
@@ -1089,7 +1089,18 @@ Provides the infrastructure to register, manage and serve ML Custom Models. This
 [NXP-25477](https://jira.nuxeo.com/browse/NXP-25477) Adds operation to use all enabled Custom Models.
 [NXP-25476](https://jira.nuxeo.com/browse/NXP-25476) Adds a service to register Custom Models to be served.
 
-<!-- ### Nuxeo JSF UI -->
+### Nuxeo JSF UI
+
+#### Back to GWT annotations
+
+The legacy annotations module that had been withdrawn is actually back and can be enabled by setting the `nuxeo.old.jsf.preview` property to true.
+
+```
+<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+  <property name="nuxeo.old.jsf.preview">true</property>
+</extension>
+```
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25110](https://jira.nuxeo.com/browse/NXP-25110).
 
 ### Amazon S3 Direct Upload for Web UI {{since '10.1'}}
 
