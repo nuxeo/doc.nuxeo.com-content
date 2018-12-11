@@ -22,7 +22,15 @@ We also provide [instructions for upgrading]({{page version='' space='nxdoc' pag
 
 ## Nuxeo Server
 
-<!--- ### Runtime  -->
+### Runtime
+
+#### New Descriptor Interface {{since '10.3'}}
+
+A Descriptor interface has been added, such that all descriptors implementing it will be automatically registered and unregistered in the targeted component, saving lots of boilerplate code and pushing towards a standardization of the contribution registration behaviours.
+As an example, here is the AvroComponent written [before](https://github.com/nuxeo/nuxeo/blob/10.2-SNAPSHOT/nuxeo-runtime/nuxeo-runtime-stream/src/main/java/org/nuxeo/runtime/avro/AvroComponent.java) and [after](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-runtime/nuxeo-runtime-stream/src/main/java/org/nuxeo/runtime/avro/AvroComponent.java). 214 locs became 131, 4 inner classes removed, 2 full methods removed, 83 less useless locs, and a standardized and reliable code.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25186](https://jira.nuxeo.com/browse/NXP-25186)
+
 
 ### Core Repository
 
@@ -1092,7 +1100,6 @@ Provides the infrastructure to register, manage and serve ML Custom Models. This
 ### Nuxeo JSF UI
 
 #### Back to GWT annotations
-
 The legacy annotations module that had been withdrawn is actually back and can be enabled by setting the `nuxeo.old.jsf.preview` property to true.
 
 ```
@@ -1100,8 +1107,6 @@ The legacy annotations module that had been withdrawn is actually back and can b
   <property name="nuxeo.old.jsf.preview">true</property>
 </extension>
 ```
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25110](https://jira.nuxeo.com/browse/NXP-25110).
-
 ### Amazon S3 Direct Upload for Web UI {{since '10.1'}}
 
 New add-on to upload using AWS S3 infrastructure with support for multipart. Allows future integration of other providers.
