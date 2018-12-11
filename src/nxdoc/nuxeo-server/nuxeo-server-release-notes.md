@@ -561,7 +561,13 @@ When uploading content to Nuxeo using the multi-part/form-data way, no useless c
 
 <!--- ### Redis -->
 
-<!--- ### Key Value Store -->
+### Key Value Store
+
+#### KeyValue Store and Lock Manager on MongoDB  for MongoDB template  {{since '10.3'}}
+
+The MongoDB template now makes use by default of the MongoDB implementations for the KeyValue store and the Lock Manager.
+
+ <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25617](https://jira.nuxeo.com/browse/NXP-25617).
 
 ### OAuth
 
@@ -731,7 +737,18 @@ It is now possible to register offline a new instance from the terminal with the
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23815](https://jira.nuxeo.com/browse/NXP-23815).
 
-#### Enabling Dev mode from the wizard
+#### Reporting metrics to StatsD {{since '10.3'}}
+
+It is possible to send Nuxeo metrics to StatsD [More about StatsD](https://www.datadoghq.com/blog/statsd/) just by configuration.
+```
+metrics.statsd.enabled=true
+# report every 15s
+metrics.statsd.period=15
+metrics.statsd.host=my-statd-server
+metrics.statsd.port=8125
+```
+
+#### Enabling Dev mode from the wizard {{since '10.3'}}
 
 It is now possible to enable the dev (necessary to perform a hotreload with the browser extension) from the wizard.
 
