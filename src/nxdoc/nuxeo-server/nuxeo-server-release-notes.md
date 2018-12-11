@@ -155,6 +155,7 @@ Multi-tenant addon now supports tenant-isolated directories with MongoDB
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22682](https://jira.nuxeo.com/browse/NXP-22682)
 
+
 #### Same Directory Entry ID on Different Tenants {{since '10.2'}}
 
 Unicity check on directory entry has been moved post tenant-specific computation, so that same end user id can be used in two different tenants.
@@ -698,6 +699,13 @@ It is now possible to register offline a new instance from the terminal with the
 ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23815](https://jira.nuxeo.com/browse/NXP-23815).
+
+#### Enabling Dev mode from the wizard
+
+It is now possible to enable the dev (necessary to perform a hotreload with the browser extension) from the wizard.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25508](https://jira.nuxeo.com/browse/NXP-25508).
+
 
 
 #### HSTS Policy {{since '10.1'}}
