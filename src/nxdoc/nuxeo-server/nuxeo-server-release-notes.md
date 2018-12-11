@@ -422,6 +422,15 @@ If set to `false`, the annotations are stored in a hidden folder. This folder is
 
 ### Comment Service
 
+#### New implementation {{since '10.3'}}
+The comment service no more makes use of the relation service. Comments now own:
+- highest commented document id
+- parent comment id (if exists)
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25425](https://jira.nuxeo.com/browse/NXP-25425).
+
+
+
 #### REST API for the comment services {{since '10.3'}}
 New REST endpoints have been added for the comment service allowing on a document resource to post and retrieve comments. A comment has the following JSON representation:
 ```
