@@ -378,6 +378,12 @@ will take the most frequent terms of the title and description of document 1234 
 </br>
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25315](https://jira.nuxeo.com/browse/NXP-25315).
 
+#### Audit and UID indexes configured in translog async
+
+By default translog are commited per request, configuring them with the async option relieves a lot the stress on the hard drives. This behaviour is now applied to all indexes: repository, audit and uid, when option `elasticsearch.index.translog.durability=async` is set in nuxeo.conf.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25587](https://jira.nuxeo.com/browse/NXP-25587).
+
 ### Tag Service
 
 #### Sanitization {{since '10.3'}}
