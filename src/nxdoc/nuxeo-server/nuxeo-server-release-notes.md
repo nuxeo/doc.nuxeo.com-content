@@ -622,6 +622,19 @@ Atomic increment:
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23745](https://jira.nuxeo.com/browse/NXP-23745).
 
+### AWS Service
+
+A new service has been added to retrieve credentials and other configurations information.
+A template `aws` is available, to define the AWS configuration. When activated (which is automatically done by the marketplace-amazon-s3 package), the following `nuxeo.conf` properties are available:
+nuxeo.aws.accessKeyId
+nuxeo.aws.secretKey
+nuxeo.aws.region
+Two new methods are then available to retrieve the information in the code:
+- `NuxeoAWSCredentialsProvider.getInstance()`
+- `NuxeoAWSRegionProvider.getInstance().getRegion()`
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25075](https://jira.nuxeo.com/browse/NXP-25075.
+
 ### Packaging / Distribution / Miscellaneous
 
 #### Java 11 Support {{since '10.3'}}
@@ -905,6 +918,7 @@ We then put properties namespaced with `org.nuxeo.web.ui` into the `Nuxeo.UI.con
 [NXP-25512](https://jira.nuxeo.com/browse/NXP-25512) Allows to override/extend fetch properties and enrichers used to browse a document.
 
 
+
 #### UX improvements
 
 Several UX improvements were added to Web UI:
@@ -987,7 +1001,6 @@ We added these metrics to the performance analyzer added in NXP-25303. You can t
 
 ```Nuxeo.Performance.report({networkStats: true});
 ```
-
 
 #### New Languages
 
@@ -1089,7 +1102,7 @@ Integrated with Web UI upload with real time upload progress. For 10.2 we have a
 
 A first implementation of the ARender SPI bridge has been done so as to be able to preview content stored in Nuxeo using the [Arender previewer](https://arender.io/). It allows to preview and annotate content, may it be an office file, an image or a video. A first integration to Web UI is done in the addon, the Arender previewer appears in a new "annotations" tab.  Also, comments made for a given annotation are synced with Nuxeo Comments. Deeper integration will be done in the future. The connector also exposes an operation for getting an URL that will open a diff view of binary content (`Document.ARenderGetDiffUrl`). A package is available on the marketplace.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24104](https://jira.nuxeo.com/browse/NXP-24104),[NXP-24724](https://jira.nuxeo.com/browse/NXP-24724) and [NXP-25071](https://jira.nuxeo.com/browse/NXP-25071).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24104](https://jira.nuxeo.com/browse/NXP-24104),[NXP-24724](https://jira.nuxeo.com/browse/NXP-24724) and [NXP-25071](https://jira.nuxeo.com/browse/NXP-25071) ({{since '10.3'}}).
 
 ### MS Office 356 Integration: WOPI Implementation
 
