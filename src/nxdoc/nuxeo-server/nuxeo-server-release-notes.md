@@ -576,6 +576,13 @@ A new `nuxeo.saml2.skewTimeMs` configuration property to control the clock skew 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24532](https://jira.nuxeo.com/browse/NXP-24532).
 
+#### Nuxeo REST API now consumes application/json
+
+The REST API now produces and consumes only application/json as content type. `application/json+nxentity` is now never returned as content type response; the server does not expect it as content type request.
+- application/json+nxrequest content type should not be used anymore. It still works but it's deprecated server side. application/json should be used instead when POSTing to automation.
+application/json+esentity which was never used has also been removed.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25036](https://jira.nuxeo.com/browse/NXP-25036).
 
 #### ManagedBlob Decoder {{since '10.2'}}
 
