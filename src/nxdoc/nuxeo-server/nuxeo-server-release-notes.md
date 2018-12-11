@@ -1376,6 +1376,13 @@ As a consequence, the user might not have the video info in the UI immediately a
 
 ### Nuxeo Vision
 
+#### Support to detect unsafe content with AWS Rekognition {{since '10.3'}}
+
+Using the feature "SAFE_SEARCH_DETECTION" is now possible with the Amazon implementation of Nuxeo Vision.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25646](https://jira.nuxeo.com/browse/NXP-25646).
+
+
 #### All Backend Service features can be leveraged in Nuxeo Vision {{since '10.2'}}
 
 The features to use (and sent to the provider) are no more checked against a predefined list. This allows to use any new feature available without waiting for an update of the plugin. After using such new feature, the caller should use the getNativeObject method and handle the results based on the provider's documentation.
