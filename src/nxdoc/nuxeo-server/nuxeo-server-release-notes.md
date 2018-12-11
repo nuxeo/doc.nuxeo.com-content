@@ -666,6 +666,12 @@ A check on the presence of a JDK per is enforced at startup in nuxeoctl
 mp-listall command has been optimized by listing only relevant packages for the version of the Nuxeo server it is run on.
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22520](https://jira.nuxeo.com/browse/NXP-22520).
 
+#### Tomcat upload time configurable
+
+Default Tomcat `connectionUploadTimeout` has been set to 1 min and is now configurable in `nuxeo.conf`.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25037](https://jira.nuxeo.com/browse/NXP-25037).
+
 #### Making Use of Tomcat 8 Rewrite Valve {{since '10.2'}}
 
 It is now possible to contribute rules to Tomcat Rewrite Valve by leveraging our deployment preprocessor.
