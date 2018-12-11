@@ -58,7 +58,6 @@ Further more, the implementation now makes use of the Bulk Action Framework for 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24741](https://jira.nuxeo.com/browse/NXP-24741)
 
-
 #### New firstAccessibleAncestor REST API Enricher {{since '10.1'}}
 
 It is now possible to get the closest document's ancestor of a document using the `firstAccessibleAncestor` JSON Enricher.
@@ -1303,6 +1302,12 @@ Windows symlink files `.lnk` are now ignored by default
 A great optimisation has been added lowering heavily the charge of the Elasticseach cluster when using Nuxeo Drive with Nuxeo.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24232](https://jira.nuxeo.com/browse/NXP-24232) and [NXP-24637](https://jira.nuxeo.com/browse/NXP-24637)
+
+#### Authentication from the browser {{since '10.3'}}
+
+Nuxeo Drive no more launches its own "embedded browser" and relies on the default desktop browser to open the drive_login.jsp page, making it more compatible with various authentication protocoles.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25519](https://jira.nuxeo.com/browse/NXP-25519)
 
 ### Nuxeo DAM
 
