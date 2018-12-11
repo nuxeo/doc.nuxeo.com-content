@@ -117,6 +117,12 @@ Assuming the following configuration to define a suitable key/value store, for e
 
 ### Core Storage
 
+#### More Secured AES Binary manager {{since '10.3'}}
+
+The encryption used to be based on AES/CBC/PKCS5Padding which has been found to be insecure (susceptible to padding oracle attacks). Now, a more secure encryption algorithm, AES/GCM/NoPadding, is used.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25540](https://jira.nuxeo.com/browse/NXP-25540).
+
 #### KMS Keys Support on S3 Binary Store {{since '10.1'}}
 
 The support for [KMS keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/kms-using-sdks.html#kms-using-sdks-java) for S3 Server-Side Encryption is added.
