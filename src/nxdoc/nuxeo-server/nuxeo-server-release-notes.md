@@ -325,9 +325,15 @@ auditBackend.queryLogs(new AuditQueryBuilder().predicates( //
 
 ### Query
 
-#### NXQL `ecm:isTrashed` Support
+#### NXQL `ecm:isTrashed` Support {{since '10.2'}}
 
 Following evolutions on the trash service, the NXQL property `ecm:isTrashed` has been added to be able to filter queries on trashed or not trashed documents.
+
+#### NOT IN support in NXQL {{since '10.3'}}
+
+You can now use the `NOT IN` syntax for querying content.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25699](https://jira.nuxeo.com/browse/NXP-25699).
 
 #### Some Built-In Page Providers Moved to Elasticsearch {{since '10.1'}}
 
