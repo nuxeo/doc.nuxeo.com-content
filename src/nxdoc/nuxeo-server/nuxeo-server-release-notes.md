@@ -368,8 +368,16 @@ The BulkService is a new Nuxeo Platform service that allows to persist a documen
 - `automation` that allows to execute an automation chain or script on the set of documents
 - `csvExport` that allows to export in CSV the content of the repository.
 
+It is possible to run a bulk command on a page provider using the REST API:
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-24837](https://jira.nuxeo.com/browse/NXP-24837), [NXP-25060](https://jira.nuxeo.com/browse/NXP-25060) and [NXP-25097](https://jira.nuxeo.com/browse/NXP-25097).
+| HTTP Method | Path |Request Body | Response |
+------|-------|------| ------| ---|------------|
+| POST| `/nuxeo/api/v1/search/bulk/{actionId}` | Bulk action parameters | Bulk action status|
+| POST| `/nuxeo/api/v1/search/pp/{pageProviderName}/bulk/{actionId}` | Bulk action parameters | Bulk action status|
+| POST| `/nuxeo/api/v1/search/saved/{savedSearchId}/bulk/{actionId}` | Bulk action parameters | Bulk action status|
+
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-24837](https://jira.nuxeo.com/browse/NXP-24837), [NXP-25060](https://jira.nuxeo.com/browse/NXP-25060) and [NXP-25097](https://jira.nuxeo.com/browse/NXP-25097), [NXP-25249](https://jira.nuxeo.com/browse/NXP-25249), [NXP-25250](https://jira.nuxeo.com/browse/NXP-25250).
 
 ### Annotations Service
 
@@ -707,7 +715,7 @@ mp-listall command has been optimized by listing only relevant packages for the 
 
 #### Tomcat upload time configurable {{since '10.3'}}
 
-Default Tomcat `connectionUploadTimeout` has been set to 1 min and is now configurable in `nuxeo.conf`.
+Default Tomcat `connectionUploadTimeout` has been set to 1 min and is now configurable in `nuxeo.conf`. It is the time during which tomcat accepts to not receive any byte of information, making the upload experience more resilient to bad network connections for instance.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25037](https://jira.nuxeo.com/browse/NXP-25037).
 
