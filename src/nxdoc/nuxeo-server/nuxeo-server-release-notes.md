@@ -273,6 +273,12 @@ nuxeo.pubsub.provider=stream
 
 ### Audit
 
+#### Batch Retry {{since '10.2'}}
+
+AuditLogWriter uses a computation with a batching and retry mechanism that allows to tolerate up to 2 minutes of unvailability of the audit backend.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25341](https://jira.nuxeo.com/browse/NXP-25341).
+
 #### STARTSWITH Operator Available for All Audit Backend (SQL, MongoDB and Elasticsearch){{since '10.1'}}
 
 Following introduction of `AuditBackend#queryLogs(AuditQueryBuilder)`, we now have an easy way to query audit. We introduced in 10.1 the STARTSWITH operator, we could use it as below:
@@ -362,7 +368,7 @@ A new configuration property `nuxeo.tag.sanitization.enabled` has been added to 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25035](https://jira.nuxeo.com/browse/NXP-25035).
 
-### Bulk  Service (aka "Bulk Action Framework"){{since '10.2'}}
+### Bulk  Service (aka "Bulk Action Framework"){{since '10.2'}} and {{since '10.3'}}
 
 The BulkService is a new Nuxeo Platform service that allows to persist a document set homogenous to an NXQL query (and in the future to a page provider) so as to process an "action" on each of the documents. The action is processed in small batches. The service allows to get a status on a given "Bulk". It is possible to remotely start a bulk using the `Bulk.RunAction` operation that accepts as a parameter the name of the action and an NXQL query for specifying the list of documents on which to run the bulk. Actions can be contributed via an extension point. [A few actions](https://doc.nuxeo.com/nxdoc/bulk-actions-directory/) are already available such as:
 - `setProperties` that allows to bulk set a some properties values on a set of documents.
