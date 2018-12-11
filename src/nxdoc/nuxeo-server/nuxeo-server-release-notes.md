@@ -218,11 +218,11 @@ Note that you should not change the codec of an existing stream (Kafka Topic or 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22597](https://jira.nuxeo.com/browse/NXP-22597) and [NXP-24324](https://jira.nuxeo.com/browse/NXP-24324)
 
-#### Kafka 1.1 {{since '10.2'}}
+#### Kafka 2.0 {{since '10.3'}}
 
-The Nuxeo Platform now relies on Kafka 1.1.
+The Nuxeo Platform now relies on Kafka 2.0
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25087](https://jira.nuxeo.com/browse/NXP-25087).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25600](https://jira.nuxeo.com/browse/NXP-25600).
 
 #### Stream Computations Use Watermark {{since '10.2'}}
 
@@ -1355,7 +1355,7 @@ The features to use (and sent to the provider) are no more checked against a pre
 
 #### Amazon Implementation does a fallback on environment variables AWS Services configuration keys {{since '10.3'}}
 
-If the keys are not set in nuxeo.conf a lookup is made in the environment. 
+If the keys are not set in nuxeo.conf a lookup is made in the environment.
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25596](https://jira.nuxeo.com/browse/NXP-25596).
 
 ### Nuxeo Quota
