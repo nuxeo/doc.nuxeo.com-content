@@ -117,6 +117,12 @@ Assuming the following configuration to define a suitable key/value store, for e
 
 ### Core Storage
 
+#### Compatibility with MongoDB 4.X  {{since '10.3'}}
+
+Nuxeo DBS MongoDB implementation is now compatible and continously tested with MongoDB 4.0.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25620](https://jira.nuxeo.com/browse/NXP-25620).
+
 #### More Secured AES Binary manager {{since '10.3'}}
 
 The encryption used to be based on AES/CBC/PKCS5Padding which has been found to be insecure (susceptible to padding oracle attacks). Now, a more secure encryption algorithm, AES/GCM/NoPadding, is used.
