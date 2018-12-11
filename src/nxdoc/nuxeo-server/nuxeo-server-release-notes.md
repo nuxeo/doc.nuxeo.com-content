@@ -1121,7 +1121,7 @@ Aggregation widgets can now be sorted by the label with the *sort-by-label* bool
 - [ELEMENTS-610](https://jira.nuxeo.com/browse/ELEMENTS-610) Replaces video javascript library with browser native video element for to better support browsers.
 
 
-### Nuxeo AI {{> anchor 'nuxeo-ai-core'}}
+### Nuxeo AI {{> anchor 'nuxeo-ai'}}
 
 #### Documents export for training {{since '10.3'}}
 In order to train a ML Custom Model with proper business data, there is the need to gather and process all the repository documents on the scope of the ML Custom Model.
@@ -1143,6 +1143,73 @@ Provides the infrastructure to register, manage and serve ML Custom Models. This
 
 [NXP-25477](https://jira.nuxeo.com/browse/NXP-25477) Adds operation to use all enabled Custom Models.
 [NXP-25476](https://jira.nuxeo.com/browse/NXP-25476) Adds a service to register Custom Models to be served.
+[NXP-26001](https://jira.nuxeo.com/browse/NXP-26001) Adds new schema for suggestions metadata.
+
+<!-- ML Enrichments -->
+
+#### Create the Framework for Document Enrichment Service Integration {{since '10.3'}}
+Defines an infrastructure for Document Enrichment with service integration. The new framework is architecture to be resilient, scalable and efficient as flexible on the functional level.
+
+[NXP-25191](https://jira.nuxeo.com/browse/NXP-25191) Adds a new event listener on binary text conversion from files that redirects text to correct stream.
+[NXP-24749](https://jira.nuxeo.com/browse/NXP-24749) Provides a listener for images than redirect their info to the correct image Stream.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24605](https://jira.nuxeo.com/browse/NXP-24605).
+
+
+#### Event stream for data annotation {{since '10.3'}}
+Refactor events and integrates them with Streams that will process ML enrichments. Also takes care of results to correct processors to store metadata.
+
+[NXP-25191](https://jira.nuxeo.com/browse/NXP-25191) Adds a new event listener on binary text conversion from files that redirects text to correct stream.
+[NXP-24749](https://jira.nuxeo.com/browse/NXP-24749) Provides a listener for images than redirect their info to the correct image Stream.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24722](https://jira.nuxeo.com/browse/NXP-24722).
+
+#### Turn raw data into the internal enrichment metadata format and store it {{since '10.3'}}
+Ingests raw ML services data, normalizes it and exposes as a facet on documents.
+
+[NXP-25124](https://jira.nuxeo.com/browse/NXP-25124) Adds invalidation process to ML enrichments.
+[NXP-25122](https://jira.nuxeo.com/browse/NXP-25122) Dispatches an event on new ML enrichments.
+[NXP-24771](https://jira.nuxeo.com/browse/NXP-24771) Converts raw data into the internal enrichment schema format.
+[NXP-25651](https://jira.nuxeo.com/browse/NXP-25651) Provides a generic caching system to enrichment process so that paid services are not called more than once without need.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24770](https://jira.nuxeo.com/browse/NXP-24770).
+
+### Nuxeo AI AWS {{> anchor 'nuxeo-ai-aws'}}
+
+#### Add Amazon enrichment services {{since '10.3'}}
+Adds an AI addon that provides ML Enrichment integration with Amazon Rekognition, Comprehend and Translate.
+
+[NXP-24750](https://jira.nuxeo.com/browse/NXP-24750) Adds a Stream processor that integrates AWS Rekognition for image labelling and tagging.
+[NXP-24823](https://jira.nuxeo.com/browse/NXP-24823) Provides a new extension to integrate AWS Comprehend to predict sentiment on main file text.
+[NXP-25053](https://jira.nuxeo.com/browse/NXP-25053) Adds ability to tag images text with OCR.
+[NXP-25192](https://jira.nuxeo.com/browse/NXP-25192) Provides addition of face and celebrity face detection from AWS Rekognition as image tagging.
+[NXP-25599](https://jira.nuxeo.com/browse/NXP-25599) Adds ML enrichment to translate metadata using AWS Translate.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24770](https://jira.nuxeo.com/browse/NXP-24770).
+
+### Nuxeo AI Image Quality {{> anchor 'nuxeo-ai-image-quality'}}
+
+#### Add Sightengine as an enrichment service {{since '10.3'}}
+Introduces new enrichments from SightEngine as a ML enrichment add-on
+Services integrated:
+- weapon - the probability that the image contains weapons
+- alcohol - the probability that the image contains alcohol
+- drugs - the probability that the image contains drugs
+- nudity - containing information on the nudity content of the image
+- type - containing information on the type of the image
+- faces - containing information on the presence of faces / celebrities in the image
+- sharpness - a value between 0 (very blurry) and 1 (very sharp)
+- contrast	- a value between 0 (low contrast) and 1 (high contrast)
+- brightness - a value between 0 (very dark) and 1 (very bright)
+- scam - the probability that the image contains scammers
+- text - containing information on the presence of text in the image
+- offensive - containing information on the presence of offensive content in the image
+- celebrity - the probability that the image contains a celebrity
+- colors - describing the colors of the image received
+- media - describing the image received
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25725](https://jira.nuxeo.com/browse/NXP-25725).
+
 
 ### Nuxeo JSF UI
 
