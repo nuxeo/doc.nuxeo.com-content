@@ -785,7 +785,7 @@ Documents can be compared to other documents or within its versions. Common sche
 - [NXP-24786](https://jira.nuxeo.com/browse/NXP-24786) Enables switching comparing documents position.
 - [NXP-24784](https://jira.nuxeo.com/browse/NXP-24784) Visualizes metadata differences on two documents.
 - [NXP-24784](https://jira.nuxeo.com/browse/NXP-24785) Allows custom element to be added to compare different metadata proprieties. Defines custom elements to be used on blobs, document and user references.
-- [NXP-25941](https://jira.nuxeo.com/browse/NXP-25941) Leverage Arender difference capabilities on document comparison (Arender addon). {{since '10.3'}}
+- [NXP-25941](https://jira.nuxeo.com/browse/NXP-25941) Leverage ARender difference capabilities on document comparison (ARender addon). {{since '10.3'}}
 
 
 ##### Default comparison elements
@@ -913,9 +913,9 @@ It is now possible to use drag and drop user interaction to move and copy docume
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22807](https://jira.nuxeo.com/browse/NXP-22807)
 
 
-#### Arender annotation pill {{since '10.2'}}
+#### ARender annotation pill {{since '10.2'}}
 
-Introduces new file-based document pill to allow annotations with Arender.
+Introduces new file-based document pill to allow annotations with ARender.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25107](https://jira.nuxeo.com/browse/NXP-25107)
 
@@ -1128,11 +1128,11 @@ Integrated with Web UI upload with real time upload progress. For 10.2 we have a
 
 ### Document, Image, Video Annotations with ARender Connector {{since '10.2'}}
 
-A first implementation of the ARender SPI bridge has been done so as to be able to preview content stored in Nuxeo using the [Arender previewer](https://arender.io/). It allows to preview and annotate content, may it be an office file, an image or a video. A first integration to Web UI is done in the addon, the Arender previewer appears in a new "annotations" tab.  Also, comments made for a given annotation are synced with Nuxeo Comments. Deeper integration will be done in the future. The connector also exposes an operation for getting an URL that will open a diff view of binary content (`Document.ARenderGetDiffUrl`). A package is available on the marketplace.
+A first implementation of the ARender SPI bridge has been done so as to be able to preview content stored in Nuxeo using the [ARender previewer](https://ARender.io/). It allows to preview and annotate content, may it be an office file, an image or a video. A first integration to Web UI is done in the addon, the ARender previewer appears in a new "annotations" tab.  Also, comments made for a given annotation are synced with Nuxeo Comments. Deeper integration will be done in the future. The connector also exposes an operation for getting an URL that will open a diff view of binary content (`Document.ARenderGetDiffUrl`). A package is available on the marketplace.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24104](https://jira.nuxeo.com/browse/NXP-24104),[NXP-24724](https://jira.nuxeo.com/browse/NXP-24724) and [NXP-25071](https://jira.nuxeo.com/browse/NXP-25071) ({{since '10.3'}}).
 
-### MS Office 356 Integration: WOPI Implementation
+### MS Office 356 Integration: WOPI Implementation {{since '10.3'}}
 
 Nuxeo Server is now integrated with Office Online through the implementation of the WOPI protocol.
 It enables users to benefit from all Office Online features such as:
