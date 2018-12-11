@@ -165,8 +165,8 @@ We strongly encourage you to follow these, especially if you are a beginner.
 | Schemas | Lower case, separated by underscore only if readability is affected | contractlibrary  |
 | Properties | Pascal case naming convention | ContractNumber  |
 | Lifecycle | Pascal case naming convention | ContractLifecycle |
-| Lifecycle state  | Camel case, not separated | validated  |
-| Lifecycle transition  | `to_` followed by the lifecycle state name | to_validated  |
+| Lifecycle state  | Camel case, not separated | ingestionInProgress |
+| Lifecycle transition  | `to_` followed by the lifecycle state name | to_ingestionInProgress |
 | Structure templates | Pascal case naming convention | ContractLibraryStructure  |
 
 
