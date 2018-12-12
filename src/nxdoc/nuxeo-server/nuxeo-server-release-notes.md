@@ -1338,6 +1338,14 @@ The Nuxeo connector of Simflofy knows how to create such documents that referenc
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24714](https://jira.nuxeo.com/browse/NXP-24714).
 
+### Webdav
+
+#### MS Office temporary files mime-type set as application/octet-stream {{since '10.3'}}
+
+They are no more detected as word documents, which avoids applying some useless conversions, and avoid confusion for the users and in the repository, and improve the behavior for Microsoft Office.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25817](https://jira.nuxeo.com/browse/NXP-25817).
+
 ### Nuxeo Platform Importer
 
 #### Image and Video capabilities for the Nuxeo Stream Random Importer {{since '10.2'}}
