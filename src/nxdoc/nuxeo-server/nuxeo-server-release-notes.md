@@ -1284,6 +1284,28 @@ Aggregation widgets can now be sorted by the label with the *sort-by-label* bool
 
 ### Nuxeo AI {{> anchor 'nuxeo-ai'}}
 
+#### Service for configuring and serve ML Custom Models  {{since '10.3'}}
+Current AI/Machine Learning services for labelling and classification behaves mostly on a very generic maner. They do not take in account specific business logic and data, but only broader and more abstract content. As an example, on a pictures with cars, they are very able to recognize cars, but for a carmaker, it would be more relevant to detect what would be the car model, and year of release. Even more valuable would be maybe to detect the correct car color in the brand's catalogue and detect any car extras.
+
+To enable business specific classification and recognition, models need to be build and trained with this information.
+This new service allows customers to build ML custom models that after defnied are trained and publish for usage.
+A ML custom model is defined with:
+- NXQL query - to provide the correct dataset of documents to use during training
+- Input fields - the metadata that the model should use to do classifications. Ie. the document image, a set of text fields.
+- Output field - this is the field that the model will try to predict. These could be a field linked to a vocabulary, a document reference or just a `string` metadata.
+
+After defined, the custom model has two other main stages:
+- Training - a ML model will be produced by training the repository model with the definition provided
+- Publishing - The result ML model can than be publish to be available as service that does Machine Learning classification on the context of a very sepcific business.
+
+Both these stages are performed on Nuxeo AI Cloud Services, but Nuxeo Server provides the means to export the relevant repository content in a way that Nuxeo AI Services can use. Nuxeo Server also allows the means to configure and use published ML models, query and getting predictions to use in UI suggestions.
+
+[NXP-25477](https://jira.nuxeo.com/browse/NXP-25477) Adds operation to use all enabled Custom Models.
+[NXP-25476](https://jira.nuxeo.com/browse/NXP-25476) Adds a service to register Custom Models to be served.
+[NXP-26001](https://jira.nuxeo.com/browse/NXP-26001) Adds new schema for suggestions metadata.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-5474](https://jira.nuxeo.com/browse/NXP-5474).
+
 #### Documents export for training {{since '10.3'}}
 In order to train a ML Custom Model with proper business data, there is the need to gather and process all the repository documents on the scope of the ML Custom Model.
 This provides a documents dataset export to AI cloud in TFRecord format.
@@ -1298,18 +1320,27 @@ Provides integration between the Nuxeo server and AI Cloud services to allow dat
 
 [NXP-25920](https://jira.nuxeo.com/browse/NXP-25920) Integrates a java client to enable Nuxeo to interact with AI Cloud Services.
 [NXP-26189](https://jira.nuxeo.com/browse/NXP-26189) Provides an Admin page to export dataset to AI Cloud services.
+[NXP-25827](https://jira.nuxeo.com/browse/NXP-25827) Added support for numeric ES aggregates : cardinality, missing, count, sum, avg, max, min. Initially, these are used to provide data sanity statistics on document datasets.
 
-#### Service for configuring and serve Custom Models  {{since '10.3'}}
-Provides the infrastructure to register, manage and serve ML Custom Models. This allows predition metadata and generate suggestions on the UI.
 
-[NXP-25477](https://jira.nuxeo.com/browse/NXP-25477) Adds operation to use all enabled Custom Models.
-[NXP-25476](https://jira.nuxeo.com/browse/NXP-25476) Adds a service to register Custom Models to be served.
-[NXP-26001](https://jira.nuxeo.com/browse/NXP-26001) Adds new schema for suggestions metadata.
 
 <!-- ML Enrichments -->
 
 #### Create the Framework for Document Enrichment Service Integration {{since '10.3'}}
-Defines an infrastructure for Document Enrichment with service integration. The new framework is architecture to be resilient, scalable and efficient as flexible on the functional level.
+In order to take advantage of any type of Machine Learning service, third-party or in-house, for content augmentation we need an infrastructure. This infrastructure needs to be resilient and to scale indefinatly in order to hand a repository with millions of ingested documents.
+
+We call this content augmentation `Enrichments`. They provide any data produced by AI that related to a document metadata. Examples are:
+- Identification of objects in pictures;
+- Translate metadata fields;
+- Classify text content sentiment
+- ..
+
+Enrichments are produced from diferent services and providers, therefore, they come in different shapes and formats. The new `enrichment` schema is diveded in three parts:
+- Raw - Information that comes directly from the service
+- Normalized - Normalized information per type of content. This allows to process information from different providers
+- Facet - cannonical information that is index for search. ie. in a video with cars races, `normalized` might have all the shots/times that cars appears, while `facet` will only indicate the video has cars.
+
+The enrichment pipeline user `Nuxeo Stream` and is fully configurable making it flexible to use in any metadata for any type of provider.
 
 [NXP-25191](https://jira.nuxeo.com/browse/NXP-25191) Adds a new event listener on binary text conversion from files that redirects text to correct stream.
 [NXP-24749](https://jira.nuxeo.com/browse/NXP-24749) Provides a listener for images then redirect their info to the correct image Stream.
@@ -1322,6 +1353,7 @@ Refactor events and integrates them with Streams that will process ML enrichment
 
 [NXP-25191](https://jira.nuxeo.com/browse/NXP-25191) Adds a new event listener on binary text conversion from files that redirects text to correct stream.
 [NXP-24749](https://jira.nuxeo.com/browse/NXP-24749) Provides a listener for images than redirect their info to the correct image Stream.
+[NXP-25279](https://jira.nuxeo.com/browse/NXP-25279) Makes the raw binary text available different processes like ML enrichment ones.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24722](https://jira.nuxeo.com/browse/NXP-24722).
 
@@ -1336,9 +1368,22 @@ Ingests raw ML services data, normalizes it and exposes as a facet on documents.
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24770](https://jira.nuxeo.com/browse/NXP-24770).
 
 ### Nuxeo AI AWS {{> anchor 'nuxeo-ai-aws'}}
+Using the new ML Enrichment service on Nuxeo AI, some Amazon machine lerning services were integrated:
+- Amazon Rekognition - Object tagging and scene detection; facial and celebrity recognition tagging; Text in image tagging.
+- Amazon Comprehend - Sentiment Analysis.
+- Amazon Translate - Translation.
+When activated, these new enrichers provide new content what can be used from the `enrichment` schema on the `Enrichable` facet in a normalized and searchable way; or can be configured to be transformed and inserted into a document native metadata.
 
-#### Add Amazon enrichment services {{since '10.3'}}
-Adds an AI addon that provides ML Enrichment integration with Amazon Rekognition, Comprehend and Translate.
+The addon brings some default configuration templates that can be enable from `nuxeo.cof`:
+```
+nuxeo.ai.images.enabled=true
+nuxeo.ai.text.enabled=true // process text content main content by default
+nuxeo.enrichment.aws.images=true // process image main file by default
+nuxeo.enrichment.aws.text=true // enable sentiment analyses
+nuxeo.enrichment.save.tags=true // transform label enrichments into the document tags
+nuxeo.enrichment.save.facets=true // save enrichment facet content on documents
+nuxeo.enrichment.raiseEvent=true // fire an event when a new enrichment is obtained
+```
 
 [NXP-24750](https://jira.nuxeo.com/browse/NXP-24750) Adds a Stream processor that integrates AWS Rekognition for image labelling and tagging.
 [NXP-24823](https://jira.nuxeo.com/browse/NXP-24823) Provides a new extension to integrate AWS Comprehend to predict sentiment on main file text.
@@ -1349,9 +1394,7 @@ Adds an AI addon that provides ML Enrichment integration with Amazon Rekognition
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24770](https://jira.nuxeo.com/browse/NXP-24770).
 
 ### Nuxeo AI Image Quality {{> anchor 'nuxeo-ai-image-quality'}}
-
-#### Add Sightengine as an enrichment service {{since '10.3'}}
-Introduces new enrichments from SightEngine as a ML enrichment add-on
+Introduces new enrichments from [SightEngine](https://sightengine.com) as a ML enrichment add-on with content warning and image quality
 Services integrated:
 - weapon - the probability that the image contains weapons
 - alcohol - the probability that the image contains alcohol
@@ -1368,6 +1411,16 @@ Services integrated:
 - celebrity - the probability that the image contains a celebrity
 - colors - describing the colors of the image received
 - media - describing the image received
+
+It it is possible to configure this addon from the `nuxeo.conf`:
+```
+nuxeo.ai.images.enabled=true // process images wich will enable them on this addon
+nuxeo.enrichment.save.tags=true // convert enrichments into labels
+nuxeo.enrichment.save.facets=true // save enrichment facet content on documents
+nuxeo.enrichment.raiseEvent=true // fire an event when a new enrichment is obtained
+nuxeo.ai.sightengine.apiKey=YOUR_API_KEY // API key from sightengine to autenticate
+nuxeo.ai.sightengine.apiSecret=YOUR_API_SECRET/ / API secret from sightengine to autenticate
+```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25725](https://jira.nuxeo.com/browse/NXP-25725).
 
