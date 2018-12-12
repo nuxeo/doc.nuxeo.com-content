@@ -427,6 +427,12 @@ It is made more robust to plurals, etc.
 
 ### Elasticsearch
 
+#### Reindex Operation Based on Bulk Action Framework {{since '10.3x'}}
+
+`Elasticsearch.BulkIndex`is available as an operation to perform a full reindex of the repository based on using BAF and Nuxeo Streams. This is really a great news when dealing with big repositories where re-indexing content would take days: you can resume on any system availability problem, without having to restart again.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26032](https://jira.nuxeo.com/browse/NXP-26032).
+
 #### Elasticseach 6.3 {{since '10.2'}}
 
 Elasticsearch 6.3+ is now required. See upgrade instructions.
