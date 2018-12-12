@@ -335,6 +335,26 @@ You can now use the `NOT IN` syntax for querying content.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25699](https://jira.nuxeo.com/browse/NXP-25699).
 
+
+#### Generic Aggregate support
+
+One can now leverage any Elastiscearch aggregate thanks to a new "generic" aggregate type.
+
+These can be used as aggregates in elasticsearch pageprovider contributions by specifying the relevant `type=` parameter, for example:
+
+```
+<aggregate id="cardinality_title" parameter="dc:title" type="cardinality">
+  <field name="cardinality_title_agg" schema="advanced_search" />
+</aggregate>
+<aggregate id="missing_description" parameter="dc:description" type="missing">
+  <field name="missing_description_agg" schema="advanced_search" />
+</aggregate>
+```
+
+The aggregations are explained in more detail on https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-metrics.html
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25827](https://jira.nuxeo.com/browse/NXP-25827).
+
 #### Some Built-In Page Providers Moved to Elasticsearch {{since '10.1'}}
 
 `REST_API_SEARCH_ADAPTER` and `all_collections` page providers have been added to the default list of page providers provided by Elasticsearch. If you have defined your own `elasticsearch.override.pageproviders` then it is recommended to add those two to your list.
@@ -351,7 +371,7 @@ Thumbnails size has been set to 1000x1000 pixels (previously 350x350).
 
 #### ConversionException {{since '10.3'}}
 
-When calling a converter directly though its name, a check is done on its source MIME type to see if it can handle the input blob. A ConversionException is thrown if the converter can't handle it.
+When calling a converter directly though its name, a check is done on its source MIME type to see if it can handle the input blob. A ConversionException is thrown if the converter can't handle it. This typically avoid having a converter open a format that it doesn't know how to handle.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25840](https://jira.nuxeo.com/browse/NXP-25840).
 
