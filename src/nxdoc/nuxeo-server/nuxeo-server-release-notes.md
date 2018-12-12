@@ -767,7 +767,7 @@ It is now possible to enable the dev (necessary to perform a hotreload with the 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25508](https://jira.nuxeo.com/browse/NXP-25508).
 
 
-#### Disabling Studio package dependency Validation {{since '10.3'}}
+#### Disabling Studio package dependency validation {{since '10.3'}}
 
 A runtime configuration property has been added that allows to disable the dependency validation on the Studio package: `studio.snapshot.disablePkgValidation`. Until we manage to optimize performances on the server side, this allows to gain up to 30 seconds on the hot-reload action, highly recommended!
 
@@ -1216,7 +1216,7 @@ Provides the infrastructure to register, manage and serve ML Custom Models. This
 Defines an infrastructure for Document Enrichment with service integration. The new framework is architecture to be resilient, scalable and efficient as flexible on the functional level.
 
 [NXP-25191](https://jira.nuxeo.com/browse/NXP-25191) Adds a new event listener on binary text conversion from files that redirects text to correct stream.
-[NXP-24749](https://jira.nuxeo.com/browse/NXP-24749) Provides a listener for images than redirect their info to the correct image Stream.
+[NXP-24749](https://jira.nuxeo.com/browse/NXP-24749) Provides a listener for images then redirect their info to the correct image Stream.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24605](https://jira.nuxeo.com/browse/NXP-24605).
 
@@ -1384,6 +1384,12 @@ The video info (duration, format, etc.) is now computed by an asynchronous work 
 As a consequence, the user might not have the video info in the UI immediately after creating / updating a Video document, needing to refresh the page once the asynchronous work is done. This change allows a better behaviour when bulk importing videos.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24316](https://jira.nuxeo.com/browse/NXP-24316).
+
+#### Operation to recompute image Renditions {{since '10.3'}}
+
+You may want to recompute your stored image renditions when you change the resolutions you want to use. A new operation is available for this: `Picture.RecomputeViews`.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25791](https://jira.nuxeo.com/browse/NXP-25791).
 
 ### Nuxeo Vision
 
