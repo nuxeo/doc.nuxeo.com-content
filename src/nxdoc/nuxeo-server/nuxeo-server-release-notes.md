@@ -722,13 +722,19 @@ It is now possible to configure the algorithm used for the digest among the list
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24532](https://jira.nuxeo.com/browse/NXP-24532).
 
-#### Nuxeo REST API now consumes application/json
+#### Nuxeo REST API now consumes application/json {{since '10.3'}}
 
 The REST API now produces and consumes only application/json as content type. `application/json+nxentity` is now never returned as content type response; the server does not expect it as content type request.
 - application/json+nxrequest content type should not be used anymore. It still works but it's deprecated server side. application/json should be used instead when POSTing to automation.
 application/json+esentity which was never used has also been removed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25036](https://jira.nuxeo.com/browse/NXP-25036).
+
+#### More properties on the document object {{since '10.3'}}
+
+`proxyTargetId` and `versionableId` are now available on the JSON of a document object.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25909](https://jira.nuxeo.com/browse/NXP-25909).
 
 #### ManagedBlob Decoder {{since '10.2'}}
 
