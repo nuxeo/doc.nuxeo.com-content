@@ -427,6 +427,12 @@ It is made more robust to plurals, etc.
 
 ### Elasticsearch
 
+#### Reindex Operation Based on Bulk Action Framework {{since '10.3x'}}
+
+`Elasticsearch.BulkIndex`is available as an operation to perform a full reindex of the repository based on using BAF and Nuxeo Streams. This is really a great news when dealing with big repositories where re-indexing content would take days: you can resume on any system availability problem, without having to restart again.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26032](https://jira.nuxeo.com/browse/NXP-26032).
+
 #### Elasticseach 6.3 {{since '10.2'}}
 
 Elasticsearch 6.3+ is now required. See upgrade instructions.
@@ -1340,7 +1346,7 @@ We call this content augmentation `Enrichments`. They provide any data produced 
 - Classify text content sentiment
 - ..
 
-Enrichments are produced from diferent services and providers, therefore, they come in different shapes and formats. The new `enrichment` schema is diveded in three parts: 
+Enrichments are produced from diferent services and providers, therefore, they come in different shapes and formats. The new `enrichment` schema is diveded in three parts:
 - Raw - Information that comes directly from the service
 - Normalized - Normalized information per type of content. This allows to process information from different providers
 - Facet - cannonical information that is index for search. ie. in a video with cars races, `normalized` might have all the shots/times that cars appears, while `facet` will only indicate the video has cars.
@@ -1386,7 +1392,7 @@ nuxeo.ai.text.enabled=true // process text content main content by default
 nuxeo.enrichment.aws.images=true // process image main file by default
 nuxeo.enrichment.aws.text=true // enable sentiment analyses
 nuxeo.enrichment.save.tags=true // transform label enrichments into the document tags
-nuxeo.enrichment.save.facets=true // save enrichment facet content on documents 
+nuxeo.enrichment.save.facets=true // save enrichment facet content on documents
 nuxeo.enrichment.raiseEvent=true // fire an event when a new enrichment is obtained
 ```
 
@@ -1421,7 +1427,7 @@ It it is possible to configure this addon from the `nuxeo.conf`:
 ```
 nuxeo.ai.images.enabled=true // process images wich will enable them on this addon
 nuxeo.enrichment.save.tags=true // convert enrichments into labels
-nuxeo.enrichment.save.facets=true // save enrichment facet content on documents 
+nuxeo.enrichment.save.facets=true // save enrichment facet content on documents
 nuxeo.enrichment.raiseEvent=true // fire an event when a new enrichment is obtained
 nuxeo.ai.sightengine.apiKey=YOUR_API_KEY // API key from sightengine to autenticate
 nuxeo.ai.sightengine.apiSecret=YOUR_API_SECRET/ / API secret from sightengine to autenticate
