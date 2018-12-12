@@ -236,6 +236,28 @@ The Nuxeo Platform now relies on Kafka 2.0
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25600](https://jira.nuxeo.com/browse/NXP-25600).
 
+#### SASL and TLS authentication against Kafka {{since '10.3'}}
+
+  ```
+  # SASL
+kafka.sasl.enabled=false
+kafka.security.protocol=SASL_PLAINTEXT
+kafka.sasl.mechanism=SCRAM-SHA-256
+kafka.sasl.jaas.config=org.apache.kafka.common.security.scram.ScramLoginModule required username="kafkaclient1" password="kafkaclient1-secret";
+
+# SSL
+kafka.ssl=false
+kafka.truststore.type=JKS
+kafka.truststore.path=
+kafka.truststore.password=
+kafka.keystore.type=JKS
+kafka.keystore.path=
+kafka.keystore.password=
+
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25956](https://jira.nuxeo.com/browse/NXP-25956).
+
 #### Stream Computations Use Watermark {{since '10.2'}}
 
 Computations that re-append records in other streams now add a watermark (time and flag information) in the record. That allows always benefiting from advanced features of the streams such as latency computation.
