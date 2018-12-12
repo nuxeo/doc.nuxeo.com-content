@@ -1467,6 +1467,13 @@ This addon adds a new custom list view for emails on email folder documents and 
 
 The release notes of the Drive client part can be found on [GitHub](https://github.com/nuxeo/nuxeo-drive/releases).
 
+#### Direct Edit enabled on all binary Properties {{since '10.3'}}
+
+It is now possible to get a Direct Edit link for any binary properties stored on a document in the Nuxeo repository (may it be a custom single binary property or a multi-valued attachment).
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket
+[NXP-25994](https://jira.nuxeo.com/browse/NXP-25994).
+
 #### .lnk Files Ignored {{since '10.1'}}
 
 Windows symlink files `.lnk` are now ignored by default
