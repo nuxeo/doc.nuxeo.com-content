@@ -237,7 +237,6 @@ The Nuxeo Platform now relies on Kafka 2.0
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25600](https://jira.nuxeo.com/browse/NXP-25600).
 
 #### SASL and TLS authentication against Kafka {{since '10.3'}}
-
   ```
   # SASL
 kafka.sasl.enabled=false
@@ -735,6 +734,12 @@ It is now possible to configure the algorithm used for the digest among the list
  `<parameter name="digestAlgorithm">SHA-512<parameter>`
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25887](https://jira.nuxeo.com/browse/NXP-25887).
+
+#### Callback URL on logout {{since '10.3'}}
+
+A new `callbackUrl` parameter has been added to the logout URL so that if the authentication plugin doesn't provide a redirect, that URL is the one used for the redirect.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26002](https://jira.nuxeo.com/browse/NXP-26002).
 
 ### REST API
 
