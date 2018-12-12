@@ -349,6 +349,12 @@ Thumbnails size has been set to 1000x1000 pixels (previously 350x350).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24717](https://jira.nuxeo.com/browse/NXP-24717).
 
+#### ConversionException {{since '10.3'}}
+
+When calling a converter directly though its name, a check is done on its source MIME type to see if it can handle the input blob. A ConversionException is thrown if the converter can't handle it.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25840](https://jira.nuxeo.com/browse/NXP-25840).
+
 ### Rendition
 
 #### Renditions on proxy {{since '10.3'}}
