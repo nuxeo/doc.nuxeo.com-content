@@ -783,6 +783,20 @@ Nuxeo LTS 2019 is supported on Java 8 and Java 11.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24210](https://jira.nuxeo.com/browse/NXP-24210).
 
+#### CSRF {{since '10.3'}}
+
+The platform now supports CSRF token that can be retrieved and then added to any requests to the server, with a mode where their presence is systematically checked. To enable it:
+```
+<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+  <property name="nuxeo.csrf.token.enabled">true</property>
+</extension>
+```
+You will find more information on the required flow on the linked ticket below.
+CSRF tokens allow to have deep protection against attacks of the system.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25903](https://jira.nuxeo.com/browse/NXP-25903).
+
+
 #### nuxeoctl register --offline {{since '10.3'}}
 
 It is now possible to register offline a new instance from the terminal with the following command, that will then start a command line wizard:
