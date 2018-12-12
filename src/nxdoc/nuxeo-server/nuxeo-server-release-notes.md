@@ -361,6 +361,14 @@ The aggregations are explained in more detail on https://www.elastic.co/guide/en
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24346](https://jira.nuxeo.com/browse/NXP-24346).
 
+#### Fulltext extraction can be leveraged more easily {{since '10.3'}}
+
+Fulltext maximum size is now 128 KB by default. To change this, the repository configuration can be updated to use another fieldSizeLimit, see the documentation. The `binaryTextUpdated` event now contains two properties of interest to know what was update exactly:
+- `systemProperty` contains the name of the property updated
+- `systemPropertyValue` contains the value
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25716](https://jira.nuxeo.com/browse/NXP-25716) and [NXP-25279](https://jira.nuxeo.com/browse/NXP-25279).
+
 ### Conversion
 
 #### Better thumbnail quality {{since '10.3'}}
@@ -1473,7 +1481,7 @@ A new operation: `Quotas.RecomputeStatistics` is provided, with optional paramet
 
 ### FS Exporter
 
-#### New Drive Exporter{{since '10.3'}}
+#### New Drive Exporter {{since '10.3'}}
 
 The FS Exporter addon that allows to easily perform exports of the repository as a files and folders hierarchy has a new "Drive like" flavor that handles exports like Drive, not exporting attachments and all this, and dealing with conflictual names at a same folder level. It uses the title of the document instead and avoid name collision by adding an integer at the end of the path.
 
