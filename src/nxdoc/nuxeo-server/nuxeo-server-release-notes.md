@@ -452,6 +452,9 @@ Elasticsearch 6.3+ is now required. See upgrade instructions.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24102](https://jira.nuxeo.com/browse/NXP-24102).
 
+#### Enable use of a custom TrustStore Elasticsearch RestClient
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26074](https://jira.nuxeo.com/browse/NXP-26074).
 
 #### Support of X-Pack {{since '10.1'}}
 
@@ -775,6 +778,31 @@ The REST API now produces and consumes only application/json as content type. `a
 application/json+esentity which was never used has also been removed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25036](https://jira.nuxeo.com/browse/NXP-25036).
+
+#### Enrichers can now apply to the `blob` type.
+
+For instance, to get the links to open a LiveConnect blob in all applications associated to its MIME type, you can use the `enrichers-blob: appLinks` enricher.
+Any blob property, e.g. `file:content`, will then be enriched in the following way:
+
+```
+{
+  "file:content": {
+    "name": "...",
+    "mime-type": "...",
+    ...,
+    "appLinks": [
+      {
+        "appName": "...",
+        "icon": "...",
+        "link": "..."
+      },
+      ...
+    ]
+  }
+}
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26126](https://jira.nuxeo.com/browse/NXP-26126).
 
 #### More properties on the document object {{since '10.3'}}
 
