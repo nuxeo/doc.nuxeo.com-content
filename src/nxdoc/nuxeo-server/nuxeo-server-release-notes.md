@@ -452,15 +452,11 @@ Elasticsearch 6.3+ is now required. See upgrade instructions.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24102](https://jira.nuxeo.com/browse/NXP-24102).
 
-#### Enable use of a custom TrustStore Elasticsearch RestClient
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26074](https://jira.nuxeo.com/browse/NXP-26074).
-
-#### Support of X-Pack {{since '10.1'}}
+#### Support of X-Pack {{since '10.1'}} {{since '10.3'}}
 
 The use of Elasticsearch X-Pack is now allowed, [see documentation]({{page version='' space='nxdoc' page='elasticsearch-setup'}}#advanced-rest-client-configuration).
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23048](https://jira.nuxeo.com/browse/NXP-23048).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23048](https://jira.nuxeo.com/browse/NXP-23048) and [NXP-26074](https://jira.nuxeo.com/browse/NXP-26074).
 
 #### More Like This Hint {{since '10.2'}}
 
@@ -615,6 +611,13 @@ function run(input, params) {
 }
 ```
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25020](https://jira.nuxeo.com/browse/NXP-25020).
+
+
+#### Async adapter for Automation {{since '10.3'}}
+
+An `@async` adapter has been added so as to easily call any operation asynchroneously and to have means to get a status on the execution. See the documentation on the ticket below.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26172](https://jira.nuxeo.com/browse/NXP-26172).
 
 ### User Manager
 
