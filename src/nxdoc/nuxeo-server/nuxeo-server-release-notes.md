@@ -711,7 +711,7 @@ A new `nuxeo.saml2.skewTimeMs` configuration property to control the clock skew 
 
 It is now possible to configure the algorithm used for the digest among the list given [here](The algorithm used must be one of those described in https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#MessageDigest). Previously, MD5 was systematically used>.
  `<parameter name="digestAlgorithm">SHA-512<parameter>`
- 
+
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25887](https://jira.nuxeo.com/browse/NXP-25887).
 
 ### REST API
@@ -782,6 +782,20 @@ Two new methods are then available to retrieve the information in the code:
 Nuxeo LTS 2019 is supported on Java 8 and Java 11.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24210](https://jira.nuxeo.com/browse/NXP-24210).
+
+#### CSRF {{since '10.3'}}
+
+The platform now supports CSRF token that can be retrieved and then added to any requests to the server, with a mode where their presence is systematically checked. To enable it:
+```
+<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+  <property name="nuxeo.csrf.token.enabled">true</property>
+</extension>
+```
+You will find more information on the required flow on the linked ticket below.
+CSRF tokens allow to have deep protection against attacks of the system.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25903](https://jira.nuxeo.com/browse/NXP-25903).
+
 
 #### nuxeoctl register --offline {{since '10.3'}}
 
