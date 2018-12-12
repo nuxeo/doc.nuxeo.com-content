@@ -123,6 +123,19 @@ Nuxeo DBS MongoDB implementation is now compatible and continously tested with M
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25620](https://jira.nuxeo.com/browse/NXP-25620).
 
+#### MongoDB Client TrustStore for in-flight encryption {{since '10.3'}}
+
+The following nuxeo.conf properties can be set to define appropriate TLS/SSL configuration for MongoDB:
+nuxeo.mongodb.ssl=true
+nuxeo.mongodb.truststore.path
+nuxeo.mongodb.truststore.password
+nuxeo.mongodb.truststore.type
+nuxeo.mongodb.keystore.path
+nuxeo.mongodb.keystore.password
+nuxeo.mongodb.keystore.type
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26072](https://jira.nuxeo.com/browse/NXP-26072).
+
 #### More Secured AES Binary manager {{since '10.3'}}
 
 The encryption used to be based on AES/CBC/PKCS5Padding which has been found to be insecure (susceptible to padding oracle attacks). Now, a more secure encryption algorithm, AES/GCM/NoPadding, is used.
