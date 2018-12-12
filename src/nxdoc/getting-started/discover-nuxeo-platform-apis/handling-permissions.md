@@ -144,8 +144,8 @@ The goal is to allow `Read and Write` access to the `sales` group members on the
 
 **Prerequisites**
 
-*   {{! multiexcerpt name='prerequisite_addon'}}Install the addon Getting started with the Nuxeo Platform. See [Setting up Your Nuxeo Environment]({{page page='setting-up-your-nuxeo-environment'}}).{{! /multiexcerpt}}
-*   {{! multiexcerpt name='prerequisite_users'}}Create users on your Nuxeo instance. See [Setting up Your JavaScript Environment]({{page page='setting-up-your-javascript-environment'}}).{{! /multiexcerpt}}
+- {{! multiexcerpt name='prerequisite_addon'}}Install the addon Getting started with the Nuxeo Platform. See [Setting up Your Nuxeo Environment]({{page page='setting-up-your-nuxeo-environment'}}).{{! /multiexcerpt}}
+- {{! multiexcerpt name='prerequisite_users'}}Create users on your Nuxeo instance. See [Setting up Your JavaScript Environment]({{page page='setting-up-your-javascript-environment'}}).{{! /multiexcerpt}}
 
 **Procedure**
 
