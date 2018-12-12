@@ -340,7 +340,7 @@ You can now use the `NOT IN` syntax for querying content.
 
 One can now leverage any Elastiscearch aggregate thanks to a new "generic" aggregate type.
 
-These can be used as aggregates in elasticsearch pageprovider contributions by specifying the relevant `type=` parameter, for example:
+These can be used as aggregates in Elasticsearch pageprovider contributions by specifying the relevant `type=` parameter, for example:
 
 ```
 <aggregate id="cardinality_title" parameter="dc:title" type="cardinality">
@@ -1470,6 +1470,14 @@ A new operation: `Quotas.RecomputeStatistics` is provided, with optional paramet
 - updaterName (defaults to `documentsSizeUpdater`)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21017](https://jira.nuxeo.com/browse/NXP-21017).
+
+### FS Exporter
+
+#### New Drive Exporter{{since '10.3'}}
+
+The FS Exporter addon that allows to easily perform exports of the repository as a files and folders hierarchy has a new "Drive like" flavor that handles exports like Drive, not exporting attachments and all this, and dealing with conflictual names at a same folder level. It uses the title of the document instead and avoid name collision by adding an integer at the end of the path.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25846](https://jira.nuxeo.com/browse/NXP-25846).
 
 ## Farewell
 
