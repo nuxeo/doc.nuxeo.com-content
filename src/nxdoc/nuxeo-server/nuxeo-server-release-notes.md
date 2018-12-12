@@ -767,6 +767,11 @@ It is now possible to enable the dev (necessary to perform a hotreload with the 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25508](https://jira.nuxeo.com/browse/NXP-25508).
 
 
+#### Disabling Studio package dependency Validation {{since '10.3'}}
+
+A runtime configuration property has been added that allows to disable the dependency validation on the Studio package: `studio.snapshot.disablePkgValidation`. Until we manage to optimize performances on the server side, this allows to gain up to 30 seconds on the hot-reload action, highly recommended!
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25719](https://jira.nuxeo.com/browse/NXP-25719).
 
 #### HSTS Policy {{since '10.1'}}
 
