@@ -808,7 +808,6 @@ A check on the presence of a JDK per is enforced at startup in nuxeoctl
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21200](https://jira.nuxeo.com/browse/NXP-21200).
 
-
 #### Target Platform filtering on mp-listall command {{since '10.3'}}
 
 mp-listall command has been optimized by listing only relevant packages for the version of the Nuxeo server it is run on.
@@ -855,6 +854,18 @@ A set of addons and scripts have been produced for the ability to replicate all 
 Servlet API 3.1 is now used in Nuxeo code.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24386](https://jira.nuxeo.com/browse/NXP-24386).
+
+
+#### Nginx File Upload / Download Acceleration {{since '10.3'}}
+
+This feature allows an Nginx proxy in front of Nuxeo to accelerate uploads and downloads.
+
+In order to enable this feature you must add to your nuxeo.conf:
+`nuxeo.nginx.accel.enabled=true`
+
+IMPORTANT: when this feature is enabled, you MUST front the Nuxeo server with a Nginx proxy that correctly deals with the X-Accel-Location header. Not doing so would be a SECURITY HOLE.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25831](https://jira.nuxeo.com/browse/NXP-25831).
 
 <!--- ### User workspace -->
 
@@ -1338,7 +1349,7 @@ The Nuxeo connector of Simflofy knows how to create such documents that referenc
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24714](https://jira.nuxeo.com/browse/NXP-24714).
 
-### Webdav
+### WEBDAV
 
 #### MS Office temporary files mime-type set as application/octet-stream {{since '10.3'}}
 
@@ -1412,7 +1423,6 @@ You may want to recompute your stored image renditions when you change the resol
 Using the feature "SAFE_SEARCH_DETECTION" is now possible with the Amazon implementation of Nuxeo Vision.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25646](https://jira.nuxeo.com/browse/NXP-25646).
-
 
 #### All Backend Service features can be leveraged in Nuxeo Vision {{since '10.2'}}
 
