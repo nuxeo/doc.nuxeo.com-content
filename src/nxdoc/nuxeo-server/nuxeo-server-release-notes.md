@@ -363,7 +363,9 @@ The aggregations are explained in more detail on https://www.elastic.co/guide/en
 
 #### Fulltext extraction can be leveraged more easily {{since '10.3'}}
 
-Fulltext maximum size is now 128 KB by default. To change this, the repository configuration can be updated to use another fieldSizeLimit, see the documentation. The `binaryTextUpdated` event now contains two properties of interest to know what was update exactly:
+Fulltext maximum size is now 128 KB by default. To change this, the repository configuration can be updated to use another fieldSizeLimit, see the documentation.
+
+The `binaryTextUpdated` event now contains two properties of interest to know what was update exactly:
 - `systemProperty` contains the name of the property updated
 - `systemPropertyValue` contains the value
 
@@ -704,6 +706,13 @@ When set to true, both parameters require a user directory that is not read-only
 A new `nuxeo.saml2.skewTimeMs` configuration property to control the clock skew in milliseconds has bene introduced. Default value is 60 * 1000 (1 minute).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24766](https://jira.nuxeo.com/browse/NXP-24766).
+
+#### Stronger digest for PORTAL_AUTH plugin {{since '10.3'}}
+
+It is now possible to configure the algorithm used for the digest among the list given [here](The algorithm used must be one of those described in https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#MessageDigest). Previously, MD5 was systematically used>.
+ `<parameter name="digestAlgorithm">SHA-512<parameter>`
+ 
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25887](https://jira.nuxeo.com/browse/NXP-25887).
 
 ### REST API
 
