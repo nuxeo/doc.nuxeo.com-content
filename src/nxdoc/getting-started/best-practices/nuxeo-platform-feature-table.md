@@ -796,6 +796,28 @@ The tables below use the following notation:
     <th>Web UI</th>
 </tr>
 <tr>
+    <td colspan="1">Document Publication</td>
+    <td colspan="1">Default distribution</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">
+    [User documentation]({{page space='userdoc' page='document-publishing'}})<br/>
+    [Developer documentation]({{page page='publisher'}})
+    </td>
+</tr>
+<tr>
+    <td colspan="1">Bulk Publication  </td>
+    <td colspan="1">Default distribution</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>N/A</td>
+    <td colspan="1">
+    [User documentation]({{page space='userdoc' page='document-publishing'}})<br/>
+    [Developer documentation]({{page page='publisher'}})
+    </td>
+</tr>
+<tr>
     <td colspan="1">Publication approval workflow</td>
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
