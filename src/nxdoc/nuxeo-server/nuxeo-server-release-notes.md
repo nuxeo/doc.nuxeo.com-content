@@ -1346,6 +1346,12 @@ They are no more detected as word documents, which avoids applying some useless 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25817](https://jira.nuxeo.com/browse/NXP-25817).
 
+#### Microsoft Office Temporary Files Not Trashed {{since '10.3'}}
+
+Office temporary files are not immediately deleted, they are not sent to trash, avoiding to fill the trash with documents that are not user-level documents.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25818](https://jira.nuxeo.com/browse/NXP-25818).
+
 ### Nuxeo Platform Importer
 
 #### Image and Video capabilities for the Nuxeo Stream Random Importer {{since '10.2'}}
