@@ -136,7 +136,7 @@ history:
 
 Nuxeo logging is compliant with common Java logging frameworks&nbsp;[Log4J](https://logging.apache.org/log4j/1.2/),&nbsp;[Log4j2](https://logging.apache.org/log4j/2.x/),&nbsp;[SLF4J](http://www.slf4j.org/)&nbsp;and&nbsp;[JUL](http://download.oracle.com/javase/6/docs/technotes/guides/logging/index.html).
 
-Logging in Nuxeo is configured through a Log4J XML file: `$NUXEO_HOME/lib/log4j2.xml`
+Logging in Nuxeo is configured through a Log4J XML file: `$NUXEO_HOME/lib/log4j.xml`
 
 Editing that file, you can set the logging rules (log level per file and component, files rotation, ...).
 
