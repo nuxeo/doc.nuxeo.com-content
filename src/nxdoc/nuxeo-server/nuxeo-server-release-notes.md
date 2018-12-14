@@ -887,7 +887,8 @@ CSRF tokens allow to have deep protection against attacks of the system.
 
 It is now possible to register offline a new instance from the terminal with the following command, that will then start a command line wizard:
 
-```nuxeoctl register --offline
+```
+nuxeoctl register --offline
 ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23815](https://jira.nuxeo.com/browse/NXP-23815).
@@ -1266,7 +1267,8 @@ We are also storing a set of custom performance marks and measurements, which ar
 - [measurement] `<page-name>.dom-changed`: a measurement between the moment in which the last `dom-change` event is fired from within the current page and the last `page-change` mark (or PerformanceTiming.fetchStart if `undefined`) - this is mostly helpful for development and debugging purposes
 We added these metrics to the performance analyzer added in NXP-25303. You can try these out by running:
 
-```Nuxeo.Performance.report({networkStats: true});
+```
+Nuxeo.Performance.report({networkStats: true});
 ```
 
 #### New Languages
