@@ -22,10 +22,11 @@ Users can export documents on their computer. It is possible to export:
 
 ### From a Folder
 
-- The **XML export** is a low level export that enables users to either get the XML definition of the document or get a folder for each exported document that contains:
-    - a document.xml file holding the document's metadata and various information such as the applied access rights,
-    - a .blob file that holds the binary content of the document. This blob is referenced in the document.xml file;
-- The **ZIP export** enables you to export a whole workspace, section or folder in a zipped XML folder. This export is only available on folderish documents.
+- **XML export** is a low-level export that enables users to get either the XML definition of the document or get a folder for each exported document that contains:
+    - a document.xml file holding the document's metadata and various information such as the applied access rights
+    - a .blob file that holds the binary content of the document. This blob is referenced in the document.xml file
+- **ZIP export** enables you to export a whole workspace, section or folder in a zipped XML folder. This export is only available on folderish documents.
+- **CSV export** enables you to export a table listing of all the properties of the content in CSV format. This export is available on folderish documents, search results and collections. CSV export  ![]({{file name='csv-icon.png'}} ?w=30)  is available at the top-right of document listing.
 
 ### From a Document
 
