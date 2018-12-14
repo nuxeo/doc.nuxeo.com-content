@@ -328,7 +328,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Files user documentation]({{page space='userdoc' page='document-types'}})</td>
+    <td colspan="1">[User Documentation]({{page space='userdoc' page='document-types'}})</td>
 </tr>
 <tr>
     <td colspan="1">Folder</td>
@@ -336,7 +336,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Folders user documentation]({{page space='userdoc' page='document-types'}})</td>
+    <td colspan="1">[User Documentation]({{page space='userdoc' page='document-types'}})</td>
 </tr>
 <tr>
     <td colspan="1">Forum</td>
@@ -344,7 +344,7 @@ The tables below use the following notation:
     <td>N/A</td>
     <td>&#10003;</td>
     <td>N/A</td>
-    <td colspan="1">[Forums user documentation]({{page space='userdoc' page='forums'}})<br/>
+    <td colspan="1">[User Documentation]({{page space='userdoc' page='forums'}})<br/>
     {{multiexcerpt 'DeprecatedAddon_8.10' page='generic-multi-excerpts'}}</td>
 </tr>
 <tr>
@@ -361,7 +361,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Notes user documentation]({{page space='userdoc' page='document-types'}})</td>
+    <td colspan="1">[User Documentation]({{page space='userdoc' page='document-types'}})</td>
 </tr>
 <tr>
     <td colspan="1">OneDrive documents</td>
@@ -377,7 +377,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Folders user documentation]({{page space='userdoc' page='document-types'}})</td>
+    <td colspan="1">[User Documentation]({{page space='userdoc' page='document-types'}})</td>
 </tr>
 <tr>
     <td colspan="1">Personal workspace</td>
@@ -393,7 +393,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Nuxeo DAM documentation]({{page page='digital-asset-management-dam'}})</td>
+    <td colspan="1">[Nuxeo DAM Documentation]({{page page='digital-asset-management-dam'}})</td>
 </tr>
 <tr>
     <td colspan="1">Section</td>
@@ -401,7 +401,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Sections user documentation]({{page space='userdoc' page='publishing-content'}})</td>
+    <td colspan="1">[User Documentation]({{page space='userdoc' page='publishing-content'}})</td>
 </tr>
 <tr>
     <td>Document template</td>
@@ -417,7 +417,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Document Types]({{page space='userdoc' page='document-types'}})</td>
+    <td colspan="1">[User Documentation]({{page space='userdoc' page='document-types'}})</td>
 </tr>
 <tr>
     <td colspan="1">Workspace templates</td>
@@ -487,7 +487,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Document creation user documentation]({{page space='userdoc' page='creating-content'}})</td>
+    <td colspan="1">[User Documentation]({{page space='userdoc' page='creating-content'}})</td>
 </tr>
 <tr>
     <td colspan="1">HTML 5 drag and drop</td>
@@ -496,8 +496,8 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [User documentation]({{page space='userdoc' page='creating-content#content-creation-dandd'}})<br/>
-    [Drag and Drop Developer documentation]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
+    [User Documentation]({{page space='userdoc' page='creating-content#content-creation-dandd'}})<br/>
+    [Developer Documentation]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
     </td>
 </tr>
 <tr>
@@ -600,8 +600,8 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [User documentation]({{page space='userdoc' page='editing-content'}})<br/>
-    [Developer documentation]({{page page='versioning'}})
+    [User Documentation]({{page space='userdoc' page='editing-content'}})<br/>
+    [Developer Documentation]({{page page='versioning'}})
     </td>
 </tr>
 <tr>
@@ -623,14 +623,14 @@ The tables below use the following notation:
     <td>&#10003;<br/>&#10003;</td>
     <td>&#10003;<br/>LTS&nbsp;2019<br/>&#10003;</td>
     <td colspan="1">
-    [Nuxeo Diff Developer documentation]({{page page='nuxeo-diff'}})<br/>
-    [Nuxeo Diff User documentation]({{page space='userdoc' page='nuxeo-diff'}})</br>
+    [Nuxeo Diff Developer Documentation]({{page page='nuxeo-diff'}})<br/>
+    [Nuxeo Diff User Documentation]({{page space='userdoc' page='nuxeo-diff'}})</br>
     [Metadata Diff User Documentation]({{page space='userdoc' page='browse'}}#compare-metadata-between-documents)</br>
     </td>
 </tr>
 <tr>
-    <td>Content transformation</td>
-    <td>Default transformation<br/>
+    <td>Content Transformation</td>
+    <td>Default Transformation<br/>
     Template Rendering<br/>
     Nuxeo DAM</td>
     <td>&#10003;<br/>&#10003;<br/>&#10003;</td>
@@ -700,8 +700,8 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [User documentation]({{page space='userdoc' page='working-with-webdav'}})<br/>
-    [Developer documentation]({{page page='webdav'}})
+    [User Documentation]({{page space='userdoc' page='working-with-webdav'}})<br/>
+    [Developer Documentation]({{page page='webdav'}})
     </td>
 </tr>
 </tbody>
@@ -730,8 +730,8 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [User documentation]({{page space='userdoc' page='workflows'}})<br/>
-    [Developer documentation]({{page page='workflow'}})<br/>
+    [User Documentation]({{page space='userdoc' page='workflows'}})<br/>
+    [Developer Documentation]({{page page='workflow'}})<br/>
     [Workflow How-To Index]({{page page='workflow-how-to-index'}})
     </td>
 </tr>
@@ -742,8 +742,8 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [User documentation]({{page space='userdoc' page='workflows'}})<br/>
-    [Developer documentation]({{page page='workflow'}})<br/>
+    [User Documentation]({{page space='userdoc' page='workflows'}})<br/>
+    [Developer Documentation]({{page page='workflow'}})<br/>
     [Workflow How-To Index]({{page page='workflow-how-to-index'}})<br/>
     </td>
 </tr>
@@ -754,8 +754,8 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [User documentation]({{page space='userdoc' page='workflows'}})<br/>
-    [Developer documentation]({{page page='workflow'}})<br/>
+    [User Documentation]({{page space='userdoc' page='workflows'}})<br/>
+    [Developer Documentation]({{page page='workflow'}})<br/>
     [Workflow How-To Index]({{page page='workflow-how-to-index'}})
     </td>
 </tr>
@@ -800,10 +800,10 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>N/A</td>
+    <td>&#10003;</td>
     <td colspan="1">
-    [User documentation]({{page space='userdoc' page='document-publishing'}})<br/>
-    [Developer documentation]({{page page='publisher'}})
+    [User Documentation]({{page space='userdoc' page='document-publishing'}})<br/>
+    [Developer Documentation]({{page page='publisher'}})
     </td>
 </tr>
 <tr>
@@ -811,10 +811,10 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>N/A</td>
+    <td>&#10003;</td>
     <td colspan="1">
-    [User documentation]({{page space='userdoc' page='document-publishing'}})<br/>
-    [Developer documentation]({{page page='publisher'}})
+    [User Documentation]({{page space='userdoc' page='document-publishing'}})<br/>
+    [Developer Documentation]({{page page='publisher'}})
     </td>
 </tr>
 <tr>
@@ -824,8 +824,8 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>N/A</td>
     <td colspan="1">
-    [User documentation]({{page space='userdoc' page='publishing-content'}})<br/>
-    [Developer documentation]({{page page='publisher'}})
+    [User Documentation]({{page space='userdoc' page='publishing-content'}})<br/>
+    [Developer Documentation]({{page page='publisher'}})
     </td>
 </tr>
 <tr>
@@ -881,7 +881,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [User documentation]({{page space='userdoc' page='browsing-content'}})<br/>
+    [User Documentation]({{page space='userdoc' page='browsing-content'}})<br/>
     [How to Customize the Dashboard]({{page page='how-to-customize-the-dashboard'}})
     </td>
 </tr>
@@ -900,8 +900,8 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [Developer documentation]({{page page='tagging'}})<br/>
-    [User documentation]({{page space='userdoc' page='tags'}})
+    [Developer Documentation]({{page page='tagging'}})<br/>
+    [User Documentation]({{page space='userdoc' page='tags'}})
     </td>
 </tr>
 <tr>
@@ -1050,8 +1050,8 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [ACLs developer documentation]({{page page='acls'}})<br/>
-    [Permissions user documentation]({{page space='userdoc' page='managing-permissions'}})
+    [Developer Documentation]({{page page='acls'}})<br/>
+    [User Documentation]({{page space='userdoc' page='managing-permissions'}})
     </td>
 </tr>
 <tr>
@@ -1102,8 +1102,8 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>N/A</td>
     <td colspan="1">
-    [Administration documentation]({{page page='nuxeo-groups-and-rights-audit'}})<br/>
-    [User documentation]({{page space='userdoc' page='nuxeo-groups-and-rights-audit'}})<br/>
+    [Developer Documentation]({{page page='nuxeo-groups-and-rights-audit'}})<br/>
+    [User Documentation]({{page space='userdoc' page='nuxeo-groups-and-rights-audit'}})<br/>
     Still in consideration for Web UI
     </td>
 </tr>
@@ -1114,8 +1114,8 @@ The tables below use the following notation:
     <td>&#10003;<br/>N/A</td>
     <td>&#10003;<br/>&#10003;</td>
     <td>&#10003;<br/>&#10003;</td>
-    <td colspan="1">[Permissions user documentation]({{page space='userdoc' page='managing-permissions'}})<br/>
-    [EasyShare documentation]({{page version='' space='userdoc' page='easyshare'}})</td>
+    <td colspan="1">[User Documentation]({{page space='userdoc' page='managing-permissions'}})<br/>
+    [EasyShare Documentation]({{page version='' space='userdoc' page='easyshare'}})</td>
 </tr>
 <tr>
     <td>Multi-tenancy</td>
@@ -1176,8 +1176,8 @@ The tables below use the following notation:
     <td>&#10003;<br/>&#10003;</td>
     <td>N/A<br/>N/A</td>
     <td colspan="1">
-    [Administration documentation]({{page page='nuxeo-groups-and-rights-audit'}})<br/>
-    [User documentation]({{page space='userdoc' page='nuxeo-groups-and-rights-audit'}})<br/>
+    [Developer Documentation]({{page page='nuxeo-groups-and-rights-audit'}})<br/>
+    [User Documentation]({{page space='userdoc' page='nuxeo-groups-and-rights-audit'}})<br/>
     Still in consideration for Web UI
 </td>
 </tr>
@@ -1336,8 +1336,17 @@ The tables below use the following notation:
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2019</td>
-    <td colspan="1">&nbsp;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[User Documentation]({{page version='' space='userdoc' page='comment'}})</br>
+    [Developer Documentation]({{page version='' space='nxdoc' page='comments'}})</td>
+</tr>
+<tr>
+    <td colspan="1">Annotations</td>
+    <td colspan="1">[ARender Connector]({{page version='' space='nxdoc' page='nuxeo-arender-connector'}})</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Documentation]({{page version='' space='nxdoc' page='nuxeo-arender-connector'}})</td>
 </tr>
 <tr>
     <td colspan="1">Preview</td>
@@ -1346,8 +1355,8 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [User documentation]({{page space='userdoc' page='preview'}})<br/>
-    [Developer documentation]({{page page='preview'}})
+    [User Documentation]({{page space='userdoc' page='preview'}})<br/>
+    [Developer Documentation]({{page page='preview'}})
 </td>
 </tr>
 <tr>
@@ -1357,9 +1366,8 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>LTS&nbsp;2020</td>
     <td colspan="1">
-    [User documentation]({{page space='userdoc' page='editing-content#relations'}})<br/>
-    [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})<br/>
-    Still in consideration for Web UI
+    [User Documentation]({{page space='userdoc' page='editing-content'}}#relations)<br/>
+    [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})
     </td>
 </tr>
 <tr>
@@ -1369,8 +1377,8 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [User documentation]({{page space='userdoc' page='deleting-content'}})<br/>
-    [Developer documentation]({{page page='deleting-documents'}})
+    [User Documentation]({{page space='userdoc' page='deleting-content'}})<br/>
+    [Developer Documentation]({{page page='deleting-documents'}})
     </td>
 </tr>
 <tr>
@@ -1379,7 +1387,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Developer documentation]({{page page='thumbnail'}})</td>
+    <td colspan="1">[Developer Documentation]({{page page='thumbnail'}})</td>
 </tr>
 <tr>
     <td colspan="1">User profile</td>
@@ -1475,7 +1483,7 @@ The tables below use the following notation:
     <td>N/A</td>
     <td>&#10003;</td>
     <td>N/A</td>
-    <td colspan="1">[Local configuration documentation]({{page version='' space='userdoc' page='local-configuration'}})</td>
+    <td colspan="1">[Local Configuration Documentation]({{page version='' space='userdoc' page='local-configuration'}})</td>
 </tr>
 <tr>
     <td colspan="1">Document content configuration</td>
@@ -1483,7 +1491,7 @@ The tables below use the following notation:
     <td>N/A</td>
     <td>&#10003;</td>
     <td>N/A</td>
-    <td colspan="1">[Local configuration documentation]({{page version='' space='userdoc' page='local-configuration'}})</td>
+    <td colspan="1">[Local Configuration Documentation]({{page version='' space='userdoc' page='local-configuration'}})</td>
 </tr>
 <tr>
     <td colspan="1">Document types configuration</td>
@@ -1491,7 +1499,7 @@ The tables below use the following notation:
     <td>N/A</td>
     <td>&#10003;</td>
     <td>N/A</td>
-    <td colspan="1">[Local configuration documentation]({{page version='' space='userdoc' page='local-configuration'}})</td>
+    <td colspan="1">[Local Configuration Documentation]({{page version='' space='userdoc' page='local-configuration'}})</td>
 </tr>
 <tr>
     <td colspan="1">Faceted search configuration</td>
@@ -1502,7 +1510,7 @@ The tables below use the following notation:
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-    <td colspan="1">Theme selection</td>
+    <td colspan="1">Theme Selection</td>
     <td colspan="1">Default distribution</td>
     <td>NR</td>
     <td>&#10003;</td>
