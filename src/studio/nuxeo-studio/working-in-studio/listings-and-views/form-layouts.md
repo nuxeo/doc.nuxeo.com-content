@@ -274,18 +274,12 @@ The right part of the screen is called the "widgets palette". The middle is the 
 *   **Add Row**: The action to add a new row on the listing. The data and form components will be displayed following the grid. You can also add a row in a specific place by right-clicking
 *   **Add Column**: The action to add a column. You can also add a column in a specific place with the right-click.
 *   **Set Table Size**: Specify rows and columns number.
-
     {{#> callout type='info' }}
-
     Using this feature will overwrite what has already been configured.
-
     {{/callout}}
 *   **Import Layout**: Enables to literally "copy/paste" the configuration you did for other layouts (Edit, or View or Header). You want to use this to gain time.
-
     {{#> callout type='info' heading='To Nuxeo Platform developers'}}
-
     Contrary to what can be done at lower level with the layout framework, you need to redefine the layout for each mode (Nuxeo Studio actually doesn't leverage the layout mode). This was done for purpose of simplicity. In the future we might propose a solution that enables to also leverage layout modes.
-
     {{/callout}}
 *   ![]({{file name='edit_wiz 1.png' page='studio-icons-index'}}): Enables to move, insert or delete columns and rows.
 *   ![]({{file name='editor_area.gif' page='studio-icons-index'}}): Enables to edit a widget and configure it.
@@ -297,26 +291,19 @@ The right part of the screen is called the "widgets palette". The middle is the 
 *   **Style class**: You can specify a class that will be applied to all the area surrounding the form. You can either use an existing class that you will find on the [style guide](http://showcase.nuxeo.com/nuxeo/styleGuide/) or contribute your own class on the [Theme]({{page space='nxdoc' page='theme'}}) feature.
 *   **Widget Display**: You can control whether you want the form label just on top of the input or on the left, or to remove the display of the labels.
 *   **Layout Template**: It is an advanced option, for Nuxeo Platform developers. The widgets are displayed using an XHTML template (JSF Facelets template). You can upload your own templates if you want to do some deeper changes on the way the data/the fields are displayed. We propose you to download the default one used so as not to start from zero.
-
     {{#> callout type='note' }}
-
     If you use a custom layout template, you will then have to maintain this template when upgrading the Nuxeo Platform version and make sure it is still compatible.
-
     {{/callout}}
 
 ### The Widgets Palette
 
 *   **Widgets by Property**: You can browse the schemas (default ones and the ones you configured in the Studio project) and then choose a specific property. That way, the widget will be automatically mapped to the property you chose, and Studio will suggest only the widget types (calendar, lists, etc.) that can work with the property you selected.
 *   **Widgets by Type (under More Widgets)**: You can browse all the existing widget types. You will then have to map the widget to a property, by browsing the schemas and properties. This is a good way for handling the display of only a sub-property of a complex property.
-
     {{#> callout type='info' heading='For Nuxeo Platform developers'}}
-
     There is currently no widget type registry for uploading custom widget types. But you can use the generic widget to specify a widget type that you contributed in another plug-in.
-
     {{/callout}}
 *   **Built-in Widgets**: Built-in widgets are widgets where you don't have to configure neither the document property mapping, nor the widget-type.
 *   **Advanced Widgets**:
-
     *   **Container:** The container widget enables to add a visual wrapper around a set of widgets. If you drop a container widget, you will have several options for controlling whether the wrapper should be foldable, folded or not, should have a title, ... Then you will be able, inside the container, to edit a grid with the widgets you want to display.
         ![]({{file name='container_properties.png'}} ?w=350,h=316,border=true)
     *   **Layout:** The layout widget can be used to reference a complete layout definition. All the widgets that were defined in the referenced layout will be displayed where you drop the widget.
@@ -345,9 +332,7 @@ Clicking on the icon ![]({{file name='icon_subwidgets_edit.png' page='studio-ico
 By default, Studio will organize all the sub properties with a simple input text widget or a date, or anything, depending on the sub-property type. But you can re-arrange the widgets, or delete them and pickup again the sub-property on the widgets palette on the right, and also insert some build-in widgets, like a header that produces a separation, or a template widget, etc.
 
 {{#> callout type='info' }}
-
 Currently, complex properties configuration using [schema]({{page page='schemas'}}) feature limits the complexity at one level. You can go over this limitation by importing your own XSD. The layout editor will know how to handle the multiple levels.
-
 {{/callout}}
 
 ## Edition and View Tabs
