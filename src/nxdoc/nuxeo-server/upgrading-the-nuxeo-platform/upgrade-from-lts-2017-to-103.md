@@ -76,6 +76,14 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 
 {{{multiexcerpt name='upgrade-10.3-code.csrf-activation' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
+### Directories
+
+{{{multiexcerpt name='upgrade-10.3-code.directories'}}}
+
+### Conversion
+
+{{{multiexcerpt name='upgrade-10.3-code.conversion'}}}
+
 ### Video Conversion Listener
 
 {{{multiexcerpt 'upgrade-10.1-code.video-listeners' page='Upgrade from LTS 2017 following Fast Tracks'}}}
@@ -84,19 +92,36 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 
 {{{multiexcerpt 'upgrade-10.2-code.relax-import-constraints' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
+### Transient Username and External Permissions
+
+{{{multiexcerpt name='upgrade-10.3-code.transient-username'}}}
+
 ### Rename operations WebUI.* related to JSF
+
 {{{multiexcerpt 'upgrade-10.3-code.webui-operations' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
+#### Comment Manager
+
+{{{multiexcerpt 'upgrade-10.3-comments-migration' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
 ### Log4j 2
+
 {{{multiexcerpt 'upgrade-10.3-api.log4j' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 ### Use `NuxeoPrincipal` Instead of `Principal` in Most APIs
+
 {{{multiexcerpt 'upgrade-10.3-api.nuxeoprincipal' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
+### REST API Enrichers
+
+{{{multiexcerpt 'upgrade-10.3-api.enrichers' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
 ### REST API Endpoints
+
 {{{multiexcerpt 'upgrade-10.3-api.endpoints' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 ### Thumbnail resolution
+
 {{{multiexcerpt 'upgrade-10.3-code.thumbnail-resolution' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 ### Code Behavior Changes
@@ -145,6 +170,9 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 {{{multiexcerpt 'upgrade-10.2-deprecated.lifecycle_transition_event' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 {{{multiexcerpt 'upgrade-10.3-deprecated.lifecycle_transition_event' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
+#### Comment Manager
+{{{multiexcerpt 'upgrade-10.3-comments-migration' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 ## Addons
 
