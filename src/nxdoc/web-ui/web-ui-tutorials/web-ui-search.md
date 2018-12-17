@@ -44,6 +44,8 @@ Once you are all set, you can navigate to Nuxeo Studio to start creating your se
 
 The first step is to create a [page provider]({{page version='' space='studio' page='page-providers'}}) in Studio Modeler.
 
+
+
 In **Configuration**, go to **Page Providers**, click on **New** and name it `Search`.
 
 **The full text search:**
@@ -96,6 +98,8 @@ In **Configuration**, go to **Page Providers**, click on **New** and name it `Se
 You can now save your changes and go to the Studio Designer.
 
 ## Create a Search Layout
+
+{{{multiexcerpt 'quick-switcher' page='web-ui-document-layouts'}}}
 
 In the Studio Designer, on the **Layouts** tab, under **Page Providers** you will find your page provider created previously.
 
