@@ -529,7 +529,7 @@ See [NXP-19262](https://jira.nuxeo.com/browse/NXP-19262)
 
 #### Conversion
 
-When calling a converter directly though its name, a check is done on its source MIME type to see if it can handle the input blob. A `ConversionException` is thrown if the converter can't handle it.
+When calling a converter directly through its name, a check is done on its source MIME type to see if it can handle the input blob. A `ConversionException` is thrown if the converter can't handle it.
 A new configuration property `nuxeo.convert.enforceSourceMimeTypeCheck` is available to disable this behavior which defaults to `true`.
 
 To disable the check, use the following contribution:
