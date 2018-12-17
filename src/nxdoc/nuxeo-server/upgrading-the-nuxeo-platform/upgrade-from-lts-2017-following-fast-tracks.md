@@ -304,6 +304,7 @@ See [NXP-24583](https://jira.nuxeo.com/browse/NXP-25020).
 ### Installation and configuration
 
 #### Requirements
+
 {{! multiexcerpt name='upgrade-10.3-installation-requirements'}}
 - **Kafka** >= 2.0.0 is required.
 {{! /multiexcerpt}}
@@ -331,7 +332,6 @@ See [NXP-24583](https://jira.nuxeo.com/browse/NXP-25020).
 </tbody>
 </table>
 </div>
-
 
 ### Data
 
@@ -521,14 +521,17 @@ See [NXP-25680](https://jira.nuxeo.com/browse/NXP-25680)
 
 #### Directories
 
+{{! multiexcerpt name='upgrade-10.3-code.directories'}}
 New directory query APIs using a `QueryBuilder`:
 - `Session.query(QueryBuilder, fetchReferences)`
 - `Session.queryIds(QueryBuilder)`
 
 See [NXP-19262](https://jira.nuxeo.com/browse/NXP-19262)
+{{! /multiexcerpt}}
 
 #### Conversion
 
+{{! multiexcerpt name='upgrade-10.3-code.conversion'}}
 When calling a converter directly through its name, a check is done on its source MIME type to see if it can handle the input blob. A `ConversionException` is thrown if the converter can't handle it.
 A new configuration property `nuxeo.convert.enforceSourceMimeTypeCheck` is available to disable this behavior which defaults to `true`.
 
@@ -540,9 +543,11 @@ To disable the check, use the following contribution:
 </extension>
 ```
 See [NXP-25840](https://jira.nuxeo.com/browse/NXP-25840)
+{{! /multiexcerpt}}
 
 #### Transient Username and External Permissions
 
+{{! multiexcerpt name='upgrade-10.3-code.transient-username'}}
 A computed transient username is now always the same for a given base username, so only one token is generated for a given email when giving permission to an external user: that means if you invite the same external user on 2 documents, he won't have to log out from the first document to see the second one.
 
 To enable back the uniqueness of the transient username computation, use the following contribution:
@@ -553,6 +558,7 @@ To enable back the uniqueness of the transient username computation, use the fol
 </extension>
 ```
 See [NXP-25828](https://jira.nuxeo.com/browse/NXP-25828)
+{{! /multiexcerpt}}
 
 #### TrashService
 
@@ -564,6 +570,32 @@ Also, these transitions are deprecated as we DO NOT follow them anymore. As a co
 As a consequence of this backward mechanism, following these transitions on a proxy will remove them.
 
 See [NXP-25761](https://jira.nuxeo.com/browse/NXP-25761)
+{{! /multiexcerpt}}
+
+#### {{> anchor 'keeping-old-comments'}} Keeping Old Comments
+
+{{! multiexcerpt name='upgrade-10.3-keeping-comments'}}
+The comment implementation has changed in 10.3. If you want to keep your old comments, add the following contribution:
+```xml
+<require>org.nuxeo.ecm.platform.comment.manager.migrator</require>
+<extension target="org.nuxeo.runtime.migration.MigrationService" point="configuration">
+  <migration id="comment-storage">
+    <defaultState>relation</defaultState>
+  </migration>
+</extension>
+```
+
+If you want to migrate comments to the new storage model, follow the [Comment migration steps](#comment-migration).
+{{! /multiexcerpt}}
+
+#### {{> anchor 'comment-migration'}} Comment Migration
+
+{{! multiexcerpt name='upgrade-10.3-comments-migration'}}
+To migrate comments to the new storage model:
+
+1. Follow the step from section [Keeping old comments](#keeping-old-comments).
+2. In the Nuxeo Platform's JSF UI, go to **Admin**&nbsp;> **System Information**&nbsp;> **Migration**, click the button **Migrate comments from relations to the parent id property usage** and wait until migration is completed.
+3. Remove the contribution added at step 1.
 {{! /multiexcerpt}}
 
 #### Log4j 2
@@ -665,6 +697,7 @@ See [NXP-24717](https://jira.nuxeo.com/browse/NXP-24717)
 
 ##### REST API Enrichers
 
+{{! multiexcerpt name='upgrade-10.3-api.enrichers'}}
 Enrichers can now apply to the `blob` type.
 
 For instance, to get the links to open a LiveConnect blob in all applications associated to its MIME type, you can use the `enrichers-blob: appLinks` enricher.
@@ -700,7 +733,7 @@ public class BlobAppLinksJsonEnricher extends AbstractJsonEnricher<BlobProperty>
 }
 ```
 See [NXP-26126](https://jira.nuxeo.com/browse/NXP-26126)
-
+{{! /multiexcerpt}}
 
 ##### REST API Endpoints
 {{! multiexcerpt name='upgrade-10.3-api.endpoints'}}
