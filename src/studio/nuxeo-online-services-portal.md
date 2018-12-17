@@ -2,7 +2,7 @@
 title: Nuxeo Online Services Portal
 review:
     comment: ''
-    date: ''
+    date: '2018-12-17'
     status: ok
 confluence:
     ajs-parent-page-id: '1409040'
@@ -89,49 +89,50 @@ history:
         version: '1'
 
 ---
-The Nuxeo Online Services portal gives you access to information about each of your Nuxeo-based applications and the services that have been enabled.
-Available services are:
 
-- Nuxeo Studio,
-- support contract (developer or operations).
+The Nuxeo Online Services portal gives you access to information about each of your Nuxeo-based applications and the services that have been enabled.
 
 Available information includes:
+- Your dashboard
+- Your applications
+- Your tokens
+- Distributions
+- Documentation
 
-- application details (such as the target delivery date),
-- the target environment,
-- the registered instances.
+## Dashboard
 
-{{#> callout type='info' }}
-We strongly recommend that you fill in your application detail and target environment, as this is information often needed by the support team to resolve any logged issues.
-{{/callout}}
+The dashboard provides you with a view of your applications, the latest maintenance fixes published and information about the early access program at a glance.
 
-**To fill in or edit your application's details and target environment:**
+![]({{file name='dashboard.png'}} ?w=600,border=true)
 
-1.  In **My Application** page, there is a list of your available accounts and projects.
-    The information on your applications are displayed.
-2.  To edit application's detail, roll over the tool icon ![CONNECT Tool Icon](nx_asset://6713b6df-b95d-46fa-9701-ff2795a43873 ?w=25) to display the contextual menu.
-    <!--     ### nx_asset ###
-      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/NOS/CONNECT    Application View
-      name: CONNECT-application-view.png
-      studio_modeler#screenshot#up_to_date
-    -->
-    ![CONNECT Application View](nx_asset://de7cd58d-7606-4d9a-8f98-0d903f0dd3ce ?w=650,border=true)
-3.  Click on the edition link, with the edit icon ![CONNECT Edit Icon](nx_asset://ce0e3bd8-059d-4c5d-9dbb-54eb806bb3eb ?w=25).
-4.  Fill in or edit the information.
-    <!--     ### NX_ASSET ###
-        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/NOS/CONNECT-application-edit
-        name: CONNECT-application-edit.png
-        studio_modeler#screenshot#to_be_updated
-    -->
-    ![CONNECT Application Edit](nx_asset://7b87837f-2cba-4bb7-84e0-16388f2d009a ?w=350,border=true)
-5.  Click on the **Update** button.
-    Information is saved.
-    <!--     ### NX_ASSET ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/NOS/Connect Application Edited
-    name: CONNECT-application-edited.png
-    studio_modeler#screenshot#up_to_date
-    -->
-    ![CONNECT Application Edited](nx_asset://640a8741-e75e-46b3-b0ce-68cfe11702f5 ?w=650,border=true)
+## My applications
+
+On my applications tab, you can create a new trial Studio Project, and open your applications in Studio in one click.
+
+To access details of your application,  click on its name. You can also access existing instances and register a new instance.
+
+![]({{file name='my-applications.png'}} ?w=600,border=true)
+
+## My tokens
+
+Token can be used wherever you need to provide credentials to access the NOS APIs and the Studio maven repository. Once your token is created, you can see it only once, so save it carefully. Then use it as you would your password to gain access to previously mentioned services. We recommend using one token per client.
+
+My tokens tabs enables you to create and revoke tokens from the token list.
+
+![]({{file name='my-tokens.png'}} ?w=600,border=true)
+
+## Distributions
+
+The distribution page provides you with the list of available distributions to download.
+
+![]({{file name='distributions.png'}} ?w=600,border=true)
+
+## Documentation
+
+Documentation tab provides you with a guide on how to create JIRA tickets to benefit from Support.
+
+![]({{file name='documentation.png'}} ?w=600,border=true)
+
 
 **RELATED TOPICS**
 
