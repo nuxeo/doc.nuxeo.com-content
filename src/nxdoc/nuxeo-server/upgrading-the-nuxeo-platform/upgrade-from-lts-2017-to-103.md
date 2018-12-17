@@ -146,6 +146,10 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 
 {{{multiexcerpt 'upgrade-10.3-deprecated.lifecycle_transition_event' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
+#### Comment Manager
+
+{{{multiexcerpt 'upgrade-10.3-comments-migration' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
 ## Addons
 
 ### Nuxeo Drive - Server APIs Changes
