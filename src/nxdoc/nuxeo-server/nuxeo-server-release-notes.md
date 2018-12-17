@@ -936,30 +936,6 @@ The Nuxeo Platform now uses version 1.11.323 of the Amazon SDK. This notably all
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24981](https://jira.nuxeo.com/browse/NXP-24981).
 
-#### {{> anchor 'keeping-old-comments'}} Keeping Old Comments
-{{! multiexcerpt name='upgrade-10.3-keeping-comments'}}
-The comment implementation has changed in 10.3. If you want to keep your old comments, add the following contribution:
-
-```xml
-<require>org.nuxeo.ecm.platform.comment.manager.migrator</require>
-<extension target="org.nuxeo.runtime.migration.MigrationService" point="configuration">
-  <migration id="comment-storage">
-    <defaultState>relation</defaultState>
-  </migration>
-</extension>
-```
-
-If you want to migrate comments to the new storage model, follow the [Comment migration steps](#comment-migration).
-{{! /multiexcerpt}}
-
-#### Comment Migration
-{{! multiexcerpt name='upgrade-10.3-comments-migration'}}
-To migrate comments to the new storage model:
-1. Follow the step from section [Keeping old comments](#keeping-old-comments).
-2. In the Nuxeo Platform's JSF UI, go to **Admin**&nbsp;> **System Information**&nbsp;> **Migration**, click the button **Migrate comments from relations to the parent id property usage** and wait until migration is completed.
-3. Remove the contribution added at step 1.
-{{! /multiexcerpt}}
-
 #### Log4J 2 {{since '10.3'}}
 
 Nuxeo now uses Log4j 2 as its logging backend instead of Log4j.
