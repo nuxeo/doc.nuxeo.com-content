@@ -25,9 +25,9 @@ tree_item_index: 800
 
 ---
 
-Document type layouts are used to display a document's metadata in Web UI forms. A document layout is structured with document type properties, assembled with several UI elements such as sections, cards, columns etc.
+Document type layouts are used to display a document's metadata in Web UI. A document layout is structured with document type properties, assembled with several UI elements such as sections, cards, columns etc.
 
-A given document type can have multiple layouts: a `create` and `edit` layout to set its schema fields when creating or editing the document, a `view` layout to simply display field values and any other layouts according to the application(s) where these are used. In our previous metamodel driven UI, these were known as `modes` and a single layout definition could be rendered in different modes.
+A given document type can have multiple layouts: a `create` and `edit` layout to set its schema fields when creating or editing the document, a `view` layout to display field values and any other layouts according to the application(s) where these are used. In our previous metamodel driven UI, these were known as `modes` and a single layout definition could be rendered in different modes.
 
 In this tutorial you will learn how to create a document type layout with Studio Designer from a document type created in Studio Modeler and how to add a icon to it.
 
@@ -39,11 +39,11 @@ Watch the related courses on Nuxeo University
 
 ## Prerequisites
 
-- Make sure that the [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
+The [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) add-on is installed on your instance.
 
 ## Create a Contract Document Type
 
-Here we want to create a custom document type named "Contract" that will hold specific metadata related to the notion of a contract: contract owner, starting date, policy.
+Create a custom document type named "Contract" that will hold specific metadata for a contract: contract owner, starting date, policy.
 
 
 1.  In Studio Modeler, under **Configuration**, click on the **Content Model** section, then **Document Types**. Click on the **New** button.
@@ -73,21 +73,33 @@ Once you are all set, you can navigate to the Studio Designer to configure your 
 
 ## Create a New Layout
 
-1. Go on the **Layouts** tab on the left menu.
-1. Under **Local Types** you will find your `Contract` document type.
-1. Five layouts are available for the configuration. Let's start with the **Create** layout: Click on the **Configure** button in the editor.
+{{! multiexcerpt name='quick-switcher'}} {{#> callout type='note' }}
+
+Jump between any Studio feature or menu option in a snap by typing its name. This action can be triggered by clicking the button, or using shortcut CTRL + K (Windows/Linux) / CMD + K (Mac).
+
+{{/callout}}{{! /multiexcerpt}}
+
+
+1. In Studio Designer, go to **Layouts**.
+1. Under **Local Types**, find your `Contract` document type.
+ Five layouts are available for the configuration.
+1. To configure the Create layout,  click on **create** layout, then on the **Configure** button.
+
   {{#> callout type='tip' }}
   It automatically creates the `nuxeo-contract-create-layout.html` file, scaffolding:
     - The title and description fields
     - Every custom schema property linked to the document type
   {{/callout}}
-1. In the catalog properties on the left, select **File**&nbsp;> **content:blob**&nbsp;> **view** and drag and drop the element in the main view.
-1. Click on Save.
+
+1. In CATALOG, on the right, select **File**&nbsp;> **content:blob**&nbsp;> **view** and drag and drop the element in the main view.
+1. Click on **Save**.
+
   {{#> callout type='note' }}
-  When configuring a document type, you need to create all layouts in the Studio Designer in order to display the relevant properties.
+  When configuring a document type, you need to create all layouts in the Studio Designer in order to display the relevant properties. You can also click **Configure missing layouts** to create automatically default layouts based on the document type.
   {{/callout}}
-1. Click on the **Edit** layout and then on the **Configure** button.
-1. Modify and/or delete fields as you wish them to be displayed when editing your document and click on **Save**.
+
+1. To configure the Edit layout,Click on the **edit** and then on the **Configure** button.
+1. Modify and/or delete fields as you need when editing your document and click on **Save**.
 1. Do the same two last steps with the **Metadata** and **View** layouts and don't forget to save.<br/>
   You now have an upload button on your document layout.
 1. At the bottom of the editor, switch to code editor.

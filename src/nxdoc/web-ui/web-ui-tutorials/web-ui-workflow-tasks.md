@@ -39,6 +39,8 @@ Watch the related courses on Nuxeo University
 ## Create a Workflow Template
 First, we need to create a new workflow template in Studio Modeler. This workflow will be applied to the Contract document type.
 
+{{{multiexcerpt 'quick-switcher' page='web-ui-document-layouts'}}}
+
 1. Go to **Workflow** > **Process Definitions** and click on **New**.
   ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='create-wf-studio.png'}} ?w=350,border=true)
 1. On the **Activation** tab, next to the field **Current document has one of the types**, select the Contract local type and move it from left to right.
