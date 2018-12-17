@@ -37,6 +37,8 @@ Once you are all set, you can navigate to Modeler to start creating your search.
 
 ## Create a Page Provider
 
+{{{multiexcerpt 'quick-switcher' page='web-ui-document-layouts'}}}
+
 1. In Studio Modeler, go to Customization, go to **Page Providers**, click on **New** and name it _otherContracts_.
 1. In the Query filter add the following line `AND ecm:primaryType='Contract'`. This will enable to only search contract documents.</br>
    You should end up with something like this:
