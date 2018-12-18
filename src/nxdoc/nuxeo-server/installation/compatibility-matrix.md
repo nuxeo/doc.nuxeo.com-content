@@ -67,11 +67,10 @@ history:
         date: '2016-05-13 14:21'
         message: ''
         version: '1'
-
 ---
 ## Java
 
-Supported Java versions: {{! multiexcerpt name='java_requirement'}}**JDK 1.8.0_112** (Oracle's JDK or OpenJDK) and greater{{! /multiexcerpt}}
+Supported Java versions: {{! multiexcerpt name='java_requirement'}}**JDK 11.0.1** (Oracle's JDK or OpenJDK) and greater{{! /multiexcerpt}}
 
 As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for any given major version, for instance the latest bugfix version of Java 8 was 8u112 (1.8.0_112) at the time of this writing.
 
@@ -86,13 +85,13 @@ More information is available from the [Installation]({{page page='installation'
 The Nuxeo Platform supports the following databases.
 {{! multiexcerpt name='all-supported-databases'}}
 <ul>
-<li>{{! multiexcerpt name='MariaDB-supported'}}MariaDB 10.1{{! /multiexcerpt}}</li>
-<li>{{! multiexcerpt name='MarkLogic-supported'}} MarkLogic 8.0 {{! /multiexcerpt}}</li>
+<li>{{! multiexcerpt name='MariaDB-supported'}}MariaDB 10.3{{! /multiexcerpt}}</li>
+<li>{{! multiexcerpt name='MarkLogic-supported'}}MarkLogic 8.0{{! /multiexcerpt}}</li>
 <li>{{! multiexcerpt name='MongoDB-supported'}}MongoDB 4.0{{! /multiexcerpt}}</li>
-<li>{{! multiexcerpt name='MySQL-supported'}}MySQL 5.7{{! /multiexcerpt}}</li>
-<li>{{! multiexcerpt name='Oracle-supported'}}Oracle 12c{{! /multiexcerpt}}</li>
-<li>{{! multiexcerpt name='PostgreSQL-supported'}}PostgreSQL 9.6{{! /multiexcerpt}}</li>
-<li>{{! multiexcerpt name='SQLserver-supported'}}SQL Server 2014{{! /multiexcerpt}}</li>
+<li>{{! multiexcerpt name='MySQL-supported'}}MySQL 8.0{{! /multiexcerpt}}</li>
+<li>{{! multiexcerpt name='Oracle-supported'}}Oracle 18c{{! /multiexcerpt}}</li>
+<li>{{! multiexcerpt name='PostgreSQL-supported'}}PostgreSQL 11{{! /multiexcerpt}}</li>
+<li>{{! multiexcerpt name='SQLserver-supported'}}SQL Server 2017{{! /multiexcerpt}}</li>
 </ul>
 {{! /multiexcerpt}}
 
@@ -110,7 +109,7 @@ Nuxeo Platform can be based on [Tomcat](http://tomcat.apache.org/). The supporte
 
 {{! multiexcerpt name='supported-app-servers-versions'}}
 <ul>
-<li>Tomcat 8.5.23</li>
+<li>Tomcat 9.0.12</li>
 </ul>
 {{! /multiexcerpt}}
 
@@ -127,6 +126,7 @@ Nuxeo is shipped with an embedded Tomcat server.
 <tbody>
 <tr>
 <th colspan="1">Nuxeo Platform Version:</th>
+<th>FT 10.3</th>
 <th>FT 10.2</th>
 <th>FT 10.1</th>
 <th colspan="1">LTS 2017</th>
@@ -135,6 +135,10 @@ Nuxeo is shipped with an embedded Tomcat server.
 </tr>
 <tr>
 <th colspan="1">Redis</th>
+<td colspan="1">2.8.x <br />
+3.0.x <br />
+3.2.x <br />
+4.0.x</td>
 <td colspan="1">2.8.x <br />
 3.0.x <br />
 3.2.x <br />
@@ -171,6 +175,7 @@ More information can be found on the [Nuxeo and Redis]({{page page='nuxeo-and-re
 <tbody>
 <tr>
 <th colspan="1">Nuxeo Platform Version:</th>
+<th>FT 10.3</th>
 <th>FT 10.2</th>
 <th>FT 10.1</th>
 <th colspan="1">LTS 2017</th>
@@ -178,6 +183,9 @@ More information can be found on the [Nuxeo and Redis]({{page page='nuxeo-and-re
 <th colspan="1">LTS 2015</th>
 </tr>
 <tr><th colspan="1">Elasticsearch</th>
+<td colspan="1">
+Library: 6.5.3<br />
+Cluster: 6.5.x (or Amazon Elasticsearch Service 6.2)</td>
 <td colspan="1">
 Library: 6.3.0<br />
 Cluster: 6.3.x (or Amazon Elasticsearch Service 6.2)</td>
