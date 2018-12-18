@@ -73,11 +73,13 @@ Once you are all set, you can navigate to the Studio Designer to configure your 
 
 ## Create a New Layout
 
-{{! multiexcerpt name='quick-switcher'}} {{#> callout type='note' }}
+{{! multiexcerpt name='quick-switcher'}}
+{{#> callout type='tip' }}
 
-Jump between any Studio feature or menu option in a snap by typing its name. This action can be triggered by clicking the button, or using shortcut CTRL + K (Windows/Linux) / CMD + K (Mac).
+Jump between any Studio feature or menu in a snap by typing its name. This action can be triggered by clicking the **Jump To** option on the bottom left of your Studio project, or using the Ctrl + K / ⌘ + K shortcut.
 
-{{/callout}}{{! /multiexcerpt}}
+{{/callout}}
+{{! /multiexcerpt}}
 
 
 1. In Studio Designer, go to **Layouts**.
