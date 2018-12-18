@@ -65,4 +65,5 @@ On Studio Designer, go on the **UI** tab:
 
 ![]({{file name='drop-down-menu-validate.png'}} ?w=200,border=true)
 
-On a Contract document type that you want to validate (change status from Project to Approved) click on your brand new **Validate** button and refresh your page, your contract is approved! The button disappeared as the status has changed.
+On a Contract document type that you want to validate (change status from Project to Approved), click on your brand new **Validate** button in the action toolbar and refresh your page.
+Your contract is approved! The button disappeared as the status has changed.
