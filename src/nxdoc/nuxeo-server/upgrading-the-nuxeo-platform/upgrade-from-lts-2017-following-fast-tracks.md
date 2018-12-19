@@ -993,3 +993,56 @@ See [NXP-25208](https://jira.nuxeo.com/browse/NXP-25208)
 
 - [Upgrade notes for 10.3](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%2210.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 - [Release notes for 10.3]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
+
+## From 10.3 to LTS 2019
+
+### Installation and Configuration
+
+#### Requirements
+
+
+
+#### New Parameters
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Parameter</th>
+<th colspan="1">Modification</th>
+<th colspan="1">Reference</th>
+</tr>
+<tr>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### Data
+
+### Code Changes
+
+
+
+
+#### Code Behavior Changes
+
+
+
+
+#### Operation Changes
+
+
+
+
+### Addons
+
+
+
+### Complementary Information
+
+- [Upgrade notes for LTS 2019](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%2210.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+- [Release notes for LTS 2019]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})

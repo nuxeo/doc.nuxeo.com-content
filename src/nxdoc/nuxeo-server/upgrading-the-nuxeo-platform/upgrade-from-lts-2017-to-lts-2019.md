@@ -1,6 +1,6 @@
 ---
-title: Upgrade from LTS 2017 to FT 10.3
-description: Instructions to upgrade your Nuxeo Platform instance from LTS 2017 version to FT 10.3.
+title: Upgrade from LTS 2017 to LTS 2019
+description: Instructions to upgrade your Nuxeo Platform instance from LTS 2017 version to LTS 2019.
 review:
     comment: ''
     date: '2018-11-13'
