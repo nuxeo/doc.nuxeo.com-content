@@ -119,7 +119,7 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
    ![]({{file name='portfolioContentListing-web-ui-designer-part2.png'}} ?w=650,border=true)
 
 1. Save your modification and deploy your Studio project
-  ![]({{file name='contractsportfoliolisting-results.png'}} ?w=650,border=true)
+  
 
 As we modified the **Owner** and **Policy** columns, they are available optionally. By clicking on **Columns Settings** icon, you can decide to display them or not.
 ![]({{file name='portfolioContentListing-columns-settings.png'}} ?w=350,border=true)
