@@ -35,7 +35,7 @@ The `I18nBehavior` relies on a locale resolver, which is an object responsible f
 The [default locale resolver](https://github.com/nuxeo/nuxeo-ui-elements/blob/maintenance-2.2.x/nuxeo-i18n.js#L47) (`XHRLocaleResolver`) loads translation files stored in the `i18n` folder, which has one English reference file, named `messages.json`, and several other files, one for each of the translations, following the pattern `messages-{language}.json`. Here, `language` is a code from Crowdin's list of [supported language codes](https://support.crowdin.com/api/language-codes/). Language is currently retrieved from the browser with the expression `navigator.language || navigator.userLanguage` and stored in the `window.nuxeo.I18n.language` global variable. The default translation function converts label IDs into messages, and it defaults to English if no language is specified. Labels are managed with [Crowdin](https://crowdin.com/project/nuxeo-web-ui).
 
 {{#> callout type='note' }}
-Web UI uses the same laguage as the web browser.
+Web UI uses the same language as the web browser.
 {{/callout}}
 
 ## Contributing Labels
