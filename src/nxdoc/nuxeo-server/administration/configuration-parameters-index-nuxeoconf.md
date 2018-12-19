@@ -1610,7 +1610,7 @@ smtp</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.vcs.fulltext.analyzer.language`</td>
-<td colspan="1">Since Nuxeo 7.3\. Full text analyzer language. Only applies to&nbsp;`postgresql` and `mssql` database types (see `nuxeo.db.type`).</td>
+<td colspan="1">Since Nuxeo 7.3\. Full text analyzer language. Only applies to&nbsp;`postgresql` and `mssql` database types.</td>
 <td colspan="1">english</td>
 <td colspan="1">Since Nuxeo 7.3</td>
 </tr>
