@@ -7,7 +7,7 @@ review:
 labels:
     - nuxeo-mobile
 toc: true
-
+tree_item_index: 100
 ---
 
 ## Layout Format
@@ -44,6 +44,11 @@ A widget consists of:
 ```
 
 The important part is the `layout` object, `name` is not used yet.
+
+{{#> callout type='info' }}
+
+To discover how this task layout can be used, follow the [HOWTO: Customize Nuxeo Mobile Workflow Tasks Layout]({{page page='how-to-customize-nuxeo-mobile-workflow-tasks-layout'}})
+{{/callout}}
 
 ## Widget Types
 

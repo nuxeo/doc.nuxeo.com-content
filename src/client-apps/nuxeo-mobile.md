@@ -158,15 +158,15 @@ history:
 
 ## Requirements
 
-### iPhone Requirements
+### iPhone
 
 The Nuxeo mobile application is available for iPhones SE, 5/5c/5s, 6/6+, 7/7+, 8/8+ and X with a minimum version of iOS 8 required.
 
-### Android Requirements
+### Android
 
 The minimum required version of Android 4.4.
 
-### Nuxeo Platform Requirements
+### Nuxeo Platform 
 
 #### Nuxeo Platform Versions
 

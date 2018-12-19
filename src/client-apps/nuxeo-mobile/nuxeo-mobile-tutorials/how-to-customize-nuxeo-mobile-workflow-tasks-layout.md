@@ -14,14 +14,14 @@ labels:
     - nuxeo-mobile
     - yachour
     - howto
-
 toc: true
-
+tree_item_index: 100
 ---
-
+{{! excerpt}}
 Since the version 1.13.0 on iOS and 1.11.0 on Android, workflows defined in Nuxeo Studio can be processed by users from the mobile application.
+{{! /excerpt}}
 
-To enable the processing of tasks on mobile devices, the tasks mobile layout need to be defined.
+To enable the processing of tasks on mobile devices, the [tasks mobile layout]({{page page='workflow-task-layout'}}) need to be defined.
 
 ## Prerequisites
 
@@ -37,6 +37,7 @@ Before you start, please follow this [how-to]({{page version='' space='nxdoc' pa
 ## Define the Task Layout
 
 The format of the layout is a JSON object with the list of task fields and properties to display.
+For more information on the format of the layout, read the [Workflow Task Layout]({{page page='workflow-task-layout'}}) documentation.
 
 On the Studio Designer side:
 1. Go to **Resources** tab
