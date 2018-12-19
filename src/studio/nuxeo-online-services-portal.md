@@ -89,7 +89,6 @@ history:
         version: '1'
 
 ---
-
 The Nuxeo Online Services portal gives you access to information about each of your Nuxeo-based applications and the services that have been enabled.
 
 Available information includes:
@@ -105,7 +104,7 @@ The dashboard provides you with a view of your applications, the latest maintena
 
 ![]({{file name='dashboard.png'}} ?w=600,border=true)
 
-## My applications
+## My Applications
 
 On my applications tab, you can create a new trial Studio Project, and open your applications in Studio in one click.
 
@@ -113,17 +112,19 @@ To access details of your application,  click on its name. You can also access e
 
 ![]({{file name='my-applications.png'}} ?w=600,border=true)
 
-## My tokens
+## My Tokens
+
+This tab lists all the tokens enabled on your account. Tokens can be created and revoked from this view.
 
 Token can be used wherever you need to provide credentials to access the NOS APIs and the Studio maven repository. Once your token is created, you can see it only once, so save it carefully. Then use it as you would your password to gain access to previously mentioned services. We recommend using one token per client.
 
-My tokens tabs enables you to create and revoke tokens from the token list.
+See the [Token Management]({{page version='' space='studio' page='token-management'}}) page, for more information. 
 
 ![]({{file name='my-tokens.png'}} ?w=600,border=true)
 
 ## Distributions
 
-The distribution page provides you with the list of available distributions to download.
+The distribution page provides the list of all the Nuxeo Platform versions to download.s
 
 ![]({{file name='distributions.png'}} ?w=600,border=true)
 
@@ -133,6 +134,7 @@ Documentation tab provides you with a guide on how to create JIRA tickets to ben
 
 ![]({{file name='documentation.png'}} ?w=600,border=true)
 
+* * *
 
 **RELATED TOPICS**
 
