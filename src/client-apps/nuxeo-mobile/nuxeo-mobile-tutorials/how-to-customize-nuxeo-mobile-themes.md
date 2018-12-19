@@ -16,11 +16,11 @@ labels:
     - howto
     - lts2017-ok
 toc: true
-
+tree_item_index: 300
 ---
-
+{{! excerpt}}
 Since the version 1.9.0 on iOS and 1.6.0 on Android, the Nuxeo Mobile application comes with 4 predefined themes that can be overridden from the server itself.
-
+{{! /excerpt}}
 
 ## Configuration Format
 
