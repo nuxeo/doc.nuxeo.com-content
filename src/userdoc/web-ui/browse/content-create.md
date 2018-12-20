@@ -1,5 +1,5 @@
 ---
-title: Creating Content
+title: Creating and Importing Content
 review:
     comment: ''
     date: '2018-10-15'
@@ -52,7 +52,7 @@ To import content into Nuxeo, drag an item from your computer and drop it into a
 #### Import with Properties
 
 {{#> callout type='tip' }}
-You can start adding properties before all the files are uploaded. 
+You can start adding properties before all the files are uploaded.
 {{/ callout}}
 
 It is possible to do a drag and drop import of documents with an additional step to fill in some properties. This prevents you from editing the documents after the import is done.
@@ -81,3 +81,18 @@ You can very easily import document by moving them from a desktop folder to a Nu
 {{{multiexcerpt 'automated-metadata-extraction-excerpt' page='userdoc/creating-content'}}}
 
 Read the [Binary Metadata]({{page space='nxdoc' page='binary-metadata'}}) documentation for more information.
+
+
+## Nuxeo Live Connect
+
+Live Connect allows you to create a content application that handles cloud files (Dropbox, Google Drive, Box, OneDrive...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it. This allows the user to benefit from thumbnailing service, full text, conversions, etc.
+
+Live Connect for Google Drive also brings the "Cloud Edit" mode. Your application based on the Nuxeo Platform can provide the users with a direct link to the SaaS applications that you can use for editing Google Drive files (Google Docs, Office 365, Pixlr, etc.).
+
+Read the [Live Connect]({{page version='' space='nxdoc' page='nuxeo-live-connect'}}) documentation for more information.
+
+## Creating Personal Documents
+
+To create personal documents, follow the same steps as for any other documents and it will be displayed in your personal space.
+
+Read the [Personal Space]({{page version='' space='userdoc' page='personal-space'}}) documentation for more information.
