@@ -39,6 +39,8 @@ Watch the related courses on Nuxeo University
 ## Create a Workflow Template
 First, we need to create a new workflow template in Studio Modeler. This workflow will be applied to the Contract document type.
 
+{{{multiexcerpt 'quick-switcher' page='web-ui-document-layouts'}}}
+
 1. Go to **Workflow** > **Process Definitions** and click on **New**.
   ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='create-wf-studio.png'}} ?w=350,border=true)
 1. On the **Activation** tab, next to the field **Current document has one of the types**, select the Contract local type and move it from left to right.
@@ -89,6 +91,8 @@ You can now [deploy your project]({{page space='studio' page='deploying-your-pro
 ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='contract-validation-process-web-ui.png'}} ?w=350,border=true)
 ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='validation-task-process.png'}} ?w=350,border=true)
 ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='type-field-web-ui.png'}} ?w=350,border=true)
+
+For more information about tasks on Web UI, read the [related documentation]({{page version='' space='userdoc' page='task'}}).
 
 ## Technical Overview
 

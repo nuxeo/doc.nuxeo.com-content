@@ -157,7 +157,7 @@ Registered access
 [Documentation]({{page page='amazon-s3-online-storage'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage?version=1.9.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage)
 </td>
 </tr>
 <tr>
@@ -172,7 +172,7 @@ Registered access
 [Documentation]({{page page='amazon-s3-direct-upload'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-direct-upload)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-direct-upload)
 </td>
 </tr>
 <tr>
@@ -187,7 +187,7 @@ Registered access
 [Documentation]({{page page='nuxeo-bulk-document-importer'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer?version=1.9.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer)
 </td>
 </tr>
 <tr>
@@ -202,7 +202,7 @@ Registered access
 [Documentation]({{page version='' space='nxdoc' page='using-cas2-authentication'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication?version=1.6.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/cas2-authentication)
 </td>
 </tr>
 <tr>
@@ -218,7 +218,7 @@ Registered access
 [User documentation]({{page space='userdoc' page='digital-signature'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-signature?version=2.7.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-signature)
 </td>
 </tr>
 <tr>
@@ -235,7 +235,7 @@ Public
 [User documentation]({{page space='userdoc' page='easyshare'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare?version=1.5.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/easyshare)
 </td>
 </tr>
 <tr>
@@ -250,7 +250,7 @@ Public
 [Documentation ]({{page page='kerberos-authentication'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/kerberos-authentication?version=1.7.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/kerberos-authentication)
 </td>
 </tr>
 <tr>
@@ -265,7 +265,7 @@ Public
 [Documentation]({{page page='marklogic'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-marklogic-connector?version=1.2.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-marklogic-connector)
 </td>
 </tr>
 <tr>
@@ -280,7 +280,7 @@ Registered access
 [Documentation]({{page page='microsoft-azure-online-storage'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage?version=1.3.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage)
 </td>
 </tr>
 <tr>
@@ -296,7 +296,7 @@ Public
 [User documentation]({{page space='userdoc' page='nuxeo-agenda'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda?version=1.6.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda)
 </td>
 </tr>
 <tr>
@@ -311,22 +311,7 @@ Public
 [Documentation]({{page page='howto-nuxeo-api-playground'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-api-playground?version=1.3.1)
-</td>
-</tr>
-<tr>
-<td colspan="1">
-Nuxeo Annotations with ARender<br/>
-`nuxeo-arender-connector`
-</td>
-<td colspan="1">
-Public
-</td>
-<td colspan="1">
-[Documentation]({{page page='nuxeo-arender-connector'}})
-</td>
-<td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender?version=1.0.0)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-api-playground)
 </td>
 </tr>
 <tr>
@@ -341,7 +326,7 @@ Registered access
 [Documentation]({{page page='nuxeo-arender-connector'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender?version=1.0.0)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender)
 </td>
 </tr>
 <tr>
@@ -356,7 +341,7 @@ Registered access
 [Documentation]({{page page='nuxeo-connect-report-tools'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report-web?version=0.2.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report-web)
 </td>
 </tr>
 <tr>
@@ -371,7 +356,7 @@ Public
 [Documentation]({{page page='nuxeo-csv'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv?version=1.7.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv)
 </td>
 </tr>
 <tr>
@@ -386,7 +371,7 @@ Public
 [Documentation]({{page page='digital-asset-management-dam'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam?version=6.4.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam)
 </td>
 </tr>
 <tr>
@@ -401,7 +386,7 @@ Public
 [Documentation]({{page page='nuxeo-datadog-reporter'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-datadog-reporter?version=2.3.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-datadog-reporter)
 </td>
 </tr>
 <tr>
@@ -417,7 +402,7 @@ Public
 [User documentation]({{page space='userdoc' page='nuxeo-diff'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff?version=1.9.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff)
 </td>
 </tr>
 <tr>
@@ -432,7 +417,7 @@ Public
 [User documentation]({{page page='nuxeo-diff-pictures'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures?version=1.3.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures)
 </td>
 </tr>
 <tr>
@@ -447,7 +432,7 @@ Public
 [Documentation]({{page version='' space='client-apps' page='nuxeo-drive'}})<br/>
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive?version=1.8.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive)
 </td>
 </tr>
 <tr>
@@ -462,7 +447,7 @@ Public
 [Documentation]({{page page='nuxeo-duoweb-two-factor-authentication'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-duoweb-authentication?version=1.6.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-duoweb-authentication)
 </td>
 </tr>
 <tr>
@@ -477,7 +462,7 @@ Public
 [Documentation]({{page page='nuxeo-edge-cache'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-edge-cache?version=1.1.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-edge-cache)
 </td>
 </tr>
 <tr>
@@ -492,7 +477,7 @@ Registered access
 [Documentation]({{page page='nuxeo-for-salesforce'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce?version=1.3.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce)
 </td>
 </tr>
 <tr>
@@ -507,7 +492,7 @@ Public
 [Documentation]({{page page='nuxeo-file-system-exporter'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/fs-exporter?version=1.6.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/fs-exporter)
 </td>
 </tr>
 <tr>
@@ -523,7 +508,7 @@ Registered access
 [User documentation]({{page page='nuxeo-groups-and-rights-audit'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit?version=1.10.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit)
 </td>
 </tr>
 <tr>
@@ -538,7 +523,7 @@ Registered access
 [Documentation]({{page version='' space='nxdoc' page='nuxeo-for-adobe-cc'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package?version=1.0.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package)
 </td>
 </tr>
 <tr>
@@ -553,7 +538,7 @@ Public
 [User documentation]({{page space='userdoc' page='nuxeo-imap-connector'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector?version=1.4.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-imap-connector)
 </td>
 </tr>
 <tr>
@@ -569,7 +554,7 @@ Public
 [User documentation]({{page space='userdoc' page='nuxeo-jenkins-report'}})
 </td>
 <td colspan="1">
-[Released for 10.1](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jenkins-report-mp?version=3.10.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jenkins-report-mp)
 </td>
 </tr>
 <tr>
@@ -584,7 +569,7 @@ Public
 [Documentation]({{page page='nuxeo-jsf-ui'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui?version=10.2.0)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui)
 </td>
 </tr>
 <tr>
@@ -599,7 +584,7 @@ Public
 [Documentation]({{page page='nuxeo-jsf-to-web-ui'}})
 </td>
 <td >
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-to-web-ui?version=1.2.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-to-web-ui)
 </td>
 </tr>
 <tr>
@@ -609,7 +594,7 @@ Public
 <td>
 [Documentation]({{page page='nuxeo-lambda-pictureview'}})
 </td>
-<td>[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-lambda-marketplace-package?version=1.1.1)</td>
+<td>[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-lambda-marketplace-package)</td>
 </tr>
 <tr>
 <td colspan="1">
@@ -623,7 +608,7 @@ Public
 [Documentation]({{page page='nuxeo-live-connect'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect?version=1.3.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
 </td>
 <tr>
 <td colspan="1">
@@ -637,7 +622,7 @@ Public
 [Documentation]({{page page='nuxeo-media-publishing'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing?version=1.4.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mediapublishing)
 </td>
 </tr>
 <tr>
@@ -653,7 +638,7 @@ Registered access
 [User documentation]({{page space='userdoc' page='nuxeo-multi-tenant'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant?version=1.8.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant)
 </td>
 </tr>
 <tr>
@@ -668,7 +653,7 @@ Registered access
 [Documentation]({{page version='' space='nxdoc' page='nuxeo-3d'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-3d?version=1.2.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-3d)
 </td>
 </tr>
 <tr>
@@ -683,7 +668,7 @@ Public
 &nbsp;
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/marketplace-lang-ext-incomplete?version=1.2.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/marketplace-lang-ext-incomplete)
 </td>
 </tr>
 <tr>
@@ -698,7 +683,7 @@ Registered access
 [Associated tutorial]({{page version='' space='nxdoc' page='discover-nuxeo-platform-apis'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-getting-started?version=1.3.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-getting-started)
 </td>
 </tr>
 <tr>
@@ -713,7 +698,7 @@ Public
 [Documentation ]({{page page='nuxeo-platform-user-registration'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-user-registration?version=1.9.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-user-registration)
 </td>
 </tr>
 <tr>
@@ -728,7 +713,7 @@ Public
 [Documentation]({{page page='nuxeo-quota'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-quota?version=1.8.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-quota)
 </td>
 </tr>
 <tr>
@@ -743,7 +728,7 @@ Registered access
 [Documentation]({{page page='resources-compatibility'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/resources-compat?version=1.6.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/resources-compat)
 </td>
 </tr>
 <tr>
@@ -758,7 +743,7 @@ Public
 [Documentation]({{page version='' space='nxdoc' page='nuxeo-sample-project'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample?version=2.5.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample)
 </td>
 </tr>
 <tr>
@@ -773,7 +758,7 @@ Public
 [Documentation]({{page version='' space='' page='nuxeo-showcase-content'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-showcase-content?version=1.3.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-showcase-content)
 </td>
 </tr>
 <tr>
@@ -788,7 +773,7 @@ Public
 [Documentation]({{page page='nuxeo-spreadsheet'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet?version=1.4.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-spreadsheet)
 </td>
 </tr>
 <tr>
@@ -811,7 +796,7 @@ Public
 `nuxeo-tree-snapshot`</td>
 <td>Public</td>
 <td>[Documentation]({{page page='nuxeo-tree-snapshot'}})</td>
-<td>[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot?version=1.2.1)
+<td>[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot)
 </td>
 </tr>
 <tr>
@@ -826,7 +811,7 @@ Registered access
 [Documentation]({{page page='nuxeo-vision'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision?version=1.3.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision)
 </td>
 </tr>
 <tr>
@@ -841,7 +826,7 @@ Public
 [Documentation]({{page version='' space='nxdoc' page='web-ui'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui?version=2.3.2)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui)
 </td>
 </tr>
 <tr>
@@ -856,7 +841,7 @@ Public
 [Documentation]({{page page='using-openid-oauth2-in-login-screen'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/openid-authentication?version=1.3.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/openid-authentication)
 </td>
 </tr>
 <tr>
@@ -871,7 +856,7 @@ Public
 &nbsp;
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/platform-explorer?version=1.8.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/platform-explorer)
 </td>
 </tr>
 <tr>
@@ -893,7 +878,7 @@ Public
 [Documentation]({{page page='saml-20-authentication'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication?version=1.4.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication)
 </td>
 </tr>
 <tr>
@@ -908,7 +893,7 @@ Registered access
 [Documentation]({{page page='scan-documents-importer'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer?version=1.5.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer)
 </td>
 </tr>
 <tr>
@@ -923,7 +908,7 @@ Public
 [Documentation]({{page page='shibboleth-authentication'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication?version=2.6.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/shibboleth-authentication)
 </td>
 </tr>
 <tr>
@@ -938,7 +923,7 @@ Public
 [Documentation]({{page page='nuxeo-shibboleth-invitation'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-shibboleth-invitation?version=1.4.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-shibboleth-invitation)
 </td>
 </tr><tr><td colspan="1">
 Template Rendering Addon<br/>
@@ -951,7 +936,7 @@ Public
 [Documentation]({{page page='template-rendering-addon'}})
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering?version=6.8.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering)
 </td>
 </tr>
 <tr>
@@ -966,7 +951,7 @@ Public
 [Documentation]({{page page='template-rendering-addon'}}#nuxeo-template-rendering-samples)
 </td>
 <td colspan="1">
-[Released for 10.2](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering-samples?version=6.8.1)
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering-samples)
 </td>
 </tr>
 </tbody>

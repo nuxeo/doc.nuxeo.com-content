@@ -282,7 +282,7 @@ Nuxeo supports the following version of Microsoft SQL Server:
 
 ## System Database Collation
 
-We've observed incorrect behavior (in particular with full-text search) if the SQL Server `master` database is not configured with a case-insensitive collation (a collation name with "`CI`").
+We have observed an incorrect behavior (in particular with full-text search) if the SQL Server `master` database is not configured with a case-insensitive collation (a collation name with "`CI`").
 
 To make sure this is the case, use:
 
@@ -292,8 +292,8 @@ SELECT collation_name FROM sys.databases WHERE name = 'master'
 
 For instance the following collations have been checked to work correctly:
 
-*   `SQL_Latin1_General_CP1_CI_AS`
-*   `French_CI_AS`
+- `SQL_Latin1_General_CP1_CI_AS`
+- `French_CI_AS`
 
 ## Database Collation
 
@@ -314,7 +314,7 @@ ALTER DATABASE nuxeo COLLATE French_CS_AS
 
 ```
 
-If you get database error related to rights issue, you can set it as a single user owner:
+If you get database error related to rights issues, you can set it as a single user owner:
 
 ```
 ALTER DATABASE nuxeo SET SINGLE_USER
@@ -327,7 +327,7 @@ ALTER DATABASE nuxeo SET MULTI_USER
 
 ## Row Versioning-Based Transaction Isolation
 
-To prevent locking and deadlocking problems you need to [enable the row versioning-based isolation levels](http://technet.microsoft.com/en-us/library/ms175095.aspx). With row versioning readers do not block other readers or writers accessing the same data. Similarly, the writers do not block readers. However, writers will block each other. Whenever a transaction is started, Nuxeo adds a `SET TRANSACTION ISOLATION LEVEL READ COMMITTED` so the transaction sees only data committed before the query began.
+To prevent locking and deadlocking problems, you need to [enable the row versioning-based isolation levels](http://technet.microsoft.com/en-us/library/ms175095.aspx). With row versioning, readers do not prevent other readers or writers from accessing the same data. Similarly, the writers do not block readers. However, writers will block each other. Whenever a transaction is started, Nuxeo adds a `SET TRANSACTION ISOLATION LEVEL READ COMMITTED` so the transaction sees only data committed before the query began.
 
 To enable the row versioning submit the following SQL commands:
 
@@ -337,7 +337,7 @@ ALTER DATABASE nuxeo SET READ_COMMITTED_SNAPSHOT ON;
 
 ```
 
-If you don't execute the above commands, you will get the following error at Nuxeo startup:
+If you do not execute the above commands, the following error will occur at Nuxeo startup:
 
 ```
 Snapshot isolation transaction failed accessing database 'nuxeo' because snapshot isolation is not allowed in this database. Use ALTER DATABASE to allow snapshot isolation.
@@ -353,7 +353,7 @@ ALTER DATABASE nuxeo SET READ_COMMITTED_SNAPSHOT ON WITH ROLLBACK IMMEDIATE;
 
 ## Recovery Model
 
-A recovery model is a database property that controls how transactions are logged, whether the transaction log requires (and allows) backing up, and what kinds of restore operations are available. Three recovery models exist: `simple`, `full`, and `bulk_logged` (see more details at [http://msdn.microsoft.com/en-us/library/ms189275.aspx](http://msdn.microsoft.com/en-us/library/ms189275.aspx)).
+A recovery model is a database property that controls how transactions are logged, whether the transaction log requires (and allows) backing up, and what kinds of restore operations are available. Three recovery models exist: `simple`, `full`, and `bulk_logged`. For more information, visit  [Recovery Models (SQL Server) on Microsoft Documentation ](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/recovery-models-sql-server?view=sql-server-2017).
 
 By default, recovery model is `full`, so you can get performance issues. You may want to change to the `simple` model if this is the case, but please consult your database administrator first.
 
@@ -372,10 +372,10 @@ ALTER DATABASE nuxeo SET RECOVERY SIMPLE;
 
 ## Full-Text
 
-If you've configured your Nuxeo Platform instance to index full-text using the SQL database (by disabling the default configuration which uses Elasticsearch),
-you will need to make sure that your SQL Server instance has full-text search configured (it's an optional component during installation). See [https://docs.microsoft.com/en-us/sql/relational-databases/search/full-text-search](https://docs.microsoft.com/en-us/sql/relational-databases/search/full-text-search) for details.
+If you have configured your Nuxeo Platform instance to index full-text using the SQL database (by disabling the default configuration which uses Elasticsearch),
+you will need to make sure that your SQL Server instance has full-text search configured, which is an optional component during installation. See [Full-Text Search on Microsoft Documentation](https://docs.microsoft.com/en-us/sql/relational-databases/search/full-text-search) for details.
 
-Failing to do this will provoke errors like:
+Otherwise similar errors will occur:
 
 {{#> panel type='code' heading='SQL Server Msg 7601'}}
 
@@ -384,7 +384,9 @@ Cannot use a CONTAINS or FREETEXT predicate on table or indexed view 'fulltext' 
 
 ```
 
-{{/panel}}{{#> panel type='code' heading='SQL Server Msg 7616'}}
+{{/panel}}
+
+{{#> panel type='code' heading='SQL Server Msg 7616'}}
 
 ```
 Full-Text Search is not enabled for the current database. Use sp_fulltext_database to enable full-text search for the database. The functionality to disable and enable full-text search for a database is deprecated. Please change your application.
@@ -402,10 +404,12 @@ Impossible d'utiliser le prédicat CONTAINS ou FREETEXT sur table ou vue indexé
 
 ```
 
-{{/panel}}{{#> panel type='code' heading='SQL Server Msg 7616'}}
+{{/panel}}
+
+{{#> panel type='code' heading='SQL Server Msg 7616'}}
 
 ```
-La recherche en texte intégral n'est pas activée dans la base de données en cours. Utilisez sp_fulltext_database pour l'activer sur cette base de données. La fonctionnalité de désactivation et d'activation d'une recherche en texte intégral pour une base de données est désapprouvée. Modifiez votre application.
+La recherche en texte intégral n'est pas activée dans la base de données en cours. Utilisez `sp_fulltext_database` pour l'activer sur cette base de données. La fonctionnalité de désactivation et d'activation d'une recherche en texte intégral pour une base de données est désapprouvée. Modifiez votre application.
 
 ```
 
@@ -442,9 +446,9 @@ RECONFIGURE WITH OVERRIDE;
 
 ## Additional Maintenance Operation
 
-The SQL Server back end comes with ACL (Access Control List) optimization. This optimization works with cache tables to store rights for each users and keep tracking of documents and rights changes. Theses data are reset when the server is started.
+The SQL Server back end comes with ACL (Access Control List) optimization. This optimization functions with cache tables to store rights for each users and keep tracking of documents and rights changes. Theses data will be reset when the server is started.
 
-For long-running instance or if you want to perform a hot backup without these unnecessary data, you can invoke the following stored procedure:
+For long-running instances or to perform a hot backup without these unnecessary data, you can invoke the following stored procedure:
 
 ```sql
 USE nuxeo;
@@ -452,17 +456,17 @@ EXEC dbo.nx_vacuum_read_acls;
 
 ```
 
-Or you can exclude the following tables from your backup:
+You can also exclude the following tables from your backup:
 
-*   `aclr`
-*   `aclr_modified`
-*   `aclr_permissions`
-*   `aclr_user_map`
-*   `aclr_user`
+- `aclr`
+- `aclr_modified`
+- `aclr_permissions`
+- `aclr_user_map`
+- `aclr_user`
 
 ### Deadlock and Lock Escalation
 
-SQL Server is doing lock escalation: converting many row level locks to page lock or table lock. When doing concurrent write operations this can create deadlocks even when working on distinct data.
+SQL Server is doing lock escalation: converting many row level locks to page lock or table lock. When doing conflicting write operations, this can create deadlocks even when working on distinct data.
 
 You can have more information on deadlock by enabling the following traces:
 
@@ -477,12 +481,6 @@ Then you can try to disable the lock escalation on the table impacted by deadloc
 ALTER TABLE mytable SET (LOCK_ESCALATION=DISABLE)
 ```
 
-### Clustered Index
-
-SQL Server uses a clustered index to defined how the data is organized physically on disk. Before Nuxeo 5.7 we didn't define a clustered index, so the primary key is used, however this primary key is a random UUID which means that data keeps getting reorganized on disk on practically every insert or delete.
-
-This has been fixed for new instance since Nuxeo 5.7\. For instance created before there are migration script to apply to add these index, see [NXP-10934](https://jira.nuxeo.com/browse/NXP-10934) attachments to get the script.
-
 ### Indexes Maintenance
 
 If the indexes are fragmented then the query response will be slow and the data storage will require more disk space. Microsoft recommends reorganizing an index with a fragmentation between 5% and 30%, and rebuilding an index with a fragmentation of more than 30%. Database administrators should always make sure that fragmentation of indexes is handled on time.
@@ -493,11 +491,11 @@ Microsoft SQL Server is a good database however it has a few unfortunate hiccups
 
 Here are some limitations in the context of the Nuxeo Platform:
 
-*   Its [snapshot isolation](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server) level is insufficiently isolated and not comparable to other MVCC databases, and may sometimes cause errors during concurrent writes.
-*   It is [infamous](http://stackoverflow.com/questions/872731/sql-server-lock-escalation-issue#872808) for its lock escalation problems that cause no end of troubles and is a very poor locking design in the first place ([MS184286](https://msdn.microsoft.com/en-us/library/ms184286.aspx)).
-*   Only one full-text index is allowed per table ([MS187317](http://technet.microsoft.com/en-us/library/ms187317%28v=sql.100%29.aspx)).
-*   Full-text indexing cannot be configured to be done synchronously with transaction commits.
-*   It does not support circular ON CASCADE DELETE constraints ([KB321843](http://support.microsoft.com/kb/321843)).
+- Its [snapshot isolation](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server) level is insufficiently isolated and not comparable to other MVCC databases, and may sometimes cause errors during concurrent writes.
+- It is [infamous](http://stackoverflow.com/questions/872731/sql-server-lock-escalation-issue#872808) for its lock escalation problems that cause no end of troubles and is a very poor locking design in the first place ([MS184286](https://msdn.microsoft.com/en-us/library/ms184286.aspx)).
+- Only one full-text index is allowed per table ([MS187317](http://technet.microsoft.com/en-us/library/ms187317%28v=sql.100%29.aspx)).
+- Full-text indexing cannot be configured to be done synchronously with transaction commits.
+- It does not support circular ON CASCADE DELETE constraints ([KB321843](http://support.microsoft.com/kb/321843)).
 
 * * *
 

@@ -2,13 +2,13 @@
 title: Nuxeo Vision
 review:
     comment: ''
-    date: '2017-07-10'
+    date: '2018-12-04'
     status: ok
 labels:
     - lts2016-ok
     - link-update
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
     - lmcintyre
 toc: true
 confluence:
@@ -141,33 +141,42 @@ Watch the related courses on Nuxeo University
 
 To install the Nuxeo Vision Package, you have several options:
 - From the Nuxeo Marketplace: install [the Nuxeo Vision package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-vision).
-- From the Nuxeo server web UI "Admin / Update Center / Packages from Nuxeo Marketplace"
-- From the command line: `nuxeoctl mp-install nuxeo-vision`
+- From the command line: `nuxeoctl mp-install nuxeo-vision`.
+- From the Admin Center on JSF UI, go to **Admin** > **Update Center** > **Packages from Nuxeo Marketplace**.
+
 
 ### Google Vision Configuration
 - Configure a [Google service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount)
-- As of march 2<sup>nd</sup>, 2016, billing must be activated in your google account in order to use the Vision API
+- Google Cloud Computing invoicing changes from time to time: it is likely that you'll need to activate billing on your account.
 - You can generate either an API Key or a Service Account Key (saved as a JSON file)
-- If you created a Service Account Key, install it on your server and edit nuxeo.conf to add the full path to the file:
-```
-org.nuxeo.vision.google.credential=[path_to_credentials_goes_here]
-```
+
+{{#> callout type='warning'}}
+
+It is a common Security best practice to use an API key, we recommend avoiding using a service account.
+
+{{/callout}}
+
 - If you generated an API key, use the `org.nuxeo.vision.google.key` parameter:
 ```
 org.nuxeo.vision.google.key=[your_api_key_goes_here]
 ```
+- If you created a Service Account Key, install it on your server and edit your `nuxeo.conf` to add the full path to the file:
+```
+org.nuxeo.vision.google.credential=[path_to_credentials_goes_here]
+```
 
-See [https://cloud.google.com/vision/](https://cloud.google.com/vision/) for more information.
+See [Google Documentation about Vision](https://cloud.google.com/vision/) for more information.
 
 ### AWS Rekognition Configuration
+
 - Configure a key/secret pair in the [AWS console](http://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html)
 - Check the [FAQ](https://aws.amazon.com/rekognition/faqs/) to see in which regions the API is available
-- Edit nuxeo.conf with the suitable information
+- Edit `nuxeo.conf` with the suitable information:
 ```
 org.nuxeo.vision.default.provider=aws
-org.nuxeo.vision.aws.region=
-org.nuxeo.vision.aws.key=
-org.nuxeo.vision.aws.secret=
+nuxeo.aws.region=
+nuxeo.aws.accessKeyId=
+nuxeo.aws.secretKey=
 ```
 
 ## Functional Overview
@@ -176,7 +185,7 @@ By default, the Computer Vision Service is called every time the main binary fil
 
 ![]({{file name='Google-Cloud-Vision-Screenshot-Church.png'}} ?w=500,border=true)
 
-For videos, the platform uses the images of the storyboard.
+For videos, the platform sends the images of the storyboard to the cloud service.
 
 ![]({{file name='Google-Cloud-Vision-Video-WebUI.png'}} ?w=500,border=true)
 
@@ -215,11 +224,13 @@ The default behavior can also be completely disabled with the following contribu
 
 ## Core Implementation
 
-In order to enable you to build your own custom logic, the addon provides an automation operation, called `VisionOp`. This operation takes a blob or list of blobs as input and calls the Computer Vision service for each one. The list of all the available features can be found at [https://cloud.google.com/vision/reference/rest/v1/images/annotate#Type](https://cloud.google.com/vision/reference/rest/v1/images/annotate#Type).
+### `VisionOp` Operation
+
+In order to enable you to build your own custom logic, the addon provides an automation operation, called `VisionOp`. This operation takes a blob or list of blobs as input and calls the Computer Vision service for each one.
 
 The result of the operation is stored in a context variable and is an object of type [VisionResponse](https://github.com/nuxeo/nuxeo-vision/blob/master/nuxeo-vision-core/src/main/java/org/nuxeo/vision/core/service/VisionResponse.java).
 
-Here&rsquo;s how the operation is used in the default chain:
+Here is how the operation is used in the default chain:
 
 ```js
 function run(input, params) {
@@ -231,33 +242,47 @@ function run(input, params) {
         maxResults: 5,
         outputVariable: 'annotations'
     });
+
     var annotations = ctx.annotations;
-    if (annotations === undefined || annotations.length === 0) return;
+    if (annotations === undefined || annotations.length === 0) {
+        return;
+    }
     var textAndLabels = annotations[0];
     // build tag list
     var labels = textAndLabels.getClassificationLabels();
     if (labels !== undefined && labels !== null && labels.length > 0) {
         var tags = [];
         for (var i = 0; i < labels.length; i++) {
-            tags.push(labels[i].getText().replace(/\s/g, '+'));
+            var label = labels[i];
+            var tag = label.getText();
+            if (tag ===undefined || tag ===null) {
+                continue;
+            }
+            tags.push(tag.replace(/[^A-Z0-9]+/ig,'+'));
         }
-        input = Services.TagDocument(input, {
-            'tags': tags
-        });
+        input = Services.TagDocument(input, {'tags': tags});
     }
     input = Document.Save(input, {});
     return input;
 }
 ```
 
-&nbsp;
+### Listeners and Events
 
-## Google Vision API Limitations
+When using the _default_ implementation, Nuxeo Vision sends events once the processing is done:
+- After handing a picture, it sends the `visionOnImageDone` event
+- After processing a video (actually, the video storyboard), it sends the `visionOnVideoDone` event
 
-The API has some known and documented [best practices](https://cloud.google.com/vision/docs/best-practices) and [limitations](https://cloud.google.com/vision/limits) you should be aware of. For example (as of December 2016):
+Listening to these events is a good way to process your own business logic when it depends on the result of the tagging: you are then sure it was processed with no error. If an error occurred during the call to the service, these events are not fired and `server.log` will contain the error stack.
 
-*   There is limitation to the size of the image you send to the API: "Image files sent to the Google Cloud Vision API should not exceed 4 MB".&nbsp;There also is a limitation when you send a list of images (max. 8MB). This is an important information to handle before requesting data. And this is why, if you look at the original chain, it actually takes the &ldquo;Medium&rdquo; conversion, which is a JPEG we can assume is always smaller than 4MB. You also should read the limitations in terms of maximum number of images/second, etc.
-*   Not all image formats are handled. TIFF for example is not handled.
-*   Amazon Rekognition doesn't provide text-recognition services (OCR)
+These events are not sent if automatic processing had been disabled, and they are not sent by the `VisionOp` operation. If you change the behavior, you may want to send the events (this depends on your configuration)
 
-Also, as it is a cloud service, these limitations will surely evolve, change, maybe depending on a subscription, etc.
+## Google Vision and AWS Rekognition API Limitations
+
+- Google Vision API has some known and documented [limitations](https://cloud.google.com/vision/docs/supported-files) you should be aware of.
+
+- You should also regularly check [Google Vision API documentation](https://cloud.google.com/vision/docs/) for changes. For example, at the time the API was first released, TIFF was not supported. It supports it as of December 2018, etc.
+
+- Amazon Rekognition doesn't provide text-recognition services (OCR). Nuxeo Vision implements only _labels detection_ and _safe search_.
+
+Also, as these are cloud services, these limitations evolve, change, maybe depending on a subscription, etc.

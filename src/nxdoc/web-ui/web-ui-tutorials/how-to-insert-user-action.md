@@ -38,6 +38,8 @@ Watch the related courses on Nuxeo University
 
 ## Create an Automation Chain
 
+{{{multiexcerpt 'quick-switcher' page='web-ui-document-layouts'}}}
+
 On Studio Modeler:
 1. Go on **Configuration** > **Automation** and then on **Automation Chains**.
 1. Click on the **New** button.
@@ -63,7 +65,7 @@ On Studio Designer, go on the **UI** tab:
   Only the users who have Manage Everything permission will see the button.
 1. Save your changes and deploy your project.
 
-  You should end up with something like this:
-  ![]({{file version='810' space='nxdoc' page='how-to-insert-user-action' name='validate-button-VD.png'}} ?w=450,border=true)
+![]({{file name='drop-down-menu-validate.png'}} ?w=200,border=true)
 
-On a Contract document type that you want to validate (change status from Project to Approved) click on your brand new **Validate** button and refresh your page, your contract is approved! The button disappeared as the status has changed.
+On a Contract document type that you want to validate (change status from Project to Approved), click on your brand new **Validate** button in the action toolbar and refresh your page.  
+Your contract is approved! The button disappeared as the status has changed.

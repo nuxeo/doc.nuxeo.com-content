@@ -4,6 +4,7 @@ review:
     comment: ''
     date: '2015-12-01'
     status: ok
+notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:
     howto:
         excerpt: Learn how to be able to control the display mode of a widget. Nuxeo Studio enables you to implement your requirements using an expression when you configure your widget.

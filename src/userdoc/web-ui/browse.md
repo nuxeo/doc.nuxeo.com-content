@@ -65,7 +65,18 @@ Once it's done click on **Close**.
 The displayed information can also be changed from the [Search view]({{page version='' space='userdoc' page='search'}}).
 {{/callout}}
 
-The information displayed on content views can be filtered with filters at the top of every column.
+All information displayed on content views, except document titles, can be filtered at the top of every column.
+
+
+
+Once in the view of a document, the side details bar can be collapsed by clicking ![]({{file name='details-collapsible-sidebar.png'}} ?w=20) at the top of the sidebar.
+
+![]({{file name='view-sidebar.png'}} ?w=600,border=true)
+
+It enables you to have a more focused view on the document preview.
+
+
+![]({{file name='without-sidebar.png'}} ?w=600,border=true)
 
 ### Keyboard Shortcuts
 

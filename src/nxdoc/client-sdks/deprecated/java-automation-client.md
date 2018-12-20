@@ -4,6 +4,7 @@ review:
     comment: ''
     date: '2017-12-15'
     status: ok
+notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:
     - lts2016-ok
     - automation

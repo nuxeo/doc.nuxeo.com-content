@@ -1,6 +1,6 @@
 default:
     site:
-        review_period: '13 months'
+        review_period: '18 months'
         spaces:
             -
                 space_path: nxdoc
