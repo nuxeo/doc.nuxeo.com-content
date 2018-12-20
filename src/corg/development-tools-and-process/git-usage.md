@@ -911,12 +911,13 @@ See also [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) which pr
 
 ### Converting a Mercurial Repository to a Git Repository
 
-Here is an example using `hg-fast-export` with Nuxeo DAM Mercurial repository:
+The conversion makes use of `hg-fast-export`:
 
 {{#> panel type='code' heading='Migrating from Mercurial to Git'}}
 
 ```
 git clone git://repo.or.cz/fast-export.git
+git -C fast-export checkout v180317 # Backward compatibility with Mercurial < 4.6
 git init new-git-repository
 cd new-git-repository
 /path/to/fast-export/hg-fast-export.sh -r /path/to/old-hg-repository
@@ -930,9 +931,8 @@ More info in [this blog post](http://hedonismbot.wordpress.com/2008/10/16/hg-fas
 {{#> panel type='code' heading='Post migration cleanup '}}
 
 ```
-for i in `git branch | grep -v master`; do git log -1 --pretty="format:$i%x09%s%n" $i | grep '[Tt]ag[g ]' | cut -f 1; done | while read i; do git branch -d $i; done
-# Replace last occurrence of "-d" with "-D" to force deletion
-
+for i in `git branch | grep -v master`; do git log -1 --pretty="format:$i%x09%s%n" $i | grep '[Tt]ag[g ]' | cut -f 1; done | while read i; do (git branch -d $i||true); done
+git checkout master # the current working branch is out of date after conversion
 ```
 
 {{/panel}}
@@ -952,7 +952,8 @@ for i in `git branch | grep -v master`; do git log -1 --pretty="format:$i%x09%s%
     ```
     git mv .hgignore .gitignore
     # Edit and remove non-Git configuration from .gitignore, such as "syntax:glob".
-
+    git commit -m"NXP-XXXX: migrate from Hg to Git" -a
+    
     ```
 
     {{/panel}}{{#> panel type='code' heading='Adding remote repository; pushing branches and tags'}}
@@ -961,12 +962,12 @@ for i in `git branch | grep -v master`; do git log -1 --pretty="format:$i%x09%s%
     git remote add origin git@github.com:nuxeo/some_repository.git
     git push --all origin
     git push --tags
-    git branch --set-upstream master origin/master
+    git branch --set-upstream-to=origin/master master
     ```
 
     {{/panel}}
 *   Set the Mercurial repository as deprecated.
-*   Activate GitHub hooks after having pushed the migration.
+*   Activate GitHub hooks **after** having pushed the migration.
 
 ### Extracting Part(s) of an Existing Repository to a New Repository
 
