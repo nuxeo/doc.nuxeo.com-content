@@ -85,17 +85,17 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ## Hotfix 24
 
-### Recompute missing thumbnails
+### Recompute Missing Thumbnails
 
-
-A new operation called `RecomputeThumbnails` has been added and is available for administrators to recompute the thumbnails, mainly the missing ones when errors occurred during conversions.
+A new operation called `RecomputeThumbnails` has been added and is available for administrators to recompute the thumbnails, mainly the missing ones when errors occurred during conversions.  
 A sample call to this operation is:
 ```
 curl -v -H 'Content-Type:application/json' -d '{"params": {"query": "SELECT * FROM Document WHERE ecm:mixinType = \"Thumbnail\" AND thumb:thumbnail/data IS NULL AND ecm:isVersion = 0 AND ecm:isProxy = 0 AND ecm:isTrashed = 0"}, "context": {}}' -u Administrator:Administrator http://localhost:8080/nuxeo/site/automation/RecomputeThumbnails
 ```
 
-### Date format in CSV importer
-Dates in CSV files are using a legacy date format (without time information) `MM/dd/yyyy`. 
+### Date Format in CSV Importer
+
+Dates in CSV files are using a legacy date format (without time information) `MM/dd/yyyy`.
 
 However, it is possible to use the W3C date format, that supports time information, by setting the configuration property `nuxeo.csv.import.legacyDateFormat` to `false`:
 ```
@@ -107,11 +107,11 @@ However, it is possible to use the W3C date format, that supports time informati
 
 More information on the [W3C documentation](https://www.w3.org/TR/NOTE-datetime).
 
-### Uniqueness in transient username
+### Uniqueness in Transient Username
 
-A new configuration property `nuxeo.transient.username.unique` is available to define if a computed transient username should be unique no matter what base username is provided, or if it should be always the same for a given base username.
-Having always the same transient username for a given base username allows to generate only one token for a given email when giving permission to an external user: that means if you invite the same external user on 2 documents, he won't have to log out from the first document to see the second one.
-It defaults to true for backward compatibility.
+A new configuration property `nuxeo.transient.username.unique` is available to define if a computed transient username should be unique no matter what base username is provided, or if it should be always the same for a given base username.  
+Having always the same transient username for a given base username allows to generate only one token for a given email when giving permission to an external user: that means if you invite the same external user on 2 documents, he won't have to log out from the first document to see the second one.  
+It defaults to `true` for backward compatibility.
 
 To disable the uniqueness of the transient username computation, use the following contribution:
 ```
@@ -120,7 +120,6 @@ To disable the uniqueness of the transient username computation, use the followi
   <property name="nuxeo.transient.username.unique">false</property>
 </extension>
 ```
-
 
 ## Hotfix 22
 
