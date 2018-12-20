@@ -110,7 +110,7 @@ Release:
     1.  [IT-release-on-demand-build/batchTasks/task/Check prepared changesets](http://qa.nuxeo.org/jenkins/view/Depl/job/IT-release-on-demand-build/batchTasks/task/Check%20prepared%20changesets/)
     2.  [IT-release-on-demand-build/batchTasks/task/Perform (push sources and deploy artifacts)](http://qa.nuxeo.org/jenkins/view/Depl/job/IT-release-on-demand-build/batchTasks/task/Perform%20%28push%20sources%20and%20deploy%20artifacts%29/)
     3.  [IT-release-on-demand-build/batchTasks/task/Perform Marketplace Packages](http://qa.nuxeo.org/jenkins/view/Depl/job/IT-release-on-demand-build/batchTasks/task/Perform%20Marketplace%20Packages/)
-*   Run jobs in [nuxeo-packaging](https://qa.nuxeo.org/jenkins/job/Deploy/job/nuxeo-packaging/) folders to generate the OS-specific installers and the Virtual Machine packages.
+*   Run jobs in [nuxeo-packaging](https://qa.nuxeo.org/jenkins/job/Deploy/job/nuxeo-packaging/) folder to generate the OS-specific installers and the Virtual Machine packages.
 
 Everything is uploaded at [http://community.nuxeo.com/static/staging/](http://community.nuxeo.com/static/staging/). Test the archives. If they are fine, move them out of the stagging repository.
 
