@@ -7,7 +7,7 @@ review:
 toc: true
 labels:
     - history
-tree_item_index: 900
+tree_item_index: 300
 
 ---
 {{! excerpt}}

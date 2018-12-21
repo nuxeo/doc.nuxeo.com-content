@@ -7,7 +7,7 @@ review:
 labels:
     - web-ui
 is_overview: true
-tree_item_index: 120
+tree_item_index: 100
 
 ---
 <div class="row" data-equalizer data-equalize-on="medium">
