@@ -115,7 +115,7 @@ You are free to organize your section to fit your project or your needs the best
 
 As in workspaces, access to sections is determined by permissions.
 
-You can define any document type as publish space by checking Document is a publish space, in the Definition screen of your custom document type in Studio Modeler. ![]({{file name='publish-space-studio.png'}} ?w=500,border=true)
+You can define any document type as publish space by checking Document is a publish space, in the Definition screen of your custom document type in Studio Modeler. <!--![]({{file name='publish-space-studio.png'}} ?w=500,border=true)-->
 
 ## Publishing Documents
 
@@ -131,14 +131,14 @@ When you publish a document, the following elements are kept from the workspace 
 - The tags (if this is a first publication — in case of a republication, tags from the workspace are merged with existing - tags on the published document)
 - However, comments are not kept from the workspace document.
 
-**To publish a document:**
+<!--**To publish a document:**
 
-From the View of the document in the workspace, click![]({{file name='more-three-dots.png'}} ?w=30)in the top action toolbar and select Publish Document. ![]({{file name='publication-popup.png'}} ?w=500,border=true)
+From the View of the document in the workspace, click ![]({{file name='more-three-dots.png'}} ?w=30)in the top action toolbar and select Publish Document. ![]({{file name='publication-popup.png'}} ?w=500,border=true)
 Enter the section where you want to publish the document.
 Select the rendition that should be published, for example None (same document format as in the workspace) or a PDF version of the document.
 Optional: Create a version.
 Click Publish.
-
+-->
 
 {{#> callout type='info' header='Working with Renditions'}}
 
