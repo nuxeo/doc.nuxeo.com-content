@@ -12,9 +12,6 @@ labels:
 tree_item_index: 250
 
 ---
-The document actions toolbar displays all the actions available for the current document.
-![]({{file page='document-actions' name='document-action-toolbar.png'}} ?w=650,border=true)
-
 ## Compare
 
 ### Compare Versions of a Document
