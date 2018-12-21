@@ -7,7 +7,7 @@ review:
 labels:
     - web-ui
 is_overview: true
-tree_item_index: 110
+tree_item_index: 300
 
 ---
 
@@ -45,14 +45,6 @@ Editing a document consists in modifying its content (i.e. the attached file of 
 
 <div class="row" data-equalizer data-equalize-on="medium">
 
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-### Deleting
-Documents can be deleted and restored. You can delete one or several documents at a time and use Trash Search to retrieved deleted documents.
-
-[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='deleting-content'}})
-{{/panel}}
-</div>
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}

@@ -1,5 +1,5 @@
 ---
-title: Browse
+title: Browsing Content
 review:
     comment: ''
     date: '2018-10-15'
@@ -9,7 +9,7 @@ toc: true
 labels:
     - creation
     - drag-and-drop
-tree_item_index: 100
+tree_item_index: 400
 
 ---
 {{! excerpt}}
