@@ -34,10 +34,59 @@ Although properties are not mandatory, filling them in will make your documents 
 2. Edit the metadata that you want.
 3. Once it is done, click on **SAVE**
 
-## Drag and Drop
+## Moving and Replacing Files using Drag and Drop
+
+### Moving Documents
 
 In a content view, drag and drop is available to move documents from a folderish document to another (like workspaces, folders, or collections).
 
 1. From your folder view, select the document you want to move.
 2. Click on selected documents and drag them.
 3. Drop them on the folderish document you want.
+
+## Replacing an attachment
+
+![]({{file name='replace.png'}} ?w=300,border=true)
+
+1. From your document view, click More ![]({{file name='more.png'}} ?w=20) then Replace ![]({{file name='replace-icon.png'}} ?w=20).
+The Replace File pop-up appears.
+2. Drag and drop the file in the zone or click **Upload main file**.
+3. Click **Replace**.
+
+## Commenting
+
+Comments enable users to discuss about the document and its evolution. To have better collaboration on content, users can create, edit, and delete threaded comments on documents.
+
+### Creating a Comment
+
+In the Comments section of the Document view, type your comment and click on ![]({{file name='comment-validate.png'}} ?w=20)
+
+![]({{file name='comment-writing.png'}} ?w=300,border=true)
+
+### Replying to a Comment
+You can reply to your comments and to comments from other users. However, replies cannot be indented further than a 2-level thread.
+
+**To reply to a comment:**
+
+Click on ![]({{file name='reply.png'}} ?w=20) next to the comment you want to reply to.
+Type your comment and click on ![]({{file name='comment-validate.png'}} ?w=20).
+![]({{file name='reply-comment.png'}} ?w=300,border=true)
+
+### Editing a Comment or a Reply
+You cannot edit comments from other users. However, you can reply to them.
+
+**To edit a comment or a reply:**
+
+1. Click on Edit.
+1. Modify your comment or reply and click on ![]({{file name='comment-validate.png'}} ?w=20).
+The mention (edited) will figure on your edited comment or reply.
+
+### Deleting a Comment or a Reply
+
+1. Click on ![]({{file name='more-dots.png'}} ?w=20).
+1. Click on Delete. ![]({{file name='comment-edit-delete.png'}} ?w=300,border=true) A confirmation pop-up appears. ![]({{file name='delete-pop-up.png'}} ?w=300,border=true)
+1. Click on Delete to confirm. Your comment has been deleted.
+
+{{#> callout type='warning'}} Please note that when a comment is deleted, all related replies are deleted too. Also deleting a comment is a permanent action, they cannot be restored. {{/callout}}
+
+## Replacing a file
