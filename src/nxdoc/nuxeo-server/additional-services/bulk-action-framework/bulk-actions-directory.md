@@ -29,14 +29,18 @@ Let's see some examples of bulk actions in use.
 The following example shows how to use `setPropertiesAction` with Java Service:
 
 {{! multiexcerpt name='baf-set-properties-action-java-example'}}
-```
+```java
 // build command
-BulkCommand command = new BulkCommand.Builder(SetPropertiesAction.ACTION_NAME, "SELECT * from Document")
-        .repository("default")
-        .user("Administrator")
-        .param("dc:nature", "article")
-        .param("dc:subjects", ImmutableList.of("art/architecture"))
-        .build();
+BulkCommand command = new BulkCommand.Builder(SetPropertiesAction.ACTION_NAME,
+        "SELECT * from Document").repository("default")
+                                 .user("Administrator")
+                                 .param("dc:nature", "article")
+                                 .param("dc:subjects", Collections.singletonList("art/architecture"))
+                                 // default is FALSE
+                                 .param(SetPropertiesAction.PARAM_DISABLE_AUDIT, Boolean.TRUE)
+                                 // default is null - only NONE can be set
+                                 .param(SetPropertiesAction.PARAM_VERSIONING_OPTION, "NONE")
+                                 .build();
 
 // run command
 BulkService bulkService = Framework.getService(BulkService.class);
@@ -50,19 +54,19 @@ BulkStatus status = bulkService.getStatus(commandId);
 ```
 {{! /multiexcerpt}}
 
-You can submit the same command through REST and [Command endpoint]({{page page='command-endpoint'}}):
+You can submit the same command through REST and [Search endpoint]({{page page='search-endpoints'}}):
 
-{{! multiexcerpt name='baf-set-properties-action-operation-example'}}
-```
+{{! multiexcerpt name='baf-set-properties-action-rest-example'}}
+```bash
 curl -u Administrator:Administrator \
- -H 'Content-Type: application/json' \
- -X POST 'http://localhost:8080/nuxeo/api/v1/automation/Bulk.RunAction' \
--d '{"params":{
-        "query":"SELECT * FROM Document",
-        "action":"setProperties",
-        "parameters":"{\"dc:nature\":\"article\",\"dc:subjects\":[\"art\/architecture\"]}"
-        }
-    }'
+     -H 'Content-Type: application/json' \
+     -X POST 'http://localhost:8080/nuxeo/api/v1/search/bulk/setProperties?query=SELECT * FROM Document' \
+     -d '{
+           "dc:nature": "article",
+           "dc:subjects": ["art/architecture"],
+           "disableAuditLogger": true,
+           "versioningOption": "NONE"
+         }'
 ```
 {{! /multiexcerpt}}
 
@@ -82,13 +86,13 @@ For exported multi-valued properties, the values are separated from each other w
 The following example shows how to use `csvExportAction` with Java Service:
 
 {{! multiexcerpt name='baf-csv-export-action-java-example'}}
-```
+```java
 // build command
 ImmutableList<String> xpaths = ImmutableList.of("file:content/name", "file:content/length");
 BulkCommand command = new BulkCommand.Builder(CSVExportAction.ACTION_NAME, "SELECT * from Document")
         .repository("default")
         .user("Administrator")
-        .param(CSVProjectionComputation.PARAM_SCHEMAS, ImmutableList.of("dublincore"))
+        .param(CSVProjectionComputation.PARAM_SCHEMAS, Collections.singletonList("dublincore"))
         .param(CSVProjectionComputation.PARAM_XPATHS, xpaths)
         .param(CSVProjectionComputation.PARAM_LANG, "fr") // default is context Locale
         .param(SortBlob.SORT_PARAMETER, Boolean.FALSE) // default is TRUE
@@ -109,27 +113,27 @@ BulkStatus status = bulkService.getStatus(commandId);
 ```
 {{! /multiexcerpt}}
 
-You can submit the same command through REST and [Command endpoint]({{page page='command-endpoint'}}):
+You can submit the same command through REST and [Search endpoint]({{page page='search-endpoints'}}):
 
-{{! multiexcerpt name='baf-csv-export-action-operation-example'}}
-```
+{{! multiexcerpt name='baf-csv-export-action-rest-example'}}
+```bash
 curl -u Administrator:Administrator \
- -H 'Content-Type: application/json' \
- -X POST 'http://localhost:8080/nuxeo/api/v1/automation/Bulk.RunAction' \
- -d '{"params":{
-        "query":"SELECT * FROM Document",
-        "action":"csvExport",
-        "parameters":"{\"schemas\":[\"dublincore\"],\"xpaths\":[\"file:content\/name\", \"file:content\/length\"],\"lang\":\"fr\",\"sort\":false,\"zip\":true}"
-	    }
-     }'
-
+     -H 'Content-Type: application/json' \
+     -X POST 'http://localhost:8080/nuxeo/api/v1/search/bulk/csvExport?query=SELECT * FROM Document' \
+     -d '{
+           "schemas": ["dublincore"],
+           "xpaths": ["file:content/name", "file:content/length"],
+           "lang": "fr",
+           "sort": false,
+           "zip": true
+         }'
 ```
 {{! /multiexcerpt}}
 
 And then get the status containing the URL to the result:
 
-```
+```bash
 curl -u Administrator:Administrator \
- -H 'Content-Type: application/json' \
- -X GET 'http://localhost:8080/nuxeo/api/v1/bulk/<id-from-previous-command>'
+     -H 'Content-Type: application/json' \
+     -X GET 'http://localhost:8080/nuxeo/api/v1/bulk/<id-from-previous-command>'
 ```
