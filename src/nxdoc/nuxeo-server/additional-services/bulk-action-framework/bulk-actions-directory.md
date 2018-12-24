@@ -14,11 +14,36 @@ toc: true
 
 Nuxeo provides several actions for the Bulk Action Framework:
 
-| Action name                             | Description                                             | Parameters                                                         | Java Class                                                                                                                                      |
-| --------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`setProperties`](#setpropertiesaction) | Allow to set several properties on each document        | Parameters represent the couple (xpath, value) to set              | [SetPropertiesAction](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/bulk/action/SetPropertiesAction.html)              |
-| `setSystemProperties`                   | Allow to set several system properties on each document | Parameters represent the couple (xpath, value) to set              | [SetSystemPropertiesAction](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/bulk/action/SetSystemPropertiesAction.html)  |
-| [`csvExport`](#csvexportaction)         | Allow to export several documents as a csv file         | Parameters represent the options (schemas, xpaths, zip/sort, lang) | [CSVExportAction](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/csv/export/action/CSVExportAction.html)            |
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th class="small-2">Action name</th>
+        <th class="small-3">Description</th>
+        <th class="small-5">Parameters</th>
+        <th class="small-2">Java Class</th>
+      </tr>
+      <tr>
+        <td>[`setProperties`](#setpropertiesaction)</td>
+        <td>Allow to set several properties on each document</td>
+        <td>Parameters represent the couple (xpath, value) to set</td>
+        <td>[SetPropertiesAction](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/bulk/action/SetPropertiesAction.html)</td>
+      </tr>
+      <tr>
+        <td>[`csvExport`](#csvexportaction)</td>
+        <td>Allow to export several documents as a csv file</td>
+        <td>Parameters represent the options (schemas, xpaths, zip/sort, lang)</td>
+        <td>[CSVExportAction](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/csv/export/action/CSVExportAction.html)</td>
+      </tr>
+      <tr>
+        <td>[`automation`](#automationbulkaction)</td>
+        <td>Allow to run an automation on each document</td>
+        <td>Parameters represent the automation to run and parameters to give to it (operationId/parameters)</td>
+        <td>[AutomationBulkAction](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/automation/core/operations/services/bulk/AutomationBulkAction.html)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ## Examples
 
@@ -136,4 +161,20 @@ And then get the status containing the URL to the result:
 curl -u Administrator:Administrator \
      -H 'Content-Type: application/json' \
      -X GET 'http://localhost:8080/nuxeo/api/v1/bulk/<id-from-previous-command>'
+```
+
+### AutomationBulkAction
+
+The following example shows how to bulk edit document using `automation` action and [Search endpoint]({{page page='search-endpoints'}}):
+
+```bash
+curl -u Administrator:Administrator \
+     -H 'Content-Type: application/json' \
+     -X POST 'http://localhost:8080/nuxeo/api/v1/search/bulk/automation?query=SELECT * FROM Document' \
+     -d '{
+           "operationId": "Document.Update",
+           "parameters": {
+             "properties": "dc:nature=article"
+           }
+         }'
 ```
