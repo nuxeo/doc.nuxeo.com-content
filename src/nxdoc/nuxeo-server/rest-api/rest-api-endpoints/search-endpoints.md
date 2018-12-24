@@ -178,8 +178,16 @@ There are three search endpoints:
         <td class="small-5">Executes a query in a given query language. Default language is NXQL.</td>
       </tr>
       <tr>
+        <td class="small-7">POST `/api/v1/search/lang/{queryLanguage}/bulk/{actionId}`</td>
+        <td class="small-5">Executes a bulk action on a query in a given query language. Default language is NXQL.</td>
+      </tr>
+      <tr>
         <td class="small-7">GET `/api/v1/search/pp/{providerName}/execute`</td>
         <td class="small-5">Executes a search using a specific page provider.</td>
+      </tr>
+      <tr>
+        <td class="small-7">POST `/api/v1/search/pp/{providerName}/bulk/{actionId}`</td>
+        <td class="small-5">Executes a bulk action using a specific page provider.</td>
       </tr>
       <tr>
         <td class="small-7">GET `/api/v1/search/pp/{providerName}`</td>
@@ -208,6 +216,10 @@ There are three search endpoints:
       <tr>
         <td class="small-7">GET `/api/v1/search/saved/{searchId}/execute`</td>
         <td class="small-5">Executes a saved search.</td>
+      </tr>
+      <tr>
+        <td class="small-7">GET `/api/v1/search/saved/{searchId}/bulk/{actionId}`</td>
+        <td class="small-5">Executes bulk action on a saved search.</td>
       </tr>
     </tbody>
   </table>
