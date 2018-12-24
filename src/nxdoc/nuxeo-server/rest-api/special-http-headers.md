@@ -184,6 +184,12 @@ In order to have more control over REST API Calls, you can use the following spe
         <td>Force ElasticSearch synchronous indexing during a REST call</td>
         <td>`nx_es_sync: true`</td>
       </tr>
+      <tr>
+        <td>`skipAggregates`</td>
+        <td>false</td>
+        <td>Tell the [search endpoint]({{page version='' space='nxdoc' page='search-endpoints'}}) to skip elasticsearch aggregate computation if any to speed up the query</td>
+        <td>`skipAggregates: false`</td>
+      </tr>
     </tbody>
   </table>
 </div>
