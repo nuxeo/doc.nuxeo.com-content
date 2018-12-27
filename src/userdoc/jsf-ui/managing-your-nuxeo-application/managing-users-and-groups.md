@@ -403,19 +403,20 @@ To delete a user, go to **Admin Center**&nbsp;> **Users & groups**. Search a use
 ## Managing Groups
 {{! multiexcerpt name='group-intro'}}
 
-Groups of users can be created and their properties modified directly in the Nuxeo Platform.
+You can create groups of users and and modify their properties directly in the Nuxeo Platform.
 
-To make permissions management easier, you can create groups of users. Instead of giving (or denying) permissions to single users and repeat the same operations several times, you can give several users the same permission in one single manipulation by using a group.
+To make permissions management easier, instead of giving (or denying) permissions to single users and repeat operations several times, you can give several users identical permissions in one single manipulation by using a group.
 
 Default groups are:
 
-*   **members**: Users in this group are the end-users users of the application.
-*   **power users**: Users in this group are the functional administrators of the application. They have a restricted access to the Admin tab, the administration user interface of the Nuxeo Platform, from which they can manage users and groups and edit the vocabularies.
-*   **administrators**: Users in this group are the technical administrators of the application. They have access to all the Admin tab features and are in charge of managing the application. Beside the functional administration features, they can edit the application configuration, install packages on the application, consult the application's statistics, restart the server, etc.
+*   **members**: End-users of the application.
+*   **power users**: Functional administrators of the application.
+ They have a restricted access to the Admin tab, the administration of the user interface of the Nuxeo Platform, from which they can manage users and groups and edit the vocabularies.
+*   **administrators**: Technical administrators of the application. They have access to all the Admin tab features and are in charge of managing the application. Beside the functional administration features, they can edit the application configuration, install packages on the application, consult the application's statistics, restart the server, etc.
 
 {{#> callout type='info' heading='Default groups'}}
 
-Users must be in one of the groups "members" or "administrators" to be able to access content. Power users must be in both the "power users" and "members" groups.
+Users must be in one of "members" or "administrators" the groups to be able to access content. Power users must be in both the "power users" and "members" groups.
 
 {{/callout}}
 
