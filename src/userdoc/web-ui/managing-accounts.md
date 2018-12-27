@@ -1,5 +1,5 @@
 ---
-title: Creating and Updating Content
+title: Managing Accounts
 review:
     comment: ''
     date: '2018-12-20'
@@ -11,33 +11,26 @@ tree_item_index: 300
 
 ---
 
-<div class="column">
-{{#> panel type='primary'}}
-
-[You migrated your user interface from JSF UI to Web UI? You will find all the necessary information here!]({{page version='' space='userdoc' page='from-jsf-ui-to-web-ui'}})
-
-{{/panel}}
-</div>
 
 <div class="row" data-equalizer data-equalize-on="medium">
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Creating and Importing
+### Administration
 
-Documents can be created in workspaces, templates and folders, using the default configuration or add-ons.
+Administrate your project and follow your content from the Administration tab at the bottom of the side menu.
 
-[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='creating-content'}})
+[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='administration'}})
 {{/panel}}
 </div>
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Editing
+### User Settings
 
-Editing a document consists in modifying its content (i.e. the attached file of a file document, the text of a note, etc.) as well as simply editing any property of the document.
+Set preferences for your account in the User Settings tab at the bottom of the side menu.
 
-[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page space='userdoc' page='content-edit'}})
+[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='user-settings'}})
 {{/panel}}
 </div>
 
@@ -48,9 +41,10 @@ Editing a document consists in modifying its content (i.e. the attached file of 
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Locking
+### Managing Permissions
 
-Documents can be locked while they are modified by users to prevent conflicts between modifications from different users.
-[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='content-lock'}})
+Depending on the document you are on, you can be granted different permissions and be allowed different actions on the document.
+
+[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='permissions'}})
 {{/panel}}
 </div>
