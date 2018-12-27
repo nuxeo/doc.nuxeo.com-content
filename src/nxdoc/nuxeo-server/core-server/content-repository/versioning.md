@@ -201,8 +201,8 @@ The system is not triggered before update if the document is already checked in.
 The system is not triggered after update if a manual versioning is asked (`VersioningService.VERSIONING_OPTION` in document context data).
 
 To contribute new policies and filters, check out the extension points documentation:
-- [policies](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--policies)
-- [filters](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--filters)
+- [policies](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.versioning.VersioningService--policies)
+- [filters](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.versioning.VersioningService--filters)
 
 ### {{> anchor 'versioning-policies'}}Versioning Policies
 
@@ -215,7 +215,7 @@ Each versioning policy defines:
 Example:
 
 ```xml
-<extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="policies">
+<extension target="org.nuxeo.ecm.core.api.versioning.VersioningService" point="policies">
   <policy id="note-and-file-policy" order="1" beforeUpdate="true" increment="MAJOR">
     <filter-id>note-filter</filter-id>
     <filter-id>file-filter</filter-id>
@@ -244,7 +244,7 @@ A versioning filter defines the condition(s) the document has to fulfill so that
 Example:
 
 ```xml
-<extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="filters">
+<extension target="org.nuxeo.ecm.core.api.versioning.VersioningService" point="filters">
   <filter id="my-standard-filter">
       <type>MyDocType</type>
       <schema>MySchema</schema>
@@ -263,7 +263,7 @@ The example below will be interpreted as:
 ```
 
 ```xml
-<extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="filters">
+<extension target="org.nuxeo.ecm.core.api.versioning.VersioningService" point="filters">
   <filter id="my-standard-filter">
     <type>type1</type>
     <type>type2</type>
@@ -303,7 +303,7 @@ For more details about source-based versioning with Nuxeo Drive, check out the p
 Below are the default versioning policies defined in Nuxeo Platform:
 
 ```xml
-<extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="policies">
+<extension target="org.nuxeo.ecm.core.api.versioning.VersioningService" point="policies">
   <policy id="no-versioning-for-system-before-update" beforeUpdate="true" increment="NONE" order="1">
     <filter-id>system-document</filter-id>
   </policy>
@@ -318,7 +318,7 @@ Below are the default versioning policies defined in Nuxeo Platform:
   </policy>
 </extension>
 
-<extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="filters">
+<extension target="org.nuxeo.ecm.core.api.versioning.VersioningService" point="filters">
   <filter id="system-document" class="org.nuxeo.ecm.core.versioning.NoVersioningPolicyFilter" />
   <filter id="note-filter">
     <type>Note</type>
@@ -353,7 +353,7 @@ In order to disable a built-in policy, you can declare the policy in your compon
 ```xml
 <!-- Don't forget to require the component defining the policy -->
 <require>org.nuxeo.ecm.core.versioning.default-policies</require>
-<extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="policies">
+<extension target="org.nuxeo.ecm.core.api.versioning.VersioningService" point="policies">
   <policy id="note-as-wiki"/>
 </extension>
 ```
@@ -365,13 +365,13 @@ In this example will see how we can leverage the source-based versioning to auto
 1. Define a versioning rule for that:
   ```xml
   <component name="">
-    <extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="policies">
+    <extension target="org.nuxeo.ecm.core.api.versioning.VersioningService" point="policies">
       <policy id="my-source-policy" order="20" increment="MINOR">
         <filter-id>my-source-versioning-filter</filter-id>
       </policy>
     </extension>
 
-    <extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="filters">
+    <extension target="org.nuxeo.ecm.core.api.versioning.VersioningService" point="filters">
       <filter id="my-source-versioning-filter">
         <condition>#{currentDocument.contextData.source == "mySource"}</condition>
       </filter>
