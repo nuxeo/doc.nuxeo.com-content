@@ -10,7 +10,7 @@ tree_item_index: 100
 labels:
 
 ---
-This Administration menu presents different submenus:
+This Administration tab presents different submenus:
 
 - [Analytics](#analytics)
 - [Users & Groups](#users-and-groups)
@@ -21,29 +21,31 @@ This Administration menu presents different submenus:
 
 ## Analytics
 
-This section of the Administration tab enables administrators to have information and statistics on how the application is used.
+Analytics enable administrators to consult information and statistics on how the application is used:
 
-The default Activity subtabs are:
+
 - **Document Distribution**: Provides statistics on the documents types, their size and counts.
 
-- **Repository Content**: Provides statistics on the repository, the top downloads, the document created per week, etc. You can filter these statistics on a specific time period.
+- **Repository Content**: Provides statistics on the repository, such as the top downloads, the number of created documents per week, etc. You can filter them on a specific time period.
 
-- **Search**: Provides statistics on the queries done by users and how search filters are used.
+- **Search**: Provides statistics on how search filters are used and which queries users enter.
 
-- **Workflow**: Provides statistics on tasks, like the average duration of a workflow, the actions per users, etc.
+- **Workflow**: Provides statistics on tasks, such as the average duration of a workflow, actions per users, etc.
 
 ## Users and Groups
 
-Only administrators and power users can create, edit and delete users and groups. They can create new users and groups, modify their properties or delete them. It is also possible to connect the Platform to an external directory (LDAP directory for instance). Users can only consult users and groups directories.
+Only administrators and power users can create, edit and delete users and groups. They can create new users and groups, modify their properties or delete them. You can also connect the Platform to an external directory such as an LDAP.
+
+Users can only consult users and groups directories.
 
 ### Managing Users
 {{! multiexcerpt name='default-user-Administrator'}}
-By default, the Nuxeo Platform has one user, called Administrator, who is the administrator. You must use it to create new users and delegate them permissions.
+By default, the Nuxeo Platform provides you with one user, called Administrator, associated with the administrator role. You will need it to create new users and delegate them permissions.
 {{! /multiexcerpt}}
 
 {{#> callout type='info' }}
 {{! multiexcerpt name='default-groups-to-browse'}}
-Users must be at least in "administrators" or "members" group, or one of their sub-groups to be able to browse the application's content.
+Users must at least belong to "members", "administrators" or one of their sub-groups to be able to browse the application's content.
 {{! /multiexcerpt}}
 {{/callout}}
 
@@ -138,19 +140,22 @@ Inviting a new user means creating a user account without setting its password, 
 
 #### Creating a New User Account
 
-When you create a new user account immediately, you choose and set the user's password.
+When you create a new user account, you immediately set a user password.
 
-To create a user, go to the **Administration** menu > **Users & groups**. Click on the **New** button and fill in the user creation form and activate the **Set user password**.
+1. To create a user, go to the **Administration** menu > **Users & groups**.
+1. Click on the **New** button.
+1. Fill in the user creation form.
+1. Activate the **Set user password**.
 
 {{#> callout type='tip' }}
 If you need to create several users check the box **Create another** next to the **Create** button at the end of the creation form. The user is saved and the user creation form is displayed so you can immediately create another user.
 {{/callout}}
 
-The user can immediately connect to the Nuxeo application using his or her username and password.
+Users can immediately connect to the Nuxeo application using their usernames and passwords.
 
 #### Editing a User's Properties
 
-Only administrators and power users can modify other users' properties. But every user can modify his own properties from their profile card in the **Users & Groups** menu.
+Only administrators and power users can modify other users' properties. But every user can modify his own properties from their profile in the **Users & Groups** tab.
 
 You cannot edit the username, as it is the ID of the user on the application.
 
@@ -158,11 +163,11 @@ You cannot edit the username, as it is the ID of the user on the application.
 When you are using an external directory for users management, the Edit button is not displayed as you cannot edit the users' properties (managed directly from the directory).
 {{/callout}}
 
-To modify a user's properties, go to the **Administration** menu > **Users & Groups**. Search a user and click on the user's name to open his or her card. Edit it by modifying the fields in the modification form.
+To modify a user's properties, go to the **Administration** menu > **Users & Groups**. Search a user and click on the user name to open his or her card. To edit it, modify the fields in the modification form.
 
 #### Changing a User's Password
 
-Only administrators and power users can modify other users' password. However every user can modify his or her own password from his/her profile card.
+Only administrators and power users can modify other users' password. However every users can modify their own password from their profile.
 
 {{#> callout type='info' }}
 When you use an external directory for users management, the **Change password** button is not displayed as you cannot edit your password.
@@ -180,7 +185,7 @@ Only administrators and power users can delete users.
 Deleting a user is a permanent action.
 {{/callout}}
 
-To delete a user, go to go to the **Administration** menu > **Users & Groups**. Search a user and click on the user's name to open his or her card. Click on **Delete** at the top-right hand corner and confirm.
+To delete a user, go to the **Administration** menu > **Users & Groups**. Search a user and click on the user's name to open his or her card. Click on **Delete** at the top-right hand corner and confirm.
 
 ### Managing Groups
 
@@ -255,14 +260,24 @@ Modifying groups most often consists in adding or removing members of the group.
 
 ![]({{file name='edit-group-web-ui.png'}} ?w=350,border=true)
 
-To edit a group, go to the **Administration** menu > **Users & Groups**. Search a group and click on its name to open its card. Click on the **Edit** tab, modify the group's members and click on the **Save** button. The users who are no longer members of the group are denied group's permissions. However they still have their individual permissions.
+**To edit a group:**
+
+ 1. Go to the **Administration** menu > **Users & Groups**.
+ 1. Search a group and click on its name to open its card.
+ 1. Click on the **Edit** tab, modify the group's members
+ 1. Click on the **Save** button.
+
+ The users who are no longer members of the group are denied group's permissions. However they still have their individual permissions.
 
 
 #### Deleting a Group
 
 Only administrators and power users can delete groups.
 
-To delete a group, go to **Administration** menu > **Users & Groups**. Search the group to delete and click on its name to open its card. Click on **Delete** and confirm.
+**To delete a group**:
+ 1. Go to **Administration** menu > **Users & Groups**.
+ 1. Search the group to delete and click on its name to open its card.
+ 1. Click on **Delete** and confirm.
 
 ## Vocabularies
 
@@ -294,7 +309,7 @@ By default, the labels of default vocabularies entries are the IDs of labels in 
 
 ### Adding a Vocabulary Entry
 
-To add an entry to a vocabulary,click on the **Add Entry** button of the vocabulary, fill in the entry creation form and click on the **Save** button.
+To add an entry to a vocabulary, click on the **Add Entry** button of the vocabulary, fill in the entry creation form and click on the **Save** button.
 
 ![]({{file name='new-entry-web-ui.png'}} ?w=250,border=true)
 
