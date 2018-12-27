@@ -111,6 +111,12 @@ You need to register a couple action/stream processor:
 </extension>
 ```
 
+If your action have some parameters, you can also validate them by adding a validation class to the action contribution:
+
+```xml
+<action name="myAction" validationClass="org.nuxeo.myValidationClass"/>
+```
+
 It is possible to add several options to the stream processor to tune the way the documents are processed.
 Please visit [nuxeo-runtime-stream README](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-runtime/nuxeo-runtime-stream#stream-processing) for more information.
 
