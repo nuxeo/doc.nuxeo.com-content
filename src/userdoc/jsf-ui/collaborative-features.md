@@ -143,6 +143,7 @@ See the page [Workflows]({{page page='workflows'}}) for more details.
 
 Alerts are emails automatically sent to users when an event occurs in a space to enable you to follow the activity of a document or a space.
 
+
 When you follow a document or a space activity, you get an email when the events below happen:
 
 *   Creation: you get an email when some content is created in the space
@@ -151,6 +152,7 @@ When you follow a document or a space activity, you get an email when the events
 *   Approval workflow started: you receive an email every time an approval workflow is started
 *   Comments moderation: you receive an email when a comment is approved on a site
 *   Publish: you receive an email when a document is published in the specified section
+*   Share: you receive an email when a document has been shared with you by its principal author or by another user.
 
     {{#> callout type='info' }}
 
