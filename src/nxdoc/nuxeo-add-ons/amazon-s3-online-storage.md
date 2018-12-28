@@ -415,6 +415,24 @@ By default, binaries are uploaded to the Nuxeo server which upload them to S3.
 
 Another possibility is for the client to ask the Nuxeo server temporary S3 credentials to a second S3 bucket, used as a facade bucket and called transient, where the client (basically Web UI) directly uploads binaries. Then the S3 reference is passed to the server which moves it to its actual S3 bucket.
 
+Please note that the s3 transient bucket has to be configured to allow CORS on PUT and POST methods, this can be done in the permissions tab from the AWS bucket configuration page.
+
+The following CORSConfiguration allows Web UI to send files to s3, please feel free to adapt it if needed.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+<CORSRule>
+    <AllowedOrigin>*</AllowedOrigin>
+    <AllowedMethod>PUT</AllowedMethod>
+    <AllowedMethod>POST</AllowedMethod>
+    <MaxAgeSeconds>3000</MaxAgeSeconds>
+    <ExposeHeader>ETag</ExposeHeader>
+    <AllowedHeader>*</AllowedHeader>
+</CORSRule>
+</CORSConfiguration>
+```
+
 To activate S3 direct upload use these parameters:
 
 ```
