@@ -125,6 +125,8 @@ For exported multi-valued properties, the values are separated from each other w
 ... , user1 | user2 , ...  
 ```
 
+For vocabulary properties, the value is exported as a column and the label is also exported within a second column sideway labeled `property [label]`
+
 The following example shows how to use `csvExportAction` with Java Service:
 
 {{! multiexcerpt name='baf-csv-export-action-java-example'}}
