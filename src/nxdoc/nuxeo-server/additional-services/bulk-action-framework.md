@@ -10,8 +10,9 @@ labels:
 toc: true
 tree_item_index: 1500
 ---
-
+{{! excerpt}}
 The Bulk Action Framework provides a service to be able to run resilient bulk actions on a _possibly large_ set of documents.
+{{! /excerpt}}
 
 This framework introduces several notions:
 - __document set__: a list of documents from a repository represented as a list of document identifiers.
@@ -19,14 +20,11 @@ This framework introduces several notions:
 - __command__: a set of parameters building a request to apply an action on a document set.
 - __bucket__: a portion of a document set that fits into a stream record.
 - __batch__: a smaller (or equals) portion of a bucket where the action is applied within a transaction.
-
 {{#> callout type='note' heading='Requirements'}}
-To work properly the Bulk Service need a true KeyValue storage to store the command and its status, there are 2 possibles choices:
-
-- Use `RedisKeyValueStore` this is the case if you have `nuxeo.redis.enabled=true` in your nuxeo.conf.
-- Use `MongoDBKeyValueStore` this is the case if you are using the mongodb template.
-
-You should not rely on the default `MemKeyValueStore` implementation that flushes the data on restart.
+    To work properly, the Bulk Service needs a true KeyValue storage to store the command and its status, there are 2 possibles choices:
+    - Use `RedisKeyValueStore` if you have `nuxeo.redis.enabled=true` in your `nuxeo.conf`.
+    - Use `MongoDBKeyValueStore` if you are using the MongoDB template.
+    You should not rely on the default `MemKeyValueStore` implementation that flushes the data on restart.
 {{/callout}}
 
 ## Bulk Service
@@ -40,7 +38,7 @@ This service provides ways to:
 - Wait for a command to be completely executed.
 - Wait for all running commands to be completely executed (for tests).
 
-The following is an example of use of bulk service:
+The following is an example of bulk service usage:
 
 {{{multiexcerpt 'baf-set-properties-action-java-example' page='bulk-actions-directory'}}}
 
@@ -53,13 +51,13 @@ The following is an example of use of bulk service:
 --}}
 ![Java Client Request flow](nx_asset://07c0feb4-cba8-45bd-917f-53e2cc090f15 ?border=true)
 
-#### The BulkService
+#### BulkService
 
 The entry point is the `BulkService` that takes a bulk command as an input. The service submits this command, meaning it appends the `BulkCommand` to the `command` stream.
 
-The BulkService can also returns the status of a command which is internally stored into a KeyValueStore.
+The BulkService can also return the status of a command which is internally stored into a KeyValueStore.
 
-#### The Scroller computation
+#### Scroller Computation
 
 The `command` stream is the input of the `Scroller` computation.
 
@@ -69,27 +67,23 @@ The `BulkBucket` record is appended to the action's stream.
 
 The scroller sends command status update to inform that the scroll is in progress or terminated and to set the total number of document in the materialized document set.
 
-#### Actions processors
+#### Actions Processors
 
 Each action runs its own stream processor (a topology of computations).
 
 The action processor must respect the following rules:
 
-action must send a status update containing the number of processed documents since the last update.
-
-action must handle possible error, for instance the user that send the command might not have write permission on all documents
-
-the total number of processed documents reported must match at some point the number of documents in the document set.
-
-action that aggregates bucket records per command must handle interleaved commands. This can be done by maintaining a local state for each command.
-
-action that aggregates bucket records per command should checkpoint only when there no other interleaved command in progress. This is to prevent checkpoint while some records are not yet processed resulting in possible loss of record.
+- action must send a status update containing the number of processed documents since the last update.
+- action must handle possible error, for instance the user that send the command might not have write permission on all documents
+- the total number of processed documents reported must match at some point the number of documents in the document set.
+- action that aggregates bucket records per command must handle interleaved commands. This can be done by maintaining a local state for each command.
+- action that aggregates bucket records per command should checkpoint only when there no other interleaved command in progress. This is to prevent checkpoint while some records are not yet processed resulting in possible loss of record.
 
 An `AbstractBulkComputation` is provided so an action can be implemented easily with a single computation. See `SetPropertiesAction` for a simple example.
 
 See The `CSVExportAction` and particularly the `MakeBlob` computation for an advanced example.
 
-#### The Status computation
+#### Status Computation
 
 This computation reads from the `status` stream and aggregate status update to build the current status of command. The status is saved into a KeyValueStore. When the number of processed document is equals to the number of document in the set, the state is changed to completed. And the computation appends the final status to the `done` stream.
 
@@ -126,7 +120,7 @@ Bulk Service APIs are accessible with REST API from two places:
 - [search endpoint]({{page page='search-endpoints'}}) to submit a command
 - dedicated bulk endpoint for others actions
 
-Objects transiting between server and client are parameters of bulk action which is a simple json object and depend on action needs, and BulkStatus object whose json representation is as below:
+Objects transiting between server and client are parameters of bulk action which is a simple JSON object and depend on action needs, and BulkStatus object whose JSON representation is as below:
 ```json
 {
   "entity-type": "bulkStatus",
@@ -157,13 +151,13 @@ Objects transiting between server and client are parameters of bulk action which
 
 ### Submit a Command
 
-You can submit a bulk command through REST by using bulk endpoint leveraging the search endpoint, as it you can run your command on a query, page provider or saved search.
+You can submit a bulk command through REST by using bulk endpoint leveraging the search endpoint. Thus, you can run your command on a query, page provider or saved search.
 
 | Description                              | HTTP Method | Path                                               | Request Body                                | Response          |
 | ---------------------------------------- | ----------- | -------------------------------------------------- | ------------------------------------------- | ----------------- |
-| Submit a bulk command on a NXQL query    | POST        | `/api/v1/search/bulk/{actionId}`                   | Parameters for bulk action as a json object | BulkStatus object |
-| Submit a bulk command on a page provider | POST        | `/api/v1/search/pp/{providerName}/bulk/{actionId}` | Parameters for bulk action as a json object | BulkStatus object |
-| Submit a bulk command on a saved search  | POST        | `/api/v1/search/saved/{searchId}/bulk/{actionId}`  | Parameters for bulk action as a json object | BulkStatus object |
+| Submit a bulk command on a NXQL query    | POST        | `/api/v1/search/bulk/{actionId}`                   | Parameters for bulk action as a JSON object | BulkStatus object |
+| Submit a bulk command on a page provider | POST        | `/api/v1/search/pp/{providerName}/bulk/{actionId}` | Parameters for bulk action as a JSON object | BulkStatus object |
+| Submit a bulk command on a saved search  | POST        | `/api/v1/search/saved/{searchId}/bulk/{actionId}`  | Parameters for bulk action as a JSON object | BulkStatus object |
 
 For instance:
 {{{multiexcerpt 'baf-set-properties-action-rest-example' page='bulk-actions-directory'}}}
@@ -195,7 +189,7 @@ curl -u Administrator:Administrator \
         }'
 ```
 
-For testing purpose, it is possible to wait then end of a bulk action with the [Bulk.WaitForAction](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Bulk.WaitForAction) automation operation.
+For testing purpose, it is possible to wait for the end of a bulk action with the [Bulk.WaitForAction](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewOperation/Bulk.WaitForAction) automation operation.
 
 ## Testing a Bulk Action with REST API
 
@@ -249,13 +243,12 @@ curl -s -X GET "http://localhost:8080/nuxeo/api/v1/bulk/$commandId"  -u Administ
 #}
 ```
 
-Also a command can be aborted, this is useful for long running command launched by error,
+It's possible to abort a command, this is useful for long-running command launched by error,
 or to by pass a command that fails systematically which blocks the entire action processor:
 
 ```bash
 ## Abort a command
 curl -s -X PUT "http://localhost:8080/nuxeo/api/v1/bulk/$commandId/abort"  -u Administrator:Administrator  -H 'content-type: application/json' | jq .
-
 ```
 
 ## Debugging
@@ -263,20 +256,22 @@ curl -s -X PUT "http://localhost:8080/nuxeo/api/v1/bulk/$commandId/abort"  -u Ad
 All streams used by the bulk service and action can be introspected using
 the Nuxeo `bin/stream.sh` script.
 
-For instance to see the latest commands submitted:
+**To get the latest commands submitted:**
+
 ```bash
 ## When using Kafka
 ./bin/stream.sh tail -k -l bulk-command --codec avro
 ## When using Chronicle Queue
 # ./bin/stream.sh tail --chronicle ./nxserver/data/stream/bulk -l command --codec avro
 ```
+
 | offset | watermark | flag | key | length | data |
 | --- | --- | --- | --- | ---: | --- |
 |bulk-command-01:+2|2018-10-11 11:18:34.955:0|[DEFAULT]|setProperties|164|{"id": "b667b677-d40e-471a-8377-eb16dd301b42", "action": "setProperties", "query": "Select * from Document", "username": "Administrator", "repository": "default", "bucketSize": 100, "batchSize": 25, "params": "{\"dc:description\":\"a new new testbulk description\"}"}|
 |bulk-command-00:+2|2018-10-11 15:10:26.826:0|[DEFAULT]|csvExport|151|{"id": "e8cc059d-6b9d-480b-a6e1-b0edace6d982", "action": "csvExport", "query": "SELECT * FROM File WHERE ecm:isVersion = 0 AND ecm:isTrashed = 0", "username": "Administrator", "repository": "default", "bucketSize": 100, "batchSize": 50, "params": null}|
 
+**To get the latest commands completed:**
 
-To get the latest commands completed:
 ```bash
 ./bin/stream.sh tail -k -l bulk-done --codec avro
 ```
@@ -285,8 +280,8 @@ To get the latest commands completed:
 |bulk-done-00:+4|2018-10-11 14:23:29.219:0|[DEFAULT]|580df47d-dd90-4d16-b23c-0e39ae363e06|96|{"commandId": "580df47d-dd90-4d16-b23c-0e39ae363e06", "action": "csvExport", "delta": false, "processed": 3873, "state": "COMPLETED", "submitTime": 1539260607207, "scrollStartTime": 1539260607275, "scrollEndTime": 1539260607326, "completedTime": 1539260609218, "total": 3873, "result": null}|
 |bulk-done-00:+5|2018-10-11 15:10:28.244:0|[DEFAULT]|e8cc059d-6b9d-480b-a6e1-b0edace6d982|96|{"commandId": "e8cc059d-6b9d-480b-a6e1-b0edace6d982", "action": "csvExport", "delta": false, "processed": 1844, "state": "COMPLETED", "submitTime": 1539263426825, "scrollStartTime": 1539263426827, "scrollEndTime": 1539263426846, "completedTime": 1539263428243, "total": 1844, "result": null}|
 
+**To view the BulkBucket message:**
 
-Of course you can view the BulkBucket message
 ```bash
 ./bin/stream.sh tail -k -l bulk-csvExport --codec avro
 ```
