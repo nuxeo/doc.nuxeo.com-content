@@ -316,6 +316,21 @@ Public
 </tr>
 <tr>
 <td colspan="1">
+Nuxeo AI<br/>
+`nuxeo-ai-core`
+</td>
+<td colspan="1">
+Registered Access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-ai'}})
+</td>
+<td colspan="1">
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-ai-core)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Nuxeo API Playground<br/>
 `nuxeo-api-playground`
 </td>
