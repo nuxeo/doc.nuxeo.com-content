@@ -17,7 +17,7 @@ On this main view two editors are available the Code Editor and the Visual Edito
 
 ## Code Editor
 
-The code editor mode is an HTML editor to let you inspect every elements and directly modify your layout. You can delete, modify, update, copy/paste, dragn and drop every elements that you want.
+The code editor mode is an HTML editor to let you inspect every elements and directly modify your layout. You can delete, modify, update, copy/paste, drag and drop every elements that you want.
 
 The HTML mode includes a few helpers such as auto-completion for document properties, tasks properties, and functions and polymer behaviours. The annotation `@doctype`, `@schema` or `@task` defined for each property defines the auto-completion for that property.
 
@@ -32,7 +32,7 @@ Don't forget to save your modifications, by clicking on the Save button ![]({{fi
 
 ## Visual Editor
 
-On the Visual Editor you will be able to drag'n'drop elements from the catalog on the right and order them as you wish.
+On the Visual Editor you will be able to drag and drop elements from the catalog on the right and order them as you wish.
 
 If you click on a particular element you will have the possibility to edit its default properties, the label, etc. on the [properties catalog]({{page page='properties-catalog'}}) on the right.
 
