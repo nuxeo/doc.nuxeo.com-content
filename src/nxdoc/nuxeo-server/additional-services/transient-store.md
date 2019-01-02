@@ -125,7 +125,7 @@ You can configure any number of transient stores with the following extension po
 The `store` element supports two attributes:
 
 *   `name`: Used to identify the store.
-*   `class`: Optionally references an implementation of the `TransientStore` interface (the default is `SimpleTransientStore`, or `RedisTransientStore` if Redis is enabled).
+*   `class`: Optionally references an implementation of the `TransientStore` interface (the default is `KeyValueBlobTransientStore`, or `RedisTransientStore` if Redis is enabled).
 
 The nested configuration elements are:
 
@@ -133,6 +133,11 @@ The nested configuration elements are:
 *   `absoluteMaxSizeMB`: The size that must never be exceeded.
 *   `firstLevelTTL`: TTL in minutes of the first level cache.
 *   `secondLevelTTL`: TTL in minutes of the second level cache.
+
+Two additional properties are defined if the `KeyValueBlobTransientStore` is used :
+
+*   `keyValueStore`: The key/value store name.
+*   `blobProvider`: The blob provider name.
 
 Have a look at the [default transient store configuration](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common/config/transient-store-config.xml.nxftl), defined in a template:
 
@@ -144,11 +149,15 @@ Have a look at the [default transient store configuration](https://github.com/nu
   <#if "${nuxeo.redis.enabled}" == "true">
     <#assign className = "org.nuxeo.ecm.core.redis.contribs.RedisTransientStore" />
   <#else>
-    <#assign className = "org.nuxeo.ecm.core.transientstore.SimpleTransientStore" />
+    <#assign className = "org.nuxeo.ecm.core.transientstore.keyvalueblob.KeyValueBlobTransientStore" />
   </#if>
   <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent"
     point="store">
     <store name="default" class="${className}">
+      <#if "${className}" == "org.nuxeo.ecm.core.transientstore.keyvalueblob.KeyValueBlobTransientStore">
+      <property name="keyValueStore">transient</property>
+      <property name="blobProvider">transient</property>
+      </#if>
       <targetMaxSizeMB>-1</targetMaxSizeMB>
       <absoluteMaxSizeMB>-1</absoluteMaxSizeMB>
       <firstLevelTTL>240</firstLevelTTL>
@@ -164,7 +173,7 @@ Have a look at the [default transient store configuration](https://github.com/nu
 In this template the class is dynamically defined depending on whether [Redis]({{page page='redis-configuration'}}) is enabled or not.
 If you need to define a custom transient store we strongly recommend you use such a template with this dynamic class definition mechanism so that:
 
-*   In development mode, where Redis is usually not enabled, you rely on the in-memory cache implementation.
+*   In development mode, where Redis is usually not enabled, you rely on the key/value store implementation.
 *   In [cluster mode]({{page page='nuxeo-clustering-configuration'}}), where Redis needs to be enabled, the data stored in the transient store is shared between cluster nodes.
 
 To retrieve a given transient store, just call `TransientStoreService#getStore(String name)`. If the specified transient store hasn't been registered, the `default` one is used instead.
