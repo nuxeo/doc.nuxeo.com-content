@@ -66,13 +66,12 @@ curl -u Administrator:Administrator \
 ```
 {{! /multiexcerpt}}
 
-To allow enhanced performances, 2 optional parameters can be passed to the SetPropertiesAction :
+To allow enhanced performances, 2 optional parameters can be passed to the `SetPropertiesAction`:
 
-- "disableAuditLogger", from NXAuditEventsService.DISABLE_AUDIT_LOGGER, disables audit logging and is meant to be used with `true` and is `false`by default
-- "VersioningOption", from VersioningService.VERSIONING_OPTION, disables auto versioning and is meant to be used with "NONE"
+- `disableAuditLogger`, from NXAuditEventsService.DISABLE_AUDIT_LOGGER, disables audit logging and is meant to be used with `true` and is `false` by default.
+- `VersioningOption`, from VersioningService.VERSIONING_OPTION, disables auto versioning and is meant to be used with `NONE`.
 
-For example :
-
+For example:
 ```
 BulkCommand command = new BulkCommand.Builder(SetPropertiesAction.ACTION_NAME, "SELECT * from Document")
         .repository("default")
