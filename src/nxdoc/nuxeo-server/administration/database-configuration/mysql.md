@@ -124,7 +124,7 @@ The Nuxeo Platform supports the following MySQL version:
 
 ### Grants
 
-Since Nuxeo 8.1, Nuxeo needs access to the `information_schema.routines` table to be able to determine if stored procedures need to be upgraded. All users have read access to this table. but Nuxeo needs to be able to write the stored procedures:
+Since Nuxeo 8.1, Nuxeo needs access to the `information_schema.routines` table to be able to determine if stored procedures need to be upgraded. All users have read access to this table, but Nuxeo needs to be able to write the stored procedures:
 
 ```sql
 SET GLOBAL log_bin_trust_function_creators = 1;
