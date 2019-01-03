@@ -29,10 +29,13 @@ Studio Designer relies on document models and business logic. That means that co
 
 You can access the Studio Designer from the link displayed next to your Nuxeo Studio project name.
 
-We divided the documentation in three pages to represent the three main sections of the Studio Designer screen:
-- The [Left menu]({{page page='left-menu'}})
-- The [Main View]({{page page='main-view'}})
-- The [Properties Catalog]({{page page='properties-catalog'}})
+The Studio Designer screen enables you to :
+- Configure your [UI]({{page version='' space='studio' page='ui-designer'}})
+- Configure your [resources]({{page version='' space='studio' page='resources-designer'}})
+- Choose your editor in the [Main View]({{page page='main-view'}})
+- Use the [Properties Catalog]({{page page='properties-catalog'}})
+
+In this documentation, you will also find [Javascript Expression Examples]({{page version='' space='studio' page='javascript-expression-examples'}}) to help you create filters or implement your specific business logic for example.
 
 * * *
 

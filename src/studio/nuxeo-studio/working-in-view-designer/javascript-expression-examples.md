@@ -6,7 +6,7 @@ review:
     status: ok
 labels:
     - howto-javascript-expressions
-tree_item_index: 400
+tree_item_index: 500
 ---
 
 Javascript expressions are useful in various use cases:
