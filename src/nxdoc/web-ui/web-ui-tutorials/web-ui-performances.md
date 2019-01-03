@@ -23,7 +23,7 @@ When fetching a document from the Rest API, you can ask to resolve some document
 
 in order to be able to display them in a friendly way. For instance, in a document layout, when it comes to display who created the document (`dc:creator` field), if we don't ask the REST API to resolve this field, we'll only be able to display the username. With a resolved field, we can display the firstname, lastname, email, etc.
 
-By default, Web UI asks to resolves any document's fields when navigating to a particular document. However, depending on your custom document types, resolving every single fields may results in an overload.
+By default, Web UI asks to resolve any document's fields when navigating to a particular document. However, depending on your custom document types, resolving every single field may result in an overload.
 
 Since ~~10.3~~ ([NXP-25512](https://jira.nuxeo.com/browse/NXP-25512)), actually 10.10 ([NXP-26520](https://jira.nuxeo.com/browse/NXP-26520)), you can limit the list of fields that should be resolved with such contribution:
 
@@ -91,7 +91,7 @@ As a direct result, a search definition:
   - with complex aggregations definitions
   - potentially returning hundreds of thousands or even millions of documents
 
-will likely not behave well because each time you change a parameters all aggregates will be recomputed on a large amount of data.
+will likely not behave well because each time you change a parameter, all aggregates will be recomputed on a large amount of data.
 
 For such use case, better do not use `auto` mode or have more specialized searches by adding different ones with a query pattern focusing on a given document type for instance.
 
@@ -99,7 +99,7 @@ For such use case, better do not use `auto` mode or have more specialized search
 Since 10.3 ([NXP-24880](https://jira.nuxeo.com/browse/NXP-24880)), page-provider aggregate computations can be skipped on demand to speed up the query.
 {{/callout}}
 
-Depending on your search form design, you may be interested to only compute aggregate if some other parameters are set to restrict the result set. For example, let's say that we'd like the [Web UI default search](https://github.com/nuxeo/nuxeo-web-ui/blob/release-10.3/elements/search/default/nuxeo-default-search-form.html) to only compute aggregate if the fulltext parameter is not empyt, you can add `skipAggregates`:
+Depending on your search form design, you may be interested to only compute aggregate if some other parameters are set in order to restrict the result set. For example, let's say that we'd like the [Web UI default search](https://github.com/nuxeo/nuxeo-web-ui/blob/release-10.3/elements/search/default/nuxeo-default-search-form.html) to only compute aggregate if the fulltext parameter is not empty, you can add `skipAggregates`:
 ```javascript
 skipAggregates: {
   type: Boolean,
@@ -142,7 +142,7 @@ Such URLs have a very aggressive cache (approximately 1 year) defined in [web-re
 
 ## Document Pills/Tabs
 
-The Web UI's browser shows a set of pills (also called tabs) when navigation to a document. Most of documents have by default the `View`, `Permissions`, `History` and `Publishing` tabs.
+The Web UI's browser shows a set of pills (also called tabs) when navigating to a document. Most of documents have by default the `View`, `Permissions`, `History` and `Publishing` tabs.
 
 You can add new tabs (and even override existing ones) by contributing the [DOCUMENT_VIEWS_ITEMS]({{page version='' space='nxdoc' page='web-ui-slots'}}#document_views_items) and [DOCUMENT_VIEWS_PAGES]({{page version='' space='nxdoc' page='web-ui-slots'}}#document_views_pages) slots.
 
