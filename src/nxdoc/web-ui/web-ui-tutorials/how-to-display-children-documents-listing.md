@@ -93,10 +93,10 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
 1. Save your changes by clicking on the **Save** button at the top right of the page
 
 
-## Create a Pill (Tab)
+## Create a Tab
 
-1. In Studio Studio Designer, go to **UI** > **Document Pages**
-1. Hover over the **Create** button and select **Listing**
+1. In Studio Studio Designer, go to **UI** > **Tabs**.
+1. Hover over the **Create** button and select **Listing**.
 1. Fill in the page like this:
    - **Name**: portfolioContentListing
    - **Label**: Content
@@ -122,7 +122,7 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
    ![]({{file name='portfolioContentListing-web-ui-designer-part2.png'}} ?w=650,border=true)
 
 1. Save your modification and deploy your Studio project
-  
+
 
 As we modified the **Owner** and **Policy** columns, they are available optionally. By clicking on **Columns Settings** icon, you can decide to display them or not.
 ![]({{file name='portfolioContentListing-columns-settings.png'}} ?w=350,border=true)
