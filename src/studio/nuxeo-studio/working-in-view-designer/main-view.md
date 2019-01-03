@@ -1,5 +1,5 @@
 ---
-title: Main View
+title: Editor
 review:
     comment: ''
     date: ''
