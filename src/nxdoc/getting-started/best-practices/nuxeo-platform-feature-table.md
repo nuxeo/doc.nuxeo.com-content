@@ -613,22 +613,6 @@ The tables below use the following notation:
     <td>[Documentation]({{page page='nuxeo-tree-snapshot'}})</td>
 </tr>
 <tr>
-    <td colspan="1">Version / Document comparison</td>
-    <td colspan="1">
-    [Nuxeo Diff](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff)<br/>
-    [Nuxeo Diff Picture](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures)</br>
-    Metadata Diff (Default Distribution)
-    </td>
-    <td>N/A</td>
-    <td>&#10003;<br/>&#10003;</td>
-    <td>&#10003;<br/>LTS&nbsp;2019<br/>&#10003;</td>
-    <td colspan="1">
-    [Nuxeo Diff Developer Documentation]({{page page='nuxeo-diff'}})<br/>
-    [Nuxeo Diff User Documentation]({{page space='userdoc' page='nuxeo-diff'}})</br>
-    [Metadata Diff User Documentation]({{page space='userdoc' page='browse'}}#compare-metadata-between-documents)</br>
-    </td>
-</tr>
-<tr>
     <td>Content Transformation</td>
     <td>Default Transformation<br/>
     Template Rendering<br/>
@@ -647,6 +631,51 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>N/A</td>
     <td>[Digital Signature documentation]({{page version='' space='nxdoc' page='digital-signature'}})</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+## Document Comparison
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+    <th rowspan="2">Feature</th>
+    <th rowspan="2">Comes with</th>
+    <th colspan="3">UI possibilities</th>
+    <th rowspan="2">Comment</th>
+</tr>
+<tr>
+    <th>API</th>
+    <th>JSF UI</th>
+    <th>Web UI</th>
+</tr>
+<tr>
+    <td colspan="1">Compare Metadata</td>
+    <td colspan="1">Default Distribution</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">
+    [Documentation]({{page version='' space='userdoc' page='document-actions'}}#compare)
+    </td>
+</tr>
+<tr>
+    <td colspan="1">Compare Versions</td>
+    <td colspan="1">Default distribution</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>&#10003;</td>
+    <td colspan="1">[Documentation]({{page page='nuxeo-drive'}})</td>
+</tr>
+<tr>
+    <td colspan="1">Compare Document</td>
+    <td colspan="1">[Nuxeo ARender Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender-connector)</td>
+    <td>N/A</td>
+    <td>&#10003;</td>
+    <td>LTS 2019</td>
+    <td colspan="1">[Documentation]({{page version='' space='nxdoc' page='nuxeo-arender-connector'}})</td>
 </tr>
 </tbody>
 </table>
@@ -730,7 +759,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [User Documentation]({{page space='userdoc' page='workflows'}})<br/>
+    [User Documentation]({{page version='' space='userdoc' page='task'}})<br/>
     [Developer Documentation]({{page page='workflow'}})<br/>
     [Workflow How-To Index]({{page page='workflow-how-to-index'}})
     </td>
@@ -742,7 +771,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [User Documentation]({{page space='userdoc' page='workflows'}})<br/>
+    [User Documentation]({{page version='' space='userdoc' page='task'}})<br/>
     [Developer Documentation]({{page page='workflow'}})<br/>
     [Workflow How-To Index]({{page page='workflow-how-to-index'}})<br/>
     </td>
@@ -807,10 +836,10 @@ The tables below use the following notation:
     </td>
 </tr>
 <tr>
-    <td colspan="1">Bulk Publication  </td>
+    <td colspan="1">Bulk Publication</td>
     <td colspan="1">Default distribution</td>
     <td>N/A</td>
-    <td>&#10003;</td>
+    <td>N/A</td>
     <td>&#10003;</td>
     <td colspan="1">
     [User Documentation]({{page space='userdoc' page='document-publishing'}})<br/>
@@ -1254,7 +1283,7 @@ The tables below use the following notation:
     <td>[Nuxeo Diff Pictures](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>LTS&nbsp;2019</td>
+    <td>LTS&nbsp;2020</td>
     <td>[Developer documentation]({{page page='nuxeo-diff'}})<br/>
     [User documentation]({{page space='userdoc' page='nuxeo-diff'}})</td>
 </tr>
