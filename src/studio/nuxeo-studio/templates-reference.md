@@ -15,6 +15,7 @@ confluence:
     shortlink: uYGE
     shortlink_source: 'https://doc.nuxeo.com/x/uYGE'
     source_link: /display/Studio/Templates+reference
+hidden: true
 tree_item_index: 500
 history:
     -

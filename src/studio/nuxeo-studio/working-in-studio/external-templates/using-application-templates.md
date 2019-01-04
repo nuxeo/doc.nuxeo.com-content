@@ -17,6 +17,7 @@ confluence:
     shortlink: 1QJz
     shortlink_source: 'https://doc.nuxeo.com/x/1QJz'
     source_link: /display/Studio/Using+Application+Templates
+tree_item_index: 100
 history:
     -
         author: Manon Lumeau

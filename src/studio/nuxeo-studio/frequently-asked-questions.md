@@ -15,6 +15,7 @@ confluence:
     shortlink: 1gwz
     shortlink_source: 'https://doc.nuxeo.com/x/1gwz'
     source_link: /display/Studio/Frequently+Asked+Questions
+hidden: true
 tree_item_index: 600
 history:
     -

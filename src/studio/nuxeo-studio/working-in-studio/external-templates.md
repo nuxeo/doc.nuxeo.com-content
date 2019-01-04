@@ -112,7 +112,8 @@ For each application template you're displayed some a set of information:
 --}}
 ![Application Templates](nx_asset://5901fa85-4b6e-4030-8123-ce20c9441fd5 ?w=650,border=true)
 
-For more information about application templates you can see the page [Using Application Templates]({{page page='using-application-templates'}}) and [the detailed documentation for each of them]({{page page='templates-reference'}}).
+
+For more information about application templates you can see the page [Using Application Templates]({{page page='using-application-templates'}}) and [Default Configuration Templates]({{page page='default-configuration-templates'}}).
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
@@ -120,7 +121,6 @@ For more information about application templates you can see the page [Using App
 
 - [Using Application Templates]({{page page='using-application-templates'}})
 - [Default configuration templates]({{page page='default-configuration-templates'}})
-- [Templates reference]({{page page='templates-reference'}})
 
 {{/panel}}
 </div>
