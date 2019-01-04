@@ -1,6 +1,6 @@
 ---
-title: Upgrade from LTS 2017 to FT 10.3
-description: Instructions to upgrade your Nuxeo Platform instance from LTS 2017 version to FT 10.3.
+title: Upgrade from LTS 2017 to LTS 2019
+description: Instructions to upgrade your Nuxeo Platform instance from LTS 2017 version to LTS 2019.
 review:
     comment: ''
     date: '2018-11-13'
@@ -62,7 +62,9 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 {{{multiexcerpt 'upgrade-10.3-installation-mongodb-upgrade' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 ### Redis
-{{{multiexcerpt name='upgrade-10.3-installation-redis-upgrade' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-10.3-installation-redis-upgrade' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
+{{{multiexcerpt 'upgrade-10.10-installation-redis-template' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 ## Code Changes
 
@@ -74,15 +76,19 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 
 {{{multiexcerpt 'upgrade-10.1-code.csrf-protection' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
-{{{multiexcerpt name='upgrade-10.3-code.csrf-activation' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-10.3-code.csrf-activation' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 ### Directories
 
-{{{multiexcerpt name='upgrade-10.3-code.directories' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-10.3-code.directories' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 ### Conversion
 
-{{{multiexcerpt name='upgrade-10.3-code.conversion' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-10.3-code.conversion' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
+### Rendition
+
+{{{multiexcerpt 'upgrade-10.10-api.rendition' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 ### Video Conversion Listener
 
@@ -94,7 +100,7 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 
 ### Transient Username and External Permissions
 
-{{{multiexcerpt name='upgrade-10.3-code.transient-username' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-10.3-code.transient-username' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 ### Rename operations WebUI.* related to JSF
 
@@ -124,6 +130,14 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 
 {{{multiexcerpt 'upgrade-10.3-code.thumbnail-resolution' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
+### Bulk Action Framework Contextual Information
+
+{{{multiexcerpt 'upgrade-10.10-code-BAF' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
+### KeyValueStore Implementation in SQL
+
+{{{multiexcerpt 'upgrade-10.10-api.keyvaluestore' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
 ### Code Behavior Changes
 
 {{{multiexcerpt 'upgrade-10.1-behavior.field.version.indexed' page='Upgrade from LTS 2017 following Fast Tracks'}}}
@@ -147,13 +161,16 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 {{{multiexcerpt 'upgrade-10.2-operation.SuggestUserEntries' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 #### Rename operations WebUI.* related to JSF
-{{{multiexcerpt name='upgrade-10.3-code.webui-operations' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+{{{multiexcerpt 'upgrade-10.3-code.webui-operations' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 #### Relocate `nuxeo-platform-collections` in `nuxeo-service`
 {{{multiexcerpt 'upgrade-10.3-operation.collections' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 #### Image Recompute
 {{{multiexcerpt 'upgrade-10.3-operation.image-recompute' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
+#### Regenerate Thumbnails on Demand
+{{{multiexcerpt 'upgrade-10.10-operation.thumbnail' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 ### Deprecated APIs
 
