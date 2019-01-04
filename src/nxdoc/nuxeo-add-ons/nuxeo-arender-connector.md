@@ -107,6 +107,8 @@ POST /arendergwt/weather?format=json
 
 ### Nuxeo Configuration
 
+The ARender connector relies on the JWT authentication. You need to define a secret `nuxeo.jwt.secret` in your `nuxeo.conf` to enable it.
+
 You can change ARender previewer URL used by Nuxeo to open ARender session by setting `arender.server.previewer.host` in your `nuxeo.conf` (default value if `http://localhost:8080`).
 
 ### ARender Previewer Configuration
