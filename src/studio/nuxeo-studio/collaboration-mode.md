@@ -16,6 +16,7 @@ confluence:
     shortlink: l4QPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/l4QPAQ'
     source_link: /display/Studio/Collaboration+Mode
+hidden: true
 tree_item_index: 700
 history:
     -

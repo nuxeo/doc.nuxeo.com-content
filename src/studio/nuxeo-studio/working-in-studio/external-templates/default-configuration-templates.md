@@ -15,7 +15,7 @@ confluence:
     shortlink: r4GE
     shortlink_source: 'https://doc.nuxeo.com/x/r4GE'
     source_link: /display/Studio/Default+configuration+templates
-tree_item_index: 100
+tree_item_index: 200
 history:
     -
         author: Alain Escaffre
