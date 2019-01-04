@@ -995,7 +995,7 @@ See [NXP-25208](https://jira.nuxeo.com/browse/NXP-25208)
 - [Release notes for 10.3]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
 
 ## From 10.3 to LTS 2019
-
+<!--
 ### Installation and Configuration
 
 #### Requirements
@@ -1020,29 +1020,137 @@ See [NXP-25208](https://jira.nuxeo.com/browse/NXP-25208)
 </tbody>
 </table>
 </div>
-
+-->
 ### Data
+
+#### Redis Activation
+
+{{! multiexcerpt name='upgrade-10.10-installation-redis-template'}}
+Activating Redis is now done through a template. Previously, it was enough to do:
+```
+nuxeo.redis.enabled=true
+```
+
+But now a redis template must be added instead:
+```
+nuxeo.templates=default,...,redis
+```
+See [NXP-26553](https://jira.nuxeo.com/browse/NXP-26553)
+{{! /multiexcerpt}}
 
 ### Code Changes
 
+#### Bulk Action Framework Contextual Information
 
+{{! multiexcerpt name='upgrade-10.10-code-BAF'}}
+The way we store contextual information for the Bulk Action Framework (BAF) has changed.
+Instead of having `BULK_ID:status`, we have `status:BULK_ID` (for instance).
 
+This makes all commands submitted before upgrade not compatible with the Bulk Action Framework after the upgrade.
 
-#### Code Behavior Changes
+There's no impact on finished command except that status can't be retrieved after the upgrade, but acceptable as it's transient data.
 
+There's an impact on running command because after upgrading to Nuxeo Platform LTS 2019 (10.10), BAF won't be able to retrieve contextual information to finish submitted command before upgrade. As it, we advise to upgrade your Nuxeo Platform from 10.3 to 10.10 after all BAF processing has finished.
 
+Otherwise, a manual intervention on the KeyValueStore is possible to reverse these key/value:
+- `BULK_ID:status` by `status:BULK_ID`
+- `BULK_ID:command` by `command:BULK_ID`
 
+See [NXP-26559](https://jira.nuxeo.com/browse/NXP-26559)
+{{! /multiexcerpt}}
+
+#### Rendition
+
+{{! multiexcerpt name='upgrade-10.10-api.rendition'}}
+- Removed as deprecated since 7.2:
+  ```
+  RenditionServiceImpl#automationService
+
+  RenditionServiceImpl#getAutomationService()
+  ```
+
+- Deprecated:
+  ```
+  RenditionServiceImpl#getRenditionDefinition(String name)
+
+  RenditionServiceImpl#storeRendition(DocumentModel sourceDocument, Rendition rendition)
+  ```
+
+- Added:
+  ```
+  RenditionService#getAvailableRenditionDefinition(DocumentModel doc, String renditionName)
+
+  RenditionServiceImpl#storeRendition(DocumentModel sourceDocument, Rendition rendition, RenditionDefinition renditionDefinition)
+  ```
+
+See [NXP-25501](https://jira.nuxeo.com/browse/NXP-25501)
+{{! /multiexcerpt}}
+
+#### KeyValueStore Implementation in SQL
+
+{{! multiexcerpt name='upgrade-10.10-api.keyvaluestore'}}
+A new Key/Value Store based on SQL is available. To configure a server to use it, use:
+```
+<extension target="org.nuxeo.runtime.kv.KeyValueService" point="configuration">
+  <store name="default" class="org.nuxeo.ecm.core.storage.sql.kv.SQLKeyValueStore">
+    <property name="datasource">jdbc/nuxeo</property>
+    <property name="table">kv</property>
+  </store>
+</extension>
+```
+See [NXP-25604](https://jira.nuxeo.com/browse/NXP-25604)
+{{! /multiexcerpt}}
+
+#### SAML Icon Displayed on Login Page
+
+{{! multiexcerpt name='upgrade-10.10-code.saml-icon'}}
+
+- **Added**:
+  ```
+  LoginScreenHelper#registerSingleProviderLoginScreenConfig(String name, String iconUrl, String link, String label, String description, LoginProviderLinkComputer computer)
+
+  LoginScreenHelper#unregisterLoginScreenConfig(LoginScreenConfig config)
+
+  LoginProviderLink(String name, String iconPath, String link, String label, String description, LoginProviderLinkComputer urlComputer)
+
+  LoginScreenConfig(LoginProviderLink provider)
+
+  PluggableAuthenticationService#registerLoginScreenConfig(LoginScreenConfig config)
+
+  PluggableAuthenticationService#unregisterLoginScreenConfig(LoginScreenConfig config)
+  ```
+
+- **Deprecated**:
+  ```
+  LoginScreenHelper#registerLoginProvider(String name, String iconUrl, String link, String label, String description, LoginProviderLinkComputer computer)
+
+  LoginScreenConfig#registerLoginProvider(String name, String iconUrl, String link, String label, String description, LoginProviderLinkComputer computer)
+  ```
+
+See [NXP-25837](https://jira.nuxeo.com/browse/NXP-25837)
+{{! /multiexcerpt}}
 
 #### Operation Changes
 
+##### Regenerate Thumbnails on Demand
 
+{{! multiexcerpt name='upgrade-10.10-operation.thumbnail'}}
+There is a new operation called RecomputeThumbnails operation, available for administrators to let them regenerate thumbnails on demand.
 
+Sample call:
+```
+curl -v -H 'Content-Type:application/json' -d '{"params": {"query": "SELECT * FROM Document WHERE ecm:mixinType = \"Thumbnail\" AND thumb:thumbnail/data IS NULL AND ecm:isVersion = 0 AND ecm:isProxy = 0 AND ecm:isTrashed = 0"}, "context": {}}' -u
+Administrator:Administrator
+http://localhost:8080/nuxeo/site/automation/RecomputeThumbnails
+```
+See [NXP-26282](https://jira.nuxeo.com/browse/NXP-26282)
+{{! /multiexcerpt}}
 
+<!--
 ### Addons
-
-
+-->
 
 ### Complementary Information
 
-- [Upgrade notes for LTS 2019](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%2210.3%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
+- [Upgrade notes for LTS 2019](https://jira.nuxeo.com/issues/?jql=project%20in%20%28NXP%29%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20IN%20%28%2210.10%22%20%29%20AND%20%28%22Impact%20type%22%20%3D%20%22API%20change%22%20OR%20%22Upgrade%20notes%22%20is%20not%20EMPTY%29%20ORDER%20BY%20component%20DESC%2C%20key%20DESC)
 - [Release notes for LTS 2019]({{page version='' space='nxdoc' page='nuxeo-server-release-notes'}})
