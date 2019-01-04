@@ -1,5 +1,6 @@
 ---
 title: REST API HOWTOs
+description: Listing all available REST API Tutorials.
 review:
     comment: ''
     date: '2018-01-02'

@@ -207,6 +207,21 @@ Registered access
 </tr>
 <tr>
 <td colspan="1">
+Content federation with Simflofy<br/>
+`nuxeo-simflofy-connector`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-simflofy-connector'}})
+</td>
+<td colspan="1">
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-simflofy)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Digital Signature<br/>
 `nuxeo-signature`
 </td>
@@ -297,6 +312,21 @@ Public
 </td>
 <td colspan="1">
 [Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-agenda)
+</td>
+</tr>
+<tr>
+<td colspan="1">
+Nuxeo AI<br/>
+`nuxeo-ai-core`
+</td>
+<td colspan="1">
+Registered Access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-ai'}})
+</td>
+<td colspan="1">
+[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-ai-core)
 </td>
 </tr>
 <tr>

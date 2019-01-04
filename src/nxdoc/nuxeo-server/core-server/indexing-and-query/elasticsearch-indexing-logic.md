@@ -226,7 +226,7 @@ When the query does not specify an ordering, the results are sorted by descendin
 There are multiple ways to tune relevance:
 - By updating the mapping to [automatically boost some fields](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/mapping-boost.html).
 - By using NXQL Hint with operator that support field boost notation like `/*+ES: INDEX(dc:title.fulltext^3,dc:description.fulltext) */`
-- By building your elasticsearch query directly and pass a [function to return a score](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-function-score-query.htm).
+- By building your elasticsearch query directly and pass a [function to return a score](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html).
 
 **Operators and Mapping**
 

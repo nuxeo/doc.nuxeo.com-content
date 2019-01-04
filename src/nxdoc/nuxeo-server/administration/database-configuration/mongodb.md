@@ -246,13 +246,13 @@ By default MongoDB doesn't require authentication, but you can [enable the clien
 
 To activate MongoDB document and directories storage (as of Nuxeo FT 9.2), add the `mongodb` template to your existing list of templates (`nuxeo.templates`) in `nuxeo.conf`. Including the `mongodb-audit` template that will also activate audit storage.
 
-For older versions of Nuxeo, if you want to activate audit and directories storage, you need to install the [MongoDB extension addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mongodb-ext). This addon includes `mongodb-audit` and `mongodb-directory` templates in order to store respectively audit or directories data in MongoDB. For example:
+For versions of Nuxeo released previously to Nuxeo FT 9.2, if you want to activate audit and directories storage, you need to install the [MongoDB extension addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mongodb-ext). This addon includes `mongodb-audit` and `mongodb-directory` templates in order to store respectively audit or directories data in MongoDB. For example:
 
 ```text
 nuxeo.templates=default,mongodb,mongodb-audit
 ```
 
-If you are not using the MongoDB extension addon for older versions of Nuxeo, you **must keep** the template corresponding to your SQL database in `nuxeo.templates`. For instance you could have:
+If you are not using the MongoDB extension addon for previous versions of Nuxeo, you **must keep** the template corresponding to your SQL database in `nuxeo.templates`. For instance you could have:
 
 ```text
 nuxeo.templates=postgresql,mongodb

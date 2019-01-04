@@ -215,6 +215,8 @@ The complete Nuxeo instance hierarchy **must not** be shared between all instanc
 
 The `repository.binary.store` (`nxserver/data/binaries` by default) directory **must** be shared by all Nuxeo instances in order for VCS to function correctly. This does not apply if binaries are stored in a network-based location, like S3.
 
+The same applies for `repository.transient.binary.store` (`nxserver/data/binaries/transient_binaries` by default) directory.
+
 ### Temporary Directory
 
 The temporary directory configured through `nuxeo.tmp.dir` **must not** be shared by all instances, because there are still a few name collision issues that may occur, especially during startup.

@@ -155,10 +155,10 @@ The following Redis configuration points should be checked:
 
 ## Configuring Nuxeo for Redis
 
-To make the Nuxeo Platform use Redis, you must activate the following in `bin/nuxeo.conf`:
+To make the Nuxeo Platform use Redis, you must activate the `redis` template by adding it to the `nuxeo.templates` property of `bin/nuxeo.conf`, and specify the Redis hostname:
 
 ```
-nuxeo.redis.enabled=true
+nuxeo.templates=default,...,redis
 nuxeo.redis.host=redishost
 ```
 
@@ -187,7 +187,7 @@ The `nuxeo.redis.password`, `nuxeo.redis.database` and `nuxeo.redis.timeout` are
 
 `nuxeo.redis.maxIdle` sets the maximum number of Redis idle connections in the pool (available since since 8.2).
 
-When `nuxeo.redis.enabled=true` then the following is automatically activated as well:
+When the `redis` template is used then the following is automatically activated as well:
 `nuxeo.work.queuing=redis`.
 (As of Nuxeo Platform 5.8, work queuing is the only use of Redis in the standard Nuxeo modules, so it makes sense to activate both together.)
 

@@ -124,13 +124,11 @@ The Nuxeo Platform supports the following MySQL version:
 
 ### Grants
 
-Since Nuxeo 8.1, Nuxeo needs access to the `mysql.proc` table to be able to determine if stored procedures need to be upgraded. You can grant this access using:
+Since Nuxeo 8.1, Nuxeo needs access to the `information_schema.routines` table to be able to determine if stored procedures need to be upgraded. All users have read access to this table, but Nuxeo needs to be able to write the stored procedures:
 
 ```sql
-GRANT SELECT ON `mysql`.`proc` TO 'nuxeo'@'%' 
+SET GLOBAL log_bin_trust_function_creators = 1;
 ```
-
-(Adapt with the proper user name instead of `nuxeo` if needed, and a more restrictive IP address if you wish.)
 
 ### Connections
 

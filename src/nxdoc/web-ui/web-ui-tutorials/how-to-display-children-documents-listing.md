@@ -32,7 +32,10 @@ In this tutorial we want to display interesting business properties when listing
 - The Nuxeo [Web UI addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) is installed on your instance.
 - In Studio Modeler > **Settings** > **Application Definition**, make sure that Nuxeo Web UI is in the **Packages to Install** list.
 
+
 ## Create a Contract Portfolio
+
+{{{multiexcerpt 'quick-switcher' page='web-ui-document-layouts'}}}
 
 1. In Studio Modeler, under **Configuration**, click on the **Content Model** section, then **Document Types**.</br>
     Click on the **New** button.
@@ -79,7 +82,7 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
 1. On the **table** results listing, click on **Edit**
 1. At the bottom right of the page, click on **Switch to table editor**
 1. Remove the **Modified** and **last Contributor** columns by clicking on the delete icon ![]({{file name='icon-trash.png' page='web-ui-search'}} ?w=20)
-1. In the right column, select **contract** > **owner : string** in _view_ mode and drag and drop it after the title column
+1. In the right column, select **contract** > **owner : string** in _view_ mode and drag and drop it after the title column.
 1. Do the same with the **contract** > **policy : string**, **contract** > **start : date** and **contract** > **endDate : date** </br>
 1. On the **Owner** and **Policy** column, click on the eye icon ![]({{file name='icon-eye.png' page='nxdoc/web-ui-search'}} ?w=20).</br>
    The 2 columns become grey. We will see after the deployment what this feature does.
@@ -119,7 +122,7 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
    ![]({{file name='portfolioContentListing-web-ui-designer-part2.png'}} ?w=650,border=true)
 
 1. Save your modification and deploy your Studio project
-  ![]({{file name='contractsportfoliolisting-results.png'}} ?w=650,border=true)
+  
 
 As we modified the **Owner** and **Policy** columns, they are available optionally. By clicking on **Columns Settings** icon, you can decide to display them or not.
 ![]({{file name='portfolioContentListing-columns-settings.png'}} ?w=350,border=true)
