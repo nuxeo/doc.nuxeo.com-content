@@ -83,16 +83,14 @@ history:
 
 ---
 {{! excerpt}}
-
 A Transient Store allows you to store temporary blobs and associated parameters (file name, MIME type, etc.) in a Nuxeo instance but outside of the document repository, thus the "transient" aspect.
-
 {{! /excerpt}}
 
 It is typically used by:
 
-*   The [Batch Upload API]({{page page='batch-upload-endpoint'}}) to temporarily store a batch of uploaded blobs until they are attached to a document.
-*   The `ConversionService` to store the `BlobHolder` resulting from an [Asynchronous Conversion Work]({{page page='conversion'}}#rest-api-async-conversions).
-*   The `BatchHandler` contributions that interact with the Transient Store.
+- The [Batch Upload API]({{page page='batch-upload-endpoint'}}) to temporarily store a batch of uploaded blobs until they are attached to a document.
+- The `ConversionService` to store the `BlobHolder` resulting from an [Asynchronous Conversion Work]({{page page='conversion'}}#rest-api-async-conversions).
+- The `BatchHandler` contributions that interact with the Transient Store.
 
 The [TransientStore](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/transientstore/api/TransientStore.html) API is based on the following methods:
 
@@ -124,25 +122,24 @@ You can configure any number of transient stores with the following extension po
 
 The `store` element supports two attributes:
 
-*   `name`: Used to identify the store.
-*   `class`: Optionally references an implementation of the `TransientStore` interface (the default is `KeyValueBlobTransientStore`, or `RedisTransientStore` if Redis is enabled).
+- `name`: Used to identify the store.
+- `class`: Optionally references an implementation of the `TransientStore` interface (the default is `KeyValueBlobTransientStore`, or `RedisTransientStore` if Redis is enabled).
 
 The nested configuration elements are:
 
-*   `targetMaxSizeMB`: The target size that ideally should never be exceeded.
-*   `absoluteMaxSizeMB`: The size that must never be exceeded.
-*   `firstLevelTTL`: TTL in minutes of the first level cache.
-*   `secondLevelTTL`: TTL in minutes of the second level cache.
+- `targetMaxSizeMB`: The target size that ideally should never be exceeded.
+- `absoluteMaxSizeMB`: The size that must never be exceeded.
+- `firstLevelTTL`: TTL in minutes of the first level cache.
+- `secondLevelTTL`: TTL in minutes of the second level cache.
 
-Two additional properties are defined if the `KeyValueBlobTransientStore` is used :
+Two additional properties are defined if the `KeyValueBlobTransientStore` is used:
 
-*   `keyValueStore`: The key/value store name.
-*   `blobProvider`: The blob provider name.
+- `keyValueStore`: The key/value store name.
+- `blobProvider`: The blob provider name.
 
 Have a look at the [default transient store configuration](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common/config/transient-store-config.xml.nxftl), defined in a template:
 
 {{#> panel type='code' heading='Default Transient Store Configuration'}}
-
 ```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.core.transient.store.config">
@@ -167,14 +164,13 @@ Have a look at the [default transient store configuration](https://github.com/nu
   </extension>
 </component>
 ```
-
 {{/panel}}
 
 In this template the class is dynamically defined depending on whether [Redis]({{page page='redis-configuration'}}) is enabled or not.
 If you need to define a custom transient store we strongly recommend you use such a template with this dynamic class definition mechanism so that:
 
-*   In development mode, where Redis is usually not enabled, you rely on the key/value store implementation.
-*   In [cluster mode]({{page page='nuxeo-clustering-configuration'}}), where Redis needs to be enabled, the data stored in the transient store is shared between cluster nodes.
+- In development mode, where Redis is usually not enabled, you rely on the key/value store implementation.
+- In [cluster mode]({{page page='nuxeo-clustering-configuration'}}), where Redis needs to be enabled, the data stored in the transient store is shared between cluster nodes.
 
 To retrieve a given transient store, just call `TransientStoreService#getStore(String name)`. If the specified transient store hasn't been registered, the `default` one is used instead.
 
@@ -201,9 +197,7 @@ The `SimpleTransientStore` implementation relies on Nuxeo's [in-memory cache imp
 The `RedisTransientStore` relies on [Redis]({{page page='nuxeo-and-redis'}}). **It is distributed and persistent.**
 
 {{#> callout type='warning' heading='Clustering configuration'}}
-
 In a cluster environment Nuxeo must be configured to use a Redis server and any transient store accessed by multiple Nuxeo instances must use the `RedisTransientStore` implementation, or a custom implementation that is cluster-aware.
-
 {{/callout}}
 
 See [NXP-18051](https://jira.nuxeo.com/browse/NXP-18051) for details about the `RedisTransientStore` cluster-aware implementation.
@@ -233,8 +227,8 @@ Initially the TTL of an entry is set to `firstLevelTTL`. It can later be set to 
 
 The garbage collection:
 
-*   Is scheduled every 15 minutes to wipe the files associated to entries that don't exist anymore.
-*   Can be triggered manually on a given store with `TransientStore#doGC` or all stores with `TransientStoreService#doGC`.
+- Is scheduled every 15 minutes to wipe the files associated to entries that don't exist anymore.
+- Can be triggered manually on a given store with `TransientStore#doGC` or all stores with `TransientStoreService#doGC`.
 
 ## Example Services Using a Transient Store
 
