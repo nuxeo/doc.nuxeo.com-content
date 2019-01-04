@@ -17,9 +17,12 @@ To process the JSF UI to Web UI migration, access **Migration Services** fromthe
 
 The migration tool is designed to reduce the effort needed to transition to [Web UI]({{page space="nxdoc" page="web-ui"}}).
 
-Running the migration tool does not delete any data. If you are not satisfied with the result, you can:
-* go back to the state your project was before triggering it anytime,
-* delete the additional configuration that was generated partially or totally.
+
+Migration tool creates the updated configuration in a dedicated branch, and does not delete anything. This lets you:
+
+- review what the result looks like at your leisure and possibly launch the migration again,
+- keep working on your master branch and/or other branches if you want to,
+- delete the additional configuration that was generated partially or totally (just remove features or delete the branch).
 
 After migration is run, a detailed report is created in **Migration Services** so that you can check the results.
 
@@ -35,7 +38,7 @@ JSF UI to Web UI migration tool is available through our early access program, o
 
 | Migrated items | Not currently migrated |
 |----------------|-------------------|
-| Document layouts | Content views that contain query parameters or that reference a table layout |
+| Document layouts | Content views that reference a table layout |
 | Workflow tasks layouts | Translation files  |
 | Form layouts | Tabs     |
 | Content views that do not reference a table layout |     &nbsp;     |
@@ -74,7 +77,7 @@ Migration can be launched as many times as you wish: for example, to allow you t
 
 {{#> callout type='warning' }}
 
-The branch created for the migration will be deleted and created again with every migration attempt, resulting in the loss of any changes made into it that would have not been merged yet.
+If you don't have branch management, the branch created for the migration will be deleted and created again with every migration attempt, resulting in the loss of any changes made into it that would have not been merged yet.
 
 {{/callout}}
 
@@ -107,9 +110,11 @@ The JSF UI configuration can be hidden when you are ready to migrate. For more i
 
 ### Discarding Changes
 
-If your project benefits from branch management, click on **Settings**, go to **Branch Management** and then delete the branch created by the migration.
+If your project benefits from branch management, everytime you launch a migration, a branch is created.
 
-If your project does not benefit from branch management, to discard changes, revert to the tag made before the migration was triggered.
+If you don't benefit from branch management, a branch is created the first time you launch a migration. It is deleted and created again with every migration, involving the loss of the previous migration.
+
+To discard changes, revert to the tag made before the migration was triggered.
 
 ### Removing JSF UI Configuration
 
