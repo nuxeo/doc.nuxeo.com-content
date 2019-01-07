@@ -496,6 +496,52 @@ To get the value of a Context Variable you should use the following syntax:
 ctx.get('var')
 ```
 
+### Login as Another User
+
+To login as another user, you must use the `Auth.LoginAs` operation:
+
+```js
+Auth.LoginAs(input, { name: "user1" });
+```
+
+When logging as another user, you must re-fetch the input with the new user. For convenience, the `Auth.LoginAs` operation re-fetch its input with the newly logged-in user:
+
+```js
+function(input, params) {
+    var doc = Auth.LoginAs(input, { name: "user1" });
+    // do something on doc as 'user1'
+    Document.BlockPermissionInheritance(doc, {});
+}
+```
+
+#### System User
+
+To login as the system user, use `Auth.LoginAs` without any parameter:
+
+```js
+function(input, params) {
+    var doc = Auth.LoginAs(input, {});
+    // do something on doc as system user
+    Document.BlockPermissionInheritance(doc, {});
+}
+```
+
+#### Logout
+
+After using the `Auth.LoginAs` operation, you can use the `Auth.Logout` operation to perform a logout. Assuming you call the following operation with the `user1` user:
+
+```js
+function(input, params) {
+    // do something on input as 'user1'
+    var doc = Auth.LoginAs(input, {});
+    // do something on doc as system user
+    Document.BlockPermissionInheritance(doc, {});
+
+    doc = Auth.Logout(doc);
+    // do something on doc as 'user1'
+}
+```
+
 ### Activating Metrics
 
 Metrics have been added to Automation Scripting services to monitor Nashorn performances with the Nuxeo Platform.
