@@ -94,7 +94,7 @@ Fill it with a JSON object defining the themes:
       "pageBackgroundColor": "#e9eef0",
       "sliderBackgroundColor": "#3a3a54",
       "actionColor": "#3a3a54",
-      "activeActionColor": "#4ecdc4",
+      "activeActionColor": "#4ecdc4"
     }
   },
   {
@@ -108,7 +108,7 @@ Fill it with a JSON object defining the themes:
       "pageBackgroundColor": "#fafafa",
       "sliderBackgroundColor": "#404052",
       "actionColor": "#2e2e3e",
-      "activeActionColor": "#00b0ff",
+      "activeActionColor": "#00b0ff"
     }
   }]
 }
