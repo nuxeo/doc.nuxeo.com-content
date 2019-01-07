@@ -41,10 +41,6 @@ Editing a document consists in modifying its content (i.e. the attached file of 
 {{/panel}}
 </div>
 
-
-
-<div class="row" data-equalizer data-equalize-on="medium">
-
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
 ### Deleting
@@ -59,6 +55,8 @@ Documents can be deleted and restored. You can delete one or several documents a
 ### Locking
 
 Documents can be locked while they are modified by users to prevent conflicts between modifications from different users.
+
 [More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='content-lock'}})
 {{/panel}}
+</div>
 </div>

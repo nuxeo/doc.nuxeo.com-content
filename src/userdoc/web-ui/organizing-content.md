@@ -33,7 +33,7 @@ tree_item_index: 200
 - [More on Sharing Content&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='share'}})
 {{/panel}}
 </div>
-
+</div>
 
 
 <div class="row" data-equalizer data-equalize-on="medium">
@@ -55,4 +55,5 @@ tree_item_index: 200
 - [More on Workflows tasks&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='task'}})
 - [More on Alerts&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='60' space='userdoc' page='alerts'}})
 {{/panel}}
+</div>
 </div>
