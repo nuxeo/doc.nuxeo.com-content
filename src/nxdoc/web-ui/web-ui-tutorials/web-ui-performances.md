@@ -1,5 +1,5 @@
 ---
-title: 'Web UI Performances'
+title: 'Web UI Performance'
 review:
     comment: ''
     date: '2018-12-18'
@@ -16,16 +16,16 @@ In this page, we go through the different aspects of customization that may impa
 
 ## Document property resolution
 
-When fetching a document from the Rest API, you can ask to resolve some document's [extended fields]({{page version='' space='nxdoc' page='document-json-extended-fields'}}). An extended field references other entities such as:
+When fetching a document from the Rest API, you can request to resolve some document's [extended fields]({{page version='' space='nxdoc' page='document-json-extended-fields'}}). An extended field references other entities such as:
  - users or groups
  - vocabulary entries
- - others documents
+ - other documents
 
-in order to be able to display them in a friendly way. For instance, in a document layout, when it comes to display who created the document (`dc:creator` field), if we don't ask the REST API to resolve this field, we'll only be able to display the username. With a resolved field, we can display the firstname, lastname, email, etc.
+in order to be able to display them. For example, in a document layout, when it comes to display who created the document (`dc:creator` field), if we don't ask the REST API to resolve this field, we'll only be able to display the username. With a resolved field, we can display the firstname, lastname, email, etc.
 
-By default, Web UI asks to resolve any document's fields when navigating to a particular document. However, depending on your custom document types, resolving every single field may result in an overload.
+By default, Web UI requests any available field when navigating to a particular document. However, depending on your custom document types, resolving every single field may result in an overload.
 
-Since ~~10.3~~ ([NXP-25512](https://jira.nuxeo.com/browse/NXP-25512)), actually 10.10 ([NXP-26520](https://jira.nuxeo.com/browse/NXP-26520)), you can limit the list of fields that should be resolved with such contribution:
+Since 10.10 ([NXP-26520](https://jira.nuxeo.com/browse/NXP-26520) + [NXP-25512](https://jira.nuxeo.com/browse/NXP-25512)), you can limit the list of fields that should be resolved with a contribution such as the following:
 
 ```xml
 <require>org.nuxeo.web.ui.properties.contrib</require>
@@ -41,7 +41,7 @@ Since ~~10.3~~ ([NXP-25512](https://jira.nuxeo.com/browse/NXP-25512)), actually 
 
 ### Property resolution
 
-Whenever we want to populate a search result or list a `Folderish` document's content, it queries the [search endpoint]({{page version='' space='nxdoc' page='search-endpoints'}}). This endpoint takes into account a couple of [HTTP headers]({{page version='' space='nxdoc' page='special-http-headers'}}).
+Whenever a search result is populated or a `Folderish` document's content is listed, it queries the [search endpoint]({{page version='' space='nxdoc' page='search-endpoints'}}). This endpoint takes into account a couple of [HTTP headers]({{page version='' space='nxdoc' page='special-http-headers'}}).
 
 A [Web UI search](({{page version='' space='nxdoc' page='search-endpoints'}}) is defined as follows:
 
@@ -54,14 +54,14 @@ A [Web UI search](({{page version='' space='nxdoc' page='search-endpoints'}}) is
 </nuxeo-slot-content>
 ```
 
-which will ask the search endpoint to serialize the `dublincore,common,uid` schemas of the result documents.
+which requests the search endpoint to serialize the `dublincore,common,uid` schemas of the result documents.
 
 {{#> callout type='note' }}
-To make your search efficient, always narrow the schemas to be serialized as much as possible. Serializing properties is costly.
+To make your search efficient, always limit the schemas to be serialized as much as possible. Serializing properties is costly.
 {{/callout}}
 
-Moreover, the search will by default ask to resolve all properties referencing other entities (as explained in the above section).
-If you have document types with a lot of references, it can significantly slow down the performances of your search because results will take much longer to be serialized by the server.
+The search will, by default, request to resolve all properties referencing other entities (as explained in the above section).
+If you have document types with a lot of references, this can significantly slow down your search because results will take much longer to be serialized by the server.
 
 To speed up your search, you can explicitly define the properties to be resolved by specifying the `X-NXfetch.document` in the `headers` property on the `nuxeo-search-form` element:
 
@@ -83,7 +83,7 @@ TODO explain the same for nuxeo-document-content once https://jira.nuxeo.com/bro
 However the computation of these aggregates by the elasticsearch back-end does not come for free.
 
 {{#> callout type='warning' }}
-It is not realistic to design a search that allows an end-user to trigger complex aggregate computation on a search result set potentially containing hundreds of thousands of documents.
+It is not realistic to design a search that allows an end-user to trigger a complex aggregate computation on a search result set potentially containing hundreds of thousands of documents.
 {{/callout}}
 
 As a direct result, a search definition:
@@ -93,13 +93,13 @@ As a direct result, a search definition:
 
 will likely not behave well because each time you change a parameter, all aggregates will be recomputed on a large amount of data.
 
-For such use case, it is better not to use `auto` mode or have more specialized searches by adding different ones with a query pattern focusing on a given document type for instance.
+For such use case, it is better not to use `auto` mode or have more specialized searches by adding different ones with a query pattern focusing on, for example, a given document type.
 
 {{#> callout type='tip' }}
 Since 10.3 ([NXP-24880](https://jira.nuxeo.com/browse/NXP-24880)), page-provider aggregate computations can be skipped on demand to speed up the query.
 {{/callout}}
 
-Depending on your search form design, you may be interested to only compute aggregates if some other parameters are set in order to restrict the result set. For example, let's say that we'd like the [Web UI default search](https://github.com/nuxeo/nuxeo-web-ui/blob/release-10.3/elements/search/default/nuxeo-default-search-form.html) to only compute aggregate if the fulltext parameter is not empty, you can add `skipAggregates`:
+Depending on your search form design, you may only wish to compute aggregates if some other parameters are set in order to restrict the result set. For example, if we'd like the [Web UI default search](https://github.com/nuxeo/nuxeo-web-ui/blob/release-10.3/elements/search/default/nuxeo-default-search-form.html) to only compute aggregates if the fulltext parameter is not empty, we can add `skipAggregates`:
 ```javascript
 skipAggregates: {
   type: Boolean,
@@ -142,9 +142,9 @@ Such URLs have a very aggressive cache (approximately 1 year) defined in [web-re
 
 ## Document Pills/Tabs
 
-The Web UI's browser shows a set of pills (also called tabs) when navigating to a document. Most of documents have by default the `View`, `Permissions`, `History` and `Publishing` tabs.
+The Web UI's browser shows a set of pills (or tabs) when navigating to a document. Most documents have, by default, the `View`, `Permissions`, `History` and `Publishing` tabs.
 
-You can add new tabs (and even override existing ones) by contributing the [DOCUMENT_VIEWS_ITEMS]({{page version='' space='nxdoc' page='web-ui-slots'}}#document_views_items) and [DOCUMENT_VIEWS_PAGES]({{page version='' space='nxdoc' page='web-ui-slots'}}#document_views_pages) slots.
+You can add new tabs (and even override existing ones) by contributing to the [DOCUMENT_VIEWS_ITEMS]({{page version='' space='nxdoc' page='web-ui-slots'}}#document_views_items) and [DOCUMENT_VIEWS_PAGES]({{page version='' space='nxdoc' page='web-ui-slots'}}#document_views_pages) slots.
 
 Pages introduced in the [DOCUMENT_VIEWS_PAGES]({{page version='' space='nxdoc' page='web-ui-slots'}}#document_views_pages) slot are present in the DOM even if not selected. These pages are just hidden if not displayed. If the page needs to fetch data to populate listing, then you must pay attention to the `visible` attribute available on your page element. The idea is to fetch the data only if your element is visible.
 
@@ -168,7 +168,7 @@ Here is a concrete example. We add a new pill to list the `Book` documents assoc
   </nuxeo-data-table-column>
 </nuxeo-data-table>
 ```
-then you can observe the `visible` property to only fetch the books when the page is displayed:
+then you can see the `visible` property to only fetch the books when the page is displayed:
 
 ```javascript
   Polymer({
