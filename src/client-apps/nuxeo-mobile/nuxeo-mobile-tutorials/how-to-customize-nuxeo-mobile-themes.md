@@ -114,13 +114,13 @@ Fill it with a JSON object defining the themes:
 }
 ```
 
-![]({{file name='ViewDesignerThemes.png'}} ?w=650,border=true)
+![]({{file name='ViewDesignerThemes.png'}} ?w=400,border=true)
 
 Here we have defined 2 themes, one named `Light` and another one `Dark`. The first one is always the default one that the application will use if no theme was already selected for the server.
 
 This gives us the following result in the app:
 
-![]({{file name='Result.png'}} ?w=200,border=true)
+![]({{file name='Result.png'}} ?w=400,border=true)
 
 
 * * *
