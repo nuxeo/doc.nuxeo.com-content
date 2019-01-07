@@ -3,7 +3,7 @@ title: Migration Services
 description:
 review:
     comment: ''
-    date: '2018-12-05'
+    date: '2019-01-07'
     status: ok
 tree_item_index: 950
 toc: true
@@ -23,6 +23,8 @@ Migration tool creates the updated configuration in a dedicated branch, and does
 - delete the additional configuration that was generated partially or totally (just remove features or delete the branch).
 
 Once the migration done, a detailed report is created in **Migration Services** so that you can check the results.
+
+![]({{file name='migration-services-report.png'}} ?w=650,border=true)
 
 {{#> callout type='info' heading='part of early access program'}}
 JSF UI to Web UI migration tool is available through our early access program, offering stable features you can co-create with us as they are only partially complete.  
@@ -100,7 +102,7 @@ The migration process does not delete any configuration but it adds more configu
 
 To merge the changes, follow the usual [feature implementation process]({{page page="how-to-implement-features-using-branches"}}). If your project benefits from branch management features, you can also take advantage of the [configuration review process]({{page page="how-to-review-nuxeo-studio-configuration"}}) to ease the merge.
 
-The JSF UI configuration can be hidden when you are ready to migrate. For more information, see the finalizing migration section.
+The JSF UI configuration can be hidden when you are ready to migrate. For more information, see the [removing JSF UI Configuration](#removing-jsf-ui-configuration) section.
 
 ### Discarding Changes
 
