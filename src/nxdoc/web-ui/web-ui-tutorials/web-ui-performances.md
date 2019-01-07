@@ -12,7 +12,7 @@ labels:
 tree_item_index: 350
 ---
 
-In this page, we go through the different aspects of customization that may infer on the performances of your Web UI apps.
+In this page, we go through the different aspects of customization that may impact the performance of your Web UI apps.
 
 ## Document property resolution
 
@@ -28,13 +28,13 @@ By default, Web UI asks to resolve any document's fields when navigating to a pa
 Since ~~10.3~~ ([NXP-25512](https://jira.nuxeo.com/browse/NXP-25512)), actually 10.10 ([NXP-26520](https://jira.nuxeo.com/browse/NXP-26520)), you can limit the list of fields that should be resolved with such contribution:
 
 ```xml
-  <require>org.nuxeo.web.ui.properties.contrib</require>
-  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
-    <property name="org.nuxeo.web.ui.fetch.document" list="true" override="true">dc:creator</property>
-    <property name="org.nuxeo.web.ui.fetch.document" >dc:nature</property>
-    <property name="org.nuxeo.web.ui.fetch.document" >dc:coverage</property>
-    <property name="org.nuxeo.web.ui.fetch.document" >dc:subjects</property>
-  </extension>
+<require>org.nuxeo.web.ui.properties.contrib</require>
+<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+ <property name="org.nuxeo.web.ui.fetch.document" list="true" override="true">dc:creator</property>
+ <property name="org.nuxeo.web.ui.fetch.document" >dc:nature</property>
+ <property name="org.nuxeo.web.ui.fetch.document" >dc:coverage</property>
+ <property name="org.nuxeo.web.ui.fetch.document" >dc:subjects</property>
+</extension>
 ```
 
 ## Searches
@@ -43,7 +43,7 @@ Since ~~10.3~~ ([NXP-25512](https://jira.nuxeo.com/browse/NXP-25512)), actually 
 
 Whenever we want to populate a search result or list a `Folderish` document's content, it queries the [search endpoint]({{page version='' space='nxdoc' page='search-endpoints'}}). This endpoint takes into account a couple of [HTTP headers]({{page version='' space='nxdoc' page='special-http-headers'}}).
 
-A [Web UI search](({{page version='' space='nxdoc' page='search-endpoints'}}) is defined as follow:
+A [Web UI search](({{page version='' space='nxdoc' page='search-endpoints'}}) is defined as follows:
 
 ```xml
 <nuxeo-slot-content name="defaultSearchMenuPage" slot="DRAWER_PAGES">
@@ -93,13 +93,13 @@ As a direct result, a search definition:
 
 will likely not behave well because each time you change a parameter, all aggregates will be recomputed on a large amount of data.
 
-For such use case, better do not use `auto` mode or have more specialized searches by adding different ones with a query pattern focusing on a given document type for instance.
+For such use case, it is better not to use `auto` mode or have more specialized searches by adding different ones with a query pattern focusing on a given document type for instance.
 
 {{#> callout type='tip' }}
 Since 10.3 ([NXP-24880](https://jira.nuxeo.com/browse/NXP-24880)), page-provider aggregate computations can be skipped on demand to speed up the query.
 {{/callout}}
 
-Depending on your search form design, you may be interested to only compute aggregate if some other parameters are set in order to restrict the result set. For example, let's say that we'd like the [Web UI default search](https://github.com/nuxeo/nuxeo-web-ui/blob/release-10.3/elements/search/default/nuxeo-default-search-form.html) to only compute aggregate if the fulltext parameter is not empty, you can add `skipAggregates`:
+Depending on your search form design, you may be interested to only compute aggregates if some other parameters are set in order to restrict the result set. For example, let's say that we'd like the [Web UI default search](https://github.com/nuxeo/nuxeo-web-ui/blob/release-10.3/elements/search/default/nuxeo-default-search-form.html) to only compute aggregate if the fulltext parameter is not empty, you can add `skipAggregates`:
 ```javascript
 skipAggregates: {
   type: Boolean,
@@ -136,7 +136,7 @@ According to the [specs](https://developers.google.com/web/fundamentals/primers/
 
 ### Dynamic resources
 
-Since 10.3 ([NXP-25385](https://jira.nuxeo.com/browse/NXP-25385)), resource URLs for document previews, thumbnails, blobs, etc. have the document `changeToken` appended as a query parameter.
+Since 10.3 ([NXP-25385](https://jira.nuxeo.com/browse/NXP-25385)), resource URLs for document previews, thumbnails, blobs, etc. have the document's `changeToken` appended as a query parameter.
 
 Such URLs have a very aggressive cache (approximately 1 year) defined in [web-request-controller-contrib.xml#L47](https://github.com/nuxeo/nuxeo/blob/release-10.3/nuxeo-services/nuxeo-platform-web-common/src/main/resources/OSGI-INF/web-request-controller-contrib.xml#L47). As a matter of fact, each time the document changes, its `changeToken` also changes and the resource is invalidated by the browser cache.
 
@@ -168,7 +168,7 @@ Here is a concrete example. We add a new pill to list the `Book` documents assoc
   </nuxeo-data-table-column>
 </nuxeo-data-table>
 ```
-then you can observer the `visible` property to only fetch the books when the page is displayed:
+then you can observe the `visible` property to only fetch the books when the page is displayed:
 
 ```javascript
   Polymer({
