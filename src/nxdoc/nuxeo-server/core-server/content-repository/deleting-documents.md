@@ -93,17 +93,11 @@ history:
 Deleting a document involves several steps before the full document is actually deleted from the database and disk. These steps are described below.
 {{! /excerpt}}
 
-## Functional Overview
-
-{{{multiexcerpt 'functional-overview-trash-feature' page='userdoc/browse'}}}
-
-## Technical Overview
-
-### Trash Management
+## Trash Management
 
 Trash feature is managed by [TrashService](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/trash/TrashService.html).
 
-#### Trash / Untrash / Purge Document
+### Trash / Untrash / Purge Document
 
 When you trash or untrash a document, the TrashService renames it (to avoid any further collision), changes the `isTrashed` property and then fires the `documentTrashed` or `documentUntrashed` event.
 Once your document is in trashed state, you can untrash it or purge it (remove it permanently).
@@ -126,7 +120,7 @@ To use the trash feature through the REST API, you need to use Automation. Sever
 
 The enricher FirstAccessibleAncestorJsonEnricher / `firstAccessibleAncestor` allows you to get the the first non trashed ancestor of returned document during a REST call. This is useful when you trashed a document and want to know on which document you might redirect your user for instance.
 
-#### Checking the State
+### Checking the State
 
 When you're handling `DocumentModel` you can call `isTrashed` method to check the state. `CoreSession` also has this API for convenience.
 
@@ -162,7 +156,7 @@ SELECT * FROM Document
   AND ecm:isTrashed = 0
 ```
 
-#### Migration
+### Migration
 
 **Keeping Old Trash implementation**
 
@@ -187,7 +181,7 @@ To migrate trash states to the new property model:
 - In the Nuxeo Platform's JSF UI, go to **Admin** > **System Information** > **Migration**, click the button Migrate trashed state from lifecycle to property and wait until migration is completed.
 - Remove the contribution added at step 1.
 
-### Permanently Deleting Document
+## Permanently Deleting Document
 
 A permanent delete is done by most Nuxeo APIs, typically [CoreSession.removeDocument](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#removeDocument-org.nuxeo.ecm.core.api.DocumentRef-) or the higher-level APIs that use it like the CMIS bindings or the Automation [Document.Delete](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Delete) operation.
 
