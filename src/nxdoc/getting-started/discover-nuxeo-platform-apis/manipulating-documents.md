@@ -558,10 +558,7 @@ Find a contract that needs to be deleted: it expired before 2016 and has a limit
       }
     });
     getContractsQuery = "SELECT * FROM BCContract " +
-      " WHERE ecm:isVersion = 0 " +
-      " AND ecm:isTrashed = 0 " +
-      " AND ecm:fulltext = 'limit%' " + // % will act as a joker
-      " AND bccontract:expirationDate < DATE '2016-01-01' ";
+      " WHERE ecm:isVersion = 0 ";
     nuxeo
       .repository()
       .query({
