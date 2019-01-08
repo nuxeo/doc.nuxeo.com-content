@@ -41,6 +41,8 @@ To activate it, request it through a support ticket by indicating:
 - Access to Nuxeo Studio Git repositories through HTTPS protocol.
 - Leverage the full power of Git locally.
 - Branches can be created and pushed as long as their name starts with `feature/` (similar to Studio).
+- Push to any branch, including master.
+- Create and push tags.
 - Launch git commands on your repositories, with some restrictions.
 
 ### Restrictions
@@ -48,7 +50,6 @@ To activate it, request it through a support ticket by indicating:
 - Only **Studio Designer files** can be managed. Changes to the Studio Modeler side of your project will automatically be rejected as we currently have no way to ensure the validity of your configuration made through this mean.
 - **We don't and will never allow rewriting history** to make sure you can always revert your project to a working state. Push force, for instance, will be rejected.
 - **Deleting Studio branches from Git is not allowed**.
-- **Creating / Updating / Deleting tags from Git is not allowed**. Releases can be created through Studio’s interface or using a REST API. This is tied to Studio managing business logic on top of this.
 
 ## How to Use Git Access
 
