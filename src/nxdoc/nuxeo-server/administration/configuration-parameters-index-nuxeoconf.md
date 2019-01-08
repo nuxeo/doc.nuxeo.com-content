@@ -2217,8 +2217,8 @@ Example: https://my.nuxeo.com/</td>
 </tr>
 <tr>
 <td colspan="1">`elasticsearch.addressList`</td>
-<td colspan="1">For TransportClient protocol a comma separated list of Elasticsearch node `host:port`.</td>
-For RestClient protocol a comma separated list of URL. If empty an in JVM embedded Elasticsearch node is used, the embedded node is only for testing and it is not supported for production
+<td colspan="1">For TransportClient protocol a comma separated list of Elasticsearch node `host:port`.
+For RestClient protocol a comma separated list of URL. If empty an in JVM embedded Elasticsearch node is used, the embedded node is only for testing and it is not supported for production.</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
