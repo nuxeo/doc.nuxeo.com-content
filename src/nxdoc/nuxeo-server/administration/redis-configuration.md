@@ -130,7 +130,7 @@ Nuxeo instances should be configured with a Redis server (in addition to the reg
 1.  When it's important that asynchronous jobs not yet executed be kept across server restarts.
 2.  In cluster mode to allow:
     *   Execution of some asynchronous jobs on dedicated nodes (for instance image conversion or fulltext extraction).
-    *   A distributed [Transient Store]({{page page='transient-store'}}), required for [Batch Upload]({{page page='batch-upload-endpoint'}}) and [Asynchronous Conversion Works]({{page page='conversion'}}#-anchor-java-api-async-conversions-asynchronous-conversions).
+    *   A distributed [Transient Store]({{page page='transient-store'}}), required for [Batch Upload]({{page page='batch-upload-endpoint'}}) and [Asynchronous Conversion Works]({{page page='conversion'}}#-anchor-java-api-async-conversions-asynchronous-conversions) (Redis is not needed anymore for this since Nuxeo 10.10, see below).
     *   Relying on the `RedisCache` as a distributed implementation of the [Nuxeo Drive]({{page page='nuxeo-drive'}}) synchronization roots cache.
     *   [Cluster cache invalidations]({{page page='nuxeo-and-redis'}}#clustering-invalidation)
 
@@ -140,6 +140,7 @@ Visit [the Nuxeo and Redis page]({{page page='nuxeo-and-redis'}}) for more infor
 Since Nuxeo 9.10 [Nuxeo Stream]({{page page='nuxeo-stream'}}) has been introduced and enables to use an alternative work manager that can rely on Kafka for
 the cluster mode, this cover point 1 and for [some configuration]({{page page='kafka'}}#no-redis) point 2.
 
+Since Nuxeo 10.10, the default transient store is `KeyValueBlobTransientStore` even if Redis is configured. To use the old `RedisTransientStore` you must set `nuxeo.transientstore.provider=redis`.
 
 ## Configuring Redis
 
