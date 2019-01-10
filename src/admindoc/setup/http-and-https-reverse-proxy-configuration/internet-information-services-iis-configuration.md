@@ -148,7 +148,7 @@ Requirements:
 7.  In **Action**:
 
     *   Action type: Rewrite
-    *   `<a>http://127.0.0.1:8080/{R:1</a>}`
+    *   `http://127.0.0.1:8080/{R:1}`
 
 {{#> callout type='info' }}
 
