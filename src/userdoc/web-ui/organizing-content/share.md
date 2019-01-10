@@ -31,7 +31,8 @@ Users can download documents on their computer. It is possible to download:
   A top bar is displayed with document actions
 - Click on the download button ![]({{file name='download-multiple-documents-web-ui.png' page='icons-index'}} ?w=22)</br>
   The documents are downloaded as a .zip on your computer.
-  ## Exporting
+
+## Exporting
 
   Users can export documents on their computer. It is possible to export:
 
@@ -58,7 +59,7 @@ Users can download documents on their computer. It is possible to download:
 
   The exports are available by clicking on the export button ![]({{file name='export-web-ui.png' page='icons-index'}} ?w=16).
 
-  ### Low-Level Exports
+### Low-Level Exports
 
   XML export is a low level export that enables users to get a set of information on documents in an XML file. This export type is useful for debugging, and as such, is mainly intended to administrators. You can export:
 
@@ -115,7 +116,10 @@ You are free to organize your section to fit your project or your needs the best
 
 As in workspaces, access to sections is determined by permissions.
 
-You can define any document type as publish space by checking Document is a publish space, in the Definition screen of your custom document type in Studio Modeler. <!--![]({{file name='publish-space-studio.png'}} ?w=500,border=true)-->
+{{#> callout type='tip' }}
+You can define any document type as publish space by checking Document is a publish space, in the Definition screen of your custom document type in Studio Modeler.
+{{/callout}}
+
 
 ## Publishing Documents
 
@@ -140,6 +144,13 @@ When you publish a document, the following elements are kept from the workspace 
 
 
 {{#> callout type='info' header='Working with Renditions'}}
+
+Renditions are alternative representations of a document, or its content such as:
+
+- A PDF representation of office files
+- A watermarked image
+- A resized video
+- An XML export of the document
 
 There are several renditions available for your publications. This list of renditions is configurable. If you select no rendition by selecting None in the list, it implies a publication of the document itself.
 
