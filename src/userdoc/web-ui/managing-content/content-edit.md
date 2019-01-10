@@ -53,7 +53,7 @@ The Replace File pop-up appears.
 2. Drag and drop the file in the zone or click **Upload main file**.
 3. Click **Replace**.
 
-<!--## Commenting
+## Commenting
 
 Comments enable users to discuss about the document and its evolution. To have better collaboration on content, users can create, edit, and delete threaded comments on documents.
 
@@ -62,6 +62,8 @@ Comments enable users to discuss about the document and its evolution. To have b
 In the Comments section of the Document view, type your comment and click on ![]({{file name='comment-validate.png'}} ?w=20)
 
 ![]({{file name='comment-writing.png'}} ?w=300,border=true)
+
+{{#> callout type='info'}} Please note that comments are not indexed yet.{{/callout}}
 
 ### Replying to a Comment
 You can reply to your comments and to comments from other users. However, replies cannot be indented further than a 2-level thread.
@@ -87,4 +89,4 @@ The mention (edited) will figure on your edited comment or reply.
 1. Click on Delete. ![]({{file name='comment-edit-delete.png'}} ?w=300,border=true) A confirmation pop-up appears. ![]({{file name='delete-pop-up.png'}} ?w=300,border=true)
 1. Click on Delete to confirm. Your comment has been deleted.
 
-{{#> callout type='warning'}} Please note that when a comment is deleted, all related replies are deleted too. Also deleting a comment is a permanent action, they cannot be restored. {{/callout}} -->
+{{#> callout type='warning'}} Please note that when a comment is deleted, all related replies are deleted too. Also deleting a comment is a permanent action, they cannot be restored. {{/callout}}
