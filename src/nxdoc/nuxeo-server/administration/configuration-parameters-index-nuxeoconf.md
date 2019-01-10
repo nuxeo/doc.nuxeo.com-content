@@ -1808,11 +1808,6 @@ Note: Changing this parameter is not enough. See [How to Change Context Path]({{
 <td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
-<td colspan="1">`repository.transient.binary.store`</td>
-<td colspan="1">Defines the folder where transient binaries are stored. Useful when using clustering or to change the location of binaries to another location.</td>
-<td colspan="1">&nbsp;</td>
-<td colspan="1">&nbsp;</td>
-</tr>
 <tr>
 <td colspan="1">`nuxeo.core.binarymanager`</td>
 <td colspan="1">Custom class for the Binary Manager, to replace the default file-base storage.</td>
