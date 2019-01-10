@@ -212,7 +212,7 @@ Directories can use either:
 *   An SQL implementation (thus storing users and groups on the underlying RDBMS).
 *   A [DBS]({{page page='dbs'}}) implementation.
 *   An LDAP implementation.
-*   A Nuxeo Platform repository implementation (Users and Groups are then "documents").
+*   A Nuxeo Platform repository implementation (Users and Groups are then "documents") (not production-ready).
 *   A custom implementation for calling remote web services can also be used.
 
 {{! /multiexcerpt}}
