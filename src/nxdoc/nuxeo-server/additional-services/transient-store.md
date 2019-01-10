@@ -111,19 +111,25 @@ You can configure any number of transient stores with the following extension po
 ```xml
 <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent"
   point="store">
-  <store name="myTransientStore" class="my.transientstore.implementation">
+  <store name="foobar" class="...">
     <targetMaxSizeMB>-1</targetMaxSizeMB>
     <absoluteMaxSizeMB>-1</absoluteMaxSizeMB>
     <firstLevelTTL>240</firstLevelTTL>
     <secondLevelTTL>10</secondLevelTTL>
-  </store>
+    <!--
+       Optional, may be used with the KeyValueBlobTransientStore
+       if you don't want the default naming.
+    <property name="keyValueStore">transient_foobar</property>
+    <property name="blobProvider">transient_foobar</property>
+    -->
+</store>
 </extension>
 ```
 
 The `store` element supports two attributes:
 
-- `name`: Used to identify the store.
-- `class`: Optionally references an implementation of the `TransientStore` interface (the default is `KeyValueBlobTransientStore`, or `RedisTransientStore` if Redis is enabled).
+- `name`: Used to identify the transient store.
+- `class`: Optionally references an implementation of the `TransientStore` interface (the default is to use the same class as the `default` transient store, which is `KeyValueBlobTransientStore` by default).
 
 The nested configuration elements are:
 
@@ -132,92 +138,59 @@ The nested configuration elements are:
 - `firstLevelTTL`: TTL in minutes of the first level cache.
 - `secondLevelTTL`: TTL in minutes of the second level cache.
 
-Two additional properties are defined if the `KeyValueBlobTransientStore` is used:
+Two additional properties can be defined if the `KeyValueBlobTransientStore` is used:
 
 - `keyValueStore`: The key/value store name.
 - `blobProvider`: The blob provider name.
 
-Have a look at the [default transient store configuration](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common/config/transient-store-config.xml.nxftl), defined in a template:
+Both of these names default to `transient_` followed by the transient store name.
+
+Have a look at the [default transient store configuration](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common/config/transient-store-config.xml), defined in a template:
 
 {{#> panel type='code' heading='Default Transient Store Configuration'}}
 ```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.core.transient.store.config">
-  <#if "${nuxeo.redis.enabled}" == "true">
-    <#assign className = "org.nuxeo.ecm.core.redis.contribs.RedisTransientStore" />
-  <#else>
-    <#assign className = "org.nuxeo.ecm.core.transientstore.keyvalueblob.KeyValueBlobTransientStore" />
-  </#if>
   <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent"
     point="store">
-    <store name="default" class="${className}">
-      <#if "${className}" == "org.nuxeo.ecm.core.transientstore.keyvalueblob.KeyValueBlobTransientStore">
-      <property name="keyValueStore">transient</property>
-      <property name="blobProvider">transient</property>
-      </#if>
+    <store name="default" class="org.nuxeo.ecm.core.transientstore.keyvalueblob.KeyValueBlobTransientStore">
       <targetMaxSizeMB>-1</targetMaxSizeMB>
       <absoluteMaxSizeMB>-1</absoluteMaxSizeMB>
       <firstLevelTTL>240</firstLevelTTL>
       <secondLevelTTL>10</secondLevelTTL>
-      <minimalRetention>10</minimalRetention>
     </store>
   </extension>
 </component>
 ```
 {{/panel}}
 
-In this template the class is dynamically defined depending on whether [Redis]({{page page='redis-configuration'}}) is enabled or not.
-If you need to define a custom transient store we strongly recommend you use such a template with this dynamic class definition mechanism so that:
-
-- In development mode, where Redis is usually not enabled, you rely on the key/value store implementation.
-- In [cluster mode]({{page page='nuxeo-clustering-configuration'}}), where Redis needs to be enabled, the data stored in the transient store is shared between cluster nodes.
-
 To retrieve a given transient store, just call `TransientStoreService#getStore(String name)`. If the specified transient store hasn't been registered, the `default` one is used instead.
 
-## Implementation
+### Implementation
 
-As seen above there are two default implementations available in the default Nuxeo platform. They both handle blob storage in the same way but store the parameters differently.
+Other implementations than `KeyValueBlobTransientStore` can be used, but this is the recommended one. If you use the `redis` template and want to use the old `RedisTransientStore`, you must set `nuxeo.transientstore.provider=redis`.
 
-A new implementation, `KeyValueBlobTransientStore`, is also available.
+## Blob Storage
 
-### Blob Storage
+The `KeyValueBlobTransientStore` stores its blobs in a `BlobProvider`. You can either specify the name of the blob provider to use with `<property name="blobProvider">myblobprovider</property>`, or let it default to `transient_` followed by the transient store name.
 
-The transient blob storage directory used by the two default implementations of the transient store is located in `$DATA_DIR/transientstores/<transientstore_name>`. Typically for the default transient store on a Nuxeo instance where the data directory is not externalized, it is: `$NUXEO/nxserver/data/transientstores/default`.
+If a blob provider is referenced but there is no actual XML configuration for it, a configuration based on the `default` blob provider will be used, however with a "namespace" to avoid collisions. For the file-based blob provider, this will be in a directory named `binaries_` followed by the blob provider name. For S3 or Azure, this will be in a "subfolder" of the bucket/container named from the blob provider name.
+
+It's important to mark the blob provider as `transient` in its configuration using `<property name="transient">true</property>`. This is done implicitly if the blob provider names starts with `transient`.
 
 {{#> callout type='warning' heading='Clustering Configuration'}}
 
-In a cluster environment the transient blob storage directory must be shared by all the Nuxeo instances, see the [related documentation]({{page page='Nuxeo Clustering+Configuration'}}#transient-store).
+In a cluster environment the transient blob provider must be shared by all the Nuxeo instances, see the [related documentation]({{page page='Nuxeo Clustering+Configuration'}}#transient-store).
 
 {{/callout}}
 
-### Parameter Storage
+## Parameter Storage
 
-The `SimpleTransientStore` implementation relies on Nuxeo's [in-memory cache implementation](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-core/nuxeo-core-cache/src/main/java/org/nuxeo/ecm/core/cache/InMemoryCacheImpl.java) which uses Google's Guava cache. **It is not distributed and not persistent** so should not be used in a clustered setting.
+The `KeyValueBlobTransientStore` stores its parameters in a `KeyValueStore`. You can either specify the name of the key/value store to use with `<property name="keyValueStore">mykeyvaluestore</property>`, or let it default to `transient_` followed by the transient store name.
 
-The `RedisTransientStore` relies on [Redis]({{page page='nuxeo-and-redis'}}). **It is distributed and persistent.**
+If a key/value store is referenced but there is no actual XML configuration for it, a configuration based on the `default` key/value store will be used, however with a "namespace" to avoid collisions.
 
-{{#> callout type='warning' heading='Clustering configuration'}}
-In a cluster environment Nuxeo must be configured to use a Redis server and any transient store accessed by multiple Nuxeo instances must use the `RedisTransientStore` implementation, or a custom implementation that is cluster-aware.
-{{/callout}}
-
-See [NXP-18051](https://jira.nuxeo.com/browse/NXP-18051) for details about the `RedisTransientStore` cluster-aware implementation.
-
-### KeyValueBlobTransientStore
-
-This implementation, available since Nuxeo 9.3, allows you to abstract yourself from Redis and the filesystem, using a Key/Value store for the parameters and a [Blob Provider]({{page page='file-storage'}}#blob-manager-and-blob-providers) for the blobs. It can be set up by defining an XML contribution like:
-
-```xml
-<extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent" point="store">
-  <store name="myname" class="org.nuxeo.ecm.core.transientstore.keyvalueblob.KeyValueBlobTransientStore">
-    <targetMaxSizeMB>-1</targetMaxSizeMB>
-    <absoluteMaxSizeMB>-1</absoluteMaxSizeMB>
-    <firstLevelTTL>240</firstLevelTTL>
-    <secondLevelTTL>10</secondLevelTTL>
-  </store>
-</extension>
-```
-
-It will read and write parameters in a Key/Value store of the same name, and the binaries in a Blob Provider of the same name (`myname` in this example). Both must be configured through their own extension points.
+The `default` key/value store in Nuxeo templates is `SQLKeyValueStore` if a SQL database is used, or `MongoDBKeyValueStore` if MongoDB is used.
 
 ## Time To Live and Garbage Collector
 
