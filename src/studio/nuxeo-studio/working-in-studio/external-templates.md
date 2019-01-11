@@ -83,10 +83,9 @@ history:
 ---
 Nuxeo Studio includes an Application Templates library composed of Studio projects or samples that you can use as a basis for your own project. This enables you to import new document types, lifecycles, workflows, features in your project as a template that you can edit to adapt it to your project.
 
-{{#> callout type='info'}}
-Watch the related courses on Nuxeo University
-- [Expert Session on the Video Utils External Template](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils)
-- [Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
+{{#> callout type='info' heading='Watch the related courses on Nuxeo University'}}
+[Expert Session on the Video Utils External Template](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils)</br> 
+[Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/External Template/University Videoutils
     name: university_videoutils.png

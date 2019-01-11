@@ -78,12 +78,10 @@ history:
         date: '2011-06-29 11:10'
         message: ''
         version: '1'
-
 ---
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Expert Session on External Templates](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils).
+{{#> callout type='info' heading='Watch the related courses on Nuxeo University'}}
+[Expert Session on External Templates](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils).
 ![]({{file version='' space='nxdoc' page='university' name='university-external-template.png'}} ?w=450,border=true)
 {{/callout}}
 

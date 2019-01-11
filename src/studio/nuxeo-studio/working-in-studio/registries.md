@@ -77,14 +77,15 @@ The goal of this section of Studio is to be able to complete Nuxeo Studio drop d
 
 Examples are provided for each registry type.
 
-{{! multiexcerpt name='Registries'}} {{#> callout type='info' }}
+{{! multiexcerpt name='Registries'}}
 
-Registries never impact what happens on the runtime when you deploy your plugins. They are only useful for configuring your Studio project screens (what you see in drop down lists and menus) and your Studio project validation rules.
-
-For that reason, you can for instance only complete the "id" of a schema without the property detail, and you'll be able to assign this schema to a document type. But in that case you won't have the properties listed when editing some layouts on documents that hold this schema. You'll need to give the complete JSON definition for this.
-
+{{#> callout type='info' }}
+  Registries never impact what happens on the runtime when you deploy your plugins. They are only useful for configuring your Studio project screens (what you see in drop down lists and menus) and your Studio project validation rules.  
+  For that reason, you can for instance only complete the "id" of a schema without the property detail, and you'll be able to assign this schema to a document type. But in that case you won't have the properties listed when editing some layouts on documents that hold this schema. You'll need to give the complete JSON definition for this.
 {{/callout}}
+
 {{! /multiexcerpt}}
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel heading='Related Documentation'}}

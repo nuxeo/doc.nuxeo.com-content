@@ -47,9 +47,8 @@ history:
 
 ---
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Course on Content Model Design](https://university.nuxeo.com/learn/public/course/view/elearning/12/content-model-design-in-nuxeo-studio)
+{{#> callout type='info' heading='Watch the related courses on Nuxeo University'}}
+[Course on Content Model Design](https://university.nuxeo.com/learn/public/course/view/elearning/12/content-model-design-in-nuxeo-studio)
 ![]({{file version='' space='nxdoc' page='university' name='university-content-model.png'}} ?w=450,border=true)
 {{/callout}}
 

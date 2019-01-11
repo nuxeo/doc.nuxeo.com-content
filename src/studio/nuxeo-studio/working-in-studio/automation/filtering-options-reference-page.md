@@ -146,10 +146,10 @@ In various places of Studio Modeler (User Actions, Workflow, Event Handlers, ...
 
 Depending on where the filtering option appears, the current document, or the document, may refer to:
 
-*   The current document in the user interface (for [User Actions]({{page page='user-actions'}}))
-*   The document for which the event listener happens ([Event Handlers]({{page page='event-handlers'}}))
-*   The document(s) bound to the workflow
-*   The document(s) that are in input of the operation (Filter list operation)
+- The current document in the user interface (for [User Actions]({{page page='user-actions'}}))
+- The document for which the event listener happens ([Event Handlers]({{page page='event-handlers'}}))
+- The document(s) bound to the workflow
+- The document(s) that are in input of the operation (Filter list operation)
 
 Below is a sample of such a screen. In this section, we review the list of all possible filtering options that you may find in Studio Modeler.
 
@@ -160,39 +160,37 @@ Below is a sample of such a screen. In this section, we review the list of all p
 --}}
 ![Sample Filtering Screen](nx_asset://beb8fb8b-11c2-4ae1-a000-b61183b3775b ?w=400,border=true)
 
-*   **Current user has one of the permissions**: The logged in user has one of the selected permissions on the document.
-*   **Current document has one of the types:** The document must implement one of the selected types for the filter to be evaluated to true.
-*   **Current document has facet**: The document must implement the selected facet to be evaluated to true. Note that it would make sense that this field is changed to a multi-select one.
-*   **Current document has life cycle**: The document must be in one of the given lifecycle states. You can separate the lifecycle states with a comma. This is particularly useful when you want to filter some buttons or workflows that have a consequence on the document lifecycle state: they can work only if the document is in a specific state.
-*   **Document path starts with:** The document path is under the given path. For instance in Nuxeo default structure, if you create a workspace in the default domain, its path will start with `/default-domain/workspaces/`. You can use it for doing some configuration that would be specific to a part of your repository only.
+- **Current user has one of the permissions**: The logged in user has one of the selected permissions on the document.
+- **Current document has one of the types:** The document must implement one of the selected types for the filter to be evaluated to true.
+- **Current document has facet**: The document must implement the selected facet to be evaluated to true. Note that it would make sense that this field is changed to a multi-select one.
+- **Current document has life cycle**: The document must be in one of the given lifecycle states. You can separate the lifecycle states with a comma. This is particularly useful when you want to filter some buttons or workflows that have a consequence on the document lifecycle state: they can work only if the document is in a specific state.
+- **Document path starts with:** The document path is under the given path. For instance in Nuxeo default structure, if you create a workspace in the default domain, its path will start with `/default-domain/workspaces/`. You can use it for doing some configuration that would be specific to a part of your repository only.
 
     {{#> callout type='info' heading='How to get the path of a document'}}
-
-    You can easily get the path of a document in Nuxeo Platform by watching its URL.
-
-    For instance, if URL of the document is "https://myserverhost/nuxeo/nxpath/default/default-domain/workspaces/billing-activity-reports/2011/April", then path of the "April" folder is : `/default-domain/workspaces/billing-activity-reports/2011/April`.
-
+    You can easily get the path of a document in Nuxeo Platform by watching its URL.</br>
+    For instance, if URL of the document is "https://myserverhost/nuxeo/nxpath/default/default-domain/workspaces/billing-activity-reports/2011/April", then path of the "April" folder is: `/default-domain/workspaces/billing-activity-reports/2011/April`.
     {{/callout}}
-*   **Current document is**:
 
-    *   Any: The default option; has no effect on the global filter definition.
-    *   Regular document: Document is a "live document". That's the case of all the document created using the default interface capabilities under the workspace, but the versions.<br/>
+- **Current document is**:
+
+    - Any: The default option; has no effect on the global filter definition.
+    - Regular document: Document is a "live document". That's the case of all the document created using the default interface capabilities under the workspace, but the versions.<br/>
         Impl: `!doc.isImmutable() && !doc.isProxy()`
-    *   Document link: Document is a "live proxy". Nuxeo Core allows to create two types of proxies. A "live proxy", aka "document link", targets a "live document" (Regular document). A "version proxy" targets a version of a document.<br/>
+    - Document link: Document is a "live proxy". Nuxeo Core allows to create two types of proxies. A "live proxy", aka "document link", targets a "live document" (Regular document). A "version proxy" targets a version of a document.<br/>
         Impl: `!doc.isImmutable() && doc.isProxy()`
-    *   Published document: Document is a version proxy, resulting of using the publishing feature.<br/>
+    - Published document: Document is a version proxy, resulting of using the publishing feature.<br/>
         impl: `doc.isImmutable() && doc.isProxy()`
-    *   Document proxy: Document is either a "Document link" or a "Published document".<br/>
+    - Document proxy: Document is either a "Document link" or a "Published document".<br/>
         Impl: `doc.isProxy()`
-    *   Document version: Document is a version (it is not a "live document").<br/>
+    - Document version: Document is a version (it is not a "live document").<br/>
         Impl: `doc.isVersion()`
-    *   Immutable document: Document that cannot be changed. That's the case for a version, or a proxy that targets a version).<br/>
+    - Immutable document: Document that cannot be changed. That's the case for a version, or a proxy that targets a version).<br/>
         Impl: `doc.isImmutable()`
-    *   Mutable document: Document that can be changed. That's the case for a regular document or a live proxy.<br/>
+    - Mutable document: Document that can be changed. That's the case for a regular document or a live proxy.<br/>
         Impl: `!doc.isImmutable()`
-*   **Current user is member of:** Logged in user is member of one of the listed groups, separated with commas.
-*   **Current user is administrator**: Current user is member of the "administrators" group.
-*   **Selection is not empty:** Some documents are selected in the user interface, in the Content tab of the current folder for instance.
-*   **Custom EL expression**: See the page [Understand Expression and Scripting Languages Used in Nuxeo]({{page space='nxdoc' page='understand-expression-and-scripting-languages-used-in-nuxeo'}}).
+- **Current user is member of:** Logged in user is member of one of the listed groups, separated with commas.
+- **Current user is administrator**: Current user is member of the "administrators" group.
+- **Selection is not empty:** Some documents are selected in the user interface, in the Content tab of the current folder for instance.
+- **Custom EL expression**: See the page [Understand Expression and Scripting Languages Used in Nuxeo]({{page space='nxdoc' page='understand-expression-and-scripting-languages-used-in-nuxeo'}}).
 
 Note: You can see in javadoc that `isImmutable()` returns `true` if the document is a version or a proxy to a version, `false` otherwise

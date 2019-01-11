@@ -63,9 +63,8 @@ The Application Definition page enables you to manage the requirements of your N
 --}}
 ![Application Definition Screen](nx_asset://8a378d74-f04d-4196-8779-5562fd79e9b3 ?w=450,border=true)
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
+{{#> callout type='info' heading='Watch the related courses on Nuxeo University'}}
+[Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
 ![]({{file name='university-quickstart-studio-project.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 

@@ -91,10 +91,12 @@ To create a new permission in Nuxeo:
 6. Don't forget to translate the permission label [using an I18N translation file]({{page space='nxdoc' page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}}) if needed.
 
 {{#> callout type='info' }}
-
 After you updated your Nuxeo application with Studio customizations, you must restart your server so the new permission is displayed.
+{{/callout}}
 
-{{/callout}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related documentation'}}
 - [Implement the News "Publishing" Process]({{page space='nxdoc' page='implement-the-news-publishing-process'}})
 {{/panel}}</div><div class="column medium-6">
 

@@ -91,9 +91,8 @@ history:
 
 User actions are meant to execute a predefined action or list of actions (namely an operation chain) when clicking on a link or button. You can read more about them in the [developers section]({{page space='nxdoc' page='actions-links-buttons-icons-tabs-and-more'}}).
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Video on User Actions](https://university.nuxeo.com/learn/public/course/view/elearning/24/adding-buttons-and-links)
+{{#> callout type='info' heading='Watch the related courses on Nuxeo University'}}
+[Video on User Actions](https://university.nuxeo.com/learn/public/course/view/elearning/24/adding-buttons-and-links)
 ![]({{file name='university-automation.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
