@@ -25,7 +25,7 @@ Early access program is free of charge for all our customers.
 
 ## Which Features Are Currently in Early Access?
 Currently available:
-- [JSF UI to Web UI migration tool]({{page page="jsf-web-ui-migration"}})
+- [JSF UI to Web UI migration tool]({{page page="migration-services"}})
 
 Coming soon:
 - Designer Live Preview: an improvement to our browser extension that makes development faster by providing an instant preview of your Web UI configuration, instead of having to go through a hot reload.
