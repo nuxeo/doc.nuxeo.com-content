@@ -10,7 +10,7 @@ toc: true
 ---
 The JSF UI to Web UI migration tool is a safe and automated way to create an equivalent Web UI configuration based on your existing JSF UI configuration.
 
-To process the JSF UI to Web UI migration:
+To process the JSF UI to Web UI migration:</br>
 From Studio Modeler, go to **Configuration menu** > **Migration Service**.
 
 ![]({{file name='studio-early-access-migration-services.png'}} ?w=650,border=true)
@@ -27,11 +27,9 @@ Once the migration done, a detailed report is created in **Migration Services** 
 ![]({{file name='migration-services-report.png'}} ?w=650,border=true)
 
 {{#> callout type='info' heading='part of early access program'}}
-JSF UI to Web UI migration tool is available through our early access program, offering stable features you can co-create with us as they are only partially complete.  
-
+JSF UI to Web UI migration tool is available through our early access program, offering stable features you can co-create with us as they are only partially complete.
 - Not a member of it yet? [Learn about its benefits, what's planned and how to get in]({{page page="early-access-program"}}).
-<br /><br />
-- Already a member? Help us co-creating it by [telling us about your experience](https://docs.google.com/forms/d/e/1FAIpQLSdoDfpJOnFwkxHAHOk5aq5KHh9myxF6fISugnMzVmvuQSp-fw/viewform?usp=pp_url) </a>.
+- Already a member? Help us co-creating it by [telling us about your experience](https://docs.google.com/forms/d/e/1FAIpQLSdoDfpJOnFwkxHAHOk5aq5KHh9myxF6fISugnMzVmvuQSp-fw/viewform?usp=pp_url).
 {{/callout}}
 
 ## Migration Scope
@@ -59,7 +57,8 @@ Any configuration you would do in that time frame would not be taken into accoun
 
 ### Launching Migration
 
-If your project benefits from branch management: In **Source Control**, go to **Branch Management**, checkout the branch you want to migrate.
+If your project benefits from branch management:</br>
+In **Source Control**, go to **Branch Management**, checkout the branch you want to migrate:
 
 1. In **Configuration**, go to **Migration Services**.
 1. Click on **Start Migration**.</br>
@@ -94,9 +93,8 @@ It also provides information concerning the migration itself, such as the tool v
 
 Results appear in a branch indicated in the **Previous Migration** list.
 
-To check the result of your migration, go to **Source Control** and **Branch Management**.  
-
-To switch to the new branch, press **Checkout** on it.
+- To check the result of your migration, go to **Source Control** and **Branch Management**.
+- To switch to the new branch, press **Checkout** on it.
 
 The migration process does not delete any configuration but it adds more configuration that might be slightly updated. For example, to enforce a good practice such as putting constraints expressed only in your layouts back at schema level. The configuration produced can be reviewed and changed if needed, at your own pace.
 
