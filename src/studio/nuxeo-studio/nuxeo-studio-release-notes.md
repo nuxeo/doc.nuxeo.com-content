@@ -9,7 +9,7 @@ toc: true
 tree_item_index: 730
 ---
 
-Discover which changes we brought in our recent Nuxeo Studio updates.
+Discover the changes we brought in our latest Nuxeo Studio updates.
 
 
 ## January 7, 2019
