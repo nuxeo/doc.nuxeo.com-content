@@ -24,7 +24,7 @@ confluence:
     shortlink: 4ID1
     shortlink_source: 'https://doc.nuxeo.com/x/4ID1'
     source_link: /display/NXDOC/JSF+UI+Framework
-tree_item_index: 600
+tree_item_index: 15000
 version_override:
     '6.0': 60/nxdoc/web-ui-framework
     '5.8': 58/nxdoc/web-ui-framework
