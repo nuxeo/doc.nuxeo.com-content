@@ -345,7 +345,7 @@ The Automation operation script `javascript.FetchSFObject` can be overridden in 
       sfobject.id = params.sfobjectId;
       sfobject.name = params.sfobjectName;
       var docs = Repository.Query(null, {
-        'query': "SELECT * FROM Document WHERE ecm:isTrashed = 0 AND sf:objectid = '" + sfobject.id + "' AND ecm:isVersion = 0 AND ecm:mixinType != 'HiddenInNavigation'",
+        'query': "SELECT * FROM Document WHERE ecm:currentLifeCycleState != 'deleted' AND sf:objectid = '" + sfobject.id + "' AND ecm:isCheckedInVersion = 0 AND ecm:mixinType != 'HiddenInNavigation'",
       });
       if (docs.length>0) {
         return Repository.GetDocument(null, {
@@ -393,7 +393,7 @@ function run(input, params) {
       var sfobject = JSON.parse(params.sfObject);
       // We are checking if the document is existing. If not we're going to check the rules to create it accordingly.
       var docs = Repository.Query(null, {
-        'query': "SELECT * FROM Document WHERE ecm:isTrashed = 0 AND sf:objectId = '" + sfobject.Id + "' AND ecm:isVersion = 0 AND ecm:mixinType != 'HiddenInNavigation'",
+        'query': "SELECT * FROM Document WHERE ecm:currentLifeCycleState != 'deleted' AND sf:objectId = '" + sfobject.Id + "' AND ecm:isCheckedInVersion = 0 AND ecm:mixinType != 'HiddenInNavigation'",
       });
       if (docs.length>0) {
         return nuxeoDocument(docs[0],sfobject);
@@ -415,7 +415,7 @@ function run(input, params) {
               });
             }else{
               var parents = Repository.Query(null, {
-                'query': "SELECT * FROM Document WHERE ecm:isTrashed = 0 AND sf:objectId = '" + sfobject.ParentId + "' AND ecm:isVersion = 0 AND ecm:mixinType != 'HiddenInNavigation'",
+                'query': "SELECT * FROM Document WHERE ecm:currentLifeCycleState != 'deleted' AND sf:objectId = '" + sfobject.ParentId + "' AND ecm:isCheckedInVersion = 0 AND ecm:mixinType != 'HiddenInNavigation'",
               });
               newSFobject = Document.Create(parents[0], {
                     "type" : "AccountName",
@@ -430,7 +430,7 @@ function run(input, params) {
           } else {
             if(sfobject.Contract_ID === null) {
               var accounts = Repository.Query(null, {
-                'query': "SELECT * FROM Document WHERE ecm:isTrashed = 0 AND sf:objectId = '" + sfobject.AccountId + "' AND ecm:isVersion = 0 AND ecm:mixinType !=  'HiddenInNavigation'",
+                'query': "SELECT * FROM Document WHERE ecm:currentLifeCycleState != 'deleted' AND sf:objectId = '" + sfobject.AccountId + "' AND ecm:isCheckedInVersion = 0 AND ecm:mixinType !=  'HiddenInNavigation'",
               });
               var account = accounts[0];
               var properties = getProperties(newSFobject, sfobject);

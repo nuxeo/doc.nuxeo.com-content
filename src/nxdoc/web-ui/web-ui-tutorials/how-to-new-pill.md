@@ -39,7 +39,11 @@ Once you are all set, you can navigate to Modeler to start creating your search.
    You should end up with something like this:
 
    ```
+<<<<<<< HEAD
    ecm:mixinType != 'HiddenInNavigation' AND ecm:isVersion = 0 AND ecm:isTrashed = 0 AND ecm:primaryType='Contract'
+=======
+   ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND ecm:primaryType='Contract'
+>>>>>>> parent of ee89f5c6... NXDOC-1481: use ecm:isTrashed instead of ecm:currentLifeCycleState
    ```
 
 Now we will add aggregates to customize the search.

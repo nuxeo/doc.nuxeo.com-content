@@ -151,7 +151,7 @@ SELECT * FROM Document
 WHERE ecm:parentId = ? AND
       ecm:isVersion = 0 AND
       ecm:mixinType != 'HiddenInNavigation' AND
-      ecm:isTrashed = 0
+      ecm:currentLifeCycleState != 'deleted'
 -- defaultSortColumn=dc:title
 ```
 {{/panel}}

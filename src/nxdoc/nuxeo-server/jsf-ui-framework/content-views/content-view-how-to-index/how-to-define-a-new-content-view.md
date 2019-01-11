@@ -405,19 +405,19 @@ You can define the query that will be executed to filter the content repository 
 When configuring a content view in Studio, a default query filter is already filled in. You can complete it with more conditions (or totally modify it if you know what you're doing). This default query filter is:
 
 ```sql
-ecm:mixinType != 'HiddenInNavigation' AND ecm:isVersion = 0 AND ecm:isTrashed = 0
+ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted'
 ```
 
 This filter:
 
 *   excludes from search results the documents supposed to be hidden in navigation (`ecm:mixinType != 'HiddenInNavigation'`),
-*   excludes the documents who are in the trash (`ecm:isTrashed = 0`),
-*   and sets that only the current version of the document should be displayed (`ecm:isVersion = 0`) so as to avoid displaying all versions of a same document in the search result.
+*   excludes the documents whose lifecycle state is "deleted"(`ecm:currentLifeCycleState != 'deleted'`),
+*   and sets that only the current version of the document should be displayed (`ecm:isCheckedInVersion = 0`) so as to avoid displaying all versions of a same document in the search result.
 
 You can add as many filter criteria as you need. If the criterion is fixed, such as a specific lifecycle state or author, you just need to add your filter criterion at the end of the default query filter. For example, you could add a criterion saying that you want to exclude documents created by Administrator from the results:
 
 ```sql
-ecm:mixinType != 'HiddenInNavigation' AND ecm:isVersion = 0 AND ecm:isTrashed = 0 AND dc:creator != 'Administrator'
+ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND dc:creator != 'Administrator'
 ```
 
 If the criterion is not a fixed value but depends on the context of the document, you should put "?" as a value and add a query parameter. For example, if you want to display only the document created by the current user:

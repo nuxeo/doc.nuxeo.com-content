@@ -367,7 +367,7 @@ This operation uses the [`default_document_suggestion`](http://explorer.nuxeo.or
 
 ```xml
 <property name="query">
-  SELECT * FROM  Document WHERE dc:title LIKE ? AND ecm:mixinType != 'HiddenInNavigation' AND ecm:isVersion = 0 AND ecm:isTrashed = 0
+  SELECT * FROM  Document WHERE dc:title LIKE ? AND ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted'
 </property>
 ```
 

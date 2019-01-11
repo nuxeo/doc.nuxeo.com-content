@@ -465,7 +465,7 @@ The Nuxeo Content View framework makes it possible to define such an object, by 
         SELECT * FROM Document WHERE ecm:parentId = ?
         AND ecm:isVersion = 0
         AND ecm:mixinType != 'HiddenInNavigation'
-        AND ecm:isTrashed = 0
+        AND ecm:currentLifeCycleState != 'deleted'
       </pattern>
       <parameter>#{currentDocument.id}</parameter>
       <sort column="dc:title" ascending="true" />
@@ -602,8 +602,8 @@ Here is an example of such a registration:
         </predicate>
 
         <fixedPart>
-          ecm:parentId = ? AND ecm:isVersion = 0 AND ecm:mixinType !=
-          'HiddenInNavigation' AND ecm:isTrashed = 0
+          ecm:parentId = ? AND ecm:isCheckedInVersion = 0 AND ecm:mixinType !=
+          'HiddenInNavigation' AND ecm:currentLifeCycleState != 'deleted'
         </fixedPart>
 
       </whereClause>
@@ -720,7 +720,7 @@ Sample usage:
     <property name="coreSession">#{documentManager}</property>
     <whereClause docType="AdvancedSearch">
       <fixedPart>
-        ecm:isTrashed = 0
+        ecm:currentLifeCycleState != 'deleted'
       </fixedPart>
       <predicate parameter="dc:title" operator="FULLTEXT">
         <field schema="dublincore" name="title" />
@@ -745,7 +745,7 @@ Sample usage, showing how to add a clause to the search depending on title set o
     <property name="coreSession">#{documentManager}</property>
     <whereClause docType="AdvancedSearch">
       <fixedPart>
-        ecm:isTrashed = 0
+        ecm:currentLifeCycleState != 'deleted'
       </fixedPart>
       <predicate parameter="dc:title" operator="FULLTEXT">
         <field schema="dublincore" name="title" />

@@ -64,7 +64,7 @@ The XML syntax is very close, here is a sample migration of a query model contri
   point="model">
   <queryModel name="MY_SEARCH">
     <pattern>
-      SELECT * FROM Document WHERE ecm:isTrashed = 0 AND ecm:uuid != ?
+      SELECT * FROM Document WHERE ecm:currentLifeCycleState != 'deleted' AND ecm:uuid != ?
     </pattern>
     <sortable value="true" defaultSortColumn="dc:title" defaultSortAscending="true" />
     <max>20</max>
@@ -83,7 +83,7 @@ This can be translated into a page provider very easily (notice the pageSize and
   point="contentViews">
   <coreQueryPageProvider name="MY_SEARCH">
     <pattern>
-      SELECT * FROM Document WHERE ecm:isTrashed = 0 AND ecm:uuid != ?
+      SELECT * FROM Document WHERE ecm:currentLifeCycleState != 'deleted' AND ecm:uuid != ?
     </pattern>
     <sort column="dc:title" ascending="true" />
     <pageSize>20</pageSize>
@@ -170,7 +170,7 @@ Let's take again the above example:
   point="model">
   <queryModel name="MY_SEARCH">
     <pattern>
-      SELECT * FROM Document WHERE ecm:isTrashed = 0 AND ecm:uuid != ?
+      SELECT * FROM Document WHERE ecm:currentLifeCycleState != 'deleted' AND ecm:uuid != ?
     </pattern>
     <sortable value="true" defaultSortColumn="dc:title" defaultSortAscending="true" />
     <max>20</max>
@@ -201,7 +201,7 @@ Let's migrate the query model to a page provider:
   point="contentViews">
   <coreQueryPageProvider name="MY_SEARCH">
     <pattern>
-      SELECT * FROM Document WHERE ecm:isTrashed = 0 AND ecm:uuid != ?
+      SELECT * FROM Document WHERE ecm:currentLifeCycleState != 'deleted' AND ecm:uuid != ?
     </pattern>
     <sort column="dc:title" ascending="true" />
     <pageSize>20</pageSize>
@@ -234,7 +234,7 @@ Here is a more complex migration involving a whereClause (the search pattern is 
       <predicate parameter="ecm:fulltext" operator="FULLTEXT ALL">
         <field schema="advanced_search" name="fulltext_all"/>
       </predicate>
-      <fixedPart>ecm:isTrashed = 0</fixedPart>
+      <fixedPart>ecm:currentLifeCycleState != 'deleted'</fixedPart>
     </whereClause>
     <sortable value="true" defaultSortColumn="dc:title" defaultSortAscending="true" />
     <max>20</max>
@@ -252,7 +252,7 @@ The `whereClause` element content is unchanged, but the associated `docType` ele
       <predicate parameter="ecm:fulltext" operator="FULLTEXT ALL">
         <field schema="advanced_search" name="fulltext_all"/>
       </predicate>
-      <fixedPart>ecm:isTrashed = 0</fixedPart>
+      <fixedPart>ecm:currentLifeCycleState != 'deleted'</fixedPart>
     </whereClause>
     <sort column="dc:title" ascending="true" />
     <pageSize>20</pageSize>
@@ -272,7 +272,7 @@ Here is a sample migration of the above example to a content view:
   <contentView name="MY_SEARCH">
     <coreQueryPageProvider>
       <pattern>
-        SELECT * FROM Document WHERE ecm:isTrashed = 0 AND ecm:uuid != ?
+        SELECT * FROM Document WHERE ecm:currentLifeCycleState != 'deleted' AND ecm:uuid != ?
       </pattern>
       <sort column="dc:title" ascending="true" />
       <pageSize>20</pageSize>

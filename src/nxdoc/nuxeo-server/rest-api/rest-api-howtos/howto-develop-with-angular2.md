@@ -259,7 +259,7 @@ In order to get a clean installation, we will make use of Nuxeo CLI. So let's in
 
   searchDocument(value: String) {
     this.nuxeo.repository().query({
-      query: `Select * from Document where ecm:fulltext LIKE '${value}' or dc:title LIKE '%${value}%' and ecm:isProxy = 0 and ecm:isTrashed = 0
+      query: `Select * from Document where ecm:fulltext LIKE '${value}' or dc:title LIKE '%${value}%' and ecm:isProxy = 0 and ecm:currentLifeCycleState <> 'deleted'`
     }, {
       enrichers: {'document': ['thumbnail']}
     }).then((docs) => {
