@@ -19,7 +19,7 @@ Discover the changes we brought in our latest Nuxeo Studio updates.
 
 ### Studio Designer Interface Improvements
 
-The layouts and UI menus in Studio Designer has been merged into a single one. This provides greater consistency with Studio modeler and an easier user experience.
+The layouts and UI menus in Studio Designer have been merged into a single one. This provides greater consistency with Studio modeler and an easier user experience.
 
 Menus change as following:
 - `Layouts` are moved into a menu option and closed by default
