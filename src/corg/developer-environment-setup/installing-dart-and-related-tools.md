@@ -75,7 +75,9 @@ Using Homebrew:
 
 ```bash
 brew tap dart-lang/homebrew-dart
-brew install https://raw.githubusercontent.com/dart-lang/homebrew-dart/b55507ab62b2e724b62e58a8e5363a726e34b7e7/dart.rb --with-dartium
+curl -O https://raw.githubusercontent.com/dart-lang/homebrew-dart/b55507ab62b2e724b62e58a8e5363a726e34b7e7/dart.rb
+sed -i '' -e 's/-EOS.undent/~EOS/' dart.rb
+brew install dart.rb --with-dartium
 ```
 
 See https://www.dartlang.org/install/mac for other Mac install options.
