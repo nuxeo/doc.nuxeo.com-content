@@ -49,7 +49,8 @@ Allows you to customize your own UI themes that users can select. It is based pr
 
 ## Translations
 
-Creates internationalized text for different languages. Create a new messages-{language}.json resource to make a new language available. These files contain pairs of keys used in UI, and values with the text in the corresponding language.
+Create and/or Manage your `messages.json` files from this view to add a new language to your platform. </br>
+This file is composed of the keys used in UI following by their value in the corresponding language. 
 
 ## Dashboard
 
