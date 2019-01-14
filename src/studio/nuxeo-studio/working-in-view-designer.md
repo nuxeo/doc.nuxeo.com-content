@@ -29,7 +29,7 @@ Studio Designer relies on document models and business logic. That means that co
 
 You can access the Studio Designer from the link displayed next to your Nuxeo Studio project name.
 
-The Studio Designer screen enables you to :
+The Studio Designer screen enables you to:
 - Configure your [UI]({{page version='' space='studio' page='ui-designer'}})
 - Configure your [Resources]({{page version='' space='studio' page='resources-designer'}})
 - Choose your [Editor]({{page page='main-view'}})
