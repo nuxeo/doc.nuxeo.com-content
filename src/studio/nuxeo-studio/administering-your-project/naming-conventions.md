@@ -162,7 +162,7 @@ We strongly encourage you to follow these, especially if you are a beginner.
 | Item  | Rules | Example   |
 |---|---|---|
 | Document types | Pascal case naming convention | ContractLibrary |
-| Schemas | Lower case, separated by underscore only if readability is affected | contractlibrary  |
+| Schemas | Lower case, separated by underscore only if readability is affected | contract_library  |
 | Properties | Pascal case naming convention | ContractNumber  |
 | Lifecycle | Pascal case naming convention | ContractLifecycle |
 | Lifecycle state  | Camel case, not separated | ingestionInProgress |
