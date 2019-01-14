@@ -29,7 +29,7 @@ Five layouts are available on documents such as local and built-in types to let 
 
 ## Tabs
 
- You can add new document tabs and also, hide and override default document tabs.
+You can add new document tabs and also, hide and override default document tabs.
  Each contribution creates a pill and corresponding element in the main view. Can be activated for a user or document property such as group, type, permissions, etc.
  Once activated, selecting the pill will display the corresponding view.
 
