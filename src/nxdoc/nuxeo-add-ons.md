@@ -623,7 +623,7 @@ Registered access
 <tr>
 <td colspan="1">
 Nuxeo Platform 3D<br/>
-`nuxeo-3d`
+`nuxeo-platform-3d`
 </td>
 <td colspan="1">
 Registered access
