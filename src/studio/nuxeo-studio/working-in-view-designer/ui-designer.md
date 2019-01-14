@@ -31,7 +31,7 @@ Five layouts are available on documents such as local and built-in types to let 
 
 You can add new document tabs and also, hide and override default document tabs.
 Each contribution creates a pill and a corresponding element in the main view. Can be activated for a user or document property such as group, type, permissions, etc.
- Once activated, selecting the pill will display the corresponding view.
+Once activated, selecting the pill will display the corresponding view.
 
 ## Drawer
 
