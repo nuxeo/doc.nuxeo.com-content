@@ -23,7 +23,7 @@ history:
     -
         author: Manon Lumeau
         date: '2016-04-28 13:44'
-        message: 'ix Studio menu label     '
+        message: 'ix Studio menu label'
         version: '31'
     -
         author: Solen Guitter
@@ -188,6 +188,8 @@ Watch the related courses on Nuxeo University
 ## Concept
 
 Read more about documents, properties and schemas in the [Essential Nuxeo Platform Terminology]({{page space='nxdoc' page='essential-nuxeo-platform-terminology'}}).
+
+{{{multiexcerpt 'disabling-feature' page='branding'}}}
 
 ## {{> anchor 'creating-a-document-type'}}Creating a Document Type
 

@@ -4,6 +4,7 @@ review:
     comment: ''
     date: ''
     status: ok
+toc: true
 details:
     howto:
         excerpt: Learn how to customize your application.
@@ -391,9 +392,105 @@ history:
         version: '1'
 
 ---
+{{! excerpt}}
+The branding menu manages the display of the login page of an application.
+{{! /excerpt}}
+
+![]({{file name='branding-studio-menu.png'}} ?w=600,border=true)
+
+To configure the login page of your application:
+
+1. In **Configuration**, go to the **Branding** menu.
+1. Click on the **New** button.
+1. Enter the name of your branding in `Feature ID`.
+1. Click **OK**.
+
+Each Studio application can only display one login page, therefore only one login page branding per application can be created.
+
+{{! multiexcerpt name='disabling-feature'}}
+{{#> callout type='tip' heading='disabling a feature'}}
+To disable a feature, click on the toggle button at the top-right of your screen.
+![]({{file name='toggle-branding.png'}} ?w=300,border=true)
+{{/callout}}
+{{! /multiexcerpt}}
+
+## Selecting a Background
+
+The background of your login page can be customized with your brand colors, pictures and videos.
+
+For their login page background image, most of our customers choose either:
+
+-   A picture covering all the screen. This is the strategy chosen by Nuxeo.
+-   A logo with a transparent background and a background color.
+
+{{#> callout type='warning'}} While selecting your background, make sure to use light files to ensure a quick display to your users.
+{{/callout}}
+
+### Selecting a Background Image
+
+1.  In `Background Image`, click on **Select Resources**.
+1.  Define how the image should be displayed using pixels or the position attribute.
+1.  Indicate if the background covers all the screen (with CSS3 / recent browsers).
+1.  Pick a color that will be displayed if the background image is too small to cover all the screen.
+
+|  Before | Studio Configuration | After |
+|---|---|---|
+| ![]({{file name='branding_picture_nuxeo.png'}} ?w=300,border=true) | ![]({{file name='login_customization.png'}} ?w=300,border=true)  |![]({{file name='branding_picture.png'}} ?w=300,border=true)  |
+
+### Selecting a Background Video
+
+1.  Select a background video.
+1.  In `Background Video URLs / MIME Type`, click **Add**.
+1.  Enter the URLs and MIME Types of your video.
+1.  Define the options for the video, such as looping or muting the video.
+
+{{#> callout type='info' heading='URLs and MIME types'}}
+MIME Types enable browsers to process your content by identifying its format. While entering options for your vido, keep in mind that depending on browsers, supported formats differ.
+{{/callout}}
+
+## Customizing the Login Box
+
+### Selecting a Logo
+
+By default, the logo used for the login box is the one defined as your application logo when you are using JSF UI. If you are using Web UI only, no application logo can be defined. In this section you can select another logo for your login box.
+
+1. In the `Background` section, check **No** to `Apply Application Logo`.
+1. In the `Login Logo` section, click **Select Resources** and upload the logo image.
+1. Optional: Define the width and the height of the logo.
+1. In `Logo Alt`, enter a text that can be displayed in the place of your logo image, if the image cannot be displayed.
+
+|  Before | Studio Configuration | After |
+|---|---|---|
+| ![]({{file name='branding_logo.png'}} ?w=300,border=true,thumbnail=true) | ![]({{file name='branding_logo1.png'}} ?w=300,border=true,thumbnail=true)  |![]({{file name='branding_logo2.png'}} ?w=300,border=true,thumbnail=true)  |
+
+### Selecting a Login Button Color
+
+You can add a color to the login button.
+
+In `Button Background Color`, enter the code of your color or click on **Pick** to select a color from the color picker.
+
+|  Before | Studio Configuration | After |
+|---|---|---|
+| ![]({{file name='branding_logo.png'}} ?w=300,border=true,thumbnail=true) | ![]({{file name='login_box.png'}} ?w=310,border=true)  |![]({{file name='branding_logo_button.png'}} ?w=300,border=true,thumbnail=true)  |
+
+{{#> callout type='warning' }} This option must be used carefully: don't use heavy patterns that can confuse the readability. The login box style must stay simple and light to keep the login action as user-friendly as possible.
+{{/callout}}
+
+## Displaying News and Footer
+
+To customize the login page completely, you can remove the news and footer.
+
+| Login page layout | Studio Configuration | After |
+|----|----|----|
+|  ![]({{file name='login_layout.png'}} ?w=300,border=true,thumbnail=true) | ![]({{file name='login_remove_boxes.png'}} ?w=310,border=true)  | ![]({{file name='login_page_no_news.png'}} ?w=300,border=true,thumbnail=true)|
+
+## Branding Options with JSF UI
+
+{{{multiexcerpt name='JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
+
 There are 3 steps shown by 3 tabs to brand your application:
 
-![]({{file name='branding_tabs.png'}} ?w=310,h=42)
+![]({{file name='jsf_branding_tabs.png'}} ?w=310,h=42)
 
 *   The [**Main Pages**](#mainp) tab will let you manage the global rendering of your application
 *   The [**Login Page**](#login) tab will let you manage the login page rendering
@@ -407,18 +504,18 @@ The Main Pages tab is where you will specify the main elements that define a bra
 
 ### Changing the Logo displayed on Header
 
-{{! multiexcerpt name='change-logo'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Before</th><th colspan="1">Studio Configuration</th><th colspan="1">After</th></tr><tr><td colspan="1">![]({{file name='branding_logo.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='branding_logo1.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='branding_logo2.png'}} ?w=300,border=true,thumbnail=true)</td></tr></tbody></table></div>{{! /multiexcerpt}}
+{{! multiexcerpt name='change-logo'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Before</th><th colspan="1">Studio Configuration</th><th colspan="1">After</th></tr><tr><td colspan="1">![]({{file name='jsf_branding_logo.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='jsf_branding_logo1.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='jsf_branding_logo2.png'}} ?w=300,border=true,thumbnail=true)</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
 ### <span style="color: rgb(0,0,0);">Changing the Header and Footer</span>
 
-{{! multiexcerpt name='change-header-footer'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Before</th><th colspan="1">Studio Configuration</th><th colspan="1">After</th></tr><tr><td colspan="1">![]({{file name='default_header_footer.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='header_and_footer.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='custom_header_footer.png'}} ?w=300,border=true,thumbnail=true)</td></tr></tbody></table></div>{{! /multiexcerpt}}
+{{! multiexcerpt name='change-header-footer'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Before</th><th colspan="1">Studio Configuration</th><th colspan="1">After</th></tr><tr><td colspan="1">![]({{file name='jsf_default_header_footer.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='jsf_header_and_footer.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='jsf_custom_header_footer.png'}} ?w=300,border=true,thumbnail=true)</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
 ### Additional Branding Elements
 
 The additional branding elements section contains all the customizable elements relative to the page contents: links colors, font family used and color of backgrounds and buttons.
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="2">Studio Configuration</th><th colspan="1">Result</th></tr><tr><td colspan="2">
-![]({{file name='additional_branding_elements.png'}} ?w=450,border=true)</td><td colspan="1">![]({{file name='additional_branding_custom.png'}} ?w=450,border=true)</td></tr></tbody></table></div>
+![]({{file name='jsf_additional_branding_elements.png'}} ?w=450,border=true)</td><td colspan="1">![]({{file name='jsf_additional_branding_custom.png'}} ?w=450,border=true)</td></tr></tbody></table></div>
 
 {{> anchor 'login'}}
 
@@ -428,7 +525,11 @@ This tab will let you manage the customization of the login page view.
 
 ### Common Changes
 
-{{! multiexcerpt name='login-page-tab'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="2">Basic Studio Configuration</th><th colspan="1">Steps</th></tr><tr><td colspan="2">![]({{file name='login_customization.png'}} ?w=450,border=true)</td><td colspan="1">
+{{! multiexcerpt name='login-page-tab'}}
+
+**Basic Studio Configuration**:
+
+![]({{file name='jsf_login_customization.png'}} ?w=450,border=true)
 
 1.  Select a background video or a background image. Be careful not to use an image too heavy to a quick display for the users.
 2.  Define the options for the video or the image, for example to mute the video or the position (in pixel or position) of the image, if you know that it will be large enough for the huge screen resolutions.
@@ -437,32 +538,21 @@ This tab will let you manage the customization of the login page view.
 
 That's it!
 
-</td></tr></tbody></table></div>
 
 Most of our customers apply the following strategies for their login page background image:
 
-*   A picture covering all the screen. This is the strategy chosen by Nuxeo.
-*   Or a logo with transparency as the background image, aligned on the top left (Horizontal alignment = top, Vertical alignment = left) + a background color.
+-  A picture covering all the screen. This is the strategy chosen by Nuxeo.
+-   Or a logo with transparency as the background image, aligned on the top left (Horizontal alignment = top, Vertical alignment = left) + a background color.
 
 With a web designer's help, you can have many other possibilities.
 
 ### Additional Options
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Login page layout</th><th colspan="1">Studio Configuration</th><th colspan="1">Role</th></tr><tr><td colspan="1">![]({{file name='login_layout.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">
+| Login page layout | Studio Configuration | Role |
+|---|---|---|
+| ![]({{file name='jsf_login_layout.png'}} ?w=300,border=true,thumbnail=true)  | ![]({{file name='jsf_login_remove_boxes.png'}} ?w=310,border=true)  | To let you customize the login screen completely, the news and footer can be removed.  |
+| ![]({{file name='jsf_login_box.png'}} ?w=310,border=true)  | If you have a simple color used as the background image in the login page, you can add a color to the login box and to the button.This option must be used carefully: don't use heavy patterns or things that will make the readability difficult or hamper the interpretation. The login box style must stay very simple and light to keep the login action as a user-friendly step.  | &nbsp;|
 
-![]({{file name='login_remove_boxes.png'}} ?w=310,border=true)
-
-</td><td colspan="1">To let you customize the login screen completely, the news and footer can be removed.</td></tr><tr><td colspan="1">
-
-![]({{file name='login_box.png'}} ?w=310,border=true)
-
-</td><td colspan="1">
-
-If you have a simple color used as the background image in the login page, you can add a color to the login box and to the button.
-
-This option must be used carefully: don't use heavy patterns or things that will make the readability difficult or hamper the interpretation. The login box style must stay very simple and light to keep the login action as a user-friendly step.
-
-</td></tr></tbody></table></div>
 
 {{! /multiexcerpt}}
 
@@ -490,13 +580,13 @@ Let's add a background color on a widget's container:
 
 </th><th colspan="1">2\. CSS Editor</th><th colspan="1">3\. Result</th></tr><tr><td colspan="1">
 
-![]({{file name='blue_background_config.png'}} ?w=300,border=true,thumbnail=true)
+![]({{file name='jsf_blue_background_config.png'}} ?w=300,border=true,thumbnail=true)
 
 </td><td colspan="1">
 
-![]({{file name='-blue_background_style.png'}} ?w=300,border=true,thumbnail=true)
+![]({{file name='jsf-blue_background_style.png'}} ?w=300,border=true,thumbnail=true)
 
-</td><td colspan="1">![]({{file name='blue_background_container.png'}} ?w=300,border=true,thumbnail=true)</td></tr><tr><td colspan="1">
+</td><td colspan="1">![]({{file name='jsf_blue_background_container.png'}} ?w=300,border=true,thumbnail=true)</td></tr><tr><td colspan="1">
 
 Define a class in the widget editor.
 
@@ -510,7 +600,7 @@ You want to change an existing style to fit your needs? In addition to the [Nuxe
 
 Let's display the main title of pages in pink:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">1\. Inspect the existing style</th><th colspan="1">2\. Declare your new rule</th><th colspan="1">3\. See the result</th></tr><tr><td colspan="1">![]({{file name='override_inspect.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='disable_branding.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='override_result.png'}} ?w=300,border=true,thumbnail=true)</td></tr><tr><td colspan="1">
+<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">1\. Inspect the existing style</th><th colspan="1">2\. Declare your new rule</th><th colspan="1">3\. See the result</th></tr><tr><td colspan="1">![]({{file name='jsf_override_inspect.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='jsf_disable_branding.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='jsf_override_result.png'}} ?w=300,border=true,thumbnail=true)</td></tr><tr><td colspan="1">
 
 The pink arrows show the main title at the top of the page, the code and its CSS declaration are at the bottom, in the web inspector. Seeing this, you will need to override the `default.CSS****` `h1` rule that contains the color declaration.
 
@@ -528,24 +618,24 @@ That way, you're sure that your new style will be stronger than the original sty
 
 ### Specifying a Default Branding
 
-![]({{file name='set_default_disable_theme.png'}} ?w=450,border=true)
+![]({{file name='jsf_set_default_disable_theme.png'}} ?w=450,border=true)
 
 Create a new branding implies that it will be the default branding used in your application. The checkbox displayed under the Common tab will be checked by default. If you created several brandings, be sure that only one of them is checked. Your branding will be used in your application everywhere except if a [local theme configuration]({{page space='userdoc' page='local-configuration'}}#local-theme-configuration) is set.
 
 ### Disabling a Theme Branding
 
-![]({{file name='disable_branding.png'}} ?w=450,border=true)
+![]({{file name='jsf_disable_branding.png'}} ?w=450,border=true)
 
 If you don't want to use your branding during a test you can disable your default branding without deleting it.
 
 Just tick the **Disable theme branding** option above the tabs. The tabs and their content will be displayed under a gray overlay.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
-
 - [Theme]({{page space='NXDOC' page='Theme'}})
+- [Nuxeo Web UI]({{page space='nxdoc' page='web-ui'}})
 - [Nuxeo JSF UI]({{page space='nxdoc' page='nuxeo-jsf-ui'}})
-
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-tos'}}
+{{/panel}}
+</div><div class="column medium-6">{{#> panel heading='Related How-tos'}}
 
 - [Theme How-To Index]({{page space='NXDOC' page='Theme How-To+Index'}})
 - [How to Brand Your Application]({{page space='NXDOC' page='How to+Brand+Your+Application'}})
@@ -555,4 +645,6 @@ Just tick the **Disable theme branding** option above the tabs. The tabs and the
 - [How to Customize the Error Pages]({{page space='NXDOC' page='How to+Customize+the+Error+Pages'}})
 - [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page space='NXDOC' page='How to+Declare+the+CSS+and+JavaScript+Resources+Used+in+Your+Templates'}})
 
-{{/panel}}</div></div>
+{{/panel}}</div>
+
+</div>

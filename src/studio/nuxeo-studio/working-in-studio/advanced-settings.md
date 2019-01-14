@@ -9,6 +9,8 @@ toc: true
 ---
 Advanced settings enable you to configure Deployment Extensions, Web Services Filtering and XML Extensions in your Studio project.
 
+{{{multiexcerpt 'disabling-feature' page='branding'}}}
+
 ## Deployment Extensions
 
 To configure the deployment of projects, users can define deployment extensions.

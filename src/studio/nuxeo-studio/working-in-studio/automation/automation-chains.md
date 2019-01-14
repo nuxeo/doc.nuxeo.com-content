@@ -128,6 +128,8 @@ Concepts about Automation are introduced in the [developer documentation]({{page
 
 The Studio Automation Chain editor allows you to build the chains of operations and fill the necessary operation parameters.
 
+{{{multiexcerpt 'disabling-feature' page='branding'}}}
+
 ## Chain Editor
 
 {{!--     ### nx_asset ###

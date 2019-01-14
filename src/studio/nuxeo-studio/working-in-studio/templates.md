@@ -15,6 +15,8 @@ You can use document templates to:
 - handle business data on content types and generate a nicer presentation for publishing, export, etc.
 - create a file from document properties and create file on demand.
 
+{{{multiexcerpt 'disabling-feature' page='branding'}}}
+
 For more information on Document Templates, discover [how to quickly generate a PDF using document template]({{page version='' space='nxdoc' page='how-to-quickly-generate-a-pdf-using-document-template'}}) and check the [Nuxeo Template Rendering]({{page version='' space='nxdoc' page='template-rendering-addon'}}) addon which is leveraging the templates mechanism.
 
 ## Mail Templates

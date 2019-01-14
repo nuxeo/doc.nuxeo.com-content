@@ -142,6 +142,8 @@ A schema in Nuxeo Studio is dedicated to define a list of metadata. If you are n
 
 Note that schemas can be defined directly from the **Documents** menu. One would configure a schema here when sharing of the definition among multiple document types is known from the beginning.
 
+{{{multiexcerpt 'disabling-feature' page='branding'}}}
+
 ## Creating a Schema
 
 To create a schema, click on **New**.

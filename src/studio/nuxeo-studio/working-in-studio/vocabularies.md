@@ -140,6 +140,8 @@ Watch the related courses on Nuxeo University
 
 {{{multiexcerpt '3-types-vocabulary' page='NXDOC:How to add a New Vocabulary'}}}
 
+{{{multiexcerpt 'disabling-feature' page='branding'}}}
+
 In each of these three types of vocabulary you will find identical parameters like:
 
 - **Creation Policy**: The Creation Policy defines whether the values are created when the configuration is deployed on a Nuxeo Platform instance.
