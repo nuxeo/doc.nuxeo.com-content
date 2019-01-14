@@ -41,7 +41,7 @@ Once activated, selecting the pill will display the corresponding view.
 
 ## Actions
 
- Allows you to create and edit user actions and operations to every existing category/area in Web UI, such as buttons.
+Allows you to create and edit user actions and operations to every existing category/area in Web UI, such as buttons.
 
 ## Themes
 
