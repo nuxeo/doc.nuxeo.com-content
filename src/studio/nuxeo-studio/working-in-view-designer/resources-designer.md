@@ -19,7 +19,9 @@ The Resources tab represents the physical view of the package which is going to 
 
 **To upload a new file**: select the folder where you want to upload it and then click on the upload button ![]({{file name='upload-file-vd.png'}} ?w=18,border=true). A popup window let you select your document in your local files.
 
-**To create a new file**: select the folder where you want to create it and then click on the create button ![]({{file name='create-file-vd.png'}} ?w=18,border=true). A popup window ask you if you want to create an Empty File, an Element or a folder.
+**To create a new file**: </br>
+Select the folder where you want to create it and then click on the create button ![]({{file name='create-file-vd.png'}} ?w=18,border=true).</br>
+A popup window asks you if you want to create an Empty File, an Element or a folder.</br>
 If you select an Element, a base template will generate a boilerplate template to start from.
 
 ![]({{file name='popup-creation-element-vd.png'}} ?w=350,border=true)
