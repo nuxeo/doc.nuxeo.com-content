@@ -43,7 +43,7 @@ Don't forget to save your modifications, by clicking on the Save button {{!--   
     name: save-action-vd.png
     studio_designer#screenshot#up_to_date
 --}}
-![Save Action Designer ](nx_asset://4c9b9f92-aca9-4e64-b796-620e6d498d22 ?w=20,border=true) at the top right-hand corner of your application.
+![Save Action Designer](nx_asset://4c9b9f92-aca9-4e64-b796-620e6d498d22 ?w=20,border=true) at the top right-hand corner of your application.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Main View/Visual Editor Designer
