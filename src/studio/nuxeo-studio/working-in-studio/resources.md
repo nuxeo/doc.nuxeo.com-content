@@ -72,7 +72,7 @@ Resources is a section in Studio where you can upload various files that will be
 
 **To upload a new resource,** select the **Browse** button, choose your file then click on **Upload**.
 
-*   **Images**: can be used in the Branding feature;
+*   **Images**: can be used in the [Branding]({{page page='branding'}}) feature to contain all the visuals for your configuration;
 *   **Widget** templates: can be used when configuring forms and layouts;
 *   **Layout** templates: can be used when configuring forms and layouts;
 *   **I18n** Files: those files contain the translations of all the labels used in your custom plugin. You can directly edit your `.properties` file by clicking on ![]({{file name='editor_area.gif' page='studio-icons-index'}}), an editor will let you edit and save your changes;

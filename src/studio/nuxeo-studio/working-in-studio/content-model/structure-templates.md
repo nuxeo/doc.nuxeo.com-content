@@ -123,6 +123,8 @@ In simple words: "**Each time I create a document of such type, I will also inst
 
 Please note that there can be only one structure template for each document type, since it is meant to create a structure without prompting the user for a choice.
 
+{{{multiexcerpt 'disabling-feature' page='branding'}}}
+
 ## Creating a new Structure Template
 
 To create a structure template, click on **New**.

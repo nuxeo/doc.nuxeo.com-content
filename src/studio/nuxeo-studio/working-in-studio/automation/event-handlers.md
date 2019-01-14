@@ -139,6 +139,8 @@ To let you understand what event handlers are we can do a parallel with:
 *   Triggers in a database,
 *   Events on event-based programming patterns like in VBA, JavaScript, ...
 
+{{{multiexcerpt 'disabling-feature' page='branding'}}}
+
 You'll read more about event handlers in the [developer documentation]({{page space='nxdoc' page='events-and-listeners'}}).
 
 ## Creating an Event Handler
