@@ -347,7 +347,7 @@ Public
 <tr>
 <td colspan="1">
 Nuxeo Annotations with ARender<br/>
-`nuxeo-arender-connector`
+`nuxeo-arender`
 </td>
 <td colspan="1">
 Registered access
