@@ -19,7 +19,7 @@ Two editors are available: the Code Editor and the Visual Editor.
 
 The code editor mode is an HTML editor designed to let you inspect every elements and directly modify your layout. You can delete, modify, update, copy/paste, drag and drop every elements that you want.
 
-The HTML mode includes a few helpers such as auto-completion for document properties, tasks properties, and functions and polymer behaviours. The annotation `@doctype`, `@schema` or `@task` defined for each property defines the auto-completion for that property.
+The HTML mode includes a few helpers such as auto-completion for document properties, tasks properties, functions and polymer behaviours. The annotation `@doctype`, `@schema` or `@task` defined for each property defines the auto-completion for that property.
 
 Don't forget to save your modifications, by clicking on the Save button ![]({{file name='save-action-vd.png'}} ?w=20,border=true) at the top right hand corner of your application.
 
