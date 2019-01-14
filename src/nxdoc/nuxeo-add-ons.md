@@ -208,7 +208,7 @@ Registered access
 <tr>
 <td colspan="1">
 Content federation with Simflofy<br/>
-`nuxeo-simflofy-connector`
+`nuxeo-simflofy`
 </td>
 <td colspan="1">
 Registered access
