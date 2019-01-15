@@ -296,7 +296,7 @@ CONFIGURE THE DIALOG FOR EACH TASK
 
 A few final touches to customize user interaction with our workflow.
 
-1.  Open **Designer** and scroll down the **Layouts** menu to open up our workflow layouts.
+1.  In **Designer**, go to **UI** > **Layouts** to open up our workflow layouts.
 
 2.  Click on the **Enter Refund Amount** task layout to configure it.
 
@@ -365,7 +365,7 @@ You can add to the query filter to further tailor your search results. Try filte
 
 CUSTOMIZE A SEARCH
 
-In **Studio Designer**, scroll down the **Layouts** menu to **Page Providers**, select **contract** and open **form** to configure the form layout.
+In **Designer**, go to **UI** > **Layouts** > **Page Providers**, select **contract** and open **form** to configure the form layout.
 
 1.  Drag the search elements from the menu on the right into the form and modify the labels as needed.
 

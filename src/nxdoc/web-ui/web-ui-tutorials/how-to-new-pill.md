@@ -84,7 +84,7 @@ Now we will add aggregates to customize the search.
 ### Configure Layouts
 
 Once you are all set, you can navigate to the Studio Designer to configure your layouts.
-1. Go to **Layouts** > **Page Providers** > **otherContracts**
+1. In **UI**, go to **Layouts** > **Page Providers** > **otherContracts**
 1. Click on **form**  and then **Configure**, it will automatically create the `nuxeo-othercontracts-search-form` layout.
 1. Do the same with the **result** button, click on **Configure**, the `nuxeo-othercontracts-search-results` layout is created.
 
