@@ -841,12 +841,6 @@ See [NXP-25791](https://jira.nuxeo.com/browse/NXP-25791)
 {{! multiexcerpt name='upgrade-10.3-addons.drive.apis'}}
 **Added**
 
-- Added to `FileManager`:
-```
-DocumentModel createDocumentFromBlob(CoreSession documentManager, Blob input, String path, boolean overwrite, String fullName, boolean noMimeTypeCheck, boolean excludeOneToMany) throws IOException;
-```
-to allow excluding "one-to-many" importers (ie. the ones creating more than one document for the given blob, typically `CSVZipImporter` or `ExportedZipImporter`) when selecting the importer. This is used by Drive to not try to explode a CSV import ZIP for instance.
-
 - Added to `FileImporter`:
 ```
 boolean isOneToMany();
@@ -1043,14 +1037,14 @@ See [NXP-26553](https://jira.nuxeo.com/browse/NXP-26553)
 #### Bulk Action Framework Contextual Information
 
 {{! multiexcerpt name='upgrade-10.10-code-BAF'}}
-The way we store contextual information for the Bulk Action Framework (BAF) has changed.   
+The way we store contextual information for the Bulk Action Framework (BAF) has changed.
 Instead of having `BULK_ID:status`, we have `status:BULK_ID` (for instance).
 
 This makes all commands submitted before upgrade not compatible with the Bulk Action Framework after the upgrade.
 
 There's no impact on finished command except that status can't be retrieved after the upgrade, but acceptable as it's transient data.
 
-There's an impact on running command because after upgrading to Nuxeo Platform LTS 2019 (10.10), BAF won't be able to retrieve contextual information to finish submitted command before upgrade. As it, we advise to upgrade your Nuxeo Platform from 10.3 to 10.10 after all BAF processing has finished.  
+There's an impact on running command because after upgrading to Nuxeo Platform LTS 2019 (10.10), BAF won't be able to retrieve contextual information to finish submitted command before upgrade. As it, we advise to upgrade your Nuxeo Platform from 10.3 to 10.10 after all BAF processing has finished.
 
 Otherwise, a manual intervention on the KeyValueStore is possible to reverse these key/value:
 - `BULK_ID:status` by `status:BULK_ID`
@@ -1130,6 +1124,48 @@ See [NXP-25604](https://jira.nuxeo.com/browse/NXP-25604)
 See [NXP-25837](https://jira.nuxeo.com/browse/NXP-25837)
 {{! /multiexcerpt}}
 
+#### FileManager
+
+All `FileManager#createDocumentFromBlob` methods have been deprecated, you should now use the `FileManager#createOrUpdateDocument(FileImporterContext)` method to create or update documents from blobs.
+
+`FileImporter#create` method has been deprecated, you should now use the `FileImporter#createOrUpdate(FileImporterContext)` method.
+
+The [FileImporterContext](https://github.com/nuxeo/nuxeo/blob/release-10.10/nuxeo-services/nuxeo-platform-filemanager-api/src/main/java/org/nuxeo/ecm/platform/filemanager/api/FileImporterContext.java) class contains everything needed to create a document from a blob.
+
+Before:
+```java
+DocumentModel doc = fileManager.createDocumentFromBlob(session, blob, parentPath, /* overwrite */ true, /* filename */ "foo.html");
+```
+After:
+```java
+FileImporterContext context = FileImporterContext.builder(session, blob, parentPath)
+    .overwrite(true)
+    .fileName("foo.html")
+    .build();
+DocumentModel doc = fileManager.createOrUpdateDocument(context);
+```
+
+Use `FileImporterContext.Builder#excludeOneToMany` to allow excluding "one-to-many" importers (ie. the ones creating more than one document for the given blob, typically `CSVZipImporter` or `ExportedZipImporter`) when selecting the importer. This is used by Drive to not try to explode a CSV import ZIP for instance.
+
+The `FileImporterContext#getBlob`'s file name is used by default now, but you can still override it with `FileImporterContext.Builder#fileName(String)`.
+
+If the underlying `FileImporter` handles it, there is now a way to let the `FileManager` create a document from a blob without persisting it using `FileImporterContext.Builder#persistDocument(boolean)`. It's then the caller's responsibility to actually persist the document.
+
+```java
+FileImporterContext fileCreationContext = FileImporterContext.builder(session, blob, parentPath)
+    .persistDocument(false)
+    .build();
+DocumentModel doc = fileManager.createOrUpdateDocument(fileCreationContext);
+// doc is not persisted
+// doc.isDirty() => true
+// doc.getId() => null
+// do domething on doc
+doc = session.createDocument(doc);
+// doc is persisted
+```
+
+See [NXP-26178](https://jira.nuxeo.com/browse/NXP-26178)
+
 #### Operation Changes
 
 ##### Regenerate Thumbnails on Demand
@@ -1145,6 +1181,14 @@ http://localhost:8080/nuxeo/site/automation/RecomputeThumbnails
 ```
 See [NXP-26282](https://jira.nuxeo.com/browse/NXP-26282)
 {{! /multiexcerpt}}
+
+##### Create Document From Blob with Properties
+
+A new atomic operation `FileManager.ImportWithProperties` has been added allowing to create a document from a blob *and* setting properties at the same time.
+
+See [FileManagerImportWithProperties](https://github.com/nuxeo/nuxeo/blob/release-10.10/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/core/operations/services/FileManagerImportWithProperties.java)
+
+See [NXP-26178](https://jira.nuxeo.com/browse/NXP-26178)
 
 <!--
 ### Addons
