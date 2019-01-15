@@ -113,9 +113,9 @@ You can change ARender previewer URL used by Nuxeo to open ARender session by se
 
 ### ARender Previewer Configuration
 
-For a on-host installation, you can follow [ARender Documentation](https://arender.io/doc/current/documentation/setup/presentation/configuration.html).
+For a on-host installation, you can follow [ARender Documentation](https://arender.io/doc/current4/documentation/setup/presentation/configuration.html).
 
-For an embedded installation, you can place your properties files under `NUXEO_HOME/nxserver/config/ARenderConfiguration` folder.
+For an embedded installation, you can modify the `arender-hmi.properties` files under `NUXEO_HOME/nxserver/config/ARenderConfiguration` folder.
 
 For a Docker installation, you can extends our image and copy your properties file to `/docker-entrypoint-init.d/arender.properties`:
 
@@ -125,7 +125,9 @@ FROM dockerin-arender.nuxeo.com:443/arender-previewer:MP_VERSION
 COPY arender.properties /docker-entrypoint-init.d/arender.properties
 ```
 
-Editing the `arender.properties` file helps you to tailor the ARender interface to fit specific UI and UX needs. Please follow the [ARender configuration guide](https://arender.io/doc/current/documentation/hmi/index-hmi.html).
+You can also modify the `arender-hmi.properties` that is deployed inside the `/ARenderConfiguration` in the previewer Docker container.
+
+Editing these configuration files helps you to tailor the ARender interface to fit specific UI and UX needs. Please follow the [ARender configuration guide](https://arender.io/doc/current4/documentation/hmi/index-hmi.html).
 
 You can for example:
 
