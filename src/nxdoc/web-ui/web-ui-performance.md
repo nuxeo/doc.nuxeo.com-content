@@ -2,7 +2,7 @@
 title: 'Web UI Performance'
 review:
     comment: ''
-    date: '2018-12-18'
+    date: '2019-01-15'
     status: ok
 toc: true
 labels:
@@ -14,7 +14,7 @@ tree_item_index: 350
 
 In this page, we go through the different aspects of customization that may impact the performance of your Web UI apps.
 
-## Document property resolution
+## Document Property Resolution
 
 When fetching a document from the Rest API, you can request to resolve some document's [extended fields]({{page version='' space='nxdoc' page='document-json-extended-fields'}}). An extended field references other entities such as:
  - users or groups
@@ -25,7 +25,7 @@ in order to be able to display them. For example, in a document layout, when it 
 
 By default, Web UI requests any available field when navigating to a particular document. However, depending on your custom document types, resolving every single field may result in an overload.
 
-Since 10.10 ([NXP-26520](https://jira.nuxeo.com/browse/NXP-26520) + [NXP-25512](https://jira.nuxeo.com/browse/NXP-25512)), you can limit the list of fields that should be resolved with a contribution such as the following:
+Since 10.10 ([NXP-26520](https://jira.nuxeo.com/browse/NXP-26520) and [NXP-25512](https://jira.nuxeo.com/browse/NXP-25512)), you can limit the list of fields that should be resolved with a contribution such as the following:
 
 ```xml
 <require>org.nuxeo.web.ui.properties.contrib</require>
@@ -39,11 +39,11 @@ Since 10.10 ([NXP-26520](https://jira.nuxeo.com/browse/NXP-26520) + [NXP-25512](
 
 ## Searches
 
-### Property resolution
+### Property Resolution
 
 Whenever a search result is populated or a `Folderish` document's content is listed, it queries the [search endpoint]({{page version='' space='nxdoc' page='search-endpoints'}}). This endpoint takes into account a couple of [HTTP headers]({{page version='' space='nxdoc' page='special-http-headers'}}).
 
-A [Web UI search](({{page version='' space='nxdoc' page='search-endpoints'}}) is defined as follows:
+A [Web UI search]({{page version='' space='nxdoc' page='search-endpoints'}}) is defined as follows:
 
 ```xml
 <nuxeo-slot-content name="defaultSearchMenuPage" slot="DRAWER_PAGES">
@@ -72,15 +72,19 @@ To speed up your search, you can explicitly define the properties to be resolved
 </nuxeo-search-form>
 ```
 
-(Note in the above example that `"X-NXtranslate.directoryEntry": "label"` is needed to translate the label of the directory entries).
+{{#> callout type='note' }}
+In the above example, `"X-NXtranslate.directoryEntry": "label"` is needed to translate the label of the directory entries.
+{{/callout}}
 
+<!--
 TODO explain the same for nuxeo-document-content once https://jira.nuxeo.com/browse/NXP-26184 is done.
+-->
 
 ### Aggregation
 
 [Aggregates]({{page version='' space='nxdoc' page='page-provider-aggregates'}}) are often added to a search to provide efficient search criteria and a better user experience.
 
-However the computation of these aggregates by the elasticsearch back-end does not come for free.
+However, the computation of these aggregates by the Elasticsearch back-end does not come for free.
 
 {{#> callout type='warning' }}
 It is not realistic to design a search that allows an end-user to trigger a complex aggregate computation on a search result set potentially containing hundreds of thousands of documents.
@@ -117,38 +121,38 @@ _skipAggregates : function() {
 
 Since 10.3 , we have improved caching strategy to better leverage browser HTTP cache.
 
-### Static resources
+### Static Resources
 
-Since 10.3 ([NXP-25700](https://jira.nuxeo.com/browse/NXP-25700)), we added a Service Worker (SW) to allow for more aggressive cache on `\*.html` and `\*.js` resources by appending the server latest hot-reload or restart timestamp (TS) to their url:
- - On clean hit we will read resources without TS (default cache will be ineffective). SW will be installed.
- - On next hit SW will intercept matching requests, append the TS and forward them to the network (aggressive cache will be effective)
- - On subsequent hits SW will keep intercepting requests and network will read them from cache.
+Since 10.3 ([NXP-25700](https://jira.nuxeo.com/browse/NXP-25700)), we added a Service Worker (SW) to allow for more aggressive cache on `\*.html` and `\*.js` resources by appending the server latest hot-reload or restart timestamp (TS) to their URL:
+ - On clean hit, we will read resources without TS (default cache will be ineffective). SW will be installed.
+ - On next hit, SW will intercept matching requests, append the TS and forward them to the network (aggressive cache will be effective)
+ - On subsequent hits, SW will keep intercepting requests and network will read them from cache.
 
 On server restart or hot-reload:
  - On first reload previous SW will still be installed and will still serve resources with previous TS. Updated SW gets installed on page load.
  - On subsequent hits updated SW will add updated TS to requests
 
-Other static resources such as images (`\*.png`, `\*jpeg`, `\*svg`, etc.) have a default cache define in [browser-cache-contrib.xml contribution](https://github.com/nuxeo/nuxeo-web-ui/blob/release-10.3/src/main/resources/OSGI-INF/browser-cache-contrib.xml#L12) which you can override to fit your needs.
+Other static resources such as images (`\*.png`, `\*jpeg`, `\*svg`, etc.) have a default cache define in [`browser-cache-contrib.xml` contribution](https://github.com/nuxeo/nuxeo-web-ui/blob/release-10.3/src/main/resources/OSGI-INF/browser-cache-contrib.xml#L12) which you can override to fit your needs.
 
 {{#> callout type='tip' }}
 According to the [specs](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#shift-reload) SWs are not active during a hard reload (e.g. Ctrl+Shift+R on most browsers).
 {{/callout}}
 
-### Dynamic resources
+### Dynamic Resources
 
 Since 10.3 ([NXP-25385](https://jira.nuxeo.com/browse/NXP-25385)), resource URLs for document previews, thumbnails, blobs, etc. have the document's `changeToken` appended as a query parameter.
 
 Such URLs have a very aggressive cache (approximately 1 year) defined in [web-request-controller-contrib.xml#L47](https://github.com/nuxeo/nuxeo/blob/release-10.3/nuxeo-services/nuxeo-platform-web-common/src/main/resources/OSGI-INF/web-request-controller-contrib.xml#L47). As a matter of fact, each time the document changes, its `changeToken` also changes and the resource is invalidated by the browser cache.
 
-## Document Pills/Tabs
+## Document Tabs
 
-The Web UI's browser shows a set of pills (or tabs) when navigating to a document. Most documents have, by default, the `View`, `Permissions`, `History` and `Publishing` tabs.
+The Web UI's browser shows a set of tabs when navigating to a document. Most documents have, by default, the `View`, `Permissions`, `History` and `Publishing` tabs.
 
 You can add new tabs (and even override existing ones) by contributing to the [DOCUMENT_VIEWS_ITEMS]({{page version='' space='nxdoc' page='web-ui-slots'}}#document_views_items) and [DOCUMENT_VIEWS_PAGES]({{page version='' space='nxdoc' page='web-ui-slots'}}#document_views_pages) slots.
 
 Pages introduced in the [DOCUMENT_VIEWS_PAGES]({{page version='' space='nxdoc' page='web-ui-slots'}}#document_views_pages) slot are present in the DOM even if not selected. These pages are just hidden if not displayed. If the page needs to fetch data to populate listing, then you must pay attention to the `visible` attribute available on your page element. The idea is to fetch the data only if your element is visible.
 
-Here is a concrete example. We add a new pill to list the `Book` documents associated to an `Author` document:
+Here is a concrete example. We add a new tab to list the `Book` documents associated to an `Author` document:
 
 ```xml
 <nuxeo-page-provider id="bookPP"
@@ -168,7 +172,7 @@ Here is a concrete example. We add a new pill to list the `Book` documents assoc
   </nuxeo-data-table-column>
 </nuxeo-data-table>
 ```
-then you can see the `visible` property to only fetch the books when the page is displayed:
+Then you can see the `visible` property to only fetch the books when the page is displayed:
 
 ```javascript
   Polymer({
