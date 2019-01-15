@@ -109,7 +109,7 @@ Nuxeo Platform can be based on [Tomcat](http://tomcat.apache.org/). The supporte
 
 {{! multiexcerpt name='supported-app-servers-versions'}}
 <ul>
-<li>Tomcat 9.0.12</li>
+<li>Tomcat 9.0.14</li>
 </ul>
 {{! /multiexcerpt}}
 
