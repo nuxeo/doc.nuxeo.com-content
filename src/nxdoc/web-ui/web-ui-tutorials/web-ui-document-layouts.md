@@ -82,7 +82,7 @@ Jump between any Studio feature or menu in a snap by typing its name. This actio
 {{! /multiexcerpt}}
 
 
-1. In Studio Designer, go to **Layouts**.
+1. In Studio Designer, go to **UI** > **Layouts**.
 1. Under **Local Types**, find your `Contract` document type.
  Five layouts are available for the configuration.
 1. To configure the Create layout,  click on **create** layout, then on the **Configure** button.
