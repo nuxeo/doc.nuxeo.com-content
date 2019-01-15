@@ -386,7 +386,7 @@ Nuxeo Studio Designer is dedicated to configure Web UI: if you need to a create 
 
   ![]({{file name='OpenNuxeoStudioDesigner.png'}} ?w=300,border=true)
 
-2. Go to **Layouts** > **Local types**. You should see the name of your document type here.
+2. Go to **UI** > **Layouts** > **Local types**. You should see the name of your document type here.
 
   ![]({{file name='local_type_designer.png'}} ?w=300,border=true)
 
