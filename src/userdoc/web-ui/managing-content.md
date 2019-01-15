@@ -10,41 +10,42 @@ is_overview: true
 tree_item_index: 110
 
 ---
-<div class="row" data-equalizer data-equalize-on="medium">
-<div class="column medium-4">
-{{#> panel type='secondary' match_height='true'}}
-### Creating and Updating Content
-<br/>
-There are numerous ways to create and update content on your Nuxeo instance.  <br/>
 
-<br/>
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='creating-updating'}})
-{{/panel}}
-</div>
-<div class="column medium-4">
-{{#> panel type='secondary' match_height='true' }}
-### Working with Versions
-<br/>
-Document versions enable you and other users to easily revert to a specific version of the document if needed, without having to edit the document. The Nuxeo Platform offers both automatic and manual versioning of documents.
-
-<br/>
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='version'}})
-{{/panel}}
-</div>
-<div class="column medium-4">
-{{#> panel type='secondary' match_height='true'}}
-### History
-<br/>
-The History tab of a document gives you access to the audit trail of the document, thus ensuring the traceability of documents.<br/>
-
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='history'}})
-{{/panel}}
-</div>
-</div>
 <div class="column">
 {{#> panel type='primary'}}
 
 [New to Nuxeo? Start Learning Nuxeo Platform with Nuxeo University Program!](https://university.nuxeo.com)
 
 {{/panel}}
+</div>
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-4">
+{{#> panel type='secondary' match_height='true'}}
+### Creating and Importing Content
+<br/>
+Discover numerous ways to create and import content on your Nuxeo instance. <br/>
+
+<br/>
+[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='content-create'}})
+{{/panel}}
+</div>
+<div class="column medium-4">
+{{#> panel type='secondary' match_height='true'}}
+### Editing Content
+<br/>
+Discover how to edit a document, to modify its content or simply edit any property of the document.<br/>
+<br/>
+[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='content-edit'}})
+{{/panel}}
+</div>
+<div class="column medium-4">
+{{#> panel type='secondary' match_height='true'}}
+### Deleting Content
+<br/>
+Discover how you can delete documents from a space and search through deleted documents.<br/>
+<br/>
+[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='content-delete'}})
+{{/panel}}
+</div>
 </div>
