@@ -9,8 +9,8 @@ toc: true
 tree_item_index: 100
 ---
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
+Watch the related course on Nuxeo University:</br>
+[Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
 ![]({{file name='university-quickstart-studio-project.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
@@ -27,44 +27,7 @@ Five layouts are available on documents such as local and built-in types to let 
 - **Workflows**: Lists the workflows that you have created.
 - **Page Providers**: Lists the page providers that you have created.
 
-## Tabs
-
-You can add new document tabs and also hide and override default document to display specific information relevant to your users.
-
-A tab is created along with a corresponding element at the top of the main view. A tab can be activated under a set of conditions (for a specific user or document property such as group, type, permissions, etc.)
-Once activated, selecting the tab will display the corresponding view.
-
-- **Page**: Uses the document page template to create a tab displaying information that you want and that are related to documents.
-- **Listing**: Uses the element `nuxeo-result-view` in the main view. You can use it to display custom document listings using a page provider.
-
-
-## Drawer
-
-- **Left Menu Items**: From generic pages to new search forms or browse pages with determined root path. These will add a new left menu item.
-
-- **Main Menu Pages**: You can integrate new custom pages if you need to display specific information, like access to your profile information, the configuration of cloud services or some kind of specific report. Items can be added to Administration or User Menu. Each contribution adds a menu entry to Administration or User menus and a corresponding element in the main view.
-
-## Actions
-
-Allows you to create and edit buttons and links as elements and display them to any existing category/area, called slots, in Web UI.
-
-- **Actions**: Can display any element whether it is provided by Nuxeo or a custom element you wrote.
-- **Operations**: Use the element `nuxeo-operation-button` for quick and easy access.
-
-## Themes
-
-Allows you to customize your own UI themes that users can select. It is based primarily on CSS custom properties, but can include any type of CSS.
-
-## Translations
-
-Create and/or Manage your `messages.json` files from this view to add a new language to your platform. </br>
-This file is composed of the keys used in UI following by their value in the corresponding language.
-
-## Dashboard
-
-You can customize the default Web UI dashboard and edit the default HTML code to include your custom elements.
-
-## Configuring Multivalued Fields
+### Configuring Multivalued Fields
 
 When drag and dropping a multivalued field or a complex multivalued field into a layout, the corresponding element is automatically set to `nuxeo-data-table`. Clicking on the element, then on the pencil icon will allow you to edit it.
 
@@ -116,6 +79,44 @@ Finally, when dealing with complex multivalued fields:
 {{#> callout type='warning' heading='Only Use the Trash Icon'}}
 When hovering on an element in a document or workflow task layout, only the trash icon should be used at the moment. Using the sortable toggle (arrows icon) or the visibility toggle (eye icon) may prevent your layout from working properly.
 {{/callout}}
+
+## Tabs
+
+You can add new document tabs and also hide and override default document to display specific information relevant to your users.
+
+A tab is created along with a corresponding element at the top of the main view. A tab can be activated under a set of conditions (for a specific user or document property such as group, type, permissions, etc.)
+Once activated, selecting the tab will display the corresponding view.
+
+- **Page**: Uses the document page template to create a tab displaying information that you want and that are related to documents.
+- **Listing**: Uses the element `nuxeo-result-view` in the main view. You can use it to display custom document listings using a page provider.
+
+
+## Drawer
+
+- **Left Menu Items**: From generic pages to new search forms or browse pages with determined root path. These will add a new left menu item.
+
+- **Main Menu Pages**: You can integrate new custom pages if you need to display specific information, like access to your profile information, the configuration of cloud services or some kind of specific report. Items can be added to Administration or User Menu. Each contribution adds a menu entry to Administration or User menus and a corresponding element in the main view.
+
+## Actions
+
+Allows you to create and edit buttons and links as elements and display them to any existing category/area, called slots, in Web UI.
+
+- **Actions**: Can display any element whether it is provided by Nuxeo or a custom element you wrote.
+- **Operations**: Use the element `nuxeo-operation-button` for quick and easy access.
+
+## Themes
+
+Allows you to customize your own UI themes that users can select. It is based primarily on CSS custom properties, but can include any type of CSS.
+
+## Translations
+
+Create and/or Manage your `messages.json` files from this view to add a new language to your platform. </br>
+This file is composed of the keys used in UI following by their value in the corresponding language.
+
+## Dashboard
+
+You can customize the default Web UI dashboard and edit the default HTML code to include your custom elements.
+
 
 * * *
 
