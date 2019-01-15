@@ -362,8 +362,8 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.4.2/nuxeo-web-ui-2.3.3/nuxeo-platform-getting-started-1.3.2
-      Packages to download (3):      nuxeo-web-ui:2.3.3, nuxeo-dam:6.4.2, nuxeo-platform-getting-started:1.3.2
+      Installation order (3):        nuxeo-dam-6.4.3/nuxeo-web-ui-2.4.0/nuxeo-platform-getting-started-1.3.3
+      Packages to download (3):      nuxeo-web-ui:2.4.0, nuxeo-dam:6.4.3, nuxeo-platform-getting-started:1.3.3
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -374,9 +374,9 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
     $ docker exec mynuxeo bin/nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.2)
-     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.3.3)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.2)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.3)
+     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.4.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.3)
     ```
 
     The installed addons now have the status started.
@@ -459,8 +459,8 @@ To install a Nuxeo Package:
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.4.2/nuxeo-web-ui-2.3.3/nuxeo-platform-getting-started-1.3.2
-      Packages to download (3):      nuxeo-web-ui:2.3.3, nuxeo-dam:6.4.2, nuxeo-platform-getting-started:1.3.2
+      Installation order (3):        nuxeo-dam-6.4.3/nuxeo-web-ui-2.4.0/nuxeo-platform-getting-started-1.3.3
+      Packages to download (3):      nuxeo-web-ui:2.4.0, nuxeo-dam:6.4.3, nuxeo-platform-getting-started:1.3.3
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -471,9 +471,9 @@ To install a Nuxeo Package:
     $ nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.2)
-     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.3.3)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.2)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.3)
+     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.4.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.3)
     ```
 
     The installed addons now have the status started.
@@ -568,8 +568,8 @@ To install a Nuxeo Package:
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.4.2/nuxeo-web-ui-2.3.3/nuxeo-platform-getting-started-1.3.2
-      Packages to download (3):      nuxeo-web-ui:2.3.3, nuxeo-dam:6.4.2, nuxeo-platform-getting-started:1.3.2
+      Installation order (3):        nuxeo-dam-6.4.3/nuxeo-web-ui-2.4.0/nuxeo-platform-getting-started-1.3.3
+      Packages to download (3):      nuxeo-web-ui:2.4.0, nuxeo-dam:6.4.3, nuxeo-platform-getting-started:1.3.3
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -581,17 +581,17 @@ To install a Nuxeo Package:
     $ ./nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.2)
-     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.3.3)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.2)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.3)
+     addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.4.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.3)
 
     # Windows
     $ .\nuxeoctl.bat mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.2)
-     addon     started  nuxeo-web-ui (id: nuxeo-web-ui-2.3.3)
-     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.2)
+     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.3)
+     addon     started  nuxeo-web-ui (id: nuxeo-web-ui-2.4.0)
+     addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.3)
     ```
 
     The installed addons now have the status 'started'.
@@ -613,7 +613,7 @@ The addon brings the following document types:
 - The portfolio document type (`BCPortfolio`) holds the contracts of a customer. Its holds properties about the customer: the company name, industry and size, and the customer's juridical contact information.
 - The contract document type (`BCContract`) have several properties: an owner (an application user), some dates (signature, start, expiration dates), a type, an amount. It inherits customer information from its portfolio.
 - Some vocabularies are used to populate the portfolio and contract metadata (`companySize`, `contractType` and `industry`)
-- Contracts have a specific lifecycle, so they can evolve though the states `draft`, `approval`, `running`, `renegociation`, `void`, `deleted` and `restored`
+- Contracts have a specific lifecycle, so they can evolve though the states `draft`, `approval`, `running`, `renegociation` and `void`
 - Some business logic through automation chains and event handlers make contracts inherit properties from its portfolio, and evolve following its lifecycle{{! /multiexcerpt}}
 
 {{#> callout type='info' heading='Learn more'}}
