@@ -126,7 +126,7 @@ Nuxeo Adobe CC Connector is compliant with Adobe CC 2015 and 2017.
 Installation is made of two steps:
 
 1.  Install the [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace) available from the marketplace.
-2.  Install the [client side plugin](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace/associatedResource?reslabel=com.nuxeo.ccplugin.1.2.2.zip). It is available as a zip on the marketplace page. Unzip the client side plugin in the following location:
+2.  Install the [client side plugin](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-cc-connector-marketplace/associatedResource?version=1.2.6&reslabel=com.nuxeo.ccplugin.1.2.6.zip). It is available as a zip on the marketplace page. Unzip the client side plugin in the following location:
     *   On OS X, into `~/Library/Application\ Support/Adobe/CEP/extensions`. We recommend you remove the previous client-side extensions/files. Be sure to close, then open the applications if you had them opened before installing the update.
     *   In your Window/extensions view in the Creative suite, you will now see a "Nuxeo CC" option.
 
