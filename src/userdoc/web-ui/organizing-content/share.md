@@ -1,5 +1,5 @@
 ---
-title: Sharing and Exporting Content
+title: Sharing Content
 review:
     comment: ''
     date: '2018-11-15'
@@ -12,6 +12,13 @@ labels:
 tree_item_index: 700
 
 ---
+
+## Sharing
+
+The button ![]({{file name='share_web-ui.png' page='icons-index' space='userdoc'}}) gives you the permanent link to the document concerned, in order to easily share it.
+
+You can also use Nuxeo Easyshare add-on which enables sharing files from the repository with external users not requiring a login.
+For more information, see [EasyShare Documentation]({{page space='userdoc' page='easyshare'}}).
 
 ## Downloading
 
@@ -34,10 +41,9 @@ Users can download documents on their computer. It is possible to download:
 
 ## Exporting
 
-  Users can export documents on their computer. It is possible to export:
-
-  - One document at a time
-  - An entire workspace, folder, section
+Users can export documents on their computer. It is possible to export:
+- One document at a time
+- An entire workspace, folder, section
 
 ## Exports Available
 
@@ -97,12 +103,6 @@ Users can download documents on their computer. It is possible to download:
 
   You can also use Nuxeo File System Exporter to export Documents. For more information, see [Nuxeo File System Exporter]({{page version='' space='nxdoc' page='nuxeo-file-system-exporter'}}).
 
-## Sharing
-
-The button ![]({{file name='share_web-ui.png' page='icons-index' space='userdoc'}}) gives you the permanent link to the document concerned, in order to easily share it.
-
-You can also use Nuxeo Easyshare add-on which enables sharing files from the repository with external users not requiring a login.
-For more information, see [EasyShare Documentation]({{page space='userdoc' page='easyshare'}}).
 
 ## Publishing
 

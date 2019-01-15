@@ -16,46 +16,29 @@ tree_item_index: 200
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Creating Content Structures
+### Create and Find your Content
 
-- [Document types]({{page space='userdoc' page='create-content-struct'}})
-- [Collections]({{page space='userdoc' page='create-content-struct'}})
-- [Favorites]({{page space='userdoc' page='create-content-struct'}})
+Create content structures and browse to compare your documents. For quicker access, create collections or add your documents to favorites.
+
+- [Document types]({{page version='' space='userdoc' page='document-types-in-web-ui'}})
+- [Collections]({{page version='' space='userdoc' page='collections-web-ui'}})
+- [Favorites]({{page version='' space='userdoc' page='favorites'}})
+- [Search]({{page version='' space='userdoc' page='search'}})
+- [Comparing]({{page version='' space='userdoc' page='compare'}})
 
 {{/panel}}
 </div>
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Managing Permissions and Sharing Content
+### Collaborate on your Content
 
-
+Work with internal and external users to make your content evolve. Grant permissions on documents and use workflows to organize a more efficient collaboration.
 
 - [Managing Permissions]({{page version='' space='userdoc' page='permissions'}})
 - [Sharing Content]({{page version='' space='userdoc' page='share'}})
-{{/panel}}
-</div>
-</div>
-
-
-<div class="row" data-equalizer data-equalize-on="medium">
-
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-### Searching and Comparing Content
-
-- [Search]({{page version='' space='userdoc' page='search'}})
-- [Comparing]({{page version='' space='userdoc' page='compare'}})
-{{/panel}}
-</div>
-
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-### Workflows tasks and Alerts
-
-
 - [Workflows]({{page version='' space='userdoc' page='task'}})
-- [Alerts]({{page version='60' space='userdoc' page='alerts'}})
+- [Alerts]({{page version='' space='userdoc' page='alerts'}})
 {{/panel}}
 </div>
 </div>
