@@ -11,7 +11,7 @@ toc: true
 The JSF UI to Web UI migration tool is a safe and automated way to create an equivalent Web UI configuration based on your existing JSF UI configuration.
 
 To process the JSF UI to Web UI migration:</br>
-From Studio Modeler, go to **Configuration menu** > **Migration Service**.
+From Studio Modeler, go to **Configuration menu** > **Migration Services**.
 
 ![]({{file name='studio-early-access-migration-services.png'}} ?w=650,border=true)
 
