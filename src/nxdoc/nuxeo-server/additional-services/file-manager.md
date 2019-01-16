@@ -100,10 +100,18 @@ The File Manager service is a traditional Nuxeo Platform service that offers som
 
     ```java
     ... fileManager = Framework.getService(FileManager.class);
-    DocumentModel createdDoc = fileManager.createDocumentFromBlob(coreSession, blob, path, true, fileName);
+    FileImporterContext context = FileImporterContext.builder(coreSession, blob, parentPath)
+        .overwrite(true)
+        .fileName(fileName)
+        .build();
+    DocumentModel createdDoc = fileManager.createDocument(context);
     ```
 
-*   You can also use the dedicated [Automation operation](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/FileManager.Import), which provides a way to create in one REST call a document from a binary, or to create easily a document from a blob in an Automation chain.
+    The File Manager relies on the [FileImporterContext](https://github.com/nuxeo/nuxeo/blob/release-10.10/nuxeo-services/nuxeo-platform-filemanager-api/src/main/java/org/nuxeo/ecm/platform/filemanager/api/FileImporterContext.java) class that contains everything needed to create a document from a blob.
+
+*   You can also use the [FileManager.Import Automation operation](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/FileManager.Import), which provides a way to create in one REST call a document from a binary, or to create easily a document from a blob in an Automation chain.
+
+*   There is also the [FileManager.ImportWithProperties Automation operation](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/FileManager.ImportWithProperties), which provides a way to create in one REST call a document from a binary **and** set properties on it.
 
 {{#> callout type='info' }}
 The versioning policies applied to the File Manager are the ones defined gloablly for the platform, see the [Automatic Versioning]({{page page='versioning#automatic-versioning'}}) section of the Versioning page.
@@ -121,18 +129,17 @@ public class SampleFilemanagerPlugin extends AbstractFileImporter {
     private static final long serialVersionUID = 1L;
 
     @Override
-    public DocumentModel create(CoreSession session, Blob content, String path, boolean overwrite, String filename,
-             TypeManager typeService) throws NuxeoException {
+    public DocumentModel createOrUpdate(FileImporterContext context) throws NuxeoException {
 
-        PathRef parentRef = new PathRef(path);
+        PathRef parentRef = new PathRef(context.getParentPath());
         DocumentModel parentDoc = session.getDocument(parentRef);
         DocumentModel doc = null;
         switch (parentDoc.getType()) {
         case "PurchaseOrderFolder":
-            doc = createDocType(session, path, content, filename, "PurchaseOrder");
+            doc = createDocType(context, "PurchaseOrder");
             break;
         case "InvoiceFolder":
-            doc = createDocType(session, path, content, filename, "Invoice");
+            doc = createDocType(context, "Invoice");
             break;
         default:
             break;
@@ -143,18 +150,18 @@ public class SampleFilemanagerPlugin extends AbstractFileImporter {
         return doc;
     }
 
-    protected DocumentModel createDocType(CoreSession session, String path, Blob content, String filename,
-            String type) {
-        DocumentModel doc = session.createDocumentModel(path, type, type);
-        doc.setPropertyValue("dc:title", filename);
-        doc.setPropertyValue("file:content", (Serializable) content);
-        doc.setPropertyValue("file:filename", filename);
+    protected DocumentModel createDocType(FileImporterContext context, String type) {
+        Blob blob = context.getBlob();
+        String fileName = StringUtils.defaultIfBlank(context.getFileName(), blob.getFilename());
+        DocumentModel doc = session.createDocumentModel(path, fileName, type);
+        doc.setPropertyValue("dc:title", fileName);
+        doc.setPropertyValue("file:content", (Serializable) blob);
         return doc;
     }
 }
 ```
 
-The created method returns either a `DocumentModel` object or `null`. If `null` is returned, then the File Manager service will try with the next plugin. Within this method, we have access to the destination path which enables us to determine the type of the folder and thus create a document with the relevant type.
+The `createdOrUpdate` method returns either a `DocumentModel` object or `null`. If `null` is returned, then the File Manager service will try with the next plugin. Within this method, we have access to the destination path which enables us to determine the type of the folder and thus create a document with the relevant type.
 
 2.  Add a new contribution to the File Manager service.
 
