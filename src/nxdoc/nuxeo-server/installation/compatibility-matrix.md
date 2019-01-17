@@ -7,7 +7,7 @@ review:
 labels:
     - lts2016-ok
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
     - fguillaume
 toc: true
 confluence:
@@ -70,7 +70,7 @@ history:
 ---
 ## Java
 
-Supported Java versions: {{! multiexcerpt name='java_requirement'}}**JDK 8** (Oracle's JDK or OpenJDK) and greater{{! /multiexcerpt}}
+Supported Java versions: {{! multiexcerpt name='java_requirement'}}**JDK 8** (Oracle's JDK or OpenJDK) and greater{{! /multiexcerpt}}.
 
 As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for any given major version, for instance the latest bugfix version of Java 8 was 8u112 (1.8.0_112) at the time of this writing.
 
@@ -82,11 +82,10 @@ More information is available from the [Installation]({{page page='installation'
 
 ## Databases
 
-The Nuxeo Platform supports the following databases.
+The Nuxeo Platform supports the following databases:
 {{! multiexcerpt name='all-supported-databases'}}
 <ul>
 <li>{{! multiexcerpt name='MariaDB-supported'}}MariaDB 10.3{{! /multiexcerpt}}</li>
-<li>{{! multiexcerpt name='MarkLogic-supported'}}MarkLogic 8.0{{! /multiexcerpt}}</li>
 <li>{{! multiexcerpt name='MongoDB-supported'}}MongoDB 4.0{{! /multiexcerpt}}</li>
 <li>{{! multiexcerpt name='MySQL-supported'}}MySQL 8.0{{! /multiexcerpt}}</li>
 <li>{{! multiexcerpt name='Oracle-supported'}}Oracle 18c{{! /multiexcerpt}}</li>
@@ -117,7 +116,6 @@ Nuxeo Platform can be based on [Tomcat](http://tomcat.apache.org/). The supporte
 Nuxeo is shipped with an embedded Tomcat server.
 {{! /multiexcerpt}}
 
-
 ## Redis
 
 {{! multiexcerpt name='redis_supported_versions'}}
@@ -126,12 +124,9 @@ Nuxeo is shipped with an embedded Tomcat server.
 <tbody>
 <tr>
 <th colspan="1">Nuxeo Platform Version:</th>
-<th>FT 10.3</th>
-<th>FT 10.2</th>
-<th>FT 10.1</th>
+<th colspan="1">LTS 2019</th>
 <th colspan="1">LTS 2017</th>
 <th colspan="1">LTS 2016</th>
-<th colspan="1">LTS 2015</th>
 </tr>
 <tr>
 <th colspan="1">Redis</th>
@@ -144,18 +139,6 @@ Nuxeo is shipped with an embedded Tomcat server.
 3.2.x <br />
 4.0.x</td>
 <td colspan="1">2.8.x <br />
-3.0.x <br />
-3.2.x <br />
-4.0.x</td>
-<td colspan="1">2.8.x <br />
-3.0.x <br />
-3.2.x <br />
-4.0.x</td>
-<td colspan="1">2.8.x <br />
-3.0.x <br />
-3.2.x <br />
-4.0.x</td>
-<td colspan="1">2.8.x<br />
 3.0.x <br />
 3.2.x <br />
 4.0.x</td>
@@ -175,23 +158,14 @@ More information can be found on the [Nuxeo and Redis]({{page page='nuxeo-and-re
 <tbody>
 <tr>
 <th colspan="1">Nuxeo Platform Version:</th>
-<th>FT 10.3</th>
-<th>FT 10.2</th>
-<th>FT 10.1</th>
+<th colspan="1">LTS 2019</th>
 <th colspan="1">LTS 2017</th>
 <th colspan="1">LTS 2016</th>
-<th colspan="1">LTS 2015</th>
 </tr>
 <tr><th colspan="1">Elasticsearch</th>
 <td colspan="1">
 Library: 6.5.3<br />
 Cluster: 6.5.x (or Amazon Elasticsearch Service 6.2)</td>
-<td colspan="1">
-Library: 6.3.0<br />
-Cluster: 6.3.x (or Amazon Elasticsearch Service 6.2)</td>
-<td colspan="1">
-Library: 5.6.3<br />
-Cluster: 5.6.x (or Amazon Elasticsearch Service 5.5)</td>
 <td colspan="1">
 Library: 5.6.3<br />
 Cluster: 5.6.x (or Amazon Elasticsearch Service 5.5)</td>
@@ -201,8 +175,6 @@ Cluster: 1.5.2 to 1.7.x<br/>
 **From 8.10:**<br/>
 Library: 2.3.5<br />
 Cluster: 2.3.x to 2.4.x</td>
-<td colspan="1">Library: 1.5.2<br />
-Cluster: 1.5.2 to 1.7.x</td>
 </tr>
 </tbody>
 </table>
@@ -217,7 +189,6 @@ Note that there are [known problems](https://jira.nuxeo.com/browse/NXP-25252) on
 For now you should either use c4 instance either c5 with java 8.
 {{/callout}}
 
-
 More information can be found on the [Elasticsearch Setup]({{page page='elasticsearch-setup'}}) page.
 
 ## Kafka
@@ -229,24 +200,14 @@ More information can be found on the [Elasticsearch Setup]({{page page='elastics
 <tbody>
 <tr>
   <th colspan="1">Nuxeo Platform Version:</th>
-  <th>FT 10.3</th>
-  <th>FT 10.2</th>
-  <th>FT 10.1</th>
+  <th colspan="1">LTS 2019</th>
   <th colspan="1">LTS 2017</th>
 </tr>
 <tr>
   <th colspan="1">Kafka</th>
 <td colspan="1">
-  Library: 2.0.0 scala 2.12<br/>
-  Cluster: 1.x, 2.0.0
-</td>
-<td colspan="1">
-  Library: 1.1.0 scala 2.12<br/>
-  Cluster: 1.x, 2.0.0
-</td>
-<td colspan="1">
-  Library: 1.0.0 scala 2.11<br/>
-  Cluster: 1.x, 2.0.0
+  Library: 2.1.0 scala 2.12<br/>
+  Cluster: 1.x, 2.x
 </td>
 <td colspan="1">
   Library: 1.0.0 scala 2.11<br/>
