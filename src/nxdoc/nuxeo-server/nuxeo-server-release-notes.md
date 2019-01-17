@@ -232,6 +232,13 @@ It is now possible to filter directories values on a given column value, so as t
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25299](https://jira.nuxeo.com/browse/NXP-25299)
 
 
+#### Directories are initialized at startup {{since '10.10'}}
+
+Directories were lazy-initialized at first use, they are now initialized at startup to prevent from using the repository if there is some inconsistencies in some directories configuration.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26380](https://jira.nuxeo.com/browse/NXP-26380)
+
+
 ### Workflow
 
 #### More Properties on the Task Object {{since '10.1'}}
