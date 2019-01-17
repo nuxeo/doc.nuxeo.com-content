@@ -145,7 +145,7 @@ history:
         version: '1'
 
 ---
-This page provides you with naming conventions for Studio items configuration to make usage, maintenance and support easier.
+This page provides naming conventions for Studio items configuration to make usage, maintenance and support easier.
 
 Using Naming Conventions enables you to debug more efficiently. By investigating `server.log`, you can instantly identify which type of configuration caused an error.
 It also ensures better investigation of your issues by the Support Team.
