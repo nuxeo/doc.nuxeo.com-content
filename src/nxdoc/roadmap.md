@@ -22,7 +22,7 @@ The Global Nuxeo Roadmap focuses on:
 
 These objectives help our Product Managers prioritize ideas in the different product roadmaps. You can view our individual product roadmaps below.
 
-You can also give us your feedback and suggestions through our [feedback portal](https://portal.prodpad.com/7cdff94a-f166-11e7-93bc-06df22ffaf6f)
+You can also give us your feedback and suggestions through our [feedback portal](https://portal.prodpad.com/7cdff94a-f166-11e7-93bc-06df22ffaf6f).
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
@@ -57,8 +57,8 @@ You can also give us your feedback and suggestions through our [feedback portal]
 {{#> panel type='secondary' match_height='true'}}
 ### Mobile and Desktop
 
-- [Nuxeo Mobile]({{page page='nuxeo-mobile-roadmap'}})
-- [Nuxeo Drive]({{page page='nuxeo-drive-roadmap'}})
+- [Nuxeo Mobile]({{page space='client-apps' page='nuxeo-mobile-roadmap'}})
+- [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive-roadmap'}})
 {{/panel}}
 
 </div>

@@ -75,7 +75,6 @@ The RFC describes two endpoints:
 * An [Authorization endpoint](#authorization-endpoint) used by the client to obtain authorization from the resource owner via user-agent redirection
 * A [Token endpoint](#token-endpoint) used by the client to exchange an authorization code for a reusable access token
 
-
 ## Installation
 
 OAuth 2 is natively supported by the Nuxeo Platform, which means there is no bundle to install and no XML extensions required to enable it. An HTTP filter handles authentication in priority compared to the other filters run by the authentication chain.
@@ -118,10 +117,8 @@ EOF
   ![]({{file name='OAuth2-Consumer.png'}} ?w=500,border=true)
 
 {{#> callout type='info' }}
-The `Auto-grant` parameter, if checked, allows the OAuth 2 client to bypass the authorization phase, skipping the web page asking the user to allow the application to access the Nuxeo Platform assets. This is the case for the [Mobile application]({{page page='nuxeo-mobile'}}).
+The `Auto-grant` parameter, if checked, allows the OAuth 2 client to bypass the authorization phase, skipping the web page asking the user to allow the application to access the Nuxeo Platform assets. This is the case for the [Mobile application]({{page space='client-apps' page='nuxeo-mobile'}}).
 {{/callout}}
-
-
 
 The OAuth 2 endpoints are now ready to be used.
 

@@ -283,7 +283,7 @@ Example:
 
 ### {{> anchor 'source-based-versioning'}}Source-Based Versioning
 
-For source-based versioning (like with [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) or the [REST API]({{page version='' space='nxdoc' page='rest-api'}}) for example), a property is provided in the context data of the document (`source`), so it can be accessed in the EL condition.
+For source-based versioning (like with [Nuxeo Drive]({{page version='' space='client-apps' page='nuxeo-drive'}}) or the [REST API]({{page version='' space='nxdoc' page='rest-api'}}) for example), a property is provided in the context data of the document (`source`), so it can be accessed in the EL condition.
 
 We inject the source context parameter value for:
 - `drive`
@@ -293,7 +293,7 @@ We inject the source context parameter value for:
 
 See [the example](#source-based).
 
-For more details about source-based versioning with Nuxeo Drive, check out the page [How to Customize Nuxeo Drive Versioning Policy]({{page page='how-to-customize-nuxeo-drive-versioning-policy'}}).
+For more details about source-based versioning with Nuxeo Drive, check out the page [How to Customize Nuxeo Drive Versioning Policy]({{page space='client-apps' page='how-to-customize-nuxeo-drive-versioning-policy'}}).
 
 
 ### Automatic Versioning Example

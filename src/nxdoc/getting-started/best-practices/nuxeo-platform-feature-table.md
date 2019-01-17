@@ -667,7 +667,7 @@ The tables below use the following notation:
     <td>N/A</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Documentation]({{page page='nuxeo-drive'}})</td>
+    <td colspan="1">[Documentation]({{page space='client-apps' page='nuxeo-drive'}})</td>
 </tr>
 <tr>
     <td colspan="1">Compare Document</td>
@@ -703,7 +703,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [Documentation]({{page page='nuxeo-drive'}})
+    [Documentation]({{page space='client-apps' page='nuxeo-drive'}})
     </td>
 </tr>
 <tr>
@@ -712,7 +712,7 @@ The tables below use the following notation:
     <td>N/A</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Documentation]({{page page='nuxeo-drive'}})</td>
+    <td colspan="1">[Documentation]({{page space='client-apps' page='nuxeo-drive'}})</td>
 </tr>
 <tr>
     <td colspan="1">Offline synchronization</td>
@@ -720,7 +720,7 @@ The tables below use the following notation:
     <td>N/A</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Documentation]({{page page='nuxeo-drive'}})</td>
+    <td colspan="1">[Documentation]({{page space='client-apps' page='nuxeo-drive'}})</td>
 </tr>
 <tr>
     <td colspan="1">WebDav protocol</td>

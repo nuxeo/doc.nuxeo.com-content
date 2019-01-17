@@ -53,7 +53,7 @@ You can see that `my-element` has its `my-element-property` bound to `aPropertyF
 - Note that every slot on Web UI exposes a property named `user` by default, which contains the current user object.
 {{/callout}}
 
-For a better understanding, please refer to the [DOCUMENT_ACTIONS](#document_actions) and where we concretely detail how additional document actions are added by the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon.
+For a better understanding, please refer to the [DOCUMENT_ACTIONS](#document_actions) and where we concretely detail how additional document actions are added by the [Nuxeo Drive]({{page version='' space='client-apps' page='nuxeo-drive'}}) addon.
 
 ## Summary
 Here are the `nuxeo-slots` available in the Nuxeo Web UI.
@@ -156,7 +156,7 @@ This slot defines the available top right actions to be performed on the current
 
 ![]({{file name='DOCUMENT_ACTIONS.png'}} ?w=400,border=true)
 
-A typical use case for extending the Web UI is you'd like to add new document actions. Let's have a look on how it is done with the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon which adds a new action to synchronize a document with the local file system.
+A typical use case for extending the Web UI is you'd like to add new document actions. Let's have a look on how it is done with the [Nuxeo Drive]({{page version='' space='client-apps' page='nuxeo-drive'}}) addon which adds a new action to synchronize a document with the local file system.
 
 First, the DOCUMENT_ACTIONS `nuxeo-slot` is defined in the [nuxeo-browser.html](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-browser.html) element like this:
 ```xml
@@ -248,7 +248,7 @@ The **DOCUMENT_VIEWS_PAGES** slot define the pages introduced by the **DOCUMENT_
 
 #### BLOB_ACTIONS{{> anchor 'blob_actions'}}
 
-This slot is available on a current document that has attached blobs. Default actions are *Preview*, *Delete* and *Open with Nuxeo Drive* (when the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon is installed).
+This slot is available on a current document that has attached blobs. Default actions are *Preview*, *Delete* and *Open with Nuxeo Drive* (when the [Nuxeo Drive]({{page version='' space='client-apps' page='nuxeo-drive'}}) addon is installed).
 
 ![]({{file name='BLOB_ACTIONS.png'}} ?w=400,border=true)
 
@@ -334,7 +334,7 @@ This USER_MENU slot allows you to add additional User sub menu items.
 
 ![]({{file name='USER_MENU.png'}} ?w=400,border=true)
 
-On the above screenshot, you can see there's a Nuxeo Drive User menu item which is not part of the default Web UI. It is extended by the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon which contributes the `USER_MENU` slot with [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/9.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html):
+On the above screenshot, you can see there's a Nuxeo Drive User menu item which is not part of the default Web UI. It is extended by the [Nuxeo Drive]({{page version='' space='client-apps' page='nuxeo-drive'}}) addon which contributes the `USER_MENU` slot with [nuxeo-drive.html](https://github.com/nuxeo/nuxeo-drive-server/blob/9.10/nuxeo-drive-web-ui/src/main/resources/web/nuxeo.war/ui/nuxeo-drive/nuxeo-drive.html):
 
 ```xml
 <nuxeo-slot-content name="drivePageLink" slot="USER_MENU">
