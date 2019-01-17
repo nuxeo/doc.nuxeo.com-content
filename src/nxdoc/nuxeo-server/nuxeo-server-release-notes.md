@@ -150,6 +150,12 @@ MySQL 8.0.13 is the recommended MySQL version for Nuxeo LTS 2019.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25622](https://jira.nuxeo.com/browse/NXP-25622).
 
+#### MS SQL Server 2017{{since '10.10'}}
+
+MS SQL Server 2017 is the recommended Microsoft SQL Server version for Nuxeo LTS 2019.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25624](https://jira.nuxeo.com/browse/NXP-25624).
+
 #### More Secured AES Binary manager {{since '10.3'}}
 
 The encryption used to be based on `AES/CBC/PKCS5Padding` which has been found to be insecure (susceptible to padding Oracle attacks). Now a more secure encryption algorithm, `AES/GCM/NoPadding`, is used.
