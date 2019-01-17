@@ -151,7 +151,6 @@ Using Naming Conventions enables you to debug more efficiently. By investigating
 It also ensures better investigation of your issues by the Support Team.
 
 {{#> callout type='tip' heading='quick switcher' }}
-
 By using prefixes, you can find elements of your configuration more easily.
 You can jump between any Studio feature or menu in a snap by typing its name. This action can be triggered by clicking the Jump To option on the bottom left of your Studio project, or using the Ctrl + K / ⌘ + K shortcut.
 {{/callout}}
