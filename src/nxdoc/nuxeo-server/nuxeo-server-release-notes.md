@@ -138,6 +138,12 @@ The following `nuxeo.conf` properties can be set to define appropriate TLS/SSL c
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26072](https://jira.nuxeo.com/browse/NXP-26072).
 
+#### Maria DB 10.3.8 {{since '10.10'}}
+
+Maria DB 10.3.8 is the recomended MariaDB version for Nuxeo LTS 2019.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25621](https://jira.nuxeo.com/browse/NXP-25621).
+
 #### More Secured AES Binary manager {{since '10.3'}}
 
 The encryption used to be based on `AES/CBC/PKCS5Padding` which has been found to be insecure (susceptible to padding Oracle attacks). Now a more secure encryption algorithm, `AES/GCM/NoPadding`, is used.
@@ -681,7 +687,7 @@ The MongoDB template now makes use by default of the MongoDB implementations for
    </extension>
 ```
  <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25604](https://jira.nuxeo.com/browse/NXP-25604).
- 
+
 ### OAuth
 
 #### Rest API for OAuth 2 Tokens {{since '10.2'}}
