@@ -158,7 +158,7 @@ You can jump between any Studio feature or menu in a snap by typing its name. Th
 
 We strongly encourage you to follow these, especially if you are a beginner.
 
-## General rules
+## General Rules
 
 - Use pascal case naming convention (initial uppercase letter).
   - Example: `PascalCase`
