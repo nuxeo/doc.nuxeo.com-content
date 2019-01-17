@@ -100,7 +100,7 @@ Available information includes:
 
 ## Dashboard
 
-The dashboard provides you with a view of your applications, the latest maintenance fixes published and information about the early access program at a glance.
+The dashboard provides a view of your applications, the latest maintenance fixes published and information about the early access program at a glance.
 
 ![]({{file name='dashboard.png'}} ?w=600,border=true)
 
@@ -108,7 +108,7 @@ The dashboard provides you with a view of your applications, the latest maintena
 
 On my applications tab, you can create a new trial Studio Project, and open your Studio projects in one click.
 
-To access your project settings,  click on its name. You can also access existing instances and register a new instance.
+To access your project settings, click on its name. You can also access existing instances and register a new instance.
 
 ![]({{file name='my-applications.png'}} ?w=600,border=true)
 
@@ -118,7 +118,7 @@ This tab lists all the tokens enabled on your account. Tokens can be created and
 
 Token can be used wherever you need to provide credentials to access the NOS APIs and the Studio maven repository. Once your token is created, you can see it only once, so save it carefully. Then use it as you would your password to gain access to previously mentioned services. We recommend using one token per client application.
 
-See the [Token Management]({{page version='' space='studio' page='token-management'}}) page, for more information. 
+See the [Token Management]({{page version='' space='studio' page='token-management'}}) page, for more information.
 
 ![]({{file name='my-tokens.png'}} ?w=600,border=true)
 
@@ -130,7 +130,7 @@ The distribution page provides the list of all the Nuxeo Platform versions to do
 
 ## Documentation
 
-Documentation tab provides you with a guide on how to create JIRA tickets to benefit from Support.
+The documentation tab provides a guide on how to create JIRA tickets to benefit from Support.
 
 ![]({{file name='documentation.png'}} ?w=600,border=true)
 
