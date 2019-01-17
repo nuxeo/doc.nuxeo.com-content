@@ -721,7 +721,7 @@ When uploading content to Nuxeo using the multi-part/form-data way, no useless c
 
 ### Redis
 
-#### Activating Redis is now done through a template
+#### Activating Redis is now done through a template.
 
 Previously, it was enough to do:
 
@@ -730,8 +730,6 @@ Previously, it was enough to do:
 But now a redis template must be added instead:
 
 `nuxeo.templates=default,...,redis`
-
- <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26553](https://jira.nuxeo.com/browse/NXP-26553).
 
 ### Key Value Store
 
@@ -1045,11 +1043,11 @@ The HSTS header is enabled by default when HTTPS is in use. It forces only HTTPS
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24254](https://jira.nuxeo.com/browse/NXP-24254).
 
 
-#### AWS Client Upgrade {{since '10.2'}}
+#### AWS Client Upgrade {{since '10.10'}}
 
-The Nuxeo Platform now uses version 1.11.323 of the Amazon SDK. This notably allows using AWS Comprehend service.
+The Nuxeo Platform now uses version 1.11.468 of the Amazon SDK. This notably allows using AWS Comprehend and Sage services
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24981](https://jira.nuxeo.com/browse/NXP-24981).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26570](https://jira.nuxeo.com/browse/NXP-26570).
 
 ####  Log4J 2 {{since '10.3'}}
 
