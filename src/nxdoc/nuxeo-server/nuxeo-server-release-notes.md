@@ -164,8 +164,6 @@ MS SQL Server 2017 is the recommended Microsoft SQL Server version for Nuxeo LTS
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25624](https://jira.nuxeo.com/browse/NXP-25624).
 
-
-
 #### More Secured AES Binary manager {{since '10.3'}}
 
 Before Nuxeo 10.3, the encryption used was based on `AES/CBC/PKCS5Padding` which has been found to be insecure (susceptible to padding oracle attacks).
@@ -192,6 +190,12 @@ Fulltext tables stored in MySQL/MariaDB now use InnoDB engine instead of MyISAM.
 You can change your current engine by following this [documentation](https://dev.mysql.com/doc/refman/8.0/en/converting-tables-to-innodb.html#innodb-convert-convert)
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-17479](https://jira.nuxeo.com/browse/NXP-17479).
+
+#### Database type mismatch blocks server start {{since '10.10'}}
+
+In strict mode server won't start if there are inconsistencies on the database schemas compared to the repository configuration, such as "SQL type mismatch ConversionException". This is made for having a safer server start up.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26395](https://jira.nuxeo.com/browse/NXP-26395).
 
  <!--- ### Core Events  -->
 
