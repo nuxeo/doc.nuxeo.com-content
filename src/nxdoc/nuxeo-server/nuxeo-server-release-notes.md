@@ -18,7 +18,7 @@ You can also find detailed JIRA release notes:
 - [10.1 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=18634)
 - [10.2 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=18833)
 - [10.3 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=18834)
-
+- [10.10 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=18822)
 
 We also provide [instructions for upgrading]({{page version='' space='nxdoc' page='upgrade-from-lts-2017-to-101'}}) to the latest release.
 
@@ -690,7 +690,7 @@ function run(input, params) {
 
 #### Async adapter for Automation {{since '10.3'}}
 
-An `@async` adapter has been added so as to easily call any operation asynchroneously and to have means to get a status on the execution. See the documentation on the ticket below.
+An `@async` adapter has been added so as to easily call any operation asynchronously and to have means to get a status on the execution. See the documentation on the ticket below.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26172](https://jira.nuxeo.com/browse/NXP-26172).
 
