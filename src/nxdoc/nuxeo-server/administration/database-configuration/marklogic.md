@@ -8,7 +8,9 @@ labels:
     - lts2016-ok
     - link-update
     - content-review-lts2017
+    - deprecated
 toc: true
+hidden: true
 confluence:
     ajs-parent-page-id: '3342340'
     ajs-parent-page-title: Database Configuration
@@ -69,6 +71,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{{multiexcerpt 'DBS-definition' page='GLOS:DBS'}}}
 
 The Nuxeo Platform supports the following MarkLogic version:

@@ -12,7 +12,9 @@ labels:
     - excerpt
     - multiexcerpt-include
     - lts2017-ok
+    - deprecated
 toc: true
+hidden: true
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons
@@ -228,8 +230,9 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
 
+{{! excerpt}}
 The [Nuxeo for Salesforce addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-salesforce) allows Salesforce (SFDC) users to attach documents to their Salesforce Objects (such as Opportunities, Contacts, Accounts...) through the Salesforce UI within a Nuxeo server.
 {{! /excerpt}}
 

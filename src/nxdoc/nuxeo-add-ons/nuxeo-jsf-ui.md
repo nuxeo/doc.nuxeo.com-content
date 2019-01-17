@@ -13,6 +13,7 @@ labels:
     - multiexcerpt-include
     - excerpt
     - lts2017-ok
+    - deprecated
 toc: true
 confluence:
     ajs-parent-page-id: '16089312'
@@ -159,6 +160,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 ## Requirements
 Nuxeo JSF UI is supported on the following browsers:
 
