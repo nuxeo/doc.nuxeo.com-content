@@ -38,7 +38,7 @@ Nuxeo Drive is a Nuxeo addon that enables the synchronization of folders or work
 
 You can very easily import document by moving them from a desktop folder to a Nuxeo Drive folder, or creating office files directly in a Nuxeo Drive folder.
 
-Read the [Nuxeo Drive documentation]({{page page='nuxeo-drive'}}) for more information.
+Read the [Nuxeo Drive documentation]({{page space='client-apps' page='nuxeo-drive'}}) for more information.
 
 SCREENSHOT
 

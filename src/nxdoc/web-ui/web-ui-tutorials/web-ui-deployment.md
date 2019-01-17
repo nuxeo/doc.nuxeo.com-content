@@ -93,7 +93,7 @@ About the Web UI structure:
 
 In order to extend the Web UI (outside Studio), you'll need to create your own marketplace which will deploy your own resources in `$NUXEO_SERVER/nxserver/nuxeo.war/ui`.
 
-Let's have a look at the [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) addon. Nuxeo Drive defines among others a [nuxeo-drive-web-ui](https://github.com/nuxeo/nuxeo-drive-server/tree/9.10/nuxeo-drive-web-ui) bundle deployed in a server by its [marketplace](https://github.com/nuxeo/marketplace-drive/tree/1.7_9.10.
+Let's have a look at the [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}}) addon. Nuxeo Drive defines among others a [nuxeo-drive-web-ui](https://github.com/nuxeo/nuxeo-drive-server/tree/9.10/nuxeo-drive-web-ui) bundle deployed in a server by its [marketplace](https://github.com/nuxeo/marketplace-drive/tree/1.7_9.10.
 
 First important point is the [nuxeodrive-webresources-contrib.xml](https://github.com/nuxeo/nuxeo-drive-server/blob/9.10/nuxeo-drive-web-ui/src/main/resources/OSGI-INF/nuxeodrive-webresources-contrib.xml) file which provides the following contribution:
 

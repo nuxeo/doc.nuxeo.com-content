@@ -23,11 +23,11 @@ confluence:
     source_link: /display/NXDOC/Android+Client
 tree_item_index: 550
 history:
-    - 
+    -
         author: Alain Escaffre
         date: '2013-10-27 21:29'
         message: ''
         version: '1'
 
 ---
-You can use the native [Android application]({{page page='nuxeo-mobile'}}) or the [Nuxeo Java Client]({{page page='java-client'}}) to build a custom Android application.
+You can use the native [Android application]({{page space='client-apps' page='nuxeo-mobile'}}) or the [Nuxeo Java Client]({{page page='java-client'}}) to build a custom Android application.

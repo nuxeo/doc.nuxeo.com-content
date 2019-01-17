@@ -392,7 +392,7 @@ If you have requirements and/or constraints are not reflected below, **do not he
 <tr><th colspan="1">Client-Side Requirements</th>
 <td colspan="1">The Nuxeo Platform comes with several applications for business users, which have their own requirements: <ul><li>[JSF UI]({{page page='nuxeo-jsf-ui'}})</li>
 <li>[Web UI]({{page page='web-ui'}})</li>
-<li>[Nuxeo Drive]({{page page='nuxeo-drive'}})</li>
+<li>[Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}})</li>
 </ul></td>
 <td colspan="1"></td>
 </tr>
