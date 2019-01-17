@@ -116,36 +116,33 @@ The Nuxeo Repository includes a versioning system. At any time, you can ask the 
 
 Each version has:
 
-*   A label
-*   A major version number
-*   A minor version number
+- A label
+- A major version number
+- A minor version number
 
 The versioning service is configurable so you can define the numbering policy.
 
-## Functional Overview
-
-{{{multiexcerpt 'versioning-functional-overview' page='USERDOC:Browse'}}}
-
-**To create new version in a Web UI application:**
-
-{{{multiexcerpt name='web-ui-manual-versioning' page='USERDOC:Browse'}}}
-
-**To create a new version of your document in a JSF application**:
-
-{{{multiexcerpt name='jsf-ui-manual-versioning' page='USERDOC:Editing Content'}}}
-
 ## Concepts
 
-*   **Placeful**. A placeful document is one which is stored in a folder, and therefore has a parent in which it is visible as a child.
-*   **Placeless**. A placeless document isn't stored in a given folder, it's just available in the storage through its id. Having no parent folder it doesn't inherit any security, so it is usually only accessible by system code.
-*   **Working Copy**. The document that you edit. It is usually stored in a Workspace's folder but this is just convention. It is also often called the **Live Document**. There is at most one Working Copy per version series. In other systems it is also called the Private Working Copy because only the user that created it can work on it; this is less strict in the Nuxeo Platform.
-*   **Version**. An immutable, archived version of a document. It is created from a **working copy** by a **check in** operation.
-*   **Version Number**. The label which is uniquely attached to a version. It formed of two integers separated by a dot, like "2.1". The first integer is the major version number, the second one is the minor version number.
-*   **Major Version**. A version whose minor version number is 0\. It follows that a minor version is a version whose minor version number is not 0.
-*   **Version Series**. The list of versions that have been successively created from an initial **working copy**. The version series id is a unique identifier that is shared by the working copy and all the versions of the version series.
-*   **Versionable Document**. The document which can be versioned, in effect the **working copy**.
-*   **Check In**. The operation by which a new **version** is created from a **working copy**.
-*   **Check Out**. The operation by which a **working copy** is made available.
+- **Placeful**: A placeful document is one which is stored in a folder, and therefore has a parent in which it is visible as a child.
+
+- **Placeless**: A placeless document isn't stored in a given folder, it's just available in the storage through its id. Having no parent folder it doesn't inherit any security, so it is usually only accessible by system code.
+
+- **Working Copy**: The document that you edit. It is usually stored in a Workspace's folder but this is just convention. It is also often called the **Live Document**. There is at most one Working Copy per version series. In other systems it is also called the Private Working Copy because only the user that created it can work on it; this is less strict in the Nuxeo Platform.
+
+- **Version**: An immutable, archived version of a document. It is created from a **working copy** by a **check in** operation.
+
+- **Version Number**: The label which is uniquely attached to a version. It formed of two integers separated by a dot, like "2.1". The first integer is the major version number, the second one is the minor version number.
+
+- **Major Version**: A version whose minor version number is 0\. It follows that a minor version is a version whose minor version number is not 0.
+
+- **Version Series**: The list of versions that have been successively created from an initial **working copy**. The version series id is a unique identifier that is shared by the working copy and all the versions of the version series.
+
+- **Versionable Document**: The document which can be versioned, in effect the **working copy**.
+
+- **Check In**: The operation by which a new **version** is created from a **working copy**.
+
+- **Check Out**: The operation by which a **working copy** is made available.
 
 ## Check In and Check Out
 
@@ -161,9 +158,9 @@ A working copy in the Checked In state is identical to the version that was crea
 
 From a working copy in the Checked Out state, invoking the Check In operation does several things:
 
-*   the final version number is determined,
-*   a new version is created,
-*   the working copy is placed in the Checked In state.
+- the final version number is determined,
+- a new version is created,
+- the working copy is placed in the Checked In state.
 
 When invoking the Check In operation, a flag is passed to indicate whether a major version or a minor version should be created. Depending on whether the new version should be major or minor, the version number is incremented differently; for instance, starting from a working copy with the version number "2.1" (displayed as "2.1+"), a minor version would be created as "2.2" and a major version as "3.0".
 
@@ -236,10 +233,10 @@ Nuxeo reserved order range `[1,10]` to contribute system policies. Notice that d
 
 A versioning filter defines the condition(s) the document has to fulfill so that the versioning can be applied. The standard filter can be composed of the following elements:
 
-*   **Type**: On which document type the versioning applies
-*   **Schema**: Apply the versioning if the document contains this schema
-*   **Facet**: Apply the versioning if the document contains this facet
-*   **Condition**: Defines a condition in [EL]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo#main-differences-between-languages'}}) to access properties of the document before/after modification
+- **Type**: On which document type the versioning applies
+- **Schema**: Apply the versioning if the document contains this schema
+- **Facet**: Apply the versioning if the document contains this facet
+- **Condition**: Defines a condition in [EL]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo#main-differences-between-languages'}}) to access properties of the document before/after modification
 
 Example:
 
@@ -272,7 +269,6 @@ The example below will be interpreted as:
 </extension>
 ```
 
-
 If the standard filter is not enough to cover all your requirements, the filter can be customized with a Java class implementing the [VersioningPolicyFilter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/versioning/VersioningPolicyFilter.html) interface to define a particular condition:
 
 Example:
@@ -294,7 +290,6 @@ We inject the source context parameter value for:
 See [the example](#source-based).
 
 For more details about source-based versioning with Nuxeo Drive, check out the page [How to Customize Nuxeo Drive Versioning Policy]({{page page='how-to-customize-nuxeo-drive-versioning-policy'}}).
-
 
 ### Automatic Versioning Example
 
@@ -333,14 +328,14 @@ Below are the default versioning policies defined in Nuxeo Platform:
 What happens when you save a document using `CoreSession#saveDocument`?
 
 1. Before saving the document in DB, the engine will evaluate `no-versioning-for-system-before-update`:
-  * If its filter matches (here `system-document`) then no version will be created because policy increment is `NONE`
-  * If the filter doesn't match, next `beforeUpdate` policy will be evaluated, here `collaborative-save`: If its filter matches then a `MINOR` version will be created before saving document in DB. The filter matches if the current document has schema `file` and previous contributor is not the current one.
-  * If it doesn't match `collaborative-save`, no more policy is found and no versioning is applied.
+  - If its filter matches (here `system-document`) then no version will be created because policy increment is `NONE`
+  - If the filter doesn't match, next `beforeUpdate` policy will be evaluated, here `collaborative-save`: If its filter matches then a `MINOR` version will be created before saving document in DB. The filter matches if the current document has schema `file` and previous contributor is not the current one.
+  - If it doesn't match `collaborative-save`, no more policy is found and no versioning is applied.
 
 2. After saving the document in DB, the engine will evaluate `no-versioning-for-system-after-update`.
-  * If its filter matches (here `system-document`) then no version will be created because policy increment is `NONE`
-  * If it doesn't match, next after update policy will be evaluated, here `note-as-wiki`: If document is a Note, a `MINOR` version will be performed
-  * If it doesn't match `note-as-wiki`, no more policy is found and no versioning is applied.
+  - If its filter matches (here `system-document`) then no version will be created because policy increment is `NONE`
+  - If it doesn't match, next after update policy will be evaluated, here `note-as-wiki`: If document is a Note, a `MINOR` version will be performed
+  - If it doesn't match `note-as-wiki`, no more policy is found and no versioning is applied.
 
 {{#> callout type='note' }}
 `system-document` is a filter used to not automatically version system document such as workspace or document having `SystemDocument` facet.
