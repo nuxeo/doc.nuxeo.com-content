@@ -12,36 +12,11 @@ tree_item_index: 730
 Discover the changes we brought in our latest Nuxeo Studio updates.
 
 
-## January 7, 2019
-{{{multiexcerpt 'summary-v3-3-1' page='2019-01-07-studio-3-3-1'}}}
+{{{multiexcerpt 'studio-updates-2019-01' page='studio-updates-2019-01'}}}
 
-## Upcoming Changes
-
-### Studio Designer Interface Improvements
-
-The layouts and UI menus in Studio Designer have been merged into a single one. This provides greater consistency with Studio modeler and an easier user experience.
-
-Menus change as following:
-- `Layouts` are moved into a menu option and closed by default
-
-![Layouts Change]({{file name='layouts-menu-change.png' page='2019-01-07-studio-3-3-1'}})
-
-- `Document Pages` entry is renamed as `Tabs`
-
-![Document Pages Change]({{file name='document-pages-change.png' page='2019-01-07-studio-3-3-1'}})
-
-- `Left Menu Items` and `Main Menu Pages` are merged into a dedicated `Drawer` menu
-
-![Left Menu Items Change]({{file name='left-menu-items-change.png' page='2019-01-07-studio-3-3-1'}})
-
-## Released Changes
-
-### Noteworthy Improvements and Bugfixes
-
-- Tags can be pushed using Git access ([NXS-4882](https://jira.nuxeo.com/browse/NXS-4882)).
-- A warning is given when you create a query using the deprecated trash management behavior in content views ([NXS-5054](https://jira.nuxeo.com/browse/NXS-5054)).
-
-[More information about bugs fixed since last release notes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.3.0','3.3.1'%29) is available in our bug tracking tool.
+<!--
+[More information about bugs fixed since last release notes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.3.0','3.3.1','3.4.0','3.4.1','3.4.2','3.4.3','3.5.0'%29) is available in our bug tracking tool.
+-->
 
 * * *
 
