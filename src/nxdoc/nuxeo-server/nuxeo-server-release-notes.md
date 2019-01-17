@@ -1726,6 +1726,12 @@ You may want to recompute your stored image renditions when you change the resol
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25791](https://jira.nuxeo.com/browse/NXP-25791).
 
+#### Support for Digital Moving-Picture Exchange (DPX) Format  {{since '10.10'}}
+
+DPX files (video production format) are now supported, including dragn'drop (recognized as a video) and thumbnail generation.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26448](https://jira.nuxeo.com/browse/NXP-26448).
+
 ### Nuxeo Vision
 
 #### Support to Detect Unsafe Content with AWS Rekognition {{since '10.3'}}
