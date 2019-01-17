@@ -476,11 +476,11 @@ It is made more robust to plurals, etc.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26032](https://jira.nuxeo.com/browse/NXP-26032).
 
-#### Elasticseach 6.3 {{since '10.2'}}
+#### Elasticseach 6.5 {{since '10.10'}}
 
-Elasticsearch 6.3+ is now required. See upgrade instructions.
+Elasticsearch 6.5 is the recommended version with Nuxeo Platform LTS 2019. See upgrade instructions.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24102](https://jira.nuxeo.com/browse/NXP-24102).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24102](https://jira.nuxeo.com/browse/NXP-24102) and [NXP-25933](https://jira.nuxeo.com/browse/NXP-25933).
 
 #### Support of X-Pack {{since '10.1'}} {{since '10.3'}}
 
@@ -1689,6 +1689,13 @@ A new operation: `Quotas.RecomputeStatistics` is provided, with optional paramet
 The FS Exporter addon that allows to easily perform exports of the repository as a files and folders hierarchy has a new "Drive like" flavor that handles exports like Drive, not exporting attachments and all this, and dealing with conflictual names at a same folder level. It uses the title of the document instead and avoid name collision by adding an integer at the end of tshe path.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25846](https://jira.nuxeo.com/browse/NXP-25846).
+
+
+## Deprecation
+
+### Marklogic
+
+The Marklogic connector is now deprecated.
 
 ## Farewell
 
