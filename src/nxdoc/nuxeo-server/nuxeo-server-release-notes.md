@@ -197,6 +197,13 @@ In strict mode server won't start if there are inconsistencies on the database s
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26395](https://jira.nuxeo.com/browse/NXP-26395).
 
+#### Id is now a valid property name {{since '10.10'}}
+
+Property "id" is now valid for a given schema, stored as id_ in the SQL database. (And in turn a field id_ will be stored as id__, etc.)
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26401](https://jira.nuxeo.com/browse/NXP-26401).
+
+
  <!--- ### Core Events  -->
 
 ### Directory
