@@ -9,10 +9,14 @@ labels:
     - edge-cache
     - rcattiau
     - lts2017-ok
+    - deprecated
 toc: true
+hidden: true
 tree_item_index: 1650
 
 ---
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
 [Nuxeo Edge Cache](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-edge-cache) allows you to cache binaries from your Nuxeo server on an Edge Cache server closer to your clients. It can act like a Content Delivery Network, to improve the speed of your downloads.
 {{! /excerpt}}

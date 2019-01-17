@@ -10,6 +10,7 @@ labels:
     - ajusto
     - excerpt
     - lts2017-ok
+    - deprecated
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -23,6 +24,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/vAOIAQ'
     source_link: /display/NXDOC/Nuxeo+Media+Publishing
 tree_item_index: 2200
+hidden: true
 history:
     -
         author: Manon Lumeau
@@ -121,6 +123,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
 Nuxeo Media Publishing is an addon that enables users to publish video documents stored in the Nuxeo repository to external video hosting websites, without leaving the Nuxeo Platform UI.
 {{! /excerpt}}
