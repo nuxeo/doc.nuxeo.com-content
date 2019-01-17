@@ -44,7 +44,7 @@ Installation is made of two steps:
   {{#> callout type='info' }}
   If you have previously used a Nuxeo Adobe connector, clear the application preferences by pressing and holding `Alt+Control+Shift` (on Windows) or `Option+Command+Shift` (on macOS) as you start Photoshop/InDesign/Illustrator
   {{/callout}}
-1. Please contact your Nuxeo Administrator for access to the local client side plugin installation.
+2. Please contact Nuxeo Sales at contact@nuxeo.com for access to the local client side plugin installation.
 
 Once the installation done, a new extension "Nuxeo CC Connector" is available on your Photoshop, InDesign or Illustrator application.
 
@@ -52,9 +52,9 @@ Once the installation done, a new extension "Nuxeo CC Connector" is available on
 
 Once Nuxeo for Adobe CC is properly installed, launch InDesign CC 2018 (licensing dialog does not appear in Photoshop or Illustrator) to see a dialog requesting license information:
 
-- If you have a license key for Nuxeo CC Connector (provided to you by your Nuxeo Admin), click “Yes” to activate now, or click “No” to activate later.
+- If you have a license key for Nuxeo CC Connector (provided to you by your Nuxeo Admin or Nuxeo Sales), click “Yes” to activate now, or click “No” to activate later.
 
-If you have questions related to licensing, contact your Nuxeo Admin, your Nuxeo sales representative or contact Nuxeo at contact@nuxeo.com.
+If you have questions related to licensing, contact your Nuxeo sales representative or contact Nuxeo at contact@nuxeo.com.
 
 ## Using the Nuxeo CC Connector
 
