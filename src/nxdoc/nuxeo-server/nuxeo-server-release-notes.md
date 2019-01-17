@@ -1356,6 +1356,12 @@ Several UX improvements were added to Web UI:
 - [NXP-25637](https://jira.nuxeo.com/browse/NXP-25637) Improved listing element layout and composition. {{since '10.3'}}
 - [NXP-25636](https://jira.nuxeo.com/browse/NXP-25636) Improved document details area to optimize content preview. {{since '10.3'}}
 
+#### Ability to configure the content view of a folderish node, depending on the type
+
+The logic in nuxeo-document-content is now a behavior that can be applied to custom views with custom page providers. See comments on the linked ticket for more information. This allows to have per type configuration of the content table of folderish document types.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26184](https://jira.nuxeo.com/browse/NXP-26184)
+
 #### Performance Improvements {{since '10.2'}}
 
 Several actions to provide better performance on Web UI.
