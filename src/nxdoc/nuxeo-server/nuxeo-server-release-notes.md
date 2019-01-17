@@ -140,6 +140,12 @@ The following `nuxeo.conf` properties can be set to define appropriate TLS/SSL c
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26072](https://jira.nuxeo.com/browse/NXP-26072).
 
+#### PostgreSQL 11 {{since '10.10'}}
+
+PostgreSQL 11 is the recommended PostgreSQL Server version for Nuxeo LTS 2019.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25625](https://jira.nuxeo.com/browse/NXP-25625).
+
 #### Maria DB 10.3.8 {{since '10.10'}}
 
 MariaDB 10.3.8 is the recommended MariaDB version for Nuxeo LTS 2019.
@@ -157,6 +163,8 @@ MySQL 8.0.13 is the recommended MySQL version for Nuxeo LTS 2019.
 MS SQL Server 2017 is the recommended Microsoft SQL Server version for Nuxeo LTS 2019.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25624](https://jira.nuxeo.com/browse/NXP-25624).
+
+
 
 #### More Secured AES Binary manager {{since '10.3'}}
 
