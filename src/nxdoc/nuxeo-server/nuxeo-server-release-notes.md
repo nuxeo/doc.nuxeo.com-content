@@ -769,6 +769,40 @@ A `KeyValueBlobTransientStore` can now specify the ids of the key/value store an
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24847](https://jira.nuxeo.com/browse/NXP-24847).
 
+
+#### Transient stores with different names now use different storage {{since '10.10'}}
+
+To configure transient stores you can now just configure the default one. If an internal Nuxeo service requests a specific non-default one, its configuration will take into account the default configuration in addition to whatever (if anything) is configured for the specific one.
+For instance the default Nuxeo template now contains:
+```
+  <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent"  point="store">
+    <store name="default" class="org.nuxeo.ecm.core.transientstore.keyvalueblob.KeyValueBlobTransientStore">
+      <targetMaxSizeMB>-1</targetMaxSizeMB>
+      <absoluteMaxSizeMB>-1</absoluteMaxSizeMB>
+      <firstLevelTTL>240</firstLevelTTL>
+      <secondLevelTTL>10</secondLevelTTL>
+    </store>
+
+    <store name="authorizationRequestStore">
+      <firstLevelTTL>10</firstLevelTTL>
+      <secondLevelTTL>0</secondLevelTTL>
+    </store>
+  </extension>
+
+  ```
+
+This shows that the implementation class needs to be defined only once in the default configuration, and other configurations can override some parameters if needed.
+As a further example, when the redis template is enabled and you exlicitly set nuxeo.transientstore.provider=redis (which is not the default), then the following is added automatically and is enough to switch all transient stores to the new class (unless a specific non-default transient store has defined its own class):
+
+```
+  <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent" point="store">
+    <store name="default" class="org.nuxeo.ecm.core.redis.contribs.RedisTransientStore"/>
+  </extension>
+  ```
+In addition, if a KeyValueBlobTransientStore is configured without an explicit <keyValueStore> or <blobProvider>, it will automatically use a key/value store or blob provider named transient_ followed by the transient store id.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26581](https://jira.nuxeo.com/browse/NXP-26581).
+
 ### Authentication
 
 #### Stateless authentication with JWT tokens {{since '10.3'}}
