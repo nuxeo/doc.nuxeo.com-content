@@ -113,7 +113,7 @@ You can change ARender previewer URL used by Nuxeo to open ARender session by se
 
 ### ARender Previewer Configuration
 
-For a on-host installation, you can follow [ARender Documentation](https://arender.io/doc/current4/documentation/setup/presentation/configuration.html).
+For an on-host installation, you can follow the [ARender Documentation](https://arender.io/doc/current4/documentation/setup/presentation/configuration.html).
 
 For an embedded installation, you can modify the `arender-hmi.properties` files under `NUXEO_HOME/nxserver/config/ARenderConfiguration` folder.
 
