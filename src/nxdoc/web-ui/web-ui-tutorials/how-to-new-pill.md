@@ -1,5 +1,5 @@
 ---
-title: 'HOWTO: Insert a New Pill'
+title: 'HOWTO: Insert a New Tab'
 review:
     comment: ''
     date: '2017-08-21'
@@ -7,7 +7,7 @@ review:
 toc: true
 details:
     howto:
-        excerpt: Learn how to insert a new pill on your custom document type
+        excerpt: Learn how to insert a new tab on your custom document type
         level: Intermediate
         tool: Designer
         topics: Web UI
@@ -18,16 +18,13 @@ labels:
     - tcardoso
     - nuxeo-ui-elements
     - page-provider
-    - pill
+    - tab
     - content-review-lts2017
 tree_item_index: 1400
 
 ---
-In this tutorial you will learn how to add a new pill to your custom document type. This pill will help you to find other contracts created for the same contract owner. To do so, we'll be using a custom page provider linked to the Contract document type.
+In this tutorial you will learn how to add a new tab to your custom document type. This tab will help you to find other contracts created for the same contract owner. To do so, we'll be using a custom page provider linked to the Contract document type.
 
-{{#> callout type='info' }}
-A pill in Web UI is the equivalent of a tab on JSF UI.
-{{/callout}}
 
 ## Prerequisites
 - A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Nuxeo Modeler
@@ -91,7 +88,7 @@ Once you are all set, you can navigate to the Studio Designer to configure your 
 
 ## Create a Listing
 Go to the Designer:
-1. Click on **UI** > **Document Pages**   
+1. Click on **UI** > **Tabs**   
 1. Hover over the Create button ![]({{file version='' space='nxdoc' page='web-ui-overview' name='create_button.png'}} ?w=20) and select the **Listing** type ![]({{file name='listing_button.png'}} ?w=20)
 1. Name it `other-contracts`.
 1. Fill in the creation form like this:

@@ -1029,10 +1029,10 @@ IMPORTANT: when this feature is enabled, you MUST front the Nuxeo server with a 
 
 Add trash functionality and management to document deletion. Document deletion moves it to trash.
 In order to manage trash:
-- Documents with Folderish facet added a trash pill to manage deleted documents.
+- Documents with Folderish facet added a trash tab to manage deleted documents.
 - New trash search on the main menu. Has a faceted search on path, size, authors, and text.
 Trashed documents can be restored or permanently deleted by users with Manage Everything permission.
-A new `EmptyTrash` operation allows to permanently delete a Folderish trash content which is available on the Folderish trash pill UI.
+A new `EmptyTrash` operation allows to permanently delete a Folderish trash content which is available on the Folderish trash tab UI.
 Finally, a set of functional tests for new trash features.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23798](https://jira.nuxeo.com/browse/NXP-23798).
@@ -1179,7 +1179,7 @@ It is now possible to use drag and drop user interaction to move and copy docume
 
 #### ARender Annotation Tab {{since '10.2'}}
 
-Introduces a new file-based document pill to allow annotations with ARender.
+Introduces a new file-based document tab to allow annotations with ARender.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25107](https://jira.nuxeo.com/browse/NXP-25107)
 

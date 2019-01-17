@@ -77,7 +77,7 @@ Here are the `nuxeo-slots` available in the Nuxeo Web UI.
  </tr>
  <tr>
    <td colspan="1">[DOCUMENT_VIEWS_PAGES](#document_view_pages)</td>
-   <td colspan="1">Additional Current content of the "View" pill</td>
+   <td colspan="1">Additional Current content of the "View" tab</td>
    <td colspan="1">![]({{file name='DOCUMENT_VIEWS_PAGES.png'}} ?w=100,border=true)
     </td>
   </tr>
@@ -234,7 +234,7 @@ Each new item of **DOCUMENT_VIEWS_ITEMS** slot triggers a navigation to a page d
 
 #### DOCUMENT_VIEWS_PAGES{{> anchor 'document_view_pages'}}
 
-The **DOCUMENT_VIEWS_PAGES** slot displays the content of the default "View" Pill.
+The **DOCUMENT_VIEWS_PAGES** slot displays the content of the default "View" tab.
 
 ![]({{file name='DOCUMENT_VIEWS_PAGES.png'}} ?w=400,border=true)
 

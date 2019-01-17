@@ -133,7 +133,7 @@ In Nuxeo Web UI, these different layout/mode combinations have been materialized
 
 By simply following a convention that maps a document type to a set of pre-defined element names, according to the different use cases (modes), our application can dynamically load and instantiate the appropriate element for a given document.
 
-Regions of the UI which require configurable document layouts rely on custom container elements to handle the loading and instantiation of the appropriate layout elements for the given use case, for instance the default document page has two configurable regions by default:
+Regions of the UI which require configurable document layouts rely on custom container elements to handle the loading and instantiation of the appropriate layout elements for the given use case, for instance the default tab has two configurable regions by default:
 
 ![]({{file name='document_page_1.png'}} ?w=400,border=true)
 
