@@ -723,7 +723,19 @@ When uploading content to Nuxeo using the multi-part/form-data way, no useless c
 
 <!--- ### FileManager -->
 
-<!--- ### Redis -->
+### Redis
+
+#### Activating Redis is now done through a template
+
+Previously, it was enough to do:
+
+`nuxeo.redis.enabled=true`
+
+But now a redis template must be added instead:
+
+`nuxeo.templates=default,...,redis`
+
+ <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26553](https://jira.nuxeo.com/browse/NXP-26553).
 
 ### Key Value Store
 
@@ -826,7 +838,7 @@ For instance the default Nuxeo template now contains:
   ```
 
 This shows that the implementation class needs to be defined only once in the default configuration, and other configurations can override some parameters if needed.
-As a further example, when the redis template is enabled and you exlicitly set nuxeo.transientstore.provider=redis (which is not the default), then the following is added automatically and is enough to switch all transient stores to the new class (unless a specific non-default transient store has defined its own class):
+As a further example, when the redis template is enabled and you exlicitely set nuxeo.transientstore.provider=redis (which is not the default), then the following is added automatically and is enough to switch all transient stores to the new class (unless a specific non-default transient store has defined its own class):
 
 ```
   <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent" point="store">
