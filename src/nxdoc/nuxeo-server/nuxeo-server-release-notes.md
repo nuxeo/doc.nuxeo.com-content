@@ -673,6 +673,19 @@ The MongoDB template now makes use by default of the MongoDB implementations for
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25617](https://jira.nuxeo.com/browse/NXP-25617).
 
+#### SQL Implementation {{since '10.10'}}
+
+ A new Key/Value Store based on SQL is available. To configure a server to use it, use:
+```
+   <extension target="org.nuxeo.runtime.kv.KeyValueService" point="configuration">
+     <store name="default" class="org.nuxeo.ecm.core.storage.sql.kv.SQLKeyValueStore">
+       <property name="datasource">jdbc/nuxeo</property>
+       <property name="table">kv</property>
+     </store>
+   </extension>
+```
+ <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25604](https://jira.nuxeo.com/browse/NXP-25604).
+
 ### OAuth
 
 #### Rest API for OAuth 2 Tokens {{since '10.2'}}
