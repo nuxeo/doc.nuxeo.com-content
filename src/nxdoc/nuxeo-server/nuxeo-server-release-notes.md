@@ -1106,6 +1106,13 @@ Ex (deployment-fragment.xml):
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25040](https://jira.nuxeo.com/browse/NXP-25040).
 
+#### Tomcat 9.0.14 {{since '10.10'}}
+
+The LTS 2019 version of Nuxeo is aligned on Tomcat 9.0.14
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26573](https://jira.nuxeo.com/browse/NXP-26573).
+
+
 #### Multi-Region Replication {{since '10.2'}}
 
 A set of addons and scripts have been produced for the ability to replicate all the Nuxeo data in near real time into another hosting region, using Kafka streams for the replication. The intent is to be able to recover from a disaster in less than a minute. Contact Nuxeo for more information about it.
