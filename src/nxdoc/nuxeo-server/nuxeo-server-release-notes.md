@@ -1,5 +1,5 @@
 ---
-title: Nuxeo Server 10.3 Fast Track Release Notes
+title: Nuxeo Server LTS 2019 Release Notes
 review:
    comment: ''
    date: '2018-12-06'
@@ -11,13 +11,14 @@ toc: true
 tree_item_index: 10000
 ---
 
-This page relates to the release notes of Nuxeo Server and related addons for the 10.10 cycle, a.k.a LTS 2018 cycle. It will list the improvements and features that are successively shipped with the 10.1, 10.2, 10.3 and LTS 2018 releases. Evolutions are grouped by components.
+This page relates to the release notes of Nuxeo Server and related addons for the 10.10 cycle, a.k.a LTS 2019 cycle. It lists the improvements and features that have successively been shipped with the 10.1, 10.2, 10.3 and LTS 2019 releases. Evolutions are grouped by components.
 
 You can also find detailed JIRA release notes:
 
 - [10.1 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=18634)
 - [10.2 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=18833)
 - [10.3 JIRA release notes](https://jira.nuxeo.com/secure/ReleaseNote.jspa?projectId=10011&version=18834)
+
 
 We also provide [instructions for upgrading]({{page version='' space='nxdoc' page='upgrade-from-lts-2017-to-101'}}) to the latest release.
 
@@ -580,7 +581,7 @@ In order to integrate with external collaboration tools, a new generic external 
 
 ### Automation
 
-#### More Java Objects in Automation Scripting {{since '10.2'}}
+#### More Java Objects in Automation Scripting {{since '10.2'}} and {{since '10.10'}}
 It's now possible to allow specific Java classes to be used via Automation Scripting, by default we add:
 - `java.util.ArrayList`
 - `java.util.Arrays`
@@ -590,6 +591,8 @@ It's now possible to allow specific Java classes to be used via Automation Scrip
 - `org.nuxeo.ecm.core.api.Blobs`
 - `org.nuxeo.ecm.core.api.impl.blob.StringBlob`
 - `org.nuxeo.ecm.core.api.impl.blob.JSONBlob`
+- `java.text.SimpleDateFormat`
+- `org.apache.commons.codec.digest.DigestUtils`
 
 Other classes can be added and previously-allowed ones denied, through:
 ```
@@ -613,7 +616,7 @@ function run(input, params) {
     return org.nuxeo.ecm.core.api.Blobs.createJSONBlob("{'uuid': \"" + uuid + "\"}");
 }
 ```
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25020](https://jira.nuxeo.com/browse/NXP-25020).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25020](https://jira.nuxeo.com/browse/NXP-25020) and [NXP-25509](https://jira.nuxeo.com/browse/NXP-25509)
 
 
 #### Async adapter for Automation {{since '10.3'}}
