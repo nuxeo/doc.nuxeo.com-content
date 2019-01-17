@@ -203,6 +203,14 @@ Property "id" is now valid for a given schema, stored as id_ in the SQL database
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26401](https://jira.nuxeo.com/browse/NXP-26401).
 
+#### Namespaced blob providers {{since '10.10'}}
+
+It's now possible to request a blob provider where there hasn't been any explicit configuration for it, using BlobManager.getBlobProviderWithNamespace(id). If there is no blob provider configured for this id, then the default one will be used, although using a namespace based on the id to avoid collisions.
+For the filesystem-based blob provider, if the default is stored in .../data/binaries/... then a namespaced provider for myid will be stored in .../data/binaries_myid/...
+For the S3 blob provider, the binaries of a namespaced provider myid will be stored in a S3 "subfolder" named myid/ under the storage for default. Azure works similarly.
+Also, a blob provider whose name starts with transient will automatically be flagged as transient (see NXP-24421) to avoid manual configuration.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26594](https://jira.nuxeo.com/browse/NXP-26594).
 
  <!--- ### Core Events  -->
 
@@ -1406,6 +1414,12 @@ Nuxeo.Performance.report({networkStats: true});
 
 [NXP-24451](https://jira.nuxeo.com/browse/NXP-24451) and [NXP-24445](https://jira.nuxeo.com/browse/NXP-24445) Italian, Dutch and Swedish languages have been added to Web UI and Nuxeo Elements. {{since '10.1'}}
 [NXP-25112](https://jira.nuxeo.com/browse/NXP-25112). Adds Chinese simplified and Hebrew locales for Web UI. {{since '10.2'}}
+
+#### More Style Configuration {{since '10.10'}}
+
+The media CSS contains more properties to configure.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25344](https://jira.nuxeo.com/browse/NXP-25344).
 
 ### Nuxeo Elements {{> anchor 'nuxeo-elements'}}
 
