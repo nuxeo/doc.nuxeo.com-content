@@ -142,9 +142,15 @@ The following `nuxeo.conf` properties can be set to define appropriate TLS/SSL c
 
 #### Maria DB 10.3.8 {{since '10.10'}}
 
-Maria DB 10.3.8 is the recomended MariaDB version for Nuxeo LTS 2019.
+MariaDB 10.3.8 is the recommended MariaDB version for Nuxeo LTS 2019.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25621](https://jira.nuxeo.com/browse/NXP-25621).
+
+#### Maria DB 10.3.8 {{since '10.10'}}
+
+MySQL 8.0.13 is the recommended MySQL version for Nuxeo LTS 2019.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25622](https://jira.nuxeo.com/browse/NXP-25622).
 
 #### More Secured AES Binary manager {{since '10.3'}}
 
