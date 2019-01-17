@@ -275,9 +275,9 @@ You can now use Avro Confluent format which is slightly different than the Avro 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25538](https://jira.nuxeo.com/browse/NXP-25538).
 
-#### Kafka 2.0 {{since '10.3'}}
+#### Kafka 2.1 {{since '10.10'}}
 
-The Nuxeo Platform now relies on Kafka 2.0
+The Nuxeo Platform now relies on Kafka 2.1
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25600](https://jira.nuxeo.com/browse/NXP-25600).
 
@@ -445,6 +445,16 @@ The `binaryTextUpdated` event now contains two properties of interest to know wh
 Thumbnails size has been set to 1000x1000 pixels (previously 350x350).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24717](https://jira.nuxeo.com/browse/NXP-24717).
+
+#### New RecomputeThumbnails operation available for administrators  {{since '10.10'}}
+
+An operation RecomputeThumbnails has been added for launching a recompute of the thumbnails.
+
+```
+curl -v -H 'Content-Type:application/json' -d '{"params": {"query": "SELECT * FROM Document WHERE ecm:mixinType = \"Thumbnail\" AND thumb:thumbnail/data IS NULL AND ecm:isVersion = 0 AND ecm:isProxy = 0 AND ecm:isTrashed = 0"}, "context": {}}' -u Administrator:Administrator http://localhost:8080/nuxeo/site/automation/RecomputeThumbnails
+```
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26282](https://jira.nuxeo.com/browse/NXP-26282).
 
 #### ConversionException {{since '10.3'}}
 
