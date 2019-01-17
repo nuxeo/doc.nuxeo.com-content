@@ -422,6 +422,12 @@ The aggregations are explained in more detail on [Elasticsearch Documentation](h
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25827](https://jira.nuxeo.com/browse/NXP-25827).
 
+####  QueryString with with aggregates {{since '10.10'}}
+
+buildQueryStringWithAggregates() method was added to PageProviderHelper class to get the query played by the page provider including the aggregates filtering.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26366](https://jira.nuxeo.com/browse/NXP-26366).
+
 #### Some Built-In Page Providers Moved to Elasticsearch {{since '10.1'}}
 
 `REST_API_SEARCH_ADAPTER` and `all_collections` page providers have been added to the default list of page providers provided by Elasticsearch. If you have defined your own `elasticsearch.override.pageproviders` then it is recommended to add those two to your list.
@@ -1740,6 +1746,11 @@ The FS Exporter addon that allows to easily perform exports of the repository as
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25846](https://jira.nuxeo.com/browse/NXP-25846).
 
+### Keycloack addon {{since '10.10'}}
+
+The Keycloack addon (available on github) used for integrating with the identity management solution has been upgraded to be compatible with a recent version of Keycloack , the 4.6.0. This one is a community contribution made by Laurent, a former Nuxeoer (and former release notes author ;)) Thank you Laurent! ;)
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26342](https://jira.nuxeo.com/browse/NXP-26342).
 
 ## Deprecation
 
