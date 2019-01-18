@@ -81,9 +81,8 @@ history:
         version: '1'
 ---
 
-{{#> callout type='info' heading='Watch the related courses on Nuxeo University'}}
-[Expert Session on External Templates](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils).
-![]({{file version='' space='nxdoc' page='university' name='university-external-template.png'}} ?w=450,border=true)
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University<br>[Expert Session on External Templates](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils).![]({{file version='' space='nxdoc' page='university' name='university-external-template.png'}} ?w=450,border=true)
 {{/callout}}
 
 **To import an Application Template:**
@@ -91,10 +90,10 @@ history:
 {{! multiexcerpt name='application-template-import'}}
 
 1.  Go to **Configuration** > **External Templates**
-    All the available templates are displayed. If a template is not compatible with your project target version (ex: Nuxeo DM 5.4.0, Nuxeo DM 5.4.2), it is displayed with a little sign ![]({{file name='unabled_small.png'}} ?w=16,h=16) that says "not compatible".
+    All the available templates are displayed. If this icon ![]({{file name='unabled_small.png'}} ?w=16,h=16) is displayed, the template is not compatible with your project target version (ex: Nuxeo Platform 10.10.0).
 
-2.  Click on the **Details** link of the template that you're interested in to check what the template includes.
-    A window pops up that displays the list of all elements the template includes: definition of new documents, automation chains, etc, new icons and images, new widgets...
+2.  Click on **Details** to check what the template that you're interested in includes.
+    A pop-up displays the list of all elements the template includes: definition of new documents, automation chains, icons, images, widgets...
     {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Using Application Templates/Application Template details
     name: STUDIO_application_template_details.png
@@ -102,20 +101,20 @@ history:
     --}}
     ![Application Template details ](nx_asset://a9c5181c-0426-47be-924a-d60a21595afb ?w=350,border=true)
 3.  Click on **Import this package**.
-4.  On the confirmation window that pops up, click on **OK**.
-    A feedback window pops up to indicate that the import was successful.
+4.  On the confirmation window, click on **OK**.<br>
+    A pop-up appears, indicating that the import was successful.
     {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Using Application Templates/Application Template Imported
     name: STUDIO_application_template_imported.png
     studio_modeler#screenshot#up_to_date
     --}}
     ![Application Template Imported](nx_asset://f6b1df76-9744-4bf7-b67c-14da77c957b7 ?w=350,border=true)
-5.  Click on **OK**.
+5.  Click on **OK**.<br>
     The icon ![]({{file name='STUDIO_tick_icon.png'}} ?w=18,h=16) is displayed next to the imported template, indicating that this template has been imported.
-    Your project is reloaded with all the template's features. You can now browse your project with the new imported features and edit them. If you modify something, Studio will tell you that you broke some other configuration by displaying the errors, and you'll be able to adapt every dependent thing. Also you'll be able to rename the imported features if you need.
+    Your project is reloaded with all the template's features.You can now browse your project with the new imported features and edit them.<br>
+    If you modify something, Studio will indicate you that you broke some other configuration by displaying the errors, and you'll be able to adapt every dependent item. Also you'll be able to rename the imported features if needed.
 
 {{! /multiexcerpt}} {{#> callout type='info' heading='Using several application templates'}}
-
 Some templates declare the same object. For instance two templates can declare the "Folder" document type. In that case, Nuxeo Studio will refuse to import the second template until you rename the previous object, to avoid collision.
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Using Application Templates/Application Template Import Result
@@ -123,5 +122,4 @@ Some templates declare the same object. For instance two templates can declare t
     studio_modeler#screenshot#up_to_date
 --}}
 ![Application Template Import Result](nx_asset://698b4766-899d-4876-a33c-e9a191bb297d ?w=350,border=true)
-
 {{/callout}}
