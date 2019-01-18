@@ -11,7 +11,7 @@ hidden: true
 ---
 {{! multiexcerpt name='studio-updates-2019-01'}}
 
-## January 2019 - Upcoming Changes
+## Upcoming Changes
 
 ### Studio Designer Interface Improvements
 
