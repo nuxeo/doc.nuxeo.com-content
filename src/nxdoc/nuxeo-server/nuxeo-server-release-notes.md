@@ -33,7 +33,7 @@ As an example, here is the AvroComponent written [before](https://github.com/nux
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25186](https://jira.nuxeo.com/browse/NXP-25186)
 
-#### Duration type in descriptors {{since '10.3'}}
+#### Duration Type in Descriptors {{since '10.3'}}
 
 You can now use Duration type into your descriptors.
 Nuxeo handles the JDK Duration format (PT10M, PT200S, PT0.500S) or a specific format for days, hours, minutes, seconds and milliseconds (10m, 200s, 500ms).
@@ -74,7 +74,7 @@ The enricher hasContent adds a boolean property "hasContent" to let the client k
 
 #### No Mention of the Repository on a Document Reference {{since '10.2'}}
 
-When referencing a document in a property, we don't need anymore to store the repository id. If the repository id is not there, the same as the referencing document is chosen.
+When referencing a document in a property, we don't need anymore to store the repository id. If the repository id is not there, the same as the referencing document is chosen.</br>
 The following two `documentResolver` restrictions with `idOnly` and `pathOnly` can be used for this:
 
 ```
@@ -128,7 +128,7 @@ Nuxeo DBS MongoDB implementation is now compatible and continuously tested with 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25620](https://jira.nuxeo.com/browse/NXP-25620).
 
-#### MongoDB Client TrustStore for in-flight encryption {{since '10.3'}}
+#### MongoDB Client TrustStore for In-Flight Encryption {{since '10.3'}}
 
 The following `nuxeo.conf` properties can be set to define appropriate TLS/SSL configuration for MongoDB:
 `nuxeo.mongodb.ssl=true`
@@ -143,25 +143,25 @@ The following `nuxeo.conf` properties can be set to define appropriate TLS/SSL c
 
 #### PostgreSQL 11 {{since '10.10'}}
 
-PostgreSQL 11 is the recommended PostgreSQL Server version for Nuxeo LTS 2019.
+PostgreSQL 11 is the recommended PostgreSQL Server version for Nuxeo Platform LTS 2019.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25625](https://jira.nuxeo.com/browse/NXP-25625).
 
 #### Maria DB 10.3.8 {{since '10.10'}}
 
-MariaDB 10.3.8 is the recommended MariaDB version for Nuxeo LTS 2019.
+MariaDB 10.3.8 is the recommended MariaDB version for Nuxeo Platform LTS 2019.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25621](https://jira.nuxeo.com/browse/NXP-25621).
 
 #### MySQL 8.0.13 {{since '10.10'}}
 
-MySQL 8.0.13 is the recommended MySQL version for Nuxeo LTS 2019.
+MySQL 8.0.13 is the recommended MySQL version for Nuxeo Platform LTS 2019.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25622](https://jira.nuxeo.com/browse/NXP-25622).
 
 #### MS SQL Server 2017 {{since '10.10'}}
 
-MS SQL Server 2017 is the recommended Microsoft SQL Server version for Nuxeo LTS 2019.
+MS SQL Server 2017 is the recommended Microsoft SQL Server version for Nuxeo Platform LTS 2019.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25624](https://jira.nuxeo.com/browse/NXP-25624).
 
@@ -204,12 +204,15 @@ Property "id" is now valid for a given schema, stored as id_ in the SQL database
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26401](https://jira.nuxeo.com/browse/NXP-26401).
 
-#### Namespaced blob providers {{since '10.10'}}
+#### Namespaced Blob Providers {{since '10.10'}}
 
-It's now possible to request a blob provider where there hasn't been any explicit configuration for it, using BlobManager.getBlobProviderWithNamespace(id). If there is no blob provider configured for this id, then the default one will be used, although using a namespace based on the id to avoid collisions.
-For the filesystem-based blob provider, if the default is stored in .../data/binaries/... then a namespaced provider for myid will be stored in .../data/binaries_myid/...
-For the S3 blob provider, the binaries of a namespaced provider myid will be stored in a S3 "subfolder" named myid/ under the storage for default. Azure works similarly.
-Also, a blob provider whose name starts with transient will automatically be flagged as transient (see NXP-24421) to avoid manual configuration.
+It's now possible to request a blob provider where there hasn't been any explicit configuration for it, using `BlobManager.getBlobProviderWithNamespace(id)`. If there is no blob provider configured for this id, then the default one will be used, although using a namespace based on the id to avoid collisions.
+
+For the filesystem-based blob provider, if the default is stored in `.../data/binaries/...` then a `namespaced` provider for myid will be stored in `.../data/binaries_myid/...`
+
+For the S3 blob provider, the binaries of a namespaced provider `myid` will be stored in a S3 "subfolder" named `myid/` under the storage for `default`. Azure works similarly.
+
+Also, a blob provider whose name starts with transient will automatically be flagged as transient (see [NXP-24421](https://jira.nuxeo.com/browse/NXP-24421)) to avoid manual configuration.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26594](https://jira.nuxeo.com/browse/NXP-26594).
 
@@ -236,7 +239,6 @@ Multi-tenant addon now supports tenant-isolated directories with MongoDB
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22682](https://jira.nuxeo.com/browse/NXP-22682)
 
-
 #### Same Directory Entry ID on Different Tenants {{since '10.2'}}
 
 Unicity check on directory entry has been moved post tenant-specific computation, so that same end user id can be used in two different tenants.
@@ -255,13 +257,11 @@ It is now possible to filter directories values on a given column value, so as t
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25299](https://jira.nuxeo.com/browse/NXP-25299)
 
-
-#### Directories are initialized at startup {{since '10.10'}}
+#### Directories Are Initialized at Startup {{since '10.10'}}
 
 Directories were lazy-initialized at first use, they are now initialized at startup to prevent from using the repository if there is some inconsistencies in some directories configuration.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26380](https://jira.nuxeo.com/browse/NXP-26380)
-
 
 ### Workflow
 
@@ -479,7 +479,7 @@ Thumbnails size has been set to 1000x1000 pixels (previously 350x350).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24717](https://jira.nuxeo.com/browse/NXP-24717).
 
-#### New RecomputeThumbnails operation available for administrators  {{since '10.10'}}
+#### New RecomputeThumbnails Operation Available for Administrators {{since '10.10'}}
 
 An operation RecomputeThumbnails has been added to let Administrators regenerate thumbnails.
 
@@ -513,6 +513,7 @@ ecm:isTrashed = 0 AND ecm:parentId IS NOT NULL
 ```
 
 It is made more robust to plurals, etc.
+
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-18198](https://jira.nuxeo.com/browse/NXP-18198).
 
 ### Elasticsearch
@@ -576,7 +577,7 @@ Actions can be contributed via an extension point. [A few actions](https://doc.n
 It is also possible to run a bulk command on a page provider using the REST API:
 
 | HTTP Method | Path |Request Body | Response |
-------|-------|------| ------| ---|------------|
+|-------------|------|-------------| ---------|
 | POST| `/nuxeo/api/v1/search/bulk/{actionId}` | Bulk action parameters | Bulk action status|
 | POST| `/nuxeo/api/v1/search/pp/{pageProviderName}/bulk/{actionId}` | Bulk action parameters | Bulk action status|
 | POST| `/nuxeo/api/v1/search/saved/{savedSearchId}/bulk/{actionId}` | Bulk action parameters | Bulk action status|
@@ -620,7 +621,7 @@ A migrator has been implemented, see migration notes.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25425](https://jira.nuxeo.com/browse/NXP-25425).
 
-#### REST API for the comment services {{since '10.3'}}
+#### REST API for the Comment Services {{since '10.3'}}
 
 New REST endpoints have been added for the comment service allowing on a document resource to post and retrieve comments. A comment has the following JSON representation:
 ```
@@ -638,6 +639,7 @@ New REST endpoints have been added for the comment service allowing on a documen
 ```
 
 See details about the endpoints on the linked ticket.
+
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24746](https://jira.nuxeo.com/browse/NXP-24746).
 
 #### New Method for Creating an Answer at a Specific Place {{since '10.2'}}
@@ -648,7 +650,7 @@ See details about the endpoints on the linked ticket.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24863](https://jira.nuxeo.com/browse/NXP-24863).
 
-#### External Comment Entity Facet
+#### External Comment Entity Facet {{since '10.3'}}
 
 To integrate with external collaboration tools, a new generic external comment facet has been added to the Comments addon, that allows to deal with comments that are managed by external systems: reference them and even serialise their content. This has been designed for now within the scope of the ARender integration.
 
@@ -719,22 +721,21 @@ To remove any post filtering actions, the usermanager component now makes use of
 
 When uploading content to Nuxeo using the multi-part/form-data way, no useless copy is made on the way, optimising drastically the upload performance with large videos when using this upload method.
 
-</br>
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24384](https://jira.nuxeo.com/browse/NXP-24384).
 
 ### User Registration
 
 #### Stronger Enforcement on Groups Validation for Newly Created Users {{since '10.1'}}
 
- Non-administrator users can only invite members from their own group(s).
+Non-administrator users can only invite members from their own group(s).
 
- <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24653](https://jira.nuxeo.com/browse/NXP-24653).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24653](https://jira.nuxeo.com/browse/NXP-24653).
 
 <!--- ### FileManager -->
 
 ### Redis
 
-#### Redis Activation Through a Template {{since '10.10'}}
+#### Redis Activation {{since '10.10'}}
 
 Previously, it was enough to do:
 
@@ -743,6 +744,8 @@ Previously, it was enough to do:
 But now a Redis template must be added instead:
 
 `nuxeo.templates=default,...,redis`
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26553](https://jira.nuxeo.com/browse/NXP-26553).
 
 ### Key Value Store
 
@@ -826,6 +829,7 @@ A `KeyValueBlobTransientStore` can now specify the ids of the key/value store an
 #### Transient Stores with Different Names Now Use Different Storage {{since '10.10'}}
 
 To configure transient stores you can now just configure the default one. If an internal Nuxeo service requests a specific non-default one, its configuration will take into account the default configuration in addition to whatever (if anything) is configured for the specific one.
+
 For instance the default Nuxeo template now contains:
 ```
   <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent"  point="store">
@@ -844,20 +848,22 @@ For instance the default Nuxeo template now contains:
 ```
 
 This shows that the implementation class needs to be defined only once in the default configuration, and other configurations can override some parameters if needed.
+
 As a further example, when the Redis template is enabled and you explicitely set `nuxeo.transientstore.provider=redis` (which is _not_ the default), then the following is added automatically and is enough to switch all transient stores to the new class (unless a specific _non-default_ transient store has defined its own class):
 
 ```
   <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent" point="store">
     <store name="default" class="org.nuxeo.ecm.core.redis.contribs.RedisTransientStore"/>
   </extension>
-  ```
+```
+
 In addition, if a `KeyValueBlobTransientStore` is configured without an explicit `<keyValueStore>` or `<blobProvider>`, it will automatically use a key/value store or blob provider named `transient_` followed by the transient store id.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26581](https://jira.nuxeo.com/browse/NXP-26581).
 
 ### Authentication
 
-#### Stateless authentication with JWT tokens {{since '10.3'}}
+#### Stateless Authentication with JWT Tokens {{since '10.3'}}
 
 There is a new Java API to acquire a JWT token to authorize a user:
 
@@ -874,7 +880,7 @@ This solution is compatible with cluster installations.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24734](https://jira.nuxeo.com/browse/NXP-24734).
 
-#### SAML Authentication working with LDAP directories {{since '10.3'}}
+#### SAML Authentication Working with LDAP Directories {{since '10.3'}}
 
 Two new parameters are now available when configuring SAML authentication plugin:
 - `userResolverCreateIfNeeded` to create the user if it does not exist in the repository (default value is true)
@@ -883,21 +889,22 @@ When set to true, both parameters require a user directory that is not read-only
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25062](https://jira.nuxeo.com/browse/NXP-25062).
 
-
-#### SAML: time skew support {{since '10.2'}}
+#### SAML: Time Skew Support {{since '10.2'}}
 
 A new `nuxeo.saml2.skewTimeMs` configuration property to control the clock skew in milliseconds has been introduced. Default value is 60 * 1000 (1 minute).
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24766](https://jira.nuxeo.com/browse/NXP-24766).
 
-#### Stronger digest for PORTAL_AUTH plugin {{since '10.3'}}
+#### Stronger Digest for PORTAL_AUTH Plugin {{since '10.3'}}
 
-It is now possible to configure the algorithm used for the digest among the list given [here](The algorithm used must be one of those described in https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#MessageDigest). Previously, MD5 was systematically used>.
- `<parameter name="digestAlgorithm">SHA-512<parameter>`
+It is now possible to configure the algorithm used for the digest among the list given [here](https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#MessageDigest). Previously, MD5 was systematically used>.
+```
+<parameter name="digestAlgorithm">SHA-512<parameter>
+```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25887](https://jira.nuxeo.com/browse/NXP-25887).
 
-#### Callback URL on logout {{since '10.3'}}
+#### Callback URL on Logout {{since '10.3'}}
 
 A new `callbackUrl` parameter has been added to the logout URL so that if the authentication plugin doesn't provide a redirect, that URL is the one used for the redirect.
 
@@ -911,11 +918,12 @@ A new `callbackUrl` parameter has been added to the logout URL so that if the au
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24532](https://jira.nuxeo.com/browse/NXP-24532).
 
-#### Nuxeo REST API now consumes application/json {{since '10.3'}}
+#### Nuxeo REST API Now Consumes Application/JSON {{since '10.3'}}
 
-The REST API now produces and consumes only application/json as content type. `application/json+nxentity` is now never returned as content type response; the server does not expect it as content type request.
-- application/json+nxrequest content type should not be used anymore. It still works but it's deprecated server side. application/json should be used instead when POSTing to automation.
-application/json+esentity which was never used has also been removed.
+The REST API now produces and consumes only `application/json` as content type:
+- `application/json+nxentity` is now never returned as content type response; the server does not expect it as content type request.
+- `application/json+nxrequest` content type should not be used anymore. It still works but it's deprecated server side. `application/json` should be used instead when POSTing to automation.
+- `application/json+esentity` which was never used has also been removed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25036](https://jira.nuxeo.com/browse/NXP-25036).
 
@@ -957,7 +965,6 @@ A generic JSON decoder has been implemented for managed blobs.
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24925](https://jira.nuxeo.com/browse/NXP-24925).
 <!--- ### Migration Service -->
 
-
 #### Key/Value Store: Increment API {{since '10.2'}}
 
 New APIs are available on `KeyValueStore`.
@@ -979,7 +986,6 @@ A new service has been added for performing CSV Exports. It is exposed via the B
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25571](https://jira.nuxeo.com/browse/NXP-25571).
 
-
 ### AWS Service {{since '10.3'}}
 
 A new service has been added to retrieve credentials and other configurations information.
@@ -992,13 +998,13 @@ Two new methods are then available to retrieve the information in the code:
 - `NuxeoAWSCredentialsProvider.getInstance()`
 - `NuxeoAWSRegionProvider.getInstance().getRegion()`
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25075](https://jira.nuxeo.com/browse/NXP-25075.
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25075](https://jira.nuxeo.com/browse/NXP-25075).
 
 ### Packaging/Distribution/Miscellaneous
 
 #### Java 11 Support {{since '10.3'}}
 
-Nuxeo LTS 2019 is supported on Java 8 and Java 11.
+Nuxeo Platform LTS 2019 is supported on Java 8 and Java 11.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24210](https://jira.nuxeo.com/browse/NXP-24210).
 
@@ -1014,7 +1020,6 @@ You will find more information on the required flow on the linked ticket below.
 CSRF tokens allow to have deep protection against attacks of the system.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25903](https://jira.nuxeo.com/browse/NXP-25903).
-
 
 #### nuxeoctl register --offline {{since '10.3'}}
 
@@ -1080,13 +1085,14 @@ Required dependencies have been added so that it is possible to configure the lo
 
 #### JDK Check Enforced in nuxeoctl {{since '10.2'}}
 
-A check on the presence of a JDK per is enforced at startup in nuxeoctl
+A check on the presence of a JDK per is enforced at startup in nuxeoctl.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-21200](https://jira.nuxeo.com/browse/NXP-21200).
 
 #### Target Platform Filtering on `mp-listall` Command {{since '10.3'}}
 
 `mp-listall` command has been optimized by listing only relevant packages for the version of the Nuxeo server it is run on.
+
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-22520](https://jira.nuxeo.com/browse/NXP-22520).
 
 #### Tomcat Upload Time Configurable {{since '10.3'}}
@@ -1099,7 +1105,8 @@ Default Tomcat `connectionUploadTimeout` has been set to 1 min and is now config
 
 It is now possible to contribute rules to Tomcat Rewrite Valve by leveraging our deployment preprocessor.
 
-Ex (deployment-fragment.xml):
+Ex:
+deployment-fragment.xml
 ```
 <?xml version="1.0"?>
 <fragment version="1">
@@ -1148,8 +1155,8 @@ session.config.tracking.mode.cookie=true
 
 If the `COOKIE` mode is:
 
-**enabled**: the `jsessionid` parameter will never be appended to the URLs. Yet, cookies need to be enabled in the brower.
-**disabled**: the `jsessionid` parameter might be appended to some URLs, for instance when sharing a document permalink to an anonymous user or when clearing the browser's cookies. Yet, cookies don't need to be enabled in the browser.
+- **enabled**: the `jsessionid` parameter will never be appended to the URLs. Yet, cookies need to be enabled in the brower.
+- **disabled**: the `jsessionid` parameter might be appended to some URLs, for instance when sharing a document permalink to an anonymous user or when clearing the browser's cookies. Yet, cookies don't need to be enabled in the browser.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-16398](https://jira.nuxeo.com/browse/NXP-16398)
 
@@ -1843,14 +1850,30 @@ The Keycloack addon (available on GitHub) used for integrating with the identity
 
 ## Deprecation
 
-### Marklogic
+### Nuxeo JSF UI {{since '10.10'}}
 
-The Marklogic connector is now deprecated.
+The Nuxeo JSF UI addon is deprecated.
+
+### Marklogic {{since '10.10'}}
+
+The Marklogic Persistence Engine addon is deprecated.
+
+### Nuxeo For Salesforce {{since '10.10'}}
+
+The Nuxeo for Salesforce addon is deprecated. A new connector will be done to fit the new salesforce's UI.
+
+### Nuxeo Media Publishing {{since '10.10'}}
+
+The Nuxeo Media Publishing addon is deprecated.
 
 ## Farewell
 
 ### WebEngine GWT Integration {{since '10.1'}}
 
-The WebEngine GWT Integration that used for the former annotations system has been removed.
+The WebEngine GWT Integration that was used for the former annotations system has been removed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24317](https://jira.nuxeo.com/browse/NXP-24317).
+
+### Nuxeo Edge Cache {{since '10.10'}}
+
+The Nuxeo Edge Cache addon has been removed.
