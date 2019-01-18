@@ -11,6 +11,7 @@ tree_item_index: 730
 
 Discover the changes we brought in our latest Nuxeo Studio updates.
 
+# January
 
 {{{multiexcerpt 'studio-updates-2019-01' page='studio-updates-2019-01'}}}
 
@@ -22,7 +23,7 @@ Discover the changes we brought in our latest Nuxeo Studio updates.
 
 ## Previous Release Notes
 
-| Release Date  | Summary  |
+| Release&nbsp;Date  | Summary  |
 |---|---|
 |[December 2018]({{page page='2018-12-12-studio-3-2-0'}})|  Faster layouts configuration.|
 |[November 2018]({{page page='2018-11-26-studio-3-1-0'}})| Firefox support for Studio Designer, performance improvements, drag and drop schema properties in Studio Designer and information about your subscription status.|
