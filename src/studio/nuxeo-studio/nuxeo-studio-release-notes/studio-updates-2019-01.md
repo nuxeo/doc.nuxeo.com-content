@@ -15,25 +15,26 @@ hidden: true
 
 ### Studio Designer Interface Improvements
 
-Layouts and UI menus in Studio Designer merged into a single one to provide greater consistency with Studio modeler and an easier user experience.
+Layouts and UI menus in Studio Designer are now merged into a single menu to be more consistent with Studio Modeler and provide an smoother user experience.
 
 Menus change as following:
-- `Layouts` are moved into a menu option and closed by default
+- `Layouts` are integrated as menu option (non-expanded by default).
 
 ![Layouts Change]({{file name='layouts-menu-change.png' page='studio-updates-2019-01'}})
 
-- `Document Pages` entry is renamed as `Tabs`
+- The former `Document Pages` entry becomes `Tabs`.
 
 ![Document Pages Change]({{file name='document-pages-change.png' page='studio-updates-2019-01'}})
 
-- `Left Menu Items` and `Main Menu Pages` are merged into a dedicated `Drawer` menu
+- `Left Menu Items` and `Main Menu Pages` are merged into a dedicated `Drawer` menu.
 
 ![Left Menu Items Change]({{file name='left-menu-items-change.png' page='studio-updates-2019-01'}})
 
 ### New Forms Menu in Studio Designer
-This menu will let you create reusable sets of properties, that can be used in your layouts afterwards. For example you could define a form where you would change the elements configuration, then make sure these changes apply to all your document type layouts by reusing it.
+This menu will let you create reusable sets of properties, that can be used in your layouts afterwards.
+<br>For example, you could define a form where you would change the elements configuration, then make sure these changes apply to all your document type layouts by reusing it.
 
-At this stage forms can only be used when switching to code in a layout. A future update will allow them to be dropped from the catalog in the visual configuration mode as well.
+At this stage forms can only be used when switching to code in a layout. A future update will allow them to be dragged and dropped from the catalog in the visual editor mode as well.
 
 ### Increased Scope for JSF UI to Web UI Migration Tool
 JSF UI form layouts are migrated as forms in Studio Designer.
@@ -45,7 +46,7 @@ Some actions found in the header today will be moved into a new status bar at th
 
 Some changes will also happen to the Git actions at the same time:
 - All conflicts will be visible at once so you can better understand the result of merging a branch.
-- In advanced mode, commit and push actions will be separated so that we can show you what commits you will push and what they contain before you decide to do it or not.
+- In advanced mode, commit and push actions will be separated so that we can display the commits you will push and what they contain before you decide to do it or not.
 
 ### Other Upcoming Improvements and Bugfixes
 
