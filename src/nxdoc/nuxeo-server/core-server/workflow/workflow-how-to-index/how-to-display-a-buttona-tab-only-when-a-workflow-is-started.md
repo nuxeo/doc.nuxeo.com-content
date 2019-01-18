@@ -88,7 +88,7 @@ history:
 
 # Web UI
 
-When fetching a document through the [Rest API]({{page page='rest-api'}}), you can use the [runningWorkflows enricher]({{page page='content-enrichers#runningWorkflows'}}) and check that `document.contextParameters.runningWorkflows` is not empty to conditionally display a [Tab]({{page page='how-to-new-pill'}}) or an [Action]({{page page='how-to-insert-user-action'}}).
+When fetching a document through the [Rest API]({{page page='rest-api'}}), you can use the [runningWorkflows enricher]({{page page='content-enrichers#runningWorkflows'}}) and check that `document.contextParameters.runningWorkflows` is not empty to conditionally display a [Tab]({{page page='how-to-new-tab'}}) or an [Action]({{page page='how-to-insert-user-action'}}).
 
 # JSF UI
 

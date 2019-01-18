@@ -32,7 +32,7 @@ Tutorials have been created to let you discover the basics of Web UI configurati
 - [HOWTO: Customize Document Layouts]({{page version='' space='nxdoc' page='web-ui-document-layouts'}})
 - [HOWTO: Customize Workflow Tasks]({{page version='' space='nxdoc' page='web-ui-workflow-tasks'}})
 - [HOWTO: Configure Searches]({{page version='' space='nxdoc' page='web-ui-search'}})
-- [HOWTO: Insert a New Tab]({{page version='' space='nxdoc' page='how-to-new-pill'}})
+- [HOWTO: Insert a New Tab]({{page version='' space='nxdoc' page='how-to-new-tab'}})
 - [HOWTO: Insert a User Action]({{page version='' space='nxdoc' page='how-to-insert-user-action'}})
 - [HOWTO: Create and Reuse a Custom element]({{page version='' space='nxdoc' page='how-to-create-and-reuse-custom-element'}})
 {{/panel}}
