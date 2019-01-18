@@ -161,7 +161,7 @@ We strongly encourage you to follow these, especially if you are a beginner.
 
 - Use pascal case naming convention (initial uppercase letter).
   - Example: `PascalCase`
-- Avoid using hyphens (-), use underscore instead. Automation scripting cannot use items that contain hyphens.
+- Use underscore `_`, instead of hyphens `-`. Automation scripting doesn't work with items containing hyphens.
 
 ## Nuxeo Studio Modeler
 
