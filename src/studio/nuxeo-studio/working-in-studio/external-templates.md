@@ -81,24 +81,24 @@ history:
         version: '1'
 
 ---
-Nuxeo Studio includes an Application Templates library composed of Studio projects or samples that you can use as a basis for your own project. This enables you to import new document types, lifecycles, workflows, features in your project as a template that you can edit to adapt it to your project.
+{{! excerpt}}
+Nuxeo Studio includes an Application Templates library composed of Studio projects or samples that you can use as a basis for your own project. Application templates enable to import new document types, lifecycles, workflows, features in a project as a template that can be edited to fit your project.
+{{! /excerpt}}
 
-{{#> callout type='info' heading='Watch the related courses on Nuxeo University'}}
-[Expert Session on the Video Utils External Template](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils)</br> 
-[Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
+{{#> callout type='info'}}
+Watch the related courses on Nuxeo University<br>[Expert Session on the Video Utils External Template](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils)<br>[Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/External Template/University Videoutils
     name: university_videoutils.png
     studio_modeler#screenshot#up_to_date
---}}
-![University Videoutils](nx_asset://0c9da5ef-bbe6-4bcb-a243-340f048a0aa1 ?w=450,border=true)
+--}}![University Videoutils](nx_asset://0c9da5ef-bbe6-4bcb-a243-340f048a0aa1 ?w=450,border=true)
 {{/callout}}
 
-To make Nuxeo Studio discovery easier, we automatically import the [Default configuration]({{page space='Studio' page='Default configuration+templates'}}) template that corresponds to your target application when a Studio project is created. You can then see how the configuration is done and start your project from it.
+To make Nuxeo Studio discovery easier, we automatically import the [Default configuration template]({{page space='Studio' page='Default configuration+templates'}}) that fits your target application when a Studio project is created. You can then see how the configuration is done and start your project from it.
 
 In the Application Templates library, you will find very complex ready-to-use templates for complete function use cases (such as Human resources - Vacation request workflow) or some unitary cases, such as Custom Doc ID generation or Nuxeo School: Sending emails.
 
-For each application template you're displayed some a set of information:
+For each application template a set of information is displayed:
 
 *   **Project version**: The version number of the application template.
 *   **Target version**: The version of the Nuxeo Platform and possible add-ons required to install the template.
@@ -111,7 +111,6 @@ For each application template you're displayed some a set of information:
     studio_modeler#screenshot#up_to_date
 --}}
 ![Application Templates](nx_asset://5901fa85-4b6e-4030-8123-ce20c9441fd5 ?w=650,border=true)
-
 
 For more information about application templates you can see the page [Using Application Templates]({{page page='using-application-templates'}}) and [Default Configuration Templates]({{page page='default-configuration-templates'}}).
 
