@@ -1,8 +1,8 @@
 ---
-title: Nuxeo Server 10.3 Fast Track Release Notes
+title: Nuxeo Server LTS 2019 Release Notes
 review:
    comment: ''
-   date: '2018-12-06'
+   date: '2019-01-18'
    status: ok
 labels:
     - lts2017-ok
@@ -153,13 +153,13 @@ MariaDB 10.3.8 is the recommended MariaDB version for Nuxeo LTS 2019.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25621](https://jira.nuxeo.com/browse/NXP-25621).
 
-#### Maria DB 10.3.8 {{since '10.10'}}
+#### MySQL 8.0.13 {{since '10.10'}}
 
 MySQL 8.0.13 is the recommended MySQL version for Nuxeo LTS 2019.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25622](https://jira.nuxeo.com/browse/NXP-25622).
 
-#### MS SQL Server 2017{{since '10.10'}}
+#### MS SQL Server 2017 {{since '10.10'}}
 
 MS SQL Server 2017 is the recommended Microsoft SQL Server version for Nuxeo LTS 2019.
 
@@ -449,9 +449,9 @@ The aggregations are explained in more detail on [Elasticsearch Documentation](h
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25827](https://jira.nuxeo.com/browse/NXP-25827).
 
-####  QueryString with with aggregates {{since '10.10'}}
+#### QueryString with aggregates {{since '10.10'}}
 
-buildQueryStringWithAggregates() method was added to PageProviderHelper class to get the query played by the page provider including the aggregates filtering.
+`buildQueryStringWithAggregates()` method was added to `PageProviderHelper` class to get the query played by the page provider including the aggregates filtering.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26366](https://jira.nuxeo.com/browse/NXP-26366).
 
@@ -481,7 +481,7 @@ Thumbnails size has been set to 1000x1000 pixels (previously 350x350).
 
 #### New RecomputeThumbnails operation available for administrators  {{since '10.10'}}
 
-An operation RecomputeThumbnails has been added for launching a recompute of the thumbnails.
+An operation RecomputeThumbnails has been added to let Administrators regenerate thumbnails.
 
 ```
 curl -v -H 'Content-Type:application/json' -d '{"params": {"query": "SELECT * FROM Document WHERE ecm:mixinType = \"Thumbnail\" AND thumb:thumbnail/data IS NULL AND ecm:isVersion = 0 AND ecm:isProxy = 0 AND ecm:isTrashed = 0"}, "context": {}}' -u Administrator:Administrator http://localhost:8080/nuxeo/site/automation/RecomputeThumbnails
@@ -734,13 +734,13 @@ When uploading content to Nuxeo using the multi-part/form-data way, no useless c
 
 ### Redis
 
-#### Activating Redis is now done through a template.
+#### Redis Activation Through a Template {{since '10.10'}}
 
 Previously, it was enough to do:
 
 `nuxeo.redis.enabled=true`
 
-But now a redis template must be added instead:
+But now a Redis template must be added instead:
 
 `nuxeo.templates=default,...,redis`
 
@@ -754,7 +754,7 @@ The MongoDB template now makes use by default of the MongoDB implementations for
 
 #### SQL Implementation {{since '10.10'}}
 
- A new Key/Value Store based on SQL is available. To configure a server to use it, use:
+A new Key/Value Store based on SQL is available. To configure a server to use it, use:
 ```
    <extension target="org.nuxeo.runtime.kv.KeyValueService" point="configuration">
      <store name="default" class="org.nuxeo.ecm.core.storage.sql.kv.SQLKeyValueStore">
@@ -823,7 +823,7 @@ A `KeyValueBlobTransientStore` can now specify the ids of the key/value store an
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24847](https://jira.nuxeo.com/browse/NXP-24847).
 
 
-#### Transient stores with different names now use different storage {{since '10.10'}}
+#### Transient Stores with Different Names Now Use Different Storage {{since '10.10'}}
 
 To configure transient stores you can now just configure the default one. If an internal Nuxeo service requests a specific non-default one, its configuration will take into account the default configuration in addition to whatever (if anything) is configured for the specific one.
 For instance the default Nuxeo template now contains:
@@ -841,18 +841,17 @@ For instance the default Nuxeo template now contains:
       <secondLevelTTL>0</secondLevelTTL>
     </store>
   </extension>
-
-  ```
+```
 
 This shows that the implementation class needs to be defined only once in the default configuration, and other configurations can override some parameters if needed.
-As a further example, when the redis template is enabled and you exlicitely set nuxeo.transientstore.provider=redis (which is not the default), then the following is added automatically and is enough to switch all transient stores to the new class (unless a specific non-default transient store has defined its own class):
+As a further example, when the Redis template is enabled and you explicitely set `nuxeo.transientstore.provider=redis` (which is _not_ the default), then the following is added automatically and is enough to switch all transient stores to the new class (unless a specific _non-default_ transient store has defined its own class):
 
 ```
   <extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent" point="store">
     <store name="default" class="org.nuxeo.ecm.core.redis.contribs.RedisTransientStore"/>
   </extension>
   ```
-In addition, if a KeyValueBlobTransientStore is configured without an explicit <keyValueStore> or <blobProvider>, it will automatically use a key/value store or blob provider named transient_ followed by the transient store id.
+In addition, if a `KeyValueBlobTransientStore` is configured without an explicit `<keyValueStore>` or `<blobProvider>`, it will automatically use a key/value store or blob provider named `transient_` followed by the transient store id.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26581](https://jira.nuxeo.com/browse/NXP-26581).
 
@@ -1059,7 +1058,7 @@ The HSTS header is enabled by default when HTTPS is in use. It forces only HTTPS
 
 #### AWS Client Upgrade {{since '10.10'}}
 
-The Nuxeo Platform now uses version 1.11.468 of the Amazon SDK. This notably allows using AWS Comprehend and Sage services
+The Nuxeo Platform now uses version 1.11.468 of the Amazon SDK. This notably allows using AWS Comprehend and Sage services.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26570](https://jira.nuxeo.com/browse/NXP-26570).
 
@@ -1122,10 +1121,37 @@ Ex (deployment-fragment.xml):
 
 #### Tomcat 9.0.14 {{since '10.10'}}
 
-The LTS 2019 version of Nuxeo is aligned on Tomcat 9.0.14
+The LTS 2019 version of Nuxeo Platform is aligned on Tomcat 9.0.14.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26573](https://jira.nuxeo.com/browse/NXP-26573).
 
+##### Configure Tomcat to Enable Session Cookie Tracking {{since '10.2'}}
+
+Tomcat can be configured to enable session cookie tracking.
+
+Since 10.2, Tomcat is configured by default with the `COOKIE` session tracking mode.
+This prevents Tomcat from appending `jsessionid` to the URLs, for example a file download URL.
+
+In 10.2 and later, to disable the COOKIE tracking mode and keep Tomcat's out of the box configuration, set the following property in `nuxeo.conf`:
+```
+session.config.tracking.mode.cookie=false
+```
+
+In 9.10-HF12, 8.10-HF33 and 7.10-HF43, the previous behavior is kept.</br>
+
+The new behavior can be enabled by setting:
+```
+session.config.tracking.mode.cookie=true
+```
+
+**Session tracking mode implications**
+
+If the `COOKIE` mode is:
+
+**enabled**: the `jsessionid` parameter will never be appended to the URLs. Yet, cookies need to be enabled in the brower.
+**disabled**: the `jsessionid` parameter might be appended to some URLs, for instance when sharing a document permalink to an anonymous user or when clearing the browser's cookies. Yet, cookies don't need to be enabled in the browser.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-16398](https://jira.nuxeo.com/browse/NXP-16398)
 
 #### Multi-Region Replication {{since '10.2'}}
 
@@ -1765,11 +1791,11 @@ You may want to recompute your stored image renditions when you change the resol
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25791](https://jira.nuxeo.com/browse/NXP-25791).
 
-#### Support for Digital Moving-Picture Exchange (DPX) Format  {{since '10.10'}}
+#### Support for DPX, MXF and GXF Video Format {{since '10.10'}}
 
-DPX files (video production format) are now supported, including dragn'drop (recognized as a video) and thumbnail generation.
+DPX (Digital Moving-Picture Exchange), MXF (Material Exchange Format) and GXF (General Exchange Format) files (video production format) are now supported, including drag and drop (recognized as a video) and thumbnail generation.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26448](https://jira.nuxeo.com/browse/NXP-26448).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXP-26448](https://jira.nuxeo.com/browse/NXP-26448) and [NXP-25896](https://jira.nuxeo.com/browse/NXP-25896).
 
 ### Nuxeo Vision
 
@@ -1809,9 +1835,9 @@ The FS Exporter addon that allows to easily perform exports of the repository as
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-25846](https://jira.nuxeo.com/browse/NXP-25846).
 
-### Keycloack addon {{since '10.10'}}
+### Keycloack Addon {{since '10.10'}}
 
-The Keycloack addon (available on github) used for integrating with the identity management solution has been upgraded to be compatible with a recent version of Keycloack , the 4.6.0. This one is a community contribution made by Laurent, a former Nuxeoer (and former release notes author ;)) Thank you Laurent! ;)
+The Keycloack addon (available on GitHub) used for integrating with the identity management solution has been upgraded to be compatible with the 4.6.0 recent version of Keycloack.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-26342](https://jira.nuxeo.com/browse/NXP-26342).
 
