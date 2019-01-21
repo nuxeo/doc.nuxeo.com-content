@@ -13,7 +13,7 @@ tree_item_index: 250
 
 ---
 The document actions toolbar displays all the actions available for the current document.
-![]({{file name='document-action-toolbar.png'}} ?w=650,border=true)
+![]({{file page='document-actions' name='document-action-toolbar.png'}} ?w=650,border=true)
 
 ## Compare
 
