@@ -4,7 +4,7 @@ description: .
 tree_item_index: 981
 review:
   comment: ''
-  date: '2019-01-17'
+  date: '2019-01-21'
   status: ok
 toc: true
 hidden: true
@@ -12,23 +12,6 @@ hidden: true
 {{! multiexcerpt name='studio-updates-2019-01'}}
 
 ## Upcoming Changes
-
-### Studio Designer Interface Improvements
-
-Layouts and UI menus in Studio Designer are now merged into a single menu to be more consistent with Studio Modeler and provide an smoother user experience.
-
-Menus change as following:
-- `Layouts` are integrated as menu option (non-expanded by default).
-
-![Layouts Change]({{file name='layouts-menu-change.png' page='studio-updates-2019-01'}})
-
-- The former `Document Pages` entry becomes `Tabs`.
-
-![Document Pages Change]({{file name='document-pages-change.png' page='studio-updates-2019-01'}})
-
-- `Left Menu Items` and `Main Menu Pages` are merged into a dedicated `Drawer` menu.
-
-![Left Menu Items Change]({{file name='left-menu-items-change.png' page='studio-updates-2019-01'}})
 
 ### New Forms Menu in Studio Designer
 This menu will let you create reusable sets of properties, that can be used in your layouts afterwards.
@@ -52,8 +35,31 @@ Some changes will also happen to the Git actions at the same time:
 
 - Blob fields are properly handled in workflow tasks layouts ([NXS-5023](https://jira.nuxeo.com/browse/NXS-5023)).
 - Workflows task drawing is correctly handled ([NXS-4682](https://jira.nuxeo.com/browse/NXS-4682)).
-- Tags can be pushed using Git access ([NXS-4882](https://jira.nuxeo.com/browse/NXS-4882)).
 - A warning is given when you create a query using the deprecated trash management behavior in content views ([NXS-5054](https://jira.nuxeo.com/browse/NXS-5054)).
+
+## Released changes
+
+### Studio Designer Interface Improvements
+
+Layouts and UI menus in Studio Designer are now merged into a single menu to be more consistent with Studio Modeler and provide an smoother user experience.
+
+Menus change as following:
+- `Layouts` are integrated as menu option (non-expanded by default).
+
+![Layouts Change]({{file name='layouts-menu-change.png' page='studio-updates-2019-01'}})
+
+- The former `Document Pages` entry becomes `Tabs`.
+
+![Document Pages Change]({{file name='document-pages-change.png' page='studio-updates-2019-01'}})
+
+- `Left Menu Items` and `Main Menu Pages` are merged into a dedicated `Drawer` menu.
+
+![Left Menu Items Change]({{file name='left-menu-items-change.png' page='studio-updates-2019-01'}})
+
+### Noteworthy Improvements and Bugfixes
+
+- Tags can be pushed using Git access ([NXS-4882](https://jira.nuxeo.com/browse/NXS-4882)).
+- Default layouts are not generated when missing ([NXS-5078](https://jira.nuxeo.com/browse/NXS-5078)).
 
 {{! /multiexcerpt}}
 
