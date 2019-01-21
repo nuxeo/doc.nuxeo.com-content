@@ -37,7 +37,7 @@ Some changes will also happen to the Git actions at the same time:
 - Workflows task drawing is correctly handled ([NXS-4682](https://jira.nuxeo.com/browse/NXS-4682)).
 - A warning is given when you create a query using the deprecated trash management behavior in content views ([NXS-5054](https://jira.nuxeo.com/browse/NXS-5054)).
 
-## Released changes
+## Released Changes
 
 ### Studio Designer Interface Improvements
 
