@@ -3,7 +3,7 @@ title: Nuxeo Annotations with ARender
 description: 'The Nuxeo Annotations with ARender addon allows users to preview and annotate any content stored in the Nuxeo repository: Office documents, PDF, images, videos with the ARender previewer, from Arondor.'
 review:
     comment: ''
-    date: '2019-07-18'
+    date: '2019-01-21'
     status: ok
 labels:
     - arender-connector
@@ -30,16 +30,18 @@ Here's a chart describing actions during first connection to ARender:
 
 There're several ways to install ARender software.
 
-You can install both piece directly on dedicated hosts by following [ARender Documentation](https://arender.io/doc/current4/documentation/setup/index-setup.html). Don't forget to take ARender previewer on our [Nexus](https://mavenpriv.nuxeo.com/nexus/#nexus-search;quick~nuxeo-arender-connector-hmi) in order to leverage the connector between ARender previewer and Nuxeo.
+To ease deployment, Nuxeo provides two Docker images, one for each piece of ARender software: `arender-previewer` and `arender-rendition`.
 
-To ease deployment, Nuxeo provides two Docker images, one for each piece of ARender software:
-- `dockerin-arender.nuxeo.com:443/arender-previewer`
-- `dockerin-arender.nuxeo.com:443/arender-rendition`
+{{#> callout type='warning' heading='Private addon'}}
+You should contact your Nuxeo Administrator or your Nuxeo sales representative to get access to these images.
+{{/callout}}
 
 {{#> callout type='info' heading='Docker Images Version'}}
 Docker images have the same version than marketplace packages.
 You should always use same version for docker images and marketplace package.
 {{/callout}}
+
+You can also install both piece directly on dedicated hosts by following [ARender Documentation](https://arender.io/doc/current4/documentation/setup/index-setup.html). Don't forget to take the ARender previewer in order to leverage the connector between ARender previewer and Nuxeo.
 
 All communications are made over HTTP, we recommend usage of HTTPS for production. Below are the ports of each piece:
 - previewer is reachable on port 8080 when exposed directly by Tomcat, we recommend to setup an Apache or Nginx in front of it
@@ -50,28 +52,15 @@ Below the needed communication (for firewall rules/docker network setup):
 - ARender previewer needs to reach ARender rendition
 - ARender previewer needs to reach Nuxeo
 
-
-{{#> callout type='warning' heading='Prerequisite'}}
-To fetch images, you need to be authenticated to docker repository:
-```
-docker login dockerin-arender.nuxeo.com:443
-```
-{{/callout}}
-
-
 ### Embedded Installation - Development
 
 For development purposes, you need to run the Docker image for rendition and bind its port to localhost:
 ```
-docker run -p 8761:8761 -it -d dockerin-arender.nuxeo.com:443/arender-rendition:MP_VERSION
+docker run -p 8761:8761 -it ARENDER_DOCKER_IMAGE_ID
 ```
-Where `MP_VERSION` is the marketplace package version installed on Nuxeo.
-
 Then you need to install [nuxeo-arender-connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender-connector) marketplace package.
 
 It installs ARender integration inside Nuxeo and ARender previewer inside the Nuxeo's Tomcat.
-
-If your ARender rendition server doesn't run on same host than Nuxeo's Tomcat, you can change the ARender rendition URL by setting `arender.server.rendition.hosts` in your `nuxeo.conf` (default value is `http://localhost:8761`).
 
 ### Docker Installation - Production
 
@@ -108,6 +97,8 @@ POST /arendergwt/weather?format=json
 ### Nuxeo Configuration
 
 The ARender connector relies on the JWT authentication. You need to define a secret `nuxeo.jwt.secret` in your `nuxeo.conf` to enable it.
+
+If your ARender rendition server doesn't run on same host than Nuxeo's Tomcat, you can change the ARender rendition URL by setting `arender.server.rendition.hosts` in your `nuxeo.conf` (default value is `http://localhost:8761`).
 
 You can change ARender previewer URL used by Nuxeo to open ARender session by setting `arender.server.previewer.host` in your `nuxeo.conf` (default value if `http://localhost:8080`).
 
@@ -162,9 +153,16 @@ Different types of annotations are available:
     An empty box is displayed on your document.
     ![]({{file name='annotation-sticky-note-empty.png'}} ?w=250,border=true)
 1. Write your annotation.
-1. Click on the Save button ICON in the top bar.
+1. Click on the Save button icon in the top bar.
     Your annotation is displayed.
-    ![]({{file name='annotation-sticky-note-displayed.png'}} ?w=350,border=true)
+
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotation-sticky-note-displayed
+        name: annotation-sticky-note-displayed.png
+        addins#screenshot#up_to_date
+    --}}
+    ![annotation-sticky-note-displayed](nx_asset://9800ba81-ea6f-469d-8861-48ec1a216e2b ?w=350,border=true)
+
 
 ### Access to the Annotations
 
@@ -187,6 +185,28 @@ You can also manage annotations from this view:
 - Accept, reject, cancelled, completed a comment
 
 ![]({{file name='annotation-comment-replied.png'}} ?w=350,border=true)
+
+### File differences
+
+The ARender addon allows you to compare two files belonging to two different versions. By default, ARender compares the binary stored in the `file:content` property corresponding to the main file. You can access this feature from the [Compare Versions Screen]({{page version='' space='userdoc' page='compare'}}) by clicking on the **eye button**.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/compare-arender
+    name: compare_arender.png
+    addins#screenshot#up_to_date
+--}}
+![compare-arender](nx_asset://fb24e3d8-b22d-45ca-820e-f8b1bb8b17a4 ?w=650,border=true)
+
+It opens a new window with the two documents, highlighting what was deleted, modified and added.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/compare_arender_2
+    name: compare_arender_2.png
+    addins#screenshot#up_to_date
+--}}
+![compare_arender_2](nx_asset://7be7595f-3e11-468a-a004-1700e45e3ab3 ?w=650,border=true)
+
+Finally, you can see the annotations linked to each version on the same screen, and even annotate one file from this view.
 
 ## Going Further
 
