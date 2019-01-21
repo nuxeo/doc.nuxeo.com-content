@@ -661,16 +661,20 @@ history:
         message: ''
         version: '1'
 ---
-{{> header_standard}}
+{{!-- > header_standard --}}
+{{> header_first}}
+{{> header_last}}
 <div class="row">
     <div id="home" class="column large-10 large-centered">
         <div class="row">
             <div class="column">
                 <div id="search-area" class="text-left">
-                    <div class="input-group">
-                        <input id="search-input-full" class="input-group-field" type="search" placeholder="SEARCH DOCUMENTATION&hellip;">
-                        <span class="input-group-label"><i class="fa fa-search"></i></span>
-                    </div>
+                    <form class="input-group" action="/search/" method="get">
+                        <input id="search-input-full" class="input-group-field" type="search" placeholder="SEARCH DOCUMENTATION&hellip;" name="query" value="">
+                        <button type="submit">
+                          <span class="input-group-label"><i class="fa fa-search"></i></span>
+                        </button>
+                    </form>
                 </div>
             </div>
             <div class="column space-top-2">
@@ -730,18 +734,5 @@ history:
         </div>
     </div>
 </div>
-
-{{! Algolia DocSearch }}
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-<script type="text/javascript"> docsearch({
-apiKey: '482c0a65c92c01569f0d04bac01b5979',
-indexName: 'nuxeo',
-inputSelector: '#search-input-full',
-algoliaOptions: {
-    'filters': 'tags:ft OR tags:static'
-},
-debug: false // Set debug to true if you want to inspect the dropdown
-});
-</script>
 
 {{> footer_standard}}

@@ -1,0 +1,30 @@
+---
+title: Search
+description: Search Nuxeo Documentation
+script: search
+style: search
+review:
+    comment: 'Not necessary for review'
+    date: ''
+    status: ok
+no_side_menu: true
+xprivate: true
+
+---
+{{> header_standard}}
+<div class="row">
+  <div class="column large-10 large-centered">
+    <div id="search">
+      <div class="row">
+        <div id="search-input" class="columns is-navy search-input">
+          {{!-- SearchBox widget will appear here --}}
+        </div>
+      </div>
+
+      <div id="hits" style="display: none;">
+        {{!-- Hits widget will appear here --}}
+      </div>
+    </div>
+  </div>
+</div>
+{{> footer_standard}}
