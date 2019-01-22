@@ -129,8 +129,6 @@ history:
 ---
 ## Integrating the Nuxeo Platform with a SAML 2.0 IdP
 
-{{! excerpt}}
-
 The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/saml2-authentication) allows setting up Nuxeo as a Service Provider and supports WebSSO thus relying on an external SAML Identity Provider (IdP) for authentication. It has been successfully tested so far with Okta, OneLogin, Ping One, SSOCircle, Google, OIF and ADFS. If you are not familiar with SAML you can read our [Background on SAML 2.0](#saml20_presentation) section below.
 
 1.  [Install the SAML2.0 Authentication addon]({{page page='installing-a-new-package-on-your-instance'}}) available from the Nuxeo Marketplace.
@@ -188,7 +186,7 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
     </component>
     ```
     {{/callout}}
-    
+
 1.  Configure the user attributes mapping for your identity provider's response. Either add a [XML contribution]({{page page='how-to-contribute-to-an-extension'}}) into your Studio project or in the previous XML component. This mapping configuration can be achieved by providing a JavaScript or Groovy script. A sample is provided below using JavaScript code.
 
     ```xml
@@ -269,8 +267,6 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
     You can find other use cases and more extensive documentation about keytool [here](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html).
 
     After having set up the Java KeyStore and updating the SAML keystore configuration with the proper aliases(key) and passwords the metadata generated at `http://NUXEO_SERVER/nuxeo/saml/metadata` should include the correct X509 certificate data.
-
-{{! /excerpt}}
 
 ## Sources
 

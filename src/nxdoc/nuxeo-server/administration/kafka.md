@@ -10,9 +10,7 @@ toc: true
 tree_item_index: 1100
 ---
 {{! excerpt}}
-
 Kafka configuration and integration with Nuxeo.
-
 {{! /excerpt}}
 
 ## When to Use Kafka?
