@@ -242,7 +242,14 @@ The Windows installer requires Administrator privileges.
 
 {{/callout}}
 
-To install the application using the Windows installer (.exe), double-click on the .exe installer you downloaded and follow the instructions displayed.
+**To install the application using the Windows installer (.exe):**
+
+1. Double-click on the .exe installer you downloaded</br>
+    A popup window appears.
+    ![]({{file name='windows-installer-more-info.png'}} ?w=350, border=true)
+1. Click on the **More info** link
+    ![]({{file name='windows-installer-run-anyway.png'}} ?w=350, border=true)
+1. Click on **Run anyway** and follow the instructions displayed.
 
 **Installation path**
 
