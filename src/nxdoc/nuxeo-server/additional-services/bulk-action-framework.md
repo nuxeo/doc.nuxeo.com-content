@@ -1,31 +1,31 @@
 ---
 title: Bulk Action Framework
 review:
-    comment: ''
-    date: '2018-07-11'
-    status: ok
+  comment: ''
+  date: '2018-07-11'
+  status: ok
 labels:
-    - bulk
-    - bulk-component
+  - bulk
+  - bulk-component
 toc: true
 tree_item_index: 1500
 ---
+
 {{! excerpt}}
 The Bulk Action Framework provides a service to be able to run resilient bulk actions on a _possibly large_ set of documents.
 {{! /excerpt}}
 
 This framework introduces several notions:
-- __document set__: a list of documents from a repository represented as a list of document identifiers.
-- __action__: an operation that can be applied to a document set.
-- __command__: a set of parameters building a request to apply an action on a document set.
-- __bucket__: a portion of a document set that fits into a stream record.
-- __batch__: a smaller (or equals) portion of a bucket where the action is applied within a transaction.
-{{#> callout type='note' heading='Requirements'}}
-    To work properly, the Bulk Service needs a true KeyValue storage to store the command and its status, there are 2 possibles choices:
-    - Use `RedisKeyValueStore` if you have `nuxeo.redis.enabled=true` in your `nuxeo.conf`.
-    - Use `MongoDBKeyValueStore` if you are using the MongoDB template.
-    You should not rely on the default `MemKeyValueStore` implementation that flushes the data on restart.
-{{/callout}}
+
+- **document set**: a list of documents from a repository represented as a list of document identifiers.
+- **action**: an operation that can be applied to a document set.
+- **command**: a set of parameters building a request to apply an action on a document set.
+- **bucket**: a portion of a document set that fits into a stream record.
+- **batch**: a smaller (or equals) portion of a bucket where the action is applied within a transaction.
+  {{#> callout type='note' heading='Requirements'}}
+  To work properly, the Bulk Service needs a true KeyValue storage to store the command and its status, there are 2 possibles choices: - Use `RedisKeyValueStore` if you have `nuxeo.redis.enabled=true` in your `nuxeo.conf`. - Use `MongoDBKeyValueStore` if you are using the MongoDB template.
+  You should not rely on the default `MemKeyValueStore` implementation that flushes the data on restart.
+  {{/callout}}
 
 ## Bulk Service
 
@@ -117,10 +117,12 @@ Please visit [nuxeo-runtime-stream README](https://github.com/nuxeo/nuxeo/tree/m
 ## Bulk REST API
 
 Bulk Service APIs are accessible with REST API from two places:
+
 - [search endpoint]({{page page='search-endpoints'}}) to submit a command
 - dedicated bulk endpoint for others actions
 
 Objects transiting between server and client are parameters of bulk action which is a simple JSON object and depend on action needs, and BulkStatus object whose JSON representation is as below:
+
 ```json
 {
   "entity-type": "bulkStatus",
@@ -141,10 +143,7 @@ Objects transiting between server and client are parameters of bulk action which
   "completed": "2018-06-21T12:40:08.172Z",
   "result": {
     "result1": "o1",
-    "result2": [
-      "o2",
-      "o3"
-    ]
+    "result2": ["o2", "o3"]
   }
 }
 ```
@@ -265,31 +264,34 @@ the Nuxeo `bin/stream.sh` script.
 # ./bin/stream.sh tail --chronicle ./nxserver/data/stream/bulk -l command --codec avro
 ```
 
-| offset | watermark | flag | key | length | data |
-| --- | --- | --- | --- | ---: | --- |
-|bulk-command-01:+2|2018-10-11 11:18:34.955:0|[DEFAULT]|setProperties|164|{"id": "b667b677-d40e-471a-8377-eb16dd301b42", "action": "setProperties", "query": "Select * from Document", "username": "Administrator", "repository": "default", "bucketSize": 100, "batchSize": 25, "params": "{\"dc:description\":\"a new new testbulk description\"}"}|
-|bulk-command-00:+2|2018-10-11 15:10:26.826:0|[DEFAULT]|csvExport|151|{"id": "e8cc059d-6b9d-480b-a6e1-b0edace6d982", "action": "csvExport", "query": "SELECT * FROM File WHERE ecm:isVersion = 0 AND ecm:isTrashed = 0", "username": "Administrator", "repository": "default", "bucketSize": 100, "batchSize": 50, "params": null}|
+| offset             | watermark                 | flag      | key           | length | data                                                                                                                                                                                                                                                                         |
+| ------------------ | ------------------------- | --------- | ------------- | -----: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| bulk-command-01:+2 | 2018-10-11 11:18:34.955:0 | [DEFAULT] | setProperties |    164 | {"id": "b667b677-d40e-471a-8377-eb16dd301b42", "action": "setProperties", "query": "Select \* from Document", "username": "Administrator", "repository": "default", "bucketSize": 100, "batchSize": 25, "params": "{\"dc:description\":\"a new new testbulk description\"}"} |
+| bulk-command-00:+2 | 2018-10-11 15:10:26.826:0 | [DEFAULT] | csvExport     |    151 | {"id": "e8cc059d-6b9d-480b-a6e1-b0edace6d982", "action": "csvExport", "query": "SELECT \* FROM File WHERE ecm:isVersion = 0 AND ecm:isTrashed = 0", "username": "Administrator", "repository": "default", "bucketSize": 100, "batchSize": 50, "params": null}                |
 
 **To get the latest commands completed:**
 
 ```bash
 ./bin/stream.sh tail -k -l bulk-done --codec avro
 ```
-| offset | watermark | flag | key | length | data |
-| --- | --- | --- | --- | ---: | --- |
-|bulk-done-00:+4|2018-10-11 14:23:29.219:0|[DEFAULT]|580df47d-dd90-4d16-b23c-0e39ae363e06|96|{"commandId": "580df47d-dd90-4d16-b23c-0e39ae363e06", "action": "csvExport", "delta": false, "processed": 3873, "state": "COMPLETED", "submitTime": 1539260607207, "scrollStartTime": 1539260607275, "scrollEndTime": 1539260607326, "completedTime": 1539260609218, "total": 3873, "result": null}|
-|bulk-done-00:+5|2018-10-11 15:10:28.244:0|[DEFAULT]|e8cc059d-6b9d-480b-a6e1-b0edace6d982|96|{"commandId": "e8cc059d-6b9d-480b-a6e1-b0edace6d982", "action": "csvExport", "delta": false, "processed": 1844, "state": "COMPLETED", "submitTime": 1539263426825, "scrollStartTime": 1539263426827, "scrollEndTime": 1539263426846, "completedTime": 1539263428243, "total": 1844, "result": null}|
+
+| offset          | watermark                 | flag      | key                                  | length | data                                                                                                                                                                                                                                                                                                |
+| --------------- | ------------------------- | --------- | ------------------------------------ | -----: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| bulk-done-00:+4 | 2018-10-11 14:23:29.219:0 | [DEFAULT] | 580df47d-dd90-4d16-b23c-0e39ae363e06 |     96 | {"commandId": "580df47d-dd90-4d16-b23c-0e39ae363e06", "action": "csvExport", "delta": false, "processed": 3873, "state": "COMPLETED", "submitTime": 1539260607207, "scrollStartTime": 1539260607275, "scrollEndTime": 1539260607326, "completedTime": 1539260609218, "total": 3873, "result": null} |
+| bulk-done-00:+5 | 2018-10-11 15:10:28.244:0 | [DEFAULT] | e8cc059d-6b9d-480b-a6e1-b0edace6d982 |     96 | {"commandId": "e8cc059d-6b9d-480b-a6e1-b0edace6d982", "action": "csvExport", "delta": false, "processed": 1844, "state": "COMPLETED", "submitTime": 1539263426825, "scrollStartTime": 1539263426827, "scrollEndTime": 1539263426846, "completedTime": 1539263428243, "total": 1844, "result": null} |
 
 **To view the BulkBucket message:**
 
 ```bash
 ./bin/stream.sh tail -k -l bulk-csvExport --codec avro
 ```
-| offset | watermark | flag | key | length | data |
-| --- | --- | --- | --- | ---: | --- |
-|bulk-csvExport-01:+48|2018-10-11 15:10:26.842:0|[DEFAULT]|e8cc059d-6b9d-480b-a6e1-b0edace6d982:18|3750|{"commandId": "e8cc059d-6b9d-480b-a6e1-b0edace6d982", "ids": ["763135b8-ca49-4eea-9a52-1ceaa227e60a", ...]}|
+
+| offset                | watermark                 | flag      | key                                     | length | data                                                                                                        |
+| --------------------- | ------------------------- | --------- | --------------------------------------- | -----: | ----------------------------------------------------------------------------------------------------------- |
+| bulk-csvExport-01:+48 | 2018-10-11 15:10:26.842:0 | [DEFAULT] | e8cc059d-6b9d-480b-a6e1-b0edace6d982:18 |   3750 | {"commandId": "e8cc059d-6b9d-480b-a6e1-b0edace6d982", "ids": ["763135b8-ca49-4eea-9a52-1ceaa227e60a", ...]} |
 
 And check for any lag on any computation, for more information on `stream.sh`:
+
 ```bash
 ./bin/stream.sh help
 ```
