@@ -611,6 +611,21 @@ Registered access
 </tr>
 <tr>
 <td colspan="1">
+Nuxeo Office Online Integration<br/>
+`nuxeo-wopi`
+</td>
+<td colspan="1">
+Public
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-office-online-integration'}})
+</td>
+<td colspan="1">
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-wopi)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Nuxeo Platform 3D<br/>
 `nuxeo-platform-3d`
 </td>
@@ -711,7 +726,7 @@ Public
 [Documentation]({{page version='' space='nxdoc' page='nuxeo-sample-project'}})
 </td>
 <td colspan="1">
-[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample)
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample)
 </td>
 </tr>
 <tr>
@@ -897,7 +912,7 @@ Public
 [Documentation]({{page page='template-rendering-addon'}}#nuxeo-template-rendering-samples)
 </td>
 <td colspan="1">
-[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering-samples)
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering-samples)
 </td>
 </tr>
 </tbody>
