@@ -503,7 +503,7 @@ For production you need to setup an Elasticsearch cluster.
 
 ### Installing the Elasticsearch Cluster
 
-Refer to the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/_installation.html) to install and secure your cluster. Basically:
+Refer to the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) to install and secure your cluster. Basically:
 
 *   Don&rsquo;t run Elasticsearch open to the public.
 *   Don&rsquo;t run Elasticsearch as root.
