@@ -9,7 +9,7 @@ toc: true
 labels:
     - creation
     - drag-and-drop
-tree_item_index: 250
+tree_item_index: 600
 
 ---
 The document actions toolbar displays all the actions available for the current document.

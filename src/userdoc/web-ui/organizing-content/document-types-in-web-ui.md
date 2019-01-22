@@ -8,7 +8,7 @@ review:
 toc: true
 labels:
     - history
-tree_item_index: 800
+tree_item_index: 100
 
 ---
 ## Domain
@@ -30,7 +30,7 @@ When documents are finished and ready, they are published in **sections**. Tradi
 ### Folder
 
 {{! multiexcerpt name='definition-folders-types'}}
-In workspaces, you can create and manage your documents in folders. A folder works like a workspace, but the documents available for creation are limited. In a folder, you can create: *documents*, notes, files, collections and sub-folders.
+In workspaces, you can create and manage your documents in folders. A folder works like a workspace, but the documents available for creation are limited. In a folder, you can create: documents, notes, files, collections and sub-folders.
 
 There are two types of folders: regular folders and ordered folders. The difference between the two folder types is the way content is sorted.
 {{! /multiexcerpt}}
@@ -45,7 +45,7 @@ In a folder, you can:
 
 - [Create documents]({{page page='content-create'}}) and do all the actions available on them (edit, approve, manage relations, etc.)
 - [Manage permissions]({{page page='permissions'}})
-- [Subscribe to alerts]({{page page='document-actions'}}#alerts)
+- [Subscribe to alerts]({{page version='' space='userdoc' page='alerts'}})
 - [Manage the folder's trash]({{page page='content-delete'}})
 
 Like in a workspace, you can use drag and drop to create content in a folder.

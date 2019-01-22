@@ -1,5 +1,5 @@
 ---
-title: Browse
+title: Browsing Content
 review:
     comment: ''
     date: '2018-10-15'

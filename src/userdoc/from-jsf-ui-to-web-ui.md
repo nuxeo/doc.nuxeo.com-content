@@ -264,7 +264,7 @@ You can export via an **XML export** or a **ZIP Tree XML export**.
 
 ![]({{file name='download-button-web-ui.png'}} ?w=350,border=true)
 </br>
-[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='content-download'}})
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**More info**]({{page page='share'}})
 </td>
 </td>
 </tbody>
