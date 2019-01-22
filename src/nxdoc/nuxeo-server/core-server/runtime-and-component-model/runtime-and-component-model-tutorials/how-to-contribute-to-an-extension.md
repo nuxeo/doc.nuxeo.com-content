@@ -1,172 +1,147 @@
 ---
 title: How to Contribute to an Extension
 review:
-    comment: ''
-    date: '2017-12-14'
-    status: ok
+  comment: ''
+  date: '2017-12-14'
+  status: ok
 details:
-    howto:
-        excerpt: 'Learn how to create an XML extension in Nuxeo Studio, with the Nuxeo CLI and how to override a Nuxeo contribution.'
-        level: Intermediate
-        tool: 'Nuxeo CLI, Studio'
-        topics: Extension point
+  howto:
+    excerpt: 'Learn how to create an XML extension in Nuxeo Studio, with the Nuxeo CLI and how to override a Nuxeo contribution.'
+    level: Intermediate
+    tool: 'Nuxeo CLI, Studio'
+    topics: Extension point
 labels:
-    - lts2016-ok
-    - xml-extension
-    - extension-point
-    - studio
-    - howto
-    - runtimecomponent
-    - kleturc
-    - lts2017-ok
-    - university
+  - lts2016-ok
+  - xml-extension
+  - extension-point
+  - studio
+  - howto
+  - runtimecomponent
+  - kleturc
+  - lts2017-ok
+  - university
 toc: true
 confluence:
-    ajs-parent-page-id: '950284'
-    ajs-parent-page-title: Runtime and Component Model
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Contribute+to+an+Extension
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+to+an+Extension'
-    page_id: '12914315'
-    shortlink: iw7F
-    shortlink_source: 'https://doc.nuxeo.com/x/iw7F'
-    source_link: /display/NXDOC/How+to+Contribute+to+an+Extension
+  ajs-parent-page-id: '950284'
+  ajs-parent-page-title: Runtime and Component Model
+  ajs-space-key: NXDOC
+  ajs-space-name: Nuxeo Platform Developer Documentation
+  canonical: How+to+Contribute+to+an+Extension
+  canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Contribute+to+an+Extension'
+  page_id: '12914315'
+  shortlink: iw7F
+  shortlink_source: 'https://doc.nuxeo.com/x/iw7F'
+  source_link: /display/NXDOC/How+to+Contribute+to+an+Extension
 tree_item_index: 200
 history:
-    -
-        author: Manon Lumeau
-        date: '2016-08-25 16:26'
-        message: ''
-        version: '25'
-    -
-        author: Manon Lumeau
-        date: '2016-06-09 13:44'
-        message: ''
-        version: '24'
-    -
-        author: Manon Lumeau
-        date: '2016-03-29 12:10'
-        message: ''
-        version: '23'
-    -
-        author: Ronan Daniellou
-        date: '2015-11-06 14:09'
-        message: 'misspelling: extention -> extension'
-        version: '22'
-    -
-        author: Solen Guitter
-        date: '2015-10-08 09:15'
-        message: Migration of unmigrated content due to installation of a new plugin
-        version: '21'
-    -
-        author: Solen Guitter
-        date: '2015-10-08 09:15'
-        message: ''
-        version: '20'
-    -
-        author: Ronan Daniellou
-        date: '2015-09-28 15:38'
-        message: "Deleted superfluous 'you'"
-        version: '19'
-    -
-        author: Solen Guitter
-        date: '2015-01-30 10:08'
-        message: Migration of unmigrated content due to installation of a new plugin
-        version: '18'
-    -
-        author: Solen Guitter
-        date: '2015-01-30 10:08'
-        message: Migration of unmigrated content due to installation of a new plugin
-        version: '17'
-    -
-        author: Solen Guitter
-        date: '2015-01-30 10:08'
-        message: link update
-        version: '16'
-    -
-        author: Solen Guitter
-        date: '2014-09-08 17:42'
-        message: Migration of unmigrated content due to installation of a new plugin
-        version: '15'
-    -
-        author: Solen Guitter
-        date: '2014-09-08 17:42'
-        message: Migration of unmigrated content due to installation of a new plugin
-        version: '14'
-    -
-        author: Solen Guitter
-        date: '2014-09-08 17:42'
-        message: ''
-        version: '13'
-    -
-        author: Solen Guitter
-        date: '2014-09-08 17:39'
-        message: ''
-        version: '12'
-    -
-        author: Solen Guitter
-        date: '2014-05-23 12:02'
-        message: ''
-        version: '11'
-    -
-        author: Solen Guitter
-        date: '2014-05-05 09:11'
-        message: Formatting
-        version: '10'
-    -
-        author: Alain Escaffre
-        date: '2014-05-02 14:48'
-        message: ''
-        version: '9'
-    -
-        author: Solen Guitter
-        date: '2014-02-18 17:44'
-        message: ''
-        version: '8'
-    -
-        author: Alain Escaffre
-        date: '2014-02-15 13:44'
-        message: ''
-        version: '7'
-    -
-        author: Alain Escaffre
-        date: '2014-02-15 13:44'
-        message: Updating the content due to some evolutions of the feature
-        version: '6'
-    -
-        author: Alain Escaffre
-        date: '2013-02-25 14:56'
-        message: ''
-        version: '5'
-    -
-        author: Alain Escaffre
-        date: '2013-02-25 14:56'
-        message: ''
-        version: '4'
-    -
-        author: Alain Escaffre
-        date: '2013-02-25 14:51'
-        message: ''
-        version: '3'
-    -
-        author: Alain Escaffre
-        date: '2013-02-25 14:41'
-        message: ''
-        version: '2'
-    -
-        author: Alain Escaffre
-        date: '2013-02-25 14:29'
-        message: ''
-        version: '1'
-
+  - author: Manon Lumeau
+    date: '2016-08-25 16:26'
+    message: ''
+    version: '25'
+  - author: Manon Lumeau
+    date: '2016-06-09 13:44'
+    message: ''
+    version: '24'
+  - author: Manon Lumeau
+    date: '2016-03-29 12:10'
+    message: ''
+    version: '23'
+  - author: Ronan Daniellou
+    date: '2015-11-06 14:09'
+    message: 'misspelling: extention -> extension'
+    version: '22'
+  - author: Solen Guitter
+    date: '2015-10-08 09:15'
+    message: Migration of unmigrated content due to installation of a new plugin
+    version: '21'
+  - author: Solen Guitter
+    date: '2015-10-08 09:15'
+    message: ''
+    version: '20'
+  - author: Ronan Daniellou
+    date: '2015-09-28 15:38'
+    message: "Deleted superfluous 'you'"
+    version: '19'
+  - author: Solen Guitter
+    date: '2015-01-30 10:08'
+    message: Migration of unmigrated content due to installation of a new plugin
+    version: '18'
+  - author: Solen Guitter
+    date: '2015-01-30 10:08'
+    message: Migration of unmigrated content due to installation of a new plugin
+    version: '17'
+  - author: Solen Guitter
+    date: '2015-01-30 10:08'
+    message: link update
+    version: '16'
+  - author: Solen Guitter
+    date: '2014-09-08 17:42'
+    message: Migration of unmigrated content due to installation of a new plugin
+    version: '15'
+  - author: Solen Guitter
+    date: '2014-09-08 17:42'
+    message: Migration of unmigrated content due to installation of a new plugin
+    version: '14'
+  - author: Solen Guitter
+    date: '2014-09-08 17:42'
+    message: ''
+    version: '13'
+  - author: Solen Guitter
+    date: '2014-09-08 17:39'
+    message: ''
+    version: '12'
+  - author: Solen Guitter
+    date: '2014-05-23 12:02'
+    message: ''
+    version: '11'
+  - author: Solen Guitter
+    date: '2014-05-05 09:11'
+    message: Formatting
+    version: '10'
+  - author: Alain Escaffre
+    date: '2014-05-02 14:48'
+    message: ''
+    version: '9'
+  - author: Solen Guitter
+    date: '2014-02-18 17:44'
+    message: ''
+    version: '8'
+  - author: Alain Escaffre
+    date: '2014-02-15 13:44'
+    message: ''
+    version: '7'
+  - author: Alain Escaffre
+    date: '2014-02-15 13:44'
+    message: Updating the content due to some evolutions of the feature
+    version: '6'
+  - author: Alain Escaffre
+    date: '2013-02-25 14:56'
+    message: ''
+    version: '5'
+  - author: Alain Escaffre
+    date: '2013-02-25 14:56'
+    message: ''
+    version: '4'
+  - author: Alain Escaffre
+    date: '2013-02-25 14:51'
+    message: ''
+    version: '3'
+  - author: Alain Escaffre
+    date: '2013-02-25 14:41'
+    message: ''
+    version: '2'
+  - author: Alain Escaffre
+    date: '2013-02-25 14:29'
+    message: ''
+    version: '1'
 ---
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
+
 - [Course on Handling Service Extension Points](https://university.nuxeo.com/learn/public/course/view/elearning/70/HandlingServiceExtensionPoints)
-![]({{file name='university-extension-points.png' page='nxdoc/university'}} ?w=450,border=true)
-{{/callout}}
+  ![]({{file name='university-extension-points.png' page='nxdoc/university'}} ?w=450,border=true)
+  {{/callout}}
 
 ## {{> anchor 'finding-extension-point'}}Finding the Extension Point Where to Contribute
 
@@ -178,7 +153,7 @@ Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](htt
 3.  Click on the extension point you're interested in.
     The documentation of this extension point is displayed.
     ![]({{file name='Nuxeo-explorer.png'}} ?w=600,border=true)
-3.  Then, if you click on any link in the **Contributions** section, you will see all the default contributions implemented into your Nuxeo instance.
+4.  Then, if you click on any link in the **Contributions** section, you will see all the default contributions implemented into your Nuxeo instance.
     There are [hundreds of configuration possibilities](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/listExtensionPoints).
 
 ## {{> anchor 'xml-extension-studio'}}Contributing Using Nuxeo Studio
@@ -194,37 +169,37 @@ Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](htt
 
 **Notes**
 
-*   Pay attention to always start with an `<extension>` element, or a `<require>` element followed by an `<extension>` element. There is a minimal check done so as to avoid you contribute non correct XML. The `<require>` mechanism can be used to make sure you deploy after another contribution that is deployed by some built-in plugins for instance. You need to reference the component name in the `require` content.
-*   You can contribute several extension points in the same XML Extensions feature. This is useful to group extensions that are contributed for the same high level functional goal.
-    Thus, you can have:
+- Pay attention to always start with an `<extension>` element, or a `<require>` element followed by an `<extension>` element. There is a minimal check done so as to avoid you contribute non correct XML. The `<require>` mechanism can be used to make sure you deploy after another contribution that is deployed by some built-in plugins for instance. You need to reference the component name in the `require` content.
+- You can contribute several extension points in the same XML Extensions feature. This is useful to group extensions that are contributed for the same high level functional goal.
+  Thus, you can have:
 
-    ```xml
-    <extension point ="" target =""> ...</extension>
-    ```
+  ```xml
+  <extension point ="" target =""> ...</extension>
+  ```
 
-    or
+  or
 
-    ```xml
-    <require> component name</require>
-    <extension point ="" target =""> ...</extension>
-    ```
+  ```xml
+  <require> component name</require>
+  <extension point ="" target =""> ...</extension>
+  ```
 
-    or
+  or
 
-    ```xml
-    <extension point ="" target =""> ...</extension>
-    <extension  point ="..." target="...">...</extension>
-    ```
+  ```xml
+  <extension point ="" target =""> ...</extension>
+  <extension  point ="..." target="...">...</extension>
+  ```
 
-    or
+  or
 
-    ```xml
-    <require> component name</require>
-    <require> component name bis</require>
-    <extension  point ="..." target="...">...</extension>
-    ```
+  ```xml
+  <require> component name</require>
+  <require> component name bis</require>
+  <extension  point ="..." target="...">...</extension>
+  ```
 
-    etc.
+  etc.
 
 ## Contributing Using Nuxeo CLI
 
@@ -238,17 +213,21 @@ Once you have found the `extension point` you want to contribute to:
 
 1.  Create a file `myproject-servicewhereIcontribute-contribution.xml` into the directory `src/main/resources/OSGI-INF/` of your project.
 2.  Declare an empty component into this file, like that:
+
     ```xml
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
 
     </component>
     ```
-    {{#> callout type='note' heading='Naming your component'}}
-    *   In Nuxeo, we follow this naming convention `org.mycompany.myproject.extension.point.where.we.contribute.contribution`.
-        You can follow your way but be careful to avoid conflicts.
-    *   You must give a **unique name** for your component. If the name of your package is not unique it will **not be deployed**.{{/callout}}
+
+    {{#> callout type='note' heading='Naming your component'}}- In Nuxeo, we follow this naming convention `org.mycompany.myproject.extension.point.where.we.contribute.contribution`.
+
+You can follow your way but be careful to avoid conflicts.
+
+- You must give a **unique name** for your component. If the name of your package is not unique it will **not be deployed**.{{/callout}}
 3.  Add your contribution that express the configuration you want in the component XML fragment. You get something like:
+
     ```xml
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
@@ -267,6 +246,7 @@ Once you have found the `extension point` you want to contribute to:
 In the previous section you have created your configuration. You must now declare your component in your bundle so it's deployed in your Nuxeo Server. This declaration is made through the `src/main/resources/META-INF/MANIFEST.MF` file.
 
 1.  Create a new parameter, if it does not exist.
+
     ```
     Manifest-Version: 1.0
     Bundle-Vendor: Nuxeo
@@ -282,6 +262,7 @@ In the previous section you have created your configuration. You must now declar
     Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 
     ```
+
     ```
     Manifest-Version: 1.0
     ... all the existing element already set ...
@@ -306,6 +287,7 @@ Components deployment is linear, so if you want to override an existing configur
 3.  Copy the name of the component (value after **In component**).
 4.  Paste it in your component into a `<require>` item.
     You will have something like that:
+
     ```xml
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
