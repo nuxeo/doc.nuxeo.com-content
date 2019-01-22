@@ -125,15 +125,15 @@ These allow you to start your processing chain quickly.
 
 ## Extensions
 
-Core AI is created with multiple extension points to the several processors.
+Core AI is created with multiple extension points to the several processors.  
 The initial release has:
 - [`nuxeo-ai-aws`](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-ai-aws) package that allows us to connect to the Machine Learning services supplied by Amazon.
 - [`nuxeo-ai-image-quality`](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-ai-image-quality) package that uses [Sightengine](https://sightengine.com/).
 
 ### AWS
 
-As part of the initial release, we have a set of extensions for Amazon Web Services.
-These include Rekognition, Comprehend and Translate.
+As part of the initial release, we have a set of extensions for Amazon Web Services.  
+These include Rekognition, Comprehend and Translate.  
 See the [GitHub Readme](https://github.com/nuxeo/nuxeo-ai/tree/master/addons/nuxeo-ai-aws-core#nuxeo-ai-aws-integration) for more technical details and all the services that are currently available with this extension.
 
 #### Before You Start
@@ -141,7 +141,7 @@ See the [GitHub Readme](https://github.com/nuxeo/nuxeo-ai/tree/master/addons/nux
 You should be familiar with Amazon Web Services and be in possession of your credentials.
 
 ##### Credentials
-Credentials are discovered using `nuxeo-runtime-aws`.
+Credentials are discovered using `nuxeo-runtime-aws`.  
 The chain searches for credentials in order: Nuxeo's AWSConfigurationService, environment variables, system properties, profile credentials, EC2Container credentials.
 
 If you choose to use `nuxeo.conf`, then the properties are:
@@ -211,7 +211,7 @@ You can set these in your `nuxeo.conf`. They are used in combination with the ot
 
 ### Image Quality
 
-An implementation of an enrichment service that uses [Sightengine](https://sightengine.com/).
+An implementation of an enrichment service that uses [Sightengine](https://sightengine.com/).   
 See the [GitHub Readme](https://github.com/nuxeo/nuxeo-ai/blob/master/addons/nuxeo-ai-image-quality-core/README.md#nuxeo-ai-image-quality) for additional technical details.
 
 #### Before You Start

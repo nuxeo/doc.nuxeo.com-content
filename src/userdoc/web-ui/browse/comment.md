@@ -33,7 +33,7 @@ You can reply to your comments and to comments from other users. However, replie
 
 ## Editing a Comment or a Reply
 
-You cannot edit comments from other users. However, you can reply to them.
+You cannot edit comments from other users. However, you can reply to them.  
 
 **To edit a comment or a reply**:
 
