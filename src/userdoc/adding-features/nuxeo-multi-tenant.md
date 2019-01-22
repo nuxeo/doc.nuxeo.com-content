@@ -2,14 +2,13 @@
 title: Nuxeo Multi-Tenant
 review:
     comment: ''
-    date: '2017-02-28'
+    date: '2019-01-22'
     status: ok
 labels:
     - lts2017-ok
     - marketplace-package
     - multi-tenant
     - excerpt
-    - content-review-lts2017
 toc: true
 confluence:
     ajs-parent-page-id: '11043055'
@@ -161,10 +160,12 @@ history:
         version: '1'
 
 ---
+{{#> callout type='note' }}
+This addon is not yet available on Web UI and requires the JSF UI addon to be installed.
+{{/callout}}
+
 {{! excerpt}}
-
 [Nuxeo Multi-tenant](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant) enables to have [domains]({{page page='nuxeo-platform-concepts'}}#available-spaces), or tenants, that are independent from each other, with their own users, vocabulary values etc.
-
 {{! /excerpt}}
 
 It is possible to have several domains on the default Nuxeo Platform without using Nuxeo Multi-tenant, but they all share the same [vocabularies definition]({{page page='managing-vocabularies'}}) and users. This means that when users [configure the access to a workspace]({{page page='managing-permissions'}}), for instance, and search for users, they can see all the users of the application. Nuxeo Multi-tenant modifies this behavior and enables domains to be completely isolated from each other, including their users and vocabulary values.
