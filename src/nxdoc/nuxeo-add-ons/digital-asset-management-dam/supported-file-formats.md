@@ -786,11 +786,15 @@ X
 
 &nbsp;
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 swf
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 X
 
@@ -810,7 +814,103 @@ X
 
 &nbsp;
 
-</td></tr><tr><th colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
+
+DPX
+
+</td>
+<td colspan="1">
+
+X
+
+</td>
+<td colspan="1">
+
+X
+
+</td>
+<td colspan="1">
+
+X
+
+</td>
+<td colspan="1">
+
+&nbsp;
+
+</td>
+<td colspan="1">
+
+X
+
+</td>
+<tr>
+<td colspan="1">
+
+MXF
+
+</td>
+<td colspan="1">
+
+X
+
+</td>
+<td colspan="1">
+
+X
+
+</td>
+<td colspan="1">
+
+X
+
+</td>
+<td colspan="1">
+
+&nbsp;
+
+</td>
+<td colspan="1">
+
+X
+
+</td>
+<tr>
+<td colspan="1">
+
+GXF
+
+</td>
+<td colspan="1">
+
+X
+
+</td>
+<td colspan="1">
+
+X
+
+</td>
+<td colspan="1">
+
+X
+
+</td>
+<td colspan="1">
+
+&nbsp;
+
+</td>
+<td colspan="1">
+
+X
+
+</td>
+<tr>
+<th colspan="1">
 
 **Audio**
 
