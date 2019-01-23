@@ -121,7 +121,7 @@ It is compatible with Nuxeo Platform LTS 2015, LTS 2016 and latest Fast Tracks.
 Version 1.5.0 introduces a new fluent API. The old API is still available. Thus you can upgrade the library to the 1.5 version and access the new API and features without breaking your application.
 
 {{#> panel type='code' heading='version < 1.5.0'}}
-```php
+```
 $client = new \Nuxeo\Automation\Client\NuxeoPhpAutomationClient('http://localhost:8080/nuxeo/site/automation');
 $session = $client->getSession('Administrator', 'Administrator');
 $answer = $session->newRequest("Document.Query")->set('params', 'query', "SELECT * FROM Document)->setSchema($propertiesSchema)->sendRequest();

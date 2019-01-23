@@ -21,52 +21,52 @@ confluence:
     source_link: /display/NXDOC/Security+Recommendations
 tree_item_index: 400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-06-20 09:27'
         message: ix ancho
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2016-06-20 09:26'
         message: ''
         version: '9'
-    - 
+    -
         author: Pierre-Gildas Millon
         date: '2016-06-09 12:21'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-08 12:28'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-06-08 12:19'
         message: ''
         version: '6'
-    - 
+    -
         author: Julien Carsique
         date: '2016-06-07 13:51'
         message: review
         version: '5'
-    - 
+    -
         author: Pierre-Gildas Millon
         date: '2016-06-07 09:30'
         message: ''
         version: '4'
-    - 
+    -
         author: Pierre-Gildas Millon
         date: '2016-06-03 14:09'
         message: ''
         version: '3'
-    - 
+    -
         author: Pierre-Gildas Millon
         date: '2016-06-03 14:08'
         message: ''
         version: '2'
-    - 
+    -
         author: Pierre-Gildas Millon
         date: '2016-06-03 13:23'
         message: ''
@@ -84,11 +84,9 @@ Additionally, you can consider removing or restricting the access to the default
 ### Avoid Sending the Tomcat Version
 
 {{#> panel type='code' heading='nuxeo.conf'}}
-
 ```
 nuxeo.server.signature=Nuxeo
 ```
-
 {{/panel}}
 
 ## Apache Web Server
@@ -98,7 +96,6 @@ When using Apache HTTP Server as a proxy in front of your Nuxeo instance, you sh
 ### Clean the Server Header
 
 {{#> panel type='code' heading='apache.conf'}}
-
 ```
 # ServerTokens
 # This directive configures what you return as the Server HTTP response
@@ -116,13 +113,11 @@ ServerTokens Prod
 # Set to one of:  On | Off | EMail
 ServerSignature Off
 ```
-
 {{/panel}}
 
 ### Disallow TRACE Requests
 
 {{#> panel type='code' heading='apache.conf'}}
-
 ```
 # Allow TRACE method
 #
@@ -132,39 +127,32 @@ ServerSignature Off
 # Set to one of:  On | Off | extended
 TraceEnable Off 
 ```
-
 {{/panel}}
 
-### <span style="color: rgb(44,45,48);">ETag Headers Generation</span>
+### ETag Headers Generation
 
 Do not use filesystem sensitive information to generate the ETag headers.
 
 {{#> panel type='code' heading='nuxeo-vhost.conf'}}
-
 ```
 FileETag None
 ```
-
 {{/panel}}
 
 ### Prevent "Clickjacking"
 
 {{#> panel type='code' heading='nuxeo-vhost.conf'}}
-
 ```
 Header always append X-Frame-Options SAMEORIGIN
 ```
-
 {{/panel}}
 
 ### Prevent Cross Site Scripting - XSS
 
 {{#> panel type='code' heading='nuxeo-vhost.conf'}}
-
 ```
 Header set X-XSS-Protection "1; mode=block"
 ```
-
 {{/panel}}
 
 ### HTTP Protocol Version
@@ -172,23 +160,19 @@ Header set X-XSS-Protection "1; mode=block"
 Allow HTTP Protocol version 1.1 only.
 
 {{#> panel type='code' heading='nuxeo-vhost.conf'}}
-
 ```
 RewriteEngine On
 RewriteCond %{THE_REQUEST} !HTTP/1.1$
 RewriteRule .* - [F]
 ```
-
 {{/panel}}
 
 ### Prevent "Slowloris" Attacks
 
 {{#> panel type='code' heading='nuxeo-vhost.conf'}}
-
 ```
 Timeout 60
 ```
-
 {{/panel}}
 
 ### SSL Ciphers
@@ -196,11 +180,9 @@ Timeout 60
 Accept SSL high quality ciphers only.
 
 {{#> panel type='code' heading='nuxeo-vhost.conf'}}
-
 ```
 SSLCipherSuite HIGH:!MEDIUM:!aNULL:!MD5:!RC4
 ```
-
 {{/panel}}
 
 ### SSL Protocols
@@ -208,11 +190,9 @@ SSLCipherSuite HIGH:!MEDIUM:!aNULL:!MD5:!RC4
 Accept strong SSL protocols only.
 
 {{#> panel type='code' heading='nuxeo-vhost.conf'}}
-
 ```
 SSLProtocol -all +TLSv1.2
 ```
-
 {{/panel}}
 
 ### Cookies
@@ -220,11 +200,9 @@ SSLProtocol -all +TLSv1.2
 Secure the cookies (when using SSL).
 
 {{#> panel type='code' heading='nuxeo-vhost.conf'}}
-
 ```
 Header edit Set-Cookie ^(.*)$ $1;Secure
 ```
-
 {{/panel}}
 
 ### Use mod_security
