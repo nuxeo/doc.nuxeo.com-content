@@ -9,7 +9,6 @@ labels:
     - arender-connector
 toc: true
 tree_item_index: 1050
-
 ---
 {{! excerpt}}
 The Nuxeo Annotations with ARender addon allows users to preview and annotate any document stored in the Nuxeo repository: Office documents, PDF, images, videos with the ARender previewer, from Arondor.
@@ -41,7 +40,7 @@ Docker images have the same version than marketplace packages.
 You should always use same version for docker images and marketplace package.
 {{/callout}}
 
-You can also install both piece directly on dedicated hosts by following [ARender Documentation](https://arender.io/doc/current4/documentation/setup/index-setup.html). Don't forget to take the ARender previewer in order to leverage the connector between ARender previewer and Nuxeo.
+You can also install both pieces directly on dedicated hosts by following [ARender Documentation](https://arender.io/doc/current4/documentation/setup/index-setup.html). Don't forget to take the ARender previewer in order to leverage the connector between ARender previewer and Nuxeo.
 
 All communications are made over HTTP, we recommend usage of HTTPS for production. Below are the ports of each piece:
 - previewer is reachable on port 8080 when exposed directly by Tomcat, we recommend to setup an Apache or Nginx in front of it
@@ -71,8 +70,7 @@ You can deploy several ARender renditions. Their URL needs to be given to ARende
 Then you can deploy an ARender previewer and give it rendition URLs as the environment variable `renditionHostEnv`.
 
 {{#> callout type='info' heading='ARender previewer behavior'}}
-ARender previewer owns in its cache a session corresponding to the t-uple user, document and blob.
-
+ARender previewer owns in its cache a session corresponding to the t-uple user, document and blob.</br>
 You'll need to ask for a new session if the previewer crashes (action 1. on [chart](#functional-flow)).
 {{/callout}}
 
@@ -109,7 +107,6 @@ For an on-host installation, you can follow the [ARender Documentation](https://
 For an embedded installation, you can modify the `arender-hmi.properties` files under `NUXEO_HOME/nxserver/config/ARenderConfiguration` folder.
 
 For a Docker installation, you can extends our image and copy your properties file to `/docker-entrypoint-init.d/arender.properties`:
-
 ```
 FROM dockerin-arender.nuxeo.com:443/arender-previewer:MP_VERSION
 
@@ -155,16 +152,14 @@ Different types of annotations are available:
     An empty box is displayed on your document.
     ![]({{file name='annotation-sticky-note-empty.png'}} ?w=250,border=true)
 1. Write your annotation.
-1. Click on the Save button icon in the top bar.
+1. Click on the Save button icon in the top bar.</br>
     Your annotation is displayed.
-
     {{!--     ### nx_asset ###
         path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotation-sticky-note-displayed
         name: annotation-sticky-note-displayed.png
         addins#screenshot#up_to_date
     --}}
     ![annotation-sticky-note-displayed](nx_asset://9800ba81-ea6f-469d-8861-48ec1a216e2b ?w=350,border=true)
-
 
 ### Access to the Annotations
 
@@ -188,7 +183,11 @@ You can also manage annotations from this view:
 
 ![]({{file name='annotation-comment-replied.png'}} ?w=350,border=true)
 
-### File differences
+### Compare Files
+
+{{#> callout type='note' heading='Limitations'}}
+This feature only allows you to compare two text files.
+{{/callout}}
 
 The ARender addon allows you to compare two files belonging to two different versions. By default, ARender compares the binary stored in the `file:content` property corresponding to the main file. You can access this feature from the [Compare Versions Screen]({{page version='' space='userdoc' page='compare'}}) by clicking on the **eye button**.
 
