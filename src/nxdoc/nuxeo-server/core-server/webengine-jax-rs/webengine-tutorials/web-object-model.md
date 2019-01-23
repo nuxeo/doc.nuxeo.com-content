@@ -64,12 +64,10 @@ history:
         date: '2010-07-20 16:33'
         message: ''
         version: '1'
-
 ---
 ## JAX-RS Resources
 
 {{#> panel type='code' heading='Sample3.java'}}
-
 ```java
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
@@ -231,12 +229,10 @@ public class Sample3 extends ModuleRoot {
   }
 
 }
-
 ```
 {{/panel}}
 
 {{#> panel type='code' heading='users/UserManager.java'}}
-
 ```java
 package users;
 
@@ -289,12 +285,10 @@ public class UserManager extends DefaultObject {
   }
 
 }
-
 ```
 {{/panel}}
 
 {{#> panel type='code' heading='users/User.java'}}
-
 ```java
 package users;
 
@@ -360,12 +354,10 @@ public class User extends DefaultObject {
   }
 
 }
-
 ```
 {{/panel}}
 
 {{#> panel type='code' heading='users/UserBuddies.java'}}
-
 ```java
 package users;
 
@@ -396,14 +388,12 @@ public class UserBuddies extends DefaultAdapter {
   }
 
 }
-
 ```
 {{/panel}}
 
 ## Object Views
 
 {{#> panel type='code' heading='skin/views/sample3/index.ftl'}}
-
 ```html
 <html>
   <head>
@@ -416,12 +406,10 @@ public class UserBuddies extends DefaultAdapter {
 <p><a href="${This.path}/users">User Management</a></p>
   </body>
 </html>
-
 ```
 {{/panel}}
 
 {{#> panel type='code' heading='skin/views/UserManager/index.ftl'}}
-
 ```html
 <html>
   <head>
@@ -435,13 +423,11 @@ public class UserBuddies extends DefaultAdapter {
     </form>
   </body>
 </html>
-
 ```
 {{/panel}}
 
 
 {{#> panel type='code' heading='skin/views/User/index.ftl'}}
-
 ```html
 <html>
   <head>
@@ -453,12 +439,10 @@ public class UserBuddies extends DefaultAdapter {
     View my <a href="${This.path}/@buddies">buddies</a>
   </body>
 </html>
-
 ```
 {{/panel}}
 
 {{#> panel type='code' heading='skin/views/UserBuddies/index.ftl'}}
-
 ```html
 <html>
   <head>
@@ -480,6 +464,5 @@ public class UserBuddies extends DefaultAdapter {
     </ul>
   </body>
 </html>
-
 ```
 {{/panel}}

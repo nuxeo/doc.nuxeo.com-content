@@ -54,13 +54,10 @@ history:
         date: '2010-07-20 16:33'
         message: ''
         version: '1'
-
 ---
 
 ## JAX-RS Resources
-
 {{#> panel type='code' heading='Sample2.java'}}
-
 ```java
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
@@ -183,14 +180,12 @@ public class Sample2 extends ModuleRoot {
   }
 
 }
-
 ```
 {{/panel}}
 
 ## Object Views
 
 {{#> panel type='code' heading='skin/base.ftl'}}
-
 ```html
 <!-- Base template that defines the site layout -->
 <html>
@@ -217,12 +212,10 @@ public class Sample2 extends ModuleRoot {
     </table>
   </body>
 </html>
-
 ```
 {{/panel}}
 
 {{#> panel type='code' heading='skin/index1.ftl'}}
-
 ```
 <@extends src="base.ftl">
   <@block name="title">Index 2</@block>
@@ -240,12 +233,10 @@ public class Sample2 extends ModuleRoot {
     The footer here ...
   </@block>
 </@extends>
-
 ```
 {{/panel}}
 
 {{#> panel type='code' heading='skin/index2.ftl'}}
-
 ```
 <@extends src="base.ftl">
   <@block name="title">Index 2</@block>

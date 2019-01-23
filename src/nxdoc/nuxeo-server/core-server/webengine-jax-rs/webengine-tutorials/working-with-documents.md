@@ -49,12 +49,10 @@ history:
         date: '2010-07-20 16:34'
         message: ''
         version: '1'
-
 ---
 ## JAX-RS Resources
 
 {{#> panel type='code' heading='Sample4.java'}}
-
 ```java
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
@@ -151,7 +149,6 @@ public class Sample4 extends ModuleRoot {
 ## Object Views
 
 {{#> panel type='code' heading='skin/base.ftl'}}
-
 ```html
 <!-- base template -->
 <html>
@@ -167,7 +164,6 @@ public class Sample4 extends ModuleRoot {
 {{/panel}}
 
 {{#> panel type='code' heading='skin/views/sample4/index.ftl'}}
-
 ```
 <@extends src="base.ftl">
 <@block name="title">Sample 4: Working with documents</@block>
@@ -182,7 +178,6 @@ Browse <a href="${This.path}/repository">repository</a>
 {{/panel}}
 
 {{#> panel type='code' heading='skin/views/Document/index.ftl'}}
-
 ```
 <@extends src="base.ftl">
 
@@ -249,7 +244,6 @@ Browse <a href="${This.path}/repository">repository</a>
 ## Templates
 
 {{#> panel type='code' heading='skin/error/error_401.ftl'}}
-
 ```
 <@extends src="base.ftl">
 <@block name="header">
@@ -274,7 +268,6 @@ You don't have privileges to access this page
 {{/panel}}
 
 {{#> panel type='code' heading='skin/error/error_404.ftl'}}
-
 ```
 <@extends src="base.ftl">
 <@block name="header">
@@ -292,7 +285,6 @@ The page you requested doesn't exists
 {{/panel}}
 
 {{#> panel type='code' heading='skin/error/login.ftl'}}
-
 ```
 <!-- Login Form -->
 <form action="${Context.loginPath}" method="POST">

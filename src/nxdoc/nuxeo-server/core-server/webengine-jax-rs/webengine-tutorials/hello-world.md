@@ -62,9 +62,7 @@ history:
 
 ---
 ## JAX-RS Resources
-
 {{#> panel type='code' heading='Sample1.groovy'}}
-
 ```java
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
@@ -113,6 +111,5 @@ public class Sample1 extends ModuleRoot {
   }
 
 }
-
 ```
 {{/panel}}

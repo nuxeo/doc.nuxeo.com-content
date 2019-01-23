@@ -61,7 +61,6 @@ The module defined here extends the module defined in [Tutorial 4]({{page page='
 ## Module Definition
 
 {{#> panel type='code' heading='MANIFEST.MF'}}
-
 ```
 ...
 Nuxeo-WebModule: org.nuxeo.ecm.webengine.app.WebEngineModule;name=sample5;extends=sample4
@@ -72,7 +71,6 @@ Nuxeo-WebModule: org.nuxeo.ecm.webengine.app.WebEngineModule;name=sample5;extend
 ## JAX-RS Resources
 
 {{#> panel type='code' heading='Samples5.java'}}
-
 ```java
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
@@ -147,7 +145,6 @@ public class Sample5 extends Sample4 {
 ## Object Views
 
 {{#> panel type='code' heading='skin/views/sample5/index.ftl'}}
-
 ```
 <#-- we are reusing the base template from the base module -->
 <@extends src="base.ftl">
@@ -164,7 +161,6 @@ Browse <a href="${This.path}/repository">repository</a>
 {{/panel}}
 
 {{#> panel type='code' heading='skin/views/Document/index.ftl'}}
-
 ```
 <#-- we reuse base.ftl from base module -->
 <@extends src="base.ftl">
@@ -210,7 +206,6 @@ Browse <a href="${This.path}/repository">repository</a>
 {{/panel}}
 
 {{#> panel type='code' heading='skin/views/Document/info.ftl'}}
-
 ```
 <@extends src="base.ftl">
 
