@@ -899,7 +899,7 @@ A new `nuxeo.saml2.skewTimeMs` configuration property to control the clock skew 
 
 #### Stronger Digest for PORTAL_AUTH Plugin {{since '10.3'}}
 
-It is now possible to configure the algorithm used for the digest among the list given [here](https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#MessageDigest). Previously, MD5 was systematically used>.
+It is now possible to configure the algorithm used for the digest among the list given [here](https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#MessageDigest). Previously, MD5 was systematically used.
 ```
 <parameter name="digestAlgorithm">SHA-512<parameter>
 ```
