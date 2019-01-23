@@ -1164,6 +1164,12 @@ doc = session.createDocument(doc);
 // doc is persisted
 ```
 
+**Breaking change**
+
+Custom importers implementing `FileImporter` or extending `AbstractFileImport` must be updated to override the `#createOrUpdate(FileImporterContext)}` method instead of the `#create` method. Not overriding the `#createOrUpdate(FileImporterContext)` method will make your custom importer useless as it will never be called.
+
+See [this commit](https://github.com/nuxeo/nuxeo-platform-audio/commit/1f66c60c35464d0f2cc3a8753b16d50e08952668#diff-700f7eedc28d874cdf4555e1871d550f) for a sample of migrating to `#createOrUpdate(FileImporterContext)`.
+
 See [NXP-26178](https://jira.nuxeo.com/browse/NXP-26178)
 
 #### Operation Changes
