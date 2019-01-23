@@ -72,9 +72,7 @@ history:
 
 ---
 {{! excerpt}}
-
 Let's see how to contribute a new video conversion to convert a video to WebM format (assuming all the needed codecs are installed with FFmpeg).
-
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
@@ -88,7 +86,6 @@ A video conversion depends of a `command`, a `converter`&nbsp;and a `videoConver
 ## Contributing the Command
 
 {{#> panel type='code' heading='Command contribution'}}
-
 ```xml
 <extension target="org.nuxeo.ecm.platform.commandline.executor.service.CommandLineExecutorComponent"
   point="command">
@@ -103,7 +100,6 @@ A video conversion depends of a `command`, a `converter`&nbsp;and a `videoConver
 
 </extension>
 ```
-
 {{/panel}}
 
 **Parameters**:

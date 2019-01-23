@@ -24,62 +24,62 @@ version_override:
     LTS 2015: 710/admindoc/multiple-repositories-configuration
     '6.0': 60/admindoc/multiple-repositories-configuration
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-10-10 07:35'
         message: ix link to multi repositories con
         version: '12'
-    - 
+    -
         author: Ronan Daniellou
         date: '2016-08-22 13:20'
         message: 'Fixes "blockTimeoutMillis" -> "blockingTimeoutMillis"'
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2016-03-25 16:41'
         message: ''
         version: '10'
-    - 
+    -
         author: Antoine Taillefer
         date: '2016-03-18 09:39'
         message: ''
         version: '9'
-    - 
+    -
         author: Michaël Vachette
         date: '2015-09-03 12:40'
         message: ''
         version: '8'
-    - 
+    -
         author: Michaël Vachette
         date: '2015-09-03 12:36'
         message: ''
         version: '7'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-05-05 12:56'
         message: typo
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-05-05 10:12'
         message: 'Format steps, add related documentation'
         version: '5'
-    - 
+    -
         author: Benoit Delbosc
         date: '2015-05-04 15:59'
         message: Add a note about Elasticsearch multi repo conf
         version: '4'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-05-04 15:38'
         message: clearer paths
         version: '3'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-05-04 15:35'
         message: ''
         version: '2'
-    - 
+    -
         author: Florent Guillaume
         date: '2015-05-04 15:34'
         message: ''
@@ -156,7 +156,6 @@ It's probably easier to do this by copying an existing working version of a&nbsp
 For instance you will get something like:
 
 {{#> panel type='code' heading='repository-secondrepo-config.xml'}}
-
 ```xml
 <?xml version="1.0"?>
 <component name="repository-secondrepo-config">
@@ -178,7 +177,6 @@ For instance you will get something like:
 
  </component>
 ```
-
 {{/panel}}
 
 The part about&nbsp;`<repository name="secondrepo"`&nbsp;is important as it's where you define the name of your repository, which needs to be in sync with what you defined for the datasource.&nbsp;
@@ -188,9 +186,7 @@ The part about&nbsp;`<repository name="secondrepo"`&nbsp;is important as it's wh
 Each repository must have its own different binary store path.
 
 {{#> callout type='warning' heading='Separating Binaries'}}
-
 It is CRITICAL to keep the binaries separated between each repository if you want to properly delete orphaned binaries from the Admin tab. If you don't do this, things will seem to work correctly but you will lose data the next time you delete orphaned binaries.
-
 {{/callout}}
 
 In the above repository configuration, we defined `<property name="path">binaries2</property>` which means that the binaries for your second repository will be stored under `$NUXEO/nxserver/data/binaries2` instead of the default `$NUXEO/nxserver/data/binaries`.

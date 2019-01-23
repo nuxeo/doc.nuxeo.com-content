@@ -213,7 +213,6 @@ This part assumes you have Nuxeo CLI, and a Nuxeo Server associated to a Nuxeo C
 2.  Add the following component:
 
     {{#> panel type='code' heading='src/main/resources/OSGI-INF/test-computed-group-contrib.xml'}}
-
     ```xml
     <?xml version="1.0"?>
     <component
@@ -236,7 +235,6 @@ This part assumes you have Nuxeo CLI, and a Nuxeo Server associated to a Nuxeo C
     	</extension>
     </component>
     ```
-
     {{/panel}}
 
     &nbsp;
@@ -246,7 +244,6 @@ This part assumes you have Nuxeo CLI, and a Nuxeo Server associated to a Nuxeo C
 3.  Don't forget to reference the XML contribution in the `src/main/resources/META-INF/MANIFEST.MF`. The file must be like that:
 
     {{#> panel type='code' heading='MANIFEST.MF'}}
-
     ```perl
     Bundle-ActivationPolicy: lazy
     Bundle-ClassPath: .
@@ -258,9 +255,7 @@ This part assumes you have Nuxeo CLI, and a Nuxeo Server associated to a Nuxeo C
     Bundle-ManifestVersion: 2
     Bundle-SymbolicName: test-computed-group
     Bundle-Vendor: Nuxeo
-
     ```
-
     {{/panel}}
 
     {{#> callout type='warning' }}
@@ -285,7 +280,6 @@ In the previous section we asked Nuxeo Runtime to register our new computer grou
     You must have something like that:
 
     {{#> panel type='code' heading='Simple Static Computer Group'}}
-
     ```java
     package org.nuxeo.project.computed.group;
 
@@ -390,7 +384,6 @@ In this section we will just merge information from the two previous ones and te
 Here is the final version of the `ValidatorsGroupComputer` class:
 
 {{#> panel type='code' heading='ValidatorsGroupComputer with dynamic groups'}}
-
 ```
 package org.nuxeo.project.computed.group;
 

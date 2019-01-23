@@ -134,7 +134,7 @@ The SHIB_AUTH plug-in is implemented by the class [ShibbolethAuthenticationPlugi
 
 As the Shibboleth attributes values are passed by HTTP headers, the service [ShibbolethAuthenticationService](http://community.nuxeo.com/api/nuxeo/9.10/javadoc/org/nuxeo/ecm/platform/shibboleth/service/ShibbolethAuthenticationService.html) has been added to configure the mapping between the user metadata and the headers names.
 
-### Shibboleth groups 
+### Shibboleth groups
 
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
@@ -166,7 +166,6 @@ After you installed the package, a new **Shib Goups** tab is available in the **
     *   `$NUXEO/server/default/deploy/nuxeo.ear/config` for a JBoss distribution
 
 {{#> panel type='code' heading='shibboleth-config.xml'}}
-
 ```xml
 <?xml version="1.0"?>
     <component name="org.nuxeo.ecm.platform.login.shibboleth.config">
@@ -187,7 +186,6 @@ After you installed the package, a new **Shib Goups** tab is available in the **
     </extension>
 </component>
 ```
-
 {{/panel}}
 
 ## Configuration
@@ -199,7 +197,6 @@ To enable the Shibboleth authentication, you need to add the Shibboleth plug-in 
 To override the default authentication chain in the Nuxeo Platform, add a new file named `authentication-chain-config.xml` in the `config/` directory of your server.
 
 {{#> panel type='code' heading='authentication-chain-config.xml'}}
-
 ```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.platform.your.authentication.chain.config">
@@ -219,7 +216,6 @@ To override the default authentication chain in the Nuxeo Platform, add a new fi
   </extension>
 </component>
 ```
-
 {{/panel}}
 
 **Note**: If you already defined your own authentication chain in any of your config or contrib files, you just need to add the `SHIB_AUTH` plug-in into your own chain.
@@ -233,7 +229,6 @@ For that, the [ShibbolethSecurityExceptionHandler](http://community.nuxeo.com/ap
 To activate it, add a new file named `login-anonymous-config.xml` in the `config/` directory of your server.
 
 {{#> panel type='code' heading='login-anonymous-config.xml'}}
-
 ```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.platform.your.anonymous.user.config">
@@ -250,7 +245,6 @@ To activate it, add a new file named `login-anonymous-config.xml` in the `config
   </extension>
 </component>
 ```
-
 {{/panel}}
 
 ### Full Sample Configuration File

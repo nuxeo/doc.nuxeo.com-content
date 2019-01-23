@@ -148,7 +148,6 @@ This page gives operational information on targeted configurations. For a full u
 The default blob provider for Nuxeo Platform stores files on the local filesystem at a configurable location and with filenames based on their hash (digest).
 
 {{#> panel type='code' heading='Standard DefaultBinaryManager Configuration'}}
-
 ```xml
 <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
   <blobprovider name="default">
@@ -157,7 +156,6 @@ The default blob provider for Nuxeo Platform stores files on the local filesyste
   </blobprovider>
 </extension>
 ```
-
 {{/panel}}
 
 The `path` property is used to specify the filesystem path at which the binaries will be stored. A relative path will be resolved under `$NUXEO_HOME/nxserver/data`, but an absolute path can be used as well if needed.

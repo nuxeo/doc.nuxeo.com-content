@@ -333,7 +333,6 @@ Each time a SF user is displaying a SF object in his SF console, Nuxeo is going 
 The Automation operation script `javascript.FetchSFObject` can be overridden in order to bind the current Salesforce object to a specific document in Nuxeo.
 
 {{#> panel type='code' heading='javascript.FetchSFObject'}}
-
 ```js
 <scriptedOperation id="javascript.FetchSFObject">
   <inputType>void</inputType>
@@ -368,7 +367,6 @@ The Automation operation script `javascript.FetchSFObject` can be overridden in 
   </script>
 </scriptedOperation>
 ```
-
 {{/panel}}
 
 In the operation, the parameter `param` of the function provides three attributes: `sfobjectid`, `sfobjectname` and `sfobjecttype`.
@@ -387,7 +385,6 @@ Here is an example of overriding the SF object binding: When I enter my SF objec
 This behavior is implemented by this operation.
 
 {{#> panel type='code' heading='New Behavior'}}
-
 ```js
 function run(input, params) {
       var sfobject = JSON.parse(params.sfObject);
@@ -476,11 +473,10 @@ function getProperties(doc, sfobject){
   return dirtyProperties;
 }
 ```
+{{/panel}}
 
-{{/panel}} {{#> callout type='tip' heading='Customization with Nuxeo Studio'}}
-
+{{#> callout type='tip' heading='Customization with Nuxeo Studio'}}
 Those two operations can be overridden inside a Nuxeo Studio project easily by creating two operations for instance: `SFGetChildren` and `FetchSFObject`.
-
 {{/callout}}
 
 ## Documents Listing
@@ -490,7 +486,6 @@ Those two operations can be overridden inside a Nuxeo Studio project easily by c
 The Automation operation script `javascript.SFGetChildren` provides a way for the developer to customize the listing of the document content bound to the Salesforce object.
 
 {{#> panel type='code' heading='javascript.SFGetChildren'}}
-
 ```js
 <scriptedOperation id="javascript.SFGetChildren">
   <inputType>document</inputType>
@@ -503,7 +498,6 @@ The Automation operation script `javascript.SFGetChildren` provides a way for th
   </script>
 </scriptedOperation>
 ```
-
 {{/panel}}
 
 ### Override Example
@@ -511,7 +505,6 @@ The Automation operation script `javascript.SFGetChildren` provides a way for th
 For instance, the listing execution could be executed in an unrestricted session to list "unauthorized" documents only for title viewing (Salesforce or Nuxeo rights are not affected).
 
 {{#> panel type='code' heading='javascript.SFGetChildren'}}
-
 ```js
 function run(input, params) {
   Auth.LoginAs(null, {});
@@ -520,11 +513,10 @@ function run(input, params) {
   return children;
 }
 ```
+{{/panel}}
 
-{{/panel}} {{#> callout type='tip' heading='Customization with Nuxeo Studio'}}
-
+{{#> callout type='tip' heading='Customization with Nuxeo Studio'}}
 Those two operations can be overridden inside a Nuxeo Studio project easily by creating two operations for instance: `SFGetChildren` and `FetchSFObject`.
-
 {{/callout}}
 
 {{! Don't put anything here. }}

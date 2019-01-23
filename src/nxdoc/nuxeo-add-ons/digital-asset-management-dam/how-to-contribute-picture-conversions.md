@@ -239,7 +239,6 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
 3.  <span style="line-height: 21.58px;">Create a chain that will be used for the picture conversion, getting the text from the&nbsp;</span> `pictureDocument` <span style="line-height: 21.58px;">&nbsp;and call the registered `watermarkWithText` converter to watermark the image. Here, for the example, we watermark the title of the document on the image:</span>
 
     {{#> panel type='code' heading='WatermarkChain'}}
-
     ```
     - Blob.RunConverter:
         converter: watermarkWithText
@@ -255,7 +254,6 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
           xOffset: "0"
           yOffset: "0"
     ```
-
     {{/panel}}
 4.  Add a new picture conversion that will watermark the image:
 
@@ -279,7 +277,6 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
     1.  First, create a chain that will retrieve the text, and put it in the&nbsp;`Context`:
 
         {{#> panel type='code' heading='GetWatermarkTextChain'}}
-
         ```
         - Blob.Push
         - Auth.LoginAs: {}
@@ -290,12 +287,10 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
             value: "@{Document[\"myparentschema:watermarkText\"]}"
         - Blob.Pop
         ```
-
         {{/panel}}
     2.  Now, we need the chain that will be used for the picture conversion, getting the text from the&nbsp;`Context` and call a custom operation that will watermark the image:
 
         {{#> panel type='code' heading='WatermarkChain'}}
-
         ```
         - Context.RunFileOperation:
             id: GetWatermarkText
@@ -305,7 +300,6 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
         - WatermarkOperation:
             watermarkText: "@{Context[\"watermarkText\"]}"
         ```
-
         {{/panel}}
 
 ## Filtering Picture Conversions
@@ -313,9 +307,7 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
 Picture conversions can be filtered so that you can choose which picture conversions should be executed on a given document. The filtering is done through standard filters we already use in the Nuxeo Platform.
 
 {{#> callout type='note' }}
-
 In the execution context of the filters you can use on a picture conversion, you only have access to the detached **document**. There is no `principal`, `currentUser` or `coreSession`. You cannot access the Seam beans as the conversion is done in a worker.
-
 {{/callout}}
 
 Let's say we want to execute the previous&nbsp;`Watermark` picture conversion only on documents that have their&nbsp;`dc:source` value to&nbsp;`MyCompany` and their&nbsp;`dc:language` value not equals to&nbsp;`english`.

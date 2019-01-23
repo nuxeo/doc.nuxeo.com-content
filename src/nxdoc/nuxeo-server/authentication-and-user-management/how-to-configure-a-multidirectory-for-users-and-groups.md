@@ -119,7 +119,6 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
 5.  Stop the server and edit the XML file to change the parameters and the field mappings with your specific ones.
 
 {{#> panel type='code' heading='default-multi-directories-config.xml'}}
-
 ```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.directory.multi.storage.users">
@@ -299,7 +298,6 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
   </extension>
 </component>
 ```
-
 {{/panel}}
 
 * * *

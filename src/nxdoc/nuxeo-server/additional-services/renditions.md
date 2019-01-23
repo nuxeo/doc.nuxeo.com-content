@@ -100,7 +100,6 @@ Renditions are declared on a document through rendition definition contributions
 A rendition definition can be contributed through the  [`renditionDefinitions`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.rendition.service.RenditionService--renditionDefinitions) extension point.
 
 {{#> panel type='code' heading='Sample contribution for a PDF rendition'}}
-
 ```xml
 <extension target="org.nuxeo.ecm.platform.rendition.service.RenditionService"
   point="renditionDefinitions">
@@ -116,7 +115,6 @@ A rendition definition can be contributed through the  [`renditionDefinitions`](
   </renditionDefinition>
 </extension>
 ```
-
 {{/panel}}
 
 By default, the rendition is computed through an automation chain, specified in the `operationChain` element. The rendition isn't stored permanently unless the code requesting it explicitly asks for it to be stored, but since Nuxeo 7.10 the default can be changed by using the `storeByDefault` element.
@@ -158,13 +156,9 @@ Here is the contribution for the `PictureRenditionDefinitionProvider`:
 </extension>
 ```
 
-
-
 ### Filtering Rendition Definitions and Rendition Definition Providers
 
 Since 7.2, both contributions can be filtered through standard filters we already use in the Nuxeo Platform. The `currentDocument` referenced in the filter is the document on which the rendition definition is checked.
-
-
 
 * * *
 

@@ -150,7 +150,6 @@ If you prefer you can find below the source of a PostgreSQL function that can be
 - to match the syntax of other databases.
 
 {{#> panel type='code' heading='nx_audit_purge for PostgreSQL'}}
-
 ```sql
 CREATE OR REPLACE FUNCTION nx_audit_purge(olderThan character varying)
   RETURNS int AS
@@ -207,13 +206,11 @@ END $BODY$
 ALTER FUNCTION nx_audit_purge(character varying) OWNER TO nuxeo;
 
 ```
-
 {{/panel}}
 
 Here is the same script for SQL Server:
 
 {{#> panel type='code' heading='nx_audit_puge for SQL Server'}}
-
 ```sql
 ALTER PROCEDURE [dbo].[nx_audit_purge]
   @olderThan varchar(11)
@@ -266,13 +263,11 @@ BEGIN
   RETURN @total
 END 
 ```
-
 {{/panel}}
 
 Here for Oracle:
 
 {{#> panel type='code' heading='nx_audit_puge for Oracle'}}
-
 ```sql
 CREATE GLOBAL TEMPORARY TABLE audit_purge_tmp (
   log_fk NUMBER(38),
@@ -319,7 +314,6 @@ BEGIN
   dbms_output.put_line('Total lines cleanup: '|| total);
 END;
 ```
-
 {{/panel}}
 
 ## Purging Audit with Elasticsearch Backend
@@ -338,7 +332,6 @@ Here you need to edit the cURL query to match:
 The following query creates a new audit index and set a proper setting and mapping for Nuxeo 10.3 (Elasticsearch 6.3):
 
 {{#> panel type='code' heading='Create a new audit index'}}
-
 ```json
 curl -XPUT "localhost:9200/nuxeo-audit-201809" -H 'Content-Type: application/json' -d'{
 "settings":
@@ -454,7 +447,6 @@ curl -XPUT "localhost:9200/nuxeo-audit-201809" -H 'Content-Type: application/jso
 }}'
 
 ```
-
 {{/panel}}
 
 ### 2. Re-index and Filter
@@ -471,7 +463,6 @@ Here you need to edit the cURL query to match:
 The following query will purge all log entries related to login and download the ones that are older than 2018-06-01.
 
 {{#> panel type='code' heading='Re-index and filter'}}
-
 ```json
 curl -XPOST "localhost:9200/_reindex" -H 'Content-Type: application/json' -d'{
   "source": {
@@ -513,7 +504,6 @@ curl -XPOST "localhost:9200/_reindex" -H 'Content-Type: application/json' -d'{
 }'
 
 ```
-
 {{/panel}}
 
 ### 3. Update the Nuxeo Configuration
@@ -524,16 +514,10 @@ Now you can edit the `nuxeo.conf` to update the name of the new Elasticsearch au
 audit.elasticsearch.indexName=nuxeo-audit-201809
 ```
 
-
 {{#> callout type='warning' }}
-
 This purge procedure can also be used to upgrade Elasticsearch from 5.x or to update the mapping.
 You just need to remove the query part of the re-index command if you don't want to purge at the same time.
-
 {{/callout}}
-
-
-
 
 &nbsp;
 

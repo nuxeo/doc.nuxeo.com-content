@@ -22,52 +22,52 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Datadog+Reporter
 tree_item_index: 1300
 history:
-    - 
+    -
         author: Manon Lumeau
         date: '2016-08-12 12:39'
         message: ''
         version: '10'
-    - 
+    -
         author: Nicolas Chapurlat
         date: '2016-08-11 08:42'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2016-08-05 07:51'
         message: ''
         version: '8'
-    - 
+    -
         author: Damien Metzler
         date: '2016-08-04 08:42'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-28 08:32'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-28 08:32'
         message: ''
         version: '5'
-    - 
+    -
         author: Arnaud Kervern
         date: '2015-09-25 09:51'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2015-07-08 10:04'
         message: 'Add links, format'
         version: '3'
-    - 
+    -
         author: Antoine Taillefer
         date: '2015-07-08 07:06'
         message: ''
         version: '2'
-    - 
+    -
         author: Damien Metzler
         date: '2015-07-07 15:10'
         message: ''
@@ -86,7 +86,6 @@ The [Nuxeo Datadog Reporter addon](https://connect.nuxeo.com/nuxeo/site/marketpl
 2.  Then add your Datadog API key in [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}):
 
     {{#> panel type='code' heading='Configuration'}}
-
     ```text
     # Datadog API_KEY
     datadog.apikey=YOUR_OWN_API_KEY
@@ -97,7 +96,6 @@ The [Nuxeo Datadog Reporter addon](https://connect.nuxeo.com/nuxeo/site/marketpl
     # Optional: interval in seconds for reports to be sent to Datadog
     # datadog.pollinterval=10
     ```
-
     {{/panel}}
 
 ## Exploring Metrics in Datadog

@@ -378,45 +378,32 @@ you will need to make sure that your SQL Server instance has full-text search co
 Otherwise similar errors will occur:
 
 {{#> panel type='code' heading='SQL Server Msg 7601'}}
-
 ```
 Cannot use a CONTAINS or FREETEXT predicate on table or indexed view 'fulltext' because it is not full-text indexed.
-
 ```
-
 {{/panel}}
 
 {{#> panel type='code' heading='SQL Server Msg 7616'}}
-
 ```
 Full-Text Search is not enabled for the current database. Use sp_fulltext_database to enable full-text search for the database. The functionality to disable and enable full-text search for a database is deprecated. Please change your application.
-
 ```
-
 {{/panel}}
 
 Here is the French version of these messages, for reference:
 
 {{#> panel type='code' heading='SQL Server Msg 7601'}}
-
 ```
 Impossible d'utiliser le prédicat CONTAINS ou FREETEXT sur table ou vue indexée 'fulltext', car il n'y a pas d'index de texte intégral.
-
 ```
-
 {{/panel}}
 
 {{#> panel type='code' heading='SQL Server Msg 7616'}}
-
 ```
 La recherche en texte intégral n'est pas activée dans la base de données en cours. Utilisez `sp_fulltext_database` pour l'activer sur cette base de données. La fonctionnalité de désactivation et d'activation d'une recherche en texte intégral pour une base de données est désapprouvée. Modifiez votre application.
-
 ```
-
 {{/panel}}
 
 You can verify if your SQL Server instance has its full-text feature installed before creating your database:
-
 ```sql
 SELECT SERVERPROPERTY('IsFullTextInstalled');
 ```

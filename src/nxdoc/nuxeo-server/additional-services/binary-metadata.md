@@ -502,7 +502,6 @@ This feature gives the ability to get time execution informations through JMX: `
 Here is the default metadata mapping contribution in the Nuxeo Platform:
 
 {{#> panel type='code' heading='Default Contribution'}}
-
 ```xml
 <extension target="org.nuxeo.binary.metadata"
  point="metadataMappings">
@@ -552,7 +551,6 @@ Here is the default metadata mapping contribution in the Nuxeo Platform:
   </filter>
 </extension>
 ```
-
 {{/panel}}
 
 * * *
