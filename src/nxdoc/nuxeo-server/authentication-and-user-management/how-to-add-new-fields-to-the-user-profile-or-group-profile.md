@@ -21,6 +21,7 @@ labels:
 Users and groups are defined using schemas and as an *Extensible Platform*, Nuxeo gives you the ability to modify or add schemas.
 
 The default **user** schema definition:
+
 ```xml
 <?xml version="1.0"?>
 
@@ -121,6 +122,7 @@ Following to your custom updates, you might want to [update the user profile int
 The customisation of the groups is similar to the users.
 
 The default **group** schema definition:
+
 ```xml
 <?xml version="1.0"?>
 
