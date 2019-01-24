@@ -879,9 +879,7 @@ The tables below use the following notation:
     <td>N/A</td>
     <td>&#10003;</td>
     <td>LTS&nbsp;2020</td>
-    <td colspan="1">Publication of videos to YouTube and Wistia.<br/>
-    [Nuxeo Media Publishing documentation]({{page page='nuxeo-media-publishing'}})<br/>
-    Still in consideration for Web UI
+    <td colspan="1">The Nuxeo Media Publishing addon is deprecated since Nuxeo Platform LTS 2019.
     </td>
 </tr>
 </tbody>
@@ -1328,9 +1326,7 @@ The tables below use the following notation:
     <td>N/A</td>
     <td>&#10003;</td>
     <td>N/A</td>
-    <td colspan="1">Publication of videos to YouTube and Wistia.<br/>
-    [Nuxeo Media Publishing documentation]({{page page='nuxeo-media-publishing'}})<br/>
-    Still in consideration for Web UI
+    <td colspan="1">The Nuxeo Media Publishing addon is deprecated since Nuxeo Platform LTS 2019.
     </td>
 </tr>
 </tbody>
