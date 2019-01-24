@@ -674,7 +674,7 @@ The tables below use the following notation:
     <td colspan="1">[Nuxeo ARender Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender-connector)</td>
     <td>N/A</td>
     <td>&#10003;</td>
-    <td>LTS 2019</td>
+    <td>&#10003;</td>
     <td colspan="1">[Documentation]({{page version='' space='nxdoc' page='nuxeo-arender-connector'}})</td>
 </tr>
 </tbody>
