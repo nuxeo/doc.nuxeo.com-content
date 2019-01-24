@@ -127,7 +127,7 @@ You can for example:
 
 ## Functional Overview
 
-Once the ARender addon is properly installed and configured a new **Annotations** pill is available on each document with the picture or video facet:
+Once the ARender addon is properly installed and configured a new **Annotations** tab is available on each document with the picture or video facet:
 
 ![]({{file name='annotation-tab.png'}} ?w=350)
 
@@ -147,7 +147,7 @@ Different types of annotations are available:
 
 **To add an annotation:**
 
-1. Go to the annotations pill
+1. Go to the annotations tab
 1. Click on an annotation type, like the sticky note.</br>
     An empty box is displayed on your document.
     ![]({{file name='annotation-sticky-note-empty.png'}} ?w=250,border=true)
