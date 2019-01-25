@@ -1,36 +1,30 @@
 default:
-    site:
-        review_period: '6 months'
-        review_release_date: 2015-11-09
-        review_allow_no_date_set: true
-        spaces:
-            -
-                space_path: nxdoc
-                space_name: Developer Documentation Center
-            -
-                space_path: userdoc
-                space_name: Nuxeo Platform User Documentation
-            -
-                space_path: admindoc
-                space_name: Nuxeo Installation and Administration
-        branch: '710'
-        dev_browser_path: '710/nxdoc'
-        versions:
-            -
-                label: FT
-            -
-                label: LTS 2017
-                url_path: '910'
-            -
-                label: LTS 2016
-                url_path: '810'
-            -
-                is_current_version: true
-                label: LTS 2015
-                url_path: '710'
-            -
-                label: '6.0'
-                url_path: '60'
+  site:
+    review_period: '6 months'
+    review_release_date: 2015-11-09
+    review_allow_no_date_set: true
+    spaces:
+      - space_path: nxdoc
+        space_name: Developer Documentation Center
+      - space_path: userdoc
+        space_name: Nuxeo Platform User Documentation
+      - space_path: admindoc
+        space_name: Nuxeo Installation and Administration
+    branch: '710'
+    dev_browser_path: '710/nxdoc'
+    versions:
+      - label: FT
+      - label: LTS 2019
+        url_path: '1010'
+      - label: LTS 2017
+        url_path: '910'
+      - label: LTS 2016
+        url_path: '810'
+      - label: LTS 2015
+        url_path: '710'
+        is_current_version: true
+      - label: '6.0'
+        url_path: '60'
 
 development:
-    isDev: true
+  isDev: true
