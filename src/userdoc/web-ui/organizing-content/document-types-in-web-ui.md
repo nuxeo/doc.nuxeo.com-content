@@ -9,7 +9,6 @@ toc: true
 labels:
     - history
 tree_item_index: 100
-
 ---
 ## Domain
 

@@ -9,7 +9,6 @@ labels:
 toc: true
 tree_item_index: 100
 description: Web UI User Documentation about Workflows
-
 ---
 You need to have editing or management permissions to start a workflow on a document.
 

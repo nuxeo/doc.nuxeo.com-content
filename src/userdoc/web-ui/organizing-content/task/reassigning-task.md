@@ -9,15 +9,12 @@ labels:
 toc: true
 tree_item_index: 400
 description: Web UI User Documentation about Workflows
-
 ---
 If you think that you should not be responsible for a task, you can reassign it. Reassignment should not be confused with delegation.
 
 {{{multiexcerpt 'delegate-vs-reassign' page='Reassigning a Task'}}}
 
 You can reassign a task from the Task tab.
-
-
 
 **To reassign a task from Task tab:**
 

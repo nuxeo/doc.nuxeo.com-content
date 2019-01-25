@@ -8,10 +8,7 @@ labels:
     - web-ui
 is_overview: true
 tree_item_index: 200
-
 ---
-
-
 <div class="row" data-equalizer data-equalize-on="medium">
 
 <div class="column medium-6">

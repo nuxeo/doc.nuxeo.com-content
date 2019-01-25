@@ -9,7 +9,6 @@ toc: true
 labels:
     - comments
 tree_item_index: 300
-
 ---
 {{! excerpt}}
 Comments enable users to discuss about the document and its evolution. To have better collaboration on content, users can create, edit, and delete threaded comments on documents.

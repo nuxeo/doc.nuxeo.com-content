@@ -10,7 +10,6 @@ labels:
 toc: true
 tree_item_index: 300
 description: Web UI User Documentation about Workflows
-
 ---
 When you know you might not be able to perform a task, you can delegate it to another user or group of users. Delegating means that they can do the task for you, but you are still assigned to the task.
 
@@ -34,7 +33,6 @@ The delegation form is displayed in a pop-up.
 1. Optional: type a comment for the delegatees.
 1. Click on the **Delegate** button.
 In the **Tasks tab**, click on the task to see the list of delegatees.
-
 
 **To delegate the task from the Task tab:**
 

@@ -1,15 +1,14 @@
 ---
 title: Search
 review:
-    comment: ''
-    date: '2018-10-15'
-    status: ok
+  comment: ''
+  date: '2018-10-15'
+  status: ok
 toc: true
 tree_item_index: 500
 description: Web UI user documentation about Search
 labels:
-
-
+  - search
 ---
 {{! excerpt}}
 The Nuxeo Platform provides different ways to search your documents: a Search tab in the side menu and a quick search at the top of the page.
@@ -88,7 +87,7 @@ You can manage and delete your saved search from the Search tab drop down list, 
 
 ## Trash Search
 
-Trash Search enables you to find all the documents deleted depending on your access rights. For more information, see [Trash Search]({{page page='browse/#trash-search'}}).
+Trash Search enables you to find all the documents deleted depending on your access rights. For more information, see [Trash Search]({{page page='search'}}#trash-search).
 
 ## Assets Tab
 

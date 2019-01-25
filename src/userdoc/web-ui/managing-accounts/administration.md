@@ -8,21 +8,10 @@ review:
 toc: true
 tree_item_index: 100
 labels:
-
 ---
-This Administration tab presents different submenus:
-
-- [Analytics](#analytics)
-- [Users & Groups](#users-and-groups)
-- [Vocabularies](#vocabularies)
-- [Audit](#audit)
-- [Cloud Services](#cloud-services)
-- [NXQL Search](#nxql-search)
-
 ## Analytics
 
 Analytics enable administrators to consult information and statistics on how the application is used:
-
 
 - **Document Distribution**: Provides statistics on the documents types, their size and counts.
 

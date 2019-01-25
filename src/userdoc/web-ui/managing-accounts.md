@@ -8,14 +8,13 @@ labels:
     - web-ui
 is_overview: true
 tree_item_index: 300
-
 ---
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
 ### Administration
 <br/>
-Administrate your project and follow your content from the Administration tab at the bottom of the side menu. <br/>
+Administrate your project and follow your content from the Administration tab. <br/>
 
 <br/>
 [More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='administration'}})
@@ -25,7 +24,7 @@ Administrate your project and follow your content from the Administration tab at
 {{#> panel type='secondary' match_height='true'}}
 ### User Settings
 <br/>
-Set preferences for your account in the User Settings tab at the bottom of the side menu.
+Set preferences for your account in the User Settings tab.
 
 <br/>
 [More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='userdoc' page='user-settings'}})
