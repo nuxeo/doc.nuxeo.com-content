@@ -403,7 +403,7 @@ To delete a user, go to **Admin Center**&nbsp;> **Users & groups**. Search a use
 ## Managing Groups
 {{! multiexcerpt name='group-intro'}}
 
-You can create groups of users and and modify their properties directly in the Nuxeo Platform.
+You can create groups of users and modify their properties directly in the Nuxeo Platform.
 
 To make permissions management easier, instead of giving (or denying) permissions to single users and repeat operations several times, you can give several users identical permissions in one single manipulation by using a group.
 
@@ -416,7 +416,7 @@ Default groups are:
 
 {{#> callout type='info' heading='Default groups'}}
 
-Users must be in one of "members" or "administrators" the groups to be able to access content. Power users must be in both the "power users" and "members" groups.
+Users must either belong to the "members" or "administrators" group to be able to access content. Power users must be in both the "power users" and "members" groups.
 
 {{/callout}}
 
