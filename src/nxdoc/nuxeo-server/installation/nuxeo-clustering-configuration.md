@@ -198,24 +198,49 @@ To enable clustering, you must have at least two nodes with:
 *   A shared database
 *   A shared filesystem (unless you use an external binary store like S3)
 *   A dedicated [Elasticsearch cluster]({{page page='elasticsearch-setup'}}), if using Elasticsearch
-*   A [Redis server]({{page page='redis-configuration'}})
+*   A [Kafka cluster]({{page page='kafka'}}) or a [Redis server]({{page page='redis-configuration'}})
 *   A load-balancer with sticky sessions
 
 You can head to the [Nuxeo cluster architecture introduction]({{page page='nuxeo-cluster-architecture-introduction'}}) for more information on these components.
 
 The shared filesystem is usually an NFS mount. You **must not** share the whole Nuxeo installation tree (see below).
 
-The load balancer **must** use sticky sessions if the clustering delay is not 0. Having a non-0 clustering delay is recommended for performance reasons. See below for more.
+## Cluster Node Identity
+
+To set up clustering, please update the following parameters in [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}}) :
+
+*   **`nuxeo.cluster.enabled`** must be `true` to enable clustering.
+*   **`nuxeo.cluster.nodeid`**: must be set to a cluster node id. The id should be a string specific to this instance (and therefore all instances must have different cluster node ids).
 
 ## Shared Filesystem Configuration
 
-The complete Nuxeo instance hierarchy **must not** be shared between all instances. However a few things must or should be shared.
+The complete Nuxeo instance hierarchy **must not** be shared between all instances. However the following things must be shared.
 
 ### Binaries
 
-The `repository.binary.store` (`nxserver/data/binaries` by default) directory **must** be shared by all Nuxeo instances in order for VCS to function correctly. This does not apply if binaries are stored in a network-based location, like S3.
+All the binary stores **must** be shared by all Nuxeo instances in order for the document repository and transient stores to function correctly.
 
-The same applies for `repository.transient.binary.store` (`nxserver/data/binaries/transient_binaries` by default) directory.
+In addition to the default repository binary store used for documents, Nuxeo uses dynamically-named binary stores for the various transient stores it needs. These dynamic binary stores are created as siblings of the default one.
+
+The default `repository.binary.store` is `$NUXEO/nxserver/data/binaries` and therefore by default Nuxeo would create:
+- `$NUXEO/nxserver/data/binaries`
+- `$NUXEO/nxserver/data/binaries_transient_authorizationRequestStore`
+- `$NUXEO/nxserver/data/binaries_transient_BatchManagerCache`
+- `$NUXEO/nxserver/data/binaries_transient_default`
+- etc.
+
+However the rest of the `$NUXEO/nxserver/data` directory **must not** be shared by several Nuxeo instances, as it contains instance-specific data.
+
+Therefore in a cluster setting you should point `repository.binary.store` to a folder like `/var/lib/nuxeo/binaries/binaries` and mount/share `/var/lib/nuxeo/binaries`. This way the default binary store and all the dynamic binary stores will be created under the mount point:
+- `/var/lib/nuxeo/binaries/binaries`
+- `/var/lib/nuxeo/binaries/binaries_transient_authorizationRequestStore`
+- `/var/lib/nuxeo/binaries/binaries_transient_BatchManagerCache`
+- `/var/lib/nuxeo/binaries/binaries_transient_default`
+- etc.
+
+You can of course use a different path than `/var/lib/nuxeo/binaries`.
+
+The above does not apply if binaries are stored in a network-based location, like S3.
 
 ### Temporary Directory
 
@@ -223,73 +248,19 @@ The temporary directory configured through `nuxeo.tmp.dir` **must not** be share
 
 However, in order for various no-copy optimizations to be effective, the temporary directory should be on the same filesystem as the binaries directory. To do this, the recommended way is to have each instance's `nuxeo.tmp.dir` point to a different subdirectory of the shared filesystem.
 
-### Transient Store
-
-The transient directory used by any [Transient Store]({{page version='' space='nxdoc' page='transient-store'}}) accessed by multiple Nuxeo instances **must be** shared by all instances. This transient directory is located in `nxserver/data/transientstores/<transientstore_name>`.
-
-By default there is only one Transient Store contribution named `default`:
-
-```xml
-<extension target="org.nuxeo.ecm.core.transientstore.TransientStorageComponent"
-  point="store">
-  <store name="default" class="...">
-    ...
-  </store>
-</extension>
-```
-
-Therefore you need to create in the `nxserver/data/transientstores` directory a symbolic link named `default` pointing to a shared directory, and do the same for any other `TransientStore` you might have contributed if it is intended to be shared by multiple instances of the cluster.
-
-This does not apply if you manually configured a `KeyValueBlobTransientStore`, which will use a `BlobProvider` to store blobs instead of a filesystem directory.
-
-## VCS Cluster Configuration
-
-### Setup
-
-To set up clustering, please update the following parameters in [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}}) :
-
-*   **`repository.clustering.enabled`** must be `true` to enable clustering.
-*   **`repository.clustering.id`**: it is now highly recommended to set an explicit cluster node id. The id should be a short string specific to this instance. For VCS (SQL database), it must be an integer.
-*   **`repository.clustering.delay`** is expressed in milliseconds, and specifies a delay during which invalidations don't need to be processed. Using a non-0 value is an important optimization as otherwise every single transaction, even a read-only one, would have to hit the database to check invalidations between several nodes. However this means that one node may not see immediately the changes made on another node, which is a problem if you don't use sticky session on the load balancer. This is VCS-specific, and does not apply to DBS (MongoDB).
-*   **`repository.binary.store`** must point to a shared storage unless you use an external binary store like S3. Under Windows, the path value can be UNC formatted, for instance `\\servername\sharename`.
-*   **`nuxeo.db.validationQuery`** must contain a SELECT clause for validating connections in the pool according to your database type. For instance `SELECT 1` used on PostgreSQL or `SELECT 1 FROM dual` on Oracle. This is VCS-specific, and does not apply to DBS (MongoDB).
-
-There is a dedicated page detailing all the [VCS configuration options]({{page page='vcs'}}).
-
-### Checking the SQL Tables Initialization
-
-1.  Start the SQL server, all Nuxeo nodes (the first alone and the other afterwards to avoid concurrent initialization of the SQL tables) and the load balancer.
-2.  Log in on the HTTP user interface on each cluster node.
-3.  Check on the database that the `cluster_nodes` table is initialized with one line per node:
-
-```
-nuxeo-db=# select * from cluster_nodes;
- nodeid |          created
---------+----------------------------
-  25767 | 2009-07-29 14:36:08.769657
-  32546 | 2009-07-29 14:39:18.437264
-(2 lines)
-
-```
-
-### Checking VCS Cache Invalidations
-
-1.  Create a document and browse it from two different nodes.
-2.  Edit the title from one node.
-3.  Navigate back to the document from second node to check that the change is visible.
-4.  You can also monitor what's happening in the `cluster_invals` table to see cache invalidation information.
+Using the above suggestions for the binaries directory, you could set `nuxeo.tmp.dir` to `/var/lib/nuxeo/binaries/tmp/node1` for example, for a node with id `node1`.
 
 ## Quartz Scheduler Cluster Configuration
 
 A clustered Nuxeo environment should be configured to use Quartz scheduling. The Quartz scheduling component allows nodes to coordinate scheduled tasks between themselves - a single task will be routed to a single node for execution on that one node. This ensures that scheduled events, like periodic cleanups or periodic imports, are executed only on one node and not on all nodes at the same time.
 
-Standard configuration is available from Nuxeo templates for VCS (SQL databases). For MongoDB (DBS) everything is done automatically, you don't have to use any specific configuration or template.
+For DBS (MongoDB) everything is done automatically, you don't have to use any specific configuration or template. You can skip the rest of this section.
 
-Each node in the cluster should be configured to include this template.
+For VCS (SQL databases) the standard configuration is available from Nuxeo templates; each node in the cluster should be configured to include the relevant `<database>-quartz-cluster` template.
 
 1.  Populate the database with the tables needed by Quartz (names `QRTZ_*`).
     The DDL scripts come from the standard Quartz distribution and are available in the Nuxeo templates in `$NUXEO_HOME/templates/<database>-quartz-cluster/bin/create-quartz-tables.sql`.
-2.  Enable the Quartz-specific cluster templates by adding the template `<database>-quartz-cluster`. In most cases you will include this template on each node in the cluster.
+2.  Enable the Quartz-specific cluster templates by adding the template `<database>-quartz-cluster`.
 
 {{#> callout type='note' }}
 
@@ -326,7 +297,7 @@ The Nuxeo Platform requires all calls to be authenticated. Depending on your arc
 
 That's why having a session based authentication + session affinity can make sense: you don't have to re-authenticate each time you call the server.
 
-If the session affinity can not be restored, for example because the target server has been shutdown:
+If the session affinity can not be restored, for example because the target server has been shut down:
 
 *   stateless authentication will be automatically replayed (ex: Basic Auth)
 *   for stateful authentication:
