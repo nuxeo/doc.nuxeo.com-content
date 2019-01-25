@@ -187,7 +187,6 @@ history:
         date: '2013-05-30 11:41'
         message: ''
         version: '1'
-
 ---
 Nuxeo can be clustered between several nodes (a.k.a. instances or machines) with the appropriate configuration. In addition, an HTTP load balancer with session affinity must be used in front of the nodes.
 
@@ -195,11 +194,11 @@ Nuxeo can be clustered between several nodes (a.k.a. instances or machines) with
 
 To enable clustering, you must have at least two nodes with:
 
-*   A shared database
-*   A shared filesystem (unless you use an external binary store like S3)
-*   A dedicated [Elasticsearch cluster]({{page page='elasticsearch-setup'}}), if using Elasticsearch
-*   A [Kafka cluster]({{page page='kafka'}}) or a [Redis server]({{page page='redis-configuration'}})
-*   A load-balancer with sticky sessions
+- A shared database
+- A shared filesystem (unless you use an external binary store like S3)
+- A dedicated [Elasticsearch cluster]({{page page='elasticsearch-setup'}}), if using Elasticsearch
+- A [Kafka cluster]({{page page='kafka'}}) or a [Redis server]({{page page='redis-configuration'}})
+- A load-balancer with sticky sessions
 
 You can head to the [Nuxeo cluster architecture introduction]({{page page='nuxeo-cluster-architecture-introduction'}}) for more information on these components.
 
@@ -207,10 +206,10 @@ The shared filesystem is usually an NFS mount. You **must not** share the whole 
 
 ## Cluster Node Identity
 
-To set up clustering, please update the following parameters in [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}}) :
+To set up clustering, please update the following parameters in [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}}):
 
-*   **`nuxeo.cluster.enabled`** must be `true` to enable clustering.
-*   **`nuxeo.cluster.nodeid`**: must be set to a cluster node id. The id should be a string specific to this instance (and therefore all instances must have different cluster node ids).
+- **`nuxeo.cluster.enabled`** must be `true` to enable clustering.
+- **`nuxeo.cluster.nodeid`**: must be set to a cluster node id. The id should be a string specific to this instance (and therefore all instances must have different cluster node ids).
 
 ## Shared Filesystem Configuration
 
