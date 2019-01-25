@@ -1263,7 +1263,7 @@ Added document publishing capabilities:
 - [NXP-24432](https://jira.nuxeo.com/browse/NXP-24432) Unpublish documents from original one.
 - [NXP-24427](https://jira.nuxeo.com/browse/NXP-24427) Ability to publish a set of documents in bulk.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on [documentation]({{page space='userdoc' page='document-publishing'}}).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on [documentation]({{page space='userdoc' page='share'}}#publishing).
 
 #### Comments on Document {{since '10.3'}}
 
@@ -1272,7 +1272,7 @@ Allows comments on commentable document:
 - [NXP-25536](https://jira.nuxeo.com/browse/NXP-25536) Allows creation of new comment or reply.
 - [NXP-25537](https://jira.nuxeo.com/browse/NXP-25537) Deletion and edition of comments and replies.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on [documentation]({{page space='userdoc' page='comment'}}).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on [documentation]({{page space='userdoc' page='content-edit'}}#commenting).
 
 #### Machine Learning Suggestions on Document Creation Forms {{since '10.3'}}
 
@@ -1285,7 +1285,7 @@ Integrates Machine Learning custom models suggestion in Web UI to provide predic
 It exposes CSV export in the UI, allowing users to download a listing in CSV format.
 [NXP-25934](https://jira.nuxeo.com/browse/NXP-25934) Ability to export results and folderish content in CSV.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on [documentation]({{page space='userdoc' page='content-export'}}).
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on [documentation]({{page space='userdoc' page='share'}}#exporting).
 
 #### Direct Upload to 3rd-Party Service {{since '10.1'}}
 
