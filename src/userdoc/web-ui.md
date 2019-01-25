@@ -16,7 +16,6 @@ Watch the related course on Nuxeo University:</br>
 {{/callout}}
 
 {{! multiexcerpt name='webui-functional-overview'}}
-## Functional Overview
 
 Nuxeo Web UI is a responsive application with three main layout regions:
 
@@ -31,7 +30,7 @@ Nuxeo Web UI is a responsive application with three main layout regions:
 2. [The side menu](#side-menu-functional-overview)
 3. [The main view](#main-view-functional-overview)
 
-### {{> anchor 'header-toolbar-functional-overview'}} Header Toolbar
+## {{> anchor 'header-toolbar-functional-overview'}} Header Toolbar
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Header toolbar
     name: header_toolbar.png
@@ -43,7 +42,7 @@ Nuxeo Web UI is a responsive application with three main layout regions:
 2.  **Sub-Views**: The sub-views available.
 3.  **Quick search**: Search by keywords or users.
 
-### {{> anchor 'side-menu-functional-overview'}} Side Menu
+## {{> anchor 'side-menu-functional-overview'}} Side Menu
 
 The menu displays different tabs. Clicking on one of them will open a side panel with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area. We will see the description of the main area on the last part of this section.
 
@@ -190,7 +189,7 @@ This new pattern allows to start browsing without changing the context of work.
 
 </td></tr></tbody></table></div>
 
-### {{> anchor 'main-view-functional-overview'}} Main View
+## {{> anchor 'main-view-functional-overview'}} Main View
 
 The main view display depends on what has been selected on the side menu. The main view will usually show lists of documents or a document and its details.
 Lists of documents are presented in a table that proposes different functionalities like infinite scroll instead of pagination, faceted filters in the header, easy columns selection with persistence of the user's choice and a great visibility of selected elements.
