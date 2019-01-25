@@ -8,12 +8,10 @@ toc: true
 description: Web UI User Documentation
 tree_item_index: 100
 labels:
-
-
 ---
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Getting Started with Nuxeo Web UI](https://university.nuxeo.com/learn/public/course/view/elearning/92/getting-started-with-nuxeo-web-ui).
+Watch the related course on Nuxeo University:</br>
+[Getting Started with Nuxeo Web UI](https://university.nuxeo.com/learn/public/course/view/elearning/92/getting-started-with-nuxeo-web-ui).
 ![]({{file name='university-webui.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
@@ -34,7 +32,6 @@ Nuxeo Web UI is a responsive application with three main layout regions:
 3. [The main view](#main-view-functional-overview)
 
 ### {{> anchor 'header-toolbar-functional-overview'}} Header Toolbar
-
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Header toolbar
     name: header_toolbar.png
@@ -224,5 +221,4 @@ A create button {{!--     ### nx_asset ###
     1.1.3#screenshot#up_to_date
 --}}
 ![Create Button](nx_asset://2b093e23-6ed6-4228-943b-9b4655df9273 ?w=20) is also permanently displayed at the bottom right corner of the main view the to let you create or import documents from anywhere in the application.
-
 {{! /multiexcerpt}}
