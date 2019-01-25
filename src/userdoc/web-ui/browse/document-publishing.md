@@ -68,7 +68,6 @@ To revert all the publication of this document, click **Unpublish All**.
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages'}}
 
 - [Nuxeo Platform Feature Table]({{page space='nxdoc' page='nuxeo-platform-feature-table'}})
-- [Nuxeo Media Publishing]({{page space='nxdoc' page='nuxeo-media-publishing'}})
 
 {{/panel}}</div><div class="column medium-6">
 

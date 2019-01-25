@@ -10,7 +10,6 @@ labels:
 toc: true
 tree_item_index: 200
 description: Web UI User Documentation about Tasks
-
 ---
 Once a workflow has been started, users added on the workflow can review the document and approve or reject it.
 

@@ -10,9 +10,7 @@ labels:
     - creation
     - drag-and-drop
 tree_item_index: 100
-
 ---
-
 {{{multiexcerpt 'intro-creating-content'}}}
 
 ## Creating a Document Using the Create Button

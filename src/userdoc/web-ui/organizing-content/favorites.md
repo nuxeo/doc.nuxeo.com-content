@@ -9,9 +9,7 @@ toc: true
 labels:
     - favorites
 tree_item_index: 300
-
 ---
-
 {{! multiexcerpt name='definition-favorites'}}
 Favorites is a particular [collection]({{page version='' space='userdoc' page='collections-web-ui'}}) that enables you to bookmark documents.
 {{! /multiexcerpt}}

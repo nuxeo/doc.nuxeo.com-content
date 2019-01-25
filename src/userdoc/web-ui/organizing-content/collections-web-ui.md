@@ -1,14 +1,14 @@
 ---
 title: Collections
 review:
-    comment: ''
-    date: '2018-10-15'
-    status: ok
+  comment: ''
+  date: '2018-10-15'
+  status: ok
 toc: true
 tree_item_index: 200
 description: Web UI user documentation about Collections
 labels:
-
+  - collections
 ---
 {{! multiexcerpt name='definition-collection'}}
 

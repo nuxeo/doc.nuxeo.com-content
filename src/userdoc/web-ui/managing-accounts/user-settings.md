@@ -7,15 +7,12 @@ review:
 toc: true
 tree_item_index: 200
 description: null
-labels:
-
-
 ---
 ## Nuxeo Drive
 
 The Nuxeo Drive tab enables you to manage your Nuxeo Drive application. You will be able to see all the spaces you have synchronized with Nuxeo Drive and the tokens connected to your Drive client.
 
-For more information about Nuxeo Drive, read the [following documentation]({{page version='' space='nxdoc' page='nuxeo-drive'}}).
+For more information about Nuxeo Drive, read the [following documentation]({{page version='' space='client-apps' page='nuxeo-drive'}}).
 
 ## Profile
 

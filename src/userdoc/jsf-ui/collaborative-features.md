@@ -77,12 +77,9 @@ history:
         date: '2015-08-27 08:46'
         message: ''
         version: '1'
-
 ---
 {{! excerpt}}
-
 The Nuxeo Platform provides you with a set of features that ease collaborative work.
-
 {{! /excerpt}}
 
 ## Lock - Unlock
@@ -95,19 +92,19 @@ Users with Management everything permission can unlock document on other users' 
 
 ## Versions Management
 
-{{{multiexcerpt 'versioning-intro' page='USERDOC:Browse'}}}
+{{{multiexcerpt 'versioning-intro' page='managing-content'}}}
 
 See the [Versioning Overview section]({{page page='editing-content'}}#versioning-overview) for more details.
 
 ## Nuxeo Diff
 
-{{{excerpt 'USERDOC:Nuxeo Diff'}}}
+{{{excerpt space='userdoc' page='nuxeo-diff'}}}
 
-{{{multiexcerpt 'comparison-possibilities' page='USERDOC:Nuxeo Diff'}}}
+{{{multiexcerpt 'comparison-possibilities' space='userdoc' page='nuxeo-diff'}}}
 
 ![]({{file name='Diff-compare-screen.png' page='nuxeo-diff'}} ?w=600,border=true)
 
-See the page [Nuxeo Diff]({{page page='nuxeo-diff'}}) for more details.
+See the page [Nuxeo Diff]({{page page='/userdoc/nuxeo-diff'}}) for more details.
 
 ## {{> anchor 'comments'}}Comments
 
@@ -124,9 +121,7 @@ All users can add and read comments on a document. Adding comments, answering a 
 Only the author of the comment and users with Manage everything permission can delete the comments of a document, by clicking the **Delete** link.
 
 {{#> callout type='warning' }}
-
 Deleting a comment is a permanent action. You cannot restore deleted comments.
-
 {{/callout}}
 
 ## Validation Workflows

@@ -10,9 +10,7 @@ labels:
     - creation
     - drag-and-drop
 tree_item_index: 300
-
 ---
-
 Editing a document means modifying its content (i.e. the attached file of a file document, the text of a note, etc.), or simply editing the title, description or any property of the document.
 
 You can also edit documents using Nuxeo Drive. For more information, see [Nuxeo Drive Editing Documents]({{page space='client-apps' page='nuxeo-drive/#editing-documents'}}).

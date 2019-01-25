@@ -8,9 +8,7 @@ labels:
     - web-ui
 is_overview: true
 tree_item_index: 110
-
 ---
-
 <div class="column">
 {{#> panel type='primary'}}
 

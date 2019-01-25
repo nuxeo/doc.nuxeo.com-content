@@ -10,11 +10,10 @@ labels:
     - creation
     - drag-and-drop
 tree_item_index: 400
-
 ---
 {{! multiexcerpt name='functional-overview-trash-feature'}}
 
-Only users with "Edit" or "Manage everything" [permissions]({{page version='' space='userdoc' page='managing-permissions'}}) can delete documents from a space.
+Only users with "Edit" or "Manage everything" [permissions]({{page version='' space='userdoc' page='permissions'}}) can delete documents from a space.
 
 ## From Workspace View
 

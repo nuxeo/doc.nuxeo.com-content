@@ -10,11 +10,8 @@ labels:
     - creation
     - drag-and-drop
 tree_item_index: 600
-
 ---
-## Compare
-
-### Compare Versions of a Document
+## Compare Versions of a Document
 
 When you have several versions of a document, click **Compare Version** ![]({{file space='userdoc' page='icons-index' name='compare-versions-web-ui.png'}} ?w=20) to see the differences between the document versions.
 
@@ -23,7 +20,7 @@ By default, you will only see the data that differ from one version to another.<
 Enable **View All Data** to see all the properties of the documents.
 {{/callout}}
 
-### Compare Metadata Between Documents
+## Compare Metadata Between Documents
 
 You can visualize metadata differences between two documents.
 

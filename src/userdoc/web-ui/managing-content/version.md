@@ -10,14 +10,10 @@ labels:
     - creation
     - drag-and-drop
 tree_item_index: 500
-
 ---
-
 {{! multiexcerpt name='versioning-functional-overview'}}
 {{! multiexcerpt name='versioning-intro'}}
-
 Document versions enable you and other users to easily revert to a specific version of the document if needed, without having to edit the document. The Nuxeo Platform offers both automatic and manual versioning of documents.
-
 {{! /multiexcerpt}}
 
 Every document holds a version number, which is a piece of information about the evolution of the document. A version number (V.v) is composed of a major version number (V) and a minor version number (v). When a document is created, its version number can be 0.0, 0.1 or 1.0 depending on automatic versioning rules. Minor version increment are typically used for secondary changes. Major version increment is usually reserved to significant modifications. When a document is edited without a new version being created, the version number is suffixed with a + (0.1+ for instance), to indicate that the version was modified since it was created.
