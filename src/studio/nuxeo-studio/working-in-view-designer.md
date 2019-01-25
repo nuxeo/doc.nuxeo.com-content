@@ -46,7 +46,7 @@ In this documentation, you will also find [Javascript Expression Examples]({{pag
 - [HOWTO: Create a New Workflow in Studio Designer]({{page version='' space='nxdoc' page='web-ui-workflow-tasks'}})
 - [HOWTO: Create and Reuse a Custom Element]({{page version='' space='nxdoc' page='how-to-create-and-reuse-custom-element'}})
 - [HOWTO: Insert a User Action]({{page version='' space='nxdoc' page='how-to-insert-user-action'}})
-- [HOWTO: Insert a New Pill]({{page version='' space='nxdoc' page='how-to-new-pill'}})
+- [HOWTO: Insert a New Tab]({{page version='' space='nxdoc' page='how-to-new-tab'}})
 
 
 {{/panel}}
