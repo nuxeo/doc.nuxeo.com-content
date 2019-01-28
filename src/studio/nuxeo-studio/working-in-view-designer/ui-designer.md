@@ -80,9 +80,29 @@ Finally, when dealing with complex multivalued fields:
 When hovering on an element in a document or workflow task layout, only the trash icon should be used at the moment. Using the sortable toggle (arrows icon) or the visibility toggle (eye icon) may prevent your layout from working properly.
 {{/callout}}
 
+## Layout Blocks
+
+Allows you to create reusable components and share them between different documents layouts.
+Layout blocks are elements of a layout that you can reuse them in other layouts configurations.
+In each layout block, you can insert properties along with their configuration.
+
+Nuxeo Studio provides you a variety of Layout Blocks templates:
+
+- **Title/description element template**: By default, provides a element containing the title and description properties in a single block. Properties can be added to the block.
+- **Sample layout template**: Provides the frame for creating
+- **Document Page template**: Provides the frame for creating your own document tabs.
+- **Drawer Page template**: Provides the frame for customizing your drawer menu.
+- **Main Page template**: Provides the frame for creating custom pages to display specific information.
+- **Dialog Action template**: Provides the frame for creating a button opening a dialog box.
+- **Script Action template**: Provides the frame for creating a button running an automation script.
+
+When creating or editing a form, you can drag and drop properties from any schema. Then, you can configure them individually.
+
+In any of your **Layouts**, you can drag and drop your forms from the catalog.
+
 ## Tabs
 
-You can add new document tabs and also hide and override default document to display specific information relevant to your users.
+Allows you to add new document tabs and also hide and override default document to display specific information relevant to your users.
 
 A tab is created along with a corresponding element at the top of the main view. A tab can be activated under a set of conditions (for a specific user or document property such as group, type, permissions, etc.)
 Once activated, selecting the tab will display the corresponding view.
@@ -90,8 +110,9 @@ Once activated, selecting the tab will display the corresponding view.
 - **Page**: Uses the document page template to create a tab displaying information that you want and that are related to documents.
 - **Listing**: Uses the element `nuxeo-result-view` in the main view. You can use it to display custom document listings using a page provider.
 
-
 ## Drawer
+
+Allows you to create left menu items and main menu pages customize your drawer menu.
 
 - **Left Menu Items**: From generic pages to new search forms or browse pages with determined root path. These will add a new left menu item.
 
@@ -110,13 +131,12 @@ Allows you to customize your own UI themes that users can select. It is based pr
 
 ## Translations
 
-Create and/or Manage your `messages.json` files from this view to add a new language to your platform. </br>
+Allows you to create and/or Manage your `messages.json` files from this view to add a new language to your platform. </br>
 This file is composed of the keys used in UI following by their value in the corresponding language.
 
 ## Dashboard
 
-You can customize the default Web UI dashboard and edit the default HTML code to include your custom elements.
-
+Allows you to customize the default Web UI dashboard and edit the default HTML code to include your custom elements.
 
 * * *
 
