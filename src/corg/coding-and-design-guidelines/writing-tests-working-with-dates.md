@@ -76,7 +76,7 @@ Although all other methods were very useful (especially the `parse()` one), they
 
 ## Date parsing
 
-There is no equivalent to the&nbsp;[`public static&nbsp;long&nbsp;parse(String&nbsp;s)`](http://docs.oracle.com/javase/7/docs/api/java/util/Date.html#parse%28java.lang.String%29) method. All other methods (either from [`DateFormat`](http://docs.oracle.com/javase/7/docs/api/java/text/DateFormat.html) or other frameworks) require to explicitly set the format before parsing.
+There is no equivalent to the [`public static long parse(String s)`](http://docs.oracle.com/javase/7/docs/api/java/util/Date.html#parse%28java.lang.String%29) method. All other methods (either from [`DateFormat`](http://docs.oracle.com/javase/7/docs/api/java/text/DateFormat.html) or other frameworks) require to explicitly set the format before parsing.
 
 Recommended classes are [`SimpleDateFormat`](http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html) and [`DateTimeFormatter` (from Joda Time)](http://joda-time.sourceforge.net/apidocs/org/joda/time/format/DateTimeFormatter.html).
 

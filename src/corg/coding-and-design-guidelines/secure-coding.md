@@ -142,9 +142,9 @@ public void extract(ZipInputStream in, ZipEntry entry, File base) {
 
 ### No XML External Entity Processing
 
-[XML External Entity Processing](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing) (XXE) is a class of security issues due to invalid processing of external entities in user-supplied XML files, where the entities may access invalid external resources.
+[XML External Entity Processing](https://www.owasp.org/index.php/XML_External_Entity_%28XXE%29_Processing) (XXE) is a class of security issues due to invalid processing of external entities in user-supplied XML files, where the entities may access invalid external resources.
 
-The recommendations for Java code detailed in the [above page](https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing) must be followed. In particular:
+The recommendations for Java code detailed in the [above page](https://www.owasp.org/index.php/XML_External_Entity_%28XXE%29_Processing) must be followed. In particular:
 
 {{#> panel type='code' heading='DocumentBuilder Protection'}}
 
