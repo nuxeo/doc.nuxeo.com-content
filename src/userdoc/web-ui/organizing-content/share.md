@@ -49,6 +49,7 @@ Users can export documents on their computer. It is possible to export:
     - a document.xml file holding the document's metadata and various information such as the applied access rights,
     - a .blob file that holds the binary content of the document. This blob is referenced in the document.xml file;
 - The **ZIP export** enables you to export a whole workspace, section or folder in a zipped XML folder. This export is only available on folderish documents.
+- **CSV export** enables you to export a table listing of all the properties of the content in CSV format. This export is available on folderish documents, search results and collections. CSV export  ![]({{file name='csv-icon.png'}} ?w=30)  is available at the top-right of document listing.
 
 ### From a Document
 
@@ -57,7 +58,6 @@ Users can export documents on their computer. It is possible to export:
 - The **XML export** is a low level export that enables users to either get the XML definition of the document or get a folder for each exported document that contains:
     - document.xml file holding the document's metadata and various information such as the applied access rights,
     - A .blob file that holds the binary content of the document. This blob is referenced in the document.xml file;
-
 
 The exports are available by clicking on the export button ![]({{file name='export-web-ui.png' page='icons-index'}} ?w=16).
 
@@ -114,7 +114,6 @@ As in workspaces, access to sections is determined by permissions.
 {{#> callout type='tip' }}
 You can define any document type as publish space by checking Document is a publish space, in the Definition screen of your custom document type in Studio Modeler.
 {{/callout}}
-
 
 ## Publishing Documents
 

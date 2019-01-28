@@ -831,7 +831,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [User Documentation]({{page space='userdoc' page='document-publishing'}})<br/>
+    [User Documentation]({{page space='userdoc' page='share'}}#publishing)<br/>
     [Developer Documentation]({{page page='publisher'}})
     </td>
 </tr>
@@ -842,7 +842,7 @@ The tables below use the following notation:
     <td>N/A</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [User Documentation]({{page space='userdoc' page='document-publishing'}})<br/>
+    [User Documentation]({{page space='userdoc' page='share'}}#publishing)<br/>
     [Developer Documentation]({{page page='publisher'}})
     </td>
 </tr>
@@ -853,7 +853,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>N/A</td>
     <td colspan="1">
-    [User Documentation]({{page space='userdoc' page='publishing-content'}})<br/>
+    [User Documentation]({{page space='userdoc' page='share'}}#publishing)<br/>
     [Developer Documentation]({{page page='publisher'}})
     </td>
 </tr>
@@ -1362,7 +1362,7 @@ The tables below use the following notation:
     <td>N/A</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[User Documentation]({{page version='' space='userdoc' page='comment'}})</br>
+    <td colspan="1">[User Documentation]({{page version='' space='userdoc' page='content-edit'}}#commenting)</br>
     [Developer Documentation]({{page version='' space='nxdoc' page='comments'}})</td>
 </tr>
 <tr>
