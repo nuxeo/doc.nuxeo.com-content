@@ -135,13 +135,11 @@ history:
     message: ''
     version: '1'
 ---
-
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
-
-- [Course on Handling Service Extension Points](https://university.nuxeo.com/learn/public/course/view/elearning/70/HandlingServiceExtensionPoints)
-  ![]({{file name='university-extension-points.png' page='nxdoc/university'}} ?w=450,border=true)
-  {{/callout}}
+Watch the related courses on Nuxeo University:</br>
+[Course on Handling Service Extension Points](https://university.nuxeo.com/learn/public/course/view/elearning/70/HandlingServiceExtensionPoints)
+![]({{file name='university-extension-points.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
 
 ## {{> anchor 'finding-extension-point'}}Finding the Extension Point Where to Contribute
 
@@ -172,7 +170,6 @@ Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](htt
 - Pay attention to always start with an `<extension>` element, or a `<require>` element followed by an `<extension>` element. There is a minimal check done so as to avoid you contribute non correct XML. The `<require>` mechanism can be used to make sure you deploy after another contribution that is deployed by some built-in plugins for instance. You need to reference the component name in the `require` content.
 - You can contribute several extension points in the same XML Extensions feature. This is useful to group extensions that are contributed for the same high level functional goal.
   Thus, you can have:
-
   ```xml
   <extension point ="" target =""> ...</extension>
   ```
@@ -198,7 +195,6 @@ Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](htt
   <require> component name bis</require>
   <extension  point ="..." target="...">...</extension>
   ```
-
   etc.
 
 ## Contributing Using Nuxeo CLI
@@ -217,21 +213,17 @@ Once you have found the `extension point` you want to contribute to:
     ```xml
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
-
     </component>
     ```
-
-    {{#> callout type='note' heading='Naming your component'}}- In Nuxeo, we follow this naming convention `org.mycompany.myproject.extension.point.where.we.contribute.contribution`.
-
-You can follow your way but be careful to avoid conflicts.
-
-- You must give a **unique name** for your component. If the name of your package is not unique it will **not be deployed**.{{/callout}}
+    {{#> callout type='note' heading='Naming your component'}}
+    *   In Nuxeo, we follow this naming convention `org.mycompany.myproject.extension.point.where.we.contribute.contribution`.
+        You can follow your way but be careful to avoid conflicts.
+    *   You must give a **unique name** for your component. If the name of your package is not unique it will **not be deployed**.{{/callout}}
+    
 3.  Add your contribution that express the configuration you want in the component XML fragment. You get something like:
-
     ```xml
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
-
       <!-- target and point value is given by the extension point definition -->
       <extension target="name.of.the.component.where.the.service.isdeclared" point="pointNameIntoThisComponent">
         <!-- here you put your configuration XML fragment
@@ -246,7 +238,6 @@ You can follow your way but be careful to avoid conflicts.
 In the previous section you have created your configuration. You must now declare your component in your bundle so it's deployed in your Nuxeo Server. This declaration is made through the `src/main/resources/META-INF/MANIFEST.MF` file.
 
 1.  Create a new parameter, if it does not exist.
-
     ```
     Manifest-Version: 1.0
     Bundle-Vendor: Nuxeo
@@ -260,14 +251,12 @@ In the previous section you have created your configuration. You must now declar
     Bundle-ManifestVersion: 2
     Bundle-SymbolicName: jalon-dm-bundle
     Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-
     ```
 
     ```
     Manifest-Version: 1.0
     ... all the existing element already set ...
     Nuxeo-Component: OSGI-INF/myproject-servicewhereIcontribute-contribution.xml
-
     ```
 
 2.  If the `Nuxeo-Component` entry already exists with another component declaration, separate them by commas.
@@ -287,12 +276,10 @@ Components deployment is linear, so if you want to override an existing configur
 3.  Copy the name of the component (value after **In component**).
 4.  Paste it in your component into a `<require>` item.
     You will have something like that:
-
     ```xml
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
       <require>name.of.the.component.you.want.to.override</require>
-
       <!-- target and point value is given by the extension point definition -->
       <extension target="name.of.the.component.where.the.service.isdeclared" point="pointNameIntoThisComponent">
         <!-- here you put your configuration XML fragment
