@@ -266,7 +266,7 @@ If you intend to continue working on this document, **immediately after** the in
 Working with an existing repository InDesign file:
 To open InDesign files stored in the repository, simply drag and drop the file from the panel to the main view of the application.
 
-After you have worked on your file (following instructions above for placing assets), use the Nuxeo CC Connector fly out menu to upload the file as before. This time, choose to “Replace” the file. This will override the previous version in the repository (and will version the file according to your company’s versioning policy in Nuxeo).
+After you have worked on your file (following instructions above for placing assets), use the Nuxeo Adobe Connector fly out menu to upload the file as before. Use "Replace" to update the same file in the DAM. Use "New" to create a new file in the DAM.
 
 {{#> callout type='note' }}
 If you did not open the InDesign file from the Connector panel (via drag and drop) and you choose “Replace”, you will still get a “new”/duplicate file in the repository.
@@ -362,3 +362,9 @@ This file can be edited with a basic text editor and is documented with definiti
 ### Firewall
 
 If your company has a firewall, you will need to be sure to whitelist the Silicon Publishing licensing server. The url to whitelist is https://licensing.siliconpublishing.com.
+
+## Roadmap
+
+Below are the evolutions and improvements planned for the Nuxeo Adobe Connector.
+
+<iframe src='https://ext.prodpad.com/ext/roadmap/8394e60a0789b66a7da9e54c9acee3d6a8d83f78' height='900' width='100%' frameborder='0'></iframe>
