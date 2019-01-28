@@ -135,13 +135,11 @@ history:
     message: ''
     version: '1'
 ---
-
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
-
-- [Course on Handling Service Extension Points](https://university.nuxeo.com/learn/public/course/view/elearning/70/HandlingServiceExtensionPoints)
-  ![]({{file name='university-extension-points.png' page='nxdoc/university'}} ?w=450,border=true)
-  {{/callout}}
+Watch the related courses on Nuxeo University:
+[Course on Handling Service Extension Points](https://university.nuxeo.com/learn/public/course/view/elearning/70/HandlingServiceExtensionPoints)
+![]({{file name='university-extension-points.png' page='nxdoc/university'}} ?w=450,border=true)
+{{/callout}}
 
 ## {{> anchor 'finding-extension-point'}}Finding the Extension Point Where to Contribute
 
@@ -227,7 +225,6 @@ You can follow your way but be careful to avoid conflicts.
 
 - You must give a **unique name** for your component. If the name of your package is not unique it will **not be deployed**.{{/callout}}
 3.  Add your contribution that express the configuration you want in the component XML fragment. You get something like:
-
     ```xml
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
@@ -287,7 +284,6 @@ Components deployment is linear, so if you want to override an existing configur
 3.  Copy the name of the component (value after **In component**).
 4.  Paste it in your component into a `<require>` item.
     You will have something like that:
-
     ```xml
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
