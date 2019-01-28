@@ -266,7 +266,7 @@ If you intend to continue working on this document, **immediately after** the in
 Working with an existing repository InDesign file:
 To open InDesign files stored in the repository, simply drag and drop the file from the panel to the main view of the application.
 
-After you have worked on your file (following instructions above for placing assets), use the Nuxeo CC Connector fly out menu to upload the file as before. Use "Replace" to update the same file in the DAM. Use "New" to create a new file in the DAM.
+After you have worked on your file (following instructions above for placing assets), use the Nuxeo Adobe Connector fly out menu to upload the file as before. Use "Replace" to update the same file in the DAM. Use "New" to create a new file in the DAM.
 
 {{#> callout type='note' }}
 If you did not open the InDesign file from the Connector panel (via drag and drop) and you choose “Replace”, you will still get a “new”/duplicate file in the repository.
