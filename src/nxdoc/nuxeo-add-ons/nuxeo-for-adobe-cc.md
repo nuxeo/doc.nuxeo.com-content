@@ -362,3 +362,9 @@ This file can be edited with a basic text editor and is documented with definiti
 ### Firewall
 
 If your company has a firewall, you will need to be sure to whitelist the Silicon Publishing licensing server. The url to whitelist is https://licensing.siliconpublishing.com.
+
+## Roadmap
+
+Below are the evolutions and improvements planned for the Nuxeo Adobe Connector.
+
+<iframe src='https://ext.prodpad.com/ext/roadmap/8394e60a0789b66a7da9e54c9acee3d6a8d83f78' height='900' width='100%' frameborder='0'></iframe>
