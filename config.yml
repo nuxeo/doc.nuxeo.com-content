@@ -6,7 +6,7 @@ default:
         space_name: Developer Documentation Center
       - space_path: userdoc
         space_name: Nuxeo Platform User Documentation
-    branch: 1010
+    branch: '1010'
     dev_browser_path: 1010/nxdoc
     versions:
       - label: FT
