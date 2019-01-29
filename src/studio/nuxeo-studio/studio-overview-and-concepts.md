@@ -93,15 +93,11 @@ history:
         date: '2011-08-05 18:15'
         message: ''
         version: '1'
-
 ---
-
 ## What is Nuxeo Studio
 
 {{! excerpt}}
-
 Nuxeo Studio is a SaaS (Software as a Service) application allowing you to customize Nuxeo products, from minor details to significant changes. With its graphical user interface, you can develop real new applications from the Nuxeo Platform without writing code.
-
 {{! /excerpt}}
 
 Nuxeo Studio enables you to configure and design your document types, forms, workflows and everything that builds your business logic.
@@ -119,8 +115,8 @@ Nuxeo Studio not only facilitates the configuration, it also makes the deploymen
 Finally, Nuxeo Studio makes it easier to upgrade your Nuxeo-based applications, as Nuxeo Studio guarantees forward compatibility with the next release of Nuxeo Platform.
 
 Nuxeo Studio is composed of two parts:
-* Studio Modeler, where you configure your content models and business workflows
-* Studio Designer, where you configure your forms and layouts designs for Web UI
+- Studio Modeler, where you configure your content models and business workflows
+- Studio Designer, where you configure your forms and layouts designs for Web UI
 
 ## Why Use Nuxeo Studio
 
@@ -138,24 +134,24 @@ Nuxeo Studio enables you to adapt the Nuxeo Platform and make it your own. Custo
 
 Using Nuxeo Studio you can:
 
-*   Brand your application
-*   Add new document types, with new metadata and lifecycle
-*   Create forms adapted to your specific document types
-*   Customize the screen listing documents (content views) to display relevant business information
-*   Define your own search forms
-*   Add new buttons, tabs, icons in the UI
-*   Create Automation chains to automatically apply simple to complex actions on documents
-*   Define business workflows with manual and automated transitions, a dedicated dashboard, specific forms
+- Brand your application
+- Add new document types, with new metadata and lifecycle
+- Create forms adapted to your specific document types
+- Customize the screen listing documents (content views) to display relevant business information
+- Define your own search forms
+- Add new buttons, tabs, icons in the UI
+- Create Automation chains to automatically apply simple to complex actions on documents
+- Define business workflows with manual and automated transitions, a dedicated dashboard, specific forms
 
 ## How to Get Started
 
 Here is a list of resources to start working with Nuxeo Studio:
 
-*   [Nuxeo Studio Concepts video](https://university.nuxeo.com/learn/public/course/view/elearning/142/nuxeo-platform-quickstart-nuxeo-studio-concepts): Our Nuxeo University video dedicated to the discovery of Nuxeo Studio
-*   [Working in Studio Modeler]({{page page='working-in-studio'}}): This section of the documentation provides you screen by screen descriptions of the tool
-*   [Working in Studio Designer]({{page page='working-in-view-designer'}}): This section of the documentation provides description of the tool and its capabilities
-*   [Essential Nuxeo Platform Terminology]({{page space='nxdoc' page='essential-nuxeo-platform-terminology'}}): Get familiar with the concepts and terms used in the Platform
-*   [Quick Start Dev Guide]({{page space='nxdoc' page='configure-nuxeo-platform'}}): Start configuring a Nuxeo Platform project using Nuxeo Studio and Nuxeo Generator
+- [Nuxeo Studio Concepts video](https://university.nuxeo.com/learn/public/course/view/elearning/142/nuxeo-platform-quickstart-nuxeo-studio-concepts): Our Nuxeo University video dedicated to the discovery of Nuxeo Studio
+- [Working in Studio Modeler]({{page page='working-in-studio'}}): This section of the documentation provides you screen by screen descriptions of the tool
+- [Working in Studio Designer]({{page page='working-in-view-designer'}}): This section of the documentation provides description of the tool and its capabilities
+- [Essential Nuxeo Platform Terminology]({{page space='nxdoc' page='essential-nuxeo-platform-terminology'}}): Get familiar with the concepts and terms used in the Platform
+- [Quick Start Dev Guide]({{page space='nxdoc' page='configure-nuxeo-platform'}}): Start configuring a Nuxeo Platform project using Nuxeo Studio and Nuxeo Generator
 
 ## Browser Support
 

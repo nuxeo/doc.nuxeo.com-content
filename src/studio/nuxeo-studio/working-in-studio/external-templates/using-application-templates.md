@@ -80,9 +80,10 @@ history:
         message: ''
         version: '1'
 ---
-
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University<br>[Expert Session on External Templates](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils).![]({{file version='' space='nxdoc' page='university' name='university-external-template.png'}} ?w=450,border=true)
+Watch the related courses on Nuxeo University:<br>
+[Expert Session on External Templates](https://university.nuxeo.com/learn/public/course/view/elearning/135/expert-session-studio-external-templates-videoutils).
+![]({{file version='' space='nxdoc' page='university' name='university-external-template.png'}} ?w=450,border=true)
 {{/callout}}
 
 **To import an Application Template:**
@@ -90,7 +91,7 @@ Watch the related courses on Nuxeo University<br>[Expert Session on External Tem
 {{! multiexcerpt name='application-template-import'}}
 
 1.  Go to **Configuration** > **External Templates**
-    All the available templates are displayed. If this icon ![]({{file name='unabled_small.png'}} ?w=16,h=16) is displayed, the template is not compatible with your project target version (ex: Nuxeo Platform 10.10.0).
+    All the available templates are displayed. If this icon ![]({{file name='unabled_small.png'}} ?w=16,h=16) is displayed, the template is not compatible with your project target version.
 
 2.  Click on **Details** to check what the template that you're interested in includes.
     A pop-up displays the list of all elements the template includes: definition of new documents, automation chains, icons, images, widgets...

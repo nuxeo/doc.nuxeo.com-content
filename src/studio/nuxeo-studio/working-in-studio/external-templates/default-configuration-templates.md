@@ -32,13 +32,10 @@ history:
         date: '2011-09-18 21:16'
         message: ''
         version: '1'
-
 ---
 {{#> callout type='tip' }}
-
-To make the discovery of Studio easier, in each newly created project we automatically import the "Default configuration" template that corresponds to your target application (DM, CMF, etc), so that all you have to do is modifying what has been imported. These default configuration templates implement some core elements you see in the Nuxeo application you downloaded.
+To make the discovery of Studio easier, in each newly created project we automatically import the "Default configuration" template that corresponds to your target application (DM, DAM, etc), so that all you have to do is modifying what has been imported. These default configuration templates implement some core elements you see in the Nuxeo application you downloaded.</br>
 If you want to customize those elements, the "Default configuration" templates are what you need!
-
 {{/callout}}
 
 The Application templates below are available to help you discover how the default configuration of Nuxeo applications is done.
@@ -61,9 +58,9 @@ Please note that you need to select the DAM package in the Application Definitio
 
 ## Default Nuxeo Platform Workflows Configuration
 
-This application will add into your Nuxeo Studio project the default workflow models (Serial and Parallel Reviews) delivered by Nuxeo into the Nuxeo Platform application. Workflow models are then executed in Nuxeo Platform using Nuxeo Workflow Engine. To modify them in Studio Designer go to:
-
-**UI** > **Layouts** > **Workflows**.
+This application will add into your Nuxeo Studio project the [default workflow models]({{page space='userdoc' page='task'}}) (Serial and Parallel Reviews) delivered by Nuxeo into the Nuxeo Platform application. Workflow models are then executed in Nuxeo Platform using Nuxeo Workflow Engine.  
+</br>
+To modify them in Studio Designer go to **UI** > **Layouts** > **Workflows**.
 
 ## Video Utils
 
