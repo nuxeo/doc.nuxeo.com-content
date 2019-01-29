@@ -32,7 +32,7 @@ Nuxeo CLI is working like any shell program. After installing it, you'll be able
 
 ### Requirements
 
-* [Node.js](https://nodejs.org/) version > 6
+* [Node.js](https://nodejs.org/) **version = 6.15.1**
 
 ### Recommended Installation
 
