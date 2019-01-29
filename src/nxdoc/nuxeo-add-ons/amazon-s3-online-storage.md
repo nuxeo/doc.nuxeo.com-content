@@ -120,7 +120,6 @@ history:
         date: '2013-01-04 10:51'
         message: ''
         version: '1'
-
 ---
 The [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage) is a Nuxeo Binary Manager for S3\. It stores Nuxeo's binaries (the attached documents) in an [Amazon S3](http://aws.amazon.com/s3/) bucket.
 
@@ -316,11 +315,14 @@ Web UI triggers some blob downloads from XHR (e.g. Bulk Download, CSV Export, et
   </CORSRule>
 </CORSConfiguration>
 ```
+{{#> callout type='note' }}
 Make sure to replace `http://localhost:8080` by the address where your Nuxeo instance is deployed.
+{{/callout}}
 
-Transient stores are much easier to configure now thanks to the combination of [NXP-26594](https://jira.nuxeo.com/browse/NXP-26594) and [NXP-26581](https://jira.nuxeo.com/browse/NXP-26581). Since [NXP-25974](https://jira.nuxeo.com/browse/NXP-25974) we are no longer using SimpleTransientStore because it is not cluster-compatible.
+Transient stores are much easier to configure now thanks to the combination of [NXP-26594](https://jira.nuxeo.com/browse/NXP-26594) and [NXP-26581](https://jira.nuxeo.com/browse/NXP-26581).</br>
+Since [Nuxeo Platform 10.10](https://jira.nuxeo.com/browse/NXP-25974) we are no longer using SimpleTransientStore because it is not cluster-compatible.
 
-Now, unless configured otherwise, storage for the blobs of transient stores shares the S3 configuration of the default binary store to store the transient blobs in a "subfolder" of the S3 bucket. It still has a separate TTL/GC cleanup lifecycle from the default one - everything is per-"folder".
+Now, unless configured otherwise, storage for the blobs of transient stores shares the S3 configuration of the default binary store to stock the transient blobs in a "subfolder" of the S3 bucket. It still has a separate TTL/GC cleanup lifecycle from the default one, everything is per-"folder".
 
 So given that now transient blobs come from S3, if direct download is enabled and JavaScript generates the download, a CORS configuration is needed on the bucket.
 
