@@ -79,7 +79,6 @@ history:
         date: '2011-09-18 21:11'
         message: ''
         version: '1'
-
 ---
 {{! excerpt}}
 Nuxeo Studio includes an Application Templates library composed of Studio projects or samples that you can use as a basis for your own project. Application templates enable to import new document types, lifecycles, workflows, features in a project as a template that can be edited to fit your project.
@@ -100,10 +99,10 @@ In the Application Templates library, you will find very complex ready-to-use te
 
 For each application template a set of information is displayed:
 
-*   **Project version**: The version number of the application template.
-*   **Target version**: The version of the Nuxeo Platform and possible add-ons required to install the template.
-*   **Import this package**: Click on this button to import the package that you want and follow the instructions. This button is displayed only if your Studio project is configured for a compatible target version of the template.
-*   **Details**: Click on this button to be displayed the list of Studio configuration items defined by the template.
+- **Project Version**: The version number of the application template.
+- **Target Version**: The version of the Nuxeo Platform and possible add-ons required to install the template.
+- **Import this package**: Click on this button to import the package that you want and follow the instructions. This button is displayed only if your Studio project is configured for a compatible target version of the template.
+- **Details**: Click on this button to display the list of Studio configuration items defined by the template.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/External Template/Application Templates
