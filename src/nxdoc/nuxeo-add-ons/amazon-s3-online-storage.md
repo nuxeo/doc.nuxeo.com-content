@@ -120,7 +120,6 @@ history:
         date: '2013-01-04 10:51'
         message: ''
         version: '1'
-
 ---
 The [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage) is a Nuxeo Binary Manager for S3\. It stores Nuxeo's binaries (the attached documents) in an [Amazon S3](http://aws.amazon.com/s3/) bucket.
 
@@ -303,9 +302,9 @@ Before Nuxeo 7.10 the configuration was done using property `nuxeo.s3storage.dow
 
 {{/callout}}
 
-##### Cors config
+##### CORS Configuration
 
-Web UI triggers some blob downloads from XHR (e.g. Bulk Download, CSV Export, etc.) and will need the following CORS configuration on your s3 bucket:
+Web UI triggers some blob downloads from XHR (e.g. Bulk Download, CSV Export, etc.) and will require the following CORS configuration on your S3 bucket:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
@@ -316,13 +315,16 @@ Web UI triggers some blob downloads from XHR (e.g. Bulk Download, CSV Export, et
   </CORSRule>
 </CORSConfiguration>
 ```
-where `http://localhost:8080` must be replaced by the address where the Web UI is deployed.
+{{#> callout type='note' }}
+Make sure to replace `http://localhost:8080` by the address where your Nuxeo instance is deployed.
+{{/callout}}
 
-The combination of [NXP-26594](https://jira.nuxeo.com/browse/NXP-26594) and [NXP-26581](https://jira.nuxeo.com/browse/NXP-26581)  made it so that the transient stores are much easier to configure. Also we're not using SimpleTransientStore at all anymore since [NXP-25974](https://jira.nuxeo.com/browse/NXP-25974) because it is not cluster-compatible.
+Transient stores are much easier to configure now thanks to the combination of [NXP-26594](https://jira.nuxeo.com/browse/NXP-26594) and [NXP-26581](https://jira.nuxeo.com/browse/NXP-26581).</br>
+Since [Nuxeo Platform 10.10](https://jira.nuxeo.com/browse/NXP-25974) we are no longer using SimpleTransientStore because it is not cluster-compatible.
 
-The result is that the storage for the blobs of the transient stores are now (unless configured otherwise) sharing the S3 configuration of the default binary store to store the transient blobs in a "subfolder" of the S3 bucket (but still with a TTL/GC cleanup lifecycle separate from the default one — everything is per-"folder").
+Now, unless configured otherwise, storage for the blobs of transient stores shares the S3 configuration of the default binary store to stock the transient blobs in a "subfolder" of the S3 bucket. It still has a separate TTL/GC cleanup lifecycle from the default one, everything is per-"folder".
 
-So given that now transient blobs come from S3, if direct download is enabled and JavaScript does the download, a CORS config on the bucket is now needed.
+So given that now transient blobs come from S3, if direct download is enabled and JavaScript generates the download, a CORS configuration is needed on the bucket.
 
 #### Connection Pool Options
 
