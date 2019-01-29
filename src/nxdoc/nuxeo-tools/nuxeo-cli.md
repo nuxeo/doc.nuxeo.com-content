@@ -12,9 +12,7 @@ labels:
     - nuxeo-cli
     - akervern
     - university
-
 ---
-
 {{! excerpt}}
 Nuxeo CLI aims at making the whole development process easier with bootstraps for common Nuxeo components, sample projects to help you understand the hood and with the ability to trigger a hot reload of your developments in a running Nuxeo Server.
 {{! /excerpt}}
@@ -32,7 +30,7 @@ Nuxeo CLI is working like any shell program. After installing it, you'll be able
 
 ### Requirements
 
-* [Node.js](https://nodejs.org/) **version = 6.15.1**
+* [Node.js](https://nodejs.org/) **version = 6.x.x**
 
 ### Recommended Installation
 
