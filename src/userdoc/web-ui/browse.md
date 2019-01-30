@@ -36,6 +36,13 @@ The side menu displays all the domain structure from the root. It enables you to
 
 To access your dashboard, click on the icon on the top left hand corner of your platform.
 
+## Previewing Documents
+
+To preview documents, click on the **Preview** icon.
+A pop-up window will display a preview of your document.
+
+All type of documents can be previewed: Audio, PDF, Office, Video, 3D, etc.
+
 ## Browsing Lists of Documents
 
 Users can change the way content is presented in the folderish repositories (workspaces, folders, sections) and search results. They can also change the displayed information.
