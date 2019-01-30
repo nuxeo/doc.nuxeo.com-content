@@ -1,11 +1,11 @@
 ---
 title: Customize Your App with Nuxeo Elements
 review:
-    comment: 'This tutorial needs to be reviewed after migration to Polymer 2.0 legacy API.'
-    date: '2017-12-15'
-    status: requiresUpdates
+    date: '2019-01-30'
+    status: ok
 toc: true
 labels:
+    - lts2019-ok
     - lts2016-ok
     - tutorial
     - nuxeo-elements
@@ -30,15 +30,15 @@ Watch the related courses on Nuxeo University
 
 ## Requirements
 
-*   **[Node.js](https://nodejs.org/)** is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client-side development is built with Node.js and distributed with npm, the package manager for Node.js. Make sure you download and install your OS-specific version first.
+*   **[Node.js](https://nodejs.org/)** is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client-side development is built with Node.js and distributed with npm, the package manager for Node.js. Make sure you download and install your OS-specific version first (last verified versions for this tutorial are node v10.12.0 and npm 6.4.1)
 *   **[Bower](http://bower.io/)** is currently **the** tool for managing web application definition.
-*   **[Nuxeo CLI]({{page page='nuxeo-cli'}})** to scaffold your application **as a Nuxeo Bundle** and deploy it on a Nuxeo Server. Your application is **hosted inside** the Nuxeo Server as a bundle and uses it as a backend.
-*   **[Polymer CLI](https://github.com/Polymer/polymer-cli)** to scaffold your standalone application. Your application is **hosted outside** the Nuxeo Server and uses it as a service
+*   **[Nuxeo CLI]({{page page='nuxeo-cli'}})** to scaffold your application **as a Nuxeo Bundle** and deploy it on a Nuxeo Server. Your application is **hosted inside** the Nuxeo Server as a bundle and uses it as a backend (last verified version for this tutorial is 1.9.0)
+*   **[Polymer CLI](https://github.com/Polymer/tools/tree/master/packages/cli)** to scaffold your standalone application. Your application is **hosted outside** the Nuxeo Server and uses it as a service (last verified version for this tutorial is 1.9.5)
 
 ## Scaffolding
 
 {{#> callout type='note'}}
-We recommend you to use [Nuxeo CLI]({{page page='nuxeo-cli'}}) for scaffolding. Using this setup, you'll not have to take care about packaging and deploying your application in Nuxeo. Use [Polymer CLI](https://github.com/Polymer/polymer-cli) only if you know that your application will live outside the Nuxeo Server.
+We recommend you to use [Nuxeo CLI]({{page page='nuxeo-cli'}}) for scaffolding. Using this setup, you'll not have to take care about packaging and deploying your application in Nuxeo. Use [Polymer CLI](https://github.com/Polymer/tools/tree/master/packages/cli) only if you know that your application will live outside the Nuxeo Server.
 {{/callout}}
 
 ### As a Nuxeo Bundle
@@ -66,7 +66,7 @@ We recommend you to use [Nuxeo CLI]({{page page='nuxeo-cli'}}) for scaffolding. 
     $ polymer serve
     ```
 
-    The produced application based on [Polymer Starter Kit](https://developers.google.com/web/tools/polymer-starter-kit/) can also be extended using the [Polymer CLI](https://github.com/Polymer/polymer-cli). And it helps you as a starting point for building web applications with Polymer and can be deployed like all [Nuxeo Bundles]({{page page='understanding-bundles-deployment'}}).
+    The produced application based on [Polymer Starter Kit](https://developers.google.com/web/tools/polymer-starter-kit/) can also be extended using the [Polymer CLI](https://github.com/Polymer/tools/tree/master/packages/cli). And it helps you as a starting point for building web applications with Polymer and can be deployed like all [Nuxeo Bundles]({{page page='understanding-bundles-deployment'}}).
 
 1.  Build the Nuxeo Bundle containing the Polymer Application:
 
@@ -86,10 +86,10 @@ We recommend you to use [Nuxeo CLI]({{page page='nuxeo-cli'}}) for scaffolding. 
     ```bash
     $ npm install -g polymer-cli
     $ mkdir -p nuxeo-elements-sample && cd $_
-    $ polymer init starter-kit
+    $ polymer init polymer-2-starter-kit
     ```
 
-    The produced application based on [Polymer Starter Kit](https://developers.google.com/web/tools/polymer-starter-kit/) using [Polymer CLI](https://github.com/Polymer/polymer-cli) can help you as a starting point for building web applications with Polymer.
+    The produced application based on [Polymer Starter Kit](https://developers.google.com/web/tools/polymer-starter-kit/) using [Polymer CLI](https://github.com/Polymer/tools/tree/master/packages/cli) can help you as a starting point for building web applications with Polymer.
 
 2.  Serve your application and check out what has been generated.
 
@@ -145,12 +145,12 @@ Let's plug this application into the Nuxeo instance and change the hardcoded use
     Add a new entry to *Drawer content*:
 
     {{#> callout type='note'}}
-    Depending on your setup, links differ if you generated with [Polymer CLI](https://github.com/Polymer/polymer-cli).
+    Depending on your setup, links differ if you generated with [Polymer CLI](https://github.com/Polymer/tools/tree/master/packages/cli).
     {{/callout}}
 
     {{#> panel type='code' heading='src/my-app.html'}}
     ```xml
-    <a name="doc-reader" href="#/doc-reader">Document Reader</a>
+    <a name="doc-reader" href="[[rootPath]]doc-reader">Document Reader</a>
     ```
     {{/panel}}
 
@@ -180,7 +180,7 @@ Let's plug this application into the Nuxeo instance and change the hardcoded use
 
     {{#> callout type='note' heading='App structure and lazy loading'}}
     For more information about app structure and lazy loading, please check the
-    [Polymer Documentation](https://www.polymer-project.org/1.0/toolbox/server#app-structure).
+    [Polymer Documentation](https://polymer-library.polymer-project.org/2.0/docs/apps/prpl).
     {{/callout}}
 
 ## Plug in Nuxeo Elements
@@ -227,11 +227,12 @@ file, that you should copy to `NUXEO_HOME/nxserver/config/cors-config.xml`:
 ```xml
 <component name="org.nuxeo.corsi.demo">
   <extension target="org.nuxeo.ecm.platform.web.common.requestcontroller.service.RequestControllerService" point="corsConfig">
-    <corsConfig name="foobar" supportedMethods="GET,POST,HEAD,OPTIONS,DELETE,PUT" exposedHeaders="Accept-Ranges,Content-Range,Content-Encoding,Content-Length">
+    <corsConfig name="foobar" supportedMethods="GET,POST,HEAD,OPTIONS,DELETE,PUT"exposedHeaders="Accept-Ranges,Content-Range,Content-Encoding,Content-Length,Content-Disposition">
       <pattern>/nuxeo/.*</pattern>
     </corsConfig>
   </extension>
 </component>
+
 ```
 
 We can then add a `nuxeo-document` to our template, which is a data element responsible for retrieving documents from a
@@ -637,5 +638,5 @@ For reference, here is the final code of the `doc-reader` element:
 {{/panel}}
 
 {{#> callout type='note' heading='Building and serving'}}
-For more information about how to build and serve your application, please check the [Polymer Documentation](https://www.polymer-project.org/1.0/toolbox/server#build-output).
+For more information about how to build and serve your application, please check the [Polymer Documentation](https://polymer-library.polymer-project.org/2.0/docs/apps/prpl#build-output).
 {{/callout}}
