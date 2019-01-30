@@ -42,14 +42,22 @@ In a content view, drag and drop is available to move documents from a folderish
 2. Click on selected documents and drag them.
 3. Drop them on the folderish document you want.
 
-## Replacing an attachment
+## Managing Attachments
 
 ![]({{file name='replace.png'}} ?w=300,border=true)
 
-1. From your document view, click More ![]({{file name='more.png'}} ?w=20) then Replace ![]({{file name='replace-icon.png'}} ?w=20).
-The Replace File pop-up appears.
-2. Drag and drop the file in the zone or click **Upload main file**.
-3. Click **Replace**.
+### Replacing an attachment
+
+1. From your document view, click **More** ![]({{file name='more.png'}} ?w=32) then **Replace** ![]({{file name='replace-icon.png'}} ?w=32).
+<br>The Replace File pop-up appears.
+1. Drag and drop the file in the zone or click **Upload main file**.
+1. Click **Replace**.
+
+### Removing an attachment
+
+1. From your document view, click **More** ![]({{file name='more.png'}} ?w=32) then **Remove** ![]({{file name='remove-icon.png'}} ?w=32).
+<br>The Remove File pop-up appears.
+1. Click YES to confirm.
 
 ## Commenting
 
@@ -57,7 +65,7 @@ Comments enable users to discuss about the document and its evolution. To have b
 
 ### Creating a Comment
 
-In the Comments section of the Document view, type your comment and click on ![]({{file name='comment-validate.png'}} ?w=20)
+In the Comments section of the Document view, type your comment and click on ![]({{file name='comment-validate.png'}} ?w=32).
 
 ![]({{file name='comment-writing.png'}} ?w=300,border=true)
 
@@ -68,7 +76,7 @@ You can reply to your comments and to comments from other users. However, replie
 
 **To reply to a comment:**
 
-Click on ![]({{file name='reply.png'}} ?w=20) next to the comment you want to reply to.
+Click on ![]({{file name='reply.png'}} ?w=32,border=true) next to the comment you want to reply to.
 Type your comment and click on ![]({{file name='comment-validate.png'}} ?w=20).
 ![]({{file name='reply-comment.png'}} ?w=300,border=true)
 
@@ -78,12 +86,12 @@ You cannot edit comments from other users. However, you can reply to them.
 **To edit a comment or a reply:**
 
 1. Click on Edit.
-1. Modify your comment or reply and click on ![]({{file name='comment-validate.png'}} ?w=20).
+1. Modify your comment or reply and click on ![]({{file name='comment-validate.png'}} ?w=32,border=true).
 The mention (edited) will figure on your edited comment or reply.
 
 ### Deleting a Comment or a Reply
 
-1. Click on ![]({{file name='more-dots.png'}} ?w=20).
+1. Click on ![]({{file name='more-dots.png'}} ?w=32,border=true).
 1. Click on Delete. ![]({{file name='comment-edit-delete.png'}} ?w=300,border=true) A confirmation pop-up appears. ![]({{file name='delete-pop-up.png'}} ?w=300,border=true)
 1. Click on Delete to confirm. Your comment has been deleted.
 
