@@ -15,25 +15,23 @@ labels:
     - polymer-starter-kit
     - content-review-lts2017
 tree_item_index: 200
-
 ---
-
 This tutorial shows you how to build a simple application base on the Polymer Starter Kit, which
 will be able to read documents from a Nuxeo instance.  You'll learn how to create a new element and gradually
 improve it using both `nuxeo-elements` and `nuxeo-ui-elements`.
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
-- [Introduction to Nuxeo Elements](https://university.nuxeo.com/learn/public/course/view/elearning/79/introduction-to-nuxeo-elements)
+Watch the related courses on Nuxeo University:</br>
+[Introduction to Nuxeo Elements](https://university.nuxeo.com/learn/public/course/view/elearning/79/introduction-to-nuxeo-elements)
 ![]({{file name='university-nuxeo-elements.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Requirements
 
-*   **[Node.js](https://nodejs.org/)** is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client-side development is built with Node.js and distributed with npm, the package manager for Node.js. Make sure you download and install your OS-specific version first (last verified versions for this tutorial are node v10.12.0 and npm 6.4.1)
-*   **[Bower](http://bower.io/)** is currently **the** tool for managing web application definition.
-*   **[Nuxeo CLI]({{page page='nuxeo-cli'}})** to scaffold your application **as a Nuxeo Bundle** and deploy it on a Nuxeo Server. Your application is **hosted inside** the Nuxeo Server as a bundle and uses it as a backend (last verified version for this tutorial is 1.9.0)
-*   **[Polymer CLI](https://github.com/Polymer/tools/tree/master/packages/cli)** to scaffold your standalone application. Your application is **hosted outside** the Nuxeo Server and uses it as a service (last verified version for this tutorial is 1.9.5)
+- **[Node.js](https://nodejs.org/)** is a JavaScript runtime built on Chrome's V8 JavaScript engine. Almost every tool out there for client-side development is built with Node.js and distributed with npm, the package manager for Node.js. Make sure you download and install your OS-specific version first (last verified versions for this tutorial are node v10.12.0 and npm 6.4.1)
+- **[Bower](http://bower.io/)** is currently **the** tool for managing web application definition.
+- **[Nuxeo CLI]({{page page='nuxeo-cli'}})** to scaffold your application **as a Nuxeo Bundle** and deploy it on a Nuxeo Server. Your application is **hosted inside** the Nuxeo Server as a bundle and uses it as a backend (last verified version for this tutorial is 1.9.0)
+- **[Polymer CLI](https://github.com/Polymer/tools/tree/master/packages/cli)** to scaffold your standalone application. Your application is **hosted outside** the Nuxeo Server and uses it as a service (last verified version for this tutorial is 1.9.5)
 
 ## Scaffolding
 
