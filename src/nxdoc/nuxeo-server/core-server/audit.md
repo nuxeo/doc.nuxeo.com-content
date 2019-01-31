@@ -1,5 +1,6 @@
 ---
 title: Audit
+description: The Audit Service is mainly a data store service. It defines a data record structure that will be used for storing audit information.
 review:
     comment: ''
     date: '2017-12-14'

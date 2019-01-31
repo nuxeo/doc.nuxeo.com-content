@@ -1,5 +1,6 @@
 ---
 title: Configuration Parameters Index (nuxeo.conf)
+description: Nuxeo Platform reads configuration properties in nuxeo.conf file. Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files.
 review:
     comment: ''
     date: '2017-12-11'

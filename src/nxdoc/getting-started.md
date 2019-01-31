@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+description: Follow these 3 tutorials to discover all the features of Nuxeo Platform.
 review:
     comment: ''
     date: '2018-01-02'

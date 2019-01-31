@@ -1,5 +1,6 @@
 ---
 title: Cross-Origin Resource Sharing (CORS)
+description: CORS allows you to communicate with Nuxeo from another domain using XMLHttpRequests.
 review:
     comment: ''
     date: '2017-12-11'

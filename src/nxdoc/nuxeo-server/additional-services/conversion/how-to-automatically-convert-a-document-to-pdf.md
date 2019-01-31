@@ -1,5 +1,5 @@
 ---
-title: How to Automatically Convert a Document to PDF
+title: 'HOWTO: Automatically Convert a Document to PDF'
 review:
     comment: ''
     date: '2017-12-12'
@@ -151,37 +151,33 @@ history:
         date: '2011-08-30 15:57'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 In some cases, you want the system to automatically create a PDF conversion of a document and attach it to the document. In Nuxeo Studio, the operation&nbsp;**Conversion > Convert To PDF**&nbsp;is provided to make this conversion.
-
 {{! /excerpt}}
 
 Here is how you can create an automation chain to do the conversion and attach the PDF created on the input document.
 
 {{#> callout type='info' }}
 
-This how to requires knowledge about:
-
-*   [Document Types Definition]({{page page='how-to-define-a-document-type'}}),
-*   [Automation chains]({{page page='content-automation-concepts'}}).
-
+This how-to requires knowledge about:
+- [Document Types Definition]({{page page='how-to-define-a-document-type'}}),
+- [Automation chains]({{page page='content-automation-concepts'}}).
 {{/callout}}
 
 ## Document Preparation
 
 The document needs a metadata to hold the PDF blob created during the conversion, two options are available:
 
-* Use the default File document type, in that case, the metadata that holds the blob is `file:content`.
-* Define your own custom metadata to store the blob. To do so, you first need to add a field to the schema in the document definition. This new metadata has to be a Blob type. Here is an example where the new metadata is "pdffile". It can be accessed by "myDocumentSchema:pdffile" if the schema name of my document type is "myDocumentSchema".
+- Use the default File document type, in that case, the metadata that holds the blob is `file:content`.
+- Define your own custom metadata to store the blob. To do so, you first need to add a field to the schema in the document definition. This new metadata has to be a Blob type. Here is an example where the new metadata is `pdffile`. It can be accessed by `myDocumentSchema:pdffile` if the schema name of my document type is `myDocumentSchema`.
 
 ![]({{file name='schema_pdffile.png'}} ?w=600,border=true)
 
 ## Automation Chain
 
-The "Blob To PDF" operation accepts either blob, bloblists or document as inputs. If the input is a document, the file to convert must be in the `file:content` metadata (the usual place for it). The operation produces a blob (the PDF file) and does not return the input document so we will have to store the document somehow before the conversion so that we can recall it after to attach the PDF file to it. The solution is to use Push & Pop operation to put the input document in a heap and get it back (or to use a context variable).
+The `Blob To PDF` operation accepts either blob, bloblists or document as inputs. If the input is a document, the file to convert must be in the `file:content` metadata (the usual place for it). The operation produces a blob (the PDF file) and does not return the input document so we will have to store the document somehow before the conversion so that we can recall it after to attach the PDF file to it. The solution is to use Push & Pop operation to put the input document in a heap and get it back (or to use a context variable).
 
 For the same reasons, we also do not want to lose the PDF file produced by the conversion during the recall of the input document, so we will save it as a Context variable.
 

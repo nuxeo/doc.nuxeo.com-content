@@ -1,5 +1,6 @@
 ---
 title: Elasticsearch Indexing Logic
+description: When manipulating a session to create, update or delete documents, a synchronous listener stacks the indexing commands to process. These commands are factorized and are processed either in an asynchronous job or at post commit time.
 review:
     comment: ''
     date: '2017-12-13'
@@ -188,11 +189,10 @@ history:
 
 ---
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Configuring Searches in Nuxeo Studio Modeler & Designer](https://university.nuxeo.com/learn/public/course/view/elearning/134/configuring-searches-in-nuxeo-studio-modeler-designer).
+Watch the related courses on Nuxeo University:</br>
+[Configuring Searches in Nuxeo Studio Modeler & Designer](https://university.nuxeo.com/learn/public/course/view/elearning/134/configuring-searches-in-nuxeo-studio-modeler-designer).
 ![]({{file name='university-search.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
-
 
 ## Indexing
 

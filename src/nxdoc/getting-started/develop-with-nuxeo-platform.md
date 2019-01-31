@@ -1,5 +1,6 @@
 ---
 title: Develop with Nuxeo Platform
+description: This tutorial takes a contract's start date and add three months to it, but you can think of integrating any custom logic in your Java class.
 review:
     comment: ''
     date: '2017-12-15'

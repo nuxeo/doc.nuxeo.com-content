@@ -1,5 +1,6 @@
 ---
 title: Search Resource Endpoints
+description: This how-to provides some examples of how to use the REST API to query the Nuxeo repository, as well as to save these queries and later reproduce them.
 review:
     comment: ''
     date: '2017-12-13'

@@ -1,5 +1,6 @@
 ---
 title: Page Provider Aggregates
+description: When using the Elasticsearch Page Provider, you can define aggregates that will be returned along with the query result.
 review:
     comment: ''
     date: '2017-12-13'
@@ -150,9 +151,7 @@ history:
 
 ---
 {{! excerpt}}
-
 When using the Elasticsearch Page Provider, you can define aggregates that will be returned along with the query result.
-
 {{! /excerpt}}
 
 You can define a page provider that will query documents from Elasticsearch. The Nuxeo Platform takes advantage of the Elasticsearch aggregate module and you can define your own aggregates within a page provider definition. Please refer to [Elasticsearch documentation about aggregates](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-aggregations.html) for more information.

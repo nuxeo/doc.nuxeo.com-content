@@ -1,5 +1,6 @@
 ---
 title: How to Configure a Search Filter With Facets and Other Aggregates
+description: Learn how to use the Elasticsearch aggregate widgets.
 review:
     comment: ''
     date: '2017-01-17'

@@ -81,12 +81,10 @@ history:
         date: '2014-07-15 00:44'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 These are the most common and useful terms you will come across using the Nuxeo Platform. A fuller more extensive list can be found in the Nuxeo [glossary]({{page space='glos' page='index'}}).
-
 {{! /excerpt}}
 
 ## Content Model

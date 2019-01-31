@@ -1,5 +1,6 @@
 ---
 title: Upload & Store
+description: Discover how Nuxeo Platform let you upload and store your digital assets.
 review:
     comment: ''
     date: '2018-01-30'

@@ -1,5 +1,6 @@
 ---
 title: HTTP and HTTPS Reverse-Proxy Configuration
+description: The Nuxeo webapp can be virtual hosted behind a HTTP/HTTPS reverse proxy, like Apache, NGINX, IIS, etc.
 review:
     comment: ''
     date: '2015-12-01'
@@ -237,7 +238,9 @@ history:
         version: '1'
 
 ---
+{{! excerpt}}
 The Nuxeo webapp can be virtual hosted behind a HTTP/HTTPS reverse proxy, like Apache, NGINX, IIS, etc.
+{{! /excerpt}}
 
 {{#> callout type='info' }}
 

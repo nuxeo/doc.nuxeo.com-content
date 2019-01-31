@@ -1,6 +1,6 @@
 ---
 title: 'HOWTO: Configure Searches'
-description: Learn how to create a new search screen with an icon in the left menu. The search will be compose of a full text search, a search by date range, a search by owners and finally by tags.
+description: Learn how to create a new search screen with Studio Designer.
 review:
   comment: ''
   date: '2019-02-18'

@@ -9,17 +9,16 @@ labels:
 toc: true
 tree_item_index: 1100
 ---
-{{! excerpt}}
 
+{{! excerpt}}
 Nuxeo Stream provides a Log storage abstraction and a Stream processing pattern.
+{{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
 - [LTS 2017 New Features](https://university.nuxeo.com/learn/public/course/view/elearning/126/lts-2017-new-features).
 ![]({{file name='university-nuxeo-stream.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
-
-{{! /excerpt}}
 
 ## Log and Stream Processing
 

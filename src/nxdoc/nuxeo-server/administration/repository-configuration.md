@@ -1,5 +1,6 @@
 ---
 title: Repository Configuration
+description: This page lists the options available to configure VCS repository in Nuxeo Platform. They usually go in a file named default-repository-config.xml.
 review:
     comment: ''
     date: '2019-03-12'

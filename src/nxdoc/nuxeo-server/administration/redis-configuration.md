@@ -1,5 +1,6 @@
 ---
 title: Redis Configuration
+description: Discover how to configure Redis with Nuxeo Platform.
 review:
     comment: ''
     date: '2017-12-13'

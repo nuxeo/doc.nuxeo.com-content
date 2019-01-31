@@ -1,5 +1,6 @@
 ---
 title: Digital Asset Management (DAM)
+description: The Digital Asset Management addon of the Nuxeo Platform provides multimedia files management (pictures, audio and video).
 review:
     comment: ''
     date: '2018-01-19'

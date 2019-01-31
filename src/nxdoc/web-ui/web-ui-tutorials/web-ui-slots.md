@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Customize Slots'
+description: Learn how to use Nuxeo Slots with Web UI.
 review:
     comment: ''
     date: '2017-12-15'

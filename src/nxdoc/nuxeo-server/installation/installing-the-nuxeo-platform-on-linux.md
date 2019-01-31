@@ -1,5 +1,6 @@
 ---
 title: Installing the Nuxeo Platform on Linux
+description: Discover how to install Nuxeo Platform on Linux.
 review:
     comment: ''
     date: '2017-12-14'

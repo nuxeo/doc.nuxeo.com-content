@@ -1,5 +1,6 @@
 ---
 title: Editing Content
+description: Editing a document means modifying its content (i.e. the attached file of a file document, the text of a note, etc.), or simply editing the title, description or any metadata of the document.
 review:
     comment: ''
     date: '2017-03-29'
@@ -388,9 +389,7 @@ history:
 
 ---
 {{! excerpt}}
-
 Editing a document means modifying its content (i.e. the attached file of a [file]({{page space='userdoc' page='document-types'}}#file) document, the text of a [note]({{page space='userdoc' page='document-types'}}#note), etc.), or simply editing the title, description or any metadata of the document. You can edit documents individually using an edit form or apply modifications to several documents using the bulk edit form.
-
 {{! /excerpt}}
 
 ## {{> anchor 'edit-metadata-form'}} Content and Metadata Edit Form

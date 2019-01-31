@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Translate the Nuxeo Platform'
+description: Learn how to translate the Nuxeo Platform.
 review:
     comment: 'This page is mainly about labels management in Nuxeo JSF UI. An update is planned to include Web UI labels management. See [NXDOC-1436](https://jira.nuxeo.com/browse/NXDOC-1436).'
     date: '2017-12-14'
@@ -303,11 +304,10 @@ history:
 Nuxeo supported modules handle English translations for each of their bundles. Other translations are managed on [Crowdin](https://crowdin.net/projects/nuxeo) and synchronized automatically with the Nuxeo source code.
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Expert Session on Translations](https://university.nuxeo.com/learn/public/course/view/elearning/140/expert-session-translations).
+Watch the related courses on Nuxeo University:</br>
+[Expert Session on Translations](https://university.nuxeo.com/learn/public/course/view/elearning/140/expert-session-translations).
 ![]({{file name='university-translations.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
-
 
 Languages that are sufficiently translated are available in the released default distribution. The conditions for a language to be available by default are that it is translated at 95% and approved at 75% minimum.
 Default languages in Nuxeo Platform 10.1 are:

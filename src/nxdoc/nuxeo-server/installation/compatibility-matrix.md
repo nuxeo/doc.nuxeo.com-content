@@ -1,5 +1,6 @@
 ---
 title: Compatibility Matrix
+description: This page presents the compatibility matrix for the Nuxeo Platform.
 review:
     comment: ''
     date: '2018-07-25'

@@ -1,5 +1,6 @@
 ---
 title: Upgrading the Nuxeo Platform
+description: This page describes a general upgrade procedure. You will find below the list of required manual steps per version.
 review:
     comment: ''
     date: '2017-12-11'

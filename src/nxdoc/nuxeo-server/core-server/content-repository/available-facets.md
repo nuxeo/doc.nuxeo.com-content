@@ -1,5 +1,6 @@
 ---
 title: Available Facets
+description: Facets are markers on document types that instruct the Nuxeo platform (and any part of the system that cares about them) to behave differently, or that are automatically set on some document instances.
 review:
     comment: ''
     date: '2016-12-06'

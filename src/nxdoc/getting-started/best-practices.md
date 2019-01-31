@@ -1,5 +1,6 @@
 ---
 title: Best Practices
+description: Browse the best practices section of the developer documentation.
 review:
     comment: ''
     date: '2018-01-02'

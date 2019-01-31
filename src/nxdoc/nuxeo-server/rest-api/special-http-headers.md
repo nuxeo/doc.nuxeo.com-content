@@ -1,5 +1,6 @@
 ---
 title: Special HTTP Headers
+description: In order to have more control over REST API Calls, you can use the following special Nuxeo HTTP headers.
 review:
     comment: ''
     date: '2018-01-15'

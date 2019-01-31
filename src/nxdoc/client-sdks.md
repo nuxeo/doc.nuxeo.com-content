@@ -1,5 +1,6 @@
 ---
 title: Client SDKs
+description: The platform provides multiple clients for accessing the platform remotely.
 review:
     comment: ''
     date: '2018-01-02'

@@ -1,5 +1,6 @@
 ---
 title: Variables Available in the Automation Context
+description: In the chains run on nodes (Input chain, output chain, transition and escalation chains) you have access to some data linked to the workflow being run.
 review:
     comment: ''
     date: '2017-01-20'
@@ -118,9 +119,7 @@ history:
 
 ---
 {{#> callout type='info' }}
-
 For a broader look about variables available in different contexts, have a look at the [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}}) page.
-
 {{/callout}}
 
 You need to be familiar with the concept of [Automation]({{page space='studio' page='automation'}}) for this section.

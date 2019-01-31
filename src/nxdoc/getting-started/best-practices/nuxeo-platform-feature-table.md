@@ -1,5 +1,6 @@
 ---
 title: UI Feature Comparison
+description: This page list the features available on the Nuxeo Platform, either directly in the default distribution (Nuxeo Server) or using addons.
 review:
     comment: ''
     date: '2018-02-26'

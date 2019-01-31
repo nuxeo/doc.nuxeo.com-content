@@ -1,5 +1,6 @@
 ---
 title: Nuxeo Vision
+description: The Nuxeo Vision addon provides a gateway to computer vision services. Currently it supports the Google Vision API and Amazon Rekognition API.
 review:
     comment: ''
     date: '2018-12-04'

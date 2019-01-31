@@ -1,5 +1,6 @@
 ---
 title: Creating Nuxeo Packages
+description: This section gives instructions on how to wrap a plugin and its required dependencies into a Nuxeo Package.
 review:
     comment: ''
     date: '2017-12-12'
@@ -297,9 +298,7 @@ history:
 
 ---
 {{! excerpt}}
-
 This section gives instructions on how to wrap a plugin and its required dependencies into a Nuxeo Package.
-
 {{! /excerpt}}
 
 A Nuxeo Package usually contains new features or patches along with installation instructions and optional constraints towards other packages (dependency, conflict). It is the **easiest** way to distribute a plugin, as it contains in one single ZIP file all the bundles, libraries, configuration properties and templates that are required to make the plugin work. Moreover, it is the most **reliable** and **sustainable** way to install a plugin, as it provides install history, rollback capabilities, dependencies and conflicts resolution and much more.

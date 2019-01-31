@@ -1,5 +1,6 @@
 ---
 title: Backup and Restore
+description: Nuxeo Platform supports the backup of your data.
 review:
     comment: ''
     date: '2017-12-14'

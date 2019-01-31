@@ -1,5 +1,6 @@
 ---
 title: Configuration Templates
+description: Nuxeo applications integrate a configuration templates system to ease configuration and maintenance of configuration files.
 review:
     comment: ''
     date: '2017-12-15'

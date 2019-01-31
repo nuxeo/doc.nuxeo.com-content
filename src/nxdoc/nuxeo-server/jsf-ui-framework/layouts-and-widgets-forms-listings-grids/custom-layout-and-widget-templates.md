@@ -147,7 +147,6 @@ history:
         date: '2010-10-12 15:16'
         message: ''
         version: '1'
-
 ---
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 

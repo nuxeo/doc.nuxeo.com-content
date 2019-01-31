@@ -1,5 +1,6 @@
 ---
 title: Configuration Wizard
+description: The first time you start the Nuxeo Platform, a Startup Wizard will guide you to the main configuration steps and enable you to choose which addons you want to enable on the Platform.
 review:
     comment: ''
     date: '2018-01-02'

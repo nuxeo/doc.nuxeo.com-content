@@ -1,6 +1,6 @@
 ---
 title: Elasticsearch Highlights
-description: A description for how Elasticsearch can be used for highlights.
+description: Discover how Elasticsearch can be configured to use the highlight feature.
 review:
     date: '2017-05-22'
     status: ok

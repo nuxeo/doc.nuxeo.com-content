@@ -259,7 +259,6 @@ history:
         date: '2010-08-02 17:14'
         message: ''
         version: '1'
-
 ---
 The Nuxeo Platform comes in many different packages and can be installed on many operating systems. You may have to install:
 

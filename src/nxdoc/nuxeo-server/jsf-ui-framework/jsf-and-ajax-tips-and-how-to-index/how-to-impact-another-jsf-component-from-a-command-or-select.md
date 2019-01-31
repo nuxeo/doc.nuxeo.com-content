@@ -1,5 +1,6 @@
 ---
 title: How to Impact Another JSF Component from a Command or Select
+description: When designing a screen or form, you may want to render a part of the page when clicking on a link or when choosing an element in a select. This page explains how this can be done in a XHTML template.
 review:
     comment: ''
     date: '2015-12-01'

@@ -1,5 +1,6 @@
 ---
 title: Document Types
+description: This page lists all the available document types by default on Nuxeo Platform.
 review:
     comment: ''
     date: '2018-02-26'

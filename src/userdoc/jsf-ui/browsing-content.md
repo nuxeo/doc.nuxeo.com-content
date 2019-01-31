@@ -1,5 +1,6 @@
 ---
 title: Browsing Content
+description: To help you find accurate documents, the Nuxeo Platform features several different ways to access documents.
 review:
     comment: ''
     date: '2018-02-26'
@@ -232,7 +233,9 @@ labels:
     - content-review-lts2017
 
 ---
+{{! excerpt}}
 To help you find accurate documents, the Nuxeo Platform features several different ways to access documents.
+{{! /excerpt}}
 
 ## Dashboard
 
@@ -241,7 +244,6 @@ Every user has a personal dashboard that displays information he finds relevant 
 
 {{! multiexcerpt name='dashboard-tab-overview'}}
 The dashboard is composed of a set of boxes that display either a list of documents matching a criteria (all the workspaces the user can access, the last documents he modified, the last documents that have been published...), or possibly a piece of information either from the Platform or from external websites.
-
 {{! /multiexcerpt}}
 {{! /multiexcerpt}}
 To access your dashboard, click on the **Home** main tab. Your dashboard is the default tab of your Home.

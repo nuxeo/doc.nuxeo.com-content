@@ -1,5 +1,6 @@
 ---
 title: ACLs
+description: The Nuxeo repository security relies on a list of unitary permissions that are used within the repository to grant or deny access.
 review:
     comment: ''
     date: '2017-12-13'

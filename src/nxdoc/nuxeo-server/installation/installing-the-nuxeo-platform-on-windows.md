@@ -1,5 +1,6 @@
 ---
 title: Installing the Nuxeo Platform on Windows
+description: Discover how to install Nuxeo Platform on Windows.
 review:
     comment: ''
     date: '2017-12-14'

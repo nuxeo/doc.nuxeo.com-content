@@ -1,5 +1,6 @@
 ---
 title: Data Lists and Directories
+description: In the Nuxeo Platform, a directory is used to provide an abstraction on all referential data that can be manipulated inside the application.
 review:
     comment: ''
     date: '2017-12-14'

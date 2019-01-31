@@ -1,5 +1,6 @@
 ---
 title: How to Use Plug-Ins in TinyMCE Editor
+description: Learn how to customize TinyMCE by adding new plug-ins. We will use the textcolor plug-in as an example.
 review:
     comment: ''
     date: '2015-12-01'

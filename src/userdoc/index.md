@@ -1,5 +1,6 @@
 ---
-title: Nuxeo Platform User Documentation
+title: User Documentation
+description: Browse the latest functional documentation.
 review:
   comment: ''
   date: '2018-02-27'

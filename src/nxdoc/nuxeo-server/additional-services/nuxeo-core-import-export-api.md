@@ -121,13 +121,13 @@ history:
         date: '2013-08-06 14:30'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
-The import / export service is providing an API to export a set of documents from the repository in an XML format and then re-importing them back. The service can also be used to create in batch document trees from valid import archives or to provide a simple solution of creating and retrieving repository data. This could be used for example to expose repository data through REST or raw HTTP requests.
-
+The import / export service is providing an API to export a set of documents from the repository in an XML format and then re-importing them back.
 {{! /excerpt}}
+
+The service can also be used to create in batch document trees from valid import archives or to provide a simple solution of creating and retrieving repository data. This could be used for example to expose repository data through REST or raw HTTP requests.
 
 The import and export mechanism is extensible so that you can easily create your custom format for exported data. The default format provided by the Nuxeo Platform is described below.
 

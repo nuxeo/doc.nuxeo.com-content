@@ -1,5 +1,6 @@
 ---
 title: Events and Listeners
+description: When you need to integrate some features of an external application into the Nuxeo Platform, or want the Platform to push data into an external application, using the Nuxeo event system is usually a good solution.
 review:
     comment: ''
     date: '2017-12-14'

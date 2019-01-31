@@ -1,5 +1,6 @@
 ---
 title: Searching the Nuxeo Platform
+description: The Nuxeo Platform provides a Search tab that enables you to browse and search the content of the Nuxeo Platform.
 review:
     comment: ''
     date: '2018-02-26'

@@ -1,5 +1,6 @@
 ---
 title: Quick Overview
+description: Nuxeo Platform is a set of server and client side software artifacts and tools that allow you to build, operate and maintain advanced content management applications.
 review:
     comment: ''
     date: '2017-12-14'

@@ -1,5 +1,6 @@
 ---
 title: Schema Fields
+description: The fields of a schema define the allowed content for the properties of the documents having this schema.
 review:
     comment: ''
     date: '2016-12-06'
@@ -41,9 +42,7 @@ history:
 
 ---
 {{! excerpt}}
-
 The fields of a schema define the allowed content for the properties of the documents having this schema.
-
 {{! /excerpt}}
 
 ## Simple Types

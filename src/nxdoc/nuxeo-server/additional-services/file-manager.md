@@ -76,8 +76,8 @@ history:
         date: '2014-05-02 15:57'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
 The File Manager is used to create documents from simple binaries.
 {{! /excerpt}}

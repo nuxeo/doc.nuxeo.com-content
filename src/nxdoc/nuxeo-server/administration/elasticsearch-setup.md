@@ -1,5 +1,6 @@
 ---
 title: Elasticsearch Setup
+description: This page provides several configuration use cases for Elasticsearch.
 review:
     comment: ''
     date: '2017-12-13'
@@ -465,9 +466,7 @@ history:
 
 ---
 {{! excerpt}}
-
 This page provides several configuration use cases for Elasticsearch.
-
 {{! /excerpt}}
 
 ## Setting up an Elasticsearch Cluster

@@ -96,12 +96,10 @@ history:
         date: '2015-09-29 08:47'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 The platform allows to use the HTTP REST API provided by the Elasticsearch back end.
-
 {{! /excerpt}}
 
 ## Principle

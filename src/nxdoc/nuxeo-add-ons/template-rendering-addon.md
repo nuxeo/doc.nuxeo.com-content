@@ -1,7 +1,8 @@
 ---
 title: Template Rendering Addon
+description: 'The template rendering addon is a set of two addons available from the Nuxeo Marketplace: Nuxeo Template Rendering and Nuxeo Template Rendering Samples.'
 review:
-    comment: 'This page needs to be updated to cover the addon''s migration to Web UI and the new simplified process to render documents.'
+    comment: "This page needs to be updated to cover the addon's migration to Web UI and the new simplified process to render documents."
     date: '2017-12-14'
     status: requiresUpdates
 labels:

@@ -1,5 +1,6 @@
 ---
 title: Runtime and Component Model
+description: This page describes how the Nuxeo Platform is modular, and how bundles, components and extension points relate to each other to let you create a fully customized application.
 review:
     comment: ''
     date: '2017-12-14'

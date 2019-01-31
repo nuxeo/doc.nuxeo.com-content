@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Upload a File in Nuxeo Using REST API'
+description: Learn how to import a file using the Batch processing endpoint of the REST API.
 review:
     comment: ''
     date: '2018-03-13'

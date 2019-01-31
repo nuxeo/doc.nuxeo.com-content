@@ -1,5 +1,6 @@
 ---
 title: Downloading Files
+description: This page describes the logic for building the correct URL to download a file stored on a Nuxeo Document.
 review:
     comment: ''
     date: '2015-12-01'

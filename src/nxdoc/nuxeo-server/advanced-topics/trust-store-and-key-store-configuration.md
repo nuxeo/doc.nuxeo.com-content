@@ -1,5 +1,6 @@
 ---
 title: Trust Store and Key Store Configuration
+description: Communications between a client and a server can be secured using TLS/SSL. This security includes encryption, authentication of the server by the client, and optionally authentication of the client by the server.
 review:
     comment: ''
     date: '2017-12-14'

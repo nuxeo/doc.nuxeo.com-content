@@ -1,5 +1,6 @@
 ---
 title: Nuxeo Elements
+description: Nuxeo Elements is a set of libraries of web components leveraging emerging Web standards, built upon the same goals of simplicity and pluggability.
 review:
     comment: ''
     date: '2017-12-15'

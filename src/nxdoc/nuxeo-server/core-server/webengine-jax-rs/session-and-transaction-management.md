@@ -1,5 +1,6 @@
 ---
 title: Session and Transaction Management
+description: Discover how transaction and management are managed with WebEngine. 
 review:
     comment: ''
     date: '2016-12-20'
@@ -101,8 +102,8 @@ history:
         date: '2010-10-28 12:17'
         message: ''
         version: '1'
-
 ---
+
 ## Transaction Management
 
 By default WebEngine will automatically start a transaction for any request to a JAX-RS application (or WebEngine module). The default locations of static resources are omitted (so that no transaction will be started when requesting a static resource). The static resources locations is `*/skin/*`&nbsp;&mdash; this will match any path that targets a resource inside a `skin` directory in a JAX-RS application.

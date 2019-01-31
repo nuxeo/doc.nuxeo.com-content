@@ -1,5 +1,6 @@
 ---
 title: Authentication and User Management
+description: This page gives a general idea on how authentication is plugged into the platform.
 review:
     comment: ''
     date: '2017-12-11'

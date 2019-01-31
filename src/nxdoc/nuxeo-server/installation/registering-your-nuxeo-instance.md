@@ -1,5 +1,6 @@
 ---
 title: Registering your Nuxeo Instance
+description: Registering your Nuxeo application with Nuxeo Online Services will let you easily install patches and bug fixes, install addons from the Nuxeo Marketplace, or update your application with your Nuxeo Studio customization, all that directly from the Nuxeo Platform.
 review:
   comment: ''
   date: '2017-12-13'

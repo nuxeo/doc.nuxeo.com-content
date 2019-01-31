@@ -1,5 +1,6 @@
 ---
 title: java.net.SocketException Too many open files
+description: On Linux, you might encounter this error after you've used your Nuxeo instance, discover how to solve it.
 review:
     comment: ''
     date: '2017-12-14'

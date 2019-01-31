@@ -1,5 +1,6 @@
 ---
 title: Managing Performance
+description: This page provides guidance on how to optimize your application performance, as well as how to troubleshoot performance-related issues through monitoring.
 review:
     comment: ''
     date: '2017-12-13'

@@ -1,5 +1,6 @@
 ---
 title: Amazon S3 Online Storage
+description: The Amazon S3 Online Storage is a Nuxeo Binary Manager for S3. It stores Nuxeo's binaries (the attached documents) in an Amazon S3 bucket.
 review:
     comment: ''
     date: '2017-12-13'

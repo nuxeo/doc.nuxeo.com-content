@@ -24,35 +24,33 @@ version_override:
     '6.0': 60/admindoc/recommended-configurations
     '5.8': 58/admindoc/recommended-configurations
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-25 07:55'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-07-22 13:33'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-07-22 13:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-07-22 13:28'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 The default Nuxeo Platform email configuration is filled in with neutral values that you need to edit to make the platform work with your mail server. Unless you do that, alerts emails won't be sent to users.
-
 {{! /excerpt}}
-
-&nbsp;
 
 **To enable notifications:**
 
@@ -63,7 +61,7 @@ The default Nuxeo Platform email configuration is filled in with neutral values 
     {{/callout}}
 3.  Click the button **Save**.
     As indicated on top of the page, you need to restart your server so the new configuration is taken into account.
-    
+
 {{#> callout type='info'}}Properties and values can also be entered directly in your `nuxeo.conf` file. Please refer to the table below for the keys to add or fill in.{{/callout}}
 
 **Email information configuration**
@@ -209,8 +207,7 @@ If you have complex mail server configurations, you may want to check the [Javam
 
 {{/callout}}
 
-{{! Don't put anything here. }}
-
+---
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 

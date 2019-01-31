@@ -10,9 +10,10 @@ labels:
     - content-review-lts2017
     - authentication
     - dmetzler
-
-
 ---
-This plugin supports standard HTTP Basic Authentication. By default, this plugin only generates the authentication prompt on configured URLs.
 
-Basic authentication is part of the default authentication chain which is defined by the contribution accessible [on the explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202016-8.10/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--chain).
+{{! excerpt}}
+This plugin supports standard HTTP Basic Authentication. By default, this plugin only generates the authentication prompt on configured URLs.
+{{! /excerpt}}
+
+Basic authentication is part of the default authentication chain which is defined by the contribution accessible [on the explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--chain).

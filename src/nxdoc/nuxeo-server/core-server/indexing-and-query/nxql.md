@@ -1,5 +1,6 @@
 ---
 title: NXQL
+description: The natural way of expressing a query in the Nuxeo Platform is with NXQL, the Nuxeo Query Language.
 review:
     comment: ''
     date: '2017-12-15'

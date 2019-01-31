@@ -1,5 +1,6 @@
 ---
 title: Configure Nuxeo Platform
+description: This tutorial introduces you to a few important aspects of Nuxeo Studio so that you can take advantage of this great product as quickly as possible.
 review:
   comment: ''
   date: '2019-02-18'

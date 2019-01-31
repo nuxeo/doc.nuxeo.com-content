@@ -1,5 +1,6 @@
 ---
 title: How to Customize the Dashboard
+description: Learn how to customize the dashboard by adding new entries or completely override the default dashboard.
 review:
     comment: ''
     date: '2015-12-01'
@@ -112,8 +113,8 @@ history:
         date: '2014-11-07 14:58'
         message: ''
         version: '1'
-
 ---
+
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 ## Adding a New Entry in the Default Dashboard

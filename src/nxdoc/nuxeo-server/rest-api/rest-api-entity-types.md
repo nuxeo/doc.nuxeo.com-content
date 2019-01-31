@@ -1,5 +1,6 @@
 ---
 title: REST API Entity Types
+description: This page lists samples of JSON objects expected by the Resources Endpoints, that you may want to use and adapt when doing POST and PUT.
 review:
     comment: ''
     date: '2018-01-15'

@@ -1,5 +1,6 @@
 ---
 title: Security
+description: A permission is a rule to grant access to a user or set of users to a Nuxeo document. User has a view in the dashboard where he can see the documents on which a permission is set.
 review:
     comment: ''
     date: '2017-12-14'

@@ -1,5 +1,6 @@
 ---
 title: JavaScript Client
+description: The Nuxeo JavaScript Client is a JavaScript client library for Nuxeo Automation and REST API.
 review:
     comment: ''
     date: '2018-01-15'

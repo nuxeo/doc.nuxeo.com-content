@@ -1,5 +1,6 @@
 ---
 title: Using cURL
+description: On this page we are using the UNIX `curl` command line tool to demonstrate how to invoke remote operations.
 review:
     comment: ''
     date: '2018-01-16'

@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Customize Document Layouts'
+description: Learn how to use document layouts with Web UI and Studio Designer.
 review:
     comment: ''
     date: '2018-02-21'

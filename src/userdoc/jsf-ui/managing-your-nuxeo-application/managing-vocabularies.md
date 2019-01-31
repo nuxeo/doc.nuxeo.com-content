@@ -1,5 +1,6 @@
 ---
 title: Managing Vocabularies
+description: Vocabularies are the lists of labels used in the application, for instance in drop down lists. A vocabulary is composed of several entries, that are the options in the drop down lists.
 review:
     comment: ''
     date: '2018-03-08'
@@ -119,16 +120,13 @@ history:
         date: '2010-04-23 15:50'
         message: ''
         version: '1'
-
 ---
 {{! multiexcerpt name='vocabularies-content'}}
 {{multiexcerpt 'vocabularies-intro' page='administration'}}
 ![]({{file name='hierarchical-vocabulary.png'}} ?w=250,border=true)
 
 {{#> callout type='tip' }}
-
 Although the `I10nsubjects` vocabulary is used in most places to populate the Subject list (on edit forms and search forms for instance), the [virtual navigations]({{page version='' space='nxdoc' page='nuxeo-virtual-navigation'}}) used the older "topic" and "subtopic" vocabularies. You need to use the same ID in all vocabularies to make the virtual navigations work.
-
 {{/callout}}
 
 {{multiexcerpt 'vocabularies-management-restrictions' page='administration'}}

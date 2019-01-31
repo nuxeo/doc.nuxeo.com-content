@@ -9,7 +9,10 @@ labels:
 tree_item_index: 200
 toc: true
 ---
+
+{{! excerpt}}
 Once your assets are uploaded and/or created on your instance you will probably need to manage them, add some properties, tags, move them from one folder to another, archive them, validate them with your team, etc. Discover all the features available to help you manage and organize your media assets.
+{{! /excerpt}}
 
 ## Bulk Edit
 

@@ -1,5 +1,6 @@
 ---
 title: Full-Text Queries
+description: Nuxeo documents can be searched using full-text queries; the standard way to do so is to use the top-right "quick search" box in the Nuxeo Platform.
 review:
     comment: ''
     date: '2017-12-14'
@@ -110,12 +111,9 @@ history:
         date: '2010-09-28 11:30'
         message: ''
         version: '1'
-
 ---
 {{! excerpt}}
-
 Nuxeo documents can be searched using full-text queries; the standard way to do so is to use the top-right "quick search" box in the Nuxeo Platform. Search queries are expressed in a Nuxeo-defined syntax, described below.
-
 {{! /excerpt}}
 
 ## Nuxeo Full-Text Query Syntax

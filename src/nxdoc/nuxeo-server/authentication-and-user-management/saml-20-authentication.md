@@ -1,5 +1,6 @@
 ---
 title: SAML 2.0 Authentication
+description: The Nuxeo SAML 2.0 addon allows setting up Nuxeo as a Service Provider and supports WebSSO thus relying on an external SAML Identity Provider (IdP) for authentication.
 review:
     comment: ''
     date: '2016-12-09'

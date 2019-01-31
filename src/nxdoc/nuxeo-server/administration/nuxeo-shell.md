@@ -234,23 +234,20 @@ history:
         date: '2010-11-23 21:09'
         message: ''
         version: '1'
-
 ---
 
-Nuxeo Shell works on top of Nuxeo Content Automation Client and is using the REST API provided by the Automation framework. Because it is using HTTP to communicate with the server the Shell can be used against any Nuxeo distribution which includes the automation framework.
+{{! excerpt}}
+Nuxeo Shell works on top of Nuxeo Content Automation Client and is using the REST API provided by the Automation framework. Because it is using HTTP to communicate with the server, the Shell can be used against any Nuxeo distribution which includes the automation framework.
+{{! /excerpt}}
 
 This also means, most of the Shell commands are implemented as remote Automation operations.
 
-&nbsp;
-
 {{#> callout type='info' heading='Downloads'}}
-
 The Nuxeo Shell is available at the Admin Center, in the "Monitoring" tab and also as a WebEngine site at [http://NUXEO_SERVER/nuxeo/site/shell](http://hostport).
 
 Nuxeo Shell can be installed in Eclipse adding the following repository: Nuxeo ECR - [http://osgi.nuxeo.org/p2/ecr/ide/](http://osgi.nuxeo.org/p2/ecr/ide/), then install "ECR Shell Feature".
 
 [Download the last released version of Nuxeo Shell](http://www.nuxeo.org/static/latest-release/nuxeo-shell) for a manual install. You can browse available versions at [https://maven.nuxeo.org](https://maven.nuxeo.org/nexus/index.html#nexus-search;gav~org.nuxeo.shell~nuxeo-shell~~~) (or pick [latest](https://maven.nuxeo.org/nexus/service/local/artifact/maven/redirect?r=public-releases&g=org.nuxeo.shell&a=nuxeo-shell&v=LATEST&e=jar)).
-
 {{/callout}}
 
 ## Overview

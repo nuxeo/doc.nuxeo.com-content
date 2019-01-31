@@ -1,5 +1,6 @@
 ---
 title: REST API
+description: This page explains the organization and scope of the existing endpoints and other additional mechanisms which extend the behavior of the API.
 review:
     comment: ''
     date: '2017-12-15'

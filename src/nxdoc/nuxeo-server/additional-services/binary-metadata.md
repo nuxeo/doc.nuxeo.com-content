@@ -1,5 +1,6 @@
 ---
 title: Binary Metadata
+description: The Nuxeo Platform enables to extract information from the uploaded files attached to a document and automatically fill in the document metadata at creation time.
 review:
     comment: ''
     date: '2017-12-13'

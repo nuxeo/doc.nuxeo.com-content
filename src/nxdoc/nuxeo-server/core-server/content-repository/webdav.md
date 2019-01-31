@@ -90,19 +90,20 @@ history:
         date: '2010-03-01 13:36'
         message: ''
         version: '1'
-
 ---
+
 ## Functional Overview
 
 {{{multiexcerpt 'functional-overview' page='USERDOC:Working with WebDAV'}}}
 
 ## Technical Overview
-
+{{! excerpt}}
 Nuxeo supports the WebDAV (Web-based Distributed Authoring and Versioning) protocol and thus enables you to create and edit Office documents stored in the Nuxeo Platform directly from you OS desktop, without having to go through your Nuxeo application in a browser.
+{{! /excerpt}}
 
 The documentation about installation and usage of WebDAV can be found [in the Nuxeo Platform User Guide]({{page space='userdoc' page='working-with-webdav'}}).
 
-### Adding a new WebDAV Client
+### Adding a New WebDAV Client
 
 The plugin comes with a default configuration which supports only a few clients among Windows 7's one, litmus, davfs, cadaver. If your usual client is not listed, you can override this configuration by adding a new file `webdav-authentication-config.xml` under `$NUXEO/nxserver/config/` and update the list associated to the header.
 

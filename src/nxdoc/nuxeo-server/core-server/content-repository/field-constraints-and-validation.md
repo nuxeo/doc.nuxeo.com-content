@@ -1,5 +1,6 @@
 ---
 title: Field Constraints and Validation
+description: This page explains how to add validation constraints to a document type by using the Nuxeo component org.nuxeo.ecm.core.api.DocumentValidationService.
 review:
     comment: ''
     date: '2017-12-14'

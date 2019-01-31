@@ -1,5 +1,6 @@
 ---
 title: Learning with Examples
+description: Browse the Learning with Examples section.
 review:
     comment: ''
     date: '2018-01-02'
