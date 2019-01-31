@@ -1,5 +1,6 @@
 ---
 title: Simple Workflow Example
+description: Discover how workflows work in Nuxeo Platform following this simple example.
 review:
   comment: ''
   date: '2019-02-18'

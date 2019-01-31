@@ -1,5 +1,6 @@
 ---
 title: Nuxeo Server
+description: Here the main steps you should follow to quickly install and configure your Nuxeo application and get ready to use it.
 review:
     comment: ''
     date: '2017-02-06'

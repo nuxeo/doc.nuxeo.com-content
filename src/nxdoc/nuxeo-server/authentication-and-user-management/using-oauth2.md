@@ -1,5 +1,6 @@
 ---
 title: OAuth 2
+description: OAuth 2 is a protocol that allows an application to obtain access to the Nuxeo Platform on behalf of a user.
 review:
     comment: ''
     date: '2017-12-11'

@@ -1,5 +1,6 @@
 ---
 title: Authentication Chain Principles
+description: 'Nuxeo Authentication is based on the JAAS standard. Authentication infrastructure is based on two main components: a JAAS Login Module and a Web filter.'
 review:
     comment: ''
     date: '2016-12-14'
@@ -10,13 +11,11 @@ labels:
     - content-review-lts2017
     - authentication
     - dmetzler
-
 ---
-
 Nuxeo Authentication is based on the JAAS standard. Authentication infrastructure is based on two main components:
 
-*   A JAAS Login Module: `NuxeoLoginModule`,
-*   A Web Filter: `NuxeoAuthenticationFilter`.
+- A JAAS Login Module: `NuxeoLoginModule`,
+- A Web Filter: `NuxeoAuthenticationFilter`.
 
 Users and groups are managed via the `UserManagerService` that handles the indirection to users and groups directories (SQL or LDAP or else).
 The Nuxeo authentication framework is pluggable so that you can contribute new plugins and don't have to rewrite and reconfigure a complete JAAS infrastructure.

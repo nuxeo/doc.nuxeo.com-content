@@ -1,5 +1,6 @@
 ---
 title: Automation
+description: This page briefly presents what the Automation module is about.
 review:
     comment: ''
     date: '2017-12-14'
@@ -62,9 +63,7 @@ history:
 
 ---
 {{! excerpt}}
-
 This page briefly presents what the Automation module is about. You can read the [full conceptual explanation]({{page page='content-automation-concepts'}}) for a complete understanding.
-
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}

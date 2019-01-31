@@ -1,5 +1,6 @@
 ---
 title: Web UI Tutorials
+description: Browse the list of tutorials available concerning Nuxeo Web UI.
 review:
     comment: ''
     date: '2017-12-15'

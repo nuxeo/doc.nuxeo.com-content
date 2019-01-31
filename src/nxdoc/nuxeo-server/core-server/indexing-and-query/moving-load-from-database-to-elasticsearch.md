@@ -1,5 +1,6 @@
 ---
 title: Moving Load from Database to Elasticsearch
+description: By moving query load from the database to Elasticsearch, applications can dramatically increase performance and scalability.
 review:
     comment: ''
     date: '2017-12-15'
@@ -88,9 +89,7 @@ history:
 
 ---
 {{! excerpt}}
-
 By moving query load from the database to Elasticsearch, applications can dramatically increase performance and scalability.
-
 {{! /excerpt}}
 
 It is easy to pinpoint slow queries that need to be migrated from the database to Elasticsearch by [monitoring slow queries]({{page page='monitoring-slow-nxql-queries'}}).

@@ -1,5 +1,6 @@
 ---
 title: Kafka
+description: Kafka configuration and integration with Nuxeo.
 review:
     comment: ''
     date: '2017-12-07'

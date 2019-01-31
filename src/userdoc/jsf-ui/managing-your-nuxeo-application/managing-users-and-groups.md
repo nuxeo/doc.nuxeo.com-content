@@ -1,5 +1,6 @@
 ---
 title: Managing Users and Groups
+description: Only administrators and power users can create, edit and delete users and groups. They can create new users and groups, modify their properties or delete them.
 review:
     comment: ''
     date: '2018-03-08'
@@ -242,21 +243,18 @@ history:
 
 ---
 {{! multiexcerpt name='functional-overview'}}
-
 Only administrators and power users can create, edit and delete users and groups. They can create new users and groups, modify their properties or delete them. It is also possible to connect the Platform to an external directory (LDAP directory for instance). Users can only consult users and groups directories.
 
 {{#> callout type='info' }}
-
 When you use an external directory for users and groups, the actions available on users and groups are limited, even to administrators.
-
 {{/callout}}
 
 Users and groups management is available:
 
-*   from the **Admin Center**, in the **Users & groups** tab,
-    ![]({{file name='AdminCenter-users-groups-tab.png' space='nxdoc' page='admin-tab-overview'}} ?w=650,h=172,border=true)
-*   from the **Home** tab, in the **Users & groups** tab.
-    ![]({{file name='home-user-tab.png'}} ?w=650,border=true)
+- from the **Admin Center**, in the **Users & groups** tab,
+  ![]({{file name='AdminCenter-users-groups-tab.png' space='nxdoc' page='admin-tab-overview'}} ?w=650,h=172,border=true)
+- from the **Home** tab, in the **Users & groups** tab.
+  ![]({{file name='home-user-tab.png'}} ?w=650,border=true)
 
 ## Managing Users
 

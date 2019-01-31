@@ -1,6 +1,6 @@
 ---
 title: Administration
-description: null
+description: This page presents the Administration menu on Web UI.
 review:
     comment: ''
     date: '2018-10-15'
@@ -9,6 +9,11 @@ toc: true
 tree_item_index: 100
 labels:
 ---
+
+{{! excerpt}}
+Discover the information displayed on the Administration menu on Web UI.
+{{! /excerpt}}
+
 ## Analytics
 
 Analytics enable administrators to consult information and statistics on how the application is used:

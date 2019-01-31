@@ -1,5 +1,6 @@
 ---
 title: Setting up Your Nuxeo Environment
+description: This how-to is the first step of the tutorial Getting Started with the Nuxeo Platform, allowing you to explore the Nuxeo Platform through its REST API.
 review:
     comment: ''
     date: '2018-12-10'

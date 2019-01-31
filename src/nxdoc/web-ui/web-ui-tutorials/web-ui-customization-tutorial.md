@@ -1,5 +1,6 @@
 ---
 title: Web UI Customization Tutorial
+description: Learn how to customize Web UI and deploy your customization.
 review:
     comment: ''
     date: '2019-02-25'

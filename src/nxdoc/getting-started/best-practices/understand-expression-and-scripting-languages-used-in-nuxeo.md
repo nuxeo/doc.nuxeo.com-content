@@ -1,5 +1,6 @@
 ---
 title: Understand Expression and Scripting Languages Used in Nuxeo
+description: The following documentation will help you understand which languages are available and which variables may be used based on the Nuxeo context you are using.
 review:
   comment: ''
   date: '2016-12-06'

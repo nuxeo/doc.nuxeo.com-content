@@ -247,7 +247,6 @@ history:
         date: '2014-01-21 10:57'
         message: ''
         version: '1'
-
 ---
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 {{! excerpt}}
@@ -256,8 +255,8 @@ A series of widget types for suggestions.
 
 Since 5.7.2, Nuxeo uses [select2](http://select2.github.io/select2/) for the suggestion widgets:
 
-*   the user suggestion and the document suggestion widgets were previously based on the RichFaces suggestion box, and they now use select2;
-*   a new directory suggestion widget is provided.
+- the user suggestion and the document suggestion widgets were previously based on the RichFaces suggestion box, and they now use select2;
+- a new directory suggestion widget is provided.
 
 Unlike the older JSF suggestion widgets, these select2-based widgets rely upon an [automation]({{page page='content-automation-concepts'}}) operation to retrieve suggestions according to the search term typed in the select2 box. The backing operation returns suggestions as an array of JSON objects that select2 is able to manipulate.
 
@@ -273,8 +272,8 @@ Each widget type is available for single and multiple suggestions.
 
 This widget type lets the user select an entry among a list of vocabulary entries, based on the user input. Widget type names are:
 
-*   suggestOneDirectory
-*   suggestManyDirectory
+- suggestOneDirectory
+- suggestManyDirectory
 
 ![l10ncoverage suggestion widget]({{file name='docdirectorySuggestion.png'}} ?w=400,border=true 'l10ncoverage suggestion widget')
 
@@ -319,15 +318,15 @@ Using column-based translation allows to directly query suggestions in the direc
 
 Check out the layout showcase for more details on available widget properties:
 
-*   [Vocabulary suggestion showcase](http://showcase.nuxeo.com/nuxeo/layoutDemo/suggest_one_directory_widget/reference)
-*   [Multiple vocabulary showcase](http://showcase.nuxeo.com/nuxeo/layoutDemo/suggest_one_directory_multiple_widget/reference)
+- [Vocabulary suggestion showcase](http://showcase.nuxeo.com/nuxeo/layoutDemo/suggest_one_directory_widget/reference)
+- [Multiple vocabulary showcase](http://showcase.nuxeo.com/nuxeo/layoutDemo/suggest_one_directory_multiple_widget/reference)
 
 ### {{> anchor 'user'}}User Suggestion Widget Type
 
 This widget type lets the user select an entry among a list of users or groups based on the user input. Widget type names are:
 
-*   singleUserSuggestion
-*   multipleUsersSuggestion
+- singleUserSuggestion
+- multipleUsersSuggestion
 
 ![]({{file name='docuserSuggestion.png'}} ?w=400,border=true)
 
@@ -343,15 +342,15 @@ This property allows to specify a group id to restrict the suggested users.
 
 Check out the layout showcase for more details on available widget properties:
 
-*   [Single user showcase](http://showcase.nuxeo.com/nuxeo/layoutDemo/singleUserSuggestion/reference)
-*   [Multiple user showcase](http://showcase.nuxeo.com/nuxeo/layoutDemo/multipleUsersSuggestion/reference)
+- [Single user showcase](http://showcase.nuxeo.com/nuxeo/layoutDemo/singleUserSuggestion/reference)
+- [Multiple user showcase](http://showcase.nuxeo.com/nuxeo/layoutDemo/multipleUsersSuggestion/reference)
 
 ### {{> anchor 'document'}}Document Suggestion Widget Type
 
 This widget type lets the user select an entry among a list of existing documents of the repository that results from a search query based on the user input. Widget type names are:
 
-*   singleDocumentSuggestion
-*   multipleDocumentsSuggestion
+- singleDocumentSuggestion
+- multipleDocumentsSuggestion
 
 ![]({{file name='docdocumentSuggestion.png'}} ?w=400,border=true)
 
@@ -389,13 +388,11 @@ This is useful if you need to [customize the display of the suggested/selected e
 
 ### {{> anchor 'advanced'}}Advanced Suggestion Widget Type
 
-*   select2Widget
-*   select2WidgetMultiple
+- select2Widget
+- select2WidgetMultiple
 
 {{#> callout type='note' }}
-
 This section deals with advanced settings and requires some development skills.
-
 {{/callout}}
 
 In case you'd like to build your own advanced suggestion widget, here are additional widget properties.
@@ -417,9 +414,9 @@ protected String searchTerm;
 
 The specified operation must return an array of JSON objects which, to be interpreted by select2, must contains the following elements:
 
-*   `id`: the value or reference to be submitted (i.e. saved in the bound field). In case of a JSON serialization of a document, it is the document uid. However, you can modify which element of the JSON object must be submitted with the `idProperty` widget property.
+- `id`: the value or reference to be submitted (i.e. saved in the bound field). In case of a JSON serialization of a document, it is the document uid. However, you can modify which element of the JSON object must be submitted with the `idProperty` widget property.
 
-*   `displayLabel`: the label to displayed by select2 in the UI. However, if you use [custom formatter](#customdisplay), it will be ignored.
+- `displayLabel`: the label to displayed by select2 in the UI. However, if you use [custom formatter](#customdisplay), it will be ignored.
 
 ## {{> anchor 'customdisplay'}}Custom Display
 
@@ -427,9 +424,9 @@ The specified operation must return an array of JSON objects which, to be interp
 
 Suggestion widget appearance can be customized in a quite flexible way through the use of JavaScript formatters. You can separately tune the formatting of both the suggested and selected entries. All suggestion widgets have the following widget properties:
 
-*   `suggestionFormatter`
-*   `selectionFormatter`
-*   `inlinejs`
+- `suggestionFormatter`
+- `selectionFormatter`
+- `inlinejs`
 
 As explained above, each suggested entries are JSON objects returned by an automation operation. The idea is to define a JavaScript function that will generate the HTML to render this JSON object. For instance, the formatter used to render suggested documents in the above [Picture 3](#picture3) is:
 
@@ -493,8 +490,8 @@ _**Picture 4:** multipleDocumentsSuggestion with custom formatter to suggest doc
 
 You can finally customize the CSS style of the select2-based widgets through the use of the following widget properties:
 
-*   `containerCssClass`
-*   `dropdownCssClass`
+- `containerCssClass`
+- `dropdownCssClass`
 
 The container is the div handling the current selection and the dropdown is the popup box suggesting available entries.
 

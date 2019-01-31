@@ -1,5 +1,6 @@
 ---
 title: REST API Endpoints
+description: Nuxeo REST API provides many document-oriented endpoints, but also allows you to customize your own. This page lists all the endpoints provided by Nuxeo.
 review:
     comment: ''
     date: '2018-01-15'

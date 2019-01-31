@@ -1,5 +1,6 @@
 ---
 title: Installing and Setting Up Related Software
+description: The Nuxeo Platform modules use external software for some features. They need to be installed on the server in addition to Nuxeo application.
 review:
     comment: ''
     date: '2017-12-14'

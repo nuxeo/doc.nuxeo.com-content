@@ -1,5 +1,6 @@
 ---
-title: Developer Documentation Center
+title: Developer Documentation
+description: Browse the latest Nuxeo Developer Documentation.
 review:
   comment: ''
   date: '2018-01-02'

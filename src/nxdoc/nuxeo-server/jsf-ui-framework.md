@@ -1,5 +1,6 @@
 ---
 title: JSF UI Framework
+description: This chapter presents the different ways to customize what is displayed on the JSF UI application.
 review:
     comment: ''
     date: '2018-01-02'
@@ -86,11 +87,12 @@ history:
 
 ---
 {{! excerpt}}
-
 This chapter presents the different ways to customize what is displayed on the JSF UI application.
-
 {{! /excerpt}}
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
 
 ### Main UI Elements
 

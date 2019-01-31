@@ -1,5 +1,6 @@
 ---
 title: Using FreeMarker Template Language (FTL)
+description: This tutorial demonstrates how to use templates to render dynamic content.
 review:
     comment: ''
     date: '2016-12-20'

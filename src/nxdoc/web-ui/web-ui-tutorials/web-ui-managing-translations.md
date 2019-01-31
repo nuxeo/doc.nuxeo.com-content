@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Manage Translations'
+description: Learn how to manage translations in Nuxeo Web UI.
 review:
     comment: 'Links to GitHub need to be updated after the release of nuxeo-ui-elements 2.2.0.'
     date: '2017-12-14'

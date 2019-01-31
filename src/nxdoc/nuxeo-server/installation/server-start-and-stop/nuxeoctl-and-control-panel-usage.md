@@ -1,5 +1,6 @@
 ---
 title: nuxeoctl and Control Panel Usage
+description: The nuxeoctl script is located in the bin folder of your Nuxeo installation. It enables various options and commands.
 review:
     comment: ''
     date: '2017-12-11'

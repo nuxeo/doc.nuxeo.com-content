@@ -1,5 +1,6 @@
 ---
 title: Nuxeo Clustering Configuration
+description: Nuxeo can be clustered between several nodes (a.k.a. instances or machines) with the appropriate configuration.
 review:
     comment: ''
     date: '2017-12-14'

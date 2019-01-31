@@ -1,5 +1,6 @@
 ---
 title: Administration
+description: Browse the administration section to discover how to setup your instance correctly.
 review:
   comment: ''
   date: '2018-01-02'

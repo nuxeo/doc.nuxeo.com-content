@@ -1,5 +1,6 @@
 ---
 title: MongoDB
+description: Nuxeo supports MongoDB, read more about its configuration.
 review:
     comment: ''
     date: '2017-12-15'

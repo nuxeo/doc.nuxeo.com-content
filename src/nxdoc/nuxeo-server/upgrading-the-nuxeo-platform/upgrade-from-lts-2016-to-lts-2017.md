@@ -10,8 +10,11 @@ labels:
     - content-review-lts2017
 toc: true
 tree_item_index: 96
-
 ---
+
+{{! excerpt}}
+Instructions to upgrade your Nuxeo Platform instance from LTS 2016 version to LTS 2017.
+{{! /excerpt}}
 
 ## From LTS 2016 to LTS 2017
 

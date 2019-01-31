@@ -1,137 +1,118 @@
 ---
 title: Logs Analysis
+description: Discover how logs are handled in Nuxeo Platform.
 review:
-    comment: ''
-    date: '2017-12-14'
-    status: ok
+  comment: ''
+  date: '2017-12-14'
+  status: ok
 labels:
-    - content-review-lts2016
-    - logs
-    - bdelbosc
-    - warn
-    - error
-    - log4j
-    - lts2017-ok
+  - content-review-lts2016
+  - logs
+  - bdelbosc
+  - warn
+  - error
+  - log4j
+  - lts2017-ok
 toc: true
 confluence:
-    ajs-parent-page-id: '950318'
-    ajs-parent-page-title: Monitoring and Maintenance
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Logs+Analysis
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Logs+Analysis'
-    page_id: '14254233'
-    shortlink: mYDZ
-    shortlink_source: 'https://doc.nuxeo.com/x/mYDZ'
-    source_link: /display/NXDOC/Logs+Analysis
+  ajs-parent-page-id: '950318'
+  ajs-parent-page-title: Monitoring and Maintenance
+  ajs-space-key: NXDOC
+  ajs-space-name: Nuxeo Platform Developer Documentation
+  canonical: Logs+Analysis
+  canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Logs+Analysis'
+  page_id: '14254233'
+  shortlink: mYDZ
+  shortlink_source: 'https://doc.nuxeo.com/x/mYDZ'
+  source_link: /display/NXDOC/Logs+Analysis
 tree_item_index: 300
 version_override:
-    LTS 2015: 710/admindoc/logs-analysis
-    '6.0': 60/admindoc/logs-analysis
-    '5.8': 58/admindoc/logs-analysis
+  LTS 2015: 710/admindoc/logs-analysis
+  '6.0': 60/admindoc/logs-analysis
+  '5.8': 58/admindoc/logs-analysis
 history:
-    -
-        author: Manon Lumeau
-        date: '2016-03-23 13:35'
-        message: ''
-        version: '20'
-    -
-        author: Manon Lumeau
-        date: '2016-03-23 13:33'
-        message: 'Fix links '
-        version: '19'
-    -
-        author: Julien Carsique
-        date: '2015-12-09 16:15'
-        message: ''
-        version: '18'
-    -
-        author: Manon Lumeau
-        date: '2015-11-18 17:15'
-        message: ''
-        version: '17'
-    -
-        author: Solen Guitter
-        date: '2014-11-26 17:13'
-        message: ''
-        version: '16'
-    -
-        author: Solen Guitter
-        date: '2014-11-26 17:05'
-        message: Added tomcat.log and classloader.log
-        version: '15'
-    -
-        author: Solen Guitter
-        date: '2014-11-26 14:55'
-        message: ''
-        version: '14'
-    -
-        author: Solen Guitter
-        date: '2014-11-26 14:51'
-        message: formatting and link update
-        version: '13'
-    -
-        author: Solen Guitter
-        date: '2014-08-21 11:13'
-        message: Formatting
-        version: '12'
-    -
-        author: Solen Guitter
-        date: '2013-10-15 11:56'
-        message: ''
-        version: '11'
-    -
-        author: Julien Carsique
-        date: '2013-08-06 14:21'
-        message: JIRA Issue macro params updated with additional server info
-        version: '10'
-    -
-        author: Julien Carsique
-        date: '2013-08-06 14:21'
-        message: 'Removed download instructions for tomcat-juli: there are already installed in the server since 5.7.2'
-        version: '9'
-    -
-        author: Julien Carsique
-        date: '2013-07-31 16:27'
-        message: ''
-        version: '8'
-    -
-        author: Solen Guitter
-        date: '2013-07-15 15:53'
-        message: Added TOC
-        version: '7'
-    -
-        author: Julien Carsique
-        date: '2013-06-28 13:20'
-        message: ''
-        version: '6'
-    -
-        author: Julien Carsique
-        date: '2013-06-28 13:19'
-        message: ''
-        version: '5'
-    -
-        author: Julien Carsique
-        date: '2013-06-28 13:14'
-        message: ''
-        version: '4'
-    -
-        author: Solen Guitter
-        date: '2013-05-22 15:09'
-        message: Added related pages
-        version: '3'
-    -
-        author: Solen Guitter
-        date: '2013-05-22 15:07'
-        message: Reported content from 5.6 documentation
-        version: '2'
-    -
-        author: Solen Guitter
-        date: '2013-05-22 11:51'
-        message: ''
-        version: '1'
-
+  - author: Manon Lumeau
+    date: '2016-03-23 13:35'
+    message: ''
+    version: '20'
+  - author: Manon Lumeau
+    date: '2016-03-23 13:33'
+    message: 'Fix links '
+    version: '19'
+  - author: Julien Carsique
+    date: '2015-12-09 16:15'
+    message: ''
+    version: '18'
+  - author: Manon Lumeau
+    date: '2015-11-18 17:15'
+    message: ''
+    version: '17'
+  - author: Solen Guitter
+    date: '2014-11-26 17:13'
+    message: ''
+    version: '16'
+  - author: Solen Guitter
+    date: '2014-11-26 17:05'
+    message: Added tomcat.log and classloader.log
+    version: '15'
+  - author: Solen Guitter
+    date: '2014-11-26 14:55'
+    message: ''
+    version: '14'
+  - author: Solen Guitter
+    date: '2014-11-26 14:51'
+    message: formatting and link update
+    version: '13'
+  - author: Solen Guitter
+    date: '2014-08-21 11:13'
+    message: Formatting
+    version: '12'
+  - author: Solen Guitter
+    date: '2013-10-15 11:56'
+    message: ''
+    version: '11'
+  - author: Julien Carsique
+    date: '2013-08-06 14:21'
+    message: JIRA Issue macro params updated with additional server info
+    version: '10'
+  - author: Julien Carsique
+    date: '2013-08-06 14:21'
+    message: 'Removed download instructions for tomcat-juli: there are already installed in the server since 5.7.2'
+    version: '9'
+  - author: Julien Carsique
+    date: '2013-07-31 16:27'
+    message: ''
+    version: '8'
+  - author: Solen Guitter
+    date: '2013-07-15 15:53'
+    message: Added TOC
+    version: '7'
+  - author: Julien Carsique
+    date: '2013-06-28 13:20'
+    message: ''
+    version: '6'
+  - author: Julien Carsique
+    date: '2013-06-28 13:19'
+    message: ''
+    version: '5'
+  - author: Julien Carsique
+    date: '2013-06-28 13:14'
+    message: ''
+    version: '4'
+  - author: Solen Guitter
+    date: '2013-05-22 15:09'
+    message: Added related pages
+    version: '3'
+  - author: Solen Guitter
+    date: '2013-05-22 15:07'
+    message: Reported content from 5.6 documentation
+    version: '2'
+  - author: Solen Guitter
+    date: '2013-05-22 11:51'
+    message: ''
+    version: '1'
 ---
+
 ## Logging Configuration
 
 Nuxeo logging is compliant with common Java logging frameworks&nbsp;[Log4J](https://logging.apache.org/log4j/1.2/),&nbsp;[Log4j2](https://logging.apache.org/log4j/2.x/),&nbsp;[SLF4J](http://www.slf4j.org/)&nbsp;and&nbsp;[JUL](http://download.oracle.com/javase/6/docs/technotes/guides/logging/index.html).
@@ -144,36 +125,34 @@ Log4J log levels are: ERROR, WARN, INFO, DEBUG and TRACE.
 
 You can increase or decrease the logs for specific services. Here are some useful loggers:
 
-*   `org.nuxeo.runtime.deployment.preprocessor.DeploymentPreprocessor` logs the pre-processing order
-*   `org.nuxeo.osgi.application.loader.FrameworkLoader` writes the configuration summary
-*   `org.nuxeo.runtime.osgi.OSGiRuntimeService` provides the final startup summary
+- `org.nuxeo.runtime.deployment.preprocessor.DeploymentPreprocessor` logs the pre-processing order
+- `org.nuxeo.osgi.application.loader.FrameworkLoader` writes the configuration summary
+- `org.nuxeo.runtime.osgi.OSGiRuntimeService` provides the final startup summary
 
 Related pages:
 
-*   [Log4J]({{page space='glos' page='log4j'}})
-*   [How to change the JBoss log files rotation]({{page space='kb' page='how-to-change-the-jboss-log-files-rotation'}})
-*   [Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)
+- [Log4J]({{page space='glos' page='log4j'}})
+- [How to change the JBoss log files rotation]({{page space='kb' page='how-to-change-the-jboss-log-files-rotation'}})
+- [Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)
 
 ### Log Files
 
 The log files location depends on the `nuxeo.log.dir` parameter. By default, Nuxeo generates the following log files (also available from the platform [Admin tab]({{page page='admin-tab-overview'}}) and the Control Panel):
 
-*   Launcher logs
-    *   nuxeoctl.log - Logs activity from NuxeoCtl
-    *   console.log - Logs output written to the console (stdout)
-*   Server logs
-    *   server.log - Server logs
-    *   nuxeo-error.log - Gathers errors raised to the user
-    *   stderr.log - Gathers errors written to the console (stderr)
-    *   classloader.log - Gathers class loading errors from Catalina
-    *   tomcat.log - Gathers Tomcat logs
+- Launcher logs
+  - nuxeoctl.log - Logs activity from NuxeoCtl
+  - console.log - Logs output written to the console (stdout)
+- Server logs
+  - server.log - Server logs
+  - nuxeo-error.log - Gathers errors raised to the user
+  - stderr.log - Gathers errors written to the console (stderr)
+  - classloader.log - Gathers class loading errors from Catalina
+  - tomcat.log - Gathers Tomcat logs
 
 ### Tomcat Specific
 
 {{#> callout type='note' }}
-
 The following information is for debug purpose, it may have impacts on performance and logging files size
-
 {{/callout}}
 
 `$NUXEO_HOME/conf/logging.properties` has no effect; you can safely remove it.
@@ -329,7 +308,7 @@ WARN
 
 &nbsp;
 
-* * *
+---
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 

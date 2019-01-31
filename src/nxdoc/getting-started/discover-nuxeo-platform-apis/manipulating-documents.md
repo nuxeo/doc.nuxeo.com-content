@@ -1,5 +1,6 @@
 ---
 title: Manipulating Documents
+description: 'Learn how to manipulate documents (creation, update, state change, deletion...) and launch queries through the REST API.'
 review:
     comment: ''
     date: '2018-11-26'

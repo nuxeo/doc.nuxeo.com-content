@@ -1,5 +1,6 @@
 ---
 title: Conversion
+description: The Nuxeo Platform comes with a conversion service that can be used to manage conversion of blobs from one format to an other.
 review:
     comment: ''
     date: '2017-12-11'
@@ -98,9 +99,7 @@ history:
 
 ---
 {{! excerpt}}
-
 The Nuxeo Platform comes with a [conversion service](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.core.convert.api.ConversionService) that can be used to manage conversion of blobs from one format to an other.
-
 {{! /excerpt}}
 
 This is what is used for getting a PDF file from an office document, for instance. This is also the infrastructure you should use if you want to plug an Autocad convertor or any business specific format that is not available in the built-in set of converters.

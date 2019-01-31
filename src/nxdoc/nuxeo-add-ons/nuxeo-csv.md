@@ -209,16 +209,14 @@ Watch the related courses on Nuxeo University
 
 {{! excerpt}}
 The [Nuxeo CSV addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv) enables users to proceed to a bulk import of documents in the Nuxeo Platform using a CSV file. This addon enables users to create documents with their metadata filled in, to import files with their main attachment or to create a tree structure.
-{{! /excerpt}} {{! multiexcerpt name='nuxeo_csv_functional_introduction'}}
+{{! /excerpt}}
 
-Installing this addon adds a button "Import a CSV file" for all users that have at least the Edit permission on any document in which it is possible to import a file. By default, this means workspaces and folders. If you configured other documents types in which it is possible to import files, then the button "Import a CSV file" can also be available (see the page [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})).
-
+{{! multiexcerpt name='nuxeo_csv_functional_introduction'}}
+Installing this addon adds a button **Import a CSV file** for all users that have at least the Edit permission on any document in which it is possible to import a file. By default, this means workspaces and folders. If you configured other documents types in which it is possible to import files, then the button **Import a CSV file** can also be available (see the page [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})).
 {{! /multiexcerpt}}
 
 {{#> callout type='info' heading='Web UI and JSF UI' }}
-
 This page gives all the necessary steps to import content with the CSV addon from JSF UI and Web UI.
-
 {{/callout}}
 
 ## Installation
@@ -243,11 +241,11 @@ The Nuxeo CSV addon enables users to create file documents and upload their main
 
 The CSV file used to import documents in the Nuxeo Platform must respect the following rules:
 
-*   First line defines the properties that will be filled in
-*   Other lines define the documents to be imported
-*   Use a comma to separate properties
-*   Values must be between quotes
-*   Dates must be formatted using the W3C format. More information on the [W3C documentation](https://www.w3.org/TR/NOTE-datetime).
+- First line defines the properties that will be filled in
+- Other lines define the documents to be imported
+- Use a comma to separate properties
+- Values must be between quotes
+- Dates must be formatted using the W3C format. More information on the [W3C documentation](https://www.w3.org/TR/NOTE-datetime).
 
 {{#> callout type='note'}}
 It is possible to use the old legacy date format (without time information) `MM/dd/yyyy` by setting the configuration property `nuxeo.csv.import.legacyDateFormat` to `true`:
@@ -261,9 +259,9 @@ It is possible to use the old legacy date format (without time information) `MM/
 ```
 {{/callout}}
 
-*   For multi-valued metadata, such as contributors, use a pipe character (`|`) to separate the different values
-*   For vocabularies values, use their id
-*   Lines defining the documents to import must define all properties specified on the first line, even empty ones (by using empty values)
+- For multi-valued metadata, such as contributors, use a pipe character (`|`) to separate the different values
+- For vocabularies values, use their id
+- Lines defining the documents to import must define all properties specified on the first line, even empty ones (by using empty values)
 
 Here is a simple example of the structure of a CSV file:
 
@@ -274,9 +272,9 @@ Here is a simple example of the structure of a CSV file:
 
 In the example above:
 
-*   `name` is the id of the document (used in the URL)
-*   `type` is the id of document type (see the page [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) for some default types properties)
-*   `dc:title` and `dc:description` are the title and description fields of the document from the Dublin Core (dc) schema. They follow the `schema:field` formatting.
+- `name` is the id of the document (used in the URL)
+- `type` is the id of document type (see the page [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) for some default types properties)
+- `dc:title` and `dc:description` are the title and description fields of the document from the Dublin Core (dc) schema. They follow the `schema:field` formatting.
 
 To have new lines in a field value (like `dc:description`), just write them as in the following CSV file example:
 

@@ -1,5 +1,6 @@
 ---
 title: Nuxeo Live Connect
+description: Live Connect allows you to create a content application that handles cloud files (Dropbox, Google Drive, Box, OneDrive...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it.
 review:
   comment: ''
   date: '2017-12-15'
@@ -299,14 +300,14 @@ The table below shows the available features for each default implementation.
 <tr>
 <td colspan="1">Download URL</td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>*</sup></td>
+<td colspan="1">Yes<sup>\*</sup></td>
 <td colspan="1">Yes</td>
 <td colspan="1">Yes</td>
 </tr>
 <tr>
 <td colspan="1">Full-text indexation</td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>*</sup>
+<td colspan="1">Yes<sup>\*</sup>
 </td>
 <td colspan="1">Yes</td>
 <td colspan="1">Yes</td>
@@ -314,20 +315,20 @@ The table below shows the available features for each default implementation.
 <tr>
 <td colspan="1">PDF conversion</td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>*</sup>
+<td colspan="1">Yes<sup>\*</sup>
 </td>
-<td colspan="1">Yes<sup>*</sup>
+<td colspan="1">Yes<sup>\*</sup>
 </td>
-<td colspan="1">Yes<sup>*</sup>
+<td colspan="1">Yes<sup>\*</sup>
 </td>
 </tr>
 <tr>
 <td colspan="1">Preview</td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>*</sup>
+<td colspan="1">Yes<sup>\*</sup>
 </td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>*</sup>
+<td colspan="1">Yes<sup>\*</sup>
 </td>
 </tr>
 <tr>
@@ -347,10 +348,10 @@ The table below shows the available features for each default implementation.
 <tr>
 <td colspan="1">Versioning</td>
 <td colspan="1">Yes (non-native Google Drive documents)</td>
-<td colspan="1">Yes<sup>*</sup>
+<td colspan="1">Yes<sup>\*</sup>
 </td>
 <td colspan="1">Yes</td>
-<td colspan="1">Yes<sup>*</sup>
+<td colspan="1">Yes<sup>\*</sup>
 </td>
 </tr>
 <tr>

@@ -1,5 +1,6 @@
 ---
 title: Use of MVEL in Automation Chains
+description: This documentation focuses on the MVEL expression language, used in automation chains.
 review:
     comment: ''
     date: '2016-12-19'

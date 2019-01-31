@@ -1,5 +1,6 @@
 ---
-title: 'HOWTO: Publish a News Feature in Workspaces'
+title: How to Publish a News Feature in Workspaces
+description: 'How to add a small "News" feature to your Nuxeo Platform for enabling News content publishing at workspace level, using only Nuxeo Studio.'
 review:
     comment: ''
     date: '2018-10-31'

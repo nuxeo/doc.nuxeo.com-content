@@ -1,5 +1,6 @@
 ---
 title: Workflows
+description: 'All the documents evolve according to a defined lifecycle. The default lifecycle is composed of the following states: Project, Approved, Obsolete and Deleted.'
 review:
     comment: ''
     date: '2018-03-08'
@@ -120,7 +121,9 @@ history:
         version: '1'
 
 ---
+{{! excerpt}}
 All the documents evolve according to a defined lifecycle. The default lifecycle is composed of the following states: Project, Approved, Obsolete and Deleted. There are different ways to make documents evolve through this lifecycle. One of the ways is to use a workflow.
+{{! /excerpt}}
 
 Users who are involved in workflows are alerted by email and can have a synthetic view of all their pending tasks on documents in their [dashboard]({{page space='USERDOC' page='Browsing Content'}}#dashboard). The documents they have to review are listed there.
 

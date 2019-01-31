@@ -1,5 +1,6 @@
 ---
 title: Content Enrichers
+description: The Nuxeo Platform provides you with several content enrichers out of the box for the most common use cases, and you can contribute your own if needed.
 review:
     comment: ''
     date: '2017-12-11'
@@ -304,9 +305,7 @@ history:
         date: '2014-07-03 00:58'
         message: ''
         version: '1'
-
 ---
-
 ## Pluggable Context
 
 Sometimes it's useful to optimize the number of requests you send to the server. For this reason, we provide a mechanism for requesting more information on the response, simply by specifying the context you require in the request header.

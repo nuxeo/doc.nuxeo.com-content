@@ -181,9 +181,14 @@ history:
         date: '2010-07-21 18:00'
         message: ''
         version: '1'
-
 ---
+
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
+{{! excerpt}}
+Discover how to add a JSF form validation to a JSF component to validate a field.
+{{! /excerpt}}
+
 The document is created and updated using the 'create' or 'update' view. You can check values on this document before it is saved in the repository.
 
 To validate field, you add a JSF validator to the JSF component controlling the field.

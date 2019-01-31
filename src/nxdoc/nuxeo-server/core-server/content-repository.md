@@ -1,5 +1,6 @@
 ---
 title: Content Repository
+description: Browse the Content Repository section of the developer documentation.
 review:
     comment: ''
     date: '2018-01-02'

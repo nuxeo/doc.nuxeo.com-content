@@ -1,5 +1,6 @@
 ---
 title: Nuxeo JSF UI
+description: "JSF UI addon offers a complete user interface for Nuxeo server, fully extensible and configurable: forms, process, user actions."
 review:
     comment: ''
     date: '2018-04-03'

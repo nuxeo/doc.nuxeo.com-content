@@ -1,5 +1,6 @@
 ---
-title: 'HOWTO: Define a Document Type'
+title: How to Define a Document Type
+description: Learn how to create a new document type using Nuxeo Studio.
 review:
     comment: ''
     date: '2017-12-12'

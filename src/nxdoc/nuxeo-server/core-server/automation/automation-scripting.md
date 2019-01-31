@@ -1,5 +1,6 @@
 ---
 title: Automation Scripting
+description: Automation Scripting is a Nuxeo module which provides ability to create and contribute Automation chain/operation in JavaScript.
 review:
     comment: ''
     date: '2017-12-11'

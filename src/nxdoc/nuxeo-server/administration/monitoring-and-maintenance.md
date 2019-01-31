@@ -154,20 +154,18 @@ history:
         date: '2010-03-01 00:58'
         message: ''
         version: '1'
-
 ---
-## Monitoring Nuxeo
 
-### Nuxeo JMX Monitoring
+## Nuxeo JMX Monitoring
 
 The Nuxeo Platform exposes a lot of metrics, either through JMX or through the Coda Hale Metrics library. See the&nbsp;[Metrics and Monitoring]({{page page='metrics-and-monitoring'}}) page for more details.
 
-### Nuxeo Server Running and Components Loading Statuses
+## Nuxeo Server Running and Components Loading Statuses
 
 The Nuxeo Platform provides an URL for monitoring the server status. This method is actually also used by the Launcher to follow the server startup status, after checking the Java process status.
 
-*   `http://NUXEO_SERVER/nuxeo/runningstatus` will be available at last. While it isn't reachable, the server is stopped or still starting.
-The server checks the status of all the probes that are registred to be evaluated for this health check. It returns either:
+- `http://NUXEO_SERVER/nuxeo/runningstatus` will be available at last. While it isn't reachable, the server is stopped or still starting.
+The server checks the status of all the probes that are registered to be evaluated for this health check. It returns either:
      - HTTP 200 if all checks pass and a JSON with the detailed status like:
      ```json
          {
@@ -191,9 +189,9 @@ The server checks the status of all the probes that are registred to be evaluate
           ```
    A probe is only run if the last execution time was more than 20s ago. For intervals less than 20s, the last execution status is returned as part of the response.
    See  details about ( [probes in Metrics and monitoring ]({{page page='metrics-and-monitoring'}}#probes)) for the list of probes evaluated for the healthCheck and  how to contribute new checks.          
-*   `http://NUXEO_SERVER/nuxeo/runningstatus?info=probe&key=xxx`  where key can be any probe registered to be evaluated for the health check returns 200 OK if the check passes  
-*   `http://NUXEO_SERVER/nuxeo/runningstatus?info=started` returns `true` if the server finished starting and the Nuxeo runtime is fine with its components.
-*   `http://NUXEO_SERVER/nuxeo/runningstatus?info=summary&key=xxx` returns `true` or `false` (see "info=started") and a detailed summary about components. Access to this URL is restricted by an access key configurable in `nuxeo.conf` (see `"server.status.key"` in [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})).
+- `http://NUXEO_SERVER/nuxeo/runningstatus?info=probe&key=xxx`  where key can be any probe registered to be evaluated for the health check returns 200 OK if the check passes  
+- `http://NUXEO_SERVER/nuxeo/runningstatus?info=started` returns `true` if the server finished starting and the Nuxeo runtime is fine with its components.
+- `http://NUXEO_SERVER/nuxeo/runningstatus?info=summary&key=xxx` returns `true` or `false` (see "info=started") and a detailed summary about components. Access to this URL is restricted by an access key configurable in `nuxeo.conf` (see `"server.status.key"` in [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}})).
 
 {{#> panel type='code' heading='Sample output if something was wrong at startup (for instance, missing RelationService)'}}
 ```

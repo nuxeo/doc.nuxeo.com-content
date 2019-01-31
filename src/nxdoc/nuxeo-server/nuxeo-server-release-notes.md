@@ -1,5 +1,6 @@
 ---
 title: Nuxeo Server LTS 2019 Release Notes
+description: This page relates to the release notes of Nuxeo Server and related addons for the 10.10 cycle, a.k.a LTS 2019 cycle.
 review:
    comment: ''
    date: '2019-01-18'

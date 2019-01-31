@@ -1,5 +1,6 @@
 ---
 title: Contributing an Operation
+description: This page provides all the information necessary for implementing an operation and is a must-read for getting a good comprehension of the framework.
 review:
     comment: ''
     date: '2017-12-14'

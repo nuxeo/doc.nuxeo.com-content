@@ -9,7 +9,7 @@ labels:
     - vcs
     - fguillaume
     - vcs-component
-    - content-review-lts2017
+    - content-review-lts2019
 toc: true
 confluence:
     ajs-parent-page-id: '20515468'
@@ -244,56 +244,58 @@ history:
         date: '2010-06-17 17:06'
         message: ''
         version: '1'
-
 ---
+
 The goals of VCS (Visible Content Store) are to:
 
-*   Store information in standard SQL databases.
-*   Use "natural" object mapping to tables.
-*   Be fast.
-*   Support full-text searches on databases having that capability.
-*   Have some flexibility in the storage model to optimize certain cases at configuration time.
+- Store information in standard SQL databases.
+- Use "natural" object mapping to tables.
+- Be fast.
+- Support full-text searches on databases having that capability.
+- Have some flexibility in the storage model to optimize certain cases at configuration time.
 
+{{! excerpt}}
 This section's sub-pages describe the architecture of VCS.
+{{! /excerpt}}
 
-### "Visible SQL" Structures
+## "Visible SQL" Structures
 
 When using VCS, you can directly access all your data in pure SQL: the schema of the database is a mapping of the XSD schemas you defined in the Nuxeo configuration.
 
-### Easy Reporting
+## Easy Reporting
 
 Because SQL data can be accessed directly, you may use any SQL reporting tool (Business Object, BIRT, Crystal Reports...) to build custom business reports on your documents data.
 
-### Easy Data Injection
+## Easy Data Injection
 
 For big data migration you can use direct SQL injection. Although we provide import / export APIs in Nuxeo, they will never be as fast as bulk inserts. Furthermore, in some cases, you don't want the people dealing with data migration to be Nuxeo developers: in this case, using plain SQL is an advantage.
 
-### Simple Debugging
+## Simple Debugging
 
 Because data is transparently stored in SQL tables, it's very easy to have a look at them and understand exactly what is going on.
 
-### Easy Schema Migration
+## Easy Schema Migration
 
 With VCS, schema changes in Nuxeo are automatically propagated to the SQL level (columns are added as needed, and you are warned about extra unused columns). If you change a field type, you can just do `ALTER TABLE` to change the column type.
 
-### Easy and Safe Hot Backup
+## Easy and Safe Hot Backup
 
 You can hot backup your SQL database and then in a second step hot backup the binary store; in this case data will be consistent:
 
-*   You have no risk of having a file being in the middle of an update.
-*   You have no risk of having a file referenced by the SQL database that has been removed from the filesystem.
+- You have no risk of having a file being in the middle of an update.
+- You have no risk of having a file referenced by the SQL database that has been removed from the filesystem.
 
 See also these additional [explanations]({{page page='backup-and-restore'}}) on why VCS ensures safe hot backups.
 
-### Blob Storage
+## Blob Storage
 
 By default Nuxeo stores all blobs on the filesystem in a lock-free, cluster-aware manner, based on the "Content-addressable storage" paradigm. Instead of the filesystem, you can also elect to store the blobs in Amazon S3 or in other external storage systems using the appropriate plugin. See [File Storage Configuration]({{page page='file-storage-configuration'}}) for more on the blob storage mechanism.
 
 You can also choose to store blobs in the SQL database but we don't recommend it. In our experience storing blobs in a SQL database leads to a lot of problems:
 
-*   Performances really drops.
-*   Some JDBC drivers load blobs in the JVM memory which can lead to memory issues.
-*   Database backup/restore is very slow.
-*   Database replication (master/slave) is very slow too.
+- Performances really drops.
+- Some JDBC drivers load blobs in the JVM memory which can lead to memory issues.
+- Database backup/restore is very slow.
+- Database replication (master/slave) is very slow too.
 
 If despite these recommendations you still want to choose this architectural option, you can use the dedicated plugin available at [https://github.com/nuxeo/nuxeo-core-binarymanager-sql/](https://github.com/nuxeo/nuxeo-core-binarymanager-sql/).

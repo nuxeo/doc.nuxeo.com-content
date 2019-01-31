@@ -1,5 +1,6 @@
 ---
 title: PHP Automation Client
+description: The [Nuxeo Automation PHP Client is a PHP client library for Nuxeo Automation API.
 review:
     comment: ''
     date: '2016-12-06'

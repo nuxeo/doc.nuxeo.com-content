@@ -1,5 +1,6 @@
 ---
 title: Managing Files
+description: Learn how to upload files on your Nuxeo server and attach them to a document.
 review:
     comment:
     date: '2018-10-31'
@@ -151,9 +152,7 @@ next_link: /nxdoc/retrieving-audit-log
 
 ---
 {{! excerpt}}
-
 Learn how to upload files on your Nuxeo server and attach them to a document.
-
 {{! /excerpt}}
 
 ## Create a Document from an Existing File

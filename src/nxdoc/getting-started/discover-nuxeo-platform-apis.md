@@ -1,5 +1,6 @@
 ---
 title: Discover Nuxeo Platform APIs
+description: This tutorial will guide you on a tour of the Nuxeo Platform and its features through its APIs.
 review:
     comment: ''
     date: '2018-02-28'

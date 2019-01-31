@@ -1,5 +1,6 @@
 ---
 title: Deleting Documents
+description: Deleting a document involves several steps before the full document is actually deleted from the database and disk.
 review:
     comment: ''
     date: '2018-04-24'

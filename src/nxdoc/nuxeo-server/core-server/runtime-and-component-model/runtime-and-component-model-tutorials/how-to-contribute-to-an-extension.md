@@ -1,5 +1,6 @@
 ---
 title: How to Contribute to an Extension
+description: Learn how to create an XML extension in Nuxeo Studio, with the Nuxeo CLI and how to override a Nuxeo contribution.
 review:
   comment: ''
   date: '2017-12-14'
@@ -219,7 +220,7 @@ Once you have found the `extension point` you want to contribute to:
     *   In Nuxeo, we follow this naming convention `org.mycompany.myproject.extension.point.where.we.contribute.contribution`.
         You can follow your way but be careful to avoid conflicts.
     *   You must give a **unique name** for your component. If the name of your package is not unique it will **not be deployed**.{{/callout}}
-    
+
 3.  Add your contribution that express the configuration you want in the component XML fragment. You get something like:
     ```xml
     <?xml version="1.0"?>

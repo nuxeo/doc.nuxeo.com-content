@@ -1,5 +1,6 @@
 ---
 title: .NET Client
+description: Nuxeo .NET Client is a cross-platform client library developed in C# for the Nuxeo Automation and REST API.
 review:
     comment: ''
     date: '2017-12-13'

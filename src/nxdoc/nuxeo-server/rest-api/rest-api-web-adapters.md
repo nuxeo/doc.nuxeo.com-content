@@ -1,5 +1,6 @@
 ---
 title: REST API Web Adapters
+description: Web Adapters transform the resources returned, for example, getting all the tasks of a document, or its related documents.
 review:
     comment: ''
     date: '2018-01-15'

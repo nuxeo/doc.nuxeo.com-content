@@ -1,5 +1,5 @@
 ---
-title: How to Export Data Using Document Template and Automation
+title: 'HOWTO: Export Data Using Document Template and Automation'
 review:
     comment: ''
     date: '2016-12-19'
@@ -175,18 +175,12 @@ history:
         date: '2011-02-04 18:15'
         message: ''
         version: '1'
-
 ---
-{{#> panel type='primary'}}
-[Check out the blog post Export Data with Content Automation.](http://blogs.nuxeo.com/development/2014/03/export-data-content-automation/)
-{{/panel}}
 
 Document Templates are pattern files used to produce any type of text-based document with dynamic content. Used in combination with [automation chains]({{page page='content-automation-concepts'}}), document templates can be used to generate files such as CSV files, MS Word or OpenOffice file, PDF files, XML files, HTML, etc.
 
 {{! excerpt}}
-
 In a few steps, we will show how to generate a CSV file that lists all the documents of your Nuxeo Platform repository and some metadata.
-
 {{! /excerpt}}
 
 ## Step 1: Creating the Document Template

@@ -1,5 +1,6 @@
 ---
 title: Connecting Nuxeo to the Database
+description: To connect Nuxeo to your database, you need to tell Nuxeo which database template to use and provide the database connection information.
 review:
     comment: ''
     date: '2017-12-13'

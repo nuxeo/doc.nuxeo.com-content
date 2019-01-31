@@ -1,5 +1,6 @@
 ---
 title: Repository Concepts
+description: This page summarizes all the main concepts about documents, access to documents and document storage.
 review:
     comment: ''
     date: '2017-01-30'

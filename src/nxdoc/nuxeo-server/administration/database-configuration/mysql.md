@@ -1,5 +1,6 @@
 ---
 title: MySQL
+description: Nuxeo Platform supports MySQL, read more about its configuration.
 review:
     comment: ''
     date: '2017-12-15'

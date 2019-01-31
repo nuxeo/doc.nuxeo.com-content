@@ -1,5 +1,6 @@
 ---
 title: Using OpenID / OAuth2 in Login Screen
+description: You can use any OpenID / OAuth 2 identity provider in the authentication chain. A Nuxeo addon, OpenID Authentication, is available to make this possible.
 review:
     comment: ''
     date: '2017-12-11'

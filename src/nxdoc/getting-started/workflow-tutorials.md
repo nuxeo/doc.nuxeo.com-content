@@ -1,5 +1,6 @@
 ---
 title: Workflow Tutorials
+description: Browse the list of tutorials available on workflows.
 review:
     comment: ''
     date: '2018-01-02'

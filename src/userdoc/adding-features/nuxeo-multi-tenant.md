@@ -158,8 +158,8 @@ history:
         date: '2012-06-14 14:17'
         message: ''
         version: '1'
-
 ---
+
 {{#> callout type='note' }}
 This addon is not yet available on Web UI and requires the JSF UI addon to be installed.
 {{/callout}}

@@ -1,5 +1,6 @@
 ---
 title: Web UI
+description: Web UI is the UI of Nuxeo Server. Thanks to its great flexibility, it is the ideal start for any Digital Asset Management, Case Management and Document Management project.
 review:
     comment: ''
     date: '2018-01-02'

@@ -1,5 +1,6 @@
 ---
 title: Common Events
+description: Any Nuxeo code can define its own events, but it's useful to know some of the standard ones that Nuxeo sends by default.
 review:
     comment: ''
     date: '2017-12-14'

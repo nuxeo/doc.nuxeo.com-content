@@ -93,9 +93,11 @@ history:
         date: '2011-06-10 16:42'
         message: ''
         version: '1'
-
 ---
+
+{{! excerpt}}
 Need a quick Nuxeo Platform instance for your cloud? You can deploy one in just a few minutes with our CloudFormation template, as we provide a template that will automatically install the latest Nuxeo on your Amazon AWS and all the required resources.
+{{! /excerpt}}
 
 ## Prerequisites
 

@@ -1,5 +1,6 @@
 ---
 title: Python Client
+description: The Nuxeo Python Client is a Python client library for Nuxeo Automation and REST API.
 review:
     comment: ''
     date: '2017-12-18'

@@ -1,5 +1,6 @@
 ---
 title: Nuxeo Bulk Document Importer
+description: The Nuxeo Bulk Document Importer is available for any Nuxeo platform-based application and enables mass document import in a Nuxeo repository.
 review:
     comment: ''
     date: '2017-12-14'

@@ -13,18 +13,19 @@ labels:
     - lts2017-ok
 toc: true
 tree_item_index: 500
-
 ---
 
+{{! excerpt}}
 Nuxeo Platform 7.2 introduces the concept of Extended fields. See [Field Constraints and Validation]({{page page='field-constraints-and-validation'}}) and [How to Customize Document Validation]({{page page='how-to-customize-document-validation'}}).
+{{! /excerpt}}
 
 This kind of document field are defined as reference to external object. For example, in the Dublin Core schema:
 
-*   `dc:creator` and `dc:lastContributors` are references to Nuxeo users
-*   `dc:contributors` contains references to Nuxeo users
-*   `dc:subjects` contains references to the "l10nsubjects" directory entries
-*   `dc:coverage` is a reference to the "l10ncoverage" directory entry
-*   `dc:nature` is a reference to the "nature" directory entry
+- `dc:creator` and `dc:lastContributors` are references to Nuxeo users
+- `dc:contributors` contains references to Nuxeo users
+- `dc:subjects` contains references to the "l10nsubjects" directory entries
+- `dc:coverage` is a reference to the "l10ncoverage" directory entry
+- `dc:nature` is a reference to the "nature" directory entry
 
 ## Usage
 

@@ -115,11 +115,11 @@ history:
         date: '2013-04-08 16:28'
         message: ''
         version: '1'
-
 ---
+
 ## Fragment Tables
 
-Some databases may use a database-native UUID instead of a string-based UUID if Nuxeo is configured to do so, or even an automatically-generated small integer instead (see `nuxeo.vcs.idtype` in [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}}) or `<idType>` in [Repository Configuration]({{page page='repository-configuration'}})).
+Some databases may use a database-native UUID instead of a string-based UUID if Nuxeo is configured to do so, or even an automatically-generated small integer instead (see `nuxeo.vcs.idtype` in [Configuration Parameters Index (nuxeo.conf)]({{page page='configuration-parameters-index-nuxeoconf'}}) or `<idType>` in [Repository Configuration]({{page page='repository-configuration'}}).
 
 All the fragments making up a given node use the node id in their `id` column.
 
@@ -141,10 +141,10 @@ Table **hierarchy**:
 
 Note that:
 
-*   The `id` column is used as a `FOREIGN KEY` reference with `ON DELETE CASCADE` from all other fragment tables that refer to it,
-*   The `pos` is `NULL` for non-ordered children,
-*   The `parentid` and `pos` are `NULL` for unfiled nodes,
-*   The `name` is an empty string for the hierarchy's root.
+- The `id` column is used as a `FOREIGN KEY` reference with `ON DELETE CASCADE` from all other fragment tables that refer to it,
+- The `pos` is `NULL` for non-ordered children,
+- The `parentid` and `pos` are `NULL` for unfiled nodes,
+- The `name` is an empty string for the hierarchy's root.
 
 For performance reasons (denormalization) this table has actually more columns; they are detailed below.
 
@@ -251,9 +251,9 @@ You may want to read [background information about Nuxeo versioning]({{page page
 
 Versioning uses identifiers for several concepts:
 
-*   **Live node id**: the identifier of a node that may be subject to versioning.
-*   **Version id**: the identifier of the frozen node copy that is created when a version was snapshotted, often just called a "version".
-*   **Versionable id** or **version series id**: the identifier of the original live node of a version, but which keeps its meaning even after the live node may be deleted. Several frozen version nodes may come from the same live node, and therefore have the same versionable id, which is why it is also called also the version series id.
+- **Live node id**: the identifier of a node that may be subject to versioning.
+- **Version id**: the identifier of the frozen node copy that is created when a version was snapshotted, often just called a "version".
+- **Versionable id** or **version series id**: the identifier of the original live node of a version, but which keeps its meaning even after the live node may be deleted. Several frozen version nodes may come from the same live node, and therefore have the same versionable id, which is why it is also called also the version series id.
 
 Version nodes don't have a parent (they are unfiled), but have more meta-information (versionable id, various information) than live nodes. Live nodes hold information about the version they are derived from (base version id).
 
@@ -270,8 +270,8 @@ Table **hierarchy** (continued):
 
 Note that:
 
-*   This information is inlined in the hierarchy table for performance reasons,
-*   The `baseversionid` represents the version from which a checked out or checked in document originates. For a new document that has never been checked in it is `NULL`.
+- This information is inlined in the hierarchy table for performance reasons,
+- The `baseversionid` represents the version from which a checked out or checked in document originates. For a new document that has never been checked in it is `NULL`.
 
 Table **versions**:
 
@@ -283,10 +283,10 @@ Table **versions**:
 
 Note that:
 
-*   The `versionableid` is the id of the versionable node (which may not exist anymore, which means it's not a `FOREIGN KEY` reference), and is common to a set of versions for the same node, it is used as a _version series id_.
-*   `islatest` is true for the last version created,
-*   `islatestmajor` is true for the last major version created, a major version being a version whose minor version number is 0,
-*   The `label` contains a concatenation of the major and minor version numbers for users' benefit.
+- The `versionableid` is the id of the versionable node (which may not exist anymore, which means it's not a `FOREIGN KEY` reference), and is common to a set of versions for the same node, it is used as a _version series id_.
+- `islatest` is true for the last version created,
+- `islatestmajor` is true for the last major version created, a major version being a version whose minor version number is 0,
+- The `label` contains a concatenation of the major and minor version numbers for users' benefit.
 
 ### Proxies
 
@@ -302,8 +302,8 @@ Table **proxies**:
 
 Note that:
 
-*   `targetid` is the id of a version node and is a `FOREIGN KEY` reference to `hierarchy.id`.
-*   `versionableid` is duplicated here for performance reasons, although it could be retrieved from the target using a `JOIN`.
+- `targetid` is the id of a version node and is a `FOREIGN KEY` reference to `hierarchy.id`.
+- `versionableid` is duplicated here for performance reasons, although it could be retrieved from the target using a `JOIN`.
 
 ### Locking
 
@@ -325,9 +325,9 @@ Another important feature of the `locks` table is that the `id` column is **not*
 
 The Nuxeo security model is based on the following:
 
-*   A single ACP is placed on a (document) node,
-*   The ACP contains an ordered list of named ACLs, each ACL being an ordered list of individual grants or denies of permissions,
-*   The security information on a node (materialized by the ACP) also contains local group information (which can emulate owners).
+- A single ACP is placed on a (document) node,
+- The ACP contains an ordered list of named ACLs, each ACL being an ordered list of individual grants or denies of permissions,
+- The security information on a node (materialized by the ACP) also contains local group information (which can emulate owners).
 
 Table **acls**:
 
@@ -343,7 +343,7 @@ The `user` column is separated from the `group` column because they semantically
 
 ### Miscellaneous Values
 
-The lifecycle information (life ycle policy and lifecycle state) is stored in a dedicated table.
+The lifecycle information (life cycle policy and lifecycle state) is stored in a dedicated table.
 
 Table **misc**:
 
@@ -407,8 +407,8 @@ Table **cluster_nodes**:
 
 Note that:
 
-*   The `nodeid` is assigned by Nuxeo from the configured `repository.clustering.id`.
-*   The `created` date is not used by Nuxeo but is useful for diagnostics.
+- The `nodeid` is assigned by Nuxeo from the configured `repository.clustering.id`.
+- The `created` date is not used by Nuxeo but is useful for diagnostics.
 
 The cluster invalidations are inserted when a transaction commits, the invalidation rows are duplicated for all cluster node ids that are not the current cluster node. Rows are removed as soon as a cluster node checks for its own invalidations, usually at the beginning of a transaction.
 
@@ -423,9 +423,9 @@ Table **cluster_invals**:
 
 Note that:
 
-*   `nodeid` is a node id but is not a `FOREIGN KEY` to `hierarchy.id` for speed reasons.
-*   `fragments` is the list of fragments to invalidate; it is a space-separated string, or an array of strings for databases that support arrays.
-*   `kind` is 1 for modification invalidations, or 2 for deletion invalidations.
+- `nodeid` is a node id but is not a `FOREIGN KEY` to `hierarchy.id` for speed reasons.
+- `fragments` is the list of fragments to invalidate; it is a space-separated string, or an array of strings for databases that support arrays.
+- `kind` is 1 for modification invalidations, or 2 for deletion invalidations.
 
 ### Path Optimizations
 

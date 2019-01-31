@@ -132,9 +132,11 @@ history:
         date: '2010-07-20 19:29'
         message: ''
         version: '1'
-
 ---
+
+{{! excerpt}}
 The Platform Digital Asset Management module supports a large number of file formats.
+{{! /excerpt}}
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 

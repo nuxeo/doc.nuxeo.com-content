@@ -161,8 +161,8 @@ history:
         date: '2010-07-21 18:00'
         message: ''
         version: '1'
-
 ---
+
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 ## File URLs within JSF Context Only
@@ -175,8 +175,6 @@ The default URL patterns for downloading files from within the JSF environment a
 - `http://NUXEO_SERVER/nuxeo/nxfile/{repository}/{uuid}/{propertyXPath}/{fileName}`
 
 Where :
-
-
 - `nxfile` is the download servlet.
     Note that `nxbigfile`&nbsp;is also accepted for compatibility with older versions.
 - `repository`&nbsp;is the identifier of the target repository.

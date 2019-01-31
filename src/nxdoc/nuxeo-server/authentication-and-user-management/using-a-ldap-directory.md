@@ -1,5 +1,6 @@
 ---
 title: LDAP and Active Directory
+description: Discover how to set up your Nuxeo Instance to use a LDAP directory.
 review:
     comment: ''
     date: '2017-01-06'

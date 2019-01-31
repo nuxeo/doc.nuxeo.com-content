@@ -1,5 +1,6 @@
 ---
 title: File Storage Configuration
+description: The files attached to a document in Nuxeo are usually stored separately from the main document database. The way in which they are stored is configurable using the concepts of a Binary Manager, Blob Provider and Blob Dispatcher.
 review:
     comment: ''
     date: '2017-12-14'

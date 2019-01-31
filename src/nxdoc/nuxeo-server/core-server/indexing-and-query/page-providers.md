@@ -1,5 +1,6 @@
 ---
 title: Page Providers
+description: Page providers allow retrieving items with pagination facilities, they can be used in a non-UI or non-JSF context like event listeners or core services.
 review:
     comment: ''
     date: '2017-12-14'

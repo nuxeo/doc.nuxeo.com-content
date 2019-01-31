@@ -1,5 +1,6 @@
 ---
 title: Metrics and Monitoring
+description: The Nuxeo Platform exposes a lot of metrics, either through JMX or through the Coda Hale Metrics library.
 review:
     comment: ''
     date: '2017-12-14'

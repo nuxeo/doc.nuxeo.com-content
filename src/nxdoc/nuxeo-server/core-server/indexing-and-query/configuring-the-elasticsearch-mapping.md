@@ -1,5 +1,6 @@
 ---
 title: Configuring the Elasticsearch Mapping
+description: This documentation page talks about the many aspects you can tune for improving the search experience for your users when it comes to search the document repository index.
 review:
     comment: ''
     date: '2017-12-13'
@@ -186,9 +187,7 @@ history:
 
 ---
 {{! excerpt}}
-
 This documentation page talks about the many aspects you can tune for improving the search experience for your users when it comes to search the document repository index.
-
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}

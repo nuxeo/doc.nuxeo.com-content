@@ -1,5 +1,6 @@
 ---
 title: Error Handling
+description: The Nuxeo API communicates error messages through standard HTTP status codes paired with exception details.
 review:
     comment: ''
     date: '2017-12-12'

@@ -1,5 +1,6 @@
 ---
 title: Content Automation Concepts
+description: Content Automation is a Nuxeo service that exposes common actions created on a Nuxeo application as atomic operations.
 review:
     comment: ''
     date: '2017-12-14'
