@@ -88,17 +88,16 @@ In each layout block, you can insert properties along with their configuration.
 
 Nuxeo Studio provides you a variety of Layout Blocks templates:
 
-- **Title/description element template**: By default, provides a element containing the title and description properties in a single block. Properties can be added to the block.
-- **Sample layout template**: Provides the frame for creating
-- **Document Page template**: Provides the frame for creating your own document tabs.
-- **Drawer Page template**: Provides the frame for customizing your drawer menu.
-- **Main Page template**: Provides the frame for creating custom pages to display specific information.
-- **Dialog Action template**: Provides the frame for creating a button opening a dialog box.
-- **Script Action template**: Provides the frame for creating a button running an automation script.
+- **Title/description element template**: By default, provides an element containing the title and description properties in a single block. Properties can be added to the block.
+- **Document Page template**: Provides an element for creating your own document tabs.
+- **Drawer Page template**: Provides an element for customizing your drawer menu.
+- **Main Page template**: Provides an element for creating custom pages to display specific information.
+- **Dialog Action template**: Provides an element for creating a button opening a dialog box.
+- **Script Action template**: Provides an element for creating a button running an automation script.
 
 When creating or editing a form, you can drag and drop properties from any schema. Then, you can configure them individually.
 
-In any of your **Layouts**, you can drag and drop your forms from the catalog.
+In any of your **Layouts**, you can drag and drop your Layout Blocks from the catalog.
 
 ## Tabs
 
