@@ -390,7 +390,6 @@ history:
         date: '2012-11-29 18:45'
         message: ''
         version: '1'
-
 ---
 {{! excerpt}}
 The branding menu manages the display of the login page of an application.
@@ -402,7 +401,7 @@ To configure the login page of your application:
 
 1. In **Configuration**, go to the **Branding** menu.
 1. Click on the **New** button.
-1. Enter the name of your branding in `Feature ID`.
+1. Enter the name of your branding in **Feature ID**.
 1. Click **OK**.
 
 Each Studio application can only display one login page, therefore only one login page branding per application can be created.
@@ -410,7 +409,7 @@ Each Studio application can only display one login page, therefore only one logi
 {{! multiexcerpt name='disabling-feature'}}
 {{#> callout type='tip' heading='disabling a feature'}}
 To disable a feature, click on the toggle button at the top-right of your screen.
-![]({{file name='toggle-branding.png'}} ?w=300,border=true)
+![]({{file name='toggle-branding.png'}} ?w=150,border=true)
 {{/callout}}
 {{! /multiexcerpt}}
 
@@ -419,45 +418,45 @@ To disable a feature, click on the toggle button at the top-right of your screen
 The background of your login page can be customized with your brand colors, pictures and videos.
 
 For their login page background image, most of our customers choose either:
+- A picture covering all the screen, this is the strategy chosen by Nuxeo.
+- A logo with a transparent background and a background color.
 
--   A picture covering all the screen. This is the strategy chosen by Nuxeo.
--   A logo with a transparent background and a background color.
-
-{{#> callout type='warning'}} While selecting your background, make sure to use light files to ensure a quick display to your users.
+{{#> callout type='warning'}}
+While selecting your background, make sure to use light files to ensure a quick display to your users.
 {{/callout}}
 
-### Selecting a Background Image
+### Image
 
-1.  In `Background Image`, click on **Select Resources**.
-1.  Define how the image should be displayed using pixels or the position attribute.
-1.  Indicate if the background covers all the screen (with CSS3 / recent browsers).
-1.  Pick a color that will be displayed if the background image is too small to cover all the screen.
+1. In Background Image, click on **Select Resources**.
+1. Indicate if the background covers all the screen (with CSS3/recent browsers).
+1. If not, define how the image should be displayed using pixels or the position attribute.
+1. Pick a color to be displayed if the background image is too small to cover all the screen.
 
 |  Before | Studio Configuration | After |
 |---|---|---|
 | ![]({{file name='branding_picture_nuxeo.png'}} ?w=300,border=true) | ![]({{file name='login_customization.png'}} ?w=300,border=true)  |![]({{file name='branding_picture.png'}} ?w=300,border=true)  |
 
-### Selecting a Background Video
+### Video
 
-1.  Select a background video.
-1.  In `Background Video URLs / MIME Type`, click **Add**.
-1.  Enter the URLs and MIME Types of your video.
-1.  Define the options for the video, such as looping or muting the video.
+1. Select a background video.
+1. In `Background Video URLs / MIME Type`, click **Add**.
+1. Enter the URLs and MIME Types of your video.
+1. Define the options for the video, such as looping or muting the video.
 
 {{#> callout type='info' heading='URLs and MIME types'}}
-MIME Types enable browsers to process your content by identifying its format. While entering options for your vido, keep in mind that depending on browsers, supported formats differ.
+MIME Types enable browsers to process your content by identifying its format. While entering options for your video, keep in mind that depending on browsers, supported formats differ.
 {{/callout}}
 
 ## Customizing the Login Box
 
 ### Selecting a Logo
 
-By default, the logo used for the login box is the one defined as your application logo when you are using JSF UI. If you are using Web UI only, no application logo can be defined. In this section you can select another logo for your login box.
+The logo defined here will only be displayed on your login page, but won't be defined as your application logo.
 
-1. In the `Background` section, check **No** to `Apply Application Logo`.
-1. In the `Login Logo` section, click **Select Resources** and upload the logo image.
+1. In the Background section, on the Apply Application field, select **No** to be able to customize the logo.
+1. In the Login Logo section, click **Select Resources** and upload the logo image.
 1. Optional: Define the width and the height of the logo.
-1. In `Logo Alt`, enter a text that can be displayed in the place of your logo image, if the image cannot be displayed.
+1. In Logo Alt, enter a text that can be displayed if the image cannot be shown.
 
 |  Before | Studio Configuration | After |
 |---|---|---|
@@ -465,20 +464,21 @@ By default, the logo used for the login box is the one defined as your applicati
 
 ### Selecting a Login Button Color
 
-You can add a color to the login button.
+You can change the color of the **Log in** button.
 
-In `Button Background Color`, enter the code of your color or click on **Pick** to select a color from the color picker.
+In **Button Background Color**, enter the code of your color or click on **Pick** to select a color from the color picker.
 
 |  Before | Studio Configuration | After |
 |---|---|---|
 | ![]({{file name='branding_logo.png'}} ?w=300,border=true,thumbnail=true) | ![]({{file name='login_box.png'}} ?w=310,border=true)  |![]({{file name='branding_logo_button.png'}} ?w=300,border=true,thumbnail=true)  |
 
-{{#> callout type='warning' }} This option must be used carefully: don't use heavy patterns that can confuse the readability. The login box style must stay simple and light to keep the login action as user-friendly as possible.
+{{#> callout type='warning' }}
+This option must be used carefully: don't use heavy patterns that can confuse the readability. The login box style must stay simple and light to keep the login action as user-friendly as possible.
 {{/callout}}
 
 ## Displaying News and Footer
 
-To customize the login page completely, you can remove the news and footer.
+To customize the login page, you can also remove the news and footer boxes.
 
 | Login page layout | Studio Configuration | After |
 |----|----|----|
@@ -486,7 +486,11 @@ To customize the login page completely, you can remove the news and footer.
 
 ## Branding Options with JSF UI
 
-{{{multiexcerpt name='JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
+{{#> callout type='warning' }}
+The JSF UI addons is deprecated since Nuxeo Platform LTS 2019.
+{{/callout}}
+
+If you are working with JSF UI, some branding options differ.
 
 There are 3 steps shown by 3 tabs to brand your application:
 
@@ -498,19 +502,19 @@ There are 3 steps shown by 3 tabs to brand your application:
 
 {{> anchor 'mainpages'}}
 
-## Main Pages Tab
+### Main Pages Tab
 
 The Main Pages tab is where you will specify the main elements that define a branding: the logo, the colors and the font used by the default view in Nuxeo.
 
-### Changing the Logo displayed on Header
+#### Changing the Logo displayed on Header
 
 {{! multiexcerpt name='change-logo'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Before</th><th colspan="1">Studio Configuration</th><th colspan="1">After</th></tr><tr><td colspan="1">![]({{file name='jsf_branding_logo.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='jsf_branding_logo1.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='jsf_branding_logo2.png'}} ?w=300,border=true,thumbnail=true)</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
-### <span style="color: rgb(0,0,0);">Changing the Header and Footer</span>
+#### <span style="color: rgb(0,0,0);">Changing the Header and Footer</span>
 
 {{! multiexcerpt name='change-header-footer'}}<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Before</th><th colspan="1">Studio Configuration</th><th colspan="1">After</th></tr><tr><td colspan="1">![]({{file name='jsf_default_header_footer.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='jsf_header_and_footer.png'}} ?w=300,border=true,thumbnail=true)</td><td colspan="1">![]({{file name='jsf_custom_header_footer.png'}} ?w=300,border=true,thumbnail=true)</td></tr></tbody></table></div>{{! /multiexcerpt}}
 
-### Additional Branding Elements
+#### Additional Branding Elements
 
 The additional branding elements section contains all the customizable elements relative to the page contents: links colors, font family used and color of backgrounds and buttons.
 
@@ -519,11 +523,11 @@ The additional branding elements section contains all the customizable elements 
 
 {{> anchor 'login'}}
 
-## Login Page Tab
+### Login Page Tab
 
 This tab will let you manage the customization of the login page view.
 
-### Common Changes
+#### Common Changes
 
 {{! multiexcerpt name='login-page-tab'}}
 
@@ -546,7 +550,7 @@ Most of our customers apply the following strategies for their login page backgr
 
 With a web designer's help, you can have many other possibilities.
 
-### Additional Options
+#### Additional Options
 
 | Login page layout | Studio Configuration | Role |
 |---|---|---|
@@ -558,7 +562,7 @@ With a web designer's help, you can have many other possibilities.
 
 {{> anchor 'css'}}
 
-## CSS Editor Tab
+### CSS Editor Tab
 
 The CSS Editor is dedicated to web designers who know CSS and its syntax. It's the place to declare your new CSS rules or override existing rules that will be used into the Nuxeo main tabs: Home, Document Management and Admin Center.
 
@@ -568,7 +572,7 @@ Have a look at the [Nuxeo UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleG
 
 {{/callout}}
 
-### Declaring a New CSS Class and Its Rules
+#### Declaring a New CSS Class and Its Rules
 
 You can add style classes in your widgets in [forms]({{page page='form-layouts'}}), [content views]({{page page='content-views'}}), and [tab layout]({{page page='tabs'}}) to manage the rendering of your elements.
 
@@ -594,7 +598,7 @@ Define a class in the widget editor.
 
 </td><td colspan="1">Enjoy your blue container.</td></tr></tbody></table></div>
 
-### Overriding an Existing Rule
+#### Overriding an Existing Rule
 
 You want to change an existing style to fit your needs? In addition to the [Nuxeo UI Style Guide](http://showcase.nuxeo.com/nuxeo/styleGuide/) that explains the default set of CSS existing rules, you will need to use a browser's web inspector to understand what to override.
 
@@ -614,37 +618,18 @@ That way, you're sure that your new style will be stronger than the original sty
 
 </td><td colspan="1">Your title is pink now. You can see that your new rule is displayed at the top of the default one, and the original black color value is striked, so not used anymore.</td></tr></tbody></table></div>
 
-## Specifying the Default Branding, Disabling a Theme Branding {{> anchor 'specify'}}
+### Specifying the Default Branding, Disabling a Theme Branding {{> anchor 'specify'}}
 
-### Specifying a Default Branding
+#### Specifying a Default Branding
 
 ![]({{file name='jsf_set_default_disable_theme.png'}} ?w=450,border=true)
 
 Create a new branding implies that it will be the default branding used in your application. The checkbox displayed under the Common tab will be checked by default. If you created several brandings, be sure that only one of them is checked. Your branding will be used in your application everywhere except if a [local theme configuration]({{page space='userdoc' page='local-configuration'}}#local-theme-configuration) is set.
 
-### Disabling a Theme Branding
+#### Disabling a Theme Branding
 
 ![]({{file name='jsf_disable_branding.png'}} ?w=450,border=true)
 
 If you don't want to use your branding during a test you can disable your default branding without deleting it.
 
 Just tick the **Disable theme branding** option above the tabs. The tabs and their content will be displayed under a gray overlay.
-
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
-- [Theme]({{page space='NXDOC' page='Theme'}})
-- [Nuxeo Web UI]({{page space='nxdoc' page='web-ui'}})
-- [Nuxeo JSF UI]({{page space='nxdoc' page='nuxeo-jsf-ui'}})
-{{/panel}}
-</div><div class="column medium-6">{{#> panel heading='Related How-tos'}}
-
-- [Theme How-To Index]({{page space='NXDOC' page='Theme How-To+Index'}})
-- [How to Brand Your Application]({{page space='NXDOC' page='How to+Brand+Your+Application'}})
-- [How to Override the Login Page]({{page space='NXDOC' page='How to+Override+the+Login+Page'}})
-- [How to Customize the Login Page]({{page space='NXDOC' page='How to+Customize+the+Login+Page'}})
-- [How to Override a Default Style]({{page space='NXDOC' page='How to+Override+a+Default+Style'}})
-- [How to Customize the Error Pages]({{page space='NXDOC' page='How to+Customize+the+Error+Pages'}})
-- [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page space='NXDOC' page='How to+Declare+the+CSS+and+JavaScript+Resources+Used+in+Your+Templates'}})
-
-{{/panel}}</div>
-
-</div>
