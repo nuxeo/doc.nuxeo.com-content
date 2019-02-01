@@ -15,9 +15,7 @@ labels:
     - lts2017-ok
     - authentication
     - dmetzler
-
 ---
-
 Users and groups are defined using schemas and as an *Extensible Platform*, Nuxeo gives you the ability to modify or add schemas.
 
 The default **user** schema definition:
@@ -73,15 +71,14 @@ In the Nuxeo Platform **user** infos are displayed as follow:
 ![How to add new fields to the user profile or group profile](nx_asset://ebe8582d-f07a-4c21-83a0-efada9fd3df9 ?w=650,border=true)
 
 {{#> callout type='note'}}
-Whenever you contribute to a schema referencing another schema or document, you **must** define the references and inverse references. On that particular case you also have to define **directories** to specify the way schemas are linked to each others. 
+Whenever you contribute to a schema referencing another schema or document, you **must** define the references and inverse references. On that particular case you also have to define **directories** to specify the way schemas are linked to each others.
 The relation between `user` and `groups` uses a directory called **groupDirectory** defined as follow:
-
 ```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.directory.storage">
   <require>org.nuxeo.ecm.platform.digestauth.config</require>
   <extension target="org.nuxeo.ecm.directory.GenericDirectory" point="directories">
-  
+
     <directory name="groupDirectory" extends="template-group">
 
       <schema>group</schema>
@@ -100,14 +97,14 @@ The relation between `user` and `groups` uses a directory called **groupDirector
         <reference field="members" directory="userDirectory"
                    name="user2group" source="groupId" target="userId"
                    dataFile="user2group.csv"/>
-  
+
         <reference field="subGroups" directory="groupDirectory"
                    name="group2group" source="parentGroupId"
                    target="childGroupId"/>
         <inverseReference field="parentGroups" directory="groupDirectory"
                           dualReferenceField="subGroups"/>
       </references>
-  
+
     </directory>
   </extension>
 </component>
@@ -169,18 +166,13 @@ In a more friendly way, you can add your own schemas using [Nuxeo Studio]({{page
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
-
 {{#> panel heading='Related How-tos'}}
-
 - [How to Add Custom LDAP Fields to the UI]({{page version='' space='nxdoc' page='how-to-add-custom-ldap-fields-to-the-ui'}})
 - [How to Configure a Multidirectory for Users and Groups]({{page version='' space='nxdoc' page='how-to-configure-a-multidirectory-for-users-and-groups'}})
 - [How-to Index]({{page version='' space='nxdoc' page='how-to-index'}})
-
 {{/panel}}
 </div>
-
 <div class="column medium-6">
-
 {{#> panel heading='Related Documentation'}}
 - [Define directories]({{page page='data-lists-and-directories'}}#generic-directory-and-directory-templates)
 - [Define reference and inverse references]({{page page='data-lists-and-directories'}}#defining-inverse-references)
@@ -188,6 +180,5 @@ In a more friendly way, you can add your own schemas using [Nuxeo Studio]({{page
 - [Authentication and User Management]({{page version='' space='nxdoc' page='authentication-and-user-management'}})
 - [Managing Users and Groups]({{page version='' space='userdoc' page='managing-users-and-groups'}})
 {{/panel}}
-
 </div>
 </div>
