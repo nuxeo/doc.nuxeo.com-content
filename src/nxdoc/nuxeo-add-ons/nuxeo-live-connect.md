@@ -299,16 +299,15 @@ history:
         date: '2015-06-19 16:40'
         message: ''
         version: '1'
-
 ---
-{{#> callout type='info'}}
-Browsers that block pop-ups may affect the behavior of Nuxeo Live Connect. If you face any difficulties, make sure to check your browser settings.
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University:</br>
+[Video on Live Connect](https://university.nuxeo.com/learn/public/course/view/elearning/56/understanding-live-connect).
+![]({{file name='university-live-connect.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Video on Live Connect](https://university.nuxeo.com/learn/public/course/view/elearning/56/understanding-live-connect).
-![]({{file name='university-live-connect.png' page='nxdoc/university'}} ?w=450,border=true)
+{{#> callout type='tip'}}
+Browsers that block pop-ups may affect the behavior of Nuxeo Live Connect. If you face any difficulties, make sure to check your browser settings.
 {{/callout}}
 
 Live Connect allows you to create a content application that handles cloud files (Dropbox, Google Drive, Box, OneDrive...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it. This allows the user to benefit from thumbnailing service, full text, conversions, etc.
@@ -414,7 +413,10 @@ The table below shows the available features for each default implementation.
 <td colspan="1">Yes</td>
 <td colspan="1">Yes</td>
 <td colspan="1">Yes</td>
-</tr></tbody></table></div>
+</tr>
+</tbody>
+</table>
+</div>
 
 <sup>*</sup> _Provided by the Nuxeo Platform_
 
