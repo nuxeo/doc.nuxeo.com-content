@@ -1,5 +1,5 @@
 ---
-title: How to Define a Document Type
+title: 'HOWTO: Define a Document Type'
 review:
     comment: ''
     date: '2017-12-12'
@@ -306,145 +306,136 @@ Watch the related courses on Nuxeo University
 
 ## Introduction
 
-When you are in the application and you want to create a new document, you need to choose the type of document you want to create:
+In your application, when you want to create a new document, you need to select the type of document you want to create:
 
 ![]({{file name='DM-user-interface-WebUI.png'}} ?w=650,h=292,border=true)
 
 {{! excerpt}}
-
-You can create as many [document types]({{page page='essential-nuxeo-platform-terminology#document-type'}}) as you want with Nuxeo Studio. This how-to explains the different steps to do so.
-
+With Nuxeo Studio, you can create as many [document types]({{page page='essential-nuxeo-platform-terminology#document-type'}}) as you want. This tutorial provides every steps you need to create your own.
 {{! /excerpt}}
 
-Since content is at the center of customization, the definition of a new document type is related to many other features of the Nuxeo Platform. This how-to presents the basic steps to create a new document type and provides links to other related customizations with Nuxeo Studio, such as layout definition for instance.
+Since content is at the center of our configuration, the definition of a new document type is related to many other features of the Nuxeo Platform. This how-to offers the basic steps to create a new document type.
 
 ## Nuxeo Studio Modeler and Designer
 
-Nuxeo Studio is divided in two sections:
-- **Nuxeo Studio Modeler** aims at building the document type definition and structure. More globally, it defines all your custom core components (workflows, lifecycles, document structure, automations...).
-- **Nuxeo Studio Designer** allows you to configure the associated document type layouts for the Web UI application (as it is dedicated to all configuration items linked to the user interface).
+Nuxeo Studio consists in:
+- **Nuxeo Studio Modeler**: defines all your custom core components (workflows, lifecycles, document structure, automations...) such as building the definition and structure of your document types.  
+- **Nuxeo Studio Designer**: allows you to configure the layouts associated to your document types. It is dedicated to all configuration items linked to the user interface.
 
-Nuxeo Studio Designer is dedicated to configure Web UI: if you need to a create a document type layout for JSF UI, then you will have to use Nuxeo Studio Modeler. In this case, you need to ensure Nuxeo JSF UI is selected as one of the target packages of your application definition (to do so go to **Settings** > **Application Definition**).
+## Defining a Document Type
 
-## Content Type Definition with Nuxeo Studio Modeler
-
-1.  Open **Nuxeo Studio Modeler**
-2.  Unfold the **Content Model** item of the Studio tree, click on **Document Types** and click the **New** button.
-3.  On the creation form:
+1.  Open **Nuxeo Studio Modeler**.
+1.  Go to **Content Model** > **Document Types** and click the **New** button.
+1.  On the creation form:
     1.  Fill in the ID, label and description of your document type.
 
         {{#> callout type='tip' }}
-
-        You can override built-in types definition (File, Folder, ...): just create a type with the same name. See the [dedicated how to override existing document types]({{page page='how-to-override-existing-document-types'}}).
-
+        You can override built-in types definition (File, Folder, ...) by creating a type with the same name. See the [dedicated how to override existing document types]({{page page='how-to-override-existing-document-types'}}).
         {{/callout}}
 
-    2.  Select the document type you want to extend and so inherit from.
+    1.  To inherit characteristics from another document type, select it in **Extends**.
 
-        {{#> callout type='tip' }}
-
-        Common inheritance choices are Folder for a folderish type and File for a "file-based" document type.
-
+        {{#> callout type='info' }}
+        Common inheritance choices are Folder for a folderish document type and File for a "file-based" document type.
         {{/callout}}
+
+    1.  Click OK.    
 
         ![]({{file name='doc_type_creation.png'}} ?w=350,border=true)
-        Your document type is created. You now need to edit it to indicate all its characteristics: layouts, lifecycle, schema, etc.
+        Your document type is created. Now, you need to configure all its characteristics: schema, lifecycle, etc.
 
-4.  Fill in the [**Definition** tab]({{page space='studio' page='documents'}}).
+1.  Fill in the [**Definition** tab]({{page space='studio' page='documents'}}).
     ![]({{file page='web-ui-document-layouts' name='definition_contract.png'}} ?w=600,border=true)
 
     {{#> callout type='info' }}
-
     Click on the question mark to have more information on each of the parameters.
-
     {{/callout}}
 
-5.  To have an icon working on every different views, you need:
-    - A .png icon for the fields **Icon** and **Large Icon**
+1.  In order for an icon to work on every different views, you need:
+    - A .png icon for the **Icon** and **Large Icon** fields.
     - An .svg icon next to the **SVG Icon** field.</br>
     From **Select Resource** buttons, you can select any PNG/SVG file available in the Studio project resources or upload your own.
 
     {{#> callout type='tip' }}
-
-    If the icons and lifecycle resources for your document type don't already exist, you can create them from:
-
-    - [**Resources** Studio tree item]({{page space='studio' page='resources'}}) for icons;
-    - **Content Model** > [**Life Cycles** Studio tree item]({{page space='studio' page='life-cycle'}}) for lifecycle.
+    If the icons and lifecycle resources for your document type do not exist yet, you can create them from:
+    - for Icons, [**Resources**]({{page space='studio' page='resources'}}).
+    - for Lifecycle, [**Content Model** > **Life Cycles**]({{page space='studio' page='life-cycle'}}).
         ![]({{file name='lifecycle.png'}} ?w=450,border=true)
-
     {{/callout}}
 
-6.  Fill the specific metadata you want in the [**Schema** tab]({{page space='studio' page='schemas'}}).
-    1.  Give your schema a name and a prefix (which are the same as the document type name by default).
-    2.  Add your metadata fields. The name and type of the metadata are the minimum required pieces of information required for a field.
+1.  Fill in the specific metadata you need in the [**Schema**]({{page space='studio' page='schemas'}}) tab.
+    1.  Name your schema. By default, the document type.
+    1.  Add your metadata fields. To create fields, you need to enter at least the name and the type of the metadata of your fields.
         ![]({{file name='doc_type_schema_tab.png'}} ?w=650,border=true)
 
+## Configuring Document Type Layouts
 
-## Content Type Layouts with Nuxeo Studio Designer (Web UI)
-
-1. Open Nuxeo Studio Designer.
+1. Open **Nuxeo Studio Designer**.
 
   ![]({{file name='OpenNuxeoStudioDesigner.png'}} ?w=300,border=true)
 
-2. Go to **UI** > **Layouts** > **Local types**. You should see the name of your document type here.
+1. Go to **UI** > **Layouts** > **Local types**. You should find the name of your document type here.
 
   ![]({{file name='local_type_designer.png'}} ?w=300,border=true)
 
-3. Edit the creation layout by selectioning the **create** entry, and press on **Configure** in the lower right corner.
-4. Drag and drop all the metadata you need into the main central area;
+1. To edit the creation layout, select the **create** entry and click on **Configure**.
+1. Drag and drop all the metadata you need into the main view.
 
   ![]({{file name='doc_type_designer_layout_creation.png'}} ?w=650,border=true)
 
-5. Save your configuration and repeat the same operations with the edit, import, metadata and view layouts.
+1. Save your configuration and repeat with the edit, import, metadata and view layouts.
 
   {{#> callout type='tip' }}
 
-  Use the *create* mode of the metadata for editable value, and the *view* mode for read-only values).
+  Use the *edit* mode of the metadata for editable value, and the *view* mode for read-only values).
 
   ![]({{file name='doc_type_edit_view_mode_designer.png'}} ?w=100,border=true)
 
   {{/callout}}
 
-6. Go to **UI** tab, and open the **Translations menu**
-8. Create a  `messages.json` file to translate your document type name and properties
+  If you want to some of the layouts to be configure by default, click **Configure Missing Layouts**. The configured layouts will consist in the title, description and required fields of your document type.
+
+1. Go to **UI** tab, and open the **Translations** menu.
+1. To translate your document type properties, click **Edit** on the `messages.json` file and enter:
 
   ![]({{file name='doc_type_translations_1.png'}} ?w=650,border=true)
 
   1. For **document type labels**:</br>
       `"label.document.type.<name_of_your_doctype>":"<label_of_your_document_type>"`
-  2. For **document type property**:</br>
+  1. For a **document type property**:</br>
       `"label.doctype.<name_of_your_doctype>.<name_of_your_property>":"<label_of_your_document_type_property>"`
 
     ![]({{file name='doc_type_translations_2.png'}} ?w=650,border=true)
 
-## Content Type Layouts with Nuxeo Studio Modeler (JSF UI)
+## Deploying a Document Type       
 
-1.  In the **Tabs** tab:
-    1.  Check the default tabs that should not be displayed for your document type.
-    2.  If you created new content views, add news tabs in the **Content views** sub-tab.
+1.  Click on **Save** to save your configuration.
+1.  Deploy your configuration on your Nuxeo Platform instance.
+1.  Start Nuxeo Platform instance. Your new document type is displayed in the **Available document Types** popup window.
+
+To create a document, click on the Create button and select your document type.
+
+## Content Type Layouts Configuration with JSF UI (deprecated)
+
+If you need to a create a document type layout for JSF UI, then you have to use Nuxeo Studio Modeler. In this case, you need to ensure that Nuxeo JSF UI is selected as one of the target packages of your **Settings** > **Application Definition**.
+
+1.  Open **Nuxeo Studio Modeler**.
+1.  Go to **Content Model** > **Document Types** and click your document type.
+1.  In **Tabs** :
+    1.  Check the views you want to disable for your document type.
+    1.  If you created new content views, go to **Content views** and add them.
         ![]({{file name='doc_type_tabs_tab.png'}} ?w=650,border=true)
-2.  Specify the [creation, edition and view forms layouts]({{page space='studio' page='form-layouts'}}) in the corresponding tabs:
+1.  Specify the [creation, edition and view forms layouts]({{page space='studio' page='form-layouts'}}) in the corresponding tabs:
     1.  Drag and drop fields names from the right to the grid.
         ![]({{file name='creation_layout_form.png'}} ?w=650,border=true)
-    2.  Edit the corresponding widget properties.
+    1.  Edit the corresponding widget properties.
         ![]({{file name='doc_type_layout_widget_editor.png'}} ?w=350,border=true)
 
         {{#> callout type='tip' }}
-
-        If the vocabularies you want to use in your layouts don't exist, you can [create them in the Studio tree item **Vocabularies** ]({{page page='how-to-add-a-new-vocabulary'}}).
-
+        If the vocabularies you want to use in your layouts don't exist, you can [create them in **Vocabularies** ]({{page page='how-to-add-a-new-vocabulary'}}).
         {{/callout}}
 
-## Content Type Deployment        
-
-1.  Click on **Save** to save your configuration.
-2.  After you deploy your customization on the your Nuxeo Platform instance, your new document type is displayed in the **Available document type** popup window.
-
-
 * * *
-
-
-
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
