@@ -1,22 +1,23 @@
 ---
 title: How to Add New Fields to the User Profile or Group Profile
 review:
-    comment: ''
-    date: '2018-10-10'
-    status: ok
+  comment: ''
+  date: '2018-10-10'
+  status: ok
 details:
-    howto:
-        excerpt: This page provides a turnkey solution to add new fields to the user profile or group.
-        level: Intermediate
-        tool: XML configuration
-        topics: 'LDAP, Multidirectory'
+  howto:
+    excerpt: This page provides a turnkey solution to add new fields to the user profile or group.
+    level: Intermediate
+    tool: XML configuration
+    topics: 'LDAP, Multidirectory'
 tree_item_index: 400
 labels:
-    - lts2017-ok
-    - authentication
-    - dmetzler
+  - lts2017-ok
+  - authentication
+  - dmetzler
 ---
-Users and groups are defined using schemas and as an *Extensible Platform*, Nuxeo gives you the ability to modify or add schemas.
+
+Users and groups are defined using schemas and as an _Extensible Platform_, Nuxeo gives you the ability to modify or add schemas.
 
 The default **user** schema definition:
 
@@ -72,7 +73,9 @@ In the Nuxeo Platform **user** infos are displayed as follow:
 
 {{#> callout type='note'}}
 Whenever you contribute to a schema referencing another schema or document, you **must** define the references and inverse references. On that particular case you also have to define **directories** to specify the way schemas are linked to each others.
-The relation between `user` and `groups` uses a directory called **groupDirectory** defined as follow:
+The relation between `user` and `groups` uses a directory called **groupDirectory** defined below:
+{{/callout}}
+
 ```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.directory.storage">
@@ -109,13 +112,14 @@ The relation between `user` and `groups` uses a directory called **groupDirector
   </extension>
 </component>
 ```
-See the related documentation for more infos.
-{{/callout}}
-<!--
+See the related documentation for more information.
+
+{{!--
 {{#> callout type='note'}}
 Following to your custom updates, you might want to [update the user profile interface](https://nuxeo.quandora.com/frontend/q/e701dcb9459f48479d8923295ed16ab1/How-to-override-nuxeo-user-profile-and-nuxeo-user-management-elements)
 {{/callout}}
--->
+--}}
+
 The customisation of the groups is similar to the users.
 
 The default **group** schema definition:
@@ -162,23 +166,31 @@ Make sure you have the mandatory fields configured for **references** and **inve
 In a more friendly way, you can add your own schemas using [Nuxeo Studio]({{page space='studio' page='schemas'}}).
 {{/callout}}
 
-* * *
+---
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
+
 {{#> panel heading='Related How-tos'}}
+
 - [How to Add Custom LDAP Fields to the UI]({{page version='' space='nxdoc' page='how-to-add-custom-ldap-fields-to-the-ui'}})
 - [How to Configure a Multidirectory for Users and Groups]({{page version='' space='nxdoc' page='how-to-configure-a-multidirectory-for-users-and-groups'}})
 - [How-to Index]({{page version='' space='nxdoc' page='how-to-index'}})
+
 {{/panel}}
+
 </div>
+
 <div class="column medium-6">
+
 {{#> panel heading='Related Documentation'}}
+
 - [Define directories]({{page page='data-lists-and-directories'}}#generic-directory-and-directory-templates)
 - [Define reference and inverse references]({{page page='data-lists-and-directories'}}#defining-inverse-references)
 - [Generic references]({{page page='data-lists-and-directories'}}#generic-directory-references)
 - [Authentication and User Management]({{page version='' space='nxdoc' page='authentication-and-user-management'}})
 - [Managing Users and Groups]({{page version='' space='userdoc' page='managing-users-and-groups'}})
-{{/panel}}
+  {{/panel}}
+
 </div>
 </div>
