@@ -61,7 +61,7 @@ The Application Definition page enables you to manage the requirements of your N
     name: application-definition.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Application Definition Screen](nx_asset://8a378d74-f04d-4196-8779-5562fd79e9b3 ?w=450,border=true)
+![Application Definition Screen](nx_asset://8a378d74-f04d-4196-8779-5562fd79e9b3 ?w=350,border=true)
 
 {{#> callout type='info' heading='Watch the related courses on Nuxeo University'}}
 [Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
@@ -70,10 +70,10 @@ The Application Definition page enables you to manage the requirements of your N
 
 ## Main Options
 
-*   **Nuxeo Server Version:** Studio will generate valid configuration for this Nuxeo Server version.
-*   **Packages to Install:** The list of additional dependencies needed to make your application work. Selected dependencies will be automatically installed when you deploy your Nuxeo Studio configuration on your server.
+-   **Nuxeo Server Version:** The Nuxeo Server version Studio will generate a valid configuration for.
+-   **Packages to Install:** The list of additional dependencies needed to make your application work. Selected dependencies will be automatically installed when you deploy your Nuxeo Studio configuration on your server.
 
-Any Nuxeo public addon or [private addon you uploaded]({{page page='delivering-a-customization-package-through-the-nuxeo-marketplace'}}) in the [Nuxeo Marketplace](https://marketplace.nuxeo.com) can be selected here: type a character to start filtering them. Options are shown with their title and description.
+Any Nuxeo public or [private]({{page page='delivering-a-customization-package-through-the-nuxeo-marketplace'}}) addon uploaded in the [Nuxeo Marketplace](https://marketplace.nuxeo.com) can be selected. Type a character to start filtering them. The title and description are provided for each addon to help you select the package you need.
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Application Definition/Addons List
     name: addons-list.png
@@ -81,35 +81,29 @@ Any Nuxeo public addon or [private addon you uploaded]({{page page='delivering-a
 --}}
 ![Addons List](nx_asset://0c684cef-bae9-4a60-8f5f-3752bfe3f079 ?w=350,border=true)
 
-Addons that display a `Studio` tag bring additional options into Studio like new screens or options, making their configuration easier.
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Application Definition/Studio Tag
-    name: studio-tag.png
-    studio_modeler#screenshot#up_to_date
---}}
-![Studio Tag](nx_asset://47a8bd1a-cea4-4d77-a0cf-45184e0c1b81 ?w=300,border=true)
+Some addons bring additional options into Studio such as new screens or options, making their configuration easier. Once you select addons impacting Studio, their specific features are instantly available.
 
-Addons that display a `Private` tag mean they have been uploaded on the marketplace through the [private channel]({{page page='delivering-a-customization-package-through-the-nuxeo-marketplace'}}). Note that it is not yet possible to choose which version of a private package you want to depend on. Application definition will always add a dependency to the latest available version on the marketplace every time you save your changes.
+Addons that display a `Private` tag mean they have been uploaded on the marketplace through the [private channel]({{page page='delivering-a-customization-package-through-the-nuxeo-marketplace'}}). You cannot yet select a specific version of a private package as a dependency. Application definition will add the latest available version on the marketplace every time you save your changes.
 
-No change is kept until you manually press the save button, and pending changes are shown so that you can tell what will be added or removed and undo it if necessary.
+No change is kept until you manually press the save button. Pending changes are displayed so that you can assess what will be added or removed and undo it if necessary.
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Application Definition/Pending Modifications
     name: pending-modifications.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Pending Modifications](nx_asset://32b3fdd2-8395-4550-96b3-141d199a0ed0 ?w=400,border=true)
+![Pending Modifications](nx_asset://32b3fdd2-8395-4550-96b3-141d199a0ed0 ?w=350,border=true)
 
 ## Upgrading to a Newer Nuxeo Server version
 
-When upgrading to a newer Nuxeo Version, Nuxeo Studio will automatically adapt the configuration to it. Some exceptions requiring a manual change may still happen and are listed in the [specific upgrade instructions]({{page page='specific-upgrade-instructions'}}) page.
+When upgrading to a newer Nuxeo Version, Nuxeo Studio will automatically adapt the configuration. Some exceptions requiring a manual change may still happen and are listed in the [specific upgrade instructions]({{page page='specific-upgrade-instructions'}}) page.
 
-When a previously selected package is not available for your newer Nuxeo Server version, Nuxeo Studio will list it in the pending changes and warn you about it.
+When a previously selected package is not available for your newer Nuxeo Server version, Nuxeo Studio will list it in the pending changes to warn you.
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Application Definition/Removal Notice
     name: removal-notice.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Removal Notice](nx_asset://e7f5c288-33db-4cca-af83-fd15876acb93 ?w=400,border=true)
+![Removal Notice](nx_asset://e7f5c288-33db-4cca-af83-fd15876acb93 ?w=350,border=true)
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
