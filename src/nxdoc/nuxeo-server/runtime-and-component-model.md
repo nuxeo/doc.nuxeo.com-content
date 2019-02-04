@@ -333,7 +333,7 @@ For that, Nuxeo Platform provides the following patterns:
 *   [Components and services](#components): A component is a software object declared via XML (and that may reference a Java class) that is used to expose some services in the framework. Thanks to this architecture, it is possible to expose a new service anywhere in the Java code executed in the platform. Services are auto-documented: you can see the list on [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/listServices).
 *   [Extensions](#extensions): An extension is a mechanism leveraged by the services to let platform users inject customization in the core of the implementation. It is a pattern used frequently on products such as Mozilla, Chrome, or Eclipse. Thanks to this architecture, it is possible to go very deep in product customization only with XML or using our [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) visual environment, without any coding. You can see the list of all extension points in [Nuxeo Platform Explorer](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/listExtensionPoints). Contributions to extensions are delivered in a custom bundle.
 
-Implementing your own _bundle_, your will be able to contribute to existing _extensions_ so as to customize things. For instance, you can:
+Implementing your own _bundle_, you will be able to contribute to existing _extensions_ so as to customize things. For instance, you can:
 
 *   Define custom schemas and Document types (supported by Nuxeo Studio),
 *   Define custom forms (supported by Nuxeo Studio),
