@@ -315,7 +315,7 @@ The Trash management is now available in Web UI on 9.10 but is disabled by defau
   </template>
 </nuxeo-slot-content>
 
-<!-- Trash pill to browse trash content of a Folderish -->
+<!-- Trash tab to browse trash content of a Folderish -->
 <nuxeo-slot-content name="documentTrashItem" slot="DOCUMENT_VIEWS_ITEMS" order="40">
   <template>
     <nuxeo-filter document="[[document]]" facet="Folderish">

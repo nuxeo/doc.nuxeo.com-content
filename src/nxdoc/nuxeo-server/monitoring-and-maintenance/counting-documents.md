@@ -58,7 +58,7 @@ history:
         version: '1'
 
 ---
-If you want to know how many documents you have in your repository, you can go to the **Administration** menu, and check the **Repository Content** pill in the **Analytics** tab.
+If you want to know how many documents you have in your repository, you can go to the **Administration** menu, and check the **Repository Content** tab in the **Analytics** tab.
 
 You can filter the statisticts on a specific time period.
 

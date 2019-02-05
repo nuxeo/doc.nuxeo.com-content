@@ -59,7 +59,7 @@ Once you are all set, you can navigate to the Studio Designer to customize your 
 
 ## Create a New Layout
 
-1. Go on the **Layouts** tab on the left menu.
+1. In Studio Designer, go to **UI** > **Layouts**.
 1. Under **Local Types** you will find your `Contract` document type.
 1. Five layouts are available for the customization. Let's start with the **Create** layout: Click on the **CUSTOMIZE** button in the editor.
   {{#> callout type='tip' }}
@@ -123,7 +123,7 @@ In Nuxeo Web UI, these different layout/mode combinations have been materialized
 
 By simply following a convention that maps a document type to a set of pre-defined element names, according to the different use cases (modes), our application can dynamically load and instantiate the appropriate element for a given document.
 
-Regions of the UI which require customizable document layouts rely on custom container elements to handle the loading and instantiation of the appropriate layout elements for the given use case, for instance the default document page has two customizable regions by default:
+Regions of the UI which require customizable document layouts rely on custom container elements to handle the loading and instantiation of the appropriate layout elements for the given use case, for instance the default tab has two customizable regions by default:
 
 ![]({{file name='document_page_1.png'}} ?w=400,border=true)
 
