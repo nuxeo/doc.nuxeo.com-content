@@ -85,7 +85,7 @@ You can now save your changes and go to the Studio Designer.
 
 ## Create a Search Layout
 
-In the Studio Designer, on the **Layouts** tab, under **Page Providers** you will find your page provider created previously.
+In the Studio Designer, in the **UI** tab, under  **Layouts** > **Page Providers** you will find your page provider created previously.
 
 Click on your page provider, two layouts are available. Let's edit the **Form** layout first.
 
