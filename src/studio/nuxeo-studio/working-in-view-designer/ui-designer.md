@@ -88,12 +88,12 @@ In each layout block, you can insert properties along with their configuration.
 
 Nuxeo Studio provides a variety of Layout Blocks templates:
 
-- **Title/description element template**: By default, provides an element containing the title and description properties in a single block. Properties can be added to the block.
-- **Document Page template**: Provides an element for creating your own document tabs.
-- **Drawer Page template**: Provides an element for customizing your drawer menu.
-- **Main Page template**: Provides an element for creating custom pages to display specific information.
-- **Dialog Action template**: Provides an element for creating a button opening a dialog box.
-- **Script Action template**: Provides an element for creating a button running an automation script.
+- **Title/description element template**: To create a single document layout block that contains, by default, the title and description properties. Properties can be added to the block.
+- **Document Page template**: To configure your own document tabs.
+- **Drawer Page template**: To customize your drawer menu.
+- **Main Page template**: To display specific information in custom pages.
+- **Dialog Action template**: To add a button opening a dialog box.
+- **Script Action template**: To add a button running an automation script.
 
 When creating or editing a form, you can drag and drop properties from any schema. Then, you can configure them individually.
 
@@ -111,7 +111,7 @@ Once activated, selecting the tab will display the corresponding view.
 
 ## Drawer
 
-Allows you to create left menu items and main menu pages customize your drawer menu.
+Allows you to create left menu items and main menu pages to customize your drawer menu.
 
 - **Left Menu Items**: From generic pages to new search forms or browse pages with determined root path. These will add a new left menu item.
 
