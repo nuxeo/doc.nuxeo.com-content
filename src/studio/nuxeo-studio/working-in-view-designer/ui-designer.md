@@ -83,10 +83,10 @@ When hovering on an element in a document or workflow task layout, only the tras
 ## Layout Blocks
 
 Allows you to create reusable components and share them between different documents layouts.
-Layout blocks are elements of a layout that you can reuse them in other layouts configurations.
+Layout blocks are elements of a layout that can be reused in other layouts configuration.
 In each layout block, you can insert properties along with their configuration.
 
-Nuxeo Studio provides you a variety of Layout Blocks templates:
+Nuxeo Studio provides a variety of Layout Blocks templates:
 
 - **Title/description element template**: By default, provides an element containing the title and description properties in a single block. Properties can be added to the block.
 - **Document Page template**: Provides an element for creating your own document tabs.
@@ -101,7 +101,7 @@ In any of your **Layouts**, you can drag and drop your Layout Blocks from the ca
 
 ## Tabs
 
-Allows you to add new document tabs and also hide and override default document to display specific information relevant to your users.
+You can add new document tabs and also hide and override default document to display specific information relevant to your users.
 
 A tab is created along with a corresponding element at the top of the main view. A tab can be activated under a set of conditions (for a specific user or document property such as group, type, permissions, etc.)
 Once activated, selecting the tab will display the corresponding view.
@@ -130,12 +130,12 @@ Allows you to customize your own UI themes that users can select. It is based pr
 
 ## Translations
 
-Allows you to create and/or Manage your `messages.json` files from this view to add a new language to your platform. </br>
+Create and/or Manage your `messages.json` files from this view to add a new language to your platform. </br>
 This file is composed of the keys used in UI following by their value in the corresponding language.
 
 ## Dashboard
 
-Allows you to customize the default Web UI dashboard and edit the default HTML code to include your custom elements.
+Customize the default Web UI dashboard and edit the default HTML code to include your custom elements.
 
 * * *
 
