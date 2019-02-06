@@ -48,10 +48,9 @@ To create a `validation` schema:
 1. Add a field `validated` as a boolean.
 1. Save your changes.
 
-
 To insert the `validation` schema in the Contract document type:
 1. In Studio Designer, go to the **UI** tab.
-1. In **Layout Blocks**, click Plus to create a new element.
+1. In **Layout Blocks**, at the bottom-right of the screen, click on ![]({{file name='plus.png'}} ?w=32) to create a new element.
 1. Enter the name `my-validation-element` and  select **Title/description element template** as element template. ![]({{file name='create-element-VD.png'}} ?w=300,border=true)
 1. Edit the layout of the element by adding the validation schema.
   ![]({{file name='schema-annotations-VD.png'}} ?w=200,border=true)
