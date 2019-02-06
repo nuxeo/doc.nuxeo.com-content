@@ -28,7 +28,10 @@ In this tutorial you will learn how to create and reuse custom elements in Studi
 {{! /excerpt}}
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University<br>[Expert Session on Nuxeo Elements Creation](https://university.nuxeo.com/learn/public/course/view/elearning/148/expert-session-creating-nuxeo-elements-with-studio-designer)<br>[Course on Web UI Stack](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner)![]({{file name='university-new-nuxeo-element.png' page='nxdoc/university'}} ?w=450,border=true)
+Watch the related courses on Nuxeo University:</br>
+[Expert Session on Nuxeo Elements Creation](https://university.nuxeo.com/learn/public/course/view/elearning/148/expert-session-creating-nuxeo-elements-with-studio-designer)</br>
+[Course on Web UI Stack](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner)
+![]({{file name='university-new-nuxeo-element.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Requirements
@@ -52,7 +55,7 @@ To insert the `validation` schema in the Contract document type:
 1. Enter the name `my-validation-element` and  select **Title/description element template** as element template. ![]({{file name='create-element-VD.png'}} ?w=300,border=true)
 1. Edit the layout of the element by adding the validation schema.
   ![]({{file name='schema-annotations-VD.png'}} ?w=200,border=true)
-1. Switch to the Code Editor at the bottom of the main view, and replace the lines describing the title and description by the following to call your validation element:
+1. Switch to the Code Editor at the bottom of the main view and replace the lines describing the title and description by the following to call your `validation` element:
     ```
     <div role="widget">
         <label>Validated</label>
@@ -61,9 +64,9 @@ To insert the `validation` schema in the Contract document type:
     ```
 1. Save your changes.
 
-## Reuse a Element
+## Reuse an Element
 
-Now, go to your `contract` document type, on the **View** layout to use your element:
+Now, go to your `contract` document type, on the **view** layout to use your element:
 1. Click on **Configure**.
 1. Switch to the Code Editor. On the search available in the elements catalog, search `my-validation-element`.
 1. Drag and drop it from the catalog to the editor.
