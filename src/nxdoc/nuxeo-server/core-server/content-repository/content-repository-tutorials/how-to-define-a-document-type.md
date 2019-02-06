@@ -311,7 +311,7 @@ When you want to create a new document in your application, you need to select t
 ![]({{file name='DM-user-interface-WebUI.png'}} ?w=650,h=292,border=true)
 
 {{! excerpt}}
-Nuxeo Studio enables to create as many [document types]({{page page='essential-nuxeo-platform-terminology#document-type'}}) as needed. This how-to offers every steps to create your own.
+Nuxeo Studio enables to create as many [document types]({{page page='essential-nuxeo-platform-terminology'}}#document-type) as needed. This how-to explains every step to create your own.
 {{! /excerpt}}
 
 Since content is at the center of our configuration, the definition of a new document type is related to many other features of the Nuxeo Platform.
@@ -360,8 +360,8 @@ Nuxeo Studio consists in:
 
     {{#> callout type='tip' }}
     If the icons and lifecycle resources for your document type do not exist yet, you can create them from:
-    - for Icons, [**Resources**]({{page space='studio' page='resources'}}).
-    - for Lifecycle, [**Content Model** > **Life Cycles**]({{page space='studio' page='life-cycle'}}).
+    - for Icons: [**Resources**]({{page space='studio' page='resources'}}).
+    - for Lifecycle: [**Content Model** > **Life Cycles**]({{page space='studio' page='life-cycle'}}).
         ![]({{file name='lifecycle.png'}} ?w=450,border=true)
     {{/callout}}
 
@@ -372,7 +372,7 @@ Nuxeo Studio consists in:
 
 ## Configuring Document Type Layouts
 
-1. Open **Nuxeo Studio Designer**.
+1. Open Nuxeo Studio Designer.
 
   ![]({{file name='OpenNuxeoStudioDesigner.png'}} ?w=300,border=true)
 
@@ -412,7 +412,7 @@ Nuxeo Studio consists in:
 ## Deploying a Document Type       
 
 1.  Click on **Save** to save your configuration.
-1.  Deploy your configuration on your Nuxeo Platform instance.
+1.  [Deploy your configuration]({{page page='nuxeo-dev-tools-extension'}}#hot-reload) on your Nuxeo Platform instance.
 1.  Start Nuxeo Platform instance. Your new document type is displayed in the **Available document Types** popup window.
 
 To create a document, click on the Create button and select your document type.
