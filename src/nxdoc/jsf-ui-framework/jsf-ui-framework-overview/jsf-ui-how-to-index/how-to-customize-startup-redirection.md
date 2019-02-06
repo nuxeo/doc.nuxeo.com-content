@@ -81,6 +81,7 @@ The following example presents a customization redirecting every user to the das
 ```java
 @Name("startupHelper")
 @Scope(SESSION)
+@Install(precedence=DEPLOYMENT)
 public class CustomStartupHelper extends StartupHelper {
 
     private static final long serialVersionUID = 1L;
