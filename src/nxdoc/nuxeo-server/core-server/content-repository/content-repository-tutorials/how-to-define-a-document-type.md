@@ -351,8 +351,7 @@ Nuxeo Studio consists in:
     For more information on each parameter, click on the question mark.
     {{/callout}}
 
-1.  Select icons.
-    <br>Click on the **Select Resource** button to select any PNG/SVG file available in the Studio project resources or upload your own.
+1.  To customize icons, click on **Select Resource** button to select any PNG/SVG file available in the Studio project resources or upload your own.
 
     In order for an icon to work on every different views, you need:
     - A .png icon for the **Icon** and **Large Icon** fields.
@@ -395,7 +394,7 @@ Nuxeo Studio consists in:
 
   {{/callout}}
 
-  If you want to some of the layouts to be configure by default, click **Configure Missing Layouts**. The configured layouts will consist in the title, description and required fields of your document type.
+Click **Configure Missing Layouts** to configure by default the rest of the layouts for this document type. The configured layouts will consist in the title, description and required fields of your document type.
 
 1. Go to **UI** tab, and open the **Translations** menu.
 1. To translate your document type properties, click **Edit** on the `messages.json` file and enter:
@@ -413,7 +412,7 @@ Nuxeo Studio consists in:
 
 1.  Click on **Save** to save your configuration.
 1.  [Deploy your configuration]({{page page='nuxeo-dev-tools-extension'}}#hot-reload) on your Nuxeo Platform instance.
-1.  Start Nuxeo Platform instance. Your new document type is displayed in the **Available document Types** popup window.
+1.  Start your Nuxeo Server. Your new document type is displayed in the **Available document Types** popup window.
 
 To create a document, click on the Create button and select your document type.
 
