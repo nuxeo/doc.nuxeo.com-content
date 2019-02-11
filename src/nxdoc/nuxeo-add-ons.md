@@ -345,6 +345,21 @@ Registered access
 </tr>
 <tr>
 <td colspan="1">
+Nuxeo Download/Upload with Aspera<br/>
+`nuxeo-aspera-connector`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-aspera-connector'}})
+</td>
+<td colspan="1">
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera-connector)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Nuxeo Connect Report Tools Web<br/>
 `nuxeo-connect-tools-report-web`
 </td>
