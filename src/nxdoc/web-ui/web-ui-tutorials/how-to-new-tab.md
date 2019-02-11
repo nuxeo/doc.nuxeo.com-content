@@ -39,18 +39,18 @@ Once you are all set, you can navigate to Modeler to start creating your search.
    You should end up with something like this:
 
    ```
-   ecm:mixinType != 'HiddenInNavigation' AND ecm:isCheckedInVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND ecm:primaryType='Contract'
+   ecm:mixinType != 'HiddenInNavigation' AND ecm:isVersion = 0 AND ecm:currentLifeCycleState != 'deleted' AND ecm:primaryType='Contract'
    ```
 
 Now we will add aggregates to customize the search.
 
 **The search by owner of the contract:**
-![]({{file version='' space='nxdoc' page='web-ui-search' name='contract-owner-vd.png'}} ?w=250,border=true)
+![]({{file version='810' space='nxdoc' page='web-ui-search' name='contract-owner-vd.png'}} ?w=250,border=true)
   1. Add another new Predicates
   1. Click on **Edit binding** and select `schema:contract` > `owner`
 
 **The search by date range:**
-![]({{file version='' space='nxdoc' page='web-ui-search' name='creation-date-range-vd.png'}} ?w=250, border=true)
+![]({{file version='810' space='nxdoc' page='web-ui-search' name='creation-date-range-vd.png'}} ?w=250, border=true)
 1. Next to **Aggregates** click on **Add**
   A popup window appears.
 1. Fill the popup window like this:
@@ -75,6 +75,20 @@ Now we will add aggregates to customize the search.
   </table>
   </div>
 
+  You now need to add your labels to your translations file to display them correctly in the UI. To do so:
+
+   1. Click on the **UI** table
+  1. Click on **Translations**
+  1. Use the default `messages.json` or create your own language.
+  1. Create a new entry in the JSON file with key `label.ui.aggregate.<label>` and the label as value. Here it's:
+
+       ```
+      `"label.ui.aggregate.from_now-1y_to_now-1M":"Last year"`,
+      `"label.ui.aggregate.from_now-1M_to_now-7d":"Last month"`,
+      `"label.ui.aggregate.from_now-7d_to_now-24H":"Last week"`,
+      `"label.ui.aggregate.from_now-24H_to_now":"Last 24H"`
+      ```
+
 You can now save your changes and go to the Designer.
 
 ## Create a Listing
@@ -83,7 +97,7 @@ Go to the Designer:
 1. Hover over the Create button ![]({{file version='' space='nxdoc' page='web-ui-overview' name='create_button.png'}} ?w=20) and select the **Listing** type ![]({{file name='listing_button.png'}} ?w=20)
 1. Name it `other-contracts`.
 1. Fill in the creation form like this:
-  ![]({{file name='other-contract.png'}} ?w=450,border=true)
+  ![]({{file version='810' name='other-contract.png'}} ?w=450,border=true)
 1. Fill in the **Element & Attributes** section like this:
   ![]({{file name='other-contract-elements-attributes.png'}} ?w=450,border=true)
 1. Fill in the Filters section like this:
