@@ -1738,47 +1738,6 @@ Note: Changing this parameter is not enough. See [How to Change Context Path]({{
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">`opensocial.gadgets.host`</td>
-<td colspan="1">DEPRECATED since Nuxeo 6.0</td>
-<td colspan="1">localhost</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="1">`opensocial.gadgets.port`</td>
-<td colspan="1">DEPRECATED since Nuxeo 6.0</td>
-<td colspan="1">8080</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr><td colspan="1">`opensocial.proxy.proxySet`</td>
-<td colspan="1">DEPRECATED since Nuxeo 5.6</td>
-<td colspan="1">false</td>
-<td colspan="1">Deprecated since Nuxeo 5.6</td>
-</tr>
-<tr>
-<td colspan="1">`opensocial.proxy.proxyHost`</td>
-<td colspan="1">DEPRECATED since Nuxeo 5.6 (use default `nuxeo.http.proxy.host`)</td>
-<td colspan="1">&nbsp;</td>
-<td colspan="1">Deprecated since Nuxeo 5.6</td>
-</tr>
-<tr>
-<td colspan="1">`opensocial.proxy.proxyPort`</td>
-<td colspan="1">DEPRECATED since Nuxeo 5.6 (use default `nuxeo.http.proxy.port`)</td>
-<td colspan="1">&nbsp;</td>
-<td colspan="1">Deprecated since Nuxeo 5.6</td>
-</tr>
-<tr>
-<td colspan="1">`opensocial.proxy.user`</td>
-<td colspan="1">DEPRECATED since Nuxeo 5.6 (use default `nuxeo.http.proxy.login`)</td>
-<td colspan="1">&nbsp;</td>
-<td colspan="1">Deprecated since Nuxeo 5.6</td>
-</tr>
-<tr>
-<td colspan="1">`opensocial.proxy.password`</td>
-<td colspan="1">DEPRECATED since Nuxeo 5.6 (use default `nuxeo.http.proxy.password`)</td>
-<td colspan="1">&nbsp;</td>
-<td colspan="1">Deprecated since Nuxeo 5.6</td>
-</tr>
-<tr>
 <td colspan="1">`repository.clustering.enabled`</td>
 <td colspan="1">Activate clustering mode.</td>
 <td colspan="1">false</td>
