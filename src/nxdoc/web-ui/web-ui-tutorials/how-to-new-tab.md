@@ -2,7 +2,7 @@
 title: 'HOWTO: Insert a New Tab'
 review:
     comment: ''
-    date: '2017-08-21'
+    date: '2019-01-11'
     status: ok
 toc: true
 details:
