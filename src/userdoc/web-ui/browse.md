@@ -42,7 +42,7 @@ To access your dashboard, click on the icon on the top left hand corner of your 
     name: preview-action-icon.png
     1.1.3#screenshot#up_to_date
 --}}
-![Preview action ](nx_asset://c6960afb-7b44-4999-ae65-90c7f8908e18 ?w=600,border=true)
+![Preview action ](nx_asset://c6960afb-7b44-4999-ae65-90c7f8908e18 ?w=300,border=true)
 
 To preview documents, click on the **Preview** icon {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Browse/Preview action icon
@@ -57,7 +57,7 @@ A pop-up window will display a preview of your document.
     name: preview-pop-up.png
     1.1.3#popup#up_to_date
 --}}
-![Preview pop up ](nx_asset://c21209c4-60ff-4204-b3d1-fb57e242dbf6 ?w=600,border=true)
+![Preview pop up ](nx_asset://c21209c4-60ff-4204-b3d1-fb57e242dbf6 ?w=300,border=true)
 
 All type of documents can be previewed: Audio, PDF, Office, Video, 3D, etc.
 
