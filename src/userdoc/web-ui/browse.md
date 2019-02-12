@@ -16,7 +16,10 @@ In order to help you find the documents that you need, the Nuxeo Platform featur
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University<br>[Getting started with Nuxeo Web UI](https://university.nuxeo.com/learn/public/course/view/elearning/92/getting-started-with-nuxeo-web-ui)<br>[Importing Documents in the Nuxeo Platform](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture)<br>![]({{file name='university-webui.png' page='nxdoc/university'}} ?w=450,border=true)
+Watch the related courses on Nuxeo University</br>
+[Getting started with Nuxeo Web UI](https://university.nuxeo.com/learn/public/course/view/elearning/92/getting-started-with-nuxeo-web-ui)</br>
+[Importing Documents in the Nuxeo Platform](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture)</br>
+![]({{file name='university-webui.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Side Menu
