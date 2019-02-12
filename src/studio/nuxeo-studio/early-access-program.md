@@ -18,7 +18,14 @@ Free of charge for all our customers, the early access program offers an opportu
 
 ## Early Access Program Features
 
-When some features are stable but partially complete, we offer them through the Early access program. For example, a tool that supports a limited number of browsers, or a configuration screen that does not expose all advanced options people may need yet, could be available first through early access.
+When some features are stable but partially complete, we offer them through the Early access program. For example, a tool that supports a limited number of browsers, or a configuration screen that does not expose all advanced options people may need yet, could be available first through early access with a specific tag.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Early Access /Early Access Feature Tag
+    name: early-access-feature.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Early Access Feature Tag](nx_asset://37c5c725-f2a4-4f38-8a59-bdce6ddeb73c ?w=300,border=true)
 
 Our goal is to deliver features and get your feedback quickly, so that we can adjust our priorities to better fit your needs.
 
@@ -38,6 +45,13 @@ You can choose to benefit from the early access program on each of your project.
 
 The Early access program is opt-in. To activate it on a Studio project, you need to be granted the role of the `project owner` by our support team: to request it, simply [open a support ticket](https://jira.nuxeo.com). This role enables you to edit your project settings, including enabling or disabling early access features.
 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Early Access /Early Access Connect
+    name: early-access-connect.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Early Access Connect](nx_asset://9e10ae09-b9f4-4215-9a21-a7d8ade6ece2 ?w=650,border=true)
+
 Once you have the project owner role, to enable or disable early access:
 
 1. Go to the Nuxeo Online Services portal.
@@ -45,3 +59,9 @@ Once you have the project owner role, to enable or disable early access:
 1. Press the edit icon.
 1. Select early access features if you want it to be available.
 1. Save your changes.
+
+* * *
+
+**RELATED TOPICS**
+
+- [Nuxeo Online Services Portal]({{page version='' space='studio' page='nuxeo-online-services-portal'}})

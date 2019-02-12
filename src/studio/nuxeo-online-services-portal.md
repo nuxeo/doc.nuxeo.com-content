@@ -138,4 +138,5 @@ The documentation tab provides a guide on how to create JIRA tickets to benefit 
 
 **RELATED TOPICS**
 
-[Nuxeo Support issue Tracker: JIRA]({{page page='support-jira'}})
+- [Nuxeo Support issue Tracker: JIRA]({{page page='support-jira'}})
+- [Nuxeo Studio Early Access Program]({{page version='' space='studio' page='early-access-program'}})
