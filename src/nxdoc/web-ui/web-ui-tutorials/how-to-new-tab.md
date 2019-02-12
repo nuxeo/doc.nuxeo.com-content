@@ -75,12 +75,12 @@ Now we will add aggregates to customize the search.
   </table>
   </div>
 
-  You now need to add your labels to your translations file to display them correctly in the UI. To do so:
+You now need to add your labels to your translations file to display them correctly in the UI. To do so:
 
-   1. Click on the **UI** table
-  1. Click on **Translations**
-  1. Use the default `messages.json` or create your own language.
-  1. Create a new entry in the JSON file with key `label.ui.aggregate.<label>` and the label as value. Here it's:
+1. Click on the **UI** table
+1. Click on **Translations**
+1. Use the default `messages.json` or create your own language.
+1. Create a new entry in the JSON file with key `label.ui.aggregate.<label>` and the label as value. Here it's:
 
   ```
   `"label.ui.aggregate.from_now-1y_to_now-1M":"Last year"`,
