@@ -81,7 +81,7 @@ You can now save your changes and go to the Studio Designer.
 
 ## Create a Form Layout
 
-In the Studio Designer, on the **Layout tabs**, under **Page Providers** you will find your page provider created previously.
+In the Studio Designer, in the **UI** tab, under  **Layouts** > **Page Providers** you will find your page provider created previously.
 
 Click on **Customize**, two layouts are available. Let's edit the **Form** layout.
 
