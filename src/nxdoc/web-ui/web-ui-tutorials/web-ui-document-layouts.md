@@ -34,7 +34,7 @@ Once you are all set, you can navigate to the Studio Designer application to cus
 
 ### Create a New Layout
 
-1. Go on the **Layout** tab on the left menu.
+1. In Studio Designer, go to **UI** > **Layouts**.
 1. Under **Local Types** you will find your Contract document type.
 1. Five layouts are available for the customization, let's start with the **Create** layout, click on the **CUSTOMIZE** button in the editor.
   {{#> callout type='tip' }}
