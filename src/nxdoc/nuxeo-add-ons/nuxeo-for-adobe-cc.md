@@ -30,7 +30,7 @@ The [Nuxeo for Adobe CC](https://connect.nuxeo.com/nuxeo/site/marketplace/packag
 
 ## Requirements
 
-Nuxeo for Adobe CC is compliant with Adobe CC 2018 and requires Nuxeo Platform 9.10 or newer.
+Nuxeo for Adobe CC is compliant with Adobe CC 2018 and 2019 and requires Nuxeo Platform 9.10 or newer.
 
 ## Support
 
