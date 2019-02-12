@@ -73,15 +73,16 @@ In the Nuxeo Platform **user** infos are displayed as follow:
 ![How to add new fields to the user profile or group profile](nx_asset://ebe8582d-f07a-4c21-83a0-efada9fd3df9 ?w=650,border=true)
 
 {{#> callout type='note'}}
-Whenever you contribute to a schema referencing another schema or document, you **must** define the references and inverse references. On that particular case you also have to define **directories** to specify the way schemas are linked to each others. 
+Whenever you contribute to a schema referencing another schema or document, you **must** define the references and inverse references. On that particular case you also have to define **directories** to specify the way schemas are linked to each others.
 The relation between `user` and `groups` uses a directory called **groupDirectory** defined as follow:
+{{/callout}}
 
 ```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.directory.storage">
   <require>org.nuxeo.ecm.platform.digestauth.config</require>
   <extension target="org.nuxeo.ecm.directory.GenericDirectory" point="directories">
-  
+
     <directory name="groupDirectory" extends="template-group">
 
       <schema>group</schema>
@@ -100,20 +101,19 @@ The relation between `user` and `groups` uses a directory called **groupDirector
         <reference field="members" directory="userDirectory"
                    name="user2group" source="groupId" target="userId"
                    dataFile="user2group.csv"/>
-  
+
         <reference field="subGroups" directory="groupDirectory"
                    name="group2group" source="parentGroupId"
                    target="childGroupId"/>
         <inverseReference field="parentGroups" directory="groupDirectory"
                           dualReferenceField="subGroups"/>
       </references>
-  
+
     </directory>
   </extension>
 </component>
 ```
-See the related documentation for more infos.
-{{/callout}}
+
 <!--
 {{#> callout type='note'}}
 Following to your custom updates, you might want to [update the user profile interface](https://nuxeo.quandora.com/frontend/q/e701dcb9459f48479d8923295ed16ab1/How-to-override-nuxeo-user-profile-and-nuxeo-user-management-elements)
