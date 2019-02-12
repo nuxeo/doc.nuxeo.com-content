@@ -73,6 +73,8 @@ In the Nuxeo Platform **user** infos are displayed as follow:
 {{#> callout type='note'}}
 Whenever you contribute to a schema referencing another schema or document, you **must** define the references and inverse references. On that particular case you also have to define **directories** to specify the way schemas are linked to each others.
 The relation between `user` and `groups` uses a directory called **groupDirectory** defined as follow:
+{{/callout}}
+
 ```xml
 <?xml version="1.0"?>
 <component name="org.nuxeo.ecm.directory.storage">
@@ -109,13 +111,12 @@ The relation between `user` and `groups` uses a directory called **groupDirector
   </extension>
 </component>
 ```
-See the related documentation for more infos.
-{{/callout}}
 <!--
 {{#> callout type='note'}}
 Following to your custom updates, you might want to [update the user profile interface](https://nuxeo.quandora.com/frontend/q/e701dcb9459f48479d8923295ed16ab1/How-to-override-nuxeo-user-profile-and-nuxeo-user-management-elements)
 {{/callout}}
 -->
+
 The customisation of the groups is similar to the users.
 
 The default **group** schema definition:

@@ -48,8 +48,8 @@ Now we will add aggregates to customize the search.
 
 **The search by owner of the contract:**
 ![]({{file version='' space='nxdoc' page='web-ui-search' name='contract-owner-vd.png'}} ?w=250,border=true)
-  1. Add another new Predicates
-  1. Click on **Edit binding** and select `schema:contract` > `owner`
+1. Add another new Predicates
+1. Click on **Edit binding** and select `schema:contract` > `owner`
 
 **The search by date range:**
 ![]({{file version='' space='nxdoc' page='web-ui-search' name='creation-date-range-vd.png'}} ?w=250, border=true)
