@@ -55,6 +55,9 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 
 ## Data
 
+### Binaries
+{{{multiexcerpt 'upgrade-10.10-installation-binaries-upgrade' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
 ### Elasticsearch
 {{{multiexcerpt 'upgrade-10.3-installation-elasticsearch-upgrade' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 

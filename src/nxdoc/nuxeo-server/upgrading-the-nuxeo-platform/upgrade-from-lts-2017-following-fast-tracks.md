@@ -1017,6 +1017,18 @@ See [NXP-25208](https://jira.nuxeo.com/browse/NXP-25208)
 -->
 ### Data
 
+#### Binaries
+
+{{! multiexcerpt name='upgrade-10.10-installation-binaries-upgrade'}}
+In addition to the default binary store used for the document repository, Nuxeo now uses additional binary stores to store transient binaries. With the standard configuration that stores the default binaries under the directory defined by `repository.binary.store`, you should take into account the fact that these new binary stores will be created as **siblings** of this configured directory. For instance if you have `repository.binary.store=/my/binaries/path` then additional binary stores will be created at `/my/binaries/path_transient_xyz` for various values of `xyz`.
+
+Therefore, if you require a mount point (like a Docker volume) for all the binaries in order to share them in a cluster configuration, we recommend to mount for instance `/var/lib/nuxeo/binaries` and define `repository.binary.store=/var/lib/nuxeo/binaries/binaries`, so that additional binary stores like `/var/lib/nuxeo/binaries/binaries_transient_xyz` will still be under the mount point.
+
+This does not apply to binaries stored in S3 or in other locations that are not on the filesystem.
+
+See [NXP-26594](https://jira.nuxeo.com/browse/NXP-26594)
+{{! /multiexcerpt}}
+
 #### Redis Activation
 
 {{! multiexcerpt name='upgrade-10.10-installation-redis-template'}}
