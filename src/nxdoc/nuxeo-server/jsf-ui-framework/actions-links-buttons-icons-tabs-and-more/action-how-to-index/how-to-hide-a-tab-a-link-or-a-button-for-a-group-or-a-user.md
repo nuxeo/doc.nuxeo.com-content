@@ -2,7 +2,7 @@
 title: 'How to Hide a Tab, a Link or a Button for a Group or a User'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -125,6 +125,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 # Hiding an Action
 
 <u>Goal</u>: hide the "`New`" button to all member of a group named `Group1`.

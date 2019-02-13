@@ -2,7 +2,7 @@
 title: Actions Display
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -93,10 +93,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Actions are grouped in categories to be able to display them in the same area of a page. Widgets can be used to handle rendering of these actions.
-
 {{! /excerpt}}
 
 Actions are referencing the same category when they need to be displayed in the same area of a page.

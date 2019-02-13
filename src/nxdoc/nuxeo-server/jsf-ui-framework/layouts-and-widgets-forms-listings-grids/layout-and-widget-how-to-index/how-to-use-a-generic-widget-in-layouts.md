@@ -2,7 +2,7 @@
 title: How to Use a Generic Widget in Layouts
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -84,15 +84,18 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' }}
-{{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}
-{{/callout}}
+
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 The Nuxeo Platform framework and its "Layout" module offers many widget types. Some are exposed directly in Studio interface, but some are not. If you want to use one of those existing widgets in Studio when editing a layout, you should drop a _generic widget_ from the "Advanced Widgets" category on the right, as in the screenshot below:
 {{! /excerpt}}
 
 ![]({{file name='screenshot_2011-12-02_18.39.20.png'}} ?w=200,border=true,thumbnail=true)
+
+{{#> callout type='info' }}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}
+{{/callout}}
 
 You should then fill the proper type attribute in widget configuration screen (among the existing one or by giving the id of the one you target) and the widget properties in the _Custom properties_ section.
 

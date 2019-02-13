@@ -75,7 +75,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'JSF-UI-required' page='/nxdoc/generic-multi-excerpts'}}}
+{{{multiexcerpt 'DeprecatedJSF' page='/nxdoc/generic-multi-excerpts'}}}
 
 {{! multiexcerpt name='nuxeo-agenda-functional-overview'}}{{! excerpt}}
 

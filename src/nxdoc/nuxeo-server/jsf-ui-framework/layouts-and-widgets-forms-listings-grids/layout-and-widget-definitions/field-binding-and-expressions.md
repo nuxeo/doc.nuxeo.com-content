@@ -2,7 +2,7 @@
 title: Field Binding and Expressions
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -156,10 +156,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 This chapter explains how field bindings are resolved, what is their purpose, and what variables are available for expressions depending on the context.
-
 {{! /excerpt}}
 
 ## Field Bindings

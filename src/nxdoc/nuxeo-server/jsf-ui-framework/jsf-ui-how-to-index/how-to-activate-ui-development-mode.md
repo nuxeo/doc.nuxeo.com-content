@@ -2,7 +2,7 @@
 title: How to Activate UI Development Mode
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -56,6 +56,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 The following steps will allow you to activate the UI development mode. This mode displays additional information about rendered layouts/widgets.
 
 1.  Set up the dev mode, the process is detailed on the page [Supporting Hot Reload]({{page space='CORG' page='Supporting Hot+Reload#SupportingHotReload-SettinguptheDevMode'}}).

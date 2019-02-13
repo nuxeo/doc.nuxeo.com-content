@@ -2,7 +2,7 @@
 title: How to Set a Default Date on a Field at Document Creation
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -102,6 +102,12 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
+{{#> callout type='info' }}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}
+{{/callout}}
+
 {{! excerpt}}
 A frequent requirement with documents is to set a default date on a field when showing the creation form. This how-to will teach you how to do it easily using Nuxeo Studio's [event handlers]({{page space='studio' page='event-handlers'}}) and [automation chains]({{page space='studio' page='automation'}}).
 {{! /excerpt}}

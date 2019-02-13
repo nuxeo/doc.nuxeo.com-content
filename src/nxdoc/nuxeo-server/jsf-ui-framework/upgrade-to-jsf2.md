@@ -2,7 +2,7 @@
 title: Upgrade to JSF2
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -61,6 +61,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}The Nuxeo Platform has been upgraded to JSF 2 for the 6.0 version. This page provides tools and notes to help you migrate your custom Nuxeo projects to this version.{{! /excerpt}}
 
 Content Application Platform (CAP) and its plug-ins have been migrated JSF 2 for 6.0\. This can have a big impact on custom XHTML templates, so a migration tool has been implemented to help you to migrate your custom code base. Here you will find additional notes and instructions about this migration.

@@ -2,7 +2,7 @@
 title: How to Make a Selection Based on the Value of Another Value in a Layout
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -80,11 +80,13 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
+The Nuxeo UI uses a variety of web frameworks, each having its own strengths and weaknesses. User interfaces designed in Nuxeo Studio are primarily driven by JSF and Seam, which have a long history and are quite solid but are sometimes tricky to use in elaborate use cases. The Nuxeo Platform includes a widget which integrates the Javascript-based Select2 component with core Nuxeo APIs to enable some very interesting and useful Javascript-based features.
+
 {{#> callout type='info' }}
 {{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}
 {{/callout}}
-
-The Nuxeo UI uses a variety of web frameworks, each having its own strengths and weaknesses. User interfaces designed in Nuxeo Studio are primarily driven by JSF and Seam, which have a long history and are quite solid but are sometimes tricky to use in elaborate use cases. The Nuxeo Platform includes a widget which integrates the Javascript-based Select2 component with core Nuxeo APIs to enable some very interesting and useful Javascript-based features.
 
 ## The select2 Widget
 

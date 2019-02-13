@@ -2,7 +2,7 @@
 title: Shell Documentation
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -76,10 +76,11 @@ history:
         version: '1'
 
 ---
+
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Commands are self documented by using annotations. These annotations are used to generate the base of the command documentation, like: short description, syntax, options, arguments etc. Using this information the shell automatically generates basic help for you.
-
 {{! /excerpt}} {{#> callout type='info' }}
 
 The generated documentation is available in both text format (for terminal) and wiki format. See [Nuxeo Shell Command Index]({{page page='nuxeo-shell-command-index'}}) for the wiki format.

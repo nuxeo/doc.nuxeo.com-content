@@ -1092,7 +1092,7 @@ Existing configuration parameters are listed in the index section below.
 
 ## Admin Center / Setup Tab {{> anchor 'setup-admincenter'}}
 
-{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 Administrators can also change the `nuxeo.conf` configuration parameters from the Admin center.
 

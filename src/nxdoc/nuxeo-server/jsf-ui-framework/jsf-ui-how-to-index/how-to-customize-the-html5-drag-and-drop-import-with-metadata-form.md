@@ -2,7 +2,7 @@
 title: How to Customize the HTML5 Drag and Drop Import with Metadata Form
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -74,6 +74,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{#> callout type='info' }}
 {{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}
 {{/callout}}

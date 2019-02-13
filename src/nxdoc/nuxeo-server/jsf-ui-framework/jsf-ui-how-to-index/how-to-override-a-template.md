@@ -2,7 +2,7 @@
 title: How to Override a Template
 review:
     comment: 'Tutorial followed by Ahmed: OK for LTS 2016'
-    date: '2017-03-20'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -58,6 +58,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 The purpose of this how-to is to learn how to override a default Nuxeo template. It considers that you are able to create a new bundle and the required files. Otherwise please refer to the page [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}}) or use [Nuxeo CLI]({{page page='how-to-contribute-to-an-extension'}}).
 
 {{#> callout type='note' }}

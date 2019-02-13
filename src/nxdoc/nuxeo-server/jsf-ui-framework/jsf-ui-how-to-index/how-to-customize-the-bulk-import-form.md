@@ -2,7 +2,7 @@
 title: How to Customize the Bulk Import Form
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -29,173 +29,175 @@ confluence:
     source_link: /display/NXDOC/How+to+Customize+the+Bulk+Import+Form
 tree_item_index: 1200
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 10:07'
         message: ''
         version: '33'
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 10:05'
         message: Update how-to topics
         version: '32'
-    - 
+    -
         author: Joshua Fletcher
         date: '2015-04-17 23:56'
         message: Typo.
         version: '31'
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-20 15:19'
         message: Add note about Where and Files fields
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-11 11:00'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-11 10:44'
         message: ''
         version: '28'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-10 14:22'
         message: ''
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-10 10:24'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:30'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:11'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-21 17:36'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-19 18:11'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-19 18:10'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 17:21'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:45'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:43'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:40'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:32'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:32'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:31'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:29'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:28'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 15:46'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 15:45'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 11:00'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-13 18:15'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-13 18:13'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 17:35'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 17:29'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 17:20'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 17:17'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 17:09'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-05 15:49'
         message: ''
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 The bulk import screen has a form that allows you to edit several documents at the same time. You can customize it with Studio by creating a form layout named `bulkImport`. The "Create" layout will be used on the bulk import popup.
 
 ![]({{file name='default_bulk_import.png' space='userdoc' page='creating-content'}} ?w=500,border=true)

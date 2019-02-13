@@ -2,7 +2,7 @@
 title: How to Declare the CSS and JavaScript Resources Used in Your Templates
 review:
     comment: ''
-    date: '2018-01-15'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -116,10 +116,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 The CSS and JavaScript resources needed by your JSF pages can be added directly from inside your templates, or using runtime extension points.
-
 {{! /excerpt}} {{#> callout type='note' }}
 
 This page talks about using JavaScript inside the Nuxeo web application (the back office). If you want to build a JavaScript application (with jQuery, Node, AngularJS, ...) you should follow our [Nuxeo JavaScript Client]({{page page='javascript-client'}}) page.

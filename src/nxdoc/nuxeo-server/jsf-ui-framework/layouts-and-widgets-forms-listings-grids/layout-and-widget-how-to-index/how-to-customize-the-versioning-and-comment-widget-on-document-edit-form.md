@@ -2,7 +2,7 @@
 title: How to Customize the Versioning and Comment Widget on Document Edit Form
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -147,13 +147,15 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' }}
-{{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}
-{{/callout}}
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 On documents edit form, a **Comment** textarea is displayed, and this text is visible in the **History** tab. When the document is versionable, versioning options are also displayed. This page provides some examples to customize this behavior using XML extensions. These examples can be contributed [in Nuxeo Studio]({{page page='how-to-contribute-to-an-extension'}}) (Advanced Settings > XML Extensions) or with [Nuxeo CLI]({{page page='how-to-contribute-to-an-extension'}}).
 {{! /excerpt}}
+
+{{#> callout type='info' }}
+{{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}
+{{/callout}}
 
 When using a **Toggleable Form** (`toggleableLayoutWithForms`) [widget type](http://showcase.nuxeo.com/nuxeo/layoutDemo/toggleableLayoutWidget), these fields can be shown by setting the property **Show Edit Options** (`showEditOptions`) to `true`, and they can be hidden by setting the property to `false`.
 

@@ -2,7 +2,7 @@
 title: Document Views
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2019-02-13'
     status: ok
 labels:
     - lts2016-ok
@@ -82,10 +82,9 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 {{! excerpt}}
-
 Pages visible for a given document can be configured depending on the document type.
-
 {{! /excerpt}}
 
 First of all, we have to make the difference between a view in a standard JSF way (navigation case view id, navigation case output) and views in the Nuxeo Platform (document type view, creation view).

@@ -2,7 +2,7 @@
 title: Layout and Widget Display
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -124,10 +124,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Layouts can be displayed thanks to a series a JSF tags that will query the web layout service to get the layout definition and build it for a given mode.
-
 {{! /excerpt}}
 
 The more common way to display a given layout for a document is to use the [`nxl:layout` tag](http://community.nuxeo.com/api/nuxeo/7.1/tlddoc/nxl/layout.html):

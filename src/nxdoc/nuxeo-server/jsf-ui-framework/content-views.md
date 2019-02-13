@@ -2,7 +2,7 @@
 title: Content Views
 review:
     comment: ''
-    date: '2017-01-03'
+    date: '2019-02-13'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:
@@ -430,18 +430,16 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{#> callout type='info' }}
-
 Content Views can be configured using Studio, check out the [Content Views]({{page space='studio' page='content-views'}}) documentation.
-
 {{/callout}}
 
 ## Definition
 
 {{! excerpt}}
-
 A content view is a notion to define all the elements needed to get a list of items and perform their rendering. The most obvious use case is the listing of a folderish document content, where we would like to be able to perform several actions.
-
 {{! /excerpt}}
 
 *   Defining the NXQL query that will be used to retrieve the documents, filtering some of them (documents in the trash for instance).

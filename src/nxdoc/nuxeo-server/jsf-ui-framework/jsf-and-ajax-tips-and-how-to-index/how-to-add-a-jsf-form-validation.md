@@ -2,7 +2,7 @@
 title: How to Add a JSF Form Validation
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -183,6 +183,7 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 The document is created and updated using the 'create' or 'update' view. You can check values on this document before it is saved in the repository.
 
 To validate field, you add a JSF validator to the JSF component controlling the field.

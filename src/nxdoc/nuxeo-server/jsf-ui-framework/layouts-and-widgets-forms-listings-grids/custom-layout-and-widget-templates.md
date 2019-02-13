@@ -2,7 +2,7 @@
 title: Custom Layout and Widget Templates
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -148,10 +148,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Some templating features have been made available to make it easier to control the layouts and widgets rendering.
-
 {{! /excerpt}}
 
 ## Custom Layout Template

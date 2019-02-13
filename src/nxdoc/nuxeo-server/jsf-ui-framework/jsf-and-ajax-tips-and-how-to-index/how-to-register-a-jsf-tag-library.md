@@ -2,7 +2,7 @@
 title: How to Register a JSF Tag Library
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -157,6 +157,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 When registering a new tag library for your application, you would usually declare the facelets taglib file in the `web.xml` configuration file.
 
 As this parameter can only be declared once, and is already declared in the nuxeo base ui module, you cannot declare it using the Nuxeo deployment feature.

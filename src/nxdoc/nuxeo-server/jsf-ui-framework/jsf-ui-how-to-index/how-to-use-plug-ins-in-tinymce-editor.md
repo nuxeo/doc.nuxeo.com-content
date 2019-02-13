@@ -2,7 +2,7 @@
 title: How to Use Plug-Ins in TinyMCE Editor
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -103,9 +103,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 In this how-to, we consider you already [developed with Nuxeo Platform]({{page page='develop-with-nuxeo-platform'}}) with the necessary commands in the `deployment-fragment.xml` to copy the `web` resources to `$NUXEO/nxserver/nuxeo.war`. As an example, we will explain how to install the [textcolor plug-in](http://www.tinymce.com/wiki.php/Plugin:textcolor).
 
-# Adding the TinyMCE textcolor Plug-In
+## Adding the TinyMCE textcolor Plug-In
 
 The general procedure to make a new plug-in available is to apply the initialization code, provided in the plug-in documentation, to the `tinyMCE#init` method in `tinymce_init.js`.
 
@@ -183,7 +184,7 @@ The general procedure to make a new plug-in available is to apply the initializa
 
     ![]({{file name='tinymce-textcolor.png'}} ?w=600,border=true)
 
-# Using Hot-Reload
+## Using Hot-Reload
 
 While the development mode is activated, you can use the hot-reload of the files located in `$NUXEO/nxserver/nuxeo.war` to test the customization of TinyMCE in live, without spending time in server restarts.
 
@@ -193,11 +194,11 @@ While the development mode is activated, you can use the hot-reload of the files
 4.  Apply the needed modifications and save the file.
 5.  In your browser, reload (F5) the page and observe the changes in the rich text editor.
 
-# Useful Links
+## Useful Links
 
-*   [http://www.tinymce.com/wiki.php/Configuration](http://www.tinymce.com/wiki.php/Configuration)
+-  [http://www.tinymce.com/wiki.php/Configuration](http://www.tinymce.com/wiki.php/Configuration)
 
-*   [http://www.tinymce.com/wiki.php/Plugins](http://www.tinymce.com/wiki.php/Plugins)
+-  [http://www.tinymce.com/wiki.php/Plugins](http://www.tinymce.com/wiki.php/Plugins)
 
 &nbsp;
 

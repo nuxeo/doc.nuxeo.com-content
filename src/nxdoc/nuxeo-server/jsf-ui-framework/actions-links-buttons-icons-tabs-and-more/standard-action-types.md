@@ -2,7 +2,7 @@
 title: Standard Action Types
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -68,10 +68,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 A series of action types is available for the most basic uses cases.
-
 {{! /excerpt}}
 
 ## link

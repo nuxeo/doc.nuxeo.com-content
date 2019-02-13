@@ -2,7 +2,7 @@
 title: 'Actions (Links, Buttons, Icons, Tabs and More)'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:
@@ -213,12 +213,12 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
+{{! excerpt}}
 Actions usually stand for commands that can be triggered via user interface interaction (buttons, links, etc...). Usually, it will describe a link and other information that may be used to manage its display (the link label and an icon for instance). By extension, actions are also used for conditional rendering and sorting of page fragments (tabs, summary widgets,...).
 
 This chapter explains how to define actions and display them in pages.
-
 {{! /excerpt}}
 
 *   [Actions Overview]({{page space='NXDOC' page='Actions Overview'}})&nbsp;&mdash;&nbsp;<span class="smalltext">In this chapter, an action will stand for any kind of command that can be triggered via user interface interaction. In other words, it will describe a link and other information that may be used to manage its display (the link label, an icon, security information for instance).</span>

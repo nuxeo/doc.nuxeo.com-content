@@ -2,7 +2,7 @@
 title: How to Override a Seam Component
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -78,10 +78,9 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 {{! excerpt}}
-
 This how-to considers you master the creation of the Java plug-in, and you know where to create a Java class. Otherwise please refer to the page [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}}) or use [Nuxeo CLI]({{page page='nuxeo-cli'}}).
-
 {{! /excerpt}}
 
 The main steps to override a Seam component are:

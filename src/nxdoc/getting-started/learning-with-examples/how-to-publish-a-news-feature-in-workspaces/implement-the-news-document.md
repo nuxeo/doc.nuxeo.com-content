@@ -111,7 +111,7 @@ history:
 next_link: /nxdoc/add-a-news-content-view-on-workspaces
 
 ---
-{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 In this section, we will:
 

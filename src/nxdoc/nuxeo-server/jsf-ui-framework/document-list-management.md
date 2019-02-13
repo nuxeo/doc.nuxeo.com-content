@@ -2,7 +2,7 @@
 title: Document List Management
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -42,10 +42,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Management of a lost of documents is useful for clipboard and generally document selection features.
-
 {{! /excerpt}}
 
 The Document List Manager provides a service to manage lists of Nuxeo documents.

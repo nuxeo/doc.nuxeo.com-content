@@ -2,7 +2,7 @@
 title: Document Content Views
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2019-02-13'
     status: ok
 labels:
     - lts2016-ok
@@ -61,10 +61,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Content Views can be linked to a document type by specifying the content view names in its definition.
-
 {{! /excerpt}}
 
 Some default document views present [content views]({{page page='content-views'}}) for listing this folderish document content, for instance, or to present the result of a search using some of the document properties as parameters (like in the [Smart Search]({{page page='smart-search'}}) addon).

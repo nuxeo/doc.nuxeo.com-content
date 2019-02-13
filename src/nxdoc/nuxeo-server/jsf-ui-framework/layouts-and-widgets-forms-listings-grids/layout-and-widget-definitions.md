@@ -2,7 +2,7 @@
 title: Layout and Widget Definitions
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -166,10 +166,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Custom layouts and widgets can be contributed to the web layout service, using its extension points.
-
 {{! /excerpt}}
 
 These layout definitions are then available through the service to control how they will be displayed in a given mode.

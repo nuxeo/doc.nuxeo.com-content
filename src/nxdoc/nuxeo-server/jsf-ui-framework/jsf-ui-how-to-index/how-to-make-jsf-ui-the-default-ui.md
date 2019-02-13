@@ -2,7 +2,7 @@
 title: How to Make JSF UI the Default UI
 review:
     comment: ''
-    date: '2017-10-11'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -49,6 +49,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 In case both _nuxeo-jsf-ui_ and _nuxeo-web-ui_ addons are installed, the new Web UI is set to be the default UI.
 If you want to make the JSF UI the default UI there are several changes to apply.
 
@@ -68,8 +70,8 @@ To make the login page redirect to the JSF UI instead of the new Web UI you need
 
 Note that the default `priority` values are:
 
-*   Web UI (`id="web"`): 100
-*   JSF UI ( `id="jsf"` ): 10
+-   Web UI (`id="web"`): 100
+-   JSF UI ( `id="jsf"` ): 10
 
 The highest priority wins.
 

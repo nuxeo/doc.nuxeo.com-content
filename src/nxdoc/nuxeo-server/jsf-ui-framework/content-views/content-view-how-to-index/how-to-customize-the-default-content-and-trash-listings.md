@@ -2,7 +2,7 @@
 title: How to Customize the Default Content and Trash Listings
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -72,18 +72,18 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' }} {{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}} {{/callout}}
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 The content displayed in the **Content** tab of a folder is the result of a query that says that we want to display all the documents that:
-
-*   are the direct children of the current folder;
-*   are not "trashed";
-*   are not hidden in navigation.
-
+-   are the direct children of the current folder;
+-   are not "trashed";
+-   are not hidden in navigation.
 {{! /excerpt}}
 
 You can create new views that will display the results of a query you have customized. This is done using Content views. Then you can choose to use your content view in the **Content** or **Trash** tab of your document types.
+
+{{#> callout type='info' }} {{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}} {{/callout}}
 
 **To change the list of documents displayed in the Content and Trash tabs:**
 

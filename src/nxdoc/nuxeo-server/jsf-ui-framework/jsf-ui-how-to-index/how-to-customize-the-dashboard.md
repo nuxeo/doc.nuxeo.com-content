@@ -2,7 +2,7 @@
 title: How to Customize the Dashboard
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -113,6 +113,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 ## Adding a New Entry in the Default Dashboard
 
 Goal: Displaying the list of documents of type `Contract` recently updated [(assuming you already defined documents of type `Contract`]({{page version='' space='nxdoc' page='web-ui-document-layouts'}})).

@@ -2,7 +2,7 @@
 title: Tab Designer Widget Types
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -63,10 +63,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Some higher level widget types are useful to design tab content, and come as an addition to [Summary Widget Types]({{page page='summary-widget-types'}}).
-
 {{! /excerpt}}
 
 ## {{> anchor 'toggleablelayoutwithforms'}}Toggleable Layout

@@ -2,7 +2,7 @@
 title: Ajax4jsf Best Practices
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -92,10 +92,9 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 {{! excerpt}}
-
 This page lists some good practices to follow to ensure correct rendering, HTML and testing.
-
 {{! /excerpt}}
 
 ## Use a4j:region to Speed up Ajax Rendering

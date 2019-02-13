@@ -136,7 +136,7 @@ As the Shibboleth attributes values are passed by HTTP headers, the service [Shi
 
 ### Shibboleth groups
 
-{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 ShibbGroups are virtual groups based on an EL expression with Shibboleth attributes. A new user management tab is added to create and edit them. The definitions are stored in the `shibbGroup` directory.
 
@@ -151,7 +151,7 @@ The Shibboleth authentication module is available [as a packaged Nuxeo Addon](ht
 
 #### Shibboleth groups tab
 
-{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 After you installed the package, a new **Shib Goups** tab is available in the **Admin** > **Users & Groups** tab.
 

@@ -2,7 +2,7 @@
 title: 'Layouts and Widgets (Forms, Listings, Grids)'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -328,6 +328,7 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 Layouts and widgets have been originally designed to display forms, and have been improved to handle listings as well as summary pages. These configuration elements are used to generate page fragments from XML configurations contributed to [Nuxeo Runtime extension points]({{page page='runtime-and-component-model'}}).

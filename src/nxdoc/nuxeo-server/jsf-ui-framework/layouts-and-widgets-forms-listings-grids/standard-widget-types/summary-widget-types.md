@@ -2,7 +2,7 @@
 title: Summary Widget Types
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -58,10 +58,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 A series of higher-level widget types useful to display information on a document Summary tab.
-
 {{! /excerpt}} {{#> callout type='warning' }}
 
 Summary widget types are usually using hardcoded values to display from the context, hence their field bindings are usually ignored.

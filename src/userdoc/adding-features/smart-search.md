@@ -123,7 +123,7 @@ history:
 ---
 {{multiexcerpt 'DeprecatedAddon' space='nxdoc' page='generic-multi-excerpts'}}
 
-{{{multiexcerpt 'JSF-UI-required' page='/nxdoc/generic-multi-excerpts'}}}
+{{{multiexcerpt 'DeprecatedJSF' page='/nxdoc/generic-multi-excerpts'}}}
 
 {{! excerpt}}
 

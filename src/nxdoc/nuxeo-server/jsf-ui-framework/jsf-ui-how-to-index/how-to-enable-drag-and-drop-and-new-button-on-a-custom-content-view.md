@@ -2,7 +2,7 @@
 title: How to Enable Drag and Drop and New Button on a Custom Content View
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -64,10 +64,12 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 You should follow this how-to if you want to either:
 
-*   Replace the default Content tab of a folderish document type
-*   Or add a new tab from which users should be able to create children documents.
+-  Replace the default Content tab of a folderish document type
+-  Or add a new tab from which users should be able to create children documents.
 
 To do so, you basically need to create a new tab with some specific properties.
 

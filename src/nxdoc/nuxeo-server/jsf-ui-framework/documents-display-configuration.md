@@ -2,7 +2,7 @@
 title: Documents Display Configuration
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2019-02-13'
     status: ok
 labels:
     - lts2016-ok
@@ -83,10 +83,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 The views on documents, the forms to create or edit them, how lists of documents are presented, all that can be changed in a Nuxeo application, to make sure the information displayed are meaningful. To enable the customization of how documents, forms and listings are presented, Nuxeo Platform-based application use layouts and content views.
-
 {{! /excerpt}}
 
 ## UI Document Types

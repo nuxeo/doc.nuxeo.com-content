@@ -2,7 +2,7 @@
 title: How to Override the Login Page
 review:
     comment: ''
-    date: '2017-12-11'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -89,7 +89,9 @@ history:
         version: '1'
 
 ---
-# Login Page
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
+## Login Page
 
 The Login Page when the server is deployed is located at `<nuxeo_server>/nxserver/nuxeo.war/login.jsp`. In the source code, this page is located at `nuxeo-platform-webapp/src/main/resources/nuxeo.war/login.jsp`.
 
@@ -124,7 +126,7 @@ String logoUrl = LoginScreenHelper.getValueWithDefault(screenConfig.getLogoUrl()
 
 {{/panel}}
 
-# Deployment
+## Deployment
 
 In order to be sure that your JSP page will override the default one, a modification must be added in the&nbsp;`deployment-fragment.xml` file of your bundle. In Nuxeo Platform, the module containing the login page is `nuxeo-platform-webapp`.
 

@@ -2,7 +2,7 @@
 title: JSF troubleshoot
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -178,6 +178,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 Although they are not all specific to Nuxeo framework, here are some troubleshooting issues that can be encountered with JSF.
 
 ## My file is not uploaded correctly although other fields are set

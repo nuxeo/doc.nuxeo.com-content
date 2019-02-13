@@ -78,7 +78,7 @@ history:
 
 ---
 
-{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 ## Installation
 

@@ -2,7 +2,7 @@
 title: How to Define a New Content View
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2019-02-13'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:
@@ -364,7 +364,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 A content view is the definition of a list of documents displayed in the interface. The lists of documents displayed in the UI are the results of a query which you can customize and the definition of the information displayed on the documents. In Nuxeo applications, content views are used in most cases when there is a list of content.

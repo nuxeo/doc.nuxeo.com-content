@@ -2,7 +2,7 @@
 title: Drag and Drop Service for Content Capture (HTML5-Based)
 review:
     comment: ''
-    date: '2017-12-28'
+    date: '2019-02-13'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:
@@ -179,15 +179,14 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 Drag and Drop from the Desktop to Nuxeo HTML UI has been available for a long time using a browser plugin.
 
 {{! excerpt}}
-
 You can use the native HTML5 Drag and Drop features on recent browsers (Firefox 3.6+, Google Chrome 9+, Safari 5+, IE11, Edge). This new Drag and Drop import model is pluggable so you can adapt the import behavior to your custom needs.
-
 {{! /excerpt}}
+
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 ## How to Use it
 

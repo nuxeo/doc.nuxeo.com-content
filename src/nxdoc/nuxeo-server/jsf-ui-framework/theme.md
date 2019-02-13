@@ -2,7 +2,7 @@
 title: Theme
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2019-02-13'
     status: ok
 labels:
     - lts2016-ok
@@ -382,10 +382,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 The theme is in charge of the global _layout_ or _structure_ of a page (composition of the header, footer, left menu, main area...), as well as its _branding_ or _styling_ using resources like styling or JavaScript files.
-
 {{! /excerpt}}
 
 &nbsp;

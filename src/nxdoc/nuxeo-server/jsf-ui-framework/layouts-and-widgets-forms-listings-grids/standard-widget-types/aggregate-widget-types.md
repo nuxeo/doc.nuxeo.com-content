@@ -2,7 +2,7 @@
 title: Aggregate Widget Types
 review:
     comment: ''
-    date: '2017-12-13'
+    date: '2019-02-13'
     status: ok
 labels:
     - lts2016-ok
@@ -108,10 +108,9 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 {{! excerpt}}
-
 This page presents widget types to be used to display aggregate buckets.
-
 {{! /excerpt}}
 
 As described in [Page Provider Aggregates]({{page page='page-provider-aggregates'}}), you can define aggregates on content views based on Elasticsearch. In order to display and select the buckets returned by an aggregate, new widget types have been added to the platform.

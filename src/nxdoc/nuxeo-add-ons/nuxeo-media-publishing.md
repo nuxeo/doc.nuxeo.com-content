@@ -129,6 +129,7 @@ history:
 Nuxeo Media Publishing is an addon that enables users to publish video documents stored in the Nuxeo repository to external video hosting websites, without leaving the Nuxeo Platform UI.
 {{! /excerpt}}
 
+
 This addon is designed to allow many implementations. Default implemented providers are:
 
 *   [Youtube](http://youtube.com)
@@ -154,7 +155,7 @@ Published videos can also be republished or unpublished from the external provid
 
 ## Installation and Configuration
 
-{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 This addon requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin tab]({{page page='installing-a-new-package-on-your-instance'}}). However, it requires the installation of the [Digital Asset Management (DAM) addon]({{page page='digital-asset-management-dam'}}) which provides multimedia files (picture, audio and video).
 
