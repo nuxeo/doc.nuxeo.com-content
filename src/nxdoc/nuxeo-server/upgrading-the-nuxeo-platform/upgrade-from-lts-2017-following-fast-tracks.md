@@ -219,28 +219,16 @@ See [NXP-25020](https://jira.nuxeo.com/browse/NXP-25020) and [NXP-25211](https:/
 ##### API Changes
 The new TrashService fires dedicated events `documentTrashed` and `documentUntrashed` (hold by TrashService interface) instead of `lifecycle_transition_event`. The document model passed in the event won't be saved by Nuxeo at the end.
 
-##### Keeping Old Trash implementation
-The trash implementation has changed in 10.2. If you want to keep previous implementation relying on life cycle state, add the following contribution:
-  ```
-  <require>org.nuxeo.ecm.core.trash.service.migrator</require>
-  <extension target="org.nuxeo.runtime.migration.MigrationService" point="configuration">
-
-    <migration id="trash-storage">
-      <defaultState>lifecycle</defaultState>
-    </migration>
-
-  </extension>
-  ```
-
-If you want to migrate trash state to the new property model (`ecm:isTrashed`), follow the Trash migration steps.
-
 ##### Trash Migration
-To migrate trash states to the new property model:
 
-1. Follow the step from section [Keeping old trash implementation](#keeping-old-trash-implementation).
-1. In the Nuxeo Platform's JSF UI, go to **Admin** > **System Information** > **Migration**, click the button Migrate trashed state from lifecycle to property and wait until migration is completed.
-1. Then perform an Elasticsearch re-indexation of all repository, in the Nuxeo Platform's JSF UI, go to **Admin** > **Elasticsearch** > **Admin**, click the button Re-index repository and wait until re-indexation is completed.
-1. Remove the contribution added at step 1.
+As TrashService now leverages the system property `ecm:isTrashed` by default, you need to migrate your instance.
+
+1. You need to replace all comparisons of `ecm:currentLifeCycleState` with `deleted` state by `ecm:isTrashed` check in your NXQL/Page Provider/Content View... For instance `ecm:currentLifeCycleState = 'deleted'` is to replace by `ecm:isTrashed = 1`.
+2. Add the contribution from section [Keeping old trash implementation](#keeping-old-trash-implementation).
+3. In the Nuxeo Platform's JSF UI, go to **Admin** > **System Information** > **Migration**, click the button Migrate trashed state from lifecycle to property and wait until migration is completed.
+4. Then perform an Elasticsearch re-indexation of all repository, in the Nuxeo Platform's JSF UI, go to **Admin** > **Elasticsearch** > **Admin**, click the button Re-index repository and wait until re-indexation is completed.
+5. Remove the contribution added at step 2.
+6. You now need to remove `deleted` lifecycle state from your lifecycle policies as it is deprecated and not used anymore.
 
 {{#> callout type='info' heading='Migration Note - 10.2'}}
 During migration, documents in state `deleted` will receive the `isTrashed` property set to true but migrator will leave document in `deleted` state.
@@ -252,6 +240,19 @@ Migrator behavior has changed in 10.3, now documents in state `deleted` will rec
 
 See [NXP-24850](https://jira.nuxeo.com/browse/NXP-24850).
 {{! /multiexcerpt}}
+
+##### Keeping Old Trash implementation
+The trash implementation has changed in 10.2. If you want to keep previous implementation relying on lifecycle state, add the following contribution:
+  ```xml
+  <require>org.nuxeo.ecm.core.trash.service.migrator</require>
+  <extension target="org.nuxeo.runtime.migration.MigrationService" point="configuration">
+
+    <migration id="trash-storage">
+      <defaultState>lifecycle</defaultState>
+    </migration>
+
+  </extension>
+  ```
 
 #### Code Behavior Changes
 
