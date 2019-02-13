@@ -2,7 +2,7 @@
 title: Custom Widget Types
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -157,10 +157,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Custom widget types can be added to the [standard list]({{page page='standard-widget-types'}}) thanks to another extension point on the web layout service.
-
 {{! /excerpt}}
 
 Usually widget types are template widgets that are declared as widget types to make them easily reusable in different layouts, have a clear widget types library, and make them available in [Studio]({{page space='studio'}}).

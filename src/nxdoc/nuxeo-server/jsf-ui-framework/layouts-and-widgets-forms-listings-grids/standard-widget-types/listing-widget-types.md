@@ -2,7 +2,7 @@
 title: Listing Widget Types
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -72,10 +72,9 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 {{! excerpt}}
-
 A series of widget types useful for listings.
-
 {{! /excerpt}} {{#> callout type='warning' }}
 
 Listing widget types usually apply to a [`PageSelection`](http://community.nuxeo.com/api/nuxeo/5.9.1/javadoc/org/nuxeo/ecm/platform/query/api/PageSelection.html) element, wrapping the&nbsp; [`DocumentModel`](http://community.nuxeo.com/api/nuxeo/5.9.1/javadoc/org/nuxeo/ecm/core/api/DocumentModel.html) to handle selection information.

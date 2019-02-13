@@ -2,7 +2,7 @@
 title: How to Add a New Action Category on a Document Tab
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -123,12 +123,12 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 Nuxeo Studio enables you to add new buttons and links, called actions, when you implement new features. These actions are located in predefined places on the page, that we call action categories.
 
 {{! excerpt}}
-
 It is possible to define new action categories on the custom tab of documents, that is to say new places on that tab where you can add new links, icons or buttons.
-
 {{! /excerpt}}
 
 ## Creating a New Category

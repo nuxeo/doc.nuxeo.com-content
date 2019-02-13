@@ -2,7 +2,7 @@
 title: Layout and Widget Modes
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -72,10 +72,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Both layouts and widgets have modes, that makes it possible to render the same layout in different use cases, even if some only support a simple "view" mode.
-
 {{! /excerpt}}
 
 The **layout modes** can be anything although some default modes are included in the application: `create`, `edit`, `view`. Some additional modes are available: `listing`, `search`, `bulkEdit`, `header`, `csv`, `pdf` and `plain`.

@@ -2,7 +2,7 @@
 title: How to Upload Labels Translations in Nuxeo Studio (i18n)
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2019-02-13'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:
@@ -125,6 +125,7 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 {{#> callout type='info'}}
 This page is about label translation for Nuxeo JSF UI. For Web UI labels, please refer to the page [HOWTO: Manage Translations]({{page version='' space='nxdoc' page='web-ui-managing-translations'}}).

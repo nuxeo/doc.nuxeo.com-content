@@ -2,7 +2,7 @@
 title: Standard Widget Types
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -149,10 +149,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 A series of widget types has been defined for the most generic uses cases.
-
 {{! /excerpt}}
 
 Please refer to the tag library documentation available at [http://community.nuxeo.com/api/nuxeo/7.4/tlddoc/](http://community.nuxeo.com/api/nuxeo/7.4/tlddoc/) for Nuxeo JSF tags, and consider reading the page [Default Widget Types Known Limitations]({{page page='default-widget-types-known-limitations'}}).
@@ -163,14 +163,14 @@ All widgets types available on your Nuxeo application are listed at `http://NUXE
 
 Here is some documentation about the most common widget types that are used in the application:
 
-*   [Default Widget Types Known Limitations]({{page space='NXDOC' page='Default Widget+Types+Known+Limitations'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Some widgets have limitations in some specific conditions of use. We maintain a list of known problems here.</span>
-*   [Basic Widget Types]({{page space='NXDOC' page='Basic Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types is available for the most basic uses cases.</span>
-*   [Listing Widget Types]({{page space='NXDOC' page='Listing Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types useful for listings.</span>
-*   [Summary Widget Types]({{page space='NXDOC' page='Summary Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A series of higher-level widget types useful to display information on a document Summary tab.</span>
-*   [Tab Designer Widget Types]({{page space='NXDOC' page='Tab Designer+Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Some higher level widget types are useful to design tab content, and come as an addition to Summary Widget Types.</span>
-*   [Decoration Widget Types]({{page space='NXDOC' page='Decoration Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types that are only useful to handle display of subwidgets, or just add tags surrounding other widgets.</span>
-*   [Suggestion Widget Types]({{page space='NXDOC' page='Suggestion Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types for suggestions.</span>
-*   [Aggregate Widget Types]({{page space='NXDOC' page='Aggregate Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This page presents widget types to be used to display aggregate buckets.</span>
-*   [Advanced Widget Types]({{page space='NXDOC' page='Advanced Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types for advanced usage.</span>
+-   [Default Widget Types Known Limitations]({{page space='NXDOC' page='Default Widget+Types+Known+Limitations'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Some widgets have limitations in some specific conditions of use. We maintain a list of known problems here.</span>
+-   [Basic Widget Types]({{page space='NXDOC' page='Basic Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types is available for the most basic uses cases.</span>
+-   [Listing Widget Types]({{page space='NXDOC' page='Listing Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types useful for listings.</span>
+-   [Summary Widget Types]({{page space='NXDOC' page='Summary Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A series of higher-level widget types useful to display information on a document Summary tab.</span>
+-   [Tab Designer Widget Types]({{page space='NXDOC' page='Tab Designer+Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Some higher level widget types are useful to design tab content, and come as an addition to Summary Widget Types.</span>
+-   [Decoration Widget Types]({{page space='NXDOC' page='Decoration Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types that are only useful to handle display of subwidgets, or just add tags surrounding other widgets.</span>
+-   [Suggestion Widget Types]({{page space='NXDOC' page='Suggestion Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types for suggestions.</span>
+-   [Aggregate Widget Types]({{page space='NXDOC' page='Aggregate Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This page presents widget types to be used to display aggregate buckets.</span>
+-   [Advanced Widget Types]({{page space='NXDOC' page='Advanced Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A series of widget types for advanced usage.</span>
 
 &nbsp;

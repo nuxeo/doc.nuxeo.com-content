@@ -2,7 +2,7 @@
 title: How to Customize the Login Page
 review:
     comment: ''
-    date: '2017-12-11'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -243,6 +243,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 The basic customization can be made by extending the service `org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService` for the point [`loginScreen`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--loginScreen).
 
 This point allows you to configure the Login Screen : header, footer, styles, openid providers ... The variable `${org.nuxeo.ecm.contextPath}` can be used to avoid hardcoding the default application path (/nuxeo).

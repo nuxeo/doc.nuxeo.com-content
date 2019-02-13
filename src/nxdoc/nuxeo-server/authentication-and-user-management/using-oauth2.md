@@ -110,7 +110,7 @@ EOF
 
 ### Through the Admin Center
 
-{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 1. Go to the Nuxeo Platform web interface, then browse to the **Admin Center** > **Cloud Services** > **Consumers** tab.
 2. Provide a name, a client ID, possibly a client secret, at least one redirect URI and save.

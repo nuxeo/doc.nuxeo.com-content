@@ -2,7 +2,7 @@
 title: Decoration Widget Types
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -67,7 +67,10 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}A series of widget types that are only useful to handle display of subwidgets, or just add tags surrounding other widgets.{{! /excerpt}}
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{! excerpt}}
+A series of widget types that are only useful to handle display of subwidgets, or just add tags surrounding other widgets.
+{{! /excerpt}}
 
 ## Container
 

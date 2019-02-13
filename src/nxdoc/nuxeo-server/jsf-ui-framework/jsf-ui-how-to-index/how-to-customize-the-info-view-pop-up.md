@@ -2,7 +2,7 @@
 title: How to Customize the Info-View Pop-Up
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -267,6 +267,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 The info-view pop-up displays the metadata of a selected document. You can customize it by Studio or an XML extension.&nbsp;The default info layout is used on the info view for documents that don't specify a specific info layout.
 
 ## Modifying the Info-View Pop-up by Default

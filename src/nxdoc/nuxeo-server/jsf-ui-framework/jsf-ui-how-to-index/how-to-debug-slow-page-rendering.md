@@ -2,7 +2,7 @@
 title: How to Debug Slow Page Rendering
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -30,28 +30,30 @@ confluence:
     source_link: /display/NXDOC/How+to+Debug+Slow+Page+Rendering
 tree_item_index: 1700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 09:42'
         message: pdate how-to topic
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-12 08:35'
         message: Format
         version: '3'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2016-07-08 17:05'
         message: ''
         version: '2'
-    - 
+    -
         author: Anahide Tchertchian
         date: '2016-07-08 15:18'
         message: ''
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 Several timers are available to debug slow JSF pages rendering.
 
 # Debug Phase Listener Timer

@@ -2,7 +2,7 @@
 title: How to Add a Button in the JSF UI
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -260,6 +260,7 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 Users actions are UI elements that the user will use to do an action in the application. It can be a link, an icon, a button. There are different categories of actions, that determine where they are displayed and under which form (button, icon, etc.). Clicking a user action will then trigger an automation chain.
 
 ## Adding a Button in the JSF UI

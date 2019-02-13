@@ -2,7 +2,7 @@
 title: How to Add a New Widget to the Default Summary Layout
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -85,10 +85,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 This how-to explains how to insert a new widget to the default Summary layout so that's displayed on all document Summary pages.
-
 {{! /excerpt}}
 
 {{#> callout type='info' }}

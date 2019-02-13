@@ -2,7 +2,7 @@
 title: How to Force Locale
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -164,10 +164,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 You can force the locale by removing other locales support. This is done in the&nbsp;`deployment-fragment.xml`&nbsp;file of your plugin.
-
 {{! /excerpt}}{{#> panel type='code' heading='"Sample extract of deployment-fragment.xml replacing other bundles\' contributions to faces-config.xml"'}}
 
 ```

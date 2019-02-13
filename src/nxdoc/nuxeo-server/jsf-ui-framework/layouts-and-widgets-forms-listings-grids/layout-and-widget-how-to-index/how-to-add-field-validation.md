@@ -2,7 +2,7 @@
 title: How to Add Field Validation
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -136,13 +136,11 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 When you create your own document type, you may need to impose a structure for some fields (phone number, zip code, ...) to your user. The Nuxeo Layout system is based on JSF that implements the notion of validator. Here we will explain how to do that with Nuxeo Studio and Nuxeo IDE.
-
 {{! /excerpt}}
-
-
 
 For a pure JSF fragment, see [How to validate fields of document at creation or update]({{page page='how-to-add-a-jsf-form-validation'}}).
 

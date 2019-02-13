@@ -2,7 +2,7 @@
 title: Filters and Access Controls
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -117,10 +117,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Filters configuration allows to control activation of an action, to control its visibility depending on the user rights, for instance, or selected documents, etc.
-
 {{! /excerpt}}
 
 ## {{> anchor 'filters'}}Managing Filters to Control an Action Visibility

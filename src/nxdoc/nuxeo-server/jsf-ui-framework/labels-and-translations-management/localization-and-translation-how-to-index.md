@@ -2,7 +2,7 @@
 title: Localization and Translation How-To Index
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2019-02-13'
     status: ok
 labels:
     - lts2016-ok
@@ -82,10 +82,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 This section provides how-tos to customize the localization and translation behavior of the Nuxeo Platform.
-
 {{! /excerpt}}
 
 &nbsp;

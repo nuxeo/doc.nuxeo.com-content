@@ -2,7 +2,7 @@
 title: 'How to Display Non-Folderish Documents (Files, Note, ...) in the Left Tree'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -69,10 +69,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 The left tree is built using a query that is ran recursively. One of the clauses of the query makes sure that only folderish documents are displayed (`AND&nbsp;ecm:mixinType = 'Folderish'`). The query is defined in the "tree_children" page provider. See below a sample override of this query without the "Folderish" clause. You can contribute to the "providers" extension using the[ XML Extensions]({{page page='how-to-contribute-to-an-extension'}}) feature.
-
 {{! /excerpt}}
 
 ```html/xml

@@ -2,7 +2,7 @@
 title: JSF UI Framework Overview
 review:
     comment: ''
-    date: '2015-12-14'
+    date: '2019-02-13'
     status: ok
 tree_item_index: 50
 toc: true
@@ -14,6 +14,8 @@ labels:
     - atchertchian
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 The Nuxeo Platform provides a web framework to build business applications for thin clients. This framework is based on the standard JEE view technology: Java Server Faces (JSF).
 
 ## Nuxeo JSF Technical Stack

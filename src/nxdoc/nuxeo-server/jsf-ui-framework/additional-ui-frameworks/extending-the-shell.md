@@ -2,7 +2,7 @@
 title: Extending The Shell
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -76,10 +76,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 This section is intended for developers who wants to provide new Shell commands, namespaces or Shell Features.
-
 {{! /excerpt}}
 
 **Table of contents:**

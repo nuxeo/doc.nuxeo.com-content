@@ -157,7 +157,8 @@ history:
 ---
 {{multiexcerpt 'DeprecatedAddon' space='nxdoc' page='generic-multi-excerpts'}}
 
-{{{multiexcerpt 'JSF-UI-required' page='/nxdoc/generic-multi-excerpts'}}}
+{{{multiexcerpt 'DeprecatedJSF' page='/nxdoc/generic-multi-excerpts'}}}
+
 
 {{! excerpt}}
 [Nuxeo Forum](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-forum) brings forums into the Nuxeo Platform. A forum is a discussion space in which users can talk together. A forum is organized around different topics, in which users can add comments. Topics and comments are displayed in threads.

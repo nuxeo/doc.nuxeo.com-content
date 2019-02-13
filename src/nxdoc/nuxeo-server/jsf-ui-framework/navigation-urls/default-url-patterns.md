@@ -2,7 +2,7 @@
 title: Default URL Patterns
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -92,6 +92,7 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 {{! excerpt}}
 
 This page introduces the URLs used in Nuxeo Platform and tries to bind them to services/addons.
@@ -100,14 +101,14 @@ This page introduces the URLs used in Nuxeo Platform and tries to bind them to s
 
 URLs:
 
-*   `/nuxeo/nxdoc`: navigation by document ID in Workspace tab
-*   `/nuxeo/nxpath`: navigation by document path in Workspace tab
-*   `/nuxeo/nxfile`: URL to download a file
-*   `/nuxeo/nxbigfile`: URL to download big files or automatic switch from nxfile if file size > 5 MB (default value)
-*   `/nuxeo/nxhome`: navigation under Home tab
-*   `/nuxeo/nxadmin`: navigation under Admin tab
-*   `/nuxeo/nxsearch`: navigation under Search tab
-*   `/nuxeo/nxdam`: navigation in DAM (when the DAM Nuxeo Package is installed)
+-  `/nuxeo/nxdoc`: navigation by document ID in Workspace tab
+-   `/nuxeo/nxpath`: navigation by document path in Workspace tab
+-   `/nuxeo/nxfile`: URL to download a file
+-   `/nuxeo/nxbigfile`: URL to download big files or automatic switch from nxfile if file size > 5 MB (default value)
+-   `/nuxeo/nxhome`: navigation under Home tab
+-   `/nuxeo/nxadmin`: navigation under Admin tab
+-   `/nuxeo/nxsearch`: navigation under Search tab
+-   `/nuxeo/nxdam`: navigation in DAM (when the DAM Nuxeo Package is installed)
 
 The [complete list of contributions](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.rest.URLService--urlpatterns) can be browsed on the explorer.
 

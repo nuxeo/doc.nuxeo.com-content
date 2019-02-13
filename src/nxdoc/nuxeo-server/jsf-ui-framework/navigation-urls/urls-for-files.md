@@ -2,7 +2,7 @@
 title: URLs for Files
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -162,6 +162,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 ## File URLs within JSF Context Only
 
 {{! multiexcerpt name='download_url_pattern'}}

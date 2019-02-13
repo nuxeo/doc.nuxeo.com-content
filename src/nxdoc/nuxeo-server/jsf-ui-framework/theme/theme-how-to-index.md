@@ -2,7 +2,7 @@
 title: Theme How-To Index
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2019-02-13'
     status: ok
 labels:
     - lts2016-ok

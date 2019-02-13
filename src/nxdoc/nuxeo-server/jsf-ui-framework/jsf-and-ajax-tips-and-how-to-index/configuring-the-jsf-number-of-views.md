@@ -2,7 +2,7 @@
 title: Configuring the JSF Number of Views
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -61,6 +61,7 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 The JSF/Seam stack used in the Nuxeo Platform uses server-side state saving: for each JSF component in the tree of graphical components, a state is saved server-side.
 
 Each JSF component tree state is associated to a unique identifier, and the number of states is configurable using the JSF parameters&nbsp;`com.sun.faces.numberOfViewsInSession` and `com.sun.faces.numberOfLogicalViews`.

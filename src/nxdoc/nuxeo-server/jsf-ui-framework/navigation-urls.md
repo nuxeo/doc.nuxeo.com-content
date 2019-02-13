@@ -2,7 +2,7 @@
 title: Navigation URLs
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -100,10 +100,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 There are two services that help building GET URLs to restore a Nuxeo context. The default configuration restores the current document, the view and current tabs.
-
 {{! /excerpt}}
 
 ## Document View Codec Service

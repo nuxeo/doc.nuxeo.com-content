@@ -2,7 +2,7 @@
 title: How to Make the New Button Appear on a Custom Folderish Document
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -143,10 +143,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 By default, if you create a folderish document type, the **New** button will not be displayed on the default summary view. This page explains how to add it, as well as how to add the **New** button to a custom tab.&nbsp;
-
 {{! /excerpt}}
 
 ## Adding the New&nbsp;Button to the Content Tab

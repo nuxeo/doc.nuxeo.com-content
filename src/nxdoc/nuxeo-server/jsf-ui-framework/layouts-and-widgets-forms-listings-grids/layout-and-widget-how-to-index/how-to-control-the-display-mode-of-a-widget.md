@@ -2,7 +2,7 @@
 title: How to Control the Display Mode of a Widget
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:
@@ -178,10 +178,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 It is a very frequent requirement to be able to control the display mode of a widget depending on some conditions such as the lifecycle state of the document, or the groups a user belongs to. Nuxeo Studio enables you to leverage the power of the Nuxeo Layout service and to implement your requirements using an expression when you configure your widget.
-
 {{! /excerpt}}
 
 For instance, when you are editing a document layout, whether it is the creation, edition or view layout, if you edit the widgets you dropped on the layout, you will see the "Advanced mode configuration" section.

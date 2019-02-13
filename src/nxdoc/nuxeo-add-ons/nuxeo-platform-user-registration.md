@@ -116,13 +116,13 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='Generic Multi-Excerpts'}}}
+
 {{! excerpt}}
 The [Nuxeo Platform User Registration add-on](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-user-registration) enables users to invite external users to access a specific space of the Platform or a limited set of spaces. The invitations must be approved by an administrator of the Platform.
 {{! /excerpt}}
 
 ## Installation
-
-{{{multiexcerpt 'JSF-UI-required' page='Generic Multi-Excerpts'}}}
 
 {{{multiexcerpt 'mp-installation-easy' page='Generic Multi-Excerpts'}}}
 
@@ -309,7 +309,7 @@ When you have been invited to a workspace, a folder or any type of space in the 
     ![]({{file name='invitation-password-creation.png' space='userdoc' page='managing-users-and-groups'}} ?w=300,border=true,thumbnail=true)
 3.  Log in to the Nuxeo Platform.
 
-Once the invited user has validated the invitation by clicking on the invitation link and setting his password, the administrator can see the invitation in **Accepted** state. 
+Once the invited user has validated the invitation by clicking on the invitation link and setting his password, the administrator can see the invitation in **Accepted** state.
 
 ## Technical Configuration Overview
 

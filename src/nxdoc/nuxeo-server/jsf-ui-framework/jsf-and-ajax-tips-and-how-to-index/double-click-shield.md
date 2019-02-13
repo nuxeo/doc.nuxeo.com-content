@@ -2,7 +2,7 @@
 title: Double Click Shield
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -127,10 +127,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 The "Double Click Shield" feature is enabled in the JSF interface and it addresses the issue described in the page [I Get an Error When I Click on Two Links Quickly]({{page space='nxdoc60' page='i-get-an-error-when-i-click-on-two-links-quickly'}}).
-
 {{! /excerpt}}
 
 The Double Click Shield prevents a form from being submitted twice. When you click many times on the same button that launches a&nbsp;server-side action, the feature will let the first click launch the action but will prevent any additional click. This is possible thanks to a jQuery plugin which listens to the submit event of a given form.

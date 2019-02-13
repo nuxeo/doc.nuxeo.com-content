@@ -2,7 +2,7 @@
 title: Labels and Translations Management
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -47,10 +47,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 The Framework supports resolution of translations using the standard Java Internationalisation mechanism.
-
 {{! /excerpt}}
 
 Labels can be gathered in .properties files and translated in properties file with the corresponding language suffix. Because of the modularity of the Nuxeo Platform, a specific mechanism allows the Nuxeo Runtime to "build" the complete resources file before deploying it in the web application. You can read the [Deployment Model of Nuxeo Platform]({{page page='understanding-bundles-deployment'}}) documentation page for a better understanding. Your plugin must declare the translation resources to the Nuxeo Runtime so that they are taken into account.

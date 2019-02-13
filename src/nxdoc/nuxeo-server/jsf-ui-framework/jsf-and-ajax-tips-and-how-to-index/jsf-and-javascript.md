@@ -2,7 +2,7 @@
 title: JSF and JavaScript
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -165,10 +165,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Getting a tag client id with JavaScript might be an issue. Here's how you can get your tag using DOM.
-
 {{! /excerpt}} {{#> callout type='warning' }}
 
 Some of this content is outdated and needs to be reviewed.

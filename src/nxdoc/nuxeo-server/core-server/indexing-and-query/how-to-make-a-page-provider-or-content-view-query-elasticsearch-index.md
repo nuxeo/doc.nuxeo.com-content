@@ -158,7 +158,7 @@ elasticsearch.override.pageproviders=default_search,document_content,section_con
 
 You can view the list of the Page Providers in the Admin Center/Elasticsearch/Page Provider tab, the `CoreQueryDocumentPageProvider` listed in blue can be overridden by Elasticsearch.
 
-{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 ## Configuring a New Content View (and underlying Page Provider) With Nuxeo Studio
 

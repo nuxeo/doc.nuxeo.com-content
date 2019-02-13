@@ -2,7 +2,7 @@
 title: Incremental Layouts and Actions
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -62,10 +62,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Actions are leveraged by the layout framework to include widgets inside layouts dynamically, benefiting from sorting and filtering features of actions within layouts.
-
 {{! /excerpt}}
 
 Configuration is a bit overkill for now; this could be simplified in the future, but the main principle is to:

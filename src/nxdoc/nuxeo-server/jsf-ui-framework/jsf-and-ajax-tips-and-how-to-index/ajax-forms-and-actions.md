@@ -2,7 +2,7 @@
 title: Ajax Forms and Actions
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -97,14 +97,12 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Here is some helpful tips and tricks when working with Ajax forms or actions.
-
-{{! /excerpt}} {{#> callout type='warning' }}
-
+{{! /excerpt}} {{#> callout type='warning'}}
 Some of this content is outdated and needs to be reviewed.
-
 {{/callout}}
 
 ## Generic Advice

@@ -2,7 +2,7 @@
 title: Document Layouts
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2019-02-13'
     status: ok
 labels:
     - lts2016-ok
@@ -86,10 +86,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Layouts can be linked to a document type by specifying the layout names in its definition.
-
 {{! /excerpt}}
 
 Here is a sample configuration excerpt:

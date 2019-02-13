@@ -2,7 +2,7 @@
 title: Suggestion Widget Types
 review:
     comment: ''
-    date: '2017-01-23'
+    date: '2019-02-13'
     status: ok
 labels:
     - lts2016-ok
@@ -248,10 +248,9 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 {{! excerpt}}
-
 A series of widget types for suggestions.
-
 {{! /excerpt}}
 
 Since 5.7.2, Nuxeo uses [select2](http://select2.github.io/select2/) for the suggestion widgets:

@@ -2,7 +2,7 @@
 title: How to Create a N-Level Select Widget
 review:
     comment: ''
-    date: '2017-12-01'
+    date: '2019-02-13'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:
@@ -171,10 +171,10 @@ history:
         message: ''
         version: '1'
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 In this page we provide samples to have a selection widget with 3 levels by contributing a "template widget" in Studio. Each sample code below is the sample for one widget that has a different behavior (described before the code).
-
 {{! /excerpt}}
 
 To create and use a new widget:

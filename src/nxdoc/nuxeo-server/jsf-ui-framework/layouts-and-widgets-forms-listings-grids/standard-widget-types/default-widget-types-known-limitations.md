@@ -2,7 +2,7 @@
 title: Default Widget Types Known Limitations
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -112,10 +112,9 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 {{! excerpt}}
-
 Some widgets have limitations in some specific conditions of use. We maintain a list of known problems here.
-
 {{! /excerpt}}
 
 *   **File widget cannot be used in an Ajax form.**

@@ -2,7 +2,7 @@
 title: How to Customize the Error Pages
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -229,6 +229,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 There are three error pages in the Nuxeo Platform, each of them can be customized:
 
 *   `nuxeo_error.jsp`: This is the default error page

@@ -2,7 +2,7 @@
 title: Generic Layout Usage
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -82,10 +82,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Layouts can be used with other kind of objects than documents.
-
 {{! /excerpt}}
 
 The field definition has to match a document property for which setters and getters will be available, or the `value` property must be passed explicitly for the binding to happen. Depending on the widget, other kinds of bindings can be done.

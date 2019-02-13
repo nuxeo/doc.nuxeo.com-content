@@ -2,7 +2,7 @@
 title: How to Override a Default Style
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2019-02-13'
     status: ok
 details:
     howto:
@@ -114,6 +114,8 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 Most of the default application styling is done using "dynamic" SCSS files referring to variables and flavors. These styles can be browsed [on GitHub](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/themes/sass).
 
 {{! excerpt}}

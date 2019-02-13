@@ -210,6 +210,7 @@ history:
 
 ---
 {{! multiexcerpt name='preview_functional_overview'}}
+
 The preview enables you to see an insight of your document.
 
 The PDF files preview is leveraged by [pdf.js by Mozilla](https://mozilla.github.io/pdf.js/). The preview of other file types are leveraged by the [Nuxeo Platform preview module](https://github.com/nuxeo-archives/nuxeo-features/tree/release-6.0/nuxeo-platform-preview).
@@ -224,7 +225,8 @@ Several means to preview documents are available.
     The document preview is displayed in a popup window.
     ![]({{file name='preview_popup.png' space='userdoc' page='preview'}} ?w=600,border=true)
 
-{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 *   On the JSF UI, you can also preview a document along with its main metadata on the [Info-View pop-up]({{page space='nxdoc' page='how-to-customize-the-info-view-pop-up'}}), accessible from any thumbnail listing.
     ![]({{file name='info_view_preview.png' space='userdoc' page='preview'}} ?w=600,border=true)
 

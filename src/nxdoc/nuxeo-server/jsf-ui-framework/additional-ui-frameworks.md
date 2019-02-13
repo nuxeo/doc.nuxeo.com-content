@@ -2,7 +2,7 @@
 title: Additional UI Frameworks
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2019-02-13'
     status: ok
 labels:
     - lts2016-ok
@@ -81,10 +81,9 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 {{! excerpt}}
-
 Nuxeo uses several UI frameworks beside the [JSF technology]({{page page='nuxeo-jsf-ui'}}) and the [Web Components-based Web UI]({{page page='web-ui'}}).
-
 {{! /excerpt}}
 
 <div class="row" data-equalizer data-equalize-on="medium">

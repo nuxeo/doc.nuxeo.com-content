@@ -2,7 +2,7 @@
 title: Content Views Display
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-02-13'
     status: ok
 labels:
     - content-review-lts2016
@@ -92,10 +92,10 @@ history:
         version: '1'
 
 ---
+{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 This chapter presents how content views are displayed on a page.
-
 {{! /excerpt}}
 
 Here is a typical content view display:
