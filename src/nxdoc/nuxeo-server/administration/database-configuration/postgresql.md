@@ -636,6 +636,16 @@ local   all         all                               md5
 host    all         all         127.0.0.1/32          md5
 ```
 
+## TLS/SSL Configuration
+
+If you have chosen to configure your PostgreSQL server to use TLS/SSL connections, then you should use the standard PostgreSQL JDBC connection parameters to specify the configuration parameters.
+
+For a fully secure communication, use the `sslcert`, `sslkey`, and `sslrootcert` JDBC connection parameters with `sslmode=verify-full`. For instance you could define:
+
+    nuxeo.db.jdbc.url=jdbc:postgresql://${nuxeo.db.host}:${nuxeo.db.port}/${nuxeo.db.name}?ssl=true&sslmode=verify-full&...
+
+Please refer to https://jdbc.postgresql.org/documentation/head/connect.html for more about the PostgreSQL JDBC connection parameters and more specifically to https://jdbc.postgresql.org/documentation/head/ssl-client.html for the SSL aspects.
+
 ## Performance Tuning
 
 ### Shared Buffers and System Cache
