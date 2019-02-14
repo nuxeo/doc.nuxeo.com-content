@@ -9,15 +9,30 @@ toc: true
 tree_item_index: 730
 ---
 
-Discover the changes we brought in our latest Nuxeo Studio updates.
+Discover upcoming and recent changes in Nuxeo Studio.
 
-# January
+## Upcoming Changes
 
-{{{multiexcerpt 'studio-updates-2019-01' page='studio-updates-2019-01'}}}
+### Git Status Bar
+Some actions found in the header today are moved into a new status bar at the bottom of the screen ([NXS-5080](https://jira.nuxeo.com/browse/NXS-5080)). This is a first step towards providing greater consistency in the Nuxeo Online Services ecosystem.
 
-<!--
-[More information about bugs fixed since last release notes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.3.0','3.3.1','3.4.0','3.4.1','3.4.2','3.4.3','3.5.0'%29) is available in our bug tracking tool.
--->
+Some changes also happen to the Git actions at the same time:
+- All conflicts will be visible at once so you can better understand the result of merging a branch.
+- In advanced mode, commit and push actions will be separated so that we can display the commits you will push and what they contain before you decide to do it or not.
+
+### Folderish Documents Configuration
+When using LTS 2019 or more recent, visually configure columns to display for every folderish document type you create ([NXS-4994](https://jira.nuxeo.com/browse/NXS-4994)). To prevent disruption only newly configured layouts will benefit from this feature. You can erase the existing configuration and generate it again to benefit from it otherwise.
+
+### Default Theme Selection
+Choose the theme to use by default with the click of a button ([NXS-4891](https://jira.nuxeo.com/browse/NXS-4891)).
+
+### Parameters Mapping in Search and Listings Configuration
+When configuring a UI element for a search or a listing, search parameters are visible right away. The corresponding JavaScript expression to write benefits from autocompletion ([NXS-5122](https://jira.nuxeo.com/browse/NXS-5122)).
+
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.6.0'%29) is available in our bug tracking tool.
+
+## Recently Released Changes
+{{{multiexcerpt 'studio-updates-2019-02' page='studio-updates-2019-02'}}}
 
 * * *
 
@@ -25,6 +40,7 @@ Discover the changes we brought in our latest Nuxeo Studio updates.
 
 | Release&nbsp;Date  | Summary  |
 |---|---|
+|[January 2019]({{page page='studio-updates-2019-01'}})|  Studio Designer interface improvements.|
 |[December 2018]({{page page='2018-12-12-studio-3-2-0'}})|  Faster layouts configuration.|
 |[November 2018]({{page page='2018-11-26-studio-3-1-0'}})| Firefox support for Studio Designer, performance improvements, drag and drop schema properties in Studio Designer and information about your subscription status.|
 |[October 2018]({{page page='2018-10-29-studio-73-24'}})| Develop faster with Git access and Quick Switcher, JSF to Web UI migration early access release.|
