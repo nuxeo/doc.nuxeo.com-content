@@ -221,7 +221,7 @@ The new TrashService fires dedicated events `documentTrashed` and `documentUntra
 
 As TrashService now leverages the system property `ecm:isTrashed` by default, you need to migrate your instance.
 
-1. You need to replace all occurences of `ecm:currentLifeCycleState` with `deleted` state by `ecm:isTrashed` in your NXQL/Page Provider/Content View, etc.</br>
+1. You need to replace all occurrences of `ecm:currentLifeCycleState` with `deleted` state by `ecm:isTrashed` in your NXQL/Page Provider/Content View, etc.</br>
    For instance `ecm:currentLifeCycleState = 'deleted'` is to replace by `ecm:isTrashed = 1`.
 1. Add the contribution from section [Keeping old trash implementation](#keeping-old-trash-implementation).
 1. In JSF UI, go to **Admin** > **System Information** > **Migration**, click the button next to **Migration of in the trash storage model** field and wait until the migration is completed.
