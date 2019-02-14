@@ -111,6 +111,10 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 
 #### Comment Manager
 
+##### Keeping Old Comments
+{{{multiexcerpt 'upgrade-10.3-keeping-comments' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
+##### Comment Migration
 {{{multiexcerpt 'upgrade-10.3-comments-migration' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 ### Log4j 2
