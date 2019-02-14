@@ -18,7 +18,7 @@ Free of charge for all customers, the early access program offers an opportunity
 
 ## Early Access Program Features
 
-When some features are stable but partially complete, we offer them through the Early access program. For example, a tool that supports a limited number of browsers, or a configuration screen that does not expose all advanced options people may need yet, could be available first through early access with a specific tag.
+When some features are stable but partially complete, we offer them through the Early Access program. For example, a tool that supports a limited number of browsers, or a configuration screen that does not expose all advanced options people may need yet, could be available first through Early Access with a specific tag.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Early Access /Early Access Feature Tag
@@ -41,9 +41,9 @@ An improvement to our browser extension that provides an instant preview of your
 
 ## Activating the Early Access Program
 
-You can choose to benefit from the early access program on each of your project. You can enable and disable early access features as you want. When enabled, all early access features are available to anyone accessing to the project.
+You can choose to benefit from the Early Access program on each of your project. You can enable and disable Early Access features as you want. When enabled, all Early Access features are available to anyone accessing the project.
 
-The Early access program is opt-in. To activate it on a Studio project, you need to be granted the role of the `project owner` by our support team: to request it, simply [open a support ticket](https://jira.nuxeo.com). This role enables you to edit your project settings, including enabling or disabling early access features.
+The Early access program is opt-in. To activate it on a Studio project, you need to be granted the role of the `project owner` by our support team. To request it, simply [open a support ticket](https://jira.nuxeo.com). This role enables you to edit your project settings, including enabling or disabling Early Access features.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Early Access /Early Access Connect
@@ -52,7 +52,7 @@ The Early access program is opt-in. To activate it on a Studio project, you need
 --}}
 ![Early Access Connect](nx_asset://9e10ae09-b9f4-4215-9a21-a7d8ade6ece2 ?w=650,border=true)
 
-Once you have the project owner role, to enable or disable early access:
+Once you have the project owner role, to enable or disable Early Access:
 
 1. Go to the Nuxeo Online Services portal.
 1. In **My Applications**, click on the project name to access its settings.
