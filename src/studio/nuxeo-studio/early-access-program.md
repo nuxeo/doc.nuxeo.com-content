@@ -9,7 +9,7 @@ review:
 toc: true
 ---
 {{! excerpt}}
-Free of charge for all our customers, the early access program offers an opportunity to:
+Free of charge for all customers, the early access program offers an opportunity to:
 
 - benefit from new stable features before everyone else
 - be part of the community and co-create with us
@@ -25,7 +25,7 @@ When some features are stable but partially complete, we offer them through the 
     name: early-access-feature.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Early Access Feature Tag](nx_asset://37c5c725-f2a4-4f38-8a59-bdce6ddeb73c ?w=300,border=true)
+![Early Access Feature Tag](nx_asset://37c5c725-f2a4-4f38-8a59-bdce6ddeb73c ?w=250,border=true)
 
 Our goal is to deliver features and get your feedback quickly, so that we can adjust our priorities to better fit your needs.
 
