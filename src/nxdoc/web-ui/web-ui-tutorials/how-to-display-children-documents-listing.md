@@ -51,6 +51,16 @@ In this tutorial we want to display interesting business properties when listing
 
 Now click on **Configure layouts in Designer** at the top right of the page and configure the 5 layouts under your **contractsPortfolio** document type by clicking on **CONFIGURE** on each layout and save your changes.
 
+Optional: You can display your document in a table layout:
+
+1. Go to the **view** layout of your **contractsPortfolio** document type.
+1. Click **Edit**.
+1. Click on **nuxeo-results** and then **table**.
+1. At the bottom-right of your screen, click **Switch to table editor**.
+1. Select table, grid or justified grid.
+1. Drag and drop in the Main View the properties your want to see as table headers.
+1. Click **Save**
+
 
 ## Create a Page Provider
 
