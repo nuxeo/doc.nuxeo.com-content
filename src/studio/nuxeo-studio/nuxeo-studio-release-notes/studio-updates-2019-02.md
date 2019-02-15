@@ -9,14 +9,14 @@ review:
 toc: true
 hidden: true
 ---
-
 ## Released Changes
-
 {{! multiexcerpt name='studio-updates-2019-02'}}
 ### New Layout Blocks Menu in Studio Designer
 This menu lets you create reusable sets of properties, that can be used in your layouts afterwards.
-<br>For example, you could define a form where you would change the elements configuration, then make sure these changes apply to all your document type layouts by reusing it.
-For more information, see [UI]({{page version='' space='studio' page='ui-designer'}}).
+For example, you could define a form where you would change the elements configuration, then make sure these changes apply to all your document type layouts by reusing it.
+</br>
+
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>**For more information, see the UI page**]({{page version='' space='studio' page='ui-designer'}}).
 
 At this stage forms can only be used when switching to code in a layout. A future update will allow them to be dragged and dropped from the catalog in the visual editor mode as well.
 
@@ -24,7 +24,9 @@ At this stage forms can only be used when switching to code in a layout. A futur
 JSF UI form layouts are migrated as forms in Studio Designer.
 
 Content views containing parameters are supported, query parameters are mapped to page provider predicates.
-For more information, see [Migration Services]({{page version='' space='studio' page='migration-services'}}).
+</br>
+
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>**For more information, see the Migration Services page**]({{page version='' space='studio' page='migration-services'}}).
 
 ### Noteworthy Improvements and Bugfixes
 
