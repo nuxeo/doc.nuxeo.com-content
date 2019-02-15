@@ -1,189 +1,158 @@
 ---
 title: Documents
 review:
-    comment: ''
-    date: ''
-    status: ok
+  comment: ''
+  date: ''
+  status: ok
 labels:
-    - document-type
+  - document-type
 toc: true
 confluence:
-    ajs-parent-page-id: '12911801'
-    ajs-parent-page-title: Content Model
-    ajs-space-key: Studio
-    ajs-space-name: Nuxeo Online Services
-    canonical: Documents
-    canonical_source: 'https://doc.nuxeo.com/display/Studio/Documents'
-    page_id: '12911979'
-    shortlink: awXF
-    shortlink_source: 'https://doc.nuxeo.com/x/awXF'
-    source_link: /display/Studio/Documents
+  ajs-parent-page-id: '12911801'
+  ajs-parent-page-title: Content Model
+  ajs-space-key: Studio
+  ajs-space-name: Nuxeo Online Services
+  canonical: Documents
+  canonical_source: 'https://doc.nuxeo.com/display/Studio/Documents'
+  page_id: '12911979'
+  shortlink: awXF
+  shortlink_source: 'https://doc.nuxeo.com/x/awXF'
+  source_link: /display/Studio/Documents
 tree_item_index: 200
 history:
-    -
-        author: Manon Lumeau
-        date: '2016-04-28 13:44'
-        message: 'ix Studio menu label'
-        version: '31'
-    -
-        author: Solen Guitter
-        date: '2016-02-09 16:13'
-        message: Add screenshot for schema and layouts tabs
-        version: '30'
-    -
-        author: Solen Guitter
-        date: '2016-02-09 10:53'
-        message: 'NXDOC-769: update Schema tab description'
-        version: '29'
-    -
-        author: Solen Guitter
-        date: '2015-09-07 09:17'
-        message: Fix format and update related how-to's.
-        version: '28'
-    -
-        author: Solen Guitter
-        date: '2015-01-26 16:09'
-        message: ''
-        version: '27'
-    -
-        author: Solen Guitter
-        date: '2015-01-26 16:05'
-        message: ''
-        version: '26'
-    -
-        author: Solen Guitter
-        date: '2015-01-26 15:30'
-        message: ''
-        version: '25'
-    -
-        author: Solen Guitter
-        date: '2014-11-05 23:01'
-        message: ''
-        version: '24'
-    -
-        author: Solen Guitter
-        date: '2014-09-17 14:49'
-        message: ''
-        version: '23'
-    -
-        author: Solen Guitter
-        date: '2014-09-12 16:37'
-        message: ''
-        version: '22'
-    -
-        author: Manon Lumeau
-        date: '2014-08-14 11:05'
-        message: ''
-        version: '21'
-    -
-        author: Manon Lumeau
-        date: '2014-07-10 16:20'
-        message: ''
-        version: '20'
-    -
-        author: Manon Lumeau
-        date: '2014-07-02 15:29'
-        message: ''
-        version: '19'
-    -
-        author: Manon Lumeau
-        date: '2014-07-02 11:59'
-        message: ''
-        version: '18'
-    -
-        author: Manon Lumeau
-        date: '2014-07-02 11:55'
-        message: ''
-        version: '17'
-    -
-        author: Manon Lumeau
-        date: '2014-07-01 12:39'
-        message: ''
-        version: '16'
-    -
-        author: Manon Lumeau
-        date: '2014-07-01 10:35'
-        message: ''
-        version: '15'
-    -
-        author: Manon Lumeau
-        date: '2014-06-30 18:00'
-        message: ''
-        version: '14'
-    -
-        author: Benjamin Jalon
-        date: '2013-07-05 01:40'
-        message: ''
-        version: '13'
-    -
-        author: Solen Guitter
-        date: '2013-07-04 12:05'
-        message: 'Added links, fixed typos and resized screenshots'
-        version: '12'
-    -
-        author: Alain Escaffre
-        date: '2013-01-03 11:06'
-        message: ''
-        version: '11'
-    -
-        author: Alain Escaffre
-        date: '2013-01-03 05:13'
-        message: ''
-        version: '10'
-    -
-        author: Alain Escaffre
-        date: '2013-01-03 05:09'
-        message: ''
-        version: '9'
-    -
-        author: Alain Escaffre
-        date: '2013-01-03 01:01'
-        message: ''
-        version: '8'
-    -
-        author: Alain Escaffre
-        date: '2013-01-03 00:59'
-        message: ''
-        version: '7'
-    -
-        author: Alain Escaffre
-        date: '2013-01-02 01:18'
-        message: ''
-        version: '6'
-    -
-        author: Alain Escaffre
-        date: '2013-01-02 01:12'
-        message: ''
-        version: '5'
-    -
-        author: Alain Escaffre
-        date: '2013-01-02 01:09'
-        message: ''
-        version: '4'
-    -
-        author: Alain Escaffre
-        date: '2013-01-02 00:52'
-        message: ''
-        version: '3'
-    -
-        author: Alain Escaffre
-        date: '2013-01-02 00:18'
-        message: ''
-        version: '2'
-    -
-        author: Benjamin Jalon
-        date: '2012-12-04 08:41'
-        message: ''
-        version: '1'
-
+  - author: Manon Lumeau
+    date: '2016-04-28 13:44'
+    message: 'ix Studio menu label'
+    version: '31'
+  - author: Solen Guitter
+    date: '2016-02-09 16:13'
+    message: Add screenshot for schema and layouts tabs
+    version: '30'
+  - author: Solen Guitter
+    date: '2016-02-09 10:53'
+    message: 'NXDOC-769: update Schema tab description'
+    version: '29'
+  - author: Solen Guitter
+    date: '2015-09-07 09:17'
+    message: Fix format and update related how-to's.
+    version: '28'
+  - author: Solen Guitter
+    date: '2015-01-26 16:09'
+    message: ''
+    version: '27'
+  - author: Solen Guitter
+    date: '2015-01-26 16:05'
+    message: ''
+    version: '26'
+  - author: Solen Guitter
+    date: '2015-01-26 15:30'
+    message: ''
+    version: '25'
+  - author: Solen Guitter
+    date: '2014-11-05 23:01'
+    message: ''
+    version: '24'
+  - author: Solen Guitter
+    date: '2014-09-17 14:49'
+    message: ''
+    version: '23'
+  - author: Solen Guitter
+    date: '2014-09-12 16:37'
+    message: ''
+    version: '22'
+  - author: Manon Lumeau
+    date: '2014-08-14 11:05'
+    message: ''
+    version: '21'
+  - author: Manon Lumeau
+    date: '2014-07-10 16:20'
+    message: ''
+    version: '20'
+  - author: Manon Lumeau
+    date: '2014-07-02 15:29'
+    message: ''
+    version: '19'
+  - author: Manon Lumeau
+    date: '2014-07-02 11:59'
+    message: ''
+    version: '18'
+  - author: Manon Lumeau
+    date: '2014-07-02 11:55'
+    message: ''
+    version: '17'
+  - author: Manon Lumeau
+    date: '2014-07-01 12:39'
+    message: ''
+    version: '16'
+  - author: Manon Lumeau
+    date: '2014-07-01 10:35'
+    message: ''
+    version: '15'
+  - author: Manon Lumeau
+    date: '2014-06-30 18:00'
+    message: ''
+    version: '14'
+  - author: Benjamin Jalon
+    date: '2013-07-05 01:40'
+    message: ''
+    version: '13'
+  - author: Solen Guitter
+    date: '2013-07-04 12:05'
+    message: 'Added links, fixed typos and resized screenshots'
+    version: '12'
+  - author: Alain Escaffre
+    date: '2013-01-03 11:06'
+    message: ''
+    version: '11'
+  - author: Alain Escaffre
+    date: '2013-01-03 05:13'
+    message: ''
+    version: '10'
+  - author: Alain Escaffre
+    date: '2013-01-03 05:09'
+    message: ''
+    version: '9'
+  - author: Alain Escaffre
+    date: '2013-01-03 01:01'
+    message: ''
+    version: '8'
+  - author: Alain Escaffre
+    date: '2013-01-03 00:59'
+    message: ''
+    version: '7'
+  - author: Alain Escaffre
+    date: '2013-01-02 01:18'
+    message: ''
+    version: '6'
+  - author: Alain Escaffre
+    date: '2013-01-02 01:12'
+    message: ''
+    version: '5'
+  - author: Alain Escaffre
+    date: '2013-01-02 01:09'
+    message: ''
+    version: '4'
+  - author: Alain Escaffre
+    date: '2013-01-02 00:52'
+    message: ''
+    version: '3'
+  - author: Alain Escaffre
+    date: '2013-01-02 00:18'
+    message: ''
+    version: '2'
+  - author: Benjamin Jalon
+    date: '2012-12-04 08:41'
+    message: ''
+    version: '1'
 ---
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
+
 - [Course on Content Model Design](https://university.nuxeo.com/learn/public/course/view/elearning/12/content-model-design-in-nuxeo-studio)
 - [Video on a simple Nuxeo Project Creation](https://university.nuxeo.com/learn/public/course/view/elearning/144/nuxeo-platform-quickstart-creation-of-a-simple-nuxeo-studio-project)
-![]({{file version='' space='nxdoc' page='university' name='university-content-model.png'}} ?w=450,border=true)
-{{/callout}}
+  ![]({{file version='' space='nxdoc' page='university' name='university-content-model.png'}} ?w=450,border=true)
+  {{/callout}}
 
 ## Concept
 
@@ -197,8 +166,8 @@ To create a document type, click on button "**New**".
 
 ![]({{file name='doc_type_creation.png' space='nxdoc' page='how-to-define-a-document-type'}} ?w=350,h=269,border=true)
 
-*   **Feature ID**: The id of the document type. Will be used as the technical id at generation. Convention is to use a capital for the first letter.
-*   **Extend**: The document type that the type being created will extend. Local types are the ones created in your Studio project. Default types are the ones part of the Nuxeo distribution you use (Nuxeo DM 5.6, ...)
+- **Feature ID**: The id of the document type. Will be used as the technical id at generation. Convention is to use a capital for the first letter.
+- **Extend**: The document type that the type being created will extend. Local types are the ones created in your Studio project. Default types are the ones part of the Nuxeo distribution you use (Nuxeo DM 5.6, ...)
 
 {{#> callout type='info' heading='Adding a custom type' }}
 if you don't find the default type you are looking for, you can add it [using the custom type registry]({{page page='registries'}}).
@@ -215,6 +184,7 @@ if you don't find the default type you are looking for, you can add it [using th
 - **Label**: See the [Creating a Document Type](#creating-a-document-type) section of this page.
 - **Category**: The category defines in which column the document type appears on the "new Document" pop up in Nuxeo Server, when using JSF UI. If you don't want to use the default categories, you can add a new one [using the custom document category registry]({{page page='registries'}}).
   ![]({{file name='available-documents-workspace.png' space='userdoc' page='creating-content'}} ?w=500,h=216,border=true)
+  {{{multiexcerpt 'DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
 - **Icon**: The icon displayed in the default list view.
 - **Large Icon**: The icon displayed in the "Available document types" pop-up when using JSF UI and the Icon view (view available up to Nuxeo Platform 5.8).
 - **SVG Icon**: The icon displayed in the document creation pop-up when using Web UI. If you've already configured your document type icons by uploading the corresponding files in Designer's "Resources" tab, it overrides the configuration made in this field.
@@ -249,6 +219,10 @@ Select the Nuxeo JSF UI target package in your [Application Definition]({{page p
 {{! /multiexcerpt}}
 {{/callout}}
 
+{{#> callout type='warning' }}
+The JSF UI addon is deprecated since Nuxeo Platform LTS 2019. You can define Layouts with Studio Designer. For more information, please refer to the [UI documentation]({{page version='' space='studio' page='ui-designer'}}#layouts).
+{{/callout}}
+
 On those tabs, you can respectively configure the creation, edition, view and header layouts of the document type you are designing. They work like the [form layouts]({{page page='form-layouts'}}) feature, thus you can follow the same instructions.
 
 However there are a few differences/additional features:
@@ -264,7 +238,7 @@ However there are a few differences/additional features:
 ![]({{file name='doc_type_tabs_tab.png' space='nxdoc' page='how-to-define-a-document-type'}} ?w=650,border=true)
 
 {{#> callout type='info' heading='Requirement'}}
-  {{{multiexcerpt 'tab-jsf-ui-target-package-requirement' page='documents'}}}
+{{{multiexcerpt 'tab-jsf-ui-target-package-requirement' page='documents'}}}
 {{/callout}}
 
 Documents in DM are displayed with a series of tabs to display all the actions that can be done on documents. By default, a new document type will hold all the tabs. From this view in Studio, you can disable some of them, for the document type you are configuring. This is a binary activation/inactivation. If you want to refine the tabs display rules, you can [contribute XML extensions to the action service](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--actions), so as to override existing contributions (for advanced users).
@@ -274,7 +248,7 @@ Documents in DM are displayed with a series of tabs to display all the actions t
 ![]({{file name='doc_type_content_view.png'}} ?w=650,border=true)
 
 {{#> callout type='info' heading='Requirement'}}
-  {{{multiexcerpt 'tab-jsf-ui-target-package-requirement' page='documents'}}}
+{{{multiexcerpt 'tab-jsf-ui-target-package-requirement' page='documents'}}}
 {{/callout}}
 
 Content view tabs are tabs that display a list of documents in a table, that is the result of an [NXQL]({{page space='nxdoc' page='nxql'}}) query (a content view). You configure the content view with the [content view feature]({{page page='content-views'}}) and just reference it here.
@@ -283,13 +257,13 @@ Content view tabs are tabs that display a list of documents in a table, that is 
 - **Trash content**: you can choose which content view is used for the document that are displayed in the trash. This appears only for document types that are folderish.
 - **Additional tabs configuration**:
 
-    - **Label**: The name displayed for this new tab. Can be a translated key.
-    - **Content views**: You can reference several content views that will be displayed one after the other.
-    - **Order**: The place of the tab on the document . You can put numbers like 0, 5, 10, 40, 150, ...
-    - **Tab Activation**: (TODO: a specific page for this screen that appears in many places on Studio).
+  - **Label**: The name displayed for this new tab. Can be a translated key.
+  - **Content views**: You can reference several content views that will be displayed one after the other.
+  - **Order**: The place of the tab on the document . You can put numbers like 0, 5, 10, 40, 150, ...
+  - **Tab Activation**: (TODO: a specific page for this screen that appears in many places on Studio).
 
 {{#> callout type='info' heading='Using the Tabs feature'}}
-  Adding a tab that displays a content view using this feature is easy and straightforward, but you can also use the [Tabs feature]({{page page='tabs'}}) that provides more refinements like the ability to add buttons, other information, wrappers, etc...
+Adding a tab that displays a content view using this feature is easy and straightforward, but you can also use the [Tabs feature]({{page page='tabs'}}) that provides more refinements like the ability to add buttons, other information, wrappers, etc...
 {{/callout}}
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}

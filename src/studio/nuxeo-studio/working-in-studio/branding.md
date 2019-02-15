@@ -486,9 +486,7 @@ To customize the login page, you can also remove the news and footer boxes.
 
 ## Branding Options with JSF UI
 
-{{#> callout type='warning' }}
-The JSF UI addons is deprecated since Nuxeo Platform LTS 2019.
-{{/callout}}
+{{{multiexcerpt 'DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
 
 If you are working with JSF UI, some branding options differ.
 

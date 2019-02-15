@@ -1,217 +1,179 @@
 ---
 title: Content View - Query and Form Tab
 review:
-    comment: ''
-    date: ''
-    status: ok
+  comment: ''
+  date: ''
+  status: ok
 labels:
-    - content-view
+  - content-view
 toc: true
 confluence:
-    ajs-parent-page-id: '12912765'
-    ajs-parent-page-title: Content Views
-    ajs-space-key: Studio
-    ajs-space-name: Nuxeo Online Services
-    canonical: Content+View+-+Query+and+Form+Tab
-    canonical_source: 'https://doc.nuxeo.com/display/Studio/Content+View+-+Query+and+Form+Tab'
-    page_id: '12913133'
-    shortlink: 7QnF
-    shortlink_source: 'https://doc.nuxeo.com/x/7QnF'
-    source_link: /display/Studio/Content+View+-+Query+and+Form+Tab
+  ajs-parent-page-id: '12912765'
+  ajs-parent-page-title: Content Views
+  ajs-space-key: Studio
+  ajs-space-name: Nuxeo Online Services
+  canonical: Content+View+-+Query+and+Form+Tab
+  canonical_source: 'https://doc.nuxeo.com/display/Studio/Content+View+-+Query+and+Form+Tab'
+  page_id: '12913133'
+  shortlink: 7QnF
+  shortlink_source: 'https://doc.nuxeo.com/x/7QnF'
+  source_link: /display/Studio/Content+View+-+Query+and+Form+Tab
 tree_item_index: 100
 history:
-    -
-        author: Solen Guitter
-        date: '2015-09-07 09:19'
-        message: ''
-        version: '38'
-    -
-        author: Manon Lumeau
-        date: '2015-08-28 14:40'
-        message: ''
-        version: '37'
-    -
-        author: Solen Guitter
-        date: '2014-11-03 18:55'
-        message: ''
-        version: '36'
-    -
-        author: Solen Guitter
-        date: '2014-11-03 16:11'
-        message: ''
-        version: '35'
-    -
-        author: Solen Guitter
-        date: '2014-11-03 16:09'
-        message: ''
-        version: '34'
-    -
-        author: Solen Guitter
-        date: '2014-10-21 16:55'
-        message: ''
-        version: '33'
-    -
-        author: Solen Guitter
-        date: '2014-10-21 16:00'
-        message: ''
-        version: '32'
-    -
-        author: Solen Guitter
-        date: '2014-10-21 15:56'
-        message: ''
-        version: '31'
-    -
-        author: Solen Guitter
-        date: '2014-10-21 15:56'
-        message: 'Add 6.0 flags, update screenshots, format'
-        version: '30'
-    -
-        author: Solen Guitter
-        date: '2014-09-30 11:26'
-        message: ''
-        version: '29'
-    -
-        author: Solen Guitter
-        date: '2014-08-22 10:17'
-        message: ''
-        version: '28'
-    -
-        author: Solen Guitter
-        date: '2014-08-22 10:16'
-        message: ''
-        version: '27'
-    -
-        author: Solen Guitter
-        date: '2014-08-22 10:16'
-        message: ''
-        version: '26'
-    -
-        author: Manon Lumeau
-        date: '2014-08-21 12:10'
-        message: ''
-        version: '25'
-    -
-        author: Manon Lumeau
-        date: '2014-08-14 15:09'
-        message: ''
-        version: '24'
-    -
-        author: Manon Lumeau
-        date: '2014-08-14 15:09'
-        message: ''
-        version: '23'
-    -
-        author: Solen Guitter
-        date: '2014-06-26 12:21'
-        message: ''
-        version: '22'
-    -
-        author: Solen Guitter
-        date: '2013-08-29 17:23'
-        message: ''
-        version: '21'
-    -
-        author: Benjamin Jalon
-        date: '2013-02-11 17:04'
-        message: ''
-        version: '20'
-    -
-        author: Benjamin Jalon
-        date: '2013-02-11 16:28'
-        message: ''
-        version: '19'
-    -
-        author: Benjamin Jalon
-        date: '2013-02-11 16:14'
-        message: ''
-        version: '18'
-    -
-        author: Benjamin Jalon
-        date: '2013-02-11 14:56'
-        message: ''
-        version: '17'
-    -
-        author: Benjamin Jalon
-        date: '2013-02-11 14:41'
-        message: ''
-        version: '16'
-    -
-        author: Benjamin Jalon
-        date: '2013-02-11 14:41'
-        message: ''
-        version: '15'
-    -
-        author: Benjamin Jalon
-        date: '2013-02-11 13:14'
-        message: ''
-        version: '14'
-    -
-        author: Benjamin Jalon
-        date: '2013-02-11 13:14'
-        message: ''
-        version: '13'
-    -
-        author: Benjamin Jalon
-        date: '2013-01-15 20:02'
-        message: ''
-        version: '12'
-    -
-        author: Benjamin Jalon
-        date: '2013-01-15 20:01'
-        message: ''
-        version: '11'
-    -
-        author: Benjamin Jalon
-        date: '2013-01-15 20:01'
-        message: ''
-        version: '10'
-    -
-        author: Benjamin Jalon
-        date: '2013-01-15 19:03'
-        message: ''
-        version: '9'
-    -
-        author: Benjamin Jalon
-        date: '2013-01-15 18:50'
-        message: ''
-        version: '8'
-    -
-        author: Benjamin Jalon
-        date: '2013-01-15 18:32'
-        message: ''
-        version: '7'
-    -
-        author: Benjamin Jalon
-        date: '2013-01-15 18:32'
-        message: ''
-        version: '6'
-    -
-        author: Benjamin Jalon
-        date: '2013-01-15 18:26'
-        message: ''
-        version: '5'
-    -
-        author: Benjamin Jalon
-        date: '2013-01-15 18:26'
-        message: ''
-        version: '4'
-    -
-        author: Benjamin Jalon
-        date: '2013-01-15 18:24'
-        message: ''
-        version: '3'
-    -
-        author: Benjamin Jalon
-        date: '2013-01-15 18:24'
-        message: ''
-        version: '2'
-    -
-        author: Benjamin Jalon
-        date: '2013-01-15 17:53'
-        message: ''
-        version: '1'
-
+  - author: Solen Guitter
+    date: '2015-09-07 09:19'
+    message: ''
+    version: '38'
+  - author: Manon Lumeau
+    date: '2015-08-28 14:40'
+    message: ''
+    version: '37'
+  - author: Solen Guitter
+    date: '2014-11-03 18:55'
+    message: ''
+    version: '36'
+  - author: Solen Guitter
+    date: '2014-11-03 16:11'
+    message: ''
+    version: '35'
+  - author: Solen Guitter
+    date: '2014-11-03 16:09'
+    message: ''
+    version: '34'
+  - author: Solen Guitter
+    date: '2014-10-21 16:55'
+    message: ''
+    version: '33'
+  - author: Solen Guitter
+    date: '2014-10-21 16:00'
+    message: ''
+    version: '32'
+  - author: Solen Guitter
+    date: '2014-10-21 15:56'
+    message: ''
+    version: '31'
+  - author: Solen Guitter
+    date: '2014-10-21 15:56'
+    message: 'Add 6.0 flags, update screenshots, format'
+    version: '30'
+  - author: Solen Guitter
+    date: '2014-09-30 11:26'
+    message: ''
+    version: '29'
+  - author: Solen Guitter
+    date: '2014-08-22 10:17'
+    message: ''
+    version: '28'
+  - author: Solen Guitter
+    date: '2014-08-22 10:16'
+    message: ''
+    version: '27'
+  - author: Solen Guitter
+    date: '2014-08-22 10:16'
+    message: ''
+    version: '26'
+  - author: Manon Lumeau
+    date: '2014-08-21 12:10'
+    message: ''
+    version: '25'
+  - author: Manon Lumeau
+    date: '2014-08-14 15:09'
+    message: ''
+    version: '24'
+  - author: Manon Lumeau
+    date: '2014-08-14 15:09'
+    message: ''
+    version: '23'
+  - author: Solen Guitter
+    date: '2014-06-26 12:21'
+    message: ''
+    version: '22'
+  - author: Solen Guitter
+    date: '2013-08-29 17:23'
+    message: ''
+    version: '21'
+  - author: Benjamin Jalon
+    date: '2013-02-11 17:04'
+    message: ''
+    version: '20'
+  - author: Benjamin Jalon
+    date: '2013-02-11 16:28'
+    message: ''
+    version: '19'
+  - author: Benjamin Jalon
+    date: '2013-02-11 16:14'
+    message: ''
+    version: '18'
+  - author: Benjamin Jalon
+    date: '2013-02-11 14:56'
+    message: ''
+    version: '17'
+  - author: Benjamin Jalon
+    date: '2013-02-11 14:41'
+    message: ''
+    version: '16'
+  - author: Benjamin Jalon
+    date: '2013-02-11 14:41'
+    message: ''
+    version: '15'
+  - author: Benjamin Jalon
+    date: '2013-02-11 13:14'
+    message: ''
+    version: '14'
+  - author: Benjamin Jalon
+    date: '2013-02-11 13:14'
+    message: ''
+    version: '13'
+  - author: Benjamin Jalon
+    date: '2013-01-15 20:02'
+    message: ''
+    version: '12'
+  - author: Benjamin Jalon
+    date: '2013-01-15 20:01'
+    message: ''
+    version: '11'
+  - author: Benjamin Jalon
+    date: '2013-01-15 20:01'
+    message: ''
+    version: '10'
+  - author: Benjamin Jalon
+    date: '2013-01-15 19:03'
+    message: ''
+    version: '9'
+  - author: Benjamin Jalon
+    date: '2013-01-15 18:50'
+    message: ''
+    version: '8'
+  - author: Benjamin Jalon
+    date: '2013-01-15 18:32'
+    message: ''
+    version: '7'
+  - author: Benjamin Jalon
+    date: '2013-01-15 18:32'
+    message: ''
+    version: '6'
+  - author: Benjamin Jalon
+    date: '2013-01-15 18:26'
+    message: ''
+    version: '5'
+  - author: Benjamin Jalon
+    date: '2013-01-15 18:26'
+    message: ''
+    version: '4'
+  - author: Benjamin Jalon
+    date: '2013-01-15 18:24'
+    message: ''
+    version: '3'
+  - author: Benjamin Jalon
+    date: '2013-01-15 18:24'
+    message: ''
+    version: '2'
+  - author: Benjamin Jalon
+    date: '2013-01-15 17:53'
+    message: ''
+    version: '1'
 ---
+
 {{! excerpt}}
 
 This page explains the Query & Form tab in the content view definition.
@@ -227,10 +189,10 @@ This tab lets you define:
 ## Pre-Requisites
 
 {{! multiexcerpt name='jsf-ui-target-package-requirement-in-content-view'}}
-
 Select the Nuxeo JSF UI target package in your [Application Definition]({{page page='application-definition'}}) for the Content View feature to be available.
-
 {{! /multiexcerpt}}
+
+{{{multiexcerpt 'DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
 
 ## Default Filtering Definition
 
@@ -240,10 +202,10 @@ This section explains the following elements of the Query & Form tab:
 
 Here are the fields you can play with:
 
-*   **Use Elasticsearch index**: Lets you use the Elasticsearch aggregates
-*   **Query filter**: Lets you [manage where clauses](#query-filter-field) (filtering expression) applied by default
-*   **Query parameters:** Lets you [set dynamic expressions](#query-parameters-field) in your default where clauses
-*   **Default sort:** Lets you set the default sort applied to the result list
+- **Use Elasticsearch index**: Lets you use the Elasticsearch aggregates
+- **Query filter**: Lets you [manage where clauses](#query-filter-field) (filtering expression) applied by default
+- **Query parameters:** Lets you [set dynamic expressions](#query-parameters-field) in your default where clauses
+- **Default sort:** Lets you set the default sort applied to the result list
 
 ### Use Elasticsearch index
 
@@ -259,18 +221,18 @@ The Nuxeo query system is based on our NXQL technology, which is very similar to
 
 You don't have to specify the `SELECT * FROM Document` part of the request that is automatically managed by the content view. If the **Query filter** field is empty, then there is no restriction. So it displays **all** documents, including:
 
-*   Deleted documents,
-*   Versioned documents,
-*   Technical Documents normally hidden from end users,
-*   etc.
+- Deleted documents,
+- Versioned documents,
+- Technical Documents normally hidden from end users,
+- etc.
 
 {{! multiexcerpt name='studio-default-query-filter'}}
 
 By default, Nuxeo Studio fills this field to filter out:
 
-*   documents marked as hidden in navigation (`ecm:mixinType != 'HiddenInNavigation'`)
-*   documents that are not archived versions (`ecm:isCheckedInVersion = 0`)
-*   and documents that are deleted (`ecm:currentLifeCycleState != 'deleted'`)
+- documents marked as hidden in navigation (`ecm:mixinType != 'HiddenInNavigation'`)
+- documents that are not archived versions (`ecm:isCheckedInVersion = 0`)
+- and documents that are deleted (`ecm:currentLifeCycleState != 'deleted'`)
 
 {{! /multiexcerpt}}
 
@@ -282,9 +244,9 @@ By default, this field is limited to static filtering (specific document type, s
 
 The **Query Filter** field enables you to express the "where" clauses of your content view filter. The **query parameters** field lets you define a "where" clause based on the execution context. For instance:
 
-*   The current date (for instance documents issued before today)
-*   The user that displays the content view (documents created by the current user or to which the current user has contributed)
-*   The currently displayed document (its document children, descendants or documents linked to the current document)
+- The current date (for instance documents issued before today)
+- The user that displays the content view (documents created by the current user or to which the current user has contributed)
+- The currently displayed document (its document children, descendants or documents linked to the current document)
 
 To express a dynamic expression:
 
@@ -340,9 +302,9 @@ More information on NXQL and examples are available on the [dedicated page in th
 
 Note to people familiar with Nuxeo products customization: The syntax that is to be used in those parameters is the same EL syntax as the one used in XHTML files. You have access to the SEAM context. Other sample expressions:
 
-*   `#{currentDate.toString()}`: that can be used with date properties, like `dc:created > DATE ?`
-*   `#{currentDocument.dc.rights}`
-*   `#{empty currentDocument.getProperty("dublincore","subjects") ? '%' : currentDocument.getProperty( ("dublincore","subjects" )}` for multivalued property
+- `#{currentDate.toString()}`: that can be used with date properties, like `dc:created > DATE ?`
+- `#{currentDocument.dc.rights}`
+- `#{empty currentDocument.getProperty("dublincore","subjects") ? '%' : currentDocument.getProperty( ("dublincore","subjects" )}` for multivalued property
 
 {{! /multiexcerpt}}
 
@@ -359,8 +321,8 @@ The **Default Sort** field lets you express the default sorting applied to the r
 
 You can sort through:
 
-*   A field of the listed documents,
-*   A property of the listed documents (lifecycle state, lock date, lock owner, etc.).
+- A field of the listed documents,
+- A property of the listed documents (lifecycle state, lock date, lock owner, etc.).
 
 **To sort through a field:**
 
@@ -382,14 +344,14 @@ If you want to sort through multiple criteria, just repeat the steps above for e
 
 This section explains the flags section and what the different flags enable.
 
-*   **Search content view**: Since Nuxeo Platform 6.0\. Enables to have your content view available in Search tab drop down list. Selecting this flag makes the Search layout required so as to have a search form displayed in the Search tab. It also adds a tab Enablement on the content view in Studio to define when the content view should be available in the Search tab.
-*   **Document content**: Enables to use your content view on a custom tab, or to have it available in the [local configuration of a workspace]({{page space='userdoc' page='local-configuration'}}).
-*   **DAM**: Enables to display the content view in the DAM tab.
-    Since Nuxeo Platform 6.0, the flag is available when you select the target package Nuxeo DAM Compat.
-*   **Faceted search**: Since Nuxeo Platform 5.7\. Enables to display the content view in the Faceted search tab and have it available in the [local search configuration of a workspace]({{page space='userdoc' page='local-configuration'}}).
-    Since Nuxeo Platform 6.0, this flag is available when you select the target package Faceted search.
-*   **Advanced search**: Enables to have the content view available in the [local search configuration of a workspace]({{page space='userdoc' page='local-configuration'}}).
-    Since Nuxeo Platform 6.0, this flag is not available anymore. You should use the Search content view flag instead.
+- **Search content view**: Since Nuxeo Platform 6.0\. Enables to have your content view available in Search tab drop down list. Selecting this flag makes the Search layout required so as to have a search form displayed in the Search tab. It also adds a tab Enablement on the content view in Studio to define when the content view should be available in the Search tab.
+- **Document content**: Enables to use your content view on a custom tab, or to have it available in the [local configuration of a workspace]({{page space='userdoc' page='local-configuration'}}).
+- **DAM**: Enables to display the content view in the DAM tab.
+  Since Nuxeo Platform 6.0, the flag is available when you select the target package Nuxeo DAM Compat.
+- **Faceted search**: Since Nuxeo Platform 5.7\. Enables to display the content view in the Faceted search tab and have it available in the [local search configuration of a workspace]({{page space='userdoc' page='local-configuration'}}).
+  Since Nuxeo Platform 6.0, this flag is available when you select the target package Faceted search.
+- **Advanced search**: Enables to have the content view available in the [local search configuration of a workspace]({{page space='userdoc' page='local-configuration'}}).
+  Since Nuxeo Platform 6.0, this flag is not available anymore. You should use the Search content view flag instead.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Content View - Query and Form Tab/Flag Zone
