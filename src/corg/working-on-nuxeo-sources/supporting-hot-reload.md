@@ -1,101 +1,87 @@
 ---
 title: Supporting Hot Reload
 review:
-    comment: ''
-    date: ''
-    status: ok
+  comment: ''
+  date: ''
+  status: ok
 labels:
-    - 5-6
+  - 5-6
 toc: true
 confluence:
-    ajs-parent-page-id: '9275231'
-    ajs-parent-page-title: Working on Nuxeo sources
-    ajs-space-key: CORG
-    ajs-space-name: Core Developer Guide
-    canonical: Supporting+Hot+Reload
-    canonical_source: 'https://doc.nuxeo.com/display/CORG/Supporting+Hot+Reload'
-    page_id: '11043369'
-    shortlink: KYKo
-    shortlink_source: 'https://doc.nuxeo.com/x/KYKo'
-    source_link: /display/CORG/Supporting+Hot+Reload
+  ajs-parent-page-id: '9275231'
+  ajs-parent-page-title: Working on Nuxeo sources
+  ajs-space-key: CORG
+  ajs-space-name: Core Developer Guide
+  canonical: Supporting+Hot+Reload
+  canonical_source: 'https://doc.nuxeo.com/display/CORG/Supporting+Hot+Reload'
+  page_id: '11043369'
+  shortlink: KYKo
+  shortlink_source: 'https://doc.nuxeo.com/x/KYKo'
+  source_link: /display/CORG/Supporting+Hot+Reload
 tree_item_index: 500
 history:
-    -
-        author: Manon Lumeau
-        date: '2015-09-29 14:02'
-        message: ''
-        version: '14'
-    -
-        author: Anahide Tchertchian
-        date: '2013-10-18 15:38'
-        message: >-
-            rephrase first sentence to make it clear that this is supported
-            since 5.6
-        version: '13'
-    -
-        author: Solen Guitter
-        date: '2013-10-18 15:28'
-        message: >-
-            NXDOC-242: Updated WebEngine paragraph to reflect NXP-12749 changes
-            in 5.8
-        version: '12'
-    -
-        author: Solen Guitter
-        date: '2013-10-18 12:13'
-        message: Added TOC
-        version: '11'
-    -
-        author: Anahide Tchertchian
-        date: '2012-07-03 09:32'
-        message: Migrated to Confluence 4.0
-        version: '10'
-    -
-        author: Anahide Tchertchian
-        date: '2012-07-03 09:32'
-        message: ''
-        version: '9'
-    -
-        author: Anahide Tchertchian
-        date: '2012-06-29 17:01'
-        message: ''
-        version: '8'
-    -
-        author: Anahide Tchertchian
-        date: '2012-06-28 17:47'
-        message: ''
-        version: '7'
-    -
-        author: Anahide Tchertchian
-        date: '2012-06-28 17:42'
-        message: ''
-        version: '6'
-    -
-        author: Anahide Tchertchian
-        date: '2012-06-28 16:34'
-        message: ''
-        version: '5'
-    -
-        author: Anahide Tchertchian
-        date: '2012-06-27 19:20'
-        message: ''
-        version: '4'
-    -
-        author: Anahide Tchertchian
-        date: '2012-06-27 19:08'
-        message: ''
-        version: '3'
-    -
-        author: Anahide Tchertchian
-        date: '2012-06-27 19:06'
-        message: ''
-        version: '2'
-    -
-        author: Anahide Tchertchian
-        date: '2012-06-27 19:05'
-        message: ''
-        version: '1'
-
+  - author: Manon Lumeau
+    date: '2015-09-29 14:02'
+    message: ''
+    version: '14'
+  - author: Anahide Tchertchian
+    date: '2013-10-18 15:38'
+    message: >-
+      rephrase first sentence to make it clear that this is supported
+      since 5.6
+    version: '13'
+  - author: Solen Guitter
+    date: '2013-10-18 15:28'
+    message: >-
+      NXDOC-242: Updated WebEngine paragraph to reflect NXP-12749 changes
+      in 5.8
+    version: '12'
+  - author: Solen Guitter
+    date: '2013-10-18 12:13'
+    message: Added TOC
+    version: '11'
+  - author: Anahide Tchertchian
+    date: '2012-07-03 09:32'
+    message: Migrated to Confluence 4.0
+    version: '10'
+  - author: Anahide Tchertchian
+    date: '2012-07-03 09:32'
+    message: ''
+    version: '9'
+  - author: Anahide Tchertchian
+    date: '2012-06-29 17:01'
+    message: ''
+    version: '8'
+  - author: Anahide Tchertchian
+    date: '2012-06-28 17:47'
+    message: ''
+    version: '7'
+  - author: Anahide Tchertchian
+    date: '2012-06-28 17:42'
+    message: ''
+    version: '6'
+  - author: Anahide Tchertchian
+    date: '2012-06-28 16:34'
+    message: ''
+    version: '5'
+  - author: Anahide Tchertchian
+    date: '2012-06-27 19:20'
+    message: ''
+    version: '4'
+  - author: Anahide Tchertchian
+    date: '2012-06-27 19:08'
+    message: ''
+    version: '3'
+  - author: Anahide Tchertchian
+    date: '2012-06-27 19:06'
+    message: ''
+    version: '2'
+  - author: Anahide Tchertchian
+    date: '2012-06-27 19:05'
+    message: ''
+    version: '1'
 ---
+
 {{#> callout type='info' }}
 
 Hot reload has been partially supported over Nuxeo versions. The following instructions apply since Nuxeo 5.6 version (some of them were available in earlier version).
@@ -118,7 +104,8 @@ Hot reload support is controlled by the Nuxeo development mode. This mode can be
 org.nuxeo.dev=true
 
 ```
-{{{multiexcerpt name='JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}} 
+
+{{{multiexcerpt name='DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
 
 Activating this mode can also be done in the Admin Center, in the **Update Center** > **Nuxeo Studio** tab, or in the **System information** > **Setup** tab.
 
@@ -134,10 +121,10 @@ The development mode should not be activated on a server in production.
 
 When contributing a JAR to the Nuxeo application, what's a stake?
 
-*   The JAR should be detected by the application.
-*   Its contributions to Nuxeo extension points should be loaded.
-*   Its contributions to other resources (XHTML files, message bundles, etc...) should be detected.
-*   Some caches should be reset.
+- The JAR should be detected by the application.
+- Its contributions to Nuxeo extension points should be loaded.
+- Its contributions to other resources (XHTML files, message bundles, etc...) should be detected.
+- Some caches should be reset.
 
 #### Hot Reloading Nuxeo Runtime Components
 
@@ -184,8 +171,8 @@ Low level caches are shared by all users of the application. Resetting of their 
 
 Checkout the following contribution, allowing to reset the directories cache (it's relying on the ReloadService#flush method to be called):
 
-*   [runtime event listener contribution](https://github.com/nuxeo/nuxeo-services/blob/master/nuxeo-platform-directory/nuxeo-platform-directory-core/src/main/resources/OSGI-INF/DirectoryService.xml) (near the end of the file)
-*   [java class performing reset of cache](https://github.com/nuxeo/nuxeo-services/blob/master/nuxeo-platform-directory/nuxeo-platform-directory-core/src/main/java/org/nuxeo/ecm/directory/DirectoryCacheFlusher.java)
+- [runtime event listener contribution](https://github.com/nuxeo/nuxeo-services/blob/master/nuxeo-platform-directory/nuxeo-platform-directory-core/src/main/resources/OSGI-INF/DirectoryService.xml) (near the end of the file)
+- [java class performing reset of cache](https://github.com/nuxeo/nuxeo-services/blob/master/nuxeo-platform-directory/nuxeo-platform-directory-core/src/main/java/org/nuxeo/ecm/directory/DirectoryCacheFlusher.java)
 
 #### Hot Reloading the WAR
 
@@ -229,7 +216,7 @@ Seam components may hold high level caches. Since the web session is not impacte
 
 For a Seam component to reset its cache correctly, it can use the following tricks:
 
-*   When dev mode is set (and only then: the rest of the time, cache invalidation should be handled as usual, regardless of hot reload support), it can check if the service it relies on has changed. This can be done only with services implementing the `org.nuxeo.runtime.service.TimestampedService` interface: Whenever a change is done on this service, a timestamp will be changed on the service.
+- When dev mode is set (and only then: the rest of the time, cache invalidation should be handled as usual, regardless of hot reload support), it can check if the service it relies on has changed. This can be done only with services implementing the `org.nuxeo.runtime.service.TimestampedService` interface: Whenever a change is done on this service, a timestamp will be changed on the service.
 
 Here is sample code checking for changes on the type service for instance:
 
@@ -320,8 +307,8 @@ For backward compatibility, we also include the classes selected in the `seam-de
 
 During deployment preprocessing, the "hot reloadable JARs" will be split:
 
-*   Seam classes made for hot reload will be copied into `nuxeo.ear/nuxeo.war/WEB-INF/dev`;
-*   Other JAR ressources (class, XML, manifest ...) will remain in another JAR that will be deployed instead of the original one
+- Seam classes made for hot reload will be copied into `nuxeo.ear/nuxeo.war/WEB-INF/dev`;
+- Other JAR ressources (class, XML, manifest ...) will remain in another JAR that will be deployed instead of the original one
 
 Classes in `nuxeo.ear/nuxeo.war/WEB-INF/dev` will be deployed by Seam in a separated class loader and will be hot-reloadable.
 
@@ -333,8 +320,8 @@ You have to copy your updated classes into `nuxeo.ear/nuxeo.war/WEB-INF/dev`.
 
 To trigger the hot reload, you can either:
 
-*   Use the SeamReload action link that is available in the default nuxeo-dm packaging,
-*   Or call the URL : [`http://127.0.0.1:8080/nuxeo/restAPI/seamReload`](http://127.0.0.1:8080/nuxeo/restAPI/seamReload)
+- Use the SeamReload action link that is available in the default nuxeo-dm packaging,
+- Or call the URL : [`http://127.0.0.1:8080/nuxeo/restAPI/seamReload`](http://127.0.0.1:8080/nuxeo/restAPI/seamReload)
 
 ### How Do I Automatically Hot Reload with ant?
 

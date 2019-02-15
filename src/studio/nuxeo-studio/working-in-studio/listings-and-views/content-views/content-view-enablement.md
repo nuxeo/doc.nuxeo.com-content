@@ -1,53 +1,49 @@
 ---
 title: Content View - Enablement
 review:
-    comment: ''
-    date: ''
-    status: ok
+  comment: ''
+  date: ''
+  status: ok
 confluence:
-    ajs-parent-page-id: '12912765'
-    ajs-parent-page-title: Content Views
-    ajs-space-key: Studio
-    ajs-space-name: Nuxeo Online Services
-    canonical: Content+View+-+Enablement
-    canonical_source: 'https://doc.nuxeo.com/display/Studio/Content+View+-+Enablement'
-    page_id: '20517059'
-    shortlink: wxA5AQ
-    shortlink_source: 'https://doc.nuxeo.com/x/wxA5AQ'
-    source_link: /display/Studio/Content+View+-+Enablement
+  ajs-parent-page-id: '12912765'
+  ajs-parent-page-title: Content Views
+  ajs-space-key: Studio
+  ajs-space-name: Nuxeo Online Services
+  canonical: Content+View+-+Enablement
+  canonical_source: 'https://doc.nuxeo.com/display/Studio/Content+View+-+Enablement'
+  page_id: '20517059'
+  shortlink: wxA5AQ
+  shortlink_source: 'https://doc.nuxeo.com/x/wxA5AQ'
+  source_link: /display/Studio/Content+View+-+Enablement
 tree_item_index: 300
 history:
-    -
-        author: Solen Guitter
-        date: '2015-09-07 09:19'
-        message: ename page to fix anchor link
-        version: '5'
-    -
-        author: Solen Guitter
-        date: '2014-11-03 19:02'
-        message: ''
-        version: '4'
-    -
-        author: Solen Guitter
-        date: '2014-11-03 18:58'
-        message: ''
-        version: '3'
-    -
-        author: Solen Guitter
-        date: '2014-11-03 18:57'
-        message: ''
-        version: '2'
-    -
-        author: Solen Guitter
-        date: '2014-10-21 18:41'
-        message: ''
-        version: '1'
-
+  - author: Solen Guitter
+    date: '2015-09-07 09:19'
+    message: ename page to fix anchor link
+    version: '5'
+  - author: Solen Guitter
+    date: '2014-11-03 19:02'
+    message: ''
+    version: '4'
+  - author: Solen Guitter
+    date: '2014-11-03 18:58'
+    message: ''
+    version: '3'
+  - author: Solen Guitter
+    date: '2014-11-03 18:57'
+    message: ''
+    version: '2'
+  - author: Solen Guitter
+    date: '2014-10-21 18:41'
+    message: ''
+    version: '1'
 ---
 
 {{#> callout type='info' }}
 Select the Nuxeo JSF UI target package in your [Application Definition]({{page page='application-definition'}}) for the Content View feature to be available.
 {{/callout}}
+
+{{{multiexcerpt 'DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
 
 If you selected the Search content view flag on the [Query & form tab of the content view]({{page version='' space='studio' page='content-view-query-and-form-tab'}}), you get an additional Enablement tab. This tab allows you to define under which circumstances the content view should be displayed in the Search tab drop down list. It shows the options below:
 
