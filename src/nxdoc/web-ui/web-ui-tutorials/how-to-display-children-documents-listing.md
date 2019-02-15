@@ -51,15 +51,16 @@ In this tutorial we want to display interesting business properties when listing
 
 Now click on **Configure layouts in Designer** at the top right of the page and configure the 5 layouts under your **contractsPortfolio** document type by clicking on **CONFIGURE** on each layout and save your changes.
 
-Optional: You can display your document in a table layout:
+Optional: You can configure the display of your folderish document in a table layout:
 
 1. Go to the **view** layout of your **contractsPortfolio** document type.
 1. Click **Edit**.
-1. Click on **nuxeo-results** and then **table**.
+1. Select **nuxeo-results** and click **Edit**.
+You accessed the Results Editor, you can configure here the table and the grid layouts for your document.
+1. In **table**, click **Edit**.
 1. At the bottom-right of your screen, click **Switch to table editor**.
-1. Select table, grid or justified grid.
 1. Drag and drop in the Main View the properties your want to see as table headers.
-1. Click **Save**
+1. Click **Save**.
 
 
 ## Create a Page Provider
@@ -86,14 +87,14 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
 
 ## Configure a Listing
 
-1. In modeler, on your portfolioContent page provider screen, click on **Configure layouts in Designer**
+1. In Modeler, on your portfolioContent page provider screen, click on **Configure layouts in Designer**.
    You are now in Studio Designer.
-1. On the **results** field, click on **Configure**
-1. On the **table** results listing, click on **Edit**
-1. At the bottom right of the page, click on **Switch to table editor**
-1. Remove the **Modified** and **last Contributor** columns by clicking on the delete icon ![]({{file name='icon-trash.png' page='web-ui-search'}} ?w=20)
+1. On the **results** field, click on **Configure**.
+1. On the **table** results listing, click on **Edit**.
+1. At the bottom right of the page, click on **Switch to table editor**.
+1. Remove the **Modified** and **last Contributor** columns by clicking on the delete icon ![]({{file name='icon-trash.png' page='web-ui-search'}} ?w=20).
 1. In the right column, select **contract** > **owner : string** in _view_ mode and drag and drop it after the title column.
-1. Do the same with the **contract** > **policy : string**, **contract** > **start : date** and **contract** > **endDate : date** </br>
+1. Do the same with the **contract** > **policy : string**, **contract** > **start : date** and **contract** > **endDate : date**. </br>
 1. On the **Owner** and **Policy** column, click on the eye icon ![]({{file name='icon-eye.png' page='nxdoc/web-ui-search'}} ?w=20).</br>
    The 2 columns become grey. We will see after the deployment what this feature does.
 
@@ -114,7 +115,7 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
    - **Provider**: portfolioContent
    - **Schemas**: dublincore, contract
    - **Search-name**: portfoliocontent
-1. Unfold the down arrow at the bottom of the **Elements & Attributes** section
+1. Unfold the down arrow at the bottom of the **Elements & Attributes** section.
 1. Add the following line next to the **params** field:</br>
    `{"system_parentId": "[[document.uid]]"}`
 
@@ -131,8 +132,7 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
    - **Document has one of the type**: `contractsPortfolio`
    ![]({{file name='portfolioContentListing-web-ui-designer-part2.png'}} ?w=650,border=true)
 
-1. Save your modification and deploy your Studio project
-
+1. Save your modification and deploy your Studio project.
 
 As we modified the **Owner** and **Policy** columns, they are available optionally. By clicking on **Columns Settings** icon, you can decide to display them or not.
 ![]({{file name='portfolioContentListing-columns-settings.png'}} ?w=350,border=true)
