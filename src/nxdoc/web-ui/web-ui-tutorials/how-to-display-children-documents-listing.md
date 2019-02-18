@@ -1,25 +1,27 @@
 ---
 title: 'HOWTO: Display a Children Documents Listing'
 review:
-    comment: ''
-    date: '2018-04-19'
-    status: ok
+  comment: ''
+  date: '2019-02-18'
+  status: ok
 details:
-    howto:
-      excerpt: >-
-            Learn how to create a listing displaying custom properties of the documents contained in a given space.
-      level: Intermediate
-      tool: Studio
-      topics: 'Page Providers'
+  howto:
+    excerpt: >-
+      Learn how to create a listing displaying custom properties of the documents contained in a given space.
+    level: Intermediate
+    tool: Studio
+    topics: 'Page Providers'
 labels:
-    - howto
-    - studio
+  - howto
+  - studio
 toc: true
 tree_item_index: 1200
 ---
+
 In Nuxeo Web UI, if you want to build a custom page provider to retrieve children documents, for a folderish document type for example, you should use predicates instead of query parameters that were used on JSF UI side.
 
 In this tutorial, you will learn to display interesting business properties when listing the children documents of a contract portfolio:
+
 - Owner
 - Policy
 - Start date
@@ -34,8 +36,9 @@ In this tutorial, you will learn to display interesting business properties when
 ## Create a Contract Portfolio
 
 {{{multiexcerpt 'quick-switcher' page='web-ui-document-layouts'}}}
-1. In Studio Modeler, go to  **Configuration** > **Content Model** > **Document Types**.</br>
-    Click on the **New** button.
+
+1. In Studio Modeler, go to **Configuration** > **Content Model** > **Document Types**.</br>
+   Click on the **New** button.
 1. Fill in the creation form as follows and click on **Next**:
    - **ID**: contractsPortfolio
    - **Extends**: Folder
@@ -53,12 +56,12 @@ Optional: **You can configure the table layout of your folderish document:**
 1. In Studio Designer, go to **UI** > **Layouts** > **Local Document Types** and select **contractsPortfolio**.
 1. In the **view** layout, click **Edit**.
 1. Select **nuxeo-results** and click **Edit** {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Display a Children documents listing/Edit icon folderish configuration
-    name: Screen Shot 2019-02-18 at 10.00.43.png
-    studio_designer#icon#up_to_date
---}}
-![Edit icon folderish configuration](nx_asset://c3c451b4-5953-4659-a98c-86e6d6affe16 ?w=30).
-You are now in the Results Editor, where you can configure the table and the grid layouts for your document.
+       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Display a Children documents listing/Edit icon folderish configuration
+       name: Screen Shot 2019-02-18 at 10.00.43.png
+       studio_designer#icon#up_to_date
+   --}}
+   ![Edit icon folderish configuration](nx_asset://c3c451b4-5953-4659-a98c-86e6d6affe16 ?w=30).
+   You are now in the Results Editor, where you can configure the table and the grid layouts for your document.
 1. In **table**, click **Edit**.
 1. At the bottom-right of your screen, click **Switch to table editor**.
 1. Drag and drop in the Main View the properties your want to see as table headers.
@@ -113,8 +116,7 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
 
 ## Create a Tab
 
-1. In Studio Studio Designer, go to **UI** > **Tabs**.
-1. Hover over the **Create** button and select **Listing**.
+1. In Designer, on your portfolioContent page provider screen, in Bind more elements, select **Tabs**.
 1. Fill in the page like this:
    - **Name**: portfolioContentListing
    - **Label**: Content
@@ -139,7 +141,7 @@ Elements are configured using JavaScript (JS). We are putting a JS object here (
 1. At the bottom of the page, define the activation filter:
 
    - **Document has one of the type**: `contractsPortfolio`
-   ![]({{file name='portfolioContentListing-web-ui-designer-part2.png'}} ?w=650,border=true)
+     ![]({{file name='portfolioContentListing-web-ui-designer-part2.png'}} ?w=650,border=true)
 
 1. Save your modification and deploy your Studio project.
 
