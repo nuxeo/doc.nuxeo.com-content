@@ -1,35 +1,34 @@
 ---
 title: Simple Workflow Example
 review:
-    comment: ''
-    date: '2017-12-14'
-    status: ok
+  comment: ''
+  date: '2019-02-18'
+  status: ok
 labels:
-    - lts2016-ok
-    - excerpt
-    - lts2017-ok
+  - lts2016-ok
+  - excerpt
+  - lts2017-ok
+  - lts2019-ok
 toc: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
-    ajs-parent-page-id: '19235786'
-    ajs-parent-page-title: Workflow Use Cases
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Simple+Workflow+Example
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Simple+Workflow+Example'
-    page_id: '12915754'
-    shortlink: KhTF
-    shortlink_source: 'https://doc.nuxeo.com/x/KhTF'
-    source_link: /display/NXDOC/Simple+Workflow+Example
+  ajs-parent-page-id: '19235786'
+  ajs-parent-page-title: Workflow Use Cases
+  ajs-space-key: NXDOC
+  ajs-space-name: Nuxeo Platform Developer Documentation
+  canonical: Simple+Workflow+Example
+  canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Simple+Workflow+Example'
+  page_id: '12915754'
+  shortlink: KhTF
+  shortlink_source: 'https://doc.nuxeo.com/x/KhTF'
+  source_link: /display/NXDOC/Simple+Workflow+Example
 tree_item_index: 100
-
 ---
+
 ## Use Case
 
 {{! excerpt}}
-
-Company C has decided to be more rigorous on proposals sent by the sales team. A workflow has to be set up so that each proposal is reviewed by the head of operations, this one being able to decide of an additional juridical control.
-
+A company has decided to be more rigorous on proposals sent by the sales team. A workflow has to be set up so that each proposal is reviewed by the head of operations, this one being able to decide of an additional juridical control.
 {{! /excerpt}}
 
 The graph we want is like this:
@@ -40,35 +39,36 @@ The graph we want is like this:
 
 The following operations have to be done in your Nuxeo Platform before following this tutorial:
 
-*   Create a user having for id "Jack".
-*   Give Jack read and edit access on the domain.
-*   Create a user group having for id `Internal_Lawyers`.
-*   Populate the Internal_Lawyers group with at least one user.
-*   Create the user that will launch the workflow.
+- Create a user having for id `Emily`, a sales employee who launches the workflow, and give her `ReadWrite` access on the domain.
+- Create a user having for id `Jack`, as Head of Operations, and give him `ReadWrite` access on the domain.
+- Create a group having for id `Internal_Lawyers` and populate it with at least one user (like `Internal_Lawyers1`).
 
+{{#> callout type='tip' }}
+You can perform these operations from the Web UI Administration menu and the domain permission tab. For advanced users, you can alternatively use the **Users and Groups** menu in Studio Modeler and update the Domain Structure Template (`DomainFactory`) to grant the required permissions.
+{{/callout}}
+
+<!--
 {{#> callout type='info' }}
-
 Web UI and JSF UI
 
 This tutorial gives all the necessary steps to build the custom workflow template for Nuxeo JSF UI and Nuxeo Web UI.
 * The workflow template design, the task description, workflow variables and all the business logic is hold by Studio Modeler for both interfaces
 * **JSF UI** is fully based upon **Studio Modeler**, including the forms and layouts design.
 * **Web UI** uses forms and layouts design from **Studio Designer**.
-
 {{/callout}}
-
+-->
 
 ## Implementation Steps
 
 ### Creating the Workflow
 
-1.  In the Workflow category, click on **Process Definitions**.
+1.  In **Studio Modeler**, navigate to the **Workflow > Process Definitions** submenu.
 2.  Click on the **New** button.
 3.  Give the workflow an id (`SalesProposalWorkflow`), a label and a description.
     ![]({{file name='Simple_Workflow_000.png'}} ?w=450,border=true)
 4.  Click on the **Ok** button.
 
-### Defining the Workflow's Availability
+### Defining the Workflow's Activation
 
 Workflows can be launched through a drop down list on the summary screen of every document. Into the **Activation** tab, you can decide for which type of document the workflow you do will be usable, for which group of users, etc.
 
@@ -83,36 +83,40 @@ A workflow must start with a node for which the "start node" property is checked
 To start the workflow graph:
 
 1.  Click on the **Graph** tab.
-2. By default, Studio adds the Start and Stop nodes automatically. If not, drag and drop the **Start** node on the graph.
+2.  By default, Studio adds the Start and Stop nodes automatically. If not, drag and drop the **Start** node on the graph.
     ![](https://www.lucidchart.com/publicSegments/view/54ede03e-bcb8-4715-a9f3-1f500a008a99/image.png ?w=400,border=true)
 
 ### Defining the Technical Validation Step
 
 Let's create and configure the technical validation step.
 
-#### Adding the Technical Validation Node
-
-This node will create a task for the head of operations, named "Jack". Jack will have to accept or reject the proposal submitted by the salesman, or decide that it requires a juridical advice.
+This node will create a task for Jack, the head of operations. He will have to accept or reject the proposal submitted by the salesman, or decide that it requires a juridical advice.
 
 Drag the **Accept/Reject** node template from the node template library and drop it on the graph.
 It will already have some of the needed transitions and buttons pre-configured: Validate and Reject. You actually need another transition (Need juridical advice), which you will add manually in a future step.
 ![]({{file name='Simple_Workflow_003.png'}} ?w=400,border=true)
 
-#### Configuring the Technical Validation Node
-
 1.  Hover on the **Accept/Reject** node you just dropped and click on the icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) that appears to open the node properties.
     ![]({{file name='Simple_Workflow_005.png'}} ?w=150,border=true,thumbnail=true)
 2.  In the **General** tab edit the following properties:
-  * Title: `Technical validation`
-  * Due date expression: `CurrentDate.days(5)`
-    ![]({{file name='technical-validation-general.png'}} ?w=450,border=true)
-3. Update the assignee related fields:  
-  * Assignees: Add a statical assignee ("Jack"). Click on the "Add" link in front of the "Assignees" field.
-  * Assignees expression: `NodeVariables["assignees"]`
-  * Grant permission to task assignees: Leave this field blank.
-    ![]({{file name='technical-validation-assignee.png'}} ?w=450,border=true)
+
+- Title: `Technical validation`
+- Due date expression: `CurrentDate.days(5)`
+
+3. Update the assignee related fields:
+
+- Assignees: Add a statical assignee (`Jack`). Click on the "Add" link in front of the "Assignees" field.
+- Grant permission to task assignees: Leave this field blank.
+
 4.  Click on the **Save** button of the popup.
 5.  Click on the **Save** button of the workflow feature on the bottom left corner.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/tecnical-validation-node.png
+    name: tecnical-validation-node.png
+    1.1.3#screenshot#up_to_date
+--}}
+![tecnical-validation-node.png](nx_asset://7dc45826-454d-446c-a2d4-c91548ec277e ?w=650,border=true)
 
 ### Configuring the Workflow Variables
 
@@ -129,15 +133,43 @@ This variable will be named `hoo_comment`.
     ![]({{file name='Simple_Workflow_004.png'}} ?w=600,border=true)
 5.  Click on **Save**.
 
-### Configuring the Technical Validation Step Forms and Actions
+### Configuring the Technical Validation Step Layout and Actions
 
-The form lets the user edit some of the workflow's variables (either at workflow level or node level), and the buttons help the engine to know which transition to play after the node, depending on what the user clicked on.
+#### Initializing the Task Layout
 
-#### Configuring the Form
+The workflow task layout lets the user edit some of the workflow's variables (either at workflow level or node level), and the buttons help the engine to know which transition to play after the node, depending on what the user clicked on.
 
-The way you process the next step will depend on the UI you chose for your platform:
+1.  Go back to the **Technical validation** node.
+2.  Click on the **Variables** tab.
+    Add the **hoo_comment** to the right column.
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/tecnical-validation-layout1.png
+        name: tecnical-validation-layout1.png
+        studio_modeler#screenshot#up_to_date
+    --}}
+    ![tecnical-validation-layout1.png](nx_asset://a8fceac5-6af1-4647-b501-9a2312cd57b9 ?w=650,border=true)
+3.  Save you work.
+4.  Click on the **Configure layouts in Designer** button.
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/tecnical-validation-layout2.png
+        name: tecnical-validation-layout2.png
+        studio_designer#screenshot#up_to_date
+    --}}
+    ![tecnical-validation-layout2.png](nx_asset://184b7cb0-47e4-4e37-a9f5-612eeb0ffb5c ?w=200,border=true)
+5.  Select the **Technical validation** task and click on the **Configure** button.
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/tecnical-validation-layout3.png
+        name: tecnical-validation-layout3.png
+        studio_designer#screenshot#up_to_date
+    --}}
+    ![tecnical-validation-layout3.png](nx_asset://98461ec6-4aa5-4380-a4b2-7e6dca2d9324 ?w=650,border=true)
+6.  Delete the properties already displayed in the layout using the delete icon once an element is selected. Keep only the "hoo_comment" property.
+    ![]({{file name='vd_wf_technical_validation_layout3.png'}} ?w=600,border=true)
+7.  Change its label for `Head of operations comment`.
+    ![]({{file name='vd_wf_technical_validation_layout5.png'}} ?w=600,border=true)
 
-##### With Nuxeo Studio and JSF UI
+<!--
+##### With Studio Modeler and JSF UI
 
 1.  Go back to the **Technical validation** node.
 2. Click on the **Variables** tab.
@@ -150,35 +182,17 @@ The way you process the next step will depend on the UI you chose for your platf
     *   Title: `Head of operations comment`.
     *   Widget type: Textarea.
     ![]({{file name='technical-validation-textarea.png'}} ?w=600,border=true)
-
-##### With Studio Designer and Web UI
-
-1.  Go back to the **Technical validation** node.
-2. Click on the **Variables** tab.
-   Add the **hoo_comment** to the right column.
-   ![]({{file name='Simple_Workflow_006_1.png'}} ?w=600,border=true)
-3.  Save you work.
-4.  Click on the **Designer** button.
-   ![]({{file name='link_view_designer.png'}} ?w=300,border=true)
-5.  In the Layout tab, navigate to **Workflows**&nbsp;> **SalesProposalWorkflow** and click on **Technical validation**.
-   ![]({{file name='vd_wf_technical_validation_layout1.png'}} ?w=200,border=true)
-    A  page with the Technical validation task layout is displayed. If there is no layout, click on the **Configure** button.
-    ![]({{file name='vd_wf_technical_validation_layout2.png'}} ?w=600,border=true)
-5.  Delete the properties displayed in the layout using the delete icon once an element is selected.
-    ![]({{file name='vd_wf_technical_validation_layout3.png'}} ?w=600,border=true)
-6.  Add a field for the comment of the user who validates: Drag the **hoo_comment** field from the workflow variables schema from the element catalogue and drop it on the layout, using the **edit** mode.
-    ![]({{file name='vd_wf_technical_validation_layout4.png'}} ?w=600,border=true)
-7.  Change its label for `Head of operations comment`.
-    ![]({{file name='vd_wf_technical_validation_layout5.png'}} ?w=600,border=true)
+-->
 
 #### Setting up the Tasks Buttons
 
 In Studio Modeler, the buttons that are shown on the form are configured on the **Resolution Actions** tab. Two are already available because of the template node you chose. You need to add a third one when the document requires juridical expertise.
 
-1.  Click on **Add task button**.
-2.  Fill in the button id `require_juridical_advice` and label `Require Juridical Advice?`.
-3.  Let the box **Generate the condition for the transition** checked.
- ![]({{file name='Simple_Workflow_008_1.png'}} ?w=450,h=316, border=true)
+1. Go back to the graph of the workflow on Modeler side.
+1. Click on **Add task button**.
+1. Fill in the button id `require_juridical_advice` and label `Require Juridical Advice?`.
+1. Let the box **Generate the condition for the transition** checked.
+    ![]({{file name='Simple_Workflow_008_1.png'}} ?w=450,h=316, border=true)
 
 #### Check the Transitions
 
@@ -193,7 +207,7 @@ Each button is automatically associated to a transition to define what should be
 
 1.  Go back to the graph.
 2.  Link the **Start** node to the **Technical validation** node, by pulling an arrow between the unique transition point of the Start node to the input point of the Technical validation node.
-  ![]({{file name='Simple_Workflow_012.png'}} ?w=200,border=true,thumbnail=true)
+    ![]({{file name='Simple_Workflow_012.png'}} ?w=200,border=true,thumbnail=true)
 
     Note that you have three transition points on the technical validation node, ready to be pulled to the next nodes.
 
@@ -201,31 +215,53 @@ Each button is automatically associated to a transition to define what should be
 
 Now that we have our Technical validation node set up, we need to create the nodes used for its possible transitions. First comes the Juridical advice node. As most operations have been described before, we will only comment this node&rsquo;s specificities.
 
-#### Adding the Node
+#### Configuring the Node
 
 Drag the **Approve** node from the node template library and drop it on the graph.
 
 ![](https://www.lucidchart.com/publicSegments/view/54eefcaf-64e8-42a2-ad51-6ed50a00c10c/image.png ?w=300,border=true)
 
-#### Configuring the Juridical Advice Node
-
 1.  Open the node properties.
 2.  Rename the node to `Juridical advice`.
 3.  Define the assignees.
 
-    This time we would like to ask a member of the &ldquo;Internal_ Lawyers&rdquo; user group to comment instead of a specific person. Therefore, instead of adding a specific username, you may simply add an assignee and use the prefix `group:` to specify a user group.
-    * Assignees: `group:Internal_Lawyers`
-    * Assignees expression: `NodeVariables["assignees"]`
-4.  Grant the appropriate rights.
-    The internal lawyers may not have the necessary rights to read and/or edit a sales proposal document. To avoid an exception to be thrown because of this, you need to grant them the appropriate rights on the document that needs juridical advice temporarily. This is what the **Grant permission to task assignees** field is used for. In this case, choose the **Read & Edit** permission to let them modify the document. Keep in mind that these rights will only be granted during the operations made on this node, and reverted to their previous state when following a transition to another node.
+    This time we would like to ask a member of the &ldquo;Internal\_ Lawyers&rdquo; user group to comment instead of a specific person. Therefore, instead of adding a specific username, you may simply add an assignee and use the prefix `group:` to specify a user group (`group:Internal_Lawyers`).
 
-    ![]({{file name='juridical-advice-general.png'}} ?w=450,border=true)
+4.  Grant the appropriate rights. The internal lawyers may not have the necessary rights to read and/or edit a sales proposal document. To avoid an exception to be thrown because of this, you need to grant them the appropriate rights on the document that needs juridical advice temporarily. This is what the **Grant permission to task assignees** field is used for. In this case, choose the **Read & Edit** permission to let them modify the document. Keep in mind that these rights will only be granted during the operations made on this node, and reverted to their previous state when following a transition to another node.
 
-#### Configuring the Form
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/juridical-advice-node.png
+    name: juridical-advice-node.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![juridical-advice-node.png](nx_asset://d7b5c04b-88bf-4800-ab1b-6d2bdbaa650e ?w=600,border=true)
 
-The way you process the next step will depend on the UI you chose for your platform:
+#### Configuring the Task Layout
 
-##### With Nuxeo Studio and JSF UI
+1. Click on the **Variables** tab and add the **juridical_comment** and **hoo_comment** variables to the right column.
+   {{!--     ### nx_asset ###
+       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/juridical-advice-node2.png
+       name: juridical-advice-node2.png
+       studio_modeler#screenshot#up_to_date
+   --}}
+   ![juridical-advice-node2.png](nx_asset://636781ec-ea16-4e2f-bd8d-8dbbabe3c5d9 ?w=650,border=true)
+2. Save you work
+3. Click on the **Configure layouts in Designer** button.
+4. Open the **Juridical Advice** workflow task and click on the **Configure** button.
+5. Delete the properties displayed in the layout using the delete icon once an element is selected. Keep only the **hoo_comment** and the **juridical_comment** properties.
+6. Select the **juridical_comment** field and set the property as required.
+   ![]({{file name='vd_wf_technical_validation_layout6.png'}} ?w=300,border=true)
+7. Select the **hoo_comment** as well, change its label for `Head of operations comment`.and set the property as read only.
+   {{!--     ### nx_asset ###
+       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/juridical-advice-layout.png
+       name: juridical-advice-layout.png
+       studio_designer#screenshot#up_to_date
+   --}}
+   ![juridical-advice-layout.png](nx_asset://7fa1a583-0ec6-4120-865e-79204af09bd3 ?w=650,border=true)
+8. Click on **Save**.
+
+<!--
+##### With Studio Modeler and JSF UI
 
 1. Click on the **Variables** tab and add the **juridical_comment** and **hoo_comment** variables to the right column.
   ![]({{file name='Simple_Workflow_015_1.png'}} ?w=600,border=true)
@@ -236,21 +272,7 @@ The way you process the next step will depend on the UI you chose for your platf
     ![]({{file name='hoo-comment.png'}} ?w=450,border=true)
 5.  Click on **Save**.
     ![]({{file name='juridical-advice-form.png'}} ?w=450,border=true)
-
-##### With Studio Designer and Web UI
-
-1. Click on the **Variables** tab and add the **juridical_comment** and **hoo_comment** variables to the right column.
-  ![]({{file name='Simple_Workflow_015_1.png'}} ?w=600,border=true)
-2.  Save you work and click on the **Designer** button.
-3.  In the Layout tab, navigate to **Workflows**&nbsp;> **SalesProposalWorkflow** and click on **Juridical Advice**.
-
-  A page with the Juridical Advice task layout is displayed. If there is no layout, click on the **Configure** button.
-4.  Delete the properties displayed in the layout using the delete icon once an element is selected.
-5.  Add the **juridical_comment** field the same way you did with the **Technical validation** node, setting the property as required.
-![]({{file name='vd_wf_technical_validation_layout6.png'}} ?w=300,border=true)
-6.  Add the **hoo_comment** as well, but make sure to set it as read only by using the **view** mode.
-![]({{file name='vd_wf_technical_validation_layout7.png'}} ?w=600,border=true)
-7.  Click on **Save**.
+-->
 
 #### Connecting the Nodes
 
@@ -273,7 +295,7 @@ The **Approve** node will once again be the most appropriate. Pick it up and dro
 2.  Rename the node to `Proposal update`.
 3.  Rename the directive: `Proposal update`.
 4.  Define the Due date expression: `CurrentDate.days(5)`
-5.  Define the assignees.
+5.  Define the assignees.</br>
     Here comes another interesting situation: This task may not be assigned to a particular person, neither may it be assigned to a group. It needs to be assigned to the document's creator. To do so, a variable needs to be used instead of a hard coded value. The "Assignees" field may only receive usernames or groups, not variables.
     We will rather use the **Assignees expression** field and set this variable as value: `@{Document["dc:creator"]}`. This will return the document creator's username.
     Note that there are no specific rights to grant there as in this situation the document will be heading back to its creator.
@@ -282,42 +304,55 @@ The **Approve** node will once again be the most appropriate. Pick it up and dro
     Calling the task an approval task could lead to confusion for the salesman that wants to submit an updated proposal. Thus, we will rename it.
     1.  Click on the **Resolution Actions** tab.
     2.  Click on the **Add task button** link.
-      * id: `submit_updated_proposal`
-      * Label: `Submit updated proposal`    
-    ![]({{file name='Simple_Workflow_022_1.png'}} ?w=450,border=true,thumbnail=true)
-7. Save.
+    - id: `submit_updated_proposal`
+    - Label: `Submit updated proposal`  
+      ![]({{file name='Simple_Workflow_022_1.png'}} ?w=450,border=true,thumbnail=true)
+7.  Save.
 
-#### Configuring the Form
+{{#> callout type='info' }}
+In this scenario, if Jack (Head of Operations) rejects the tasks, it is sent back to the document creator. We could have used the `workflowInitiator` expression so that the task is assigned to **the user who has launched the workflow** (assuming it could have been distinct from the document creator)
+{{/callout}}
 
-The way you process the next step will depend on the UI you chose for your platform:
+#### Configuring the Task layout
 
-##### With Nuxeo Studio and JSF UI
+1.  Click on the **Variables** tab and add the **sales_comment** and **hoo_comment** variables to the right column.
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/proposal-update-node.png
+        name: proposal-update-node.png
+        studio_modeler#screenshot#up_to_date
+    --}}
+    ![proposal-update-node.png](nx_asset://d23602e0-6558-49b3-8672-b60c619d55fc ?w=650,border=true)
+2.  Save you work.
+3.  Click on the **Configure layouts in Designer** button.
+4.  Click on **Proposal Update**. A page with the Proposal Update task layout is displayed. If there is no layout, click on the **Configure** button
+5.  Delete the properties displayed in the layout using the delete icon once an element is selected.
+6.  Change the **hoo_comment** label for `Head of operations comment` and set it as read only mode.
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/proposal-update-layout.png
+        name: proposal-update-layout.png
+        studio_designer#screenshot#up_to_date
+    --}}
+    ![proposal-update-layout.png](nx_asset://99a96a40-e0b9-4e3d-b0c4-c50c435bda4c ?w=650,border=true)
+
+<!--
+##### With Studio Modeler and JSF UI
 
 1. Click on the **Variables** tab and add the **sales_comment** and **hoo_comment** variables to the right column.
 ![]({{file name='Simple_Workflow_020_1.png'}} ?w=450,border=true,thumbnail=true)
 2.  Click on the **Form** tab.
 3.  Add the **sales_comment** field as well as the **hoo_comment** field, the latter still in read only mode.
     ![]({{file name='Simple_Workflow_020_2.png'}} ?w=450,border=true,thumbnail=true)
-
-##### With Studio Designer and Web UI
-
-1. Click on the **Variables** tab and add the **sales_comment** and **hoo_comment** variables to the right column.
-![]({{file name='Simple_Workflow_020_1.png'}} ?w=450,border=true,thumbnail=true)
-2.  Save you work and click on the **Designer** button.
-3.  In the **Layout** tab, navigate to **Workflows**&nbsp;> **SalesProposalWorkflow** and click on **Proposal Update**. A page with the Proposal Update task layout is displayed. If there is no layout, click on the **Configure** button
-4.  Delete the properties displayed in the layout using the delete icon once an element is selected.
-5.  Add the **sales_comment** field as well as the **hoo_comment** field, the latter still in read only mode.
-    ![]({{file name='vd_wf_technical_validation_layout9.png'}} ?w=600,border=true)
+-->
 
 #### Removing the Approve Transition
 
 1. Go back to the Proposal update node, in Studio Modeler.
-1.  Click on the **Transitions** tab.
-    As you may see, deleting the task button in the previous step does not automatically remove the transition as well. We will do it manually then.
-2.  Click on the icon ![]({{file name='edit_wiz.png'}}) next to the "approve" transition and click on **Remove** in the contextual menu.
-    ![]({{file name='proposal-update-transitions.png'}} ?w=450,border=true)
-3.  Confirm row deletion on the popup window.
-4.  Click on **Save**.
+1. Click on the **Transitions** tab.
+   As you may see, deleting the task button in the previous step does not automatically remove the transition as well. We will do it manually then.
+1. Click on the icon ![]({{file name='edit_wiz.png'}}) next to the "approve" transition and click on **Remove** in the contextual menu.
+   ![]({{file name='proposal-update-transitions.png'}} ?w=450,border=true)
+1. Confirm row deletion on the popup window.
+1. Click on **Save**.
 
 #### Connecting the Nodes
 
@@ -326,12 +361,12 @@ The way you process the next step will depend on the UI you chose for your platf
 3.  Pull an arrow from there to the Proposal update node&rsquo;s input point.
 4.  Make sure you connect the Proposal update node&rsquo;s output point back to the Technical validation node&rsquo;s input point too.
     ![]({{file name='Simple_Workflow_024.png'}} ?w=300,border=true,thumbnail=true)
+5.  Link the `validate` outpoint point of the Technical validation task to the end node.
+6.  Link the `approve` outpoint point of the Juridical advice task to the end node as well.
 
-### Adding the End Node
-
-This is almost finished. The last node needed is the end node. This node sets a possible ending to the workflow. In this situation only one end node will be used, but remember that you may use several end nodes if needed.
-
-Pickup the **Stop** node from the node template library and drop it on the graph.
+{{#> callout type='info' }}
+This node sets a possible ending to the workflow. In this situation only one end node will be used, but remember that you may use several end nodes if needed.
+{{/callout}}
 
 ### Automating Document's Metadata Update
 
@@ -339,10 +374,11 @@ A document being accepted by the head of operations or the juridical services ha
 
 1.  Open the **Stop** node properties.
 
-  In the **General** tab, the "Automation chains" section lets you make use of an existing automation chain, that you may even edit by using the corresponding link. Automation chains can be launched at different moments, depending of your needs. The input operation chain will be played when entering the node, the output chain when the node is being left. In this situation the chain needs to be played from the start, but is not existing yet though.
+In the **General** tab, the "Automation chains" section lets you make use of an existing automation chain, that you may even edit by using the corresponding link. Automation chains can be launched at different moments, depending of your needs. The input operation chain will be played when entering the node, the output chain when the node is being left. In this situation the chain needs to be played from the start, but is not existing yet though.
 
 2.  Click on the **Create** link of the "Input operation chain".
     ![]({{file name='empty-end-node.png'}} ?w=450,border=true)
+
     1.  Give an id to your chain : `SetAsApproved`.
         ![]({{file name='Simple_Workflow_026.png'}} ?w=350,border=true)
     1.  In the editor, add the **Document**&nbsp;> **Follow Life Cycle Transition** operation using drag and drop.
@@ -354,14 +390,59 @@ A document being accepted by the head of operations or the juridical services ha
     1.  Save the chain and go back to your workflow graph.
 
 3.  Now that the chain is created, you may have a look at your end node properties.
-  The input operation chain has been automatically filled in thanks to our previous operation.
-  ![]({{file name='end-node-setasapproved.png'}} ?w=450,border=true)
+    The input operation chain has been automatically filled in thanks to our previous operation.
+    ![]({{file name='end-node-setasapproved.png'}} ?w=450,border=true)
 
-### Connecting the Nodes
+## Deploy and Test the Workflow Configuration
 
-1.  Link both the Technical validation node&rsquo;s accept output point **and** the Juridical advice&rsquo;s outpoint to the end node.
-2.  Save your work.
-    Your workflow is now complete. Enjoy it!
-    Below is a screenshot of what it looks like once finished.
+1. Log in as `Administrator`.
+2. Hot reload your instance to deploy the Nuxeo Studio Configuration (thanks to the [Nuxeo Browser Extension]({{page space='nxdoc' page='nuxeo-dev-tools-extension'}})).
+3. Navigate to **Domain > Workspaces** and create a `Proposals` workspace.
+4. Create a file in the Proposals folder.
+5. Log out and log in as `Emily` and open the proposal you've just created.
+6. Click on the **Start Process** button.
+   {{!--     ### nx_asset ###
+       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple-worfklow-step1.png
+       name: simple-worfklow-step1.png
+       1.1.3#screenshot#up_to_date
+   --}}
+   ![simple-worfklow-step1.png](nx_asset://bf8f8f83-d6d1-44fe-8a91-57c19c1db1e8 ?w=200,border=true)
+7. Select the **Sales Proposal** workflow.
+   {{!--     ### nx_asset ###
+       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple-worfklow-step2.png
+       name: simple-worfklow-step2.png
+       1.1.3#screenshot#up_to_date
+   --}}
+   ![simple-worfklow-step2.png](nx_asset://86cb738b-95b7-45a4-8a50-166a75b4aa3b ?w=650,border=true)
+   You should see a information banner indicating a workflow as been triggered. As a workflow initiator, you can **View the Workflow graph** or **Abandon** it.
+8. Log out and log in as `Jack`. You should see a new task in your dashboard as well as a notification on the workflow task menu.
+   {{!--     ### nx_asset ###
+       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple-worfklow-step3.png
+       name: simple-worfklow-step3.png
+       1.1.3#screenshot#up_to_date
+   --}}
+   ![simple-worfklow-step3.png](nx_asset://1a2150b1-9ba5-42af-bf89-28e11dcbb75a ?w=650,border=true)
+9. Open the task, add a comment and send it for review to the Internal Lawyers by clicking on the **Require Juridical Advice** button.
+10. Log out and log in as one member of the `Internal_Lawyers` group. You should see the Juridical Advice workflow task.
+    {{#> callout type='info' }}
+    Il you click on the document, or try to navigate, you'll notice you won't be see the **Domain > Workspaces > Proposals** folder structure as we have just given Read and Write access to the document for this group.
+    {{/callout}}
+11. Add a comment and approve the document
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple-worfklow-step4.png
+        name: simple-worfklow-step4.png
+        1.1.3#screenshot#up_to_date
+    --}}
+    ![simple-worfklow-step4.png](nx_asset://62871e10-4965-451f-a761-bc2a22155799 ?w=650,border=true)
+    {{#> callout type='info' }}
+    Once completed, the task performer of the "Require Juridical Advice" task hasn't access to the document
+    {{/callout}}
+12. Log our as log in as `Jack` and open the document. You'll noticed the document status has been updated to **Approved**
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple-worfklow-step5.png
+        name: simple-worfklow-step5.png
+        1.1.3#screenshot#up_to_date
+    --}}
+    ![simple-worfklow-step5.png](nx_asset://b294fee9-d2a2-444f-b9a6-141eb1630061 ?w=650,border=true)
 
-    ![]({{file name='Simple_Workflow_031.png'}} ?w=450,border=true)
+You can execute again the workflow with another document and pass through the **Reject task**.
