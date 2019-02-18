@@ -86,7 +86,7 @@ Then, you need to configure it using the [tools folder of the top-level reposito
 
 - Enable the plugin
 - Import Eclipse Java Formatter config file from the tools folder of Nuxeo source code
-  `nuxeo/tools/nuxeo_formatter.xml`.
+  `nuxeo/tools/nuxeo-formatter.xml`.
 - Optimize import order from file `nuxeo/tools/nuxeo.importorder`
 
 Congratulations! Now everything is done. Enjoy IntelliJ IDEA, your capable and
