@@ -75,12 +75,9 @@ Once you are all set, you can navigate to the Studio Designer to configure your 
 
 {{! multiexcerpt name='quick-switcher'}}
 {{#> callout type='tip' }}
-
 Jump between any Studio feature or menu in a snap by typing its name. This action can be triggered by clicking the **Jump To** option on the bottom left of your Studio project, or using the Ctrl + K / ⌘ + K shortcut.
-
 {{/callout}}
 {{! /multiexcerpt}}
-
 
 1. In Studio Designer, go to **UI** > **Layouts**.
 1. Under **Local Types**, find your `Contract` document type.

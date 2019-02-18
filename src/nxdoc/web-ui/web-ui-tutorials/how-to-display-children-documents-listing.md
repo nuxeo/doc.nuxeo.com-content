@@ -6,21 +6,20 @@ review:
     status: ok
 details:
     howto:
-        excerpt: >-
+      excerpt: >-
             Learn how to create a listing displaying custom properties of the documents contained in a given space.
-        level: Intermediate
-        tool: Studio
-        topics: 'Page Providers'
+      level: Intermediate
+      tool: Studio
+      topics: 'Page Providers'
 labels:
     - howto
     - studio
 toc: true
 tree_item_index: 1200
 ---
+In Nuxeo Web UI, if you want to build a custom page provider to retrieve children documents, for a folderish document type for example, you should use predicates instead of query parameters that were used on JSF UI side.
 
-In Nuxeo Web UI, if you want to build a custom page providers to retrieve children document, typically for a folderish document type for example, you should use predicates instead of query parameters that were used on JSF UI side.
-
-In this tutorial we want to display interesting business properties when listing the children documents of a contract portfolio:
+In this tutorial, you will learn to display interesting business properties when listing the children documents of a contract portfolio:
 - Owner
 - Policy
 - Start date
@@ -32,12 +31,10 @@ In this tutorial we want to display interesting business properties when listing
 - The Nuxeo [Web UI addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) is installed on your instance.
 - In Studio Modeler > **Settings** > **Application Definition**, make sure that Nuxeo Web UI is in the **Packages to Install** list.
 
-
 ## Create a Contract Portfolio
 
 {{{multiexcerpt 'quick-switcher' page='web-ui-document-layouts'}}}
-
-1. In Studio Modeler, under **Configuration**, click on the **Content Model** section, then **Document Types**.</br>
+1. In Studio Modeler, go to  **Configuration** > **Content Model** > **Document Types**.</br>
     Click on the **New** button.
 1. Fill in the creation form as follows and click on **Next**:
    - **ID**: contractsPortfolio
@@ -51,17 +48,28 @@ In this tutorial we want to display interesting business properties when listing
 
 Now click on **Configure layouts in Designer** at the top right of the page and configure the 5 layouts under your **contractsPortfolio** document type by clicking on **CONFIGURE** on each layout and save your changes.
 
-Optional: You can configure the display of your folderish document in a table layout:
+Optional: **You can configure the table layout of your folderish document:**
 
-1. Go to the **view** layout of your **contractsPortfolio** document type.
-1. Click **Edit**.
-1. Select **nuxeo-results** and click **Edit**.
-You accessed the Results Editor, you can configure here the table and the grid layouts for your document.
+1. In Studio Designer, go to **UI** > **Layouts** > **Local Document Types** and select **contractsPortfolio**.
+1. In the **view** layout, click **Edit**.
+1. Select **nuxeo-results** and click **Edit** {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Display a Children documents listing/Edit icon folderish configuration
+    name: Screen Shot 2019-02-18 at 10.00.43.png
+    studio_designer#icon#up_to_date
+--}}
+![Edit icon folderish configuration](nx_asset://c3c451b4-5953-4659-a98c-86e6d6affe16 ?w=30).
+You are now in the Results Editor, where you can configure the table and the grid layouts for your document.
 1. In **table**, click **Edit**.
 1. At the bottom-right of your screen, click **Switch to table editor**.
 1. Drag and drop in the Main View the properties your want to see as table headers.
 1. Click **Save**.
 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Display a Children documents listing/Table layout editor
+    name: table-layout-editor.png
+    studio_designer#screenshot#up_to_date
+--}}
+![Table layout editor](nx_asset://37d8c54d-cf66-431c-8464-cd0794a930da ?w=600,border=true)
 
 ## Create a Page Provider
 
@@ -103,7 +111,6 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
 
 1. Save your changes by clicking on the **Save** button at the top right of the page
 
-
 ## Create a Tab
 
 1. In Studio Studio Designer, go to **UI** > **Tabs**.
@@ -121,11 +128,13 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
 
    ![]({{file name='portfolioContentListing-web-ui-designer.png'}} ?w=650,border=true)
 
-  {{#> callout type='info' heading='Some explanations for params' }}
-  - Elements are configured using JavaScript (JS). We are putting a JS object here (`{"key": "value", "anotherKey": "anotherValue"}`) that will be inserted in the element.
-  - `system_parentId` is the name of the predicate we defined in Modeler. We are saying here that we want to assign a value to it.
-  - `[[document.uid]]` is the value we assign to our predicate. In this case, we are using one way binding (symbolized by the double square brackets) to forward a value dynamically. The `document.uid` variable can be guessed easily once you know that you are parsing a [document entity-type]({{page version='' space='nxdoc' page='rest-api-entity-types'}}#document) using JS.
-  {{/callout}}
+{{#> callout type='info' heading='Some explanations for params' }}
+Elements are configured using JavaScript (JS). We are putting a JS object here (`{"key": "value", "anotherKey": "anotherValue"}`) that will be inserted in the element.
+</br>
+`system_parentId` is the name of the predicate we defined in Modeler. We are saying here that we want to assign a value to it.
+</br>
+`[[document.uid]]` is the value we assign to our predicate. In this case, we are using one way binding (symbolized by the double square brackets) to forward a value dynamically. The `document.uid` variable can be guessed easily once you know that you are parsing a [document entity-type]({{page version='' space='nxdoc' page='rest-api-entity-types'}}#document) using JS.
+{{/callout}}
 
 1. At the bottom of the page, define the activation filter:
 
@@ -134,5 +143,5 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
 
 1. Save your modification and deploy your Studio project.
 
-As we modified the **Owner** and **Policy** columns, they are available optionally. By clicking on **Columns Settings** icon, you can decide to display them or not.
+As we modified the **Owner** and **Policy** columns, they are optional. By clicking on **Columns Settings** icon, you can decide to display them or not.
 ![]({{file name='portfolioContentListing-columns-settings.png'}} ?w=350,border=true)
