@@ -12,23 +12,13 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Upcoming Changes
 
-### Git Status Bar
-Some actions, previously found in the header, are moved into a new status bar at the bottom of the screen ([NXS-5080](https://jira.nuxeo.com/browse/NXS-5080)). This is a first step towards providing greater consistency in the Nuxeo Online Services ecosystem.
-
-Some changes also happen to the Git actions at the same time:
-- All conflicts will be visible at once so you can better understand the result of merging a branch.
-- In advanced mode, commit and push actions will be separated so that we can display the commits you will push and what they contain before you decide to do it or not.
-
-### Folderish Documents Configuration
-When using LTS 2019 or greater, visually configure columns to be displayed for every folderish document type you create ([NXS-4994](https://jira.nuxeo.com/browse/NXS-4994)). To prevent disruption only newly configured layouts will benefit from this feature. You can erase the existing configuration and generate it again to benefit from it otherwise.
-
 ### Default Theme Selection
 Choose the theme to use by default with the click of a button ([NXS-4891](https://jira.nuxeo.com/browse/NXS-4891)).
 
 ### Parameters Mapping in Search and Listings Configuration
 When configuring a UI element for a search or a listing, search parameters are visible right away. The corresponding JavaScript expression benefits from autocompletion ([NXS-5122](https://jira.nuxeo.com/browse/NXS-5122)).
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.6.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.7.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 {{{multiexcerpt 'studio-updates-2019-02' page='studio-updates-2019-02'}}}

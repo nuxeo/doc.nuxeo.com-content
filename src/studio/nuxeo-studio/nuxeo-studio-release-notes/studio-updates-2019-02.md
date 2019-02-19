@@ -11,6 +11,16 @@ hidden: true
 ---
 ## Released Changes
 {{! multiexcerpt name='studio-updates-2019-02'}}
+### Git Status Bar
+Some actions, previously found in the header, are moved into a new status bar at the bottom of the screen ([NXS-5080](https://jira.nuxeo.com/browse/NXS-5080)). This is a first step towards providing greater consistency in the Nuxeo Online Services ecosystem.
+
+Some changes also happen to the Git actions at the same time:
+- All conflicts will be visible at once so you can better understand the result of merging a branch.
+- In advanced mode, commit and push actions will be separated so that we can display the commits you will push and what they contain before you decide to do it or not.
+
+### Easier Folderish Documents Configuration
+When using LTS 2019 or greater, visually configure columns to be displayed for every folderish document type you create ([NXS-4994](https://jira.nuxeo.com/browse/NXS-4994)). To prevent disruption only newly configured layouts will benefit from this feature. You can erase the existing configuration and generate it again to benefit from it otherwise.
+
 ### New Layout Blocks Menu in Studio Designer
 This menu lets you create reusable sets of properties, that can be used in your layouts afterwards.
 For example, you could define a form where you would change the elements configuration, then make sure these changes apply to all your document type layouts by reusing it.
@@ -35,7 +45,7 @@ Content views containing parameters are supported, query parameters are mapped t
 - Studio generates proper configuration when handling files in workflow tasks ([NXS-5023](https://jira.nuxeo.com/browse/NXS-5023)).
 - UI items work correctly when used from a Studio Designer page provider configuration ([NXS-5092](https://jira.nuxeo.com/browse/NXS-5092)).
 
-[More information about bugs fixed since last release notes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.5.0','3.5.1','3.5.2'%29) is available in our bug tracking tool.
+[More information about bugs fixed since last release notes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.5.0','3.5.1','3.5.2','3.6.0'%29) is available in our bug tracking tool.
 
 {{! /multiexcerpt}}
 
