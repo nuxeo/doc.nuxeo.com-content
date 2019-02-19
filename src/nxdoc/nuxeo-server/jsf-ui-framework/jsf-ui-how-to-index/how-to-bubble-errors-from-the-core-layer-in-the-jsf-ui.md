@@ -1,119 +1,103 @@
 ---
 title: How to Bubble Errors from the Core Layer in the JSF UI
 review:
-    comment: ''
-    date: '2015-12-01'
-    status: ok
+  comment: ''
+  date: '2015-12-01'
+  status: ok
 details:
-    howto:
-        excerpt: 'Learn how to bubble errors from the core layer in the&nbsp; UI.'
-        level: Advanced
-        tool: Code editor
-        topics: JSF UI
+  howto:
+    excerpt: 'Learn how to bubble errors from the core layer in the&nbsp; UI.'
+    level: Advanced
+    tool: Code editor
+    topics: JSF UI
 labels:
-    - content-review-lts2016
-    - automation
-    - howto
-    - seam-jsf-component
-    - atchertchian
-    - content-review-lts2017
+  - content-review-lts2016
+  - automation
+  - howto
+  - seam-jsf-component
+  - atchertchian
+  - content-review-lts2017
 confluence:
-    ajs-parent-page-id: '20517820'
-    ajs-parent-page-title: JSF UI How-To Index
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Bubble+Errors+from+the+Core+Layer+in+the+JSF+UI
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Bubble+Errors+from+the+Core+Layer+in+the+JSF+UI'
-    page_id: '19235489'
-    shortlink: oYIlAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/oYIlAQ'
-    source_link: /display/NXDOC/How+to+Bubble+Errors+from+the+Core+Layer+in+the+JSF+UI
+  ajs-parent-page-id: '20517820'
+  ajs-parent-page-title: JSF UI How-To Index
+  ajs-space-key: NXDOC
+  ajs-space-name: Nuxeo Platform Developer Documentation
+  canonical: How+to+Bubble+Errors+from+the+Core+Layer+in+the+JSF+UI
+  canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Bubble+Errors+from+the+Core+Layer+in+the+JSF+UI'
+  page_id: '19235489'
+  shortlink: oYIlAQ
+  shortlink_source: 'https://doc.nuxeo.com/x/oYIlAQ'
+  source_link: /display/NXDOC/How+to+Bubble+Errors+from+the+Core+Layer+in+the+JSF+UI
 tree_item_index: 100
 version_override:
-    '6.0': 60/nxdoc/how-to-bubble-errors-from-the-core-layer-in-the-web-ui
+  '6.0': 60/nxdoc/how-to-bubble-errors-from-the-core-layer-in-the-web-ui
 history:
-    -
-        author: Solen Guitter
-        date: '2016-09-05 09:41'
-        message: ''
-        version: '16'
-    -
-        author: Solen Guitter
-        date: '2016-08-31 13:26'
-        message: ''
-        version: '15'
-    -
-        author: Manon Lumeau
-        date: '2015-01-13 10:03'
-        message: ''
-        version: '14'
-    -
-        author: Alain Escaffre
-        date: '2014-11-24 16:55'
-        message: ''
-        version: '13'
-    -
-        author: Solen Guitter
-        date: '2014-08-28 10:39'
-        message: ''
-        version: '12'
-    -
-        author: Florent Guillaume
-        date: '2014-08-27 17:48'
-        message: ''
-        version: '11'
-    -
-        author: Vladimir Pasquier
-        date: '2014-08-27 17:44'
-        message: ''
-        version: '10'
-    -
-        author: Solen Guitter
-        date: '2014-04-29 13:48'
-        message: ''
-        version: '9'
-    -
-        author: Manon Lumeau
-        date: '2014-04-29 10:01'
-        message: ''
-        version: '8'
-    -
-        author: Vladimir Pasquier
-        date: '2014-04-28 16:18'
-        message: ''
-        version: '7'
-    -
-        author: Vladimir Pasquier
-        date: '2014-04-28 16:17'
-        message: ''
-        version: '6'
-    -
-        author: Vladimir Pasquier
-        date: '2014-04-28 15:47'
-        message: ''
-        version: '5'
-    -
-        author: Vladimir Pasquier
-        date: '2014-04-28 15:44'
-        message: ''
-        version: '4'
-    -
-        author: Vladimir Pasquier
-        date: '2014-04-28 15:35'
-        message: ''
-        version: '3'
-    -
-        author: Vladimir Pasquier
-        date: '2014-04-28 15:29'
-        message: ''
-        version: '2'
-    -
-        author: Alain Escaffre
-        date: '2014-04-28 15:23'
-        message: ''
-        version: '1'
-
+  - author: Solen Guitter
+    date: '2016-09-05 09:41'
+    message: ''
+    version: '16'
+  - author: Solen Guitter
+    date: '2016-08-31 13:26'
+    message: ''
+    version: '15'
+  - author: Manon Lumeau
+    date: '2015-01-13 10:03'
+    message: ''
+    version: '14'
+  - author: Alain Escaffre
+    date: '2014-11-24 16:55'
+    message: ''
+    version: '13'
+  - author: Solen Guitter
+    date: '2014-08-28 10:39'
+    message: ''
+    version: '12'
+  - author: Florent Guillaume
+    date: '2014-08-27 17:48'
+    message: ''
+    version: '11'
+  - author: Vladimir Pasquier
+    date: '2014-08-27 17:44'
+    message: ''
+    version: '10'
+  - author: Solen Guitter
+    date: '2014-04-29 13:48'
+    message: ''
+    version: '9'
+  - author: Manon Lumeau
+    date: '2014-04-29 10:01'
+    message: ''
+    version: '8'
+  - author: Vladimir Pasquier
+    date: '2014-04-28 16:18'
+    message: ''
+    version: '7'
+  - author: Vladimir Pasquier
+    date: '2014-04-28 16:17'
+    message: ''
+    version: '6'
+  - author: Vladimir Pasquier
+    date: '2014-04-28 15:47'
+    message: ''
+    version: '5'
+  - author: Vladimir Pasquier
+    date: '2014-04-28 15:44'
+    message: ''
+    version: '4'
+  - author: Vladimir Pasquier
+    date: '2014-04-28 15:35'
+    message: ''
+    version: '3'
+  - author: Vladimir Pasquier
+    date: '2014-04-28 15:29'
+    message: ''
+    version: '2'
+  - author: Alain Escaffre
+    date: '2014-04-28 15:23'
+    message: ''
+    version: '1'
 ---
+
 The Nuxeo Platform proposes an easy model for implementing custom logic through the [Event Listener system]({{page page='events-and-listeners'}}). Sometimes, you want to "bubble" in the UI up to the user errors that happens in that lower layer. This page explains how this can be done by using the RecoverableClientException mechanism, throughout an example that executes a chain in the listener which can easily be configured using Studio. In the end, this provides a nice pattern for implementing integrity checks based on automation.
 
 {{#> callout type='note' }}
@@ -275,20 +259,18 @@ Make sure that none of the listeners running before your custom listener modify 
     Here is the result after trying to create a document: The end user sees error message displaying all collected invalidations:
     ![]({{file name='Screenshot 2014-04-28 15.42.55.png'}} ?w=300,h=127,border=true)
 
-* * *
+---
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel heading='Related pages in current documentation'}}
-
-*   [JSF UI How-To Index]({{page page='jsf-ui-how-to-index'}})
-*   [Uploading Custom Operations in Nuxeo Studio]({{page space='idedoc' page='uploading-custom-operations-in-nuxeo-studio'}})
-*   [Contributing an Operation]({{page page='contributing-an-operation'}})
-
+- [JSF UI How-To Index]({{page page='jsf-ui-how-to-index'}})
+- [Uploading Custom Operations in Nuxeo Studio]({{page space='idedoc' page='uploading-custom-operations-in-nuxeo-studio'}})
+- [Contributing an Operation]({{page page='contributing-an-operation'}})
 {{/panel}}
+
 </div>
 <div class="column medium-6">
-
 
 &nbsp;
 
