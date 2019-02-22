@@ -1,47 +1,43 @@
 ---
 title: Nuxeo Studio
 review:
-    comment: ''
-    date: ''
-    status: ok
+  comment: ''
+  date: ''
+  status: ok
 is_overview: true
 notes: >-
-    Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
+  Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
-    ajs-parent-page-id: '1409040'
-    ajs-parent-page-title: Nuxeo Online Services
-    ajs-space-key: Studio
-    ajs-space-name: Nuxeo Online Services
-    canonical: Nuxeo+Studio
-    canonical_source: 'https://doc.nuxeo.com/display/Studio/Nuxeo+Studio'
-    page_id: '19793788'
-    shortlink: fAcuAQ
-    shortlink_source: 'https://doc.nuxeo.com/x/fAcuAQ'
-    source_link: /display/Studio/Nuxeo+Studio
+  ajs-parent-page-id: '1409040'
+  ajs-parent-page-title: Nuxeo Online Services
+  ajs-space-key: Studio
+  ajs-space-name: Nuxeo Online Services
+  canonical: Nuxeo+Studio
+  canonical_source: 'https://doc.nuxeo.com/display/Studio/Nuxeo+Studio'
+  page_id: '19793788'
+  shortlink: fAcuAQ
+  shortlink_source: 'https://doc.nuxeo.com/x/fAcuAQ'
+  source_link: /display/Studio/Nuxeo+Studio
 tree_item_index: 200
 history:
-    -
-        author: Manon Lumeau
-        date: '2016-07-12 09:01'
-        message: ''
-        version: '4'
-    -
-        author: Solen Guitter
-        date: '2014-12-30 17:00'
-        message: ''
-        version: '3'
-    -
-        author: Solen Guitter
-        date: '2014-07-15 16:07'
-        message: ''
-        version: '2'
-    -
-        author: Solen Guitter
-        date: '2014-07-15 16:06'
-        message: ''
-        version: '1'
-
+  - author: Manon Lumeau
+    date: '2016-07-12 09:01'
+    message: ''
+    version: '4'
+  - author: Solen Guitter
+    date: '2014-12-30 17:00'
+    message: ''
+    version: '3'
+  - author: Solen Guitter
+    date: '2014-07-15 16:07'
+    message: ''
+    version: '2'
+  - author: Solen Guitter
+    date: '2014-07-15 16:06'
+    message: ''
+    version: '1'
 ---
+
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Getting started
@@ -55,22 +51,22 @@ Get an overview of what can be done with Nuxeo Studio and how you can create you
 
 ### [Working with Studio Modeler]({{page page='working-in-studio'}})
 
-In this chapter we will explain each screen exposed by Nuxeo Studio. If you are blocked in your configuration process on a specific screen!
+In this chapter we will explain each screen exposed by Studio Modeler. If you are blocked in your configuration process on a specific screen!
 
 - [Documents]({{page page='documents'}})
-- [Content Views]({{page page='content-views'}})
+- [Page Providers]({{page version='' space='studio' page='page-providers'}})
 - [Workflow]({{page page='workflow'}})
 - [Automation]({{page page='automation'}})
 
 {{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
-### [Administering your project]({{page page='administering-your-project'}})
+### [Working with Studio Designer]({{page version='' space='studio' page='working-in-view-designer'}})
 
-This section provides you an overview of how you can manage your own application (versioning, naming, etc.)
+Discover with each screen how to configure your interface.
 
-- [How to Enable Package Specific Features in Studio for DAM or DM]({{page page='how-to-enable-package-specific-features-in-studio-for-dam-or-virtual-navigation'}})
-- [Use Registries for Referencing Externally Defined Objects]({{page page='registries'}})
-- [Update the Version of Your Target Platform]({{page page='update-the-version-of-your-target-platform'}})
+- [UI]({{page version='' space='studio' page='ui-designer'}})
+- [Resources]({{page version='' space='studio' page='resources-designer'}})
+- [Editor]({{page version='' space='studio' page='main-view'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
@@ -78,15 +74,17 @@ This section provides you an overview of how you can manage your own application
 
 The goal of this section is to provide ready to use examples. They can be followed step by step to learn how to use Studio on practical use cases.
 
-- [Deploying Your Project in Dev Mode]({{page page='deploying-your-project-in-dev-mode'}})
+- [How to Collaborate on a Studio Project ]({{page page='how-to-collaborate-on-a-studio-project'}})
+- [How to Configure your Login Page]({{page version='' space='studio' page='branding'}})
 - [From the JSF UI to Nuxeo Studio]({{page space='nxdoc' page='from-the-jsf-ui-to-nuxeo-studio'}})
 
 {{/panel}}</div></div>
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
+
 - [Learning Plan on Nuxeo Studio](https://university.nuxeo.com/learn/public/learning_plan/view/5/nuxeo-studio-foundations)
-![]({{file version='' space='nxdoc' page='university' name='university-studio-learning-plan.png'}} ?w=450,border=true)
-{{/callout}}
+  ![]({{file version='' space='nxdoc' page='university' name='university-studio-learning-plan.png'}} ?w=450,border=true)
+  {{/callout}}
 
 {{{multiexcerpt 'license' page='NXDOC:Developer Documentation Center'}}}
