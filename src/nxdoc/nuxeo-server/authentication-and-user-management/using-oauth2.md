@@ -122,11 +122,19 @@ The `Auto-grant` parameter, if checked, allows the OAuth 2 client to bypass the 
 
 The OAuth 2 endpoints are now ready to be used.
 
-## OAuth 2 Flow
+## OAuth 2 Flows
+
+### OAuth 2 Authorization Grant Flow
 
 Here is how Nuxeo handles the OAuth 2 flow to authorize your **application** to access a **protected Nuxeo resource** on behalf of a **user**.
 
 ![]({{file name='Nuxeo-OAuth2-Flow.png'}} ?w=500,border=true)
+
+### OAuth 2 JWT Flow
+
+Here is how Nuxeo handles the OAuth 2 flow to authorize your **application** to access a **protected Nuxeo resource** thanks to a **JSON Web Token (JWT)** that contains identity and security information.
+
+![]({{file name='Nuxeo-JWT-Flow.png'}} ?w=500,border=true)
 
 ## Authorization Endpoint
 
@@ -202,7 +210,7 @@ The `code_challenge` and `code_challenge_method` parameters must be used with a 
 
 ## Token Endpoint
 
-### Requesting an Access Token
+### Requesting an Access Token with an Authorization code
 
 ```
 POST https://NUXEO_SERVER/nuxeo/oauth2/token?grant_type=authorization_code&client_id=myApp&code=authorizationCode
@@ -254,6 +262,72 @@ POST https://NUXEO_SERVER/nuxeo/oauth2/token?grant_type=authorization_code&clien
 <td>string</td>
 <td>No, only if `code_challenge` and `code_challenge_method` were sent to the Authorization endpoint.</td>
 <td>A high-entropy cryptographic random string using the unreserved characters [A-Z] / [a-z] / [0-9] / "-" / "." / "\_" / "~" from [Section 2.3 of RFC3986](https://tools.ietf.org/html/rfc3986#section-2.3), with a minimum length of 43 characters and a maximum length of 128 characters.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+**Response:**
+
+```
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Length: 176
+Content-Type: application/json;charset=ISO-8859-1
+
+{
+    "access_token": "A4zNYD1F7cp9l2UTL14pMT65qsyilgjZ",
+    "expires_in": 3599.0,
+    "refresh_token": "uFfVCD82NRlzeACoK6Fw09fvkYp6GmkuLs2UigconizFufNxIQZLd7btXLxzUzlB",
+    "token_type": "bearer"
+}
+
+```
+### Requesting an Access Token with a JWT
+
+```
+POST /oauth2/token HTTP/1.1
+Host: NUXEO_SERVER/nuxeo
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=jwtToken
+&client_id=myApp
+```
+
+**Input parameters:**
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>`grant_type`</td>
+<td>string</td>
+<td>**Yes**</td>
+<td>The value must be `urn:ietf:params:oauth:grant-type:jwt-bearer` for requesting an access token.</td>
+</tr>
+<tr>
+<td>`client_id`</td>
+<td>string</td>
+<td>**Yes**</td>
+<td>The client id, registered in Nuxeo.</td>
+</tr>
+<tr>
+<td>`client_secret`</td>
+<td>string</td>
+<td>No</td>
+<td>The client's secret</td>
+</tr>
+<tr>
+<td>`assertion`</td>
+<td>string</td>
+<td>**Yes**</td>
+<td>The JSON web token</td>
 </tr>
 </tbody>
 </table>
