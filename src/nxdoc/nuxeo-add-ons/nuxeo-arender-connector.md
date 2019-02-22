@@ -94,7 +94,15 @@ POST /arendergwt/weather?format=json
 
 ### Nuxeo Configuration
 
-The ARender connector relies on the JWT authentication. You need to define a secret `nuxeo.jwt.secret` in your `nuxeo.conf` to enable it.
+The ARender connector relies on a [JWT](https://jwt.io/) to request an OAuth2 token for authentication (See [OAuth2]({{page page='using-oauth2'}}) documentation page for more information). 
+You need to define a secret `nuxeo.jwt.secret` in your `nuxeo.conf` to enable it.
+
+Authentication from ARender to Nuxeo relies on a shared secret between the two applications. This secret is defined with the property `nuxeo.arender.secret` in your `nuxeo.conf`.
+
+{{#> callout type='info' heading='Shared secret environment variable'}}
+If using the docker image for the ARender previewer, you can also define this shared secret through an environment variable `nuxeoArenderSecretEnv`.
+{{/callout}}
+
 
 If your ARender rendition server doesn't run on same host than Nuxeo's Tomcat, you can change the ARender rendition URL by setting `arender.server.rendition.hosts` in your `nuxeo.conf` (default value is `http://localhost:8761`).
 
