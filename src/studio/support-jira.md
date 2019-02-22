@@ -191,7 +191,7 @@ history:
         version: '1'
 
 ---
-Your Nuxeo Support contract includes the access to [our JIRA issue tracker platform](https://jira.nuxeo.com). JIRA is the place where you can ask the support team questions, report issues with your application by creating "tickets". It enables both you and us to centralize the exchanges on your project's issues and to keep the history of your project available to all the persons working on your project. You can use JIRA to ad&shy;dress the following aspects of Nuxeo:
+Your Nuxeo Support contract includes the access to our JIRA issue tracker platform [https://jira.nuxeo.com](https://jira.nuxeo.com). JIRA is the place where you can ask the support team questions, report issues with your application by creating "tickets". It enables both you and us to centralize the exchanges on your project's issues and to keep the history of your project available to all the persons working on your project. You can use JIRA to ad&shy;dress the following aspects of Nuxeo:
 
 *   use of the Nuxeo API(s)
 *   bug identification and correction
