@@ -171,7 +171,7 @@ We strongly encourage you to follow these, especially if you are a beginner.
 |---|---|---|
 | Document types | Pascal case naming convention | ContractLibrary |
 | Schemas | Lower case, separated by underscore only if readability is affected | contract_library  |
-| Properties | Pascal case naming convention | ContractNumber  |
+| Properties | Camel case, not separated | contractNumber |
 | Lifecycles | Pascal case naming convention | ContractLifecycle |
 | Lifecycle states  | Camel case, not separated | ingestionInProgress |
 | Lifecycle transitions  | `to_` followed by the lifecycle state name | to_ingestionInProgress |
