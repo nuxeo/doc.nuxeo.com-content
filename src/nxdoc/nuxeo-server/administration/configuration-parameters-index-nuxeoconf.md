@@ -2079,7 +2079,7 @@ Defaults to false on server upgrade, true on new install.</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.routing.enforceGlobalVariablesAssignmentCheck`</td>
-<td colspan="1">Enforce workflow global variable assignment check. See the page [NXP-26630](https://jira.nuxeo.com/browse/NXP-26630) for more details.</td>
+<td colspan="1">Enforce workflow global variable assignment check. See [NXP-26630](https://jira.nuxeo.com/browse/NXP-26630) for more details.</td>
 <td colspan="1">false</td>
 <td colspan="1">Only for Nuxeo 8.10 (since HF43) and 9.10 (since HF38)</td>
 </tr>
