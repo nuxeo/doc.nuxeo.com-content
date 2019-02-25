@@ -123,13 +123,10 @@ history:
         date: '2014-07-03 01:07'
         message: ''
         version: '1'
-
 ---
 
 {{! excerpt}}
-
 The Nuxeo Platform allows you to [upload binaries under a given "batch ID"]({{page page='batch-upload-endpoint'}}) on the server and then reference the batch ID when posting a document resource, or for fetching it from a custom Automation chain. For instance if you need to create a file with some binary content, first you have to upload the file into the `BatchManager`. It's a place on the system where you can upload temporary files to bind them later.
-
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
@@ -339,23 +336,25 @@ GET /api/v1/path/default-domain/workspaces/myworkspace/myNewDoc/@blob/file:conte
 ```
 
 ## Uploading Several Files and Using Them
+
 The batch-upload API lets you upload several files, and then reference them by their indices in the batch (see examples above, using the `"upload-fileId": "0"` field).
 Something important to understand is that as soon as a batch is used, it is cleared. So, if you upload 10 files, as soon as you create a Document and reference the first file of the batch, the batch is cleared and the other files are lost, referencing them in the batch will just create a `null`  blob.
 
 This can be avoided by passing a special header, `X-Batch-No-Drop` and setting it to `true`. When a batch is used and this header exists and is `true`, the batch is not deleted.
 Ultimately, as an example, to create 10 documents in a single batch upload:
-* Create the batch and upload the 10 files
-* Create the first 9 Documents as explained above, and pass the `X-Batch-No-Drop`, and set it to `true`
-* For the last one, omit the header so Nuxeo can clean up the batch and free memory and space.
+- Create the batch and upload the 10 files
+- Create the first 9 Documents as explained above, and pass the `X-Batch-No-Drop`, and set it to `true`
+- For the last one, omit the header so Nuxeo can clean up the batch and free memory and space.
 
-(Notice that, to create these 10 documents, you could also create 10 batches each of them with a single file.)
+{{#> callout type='tip' }}
+To create these 10 documents, you can also create 10 batches each of them with a single file.
+{{/callout}}
 
 Documentation can be found [here](https://doc.nuxeo.com/nxdoc/batch-upload-endpoint/#dropping-a-batch).
 
-
 ## Learn More
 
-*   Follow the courses [Importing Files with the REST API](https://university.nuxeo.com/learn/course/external/view/elearning/69/importing-files-with-the-rest-api) and [Importing Documents / REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) at [Nuxeo University](https://university.nuxeo.com).
+- Follow the courses [Importing Files with the REST API](https://university.nuxeo.com/learn/course/external/view/elearning/69/importing-files-with-the-rest-api) and [Importing Documents / REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) at [Nuxeo University](https://university.nuxeo.com).
 
 * * *
 
