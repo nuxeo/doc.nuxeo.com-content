@@ -1,122 +1,105 @@
 ---
-title: How to Override Existing Document Types
+title: 'HOWTO: Override Existing Document Types'
 review:
-    comment: ''
-    date: '2017-02-13'
-    status: not-ok
+  comment: ''
+  date: '2017-02-13'
+  status: not-ok
 details:
-    howto:
-        excerpt: Learn how to override an existing document type in Nuxeo Studio.
-        level: Beginner
-        tool: Studio
-        topics: 'Document type, Override'
+  howto:
+    excerpt: Learn how to override an existing document type in Nuxeo Studio.
+    level: Beginner
+    tool: Studio
+    topics: 'Document type, Override'
 labels:
-    - lts2016-ok
-    - howto
-    - document-type
-    - gcarlin
-    - excerpt
-    - lts2017-ok
+  - lts2016-ok
+  - howto
+  - document-type
+  - gcarlin
+  - excerpt
+  - lts2017-ok
 confluence:
-    ajs-parent-page-id: '950287'
-    ajs-parent-page-title: Content Repository
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: How+to+Override+Existing+Document+Types
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Override+Existing+Document+Types'
-    page_id: '6030167'
-    shortlink: VwNc
-    shortlink_source: 'https://doc.nuxeo.com/x/VwNc'
-    source_link: /display/NXDOC/How+to+Override+Existing+Document+Types
+  ajs-parent-page-id: '950287'
+  ajs-parent-page-title: Content Repository
+  ajs-space-key: NXDOC
+  ajs-space-name: Nuxeo Platform Developer Documentation
+  canonical: How+to+Override+Existing+Document+Types
+  canonical_source: 'https://doc.nuxeo.com/display/NXDOC/How+to+Override+Existing+Document+Types'
+  page_id: '6030167'
+  shortlink: VwNc
+  shortlink_source: 'https://doc.nuxeo.com/x/VwNc'
+  source_link: /display/NXDOC/How+to+Override+Existing+Document+Types
 tree_item_index: 1100
 history:
-    -
-        author: Manon Lumeau
-        date: '2015-10-29 16:15'
-        message: ''
-        version: '17'
-    -
-        author: Solen Guitter
-        date: '2014-12-01 21:47'
-        message: ''
-        version: '16'
-    -
-        author: Manon Lumeau
-        date: '2014-09-09 11:13'
-        message: ''
-        version: '15'
-    -
-        author: Manon Lumeau
-        date: '2014-09-08 17:55'
-        message: ''
-        version: '14'
-    -
-        author: Manon Lumeau
-        date: '2014-09-08 16:40'
-        message: ''
-        version: '13'
-    -
-        author: Solen Guitter
-        date: '2014-06-27 13:49'
-        message: ''
-        version: '12'
-    -
-        author: Solen Guitter
-        date: '2014-06-27 13:48'
-        message: format
-        version: '11'
-    -
-        author: Solen Guitter
-        date: '2014-01-24 17:24'
-        message: ''
-        version: '10'
-    -
-        author: Solen Guitter
-        date: '2013-09-02 14:46'
-        message: ''
-        version: '9'
-    -
-        author: Solen Guitter
-        date: '2011-09-06 16:33'
-        message: Migrated to Confluence 4.0
-        version: '8'
-    -
-        author: Solen Guitter
-        date: '2011-09-06 16:33'
-        message: Added related tutorials
-        version: '7'
-    -
-        author: Solen Guitter
-        date: '2011-07-19 16:56'
-        message: format
-        version: '6'
-    -
-        author: Anahide Tchertchian
-        date: '2011-03-15 17:20'
-        message: ''
-        version: '5'
-    -
-        author: Alain Escaffre
-        date: '2011-03-15 10:16'
-        message: ''
-        version: '4'
-    -
-        author: Alain Escaffre
-        date: '2011-03-15 10:12'
-        message: ''
-        version: '3'
-    -
-        author: Alain Escaffre
-        date: '2011-03-15 10:11'
-        message: ''
-        version: '2'
-    -
-        author: Alain Escaffre
-        date: '2011-03-15 09:27'
-        message: ''
-        version: '1'
-
+  - author: Manon Lumeau
+    date: '2015-10-29 16:15'
+    message: ''
+    version: '17'
+  - author: Solen Guitter
+    date: '2014-12-01 21:47'
+    message: ''
+    version: '16'
+  - author: Manon Lumeau
+    date: '2014-09-09 11:13'
+    message: ''
+    version: '15'
+  - author: Manon Lumeau
+    date: '2014-09-08 17:55'
+    message: ''
+    version: '14'
+  - author: Manon Lumeau
+    date: '2014-09-08 16:40'
+    message: ''
+    version: '13'
+  - author: Solen Guitter
+    date: '2014-06-27 13:49'
+    message: ''
+    version: '12'
+  - author: Solen Guitter
+    date: '2014-06-27 13:48'
+    message: format
+    version: '11'
+  - author: Solen Guitter
+    date: '2014-01-24 17:24'
+    message: ''
+    version: '10'
+  - author: Solen Guitter
+    date: '2013-09-02 14:46'
+    message: ''
+    version: '9'
+  - author: Solen Guitter
+    date: '2011-09-06 16:33'
+    message: Migrated to Confluence 4.0
+    version: '8'
+  - author: Solen Guitter
+    date: '2011-09-06 16:33'
+    message: Added related tutorials
+    version: '7'
+  - author: Solen Guitter
+    date: '2011-07-19 16:56'
+    message: format
+    version: '6'
+  - author: Anahide Tchertchian
+    date: '2011-03-15 17:20'
+    message: ''
+    version: '5'
+  - author: Alain Escaffre
+    date: '2011-03-15 10:16'
+    message: ''
+    version: '4'
+  - author: Alain Escaffre
+    date: '2011-03-15 10:12'
+    message: ''
+    version: '3'
+  - author: Alain Escaffre
+    date: '2011-03-15 10:11'
+    message: ''
+    version: '2'
+  - author: Alain Escaffre
+    date: '2011-03-15 09:27'
+    message: ''
+    version: '1'
 ---
+
 {{! excerpt}}
 
 Any built-in document type can be overridden: you just have to use the good ID, inherit the good type and add some necessary schemas and facets. We provide a table that should give you all necessary information.
