@@ -184,6 +184,29 @@ Cluster: 1.5.2 to 1.7.x</td>
 
 More information can be found on the [Elasticsearch Setup]({{page page='elasticsearch-setup'}}) page.
 
+## Kafka
+
+{{! multiexcerpt name='kafka_supported_versions'}}
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+  <th colspan="1">Nuxeo Platform Version:</th>
+  <th colspan="1">LTS 2017</th>
+</tr>
+<tr>
+  <th colspan="1">Kafka</th>
+<td colspan="1">
+  Library: 1.0.0 scala 2.11<br/>
+  Cluster: 1.x, 2.0.0
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+{{! /multiexcerpt}}
+
 ## Browsers
 
 {{! multiexcerpt name='supported-browsers'}}
