@@ -64,8 +64,8 @@ history:
         date: '2014-02-10 15:54'
         message: ''
         version: '1'
-
 ---
+
 OAuth 2 is a protocol that allows an application to obtain access to the Nuxeo Platform on behalf of a user.
 
 Nuxeo tries to stay very close to the ["OAuth 2.0 Authorization Framework"](http://tools.ietf.org/html/rfc6749) RFC to ease client integration and be secure. Before going any further, because OAuth 2 has to make a lot of secure exchanges with clients using query parameters, you **must ensure** to have [configured Nuxeo in HTTPs]({{page page='http-and-https-reverse-proxy-configuration'}}).
@@ -163,13 +163,13 @@ GET https://NUXEO_SERVER/nuxeo/oauth2/authorize?response_type=code&client_id=myA
                 <td>`client_id`</td>
                 <td>string</td>
                 <td>**Yes**</td>
-                <td>An enabled client identification</td>
+                <td>An enabled client identification.</td>
             </tr>
             <tr>
                 <td>`redirect_uri`</td>
                 <td>string</td>
                 <td>No</td>
-                <td>The absolute URI to return the user to after authorization is complete</td>
+                <td>The absolute URI to return the user to after authorization is complete.</td>
             </tr>
             <tr>
                 <td>`state`</td>
@@ -181,7 +181,7 @@ GET https://NUXEO_SERVER/nuxeo/oauth2/authorize?response_type=code&client_id=myA
                 <td>`scope`</td>
                 <td>string</td>
                 <td>No</td>
-                <td>Ignored in our implementation</td>
+                <td>Ignored in our implementation.</td>
             </tr>
             <tr>
                 <td>`code_challenge`</td>
@@ -210,7 +210,7 @@ The `code_challenge` and `code_challenge_method` parameters must be used with a 
 
 ## Token Endpoint
 
-### Requesting an Access Token with an Authorization code
+### Requesting an Access Token with an Authorization Code
 
 ```
 POST https://NUXEO_SERVER/nuxeo/oauth2/token?grant_type=authorization_code&client_id=myApp&code=authorizationCode
@@ -243,13 +243,13 @@ POST https://NUXEO_SERVER/nuxeo/oauth2/token?grant_type=authorization_code&clien
 <td>`client_secret`</td>
 <td>string</td>
 <td>No</td>
-<td>The client's secret</td>
+<td>The client's secret.</td>
 </tr>
 <tr>
 <td>`code`</td>
 <td>string</td>
 <td>**Yes**</td>
-<td>The authorization code received from the Authorization endpoint</td>
+<td>The authorization code received from the Authorization endpoint.</td>
 </tr>
 <tr>
 <td>`redirect_uri`</td>
@@ -382,13 +382,13 @@ POST https://NUXEO_SERVER/nuxeo/oauth2/token?grant_type=refresh_token&client_id=
             <td>`client_secret`</td>
             <td>string</td>
             <td>No</td>
-            <td>The client's secret</td>
+            <td>The client's secret.</td>
         </tr>
         <tr>
             <td>`refresh_token`</td>
             <td>string</td>
             <td>**Yes**</td>
-            <td>A refresh token bound to the same client</td>
+            <td>A refresh token bound to the same client.</td>
         </tr>
     </tbody>
     </table>
