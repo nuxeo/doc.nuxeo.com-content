@@ -472,7 +472,7 @@ and bind the servlet to this host in the deployment-fragment.xml file:
 
 ```
 
-This will isolate your top level resources from the ones declared by other modules (like root resources, message body writer and readers, exception mapper etc).
+This will isolate your top level resources from the ones declared by other modules (like root resources, message body writer and readers, exception mapper, etc.).
 Example: this will make it possible, for instance, to use a distinct exception mapper in your application.
 
 ### Example
