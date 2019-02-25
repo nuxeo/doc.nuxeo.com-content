@@ -400,7 +400,7 @@ Build your application JAR and put it into your Nuxeo bundles directory. After s
 
 ### Automatic Discovery of JAX-RS Resources at Runtime
 
-If you don't want to explicitly declares your resources in a JAX-RS application object you can use a special application that will discover resources at runtime when it will be registered by the JAX-RS container.
+If you don't want to explicitly declare your resources in a JAX-RS application object you can use a special application that will discover resources at runtime when it will be registered by the JAX-RS container.
 For this you should use the `org.nuxeo.ecm.webengine.jaxrs.scan.DynamicApplicationFactory` application in your manifest like this:
 
 ```
