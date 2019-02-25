@@ -132,7 +132,7 @@ Bundle-Version: 1.0.0
 {{#> callout type='warning' }}
 
 This also causes all of the other components in the fragment bundle not to be deployed.
-Thus, any endpoint or web adapter class you add, respectively annotated with `@WebObject` ot `@WebAdapter`, need to be in a standalone bundle, not in the same bundle as extension point XML contributions for instance.
+Thus, any endpoint or web adapter class you add, respectively annotated with `@WebObject` or `@WebAdapter`, need to be in a standalone bundle, not in the same bundle as extension point XML contributions for instance.
 
 {{/callout}}
 
