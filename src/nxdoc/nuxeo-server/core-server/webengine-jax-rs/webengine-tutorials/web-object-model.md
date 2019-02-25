@@ -1,73 +1,67 @@
 ---
 title: Web Object Model
 review:
-    comment: ''
-    date: '2016-12-20'
-    status: ok
+  comment: ''
+  date: '2016-12-20'
+  status: ok
 labels:
-    - lts2016-ok
-    - howto
-    - webengine
-    - webengine-component
-    - dmetzler
-    - content-review-lts2017
+  - lts2016-ok
+  - howto
+  - webengine
+  - webengine-component
+  - dmetzler
+  - content-review-lts2017
 confluence:
-    ajs-parent-page-id: '3343141'
-    ajs-parent-page-title: WebEngine Tutorials
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Web+Object+Model
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Web+Object+Model'
-    page_id: '3343204'
-    shortlink: ZAMz
-    shortlink_source: 'https://doc.nuxeo.com/x/ZAMz'
-    source_link: /display/NXDOC/Web+Object+Model
+  ajs-parent-page-id: '3343141'
+  ajs-parent-page-title: WebEngine Tutorials
+  ajs-space-key: NXDOC
+  ajs-space-name: Nuxeo Platform Developer Documentation
+  canonical: Web+Object+Model
+  canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Web+Object+Model'
+  page_id: '3343204'
+  shortlink: ZAMz
+  shortlink_source: 'https://doc.nuxeo.com/x/ZAMz'
+  source_link: /display/NXDOC/Web+Object+Model
 tree_item_index: 300
 history:
-    -
-        author: Damien Metzler
-        date: '2015-10-20 14:08'
-        message: ''
-        version: '8'
-    -
-        author: Damien Metzler
-        date: '2015-10-20 14:07'
-        message: ''
-        version: '7'
-    -
-        author: Damien Metzler
-        date: '2015-10-20 14:07'
-        message: ''
-        version: '6'
-    -
-        author: Bogdan Stefanescu
-        date: '2010-07-21 11:46'
-        message: Migrated to Confluence 4.0
-        version: '5'
-    -
-        author: Bogdan Stefanescu
-        date: '2010-07-21 11:46'
-        message: ''
-        version: '4'
-    -
-        author: Bogdan Stefanescu
-        date: '2010-07-21 11:42'
-        message: ''
-        version: '3'
-    -
-        author: Bogdan Stefanescu
-        date: '2010-07-21 11:31'
-        message: ''
-        version: '2'
-    -
-        author: Bogdan Stefanescu
-        date: '2010-07-20 16:33'
-        message: ''
-        version: '1'
+  - author: Damien Metzler
+    date: '2015-10-20 14:08'
+    message: ''
+    version: '8'
+  - author: Damien Metzler
+    date: '2015-10-20 14:07'
+    message: ''
+    version: '7'
+  - author: Damien Metzler
+    date: '2015-10-20 14:07'
+    message: ''
+    version: '6'
+  - author: Bogdan Stefanescu
+    date: '2010-07-21 11:46'
+    message: Migrated to Confluence 4.0
+    version: '5'
+  - author: Bogdan Stefanescu
+    date: '2010-07-21 11:46'
+    message: ''
+    version: '4'
+  - author: Bogdan Stefanescu
+    date: '2010-07-21 11:42'
+    message: ''
+    version: '3'
+  - author: Bogdan Stefanescu
+    date: '2010-07-21 11:31'
+    message: ''
+    version: '2'
+  - author: Bogdan Stefanescu
+    date: '2010-07-20 16:33'
+    message: ''
+    version: '1'
 ---
+
 ## JAX-RS Resources
 
 {{#> panel type='code' heading='Sample3.java'}}
+
 ```java
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
@@ -119,11 +113,11 @@ import org.nuxeo.ecm.webengine.model.*;
  * Or more, to create a document version? or to get a document version?
  * A simple way is to add new methods on the DocumentObject resource that will handle requests top lock, unlock, version etc.
  * Somethig like <code>@GET @Path("lock") getLock()</code> or <code>@POST @Path("lock") postLock()</code>.
- * But this approach is not flexible because you cannot easily add new fonctionalities on existing resources in a dynamic way.
+ * But this approach is not flexible because you cannot easily add new functionalities on existing resources in a dynamic way.
  * And also, doing so, you will end up with a cluttered code, having many methods for each new aspect of the Web Object you need to handle.
- * To solve this problem, WebEngine is defining Web Adapters, so that they can be used to add new fonctionality on existing objects.
+ * To solve this problem, WebEngine is defining Web Adapters, so that they can be used to add new functionality on existing objects.
  * For example, to handle the lock actions on an Web Object we will define a new class LockAdapter which will implement
- * the <code>GET</code>, <code>POST</code>, <code>DELETE</code> methods to manage the lock fonctionality on the target Web Object.
+ * the <code>GET</code>, <code>POST</code>, <code>DELETE</code> methods to manage the lock functionality on the target Web Object.
  * Adapters are specified using an '@' prefix on the segment in an HTTP request path. This is needed by WebEngine to differentiate
  * Web Objects from Web Adapters.
  * Thus in our lock example to request the lock adapter on an object you will use a request path of like the following:
@@ -152,7 +146,7 @@ import org.nuxeo.ecm.webengine.model.*;
  * <br>
  * <b>Note</b> that the root resource is not necessarily the first one, and the target resource is not necessarily the last one!
  * More, the root and the target resources are never WebAdapters. They can be only WebObjects or WebModule entry points
- * (that are aspecial kind of WebObjects).
+ * (that are a special kind of WebObjects).
  *
 <p>
  * The root resource is by default the module entry point (i.e. the first resource in the chain) but can be programatically set to point to any other
@@ -195,7 +189,7 @@ import org.nuxeo.ecm.webengine.model.*;
 <pre>
  * view_id + [-media_type_id] + ".ftl"
  * </pre>
- * The <code>media_type_id</code> is optional and will be empty for media-types not explicitely bound to an ID in modules.xml configuration file.
+ * The <code>media_type_id</code> is optional and will be empty for media-types not explicitly bound to an ID in modules.xml configuration file.
  * For example, to dynamically change the view file corresponding to a view
  * having the ID <code>index</code> when the response media-type is <code>application/atom+xml</code>
  * you can define a mapping of this media type to the media_type_id <code>atom</code> and then you can use the file name
@@ -219,7 +213,7 @@ public class Sample3 extends ModuleRoot {
 
   /**
    * Get the WebObject (i.e. a JAX-RS sub-resource) bound to "users".
-   * Look into "users" directory for the UserManager WebObject. The location of WebObjects is not explictely specified by the programmer.
+   * Look into "users" directory for the UserManager WebObject. The location of WebObjects is not explicitly specified by the programmer.
    * The module directory will be automatically scanned for WebObject and WebAdapters.
    */
   @Path("users")
@@ -230,9 +224,11 @@ public class Sample3 extends ModuleRoot {
 
 }
 ```
+
 {{/panel}}
 
 {{#> panel type='code' heading='users/UserManager.java'}}
+
 ```java
 package users;
 
@@ -286,9 +282,11 @@ public class UserManager extends DefaultObject {
 
 }
 ```
+
 {{/panel}}
 
 {{#> panel type='code' heading='users/User.java'}}
+
 ```java
 package users;
 
@@ -355,9 +353,11 @@ public class User extends DefaultObject {
 
 }
 ```
+
 {{/panel}}
 
 {{#> panel type='code' heading='users/UserBuddies.java'}}
+
 ```java
 package users;
 
@@ -389,60 +389,64 @@ public class UserBuddies extends DefaultAdapter {
 
 }
 ```
+
 {{/panel}}
 
 ## Object Views
 
 {{#> panel type='code' heading='skin/views/sample3/index.ftl'}}
+
 ```html
 <html>
   <head>
     <title>Sample3</title>
   </head>
   <body>
+    <h3>Sample3 Index View.</h3>
 
-<h3>Sample3 Index View.</h3>
-
-<p><a href="${This.path}/users">User Management</a></p>
+    <p><a href="${This.path}/users">User Management</a></p>
   </body>
 </html>
 ```
+
 {{/panel}}
 
 {{#> panel type='code' heading='skin/views/UserManager/index.ftl'}}
+
 ```html
 <html>
   <head>
     <title>Sample3</title>
   </head>
   <body>
-
-<h3>UserManager Index</h3>
+    <h3>UserManager Index</h3>
     <form method="GET" action="${This.path}/user" onSubmit="">
-    Enter a fictive User name: <input type="text" name="name" value=""/>
+      Enter a fictive User name: <input type="text" name="name" value="" />
     </form>
   </body>
 </html>
 ```
+
 {{/panel}}
 
-
 {{#> panel type='code' heading='skin/views/User/index.ftl'}}
+
 ```html
 <html>
   <head>
     <title>Sample3</title>
   </head>
   <body>
-
-<h3>${This.displayName}</h3>
+    <h3>${This.displayName}</h3>
     View my <a href="${This.path}/@buddies">buddies</a>
   </body>
 </html>
 ```
+
 {{/panel}}
 
 {{#> panel type='code' heading='skin/views/UserBuddies/index.ftl'}}
+
 ```html
 <html>
   <head>
@@ -465,4 +469,5 @@ public class UserBuddies extends DefaultAdapter {
   </body>
 </html>
 ```
+
 {{/panel}}
