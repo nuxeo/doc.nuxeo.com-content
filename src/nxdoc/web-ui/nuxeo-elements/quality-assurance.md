@@ -2,11 +2,11 @@
 title: Nuxeo Elements Quality Assurance
 review:
     comment: 'Needs to be updated after migration to Polymer 2.0 legacy API.'
-    date: '2017-12-15'
-    status: requiresUpdates
+    date: '2019-02-25'
+    status: ok
 toc: true
 labels:
-    - lts2016-ok
+    - lts2019-ok
     - nuxeo-elements
     - quality-assurance
     - testing
@@ -14,7 +14,6 @@ labels:
     - performance
     - gbarata
     - security
-    - content-review-lts2017
 tree_item_index: 100
 
 ---
@@ -23,11 +22,13 @@ Using our experience, here we share some best practices and our views on these d
 
 ## Formatting and Linting
 
-A *linter* is a code quality tool that scans your code and flags bugs, unoptimized code and other suspicious constructs. *Linting* is important because it keeps the code clean and enforces a predefined set of rules and good practices. Because JavaScript is a loosely-typed language, it is very easy to introduce bugs in the code. Therefore, a JavaScript linter becomes a crucial tool to help developers identify problems in the code without having to execute it. Our linter of choice is [ESLint](http://eslint.org/), and you can use our Nuxeo Web UI [config file](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/.eslintrc.json) as a sample.
+A *linter* is a code quality tool that scans your code and flags bugs, unoptimized code and other suspicious constructs. *Linting* is important because it keeps the code clean and enforces a predefined set of rules and good practices. Because JavaScript is a loosely-typed language, it is very easy to introduce bugs in the code. Therefore, a JavaScript linter becomes a crucial tool to help developers identify problems in the code without having to execute it. Our linter of choice is [ESLint](http://eslint.org/), and you can use our Nuxeo Web UI [config file](https://github.com/nuxeo/nuxeo-web-ui/blob/10.10/.eslintrc.json) as a sample.
 
 You can find a quick guide on how to run and setup ESLint in their [online documentation](http://eslint.org/docs/user-guide/getting-started).
 
-You can use ESLint in two ways: a) run it via command line (e.g. `eslint file.js`), or b) use it in an IDE or text editor and let it run as you type. The latter is usually more convenient. There is ESLint support for several of the most popular IDEs, including:
+You can use ESLint in two ways: 
+1) run it via command line (e.g. `eslint file.js`) or
+2) use it in an IDE or text editor and let it run as you type. The latter is usually more convenient. There is ESLint support for several of the most popular IDEs, including:
 - [Atom](https://atom.io/packages/linter-eslint)
 - [Intellij Idea](http://plugins.jetbrains.com/plugin/7494)
 - [Sublime Text 3](https://github.com/roadhump/SublimeLinter-eslint)
@@ -64,7 +65,7 @@ In order to activate the browser cache, you can create a file `cache-browser-con
 </component>
 ```
 
-- The cache will be `private` (you cannot cache the resources on a intermediate proxy like for instance a `CDN`)
+- The cache will be `private` (i.e., you cannot cache the resources on a intermediate proxy like for instance a `CDN`)
 - The `max-age` cache time is set to 1 hour (within the hour, the browser won't request a validation to the server of the blobs like thumbnails)
 - Once the cache expires, the browser will request a validation of the blobs from the server if they have been updated
 
@@ -74,7 +75,7 @@ Here is [a schema](https://developers.google.com/web/fundamentals/performance/op
 
 ##### Vulcanizing the Polymer Elements
 
-[`Vulcanize`](https://www.polymer-project.org/1.0/docs/tools/optimize-for-production) is a build tool that lets you concatenate a set of elements and their HTML imported dependencies into a single file. It will reduce network requests for a performant app experience. You can check out [this video](https://www.youtube.com/watch?v=EUZWE8EZ0IU) for a complete bootstrap.
+[`Vulcanize`](https://polymer-library.polymer-project.org/2.0/docs/apps/build-for-production) is a build tool that lets you concatenate a set of elements and their HTML imported dependencies into a single file. It will reduce network requests for a performant app experience. You can check out [this video](https://www.youtube.com/watch?v=EUZWE8EZ0IU) for a complete bootstrap.
 
 ##### Custom Polymer Elements - Anti-Patterns
 
@@ -93,7 +94,7 @@ There are two ways to filter data from the server in order to avoid unnecessary 
 
 ##### Schemas
 
-When building views, listings and pages in general you need to determine which document information you want to display for your users.
+When building views, listings and pages in general you need to determine which document information you want to display to your users.
 
 For instance a listing could only require the `dublincore` schema of the documents and their summary links. The metadata displayed in each row would be:
 
@@ -157,14 +158,14 @@ For Elasticsearch (ES), use `pageproviders` which [can be activated for ES]({{pa
 
 ## Test Strategies
 
-Testing your custom elements is paramount if you want to have reliable and easy to maintain components. The Polymer team already provides the [Web Component Tester](https://github.com/Polymer/web-component-tester)
+Testing your custom elements is paramount if you want to have reliable and easy to maintain components. The Polymer team already provides the [Web Component Tester](https://github.com/Polymer/tools/tree/master/packages/web-component-tester)
 (hereafter referred to as **WCT**), a handy library that allows you to **unit test** your elements. This is the library we use to individually test our custom components. However, testing how your custom elements work together and whether they actually play the role they are supposed to play becomes crucial as your application grows. That's what **functional and integration testing** are for! In the Web UI, we use [Cucumber](https://cucumber.io/) and [WebdriverIO](http://webdriver.io/) for Behavior-Driven Testing (or **BDD** for short), and to test the UI as a whole. Alternative solutions, such as [NighwatchJS](http://nightwatchjs.org/), have proven to be valuable tools in testing applications that use web components, while following both **BDD** and more test-driven approaches to development (**TDD**).
 
 ### Web Component Tester
 
-[WCT](https://github.com/Polymer/web-component-tester) is Polymer's approach to testing custom elements. This library relies on several frameworks to provide a flexible test environment for your components. It includes
-[Mocha](http://mochajs.org/) as the test framework, [Chai](http://chaijs.com/) for the assertions, [Sinon](http://sinonjs.org/) to mock server responses, and [WD](http://admc.io/wd/) to provide an interface to communicate with the web browser. WCT is best used from the [Polymer CLI](https://www.polymer-project.org/1.0/docs/tools/polymer-cli).
-We recommend reading Polymer's Documentation on [WCT](https://www.polymer-project.org/1.0/docs/tools/tests) and watching Polycasts [#36](https://www.youtube.com/watch?v=YBNBr9ECXLo) and [#37](https://www.youtube.com/watch?v=_9qARcdCAn4) for a better understanding on how to setup and run your tests before proceeding to the next section.
+[WCT](https://github.com/Polymer/tools/tree/master/packages/web-component-tester) is Polymer's approach to testing custom elements. This library relies on several frameworks to provide a flexible test environment for your components. It includes
+[Mocha](http://mochajs.org/) as the test framework, [Chai](http://chaijs.com/) for the assertions, [Sinon](http://sinonjs.org/) to mock server responses, and [WD](http://admc.io/wd/) to provide an interface to communicate with the web browser. WCT is best used from the [Polymer CLI](https://polymer-library.polymer-project.org/2.0/docs/tools/polymer-cli).
+We recommend reading Polymer's Documentation on [WCT](https://polymer-library.polymer-project.org/2.0/docs/tools/tests) and watching Polycasts [#36](https://www.youtube.com/watch?v=YBNBr9ECXLo) and [#37](https://www.youtube.com/watch?v=_9qARcdCAn4) for a better understanding on how to setup and run your tests before proceeding to the next section.
 
 #### Quick Guide
 
@@ -178,8 +179,7 @@ All the elements to be tested or to support testing directly should be declared 
 </test-fixture>
 ```
 
-Most of our custom elements need to communicate with an instance of Nuxeo server, and that is true for `nuxeo-collections` as well. We must then declare a `nuxeo-connection` as a test-fixture beforehand, so that the Nuxeo JavaScript Client is properly
-initialized and `nuxeo-collections` can issue requests to the server:
+Most of our custom elements need to communicate with an instance of Nuxeo server, and that is true for `nuxeo-collections` as well. We must then declare a `nuxeo-connection` as a test-fixture beforehand, so that the Nuxeo JavaScript Client is properly initialized and `nuxeo-collections` can issue requests to the server:
 
 ```html
 <test-fixture id="nx">
@@ -202,11 +202,10 @@ setup(function() {
 ```
 
 {{#> callout type='tip' heading='Test Helpers'}}
-Here, the `login` method is part of our [test helpers](https://github.com/nuxeo/nuxeo-elements/blob/maintenance-2.2.x/test/test-helpers.js), which also includes several other support methods. Feel free to import them on your own test suites.
+Here, the `login` method is part of our [test helpers](https://github.com/nuxeo/nuxeo-elements/blob/maintenance-2.4.x/test/test-helpers.js), which also includes several other support methods. Feel free to import them on your own test suites.
 {{/callout}}
 
-Oftentimes you'll want to perform more than one bundle of tests inside the same test file. In this case you can define *inner* test suites, i.e., test suites inside your main test suite. Inside these you should setup the responses that the
-fake server should issue to your custom elements.
+Oftentimes you'll want to perform more than one bundle of tests inside the same test file. In this case you can define *inner* test suites, i.e., test suites inside your main test suite. Inside these you should setup the responses that the fake server should issue to your custom elements.
 
 So, imagine we want to test how our collections element behaves when there are collections to display. We can create a dedicated suite and setup a fake response with only a single entry:
 
@@ -235,7 +234,7 @@ setup(function() {
 ```
 
 {{#> callout type='note' heading='Sinon Documentation'}}
-For more information about how to setup fake responses, please check the official [Sinon Documentation](http://sinonjs.org/docs/)
+For more information about how to setup fake responses, please check the official [Sinon Documentation](http://sinonjs.org/docs/) for the matching version.
 {{/callout}}
 
 We now want to create a test case that verifies that our element actually displays the collection and that its DOM reflects this. We can do it by adding a test inside our test suite:
@@ -256,20 +255,20 @@ test('it should display collections', function() {
 ```
 
 {{#> callout type='tip' heading='Test Helpers'}}
-Again, the `waitForEvent` method is part of our [test helpers](https://github.com/nuxeo/nuxeo-elements/blob/maintenance-2.2.x/test/test-helpers.js#L35). This method waits for an event to be fired a specific amount of times before returning a promise. Similarly, you can use `waitChanged` to wait for a particular
-property to change on an element, provided that it's set to `notify: true`. Please, check the Polymer documentation on [data-binding](https://www.polymer-project.org/1.0/docs/devguide/data-binding) for more information on this subject.
+Again, the `waitForEvent` method is part of our [test helpers](https://github.com/nuxeo/nuxeo-elements/blob/maintenance-2.4.x/test/test-helpers.js). This method waits for an event to be fired a specific amount of times before returning a promise. Similarly, you can use `waitChanged` to wait for a particular
+property to change on an element, provided that it's set to `notify: true`. Please, check the Polymer documentation on [data-binding](https://polymer-library.polymer-project.org/2.0/docs/devguide/data-binding) for more information on this subject.
 {{/callout}}
 
 {{#> callout type='note' heading='Chai API'}}
 For more information about how perform test asserts, please check the official [Chai documentation](http://chaijs.com/api/), which provides both BDD and TDD oriented APIs.
 {{/callout}}
 
-You can then run your tests using `polymer test` or run them interactively via `polymer serve`. Check the Polymer documentation on [WCT](https://www.polymer-project.org/1.0/docs/tools/tests) for more on this subject.
+You can then run your tests using `polymer test` or run them interactively via `polymer serve`. Check the Polymer documentation on [WCT](https://polymer-library.polymer-project.org/2.0/docs/tools/tests) for more on this subject.
 
 For more examples on testing custom elements, please check our repositories:
-- [nuxeo-elements](https://github.com/nuxeo/nuxeo-elements/tree/maintenance-2.2.x/test)
-- [nuxeo-dataviz-elements](https://github.com/nuxeo/nuxeo-dataviz-elements/tree/maintenance-2.2.x/test)
-- [nuxeo-ui-elements](https://github.com/nuxeo/nuxeo-ui-elements/tree/maintenance-2.2.x/test)
+- [nuxeo-elements](https://github.com/nuxeo/nuxeo-elements/tree/maintenance-2.4.x/test)
+- [nuxeo-dataviz-elements](https://github.com/nuxeo/nuxeo-dataviz-elements/tree/maintenance-2.4.x/test)
+- [nuxeo-ui-elements](https://github.com/nuxeo/nuxeo-ui-elements/tree/maintenance-2.4.x/test)
 
 ### Cucumber
 
@@ -289,16 +288,16 @@ Scenario: Admin center
 Step definitions bridge the gap between features and the system being tested. They translate plain text into interactions with the system. Step definitions are platform-dependent, and they use a regular expression the match the steps defined in the feature files, and implement the code required to execute the step.
 
 ```JavaScript
-this.Given('I am "$username"', (username) => this.username = username);
+this.Given('I login as {string}', (username) => this.username = username);
 
-this.When('I click the "$button" button', (button) => this.ui.drawer.open(button));
+this.When('I click the {word} button', (button) => this.ui.drawer.open(button));
 
 this.Then('I can see the administration menu', () => this.ui.drawer.administration.isVisible().should.be.true);
 ```
 
-Cucumber allows for BDD using human-readable specifications. The advantages are two-fold: first, it allows specifications to be implemented by developers, but written in natural language by someone else, such as QA or business analyst; second, it makes error identification simpler for developers and non-developers alike, by showing clearly in plain language what steps failed. Please check [Cucumber](https://cucumber.io/docs/reference) and [Cucumber.js](https://github.com/cucumber/cucumber-js) documentation for more details.
+Cucumber allows for BDD using human-readable specifications. The advantages are two-fold: first, it allows specifications to be implemented by developers, but written in natural language by someone else, such as QA or business analyst; second, it makes error identification simpler for developers and non-developers alike, by showing clearly in plain language what steps failed. Please check [Cucumber](https://docs.cucumber.io/) and [Cucumber.js](https://github.com/cucumber/cucumber-js) documentation for more details.
 
-If you're looking for examples of Cucumber tests, check our [Web UI's plugin repository](https://github.com/nuxeo/plugin-nuxeo-web-ui/tree/2.2_9.10/ftest/web-ui/webdriver/test). These rely on [Chimp.js](http://chimp.readme.io), a test automation framework that brings together Cucumber.js, WebdriverIO and Chai. See [Chimp's documentation page](https://chimp.readme.io/docs/tutorial) and [this tutorial](https://chimp.readme.io/docs/tutorial) for more details.
+If you're looking for examples of Cucumber tests, check our [Web UI's plugin repository](https://github.com/nuxeo/plugin-nuxeo-web-ui/tree/2.4_10.10/ftest/web-ui/webdriver/test).
 
 ### NighwatchJS
 
@@ -312,7 +311,7 @@ Here is the [Nightwatch.js wiki](https://github.com/nightwatchjs/nightwatch/wiki
 
 #### Configuration
 
-The test runner expects a configuration file to be passed, using by default a `nightwatch.json` file from the current directory, if present. A `nightwatch.conf.js` file will also be loaded by default, if found. Click [here](http://nightwatchjs.org/getingstarted#settings-file) to view an example.
+The test runner expects a configuration file to be passed, using by default a `nightwatch.json` file from the current directory, if present. A `nightwatch.conf.js` file will also be loaded by default, if found. Click [here](http://nightwatchjs.org/gettingstarted#settings-file) to view an example.
 
 #### Page Object API
 
