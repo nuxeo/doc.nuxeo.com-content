@@ -84,10 +84,16 @@ with your preferred values:
 Download and install plugin [Eclipse Code Formatter](https://plugins.jetbrains.com/plugin/6546-eclipse-code-formatter).
 Then, you need to configure it using the [tools folder of the top-level repository](https://github.com/nuxeo/nuxeo/tree/master/tools/).
 
-- Enable the plugin
+- Enable the plugin.
 - Import Eclipse Java Formatter config file from the tools folder of Nuxeo source code
   `nuxeo/tools/nuxeo_formatter.xml`.
-- Optimize import order from file `nuxeo/tools/nuxeo.importorder`
+- Optimize import order from file `nuxeo/tools/nuxeo.importorder`.
+
+To avoid Intellij IDEA replacing imports with '*', you need to configure the `Class count to use import with ‘*’` and `Names count to use static import with ‘*’` preferences:
+
+- Go to **Preferences** > **Editor** > **Code Style** > **Java**.
+- Set a big value for both preferences, such as `500`.
+- Save.
 
 Congratulations! Now everything is done. Enjoy IntelliJ IDEA, your capable and
 ergonomic IDE!
