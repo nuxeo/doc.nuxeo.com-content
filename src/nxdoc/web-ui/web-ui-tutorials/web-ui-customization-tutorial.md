@@ -1,7 +1,7 @@
-  ---
+---
 title: Web UI Customization Tutorial
 review:
-    comment: 'The example contribution was reviewed to LTS 2019. Changed to File layout in order to avoid DAM addon implementation details.'
+    comment: ''
     date: '2019-02-25'
     status: ok
 toc: true
@@ -21,13 +21,11 @@ labels:
     - customization
     - polymer
 tree_item_index: 300
-
 ---
 
-In this tutorial we'll guide you through customizing Nuxeo Web UI and deploying your customization. We're going to
-address to different customization approaches: by **overriding dynamic layouts** and via **slots**. In the former case
-we'll edit a view layout for a popular document type, whereas in the latter we're going to contribute a new
-[Document Action]({{page page='web-ui-slots'}}/#document_actions).
+{{! excerpt}}
+In this tutorial we'll guide you through customizing Nuxeo Web UI and deploying your customization. We're going to address to different customization approaches: by **overriding dynamic layouts** and via **slots**. In the former case we'll edit a view layout for a popular document type, whereas in the latter we're going to contribute a new [Document Action]({{page page='web-ui-slots'}}/#document_actions).
+{{! /excerpt}}
 
 ## Setup
 
@@ -38,8 +36,7 @@ resources to understand how to create and deploy a bundle:
 
 ### Creating an Empty Bundle
 
-To make our life easier, we'll use [Nuxeo CLI]({{page page='nuxeo-cli'}}). Please
-make sure you follow the respective [guide]({{page page='develop-with-nuxeo-platform'}}) before proceeding.
+To make our life easier, we'll use [Nuxeo CLI]({{page page='nuxeo-cli'}}). Please make sure to follow the respective [guide]({{page page='develop-with-nuxeo-platform'}}) before proceeding.
 
 Let's start by installing Nuxeo CLI and scaffolding a new bundle:
 
@@ -67,8 +64,7 @@ nuxeo-customization-sample
 └── pom.xml
 ```
 
-Our customizations will be contributed to the `nuxeo-customization-sample-core/src/main/resources` folder, hereafter
-referred to as just the **resources** folder.
+Our customizations will be contributed to the `nuxeo-customization-sample-core/src/main/resources` folder, hereafter referred to as just the **resources** folder.
 
 ### Building and Deploying
 
@@ -100,8 +96,7 @@ For more information about building and deploying bundles, please check the [doc
 ## Contributing Dynamic Layouts{{> anchor 'contributing_dynamic_layouts'}}
 
 One of the most common cases of customization of the Web UI is to contribute new or modify already existing dynamic layouts.
-For example, one might want to change the layout to create a user or add layouts for a new document type. In this section
-we're going to change the view layout for the `File` document type, so that it displays the file's blob mime type.
+For example, one might want to change the layout to create a user or add layouts for a new document type. In this section we are going to change the view layout for the `File` document type, so that it displays the file's blob mime type.
 
 To override or contribute new layouts for a document type, we must add a file with the name of the layout that needs to be created or overridden to the `document/{type}` folder. In this case, we need to create the folder `resources/web/nuxeo.war/ui/document/file` and take the original [nuxeo-file-view-layout.html](https://github.com/nuxeo/nuxeo-web-ui/blob/10.10/elements/document/file/nuxeo-file-view-layout.html) and add a new `div` element to hold some file details, specifically the blob's mime type, which is the piece of information we wanted to add:
 
