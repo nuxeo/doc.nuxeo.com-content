@@ -22,11 +22,9 @@ IntelliJ IDEA with your own preferences.
 ## Import Nuxeo Source Code into IntelliJ IDEA
 
 {{#> callout type='note' }}
-
 We assume that you've cloned the Nuxeo source code successfully. If it's not the
 case, please go back to the previous section, [Getting the Nuxeo Source Code]({{page page='getting-the-nuxeo-source-code'}}),
 to see how to do it.
-
 {{/callout}}
 
 Before importing Nuxeo source code, you need to configure the VM options for
@@ -89,7 +87,7 @@ Then, you need to configure it using the [tools folder of the top-level reposito
   `nuxeo/tools/nuxeo_formatter.xml`.
 - Optimize import order from file `nuxeo/tools/nuxeo.importorder`.
 
-To avoid Intellij IDEA replacing imports with '*', you need to configure the `Class count to use import with ‘*’` and `Names count to use static import with ‘*’` preferences:
+To avoid IntelliJ IDEA replacing imports with `*`, you need to configure the `Class count to use import with ‘*’` and `Names count to use static import with ‘*’` preferences:
 
 - Go to **Preferences** > **Editor** > **Code Style** > **Java**.
 - Set a big value for both preferences, such as `500`.
