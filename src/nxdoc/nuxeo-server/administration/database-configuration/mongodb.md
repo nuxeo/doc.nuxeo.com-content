@@ -244,13 +244,17 @@ By default MongoDB doesn't require authentication, but you can [enable the clien
 
 ## Nuxeo Configuration
 
-To activate MongoDB document and directories storage (as of Nuxeo FT 9.2), add the `mongodb` template to your existing list of templates (`nuxeo.templates`) in `nuxeo.conf`. Including the `mongodb-audit` template that will also activate audit storage.
+To activate MongoDB document and directories storage (as of after Nuxeo FT 9.2), add the `mongodb` template to your existing list of templates (`nuxeo.templates`) in `nuxeo.conf`. Including the `mongodb-audit` template that will also activate audit storage.
+
+{{#> callout type='info' }}
 
 For versions of Nuxeo released previously to Nuxeo FT 9.2, if you want to activate audit and directories storage, you need to install the [MongoDB extension addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-mongodb-ext). This addon includes `mongodb-audit` and `mongodb-directory` templates in order to store respectively audit or directories data in MongoDB. For example:
 
 ```text
 nuxeo.templates=default,mongodb,mongodb-audit
 ```
+
+{{/callout}}
 
 If you are not using the MongoDB extension addon for previous versions of Nuxeo, you **must keep** the template corresponding to your SQL database in `nuxeo.templates`. For instance you could have:
 
@@ -266,11 +270,10 @@ nuxeo.templates=default,mongodb
 
 The following properties are available in `nuxeo.conf`:
 
-*   `nuxeo.mongodb.server`: The MongoDB server, either a hostname or a hostname with port
-    or a full `mongodb://` URI if you have an authentication, the pattern is:
-    `mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]`
-    (defaults to `localhost:27017`)
-*   `nuxeo.mongodb.dbname`: The MongoDB database. (defaults to `nuxeo`)
+| Property name  | Description | Default value |
+|---|---|---|
+| `nuxeo.mongodb.server` | The MongoDB server, either a hostname or a hostname with port or a full `mongodb://` URI if you have an authentication, the pattern is: `mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]` | `localhost:27017`|
+| `nuxeo.mongodb.dbname` | The MongoDB database. | `nuxeo` |
 
 {{#> callout type='info' }}
 
