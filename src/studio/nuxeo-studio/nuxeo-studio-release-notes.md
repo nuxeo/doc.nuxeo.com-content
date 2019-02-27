@@ -12,20 +12,26 @@ tree_item_index: 730
 Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Upcoming Changes
+<!-- 3.8.0 -->
+### Easier Search Configuration
 
-### Default Theme Selection
+#### Required Fields Mapping in Search and Listings Configuration
 
-Choose the theme to use by default in one click ([NXS-4891](https://jira.nuxeo.com/browse/NXS-4891)).
+When configuring a UI element for a search or a listing, schemas and names coming from your page provider predicates and aggregates will be prefilled to ensure a quicker configuration.
 
-### Parameters Mapping in Search and Listings Configuration
+When updating the configuration of the page provider, a warning in Designer appears to inform you that you need to update the UI configuration as well.
 
-When configuring a UI element for a search or a listing, search parameters are visible right away. The corresponding JavaScript expression benefits from autocompletion ([NXS-5122](https://jira.nuxeo.com/browse/NXS-5122)).
+#### Improved Default Configuration for Search Elements
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.7.0'%29) is available in our bug tracking tool.
+Studio generates checkboxes elements instead of drop-down lists by default when drag and dropping aggregates in your layouts configuration.
+
+#### Automatic Range Label Usage
+
+When configuring range aggregates, if no translation has been defined, Studio uses their label by default.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2019-02' page='studio-updates-2019-02'}}}
+{{{multiexcerpt 'studio-updates-2019-03' page='studio-updates-2019-03'}}}
 
 ---
 
@@ -33,6 +39,7 @@ When configuring a UI element for a search or a listing, search parameters are v
 
 | Release&nbsp;Date                                           | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [February 2019]({{page page='studio-updates-2019-02'}})      | Introducing the Layout Blocks and Git Status bar as well as an easier folderish documents configuration.                                                                                                                                                                               |
 | [January 2019]({{page page='studio-updates-2019-01'}})      | Studio Designer interface improvements.                                                                                                                                                                                |
 | [December 2018]({{page page='2018-12-12-studio-3-2-0'}})    | Faster layouts configuration.                                                                                                                                                                                          |
 | [November 2018]({{page page='2018-11-26-studio-3-1-0'}})    | Firefox support for Studio Designer, performance improvements, drag and drop schema properties in Studio Designer and information about your subscription status.                                                      |
