@@ -382,7 +382,7 @@ The Nuxeo Platform can be integrated with various standards and technologies, in
 
 ### Web UI Customization
 
-Here are some key pages to customize the back office of the Nuxeo Platform:
+Here are some key pages to start customizing the UI of the Nuxeo Server:
 
 - [HOWTO: Configure Searches]({{page page='web-ui-search'}})
 - [HOWTO: Customize Document Layouts]({{page page='web-ui-document-layouts'}})
