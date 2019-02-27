@@ -1,7 +1,7 @@
 ---
 title: Nuxeo Elements Quality Assurance
 review:
-    comment: 'Needs to be updated after migration to Polymer 2.0 legacy API.'
+    comment: ''
     date: '2019-02-25'
     status: ok
 toc: true
@@ -15,8 +15,8 @@ labels:
     - gbarata
     - security
 tree_item_index: 100
-
 ---
+
 When developing web applications with Nuxeo Elements there are several strategies and tools that can provide means for code quality, performance and security.
 Using our experience, here we share some best practices and our views on these different quality assurance topics.
 
@@ -26,11 +26,14 @@ A *linter* is a code quality tool that scans your code and flags bugs, unoptimiz
 
 You can find a quick guide on how to run and setup ESLint in their [online documentation](http://eslint.org/docs/user-guide/getting-started).
 
-You can use ESLint in two ways: 
-1) run it via command line (e.g. `eslint file.js`) or
-2) use it in an IDE or text editor and let it run as you type. The latter is usually more convenient. There is ESLint support for several of the most popular IDEs, including:
+You can use ESLint in two ways:
+1. run it via command line (e.g. `eslint file.js`)
+2. use it in an IDE or text editor and let it run as you type.
+The latter is usually more convenient.
+
+There is ESLint support for several of the most popular IDEs, including:
 - [Atom](https://atom.io/packages/linter-eslint)
-- [Intellij Idea](http://plugins.jetbrains.com/plugin/7494)
+- [IntelliJ Idea](http://plugins.jetbrains.com/plugin/7494)
 - [Sublime Text 3](https://github.com/roadhump/SublimeLinter-eslint)
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [and others](http://eslint.org/docs/user-guide/integrations)
@@ -164,12 +167,14 @@ Testing your custom elements is paramount if you want to have reliable and easy 
 ### Web Component Tester
 
 [WCT](https://github.com/Polymer/tools/tree/master/packages/web-component-tester) is Polymer's approach to testing custom elements. This library relies on several frameworks to provide a flexible test environment for your components. It includes
-[Mocha](http://mochajs.org/) as the test framework, [Chai](http://chaijs.com/) for the assertions, [Sinon](http://sinonjs.org/) to mock server responses, and [WD](http://admc.io/wd/) to provide an interface to communicate with the web browser. WCT is best used from the [Polymer CLI](https://polymer-library.polymer-project.org/2.0/docs/tools/polymer-cli).
+[Mocha](http://mochajs.org/) as the test framework, [Chai](http://chaijs.com/) for the assertions, [Sinon](http://sinonjs.org/) to mock server responses, and [WD](http://admc.io/wd/) to provide an interface to communicate with the web browser.
+
+WCT is best used from the [Polymer CLI](https://polymer-library.polymer-project.org/2.0/docs/tools/polymer-cli).
 We recommend reading Polymer's Documentation on [WCT](https://polymer-library.polymer-project.org/2.0/docs/tools/tests) and watching Polycasts [#36](https://www.youtube.com/watch?v=YBNBr9ECXLo) and [#37](https://www.youtube.com/watch?v=_9qARcdCAn4) for a better understanding on how to setup and run your tests before proceeding to the next section.
 
 #### Quick Guide
 
-All the elements to be tested or to support testing directly should be declared as a `test-fixture`. Imagine we want to unit test the `nuxeo-collections` element. We must declare the test fixture as follows:
+All the elements to be tested, or to support testing directly, should be declared as a `test-fixture`. Imagine we want to unit test the `nuxeo-collections` element. We must declare the test fixture as follows:
 
 ```html
 <test-fixture id="collections">
