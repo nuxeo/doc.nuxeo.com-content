@@ -83,7 +83,6 @@ When fetching a document through the [Rest API]({{page page='rest-api'}}), you c
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [HOWTO: Display a Button/a Tab Only When a Workflow Is Started with JSF UI]({{page version='' space='nxdoc' page='how-to-display-a-button-a-tab-only-when-a-workflow-is-started-jsf'}})
 - [How to Modify a Workflow Variable outside of Workflow Context]({{page page='how-to-modify-a-workflow-variable-outside-of-workflow-context'}})
 - [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})
 - [How-To Index]({{page page='how-to-index'}})

@@ -10,7 +10,6 @@ tree_item_index: 1900
 labels:
   - lts2017-ok
   - migration
-  - web-ui
   - jsf-ui
 ---
 
