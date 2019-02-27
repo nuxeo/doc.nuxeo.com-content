@@ -247,7 +247,7 @@ $ $NUXEO_HOME/bin/nuxeoctl stop
 $ .\$NUXEO_HOME\bin\nuxeoctl.bat stop
 ```
 
-2. Launch Registration
+1. Launch Registration
 
 ```
 // Linux and Mac OS
@@ -261,20 +261,20 @@ $ .\$NUXEO_HOME\bin\nuxeoctl.bat register --offline
 
 nuxeoctl will display a CTID to be used for registration.
 
-3.  Store the CTID in a file that you can use from another computer that can connect to the Internet.
+1.  Store the CTID in a file that you can use from another computer that can connect to the Internet.
 
-4.  From an Internet-connected computer:
+1.  From an Internet-connected computer:
 
     1.  Go to the [Nuxeo Online Services portal](https://connect.nuxeo.com).
-    2.  Click on the `My Applications` tab
-    3.  Click on the application name for which you want to register your Nuxeo Platform to access its settings.
-    4.  Click on the `Instances` tab
-    5.  Click on the `Register Instance` button
-    6.  Fill in the registration form and submit it.</br>
+    1.  Click on the `My Applications` tab
+    1.  Click on the application name for which you want to register your Nuxeo Platform to access its settings.
+    1.  Click on the `Instances` tab
+    1.  Click on the `Register Instance` button
+    1.  Fill in the registration form and submit it.</br>
         The instance is registered.
-    7.  Copy the identifier (CLID) from the instance you just registered.
+    1.  Copy the identifier (CLID) from the instance you just registered.
 
-5.  On the offline server:
+1.  On the offline server:
     1.  In nuxeoctl, paste the identifier (CLID) from Nuxeo Online Services and confirm registration.</br>
         The registration is approved and the registration summary is displayed. You can now use hotfixes on this instance for the duration of your subscription.
 
@@ -289,24 +289,24 @@ Offline registration can be used when the server does not connect to the Interne
 1.  On the offline server:
 
     1.  Start your Nuxeo instance and connect as an administrator (Administrator/Administrator by default).
-    2.  Click on the **Admin** tab.</br>
+    1.  Click on the **Admin** tab.</br>
         The **Nuxeo Online Services** tab is displayed.
-    3.  Copy the **instance technical identifier** called CTID (ex:`Mac OS X-EbMKUsirT9WQszM5mDkaKAp=-BhnJsMDaabDHAQ0A300d6Q==`) displayed in the **No network access?** box.
+    1.  Copy the **instance technical identifier** called CTID (ex:`Mac OS X-EbMKUsirT9WQszM5mDkaKAp=-BhnJsMDaabDHAQ0A300d6Q==`) displayed in the **No network access?** box.
         ![]({{file name='AdminCenter-offline-registration.png'}} ?w=500,border=true)
-    4.  Store the CTID in a file that you can use from another computer that can connect to the Internet.
+    1.  Store the CTID in a file that you can use from another computer that can connect to the Internet.
 
-2.  From an Internet-connected computer:
+1.  From an Internet-connected computer:
 
     1.  Go to the [Nuxeo Online Services portal](https://connect.nuxeo.com).
-    2.  Click on the `My Applications` tab
-    3.  Click on the application name for which you want to register your Nuxeo Platform to access its settings.
-    4.  Click on the `Instances` tab
-    5.  Click on the `Register Instance` button
-    6.  Fill in the registration form and submit it.</br>
+    1.  Click on the `My Applications` tab
+    1.  Click on the application name for which you want to register your Nuxeo Platform to access its settings.
+    1.  Click on the `Instances` tab
+    1.  Click on the `Register Instance` button
+    1.  Fill in the registration form and submit it.</br>
         The instance is registered.
-    7.  Copy the identifier (CLID) from the instance you just registered.
+    1.  Copy the identifier (CLID) from the instance you just registered.
 
-3.  On the offline server:
+1.  On the offline server:
 
     1.  In the Admin tab, fill in the instance description, paste the CLID from Nuxeo Online Services and click on the **Register this instance** button.
         ![]({{file name='AdminCenter-offline-registration-3.png'}} ?w=500,border=true)
