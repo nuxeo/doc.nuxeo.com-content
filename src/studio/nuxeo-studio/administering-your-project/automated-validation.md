@@ -1,5 +1,5 @@
 ---
-title: Automated validation
+title: Automated Validation
 review:
     comment: ''
     date: ''
@@ -15,7 +15,7 @@ confluence:
     shortlink: gAJu
     shortlink_source: 'https://doc.nuxeo.com/x/gAJu'
     source_link: /display/Studio/Automated+validation
-tree_item_index: 500
+tree_item_index: 300
 history:
     -
         author: Manon Lumeau

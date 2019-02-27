@@ -1,11 +1,17 @@
 ---
-title: >-
-    How to Enable Package Specific Features in Studio for DAM or Virtual
-    Navigation?
+title: 'How to Enable Package Specific Features in Studio for DAM or Virtual
+    Navigation?'
 review:
     comment: ''
     date: ''
     status: ok
+details:
+    howto:
+      excerpt: >-
+        Learn how to Enable Package Specific Features in Studio for DAM or Virtual Navigation.
+      level: Beginner
+      tool: Studio
+      topics: 'Application Definition'
 labels:
     - target-package
     - project-settings

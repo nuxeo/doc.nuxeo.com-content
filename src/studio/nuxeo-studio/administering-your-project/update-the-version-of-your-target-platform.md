@@ -16,7 +16,7 @@ confluence:
     shortlink: JQFz
     shortlink_source: 'https://doc.nuxeo.com/x/JQFz'
     source_link: /display/Studio/Update+the+Version+of+Your+Target+Platform
-tree_item_index: 300
+tree_item_index: 400
 history:
     -
         author: Manon Lumeau
