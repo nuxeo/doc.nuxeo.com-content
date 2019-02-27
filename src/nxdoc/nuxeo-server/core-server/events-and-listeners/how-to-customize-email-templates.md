@@ -1,5 +1,5 @@
 ---
-title: How to Customize Email Templates
+title: 'HOWTO: Customize Email Templates'
 review:
   comment: ''
   date: '2017-12-14'
