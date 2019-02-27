@@ -37,34 +37,18 @@ history:
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Automated Behaviors
-- [Automated renaming]({{page space='Studio' page='Automated renaming'}})
-- [Automated validation]({{page space='Studio' page='Automated validation'}})
-{{/panel}}
-</div>
-
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
 ### Best Practices
 - [Naming Conventions]({{page space='Studio' page='Naming Conventions'}})
-
+- [Automated Validation]({{page version='' space='studio' page='automated-validation'}})
+- [Automated Renaming]({{page version='' space='studio' page='automated-renaming'}})
 {{/panel}}
 </div>
-</div>
 
-<div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Handling New Versions
-- [Test your Studio config with a new version of DM or CMF]({{page space='Studio' page='Test your+Studio+config+with+a+new+version+of+DM+or+CMF'}})
-- [Update the Version of Your Target Platform]({{page space='Studio' page='Update the+Version+of+Your+Target+Platform'}})
-{{/panel}}
-
-</div>
-<div class="column medium-6">
-{{#> panel type='secondary' match_height='true'}}
-### Additional Options
-- [How to Enable Package Specific Features in Studio for DAM or Virtual Navigation?]({{page space='Studio' page='how-to-enable-package-specific-features-in-studio-for-dam-or-virtual-navigation'}})
+### Administration
+- [Update the Version of Your Target Platform]({{page version='' space='studio' page='update-the-version-of-your-target-platform'}})
+- [Specific Upgrade Instructions]({{page version='' space='studio' page='specific-upgrade-instructions'}})
 {{/panel}}
 </div>
 </div>

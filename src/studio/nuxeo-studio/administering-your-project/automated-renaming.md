@@ -1,5 +1,5 @@
 ---
-title: Automated renaming
+title: Automated Renaming
 review:
     comment: ''
     date: ''
@@ -15,7 +15,7 @@ confluence:
     shortlink: 1wJz
     shortlink_source: 'https://doc.nuxeo.com/x/1wJz'
     source_link: /display/Studio/Automated+renaming
-tree_item_index: 100
+tree_item_index: 200
 history:
     -
         author: Solen Guitter

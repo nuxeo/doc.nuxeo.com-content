@@ -17,6 +17,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/1AJu'
     source_link: /display/Studio/Test+your+Studio+config+with+a+new+version+of+DM+or+CMF
 tree_item_index: 200
+hidden: true
 history:
     -
         author: Manon Lumeau
