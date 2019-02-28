@@ -454,10 +454,6 @@ MIME Types enable browsers to process your content by identifying its format. Wh
 
 The logo defined here will only be displayed on your login page, but won't be defined as your application logo.
 
-{{#> callout type='info'}}
-The Apply Application Logo option is related to JSF UI. Since JSF UI is now deprecated, the option is set to **No** by default.
-{{/callout}}
-
 1. In the Login Logo section, click **Select Resources** and upload the logo image.
 1. Optional: Define the width and the height of the logo.
 1. In Logo Alt, enter a text that can be displayed if the image cannot be shown.
