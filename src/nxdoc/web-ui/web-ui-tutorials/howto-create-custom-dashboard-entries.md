@@ -1,7 +1,7 @@
 ---
 title: 'HOWTO: Create Custom Dashboard Entries'
 review:
-    comment: 'The page was updated to cover Polymer 2'
+    comment: ''
     date: '2019-02-28'
     status: ok
 details:
@@ -24,14 +24,10 @@ labels:
     - howto
 toc: true
 tree_item_index: 600
-
 ---
-## Building Custom Dashboards
 
-{{#> callout type='note' }}
-
+{{#> callout type='info' }}
 Before building your own custom dashboards please make sure you fulfill the requirements in the [Customize Your App with Nuxeo Elements]({{page page='nuxeo-elements-tutorial'}}) page.
-
 {{/callout}}
 
 The quickest way to start building a dashboard is to use the [Polymer CLI](https://github.com/Polymer/tools/tree/master/packages/cli) to scaffold our custom elements.
@@ -43,7 +39,7 @@ The quickest way to start building a dashboard is to use the [Polymer CLI](https
     polymer init
     ```
 
-    **Note:** Polymer CLI will ask for a couple of values in order to scaffold the project according to your needs. It is a good practice to build dashboards as custom elements since you can then use them anywhere you see fit. For this reason we would suggest you to use the template `polymer-2-element - A simple Polymer 2.0 element template`. Further details can be found [Create an element project with the Polymer CLI](https://polymer-library.polymer-project.org/2.0/docs/tools/create-element-polymer-cli).
+    **Note:** Polymer CLI will ask for a couple of values in order to scaffold the project according to your needs. It is a good practice to build dashboards as custom elements since you can then use them anywhere you want. For this reason we would suggest you to use the template `polymer-2-element - A simple Polymer 2.0 element template`. Further details can be found [Create an element project with the Polymer CLI](https://polymer-library.polymer-project.org/2.0/docs/tools/create-element-polymer-cli).
 
     But you can also build dashboards as full applications in which case the template `polymer-2-application - A simple Polymer 2.0 application` should be used instead. For more details please visit [Create an application project with the Polymer CLI](https://polymer-library.polymer-project.org/2.0/docs/tools/create-app-polymer-cli)
 
@@ -160,7 +156,7 @@ The quickest way to start building a dashboard is to use the [Polymer CLI](https
     ```
 
     {{/panel}}
-4.  To checkout your element you can use [Polyserve](https://github.com/Polymer/tools/tree/master/packages/polyserve), a simple web server for using bower components locally, which you can install with:
+4.  To checkout your element you can use [Polyserve](https://github.com/Polymer/tools/tree/master/packages/polyserve), a simple web server to use bower components locally that you can install with:
 
     ```bash
     npm install -g polyserve
@@ -170,12 +166,12 @@ The quickest way to start building a dashboard is to use the [Polymer CLI](https
     Once Polyserve is up and running we can finally see our custom element's demo at: [http://localhost:3000/components/nuxeo-sample-dashboard/demo/](http://localhost:3000/components/nuxeo-sample-dashboard/demo/)
 
     Using the Polymer CLI is also possible to checkout your element by running the following command:
-    
+
     ```bash
     polymer serve
     ```
 
-    It will point to you to the local web server URL that, by default, should be something like: [http://127.0.0.1:8081/components/nuxeo-sample-dashboard/](http://127.0.0.1:8081/components/nuxeo-sample-dashboard/)
+    It will point to the local web server URL that, by default, should be something like: [http://127.0.0.1:8081/components/nuxeo-sample-dashboard/](http://127.0.0.1:8081/components/nuxeo-sample-dashboard/)
 
     Both are simple ways to launch a server and see your demo up and running.
 
@@ -186,15 +182,6 @@ The quickest way to start building a dashboard is to use the [Polymer CLI](https
     ```bash
     polymer test
     ```
-    
+
     After our customizations the scaffolded tests won't make sense anymore and we would need to code specific tests for our customized element and its logics.
     Further information about this topic can be found on our [Quality Assurance page]({{page page='quality-assurance'}}).
-
-* * *
-
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
-
-- [HOWTO: Create Custom Dashboard]({{page version='' space='nxdoc' page='howto-create-custom-dashboard'}})
-
-{{/panel}}</div><div class="column medium-6">
-</div></div>
