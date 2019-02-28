@@ -1,9 +1,9 @@
 ---
 title: 'HOWTO: Create Custom Dashboard Entries'
 review:
-    comment: 'This page needs be updated to take into account the update to Polymer 2'
-    date: '2017-12-13'
-    status: requiresUpdates
+    comment: 'The page was updated to cover Polymer 2'
+    date: '2019-02-28'
+    status: ok
 details:
     howto:
         excerpt: Learn the basics of a Nuxeo module and is IDE agnostic.
@@ -11,7 +11,7 @@ details:
         tool: Code
         topics: Bundle
 labels:
-    - lts2016-ok
+    - lts2019-ok
     - dev-guide
     - manifest
     - bundle
@@ -22,7 +22,6 @@ labels:
     - nuxeo-ui-elements
     - pom_xml
     - howto
-    - content-review-lts2017
 toc: true
 tree_item_index: 600
 
@@ -35,63 +34,84 @@ Before building your own custom dashboards please make sure you fulfill the requ
 
 {{/callout}}
 
-The quickest way to start building a dashboard is to use the [Polymer Generator](https://github.com/polymer/generator-polymer) to scaffold our custom elements.
+The quickest way to start building a dashboard is to use the [Polymer CLI](https://github.com/Polymer/tools/tree/master/packages/cli) to scaffold our custom elements.
 
-1.  Generate a `nuxeo-sample` dashboard element:
+1.  Generate a `nuxeo-sample-dashboard` dashboard element:
 
     ```bash
     mkdir -p nuxeo-sample-dashboard && cd $_
-    yo polymer:seed nuxeo-sample-dashboard
+    polymer init
     ```
 
-    **Note:** It is a good practice to build dashboards as custom elements since you can then use them anywhere you see fit. But you can also build dashboards as full applications in which case the Yeoman polymer application generator should be used instead.
+    **Note:** Polymer CLI will ask for a couple of values in order to scaffold the project according to your needs. It is a good practice to build dashboards as custom elements since you can then use them anywhere you see fit. For this reason we would suggest you to use the template `polymer-2-element - A simple Polymer 2.0 element template`. Further details can be found [Create an element project with the Polymer CLI](https://polymer-library.polymer-project.org/2.0/docs/tools/create-element-polymer-cli).
 
-2.  Once the `nuxeo-sample` element is generated you can install further client side dependencies. In this case you need the Nuxeo Data Visualization Elements and a charting library to produce charts for your dashboard:
+    But you can also build dashboards as full applications in which case the template `polymer-2-application - A simple Polymer 2.0 application` should be used instead. For more details please visit [Create an application project with the Polymer CLI](https://polymer-library.polymer-project.org/2.0/docs/tools/create-app-polymer-cli)
+
+2.  Once the `nuxeo-sample-dashboard` element is generated you can install further client side dependencies. In this case you need the Nuxeo Data Visualization Elements and a charting library to produce charts for your dashboard:
 
     ```bash
     bower install --save nuxeo/nuxeo-dataviz-elements
     bower install --save GoogleWebComponents/google-chart
     ```
 
-3.  Yeoman scaffolded a sample custom element so you now need to replace this sample content with your own. In this example build a simple chart with the total number of Serial Review workflows started by each user:
+3.  Polymer CLI scaffolded a sample custom element so you now need to replace this sample content with your own. In this example build a simple chart with the total number of Serial Review workflows started by each user:
 
     {{#> panel type='code' heading='nuxeo-dataviz-sample.html'}}
 
     ```xml
-    <dom-module id="nuxeo-dataviz-sample">
-      <template>
+    <link rel="import" href="../polymer/polymer-element.html">
+    <link rel="import" href="../nuxeo-dataviz-elements/nuxeo-workflow-data.html">
+    <link rel="import" href="../google-chart/google-chart.html">
 
+    <dom-module id="nuxeo-sample-dashboard">
+      <template>
+        <style>
+          :host {
+            display: block;
+          }
+        </style>
         <!-- Retrieve our data and store it in 'initiators' -->
         <nuxeo-workflow-data workflow="SerialDocumentReview"
                             event="afterWorkflowStarted"
                             grouped-by="workflowInitiator"
                             start-date="[[startDate]]" end-date="[[endDate]]"
-                            data="\{{initiators}}">
-       </nuxeo-workflow-data>
+                            data="{{initiators}}">
+      </nuxeo-workflow-data>
 
-       <!-- Display a Pie Chart with out data -->
-       <google-chart type="pie"
-                     cols='[{"label": "User", "type": "string"},{"label": "Value", "type": "number"}]'
-                     rows="[[_rows(initiators)]]">
-       </google-chart>
+      <!-- Display a Pie Chart with out data -->
+      <google-chart type="pie"
+                    cols='[{"label": "User", "type": "string"},{"label": "Value", "type": "number"}]'
+                    rows="[[_rows(initiators)]]">
+      </google-chart>
       </template>
-    </dom-module>
-    <script>
-      Polymer({
-        is: 'nuxeo-dataviz-sample',
 
-        // Expose startDate and endDate as properties
-        properties: {
-          startDate: String,
-          endDate: String
-        },
+      <script>
+        /**
+        * `nuxeo-sample-dashboard`
+        * Custom Dashboard
+        *
+        * @customElement
+        * @polymer
+        * @demo demo/index.html
+        */
+        class NuxeoSampleDashboard extends Polymer.Element {
+          static get is() { return 'nuxeo-sample-dashboard'; }
+          static get properties() {
+            return {
+              startDate: String,
+              endDate: String
+            };
+          }
 
-        // Transform our data for usage with Google Charts
-        _rows: function(data) {
-          return data.map(function(e) { return [e.key, e.value]; });
+            // Transform our data for usage with Google Charts
+          _rows(data) {
+            return data.map(function(e) { return [e.key, e.value]; });
+          }
         }
-      });
-    </script>
+
+        window.customElements.define(NuxeoSampleDashboard.is, NuxeoSampleDashboard);
+      </script>
+    </dom-module>
     ```
 
     {{/panel}}
@@ -101,32 +121,74 @@ The quickest way to start building a dashboard is to use the [Polymer Generator]
     {{#> panel type='code' heading='demo/index.html'}}
 
     ```xml
-    <html>
+    <!doctype html>
+    <html lang="en">
       <head>
-        ...
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+        <title>nuxeo-sample-dashboard demo</title>
+
+        <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+
+        <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+        <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+        <link rel="import" href="../nuxeo-sample-dashboard.html">
+        <link rel="import" href="../../nuxeo-dataviz-elements/nuxeo-workflow-data.html">
         <link rel="import" href="../../nuxeo-elements/nuxeo-connection.html">
-        <link rel="import" href="../nuxeo-dataviz-sample.html">
+        <link rel="import" href="../../google-chart/google-chart.html">
+
+        <custom-style>
+          <style is="custom-style" include="demo-pages-shared-styles">
+          </style>
+        </custom-style>
       </head>
-      <body unresolved>
-        <!-- Define a connection to our Nuxeo server -->
-        <nuxeo-connection url="http://localhost:8080/nuxeo" username="Administrator" password="Administrator"></nuxeo-connection>
-        <!-- Include our element and specify a start and end date -->
-        <nuxeo-dataviz-sample start-date="2015-09-01" end-date="2015-10-30"></nuxeo-dataviz-sample>
+      <body>
+        <div class="vertical-section-container centered">
+          <h3>Basic nuxeo-sample-dashboard demo</h3>
+          <demo-snippet>
+            <template>
+              <!-- Define a connection to our Nuxeo server -->
+              <nuxeo-connection url="http://localhost:8080/nuxeo" username="Administrator" password="Administrator"></nuxeo-connection>
+              <!-- Include our element and specify a start and end date -->
+              <nuxeo-sample-dashboard start-date="2019-02-20" end-date="2019-02-28"></nuxeo-sample-dashboard>
+            </template>
+          </demo-snippet>
+        </div>
       </body>
     </html>
     ```
 
     {{/panel}}
-4.  To checkout your element we recommend using [Polyserve](https://github.com/PolymerLabs/polyserve), a simple web server for using bower components locally, which you can install with:
+4.  To checkout your element you can use [Polyserve](https://github.com/Polymer/tools/tree/master/packages/polyserve), a simple web server for using bower components locally, which you can install with:
 
     ```bash
     npm install -g polyserve
     polyserve -p 3000
     ```
 
-    Once Polyserve is up and running we can finally see our custom element's demo at: [http://localhost:3000/components/nuxeo-dataviz-sample/demo/](http://localhost:3000/components/nuxeo-dataviz-sample/demo/)
+    Once Polyserve is up and running we can finally see our custom element's demo at: [http://localhost:3000/components/nuxeo-sample-dashboard/demo/](http://localhost:3000/components/nuxeo-sample-dashboard/demo/)
 
-    ![]({{file page='data-visualization' name='dataviz_custom_element_demo.png'}} ?w=326,h=293,border=true)
+    Using the Polymer CLI is also possible to checkout your element by running the following command:
+    
+    ```bash
+    polymer serve
+    ```
+
+    It will point to you to the local web server URL that, by default, should be something like: [http://127.0.0.1:8081/components/nuxeo-sample-dashboard/](http://127.0.0.1:8081/components/nuxeo-sample-dashboard/)
+
+    Both are simple ways to launch a server and see your demo up and running.
+
+    ![]({{file page='data-visualization' name='custom_element_demo.png'}} ?w=326,h=293,border=true)
+
+5. Polymer CLI also generated a folder `test` that contains a couple of tests for the scaffolded `nuxeo-sample-dashboard` element. Those tests can be run by using the following command:
+
+    ```bash
+    polymer test
+    ```
+    
+    After our customizations the scaffolded tests won't make sense anymore and we would need to code specific tests for our customized element and its logics.
+    Further information about this topic can be found on our [Quality Assurance page]({{page page='quality-assurance'}}).
 
 * * *
 
