@@ -254,10 +254,11 @@ You can view among other metrics:
 ![job-report.png](nx_asset://77135068-16b9-4c19-ab80-4c36356d52b0 ?w=650,border=true)
 
 {{#> callout type='info'}}
-If you need to execute the federation job automatically, then you'll have to set up a **job runner**. It is process run a server, running periodically a specific federation job. More information on the [Simflofy Documentation Site](http://simflofy.helpdocsonline.com/simflofy-job-runner-2).
+If you need to execute the federation job automatically, then you'll have to set up a **job runner**. This process runs a specific federation job periodically.
+More information on the [Simflofy Documentation Site](http://simflofy.helpdocsonline.com/simflofy-job-runner-2).
 {{/callout}}
 
-You can view the job report by clicking on the numbers displayed in each column (Read, Writen, Erros...) to list the exhaustive list of related documents:
+You can view the job report by clicking on the numbers displayed in each column (Read, Written, Errors...) to list the exhaustive list of related documents:
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Content Federation with Simflofy/job-report2.png
