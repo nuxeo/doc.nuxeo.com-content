@@ -615,7 +615,7 @@ Nuxeo Office Online Integration<br/>
 `nuxeo-wopi`
 </td>
 <td colspan="1">
-Public
+Registered access
 </td>
 <td colspan="1">
 [Documentation]({{page page='nuxeo-office-online-integration'}})
