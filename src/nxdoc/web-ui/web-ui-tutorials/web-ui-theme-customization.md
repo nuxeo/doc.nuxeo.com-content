@@ -23,8 +23,6 @@ tree_item_index: 1050
 
 ---
 
-## Themes
-
 Nuxeo Web UI provides several themes to change the look and feel of the UI. For the moment, they mostly provide color schemes applied to UI elements and a background image for some themes.
 
 The available themes are:
@@ -34,7 +32,7 @@ The available themes are:
 - Light
 - Kawaii
 
-### Customization
+## Customization
 
 All the resources for each theme are located on the `/themes/{name}` folder, where `name` is the name of the theme and have the following files:
 
@@ -48,7 +46,7 @@ All the resources for each theme are located on the `/themes/{name}` folder, whe
 
 To add a new theme or customize one of the provided ones you can simply deploy and override theme resources as described in [How to deploy additional Web UI resources]({{page page='web-ui-deployment#deploy_or_override'}}).
 
-### How to Create a Theme
+## Create a Theme
 
 This example provides an walk-through on how to create a new theme and add it as a contribution to the Web UI.
 We will create our new theme called `new-light` theme, which is base on the provider `light` theme with some customizations.
