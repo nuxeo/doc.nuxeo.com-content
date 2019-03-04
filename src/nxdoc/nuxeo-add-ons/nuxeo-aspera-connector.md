@@ -9,19 +9,7 @@ labels:
     - lts2019-ok
     - vpasquier
 toc: true
-hidden: true
-confluence:
-    ajs-parent-page-id: '16089349'
-    ajs-parent-page-title: Nuxeo Add-Ons
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: Nuxeo+Aspera
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/Nuxeo+Aspera'
-    page_id: '31686663'
-    shortlink: B4DjAQ
-    shortlink_source: ''
-    source_link: /display/NXDOC/Nuxeo+Aspera
-
+tree_item_index: 1100s
 ---
 
 {{! excerpt}}
@@ -37,20 +25,19 @@ Aspera Desktop Client - latest version [3.8](http://d3gcli72yxqn2z.cloudfront.ne
 Installation is made of two steps:
 
 1.  Install the [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera-connector) available from the marketplace.
-2.  Install the [Aspera desktop client](http://d3gcli72yxqn2z.cloudfront.net/connect/v4/bin/IBMAsperaConnectInstaller-3.8.1.161274.dmg).
+1.  Install the [Aspera desktop client](http://d3gcli72yxqn2z.cloudfront.net/connect/v4/bin/IBMAsperaConnectInstaller-3.8.1.161274.dmg).
 
 ## Configuration
 
-### Aspera configuration
+### Aspera Configuration
 
 We need to configure 2 nodes, one for upload and one for download, each one will bet attached to one S3 bucket in Nuxeo:
+- The main Nuxeo S3 bucket in Nuxeo is going to be used for download purpose
+- While the S3 transient store bucket is used for upload purpose
 
-- The main Nuxeo S3 Bucket in Nuxeo is going to be used for Download only
-- While the S3 transient store bucket is used for upload
+Follow this [documentation](https://aspera.ibmaspera.com/help/transfer_service/managing_transfer_service_with_aspera_apis/adding_a_transfer_service_node_to_the_organization-1) to attach these S3 buckets to Aspera.
 
-Follow this [documentation](https://aspera.ibmaspera.com/help/transfer_service/managing_transfer_service_with_aspera_apis/adding_a_transfer_service_node_to_the_organization-1) to attach these S3 buckets for Aspera.
-
-While following the documentation above, pay attention to the fact that for `Download` the IAM role used by Aspera needs only READ permissions on the bucket, so the policy attached to this role can be added like this:
+While following the documentation above, pay attention to the fact that for `Download` the IAM role used by Aspera only needs `READ` permissions on the bucket, so the policy attached to this role can be added like this:
 
 ```
 {
@@ -66,7 +53,7 @@ While following the documentation above, pay attention to the fact that for `Dow
       ],
       "Resource": [
         "arn:aws:s3:::bucket-name",
-        "arn:aws:s3:::bucket-name/*"
+        "arn:aws:s3:::bucket-name/\*"
       ]
     }
   ]
@@ -105,7 +92,7 @@ Then the policy for `Upload` must be able to put and get objects from the S3 buc
 }
 ```
 
-### Nuxeo configuration
+### Nuxeo Configuration
 
 #### Transient Store on AWS
 
@@ -161,9 +148,9 @@ nuxeo.s3storage.transient.awstoken=
 nuxeo.s3storage.transient.region=
 ```
 
-#### Aspera Nuxeo configuration
+#### Aspera Nuxeo Configuration
 
-Add the aspera acccess keys in `nuxeo.conf`:
+Add the aspera access keys in `nuxeo.conf`:
 
 Example:
 
@@ -171,7 +158,7 @@ Example:
 ## is the same for the 2 nodes
 aspera.node.url=https://ats-aws-us-east-1.aspera.io
 aspera.node.port=443
- 
+
 ### ACCESS KEY ON UPLOAD NODE LINKED TO TS S3 BUCKET
 aspera.acess.key.id=
 ### SECRET KEY ON UPLOAD NODE LINKED TO TS S3 BUCKET
@@ -183,16 +170,16 @@ aspera.download.acess.key.id=
 aspera.download.acess.key.secret=
 ```
 
-#### Nuxeo Lambda configuration
+#### Nuxeo Lambda Configuration
 
-- A lambda function is configured on the same region as the S3 bucket: 
+- A lambda function is configured on the same region as the S3 bucket:
 
     - Triggered on PUT Object.
     - Filter objects with prefix `batchId`.
     - Returning the url `$NUXEO/site/lambda/success/$batchId` to your Nuxeo.
     - The lambda function must be configured to filter on prefix `batchId`.
 
-Set up those two scripts on your aws lambda account:
+Set up those two scripts on your AWS Lambda account:
 
 `api_caller.js`:
 
@@ -289,9 +276,10 @@ When running Nuxeo with the addon installed, you can go to `NUXEO_URL/nuxeo/app/
 - To upload and add a file to a given document via the connector
 - To list all documents with binaries and download them via the connector
 
-Here is [the complete example implementation](https://github.com/nuxeo/nuxeo-aspera-connector/tree/master/aspera-connector-web/src).
+<!--
+Here is [the complete example of implementation](https://github.com/nuxeo/nuxeo-aspera-connector/tree/master/aspera-connector-web/src).
 
 - `my-app` is the main page containing all `pages` folder pages.
 - In each page, `aspera-connector` is called to set Aspera authentication in place.
-
 - `aspera-connector.html` is wrapping the Aspera API to be used for upload/download via the connector.
+-->
