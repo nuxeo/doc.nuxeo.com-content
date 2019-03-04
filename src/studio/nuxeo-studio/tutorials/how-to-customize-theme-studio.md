@@ -1,5 +1,5 @@
 ---
-title: 'HOWTO: Create Themes with Nuxeo Studio'
+title: 'HOWTO: Create Themes'
 review:
   comment: ''
   date: '2019-03-01'
@@ -9,8 +9,8 @@ details:
   howto:
     excerpt: Learn how to customize themes in Nuxeo Studio.
 tree_item_index: 1100
-
 ---
+
 Nuxeo Studio Designer enables you to create a new theme featuring your logo, background and colors, and to set it as the default theme of your application.
 
 ### Creating a Theme
