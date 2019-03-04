@@ -6,8 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: Learn how to unit test a Studio Bundle
-        level: Advanced
+        excerpt: Learn how to override Web UI Default contributions with Nuxeo Studio
         tool: Nuxeo Studio
         topics: Nuxeo Studio
 labels:
@@ -50,7 +49,7 @@ In this section, we will restrict access to the authorized apps menu only to Adm
 
 ## Copying a Contribution
 
-In this section, we want to give accessto a contribution that is by default available in the Administration menu, the Analytics page,  in User Settings menu.
+In this section, we want to give access to a contribution that is by default available in the Administration menu, the Analytics page,  in User Settings menu.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/HOWTO: Override Existing Contributions/Copy contribution analytics
