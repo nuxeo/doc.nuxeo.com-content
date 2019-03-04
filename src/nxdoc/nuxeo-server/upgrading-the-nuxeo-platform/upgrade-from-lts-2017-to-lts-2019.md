@@ -3,7 +3,7 @@ title: Upgrade from LTS 2017 to LTS 2019
 description: Instructions to upgrade your Nuxeo Platform instance from LTS 2017 version to LTS 2019.
 review:
     comment: ''
-    date: '2018-11-13'
+    date: '2019-03-04'
     status: ok
 labels:
     - multiexcerpt
@@ -144,6 +144,9 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 ### KeyValueStore Implementation in SQL
 
 {{{multiexcerpt 'upgrade-10.10-api.keyvaluestore' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
+### User Actions in WebUI
+{{{multiexcerpt 'upgrade-10.10-code.webui-user-actions' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 ### Code Behavior Changes
 

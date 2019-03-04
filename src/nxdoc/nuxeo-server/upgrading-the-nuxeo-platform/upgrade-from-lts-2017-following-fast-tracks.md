@@ -2,7 +2,7 @@
 title: Upgrade from LTS 2017 following Fast Tracks
 review:
     comment: ''
-    date: '2018-11-16'
+    date: '2019-03-04'
     status: ok
 labels:
     - multiexcerpt
@@ -1106,6 +1106,81 @@ A new Key/Value Store based on SQL is available. To configure a server to use it
 </extension>
 ```
 See [NXP-25604](https://jira.nuxeo.com/browse/NXP-25604)
+{{! /multiexcerpt}}
+
+#### User Actions in WebUI
+{{! multiexcerpt name='upgrade-10.10-code.webui-user-actions'}}
+
+The User Actions in WebUI were redesigned in order to allow a bigger number of actions in an elegant way.
+
+The main idea to put this into practice was to have a responsive menu which moves actions to a dropdown if they cannot fit the available space.
+In order to achieve this the following actions took place:
+- Added a responsive menu which moves actions to a dropdown if they cannot fit the available space.
+- The menu exposes two CSS mixins to control the menu style `--nuxeo-actions-menu-main` and the dropdown style `--nuxeo-actions-menu-dropdown`.
+- Actions must now expose a `show-label` property, which will be set by the menu when they are placed inside the dropdown.
+- It is up to the actions to know how to display the label when the `show-label` property is set.
+
+See [ELEMENTS-738](https://jira.nuxeo.com/browse/ELEMENTS-738) for more details.
+
+This new menu was implemented on WebUI on user actions context. (see [NXP-25146](https://jira.nuxeo.com/browse/NXP-25146))
+
+In this context three slots, to which actions are contributed, were wrapped in a responsive menu: `DOCUMENT_ACTIONS`, `BLOB_ACTIONS` and `RESULTS_SELECTION_ACTIONS`.
+
+Three CSS variables were added to control the width of these menus, respectively: `--nuxeo-browser-actions-menu-max-width`, `--nuxeo-document-blob-actions-menu-max-width` and `--nuxeo-results-selection-actions-menu-max-width`.
+These variables can be overridden in the themes.
+
+While migrating those actions from a previous version, the following questions may arise.
+
+##### How to customize number of actions in action menus?
+As part of [NXP-25146](https://jira.nuxeo.com/browse/NXP-25146), the `max-with` of these three menus can be customized in your themes with three CSS variables:
+
+`--nuxeo-browser-actions-menu-max-width` (for the document actions menu)
+
+`--nuxeo-document-blob-actions-menu-max-width` (for the blob actions menu)
+
+`--nuxeo-results-selection-actions-menu-max-width` (for the result selection actions menu)
+
+These variables supports all the values valid for the [max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width#Values) property, so you’ll have to set them to fit the desired number of actions.
+
+##### How to allow actions to show a label in action menus?
+Basically, every action must have a `showLabel` property, and it is responsible for representing it’s own label when that property is set to `true`. To migrate an action to this format, you should:
+
+1) Include the `nuxeo-action-button-styles` module in the element style:
+
+```html
+<style include="nuxeo-action-button-styles">
+  ...
+</style>
+```
+
+2) Add a `showLabel` boolean property (with `false` as the initial value):
+
+```js
+showLabel: {
+    type: Boolean,
+    value: false,
+},
+```
+
+3) Add a span element with class label, with your label bound to it, right next to your button, and bind it’s hidden attribute to `!showLabel`:
+
+```html
+<paper-icon-button noink id="myAction" icon="nuxeo:someicon" on-tap=”_doSomething”>
+</paper-icon-button>
+<span class="label" hidden$="[[!showLabel]]">[[_label]]</span>
+```
+
+4) Wrap the two elements above (the button and the label) in a new div with class action, and move your tap or click event listener to the div:
+
+```html
+<div class="action" on-tap="_doSomething">
+    <paper-icon-button noink id="myAction" icon="nuxeo:someicon"></paper-icon-button>
+    <span class="label" hidden$="[[!showLabel]]">[[_label]]</span>
+</div>
+```
+
+For more examples on how to do this process, please check Web UI’s [migration commit](https://github.com/nuxeo/nuxeo-web-ui/commit/60d5b637ef093d8279447d550391e686771ba115).
+
 {{! /multiexcerpt}}
 
 #### SAML Icon Displayed on Login Page
