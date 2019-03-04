@@ -237,31 +237,29 @@ Since 10.3, the `nuxeoctl` script allows you to register your instance offline u
 **To register your instance for the first time:**
 
 1. On the offline server:
-1. Make sure your instance is stopped
 
-```
-// Linux and Mac OS
-$ $NUXEO_HOME/bin/nuxeoctl stop
+  1. Make sure your instance is stopped:
+    ```
+    // Linux and Mac OS
+    $ $NUXEO_HOME/bin/nuxeoctl stop
 
-// Windows
-$ .\$NUXEO_HOME\bin\nuxeoctl.bat stop
-```
+    // Windows
+    $ .\$NUXEO_HOME\bin\nuxeoctl.bat stop
+    ```
 
-1. Launch Registration
+  1. Launch registration:
+    ```
+    // Linux and Mac OS
+    // Requires a Nuxeo Online Service account
+    $ $NUXEO_HOME/bin/nuxeoctl register --offline
 
-```
-// Linux and Mac OS
-// Requires a Nuxeo Online Service account
-$ $NUXEO_HOME/bin/nuxeoctl register --offline
+    // Windows
+    // Requires a Nuxeo Online Service account
+    $ .\$NUXEO_HOME\bin\nuxeoctl.bat register --offline
+    ```
+    nuxeoctl will display a CTID to be used for registration.
 
-// Windows
-// Requires a Nuxeo Online Service account
-$ .\$NUXEO_HOME\bin\nuxeoctl.bat register --offline
-```
-
-nuxeoctl will display a CTID to be used for registration.
-
-1.  Store the CTID in a file that you can use from another computer that can connect to the Internet.
+  1.  Store the CTID in a file that you can use from another computer that can connect to the Internet.
 
 1.  From an Internet-connected computer:
 
@@ -272,9 +270,10 @@ nuxeoctl will display a CTID to be used for registration.
     1.  Click on the `Register Instance` button
     1.  Fill in the registration form and submit it.</br>
         The instance is registered.
-    1.  Copy the identifier (CLID) from the instance you just registered.
-
+    1.  Copy the identifier (CLID) from the instance you just registered.</br>
+&nbsp;
 1.  On the offline server:
+
     1.  In nuxeoctl, paste the identifier (CLID) from Nuxeo Online Services and confirm registration.</br>
         The registration is approved and the registration summary is displayed. You can now use hotfixes on this instance for the duration of your subscription.
 
