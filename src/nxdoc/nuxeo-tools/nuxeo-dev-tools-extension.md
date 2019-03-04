@@ -26,8 +26,9 @@ Watch the related courses on Nuxeo University
 ## Installation
 
 ### Requirements
-* The **Nuxeo Dev Tools** extension requires Nuxeo Platform 8.2 and above.
-* If using an **LTS distribution**, all available hotfixes should be installed.
+
+- The **Nuxeo Dev Tools** extension requires Nuxeo Platform 8.2 and above.
+- If using an **LTS distribution**, all available hotfixes should be installed.
 
 ### Installation
 
@@ -47,25 +48,26 @@ $ gulp clean build
 ## Features
 
 Features include:
-* **Hot Reload** of your registered Nuxeo Studio project
-* **Designer Live Preview** of Web UI customizations
-* **Restart** server
-* Rebuild **Elasticsearch** Index
-* Connect to **API Playground**
-* **Automation Call Tracing** toggle
-* **Useful Links** menu
-* **Document Search** with JSON export (search with path, GUID or file name)
-    ![Searching documents from the Nuxeo Dev Tools extension]({{file name='nuxeo-dev-tools-extension-search.png'}} ?w=600,border=true)<br /><br />
+- **Hot Reload** of your registered Nuxeo Studio project
+- **Designer Live Preview** of Web UI customizations
+- **Restart** server
+- Rebuild **Elasticsearch** Index
+- Connect to **API Playground**
+- **Automation Call Tracing** toggle
+- **Useful Links** menu
+- **Document Search** with JSON export (search with path, GUID or file name)
+    ![Searching documents from the Nuxeo Dev Tools extension]({{file name='nuxeo-dev-tools-extension-search.png'}} ?w=600,border=true)
 - One-click **JSON export** of document in current active tab
     ![JSON Export of a document using the Nuxeo Dev Tools extension]({{file name='nuxeo-dev-tools-extension-json-export.png'}} ?w=600,border=true)
 - **Chrome Omnibox** to search for documents without even opening the extension
 - Link to our **Customer Feedback Portal** from the **About** page. You can vote for requested features or even suggest your own, anonymously if you wish.
 
 ### Hot Reload
+
 Hot reloading updates your instance with all your Nuxeo Studio customizations.
 
-1. Install the extension (see [Installation](#installation) or [Building from GitHub](#building-from-github))
-1. Make sure **Dev mode** is enabled by checking your `nuxeo.conf` file (`org.nuxeo.dev=true` should be enabled)
+1. Install the extension (see [Installation](#installation) or [Building from GitHub](#building-from-github)).
+1. Make sure **Dev mode** is enabled by checking your `nuxeo.conf` file (`org.nuxeo.dev=true` should be enabled).
 1. Start your Nuxeo instance.</br>
 1. Modify your Studio Project.
 1. Go to your running server.
@@ -73,6 +75,7 @@ Hot reloading updates your instance with all your Nuxeo Studio customizations.
 1. In the pop-up window, click on **Hot Reload**. When the browser refreshes, the instance will be updated with your modifications.
 
 ### Designer Live Preview
+
 Preview your Web UI customizations without having to wait for a hot reload.
 
 1. Open your browser and navigate to your Nuxeo instance.
@@ -82,22 +85,23 @@ Preview your Web UI customizations without having to wait for a hot reload.
 1. Refresh your browser and see your customizations in the Web UI!
 
 ### Chrome Omnibox
-  - In the Chrome URL field, enter `nx` then hit tab. This will activate the **Nuxeo Dev Tools** omnibox.
-  - Enter the **correct path** or **GUID** of an existing document and the document JSON will open in a separate tab.
-  - Entering plain text will perform a **full-text search**, or you can enter an **NXQL query**.
-  - Searches return the first 5 results in a dropdown window from the omnibox.
-    ![Chrome Omnibox search]({{file name='omnibox.gif'}} ?w=600,border=true)
+
+- In the Chrome URL field, enter `nx` then hit tab. This will activate the **Nuxeo Dev Tools** omnibox.
+- Enter the **correct path** or **GUID** of an existing document and the document JSON will open in a separate tab.
+- Entering plain text will perform a **full-text search**, or you can enter an **NXQL query**.
+- Searches return the first 5 results in a dropdown window from the omnibox.
+  ![Chrome Omnibox search]({{file name='omnibox.gif'}} ?w=600,border=true)
 
 ## Limitations
 
-* Multiple Studio projects are not supported.
-* The extension is only active when a Nuxeo instance is in the current active tab.
-* The **Hot Reload** and **Designer Live Preview** buttons are only active when a Studio project is associated with the current Nuxeo server.
-* You must have **Administrator** access for some features.
-* **Dev Mode** must be activated to benefit from the **Hot Reload** feature.
-* [**CORS config**](https://doc.nuxeo.com/pages/viewpage.action?pageId=14257084) must be activated in your Nuxeo server to connect to your repository on API Playground.
-* Some features may not behave correctly in **Incognito/Private** mode.
-* Designer Live Preview with HTML imports [currently unavailable](https://bugs.chromium.org/p/chromium/issues/detail?id=803115) in Chrome.
+- Multiple Studio projects are not supported.
+- The extension is only active when a Nuxeo instance is in the current active tab.
+- The **Hot Reload** and **Designer Live Preview** buttons are only active when a Studio project is associated with the current Nuxeo server.
+- You must have **Administrator** access for some features.
+- **Dev Mode** must be activated to benefit from the **Hot Reload** feature.
+- [**CORS config**]({{page version='' space='nxdoc' page='cross-origin-resource-sharing-cors'}}) must be activated in your Nuxeo server to connect to your repository on API Playground.
+- Some features may not behave correctly in **Incognito/Private** mode.
+- Designer Live Preview with HTML imports is [currently unavailable](https://bugs.chromium.org/p/chromium/issues/detail?id=803115) in Chrome.
 
 ## Feedback
 
