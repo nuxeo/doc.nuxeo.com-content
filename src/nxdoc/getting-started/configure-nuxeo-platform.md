@@ -107,7 +107,7 @@ Nuxeo Studio allows you to create your own document types and customize the meta
 
 1.  Click on ![]({{file version='' space='nxdoc' page='web-ui-overview' name='create_button.png'}} ?w=25) again to create a BC Portfolio with the following metadata:
 
-<div class="table-scroll">
+  <div class="table-scroll">
   <table class="hover">
     <tbody>
       <tr>
@@ -143,15 +143,14 @@ Nuxeo Studio allows you to create your own document types and customize the meta
       </tr>
     </tbody>
   </table>
-</div>
+  </div>
 
 1.  On the Permissions tab, give both groups the Read & Write permission on this document.
 
 1.  From within your created portfolio, click ![]({{file version='' space='nxdoc' page='web-ui-overview' name='create_button.png'}} ?w=25) again. You'll notice that the only document we can create in a BC Portfolio is **BC Contract**.
-
-{{#> callout type='tip' }}
-To modify this constraint, under the **Configuration** menu in Studio, select **Content Model** > **Document Types** > **BC Portfolio**. You can then add other document types to the **Accepted Children Types** on the **Definition** tab.
-{{/callout}}
+    {{#> callout type='tip' }}
+    To modify this constraint, under the **Configuration** menu in Studio, select **Content Model** > **Document Types** > **BC Portfolio**. You can then add other document types to the **Accepted Children Types** on the **Definition** tab.
+    {{/callout}}
 
 1.  Create a contract with the following metadata:
 
@@ -205,10 +204,9 @@ First we'll need to add a metadatum to our schema to represent the **amount to b
 1.  In Studio, under the **Configuration** menu, select **Content Model** > **Document Types** > **BCContract**, then click on the **Schema** tab.
 
 1.  Add a new field to the schema: `refundAmount` as a Floating point.
-
-{{#> callout type='tip' }}
-This field is directly related to the **BC Contract** document type, but if you want to create more general properties to be shared with other document types you can add them to a separate schema (**Configuration** > **Content Model** > **Schemas**), or create your own.
-{{/callout}}
+    {{#> callout type='tip' }}
+    This field is directly related to the **BC Contract** document type, but if you want to create more general     properties to be shared with other document types you can add them to a separate schema (**Configuration** >    **Content Model** > **Schemas**), or create your own.
+    {{/callout}}
 
 1.  Save your changes and click on the **Designer** button.
 1.  Go to **Local Types** > **BCCONTRACT**.
@@ -316,14 +314,13 @@ CREATE A PAGE PROVIDER FOR A CUSTOM DOCUMENT
 1.  In Studio, select **Page Providers**, then **New**.
 
 1.  We'll give our page provider the ID `contract`. To filter our custom document type `BCContract`, we'll add to the existing query filter:
+    ```sql
+    AND ecm:primaryType = 'BCContract'
+    ```
 
-```sql
-AND ecm:primaryType = 'BCContract'
-```
-
-{{#> callout type='tip' }}
-You can add to the query filter to further tailor your search results. Try filtering out contracts that haven't been cancelled!
-{{/callout}}
+    {{#> callout type='tip' }}
+    You can add to the query filter to further tailor your search results. Try filtering out contracts that     haven't been cancelled!
+    {{/callout}}
 
 1.  Under **Predicates**, click **Add**. Click on **Edit binding** and select `schema:system` > `fulltext`.
 
@@ -376,7 +373,7 @@ In the Studio Designer, you are now in the **UI** tab, under **Layouts** > **Pag
 
 1.  From **Bind more elements**, select **Drawer menu search** and hover over ![]({{file version='' space='nxdoc' page='web-ui-overview' name='create_button.png'}} ?w=25) to select the Search drawer. Then fill in the form:
 
-<div class="table-scroll">
+  <div class="table-scroll">
   <table class="hover">
     <tbody>
       <tr>
@@ -417,7 +414,7 @@ In the Studio Designer, you are now in the **UI** tab, under **Layouts** > **Pag
       </tr>
     </tbody>
   </table>
-</div>
+  </div>
 
 1.  Finally, select **Translations** to modify the range labels. Following our previous example:
 

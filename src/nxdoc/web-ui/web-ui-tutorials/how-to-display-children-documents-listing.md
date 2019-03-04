@@ -49,7 +49,7 @@ In this tutorial, you will learn to display interesting business properties when
    - **Document Facets**: Document is folderish
 1. Save your changes by clicking on **Save** at the top right corner of the page.
 
-Now click on **Configure layouts in Designer** at the top right of the page and configure the 5 layouts under your **contractsPortfolio** document type by clicking on **CONFIGURE** on each layout and save your changes.
+Now click on **Configure layouts in Designer** at the top right of the page and configure the 5 layouts under your **contractsPortfolio** document type by clicking on **Configure Missing Layouts** at the bottom of the list and save your changes.
 
 Optional: **You can configure the table layout of your folderish document:**
 
@@ -60,7 +60,7 @@ Optional: **You can configure the table layout of your folderish document:**
        name: Screen Shot 2019-02-18 at 10.00.43.png
        studio_designer#icon#up_to_date
    --}}
-   ![Edit icon folderish configuration](nx_asset://c3c451b4-5953-4659-a98c-86e6d6affe16 ?w=30).
+   ![Edit icon folderish configuration](nx_asset://c3c451b4-5953-4659-a98c-86e6d6affe16 ?w=30).</br>
    You are now in the Results Editor, where you can configure the table and the grid layouts for your document.
 1. In **table**, click **Edit**.
 1. At the bottom-right of your screen, click **Switch to table editor**.
