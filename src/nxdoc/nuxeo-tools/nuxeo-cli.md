@@ -71,18 +71,20 @@ $ nuxeo <command> [options] [args]
 
 ### Hot Reload
 
-Triggering a hot reload on your server allows you to update some of your development modules without restarting the Nuxeo Server. To be done, it requires some simple modifications like to enable the `sdk` template in your `nuxeo.conf` file (nuxeo-CLI does that for you)
+Triggering a hot reload on your server allows you to update some of your development modules without restarting the Nuxeo Server. To be done, it requires some simple modifications like to enable the `sdk` template in your `nuxeo.conf` file (Nuxeo CLI does that for you)
 
-The first step is to associate a Nuxeo Server with your project root. Nuxeo CLI will ask you the distribution path (path to the home directory of the server, typically, the _parent_ of the `bin` folder) and if you want to let it change `nuxeo.conf` file for you. Reexecute the command to change the distribution path.
+The first step is to associate a Nuxeo Server with your project root. Nuxeo CLI will ask you the distribution path (the path to the home directory of the server, typically, the _parent_ of the `bin` folder) and if you want to let it change `nuxeo.conf` file for you. Re-execute the command to change the distribution path.
 
-Warning: The plugin lists the modules to _ignore_, not the ones to deploy, so only check the modules you do _not_ want to deploy during the hotreloads.
+{{#> callout type='warning' }}
+The plugin lists the modules to _ignore_, not the ones to deploy, so only check the modules you do _not_ want to deploy during the hot reloads.
+{{/callout}}
 
 ```bash
 $ #Make sure you are at the root folder of your project, then:
 $ nuxeo hotreload configure
 ```
 
-If you server was already running, restart it so the changes made in nuxeo.conf are handled (using the sdk emplate, mainly).
+If your server was already running, restart it, so the changes made in `nuxeo.conf` are handled (using the SDK template, mainly).
 
 Then, you will be able to trigger a hot reload using:
 
@@ -128,9 +130,7 @@ $ nuxeo studio release
 ### Bootstrap
 
 {{#> callout type='warning' }}
-
-To prevent unpredictable behaviors **always** execute the FIRST bootstrap command from the .
-
+To prevent unpredictable behaviors **always** execute the FIRST bootstrap command from the **root folder** of your project.
 {{/callout}}
 
 #### Options
