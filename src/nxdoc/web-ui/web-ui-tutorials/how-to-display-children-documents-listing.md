@@ -125,7 +125,7 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
    - **Schemas**: dublincore, contract
    - **Search-name**: portfoliocontent
 1. Unfold the down arrow at the bottom of the **Elements & Attributes** section.
-1. Add the following line next to the **params** >`system_parentId` field:</br>`[[document.uid]]`
+1. Add the following line next to the **params** > `system_parentId` field:</br>`[[document.uid]]`
 
 {{!--     ### nx_asset ###
   path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Display a Children documents listing/Mapped parameters portfolioContentListing
