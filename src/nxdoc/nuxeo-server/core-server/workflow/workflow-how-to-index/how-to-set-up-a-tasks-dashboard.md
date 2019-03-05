@@ -19,6 +19,7 @@ labels:
     - howto
     - excerpt
     - lts2017-ok
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '19235619'
     ajs-parent-page-title: Workflow How-To Index
@@ -110,7 +111,7 @@ history:
 
 ---
 
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 

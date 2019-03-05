@@ -10,6 +10,7 @@ labels:
     - fdavid
     - user-registration-component
     - lts2017-ok
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -116,7 +117,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='Generic Multi-Excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='Generic Multi-Excerpts'}}}
 
 {{! excerpt}}
 The [Nuxeo Platform User Registration add-on](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-user-registration) enables users to invite external users to access a specific space of the Platform or a limited set of spaces. The invitations must be approved by an administrator of the Platform.

@@ -9,6 +9,7 @@ labels:
     - tuto-document-type
     - tuto-user-action
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '4689520'
@@ -109,9 +110,9 @@ history:
         message: ''
         version: '1'
 next_link: /nxdoc/add-a-news-content-view-on-workspaces
-
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 In this section, we will:
 
@@ -120,12 +121,9 @@ In this section, we will:
 - Add a button dedicated to News creation.
 
 {{#> callout type='info' }}
-
 For this section, it is recommended to take a look at the following guides for a step-by-step approach:
-
 - [How to define a document type]({{page page='how-to-define-a-document-type'}})
 - [Use Content Automation]({{page page='how-to-define-a-new-content-view'}})
-
 {{/callout}}
 
 ## Before You Start

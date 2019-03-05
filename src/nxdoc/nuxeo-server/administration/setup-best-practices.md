@@ -12,6 +12,7 @@ labels:
   - bdelbosc
   - last-review-20141126
   - lts2017-ok
+  - jsf-ui
 toc: true
 confluence:
   ajs-parent-page-id: '31032113'
@@ -187,7 +188,7 @@ By default, `data` and `log` directories are stored inside the Nuxeo tree. To ea
 
 **To move the data and log directories:**
 
-{{{multiexcerpt name='DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
+{{{multiexcerpt name='JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
 
 1.  In the Admin tab **System Information** > **Setup** tab, type the path to the location where you want the directories to be stored (see the table below).
 2.  Click on **Save**.

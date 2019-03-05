@@ -12,7 +12,7 @@ details:
         topics: 'JSF, JavaScript'
 labels:
     - content-review-lts2016
-    - jsf
+    - jsf-ui
     - javascript
     - troger
     - howto
@@ -165,7 +165,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 Getting a tag client id with JavaScript might be an issue. Here's how you can get your tag using DOM.

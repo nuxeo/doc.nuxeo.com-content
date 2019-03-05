@@ -12,6 +12,7 @@ labels:
     - atchertchian
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '950330'
@@ -148,7 +149,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 Some templating features have been made available to make it easier to control the layouts and widgets rendering.

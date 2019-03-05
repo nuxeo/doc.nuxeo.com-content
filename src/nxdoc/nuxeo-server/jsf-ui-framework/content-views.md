@@ -14,6 +14,7 @@ labels:
     - content-views-component
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '16089312'
@@ -430,7 +431,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{#> callout type='info' }}
 Content Views can be configured using Studio, check out the [Content Views]({{page space='studio' page='content-views'}}) documentation.

@@ -96,9 +96,7 @@ history:
 
 ---
 {{#> callout type='info' heading='Namespace: *local*'}}
-
 Commands available on the local file system
-
 {{/callout}}
 
 ## cat

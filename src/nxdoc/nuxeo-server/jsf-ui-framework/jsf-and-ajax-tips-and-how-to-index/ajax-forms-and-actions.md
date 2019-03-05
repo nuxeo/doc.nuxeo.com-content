@@ -21,6 +21,7 @@ labels:
     - atchertchian
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '9830458'
@@ -97,11 +98,13 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 Here is some helpful tips and tricks when working with Ajax forms or actions.
-{{! /excerpt}} {{#> callout type='warning'}}
+{{! /excerpt}}
+
+{{#> callout type='warning'}}
 Some of this content is outdated and needs to be reviewed.
 {{/callout}}
 

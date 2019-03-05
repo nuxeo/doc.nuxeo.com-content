@@ -17,6 +17,7 @@ labels:
     - atchertchian
     - tinymce-component
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'
@@ -103,7 +104,8 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 In this how-to, we consider you already [developed with Nuxeo Platform]({{page page='develop-with-nuxeo-platform'}}) with the necessary commands in the `deployment-fragment.xml` to copy the `web` resources to `$NUXEO/nxserver/nuxeo.war`. As an example, we will explain how to install the [textcolor plug-in](http://www.tinymce.com/wiki.php/Plugin:textcolor).
 
 ## Adding the TinyMCE textcolor Plug-In
@@ -122,13 +124,11 @@ The general procedure to make a new plug-in available is to apply the initializa
 2.  Copy the pristine version of [tinymce_init.js](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-ui-web/src/main/resources/tinymce/tinymce_init.js)&nbsp;under your project's `src/main/resources/web/nuxeo.war/tinymce`.
 
     {{#> callout type='info' }}
-
     In the sources of the `nuxeo-platform-ui-web` plug-in, TinyMCE files are under `src/main/resources` but it requires an extra command in the `deployment-fragment.xml`:
 
     `<copy from= "nxwebplatform.tmp/tinymce/" to= "nuxeo.war/tinymce/" />`
 
     Also, ensure you are requiring `<require>org.nuxeo.ecm.platform.ui</require>` to override the default file.
-
     {{/callout}}
 3.  Open your `tinymce_init.js` file.
 

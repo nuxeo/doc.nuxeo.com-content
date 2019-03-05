@@ -13,7 +13,7 @@ details:
 labels:
     - content-review-lts2016
     - validator
-    - jsf
+    - jsf-ui
     - howto
     - seam-jsf-component
     - atchertchian
@@ -183,7 +183,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 The document is created and updated using the 'create' or 'update' view. You can check values on this document before it is saved in the repository.
 
 To validate field, you add a JSF validator to the JSF component controlling the field.

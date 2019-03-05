@@ -11,6 +11,7 @@ labels:
   - admin-center-component
   - multiexcerpt-include
   - lts2017-ok
+  - jsf-ui
 toc: true
 confluence:
   ajs-parent-page-id: '31032113'
@@ -178,7 +179,7 @@ history:
     version: '1'
 ---
 
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 The Admin tab, also called Admin Center, is a space within the Nuxeo Platform that provides administrative services, such as server and application usage summary information, as well as access to upgrades, patches, the Nuxeo Marketplace, and Nuxeo Studio projects. It is available to administrators and power users. Power users have access to a limited set of admin features.
 

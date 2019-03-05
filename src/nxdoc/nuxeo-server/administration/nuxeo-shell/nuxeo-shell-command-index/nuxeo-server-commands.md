@@ -107,9 +107,7 @@ history:
 
 ---
 {{#> callout type='info' heading='Namespace: *remote*'}}
-
 High level commands exposed by a remote Nuxeo Server
-
 {{/callout}}
 
 ## audit

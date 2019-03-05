@@ -16,9 +16,10 @@ labels:
     - howto
     - i18n
     - translation
-    - sguitter
+    - mlumeau
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '19235763'
     ajs-parent-page-title: Labels and Translations Management
@@ -164,7 +165,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 You can force the locale by removing other locales support. This is done in the&nbsp;`deployment-fragment.xml`&nbsp;file of your plugin.

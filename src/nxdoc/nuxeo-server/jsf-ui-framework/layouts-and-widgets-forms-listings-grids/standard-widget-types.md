@@ -14,6 +14,7 @@ labels:
     - home
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '950330'
     ajs-parent-page-title: 'Layouts and Widgets (Forms, Listings, Grids)'
@@ -149,7 +150,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 A series of widget types has been defined for the most generic uses cases.

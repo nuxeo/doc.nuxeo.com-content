@@ -2,7 +2,7 @@
 title: Extending The Shell
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2015-12-01'
     status: ok
 labels:
     - content-review-lts2016
@@ -22,7 +22,7 @@ confluence:
     shortlink: bYdH
     shortlink_source: 'https://doc.nuxeo.com/x/bYdH'
     source_link: /display/NXDOC/Extending+The+Shell
-tree_item_index: 200
+tree_item_index: 300
 history:
     -
         author: Manon Lumeau
@@ -76,7 +76,6 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 This section is intended for developers who wants to provide new Shell commands, namespaces or Shell Features.
@@ -84,7 +83,7 @@ This section is intended for developers who wants to provide new Shell commands,
 
 **Table of contents:**
 
-*   [Shell Features]({{page space='NXDOC' page='Shell Features'}})&nbsp;&mdash;&nbsp;<span class="smalltext">In order to install new commands to existing namespaces or to register new namespaces, completors, injector providers or other Shell objects you must create a new Shell Feature.</span>
-*   [Shell Commands]({{page space='NXDOC' page='Shell Commands'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Let's look now into Command implementation details.</span>
-*   [Shell Namespaces]({{page space='NXDOC' page='Shell Namespaces'}})&nbsp;&mdash;&nbsp;<span class="smalltext">We've already seen how to add new Shell Features and how to implement new commands. This last chapter is talking a bit about Shell Namespaces.</span>
-*   [Shell Documentation]({{page space='NXDOC' page='Shell Documentation'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Commands are self documented by using annotations. These annotations are used to generate the base of the command documentation, like: short description, syntax, options, arguments etc. Using this information the shell automatically generates basic help for you.</span>
+- [Shell Features]({{page space='NXDOC' page='Shell Features'}})&nbsp;&mdash;&nbsp;<span class="smalltext">In order to install new commands to existing namespaces or to register new namespaces, completors, injector providers or other Shell objects you must create a new Shell Feature.</span>
+- [Shell Commands]({{page space='NXDOC' page='Shell Commands'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Let's look now into Command implementation details.</span>
+- [Shell Namespaces]({{page space='NXDOC' page='Shell Namespaces'}})&nbsp;&mdash;&nbsp;<span class="smalltext">We've already seen how to add new Shell Features and how to implement new commands. This last chapter is talking a bit about Shell Namespaces.</span>
+- [Shell Documentation]({{page space='NXDOC' page='Shell Documentation'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Commands are self documented by using annotations. These annotations are used to generate the base of the command documentation, like: short description, syntax, options, arguments etc. Using this information the shell automatically generates basic help for you.</span>

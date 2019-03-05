@@ -16,7 +16,7 @@ labels:
     - double-click
     - howto
     - ajax
-    - jsf
+    - jsf-ui
     - seam-jsf-component
     - atchertchian
     - excerpt
@@ -127,7 +127,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 The "Double Click Shield" feature is enabled in the JSF interface and it addresses the issue described in the page [I Get an Error When I Click on Two Links Quickly]({{page space='nxdoc60' page='i-get-an-error-when-i-click-on-two-links-quickly'}}).

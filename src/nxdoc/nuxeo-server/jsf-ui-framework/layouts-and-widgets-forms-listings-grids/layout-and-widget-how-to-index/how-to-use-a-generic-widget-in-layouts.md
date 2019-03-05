@@ -19,6 +19,7 @@ labels:
     - atchertchian
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '19235623'
     ajs-parent-page-title: 'Layout & Widget How-To Index'
@@ -85,7 +86,7 @@ history:
 
 ---
 
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 The Nuxeo Platform framework and its "Layout" module offers many widget types. Some are exposed directly in Studio interface, but some are not. If you want to use one of those existing widgets in Studio when editing a layout, you should drop a _generic widget_ from the "Advanced Widgets" category on the right, as in the screenshot below:

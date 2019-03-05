@@ -14,6 +14,7 @@ labels:
     - lts2016-ok
     - howto
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '20517820'
     ajs-parent-page-title: JSF UI How-To Index
@@ -74,7 +75,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{#> callout type='info' }}
 {{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}

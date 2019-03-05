@@ -54,14 +54,12 @@ history:
         version: '1'
 
 ---
-Here is a list of the commands&nbsp;available in the Nuxeo Shell, grouped by namespace.
+Here is a list of the commands available in the Nuxeo Shell, grouped by namespace.
 
 {{#> callout type='info' }}
-
 For each page, the command index has been generated using the&nbsp;`help` command:
 
 ```
 help [-export [file]] [-ns [namespace]]
 ```
-
 {{/callout}}

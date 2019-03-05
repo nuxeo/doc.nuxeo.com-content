@@ -6,7 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: Learn how to make the JSF UI the default UI instead of the Web UI.
+        excerpt: Learn how to make JSF UI the default UI instead of Web UI.
         level: Beginner
         tool: XML Extension
         topics: 'Web UI, JSF UI'
@@ -14,6 +14,7 @@ labels:
     - lts2017-ok
     - howto
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '20517820'
     ajs-parent-page-title: JSF UI How-To Index
@@ -49,9 +50,9 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-In case both _nuxeo-jsf-ui_ and _nuxeo-web-ui_ addons are installed, the new Web UI is set to be the default UI.
+In case both _nuxeo-jsf-ui_ and _nuxeo-web-ui_ addons are installed, Web UI is set to be the default UI.
 If you want to make the JSF UI the default UI there are several changes to apply.
 
 ## Login Page Redirection

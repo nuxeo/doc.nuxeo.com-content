@@ -13,7 +13,7 @@ details:
 labels:
     - content-review-lts2016
     - validation
-    - jsf
+    - jsf-ui
     - howto
     - layout
     - seam-jsf-component
@@ -136,7 +136,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 When you create your own document type, you may need to impose a structure for some fields (phone number, zip code, ...) to your user. The Nuxeo Layout system is based on JSF that implements the notion of validator. Here we will explain how to do that with Nuxeo Studio and Nuxeo IDE.

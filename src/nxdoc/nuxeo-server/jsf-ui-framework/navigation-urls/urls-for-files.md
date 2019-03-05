@@ -12,6 +12,7 @@ labels:
     - blob-manager-component
     - multiexcerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '7209351'
     ajs-parent-page-title: Navigation URLs
@@ -162,7 +163,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 ## File URLs within JSF Context Only
 

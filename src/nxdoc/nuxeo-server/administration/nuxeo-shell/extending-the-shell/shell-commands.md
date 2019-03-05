@@ -2,7 +2,7 @@
 title: Shell Commands
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2015-12-01'
     status: ok
 labels:
     - content-review-lts2016
@@ -127,7 +127,6 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 Let's look now into Command implementation details.

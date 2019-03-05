@@ -13,7 +13,7 @@ details:
 labels:
     - content-review-lts2016
     - howto
-    - jsf
+    - jsf-ui
     - seam-jsf-component
     - atchertchian
     - excerpt
@@ -78,7 +78,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 After connection, the startup page is defined by the method `StartupHelper.initDomainAndFindStartupPage`. If you want to customize the startup redirection, you have to override the method&nbsp;`initDomainAndFindStartupPage` in a custom class.
 
 The following example presents a customization redirecting every user to the dashboard except for the Administrators:

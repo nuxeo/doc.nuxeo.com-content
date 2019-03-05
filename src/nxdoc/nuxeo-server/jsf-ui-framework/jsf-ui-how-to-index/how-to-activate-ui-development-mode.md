@@ -16,6 +16,7 @@ labels:
     - seam-jsf-component
     - atchertchian
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '20517820'
     ajs-parent-page-title: JSF UI How-To Index
@@ -56,7 +57,8 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 The following steps will allow you to activate the UI development mode. This mode displays additional information about rendered layouts/widgets.
 

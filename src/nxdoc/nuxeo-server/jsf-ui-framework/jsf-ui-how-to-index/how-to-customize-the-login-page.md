@@ -18,6 +18,7 @@ labels:
     - theme
     - login-page-component
     - lts2017-ok
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '20517820'
     ajs-parent-page-title: JSF UI How-To Index
@@ -243,7 +244,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 The basic customization can be made by extending the service `org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService` for the point [`loginScreen`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService--loginScreen).
 

@@ -17,6 +17,7 @@ labels:
     - seam-jsf-component
     - atchertchian
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'
@@ -58,7 +59,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 The purpose of this how-to is to learn how to override a default Nuxeo template. It considers that you are able to create a new bundle and the required files. Otherwise please refer to the page [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}}) or use [Nuxeo CLI]({{page page='how-to-contribute-to-an-extension'}}).
 

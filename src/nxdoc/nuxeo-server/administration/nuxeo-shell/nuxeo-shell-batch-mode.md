@@ -120,7 +120,7 @@ ls -uid
 
 ```
 
-If you want to span a command on multiple lines (you may want this for improved readability in case of long commands) you can end the line with a *** character (*make sure** you don't have a space after **). In that case the command will continue on the next line, and so on until no more line ending ** is found or the end of file is reached.
+If you want to span a command on multiple lines (you may want this for improved readability in case of long commands) you can end the line with a *** character (*make sure** you don't have a space after `***`). In that case the command will continue on the next line, and so on until no more line ending ** is found or the end of file is reached.
 
 Example:
 

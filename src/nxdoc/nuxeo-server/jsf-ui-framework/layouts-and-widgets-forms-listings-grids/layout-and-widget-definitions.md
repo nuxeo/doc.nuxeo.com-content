@@ -11,6 +11,7 @@ labels:
     - mlumeau
     - excerpt
     - lts2017-ok
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '950330'
     ajs-parent-page-title: 'Layouts and Widgets (Forms, Listings, Grids)'
@@ -166,7 +167,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 Custom layouts and widgets can be contributed to the web layout service, using its extension points.

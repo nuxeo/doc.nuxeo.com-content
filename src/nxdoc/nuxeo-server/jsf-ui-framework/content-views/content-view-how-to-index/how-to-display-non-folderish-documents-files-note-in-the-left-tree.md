@@ -19,6 +19,7 @@ labels:
     - page-provider-component
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '19235663'
     ajs-parent-page-title: Content View How-To Index
@@ -69,7 +70,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 The left tree is built using a query that is ran recursively. One of the clauses of the query makes sure that only folderish documents are displayed (`AND&nbsp;ecm:mixinType = 'Folderish'`). The query is defined in the "tree_children" page provider. See below a sample override of this query without the "Folderish" clause. You can contribute to the "providers" extension using the[ XML Extensions]({{page page='how-to-contribute-to-an-extension'}}) feature.

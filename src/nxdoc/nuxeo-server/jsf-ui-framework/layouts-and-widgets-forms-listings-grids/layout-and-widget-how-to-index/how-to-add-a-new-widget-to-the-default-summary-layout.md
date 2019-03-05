@@ -20,6 +20,7 @@ labels:
     - atchertchian
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '19235623'
     ajs-parent-page-title: 'Layout & Widget How-To Index'
@@ -85,7 +86,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 This how-to explains how to insert a new widget to the default Summary layout so that's displayed on all document Summary pages.

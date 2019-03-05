@@ -17,13 +17,13 @@ labels:
     - troger
     - pdf
     - lts2017-ok
+    - jsf-ui
 toc: true
 tree_item_index: 150
 
 ---
 
 {{! excerpt}}
-
 If the main document format stored in the Nuxeo repository is PDF, it should be convenient to manipulate it without having to use a desktop software. Nuxeo gives the opportunity to safely and automatically execute PDF operations from the Nuxeo interface.
 
 In this tutorial we will implement a document management security politic that requires to control each downloaded PDF files with a "confidential" watermark and ask for a password in order to open the document.
@@ -31,17 +31,13 @@ In this tutorial we will implement a document management security politic that r
 Nuxeo integrates PDF tools operations, under the **Conversion** category so that all this can be done easily from automation chains.
 
 ![]({{file name='nuxeo-studio-pdf-conversion-operations.png'}} ?w=500,border=true)
-
 {{! /excerpt}}
 
 {{#> callout type='info' }}
-
 This how to requires knowledge about:
-
-*   [Document Types Definition]({{page page='how-to-define-a-document-type'}})
-*   [User Actions]({{page space='studio' page='user-actions'}})
-*   [Automation chains]({{page page='content-automation-concepts'}})
-
+- [Document Types Definition]({{page page='how-to-define-a-document-type'}})
+- [User Actions]({{page space='studio' page='user-actions'}})
+- [Automation chains]({{page page='content-automation-concepts'}})
 {{/callout}}
 
 ## Importing PDF Operations in Nuxeo Studio
@@ -146,10 +142,8 @@ The operations are now available in the Automation Chain editor, in the Conversi
 To implement the behavior defined in the introduction, [create an automation chain]({{page page='how-to-create-an-automation-chain'}}) which retrieves the blob from the File document, encrypts and watermarks with a picture previously uploaded in the Nuxeo instance (in a "Test" workspace under the and called `confidential.png`).
 
 {{#> callout type='info'}}
-
 To use watermark with picture, we recommend to use pictures with transparency.
 Note that although the files are picture files, you do not need to create Picture document types in Nuxeo and so do not need to use the Nuxeo DAM addon.
-
 {{/callout}}
 
 The automation chain should be:
@@ -178,12 +172,12 @@ The automation chain should be:
 - WebUI.DownloadFile
 ```
 
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 Now, plug the automation chain to a button called `safeDownloadButton` available:
-* in the contextual tools
-* only for File document type
-* to users with Read permission
+- in the contextual tools
+- only for File document type
+- to users with Read permission
 
 ## Result
 

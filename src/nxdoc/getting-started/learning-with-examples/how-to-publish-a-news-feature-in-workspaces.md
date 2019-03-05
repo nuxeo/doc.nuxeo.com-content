@@ -1,5 +1,5 @@
 ---
-title: How to Publish a News Feature in Workspaces
+title: 'HOWTO: Publish a News Feature in Workspaces'
 review:
     comment: ''
     date: '2018-10-31'
@@ -11,6 +11,7 @@ labels:
     - studio
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 toc: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
@@ -121,9 +122,9 @@ history:
         date: '2011-01-18 08:34'
         message: ''
         version: '1'
-
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 ## Concept
 

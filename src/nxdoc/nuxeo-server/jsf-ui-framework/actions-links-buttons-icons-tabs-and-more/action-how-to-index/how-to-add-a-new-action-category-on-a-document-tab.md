@@ -18,6 +18,7 @@ labels:
     - atchertchian
     - studio
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '19235610'
     ajs-parent-page-title: Action How-To Index
@@ -123,7 +124,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 Nuxeo Studio enables you to add new buttons and links, called actions, when you implement new features. These actions are located in predefined places on the page, that we call action categories.
 

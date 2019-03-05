@@ -12,6 +12,7 @@ labels:
     - content-view
     - atchertchian
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '4689520'
@@ -78,9 +79,9 @@ history:
         version: '1'
 previous_link: /nxdoc/implement-the-news-document
 next_link: /nxdoc/implement-the-news-publishing-process
-
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 In the section, we will:
 

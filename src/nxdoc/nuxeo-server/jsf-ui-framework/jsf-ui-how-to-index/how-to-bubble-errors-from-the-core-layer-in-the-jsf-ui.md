@@ -17,6 +17,7 @@ labels:
   - seam-jsf-component
   - atchertchian
   - content-review-lts2017
+  - jsf-ui
 confluence:
   ajs-parent-page-id: '20517820'
   ajs-parent-page-title: JSF UI How-To Index
@@ -97,7 +98,7 @@ history:
     message: ''
     version: '1'
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 The Nuxeo Platform proposes an easy model for implementing custom logic through the [Event Listener system]({{page page='events-and-listeners'}}). Sometimes, you want to "bubble" in the UI up to the user errors that happens in that lower layer. This page explains how this can be done by using the RecoverableClientException mechanism, throughout an example that executes a chain in the listener which can easily be configured using Studio. In the end, this provides a nice pattern for implementing integrity checks based on automation.
 
 {{#> callout type='note' }}

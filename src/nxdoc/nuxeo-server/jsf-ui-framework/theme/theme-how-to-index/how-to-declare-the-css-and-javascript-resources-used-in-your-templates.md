@@ -21,6 +21,7 @@ labels:
     - link-update
     - excerpt
     - lts2017-ok
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '19235625'
     ajs-parent-page-title: Theme How-To Index
@@ -116,7 +117,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 The CSS and JavaScript resources needed by your JSF pages can be added directly from inside your templates, or using runtime extension points.

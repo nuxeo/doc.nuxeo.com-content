@@ -18,6 +18,7 @@ labels:
     - howto
     - studio
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '19235663'
@@ -364,7 +365,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 A content view is the definition of a list of documents displayed in the interface. The lists of documents displayed in the UI are the results of a query which you can customize and the definition of the information displayed on the documents. In Nuxeo applications, content views are used in most cases when there is a list of content.

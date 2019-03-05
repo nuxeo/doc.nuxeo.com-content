@@ -12,6 +12,7 @@ labels:
     - aggregates-widgets-component
     - excerpt
     - lts2017-ok
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '3868345'
@@ -108,7 +109,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 {{! excerpt}}
 This page presents widget types to be used to display aggregate buckets.
 {{! /excerpt}}

@@ -16,6 +16,7 @@ labels:
     - search-tab-component
     - atchertchian
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'
@@ -267,7 +268,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 The info-view pop-up displays the metadata of a selected document. You can customize it by Studio or an XML extension.&nbsp;The default info layout is used on the info view for documents that don't specify a specific info layout.
 

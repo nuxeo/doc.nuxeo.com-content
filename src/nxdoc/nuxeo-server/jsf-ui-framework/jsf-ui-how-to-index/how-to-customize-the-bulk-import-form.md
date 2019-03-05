@@ -15,6 +15,7 @@ labels:
     - howto
     - layout
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '20517820'
@@ -196,7 +197,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 The bulk import screen has a form that allows you to edit several documents at the same time. You can customize it with Studio by creating a form layout named `bulkImport`. The "Create" layout will be used on the bulk import popup.
 

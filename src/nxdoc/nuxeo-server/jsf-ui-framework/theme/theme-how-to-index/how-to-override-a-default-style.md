@@ -19,6 +19,7 @@ labels:
     - style-css-component
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '19235625'
     ajs-parent-page-title: Theme How-To Index
@@ -114,7 +115,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 Most of the default application styling is done using "dynamic" SCSS files referring to variables and flavors. These styles can be browsed [on GitHub](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/themes/sass).
 

@@ -15,7 +15,7 @@ labels:
     - howto
     - seam-jsf-component
     - atchertchian
-    - jsf
+    - jsf-ui
     - excerpt
     - content-review-lts2017
 toc: true
@@ -104,7 +104,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{#> callout type='info' }}
 {{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}

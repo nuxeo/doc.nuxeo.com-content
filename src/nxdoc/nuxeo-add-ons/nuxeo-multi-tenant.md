@@ -10,6 +10,7 @@ labels:
     - ataillefer
     - excerpt-include
     - lts2017-ok
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons
@@ -46,7 +47,7 @@ history:
 
 ---
 
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{{excerpt 'USERDOC:Nuxeo Multi-tenant'}}}
 

@@ -21,6 +21,7 @@ labels:
     - atchertchian
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '9830458'
@@ -92,7 +93,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 {{! excerpt}}
 This page lists some good practices to follow to ensure correct rendering, HTML and testing.
 {{! /excerpt}}

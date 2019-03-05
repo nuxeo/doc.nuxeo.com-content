@@ -18,6 +18,7 @@ labels:
     - studio
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '19235610'
     ajs-parent-page-title: Action How-To Index
@@ -143,7 +144,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 By default, if you create a folderish document type, the **New** button will not be displayed on the default summary view. This page explains how to add it, as well as how to add the **New** button to a custom tab.&nbsp;

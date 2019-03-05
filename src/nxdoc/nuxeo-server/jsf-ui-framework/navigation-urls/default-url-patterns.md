@@ -12,6 +12,7 @@ labels:
     - blob-manager-component
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '7209351'
     ajs-parent-page-title: Navigation URLs
@@ -92,7 +93,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 {{! excerpt}}
 
 This page introduces the URLs used in Nuxeo Platform and tries to bind them to services/addons.

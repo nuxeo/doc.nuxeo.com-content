@@ -2,7 +2,7 @@
 title: Shell Namespaces
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2015-12-01'
     status: ok
 labels:
     - content-review-lts2016
@@ -82,7 +82,6 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 We are getting now to the end of our breakthrough about extending the shell.
 

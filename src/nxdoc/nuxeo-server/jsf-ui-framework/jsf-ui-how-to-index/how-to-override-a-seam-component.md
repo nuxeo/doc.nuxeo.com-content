@@ -18,6 +18,7 @@ labels:
     - atchertchian
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '19235681'
     ajs-parent-page-title: Transversal How-Tos
@@ -78,7 +79,8 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
 This how-to considers you master the creation of the Java plug-in, and you know where to create a Java class. Otherwise please refer to the page [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}}) or use [Nuxeo CLI]({{page page='nuxeo-cli'}}).
 {{! /excerpt}}
