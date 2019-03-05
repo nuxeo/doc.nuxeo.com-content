@@ -125,10 +125,14 @@ Contrary to JSF UI, parameters are not inserted in the query then resolved using
    - **Schemas**: dublincore, contract
    - **Search-name**: portfoliocontent
 1. Unfold the down arrow at the bottom of the **Elements & Attributes** section.
-1. Add the following line next to the **params** field:</br>
-   `{"system_parentId": "[[document.uid]]"}`
+1. Add the following line next to the **params** >`system_parentId` field:</br>`[[document.uid]]`
 
-   ![]({{file name='portfolioContentListing-web-ui-designer.png'}} ?w=650,border=true)
+{{!--     ### nx_asset ###
+  path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Display a Children documents listing/Mapped parameters portfolioContentListing
+  name: portfolioContentListing-web-ui-designer.png
+  studio_designer#screenshot#up_to_date
+--}}
+![Mapped parameters portfolioContentListing](nx_asset://80c2f9b2-87f2-40e9-bd6f-274b8f4158fc ?w=650,border=true)
 
 {{#> callout type='info' heading='Some explanations for params' }}
 Elements are configured using JavaScript (JS). We are putting a JS object here (`{"key": "value", "anotherKey": "anotherValue"}`) that will be inserted in the element.
