@@ -136,7 +136,7 @@ You now need to add your labels to your translations file to display them correc
 
 ## Create a New Left Menu Item
 
-The next step is to add a button in the left menu to display the search screen.
+The next step is to add a button in the drawer menu to display the search screen.
 
 1. In the same screen, in **Bind more elements**, select **Drawer item search** to create your menu item.
 1. Fill in the page like this:
