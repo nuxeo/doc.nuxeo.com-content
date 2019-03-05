@@ -25,6 +25,11 @@ version_override:
 tree_item_index: 300
 history:
     -
+        author: Arnaud Kervern
+        date: '2019-03-05 17:21'
+        message: ''
+        version: '78'
+    -
         author: Thibaud Arguillere
         date: '2016-08-26 17:56'
         message: ''
@@ -637,38 +642,84 @@ From a command line:
     }
     ```
 
-#### Send the Operation to Studio
+#### Send the Operation to Nuxeo Studio
 
 1. Build a JAR file (without running the tests); from the `contract-mgt-project` folder run:
 
-    ```bash
-    $ mvn -DskipTests package
-    ```
+  ```bash
+  $ mvn -DskipTests package
+  ```
 
-2. Deploy the JAR (`contract-mgt-project/contract-mgt-project-core/target/contract-mgt-project-core-1.0-SNAPSHOT.jar`) in your Nuxeo server by copying it to **$NuxeoServer/nxserver/bundles**, then restart your server.
+2. Link Your Local Project to Your Studio Project
 
-3. Go to the local automation documentation at `http://NUXEO_SERVER/nuxeo/site/automation/doc` (for example `http://localhost:8080/nuxeo/site/automation/doc`).
+  ```bash
+  $ nuxeo studio link
+    info You are going to link a Studio project to this project.
+  ? NOS Username: my-user
+  ? NOS Password: [hidden]
+  ? Studio Project: my-project
+  ? Do you want to update your Maven settings.xml file accordingly? Yes
+  ```
 
-4. In the Document category click **Contract Updater**, then click on the **JSON definition** link and copy the operation definition.
+  **Warning**: At this point, you just added your Nuxeo Connect password in `~/.m2/settings.xml` in clear text. This is not recommended, please read the following `Security Best Practise` section.
 
-5. In Nuxeo Studio go to **Settings** > **Registries** > **Automation Operations** and paste the operation definition into the `"operations": []` array, for example:
+3. Export Your Contributions to Nuxeo Studio
 
-    ```
-    { "operations": [
-     {
-      "id" : "Document.ContractUpdater",
-      "label" : "Contract Updater",
-      "category" : "Document",
-      "requires" : null,
-      "description" : "On a contract, sets the reminder date to three months after its start date.",
-      "url" : "Document.ContractUpdater",
-      "signature" : [ "document", "document", "documents", "documents" ],
-      "params" : [ ]
-     }
-    ] }
-    ```
+  ```bash
+  $ nuxeo studio export
+    info Building and exporting your contributions to 'my-project' Studio project.
+    info Contributions sucessfully exported to 'my-project' Studio project.
+  ```
 
-The operation is now available in Automation Chain editor, under the Document category.
+4. In Nuxeo Studio go to **Settings** > **Automatic Registries** > **Automation Operations**, and you should see the JSON definition of your Operation.
+
+  The operation is now available in Automation Chain editor, under the Document category.
+
+##### Note: Security Best Practises
+
+It is strongly recommended that you encrypt the secrets stored in `~/.m2/settings.xml`. Official [Maven Password Encryption](https://maven.apache.org/guides/mini/guide-encryption.html) documentation page.
+
+1. Create a master password:
+
+  ```bash
+  $ mvn --encrypt-master-password
+  ```
+
+  The command will prompt you for your master password and produce an encrypted version, something like this:
+
+  ```bash
+  {jSMOWnoPFgsHVpMvz5VrIt5kRbzGpI8u+9EF1iFQyJQ=}
+  ```
+
+1. Store this password in `~/.m2/settings-security.xml` like this:
+
+  ```xml
+  <settingsSecurity>
+    <master>{jSMOWnoPFgsHVpMvz5VrIt5kRbzGpI8u+9EF1iFQyJQ=}</master>
+  </settingsSecurity>
+  ```
+
+1. Encrypt your Nuxeo Studio password:
+
+  ```bash
+  $ mvn --encrypt-password
+  ```
+
+1. Find and Update Your Credentials in your `~/.m2/settings.xml` file as below:
+
+  ```xml
+  <servers>
+    ....
+    <server>
+      <id>nuxeo-studio</id>
+      <username>your_studio_username</username>
+      <password>your_new_encrypted_studio_password</password>
+    </server>
+    ...
+  </servers>
+  ```
+
+This configures your Maven client to use authentication when accessing the Studio Maven repository.
 
 ## Step 3 - Create Your Chain in Nuxeo Studio
 
@@ -702,9 +753,21 @@ Now create an Event Handler in order to call your operation when a contract is c
 
 Now you can try it on your server either by running the unit tests or by testing manually.
 
+5. Import Your Automation Chain in Your Java Project
+
+  We assume you already called `nuxeo studio link` from the previous chapter.
+
+  ```bash
+  $ nuxeo studio import
+    info You are going to create a new Constant Class with Studio s related models.
+  ? Constant package: nuxeo.studio.test
+  ? Constant class name: StudioConstant
+    create contract-mgt-project-core/src/main/java/nuxeo/studio/test/StudioConstant.java
+  ```
+
 ## Step 4 - Test the Code
 
-The code can either be tested through unit tests or manually. You need to bind the Studio project first to have it deployed during the unit tests or on the server when testing manually.
+The code can either be tested through unit tests or manually. You need to bind the Studio project first (using `nuxeo studio link` and imported Studio constants `nuxeo studio import` seen previously) to have it deployed during the unit tests or on the server when testing manually.
 
 ### Update the Unit Test
 
@@ -722,6 +785,7 @@ Nuxeo CLI automatically created a unit test class for the Operation at `contract
     import java.util.Calendar;
     import java.util.GregorianCalendar;
     import javax.inject.Inject;
+    import nuxeo.studio.test.StudioConstant;
 
     import org.junit.Test;
     import org.junit.runner.RunWith;
@@ -746,7 +810,7 @@ Nuxeo CLI automatically created a unit test class for the Operation at `contract
     // You can find it in Studio:
     // Settings > Application Information > Maven Artifact id field
     @Deploy({"com.bigcorp.contractmgt.contract-mgt-project-core"})
-    @PartialDeploy(bundle = "studio.extensions.MAVEN-ARTIFACT-ID", features = { TargetExtensions.Automation.class })
+    @PartialDeploy(bundle = StudioConstant.BUNDLE_NAME, extensions = { TargetExtensions.Automation.class })
     public class TestContractUpdater {
           @Inject
           protected CoreSession session;
@@ -774,91 +838,7 @@ Nuxeo CLI automatically created a unit test class for the Operation at `contract
     }
     ```
 
-4.  Replace `MAVEN-ARTIFACT-ID` in `studio.extensions.MAVEN-ARTIFACT-ID` with your Studio project's symbolic name.
-
-    Note: To get the symbolic name go to **Settings** > **Application Information** in Nuxeo Studio and use the value found in the **Maven Artifact id** field.
-
 If you try running the test (in Eclipse, right-click on your project and choose **Run As, JUnit Test**, or **Run TestContractUpdater** in IntelliJ IDEA), you will notice that the test fails because our Studio project is missing a few things. We need to add them to make the test pass.
-
-### Bind the Studio Project
-
-1.  In Nuxeo Studio, under **Source Control** > **Branch Management**, release the most recent commit on your project. This will generate a version of your project that can be accessed by Maven.
-
-2.  It is strongly recommended that you encrypt your Studio password (aka your Nuxeo Connect account password):
-
-    1. Create a master password:
-
-        ```bash
-        mvn --encrypt-master-password
-        ```
-
-        The command will prompt you for your master password and produce an encrypted version, something like this:
-
-        ```bash
-        {jSMOWnoPFgsHVpMvz5VrIt5kRbzGpI8u+9EF1iFQyJQ=}
-        ```
-
-    2. Store this password in `~/.m2/settings-security.xml` like this:
-
-        ```xml
-        <settingsSecurity>
-          <master>{jSMOWnoPFgsHVpMvz5VrIt5kRbzGpI8u+9EF1iFQyJQ=}</master>
-        </settingsSecurity>
-        ```
-
-    3. Encrypt your Studio password:
-
-        ```bash
-        mvn --encrypt-password
-        ```
-
-    4. Store the encrypted Studio password in your `~/.m2/settings.xml` file as below:
-
-        ```xml
-        <servers>
-          ....
-          <server>
-            <id>nuxeo-studio</id>
-            <username>your_studio_username</username>
-            <password>your_encrypted_studio_password</password>
-          </server>
-          ...
-        </servers>
-        ```
-
-         This configures your Maven client to use authentication when accessing the Studio Maven repository.
-
-3. Edit the `pom.xml` file in `contract-mgt-project/contract-mgt-project-core` to declare the dependency on the Studio project you just made a release of:
-
-    ```xml
-    <dependencies>
-      ...
-      <dependency>
-        <groupId>nuxeo-studio</groupId>
-        <artifactId>myproject</artifactId>
-        <version>0.0.1</version>
-      </dependency>
-      ...
-    </dependencies>
-    ```
-
-    The value for `artifactId` is identical to the `MAVEN-ARTIFACT-ID` we referenced before. Use the `version` value from the release you created.
-
-4.  Update the project dependencies:
-
-    * IntelliJ IDEA
-
-        * IntelliJ IDEA will detect the change automatically, click on **Import Changes** in the Maven popup.
-
-    * Eclipse
-
-        1. In a terminal:
-
-        ```bash
-        $ mvn eclipse:eclipse
-        ```
-
-        2. In Eclipse, then right-click on the project and click Refresh (F5).
 
 ### Using Unit Tests
 
