@@ -13,6 +13,7 @@ labels:
     - home
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '16089312'
     ajs-parent-page-title: JSF UI Framework
@@ -213,7 +214,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 Actions usually stand for commands that can be triggered via user interface interaction (buttons, links, etc...). Usually, it will describe a link and other information that may be used to manage its display (the link label and an icon for instance). By extension, actions are also used for conditional rendering and sorting of page fragments (tabs, summary widgets,...).

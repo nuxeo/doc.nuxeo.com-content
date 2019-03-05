@@ -13,6 +13,7 @@ labels:
     - akervern
     - multiexcerpt
     - lts2017-ok
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
@@ -1090,9 +1091,9 @@ Wordpad is fine, Notepad++ and SciTE are good text editors, there are lots of [o
 
 Existing configuration parameters are listed in the index section below.
 
-## Admin Center / Setup Tab {{> anchor 'setup-admincenter'}}
+## Admin Center/Setup Tab {{> anchor 'setup-admincenter'}}
 
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 Administrators can also change the `nuxeo.conf` configuration parameters from the Admin center.
 

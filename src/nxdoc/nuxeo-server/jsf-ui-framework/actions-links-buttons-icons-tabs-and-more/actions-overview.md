@@ -11,6 +11,7 @@ labels:
     - actions-filters-component
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '950289'
@@ -112,7 +113,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 In this chapter, an action will stand for any kind of command that can be triggered via user interface interaction. In other words, it will describe a link and other information that may be used to manage its display (the link label, an icon, security information for instance).

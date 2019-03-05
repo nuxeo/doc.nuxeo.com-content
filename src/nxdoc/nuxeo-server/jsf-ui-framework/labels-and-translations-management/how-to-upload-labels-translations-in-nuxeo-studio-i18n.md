@@ -16,10 +16,11 @@ labels:
     - i18n
     - labels
     - translation
-    - sguitter
+    - mlumeau
     - howto
     - studio
     - lts2017-ok
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '19235763'
     ajs-parent-page-title: Labels and Translations Management
@@ -125,7 +126,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{#> callout type='info'}}
 This page is about label translation for Nuxeo JSF UI. For Web UI labels, please refer to the page [HOWTO: Manage Translations]({{page version='' space='nxdoc' page='web-ui-managing-translations'}}).

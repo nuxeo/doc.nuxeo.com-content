@@ -13,6 +13,7 @@ labels:
     - multiexcerpt-include
     - multiexcerpt
     - lts2017-ok
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -298,7 +299,7 @@ org.nuxeo.connect.update.PackageException: Package not found: unknown-package-na
 
 ### Installing a Package from the Admin Tab
 
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 The Admin tab includes a section called **Update Center** from which you can easily install hotfixes, updates, addons and your customizations. The Update Center features a **Packages from Nuxeo Marketplace** tab that shows the list of packages available from the Marketplace and allowing you to install these packages directly from your Nuxeo application.
 
@@ -434,7 +435,7 @@ Depending on the package you want to install, you may need to be logged in to th
 
 ### Installing a Package Offline from the Admin Tab
 
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 1.  As administrator (Administrator/Administrator by default), in the **Admin** tab, click on the **Update Center** left tab.
 2.  Click on the **Local packages** tab.
@@ -525,7 +526,7 @@ The instructions below provide the steps to follow to uninstall a package using 
 
 ### Uninstalling a Package from the Admin Tab
 
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 1.  In the **Admin** tab, go on the **Local packages** tab of the **Update Center**.
     The list of packages that you have downloaded and possibly installed is displayed.

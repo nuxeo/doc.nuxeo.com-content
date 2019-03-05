@@ -21,6 +21,7 @@ labels:
     - studio
     - layout-widgets-component
     - excerpt
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '19235623'
@@ -171,7 +172,7 @@ history:
         message: ''
         version: '1'
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 In this page we provide samples to have a selection widget with 3 levels by contributing a "template widget" in Studio. Each sample code below is the sample for one widget that has a different behavior (described before the code).

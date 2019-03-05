@@ -12,6 +12,7 @@ labels:
     - atchertchian
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '3868333'
     ajs-parent-page-title: Layout and Widget Definitions
@@ -72,7 +73,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 Both layouts and widgets have modes, that makes it possible to render the same layout in different use cases, even if some only support a simple "view" mode.

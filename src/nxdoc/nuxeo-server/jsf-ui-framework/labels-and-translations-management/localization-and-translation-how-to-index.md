@@ -12,6 +12,7 @@ labels:
     - index
     - excerpt
     - lts2017-ok
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '19235763'
     ajs-parent-page-title: Labels and Translations Management
@@ -82,7 +83,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 This section provides how-tos to customize the localization and translation behavior of the Nuxeo Platform.

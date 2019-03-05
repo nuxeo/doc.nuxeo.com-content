@@ -11,6 +11,7 @@ labels:
     - link-update
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '16089312'
@@ -382,7 +383,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 The theme is in charge of the global _layout_ or _structure_ of a page (composition of the header, footer, left menu, main area...), as well as its _branding_ or _styling_ using resources like styling or JavaScript files.

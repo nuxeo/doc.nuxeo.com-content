@@ -16,6 +16,7 @@ labels:
     - content-view
     - atchertchian
     - content-review-lts2017
+    - jsf-ui
 toc: true
 version_override:
     LTS 2015: 710/nxdoc/how-to-enable-dragn-drop-and-new-button-on-a-custom-content-view
@@ -64,7 +65,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 You should follow this how-to if you want to either:
 

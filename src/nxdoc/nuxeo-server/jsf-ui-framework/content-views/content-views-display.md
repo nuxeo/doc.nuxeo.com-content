@@ -11,6 +11,7 @@ labels:
     - content-views-component
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '3345941'
@@ -92,7 +93,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 This chapter presents how content views are displayed on a page.

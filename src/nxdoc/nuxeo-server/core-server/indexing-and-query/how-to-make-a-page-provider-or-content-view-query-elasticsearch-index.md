@@ -21,6 +21,7 @@ labels:
     - university
     - excerpt
     - lts2017-ok
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '4687860'
     ajs-parent-page-title: Indexing and Query
@@ -158,7 +159,7 @@ elasticsearch.override.pageproviders=default_search,document_content,section_con
 
 You can view the list of the Page Providers in the Admin Center/Elasticsearch/Page Provider tab, the `CoreQueryDocumentPageProvider` listed in blue can be overridden by Elasticsearch.
 
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 ## Configuring a New Content View (and underlying Page Provider) With Nuxeo Studio
 

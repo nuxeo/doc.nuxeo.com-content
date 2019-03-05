@@ -12,6 +12,7 @@ labels:
     - atchertchian
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '6029663'
     ajs-parent-page-title: Documents Display Configuration
@@ -82,7 +83,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 {{! excerpt}}
 Pages visible for a given document can be configured depending on the document type.
 {{! /excerpt}}

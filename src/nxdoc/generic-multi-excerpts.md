@@ -99,9 +99,12 @@ This addon is deprecated since Nuxeo Platform LTS 2019.
 {{/callout}}
 {{! /multiexcerpt}}
 
-{{! multiexcerpt name='DeprecatedJSF'}} {{#> callout type='note' }}
-This requires to have the JSF UI addon installed on your server. The JSF UI addon is deprecated since Nuxeo Platform LTS 2019.</br>Please refer to the [Web UI documentation]({{page version='' space='nxdoc' page='web-ui'}}).
-{{/callout}}{{! /multiexcerpt}}
+{{! multiexcerpt name='JSF-UI-required'}}
+{{#> callout type='note' heading='JSF UI Deprecation' }}
+This requires to have the JSF UI addon installed on your server that is deprecated since Nuxeo Platform LTS 2019.</br>
+Please refer to the [Web UI documentation]({{page version='' space='nxdoc' page='web-ui'}}).
+{{/callout}}
+{{! /multiexcerpt}}
 
 {{! multiexcerpt name='MP-installation-easy'}}
 This addon requires no specific installation steps. It can be installed like any other package with [nuxeoctl command line]({{page page='installing-a-new-package-on-your-instance'}}#installing-a-package-using-the-nuxeoctl-script) or [from the Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace).

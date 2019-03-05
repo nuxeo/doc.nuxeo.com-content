@@ -102,9 +102,7 @@ history:
 
 ---
 {{#> callout type='info' heading='Namespace: automation'}}
-
 Commands exposed by the Nuxeo Server through automation
-
 {{/callout}}
 
 ## Audit.Log

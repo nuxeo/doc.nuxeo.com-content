@@ -12,6 +12,7 @@ labels:
     - actions-filters-component
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '950289'
@@ -68,7 +69,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 A series of action types is available for the most basic uses cases.

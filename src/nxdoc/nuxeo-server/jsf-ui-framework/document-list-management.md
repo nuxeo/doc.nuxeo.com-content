@@ -12,6 +12,7 @@ labels:
     - atchertchian
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '16089312'
     ajs-parent-page-title: JSF UI Framework
@@ -42,7 +43,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 Management of a lost of documents is useful for clipboard and generally document selection features.

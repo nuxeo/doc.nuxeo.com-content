@@ -12,6 +12,7 @@ labels:
     - actions-filters-component
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '950289'
     ajs-parent-page-title: 'Actions (Links, Buttons, Icons, Tabs and More)'
@@ -72,7 +73,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 Since 5.8, it is easy to add your own action type to handle its configuration and display, rather than defining an action of type "template" and specifying the template each time it needs to be used.

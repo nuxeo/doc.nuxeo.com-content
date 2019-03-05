@@ -12,6 +12,7 @@ labels:
     - nxdoc-697
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '16089312'
     ajs-parent-page-title: JSF UI Framework
@@ -47,7 +48,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 The Framework supports resolution of translations using the standard Java Internationalisation mechanism.

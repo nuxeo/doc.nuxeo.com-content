@@ -12,6 +12,7 @@ labels:
     - limitations
     - excerpt
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '3868345'
     ajs-parent-page-title: Standard Widget Types
@@ -112,7 +113,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 {{! excerpt}}
 Some widgets have limitations in some specific conditions of use. We maintain a list of known problems here.
 {{! /excerpt}}

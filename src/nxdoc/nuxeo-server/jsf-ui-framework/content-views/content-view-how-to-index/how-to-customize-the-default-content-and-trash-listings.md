@@ -17,6 +17,7 @@ labels:
     - howto
     - studio
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '19235663'
     ajs-parent-page-title: Content View How-To Index
@@ -72,7 +73,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 The content displayed in the **Content** tab of a folder is the result of a query that says that we want to display all the documents that:
@@ -82,8 +83,6 @@ The content displayed in the **Content** tab of a folder is the result of a quer
 {{! /excerpt}}
 
 You can create new views that will display the results of a query you have customized. This is done using Content views. Then you can choose to use your content view in the **Content** or **Trash** tab of your document types.
-
-{{#> callout type='info' }} {{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}} {{/callout}}
 
 **To change the list of documents displayed in the Content and Trash tabs:**
 

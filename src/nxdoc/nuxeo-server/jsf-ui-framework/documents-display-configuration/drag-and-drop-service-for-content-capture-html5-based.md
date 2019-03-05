@@ -13,6 +13,7 @@ labels:
     - automation
     - file-upload-component
     - lts2017-ok
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '6029663'
@@ -180,13 +181,13 @@ history:
 
 ---
 
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 Drag and Drop from the Desktop to Nuxeo HTML UI has been available for a long time using a browser plugin.
 
 {{! excerpt}}
 You can use the native HTML5 Drag and Drop features on recent browsers (Firefox 3.6+, Google Chrome 9+, Safari 5+, IE11, Edge). This new Drag and Drop import model is pluggable so you can adapt the import behavior to your custom needs.
 {{! /excerpt}}
-
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
 
 ## How to Use it
 

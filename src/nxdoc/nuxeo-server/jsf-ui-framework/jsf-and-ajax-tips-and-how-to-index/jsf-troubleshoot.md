@@ -12,7 +12,7 @@ details:
         topics: JSF
 labels:
     - content-review-lts2016
-    - jsf
+    - jsf-ui
     - howto
     - seam-jsf-component
     - atchertchian
@@ -178,7 +178,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 Although they are not all specific to Nuxeo framework, here are some troubleshooting issues that can be encountered with JSF.
 

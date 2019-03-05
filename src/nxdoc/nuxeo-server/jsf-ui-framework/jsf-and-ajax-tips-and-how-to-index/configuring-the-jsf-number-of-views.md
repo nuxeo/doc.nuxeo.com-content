@@ -6,7 +6,7 @@ review:
     status: ok
 labels:
     - content-review-lts2016
-    - jsf
+    - jsf-ui
     - howto
     - seam-jsf-component
     - atchertchian
@@ -61,7 +61,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 The JSF/Seam stack used in the Nuxeo Platform uses server-side state saving: for each JSF component in the tree of graphical components, a state is saved server-side.
 
 Each JSF component tree state is associated to a unique identifier, and the number of states is configurable using the JSF parameters&nbsp;`com.sun.faces.numberOfViewsInSession` and `com.sun.faces.numberOfLogicalViews`.
