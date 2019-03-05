@@ -111,11 +111,11 @@ Once activated, selecting the tab will display the corresponding view.
 
 ## Drawer
 
-Allows you to create left menu items and main menu pages to customize your drawer menu.
+Allows you to create drawer items and drawer menus to customize your drawer menu.
 
-- **Left Menu Items**: From generic pages to new search forms or browse pages with determined root path. These will add a new left menu item.
+- **Drawer Items**: From generic pages to new search forms or browse pages with determined root path. These will add a new drawer item.
 
-- **Main Menu Pages**: You can integrate new custom pages if you need to display specific information, like access to your profile information, the configuration of cloud services or some kind of specific report. Items can be added to Administration or User Menu. Each contribution adds a menu entry to Administration or User menus and a corresponding element in the main view.
+- **Drawer Menus**: You can integrate new custom pages if you need to display specific information, like access to your profile information, the configuration of cloud services or some kind of specific report. Items can be added to Administration or User Menu. Each contribution adds a menu entry to the Administration or User menus and a corresponding element in the main view.
 
 ## Actions
 
