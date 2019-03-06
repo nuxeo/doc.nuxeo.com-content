@@ -6,6 +6,7 @@ review:
   status: ok
 labels:
   - 5-6
+  - jsf-ui
 toc: true
 confluence:
   ajs-parent-page-id: '9275231'
@@ -105,7 +106,7 @@ org.nuxeo.dev=true
 
 ```
 
-{{{multiexcerpt name='DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
+{{{multiexcerpt name='JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
 
 Activating this mode can also be done in the Admin Center, in the **Update Center** > **Nuxeo Studio** tab, or in the **System information** > **Setup** tab.
 

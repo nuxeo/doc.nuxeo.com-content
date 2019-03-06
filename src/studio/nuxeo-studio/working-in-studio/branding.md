@@ -17,6 +17,7 @@ labels:
     - lts2015-ok
     - howto
     - multiexcerpt
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '12911781'
     ajs-parent-page-title: Working in Studio
@@ -486,7 +487,7 @@ To customize the login page, you can also remove the news and footer boxes.
 
 ## Branding Options with JSF UI
 
-{{{multiexcerpt 'DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
 
 If you are working with JSF UI, some branding options differ.
 
