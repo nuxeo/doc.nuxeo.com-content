@@ -339,15 +339,6 @@ The tables below use the following notation:
     <td colspan="1">[User Documentation]({{page space='userdoc' page='document-types'}})</td>
 </tr>
 <tr>
-    <td colspan="1">Forum</td>
-    <td colspan="1">[Nuxeo Forum](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-forum)</td>
-    <td>N/A</td>
-    <td>&#10003;</td>
-    <td>N/A</td>
-    <td colspan="1">[User Documentation]({{page space='userdoc' page='forums'}})<br/>
-    {{multiexcerpt 'DeprecatedAddon_8.10' page='generic-multi-excerpts'}}</td>
-</tr>
-<tr>
     <td colspan="1">Google Drive documents</td>
     <td colspan="1">[Nuxeo Live Connect](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)</td>
     <td>&#10003;</td>

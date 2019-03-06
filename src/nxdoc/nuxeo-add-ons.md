@@ -1063,8 +1063,8 @@ Deprecated since LTS 2019 (10.10)
 </td>
 <td colspan="1">Public</td>
 <td colspan="1">
-[Developer documentation]({{page page='smart-search'}})<br/>
-[User documentation]({{page space='userdoc' page='smart-search'}})
+[Developer documentation]({{page version='810' page='smart-search'}})<br/>
+[User documentation]({{page version='810' space='userdoc' page='smart-search'}})
 </td>
 <td colspan="1">
 [Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-smart-search?version=1.9.3)<br/>
