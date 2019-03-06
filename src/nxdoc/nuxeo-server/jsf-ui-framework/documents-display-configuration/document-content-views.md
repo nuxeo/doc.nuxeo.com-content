@@ -68,7 +68,7 @@ history:
 Content Views can be linked to a document type by specifying the content view names in its definition.
 {{! /excerpt}}
 
-Some default document views present [content views]({{page page='content-views'}}) for listing this folderish document content, for instance, or to present the result of a search using some of the document properties as parameters (like in the [Smart Search]({{page page='smart-search'}}) addon).
+Some default document views present [content views]({{page page='content-views'}}) for listing this folderish document content, for instance, or to present the result of a search using some of the document properties as parameters.
 
 A `category` has been added to make the distinction between the different views, here is a sample configuration:
 
