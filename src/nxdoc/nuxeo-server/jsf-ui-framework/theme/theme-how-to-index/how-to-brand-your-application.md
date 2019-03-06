@@ -2,7 +2,7 @@
 title: How to Brand Your Application
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2015-12-01'
     status: ok
 redirect: studio/branding-configuration
 labels:

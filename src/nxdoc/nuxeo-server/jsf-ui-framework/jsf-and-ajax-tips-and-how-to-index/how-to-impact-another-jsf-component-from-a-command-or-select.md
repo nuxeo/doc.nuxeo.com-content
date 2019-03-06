@@ -2,7 +2,7 @@
 title: How to Impact Another JSF Component from a Command or Select
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2015-12-01'
     status: ok
 details:
     howto:

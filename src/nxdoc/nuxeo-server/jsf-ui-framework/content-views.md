@@ -2,7 +2,7 @@
 title: Content Views
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2017-01-03'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:

@@ -217,17 +217,17 @@ The PDF files preview is leveraged by [pdf.js by Mozilla](https://mozilla.github
 
 Several means to preview documents are available.
 
-*   For office and PDF documents: Click on the ![]({{file name='preview.png' space='userdoc' page='icons-index'}}) icon in the document view.
+- For office and PDF documents: Click on the ![]({{file name='preview.png' space='userdoc' page='icons-index'}}) icon in the document view.
     The preview opens in a popup window.
     ![]({{file name='DocumentPreviewer2.png' space='userdoc' page='preview'}} ?w=600,h=331,border=true)
 
-*   For all previewable documents, a **Preview** button (![]({{file name='preview.png' space='userdoc' page='icons-index'}}) icon) is available on the Document Actions section area (top right on the Web UI document view). On the JSF UI, you can find this on the **Summary** tab of a document, clicking on **More** > **Preview**.
+- For all previewable documents, a **Preview** button (![]({{file name='preview.png' space='userdoc' page='icons-index'}}) icon) is available on the Document Actions section area (top right on the Web UI document view). On the JSF UI, you can find this on the **Summary** tab of a document, clicking on **More** > **Preview**.
     The document preview is displayed in a popup window.
     ![]({{file name='preview_popup.png' space='userdoc' page='preview'}} ?w=600,border=true)
 
-{{{multiexcerpt 'DeprecatedJSF' page='generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-*   On the JSF UI, you can also preview a document along with its main metadata on the [Info-View pop-up]({{page space='nxdoc' page='how-to-customize-the-info-view-pop-up'}}), accessible from any thumbnail listing.
+- On the JSF UI, you can also preview a document along with its main metadata on the [Info-View pop-up]({{page space='nxdoc' page='how-to-customize-the-info-view-pop-up'}}), accessible from any thumbnail listing.
     ![]({{file name='info_view_preview.png' space='userdoc' page='preview'}} ?w=600,border=true)
 
 ### Supported Formats and Requirements

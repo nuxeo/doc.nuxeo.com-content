@@ -2,7 +2,7 @@
 title: How to Customize the HTML5 Drag and Drop Import with Metadata Form
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2016-12-19'
     status: ok
 details:
     howto:

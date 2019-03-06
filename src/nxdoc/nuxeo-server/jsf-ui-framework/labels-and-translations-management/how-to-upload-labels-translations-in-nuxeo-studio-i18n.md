@@ -2,7 +2,7 @@
 title: How to Upload Labels Translations in Nuxeo Studio (i18n)
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2017-12-14'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:

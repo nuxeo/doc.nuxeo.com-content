@@ -1,8 +1,8 @@
 ---
 title: How to Override a Template
 review:
-    comment: 'Tutorial followed by Ahmed: OK for LTS 2016'
-    date: '2019-02-13'
+    comment: ''
+    date: '2017-03-20'
     status: ok
 details:
     howto:
@@ -11,7 +11,7 @@ details:
         tool: Code
         topics: JSF UI
 labels:
-    - content-review-lts2016
+    - lts2016-ok
     - howto
     - template
     - seam-jsf-component

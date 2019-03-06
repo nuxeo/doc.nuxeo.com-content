@@ -2,7 +2,7 @@
 title: How to Customize the Default Content and Trash Listings
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2016-12-19'
     status: ok
 details:
     howto:
