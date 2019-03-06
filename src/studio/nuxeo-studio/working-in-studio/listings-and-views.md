@@ -4,6 +4,8 @@ review:
     comment: ''
     date: ''
     status: ok
+labels:
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '12911781'
     ajs-parent-page-title: Working in Studio
@@ -49,13 +51,8 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' }}
-{{! multiexcerpt name='jsf-ui-target-package-requirement'}}
-Select the Nuxeo JSF UI target package in your [Application Definition]({{page page='application-definition'}}) for this menu item to be available.
-{{! /multiexcerpt}}
-{{/callout}}
 
-{{{multiexcerpt 'DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
 
 -   [Content Views]({{page space='Studio' page='Content Views'}})
 -   [Form Layouts]({{page space='Studio' page='Form Layouts'}})

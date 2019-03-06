@@ -87,9 +87,7 @@ history:
     version: '1'
 ---
 
-The Nuxeo Marketplace is the channel provided by Nuxeo to distribute addons and patches to the Nuxeo Platform. [nuxeoctl]({{page space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}) provides an integrated way to browse this catalog of add-ons and install them. In JSF UI, the [Admin Center]({{page space='nxdoc' page='admin-tab-overview'}}) offers the same features from the Nuxeo Platform interface.
-
-{{{multiexcerpt 'DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
+The Nuxeo Marketplace is the channel provided by Nuxeo to distribute addons and patches to the Nuxeo Platform. [nuxeoctl]({{page space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}) provides an integrated way to browse this catalog of add-ons and install them.
 
 This catalog of packages is public, although some addons require a valid Nuxeo Online Services account to be able to install them.
 

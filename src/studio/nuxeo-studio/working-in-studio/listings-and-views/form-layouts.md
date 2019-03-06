@@ -196,6 +196,8 @@ history:
     version: '1'
 ---
 
+{{{multiexcerpt 'JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
+
 ## Concept
 
 The form layouts feature enables to design forms and data display screens that you can map to document properties. Read more about [layouts]({{page space='nxdoc' page='layouts-and-widgets-forms-listings-grids'}}). Forms configured on this feature can be referenced in various places:

@@ -50,6 +50,8 @@ history:
     version: '1'
 ---
 
+{{{multiexcerpt 'JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
+
 Once you've [defined the query and form]({{page page='content-view-query-and-form-tab'}}) of your content view, you can define how to display the list of documents that match the query.
 
 Search results, and so content listings, are presented in a table. You can configure the columns, i.e. the information on the documents that should be displayed in your content view. This is done in the **Results** tab of the content view.
@@ -57,7 +59,6 @@ Search results, and so content listings, are presented in a table. You can confi
 ## Pre-Requisites
 
 {{{multiexcerpt 'jsf-ui-target-package-requirement-in-content-view' page='content-view-query-and-form-tab'}}}
-{{{multiexcerpt 'DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
 
 ## General Configuration
 

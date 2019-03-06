@@ -174,14 +174,13 @@ history:
     version: '1'
 ---
 
+{{{multiexcerpt 'JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 This page explains the Query & Form tab in the content view definition.
-
 {{! /excerpt}}
 
 This tab lets you define:
-
 - [The usability of the content view in local configuration](#usability-in-local-configuration)
 - [the filtering UI proposed to the end user](#ui-filtering-definition)
 - Some advanced configuration about filtering
@@ -191,8 +190,6 @@ This tab lets you define:
 {{! multiexcerpt name='jsf-ui-target-package-requirement-in-content-view'}}
 Select the Nuxeo JSF UI target package in your [Application Definition]({{page page='application-definition'}}) for the Content View feature to be available.
 {{! /multiexcerpt}}
-
-{{{multiexcerpt 'DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
 
 ## Default Filtering Definition
 

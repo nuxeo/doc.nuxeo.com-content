@@ -7,6 +7,7 @@ review:
 labels:
   - search
   - content-view
+  - jsf-ui
 confluence:
   ajs-parent-page-id: '12911803'
   ajs-parent-page-title: Listings & Views
@@ -166,11 +167,7 @@ history:
     version: '1'
 ---
 
-{{#> callout type='info' }}
-Select the Nuxeo JSF UI target package in your [Application Definition]({{page page='application-definition'}}) for the Content View feature to be available.
-{{/callout}}
-
-{{{multiexcerpt 'DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
 
 Content view is the Nuxeo technology used to define a list of documents to display. The Nuxeo Platform uses this technology in these following cases:
 

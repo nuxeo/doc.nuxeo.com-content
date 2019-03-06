@@ -162,23 +162,21 @@ history:
     version: '1'
 ---
 
+{{#> callout type='warning' }}
+The JSF UI addon is deprecated since Nuxeo Platform LTS 2019. You can define Tabs with Studio Designer. For more information, please refer to the [UI documentation]({{page version='' space='studio' page='ui-designer'}}#tabs).
+{{/callout}}
+
 ## Concept
 
 When you create new document types, you often need to have specific tabs on these document types that display information relevant to your users. A **Tabs** menu item enables you to create customized tabs on which you can define the elements you want to be displayed: widgets, layouts, content views, actions bars. You can also define the conditions that should be met to display the tab (on which document types the tab will be available, for which users, etc).
 
 {{#> callout type='info' }}
-
 The **Tabs** feature is available from Nuxeo Platform 5.6.
-
 {{/callout}}
 
 ## Pre-Requisites
 
 {{{multiexcerpt 'jsf-ui-target-package-requirement' page='listings-and-views'}}}
-
-{{#> callout type='warning' }}
-The JSF UI addon is deprecated since Nuxeo Platform LTS 2019. You can define Tabs with Studio Designer. For more information, please refer to the [UI documentation]({{page version='' space='studio' page='ui-designer'}}#tabs).
-{{/callout}}
 
 ## Creating a New Tab
 

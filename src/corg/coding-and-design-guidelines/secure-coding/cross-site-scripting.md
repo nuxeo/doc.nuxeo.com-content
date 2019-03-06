@@ -99,7 +99,7 @@ In FreeMarker you can use the two built-in escapes:
 
 ### JSF UI&nbsp;
 
-{{{multiexcerpt 'DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
 
 Thanks to the JSF ViewState management, all active (POST) requests have to be associated with a correct (non guessable) ViewState id : this makes a built-in CSRF protection.
 
