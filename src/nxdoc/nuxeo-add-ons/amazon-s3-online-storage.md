@@ -466,12 +466,18 @@ nuxeo.s3storage.useDirectUpload=false
 nuxeo.s3storage.transient.bucket=YOUR_TRANSIENT_BUCKET
 nuxeo.s3storage.transient.roleArn=ROLE_THAT_CAN_WRITE_ON_IT
 
+# optional
+nuxeo.s3storage.transient.bucket_prefix=mysubfolder/
+nuxeo.s3storage.transient.crypt.serverside=true
+
 # usually taken from system environement
 nuxeo.s3storage.transient.awsid=
 nuxeo.s3storage.transient.awssecret=
 nuxeo.s3storage.transient.awstoken=
 nuxeo.s3storage.transient.region=
 ```
+
+The optional `bucket_prefix` allows you to use a "subfolder" of the bucket. The optional `crypt.serverside` allows you to use server-side encryption (SSE-S3).
 
 The `awsid`, `awssecret`, `awstoken` and `region` are deprecated and should instead be configured through `nuxeo.aws.accessKeyId`, `nuxeo.aws.secretKey`,`nuxeo.aws.sessionToken` and `nuxeo.aws.region` or through implicit IAM instance roles (see above).
 
