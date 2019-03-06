@@ -2,7 +2,7 @@
 title: How to Customize the Error Pages
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2016-12-06'
     status: ok
 details:
     howto:

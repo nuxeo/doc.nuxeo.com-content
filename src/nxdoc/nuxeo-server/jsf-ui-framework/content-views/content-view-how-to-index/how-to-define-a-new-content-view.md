@@ -2,7 +2,7 @@
 title: How to Define a New Content View
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2016-12-19'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:

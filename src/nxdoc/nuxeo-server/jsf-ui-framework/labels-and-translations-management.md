@@ -2,13 +2,13 @@
 title: Labels and Translations Management
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2015-12-01'
     status: ok
 labels:
     - content-review-lts2016
     - todo
     - translation
-    - sguitter
+    - mlumeau
     - nxdoc-697
     - excerpt
     - content-review-lts2017

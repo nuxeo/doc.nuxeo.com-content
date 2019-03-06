@@ -110,7 +110,7 @@ history:
 
 ---
 
-{{{multiexcerpt 'DeprecatedJSF' page='/nxdoc/generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='/nxdoc/generic-multi-excerpts'}}}
 
 {{! multiexcerpt name='nuxeo-diff-functional-overview'}}
 {{! excerpt}}

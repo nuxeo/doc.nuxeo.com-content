@@ -2,7 +2,7 @@
 title: How to Add a Button in the JSF UI
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2015-12-0'
     status: ok
 details:
     howto:

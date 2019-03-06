@@ -49,12 +49,10 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'DeprecatedJSF' page='/nxdoc/generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' page='/nxdoc/generic-multi-excerpts'}}}
 
 {{! excerpt}}
-
 The [Nuxeo Groups and Rights Audit addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-groups-rights-audit) generates an Excel matrix listing every exported documents with permissions for each user.
-
 {{! /excerpt}}
 
 Only administrators can do an audit of the permissions of a folder.

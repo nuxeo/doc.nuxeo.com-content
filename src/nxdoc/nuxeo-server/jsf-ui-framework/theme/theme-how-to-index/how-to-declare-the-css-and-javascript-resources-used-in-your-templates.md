@@ -2,7 +2,7 @@
 title: How to Declare the CSS and JavaScript Resources Used in Your Templates
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2018-01-15'
     status: ok
 details:
     howto:
