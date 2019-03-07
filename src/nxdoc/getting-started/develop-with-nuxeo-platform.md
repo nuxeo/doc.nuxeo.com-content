@@ -25,11 +25,6 @@ version_override:
 tree_item_index: 300
 history:
     -
-        author: Arnaud Kervern
-        date: '2019-03-05 17:21'
-        message: ''
-        version: '78'
-    -
         author: Thibaud Arguillere
         date: '2016-08-26 17:56'
         message: ''
@@ -428,13 +423,13 @@ Watch the related courses on Nuxeo University
 
 ## Prerequisites
 
-* A Contract document type created on this [page]({{page version='' space='nxdoc' page='web-ui-document-layouts'}})
-* An IDE that integrates with Maven.
+- A Contract document type created on this [page]({{page version='' space='nxdoc' page='web-ui-document-layouts'}})
+- An IDE that integrates with Maven.
     We provide instructions for [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars) or IntelliJ IDEA
-* Java 8 with JDK
-* Maven 3.3+ (see the Installing Maven section of page [Maven Usage]({{page version='' space='corg' page='maven-usage'}}))
-* The latest stable [NodeJS](https://nodejs.org) version should be installed on your machine
-* npm 2.12.0+
+- Java 8 with JDK
+- Maven 3.3+ (see the Installing Maven section of page [Maven Usage]({{page version='' space='corg' page='maven-usage'}}))
+- The latest stable [NodeJS](https://nodejs.org) version should be installed on your machine
+- npm 2.12.0+
 
 
 ## Step 1 - Install Nuxeo CLI
@@ -449,7 +444,6 @@ $ npm install -g nuxeo-cli
 
 We'll use it to generate a new Nuxeo project and a custom operation.
 
-
 ## Step 2 - Implement a Custom Operation
 
 We want to create an operation that indicates the date of renegotiation of a contract. This will be done by fetching the document's start date and adding three months to it.
@@ -457,7 +451,6 @@ We want to create an operation that indicates the date of renegotiation of a con
 A custom operation is a Java class in which you can put custom business logic. Custom operations usually serve one of two purposes: to support business logic that is too complex to express via an Automation Chain; or to provide functionality that does not exist within existing operations.
 
 Once created, the operation can be exposed in Nuxeo Studio and used just like any other operation via automation chains and automation scripts. See the [Automation]({{page page='automation'}}) section for more information about operations.
-
 
 #### Create Your Project
 
@@ -504,7 +497,7 @@ From a command line:
 
 #### Import the Project Into an IDE
 
-* Using IntelliJ IDEA
+- Using IntelliJ IDEA
 
     1. Select **File** / **Open...**.
 
@@ -512,7 +505,7 @@ From a command line:
 
     3. Choose **Open as Project**.
 
-* Using Eclipse
+- Using Eclipse
 
     1.  Generate Eclipse configuration files.
 
@@ -552,10 +545,10 @@ From a command line:
 
 3.  Update the dependencies:
 
-    * IntelliJ IDEA
+    - IntelliJ IDEA</br>
         In IntelliJ IDEA, click on **Import Changes** in the Maven's popup.
 
-    * Eclipse
+    - Eclipse</br>
         1. In a terminal:
 
         ```bash
@@ -650,7 +643,7 @@ From a command line:
   $ mvn -DskipTests package
   ```
 
-2. Link Your Local Project to Your Studio Project
+2. Link your local project to your Studio Project
 
   ```bash
   $ nuxeo studio link
@@ -661,23 +654,25 @@ From a command line:
   ? Do you want to update your Maven settings.xml file accordingly? Yes
   ```
 
-  **Warning**: At this point, you just added your Nuxeo Connect password in `~/.m2/settings.xml` in clear text. This is not recommended, please read the following `Security Best Practise` section.
+  {{#> callout type='warning' }}
+  At this point, you just added your Nuxeo Connect password in `~/.m2/settings.xml` in clear text. This is not recommended, please read the following [Security Best Practices](#security-best-practices) section.
+  {{/callout}}
 
-3. Export Your Contributions to Nuxeo Studio
+3. Export your contributions to Nuxeo Studio
 
   ```bash
   $ nuxeo studio export
     info Building and exporting your contributions to 'my-project' Studio project.
-    info Contributions sucessfully exported to 'my-project' Studio project.
+    info Contributions successfully exported to 'my-project' Studio project.
   ```
 
-4. In Nuxeo Studio go to **Settings** > **Automatic Registries** > **Automation Operations**, and you should see the JSON definition of your Operation.
+4. In Nuxeo Studio go to **Settings** > **Automatic Registries** > **Automation Operations**, and you should see the JSON definition of your operation.
 
-  The operation is now available in Automation Chain editor, under the Document category.
+The operation is available in the Automation Chain editor, under the **Document** category.
 
-##### Note: Security Best Practises
+##### Security Best Practices
 
-It is strongly recommended that you encrypt the secrets stored in `~/.m2/settings.xml`. Official [Maven Password Encryption](https://maven.apache.org/guides/mini/guide-encryption.html) documentation page.
+It is strongly recommended that you encrypt the secrets stored in `~/.m2/settings.xml`. Read the official [Maven Password Encryption](https://maven.apache.org/guides/mini/guide-encryption.html) documentation page, for more information.
 
 1. Create a master password:
 
@@ -691,7 +686,7 @@ It is strongly recommended that you encrypt the secrets stored in `~/.m2/setting
   {jSMOWnoPFgsHVpMvz5VrIt5kRbzGpI8u+9EF1iFQyJQ=}
   ```
 
-1. Store this password in `~/.m2/settings-security.xml` like this:
+1. Store this password in `~/.m2/settings-security.xml`:
 
   ```xml
   <settingsSecurity>
@@ -705,7 +700,7 @@ It is strongly recommended that you encrypt the secrets stored in `~/.m2/setting
   $ mvn --encrypt-password
   ```
 
-1. Find and Update Your Credentials in your `~/.m2/settings.xml` file as below:
+1. Find and update your credentials in your `~/.m2/settings.xml` file as below:
 
   ```xml
   <servers>
@@ -739,27 +734,25 @@ This configures your Maven client to use authentication when accessing the Studi
 
 Now create an Event Handler in order to call your operation when a contract is created.
 
-1.  In the Studio menu **Automation** > **Event Handlers**, click on **New**.
+1. In the Studio menu **Automation** > **Event Handlers**, click on **New**.
 
-2.  Call the event handler `SetReminderDate`.
+2. Call the event handler `SetReminderDate`.
 
-3.  Fill in the creation wizard:
+3. Fill in the creation wizard:
+    - **Events**: Select **About to create**.
+    - **Current document has one of the types**: Select your document type **Contract**.
+    - **Event Handler Execution**: Choose your automation chain `ContractUpdater`.
 
-    *   **Events**: Select **About to create**.
-    *   **Current document has one of the types**: Select your document type **Contract**.
-    *   **Event Handler Execution**: Choose your automation chain `ContractUpdater`.
+4. Click on **Save**.
+    Now you can try it on your server either by running the unit tests or by testing manually.
 
-4.  Click on **Save**.
-
-Now you can try it on your server either by running the unit tests or by testing manually.
-
-5. Import Your Automation Chain in Your Java Project
+5. Import your automation chain in your Java project
 
   We assume you already called `nuxeo studio link` from the previous chapter.
 
   ```bash
   $ nuxeo studio import
-    info You are going to create a new Constant Class with Studio s related models.
+    info You are going to create a new Constant Class with Studio\'s related models.
   ? Constant package: nuxeo.studio.test
   ? Constant class name: StudioConstant
     create contract-mgt-project-core/src/main/java/nuxeo/studio/test/StudioConstant.java
@@ -849,18 +842,16 @@ Using unit tests is the **recommended way** to ensure a feature is working as ex
 
 ### Testing Manually
 
-1.  Start your Nuxeo server. Update your Studio package from the Update Center.
+1. Start your Nuxeo server. Update your Studio package from the Update Center.
 
-2.  Create a new Contract with the following information:
-    *   Title: Maintenance Contract
-    *   Contract Owner: Nuxeo
-    *   Starting Date: Choose today's date. You should end up with something like this:
+2. Create a new Contract with the following information:
+    - Title: Maintenance Contract
+    - Contract Owner: Nuxeo
+    - Starting Date: Choose today's date. You should end up with something like this:
     ![]({{file name='result.png'}} ?w=600,border=true)
 
 {{#> callout type='info' }}
-
 That's it! You are ready to develop on the Nuxeo Platform.
-
 {{/callout}}
 
 ## What to do Next
