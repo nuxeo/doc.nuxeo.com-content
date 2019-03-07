@@ -162,24 +162,24 @@ If you used explicit configuration, the file `nuxeo.conf` now contains S3 secret
 
 The region code can be found in the [S3 Region Documentation](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region). The default is `us-east-1`. At the time this documentation was written, the list is:
 
-* us-east-1: US East (N. Virginia) (default)
-* us-east-2: US East (Ohio)
-* us-west-1: US West (N. California)
-* us-west-2: US West (Oregon)
-* eu-west-1: EU (Ireland)
-* eu-west-2: EU (London)
-* eu-west-3: EU (Paris)
-* eu-central-1: EU (Frankfurt)
-* ap-south-1: Asia Pacific (Mumbai)
-* ap-southeast-1: Asia Pacific (Singapore)
-* ap-southeast-2: Asia Pacific (Sydney)
-* ap-northeast-1: Asia Pacific (Tokyo)
-* ap-northeast-2: Asia Pacific (Seoul)
-* ap-northeast-3: Asia Pacific (Osaka-Local)
-* sa-east-1: South America (São Paulo)
-* ca-central-1: Canada (Central)
-* cn-north-1: China (Beijing)
-* cn-northwest-1: China (Ningxia)
+- us-east-1: US East (N. Virginia) (default)
+- us-east-2: US East (Ohio)
+- us-west-1: US West (N. California)
+- us-west-2: US West (Oregon)
+- eu-west-1: EU (Ireland)
+- eu-west-2: EU (London)
+- eu-west-3: EU (Paris)
+- eu-central-1: EU (Frankfurt)
+- ap-south-1: Asia Pacific (Mumbai)
+- ap-southeast-1: Asia Pacific (Singapore)
+- ap-southeast-2: Asia Pacific (Sydney)
+- ap-northeast-1: Asia Pacific (Tokyo)
+- ap-northeast-2: Asia Pacific (Seoul)
+- ap-northeast-3: Asia Pacific (Osaka-Local)
+- sa-east-1: South America (São Paulo)
+- ca-central-1: Canada (Central)
+- cn-north-1: China (Beijing)
+- cn-northwest-1: China (Ningxia)
 
 ### Specifying Your Amazon S3 Parameters
 
@@ -192,9 +192,7 @@ nuxeo.s3storage.bucket_prefix=yourfolder/
 ```
 
 {{#> callout type='info' }}
-
 The bucket name is unique across all of Amazon, you should find something original and specific.
-
 {{/callout}}
 
 The optional bucket prefix is used to localize your binaries within a specific S3 folder (the `bucket_prefix` syntax is available since Nuxeo 7.10-HF03).
@@ -226,10 +224,10 @@ With S3 you have the option of storing your data encrypted using [S3 Client-Side
 
 The S3 Binary Manager can use a keystore containing a keypair, but there are a few caveats to be aware of:
 
-*   The Sun/Oracle JDK doesn't always allow the AES256 cipher which the AWS SDK uses internally. Depending on the US export restrictions for your country, you may be able to modify your JDK to use AES256 by installing the "Java Cryptography Extension Unlimited Strength Jurisdiction Policy Files". See the following link to download the files and installation instructions:
+- The Sun/Oracle JDK doesn't always allow the AES256 cipher which the AWS SDK uses internally. Depending on the US export restrictions for your country, you may be able to modify your JDK to use AES256 by installing the "Java Cryptography Extension Unlimited Strength Jurisdiction Policy Files". See the following link to download the files and installation instructions:
     [http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
 
-*   Don't forget to specify the key algorithm if you create your keypair with the `keytool` command, as this won't work with the default (DSA). The S3 Binary Manager has been tested with a keystore generated with this command:
+- Don't forget to specify the key algorithm if you create your keypair with the `keytool` command, as this won't work with the default (DSA). The S3 Binary Manager has been tested with a keystore generated with this command:
 
     ```
     keytool -genkeypair -keystore </path/to/keystore/file> -alias <key alias> -storepass <keystore password> -keypass <key password> -dname <key distinguished name> -keyalg RSA
@@ -238,9 +236,7 @@ The S3 Binary Manager can use a keystore containing a keypair, but there are a f
     If you get&nbsp;`keytool error: java.io.IOException: Incorrect AVA format`, then ensure that the distinguished name parameter has a form such as:&nbsp;`-dname "CN=AWS S3 Key, O=example, DC=com".`
 
 {{#> callout type='warning' }}
-
 Don't forget to **make backups of the `/path/to/keystore/file` file** along with the **store password, key alias and key password**. If you lose them (for instance if the EC2 machine hosting the Nuxeo instance with the original keystore is lost) you will lose the ability to recover any encrypted blob from the S3 bucket.
-
 {{/callout}}
 
 With all that above in mind, here are the crypto options that you can add to `nuxeo.conf` (they are all&nbsp;mandatory once you specify a keystore):
@@ -262,9 +258,7 @@ nuxeo.s3storage.crypt.serverside=true
 ```
 
 {{#> callout type='info' }}
-
 Client-Side Encryption is safer than Server-Side Encryption. With Client-Side Encryption an attacker needs both access to the _AWS credentials and the key_ to be able to access the unencrypted data while Server-Side Encryption will only require the potential attacker to provide the _AWS credentials_.
-
 {{/callout}}
 
 If you want to use [Server-Side Encryption with AWS KMS–Managed Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html), specify your key with:
@@ -466,12 +460,18 @@ nuxeo.s3storage.useDirectUpload=false
 nuxeo.s3storage.transient.bucket=YOUR_TRANSIENT_BUCKET
 nuxeo.s3storage.transient.roleArn=ROLE_THAT_CAN_WRITE_ON_IT
 
+# optional
+nuxeo.s3storage.transient.bucket_prefix=mysubfolder/
+nuxeo.s3storage.transient.crypt.serverside=true
+
 # usually taken from system environement
 nuxeo.s3storage.transient.awsid=
 nuxeo.s3storage.transient.awssecret=
 nuxeo.s3storage.transient.awstoken=
 nuxeo.s3storage.transient.region=
 ```
+
+The optional `bucket_prefix` allows you to use a "subfolder" of the bucket. The optional `crypt.serverside` allows you to use server-side encryption (SSE-S3).
 
 The `awsid`, `awssecret`, `awstoken` and `region` are deprecated and should instead be configured through `nuxeo.aws.accessKeyId`, `nuxeo.aws.secretKey`,`nuxeo.aws.sessionToken` and `nuxeo.aws.region` or through implicit IAM instance roles (see above).
 
