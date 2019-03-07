@@ -88,3 +88,47 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
+
+## Hotfix 02
+
+### Multiple AWS Configuration
+
+AWS configuration can now specify an id with:
+```
+  <extension target="org.nuxeo.runtime.aws.AWSConfigurationService" point="configuration">
+    <configuration id="myconfig">
+      <accessKeyId>MY_ACCESS_KEY_ID</accessKeyId>
+      <secretKey>MY_SECRET_KEY</secretKey>
+      <region>MY_REGION</region>
+    </configuration>
+  </extension> 
+```
+If the id is not specified, default is used.
+
+To get to this configuration, one can then use:
+```
+new NuxeoAWSCredentialsProvider(id)
+new NuxeoAWSRegionProvider(id).getRegion()
+```
+Note that if the configuration is not found, the providers will still fall back on the default AWS SDK behavior to look in the OS environment, Java system properties, AWS profile or EC2 container credentials (which don't take into account any configuration id).
+
+
+### S3 Server-side Encryption
+
+S3 copy (used during direct upload in particular) now correctly takes into account the server-side encryption configuration for the destination bucket.
+
+For direct upload, this requires setting the property:
+```
+nuxeo.s3storage.transient.crypt.serverside=true
+```
+
+### S3 Multipart Part Size
+
+There is a new configuration property `nuxeo.s3.multipart.copy.part.size` to change the S3 multipart copy part size. The default is `5242880` (5MB). </br>
+
+It can be changed with:
+```
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="nuxeo.s3.multipart.copy.part.size">5242880</property>
+  </extension>
+```
