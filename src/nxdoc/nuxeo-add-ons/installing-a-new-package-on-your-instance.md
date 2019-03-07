@@ -374,7 +374,7 @@ It is possible to install packages available on the Nuxeo Marketplace even if yo
     ```
     ./nuxeoctl stop
     ```
-2.  Update your nuxeo.conf file
+2.  Go to `$NUXEO_HOME/bin` and update your `nuxeo.conf` file.
 
     ```
     org.nuxeo.connect.server.reachable=false
