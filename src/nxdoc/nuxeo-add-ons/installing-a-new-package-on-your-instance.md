@@ -374,8 +374,12 @@ It is possible to install packages available on the Nuxeo Marketplace even if yo
     ```
     ./nuxeoctl stop
     ```
+2.  Update your nuxeo.conf file
 
-2.  Install the package by providing the path to the downloaded .zip file.
+    ```
+    org.nuxeo.connect.server.reachable=false
+    ```
+3.  Install the package by providing the path to the downloaded .zip file.
 
     ```
     ./nuxeoctl mp-install /Users/NUXEO/Downloads/nuxeo-drive-1.6.6.zip
@@ -403,7 +407,7 @@ It is possible to install packages available on the Nuxeo Marketplace even if yo
 
     If some dependencies are not already locally available, repeat this step for each required package.
 
-3.  Confirm installation.
+4.  Confirm installation.
 
     ```
     Do you want to continue (yes/no)? [yes] yes
@@ -415,7 +419,7 @@ It is possible to install packages available on the Nuxeo Marketplace even if yo
     Installing nuxeo-drive-1.6.6
     ```
 
-4.  Start the server.
+5.  Start the server.
 
     ```
     ./nuxeoctl start
