@@ -920,12 +920,12 @@ Public
 <td colspan="1">Nuxeo Zapier Integration (Coming Soon!)<br/>
 `nuxeo-zapier`
 </td>
-<td colspan="1">Public</td>
+<td colspan="1">Registered Access</td>
 <td colspan="1">
-[Documentation]({{page page='Nuxeo Zapier Integration'}})
+[Documentation]({{page page='nuxeo-zapier'}})
 </td>
 <td colspan="1">
-[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-zapier?version=1.0.0)
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-zapier)
 </td>
 </tr>
 </tbody>
