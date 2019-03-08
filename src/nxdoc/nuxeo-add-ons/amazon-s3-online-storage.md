@@ -403,6 +403,8 @@ Another possibility is for the client to ask the Nuxeo server temporary S3 crede
 
 To unblock this capability you will need a dedicated S3 bucket and a IAM Role that can write in it and which can be assumed with the Nuxeo server AWS configuration.
 
+The role must possess at least the right `s3:PutObject` on the transient bucket.
+
 Please note that the S3 transient bucket has to be configured to allow CORS on PUT and POST methods, this can be done in the permissions tab from the AWS bucket configuration page.
 
 The following CORS configuration allows Web UI to send files to S3, please feel free to adapt it if needed.
