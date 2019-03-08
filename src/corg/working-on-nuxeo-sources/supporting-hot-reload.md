@@ -89,28 +89,31 @@ Hot reload has been partially supported over Nuxeo versions. The following instr
 
 {{/callout}}
 
-Hot reload involves a lot of layers, each one handling different kinds of caches.
+Hot reload involves a lot of layers, each one handling different kinds of caches. Server tries to keep contextual information which are not persisted and reload every services to take into account changes in Java code.
 
-Sometimes hot reload needs to be very smooth, when installing Studio packages from the Admin Center for instance. In these cases, the whole application does not need to be reloaded, and the current user view needs to keep its context (authentication, current page, current document, etc...)
+<!--Sometimes hot reload needs to be very smooth, when installing Studio packages from the Admin Center for instance. In these cases, the whole application does not need to be reloaded, and the current user view needs to keep its context (authentication, current page, current document, etc…)
 
-In other cases the application needs to be reloaded completely to take into account changes in Java code, and the current context cannot always be restored to its previous state.
+In other cases the application needs to be reloaded completely to take into account changes in Java code, and the current context cannot always be restored to its previous state.-->
 
-## Setting up the Dev Mode
+### Setting up the Dev Mode
 
 Hot reload is currently mainly interesting to ease up development. Enabling it means re-building part of the application, resetting caches that are needed for the application to work efficiently, etc. For this reason, using hot reload may not be suitable for production.
 
-Hot reload support is controlled by the Nuxeo development mode. This mode can be activated by setting a runtime property in _nuxeo.conf_ file:
+Hot reload support is controlled by the Nuxeo development mode. This mode can be activated by setting a runtime property in _nuxeo.conf_ file (you'll need to restart your Nuxeo server):
 
 ```
 org.nuxeo.dev=true
 
 ```
 
+<!--
 {{{multiexcerpt name='JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
 
 Activating this mode can also be done in the Admin Center, in the **Update Center** > **Nuxeo Studio** tab, or in the **System information** > **Setup** tab.
 
 The development mode is checked by code whenever performing actions that would involve hot reload (when trying to install packages from the Update Center, or bypassing some caches during rendering, for instance). But some parts of the application may need the server to be started with the dev mode enabled (or disabled) for this property to be taken into account properly, so it is recommended to restart the server at least once after changing this property value.
+
+-->
 
 {{#> callout type='warning' }}
 
@@ -129,63 +132,25 @@ When contributing a JAR to the Nuxeo application, what's a stake?
 
 #### Hot Reloading Nuxeo Runtime Components
 
-If your bundle is already installed (you do a reload) you should first uninstall it.
+For this you need the `java.io.File` of your bundle, and you can call:
 
-1.  For this you need the `java.io.File` of your bundle, and you can call:
+```java
+Framework.getLocalService(ReloadService.class).reloadBundles(new ReloadContext().deploy(file));
+```
 
-    ```
-    Framework.getLocalService(ReloadService.class).undeployBundle(file, true);
+Undeploy and deploy to the runtime framework were already possible as of Nuxeo 5.4.1: you can take example on what the ReloadService is doing to make it work in your version.
 
-    ```
+For more information, check out the [ReloadService API](https://github.com/nuxeo/nuxeo-runtime/blob/master/nuxeo-runtime-reload/src/main/java/org/nuxeo/runtime/reload/ReloadService.java). Note that [Scripting Commands]({{page space='nxdoc' page='scripting-commands'}}) used by Market Place packages already call ReloadService methods.
 
-2.  Then to install your bundle again you can do this:
-
-    ```
-    Framework.getLocalService(ReloadService.class).deployBundle(file, true);
-
-    ```
-
-    The second parameter makes sure that hot reloaded bundles are taken into account by a specific class loader, only used in hot reload cases.
-
-    Undeploy and deploy to the runtime framework were already possible as of Nuxeo 5.4.1: you can take example on what the ReloadService is doing to make it work in your version.
-
-3.  After uninstalling, installing or reloading a bundle you may want to flush all main Nuxeo caches. This can be done like this:
-
-    ```
-    ReloadService service = Framework.getLocalService(ReloadService.class);
-    service.flush();
-    service.reload();
-
-    ```
-
-There is a variety of flush and reload methods available on the ReloadService, flush-like methods are mainly used to clean up caches, while reload-like methods do not rely on lazy-loading of resources when cache is reset: they tend to rebuild the cache themselves.
-
-Calling the main flush/reload methods is important if you have parts of the application relying on receiving runtime events "reload" and "flush". Flushing the repository cache is important if you make modifications on document types and the JAAS flush is flushing user cache (if you modify logins etc...). For more information, check out the [ReloadService API](https://github.com/nuxeo/nuxeo-runtime/blob/master/nuxeo-runtime-reload/src/main/java/org/nuxeo/runtime/reload/ReloadService.java). Note that [Scripting Commands]({{page space='nxdoc' page='scripting-commands'}}) used by Market Place packages already call ReloadService methods.
-
-Note that reloading a bundle is working correctly only if the extension point registries it holds are correctly handling the contributions merging and removal. This can be easily set up by extending the [ContributionFragmentRegistry abstract class](https://github.com/nuxeo/nuxeo-runtime/blob/master/nuxeo-runtime/src/main/java/org/nuxeo/runtime/model/ContributionFragmentRegistry.java). Check out the [SimpleContributionRegistry abstract class](https://github.com/nuxeo/nuxeo-runtime/blob/master/nuxeo-runtime/src/main/java/org/nuxeo/runtime/model/SimpleContributionRegistry.java) for most common use cases (a single registry using a map, not needing any merge management).
-
-There are some registries that will not work correctly. In that case please report a bug. Anyway document types, actions and other important contributions are working.
-
-#### Resetting Low Level Caches
-
-Low level caches are shared by all users of the application. Resetting of their cache can be done by listening to the runtime "flush" event.
-
-Checkout the following contribution, allowing to reset the directories cache (it's relying on the ReloadService#flush method to be called):
-
-- [runtime event listener contribution](https://github.com/nuxeo/nuxeo-services/blob/master/nuxeo-platform-directory/nuxeo-platform-directory-core/src/main/resources/OSGI-INF/DirectoryService.xml) (near the end of the file)
-- [java class performing reset of cache](https://github.com/nuxeo/nuxeo-services/blob/master/nuxeo-platform-directory/nuxeo-platform-directory-core/src/main/java/org/nuxeo/ecm/directory/DirectoryCacheFlusher.java)
+Note that reloading a bundle is working correctly only if the extension point registries it holds are correctly handling the contributions merging and removal. This can be easily set up by extending the [Descriptor interface](https://github.com/nuxeo/nuxeo-runtime/blob/master/nuxeo-runtime/src/main/java/org/nuxeo/runtime/model/ContributionFragmentRegistry.java) and implementing the `merge` method.
 
 #### Hot Reloading the WAR
 
-The war can be rebuilt, taking care of changes to JARs/bundles deployed in the application:
+The war is rebuilt after each reload, taking care of changes to JARs/bundles deployed in the application:
 
-```
-ReloadService service = Framework.getLocalService(ReloadService.class);
-service.runDeploymentPreprocessor();
+When the WAR is up-to-date, it's a matter of forcing the application to detect changes.
 
-```
-
-When the WAR is up-to-date, it's a matter of forcing the application to detect changes. As a reminder, all this is only activated when the Nuxeo development mode is on.
+<!-- Maybe change to something about webui reload
 
 ##### XHTML Files
 
@@ -202,6 +167,10 @@ Do not forget to disable this option for production, as detecting changes on XHT
 ##### Message Bundles
 
 Message files can be hot reloaded from the `nuxeo.war/WEB-INF` directory. The resources cache needs to be reset first. This is done by listening to the runtime "flush" event (see above) and can also be triggered by the user action "Dev mode: force flush" action available in the user menu on top of all pages.
+
+ -->
+
+<!--
 
 ##### JSF Navigation Cases
 
@@ -269,11 +238,9 @@ Note that currently, automatic detection does not only send the "flush" seam eve
 
 Check out Seam components named [seamReloadContext](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-webapp-base/src/main/java/org/nuxeo/ecm/webapp/seam/NuxeoSeamHotReloadContextKeeper.java) and [seamReload](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-webapp-base/src/main/java/org/nuxeo/ecm/webapp/seam/NuxeoSeamHotReloader.java) for more information.
 
-## Hot Reloading WebEngine Modules
+-->
 
-On Nuxeo Platform 5.8, WebEngine class hot reloading is not supported. However, you can force cache flush and reset the WebEngine modules from the URL `http://yournuxeosite:8080/nuxeo/site/admin/engine/reload.` However it doesn't flush the already loaded classes.
-
-Using [Nuxeo IDE]({{page version='' space='idedoc' page='nuxeo-ide'}}) enables you to benefit from hot reload for both WebEngine resources and classes.
+<!--
 
 ## Hot reloading Seam Components
 
@@ -324,41 +291,4 @@ To trigger the hot reload, you can either:
 - Use the SeamReload action link that is available in the default nuxeo-dm packaging,
 - Or call the URL : [`http://127.0.0.1:8080/nuxeo/restAPI/seamReload`](http://127.0.0.1:8080/nuxeo/restAPI/seamReload)
 
-### How Do I Automatically Hot Reload with ant?
-
-1.  You add this code to your ant script :
-
-    ```xml
-    <target name="seam" depends="clean-seam-hotdeploy-dir">
-     <antcall target="maven">
-       <param name="mvn.lifecycle" value="clean"/>
-     </antcall>
-     <antcall target="maven">
-       <param name="mvn.lifecycle" value="compile"/>
-     </antcall>
-     <echo message="Deploy Seam components in ${seam.hotdeploy.dir}"/>
-     <copy todir="${seam.hotdeploy.dir}" flatten="false">
-       <fileset dir="./target/classes">
-         <include name="**/*.class"/>
-       </fileset>
-     </copy>
-     <get dest="./seam_hotdeploy_result.html"
-       src="http://127.0.0.1:8080/nuxeo/restAPI/seamReload"
-       username="Administrator" password="Administrator"/>
-    </target>
-
-    <target name="clean-seam-hotdeploy-dir">
-     <delete>
-       <fileset dir="${seam.hotdeploy.dir}">
-         <include name="*"/>
-       </fileset>
-     </delete>
-    </target>
-
-    ```
-
-2.  and launch:
-
-    ```
-    ant seam
-    ```
+-->
