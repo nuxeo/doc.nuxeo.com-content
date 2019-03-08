@@ -270,7 +270,8 @@ Use the same recipe as above, but specify the wanted branch (5.4.1, 5.4.2, 5.5.0
 {{#> panel type='code' heading='Get Nuxeo 5.5 release source code'}}
 
 ```
-python clone.py release-5.5
+git checkout release-5.5
+python clone.py
 
 ```
 
