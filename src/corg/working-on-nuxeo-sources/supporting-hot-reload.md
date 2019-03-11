@@ -84,44 +84,40 @@ history:
 ---
 
 {{#> callout type='info' }}
-
 Hot reload has been partially supported over Nuxeo versions. The following instructions apply since Nuxeo 5.6 version (some of them were available in earlier version).
-
 {{/callout}}
 
 Hot reload involves a lot of layers, each one handling different kinds of caches. Server tries to keep contextual information which are not persisted and reload every services to take into account changes in Java code.
 
-<!--Sometimes hot reload needs to be very smooth, when installing Studio packages from the Admin Center for instance. In these cases, the whole application does not need to be reloaded, and the current user view needs to keep its context (authentication, current page, current document, etc…)
+<!--JSF Instructions
+Sometimes hot reload needs to be very smooth, when installing Studio packages from the Admin Center for instance. In these cases, the whole application does not need to be reloaded, and the current user view needs to keep its context (authentication, current page, current document, etc.)
 
-In other cases the application needs to be reloaded completely to take into account changes in Java code, and the current context cannot always be restored to its previous state.-->
+In other cases the application needs to be reloaded completely to take into account changes in Java code, and the current context cannot always be restored to its previous state.
+-->
 
-### Setting up the Dev Mode
+## Setting up the Dev Mode
 
 Hot reload is currently mainly interesting to ease up development. Enabling it means re-building part of the application, resetting caches that are needed for the application to work efficiently, etc. For this reason, using hot reload may not be suitable for production.
 
-Hot reload support is controlled by the Nuxeo development mode. This mode can be activated by setting a runtime property in _nuxeo.conf_ file (you'll need to restart your Nuxeo server):
+Hot reload support is controlled by the Nuxeo development mode. This mode can be activated by setting a runtime property in `nuxeo.conf` file (you'll need to restart your Nuxeo server):
 
 ```
-org.nuxeo.dev=true
-
+  org.nuxeo.dev=true
 ```
 
-<!--
+<!--JSF Instructions
 {{{multiexcerpt name='JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
 
 Activating this mode can also be done in the Admin Center, in the **Update Center** > **Nuxeo Studio** tab, or in the **System information** > **Setup** tab.
 
 The development mode is checked by code whenever performing actions that would involve hot reload (when trying to install packages from the Update Center, or bypassing some caches during rendering, for instance). But some parts of the application may need the server to be started with the dev mode enabled (or disabled) for this property to be taken into account properly, so it is recommended to restart the server at least once after changing this property value.
-
 -->
 
 {{#> callout type='warning' }}
-
 The development mode should not be activated on a server in production.
-
 {{/callout}}
 
-### Understanding Layers Involved in Hot Reload
+## Understanding Layers Involved in Hot Reload
 
 When contributing a JAR to the Nuxeo application, what's a stake?
 
@@ -130,27 +126,27 @@ When contributing a JAR to the Nuxeo application, what's a stake?
 - Its contributions to other resources (XHTML files, message bundles, etc...) should be detected.
 - Some caches should be reset.
 
-#### Hot Reloading Nuxeo Runtime Components
+### Hot Reloading Nuxeo Runtime Components
 
 For this you need the `java.io.File` of your bundle, and you can call:
 
 ```java
-Framework.getLocalService(ReloadService.class).reloadBundles(new ReloadContext().deploy(file));
+  Framework.getLocalService(ReloadService.class).reloadBundles(new ReloadContext().deploy(file));
 ```
 
-Undeploy and deploy to the runtime framework were already possible as of Nuxeo 5.4.1: you can take example on what the ReloadService is doing to make it work in your version.
+Undeploy and deploy to the runtime framework were already possible as of Nuxeo 5.4.1: you can take example on what the `ReloadService` is doing to make it work in your version.
 
-For more information, check out the [ReloadService API](https://github.com/nuxeo/nuxeo-runtime/blob/master/nuxeo-runtime-reload/src/main/java/org/nuxeo/runtime/reload/ReloadService.java). Note that [Scripting Commands]({{page space='nxdoc' page='scripting-commands'}}) used by Market Place packages already call ReloadService methods.
+For more information, check out the [ReloadService API](https://github.com/nuxeo/nuxeo-runtime/blob/master/nuxeo-runtime-reload/src/main/java/org/nuxeo/runtime/reload/ReloadService.java). Note that [Scripting Commands]({{page space='nxdoc' page='scripting-commands'}}) used by Marketplace packages already call `ReloadService` methods.
 
 Note that reloading a bundle is working correctly only if the extension point registries it holds are correctly handling the contributions merging and removal. This can be easily set up by extending the [Descriptor interface](https://github.com/nuxeo/nuxeo-runtime/blob/master/nuxeo-runtime/src/main/java/org/nuxeo/runtime/model/ContributionFragmentRegistry.java) and implementing the `merge` method.
 
-#### Hot Reloading the WAR
+### Hot Reloading the WAR
 
-The war is rebuilt after each reload, taking care of changes to JARs/bundles deployed in the application:
+The WAR is rebuilt after each reload, taking care of changes to `JARs/bundles` deployed in the application:
 
 When the WAR is up-to-date, it's a matter of forcing the application to detect changes.
 
-<!-- Maybe change to something about webui reload
+<!--JSF Instructions
 
 ##### XHTML Files
 
@@ -170,7 +166,7 @@ Message files can be hot reloaded from the `nuxeo.war/WEB-INF` directory. The re
 
  -->
 
-<!--
+<!--JSF Instructions
 
 ##### JSF Navigation Cases
 
@@ -240,7 +236,7 @@ Check out Seam components named [seamReloadContext](https://github.com/nuxeo/nux
 
 -->
 
-<!--
+<!--JSF Instructions
 
 ## Hot reloading Seam Components
 
@@ -289,6 +285,6 @@ You have to copy your updated classes into `nuxeo.ear/nuxeo.war/WEB-INF/dev`.
 To trigger the hot reload, you can either:
 
 - Use the SeamReload action link that is available in the default nuxeo-dm packaging,
-- Or call the URL : [`http://127.0.0.1:8080/nuxeo/restAPI/seamReload`](http://127.0.0.1:8080/nuxeo/restAPI/seamReload)
+- Or call the URL: [`http://127.0.0.1:8080/nuxeo/restAPI/seamReload`](http://127.0.0.1:8080/nuxeo/restAPI/seamReload)
 
 -->
