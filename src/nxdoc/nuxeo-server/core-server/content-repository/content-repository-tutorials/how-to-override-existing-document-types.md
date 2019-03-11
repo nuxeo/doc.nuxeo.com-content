@@ -116,287 +116,164 @@ Be careful to select the **Override** deployment mode from the **Advanced Config
 
 Below are the document types provided by the default Nuxeo Platform, the Document Management and Digital Asset Management modules. Don't hesitate to give feedback if you encounter troubles.
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-
-Document type label
-
-</th><th colspan="1">
-
-Document type ID
-
-</th><th colspan="1">
-
-Inherits from
-
-</th><th colspan="1">
-
-Necessary schemas
-
-</th><th colspan="1">
-
-Necessary facets
-
-</th><th colspan="1">
-
-Additional comments
-
-</th></tr><tr><td colspan="1">Audio</td><td colspan="1">Audio</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid</td><td colspan="1">Audio, Commentable, Publishable, Versionable, NXTag</td><td colspan="1">Available when using the [DAM addon]({{page page='digital-asset-management-dam'}}).</td>
-
-</tr><tr><td colspan="1">
-
-Collection
-
-</td><td colspan="1">
-
-Collection
-
-</td><td colspan="1">
-
-Document
-
-</td><td colspan="1">
-
-uid, dublincore, common
-
-</td><td colspan="1">
-
-Versionable, Collection, NotCollectionMember
-
-</td><td colspan="1">
-
-</td></tr><tr><td colspan="1">
-
-Collections
-
-</td><td colspan="1">
-
-Collections
-
-</td><td colspan="1">
-
-Folder
-
-</td><td colspan="1">
-
-</td><td colspan="1">
-
-NotCollectionMember
-
-</td><td colspan="1">
-
-</td></tr><tr><td colspan="1">Domain</td><td colspan="1">Domain</td><td colspan="1">Folder</td><td colspan="1">domain</td><td colspan="1">
-
-SuperSpace, NotCollectionMember
-
-</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
-
-File
-
-</td><td colspan="1">
-
-File
-
-</td><td colspan="1">
-
-Document
-
-</td><td colspan="1">
-
-file, files, common, dublincore, uid
-
-</td><td colspan="1">
-
-Commentable, Downloadable,&nbsp;HasRelatedText,&nbsp; Publishable, Versionable
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-Folder
-
-</td><td colspan="1">
-
-Folder
-
-</td><td colspan="1">
-
-Document
-
-</td><td colspan="1">
-
-common, dublincore
-
-</td><td colspan="1">
-
-Folderish
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-HiddenFolder
-
-</td><td colspan="1">
-
-HiddenFolder
-
-</td><td colspan="1">
-
-Folder
-
-</td><td colspan="1">
-
-</td><td colspan="1">
-
-HiddenInNavigation
-
-</td><td colspan="1">
-
-</td></tr><tr><td colspan="1">Note</td><td colspan="1">Note</td><td colspan="1">Document</td><td colspan="1">common, dublincore, files, note, uid</td><td colspan="1">
-
-Commentable, HasRelatedText, Publishable, Versionable
-
-</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
-
-OrderedFolder
-
-</td><td colspan="1">
-
-OrderedFolder
-
-</td><td colspan="1">
-
-Folder
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-Orderable
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">Picture</td><td colspan="1">Picture</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid</td><td colspan="1">Commentable, HasRelatedText, Picture, Publishable, Versionable, NXTag</td><td colspan="1">Available when using the [DAM addon]({{page page='digital-asset-management-dam'}}).</td></tr><tr><td colspan="1">
-
-Relation
-
-</td><td colspan="1">
-
-Relation
-
-</td><td colspan="1">
-
-</td><td colspan="1">
-
-relation, dublincore
-
-</td><td colspan="1">
-
-</td><td colspan="1">
-
-</td></tr><tr><td colspan="1">
-
-Root
-
-</td><td colspan="1">
-
-Root
-
-</td><td colspan="1">
-
-Folder
-
-</td><td colspan="1">
-
-</td><td colspan="1">
-
-NotCollectionMember
-
-</td><td colspan="1">
-
-</td></tr><tr><td colspan="1">
-
-Section
-
-</td><td colspan="1">
-
-Section
-
-</td><td colspan="1">
-
-Folder
-
-</td><td colspan="1">
-
-file
-
-</td><td colspan="1">
-
-PublishSpace, SuperSpace
-
-</td><td colspan="1">
-
-The SuperSpace facet is required for children documents to get default notifications configured in the **Alerts** tab.
-
-</td></tr><tr><td colspan="1">SectionRoot</td><td colspan="1">SectionRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">MasterPublishSpace, SuperSpace, HiddenInCreation, NotCollectionMember</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">TemplateRoot</td><td colspan="1">TemplateRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">SuperSpace, HiddenInCreation, NotCollectionMember</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Video</td><td colspan="1">Video</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid, files</td><td colspan="1">Commentable, Publishable, Versionable, Video, HasStoryboard, HasVideoPreview, NXTag</td><td colspan="1">Available when using the [DAM addon]({{page page='digital-asset-management-dam'}}).</td></tr><tr><td colspan="1">
-
-Workspace
-
-</td><td colspan="1">
-
-Workspace
-
-</td><td colspan="1">
-
-Folder
-
-</td><td colspan="1">
-
-webcontainer, publishing, file, files
-
-</td><td colspan="1">
-
-SuperSpace
-
-</td><td colspan="1">
-
-The SuperSpace facet is required for children documents to get default notifications configured in the **Alerts** tab.
-
-</td></tr><tr><td colspan="1">
-
-WorkspaceRoot
-
-</td><td colspan="1">
-
-WorkspaceRoot
-
-</td><td colspan="1">
-
-Folder
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-SuperSpace, HiddenInCreation, NotCollectionMember
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td>
-
-</tr></tbody></table></div>
+<div class="table-scroll">
+  <table class="hover">
+    <tbody>
+      <tr>
+        <th>Document type label</th>
+        <th>Document type ID</th>
+        <th>Inherits from</th>
+        <th>Necessary schemas</th>
+        <th>Necessary facets</th>
+        <th>Additional comments</th>
+      </tr>
+      <tr>
+        <td>Audio</td>
+        <td>Audio</td>
+        <td>Document</td>
+        <td>common, dublincore, uid</td>
+        <td>Audio, Commentable, Publishable, Versionable, NXTag</td>
+        <td>Available when using the [DAM addon]({{page page='digital-asset-management-dam'}}).</td>
+      </tr>
+      <tr>
+        <td>Collection</td>
+        <td>Collection</td>
+        <td>Document</td>
+        <td>uid, dublincore, common</td>
+        <td>Versionable, Collection, NotCollectionMember</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Collections</td>
+        <td>Collections</td>
+        <td>Folder</td>
+        <td></td>
+        <td>NotCollectionMember</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Domain</td>
+        <td>Domain</td>
+        <td>Folder</td>
+        <td>domain</td>
+        <td>SuperSpace, NotCollectionMember</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>File</td>
+        <td>File</td>
+        <td>Document</td>
+        <td>file, files, common, dublincore, uid</td>
+        <td>Commentable, Downloadable,&nbsp;HasRelatedText,&nbsp; Publishable, Versionable</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Folder</td>
+        <td>Folder</td>
+        <td>Document</td>
+        <td>common, dublincore</td>
+        <td>Folderish</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>HiddenFolder</td>
+        <td>HiddenFolder</td>
+        <td>Folder</td>
+        <td></td>
+        <td>HiddenInNavigation</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Note</td>
+        <td>Note</td>
+        <td>Document</td>
+        <td>common, dublincore, files, note, uid</td>
+        <td>Commentable, HasRelatedText, Publishable, Versionable</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>OrderedFolder</td>
+        <td>OrderedFolder</td>
+        <td>Folder</td>
+        <td></td>
+        <td>Orderable</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Picture</td>
+        <td>Picture</td>
+        <td>Document</td>
+        <td>common, dublincore, uid</td>
+        <td>Commentable, HasRelatedText, Picture, Publishable, Versionable, NXTag</td>
+        <td>Available when using the [DAM addon]({{page page='digital-asset-management-dam'}}).</td>
+      </tr>
+      <tr>
+        <td>Relation</td>
+        <td>Relation</td>
+        <td></td>
+        <td>relation, dublincore</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Root</td>
+        <td>Root</td>
+        <td>Folder</td>
+        <td></td>
+        <td>NotCollectionMember</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Section</td>
+        <td>Section</td>
+        <td>Folder</td>
+        <td>file</td>
+        <td>PublishSpace, SuperSpace</td>
+        <td>The SuperSpace facet is required for children documents to get default notifications configured in the **Alerts** tab.</td>
+      </tr>
+      <tr>
+        <td>SectionRoot</td>
+        <td>SectionRoot</td>
+        <td>Folder</td>
+        <td></td>
+        <td>MasterPublishSpace, SuperSpace, HiddenInCreation, NotCollectionMember</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>TemplateRoot</td>
+        <td>TemplateRoot</td>
+        <td>Folder</td>
+        <td></td>
+        <td>SuperSpace, HiddenInCreation, NotCollectionMember</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Video</td>
+        <td>Video</td>
+        <td>Document</td>
+        <td>common, dublincore, uid, files</td>
+        <td>Commentable, Publishable, Versionable, Video, HasStoryboard, HasVideoPreview, NXTag</td>
+        <td>Available when using the [DAM addon]({{page page='digital-asset-management-dam'}}).</td>
+      </tr>
+      <tr>
+        <td>Workspace</td>
+        <td>Workspace</td>
+        <td>Folder</td>
+        <td>webcontainer, publishing, file, files</td>
+        <td>SuperSpace</td>
+        <td>The SuperSpace facet is required for children documents to get default notifications configured in the **Alerts** tab.</td>
+      </tr>
+      <tr>
+        <td>WorkspaceRoot</td>
+        <td>WorkspaceRoot</td>
+        <td>Folder</td>
+        <td></td>
+        <td>SuperSpace, HiddenInCreation, NotCollectionMember</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 {{#> callout type='info' }}
 
