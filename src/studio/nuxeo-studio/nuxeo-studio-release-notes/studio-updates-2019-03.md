@@ -32,13 +32,13 @@ In Studio Designer, click on a default configuration item to see how it is confi
 
 Choose the theme to use by default in one click ([NXS-4891](https://jira.nuxeo.com/browse/NXS-4891)).
 
-[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>**For more information, see the How to Customize Themes**]({{page version='' space='studio' page='migration-services'}}).
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>**For more information, discover How to Customize Themes**]({{page page='how-to-customize-theme-studio'}}).
 
 ### Parameters Mapping in Search and Listings Configuration
 
 When configuring a UI element for a search or a listing, search parameters are visible right away. The corresponding JavaScript expression benefits from autocompletion ([NXS-5122](https://jira.nuxeo.com/browse/NXS-5122)).
 
-[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>**For more information, see our use case**]({{page version='' space='studio' page='migration-services'}}).
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>**For more information, see our use case**]({{page version='' space='nxdoc' page='how-to-display-children-documents-listing'}}).
 
 <!--
 ### Noteworthy Improvements and Bugfixes
