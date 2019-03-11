@@ -426,7 +426,7 @@ The following CORS configuration allows Web UI to send files to S3, please feel 
 To activate S3 direct upload use these parameters:
 
 ```
-nuxeo.s3storage.useDirectUpload=false
+nuxeo.s3storage.useDirectUpload=true
 
 # mandatory
 nuxeo.s3storage.transient.bucket=YOUR_TRANSIENT_BUCKET
