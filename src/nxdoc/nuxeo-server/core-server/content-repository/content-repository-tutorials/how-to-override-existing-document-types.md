@@ -140,7 +140,51 @@ Necessary facets
 
 Additional comments
 
-</th></tr><tr><td colspan="1">Audio</td><td colspan="1">Audio</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid</td><td colspan="1">Audio, Commentable, Publishable, Versionable, NXTag</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Domain</td><td colspan="1">Domain</td><td colspan="1">Folder</td><td colspan="1">domain</td><td colspan="1">
+</th></tr><tr><td colspan="1">Audio</td><td colspan="1">Audio</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid</td><td colspan="1">Audio, Commentable, Publishable, Versionable, NXTag</td><td colspan="1">&nbsp;</td>
+
+</tr><tr><td colspan="1">
+
+Collection
+
+</td><td colspan="1">
+
+Collection
+
+</td><td colspan="1">
+
+Document
+
+</td><td colspan="1">
+
+uid, dublincore, common
+
+</td><td colspan="1">
+
+Versionable, Collection, NotCollectionMember
+
+</td><td colspan="1">
+
+</td></tr><tr><td colspan="1">
+
+Collections
+
+</td><td colspan="1">
+
+Collections
+
+</td><td colspan="1">
+
+Folder
+
+</td><td colspan="1">
+
+</td><td colspan="1">
+
+NotCollectionMember
+
+</td><td colspan="1">
+
+</td></tr><tr><td colspan="1">Domain</td><td colspan="1">Domain</td><td colspan="1">Folder</td><td colspan="1">domain</td><td colspan="1">
 
 SuperSpace, NotCollectionMember
 
@@ -192,6 +236,26 @@ Folderish
 
 &nbsp;
 
+</td></tr><tr><td colspan="1">
+
+HiddenFolder
+
+</td><td colspan="1">
+
+HiddenFolder
+
+</td><td colspan="1">
+
+Folder
+
+</td><td colspan="1">
+
+</td><td colspan="1">
+
+HiddenInNavigation
+
+</td><td colspan="1">
+
 </td></tr><tr><td colspan="1">Note</td><td colspan="1">Note</td><td colspan="1">Document</td><td colspan="1">common, dublincore, files, note, uid</td><td colspan="1">
 
 Commentable, HasRelatedText, Publishable, Versionable
@@ -221,6 +285,44 @@ Orderable
 &nbsp;
 
 </td></tr><tr><td colspan="1">Picture</td><td colspan="1">Picture</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid</td><td colspan="1">Commentable, HasRelatedText, Picture, Publishable, Versionable, NXTag</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
+
+Relation
+
+</td><td colspan="1">
+
+Relation
+
+</td><td colspan="1">
+
+</td><td colspan="1">
+
+relation, dublincore
+
+</td><td colspan="1">
+
+</td><td colspan="1">
+
+</td></tr><tr><td colspan="1">
+
+Root
+
+</td><td colspan="1">
+
+Root
+
+</td><td colspan="1">
+
+Folder
+
+</td><td colspan="1">
+
+</td><td colspan="1">
+
+NotCollectionMember
+
+</td><td colspan="1">
+
+</td></tr><tr><td colspan="1">
 
 Section
 
