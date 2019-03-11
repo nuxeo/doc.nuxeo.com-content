@@ -90,7 +90,10 @@ history:
 
 ---
 {{! excerpt}}
-Deleting a document involves several steps before the full document is actually deleted from the database and disk. These steps are described below.
+On user interface provided by Nuxeo, deleting a document involves several steps before the full document is actually deleted from the database and disk. It implies to first trash it and then delete it permanently. The second action is only possible if document is in the trash.
+
+More details below.
+
 {{! /excerpt}}
 
 ## Trash Management
@@ -156,31 +159,6 @@ SELECT * FROM Document
   AND ecm:isTrashed = 0
 ```
 
-### Migration
-
-**Keeping Old Trash implementation**
-
-The trash implementation has changed in 10.2. If you want to keep previous implementation relying on life cycle state, add the following contribution:
-
-```xml
-  <require>org.nuxeo.ecm.core.trash.service.migrator</require>
-  <extension target="org.nuxeo.runtime.migration.MigrationService" point="configuration">
-
-    <migration id="trash-storage">
-      <defaultState>lifecycle</defaultState>
-    </migration>
-
-  </extension>
-```
-If you want to migrate trash state to the new property model (`ecm:isTrashed`), follow the Trash migrations steps.
-
-**Trash Migration**
-
-To migrate trash states to the new property model:
-- Follow the step from the previous section **Keeping old trash implementation**.
-- In the Nuxeo Platform's JSF UI, go to **Admin** > **System Information** > **Migration**, click the button Migrate trashed state from lifecycle to property and wait until migration is completed.
-- Remove the contribution added at step 1.
-
 ## Permanently Deleting Document
 
 A permanent delete is done by most Nuxeo APIs, typically [CoreSession.removeDocument](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/api/CoreSession.html#removeDocument-org.nuxeo.ecm.core.api.DocumentRef-) or the higher-level APIs that use it like the CMIS bindings or the Automation [Document.Delete](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.Delete) operation.
@@ -209,6 +187,36 @@ Please consult [NXP-11335](https://jira.nuxeo.com/browse/NXP-11335) for more det
 
 If soft-delete is not enabled, or when the periodic cleanup process for soft-delete happens, the document's data is actually physically deleted from the database by using `DELETE` SQL statements (or equivalent calls for non-VCS storages).
 
+## Trash migration
+
+{{! multiexcerpt name='trash-migration'}}
+
+As TrashService now leverages the system property `ecm:isTrashed` by default, you need to migrate your instance.
+
+1. You need to replace all occurrences of `ecm:currentLifeCycleState` with `deleted` state by `ecm:isTrashed` in your NXQL/Page Provider/Content View, etc.</br>
+   For instance `ecm:currentLifeCycleState = 'deleted'` is to replace by `ecm:isTrashed = 1`.
+2. Add the contribution from section [Keeping old trash implementation](#keeping-old-trash-implementation).
+3. In JSF UI, go to **Admin** > **System Information** > **Migration**, click the button next to **Migration of in the trash storage model** field and wait until the migration is completed.
+4. Then perform an Elasticsearch re-indexation of all repository, in JSF UI, go to **Admin** > **Elasticsearch** > **Admin**, click the button **Re-index repository** and wait until the re-indexation is completed.
+5. Remove the contribution added at step 2.
+6. You now need to remove `deleted` lifecycle state from your lifecycle policies as it is deprecated and not used anymore.
+
+{{> anchor 'keeping-old-trash-implementation'}}__Keeping old trash implementation__
+
+The trash implementation has changed in 10.2. If you want to keep previous implementation relying on lifecycle state, add the following contribution:
+
+```xml
+  <require>org.nuxeo.ecm.core.trash.service.migrator</require>
+  <extension target="org.nuxeo.runtime.migration.MigrationService" point="configuration">
+
+    <migration id="trash-storage">
+      <defaultState>lifecycle</defaultState>
+    </migration>
+
+  </extension>
+```
+
+{{! /multiexcerpt}}
 
 * * *
 
