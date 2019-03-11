@@ -140,7 +140,7 @@ Necessary facets
 
 Additional comments
 
-</th></tr><tr><td colspan="1">Audio</td><td colspan="1">Audio</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid</td><td colspan="1">Audio, Commentable, Publishable, Versionable</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Domain</td><td colspan="1">Domain</td><td colspan="1">Folder</td><td colspan="1">domain</td><td colspan="1">
+</th></tr><tr><td colspan="1">Audio</td><td colspan="1">Audio</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid</td><td colspan="1">Audio, Commentable, Publishable, Versionable, NXTag</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Domain</td><td colspan="1">Domain</td><td colspan="1">Folder</td><td colspan="1">domain</td><td colspan="1">
 
 SuperSpace, NotCollectionMember
 
@@ -220,7 +220,7 @@ Orderable
 
 &nbsp;
 
-</td></tr><tr><td colspan="1">Picture</td><td colspan="1">Picture</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid</td><td colspan="1">Commentable, HasRelatedText, Picture, Publishable, Versionable</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Post</td><td colspan="1">Post</td><td colspan="1">Document</td><td colspan="1">common, dublincore, post</td><td colspan="1">Commentable, HiddenInNavigation</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
+</td></tr><tr><td colspan="1">Picture</td><td colspan="1">Picture</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid</td><td colspan="1">Commentable, HasRelatedText, Picture, Publishable, Versionable, NXTag</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Post</td><td colspan="1">Post</td><td colspan="1">Document</td><td colspan="1">common, dublincore, post</td><td colspan="1">Commentable, HiddenInNavigation</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 Section
 
@@ -244,7 +244,7 @@ PublishSpace, SuperSpace
 
 The SuperSpace facet is required for children documents to get default notifications configured in the **Alerts** tab.
 
-</td></tr><tr><td colspan="1">SectionRoot</td><td colspan="1">SectionRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">MasterPublishSpace, SuperSpace, HiddenInCreation, NotCollectionMember</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">TemplateRoot</td><td colspan="1">TemplateRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">SuperSpace, HiddenInCreation, NotCollectionMember</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Thread</td><td colspan="1">Thread</td><td colspan="1">Document</td><td colspan="1">common, dublincore, thread</td><td colspan="1">Commentable</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Video</td><td colspan="1">Video</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid, files</td><td colspan="1">Commentable, Publishable, Versionable, Video, HasStoryboard, HasVideoPreview</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
+</td></tr><tr><td colspan="1">SectionRoot</td><td colspan="1">SectionRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">MasterPublishSpace, SuperSpace, HiddenInCreation, NotCollectionMember</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">TemplateRoot</td><td colspan="1">TemplateRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">SuperSpace, HiddenInCreation, NotCollectionMember</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Thread</td><td colspan="1">Thread</td><td colspan="1">Document</td><td colspan="1">common, dublincore, thread</td><td colspan="1">Commentable</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Video</td><td colspan="1">Video</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid, files</td><td colspan="1">Commentable, Publishable, Versionable, Video, HasStoryboard, HasVideoPreview, NXTag</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
 
 Workspace
 
