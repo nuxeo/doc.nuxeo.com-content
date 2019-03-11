@@ -132,15 +132,15 @@ Below are the document types provided by the default Nuxeo Platform, the Documen
         <td>Audio</td>
         <td>Document</td>
         <td>common, dublincore, uid</td>
-        <td>Audio, Commentable, Publishable, Versionable, NXTag</td>
+        <td>Audio, Commentable, NXTag, Publishable, Versionable</td>
         <td>Available when using the [DAM addon]({{page page='digital-asset-management-dam'}}).</td>
       </tr>
       <tr>
         <td>Collection</td>
         <td>Collection</td>
         <td>Document</td>
-        <td>uid, dublincore, common</td>
-        <td>Versionable, Collection, NotCollectionMember</td>
+        <td>common, dublincore, uid</td>
+        <td>Collection, NotCollectionMember, Versionable</td>
         <td></td>
       </tr>
       <tr>
@@ -156,15 +156,15 @@ Below are the document types provided by the default Nuxeo Platform, the Documen
         <td>Domain</td>
         <td>Folder</td>
         <td>domain</td>
-        <td>SuperSpace, NotCollectionMember</td>
+        <td>NotCollectionMember, SuperSpace</td>
         <td></td>
       </tr>
       <tr>
         <td>File</td>
         <td>File</td>
         <td>Document</td>
-        <td>file, files, common, dublincore, uid</td>
-        <td>Commentable, Downloadable,&nbsp;HasRelatedText,&nbsp; Publishable, Versionable</td>
+        <td>common, dublincore, file, files, uid</td>
+        <td>Commentable, Downloadable, HasRelatedText, Publishable, Versionable</td>
         <td></td>
       </tr>
       <tr>
@@ -204,14 +204,14 @@ Below are the document types provided by the default Nuxeo Platform, the Documen
         <td>Picture</td>
         <td>Document</td>
         <td>common, dublincore, uid</td>
-        <td>Commentable, HasRelatedText, Picture, Publishable, Versionable, NXTag</td>
+        <td>Commentable, HasRelatedText, NXTag, Picture, Publishable, Versionable</td>
         <td>Available when using the [DAM addon]({{page page='digital-asset-management-dam'}}).</td>
       </tr>
       <tr>
         <td>Relation</td>
         <td>Relation</td>
         <td></td>
-        <td>relation, dublincore</td>
+        <td>dublincore, relation</td>
         <td></td>
         <td></td>
       </tr>
@@ -236,7 +236,7 @@ Below are the document types provided by the default Nuxeo Platform, the Documen
         <td>SectionRoot</td>
         <td>Folder</td>
         <td></td>
-        <td>MasterPublishSpace, SuperSpace, HiddenInCreation, NotCollectionMember</td>
+        <td>HiddenInCreation, MasterPublishSpace, NotCollectionMember, SuperSpace</td>
         <td></td>
       </tr>
       <tr>
@@ -244,7 +244,7 @@ Below are the document types provided by the default Nuxeo Platform, the Documen
         <td>TemplateRoot</td>
         <td>Folder</td>
         <td></td>
-        <td>SuperSpace, HiddenInCreation, NotCollectionMember</td>
+        <td>HiddenInCreation, NotCollectionMember, SuperSpace</td>
         <td></td>
       </tr>
       <tr>
@@ -252,14 +252,14 @@ Below are the document types provided by the default Nuxeo Platform, the Documen
         <td>Video</td>
         <td>Document</td>
         <td>common, dublincore, uid, files</td>
-        <td>Commentable, Publishable, Versionable, Video, HasStoryboard, HasVideoPreview, NXTag</td>
+        <td>Commentable, HasStoryboard, HasVideoPreview, NXTag, Publishable, Versionable, Video</td>
         <td>Available when using the [DAM addon]({{page page='digital-asset-management-dam'}}).</td>
       </tr>
       <tr>
         <td>Workspace</td>
         <td>Workspace</td>
         <td>Folder</td>
-        <td>webcontainer, publishing, file, files</td>
+        <td>file, files, publishing, webcontainer</td>
         <td>SuperSpace</td>
         <td>The SuperSpace facet is required for children documents to get default notifications configured in the **Alerts** tab.</td>
       </tr>
@@ -268,7 +268,7 @@ Below are the document types provided by the default Nuxeo Platform, the Documen
         <td>WorkspaceRoot</td>
         <td>Folder</td>
         <td></td>
-        <td>SuperSpace, HiddenInCreation, NotCollectionMember</td>
+        <td>HiddenInCreation, NotCollectionMember, SuperSpace</td>
         <td></td>
       </tr>
     </tbody>
