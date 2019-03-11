@@ -140,7 +140,7 @@ Necessary facets
 
 Additional comments
 
-</th></tr><tr><td colspan="1">Audio</td><td colspan="1">Audio</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid</td><td colspan="1">Audio, Commentable, Publishable, Versionable, NXTag</td><td colspan="1">&nbsp;</td>
+</th></tr><tr><td colspan="1">Audio</td><td colspan="1">Audio</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid</td><td colspan="1">Audio, Commentable, Publishable, Versionable, NXTag</td><td colspan="1">Available when using the [DAM addon]({{page page='digital-asset-management-dam'}}).</td>
 
 </tr><tr><td colspan="1">
 
@@ -284,7 +284,7 @@ Orderable
 
 &nbsp;
 
-</td></tr><tr><td colspan="1">Picture</td><td colspan="1">Picture</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid</td><td colspan="1">Commentable, HasRelatedText, Picture, Publishable, Versionable, NXTag</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
+</td></tr><tr><td colspan="1">Picture</td><td colspan="1">Picture</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid</td><td colspan="1">Commentable, HasRelatedText, Picture, Publishable, Versionable, NXTag</td><td colspan="1">Available when using the [DAM addon]({{page page='digital-asset-management-dam'}}).</td></tr><tr><td colspan="1">
 
 Relation
 
@@ -346,7 +346,7 @@ PublishSpace, SuperSpace
 
 The SuperSpace facet is required for children documents to get default notifications configured in the **Alerts** tab.
 
-</td></tr><tr><td colspan="1">SectionRoot</td><td colspan="1">SectionRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">MasterPublishSpace, SuperSpace, HiddenInCreation, NotCollectionMember</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">TemplateRoot</td><td colspan="1">TemplateRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">SuperSpace, HiddenInCreation, NotCollectionMember</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Video</td><td colspan="1">Video</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid, files</td><td colspan="1">Commentable, Publishable, Versionable, Video, HasStoryboard, HasVideoPreview, NXTag</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
+</td></tr><tr><td colspan="1">SectionRoot</td><td colspan="1">SectionRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">MasterPublishSpace, SuperSpace, HiddenInCreation, NotCollectionMember</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">TemplateRoot</td><td colspan="1">TemplateRoot</td><td colspan="1">Folder</td><td colspan="1">&nbsp;</td><td colspan="1">SuperSpace, HiddenInCreation, NotCollectionMember</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">Video</td><td colspan="1">Video</td><td colspan="1">Document</td><td colspan="1">common, dublincore, uid, files</td><td colspan="1">Commentable, Publishable, Versionable, Video, HasStoryboard, HasVideoPreview, NXTag</td><td colspan="1">Available when using the [DAM addon]({{page page='digital-asset-management-dam'}}).</td></tr><tr><td colspan="1">
 
 Workspace
 
@@ -368,7 +368,7 @@ SuperSpace
 
 </td><td colspan="1">
 
-The SuperSpace facet is required for children documents to get default notifications configured in the 'Alerts' tab.
+The SuperSpace facet is required for children documents to get default notifications configured in the **Alerts** tab.
 
 </td></tr><tr><td colspan="1">
 
