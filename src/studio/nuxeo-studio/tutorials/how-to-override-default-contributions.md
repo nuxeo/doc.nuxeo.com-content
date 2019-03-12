@@ -1,17 +1,17 @@
 ---
 title: 'HOWTO: Override Existing Contributions'
 review:
-    comment: ''
-    date: '2019-03-01'
-    status: ok
+  comment: ''
+  date: '2019-03-01'
+  status: ok
 details:
-    howto:
-        excerpt: Learn how to override Web UI Default contributions with Nuxeo Studio
-        tool: Nuxeo Studio
-        topics: Nuxeo Studio
-        level: Intermediate
+  howto:
+    excerpt: Learn how to override Web UI Default contributions with Nuxeo Studio
+    tool: Nuxeo Studio
+    topics: Nuxeo Studio
+    level: Intermediate
 labels:
-    - howto
+  - howto
 tree_item_index: 1200
 toc: true
 ---
@@ -103,6 +103,6 @@ In this section, we will reorder the contributions of the User Settings menu to 
 
 You should have this result.
 
-| For administrator users |  For non-admistrator users |
-|---|---|
-| ![Customized menu ](nx_asset://f73344cd-a726-4378-9832-bebbd5cba976 ?w=300,border=true) | ![Customized menu members](nx_asset://500b4e0c-bdea-4bfb-bb9b-fc15c0a6d2a9 ?w=300,border=true)|
+| For administrator users                                                                 | For non-admistrator users                                                                      |
+| --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| ![Customized menu ](nx_asset://f73344cd-a726-4378-9832-bebbd5cba976 ?w=300,border=true) | ![Customized menu members](nx_asset://500b4e0c-bdea-4bfb-bb9b-fc15c0a6d2a9 ?w=300,border=true) |

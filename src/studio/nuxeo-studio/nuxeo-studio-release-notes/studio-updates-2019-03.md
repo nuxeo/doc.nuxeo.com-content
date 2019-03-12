@@ -13,10 +13,13 @@ hidden: true
 ## Released Changes
 
 {{! multiexcerpt name='studio-updates-2019-03'}}
+
 <!-- 3.7.0 -->
+
 ### [Impacting Change] Layout Blocks Scope Fix
 
 Layout blocks no longer list all custom elements you created so far. Instead they contain specifically form layouts:
+
 - migrated from your JSF UI configuration.
 - created from the Studio user interface.
 
