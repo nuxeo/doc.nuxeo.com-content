@@ -220,15 +220,7 @@ The new TrashService fires dedicated events `documentTrashed` and `documentUntra
 
 ##### Trash Migration
 
-As TrashService now leverages the system property `ecm:isTrashed` by default, you need to migrate your instance.
-
-1. You need to replace all occurrences of `ecm:currentLifeCycleState` with `deleted` state by `ecm:isTrashed` in your NXQL/Page Provider/Content View, etc.</br>
-   For instance `ecm:currentLifeCycleState = 'deleted'` is to replace by `ecm:isTrashed = 1`.
-1. Add the contribution from section [Keeping old trash implementation](#keeping-old-trash-implementation).
-1. In JSF UI, go to **Admin** > **System Information** > **Migration**, click the button next to **Migration of in the trash storage model** field and wait until the migration is completed.
-1. Then perform an Elasticsearch re-indexation of all repository, in JSF UI, go to **Admin** > **Elasticsearch** > **Admin**, click the button **Re-index repository** and wait until the re-indexation is completed.
-1. Remove the contribution added at step 2.
-1. You now need to remove `deleted` lifecycle state from your lifecycle policies as it is deprecated and not used anymore.
+{{{multiexcerpt 'trash-migration' page='deleting-documents'}}}
 
 {{#> callout type='info' heading='Migration Note - 10.2'}}
 During migration, documents in state `deleted` will receive the `isTrashed` property set to true but migrator will leave document in `deleted` state.
@@ -239,20 +231,6 @@ Migrator behavior has changed in 10.3, now documents in state `deleted` will rec
 {{/callout}}
 
 See [NXP-24850](https://jira.nuxeo.com/browse/NXP-24850).
-
-##### Keeping Old Trash Implementation
-
-The trash implementation has changed in 10.2. If you want to keep previous implementation relying on lifecycle state, add the following contribution:
-  ```xml
-  <require>org.nuxeo.ecm.core.trash.service.migrator</require>
-  <extension target="org.nuxeo.runtime.migration.MigrationService" point="configuration">
-
-    <migration id="trash-storage">
-      <defaultState>lifecycle</defaultState>
-    </migration>
-
-  </extension>
-  ```
 {{! /multiexcerpt}}
 
 #### Code Behavior Changes
@@ -265,7 +243,6 @@ The trash implementation has changed in 10.2. If you want to keep previous imple
 
 See [NXP-25197](https://jira.nuxeo.com/browse/NXP-25197).
 {{! /multiexcerpt}}
-
 
 {{! multiexcerpt name='upgrade-10.2-api.KeyValueStore'}}
 - New APIs are available on `KeyValueStore`.
@@ -287,7 +264,6 @@ See [NXP-25197](https://jira.nuxeo.com/browse/NXP-25197).
 
   See [NXP-25158](https://jira.nuxeo.com/browse/NXP-25158).
 {{! /multiexcerpt}}
-
 
 #### Operation changes
 
