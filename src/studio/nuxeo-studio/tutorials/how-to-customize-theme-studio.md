@@ -8,6 +8,9 @@ toc: true
 details:
   howto:
     excerpt: Learn how to customize themes in Nuxeo Studio.
+    level: Beginner
+    tool: Nuxeo Studio
+    topics: Themes
 tree_item_index: 1100
 ---
 
