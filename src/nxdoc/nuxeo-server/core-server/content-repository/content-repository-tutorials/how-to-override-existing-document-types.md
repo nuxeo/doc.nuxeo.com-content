@@ -101,20 +101,22 @@ history:
 ---
 
 {{! excerpt}}
-
 Any built-in document type can be overridden: you just have to use the good ID, inherit the good type and add some necessary schemas and facets. We provide a table that should give you all necessary information.
-
 {{! /excerpt}}
 
 When inheriting from a document type, you inherit its schemas and facets. For instance, when inheriting from Document, you get the `dublincore` schema (that holds the title, description, modification date, ... metadata), as well as `common` (that holds the size of the doc) and `uid` (that holds version information and ID).
 
 {{#> callout type='note' heading='Deployment Mode'}}
-
-Be careful to select the **Override** deployment mode from the **Advanced Configuration** section on the **Definition** tab of your document type. Should you leave **Merge**, you would get both your customizations and the default behavior of the document type instead of only your own customizations.
-
+Be careful to select the **Override** deployment mode from the **Advanced Configuration** section on the **Definition** tab of your document type in Nuxeo Studio. If you leave the **Merge** mode, you would get both your customizations and the default behavior of the document type instead of only your own customizations.
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Override Existing Document Types/Override Mode in Studio
+    name: STUDIO-override-mode.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![Override Mode in Studio](nx_asset://af70e650-bad0-4fbc-a718-aab947d1d67d ?w=250,border=true)
 {{/callout}}
 
-Below are the document types provided by the default Nuxeo Platform, the Document Management and Digital Asset Management modules. Don't hesitate to give feedback if you encounter troubles.
+Below are the document types provided by the default Nuxeo Platform, the Document Management and Digital Asset Management modules.
 
 <div class="table-scroll">
   <table class="hover">
@@ -276,16 +278,14 @@ Below are the document types provided by the default Nuxeo Platform, the Documen
 </div>
 
 {{#> callout type='info' }}
-
-The Alert tab is currently only available on JSF UI. It is planned to be integrated in Nuxeo Web UI.
-
+The Alert tab is currently only available on JSF UI, which is deprecated since Nuxeo Platform LTS 2019 (10.10). It is planned to be integrated in Nuxeo Web UI.
 {{/callout}}
 
 {{#> callout type='tip' }}
-
 You can also browse the [contributions to the Type extension](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype) for more document types.
-
 {{/callout}}
+
+---
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
