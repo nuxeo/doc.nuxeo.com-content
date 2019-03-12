@@ -101,30 +101,32 @@ AWS configuration can now specify an id with:
       <secretKey>MY_SECRET_KEY</secretKey>
       <region>MY_REGION</region>
     </configuration>
-  </extension> 
+  </extension>
 ```
 If the id is not specified, default is used.
 
-To get to this configuration, one can then use:
+To get to this configuration, you can use:
 ```
 new NuxeoAWSCredentialsProvider(id)
 new NuxeoAWSRegionProvider(id).getRegion()
 ```
-Note that if the configuration is not found, the providers will still fall back on the default AWS SDK behavior to look in the OS environment, Java system properties, AWS profile or EC2 container credentials (which don't take into account any configuration id).
 
+{{#> callout type='note' }}
+If the configuration is not found, the providers will still fall back on the default AWS SDK behavior to look in the OS environment, Java system properties, AWS profile or EC2 container credentials (which don't take into account any configuration id).
+{{/callout}}
 
 ### S3 Server-side Encryption
 
 S3 copy (used during direct upload in particular) now correctly takes into account the server-side encryption configuration for the destination bucket.
 
-For direct upload, this requires setting the property:
+For direct upload, the following property is required:
 ```
 nuxeo.s3storage.transient.crypt.serverside=true
 ```
 
 ### S3 Multipart Part Size
 
-There is a new configuration property `nuxeo.s3.multipart.copy.part.size` to change the S3 multipart copy part size. The default is `5242880` (5MB). </br>
+There is a new configuration property `nuxeo.s3.multipart.copy.part.size` to change the S3 multipart copy part size. The default is `5242880` (5MB).</br>
 
 It can be changed with:
 ```
