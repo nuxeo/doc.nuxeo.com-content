@@ -1,9 +1,9 @@
 ---
 title: Repository Configuration
 review:
-    comment: 'This page needs to be updated to document DBS configuration and separate SQL-specific options'
-    date: '2017-12-14'
-    status: requiresUpdates
+    comment: ''
+    date: '2019-03-12'
+    status: ok
 labels:
     - lts2016-ok
     - binary-manager
@@ -12,6 +12,7 @@ labels:
     - fulltext
     - vcs-component
     - lts2017-ok
+    - lts2019-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31032113'
@@ -302,6 +303,9 @@ history:
         version: '1'
 
 ---
+
+## VCS Configuration 
+
 VCS (Visible Content Store) is the default storage engine for Nuxeo documents.
 
 The following are the options available to configure VCS repository in Nuxeo Platform. They usually go in a file named `default-repository-config.xml`.
@@ -312,7 +316,7 @@ In a standard Nuxeo this file is generated from a template, and many elements or
 
 {{/callout}}
 
-## Example File
+### Example File
 
 This file is for illustration and contains many more options than are necessary by default.
 
@@ -369,7 +373,7 @@ This file is for illustration and contains many more options than are necessary 
 </component>
 ```
 
-## Pooling Options
+### Pooling Options
 
 ```xml
 <pool minPoolSize="0" maxPoolSize="20"
@@ -384,7 +388,7 @@ This file is for illustration and contains many more options than are necessary 
 *   **idleTimeoutMinutes**: the time (in minutes) after which an unused pool connection will be destroyed.
 *   **activeTimeoutMinutes**: the time (in minutes) after which a connection is killed even if it is still active. This is used to avoid connection leaks. This should always be set higher than the Nuxeo transaction timeout.
 
-## Clustering Options
+### Clustering Options
 
 ```xml
 <clustering id="12345" enabled="true" delay="1000" />
@@ -394,9 +398,9 @@ This file is for illustration and contains many more options than are necessary 
 *   **enabled**: use **true** to activate Nuxeo clustering (default is **false**, i.e., no clustering) (see `repository.clustering.enabled` in `nuxeo.conf`).
 *   **delay**: a configurable delay in milliseconds between two checks at the start of each transaction, to know if there are any remote invalidations (see `repository.clustering.delay` in `nuxeo.conf`).
 
-## Column Types
+### Column Types
 
-### Large Text / CLOB Columns
+#### Large Text / CLOB Columns
 
 If you need to specify a length on a Nuxeo field and cannot change the XSD of the document type, you should use the following code in the repository configuration:
 
@@ -444,7 +448,7 @@ Using Oracle, if you attempt to save a string too big for the standard NVARCHAR2
 java.sql.SQLException: ORA-01461: can bind a LONG value only for insert into a LONG column
 ```
 
-### Id Column Type
+#### Id Column Type
 
 In standard Nuxeo the document id is a UUID stored as a string, for instance `9ea9a461-e131-4127-9a57-08b5b9b80ecb`.
 
@@ -474,9 +478,9 @@ Low-level database constraints that disallow multiple children with the same nam
 
 This is available and enabled by default on PostgreSQL since Nuxeo 9.2 ([NXP-22421](https://jira.nuxeo.com/browse/NXP-22421)).
 
-## Indexing Options
+### Indexing Options
 
-### Configuring Which Types Will Be Indexed
+#### Configuring Which Types Will Be Indexed
 
 It's possible to configure the document types you want to index or you want to exclude from full-text indexing. This is possible using the sub-elements `includedTypes` and `excludedTypes` of the `indexing` element:
 
@@ -498,7 +502,7 @@ or
 
 If you set both included and excluded types, only the included types configuration will be taken into account.
 
-### {{> anchor 'vcs-full-text-configuration'}}Full-Text
+#### {{> anchor 'vcs-full-text-configuration'}}Full-Text
 
 ```xml
 <fulltext disabled="false" searchDisabled="true" fieldSizeLimit="1000" analyzer="english" catalog="...">
@@ -548,7 +552,7 @@ If no `<index>` elements are present, then a **default** index with all string a
 
 If no `<fieldType>`, `<field>` or `<excludeField>` are present, then all string and blob fields are used.
 
-## Optimizations
+### Optimizations
 
 *   **pathOptimizations enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), it is possible to disable the path-based optimizations by using **false**. The default is **true**, _i.e._ path optimizations enabled.
     ```xml
@@ -572,7 +576,7 @@ If no `<fieldType>`, `<field>` or `<excludeField>` are present, then all string 
     SELECT nx_rebuild_read_acls();
     ```
 
-## Database Creation Option
+### Database Creation Option
 
 ```xml
 <ddlMode>execute</ddlMode>
@@ -667,3 +671,26 @@ The following categories are executed in special circumstances:
 
 *   `addClusterNode`: when creating a cluster node,
 *   `removeClusterNode`: when shutting down a cluster node.
+
+## DBS Configuration
+
+For a [DBS]({{page page='dbs'}}) (Document-Based Storage) configuration, you need to contribute to the extension point `repository` of the component `org.nuxeo.ecm.core.storage.mongodb.MongoDBRepositoryService`: 
+
+```xml
+<?xml version="1.0"?>
+<component name="default-repository-config">
+  <require>org.nuxeo.runtime.mongodb.MongoDBComponent</require>
+  <extension target="org.nuxeo.ecm.core.storage.mongodb.MongoDBRepositoryService"
+      point="repository">
+    <repository name="default" label="label.default.repository">
+      <cache enabled="true" maxSize="1000"
+             concurrencyLevel="10" ttl="10" />
+      ...
+    </repository>
+  </extension>
+</component>
+```
+
+This repository can be configured with the same [clustering](#clustering-options) and [indexing](#indexing-options) options as for VCS.
+
+For the DBS implementation based on MongoDB, the repository definition relies on [MongoDBConnectionService]({{page page='mongodb'}}#connection-pool-configuration) to instantiate a database connection.
