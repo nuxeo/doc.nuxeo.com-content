@@ -302,7 +302,8 @@ this.Then('I can see the administration menu', () => this.ui.drawer.administrati
 
 Cucumber allows for BDD using human-readable specifications. The advantages are two-fold: first, it allows specifications to be implemented by developers, but written in natural language by someone else, such as QA or business analyst; second, it makes error identification simpler for developers and non-developers alike, by showing clearly in plain language what steps failed. Please check [Cucumber](https://docs.cucumber.io/) and [Cucumber.js](https://github.com/cucumber/cucumber-js) documentation for more details.
 
-If you're looking for examples of Cucumber tests, check our [Web UI's plugin repository](https://github.com/nuxeo/plugin-nuxeo-web-ui/tree/2.4_10.10/ftest/web-ui/webdriver/test).
+For a more in-depth explanation on functional tests, please check the
+[Web UI functional testing]({{page page='web-ui-functional-testing'}}) page!
 
 ### NighwatchJS
 
