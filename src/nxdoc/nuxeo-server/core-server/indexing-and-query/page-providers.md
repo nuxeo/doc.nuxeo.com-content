@@ -2,11 +2,11 @@
 title: Page Providers
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2019-03-13'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:
-    - content-review-lts2016
+    - lts2019-ok
     - page-provider
     - query-pageprovider-component
     - kleturc
@@ -171,11 +171,9 @@ history:
 ---
 {{! excerpt}}
 
-Page providers allow retrieving items with pagination facilities, they can be used in a non-UI or non-JSF context like event listeners or core services.
+Page providers allow retrieving items with pagination facilities, they can be used in a non-UI context like event listeners or core services.
 
 {{! /excerpt}}
-
-For an introduction to content views, please refer to the [Content Views]({{page page='content-views'}}) page.
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
@@ -192,16 +190,6 @@ Page provider offers many advantages comparing to hard coded NXQL queries:
 *   Overriding an existing page provider definition is easy.
 *   The default implementation (`CoreQueryDocumentPageProvider`) that handles Nuxeo documents can be [switched from VCS (database) to Elasticsearch]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}) by just setting a configuration in the `nuxeo.conf` file.
 *   When using Elasticsearch, page providers support [aggregation features]({{page page='page-provider-aggregates'}}).
-
-Page providers can be registered on their own service and queried outside of an UI context. These page providers can also be referenced from [content views]({{page page='content-views'}}), to keep a common definition of the provider.
-
-{{#> callout type='info' }}
-
-Content views are very linked to the rendering as they hold UI configuration and need the JSF context to resolve variables.
-
-Page providers defined inside content views are also registered on the `PageProviderService`, reusing the original content view name, so that they're available outside of the content view.
-
-{{/callout}}
 
 Here is a sample page provider definition:
 
@@ -223,8 +211,6 @@ Here is a sample page provider definition:
 
 ```
 
-This definition is identical to the one within a content view, except it cannot use EL expressions for variables resolution.
-
 A typical usage of this page provider would be:
 
 ```java
@@ -240,44 +226,21 @@ List<DocumentModel> documents = pp.getCurrentPage();
 
 Here you can see that the page provider properties (needed for the query to be executed) and its parameters (needed for the query to be built) cannot be resolved from EL expressions: they need to be given explicitly to the page provider service.
 
-A typical usage of this page provider, referenced in a content view, would be:
-
-```xml
-<extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService" point="contentViews">
-
-  <contentView name="TREE_CHILDREN_CV">
-    <title>tree children</title>
-
-    <pageProvider name="TREE_CHILDREN_PP">
-      <property name="coreSession">#{documentManager}</property>
-      <property name="checkQueryCache">true</property>
-      <parameter>#{currentDocument.id}</parameter>
-    </pageProvider>      
-
-  </contentView>
-
-</extension>
-
-```
-
-Here you can see that properties and parameters can be put on the referenced page provider as content views all have a JSF context.
-
 There is also a syntax to reference "named parameters" in the page provider fixed part. This is mostly useful when working with page providers from the [Search Endpoints]({{page page='search-endpoints'}}). You can also find [extensive test cases in the code](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/nuxeo-platform-query-api/src/test/java/org/nuxeo/ecm/platform/query/core/TestPageProviderNamedParameters.java).
 
-## Custom Page Providers
+### Available Parameters
 
-This chapter focuses on writing custom page providers, for instance when you'd like to use content views to query and display results from an external system.
+{{{multiexcerpt 'page_provider_parameters' page='Content Views'}}}
+
+## Custom Page Providers
 
 The `<coreQueryPageProvider>` element makes it possible to answer to most common use cases. If you would like to use another kind of query, you can use an alternate element and specify the `PageProvider` class to use.
 
 Here is a sample example of a custom page provider configuration:
 
 ```xml
-<extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
-  point="contentViews">
-
-  <contentView name="CURRENT_DOCUMENT_CHILDREN_FETCH">
-    <genericPageProvider
+<extension point="providers" target="org.nuxeo.ecm.platform.query.api.PageProviderService">
+    <genericPageProvider name="CUSTOM_PAGE_PROVIDER"
       class="org.nuxeo.ecm.platform.query.nxql.CoreQueryAndFetchPageProvider">
       <property name="coreSession">#{documentManager}</property>
       <pattern>
@@ -291,13 +254,11 @@ Here is a sample example of a custom page provider configuration:
     </genericPageProvider>
 
     ...
-  </contentView>
-
 </extension>
 
 ```
 
-The `<genericPageProvider>` element takes an additional `class` attribute stating the page provider class. This class has to follow the `org.nuxeo.ecm.core.api.PageProvider` interface and does not need to list document models: content views do not force the item type to a given interface. The abstract class `org.nuxeo.ecm.core.api.AbstractPageProvider` makes it easier to define a new page provider as it implements most of the interface methods in a generic way.
+The `<genericPageProvider>` element takes an additional `class` attribute stating the page provider class. This class has to follow the `org.nuxeo.ecm.core.api.PageProvider` interface and does not need to list document models. The abstract class `org.nuxeo.ecm.core.api.AbstractPageProvider` makes it easier to define a new page provider as it implements most of the interface methods in a generic way.
 
 As result layouts can apply to other objects than document models, their definition can be adapted to fit to the kind of results provided by the custom page provider.
 

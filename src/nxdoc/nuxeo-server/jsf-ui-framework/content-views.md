@@ -510,11 +510,13 @@ The Nuxeo Content View framework makes it possible to define such an object, by 
 
 ### The Content View Query
 
-###### coreQueryPageProvider element
+#### coreQueryPageProvider element
 
 The `coreQueryPageProvider` element makes it possible to define what query will be performed. Here it is a query on a core session, using a pattern with one parameter.
 
-###### parameter and property elements
+{{! multiexcerpt name='page_provider_parameters'}}
+
+#### parameter and property elements
 
 The `coreQueryPageProvider` element accepts any number of property elements, defining needed context variables for the page provider to perform its work. The `coreSession` property is mandatory for a core query to be processed and is bound to the core session proxy named `documentManager` available in a default Nuxeo application.
 
@@ -522,23 +524,23 @@ It also accepts any number of `parameter` elements, where order of definition ma
 
 The main difference between `properties` and `parameters` is that properties will not be recomputed when refreshing the provider, whereas parameters will be. Properties will only be recomputed when resetting the provider.
 
-###### sort elements
+#### sort elements
 
 The `sort` element defines the default sort, that can be changed later through the interface. There can be any number of `sort` elements. The `sortInfosBinding` element can also be defined: it can resolve an EL expression in case the sort infos are held by a third party instance (document, Seam component...) and will be used instead of the default sort information if not null or empty. The EL expression can either resolve to a list of `org.nuxeo.ecm.core.api.SortInfo` instances, or a list of map items using keys `sortColumn` (with a String value) and `sortAscending` (with a boolean value).
 
-###### quickFilter elements
+#### quickFilter elements
 
 Since version 8.10, the `quickFilter` element enables to refine the results obtained by a search. There can be any number of `quickFilter` elements. Each quick filter is composed of a `clause` element which enables to extend the query, and additional `sort` elements.  
 The quick filters appears in the interface as buttons where each action on a button enables or disables its associated quick filter.
 In the previous example, activating "myQuickFilter" will display the children of the current document with the titles "Title1" or "Title2". The search results will be ordered by creator.
 
-###### pageSize elements
+#### pageSize elements
 
 The `pageSize` element defines the default page size, it can also be changed later. The `pageSizeBinding` element can also be defined: it can resolve an EL expression in case the page size is held by a third party instance (document, Seam component...), and will be used instead of the default page size if not null.
 
 The optional `maxPageSize` element can be placed at the same level than `pageSize`. It makes it possible to define the maximum page size so that the content view does not overload the server when retrieving a large number of items. When not set, the default value "1000" will be used: even when asking for all the results with a page size with value "0" (when exporting the content view in CSV format for instance), only 1000 items will be returned. This is configurable by [contributing the property `nuxeo.pageprovider.default-max-page-size`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.core.query.properties--configuration) to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
 
-###### {{> anchor 'maxresults'}} maxResults elements
+#### {{> anchor 'maxresults'}} maxResults elements
 
 ![]({{file name='content-view-results-exceed-limit.png'}} ?w=650,border=true)
 
@@ -559,7 +561,7 @@ If you change the Elasticsearch configuration you can adapt the Nuxeo limit by c
 
 {{/callout}}
 
-###### whereClause element
+#### whereClause element
 
 This kind of core query can also perform a more complex form of query, using a document model to store query parameters. Using a document model makes it easy to:
 
@@ -568,12 +570,7 @@ This kind of core query can also perform a more complex form of query, using a d
 
 Here is an example of such a registration:
 
-```html/xml
-<extension target="org.nuxeo.ecm.platform.ui.web.ContentViewService"
-  point="contentViews">
-
-  <contentView name="document_content">
-
+```html/xml 
     <coreQueryPageProvider>
       <property name="coreSession">#{documentManager}</property>
       <property name="maxResults">DEFAULT_NAVIGATION_RESULTS</property>
@@ -611,14 +608,6 @@ Here is an example of such a registration:
       <sort column="dc:title" ascending="true" />
       <pageSize>20</pageSize>
     </coreQueryPageProvider>
-
-    <searchLayout name="document_content_search"
-      filterDisplayType="quick" />
-    <showFilterForm>true</showFilterForm>
-
-    ...
-
-</extension>
 ```
 
 The above definition holds a `whereClause` element, stating the search document type and predicates explaining how the document model properties will be translated into a NXQL query. It can also state a `fixedPart` element that will added as to the query string. This fixed part can also take parameters using the '?' character and `parameter` elements. It can also accept "named parameters", e.g. parameters prefixed by a comma, that can also match the search document model properties (for instance: `SELECT * FROM Document WHERE [dc:title](http://dctitle) = :[searchdoc:title](http://searchdoctitle)` ).
@@ -646,28 +635,27 @@ Attributes `escapeParameters` and `quoteParameters` are also accepted on the `pa
 It might be useful to add the ContentViewDisplay facet (this facet includes the [`content_view_display` schema, using the `cvd` prefix](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp-types/src/main/resources/schemas/content_view_display.xsd)) to the definition of the `AdvandedSearch` document type, when configuring one of the elements described below: `pageSizeBinding`, `sortInfosBinding
 `, `resultColumns` or `resultLayout`.
 
-###### searchDocumentType element
+#### searchDocumentType element
 
 The searchDocumentType element is an alternative way to define the search document type to use on the whereClause element. It's been made available to make it possible to define such a search document model, even if no whereClause is defined. This can be useful when defining [aggregates]({{page page='page-provider-aggregates'}}) without any other filtering, for instance.
 
 Sample usage:
 
 ```xml
-<contentView name="myContentView">
   <coreQueryPageProvider>
     <property name="coreSession">#{documentManager}</property>
     <searchDocumentType>AdvancedSearch</searchDocumentType>
   </coreQueryPageProvider>
-</contentView>
 ```
+{{! /multiexcerpt}}
 
-###### searchLayout element
+#### searchLayout element
 
 The `searchLayout` element defines what layouts needs to be used when rendering the search document model: it will be in charge of displaying the search form. This element accepts a `filterDisplayType` attribute: when set to value `quick`, it will display a form showing only the first row of the layout, visible directly above the content view results. The whole filter form is then displayed in a popup. Otherwise, the default rendering is used, and the filter form is visible in a foldable box.
 
 The `showFilterForm` element makes it possible to show this form above the content view results.
 
-###### waitForExecution element
+#### waitForExecution element
 
 The `waitForExecution` element waits for a boolean value, and defaults to false. When set to true, the query will not be executed right away: this is useful when user has to submit filtering criteria first, when search criteria are presented on the side of the page, for instance. When submitting the filtering form, the content view will be marked as executed (it can also be explicitely marked as executed by using the content view API) and search results will be presented.
 
