@@ -301,19 +301,16 @@ history:
         date: '2010-07-21 18:00'
         message: ''
         version: '1'
-
 ---
 
-## VCS Configuration 
+## VCS Configuration
 
 VCS (Visible Content Store) is the default storage engine for Nuxeo documents.
 
 The following are the options available to configure VCS repository in Nuxeo Platform. They usually go in a file named `default-repository-config.xml`.
 
 {{#> callout type='note' }}
-
-In a standard Nuxeo this file is generated from a template, and many elements or attributes actually take their values from parameters in [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}).
-
+In a standard Nuxeo this file is generated from a template, and many elements or attributes actually take their values from parameters in [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}}).
 {{/callout}}
 
 ### Example File
@@ -382,11 +379,11 @@ This file is for illustration and contains many more options than are necessary 
   activeTimeoutMinutes="5" />
 ```
 
-*   **minPoolSize**: the minimum pool size (default is **0**) (see `nuxeo.vcs.min-pool-size` in `nuxeo.conf`).
-*   **maxPoolSize**: the maximum pool size, above which connections will be refused (default is **20**) (see `nuxeo.vcs.max-pool-size` in `nuxeo.conf`).
-*   **blockingTimeoutMillis**: the maximum time (in milliseconds) the pool will wait for a new connection to be available before deciding that it cannot answer a connection request (pool saturated).
-*   **idleTimeoutMinutes**: the time (in minutes) after which an unused pool connection will be destroyed.
-*   **activeTimeoutMinutes**: the time (in minutes) after which a connection is killed even if it is still active. This is used to avoid connection leaks. This should always be set higher than the Nuxeo transaction timeout.
+- **minPoolSize**: the minimum pool size (default is **0**) (see `nuxeo.vcs.min-pool-size` in [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}})).
+- **maxPoolSize**: the maximum pool size, above which connections will be refused (default is **20**) (see `nuxeo.vcs.max-pool-size` in [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}})).
+- **blockingTimeoutMillis**: the maximum time (in milliseconds) the pool will wait for a new connection to be available before deciding that it cannot answer a connection request (pool saturated).
+- **idleTimeoutMinutes**: the time (in minutes) after which an unused pool connection will be destroyed.
+- **activeTimeoutMinutes**: the time (in minutes) after which a connection is killed even if it is still active. This is used to avoid connection leaks. This should always be set higher than the Nuxeo transaction timeout.
 
 ### Clustering Options
 
@@ -394,9 +391,9 @@ This file is for illustration and contains many more options than are necessary 
 <clustering id="12345" enabled="true" delay="1000" />
 ```
 
-*   **id**: the cluster node id, which must be unique among all cluster nodes connected to the same database.
-*   **enabled**: use **true** to activate Nuxeo clustering (default is **false**, i.e., no clustering) (see `repository.clustering.enabled` in `nuxeo.conf`).
-*   **delay**: a configurable delay in milliseconds between two checks at the start of each transaction, to know if there are any remote invalidations (see `repository.clustering.delay` in `nuxeo.conf`).
+- **id**: the cluster node id, which must be unique among all cluster nodes connected to the same database.
+- **enabled**: use **true** to activate Nuxeo clustering (default is **false**, i.e., no clustering) (see `repository.clustering.enabled` in [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}})).
+- **delay**: a configurable delay in milliseconds between two checks at the start of each transaction, to know if there are any remote invalidations (see `repository.clustering.delay` in [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}})).
 
 ### Column Types
 
@@ -460,9 +457,13 @@ It's possible on select databases to use a more efficient id representation:
 
 The following values for idType are possible:
 
-*   **varchar**: a varchar-based UUID (the default),
-*   **uuid**: a native uuid (only on PostgreSQL ([NXP-4803](https://jira.nuxeo.com/browse/NXP-4803))),
-*   **sequence**: a sequence-based integer (on PostgreSQL ([NXP-10894](https://jira.nuxeo.com/browse/NXP-10894)), Oracle ([NXP-13800](https://jira.nuxeo.com/browse/NXP-13800)), and SQL Server 2012 (not Azure) ([NXP-10912](https://jira.nuxeo.com/browse/NXP-10912))). Instead of just `sequence` you can also use `sequence:your_sequence_name` if you want to use another sequence than the default one (`hierarchy_seq`).
+- **varchar**: a varchar-based UUID (the default),
+- **uuid**: a native uuid (only on PostgreSQL ([NXP-4803](https://jira.nuxeo.com/browse/NXP-4803))),
+- **sequence**: a sequence-based integer on:
+    - PostgreSQL [NXP-10894](https://jira.nuxeo.com/browse/NXP-10894)
+    - Oracle [NXP-13800](https://jira.nuxeo.com/browse/NXP-13800)
+    - SQL Server 2012 (not Azure) [NXP-10912](https://jira.nuxeo.com/browse/NXP-10912).</br>
+    Instead of just `sequence` you can also use `sequence:your_sequence_name` if you want to use another sequence than the default one (`hierarchy_seq`).
 
 When using a sequence, the document ids will be simple incremental small integers instead of randomly-generated UUIDs.
 
@@ -510,19 +511,32 @@ If you set both included and excluded types, only the included types configurati
 </fulltext>
 ```
 
-*   **disabled**: use **true** to disable full-text support. The default is **false**, _i.e._, fulltext enabled.
-*   **searchDisabled**: use **true** to disable VCS full-text search (based on database backend), the full-text extraction is done and [searchable using Elasticsearch]({{page space='NXDOC' page='Moving Load+from+Database+to+Elasticsearch#MovingLoadfromDatabasetoElasticsearch-DeactivatingDatabaseFull-TextSearch'}}). The default is **false**.
-*   **fieldSizeLimit**: used to specify the maximum size of the full-text that is extracted and indexed. The default is **131072**, _i.e._, 128 KB. Use 0 to remove any limit (but this will penalize Elasticsearch indexing).
-*   **analyzer**: a full-text analyzer, the content of this attribute depends on the backend used:
-    *   H2: a Lucene analyzer, for instance `org.apache.lucene.analysis.fr.FrenchAnalyzer`. The default is an English analyzer.
-    *   PostgreSQL: a Text Search configuration, for instance `french`. The default is **english**. See [http://www.postgresql.org/docs/8.3/static/textsearch-configuration.html](http://www.postgresql.org/docs/8.3/static/textsearch-configuration.html)
-    *   Oracle: an Oracle PARAMETERS for full-text, as defined by [http://download.oracle.com/docs/cd/B19306_01/text.102/b14218/cdatadic.htm](http://download.oracle.com/docs/cd/B19306_01/text.102/b14218/cdatadic.htm) (see NXP-4035 for details).
-    *   Microsoft SQL Server: a full-text LANGUAGE, for instance `english`, as defined in [http://msdn.microsoft.com/en-us/library/ms187787(v=SQL.90).aspx](http://msdn.microsoft.com/en-us/library/ms187787(v=SQL.90).aspx). The default is **english**.
-    *   other backends don't have configurable full-text analyzers.
-*   **catalog**: a full-text catalog, the content of this attribute depends on the backend used:
-    *   Microsoft SQL Server: a full-text CATALOG. The default is **nuxeo**.
-    *   other backends don't need a catalog.
+- **disabled**:
+  * The default is `false`, _i.e._, fulltext enabled.
+  * Use `true` to disable full-text support.
 
+
+- **searchDisabled**:
+  - The default is `false`.
+  - Use `true` to disable VCS full-text search (based on database backend), the full-text extraction is done and [searchable using Elasticsearch]({{page version='' space='nxdoc' page='moving-load-from-database-to-elasticsearch'}}#deactivating-database-full-text-search).
+
+
+- **fieldSizeLimit**: used to specify the maximum size of the full-text that is extracted and indexed.
+  - The default is `131072`, _i.e._, 128 KB.
+  - Use 0 to remove any limit (but this will penalize Elasticsearch indexing).
+
+
+- **analyzer**: a full-text analyzer, the content of this attribute depends on the backend used:
+  - H2: a Lucene analyzer, for instance `org.apache.lucene.analysis.fr.FrenchAnalyzer`. The default is an English analyzer.
+  - PostgreSQL: a Text Search configuration, for instance `french`. The default is **english**. See [the PostgreSQL documentation](http://www.postgresql.org/docs/8.3/static/textsearch-configuration.html)
+  - Oracle: an Oracle PARAMETERS for full-text, as defined by the [Oracle Text Indexing Elements](http://download.oracle.com/docs/cd/B19306_01/text.102/b14218/cdatadic.htm) (see [NXP-4035](https://jira.nuxeo.com/browse/NXP-4035) for details).
+  - Microsoft SQL Server: a full-text LANGUAGE, for instance `english`, as defined in the [Microsoft Documentation](https://docs.microsoft.com/en-us/sql/t-sql/queries/contains-transact-sql). The default is `english`.
+  - other backends don't have configurable full-text analyzers.
+
+
+- **catalog**: a full-text catalog, the content of this attribute depends on the backend used:
+  - Microsoft SQL Server: a full-text CATALOG. The default is `nuxeo`.
+  - other backends don't need a catalog.
 Full-text indexes are queried in NXQL through the `ecm:fulltext` pseudo-field. A non-default index "foo" can be queried using `ecm:fulltext_foo`.
 
 If no `<index>` elements are present, then a **default** index with all string and blob fields is used.
@@ -543,35 +557,35 @@ If no `<index>` elements are present, then a **default** index with all string a
 </fulltext>
 ```
 
-*   index **name**: the name of the index. The default is **default**.
-*   index **analyzer**: a full-text analyzer just for this index. See full-text options above for details.
-*   index **catalog**: a full-text catalog just for this index. See full-text options above for details.
-*   **fieldType**: **string** or **blob**, the default being both. This selects all these fields for indexing.
-*   **field**: the name of a field that should be selected for indexing.
-*   **excludeField**: the name of a field that should not be in the index.
+- index **name**: the name of the index. The default is **default**.
+- index **analyzer**: a full-text analyzer just for this index. See full-text options above for details.
+- index **catalog**: a full-text catalog just for this index. See full-text options above for details.
+- **fieldType**: **string** or **blob**, the default being both. This selects all these fields for indexing.
+- **field**: the name of a field that should be selected for indexing.
+- **excludeField**: the name of a field that should not be in the index.
 
 If no `<fieldType>`, `<field>` or `<excludeField>` are present, then all string and blob fields are used.
 
 ### Optimizations
 
-*   **pathOptimizations enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), it is possible to disable the path-based optimizations by using **false**. The default is **true**, _i.e._ path optimizations enabled.
+- **pathOptimizations enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), it is possible to disable the path-based optimizations by using **false**. The default is **true**, _i.e._ path optimizations enabled.
     ```xml
     <pathOptimizations enabled="false"/>
     ```
 
-*   **aclOptimization enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), you can disable the read ACL optimizations by using **false**. The default is **true**, _i.e._ ACL optimizations enabled.
+- **aclOptimization enabled**: for PostgreSQL, Oracle and MS SQL Server (and H2), you can disable the read ACL optimizations by using **false**. The default is **true**, _i.e._ ACL optimizations enabled.
     ```xml
     <aclOptimizations enabled="false"/>
     ```
 
-*   **aclOptimizations readAclMaxSize**: can be set to define the size of the largest ACL for a document; this may be useful if you have mostly assigned permissions to a lot of users instead of using groups (do not set this attribute if you disable ACL optimizations).
+- **aclOptimizations readAclMaxSize**: can be set to define the size of the largest ACL for a document; this may be useful if you have mostly assigned permissions to a lot of users instead of using groups (do not set this attribute if you disable ACL optimizations).
 
-*   In case the user/group names in your directories contains the separator character used in the Read ACL cache, you can change this value using the attribute `usersSeparator`. The default depends on the database, it may be `,` (for H2 and PostgreSQL) or `|` (for Oracle and SQL Server).
+- In case the user/group names in your directories contains the separator character used in the Read ACL cache, you can change this value using the attribute `usersSeparator`. The default depends on the database, it may be `,` (for H2 and PostgreSQL) or `|` (for Oracle and SQL Server).
     ```xml
     <usersSeparator key="," />
     ```
 
-*   If you change this value on an existing database, you will need to rebuild the ACL cache with the SQL command:
+- If you change this value on an existing database, you will need to rebuild the ACL cache with the SQL command:
     ```sql
     SELECT nx_rebuild_read_acls();
     ```
@@ -584,18 +598,18 @@ If no `<fieldType>`, `<field>` or `<excludeField>` are present, then all string 
 
 The `<ddlMode>` specifies how the DDL (Data Definition Language) for repository initialization should be executed at startup. DDL includes:
 
-*   `CREATE TABLE`, `CREATE INDEX`, `ALTER TABLE ADD CONSTRAINT` for a new schema or complex property,
-*   `ALTER TABLE ADD column` for a new property in a schema,
-*   `CREATE FUNCTION`, `CREATE PROCEDURE`, `CREATE TRIGGER` for VCS internal stored procedures and migration steps.
+- `CREATE TABLE`, `CREATE INDEX`, `ALTER TABLE ADD CONSTRAINT` for a new schema or complex property,
+- `ALTER TABLE ADD column` for a new property in a schema,
+- `CREATE FUNCTION`, `CREATE PROCEDURE`, `CREATE TRIGGER` for VCS internal stored procedures and migration steps.
 
 Depending on the chosen mode, the DDL to be executed may not be executed at all and instead dumped to the file `log/ddl-vcs-default.sql`. The possible values are:
 
-*   **ignore**: no DDL detected or executed.
-*   **compat**: compatibility mode with previous version, always executes DDL that recreates stored procedures (and does not attempt to detect existing ones).
-*   **execute**: executes the DDL and starts Nuxeo normally.
-*   **dump**: dump the DDL (if any) to the file but still executes it and starts Nuxeo normally.
-*   **dump,ignore**: dump the DDL (if any) to the file but does not execute it and starts Nuxeo normally (will likely result in errors).
-*   **dump,abort**: dumps the DDL (if any) to the file, and if not empty aborts startup.
+- **ignore**: no DDL detected or executed.
+- **compat**: compatibility mode with previous version, always executes DDL that recreates stored procedures (and does not attempt to detect existing ones).
+- **execute**: executes the DDL and starts Nuxeo normally.
+- **dump**: dump the DDL (if any) to the file but still executes it and starts Nuxeo normally.
+- **dump,ignore**: dump the DDL (if any) to the file but does not execute it and starts Nuxeo normally (will likely result in errors).
+- **dump,abort**: dumps the DDL (if any) to the file, and if not empty aborts startup.
 
 For Nuxeo 6.0-HF24+ and Nuxeo 7.10-HF01+ the default is **compat**. For Nuxeo 8.1 and above the default is **execute**.
 
@@ -621,60 +635,60 @@ SQL statements have to be separated from every other by a **blank line**.
 
 A statement may be preceded by one or more **tag** lines, which are lines starting with **`#SOMETAG:`** (including the final colon), and may be:
 
-*   `#CATEGORY:` defines the category for all future statements, until a new category is defined. See below for the use of categories.
-*   `#TEST:` specifies that the following statement returns a certain number of rows, and if that number of rows is 0 then the variable `emptyResult` will be set to true, otherwise it will be set to false.
-*   `#SET_IF_EMPTY: variable` or `#SET_IF_NOT_EMPTY: variable` will set the specified variable to true if the following statement returns an empty (or not empty) set of rows. If the condition is not met, the variable is not changed.
-*   `#IF: condition` conditions execution of the single following statement on the value of the condition. A condition can be `variable` or `! variable` for negation. Several `#IF:` tags may be used in a row (in different lines), and they are effectively ANDed together.
-*   `#IF: condition OR: othercondition OR: anothercondition` allows to OR several conditions.
-*   `#PROC: somename` specifies that the following SQL is a `CREATE FUNCTION`, `CREATE PROCEDURE` or `CREATE TRIGGER` for the given name, and that an attempt to detect whether it is already present to avoid re-creation should be done. This is used when DDL is dumped through `<ddlMode>`.
+- `#CATEGORY:` defines the category for all future statements, until a new category is defined. See below for the use of categories.
+- `#TEST:` specifies that the following statement returns a certain number of rows, and if that number of rows is 0 then the variable `emptyResult` will be set to true, otherwise it will be set to false.
+- `#SET_IF_EMPTY: variable` or `#SET_IF_NOT_EMPTY: variable` will set the specified variable to true if the following statement returns an empty (or not empty) set of rows. If the condition is not met, the variable is not changed.
+- `#IF: condition` conditions execution of the single following statement on the value of the condition. A condition can be `variable` or `! variable` for negation. Several `#IF:` tags may be used in a row (in different lines), and they are effectively ANDed together.
+- `#IF: condition OR: othercondition OR: anothercondition` allows to OR several conditions.
+- `#PROC: somename` specifies that the following SQL is a `CREATE FUNCTION`, `CREATE PROCEDURE` or `CREATE TRIGGER` for the given name, and that an attempt to detect whether it is already present to avoid re-creation should be done. This is used when DDL is dumped through `<ddlMode>`.
 
 The following boolean variables are predefined by Nuxeo and the various database dialects, and may be used in `#IF:` tags:
 
-*   `emptyResult`: true if the previous `#TEST:` statement returned no row,
-*   `fulltextEnabled`: true if full-text is enabled,
-*   `fulltextSearchEnabled`: true if full-text search is enabled,
-*   `clusteringEnabled`: true if clustering is enabled,
-*   `aclOptimizationsEnabled`: true if ACL optimizations are enabled,
-*   `pathOptimizationsEnabled`: true if path optimizations are enabled,
-*   `proxiesEnabled`: true if proxies are enabled,
-*   `softDeleteEnabled`: true if soft delete is enabled,
-*   `sequenceEnabled`: true if sequence-based ids are enabled.
+- `emptyResult`: true if the previous `#TEST:` statement returned no row,
+- `fulltextEnabled`: true if full-text is enabled,
+- `fulltextSearchEnabled`: true if full-text search is enabled,
+- `clusteringEnabled`: true if clustering is enabled,
+- `aclOptimizationsEnabled`: true if ACL optimizations are enabled,
+- `pathOptimizationsEnabled`: true if path optimizations are enabled,
+- `proxiesEnabled`: true if proxies are enabled,
+- `softDeleteEnabled`: true if soft delete is enabled,
+- `sequenceEnabled`: true if sequence-based ids are enabled.
 
 Note that not all dialects define all variables, consult the specific dialect code or the standard Nuxeo SQL init file to know more.
 
 SQL statements are regular SQL statements and will be executed as-is by the database, with variable substitution (see below). Depending on the dialect, it may or may not be necessary of forbidden to end some kinds of statement with a semicolon, please consult the standard Nuxeo SQL init file for the dialect to be sure. Note also that when writing multi-line stored procedures, you must not include a blank line for readability, as this blank line would be interpreted as the end of the whole multi-line SQL statement.
 
-The following variables provide additional dialect-specific values that may be used in SQL statements using the variable substitution syntax **`${variablename}`**:
+The following variables provide additional dialect-specific values that may be used in SQL statements using the variable substitution syntax `${variablename}`:
 
-*   `idType`: the SQL type used for ids,
-*   `idTypeParam`: the SQL type used for ids in stored procedures (not all dialects use this),
-*   `idSequenceName`: when sequence-based ids are enabled, the name of the sequence to use,
-*   `idNotPresent`: a representation of a "marker" id to use in stored procedures to represent a non-existent id,
-*   `fulltextAnalyzer`: the full-text analyzer defined in the repository configuration.
+- `idType`: the SQL type used for ids,
+- `idTypeParam`: the SQL type used for ids in stored procedures (not all dialects use this),
+- `idSequenceName`: when sequence-based ids are enabled, the name of the sequence to use,
+- `idNotPresent`: a representation of a "marker" id to use in stored procedures to represent a non-existent id,
+- `fulltextAnalyzer`: the full-text analyzer defined in the repository configuration.
 
 A few pseudo-SQL statements can be used to provide addition logging actions:
 
-*   `LOG.DEBUG message`: logs the message at DEBUG level in the standard logger,
-*   `LOG.INFO message`: logs the message at INFO level in the standard logger,
-*   `LOG.ERROR message`: logs the message at ERROR level in the standard logger,
-*   `LOG.FATAL message`: logs the message at FATAL level in the standard logger and throws an exception that will stop database initialization and make it unusable by Nuxeo.
+- `LOG.DEBUG message`: logs the message at DEBUG level in the standard logger,
+- `LOG.INFO message`: logs the message at INFO level in the standard logger,
+- `LOG.ERROR message`: logs the message at ERROR level in the standard logger,
+- `LOG.FATAL message`: logs the message at FATAL level in the standard logger and throws an exception that will stop database initialization and make it unusable by Nuxeo.
 
 To initialize the database, the statements of the following categories are executed in this order:
 
-*   `first`
-*   `beforeTableCreation`
-*   (at this point Nuxeo does a CREATE or ALTER on the tables based on the Nuxeo Schema definitions)
-*   `afterTableCreation`
-*   `last`
+- `first`
+- `beforeTableCreation`
+    (at this point Nuxeo does a CREATE or ALTER on the tables based on the Nuxeo Schema definitions)
+- `afterTableCreation`
+- `last`
 
 The following categories are executed in special circumstances:
 
-*   `addClusterNode`: when creating a cluster node,
-*   `removeClusterNode`: when shutting down a cluster node.
+- `addClusterNode`: when creating a cluster node,
+- `removeClusterNode`: when shutting down a cluster node.
 
 ## DBS Configuration
 
-For a [DBS]({{page page='dbs'}}) (Document-Based Storage) configuration, you need to contribute to the extension point `repository` of the component `org.nuxeo.ecm.core.storage.mongodb.MongoDBRepositoryService`: 
+For a [DBS]({{page page='dbs'}}) (Document-Based Storage) configuration, you need to contribute to the extension point `repository` of the component `org.nuxeo.ecm.core.storage.mongodb.MongoDBRepositoryService`:
 
 ```xml
 <?xml version="1.0"?>
