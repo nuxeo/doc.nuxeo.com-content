@@ -16,7 +16,7 @@ tree_item_index: 200
 
 Here is a schema showing the client-side architecture:
 
-![]({{file name='drive-client-side-architecture.png'}} ?w=650,border=true)
+![]({{file name='drive-client-side-architecture.png' page='nuxeo-drive'}} ?w=650)
 
 **CommandLine**
 
@@ -94,7 +94,7 @@ QT is heavily used in the new client. Here is a diagram of the signals/slots con
 
 ## Nuxeo Drive Security Informations
 
-We recommend you to always have a up-to-date version of Nuxeo Drive
+We recommend you to always have a up-to-date version of Nuxeo Drive.
 
 ### Authentication Flow
 
@@ -102,7 +102,7 @@ Nuxeo Drive use a token-based authentication. It first authenticates the user th
 
 Once the authentication is done, Nuxeo generates a token and sends it to the Drive module.
 
-![]({{file page='nuxeo-drive' name='drive-auth.svg'}} ?w=650,border=true)
+![]({{file name='drive-auth.svg' page='nuxeo-drive'}} ?w=650)
 <!--
 sequenceDiagram
 opt Authentication

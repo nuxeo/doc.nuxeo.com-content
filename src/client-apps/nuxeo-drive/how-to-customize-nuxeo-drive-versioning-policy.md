@@ -107,7 +107,6 @@ For example, to create a major version if the document is modified 30 minutes af
 
 ## How to Change Nuxeo Drive Versioning Policy
 
-
 If you need to make more changes on the versioning mechanism in Nuxeo Drive, you can write your own implementation of the [VersioningPolicyFilter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/versioning/VersioningPolicyFilter.html) interface, and contribute it to the [filters](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--filters) extension point.
 
 
