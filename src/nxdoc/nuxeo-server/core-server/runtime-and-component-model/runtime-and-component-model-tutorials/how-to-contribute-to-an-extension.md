@@ -1,5 +1,5 @@
 ---
-title: How to Contribute to an Extension
+title: 'HOWTO: Contribute to an Extension'
 description: Learn how to create an XML extension in Nuxeo Studio, with the Nuxeo CLI and how to override a Nuxeo contribution.
 review:
   comment: ''

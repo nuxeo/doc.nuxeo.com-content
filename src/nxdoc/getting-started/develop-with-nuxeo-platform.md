@@ -1,6 +1,6 @@
 ---
 title: Develop with Nuxeo Platform
-description: This tutorial takes a contract's start date and add three months to it, but you can think of integrating any custom logic in your Java class.
+description: Learn how to start working and developing with Nuxeo CLI.
 review:
     comment: ''
     date: '2017-12-15'
@@ -410,8 +410,8 @@ history:
         date: '2014-11-06 12:25'
         message: ''
         version: '1'
-
 ---
+
 Here we want to add some server side Java logic that will update the contract's renegotiation date. In our example it will simply take the contract's start date and add three months to it, but you can think of integrating any custom logic in your Java class, including a connection to an external webservice or an ERP.
 
 {{#> callout type='info'}}

@@ -1,6 +1,6 @@
 ---
 title: UI Feature Comparison
-description: This page list the features available on the Nuxeo Platform, either directly in the default distribution (Nuxeo Server) or using addons.
+description: This page lists the features available on the Nuxeo Platform, either directly in the default distribution (Nuxeo Server) or using addons.
 review:
     comment: ''
     date: '2018-02-26'
@@ -222,9 +222,14 @@ history:
         date: '2014-11-04 21:30'
         message: ''
         version: '1'
-
 ---
-This page list the features available on the Nuxeo Platform, either directly in the default distribution (Nuxeo Server) or using addons. It provides links to the relevant documentation and indicates if the features are available without any UI (through the REST API), in [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui) or in [Nuxeo Web UI]({{page page='web-ui'}}).
+
+This page lists the features available on the Nuxeo Platform, either directly in the default distribution (Nuxeo Server) or using addons. It provides links to the relevant documentation and indicates if the features are available without any UI (through the REST API), in [Nuxeo JSF UI](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui) or in [Nuxeo Web UI]({{page page='web-ui'}}).
+
+{{#> callout type='warning' }}
+
+The JSF UI addon has been deprecated since Nuxeo Platform LTS 2019 (10.10).
+{{/callout}}
 
 The tables below use the following notation:
 - &#10003;: Available
