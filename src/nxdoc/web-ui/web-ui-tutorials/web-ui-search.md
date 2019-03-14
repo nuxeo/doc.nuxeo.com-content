@@ -123,6 +123,17 @@ Let's configure the **results** layout now.
 1. Click on **results**, then **Configure**.
 1. It automatically creates the result view by default. Leave it like this and click on **Save**.
 
+You now need to add your labels to your translations file to display them correctly in the UI. To do so:
+
+1. Click on the **UI** table.
+1. Click on **Translations**.
+1. Use the default `messages.json` or create your own language.
+1. Create a new entry in the JSON file with key `label.ui.aggregate.<label>` and the label as value. Here it's:
+    - `"label.ui.aggregate.from_now-1y_to_now-1M":"Last year"`
+    - `"label.ui.aggregate.from_now-1M_to_now-7d":"Last month"`
+    - `"label.ui.aggregate.from_now-7d_to_now-24H":"Last week"`
+    - `"label.ui.aggregate.from_now-24H_to_now":"Last 24H"`
+
 ## Create a New Left Menu Item
 
 The next step is to add a button in the left menu to display the search screen.
