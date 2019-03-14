@@ -2,13 +2,14 @@
 title: Garbage-Collecting Orphaned Binaries
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2019-03-14'
     status: ok
 labels:
     - lts2016-ok
     - delete
     - fguillaume
     - lts2017-ok
+    - lts2019-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950318'
@@ -69,15 +70,7 @@ The binary files attached to documents are not stored in the database but using 
 
 Binary files are not immediately deleted when their containing document is deleted because the binary store uses a de-duplication strategy which means that the same binary file may be referenced by several documents. To avoid complex locking or reference counting strategies, they are simply garbage-collected when there remains no reference to them (they are orphaned).
 
-## Manually - Using the Web interface
-
-The garbage collection is done by an explicit administration step:
-
-1.  In the JSF UI go to **Admin** > **System Information** > **Repository binaries**.
-2.  Check the **Delete orphaned binaries** check box. If you just want to gather statistics about what it going to be deleted, don't check this box and go to next step.
-3.  Click on **Mark orphaned binaries**.
-
-## Programmatically - Using the Nuxeo Shell or Java Code
+## Usage with the Nuxeo Shell or Java Code
 
 ```java
 import org.nuxeo.ecm.core.blob.DocumentBlobManager;
