@@ -429,8 +429,8 @@ history:
         date: '2010-07-28 17:54'
         message: ''
         version: '1'
-
 ---
+
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{#> callout type='info' }}
@@ -443,13 +443,13 @@ Content Views can be configured using Studio, check out the [Content Views]({{pa
 A content view is a notion to define all the elements needed to get a list of items and perform their rendering. The most obvious use case is the listing of a folderish document content, where we would like to be able to perform several actions.
 {{! /excerpt}}
 
-*   Defining the NXQL query that will be used to retrieve the documents, filtering some of them (documents in the trash for instance).
-*   Passing on contextual parameters to the query (the current container identifier).
-*   Defining a filtering form to refine the query.
-*   Defining what columns will be used for the rendering of the list, and how to display their content.
-*   Handling selection of documents, and actions available when selecting them (copy, paste, delete...).
-*   Handling sorting and pagination.
-*   Handling caching, and refresh of this cache when a document is created, deleted, modified, etc.
+- Defining the NXQL query that will be used to retrieve the documents, filtering some of them (documents in the trash for instance).
+- Passing on contextual parameters to the query (the current container identifier).
+- Defining a filtering form to refine the query.
+- Defining what columns will be used for the rendering of the list, and how to display their content.
+- Handling selection of documents, and actions available when selecting them (copy, paste, delete...).
+- Handling sorting and pagination.
+- Handling caching, and refresh of this cache when a document is created, deleted, modified, etc.
 
 The Nuxeo Content View framework makes it possible to define such an object, by registering content views to the service. Here is a sample contribution, that will display the children of the current document:
 
@@ -510,13 +510,13 @@ The Nuxeo Content View framework makes it possible to define such an object, by 
 
 ### The Content View Query
 
-#### coreQueryPageProvider element
+#### coreQueryPageProvider Element
 
 The `coreQueryPageProvider` element makes it possible to define what query will be performed. Here it is a query on a core session, using a pattern with one parameter.
 
 {{! multiexcerpt name='page_provider_parameters'}}
 
-#### parameter and property elements
+#### parameter and property Elements
 
 The `coreQueryPageProvider` element accepts any number of property elements, defining needed context variables for the page provider to perform its work. The `coreSession` property is mandatory for a core query to be processed and is bound to the core session proxy named `documentManager` available in a default Nuxeo application.
 
@@ -524,53 +524,51 @@ It also accepts any number of `parameter` elements, where order of definition ma
 
 The main difference between `properties` and `parameters` is that properties will not be recomputed when refreshing the provider, whereas parameters will be. Properties will only be recomputed when resetting the provider.
 
-#### sort elements
+#### sort Element
 
 The `sort` element defines the default sort, that can be changed later through the interface. There can be any number of `sort` elements. The `sortInfosBinding` element can also be defined: it can resolve an EL expression in case the sort infos are held by a third party instance (document, Seam component...) and will be used instead of the default sort information if not null or empty. The EL expression can either resolve to a list of `org.nuxeo.ecm.core.api.SortInfo` instances, or a list of map items using keys `sortColumn` (with a String value) and `sortAscending` (with a boolean value).
 
-#### quickFilter elements
+#### quickFilter Element
 
 Since version 8.10, the `quickFilter` element enables to refine the results obtained by a search. There can be any number of `quickFilter` elements. Each quick filter is composed of a `clause` element which enables to extend the query, and additional `sort` elements.  
 The quick filters appears in the interface as buttons where each action on a button enables or disables its associated quick filter.
 In the previous example, activating "myQuickFilter" will display the children of the current document with the titles "Title1" or "Title2". The search results will be ordered by creator.
 
-#### pageSize elements
+#### pageSize Element
 
 The `pageSize` element defines the default page size, it can also be changed later. The `pageSizeBinding` element can also be defined: it can resolve an EL expression in case the page size is held by a third party instance (document, Seam component...), and will be used instead of the default page size if not null.
 
 The optional `maxPageSize` element can be placed at the same level than `pageSize`. It makes it possible to define the maximum page size so that the content view does not overload the server when retrieving a large number of items. When not set, the default value "1000" will be used: even when asking for all the results with a page size with value "0" (when exporting the content view in CSV format for instance), only 1000 items will be returned. This is configurable by [contributing the property `nuxeo.pageprovider.default-max-page-size`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.core.query.properties--configuration) to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
 
-#### {{> anchor 'maxresults'}} maxResults elements
+#### {{> anchor 'maxresults'}} maxResults Element
 
 ![]({{file name='content-view-results-exceed-limit.png'}} ?w=650,border=true)
 
 To set this limit you need to add a `maxResults` parameter to `coreQueryPageProvider`, either using an integer value or one of the following keywords:
 
-*   `DEFAULT_NAVIGATION_RESULTS`: Used by most of the navigation page provider. The default is 200 and it can be overridden by [contributing the property `org.nuxeo.ecm.platform.query.nxql.defaultNavigationResults`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.query.api.PageProviderService--configuration) to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
+- `DEFAULT_NAVIGATION_RESULTS`: Used by most of the navigation page provider. The default is 200 and it can be overridden by [contributing the property `org.nuxeo.ecm.platform.query.nxql.defaultNavigationResults`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.query.api.PageProviderService--configuration) to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
 
-*   `PAGE_SIZE`: this is useful when you are interested in a single page or if you don't need a total count.
+- `PAGE_SIZE`: this is useful when you are interested in a single page or if you don't need a total count.
 
 {{#> callout type='info' }}
-
 Note that when using an Elasticsearch page provider, the `maxResults` limit is not taken in account because the total number of results is always available.
 
 For performance reason by default Elasticsearch does not allow you to do unlimited deep scrolling on results.
 Only the `index.max_result_window` results (which defaults to 10000) are accessible. Content view will not allow you to access pages out of this window to prevent errors.
 
 If you change the Elasticsearch configuration you can adapt the Nuxeo limit by contributing the property `org.nuxeo.elasticsearch.provider.maxResultWindow` to the [Configuration service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
-
 {{/callout}}
 
-#### whereClause element
+#### whereClause Element
 
 This kind of core query can also perform a more complex form of query, using a document model to store query parameters. Using a document model makes it easy to:
 
-*   use a layout to display the form that will define query parameters;
-*   save this document in the repository, so that the same query can be replayed when viewing this document.
+- use a layout to display the form that will define query parameters;
+- save this document in the repository, so that the same query can be replayed when viewing this document.
 
 Here is an example of such a registration:
 
-```html/xml 
+```html/xml
     <coreQueryPageProvider>
       <property name="coreSession">#{documentManager}</property>
       <property name="maxResults">DEFAULT_NAVIGATION_RESULTS</property>
@@ -614,9 +612,9 @@ The above definition holds a `whereClause` element, stating the search document 
 
 The `fixedPart` element also accepts attributes to better control its behavior:
 
-*   `statement` makes is possible to declare the select statement to use (as contrary to the `pattern` element, the `fixedPart` element is not supposed to hold the select statement). This optional parameter default to "Select * from document" for default core page providers.
-*   `escapeParameters` is a boolean value that allows to avoid escaping parameters when building the fixed part (defaults to true).
-*   `quoteParameters` is a boolean value that allows to avoid adding quotes around the parameter (defaults to true). This is useful when parameters actually hold a complete predicate, for instance (and in this case, the `escapeParameters` element must also be set to true.
+- `statement` makes is possible to declare the select statement to use (as contrary to the `pattern` element, the `fixedPart` element is not supposed to hold the select statement). This optional parameter default to "Select * from document" for default core page providers.
+- `escapeParameters` is a boolean value that allows to avoid escaping parameters when building the fixed part (defaults to true).
+- `quoteParameters` is a boolean value that allows to avoid adding quotes around the parameter (defaults to true). This is useful when parameters actually hold a complete predicate, for instance (and in this case, the `escapeParameters` element must also be set to true.
 
 {{#> callout type='info' }}
 
@@ -635,7 +633,7 @@ Attributes `escapeParameters` and `quoteParameters` are also accepted on the `pa
 It might be useful to add the ContentViewDisplay facet (this facet includes the [`content_view_display` schema, using the `cvd` prefix](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp-types/src/main/resources/schemas/content_view_display.xsd)) to the definition of the `AdvandedSearch` document type, when configuring one of the elements described below: `pageSizeBinding`, `sortInfosBinding
 `, `resultColumns` or `resultLayout`.
 
-#### searchDocumentType element
+#### searchDocumentType Element
 
 The searchDocumentType element is an alternative way to define the search document type to use on the whereClause element. It's been made available to make it possible to define such a search document model, even if no whereClause is defined. This can be useful when defining [aggregates]({{page page='page-provider-aggregates'}}) without any other filtering, for instance.
 
@@ -649,15 +647,15 @@ Sample usage:
 ```
 {{! /multiexcerpt}}
 
-#### searchLayout element
+#### searchLayout Element
 
 The `searchLayout` element defines what layouts needs to be used when rendering the search document model: it will be in charge of displaying the search form. This element accepts a `filterDisplayType` attribute: when set to value `quick`, it will display a form showing only the first row of the layout, visible directly above the content view results. The whole filter form is then displayed in a popup. Otherwise, the default rendering is used, and the filter form is visible in a foldable box.
 
 The `showFilterForm` element makes it possible to show this form above the content view results.
 
-#### waitForExecution element
+#### waitForExecution Element
 
-The `waitForExecution` element waits for a boolean value, and defaults to false. When set to true, the query will not be executed right away: this is useful when user has to submit filtering criteria first, when search criteria are presented on the side of the page, for instance. When submitting the filtering form, the content view will be marked as executed (it can also be explicitely marked as executed by using the content view API) and search results will be presented.
+The `waitForExecution` element waits for a boolean value, and defaults to false. When set to true, the query will not be executed right away: this is useful when user has to submit filtering criteria first, when search criteria are presented on the side of the page, for instance. When submitting the filtering form, the content view will be marked as executed (it can also be explicitly marked as executed by using the content view API) and search results will be presented.
 
 The `waitForExecutionSentence` element can also be used to customize the text presented to the user when the content view is not executed yet. Note that the sentence will be translated if the `translateEmptySentence` element is set to true.
 
@@ -696,7 +694,7 @@ Note that default actions usually hard-code their usage of a given selection lis
 
 ### Additional Configuration
 
-###### searchDocument
+#### searchDocument
 
 The `searchDocument` variable can be used in EL expressions to bind the page size, the sort information and the result columns to the search document properties.
 
@@ -744,7 +742,7 @@ Sample usage, showing how to add a clause to the search depending on title set o
 
 ```
 
-###### resultColumns element
+#### resultColumns Element
 
 The `resultColumns` element can be filled on a content view using an EL expression: it will be used to resolve the list of selected columns for the current result layout. If several result layouts are defined, they should be configured so that their rows are always selected in case the selected column names do not match theirs.
 
@@ -760,7 +758,7 @@ Sample usage, showing how to reuse selected columns set on the search document m
 
 ```
 
-###### resultLayout element
+#### resultLayout Element
 
 The `resultLayout` element can be filled on a content view using an EL expression: it will be used to resolve the current result layout.
 
@@ -775,7 +773,7 @@ Sample usage, showing how to reuse the selected result layout set on the search 
 </contentView>
 ```
 
-###### Additional rendering information
+#### Additional Rendering Information
 
 Additional rendering information can also be set, to be used by templates when rendering the content view:
 

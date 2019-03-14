@@ -168,12 +168,10 @@ history:
         date: '2011-04-26 17:28'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 Page providers allow retrieving items with pagination facilities, they can be used in a non-UI context like event listeners or core services.
-
 {{! /excerpt}}
 
 {{#> callout type='info'}}
@@ -186,10 +184,10 @@ Watch the related courses on Nuxeo University
 
 Page provider offers many advantages comparing to hard coded NXQL queries:
 
-*   Pagination logics do not have to be coded again, the `AbstractPageProvider` implementation already offers corresponding logics.
-*   Code duplication can be prevented, by re-using registered page providers.
-*   Overriding an existing page provider definition is easy.
-*   The default implementation (`CoreQueryDocumentPageProvider`) that handles Nuxeo documents can be [switched from VCS (database) to Elasticsearch]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}) by just setting a configuration in the `nuxeo.conf` file.
+- Pagination logics do not have to be coded again, the `AbstractPageProvider` implementation already offers corresponding logics.
+- Code duplication can be prevented, by re-using registered page providers.
+- Overriding an existing page provider definition is easy.
+- The default implementation (`CoreQueryDocumentPageProvider`) that handles Nuxeo documents can be [switched from VCS (database) to Elasticsearch]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}) by just setting a configuration in the `nuxeo.conf` file.
 *   When using Elasticsearch, page providers support [aggregation features]({{page page='page-provider-aggregates'}}).
 
 Here is a sample page provider definition:
@@ -214,7 +212,7 @@ Here is a sample page provider definition:
 
 A typical usage of this page provider would be:
 
-```java
+```
 PageProviderService ppService = Framework.getService(PageProviderService.class);
 Map<String, Serializable> props = new HashMap<>();
 props.put(CoreQueryDocumentPageProvider.CORE_SESSION_PROPERTY, (Serializable) coreSession);
@@ -271,7 +269,7 @@ The properties can be defined as EL expressions and make it possible for the que
 
 ## Use Cases
 
-#### Using Query Parameters and 'IN' Operator
+### Using Query Parameters and 'IN' Operator
 
 By passing query String list parameters:
 
@@ -305,7 +303,7 @@ SELECT * FROM Document WHERE ecm:mixinType != 'HiddenInNavigation' AND ecm:isVer
 
 &nbsp;
 
-#### Using Named Parameters and Dates with Automation
+### Using Named Parameters and Dates with Automation
 
 By setting quoteParameters to false:
 
