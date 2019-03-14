@@ -7,6 +7,8 @@ review:
 labels:
     - lts2016-ok
     - nuxeo-drive
+    - mchoentgen
+    - lklein
     - yachour
     - multiexcerpt
     - lts2017-ok
@@ -93,60 +95,136 @@ history:
 ---
 {{! multiexcerpt name='update_site_page_content'}}
 
-Since version 1.3.0611, Nuxeo Drive is able to update itself with a newer or an older version (such a downgrade can be required if the version of the Nuxeo server Nuxeo Drive is connected to is too old for the client version). This is very useful as it allows the user to keep the application up-to-date without having to manually install a new version.
+We wrote our own auto-update framework knowing:
 
-The update process relies on an update site holding the Nuxeo Drive binary packages for Windows (MSI) and OS X (DMG) as well as available updates for both platforms packaged as ZIP files. This page aims to explain how this update site is structured in case you would like to host your own one to manage the update policy instead of relying on the official [Nuxeo update site](http://community.nuxeo.com/static/drive/).
+- The code freeze is done with PyInstaller;
+- The macOS installer uses OS-specific commands to generate a `.dmg`;
+- The Windows installer uses the Inno Setup Compiler that outputs a single `.exe`.
 
-## Using a Custom Update Site
+Currently, only macOS and Windows are supported.
+There is no built-in support for auto-updater on GNU/Linux.
 
-The update site URL can be customized using the parameter `update-site-url`, its default value being [http://community.nuxeo.com/static/drive/](http://community.nuxeo.com/static/drive/). This parameter can be set up through the command line, a config.ini file or with a registry key for the Nuxeo Drive updater point at the custom site. See the [Nuxeo Drive configuration parameters documentation]({{page page='nuxeo-drive'}}) for more information.
+## Server
 
-Of course this update site will need to have the same structure as the one provided by Nuxeo, for the Nuxeo Drive updater to be able to communicate with it.
+{{#> callout type='warning' }}
+Using a secured server with `HTTPS` access only is **strongly recommended**.
+{{/callout}}
 
-## Update Site Structure
+The server side tree is quite simple:
 
-The Nuxeo Drive update site is currently implemented as a simple directory listing served by Apache and that holds the following items.
+    drive-updates/
+        alpha/
+            nuxeo-drive-2.0.0.13.dmg
+            nuxeo-drive-2.0.0.13.exe
+        beta/
+            nuxeo-drive-3.1.1.dmg
+            nuxeo-drive-3.1.1.exe
+        release/
+            nuxeo-drive-3.1.0.dmg
+            nuxeo-drive-3.1.0.exe
+        nuxeo-drive.dmg
+        nuxeo-drive.exe
+        versions.yml
 
-### Binary Packages
+### Folders
 
-The site must hold the Nuxeo Drive binary packages released for Windows (MSI) and OS X (DMG), for instance: `nuxeo-drive-1.3.0611-win32.msi` and `nuxeo-drive-1.3.0611-osx-10.7.dmg`.
+- `alpha`: early development versions. It can be promoted to beta, in that case files are just **moved** from this folder to the `beta` one.
+- `beta`: all betas that are not releases. If one beta is going to be officially released, files are just **moved** from this folder to the `release` one.
+- `release`: all official releases.
 
-These packages are aimed to be manually downloaded for the first Nuxeo Drive installation, though they can also be used to manually install a newer version in the place of an existing installation of Nuxeo Drive.
+### Files
 
-### Esky Compliant ZIP Files
+- `nuxeo-drive.dmg`: symbolic link to the latest official release for macOS;
+- `nuxeo-drive.exe`: symbolic link to the latest official release for Windows;
+- `versions.yml`: list of available versions and their characteristics (the format used is [YAML](http://yaml.org/)).
 
-It must also hold available updates for both platforms packaged as [esky](https://pypi.python.org/pypi/esky) compliant ZIP files (the auto-update framework for frozen Python applications). They must respect the following pattern:& `<application_name>-x.y.zzzz.<platform>`, for instance: `nuxeo-drive-1.4.0125.win32.zip` and `Nuxeo Drive-1.4.0125.macosx-10_7-x86_64.zip`.
+Example of `version.yml` content:
 
-### Metadata JSON Files
+    2.0.0:
+        min: '5.6'
+        max: 7.10-HF18
+        type: alpha
+        checksum:
+            also: SHA1
+            dmg: ...
+            exe: ...
 
-The update site must also contain JSON files representing the metadata about client and server versions. For instance:
+    3.1.0:
+        min: '7.10'
+        type: release
+        checksum:
+            algo: SHA512
+            dmg: ...
+            exe: ...
 
-*   `1.3.0611.json` holds the minimum Nuxeo server version compatible with Nuxeo Drive 1.3.0611.
-*   `5.9.4.json` holds the minimum client version compatible with a Nuxeo Platform 5.9.4 instance.
+    3.1.1:
+        min: '7.10'
+        type: beta
+        checksum:
+            algo: MD5
+            dmg: ...
+            exe: ...
 
-This is how the Nuxeo Drive updater is able to compute the update status.
+    4.0.0:
+        min: '7.10'
+        type: beta
+        checksum:
+            algo: MD5
+            dmg: ...
+            exe: ...
 
-Let's say the Nuxeo Drive client version is 1.3.0611 and the version of the Nuxeo Platform instance it is connected to is 5.9.4\. It will first read the `5.9.4.json` file to see if the client version is compatible, meaning greater or equal than the `nuxeoDriveMinVersion` element. Let's say `nuxeoDriveMinVersion` is equal to 1.3.0611, we now know that an upgrade to a newer client is not required.
+Each entry describes a version with:
 
-An update could still be available. To figure this out, the updater will check the JSON metadata files of all client versions compatible with the 5.9.4 server version looking for one more recent than 1.3.0611\. Imagine there is a `1.4.0125.json` file with 5.9.4 as a value of the `nuxeoPlatformMinVersion` element. Then, if the update site holds a ZIP file matching the 1.4.0125 version and the client platform, the update status will be `update_available`, allowing Nuxeo Drive to download the ZIP file and launch the update process.
+- `type`: the release type, either an `alpha`, a `beta` or a `release`. **Mandatory**.
+- `checksum`: list of checksums for related files. **Mandatory**.
+  - `algo`: the algorithm used, it must be one of the [hashlib](https://docs.python.org/2/library/hashlib.html) module (will use SHA256 by default).
+  - `dmg`: the checksum of the file `.dmg`. **Mandatory** if you provide a macOS installer.
+  - `exe`: the checksum of the file `.exe`. **Mandatory** if you provide a Windows installer.
+- `min`: the minimum Nuxeo version required for this release to work with. **Mandatory**.
+- `max`: the maximum Nuxeo version required for this release to work with. If not defined, Drive will consider the current Nuxeo version as acceptable to work with.
 
-This means that:
+`min` and `max` can take a Hot Fix (HF) version, helpful to isolate some versions. Defined versions are **inclusive**.
 
-*   **For each Nuxeo Drive version deployed on the update site a JSON metadata file with the corresponding version needs to be deployed** (for instance 1.3.0611.json). It should have the following structure:
+Notes:
 
-    ```
-    {"nuxeoPlatformMinVersion": "5.6"}
-    ```
+- A version not listed can physically exist on the server but the reverse is not true: if a version is listed, files must exist on the server.
+- Versions set **are not effective**. They are listed for information only as there is no way to retrieve the exact server version at the time.
 
-*   **For each Nuxeo Platform version to which Nuxeo Drive might get connected a JSON metadata file with the corresponding version needs to be deployed** (for instance 5.9.4.json). It should have the following structure:
+## Client
 
-    ```
-    {"nuxeoDriveMinVersion": "1.3.0414"}
-    ```
+When setting the `update-site-url` or `beta-update-site-url` parameter, it must point to `https://example.org/drive-updates/`, also:
 
-### Symbolic Links to Packages
+- You do not specify `/beta` or `/release` at the end of the URL, Drive will compute the final URL depending on set options;
+- Of course, if you are using a specific domain name where the tree is at the root, use only `https://example.org/`;
+- The trailing slash is **not** mandatory.
 
-Symbolic links to both packages (MSI and DMG) of the latest Nuxeo Drive version available for a given version of the Nuxeo Platform, for instance in [http://community.nuxeo.com/static/drive/latest/](http://community.nuxeo.com/static/drive/latest/). This is used for the first download of Nuxeo Drive from the Nuxeo Drive tab of the user's Home on the Nuxeo Platform UI. The download links are generated server-side following this pattern: `<update_site_URL>/latest/<Nuxeo_distribution_version>/nuxeo-drive.<extension>`, for instance `http://community.nuxeo.com/static/drive/latest/5.9.4/nuxeo-drive.msi`.
+Process:
+
+1. Fetch the file `versions.yml` from the defined URL in `update-site-url` (or `beta-update-site-url`);
+2. Find the latest version sorted by `type` and the current Nuxeo version;
+3. If the "Auto-update" option is not checked, stop there;
+4. Download the version specific to the current OS (`.dmg` for macOS, `.exe` for Windows, ... ) into a temporary folder;
+5. Verify the checksum of the downloaded file.
+
+Then, actions taken are OS-specific.
+
+### macOS
+
+1. Mount the `nuxeo-drive-x.y.z.dmg` file;
+2. Backup the current `.app` in `/Applications`;
+3. Copy the new `.app` to `/Applications`;
+4. Unmount the `.dmg`;
+5. Delete the `.dmg`;
+6. Restart Drive.
+
+### Windows
+
+The only action to do is to install the new version by calling `nuxeo-drive-x.y.z.exe /VERYSILENT /START=auto` from the temporary folder.
+The installer will automagically:
+
+1. Stop Drive;
+2. Install the new version, it will upgrade the old one without personal data loss;
+3. Start Drive.
 
 {{! /multiexcerpt}}
 

@@ -14,6 +14,8 @@ labels:
     - howto
     - nuxeo-drive
     - nuxeo-drive-component
+    - mschoentgen
+    - lklein
 toc: true
 tree_item_index: 500
 
@@ -39,7 +41,7 @@ Here is what the default `nuxeo-drive-config.json` file looks like:
   "log_level_file": "DEBUG",
   "timeout": 30,
   "handshake_timeout": 60,
-  "beta_channel": false,
+  "channel": "release",
   "update_check_delay": 3600,
   "ui": "web"
 }
@@ -52,7 +54,7 @@ Here is what the default `nuxeo-drive-config.json` file looks like:
 - `log_level_file`: Logging level of the log file among `ERROR`, `WARNING`, `INFO`, `DEBUG`, `TRACE`.
 - `timeout`: Timeout in seconds for the HTTP requests sent to the Nuxeo server.
 - `handshake_timeout`: Timeout in seconds for the handshaking with the Nuxeo server.
-- `beta_channel`: Boolean to allow the use of the update beta channel.
+- `channel`: Update channel.
 - `update_check_delay`: Period in seconds for polling application updates.
 - `ui`: The Nuxeo UI used by default among `web` (Web UI) and `jsf` (JSF UI).
 

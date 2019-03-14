@@ -70,11 +70,10 @@ history:
         date: '2015-10-08 08:43'
         message: ''
         version: '1'
-
 ---
 You have created your own document types and defined forms and view that show properties specific to your business and users. Your users leverage Nuxeo Drive to work on Nuxeo documents from their desktop and you want them to be able to enjoy the [metadata edit feature of Nuxeo Drive]({{page page='nuxeo-drive'}}#metadata-edit).
 
-![]({{file name='Drive_metadata_edit.png' page='nuxeo-drive'}} ?w=400, border=true)
+![]({{file name='drive-metadata-edit.png' page='nuxeo-drive'}} ?w=400)
 
 {{#> callout type='info' }}
 {{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}
@@ -84,11 +83,11 @@ Obviously you want them to be displayed the same properties as in the Nuxeo Plat
 
 To do so:
 
-1.  In Nuxeo Studio, [create a new Form layout]({{page space='studio' page='form-layouts'}}) called `myDriveLayout` for instance.
-2.  Fill in the View Layout and Edit Layout with relevant widgets.
-    You will probably end up with similar information as on your custom document type layouts.
-3.  [Create a new XML Extension]({{page page='how-to-contribute-to-an-extension'}}#xml-extension-studio) called `DriveMetadataEdit` for instance.
-4.  Use the following content and adapt it to your needs:
+1. In Nuxeo Studio, [create a new Form layout]({{page space='studio' page='form-layouts'}}) called `myDriveLayout` for instance.
+2. Fill in the View Layout and Edit Layout with relevant widgets.
+   You will probably end up with similar information as on your custom document type layouts.
+3. [Create a new XML Extension]({{page page='how-to-contribute-to-an-extension'}}#xml-extension-studio) called `DriveMetadataEdit` for instance.
+4. Use the following content and adapt it to your needs:
 
     ```xml
     <extension target="org.nuxeo.ecm.platform.types.TypeService"
@@ -101,19 +100,19 @@ To do so:
     </extension>
     ```
 
-    *   Replace `<type id="mydocumenttype">` with your document type id.
-5.  If you want to enable a custom metadata edit view for additional document types:
-    1.  Repeat steps 1 and 2 to create additional layouts.
-    2.  Edit the `DriveMetadataEdit` extension and add new `<type> ... </type>` sections filled in with the appropriate document types ids and layouts names.
-6.  Save and [deploy]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).
-    ![]({{file name='drive_metadata_edit_custom_layout.png'}} ?w=400,border=true)
+    Note: replace `<type id="mydocumenttype">` with your document type id.
+5. If you want to enable a custom metadata edit view for additional document types:
+   1. Repeat steps 1 and 2 to create additional layouts.
+   2. Edit the `DriveMetadataEdit` extension and add new `<type> ... </type>` sections filled in with the appropriate document types ids and layouts names.
+6. Save and [deploy]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).
+   ![]({{file name='drive-metadata-custom-layout.png' page='nuxeo-drive'}} ?w=400)
 
-**Notes**
+# Notes
 
-*   **Why not use the default View and Edit layouts of your custom document types?**
+- **Why not use the default View and Edit layouts of your custom document types?**
     There are chances that the View and Edit layouts defined for your document types use the `file:content` widget, that enables to view and upload a file to the document. It wouldn't make much sense to display this field to users from the file itself. That's why you need to create a new layout for this Metadata edit view.
 
-* * *
+***
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
