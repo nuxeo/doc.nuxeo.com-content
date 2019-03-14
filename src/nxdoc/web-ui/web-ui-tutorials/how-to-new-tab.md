@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Insert a New Tab'
+description: Learn how to insert a new tab on your custom document type.
 review:
     comment: ''
     date: '2017-08-21'
@@ -21,12 +22,12 @@ labels:
     - tab
     - content-review-lts2017
 tree_item_index: 1400
-
 ---
+
 In this tutorial you will learn how to add a new tab to your custom document type. This tab will help you to find other contracts created for the same contract owner. To do so, we'll be using a custom page provider linked to the Contract document type.
 
-
 ## Prerequisites
+
 - A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Nuxeo Modeler
 - Make sure that the [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
 
@@ -85,8 +86,23 @@ Once you are all set, you can navigate to the Studio Designer to configure your 
 1. Click on **form**  and then **Configure**, it will automatically create the `nuxeo-othercontracts-search-form` layout.
 1. Do the same with the **result** button, click on **Configure**, the `nuxeo-othercontracts-search-results` layout is created.
 
+### Configure Labels
+
+You now need to add your labels to your translations file to display them correctly in the UI. To do so:
+
+1. Click on the **UI** table.
+1. Click on **Translations**.
+1. Use the default `messages.json` or create your own language.
+1. Create a new entry in the JSON file with key `label.ui.aggregate.<label>` and the label as value. Here it's:
+    - `"label.ui.aggregate.from_now-1y_to_now-1M":"Last year"`
+    - `"label.ui.aggregate.from_now-1M_to_now-7d":"Last month"`
+    - `"label.ui.aggregate.from_now-7d_to_now-24H":"Last week"`
+    - `"label.ui.aggregate.from_now-24H_to_now":"Last 24H"`
+
+You can now save your changes and go to the Designer.
 
 ## Create a Listing
+
 Go to the Designer:
 1. Click on **UI** > **Tabs**   
 1. Hover over the Create button ![]({{file version='' space='nxdoc' page='web-ui-overview' name='create_button.png'}} ?w=20) and select the **Listing** type ![]({{file name='listing_button.png'}} ?w=20)
