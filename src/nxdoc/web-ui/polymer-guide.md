@@ -1,6 +1,6 @@
 ---
 title: Polymer Guide
-description: Polymer presents itself as a simple JavaScript library that enables using and creating Web Components in modern browsers.
+description: Polymer is as a simple JavaScript library that enables using and creating Web Components in modern browsers.
 review:
     comment: ''
     date: '2017-12-14'

@@ -1,7 +1,6 @@
 ---
 title: Customize Your App with Nuxeo Elements
-description: 'This tutorial shows you how to build a simple application base on the Polymer Starter Kit, which
-will be able to read documents from a Nuxeo instance.'
+description: 'This tutorial shows you how to build a simple application base on the Polymer Starter Kit, which will be able to read documents from a Nuxeo instance.'
 review:
     date: '2019-01-30'
     status: ok

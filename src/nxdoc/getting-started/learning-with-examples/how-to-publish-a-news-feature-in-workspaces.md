@@ -1,5 +1,5 @@
 ---
-title: How to Publish a News Feature in Workspaces
+title: 'HOWTO: Publish a News Feature in Workspaces'
 description: 'How to add a small "News" feature to your Nuxeo Platform for enabling News content publishing at workspace level, using only Nuxeo Studio.'
 review:
     comment: ''
@@ -130,17 +130,15 @@ history:
 ## Concept
 
 {{! excerpt}}
-
 This how-to explains how to add a small "News" feature to your Nuxeo Platform for enabling News content publishing at workspace level, using only Nuxeo Studio.
-
 {{! /excerpt}}
 
-*   A `News` is a simple document with a title and a Rich content body, where it is possible to set HTML and pictures.
-*   `News` are stored in a dedicated folder inside the workspace.
-*   People having the "Edit" permission inside a workspace can create draft `News` directly from the workspace, by clicking one single button.
-*   `News` will be displayed on a front tab at workspace level.
-*   The publishing process will be based on the default Nuxeo lifecycle: if a `News` is in "approved" state (vs initial "draft" state), then it is automatically displayed in the front tab (the title and the HTML body). To do this publishing action, users having "NewsManagement" role will click on a contextual button, on the News' upper right corner, to approve the `News`.
-*   `News` will be ordered by descending date of publishing, and we want to see only the first three news.
+- A `News` is a simple document with a title and a Rich content body, where it is possible to set HTML and pictures.
+- `News` are stored in a dedicated folder inside the workspace.
+- People having the "Edit" permission inside a workspace can create draft `News` directly from the workspace, by clicking one single button.
+- `News` will be displayed on a front tab at workspace level.
+- The publishing process will be based on the default Nuxeo lifecycle: if a `News` is in "approved" state (vs initial "draft" state), then it is automatically displayed in the front tab (the title and the HTML body). To do this publishing action, users having "NewsManagement" role will click on a contextual button, on the News' upper right corner, to approve the `News`.
+- `News` will be ordered by descending date of publishing, and we want to see only the first three news.
 
 ## Technical Analysis
 
