@@ -134,7 +134,7 @@ You now need to add your labels to your translations file to display them correc
     - `"label.ui.aggregate.from_now-7d_to_now-24H":"Last week"`
     - `"label.ui.aggregate.from_now-24H_to_now":"Last 24H"`
 
-## Create a New Left Menu Item
+## Create a New Drawer Item
 
 The next step is to add a button in the drawer menu to display the search screen.
 
