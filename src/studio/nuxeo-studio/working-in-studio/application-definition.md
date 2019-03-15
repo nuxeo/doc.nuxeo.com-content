@@ -52,8 +52,8 @@ history:
         date: '2014-12-31 14:18'
         message: ''
         version: '1'
-
 ---
+
 The Application Definition page enables you to manage the requirements of your Nuxeo Studio project and your application.
 
 {{!--     ### nx_asset ###
@@ -70,7 +70,7 @@ The Application Definition page enables you to manage the requirements of your N
 
 ## Main Options
 
--   **Nuxeo Server Version:** The Nuxeo Server version Studio will generate a valid configuration for.
+-   **Nuxeo Server Version:** Studio will generate valid configuration for this Nuxeo Server version.
 -   **Packages to Install:** The list of additional dependencies needed to make your application work. Selected dependencies will be automatically installed when you deploy your Nuxeo Studio configuration on your server.
 
 Any Nuxeo public or [private]({{page page='delivering-a-customization-package-through-the-nuxeo-marketplace'}}) addon uploaded in the [Nuxeo Marketplace](https://marketplace.nuxeo.com) can be selected. Type a character to start filtering them. The title and description are provided for each addon to help you select the package you need.
