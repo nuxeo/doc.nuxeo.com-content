@@ -1,5 +1,5 @@
 ---
-title: DBS
+title: Document-Based Storage (DBS)
 review:
     comment: ''
     date: '2017-12-14'
@@ -89,13 +89,13 @@ history:
 ---
 {{! excerpt}}
 
-DBS (Document-Based Storage) allows storage of Nuxeo documents inside a document-oriented store, like MongoDB or MarkLogic.
+**Document-Based Storage** (DBS) allows storage of Nuxeo documents inside a document-oriented store, like MongoDB or MarkLogic.
 
 {{! /excerpt}}
 
 ## Basic Storage
 
-When configured for use with MongoDB, each Nuxeo document is stored as a single MongoDB document. A sample document could look like:
+When configured for use with MongoDB, each *Nuxeo document* is stored as a *single MongoDB document*. A sample document could look like:
 
 ```js
 {
@@ -261,7 +261,7 @@ A few system properties are computed from others in order to get efficient subtr
 
 ### Proxies
 
-Proxies cannot be queried and retrieved with a JOIN (contrary to VCS), so they are stored as copies of the documents they point to, and are updated every time their target changes. In order to do this, some properties are maintained on proxies and proxy targets:
+Proxies cannot be queried and retrieved with a JOIN, contrary to *Visible Content Story* (VCS), so they are stored as copies of the documents they point to, and are updated every time their target changes. In order to do this, some properties are maintained on proxies and proxy targets:
 
 *   `ecm:proxyTargetId`: the target of the proxy
 
@@ -271,7 +271,7 @@ Proxies cannot be queried and retrieved with a JOIN (contrary to VCS), so they a
 
 Due to the nature of the MongoDB storage, we use a transaction model equivalent to Read Uncommitted, which means that a transaction may read data written but not yet committed by another transaction. This is unavoidable in most Document-Based stores, and should be taken into account by applications.
 
-As MarkLogic relies on DBS, we are currently using the same transactional behavior.
+As MarkLogic relies on **Document Based Storage** ([DBS](https://doc.nuxeo.com/nxdoc/dbs/)), we are currently using the same transactional behavior.
 
 Full-text configuration is fixed to a default useful for evaluation (all textual fields and blobs are indexed), but a production instance should use Elasticsearch with a suitable full-text configuration.
 
