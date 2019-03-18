@@ -149,7 +149,7 @@ Typically, as long as your data or services are mapped through a Directory model
 
 ## Vocabularies Functional Overview
 
-{{{multiexcerpt 'vocabularies-content' page='USERDOC:Managing Vocabularies'}}}
+{{{multiexcerpt 'vocabularies-content' page='managing-vocabularies'}}}
 
 ## Generic Directory and Directory Templates
 

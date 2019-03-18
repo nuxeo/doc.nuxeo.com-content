@@ -67,29 +67,26 @@ history:
         date: '2015-03-10 14:39'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 This page explains what renditions are, how to get them and how to contribute new ones.
-
 {{! /excerpt}}
 
 ## Functional Overview
 
-In the Nuxeo Platform, renditions are used for exports. For more information, discover how it works on:
-- [Web UI]({{page version='' space='userdoc' page='exporting-documents'}})
-- [JSF UI]({{page version='' space='userdoc' page='exporting-content'}})
+In the Nuxeo Platform, renditions are used for exports. For more information, discover how it works on [Web UI]({{page version='' space='userdoc' page='share'}}#exporting).
+
 
 ## What Are Renditions?
 
 Renditions are alternative representations of a document, or its content such as:
 
-*   A PDF representation of office files
-*   A watermarked image
-*   A resized video
-*   An XML export of the document
-*   ...
+- A PDF representation of office files
+- A watermarked image
+- A resized video
+- An XML export of the document
+- ...
 
 ## Rendition Contributions
 
@@ -139,8 +136,8 @@ Rendition definitions can also be contributed through a `RenditionDefinitionProv
 
 We have some examples in the Nuxeo Platform, such as:
 
-*   `PictureRenditionDefinitionProvider` for picture conversions
-*   `VideoRenditionDefinitionProvider` for transcoded videos
+- `PictureRenditionDefinitionProvider` for picture conversions
+- `VideoRenditionDefinitionProvider` for transcoded videos
 
 Here is the contribution for the `PictureRenditionDefinitionProvider`:
 

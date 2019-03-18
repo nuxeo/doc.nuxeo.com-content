@@ -49,7 +49,7 @@ history:
 
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-{{{excerpt 'USERDOC:Nuxeo Multi-tenant'}}}
+{{{excerpt space='userdoc' page='nuxeo-multi-tenant'}}}
 
 ## Installation
 

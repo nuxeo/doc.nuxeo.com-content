@@ -320,7 +320,7 @@ After you installed Nuxeo DAM, you have three new document types available.
 
 ## Functional Overview
 
-{{{multiexcerpt 'functional_overview' page='USERDOC:Digital Asset Management with the Nuxeo Platform'}}}
+{{{multiexcerpt 'functional_overview' space='userdoc' page='digital-asset-management-with-the-nuxeo-platform'}}}
 
 ## Technical Overview
 

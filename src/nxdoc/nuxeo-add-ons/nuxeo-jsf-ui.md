@@ -186,23 +186,23 @@ There is no additional configuration step required to start using the addon. Cus
 
 ## Nuxeo Platform Concepts
 
-{{{multiexcerpt 'functional-overview' page='USERDOC:Nuxeo Platform Concepts'}}}
+{{{multiexcerpt 'functional-overview' page='nuxeo-platform-concepts'}}}
 
 ## Creating Content
 
-{{{multiexcerpt 'functional_overview' page='USERDOC:Creating Content'}}}
+{{{multiexcerpt 'functional_overview' page='creating-content'}}}
 
 ## Editing Content
 
 ### Content and Metadata Edit Form
 
-{{{multiexcerpt 'edit-document' page='USERDOC:Editing Content'}}}
+{{{multiexcerpt 'edit-document' page='editing-content'}}}
 
-{{{multiexcerpt 'edit-form-custom-functional-overview' page='USERDOC:Editing Content'}}}
+{{{multiexcerpt 'edit-form-custom-functional-overview' page='editing-content'}}}
 
 ### Clipboard and Worklist
 
-{{{multiexcerpt 'clipboard-worklist-overview' page='USERDOC:Editing Content'}}}
+{{{multiexcerpt 'clipboard-worklist-overview' page='editing-content'}}}
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 

@@ -307,7 +307,7 @@ When you have been invited to a workspace, a folder or any type of space in the 
 
 1.  Click on that link to validate your invitation.
 2.  Create your password by typing it.
-    ![]({{file name='invitation-password-creation.png' space='userdoc' page='managing-users-and-groups'}} ?w=300,border=true,thumbnail=true)
+    ![]({{file name='invitation-password-creation.png' space='nxdoc' page='managing-users-and-groups'}} ?w=300,border=true,thumbnail=true)
 3.  Log in to the Nuxeo Platform.
 
 Once the invited user has validated the invitation by clicking on the invitation link and setting his password, the administrator can see the invitation in **Accepted** state.
@@ -379,7 +379,7 @@ See the page [How to Contribute a New "User Registration Request" Document Type]
 
 - [Authentication and User Management]({{page page='authentication-and-user-management'}}) (developer documentation)
 - [How to Contribute a New "User Registration Request" Document Type]({{page page='how-to-contribute-a-new-user-registration-request-document-type'}})
-- [Managing Users and Groups]({{page space='userdoc' page='managing-users-and-groups'}}) (user documentation)
+- [Managing Users and Groups]({{page space='userdoc' page='administration'}}#users-and-groups) (user documentation)
 - [Setup Best Practices]({{page page='setup-best-practices'}}) (admin documentation)
 
 {{/panel}}</div><div class="column medium-6">

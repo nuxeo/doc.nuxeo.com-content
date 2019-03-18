@@ -212,7 +212,6 @@ If you have complex mail server configurations, you may want to check the [Javam
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [How to Customize Email Templates]({{page page='how-to-customize-email-templates'}})
-- [Collaborative Features]({{page space='userdoc' page='collaborative-features'}})
 
 {{/panel}}</div><div class="column medium-6">
 

@@ -105,9 +105,7 @@ history:
 ---
 
 {{! excerpt}}
-
-In this how-to, [importing a file]({{page space='userdoc' page='creating-content'}}) can correspond to using the drag and drop, using the Import button, or adding a file from [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}}) or a [WebDAV drive]({{page space='userdoc' page='working-with-webdav'}}).
-
+In this how-to, [importing a file]({{page version='' space='userdoc' page='content-create'}}) can correspond to using the drag and drop, using the Import button, or adding a file from [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}}) or a [WebDAV drive]({{page space='userdoc' page='working-with-webdav'}}).
 {{! /excerpt}}
 
 The mechanism to create a Nuxeo document with an import is tight to the [plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--plugins) extension point from the `FileManager` service.

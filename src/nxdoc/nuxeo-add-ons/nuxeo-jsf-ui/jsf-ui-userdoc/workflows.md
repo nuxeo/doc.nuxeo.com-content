@@ -125,7 +125,7 @@ history:
 All the documents evolve according to a defined lifecycle. The default lifecycle is composed of the following states: Project, Approved, Obsolete and Deleted. There are different ways to make documents evolve through this lifecycle. One of the ways is to use a workflow.
 {{! /excerpt}}
 
-Users who are involved in workflows are alerted by email and can have a synthetic view of all their pending tasks on documents in their [dashboard]({{page space='USERDOC' page='Browsing Content'}}#dashboard). The documents they have to review are listed there.
+Users who are involved in workflows are alerted by email and can have a synthetic view of all their pending tasks on documents in their [dashboard]({{page space='nxdoc' page='Browsing Content'}}#dashboard). The documents they have to review are listed there.
 
 {{{multiexcerpt 'default-validation-workflows' page='NXDOC:Workflow'}}}
 
@@ -153,13 +153,13 @@ For more information about reassignment, read [Reassigning a Task]({{page page='
 
 Abandoning a workflow means canceling it. When you abandon a workflow, the lifecycle state of the document does not change. The modifications made on the document during the workflow are kept.
 
-Abandoning the workflow can be done at any time. Only the workflow initiator and administrators can abandon a workflow. He can also decide to cancel the workflow when he gets an update request from the first reviewer. When the first reviewer [rejects the document]({{page version='' space='userdoc' page='serial-document-workflow'}}#approve-reject-document), it goes back to the initiator, who should then either edit the document and resubmit it, or cancel the review.
+Abandoning the workflow can be done at any time. Only the workflow initiator and administrators can abandon a workflow. He can also decide to cancel the workflow when he gets an update request from the first reviewer. When the first reviewer [rejects the document]({{page version='' space='nxdoc' page='serial-document-workflow'}}#approve-reject-document), it goes back to the initiator, who should then either edit the document and resubmit it, or cancel the review.
 
 To **abandon a workflow**, click on the **Workflow** tab of the document and then click on **Abandon**. The workflow is immediately canceled.
 
 ## Notifications
 
-Users who are involved in workflows are alerted by email and can have a synthetic view of all the tasks they have to do on documents in their [dashboard]({{page space='USERDOC' page='Browsing Content'}}#dashboard). The documents they have to review are listed there.
+Users who are involved in workflows are alerted by email and can have a synthetic view of all the tasks they have to do on documents in their [dashboard]({{page space='nxdoc' page='browsing-content'}}#dashboard). The documents they have to review are listed there.
 
 ## Rights Modification on the Document
 

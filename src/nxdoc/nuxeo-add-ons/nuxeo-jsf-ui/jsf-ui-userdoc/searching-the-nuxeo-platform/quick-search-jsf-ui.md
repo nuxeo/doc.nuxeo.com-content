@@ -229,7 +229,7 @@ For instance:
 
     {{/accordian}}
 
-You can use the [operators]({{page version='' space='userdoc' page='searching-the-nuxeo-platform'}}#operators) `-` and `OR` in the suggestion search.
+You can use the [operators]({{page version='' space='nxdoc' page='searching-the-nuxeo-platform'}}#operators) `-` and `OR` in the suggestion search.
 
 #### Search on Users and Groups
 

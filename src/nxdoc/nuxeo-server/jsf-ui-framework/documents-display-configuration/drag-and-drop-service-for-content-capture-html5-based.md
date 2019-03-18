@@ -199,7 +199,7 @@ In Nuxeo there are 5 different DropZones (depending on the page):
 
 *   `ContentView`: the content listing for a folderish Document;
 
-    ![]({{file name='HTML5-DnD.png' space='userdoc' page='creating-content'}} ?w=650,h=260,border=true)
+    ![]({{file name='HTML5-DnD.png' space='nxdoc' page='creating-content'}} ?w=650,h=260,border=true)
 
 *   `Clipboard_CLIPBOARD`: the user's Clipboard;
 *   `Clipboard_DEFAULT`: the user's Worklist;
@@ -228,7 +228,7 @@ By using the advanced mode you can have more control over the import process:
 
 To trigger the extended mode, just maintain the drag over the DropZone for more than 2.5 seconds: the drop zone will be highlighted in green indicating you are now in extended mode.
 
-![]({{file name='smartDnD_import_selection.png' space='userdoc' page='creating-content'}} ?w=650,border=true)
+![]({{file name='smartDnD_import_selection.png' space='nxdoc' page='creating-content'}} ?w=650,border=true)
 
 ## How to Customize it
 
@@ -353,8 +353,8 @@ In the default JSF web app you can have a look at `DndFormActionBean` and `dndFo
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='More about drag and drop in the user documentation'}}
 
-- [Creating Content]({{page space='userdoc' page='creating-content'}})
-- [Publishing Content]({{page space='userdoc' page='publishing-content'}})
-- [Editing Content]({{page space='userdoc' page='editing-content'}})
+- [Creating Content]({{page space='nxdoc' page='creating-content'}})
+- [Publishing Content]({{page space='nxdoc' page='publishing-content'}})
+- [Editing Content]({{page space='nxdoc' page='editing-content'}})
 
 {{/panel}}</div></div>

@@ -1,5 +1,5 @@
 ---
-title: Document Types
+title: Document Types in JSF UI
 description: This page lists all the available document types by default on Nuxeo Platform.
 review:
     comment: ''
@@ -368,7 +368,7 @@ For more information about attachment documents, read the page [Attachments]({{p
 
 {{! multiexcerpt name='definition-collection'}}
 
-[Collections]({{page version='' space='userdoc' page='collections'}}) are a folder-like document in which you can classify existing documents. Documents are not actually copied or moved into the collection, which only holds a link to the document in its original location.
+[Collections]({{page version='' space='nxdoc' page='collections'}}) are a folder-like document in which you can classify existing documents. Documents are not actually copied or moved into the collection, which only holds a link to the document in its original location.
 
 {{! /multiexcerpt}}
 

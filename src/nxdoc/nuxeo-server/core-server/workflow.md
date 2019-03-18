@@ -193,8 +193,8 @@ history:
         date: '2013-02-08 16:29'
         message: ''
         version: '1'
-
 ---
+
 ## Concept
 
 The Nuxeo workflow engine provides the usual features you would expect from a workflow engine and leverages the main modules of the platform: the repository, the Automation service, layouts for all the user interactions and process implementations. It provides high level features regarding task management such as filterable tasks lists, reminders, task reassignment, task delegation, task reminders. You need to understand correctly those concepts before playing with the workflow engine.
@@ -205,28 +205,27 @@ The workflow engine provides means to implement most of BPMN concepts: Fork, mer
 
 **Understanding Workflow:**
 
-*   [Useful Definitions]({{page page='useful-definitions'}})
-*   [Simple Workflow Example]({{page page='simple-workflow-example'}}) (tutorial)
-*   [How to Assign a Workflow Task to a User Depending on a Metadata]({{page page='validation-workflow-choosing-the-assignee-based-on-a-metadata'}}) (tutorial)
+- [Useful Definitions]({{page page='useful-definitions'}})
+- [Simple Workflow Example]({{page page='simple-workflow-example'}}) (tutorial)
+- [How to Assign a Workflow Task to a User Depending on a Metadata]({{page page='validation-workflow-choosing-the-assignee-based-on-a-metadata'}}) (tutorial)
 
 ## Default Available Workflows
 
 {{! multiexcerpt name='default-validation-workflows'}}
-
 The Nuxeo Platform offers two default workflows that showcase the possibilities of the Workflow.
 
-* {{{excerpt 'USERDOC:Serial Document Workflow'}}}
-* {{{excerpt 'USERDOC:Parallel Document Workflow'}}}
+- **The default serial workflow**, called "Serial document review", is an ordered workflow. This means that participants can review the document only when the previous participant in the list has approved the document. It can be used either to approve the document or simply to review it.
 
+- **The default parallel workflow**, called "Parallel document review", is an unordered workflow that enables to change the document's state after a consultation step. This means that participants can give their opinion on the document without having to wait for a previous participant to approve it.
 {{! /multiexcerpt}}
 
 They are also available as an application template in Nuxeo Studio so as to enable you to see how they are configured. This application template is called **Default Nuxeo Platform Workflows Configuration**.
 
 ![]({{file name='Screenshot 2015-06-02 11.27.17.png'}} ?w=600,border=true)
 
-It is possible to import this package from your Studio project : Go to **Configuration** > **External Templates** > **Default** **Nuxeo Platform Workflows Configuration** and click on **Import**.
+It is possible to import this package from your Studio project: Go to **Configuration** > **External Templates** > **Default** **Nuxeo Platform Workflows Configuration** and click on **Import**.
 
-See the pages [Serial Document Workflow]({{page space='userdoc' page='serial-document-workflow'}}) and [Parallel Document Workflow]({{page space='userdoc' page='parallel-document-workflow'}}) for more details about showcased default workflows.
+See the pages [Serial Document Workflow]({{page version='' space='userdoc' page='task'}}) and [Parallel Document Workflow]({{page space='userdoc' page='task'}}) for more details about showcased default workflows.
 
 ## Configuring a New Workflow
 
@@ -268,9 +267,9 @@ To go further, read the page [Simple Workflow Example]({{page page='simple-workf
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Workflow How-Tos'}}
 
-- [How to Query Workflow Objects]({{page page='how-to-query-workflow-objects'}})
-- [How to Complete a Workflow Task Programmatically]({{page page='how-to-complete-a-workflow-task-programmatically'}})
-- [How to Set Up a Tasks Dashboard]({{page page='how-to-set-up-a-tasks-dashboard'}})
+- [HOWTO: Query Workflow Objects]({{page page='how-to-query-workflow-objects'}})
+- [HOWTO: Complete a Workflow Task Programmatically]({{page page='how-to-complete-a-workflow-task-programmatically'}})
+- [HOWTO: Set Up a Tasks Dashboard]({{page page='how-to-set-up-a-tasks-dashboard'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading=' Advanced Features and Understanding'}}
 

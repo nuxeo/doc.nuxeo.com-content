@@ -49,9 +49,8 @@ history:
         date: '2013-08-06 12:39'
         message: ''
         version: '1'
-
 ---
-{{{excerpt 'USERDOC:Nuxeo Groups and Rights Audit'}}}
+{{{excerpt space='userdoc' page='Nuxeo Groups and Rights Audit'}}}
 
 ## Installation
 

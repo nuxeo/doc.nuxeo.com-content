@@ -1,5 +1,5 @@
 ---
-title: How to Add a New Vocabulary
+title: 'HOWTO: Add a New Vocabulary'
 review:
     comment: ''
     date: '2017-12-14'
@@ -291,7 +291,7 @@ There are 3 types of vocabularies:
 
     {{/callout}}
 5.  Click on the **Save** button.
-    You can now use the vocabulary on [layouts]({{page page='layout-and-widget-how-to-index'}}) to populate drop-down lists. After you deploy your customization on your Nuxeo Platform, the vocabulary is [available in the Admin Center]({{page space='userdoc' page='managing-vocabularies'}}) so power users and administrators can easily add new entries to the vocabulary.
+    You can now use the vocabulary on [layouts]({{page page='layout-and-widget-how-to-index'}}) to populate drop-down lists. After you deploy your customization on your Nuxeo Platform, the vocabulary is [available in the Administration Menu]({{page space='userdoc' page='administration'}}#vocabularies) so power users and administrators can easily add new entries to the vocabulary.
 
 * * *
 
@@ -304,6 +304,6 @@ There are 3 types of vocabularies:
 
 - [Data Lists and Directories]({{page page='data-lists-and-directories'}})
 - [Declaring Vocabularies]({{page space='studio' page='declaring-vocabularies'}})
-- [Managing Vocabularies]({{page space='userdoc' page='managing-vocabularies'}})
+- [Managing Vocabularies]({{page version='' space='userdoc' page='administration'}}#vocabularies)
 
 {{/panel}}</div></div>

@@ -201,7 +201,7 @@ history:
 
 The bulk import screen has a form that allows you to edit several documents at the same time. You can customize it with Studio by creating a form layout named `bulkImport`. The "Create" layout will be used on the bulk import popup.
 
-![]({{file name='default_bulk_import.png' space='userdoc' page='creating-content'}} ?w=500,border=true)
+![]({{file name='default_bulk_import.png' space='nxdoc' page='creating-content'}} ?w=500,border=true)
 
 Note that the Where and Files fields are obviously not customizable and will always be displayed on this form. The layout is actually below these two fields.
 

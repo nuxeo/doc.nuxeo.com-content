@@ -1,5 +1,5 @@
 ---
-title: How to Add a New Virtual Navigation Entry
+title: 'HOWTO: Add a New Virtual Navigation Entry'
 review:
     comment: ''
     date: '2015-12-01'
@@ -193,15 +193,11 @@ history:
         date: '2010-07-05 14:15'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 With Nuxeo Studio, you can configure as many virtual navigation views as you need.
-
 {{! /excerpt}}
-
-&nbsp;
 
 Just follow these steps:
 
@@ -209,7 +205,7 @@ Just follow these steps:
 2.  [Configure the link and the query](#configure-virtual-navigation)
 3.  [Configure the result layout](#configure-virtual-navigation-result-layout)
 
-## Make Sure You Have All the Required Elements&nbsp;{{> anchor 'required-element'}}
+## Make Sure You Have All the Required Elements {{> anchor 'required-element'}}
 
 **Required elements**
 
@@ -287,7 +283,7 @@ This property should always be clicked when you contribute a new virtual navigat
 
 </td></tr></tbody></table></div>
 
-## Configure the Result Layout of Your Virtual Navigation&nbsp;{{> anchor 'configure-virtual-navigation-result-layout'}}
+## Configure the Result Layout of Your Virtual Navigation {{> anchor 'configure-virtual-navigation-result-layout'}}
 
 **To configure the virtual navigation**
 

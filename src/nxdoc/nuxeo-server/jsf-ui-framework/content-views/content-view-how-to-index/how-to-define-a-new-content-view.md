@@ -564,7 +564,7 @@ The first part of the result configuration form is dedicated to setting up some 
 
 There are several ways of using the content view you configured in your Nuxeo Platform application:
 
-*   In the [search tab]({{page space='userdoc' page='searching-the-nuxeo-platform'}}) feature,  so as to add a new filter set. You just need to click on the **Search content view** checkbox, in the **Flag** section of the Query & form tab of your content view in Studio.
+*   In the [search tab]({{page space='nxdoc' page='searching-the-nuxeo-platform'}}) feature,  so as to add a new filter set. You just need to click on the **Search content view** checkbox, in the **Flag** section of the Query & form tab of your content view in Studio.
 *   In any [custom tab]({{page space='studio' page='tabs'}}), using the Content View widget.
 
 * * *
@@ -587,7 +587,7 @@ There are several ways of using the content view you configured in your Nuxeo Pl
 - [Content Views in Studio Documentation]({{page space='studio' page='content-views'}})
 - [Custom Page Providers]({{page page='custom-page-providers'}})
 - [Documents Display Configuration]({{page page='documents-display-configuration'}})
-- [Default Search]({{page space='userdoc' page='default-search'}})
+- [Default Search]({{page space='nxdoc' page='default-search'}})
 
 {{/panel}}
 </div>

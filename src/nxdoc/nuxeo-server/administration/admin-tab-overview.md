@@ -187,9 +187,7 @@ The Admin tab, also called Admin Center, is a space within the Nuxeo Platform th
 The Admin tab offers access to different kinds of information about your Nuxeo instance. Depending the addons you have installed on the Platform, you may have more or less information, i.e. more or less tabs.
 
 {{#> callout type='info' }}
-
 Installing Nuxeo Packages can add new tabs in the Admin tab. In that case, the new Admin tab feature is described in the addon's documentation.
-
 {{/callout}}
 
 The default tabs available in the Admin tab are listed below. These tabs are available whatever the modules or addons you installed on the Platform.

@@ -65,7 +65,7 @@ history:
         version: '1'
 
 ---
-{{{excerpt 'USERDOC:Nuxeo Jenkins Report'}}}
+{{{excerpt space='userdoc' page='nuxeo-jenkins-report'}}}
 
 ## Installation
 

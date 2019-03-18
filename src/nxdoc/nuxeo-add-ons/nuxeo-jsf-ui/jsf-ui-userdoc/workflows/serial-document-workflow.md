@@ -151,7 +151,7 @@ Participants can approve the document when it's their turn, after the previous p
 
 1.  In your **Home**, click on the **Workflow** tab, the list of tasks you have to do is displayed. Optionally click on the icon ![]({{file name='external.gif' page='icons-index'}}) to open the document in a new tab, consult it and edit it.
 2.  From the **Workflow** tab, click on the **Process** button. The Validation task is displayed.![]({{file name='Serial-workflow-task-process.png'}} ?w=650,border=true)
-3.  If you think that you won't be able to process the task, [delegate it]({{page space='USERDOC' page='Delegating a+Task'}}) or [reassign it]({{page page='reassigning-a-task'}}) to another user. If not switch to the next step. Optionally, type a comment to indicate what you did on the document before approving it.
+3.  If you think that you won't be able to process the task, [delegate it]({{page space='nxdoc' page='delegating-a-task'}}) or [reassign it]({{page page='reassigning-a-task'}}) to another user. If not switch to the next step. Optionally, type a comment to indicate what you did on the document before approving it.
 4.  Depending on your opinion on the document, click on one of the buttons available:
     - **Validate**
       The task is not displayed anymore from the **Workflow** tab and the document. If you originally had read-only access to the document, you can't edit it anymore. The next participant can now review the document and approve or reject it.

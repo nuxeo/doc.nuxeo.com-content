@@ -21,42 +21,42 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+Diff+Pictures
 tree_item_index: 1500
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-04 14:09'
         message: ''
         version: '8'
-    - 
+    -
         author: Thibaud Arguillere
         date: '2015-12-23 09:41'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-02 15:33'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-02 15:18'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-16 15:10'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-16 15:07'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-16 15:05'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-10-16 15:03'
         message: ''
@@ -103,7 +103,7 @@ If you want to visualize the content changes, click on the icon&nbsp;![]({{file 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Nuxeo Diff]({{page space='userdoc' page='nuxeo-diff'}})
-- [Traceability]({{page space='userdoc' page='traceability'}})
+- [Traceability]({{page space='nxdoc' page='traceability'}})
 
 {{/panel}}</div><div class="column medium-6">
 

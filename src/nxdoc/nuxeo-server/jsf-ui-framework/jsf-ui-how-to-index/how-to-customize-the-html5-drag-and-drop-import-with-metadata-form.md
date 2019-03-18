@@ -81,9 +81,9 @@ history:
 {{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}
 {{/callout}}
 
-HTML5 Drag and Drop enables users to [import documents in a folder]({{page space='userdoc' page='creating-content#content-creation-dandd'}}) and fill in their metadata at the same time.
+HTML5 Drag and Drop enables users to [import documents in a folder]({{page space='nxdoc' page='creating-content'}}#content-creation-dandd) and fill in their metadata at the same time.
 
-![]({{file name='smartDnD_metadata.png' space='userdoc' page='creating-content'}} ?w=650,h=289,border=true)
+![]({{file name='smartDnD_metadata.png' space='nxdoc' page='creating-content'}} ?w=650,h=289,border=true)
 
 Follow the steps to below to customize the import form.
 
@@ -134,6 +134,6 @@ It is currently not possible to use tags, collections or complex types on this f
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Drag and Drop Service for Content Capture (HTML5-Based)]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
-- [Creating Content]({{page space='userdoc' page='creating-content'}})
+- [Creating Content]({{page space='nxdoc' page='creating-content'}})
 
 {{/panel}}</div></div>

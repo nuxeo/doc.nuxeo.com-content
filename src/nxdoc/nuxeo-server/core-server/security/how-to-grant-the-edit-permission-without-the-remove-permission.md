@@ -1,5 +1,6 @@
 ---
-title: How to Grant the Edit Permission without the Remove Permission
+title: 'HOWTO: Grant the Edit Permission without the Remove Permission'
+description: Learn how to override the default Edit permission so it does not include Remove by default, and set a new ReadWriteAndRemove permission.
 review:
     comment: ''
     date: '2017-12-14'
@@ -81,9 +82,9 @@ history:
         date: '2015-04-09 09:43'
         message: ''
         version: '1'
-
 ---
-As described on the page [Managing Permissions]({{page space='userdoc' page='managing-permissions'}}), the Edit permission visible in the UI contains the permission to remove content. This means that you cannot grant the Edit permission and deny the Remove access right at the same level of the repository. So you need to override the [default&nbsp;`Write` permission](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.core.security.defaultPermissions--permissions) to be able to do that.
+
+As described on the page [Managing Permissions]({{page space='userdoc' page='permissions'}}), the Edit permission visible in the UI contains the permission to remove content. This means that you cannot grant the Edit permission and deny the Remove access right at the same level of the repository. So you need to override the [default `Write` permission](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.core.security.defaultPermissions--permissions) to be able to do that.
 
 ## Procedure
 
@@ -140,9 +141,9 @@ As described on the page [Managing Permissions]({{page space='userdoc' page='man
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-- [Managing Permissions]({{page space='userdoc' page='managing-permissions'}})
-- [How to Upload Labels Translations in Nuxeo Studio (i18n)]({{page page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}})
-- [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
+- [Managing Permissions]({{page space='userdoc' page='permissions'}})
+- [HOWTO: Upload Labels Translations in Nuxeo Studio (i18n)]({{page page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}})
+- [HOWTO: Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">

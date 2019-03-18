@@ -103,11 +103,9 @@ Nuxeo workflows are declared via the following contribution:
 As you can see, the workflow definition is referenced in a zip "data/TimeOffRequest.zip" (that is in the JAR bundle). In this zip you find the serialization in [core-io format]({{page page='nuxeo-core-import-export-api'}}) of the workflow graph: the parent document corresponds to the workflow model, and you have as many children as there are nodes in your graph.
 
 {{#> callout type='info' }}
-
 Workflow and nodes, with their properties configured from Studio, are serialized as Nuxeo documents.
-
 {{/callout}}
 
 Once the runtime deploys the bundle that contains such a contribution, the workflows are created from the archive, under the path `/document-route-models-root`. The workflow model is persisted as a document of type "`DocumentRoute`" and children nodes as documents of type "`RouteNode`". You can see the list of workflow models in the Admin Center (see the [workflows deployed on the demo site](http://demo.nuxeo.com/nuxeo/nxadmin/default@view_admin?tabIds=MAIN_TABS%3Aadmin%2CNUXEO_ADMIN%3Atab.admin.workflow)).
 
-Once deployed, depending on what has been set as the availability criteria for your workflow in Studio (stored on the DocumentRoute document, field `docri:availabilityFilter`) you will see the workflow in the ["start workflow" drop down list on the summary of the document]({{page space='userdoc' page='serial-document-workflow'}}). You can now start a new workflow.
+Once deployed, depending on what has been set as the availability criteria for your workflow in Studio (stored on the DocumentRoute document, field `docri:availabilityFilter`) you will see the workflow in the ["start workflow" drop down list on the summary of the document]({{page space='userdoc' page='task'}}). You can now start a new workflow.
