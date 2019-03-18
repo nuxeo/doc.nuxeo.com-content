@@ -14,6 +14,23 @@ hidden: true
 
 {{! multiexcerpt name='studio-updates-2019-03'}}
 
+<!-- 3.8.0 -->
+### Easier Search Configuration
+
+#### Required Fields Mapping in Search and Listings Configuration
+
+When configuring a UI element for a search or a listing, schemas and names coming from your page provider predicates and aggregates are prefilled to ensure a quicker configuration.
+
+When updating the configuration of the page provider, a warning in Designer appears to inform you that you need to update the UI configuration as well.
+
+#### Improved Default Configuration for Search Elements
+
+Studio generates checkboxes instead of drop-down lists by default when drag and dropping aggregates in your layouts configuration.
+
+#### Automatic Range Label Usage
+
+When configuring range aggregates, if no translation has been defined, Studio uses their label by default.
+
 <!-- 3.7.0 -->
 
 ### [Impacting Change] Layout Blocks Scope Fix
@@ -49,7 +66,7 @@ When configuring a UI element for a search or a listing, search parameters are v
 - Bla ([NXS-0000](https://jira.nuxeo.com/browse/NXS-0000)).
 -->
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.7.0','3.8.0'%29) is available in our bug tracking tool.
+[More information about released changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.7.0','3.8.0'%29) is available in our bug tracking tool.
 
 {{! /multiexcerpt}}
 
