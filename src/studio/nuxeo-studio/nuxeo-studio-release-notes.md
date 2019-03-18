@@ -12,22 +12,19 @@ tree_item_index: 730
 Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Upcoming Changes
-<!-- 3.8.0 -->
-### Easier Search Configuration
 
-#### Required Fields Mapping in Search and Listings Configuration
+### Polymer 3 Migration
 
-When configuring a UI element for a search or a listing, schemas and names coming from your page provider predicates and aggregates will be prefilled to ensure a quicker configuration.
+Compatibility for Nuxeo Studio with Polymer 3 to keep our technical stack up to date.
 
-When updating the configuration of the page provider, a warning in Designer appears to inform you that you need to update the UI configuration as well.
+## Upcoming Bugfixes
 
-#### Improved Default Configuration for Search Elements
+- Ability to use complex multivalued fields in page provider predicates ([NXS-5191](https://jira.nuxeo.com/browse/NXS-5191))
+- Workflow resolution actions not displayed when there are several of them ([NXS-5201](https://jira.nuxeo.com/browse/NXS-5201))
+- Branches should not be able to be merged when you have work in progress ([NXS-5215](https://jira.nuxeo.com/browse/NXS-5215))
+- Action configuration screen in Designer only shows the "input" field once ([NXS-5216](https://jira.nuxeo.com/browse/NXS-5216))
 
-Studio generates checkboxes elements instead of drop-down lists by default when drag and dropping aggregates in your layouts configuration.
-
-#### Automatic Range Label Usage
-
-When configuring range aggregates, if no translation has been defined, Studio uses their label by default.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.9.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
