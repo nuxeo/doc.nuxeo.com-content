@@ -669,12 +669,12 @@ In the rest of this documentation, we'll call them all "folder".
 
 ### Synchronizing a Folder
 
-Starting from Nuxeo Platform 6.0, you can synchronize spaces on which you have [at least Read permissions]({{page version='' space='userdoc' page='managing-permissions'}}). For older versions of the Nuxeo Platform, you need at least Edit permissions to be able to synchronize a space.
+Starting from Nuxeo Platform 6.0, you can synchronize spaces on which you have [at least Read permissions]({{page version='' space='userdoc' page='permissions'}}). For older versions of the Nuxeo Platform, you need at least Edit permissions to be able to synchronize a space.
 
 #### Web UI
 
-To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive_unsynced-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
-The icon becomes ![]({{file name='drive_synced_under_root-webui.png' page='nuxeo-drive'}} ?w=20). Documents inside the synchronized space have a Drive local edit icon ![]({{file name='drive_edit-webui.png' page='/nxdoc/nuxeo-drive'}} ?w=20).
+To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive_unsynced-webui.png' page='/client-apps/nuxeo-drive'}} ?w=20).
+The icon becomes ![]({{file name='drive_synced_under_root-webui.png' page='nuxeo-drive'}} ?w=20). Documents inside the synchronized space have a Drive local edit icon ![]({{file name='drive_edit-webui.png' page='/client-apps/nuxeo-drive'}} ?w=20).
 
 {{{multiexcerpt 'drive-content-sync'}}}
 
