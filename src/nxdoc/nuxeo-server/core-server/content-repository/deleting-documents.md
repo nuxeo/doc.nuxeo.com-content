@@ -215,12 +215,11 @@ The trash implementation has changed in 10.2. If you want to keep previous imple
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-To'}}
 
-- [How to use Trash Feature]({{page page='how-to-use-trash-feature'}})
-- [Action How-To Index]({{page page='action-how-to-index'}})
+- [HOWTO: Use Trash Feature]({{page page='how-to-use-trash-feature'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-- [Deleting Content]({{page space='userdoc' page='deleting-content'}}) (User documentation)
+- [Deleting Content]({{page space='userdoc' page='content-delete'}}) (User documentation)
 - [Garbage-Collecting Orphaned Binaries]({{page page='garbage-collecting-orphaned-binaries'}})
 
 {{/panel}}</div></div>

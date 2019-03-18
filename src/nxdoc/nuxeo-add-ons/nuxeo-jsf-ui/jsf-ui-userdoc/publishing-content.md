@@ -26,112 +26,112 @@ confluence:
     source_link: /display/USERDOC/Publishing+Content
 tree_item_index: 1400
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-05-18 13:21'
         message: pdate required rights in sections to be able to publish (Can ask for publishing instead of Read
         version: '22'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-07 15:01'
         message: Add publishing process using drag and drop
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-11-24 15:40'
         message: new
         version: '20'
-    - 
+    -
         author: Solen Guitter
         date: '2015-08-31 09:33'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-27 13:49'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-27 13:49'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-27 13:28'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-27 13:11'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-08-27 13:11'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-12-03 11:52'
         message: ''
         version: '13'
-    - 
+    -
         author: Solen Guitter
         date: '2014-11-04 00:59'
         message: ''
         version: '12'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-22 18:22'
         message: ''
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-18 10:59'
         message: ''
         version: '10'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-29 12:07'
         message: ''
         version: '9'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-29 12:07'
         message: ''
         version: '8'
-    - 
+    -
         author: Solen Guitter
         date: '2011-11-08 17:55'
         message: ''
         version: '7'
-    - 
+    -
         author: Solen Guitter
         date: '2010-11-03 16:48'
         message: ''
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-20 10:39'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-18 15:59'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-18 12:25'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2010-10-13 17:46'
         message: added links
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2010-04-29 14:52'
         message: ''
@@ -150,9 +150,9 @@ As in workspaces, the access to sections is determined by permissions.
 
 The main difference with workspaces is the fact that documents can't be edited in sections. The only actions available on published documents are:
 
-*   [Relations actions]({{page version='' space='userdoc' page='editing-content'}}#relations)
-*   [Preview]({{page space='USERDOC' page='Preview'}})
-*   [Alerts]({{page space='USERDOC' page='Alerts'}})
+- [Relations actions]({{page version='' space='nxdoc' page='editing-content'}}#relations)
+- [Preview]({{page space='nxdoc' page='Preview'}})
+- [Alerts]({{page space='nxdoc' page='Alerts'}})
 
 ### Publishing Documents
 

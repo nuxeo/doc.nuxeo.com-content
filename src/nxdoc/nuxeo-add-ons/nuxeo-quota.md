@@ -186,7 +186,7 @@ Administrators are responsible for managing quotas on a global scale. Non-admini
 
 When you edit a document and save it as a new version (i.e. increment the document's version), the newly archived version is displayed until the document is modified. When the document is modified, you are displayed an unarchived modified version of the document, whose version number is based on the last archived version suffixed with a + sign. As a consequence, when the document only has one archived version, typically when its first version is created, the used space is the size of the newly archived version. As soon as the document is modified, the used space of the document is the sum of the archived version and the modified unarchived version.
 
-You can find more information on [how versioning works]({{page space='userdoc' page='editing-content#versioning-overview'}}).
+You can find more information on [how versioning works]({{page space='userdoc' page='version'}}).
 
 {{/callout}}
 

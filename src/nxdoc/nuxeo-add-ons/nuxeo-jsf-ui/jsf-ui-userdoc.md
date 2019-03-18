@@ -1,5 +1,5 @@
 ---
-title: JSF UI
+title: User Documentation JSF UI
 review:
     comment: ''
     date: '2017-01-04'

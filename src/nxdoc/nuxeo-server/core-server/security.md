@@ -37,4 +37,4 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'permissions' page='USERDOC:Managing Permissions'}}}
+{{{multiexcerpt 'permissions' page='managing-permissions'}}}

@@ -197,7 +197,7 @@ This plug-in root certificate helps establishing a simple method of user certifi
 
 As the keystore configured in the installable package is a sample keystore containing a test configuration, it is required that it be replaced with the client keystore containing the keypair and the certificate to be used for signing user certificates. As of now the certificate+keypair need to be stored in a .jks formatted keystore and configured via the extension mechanism.
 
-The [user certificate generation step]({{page space='userdoc' page='digital-signature#generating-certificate'}}) requires a Certificate Authority certificate (CA) to be set up inside the Nuxeo Platform system as all user certificates have to be signed by a CA with a recognizable identity &mdash; a company rather than a single user. The term local CA can be understood here as "company Certificate Authority" or "system-wide Certificate Authority". Note that there is only one CA certificate per system but each user can have his own certificate.
+The [user certificate generation step]({{page space='userdoc' page='digital-signature'}}#generating-certificate) requires a Certificate Authority certificate (CA) to be set up inside the Nuxeo Platform system as all user certificates have to be signed by a CA with a recognizable identity &mdash; a company rather than a single user. The term local CA can be understood here as "company Certificate Authority" or "system-wide Certificate Authority". Note that there is only one CA certificate per system but each user can have his own certificate.
 
 ##### Setting up a CA certificate from a 3rd party authority
 

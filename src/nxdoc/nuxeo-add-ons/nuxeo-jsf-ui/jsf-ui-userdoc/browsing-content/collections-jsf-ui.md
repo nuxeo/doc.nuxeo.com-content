@@ -292,7 +292,7 @@ Bookmarking documents in your favorites can be done like when you add documents 
 
 - [Collections developer documentation]({{page space='nxdoc' page='collections'}})
 - [Collections in Web UI]({{page version='' space='userdoc' page='collections-web-ui'}})
-- [Favorites in Web UI]({{page version='60' space='userdoc' page='favorites'}})
+- [Favorites in Web UI]({{page version='' space='userdoc' page='favorites'}})
 
 {{/panel}}</div><div class="column medium-6">
 

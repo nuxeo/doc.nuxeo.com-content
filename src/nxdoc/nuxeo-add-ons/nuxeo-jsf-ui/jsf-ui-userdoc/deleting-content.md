@@ -165,7 +165,7 @@ To delete one or several documents, select them from the **Content** tab of the 
 
 You can also delete documents using right-click on the document's icon from the **Content** tab of the workspace.
 
-![]({{file name='right-click-menu.png' space='userdoc' page='editing-content'}} ?w=350,border=true)
+![]({{file name='right-click-menu.png' space='nxdoc' page='editing-content'}} ?w=350,border=true)
 
 ### Managing Deleted Documents
 
@@ -173,13 +173,13 @@ Users with "Manage everything" permissions can access the workspace's **Trash** 
 
 *   Restore documents by selecting them and clicking the **Restore** button.
     Documents are moved back to the **Content** tab of the workspace and available to users. They get the "project" lifecycle state, even if their lifecycle state before deletion was "approved".
-    ![]({{file name='trash-tab.png' space='userdoc' page='deleting-content'}} ?w=600,border=true)
+    ![]({{file name='trash-tab.png' space='nxdoc' page='deleting-content'}} ?w=600,border=true)
 *   Erase documents by selecting them and clicking the **Permanent delete** button.
-    Documents are permanently erased from the application. They cannot be restored. The [relations]({{page space='userdoc' page='editing-content'}}#relations) to the deleted documents are deleted.
-    ![]({{file name='trash-tab.png' space='userdoc' page='deleting-content'}} ?w=600,border=true)
+    Documents are permanently erased from the application. They cannot be restored. The [relations]({{page space='nxdoc' page='editing-content'}}#relations) to the deleted documents are deleted.
+    ![]({{file name='trash-tab.png' space='nxdoc' page='deleting-content'}} ?w=600,border=true)
 *   Empty the trash by clicking the corresponding button.
-    All deleted documents are permanently erased from the application. They cannot be restored. The [relations]({{page space='userdoc' page='editing-content'}}#relations) to the deleted documents are deleted.
-    ![]({{file name='empty-trash.png' space='userdoc' page='deleting-content'}} ?w=500,h=179,border=true)
+    All deleted documents are permanently erased from the application. They cannot be restored. The [relations]({{page space='nxdoc' page='editing-content'}}#relations) to the deleted documents are deleted.
+    ![]({{file name='empty-trash.png' space='nxdoc' page='deleting-content'}} ?w=500,h=179,border=true)
 
 {{! /multiexcerpt}}
 

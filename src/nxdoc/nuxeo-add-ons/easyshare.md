@@ -60,7 +60,7 @@ history:
         version: '1'
 
 ---
-{{{excerpt 'USERDOC:EasyShare'}}}
+{{{excerpt space='userdoc' page='EasyShare'}}}
 
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 

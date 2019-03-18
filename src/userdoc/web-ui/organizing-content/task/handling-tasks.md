@@ -1,5 +1,5 @@
 ---
-title: Participating to a workflow
+title: Participating to a Workflow
 review:
     comment: ''
     date: '2018-10-15'

@@ -854,6 +854,6 @@ You can contribute custom negotiators to the [`negotiations` extension point](ht
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
 
 - [Branding in Nuxeo Studio]({{page space='studio' page='branding'}})
-- [Local Configuration]({{page space='userdoc' page='local-configuration'}})
+- [Local Configuration]({{page space='nxdoc' page='local-configuration'}})
 
 {{/panel}}</div></div>

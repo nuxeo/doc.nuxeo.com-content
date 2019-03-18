@@ -112,7 +112,7 @@ history:
 
 ### Using Preview
 
-{{{multiexcerpt 'preview_functional_overview' page='USERDOC:Preview'}}}
+{{{multiexcerpt 'preview_functional_overview' page='preview-jsf-ui'}}}
 
 ## Installation and Configuration
 

@@ -1,5 +1,5 @@
 ---
-title: How to Disable by Coverage and by Subjects Virtual Navigations
+title: 'HOWTO: Disable by Coverage and by Subjects Virtual Navigations'
 review:
     comment: ''
     date: '2015-12-01'

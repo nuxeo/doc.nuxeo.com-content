@@ -1,5 +1,5 @@
 ---
-title: How to Implement Local Groups or Roles Using Computed Groups
+title: 'HOWTO: Implement Local Groups or Roles Using Computed Groups'
 review:
     comment: ''
     date: '2017-12-13'
@@ -136,11 +136,13 @@ history:
         date: '2013-07-05 19:02'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-In this how to, you will learn how to let managers of a workspace determine who is part of locally defined groups (local to the workspace). It is like implementing a "role" notion. For instance you may want to work with "members" of a workspace, as well as "administrators", and require that users with the administrator role can define who is a member and who is an administrator. This documentation will show you how to implement this kind of behavior, but for any "role" you want, and with even more complex use cases.
+In this how to, you will learn how to let managers of a workspace determine who is part of locally defined groups (local to the workspace). It is like implementing a "role" notion.
 {{! /excerpt}}
+
+For instance you may want to work with "members" of a workspace, as well as "administrators", and require that users with the administrator role can define who is a member and who is an administrator. This documentation will show you how to implement this kind of behavior, but for any "role" you want, and with even more complex use cases.
 
 {{#> callout type='info' }}
 Starting from 8.10 HF-04 you need to configure the virtual groups explicitly. To do so, add the following contribution:
@@ -158,7 +160,7 @@ Starting from 8.10 HF-04 you need to configure the virtual groups explicitly. To
 {{/panel}}  
 {{/callout}}
 
-The Nuxeo security system gives you all the tools you need to define security from giving a simple right to a specific user on a document to defining complex use cases. You can basically play with ACLs, granting and denying permissions to users and groups. Groups in Nuxeo are defined by users part of the "powerusers" or "administrators" groups, in the [Admin Center]({{page space='userdoc' page='managing-users-and-groups'}}). But it is also possible to define another category of groups, whose content definition is not "manual": the _computed groups_.
+The Nuxeo security system gives you all the tools you need to define security from giving a simple right to a specific user on a document to defining complex use cases. You can basically play with ACLs, granting and denying permissions to users and groups. Groups in Nuxeo are defined by users part of the "powerusers" or "administrators" groups, in the [Administration menu]({{page version='' space='userdoc' page='administration'}}). But it is also possible to define another category of groups, whose content definition is not "manual": the _computed groups_.
 
 Computed groups let you define a list of groups to which users will be affected using Java code. There are multiple use cases where you will need this feature. Implementation will require Java development knowledge and if you are familiar with Nuxeo Core Development (CoreSession, DocumentModel, ...), it's better.
 
@@ -497,30 +499,30 @@ This part is a pure Studio demonstration, just a way of making sure our newly de
 **TEST**
 
 1.  Deploy your project.
-6.  Connect as Administrator into your Nuxeo instance.
-7.  Create two users: user1 and user2.
-8.  Create a workspace and set user1 as validator.
-9.  Create a File and click on your button.
-10.  Connect as user1.
+1.  Connect as Administrator into your Nuxeo instance.
+1.  Create two users: user1 and user2.
+1.  Create a workspace and set user1 as validator.
+1.  Create a File and click on your button.
+1.  Connect as user1.
     On his Home Dashboard, you will see a task assigned on the File document.
-11.  Log out and connect as Administrator.
-12.  Modify the Workspace and add user2 into the validators list.
-13.  Log out and connect as user1.
+1.  Log out and connect as Administrator.
+1.  Modify the Workspace and add user2 into the validators list.
+1.  Log out and connect as user1.
     On his Home Dashboard, you will see a task assigned on the File document.
 
 ## Conclusion
 
 Next steps could be:
 
-*   Add a listener on the Workspace to add an ACE on it to grant read or edit permission on the workspace for the validator group.
-*   Implement a delegation document type that stores a missing user and a list of delegated users and add a computer group that resolves indirect group assignment through this object.
+- Add a listener on the Workspace to add an ACE on it to grant read or edit permission on the workspace for the validator group.
+- Implement a delegation document type that stores a missing user and a list of delegated users and add a computer group that resolves indirect group assignment through this object.
 
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel heading='Related How-Tos'}}
 
-- [How-to index ]({{page page='how-to-index'}})
+- [How-to index]({{page page='how-to-index'}})
 
 {{/panel}}
 </div>
@@ -528,7 +530,7 @@ Next steps could be:
 <div class="column medium-6">
 {{#> panel heading='Related Documentation'}}
 
-- [Managing Permissions]({{page space='userdoc' page='managing-permissions'}})
+- [Managing Permissions]({{page space='userdoc' page='permissions'}})
 - [Nuxeo Platform User Registration]({{page page='nuxeo-platform-user-registration'}})
 
 {{/panel}}

@@ -1,5 +1,6 @@
 ---
 title: Collections
+description: Collections are a folder-like document in which you can classify existing documents. Documents are not actually copied or moved into the collection, which only holds a link to the document in its original location.
 review:
     comment: ''
     date: '2017-01-17'
@@ -11,6 +12,7 @@ labels:
     - collection-component
     - multiexcerpt-include
     - content-review-lts2017
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -155,69 +157,73 @@ history:
         date: '2014-04-04 16:30'
         message: ''
         version: '1'
-
 ---
+
 ## Functional Overview
 
-{{multiexcerpt 'definition-collection' page='USERDOC:collections-web-ui'}}
+{{multiexcerpt 'definition-collection' space='userdoc' page='collections-web-ui'}}
 
 Depending on your user interface you can access collections by different means.
 
-**Web UI**
-{{{multiexcerpt 'functional-introduction-web-ui' page='USERDOC:collections-web-ui'}}}
+{{{multiexcerpt 'functional-introduction-web-ui' space='userdoc' page='collections-web-ui'}}}
 
+<!--JSF Instructions
 **JSF UI**
 {{{multiexcerpt 'functional-introduction-jsf-ui' page='USERDOC:Collections'}}}
+-->
 
 ### Collecting Documents
 
 {{multiexcerpt 'collecting-rights' page='USERDOC:collections-web-ui'}}
 
-**Collecting documents in Web UI**
 {{{multiexcerpt 'collecting-web-ui' page='USERDOC:collections-web-ui'}}}
 
+<!--JSF Instructions
 **Collecting documents in JSF UI**
 {{{multiexcerpt 'collecting-jsf-ui' page='USERDOC:Collections'}}}
+-->
 
 ### Creating Collections
 
 {{multiexcerpt 'collections-containment-rule' page='collections-web-ui'}}
 
-**Creating collections in Web UI**
-{{{multiexcerpt 'creating-web-ui' page='USERDOC:collections-web-ui'}}}
+{{{multiexcerpt 'creating-web-ui' space='userdoc' page='collections-web-ui'}}}
 
+<!--JSF Instructions
 **Creating collections in JSF UI**
 {{{multiexcerpt 'creating-jsf-ui' page='USERDOC:Collections'}}}
+-->
 
 ### Sharing a Collection
 
-{{{multiexcerpt 'sharing' page='USERDOC:Collections'}}}
+{{{multiexcerpt 'sharing' space='userdoc' page='collections-web-ui'}}}
 
 ### Removing Documents from a Collection
 
-**Web UI**
 {{{multiexcerpt 'removing-web-ui' page='USERDOC:collections-web-ui'}}}
 
+<!--JSF Instructions
 **JSF UI**
 {{{multiexcerpt 'removing-jsf-ui' page='USERDOC:Collections'}}}
+-->
 
 ### Favorites
 
 {{{multiexcerpt 'definition-favorites' page='USERDOC:Favorites'}}}
 
-**On Web UI**
-
 The list of documents bookmarked as favorites is available:
 {{{multiexcerpt 'favorites-location-web-ui' page='USERDOC:Favorites'}}}
 {{{multiexcerpt 'bookmarking-favorites-web-ui' page='USERDOC:Favorites'}}}
 
+<!--JSF Instructions
 **On JSF UI**
 
 The list of documents bookmarked as favorites is available:
 {{{multiexcerpt 'favorites-location-jsf-ui' page='USERDOC:Collections'}}}
 {{{multiexcerpt 'bookmarking-favorites-jsf-ui' page='USERDOC:Collections'}}}
+-->
 
-## Installation & Configuration
+## Installation and Configuration
 
 The collection module has no specific installation step as it is already included in the default Nuxeo Platform distribution.
 
@@ -225,7 +231,7 @@ The collection module has no specific installation step as it is already include
 
 ### {{> anchor 'customization-tab'}}How to Implement a New Type of Collection
 
-If you'd like to <span style="color: rgb(51,51,51);">implement a new collection (for instance to have new metadata)</span> you can simply add the `Collection` facet to your specific document type. You'll therefore be able to use it as a regular collection.
+If you'd like to implement a new collection (for instance to have new metadata) you can simply add the `Collection` facet to your specific document type. You'll therefore be able to use it as a regular collection.
 
 ```
   <require>org.nuxeo.ecm.collections.schemas</require>
@@ -247,14 +253,12 @@ If you'd like to <span style="color: rgb(51,51,51);">implement a new collection 
 
 ```
 
-&nbsp;
-
 ### NotCollectionMember Facet
 
 All documents can be added to a collection except:
 
-*   Documents with the facet `SystemDocument`
-*   Documents with the facet `NotCollectionMember`
+- Documents with the facet `SystemDocument`
+- Documents with the facet `NotCollectionMember`
 
 By default, documents of type `Collection`, `WorkspaceRoot`, `TemplateRoot`, `SectionRoot`, `Domain` and `Root` have the facet `NotCollectionMember`. Please see [collection-core-types-contrib.xml](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-platform-collections/nuxeo-platform-collections-core/src/main/resources/OSGI-INF/collection-core-types-contrib.xml) for more details.
 
@@ -262,10 +266,10 @@ By default, documents of type `Collection`, `WorkspaceRoot`, `TemplateRoot`, `Se
 
 Several [events]({{page page='events-and-listeners'}}) related to collections are available:
 
-*   `beforeAddedToCollection`
-*   `addedToCollection`
-*   `beforeRemovedFromCollection`
-*   `removedFromCollection`
+- `beforeAddedToCollection`
+- `addedToCollection`
+- `beforeRemovedFromCollection`
+- `removedFromCollection`
 
 The collection reference is available in the event context map. For example, within an event listener which starts an automation chain, you can fetch the collection as described below:
 
@@ -293,17 +297,14 @@ To do so you need to add the following XML contribution with [either Nuxeo Studi
 ```
 
 {{#> callout type='warning' heading='Limitation'}}
-
-With this configuration you won't be able to unsynchronize a collection as usual using the ![]({{file name='drive_synced.png' space='client-apps' page='nuxeo-drive'}}) icon as this icon will stay grey: ![]({{file name='drive_unsynced.png' space='client-apps' page='nuxeo-drive'}}).
-
+With this configuration you won't be able to unsynchronize a collection as usual using the ![]({{file name='drive_synced.png' space='client-apps' page='nuxeo-drive'}}) icon as this icon will stay grey: ![]({{file name='drive_unsynced.png' space='client-apps' page='nuxeo-drive'}}).</br>
 Yet you can always unsynchronize the collection from the Nuxeo Drive tab in the user Home.
-
 {{/callout}}
 
 **Notes:**
 
-*   Files or folders created in the locally synchronized collection folder will not be added to the collection server-side. For now we have no mechanism to choose their path in the hierarchy.
-*   Please be aware that all the limitations applied to [online editing with Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}}#online-editing) apply to synchronized collections.
+- Files or folders created in the locally synchronized collection folder will not be added to the collection server-side. For now we have no mechanism to choose their path in the hierarchy.
+- Please be aware that all the limitations applied to [online editing with Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}}#online-editing) apply to synchronized collections.
 
 ## Core Implementation
 
@@ -317,13 +318,11 @@ For instance, when deleting a collection, an asynchronous work will update the d
 
 Finally, when copying a collection, an asynchronous work will also duplicate its content.
 
-{{> end_of_tabs }}
-
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
 
-- [Collections user documentation]({{page space='userdoc' page='collections'}})
+- [Collections user documentation]({{page version='' space='userdoc' page='collections-web-ui'}})
 - [Nuxeo Drive documentation]({{page page='nuxeo-drive'}})
 - [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page version='' space='client-apps' page='index' page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
 

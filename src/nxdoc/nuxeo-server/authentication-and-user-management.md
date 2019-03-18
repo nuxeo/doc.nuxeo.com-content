@@ -224,15 +224,15 @@ It is possible to reference a meta-directory that would be the result of the mer
 
 When users are dealt with through the directory abstraction (so 90% of the cases), the Nuxeo Platform provides user interfaces (and REST APIs) for handling:
 
-*   User CRUD by administrators.
-*   User password management by administrators.
-*   Group CRUD and assignment by administrators (including management of sub-groups).
-*   User profile management by the user.
-*   Password management by the user.
-*   User and group search (for filling in a metadata, assigning an ACL, selecting a specific user in a search filter,...).
-*   [Nuxeo Platform User Registration]({{page page='nuxeo-platform-user-registration'}}): a Nuxeo addon that adds to the default Nuxeo Platform UI and services for inviting by email an external user.
+- User CRUD by administrators.
+- User password management by administrators.
+- Group CRUD and assignment by administrators (including management of sub-groups).
+- User profile management by the user.
+- Password management by the user.
+- User and group search (for filling in a metadata, assigning an ACL, selecting a specific user in a search filter,...).
+- [Nuxeo Platform User Registration]({{page page='nuxeo-platform-user-registration'}}): a Nuxeo addon that adds to the default Nuxeo Platform UI and services for inviting by email an external user.
 
-For more information, please see [Managing Users and Groups]({{page space='userdoc' page='managing-users-and-groups'}}).
+For more information, please see [Managing Users and Groups]({{page space='userdoc' page='administration'}}#users-and-groups).
 
 #### Virtual Users
 

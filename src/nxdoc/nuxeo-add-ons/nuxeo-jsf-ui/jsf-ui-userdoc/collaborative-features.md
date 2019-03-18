@@ -102,7 +102,7 @@ See the [Versioning Overview section]({{page page='editing-content'}}#versioning
 
 {{{multiexcerpt 'comparison-possibilities' space='userdoc' page='nuxeo-diff'}}}
 
-![]({{file name='Diff-compare-screen.png' page='nuxeo-diff'}} ?w=600,border=true)
+![]({{file name='Diff-compare-screen.png' space='userdoc' page='nuxeo-diff'}} ?w=600,border=true)
 
 See the page [Nuxeo Diff]({{page page='/userdoc/nuxeo-diff'}}) for more details.
 

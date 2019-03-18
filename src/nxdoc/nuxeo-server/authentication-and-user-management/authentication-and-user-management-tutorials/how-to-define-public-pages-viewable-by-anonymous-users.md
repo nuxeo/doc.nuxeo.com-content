@@ -272,11 +272,11 @@ If you give Write access to the repository to this user, you will let anyone hav
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 - [How to Implement Local Groups or Roles Using Computed Groups]({{page page='how-to-implement-local-groups-or-roles-using-computed-groups'}})
-- [How-to index ]({{page page='how-to-index'}})
+- [How-to index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-- [Managing Permissions]({{page space='userdoc' page='managing-permissions'}})
+- [Managing Permissions]({{page space='userdoc' page='permissions'}})
 - [Nuxeo Platform User Registration]({{page page='nuxeo-platform-user-registration'}})
 
 {{/panel}}</div></div>

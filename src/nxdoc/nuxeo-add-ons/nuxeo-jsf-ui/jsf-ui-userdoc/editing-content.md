@@ -389,7 +389,7 @@ history:
 
 ---
 {{! excerpt}}
-Editing a document means modifying its content (i.e. the attached file of a [file]({{page space='userdoc' page='document-types'}}#file) document, the text of a [note]({{page space='userdoc' page='document-types'}}#note), etc.), or simply editing the title, description or any metadata of the document. You can edit documents individually using an edit form or apply modifications to several documents using the bulk edit form.
+Editing a document means modifying its content (i.e. the attached file of a [file]({{page space='nxdoc' page='document-types'}}#file) document, the text of a [note]({{page space='nxdoc' page='document-types'}}#note), etc.), or simply editing the title, description or any metadata of the document. You can edit documents individually using an edit form or apply modifications to several documents using the bulk edit form.
 {{! /excerpt}}
 
 ## {{> anchor 'edit-metadata-form'}} Content and Metadata Edit Form
@@ -427,7 +427,7 @@ Nature
 
 </td><td colspan="1">
 
-Nature of the document. Values come from the nature [vocabulary]({{page space='userdoc' page='managing-vocabularies'}}).
+Nature of the document. Values come from the nature [vocabulary]({{page space='nxdoc' page='managing-vocabularies'}}).
 
 </td></tr><tr><td colspan="1">
 
@@ -435,7 +435,7 @@ Subjects
 
 </td><td colspan="1">
 
-Topic(s) of the document. Values come from the I10nsubjects [vocabularies]({{page space='userdoc' page='managing-vocabularies'}}).
+Topic(s) of the document. Values come from the I10nsubjects [vocabularies]({{page space='nxdoc' page='managing-vocabularies'}}).
 
 </td></tr><tr><td colspan="1">
 
@@ -459,7 +459,7 @@ Coverage
 
 </td><td colspan="1">
 
-Information about the geographic reach of the document. Values come from the I10ncoverage [vocabulary]({{page space='userdoc' page='managing-vocabularies'}}).
+Information about the geographic reach of the document. Values come from the I10ncoverage [vocabulary]({{page space='nxdoc' page='managing-vocabularies'}}).
 
 </td></tr><tr><td colspan="1">
 
@@ -528,7 +528,7 @@ Last user who modified the document. This field is automatically filled in by th
 
 </td></tr></tbody></table></div>{{! /multiexcerpt}}
 
-Although metadata are not mandatory, filling them in will make your documents easier to find using [Nuxeo search engine]({{page space='userdoc' page='searching-the-nuxeo-platform'}}).
+Although metadata are not mandatory, filling them in will make your documents easier to find using [Nuxeo search engine]({{page page='searching-the-nuxeo-platform'}}).
 
 {{#> callout type='info' heading='Virtual navigation'}}
 
@@ -578,7 +578,7 @@ When you navigate from page to page, your selection is not lost and you can bulk
 
 ## {{> anchor 'versioning-overview'}}Versioning Overview
 
-{{{multiexcerpt 'versioning-functional-overview' page='USERDOC:Browse'}}}
+{{{multiexcerpt 'versioning-functional-overview' page='browse'}}}
 
 **To create a new version of your document**:
 {{! multiexcerpt name='jsf-ui-manual-versioning'}}
@@ -612,7 +612,8 @@ Available relations are:
 *   compliance relation (conforms to, has conform).
 
 A summary of the document's relations is displayed in the **Summary** tab.
-![]({{file name='relations-summary-tab.png' space='userdoc' page='editing-content'}} ?w=600,border=true)
+![]({{file name='relations-summary-tab.png' space='nxdoc' page='editing-content'}} ?w=600,border=true)
+
 You can also see all the document's relations in the **Relations** tab of the document. In **Relations** tab, relations are sorted by outgoing and incoming relations. Outgoing relations are relations that were created from the current document. Incoming relations are relations which were created from another document and to the current document.
 
 The objects of the relation are hyperlinks: Click on the object's name to consult it.
@@ -637,27 +638,27 @@ In the **Relations** tab of the document, click on **Add a new relation** link, 
 
 The relation is displayed as an outgoing relation, under the relation creation form. An incoming relation is automatically created in the target document's **Relations** tab, that directs to the source document of the relation and Relations are also displayed in the **Summary** tab of the document.
 
-![]({{file name='incoming-relations.png' space='userdoc' page='editing-content'}} ?w=600,border=true)
+![]({{file name='incoming-relations.png' space='nxdoc' page='editing-content'}} ?w=600,border=true)
 
 **To delete a relation:**
 
 In the **Relations** tab of the document, click on the **Delete** link corresponding to the relation. The relation is deleted and does not appear in the table anymore. It is also removed from the incoming relations of the target document.
 
-![]({{file name='relations-outgoing.png' space='userdoc' page='editing-content'}} ?w=600,border=true)
+![]({{file name='relations-outgoing.png' space='nxdoc' page='editing-content'}} ?w=600,border=true)
 
 {{#> callout type='tip' }}
 
-If you want to go further, you can follow this [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}}).
+If you want to go further, you can follow this [How to Add New Relation Types]({{page space='nxdoc' page='how-to-add-new-relation-types'}}).
 
 {{/callout}}
 
 ## Copying and Moving Documents
 
-Copying and moving documents requires to have at least Read permission on the original document and Edit permission in the target workspace. Copy and move are possible in workspaces and workspaces templates. To copy a document in a section you need to [publish]({{page space='userdoc' page='publishing-content'}}) it in the new section. To move it from a section to another, you need to [unpublish]({{page space='userdoc' page='publishing-content'}}) it from the first section and publish it in the second one.
+Copying and moving documents requires to have at least Read permission on the original document and Edit permission in the target workspace. Copy and move are possible in workspaces and workspaces templates. To copy a document in a section you need to [publish]({{page space='nxdoc' page='publishing-content'}}) it in the new section. To move it from a section to another, you need to [unpublish]({{page space='nxdoc' page='publishing-content'}}) it from the first section and publish it in the second one.
 
 Copying and Moving are done using the clipboard and worklist, which are located in the left part of the screen, below the navigation tree.
 
-![]({{file name='worklist-clipboard.png' space='userdoc' page='editing-content'}} ?w=180,h=169,border=true)
+![]({{file name='worklist-clipboard.png' space='nxdoc' page='editing-content'}} ?w=180,h=169,border=true)
 
 ### {{> anchor 'clipboard-worklist'}}Clipboard and Worklist
 
@@ -667,9 +668,9 @@ What is the difference between the clipboard and the worklist?
 
 Both are used to select documents and apply actions on these documents. Possible actions are:
 
-*   [Copy]({{page space='userdoc' page='editing-content'}}#copy)
-*   [Move]({{page space='userdoc' page='editing-content'}}#move)
-*   [Export]({{page space='userdoc' page='exporting-documents'}})
+*   [Copy]({{page space='nxdoc' page='editing-content'}}#copy)
+*   [Move]({{page space='nxdoc' page='editing-content'}}#move)
+*   [Export]({{page space='nxdoc' page='exporting-documents'}})
 
 It is possible to add your own actions [in the clipboad or the worklist]({{page space='nxdoc' page='actions-display'}}).
 
@@ -703,7 +704,7 @@ To move one or several documents from a single workspace at the same time, you c
 
 You can also move documents one by one by dragging their icon from the **Content** tab to the target workspace in the navigation tree.
 
-![]({{file name='move-d&d.png' space='userdoc' page='editing-content'}} ?w=400,border=true)
+![]({{file name='move-d&d.png' space='nxdoc' page='editing-content'}} ?w=400,border=true)
 
 **From Several Workspaces**
 
@@ -711,8 +712,8 @@ To move several documents from different workspaces at the same time, check the 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in this documentation'}}
 
-- [Traceability]({{page space='userdoc' page='traceability'}})
-- [Managing Vocabularies]({{page space='userdoc' page='managing-vocabularies'}})
+- [Traceability]({{page space='nxdoc' page='traceability'}})
+- [Managing Vocabularies]({{page space='nxdoc' page='managing-vocabularies'}})
 
 {{/panel}}
 
@@ -721,7 +722,7 @@ To move several documents from different workspaces at the same time, check the 
 
 - [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
 - [How to Customize the Bulk Edit Form]({{page space='nxdoc' page='how-to-customize-the-bulk-edit-form'}})
-- [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})
+- [How to Add New Relation Types]({{page space='nxdoc' page='how-to-add-new-relation-types'}})
 - [How to Control the Display Mode of a Widget]({{page space='nxdoc' page='how-to-control-the-display-mode-of-a-widget'}})
 
 {{/panel}}

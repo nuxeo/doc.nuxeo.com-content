@@ -66,8 +66,18 @@ There are two ways to create a collection:
 {{! /multiexcerpt}}
 
 ## Sharing Collections
+{{! multiexcerpt name='sharing'}}
+Sharing a collection means [giving permissions]({{page page='permissions'}}) to users on the collection. Collections created in the default domain in a shared workspace or folder are automatically shared to all the workspace or folder's users, following the rights inheritance principle.
 
-{{{multiexcerpt 'sharing' page='userdoc/collections'}}}
+Collections created in your personal workspace are private by default. You must grant the needed permissions on the collection if you want to share it. Granting permissions to a collection makes the collection available to users from their Home. The list of documents displayed inside the collection depends on the permissions of the user on each of the documents.
+
+Beside the generic permissions, collection have a specific right, called "can collect". When you share a collection, you can choose to:
+
+- **Give read access**: By giving them Read permission, you enable users to see the collection in their Home and the documents inside it depending on their permissions on each document;
+- **Enable users to add documents to the collection**: By giving the permission "Can collect", you enable users to add documents to the collection and remove them;
+- **Give edit access**: By giving the Edit permission, you enable users to add documents to the collection, remove them and to edit the collection (i.e. title, description, etc.);
+- **Make them manager for the collection**: By giving them Manage everything permission, you enable users to manage the content of the collection and who can access it.
+{{! /multiexcerpt}}
 
 ## Removing Documents from Collections
 {{! multiexcerpt name='removing-web-ui'}}

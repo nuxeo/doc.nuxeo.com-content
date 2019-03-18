@@ -304,7 +304,7 @@ history:
         version: '1'
 
 ---
-{{{multiexcerpt 'automated-metadata-extraction-excerpt' page='USERDOC:Creating Content'}}}
+{{{multiexcerpt 'automated-metadata-extraction-excerpt' page='creating-content'}}}
 
 ## How It Works
 

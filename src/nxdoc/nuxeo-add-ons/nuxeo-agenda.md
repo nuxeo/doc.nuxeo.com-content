@@ -45,7 +45,7 @@ history:
         version: '1'
 
 ---
-{{{excerpt 'USERDOC:Nuxeo Agenda'}}}
+{{{excerpt space='userdoc' page='nuxeo-agenda'}}}
 
 ## Installation
 
@@ -57,4 +57,4 @@ After the package is installed, a new document type is available from workspaces
 
 ## Functional Overview
 
-{{{multiexcerpt 'nuxeo-agenda-functional-overview' page='USERDOC:Nuxeo Agenda'}}}
+{{{multiexcerpt 'nuxeo-agenda-functional-overview' space='userdoc' page='Nuxeo Agenda'}}}

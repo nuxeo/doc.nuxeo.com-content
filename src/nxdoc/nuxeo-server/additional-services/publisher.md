@@ -101,7 +101,7 @@ history:
 
 ## Functional Overview
 
-{{{multiexcerpt 'functional-overview' page='USERDOC:Publishing Content'}}}
+{{{multiexcerpt 'functional-overview' space='nxdoc' page='publishing-content'}}}
 
 ## Technical Overview
 

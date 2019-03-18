@@ -158,12 +158,12 @@ When a main 3D model file is assigned to a 3D document, a processing routine is 
 To create a 3D document, you can either attach the 3D file as main content of the document and then attach the textures files, or you can directly attach a standalone ZIP file as main content of the 3D document, that holds all the 3D resources for the document. This second way to proceed allows a directory structure inside the ZIP.
 
 Available features on 3D document type:
-- [Edit metadata]({{page version='' space='userdoc' page='editing-content'}}#edit-metadata-form)
-- [Versioning of document]({{page version='' space='userdoc' page='editing-content'}}#versioning-overview)
-- [Tagging]({{page version='' space='userdoc' page='tags'}})
-- [Add to collections]({{page version='' space='userdoc' page='collections'}})
-- [Relations]({{page version='' space='userdoc' page='editing-content'}}#relations)
-- [Publishing]({{page version='' space='userdoc' page='publishing-content'}})
+- [Edit metadata]({{page version='' space='userdoc' page='content-edit'}})
+- [Versioning of document]({{page version='' space='userdoc' page='version'}})
+- [Tagging]({{page version='' space='nxdoc' page='tags'}})
+- [Add to collections]({{page version='' space='userdoc' page='collections-web-ui'}})
+- [Relations]({{page version='' space='nxdoc' page='editing-content'}}#relations)
+- [Publishing]({{page version='' space='userdoc' page='share'}})
 
 Features not available on 3D document type:
 - Default workflows

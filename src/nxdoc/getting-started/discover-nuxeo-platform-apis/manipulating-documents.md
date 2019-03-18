@@ -209,12 +209,10 @@ history:
         version: '1'
 previous_link: /nxdoc/setting-up-your-javascript-environment
 next_link: /nxdoc/handling-permissions
-
 ---
+
 {{! excerpt}}
-
 Learn how to manipulate documents (creation, update, state change, deletion...) and launch queries through the REST API.
-
 {{! /excerpt}}
 
 The steps below leverage the document types included in the addon Getting started with the Nuxeo Platform:
@@ -229,7 +227,7 @@ Create a new contract in Nuxeo Platform.
 
 **Prerequisites**
 
-*   {{{multiexcerpt 'prerequisite_addon' page='Handling Permissions'}}}
+- {{{multiexcerpt 'prerequisite_addon' page='Handling Permissions'}}}
 
 **Procedure**
 
@@ -314,8 +312,8 @@ Create a new contract in Nuxeo Platform.
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [Creating Content]({{page space='userdoc' page='creating-content'}})
-*   [REST API Entity Types]({{page page='rest-api-entity-types'}})
+- [Creating Content]({{page space='userdoc' page='content-create'}})
+- [REST API Entity Types]({{page page='rest-api-entity-types'}})
 
 {{/callout}}
 
@@ -366,14 +364,14 @@ Documents can be fetched using their ID or path.
 
 **Notes**
 
-*   We obtained detailed information about the contract owner because we added some [headers]({{page page='special-http-headers'}}) to retrieve all the document's relations.
-*   The document hierarchy is provided in context parameters because we used a [content enricher]({{page page='content-enrichers'}}). That's only one out of many.
-*   The contract inherited the company name and other customer related properties from its portfolio (in the `bccustomer` schema) thanks to some business logic brought by the addon Getting started with the Nuxeo Platform.
+- We obtained detailed information about the contract owner because we added some [headers]({{page page='special-http-headers'}}) to retrieve all the document's relations.
+- The document hierarchy is provided in context parameters because we used a [content enricher]({{page page='content-enrichers'}}). That's only one out of many.
+- The contract inherited the company name and other customer related properties from its portfolio (in the `bccustomer` schema) thanks to some business logic brought by the addon Getting started with the Nuxeo Platform.
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
-*   [Content Enricher]({{page page='content-enrichers'}})
+- [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
+- [Content Enricher]({{page page='content-enrichers'}})
 
 {{/callout}}
 
@@ -437,7 +435,7 @@ We will now update the contract to add some custom clauses.
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [Repository Concepts]({{page space='nxdoc60' page='repository-concepts'}})
+- [Repository Concepts]({{page space='nxdoc60' page='repository-concepts'}})
 
 {{/callout}}
 
@@ -532,8 +530,8 @@ Restore the contract from trash.
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [How to use Trash Feature]({{page page='how-to-use-trash-feature'}})
-*   [ Repository Concept Lifecycle ]({{page page='repository-concepts'}})
+- [How to use Trash Feature]({{page page='how-to-use-trash-feature'}})
+- [Repository Concept Lifecycle]({{page page='repository-concepts'}})
 
 {{/callout}}
 
@@ -543,10 +541,10 @@ Find a contract that needs to be deleted: it expired before 2016 and has a limit
 
 1.  Create a file called `query.js` which launches a query for all documents:
 
-    *   of the `BCContract` type
-    *   except archived versions and documents that are in the trash
-    *   that contain the keyword "limitation"
-    *   having expired before the end of 2015.
+    - of the `BCContract` type
+    - except archived versions and documents that are in the trash
+    - that contain the keyword "limitation"
+    - having expired before the end of 2015.
 
     ```js
     #!/usr/bin/env node
@@ -584,8 +582,8 @@ Find a contract that needs to be deleted: it expired before 2016 and has a limit
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [Search Resource Endpoints]({{page page='search-endpoints'}})
-*   [Indexing and Query]({{page page='indexing-and-query'}})
+- [Search Resource Endpoints]({{page page='search-endpoints'}})
+- [Indexing and Query]({{page page='indexing-and-query'}})
 
 {{/callout}}
 

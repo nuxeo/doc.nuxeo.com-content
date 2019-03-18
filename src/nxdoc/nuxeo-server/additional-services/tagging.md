@@ -134,7 +134,7 @@ A tag holds a label that does not contain any:
 
 {{#> callout type='info' }}
 
-Since 10.3, if using the service based on the `NXTag` facet, it is possible to use these characters except the percent when creating tags. 
+Since 10.3, if using the service based on the `NXTag` facet, it is possible to use these characters except the percent when creating tags.
 This can be enabled or disabled with the following configuration property: `nuxeo.tag.sanitization.enabled`.
 By default they are not usable (`nuxeo.tag.sanitization.enabled=true`).
 
@@ -144,7 +144,7 @@ Characters will be removed by service.
 
 ## Functional Overview
 
-{{{multiexcerpt 'functional-overview' page='USERDOC:Tags'}}}
+{{{multiexcerpt 'functional-overview' space='nxdoc' page='tags'}}}
 
 ## Tag Service Features
 
@@ -205,6 +205,6 @@ Both `Tag` and `Tagging` documents managed by the tag service are _unfiled_, whi
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
 
 - [Tags]({{page space='userdoc' page='tags'}})
-- [Publishing Content]({{page space='userdoc' page='publishing-content'}})
+- [Publishing Content]({{page space='userdoc' page='share'}}#publishing)
 
 {{/panel}}</div></div>
