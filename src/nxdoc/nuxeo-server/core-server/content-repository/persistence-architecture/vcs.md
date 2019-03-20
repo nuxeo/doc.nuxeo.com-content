@@ -1,5 +1,5 @@
 ---
-title: VCS
+title: Visible Content Store (VCS)
 review:
     comment: ''
     date: '2016-12-07'
@@ -246,7 +246,7 @@ history:
         version: '1'
 ---
 
-The goals of VCS (Visible Content Store) are to:
+The goals of **Visible Content Store** (VCS) are to:
 
 - Store information in standard SQL databases.
 - Use "natural" object mapping to tables.
@@ -255,12 +255,12 @@ The goals of VCS (Visible Content Store) are to:
 - Have some flexibility in the storage model to optimize certain cases at configuration time.
 
 {{! excerpt}}
-This section's sub-pages describe the architecture of VCS.
+This section's sub-pages describe the architecture of **Visible Content Store** (VCS).
 {{! /excerpt}}
 
 ## "Visible SQL" Structures
 
-When using VCS, you can directly access all your data in pure SQL: the schema of the database is a mapping of the XSD schemas you defined in the Nuxeo configuration.
+When using *VCS*, you can directly access all your data in pure SQL: the schema of the database is a mapping of the XSD schemas you defined in the Nuxeo configuration.
 
 ## Easy Reporting
 
@@ -276,7 +276,7 @@ Because data is transparently stored in SQL tables, it's very easy to have a loo
 
 ## Easy Schema Migration
 
-With VCS, schema changes in Nuxeo are automatically propagated to the SQL level (columns are added as needed, and you are warned about extra unused columns). If you change a field type, you can just do `ALTER TABLE` to change the column type.
+With *VCS*, schema changes in Nuxeo are automatically propagated to the SQL level (columns are added as needed, and you are warned about extra unused columns). If you change a field type, you can just do `ALTER TABLE` to change the column type.
 
 ## Easy and Safe Hot Backup
 
@@ -285,7 +285,7 @@ You can hot backup your SQL database and then in a second step hot backup the bi
 - You have no risk of having a file being in the middle of an update.
 - You have no risk of having a file referenced by the SQL database that has been removed from the filesystem.
 
-See also these additional [explanations]({{page page='backup-and-restore'}}) on why VCS ensures safe hot backups.
+See also these additional [explanations]({{page page='backup-and-restore'}}) on why *VCS* ensures safe hot backups.
 
 ## Blob Storage
 
