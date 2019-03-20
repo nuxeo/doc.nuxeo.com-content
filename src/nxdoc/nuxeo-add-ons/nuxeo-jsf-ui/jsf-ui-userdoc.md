@@ -13,8 +13,10 @@ description: JSF UI User Documentation
 tree_item_index: 200
 version_override:
     '810': 810/userdoc
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
