@@ -261,10 +261,9 @@ A few system properties are computed from others in order to get efficient subtr
 
 ### Proxies
 
-Proxies cannot be queried and retrieved with a JOIN, contrary to *Visible Content Story* (VCS), so they are stored as copies of the documents they point to, and are updated every time their target changes. In order to do this, some properties are maintained on proxies and proxy targets:
+Proxies cannot be queried and retrieved with a JOIN, contrary to *Visible Content Story* ([VCS](https://doc.nuxeo.com/nxdoc/vcs/)), so they are stored as copies of the documents they point to, and are updated every time their target changes. In order to do this, some properties are maintained on proxies and proxy targets:
 
 *   `ecm:proxyTargetId`: the target of the proxy
-
 *   `ecm:proxyIds`: the proxies that target this document
 
 ## Storage Restrictions
