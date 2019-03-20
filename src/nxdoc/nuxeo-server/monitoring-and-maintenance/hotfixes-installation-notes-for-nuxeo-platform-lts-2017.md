@@ -90,7 +90,7 @@ If you have any questions, feel free to contact our support team via a dedicated
 A new operation called `RecomputeThumbnails` has been added and is available for administrators to recompute the thumbnails, mainly the missing ones when errors occurred during conversions.  
 A sample call to this operation is:
 ```
-curl -v -H 'Content-Type:application/json' -d '{"params": {"query": "SELECT * FROM Document WHERE ecm:mixinType = \"Thumbnail\" AND thumb:thumbnail/data IS NULL AND ecm:isVersion = 0 AND ecm:isProxy = 0 AND ecm:isTrashed = 0"}, "context": {}}' -u Administrator:Administrator http://localhost:8080/nuxeo/site/automation/RecomputeThumbnails
+curl -v -H 'Content-Type:application/json' -d '{"params": {"query": "SELECT * FROM Document WHERE ecm:mixinType = \"Thumbnail\" AND thumb:thumbnail/data IS NULL AND ecm:isVersion = 0 AND ecm:isProxy = 0 AND ecm:currentLifeCycleState != 'deleted'"}, "context": {}}' -u Administrator:Administrator http://localhost:8080/nuxeo/site/automation/RecomputeThumbnails
 ```
 
 ### Date Format in CSV Importer
