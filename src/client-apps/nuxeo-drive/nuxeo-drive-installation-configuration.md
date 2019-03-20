@@ -59,7 +59,7 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 #### Installing Nuxeo Drive on Windows
 
 1.  Download the Windows installer (`.exe` file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](https://community.nuxeo.com/static/drive-updates/nuxeo-drive.exe).
-2.  Run the installer: indicate where Nuxeo Drive should be installed (typically `C:\Program Files (x86)`) and click **Next** until the installation process is done.
+2.  Run the installer and click **Next** until the installation process is done.</br>
     Nuxeo Drive is now installed on your computer.
 
     {{#> callout type='tip' }}
