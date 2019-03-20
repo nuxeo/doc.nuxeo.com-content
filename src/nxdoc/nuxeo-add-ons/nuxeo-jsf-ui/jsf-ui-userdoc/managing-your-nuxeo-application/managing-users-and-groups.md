@@ -262,7 +262,7 @@ Users and groups management is available:
 
 {{#> callout type='info' }}
 
-{{multiexcerpt 'default-groups-to-browse' page='administration'}}
+{{multiexcerpt 'default-groups-to-browse' space='userdoc' page='administration'}}
 
 {{/callout}}
 
