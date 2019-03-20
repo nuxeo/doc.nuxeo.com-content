@@ -404,7 +404,7 @@ The new permission is displayed in the **Permissions defined locally** part of t
 
 {{! /multiexcerpt}}
 
-![]({{file name='add_permission_popup.png' page='810/userdoc/managing-permissions'}} ?w=350,border=true)
+![]({{file name='add_permission_popup.png' version='810' space='userdoc' page='managing-permissions'}} ?w=350,border=true)
 
 ### Granting Permissions to External Users (Instant Share)
 
@@ -416,7 +416,7 @@ In the **Permissions Assigned to External Users** part of the screen, click **Ne
 
 {{! /multiexcerpt}}
 
-![]({{file name='permissions_external_share_popup.png' page='810/userdoc/managing-permissions'}} ?w=300,thumbnail=true)
+![]({{file name='permissions_external_share_popup.png' version='810' space='userdoc' page='managing-permissions'}} ?w=300,thumbnail=true)
 
 {{! multiexcerpt name='grant-permissions-external-users-notes'}}
 

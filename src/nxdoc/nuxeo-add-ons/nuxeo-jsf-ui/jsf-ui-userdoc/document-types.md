@@ -376,7 +376,7 @@ It enables you to create your own organization of the content without duplicatin
 
 The list of collections available to you is available from your Home, in the **Collections** tab.
 
-![]({{file name='collection-home-tab.png' page='collections'}} ?w=650,border=true)
+![]({{file name='collection-home-tab.png' page='collections-jsf-ui'}} ?w=650,border=true)
 
 ### Section
 
