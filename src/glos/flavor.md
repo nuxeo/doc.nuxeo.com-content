@@ -61,14 +61,14 @@ A flavor is a set of variables which defines the branding of an application: the
 
 {{! /excerpt}}
 
-The flavors are used for the global application or in[ the Local Configuration of a space]({{page space='userdoc' page='local-configuration'}}) (workspaces or sections) to customize its main colors.
+The flavors are used for the global application or in[ the Local Configuration of a space]({{page space='nxdoc' page='local-configuration'}}) (workspaces or sections) to customize its main colors.
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
-{{#> panel heading='Related developer documentation'}}
+{{#> panel heading='Related Documentation'}}
 
-- [How to Brand Your Application]({{page space='nxdoc' page='how-to-brand-your-application'}})
-- [Theme]({{page space='nxdoc' page='theme'}})
+- [How to Brand Your Application]({{page page='branding'}})
+- [Theme]({{page space='nxdoc' page='web-ui-theme-customization'}})
 
 {{/panel}}
 </div>

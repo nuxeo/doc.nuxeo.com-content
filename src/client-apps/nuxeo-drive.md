@@ -760,7 +760,7 @@ When you create a new document in a Drive-synchronized folder from the Platform,
 
 Adding a new document in a Drive-synchronized folder from your computer will create the document in the Platform workspace at the next synchronization. The document title is the name of the original file, and no metadata is filled in.
 
-{{{multiexcerpt 'dnd-file-correspondence' page='USERDOC:Creating Content'}}}
+{{{multiexcerpt 'dnd-file-correspondence' space='nxdoc' page='creating-content'}}}
 
 ### Editing Documents
 
@@ -768,7 +768,7 @@ Adding a new document in a Drive-synchronized folder from your computer will cre
 
 {{! multiexcerpt name='drive-versioning'}}
 
-When you edit a document, either from your Nuxeo Drive folder or using the online editing, a [new version]({{page space='userdoc' page='editing-content'}}) is automatically created on the Platform and the version number is updated:
+When you edit a document, either from your Nuxeo Drive folder or using the online editing, a [new version]({{page space='userdoc' page='version'}}) is automatically created on the Platform and the version number is updated:
 
 - If you are not the last contributor of the document
 - Or if your last edit is more than an hour ago
@@ -853,7 +853,7 @@ Metadata Edit allows you to edit the metadata of your document from your desktop
 
 ### Moving Documents
 
-You can move documents either from your local Nuxeo Drive folder or [from the Platform]({{page space='userdoc' page='editing-content'}}). When you move documents between two synchronized spaces, the move is done on the other side, whether you move documents from the Platform or from your Drive folder.
+You can move documents either from your local Nuxeo Drive folder or [from the Platform]({{page space='userdoc' page='content-edit'}}). When you move documents between two synchronized spaces, the move is done on the other side, whether you move documents from the Platform or from your Drive folder.
 
 When you move a document from a Drive-synchronized folder to an unsynchronized one, the behavior is different if you move the document from the Platform or from your local folder.
 
@@ -862,7 +862,7 @@ When you move a document from a Drive-synchronized folder to an unsynchronized o
 
 ### Deleting Documents
 
-When you [delete documents from the Platform]({{page space='userdoc' page='deleting-content'}}), they are deleted from your local Drive folder at the next update.
+When you [delete documents from the Platform]({{page space='userdoc' page='content-delete'}}), they are deleted from your local Drive folder at the next update.
 
 When you delete a document from your local Drive folder, the document is deleted on the Platform and moved into the folder's trash. In the document's history, the deletion is tagged with the Nuxeo Drive category.
 

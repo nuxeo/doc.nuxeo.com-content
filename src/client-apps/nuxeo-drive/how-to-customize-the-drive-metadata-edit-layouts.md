@@ -72,7 +72,7 @@ history:
         version: '1'
 
 ---
-You have created your own document types and defined forms and view that show properties specific to your business and users. Your users leverage Nuxeo Drive to work on Nuxeo documents from their desktop and you want them to be able to enjoy the [metadata edit feature of Nuxeo Drive]({{page space='userdoc' page='nuxeo-drive'}}#metadata-edit).
+You have created your own document types and defined forms and view that show properties specific to your business and users. Your users leverage Nuxeo Drive to work on Nuxeo documents from their desktop and you want them to be able to enjoy the [metadata edit feature of Nuxeo Drive]({{page page='nuxeo-drive'}}#metadata-edit).
 
 ![]({{file name='Drive_metadata_edit.png' page='nuxeo-drive'}} ?w=400, border=true)
 
@@ -123,6 +123,6 @@ To do so:
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Nuxeo Drive Documentation'}}
 
-- [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+- [Nuxeo Drive documentation]({{page page='nuxeo-drive'}})
 
 {{/panel}}</div></div>

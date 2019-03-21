@@ -16,32 +16,32 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/ogCW'
     source_link: /display/GLOS/CAP
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-09-07 09:05'
         message: pdate lin
         version: '6'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 12:06'
         message: ''
         version: '5'
-    - 
+    -
         author: Solen Guitter
         date: '2013-02-19 14:50'
         message: ''
         version: '4'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-14 17:29'
         message: Migrated to Confluence 4.0
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-14 17:29'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2012-02-14 17:28'
         message: ''
@@ -59,4 +59,4 @@ CAP features include:
 *   collaborative features such as comments,
 *   workflows to approve documents and publish them.
 
-More information about CAP on the page [Nuxeo Platform Concepts]({{page space='userdoc' page='nuxeo-platform-concepts'}}).
+More information about CAP on the page [Nuxeo Platform Concepts]({{page space='nxdoc' page='nuxeo-platform-concepts'}}).

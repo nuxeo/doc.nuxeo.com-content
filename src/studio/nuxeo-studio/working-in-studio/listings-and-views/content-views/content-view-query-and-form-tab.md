@@ -342,12 +342,12 @@ If you want to sort through multiple criteria, just repeat the steps above for e
 This section explains the flags section and what the different flags enable.
 
 - **Search content view**: Since Nuxeo Platform 6.0\. Enables to have your content view available in Search tab drop down list. Selecting this flag makes the Search layout required so as to have a search form displayed in the Search tab. It also adds a tab Enablement on the content view in Studio to define when the content view should be available in the Search tab.
-- **Document content**: Enables to use your content view on a custom tab, or to have it available in the [local configuration of a workspace]({{page space='userdoc' page='local-configuration'}}).
+- **Document content**: Enables to use your content view on a custom tab, or to have it available in the [local configuration of a workspace]({{page space='nxdoc' page='local-configuration'}}).
 - **DAM**: Enables to display the content view in the DAM tab.
   Since Nuxeo Platform 6.0, the flag is available when you select the target package Nuxeo DAM Compat.
-- **Faceted search**: Since Nuxeo Platform 5.7\. Enables to display the content view in the Faceted search tab and have it available in the [local search configuration of a workspace]({{page space='userdoc' page='local-configuration'}}).
+- **Faceted search**: Since Nuxeo Platform 5.7\. Enables to display the content view in the Faceted search tab and have it available in the [local search configuration of a workspace]({{page space='nxdoc' page='local-configuration'}}).
   Since Nuxeo Platform 6.0, this flag is available when you select the target package Faceted search.
-- **Advanced search**: Enables to have the content view available in the [local search configuration of a workspace]({{page space='userdoc' page='local-configuration'}}).
+- **Advanced search**: Enables to have the content view available in the [local search configuration of a workspace]({{page space='nxdoc' page='local-configuration'}}).
   Since Nuxeo Platform 6.0, this flag is not available anymore. You should use the Search content view flag instead.
 
 {{!--     ### nx_asset ###

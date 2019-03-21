@@ -166,7 +166,7 @@ The Nuxeo mobile application is available for iPhones SE, 5/5c/5s, 6/6+, 7/7+, 8
 
 The minimum required version of Android 4.4.
 
-### Nuxeo Platform 
+### Nuxeo Platform
 
 #### Nuxeo Platform Versions
 
@@ -272,7 +272,7 @@ Tapping a sort order twice switches between ascendant and descendant sort order{
 
 ### Search
 
-The **Search** menu enables you to query documents on their title and content, by performing a full-text search. {{{multiexcerpt 'full-text-search-user-desc' page='USERDOC:Quick Search'}}}A list of matching documents is provided and you can directly have access them. Once on a document, tap the back icon to go back to search results.
+The **Search** menu enables you to query documents on their title and content, by performing a full-text search. {{{multiexcerpt 'full-text-search-user-desc' space='nxdoc' page='quick-search'}}}A list of matching documents is provided and you can directly have access them. Once on a document, tap the back icon to go back to search results.
 
 ![]({{file name='mobile-search.jpg'}} ?w=200,border=true)
 
@@ -349,7 +349,7 @@ When capturing a document in Nuxeo, the user can select her personal space (set 
 </div>
 
 ### Workflows
-All Nuxeo documents evolve according to defined lifecycle. See [workflows]({{page space='USERDOC' page='workflows'}}) documentation for more details. On mobile, default serial and parallel workflows are implemented.
+All Nuxeo documents evolve according to defined lifecycle. See [workflows]({{page space='nxdoc' page='workflow'}}) documentation for more details. On mobile, default serial and parallel workflows are implemented.
 
 On documents, document lists or collections, access the contextual menu by clicking the overflow button and click on **Start Process** to choose the workflow type. When consulting a document with a task to process, a banner (black in the screenshot below) allows a direct access to the task screen.
 

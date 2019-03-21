@@ -622,7 +622,7 @@ That way, you're sure that your new style will be stronger than the original sty
 
 ![]({{file name='jsf_set_default_disable_theme.png'}} ?w=450,border=true)
 
-Create a new branding implies that it will be the default branding used in your application. The checkbox displayed under the Common tab will be checked by default. If you created several brandings, be sure that only one of them is checked. Your branding will be used in your application everywhere except if a [local theme configuration]({{page space='userdoc' page='local-configuration'}}#local-theme-configuration) is set.
+Create a new branding implies that it will be the default branding used in your application. The checkbox displayed under the Common tab will be checked by default. If you created several brandings, be sure that only one of them is checked. Your branding will be used in your application everywhere except if a [local theme configuration]({{page space='nxdoc' page='local-configuration'}}#local-theme-configuration) is set.
 
 #### Disabling a Theme Branding
 

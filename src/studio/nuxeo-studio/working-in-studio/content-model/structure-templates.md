@@ -152,7 +152,7 @@ Once you have selected the target document type and clicked on **Next**, you wil
 
 - **Add**: Add another document type to the structure template.
 - **ACL**:
-    - **Add**: A pop-up window is displayed where you have to manage the permissions to this structure (see the documentation about [permissions]({{page space='userdoc' page='managing-permissions'}})).
+    - **Add**: A pop-up window is displayed where you have to manage the permissions to this structure (see the documentation about [permissions]({{page space='userdoc' page='permissions'}})).
     - **Edit**: Edit an access control.
     - **Block Inheritance**: Block the permissions inheritance.
     - **Delete**: Delete an access control (you can select several lines at a time).

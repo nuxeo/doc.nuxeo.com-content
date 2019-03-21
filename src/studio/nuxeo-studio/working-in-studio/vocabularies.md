@@ -153,7 +153,7 @@ You can't create a Child Vocabulary if you don't have a Parent Vocabulary alread
 
 This types has more parameters than the others:
 
-- **Add Root**: Adds a root value. Adding a value means giving an id, a label and an obsolete field, the same values you would find in the Nuxeo Platform [vocabulary screen edition]({{page space='userdoc' page='managing-vocabularies'}}) interface.
+- **Add Root**: Adds a root value. Adding a value means giving an id, a label and an obsolete field, the same values you would find in the Nuxeo Platform [vocabulary screen edition]({{page space='userdoc' page='administration'}}#consulting-vocabularies) interface.
 - **Add child**: When already on a node, adds a child element. Note that you have to click on the "Set tree depth" button if you want to add more children than the currently set limit.
 - **Move up** and **Move down**: Used to move the values (that are ordered).
 - **Set tree depth:** Allows to set more than two degrees of values on a hierarchical vocabulary. Select2 widgets are directly compatible with any levels. If you want to have more than two levels with chain selects, you can read the [Create a n-level select widget how-to]({{page space='nxdoc' page='how-to-create-a-n-level-select-widget'}}).
@@ -181,8 +181,7 @@ To manage a vocabulary or its entries, go to **Administration > Vocabularies** a
 {{{multiexcerpt 'DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
-- [Managing Vocabularies]({{page space='userdoc' page='managing-vocabularies'}})
-- [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})
+- [Managing Vocabularies]({{page space='userdoc' page='administration'}}consulting-vocabularies)
 - [How to Add a New Vocabulary]({{page space='nxdoc' page='how-to-add-a-new-vocabulary'}})
 - [How to Translate a Vocabulary]({{page space='nxdoc' page='how-to-translate-a-vocabulary'}})
 

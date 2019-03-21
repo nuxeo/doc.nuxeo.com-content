@@ -184,7 +184,7 @@ if you don't find the default type you are looking for, you can add it [using th
 - **Extends**: See the [Creating a Document Type](#creating-a-document-type) section of this page.
 - **Label**: See the [Creating a Document Type](#creating-a-document-type) section of this page.
 - **Category**: The category defines in which column the document type appears on the "new Document" pop up in Nuxeo Server, when using JSF UI. If you don't want to use the default categories, you can add a new one [using the custom document category registry]({{page page='registries'}}).
-  ![]({{file name='available-documents-workspace.png' space='userdoc' page='creating-content'}} ?w=500,h=216,border=true)
+  ![]({{file name='available-documents-workspace.png' space='nxdoc' page='creating-content'}} ?w=500,h=216,border=true)
   {{{multiexcerpt 'JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
 - **Icon**: The icon displayed in the default list view.
 - **Large Icon**: The icon displayed in the "Available document types" pop-up when using JSF UI and the Icon view (view available up to Nuxeo Platform 5.8).

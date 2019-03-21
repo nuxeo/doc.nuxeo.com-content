@@ -179,8 +179,8 @@ Content view is the Nuxeo technology used to define a list of documents to displ
 <th colspan="1">Search</th>
 </tr>
 <tr>
-<td colspan="1">![]({{file name='list-view.png' space='userdoc' page='browsing-content'}} ?w=300,h=181)</td>
-<td colspan="1">![]({{file name='search-tab.png' space='userdoc' page='default-search'}} ?w=300,h=167)</td>
+<td colspan="1">![]({{file name='list-view.png' space='nxdoc' page='browsing-content'}} ?w=300,h=181)</td>
+<td colspan="1">![]({{file name='search-tab.png' space='nxdoc' page='default-search'}} ?w=300,h=167)</td>
 </tr>
 </tbody>
 </table>
