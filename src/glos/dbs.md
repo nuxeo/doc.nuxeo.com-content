@@ -23,18 +23,18 @@ history:
         version: '1'
 
 ---
-## Document-Based Storage
+## Document-Based Storage (DBS)
 
 {{! multiexcerpt name='DBS-definition'}}
 
-DBS (Document-Based Storage) is an infrastructure in the Nuxeo Platform allowing storage of documents inside a document-oriented store, like NoSQL.
+*Document-Based Storage* is an architectural abstraction in the Nuxeo Platform that allow the storage of documents in a document-oriented store, for instance NoSQL databases.
 
 {{! /multiexcerpt}}
 
-DBS implementations for the Nuxeo Platform are:
+*DBS* available implementations for the Nuxeo Platform are:
 
 *   MongoDB
-*   MarkLogic
+*   MarkLogic (deprecated since Nuxeo 10.10)
 
 &nbsp;
 
