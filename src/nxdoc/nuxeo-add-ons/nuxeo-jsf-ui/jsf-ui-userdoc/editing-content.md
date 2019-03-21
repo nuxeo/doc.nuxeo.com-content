@@ -597,7 +597,7 @@ The automatic versioning after the modification of the document won't work in a 
 
 ### Nuxeo Drive Versioning Policy
 
-{{multiexcerpt 'drive-versioning-policy' page='/userdoc/browse'}}
+{{multiexcerpt 'drive-versioning-policy' space='userdoc' page='version'}}
 
 ## {{> anchor 'relations'}}Relations
 
