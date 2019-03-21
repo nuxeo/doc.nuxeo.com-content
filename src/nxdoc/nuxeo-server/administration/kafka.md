@@ -98,6 +98,8 @@ Here are some important properties:
 
  Please refer to Kafka document about the [consumer and producer options](https://kafka.apache.org/documentation#configuration) for more information.
 
+<!--
+
 ## {{> anchor 'no-redis'}}"No Redis" Nuxeo cluster
 
 Redis is used for different things in Nuxeo, among them as a default key value provider.
@@ -132,3 +134,5 @@ it is used to send instant message and its retention can be reduced at the Kafka
 ```bash
 $KAFKA_HOME/bin/kafka-configs.sh --zookeeper <zk_host> --alter --entity-type topics --entity-name nuxeo-pubsub --add-config retention.ms=7200000
 ```
+
+-->
