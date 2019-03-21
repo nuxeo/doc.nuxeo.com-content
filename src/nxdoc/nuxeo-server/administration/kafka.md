@@ -79,3 +79,38 @@ Here are some important properties:
 
 
  Please refer to Kafka document about the [consumer and producer options](https://kafka.apache.org/documentation#configuration) for more information.
+ 
+ ## {{> anchor 'no-redis'}}"No Redis" Nuxeo cluster
+
+Redis is used for different things in Nuxeo, among them as a default key value provider.
+For now there is only one alternative for this service and it requires to use MongoDB.
+
+Here is a possible "No Redis" Nuxeo cluster configuration:
+```properties
+
+# We use mongodb, this will switch the keyvalue provider and lock manager to mongodb:
+# nuxeo.keyvalue.provider=mongodb
+# nuxeo.lock.manager=mongodb
+nuxeo.templates=mongodb,default
+
+# Enable Kafka
+kafka.enabled=true
+kafka.bootstrap.servers=my-kafka-broker:9092
+
+# Enable the StreamWorkManager
+nuxeo.stream.work.enabled=true
+
+# Use the Stream PubSub provider
+# this will be used by cache and dbs invalidation
+nuxeo.pubsub.provider=stream
+
+# Just to make it clear
+nuxeo.redis.enabled=false
+```
+
+The Kafka topic used by the PubSub Provider don't need to have a 7 days retentions,
+it is used to send instant message and its retention can be reduced at the Kafka level to 2 hours:
+
+```bash
+$KAFKA_HOME/bin/kafka-configs.sh --zookeeper <zk_host> --alter --entity-type topics --entity-name nuxeo-pubsub --add-config retention.ms=7200000
+```
