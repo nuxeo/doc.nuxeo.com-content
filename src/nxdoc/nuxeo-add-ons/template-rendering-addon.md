@@ -180,7 +180,7 @@ history:
 
 ## Functional Overview
 
-The template rendering addon is a set of two addons available from the Nuxeo Marketplace:
+The template rendering addon is a set of two addons available from the Nuxeo Marketplace: the [Template Rendering](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering "Template Rendering") itself and the [Template Rendering Samples](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering-samples "Template Rendering Samples").
 
 ### Nuxeo Template Rendering
 
