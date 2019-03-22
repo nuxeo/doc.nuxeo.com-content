@@ -113,28 +113,28 @@ Redis is not a hard requirement for running the Nuxeo Platform; it is used as a 
 Nuxeo can use Redis to store both data to be persisted (e.g. jobs list) and transient data (e.g. cache data). After a normal cluster shutdown, you can flush (erase) the transient data in Redis. Note however that Nuxeo can not work with a Redis configured as an [LRU cache](http://redis.io/topics/lru-cache); there should be no eviction under memory pressure.
 {{/callout}}
 
-{{#> callout type='warn' }}
-Using Nuxeo in cluster mode does not necessarly need Redis, for more info check the related documentation bellow.
+{{#> callout type='warning' }}
+Using Nuxeo in cluster mode does not necessarily need Redis, for more info check the related documentation below.
 {{/callout}}
 
 ## Nuxeo Core Cache
 
 Nuxeo Core Cache provides a service to declare and use caches. This cache system is used for:
 
-*   Nuxeo Directories (caching directories entries)
-*   UserManager (caching principals)
-*   Nuxeo Drive (caching synchronization roots)
+- Nuxeo Directories (caching directories entries)
+- UserManager (caching principals)
+- Nuxeo Drive (caching synchronization roots)
 
-It can also be used in your custom code&nbsp;
+It can also be used in your custom code.
 
 The Cache has a default "in memory" implementation, but `nuxeo-core-redis` provides another implementation that allows to:
 
-*   Have an out of JVM memory cache storage.
-    It opens the way to have big caches without hurting the JVM.
-*   Share the same cache between several Nuxeo nodes.
-    In cluster mode this can increase cache efficiency.
-*   Manage cluster wide invalidations.
-    Updating the user on one node will impact the central cache: all nodes see the exact same data.
+- Have an out of JVM memory cache storage.</br>
+  It opens the way to have big caches without hurting the JVM.
+- Share the same cache between several Nuxeo nodes.</br>
+  In cluster mode this can increase cache efficiency.
+- Manage cluster wide invalidations.</br>
+  Updating the user on one node will impact the central cache: all nodes see the exact same data.
 
 You can configure the backend storage on a per cache basis:&nbsp;Directory A could use Redis while directory B could use in memory.
 
@@ -142,24 +142,24 @@ You can configure the backend storage on a per cache basis:&nbsp;Directory A cou
 
 The WorkManager handles asynchronous jobs:
 
-*   Schedule Jobs and store them in queues
-*   Assign execution slots to queues&nbsp;
-*   Execute the jobs
+- Schedule Jobs and store them in queues
+- Assign execution slots to queues
+- Execute the jobs
 
 In the default implementation, job queues are in the JVM memory. But this model has some limitations:
 
-*   Stacking a lot of jobs will consume JVM Memory
-*   In cluster mode each Nuxeo node maintains its own queue
-*   When a Nuxeo server is restarted, all the queued jobs are lost
+- Stacking a lot of jobs will consume JVM Memory
+- In cluster mode each Nuxeo node maintains its own queue
+- When a Nuxeo server is restarted, all the queued jobs are lost
 
 `nuxeo-core-redis` provides an alternate implementation of the queuing system based on Redis:
 
-*   Jobs are then stored outside of JVM memory.
-    That's why Work have to be serializable: they are serialized and stored in Redis.
-*   Jobs can be shared across cluster nodes.
-    This allows to dedicate some nodes to some specific processing.
-*   Jobs survive a Nuxeo restart.
-    When Redis persistence is activated, the jobs even survive a Redis restart.
+- Jobs are then stored outside of JVM memory.</br>
+  That's why Work have to be serializable: they are serialized and stored in Redis.
+- Jobs can be shared across cluster nodes.</br>
+  This allows to dedicate some nodes to some specific processing.
+- Jobs survive a Nuxeo restart.</br>
+  When Redis persistence is activated, the jobs even survive a Redis restart.
 
 ## Lock Manager
 
@@ -175,10 +175,10 @@ Managing *VCS* (Meaning RDBMS) row cache invalidations with [Redis instead of us
 
 ### Document Based Storage ([DBS](https://doc.nuxeo.com/nxdoc/dbs/)) Cache Invalidation
 
-For Nuxeo 8.10 and 9.10 the *DBS* layer (used to connect with MongoDB or Marklogic) [has a cache](https://jira.nuxeo.com/browse/NXP-20640) its invalidation in cluster mode requires Redis. 
+For Nuxeo 8.10 and 9.10 the *DBS* layer (used to connect with MongoDB or Marklogic) [has a cache](https://jira.nuxeo.com/browse/NXP-20640) its invalidation in cluster mode requires Redis.
 
-{{#> callout type='warn' }}
-A Nuxeo No-Redis cluster configuration can be applied at certain conditions, see: [No-Redis Nuxeo Cluster Configuration](https://doc.nuxeo.com/nxdoc/kafka/#andquotno-redisandquot-nuxeo-cluster) for more infos.
+{{#> callout type='warning' }}
+A Nuxeo No-Redis cluster configuration can be applied at certain conditions, see: [No-Redis Nuxeo Cluster Configuration](https://doc.nuxeo.com/nxdoc/kafka/#andquotno-redisandquot-nuxeo-cluster) for more info.
 {{/callout}}
 
 ## Transient Store
@@ -187,7 +187,7 @@ The `RedisTransientStore`&nbsp;is a Redis-based implementation of the [Transient
 
 It becomes the **default** Transient Store if Redis is enabled.
 
-It allows the parameters associated to the stored blobs to be shared accross cluster nodes.
+It allows the parameters associated to the stored blobs to be shared across cluster nodes.
 
 ## Clean-up
 
