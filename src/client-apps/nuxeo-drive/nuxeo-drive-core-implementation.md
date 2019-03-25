@@ -92,9 +92,9 @@ Base of all Nuxeo Drive window, it is basically a WebKit view with a Drive JavaS
 
 QT is heavily used in the new client. Here is a diagram of the signals/slots connections:
 
-## Nuxeo Drive Security Informations
+## Nuxeo Drive Security Information
 
-We recommend you to always have a up-to-date version of Nuxeo Drive.
+We recommend you to always have an up-to-date version of Nuxeo Drive.
 
 ### Authentication Flow
 
