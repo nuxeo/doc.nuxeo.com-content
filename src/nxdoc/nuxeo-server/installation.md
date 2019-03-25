@@ -269,9 +269,10 @@ Watch the related courses on Nuxeo University
 
 The Nuxeo Platform comes in many different packages and can be installed on many operating systems. You may have to install:
 - a zip archive (works on any operating system that supports a Java Development Kit),
+- a Docker image,
 - a Windows installer (**.exe**),
 - a virtual machine image (works on any operating system that supports running VMware or VirtualBox),
--  a **.deb** package (works on Linux Debian and Ubuntu).
+- a **.deb** package (works on Linux Debian and Ubuntu).
 
 <div>
 <table style="border-width:0px;">
@@ -329,6 +330,7 @@ Some Nuxeo distributions are also packaged with automated installers, in order t
 
 The available installers can be:
 - Multi-platform packages (ZIP, executable JAR, JNLP, ...),
+- Docker,
 - Windows installers (EXE, MSI),
 - Linux packages (DEB, RPM, ...),
 - macOS packages (DMP, APP, PKG),
@@ -436,9 +438,9 @@ If you have requirements and/or constraints are not reflected below, **do not he
     If Java is correctly installed on your computer, the name and version of your Java virtual machine is displayed:
 
     ```
-    java version "1.8.0_112"
-    Java(TM) SE Runtime Environment (build 1.8.0_112-b15)
-    Java HotSpot(TM) 64-Bit Server VM (build 25.112-b15, mixed mode)
+    java version "1.8.0_202"
+    Java(TM) SE Runtime Environment (build 1.8.0_202-b08)
+    Java HotSpot(TM) 64-Bit Server VM (build 25.202-b08, mixed mode)
 
     ```
     Check in the output that the JDK version is 64 bits.
@@ -452,7 +454,7 @@ If you have requirements and/or constraints are not reflected below, **do not he
 
     If you installed a JDK, the javac version is displayed:
     ```
-    javac 1.8.0_112
+    javac 1.8.0_202
     ```
 
     If you installed a Java Runtime Environment instead of a Java Development Kit, it will fail to find javac and to display the javac version. In this case, install a Java Development Kit (see below).
