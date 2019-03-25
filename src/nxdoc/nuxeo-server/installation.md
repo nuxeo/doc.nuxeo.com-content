@@ -260,13 +260,18 @@ history:
         message: ''
         version: '1'
 ---
-The Nuxeo Platform comes in many different packages and can be installed on many operating systems. You may have to install:
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Video on the Installation Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/141/nuxeo-platform-quickstart-installation-concepts)
+- [Screenshare on the Installation Process](https://university.nuxeo.com/learn/public/course/view/elearning/139/nuxeo-platform-quickstart-installation-process).
+{{/callout}}
+
+The Nuxeo Platform comes in many different packages and can be installed on many operating systems. You may have to install:
 - a zip archive (works on any operating system that supports a Java Development Kit),
 - a Windows installer (**.exe**),
 - a virtual machine image (works on any operating system that supports running VMware or VirtualBox),
 -  a **.deb** package (works on Linux Debian and Ubuntu).
-
 
 <div>
 <table style="border-width:0px;">
@@ -301,13 +306,11 @@ The Nuxeo Platform comes in many different packages and can be installed on many
 </table>
 </div>
 
-
-
 ## General Installation Process
 
 Installing the Nuxeo Platform requires a few steps:
 
-1.  Have a look at our Hardware and Software Requirements in the section below, as well as our [supported databases]({{page page='compatibility-matrix'}}#databases) and [application servers]({{page page='compatibility-matrix'}}#application-servers). You may also want to read our page regarding [required storage space]({{page page='how-to-estimate-volume-usage'}}).
+1.  Have a look at our [Hardware and Software Requirements](#hardware-and-software-requirements) in the section below, as well as our [supported databases]({{page page='compatibility-matrix'}}#databases) and [application servers]({{page page='compatibility-matrix'}}#application-servers). You may also want to read our page regarding [required storage space]({{page page='how-to-estimate-volume-usage'}}).
 2.  [Install and Set up the related software]({{page page='installing-and-setting-up-related-software'}}) (unless you deploy on Amazon, the image already includes it).
 3.  Install and start the Nuxeo Platform server.
     To understand how to start a Nuxeo Platform server on different environments, you can read and follow one of our recipes:
@@ -318,12 +321,33 @@ Installing the Nuxeo Platform requires a few steps:
     - [Deploying as a Standard Static WAR]({{page page='deploying-as-a-standard-static-war'}})
 4.  Run the [Configuration Wizard]({{page page='configuration-wizard'}}) (not in the case of a standard static WAR).
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Video on the Installation Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/141/nuxeo-platform-quickstart-installation-concepts)
-- [Screenshare on the Installation Process](https://university.nuxeo.com/learn/public/course/view/elearning/139/nuxeo-platform-quickstart-installation-process).
-![]({{file name='university-installation.png' page='nxdoc/university'}} ?w=450,border=true)
-{{/callout}}
+## Available Installers
+
+By default, the Nuxeo distributions are packaged as ZIP files and are multi-OS compliant.
+
+Some Nuxeo distributions are also packaged with automated installers, in order to ease installation and follow the targeted OS standards, by respecting the usual directory organization for instance, creating desktop shortcuts and menu items, tweaking environment properties, helping installing optional third-parties...
+
+The available installers can be:
+- Multi-platform packages (ZIP, executable JAR, JNLP, ...),
+- Windows installers (EXE, MSI),
+- Linux packages (DEB, RPM, ...),
+- macOS packages (DMP, APP, PKG),
+- VMWare images
+- VirtualBox images
+- Specific installers (Homebrew, ...).
+
+Nuxeo currently maintains a Linux Debian and a Windows installer. They are available for download [here](http://www.nuxeo.com/downloads/).
+
+Nuxeo aims at gathering and documenting all contributed installation solutions from the user community. Any help about OS-specific cases, recommendations, contributions or feedbacks is very welcome.
+To contribute, you can:
+- Comment on the relevant documentation page.
+- Create a pull request in the following GitHub repositories:
+    - [nuxeo-packaging-windows](https://github.com/nuxeo/nuxeo-packaging-windows)
+    - [nuxeo-packaging-debian](https://github.com/nuxeo/nuxeo-packaging-debian)
+    - [nuxeo-packaging-rpm](https://github.com/nuxeo/nuxeo-packaging-rpm)
+    - [nuxeo-packaging-vm](https://github.com/nuxeo/nuxeo-packaging-vm)
+- Open an issue in our [JIRA](https://jira.nuxeo.com/browse/NXBT) issue management system.
+- Post to any Nuxeo community channel.
 
 ## Hardware and Software Requirements
 
