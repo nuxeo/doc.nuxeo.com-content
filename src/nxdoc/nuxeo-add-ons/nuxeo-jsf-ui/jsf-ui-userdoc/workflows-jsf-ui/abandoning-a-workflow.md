@@ -126,7 +126,7 @@ Abandoning the workflow can be done at any time. The workflow initiator can also
 <div class="column medium-6">
 {{#> panel heading='Related Documentation'}}
 
-- [Workflows user documentation]({{page page='workflows'}})
+- [Workflows user documentation]({{page page='workflows-jsf-ui'}})
 - [Case Management with the Nuxeo Platform]({{page page='case-management-with-the-nuxeo-platform'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Customizing the workflow'}}

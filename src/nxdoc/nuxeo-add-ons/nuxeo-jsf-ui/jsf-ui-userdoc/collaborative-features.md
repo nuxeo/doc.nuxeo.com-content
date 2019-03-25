@@ -130,7 +130,7 @@ The Nuxeo Platform includes a workflow engine that enables you to integrate busi
 
 {{{multiexcerpt 'default-validation-workflows' page='NXDOC:Workflow'}}}
 
-See the page [Workflows]({{page page='workflows'}}) for more details.
+See the page [Workflows]({{page page='workflows-jsf-ui'}}) for more details.
 
 ## {{> anchor 'alerts'}}Alerts
 

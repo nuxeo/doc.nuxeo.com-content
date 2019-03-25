@@ -423,7 +423,7 @@ The evolution of a document, each time contributors edit it, constitutes its lif
 * **Obsolete**: The document is not accurate anymore and, for instance, has been replaced by a new version
 * **Deleted**: The document is moved into the workspace or folder trash
 
-To change the lifecycle state of a document, you need to submit it to a [workflow]({{page page='workflows'}}).
+To change the lifecycle state of a document, you need to submit it to a [workflow]({{page page='workflows-jsf-ui'}}).
 
 {{#> callout type='warning' heading='Trash behavior deprecation'}}
 
