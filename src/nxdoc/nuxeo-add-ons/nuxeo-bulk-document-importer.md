@@ -282,8 +282,8 @@ history:
         date: '2010-07-21 18:01'
         message: ''
         version: '1'
-
 ---
+
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University
 - [Nuxeo Bulk Importer](https://university.nuxeo.com/learn/public/course/view/elearning/90/nuxeo-bulk-importer) on Nuxeo University.
@@ -295,9 +295,7 @@ Available for any Nuxeo platform-based application, the [Bulk document importer 
 {{! /multiexcerpt}}
 
 {{! excerpt}}
-
 The `nuxeo-importer-core` module is designed to offer support for multi-threaded import on a Nuxeo repository.
-
 {{! /excerpt}}
 
 ## Usage
@@ -308,14 +306,12 @@ The file importer comes as a Java library (with the Nuxeo Runtime Service) and a
 
 To import the folder `/path/to/import` into the workspace `/default-domain/workspaces/some-workspace` while monitoring the import logs from a REST client, use the following HTTP GET queries:
 
-*   `GET http://NUXEO_SERVER/nuxeo/site/fileImporter/logActivate`
-*   `GET http://NUXEO_SERVER/nuxeo/site/fileImporter/run?targetPath=/default-domain/workspaces/some-workspace&inputPath=/path/to/import&batchSize=10&interactive=false&nbThreads`
-*   `GET http://NUXEO_SERVER/nuxeo/site/fileImporter/log`
+- `GET http://NUXEO_SERVER/nuxeo/site/fileImporter/logActivate`
+- `GET http://NUXEO_SERVER/nuxeo/site/fileImporter/run?targetPath=/default-domain/workspaces/some-workspace&inputPath=/path/to/import&batchSize=10&interactive=false&nbThreads`
+- `GET http://NUXEO_SERVER/nuxeo/site/fileImporter/log`
 
 {{#> callout type='tip' }}
-
 A basic user interface is provided when using just `http://NUXEO_SERVER/nuxeo/site/fileImporter` in a browser.
-
 {{/callout}}
 
 To execute these HTTP queries you can either use a browser with an active Nuxeo session (JSESSIONID cookie) or use a third party stateless HTTP client with HTTP Basic Authentication. This is an example with the curl command line client:
@@ -452,6 +448,7 @@ With the following contribution you can configure the importer to work in non-bu
     point="importerConfiguration">
   <importerConfig>
     <bulkMode>false</bulkMode>
+    <documentModelFactory/>
   </importerConfig>
 </extension>
 ```
