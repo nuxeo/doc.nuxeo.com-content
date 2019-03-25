@@ -319,7 +319,6 @@ history:
         date: '2010-11-29 10:32'
         message: ''
         version: '1'
-
 ---
 
 ## Architecture
@@ -328,8 +327,8 @@ history:
 
 The Nuxeo Platform stores documents and their property values either in a database (VCS) or in a NoSQL database (DBS). This data is also at the same time indexed in an Elasticsearch index. To query those documents, several approaches are offered by the platform depending on whether you are from a remote application or in some Java code executed server-side. In the end, all the methods lead to two possibilities:
 
-*   Query the data store (VCS or DBS). &nbsp;Queries there are "transactional", which means that the result will reflect exactly the state of the database in the transaction where the query is executed
-*   Query the Elasticsearch index. This is the most scalable and efficient way to perform a query. Benchmarks show querying the repository using this Elasticsearch index scales orders of magnitude better than the database.
+- Query the data store (VCS or DBS). Queries there are "transactional", which means that the result will reflect exactly the state of the database in the transaction where the query is executed
+- Query the Elasticsearch index. This is the most scalable and efficient way to perform a query. Benchmarks show querying the repository using this Elasticsearch index scales orders of magnitude better than the database.
 
 ### A Query Language
 
@@ -349,7 +348,7 @@ As you may see, there is no security clause, because the repository will always 
 
 The Nuxeo Platform is also [compatible with the CMISQL]({{page page='cmis'}}) defined in the CMIS standard.
 
-### Page Providers: a Pagination Service&nbsp;
+### Page Providers: a Pagination Service
 
 The framework also provides a paginated query system, the Page Providers.&nbsp;Page Providers are a way to expose a query defined in NXQL with additional services: pagination, parameters, maximum number of results, aggregates definition. Page providers are named and declared to the server via a contribution. More information can be found about [the page provider object]({{page page='page-providers'}}). Page providers are used in the platform in many places: Web application for browsing, for dashboards, &hellip;
 
@@ -372,8 +371,8 @@ The following table and schema gives an overview of the different ways of queryi
 
     **Related topics**:
 
-    *   [Search Resource Endpoint]({{page page='search-endpoints'}})
-    *   [Using the REST API with the clients]({{page page='client-sdks'}})
+    - [Search Resource Endpoint]({{page page='search-endpoints'}})
+    - [Using the REST API with the clients]({{page page='client-sdks'}})
 2.  **Command Operations (Client side)**
     A set of Automation operations allow to query a page provider that has been declared on the server. Scope is pretty much the same as with the search endpoint.
 
@@ -384,9 +383,9 @@ The following table and schema gives an overview of the different ways of queryi
     ```
 
     **Related topics**:
-    *   [PageProvider Operation definition](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Repository.PageProvider)
-    *   [How to use Operations with the Java Client](https://github.com/nuxeo/nuxeo-java-client#operation-api)
-    *   [How to use Operations with the JavaScript client](https://nuxeo.github.io/nuxeo-js-client/latest/Operation.html)
+    - [PageProvider Operation definition](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Repository.PageProvider)
+    - [How to use Operations with the Java Client](https://github.com/nuxeo/nuxeo-java-client#operation-api)
+    - [How to use Operations with the JavaScript client](https://nuxeo.github.io/nuxeo-js-client/latest/Operation.html)
 3.  **CMIS (Client side & Server side)**
     The Nuxeo Platform is compatible with the CMIS standard. CMIS covers query scope, using CMISQL. It is possible to query the Nuxeo Platform repository using CMISQL in Java server side, or via JSON-based or AtomPub bindings remotely.
 
@@ -404,10 +403,10 @@ The following table and schema gives an overview of the different ways of queryi
 
     **Related topics:**
 
-    *   [Nuxeo CMIS Implementation]({{page page='cmis'}})
-    *   [Using CMISQL from Java]({{page page='using-cmisql-from-java'}})
-    *   [Apache OpenCMIS website](http://chemistry.apache.org/)
-    *   [Processing a Query With CMIS](http://chemistry.apache.org/java/examples/example-process-query-results.html) in Java
+    - [Nuxeo CMIS Implementation]({{page page='cmis'}})
+    - [Using CMISQL from Java]({{page page='using-cmisql-from-java'}})
+    - [Apache OpenCMIS website](http://chemistry.apache.org/)
+    - [Processing a Query With CMIS](http://chemistry.apache.org/java/examples/example-process-query-results.html) in Java
 4.  **PageProvider (Server side)**
     Page Providers objects implement the PageProvider interface. It provides in Java all the primitives for getting each documents, pages and related information.
 
@@ -435,12 +434,10 @@ The following table and schema gives an overview of the different ways of queryi
 The default configuration uses an embedded Elasticsearch instance that runs&nbsp;in the same JVM as the Nuxeo Platform's one. By default the Elasticsearch indexes will be located in&nbsp;`nxserver/data/elasticsearch`.
 
 {{#> callout type='warning' }}
-
-This embedded mode&nbsp;**is only for testing purpose**&nbsp;and should not be used in production.
-
+This embedded mode **is only for testing purpose** and should not be used in production.
 {{/callout}}
 
-See the [administration documentation to setup and configure an Elasticsearch](/x/UBY5AQ) cluster.
+See the [documentation to setup and configure an Elasticsearch]({{page page='elasticsearch-setup'}}) cluster.
 
 ## Full-Text Capabilities
 
@@ -452,11 +449,25 @@ You should also read carefully how you can [tune the full-text index ]({{page pa
 
 ## Facets and Other Aggregates Support
 
-Aggregates are a way to compute additional information on a search result so as to group and count result items and project them against various axis. For instance, "in the search result, 5 of the documents have the value "Specifications" for the field [`dc:nature`](http://dcnature) ". The Elasticsearch page provider implementation provides aggregates support. It is possible to define which aggregates can be requested to Elasticsearch with each queries, and a mechanism is implemented so as to filter following queries with the aggregates system offered by Elasticsearch. &nbsp;It is possible to leverage aggregates both at the API level and in the user interface, where a set of dedicated aggregates widgets has been added. They can be used from Nuxeo Studio.
+Aggregates are a way to compute additional information on a search result so as to group and count result items and project them against various axis. For instance, "in the search result, 5 of the documents have the value "Specifications" for the field [`dc:nature`](http://dcnature) ".
 
-See the&nbsp;[How-to about aggregates widgets]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}}).
+The Elasticsearch page provider implementation provides aggregates support. It is possible to define which aggregates can be requested to Elasticsearch with each queries, and a mechanism is implemented so as to filter following queries with the aggregates system offered by Elasticsearch.
 
-![Terms with Directory Widget]({{file name='Screen Shot 2014-11-02 at 19.13.27.png'}} ?w=100,h=54,border=true 'Terms with Directory Widget')&nbsp; &nbsp; &nbsp;![Date Histograms and Date Ranges]({{file name='Screen Shot 2014-11-02 at 21.02.45.png'}} ?w=100,h=71,border=true 'Date Histograms and Date Ranges')&nbsp; &nbsp;![]({{file name='Screen Shot 2014-11-02 at 21.02.54.png'}} ?w=100,border=true,thumbnail=true 'Terms with User & Groups Widget')&nbsp; &nbsp;&nbsp;![Range]({{file name='Screen Shot 2014-11-02 at 21.03.01.png'}} ?w=100,h=41,border=true 'Range')
+It is possible to leverage aggregates both at the API level and in the user interface, where a set of dedicated aggregates widgets has been added. They can be used from Nuxeo Studio.
+
+See the [How-to about aggregates widgets]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}}).
+
+- Terms with Directory Widget:
+![]({{file name='Screen Shot 2014-11-02 at 19.13.27.png'}} ?w=250,h=54,border=true)
+
+- Date Histograms and Date Ranges:
+![]({{file name='Screen Shot 2014-11-02 at 21.02.45.png'}} ?w=250,h=71,border=true)
+
+- Terms with User & Groups Widget:
+![]({{file name='Screen Shot 2014-11-02 at 21.02.54.png'}} ?w=250,border=true)
+
+- Range:
+![]({{file name='Screen Shot 2014-11-02 at 21.03.01.png'}} ?w=250,border=true)
 
 ## Configuring Search Interfaces in the Nuxeo Platform Back Office: Content Views
 
