@@ -50,7 +50,7 @@ history:
 First you have to start a clean Nuxeo container using the official images:
 
 ```bash
-docker run -d --name NXP-88888 -p 8888:8080 nuxeo:8.1
+docker run -d --name NXP-88888 -p 8888:8080 nuxeo:10.10
 ```
 
 Nuxeo is then available on the port 8888 of the Docker's host (hopefully your local machine if you run Linux or the result of `docker-machine ip default` on other systems). The name of your container will be `NXP-88888` which will be referred in the next commands.
