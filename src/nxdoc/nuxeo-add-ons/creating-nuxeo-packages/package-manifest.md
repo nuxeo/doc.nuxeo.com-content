@@ -1,15 +1,12 @@
 ---
 title: Package Manifest
 review:
-    comment: 'This page is outdated and needs to be reviewed, see [NXDOC-1452](https://jira.nuxeo.com/browse/NXDOC-1452).'
-    date: '2017-12-18'
-    status: requiresUpdates
+    comment: ''
+    date: '2019-03-26'
+    status: ok
 labels:
-    - content-review-lts2016
     - packaging-component
-    - ataillefer
-    - todo
-    - content-review-lts2017
+    - lts2019-ok
 confluence:
     ajs-parent-page-id: '3342859'
     ajs-parent-page-title: Creating Nuxeo Packages
@@ -131,74 +128,66 @@ history:
 ---
 Let's look at a minimal example of package.xml file:
 
-```
-<package type="addon" name="nuxeo-automation" version="5.3.2">
-  <title>Nuxeo Automation</title>
-  <description>A service that enables building complex business logic on top of Nuxeo services
-    using scriptable operation chains</description>
+```xml
+<package type="addon" name="nuxeo-package" version="1.0.0">
+  <title>Nuxeo Package</title>
+  <description>
+    <p>Put here an HTML description of your Nuxeo Package.</p>
+  </description>
   <platforms>
-    <platform>cap-8.3</platform>
-    <platform>server-8.4*</platform>
+    <platform>server-11.10</platform>
+    <platform>server-11.10-HF*</platform>
   </platforms>
 </package>
 
 ```
 
-This is a minimal package manifest. It is defining a package nuxeo-automation at version 5.3.2 and of type addon.
-The package can be installed on platforms dm-5.3.2 and dam-5.3.2.
-
-{{#> callout type='warning' }}
-
-TODO: replace fixed versions in platforms with range of versions.
-
-{{/callout}}
+This is a minimal package manifest. It is defining a package nuxeo-package at version 1.0.0 and of type addon.
+The package can be installed on platforms 11.10.
 
 Also, the package title and description that should be used by the UI are specified by the `title` and `description` elements.
 
-{{#> callout type='note' }}
-
-Note that the package names used in these examples are fictional.
-
-{{/callout}}
-
 Let's look at the full version of the same package manifest:
 
-```
-<package type="addon" name="nuxeo-automation" version="5.3.2">
-  <title>Nuxeo Automation</title>
-  <description>A service that enables building complex business logic on top of Nuxeo services
-    using scriptable operation chains</description>
-  <classifier>Open Source</classifier>
+```xml
+<package type="addon" name="nuxeo-package" version="1.0.0">
+  <title>Nuxeo Package</title>
+  <description>
+    <p>Put here an HTML description of your Nuxeo Package.</p>
+  </description>
   <home-page>http://some.host.com/mypage</home-page>
   <vendor>Your Company</vendor>
-  <installer class="org.nuxeo.connect.update.impl.task.InstallTask" restart="false"/>
-  <uninstaller class="org.nuxeo.connect.update.impl.task.UninstallTask" restart="false"/>
-  <validator class="org.nuxeo.MyValidator"/>
-  <platforms>
-    <platform>cap-8.3</platform>
-    <platform>server-8.4*</platform>
-  </platforms>
-  <dependencies>
-    <package>nuxeo-core:8.3.1:8.3.2</package>
-    <package>nuxeo-runtime:8.3.1</package>
-  </dependencies>
-  <optional-dependencies>
-    <package>nuxeo-web-ui:1.0.0:1.0.2</package>
-    <package>nuxeo-jsf-ui:1.0.0</package>
-  </optional-dependencies>
-  <supported>false</supported>
   <hotreload-support>true</hotreload-support>
   <require-terms-and-conditions-acceptance>false</require-terms-and-conditions-acceptance>
-  <nuxeo-validation>primary_validation</nuxeo-validation>
-  <production-state>production_ready</production-state>
-  <license>LGPL</license>
-  <license-url>http://www.gnu.org/licenses/lgpl.html</license-url>
+  <!-- Nuxeo Validation: none | inprocess | primary_validation | nuxeo_certified -->
+  <nuxeo-validation>none</nuxeo-validation>
+  <!-- Production State: production_ready | testing | proto -->
+  <production-state>testing</production-state>
+  <supported>false</supported>
+  <platforms>
+    <platform>server-11.10</platform>
+    <platform>server-11.10-HF*</platform>
+  </platforms>
+  <dependencies>
+    <package>another-package:1.0.0:1.1.0</package>
+  </dependencies>
+  <optional-dependencies>
+    <package>nuxeo-web-ui</package>
+    <package>nuxeo-jsf-ui</package>
+  </optional-dependencies>
+  <conflicts>
+    <package>a-conflicting-package:1.0.0:1.0.0</package>
+  </conflicts>
+  <provides>
+    <package>an-embedded-package:1.0.0:1.0.0</package>
+  </provides>
+  <license>Apache License, Version 2.0</license>
+  <license-url>http://www.apache.org/licenses/LICENSE-2.0</license-url>
+  <!-- Visibility: PRIVATE | MARKETPLACE | DEV | PUBLIC -->
   <visibility>PUBLIC</visibility>
 </package>
 
 ```
-
-You can see the usage of `installer` and `uninstaller` elements. These are used to specify the task implementation to be used when installing and uninstalling.
 
 Here are the available fields (see the [<span class="nolink">PackageDefinition</span> Javadoc](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/model/PackageDefinition.html) for a full description):
 
@@ -209,11 +198,8 @@ Here are the available fields (see the [<span class="nolink">PackageDefinition</
     See [org.nuxeo.connect.update.Version](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/Version.html).
 *   `title`: Open field.
 *   `description`: HTML field.
-*   `classifier`: Unused.
 *   `home-page`: The URL where more information can be found about this package.
 *   `vendor`: The vendor represent the entity providing and maintaining the package.
-*   `installer` and `uninstaller`: See [org.nuxeo.connect.update.model.TaskDefinition](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/model/TaskDefinition.html).
-*   `validator`: See [org.nuxeo.connect.update.Validator](https://qa.nuxeo.org/jenkins/job/master/job/nuxeo-connect-master/site/nuxeo-connect-client/apidocs/org/nuxeo/connect/update/Validator.html).
 *   `supported`: True or False. Is the package maintenance guaranteed by a support contract with the vendor.
 *   `hotreload-support`: True or False. Can the package be "hot reloaded" (cf Nuxeo Studio, Dev mode...).
 *   `require-terms-and-conditions-acceptance`: True or False. Determines if the package install requires terms and conditions acceptance by the administrator.
@@ -255,14 +241,14 @@ The Nuxeo policy is:
 
 For instance, Nuxeo would use:
 
-*   `1.0.0` for the first package release targeting Nuxeo `6.x`
-*   `1.0.1`, `1.0.2`... for the next packages targeting `6.x`
-*   `1.1.0` for the first package release targeting Nuxeo `7.x`
-*   `1.1.1`, `1.1.2`... for the next packages targeting`7.x`
-*   `1.2.0` for the first package release targeting Nuxeo `8.x`
-*   And in case of important code changes, respectively `2.0.0`, `2.1.0` and `2.2.0` for the next packages targeting `6.x`, `7.x` and `8.x`.
+*   `1.0.0` for the first package release targeting Nuxeo `8.x`
+*   `1.0.1`, `1.0.2`... for the next packages targeting `8.x`
+*   `1.1.0` for the first package release targeting Nuxeo `9.x`
+*   `1.1.1`, `1.1.2`... for the next packages targeting`9.x`
+*   `1.2.0` for the first package release targeting Nuxeo `10.x`
+*   And in case of important code changes, respectively `2.0.0`, `2.1.0` and `2.2.0` for the next packages targeting `8.x`, `9.x` and `10.x`.
 
-Maintenance branches are usually named `major.minor` or `major.minor_LTS`: for instance, `1.0`, `1.1` and `1.2` or `1.0_6.0`, `1.1_7.10` and `1.2_8.10`.
+Maintenance branches are usually named `major.minor` or `major.minor_LTS`: for instance, `1.0`, `1.1` and `1.2` or `1.0_8.10`, `1.1_9.10` and `1.2_10.10`.
 
 ## Package Dependencies
 
@@ -305,11 +291,11 @@ If you really want to make a package depending on a hotfix package:
 
 ### Optional Dependencies
 
-Some packages may use the conditional bundle install in their install.xml (TODO: add link to conditional bundle installation documentation https://jira.nuxeo.com/browse/NXP-19789).
+Some packages may use the conditional bundle install in their install.xml, see [scripting command instructions]({{page page='scripting-commands#typical-installations'}}).
 When a package is being installed together with one of the packages referenced in his install.xml, those must be installed in the right order to avoid incomplete installation. Similarly, if a package is installed before one of the packages referenced in his install.xml, it must be reinstalled when one of the referenced package is installed.
 
 This is the purpose of the optional dependencies. An optional dependency will never be required, but will always be installed before its dependant package.
 
-In the above example, if you try to install `nuxeo-automation` along with `nuxeo-jsf-ui`, `nuxeo-jsf-ui` will be installed first. If you install `nuxeo-automation` alone first, then you install `nuxeo-jsf-ui`, `nuxeo-automation` will be reinstalled when you install `nuxeo-jsf-ui`.
+In the above example, if you try to install `nuxeo-package` along with `nuxeo-jsf-ui`, `nuxeo-jsf-ui` will be installed first. If you install `nuxeo-package` alone first, then you install `nuxeo-jsf-ui`, `nuxeo-package` will be reinstalled when you install `nuxeo-jsf-ui`.
 
-In any case, you still can have `nuxeo-automation` installed without having `nuxeo-jsf-ui` installed.
+In any case, you still can have `nuxeo-package` installed without having `nuxeo-jsf-ui` installed.
