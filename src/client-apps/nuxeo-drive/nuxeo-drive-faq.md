@@ -177,6 +177,16 @@ Since the version `1.3.1216` of Nuxeo Drive client, the synchronization delay is
 
 3. Finally, if you want to change the log verbosity for all the Nuxeo Drive clients, you can update the `log_level_file` setting of the [Nuxeo Drive global configuration]({{page page='how-to-configure-nuxeo-drive-globally'}}).
 
+## How to Enable Icon Overlays on macOS
+
+They are available since Nuxeo Drive 3.1.0 and should be enabled by default. If not, you can do it manually in System Preferences > Extensions:
+
+![]({{file name='drive-macos-settings.png' page='nuxeo-drive'}})
+
+And ensure the Nuxeo Drive > Finder Extensions is checked:
+
+![]({{file name='drive-macos-settings-extensions.png' page='nuxeo-drive'}})
+
 ## How to Make Nuxeo Drive Work with a Nuxeo Cluster
 
 You only need to make sure that:
