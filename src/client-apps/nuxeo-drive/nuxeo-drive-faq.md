@@ -159,9 +159,12 @@ Since the version `1.3.1216` of Nuxeo Drive client, the synchronization delay is
 
 ## How to Change the Log Verbosity
 
-1. The simplest way is through the Advanced tab of the Settings panel.
+1. The simplest way is to access it in the Settings panel through:
 
-2. This can also done as for the previous paragraph by adding the following lines in the `config.ini` file:
+    - the Advanced tab on Drive <= 2.4.0,
+    - the General tab on Drive >= 4.1.0.
+
+2. This can also be done by adding the following lines in the `config.ini` file:
 
     - Increase log verbosity:
 

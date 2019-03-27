@@ -815,14 +815,18 @@ Renaming a document from the Nuxeo Drive folder renames the document and its att
 
 Metadata edit is available starting from Nuxeo Platform 6.0.
 
+With a Drive client version below 4, it will open in a view within the application. Otherwise, it will open directly in the browser.
+
+The custom metadata page is only available with the JSF UI. If using WebUI, it will direct you to the default page of the document.
+
 {{/callout}}
 
 Metadata Edit allows you to edit the metadata of your document from your desktop.
 
 1. Go to your Nuxeo Drive folder on your computer.
 2. Right-click on the name of the document that you want to edit.
-3. Click on Nuxeo Drive > Edit metadata (works only for JSF).
-    The browser is then opened to the document metadata.
+3. Click on Nuxeo Drive > Edit metadata.
+    A view or a browser page is then opened to the document metadata.
     ![]({{file name='Drive_metadata_view.png' page='nuxeo-drive'}} ?w=350)
 4. Click on **Edit** and modify your document,
     ![]({{file name='Drive_metadata_edit.png' page='nuxeo-drive'}} ?w=350)
