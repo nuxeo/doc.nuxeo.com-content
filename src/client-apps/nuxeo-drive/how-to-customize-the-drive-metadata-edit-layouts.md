@@ -1,8 +1,8 @@
 ---
-title: How to Customize the Drive Metadata Edit Layouts
+title: 'HOWTO: Customize the Drive Metadata Edit Layouts'
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2019-03-15'
     status: ok
 details:
     howto:
@@ -71,15 +71,16 @@ history:
         message: ''
         version: '1'
 ---
+
 You have created your own document types and defined forms and view that show properties specific to your business and users. Your users leverage Nuxeo Drive to work on Nuxeo documents from their desktop and you want them to be able to enjoy the [metadata edit feature of Nuxeo Drive]({{page page='nuxeo-drive'}}#metadata-edit).
 
 ![]({{file name='drive-metadata-edit.png' page='nuxeo-drive'}} ?w=400)
 
 {{#> callout type='info' }}
-{{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}
+{{{multiexcerpt 'check-jsf-ui-dependency' space='nxdoc' page='how-to-define-a-new-content-view'}}}
 {{/callout}}
 
-Obviously you want them to be displayed the same properties as in the Nuxeo Platform web UI.
+Obviously you want them to be displayed the same properties as in the Nuxeo Platform Web UI.
 
 To do so:
 
@@ -116,8 +117,8 @@ To do so:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to Customize Nuxeo Drive Versioning Policy]({{page page='how-to-customize-nuxeo-drive-versioning-policy'}})
-- [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+- [HOWTO: Customize Nuxeo Drive Versioning Policy]({{page page='how-to-customize-nuxeo-drive-versioning-policy'}})
+- [HOWTO: Manually Initialize or Deploy a Nuxeo Drive Instance]({{page page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Nuxeo Drive Documentation'}}

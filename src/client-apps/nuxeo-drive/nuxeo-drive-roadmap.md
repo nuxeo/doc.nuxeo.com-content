@@ -3,7 +3,7 @@ title: Nuxeo Drive Roadmap
 description: See what evolutions and improvements are planned on Nuxeo Drive
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2019-03-15'
     status: ok
 details: null
 labels:
@@ -13,7 +13,6 @@ labels:
     - yachour
     - lts2017-ok
 toc: true
-
 ---
 
 Below is the list of evolutions and improvements planned for Nuxeo Drive.</br>

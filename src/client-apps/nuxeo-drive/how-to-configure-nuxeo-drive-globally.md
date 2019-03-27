@@ -1,8 +1,8 @@
 ---
-title: How to Configure Nuxeo Drive Globally
+title: 'HOWTO: Configure Nuxeo Drive Globally'
 review:
     comment: ''
-    date: '2017-11-23'
+    date: '2019-03-15'
     status: ok
 details:
     howto:

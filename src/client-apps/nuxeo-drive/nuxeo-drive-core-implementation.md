@@ -2,7 +2,7 @@
 title: Nuxeo Drive Core Implementation
 review:
     comment: ''
-    date: '2017-12-18'
+    date: '2019-03-15'
     status: ok
 labels:
     - lts2017-ok
@@ -10,8 +10,8 @@ labels:
     - mschoentgen
 toc: true
 tree_item_index: 200
-
 ---
+
 ## Client Architecture
 
 Here is a schema showing the client-side architecture:
