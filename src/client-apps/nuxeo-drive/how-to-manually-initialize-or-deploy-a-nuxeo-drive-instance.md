@@ -1,8 +1,8 @@
 ---
-title: How to Manually Initialize or Deploy a Nuxeo Drive Instance
+title: 'HOWTO: Manually Initialize or Deploy a Nuxeo Drive Instance'
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2019-03-15'
     status: ok
 labels:
     - lts2016-ok
@@ -201,14 +201,13 @@ history:
         date: '2014-02-21 15:22'
         message: ''
         version: '1'
-
 ---
 
 {{! multiexcerpt name='drive_2.x_manual_initialization'}}
 
-Usually Nuxeo Drive is initialized when the user completes the Settings panel and successfully logs in. But for auto deployment you might want use the command line or EXE.
+Usually Nuxeo Drive is initialized when the user completes the Settings panel and successfully logs in. But for auto deployment you might want to use the command line or EXE.
 
-# Command Line
+## Command Line
 
 You can bind a new engine on Nuxeo Drive by calling the `ndrive` executable with the following arguments. It is recommended to have your Drive not running while executing this command.
 
@@ -218,22 +217,22 @@ ndrive bind-server [--password PASSWORD] [--local-folder LOCALFOLDER] USERNAME U
 
 More information about the parameters:
 
-* `USERNAME`: The username of the user who will be using Nuxeo Drive. **Mandatory**.
-* `URL`: The URL of the Nuxeo server. **Mandatory**.
-* `PASSWORD`: The password of the user who will be using Nuxeo Drive. If you don't specify the `PASSWORD` then it will be asked to the user when Nuxeo Drive is started.
-* `LOCALFOLDER`: The path to the Nuxeo Drive folder that will be created. Path must include the Nuxeo Drive folder. If `LOCALFOLDER` is not specified then the default location will be picked.
+- `USERNAME`: The username of the user who will be using Nuxeo Drive. **Mandatory**.
+- `URL`: The URL of the Nuxeo server. **Mandatory**.
+- `PASSWORD`: The password of the user who will be using Nuxeo Drive. If you don't specify the `PASSWORD` then it will be asked to the user when Nuxeo Drive is started.
+- `LOCALFOLDER`: The path to the Nuxeo Drive folder that will be created. Path must include the Nuxeo Drive folder. If `LOCALFOLDER` is not specified then the default location will be picked.
 
-# Installer
+## Installer
 
 On Windows you can automatically call the `bind-server` command on install if you set up the EXE variables:
 
-* `TARGETURL`. The URL of the Nuxeo server. **Mandatory**.
-* `TARGETUSERNAME`: The username of the user who will be using Nuxeo Drive. **Mandatory**.
-* `TARGETPASSWORD`: The password of the user who will be using Nuxeo Drive. If you don't specify it then it will be asked to the user when Nuxeo Drive is started.
-* `TARGETDRIVEFOLDER`: The path to the Nuxeo Drive folder that will be created. Path must include the Nuxeo Drive folder.
-* `START=auto`: Start Nuxeo Drive after the installation.
+- `TARGETURL`: The URL of the Nuxeo server. **Mandatory**.
+- `TARGETUSERNAME`: The username of the user who will be using Nuxeo Drive. **Mandatory**.
+- `TARGETPASSWORD`: The password of the user who will be using Nuxeo Drive. If you don't specify it then it will be asked to the user when Nuxeo Drive is started.
+- `TARGETDRIVEFOLDER`: The path to the Nuxeo Drive folder that will be created. Path must include the Nuxeo Drive folder.
+- `START=auto`: Start Nuxeo Drive after the installation.
 
-## Examples
+### Examples
 
 Install Nuxeo Drive and configure the Nuxeo server to `http://localhost:8080/nuxeo` with the username `username`:
 

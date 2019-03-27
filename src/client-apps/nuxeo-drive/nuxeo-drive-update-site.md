@@ -2,7 +2,7 @@
 title: Nuxeo Drive Update Site
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2019-03-15'
     status: ok
 labels:
     - lts2016-ok
@@ -91,8 +91,8 @@ history:
         date: '2014-06-30 14:12'
         message: ''
         version: '1'
-
 ---
+
 {{! multiexcerpt name='update_site_page_content'}}
 
 We wrote our own auto-update framework knowing:
@@ -183,7 +183,7 @@ Each entry describes a version with:
 - `min`: the minimum Nuxeo version required for this release to work with. **Mandatory**.
 - `max`: the maximum Nuxeo version required for this release to work with. If not defined, Drive will consider the current Nuxeo version as acceptable to work with.
 
-`min` and `max` can take a Hot Fix (HF) version, helpful to isolate some versions. Defined versions are **inclusive**.
+`min` and `max` can take a hotfix (HF) version, helpful to isolate some versions. Defined versions are **inclusive**.
 
 Notes:
 

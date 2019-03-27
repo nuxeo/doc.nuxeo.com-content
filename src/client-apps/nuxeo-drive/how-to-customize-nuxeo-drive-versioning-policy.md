@@ -1,8 +1,8 @@
 ---
-title: How to Customize Nuxeo Drive Versioning Policy
+title: 'HOWTO: Customize Nuxeo Drive Versioning Policy'
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2019-03-15'
     status: ok
 details:
     howto:

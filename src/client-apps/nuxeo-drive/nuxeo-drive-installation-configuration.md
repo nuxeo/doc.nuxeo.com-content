@@ -11,7 +11,6 @@ labels:
     - lklein
 toc: true
 tree_item_index: 100
-
 ---
 
 ## Requirements
@@ -61,10 +60,9 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
     Nuxeo Drive is now installed on your computer.
 
     {{#> callout type='tip' }}
-
     If you have any problem due to a previous installation of Nuxeo Drive you can try using this [Microsoft tool](https://support.microsoft.com/fr-fr/mats/program_install_and_uninstall) to uninstall it properly.
-
     {{/callout}}
+
 3. You now need to [start Nuxeo Drive](#starting-nuxeo-drive) to use it.
     A new Nuxeo Drive folder will be created by the system in your local Documents folder (`C:\Users\USER\Documents\`). This is the place where synchronized documents will be stored on your computer.
 
@@ -145,29 +143,29 @@ When a new version of Nuxeo Drive is available, a message is displayed at the bo
 
 #### Windows
 
-1. Right-click on the the icon ![]({{file name='drive-icon-online.png' page='nuxeo-drive'}}) (or ![]({{file name='drive-icon-online-old.png' page='nuxeo-drive'}} ?w=14) on old versions) in the systray.
-2. Click on the icon ![]({{file name='drive-icon-settings.png' page='nuxeo-drive'}} ?w=20) and on the **Settings** menu item.
+1. Right-click on the the icon ![]({{file name='drive-icon-online.png' page='nuxeo-drive'}} ?w=20) (or ![]({{file name='drive-icon-online-old.png' page='nuxeo-drive'}} ?w=14) on old versions) in the systray.
+2. Click on the icon ![]({{file name='drive-icon-settings.png' page='nuxeo-drive'}} ?w=20) and on the **Settings** menu item.</br>
     The Settings window is displayed.
 
 #### macOS
 
 1. Click on the the icon ![]({{file name='drive-icon-online.png' page='nuxeo-drive'}} ?w=20) (or ![]({{file name='drive-icon-online-old.png' page='nuxeo-drive'}} ?w=14) on old versions) in the systray.
-2. Click on the icon ![]({{file name='drive-icon-settings.png' page='nuxeo-drive'}} ?w=20) and on the **Settings** menu item.
+2. Click on the icon ![]({{file name='drive-icon-settings.png' page='nuxeo-drive'}} ?w=20) and on the **Settings** menu item.</br>
     The Settings window is displayed.
 
 The Nuxeo Drive settings window shows four tabs that enable you to customize the behavior of your Nuxeo Drive:
 
 ### Graphical User Interface
 
-- **General**
+- **General**</br>
     This is where you select the general behavior of your Nuxeo Drive: what language to use, the update policy, etc.
     ![]({{file name='drive-tab-general.png' page='nuxeo-drive'}})
 
-- **Accounts**
+- **Accounts**</br>
     Set up one or several Nuxeo Platform accounts to synchronize with Nuxeo Drive.
     ![]({{file name='drive-tab-accounts.png' page='nuxeo-drive'}})
 
-- **About**
+- **About**</br>
     Information about the Nuxeo Drive version and license.
     ![]({{file name='drive-tab-about.png' page='nuxeo-drive'}})
 
@@ -203,7 +201,7 @@ By default, Nuxeo Drive is available in English.
 
 1. Open the Nuxeo Drive Settings window.
 2. Click on the **General** tab.
-3. In the **Language** drop down list, select the language you want to use.
+3. In the **Language** drop down list, select the language you want to use.</br>
     The Settings window language is immediately changed.
 
 {{! multiexcerpt name='drive-config-params'}}
@@ -399,9 +397,7 @@ To uninstall Nuxeo Drive:
     {{/callout}}
 
 {{#> callout type='warning' }}
-
 At this point you have uninstalled the Nuxeo Drive program and its configuration. If you want to get rid of the synchronized data you also need to delete the Nuxeo Drive folder like you delete any regular Windows folder.
-
 {{/callout}}
 
 {{! /multiexcerpt}}

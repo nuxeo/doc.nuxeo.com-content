@@ -11,7 +11,7 @@ labels:
   - mschoentgen
   - lklein
   - yachour
-  - lts2017-ok
+  - lts2019-ok
 toc: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 confluence:
@@ -607,9 +607,7 @@ Nuxeo Drive is a Nuxeo addon that enables the synchronization of folders or work
 Here is the big picture of how Nuxeo Drive works: on the Nuxeo Platform web interface, you mark some workspaces or folders to synchronize. After you installed the Nuxeo Drive client on your computer and bound it to a Nuxeo server, documents are saved on your computer so you can access them and work on them offline. And the next time you have an Internet connection, changes in your local folder are uploaded to the Nuxeo Platform. Changes on the server are also automatically downloaded to your computer. Nuxeo Drive also enables to edit synchronized documents locally from your computer.
 
 {{#> callout type='warning' }}
-
 Please note that the main purpose of Nuxeo Drive is to allow synchronization between a file system and some mount points of a Nuxeo repository. Nuxeo Drive is neither a bulk import tool, nor a repository backup / synchronization tool.
-
 {{/callout}}
 
 ## Synchronizing Content
@@ -658,25 +656,26 @@ Starting from Nuxeo Platform 6.0, you can synchronize spaces on which you have [
 To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive-webui-unsynced.png' page='nuxeo-drive'}} ?w=20).
 The icon becomes ![]({{file name='drive-webui-synced-under-root.png' page='nuxeo-drive'}} ?w=20). Documents inside the synchronized space have a Drive local edit icon ![]({{file name='drive-webui-direct-edit.png' page='nuxeo-drive'}} ?w=20).
 
-{{{multiexcerpt 'drive-content-sync'}}}
+{{! multiexcerpt name='drive-content-sync'}}
+The folder and all its content is now available in your local Nuxeo Drive folder. You can now create, edit, delete documents from your computer. If you only have Read permissions, documents are in read-only mode.
+{{! /multiexcerpt}}
 
-![]({{file name='drive-newtab-webui.png' page='nuxeo-drive'}} ?w=650)
+In the **Administration** menu > **Nuxeo Drive**, the space is displayed in the "Synchronization root" section. This is where you can see all the spaces you have synchronized with Nuxeo Drive.
+
+![]({{file name='drive-webui-newtab.png' page='nuxeo-drive'}} ?w=650)
 
 #### JSF UI
 
-{{{multiexcerpt 'JSF-UI-required' page='nxdoc/generic-multi-excerpts'}}}
+{{{multiexcerpt 'JSF-UI-required' space='nxdoc' page='generic-multi-excerpts'}}}
 
 To synchronize a space, in the Nuxeo Platform, click on the icon ![]({{file name='drive-icon-unsynced-old.png' page='nuxeo-drive'}}).
 The icon becomes green. Documents inside the synchronized space have an icon ![]({{file name='drive-jsf-synced-under-root.png' page='nuxeo-drive'}}) and a Drive local edit icon ![]({{file name='drive-jsf-direct-edit.png' page='nuxeo-drive'}}).
 
 ![]({{file name='drive-synchronise-icon.png' page='nuxeo-drive'}} ?w=650)
 
-{{! multiexcerpt name='drive-content-sync'}}
-The folder and all its content is now available in your local Nuxeo Drive folder. You can now create, edit, delete documents from your computer. If you only have Read permissions, documents are in read-only mode.
-On your Home Nuxeo Drive tab, the space is displayed in the "Synchronization root" section. This is where you can see all the spaces you have synchronized with Nuxeo Drive.
-{{! /multiexcerpt}}
+{{{multiexcerpt 'drive-content-sync'}}}
 
-![]({{file name='drive-newtab.png' page='nuxeo-drive'}} ?w=650)
+On your Home Nuxeo Drive tab, the space is displayed in the "Synchronization root" section. This is where you can see all the spaces you have synchronized with Nuxeo Drive.
 
 ### Suspending Synchronization
 
@@ -684,15 +683,15 @@ If a synchronized folder holds big document or a large amount of documents, sync
 
 **To suspend synchronization:**
 
-1. Click on the Drive icon in the system tray.
-2. Click on the icon ![]({{file name='drive-settings-icon.png' page='nuxeo-drive'}}) and click on the **Suspend** menu item.
+1. Click on the Drive icon ![]({{file name='drive-icon-online.png' page='nuxeo-drive'}} ?w=20) in the system tray.
+2. Click on the icon ![]({{file name='drive-settings-icon.png' page='nuxeo-drive'}} ?w=20) and click on the **Suspend** menu item.
     If Nuxeo Drive is currently synchronizing, synchronization is completed before suspending Nuxeo Drive.
     As long as synchronization is suspended the Drive icon becomes ![]({{file name='drive-icon-offline.png' page='nuxeo-drive'}} ?w=20) (or ![]({{file name='drive-icon-offline-old.png' page='nuxeo-drive'}} ?w=14) on old versions).
 
 **To resume synchronization:**
 
 1. Click on the Drive icon ![]({{file name='drive-icon-offline.png' page='nuxeo-drive'}} ?w=20) (or ![]({{file name='drive-icon-offline-old.png' page='nuxeo-drive'}} ?w=14) on old versions) in the system tray.
-2. Click on the icon ![]({{file name='drive-settings-icon.png' page='nuxeo-drive'}}) and click on the **Resume** menu item.
+2. Click on the icon ![]({{file name='drive-settings-icon.png' page='nuxeo-drive'}} ?w=20) and click on the **Resume** menu item.
     The Drive icon becomes blue again and synchronization is available again.
 
 ### Unsynchronizing a Folder
@@ -706,7 +705,7 @@ There are two ways to desynchronize a folder.
 
 By default, once you have synchronized a folder all its content (files and folders) is synchronized. But you can deactivate synchronization locally on some folders. This feature enables you to manage the storage space dedicated to the synchronization, which is especially useful if you use a device with a low-storage capacity.
 
-Clicking on the **Select sync folders** button in the [Settings window](#open-drive-settings) shows the **Nuxeo Drive Filters** windows from which you can unselect folders to unsynchronize. Unselected folders remain displayed to you can easily reselect and synchronize them back. They are still marked as synchronized on your web UI.
+Clicking on the **Select sync folders** button in the [Settings window]({{page page='nuxeo-drive-installation-configuration'}}#settings) shows the **Nuxeo Drive Filters** windows from which you can unselect folders to unsynchronize. Unselected folders remain displayed to you can easily reselect and synchronize them back. They are still marked as synchronized on your web UI.
 
 {{#> callout type='warning' }}
 Please note that when synchronizing a significant amount of data, it is highly inadvisable to deactivate synchronization of the folders containing this data, to avoid generating conflicts with the server. Versions 2.5.9 and above will not allow to access the "select sync folders" window when such synchronization is running.
@@ -782,18 +781,17 @@ Direct Edit enables you to edit any of your document's content from their Summar
 
 The icon looks like ![]({{file name='drive-webui-direct-edit.png' page='nuxeo-drive'}} ?w=20) on Web-UI and ![]({{file name='drive-jsf-direct-edit.png' page='nuxeo-drive'}}) on JSF-UI.
 
-To edit a document locally from the web interface:
+**To edit a document locally from the web interface:**
 
-1. On the document in the Nuxeo Platform, click on the **Direct Edit icon** on the **Summary** tab on JSF UI and on document **View** on Web UI.
+1. On the document in the Nuxeo Platform, click on the **Direct Edit icon** on the document **View** on Web UI and on the **Summary** tab on JSF UI.
     The document opens in its native application (OpenOffice.org for an .odt file for instance).
 
     {{#> callout type='note' }}
-
     If you plan to work on the document for some time, you can easily lock it from the Metadata edit popup (see the section [Metadata Edit](#metadata-edit)).
 
-    Note that depending on your OS and the file format, the document can be automatically locked.This is still a beta feature of Direct Edit, known to currently work on macOS and Windows.
-
+    Note that depending on your OS and the file format, the document can be automatically locked. This is still a beta feature of Direct Edit, known to currently work on macOS and Windows.
     {{/callout}}
+
 2. Edit the document and save the modifications.
     Modifications are saved in the Nuxeo Platform directly.
 3. Close the document.
@@ -812,7 +810,6 @@ Renaming a document from the Nuxeo Drive folder renames the document and its att
 ### {{> anchor 'metadata-edit'}}Editing Metadata
 
 {{#> callout type='info' }}
-
 Metadata edit is available starting from Nuxeo Platform 6.0.
 
 With a Drive client version below 4, it will open in a view within the application. Otherwise, it will open directly in the browser.
@@ -829,8 +826,8 @@ Metadata Edit allows you to edit the metadata of your document from your desktop
     A view or a browser page is then opened to the document metadata.
     ![]({{file name='Drive_metadata_view.png' page='nuxeo-drive'}} ?w=350)
 4. Click on **Edit** and modify your document,
-    ![]({{file name='Drive_metadata_edit.png' page='nuxeo-drive'}} ?w=350)
-5. Click on **Save.**
+    ![]({{file name='drive-metadata-edit.png' page='nuxeo-drive'}} ?w=350)
+5. Click on **Save**.
 
 ### Moving Documents
 
@@ -853,7 +850,7 @@ Starting with Drive 4.1.0, a local deletion will by default unsynchronize the do
 
 When you start Nuxeo Drive on your computer for the first time, you need to provide your credentials so the Drive client can communicate with the Nuxeo Platform. This creates an authentication token on the Platform, that is displayed on the **Nuxeo Drive** tab in the **Home** on JSF UI and on the **Nuxeo Drive** part of **User Settings** on Web UI.. If you want to unauthorize a Drive client to access the Nuxeo Platform using your credentials, for instance because you changed your computer, you can revoke this authentication token. The Nuxeo Drive client will then require the credentials to be updated to connect to the Nuxeo Platform.
 
-To revoke an authentication token:
+**To revoke an authentication token:**
 
 1. On the Nuxeo Platform, click on the **Nuxeo Drive** tab (see locations above).
 2. Click on the **Revoke** button of the token to be revoked. Several elements are displayed to help you identify the right token:
