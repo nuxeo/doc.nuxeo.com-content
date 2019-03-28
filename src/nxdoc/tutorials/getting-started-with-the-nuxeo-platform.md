@@ -8,7 +8,9 @@ labels:
     - lts2016-ok
 tree_item_index: 100
 version_override:
-  'FT': 'nxdoc/discover-nuxeo-platform-apis'
+  'FT': '/nxdoc/discover-nuxeo-platform-apis'
+  'LTS 2019': '1010/nxdoc/discover-nuxeo-platform-apis'
+  'LTS 2017': '910/nxdoc/discover-nuxeo-platform-apis'
 history:
     -
         author: Solen Guitter
