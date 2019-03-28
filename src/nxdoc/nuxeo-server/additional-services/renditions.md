@@ -160,6 +160,51 @@ Here is the contribution for the `PictureRenditionDefinitionProvider`:
 
 Since 7.2, both contributions can be filtered through standard filters we already use in the Nuxeo Platform. The `currentDocument` referenced in the filter is the document on which the rendition definition is checked.
 
+### Default Rendition{{> anchor 'default_rendition'}}
+
+A [default rendition extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.rendition.service.RenditionService--defaultRendition) allows to configure which rendition should be produced according to contextual data:
+
+- a `reason`
+- the `CurrentUser`
+- the `Document`
+
+```xml
+  <defaultRendition reason="download">
+    <script language="JavaScript">
+      function run() {
+        if (Document.getType() == "File") {
+          return 'mainBlob';
+        } else if (Document.getType() == 'Picture') {
+          return 'mainBlob';
+        } else if (Document.getType() == 'Video') {
+          return 'mainBlob';
+        } else if (Document.getType() == 'Audio') {
+          return 'mainBlob';
+        } else if (Document.getType() == 'Note') {
+          return 'pdf';
+        } else if (Document.getFacets().contains("Collection")) {
+          return 'containerDefaultRendition';
+        } else if (Document.getFacets().contains("Folderish")) {
+          return 'containerDefaultRendition';
+        } else {
+          return 'xmlExport';
+        }
+      }
+    </script>
+  </defaultRendition>
+```
+
+The language can be any JVM scripting language, the default is "JavaScript".
+
+The `<script>` must define a run() function that returns the name of the rendition to be produced.
+
+Note that the [`containerDefaultRendition`](https://github.com/nuxeo/nuxeo/blob/10.10/nuxeo-features/nuxeo-platform-rendition/nuxeo-platform-rendition-core/src/main/resources/OSGI-INF/rendition-contrib.xml#L88) rendition returns a Zip containing the default renditions of the `Folderish`'s children or the `Collection`'s members.
+
+Web UI leverages this capabiltiy in 2 important feature in :
+
+- [`Bulk Download`]({{page page='web-ui-defaullt-rendition#bulk_download'}}) which will pack inside a Zip file the default renditions of a selection of documents to be downloaded.
+- [`Publishing`]({{page page='web-ui-defaullt-rendition#publishing'}}) where you can pick the default rendition to be used when publishing a document.
+
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
