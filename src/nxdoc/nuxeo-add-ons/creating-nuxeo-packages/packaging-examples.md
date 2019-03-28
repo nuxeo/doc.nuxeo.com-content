@@ -80,8 +80,8 @@ history:
         date: '2012-09-10 18:14'
         message: ''
         version: '1'
-
 ---
+
 Automating the packaging process allows to setup continuous integration on the Nuxeo Package build, its install and the features it provides.
 
 There are multiple ways to build a Nuxeo Package. Focusing on those using the [Ant Assembly Maven Plugin](https://github.com/nuxeo/ant-assembly-maven-plugin), you can find below the three different methods depending on the constraints and objectives, from the better to the quicker method:
@@ -90,7 +90,7 @@ There are multiple ways to build a Nuxeo Package. Focusing on those using the [A
 - [No-NXR Method](#no-nxr-method)
 - [Explicit Method](#explicit-method)
 
-See [https://github.com/nuxeo/nuxeo-marketplace-sample/](https://github.com/nuxeo/nuxeo-marketplace-sample/) for downloading a project with sample architectures, implementing the three below build methods plus the required modules for testing those Nuxeo Packages with Selenium, WebDriver and Gatling.
+See [Nuxeo Marketplace Sample](https://github.com/nuxeo/nuxeo-marketplace-sample/) for downloading a project with sample architectures, implementing the three below build methods plus the required modules for testing those Nuxeo Packages with Selenium, WebDriver and Gatling.
 
 Applied to the sample project, here are the results from those three methods. Look at the differences in the content, size and build time. The network bandwidth is not evaluated but it also varies respectively from the most to the less, proportionally to the build time.
 
