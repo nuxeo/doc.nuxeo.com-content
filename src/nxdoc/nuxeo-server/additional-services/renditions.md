@@ -198,12 +198,12 @@ The language can be any JVM scripting language, the default is "JavaScript".
 
 The `<script>` must define a run() function that returns the name of the rendition to be produced.
 
-Note that the [`containerDefaultRendition`](https://github.com/nuxeo/nuxeo/blob/10.10/nuxeo-features/nuxeo-platform-rendition/nuxeo-platform-rendition-core/src/main/resources/OSGI-INF/rendition-contrib.xml#L88) rendition returns a Zip containing the default renditions of the `Folderish`'s children or the `Collection`'s members.
+Note that the [`containerDefaultRendition`](https://github.com/nuxeo/nuxeo/blob/10.10/nuxeo-features/nuxeo-platform-rendition/nuxeo-platform-rendition-core/src/main/resources/OSGI-INF/rendition-contrib.xml#L88) rendition returns a ZIP containing the default renditions of the `Folderish`'s children or the `Collection`'s members.
 
-Web UI leverages this capabiltiy in 2 important feature in :
+Web UI leverages this capability in 2 important features:
 
-- [`Bulk Download`]({{page page='web-ui-defaullt-rendition#bulk_download'}}) which will pack inside a Zip file the default renditions of a selection of documents to be downloaded.
-- [`Publishing`]({{page page='web-ui-defaullt-rendition#publishing'}}) where you can pick the default rendition to be used when publishing a document.
+- [`Bulk Download`]({{page page='web-ui-default-rendition'}}#bulk_download) which will pack inside a ZIP file the default renditions of a selection of documents to be downloaded.
+- [`Publishing`]({{page page='web-ui-default-rendition'}}#publishing) where you can pick the default rendition to be used when publishing a document.
 
 * * *
 

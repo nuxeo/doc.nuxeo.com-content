@@ -1,5 +1,6 @@
 ---
-title: 'HOWTO: Default Rendition within Web UI'
+title: 'HOWTO: Customize Default Rendition in Web UI'
+description: Learn how to customize the default rendition used in Web UI.
 review:
     comment: ''
     date: '2019-03-28'
@@ -15,11 +16,10 @@ labels:
     - tutorial
     - rendition
     - lts2019-ok
-tree_item_index: 1600
-
+tree_item_index: 1040
 ---
 
-Web UI leverages the [Default Rendition]({{page page='renditions#default_rendition'}}) service for 2 Web UI features.
+Web UI leverages the [Default Rendition]({{page page='renditions'}}#default_rendition) service for two Web UI features.
 
 ## Bulk Download{{> anchor 'bulk_download'}}
 
