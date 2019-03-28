@@ -197,15 +197,15 @@ history:
         date: '2010-07-07 11:26'
         message: ''
         version: '1'
-
 ---
+
 Scripting commands can be used to define the way an installation is done. Usually, when installing a new component you need to execute a limited set of commands like copy, delete, patch etc.
 
-The Package Scripting Commands provides a easy to use format for defining the install logic of a package and more, each built-in command is providing safe rollback in case of install failures.
+The Package Scripting Commands provides an easy to use format for defining the install logic of a package and more, each built-in command is providing safe rollback in case of install failures.
 
 When writing your installation using scripting commands you don't need to write the uninstall script. This script will be automatically generated after the installation is successfully done.
 
-## Typical installations
+## Typical Installations
 
 A typical `install.xml` file looks like this:
 
@@ -220,7 +220,7 @@ A typical `install.xml` file looks like this:
 
 This instructs Nuxeo to use the bundles from the `bundles` directory, and in addition use those from the `bundles-jsf-ui` directory only if the `nuxeo-jsf-ui` package is installed (and similarly for `nuxeo-web-ui`). It also instructs Nuxeo to use the plain Java libraries from the `lib` directory.
 
-## Specialized installations
+## Specialized Installations
 
 Let's now look at a more complex `install.xml` file, which would be used only for very specialized packages:
 
@@ -239,7 +239,7 @@ You can see the file is using contextual variables as&nbsp;`env.bundles`.&nbsp;e
 
 Let's take each command and see what will be executed.
 
-* The first update command is copying the file named `myplugin.jar` from the package root into the Nuxeo bundles directory (by preserving the file name).
+- The first update command is copying the file named `myplugin.jar` from the package root into the Nuxeo bundles directory (by preserving the file name).
 
     ```xml
       <update file="${package.root}/myplugin.jar" todir="${env.bundles}" 
@@ -248,7 +248,7 @@ Let's take each command and see what will be executed.
 
     You can see a `fail` attribute was used to put a guard on this command. The guard says that the command should fail if the target file exists (i.e a JAR with the same name already exists in the Nuxeo bundles directory). See below in the [Guard Attributes](#guard-attributes) section for more details on using guards.
 
-* The second update command will copy the `my.properties` file from the package root to the Nuxeo configuration directory but only if the current platform distribution is not based on JBoss.
+- The second update command will copy the `my.properties` file from the package root to the Nuxeo configuration directory but only if the current platform distribution is not based on JBoss.
 
     ```xml
       <update file="${package.root}/my.properties" todir="${env.config}"
@@ -257,7 +257,7 @@ Let's take each command and see what will be executed.
 
     You can see here the usage of another type of guard parameter: `ignore`.
 
-* The third copy command is a bit more complicated. It is used to upgrade an existing library. It is checking if the version of the library is an old version and should be replaced. If it is the same or a newer version the command will be ignored.
+- The third copy command is a bit more complicated. It is used to upgrade an existing library. It is checking if the version of the library is an old version and should be replaced. If it is the same or a newer version the command will be ignored.
 
     ```xml
       <copy file="${package.root}/mylib-1.2.jar" tofile="${env.lib}"
@@ -269,16 +269,14 @@ Let's take each command and see what will be executed.
     So, in our case the first file that matches the name `mylib-*.jar` and is located in the `env.lib` directory will be selected and the value that matched the pattern will be inserted into EL context under the name `version`.
     That way we can use this variable in our `ignore` guard parameter. This will check the version of the file that matched to see if the upgrade should be done or not.
 
-*   The `deploy` command will deploy (e.g. install) the specified bundle into the working Nuxeo Platform. The `deploy` command is needed only if you don't want to restart the server after the install is done. If you skip the deployment command you need to restart the server to have your new bundle deployed.
+- The `deploy` command will deploy (e.g. install) the specified bundle into the working Nuxeo Platform. The `deploy` command is needed only if you don't want to restart the server after the install is done. If you skip the deployment command you need to restart the server to have your new bundle deployed.
 
     ```xml
       <deploy file="${env.bundles}/my-plugin.jar"/>
     ```
 
     {{#> callout type='note' }}
-
-    Note that the `deploy` command won't work for all bundles. Some bundles will need the server to be restarted.
-
+    The `deploy` command won't work for all bundles. Some bundles will need the server to be restarted.
     {{/callout}}
 
 
@@ -286,19 +284,19 @@ Let's take each command and see what will be executed.
 
 We've seen that there are two special attributes that can be used on any command:
 
-*   `fail`: this is an EL expression that can be used to force command to fail in some circumstances.
-*   `ignore`: this is an EL expression that can be used to avoid executing the command in some circumstances.
-*   `if`: this is an EL expression that can be used to only execute the command in some circumstances.
+- `fail`: this is an EL expression that can be used to force command to fail in some circumstances.
+- `ignore`: this is an EL expression that can be used to avoid executing the command in some circumstances.
+- `if`: this is an EL expression that can be used to only execute the command in some circumstances.
 
-The variable available in EL context are:
+The variables available in EL context are:
 
-*   `Packages`: a packages helper. Only one method is available, `contains`, that will check if the given package is installed (or being installed) in the platform.
-*   `Version`: a version helper. See `VersionHelper` class for the list of all available methods.
+- `Packages`: a packages helper. Only one method is available, `contains`, that will check if the given package is installed (or being installed) in the platform.
+- `Version`: a version helper. See `VersionHelper` class for the list of all available methods.
     Example: `Version.isGreater(version, '1.0')`
-*   `Platform`: a platform helper that provides methods to check the type of the currently running Nuxeo Platform (name, version etc.).
+- `Platform`: a platform helper that provides methods to check the type of the currently running Nuxeo Platform (name, version etc.).
     Examples: `Platform.matches("dm-5.3.2")`, `Platform.isTomcat()` etc.
-*   `Pattern Variables`: as we seen variable used in file pattern matching are inserted into the EL context.
-*   custom variables provided by each command. Each command should document which variables are provided.
+- `Pattern Variables`: as we seen variable used in file pattern matching are inserted into the EL context.
+- custom variables provided by each command. Each command should document which variables are provided.
 
 ## Command Validation
 
@@ -315,9 +313,9 @@ Each command executed during an install is returning an opposite command if succ
 As an example of describing how a command should generate its rollback command let's the built-in copy command. To simplify let's say the update command has a `file` parameter and a `todir` parameter.
 When the `update` command (`update1`) is executed it will backup the  file present in `todir` if any into let say `backup_file` and then update the `file` over the previous one if any or just copy it. This command will generate a rollback command (`rollback2`) that will have the following arguments:
 
-*   rollback2.key = key of file, generally its location in nuxeo server
-*   rollback2.pkgId = package which has installed the new version
-*   rollback2.version = version of file
+- rollback2.key = key of file, generally its location in nuxeo server
+- rollback2.pkgId = package which has installed the new version
+- rollback2.version = version of file
 
 This is the approach taken by the update command. You can take any approach you want but in any case the command you implement must provide a safe rollback command.
 
@@ -331,7 +329,6 @@ for (Command cmd : commands) {
      log.addFirst(rollBackCommand);
   }
 }
-
 ```
 
 So, each time a command is executed the opposite command is logged into an command list named `log.`
@@ -355,7 +352,7 @@ You can see the uninstall script doesn't contain variables, neither guard attrib
 
 The built-ins commands provided by the Nuxeo Platform may not cover all of the install use cases. In that case you must implement your own command.
 
-To implement you own command you must extend the [`AbstractCommand` class](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/connect/update/task/standalone/commands/AbstractCommand.html) from org.nuxeo.connect.update.task.standalone.[commands:nuxeo-connect-standalone](http://commandsnuxeo-connect-standalone) (nuxeo-connect-standalone in [https://github.com/nuxeo/nuxeo-runtime/](https://github.com/nuxeo/nuxeo-runtime/)).
+To implement your own command you must extend the [`AbstractCommand` class](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/connect/update/task/standalone/commands/AbstractCommand.html) from org.nuxeo.connect.update.task.standalone.[commands:nuxeo-connect-standalone](http://commandsnuxeo-connect-standalone) (nuxeo-connect-standalone in [https://github.com/nuxeo/nuxeo-runtime/](https://github.com/nuxeo/nuxeo-runtime/)).
 
 Here is a simple example (the Delete command):
 
@@ -430,9 +427,9 @@ public class Delete extends AbstractCommand {
 
 You can see in that example there are four main methods to implement:
 
-*   Two are the XML serialization of the command,
-*   one is the command validation (should check if all required attributes are set and the command is consistent),
-*   and the last one is the execution itself which should return a valid rollback command.
+- Two are the XML serialization of the command,
+- one is the command validation (should check if all required attributes are set and the command is consistent),
+- and the last one is the execution itself which should return a valid rollback command.
 
 To deploy your command you should put your class into the package (the command can be a Groovy class or a Java one). Then to invoke it just use the full class name of your command as the element name in the XML. For example if the command file is `commands/MyCommand.class` (relative to your package root) you can just use the following XML code:
 
