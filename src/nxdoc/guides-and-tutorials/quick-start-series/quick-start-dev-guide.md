@@ -8,7 +8,9 @@ labels:
     - home
     - lts2015-ok
 version_override:
-    'FT': '/nxdoc/start-customizing-the-nuxeo-platform'
+    'FT': 'nxdoc/start-customizing-the-nuxeo-platform'
+    'LTS 2019': '1010/nxdoc/start-customizing-the-nuxeo-platform'
+    'LTS 2017': '910/nxdoc/start-customizing-the-nuxeo-platform'
     'LTS 2016': 810/nxdoc/start-customizing-the-nuxeo-platform
 confluence:
     ajs-parent-page-id: '28475558'

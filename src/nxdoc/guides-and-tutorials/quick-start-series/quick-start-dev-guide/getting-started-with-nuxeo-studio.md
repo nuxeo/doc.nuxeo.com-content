@@ -14,6 +14,11 @@ labels:
     - lts2015-ok
     - howto
     - studio
+version_override:
+    'FT': 'nxdoc/configure-nuxeo-platform'
+    'LTS 2019': '1010/nxdoc/configure-nuxeo-platform'
+    'LTS 2017': '910/nxdoc/configure-nuxeo-platform'
+    'LTS 2016': '810/nxdoc/getting-started-with-nuxeo-studio'
 toc: true
 confluence:
     ajs-parent-page-id: '28475632'
