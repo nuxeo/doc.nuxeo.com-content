@@ -9,4 +9,4 @@ labels:
     - alerts
 tree_item_index: 900
 ---
-{{{multiexcerpt 'alert-functional' page='collaborative-features'}}}
+{{{multiexcerpt 'alert-functional' space='nxdoc' page='collaborative-features'}}}
