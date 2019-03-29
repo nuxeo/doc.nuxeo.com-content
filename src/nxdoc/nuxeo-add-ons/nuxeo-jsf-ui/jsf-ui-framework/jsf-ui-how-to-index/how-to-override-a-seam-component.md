@@ -1,5 +1,5 @@
 ---
-title: How to Override a Seam Component
+title: 'HOWTO: Override a Seam Component - JSF UI'
 review:
     comment: ''
     date: '2015-12-01'

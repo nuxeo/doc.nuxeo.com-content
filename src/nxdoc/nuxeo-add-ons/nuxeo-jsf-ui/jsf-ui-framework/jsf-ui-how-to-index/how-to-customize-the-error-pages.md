@@ -1,5 +1,5 @@
 ---
-title: How to Customize the Error Pages
+title: 'HOWTO: Customize the Error Pages - JSF UI'
 review:
     comment: ''
     date: '2016-12-06'

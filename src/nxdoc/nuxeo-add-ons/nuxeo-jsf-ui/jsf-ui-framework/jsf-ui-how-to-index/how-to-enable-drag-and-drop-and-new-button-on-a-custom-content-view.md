@@ -1,5 +1,5 @@
 ---
-title: How to Enable Drag and Drop and New Button on a Custom Content View
+title: 'HOWTO: Enable Drag and Drop and New Button on a Custom Content View - JSF UI'
 review:
     comment: ''
     date: '2015-12-01'

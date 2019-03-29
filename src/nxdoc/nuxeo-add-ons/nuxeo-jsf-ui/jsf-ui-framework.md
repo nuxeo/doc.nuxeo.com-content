@@ -84,11 +84,13 @@ history:
         date: '2013-09-05 15:39'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
 This chapter presents the different ways to customize what is displayed on the JSF UI application.
 {{! /excerpt}}
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">

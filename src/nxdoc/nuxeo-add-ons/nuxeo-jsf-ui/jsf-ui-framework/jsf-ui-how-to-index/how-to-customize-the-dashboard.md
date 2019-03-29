@@ -1,5 +1,5 @@
 ---
-title: How to Customize the Dashboard
+title: 'HOWTO: Customize the Dashboard - JSF UI'
 description: Learn how to customize the dashboard by adding new entries or completely override the default dashboard.
 review:
     comment: ''

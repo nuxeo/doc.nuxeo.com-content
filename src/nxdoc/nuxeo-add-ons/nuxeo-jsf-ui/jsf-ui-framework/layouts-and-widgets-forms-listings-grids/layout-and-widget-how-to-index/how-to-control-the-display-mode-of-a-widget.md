@@ -1,5 +1,5 @@
 ---
-title: How to Control the Display Mode of a Widget
+title: 'HOWTO: Control the Display Mode of a Widget - JSF UI'
 review:
     comment: ''
     date: '2015-12-01'

@@ -1,5 +1,5 @@
 ---
-title: How to Make the New Button Appear on a Custom Folderish Document
+title: 'HOWTO: Make the New Button Appear on a Custom Folderish Document - JSF UI'
 review:
     comment: ''
     date: '2015-12-01'

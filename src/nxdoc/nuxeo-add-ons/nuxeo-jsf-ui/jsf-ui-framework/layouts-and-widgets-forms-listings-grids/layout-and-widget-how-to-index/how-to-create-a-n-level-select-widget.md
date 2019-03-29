@@ -1,5 +1,5 @@
 ---
-title: How to Create a N-Level Select Widget
+title: 'HOWTO: Create a N-Level Select Widget - JSF UI'
 review:
     comment: ''
     date: '2017-12-01'

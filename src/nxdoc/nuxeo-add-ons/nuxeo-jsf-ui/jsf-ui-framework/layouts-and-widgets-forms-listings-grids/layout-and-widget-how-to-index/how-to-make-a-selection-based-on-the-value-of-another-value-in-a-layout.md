@@ -1,5 +1,5 @@
 ---
-title: How to Make a Selection Based on the Value of Another Value in a Layout
+title: 'HOWTO: Make a Selection Based on the Value of Another Value in a Layout - JSF UI'
 review:
     comment: ''
     date: '2015-12-01'

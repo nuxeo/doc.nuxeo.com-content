@@ -1,5 +1,5 @@
 ---
-title: How to Customize the Versioning and Comment Widget on Document Edit Form
+title: 'HOWTO: Customize the Versioning and Comment Widget on Document Edit Form - JSF UI'
 review:
     comment: ''
     date: '2015-12-01'

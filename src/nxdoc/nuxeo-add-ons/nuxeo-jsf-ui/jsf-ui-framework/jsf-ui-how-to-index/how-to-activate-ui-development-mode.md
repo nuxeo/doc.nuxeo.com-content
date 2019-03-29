@@ -1,5 +1,5 @@
 ---
-title: How to Activate UI Development Mode
+title: 'HOWTO: Activate UI Development Mode - JSF UI'
 review:
     comment: ''
     date: '2015-12-01'

@@ -1,5 +1,5 @@
 ---
-title: How to Add Field Validation
+title: 'HOWTO: Add Field Validation - JSF UI'
 review:
     comment: ''
     date: '2015-12-01'

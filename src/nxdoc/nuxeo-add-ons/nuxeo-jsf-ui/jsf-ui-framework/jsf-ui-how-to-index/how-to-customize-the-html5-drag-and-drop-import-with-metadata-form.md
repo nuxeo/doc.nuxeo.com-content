@@ -1,5 +1,5 @@
 ---
-title: How to Customize the HTML5 Drag and Drop Import with Metadata Form
+title: 'HOWTO: Customize the HTML5 Drag and Drop Import with Metadata Form - JSF UI'
 review:
     comment: ''
     date: '2016-12-19'

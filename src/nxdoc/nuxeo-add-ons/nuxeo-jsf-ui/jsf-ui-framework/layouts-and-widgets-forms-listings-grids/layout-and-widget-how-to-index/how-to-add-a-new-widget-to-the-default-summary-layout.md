@@ -1,5 +1,5 @@
 ---
-title: How to Add a New Widget to the Default Summary Layout
+title: 'HOWTO: Add a New Widget to the Default Summary Layout - JSF UI'
 review:
     comment: ''
     date: '2015-12-01'

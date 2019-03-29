@@ -1,5 +1,5 @@
 ---
-title: How to Define a New Content View
+title: 'HOWTO: Define a New Content View - JSF UI'
 review:
     comment: ''
     date: '2016-12-19'

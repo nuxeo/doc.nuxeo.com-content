@@ -1,5 +1,6 @@
 ---
-title: How to Customize Startup Redirection
+title: 'HOWTO: Customize Startup Redirection - JSF UI'
+description: Learn how to customize startup redirection so users are displayed the default Nuxeo dashboard on JSF UI.
 review:
     comment: ''
     date: '2015-12-01'
@@ -76,8 +77,8 @@ history:
         date: '2014-11-05 15:21'
         message: ''
         version: '1'
-
 ---
+
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 After connection, the startup page is defined by the method `StartupHelper.initDomainAndFindStartupPage`. If you want to customize the startup redirection, you have to override the method&nbsp;`initDomainAndFindStartupPage` in a custom class.
 
