@@ -1,5 +1,5 @@
 ---
-title: How to Customize the Login Page
+title: 'HOWTO: Customize the Login Page - JSF UI'
 review:
     comment: ''
     date: '2017-12-11'

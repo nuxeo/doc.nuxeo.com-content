@@ -1,5 +1,5 @@
 ---
-title: How to Override the Login Page
+title: 'HOWTO: Override the Login Page - JSF UI'
 review:
     comment: ''
     date: '2017-12-11'
@@ -144,7 +144,6 @@ We want our bundle to be loaded after this module because our custom login page 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to Brand Your Application]({{page page='how-to-brand-your-application'}})
 - [How to Customize the Error Pages]({{page page='how-to-customize-the-error-pages'}})
 - [How-To Index]({{page page='how-to-index'}})
 

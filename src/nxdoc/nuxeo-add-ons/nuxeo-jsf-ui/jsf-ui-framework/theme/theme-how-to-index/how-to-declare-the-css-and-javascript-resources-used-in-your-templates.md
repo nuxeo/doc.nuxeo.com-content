@@ -1,12 +1,12 @@
 ---
-title: How to Declare the CSS and JavaScript Resources Used in Your Templates
+title: 'HOWTO: Declare the CSS and JavaScript Resources Used in Your Templates - JSF UI'
 review:
     comment: ''
     date: '2018-01-15'
     status: ok
 details:
     howto:
-        excerpt: Learn how to declare and add the CSS and JavaScript ressources in your templates.
+        excerpt: Learn how to declare and add the CSS and JavaScript resources in your templates.
         level: Advanced
         tool: Code editor
         topics: Theme
@@ -115,16 +115,16 @@ history:
         date: '2011-01-07 21:29'
         message: ''
         version: '1'
-
 ---
+
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
 The CSS and JavaScript resources needed by your JSF pages can be added directly from inside your templates, or using runtime extension points.
-{{! /excerpt}} {{#> callout type='note' }}
+{{! /excerpt}}
 
+{{#> callout type='note' }}
 This page talks about using JavaScript inside the Nuxeo web application (the back office). If you want to build a JavaScript application (with jQuery, Node, AngularJS, ...) you should follow our [Nuxeo JavaScript Client]({{page page='javascript-client'}}) page.
-
 {{/callout}}
 
 ## Defining New Resources

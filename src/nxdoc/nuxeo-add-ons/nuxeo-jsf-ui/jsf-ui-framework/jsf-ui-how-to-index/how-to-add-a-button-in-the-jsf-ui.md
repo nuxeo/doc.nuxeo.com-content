@@ -1,5 +1,5 @@
 ---
-title: How to Add a Button in the JSF UI
+title: 'HOWTO: Add a Button - JSF UI'
 review:
     comment: ''
     date: '2015-12-0'

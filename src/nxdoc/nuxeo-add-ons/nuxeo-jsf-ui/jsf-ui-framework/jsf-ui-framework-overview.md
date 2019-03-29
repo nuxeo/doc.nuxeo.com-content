@@ -13,8 +13,8 @@ labels:
     - seam-jsf-component
     - atchertchian
     - jsf-ui
-
 ---
+
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 The Nuxeo Platform provides a web framework to build business applications for thin clients. This framework is based on the standard JEE view technology: Java Server Faces (JSF).

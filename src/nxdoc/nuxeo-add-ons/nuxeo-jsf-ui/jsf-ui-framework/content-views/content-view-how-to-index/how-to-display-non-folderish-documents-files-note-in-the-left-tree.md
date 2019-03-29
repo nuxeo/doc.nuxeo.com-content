@@ -1,5 +1,5 @@
 ---
-title: 'How to Display Non-Folderish Documents (Files, Note, ...) in the Left Tree'
+title: 'HOWTO: Display Non-Folderish Documents (Files, Note, ...) in the Left Tree - JSF UI'
 review:
     comment: ''
     date: '2015-12-01'

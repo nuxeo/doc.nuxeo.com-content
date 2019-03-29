@@ -1,5 +1,5 @@
 ---
-title: How to Customize the Bulk Edit Form
+title: 'HOWTO: Customize the Bulk Edit Form - JSF UI'
 review:
     comment: ''
     date: '2016-12-19'

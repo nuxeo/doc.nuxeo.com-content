@@ -7,6 +7,7 @@ review:
 labels:
     - lts2016-ok
     - content-review-lts2017
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '950313'
     ajs-parent-page-title: Nuxeo JSF UI
@@ -18,7 +19,7 @@ confluence:
     shortlink: OgCW
     shortlink_source: 'https://doc.nuxeo.com/x/OgCW'
     source_link: /display/NXDOC/JSF+and+Ajax+Tips+and+How-To+Index
-tree_item_index: 500
+tree_item_index: 1400
 history:
     -
         author: Manon Lumeau

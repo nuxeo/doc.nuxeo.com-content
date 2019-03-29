@@ -1,5 +1,5 @@
 ---
-title: How to Use a Generic Widget in Layouts
+title: 'HOWTO: Use a Generic Widget in Layouts - JSF UI'
 review:
     comment: ''
     date: '2015-12-01'

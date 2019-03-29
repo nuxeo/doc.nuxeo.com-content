@@ -1,5 +1,5 @@
 ---
-title: How to Upload Labels Translations in Nuxeo Studio (i18n)
+title: 'HOWTO: Upload Labels Translations in Nuxeo Studio (i18n)'
 review:
     comment: ''
     date: '2017-12-14'
@@ -124,8 +124,8 @@ history:
         date: '2010-09-06 16:13'
         message: ''
         version: '1'
-
 ---
+
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{#> callout type='info'}}

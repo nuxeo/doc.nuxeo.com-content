@@ -1,5 +1,5 @@
 ---
-title: How to Debug Slow Page Rendering
+title: 'HOWTO: Debug Slow Page Rendering - JSF UI'
 review:
     comment: ''
     date: '2015-12-01'

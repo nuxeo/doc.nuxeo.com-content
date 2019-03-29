@@ -1,5 +1,5 @@
 ---
-title: How to Register a JSF Tag Library
+title: 'HOWTO: Register a JSF Tag Library'
 review:
     comment: ''
     date: '2015-12-01'

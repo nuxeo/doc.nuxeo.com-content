@@ -1,5 +1,5 @@
 ---
-title: How to Customize the Default Content and Trash Listings
+title: 'HOWTO: Customize the Default Content and Trash Listings - JSF UI'
 review:
     comment: ''
     date: '2016-12-19'

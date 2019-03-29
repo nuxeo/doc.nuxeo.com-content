@@ -9,6 +9,7 @@ labels:
     - index
     - mlumeau
     - lts2017-ok
+    - jsf-ui
 confluence:
     ajs-parent-page-id: '950313'
     ajs-parent-page-title: Nuxeo JSF UI
@@ -20,7 +21,7 @@ confluence:
     shortlink: vBM5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/vBM5AQ'
     source_link: /display/NXDOC/JSF+UI+How-To+Index
-tree_item_index: 300
+tree_item_index: 1500
 version_override:
     '6.0': 60/nxdoc/web-ui-how-to-index
 history:

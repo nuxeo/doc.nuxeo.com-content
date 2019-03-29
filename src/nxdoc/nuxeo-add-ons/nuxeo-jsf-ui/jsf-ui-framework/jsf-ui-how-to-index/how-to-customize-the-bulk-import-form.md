@@ -1,5 +1,5 @@
 ---
-title: How to Customize the Bulk Import Form
+title: 'HOWTO: Customize the Bulk Import Form - JSF UI'
 review:
     comment: ''
     date: '2016-12-19'

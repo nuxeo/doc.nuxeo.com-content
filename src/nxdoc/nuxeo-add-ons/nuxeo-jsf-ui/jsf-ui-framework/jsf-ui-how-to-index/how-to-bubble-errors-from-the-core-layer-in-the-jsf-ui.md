@@ -1,5 +1,5 @@
 ---
-title: How to Bubble Errors from the Core Layer in the JSF UI
+title: 'HOWTO: Bubble Errors from the Core Layer - JSF UI'
 review:
   comment: ''
   date: '2015-12-01'

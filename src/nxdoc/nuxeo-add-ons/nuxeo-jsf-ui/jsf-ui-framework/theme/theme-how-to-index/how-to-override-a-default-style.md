@@ -1,5 +1,5 @@
 ---
-title: How to Override a Default Style
+title: 'HOWTO: Override a Default Style - JSF UI'
 review:
     comment: ''
     date: '2016-12-06'
