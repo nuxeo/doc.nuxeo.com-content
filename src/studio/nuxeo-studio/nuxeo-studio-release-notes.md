@@ -13,6 +13,14 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Upcoming Changes
 
+### More Consistent Layouts
+When creating a create / edit / import layout, the title field is automatically set as required to keep consistency with the default web ui behavior.
+
+### New Options in Page Provider Screen
+- `file:content` sub fields are exposed when defining an aggregate: to configure searches on file size or file mime type for instance.
+
+ - `ecm:ancestorId` is exposed in both predicates and aggregates: can be used as an alternative to `ecm:path` when you know the document id instead.
+
 ### Polymer 3 Migration
 
 Compatibility for Nuxeo Studio with Polymer 3 to keep our technical stack up to date.
@@ -22,9 +30,8 @@ Compatibility for Nuxeo Studio with Polymer 3 to keep our technical stack up to 
 - Ability to use complex multivalued fields in page provider predicates ([NXS-5191](https://jira.nuxeo.com/browse/NXS-5191))
 - Workflow resolution actions not displayed when there are several of them ([NXS-5201](https://jira.nuxeo.com/browse/NXS-5201))
 - Branches should not be able to be merged when you have work in progress ([NXS-5215](https://jira.nuxeo.com/browse/NXS-5215))
-- Action configuration screen in Designer only shows the "input" field once ([NXS-5216](https://jira.nuxeo.com/browse/NXS-5216))
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.9.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.10.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
@@ -36,6 +43,7 @@ Compatibility for Nuxeo Studio with Polymer 3 to keep our technical stack up to 
 
 | Release&nbsp;Date                                           | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [March 2019]({{page page='studio-updates-2019-03'}})      | Easier search configuration, override Web UI default configuration, select your default theme in a click |          
 | [February 2019]({{page page='studio-updates-2019-02'}})      | Introducing the Layout Blocks and Git Status bar as well as an easier folderish documents configuration.                                                                                                                                                                               |
 | [January 2019]({{page page='studio-updates-2019-01'}})      | Studio Designer interface improvements.                                                                                                                                                                                |
 | [December 2018]({{page page='2018-12-12-studio-3-2-0'}})    | Faster layouts configuration.                                                                                                                                                                                          |
@@ -47,8 +55,6 @@ Compatibility for Nuxeo Studio with Polymer 3 to keep our technical stack up to 
 | [April 2018]({{page page='2018-04-17-studio-73-11-1'}})     | This release makes it easier to create a document type when using Web UI.                                                                                                                                              |
 | [April 2018]({{page page='2018-04-02-studio-73-9'}})        | You can now configure your project as a real application containing dependencies on any public addon without having to make a dedicated custom bundle. This release also brings improvements to our Maven integration. |
 | [March 2018]({{page page='2018-03-05-studio-73-8'}})        | A REST API to trigger Studio releases, a revamped editor for page providers results and the ability to declare constraints for workflow variables and node variables.                                                  |
-| [February 2018]({{page page='2018-03-05-studio-73-8'}})     | Studio now handles lost sessions gracefully, and provides advanced configuration patterns for JSF UI layouts' widgets.                                                                                                 |
-| [January 2018]({{page page='2018-01-03-studio-73-4'}})      | Studio will now show your work in progress changes, commits to push or pull. It can be used to monitor your work status, and also to review configuration changes made by others.                                      |
 
 ## We Want Your Feedback!
 
