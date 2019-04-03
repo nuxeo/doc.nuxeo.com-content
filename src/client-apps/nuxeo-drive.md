@@ -824,7 +824,7 @@ Metadata Edit allows you to edit the metadata of your document from your desktop
 2. Right-click on the name of the document that you want to edit.
 3. Click on Nuxeo Drive > Edit metadata.
     A view or a browser page is then opened to the document metadata.
-    ![]({{file name='Drive_metadata_view.png' page='nuxeo-drive'}} ?w=350)
+    ![]({{file name='drive-metadata-view.png' page='nuxeo-drive'}} ?w=350)
 4. Click on **Edit** and modify your document,
     ![]({{file name='drive-metadata-edit.png' page='nuxeo-drive'}} ?w=350)
 5. Click on **Save**.
