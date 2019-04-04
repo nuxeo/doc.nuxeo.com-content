@@ -451,6 +451,7 @@ The following CORS configuration allows Web UI to send files to S3, please feel 
 <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
 <CORSRule>
     <AllowedOrigin>*</AllowedOrigin>
+    <AllowedMethod>DELETE</AllowedMethod>
     <AllowedMethod>PUT</AllowedMethod>
     <AllowedMethod>POST</AllowedMethod>
     <MaxAgeSeconds>3000</MaxAgeSeconds>
