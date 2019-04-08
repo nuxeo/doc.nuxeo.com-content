@@ -1,143 +1,118 @@
 ---
 title: Managing Files
 review:
-    comment: ''
-    date: '2016-12-20'
-    status: ok
+  comment: ''
+  date: '2016-12-20'
+  status: ok
 toc: true
 labels:
-    - lts2016-ok
+  - lts2016-ok
 tree_item_index: 500
 history:
-    -
-        author: Solen Guitter
-        date: '2016-10-05 11:53'
-        message: ''
-        version: '25'
-    -
-        author: Solen Guitter
-        date: '2016-09-21 12:39'
-        message: ''
-        version: '24'
-    -
-        author: Solen Guitter
-        date: '2016-09-21 10:09'
-        message: ''
-        version: '23'
-    -
-        author: Solen Guitter
-        date: '2016-09-21 10:05'
-        message: ''
-        version: '22'
-    -
-        author: Solen Guitter
-        date: '2016-09-20 15:27'
-        message: ''
-        version: '21'
-    -
-        author: Solen Guitter
-        date: '2016-09-20 15:09'
-        message: Fix contract to attach files to
-        version: '20'
-    -
-        author: Solen Guitter
-        date: '2016-09-20 13:07'
-        message: remove uploadedFiles.forEach section
-        version: '19'
-    -
-        author: Solen Guitter
-        date: '2016-09-20 07:40'
-        message: ''
-        version: '18'
-    -
-        author: Solen Guitter
-        date: '2016-09-19 15:43'
-        message: ''
-        version: '17'
-    -
-        author: Arnaud Kervern
-        date: '2016-09-07 09:15'
-        message: ''
-        version: '16'
-    -
-        author: Solen Guitter
-        date: '2016-09-02 15:50'
-        message: ''
-        version: '15'
-    -
-        author: Solen Guitter
-        date: '2016-08-17 09:03'
-        message: ''
-        version: '14'
-    -
-        author: Solen Guitter
-        date: '2016-08-17 09:03'
-        message: ''
-        version: '13'
-    -
-        author: Solen Guitter
-        date: '2016-08-12 15:28'
-        message: ''
-        version: '12'
-    -
-        author: Solen Guitter
-        date: '2016-08-12 15:27'
-        message: ''
-        version: '11'
-    -
-        author: Solen Guitter
-        date: '2016-08-12 15:24'
-        message: ''
-        version: '10'
-    -
-        author: Solen Guitter
-        date: '2016-08-12 14:25'
-        message: ''
-        version: '9'
-    -
-        author: Solen Guitter
-        date: '2016-08-12 14:24'
-        message: ''
-        version: '8'
-    -
-        author: Bertrand Chauvin
-        date: '2016-08-10 07:55'
-        message: ''
-        version: '7'
-    -
-        author: Bertrand Chauvin
-        date: '2016-08-02 14:46'
-        message: add attachment
-        version: '6'
-    -
-        author: Bertrand Chauvin
-        date: '2016-08-02 12:51'
-        message: ''
-        version: '5'
-    -
-        author: Bertrand Chauvin
-        date: '2016-08-01 17:15'
-        message: ''
-        version: '4'
-    -
-        author: Bertrand Chauvin
-        date: '2016-08-01 09:59'
-        message: ''
-        version: '3'
-    -
-        author: Bertrand Chauvin
-        date: '2016-07-19 17:11'
-        message: ''
-        version: '2'
-    -
-        author: Bertrand Chauvin
-        date: '2016-07-19 12:41'
-        message: ''
-        version: '1'
-previous_link: 810/nxdoc/handling-permissions
-next_link: 810/nxdoc/retrieving-audit-log
-
+  - author: Solen Guitter
+    date: '2016-10-05 11:53'
+    message: ''
+    version: '25'
+  - author: Solen Guitter
+    date: '2016-09-21 12:39'
+    message: ''
+    version: '24'
+  - author: Solen Guitter
+    date: '2016-09-21 10:09'
+    message: ''
+    version: '23'
+  - author: Solen Guitter
+    date: '2016-09-21 10:05'
+    message: ''
+    version: '22'
+  - author: Solen Guitter
+    date: '2016-09-20 15:27'
+    message: ''
+    version: '21'
+  - author: Solen Guitter
+    date: '2016-09-20 15:09'
+    message: Fix contract to attach files to
+    version: '20'
+  - author: Solen Guitter
+    date: '2016-09-20 13:07'
+    message: remove uploadedFiles.forEach section
+    version: '19'
+  - author: Solen Guitter
+    date: '2016-09-20 07:40'
+    message: ''
+    version: '18'
+  - author: Solen Guitter
+    date: '2016-09-19 15:43'
+    message: ''
+    version: '17'
+  - author: Arnaud Kervern
+    date: '2016-09-07 09:15'
+    message: ''
+    version: '16'
+  - author: Solen Guitter
+    date: '2016-09-02 15:50'
+    message: ''
+    version: '15'
+  - author: Solen Guitter
+    date: '2016-08-17 09:03'
+    message: ''
+    version: '14'
+  - author: Solen Guitter
+    date: '2016-08-17 09:03'
+    message: ''
+    version: '13'
+  - author: Solen Guitter
+    date: '2016-08-12 15:28'
+    message: ''
+    version: '12'
+  - author: Solen Guitter
+    date: '2016-08-12 15:27'
+    message: ''
+    version: '11'
+  - author: Solen Guitter
+    date: '2016-08-12 15:24'
+    message: ''
+    version: '10'
+  - author: Solen Guitter
+    date: '2016-08-12 14:25'
+    message: ''
+    version: '9'
+  - author: Solen Guitter
+    date: '2016-08-12 14:24'
+    message: ''
+    version: '8'
+  - author: Bertrand Chauvin
+    date: '2016-08-10 07:55'
+    message: ''
+    version: '7'
+  - author: Bertrand Chauvin
+    date: '2016-08-02 14:46'
+    message: add attachment
+    version: '6'
+  - author: Bertrand Chauvin
+    date: '2016-08-02 12:51'
+    message: ''
+    version: '5'
+  - author: Bertrand Chauvin
+    date: '2016-08-01 17:15'
+    message: ''
+    version: '4'
+  - author: Bertrand Chauvin
+    date: '2016-08-01 09:59'
+    message: ''
+    version: '3'
+  - author: Bertrand Chauvin
+    date: '2016-07-19 17:11'
+    message: ''
+    version: '2'
+  - author: Bertrand Chauvin
+    date: '2016-07-19 12:41'
+    message: ''
+    version: '1'
+previous_link: nxdoc/handling-permissions
+next_link: nxdoc/retrieving-audit-log
 ---
+
 {{! excerpt}}
 
 Learn how to upload files on your Nuxeo server and attach them to a document.
@@ -152,8 +127,8 @@ Upload a file to your Nuxeo Platform instance, create a contract and attach the 
 
 **Prerequisites**
 
-*   {{{multiexcerpt 'prerequisite_addon' page='Handling Permissions'}}}
-*   {{{multiexcerpt 'prerequisite_users' page='Handling Permissions'}}}
+- {{{multiexcerpt 'prerequisite_addon' page='Handling Permissions'}}}
+- {{{multiexcerpt 'prerequisite_users' page='Handling Permissions'}}}
 
 **Procedure**
 
@@ -192,14 +167,15 @@ Upload a file to your Nuxeo Platform instance, create a contract and attach the 
 
       // We create a blob from the filePath passed as variable
       let blob = new Nuxeo.Blob({
-        'content': fs.createReadStream(filePath),
-        'name': path.basename(filePath),
-        'size': stats.size
+        content: fs.createReadStream(filePath),
+        name: path.basename(filePath),
+        size: stats.size
       });
       let fileName = path.basename(filePath);
 
       // Then upload the file
-      nuxeo.batchUpload()
+      nuxeo
+        .batchUpload()
         .upload(blob)
         .then(uploadedFile => {
           console.log('File is uploaded, we will now create a document to attach it.');
@@ -208,9 +184,9 @@ Upload a file to your Nuxeo Platform instance, create a contract and attach the 
           // We could also attach the file to an existing contract
           let contractToCreate = {
             'entity-type': 'document',
-            'type': 'BCContract',
-            'name': 'awesome-contract',
-            'properties': {
+            type: 'BCContract',
+            name: 'awesome-contract',
+            properties: {
               'dc:title': fileName,
               'file:content': uploadedFile.blob
             }
@@ -221,11 +197,15 @@ Upload a file to your Nuxeo Platform instance, create a contract and attach the 
         .then(contract => {
           console.log('Contract has been created as follows:');
           console.log(contract);
-          console.log(`Blob can be downloaded here: ${contract.get('file:content').data}.\nNote that a file security policy restricts downloads to Administrators and members of the managers group.\nYou can log in as sconnor / sconnor to download it.`);
+          console.log(
+            `Blob can be downloaded here: ${
+              contract.get('file:content').data
+            }.\nNote that a file security policy restricts downloads to Administrators and members of the managers group.\nYou can log in as sconnor / sconnor to download it.`
+          );
         })
         .catch(error => {
-           console.log(error);
-         });
+          console.log(error);
+        });
     });
     ```
 
@@ -239,8 +219,8 @@ Upload a file to your Nuxeo Platform instance, create a contract and attach the 
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [File Download Security Policies]({{page page='file-download-security-policies'}})
-*   [HOWTO: Upload a File in Nuxeo Using REST API]({{page page='howto-upload-file-nuxeo-using-rest-api'}})
+- [File Download Security Policies]({{page page='file-download-security-policies'}})
+- [HOWTO: Upload a File in Nuxeo Using REST API]({{page page='howto-upload-file-nuxeo-using-rest-api'}})
 
 {{/callout}}
 
@@ -254,7 +234,7 @@ The contract for Skynet AI maintenance you just created should contain other fil
 
 **Prerequisites**
 
-*   Section "Create a Document from an Existing File" above.
+- Section "Create a Document from an Existing File" above.
 
 **Procedure**
 
@@ -272,8 +252,7 @@ The contract for Skynet AI maintenance you just created should contain other fil
         username: 'sconnor',
         password: 'sconnor'
       }
-    }); 
-
+    });
     // Further calls will return all document properties
     nuxeo.schemas('*');
 
@@ -294,86 +273,89 @@ The contract for Skynet AI maintenance you just created should contain other fil
     // Look for attachments and upload them in an upload batch
     // The upload batch's content can be attached to a document afterward
     fs.readdir(filesPath, (err, files) => {
-        if (err) {
-            console.log(`Attachments folder cannot be found.\nPlease check the filesPath variable (currently set to ${filesPath}).`);
+      if (err) {
+        console.log(
+          `Attachments folder cannot be found.\nPlease check the filesPath variable (currently set to ${filesPath}).`
+        );
+        return;
+      }
+
+      // Create an empty batch into which we will upload files
+      let attachmentsBatch = nuxeo.batchUpload();
+      files.forEach(file => {
+        try {
+          // Be sure to use statSync
+          // By using a synchronous method we won't have to deal with the callback
+          // and will prevent attaching the batch's content to the document too soon
+          let stats = fs.statSync(`${filesPath}/${file}`);
+          if (!stats.isFile()) {
+            console.log(`${file} is not a file. Aborting.`);
+            attachmentsBatch.cancel();
             return;
-        }
+          }
 
-        // Create an empty batch into which we will upload files
-        let attachmentsBatch = nuxeo.batchUpload();
-        files.forEach(file => {
-                try {
-                    // Be sure to use statSync
-                    // By using a synchronous method we won't have to deal with the callback
-                    // and will prevent attaching the batch's content to the document too soon
-                    let stats = fs.statSync(`${filesPath}/${file}`);
-                    if (!stats.isFile()) {
-                        console.log(`${file} is not a file. Aborting.`);
-                        attachmentsBatch.cancel();
-                        return;
-                    }
+          // We create a blob that can be uploaded from the file
+          let nxBlob = new Nuxeo.Blob({
+            content: fs.createReadStream(`${filesPath}/${file}`),
+            name: path.basename(`${filesPath}/${file}`),
+            size: stats.size
+          });
 
-                    // We create a blob that can be uploaded from the file
-                    let nxBlob = new Nuxeo.Blob({
-                        'content': fs.createReadStream(`${filesPath}/${file}`),
-                        'name': path.basename(`${filesPath}/${file}`),
-                        'size': stats.size
-                    });
-
-                    // And upload it into the batch
-                    attachmentsBatch.upload(nxBlob)
-                        .then(uploadedFile => {
-                            console.log(`File ${file} has been uploaded.`);
-                        })
-                        .catch(error => {
-                            console.log(`File ${file} could not be uploaded. Aborting.`);
-                            console.log(error);
-                            attachmentsBatch.cancel();
-                            return;
-                        });
-
-                } catch(error) {
-                    console.log('Apologies, an error occurred while looking for attachments to upload. Aborting.');
-                    console.log(error);
-                    attachmentsBatch.cancel();
-                    return;
-                }
-            });
-
-        // Phase 2
-        // We attach the batch's content into a document once upload is finished
-        attachmentsBatch.done()
-            .then(uploadedFiles => {
-                // Parsing the batch files
-                // so that they can be added to the files:files property
-    			for (var uploadedFilesIndex = 0; uploadedFilesIndex < uploadedFiles.blobs.length; uploadedFilesIndex++) {
-                    var currentFile = uploadedFiles.blobs[uploadedFilesIndex];
-                    propertiesToUpdate['files:files'].push({
-                        'file': {
-                            'upload-batch': currentFile['upload-batch'],
-                            'upload-fileId': currentFile['fileIdx']
-                        }
-                    });
-                }
-                // Retrieving the contract to update it
-                return nuxeo.repository().fetch(contractToUpdatePath);
-            })
-            .then(contract => {
-                // Contract has been retrieved
-                // Let's update it with its new properties
-                contract.set(propertiesToUpdate);
-                return contract.save();
-            })
-            .then(contract => {
-                console.log('Contract has been updated. It contains the following attachments:');
-                console.log(contract.properties['files:files']);
+          // And upload it into the batch
+          attachmentsBatch
+            .upload(nxBlob)
+            .then(uploadedFile => {
+              console.log(`File ${file} has been uploaded.`);
             })
             .catch(error => {
-                console.log('Apologies, an error occurred while updating the contract. Aborting.');
-                attachmentsBatch.cancel();
-                console.log(error);
-                return;
+              console.log(`File ${file} could not be uploaded. Aborting.`);
+              console.log(error);
+              attachmentsBatch.cancel();
+              return;
             });
+        } catch (error) {
+          console.log('Apologies, an error occurred while looking for attachments to upload. Aborting.');
+          console.log(error);
+          attachmentsBatch.cancel();
+          return;
+        }
+      });
+
+      // Phase 2
+      // We attach the batch's content into a document once upload is finished
+      attachmentsBatch
+        .done()
+        .then(uploadedFiles => {
+          // Parsing the batch files
+          // so that they can be added to the files:files property
+          for (var uploadedFilesIndex = 0; uploadedFilesIndex < uploadedFiles.blobs.length; uploadedFilesIndex++) {
+            var currentFile = uploadedFiles.blobs[uploadedFilesIndex];
+            propertiesToUpdate['files:files'].push({
+              file: {
+                'upload-batch': currentFile['upload-batch'],
+                'upload-fileId': currentFile['fileIdx']
+              }
+            });
+          }
+          // Retrieving the contract to update it
+          return nuxeo.repository().fetch(contractToUpdatePath);
+        })
+        .then(contract => {
+          // Contract has been retrieved
+          // Let's update it with its new properties
+          contract.set(propertiesToUpdate);
+          return contract.save();
+        })
+        .then(contract => {
+          console.log('Contract has been updated. It contains the following attachments:');
+          console.log(contract.properties['files:files']);
+        })
+        .catch(error => {
+          console.log('Apologies, an error occurred while updating the contract. Aborting.');
+          attachmentsBatch.cancel();
+          console.log(error);
+          return;
+        });
     });
     ```
 
