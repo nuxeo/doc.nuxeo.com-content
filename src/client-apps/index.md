@@ -22,7 +22,7 @@ confluence:
     shortlink: 64fZAQ
     shortlink_source: 'https://doc.nuxeo.com/x/64fZAQ'
     source_link: /display/NXDOC/Desktop+and+Mobile
-section_parent: app
+section_parent: desktop-mob
 tree_item_index: 400
 history:
     -
