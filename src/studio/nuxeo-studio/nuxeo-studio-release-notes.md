@@ -14,10 +14,10 @@ Discover upcoming and recent changes in Nuxeo Studio.
 ## Upcoming Changes
 
 ### More Consistent Layouts
-When creating a create / edit / import layout, the title field is automatically set as required to keep consistency with the default web ui behavior.
+When creating a **Create**, **Edit** or **Import** layout, the title field is automatically set as required to keep consistency with the default Web UI behavior.
 
 ### New Options in Page Provider Screen
-- `file:content` sub fields are exposed when defining an aggregate: to configure searches on file size or file mime type for instance.
+- `file:content` sub-fields are exposed when defining an aggregate: to configure searches on file size or file MIME type for instance.
 
 - `ecm:ancestorId` is exposed in both predicates and aggregates: can be used as an alternative to `ecm:path` when you know the document id instead.
 
