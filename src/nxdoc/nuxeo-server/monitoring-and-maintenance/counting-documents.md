@@ -47,7 +47,7 @@ history:
 ---
 If you want to know how many documents you have in your repository, you can go to the **Admin** tab, and check the **Repository Analytics** subtab in the **Activity** tab.
 
-You can filter the statisticts on a specific time period.
+You can filter the statistics on a specific time period.
 
 ![]({{file name='admin_repository_analytics_tab.png'}} ?w=600,h=321,border=true)
 

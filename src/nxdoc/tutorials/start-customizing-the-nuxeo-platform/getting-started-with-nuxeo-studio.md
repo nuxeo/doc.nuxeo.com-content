@@ -14,6 +14,11 @@ labels:
     - howto
     - studio
     - lts2016-ok
+version_override:
+    'FT': '/nxdoc/configure-nuxeo-platform'
+    'LTS 2019': '1010/nxdoc/'
+    'LTS 2017': '910/nxdoc/configure-nuxeo-platform'
+    'LTS 2015': '710/nxdoc/getting-started-with-nuxeo-studio'
 toc: true
 tree_item_index: 100
 history:

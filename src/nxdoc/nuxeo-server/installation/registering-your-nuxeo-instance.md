@@ -171,6 +171,10 @@ Registering your Nuxeo application with [Nuxeo Online Services]({{page space='st
 
 The registration process only copies a file on your file system. This enables the Nuxeo Online Services portal to identify the instance among all the registered instances. You can register multiple instances.
 
+{{#> callout type='note' no_icon=true}}
+The instance registration is only valid for your current subscription contract dates, and needs to be renewed on a regular basis. Please refer to the [registration renewal](#renewal) section for further information.
+{{/callout}}
+
 ## How to Register
 
 To be able to register, you need to have a [Nuxeo Online Services account](#connect-account-creation).
@@ -254,7 +258,7 @@ Offline registration can be used when the server does not connect to the Interne
         The registration is approved and the registration summary is displayed. The Nuxeo Online Services registration message is not displayed anymore after you browse the application, although registration cannot be validated on the Nuxeo Online Services server.
         ![]({{file name='AdminCenter-offline-registration-done.png'}} ?w=600,border=true)
 
-## Renewing Registration for Your Nuxeo Instance
+## Renewing Registration for Your Nuxeo Instance {{> anchor 'renewal'}}
 
 Renewing your Nuxeo instance registration can be done anytime while you have an active Nuxeo Online Services subscription using the nuxeoctl script:
 

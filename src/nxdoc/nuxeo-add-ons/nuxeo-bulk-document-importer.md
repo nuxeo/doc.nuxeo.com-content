@@ -335,6 +335,7 @@ With the following contribution you can configure the importer to work in non-bu
     point="importerConfiguration">
   <importerConfig>
     <bulkMode>false</bulkMode>
+    <documentModelFactory/>
   </importerConfig>
 </extension>
 ```

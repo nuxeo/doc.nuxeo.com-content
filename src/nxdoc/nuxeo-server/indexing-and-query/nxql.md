@@ -955,7 +955,7 @@ Where:
     *   [fuzzy](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-fuzzy-query.html)
     *   [match](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-match-query.html)
     *   [match_phrase](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-match-query.html#_phrase)
-    *   [match_phase_prefix](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-match-query.html#_match_phrase_prefix)
+    *   [match_phrase_prefix](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-match-query.html#_match_phrase_prefix)
     *   [multi_match](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-multi-match-query.html)
     *   [query_string](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-query-string-query.html)
     *   [simple_query_string](http://www.elastic.co/guide/en/elasticsearch/reference/1.4/query-dsl-simple-query-string-query.html)

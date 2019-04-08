@@ -8,11 +8,10 @@ labels:
     - lts2016-ok
     - home
 version_override:
-    'FT': nxdoc/develop-with-nuxeo-platform
-    'LTS 2017': 910/nxdoc/develop-with-nuxeo-platform
-    'LTS 2015': 710/nxdoc/quick-start-dev-guide
-    '6.0': 60/nxdoc/quick-start-dev-guide
-    '5.8': 58/nxdoc/quick-start-dev-guide
+    'FT': '/nxdoc/develop-with-nuxeo-platform'
+    'LTS 2019': '1010/nxdoc/develop-with-nuxeo-platform'
+    'LTS 2017': '910/nxdoc/develop-with-nuxeo-platform'
+    'LTS 2015': '710/nxdoc/quick-start-dev-guide'
 tree_item_index: 200
 history:
     -
