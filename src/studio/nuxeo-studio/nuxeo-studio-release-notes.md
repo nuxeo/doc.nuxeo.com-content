@@ -31,7 +31,7 @@ Compatibility for Nuxeo Studio with Polymer 3 to keep our technical stack up to 
 - Workflow resolution actions not displayed when there are several of them ([NXS-5201](https://jira.nuxeo.com/browse/NXS-5201))
 - Branches should not be able to be merged when you have work in progress ([NXS-5215](https://jira.nuxeo.com/browse/NXS-5215))
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.10.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.9.0','3.10.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
