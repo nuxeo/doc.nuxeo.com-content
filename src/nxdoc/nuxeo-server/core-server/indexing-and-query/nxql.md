@@ -455,7 +455,6 @@ history:
         date: '2010-12-24 17:19'
         message: ''
         version: '1'
-
 ---
 
 {{#> callout type='info' heading='Nuxeo University'}}
@@ -976,7 +975,7 @@ Where:
     *   [fuzzy](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-fuzzy-query.html)
     *   [match](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query.html)
     *   [match_phrase](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query-phrase.html)
-    *   [match_phase_prefix](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query-phrase-prefix.html)
+    *   [match_phrase_prefix](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query-phrase-prefix.html)
     *   [multi_match](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-multi-match-query.html)
     *   [query_string](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-query-string-query.html)
     *   [simple_query_string](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-simple-query-string-query.html)
