@@ -42,9 +42,7 @@ Kafka broker need to be tuned a bit:
   | `log.retention.hours` | `168` | |The default log retention is 7 days. If you change this make sure you update `offset.retention.minutes`.|
 
 {{#> callout type='warning' }}
-
 Make sure that you set properly the `offsets.retention.minutes`.
-
 {{/callout}}
 
 ## Kafka Configuration
@@ -93,46 +91,14 @@ Here are some important properties:
   | `compression.type` | `none` | Valid values are none, gzip, snappy, or lz4. Compression is of full batches of data, so the efficacy of batching will also impact the compression ratio (more batching means better compression). |
   | `default.replication.factor` | `1` | Not a Kafka option, used by the module to set the topic replication factor when creating new topic. |
 
+Most of the above properties can be tuned directly from [nuxeo.conf file]({{page space='nxdoc' page='configuration-parameters-index-nuxeoconf'}}).
 
- Most of the above properties can be tuned directly from [nuxeo.conf file]({{page space='nxdoc' page='configuration-parameters-index-nuxeoconf'}}).
+Please refer to Kafka document about the [consumer and producer options](https://kafka.apache.org/documentation#configuration) for more information.
 
- Please refer to Kafka document about the [consumer and producer options](https://kafka.apache.org/documentation#configuration) for more information.
 
-<!--
-
-## {{> anchor 'no-redis'}}"No Redis" Nuxeo cluster
-
-Redis is used for different things in Nuxeo, among them as a default key value provider.
-For now there is only one alternative for this service and it requires to use MongoDB.
-
-Here is a possible "No Redis" Nuxeo cluster configuration:
-```properties
-
-# We use mongodb, this will switch the keyvalue provider and lock manager to mongodb:
-# nuxeo.keyvalue.provider=mongodb
-# nuxeo.lock.manager=mongodb
-nuxeo.templates=mongodb,default
-
-# Enable Kafka
-kafka.enabled=true
-kafka.bootstrap.servers=my-kafka-broker:9092
-
-# Enable the StreamWorkManager
-nuxeo.stream.work.enabled=true
-
-# Use the Stream PubSub provider
-# this will be used by cache and dbs invalidation
-nuxeo.pubsub.provider=stream
-
-# Just to make it clear
-nuxeo.redis.enabled=false
-```
-
-The Kafka topic used by the PubSub Provider don't need to have a 7 days retentions,
-it is used to send instant message and its retention can be reduced at the Kafka level to 2 hours:
-
+{{#> callout type='info' }}
+When Kafka is used by the PubSub Provider, the topic retention can be reduced to few hours because PubSub is used to send instant messages, this can be done at the Kafka level using the following command:
 ```bash
 $KAFKA_HOME/bin/kafka-configs.sh --zookeeper <zk_host> --alter --entity-type topics --entity-name nuxeo-pubsub --add-config retention.ms=7200000
 ```
-
--->
+{{/callout}}
