@@ -7,8 +7,8 @@ review:
     status: ok
 toc: true
 tree_item_index: 300
-previous_link: 810/nxdoc/rest-api-principles
-next_link: 810/nxdoc/log-into-nuxeo-platform
+previous_link: nxdoc/rest-api-principles
+next_link: nxdoc/log-into-nuxeo-platform
 
 ---
 

@@ -7,8 +7,8 @@ review:
     status: ok
 toc: true
 tree_item_index: 200
-previous_link: 810/nxdoc/learning-rest-api-prerequisites
-next_link: 810/nxdoc/define-a-cors-configuration
+previous_link: nxdoc/learning-rest-api-prerequisites
+next_link: nxdoc/define-a-cors-configuration
 
 ---
 

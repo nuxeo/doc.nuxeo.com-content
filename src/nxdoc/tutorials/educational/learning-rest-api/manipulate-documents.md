@@ -9,8 +9,8 @@ labels:
     - multiexcerpt-include
 toc: true
 tree_item_index: 600
-previous_link: 810/nxdoc/log-into-nuxeo-platform
-next_link: 810/nxdoc/query-and-search
+previous_link: nxdoc/log-into-nuxeo-platform
+next_link: nxdoc/query-and-search
 
 ---
 ## Creating a Document

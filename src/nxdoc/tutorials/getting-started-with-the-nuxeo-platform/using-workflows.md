@@ -134,8 +134,8 @@ history:
         date: '2016-08-04 08:21'
         message: ''
         version: '1'
-previous_link: 810/nxdoc/using-renditions
-next_link: 810/nxdoc/using-automation
+previous_link: nxdoc/using-renditions
+next_link: nxdoc/using-automation
 
 ---
 {{! excerpt}}

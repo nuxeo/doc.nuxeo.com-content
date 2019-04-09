@@ -7,8 +7,8 @@ review:
     status: ok
 toc: true
 tree_item_index: 100
-previous_link: 810/nxdoc/learning-rest-api
-next_link: 810/nxdoc/rest-api-principles
+previous_link: nxdoc/learning-rest-api
+next_link: nxdoc/rest-api-principles
 
 ---
 ## Technical Prerequisites

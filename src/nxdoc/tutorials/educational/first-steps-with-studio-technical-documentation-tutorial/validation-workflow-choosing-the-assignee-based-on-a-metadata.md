@@ -145,7 +145,7 @@ history:
         date: '2013-07-16 10:57'
         message: ''
         version: '1'
-previous_link: 810/nxdoc/document-locking-right-after-its-creation
+previous_link: nxdoc/document-locking-right-after-its-creation
 
 ---
 {{! multiexcerpt name='partOfTechDocTuto'}}This tutorial is one of the steps of a complete project tutorial on technical documentation management. Although recommended, the reading of the previous steps is not mandatory and you should be able to adapt easily the logic to your own document types.{{! /multiexcerpt}}

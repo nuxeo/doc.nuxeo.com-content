@@ -9,8 +9,8 @@ labels:
     - multiexcerpt-include
 toc: true
 tree_item_index: 700
-previous_link: 810/nxdoc/manipulate-documents
-next_link: 810/nxdoc/execute-business-logic-through-automation
+previous_link: nxdoc/manipulate-documents
+next_link: nxdoc/execute-business-logic-through-automation
 
 ---
 

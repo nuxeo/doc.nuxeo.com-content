@@ -9,7 +9,7 @@ labels:
     - multiexcerpt-include
 toc: true
 tree_item_index: 1000
-previous_link: 810/nxdoc/launch-a-workflow
+previous_link: nxdoc/launch-a-workflow
 ---
 
 We've covered the basics of Nuxeo REST API. But there are some functionalities we left aside: [`Users`](https://nuxeo.github.io/nuxeo-js-client/latest/Users.html) / [`Groups`](https://nuxeo.github.io/nuxeo-js-client/latest/Groups.html) management, and [`Directories`](https://nuxeo.github.io/nuxeo-js-client/latest/Directory.html). Feel free to take a look at their corresponding classes.

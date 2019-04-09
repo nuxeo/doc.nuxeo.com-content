@@ -152,7 +152,7 @@ history:
         date: '2014-11-06 12:21'
         message: ''
         version: '1'
-next_link: 810/nxdoc/getting-started-with-nuxeo-cli
+next_link: nxdoc/getting-started-with-nuxeo-cli
 
 ---
 This page explains how to start customizing the Nuxeo Platform using Nuxeo Studio. It will guide you through the steps to:

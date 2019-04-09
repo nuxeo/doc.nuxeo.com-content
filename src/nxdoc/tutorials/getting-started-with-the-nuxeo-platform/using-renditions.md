@@ -134,8 +134,8 @@ history:
         date: '2016-08-02 15:58'
         message: ''
         version: '1'
-previous_link: 810/nxdoc/retrieving-audit-log
-next_link: 810/nxdoc/using-workflows
+previous_link: nxdoc/retrieving-audit-log
+next_link: nxdoc/using-workflows
 
 ---
 {{! excerpt}}

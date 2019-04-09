@@ -98,7 +98,7 @@ history:
         date: '2016-08-05 13:48'
         message: ''
         version: '1'
-previous_link: 810/nxdoc/using-workflows
+previous_link: nxdoc/using-workflows
 
 ---
 **Goal**

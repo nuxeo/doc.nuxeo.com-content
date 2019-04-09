@@ -131,8 +131,8 @@ history:
         date: '2013-07-10 15:13'
         message: ''
         version: '1'
-previous_link: 810/nxdoc/custom-content-view-for-documentation-items
-next_link: 810/nxdoc/validation-workflow-choosing-the-assignee-based-on-a-metadata
+previous_link: nxdoc/custom-content-view-for-documentation-items
+next_link: nxdoc/validation-workflow-choosing-the-assignee-based-on-a-metadata
 
 ---
 {{! multiexcerpt name='partOfTechDocTuto'}}

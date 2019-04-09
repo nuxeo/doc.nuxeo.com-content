@@ -91,7 +91,7 @@ history:
         date: '2016-05-19 14:49'
         message: ''
         version: '1'
-next_link: 810/nxdoc/learning-rest-api-prerequisites
+next_link: nxdoc/learning-rest-api-prerequisites
 
 ---
 This tutorial teaches you how to use Nuxeo REST API using Nuxeo JavaScript Client. The tutorial is organized as follows:

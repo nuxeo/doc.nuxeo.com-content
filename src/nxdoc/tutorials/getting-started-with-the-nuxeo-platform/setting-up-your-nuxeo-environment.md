@@ -279,7 +279,7 @@ history:
         date: '2016-02-17 16:22'
         message: ''
         version: '1'
-next_link: 810/nxdoc/setting-up-your-javascript-environment
+next_link: nxdoc/setting-up-your-javascript-environment
 
 ---
 {{! excerpt}}

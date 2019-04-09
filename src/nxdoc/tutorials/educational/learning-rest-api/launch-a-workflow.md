@@ -7,8 +7,8 @@ review:
     status: ok
 toc: true
 tree_item_index: 900
-previous_link: 810/nxdoc/execute-business-logic-through-automation
-next_link: 810/nxdoc/bonus-contribute-your-own-enricher
+previous_link: nxdoc/execute-business-logic-through-automation
+next_link: nxdoc/bonus-contribute-your-own-enricher
 
 ---
 

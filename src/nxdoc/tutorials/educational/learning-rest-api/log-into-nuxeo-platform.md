@@ -7,8 +7,8 @@ review:
     status: ok
 toc: true
 tree_item_index: 500
-previous_link: 810/nxdoc/define-a-cors-configuration
-next_link: 810/nxdoc/manipulate-documents
+previous_link: nxdoc/define-a-cors-configuration
+next_link: nxdoc/manipulate-documents
 
 ---
 

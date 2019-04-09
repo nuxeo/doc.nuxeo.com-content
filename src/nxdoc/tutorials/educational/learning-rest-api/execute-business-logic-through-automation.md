@@ -7,8 +7,8 @@ review:
     status: ok
 toc: true
 tree_item_index: 800
-previous_link: 810/nxdoc/query-and-search
-next_link: 810/nxdoc/launch-a-workflow
+previous_link: nxdoc/query-and-search
+next_link: nxdoc/launch-a-workflow
 
 ---
 
