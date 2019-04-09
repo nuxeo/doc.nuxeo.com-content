@@ -916,7 +916,7 @@ Public
 </td>
 </tr>
 <tr>
-<td colspan="1">Nuxeo Zapier Integration (Coming Soon!)<br/>
+<td colspan="1">Nuxeo Zapier Integration<br/>
 `nuxeo-zapier`
 </td>
 <td colspan="1">Registered Access</td>
