@@ -151,11 +151,11 @@ history:
 
 ---
 {{! multiexcerpt name='main_content'}}
-{{! multiexcerpt name='intro_hotfix'}}
-{{! excerpt}}
 
+{{! excerpt}}
 The purpose of this page is to describe the additional actions that need to be done when installing the hotfixes on Nuxeo Platform and that cannot be done automatically. The page provides an exhaustive list of manipulations for the installation of Nuxeo Platform LTS 2015 hotfixes, but you need only to apply those relevant for your own instance.
 
+{{! multiexcerpt name='intro_hotfix'}}
 When you are installing/configuring a new Nuxeo instance, the very first thing to do is to install the hotfixes. Because it will provide fixes on the Nuxeo launcher, on the startup wizard and on the templates, installing them immediately will prevent from encountering known issues.
 
 {{! /excerpt}}
@@ -163,9 +163,7 @@ When you are installing/configuring a new Nuxeo instance, the very first thing t
 ## How to Keep Your Instance up-to-Date
 
 {{#> callout type='tip' }}
-
 Hotfixes always have dependencies on the previous hotfix. So if you need to install several hotfixes, you can download only the latest one: when you install it, it will trigger the installation of the previous hotfixes.
-
 {{/callout}}
 
 ### Installing Hotfixes from the Command Line
