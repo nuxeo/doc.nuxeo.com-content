@@ -161,7 +161,7 @@ history:
         date: '2010-07-27 08:46'
         message: ''
         version: '1'
-previous_link: 60/nxdoc/create-a-task-assignment-alert
+previous_link: nxdoc/create-a-task-assignment-alert
 
 ---
 Now that we have a new permission that can be used in workspaces, we will leverage it for our validation logic: we will create a button that will assign a task to people having the "spellingValidation" permission.

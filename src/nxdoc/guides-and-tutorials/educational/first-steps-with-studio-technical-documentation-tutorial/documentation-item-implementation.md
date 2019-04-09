@@ -276,7 +276,7 @@ history:
         date: '2013-02-22 17:36'
         message: ''
         version: '1'
-next_link: 60/nxdoc/custom-content-view-for-documentation-items
+next_link: nxdoc/custom-content-view-for-documentation-items
 
 ---
 

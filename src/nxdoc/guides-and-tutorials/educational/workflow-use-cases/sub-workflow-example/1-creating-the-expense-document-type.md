@@ -97,7 +97,7 @@ history:
         date: '2013-08-07 18:11'
         message: ''
         version: '1'
-next_link: 60/nxdoc/2-creating-the-subworkflows
+next_link: nxdoc/2-creating-the-subworkflows
 
 ---
 {{#> callout type='info' }}

@@ -136,7 +136,7 @@ history:
         date: '2014-11-06 12:25'
         message: ''
         version: '1'
-previous_link: 60/nxdoc/getting-started-with-nuxeo-studio
+previous_link: nxdoc/getting-started-with-nuxeo-studio
 
 ---
 Here we want to add some server side Java logic that will update the date of renegotiation of the contract. In our exemple it will simply set date of creation + three months, but you can think of integrating in your Java class a connection to an external webservice or an ERP.
