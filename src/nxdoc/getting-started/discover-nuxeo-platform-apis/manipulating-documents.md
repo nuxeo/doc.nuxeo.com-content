@@ -206,8 +206,8 @@ history:
         date: '2016-07-18 15:02'
         message: ''
         version: '1'
-previous_link: /nxdoc/setting-up-your-javascript-environment
-next_link: /nxdoc/handling-permissions
+previous_link: nxdoc/setting-up-your-javascript-environment
+next_link: nxdoc/handling-permissions
 
 ---
 {{! excerpt}}
