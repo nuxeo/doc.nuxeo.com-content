@@ -115,7 +115,7 @@ history:
         date: '2013-07-16 10:57'
         message: ''
         version: '1'
-previous_link: 60/nxdoc/document-locking-right-after-its-creation
+previous_link: nxdoc/document-locking-right-after-its-creation
 
 ---
 

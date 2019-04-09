@@ -82,7 +82,7 @@ history:
         date: '2010-07-28 01:19'
         message: ''
         version: '1'
-next_link: 60/nxdoc/implement-the-validation-logic
+next_link: nxdoc/implement-the-validation-logic
 
 ---
 Here is the use case we want to implement:

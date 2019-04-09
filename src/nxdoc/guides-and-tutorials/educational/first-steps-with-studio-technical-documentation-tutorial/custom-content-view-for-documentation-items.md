@@ -181,8 +181,8 @@ history:
         date: '2013-07-03 18:00'
         message: ''
         version: '1'
-previous_link: 60/nxdoc/documentation-item-implementation
-next_link: 60/nxdoc/document-locking-right-after-its-creation
+previous_link: nxdoc/documentation-item-implementation
+next_link: nxdoc/document-locking-right-after-its-creation
 
 ---
 At the first step of this tutorial, we created a new document type, called `documentationItem`.
