@@ -119,8 +119,8 @@ history:
         date: '2013-08-07 18:45'
         message: ''
         version: '1'
-previous_link: /nxdoc/1-creating-the-expense-document-type
-next_link: /nxdoc/3-creating-the-main-workflow
+previous_link: nxdoc/1-creating-the-expense-document-type
+next_link: nxdoc/3-creating-the-main-workflow
 
 ---
 {{#> callout type='info' }}
