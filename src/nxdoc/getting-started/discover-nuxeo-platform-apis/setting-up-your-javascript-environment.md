@@ -216,8 +216,8 @@ history:
         date: '2016-05-16 13:04'
         message: ''
         version: '1'
-previous_link: /nxdoc/setting-up-your-nuxeo-environment
-next_link: /nxdoc/manipulating-documents
+previous_link: nxdoc/setting-up-your-nuxeo-environment
+next_link: nxdoc/manipulating-documents
 
 ---
 {{! excerpt}}
