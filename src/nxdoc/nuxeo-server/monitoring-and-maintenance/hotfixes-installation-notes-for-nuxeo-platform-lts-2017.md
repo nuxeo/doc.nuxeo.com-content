@@ -14,6 +14,9 @@ version_override:
     LTS 2015: 710/admindoc/hotfixes-installation-notes-for-nuxeo-platform-lts-2015
     '6.0': 60/admindoc/hotfixes-installation-notes-for-nuxeo-platform-60
 ---
+
+The purpose of this page is to describe the additional actions that need to be done when installing the hotfixes on Nuxeo Platform and that cannot be done automatically. The page provides an exhaustive list of manipulations for the installation of Nuxeo Platform LTS 2017 hotfixes, but you need only to apply those relevant for your own instance.
+
 {{{multiexcerpt 'intro_hotfix' page='ADMINDOC710:Hotfixes Installation Notes for Nuxeo Platform LTS 2015'}}}
 
 {{#> callout type='warning' }}
