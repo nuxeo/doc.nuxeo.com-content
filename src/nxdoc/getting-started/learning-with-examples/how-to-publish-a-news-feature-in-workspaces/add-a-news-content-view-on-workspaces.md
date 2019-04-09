@@ -76,8 +76,8 @@ history:
         date: '2011-01-28 16:19'
         message: ''
         version: '1'
-previous_link: /nxdoc/implement-the-news-document
-next_link: /nxdoc/implement-the-news-publishing-process
+previous_link: nxdoc/implement-the-news-document
+next_link: nxdoc/implement-the-news-publishing-process
 
 ---
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}

@@ -126,8 +126,8 @@ history:
         date: '2016-07-19 10:20'
         message: ''
         version: '1'
-previous_link: /nxdoc/manipulating-documents
-next_link: /nxdoc/managing-files
+previous_link: nxdoc/manipulating-documents
+next_link: nxdoc/managing-files
 
 ---
 {{! excerpt}}

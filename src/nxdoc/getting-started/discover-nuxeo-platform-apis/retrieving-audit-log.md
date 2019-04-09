@@ -106,8 +106,8 @@ history:
         date: '2016-07-19 12:24'
         message: ''
         version: '1'
-previous_link: /nxdoc/managing-files
-next_link: /nxdoc/using-renditions
+previous_link: nxdoc/managing-files
+next_link: nxdoc/using-renditions
 
 ---
 **Goal**

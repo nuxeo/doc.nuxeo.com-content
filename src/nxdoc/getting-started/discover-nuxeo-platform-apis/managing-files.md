@@ -146,8 +146,8 @@ history:
         date: '2016-07-19 12:41'
         message: ''
         version: '1'
-previous_link: /nxdoc/handling-permissions
-next_link: /nxdoc/retrieving-audit-log
+previous_link: nxdoc/handling-permissions
+next_link: nxdoc/retrieving-audit-log
 
 ---
 {{! excerpt}}
