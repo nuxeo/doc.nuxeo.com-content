@@ -122,8 +122,8 @@ history:
         date: '2011-01-17 15:37'
         message: ''
         version: '1'
-previous_link: 710/nxdoc/implement-the-validation-logic
-next_link: 710/nxdoc/create-a-button-that-triggers-the-task-assignment
+previous_link: nxdoc/implement-the-validation-logic
+next_link: nxdoc/create-a-button-that-triggers-the-task-assignment
 
 ---
 Here, we want to create the template of the email that will be sent to the users with "Document Validation" permission to notify them that they have a document to review. This template will be used in the operation chain used to assign the validation task to users, using the "Send E-Mail" operation (see next step: [Create a button that triggers the task assignment]({{page space='studio' page='create-a-button-that-triggers-the-task-assignment'}})).

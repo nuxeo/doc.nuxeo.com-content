@@ -75,8 +75,8 @@ history:
         date: '2011-01-28 16:19'
         message: ''
         version: '1'
-previous_link: 710/nxdoc/implement-the-news-document
-next_link: 710/nxdoc/implement-the-news-publishing-process
+previous_link: nxdoc/implement-the-news-document
+next_link: nxdoc/implement-the-news-publishing-process
 
 ---
 In the section, we will:
