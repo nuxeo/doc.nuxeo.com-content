@@ -115,8 +115,8 @@ history:
         date: '2010-07-28 00:13'
         message: ''
         version: '1'
-previous_link: 710/nxdoc/functional-tour
-next_link: 710/nxdoc/create-a-task-assignment-alert
+previous_link: nxdoc/functional-tour
+next_link: nxdoc/create-a-task-assignment-alert
 
 ---
 The validation logic defines what happens when the user approves the document, and what happens when he rejects it. To do that, we will create 2 automation chains:
