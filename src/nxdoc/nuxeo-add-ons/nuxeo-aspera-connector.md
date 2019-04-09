@@ -9,7 +9,8 @@ labels:
     - lts2019-ok
     - vpasquier
 toc: true
-tree_item_index: 1100s
+hidden: true
+tree_item_index: 1100
 ---
 
 {{! excerpt}}
@@ -18,7 +19,7 @@ The [Nuxeo Aspera Connector addon](https://connect.nuxeo.com/nuxeo/site/marketpl
 
 ## Requirements
 
-Aspera Desktop Client - latest version [3.8](http://d3gcli72yxqn2z.cloudfront.net/connect/v4/bin/IBMAsperaConnectInstaller-3.8.1.161274.dmg).
+Aspera Desktop Client - [latest version](https://downloads.asperasoft.com/en/downloads/2).
 
 ## Installation
 
@@ -270,16 +271,13 @@ exports.handler = async (event, context) => {
 
 ## Nuxeo UI Implementation
 
-When running Nuxeo with the addon installed, you can go to `NUXEO_URL/nuxeo/app/` to get a simple example of UI for using the Aspera connector:
+When running Nuxeo with the addon installed, you can go to `NUXEO_URL/nuxeo/app/` to get a simple UI example on how to use the Aspera connector:
 
 - To upload a file in a given location via the connector
 - To upload and add a file to a given document via the connector
 - To list all documents with binaries and download them via the connector
 
-<!--
-Here is [the complete example of implementation](https://github.com/nuxeo/nuxeo-aspera-connector/tree/master/aspera-connector-web/src).
-
+Here is [the complete example of implementation](https://github.com/nuxeo-sandbox/nuxeo-aspera-web-sample/src).
 - `my-app` is the main page containing all `pages` folder pages.
 - In each page, `aspera-connector` is called to set Aspera authentication in place.
 - `aspera-connector.html` is wrapping the Aspera API to be used for upload/download via the connector.
--->
