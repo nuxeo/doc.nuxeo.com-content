@@ -64,7 +64,7 @@ The rendition used when publishing the default rendition is defined by [renditio
 
   <extension target="org.nuxeo.ecm.platform.rendition.service.RenditionService"
     point="defaultRendition">
-    <defaultRendition reason="download">
+    <defaultRendition reason="publish">
       <script language="JavaScript">
         function run() {
           if (CurrentUser.getName() != "bob") {
