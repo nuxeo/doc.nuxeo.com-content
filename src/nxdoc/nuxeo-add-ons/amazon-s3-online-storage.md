@@ -441,4 +441,4 @@ nuxeo.s3storage.transient.region=
 
 The `awsid`, `awssecret`, `awstoken` and `region` are deprecated and should instead be configured through `nuxeo.aws.accessKeyId`, `nuxeo.aws.secretKey`,`nuxeo.aws.sessionToken` and `nuxeo.aws.region` or through implicit IAM instance roles (see above).
 
-S3 direct upload is implemented by a [BatchHandler]({{page space='nxdoc' page='batch-handler'}}) and a [TransientStore]({{page space='nxdoc' page='transient-store'}}) using contributions that can be found in the s3binaries template file [s3directupload-config.xml.nxftl](https://github.com/nuxeo/marketplace-amazon-s3/tree/master/ear/src/main/resources/s3binaries/nxserver/config/s3directupload-config.xml.nxftl)
+S3 direct upload is implemented by a [BatchHandler]({{page space='nxdoc' page='batch-handler'}}) and a [TransientStore]({{page space='nxdoc' page='transient-store'}}) using contributions that can be found in the s3binaries template file [s3directupload-config.xml.nxftl](https://github.com/nuxeo/marketplace-amazon-s3/tree/1.8_9.10/ear/src/main/resources/s3binaries/nxserver/config/s3directupload-config.xml.nxftl)
