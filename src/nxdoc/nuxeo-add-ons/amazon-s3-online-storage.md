@@ -461,25 +461,7 @@ The following CORS configuration allows Web UI to send files to S3, please feel 
 </CORSConfiguration>
 ```
 
-To activate S3 direct upload use these parameters:
-
-```
-nuxeo.s3storage.useDirectUpload=true
-
-# mandatory
-nuxeo.s3storage.transient.bucket=YOUR_TRANSIENT_BUCKET
-nuxeo.s3storage.transient.roleArn=ROLE_THAT_CAN_WRITE_ON_IT
-
-# optional
-nuxeo.s3storage.transient.bucket_prefix=mysubfolder/
-nuxeo.s3storage.transient.crypt.serverside=true
-
-# usually taken from system environement
-nuxeo.s3storage.transient.awsid=
-nuxeo.s3storage.transient.awssecret=
-nuxeo.s3storage.transient.awstoken=
-nuxeo.s3storage.transient.region=
-```
+To activate S3 direct upload you have to declare the mandatory fields from [nuxeo.defaults](https://github.com/nuxeo/marketplace-amazon-s3/tree/master/ear/src/main/resources/s3binaries/nxserver/nuxeo.defaults) in the `nuxeo.conf`.
 
 The optional `bucket_prefix` allows you to use a "subfolder" of the bucket. The optional `crypt.serverside` allows you to use server-side encryption (SSE-S3).
 
