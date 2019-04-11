@@ -165,10 +165,10 @@ More information can be found on the [Nuxeo and Redis]({{page page='nuxeo-and-re
 <tr><th colspan="1">Elasticsearch</th>
 <td colspan="1">
 Library: 6.5.3<br />
-Cluster: 6.5.x (or Amazon Elasticsearch Service 6.2)</td>
+Cluster: 6.5.x</td>
 <td colspan="1">
 Library: 5.6.3<br />
-Cluster: 5.6.x (or Amazon Elasticsearch Service 5.5)</td>
+Cluster: 5.6.x</td>
 <td colspan="1">**From 8.1 to 8.3:**<br/>
 Library: 1.5.2<br />
 Cluster: 1.5.2 to 1.7.x<br/>
