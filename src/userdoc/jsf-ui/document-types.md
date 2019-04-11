@@ -420,7 +420,6 @@ The evolution of a document, each time contributors edit it, constitutes its lif
 * **Project**: The document has been created and it can be modified
 * **Approved**: The document has been approved and is considered as valid. Modifying it makes it back to project lifecycle state
 * **Obsolete**: The document is not accurate anymore and, for instance, has been replaced by a new version
-* **Deleted**: The document is moved into the workspace or folder trash
 
 To change the lifecycle state of a document, you need to submit it to a [workflow]({{page page='workflows'}}).
 

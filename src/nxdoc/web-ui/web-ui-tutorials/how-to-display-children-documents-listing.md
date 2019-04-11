@@ -63,7 +63,7 @@ Now click on **Configure layouts in Designer** at the top right of the page and 
 ```
 ecm:mixinType != 'HiddenInNavigation'
 AND ecm:isVersion = 0
-AND ecm:currentLifeCycleState != 'deleted'
+AND ecm:isTrashed = 0
 ```
 
 1. Add a predicate on field: `Schema` > `System` > `ParentId` and take note of the name that has been given to it (likely to be `system_parentId`)
