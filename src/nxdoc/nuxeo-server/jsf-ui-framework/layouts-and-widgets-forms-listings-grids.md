@@ -378,7 +378,7 @@ The following pages explain how to work with layouts and widgets.
 *   [Custom Widget Types]({{page space='NXDOC' page='Custom Widget+Types'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Custom widget types can be added to the standard list thanks to another extension point on the web layout service.</span>
 *   [Layout and Widget Display]({{page space='NXDOC' page='Layout and+Widget+Display'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Layouts can be displayed thanks to a series a JSF tags that will query the web layout service to get the layout definition and build it for a given mode.</span>
 *   [Generic Layout Usage]({{page space='NXDOC' page='Generic Layout+Usage'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Layouts can be used with other kind of objects than documents.</span>
-*   [Layout & Widget How-To Index](/pages/viewpage.action?pageId=19235623)
+*   [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
 {{/panel}}
 
 <div class="column medium-4">

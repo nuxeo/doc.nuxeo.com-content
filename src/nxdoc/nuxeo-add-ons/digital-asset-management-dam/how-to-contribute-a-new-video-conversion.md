@@ -216,7 +216,7 @@ To run the "WebM 480p" video conversion automatically:
 - [How to Contribute a Command Line Converter]({{page space='NXDOC' page='How to+Contribute+a+Command+Line+Converter'}})
 - [How to Contribute Picture Conversions]({{page space='NXDOC' page='How to+Contribute+Picture+Conversions'}})
 - [How to Quickly Generate a PDF Using Document Template]({{page space='NXDOC' page='How to+Quickly+Generate+a+PDF+Using+Document+Template'}})
-- [Digital Asset Management (DAM)](/pages/viewpage.action?pageId=3866704)
+- [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
 {{/panel}}</div><div class="column medium-6">
 {{#> panel heading='Related pages in other documentation'}}
 - [User actions categories]({{page space='Studio' page='User actions+categories'}})<span class="smalltext">(Nuxeo Online Services)</span>
