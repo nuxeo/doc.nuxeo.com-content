@@ -3,30 +3,25 @@ title: 404
 description: Page not found
 style: error
 review:
-    comment: ''
-    date: ''
-    status: ok
+  comment: ''
+  date: ''
+  status: ok
 no_side_menu: true
 private: true
-
 ---
+
 {{> header_standard}}
 <div class="row expanded error-background">
-    <div>
-        <div class="row space-top-3">
-            <div class="text-center">
-                <h1>
-                    {{title}}
-                </h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="column medium-8 medium-offset-2 end text-center">
-                <p>
-                    {{description}}
-                </p>
-            </div>
-        </div>
-    </div>
+  <video preload="auto" playsinline="" autoplay="" muted="" loop="">
+    <source src="https://www.nuxeo.com/assets/imgs/backgrounds/search-animal.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div>
+    <h1>{{title}}</h1>
+    <p>
+      This is probably not what you're looking for. <br /><br />
+      (His name is Alfred.)
+    </p>
+  </div>
 </div>
 {{> footer_standard}}
