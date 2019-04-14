@@ -695,15 +695,9 @@ FFmpeg is required by the Nuxeo DAM addon. It is used to create the storyboard o
 
 To install FFmpeg using Homebrew:
 ```bash
-$ brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype \
---with-frei0r --with-libass --with-libbluray --with-libcaca \
---with-libquvi --with-libvidstab --with-libvo-aacenc --with-libvorbis \
---with-libvpx --with-opencore-amr --with-openjpeg --with-openssl \
---with-opus --with-rtmpdump --with-schroedinger --with-speex \
---with-theora --with-tools --with-x265 --with-faac
+$ brew install ffmpeg 
 ```
-
-This installs most libraries. You can of course remove the libraries that are not needed for the video files you will be managing. Use `brew info ffmpeg` for details about each library available.
+Notice: Since recent versions, ffmpeg for brew does not allow anymore installing third-party libraries for fine tuning of the compilation/installation of ffmpeg. Please, see the [ffmpeg documentation](https://trac.ffmpeg.org/wiki/CompilationGuide/macOS) for alternatives. This will be required, for example, if you prefer to install a library like fdk-aac, instead of the internal aac encoder.
 
 {{#> callout type='note' }}
 Since recent versions, FFmpeg for brew does not allow anymore installing third-party libraries for fine tuning of the compilation/installation of FFmpeg.
