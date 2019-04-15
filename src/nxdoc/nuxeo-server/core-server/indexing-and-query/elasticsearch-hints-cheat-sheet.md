@@ -90,7 +90,7 @@ Watch the [related course](https://university.nuxeo.com/learn/course/internal/vi
 
 ### Configuration
 
-- Drop any string field on your content view
+- Drop any string field as a predicate of your PageProvider
 - Use the following values for the ES hints configuration:
     - Index: `all_field`
     - Analyzer: `fulltext`
