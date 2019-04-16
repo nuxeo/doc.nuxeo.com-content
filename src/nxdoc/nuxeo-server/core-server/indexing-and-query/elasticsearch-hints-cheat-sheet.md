@@ -90,12 +90,13 @@ Watch the [related course](https://university.nuxeo.com/learn/course/internal/vi
 
 ### Configuration
 
-- In your PageProvider in Studio, drop any string field as a predicate of your Page Provider
+- In your Page Provider in Nuxeo Studio, drop any string field as a predicate of your Page Provider
 - Use the following values for the ES hints configuration:
     - Index: `all_field`
     - Analyzer: `fulltext`
     - Operator: `fuzzy`
-- Notice: Once these values are filled, any value chosen for the main "Operator" item (`=`, `!=`, etc.) is ignored
+
+Once these values are filled, any value chosen for the main "Operator" item (`=`, `!=`, etc.) is ignored.
 
 ### Test case
 
