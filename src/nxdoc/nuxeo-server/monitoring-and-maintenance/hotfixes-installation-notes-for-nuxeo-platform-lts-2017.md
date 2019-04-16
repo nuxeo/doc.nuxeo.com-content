@@ -86,6 +86,63 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 30
+
+### StreamWorkManager Configuration
+
+It is now possible to use the StreamWorkManager implementation with large Work that exceed 1MB when serialized. The value is stored outside of the stream, in an external storage. For now the possible storages are the KeyValue store and the Transient store.
+
+Here are the nuxeo.conf options to use to activate this feature for the StreamWorkManager:
+```
+# Filter big work to be stored outside of the stream
+nuxeo.stream.work.computation.filter.enabled=true
+# Above this threshold in bytes the record value is stored outside of the stream
+nuxeo.stream.work.computation.filter.thresholdSize=1000000
+nuxeo.stream.work.computation.filter.class=org.nuxeo.ecm.core.transientstore.computation.TransientStoreOverflowRecordFilter
+nuxeo.stream.work.computation.filter.storeName=default
+nuxeo.stream.work.computation.filter.storeKeyPrefix=bigRecord:
+# An alternative storage using the KeyValue store
+#nuxeo.stream.work.computation.filter.class=org.nuxeo.ecm.core.work.KeyValueStoreOverflowRecordFilter # TTL is only taken in account with the KV impl, for TS impl you need to configure TS garbage collector
+#nuxeo.stream.work.computation.filter.storeTTL=4d
+```
+When using the TransientStore its TTL (firstLevelTTL) need to be adapted so the record value is not garbage collected before the work has been processed.
+The `nuxeo.stream.work.computation.filter.storeTTL` option which is used by the KeyValue store implementation needs to be expressed in number of seconds.
+
+Note also that this ability of using an external storage for large record value is not tied to the StreamWorkManager and can be used in any StreamProcessor.
+
+### DublinCoreListener Triggered on aboutToCreate
+
+To allow 10.10 behavior (which fixes the issue where the first version of a Note or other auto-versioned document doesn't have a creator nor creation date), use the configuration:
+```
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="nuxeo.dclistener.trigger-before-creation">true</property>
+  </extension>
+```
+
+### Quota Computation on Versioning
+
+The behavior of quota computation and check has changed for versioning.
+Now we compute and check the quotas on the `aboutToCheckIn` event instead of computing the quotas on the `documentCheckedIn` one and checking the quotas on the `documentCheckedOut` one.
+
+This behavior is disabled by default and can be enabled by overriding `nuxeo.quota.size.check.on.aboutToCheckIn` property:
+```
+  <require>org.nuxeo.ecm.quota.contrib</require>
+
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="nuxeo.quota.size.check.on.aboutToCheckIn">true</property>
+  </extension>
+```
+
+### Orphan Version Cleanup
+
+The orphan versions cleanup is now disabled by default, and can be re-enabled (if its performance is acceptable) with the following contribution:
+```
+  <require>org.nuxeo.ecm.core.orphanVersionsCleanup</require>
+  <extension point="listener" target="org.nuxeo.ecm.core.event.EventServiceComponent">
+    <listener name="orphanVersionsCleanup" enabled="true" />
+  </extension> 
+```
+
 ## Hotfix 24
 
 ### Recompute Missing Thumbnails
