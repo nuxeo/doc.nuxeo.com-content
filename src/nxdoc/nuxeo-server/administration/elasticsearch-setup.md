@@ -726,7 +726,7 @@ audit.elasticsearch.enabled=false
 
 ## Rebuilding the Repository Index
 
-If you need to reindex the whole repository, you can do this from the **Admin** > **Elasticsearch** > **Admin** tab.
+If you need to reindex the whole repository, you can do this from the JSF UI, at **Admin** > **Elasticsearch** > **Admin** tab, or from the [Nuxeo Dev Tool Browser Extension](https://doc.nuxeo.com/nxdoc/nuxeo-dev-tools-extension).
 
 You can fine tune the indexing process using the following options:
 
@@ -769,8 +769,8 @@ Since Nuxeo 9.3, instead of overriding the extension point you can simply overri
     myapp.target=.
     ```
 
-2.  In this custom template create a file named `nxserver/config/elasticsearch-doc-mapping.json` to override the mapping. You can
-    create a file named `nxserver/config/elasticsearch-doc-settings.json` to override the settings.
+2.  In this custom template create a file named `nxserver/config/elasticsearch-doc-mapping.json` to override the mapping. You can create a file named `nxserver/config/elasticsearch-doc-settings.json` to override the settings.<br />
+**Important**: You must add your custom mapping to the existing one, you cannot just set your custom mapping in the file, Nuxeo does not merge your mapping with the default one. So, you must _duplicate_ the original file at `${NUXEO_HOME}/templates/common-base/nxserver/config/elasticsearch-doc-mapping.json` to `myapp/nxserver/config/elasticsearch-doc-mapping.json` , and modify the copy.
 
 
 3.  Update the `nuxeo.conf` to use your custom template.
@@ -779,7 +779,7 @@ Since Nuxeo 9.3, instead of overriding the extension point you can simply overri
     nuxeo.templates=default,myapp
     ```
 
-4.  Restart and re-index the entire repository from the Admin tab (see previous section), a re-indexing is needed to apply the new settings and mapping.
+4.  Restart and re-index the entire repository (see previous section). A re-indexing is needed to apply the new settings and mapping.
 
 For mapping customization examples, see the page [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}}).
 
