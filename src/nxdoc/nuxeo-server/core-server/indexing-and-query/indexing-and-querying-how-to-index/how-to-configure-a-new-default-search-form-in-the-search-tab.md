@@ -1,5 +1,5 @@
 ---
-title: How to Configure a New Default Search Form in the Search Tab
+title: 'HOWTO: Configure a New Default Search Form in the Search Tab'
 review:
     comment: ''
     date: '2019-04-16'
@@ -81,24 +81,22 @@ history:
         date: '2014-10-23 19:19'
         message: ''
         version: '1'
-
 ---
 
 Updating a new default search form basically consists in disabling the default search and create a new one, based upon your requirements.
 
 To set a new search form that will replace the Default search form displayed when you click on the Search tab:
 
-1. In Nuxeo Studio Designer, **disable the default search** in UI > Drawer > Drawer Items > defaultSearchMenuPage.
+1. In Nuxeo Studio Designer, **disable the default search** in **UI** > **Drawer** > **Drawer Items** > defaultSearchMenuPage.
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/How to Configure a New Default Search Form in the Search Tab/disable-default-search.png
     name: disable-default-search.png
     1.1.3#screenshot#up_to_date
 --}}
 ![disable-default-search.png](nx_asset://b567178b-f8f9-4337-842e-29324509cd84 ?w=650,border=true)
-2.  Create a **new Page Provider** in Nuxeo Studio Modeler in Configuration > Page Providers.
-3.  Generate the corresponding f**orm and result layouts** in Nuxeo Studio Designer, following the [How to Configure Searches]({{page page='web-ui-search'}})) tutorial.
-4.  Save and [deploy]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).
-
+2. In Nuxeo Studio Modeler, go to **Configuration** > **Page Providers**, to create a **new Page Provider**.
+3. Generate the corresponding **form and result layouts** in Nuxeo Studio Designer, following the [How to Configure Searches]({{page page='web-ui-search'}}) tutorial.
+4. Save and [deploy]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).
 &nbsp;
 
 * * *
@@ -111,7 +109,5 @@ To set a new search form that will replace the Default search form displayed whe
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Search screen in Nuxeo Studio]({{page space='studio' page='search-advanced-search'}})
-- [Content Views in Nuxeo Studio documentation]({{page space='studio' page='content-views'}})
-- [Content Views in developer documentation]({{page page='content-views'}})
 
 {{/panel}}</div></div>
