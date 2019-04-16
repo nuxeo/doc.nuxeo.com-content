@@ -2,7 +2,7 @@
 title: Nuxeo CSV
 review:
     comment: ''
-    date: '2018-01-15'
+    date: '2019-04-16'
     status: ok
 labels:
     - lts2016-ok
@@ -508,8 +508,14 @@ It is possible to set the lifecycle state when the document is created through N
 
 ### Events
 
-Note that the event raised by this CSV import is a **creation event**, not an import one. An import event means that for the Nuxeo Platform, a full and ready Nuxeo document is imported. Here based on some data, a new Nuxeo document is created.
 
+By default, performing a CSV import raises a **document created event**.
+
+If you want to import documents while maintaining original UUID, creation date, modification date, author and contributors, check the "Apply Date, Author and Dublin Core metadata" checkbox. In this case, a **document imported event** is triggered.
+
+{{#> callout type='info'}}
+This last option can only be used by members of the administrators group.
+{{/callout}}
 
 * * *
 
