@@ -3,7 +3,7 @@ title: Indexing and Query
 description: The Nuxeo Platform stores documents and their property values either in a database (VCS) or in a NoSQL database (DBS). This data is also at the same time indexed in an Elasticsearch index.
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2019-04-16'
     status: ok
 labels:
     - content-review-lts2016
@@ -457,23 +457,50 @@ It is possible to leverage aggregates both at the API level and in the user inte
 
 See the [How-to about aggregates widgets]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}}).
 
-- Terms with Directory Widget:
-![]({{file name='Screen Shot 2014-11-02 at 19.13.27.png'}} ?w=250,h=54,border=true)
+- Terms with `nuxeo-checkbox-aggregation` element:
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Indexing and Query/terms-vocabulary.png
+    name: terms-vocabulary.png
+    1.1.3#screenshot#up_to_date
+--}}
+![terms-vocabulary.png](nx_asset://7c14a436-787d-4028-9471-516f779a283f ?w=250,border=true)
 
 - Date Histograms and Date Ranges:
-![]({{file name='Screen Shot 2014-11-02 at 21.02.45.png'}} ?w=250,h=71,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Indexing and Query/date-histogram.png
+    name: date-histogram.png
+    1.1.3#screenshot#up_to_date
+--}}
+![date-histogram.png](nx_asset://9b7cef4b-a133-4d74-99e8-a24968662acd ?w=250,border=true)
 
-- Terms with User & Groups Widget:
-![]({{file name='Screen Shot 2014-11-02 at 21.02.54.png'}} ?w=250,border=true)
+- Terms with User & Groups with the `nuxeo-dropdown-aggregation` element:
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Indexing and Query/authors-suggestion.png
+    name: authors-suggestion.png
+    1.1.3#screenshot#up_to_date
+--}}
+![authors-suggestion.png](nx_asset://3feb3d0e-5d6c-45d3-b18b-2d67b3acc4b7 ?w=250,border=true)
 
 - Range:
-![]({{file name='Screen Shot 2014-11-02 at 21.03.01.png'}} ?w=250,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Indexing and Query/range.png
+    name: range.png
+    1.1.3#screenshot#up_to_date
+--}}
+![range.png](nx_asset://2e336306-0841-44b3-8fd5-6c41b9d2f425 ?w=250,border=true)
 
-## Configuring Search Interfaces in the Nuxeo Platform Back Office: Content Views
+## Configuring Search Interfaces in the Nuxeo Platform
 
-Search UI has been conceptualized throughout the notion of &ldquo;content view&rdquo; in the Nuxeo Platform framework. The [Content View]({{page space='glos' page='content-view'}}) object holds all the necessary information for rendering a search filter, the associated page provider, a search result and all actions that can be made around that search result (sorting, exporting, slide showing, selection actions&hellip;). Content views are [fully configurable via Nuxeo Studio]({{page page='how-to-define-a-new-content-view'}}) which makes it a matter of a few minutes to configure new business specific search screens for your application users.
+Searches have been conceptualized throughout the notion of &ldquo;page providers&rdquo; in the Nuxeo Platform. The [Page Provider]({{page space='nxdoc' page='page-providers'}}) object holds all the necessary information for rendering a search: a NXQL query, pagination logics, quick filters, sorting capabilities etc. Page providers are used in a non-UI context: you need to generate the **form layout** and the corresponding **result layouts** to display the search to the users (in Nuxeo Web UI typically).
 
-![A Content View]({{file name='Screen Shot 2014-11-02 at 21.07.25.png'}} ?w=600,border=true 'A Content View')
+These elements are [fully configurable via Nuxeo Studio]({{page page='web-ui-search'}}) which makes it a matter of a few minutes to configure new business specific search screens for your application users.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Indexing and Query/search-exemple.png
+    name: search-exemple.png
+    1.1.3#screenshot#up_to_date
+--}}
+![search-exemple.png](nx_asset://4599c0ae-78c3-4c22-95dd-532b43cf8f77 ?w=600,border=true)
 
 ## Indexing Logic
 
