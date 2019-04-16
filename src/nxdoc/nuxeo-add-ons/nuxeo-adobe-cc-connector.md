@@ -127,8 +127,8 @@ history:
 
 ---
 
-{{#> callout type='note' }}
-This addon is deprecated since Nuxeo Platform LTS 2017. It has been replaced by a brand new connector, [go check it out]({{page version='' space='nxdoc' page='nuxeo-for-adobe-cc'}})!
+{{#> callout type='warning' }}
+**This addon is deprecated since Nuxeo Platform LTS 2017. It has been replaced by a brand new connector, [go check it out]({{page version='' space='nxdoc' page='nuxeo-for-adobe-cc'}})!**
 {{/callout}}
 
 
