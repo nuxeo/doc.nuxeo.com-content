@@ -542,18 +542,18 @@ The Nuxeo Platform modules use external software for some features. They need to
 
 On a naked default Nuxeo Platform, you need the following software:
 
-*   For web preview of office documents: LibreOffice and pdftohtml
-    *   LibreOffice (version >= 5): converts office file into PDF
-    *   pdftohtml: converts converted PDF into HTML preview
-*   For thumbnail generation: ImageMagick and Ghostscript for most file formats. UFRaw for RAW files.
-*   For processing WordPerfect documents: libwpd
+- For web preview of office documents: LibreOffice and pdftohtml
+    - LibreOffice (version >= 5): converts office file into PDF
+    - pdftohtml: converts converted PDF into HTML preview
+- For thumbnail generation: ImageMagick and Ghostscript for most file formats. UFRaw for RAW files.
+- For processing WordPerfect documents: libwpd
 
 If you installed the Nuxeo DAM addon, you will need these additional requirements:
 
-*   For metadata extraction: Exiftool
-*   For picture preview and tilling: ImageMagick (already required for thumbnails)
-*   For video conversion and storyboarding: FFmpeg
-*   For subtitles extraction from videos: CCExtractor
+- For metadata extraction: Exiftool
+- For picture preview and tilling: ImageMagick (already required for thumbnails)
+- For video conversion and storyboarding: FFmpeg
+- For subtitles extraction from videos: CCExtractor
 
 Thumbnails and previews are created when documents are imported into Nuxeo, not on the fly when browsing documents. So in order to check if the third party software work properly on your Nuxeo instance, you must import new documents.
 
@@ -695,9 +695,13 @@ FFmpeg is required by the Nuxeo DAM addon. It is used to create the storyboard o
 
 To install FFmpeg using Homebrew:
 ```bash
-$ brew install ffmpeg 
+$ brew install ffmpeg
 ```
-Notice: Since recent versions, ffmpeg for brew does not allow anymore installing third-party libraries for fine tuning of the compilation/installation of ffmpeg. Please, see the [ffmpeg documentation](https://trac.ffmpeg.org/wiki/CompilationGuide/macOS) for alternatives. This will be required, for example, if you prefer to install a library like fdk-aac, instead of the internal aac encoder.
+{{#> callout type='note' }}
+Since recent versions, FFmpeg for brew does not allow anymore installing third-party libraries for fine tuning of the compilation/installation of FFmpeg.  
+Please, see the [FFmpeg documentation](https://trac.ffmpeg.org/wiki/CompilationGuide/macOS) for alternatives.   
+This will be required, for example, if you prefer to install a library like fdk-aac, instead of the internal aac encoder.
+{{/callout}}
 
 {{#> callout type='note' }}
 Since recent versions, FFmpeg for brew does not allow anymore installing third-party libraries for fine tuning of the compilation/installation of FFmpeg.
