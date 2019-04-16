@@ -2,7 +2,7 @@
 title: How to Configure a New Default Search Form in the Search Tab
 review:
     comment: ''
-    date: '2017-04-21'
+    date: '2019-04-16'
     status: ok
 details:
     howto:
@@ -83,17 +83,20 @@ history:
         version: '1'
 
 ---
-{{#> callout type='info' }}
-{{{multiexcerpt 'check-jsf-ui-dependency' page='how-to-define-a-new-content-view'}}}
-{{/callout}}
 
-Defining a new search form basically consists in defining a new content view that is flagged as a Search content view.
+Updating a new default search form basically consists in disabling the default search and create a new one, based upon your requirements.
 
 To set a new search form that will replace the Default search form displayed when you click on the Search tab:
 
-1.  In Studio, click on the **Listings & Views** > [**Search** menu item]({{page space='studio' page='search-advanced-search'}}).
-2.  Click on the **Create** button to create a new default search.
-3.  Configure the base query, the form and the results table, like you would on any other content view (see [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})).
+1. In Nuxeo Studio Designer, **disable the default search** in UI > Drawer > Drawer Items > defaultSearchMenuPage.
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/How to Configure a New Default Search Form in the Search Tab/disable-default-search.png
+    name: disable-default-search.png
+    1.1.3#screenshot#up_to_date
+--}}
+![disable-default-search.png](nx_asset://b567178b-f8f9-4337-842e-29324509cd84 ?w=650,border=true)
+2.  Create a **new Page Provider** in Nuxeo Studio Modeler in Configuration > Page Providers.
+3.  Generate the corresponding f**orm and result layouts** in Nuxeo Studio Designer, following the [How to Configure Searches]({{page page='web-ui-search'}})) tutorial.
 4.  Save and [deploy]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).
 
 &nbsp;
@@ -102,7 +105,6 @@ To set a new search form that will replace the Default search form displayed whe
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
 - [How to Configure a Search Filter With Facets and Other Aggregates]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
 - [How-To Index]({{page page='how-to-index'}})
 
