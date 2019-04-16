@@ -88,7 +88,7 @@ Watch the [related course](https://university.nuxeo.com/learn/course/internal/vi
 
 ## Fuzzy Search on Full Text Index
 
-### Configuration
+### Nuxeo Studio Configuration
 
 - In your Page Provider in Nuxeo Studio, drop any string field as a predicate of your Page Provider
 - Use the following values for the ES hints configuration:
@@ -163,11 +163,12 @@ You can now configure hints in Nuxeo Studio using the common operator when query
 
 ### Nuxeo Studio Configuration
 
-- Drop any string field in the search layout of your content view
+- In your Page Provider in Nuxeo Studio, drop any string field as a predicate of your Page Provider
 - Use the following values for the ES hints configuration:
     - Index: `ecm:binarytext.common`
     - Analyzer: `my_attachment_analyzer`
     - Operator: `common`
+- Notice: Once these values are filled, any value chosen for the main "Operator" item (`=`, `!=`, etc.) is ignored.
 
 ### Test case
 
