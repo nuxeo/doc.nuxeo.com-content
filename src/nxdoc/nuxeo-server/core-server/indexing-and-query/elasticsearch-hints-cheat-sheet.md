@@ -90,7 +90,7 @@ Watch the [related course](https://university.nuxeo.com/learn/course/internal/vi
 
 ### Nuxeo Studio Configuration
 
--In your Page Provider in Nuxeo Studio, drop any string field as a predicate of your Page Provider.
+- In your Page Provider in Nuxeo Studio, drop any string field as a predicate of your Page Provider.
 - Use the following values for the ES hints configuration:
     - Index: `all_field`
     - Analyzer: `fulltext`
@@ -104,8 +104,6 @@ Once these values are filled, any value chosen for the main "Operator" item (`=`
 - Search for "Nuxo", the document created previously appears in the results.
 
 ## Using the Common Operator on the Main Attachment Content
-
-Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.com/learn/public/course/view/elearning/55/WhatsnewinNuxeoPlatformLTS2015%3F) in [Nuxeo University](https://university.nuxeo.com)
 
 Suppose you want to be able to search using the [common operator](https://www.elastic.co/guide/en/elasticsearch/reference/1.5/query-dsl-common-terms-query.html) on your documents' main attachment content. This Elasticsearch operator is interesting for two reasons:
 
@@ -152,7 +150,7 @@ You can now configure hints in Nuxeo Studio using the common operator when query
 
 ### Nuxeo Studio Configuration
 
-- In your Page Provider in Nuxeo Studio, drop any string field as a predicate of your Page Provider
+- In your Page Provider in Nuxeo Studio, drop any string field as a predicate of your Page Provider.
 - Use the following values for the ES hints configuration:
     - Index: `ecm:binarytext.common`
     - Analyzer: `my_attachment_analyzer`
