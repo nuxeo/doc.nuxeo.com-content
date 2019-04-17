@@ -41,7 +41,7 @@ This diagram represents the logical architecture for a Nuxeo cluster. It contain
 - A Nuxeo server cluster,
 - A database cluster Nuxeo can connect to,
 - An Elasticsearch cluster,
-- A Redis cluster,
+- A Redis cluster and/or a Kafka cluster
 - A file system where binaries will be stored.
 
 We will explain the role of each component below.
@@ -100,21 +100,150 @@ Imagine that your cluster gets cut in half: 2 nodes on side A cannot communicate
 If you had 4 nodes in the same situation, service wouldn't be available anymore because a majority could not be obtained when voting. This is known as the split-brain problem. This also means that the minimum number of nodes to obtain high availability is 3.
 {{/callout}}
 
-## Redis
+## Redis and/or a Kafka cluster
 
-Redis is an optional, yet strongly recommended component for any Nuxeo cluster. It is mainly used to persist any [asynchronous job]({{page page='work-and-workmanager'}}) created by the Nuxeo server nodes. Fulltext content extraction from files, thumbnail generation, metadata extraction or write for pictures, video conversion tasks are all examples of such jobs. When a Redis instance or cluster is set up, you can safely stop your Nuxeo server nodes anytime without being worried of losing these jobs in the process.
+When running in cluster mode, the Nuxeo nodes needs to communicate
+so the following services work in a distributed way:
 
-Redis can also serve as a centralized caching tool, allowing to share cache between Nuxeo server nodes for various data sources and thus preventing invalidation issues. You may refer to the [Nuxeo and Redis]({{page page='nuxeo-and-redis'}}) page for more details.
+- The **[WorkManager]({{page page='work-and-workmanager'}})** can distribute its Works among nodes and share a common state
+- **[Nuxeo Stream]({{page page='nuxeo-stream'}})** and the **[Bulk Service]({{page page='bulk-action-framework'}})** distribute processing among nodes and handle failover
+- The **KeyValue Store** enabling distributed cache and a shared [Transient Store]({{page page='transient-store'}})
+- The **PubSub Service** can publish messages to all nodes and is used for cache invalidation
+
+
+Before Nuxeo 9.10, Redis was the only option for all the available distributed services:
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+  <td colspan="1">Nuxeo 8.10</th>
+  <th colspan="1">WorkManager</th>
+  <th colspan="1">KeyValue Store</th>
+  <th colspan="1">PubSub Service</th>
+</tr>
+<tr>
+  <th colspan="1">Redis</th>
+  <td colspan="1">Yes</td>
+  <td colspan="1">Yes</td>
+  <td colspan="1">Yes</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+Since Nuxeo 9.10 and the introduction of Nuxeo Stream, there are more choice and
+it is even possible to [not use Redis]({{page version='910' space='nxdoc' page='kafka'}}#andquotno-redisandquot-nuxeo-cluster) when using Kafka and MongoDB:
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+  <td colspan="1">Nuxeo 9.10</th>
+  <th colspan="1">WorkManager</th>
+  <th colspan="1">Nuxeo Stream</th>
+  <th colspan="1">KeyValue Store</th>
+  <th colspan="1">PubSub Service</th>
+</tr>
+<tr>
+  <th colspan="1">Redis</th>
+  <td colspan="1">Yes</td>
+  <td colspan="1">No</td>
+  <td colspan="1">Yes</td>
+  <td colspan="1">Yes</td>
+</tr>
+<tr>
+  <th colspan="1">Kafka</th>
+  <td colspan="1">Yes</td>
+  <td colspan="1">Yes</td>
+  <td colspan="1">No</td>
+  <td colspan="1">Yes</td>
+</tr>
+<tr>
+  <th colspan="1">MongoDB</th>
+  <td colspan="1">No</td>
+  <td colspan="1">No</td>
+  <td colspan="1">Yes</td>
+  <td colspan="1">No</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+Since Nuxeo 10.10, there are KeyValue store implementations for SQL backend.
+We strongly recommend the usage of Kafka to have a highly reliable Bulk Service.
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+  <td colspan="1">Nuxeo 10.10</th>
+  <th colspan="1">WorkManager</th>
+  <th colspan="1">Nuxeo Stream/Bulk Service</th>
+  <th colspan="1">KeyValue Store</th>
+  <th colspan="1">PubSub Service</th>
+</tr>
+<tr>
+  <th colspan="1">Redis</th>
+  <td colspan="1">Yes</td>
+  <td colspan="1">No</td>
+  <td colspan="1">Yes</td>
+  <td colspan="1">Yes</td>
+</tr>
+<tr>
+  <th colspan="1">Kafka</th>
+  <td colspan="1">Yes</td>
+  <td colspan="1">Yes</td>
+  <td colspan="1">No</td>
+  <td colspan="1">Yes</td>
+</tr>
+<tr>
+  <th colspan="1">MongoDB</th>
+  <td colspan="1">No</td>
+  <td colspan="1">No</td>
+  <td colspan="1">Yes</td>
+  <td colspan="1">No</td>
+</tr>
+<tr>
+  <th colspan="1">SQL DB</th>
+  <td colspan="1">No</td>
+  <td colspan="1">No</td>
+  <td colspan="1">Yes</td>
+  <td colspan="1">No</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+### Redis
+
+As seen above Redis can be used for the WorkManager, KeyValue Store and PubSub service.
+
+When a Redis instance or cluster is set up, you can safely stop your Nuxeo server nodes anytime without being worried of losing these jobs in the process.
+
+Keep in mind that Redis is always limited by its available memory which can be a problem on mass operation.
 
 For high availability, a Redis cluster with a minimum of three nodes is required (for the same reasons as Elasticsearch). Two options exist to handle automatic failover:
 
-### Redis Sentinel
+##### Redis Sentinel
 
 Redis Sentinel is the open-source option to provide automatic Redis node failover. Nuxeo server's API has been adapted to be used with Redis Sentinel, and some of our customers happily use it in production. Before choosing it though, you need to know that RedisLabs (creators of Redis) do not officially support it, which means that in case of a problem we will not be able to provide support either.
 
-### Redis Entreprise
+##### Redis Entreprise
 
 Redis Entreprise is our recommendation for a high availability Redis cluster, as it gets support from RedisLabs. You may visit the [RedisLabs website](https://redislabs.com/why-redis/redis-enterprise/) for more information about the product.
+
+### Kafka
+
+Since Nuxeo 10.10 Kafka is recommended in cluster mode so the Bulk Service can be distributed and handle failover between Nuxeo nodes.
+
+When used as WorkManager implementation you can safely stop a Nuxeo nodes anytime without being worried of losing any processing.
+
+When the KeyValue store relies on the repository's backend, you don't need a Redis cluster anymore.
+
+Kafka requires few resources and it is limited only by the available disk space.
+
+For high availability Kafka needs to be deployed in cluster.
 
 ## File System
 
