@@ -168,7 +168,8 @@ You can now configure hints in Nuxeo Studio using the common operator when query
     - Index: `ecm:binarytext.common`
     - Analyzer: `my_attachment_analyzer`
     - Operator: `common`
-- Notice: Once these values are filled, any value chosen for the main "Operator" item (`=`, `!=`, etc.) is ignored.
+
+Once these values are filled, any value chosen for the main "Operator" item (`=`, `!=`, etc.) is ignored.
 
 ### Test case
 
