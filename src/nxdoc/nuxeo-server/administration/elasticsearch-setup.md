@@ -463,8 +463,8 @@ history:
         date: '2014-11-10 12:34'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
 This page provides several configuration use cases for Elasticsearch.
 {{! /excerpt}}
@@ -482,20 +482,15 @@ The Nuxeo Platform can communicate with Elasticsearch using 2 different protocol
   it is the default choice since Nuxeo 10.2.
 
 {{#> callout type='warning' }}
-
-The transport client will be depreciated in Elasticsearch 7.x.
-
+The transport client will be deprecated in Elasticsearch 7.x.
 {{/callout}}
 
 {{{multiexcerpt 'elasticsearch_supported_versions' page='Compatibility Matrix'}}}
 
-
 The default configuration uses an embedded Elasticsearch instance that runs in the same JVM as the Nuxeo Platform's.
 
 {{#> callout type='warning' }}
-
 This embedded mode **is only for testing purpose** and should not be used in production, neither Elasticsearch nor Nuxeo can support an embedded installation.
-
 {{/callout}}
 
 For production you need to setup an Elasticsearch cluster.
@@ -504,13 +499,11 @@ For production you need to setup an Elasticsearch cluster.
 
 Refer to the [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) to install and secure your cluster. Basically:
 
-*   Don&rsquo;t run Elasticsearch open to the public.
-*   Don&rsquo;t run Elasticsearch as root.
+- Don&rsquo;t run Elasticsearch open to the public.
+- Don&rsquo;t run Elasticsearch as root.
 
 {{#> callout type='tip' }}
-
 Use an explicit cluster name by setting the `cluster.name` in the `/etc/elasticsearch/elasticsearch.yml` file, this will avoid conflicts with other environments.
-
 {{/callout}}
 
 #### Recommended Tuning
@@ -584,7 +577,7 @@ Where:
 
 ### The Transport Client protocol
 
-Here are the  `nuxeo.conf` options available for the Transport Client protocol:
+Here are the `nuxeo.conf` options available for the Transport Client protocol:
 ```
 elasticsearch.client=TransportClient
 elasticsearch.addressList=somenode:9300,anothernode:9300
@@ -657,9 +650,9 @@ See the [Trust Store and Key Store Configuration]({{page page='trust-store-and-k
 
 Nuxeo manages 3 Elasticsearch indexes:
 
-*   The repository index used to index document content, this index can be rebuild from scratch by extracting content from the repository.
-*   The audit logs index to store audit entries, this index is a primary storage and can not be rebuild.
-*   A sequence index used to serve unique value that can be used as primary keys, this index is also a primary storage.
+- The repository index used to index document content, this index can be rebuild from scratch by extracting content from the repository.
+- The audit logs index to store audit entries, this index is a primary storage and can not be rebuild.
+- A sequence index used to serve unique value that can be used as primary keys, this index is also a primary storage.
 
 To make the connection between the Nuxeo Platform instance and the ES cluster check the following options in the `nuxeo.conf` file and edit if you need to change the default value:
 
@@ -682,14 +675,14 @@ You can find all the available options in the [nuxeo.defaults](https://github.co
 
 #### Index Aliases
 
-Nuxeo supports repository index aliases.  This allows you to distinguish the read index from the write index. To enable this feature set `manageAlias` to `true` in the default template (`elasticsearch-config.xml.nxftl`).
+Nuxeo supports repository index aliases. This allows you to distinguish the read index from the write index. To enable this feature set `manageAlias` to `true` in the default template (`elasticsearch-config.xml.nxftl`).
 ```
 <elasticSearchIndex name="${elasticsearch.indexName}" type="doc" repository="default" manageAlias="true">
 ```
 
-When `manageAlias` is `true`, Nuxeo will manage 2 aliases: one for searching using the name of the contrib (default to `nuxeo`), one for writing with a "-write" suffix (`nuxeo-write`), both aliases will point to the same index (`nuxeo-0000`).  The index name ends with a number and is automatically incremented when a new index is created.
+When `manageAlias` is `true`, Nuxeo will manage 2 aliases: one for searching using the name of the contrib (default to `nuxeo`), one for writing with a "-write" suffix (`nuxeo-write`), both aliases will point to the same index (`nuxeo-0000`). The index name ends with a number and is automatically incremented when a new index is created.
 
-When reindexing the repository, a new index is created (`nuxeo-0001`) and the write alias is updated to use it.  The search alias stays on the previous index (`nuxeo-0000`), it is read-only and can still be used by users.  Once indexing is terminated the search alias is updated to point to the new index (`nuxeo-0001`). An administrator can then backup and delete the old index.
+When reindexing the repository, a new index is created (`nuxeo-0001`) and the write alias is updated to use it. The search alias stays on the previous index (`nuxeo-0000`), it is read-only and can still be used by users. Once indexing is terminated the search alias is updated to point to the new index (`nuxeo-0001`). An administrator can then backup and delete the old index.
 
 {{#> callout type='warning' }}
 
@@ -711,11 +704,9 @@ When Elasticsearch is enabled and the `audit.elasticsearch.enabled` property is 
 This improves scalability, especially when using Nuxeo Drive with a large set of users.
 
 {{#> callout type='warning' }}
-
 When Elasticsearch is used as a backend for audit logs it becomes the reference (no more SQL backend as it was the case in Nuxeo versions lower than 7.3).
 
 For this purpose make sure you read the [Backing Up and Restoring the Audit Elasticsearch Index]({{page page='backup-and-restore'}}) page.
-
 {{/callout}}
 
 If you want to disable Elasticsearch and use the SQL database as the default backend for audit logs you can simply update this property in `nuxeo.conf`:
@@ -726,17 +717,17 @@ audit.elasticsearch.enabled=false
 
 ## Rebuilding the Repository Index
 
-If you need to reindex the whole repository, you can do this from the JSF UI, at **Admin** > **Elasticsearch** > **Admin** tab, or from the [Nuxeo Dev Tool Browser Extension](https://doc.nuxeo.com/nxdoc/nuxeo-dev-tools-extension).
+If you need to reindex the whole repository, you can do this from the [Nuxeo Dev Tool Browser Extension]({{page page='nuxeo-dev-tools-extension'}}#features).
 
 You can fine tune the indexing process using the following options:
 
-*   Sizing the indexing worker thread pool. The default size is 4, using more threads will crawl the repository faster:
+- Sizing the indexing worker thread pool. The default size is `4`, using more threads will crawl the repository faster:
 
     ```
     elasticsearch.indexing.maxThreads=4
     ```
 
-*   Tuning the number of documents per worker and the number of document submitted using the Elasticsearch bulk API:
+- Tuning the number of documents per worker and the number of document submitted using the Elasticsearch bulk API:
 
     ```
     # Reindexing option, number of documents to process per worker
@@ -752,9 +743,7 @@ You can fine tune the indexing process using the following options:
 Nuxeo comes with a default mapping that sets the locale for full-text and declares some fields as being date or numeric.
 
 {{#> callout type='note' }}
-
 For fields that are not explicitly defined in the mapping, Elasticsearch will try to guess the type the first time it indexes the field. If the field is empty it will be treated as a String field. This is why most of the time you need to explicitly set the mapping for your custom fields that are of type date, numeric or full-text. Also fields that are used to sort and that could be empty need to be defined to prevent an unmapped field error.
-
 {{/callout}}
 
 The default mapping is located in the `${NUXEO_HOME}/templates/common-base/nxserver/config/elasticsearch-config.xml.nxftl`.
@@ -763,23 +752,23 @@ The default mapping is located in the `${NUXEO_HOME}/templates/common-base/nxser
 
 Since Nuxeo 9.3, instead of overriding the extension point you can simply override the default mapping or settings JSON files:
 
-1.  [Create a custom template]({{page page='configuration-templates'}}) like `myapp` with a `nuxeo.defaults` file that contains:
+1. [Create a custom template]({{page page='configuration-templates'}}) like `myapp` with a `nuxeo.defaults` file that contains:
 
     ```
     myapp.target=.
     ```
 
-2.  In this custom template create a file named `nxserver/config/elasticsearch-doc-mapping.json` to override the mapping. You can create a file named `nxserver/config/elasticsearch-doc-settings.json` to override the settings.<br />
+1. In this custom template create a file named `nxserver/config/elasticsearch-doc-mapping.json` to override the mapping. You can create a file named `nxserver/config/elasticsearch-doc-settings.json` to override the settings.<br/>
 **Important**: You must add your custom mapping to the existing one, you cannot just set your custom mapping in the file, Nuxeo does not merge your mapping with the default one. So, you must _duplicate_ the original file at `${NUXEO_HOME}/templates/common-base/nxserver/config/elasticsearch-doc-mapping.json` to `myapp/nxserver/config/elasticsearch-doc-mapping.json` , and modify the copy.
 
 
-3.  Update the `nuxeo.conf` to use your custom template.
+1. Update the `nuxeo.conf` to use your custom template.
 
     ```
     nuxeo.templates=default,myapp
     ```
 
-4.  Restart and re-index the entire repository (see previous section). A re-indexing is needed to apply the new settings and mapping.
+1. Restart and re-index the entire repository (see previous section). A re-indexing is needed to apply the new settings and mapping.
 
 For mapping customization examples, see the page [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}}).
 
@@ -787,12 +776,12 @@ For mapping customization examples, see the page [Configuring the Elasticsearch 
 
 Here the index is a primary storage and you cannot rebuild it. So we need a tool that will extract the `_source` of documents from one index and submit it to a new index that have been setup with the new configuration.
 
-1.  Update the mappings or settings configuration by overriding the `{NUXEO_HOME}/templates/common-base/nxserver/config/elasticsearch-audit-index-config.xml`(follow the same procedure as the section above for the repository index)
-2.  Use a new name for the `audit.elasticsearch.indexName`(like `nuxeo-audit2`)
-3.  Start the Nuxeo Platform.
+1. Update the mappings or settings configuration by overriding the `{NUXEO_HOME}/templates/common-base/nxserver/config/elasticsearch-audit-index-config.xml`(follow the same procedure as the section above for the repository index)
+1. Use a new name for the `audit.elasticsearch.indexName` (like `nuxeo-audit2`)
+1. Start the Nuxeo Platform.</br>
     The new index is created with the new mapping.
-4.  Stop the Nuxeo Platform
-5.  Copy the audit logs entries in the new index using [stream2es](https://github.com/elasticsearch/stream2es/). Here we copy `nuxeo-audit` to `nuxeo-audit2`.
+1. Stop the Nuxeo Platform
+1. Copy the audit logs entries in the new index using [stream2es](https://github.com/elasticsearch/stream2es/). Here we copy `nuxeo-audit` to `nuxeo-audit2`.
 
     ```
     curl -O download.elasticsearch.org/stream2es/stream2es; chmod +x stream2es
@@ -803,8 +792,8 @@ Here the index is a primary storage and you cannot rebuild it. So we need a tool
 
 You need to define an index for each repository. This is done by adding an `elasticSearchIndex` contribution.
 
-1.  Create a custom template as described in the above section "Changing the mapping of the index".
-2.  Add a second `elasticSearchIndex` contribution:
+1. Create a custom template as described in the above section "Changing the mapping of the index".
+1. Add a second `elasticSearchIndex` contribution:
 
     ```
     <elasticSearchIndex name="nuxeo-repo2" type="doc" repository="repo2"> ....
@@ -892,7 +881,6 @@ You may need to change the `size` parameter to get more or less indexed terms.
 You can use the [esync tool](https://github.com/nuxeo/esync) to compare both content and pinpoint discrepancies.
 
 This tool is a read-only standalone tool, it requires both access to the database and Elasticsearch (using transport client on port 9300).
-
 
 * * *
 
