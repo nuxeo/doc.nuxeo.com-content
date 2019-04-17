@@ -75,45 +75,46 @@ history:
         date: '2015-08-04 10:08'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 This page lists interesting use cases of Elasticsearch Hints.
-
 {{! /excerpt}}
 
-&nbsp;
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the [related course](https://university.nuxeo.com/learn/course/internal/view/elearning/134/configuring-searches-in-nuxeo-studio-modeler-designer) on Nuxeo University.
+{{/callout}}
 
 ## Fuzzy Search on Full Text Index
 
-### Configuration
+### Nuxeo Studio Configuration
 
-*   Drop any string field on your content view
-*   Use the following values for the ES hints configuration:
-    *   Index: `all_field`
-    *   Analyzer: `fulltext`
-    *   Operator: `fuzzy`
+- In your Page Provider in Nuxeo Studio, drop any string field as a predicate of your Page Provider.
+- Use the following values for the ES hints configuration:
+    - Index: `all_field`
+    - Analyzer: `fulltext`
+    - Operator: `fuzzy`
+
+Once these values are filled, any value chosen for the main "Operator" item (`=`, `!=`, etc.) is ignored.
 
 ### Test case
 
-*   Create a new document that contains a text file which itself contains the string "Nuxeo rocks"
-*   Search for "Nuxo", the document created previously appears in the results
+- Create a new document that contains a text file which itself contains the string "Nuxeo rocks"
+- Search for "Nuxo", the document created previously appears in the results
 
 ## Using the Common Operator on the Main Attachment Content
 
-Extract from the course [What's New in Nuxeo Platform LTS 2015?](https://university.nuxeo.com/learn/public/course/view/elearning/55/WhatsnewinNuxeoPlatformLTS2015%3F) in [Nuxeo University](https://university.nuxeo.com)
-
 Suppose you want to be able to search using the [common operator](https://www.elastic.co/guide/en/elasticsearch/reference/1.5/query-dsl-common-terms-query.html) on your documents' main attachment content. This Elasticsearch operator is interesting for two reasons:
 
-*   The common operator can be seen as an alternative to the full-text search.
-    One notable difference is that it allows to search on terms that would have been removed by the full-text analyzer. If I absolutely want to search for the &ldquo;Not Beyond Space Travel Agencies&rdquo;, I&rsquo;d like to be able to search for the &ldquo;Not&rdquo; keyword.
-*   The common operator is smart. It divides query terms between those which are rare into the index, and those which are commonly found into it.
-    Rare terms will get a boost, common terms will be lowered. Let's say you have lots of contracts in your repository, and you search for "confidentiality clause". If both query terms were considered of same importance, most relevant results might be drowned. The common operator will understand that the term "confidentiality" is rare and boost it, while lowering the importance of the "clause" term, that is common. This will help you getting the most relevant results first.
+- The common operator can be seen as an alternative to the full-text search.</br>
+  One notable difference is that it allows to search on terms that would have been removed by the full-text analyzer. If I absolutely want to search for the &ldquo;Not Beyond Space Travel Agencies&rdquo;, I&rsquo;d like to be able to search for the &ldquo;Not&rdquo; keyword.
 
-To implement this use case:
+- The common operator is smart. It divides query terms between those which are rare into the index, and those which are commonly found into it.</br>
+  Rare terms will get a boost, common terms will be lowered. Let's say you have lots of contracts in your repository, and you search for "confidentiality clause". If both query terms were considered of same importance, most relevant results might be drowned. The common operator will understand that the term "confidentiality" is rare and boost it, while lowering the importance of the "clause" term, that is common. This will help you getting the most relevant results first.
 
-*   In the `analyzer` configuration, add an analyzer that will be used to index the main attachment's content:
+**To implement this use case:**
+
+- In the `analyzer` configuration, add an analyzer that will be used to index the main attachment's content:
 
 ```js
 "my_attachment_analyzer" : {
@@ -126,7 +127,8 @@ To implement this use case:
   "tokenizer" : "standard"
 }
 ```
-*   In the `properties` configuration, update the `ecm:binarytext` field mapping configuration to the following:
+
+- In the `properties` configuration, update the `ecm:binarytext` field mapping configuration to the following:
 
 ```js
 "ecm:binarytext" : {
@@ -145,20 +147,20 @@ To implement this use case:
 
 You can now configure hints in Nuxeo Studio using the common operator when querying on the `ecm:binarytext.common` index.
 
-
-
 ### Nuxeo Studio Configuration
 
-*   Drop any string field in the search layout of your content view
-*   Use the following values for the ES hints configuration:
-    *   Index: `ecm:binarytext.common`
-    *   Analyzer: `my_attachment_analyzer`
-    *   Operator: `common`
+- In your Page Provider in Nuxeo Studio, drop any string field as a predicate of your Page Provider.
+- Use the following values for the ES hints configuration:
+    - Index: `ecm:binarytext.common`
+    - Analyzer: `my_attachment_analyzer`
+    - Operator: `common`
+
+Once these values are filled, any value chosen for the main "Operator" item (`=`, `!=`, etc.) is ignored.
 
 ### Test case
 
-*   Create a new document that contains an attachment which itself contains the string "Not Beyond Space Travel Agency"
-*   Search for "Not", the document created previously appears in the results
+- Create a new document that contains an attachment which itself contains the string "Not Beyond Space Travel Agency"
+- Search for "Not", the document created previously appears in the results
 
 Please note this is a basic test case. The common operator is best used on very large indexes.
 
