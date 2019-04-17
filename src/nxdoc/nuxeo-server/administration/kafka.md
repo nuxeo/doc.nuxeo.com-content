@@ -3,10 +3,10 @@ title: Kafka
 description: Kafka configuration and integration with Nuxeo.
 review:
     comment: ''
-    date: '2017-12-07'
+    date: '2019-04-17'
     status: ok
 labels:
-    - lts2017-ok
+    - lts2019-ok
 toc: true
 tree_item_index: 1100
 ---
@@ -16,15 +16,28 @@ Kafka configuration and integration with Nuxeo.
 
 ## When to Use Kafka?
 
-[Nuxeo Stream]({{page page='nuxeo-stream'}}) (introduced in Nuxeo 9.3) requires [Kafka](https://kafka.apache.org/) to run in cluster mode.
+Since Nuxeo 10.10 it is highly recommended to use Kafka when running Nuxeo in cluster mode:
 
-Here are some good use cases for Kafka:
+- [Nuxeo Stream]({{page page='nuxeo-stream'}}) introduced in Nuxeo 9.3 requires [Kafka](https://kafka.apache.org/) to run in a distributed way.
+  Kafka will act as a message broker and enable reliable distributed processing by handling failover between nodes.
 
-- Mass processing like import or slow async processing, to go beyond the boundaries of Redis by not being limited by memory.
+  Without Kafka Nuxeo Stream relies on local storage using Chronicle Queue:
+   - the processing is not distributed among nodes
+   - there is no cluster wide metrics to follow processing progress
+   - the chronicle queue files need to be backup on each node
 
-- Interoperability with other products or system.
+- The [Nuxeo Bulk Service]({{page page='bulk-action-framework'}}) introduced in Nuxeo 10.10 relies on Nuxeo Stream and
+  therefor requires Kafka to work in a distributed way.
 
-- As [an alternative to Redis]({{page page='kafka'}}#no-redis) to deploy Nuxeo in cluster.
+
+Other reasons to use Kafka:
+
+- The WorkManager can be configured to use Nuxeo Stream and go beyond the boundaries of Redis by not being limited by memory.
+
+- To get rid of Redis deployment.
+
+- To gain interoperability using Kafka topic and Avro messaging.
+
 
 
 ## Kafka Setup
