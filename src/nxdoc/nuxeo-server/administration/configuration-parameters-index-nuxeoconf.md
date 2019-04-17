@@ -2499,6 +2499,12 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 </tr>
 
 <tr>
+<td colspan="1">`nuxeo.stream.chronicle.dir`</td>
+<td colspan="1">The directory where Chronicle Queue files are stored.</td>
+<td colspan="1">`${nuxeo.data.dir}/data/stream`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
 <td colspan="1">`nuxeo.stream.chronicle.retention.duration`</td>
 <td colspan="1">Default retention for Chronicle Queue Log, default to 4 days.</td>
 <td colspan="1">`4d`</td>
