@@ -7,10 +7,10 @@ labels:
     - architecture
     - cluster
     - content-review-lts2017
+    - content-review-lts2019
 review:
-    date: '2017-12-15'
-    status: requiresUpdates
-    comment: 'Kafka is now an available option for audit, workmanager or import usage since Nuxeo Server 9.3.'
+    date: '2019-04-17'
+    status: reviewed
 toc: true
 tree_item_index: 1220
 
