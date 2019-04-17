@@ -2415,7 +2415,78 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 <td colspan="1">`2000`</td>
 <td colspan="1">Since 9.3</td>
 </tr>
-
+<tr>
+<td colspan="1">`kafka.sasl.enabled`</td>
+<td colspan="1">Enable SASL authentication to communicate with Kafka brokers</td>
+<td colspan="1">`false`</td>
+<td colspan="1">Since 10.3/9.10-HF22</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.security.protocol`</td>
+<td colspan="1">When using SASL authentication, choose the protocol to communicate with brokers, valid values are: PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL</td>
+<td colspan="1">`SASL_PLAINTEXT`</td>
+<td colspan="1">Since 10.3/9.10-HF22</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.sasl.mechanism`</td>
+<td colspan="1">SASL mechanism used for client connections</td>
+<td colspan="1">`SCRAM-SHA-256`</td>
+<td colspan="1">Since 10.3/9.10-HF22</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.sasl.jaas.config`</td>
+<td colspan="1">JAAS login context parameters for SASL connections in the format used by JAAS configuration files. See [Kafka documentation for more information](https://kafka.apache.org/documentation/#security_sasl_scram_clientconfig).</td>
+<td colspan="1"></td>
+<td colspan="1">Since 10.3/9.10-HF22</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.ssl`</td>
+<td colspan="1">Use SSL to communicate with Kafka Broker</td>
+<td colspan="1">`false`</td>
+<td colspan="1">Since 10.3/9.10-HF22</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.truststore.path`</td>
+<td colspan="1">The location of the trust store file, empty path means no truststore</td>
+<td colspan="1"></td>
+<td colspan="1">Since 10.3/9.10-HF22</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.truststore.type`</td>
+<td colspan="1">The file format of the trust store file</td>
+<td colspan="1">`JKS`</td>
+<td colspan="1">Since 10.3/9.10-HF22</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.truststore.password`</td>
+<td colspan="1">The password for the trust store file. If a password is not set access to the truststore is still available, but integrity checking is disabled</td>
+<td colspan="1"></td>
+<td colspan="1">Since 10.3/9.10-HF22</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.keystore.path`</td>
+<td colspan="1">The location of the key store file used by the client for two-way authentication, empty value means no keystore</td>
+<td colspan="1"></td>
+<td colspan="1">Since 10.3/9.10-HF22</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.keystore.type`</td>
+<td colspan="1">The file format of the key store file</td>
+<td colspan="1">`JKS`</td>
+<td colspan="1">Since 10.3/9.10-HF22</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.keystore.password`</td>
+<td colspan="1">The store password for the key store file</td>
+<td colspan="1"></td>
+<td colspan="1">Since 10.3/9.10-HF22</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.chronicle.dir`</td>
+<td colspan="1">The directory where Chronicle Queue files are stored.</td>
+<td colspan="1">`${nuxeo.data.dir}/data/stream`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
 <tr>
 <td colspan="1">`nuxeo.stream.chronicle.retention.duration`</td>
 <td colspan="1">Default retention for Chronicle Queue Log, default to 4 days.</td>
