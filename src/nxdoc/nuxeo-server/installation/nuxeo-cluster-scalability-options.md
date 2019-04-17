@@ -7,10 +7,11 @@ labels:
     - architecture
     - cluster
     - content-review-lts2017
+    - content-review-lts2019
 review:
-    date: '2017-12-15'
     status: requiresUpdates
-    comment: 'Kakfa is now an available option for audit, workmanager or import usage since Nuxeo Server 9.3.'
+    comment: 'Images need to be updated: "Redis" must be replaced by "Kafka and/or Redis"'
+    date: '2019-04-17'
 toc: true
 tree_item_index: 1260
 
@@ -33,7 +34,24 @@ Applications requiring heavy processing like picture or video conversions can ta
 ![]({{file name='dedicated-processing-nodes.png'}} ?border=true)
 <!-- Source: https://www.lucidchart.com/documents/edit/0eb7242e-9a34-4d1f-8568-9682f8ab26a8 -->
 
-The async tasks can be managed in a distributed way using the [WorkManager]({{page page='work-and-workmanager'}}) and Redis.
+The async tasks can be managed in a distributed way using the [WorkManager]({{page page='work-and-workmanager'}}) with Redis or Kafka.
+
+### WorkManager and Kafka
+
+The WorkManager defines pools of workers, the size of a pool defines the maximum number of threads that can run concurrently on this node.
+
+When using Kafka each worker thread is a consumer of a Kafka topic containing works for the pool.
+
+The maximum concurrency for Kafka consumers is limited by the number of partitions in the topic.
+
+This means that if the video conversion pool size is set to 4 threads in Nuxeo,
+the maximum number of threads (cluster wide) that can run concurrently is limited by the number of partitions in the video conversion topic.
+
+By default we over-provision the number of partition with a factor 3, so there are 12 partitions when defining a work pool of 4.
+
+This is very handy to limit the processing throughput per pool at cluster level, adding nodes will scale up to an expected limit
+ but adding more nodes will not make the cluster collapse.
+
 
 ## Scaling the Queries
 
