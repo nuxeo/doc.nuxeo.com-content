@@ -2,7 +2,7 @@
 title: Hotfixes Installation Notes for Nuxeo Platform LTS 2017
 review:
     comment: ''
-    date: '2018-02-07'
+    date: '2019-04-17'
     status: ok
 labels:
     - lts2017-ok
@@ -90,9 +90,9 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ### StreamWorkManager Configuration
 
-It is now possible to use the StreamWorkManager implementation with large Work that exceed 1MB when serialized. The value is stored outside of the stream, in an external storage. For now the possible storages are the KeyValue store and the Transient store.
+It is now possible to use the StreamWorkManager implementation with large works that exceed 1MB when serialized. The value is stored outside of the stream, in an external storage. For now the possible storages are the KeyValue store and the Transient store.
 
-Here are the nuxeo.conf options to use to activate this feature for the StreamWorkManager:
+Here are the `nuxeo.conf` options to use to activate this feature for the StreamWorkManager:
 ```
 # Filter big work to be stored outside of the stream
 nuxeo.stream.work.computation.filter.enabled=true
@@ -124,7 +124,7 @@ To allow 10.10 behavior (which fixes the issue where the first version of a Note
 The behavior of quota computation and check has changed for versioning.
 Now we compute and check the quotas on the `aboutToCheckIn` event instead of computing the quotas on the `documentCheckedIn` one and checking the quotas on the `documentCheckedOut` one.
 
-This behavior is disabled by default and can be enabled by overriding `nuxeo.quota.size.check.on.aboutToCheckIn` property:
+This behavior is disabled by default and can be enabled by overriding the `nuxeo.quota.size.check.on.aboutToCheckIn` property:
 ```
   <require>org.nuxeo.ecm.quota.contrib</require>
 
@@ -140,7 +140,7 @@ The orphan versions cleanup is now disabled by default, and can be re-enabled (i
   <require>org.nuxeo.ecm.core.orphanVersionsCleanup</require>
   <extension point="listener" target="org.nuxeo.ecm.core.event.EventServiceComponent">
     <listener name="orphanVersionsCleanup" enabled="true" />
-  </extension> 
+  </extension>
 ```
 
 ## Hotfix 24
