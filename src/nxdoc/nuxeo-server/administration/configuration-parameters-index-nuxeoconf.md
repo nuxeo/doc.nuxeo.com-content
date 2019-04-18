@@ -2386,7 +2386,7 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 <td colspan="1">`localhost:9092`</td>
 <td colspan="1">Since 9.3</td>
 </tr>
-<<tr>
+<tr>
 <td colspan="1">`kafka.default.replication.factor`</td>
 <td colspan="1">Default replication factor per partition when creating a new Topic</td>
 <td colspan="1">`1`</td>
@@ -2497,6 +2497,12 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 </tr>
 
 <tr>
+<td colspan="1">`nuxeo.stream.chronicle.dir`</td>
+<td colspan="1">The directory where Chronicle Queue files are stored.</td>
+<td colspan="1">`${nuxeo.data.dir}/data/stream`</td>
+<td colspan="1">Since 9.3</td>
+</tr>
+<tr>
 <td colspan="1">`nuxeo.stream.chronicle.retention.duration`</td>
 <td colspan="1">Default retention for Chronicle Queue Log, default to 4 days.</td>
 <td colspan="1">`4d`</td>
@@ -2543,6 +2549,44 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 <td colspan="1">The factor to use on the Work Thread pool size to get the number of Log partition.</td>
 <td colspan="1">`3`</td>
 <td colspan="1">Since 9.3</td>
+</tr>
+
+<tr>
+<td colspan="1">`nuxeo.stream.work.computation.filter.enabled`</td>
+<td colspan="1">Filter work with a serialized size that exceed a threshold so they are stored outside of the stream.</td>
+<td colspan="1">`false`</td>
+<td colspan="1">Since 9.10</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.work.computation.filter.thresholdSize`</td>
+<td colspan="1">Threshold in bytes that is used to store work outside of the stream.</td>
+<td colspan="1">`1000000`</td>
+<td colspan="1">Since 9.10</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.work.computation.filter.class`</td>
+<td colspan="1">The class that implement the external storage of large work. Default is using a Transient store, there is also a KeyValue implementation `org.nuxeo.ecm.core.work.KeyValueStoreOverflowRecordFilter`.</td>
+<td colspan="1">`org.nuxeo.ecm.core.transientstore.computation.TransientStoreOverflowRecordFilter`</td>
+<td colspan="1">Since 9.10</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.work.computation.filter.storeName`</td>
+<td colspan="1">The storage name to use.</td>
+<td colspan="1">`default`</td>
+<td colspan="1">Since 9.10</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.work.computation.filter.storeKeyPrefix`</td>
+<td colspan="1">A key prefix to use on the external storage.</td>
+<td colspan="1">`bigRecord:`</td>
+<td colspan="1">Since 9.10</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.stream.work.computation.filter.storeTTL`</td>
+<td colspan="1">The time to live used the KeyValue storage implementation.
+This does not apply to the Transient store where the retention is fixed by its configuration.</td>
+<td colspan="1">`4d`</td>
+<td colspan="1">Since 9.10</td>
 </tr>
 
 <tr>

@@ -2,9 +2,9 @@
 title: Standard High Availability Nuxeo Cluster Architecture
 description: This page details standard architecture options to deploy a Nuxeo cluster.
 review:
-    comment: ''
-    date: '2017-12-15'
-    status: ok
+    status: requiresUpdates
+    comment: 'Images need to be updated, "Redis" must be replaced by "Kafka and/or Redis"'
+    date: '2019-04-17'
 labels:
     - lts2016-ok
     - deployment
@@ -265,7 +265,7 @@ The standard Nuxeo cluster architecture providing high availability is composed 
 1. Two load balancers in front with sticky sessions handling incoming requests and directing them to the appropriate Nuxeo server nodes.
 1. A reverse proxy to protect each Nuxeo server node (usually Apache or Nginx).
 1. At least two Nuxeo server nodes. You can add any number of nodes to scale out performances.
-1. At least three nodes for the Elasticsearch cluster, same for Redis. Contrarily to Nuxeo server nodes, these two components always require an odd number of nodes to avoid the split-brain problem, which means you need to add nodes by batches of two minimum when wishing to scale out performances.
+1. At least three nodes for the Elasticsearch cluster, same for Kafka and Redis if used. Contrarily to Nuxeo server nodes, these components always require an odd number of nodes to avoid the split-brain problem, which means you need to add nodes by batches of two minimum when wishing to scale out performances.
 1. A database system providing high availability. Each solution has its own options for this, therefore we can't go into further details here.
 1. A shared file system that is used to store binary files.
 
@@ -286,6 +286,7 @@ For example, considering Amazon AWS as a possible cloud infrastructure provider:
 - EC2 instances can be used for the Nuxeo server nodes. We provide a [Nuxeo server CloudFormation template]({{page page='deploying-nuxeo-on-amazon-aws'}}) to help in that regard.
 - EC2 instances can be used for Elasticsearch cluster nodes too. The Amazon ElasticCache service does not provide the required APIs at this point to allow us to have a completely managed cluster.
 - Amazon ElasticCache can be used for a managed Redis cluster. Another option is to have a cluster hosted and managed by RedisLabs.
+- Amazon Managed Streaming for Kafka ([MSK](https://aws.amazon.com/msk/)) is an option for Kafka if it is available in your AWS region.
 - Database can be handled through Amazon RDS, this is a native plug as there is nothing specific to Amazon in this case. MongoDB Atlas is also an option for a hosted MongoDB cluster.
 - An Amazon S3 bucket can be used for replicated file storage. Our BinaryManager is pluggable and we use it to leverage the S3 Storage capabilities.
 
@@ -310,8 +311,9 @@ A frequently asked question is whether some applications can be merged on the sa
 We see here how applications can be merged.
 1. The load balancers are usually deployed on separate machines from where the Nuxeo server nodes will be, as otherwise stopping a Nuxeo node could have consequences on serving the requests.
 2. On the machines where Nuxeo server nodes will be installed, a reverse proxy can be installed as well. It is lightweight, and having a reverse proxy for each Nuxeo node makes sense: if it fails for some reason, only the Nuxeo node behind it will be affected.
-3. Redis can be installed on the same machine as Nuxeo server: our Redis usage is usually low enough for that.
+3. Redis if used can be installed on the same machine as Nuxeo server: our Redis usage is usually low enough for that.
 4. Elasticsearch nodes have to be installed on dedicated machines for performance reasons. Elasticsearch uses half of the machine's memory for its heap and half for the system, and is not designed to share memory with another application using the JVM.
+5. Kafka cluster is better on dedicated machines for isolation purpose.
 
 ### Compact Deployment With Limited Failover
 
@@ -325,6 +327,7 @@ In this architecture:
 1. A total of two machines are prepared for the application cluster. Each machine holds a Nuxeo server node, a Redis node, and a reverse proxy. More machines can be added later for scalability purpose.
 1. Since we have two Redis nodes, we take advantage from it to configure Redis in [master / slave mode](https://redis.io/topics/replication).
 1. A single Elasticsearch node is used.
+1. A single Kafka node is used.
 
 #### Limitations
 ##### Potential Single Point of Failures
