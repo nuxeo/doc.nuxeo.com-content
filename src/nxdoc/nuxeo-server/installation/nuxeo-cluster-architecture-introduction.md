@@ -7,13 +7,13 @@ labels:
     - architecture
     - cluster
     - content-review-lts2017
-    - content-review-lts2019
+    - lts2019-ok
 review:
+    comment: ''
     date: '2019-04-17'
-    status: reviewed
+    status: ok
 toc: true
 tree_item_index: 1220
-
 ---
 
 {{! excerpt}}
@@ -25,6 +25,7 @@ This page introduces the principles and components of a Nuxeo cluster. If you ar
 {{/callout}}
 
 ## Cluster Basics
+
 Setting up a Nuxeo cluster consists of answering two main constraint types, independently or combined:
 1. **Scalability** - The setup has to scale easily without sacrificing performances to adapt to a varying load.
 1. **High Availability** - When something goes wrong, you should be able to restore service quickly, losing as little data as possible in the process.
@@ -84,7 +85,7 @@ Each database has its own solutions for high availability, therefore we may not 
 
 ## Elasticsearch
 
-Elasticsearch is used to relieve the database from the costliest operations.
+Elasticsearch is used to relieve the database from the costliest operations:
 - It keeps indexes on the documents in order to allow blazingly fast searches and modern search options like realtime filtering (AKA facets), even on very high volumes.
 - It stores the document's audit log. Since every operation on a document in Nuxeo is stored for possible audit purposes, the corresponding table would grow very rapidly and possibly reach millions of tuples when stored in the database. Using Elasticsearch, this is not a problem anymore.
 - It scales horizontally and provides constant performance even with growing content size.
@@ -92,15 +93,14 @@ Elasticsearch is used to relieve the database from the costliest operations.
 Elasticsearch remains an optional component and can be deactivated if needed. But except for some specific use cases where installation size and setup steps highly matter (for example, when embedding a Nuxeo server), it is highly recommended to take advantage of it. Refer to the [Elasticsearch setup]({{page page='elasticsearch-setup'}}) documentation for more information.
 
 {{#> callout type='info' heading='Number of Machines for Elasticsearch / Redis cluster'}}
-Note that **you always need to have an odd number of machines for Redis and Elasticsearch** (3, 5, 7...). It is required in order to safely handle failover when a network partioning error occurs.
+Note that **you always need to have an odd number of machines for Redis and Elasticsearch** (3, 5, 7,etc.). It is required in order to safely handle failover when a network partitioning error occurs.
 
-
-Imagine that your cluster gets cut in half: 2 nodes on side A cannot communicate anymore with the third node on side B. In this situation, if the master node is the one isolated on side B, failover can be achieved properly because a majority (the 2 nodes on side A) can elect a new master node between them and keep service available.<br /><br />
+Imagine that your cluster gets cut in half: 2 nodes on side A cannot communicate anymore with the third node on side B. In this situation, if the master node is the one isolated on side B, failover can be achieved properly because a majority (the 2 nodes on side A) can elect a new master node between them and keep service available.</br></br>
 
 If you had 4 nodes in the same situation, service wouldn't be available anymore because a majority could not be obtained when voting. This is known as the split-brain problem. This also means that the minimum number of nodes to obtain high availability is 3.
 {{/callout}}
 
-## Redis and/or a Kafka cluster
+## Redis And/Or Kafka Cluster
 
 When running in cluster mode, the Nuxeo nodes needs to communicate
 so the following services work in a distributed way:
@@ -110,8 +110,7 @@ so the following services work in a distributed way:
 - The **KeyValue Store** enabling distributed cache and a shared [Transient Store]({{page page='transient-store'}})
 - The **PubSub Service** can publish messages to all nodes and is used for cache invalidation
 
-
-Before Nuxeo 9.10, Redis was the only option for all the available distributed services:
+**Before Nuxeo 9.10**, Redis was the only option for all the available distributed services:
 <div class="table-scroll">
 <table class="hover">
 <tbody>
@@ -131,8 +130,7 @@ Before Nuxeo 9.10, Redis was the only option for all the available distributed s
 </table>
 </div>
 
-
-Since Nuxeo 9.10 and the introduction of Nuxeo Stream, there are more choice and
+**Since Nuxeo 9.10** and the introduction of Nuxeo Stream, there are more choice and
 it is even possible to [not use Redis]({{page version='910' space='nxdoc' page='kafka'}}#andquotno-redisandquot-nuxeo-cluster) when using Kafka and MongoDB:
 <div class="table-scroll">
 <table class="hover">
@@ -169,8 +167,7 @@ it is even possible to [not use Redis]({{page version='910' space='nxdoc' page='
 </table>
 </div>
 
-
-Since Nuxeo 10.10, there are KeyValue store implementations for SQL backend.
+**Since Nuxeo 10.10**, there are KeyValue store implementations for SQL backend.
 We strongly recommend the usage of Kafka to have a highly reliable Bulk Service.
 <div class="table-scroll">
 <table class="hover">
@@ -214,30 +211,31 @@ We strongly recommend the usage of Kafka to have a highly reliable Bulk Service.
 </table>
 </div>
 
-
 ### Redis
 
-As seen above Redis can be used for the WorkManager, KeyValue Store and PubSub service.
+As seen above, Redis can be used for the WorkManager, KeyValue Store and PubSub service.
 
-When a Redis instance or cluster is set up, you can safely stop your Nuxeo server nodes anytime without being worried of losing these jobs in the process.
+When a Redis instance or cluster is set up, you can safely stop your Nuxeo server nodes anytime without being worried about losing these jobs in the process.
 
-Keep in mind that Redis is always limited by its available memory which can be a problem on mass operation.
+Keep in mind that Redis is always limited by its available memory which can be a problem on a mass operation.
 
-For high availability, a Redis cluster with a minimum of three nodes is required (for the same reasons as Elasticsearch). Two options exist to handle automatic failover:
+For high availability, a Redis cluster with a minimum of three nodes is required (for the same reasons as Elasticsearch).
+
+Two options exist to handle automatic failover:
 
 ##### Redis Sentinel
 
-Redis Sentinel is the open-source option to provide automatic Redis node failover. Nuxeo server's API has been adapted to be used with Redis Sentinel, and some of our customers happily use it in production. Before choosing it though, you need to know that RedisLabs (creators of Redis) do not officially support it, which means that in case of a problem we will not be able to provide support either.
+Redis Sentinel is the open-source option to provide automatic Redis node failover. Nuxeo server's API has been adapted to be used with Redis Sentinel, and some of our customers happily use it in production. Before choosing it though, you need to know that RedisLabs (creators of Redis) does not officially support it, which means that in case of a problem we will not be able to provide support either.
 
-##### Redis Entreprise
+##### Redis Enterprise
 
-Redis Entreprise is our recommendation for a high availability Redis cluster, as it gets support from RedisLabs. You may visit the [RedisLabs website](https://redislabs.com/why-redis/redis-enterprise/) for more information about the product.
+Redis Enterprise is our recommendation for a high availability Redis cluster, as it gets support from RedisLabs. You may visit the [RedisLabs website](https://redislabs.com/why-redis/redis-enterprise/) for more information about the product.
 
 ### Kafka
 
 Since Nuxeo 10.10 Kafka is recommended in cluster mode so the Bulk Service can be distributed and handle failover between Nuxeo nodes.
 
-When used as WorkManager implementation you can safely stop a Nuxeo nodes anytime without being worried of losing any processing.
+When used as WorkManager implementation you can safely stop a Nuxeo node anytime without being worried of losing any processing.
 
 When the KeyValue store relies on the repository's backend, you don't need a Redis cluster anymore.
 
