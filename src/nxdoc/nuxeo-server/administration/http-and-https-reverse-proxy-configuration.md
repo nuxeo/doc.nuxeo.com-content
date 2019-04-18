@@ -284,11 +284,15 @@ A reverse proxy can be used to buffer uploads and downloads so that uploads and 
 For this configuration, you will need to load and enable the `mod_proxy` and `mod_proxy_http` modules.
 
 ```
-ProxyPass /nuxeo/ http://NuxeoServerInternalIp:8080/nuxeo/
+ProxyPass /nuxeo/ http://NuxeoServerInternalIp:8080/nuxeo/ nocanon
 ProxyPassReverse /nuxeo/ http://NuxeoServerInternalIp:8080/nuxeo/
 ProxyPreserveHost On
 
 ```
+
+{{#> callout type='note'}}
+The `nocanon` keyword for `ProxyPass` is required to prevent URL canonicalization on Apache, since it decodes certain characters (such as "`;`") before passing them on to the Nuxeo server. In the absence of `nocanon`, some URLs won't be parsed correctly.
+{{/callout}}
 
 You can also use rewrite rules to achieve the same result:
 
