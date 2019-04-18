@@ -9,6 +9,7 @@ labels:
 toc: true
 tree_item_index: 1100
 ---
+
 {{! excerpt}}
 Kafka configuration and integration with Nuxeo.
 {{! /excerpt}}
@@ -20,14 +21,12 @@ Since Nuxeo 10.10 it is highly recommended to use Kafka when running Nuxeo in cl
 - [Nuxeo Stream]({{page page='nuxeo-stream'}}) introduced in Nuxeo 9.3 requires [Kafka](https://kafka.apache.org/) to run in a distributed way.
   Kafka will act as a message broker and enable reliable distributed processing by handling failover between nodes.
 
-  Without Kafka Nuxeo Stream relies on local storage using Chronicle Queue:
+  Without Kafka, Nuxeo Stream relies on local storage using Chronicle Queue:
    - the processing is not distributed among nodes
    - there is no cluster wide metrics to follow processing progress
    - the chronicle queue files need to be backup on each node
 
-- The [Nuxeo Bulk Service]({{page page='bulk-action-framework'}}) introduced in Nuxeo 10.10 relies on Nuxeo Stream and
-  therefor requires Kafka to work in a distributed way.
-
+- The [Nuxeo Bulk Service]({{page page='bulk-action-framework'}}) introduced in Nuxeo 10.10 relies on Nuxeo Stream and therefore requires Kafka to work in a distributed way.
 
 Other reasons to use Kafka:
 
@@ -36,8 +35,6 @@ Other reasons to use Kafka:
 - To get rid of Redis deployment.
 
 - To gain interoperability using Kafka topic and Avro messaging.
-
-
 
 ## Kafka Setup
 
