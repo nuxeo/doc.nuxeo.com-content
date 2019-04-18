@@ -7,14 +7,13 @@ labels:
     - architecture
     - cluster
     - content-review-lts2017
-    - content-review-lts2019
+    - lts2019-ok
 review:
-    status: requiresUpdates
-    comment: 'Images need to be updated: "Redis" must be replaced by "Kafka and/or Redis"'
+    status: ok
+    comment: ''
     date: '2019-04-17'
 toc: true
 tree_item_index: 1260
-
 ---
 
 {{! excerpt}}
@@ -40,18 +39,15 @@ The async tasks can be managed in a distributed way using the [WorkManager]({{pa
 
 The WorkManager defines pools of workers, the size of a pool defines the maximum number of threads that can run concurrently on this node.
 
-When using Kafka each worker thread is a consumer of a Kafka topic containing works for the pool.
+When using Kafka, each worker thread is a consumer of a Kafka topic containing works for the pool.
 
 The maximum concurrency for Kafka consumers is limited by the number of partitions in the topic.
 
-This means that if the video conversion pool size is set to 4 threads in Nuxeo,
-the maximum number of threads (cluster wide) that can run concurrently is limited by the number of partitions in the video conversion topic.
+This means that if the video conversion pool size is set to 4 threads in Nuxeo, the maximum number of threads (cluster wide) that can run concurrently is limited by the number of partitions in the video conversion topic.
 
-By default we over-provision the number of partition with a factor 3, so there are 12 partitions when defining a work pool of 4.
+By default, we over-provision the number of partition with a factor 3, so there are 12 partitions when defining a work pool of 4.
 
-This is very handy to limit the processing throughput per pool at cluster level, adding nodes will scale up to an expected limit
- but adding more nodes will not make the cluster collapse.
-
+This is very handy to limit the processing throughput per pool at the cluster level, adding nodes will scale up to an expected limit but adding more nodes will not make the cluster collapse.
 
 ## Scaling the Queries
 

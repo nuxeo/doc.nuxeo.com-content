@@ -2,8 +2,8 @@
 title: Standard High Availability Nuxeo Cluster Architecture
 description: This page details standard architecture options to deploy a Nuxeo cluster.
 review:
-    status: requiresUpdates
-    comment: 'Images need to be updated, "Redis" must be replaced by "Kafka and/or Redis"'
+    status: ok
+    comment: ''
     date: '2019-04-17'
 labels:
     - lts2016-ok
@@ -13,6 +13,7 @@ labels:
     - architecture
     - lts2017-ok
     - university
+    - lts2019-ok
 toc: true
 confluence:
     ajs-parent-page-id: '3866685'
@@ -241,8 +242,8 @@ history:
         date: '2010-03-01 00:55'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
 This page details standard architecture options to deploy a Nuxeo cluster.
 {{! /excerpt}}
@@ -311,7 +312,7 @@ A frequently asked question is whether some applications can be merged on the sa
 We see here how applications can be merged.
 1. The load balancers are usually deployed on separate machines from where the Nuxeo server nodes will be, as otherwise stopping a Nuxeo node could have consequences on serving the requests.
 2. On the machines where Nuxeo server nodes will be installed, a reverse proxy can be installed as well. It is lightweight, and having a reverse proxy for each Nuxeo node makes sense: if it fails for some reason, only the Nuxeo node behind it will be affected.
-3. Redis if used can be installed on the same machine as Nuxeo server: our Redis usage is usually low enough for that.
+3. Redis, if used, can be installed on the same machine as Nuxeo server: our Redis usage is usually low enough for that.
 4. Elasticsearch nodes have to be installed on dedicated machines for performance reasons. Elasticsearch uses half of the machine's memory for its heap and half for the system, and is not designed to share memory with another application using the JVM.
 5. Kafka cluster is better on dedicated machines for isolation purpose.
 
@@ -330,10 +331,13 @@ In this architecture:
 1. A single Kafka node is used.
 
 #### Limitations
+
 ##### Potential Single Point of Failures
+
 Two potential single points of failure exist in this architecture: the Elasticsearch server and the database server.
 
 ###### Database Server
+
 The database server is the most impacting of the two; if it fails, you won't able to store or retrieve documents anymore. To prevent the database server from becoming a single point of failure, you have several options:
 
 - Use database replication
@@ -341,6 +345,7 @@ The database server is the most impacting of the two; if it fails, you won't abl
 - Use a distributed / failsafe database like MongoDB
 
 ###### Elasticsearch Server
+
 Some features won't be available in your application during an Elasticsearch downtime: search screens and views that depend on the Elasticsearch index mainly. But even in a hard failure situation leading to complete data loss, it will not be that impacting as long as you configure your Nuxeo Server to store audit and sequences in the database: after reinstalling Elasticsearch the document index can be rebuilt easily using Nuxeo Server.
 
 #### Redis in Master / Slave Mode
