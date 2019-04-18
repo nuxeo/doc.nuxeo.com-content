@@ -76,7 +76,7 @@ The goal of this section is to provide ready to use examples. They can be follow
 
 - [How to Collaborate on a Studio Project ]({{page page='how-to-collaborate-on-a-studio-project'}})
 - [How to Configure your Login Page]({{page version='' space='studio' page='branding'}})
-- [How to Develop Faster with Git and Your Nuxeo Studio Project]({{page space='nxdoc' page='how-to-work-with-git-and-studio-project'}})
+- [How to Develop Faster with Git and Your Nuxeo Studio Project]({{page page='how-to-work-with-git-and-studio-project'}})
 
 {{/panel}}</div></div>
 
