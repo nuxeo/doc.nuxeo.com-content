@@ -22,6 +22,7 @@ Create content structures and browse to compare your documents. For quicker acce
 - [Favorites]({{page version='' space='userdoc' page='favorites'}})
 - [Search]({{page version='' space='userdoc' page='search'}})
 - [Comparing]({{page version='' space='userdoc' page='compare'}})
+- [Tags]({{page space='userdoc' page='tags'}})
 
 {{/panel}}
 </div>
