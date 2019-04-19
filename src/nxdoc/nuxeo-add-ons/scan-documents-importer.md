@@ -121,6 +121,21 @@ Watch the related courses on Nuxeo University
 
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
+Please note that the XML can only be mapped to non-multivalued and non-complex fields. If you need this functionality, you will need the advanced XML parsing.
+
+Advanced XML parsing can be achieved by adding the following bundles into your platform (copy the jar files into the `nxserver/bundles` directory):
+
+1.  [nuxeo-importer-xml-parser](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;gav~org.nuxeo.ecm.platform~nuxeo-importer-xml-parser~~~~kw,versionexpand)
+2.  [nuxeo-importer-scan-xml-parser](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;gav~org.nuxeo.ecm.platform~nuxeo-importer-scan-xml-parser~~~~kw,versionexpand)
+
+These bundles provide you with a new service (`org.nuxeo.ecm.platform.importer.xml.parser.XMLImporterComponent`) and extension points that need to be used instead of the regular ones:
+
+1.  `documentMapping` to determine which document type should be created depending on a set of conditions
+
+2.  `attributeMapping` to do the XML parsing and map to the corresponding metadata
+
+A detailed documentation on the advanced XML parsing usage can be found on the [nuxeo-importer-xml-parser GitHub page](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-platform-importer/nuxeo-importer-xml-parser).
+
 
 ## Import process
 
@@ -145,26 +160,109 @@ The scan import process is composed of several elements:
 
 ## Configuration
 
-A step by step example explaining the addon configuration can be found in the Nuxeo blogs : [[Monday Dev Heaven] Multi-threaded, transactional bulk import with Nuxeo](http://blogs.nuxeo.com/development/2012/03/monday-dev-heaven-multithreaded-transactional-documents-import-nuxeo/)
+The import is triggered by a simple event fired by the scheduler service. The default value is set to fire the event every 30 seconds as you can see on the contribution below. If you are used to good old Unix cron, be careful, the syntax is slightly different since we are using [quartz](http://www.quartz-scheduler.org/documentation/quartz-1.x/tutorials/crontrigger).
 
-Please note that the XML can only be mapped to non-multivalued and non-complex fields. If you need this functionality, see the advanced XML parsing section.
+{{#> panel type='code' heading='Scheduler to trigger the import'}}
+```xml
+<!-- define scheduler event to trigger the import -->
+  <extension
+    target="org.nuxeo.ecm.platform.scheduler.core.service.SchedulerRegistryService"
+    point="schedule">
+    <schedule id="scanImporter">
+      <username>Administrator</username>
+      <password>Administrator</password>
+      <eventId>ScanIngestionStart</eventId>
+      <eventCategory>default</eventCategory>
+      <!-- every 30 seconds -->
+      <!-- only edit this part !!! -->
+      <cronExpression>*/30 * * * * ?</cronExpression>
+    </schedule>
+  </extension>
+```
+{{/panel}}
 
-A [Java mapper class example](https://github.com/nuxeo/nuxeo-platform-importer/blob/master/nuxeo-importer-scan/src/test/java/org/nuxeo/platform/scanimporter/tests/SampleMapper.java) can be found on GitHub. This allows to create a specific Nuxeo document type depending on the XML source.
+Then, you need to configure the importer. In the following example you will specify the source and destination folder of the resources to import, where to import the documents in the repository, the number of concurrent import threads, the size of the document batch to import between commits, etc..
 
-## Advanced XML Parsing
+{{#> panel type='code' heading='XML Extension to configure the importer'}}
+```xml
+<extension target="org.nuxeo.ecm.platform.scanimporter.service.ScannedFileMapperComponent"
+    point="config">
+        <!-- define here importer configuration -->
+        <importerConfig>
+            <!-- folder that holds the data to be imported -->
+            <sourcePath>/home/importer/testdata</sourcePath>
+            <!-- folder where xml files will be moved when processed (files will be deleted if directory is not set or does not exist)-->
+            <processedPath>/home/importer/testdata_out</processedPath>
+            <!-- number of threads used by the importer : keep it to 1 if using H2 or you will break H2's lucene index -->
+            <nbThreads>1</nbThreads>
+            <!-- define how many documents are imported between 2 commits -->
+            <batchSize>10</batchSize>
+            <!-- Specify the path of the root document where you want to import your documents -->
+            <targetPath>/default-domain/workspaces</targetPath>
+            <!-- default to true -->
+            <createInitialFolder>true</createInitialFolder>
+            <!-- default to false -->
+            <mergeInitialFolder>false</mergeInitialFolder>
+            <!-- Looks for XML file and use mapping configuration, default to true. -->
+            <useXMLMapping>true</useXMLMapping>
+        </importerConfig>
+  </extension>
+```
+{{/panel}}
 
-Advanced XML parsing for complex and / or multivalued fields can be achieved by adding the following bundles into your platform (copy the jar files into the `nxserver/bundles` directory):
+If you choose to use the XML mapping, you can configure it with an extension point contribution as you can see in the following example.
 
-1.  [nuxeo-importer-xml-parser](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;gav~org.nuxeo.ecm.platform~nuxeo-importer-xml-parser~~~~kw,versionexpand)
-2.  [nuxeo-importer-scan-xml-parser](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;gav~org.nuxeo.ecm.platform~nuxeo-importer-scan-xml-parser~~~~kw,versionexpand)
+{{#> panel type='code' heading='XML Extension for the XML mapping of the import file'}}
+```xml
+<!-- Doctype to create depending on XML formatting
+     In this case, having an invoice tag means I should create an Invoice document in Nuxeo -->
+<extension target="org.nuxeo.ecm.platform.importer.xml.parser.XMLImporterComponent" point="documentMapping">
+    <docConfig tagName="invoice">
+      <docType>Invoice</docType>
+    </docConfig>
+</extension>
 
-These bundles provide you with a new service (`org.nuxeo.ecm.platform.importer.xml.parser.XMLImporterComponent`) and extension points that need to be used instead of the regular ones:
+<!-- XML to metadata mapping
+    In this case, my invoice schema is as follows:
+    supplier                          string
+    amount                            float
+    orderdate                         date
+    planneddeliverydate               date
+		items								complex, multivalued
+			ref								    string
+			description						string
+			amount							  float
+			deliverydate					date
+-->
+<extension target="org.nuxeo.ecm.platform.importer.xml.parser.XMLImporterComponent" point="attributeMapping">
+    <attributeConfig tagName="order_number" docProperty="dc:title" xmlPath="@value"/>
+  <attributeConfig tagName="software_source" docProperty="dc:source" xmlPath="@value"/>
+    <attributeConfig tagName="supplier" docProperty="invoice:supplier" xmlPath="@value"/>
+  <attributeConfig tagName="total_incl_taxes" docProperty="invoice:amount" xmlPath="@value"/>
+  <attributeConfig tagName="order_date" docProperty="invoice:orderdate" xmlPath="@value"/>
+  <attributeConfig tagName="planned_delivery_date" docProperty="invoice:planneddeliverydate" xmlPath="@value"/>
 
-1.  `documentMapping` to determine which document type should be created depending on a set of conditions
+  <attributeConfig tagName="file" docProperty="file:content">
+        <mapping documentProperty="filename">@name</mapping>
+        <mapping documentProperty="content">@name</mapping>
+    </attributeConfig>
 
-2.  `attributeMapping` to do the XML parsing and map to the corresponding metadata
+    <attributeConfig tagName="item" docProperty="invoice:items">
+       <mapping documentProperty="ref">ref/text()</mapping>
+    <mapping documentProperty="description">desc/text()</mapping>
+    <mapping documentProperty="amount">amount/text()</mapping>
+    <mapping documentProperty="deliverydate">
+             #{
+                String date = currentElement.selectNodes('delivery_date/text()')[0].getText().trim();
+              return Fn.parseDate(date, 'yyyy.MM.dd')
+        }
+        </mapping>
+  </attributeConfig>
+</extension>
+```
+{{/panel}}
 
-A detailed documentation on the advanced XML parsing usage can be found on the [nuxeo-importer-xml-parser GitHub page](https://github.com/nuxeo/nuxeo-platform-importer/tree/master/nuxeo-importer-xml-parser). To get you started, below is a working example with the original XML file and the corresponding XML configuration that can be pasted into Nuxeo Studio.
+At the end, below is an example of XML file to import, working with the configuration previously described.
 
 {{#> panel type='code' heading='Original XML file'}}
 ```xml
@@ -198,57 +296,8 @@ A detailed documentation on the advanced XML parsing usage can be found on the [
 ```
 {{/panel}}
 
-{{#> panel type='code' heading='Corresponding XML extension into Nuxeo Studio'}}
-```xml
-<!-- Doctype to create depending on XML formatting
-     In this case, having an invoice tag means I should create an Invoice document in Nuxeo -->
-<extension target="org.nuxeo.ecm.platform.importer.xml.parser.XMLImporterComponent" point="documentMapping">
-    <docConfig tagName="invoice">
-      <docType>Invoice</docType>
-    </docConfig>
-</extension>
 
-<!-- XML to metadata mapping
-     In this case, my invoice schema is as follows:
-     	order_number 						string
-		software_source						string
-		supplier							string
-		total_inc_taxes						float
-		order_date							date
-		planned_delivery_date				date
-		items								complex, multivalued
-			ref								string
-			description						string
-			amount							float
-			deliverydate					date
--->
-<extension target="org.nuxeo.ecm.platform.importer.xml.parser.XMLImporterComponent" point="attributeMapping">
-    <attributeConfig tagName="order_number" docProperty="dc:title" xmlPath="@value"/>
-  <attributeConfig tagName="software_source" docProperty="dc:source" xmlPath="@value"/>
-    <attributeConfig tagName="supplier" docProperty="invoice:supplier" xmlPath="@value"/>
-  <attributeConfig tagName="total_incl_taxes" docProperty="invoice:amount" xmlPath="@value"/>
-  <attributeConfig tagName="order_date" docProperty="invoice:orderdate" xmlPath="@value"/>
-  <attributeConfig tagName="planned_delivery_date" docProperty="invoice:planneddeliverydate" xmlPath="@value"/>
-
-  <attributeConfig tagName="file" docProperty="file:content">
-        <mapping documentProperty="filename">@name</mapping>
-        <mapping documentProperty="content">@name</mapping>
-    </attributeConfig>
-
-    <attributeConfig tagName="item" docProperty="invoice:items">
-       <mapping documentProperty="ref">ref/text()</mapping>
-    <mapping documentProperty="description">desc/text()</mapping>
-    <mapping documentProperty="amount">amount/text()</mapping>
-    <mapping documentProperty="deliverydate">
-             #{
-                String date = currentElement.selectNodes('delivery_date/text()')[0].getText().trim();
-              return Fn.parseDate(date, 'yyyy.MM.dd')
-        }]]>
-        </mapping>
-  </attributeConfig>
-</extension>
-```
-{{/panel}}
+A [Java mapper class example](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-platform-importer/nuxeo-importer-scan/src/test/java/org/nuxeo/platform/scanimporter/tests/SampleMapper.java) can be found on GitHub. This allows to create a specific Nuxeo document type depending on the XML source.
 
 &nbsp;
 
