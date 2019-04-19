@@ -187,7 +187,7 @@ Unlike subjects in the metadata of the document, you don't have to choose tags i
 
 You can then use the tag cloud to find all documents that have the same tags.
 
-![]({{file name='tag-cloud.png'}} ?border=true) 
+![]({{file name='tag-cloud.png'}} ?border=true)
 
 Documents can be tagged in workspaces and in sections. When a document is published, the tags applied in the workspaces are published with the document. Users can add a tag on a document as soon as they can access the document, i.e. as soon as they have reading permissions.
 
@@ -195,7 +195,7 @@ To tag a document, go on the **Summary** tab of the document and click on ![]({{
 
 ![]({{file name='tags-add.png'}} ?w=350,border=true)
 
-To remove a tag from a document, you need to be the user who added the tag on the document or have at least Edit permission on the document. Click on the icon ![]({{file name='delete.png' page='icons-index'}}). The tag is immediately removed.
+To remove a tag from a document, you need to be the user who added the tag on the document or have at least Edit permission on the document. Click on the icon ![]({{file space='userdoc' name='delete.png' page='icons-index'}}). The tag is immediately removed.
 
 ### Tags, Versions and Publication
 

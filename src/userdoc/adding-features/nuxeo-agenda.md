@@ -169,6 +169,6 @@ The features below are available on events:
 
 *   [Relations]({{page page='editing-content'}}#relations)
 *   [Comments]({{page page='collaborative-features'}}#comments)
-*   [Tags]({{page page='tags'}})
+*   [Tags]({{page page='tags-jsf-ui'}})
 
 {{! /multiexcerpt}}

@@ -160,7 +160,7 @@ To create a 3D document, you can either attach the 3D file as main content of th
 Available features on 3D document type:
 - [Edit metadata]({{page version='' space='userdoc' page='content-edit'}})
 - [Versioning of document]({{page version='' space='userdoc' page='version'}})
-- [Tagging]({{page version='' space='nxdoc' page='tags'}})
+- [Tagging]({{page version='' space='nxdoc' page='tagging'}})
 - [Add to collections]({{page version='' space='userdoc' page='collections-web-ui'}})
 - [Relations]({{page version='' space='nxdoc' page='editing-content'}}#relations)
 - [Publishing]({{page version='' space='userdoc' page='share'}})
