@@ -3,7 +3,7 @@ title: LDAP and Active Directory
 description: Discover how to set up your Nuxeo Instance to use a LDAP directory.
 review:
     comment: ''
-    date: '2017-01-06'
+    date: '2019-04-23'
     status: ok
 labels:
     - lts2016-ok
@@ -29,6 +29,11 @@ confluence:
     source_link: /display/NXDOC/Using+a+LDAP+Directory
 tree_item_index: 130
 history:
+    -
+        author: Damon Brown
+        date: '2019-04-23 11:56'
+        message: 'Added detailed configuration documentation'
+        version: '39'
     -
         author: Damien Metzler
         date: '2015-12-08 11:18'
@@ -223,16 +228,15 @@ history:
 ---
 In the Nuxeo Platform, users and groups are managed by directories. If you want your Nuxeo instance to use a LDAP directory you will need to:
 
-*   configure a user directory pointing to your LDAP server(s),
-*   configure a group directory pointing to your LDAP server(s) (if you need LDAP groups).
+* configure a user directory pointing to your LDAP server(s),
+* configure a group directory pointing to your LDAP server(s) (if you need LDAP groups).
 
 Of course you can have a specific custom config where:
 
-*   you use a custom user / group schema,
-*   you use several LDAP directories, or a mix of SQL and LDAP directories.
+* you use a custom user / group schema,
+* you use several LDAP directories, or a mix of SQL and LDAP directories.
 
 But for the most common use case, all you want to do is map the default `userDirectory` to your LDAP Server. Since groups are used in Nuxeo to associate permissions with content, fetching groups from LDAP is usually not very efficient: LDAP groups are usually not designed for that.
-
 
 ## Configuration
 
@@ -267,59 +271,142 @@ Groups are defined on the `groups` element (also referencing already contributed
     <listingMode>search_only</listingMode>
 </groups>
 ```
+
 ## Default Users and Groups Configuration
 
 By default, the platform's administrator is the principal "Administrator". On the same [contribution to the UserManager extension point](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.usermanager.UserService--userManager) you can define which principal from the remote identity provider will be the administrator of the application, instead of Administrator. That way you can assign a "real" user. This is done using the `defaultAdministratorId` element.
 
 You can also choose a group from your company's directory instead of using the default "administrators" group, to determine the users who will benefit from all the rights in the platform. This is done using the `administratorsGroup` element.
 
-There are 2 ways to configure your LDAP config:
-    *   Defining all out-of-the-box LDAP variables in `nuxeo.conf`
-    *   Contributing the whole XML config file
+There are 2 ways to define your LDAP configuration:
+
+* Set all out-of-the-box LDAP variables in `nuxeo.conf`
+* Providing an XML contribution for your LDAP configuration
 
 The first approach allows you to simply reuse the default LDAP configuration template [here](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common/config/default-ldap-users-directory-bundle.xml.nxftl) by providing values for each variable defined in this template. The advantage of that solution is you don't have to deal with future upgrades config changes as you simply define variables in `nuxeo.conf`. If changes are required then the template will be automatically updated at the future upgrades.
 
-If you need to add other custom setting where the template doesn't define any variable for that config then the second option would be better. You will have to maintain this config file for future Nuxeo upgrades.
+If you need to add other custom setting where the template doesn't define any variable for that config then the second option would be better. You will have to maintain this contribution for future Nuxeo upgrades.
 
-## Simple configuration Example Using `nuxeo.conf` (Recommended)
+## LDAP Configuration Variables (nuxeo.conf)
 
-Here is the list of variables to define in `nuxeo.conf` to enable your LDAP integration:
-See XML config example below to get values examples.
+{{#> callout type='info'}}LDAP settings vary widely across vendors and organizations.  Please check with your LDAP administrator to properly configure LDAP authentication.{{/callout}}
 
-```
+To enable LDAP authentication, add the following properties to your `nuxeo.conf` file.  Default settings are shown with _**bold italics**_, while example settings are shown with `monotype`.
+
+### Connection Parameters
+
+| Property | Values | Description |
+|----------------------------|:--------------------------------:|--------------------------------------------------------------------------------------------------------|
+| nuxeo.directory.type | _**default**_, multi, ldap | Select where Users and Groups are managed - `default`: Nuxeo Database, `ldap`: LDAP, `multi`: Nuxeo Database or LDAP |
+| nuxeo.ldap.url | `ldaps://ldap.example.com` | [LDAP URL](https://ldap.com/ldap-urls/) |
+| nuxeo.ldap.binddn | `cn=nuxeoldap,dc=example,dc=com` | Bind DN provided by your LDAP administrator |
+| nuxeo.ldap.bindpassword | `secret value` | Bind Password provided by your LDAP administrator |
+| nuxeo.ldap.retries | _**5**_ | Number of times to retry query |
+| nuxeo.ldap.query.sizeLimit | _**200**_ | Maximum number of entries to return per query |
+| nuxeo.ldap.query.timeLimit | _**0**_ | Query timeout in milliseconds (0 means no timeout) |
+
+### Default Mapping
+
+| Property | Values | Description |
+|----------------------------|:--------------------------------:|--------------------------------------------------------------------------------------------------------|
+| nuxeo.ldap.defaultAdministratorId | `johndoe` | Trusted user that is assigned Administrative privileges |
+| nuxeo.ldap.defaultMembersGroup | _**members**_ | Nuxeo Group assigned to properly authenticated LDAP users |
+
+### User Search Parameter
+
+| Property | Values | Description |
+|----------------------------|:--------------------------------:|--------------------------------------------------------------------------------------------------------|
+| nuxeo.ldap.user.searchBaseDn | `o=users,dc=example,dc=com` | Base User DN provided by your LDAP administrator |
+| nuxeo.ldap.user.searchClass | _**person**_ | Search class used to locate Users within the directory |
+| nuxeo.ldap.user.searchScope | _**onelevel**_, subtree, object | Search scope used to locate Users within the directory - `onelevel`: search children of base DN, `subtree`: search whole subtree of base DN, `object`: search only base DN |
+| nuxeo.ldap.user.searchBehavior | _**subany**_, subinitial, subfinal | Specify how partial user identifiers are matched against directory entries - `subany`: Matches any substring, `subinitial`: Matches start of string, `subfinal`: Matches end of string |
+| nuxeo.ldap.user.readonly | _**true**_, false | Enable or disable modification of User details from Nuxeo - requires authorized bind DN |
+
+### User Mapping Parameters
+
+| Property | Values | Description |
+|----------------------------|:--------------------------------:|--------------------------------------------------------------------------------------------------------|
+| nuxeo.ldap.user.mapping.rdn | `cn` | Relative distinguished name for the LDAP user |
+| nuxeo.ldap.user.mapping.username | `cn` | Base User DN provided by your LDAP administrator |
+| nuxeo.ldap.user.mapping.password | `userPassword` | LDAP attribute containing the user's credentials |
+| nuxeo.ldap.user.mapping.firstname | `givenName` | LDAP attribute containing the user's first name |
+| nuxeo.ldap.user.mapping.lastname | `sn` | LDAP attribute containing the user's last name |
+| nuxeo.ldap.user.mapping.company | `ou` | LDAP attribute containing the user's company (optional) |
+| nuxeo.ldap.user.mapping.email | `mail` | LDAP attribute containing the user's email address |
+
+### Group Search Parameters
+
+| Property | Values | Description |
+|----------------------------|:--------------------------------:|--------------------------------------------------------------------------------------------------------|
+| nuxeo.user.group.storage | _**default**_, userLdapOnly, multiUserGroup, multiUserSqlGroup, ldapUserMultiGroup | Select how Groups are added to a User within Nuxeo - `default`: Users and Groups from LDAP, `userLdapOnly`: Only Users from LDAP, `multiUserGroup`: Users and Groups from multiple directories (LDAP or Nuxeo database), `multiUserSqlGroup`: Users from multiple directories (LDAP or Nuxeo database) and Groups from Nuxeo database, `ldapUserMultiGroup`: Users from LDAP and Groups from multiple directories (LDAP or Nuxeo database) |
+| nuxeo.ldap.group.searchBaseDn | `o=groups,dc=example,dc=com` | Base Group DN provided by your LDAP administrator |
+| nuxeo.ldap.group.searchFilter | _**(\|(objectClass=groupOfUniqueNames)(objectClass=groupOfURLs))**_ | Search filter used to return Group entries from the LDAP server |
+| nuxeo.ldap.group.searchScope | _**onelevel**_, subtree, object | Search scope used to locate Groups within the directory - `onelevel`: search children of base DN, `subtree`: search whole subtree of base DN, `object`: search only base DN |
+| nuxeo.ldap.group.readonly | _**true**_, false | Enable or disable modification of Group details from Nuxeo - requires authorized bind DN |
+
+### Group Mapping Parameters
+
+| Property | Values | Description |
+|----------------------------|:--------------------------------:|--------------------------------------------------------------------------------------------------------|
+| nuxeo.ldap.group.mapping.rdn | `cn` | Relative distinguished name for LDAP groups |
+| nuxeo.ldap.group.mapping.name | `cn` | LDAP attribute containing the group name |
+| nuxeo.ldap.group.mapping.label | `description` | LDAP attribute continaing the group display label |
+| nuxeo.ldap.group.mapping.members.staticAttributeId | _**uniqueMember**_ | LDAP attribute containing the static group members |
+| nuxeo.ldap.group.mapping.members.dynamicAttributeId | _**memberURL**_ | LDAP attribute containing the query for the dynamic group members |
+
+### Emergency User
+
+The Emergency Administrator may be selectively enabled to provide access to the Nuxeo Server when other forms of authentication are not available.
+
+| Property | Values | Description |
+|----------------------------|:--------------------------------:|--------------------------------------------------------------------------------------------------------|
+| nuxeo.user.emergency.enable | _**false**_, true | Enable or disable the emergency user |
+| nuxeo.user.emergency.username | _**MyAdministrator**_ | Emergency administrator username |
+| nuxeo.user.emergency.password | `secret value` | Password for emergency administrator |
+| nuxeo.user.emergency.firstname | `Emergency` | Emergency administrator first name |
+| nuxeo.user.emergency.lastname | `Administrator` | Emergency administrator last name |
+
+## Default `nuxeo.conf` Configuration Example
+
+```properties
 nuxeo.directory.type=ldap
 nuxeo.ldap.url=
 nuxeo.ldap.binddn=
 nuxeo.ldap.bindpassword=
-nuxeo.ldap.retries=
+nuxeo.ldap.retries=5
+nuxeo.ldap.query.sizeLimit=200
+nuxeo.ldap.query.timeLimit=0
+
 nuxeo.ldap.user.searchBaseDn=
-nuxeo.ldap.user.searchClass=
-nuxeo.ldap.user.searchScope=
-nuxeo.ldap.user.searchBehavior=
-nuxeo.ldap.user.searchScope=
-nuxeo.ldap.user.readonly=
-nuxeo.ldap.query.sizeLimit=
-nuxeo.ldap.query.timeLimit=
+nuxeo.ldap.user.searchClass=person
+nuxeo.ldap.user.searchScope=onelevel
+nuxeo.ldap.user.searchBehavior=subany
+nuxeo.ldap.user.readonly=true
+
 nuxeo.ldap.user.mapping.username=
 nuxeo.ldap.user.mapping.password=
 nuxeo.ldap.user.mapping.firstname=
 nuxeo.ldap.user.mapping.lastname=
 nuxeo.ldap.user.mapping.company=
 nuxeo.ldap.user.mapping.email=
-nuxeo.ldap.group.storage=
+
+nuxeo.user.group.storage=default
 nuxeo.ldap.group.searchBaseDn=
-nuxeo.ldap.group.searchFilter=
-nuxeo.ldap.group.searchScope=
-nuxeo.ldap.group.readonly=
+nuxeo.ldap.group.searchFilter=(|(objectClass=groupOfUniqueNames)(objectClass=groupOfURLs))
+nuxeo.ldap.group.searchScope=subtree
+nuxeo.ldap.group.readonly=true
+
 nuxeo.ldap.group.mapping.rdn=
 nuxeo.ldap.group.mapping.name=
 nuxeo.ldap.group.mapping.label=
-nuxeo.ldap.group.mapping.members.staticAttributeId=
-nuxeo.ldap.group.mapping.members.dynamicAttributeId=
+nuxeo.ldap.group.mapping.members.staticAttributeId=uniqueMember
+nuxeo.ldap.group.mapping.members.dynamicAttributeId=memberURL
+
 nuxeo.ldap.defaultAdministratorId=
-nuxeo.ldap.defaultMembersGroup=
-nuxeo.user.emergency.enable=
-nuxeo.user.emergency.username=
+nuxeo.ldap.defaultMembersGroup=members
+
+nuxeo.user.emergency.enable=false
+nuxeo.user.emergency.username=MyAdministrator
 nuxeo.user.emergency.password=
 nuxeo.user.emergency.firstname=
 nuxeo.user.emergency.lastname=
@@ -461,7 +548,8 @@ nuxeo.user.emergency.lastname=
     </component>
 
     ```
-    Then you should edit this file:
+
+Then you should edit this file:
 
 4.  Set the correct server:
     *   `<ldapUrl>`
