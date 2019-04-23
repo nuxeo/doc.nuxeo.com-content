@@ -196,3 +196,7 @@ Users
 Use the `>` and `<` arrows to add or remove predefined users from the group by default.
 
 </td></tr></tbody></table></div>
+
+{{#> callout type='info' heading='User and Group prefix' }}
+When filling a user or a group within a property, the prefix `user:` or `group:` should be set to avoid confusion since a group can have the exact same id as a user. Indeed, whenever a schema field is able to store a group or user id, this persisted id should be prefixed.
+{{/callout}}
