@@ -603,11 +603,16 @@ Some others can be used when building an NXQL query to express dates relatively 
 *   ...
 
 {{#> callout type='tip' }}
-- If you want to work on a date that is held by a property of your document, you first need to get a `DateWrapper` object, by using: `@{Fn.calendar(Document["dc:created"])}` (`@{Fn.calendar(Document["dc:created"]).format("yyyy-MM-dd")}` for exemple)
-- To set a date property based on the current date, use the `CurrentDate` object, and ends the expression with the `calendar` wrapper. So for example, to set up the a field to
+- If you want to work on a date that is held by a property of your document, you first need to get a `DateWrapper` object, by using: `@{Fn.calendar(Document["dc:created"])}`</br>
+  For example:
+ `@{Fn.calendar(Document["dc:created"]).format("yyyy-MM-dd")}`
+
+- To set a date property based on the current date, use the `CurrentDate` object, and ends the expression with the `calendar` wrapper.</br>
+  For example, to set up a field to:
   - today: `@{CurrentDate.days(0).calendar}`
   - in 7 days: `@{CurrentDate.days(7).calendar}`
-- To create a date that you can set on a date property from a string, you can use `@{new java.text.SimpleDateFormat("yyyy-MM-dd").parse(date_str)}` where `date_str` is a Context variable containing a value such as "2013-09-26". You must pass to `SimpleDateFormat` the format of this date, so the parse() method will work.
+  
+- To create a date that you can set on a date property from a string, you can use `@{new java.text.SimpleDateFormat("yyyy-MM-dd").parse(date_str)}` where `date_str` is a Context variable containing a value such as "2019-09-26". You must pass to `SimpleDateFormat` the format of this date, so the parse() method work.
 {{/callout}}
 
 ## {{> anchor 'fn-object'}}Functions
