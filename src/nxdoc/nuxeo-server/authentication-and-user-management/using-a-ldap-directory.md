@@ -30,11 +30,6 @@ confluence:
 tree_item_index: 130
 history:
     -
-        author: Damon Brown
-        date: '2019-04-23 11:56'
-        message: 'Added detailed configuration documentation'
-        version: '39'
-    -
         author: Damien Metzler
         date: '2015-12-08 11:18'
         message: ''
@@ -224,17 +219,17 @@ history:
         date: '2011-02-07 18:51'
         message: ''
         version: '1'
-
 ---
+
 In the Nuxeo Platform, users and groups are managed by directories. If you want your Nuxeo instance to use a LDAP directory you will need to:
 
-* configure a user directory pointing to your LDAP server(s),
-* configure a group directory pointing to your LDAP server(s) (if you need LDAP groups).
+- configure a user directory pointing to your LDAP server(s),
+- configure a group directory pointing to your LDAP server(s) (if you need LDAP groups).
 
 Of course you can have a specific custom config where:
 
-* you use a custom user / group schema,
-* you use several LDAP directories, or a mix of SQL and LDAP directories.
+- you use a custom user / group schema,
+- you use several LDAP directories, or a mix of SQL and LDAP directories.
 
 But for the most common use case, all you want to do is map the default `userDirectory` to your LDAP Server. Since groups are used in Nuxeo to associate permissions with content, fetching groups from LDAP is usually not very efficient: LDAP groups are usually not designed for that.
 
@@ -280,8 +275,8 @@ You can also choose a group from your company's directory instead of using the d
 
 There are 2 ways to define your LDAP configuration:
 
-* Set all out-of-the-box LDAP variables in `nuxeo.conf`
-* Providing an XML contribution for your LDAP configuration
+- Set all out-of-the-box LDAP variables in `nuxeo.conf`
+- Providing an XML contribution for your LDAP configuration
 
 The first approach allows you to simply reuse the default LDAP configuration template [here](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common/config/default-ldap-users-directory-bundle.xml.nxftl) by providing values for each variable defined in this template. The advantage of that solution is you don't have to deal with future upgrades config changes as you simply define variables in `nuxeo.conf`. If changes are required then the template will be automatically updated at the future upgrades.
 
@@ -289,7 +284,9 @@ If you need to add other custom setting where the template doesn't define any va
 
 ## LDAP Configuration Variables (nuxeo.conf)
 
-{{#> callout type='info'}}LDAP settings vary widely across vendors and organizations.  Please check with your LDAP administrator to properly configure LDAP authentication.{{/callout}}
+{{#> callout type='info'}}
+LDAP settings vary widely across vendors and organizations. Please check with your LDAP administrator to properly configure LDAP authentication.
+{{/callout}}
 
 To enable LDAP authentication, add the following properties to your `nuxeo.conf` file.  Default settings are shown with _**bold italics**_, while example settings are shown with `monotype`.
 
@@ -297,7 +294,7 @@ To enable LDAP authentication, add the following properties to your `nuxeo.conf`
 
 | Property | Values | Description |
 |----------------------------|:--------------------------------:|--------------------------------------------------------------------------------------------------------|
-| nuxeo.directory.type | _**default**_, multi, ldap | Select where Users and Groups are managed - `default`: Nuxeo Database, `ldap`: LDAP, `multi`: Nuxeo Database or LDAP |
+| nuxeo.directory.type | _**default**_, multi, ldap | Select where Users and Groups are managed<ul><li>`default`: Nuxeo Database</li><li>`ldap`: LDAP</li><li>`multi`: Nuxeo Database or LDAP</li> |
 | nuxeo.ldap.url | `ldaps://ldap.example.com` | [LDAP URL](https://ldap.com/ldap-urls/) |
 | nuxeo.ldap.binddn | `cn=nuxeoldap,dc=example,dc=com` | Bind DN provided by your LDAP administrator |
 | nuxeo.ldap.bindpassword | `secret value` | Bind Password provided by your LDAP administrator |
@@ -318,16 +315,16 @@ To enable LDAP authentication, add the following properties to your `nuxeo.conf`
 |----------------------------|:--------------------------------:|--------------------------------------------------------------------------------------------------------|
 | nuxeo.ldap.user.searchBaseDn | `o=users,dc=example,dc=com` | Base User DN provided by your LDAP administrator |
 | nuxeo.ldap.user.searchClass | _**person**_ | Search class used to locate Users within the directory |
-| nuxeo.ldap.user.searchScope | _**onelevel**_, subtree, object | Search scope used to locate Users within the directory - `onelevel`: search children of base DN, `subtree`: search whole subtree of base DN, `object`: search only base DN |
-| nuxeo.ldap.user.searchBehavior | _**subany**_, subinitial, subfinal | Specify how partial user identifiers are matched against directory entries - `subany`: Matches any substring, `subinitial`: Matches start of string, `subfinal`: Matches end of string |
+| nuxeo.ldap.user.searchScope | _**onelevel**_, subtree, object | Search scope used to locate Users within the directory<ul><li> `onelevel`: search children of base DN</li><li> `subtree`: search whole subtree of base DN</li><li>`object`: search only base DN</li> |
+| nuxeo.ldap.user.searchBehavior | _**subany**_, subinitial, subfinal | Specify how partial user identifiers are matched against directory entries <ul><li>`subany`: Matches any substring</li><li> `subinitial`: Matches start of string</li><li>`subfinal`: Matches end of string</li> |
 | nuxeo.ldap.user.readonly | _**true**_, false | Enable or disable modification of User details from Nuxeo - requires authorized bind DN |
 
 ### User Mapping Parameters
 
 | Property | Values | Description |
 |----------------------------|:--------------------------------:|--------------------------------------------------------------------------------------------------------|
-| nuxeo.ldap.user.mapping.rdn | `cn` | Relative distinguished name for the LDAP user |
-| nuxeo.ldap.user.mapping.username | `cn` | Base User DN provided by your LDAP administrator |
+| nuxeo.ldap.user.mapping.rdn | `cn` OR `uid` | Relative distinguished name for the LDAP user |
+| nuxeo.ldap.user.mapping.username | `cn` OR `uid` | Base User DN provided by your LDAP administrator |
 | nuxeo.ldap.user.mapping.password | `userPassword` | LDAP attribute containing the user's credentials |
 | nuxeo.ldap.user.mapping.firstname | `givenName` | LDAP attribute containing the user's first name |
 | nuxeo.ldap.user.mapping.lastname | `sn` | LDAP attribute containing the user's last name |
@@ -338,10 +335,10 @@ To enable LDAP authentication, add the following properties to your `nuxeo.conf`
 
 | Property | Values | Description |
 |----------------------------|:--------------------------------:|--------------------------------------------------------------------------------------------------------|
-| nuxeo.user.group.storage | _**default**_, userLdapOnly, multiUserGroup, multiUserSqlGroup, ldapUserMultiGroup | Select how Groups are added to a User within Nuxeo - `default`: Users and Groups from LDAP, `userLdapOnly`: Only Users from LDAP, `multiUserGroup`: Users and Groups from multiple directories (LDAP or Nuxeo database), `multiUserSqlGroup`: Users from multiple directories (LDAP or Nuxeo database) and Groups from Nuxeo database, `ldapUserMultiGroup`: Users from LDAP and Groups from multiple directories (LDAP or Nuxeo database) |
+| nuxeo.user.group.storage | _**default**_, userLdapOnly, multiUserGroup, multiUserSqlGroup, ldapUserMultiGroup | Select how Groups are added to a User within Nuxeo<ul><li>`default`: Users and Groups from LDAP</li><li>`userLdapOnly`: Only Users from LDAP</li><li> `multiUserGroup`: Users and Groups from multiple directories (LDAP or Nuxeo database)</li><li> `multiUserSqlGroup`: Users from multiple directories (LDAP or Nuxeo database) and Groups from Nuxeo database</li><li>`ldapUserMultiGroup`: Users from LDAP and Groups from multiple directories (LDAP or Nuxeo database)</li> |
 | nuxeo.ldap.group.searchBaseDn | `o=groups,dc=example,dc=com` | Base Group DN provided by your LDAP administrator |
-| nuxeo.ldap.group.searchFilter | _**(\|(objectClass=groupOfUniqueNames)(objectClass=groupOfURLs))**_ | Search filter used to return Group entries from the LDAP server |
-| nuxeo.ldap.group.searchScope | _**onelevel**_, subtree, object | Search scope used to locate Groups within the directory - `onelevel`: search children of base DN, `subtree`: search whole subtree of base DN, `object`: search only base DN |
+| nuxeo.ldap.group.searchFilter | _**(&#124;(objectClass=groupOfUniqueNames)(objectClass=groupOfURLs))**_ | Search filter used to return Group entries from the LDAP server |
+| nuxeo.ldap.group.searchScope | _**onelevel**_, subtree, object | Search scope used to locate Groups within the directory<ul><li>`onelevel`: search children of base DN</li><li> `subtree`: search whole subtree of base DN</li><li> `object`: search only base DN</li> |
 | nuxeo.ldap.group.readonly | _**true**_, false | Enable or disable modification of Group details from Nuxeo - requires authorized bind DN |
 
 ### Group Mapping Parameters
@@ -414,10 +411,10 @@ nuxeo.user.emergency.lastname=
 
 ## Simple Configuration Example Using XML config
 
-1.  Create a file called `default-ldap-users-directory-config.xml` in your config directory:
+1. Create a file called `default-ldap-users-directory-config.xml` in your config directory:
     - `nxserver/config/`
 
-2.  Then copy this content (make sure it's valid XML, sometimes what you think is a space character is actually a non-breaking space (`U+00A0`) which is invalid in XML):
+2. Then copy this content (make sure it's valid XML, sometimes what you think is a space character is actually a non-breaking space (`U+00A0`) which is invalid in XML):
 
     ```xml
     <?xml version="1.0"?>
@@ -549,37 +546,39 @@ nuxeo.user.emergency.lastname=
 
     ```
 
-Then you should edit this file:
+    Then you should edit this file:
 
-4.  Set the correct server:
-    *   `<ldapUrl>`
-    *   `<bindDn>` and `<bindPassword>`
+3. Set the correct server:
+    - `<ldapUrl>`
+    - `<bindDn>` and `<bindPassword>`  
+    &nbsp;  
 
-5.  Set the correct LDAP config:
-    *   `<searchBaseDN>`
-    *   `<searchClass>`
-    *   `<fieldMapping>`
+4. Set the correct LDAP config:
+    - `<searchBaseDN>`
+    - `<searchClass>`
+    - `<fieldMapping>`  
+    &nbsp;  
 
-6.  If you want Nuxeo to be able to create users in the LDAP directory:
-    *   Make sure the user you use to access LDAP has write access
-    *   Define the `<creationBaseDn>` and associated parameters
+5. If you want Nuxeo to be able to create users in the LDAP directory:
+    - Make sure the user you use to access LDAP has write access
+    - Define the `<creationBaseDn>` and associated parameters  
+    &nbsp;
 
-7.  Define the default mapping:
-    *   Since the _Administrator_ user won't exists anymore, you should assign at least one user to be administrator using `<defaultAdministratorId>`
-    *   You can also choose to make all users members of the default "members" group using `<defaultGroup>`
+6. Define the default mapping:
+    - Since the _Administrator_ user won't exists anymore, you should assign at least one user to be administrator using `<defaultAdministratorId>`
+    - You can also choose to make all users members of the default "members" group using `<defaultGroup>`
+    &nbsp;
 
-8.  Restart the Nuxeo server, and you should now be able to authenticate against LDAP.
-
+7. Restart the Nuxeo server, and you should now be able to authenticate against LDAP.
+    &nbsp;
 {{#> callout type='note' }}
-
 If you want to roll back the changes, simply delete the `default-ldap-users-directory-config.xml` file and restart the server.
-
 {{/callout}}
 
 For a more detailed view about possible configuration, see:
 
-*   [LDAPDirectory and associated extension points](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory),
-*   [UserManager extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.usermanager.UserService--userManager).
+- [LDAPDirectory and associated extension points](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory),
+- [UserManager extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.usermanager.UserService--userManager).
 
 The [ldaptools/](https://github.com/nuxeo/nuxeo-services/tree/master/nuxeo-platform-directory/nuxeo-platform-directory-ldap/ldaptools) folder in source code of the `nuxeo-platform-directory-ldap` module further provides sample LDIF files and OpenLDAP configuration file to help you setup a sample OpenLDAP server you can use as a base setup to build your corporate directory.
 
@@ -587,8 +586,8 @@ The [ldaptools/](https://github.com/nuxeo/nuxeo-services/tree/master/nuxeo-platf
 
 If you use Active Directory and want to use it with Nuxeo, you need to:
 
-1.  Be sure that LDAP mode is enabled on the Active Directory server,
-2.  Get the schema info (because Active Directory schema changes depending on a lot of external factors).
+1. Be sure that LDAP mode is enabled on the Active Directory server,
+2. Get the schema info (because Active Directory schema changes depending on a lot of external factors).
 
 Once you have this information, you can connect Nuxeo to Active Directory as it was a real LDAP server.
 
@@ -655,9 +654,9 @@ Therefore you should apply the changes described below to your existing LDAP con
 
 See attached files for templates of LDAP configuration:
 
-*   [LDAP users configuration]({{file name='default-ldap-users-directory-config.xml'}})
-*   [LDAP groups configuration]({{file name='default-ldap-groups-directory-config.xml'}})
-*   [User manager configuration]({{file name='default-virtual-groups-config.xml'}})
+- [LDAP users configuration]({{file name='default-ldap-users-directory-config.xml'}})
+- [LDAP groups configuration]({{file name='default-ldap-groups-directory-config.xml'}})
+- [User manager configuration]({{file name='default-virtual-groups-config.xml'}})
 
 This method applies to multi-directories too.
 
@@ -679,11 +678,11 @@ In the [Log4J]({{page space='glos' page='log4j'}}) configuration, increase the l
 
 This will give you more informations such as:
 
-*   Is your XML contribution properly loaded?
+- Is your XML contribution properly loaded?
     Search for the component name of your contribution in the log file (for instance `org.nuxeo.ecm.directory.ldap.users`).
-*   Did the LDAP directory initialized?
+- Did the LDAP directory initialized?
     If so, your "servers" extension point is working.
-*   What is the LDAP request sending when you try to log in Nuxeo?
+- What is the LDAP request sending when you try to log in Nuxeo?
     You must be run the same request outside Nuxeo, using your preferred LDAP tool.
 
 [Apache Directory Studio](http://directory.apache.org/studio/) can be used to replicate the LDAP requests sent by Nuxeo to the LDAP server and check their responses. If you seek help on [answers.nuxeo.com](http://answers.nuxeo.com) or [connect.nuxeo.com](http://connect.nuxeo.com) please include the LDIF export of a sample user entry and a sample group entry (if you want to use the LDAP server to resolve the groups).
