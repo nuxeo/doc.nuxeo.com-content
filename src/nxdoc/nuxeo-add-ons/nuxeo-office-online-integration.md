@@ -9,8 +9,8 @@ labels:
     - nuxeo-wopi
 toc: true
 tree_item_index: 2400
-
 ---
+
 {{! excerpt}}
 The Nuxeo Office Online Integration addon adds the ability to view/edit Microsoft Office documents through Office Online.
 {{! /excerpt}}
@@ -18,6 +18,8 @@ The Nuxeo Office Online Integration addon adds the ability to view/edit Microsof
 The Office Online integration is done thanks to the Web Application Open Platform Interface (WOPI) protocol provided by Microsoft. The WOPI protocol enables Office Online to access and change files that are stored in a Nuxeo server.
 
 You can find more information on the WOPI protocol for the Office Online integration [here](https://wopi.readthedocs.io/en/latest/index.html).
+
+<script src="https://fast.wistia.com/embed/medias/qvuc7teh6i.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_qvuc7teh6i popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:250px;position:relative;width:500px">&nbsp;</span>
 
 ## Requirements
 
