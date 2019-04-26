@@ -183,7 +183,7 @@ For example, by using our `nuxeo-workflow-data` element with the following attri
 
 Our element would produce a request like this:
 
-```js
+```
 {
   query: { bool: { must: [...] },
   aggs: {
@@ -225,7 +225,7 @@ Data returned from Elasticsearch is also processed for simplification and consis
 
 ![]({{file name='web_ui_workflows_analytics.png'}} ?w=600)
 
-### JSF UI Review Workflows Dashboards
+<!--### JSF UI Review Workflows Dashboards
 
 **GitHub project**: [https://github.com/nuxeo/nuxeo-review-workflows-dashboards](https://github.com/nuxeo/nuxeo-review-workflows-dashboards)
 
@@ -242,3 +242,4 @@ Data returned from Elasticsearch is also processed for simplification and consis
 **Dashboard**: [https://github.com/nuxeo/nuxeo-travel-expenses/blob/master/src/main/yo/app/elements/nx-workflow-dashboard/nx-workflow-dashboard.html](https://github.com/nuxeo/nuxeo-travel-expenses/blob/master/src/main/yo/app/elements/nx-workflow-dashboard/nx-workflow-dashboard.html)
 
 ![]({{file name='travel_expenses_dashboard.png'}} ?w=600,border=true)
+-->

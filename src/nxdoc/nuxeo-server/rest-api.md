@@ -572,7 +572,6 @@ The Nuxeo REST API offers several additional features compared to a standard RES
 *   Follow a cURL tutorial on how to [create a document in the repository and bind a binary to it]({{page page='howto-upload-file-nuxeo-using-rest-api'}})
 *   Check out some [consecutive cURL calls to get familiar with the resources/command variations of the API]({{page page='using-curl'}})
 *   Read a [blog post](http://blogs.nuxeo.com/development/2013/10/building-pluggable-rest-api/) that discusses advanced concepts of Nuxeo REST API with a few examples.
-*   A client sample [nuxeo-travel-expenses](https://github.com/nuxeo/nuxeo-travel-expenses) (available on [GitHub](https://github.com/nuxeo/nuxeo-travel-expenses)) based on web components and [polymer framework](https://www.polymer-project.org/) demonstrating how to use the workflow REST API.
 
 ## Available Client SDKs
 

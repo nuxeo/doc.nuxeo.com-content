@@ -238,7 +238,6 @@ Below is an example of how to start a Parallel Review Workflow and complete it w
 
 *   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
 *   Checkout the Nuxeo REST API explorer of your instance at `http://NUXEO_SERVER/nuxeo/api/v1/doc`.
-*   A client sample [nuxeo-travel-expenses](https://github.com/nuxeo/nuxeo-travel-expenses) based on Web Components and [Polymer](https://www.polymer-project.org) demonstrates how to use the workflow REST API.
 
 * * *
 
