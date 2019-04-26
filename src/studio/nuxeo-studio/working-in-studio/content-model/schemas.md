@@ -133,7 +133,7 @@ history:
 
 ---
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the [related course]((https://university.nuxeo.com/learn/public/course/view/elearning/12/content-model-design-in-nuxeo-studio) on Nuxeo University
+Watch the [related course](https://university.nuxeo.com/learn/public/course/view/elearning/12/content-model-design-in-nuxeo-studio) on Nuxeo University
 ![]({{file version='' space='nxdoc' page='university' name='university-content-model.png'}} ?w=450,border=true)
 {{/callout}}
 ## Concept
