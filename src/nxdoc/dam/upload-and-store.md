@@ -23,7 +23,7 @@ You can use drag and drop to easily import documents into a workspace or just to
 
 You can also drag and drop a file directly in the file view in order to replace the already uploaded file.
 
-![]({{file name='import-popup-web-ui.png' page='userdoc/browse'}} ?w=450,border=true)
+![]({{file space='userdoc' name='import-popup-web-ui.png' page='content-create'}} ?w=450,border=true)
 
 #### Import Button
 
@@ -31,7 +31,7 @@ You can also drag and drop one or more files of any type from the Import tab of 
 
 From this Import button you will be able to import with properties, which means fill in metadata of the document(s) before they are created in the workspace.
 
-![]({{file name='add-properties-web-ui.png' page='userdoc/browse'}} ?w=450,border=true)
+![]({{file space='userdoc' name='add-properties-web-ui.png' page='content-create'}} ?w=450,border=true)
 
 ### From Nuxeo Drive
 

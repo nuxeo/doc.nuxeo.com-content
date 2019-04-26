@@ -474,7 +474,7 @@ You can create different types of documents to be able to display the content hi
 
 ### Breadcrumbs
 
-Breadcrumb enables you to navigate in the platform. For example, you can go up one level in the platform structure, by clicking on the ![]({{file name='UpFolder_icon.gif' page='icons-index'}})&nbsp;icon in the breadcrumbs. Users can also click on the workspace's title in the breadcrumbs directly or in the navigation tree. They can go up several levels in the document's path in a single click that way.
+Breadcrumb enables you to navigate in the platform. For example, you can go up one level in the platform structure, by clicking on the ![]({{file space='userdoc' name='UpFolder_icon.gif' page='icons-index'}})&nbsp;icon in the breadcrumbs. Users can also click on the workspace's title in the breadcrumbs directly or in the navigation tree. They can go up several levels in the document's path in a single click that way.
 
 ![]({{file name='breadcrumbs.png' page='browsing-content'}} ?w=376,h=36,border=true)
 
@@ -523,7 +523,7 @@ Other main user-centric information available from the **Home** is:
     ![]({{file name='home-searches-tab.png' page='saved-searches'}} ?w=650,border=true)
 *   **Authorized Applications**: Lists the external applications that can access Nuxeo data. See [Nuxeo Media Publishing]({{page space='nxdoc' page='nuxeo-media-publishing'}}) for instance.
 *   **Collections**: Lists the [collections]({{page page='collections'}}) the user can access
-    ![]({{file name='collection-home-tab.png' page='collections'}} ?w=650,border=true)
+    ![]({{file name='collection-home-tab.png' page='collections-jsf-ui'}} ?w=650,border=true)
 
 ## Search
 
@@ -539,13 +539,11 @@ The default search filter provides a faceted search, leveraging the [Elasticsear
 
 Users can change the way content is presented in the result layout. They can also change the displayed information. At the top right and corner of the results pages, you have different options to display your content list.
 
-*   **Thumbnail view**![]({{file name='DM-icon-view-icon.png' page='icons-index'}}) : this view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
-*   **Edit Result Columns**![]({{file name='edit_columns.png' space='userdoc60' page='icons-index'}}): this button lets you change the information displayed in content lists. The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and reorder columns using the vertical arrows.
+*   **Thumbnail view**![]({{file space='userdoc' name='DM-icon-view-icon.png' page='icons-index'}}) : this view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
+*   **Edit Result Columns**![]({{file space='userdoc' name='edit_columns.png' page='icons-index'}}): this button lets you change the information displayed in content lists. The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and reorder columns using the vertical arrows.
 
     {{#> callout type='info' }}
-
     Editing results column is possible from search results and the Content tab of folderish documents. It is not possible from the tag cloud.
-
     {{/callout}}
 
 When you create new search forms, you can adapt the result layout to your own document types so as to display information relevant to your users. See [How to Define a New Content View]({{page space='nxdoc' page='how-to-define-a-new-content-view'}}) for instance.

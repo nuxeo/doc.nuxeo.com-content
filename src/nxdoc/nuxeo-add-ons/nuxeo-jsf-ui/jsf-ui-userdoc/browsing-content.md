@@ -280,7 +280,7 @@ It is possible to add another type of navigation tree based on metadata instead 
 
 The Document Management module includes [tagging of documents]({{page page='tags'}}), which enables users to apply their own labels on documents. The tag cloud lists all tags on documents, with their size growing as the tag is applied on several documents.
 
-![]({{file name='tag-cloud.png' page='tags'}} ?border=true)
+![]({{file name='tag-cloud.png' page='tags-jsf-ui'}} ?border=true)
 
 To see all documents tagged with the same label, click on the tag in the tag cloud.
 
@@ -292,9 +292,9 @@ Users can change the way content is presented in the folderish repositories (wor
 
 Two views of the content lists are available on the top right corner of **Content** tab:
 
-*   List view (default view) ![]({{file name='DM-list-view-icon.png' page='icons-index'}}): This view displays title of the documents with a small icon (that depends on the type of document or main attachment type) and a set of metadata in a table
+*   List view (default view) ![]({{file space='userdoc' name='DM-list-view-icon.png' page='icons-index'}}): This view displays title of the documents with a small icon (that depends on the type of document or main attachment type) and a set of metadata in a table
     ![]({{file name='list-view.png'}} ?w=600,border=true)
-*   Thumbnail view ![]({{file name='DM-icon-view-icon.png' page='icons-index'}}): This view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
+*   Thumbnail view ![]({{file space='userdoc' name='DM-icon-view-icon.png' page='icons-index'}}): This view displays a thumbnail of documents. For folders, the thumbnail of the first item in the folder is displayed.
     ![]({{file name='thumbnail-view.png'}} ?w=600,border=true)
 
 **Changing Displayed Information**
@@ -307,7 +307,7 @@ Editing results column is possible from search results and the Content tab of fo
 
 {{/callout}}
 
-To change the information displayed in content lists, click on the icon ![]({{file name='edit_columns.png' page='icons-index'}}). A pop-up is displayed: The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and reorder columns using the vertical arrows. Once it's done, click on **Save**.
+To change the information displayed in content lists, click on the icon ![]({{file space='userdoc' name='edit_columns.png' page='icons-index'}}). A pop-up is displayed: The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and reorder columns using the vertical arrows. Once it's done, click on **Save**.
 
 ![]({{file name='results-columns-popup.png'}} ?w=350,border=true)
 

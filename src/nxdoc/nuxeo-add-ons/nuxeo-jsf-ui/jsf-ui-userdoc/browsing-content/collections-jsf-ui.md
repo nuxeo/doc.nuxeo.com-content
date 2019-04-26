@@ -216,11 +216,11 @@ Click on a document to consult it. You are moved out of the collection to be dis
 {{! multiexcerpt name='collecting-jsf-ui'}}
 Documents can be collected:
 
-- Individually by clicking on the icon ![]({{file name='add_to_collection.png' page='icons-index'}}) of the document
+- Individually by clicking on the icon ![]({{file space='userdoc' name='add_to_collection.png' page='icons-index'}}) of the document
     ![]({{file name='collection-creation-from-form-1.png'}} ?w=350,border=true)
 - By batch by selecting documents from their parent and clicking on the **Add to collection** button
     ![]({{file name='collection_form_batch.png'}} ?w=350,border=true)
-- From the collection itself by clicking the icon ![]({{file name='add_to_collection.png' page='icons-index'}}) and searching the documents to collect
+- From the collection itself by clicking the icon ![]({{file space='userdoc' name='add_to_collection.png' page='icons-index'}}) and searching the documents to collect
     ![]({{file name='add-to-collection-suggested-documents.png'}} ?w=350,border=true)
 
 In the first two cases you can select the collection by:
@@ -246,7 +246,7 @@ There are two ways to create a collection:
 
 - Like any other document, using the **New** button: Just fill in the creation form and the collection is created in the current workspace / folder.
     ![]({{file name='available-documents-workspace.png' page='creating-content'}} ?w=500,border=true)
-- Directly from the "Add to collection" popup: collections about to be created are displayed with the icon ![]({{file name='add_document.gif' page='icons-index'}}), while existing collections have the icon ![]({{file name='add_to_collection.png' page='icons-index'}}). The collection is created in your personal workspaces, in a **My Collections** folder.
+- Directly from the "Add to collection" popup: collections about to be created are displayed with the icon ![]({{file space='userdoc' name='add_document.gif' page='icons-index'}}), while existing collections have the icon ![]({{file space='userdoc' name='add_to_collection.png' page='icons-index'}}). The collection is created in your personal workspaces, in a **My Collections** folder.
     ![]({{file name='collection-creation-from-form-1.png'}} ?w=350,border=true)
 {{! /multiexcerpt}}
 
@@ -266,7 +266,7 @@ Beside the generic permissions, collection have a specific right, called "can co
 
 ## Removing Documents from a Collection
 {{! multiexcerpt name='removing-jsf-ui'}}
-To remove a document from a collection, either click on the <span class="s1">icon ![]({{file name='delete.png' page='icons-index'}}) of the collection</span> from the **Summary** tab of the document, or select the document in the collection the checkboxes and click on the **Remove from collection** button.
+To remove a document from a collection, either click on the <span class="s1">icon ![]({{file space='userdoc' name='delete.png' page='icons-index'}}) of the collection</span> from the **Summary** tab of the document, or select the document in the collection the checkboxes and click on the **Remove from collection** button.
 
 In both ways the document is immediately removed from the collection.
 {{! /multiexcerpt}}
@@ -283,7 +283,7 @@ The list of documents bookmarked as favorites is available:
 {{! /multiexcerpt}}
 
 {{! multiexcerpt name='bookmarking-favorites-jsf-ui'}}
-Bookmarking documents in your favorites can be done like when you add documents to a collection (see previous sections) and selecting the Favorites collection, or using the icon ![]({{file name='pin.png' page='icons-index'}}) from the document itself.
+Bookmarking documents in your favorites can be done like when you add documents to a collection (see previous sections) and selecting the Favorites collection, or using the icon ![]({{file space='userdoc' name='pin.png' page='icons-index'}}) from the document itself.
 {{! /multiexcerpt}}
 
 {{! /multiexcerpt}}

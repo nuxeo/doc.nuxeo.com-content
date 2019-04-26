@@ -111,7 +111,7 @@ You need to have editing or management permissions to start a workflow.
     The form to select the reviewers and start the workflow is displayed on the **Summary** tab. A **Show graph view** button is also available, that displays the workflow route in a pop-up window.
     A **Workflow** tab is now available on the document from which you can select the reviewers, [delegate your task]({{page page='delegating-a-task'}}), show the graph view but also see the current and previous tasks and [abandon the workflow]({{page page='abandoning-a-workflow'}}).
     ![]({{file name='workflow-choose-reviewers-task-workflow-tab.png'}} ?w=650,border=true)
-2.  In the **Participants on the review** field, type the name of a user or a group you want to add on the workflow and select it in the drop down list. Repeat these two steps to add all the participants to the review. Optionally, drag and drop the participants to change their order on the workflow, or the icon ![]({{file name='action-delete.png' page='icons-index'}}) to remove them. {{{multiexcerpt 'tasks-assigned-to-group' page='Serial Document Workflow'}}}
+2.  In the **Participants on the review** field, type the name of a user or a group you want to add on the workflow and select it in the drop down list. Repeat these two steps to add all the participants to the review. Optionally, drag and drop the participants to change their order on the workflow, or the icon ![]({{file space='userdoc' name='action-delete.png' page='icons-index'}}) to remove them. {{{multiexcerpt 'tasks-assigned-to-group' page='Serial Document Workflow'}}}
 3.  Select the type of review you want to do: **Simple review**: the document's state will not change; or the **Validation review**: when all the reviewers have approved the document, it goes to the **Approved** lifecycle state.
     ![]({{file name='workflow-review-type-selection.png'}} ?w=350,border=true)
 4.  Type a comment, indicating the purpose of the review for instance.
@@ -149,7 +149,7 @@ Participants can approve the document when it's their turn, after the previous p
 
 **To approve or reject the document**:
 
-1.  In your **Home**, click on the **Workflow** tab, the list of tasks you have to do is displayed. Optionally click on the icon ![]({{file name='external.gif' page='icons-index'}}) to open the document in a new tab, consult it and edit it.
+1.  In your **Home**, click on the **Workflow** tab, the list of tasks you have to do is displayed. Optionally click on the icon ![]({{file space='userdoc' name='external.gif' page='icons-index'}}) to open the document in a new tab, consult it and edit it.
 2.  From the **Workflow** tab, click on the **Process** button. The Validation task is displayed.![]({{file name='Serial-workflow-task-process.png'}} ?w=650,border=true)
 3.  If you think that you won't be able to process the task, [delegate it]({{page space='nxdoc' page='delegating-a-task'}}) or [reassign it]({{page page='reassigning-a-task'}}) to another user. If not switch to the next step. Optionally, type a comment to indicate what you did on the document before approving it.
 4.  Depending on your opinion on the document, click on one of the buttons available:

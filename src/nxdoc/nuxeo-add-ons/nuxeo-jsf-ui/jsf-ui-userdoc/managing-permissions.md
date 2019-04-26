@@ -435,7 +435,7 @@ To edit a permission click on ![]({{file name='editor_area.gif' space='studio' p
 
 ### Deleting Permissions
 
-To delete a permission click on ![]({{file name='delete_2.png' page='icons-index'}}) next to the permission you want to delete, click **Ok** on the confirmation popup.
+To delete a permission click on ![]({{file space='userdoc' name='delete_2.png' page='icons-index'}}) next to the permission you want to delete, click **Ok** on the confirmation popup.
 
 ![]({{file name='delete_permission_popup.png'}} ?w=350,border=true)
 
@@ -445,7 +445,7 @@ In the Admin Center, the Permissions tab presents two sub-tabs: a **Search** tab
 
 ### Auditing Permissions
 
-The **Search** tab will help you to audit permissions in the repository, you can search by user/group, time frame, permissions etc. You can then export search results in an Excel file by clicking the icon ![]({{file name='xls_export.png' page='icons-index'}}).
+The **Search** tab will help you to audit permissions in the repository, you can search by user/group, time frame, permissions etc. You can then export search results in an Excel file by clicking the icon ![]({{file space='userdoc' name='xls_export.png' page='icons-index'}}).
 ![]({{file name='search_tab_permissions.png'}} ?w=600,h=304,border=true)
 
 You can search permissions on the following criteria:

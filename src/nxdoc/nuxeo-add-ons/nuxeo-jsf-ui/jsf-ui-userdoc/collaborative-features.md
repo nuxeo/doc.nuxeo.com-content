@@ -84,9 +84,9 @@ The Nuxeo Platform provides you with a set of features that ease collaborative w
 
 ## Lock - Unlock
 
-When you need to work on a document for some time, you don't want other users to edit it at the same time and disturb your own work. This is typically the case where you lock the document by clicking the icon ![]({{file name='lock.gif' page='icons-index'}}).
+When you need to work on a document for some time, you don't want other users to edit it at the same time and disturb your own work. This is typically the case where you lock the document by clicking the icon ![]({{file space='userdoc' name='lock.gif' page='icons-index'}}).
 
-A locked document remains visible to other users but only the locker and users with Manage everything permission can edit it. Other users can see the document locked through the orange icon ![]({{file name='locked.png' page='icons-index'}}). A tooltip indicates who locked the document and when.
+A locked document remains visible to other users but only the locker and users with Manage everything permission can edit it. Other users can see the document locked through the orange icon ![]({{file space='userdoc' name='locked.png' page='icons-index'}}). A tooltip indicates who locked the document and when.
 
 Users with Management everything permission can unlock document on other users' behalf so a document does not remains locked during the locker's vacation and blocks other user's work, for instance.
 
@@ -159,7 +159,7 @@ When you follow a document or a space activity, you get an email when the events
 
 ### Following Documents
 
-The icon ![]({{file name='subscribe.png' page='icons-index'}}) enables you to follow a document or a space by clicking it. The icon becomes ![]({{file name='unsubscribe.png' page='icons-index'}}). Click on it to stop following the document, meaning you won't get any email notification at all from that document.
+The icon ![]({{file space='userdoc' name='subscribe.png' page='icons-index'}}) enables you to follow a document or a space by clicking it. The icon becomes ![]({{file space='userdoc' name='unsubscribe.png' page='icons-index'}}). Click on it to stop following the document, meaning you won't get any email notification at all from that document.
 
 {{#> callout type='info' }}
 

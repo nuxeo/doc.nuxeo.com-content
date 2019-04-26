@@ -275,7 +275,7 @@ By default, workspaces don't have any targets defined.
 
 To define the publication targets of a workspace, click on the **Manage**&nbsp;> **Publication targets**, if no section has been defined yet, users can submit documents to publishing in any section (providing they have the permissions to publish). Unfold the sections tree and click on the **Add** link of the sections to which you want to restrict publishing from this workspace. The selected sections are displayed in a table below the tree. No **Add** link is available anymore for these sections.
 
-When they click on the **Publish** tab of documents to publish a document, only the selected sections are available to publish the document. To **remove a section** from the workspace's targets, click on&nbsp;![]({{file name='delete.png' page='icons-index'}}) next to it.
+When they click on the **Publish** tab of documents to publish a document, only the selected sections are available to publish the document. To **remove a section** from the workspace's targets, click on&nbsp;![]({{file space='userdoc' name='delete.png' page='icons-index'}}) next to it.
 
 ![]({{file name='publicationTargets-added.png'}} ?w=500,border=true)
 

@@ -193,7 +193,7 @@ Users can export documents on their computer. It is possible to export:
 Export is available from:
 
 *   The worklist
-*   The Export button, available by clicking the icon ![]({{file name='export.png' page='icons-index'}}) in the **More** menu
+*   The Export button, available by clicking the icon ![]({{file space='userdoc' name='export.png' page='icons-index'}}) in the **More** menu
 
 ### Exporting Attachments
 
@@ -219,7 +219,7 @@ When you unzip it, you get the documents' attachments and an INDEX.txt file that
 Just like it is possible to [export search results]({{page page='searching-the-nuxeo-platform'}}), it is possible to export the list of documents in a workspace, section or folder.
 You can use the Excel export which enables you to get the list of documents inside the folder in an Excel table.
 
-To **export the list of documents of a space in an Excel file**, click on the icon ![]({{file name='xls_export.png' page='icons-index'}}) displayed in the top right corner of the **Content** tab of the workspace, folder or section.
+To **export the list of documents of a space in an Excel file**, click on the icon ![]({{file space='userdoc' name='xls_export.png' page='icons-index'}}) displayed in the top right corner of the **Content** tab of the workspace, folder or section.
 You are proposed to save a "document_content.xls" file, that displays the same information on the folder's documents as in the **Content** tab.
 
 ### Low-Level Exports
@@ -237,7 +237,7 @@ The XML export of a document enables users to get a folder for the exported docu
 *   A document.xml file holding the document's various information (the applied access rights, the document's metadata, its path)
 *   A .blob file that holds the binary content of the document. This blob is referenced in the document.xml file
 
-To **get the XML export of a document**, from the document, click on the icon  ![]({{file name='export.png' page='icons-index'}})  or, if the icon is not available on the action bar, on the **Export** button of the **More** menu in the action bar.
+To **get the XML export of a document**, from the document, click on the icon  ![]({{file space='userdoc' name='export.png' page='icons-index'}})  or, if the icon is not available on the action bar, on the **Export** button of the **More** menu in the action bar.
 
 ![]({{file name='more-menu.png'}} ?w=250,border=true)
 
@@ -272,7 +272,7 @@ When you unzip it, you get a folder structure that reproduces the Nuxeo Platform
 
 It is possible to export a whole workspace, section or folder in a zipped XML folder. This specific export enables users to import the folder back, with the same access rights definition.
 
-To **get the XML export of a folder**, from the folder (or workspace or section), click on the icon  ![]({{file name='export.png' page='icons-index'}})  or, if the icon is not available on the action bar, on the  **Export** button of the  **More**  menu in the action bar.
+To **get the XML export of a folder**, from the folder (or workspace or section), click on the icon  ![]({{file space='userdoc' name='export.png' page='icons-index'}})  or, if the icon is not available on the action bar, on the  **Export** button of the  **More**  menu in the action bar.
 
 ![]({{file name='more-menu.png'}} ?w=250,border=true)
 
@@ -281,7 +281,7 @@ You are proposed to save a "export.zip" file on your computer.
 
 {{#> callout type='tip' }}
 
-If you're only interested in the XML definition of the folder, click on ![]({{file name='xml.png' page='icons-index'}}) **XML Export**. The XML file should open in a new tab or window (depending on your browser's preferences).
+If you're only interested in the XML definition of the folder, click on ![]({{file space='userdoc' name='xml.png' page='icons-index'}}) **XML Export**. The XML file should open in a new tab or window (depending on your browser's preferences).
 
 {{/callout}}
 

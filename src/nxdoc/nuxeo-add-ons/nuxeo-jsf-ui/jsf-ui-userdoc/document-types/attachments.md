@@ -73,7 +73,7 @@ It is possible to add attachments to [Files]({{page page='document-types'}}#file
 **To remove attachments:**
 
 1.  Click on the **Files** tab.
-2.  Click on the icon ![]({{file name='delete.png' page='icons-index'}}) of the attachment to remove.
+2.  Click on the icon ![]({{file space='userdoc' name='delete.png' page='icons-index'}}) of the attachment to remove.
     The attachment is immediately deleted.
 
 **Notes:**

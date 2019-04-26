@@ -101,7 +101,7 @@ You need to have editing or management permissions to start a workflow, either p
 
     A **Workflow** tab is now available on the document from which you can select reviewers, see the graph view but also see the current and previous tasks and [abandon the workflow]({{page space='nxdoc' page='abandoning-a-workflow'}}).
     ![]({{file name='parallel-workflow-choose-participants-task-workflow-tab.png'}} ?w=600,border=true)
-2. In the **Participants on the review** field, type the name of a user or a group you want to add on the workflow and select it in the drop down list. Repeat these two steps to add all the participants to the review. Optionally, drag and drop the participants to change their order on the workflow, or the icon ![]({{file name='action-delete.png' page='icons-index'}}) to remove them.
+2. In the **Participants on the review** field, type the name of a user or a group you want to add on the workflow and select it in the drop down list. Repeat these two steps to add all the participants to the review. Optionally, drag and drop the participants to change their order on the workflow, or the icon ![]({{file space='userdoc' name='action-delete.png' page='icons-index'}}) to remove them.
 3. Type a comment for the reviewers, for instance if you want them to pay attention to a specific section of the document. {{{multiexcerpt 'tasks-assigned-to-group' page='Serial Document Workflow'}}}
 4. Select the due date by when the participants need to have reviewed the document.
     {{#> callout type='tip' }}
@@ -141,7 +141,7 @@ The consultation task consists in saying if you would approve or reject the docu
 
 1. In your **Home**, click on the **Workflow** tab.
 
-    The list of tasks you have to do is displayed. Optionally click on the icon ![]({{file name='external.gif' page='icons-index'}}) to open the document in a new tab and consult it.
+    The list of tasks you have to do is displayed. Optionally click on the icon ![]({{file space='userdoc' name='external.gif' page='icons-index'}}) to open the document in a new tab and consult it.
 2. Click on the **Process** button.
 
     The Consultation task form is displayed in the Workflow tab. If you think that you won't be able to process the task, [delegate it]({{page page='delegating-a-task'}}) or [reassign it ]({{page page='reassigning-a-task'}})to another user. If not, switch to the next step.

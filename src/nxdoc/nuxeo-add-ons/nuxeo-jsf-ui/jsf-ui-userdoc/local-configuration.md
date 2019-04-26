@@ -123,7 +123,7 @@ The local configuration enables users to set some document types preferences at 
 
 Users with Manage permission in a space can define what document types can be created in the current space by restricting the list of allowed document types proposed by default.
 
-To **define what document types can be created in a space,** click on **Manage**&nbsp;> **Local configuration**. The list of the available local configurations are displayed. If needed, click on the **Enable** link of the "Document types configuration". The document types configuration form is displayed. By default, all types are allowed. **Move** the document types you don't want users to be able to create to the left column using the icon ![]({{file name='move_left.png' page='icons-index'}}) and **Save**. ![]({{file name='doctype_config_remove_doctype.png'}} ?w=600,border=true)
+To **define what document types can be created in a space,** click on **Manage**&nbsp;> **Local configuration**. The list of the available local configurations are displayed. If needed, click on the **Enable** link of the "Document types configuration". The document types configuration form is displayed. By default, all types are allowed. **Move** the document types you don't want users to be able to create to the left column using the icon ![]({{file space='userdoc' name='move_left.png' page='icons-index'}}) and **Save**. ![]({{file name='doctype_config_remove_doctype.png'}} ?w=600,border=true)
 
 The document types you removed from the default selection cannot be created in the current space anymore: they are not displayed anymore when users clicks on the **New** button.
 
@@ -175,7 +175,7 @@ To **associate a document type and a content view**, click on **Manage**&nbsp;> 
 
 The selected document type now has the presentation defined by the selected content view, in the current space and its sub-spaces.
 
-To **remove a document type - Content view association,** click on **Manage**&nbsp;> **Local configuration**. In the Document content configuration, click on the icon ![]({{file name='delete.png' page='icons-index'}}) of the document type - content view association you want to remove and **Save**. The document type has its default content view.
+To **remove a document type - Content view association,** click on **Manage**&nbsp;> **Local configuration**. In the Document content configuration, click on the icon ![]({{file space='userdoc' name='delete.png' page='icons-index'}}) of the document type - content view association you want to remove and **Save**. The document type has its default content view.
 
 ## Search Configuration
 
