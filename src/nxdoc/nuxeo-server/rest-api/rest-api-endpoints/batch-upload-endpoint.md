@@ -308,7 +308,7 @@ This request returns a 201 CREATED status code with the following JSON data:
 {"batchId": batchId}
 ```
 
-The batch id can be seen as an upload session id, especially for a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}}#-anchor-uploadingafileinchunks-uploading-a-file-in-chunks-resumable-).
+The batch id can be seen as an upload session id, especially for a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}}#uploading-a-file-in-chunks).
 
 #### Batch Upload Handler Architecture
 Example for Amazon Web Services S3
@@ -454,7 +454,7 @@ Returns a 204 No Content and removes the file from the batch.
 
 ## Uploading a File in Chunks {{> anchor 'uploading-a-file-in-chunks'}}
 
-Using a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}}#-anchor-uploadingafileinchunks-uploading-a-file-in-chunks-resumable-) is useful otherwise uploading large files over a broken connection could take days.
+Using a [resumable upload]({{page page='howto-upload-file-nuxeo-using-rest-api'}}#uploading-a-file-in-chunks) is useful otherwise uploading large files over a broken connection could take days.
 
 Chunking is a good idea because:
 
