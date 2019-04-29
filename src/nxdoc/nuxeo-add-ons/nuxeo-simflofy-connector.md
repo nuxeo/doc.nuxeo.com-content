@@ -11,10 +11,22 @@ toc: true
 tree_item_index: 350
 ---
 
-[Simflofy](https://www.simflofy.com/) is a Federation and Integration platform for content management. It provides ways to search or migrate data across multiple content repositories.
+{{! excerpt}}
+The Nuxeo Simflofy addon allows users to search, find and view documents stored in an external system, thanks to Nuxeo federation capabilities. Binary files can either be copied in Nuxeo repository or remain "in-place".
+{{! /excerpt}}
 
-The Nuxeo Simflofy connector leverages content federation provided by Simflofy by enabling
-users to access data available in Simflofy.
+{{#> callout type='info'}}
+Watch the related video on Nuxeo University:</br>
+[Product News - Nuxeo Federation Services](https://university.nuxeo.com/learn/course/external/view/elearning/184/NuxeoFederationServices).
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Content Federation with Simflofy/nuxeo-federation-university.png
+    name: nuxeo-federation-university.png
+    addins#screenshot#up_to_date
+--}}
+![nuxeo-federation-university.png](nx_asset://70e0644b-87e4-4bf3-94bc-be3f82b9f35e ?w=450,border=true)
+{{/callout}}
+
+[Simflofy](https://www.simflofy.com/) is a Federation and Integration platform for content management. It provides ways to search or migrate data across multiple content repositories.
 
 ## Synchronization Process
 
