@@ -1,6 +1,6 @@
 ---
-title: Configuration Parameters Index (nuxeo.conf)
-description: Nuxeo Platform reads configuration properties in nuxeo.conf file. Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files.
+title: Configuration Parameters Index
+description: Manage your configuration properties around the Nuxeo Platform.
 review:
     comment: ''
     date: '2017-12-11'
@@ -1068,17 +1068,17 @@ history:
         date: '2010-08-02 17:15'
         message: ''
         version: '1'
-
 ---
+
 The Nuxeo Platform reads configuration properties that you can set either:
 
-*   In a nuxeo.conf file
-*   By contributing to the [Configuration Service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute)
-*   From the Setup tab in the Admin Center (if Nuxeo JSF UI is installed)
+- In the `nuxeo.conf` file
+- By contributing to the [Configuration Service](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute)
+- From the Setup tab in the Admin Center (if Nuxeo JSF UI is installed)
 
 ## nuxeo.conf File {{> anchor 'conf-manual-edition'}}
 
-Nuxeo Platform reads configuration properties in nuxeo.conf file. Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files. By default, the `nuxeo.conf` file is located in `$NUXEO_HOME/bin`. If you installed your application using the Windows installer, the configuration is located in `%APPDATA%\Nuxeo\conf` (check the page [Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)&nbsp;for more information).
+Nuxeo Platform reads configuration properties in the `nuxeo.conf` file. Those parameters can be either environment parameters used by Nuxeo runtime or template parameters used for values replacement in configuration files. By default, the `nuxeo.conf` file is located in `$NUXEO_HOME/bin`. If you installed your application using the Windows installer, the configuration is located in `%APPDATA%\Nuxeo\conf` (check the page [Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)&nbsp;for more information).
 
 If you plan to use the application in production, you should [move the configuration file outside the Nuxeo home directory]({{page page='setup-best-practices'}}), to make upgrades easier and more secured: your data and configuration won't risk to be overridden or lost.
 
@@ -1102,24 +1102,22 @@ Administrators can also change the `nuxeo.conf` configuration parameters from th
 
 1.  Log in with an administrator account.
     Default administrator credentials are:
-    *   login: `Administrator`
-    *   password: `Administrator`
+    - login: `Administrator`
+    - password: `Administrator`
 2.  Click on the **Admin** tab in the page header.
 3.  Click on the **Setup** tab, edit the configuration you want to change and click on **Save**.
     ![]({{file name='AdminCenter_SetupTab.png' page='admin-tab-overview'}} ?w=650,border=true)
 4.  If indicated as needed on top of the page, restart the server.
 
 {{#> callout type='tip' }}
-
 You can also take a look at the following pages for recommendations and examples:
 
-*   [Setup Best Practices]({{page page='setup-best-practices'}})
-
+- [Setup Best Practices]({{page page='setup-best-practices'}})
 {{/callout}}
 
 ## Configuration Parameters Index
 
-The table below lists the properties that you can set in nuxeo.conf. Properties that can be contributed to the Configuration service are available [from the Nuxeo Platform Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
+The table below lists the properties that you can set in `nuxeo.conf`. Properties that can be contributed to the Configuration service are available [from the Nuxeo Platform Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.runtime.ConfigurationService--configuration#contribute).
 
 {{! table-filter removed }}
 <div class="table-scroll">
