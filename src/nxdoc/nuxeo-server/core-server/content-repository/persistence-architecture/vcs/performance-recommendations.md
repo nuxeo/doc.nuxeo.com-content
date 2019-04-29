@@ -133,8 +133,8 @@ Here is a non-exhaustive list of recommendations to get better performance:
 
 - Tune the Elasticsearch settings and mappings:
   - Remove the `html_strip` char filters if not needed (on repository and audit index), its indexing cost is high on CPU.
-  - Remove the [`ecm:binarytext` fulltext index]({{page page='elasticsearch-highlights'}}#elasticsearch-configuration) if highlights are no needed.
-
+  - Remove the [`ecm:binarytext` fulltext index]({{page page='elasticsearch-highlights'}}#elasticsearch-configuration) if highlights are no needed.</br>
+&nbsp;
 - Disable audit log on loginSuccess (see above perf template).
 
 
