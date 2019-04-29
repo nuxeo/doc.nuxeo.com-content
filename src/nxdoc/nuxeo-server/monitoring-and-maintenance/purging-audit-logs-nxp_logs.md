@@ -103,8 +103,8 @@ history:
         date: '2013-01-14 11:41'
         message: ''
         version: '1'
-
 ---
+
 Depending on usage (lots of updates, lots of workflows, lots of logins, ...), the audit storage can grow very quickly.
 
 You can configure the audit to filter what must be recorded, but there is no API or UI to do a cleanup inside the audit tables. Actually, this is not something we forgot, we simply considered that it was safer like that: the Audit Service is here to record activity in the platform, it makes sense that a component cannot easily delete its audit trail.
@@ -115,33 +115,13 @@ This means that the cleanup should be done at the Backend level (SQL or Elastics
 
 Since the table structure of `NXP_LOGS` is really obvious, it is an easy job for a database administrator to remove old rows based on the `log_event_date` column which contains a timestamp.
 
-<div class="message-content">
-
-&nbsp;
-
 {{#> callout type='warning' }}
-
 Please backup your database before proceeding.
-
 {{/callout}}
-
-&nbsp;
-
-</div>
-
-<div class="message-content">
-
-&nbsp;
 
 {{#> callout type='warning' }}
-
 Keep in mind that these scripts purge all Audit entries, including documents' audit entries (i.e. documents' history).
-
 {{/callout}}
-
-&nbsp;
-
-</div>
 
 If you prefer you can find below the source of a PostgreSQL function that can be used to purge Audit entries older than a given date. You can easily adapt it:
 
@@ -150,7 +130,6 @@ If you prefer you can find below the source of a PostgreSQL function that can be
 - to match the syntax of other databases.
 
 {{#> panel type='code' heading='nx_audit_purge for PostgreSQL'}}
-
 ```sql
 CREATE OR REPLACE FUNCTION nx_audit_purge(olderThan character varying)
   RETURNS int AS
@@ -205,15 +184,12 @@ END $BODY$
  COST 100;
 
 ALTER FUNCTION nx_audit_purge(character varying) OWNER TO nuxeo;
-
 ```
-
 {{/panel}}
 
 Here is the same script for SQL Server:
 
 {{#> panel type='code' heading='nx_audit_puge for SQL Server'}}
-
 ```sql
 ALTER PROCEDURE [dbo].[nx_audit_purge]
   @olderThan varchar(11)
@@ -330,7 +306,6 @@ Here you need to edit the cURL query to match:
 - the name of your new index (`nuxeo-audit-201809`)
 - the number of shards and replicas (5 and 1 here)
 - eventually any custom mapping present in the `extended` map
-
 
 The following query creates a new audit index and set a proper setting and mapping for Nuxeo LTS 2017 (Elasticsearch 5.6):
 
@@ -466,7 +441,6 @@ Here you need to edit the cURL query to match:
 - the name of your new index (`nuxeo-audit-201809`)
 - the query part to match what you want to purge
 
-
 The following query will purge all log entries related to login and download the ones that are older than 2018-06-01.
 
 {{#> panel type='code' heading='Re-index and filter'}}
@@ -525,8 +499,6 @@ audit.elasticsearch.indexName=nuxeo-audit-201809
 This purge procedure can also be used to upgrade Elasticsearch from 2.x or to update the mapping.
 You just need to remove the query part of the re-index command if you don't want to purge at the same time.
 {{/callout}}
-
-&nbsp;
 
 * * *
 
