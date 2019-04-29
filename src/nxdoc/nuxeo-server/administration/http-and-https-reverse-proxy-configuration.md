@@ -1,5 +1,5 @@
 ---
-title: HTTP and HTTPS Reverse-Proxy Configuration
+title: HTTP/HTTPS Reverse-Proxy Configuration
 description: The Nuxeo webapp can be virtually hosted behind a HTTP/HTTPS reverse proxy, like Apache, NGINX, IIS, etc.
 review:
     comment: ''
@@ -236,29 +236,27 @@ history:
         date: '2011-03-03 16:00'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
 The Nuxeo webapp can be virtually hosted behind a HTTP/HTTPS reverse proxy, like Apache, NGINX, IIS, etc.
 {{! /excerpt}}
 
 {{#> callout type='info' }}
-
 {{{multiexcerpt 'what-is-nuxeo-platform' page='NXDOC:Generic Multi-Excerpts'}}}
-
 {{/callout}}
 
 ## Motivations for Virtual Hosting
 
 Virtual hosting provides several advantages:
 
-*   Support for HTTPS:</br>
+- Support for HTTPS:</br>
     HTTPS support in Apache is easy and flexible to setup. Apache can also be used to handle certificate authentication.
 
-*   URL filtering:</br>
+- URL filtering:</br>
     You can use Apache filtering tools to limit the URLs that can be accessed via the reverse proxy.
 
-*   Handle HTTP cache for static resources:</br>
+- Handle HTTP cache for static resources:</br>
     The Nuxeo Platform generates standard HTTP cache headers for all static resources (images, JavaScript...). These resources are by default cached on the client side (in the browser cache). For performance reasons, it can be useful to host these resources in the reverse proxy cache.
 
 This page focuses on the Apache Configuration.
@@ -269,9 +267,9 @@ Using a reverse proxy can also be a way to optimize uploads and downloads.
 
 When clients access the Nuxeo server via a WAN with low bandwidth, upload and download can take time: this is bad for the server since it consumes resources such as:
 
-*   HTTP socket and HTTP thread
-*   Memory
-*   Transaction and associated JDBC resources
+- HTTP socket and HTTP thread
+- Memory
+- Transaction and associated JDBC resources
 
 A reverse proxy can be used to buffer uploads and downloads so that uploads and downloads from the Nuxeo server's point of view are always done at a high speed.
 
@@ -373,9 +371,7 @@ org.nuxeo.ecm.webengine.skinPathPrefix=/skin/
 ### Reverse Proxy with mod_jk
 
 {{#> callout type='warning' }}
-
 The `AJP` connector may lock threads if you're not using the `APR` implementation. Please read the [native Tomcat documentation](http://tomcat.apache.org/native-doc/) for activating the `APR` implementation on your system. On Linux you just have to install the package `libtcnative-1`.
-
 {{/callout}}
 
 `mod_jk` allows you to communicate between Apache and Tomcat via the ajp1.3 protocol.
@@ -463,17 +459,17 @@ This extension point lets you contribute customized filter for a given pattern U
 ```
 {{/panel}}
 
-This contribution will ensure that every pattern matching URL will go through NuxeoRequestControllerFilter. The header of the corresponding request will be modified according to the extension point configuration. Here is a list of the possible options:
+This contribution will ensure that every pattern matching URL will go through `NuxeoRequestControllerFilter`. The header of the corresponding request will be modified according to the extension point configuration. Here is a list of the possible options:
 
-*   `filterConfig`
+- `filterConfig`
+    - name: name of the Filter.
+    - transactional: use transaction.
+    - synchonize: is synchronized.
+    - cached: if true, adds cache-control to the header.
+    - cacheTime: cache duration.
+    - private: if true, cache is private, public if false.
 
-    *   name: name of the Filter.
-    *   transactional: use transaction.
-    *   synchonize: is synchronized.
-    *   cached: if true, adds cache-control to the header.
-    *   cacheTime: cache duration.
-    *   private: if true, cache is private, public if false.
-*   `pattern`: URL pattern to match
+- `pattern`: URL pattern to match
 
 #### Using Simple Cache Filter
 
@@ -544,8 +540,8 @@ ignore_invalid_headers off
 
 Affected [headers]({{page page='special-http-headers'}}) in the Nuxeo Platform are:
 
-*   enrichers.document
-*   fetch.document
+- enrichers.document
+- fetch.document
 
 Otherwise, features like the Permissions tab will not work.
 

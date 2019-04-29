@@ -11,7 +11,6 @@ labels:
     - mguillaume
 toc: true
 tree_item_index: 300
-
 ---
 
 ## The Symptoms
