@@ -224,13 +224,13 @@ history:
         date: '2010-04-23 17:14'
         message: ''
         version: '1'
-
 ---
+
 ## Available Documents
 
 ### Domain
 
-{{multiexcerpt 'definition-domain' page='document-types-in-web-ui'}}
+{{multiexcerpt 'definition-domain' space='userdoc' page='document-types-in-web-ui'}}
 
 ### Workspace
 
@@ -256,11 +256,11 @@ Workspaces management also includes setting [alerts]({{page page='collaborative-
 
 ### Folder
 
-{{multiexcerpt 'definition-folders-types' page='document-types-in-web-ui'}}
+{{multiexcerpt 'definition-folders-types' space='userdoc' page='document-types-in-web-ui'}}
 
 **Regular Folders**
 
-{{multiexcerpt 'definition-folder' page='document-types-in-web-ui'}}
+{{multiexcerpt 'definition-folder' space='userdoc' page='document-types-in-web-ui'}}
 In a folder, you can:
 
 *   [Create documents]({{page page='creating-content'}}) and do all the actions available on them (edit, approve, manage relations, etc.)
@@ -272,11 +272,11 @@ Like in a workspace, you can use drag and drop to create content in a folder.
 
 **Ordered Folders**
 
-{{multiexcerpt 'ordered-folders' page='document-types-in-web-ui'}}
+{{multiexcerpt 'ordered-folders' space='userdoc' page='document-types-in-web-ui'}}
 
 ### File
 
-{{multiexcerpt 'definition-file' page='document-types-in-web-ui'}}
+{{multiexcerpt 'definition-file' space='userdoc' page='document-types-in-web-ui'}}
 
 ![]({{file name='file-summary.png'}} ?w=650,border=true)
 
@@ -351,9 +351,7 @@ Format of the automatically created file used to export notes from the Nuxeo Pla
 To create a note, in the **Content** tab of the workspace, click on the **New** button. On the window **Available document types**, click on the desired document, fill in the document's creation form and click on the **Create** button.
 
 {{#> callout type='tip' heading='Other ways to create a note'}}
-
 You can also create a note by importing a .txt, a .html or a .xml file using [ **Import** button]({{page page='creating-content'}}#import-button) or [drag and drop]({{page page='creating-content'}}#drag-and-drop).
-
 {{/callout}}
 
 When the note is created, users can enhance it by adding [comments]({{page page='collaborative-features'}}#comments), attached files on it, or just [editing it]({{page page='editing-content'}}).
@@ -367,9 +365,7 @@ For more information about attachment documents, read the page [Attachments]({{p
 ### Collections
 
 {{! multiexcerpt name='definition-collection'}}
-
 [Collections]({{page version='' space='nxdoc' page='collections'}}) are a folder-like document in which you can classify existing documents. Documents are not actually copied or moved into the collection, which only holds a link to the document in its original location.
-
 {{! /multiexcerpt}}
 
 It enables you to create your own organization of the content without duplicating content and having the size of the content growing uncontrollably.
@@ -380,7 +376,7 @@ The list of collections available to you is available from your Home, in the **C
 
 ### Section
 
-{{multiexcerpt 'definition-section' page='document-types-in-web-ui'}}
+{{multiexcerpt 'definition-section' space='userdoc' page='document-types-in-web-ui'}}
 [Publishing]({{page page='publishing-content'}}) is controlled using a workflow, that requires publishing requests to be [approved]({{page page='publishing-content'}}) so documents can be seen in sections.
 
 ### Workspace Template
@@ -404,7 +400,7 @@ For more information about picture document, take a look to the [Digital Asset M
 
 ### Video
 
-{{multiexcerpt 'definition-video' page='document-types-in-web-ui'}}
+{{multiexcerpt 'definition-video' space='userdoc' page='document-types-in-web-ui'}}
 
 ### Audio
 
