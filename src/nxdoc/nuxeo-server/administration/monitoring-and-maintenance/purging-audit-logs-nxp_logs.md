@@ -325,11 +325,11 @@ Make sure to stop all Nuxeo instances before proceeding.
 Here you need to edit the cURL query to match:
 - your Elasticsearch server (`localhost:9200`)
 - the name of your new index (`nuxeo-audit-201809`)
-- the number of shards and replicas (1 and 0 here)
+- the number of shards and replicas (5 and 1 here)
 - eventually any custom mapping present in the `extended` map
 
 
-The following query creates a new audit index and set a proper setting and mapping for Nuxeo 10.3 (Elasticsearch 6.3):
+The following query creates a new audit index and set a proper setting and mapping for Nuxeo 10.10 (Elasticsearch 6.3):
 
 {{#> panel type='code' heading='Create a new audit index'}}
 ```json
@@ -337,8 +337,8 @@ curl -XPUT "localhost:9200/nuxeo-audit-201809" -H 'Content-Type: application/jso
 "settings":
 {
   "index.translog.durability": "async",
-  "number_of_shards": "1",
-  "number_of_replicas": "0",
+  "number_of_shards": "5",
+  "number_of_replicas": "1",
   "analysis": {
     "filter": {
       "truncate_filter": {
