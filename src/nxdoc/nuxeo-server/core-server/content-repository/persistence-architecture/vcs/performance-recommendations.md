@@ -131,6 +131,9 @@ Here is a non-exhaustive list of recommendations to get better performance:
 
 - Turn the Elasticsearch translog to async for all index ([NXP-25587](https://jira.nuxeo.com/browse/NXP-25587)).
 
+- Tune the Elasticsearch settings and mappings:
+  - Remove the `html_strip` char filters if not needed (on repository and audit index), its indexing cost is high on CPU.
+  - Remove the [`ecm:binarytext` fulltext index]({{page page='elasticsearch-highlights'}}#elasticsearch-configuration) if highlights are no needed.
 
 - Disable audit log on loginSuccess (see above perf template).
 
