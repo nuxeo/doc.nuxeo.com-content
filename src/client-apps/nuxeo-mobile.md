@@ -152,8 +152,8 @@ history:
         date: '2016-06-15 11:30'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}The Nuxeo mobile application lets you access content stored in Nuxeo Platform servers on your phone. It provides a seamless experience on essential features such as searching, browsing and managing favorite documents. Available for iOS and Android.{{! /excerpt}}
 
 ## Requirements
@@ -176,11 +176,11 @@ See the [Limitations](#limitations) section for previous hotfixes of Nuxeo Platf
 
 #### OAuth 2 Configuration
 
-Since Nuxeo Platform 9.2, the Nuxeo mobile application uses an OAuth&nbsp;2 flow to authorize against the platform. If not already done, you need to [register]({{page page='using-oauth2#client-registration'}}) an OAuth&nbsp;2 client on your Nuxeo Platform with the following attributes:
+Since Nuxeo Platform 9.2, the Nuxeo mobile application uses an OAuth&nbsp;2 flow to authorize against the platform. If not already done, you need to [register]({{page page='using-oauth2'}}#client-registration) an OAuth&nbsp;2 client on your Nuxeo Platform with the following attributes:
 
-* Name: Nuxeo Mobile
-* Client Id: `nuxeo-mobile`
-* Redirect URIs: `nuxeo://authorize`
+- Name: Nuxeo Mobile
+- Client Id: `nuxeo-mobile`
+- Redirect URIs: `nuxeo://authorize`
 
 ## Installation
 
@@ -192,7 +192,12 @@ The Nuxeo **Android** application can be installed from [Google Play](https://pl
 
 The Nuxeo application allows you to authenticate against a Nuxeo server, browse and search the Nuxeo repository. In addition, you can manage your favorite documents and access your shared/personal collections. Finally, you can start and process workflows tasks on your assets. All features listed below are available using the side ("burger") menu.
 
-![]({{file name='mobile-menu.png'}} ?w=200,h=433,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Menu
+    name: mobile-menu.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Menu](nx_asset://02542a71-a2e3-4dec-89bd-1a4aa53792b1 ?w=200,border=true)
 
 ### Authenticating
 
@@ -202,8 +207,18 @@ Once the application is installed and opened, indicate the Nuxeo server you want
 <table class="hover" style="border: 0px;">
 <tbody>
 <tr>
-<td colspan="1"><b>![]({{file name='mobile-connection.png'}} ?w=200,h=355,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-login-page.png'}} ?w=200,h=355,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Connection
+    name: mobile-connection.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Connection](nx_asset://cafb4592-0a06-4373-863c-297e13d71347 ?w=200,h=355,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Login Page
+    name: mobile-login-page.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Login Page](nx_asset://d708e300-680a-4332-8bcf-b668eb6f26dc ?w=200,h=355,border=true)</b></td>
 </tr>
 </tbody>
 </table>
@@ -213,17 +228,27 @@ Once the application is installed and opened, indicate the Nuxeo server you want
 
 The **Browse** menu enables you to browse your documents. The thumbnail of the document is displayed whenever it's available, just like on the regular web user interface (see the [Limitations](#limitations) section). Otherwise an icon is displayed. Tap to enter the workspace or see the document. Actions on documents are available by **taping the overflow button**:
 
-*   Share
-*   [Add to/Remove from favorites](#favorites)
-*   Add to Collections
-*   [Start Process](#workflows)
+- Share
+- [Add to/Remove from favorites](#favorites)
+- Add to Collections
+- [Start Process](#workflows)
 
 <div>
 <table class="hover" style="border: 0px;">
 <tbody>
 <tr>
-<td colspan="1"><b>![]({{file name='mobile-actions-overflow.jpg'}} ?w=200,h=355,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-actions-overflow-menu.png'}} ?w=200,h=355,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Actions Overflow
+    name: mobile-actions-overflow.jpg
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Actions Overflow](nx_asset://723f8305-2a9e-45dd-ac90-9cc1e1f6b783 ?w=200,h=355,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Actions Overflow Menu
+    name: mobile-actions-overflow-menu.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Actions Overflow Menu](nx_asset://94f5a226-a875-4469-b798-5a90644736c9 ?w=200,h=355,border=true)</b></td>
 </tr>
 </tbody>
 </table>
@@ -231,9 +256,9 @@ The **Browse** menu enables you to browse your documents. The thumbnail of the d
 
 For any non folderish document, such as notes and files typically, some information is displayed on the view layout:
 
-*   The document thumbnail if available or the preview of content for notes
-*   The filename and size of the attached file if any
-*   The creation date, creator username, version, state and list of contributors
+- The document thumbnail if available or the preview of content for notes
+- The filename and size of the attached file if any
+- The creation date, creator username, version, state and list of contributors
 
 
 If the PDF preview is available, tap the thumbnail zone to preview it. If the document is a text document with several pages, you can navigate through it.
@@ -242,9 +267,24 @@ If the PDF preview is available, tap the thumbnail zone to preview it. If the do
 <table class="hover" style="border: 0px;">
 <tbody>
 <tr>
-<td colspan="1"><b>![]({{file name='mobile-browse.jpg'}} ?w=210,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-document-view.png'}} ?w=200,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-document-preview.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Browse
+    name: mobile-browse.jpg
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Browse](nx_asset://59cee105-d60c-4b86-806d-2ae530f3ac93 ?w=210,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Document View
+    name: mobile-document-view.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Document View](nx_asset://e13b65e4-b5ae-40ea-b266-b41b82a80535 ?w=200,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Document Preview
+    name: mobile-document-preview.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Document Preview](nx_asset://642becf6-9504-4872-8ee5-f86c1942ff46 ?w=200,border=true)</b></td>
 </tr>
 </tbody>
 </table>
@@ -260,8 +300,18 @@ Browsing documents can be made with list view or grid view, allowing to better p
 <table class="hover" style="border: 0px;">
 <tbody>
 <tr>
-<td colspan="1"><b>![]({{file name='mobile-browse-grid.png'}} ?w=200,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-browse-sort.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Browse Grid
+    name: mobile-browse-grid.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Browse Grid](nx_asset://4a958393-6ad3-44f7-8fd4-850a21c3f247 ?w=200,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Browse Sort
+    name: mobile-browse-sort.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Browse Sort](nx_asset://abdabea3-eb03-4eec-9e63-3fc93f4a8858 ?w=200,border=true)</b></td>
 </tr>
 </tbody>
 </table>
@@ -274,7 +324,12 @@ Tapping a sort order twice switches between ascendant and descendant sort order{
 
 The **Search** menu enables you to query documents on their title and content, by performing a full-text search. {{{multiexcerpt 'full-text-search-user-desc' space='nxdoc' page='quick-search'}}}A list of matching documents is provided and you can directly have access them. Once on a document, tap the back icon to go back to search results.
 
-![]({{file name='mobile-search.jpg'}} ?w=200,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Search
+    name: mobile-search.jpg
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Search](nx_asset://b7d7293e-78cf-456b-b6b8-75be16b5e660 ?w=200,border=true)
 
 ### Favorites
 
@@ -284,9 +339,24 @@ You are able to mark as favorite the list of documents you are interested in. "A
 <table class="hover" style="border: 0px;">
 <tbody>
 <tr>
-<td colspan="1"><b>![]({{file name='mobile-favorites.png'}} ?w=200,h=357,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-add-favorite.png'}} ?w=200,h=357,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-remove-favorite.png'}} ?w=200,h=357,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Favorites
+    name: mobile-favorites.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Favorites](nx_asset://b7333bef-f753-407a-a2c9-a97f588083fe ?w=200,h=357,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Add Favorite
+    name: mobile-add-favorite.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Add Favorite](nx_asset://7636b6df-d9a2-4669-a59b-904cf58f7936 ?w=200,h=357,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Remove Favorite
+    name: mobile-remove-favorite.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Remove Favorite](nx_asset://1f709d2d-08c4-4dfd-b5b2-5479f6ff21f6 ?w=200,h=357,border=true)</b></td>
 </tr>
 </tbody>
 </table>
@@ -296,7 +366,12 @@ You are able to mark as favorite the list of documents you are interested in. "A
 
 The **Recently Viewed** entry displays the last 20 documents viewed on your Nuxeo Mobile application. From this entry you can tap on a document to enter a workspace or display the document. Actions on documents are available by **sliding** to share, add to your favorites or add a document to a collections.
 
-![]({{file name='mobile-recently-viewed.png'}} ?w=200,h=357,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Recently Viewed
+    name: mobile-recently-viewed.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Recently Viewed](nx_asset://220f2d30-3271-4e55-a59d-3c436c4ba838 ?w=200,h=357,border=true)
 
 
 ### Collections
@@ -309,9 +384,24 @@ Browsing your repository, you can add a document to one or several collections. 
 <table class="hover" style="border: 0px;">
 <tbody>
 <tr>
-<td colspan="1"><b>![]({{file name='mobile-collections.png'}} ?w=200,h=357,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-collections.jpg'}} ?w=200,h=357,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-collections-added.png'}} ?w=200,h=357,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Collections
+    name: mobile-collections.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Collections](nx_asset://871e1b5f-210b-495a-a336-454874c2ae1d ?w=200,h=357,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Collections JPG
+    name: mobile-collections.jpg
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Collections JPG](nx_asset://5eb75da0-6859-4ac8-a8ec-9cc7e9965a60 ?w=200,h=357,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Collections Added
+    name: mobile-collections-added.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Collections Added](nx_asset://9a607995-e8b8-4f2d-9998-42bfb72551c1 ?w=200,h=357,border=true)</b></td>
 </tr>
 </tbody>
 </table>
@@ -326,9 +416,24 @@ On iOS, from the **Share** menu associated with a document, add the Nuxeo share 
 <table class="hover" style="border: 0px;">
 <tbody>
 <tr>
-<td colspan="1"><b>![]({{file name='mobile-capture-add-nuxeo.png'}} ?w=200,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-capture-share-photo.png'}} ?w=200,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-capture-share-photo-android.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Capture Add Nuxeo
+    name: mobile-capture-add-nuxeo.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Capture Add Nuxeo](nx_asset://f6e32747-3bb1-4f54-b26d-6846c1c5e718 ?w=200,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Capture Share Photo
+    name: mobile-capture-share-photo.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Capture Share Photo](nx_asset://8b7709e3-0870-4d15-99f4-302cc9e74594 ?w=200,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Capture Share Photo Android
+    name: mobile-capture-share-photo-android.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Capture Share Photo Android](nx_asset://e6b4ea7a-8d30-4e53-ba16-0492f8d9a098 ?w=200,border=true)</b></td>
 </tr>
 </tbody>
 </table>
@@ -340,9 +445,24 @@ When capturing a document in Nuxeo, the user can select her personal space (set 
 <table class="hover" style="border: 0px;">
 <tbody>
 <tr>
-<td colspan="1"><b>![]({{file name='mobile-capture-folder-selection.png'}} ?w=200,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-capture-folder-done.png'}} ?w=200,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-capture-done.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Capture Folder Selection
+    name: mobile-capture-folder-selection.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Capture Folder Selection](nx_asset://46a1c41e-cfc7-49c1-8ee4-a030828427dd ?w=200,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Capture Folder Done
+    name: mobile-capture-folder-done.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Capture Folder Done](nx_asset://43db26be-d997-4ca7-a4fe-c9190a919291 ?w=200,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Capture Done
+    name: mobile-capture-done.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Capture Done](nx_asset://4c77c6c8-26ed-4548-8c86-0797287d97e4 ?w=200,border=true)</b></td>
 </tr>
 </tbody>
 </table>
@@ -372,9 +492,24 @@ Once mandatory fields are filled, the user can process it (approval, rejection, 
 <table class="hover" style="border: 0px;">
 <tbody>
 <tr>
-<td colspan="1"><b>![]({{file name='mobile-workflows-tasks-list.png'}} ?w=200,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-workflows-task-view.png'}} ?w=200,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-workflows-approve-reject.png'}} ?w=200,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Workflow Start Process
+    name: mobile-workflows-start-process.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Workflow Start Process](nx_asset://a0bc8a70-0552-4945-8fc0-91bfcf14a053 ?w=200,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Worfklow Task View
+    name: mobile-workflows-task-view.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Worfklow Task View](nx_asset://aaa2c577-db14-43e7-a841-b56ccaa29f45 ?w=200,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Workflow Approve Reject
+    name: mobile-workflows-approve-reject.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Workflow Approve Reject](nx_asset://6d17fa9a-a39f-40c5-a8db-ce1d4f06d5b1 ?w=200,border=true)</b></td>
 </tr>
 </tbody>
 </table>
@@ -385,7 +520,12 @@ Once mandatory fields are filled, the user can process it (approval, rejection, 
 
 You are able to **share** any document through messages, mail, Slack, Twitter, Facebook.... any available application on your phone for that purpose. The **Share** button is available on the toolbar of the document view, next to the filename.
 
-![]({{file name='mobile-share-action.png'}} ?w=200,h=355,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Share Action
+    name: mobile-share-action.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Share Action](nx_asset://08f0f3aa-975f-4f26-b66f-e62b480c8f72 ?w=200,h=350,border=true)
 
 In addition, you are able to **Open directly** documents on your phone by downloading them first and then choose the action that you want. To do so click on the **Download** button below the thumbnail view.
 
@@ -393,8 +533,18 @@ In addition, you are able to **Open directly** documents on your phone by downlo
 <table class="hover" style="border: 0px;">
 <tbody>
 <tr>
-<td colspan="1"><b>![]({{file name='mobile-open-in-download.png'}} ?w=200,h=357,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-open-action.png'}} ?w=200,h=355,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Open in Download
+    name: mobile-open-in-download.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Open in Download](nx_asset://424be51f-df49-47b7-8cb7-3a07b724929d ?w=200,h=350,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Open Action
+    name: mobile-open-action.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Open Action](nx_asset://85464e22-7504-4023-8401-bea12fc162fd ?w=200,h=350,border=true)</b></td>
 </tr>
 </tbody>
 </table>
@@ -412,8 +562,18 @@ When your phone loses network connection or when you turn it on airplane mode, a
 <table class="hover" style="border: 0px;">
 <tbody>
 <tr>
-<td colspan="1"><b>![]({{file name='mobile-offline-mode.png'}} ?w=200,h=355,border=true)</b></td>
-<td colspan="1"><b>![]({{file name='mobile-offline-mode-refresh.png'}} ?w=200,h=355,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Offline Mode
+    name: mobile-offline-mode.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Offline Mode](nx_asset://dc835e7a-6258-4c12-bc50-47e9322a3f27 ?w=200,h=350,border=true)</b></td>
+<td colspan="1"><b>{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Mobile/Mobile Offline Mode Refresh
+    name: mobile-offline-mode-refresh.png
+    1.13#screenshot#up_to_date
+--}}
+![Mobile Offline Mode Refresh](nx_asset://f7e6a180-0273-42dc-b7ad-7e5551309feb ?w=200,h=350,border=true)</b></td>
 </tr>
 </tbody>
 </table>
