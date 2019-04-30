@@ -105,7 +105,7 @@ The File Manager service is a traditional Nuxeo Platform service that offers som
   DocumentModel createdDoc = fileManager.createDocument(context);
   ```
 
-  The File Manager relies on the [FileImporterContext](https://github.com/nuxeo/nuxeo/blob/release-10.10/nuxeo-services/nuxeo-platform-filemanager-api/src/main/java/org/nuxeo/ecm/platform/filemanager/api/FileImporterContext.java) class that contains everything needed to create a document from a blob.
+  The File Manager relies on the [FileImporterContext](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/nuxeo-platform-filemanager-api/src/main/java/org/nuxeo/ecm/platform/filemanager/api/FileImporterContext.java) class that contains everything needed to create a document from a blob.
 
 - You can also use the [`FileManager.Import` Automation operation](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewOperation/FileManager.Import), which provides a way to create in one REST call a document from a binary, or to create easily a document from a blob in an Automation chain.
 

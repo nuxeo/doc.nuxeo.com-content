@@ -334,8 +334,8 @@ Stores Content on Azure Object Store
 </td><td colspan="1">
 
 - [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage)
-- [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/master/nuxeo-core-binarymanager-azure)
-- [Configuration](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/blob/master/nuxeo-core-binarymanager-azure/README.md)
+- [Sources](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-azure)
+- [Configuration](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-azure/README.md)
 
 </td></tr><tr><td colspan="1">
 
@@ -356,8 +356,8 @@ Stores content on Azure object store read it through Azure CDN
 </td><td colspan="1">
 
 - [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage)
-- [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/master/nuxeo-core-binarymanager-azure)
-- [Configuration](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/blob/master/nuxeo-core-binarymanager-azure/README.md)
+- [Sources](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-azure)
+- [Configuration](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-azure/README.md)
 
 </td></tr><tr><td colspan="1">
 
@@ -378,7 +378,7 @@ Stores content on Amazon S3
 </td><td colspan="1">
 
 - [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage)
-- [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/master/nuxeo-core-binarymanager-s3)
+- [Sources](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-s3)
 - [Configuration]({{page page='amazon-s3-online-storage'}})
 
 </td></tr><tr><td colspan="1">
@@ -399,7 +399,7 @@ Stores binaries using the Apache jclouds library into a wide range of possible b
 
 </td><td colspan="1">
 
-[Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/tree/master/nuxeo-core-binarymanager-jclouds)
+[Sources](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-jclouds)
 
 </td></tr><tr><td colspan="1">
 
@@ -460,9 +460,8 @@ GridFSBinaryManager
 Reads and writes content into MongoDB Binary Manager
 
 </td><td colspan="1">
-- [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/mongodb-gridfs-storage)[](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs)
-[](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs)
-- [](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs)[Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs)
+- [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/mongodb-gridfs-storage)
+- [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs)
 - [Configuration](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs/blob/master/ReadMe.md)
 
 &nbsp;

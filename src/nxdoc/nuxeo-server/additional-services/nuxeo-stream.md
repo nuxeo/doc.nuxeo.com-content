@@ -224,7 +224,7 @@ nuxeo.stream.pubsub.log.codec=avroBinary
 
 The `nuxeo-importer-stream` which is part of the `nuxeo-platform-importer` addon use Log to run document importer.
 
-Please visit [nuxeo-importer-stream README](https://github.com/nuxeo/nuxeo-platform-importer/tree/master/nuxeo-importer-stream)
+Please visit [nuxeo-importer-stream README](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-platform-importer/nuxeo-importer-stream)
 for more information.
 
 ### Bulk Action Framework

@@ -352,7 +352,7 @@ You can see the uninstall script doesn't contain variables, neither guard attrib
 
 The built-ins commands provided by the Nuxeo Platform may not cover all of the install use cases. In that case you must implement your own command.
 
-To implement your own command you must extend the [`AbstractCommand` class](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/connect/update/task/standalone/commands/AbstractCommand.html) from org.nuxeo.connect.update.task.standalone.[commands:nuxeo-connect-standalone](http://commandsnuxeo-connect-standalone) (nuxeo-connect-standalone in [https://github.com/nuxeo/nuxeo-runtime/](https://github.com/nuxeo/nuxeo-runtime/)).
+To implement your own command you must extend the [`AbstractCommand` class](http://community.nuxeo.com/api/nuxeo/8.2/javadoc/org/nuxeo/connect/update/task/standalone/commands/AbstractCommand.html) from org.nuxeo.connect.update.task.standalone.[commands:nuxeo-connect-standalone](http://commandsnuxeo-connect-standalone) (nuxeo-connect-standalone in [https://github.com/nuxeo/nuxeo-runtime/](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-runtime)).
 
 Here is a simple example (the Delete command):
 

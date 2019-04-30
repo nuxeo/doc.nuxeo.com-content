@@ -33,7 +33,7 @@ Once installed, this addon sets the S3 direct upload as the default upload provi
 
 The upload is done in three steps:
 
-1. The Web UI makes a call to a REST API endpoint, to initiate a new batch using the [S3 batch handler](https://github.com/nuxeo/nuxeo-core-binarymanager-cloud/blob/release-10.2/nuxeo-core-binarymanager-s3/src/main/java/org/nuxeo/ecm/core/storage/sql/S3DirectBatchHandler.java):
+1. The Web UI makes a call to a REST API endpoint, to initiate a new batch using the [S3 batch handler](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-s3/src/main/java/org/nuxeo/ecm/core/storage/sql/S3DirectBatchHandler.java):
 
   ```
   POST 'http://localhost:8080/nuxeo/api/v1/upload/new/s3'

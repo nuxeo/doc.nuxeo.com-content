@@ -240,8 +240,8 @@ Here are the different components of the thumbnail feature:
 Here are Nuxeo thumbnail factory implementations on GitHub:
 
 * [`ThumbnailDocumentFactory`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-thumbnail/src/main/java/org/nuxeo/ecm/platform/thumbnail/factories/ThumbnailDocumentFactory.java)
-* [`ThumbnailVideoFactory`](https://github.com/nuxeo/nuxeo-platform-video/blob/master/nuxeo-platform-video-core/src/main/java/org/nuxeo/ecm/platform/video/adapter/ThumbnailVideoFactory.java)
-* [`ThumbnailAudioFactory`](https://github.com/nuxeo/nuxeo-platform-audio/blob/master/nuxeo-platform-audio-core/src/main/java/org/nuxeo/ecm/platform/audio/extension/ThumbnailAudioFactory.java)
+* [`ThumbnailVideoFactory`](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-platform-video/nuxeo-platform-video-core/src/main/java/org/nuxeo/ecm/platform/video/adapter/ThumbnailVideoFactory.java)
+* [`ThumbnailAudioFactory`](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-platform-audio/nuxeo-platform-audio-core/src/main/java/org/nuxeo/ecm/platform/audio/extension/ThumbnailAudioFactory.java)
 * [`ThumbnailPictureFactory`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-platform-imaging/nuxeo-platform-imaging-core/src/main/java/org/nuxeo/ecm/platform/picture/thumbnail/ThumbnailPictureFactory.java)
 
 {{/callout}}

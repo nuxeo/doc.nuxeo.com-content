@@ -149,7 +149,7 @@ A step by step example explaining the addon configuration can be found in the Nu
 
 Please note that the XML can only be mapped to non-multivalued and non-complex fields. If you need this functionality, see the advanced XML parsing section.
 
-A [Java mapper class example](https://github.com/nuxeo/nuxeo-platform-importer/blob/master/nuxeo-importer-scan/src/test/java/org/nuxeo/platform/scanimporter/tests/SampleMapper.java) can be found on GitHub. This allows to create a specific Nuxeo document type depending on the XML source.
+A [Java mapper class example](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-platform-importer/nuxeo-importer-scan/src/test/java/org/nuxeo/platform/scanimporter/tests/SampleMapper.java) can be found on GitHub. This allows to create a specific Nuxeo document type depending on the XML source.
 
 ## Advanced XML Parsing
 
@@ -164,7 +164,7 @@ These bundles provide you with a new service (`org.nuxeo.ecm.platform.importer.x
 
 2.  `attributeMapping` to do the XML parsing and map to the corresponding metadata
 
-A detailed documentation on the advanced XML parsing usage can be found on the [nuxeo-importer-xml-parser GitHub page](https://github.com/nuxeo/nuxeo-platform-importer/tree/master/nuxeo-importer-xml-parser). To get you started, below is a working example with the original XML file and the corresponding XML configuration that can be pasted into Nuxeo Studio.
+A detailed documentation on the advanced XML parsing usage can be found on the [nuxeo-importer-xml-parser GitHub page](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-platform-importer/nuxeo-importer-xml-parser). To get you started, below is a working example with the original XML file and the corresponding XML configuration that can be pasted into Nuxeo Studio.
 
 {{#> panel type='code' heading='Original XML file'}}
 ```xml

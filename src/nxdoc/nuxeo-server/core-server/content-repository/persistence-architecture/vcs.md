@@ -297,5 +297,3 @@ You can also choose to store blobs in the SQL database but we don't recommend it
 - Some JDBC drivers load blobs in the JVM memory which can lead to memory issues.
 - Database backup/restore is very slow.
 - Database replication (master/slave) is very slow too.
-
-If despite these recommendations you still want to choose this architectural option, you can use the dedicated plugin available at [https://github.com/nuxeo/nuxeo-core-binarymanager-sql/](https://github.com/nuxeo/nuxeo-core-binarymanager-sql/).

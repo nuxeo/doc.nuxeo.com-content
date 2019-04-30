@@ -626,7 +626,7 @@ For compatibility with previous Nuxeo versions, if no `<ddlMode>` element is spe
 <sqlInitFile>myconf.sql.txt</sqlInitFile>
 ```
 
-If you need to execute additional SQL when the database is initialized (at every Nuxeo startup), you can use this to specify an additional SQL file to read and execute (unless noDDL is true). The format of an SQL init file is described below. Examples can be found in the standard SQL init files used by Nuxeo, which are available at [https://github.com/nuxeo/nuxeo-core/tree/master/nuxeo-core-storage-sql/nuxeo-core-storage-sql/src/main/resources/nuxeovcs](https://github.com/nuxeo/nuxeo-core/tree/master/nuxeo-core-storage-sql/nuxeo-core-storage-sql/src/main/resources/nuxeovcs) (in the appropriate branch for your version).
+If you need to execute additional SQL when the database is initialized (at every Nuxeo startup), you can use this to specify an additional SQL file to read and execute (unless noDDL is true). The format of an SQL init file is described below. Examples can be found in the standard SQL init files used by Nuxeo, which are available at [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-core/nuxeo-core-storage-sql/nuxeo-core-storage-sql/src/main/resources/nuxeovcs](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-core/nuxeo-core-storage-sql/nuxeo-core-storage-sql/src/main/resources/nuxeovcs) (in the appropriate branch for your version).
 
 A SQL init file is a series of SQL statements.
 

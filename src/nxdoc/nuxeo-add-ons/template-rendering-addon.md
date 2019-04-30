@@ -243,11 +243,11 @@ To create a template file:
 
 {{#> callout type='tip' heading='More resources to help users create the template file'}}
 
-*   More information about the variables available (including functions) in the [Quick user guide](https://github.com/nuxeo/nuxeo-template-rendering/blob/master/QuickUserGuide.md) on the Nuxeo GitHub repository.
+*   More information about the variables available (including functions) in the [Quick user guide](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-template-rendering/QuickUserGuide.md) on the Nuxeo GitHub repository.
 *   XDocReport [overview](https://github.com/opensagres/xdocreport/wiki/Overview) and [docx format user guide](https://github.com/opensagres/xdocreport/wiki/DocxDesignReport) / [odt format user guide](https://github.com/opensagres/xdocreport/wiki/ODTDesignReport): XDocReport is a tool that enables to insert fields in MS Office and OpenOffice / LibreOffice text files.
 *   [JXLS website](http://jxls.sourceforge.net): JXLS is a tool that enables to insert fields in MS Office and OpenOffice / LibreOffice spreadsheets.
-*   [Template rendering readme file](https://github.com/nuxeo/nuxeo-template-rendering/blob/master/ReadMe.md) on the Nuxeo GitHub repository
-*   [Template rendering Quick User Guide](https://github.com/nuxeo/nuxeo-template-rendering/blob/master/QuickUserGuide.md) on the Nuxeo GitHub repository
+*   [Template rendering readme file](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-template-rendering/ReadMe.md) on the Nuxeo GitHub repository
+*   [Template rendering Quick User Guide](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-template-rendering/QuickUserGuide.md) on the Nuxeo GitHub repository
 
 {{/callout}}
 
@@ -402,7 +402,7 @@ There are several ways to associate a template to a document.
 
 ##### Creating a document based on a template
 
-To create a new document based on a template, users need to [use the **New document** button]({{page space='userdoc' page='creating-content#creating-a-document-using-the-new-document-button'}}). If a template is available for the selected document type, an additional option is then available for the **Content** field, allowing users to select which template to use.
+To create a new document based on a template, users need to [use the **New document** button]({{page space='userdoc' page='creating-content'}}#creating-a-document-using-the-new-document-button). If a template is available for the selected document type, an additional option is then available for the **Content** field, allowing users to select which template to use.
 ![]({{file name='select_template.png'}} ?w=500,h=122,border=true)
 When the document is created, the template is used as content. An additional **Associated templates** tab is available.
 

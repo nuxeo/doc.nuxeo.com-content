@@ -221,7 +221,7 @@ Data returned from Elasticsearch is also processed for simplification and consis
 
 ### Web UI Workflow Analytics Dashboards
 
-**Source file on GitHub**: [nuxeo-workflow-analytics.html](https://github.com/nuxeo/nuxeo-web-ui/blob/master/elements/nuxeo-admin/nuxeo-workflow-analytics.html)
+**Source file on GitHub**: [nuxeo-workflow-analytics.js](https://github.com/nuxeo/nuxeo-web-ui/blob/master/elements/nuxeo-admin/nuxeo-workflow-analytics.js)
 
 ![]({{file name='web_ui_workflows_analytics.png'}} ?w=600)
 
