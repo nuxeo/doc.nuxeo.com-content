@@ -95,8 +95,8 @@ history:
         date: '2014-05-02 17:27'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
 
 The Nuxeo Platform comes with a [conversion service](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.core.convert.api.ConversionService) that can be used to manage conversion of blobs from one format to an other.
@@ -113,93 +113,6 @@ The conversion service provides:
 *   A set of built-in converters for managing many standard formats
 
 ## Converting Blobs
-
-### Java API
-
-The Conversion Service can be accessed via the standard Nuxeo Service lookup:
-
-```java
-ConversionService conversionService = Framework.getService(ConversionService.class)
-```
-
-#### Synchronous Conversions
-
-To convert a BlobHolder to a given destination mime type:
-
-```java
-BlobHolder result = conversionService.convertToMimeType("text/plain", blobHolder, params);
-```
-
-`params` is a simple `Map<String,Serializable>` to pass parameters to the converter (can be null).
-
-To use a known converter:
-
-```java
-BlobHolder result = conversionService.convert("converterName", blobHolder, params);
-```
-
-#### {{> anchor 'java-api-async-conversions'}}Asynchronous Conversions
-
-Since 7.10, four new methods are available on the&nbsp;`ConversionService` to schedule asynchronous conversions and retrieve the result.
-
-To schedule a new asynchronous conversion given a converter name:
-
-```java
-String conversionId = conversionService.scheduleConversion("converterName", blobHolder, params);
-```
-
-To schedule a new asynchronous conversion given a destination mime type:
-
-```
-String conversionId = conversionService.scheduleConversion("text/plain", blobHolder, params);
-```
-
-Those methods return a conversion id to be used in the following methods to get the status and result of the conversion.
-
-To retrieve the status of a scheduled conversion:
-
-```java
-ConversionStatus status = conversionService.getConversionStatus(conversionId);
-```
-
-The&nbsp;`ConversionStatus` object holds the status of an asynchronous conversion which can be `SCHEDULED`, `RUNNING`&nbsp;or&nbsp;`COMPLETED`.
-
-When the status is&nbsp;`COMPLETED`, the result of the conversion can be retrieved with:
-
-```java
-BlobHolder result = conversionService.getConversionResult(conversionId, true);
-```
-
-The second boolean parameter defines if the conversion result will be deleted, if&nbsp;`true`, or not. If deleted, the next call to&nbsp;`#getConversionResult` will return&nbsp;`null`.
-
-### Utility Methods
-
-Find a converter name for a given conversion:
-
-```java
-String converterName = conversionService.getConverterName(sourceMimeType, destinationMimeType);
-```
-
-Test if a converter is available:
-
-```java
-String converterName = conversionService.getConverterName(sourceMimeType, destinationMimeType);
-ConverterCheckResult checkResult = conversionService.isConverterAvailable("converterName");
-```
-
-This call can throw `ConverterNotRegistred` if the target converter does not exist at all. The `ConverterCheckResult` class provides:
-
-*   A `isAvailable()` method
-*   A `getErrorMessage()` method: Returns the error that occurred while doing the availability check
-*   A `getInstallationMessage` method: Returns the installation message that was contributed by the converter contributor
-
-### Automation
-
-A few operations exist to do synchronous conversions:
-
-*   [Conversion > Convert to given mime-type](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Blob.Convert)
-*   [Conversion > Convert To PDF](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Blob.ToPDF)
-*   [Conversion > Run converter](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Blob.RunConverter)
 
 ### REST API
 
@@ -339,6 +252,94 @@ GET http://localhost:8080/nuxeo/api/v1/conversion/id/result
 ```
 
 Returns the result of the conversion, or HTTP code 404 if there is no conversion matching the id or if there is no result yet (conversion not completed).
+
+### Java API
+
+The Conversion Service can be accessed via the standard Nuxeo Service lookup:
+
+```java
+ConversionService conversionService = Framework.getService(ConversionService.class)
+```
+
+#### Synchronous Conversions
+
+To convert a BlobHolder to a given destination mime type:
+
+```java
+BlobHolder result = conversionService.convertToMimeType("text/plain", blobHolder, params);
+```
+
+`params` is a simple `Map<String,Serializable>` to pass parameters to the converter (can be null).
+
+To use a known converter:
+
+```java
+BlobHolder result = conversionService.convert("converterName", blobHolder, params);
+```
+
+#### {{> anchor 'java-api-async-conversions'}}Asynchronous Conversions
+
+Since 7.10, four new methods are available on the&nbsp;`ConversionService` to schedule asynchronous conversions and retrieve the result.
+
+To schedule a new asynchronous conversion given a converter name:
+
+```java
+String conversionId = conversionService.scheduleConversion("converterName", blobHolder, params);
+```
+
+To schedule a new asynchronous conversion given a destination mime type:
+
+```
+String conversionId = conversionService.scheduleConversion("text/plain", blobHolder, params);
+```
+
+Those methods return a conversion id to be used in the following methods to get the status and result of the conversion.
+
+To retrieve the status of a scheduled conversion:
+
+```java
+ConversionStatus status = conversionService.getConversionStatus(conversionId);
+```
+
+The&nbsp;`ConversionStatus` object holds the status of an asynchronous conversion which can be `SCHEDULED`, `RUNNING`&nbsp;or&nbsp;`COMPLETED`.
+
+When the status is&nbsp;`COMPLETED`, the result of the conversion can be retrieved with:
+
+```java
+BlobHolder result = conversionService.getConversionResult(conversionId, true);
+```
+
+The second boolean parameter defines if the conversion result will be deleted, if&nbsp;`true`, or not. If deleted, the next call to&nbsp;`#getConversionResult` will return&nbsp;`null`.
+
+### Utility Methods
+
+Find a converter name for a given conversion:
+
+```java
+String converterName = conversionService.getConverterName(sourceMimeType, destinationMimeType);
+```
+
+Test if a converter is available:
+
+```java
+String converterName = conversionService.getConverterName(sourceMimeType, destinationMimeType);
+ConverterCheckResult checkResult = conversionService.isConverterAvailable("converterName");
+```
+
+This call can throw `ConverterNotRegistred` if the target converter does not exist at all. The `ConverterCheckResult` class provides:
+
+*   A `isAvailable()` method
+*   A `getErrorMessage()` method: Returns the error that occurred while doing the availability check
+*   A `getInstallationMessage` method: Returns the installation message that was contributed by the converter contributor
+
+### Automation
+
+A few operations exist to do synchronous conversions:
+
+*   [Conversion > Convert to given mime-type](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Blob.Convert)
+*   [Conversion > Convert To PDF](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Blob.ToPDF)
+*   [Conversion > Run converter](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Blob.RunConverter)
+
 
 ## Configuration and Contributions
 

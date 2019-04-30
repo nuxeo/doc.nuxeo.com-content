@@ -1,5 +1,6 @@
 ---
-title: Document Resources Endpoints
+title: Document Resource Endpoints
+description: This page lists some examples of the id and Path endpoints available on the Nuxeo Platform.
 review:
     comment: ''
     date: '2017-12-12'

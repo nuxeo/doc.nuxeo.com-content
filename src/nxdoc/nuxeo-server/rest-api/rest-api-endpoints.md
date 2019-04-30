@@ -12,7 +12,6 @@ labels:
     - lts2017-ok
 toc: true
 tree_item_index: 100
-
 ---
 
 Nuxeo REST API provides many document-oriented endpoints, but also allows you to customize your own.
@@ -70,14 +69,14 @@ Perform CRUD operations on Nuxeo resources in REST style. The following resource
         </td>
       </tr>
       <tr>
-        <td class="small-3">**Searches**</td>
+        <td class="small-3">**Search**</td>
         <td class="small-3">
           `/nuxeo/api/v1/search/lang`<br/>
           `/nuxeo/api/v1/search/pp`<br/>
           `/nuxeo/api/v1/search/saved`
         </td>
         <td class="small-6">
-          Perform searches by query or page provider, store searches and reproduce them later. See [Search Resource Endpoint]({{page page='search-endpoints'}}) for more information.
+          Perform search by query or page provider, store search and reproduce it later. See [Search Resource Endpoint]({{page page='search-endpoints'}}) for more information.
         </td>
       </tr>
       <tr>
