@@ -1,5 +1,5 @@
 ---
-title: Workflow and Task Resources Endpoints
+title: Workflow and Task Resource Endpoints
 review:
     comment: ''
     date: '2018-01-16'

@@ -1,5 +1,5 @@
 ---
-title: Command Resource Endpoints
+title: Command Endpoints
 description: The Nuxeo Automation Server module provides a REST API to execute operations on a Nuxeo server.
 review:
     comment: ''
