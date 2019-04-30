@@ -195,6 +195,7 @@ Note that since Nuxeo 7.3, the audit is stored by default as an Elasticsearch in
 
 {{/callout}}
 
+<!--DEPRECATED ADDON
 ## The Travel Expenses Example
 
 Let's consider the [travel expenses addon's workflow](https://github.com/nuxeo/marketplace-travel-expenses) which allows a user to submit a travel expense to be validated by a manager or a supervisor.
@@ -466,5 +467,6 @@ Eventually a manager will validate the request (associated audit entries will be
     Along with final values of the workflow variables we can see the workflow duration `timeSinceWorkflowStarted`.
 
 {{! Don't put anything here. }}
+-->
 
 * * *

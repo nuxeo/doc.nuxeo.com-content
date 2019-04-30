@@ -90,7 +90,7 @@ There are multiple ways to build a Nuxeo Package. Focusing on those using the [A
 - [No-NXR Method](#no-nxr-method)
 - [Explicit Method](#explicit-method)
 
-See [Nuxeo Marketplace Sample](https://github.com/nuxeo/nuxeo-marketplace-sample/) for downloading a project with sample architectures, implementing the three below build methods plus the required modules for testing those Nuxeo Packages with Selenium, WebDriver and Gatling.
+See [Nuxeo Marketplace Sample](https://github.com/nuxeo/nuxeo-sample-project) for downloading a project with sample architectures, implementing the three below build methods plus the required modules for testing those Nuxeo Packages with Selenium, WebDriver and Gatling.
 
 Applied to the sample project, here are the results from those three methods. Look at the differences in the content, size and build time. The network bandwidth is not evaluated but it also varies respectively from the most to the less, proportionally to the build time.
 

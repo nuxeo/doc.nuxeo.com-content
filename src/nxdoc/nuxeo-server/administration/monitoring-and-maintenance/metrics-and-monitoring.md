@@ -343,7 +343,7 @@ You can report Nuxeo metrics to Datadog using the package: https://github.com/nu
 
 #### Graphite Dashboard
 
-You can find an example of Graphite dashboard on GitHub: [https://github.com/nuxeo/nuxeo-runtime/blob/master/nuxeo-runtime-metrics/graphite/dashboard.json](https://github.com/nuxeo/nuxeo-runtime/blob/master/nuxeo-runtime-metrics/graphite/dashboard.json).
+You can find an example of Graphite dashboard on GitHub: [https://github.com/nuxeo/nuxeo-runtime/blob/master/nuxeo-runtime-metrics/graphite/dashboard.json](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-runtime/nuxeo-runtime-metrics/graphite/dashboard.json).
 
 You will have to edit the dashboard to replace the hostname (here it is `octopussy`).
 

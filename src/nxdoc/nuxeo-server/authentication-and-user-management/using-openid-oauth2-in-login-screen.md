@@ -184,10 +184,10 @@ You can easily add your own by extending the`org.nuxeo.ecm.platform.oauth2.openi
 
 ## Others Parameters
 
-You can change some behaviors by adding the following parameters in your [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}) file:
+You can change some behaviors by adding the following parameters in your [nuxeo.conf]({{page version='' space='nxdoc' page='configuration-parameters-index-nuxeoconf'}}) file:
 
-*   `nuxeo.skip.oauth.token.state.check` (default: `false`): Whether to skip checking if the provider response contains the correct OAuth 2 state. Default value if recommended for security.
-*   `nuxeo.oauth.auth.create.user` (default: `false`): Create user on request if not exists.
+- `nuxeo.skip.oauth.token.state.check` (default: `false`): Whether to skip checking if the provider response contains the correct OAuth 2 state. Default value if recommended for security.
+- `nuxeo.oauth.auth.create.user` (default: `false`): Create user on request if not exists.
 
 * * *
 
