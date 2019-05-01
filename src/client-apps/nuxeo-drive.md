@@ -601,7 +601,7 @@ history:
 {{! multiexcerpt name='drive_2_FT_page'}}
 
 {{! excerpt}}
-Nuxeo Drive is a Nuxeo addon that enables the synchronization of folders or workspaces from the Nuxeo Platform with local folder on your computer.
+Nuxeo Drive is a Nuxeo addon that enables the synchronization of folders or workspaces from the Nuxeo Platform with local folder on your computer, providing offline edition capabilities.
 {{! /excerpt}}
 
 Here is the big picture of how Nuxeo Drive works: on the Nuxeo Platform web interface, you mark some workspaces or folders to synchronize. After you installed the Nuxeo Drive client on your computer and bound it to a Nuxeo server, documents are saved on your computer so you can access them and work on them offline. And the next time you have an Internet connection, changes in your local folder are uploaded to the Nuxeo Platform. Changes on the server are also automatically downloaded to your computer. Nuxeo Drive also enables to edit synchronized documents locally from your computer.
