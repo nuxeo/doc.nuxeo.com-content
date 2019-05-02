@@ -3,7 +3,7 @@ title: Automation Scripting
 description: Automation Scripting is a Nuxeo module which provides ability to create and contribute Automation chain/operation in JavaScript.
 review:
     comment: ''
-    date: '2017-12-11'
+    date: '2019-05-02'
     status: ok
 labels:
     - lts2016-ok
@@ -256,13 +256,12 @@ Nuxeo Automation Scripting allows you to write JavaScript code to use Automation
 *   Using operations/chains as JavaScript functions within this `run()` function
 
     ```js
-    // For instance, the operation to display JSF messages
-    WebUI.AddMessage(input, {
-        /*required:true - type: string*/
-        'message': "Display It!",
-        /*required:true - type: string*/
-        'severity': "INFO"
-    });
+    /*Automation operation to create a new version*/
+    input = Document.CreateVersion(input,{
+	/*required:false - type: string*/
+	'increment': 'MAJOR',
+	/*required:false - type: boolean*/
+	'saveDocument': 'true'
     ```
 
 *   Using `for/if/print` or any other JavaScript feature
@@ -320,39 +319,34 @@ If one of your Automation chain or operation contains dashes (`-`) in their name
 
 {{/callout}}
 
-The following code example is bound to a simple action button, renames all selected documents with the value "test" as `dc:title` or displays a warning JSF message (depending on the number of the selected documents).
+The following code example is bound to a simple event (`Document created`), to apply property value inheritance from the parent document, with some logging information messages.
 
 ```js
 function run(input, params) {
-    var docs = Seam.GetSelectedDocuments(input, {});
-    /* Description: Fetch the documents selected in the current folder listing */
-    if (docs.length > 3) {
-        var index;
-        for (index = 0; index < docs.length; ++index) {
-            Document.SetProperty(input, {
-                /* required: true - type: string */
-                "xpath": "dc:title",
-                /* required: false - type: boolean */
-                "save": true,
-                /* required: false - type: serializable */
-                "value": "test"
-            });
-        }
-        WebUI.Refresh(input, {});
-    } else {
-        WebUI.AddMessage(input, {
-            /* required: true - type: string */
-            "message": "DISPLAY IT",
-            /* required: true - type: string */
-            "severity": "WARN"
-        });
+
+ Console.log("Starting property inheritance");
+
+  var parent = Document.GetParent(
+    input, {
+      /*required:false - type: string*/
+      'type': 'product'
     }
+  );
+
+  if(parent){
+    input = Document.CopySchema(
+      input, {
+        /*required:true - type: string*/
+        'schema': 'product_catalog',
+        /*required:false - type: string*/
+        'sourceId': parent.id
+      }
+    );
+
+    Console.log("product_catalog schema copied");
+
 }
 ```
-
-As a result, once the Automation Scripting code has been bound to a simple action button, we can rename all the selected documents or display a warning message.
-
-![]({{file name='automation_scripting_example2.png'}} ?w=600,border=true)
 
 ## Use Cases
 
@@ -432,21 +426,29 @@ function run(input, params) {
   // Then all comparaisons can be made
   var compare = (nowDate > releaseDate);
   if (compare) {
-    WebUI.AddInfoMessage(
-      input, {
-        'message': 'Now less than release date'
-      }
-    );
+    Console.log("Now less than release date");
   }
   else {
-    WebUI.AddInfoMessage(
-      input, {
-        'message': 'Now greater than release date'
+    Console.log("Now greater than release date");
       }
     );
   }
 }
 ```
+
+### Event Context
+
+It is possible to access to the event context. This can be really usefull when trying to access some repository information before the document is created: Typically, you can't access parent properties on the `About to create` event without `ctx.Event.getProperty`:
+
+
+```js
+  function run(input, params) {
+    var parentPath = ctx.Event.getProperty("parentPath");
+    var parentDoc = Repository.GetDocument(null, {"value": parentPath});
+    ...
+```
+
+It can be also interesting to use it when an automation chain/scripting is common to several event handlers: it helps to identify which event is called for example.
 
 ### JVM Nashorn Debugging
 
@@ -464,10 +466,7 @@ Example:
 function run(input, params) {
 	var nowDate = new Date().toISOString();
 	debugger;
-	WebUI.AddInfoMessage(
-	  input, {
-	    /*required:true - type: string*/
-	    'message': nowDate
+	Console.log(nowDate);
 	  }
 	);
 }
@@ -475,13 +474,7 @@ function run(input, params) {
 
 ### JavaScript Logging
 
-When printing values as follow, the output is redirected to the console:
-
-```js
-print("value")
-```
-
-But you can also use the helper "Console" to write logs within `NUXEO_HOME/log/server.log`:
+When printing values as follow, you can use the helper "Console" to write logs within `NUXEO_HOME/log/server.log`:
 
 ```js
 Console.info("Informations");
@@ -567,6 +560,43 @@ print(file);
 ```
 
 ## Advanced Use
+
+### Java Objects in Automation Scripting
+
+It is possible to allow specific Java classes to be used via Automation Scripting:
+
+- `java.util.ArrayList`
+- `java.util.Arrays`
+- `java.util.Collections`
+- `java.util.UUID`
+- `org.nuxeo.runtime.transaction.TransactionHelper`
+- `org.nuxeo.ecm.core.api.Blobs`
+- `org.nuxeo.ecm.core.api.impl.blob.StringBlob`
+- `org.nuxeo.ecm.core.api.impl.blob.JSONBlob`
+
+Other classes can be added and previously-allowed ones denied, through:
+
+```
+  <require>org.nuxeo.automation.scripting.classfilter</require>
+  <extension target="org.nuxeo.automation.scripting.internals.AutomationScriptingComponent" point="classFilter">
+    <classFilter>
+      <allow>com.example.MyClass</allow>
+      <allow>com.example.MyOtherClass</allow>
+      <deny>org.nuxeo.runtime.transaction.TransactionHelper</deny>
+    </classFilter>
+  </extension>
+```
+
+One can use `<deny>*</deny>` to disallow all previously-allowed classes.
+
+The default contribution now allows scripting code like:
+
+```js
+function run(input, params) {
+    var uuid = java.util.UUID.randomUUID().toString();
+    return org.nuxeo.ecm.core.api.Blobs.createJSONBlob("{'uuid': \"" + uuid + "\"}");
+}
+```
 
 ### Contributing Automation Scripting Operations
 
