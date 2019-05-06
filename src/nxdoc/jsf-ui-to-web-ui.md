@@ -16,7 +16,7 @@ tree_item_index: 5
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
 ### Features Overview
-This page will help you to find the basic features of JSF UI into Web UI: Create, Preview, Browse, Search, Review and Download.</br>
+This page helps you to find the basic features of JSF UI into Web UI: Create, Preview, Browse, Search, Review and Download.</br>
 
 ![]({{file name='web-ui-search-assets.png'}})
 
@@ -25,6 +25,19 @@ This page will help you to find the basic features of JSF UI into Web UI: Create
 </div>
 
 <div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Studio Configuration
+This page helps you to migrate your Studio Project from JSF UI to Web UI by going through all the configuration categories: Branding, Document type, workflows, etc.
+
+![]({{file name='university-doc-layout.png'}})
+
+[More&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='studio' page='jsf-ui-migration'}})
+{{/panel}}
+</div>
+</div>
+
+
+<div>
 {{#> panel type='secondary' match_height='true'}}
 ### Learn with Examples
 
@@ -38,7 +51,7 @@ Tutorials have been created to let you discover the basics of Web UI configurati
 {{/panel}}
 </div>
 
-</div>
+* * *
 
 ### Roadmap
 
