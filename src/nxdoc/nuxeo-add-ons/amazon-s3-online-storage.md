@@ -377,7 +377,7 @@ The above configuration uses `nuxeo.conf` properties prefixed with `nuxeo.s3stor
     <property name="awssecret">your_AWS_SECRET_ACCESS_KEY</property>
     <property name="region">us-west-1</property>
     <property name="bucket">your_s3_bucket_name</property>
-    <property name="bucket.prefix">myprefix/</property>
+    <property name="bucket_prefix">myprefix/</property>
     <property name="directdownload">true</property>
     <property name="directdownload.expire">3600</property>
     <property name="cachesize">100MB</property>
