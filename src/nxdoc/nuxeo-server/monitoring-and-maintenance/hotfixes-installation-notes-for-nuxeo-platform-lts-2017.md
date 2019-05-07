@@ -86,6 +86,28 @@ Registration tokens are valid until your current contract's expiration date. Whe
 **I Have More Questions, Who Can I Ask For Help?** </br>
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 31
+
+### Large ACLs with SQL Server
+
+On SQL Server it's now possible to configure VCS to use an increased size to stored the Read ACLs optimization tables, which may be necessary if users belong to many groups (total size of group names + the user name + "Everyone" > 4000 characters).
+```
+nuxeo.vcs.optimizations.acl.maxsize=999999
+```
+Any value > 4000 will make SQL Server use NVARCHAR(MAX) instead of NVARCHAR(4000) for its internal datastructures.
+
+On PostgreSQL this feature already existed (default to 4096) but was not easily configurable, the same configuration property can be used to increase the value. The specific value requested will be used (there is no notion of MAX).
+
+Note that the use of a new value will only happen when the optimization tables are created, which can be done on a stopped server by running:
+```
+DROP TABLE aclr;
+DROP TABLE aclr_user;
+-- on SQL Server:
+EXEC nx_rebuild_read_acls;
+-- on PostgreSQL:
+SELECT nx_rebuild_read_acls();
+```
+
 ## Hotfix 30
 
 ### StreamWorkManager Configuration
