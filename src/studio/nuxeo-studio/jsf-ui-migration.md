@@ -254,11 +254,11 @@ For these operations, specific properties are available from the Action elements
 <tr>
 <td colspan="1" style="background-color:white">
 {{!--     ### nx_asset ###
-  path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Web UI Studio Project Migration/migration-jsf-automation.png
-  name: migration-jsf-automation.png
-  studio_modeler#screenshot#up_to_date
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Web UI Studio Project Migration/migration-jsf-translation.png
+    name: migration-jsf-translation.png
+    studio_modeler#screenshot#up_to_date
 --}}
-![migration-jsf-automation.png](nx_asset://fc6363a4-cd55-4fc0-aa00-3056d36fee79 ?w=400,border=true)
+![migration-jsf-translation.png](nx_asset://ec5a844e-0dee-4ba6-8a3b-406afdb8f3f9 ?w=400,border=true)
 </td>
 <td colspan="1" style="background-color:white">
 {{!--     ### nx_asset ###
