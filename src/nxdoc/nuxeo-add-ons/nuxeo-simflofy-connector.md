@@ -1,6 +1,6 @@
 ---
-title: Content Federation with Simflofy
-description: 'Nuxeo Simflofy connector allows to leverage content federation from Simflofy in Nuxeo.'
+title: Nuxeo Federation Framework
+description: 'The Nuxeo Federation Framework allows users to search, find and view documents stored in an external system, thanks to Nuxeo federation capabilities.'
 review:
     comment: ''
     date: '2019-12-19'
@@ -8,11 +8,11 @@ review:
 labels:
     - simflofy
 toc: true
-tree_item_index: 350
+tree_item_index: 1510
 ---
 
 {{! excerpt}}
-The Nuxeo Simflofy addon allows users to search, find and view documents stored in an external system, thanks to Nuxeo federation capabilities. Binary files can either be copied in Nuxeo repository or remain "in-place".
+The Nuxeo Federation Framework allows users to search, find and view documents stored in an external system, thanks to Nuxeo federation capabilities. Binary files can either be copied in Nuxeo repository or remain "in-place".
 {{! /excerpt}}
 
 {{#> callout type='info'}}

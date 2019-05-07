@@ -206,21 +206,6 @@ Registered access
 </tr>
 <tr>
 <td colspan="1">
-Content federation with Simflofy<br/>
-`nuxeo-simflofy`
-</td>
-<td colspan="1">
-Registered access
-</td>
-<td colspan="1">
-[Documentation]({{page page='nuxeo-simflofy-connector'}})
-</td>
-<td colspan="1">
-[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-simflofy)
-</td>
-</tr>
-<tr>
-<td colspan="1">
 Digital Signature<br/>
 `nuxeo-signature`
 </td>
@@ -477,6 +462,21 @@ Public
 </td>
 <td colspan="1">
 [Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-duoweb-authentication)
+</td>
+</tr>
+<tr>
+<td colspan="1">
+Nuxeo Federation Framework<br/>
+`nuxeo-simflofy`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-simflofy-connector'}})
+</td>
+<td colspan="1">
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-simflofy)
 </td>
 </tr>
 <tr>
