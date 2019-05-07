@@ -254,11 +254,11 @@ For these operations, specific properties are available from the Action elements
 <tr>
 <td colspan="1" style="background-color:white">
 {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Web UI Studio Project Migration/migration-jsf-translation.png
-    name: migration-jsf-translation.png
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Web UI Studio Project Migration/migration-jsf-automation.png
+    name: migration-jsf-automation.png
     studio_modeler#screenshot#up_to_date
 --}}
-![migration-jsf-translation.png](nx_asset://ec5a844e-0dee-4ba6-8a3b-406afdb8f3f9 ?w=400,border=true)
+![migration-jsf-automation.png](nx_asset://fc6363a4-cd55-4fc0-aa00-3056d36fee79 ?w=400,border=true)
 </td>
 <td colspan="1" style="background-color:white">
 {{!--     ### nx_asset ###
@@ -311,15 +311,16 @@ Document properties labels should be created in a translation file.
 --}}
 ![migration-webui-translation.png](nx_asset://611b80ec-4eb6-4342-92d7-ee808c5da3b8 ?w=400,border=true)
 </td>
+</tr>
 <tr>
 <td colspan="2" style="background-color:white">
-<div>
-{{#> panel type='secondary' match_height='true'}}
+<div>{{#> panel type='secondary' match_height='true'}}
 ### Useful Link
 [<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**Studio Designer - HOWTO: Manage Translations**]({{page space='nxdoc' page='web-ui-managing-translations'}})
 {{/panel}}
 </div>
 </td>
+</tr>
 </tbody>
 </table>
 </div>
