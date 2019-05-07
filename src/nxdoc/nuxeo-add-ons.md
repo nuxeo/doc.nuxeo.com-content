@@ -1,5 +1,5 @@
 ---
-title: Nuxeo Add-Ons
+title: Addons
 description: This chapter presents list of Nuxeo Packages available on the Nuxeo Marketplace for the latest version of the Nuxeo Platform.
 review:
     comment: ''

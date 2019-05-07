@@ -1,5 +1,5 @@
 ---
-title: Web UI
+title: Web UI User Documentation
 review:
     comment: ''
     date: '2018-10-16'
