@@ -297,11 +297,11 @@ Document properties labels should be created in a translation file.
 <tr>
 <td colspan="1" style="background-color:white">
 {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Web UI Studio Project Migration/migration-webui-translation.png
-    name: migration-webui-translation.png
-    studio_designer#screenshot#up_to_date
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Web UI Studio Project Migration/migration-jsf-translation.png
+    name: migration-jsf-translation.png
+    studio_modeler#screenshot#up_to_date
 --}}
-![migration-webui-translation.png](nx_asset://611b80ec-4eb6-4342-92d7-ee808c5da3b8 ?w=400,border=true)
+![migration-jsf-translation.png](nx_asset://ec5a844e-0dee-4ba6-8a3b-406afdb8f3f9 ?w=400,border=true)
 </td>
 <td colspan="1" style="background-color:white">
 {{!--     ### nx_asset ###
