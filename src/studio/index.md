@@ -1,5 +1,5 @@
 ---
-title: Nuxeo Online Services
+title: Studio
 review:
     comment: ''
     date: ''
