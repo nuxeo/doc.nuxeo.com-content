@@ -92,6 +92,82 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 06
+
+### Large ACLs with SQL Server
+
+On SQL Server it's now possible to configure VCS to use an increased size to stored the Read ACLs optimization tables, which may be necessary if users belong to many groups (total size of group names + the user name + "Everyone" > 4000 characters).
+```
+nuxeo.vcs.optimizations.acl.maxsize=999999
+```
+Any value > 4000 will make SQL Server use NVARCHAR(MAX) instead of NVARCHAR(4000) for its internal datastructures.
+
+On PostgreSQL this feature already existed (default to 4096) but was not easily configurable, the same configuration property can be used to increase the value. The specific value requested will be used (there is no notion of MAX).
+
+Note that the use of a new value will only happen when the optimization tables are created, which can be done on a stopped server by running:
+```
+DROP TABLE aclr;
+DROP TABLE aclr_user;
+-- on SQL Server:
+EXEC nx_rebuild_read_acls;
+-- on PostgreSQL:
+SELECT nx_rebuild_read_acls();
+```
+
+## Hotfix 05
+
+### StreamWorkManager Configuration
+
+It is now possible to use the StreamWorkManager implementation with large works that exceed 1MB when serialized. The value is stored outside of the stream, in an external storage. For now the possible storages are the KeyValue store and the Transient store.
+
+Here are the `nuxeo.conf` options to use to activate this feature for the StreamWorkManager:
+```
+# Filter big work to be stored outside of the stream
+nuxeo.stream.work.computation.filter.enabled=true
+# Above this threshold in bytes the record value is stored outside of the stream
+nuxeo.stream.work.computation.filter.thresholdSize=1000000
+nuxeo.stream.work.computation.filter.class=org.nuxeo.ecm.core.transientstore.computation.TransientStoreOverflowRecordFilter
+nuxeo.stream.work.computation.filter.storeName=default
+nuxeo.stream.work.computation.filter.storeKeyPrefix=bigRecord:
+# An alternative storage using the KeyValue store
+#nuxeo.stream.work.computation.filter.class=org.nuxeo.ecm.core.work.KeyValueStoreOverflowRecordFilter # TTL is only taken in account with the KV impl, for TS impl you need to configure TS garbage collector
+#nuxeo.stream.work.computation.filter.storeTTL=4d
+```
+When using the TransientStore its TTL (firstLevelTTL) need to be adapted so the record value is not garbage collected before the work has been processed.
+The `nuxeo.stream.work.computation.filter.storeTTL` option which is used by the KeyValue store implementation can be expressed using a duration string like "48h" or "4d".
+
+Note also that this ability of using an external storage for large record value is not tied to the StreamWorkManager and can be used in any StreamProcessor.
+
+### Quota Computation on Versioning
+
+The behavior of quota computation and check has changed for versioning.
+Now we compute and check the quotas on the `aboutToCheckIn` event instead of computing the quotas on the `documentCheckedIn` one and checking the quotas on the `documentCheckedOut` one.
+
+This behavior is disabled by default and can be enabled by overriding the `nuxeo.quota.size.check.on.aboutToCheckIn` property:
+```
+  <require>org.nuxeo.ecm.quota.contrib</require>
+
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="nuxeo.quota.size.check.on.aboutToCheckIn">true</property>
+  </extension>
+```
+
+## Hotfix 04
+
+### Binary store configuration
+
+A new property `nuxeo.binarystores.root` is now available, and its use is recommended over the now-deprecated `repository.binary.store`. The old `repository.binary.store` is equivalent to `${nuxeo.binarystores.root}/binaries`.
+
+### Orphan Version Cleanup
+
+The orphan versions cleanup is now disabled by default, and can be re-enabled (if its performance is acceptable) with the following contribution:
+```
+  <require>org.nuxeo.ecm.core.orphanVersionsCleanup</require>
+  <extension point="listener" target="org.nuxeo.ecm.core.event.EventServiceComponent">
+    <listener name="orphanVersionsCleanup" enabled="true" />
+  </extension>
+```
+
 ## Hotfix 02
 
 ### Multiple AWS Configuration
