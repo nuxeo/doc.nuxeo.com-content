@@ -380,10 +380,11 @@ To execute an operation, build an operation request descriptor and POST it on th
 An operation request is a JSON document with the following format:
 
 ```
-  input: "the_operation_input_object_reference",
-  params: {key1: "value1", key: "value2", ...},
-  context: {key1: "val1", ... }
-
+  {
+    input: "the_operation_input_object_reference",
+    params: {key1: "value1", key: "value2", ...},
+    context: {key1: "val1", ... }
+  }
 ```
 
 These three request parameters are optional and depend on the executed operation.
@@ -413,6 +414,13 @@ The `input` parameter is a string that acts as a reference to the real object to
 *   For a **blob list**, simply add one additional content part for each blob in the list.
 
     The only limitation for both blobs and blob lists is that the request content part should be the first part in the multipart document. The order of the blob parts will be preserved and blobs will be processed in the same order. The expects assumes the request part to be the first part of the multipart document (Content-Ids are not used by the server to identify the request part).
+
+Example of a JSON **input** body parameter:
+```
+  {
+    input: "doc:96bfb9cb-a13d-48a2-9bbd-9341fcf24801"
+  }
+```
 
 ### Request Parameter Types
 
