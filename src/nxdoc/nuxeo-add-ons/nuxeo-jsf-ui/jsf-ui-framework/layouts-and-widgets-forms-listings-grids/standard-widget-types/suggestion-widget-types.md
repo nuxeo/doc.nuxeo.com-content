@@ -501,6 +501,6 @@ Finally you can specify the `width` property, it accepts pixel as well as percen
 
 ## {{> anchor 'internationalization'}}Internationalization
 
-Select2 widgets localization is provided by the select2 library and the control labels are therefore not translated in `messages_xx.properties` files but directly in [select2 resources files](https://github.com/nuxeo-archives/nuxeo-features/tree/master/nuxeo-platform-ui-select2/src/main/resources/META-INF/resources/org.nuxeo.select2). Many locales are provided.
+Select2 widgets localization is provided by the select2 library and the control labels are therefore not translated in `messages_xx.properties` files but directly in [select2 resources files](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-platform-ui-select2/src/main/resources/META-INF/resources/org.nuxeo.select2). Many locales are provided.
 
 However, if you're a missing a locale, you must create your own `select2_locale_xx.js` file and add it to your own bundle. This file must be deployed in `${NUXEO_HOME}/nxserver/nuxeo.war/scripts/select2/` directory.
