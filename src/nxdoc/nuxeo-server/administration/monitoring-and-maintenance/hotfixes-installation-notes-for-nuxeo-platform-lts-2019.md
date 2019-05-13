@@ -96,11 +96,13 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ### Large ACLs with SQL Server
 
-On SQL Server it's now possible to configure VCS to use an increased size to stored the Read ACLs optimization tables, which may be necessary if users belong to many groups (total size of group names + the user name + "Everyone" > 4000 characters).
+On SQL Server it's possible to configure VCS to use an increased size to stored the Read ACLs optimization tables, which may be necessary if users belong to many groups (total size of group names + the user name + "Everyone" > 4000 characters).
+
 ```
 nuxeo.vcs.optimizations.acl.maxsize=999999
 ```
-Any value > 4000 will make SQL Server use NVARCHAR(MAX) instead of NVARCHAR(4000) for its internal datastructures.
+
+Any value > 4000 will make SQL Server use NVARCHAR(MAX) instead of NVARCHAR(4000) for its internal data structures.
 
 On PostgreSQL this feature already existed (default to 4096) but was not easily configurable, the same configuration property can be used to increase the value. The specific value requested will be used (there is no notion of MAX).
 
@@ -118,7 +120,7 @@ SELECT nx_rebuild_read_acls();
 
 ### StreamWorkManager Configuration
 
-It is now possible to use the StreamWorkManager implementation with large works that exceed 1MB when serialized. The value is stored outside of the stream, in an external storage. For now the possible storages are the KeyValue store and the Transient store.
+It is possible to use the StreamWorkManager implementation with large works that exceed 1MB when serialized. The value is stored outside of the stream, in an external storage. For now the possible storages are the KeyValue store and the Transient store.
 
 Here are the `nuxeo.conf` options to use to activate this feature for the StreamWorkManager:
 ```
@@ -133,8 +135,10 @@ nuxeo.stream.work.computation.filter.storeKeyPrefix=bigRecord:
 #nuxeo.stream.work.computation.filter.class=org.nuxeo.ecm.core.work.KeyValueStoreOverflowRecordFilter # TTL is only taken in account with the KV impl, for TS impl you need to configure TS garbage collector
 #nuxeo.stream.work.computation.filter.storeTTL=4d
 ```
-When using the TransientStore its TTL (firstLevelTTL) need to be adapted so the record value is not garbage collected before the work has been processed.
-The `nuxeo.stream.work.computation.filter.storeTTL` option which is used by the KeyValue store implementation can be expressed using a duration string like "48h" or "4d".
+
+When using the TransientStore, its TTL (firstLevelTTL) needs to be adapted so that the record value is not garbage collected before the work is processed.
+
+The `nuxeo.stream.work.computation.filter.storeTTL` option, which is used by the KeyValue store implementation, can be expressed using a duration string like "48h" or "4d".
 
 Note also that this ability of using an external storage for large record value is not tied to the StreamWorkManager and can be used in any StreamProcessor.
 
@@ -154,13 +158,13 @@ This behavior is disabled by default and can be enabled by overriding the `nuxeo
 
 ## Hotfix 04
 
-### Binary store configuration
+### Binary Store Configuration
 
-A new property `nuxeo.binarystores.root` is now available, and its use is recommended over the now-deprecated `repository.binary.store`. The old `repository.binary.store` is equivalent to `${nuxeo.binarystores.root}/binaries`.
+A new property `nuxeo.binarystores.root` is available and its use is recommended over the now-deprecated `repository.binary.store`. The old `repository.binary.store` is equivalent to `${nuxeo.binarystores.root}/binaries`.
 
 ### Orphan Version Cleanup
 
-The orphan versions cleanup is now disabled by default, and can be re-enabled (if its performance is acceptable) with the following contribution:
+The orphan versions cleanup is disabled by default and can be re-enabled (if its performance is acceptable) with the following contribution:
 ```
   <require>org.nuxeo.ecm.core.orphanVersionsCleanup</require>
   <extension point="listener" target="org.nuxeo.ecm.core.event.EventServiceComponent">
