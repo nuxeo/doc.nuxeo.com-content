@@ -26,7 +26,7 @@ version_override:
     '6.0': 60/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
     '5.8': 58/admindoc/query-models-and-result-providers-migration-to-content-views-and-page-providers
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-04-14 14:46'
         message: ''
@@ -103,7 +103,7 @@ Reading the [Custom Page Providers]({{page page='custom-page-providers'}}) and [
 
 ### Templates Migration
 
-Old templates displaying paged lists of documents have been removed, the template at [`/incl/content_view.xhtml`](https://github.com/nuxeo/nuxeo-jsf/blob/master/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/incl/content_view.xhtml) can now be included to display the results using a listing layout configured on the content view.
+Old templates displaying paged lists of documents have been removed, the template at [`/incl/content_view.xhtml`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-contentview-jsf/src/main/resources/web/nuxeo.war/incl/content_view.xhtml) can now be included to display the results using a listing layout configured on the content view.
 
 {{#> panel type='code' heading='Sample Old Template'}}
 
