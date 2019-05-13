@@ -562,7 +562,7 @@ Note that `currentDocument` is an alias for `Document`.
 {{/callout}}
 
 {{#> callout type='info' }}
-Also note that we listed here the main accessors. `Document` is a `DocumentWrapper` and you can also [check the code](https://github.com/nuxeo-archives/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-core/src/main/java/org/nuxeo/ecm/automation/core/scripting/DocumentWrapper.java) to see all the available accessors.</br>
+Also note that we listed here the main accessors. `Document` is a `DocumentWrapper` and you can also [check the code](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-core/src/main/java/org/nuxeo/ecm/automation/core/scripting/DocumentWrapper.java) to see all the available accessors.</br>
 For example, you can also use `hasFacet(String facet)`, `hasSchema(String schemaName)`, etc. Make sure to select the branch corresponding to the version of Nuxeo you are using.
 {{/callout}}
 
@@ -611,7 +611,7 @@ Some others can be used when building an NXQL query to express dates relatively 
   For example, to set up a field to:
   - today: `@{CurrentDate.days(0).calendar}`
   - in 7 days: `@{CurrentDate.days(7).calendar}`
-  
+
 - To create a date that you can set on a date property from a string, you can use `@{new java.text.SimpleDateFormat("yyyy-MM-dd").parse(date_str)}` where `date_str` is a Context variable containing a value such as "2019-09-26". You must pass to `SimpleDateFormat` the format of this date, so the parse() method work.
 {{/callout}}
 
