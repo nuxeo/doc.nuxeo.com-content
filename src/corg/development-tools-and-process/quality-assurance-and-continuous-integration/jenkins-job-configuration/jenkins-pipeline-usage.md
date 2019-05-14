@@ -1,5 +1,6 @@
 ---
-title: Jenkins Pipeline usage
+title: Jenkins Pipeline Usage
+description: A Jenkins Pipeline is a suite of plugins that supports implementing and integrating continuous delivery pipelines into Jenkins.
 review:
     comment: ''
     date: ''
@@ -27,14 +28,14 @@ history:
         date: '2016-09-08 14:44'
         message: ''
         version: '1'
-
 ---
+
 ## Useful Links
 
 Jenkins step generator (self-updated with installed plugins):
 
-*   [https://qa.nuxeo.org/jenkins/pipeline-syntax/](https://qa.nuxeo.org/jenkins/pipeline-syntax/)
-*   [https://qa.nuxeo.org/jenkins/pipeline-syntax/globals](https://qa.nuxeo.org/jenkins/pipeline-syntax/globals)
+- [https://qa.nuxeo.org/jenkins/pipeline-syntax/](https://qa.nuxeo.org/jenkins/pipeline-syntax/)
+- [https://qa.nuxeo.org/jenkins/pipeline-syntax/globals](https://qa.nuxeo.org/jenkins/pipeline-syntax/globals)
 
 ## Basic Sample
 
@@ -98,7 +99,7 @@ checkout([$class: 'GitSCM',
 ])
 ```
 
-## Maven build
+## Maven Build
 
 ```
 node('SLAVE') {
@@ -198,7 +199,7 @@ sh "docker tag ${image.id} dockerpriv.nuxeo.com:443/nuxeo/some_name:${env.BRANCH
 sh "docker push dockerpriv.nuxeo.com:443/nuxeo/some_name:${env.BRANCH_NAME}"
 ```
 
-### Running Steps inside a Docker Container
+### Running Steps Inside a Docker Container
 
 Both `docker.image('...')` and `docker.build('...')` return an image object. On such object you can make a `pull()` (see sample above), or create a container from the image and run something inside it:
 

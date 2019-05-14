@@ -18,6 +18,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/z4IlAQ'
     source_link: /display/CORG/Jenkins+Job+Configuration
 tree_item_index: 300
+toc: true
 history:
     -
         author: Julien Carsique
@@ -89,14 +90,12 @@ history:
         date: '2014-04-29 16:29'
         message: ''
         version: '1'
-
 ---
+
 Here are Jenkins job templates recommended for setting up continuous integration over GitHub repositories containing Nuxeo Addons, Packages or Plugins.
 
 {{#> callout type='note' }}
-
 If your project is public and depends on a Studio project, you must add "jenkins_pub" as a contributor in the Studio settings.
-
 {{/callout}}
 
 The jobs are now organized within folders: you must not create a job at Jenkins root.

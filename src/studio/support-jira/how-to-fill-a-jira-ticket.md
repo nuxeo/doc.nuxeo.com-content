@@ -1,5 +1,6 @@
 ---
 title: How to Fill a JIRA Ticket
+description: This page lists the best practices to fill in a JIRA ticket so that's it's correctly handled by our Support team. 
 review:
     comment: ''
     date: ''
@@ -100,20 +101,16 @@ history:
         date: '2014-01-02 16:04'
         message: ''
         version: '1'
-
 ---
+
 {{#> callout type='info' heading='Before you start'}}
-
 Tickets that follow the recommendations below will be processed more quickly. Tickets can be filled in English or in French.
-
 {{/callout}}
 
 The ticket creation screen is divided in two parts: the first tab, **Main fields**, displays the main fields that you need to fill in (title, description, priority, version), and the second tab, **Advanced fields**, presents optionals fields or fields that are less important for the ticket's resolution.
 
 {{#> callout type='info' }}
-
 A ticket must concern only one issue. Do not hesitate to create a new ticket to report another issue.
-
 {{/callout}}
 
 **To create a JIRA ticket:**

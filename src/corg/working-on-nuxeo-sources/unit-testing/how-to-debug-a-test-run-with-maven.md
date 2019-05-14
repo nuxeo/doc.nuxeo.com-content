@@ -1,5 +1,6 @@
 ---
 title: How to Debug a Test Run with Maven
+description: Discover how to debug a test run with Maven using Eclipse. 
 review:
     comment: ''
     date: ''
@@ -142,13 +143,12 @@ history:
         date: '2010-07-21 18:00'
         message: ''
         version: '1'
-
 ---
-
 
 Due to different class loading rules and test order, test results might change if you run them inside Eclipse or with Maven. Note however that such cases raise an issue in the way the tests are written.
 
 ### Using Eclipse to debug tests run with Maven
+
 To debug the `MySuperClassTest` class:
 
 1.  Start the Maven test for this class only, in debug mode:
