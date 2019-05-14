@@ -1,5 +1,5 @@
 ---
-title: Installing the Studio JAR Manually
+title: 'HOWTO: Install the Studio JAR Manually'
 review:
   comment: ''
   date: ''

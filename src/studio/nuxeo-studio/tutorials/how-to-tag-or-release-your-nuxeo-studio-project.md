@@ -1,5 +1,6 @@
 ---
-title: How to Tag or Release Your Nuxeo Studio Project
+title: 'HOWTO: Tag or Release Your Nuxeo Studio Project'
+description: Learn how to use the tags and releases features of Nuxeo Studio.
 review:
     comment: ''
     date: ''
@@ -37,9 +38,9 @@ history:
         date: '2016-05-11 12:34'
         message: ''
         version: '1'
-
 ---
-## How to Tag Your Studio Project
+
+## Tag
 
 {{! multiexcerpt name='tag'}}
 
@@ -59,7 +60,7 @@ From the Branch Management page:
 
 Once you have created a new tag, it will be available from the tags tab on the [Releases & Tags page]({{page page='releases-and-tags'}}), where you will be available to manage your tags.
 
-## {{> anchor 'release-creation'}} How to Release Your Studio Project
+## {{> anchor 'release-creation'}} Release
 
 {{! multiexcerpt name='release'}}
 

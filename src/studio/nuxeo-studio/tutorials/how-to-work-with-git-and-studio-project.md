@@ -1,5 +1,5 @@
 ---
-title: How to Develop Faster with Git and Your Nuxeo Studio Project
+title: 'HOWTO: Develop Faster with Git and Your Nuxeo Studio Project'
 description: Learn how to use Studio Designer Git Access to create your Studio Designer contribution
 review:
     date: '2018-10-24'
