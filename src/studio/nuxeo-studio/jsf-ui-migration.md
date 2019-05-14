@@ -19,7 +19,9 @@ This page is a checklist to let you understand all the major impacts of a migrat
 
 ## Prerequisites
 
-Before digging into the different configuration elements, make sure that the Nuxeo Web UI is selected as target package in the [Application Definition]({{page page='application-definition'}}) screen.
+Before digging into the different configuration elements:
+- Make sure that the Nuxeo Web UI is selected as target package in the [Application Definition]({{page page='application-definition'}}) screen.
+- Check the [features overview]({{page space='userdoc' page='from-jsf-ui-to-web-ui'}}) page for more information. 
 
 ## Branding
 
@@ -334,4 +336,6 @@ XML Extensions may not be impacted by the Web UI migration, except the one which
 
 ## Going Further
 
-A [Migration Service]({{page page='migration-services'}}) can be activated to migrate some Studio Configuration from JSF UI to Web UI. This migration tool is a safe and automated way to migrate your configuration to Web UI based on your existing JSF UI configuration. Note that it migrates simple configuration objects and is not adapted for complex configurations.
+A [Migration Service]({{page page='migration-services'}}) can be activated to migrate some Studio Configuration from JSF UI to Web UI. This migration tool is a safe and automated way to migrate your configuration to Web UI based on your existing JSF UI configuration.
+
+Note that it will let you save time but depending on the complexity of your configuration, some manual actions will still be required
