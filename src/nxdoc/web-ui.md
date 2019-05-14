@@ -17,12 +17,12 @@ labels:
 is_overview: true
 tree_item_index: 300
 section_parent: web-ui
-
 ---
+
 <div class="column">
 {{#> panel type='primary'}}
 
-[You migrated your user interface from JSF UI to Web UI? You will find all the necessary information here!]({{page version='' space='userdoc' page='from-jsf-ui-to-web-ui'}})
+[You migrated your user interface from JSF UI to Web UI? You will find all the necessary information here!]({{page page='jsf-ui-to-web-ui'}})
 
 {{/panel}}
 </div>
