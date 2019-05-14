@@ -1,5 +1,5 @@
 ---
-title: How to Review Nuxeo Studio Configuration
+title: 'HOWTO: Review Nuxeo Studio Configuration'
 review:
   comment: ''
   date: ''
@@ -25,7 +25,9 @@ Let's consider two users:
 - Bob is a new developer that just joined the project.
 - Sarah is his manager and wants to review his work before it gets pushed to the master branch.
 
-Bob has some configuration made in a dedicated branch named `feature/assetsmgt` that is now ready to be reviewed. Sarah has to select the appropriate save mode, merge the feature branch's content and take a decision.
+## Reviewing the Changes
+
+Bob has some configuration made in a dedicated branch named `feature/assetsmgt` that is now ready to be reviewed. Sarah has to select the appropriate commit mode, merge the feature branch's content and take a decision.
 
 ## Switching to an Appropriate Save Mode
 

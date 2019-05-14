@@ -1,5 +1,5 @@
 ---
-title: Deploying Your Project in Dev Mode
+title: 'HOWTO: Deploy Your Project in Dev Mode'
 review:
     comment: ''
     date: ''
@@ -125,7 +125,6 @@ history:
         date: '2010-08-12 01:16'
         message: ''
         version: '1'
-
 ---
 {{#> callout type='note' }}
 
@@ -133,12 +132,8 @@ The Dev mode, as its name stands, is for development only. You should always dep
 {{/callout}}
 
 {{! excerpt}}
-
 You can update your Nuxeo Platform instance with your Studio configuration by going to the&nbsp;[**Admin Center**]({{page space='nxdoc' page='admin-tab-overview'}})&nbsp;> **Update Center**, on the **Studio** tab.
-
 {{! /excerpt}}
-
-
 
 1.  Make sure your Nuxeo Platform instance is [registered]({{page space='nxdoc' page='registering-your-nuxeo-instance'}}).
 2.  Go to the **Admin Center** > **Update Center** > **Studio** tab.
@@ -146,7 +141,9 @@ You can update your Nuxeo Platform instance with your Studio configuration by go
     It says you need to restart but this is actually not mandatory.
 4.  Click on the **Update** button.
 5.  Your Studio project configuration is automatically downloaded and (re)deployed on your Nuxeo Platform.
-{{#> callout type='info' }}In case your Studio project has [several branches]({{page page='branch-management'}}), note that deploying your customization will deploy the registered user's current branch.{{/callout}}
+    {{#> callout type='info' }}
+    In case your Studio project has [several branches]({{page page='branch-management'}}), note that deploying your customization will deploy the registered user's current branch.
+    {{/callout}}
 6.  You can do it as many time as you do modifications in Studio. We actually recommend you to be very iterative, and not to let to many changes go before updating your Nuxeo Platform with the newest Studio project configuration.
 
 **To deploy a specific branch on your application:**
@@ -155,21 +152,19 @@ You can update your Nuxeo Platform instance with your Studio configuration by go
 2.  Update your application with the Studio configuration.
 
 {{#> callout type='info' }}
-
-The Studio project is available as a Nuxeo Package. Thus, all [the nuxeoctl's mp-* commands]({{page space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}) can be used to list, download, install, uninstall, upgrade a Nuxeo Studio configuration.
+The Studio project is available as a Nuxeo Package. Thus, all [the nuxeoctl's mp-* commands]({{page space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}) can be used to list, download, install, uninstall and upgrade a Nuxeo Studio configuration.
 {{/callout}}
-
 
 <div style="width: 640px; height: 480px; margin: 10px; position: relative;">
 <iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://www.lucidchart.com/documents/embeddedchart/eb497f4a-ac4a-46f5-879a-376372ffc333"></iframe>
-<a href="https://www.lucidchart.com/pages/examples/mind_mapping_software" style="margin: 0; padding: 0; border: none; display: inline-block; position: absolute; bottom: 5px; left: 5px;"><img alt="mind mapping software"title="Lucidchart online diagrams"style="width: 100px; height: 30px; margin: 0; padding: 0; border-image: none; border: none; display: block"src="https://www.lucidchart.com/img/diagrams-lucidchart.png"/></a>
+<a href="https://www.lucidchart.com/pages/examples/mind_mapping_software" style="margin: 0; padding: 0; border: none; display: inline-block; position: absolute; bottom: 5px; left: 5px;"></a>
 </div>
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel heading='Related Documentation'}}
 
-* [Installing the Studio JAR Manually]({{page page='installing-the-studio-jar-manually'}})
+- [Installing the Studio JAR Manually]({{page page='installing-the-studio-jar-manually'}})
 
 {{/panel}}</div><div class="column medium-6">
 

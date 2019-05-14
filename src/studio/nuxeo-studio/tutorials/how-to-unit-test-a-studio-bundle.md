@@ -1,5 +1,5 @@
 ---
-title: How to Unit Test a Studio Bundle
+title: 'HOWTO: Unit Test a Studio Bundle'
 review:
     comment: ''
     date: '2017-03-28'

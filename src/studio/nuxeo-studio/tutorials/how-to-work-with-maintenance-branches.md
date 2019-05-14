@@ -1,5 +1,7 @@
 ---
-title: How to Work with Maintenance Branches
+title: 'HOWTO: Work with Maintenance Branches'
+description: 'Learn how to use the advanced branch management feature of Nuxeo
+Studio to get a production and a maintenance branch.'
 review:
     comment: ''
     date: '2015-08-07'
@@ -125,8 +127,8 @@ history:
         date: '2015-07-29 14:32'
         message: ''
         version: '1'
-
 ---
+
 After you have completed a first version of your project and it goes live, you can leverage the [advanced branch management features]({{page page='branch-management'}}) of Nuxeo Studio to separate maintenance developments from evolution development.
 
 {{#> callout type='info' heading='Nuxeo University'}}

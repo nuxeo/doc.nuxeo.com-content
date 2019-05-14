@@ -1,5 +1,6 @@
 ---
-title: How to Collaborate on a Studio Project
+title: 'HOWTO: Collaborate on a Studio Project'
+description: This how-to explains how two users can work at the same time on a Studio Project.
 review:
   comment: ''
   date: '2015-08-07'
@@ -30,94 +31,116 @@ confluence:
   source_link: /display/Studio/How+to+Collaborate+on+a+Studio+Project
 tree_item_index: 600
 history:
-  - author: Manon Lumeau
-    date: '2016-04-27 15:48'
-    message: ''
-    version: '22'
-  - author: Manon Lumeau
-    date: '2016-03-16 17:09'
-    message: ''
-    version: '21'
-  - author: Manon Lumeau
-    date: '2016-03-16 16:11'
-    message: ''
-    version: '20'
-  - author: Manon Lumeau
-    date: '2015-08-11 11:46'
-    message: ''
-    version: '19'
-  - author: Manon Lumeau
-    date: '2015-08-10 09:11'
-    message: ''
-    version: '18'
-  - author: Manon Lumeau
-    date: '2015-08-10 08:40'
-    message: ''
-    version: '17'
-  - author: Manon Lumeau
-    date: '2015-08-07 15:54'
-    message: ''
-    version: '16'
-  - author: Solen Guitter
-    date: '2015-08-07 15:53'
-    message: ''
-    version: '15'
-  - author: Solen Guitter
-    date: '2015-08-07 14:41'
-    message: ''
-    version: '14'
-  - author: Solen Guitter
-    date: '2015-08-07 14:41'
-    message: ''
-    version: '13'
-  - author: Solen Guitter
-    date: '2015-08-07 14:39'
-    message: ''
-    version: '12'
-  - author: Solen Guitter
-    date: '2015-08-07 14:33'
-    message: ''
-    version: '11'
-  - author: Solen Guitter
-    date: '2015-08-07 14:32'
-    message: ''
-    version: '10'
-  - author: Solen Guitter
-    date: '2015-08-07 14:31'
-    message: ''
-    version: '9'
-  - author: Manon Lumeau
-    date: '2015-08-05 13:31'
-    message: ''
-    version: '8'
-  - author: Manon Lumeau
-    date: '2015-08-05 13:30'
-    message: ''
-    version: '7'
-  - author: Manon Lumeau
-    date: '2015-08-05 13:29'
-    message: ''
-    version: '6'
-  - author: Manon Lumeau
-    date: '2015-08-05 13:13'
-    message: ''
-    version: '5'
-  - author: Manon Lumeau
-    date: '2015-08-05 13:13'
-    message: ''
-    version: '4'
-  - author: Solen Guitter
-    date: '2015-08-05 12:24'
-    message: ''
-    version: '3'
-  - author: Manon Lumeau
-    date: '2015-07-31 14:55'
-    message: ''
-    version: '2'
-  - author: Manon Lumeau
-    date: '2015-07-31 14:53'
-    message: ''
-    version: '1'
+    -
+        author: Manon Lumeau
+        date: '2016-04-27 15:48'
+        message: ''
+        version: '22'
+    -
+        author: Manon Lumeau
+        date: '2016-03-16 17:09'
+        message: ''
+        version: '21'
+    -
+        author: Manon Lumeau
+        date: '2016-03-16 16:11'
+        message: ''
+        version: '20'
+    -
+        author: Manon Lumeau
+        date: '2015-08-11 11:46'
+        message: ''
+        version: '19'
+    -
+        author: Manon Lumeau
+        date: '2015-08-10 09:11'
+        message: ''
+        version: '18'
+    -
+        author: Manon Lumeau
+        date: '2015-08-10 08:40'
+        message: ''
+        version: '17'
+    -
+        author: Manon Lumeau
+        date: '2015-08-07 15:54'
+        message: ''
+        version: '16'
+    -
+        author: Solen Guitter
+        date: '2015-08-07 15:53'
+        message: ''
+        version: '15'
+    -
+        author: Solen Guitter
+        date: '2015-08-07 14:41'
+        message: ''
+        version: '14'
+    -
+        author: Solen Guitter
+        date: '2015-08-07 14:41'
+        message: ''
+        version: '13'
+    -
+        author: Solen Guitter
+        date: '2015-08-07 14:39'
+        message: ''
+        version: '12'
+    -
+        author: Solen Guitter
+        date: '2015-08-07 14:33'
+        message: ''
+        version: '11'
+    -
+        author: Solen Guitter
+        date: '2015-08-07 14:32'
+        message: ''
+        version: '10'
+    -
+        author: Solen Guitter
+        date: '2015-08-07 14:31'
+        message: ''
+        version: '9'
+    -
+        author: Manon Lumeau
+        date: '2015-08-05 13:31'
+        message: ''
+        version: '8'
+    -
+        author: Manon Lumeau
+        date: '2015-08-05 13:30'
+        message: ''
+        version: '7'
+    -
+        author: Manon Lumeau
+        date: '2015-08-05 13:29'
+        message: ''
+        version: '6'
+    -
+        author: Manon Lumeau
+        date: '2015-08-05 13:13'
+        message: ''
+        version: '5'
+    -
+        author: Manon Lumeau
+        date: '2015-08-05 13:13'
+        message: ''
+        version: '4'
+    -
+        author: Solen Guitter
+        date: '2015-08-05 12:24'
+        message: ''
+        version: '3'
+    -
+        author: Manon Lumeau
+        date: '2015-07-31 14:55'
+        message: ''
+        version: '2'
+    -
+        author: Manon Lumeau
+        date: '2015-07-31 14:53'
+        message: ''
+        version: '1'
 ---
 
 {{! excerpt}}

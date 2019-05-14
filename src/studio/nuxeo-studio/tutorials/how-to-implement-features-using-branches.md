@@ -1,5 +1,6 @@
 ---
-title: How to Implement Features Using Branches
+title: 'HOWTO: Implement Features Using Branches'
+description: Learn how to use the advanced branch management features of Nuxeo Studio to get a production and a feature branch.
 review:
     comment: ''
     date: '2015-08-07'
@@ -230,9 +231,10 @@ history:
         date: '2015-07-31 14:57'
         message: ''
         version: '1'
-
 ---
+{{! excerpt}}
 The principal goal is to create feature branches that will enable developers to work on the same branch without impacting the `master` branch. They can work together or on their respective sides and merge their work when the features are done.
+{{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
