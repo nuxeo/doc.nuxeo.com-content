@@ -43,11 +43,11 @@ Web UI uses the same language as the web browser.
 Labels can be contributed to the Web UI by adding or overriding the JSON messages files in the `i18n` folder. The JSON objects therein possess key-value pairs, where each key is a unique id for the label and the value is the translated message itself. Keys usually begin with the name of the element where the label is used in (excluding the "nuxeo-" prefix), followed by a **dot** (.). This measure makes it easier to identify where a given key is used and prevents duplicates. As an example, take the following three labels which are used in the `nuxeo-activity` element:
 
 {{#> callout type='tip' }}
-Adding translation can easily be done using [Nuxeo Studio Designer](https://doc.nuxeo.com/studio/ui-designer/#translations). When doing so, you can just update/create the .json file, there is no need to add a deployment fragment or to build the hierarchy that will hold the .json translation.
+Adding translation can easily be done using [Nuxeo Studio Designer]({{page space='studio' page='ui-designer'}}#translations). When doing so, you can just update/create the `.json` file, there is no need to add a deployment fragment or to build the hierarchy that will hold the .json translation.
 {{/callout}}
 
-{{#> callout type='tip' }}
-After adding a translation and having hot-reloaded your project, you may need to Shift-Reload the page to force the translation files to be reloaded.
+{{#> callout type='note' }}
+After adding a translation and having hot-reloaded your project, you may need to force refresh the page to force the translation files to be reloaded.
 {{/callout}}
 
 {{#> panel type='code' heading='nuxeo-web-ui/i18n/messages.json'}}
