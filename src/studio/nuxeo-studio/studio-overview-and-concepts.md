@@ -81,12 +81,12 @@ history:
 ---
 
 {{! excerpt}}
-Nuxeo Studio allows you to configure the Nuxeo Platform easily. Nuxeo Studio is part of Nuxeo Online Services, hosted on the Cloud and maintained by Nuxeo. It allows application builders to get an easy-to-use, wizard based, graphical interface where they can define business objects, types of content, workflows, taxonomy, and user interfaces. Users with more technical knowledge can add even more advanced configurations with XML extensions, Javascript code, or custom HTML pages.
+Nuxeo Studio allows you to configure the Nuxeo Platform easily. It's part of Nuxeo Online Services, hosted on the Cloud and maintained by Nuxeo.
 {{! /excerpt}}
 
-Nuxeo Studio helps solution designers create a consistent configuration thanks to real-time checks warning of any errors or missing configuration points. It also uses an auto-completion system to guide you through your implementation work.
+It allows application builders to get an easy-to-use, wizard based, graphical interface where they can define business objects, types of content, workflows, taxonomy, and user interfaces. Users with more technical knowledge can add even more advanced configurations with XML extensions, Javascript code, or custom HTML pages.
 
-Nuxeo Studio seamlessly upgrades your configuration when you decide to upgrade to a newer Nuxeo Server version.
+Solution designers are able to create a consistent configuration thanks to real-time checks warning of any errors or missing configuration points and uses an auto-completion system to guide you through your implementation work.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Studio Overview and Concepts/nuxeo-studio-overview.png
@@ -99,19 +99,19 @@ Nuxeo Studio seamlessly upgrades your configuration when you decide to upgrade t
 <div class="column medium-4" align="center">
 {{#> panel type='primary' match_height='true'}}
 **Configure**</br>
-Configure and design the application core logic and user interfaces.
+Configure and design the core logic and user interface of your application.
 {{/panel}}
 </div>
 <div class="column medium-4" align="center">
 {{#> panel type='primary' match_height='true'}}
 **Deploy**</br>
-Deploy your configurations in seconds with our hotreload mechanism.
+Deploy your configurations in a click with our hot reload mechanism.
 {{/panel}}
 </div>
 <div class="column medium-4" align="center">
 {{#> panel type='primary' match_height='true'}}
 **Upgrade**</br>
-Evolve safely. Configurations compatibility with future versions is guaranteed.
+Evolve safely, configurations compatibility with future versions is guaranteed.
 {{/panel}}
 </div>
 </div>
@@ -147,7 +147,7 @@ Configure your forms and layouts designs for Web UI.
 
 ## Making Nuxeo Platform Your Own
 
-When creating a new application, the configuration steps are generally:
+When creating a new application, the usual configuration steps are:
 1. [Brand your application]({{page version='' space='studio' page='branding'}})
 1. [Add new document types, with new metadata and lifecycle]({{page version='' space='studio' page='content-model'}})
 1. [Create forms tailored to your document types]({{page version='' space='studio' page='form-layouts'}})
@@ -155,8 +155,6 @@ When creating a new application, the configuration steps are generally:
 1. [Add new buttons, tabs, icons in the UI]({{page version='' space='studio' page='user-actions'}})
 1. [Automatize simple to complex actions on documents]({{page version='' space='studio' page='automation'}})
 1. [Define business workflows with manual and automated transitions, a dedicated dashboard, specific forms]({{page version='' space='studio' page='workflows'}})
-
-
 
 ## Browser Support
 
