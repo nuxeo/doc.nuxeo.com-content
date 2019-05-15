@@ -2,7 +2,7 @@
 title: Studio Overview
 review:
   comment: ''
-  date: ''
+  date: '2019-05-15'
   status: ok
 toc: true
 confluence:
@@ -81,36 +81,37 @@ history:
 ---
 
 {{! excerpt}}
-Nuxeo Studio is a SaaS (Software as a Service) application to configure the Nuxeo Platform easily which enables to develop new applications without writing code.
+Nuxeo Studio allows you to configure the Nuxeo Platform easily. Nuxeo Studio is part of Nuxeo Online Services, hosted on the Cloud and maintained by Nuxeo. It allows application builders to get an easy-to-use, wizard based, graphical interface where they can define business objects, types of content, workflows, taxonomy, and user interfaces. Users with more technical knowledge can add even more advanced configurations with XML extensions, Javascript code, or custom HTML pages.
 {{! /excerpt}}
 
-Since you can quickly configure the platform and safely make it evolve, Nuxeo Studio lowers the maintenance cost of your business applications and makes them easy to scale.
+Nuxeo Studio helps solution designers create a consistent configuration thanks to real-time checks warning of any errors or missing configuration points. It also uses an auto-completion system to guide you through your implementation work.
+
+Nuxeo Studio seamlessly upgrades your configuration when you decide to upgrade to a newer Nuxeo Server version.
 
 {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Studio Overview and Concepts/One-click Deployment
-    name: one-click-deployment.png
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Studio Overview and Concepts/nuxeo-studio-overview.png
+    name: nuxeo-studio-overview.png
     studio_modeler#screenshot#up_to_date
 --}}
-![One-click Deployment ](nx_asset://071fbee4-5994-4ac0-aac6-540656b7f269 ?w=650,border=true)
-<!--![](https://www.lucidchart.com/publicSegments/view/54c64fa0-9150-4b14-b7e0-572f0a009cea/image.png ?w=600,border=true)-->
+![nuxeo-studio-overview.png](nx_asset://be6530f5-6a98-460a-99f8-637eaa546a3b ?w=650,border=true)
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-4" align="center">
 {{#> panel type='primary' match_height='true'}}
 **Configure**</br>
-Configure and design everything that builds your business logic without code or XML configuration, preventing time-consuming development issues.
+Configure and design the application core logic and user interfaces.
 {{/panel}}
 </div>
 <div class="column medium-4" align="center">
 {{#> panel type='primary' match_height='true'}}
 **Deploy**</br>
-Deploy your configurations in a click. You don't even need to restart your server. Studio generates a single JAR file that holds all your configurations.
+Deploy your configurations in seconds with our hotreload mechanism.
 {{/panel}}
 </div>
 <div class="column medium-4" align="center">
 {{#> panel type='primary' match_height='true'}}
 **Upgrade**</br>
-Evolve safely. Configurations compatibility with future versions is guaranteed. Auto-migration process and consistency checks ensure a safe path to new technologies.
+Evolve safely. Configurations compatibility with future versions is guaranteed.
 {{/panel}}
 </div>
 </div>
@@ -120,7 +121,7 @@ Evolve safely. Configurations compatibility with future versions is guaranteed. 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6" align="center">
 {{#> panel type='secondary' match_height='true'}}
-### [Nuxeo Studio Video](https://university.nuxeo.com/learn/public/course/view/elearning/142/nuxeo-platform-quickstart-nuxeo-studio-concepts)
+### [Nuxeo Studio Quickstart](https://university.nuxeo.com/learn/course/external/view/elearning/143/NuxeoPlatformQuickstart)
 Our Nuxeo University video dedicated to the discovery of Nuxeo Studio.
 {{/panel}}
 </div>
@@ -146,25 +147,29 @@ Configure your forms and layouts designs for Web UI.
 
 ## Making Nuxeo Platform Your Own
 
-- [Brand your application]({{page version='' space='studio' page='branding'}})
-- [Add new document types, with new metadata and lifecycle]({{page version='' space='studio' page='content-model'}})
-- [Create forms tailored to your document types]({{page version='' space='studio' page='form-layouts'}})
-- [Define your own search forms]({{page version='' space='studio' page='search-advanced-search'}})
-- [Add new buttons, tabs, icons in the UI]({{page version='' space='studio' page='user-actions'}})
-- [Automatize simple to complex actions on documents]({{page version='' space='studio' page='automation'}})
-- [Define business workflows with manual and automated transitions, a dedicated dashboard, specific forms]({{page version='' space='studio' page='workflows'}})
+When creating a new application, the configuration steps are generally:
+1. [Brand your application]({{page version='' space='studio' page='branding'}})
+1. [Add new document types, with new metadata and lifecycle]({{page version='' space='studio' page='content-model'}})
+1. [Create forms tailored to your document types]({{page version='' space='studio' page='form-layouts'}})
+1. [Define your own search forms]({{page version='' space='studio' page='search-advanced-search'}})
+1. [Add new buttons, tabs, icons in the UI]({{page version='' space='studio' page='user-actions'}})
+1. [Automatize simple to complex actions on documents]({{page version='' space='studio' page='automation'}})
+1. [Define business workflows with manual and automated transitions, a dedicated dashboard, specific forms]({{page version='' space='studio' page='workflows'}})
+
+
 
 ## Browser Support
 
-Nuxeo Studio Designer and parts of Modeler use the recent W3C standard Web Components and Google Polymer framework (legacy mode). The [Google Polymer framework](https://www.polymer-project.org/) comes with [polyfills for Web Components](https://www.webcomponents.org/polyfills), a library that extends the support of web components standard to more browsers.
-Nevertheless, due to browser support to some shadow DOM features and third-party libraries used in Nuxeo Studio, some browsers are not supported.
+<!--Nuxeo Studio Designer and parts of Modeler use the recent W3C standard Web Components and Google Polymer framework (legacy mode). The [Google Polymer framework](https://www.polymer-project.org/) comes with [polyfills for Web Components](https://www.webcomponents.org/polyfills), a library that extends the support of web components standard to more browsers.
+Nevertheless, due to browser support to some shadow DOM features and third-party libraries used in Nuxeo Studio, some browsers are not supported.-->
 
-Supported browsers are:
+Nuxeo Studio supports the following browsers:
 {{! multiexcerpt name='webui-supported-browsers'}}
  - Google Chrome
  - Firefox
 {{! /multiexcerpt}}
-
+<!--
 {{#> callout type='warning' heading='Exceptions on Firefox'}}
 Firefox is not fully supported on Nuxeo Studio Designer. Currently, view editors - with widget preview on forms - are not supported.
 {{/callout}}
+-->
