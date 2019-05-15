@@ -297,7 +297,7 @@ To do so you need to add the following XML contribution with [either Nuxeo Studi
 ```
 
 {{#> callout type='warning' heading='Limitation'}}
-With this configuration you won't be able to unsynchronize a collection as usual using the ![]({{file name='drive_synced.png' space='client-apps' page='nuxeo-drive'}}) icon as this icon will stay grey: ![]({{file name='drive_unsynced.png' space='client-apps' page='nuxeo-drive'}}).</br>
+With this configuration you won't be able to unsynchronize a collection as usual using the ![]({{file name='drive_synced.png' version='810' space='nxdoc' page='nuxeo-drive'}}) icon as this icon will stay grey: ![]({{file name='drive_unsynced.png' version='810' space='client-apps' page='nuxeo-drive'}}).</br>
 Yet you can always unsynchronize the collection from the Nuxeo Drive tab in the user Home.
 {{/callout}}
 
