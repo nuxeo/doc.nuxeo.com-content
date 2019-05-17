@@ -758,7 +758,7 @@ invoice.details=dc:description
 ```
 1. Configure the CMIS export properties:
 
-![]({{file page='nxdoc/cmis' name='ephesoft_cmis_export.png'}} ?w=600,border=true)
+![]({{file version='' page='cmis' name='ephesoft_cmis_export.png'}} ?w=600,border=true)
 
 Here is the list of the most important properties:
 
