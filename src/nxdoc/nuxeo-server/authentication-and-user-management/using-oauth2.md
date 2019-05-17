@@ -86,6 +86,31 @@ OAuth 2 is natively supported by the Nuxeo Platform, which means there is no bun
 Nuxeo allows you to register an OAuth 2 client by specifying an arbitrary name, a client ID, possibly a client secret and a list of redirect URIs.
 There are two ways of registering a client.
 
+### Through the Admin Center
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
+#### Using Web UI
+
+1. Go to the Nuxeo Platform web interface, then browse to the **Administration** > **Cloud Services** > **Consumers** tab.
+2. Click on the **Add** button and then provide a name, a client ID, possibly a client secret, at least one redirect URI and then click on the **Save** button.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/OAuth 2/OAuth2 Consumer
+    name: OAuth2-Consumer.png
+    1.1.3#screenshot#up_to_date
+--}}
+![OAuth2 Consumer](nx_asset://383d8afb-7570-4a3d-b6fd-db0bd9479412 ?w=650,border=true)
+
+#### Using JSF
+
+1. Go to the Nuxeo Platform web interface, then browse to the **Admin Center** > **Cloud Services** > **Consumers** tab.
+2. Provide a name, a client ID, possibly a client secret, at least one redirect URI and save.
+  ![]({{file name='OAuth2-Consumer.png'}} ?w=500,border=true)
+
+{{#> callout type='info' }}
+The `Auto-grant` parameter, if checked, allows the OAuth 2 client to bypass the authorization phase, skipping the web page asking the user to allow the application to access the Nuxeo Platform assets. This is the case for the [Mobile application]({{page space='client-apps' page='nuxeo-mobile'}}).
+{{/callout}}
+
 ### Using the REST API
 
 Use the `directory` REST API endpoint to create a new entry in the `oauth2Clients` directory, for instance with `curl`:
@@ -109,18 +134,6 @@ curl -u Administrator:Administrator \
   }
 EOF
 ```
-
-### Through the Admin Center
-
-{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
-
-1. Go to the Nuxeo Platform web interface, then browse to the **Admin Center** > **Cloud Services** > **Consumers** tab.
-2. Provide a name, a client ID, possibly a client secret, at least one redirect URI and save.
-  ![]({{file name='OAuth2-Consumer.png'}} ?w=500,border=true)
-
-{{#> callout type='info' }}
-The `Auto-grant` parameter, if checked, allows the OAuth 2 client to bypass the authorization phase, skipping the web page asking the user to allow the application to access the Nuxeo Platform assets. This is the case for the [Mobile application]({{page space='client-apps' page='nuxeo-mobile'}}).
-{{/callout}}
 
 The OAuth 2 endpoints are now ready to be used.
 
