@@ -174,6 +174,18 @@ history:
         version: '1'
 
 ---
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Expert Session - Template Rendering](https://university.nuxeo.com/learn/public/course/view/elearning/188/ExpertSession-TemplateRendering)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Template Rendering/template-rendering.png
+    name: template-rendering.png
+    addins#screenshot#up_to_date
+--}}
+![template-rendering.png](nx_asset://a0bd8d0a-c162-4671-bbfa-e835f01990b3 ?w=450,border=true)
+{{/callout}}
+
 ## Installation
 
 {{{multiexcerpt 'mp-installation-easy' page='Generic Multi-Excerpts'}}}

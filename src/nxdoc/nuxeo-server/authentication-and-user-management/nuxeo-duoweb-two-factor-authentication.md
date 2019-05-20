@@ -64,6 +64,17 @@ The [Nuxeo addon nuxeo-duoweb-authentication](https://connect.nuxeo.com/nuxeo/si
 
 This plugin is available for Nuxeo Platform 5.8 and above.
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Expert Session - Two Factor Authentication](https://university.nuxeo.com/learn/public/course/view/elearning/187/ExpertSession-Two-FactorAuthentication)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo DuoWeb Two-Factor Authentication/two-factor.png
+    name: two-factor.png
+    addins#screenshot#up_to_date
+--}}
+![two-factor.png](nx_asset://60f64180-edf6-467d-93ee-70970ccabbac ?w=450,border=true)
+{{/callout}}
+
 {{! /excerpt}} {{#> callout type='info' heading='Configuration'}}
 
 Please refer to this [README](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-duoweb-authentication/README.md) to configure and activate the addon on your Nuxeo instance.
