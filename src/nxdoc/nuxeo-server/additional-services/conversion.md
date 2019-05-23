@@ -373,10 +373,12 @@ To contribute a new converter, you have to contribute a class that implement the
 *   A list of source mime-types
 *   One destination mime-type
 *   Optional named parameters
+*   Optional converter bypass attribute (allows the conversion service to simply return the file rather than converting it if it already is in the converter output format)
 
 ```xml
 <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl" point="converter">
-  <converter name="html2text" class="org.nuxeo.ecm.core.convert.plugins.text.extractors.Html2TextConverter">
+  <converter name="html2text" class="org.nuxeo.ecm.core.convert.plugins.text.extractors.Html2TextConverter"
+             bypassIfSameMimeType="true">
     <sourceMimeType>text/html</sourceMimeType>
     <sourceMimeType>text/xhtml</sourceMimeType>
     <destinationMimeType>text/plain</destinationMimeType>
