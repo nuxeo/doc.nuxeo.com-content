@@ -373,6 +373,7 @@ To contribute a new converter, you have to contribute a class that implement the
 *   A list of source mime-types
 *   One destination mime-type
 *   Optional named parameters
+*   Optional `bypassIfSameMimeType` attribute to bypass the conversion if the input blob mime type equals the converter destination mime type
 
 ```xml
 <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl" point="converter">
@@ -386,6 +387,16 @@ To contribute a new converter, you have to contribute a class that implement the
   </converter>
 </extension>
 ```
+
+Here is an example of conversion bypass on the any2pdf converter, the input and output is pdf, in which case we must not process the file:
+
+```xml
+<converter name="any2pdf" class="org.nuxeo.ecm.platform.convert.plugins.LibreOfficeConverter"
+           bypassIfSameMimeType="true">
+  <destinationMimeType>application/pdf</destinationMimeType>
+  <sourceMimeType>application/pdf</sourceMimeType>
+</converter>
+    ```
 
 See list of [built-in contributions](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.core.convert.service.ConversionServiceImpl--converter).
 
