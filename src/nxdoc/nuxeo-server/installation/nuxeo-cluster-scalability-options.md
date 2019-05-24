@@ -151,7 +151,6 @@ This type of sharding has been tested during a performance benchmark using 10 Po
 - [Elasticsearch setup]({{page page='elasticsearch-setup'}})
 - [Redis Configuration]({{page page='redis-configuration'}})
 - [HTTP and HTTPS Reverse-Proxy Configuration]({{page page='http-and-https-reverse-proxy-configuration'}})
-- [Setting up a HA Configuration Using the Nuxeo Platform and PostgreSQL]({{page page='setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql'}})
 
 {{/panel}}
 </div>
