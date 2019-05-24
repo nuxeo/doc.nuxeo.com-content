@@ -370,7 +370,6 @@ To test that the load balancer forwards the HTTP requests of a given session to 
 - [Scale your Nuxeo cluster]({{page page='nuxeo-cluster-scalability-options'}})
 - [VCS]({{page page='vcs'}})
 - [Redis Configuration]({{page page='redis-configuration'}})
-- [Setting up a HA Configuration Using the Nuxeo Platform and PostgreSQL]({{page page='setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql'}})
 - [HTTP and HTTPS Reverse-Proxy Configuration]({{page page='http-and-https-reverse-proxy-configuration'}})
 
 {{/panel}}
