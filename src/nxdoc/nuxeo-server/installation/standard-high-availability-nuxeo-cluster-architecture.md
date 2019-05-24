@@ -365,6 +365,5 @@ Depending on the importance of these jobs in your application (for instance they
 - [Elasticsearch setup]({{page page='elasticsearch-setup'}})
 - [Redis Configuration]({{page page='redis-configuration'}})
 - [HTTP and HTTPS Reverse-Proxy Configuration]({{page page='http-and-https-reverse-proxy-configuration'}})
-- [Setting up a HA Configuration Using the Nuxeo Platform and PostgreSQL]({{page page='setting-up-a-ha-configuration-using-the-nuxeo-platform-and-postgresql'}})
 
 {{/panel}}</div></div>
