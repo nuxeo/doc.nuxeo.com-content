@@ -193,7 +193,7 @@ The following method requires an Internet connection.
 1. Make sure your instance is stopped
 
 ```
-// Linux and Mac OS
+// Linux and macOS
 $ $NUXEO_HOME/bin/nuxeoctl stop
 
 // Windows
@@ -203,7 +203,7 @@ $ .\$NUXEO_HOME\bin\nuxeoctl.bat stop
 2. Register the instance
 
 ```
-// Linux and Mac OS
+// Linux and macOS
 // Requires a Nuxeo Online Service account
 $ $NUXEO_HOME/bin/nuxeoctl register
 
@@ -241,7 +241,7 @@ Since 10.3, the `nuxeoctl` script allows you to register your instance offline u
 
   1. Make sure your instance is stopped:
     ```
-    // Linux and Mac OS
+    // Linux and macOS
     $ $NUXEO_HOME/bin/nuxeoctl stop
 
     // Windows
@@ -250,7 +250,7 @@ Since 10.3, the `nuxeoctl` script allows you to register your instance offline u
 
   1. Launch registration:
     ```
-    // Linux and Mac OS
+    // Linux and macOS
     // Requires a Nuxeo Online Service account
     $ $NUXEO_HOME/bin/nuxeoctl register --offline
 
@@ -320,7 +320,7 @@ Renewing your Nuxeo instance registration can be done anytime while you have an 
 **To renew the registration**:
 
 ```
-// Linux and Mac OS
+// Linux and macOS
 // Requires an active Nuxeo Online Services subscription
 // An internet connection
 // And that instance is currently registered

@@ -197,7 +197,7 @@ history:
 
 ## Concept
 
-The Nuxeo workflow engine provides the usual features you would expect from a workflow engine and leverages the main modules of the platform: the repository, the Automation service, layouts for all the user interactions and process implementations. It provides high level features regarding task management such as filterable tasks lists, reminders, task reassignment, task delegation, task reminders. You need to understand correctly those concepts before playing with the workflow engine.
+The [Nuxeo workflow engine](https://www.nuxeo.com/features/workflows/) provides the usual features you would expect from a workflow engine and leverages the main modules of the platform: the repository, the Automation service, layouts for all the user interactions and process implementations. It provides high level features regarding task management such as filterable tasks lists, reminders, task reassignment, task delegation, task reminders. You need to understand correctly those concepts before playing with the workflow engine.
 
 A workflow is conceptually defined using a graph. Workflow graphs are [configured from Nuxeo Studio]({{page space='Studio' page='Workflow'}}).
 

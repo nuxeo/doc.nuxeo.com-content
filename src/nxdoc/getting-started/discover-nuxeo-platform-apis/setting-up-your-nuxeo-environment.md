@@ -303,7 +303,7 @@ This how-to is the first step of the tutorial Getting Started with the Nuxeo Pla
 
 ## Docker
 
-OS: Linux, Mac OS, Windows
+OS: Linux, macOS, Windows
 
 ### Installation
 
@@ -406,7 +406,7 @@ The addon brings the following document types:
 
 ## Homebrew
 
-OS: Mac OS
+OS: macOS
 
 ### Installation
 
@@ -500,7 +500,7 @@ The addon brings the following document types:
 
 ## Universal ZIP Package
 
-OS: Linux, Mac OS, Windows
+OS: Linux, macOS, Windows
 
 Contrarily to the Brew installation or Docker image, the universal ZIP package comes without the related software needed for this tutorial. Please [install and set up related software]({{page page='installing-and-setting-up-related-software'}}) before going to the next step.
 
@@ -510,7 +510,7 @@ Contrarily to the Brew installation or Docker image, the universal ZIP package c
 2.  Register your Nuxeo instance on Nuxeo Online Services:
 
     ```
-    # Linux and Mac OS
+    # Linux and macOS
     # You don't have a Nuxeo Online Service account
     $ ./$NUXEO_HOME/bin/nuxeoctl register-trial
     # You already have a Nuxeo Online Service account
@@ -536,7 +536,7 @@ To install a Nuxeo Package:
 1.  Initialize local Nuxeo addons.
 
     ```
-    # Linux and Mac OS
+    # Linux and macOS
     $ ./nuxeoctl mp-init
 
     # Windows
@@ -546,7 +546,7 @@ To install a Nuxeo Package:
 2.  Get the list of local Nuxeo addons.
 
     ```
-    # Linux and Mac OS
+    # Linux and macOS
     $ ./nuxeoctl mp-list
 
     # Windows
@@ -558,7 +558,7 @@ To install a Nuxeo Package:
 3.  Install the addons required for this tutorial.
 
     ```
-    # Linux and Mac OS
+    # Linux and macOS
     $ ./nuxeoctl mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
 
     # Windows
@@ -578,7 +578,7 @@ To install a Nuxeo Package:
 5.  Check that the Nuxeo addons were correctly installed.
 
     ```
-    # Linux and Mac OS
+    # Linux and macOS
     $ ./nuxeoctl mp-list
     [...]
     Local packages:
@@ -600,7 +600,7 @@ To install a Nuxeo Package:
 6.  Start the server.
 
     ```
-    # Linux and Mac OS
+    # Linux and macOS
     $ ./nuxeoctl console
 
     # Windows

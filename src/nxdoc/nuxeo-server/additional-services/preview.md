@@ -118,7 +118,7 @@ history:
 
 For all document previews, make sure you installed the [related software]({{page page='installing-and-setting-up-related-software'}}) corresponding to your document types.
 
-If you are running the Nuxeo Platform on MacOS, you will fall into the bug [NXP-18883](https://jira.nuxeo.com/browse/NXP-18883).
+If you are running the Nuxeo Platform on macOS, you will fall into the bug [NXP-18883](https://jira.nuxeo.com/browse/NXP-18883).
 Until it is fixed, you will need to use the following contribution as a workaround:
 ```
 <require>org.nuxeo.ecm.platform.commandline.executor.service.testContrib.magic2</require>

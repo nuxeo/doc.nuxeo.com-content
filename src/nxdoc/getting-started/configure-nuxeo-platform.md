@@ -37,7 +37,7 @@ DOWNLOAD AND REGISTER THE NUXEO PLATFORM
 
 1.  Start Nuxeo Server:
 
-{{#> panel heading='**MAC OS** / **Linux**'}}
+{{#> panel heading='**macOS** / **Linux**'}}
 
 ```bash
 $ chmod +x ./bin/nuxeoctl

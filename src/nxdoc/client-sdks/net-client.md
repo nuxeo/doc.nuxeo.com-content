@@ -187,7 +187,7 @@ Nuxeo .NET Client is a cross-platform client library developed in C# for the Nux
 
 {{! /excerpt}}
 
-Nuxeo .NET Client targets two platforms: `net45` and `dotnetcoreapp1.0`. This allows it to be used to develop apps for not only Windows but also Linux and Mac OS.
+Nuxeo .NET Client targets two platforms: `net45` and `dotnetcoreapp1.0`. This allows it to be used to develop apps for not only Windows but also Linux and macOS.
 
 ## Installation
 

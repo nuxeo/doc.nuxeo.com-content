@@ -1,5 +1,5 @@
 ---
-title: Installing the Nuxeo Platform on Mac OS
+title: Installing the Nuxeo Platform on macOS
 description: Discover how to install Nuxeo Platform on macOS.
 review:
     comment: ''
@@ -171,7 +171,7 @@ history:
         version: '1'
 
 ---
-On Mac OS, you can install the Nuxeo Platform using two different packages:
+On macOS, you can install the Nuxeo Platform using two different packages:
 
 - The `nuxeo-server-<version>-tomcat.zip` archive
 - The virtual machine image (VirtualBox or VMware)

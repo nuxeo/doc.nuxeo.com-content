@@ -283,7 +283,7 @@ Nuxeo applications are started using scripts.
 4.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
     If the server is started for the first time after the installation, the [startup wizard]({{page page='configuration-wizard'}}) is displayed so you can select what module you want to install on the platform and help you configure it. Otherwise, the login page is displayed so you can use the application.
 
-### Mac OS X {{> anchor 'start-macos'}}
+### macOS {{> anchor 'start-macos'}}
 
 #### Using the Control Panel
 
@@ -384,7 +384,7 @@ If you started the server using the `nuxeoctl start` command in the terminal, us
 
 If you started the server using the `nuxeoctl start` command, in a terminal execute the&nbsp;`nuxeoctl` script with the&nbsp;`stop` command:
 
-*   Linux / Mac OS X
+*   Linux / macOS
 
     ```
     ./nuxeoctl stop

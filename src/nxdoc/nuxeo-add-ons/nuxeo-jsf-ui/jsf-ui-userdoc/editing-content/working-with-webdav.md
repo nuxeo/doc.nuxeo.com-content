@@ -258,7 +258,7 @@ The first time you do the mapping, make sure that you have already logged in to 
     A connect window opens.
 6.  Type your login and your password and click on the **OK** button.
 
-#### Connecting to the Nuxeo Platform from Mac OS Finder
+#### Connecting to the Nuxeo Platform from macOS Finder
 
 1.  From the Finder open the **Connect to Server** popup.
 2.  Type the address of your Nuxeo application adding the **site/dav/** suffix, for instance `http://NUXEO_SERVER/nuxeo/site/dav/`.
