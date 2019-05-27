@@ -164,7 +164,7 @@ The configuration of the synchronization folder needs to be done at the first se
 
 In the Settings screen, you can switch to another folder by clicking on the `...` button, as you can see on this picture.
 
-![]({{file name='drive_Accounts_tab.png' page='/nxdoc/nuxeo-drive'}} ?w=400)
+![]({{file version='810' name='drive_Accounts_tab.png' page='nuxeo-drive'}} ?w=400)
 
 ## How to Make Nuxeo Drive Work with a Nuxeo Cluster
 

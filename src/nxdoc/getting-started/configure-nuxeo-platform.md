@@ -367,7 +367,7 @@ In **Designer**, go to **UI** > **Layouts** > **Page Providers**, select **contr
 
 2.  Then open **results** and drag columns from the menu on the right to customize your search results layout.
 
-3.  From the **UI** menu, select **Left Menu Items** and hover over ![]({{file name='create_button.png'}} ?w=25) to select the Search drawer. Then fill in the form:
+3.  From the **UI** menu, select **Left Menu Items** and hover over ![]({{file version='' space='nxdoc' page='web-ui-overview' name='create_button.png'}} ?w=25) to select the Search drawer. Then fill in the form:
 
 <div class="table-scroll">
   <table class="hover">
