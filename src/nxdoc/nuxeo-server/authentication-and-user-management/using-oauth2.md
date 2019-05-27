@@ -83,22 +83,21 @@ OAuth 2 is natively supported by the Nuxeo Platform, which means there is no bun
 
 ## Client Registration
 
-Nuxeo allows you to register an OAuth 2 client by specifying an arbitrary name, a client ID, possibly a client secret and a list of redirect URIs.
-There are two ways of registering a client.
+Nuxeo allows you to register an OAuth 2 client by specifying an arbitrary name, a client ID, possibly a client secret and a list of redirect URIs.</br>
+There are different ways to register a client:
 
-### Through the Admin Menu
+### Using Web UI
 
-1. Go to the Nuxeo Platform web interface, then browse to the **Administration** > **Cloud Services** > **Consumers** tab.
+1. In the left menu of Web UI, go to **Administration** > **Cloud Services** > **Consumers** tab.
 2. Click on the **Add** button and then provide a name, a client ID, possibly a client secret, at least one redirect URI and then click on the **Save** button.
-
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/OAuth 2/OAuth2 Consumer
     name: OAuth2-Consumer.png
     1.1.3#screenshot#up_to_date
 --}}
-![OAuth2 Consumer](nx_asset://383d8afb-7570-4a3d-b6fd-db0bd9479412 ?w=650,border=true)
+![OAuth2 Consumer](nx_asset://383d8afb-7570-4a3d-b6fd-db0bd9479412 ?w=500,border=true)
 
-### Through the Admin Center
+### Using JSF UI
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 1. Go to the Nuxeo Platform web interface, then browse to the **Admin Center** > **Cloud Services** > **Consumers** tab.
