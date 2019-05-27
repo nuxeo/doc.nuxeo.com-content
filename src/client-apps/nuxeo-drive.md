@@ -596,15 +596,13 @@ history:
     version: '1'
 ---
 
-# Functional Overview
-
 {{! multiexcerpt name='drive_2_FT_page'}}
 
 {{! excerpt}}
-Nuxeo Drive is a Nuxeo addon that enables the synchronization of folders or workspaces from the Nuxeo Platform with local folder on your computer, providing offline edition capabilities.
+[Nuxeo Drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive?version=1.8.5) is a Nuxeo addon that enables the synchronization of folders or workspaces from the Nuxeo Platform with local folder on your computer, providing offline edition capabilities.
 {{! /excerpt}}
 
-Here is the big picture of how Nuxeo Drive works: on the Nuxeo Platform web interface, you mark some workspaces or folders to synchronize. After you installed the Nuxeo Drive client on your computer and bound it to a Nuxeo server, documents are saved on your computer so you can access them and work on them offline. And the next time you have an Internet connection, changes in your local folder are uploaded to the Nuxeo Platform. Changes on the server are also automatically downloaded to your computer. Nuxeo Drive also enables to edit synchronized documents locally from your computer.
+Here is the big picture of how [Nuxeo Drive](https://www.nuxeo.com/products/drive-desktop-sync/) works: on the Nuxeo Platform web interface, you mark some workspaces or folders to synchronize. After you installed the Nuxeo Drive client on your computer and bound it to a Nuxeo server, documents are saved on your computer so you can access them and work on them offline. And the next time you have an Internet connection, changes in your local folder are uploaded to the Nuxeo Platform. Changes on the server are also automatically downloaded to your computer. Nuxeo Drive also enables to edit synchronized documents locally from your computer.
 
 {{#> callout type='warning' }}
 Please note that the main purpose of Nuxeo Drive is to allow synchronization between a file system and some mount points of a Nuxeo repository. Nuxeo Drive is neither a bulk import tool, nor a repository backup / synchronization tool.

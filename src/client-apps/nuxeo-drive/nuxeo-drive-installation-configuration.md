@@ -34,7 +34,7 @@ Nuxeo Drive uses the same authentication way as any user would do with its brows
 
 ### Installing Nuxeo Drive Addon
 
-{{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
+{{{multiexcerpt 'MP-installation-easy' space='nxdoc' page='generic-multi-excerpts'}}}
 
 After Nuxeo Drive has been installed on the server, a Nuxeo Drive tab in the user Home, from which you can see what Nuxeo spaces are synchronized with Drive.
 

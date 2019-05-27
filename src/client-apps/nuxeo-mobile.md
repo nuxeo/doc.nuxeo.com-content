@@ -154,7 +154,9 @@ history:
         version: '1'
 ---
 
-{{! excerpt}}The Nuxeo mobile application lets you access content stored in Nuxeo Platform servers on your phone. It provides a seamless experience on essential features such as searching, browsing and managing favorite documents. Available for iOS and Android.{{! /excerpt}}
+{{! excerpt}}
+The [Nuxeo mobile](https://www.nuxeo.com/products/mobile/) application lets you access content stored in Nuxeo Platform servers on your phone. It provides a seamless experience on essential features such as searching, browsing and managing favorite documents. Available for iOS and Android.
+{{! /excerpt}}
 
 ## Requirements
 
