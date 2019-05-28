@@ -12,7 +12,6 @@ labels:
     - nuxeo-cli
     - akervern
     - university
-
 ---
 
 {{! excerpt}}
@@ -32,7 +31,7 @@ Nuxeo CLI is working like any shell program. After installing it, you'll be able
 
 ### Requirements
 
-* [Node.js](https://nodejs.org/) version > 6
+- [Node.js](https://nodejs.org/) **version = Latest LTS**
 
 ### Recommended Installation
 
@@ -160,8 +159,8 @@ Using a Maven multiple modules architecture is the recommended way to bootstrap 
 
 ##### Parameters
 
-* **Use a parent artifact**: The parent artifact makes your project inherit dependencies, properties and other fields from another project. We recommend to keep the default value and use `org.nuxeo.ecm.distribution:nuxeo-distribution`.
-* **Nuxeo Version**: Asked only if no parent is specified. It specifies which Nuxeo version of the dependency management will be imported.
+- **Use a parent artifact**: The parent artifact makes your project inherit dependencies, properties and other fields from another project. We recommend to keep the default value and use `org.nuxeo.ecm.distribution:nuxeo-distribution`.
+- **Nuxeo Version**: Asked only if no parent is specified. It specifies which Nuxeo version of the dependency management will be imported.
 
 #### Empty Nuxeo Project
 
