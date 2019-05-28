@@ -49,8 +49,7 @@ Compatibility for Nuxeo Studio with Polymer 3 to keep our technical stack up to 
 
 | Release&nbsp;Date                                           | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [May 2019]({{page page='studio-updates-2019-05'}})      | Improved support for existing features. | 
-| [April 2019]({{page page='studio-updates-2019-04'}})      | Support for selecting all schemas in page providers, improved support for workflow graph definition. |
+| [April 2019]({{page page='studio-updates-2019-04'}})      | Support to select all schemas in page providers, improved support for workflow graph definition. |
 | [March 2019]({{page page='studio-updates-2019-03'}})      | Easier search configuration, override Web UI default configuration, select your default theme in a click. |          
 | [February 2019]({{page page='studio-updates-2019-02'}})      | Introducing the Layout Blocks and Git Status bar as well as an easier folderish documents configuration.                                                                                                                                                                               |
 | [January 2019]({{page page='studio-updates-2019-01'}})      | Studio Designer interface improvements.                                                                                                                                                                                |
