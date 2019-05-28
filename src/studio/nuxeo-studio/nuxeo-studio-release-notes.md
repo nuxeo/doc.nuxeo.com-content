@@ -14,12 +14,15 @@ Discover upcoming and recent changes in Nuxeo Studio.
 ## Upcoming Changes
 
 ### More Consistent Layouts
-When creating a **Create**, **Edit** or **Import** layout, the title field is automatically set as required to keep consistency with the default Web UI behavior.
+- When creating a **Create**, **Edit** or **Import** layout, the title field is automatically set as required to keep consistency with the default Web UI behavior.
+
+- When creating a layout for a workflow task, fewer properties are generated to avoid information duplication with the one exposed in Web UI.
 
 ### New Options in Page Provider Screen
 - `file:content` sub-fields are exposed when defining an aggregate: to configure searches on file size or file MIME type for instance.
 
 - `ecm:ancestorId` is exposed in both predicates and aggregates: can be used as an alternative to `ecm:path` when you know the document id instead.
+- `BETWEEN` operator is exposed in predicates for dates, float and integer numbers.
 
 ### Polymer 3 Migration
 
@@ -30,12 +33,15 @@ Compatibility for Nuxeo Studio with Polymer 3 to keep our technical stack up to 
 - Ability to use complex multivalued fields in page provider predicates ([NXS-5191](https://jira.nuxeo.com/browse/NXS-5191))
 - Workflow resolution actions not displayed when there are several of them ([NXS-5201](https://jira.nuxeo.com/browse/NXS-5201))
 - Branches should not be able to be merged when you have work in progress ([NXS-5215](https://jira.nuxeo.com/browse/NXS-5215))
+- Studio Designer support for multiple levels of schema inheritance ([NXS-5173](https://jira.nuxeo.com/browse/NXS-5173))
+- Branches can be deleted again and warning message is improved ([NXS-5304](https://jira.nuxeo.com/browse/NXS-5304))
+- The correct configuration is generated when drag and dropping the lifecycle state in a table result layout ([NXS-5257](https://jira.nuxeo.com/browse/NXS-5257))
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.9.0','3.10.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.9.0','3.10.0','3.11.0','3.12.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2019-03' page='studio-updates-2019-03'}}}
+{{{multiexcerpt 'studio-updates-2019-04' page='studio-updates-2019-04'}}}
 
 ---
 
@@ -43,6 +49,8 @@ Compatibility for Nuxeo Studio with Polymer 3 to keep our technical stack up to 
 
 | Release&nbsp;Date                                           | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [May 2019]({{page page='studio-updates-2019-05'}})      | Improved support for existing features. | 
+| [April 2019]({{page page='studio-updates-2019-04'}})      | Support for selecting all schemas in page providers, improved support for workflow graph definition. |
 | [March 2019]({{page page='studio-updates-2019-03'}})      | Easier search configuration, override Web UI default configuration, select your default theme in a click. |          
 | [February 2019]({{page page='studio-updates-2019-02'}})      | Introducing the Layout Blocks and Git Status bar as well as an easier folderish documents configuration.                                                                                                                                                                               |
 | [January 2019]({{page page='studio-updates-2019-01'}})      | Studio Designer interface improvements.                                                                                                                                                                                |
