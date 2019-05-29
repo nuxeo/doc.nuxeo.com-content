@@ -24,6 +24,25 @@ One can be interrupted while dealing with a workflow task. This how-to will teac
 
 {{! /excerpt}}
 
+Steps:
+- Create a workflow (named importantReview here)
+- Add a wf var reviewComment type string, edit it to make it required, save wf
+- Add an accept/reject task and link nodes
+- Fill in the general info about the task (nothing specific so far)
+- Make wf var editable in this task
+- Add a new button to save progress and *uncheck validate form* => that's what allows to bypass the required put earlier
+- Go to transitions tab to have the transition for that new button automatically created (it's a bug, it won't be there if you don't)
+- Save node
+- Link saveProgress transition to the same task (that's the goal, you want to go back to that task when you save)
+- Save wf
+- Configure task layout in Designer
+
+That's it (deploy and use).
+
+Note: users may possibly want to replace the text input (1 line max) with a textarea (made for large text). It's just about changing the <nuxeo-input> element to <nuxeo-textarea> in the layout config after switching to code.
+
+Note: when saving work in progress, it does trigger again the output chain, input chain and the task assigned email.
+
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
