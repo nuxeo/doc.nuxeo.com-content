@@ -365,6 +365,10 @@ The Emergency Administrator may be selectively enabled to provide access to the 
 
 ## Default `nuxeo.conf` Configuration Example
 
+{{#> callout type='info' }}
+All the parameters presented above are not listed here.
+{{/callout}}
+
 ```properties
 nuxeo.directory.type=ldap
 nuxeo.ldap.url=
@@ -380,6 +384,7 @@ nuxeo.ldap.user.searchScope=onelevel
 nuxeo.ldap.user.searchBehavior=subany
 nuxeo.ldap.user.readonly=true
 
+nuxeo.ldap.user.mapping.rdn=
 nuxeo.ldap.user.mapping.username=
 nuxeo.ldap.user.mapping.password=
 nuxeo.ldap.user.mapping.firstname=

@@ -126,6 +126,6 @@ Studio Designer is available as a public Beta version.
 
 {{! multiexcerpt name='what-is-nuxeo-platform'}}
 
-The Nuxeo Platform provides a content repository for [document management](http://www.nuxeo.com/solutions/document-management/), [digital asset management](http://www.nuxeo.com/solutions/digital-asset-management/) and [case management](http://www.nuxeo.com/solutions/case-management/) business applications.
+The Nuxeo Platform provides a content repository for [document management](https://www.nuxeo.com/products/document-management/), [digital asset management](http://www.nuxeo.com/products/digital-asset-management/) and [case management](http://www.nuxeo.com/products/case-management/) business applications.
 
 {{! /multiexcerpt}}
