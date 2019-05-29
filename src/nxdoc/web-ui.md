@@ -150,7 +150,7 @@ Nuxeo Web UI is a responsive application with three main layout regions:
 2.  **Sub-Views**: The sub-views available.
 3.  **Quick search**: Search by keywords or users.
 
-### {{> anchor 'side-menu-functional-overview'}} Side Menu&nbsp;
+### {{> anchor 'side-menu-functional-overview'}} Side Menu
 
 The menu displays different tabs. Clicking on one of them will open a side panel with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area. We will see the description of the main area on the last part of this section.
 

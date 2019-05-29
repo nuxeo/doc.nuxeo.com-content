@@ -94,7 +94,7 @@ You can now save your changes and go to the Designer.
 ## Create a Listing
 Go to the Designer:
 1. Click on **UI** > **Tabs**   
-1. Hover over the Create button ![]({{file version='' space='nxdoc' page='web-ui-overview' name='create_button.png'}} ?w=20) and select the **Listing** type ![]({{file name='listing_button.png'}} ?w=20)
+1. Hover over the Create button ![]({{file version='810' space='nxdoc' page='web-ui' name='create_button.png'}} ?w=20) and select the **Listing** type ![]({{file version='810' name='listing_button.png'}} ?w=20)
 1. Name it `other-contracts`.
 1. Fill in the creation form like this:
   ![]({{file version='810' name='other-contract.png'}} ?w=450,border=true)
