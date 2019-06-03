@@ -21,13 +21,14 @@ This page is a checklist to let you understand all the major impacts of a migrat
 
 Before digging into the different configuration elements:
 - Make sure that the Nuxeo Web UI is selected as target package in the [Application Definition]({{page page='application-definition'}}) screen.
-- Check the [features overview]({{page space='userdoc' page='from-jsf-ui-to-web-ui'}}) page for more information. 
+- Check the [features overview]({{page space='userdoc' page='from-jsf-ui-to-web-ui'}}) page for more information.
 
 ## Branding
 
 - The login page configuration remains on Nuxeo Studio Modeler.
 - The header, footer, colors and font defined in the Branding should be migrated into a new theme under **UI** > **Theme** in Studio Designer.
 - Custom CSS is removed, which means that specific CSS contributions should be migrated either into a new theme or directly inside the corresponding element in the `<style>` section in your custom theme in Studio Designer.
+- Workspace administration is no longer available in Web UI, which means that you can no longer specify a theme per workspace.
 
 <div class="table-scroll">
 <table class="hover">
@@ -229,7 +230,8 @@ These actions can either be linked to an automation chain (or an automation scri
 <div>
 {{#> panel type='secondary' match_height='true'}}
 ### Useful Link
-[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**Studio Designer - HOWTO: Configure a User Action**]({{page space='nxdoc' page='how-to-insert-user-action'}})
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**Studio Designer - HOWTO: Configure a User Action**]({{page space='nxdoc' page='how-to-insert-user-action'}})</br>
+[<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;**Javascript Expression Examples**]({{page page='javascript-expression-examples'}})
 {{/panel}}
 </div>
 </td>
