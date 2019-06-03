@@ -1184,4 +1184,5 @@ new ArrayList(Arrays.asList(WorkflowVariables["contributors"])); x.add(Context["
 - [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
 - [Automation]({{page page='automation'}})
 - [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
+- [Javascript Expression Examples]({{page space='studio' page='javascript-expression-examples'}})
 {{/panel}}</div><div class="column medium-6"></div></div>
