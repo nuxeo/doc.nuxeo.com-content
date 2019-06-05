@@ -196,7 +196,7 @@ Here is an example on how to launch a bulk command and get status:
 
 ```bash
 ## Run a bulk action
-curl -s -X POST 'http://localhost:8080/nuxeo/api/v1/search/bulk/csvExport?query=SELECT * FROM File WHERE ecm:isVersion = 0 AND ecm:isTrashed = 0' -u Administrator:Administrator -H 'content-type: application/json' -d '{}' | tee /tmp/bulk-command.txt
+curl -s -X POST 'http://localhost:8080/nuxeo/api/v1/search/bulk/csvExport?query=SELECT%20*%20FROM%20File%20WHERE%20ecm:isVersion=0%20AND%20ecm:isTrashed=0' -u Administrator:Administrator -H ‘content-type: application/json’ -d ‘{}’ | tee /tmp/bulk-command.txt
 # {"commandId":"e8cc059d-6b9d-480b-a6e1-b0edace6d982"}
 
 ## Extract the command id from the output
