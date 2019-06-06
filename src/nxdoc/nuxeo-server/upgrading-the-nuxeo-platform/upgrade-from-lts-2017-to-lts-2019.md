@@ -141,6 +141,12 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 
 {{{multiexcerpt 'upgrade-10.10-api.keyvaluestore' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
+### FileManager
+{{{multiexcerpt 'upgrade-10.10-code.filemanager' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
+### SAML Icon Displayed on Login Page
+{{{multiexcerpt 'upgrade-10.10-code.saml-icon' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
 ### Code Behavior Changes
 
 {{{multiexcerpt 'upgrade-10.1-behavior.field.version.indexed' page='Upgrade from LTS 2017 following Fast Tracks'}}}

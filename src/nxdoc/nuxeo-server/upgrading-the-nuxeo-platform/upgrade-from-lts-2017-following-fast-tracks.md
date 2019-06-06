@@ -1116,6 +1116,7 @@ See [NXP-25837](https://jira.nuxeo.com/browse/NXP-25837)
 
 #### FileManager
 
+{{! multiexcerpt name='upgrade-10.10-code.filemanager'}}
 All `FileManager#createDocumentFromBlob` methods have been deprecated, you should now use the `FileManager#createOrUpdateDocument(FileImporterContext)` method to create or update documents from blobs.
 
 `FileImporter#create` method has been deprecated, you should now use the `FileImporter#createOrUpdate(FileImporterContext)` method.
@@ -1161,6 +1162,7 @@ Custom importers implementing `FileImporter` or extending `AbstractFileImport` m
 See [this commit](https://github.com/nuxeo/nuxeo-platform-audio/commit/1f66c60c35464d0f2cc3a8753b16d50e08952668#diff-700f7eedc28d874cdf4555e1871d550f) for an example of migration to `#createOrUpdate(FileImporterContext)`.
 
 See [NXP-26178](https://jira.nuxeo.com/browse/NXP-26178)
+{{! /multiexcerpt}}
 
 #### Operation Changes
 
