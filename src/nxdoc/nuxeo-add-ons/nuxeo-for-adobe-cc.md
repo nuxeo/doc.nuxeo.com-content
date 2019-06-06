@@ -25,7 +25,7 @@ tree_item_index: 850
 ---
 
 {{! excerpt}}
-The [Nuxeo for Adobe CC](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package) connector enables [Adobe Creative Cloud users](https://www.nuxeo.com/integration/adobe-creative-suite/) to import assets into an InDesign, Photoshop or Illustrator document directly from the Nuxeo repository. Link to the repository is maintained so as to facilitate updates of the referenced assets.
+The [Nuxeo for Adobe CC](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package) connector enables [Adobe Creative Cloud users](https://www.nuxeo.com/integration/adobe-creative-suite/) to import assets into an InDesign document directly from the Nuxeo repository. Link to the repository is maintained so as to facilitate updates of the referenced assets.  Users can access the assets directly from Illustrator or Photoshop to make edits and trigger update warnings in InDesign.
 {{! /excerpt}}
 
 ## Requirements
@@ -50,9 +50,9 @@ Once the installation done, a new extension "Nuxeo CC Connector" is available on
 
 ### Licensing Information
 
-Once Nuxeo for Adobe CC is properly installed, launch InDesign CC 2018 (licensing dialog does not appear in Photoshop or Illustrator) to see a dialog requesting license information:
+Once Nuxeo for Adobe CC is properly installed, launch InDesign CC 2018 or 2019 (licensing dialog does not appear in Photoshop or Illustrator) to see a dialog requesting license information:
 
-- If you have a license key for Nuxeo CC Connector (provided to you by your Nuxeo Admin or Nuxeo Sales), click “Yes” to activate now, or click “No” to activate later.
+- If you have a license key for Nuxeo CC Connector (provided to you by Nuxeo Sales), click “Yes” to activate now, or click “No” to activate later.  You can activate in InDesign later via the Nuxeo dropdown menu item.
 
 If you have questions related to licensing, contact your Nuxeo sales representative or contact Nuxeo at contact@nuxeo.com.
 
