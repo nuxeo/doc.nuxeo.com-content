@@ -109,8 +109,6 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 
 {{{multiexcerpt 'upgrade-10.3-code.webui-operations' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
-#### Comment Manager
-
 ##### Keeping Old Comments
 {{{multiexcerpt 'upgrade-10.3-keeping-comments' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
@@ -147,6 +145,12 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 
 ### User Actions in WebUI
 {{{multiexcerpt 'upgrade-10.10-code.webui-user-actions' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
+### FileManager
+{{{multiexcerpt 'upgrade-10.10-code.filemanager' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
+### SAML Icon Displayed on Login Page
+{{{multiexcerpt 'upgrade-10.10-code.saml-icon' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 ### Code Behavior Changes
 
