@@ -3,7 +3,7 @@ title: Web UI Functional Tests
 description: An overview of functional testing on Web UI and it's functional testing framework.
 toc: true
 review:
-  date: '2019-03-13'
+  date: '2019-06-06'
   status: ok
   comment: ''
 ---
@@ -80,7 +80,7 @@ To use the framework on custom projects, you need to create an npm package with 
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@nuxeo/nuxeo-web-ui-ftest": "2.5.0-SNAPSHOT",
+    "@nuxeo/nuxeo-web-ui-ftest": "3.0.0-SNAPSHOT",
     "cucumber": "^4.1.0"
   }
 }
@@ -92,7 +92,7 @@ To ensure that you can access *SNAPSHOT* versions of the framework, you need to 
 {{#> panel type='code' heading='~/.npmrc'}}
 ```
 ...
-@nuxeo:registry=https://mavenin.nuxeo.com/nexus3/repository/npmjs-nuxeo/
+@nuxeo:registry=https://mavenin.nuxeo.com/nexus/repository/npmjs-nuxeo/
 ...
 ```
 {{/panel}}
