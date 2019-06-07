@@ -118,6 +118,7 @@ The Nuxeo addon [OpenID Authentication](https://connect.nuxeo.com/nuxeo/site/mar
         <userResolverClass>org.nuxeo.ecm.platform.oauth2.openid.auth.EmailBasedUserResolver</userResolverClass>
         <scope>https://www.googleapis.com/auth/userinfo.email</scope>
         <icon>/icons/google.png</icon>
+        <authenticationMethod>url / bearer</authenticationMethod>
     </provider>
 </extension>
 ```
