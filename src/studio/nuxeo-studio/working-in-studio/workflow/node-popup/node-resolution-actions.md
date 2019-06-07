@@ -1,5 +1,5 @@
 ---
-title: Node Resolution Actions Tab
+title: Node Task Buttons Tab
 review:
     comment: ''
     date: ''
@@ -12,7 +12,7 @@ history:
     name: node-resolution-actions-tab.png
     studio_modeler#popup#up_to_date
 --}}
-![Node Resolution Actions Tab](nx_asset://4cac2311-c4be-4a1a-98c4-344c01eb609d ?w=500,border=true)
+![Node Task Buttons Tab](nx_asset://4cac2311-c4be-4a1a-98c4-344c01eb609d ?w=500,border=true)
 
 On this tab, you define which buttons will be displayed on the form.
 

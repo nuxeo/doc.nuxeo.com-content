@@ -78,7 +78,7 @@ history:
 --}}
 ![Node Transition Tab](nx_asset://4f937076-ee59-4ca1-94f1-59e9d576a634 ?w=500,border=true)
 
-**Exclusive Node**: If checked, transitions can be ordered and only the first transition for which conditions are true will be followed. If not checked and if several transitions are true, then they will all be followed corresponding to a fork in the workflow. (available from 5.7.2)
+**Follow only first true transition**: If checked, transitions can be ordered and only the first transition for which conditions are true will be followed. If not checked and if several transitions are true, then they will all be followed corresponding to a fork in the workflow. (available from 5.7.2)
 
 ** Add a transition:**
 
