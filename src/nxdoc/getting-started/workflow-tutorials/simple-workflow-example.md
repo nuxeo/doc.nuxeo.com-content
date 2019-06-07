@@ -66,7 +66,12 @@ This tutorial gives all the necessary steps to build the custom workflow templat
 1. In **Studio Modeler**, navigate to the **Workflow** > **Process Definitions** submenu.
 2. Click on the **New** button.
 3. Give the workflow an id (`SalesProposalWorkflow`), a label and a description.
-    ![]({{file name='Simple_Workflow_000.png'}} ?w=450,border=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/Simple_Workflow_000.png
+      name: Simple_Workflow_000.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![simple_Workflow_000.png](nx_asset://a18252e0-cb6a-43c4-9058-398e169c50f9 ?w=450,border=true)
 4. Click on the **Ok** button.
 
 ### Defining the Workflow's Activation
@@ -75,7 +80,12 @@ Workflows can be launched through a dropdown list on the summary screen of every
 
 1. From the workflow, click on the **Activation** tab.
 2. In the **Current document has one of the types**, select **File**.
-   ![]({{file name='Simple_Workflow_002.png'}} ?w=600,h=407,border=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple_Workflow_002.png
+      name: Simple_Workflow_002.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![simple_Workflow_002.png](nx_asset://24ee8a6e-aac4-46f9-ba6d-2840806f0b83 ?w=600,border=true)
 
 ### Starting the Graph
 
@@ -84,7 +94,7 @@ A workflow must start with a node for which the "start node" property is checked
 To start the workflow graph:
 1. Click on the **Graph** tab.
 2. By default, Studio adds the Start and Stop nodes automatically. If not, drag and drop the **Start** node on the graph.
-   ![](https://www.lucidchart.com/publicSegments/view/54ede03e-bcb8-4715-a9f3-1f500a008a99/image.png ?w=400,border=true)
+   ![](https://www.lucidchart.com/publicSegments/view/54ede03e-bcb8-4715-a9f3-1f500a008a99/image.png ?w=300,border=true)
 
 ### Defining the Technical Validation Step
 
@@ -94,10 +104,20 @@ This node will create a task for Jack, the head of operations. He will have to a
 
 Drag the **Accept/Reject** node template from the node template library and drop it on the graph.
 It will already have some of the needed transitions and buttons pre-configured: Validate and Reject. You need another transition (Need juridical advice), which you will add manually in a future step.
-![]({{file name='Simple_Workflow_003.png'}} ?w=400,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple_Workflow_003.png
+    name: Simple_Workflow_003.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![simple_Workflow_003.png](nx_asset://07d27b3a-4105-4e62-a97b-ddfad1af64bb ?w=400,border=true)
 
 1. Hover on the **Accept/Reject** node you just dropped and click on the icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) that appears to open the node properties.
-    ![]({{file name='Simple_Workflow_005.png'}} ?w=150,border=true,thumbnail=true)
+{{!--     ### nx_asset ###
+path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple_Workflow_005.png
+name: Simple_Workflow_005.png
+studio_modeler#screenshot#up_to_date
+--}}
+![simple_Workflow_005.png](nx_asset://cbf4cf4b-c51a-4807-b8ec-edeacf246d14 ?w=150,border=true)
 2. In the **General** tab edit the following properties:
 
 - Title: `Technical validation`
@@ -130,7 +150,12 @@ This variable will be named `hoo_comment`.
 2.  Add the head of operation's comment variable and name it `hoo_comment`. It is like editing a schema.
 3.  Add the juridical advisor's comment variable: `juridical_comment`.
 4.  Add the salesman's comment variable: `sales_comment`.
-    ![]({{file name='Simple_Workflow_004.png'}} ?w=600,border=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple_Workflow_004.png
+      name: Simple_Workflow_004.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![simple_Workflow_004.png](nx_asset://7b94f177-7f48-4b31-8ab1-7368ab501861 ?w=600,border=true)
 5.  Click on **Save**.
 
 ### Configuring the Technical Validation Step Layout and Actions
@@ -186,7 +211,7 @@ The workflow task layout lets the user edit some of the workflow's variables (ei
 
 #### Setting up the Tasks Buttons
 
-In Studio Modeler, the buttons that are shown on the form are configured on the **Resolution Actions** tab. Two are already available because of the template node you chose. You need to add a third one when the document requires juridical expertise.
+In Studio Modeler, the buttons that are shown on the form are configured on the **Task Buttons** tab. Two are already available because of the template node you chose. You need to add a third one when the document requires juridical expertise.
 
 1. Go back to the graph of the workflow on Modeler side.
 1. Click on **Add task button**.
@@ -205,14 +230,24 @@ Each button is automatically associated to a transition to define what should be
 
 1. Finally, click on the **Transition** tab.
     Note that you could add more terms in the condition if necessary.
-    ![]({{file name='technical-validation-transitions.png'}} ?w=450,border=true)
+    {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/technical-validation-transitions.png
+    name: technical-validation-transitions.png
+    studio_modeler#screenshot#up_to_date
+    --}}
+    ![technical-validation-transitions.png](nx_asset://67d49953-8417-4717-9d41-8554d307021a ?w=450,border=true)
 2. Click on **Save**.
 
 #### Connecting the Nodes
 
 1. Go back to the graph.
 2. Link the **Start** node to the **Technical validation** node, by pulling an arrow between the unique transition point of the Start node to the input point of the Technical validation node.
-    ![]({{file name='Simple_Workflow_012.png'}} ?w=200,border=true,thumbnail=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple_Workflow_012.png
+      name: Simple_Workflow_012.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![simple_Workflow_012.png](nx_asset://bbb147f1-ec4f-4f07-8661-cec1c7dd3e7f ?w=200,border=true)
 
     Note that you have three transition points on the technical validation node, ready to be pulled to the next nodes.
 
@@ -287,7 +322,12 @@ Drag the **Approve** node from the node template library and drop it on the grap
 1. Go back on the graph, in Studio Modeler.
 2. Search for the Technical validation node&rsquo;s juridical advice requirement output point.
 3. Pull an arrow from there to the Juridical advice node&rsquo;s input point.
-   ![]({{file name='Simple_Workflow_018.png'}} ?w=200,border=true,thumbnail=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple_Workflow_018.png
+      name: Simple_Workflow_018.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![simple_Workflow_018.png](nx_asset://d68e990f-708f-4c15-98e8-cbbc53f35584 ?w=200,border=true)
 
 ### Defining the Proposal Update Node
 
@@ -307,14 +347,24 @@ The **Approve** node will once again be the most appropriate. Pick it up and dro
     This task may not be assigned to a particular person, neither may it be assigned to a group. It needs to be assigned to the document's creator. To do so, a variable needs to be used instead of a hard coded value.
     We use the **Assignees expression** field and use this variable: `@{Document["dc:creator"]}`. This will return the document creator's username.
     Note that there are no specific rights to grant there as in this situation the document will be heading back to its creator.
-    ![]({{file name='proposal-update-general.png'}} ?w=450,border=true)
+    {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/proposal-update-general.png
+    name: proposal-update-general.png
+    studio_modeler#screenshot#up_to_date
+    --}}
+    ![proposal-update-general.png](nx_asset://2e6836c7-1769-48aa-bfc3-372df1f513ec ?w=450,border=true)
 6. Calling the task an approval task could lead to confusion for the salesman that wants to submit an updated proposal. Thus, we will call the task button differently:
-    1. Click on the **Resolution Actions** tab.
+    1. Click on the **Task Buttons** tab.
     1. Delete the `approve` existing task button.
     1. Click on the **Add task button** link.
     - id: `submit_updated_proposal`
     - Label: `Submit updated proposal`  
-      ![]({{file name='Simple_Workflow_022_1.png'}} ?w=450,border=true,thumbnail=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple_Workflow_022_1.png
+      name: Simple_Workflow_022_1.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![simple_Workflow_022_1.png](nx_asset://27330534-2b95-4e3f-92f1-e913f30cb726 ?w=650,border=true)
 7. Save.
 
 {{#> callout type='info' }}
@@ -357,7 +407,12 @@ In this scenario, if Jack (Head of Operations) rejects the tasks, it is sent bac
 1. Go back to the Proposal update node, in Studio Modeler.
 1. Click on the **Transitions** tab.
 1. Click on the icon ![]({{file name='edit_wiz.png'}}) next to the "approve" transition and click on **Remove** in the contextual menu.
-   ![]({{file name='proposal-update-transitions.png'}} ?w=450,border=true)
+    {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/proposal-update-transitions.png
+    name: proposal-update-transitions.png
+    studio_modeler#screenshot#up_to_date
+    --}}
+    ![proposal-update-transitions.png](nx_asset://2aa2608a-8527-4209-a954-f88e73e94c58 ?w=450,border=true)
 1. Confirm row deletion on the popup window.
 1. Click on **Save**.
 
@@ -366,7 +421,12 @@ In this scenario, if Jack (Head of Operations) rejects the tasks, it is sent bac
 1. Go back to the graph.
 1. Link the reject output of the Technical validation node to the Proposal Update node's input.
 1. Link the Proposal update node's output point to the Technical validation node's input point.
-    ![]({{file name='Simple_Workflow_024.png'}} ?w=300,border=true,thumbnail=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple_Workflow_024.png
+      name: Simple_Workflow_024.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![simple_Workflow_024.png](nx_asset://a3d270c7-e336-4886-a31c-f73e7c67820a ?w=300,border=true)
 5. Link the `validate` outpoint point of the Technical validation task to the end node.
 6. Link the `approve` outpoint point of the Juridical advice task to the end node as well.
 
@@ -380,19 +440,44 @@ A document being accepted by the Head of Operations or the Juridical services ha
 
 1. Open the **Stop** node properties.
 1. In the **General** tab, click on the **Create** button next to the field "Select the input automation chain".
-    ![]({{file name='empty-end-node.png'}} ?w=450,border=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/empty-end-node.png
+      name: empty-end-node.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![empty-end-node.png](nx_asset://81c63939-c710-48b5-a1dd-1a38ac34d0d7 ?w=450,border=true)
 
     1. Give an id to your chain: `SetAsApproved`.
-        ![]({{file name='Simple_Workflow_026.png'}} ?w=350,border=true)
+        {{!--     ### nx_asset ###
+          path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple_Workflow_026.png
+          name: Simple_Workflow_026.png
+          studio_modeler#screenshot#up_to_date
+        --}}
+        ![simple_Workflow_026.png](nx_asset://2b3ac7f5-fb14-4bcb-8260-91d02b302f18 ?w=350,border=true)
     1. In the editor, add the **Document** > **Follow Life Cycle Transition** operation using drag and drop.
-        ![]({{file name='empty-automation-chain.png'}} ?w=450,border=true)
+        {{!--     ### nx_asset ###
+          path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/empty-automation-chain.png
+          name: empty-automation-chain.png
+          studio_modeler#screenshot#up_to_date
+        --}}
+        ![empty-automation-chain.png](nx_asset://3b279711-2104-447b-929a-f637bcaf8e68 ?w=450,border=true)
     1. Open it and set its value to `approve`.
-        ![]({{file name='Simple_Workflow_028_1.png'}} ?w=450,border=true)
+        {{!--     ### nx_asset ###
+          path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple_Workflow_028_1.png
+          name: Simple_Workflow_028_1.png
+          studio_modeler#screenshot#up_to_date
+        --}}
+        ![simple_Workflow_028_1.png](nx_asset://6d9ff8ac-8004-4227-95d0-b1c663b4f12c ?w=450,border=true)
     1. Save the chain and go back to your workflow graph.
 
 3. Now that the chain is created, you may have a look at your end node properties.
    The input operation chain has been automatically filled in thanks to our previous operation.
-   ![]({{file name='end-node-setasapproved.png'}} ?w=450,border=true)
+   {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/end-node-setasapproved.png
+    name: end-node-setasapproved.png
+    studio_modeler#screenshot#up_to_date
+    --}}
+    ![end-node-setasapproved.png](nx_asset://681d65e0-ac2b-456a-a4ef-67a7c602ab5b ?w=450,border=true)
 
 ## Deploy and Test
 
@@ -414,7 +499,7 @@ A document being accepted by the Head of Operations or the Juridical services ha
        name: simple-worfklow-step2.png
        1.1.3#screenshot#up_to_date
    --}}
-   ![simple-worfklow-step2.png](nx_asset://86cb738b-95b7-45a4-8a50-166a75b4aa3b ?w=650,border=true)
+   ![simple-worfklow-step2.png](nx_asset://86cb738b-95b7-45a4-8a50-166a75b4aa3b ?w=450,border=true)
    You should see a information banner indicating a workflow as been triggered. As a workflow initiator, you can **View the Workflow graph** or **Abandon** it.
 8. Log in as `Jack`: there's a new task in your dashboard as well as a notification on the workflow task menu.
    {{!--     ### nx_asset ###

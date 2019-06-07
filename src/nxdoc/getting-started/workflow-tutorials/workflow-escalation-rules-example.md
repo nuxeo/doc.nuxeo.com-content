@@ -278,18 +278,18 @@ However, in this case, we need a transition but no button. How could the user cl
 
 You may see that the condition for this transition defaults to `true`. Every time a user completes a task by clicking on a button, the workflow engine will evaluate **ALL** transition conditions. **ANY** condition evaluated to true will be followed. Back to our example, this means that leaving the default value would end up in an escalation if the user clicks on a button, which is the exact contrary of what we want to achieve.
 
-To avoid this situation, we need to activate the **Exclusive node** option. **This option tells the node to follow only the first transition that has been evaluated to true**. Back to our example, what does that imply?
+To avoid this situation, we need to activate the **Follow only first true transition** option. **This option tells the node to follow only the first transition that has been evaluated to true**. Back to our example, what does that imply?
 
 - If the user clicks on a button, the condition for this button will be evaluated to `true`. The workflow engine will follow this transition without evaluating the others.
 - If the user is away, when the escalation rule will be triggered, all conditions will be evaluated to `false` except for the escalation transition we just added. The workflow engine will then follow this transition.
 
 Wow, this is perfectly adapted to our use case! Let's do it then!
 
-#### Activating the Exclusive Node Option
+#### Activating the "Follow only first true transition" Option
 
-1.  On the marketing manager's validation node, go to the **Transitions** tab.
-2.  Check the **Exclusive node** option.
-3.  Save the node properties and the graph.</br>
+1.  On the marketing manager's validation node, go to the **General** tab.
+2.  Check the **Follow only first true transition** option
+3.  Save the node properties and the graph.
     That's it! Our transition is now secured.
 
 Now, we should take care of transferring the task to the general manager if the user is away on to the escalation rules.
@@ -451,7 +451,7 @@ Hover your mouse over the Accept/Reject node and click on the edit icon ![]({{fi
 Similarly to the previous node, if Eric validates the document we want to have it published.
 
 1.  Go to the **Transitions** tab.
-1. Check the **exclusive node** option.
+1. Check the **Follow only first true transition** option.
 1.  Select the&nbsp;`validatePressRelease` chain for the `validate` transition.
 1.  Add a new transition that you may call `endWorkflow` and leave the default condition.
 
