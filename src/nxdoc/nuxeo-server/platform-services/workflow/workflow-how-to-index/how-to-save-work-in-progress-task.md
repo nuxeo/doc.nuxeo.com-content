@@ -51,7 +51,7 @@ Start by [creating a group]({{page space='userdoc' page='administration'}}#creat
       studio_modeler#screenshot#up_to_date
     --}}
     ![variables-tab-node.png](nx_asset://33abe3dc-dd24-4236-b405-4830b0287137 ?w=350,border=true)
-1. On the Resolution Actions tab, add a task button:  
+1. On the Task Buttons tab, add a task button:
       - id: `saveprogress`</br>
       - Label: save progress</br>
       - Uncheck the box **Validate Form** of this new button.
