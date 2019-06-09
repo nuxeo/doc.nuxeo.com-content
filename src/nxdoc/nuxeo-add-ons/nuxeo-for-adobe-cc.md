@@ -124,7 +124,7 @@ You can always access the fly out menu by clicking on the burger menu in the upp
 
 ### Preferences
 
-The connector has a number of customizable preferences to enhance your workflow.
+The connector has a number of customizable preferences to enhance your workflow.  Below are the preferences availabele within InDesign. 
 
 {{!--     ### NX_ASSET ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe Preferences
@@ -133,7 +133,7 @@ The connector has a number of customizable preferences to enhance your workflow.
 --}}
 ![Adobe Preferences](nx_asset://68f83321-f2ef-45fe-9158-9c074c7427ea ?w=350,border=true)
 
-**Place Options (InDesign)**
+**Place Options (InDesign only)**
 - Replace Selected on place
   - when checked: Replaces any selected object with the asset you drag onto the page.
   - When unchecked: Dragging an item to the page, places it as a new object.
@@ -144,6 +144,7 @@ The connector has a number of customizable preferences to enhance your workflow.
   - when checked: Opens any downloaded file if possible (depends on Adobe app).
 - Save to default folder: Saves downloaded files to your `User Documents\nuxeo_connector_files\downloads` folder.
   - When unchecked: the User will be presented with the System browser to choose a folder.
+- Choose folder location:  Select the location for your downloads.
 
 **Asset View**
 - Use Grid view: Displays assets in a gallery.
@@ -157,9 +158,13 @@ The connector has a number of customizable preferences to enhance your workflow.
 
 ### Finding Content (InDesign, Photoshop and Illustrator)
 
-The connector allows to Search and Browse your content.
+The connector has three tabs, each with slightly different behavior: Search, Browse and Other.
 
-The search tab allows you to search through all the repository at one time. The browse tab allows you to browse through the hierarchical setup of the repository. While browsing, you can still use the search bar; the search content is limited to the level in the hierarchy that you are currently viewing. You have the choice between a grid view (default) and a list view. You can toggle between view options using the buttons near the search bar.
+Each tab uses a different page provider, included with the server-side Nuxeo for Adobe CC mp package, to control behavior. The page providers can be overriden in Nuxeo Studio to reflect your own content model and needs, such as displaying more results per page.  For more information on page providers and overriding them, see https://doc.nuxeo.com/nxdoc/page-providers/
+
+The Search tab allows you to search through all the repository at one time. It uses a page provider 'adobe-connector-all-images' to control the objects searched and the query results.
+
+The Browse tab allows you to browse through the hierarchical setup of the repository. It uses the 'adobe-connector-browse' page provider.  While browsing, you can still use the search bar; the search content is limited to the level in the hierarchy that you are currently viewing. You have the choice between a grid view (default) and a list view. You can toggle between view options using the buttons near the search bar.
 
 {{!--     ### NX_ASSET ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe Browse tab
@@ -167,6 +172,8 @@ The search tab allows you to search through all the repository at one time. The 
     addins#popup#up_to_date
 --}}
 ![Adobe Browse tab](nx_asset://56631c62-1a5a-4e54-a683-00658ebf0b31 ?w=350,border=true)
+
+The Other tab, by default, is configured to work with the Collections within your repository.  Two separate page providers are used to surface the collections and their content: 'adobe-connector-other_primary' and 'adobe-connector-other_secondary'. It is called "other" because you could configure it to show any "other" two step pageprovider query you want such as "Favorites". 
 
 #### Search Tab
 
@@ -183,6 +190,8 @@ The search bar supports wildcard operations, as in the example, and search the f
 Once you’ve entered your search terms in the Search field, clicking on the search icon lists the results below.
 
 Results are shown in pages and you can navigate between pages using the arrow keys at the bottom of the panel.
+
+You can also jump to a given page.
 
 Whenever using the connector, if you want to perform a search, you can choose **Search** from the Nuxeo CC Connector panel fly out menu, or just click on the Search widget.
 
@@ -205,6 +214,9 @@ To download a copy of an asset from Nuxeo CC Connector, click the blue download 
 The browse tab is easy to use by clicking on the folders in the hierarchy. Note that as you click through the repository, a breadcrumb is generated just above the content view, which allows you to easily go back to any point within your path. Simply click on one of the levels to change location. If your path becomes too long to fit the panel, a slider appears to allow you to move “up” or “down” the path.
 
 As indicated earlier, to see more information about an object, double click into the item to see the detail view, where you can also download the file.
+
+#### Other Tab
+By default, the other tab displays the collections you have access to.  You will see the search bar here, but it is not supported within collections.
 
 #### Working in InDesign
 
