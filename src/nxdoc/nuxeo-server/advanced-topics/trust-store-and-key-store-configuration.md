@@ -1,5 +1,5 @@
 ---
-title: Trust Store and Key Store
+title: Trust Store and Key Store Configuration
 description: Communications between a client and a server can be secured using TLS/SSL, it includes encryption, authentication of the server by the client, etc.
 review:
     comment: ''

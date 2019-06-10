@@ -1,5 +1,5 @@
 ---
-title: Configuration Parameters Index
+title: Configuration Parameters Index (nuxeo.conf)
 description: Manage your configuration properties around the Nuxeo Platform.
 review:
     comment: ''
