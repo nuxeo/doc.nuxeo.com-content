@@ -124,7 +124,7 @@ You can always access the fly out menu by clicking on the burger menu in the upp
 
 ### Preferences
 
-The connector has a number of customizable preferences to enhance your workflow.  Below are the preferences availabele within InDesign. 
+The connector has a number of customizable preferences to enhance your workflow. Below are the preferences available within InDesign.
 
 {{!--     ### NX_ASSET ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe Preferences
@@ -144,7 +144,7 @@ The connector has a number of customizable preferences to enhance your workflow.
   - when checked: Opens any downloaded file if possible (depends on Adobe app).
 - Save to default folder: Saves downloaded files to your `User Documents\nuxeo_connector_files\downloads` folder.
   - When unchecked: the User will be presented with the System browser to choose a folder.
-- Choose folder location:  Select the location for your downloads.
+- Choose folder location: Select the location for your downloads.
 
 **Asset View**
 - Use Grid view: Displays assets in a gallery.
@@ -160,11 +160,11 @@ The connector has a number of customizable preferences to enhance your workflow.
 
 The connector has three tabs, each with slightly different behavior: Search, Browse and Other.
 
-Each tab uses a different page provider, included with the server-side Nuxeo for Adobe CC mp package, to control behavior. The page providers can be overriden in Nuxeo Studio to reflect your own content model and needs, such as displaying more results per page.  For more information on page providers and overriding them, see https://doc.nuxeo.com/nxdoc/page-providers/
+Each tab uses a different page provider, included with the server-side Nuxeo for Adobe CC package, to control behavior. The page providers can be overridden in Nuxeo Studio to reflect your own content model and needs, such as displaying more results per page. For more information on page providers and overriding them, read the [related documentation]({{page version='' space='nxdoc' page='page-providers'}})
 
-The Search tab allows you to search through all the repository at one time. It uses a page provider 'adobe-connector-all-images' to control the objects searched and the query results.
+The Search tab allows you to search through all the repository at one time. It uses a page provider `adobe-connector-all-images` to control the objects searched and the query results.
 
-The Browse tab allows you to browse through the hierarchical setup of the repository. It uses the 'adobe-connector-browse' page provider.  While browsing, you can still use the search bar; the search content is limited to the level in the hierarchy that you are currently viewing. You have the choice between a grid view (default) and a list view. You can toggle between view options using the buttons near the search bar.
+The Browse tab allows you to browse through the hierarchical setup of the repository. It uses the `adobe-connector-browse` page provider. While browsing, you can still use the search bar; the search content is limited to the level in the hierarchy that you are currently viewing. You have the choice between a grid view (default) and a list view. You can toggle between view options using the buttons near the search bar.
 
 {{!--     ### NX_ASSET ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe Browse tab
@@ -173,7 +173,7 @@ The Browse tab allows you to browse through the hierarchical setup of the reposi
 --}}
 ![Adobe Browse tab](nx_asset://56631c62-1a5a-4e54-a683-00658ebf0b31 ?w=350,border=true)
 
-The Other tab, by default, is configured to work with the Collections within your repository.  Two separate page providers are used to surface the collections and their content: 'adobe-connector-other_primary' and 'adobe-connector-other_secondary'. It is called "other" because you could configure it to show any "other" two step pageprovider query you want such as "Favorites". 
+The Other tab, by default, is configured to work with the Collections within your repository. Two separate page providers are used to surface the collections and their content: `adobe-connector-other_primary` and `adobe-connector-other_secondary`. It is called "other" because you could configure it to show any "other" two step page provider query you want such as "Favorites".
 
 #### Search Tab
 
@@ -216,7 +216,8 @@ The browse tab is easy to use by clicking on the folders in the hierarchy. Note 
 As indicated earlier, to see more information about an object, double click into the item to see the detail view, where you can also download the file.
 
 #### Other Tab
-By default, the other tab displays the collections you have access to.  You will see the search bar here, but it is not supported within collections.
+
+By default, the other tab displays the collections you have access to. You will see the search bar here, but it is not supported within collections.
 
 #### Working in InDesign
 
