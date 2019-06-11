@@ -1294,7 +1294,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td>[Nuxeo Adobe CC Connector documentation]({{page version='' space='nxdoc' page='nuxeo-adobe-cc-connector'}})</td>
+    <td>[Nuxeo Adobe CC Connector documentation]({{page version='' space='nxdoc' page='nuxeo-for-adobe-cc'}})</td>
 </tr>
 <tr>
     <td>3D files</td>

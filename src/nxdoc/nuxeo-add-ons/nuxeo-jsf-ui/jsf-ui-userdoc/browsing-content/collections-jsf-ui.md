@@ -252,7 +252,7 @@ There are two ways to create a collection:
 
 ## Sharing a Collection
 {{! multiexcerpt name='sharing'}}
-Sharing a collection means [giving permissions]({{page page='managing-permissions'}}) to users on the collection. Collections created in the default domain in a shared workspace or folder are automatically shared to all the workspace or folder's users, following the [rights inheritance principle]({{page page='managing-permissions'}}#rights-inheritance).
+Sharing a collection means [giving permissions]({{page page='managing-permissions'}}) to users on the collection. Collections created in the default domain in a shared workspace or folder are automatically shared to all the workspace or folder's users, following the [rights inheritance principle]({{page page='permissions'}}#blocking-rights-inheritance).
 
 Collections created in your personal workspace are private by default. You must grant the needed permissions on the collection if you want to share it. Granting permissions to a collection makes the collection available to users from their Home. The list of documents displayed inside the collection depends on the permissions of the user on each of the documents.
 

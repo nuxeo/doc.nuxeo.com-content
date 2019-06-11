@@ -2,7 +2,7 @@
 title: Manage & Organize
 review:
     comment: ''
-    date: '2017-10-20'
+    date: '2019-06-11'
     status: ok
 labels:
     - DAM
@@ -69,7 +69,7 @@ Let's take a fictive creative review and approval process:
 
 1. For the Nuxeo Web UI search, Alice finds the assets she's looking for in the system, picks the shots she likes best, and shares them with the creative team to turn into ads.
 
-1. Bob's been assigned to work on the project, and he gets to work in his favorite tool, Photoshop. He can access the Nuxeo Platform from right within his Adobe Creative applications to create the ads with the [Nuxeo Adobe CC Conector]({{page version='' space='nxdoc' page='nuxeo-adobe-cc-connector'}}), and even send them for review without ever leaving his desktop.
+1. Bob's been assigned to work on the project, and he gets to work in his favorite tool, Photoshop. He can access the Nuxeo Platform from right within his Adobe Creative applications to create the ads with the [Nuxeo Adobe CC Conector]({{page version='' space='nxdoc' page='nuxeo-for-adobe-cc'}}), and even send them for review without ever leaving his desktop.
 
 1. His Art Director, Lisa, reviews and annotates content and can send it back to Bob, but once she's satisfied, she can mark it as creative approved.
 

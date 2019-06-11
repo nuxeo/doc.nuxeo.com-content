@@ -10,6 +10,7 @@ labels:
     - permissions
 tree_item_index: 400
 ---
+{{! multiexcerpt name='permissions'}}
 {{{multiexcerpt 'permissions-introduction' page='managing-permissions'}}}
 
 ## Permissions Overview
@@ -95,17 +96,14 @@ tree_item_index: 400
 </table>
 </div>
 
-For more information on how to grant and manage permissions, see the [related documentation]({{page version='' space='nxdoc' page='security'}}).
 
-## Managing Permissions on Content
-
-### Granting Permissions to the Application Users and Groups
+## Granting Permissions to the Application Users and Groups
 
 {{{multiexcerpt 'grant-permissions' page='managing-permissions'}}}
 
 ![]({{file name='add_permission_popup_web-ui.png'}} ?w=350,border=true)
 
-### Granting Permissions to External Users (Instant Share)
+## Granting Permissions to External Users (Instant Share)
 
 {{{multiexcerpt 'grant-permissions-external-users' page='managing-permissions'}}}
 
@@ -113,15 +111,31 @@ For more information on how to grant and manage permissions, see the [related do
 
 {{{multiexcerpt 'grant-permissions-external-users-notes' page='managing-permissions'}}}
 
-### Editing Permissions
+## Editing Permissions
 
 To edit a permission click on ![]({{file name='edit-icon_web-ui.png' page='icons-index'}}) next to it, from there you can modify the permission and/or the date frame.
 
-### Deleting Permissions
+## Deleting Permissions
 
 To delete a permission click on ![]({{file name='delete_web-ui.png' page='icons-index'}}) next to the permission you want to delete, click **Ok** on the confirmation popup.
 
 ![]({{file name='delete_permission_popup_web-ui.png'}} ?w=350,border=true)
+
+## Blocking Rights Inheritance
+
+The rights that are granted or denied in a space are applied to the space's content, including its sub-spaces. You thus have the same rights in the sub-spaces as in the parent space. That is called rights inheritance.
+
+You can block this inheritance. It enables you to block the access of a sub-workspace to the workspace's users, for instance, or to deeply modify the access rights in the sub-workspace.
+
+**To block rights inheritance:**
+1. Click on the **Permissions** tab of the space of which you want to the access rights. The Access Rights sub-tab is displayed.
+1. Click on the **Block** button located under the **PERMISSIONS INHERITED FROM UPPER LEVELS** table.
+
+    Now only local persmissions applied, any change made on parent document won't affect the access conditions to this document. You and the administrators will be added to local permissions.
+
+1. You can now grant access rights to specific users.
+
+{{! /multiexcerpt}}
 
 * * *
 

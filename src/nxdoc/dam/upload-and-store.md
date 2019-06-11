@@ -3,7 +3,7 @@ title: Upload & Store
 description: Discover how Nuxeo Platform let you upload and store your digital assets.
 review:
     comment: ''
-    date: '2018-01-30'
+    date: '2019-06-11'
     status: ok
 labels:
     - DAM

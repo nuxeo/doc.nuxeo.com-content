@@ -49,7 +49,7 @@ You can also give us your feedback and suggestions through our [feedback portal]
 {{#> panel type='secondary' match_height='true'}}
 ### Integrations And Connectors
 
-- [Adobe CC Connector]({{page page='nuxeo-adobe-cc-connector'}}#roadmap)
+- [Adobe CC Connector]({{page version='' space='nxdoc' page='nuxeo-for-adobe-cc'}}#roadmap)
 {{/panel}}</div>
 
 <div class="column medium-6">
