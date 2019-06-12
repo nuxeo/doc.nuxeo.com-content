@@ -456,6 +456,19 @@ As explained above, each suggested entries are JSON objects returned by an autom
 
 {{/panel}}
 
+If you want to show multipe data values the JS code of your custom formatter must produce a result that uses table HTML elements for the values to display properly:
+```HTML
+<table>
+  <tbody>
+    <tr>
+      <td>data value 1</td>
+      <td>data value 2</td>
+    </tr>
+  </tbody>
+</table>
+```
+  
+
 You can define the JS code of your custom formatters directly in the inlinejs widget property, it will be injected in the rendered HTML page. Alternatively, you can define your formatters as global JavaScript resources by contributing them to the [Theme]({{page page='theme'}}).
 
 Once you have defined a custom formatter, you can tell your widgets to use it:
