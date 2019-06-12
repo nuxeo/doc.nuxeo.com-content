@@ -20,21 +20,29 @@ tree_item_index: 710
 ---
 
 {{! excerpt}}
-The Workflow engine of the Nuxeo Platform is great tool to automate content processes. Complex routing logic can easily be configured which can lead to a very high number of possible scenarios. Adding the Automation framework and notification templating to the mix and one will quickly end up in workflow configuration hell: an exponential number of things to test. Imagine you have a workflow with 10 different steps and the last one is failing. Manually testing is definitely the painful way of doing things and will challenge one's sanity. Fortunately, with the Nuxeo Platform, there is an API for everything which means a lot can simply be automated.
+When you are implementing a long multi-step workflow, debugging the last step actually requires that you've reached it, which takes more and more time as your workflow gets longer. Time is precious and this page will provide you with tips to save it!
 {{! /excerpt}}
 
-To solve this problem, Nuxeo's Solution Engineering team built [a simple node.js tool](https://github.com/nuxeo-sandbox/nuxeo-workflow-test) that simulates the REST API calls done by the Web UI when users complete workflow tasks.
+The Workflow engine of the Nuxeo Platform is a great tool to automate content processes. Complex routing logic can easily be configured, which can lead to a very high number of possible scenarios.
+Adding the Automation framework and notification templating to the mix and one will quickly end up in workflow configuration hell: an exponential number of things to test.
 
-Scenarios are described in an JSON file which includes the following elements:
+Imagine you have a workflow with 10 different steps and the last one is failing. Manually testing is definitely the painful way of doing things and will challenge one's sanity.
+Fortunately, with the Nuxeo Platform, there is an API for everything, which means a lot can simply be automated.
+
+To solve this problem, Nuxeo's Solution Engineering team has built [a simple node.js tool](https://github.com/nuxeo-sandbox/nuxeo-workflow-test) that simulates the REST API calls done by the Web UI when users complete workflow tasks.
+
+Scenarios are described in a JSON file which includes the following elements:
 - the workflow input document
 - the workflow to start
 - an array of workflow actions to complete with the following parameters: a role, the action to simulate and the task variable values
 
-Roles are also described in an JSON file such that one scenario can be run with different sets of actual users.
+Roles are also described in a JSON file such that one scenario can be run with different sets of actual users.
 
-While this tool is not meant to replace more comprehensive test frameworks used in a real life implementation project, its very short learning curve enables Nuxeo Studio users to quickly automate workflow tests during development.
+While this tool is not meant to replace more comprehensive test frameworks used in a real-life implementation project, its very short learning curve enables Nuxeo Studio users to automate workflow tests during development quickly.
 
-The github repository contains a comprehensive [README](https://github.com/nuxeo-sandbox/nuxeo-workflow-test/blob/master/README.md) as well as two sample test scenarios for the OOTB workflows ([serial](https://github.com/nuxeo-sandbox/nuxeo-workflow-test/blob/master/config.json) and [parallel](https://github.com/nuxeo-sandbox/nuxeo-workflow-test/blob/master/config-parallel-document-review.json) document review)    
+The GitHub repository contains a comprehensive [README](https://github.com/nuxeo-sandbox/nuxeo-workflow-test/blob/master/README.md) as well as two sample test scenarios for the two default workflows:
+ - [Serial Workflow](https://github.com/nuxeo-sandbox/nuxeo-workflow-test/blob/master/config.json)
+ - [Parallel Workflow](https://github.com/nuxeo-sandbox/nuxeo-workflow-test/blob/master/config-parallel-document-review.json)
 
 * * *
 
