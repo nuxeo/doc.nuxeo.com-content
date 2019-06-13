@@ -111,10 +111,6 @@ git push
 
 ## Tips and Tricks
 
-{{#> callout type='warning' heading='Cache management with FT 10.2'}}
-As the cache management policy is strict on FT 10.2, you may have to clear you cache to visualize your changes
-{{/callout}}
-
 - A `.gitignore` file can not be added to your project
 - Make sure that you are not editing the default `nuxeo-<PROJECT-NAME>-bundle.html` file, but the `nuxeo-<PROJECT-NAME>-custom-bundle.html` to make your element imports and your slot contributions
 
