@@ -57,7 +57,7 @@ A transition is what enables a document to go from one state to another in a lif
 
 **Developer documentation about transitions in lifecycle:**
 
-*   [Repository Concepts]({{page space='nxdoc' page='repository-concepts'}})
+*   [Data Modeling]({{page space='nxdoc' page='data-modeling'}})
 
 ## Transition (Workflow)
 
