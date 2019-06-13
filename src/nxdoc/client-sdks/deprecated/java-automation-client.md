@@ -961,7 +961,7 @@ session.newRequest(UpdateDocument.ID).setInput(document).set("properties", docum
 
 ## {{> anchor 'managing-business-objects'}}Managing Business Objects
 
-It is possible to manage business objects (Plain Old Java Object client side for mapping the [Nuxeo Document Model Adapter](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters) ([Documentation]({{page page='repository-concepts#documentmodel-adapter'}})) server side).
+It is possible to manage business objects (Plain Old Java Object client side for mapping the [Nuxeo Document Model Adapter](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.DocumentAdapterService--adapters) ([Documentation]({{page page='data-modeling'}}#documentmodel-adapter) server side).
 
 Why manage business object? To manipulate business object to avoid _Nuxeo Document_ manipulation on client side:
 

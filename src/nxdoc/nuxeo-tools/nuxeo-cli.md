@@ -59,7 +59,7 @@ $ npm install -g nuxeo/nuxeo-cli
 - Enrich REST API responses using a [content enricher]({{page version='' space='nxdoc' page='content-enrichers'}}).
 - Wrap your Business logic in Document Adapter.
 - Declare your new [Nuxeo Service]({{page version='' space='nxdoc' page='runtime-and-component-model'}}).
-- Plug your logic to an existing behavior with the event bus using an [Event Listener]({{page version='' space='nxdoc' page='events-and-listeners'}}).
+- Plug your logic to an existing behavior with the event bus using an [Event Listener]({{page version='' space='nxdoc' page='events-and-messages'}}).
 - Bootstrap old-fashioned JSF objects like Seam-based UI action or bare Seam bean.
 - Interact with your Nuxeo Studio's project
 
@@ -209,7 +209,7 @@ $ nuxeo bootstrap operation
 
 #### Event Bus Listener
 
-Adds a [listener]({{page version='' space='nxdoc' page='events-and-listeners'}}) with its test class. The events will be asked during the generation process. Both existing and custom events can be declared. You can create any listener type: pre-commit, post-commit, synchronous and asynchronous.
+Adds a [listener]({{page version='' space='nxdoc' page='events-and-messages'}}) with its test class. The events will be asked during the generation process. Both existing and custom events can be declared. You can create any listener type: pre-commit, post-commit, synchronous and asynchronous.
 
 ```bash
 $ nuxeo bootstrap listener

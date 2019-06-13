@@ -33,7 +33,7 @@ confluence:
   shortlink: U4aN
   shortlink_source: 'https://doc.nuxeo.com/x/U4aN'
   source_link: /display/NXDOC/How+to+Customize+Email+Templates
-tree_item_index: 1000
+tree_item_index: 1200
 history:
   - author: Solen Guitter
     date: '2015-12-08 10:11'

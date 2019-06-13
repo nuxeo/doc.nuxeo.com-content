@@ -211,8 +211,7 @@ db.default.update(
 {{#> panel heading='Related Documentation'}}
 
 - [Schemas in Nuxeo Studio]({{page space='studio' page='schemas'}})
-- [Repository Concepts]({{page page='repository-concepts'}})
-- [Document Type How-To Index]({{page page='document-type-how-to-index'}})
+- [Data Modeling]({{page page='data-modeling'}})
 
 {{/panel}}</div><div class="column medium-6">
 

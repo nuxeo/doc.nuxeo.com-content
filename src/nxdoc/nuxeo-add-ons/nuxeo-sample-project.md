@@ -36,7 +36,7 @@ Related files:
 
 ### Asynchronous Listener
 
-[Documentation page]({{page page='events-and-listeners'}})
+[Documentation page]({{page page='events-and-messages'}})
 
 Related files:
 
@@ -48,7 +48,7 @@ Related files:
 
 ### Synchronous Listener
 
-[Documentation page]({{page page='events-and-listeners'}})
+[Documentation page]({{page page='events-and-messages'}})
 
 Related files:
 

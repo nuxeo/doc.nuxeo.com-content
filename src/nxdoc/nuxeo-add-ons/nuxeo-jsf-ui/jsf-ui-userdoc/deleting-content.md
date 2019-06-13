@@ -187,7 +187,7 @@ Users with "Manage everything" permissions can access the workspace's **Trash** 
 <div class="column medium-6">
 {{#> panel heading='Related Documentation'}}
 
-- [Deleting documents in developer documentation]({{page space='nxdoc' page='deleting-documents'}})
+- [Trash Service]({{page space='nxdoc' page='trash-service'}})
 
 {{/panel}}
 </div>

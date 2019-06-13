@@ -422,7 +422,7 @@ To change the lifecycle state of a document, you need to submit it to a [workflo
 
 {{#> callout type='warning' heading='Trash behavior deprecation'}}
 
-Since 10.2, trash management is handled by `ecm:isTrashed` property and related [APIs]({{page page='deleting-documents'}}#putting-the-document-in-the-trash).
+Since 10.2, trash management is handled by `ecm:isTrashed` property and related [APIs]({{page page='trash-service'}}).
 
 Changing the lifecycle state to `deleted` won't contribute to trash feature in future Nuxeo version.
 

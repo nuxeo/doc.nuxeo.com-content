@@ -107,7 +107,7 @@ Nuxeo allows you to bulk edit any document property by either building a custom 
 
 With the proper [permissions]({{page version='' space='userdoc' page='permissions'}}), it is possible to delete a document unitary or several documents (from a folder view or a query). The deletion can be triggered by any other Nuxeo interface such as the REST API, CMIS or any [Nuxeo SDK Client]({{page version='' space='nxdoc' page='client-sdks'}}).
 
-As described in [Deleting Documents]({{page version='' space='nxdoc' page='deleting-documents'}}) page, documents are first moved to the trash before being permanently deleted. The Nuxeo Platform removes the personal information references from the binary storage as well as from within the database.
+As described in [Trash Service]({{page version='' space='nxdoc' page='trash-service'}}) page, documents are first moved to the trash before being permanently deleted. The Nuxeo Platform removes the personal information references from the binary storage as well as from within the database.
 
 {{#> callout type='info' }}
 Some personal information may be stored within the indexes. Cleaning the indexes requires specific ElasticSearch operations.

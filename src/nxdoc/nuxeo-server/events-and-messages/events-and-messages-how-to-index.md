@@ -20,7 +20,7 @@ confluence:
     shortlink: Dwk5AQ
     shortlink_source: 'https://doc.nuxeo.com/x/Dwk5AQ'
     source_link: /display/NXDOC/Event+and+Listener+How+To+Index
-tree_item_index: 300
+tree_item_index: 1100
 history:
     -
         author: Solen Guitter

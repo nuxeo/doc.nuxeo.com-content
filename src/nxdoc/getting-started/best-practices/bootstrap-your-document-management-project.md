@@ -251,7 +251,7 @@ For metadata, we can split them among the following categories:
 Note that it is possible to extract some of the metadata automatically from a file using the [binary-metadata]({{page page='binary-metadata'}}) module.
 
 {{#> callout type='info' heading='Related Documentation'}}
-- [Repository Concepts]({{page page='repository-concepts'}})
+- [Data Modeling]({{page page='data-modeling'}})
 - [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
 - [Several Document Types vs One Document Type with a Nature Metadata]({{page page='several-document-types-vs-one-document-type-with-a-nature-metadata'}})
 {{/callout}}

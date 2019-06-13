@@ -566,6 +566,6 @@ See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribut
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}})
-- [Events and Listeners]({{page page='events-and-listeners'}})
+- [Events and Messages]({{page page='events-and-messages'}})
 
 {{/panel}}</div></div>

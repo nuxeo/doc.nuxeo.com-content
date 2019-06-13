@@ -8,7 +8,7 @@ labels:
   - bulk
   - bulk-component
 toc: true
-tree_item_index: 1500
+tree_item_index: 500
 ---
 
 {{! excerpt}}
