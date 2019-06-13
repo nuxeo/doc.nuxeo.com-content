@@ -454,8 +454,11 @@ The GitHub Authentication Plugin provides a means of using GitHub for authentica
 This plugin allows slaves to be dynamically provisioned using [Docker](http://www.docker.io/).</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">[Docker build step plugin](https://wiki.jenkins-ci.org/display/JENKINS/Docker+build+step+plugin)
 This plugin allows to add various [Docker](https://www.docker.com/) commands into your job as a build step</td></tr><tr><td colspan="1">&nbsp;</td><td colspan="1">[CloudBees Pull Request Builder for GitHub](https://release-notes.cloudbees.com/product/CloudBees+Pull+Request+Builder+for+GitHub)
 Automatically build GitHub pull requests</td></tr><tr><td colspan="1">Required</td><td colspan="1">[CloudBees Quiet Start Plugin](https://release-notes.cloudbees.com/product/CloudBees+Quiet+Start+Plugin)
-Allows you to request that Jenkins be in the &ldquo;quieting down&rdquo; state after a restart.</td></tr><tr><td colspan="1">Required</td><td colspan="1">[Role Based Access Control Plugin (RBAC)](https://release-notes.cloudbees.com/product/Role+Based+Access+Control+Plugin)
-CloudBees Jenkins Enterprise plugin that provides an authorization strategy that provides for role-based access control.</td></tr></tbody></table></div>
+Allows you to request that Jenkins be in the &ldquo;quieting down&rdquo; state after a restart.</td></tr>
+<tr><td colspan="1">Required</td><td colspan="1">[Role Based Access Control Plugin (RBAC)](https://release-notes.cloudbees.com/product/Role+Based+Access+Control+Plugin)
+CloudBees Jenkins Enterprise plugin that provides an authorization strategy that provides for role-based access control.</td></tr>
+<tr><td colspan="1"></td><td colspan="1">[Convert To Pipeline](https://plugins.jenkins.io/convert-to-pipeline) converts jobs to scripted Pipeline jobs.</td></tr>
+</tbody></table></div>
 
 &nbsp;
 
