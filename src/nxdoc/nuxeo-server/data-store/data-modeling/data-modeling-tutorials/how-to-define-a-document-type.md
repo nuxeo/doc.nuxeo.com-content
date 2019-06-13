@@ -450,7 +450,7 @@ If you need to a create a document type layout for JSF UI, then you have to use 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Documents in Nuxeo Studio]({{page space='studio' page='documents'}})
-- [Content Repository]({{page page='content-repository'}})
+- [Data Modeling]({{page page='data-modeling'}})
 - [Available Facets]({{page page='available-facets'}})
 - [Lifecycle]({{page space='studio' page='life-cycle'}})
 - [Schemas]({{page space='studio' page='schemas'}})

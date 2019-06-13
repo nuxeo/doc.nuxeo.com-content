@@ -135,7 +135,7 @@ The **id** is used for informational purposes and programmatic unregistration.
 
 If the **username** is missing, the event is executed as a system user, otherwise as that user. No password is needed: the login is done internally.
 
-The **event** specifies the event to execute. See [the section about Events and Listeners]({{page page='events-and-listeners'}}) for more.
+The **event** specifies the event to execute. See [the page about Events and Messages]({{page page='events-and-messages'}}) for more.
 
 The **eventCategory** is also used to specify the event, but usually it can be skipped.
 
@@ -236,7 +236,7 @@ In the **Event Handler Activation**, update the **Current document is** filter v
 
 ## Automation
 
-When using the Scheduler Service to trigger [Automation Chains]({{page page='content-automation-concepts'}}) through [Event Listener]({{page page='events-and-listeners'}}) and [Event Handler]({{page space='studio' page='event-handlers'}}), the Core Session cannot be retrieved and cannot be set within the Operation Context _(Core Session is not found)_.
+When using the Scheduler Service to trigger [Automation Chains]({{page page='content-automation-concepts'}}) through [Event Listener]({{page page='events-and-messages'}}) and [Event Handler]({{page space='studio' page='event-handlers'}}), the Core Session cannot be retrieved and cannot be set within the Operation Context _(Core Session is not found)_.
 
 If the need is to execute operations needing an operation context session, the first operation of the chain should be [LoginAs Operation](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Auth.LoginAs). It will create a new authenticated session and set the Automation context session accordingly.
 

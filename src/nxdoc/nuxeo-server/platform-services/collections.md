@@ -264,7 +264,7 @@ By default, documents of type `Collection`, `WorkspaceRoot`, `TemplateRoot`, `Se
 
 ### Plugging Business Rules to Collection Specific Events
 
-Several [events]({{page page='events-and-listeners'}}) related to collections are available:
+Several [events]({{page page='events-and-messages'}}) related to collections are available:
 
 - `beforeAddedToCollection`
 - `addedToCollection`

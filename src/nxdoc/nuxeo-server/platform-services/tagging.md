@@ -196,7 +196,7 @@ Both `Tag` and `Tagging` documents managed by the tag service are _unfiled_, whi
 
 - [Publisher]({{page page='publisher'}})
 - [Versioning]({{page page='versioning'}})
-- [Events and Listeners]({{page page='events-and-listeners'}})
+- [Events and Messages]({{page page='events-and-messages'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
 

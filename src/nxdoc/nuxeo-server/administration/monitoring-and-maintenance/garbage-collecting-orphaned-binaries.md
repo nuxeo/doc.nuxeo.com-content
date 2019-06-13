@@ -61,7 +61,7 @@ history:
 ---
 
 {{! excerpt}}
-The binary files attached to documents are not stored in the database but using a specialized binary store (typically filesystem-based or S3), and are not removed like documents (see [Deleting Documents]({{page page='deleting-documents'}})).
+The binary files attached to documents are not stored in the database but using a specialized binary store (typically filesystem-based or S3), and are not removed like documents (see [Trash Service]({{page page='trash-service'}})).
 {{! /excerpt}}
 
 Binary files are not immediately deleted when their containing document is deleted because the binary store uses a de-duplication strategy which means that the same binary file may be referenced by several documents. To avoid complex locking or reference counting strategies, they are simply garbage-collected when there remains no reference to them (they are orphaned).
@@ -87,7 +87,7 @@ if (!docBlobManager.isBinariesGarbageCollectionInProgress()) {
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Deleting Content]({{page space='userdoc' page='content-delete'}}) (User documentation)
-- [Deleting Documents]({{page page='deleting-documents'}})
+- [Trash Service]({{page page='trash-service'}})
 - [How to use Trash Feature]({{page page='how-to-use-trash-feature'}})
 
 {{/panel}}</div><div class="column medium-6">

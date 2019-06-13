@@ -435,7 +435,7 @@ We will now update the contract to add some custom clauses.
 
 {{#> callout type='info' heading='Learn more'}}
 
-- [Repository Concepts]({{page space='nxdoc60' page='repository-concepts'}})
+- [Data Modeling]({{page space='nxdoc' page='data-modeling'}})
 
 {{/callout}}
 
@@ -531,7 +531,7 @@ Restore the contract from trash.
 {{#> callout type='info' heading='Learn more'}}
 
 - [How to use Trash Feature]({{page page='how-to-use-trash-feature'}})
-- [Repository Concept Lifecycle]({{page page='repository-concepts'}})
+- [Data Modeling]({{page page='data-modeling'}})
 
 {{/callout}}
 

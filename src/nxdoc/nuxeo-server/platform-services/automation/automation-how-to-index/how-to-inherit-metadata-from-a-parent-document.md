@@ -239,7 +239,7 @@ To complete this how-to, you need the elements below to be already configured in
 
 - [Automation In Nuxeo Studio]({{page space='studio' page='automation'}})
 - [Content Automation Concepts]({{page page='content-automation-concepts'}})
-- [Events and Listeners in developer documentation]({{page page='events-and-listeners'}})
+- [Events and Messages]({{page page='events-and-messages'}})
 - [Event Handlers in Studio]({{page space='studio' page='event-handlers'}})
 
 {{/panel}}</div></div>

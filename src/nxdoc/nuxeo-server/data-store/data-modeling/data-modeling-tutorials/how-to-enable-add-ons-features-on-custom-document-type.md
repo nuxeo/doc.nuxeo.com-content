@@ -143,7 +143,7 @@ To know how to apply features provided by the Nuxeo Marketplace add-ons on your 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Collections]({{page version='' space='userdoc' page='collections-web-ui'}})
-- [Documents Type]({{page page='content-repository'}})
+- [Data Modeling]({{page page='data-modeling'}})
 - [Nuxeo CVS in User Documentation]({{page page='nuxeo-csv'}})
 - [Nuxeo Marketplace](http://marketplace.nuxeo.com/)
 - [Nuxeo Quota]({{page page='nuxeo-quota'}})

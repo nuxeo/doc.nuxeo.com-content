@@ -23,7 +23,7 @@ confluence:
     shortlink: _YEPAQ
     shortlink_source: 'https://doc.nuxeo.com/x/_YEPAQ'
     source_link: /display/NXDOC/Work+and+WorkManager
-tree_item_index: 1100
+tree_item_index: 400
 history:
     -
         author: Antoine Taillefer
