@@ -114,14 +114,12 @@ history:
         date: '2010-12-28 17:44'
         message: ''
         version: '1'
-
 ---
+
 The tags are either categorizing the content of the document (labels like `document_management`, `ECM`, `complex_Web_application`, etc., can be thought as tags for Nuxeo), or they reflect the user feeling (`great`, `user_friendly`, `versatile`, etc.).
 
 {{! excerpt}}
-
 The tag service uses a [facet]({{page page='available-facets'}}) to represent tags as a document property.
-
 {{! /excerpt}}
 
 A tagging action is a link between a given document and a tag, and belongs to a given user.
@@ -133,18 +131,16 @@ A tag holds a label that does not contain any:
 - quote
 
 {{#> callout type='info' }}
-
-Since 10.3, if using the service based on the `NXTag` facet, it is possible to use these characters except the percent when creating tags. 
+Since 10.3, if using the service based on the `NXTag` facet, it is possible to use these characters except the percent when creating tags.
 This can be enabled or disabled with the following configuration property: `nuxeo.tag.sanitization.enabled`.
 By default they are not usable (`nuxeo.tag.sanitization.enabled=true`).
-
 {{/callout}}
 
 Characters will be removed by service.
 
 ## Functional Overview
 
-{{{multiexcerpt 'functional-overview' page='USERDOC:Tags'}}}
+{{{multiexcerpt 'functional-overview' space='userdoc' page='tags'}}}
 
 ## Tag Service Features
 
@@ -152,17 +148,17 @@ The tag service is accessed through the  [`TagService`](http://community.nuxeo.c
 
 The tag service allows you to:
 
-*   Tag and untag a document
-*   Get all the tags for a document
-*   Get all the documents for a tag
-*   Get suggested tags for a given tag prefix
+- Tag and untag a document
+- Get all the tags for a document
+- Get all the documents for a tag
+- Get suggested tags for a given tag prefix
 
 ## Tags, Versions and Proxies
 
 The tags are duplicated:
 
-*   From the live document when creating a version
-*   From a version when creating a proxy
+- From the live document when creating a version
+- From a version when creating a proxy
 
 When restoring a version, the tags on the live document are also restored from the ones on the version.
 
@@ -182,9 +178,9 @@ To disable the duplication of tags on versions and proxies, the `TaggedVersionLi
 ```
 ## Tag Service Architecture
 
- {{#> callout type='warning' }}
- Since 9.3, the tag service uses the `NXTag` facet. The following paragraph describes the previous tag service architecture that is deprecated since 9.3.
- {{/callout}}
+{{#> callout type='warning' }}
+Since 9.3, the tag service uses the `NXTag` facet. The following paragraph describes the previous tag service architecture that is deprecated since 9.3.
+{{/callout}}
 
 The following document types are defined by the tag service.
 
@@ -205,6 +201,6 @@ Both `Tag` and `Tagging` documents managed by the tag service are _unfiled_, whi
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in other documentation'}}
 
 - [Tags]({{page space='userdoc' page='tags'}})
-- [Publishing Content]({{page space='userdoc' page='publishing-content'}})
+- [Publishing Content]({{page space='userdoc' page='share'}}#publishing-content)
 
 {{/panel}}</div></div>
