@@ -82,10 +82,10 @@ Initially, you will need to create a server listing for your Nuxeo Instance. Onc
 To create your server listing:
 1. Fill in the field **New Server Name** with a "friendly value" to represent your Nuxeo instance.
 1. Fill in the field **New Server URL** with the address of your Nuxeo instance (this is the same URL you would use to access your Nuxeo instance via the web. Be sure to include the `http/https` value and leave off any `/nuxeo` that might be included).
-  {{!--     ### NX_ASSET ###
-      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe Add server to list
-      name: image16.png
-      addins#popup#up_to_date
+  {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo for Adobe CC /Adobe Add server to list
+    name: image16.png
+    addins#popup#up_to_date
   --}}
   ![Adobe Add server to list](nx_asset://daff5596-bd62-41af-93e7-14753d921e31 ?w=200,border=true)
 1. Click **Add Server to List** button. You should now see this value in your “Server List”
@@ -162,19 +162,6 @@ The connector has three tabs, each with slightly different behavior: Search, Bro
 
 Each tab uses a different page provider, included with the server-side Nuxeo for Adobe CC package, to control behavior. The page providers can be overridden in Nuxeo Studio to reflect your own content model and needs, such as displaying more results per page. For more information on page providers and overriding them, read the [related documentation]({{page version='' space='nxdoc' page='page-providers'}})
 
-The Search tab allows you to search through all the repository at one time. It uses a page provider `adobe-connector-all-images` to control the objects searched and the query results.
-
-The Browse tab allows you to browse through the hierarchical setup of the repository. It uses the `adobe-connector-browse` page provider. While browsing, you can still use the search bar; the search content is limited to the level in the hierarchy that you are currently viewing. You have the choice between a grid view (default) and a list view. You can toggle between view options using the buttons near the search bar.
-
-{{!--     ### NX_ASSET ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe Browse tab
-    name: image14.png
-    addins#popup#up_to_date
---}}
-![Adobe Browse tab](nx_asset://56631c62-1a5a-4e54-a683-00658ebf0b31 ?w=350,border=true)
-
-The Other tab, by default, is configured to work with the Collections within your repository. Two separate page providers are used to surface the collections and their content: `adobe-connector-other_primary` and `adobe-connector-other_secondary`. It is called "other" because you could configure it to show any "other" two step page provider query you want such as "Favorites".
-
 #### Search Tab
 
 By default, when logging into the repository via the connector, the first view you see is the search tab.
@@ -186,6 +173,8 @@ The search bar supports wildcard operations, as in the example, and search the f
     addins#popup#up_to_date
 --}}
 ![Adobe Search Tab](nx_asset://f0901da6-6aca-488f-b243-2a4fb3dcfc4d ?w=250,border=true)
+
+The Search tab allows you to search through all the repository at one time. It uses a page provider `adobe-connector-all-images` to control the objects searched and the query results.
 
 Once you’ve entered your search terms in the Search field, clicking on the search icon lists the results below.
 
@@ -211,13 +200,32 @@ To download a copy of an asset from Nuxeo CC Connector, click the blue download 
 
 #### Browse Tab
 
+{{!--     ### NX_ASSET ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Nuxeo for Adobe CC /Adobe Browse tab
+    name: image14.png
+    addins#popup#up_to_date
+--}}
+![Adobe Browse tab](nx_asset://56631c62-1a5a-4e54-a683-00658ebf0b31 ?w=350,border=true)
+
+The Browse tab allows you to browse through the hierarchical setup of the repository. It uses the `adobe-connector-browse` page provider. While browsing, you can still use the search bar; the search content is limited to the level in the hierarchy that you are currently viewing. You have the choice between a grid view (default) and a list view. You can toggle between view options using the buttons near the search bar.
+
 The browse tab is easy to use by clicking on the folders in the hierarchy. Note that as you click through the repository, a breadcrumb is generated just above the content view, which allows you to easily go back to any point within your path. Simply click on one of the levels to change location. If your path becomes too long to fit the panel, a slider appears to allow you to move “up” or “down” the path.
 
 As indicated earlier, to see more information about an object, double click into the item to see the detail view, where you can also download the file.
 
 #### Other Tab
 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo for Adobe CC /Adobe Other tab
+    name: Screen Shot 2019-06-13 at 1.38.03 PM.png
+    addins#popup#up_to_date
+--}}
+![Adobe Other tab](nx_asset://a11de8e1-2171-43ca-a63c-e3b55581b293 ?w=350,border=true)
+
 By default, the other tab displays the collections you have access to. You will see the search bar here, but it is not supported within collections.
+
+The Other tab, by default, is configured to work with the Collections within your repository. Two separate page providers are used to surface the collections and their content: `adobe-connector-other_primary` and `adobe-connector-other_secondary`. It is called "other" because you could configure it to show any "other" two step page provider query you want such as "Favorites".
+
 
 #### Working in InDesign
 
