@@ -30,7 +30,7 @@ The [Nuxeo for Adobe CC](https://connect.nuxeo.com/nuxeo/site/marketplace/packag
 
 ## Requirements
 
-Nuxeo for Adobe CC is compliant with Adobe CC 2018 and 2019 and requires Nuxeo Platform 9.10 or newer.
+Nuxeo for Adobe CC is compliant with Adobe CC 2018 and 2019 and requires Nuxeo Platform 9.10 or newer, along with the Nuxeo for Adobe CC marketplace package installed on your Nuxeo instance. Please aslo be sure your Nuxeo instance has the Dam Add-on installed and, ideally, the Dam external template has been included in your studio package (template should not be required, however).
 
 ## Support
 
@@ -108,6 +108,10 @@ To login:
 ![Adobe login connector](nx_asset://60bb96ca-75a3-4dc4-92d4-0e1a5cdf90bf ?w=350,border=true)
 
 You should now see the connector populated with images that reside in your Nuxeo Instance.
+
+If, however, you see something like this, then contact your Nuxeo Admin to confirm the Nuxeo for Adobe CC marketplace package is installed.
+
+
 
 To logout, simply select **Log Out** from the Nuxeo Connector fly out menu.
 
