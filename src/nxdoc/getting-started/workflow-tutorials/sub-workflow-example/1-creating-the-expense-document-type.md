@@ -99,7 +99,7 @@ next_link: /nxdoc/2-creating-the-subworkflows
 ---
 
 {{#> callout type='info' }}
-This document is part of the [Sub Workflow Example]({{page page='sub-workflow-example'}}) project series.
+This document is part of the [Sub-Workflow Example]({{page page='sub-workflow-example'}}) project series.
 {{/callout}}
 
 ## What Will We Do in This Step?
@@ -128,13 +128,13 @@ Alright; now that we know where we are heading to, we can look further.
 
 Before creating the document type, we will create the vocabulary so that we have all necessary elements to complete it afterwards.
 
-1.  In Nuxeo studio, go to **Vocabularies** and click on the **New** button.
-2.  Name your vocabulary: `expenseType`.
-3.  Leave the default vocabulary type, a simple vocabulary is exactly what we need.
-4.  Add the following entries into the vocabulary (leave the default values for elements not indicated in the table):
+1. In Nuxeo studio, go to **Vocabularies** and click on the **New** button.
+2. Name your vocabulary: `expenseType`.
+3. Leave the default vocabulary type, a simple vocabulary is exactly what we need.
+4. Add the following entries into the vocabulary (leave the default values for elements not indicated in the table):
 
     <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Id</th><th colspan="1">Label</th></tr><tr><td colspan="1">Hotel</td><td colspan="1">Hotel</td></tr><tr><td colspan="1">Transportation</td><td colspan="1">Transportation</td></tr><tr><td colspan="1">Misc</td><td colspan="1">Misc</td></tr></tbody></table></div>
-5.  Save your vocabulary.
+5. Save your vocabulary.
     You can take a look at the expected result below:
     {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/1- Creating the Expense Document Type/expense-type-vocabulary.png
@@ -147,12 +147,12 @@ Before creating the document type, we will create the vocabulary so that we have
 
 On to the document type creation.
 
-1.  In Nuxeo Studio, go to **Content Model**&nbsp;> **Document Types**, and click on the **New** button.
-2.  Fill in the fields:
+1. In Nuxeo Studio, go to **Content Model**&nbsp;> **Document Types**, and click on the **New** button.
+2. Fill in the fields:
+    - **Feature ID**: Expense
+    - **Extends**: Choose "Nothing"
+    - **Label**: Expense
 
-    *   **Feature ID**: Expense
-    *   **Extends**: Choose "Nothing"
-    *   **Label**: Expense
 3.  Click on the **Ok** button.
 
 ## Defining the Document Type
