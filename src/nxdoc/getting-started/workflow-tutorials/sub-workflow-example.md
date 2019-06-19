@@ -1,17 +1,18 @@
 ---
-title: Sub Workflow Example
+title: Sub-Workflow Example
 review:
     comment: ''
-    date: '2017-01-24'
+    date: '2019-06-218'
     status: ok
 labels:
     - lts2016-ok
     - workflow
     - grenard
-    - subworkflow
+    - sub-workflow
     - sub-workflow
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
+    - lts2019-ok
 confluence:
     ajs-parent-page-id: '19235786'
     ajs-parent-page-title: Workflow Use Cases
@@ -110,42 +111,34 @@ history:
         date: '2013-08-07 16:49'
         message: ''
         version: '1'
-
 ---
-## A Quick Note About The Subworkflow Concept
+
+## A Quick Note About The Sub-workflow Concept
 
 {{! excerpt}}
-
-The subworkflow functionality is the ability to call a workflow from another workflow (creating inception-like workflows), and to pass it variables along the way. The main workflow is suspended while the subworkflow runs, and resumes when the subworkflow ends.
-
-This functionality is a great asset as it allows you to reuse your workflows and imagine powerful combinations. The best point is that you can dynamically choose the subworkflow that should be called using an [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}).
-
+The sub-workflow functionality is the ability to call a workflow from another workflow (creating inception-like workflows), and to pass it variables along the way. The main workflow is suspended while the sub-workflow runs, and resumes when the sub-workflow ends.
 {{! /excerpt}}
+
+This functionality is a great asset as it allows you to reuse your workflows and imagine powerful combinations. The best point is that you can dynamically choose the sub-workflow that should be called using an [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}).
 
 ## Use Case
 
 The company SuperTech wants to implement an expense report validation workflow, with the following rules:
 
-*   Users should be able to fill in their expenses and attach the corresponding receipt.
-*   Each expense should be validated separately.
-*   Expense type can be chosen from a list (transportation, hotel or misc).
-*   Expenses of 100 dollars or more have to be validated by the accounting service and the general manager, only by the accounting service if less.
-*   If the document is validated, set its status to approved.
-*   If the document is rejected, end the workflow.
-
-{{#> callout type='info' }}
-
-Please note that this tutorial will mainly focus on explaining new workflow functionalities appeared with Nuxeo 5.7.2\. If you are using an older version of Nuxeo platform and / or if you wish to learn more about workflow basics, you may have a look at the [simple workflow example]({{page page='simple-workflow-example'}}).
-
-{{/callout}}
+- Users should be able to fill in their expenses and attach the corresponding receipt.
+- Each expense should be validated separately.
+- Expense type can be chosen from a list (transportation, hotel or misc).
+- Expenses of 100 dollars or more have to be validated by the accounting service and the general manager, only by the accounting service if less.
+- If the document is validated, set its status to approved.
+- If the document is rejected, end the workflow.
 
 ### How Will We Achieve This?
 
-Easy! We will take advantage of the subworkflow functionality introduced in Nuxeo 5.7.2.
+Easy! We will take advantage of the sub-workflow functionality introduced in Nuxeo 5.7.2.
 
-*   The user will call a workflow.
-*   Depending on the document values, we will call a subworkflow with the corresponding steps.
-*   The subworkflows will be made generic so that they can also be used in another context.
+- The user will call a workflow.
+- Depending on the document values, we will call a sub-workflow with the corresponding steps.
+- The sub-workflows will be made generic so that they can also be used in another context.
 
 ### How Are We Going To Create It?
 

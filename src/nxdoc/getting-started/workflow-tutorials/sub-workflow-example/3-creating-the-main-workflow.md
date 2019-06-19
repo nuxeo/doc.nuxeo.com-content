@@ -2,7 +2,7 @@
 title: 3- Creating the Main Workflow
 review:
     comment: ''
-    date: '2018-06-27'
+    date: '2019-06-19'
     status: ok
 labels:
     - lts2016-ok
@@ -11,6 +11,7 @@ labels:
     - subworkflow
     - sub-workflow
     - lts2017-ok
+    - lts2019-ok
 toc: true
 confluence:
     ajs-parent-page-id: '14257562'
@@ -98,21 +99,21 @@ This document is part of the [Sub Workflow Example]({{page page='sub-workflow-ex
 
 ## What Will We Do In this Step?
 
-We will create the main workflow that will call a subworkflow depending on the document's metadata, and pass it variables along the way.
+We will create the main workflow that will call a sub-workflow depending on the document's metadata, and pass it variables along the way.
 
 ## Creating the Workflow
 
 1.  In Nuxeo Studio, go to **Workflow** > **Process definitions** and click on the **New** button.
-2.  Fill in the fields:
+1.  Fill in the fields:
 
     - **Feature ID**: `expenseValidation`
     - **Label**: Expense validation
     - **(Optional) Description**: Request your expense validation.
-3.  Click on the **Ok** button.
+1.  Click on the **Ok** button.
 
 ### Activation Tab
 
-This workflow will be a wrapper for the subworkflows. So contrarily to the previous ones we created, it should be visible to the users.
+This workflow will be a wrapper for the sub-workflows. So contrarily to the previous ones we created, it should be visible to the users.
 
 1.  In the "Current user has one of the permissions" list, choose **Edit**.
 2.  In the "Current document has one of the types" list, choose **Expense**.
