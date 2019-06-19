@@ -345,9 +345,9 @@ Nuxeo CC Connector has two parts: an extension to provide the panel and a plug-i
 /Library/Application Support/Adobe/CEP/extensions/NuxeoCCConnector.
 ```
 
-- Remove the plug-in folder:
+- Remove the plug-in folder (if used with InDesign, follow the path for the specific CC version):
 ```
-/Applications/Adobe InDesign CC 2018/Plug-Ins/SiliconConnectorNuxeo.
+/Applications/Adobe InDesign CC 201x/Plug-Ins/SiliconConnectorNuxeo.
 ```
 
 ### On Windows
@@ -357,9 +357,9 @@ You can use the Windows Control Panel to uninstall Nuxeo for Adobe CC like you w
 C:\Program Files (x86)\Common Files\Adobe\CEP\extensions/NuxeoCCConnector.
 ```
 
-- Remove the plug-in folder:
+- Remove the plug-in folder (if used with InDesign, follow the path for the specific CC version):
 ```
-C:\Program Files\Adobe\Adobe InDesign CC 2018\Plug-Ins\SiliconConnectorNuxeo.
+C:\Program Files\Adobe\Adobe InDesign CC 201x\Plug-Ins\SiliconConnectorNuxeo.
 ```
 
 ## Network Considerations (for Nuxeo Administrators)
