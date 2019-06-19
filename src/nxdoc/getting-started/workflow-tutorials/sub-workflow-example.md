@@ -2,7 +2,7 @@
 title: Sub-Workflow Example
 review:
     comment: ''
-    date: '2019-06-218'
+    date: '2019-06-18'
     status: ok
 labels:
     - lts2016-ok
