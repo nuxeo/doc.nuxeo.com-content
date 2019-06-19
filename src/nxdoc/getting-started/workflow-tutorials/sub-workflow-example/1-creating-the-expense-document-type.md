@@ -2,7 +2,7 @@
 title: 1- Creating the Expense Document Type
 review:
     comment: ''
-    date: '2017-01-24'
+    date: '2019-06-18'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,8 @@ labels:
     - grenard
     - subworkflow
     - sub-workflow
-    - content-review-lts2017
+    - lts2017-ok
+    - lts2019-ok
 toc: true
 confluence:
     ajs-parent-page-id: '14257562'
@@ -95,12 +96,10 @@ history:
         message: ''
         version: '1'
 next_link: /nxdoc/2-creating-the-subworkflows
-
 ---
+
 {{#> callout type='info' }}
-
 This document is part of the [Sub Workflow Example]({{page page='sub-workflow-example'}}) project series.
-
 {{/callout}}
 
 ## What Will We Do in This Step?
@@ -111,17 +110,17 @@ We will create the document type on which the workflow will be launched.
 
 Before starting the document type creation, we will take a little time to review what is expected from us at this step:
 
-*   Users should be able to fill in their expenses and attach the corresponding receipt.
-    => This means we need to create a document type that will allow us to attach a binary file. The file will be a mandatory field.
+- Users should be able to fill in their expenses and attach the corresponding receipt.</br>
+  => This means we need to create a document type that will allow us to attach a binary file. The file will be a mandatory field.
 
-*   Each expense should be validated separately.
-    => No more than one binary file at a time then.
+- Each expense should be validated separately.</br>
+  => No more than one binary file at a time then.
 
-*   Expense type can be chosen from a list (transportation, hotel or misc).
-    => We will need to create a [vocabulary]({{page space='studio' page='vocabularies'}}).
+- Expense type can be chosen from a list (transportation, hotel or misc).</br>
+  => We will need to create a [vocabulary]({{page space='studio' page='vocabularies'}}).
 
-*   Expenses worth 100 dollars or more and/or belonging to the misc type have to be validated by the accounting service and the general manager, otherwise only by the accounting service.
-    => The user will have to fill the amount; amount and expense type should be mandatory fields.
+- Expenses worth 100 dollars or more and/or belonging to the misc type have to be validated by the accounting service and the general manager, otherwise only by the accounting service.</br>
+  => The user will have to fill the amount; amount and expense type should be mandatory fields.
 
 Alright; now that we know where we are heading to, we can look further.
 
@@ -137,7 +136,12 @@ Before creating the document type, we will create the vocabulary so that we have
     <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Id</th><th colspan="1">Label</th></tr><tr><td colspan="1">Hotel</td><td colspan="1">Hotel</td></tr><tr><td colspan="1">Transportation</td><td colspan="1">Transportation</td></tr><tr><td colspan="1">Misc</td><td colspan="1">Misc</td></tr></tbody></table></div>
 5.  Save your vocabulary.
     You can take a look at the expected result below:
-    ![]({{file name='expense-type-vocabulary.png'}} ?w=650,border=true)
+    {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/1- Creating the Expense Document Type/expense-type-vocabulary.png
+    name: expense-type-vocabulary.png
+    studio_modeler#screenshot#up_to_date
+    --}}
+    ![expense-type-vocabulary.png](nx_asset://9814e247-f5ac-43f1-9138-f2d983db805b ?w=650,border=true)
 
 ## Creating the Expense Document Type
 
@@ -161,7 +165,12 @@ Now that the document type is created, we have to define its specificities.
 2.  (Optional) You may add icons if you like to, your document type will be nicer that way.
 3.  Save your modifications.
     Look at the result below:
-    ![]({{file name='expense-definition-tab.png'}} ?w=650,border=true)
+    {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/1- Creating the Expense Document Type/expense-definition-tab.png
+    name: expense-definition-tab.png
+    studio_modeler#screenshot#up_to_date
+    --}}
+    ![expense-definition-tab.png](nx_asset://c5a93f35-1be4-4288-9bc8-4dac01bb4c17 ?w=650,border=true)
 
 ### Schema Tab
 
@@ -170,19 +179,21 @@ We will need to add two specific fields: amount and type.
 1.  In the **Add extra schemas to this document type** section, add the `file` schema (not `files`).
     Our document will now be able to hold a single binary file.
 2.  In the **Add a custom schema** section:
-    *   Add a field named `amount` of type **Floating point**.
-    *   Add a field named `expensetype` of type **String**.
+    - Add a field named `amount` of type **Floating point**.
+    - Add a field named `expensetype` of type **Directory** and select the `expenseType` directory created above.
 3.  Save your modifications.
 
 ## Defining the Document Type Layouts
 
-1.  In the **Creation Layout** tab, create the layout as following:
-
-    <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Schema</th><th colspan="1">Field</th><th colspan="1">Widget type</th><th colspan="1">Required?</th></tr><tr><td colspan="1">dublincore</td><td colspan="1">title</td><td colspan="1">Text</td><td colspan="1">Yes</td></tr><tr><td colspan="1">dublincore</td><td colspan="1">description</td><td colspan="1">Textarea</td><td colspan="1">No</td></tr><tr><td colspan="1">expense</td><td colspan="1">amount</td><td colspan="1">Floating point</td><td colspan="1">Yes</td></tr><tr><td colspan="1">expense</td><td colspan="1">expensetype</td><td colspan="1">Vocabulary
-    (use the expenseType vocabulary here!)</td><td colspan="1">Yes</td></tr><tr><td colspan="1">file</td><td colspan="1">content</td><td colspan="1">File</td><td colspan="1">Yes</td></tr></tbody></table></div>
-2.  Import this (create) layout in the **Edit Layout** and **View Layout** tabs.
-3.  Save your modifications.
-    See the result:
-    ![]({{file name='expense-creation-layout-tab.png'}} ?w=500,border=true)
+1. Click on **Configure Layouts in Designer** to go to Designer.
+1. On the **Create** layout, click on **Configure** and create the layout as following:
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/1- Creating the Expense Document Type/expense-creation-layout-tab.png
+      name: expense-creation-layout-tab.png
+      studio_designer#screenshot#up_to_date
+    --}}
+    ![expense-creation-layout-tab.png](nx_asset://06aa17bb-68bc-4c30-af64-67c566e152d9 ?w=650,border=true)
+1. Go back to the Expense layout and at the bottom of the table, click on **Configure Missing Layout**
+1. Save your modifications.
 
 Our document type is ready to rock!

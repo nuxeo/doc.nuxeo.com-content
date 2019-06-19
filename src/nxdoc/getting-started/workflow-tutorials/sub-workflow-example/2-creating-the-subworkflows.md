@@ -2,7 +2,7 @@
 title: 2- Creating the Subworkflows
 review:
     comment: ''
-    date: '2017-01-24'
+    date: '2019-06-18'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,8 @@ labels:
     - grenard
     - subworkflow
     - sub-workflow
-    - content-review-lts2017
+    - lts2017-ok
+    - lts2019-ok
 toc: true
 confluence:
     ajs-parent-page-id: '14257562'
@@ -121,33 +122,31 @@ history:
         version: '1'
 previous_link: /nxdoc/1-creating-the-expense-document-type
 next_link: /nxdoc/3-creating-the-main-workflow
-
 ---
 {{#> callout type='info' }}
-
-This document is part of the [Sub Workflow Example]({{page page='sub-workflow-example'}}) project series.
-
+This document is part of the [Sub-Workflow Example]({{page page='sub-workflow-example'}}) project series.
 {{/callout}}
 
-## What Will We Do in this Step?
+## What Will We Do in This Step?
 
-We will create the subworkflows that may be called from the main workflow depending on the document's metadata. We will need two separate workflows as the business logic is different between them. The first workflow will have one Accept/Reject node, the other will have two successive ones.
+We will create the sub-workflows that may be called from the main workflow depending on the document's metadata. We will need two separate workflows as the business logic is different between them. The first workflow will have one Accept/Reject node, the other will have two successive ones.
 
-A single level validation workflow and a two-level validation workflow are both elements we could use again in the future, so we will keep them generic. Allowing a generic workflow design is one of the major assets in the subworkflow functionality.
+A single level validation workflow and a two-level validation workflow are both elements we could use again in the future, so we will keep them generic. Allowing a generic workflow design is one of the major assets in the sub-workflow functionality.
 
 ## Prerequisites
 
-Before starting this tutorial step, make sure you create in your Nuxeo Platform Admin Center a user with "Eric" as his username and a user group named "accounting" with at least one member.
+- A user named `Eric`
+- A group named `accounting` with at least one member.
 
 ## Creating the Accounting Validation Workflow
 
 In our case this workflow will be used if the expense is worth less than $100 and not belonging in the "misc" category, but it needs to be reusable in another context as well.
 
-1.  In Nuxeo Studio, go to **Workflow** > **Process definitions** and click on the **New** button.
+1.  In Studio Modeler, go to **Workflow** > **Process definitions** and click on the **New** button.
 2.  Fill in the fields:
-
     - **Feature ID**: `subOneLevelValidation`
     - **Label**: Generic one level validation workflow.
+
 3.  Click on the **Ok** button.
     The Definition tab of the workflow is displayed.
 
@@ -160,18 +159,27 @@ We want to keep this workflow generic, remember? So what we will do is setup a w
 3.  Check multi-valued (we may have several assignees).
 4.  Save your modifications.
     Look at the result below:
-    ![]({{file name='subonelevel-variables-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,h=99,border=true)
+    {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/2- Creating the Subworkflows/subonelevel-variables-tab.png
+    name: subonelevel-variables-tab.png
+    studio_modeler#screenshot#up_to_date
+    --}}
+    ![subonelevel-variables-tab.png](nx_asset://188151a4-7713-4e38-9be7-a9f72627d020 ?w=650,border=true)
 
 ### Activation Tab
 
-We do not want anybody to launch this subworkflow directly, so we will set rules to restrain its visibility.
+We do not want anybody to launch this sub-workflow directly, so we will set rules to restrain its visibility.
 
-1.  In the "<span style="color: rgb(67,67,67);">Current document state is</span>" field, type `hideThisWorkflow`.
+1.  In the **Current document state is** field, type `hideThisWorkflow`.
     As this lifecycle state does not exist, this trick will ensure the workflow will never appear in the drop-down list.
 2.  Save your modifications.
     Look at the result below:
-
-    ![]({{file name='subtwolevels-variables-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=400,h=280,border=true)
+    {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/2- Creating the Subworkflows/subwf-availability.png
+    name: subwf-availability.png
+    studio_modeler#screenshot#up_to_date
+    --}}
+    ![subwf-availability.png](nx_asset://5b9f0bdc-01ca-4717-9dcd-0797882963c5 ?w=650,border=true)
 
 ### Graph Tab
 
@@ -183,7 +191,12 @@ We do not want anybody to launch this subworkflow directly, so we will set rules
 2.  Link the Start node's output to the Accept/Reject node.
 3.  Link the Accept/Reject node's output transitions to the end node.
     Your graph should look like this:
-    ![]({{file name='subaccountingvalidation-wf-graph.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,border=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/2- Creating the Subworkflows/subaccountingvalidation-wf-graph.png
+      name: subaccountingvalidation-wf-graph.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![subaccountingvalidation-wf-graph.png](nx_asset://b8b254c4-c053-4d30-b240-2eb46c649154 ?w=650,border=true)
 
 ### Edit the Accept/Reject Node
 
@@ -192,13 +205,19 @@ We do not want anybody to launch this subworkflow directly, so we will set rules
 Set the following values:
 
 1.  **Title**: First level validation
-2.  **Directive**: Please review this document.
-3.  **Assignees expression**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
-    `@{WorkflowVariables["level1Assignees"]}`
+1.  **Directive**: Please review this document.
+1. **Due date expression**: `CurrentDate.days(5)`.
+1.  **Assignees expression**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
+    `@{WorkflowVariables["level1Assignees"]}`</br>
     This calls the corresponding workflow variable that will be set in the parent workflow.
-4.  **Grant permission to task assignees:** Read (in our case we want to make sure the accountants will be able to view the document, not necessarily to modify it).
-5.  Look at the result below:
-    ![]({{file name='subonelevel-node1-general-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,h=350,border=true)
+1.  **Grant permission to task assignees:** Read (in our case we want to make sure the accountants will be able to view the document, not necessarily to modify it).
+1.  Look at the result below:
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/2- Creating the Subworkflows/subonelevel-node1-general-tab.png
+      name: subonelevel-node1-general-tab.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![subonelevel-node1-general-tab.png](nx_asset://62cc78a4-8010-4db1-864a-a2beb701a1de ?w=650,border=true)
 
 #### Transitions Tab
 
@@ -235,7 +254,7 @@ In our case this workflow will be used in the other possible situations, but it 
 
     1.  **Feature ID**: `subTwoLevelsValidation`
     2.  **Label**: Two levels validation workflow
-3.  Click on the **Next** button.
+3.  Click on **Ok**.
 
 ### Variables Tab
 
@@ -245,33 +264,52 @@ Here comes another generic workflow. This time again we will setup workflow vari
 2.  Choose the **String** type for both.
 3.  Check multi-valued for both.
     Look at the expected result:
-    ![]({{file name='subtwolevels-variables-tab.png'}} ?w=650,border=true)
+    {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/2- Creating the Subworkflows/subtwolevels-variables-tab.png
+    name: subtwolevels-variables-tab.png
+    studio_modeler#screenshot#up_to_date
+    --}}
+    s![subtwolevels-variables-tab.png](nx_asset://8618fc1c-112b-48c6-abd1-b5b62acaa7f6 ?w=650,border=true)
 4.  Save your modifications.
 
 ### Activation Tab
 
-Same goes for this subworkflow:
+Same goes for this sub-workflow:
 
 1.  In the "Current document state is" field, type `hideThisWorkflow`.
     As this lifecycle state does not exist, the workflow will never appear in the drop-down list.
 2.  Look at the expected result:
-    ![]({{file name='subwf-availability.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=400,h=370,border=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/2- Creating the Subworkflows/subwf-availability.png
+      name: subwf-availability.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![subwf-availability.png](nx_asset://5b9f0bdc-01ca-4717-9dcd-0797882963c5 ?w=500,border=true)
 3.  Save your modifications.
 
 ### Graph Tab
 
 1.  Drag and drop the following nodes on your graph:
+    - A Start node.
+    - Two Accept/Reject nodes.
+    - An end node (Stop).
 
-    *   A Start node.
-    *   Two Accept/Reject nodes.
-    *   An end node (Stop).
-2.  Link the Start node's output to the first Accept/Reject node.
-3.  Link the first Accept/Reject node's validate output transition to the second Accept/Reject node.
-4.  Link the second Accept/Reject node's validate output transition to the end node.
-5.  Link both Accept/Reject node's reject output transitions to the end node.
+1.  Link the Start node's output to the first Accept/Reject node.
+
+1.  Link the first Accept/Reject node's validate output transition to the second Accept/Reject node.
+
+1.  Link the second Accept/Reject node's validate output transition to the end node.
+
+1.  Link both Accept/Reject node's reject output transitions to the end node.
     Your graph should look like this:
-    ![]({{file name='subaccountinggm-wf-graph-before-node-edition.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,border=true)
-6.  Save your modifications.
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/2- Creating the Subworkflows/subaccountinggm-wf-graph-before-node-edition.png
+      name: subaccountinggm-wf-graph-before-node-edition.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![subaccountinggm-wf-graph-before-node-edition.png](nx_asset://ee93fb3e-4d85-4abf-a8ba-70ffbcb508a8 ?w=650,border=true)
+
+1.  Save your modifications.
 
 ### Edit the First Accept/Reject Node
 
@@ -280,14 +318,20 @@ Same goes for this subworkflow:
 Set the following values:
 
 1.  **Title**: First level validation.
-2.  **Directive**: Please review this document.
-3.  **Assignees expression**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
-    `@{WorkflowVariables["level1Assignees"]}`
+1.  **Directive**: Please review this document.
+1.  **Due date expression**: `CurrentDate.days(5)`.
+1.  **Assignees expression**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
+    `@{WorkflowVariables["level1Assignees"]}`</br>
     This calls the corresponding workflow variable that will be set in the parent workflow.
-4.  **Grant permission to task assignees:** Read (in our case we want to make sure the accountants will be able to view the document, not necessarily to modify it).
-5.  Look at the expected result:
-    ![]({{file name='subonelevel-node1-general-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,h=350,border=true)
-6.  Save your modifications in the node and on the graph.
+1.  **Grant permission to task assignees:** Read (in our case we want to make sure the accountants will be able to view the document, not necessarily to modify it).
+1.  Look at the expected result:
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/2- Creating the Subworkflows/subonelevel-node1-general-tab.png
+      name: subonelevel-node1-general-tab.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![subonelevel-node1-general-tab.png](nx_asset://62cc78a4-8010-4db1-864a-a2beb701a1de ?w=500,border=true)
+1.  Save your modifications in the node and on the graph.
 
 ### Edit the Second Accept/Reject Node
 
@@ -295,20 +339,31 @@ Set the following values:
 
 Set the following values:
 
-1.  **Title**: Second level validation
-2.  **Directive**: Please review this document.
-3.  **Assignees expression**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
+1. **Title**: Second level validation
+1. **Directive**: Please review this document.
+1. **Due date expression**: `CurrentDate.days(5)`.
+1. **Assignees expression**: Replace the value with the following [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
     `@{WorkflowVariables["level2Assignees"]}`
     This calls the corresponding workflow variable that will be set in the parent workflow.
-4.  **Grant permission to task assignees:** Read
-5.  Look at the expected result:
-    ![]({{file name='subtwolevels-node2-general-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,h=351,border=true)
+1. **Grant permission to task assignees:** Read
+1. Look at the expected result:
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/2- Creating the Subworkflows/subtwolevels-node2-general-tab.png
+      name: subtwolevels-node2-general-tab.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![subtwolevels-node2-general-tab.png](nx_asset://c3fc08a7-febb-4b08-84d1-5e3123fd45d8 ?w=500,border=true)
 
 #### Transitions Tab
 
-1.  In the `validate` transition, select the `validateDoc` chain.
-    Look at the expected result:
-    ![]({{file name='subtwolevels-node1-transitions-tab.png' space='nxdoc60' page='2-creating-the-subworkflows'}} ?w=500,h=351,border=true)
-2.  Save your modifications in the node and on the graph.
+1. In the `validate` transition, select the `validateDoc` chain.</br>
+   Look at the expected result:
+   {{!--     ### nx_asset ###
+   path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/2- Creating the Subworkflows/subtwolevels-node1-transitions-tab.png
+   name: subtwolevels-node1-transitions-tab.png
+   studio_modeler#screenshot#up_to_date
+   --}}
+   ![subtwolevels-node1-transitions-tab.png](nx_asset://08d05de7-def8-41c7-9e63-8e429550b5a9 ?w=500,border=true)
+1. Save your modifications in the node and on the graph.
 
 That's it! Our sub workflows are ready, now only remains the one workflow to rule them all, the main workflow.
