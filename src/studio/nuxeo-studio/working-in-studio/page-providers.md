@@ -81,24 +81,24 @@ As you can see from the screenshot above, this query is launched when no additio
 In the query filter field, variables can be defined using the `?` keyword. When adding variables, the corresponding parameters have to be added as query parameters in the same order. When launching a query through the REST API, it is possible to override the parameter's default value set here by sending it in the query.
 
 ### Predicates
-Predicates are used in search forms to provide additional search criterias on top of the initial [query filter](#query-filter).
+Predicates are used in search forms to provide additional search criteria on top of the initial [query filter](#query-filter).
 
 ### Default Sort
 Lets you define in which order results should be returned by default.
 
 ### Quick Filters
-As shown in the screenshot above, quick filters appear in the interface as buttons, where clicking on the button enables or disables the search criterias associated to the quick filter. This is particularly useful to let your users filter documents quickly using commonly used or context relevant search criteria: for instance you can put quick filters to only display documents in a specific state, located in a specific space...
+As shown in the screenshot above, quick filters appear in the interface as buttons, where clicking on the button enables or disables the search criteria associated to the quick filter. This is particularly useful to let your users filter documents quickly using commonly used or context relevant search criteria: for instance you can put quick filters to only display documents in a specific state, located in a specific space...
 
 ### Elasticsearch Index Specific Options
 
 #### Aggregates
-Aggregates are an Elasticsearch specific feature that allow real-time filtering on search criterias.
+Aggregates are an Elasticsearch specific feature that allow real-time filtering on search criteria.
 
 Range aggregates allow you to display specific date or number ranges (e.g. modified in the last 6 months, renewal due in 3 weeks from now or less, amount over 10k).
 
-Histograms will display automatically generated criterias depending on the current filter selection. e.g. allow to filter contracts between 1 and 2k, 2 and 3k... if you set up a 1k range. Criterias are generated in real time and only for existing values (i.e. no option will be shown if no document corresponds to it).
+Histograms will display automatically generated criteria depending on the current filter selection. e.g. allow to filter contracts between 1 and 2k, 2 and 3k... if you set up a 1k range. criteria are generated in real time and only for existing values (i.e. no option will be shown if no document corresponds to it).
 
-Each aggregate also displays the corresponding number of results in real time depending of the other criterias already selected.
+Each aggregate also displays the corresponding number of results in real time depending of the other criteria already selected.
 
 More information can be found in the [page provider aggregates]({{page space='nxdoc' page='page-provider-aggregates'}}) documentation.
 
