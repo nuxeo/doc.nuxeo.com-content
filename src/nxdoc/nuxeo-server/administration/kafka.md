@@ -63,7 +63,7 @@ Access, consumer and producer properties are registered using the Nuxeo `KafkaCo
 <?xml version="1.0"?>
 <component name="my.project.kafka.contrib">
   <extension target="org.nuxeo.runtime.stream.kafka.service" point="kafkaConfig">
-    <kafkaConfig name="default" zkServers="localhost:2181" topicPrefix="nuxeo-">
+    <kafkaConfig name="default" topicPrefix="nuxeo-">
       <producer>
         <property name="bootstrap.servers">localhost:9092</property>
       </producer>
