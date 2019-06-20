@@ -3,7 +3,7 @@ title: Nuxeo for Adobe CC
 description: 'The Nuxeo for Adobe CC addon enables creative users to interact directly with Nuxeo repository assets from within InDesign, Photoshop or Illustrator.'
 review:
     comment: ''
-    date: '2018-07-30'
+    date: '2019-06-20'
     status: ok
 labels:
     - adobe-cc
@@ -30,7 +30,8 @@ The [Nuxeo for Adobe CC](https://connect.nuxeo.com/nuxeo/site/marketplace/packag
 
 ## Requirements
 
-Nuxeo for Adobe CC is compliant with Adobe CC 2018 and 2019 and requires Nuxeo Platform 9.10 or newer, along with the Nuxeo for Adobe CC marketplace package installed on your Nuxeo instance. Please aslo be sure your Nuxeo instance has the Dam Add-on installed and, ideally, the Dam external template has been included in your studio package (template should not be required, however).
+Nuxeo for Adobe CC is compliant with Adobe CC 2018 and 2019 and requires Nuxeo Platform 9.10 or newer, along with the Nuxeo for Adobe CC marketplace package installed on your Nuxeo instance.
+Make sure that the Nuxeo DAM add-on is installed on your instance and, ideally, that the DAM external template has been included in your Studio package (template should not be required, however).
 
 ## Support
 
@@ -109,9 +110,9 @@ To login:
 
 You should now see the connector populated with images that reside in your Nuxeo Instance.
 
+<!--
 If, however, you see something like this, then contact your Nuxeo Admin to confirm the Nuxeo for Adobe CC marketplace package is installed.
-
-
+-->
 
 To logout, simply select **Log Out** from the Nuxeo Connector fly out menu.
 
