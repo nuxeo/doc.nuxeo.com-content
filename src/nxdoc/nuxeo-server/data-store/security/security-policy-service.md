@@ -167,7 +167,7 @@ public class NoFileSecurityPolicy extends AbstractSecurityPolicy implements Secu
 
     @Override
     public Access checkPermission(Document doc, ACP mergedAcp,
-            Principal principal, String permission,
+            NuxeoPrincipal principal, String permission,
             String[] resolvedPermissions, String[] additionalPrincipals) {
         // Note that doc is NOT a DocumentModel
         if ("File".equals(doc.getType().getName())) {
@@ -204,7 +204,7 @@ public class NoFileSecurityPolicy extends AbstractSecurityPolicy implements Secu
                 new Reference(NXQL.ECM_PRIMARYTYPE), Operator.NOTEQ, new StringLiteral("File"));
 
         @Override
-        public SQLQuery transform(Principal principal, SQLQuery query) {
+        public SQLQuery transform(NuxeoPrincipal principal, SQLQuery query) {
             WhereClause where = query.where;
             Predicate predicate;
             if (where == null || where.predicate == null) {
