@@ -28,6 +28,17 @@ tree_item_index: 850
 The [Nuxeo for Adobe CC](https://connect.nuxeo.com/nuxeo/site/marketplace/package/adobe-connector-package) connector enables [Adobe Creative Cloud users](https://www.nuxeo.com/integration/adobe-creative-suite/) to import assets into an InDesign document directly from the Nuxeo repository. Link to the repository is maintained so as to facilitate updates of the referenced assets. Users can access the assets directly from Illustrator or Photoshop to make edits and trigger update warnings in InDesign.
 {{! /excerpt}}
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Adobe CC Connector](https://university.nuxeo.com/learn/course/external/view/elearning/189/NuxeoAdobeConnector)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo for Adobe CC /university-adobe.png
+    name: university-adobe.png
+    addins#screenshot#up_to_date
+--}}
+![university-adobe.png](nx_asset://2c190506-8651-4546-a4bb-cab241c05378 ?w=450,border=true)
+{{/callout}}
+
 ## Requirements
 
 Nuxeo for Adobe CC is compliant with Adobe CC 2018 and 2019 and requires Nuxeo Platform 9.10 or newer, along with the Nuxeo for Adobe CC marketplace package installed on your Nuxeo instance.
