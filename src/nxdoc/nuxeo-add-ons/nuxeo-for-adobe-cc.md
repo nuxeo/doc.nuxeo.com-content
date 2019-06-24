@@ -121,9 +121,15 @@ To login:
 
 You should now see the connector populated with images that reside in your Nuxeo Instance.
 
-<!--
+{{#> callout type='info'}}
 If, however, you see something like this, then contact your Nuxeo Admin to confirm the Nuxeo for Adobe CC marketplace package is installed.
--->
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo for Adobe CC /No mp installed error
+    name: error-no-package-installed.png
+    addins#popup#up_to_date
+--}}
+![Error no package installed](nx_asset://bc366077-1ebf-43e3-9ecf-b50a0bfa3b36 ?w=350,border=true)
+{{/callout}}
 
 To logout, simply select **Log Out** from the Nuxeo Connector fly out menu.
 
