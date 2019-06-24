@@ -29,10 +29,10 @@ The [Nuxeo for Adobe CC](https://connect.nuxeo.com/nuxeo/site/marketplace/packag
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Adobe CC Connector](https://university.nuxeo.com/learn/course/external/view/elearning/189/NuxeoAdobeConnector)
+Watch the related courses on Nuxeo University:</br>
+[Adobe CC Connector](https://university.nuxeo.com/learn/course/external/view/elearning/189/NuxeoAdobeConnector)
 {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo for Adobe CC /university-adobe.png
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo for Adobe CC/university-adobe.png
     name: university-adobe.png
     addins#screenshot#up_to_date
 --}}
