@@ -132,6 +132,22 @@ Client | 7.10 | 8.10 | 9.10 | 10.10
 3.x | HF43 | HF33 | HF12 | HF0
 4.x | HF47 | HF39 | HF22 | HF0
 
+## What Actions Trigger a Synchronization?
+
+### Server Actions
+
+Server side actions are all reflected locally (rename, move, delete, permissions change).
+
+### Local Actions
+
+Those local actions will trigger a synchronization with the server:
+
+- file/folder rename;
+- file/folder move;
+- file/folder delete.
+
+Note that changes on file metadata at the OS level (like date modification) that do not alter the file integrity (e.g.: its digest has not changed) will **not** trigger the synchronization.
+
 ## How to Configure the Synchronization Delay
 
 Since the version `1.3.1216` of Nuxeo Drive client, the synchronization delay is 30 seconds (5 seconds in the previous releases). There are three ways to change this value:
