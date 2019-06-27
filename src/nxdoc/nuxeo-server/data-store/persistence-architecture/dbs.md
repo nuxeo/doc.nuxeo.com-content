@@ -93,6 +93,17 @@ history:
 
 {{! /excerpt}}
 
+{{#> callout type='info'  heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University:</br>
+- [Video on Document Metadata from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/VCS/university_document_metadata.png
+    name: university_document_metadata.png
+    server#screenshot#up_to_date
+--}}
+![university_document_metadata.png](nx_asset://d626cbea-734b-4870-adff-bb648bece80a ?w=450,border=true)
+{{/callout}}
+
 ## Basic Storage
 
 When configured for use with MongoDB, each *Nuxeo document* is stored as a *single MongoDB document*. A sample document could look like:

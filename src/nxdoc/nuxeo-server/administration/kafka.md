@@ -15,6 +15,17 @@ tree_item_index: 1100
 Kafka configuration and integration with Nuxeo.
 {{! /excerpt}}
 
+{{#> callout type='info'  heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University:</br>
+- [Video on Streams from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Kafka/university_streams.png
+    name: university_streams.png
+    server#screenshot#up_to_date
+--}}
+![university_streams.png](nx_asset://6ea2d254-104f-4747-bf74-3f5aad34cc51 ?w=450,border=true)
+{{/callout}}
+
 ## When to Use Kafka?
 
 Since Nuxeo 10.10 it is highly recommended to use Kafka when running Nuxeo in cluster mode:

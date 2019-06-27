@@ -114,6 +114,17 @@ history:
 ---
 The Audit Service is used for logging and retrieving audit data into a data store. The service can be accessed directly with the Java API for reading or writing audit entries but the main source for Audit entries is the Nuxeo event bus: the Audit Service listens to all events that may occur on the platform (document creation, user logging in, workflow started ...) and according to the configuration an Audit record will be created.
 
+{{#> callout type='info'  heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University:</br>
+- [Video on Audits from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Audit/university_audit.png
+    name: university_audit.png
+    server#screenshot#up_to_date
+--}}
+![university_audit.png](nx_asset://fa59bf2b-6f7c-4cfa-a8ad-c0bb7e1775ae ?w=450,border=true)
+{{/callout}}
+
 ## Architecture
 
 The Audit Service is mainly a data store service. It defines a data record structure that will be used for storing audit information.

@@ -321,6 +321,17 @@ history:
         version: '1'
 ---
 
+{{#> callout type='info'  heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University:</br>
+- [Video on Indexes from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Indexing and Query/university_indexes.png
+    name: university_indexes.png
+    server#screenshot#up_to_date
+--}}
+![university_indexes.png](nx_asset://65ddd156-e915-4cb9-9cd0-89a4bb5e70d0 ?w=450,border=true)
+{{/callout}}
+
 ## Architecture
 
 ### Data store and index
