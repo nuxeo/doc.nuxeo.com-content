@@ -184,6 +184,18 @@ history:
         version: '1'
 
 ---
+
+{{#> callout type='info'  heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University:</br>
+- [Video on Document Blobs from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/File Storage/university_file_storage.png
+    name: university_file_storage.png
+    server#screenshot#up_to_date
+--}}
+![university_file_storage.png](nx_asset://c40a0162-48c8-4723-b280-aeb6ce516577 ?w=450,border=true)
+{{/callout}}
+
 ## Files and Blobs
 
 A file is what is commonly handled on user's desktop or other file system. It is a binary content managed under a file system, which means with a location (or locations if fragmented), a path and a name. On the Nuxeo Platform, the concept of file system doesn't exist. The content is stored as a binary stream, and the address of that content is stored in the database. The database has the notion of "Blob", that represents the binary stream and a set of metadata:

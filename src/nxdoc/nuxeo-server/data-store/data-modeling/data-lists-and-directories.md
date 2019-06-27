@@ -118,6 +118,17 @@ In the Nuxeo Platform, a **directory** is used to provide an abstraction on all 
 *   Roles,
 *   ...
 
+{{#> callout type='info'  heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University:</br>
+- [Video on Directories from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Data Lists and Directories/university_directories.png
+    name: university_directories.png
+    server#screenshot#up_to_date
+--}}
+![university_directories.png](nx_asset://a372ad6a-ce00-41a4-a3b9-637302a50ff3 ?w=450,border=true)
+{{/callout}}
+
 A directory is typically a connection to an external data source that is also accessed by other processes than the Nuxeo Platform itself (therefore allowing shared management and usage).
 
 A **vocabulary** is a specialized **directory** with only a few important columns that are used by the Nuxeo Platform to display things like menus and selection lists.
