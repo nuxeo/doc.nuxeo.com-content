@@ -528,6 +528,7 @@ An `<expression>` can be:
 *   `(<expression>)`
 *   `<literal>`
 *   `<identifier>`
+*   `<function>`
 
 An `<op>` can be:
 
@@ -547,6 +548,11 @@ A `<literal>` can be:
 A `<literal-list>` is a non empty comma-separated list of `<literal>`.
 
 An `<identifier>` is a property identifier. This can be only a simple property, a simple list property or a complex property element, maybe including wildcards for list indexes (see below).
+
+A `<function>` can be `NOW()` or `NOW(<string>)`.
+
+*   `NOW()` returns a timestamp of the current date/time.
+*   `NOW(<string>)` returns a timestamp of the current date/time to which an ISO 8601 period is added. The ISO 8601 period format is _PnYnMnDTnHnMnS_. A leading `-` sign, and negative values for the individual values, are allowed. Any of the value+unit can be skipped, although if an hours/minutes/seconds value is provided, specifiying `T` is mandatory.
 
 ## Operators
 
@@ -859,6 +865,12 @@ Since Nuxeo 6.0-HF06 or Nuxeo 7.2 you can use `ecm:acl` (usually with correlated
 SELECT * FROM Document WHERE ecm:acl/*1/principal = 'bob'
                          AND ecm:acl/*1/grant = 1
                          AND ecm:acl/*1/permission IN ('Browse', 'Read', 'ReadProperties', 'ReadWrite', 'ReadRemove', 'Everything')
+```
+
+Since Nuxeo 11.1 you can use `NOW()` in expressions:
+
+```
+SELECT * FROM Document WHERE dc:modified < NOW('-P1D')
 ```
 
 ### Fulltext Examples
