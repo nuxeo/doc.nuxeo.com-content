@@ -16,8 +16,8 @@ Kafka configuration and integration with Nuxeo.
 {{! /excerpt}}
 
 {{#> callout type='info'  heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University:</br>
-- [Video on Streams from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
+Watch the related course on Nuxeo University:</br>
+[Video on Streams from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Kafka/university_streams.png
     name: university_streams.png

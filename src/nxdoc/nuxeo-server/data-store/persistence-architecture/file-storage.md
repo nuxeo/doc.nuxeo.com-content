@@ -187,7 +187,7 @@ history:
 
 {{#> callout type='info'  heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University:</br>
-- [Video on Document Blobs from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
+[Video on Document Blobs from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/File Storage/university_file_storage.png
     name: university_file_storage.png

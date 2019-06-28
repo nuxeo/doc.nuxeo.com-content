@@ -15,9 +15,8 @@ Nuxeo Stream provides a Log storage abstraction and a Stream processing pattern.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [LTS 2017 New Features](https://university.nuxeo.com/learn/public/course/view/elearning/126/lts-2017-new-features).
-- [Video on Streams from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture).
+Watch the related courses on Nuxeo University:</br>
+[Video on Streams from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture).
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Kafka/university_streams.png
     name: university_streams.png
