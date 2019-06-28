@@ -108,7 +108,6 @@ history:
         date: '2010-12-28 19:23'
         message: ''
         version: '1'
-
 ---
 In the Nuxeo Platform, a **directory** is used to provide an abstraction on all referential data that can be manipulated inside the application. These data are (mostly) table-like data that live outside of the VCS document storage database:
 
@@ -119,14 +118,9 @@ In the Nuxeo Platform, a **directory** is used to provide an abstraction on all 
 *   ...
 
 {{#> callout type='info'  heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University:</br>
-- [Video on Directories from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Data Lists and Directories/university_directories.png
-    name: university_directories.png
-    server#screenshot#up_to_date
---}}
-![university_directories.png](nx_asset://a372ad6a-ce00-41a4-a3b9-637302a50ff3 ?w=450,border=true)
+Watch the related course on Nuxeo University:</br>
+[Video on Directories from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture)
+![]({{file name='university_directories.png'}} ?w=450,border=true)
 {{/callout}}
 
 A directory is typically a connection to an external data source that is also accessed by other processes than the Nuxeo Platform itself (therefore allowing shared management and usage).
