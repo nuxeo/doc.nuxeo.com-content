@@ -426,7 +426,7 @@ history:
 ---
 {{#> callout type='warning' }}
 
-Java Automation Client has been deprecated for Nuxeo LTS 2016\. Please use [Nuxeo Java Client](http://nuxeo.github.io/nuxeo-java-client/).
+Java Automation Client has been deprecated for Nuxeo LTS 2016\. Please use [Nuxeo Java Client](https://doc.nuxeo.com/client-java/).
 
 {{/callout}}
 
