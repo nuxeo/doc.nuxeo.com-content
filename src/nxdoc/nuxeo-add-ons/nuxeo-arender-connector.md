@@ -1,6 +1,6 @@
 ---
 title: Nuxeo Annotations with ARender
-description: 'The Nuxeo Annotations with ARender addon allows users to preview and annotate any content stored in the Nuxeo repository: Office documents, PDF, images, videos with the ARender previewer, from Arondor.'
+description: 'The Nuxeo Annotations addon allows users to preview and annotate any content stored in the Nuxeo repository: Office documents, PDF, images, videos with the ARender previewer, from Arondor.'
 review:
     comment: ''
     date: '2019-01-21'
@@ -10,8 +10,11 @@ labels:
 toc: true
 tree_item_index: 1050
 ---
+
+The more people involved on a document, the more it becomes difficult to collaborate and communicate on it because every participant has its own device (PC, mobile, tablet, etc.) and its own tool, which means different format to preview.
+
 {{! excerpt}}
-The Nuxeo Annotations with ARender addon allows users to preview and annotate any document stored in the Nuxeo repository: Office documents, PDF, images, videos with the ARender previewer, from Arondor.
+The Nuxeo Annotations addon allows users to preview and annotate any document stored in the Nuxeo repository: Office documents, PDF, images, videos, etc., on any device with the ARender previewer from Arondor.
 {{! /excerpt}}
 
 ARender software is made of two pieces:
@@ -290,14 +293,22 @@ Once added, these comments are available from the view tab of your document.
 --}}
 ![annotations-draw-arrows.png](nx_asset://7749f97c-548e-446c-8542-97fd35bfb6ff ?w=20) and draw your arrow.
 1. Once your arrow is drawn, you can customize its direction, color, opacity, style, etc.
+
     {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-arrow-options.png
       name: annotations-arrow-options.png
       addins#icon#up_to_date
     --}}
-    ![annotations-arrow-options.png](nx_asset://0facae06-cc18-44ad-b7d6-e1686e87c112 ?w=650)
+    ![annotations-arrow-options.png](nx_asset://0facae06-cc18-44ad-b7d6-e1686e87c112 ?w=650, border=true)
 
-Arrows can also be used to take measurements on a document.
+Arrows can also be used to take measurements on a document. To do so, once your arrow drawn, click on **Show measurement** on the customization top bar and measure will be displayed in your prefered unit measure (inch, cm or px).
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-jacket-measure.png
+    name: annotations-jacket-CD-measure.png
+    addins#screenshot#up_to_date
+--}}
+![annotations-jacket-measure.png](nx_asset://2a574eee-9949-4050-a8b6-651257e41aa8 ?w=650,border=true)
 
 ### Watermark
 
