@@ -202,16 +202,14 @@ nuxeo.stream.work.over.provisioning.factor=3
 nuxeo.stream.work.log.codec=legacy
 ```
 
-{{#> callout type='warning' }}
+
 The behavior of the Stream WorkManager is slightly different than the default WorkManager:
-
-- Works are immutable: they can not be used as a storage for result, the repository or the transient store should be used instead
-- Works can not be listed or loaded on demand because this can not scale
-- Works with the same id are executed only once, this make work idempotent for free
-- At the moment the number of Running works is only an estimation, scheduled and completed metrics are reliable
-
+* Works are immutable: they can not be used as a storage for result, the repository or the transient store should be used instead
+* Works can not be listed or loaded on demand because this can not scale
+* Works with the same id are executed only once, this make work idempotent for free
+* At the moment the number of Running works is only an estimation, scheduled and completed metrics are reliable
 This requires some work and WorkManager usage adaptations, this is still a work in progress.
-{{/callout}}
+
 
 ### Stream PubSub Provider
 

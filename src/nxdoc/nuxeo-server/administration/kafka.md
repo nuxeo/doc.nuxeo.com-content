@@ -118,9 +118,8 @@ Most of the above properties can be tuned directly from [nuxeo.conf file]({{page
 
 Please refer to Kafka document about the [consumer and producer options](https://kafka.apache.org/documentation#configuration) for more information.
 
-{{#> callout type='info' }}
-When Kafka is used by the PubSub Provider, the topic retention can be reduced to few hours because PubSub is used to send instant messages, this can be done at the Kafka level using the following command:
+
+When Kafka is used by the PubSub Provider, the **topic retention can be reduced to few hours** because PubSub is used to send instant messages, this can be done at the Kafka level using the following command:
 ```bash
 $KAFKA_HOME/bin/kafka-configs.sh --zookeeper <zk_host> --alter --entity-type topics --entity-name nuxeo-pubsub --add-config retention.ms=7200000
 ```
-{{/callout}}
