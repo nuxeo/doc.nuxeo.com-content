@@ -15,6 +15,10 @@ labels:
 The Nuxeo Platform offers all the necessary capabilities to build an application that ensures the maximum level of compliance with user privacy and security regulations.
 {{! /excerpt}}
 
+{{#> callout type='info' }}
+To get information about how Nuxeo, as a company, is ensuring its compliance with GDPR requirements, please refer to the [corporate website](https://www.nuxeo.com/about/gdpr/)
+{{/callout}}
+
 ## Concept
 
 The Nuxeo Platform, by itself, cannot ensure GDPR compliance as the GDPR is not about certifying any technical solution; it is about ensuring that the management of personally identifiable information (PII) are satisfying individual rights requirements per GDPR mandates, such as the right to access, the right to erasure, portability, etc.
