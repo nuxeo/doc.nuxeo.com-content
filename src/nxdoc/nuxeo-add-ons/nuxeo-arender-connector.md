@@ -11,21 +11,21 @@ toc: true
 tree_item_index: 1050
 ---
 
-The more people involved on a document, the more it becomes difficult to collaborate and communicate on it because every participant has its own device (PC, mobile, tablet, etc.) and its own tool, which means different format to preview.
+The more people involved on a document, the more difficult it becomes to collaborate and communicate because every participant has their own device (PC, mobile, tablet, etc.) and their own tools, which means different formats to preview.
 
 {{! excerpt}}
-The Nuxeo Annotations addon allows users to preview and annotate any document stored in the Nuxeo repository: Office documents, PDF, images, videos, etc., on any device with the ARender previewer from Arondor.
+The Nuxeo Annotations addon allows users to preview and annotate any document stored in the Nuxeo repository: Office documents, PDF, images, videos, etc., on any device with the ARender previewer from [Arondor](https://www.arondor.com/en/).
 {{! /excerpt}}
 
-ARender software is made of two pieces:
-- Previewer
-- Rendition
+ARender software comprises two parts:
+- previewer
+- rendition
 
 ARender rendition server needs to be installed on a dedicated host.
 
-ARender previewer is extended by Nuxeo to integrate the ARender Previewer with the Nuxeo REST API, it corresponds to [nuxeo-arender-connector-hmi](https://github.com/nuxeo/nuxeo-arender-connector/tree/master/nuxeo-arender-connector-hmi) in ARender Connector. It is built as a war file to deploy.
+ARender previewer is extended by Nuxeo to integrate the ARender previewer with the Nuxeo REST API -- it corresponds to [nuxeo-arender-connector-hmi](https://github.com/nuxeo/nuxeo-arender-connector/tree/master/nuxeo-arender-connector-hmi) in ARender Connector. It is built as a war file to deploy.
 
-Here's a chart describing actions during first connection to ARender:
+Here's a chart illustrating the actions during the first connection to ARender:
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Annotations with ARender/arender-flow.png
     name: arender-flow.png
@@ -35,47 +35,47 @@ Here's a chart describing actions during first connection to ARender:
 
 ## Installation
 
-There're several ways to install ARender software.
+There are several ways to install ARender software.
 
-To ease deployment, Nuxeo provides two Docker images, one for each piece of ARender software: `arender-previewer` and `arender-rendition`.
+For easy deployment, Nuxeo provides two Docker images, one for each part of the ARender software: `arender-previewer` and `arender-rendition`.
 
 {{#> callout type='warning' heading='Private addon'}}
 You should contact your Nuxeo Administrator or your Nuxeo sales representative to get access to these images.
 {{/callout}}
 
 {{#> callout type='info' heading='Docker Images Version'}}
-Docker images have the same version than marketplace packages.
-You should always use same version for docker images and marketplace package.
+Docker images have the same versions as marketplace packages.
+You should always use the same version for Docker images and marketplace packages.
 {{/callout}}
 
-You can also install both pieces directly on dedicated hosts by following [ARender Documentation](https://arender.io/doc/current4/documentation/setup/index-setup.html). Don't forget to take the ARender previewer in order to leverage the connector between ARender previewer and Nuxeo.
+You can also install both parts directly on dedicated hosts by following [ARender Documentation](https://arender.io/doc/current4/documentation/setup/index-setup.html).
 
-All communications are made over HTTP, we recommend usage of HTTPS for production. Below are the ports of each piece:
-- previewer is reachable on port 8080 when exposed directly by Tomcat, we recommend to setup an Apache or Nginx in front of it
+All communication is done over HTTP; we recommend using HTTPS for production. Below are the ports for each part:
+- previewer is reachable on port 8080 when exposed directly by Tomcat; we recommend to setup an Apache or Nginx in front of it
 - rendition is reachable on port 8761
 
-Below the needed communication (for firewall rules/docker network setup):
+Below are the requirements for firewall rules / Docker network setup:
 - Nuxeo needs to reach ARender previewer
 - ARender previewer needs to reach ARender rendition
 - ARender previewer needs to reach Nuxeo
 
 ### Embedded Installation - Development
 
-For development purposes, you need to run the Docker image for rendition and bind its port to localhost:
+For development purposes, run the rendition Docker image and bind its port to localhost:
 ```
 docker run -p 8761:8761 -it ARENDER_DOCKER_IMAGE_ID
 ```
-Then you need to install [nuxeo-arender-connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender-connector) marketplace package.
+Then install the [nuxeo-arender-connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender-connector) marketplace package.
 
-It installs ARender integration inside Nuxeo and ARender previewer inside the Nuxeo's Tomcat.
+It installs the ARender integration inside Nuxeo and the ARender previewer inside Nuxeo's Tomcat.
 
 ### Docker Installation - Production
 
-For production, we recommend to deploy each ARender piece as a Docker container.
+For production, we recommend that each part of ARender software is deployed as a Docker container.
 
-You can deploy several ARender renditions. Their URL needs to be given to ARender previewer. ARender previewer is responsible for renditions load. ARender renditions don't need to communicate with each other.
+You can deploy several ARender renditions. Their URL needs to be given to ARender previewer. ARender previewer is responsible for renditions loading. ARender renditions don't need to communicate with each other.
 
-Then you can deploy an ARender previewer and give it rendition URLs as the environment variable `renditionHostEnv`.
+Rendition URLs can be passed to ARender previewer with the `renditionHostEnv` environment variable.
 
 {{#> callout type='info' heading='ARender previewer behavior'}}
 ARender previewer owns in its cache a session corresponding to the t-uple user, document and blob.</br>
@@ -83,16 +83,16 @@ You'll need to ask for a new session if the previewer crashes (action 1. on [cha
 {{/callout}}
 
 {{#> callout type='warning' heading='ARender previewer clustering'}}
-You can't currently have a cluster of ARender previewer because previewers don't share sessions.
+You can't have a cluster of ARender previewers because previewers don't share sessions.
 {{/callout}}
 
-If you need to change this settings while ARender previewer is running, you have a REST API on ARender previewer.
+If you need to change these settings while ARender previewer is running, there is a REST API on ARender previewer.
 
-To get current setting:
+To get current settings:
 ```
 GET /arendergwt/weather?format=json
 ```
-To update it:
+To update settings:
 ```
 POST /arendergwt/weather?format=json
 ["https://rendition1:8761", "https://rendition2:8761"]
@@ -103,18 +103,18 @@ POST /arendergwt/weather?format=json
 ### Nuxeo Configuration
 
 The ARender connector relies on a [JWT](https://jwt.io/) to request an OAuth2 token for authentication (See [OAuth2]({{page page='using-oauth2'}}) documentation page for more information).
-You need to define a secret `nuxeo.jwt.secret` in your `nuxeo.conf` to enable it.
+You need to define a secret, `nuxeo.jwt.secret` in your `nuxeo.conf`, to enable it.
 
 Authentication from ARender to Nuxeo relies on a shared secret between the two applications. This secret is defined with the property `nuxeo.arender.secret` in your `nuxeo.conf`.
 
 {{#> callout type='info' heading='Shared secret environment variable'}}
-If using the docker image for the ARender previewer, you can also define this shared secret through an environment variable `nuxeoArenderSecretEnv`.
+If using the Docker image for the ARender previewer, you can also define this shared secret through an environment variable `nuxeoArenderSecretEnv`.
 {{/callout}}
 
 
-If your ARender rendition server doesn't run on same host than Nuxeo's Tomcat, you can change the ARender rendition URL by setting `arender.server.rendition.hosts` in your `nuxeo.conf` (default value is `http://localhost:8761`).
+If your ARender rendition server doesn't run on same host as Nuxeo's Tomcat, you can change the ARender rendition URL by setting `arender.server.rendition.hosts` in your `nuxeo.conf` (default value is `http://localhost:8761`).
 
-You can change ARender previewer URL used by Nuxeo to open ARender session by setting `arender.server.previewer.host` in your `nuxeo.conf` (default value if `http://localhost:8080`).
+You can change the ARender previewer URL used by Nuxeo to open ARender sessions by setting `arender.server.previewer.host` in your `nuxeo.conf` (default value if `http://localhost:8080`).
 
 ### ARender Previewer Configuration
 
@@ -122,21 +122,21 @@ For an on-host installation, you can follow the [ARender Documentation](https://
 
 For an embedded installation, you can modify the `arender-hmi.properties` files under `NUXEO_HOME/nxserver/config/ARenderConfiguration` folder.
 
-For a Docker installation, you can extends our image and copy your properties file to `/docker-entrypoint-init.d/arender.properties`:
+For a Docker installation, you can extend our image and copy your properties file to `/docker-entrypoint-init.d/arender.properties`:
 ```
 FROM dockerin-arender.nuxeo.com:443/arender-previewer:MP_VERSION
 
 COPY arender.properties /docker-entrypoint-init.d/arender.properties
 ```
 
-You can also modify the `arender-hmi.properties` that is deployed inside the `/ARenderConfiguration` in the previewer Docker container.
+You can also modify the `arender-hmi.properties` which is deployed inside the `/ARenderConfiguration` in the previewer Docker container.
 
-Editing these configuration files helps you to tailor the ARender interface to fit specific UI and UX needs. Please follow the [ARender configuration guide](https://arender.io/doc/current4/documentation/hmi/index-hmi.html).
+These configuration files let you customize the ARender interface to fit specific UI and UX needs. Please follow the [ARender configuration guide](https://arender.io/doc/current4/documentation/hmi/index-hmi.html) for more information.
 
-You can for example:
+Examples of possible configurations:
 
-- Add and/or remove buttons from the ARender interface
-- Modify ARender behaviors on specific user actions (like validating a comment when the user clicks on "Enter")
+- Add or remove buttons from the ARender interface
+- Modify ARender behaviors on specific user actions (like entering a comment when the user clicks on "Enter")
 - Reference a new theme (by creating your custom CSS file)
 
 {{!--     ### nx_asset ###
@@ -144,7 +144,7 @@ You can for example:
     name: arender-customized.png
     addins#screenshot#up_to_date
 --}}
-![arender-customized.png](nx_asset://a26f7eaf-e268-443f-be33-2c88542e2a13 ?w=350,border=true)
+![arender-customized.png](nx_asset://a26f7eaf-e268-443f-be33-2c88542e2a13 ?w=600,border=true)
 
 ## Functional Overview
 
@@ -196,7 +196,7 @@ Repeat mode available. </td>
 <tr>
 <td colspan="1">
 ![annotations-redact.png](nx_asset://421137dc-2c9f-4c01-88b3-690d12a9fff4 ?w=40)</td>
-<td colspan="1"> Annotate over text, hiding its contents.</br> This annotation is only available on text document. </td>
+<td colspan="1"> Annotate over text, hiding its contents.</br> This annotation is only available on text documents. </td>
 </tr>
 </tbody>
 </table>
@@ -207,7 +207,7 @@ Repeat mode available. </td>
     name: annotations-repeat-mode.png
     addins#icon#up_to_date
 --}}
-![annotations-repeat-mode.png](nx_asset://e1db7421-d37e-4e97-be25-cdfdc3483b66 ?w=20) meaning that you can add several annotations is a row. To disable the repeat mode, click on the annotation once again.
+![annotations-repeat-mode.png](nx_asset://e1db7421-d37e-4e97-be25-cdfdc3483b66 ?w=20) meaning that you can add several annotations is a row. To disable the repeat mode, click on the annotation icon again.
 
 Other buttons are available on the top bar to optimize the visualization of the document: zoom, rotation, full screen, pagination, height and width adjustment, etc.
 
@@ -230,7 +230,7 @@ Other buttons are available on the top bar to optimize the visualization of the 
     --}}
     ![annotation-sticky-note-displayed](nx_asset://9800ba81-ea6f-469d-8861-48ec1a216e2b ?w=450,border=true)
 
-**Access to the Annotations:**
+**To access annotations:**
 
 Three views are available on the left panel:
 {{!--     ### nx_asset ###
@@ -244,23 +244,23 @@ Three views are available on the left panel:
     name: annotation-document-pages-thumbs.png
     addins#screenshot#up_to_date
 --}}
-![annotation-document-pages-thumbs.png](nx_asset://b397f86b-bae4-4d55-bb49-2b7ea8893a3b ?w=20): The documents pages thumbs, opened by default
+![annotation-document-pages-thumbs.png](nx_asset://b397f86b-bae4-4d55-bb49-2b7ea8893a3b ?w=20): Document page thumbnails, opened by default
 - {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotation-browser-navigation.png.1561393988095
     name: annotation-browser-navigation.png
     addins#icon#up_to_date
 --}}
-![annotation-browser-navigation.png](nx_asset://e819376d-cc8d-490b-b10b-b12e58b8ca00 ?w=20): The annotations browser
+![annotation-browser-navigation.png](nx_asset://e819376d-cc8d-490b-b10b-b12e58b8ca00 ?w=20): Annotations Browser
 - {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotation-browser-navigation.png
     name: annotation-browser-navigation.png
     addins#icon#up_to_date
 --}}
-![annotation-browser-navigation.png](nx_asset://d1f71ecc-0afb-4bbf-92d7-e721518e66c3 ?w=20): The advanced search
+![annotation-browser-navigation.png](nx_asset://d1f71ecc-0afb-4bbf-92d7-e721518e66c3 ?w=20): Advanced Search
 
-From the annotation browser, you can see the list of all the annotations done on the document you are viewing, grouped by document pages.
+From the annotations browser, you can see the list of all the annotations made on the document you are viewing, grouped by document pages.
 
-You can search and filter any annotation by expending the following item:
+You can search for and filter any annotation:
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotation-search.png
@@ -269,11 +269,11 @@ You can search and filter any annotation by expending the following item:
 --}}
 ![annotation-search.png](nx_asset://24fd947d-4c73-47fa-b13b-e714c8466f33 ?w=350,border=true)
 
-You can also manage annotations from this view:
+You can also manage annotations by:
 
-- Leave a comment
-- Reply to a comment
-- Delete a comment
+- Adding a comment
+- Replying to a comment
+- Deleting a comment
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotation-comment-replied.png
@@ -291,7 +291,7 @@ Once added, these comments are available from the view tab of your document.
     name: annotations-draw-arrows.png
     addins#icon#up_to_date
 --}}
-![annotations-draw-arrows.png](nx_asset://7749f97c-548e-446c-8542-97fd35bfb6ff ?w=20) and draw your arrow.
+![annotations-draw-arrows.png](nx_asset://7749f97c-548e-446c-8542-97fd35bfb6ff ?w=20) then click and drag to draw an arrow.
 1. Once your arrow is drawn, you can customize its direction, color, opacity, style, etc.
 
     {{!--     ### nx_asset ###
@@ -301,7 +301,7 @@ Once added, these comments are available from the view tab of your document.
     --}}
     ![annotations-arrow-options.png](nx_asset://0facae06-cc18-44ad-b7d6-e1686e87c112 ?w=650, border=true)
 
-Arrows can also be used to take measurements on a document. To do so, once your arrow drawn, click on **Show measurement** on the customization top bar and measure will be displayed in your prefered unit measure (inch, cm or px).
+Arrows can also be used to take measurements on a document. To do so, once an arrow is drawn, click on **Show measurement** on the customization top bar and the measurement will be displayed in your preferred unit (inches, centimeters or pixels).
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-jacket-measure.png
@@ -312,9 +312,9 @@ Arrows can also be used to take measurements on a document. To do so, once your 
 
 ### Watermark
 
-To watermark a document, two solutions are available: Print the document with a watermark, has explained in [the section below](#print) or use a stamp annotation.
+To watermark a document, two solutions are available: Add a watermark to each page before printing, as explained in [the section below](#print) or use a stamp annotation.
 
-To **add a stamp**, click on the stamp button {{!--     ### nx_asset ###
+To **add a stamp annotation**, click on the stamp button {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-stamps.png
     name: annotations-stamps.png
     addins#icon#up_to_date
@@ -332,12 +332,12 @@ Different options are available: "Urgent", approved on the current date, "Insert
 
 ### Download
 
-Mouse-over the download icon {{!--     ### nx_asset ###
+Hover over the download icon {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-download-button.png
     name: annotations-download-button.png
     addins#icon#up_to_date
 --}}
-![annotations-download-button.png](nx_asset://f08c3d19-0da2-43b8-a023-622aa785f8db ?w=20) to display the file menu with his several available actions:
+![annotations-download-button.png](nx_asset://f08c3d19-0da2-43b8-a023-622aa785f8db ?w=20) to display the file menu with several available actions:
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-submenu-download.png
@@ -358,7 +358,7 @@ Mouse-over the download icon {{!--     ### nx_asset ###
 --}}
 ![annotation-print-button.png](nx_asset://3b7d1e22-e007-4b92-bac0-0be6ca81bc9b ?w=20) at the top right of the screen.
 
-1. A popup window appears with various solutions for printing:
+1. A popup window appears with several print options:
     - Print the current document
     - Print all documents
     {{!--     ### nx_asset ###
@@ -368,17 +368,17 @@ Mouse-over the download icon {{!--     ### nx_asset ###
     --}}
     ![annotation-popup-print.png](nx_asset://e8393e2c-ba21-4c98-a8ce-c0ec40f7a5c2 ?w=350,border=true)
 
-And you can select “Include annotations” for printing annotations included on document, or select "Include watermark" to display a watermark on all pages of the document.
+You can select “Include annotations” to print all annotations on a document, or select "Include watermark" to display the selected watermark on all pages of the document.
 
-Once your choice is done, click on “Ok” button, page(s) will be printed.
+Once your choice is made, click on “Ok” button, and the page(s) will be printed.
 
 ### Document Comparison
 
 {{#> callout type='note' heading='Limitations'}}
-This feature only allows you to compare two text files.
+This feature only allows you to compare the **text** of two files.
 {{/callout}}
 
-The ARender addon allows you to compare two files belonging to two different versions. By default, ARender compares the binary stored in the `file:content` property corresponding to the main file. You can access this feature from the [Compare Versions Screen]({{page version='' space='userdoc' page='compare'}}) by clicking on the **eye button**.
+With the ARender addon, you can compare the text of two different versions of a file. By default, ARender compares the binary stored in the `file:content` property corresponding to the main file. You can access this feature from the [Compare Versions Screen]({{page version='' space='userdoc' page='compare'}}) by clicking on the **eye icon**.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/compare-arender
@@ -387,7 +387,7 @@ The ARender addon allows you to compare two files belonging to two different ver
 --}}
 ![compare-arender](nx_asset://fb24e3d8-b22d-45ca-820e-f8b1bb8b17a4 ?w=650,border=true)
 
-It opens a new window with the two documents, highlighting what was deleted, modified and added.
+A new window is opened with the two documents side-by-side, highlighting text which has been deleted, modified or added.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/compare_arender_2
@@ -396,7 +396,7 @@ It opens a new window with the two documents, highlighting what was deleted, mod
 --}}
 ![compare_arender_2](nx_asset://7be7595f-3e11-468a-a004-1700e45e3ab3 ?w=650,border=true)
 
-Finally, you can see the annotations linked to each version on the same screen, and even annotate one file from this view.
+You can see the annotations linked to each version on the same screen, and even annotate one file from this view.
 
 ## Supported File Formats
 
@@ -410,4 +410,4 @@ The annotations module supports a large number of file formats.
 
 ## Going Further
 
-The connector can be customized in many different ways, for example if you want to have the possibility to watermark a document with other stamps than the one available by default, if you want some actions/tools displayed and/or hidden in the top bar of the annotation screen, etc.
+The connector can be customized in many different ways, such as adding new watermark stamps, displaying different actions/tools etc.
