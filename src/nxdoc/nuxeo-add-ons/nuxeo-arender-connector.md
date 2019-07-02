@@ -312,7 +312,7 @@ Arrows can also be used to take measurements on a document. To do so, once your 
 
 ### Watermark
 
-To watermark a document, two solutions are available: Print the document with a watermark, has explained in [the section below](#print-a-document) or use a stamp annotation.
+To watermark a document, two solutions are available: Print the document with a watermark, has explained in [the section below](#print) or use a stamp annotation.
 
 To **add a stamp**, click on the stamp button {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-stamps.png
