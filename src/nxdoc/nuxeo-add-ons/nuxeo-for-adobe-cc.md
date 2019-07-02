@@ -68,7 +68,7 @@ Once Nuxeo for Adobe CC is properly installed, launch InDesign CC 2018 or 2019 (
 
 If you have questions related to licensing, contact your Nuxeo sales representative or contact Nuxeo at contact@nuxeo.com.
 
-## Using the Nuxeo CC Connector
+## Using Nuxeo CC Connector
 
 ### Logging into Your Server
 
