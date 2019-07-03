@@ -16,7 +16,7 @@ The Nuxeo Platform offers all the necessary capabilities to build an application
 {{! /excerpt}}
 
 {{#> callout type='info' }}
-To get information about how Nuxeo, as a company, is ensuring its compliance with GDPR requirements, please refer to the [corporate website](https://www.nuxeo.com/about/gdpr/)
+To get information about how Nuxeo, as a company, is ensuring its compliance with GDPR requirements, please refer to the [corporate website](https://www.nuxeo.com/about/gdpr/).
 {{/callout}}
 
 ## Concept
