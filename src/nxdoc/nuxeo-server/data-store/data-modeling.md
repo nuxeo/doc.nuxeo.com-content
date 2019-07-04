@@ -604,7 +604,7 @@ Because a Document can be big (lots of fields including several files), a Docume
 
 Furthermore, even when you have very complex documents, you don't need all these data on each screen: in most screens you just need a few properties (title, version, lifecycle state, author, ...).
 
-In order to avoid these problems, the Nuxeo DocumentModel supports lazy-fetching: a DocumentModel is by default not fully loaded, only the field defined as prefetch are initially loaded. The DocumentModel is bound to the repository session that was used to read it and it will transparently fetch the missing data, block per block when needed.
+In order to avoid these problems, the Nuxeo DocumentModel supports lazy-fetching: a DocumentModel is by default not fully loaded, only the schemas defined as prefetch are initially loaded. The DocumentModel is bound to the repository session that was used to read it and it will transparently fetch the missing data, block per block when needed.
 
 You still have the possibility to disconnect a DocumentModel from the repository (all data will be fetched), but the default behavior is to have a lightweight Java object that will fetch additional data when needed.
 
