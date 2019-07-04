@@ -140,7 +140,7 @@ The main request uses a `UNION ALL` to include proxies in the results. If you do
 
 Note that requests to load fragments (steps 2 to 6) are not needed (or will be reduced) if the needed rows are already in the cache.
 
-Note that only properties configured as prefetched are loaded. If you need to access a property that is not prefetched for all your documents, you will have an extra database access for each documents (lazy loading, also called the N+1 problem).
+Note that only schemas configured as prefetched are loaded. If you need to access a property that is not in a prefetched schema for all your documents, you will have an extra database access for each documents (lazy loading, also called the N+1 problem).
 
 There is a `LIMIT` in the queries because the Page Provider for navigation uses paging by default. If you have more than 200 documents in a folder you will not see the total size of results. See [NXP-9494](https://jira.nuxeo.com/browse/NXP-9494) for more information.
 
