@@ -182,7 +182,7 @@ If you want to receive the emails, make sure you have [set up a test SMTP server
 
 ## Setting the Workflow's Availability
 
-In our case, we want the workflow to be available only for File documents on which the user has the Write permission. So we should do the following:
+In our case, we want the workflow to be available only for File documents on which the user has the Edit permission. So we should do the following:
 
 1. Go to the **Availability** tab.
 1. "Current user has one of the permissions": select **Edit**.
@@ -210,11 +210,11 @@ Let's define how the first step of the workflow, the marketing manager's approva
 
 Edit the **Accept/Reject** node by hovering over it and click on the edit icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}).
 
-1.  Title: `marketing manager validation`.
+1.  Title: `Marketing manager validation`.
 1.  Directive: "Please review this document for publication".
 1.  Due date expression: `CurrentDate.days(2)`.
 1.  Assignees: Use the **Add** button to add "Jane" (the marketing manager's username).
-1.  Grant permission to task assignee: "Write", so Jane can possibly modify the document.</br>
+1.  Grant permission to task assignee: "Edit", so Jane can possibly modify the document.</br>
     Result should look like the image below:
     {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Workflow Escalation Rules Example/marketing-validation-node-general-tab.png
@@ -271,14 +271,14 @@ If you already created workflows, you may know that by going into the Form tab, 
 
 However, in this case, we need a transition but no button. How could the user click on it if he is away? Therefore, we will simply create a transition:
 
-1.  Edit the marketing manager validation node, go to the **Transitions** tab.
+1.  Go back to the Marketing manager validation node and then to the **Transitions** tab.
 2.  Click on the **Add transition** button.
 3.  Name your new transition `escalate`.</br>
     From now on, a third transition point is available on the marketing manager validation node.
 
 You may see that the condition for this transition defaults to `true`. Every time a user completes a task by clicking on a button, the workflow engine will evaluate **ALL** transition conditions. **ANY** condition evaluated to true will be followed. Back to our example, this means that leaving the default value would end up in an escalation if the user clicks on a button, which is the exact contrary of what we want to achieve.
 
-To avoid this situation, we need to activate the **exclusive node** option. **This option tells the node to follow only the first transition that has been evaluated to true**. Back to our example, what does that imply?
+To avoid this situation, we need to activate the **Exclusive node** option. **This option tells the node to follow only the first transition that has been evaluated to true**. Back to our example, what does that imply?
 
 - If the user clicks on a button, the condition for this button will be evaluated to `true`. The workflow engine will follow this transition without evaluating the others.
 - If the user is away, when the escalation rule will be triggered, all conditions will be evaluated to `false` except for the escalation transition we just added. The workflow engine will then follow this transition.
@@ -296,13 +296,13 @@ Now, we should take care of transferring the task to the general manager if the 
 
 #### Creating the Escalation Rules
 
-A little theory about escalation rules: this functionality is used on nodes that require a user action, when the user has not yet completed the task. It automatically executes automation chains depending on conditions you decide. A scheduler will check these rules every 5 minutes by default at fixed time, when the minutes number end with 5 or 0 (thus not depending on when the server has been started). It will execute the rules once or multiple times depending on the parameters you have chosen.
+A little theory about escalation rules: this functionality is used on nodes that require a user action, when the user has not yet completed the task. It automatically executes automation chains depending on conditions you decide. A scheduler will check these rules every 5 minutes by default at a fixed time, when the minutes' number ends with 5 or 0 (thus not depending on when the server has been started). It will execute the rules once or multiple times depending on the parameters you have chosen.
 
 We need two rules for this node: one that reminds Jane to review the document every day, and one that will transfer the task to Eric in case Jane is away. We will start off with the reminder.
 
 ##### Reminder Escalation Rule
 
-Edit the `marketing managers validation` node, go to the **Escalation Rules** tab and click on the **Add escalation rule** button:
+Edit the `Marketing managers validation` node, go to the **Escalation Rules** tab and click on the **Add escalation rule** button:
 
 1.  **Id**:&nbsp;`pressReleaseReviewReminder`
 1.  **Condition**: if you paid close attention to what we did with transitions, you probably already understood that this situation has similarities and that leaving the default condition (true) will cause the rule to be executed as soon as the scheduler will check it. In this case, we need to change it. Replacing "true" with an [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}) will do the trick. In our case, we will use the following:
@@ -358,7 +358,7 @@ Now we'll go for the second one.
 
 ##### Transfer Escalation Rule
 
-Go back to the `marketing manager validation` node, on the **Escalation Rules** tab and **Add escalation rule** button:
+Go back to the `Marketing manager validation` node, on the **Escalation Rules** tab and **Add escalation rule** button:
 
 1. **Id**:&nbsp;`pressReleaseReviewEscalation`
 1. **Condition**: Once again we will replace `true` with an [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}):
@@ -383,11 +383,11 @@ Go back to the `marketing manager validation` node, on the **Escalation Rules** 
       <td colspan="1">&nbsp;</td>
     </tr>
     <tr>
-      <td colspan="1">Workflow context > Get open tasks</td>
+      <td colspan="1">Workflow context > Workflow.GetOpenTasks</td>
       <td colspan="1">&nbsp;</td>
     </tr>
     <tr>
-      <td colspan="1">Fetch > Document</td>
+      <td colspan="1">Fetch > Repository.GetDocument</td>
       <td colspan="1">
         **Value:** `@{This.get(0).id}`
       </td>
@@ -401,9 +401,9 @@ Go back to the `marketing manager validation` node, on the **Escalation Rules** 
   </div>
 
   It is not possible to simply change the assignee of a particular task. To do so we use:
-  - The&nbsp;Workflow context > Get open tasks operation to retrieve all open tasks for the current document.
-  - The Fetch > Document operation with a parameter returning only the first task found.
-  - The Workflow Context > Complete task operation to simulate a user action and resume the workflow. In our case, as we did not set any parameter to it, the workflow engine will review the possible transitions and execute the escalation transition since it is the only one set to "true".
+  - The **Workflow context > Get open tasks** operation to retrieve all open tasks for the current document.
+  - The **Fetch > Document** operation with a parameter returning only the first task found.
+  - The **Workflow Context > Complete task** operation to simulate a user action and resume the workflow. In our case, as we did not set any parameter to it, the workflow engine will review the possible transitions and execute the escalation transition since it is the only one set to "true".
 
 1. Click on **Save**.</br>
     And we're done with this node.
@@ -432,12 +432,12 @@ Good! On to the node edition.
 
 ### General Tab
 
-Hover your mouse over the node and click on the edit icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}):
+Hover your mouse over the Accept/Reject node and click on the edit icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}):
 1. Title: `General manager validation`.
 1. Directive: "Automatic task transfer: Please review this document for publication".
 1. Due date expression: `CurrentDate.days(2)`.
 1. Assignees: Use the "Add" button to add "Eric" (the general manager's username).
-1. Grant permission to task assignee: "Write", so Eric can modify the document if needed.</br>
+1. Grant permission to task assignee: "Edit", so Eric can modify the document if needed.</br>
     Result should look like the image below:
     {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Workflow Escalation Rules Example/general-manager-node-general-tab.png
@@ -480,6 +480,15 @@ Now that you are back on your graph, link the general manager's node `endWorkflo
     server#screenshot#up_to_date
 --}}
 ![graph-final.png](nx_asset://18d09633-b7bb-488d-8db6-20e8f176a046 ?w=400,border=true)
+
+## Configuring Workflow Layouts
+
+The last step is to configure the layouts to be displayed on your interface, to do so:
+
+1. On the graph tab, click on **Configure Layouts in Designer**. </br>
+    You arrive on the `pressreleasevalidation` workflow screen on Designer side.
+1. Click on **Configure Missing Layouts**.
+1. Save your changes.
 
 You are all done! You can now [deploy your Studio project on your instance]({{page page='nuxeo-dev-tools-extension'}}#hot-reload) and have fun with your brand new workflow!
 
