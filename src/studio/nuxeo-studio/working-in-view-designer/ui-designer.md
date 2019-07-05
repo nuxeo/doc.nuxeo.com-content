@@ -14,7 +14,7 @@ Watch the related course on Nuxeo University:</br>
 ![]({{file name='university-quickstart-studio-project.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
-The UI tab gives you access to several elements to customize the UI section that you want, dashboard, menus, themes, default document view, integrate new custom pages, add new actions, add translations, etc.
+The UI tab gives you access to several elements to customize the UI section that you want, dashboard, menus, themes, default document view, integrate new custom pages, add new buttons, translations, etc.
 
 ![]({{file name='ui-designer.png'}} ?w=300,border=true)
 
@@ -117,12 +117,12 @@ Allows you to create drawer items and drawer menus to customize your drawer menu
 
 - **Drawer Menus**: You can integrate new custom pages if you need to display specific information, like access to your profile information, the configuration of cloud services or some kind of specific report. Items can be added to Administration or User Menu. Each contribution adds a menu entry to the Administration or User menus and a corresponding element in the main view.
 
-## Actions
+## Buttons
 
 Allows you to create and edit buttons and links as elements and display them to any existing category/area, called slots, in Web UI.
 
-- **Actions**: Can display any element whether it is provided by Nuxeo or a custom element you wrote.
-- **Operations**: Use the element `nuxeo-operation-button` for quick and easy access.
+- **Button**: Configure a button and attach an automation operation, an automation chain or a script to it.
+- **Custom button**: Use code to create your custom element and bind it to a button. A typical example is displaying a confirmation dialog that will execute specific logic.
 
 ## Themes
 

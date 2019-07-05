@@ -197,7 +197,7 @@ The **Listing & Views** menu (and therefore the **Content Views** and **Search**
 
 ## User Actions
 
-User actions are specific to Nuxeo JSF UI. In Nuxeo Web UI, User actions are called Actions and can be found under **UI** > **Actions** menu.
+User actions are specific to Nuxeo JSF UI. In Nuxeo Web UI, User actions are called Buttons and can be found under **UI** > **Buttons** menu.
 
 These actions can either be linked to an automation chain (or an automation scripting) or a specific element.
 
