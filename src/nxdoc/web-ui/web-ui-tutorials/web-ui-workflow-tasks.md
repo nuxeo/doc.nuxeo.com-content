@@ -50,7 +50,12 @@ Now we will add a custom workflow variable called **Type** to specify which type
 1. On the **Graph** tab, select an **Accept/Reject** user tasks and drag and drop it on the graph.
 1. Click on the **Edit** button next to the task.
 1. Fill in the **General** tab as shown below:
-  ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='general-tab-custom-wf.png'}} ?w=350,border=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Workflow Tasks/general-tab-custom-wf.png
+      name: general-tab-custom-wf.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![general-tab-custom-wf.png](nx_asset://905350af-8553-4096-9661-e282f87ece4d ?w=350,border=true)
 1. On the **Variables** tab, activate the custom variable by moving it to the right box.
 1. Save your changes.
   You should end up with a graph like this:
