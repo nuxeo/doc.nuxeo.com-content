@@ -13,35 +13,67 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Upcoming Changes
 
-### More Consistent Layouts
-- When creating a **Create**, **Edit** or **Import** layout, the title field is automatically set as required to keep consistency with the default Web UI behavior.
+### Actions Renamed As Buttons
+Actions menu in Designer will be renamed as `buttons`, and the related options will be renamed as following:
+- `Operation Action` becomes `Button`. Choose this option to create a button using configuration only.
+- `Action` becomes `Custom Button`. Choose this to create your own button element using code for extensive capabilities.
 
-- When creating a layout for a workflow task, fewer properties are generated to avoid information duplication with the one exposed in Web UI.
+Icons will change too in order to reflect the options more clearly.
 
-### New Options in Page Provider Screen
-- `file:content` sub-fields are exposed when defining an aggregate: to configure searches on file size or file MIME type for instance.
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2019-07/button-creation-plus-button
+    name: button-creation-plus-button.png
+    studio_designer#screenshot#up_to_date
+--}}
+![button-creation-plus-button](nx_asset://62c8b710-4e68-4849-aa41-3ff0cfab5d82 ?w=152,border=true)
 
-- `ecm:ancestorId` is exposed in both predicates and aggregates: can be used as an alternative to `ecm:path` when you know the document id instead.
-- `BETWEEN` operator is exposed in predicates for dates, float and integer numbers.
+The `+` button in Designer will undergo a refresh at the same time, to be more explicit:
+- Tooltips are shown on the option you choose,
+- When only two options are available, clicking the `+` button directly will take you to the one that is the simplest to use.
+
+### Better Contextual Help
+Studio Designer will show contextual help on click, so that you can copy/paste code samples and click on documentation links.
+
+### Help In Page Provider Configuration
+- Aggregates for a page provider will provide default values, for instance on the date format.
+- Contextual help will be overall improved to guide you on options that had no previous explanation, be simpler to understand otherwise and provide samples.
+- Quick filter name will be shown in the user interface when no translation has been defined for it.
 
 ### Polymer 3 Migration
-
 Compatibility for Nuxeo Studio with Polymer 3 to keep our technical stack up to date.
 
-## Upcoming Bugfixes
-
-- Ability to use complex multivalued fields in page provider predicates ([NXS-5191](https://jira.nuxeo.com/browse/NXS-5191))
-- Workflow resolution actions not displayed when there are several of them ([NXS-5201](https://jira.nuxeo.com/browse/NXS-5201))
-- Branches should not be able to be merged when you have work in progress ([NXS-5215](https://jira.nuxeo.com/browse/NXS-5215))
-- Studio Designer support for multiple levels of schema inheritance ([NXS-5173](https://jira.nuxeo.com/browse/NXS-5173))
-- Branches can be deleted again and warning message is improved ([NXS-5304](https://jira.nuxeo.com/browse/NXS-5304))
-- The correct configuration is generated when drag and dropping the lifecycle state in a table result layout ([NXS-5257](https://jira.nuxeo.com/browse/NXS-5257))
-
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.9.0','3.10.0','3.11.0','3.12.0'%29) is available in our bug tracking tool.
+### More Upcoming Changes
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.14.0','3.15.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2019-04' page='studio-updates-2019-04'}}}
+### Search on File Type or Size
+It is possible to define aggregates on the sub-fields for a blob property. This can be used to provide search options to find files of a specific type, or based on the file size for example.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2019-07/aggregates-blob-sub-properties
+    name: aggregates-blob-sub-properties.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![aggregates-blob-sub-properties](nx_asset://1f8f789f-809b-43d8-8c22-c2d74c0d6b1c ?w=650,border=true)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2019-07/aggregates-blob-sub-properties-search-form
+    name: Screenshot from 2019-07-08 16-38-53.png
+    1.1.3#screenshot#up_to_date
+--}}
+![aggregates-blob-sub-properties-search-form](nx_asset://ba6d5300-6056-40bc-9d59-4d326befd8b6 ?w=334)
+
+### Other Noteworthy Mentions
+- In workflows, resolution actions is renamed as task buttons ([NXS-5084](https://jira.nuxeo.com/browse/NXS-5084)).
+- In workflows, "exclusive node" is renamed as "follow only first true transition" ([NXS-5085](https://jira.nuxeo.com/browse/NXS-5085)).
+
+{{{multiexcerpt 'studio-updates-2019-05-and-06-changes' page='studio-updates-2019-05-and-06'}}}
+
+{{{multiexcerpt 'studio-updates-2019-05-and-06-bugfix' page='studio-updates-2019-05-and-06'}}}
+
+## Learn More
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.13.0','3.13.1'%29) is available in our bug tracking tool.
 
 ---
 
@@ -49,6 +81,7 @@ Compatibility for Nuxeo Studio with Polymer 3 to keep our technical stack up to 
 
 | Release&nbsp;Date                                           | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [May/June 2019]({{page page='studio-updates-2019-05-and-06'}})      | More consistent layouts, new options in page provider screen. |
 | [April 2019]({{page page='studio-updates-2019-04'}})      | Support to select all schemas in page providers, improved support for workflow graph definition. |
 | [March 2019]({{page page='studio-updates-2019-03'}})      | Easier search configuration, override Web UI default configuration, select your default theme in a click. |          
 | [February 2019]({{page page='studio-updates-2019-02'}})      | Introducing the Layout Blocks and Git Status bar as well as an easier folderish documents configuration.                                                                                                                                                                               |
