@@ -57,6 +57,10 @@ It is possible to define aggregates on the sub-fields for a blob property. This 
 --}}
 ![aggregates-blob-sub-properties](nx_asset://1f8f789f-809b-43d8-8c22-c2d74c0d6b1c ?w=650,border=true)
 
+Use the `histogram` or `range` aggregate types in combination with the `length` property for the file size, the `terms` aggregate with the `mime-type` property for the file type.
+
+These options work with any blob property, multivalued ones as well.
+
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2019-07/aggregates-blob-sub-properties-search-form
     name: Screenshot from 2019-07-08 16-38-53.png
