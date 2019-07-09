@@ -14,11 +14,12 @@ Discover upcoming and recent changes in Nuxeo Studio.
 ## Upcoming Changes
 
 ### Actions Renamed As Buttons
-Actions menu in Designer will be renamed as `buttons`, and the related options will be renamed as following:
-- `Operation Action` becomes `Button`. Choose this option to create a button using configuration only.
-- `Action` becomes `Custom Button`. Choose this to create your own button element using code for extensive capabilities.
 
-Icons will change too in order to reflect the options more clearly.
+Actions menu in Designer has been renamed as `Buttons`, and the related options as follows:
+- `Operation Action` becomes `Button`: Choose this option to create a button using configuration only.
+- `Action` becomes `Custom Button`: Choose it to create your own button element using code for extensive capabilities.
+
+Icons changed too to reflect the options more clearly.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2019-07/button-creation-plus-button
@@ -27,35 +28,40 @@ Icons will change too in order to reflect the options more clearly.
 --}}
 ![button-creation-plus-button](nx_asset://62c8b710-4e68-4849-aa41-3ff0cfab5d82 ?w=152,border=true)
 
-The `+` button in Designer will undergo a refresh at the same time, to be more explicit:
+The `+` button in Designer has been refreshed at the same time, to be more explicit:
 - Tooltips are shown on the option you choose,
-- When only two options are available, clicking the `+` button directly will take you to the one that is the simplest to use.
+- When only two options are available, clicking the `+` button directly leads you to the one that is the simplest to use.
 
 ### Better Contextual Help
-Studio Designer will show contextual help on click, so that you can copy/paste code samples and click on documentation links.
+
+Studio Designer shows contextual help on click so that you can copy/paste code samples and click on documentation links.
 
 ### Help In Page Provider Configuration
-- Aggregates for a page provider will provide default values, for instance on the date format.
-- Contextual help will be overall improved to guide you on options that had no previous explanation, be simpler to understand otherwise and provide samples.
-- Quick filter name will be shown in the user interface when no translation has been defined for it.
+
+- Aggregates for a page provider display default values, for instance on the date format.
+- Contextual help are improved to guide you on options that had no previous explanation, be simpler to understand otherwise and provide samples.
+- Quick filter name is shown in the user interface when no translation has been defined for it.
 
 ### Polymer 3 Migration
+
 Compatibility for Nuxeo Studio with Polymer 3 to keep our technical stack up to date.
 
 ### More Upcoming Changes
+
 [More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.14.0','3.15.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
 ### Search on File Type or Size
-It is possible to define aggregates on the sub-fields for a blob property. This can be used to provide search options to find files of a specific type, or based on the file size for example.
+
+It is possible to define aggregates on the sub-fields for a blob property. It can be used to provide search options to find files of a specific type, or based on the file size for example.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2019-07/aggregates-blob-sub-properties
     name: aggregates-blob-sub-properties.png
     studio_modeler#screenshot#up_to_date
 --}}
-![aggregates-blob-sub-properties](nx_asset://1f8f789f-809b-43d8-8c22-c2d74c0d6b1c ?w=650,border=true)
+![aggregates-blob-sub-properties](nx_asset://1f8f789f-809b-43d8-8c22-c2d74c0d6b1c ?w=450,border=true)
 
 Use the `histogram` or `range` aggregate types in combination with the `length` property for the file size, the `terms` aggregate with the `mime-type` property for the file type.
 
@@ -66,11 +72,11 @@ These options work with any blob property, multivalued ones as well.
     name: Screenshot from 2019-07-08 16-38-53.png
     1.1.3#screenshot#up_to_date
 --}}
-![aggregates-blob-sub-properties-search-form](nx_asset://ba6d5300-6056-40bc-9d59-4d326befd8b6 ?w=334)
+![aggregates-blob-sub-properties-search-form](nx_asset://ba6d5300-6056-40bc-9d59-4d326befd8b6 ?w=250)
 
 ### Other Noteworthy Mentions
 - In workflows, resolution actions is renamed as task buttons ([NXS-5084](https://jira.nuxeo.com/browse/NXS-5084)).
-- In workflows, "exclusive node" is renamed as "follow only first true transition" ([NXS-5085](https://jira.nuxeo.com/browse/NXS-5085)).
+- In workflows, "exclusive node" is renamed as "Follow only first true transition" ([NXS-5085](https://jira.nuxeo.com/browse/NXS-5085)).
 
 {{{multiexcerpt 'studio-updates-2019-05-and-06-changes' page='studio-updates-2019-05-and-06'}}}
 
@@ -100,8 +106,8 @@ These options work with any blob property, multivalued ones as well.
 | [April 2018]({{page page='2018-04-02-studio-73-9'}})        | You can now configure your project as a real application containing dependencies on any public addon without having to make a dedicated custom bundle. This release also brings improvements to our Maven integration. |
 | [March 2018]({{page page='2018-03-05-studio-73-8'}})        | A REST API to trigger Studio releases, a revamped editor for page providers results and the ability to declare constraints for workflow variables and node variables.                                                  |
 
+{{! multiexcerpt name='studio-feedback'}}
 ## We Want Your Feedback!
 
 Feel free to let us know how we could [make Studio better](https://portal.prodpad.com/eb062eda-6d54-11e7-8513-22000a2145da) for you!
-
 {{! /multiexcerpt}}
