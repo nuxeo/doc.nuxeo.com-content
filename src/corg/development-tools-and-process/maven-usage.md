@@ -745,7 +745,7 @@ Regarding the tests, with `-fae` option, Maven will remember the failing tests a
 
 ## Tips and Workarounds
 
-### Do not use `activeByDefault` - Activation by the Absence of a Property
+### Do not use `activeByDefault` - Use Activation by the Absence of a Property
 
 The `activeByDefault` profile configuration parameter should never be used, instead rely on the activation by the absence of a property as a workaround.
 
