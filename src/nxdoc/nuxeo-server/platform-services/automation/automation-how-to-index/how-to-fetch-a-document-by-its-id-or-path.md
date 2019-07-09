@@ -1,5 +1,5 @@
 ---
-title: How to Fetch a Document by Its ID or Path
+title: 'HOWTO: Fetch a Document by Its ID or Path'
 description: Learn how to use the operation Document.Fetch to get a document by its ID or its path.
 review:
     comment: ''

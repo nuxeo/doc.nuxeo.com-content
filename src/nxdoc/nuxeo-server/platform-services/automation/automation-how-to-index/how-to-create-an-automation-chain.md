@@ -1,8 +1,8 @@
 ---
-title: How to Create an Automation Chain
+title: 'HOWTO: Create an Automation Chain'
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2019-07-09'
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:
     howto:
@@ -213,12 +213,10 @@ history:
         date: '2010-04-23 01:56'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 This guide explains how to create and configure an automation chain using Nuxeo Studio.
-
 {{! /excerpt}}
 
 This is done in two steps:
@@ -233,68 +231,100 @@ This is done in two steps:
 1.  In the left menu, click on **Automation** and then on **Automation Chains**.
 2.  Click on the **New** button.
 3.  Give your automation chain an ID and click on the **Next** button.
-    ![]({{file name='NXS-automation-create.png'}} ?w=350,border=true)
-    The automation chain editor is displayed.
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Create an Automation Chain/NXS-automation-create.png
+      name: NXS-automation-create.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![NXS-automation-create.png](nx_asset://5553a6aa-ac63-4da1-8c1d-d44f49281f38 ?w=350,border=true)
+    The automation chain editor is displayed.</br>  
     The **Fetch > Context Document(s)** is automatically added as the first operation of the chain.
 4.  If needed, remove the **Fetch > Context Document(s)** and replace it with another Fetch operation. The Fetch operation feeds the chain with some document input, whether it is one document or a list of documents. There are various ways to fetch:
-    *   **Context document** will bring either the UI Current document, or the document attached to the event (depending on what you bound your operation chain, see later).
-    *   **Fetch Query** will bring back the result of the query as a document list.
-    *   **Get Document** fetches a document by its path.
+    - **Context document** will bring either the UI Current document, or the document attached to the event (depending on what you bound your operation chain, see later).
+    - **Fetch Query** will bring back the result of the query as a document list.
+    - **Get Document** fetches a document by its path.
 5.  Start to drag and drop operations in the flow, respecting their input and output types. Leverage context and scripting capabilities to capture and reuse information all along the flow.
-    ![]({{file name='NXS_automation_add_operation.png'}} ?w=600,border=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Insert a User Action /validateDocument-chain-studio.png.1562678242765
+      name: validateDocument-chain-studio.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![validateDocument-chain-studio.png](nx_asset://e6da24c4-83da-4127-a93e-a93016bf89c9 ?w=650,border=true)
 
     {{#> callout type='tip' }}
-
     Click on the **Switch editor** button to write your chain in YAML or paste a chain copied from a how-to for instance.
-
     {{/callout}}
 6.  Save your chain.
     You now need to bind your automation chain by creating a new action or a new event handler.
 
 ## Automation Chain Binding
 
-Binding the automation chain to a button, an action or an event handler is done in the User action and event handler edition forms.
+Binding the automation chain to a button, an action or an event handler is done in the Buttons menu in Studio Designer.
 
-### Binding to an Action {{> anchor 'automation-chain-binding-button'}}
+### To an Action {{> anchor 'automation-chain-binding-button'}}
 
 **To bind the chain to a button/action:**
 
-1.  Create a new user action from the Studio tree:
-    1.  In the **Automation** menu entry, click on **User Actions**.
-    2.  Click on the **New** button.
-    3.  On the pop up window displayed, give the action an ID, a name and select to which [category of actions]({{page page='actions-display'}}) it should be tied (contextual icons, folder bar buttons, clipboard actions, user links...) then click on **Next**.
-        ![]({{file name='NXS-action-creation-form.png'}} ?w=350,border=true)
-        The action edition form is displayed.
-2.  Fill in all the required information : Label, icon, ...
-3.  In the **Action Activation** section, give the necessary filtering information, to target your action to the right context.
-    ![]({{file name='NXS-action-edition-1.png'}} ?w=450,border=true)
-4.  In the **Action Execution** section, select the automation chain to which you want the action to be bound.
-    ![]({{file name='NXS-action-edition-form-2.png'}} ?w=350,border=true)
-5.  Click on the **Save** button.
+1. In Designer, go to **Actions** menu and hover over the `+` button and select **Operation**
+1. On the creation form, on the Element Binding section:
+    - Give your action a name, a slot type (the schema on the right will help you check where your action will be displayed), choose an icon, a label.
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Create an Automation Chain/NXS-action-edition-1.png
+      name: NXS-action-edition-1.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![NXS-action-edition-1.png](nx_asset://fa7ccf1f-470b-44fb-913a-cc6c649bec00 ?w=400,border=true)
+    - On the **Operation** field select the automation chain to which you want the action to be bound.
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Insert a User Action /NXS-action-edition-form-2.png
+      name: NXS-action-edition-form-2.png
+      studio_designer#screenshot#up_to_date
+    --}}
+    ![NXS-action-edition-form-2.png](nx_asset://554dd8db-3236-4cb2-9edb-ba35fd216c38 ?w=400,border=true)
+    - On the **Activation filter** give the necessary filtering information, to target your action to the right context.
+1. Click on **Save**.
 
-### Binding to an Event Handler {{> anchor 'automation-chain-binding-event-handler'}}
+### To an Event Handler {{> anchor 'automation-chain-binding-event-handler'}}
 
 **To bind the chain to an event handler:**
 
-1.  Create a new event handler from the Studio tree:
-    1.  In the **Automation** menu entry, click on **Event Handlers**.
-    2.  Click on the **New** button.
-    3.  On the pop up window displayed,, give the event handler an ID and click **Next**.
-        ![]({{file name='NXS-event-handler-creation.png'}} ?w=350,border=true)
+1.  On Studio Modeler side, go to **Automation** > **Event Handlers** and click on the **New**.</br>
+    Give your Event Handler a name and click on **Ok**.
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Create an Automation Chain/NXS-event-handler-creation.png
+      name: NXS-event-handler-creation.png
+      studio_modeler#popup#up_to_date
+    --}}
+    ![NXS-event-handler-creation.png](nx_asset://5b656cec-2655-4bd3-a537-952aa7b7e7f3 ?w=350,border=true)
 2.  Choose to which events the event handler should be bound (documentCreated, documentUpdated...) and indicate whether the chain should be run synchronously or asynchronously.
-    ![]({{file name='NXS-event-handler-edition-form-1.png'}} ?w=350,border=true)
+    {{!--      ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Create an Automation Chain/NXS-event-handler-edition-form-1.png
+      name: NXS-event-handler-edition-form-1.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![NXS-event-handler-edition-form-1.png](nx_asset://e4b325ef-0605-401e-b1e9-459b289c7cc7 ?w=350,border=true)
 3.  In the **Event handler Activation** section, fill in the filtering information, to target your event handler to the right context.
-    ![]({{file name='NXS-event-handler-edition-form-2.png'}} ?w=450,border=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Create an Automation Chain/NXS-event-handler-edition-form-2.png
+      name: NXS-event-handler-edition-form-2.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![NXS-event-handler-edition-form-2.png](nx_asset://57d0e110-a85a-4b5c-81df-adb77c8b3fc8 ?w=350,border=true)
 4.  Choose the automation chain to which you want the event handler to be bound.
-    ![]({{file name='NXS-event-handler-edition-form-3.png'}} ?w=350,border=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Create an Automation Chain/NXS-event-handler-edition-form-3.png
+      name: NXS-event-handler-edition-form-3.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![NXS-event-handler-edition-form-3.png](nx_asset://3d2006cb-1b3e-4a0f-98f1-f1d8c476c09d ?w=350,border=true)
 5.  Click on the **Save** button.
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{! multiexcerpt name='popular-how-tos'}}{{#> panel heading='Popular How-Tos'}}
 
-- [How to Export Data Using Document Template and Automation]({{page page='how-to-export-data-using-document-template-and-automation'}})
-- [How to Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
+- [HOWTO: Export Data Using Document Template and Automation]({{page page='how-to-export-data-using-document-template-and-automation'}})
+- [HOWTO: Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}{{! /multiexcerpt}}</div><div class="column medium-6">{{! multiexcerpt name='related-documentation'}}{{#> panel heading='Related Documentation'}}

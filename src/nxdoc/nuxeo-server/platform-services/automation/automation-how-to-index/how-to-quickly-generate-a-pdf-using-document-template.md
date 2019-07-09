@@ -1,5 +1,5 @@
 ---
-title: How to Quickly Generate a PDF Using Document Template
+title: 'HOWTO: Quickly Generate a PDF Using Document Template'
 description: Learn how to get a PDF printable version of the data stored on your document as properties using Nuxeo Studio.
 review:
     comment: ''
