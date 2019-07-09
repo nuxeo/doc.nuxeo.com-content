@@ -312,7 +312,7 @@ Nuxeo holds a Maven repository here: [http://maven.nuxeo.org/](http://maven.nuxe
 
 You should install Maven on your development box by downloading the latest archive from [http://maven.apache.org/download.html](http://maven.apache.org/download.html) and then extract the archive into `/opt` (for instance).
 
-As usual, you have to put the mvn executable into the path of your environment, include the `bin/` sub-directory in your `PATH` by adding in your `.bashrc`(or `.profile`,&nbsp;`.zprofile`, ...) something like:
+As usual, you have to put the mvn executable into the path of your environment, include the `bin/` sub-directory in your `PATH` by adding in your `.bashrc`(or `.profile`, `.zprofile`, ...) something like:
 
 ```
 export M2_HOME=/opt/apache-maven-3.3.3/
@@ -356,7 +356,7 @@ You will find there a lot of "group", "hosted" and "proxy" repositories:
 
 There are three solutions for enabling your Maven build to use Nuxeo repositories:
 
-*   add&nbsp;`public` and&nbsp;`public-snapshot` repositories in your POM:
+*   add `public` and `public-snapshot` repositories in your POM:
 
 ```xml
 <repositories>
@@ -385,7 +385,7 @@ There are three solutions for enabling your Maven build to use Nuxeo repositorie
 
 ```
 
-*   add&nbsp;`public` and&nbsp;`public-snapshot` repositories in your `$M2_REPO/settings.xml`:
+*   add `public` and `public-snapshot` repositories in your `$M2_REPO/settings.xml`:
     The same sentence must be put inside a profile.
 
 ```xml
@@ -454,7 +454,7 @@ If you are behind an HTTP proxy, see [http://maven.apache.org/settings.html#Prox
 
 ### Configure Hotfix Repositories
 
-Nuxeo customers have access to two additional repositories where the "hotfix" artifacts are deployed: `hotfix-releases` and&nbsp;`hotfix-snapshots`.
+Nuxeo customers have access to two additional repositories where the "hotfix" artifacts are deployed: `hotfix-releases` and `hotfix-snapshots`.
 Contact the Nuxeo support to get an account.
 
 Add the repositories in your POM:
@@ -521,15 +521,13 @@ Set your credentials in your `$M2_REPO/settings.xml`:
   </servers>
 ```
 
-&nbsp;
-
 ### Configuring Plugin Repositories
 
-Maven plugins are considered as special artifacts: their repositories must also be configured. Follow exactly the same instructions as above replacing `repositories/repository`&nbsp;sections with `pluginRepositories/pluginRepository`.
+Maven plugins are considered as special artifacts: their repositories must also be configured. Follow exactly the same instructions as above replacing `repositories/repository` sections with `pluginRepositories/pluginRepository`.
 
 ### Configure Eclipse with Maven
 
-The [maven-eclipse-plugin](http://maven.apache.org/plugins/maven-eclipse-plugin/usage.html) provides a goal&nbsp;(`eclipse:configure-workspace`) for automatically configuring Eclipse with Maven but it's easy to manually configure: in Eclipse, go to `Preferences/Java/Build Path/Classpath Variables`, click `New`, name `M2_REPO` and browse to your local Maven repository (usually `~/.m2/repository`).
+The [maven-eclipse-plugin](http://maven.apache.org/plugins/maven-eclipse-plugin/usage.html) provides a goal (`eclipse:configure-workspace`) for automatically configuring Eclipse with Maven but it's easy to manually configure: in Eclipse, go to `Preferences/Java/Build Path/Classpath Variables`, click `New`, name `M2_REPO` and browse to your local Maven repository (usually `~/.m2/repository`).
 
 ## Generate a New Project with the Nuxeo-Archetype-Start Archetype
 
@@ -582,15 +580,15 @@ Note that when using for instance `mvn install`, even if a module is not rebuilt
 
 ### Multi-Thread
 
-Maven 3 enables multi-threaded builds. Of course, it requires the activated plugins being thread-safe, as well as the Unit Tests code. See below for&nbsp;`-T` option details.
+Maven 3 enables multi-threaded builds. Of course, it requires the activated plugins being thread-safe, as well as the Unit Tests code. See below for `-T` option details.
 
 ### No SNAPSHOT Updates and Offline Mode
 
-See related `-o` and&nbsp;`-nsu` options below.
+See related `-o` and `-nsu` options below.
 
 ### Skip Tests
 
-Skip all tests execution with&nbsp;`-DskipTests`(Unit Tests and Integration Tests).
+Skip all tests execution with `-DskipTests`(Unit Tests and Integration Tests).
 
 Skip only the Integration Tests execution with `-DskipITs`.
 
@@ -604,21 +602,21 @@ Avoid use of `-Dmaven.test.skip=true` which also skips the tests compilation.
 
 In the Maven Surefire Test Framework:
 
-*   Unit Tests are managed by the&nbsp;[`maven-surefire-plugin`](http://maven.apache.org/surefire/maven-surefire-plugin/)&nbsp;during the `test` phase.
-*   Integration Tests are&nbsp;managed by the&nbsp;[`maven-failsafe-plugin`](http://maven.apache.org/surefire/maven-failsafe-plugin/) during the `integration-test` and&nbsp;`verify` phases.
+*   Unit Tests are managed by the [`maven-surefire-plugin`](http://maven.apache.org/surefire/maven-surefire-plugin/) during the `test` phase.
+*   Integration Tests are managed by the [`maven-failsafe-plugin`](http://maven.apache.org/surefire/maven-failsafe-plugin/) during the `integration-test` and `verify` phases.
 *   Test classes selection is based on the filename patterns and the plugin configuration: see [Surefire Inclusions and Exclusions of Tests](http://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html) and [Failsafe Inclusions and Exclusions of Tests](http://maven.apache.org/surefire/maven-failsafe-plugin/examples/inclusion-exclusion.html).
 
 In the Nuxeo Test Framework:
 
 *   There is no difference about the Unit Tests except that they can act like Integration Tests: "unit testing" multiple modules at once, at a higher level than usual per-module Unit Tests.
-    That advanced behavior may disturb analysis tools (like Cobertura, Jacoco, SonarQube...) and require a specific configuration to get relevant&nbsp;coverage reports (see `org.nuxeo:nuxeo-ecm` POM).
+    That advanced behavior may disturb analysis tools (like Cobertura, Jacoco, SonarQube...) and require a specific configuration to get relevant coverage reports (see `org.nuxeo:nuxeo-ecm` POM).
 *   Integration Tests designate Functional and Performance Tests.
-*   Selenium, FunkLoad and other custom Integration Tests are&nbsp;managed by the [`ant-assembly-maven-plugin`](https://github.com/nuxeo/ant-assembly-maven-plugin) which mimics [`maven-failsafe-plugin`](http://maven.apache.org/surefire/maven-failsafe-plugin/) behaviors, honoring its main properties and output format.
-*   WebDriver Integration Tests are&nbsp;managed by the [`maven-failsafe-plugin`](http://maven.apache.org/surefire/maven-failsafe-plugin/); the [`ant-assembly-maven-plugin`](https://github.com/nuxeo/ant-assembly-maven-plugin) acts only during `pre-integration-test` and `post-integration-test` phases for the environment set up and tear down.
+*   Selenium, FunkLoad and other custom Integration Tests are managed by the [`ant-assembly-maven-plugin`](https://github.com/nuxeo/ant-assembly-maven-plugin) which mimics [`maven-failsafe-plugin`](http://maven.apache.org/surefire/maven-failsafe-plugin/) behaviors, honoring its main properties and output format.
+*   WebDriver Integration Tests are managed by the [`maven-failsafe-plugin`](http://maven.apache.org/surefire/maven-failsafe-plugin/); the [`ant-assembly-maven-plugin`](https://github.com/nuxeo/ant-assembly-maven-plugin) acts only during `pre-integration-test` and `post-integration-test` phases for the environment set up and tear down.
 
 {{/callout}}
 
-&nbsp;
+
 
 ## Basic Maven Options
 
@@ -656,7 +654,7 @@ Nuxeo default snapshots update policy is "always", so you need this option only 
  -nsu,--no-snapshot-updates             Suppress SNAPSHOT updates
 ```
 
-&nbsp;
+
 
 ## Advanced Maven Options
 
@@ -726,17 +724,16 @@ Maven will skip modules until it reaches the named module. Useful when your buil
 -X,--debug                             Produce execution debug output
 ```
 
-&nbsp;
 
-There are two possible errors raised by the Maven plugins: `MojoExecutionException` and `MojoFailureException`. A `MojoExecutionException` is a fatal exception, stopping the build; whereas a `MojoFailureException` is more like a warning for which you can customize the build result with the following options. Those options are common to all plugins and must be preferably&nbsp;used to plugins' specific options such as&nbsp;`-Dmaven.test.haltafterfailure=true` or `-Dmaven.test.failure.ignore=true`.
+
+There are two possible errors raised by the Maven plugins: `MojoExecutionException` and `MojoFailureException`. A `MojoExecutionException` is a fatal exception, stopping the build; whereas a `MojoFailureException` is more like a warning for which you can customize the build result with the following options. Those options are common to all plugins and must be preferably used to plugins' specific options such as `-Dmaven.test.haltafterfailure=true` or `-Dmaven.test.failure.ignore=true`.
 
 ```
 -fae,--fail-at-end                     Only fail the build afterwards; allow all non-impacted builds to continue
 ```
 
-Regarding the tests, with&nbsp;`-fae` option, Maven will remember the failing tests and skip their downstream (dependent) modules but only report the failures after the whole build. This is more or less equivalent to the `maven.test.haltafterfailure` Surefire option.
+Regarding the tests, with `-fae` option, Maven will remember the failing tests and skip their downstream (dependent) modules but only report the failures after the whole build. This is more or less equivalent to the `maven.test.haltafterfailure` Surefire option.
 
-&nbsp;
 
 ```
 -ff,--fail-fast                        Stop at first failure in reactorized builds
@@ -748,7 +745,7 @@ Regarding the tests, with&nbsp;`-fae` option, Maven will remember the failing te
 
 ## Tips and Workarounds
 
-### Fix `maven-eclipse-plugin`&nbsp;Warning about Workspace's vm (Mac OS X Only)
+### Fix `maven-eclipse-plugin` Warning about Workspace's vm (Mac OS X Only)
 
 Because of indefinitely unresolved issue [MECLIPSE-668](http://jira.codehaus.org/browse/MECLIPSE-668), Mac OS X users get the following warning message when running `mvn eclipse:eclipse` command:
 `[WARNING] Workspace defines a VM that does not contain a valid jre/lib/rt.jar: /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home`
@@ -761,7 +758,7 @@ sudo mkdir -p jre/lib
 sudo ln -s /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar jre/lib/rt.jar
 ```
 
-### Common&nbsp;`settings.xml`&nbsp;File for Nuxeo Core Developers
+### Common `settings.xml` File for Nuxeo Core Developers
 
 {{#> panel type='code' heading='settings.xml'}}
 
@@ -1011,7 +1008,7 @@ If you want to expose your test class to be reused in other test classes of proj
 
 {{/panel}}
 
-If you don't want to include the manifest file of your bundle to use the one defined in your test resources folder, you can add the following code in the&nbsp;`execution` tag of your pom:
+If you don't want to include the manifest file of your bundle to use the one defined in your test resources folder, you can add the following code in the `execution` tag of your pom:
 
 ```xml
 <configuration>
