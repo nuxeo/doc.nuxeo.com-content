@@ -745,6 +745,51 @@ Regarding the tests, with `-fae` option, Maven will remember the failing tests a
 
 ## Tips and Workarounds
 
+### Do not use `activeByDefault` - Activation by the Absence of a Property
+
+The `activeByDefault` profile configuration parameter should never be used, instead rely on the activation by the absence of a property as a workaround.
+
+#### No
+
+```xml
+     <profile>
+       <id>defaultProfile</id>
+       <activation>
+         <activeByDefault>true</activeByDefault>
+       </activation>
+     </profile>
+```
+
+`mvn help:active-profiles` shows that the profile `defaultProfile` is **implicitly deactivated** if any other profile is active (which is more than frequent), making the behavior variable, depending on the environment and the POM content.
+
+`mvn help:active-profiles -PanotherProfile` will **implicitly deactivate** the "(expected to be) active by default profile" `defaultProfile`!
+
+#### Yes
+
+```xml
+     <profile>
+       <id>defaultProfile</id>
+       <activation>
+         <property>
+           <name>!skipDefaultProfile</name>
+         </property>
+       </activation>
+     </profile>
+```
+
+`mvn help:active-profiles` shows that the profile is always activated unless being **explicitly deactivated**.
+
+`mvn help:active-profiles -P-defaultProfile` or `mvn help:active-profiles -DskipDefaultProfile` both **explicitly deactivate** the `skipDefaultProfile` as intuitively expected.
+
+#### Explanations
+
+The `activeByDefault` profile configuration parameter should never be used because it is counter-intuitive and actually useless: it activates only if no other profile is actived (explicitly, through Maven settings, based on configuration...). Finally, such a profile is never activated when we want.
+
+The [documentation](https://maven.apache.org/guides/introduction/introduction-to-profiles.html ) states:
+> This profile will automatically be active for all builds unless another profile in the same POM is activated using one of the previously described methods (explicitly, through Maven settings, based on environment variables, OS settings, present or missing files).
+
+According to [MNG-4917: Profile not active even though it has activeByDefault set to true](https://issues.apache.org/jira/browse/MNG-4917), this issue won't be fixed as it is not a bug but only a useless counter-intuitive feature.
+
 ### Fix `maven-eclipse-plugin` Warning about Workspace's vm (Mac OS X Only)
 
 Because of indefinitely unresolved issue [MECLIPSE-668](http://jira.codehaus.org/browse/MECLIPSE-668), Mac OS X users get the following warning message when running `mvn eclipse:eclipse` command:
