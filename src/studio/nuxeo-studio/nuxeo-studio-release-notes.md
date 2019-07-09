@@ -15,11 +15,11 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ### Actions Renamed As Buttons
 
-Actions menu in Designer has been renamed as `Buttons`, and the related options as follows:
+Actions menu in Designer will be renamed as `Buttons`, and the related options as follows:
 - `Operation Action` becomes `Button`: Choose this option to create a button using configuration only.
 - `Action` becomes `Custom Button`: Choose it to create your own button element using code for extensive capabilities.
 
-Icons changed too to reflect the options more clearly.
+Icons will change too to reflect the options more clearly.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2019-07/button-creation-plus-button
@@ -28,19 +28,19 @@ Icons changed too to reflect the options more clearly.
 --}}
 ![button-creation-plus-button](nx_asset://62c8b710-4e68-4849-aa41-3ff0cfab5d82 ?w=152,border=true)
 
-The `+` button in Designer has been refreshed at the same time, to be more explicit:
+The `+` button in Designer will be refreshed at the same time, to be more explicit:
 - Tooltips are shown on the option you choose,
 - When only two options are available, clicking the `+` button directly leads you to the one that is the simplest to use.
 
 ### Better Contextual Help
 
-Studio Designer shows contextual help on click so that you can copy/paste code samples and click on documentation links.
+Studio Designer will show contextual help on click so that you can copy/paste code samples and click on documentation links.
 
 ### Help In Page Provider Configuration
 
-- Aggregates for a page provider display default values, for instance on the date format.
-- Contextual help are improved to guide you on options that had no previous explanation, be simpler to understand otherwise and provide samples.
-- Quick filter name is shown in the user interface when no translation has been defined for it.
+- Aggregates for a page provider will provide default values, for instance on the date format.
+- Contextual help will be improved to guide you on options that had no previous explanation, be simpler to understand otherwise and provide samples.
+- Quick filter name will be shown in the user interface when no translation has been defined for it.
 
 ### Polymer 3 Migration
 
