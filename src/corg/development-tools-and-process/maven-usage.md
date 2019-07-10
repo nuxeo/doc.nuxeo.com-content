@@ -783,7 +783,7 @@ The `activeByDefault` profile configuration parameter should never be used, inst
 
 #### Explanations
 
-The `activeByDefault` profile configuration parameter should never be used because it is counter-intuitive and actually useless: it activates only if no other profile is actived (explicitly, through Maven settings, based on configuration...). Finally, such a profile is never activated when we want.
+The `activeByDefault` profile configuration parameter should never be used because it is counter-intuitive and actually useless: it activates only if no other profile is activated (explicitly, through Maven settings, based on configuration...). Finally, such a profile is never activated when we want.
 
 The [documentation](https://maven.apache.org/guides/introduction/introduction-to-profiles.html ) states:
 > This profile will automatically be active for all builds unless another profile in the same POM is activated using one of the previously described methods (explicitly, through Maven settings, based on environment variables, OS settings, present or missing files).
