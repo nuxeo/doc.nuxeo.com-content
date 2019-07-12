@@ -2,10 +2,11 @@
 title: Nuxeo Stream
 review:
     comment: ''
-    date: '2017-12-07'
+    date: '2019-07-11'
     status: ok
 labels:
     - lts2017-ok
+    - lts2019-ok
 toc: true
 tree_item_index: 300
 ---
@@ -15,7 +16,7 @@ Nuxeo Stream provides a Log storage abstraction and a Stream processing pattern.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University:</br>
+Watch the related course on Nuxeo University:</br>
 [Video on Streams from the Data Persistence course](https://university.nuxeo.com/learn/course/external/view/elearning/190/NuxeoArchitecture).
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Kafka/university_streams.png
@@ -29,40 +30,39 @@ Watch the related courses on Nuxeo University:</br>
 
 ### The Log
 
-A [log](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying) is a storage abstraction, it is an append-only sequence of record ordered by time.
-This simple concept is at the heart of many data intensive applications. It brings fault tolerance, durability, immutability and ordering to distributed system.
+A [log](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying) is a storage abstraction; it is an append-only sequence of record ordered by time. This simple concept is at the heart of many data-intensive applications. It brings fault tolerance, durability, immutability and ordering to a distributed system.
 
 ### Stream Processing
 
-When the processing of records is expected to give near real time feedback and the number of records is unbounded this is called stream processing.
+When the processing of records is expected to give near real-time feedback, and the number of records is unbounded, this is called stream processing.
 
-Nuxeo provides a Stream Processing pattern based on computation.
-A computation can be seen as a unix program:
+Nuxeo provides a Stream Processing pattern based on computation.</br>
+A computation can be seen as a Unix program:
 - A computation is doing one thing well and expect its output to become the input of another computation.
-- Computations can be composed using streams, like unix programs can be composed using pipes.
+- Computations can be composed using streams, like Unix programs can be composed using pipes.
 
 But it is much more powerful:
-- A computation can have many inputs and outputs streams enabling to create complex topology
-- A computation can be executed in parallel
-- Computations can be distributed on multiple machines
-- Computation can be added, restarted or removed without stopping the processing or data loss
-- Computations are fault tolerant and can defining error handling strategy
-- Streams capacity is only limited by disk size, there is no need to introduce back pressure to slow down producers
-- Streams are persisted during a retention period, all records are kept it is possible to debug, tune and test new feature easily
-- Messages exchanged by computations can be validated according to an Avro schema taking care of message evolution and interoperability
+- A computation can have many input and output streams enabling to create a complex topology.
+- A computation can be executed in parallel.
+- Computations can be distributed on multiple machines.
+- Computation can be added, restarted or removed without stopping the processing or data loss.
+- Computations are fault tolerant and can define an error handling strategy.
+- Streams capacity is only limited by disk size, there is no need to introduce back pressure to slow down producers.
+- Streams are persisted during a retention period, all records are kept. It is possible to debug, tune and test new features easily.
+- Messages exchanged by computations can be validated according to an Avro schema taking care of message evolution and interoperability.
 - Computations are monitored, the lag and latency between producer and consumer are available metrics
 
-Visit the [nuxeo-stream README](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-runtime/nuxeo-stream) for more details.
+Visit the [Nuxeo Stream README](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-runtime/nuxeo-stream) for more details.
 
 ## Nuxeo Stream Library
 
-The `nuxeo-stream` module provides a log based broker message passing system with a computation stream pattern.
+The `nuxeo-stream` module provides a log-based broker message passing system with a computation stream pattern.
 
 This module has no dependency on Nuxeo framework to ease integration with external sources or sinks.
 
-The underlying Log solution relies:
+The underlying Log solution relies on:
 
-- either on [Chronicle Queue](https://github.com/OpenHFT/Chronicle-Queue) which is a high performance off-Heap queue library, there is no broker to install, it relies entirely on OS memory mapped file (the storage is limited by disk capacity).
+- either on [Chronicle Queue](https://github.com/OpenHFT/Chronicle-Queue) which is a high-performance off-Heap queue library. There is no broker to install, it relies entirely on OS memory mapped file (the storage is limited by disk capacity).
 
 - either on [Apache Kafka](https://kafka.apache.org/) which is a distributed streaming platform.
 
@@ -87,19 +87,18 @@ The record needs to be encoded (and decoded) into binary format to be stored in 
 
 The Log API requires a record to extend Java Externalizable, but this does not mean that interoperability is limited to Java.
 
-The Codec service proposes multiple format:
+The Codec service proposes multiple formats:
 
 - `legacy`: default using Java Externalizable.
 - `java`: explicitly use Java Externalizable.
 - `avroBinary`: use Java reflection to extract an [Avro](https://avro.apache.org/docs/current/) schema and convert the record to Avro.
-- `avro`: use Java reflection to convert the record to [Avro message](https://avro.apache.org/docs/current/spec.html#single_object_encoding) which is avro binary with a header containing a fingerprint of the schema.
-- `avroConfluent`: same as Avro but using the [Confluent Schema Registry](https://docs.confluent.io/current/avro.html#confluent-schema-registry)
+- `avro`: use Java reflection to convert the record to [Avro message](https://avro.apache.org/docs/current/spec.html#single_object_encoding) which is `avro` binary with a header containing a fingerprint of the schema.
+- `avroConfluent`: same as `avro` but using the [Confluent Schema Registry](https://docs.confluent.io/current/avro.html#confluent-schema-registry)
 
-`avro` and `avroConfluent` refer to a schema fingerprint so they are interoperable format
-that support [forward and backward compatibility](https://docs.confluent.io/current/avro.html).
+`avro` and `avroConfluent` refer to a schema fingerprint so they are an interoperable format
+that supports [forward and backward compatibility](https://docs.confluent.io/current/avro.html).
 
-
-When using the Computation pattern the record is always of type `org.nuxeo.lib.stream.computation.Record`
+When using the Computation pattern, the record is always of type `org.nuxeo.lib.stream.computation.Record`
 that contains the following information:
 - `key`: a string that can be used to assign a Log partition
 - `data`: an array of bytes
@@ -139,7 +138,7 @@ The default codec for the computation record is `avro` (this can be changed by c
 }
 ```
 
-The computation record acts as an envelop that contains the data used by the computations.
+The computation record acts as an envelope that contains the data used by the computations.
 The embedded data is a convention between computations and can be whatever you like, from plain JSON to Avro.
 Using the Codec service with an `avro` message is a good option to encode and decode this data,
 because:
@@ -151,7 +150,7 @@ Also, it is possible to contribute a new Codec.
 
 ### Nuxeo Stream Services
 
-The StreamService enables to define Log configurations, and eventually to initialize Log.
+The `StreamService` enables to define Log configurations and eventually to initialize Log.
 
   ```xml
    <extension target="org.nuxeo.runtime.stream.service" point="logConfig">
@@ -165,9 +164,9 @@ The StreamService enables to define Log configurations, and eventually to initia
     </logConfig>
   ```
 
-It provides a low level access to the Log using the [LogManager](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-runtime/nuxeo-runtime-stream#using-log-from-nuxeo) that can create Log, create tailer (reader) or appender (writer).
+It provides a low-level access to the Log using the [LogManager](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-runtime/nuxeo-runtime-stream#using-log-from-nuxeo) that can create Log, create tailer (reader) or appender (writer).
 
-  ```java
+  ```
   StreamService service = Framework.getService(StreamService.class);
   LogManager logManager = service.getLogManager("myImport");
 
@@ -186,11 +185,11 @@ It provides a low level access to the Log using the [LogManager](https://github.
   // never close the manager, this is done by the service
   ```
 
-When using the Stream Processing pattern you don't have to use the LogManager directly:
-Register your processor, by providing:
+When using the Stream Processing pattern, you do not have to use the LogManager directly.</br>
+Register your processor by providing:
   - a Java Class that defines a topology of computations
-  - some settings that describes the stream configuration (partitions, codec) and how to run the computation (concurrency, policies)
-The StreamService will run a set of computation thread pools called a Processor when starting.
+  - some settings that describe the stream configuration (partitions, codec) and how to run the computation (concurrency, policies)
+The `StreamService` will run a set of computation thread pools called a Processor when starting.
 
   ```xml
    <streamProcessor name="myStreamProcessor" class="org.nuxeo.runtime.stream.tests.MyStreamProcessor"
@@ -216,17 +215,16 @@ If you want to write some input to feed your processor:
   streamManager.append("input", Record.of("key", "some message".getBytes("UTF-8")));
   ```
 
-## Error handling
+## Error Handling
 
-Strategies for handling errors is very important to have stable and reliable processing.
+Strategies for handling errors is essential to have stable and reliable processing.
 
-### Retry policy
+### Retry Policy
 
-Errors can be temporary, in this case retrying after some delay is a good strategy,
-the classical way is to configure a number of retries with delay that backs off exponentially up to a maximum,
+Errors can be temporary, in this case retrying after some delay is a good strategy. The classical way is to configure a number of retries with a delay that backs off exponentially up to a maximum,
 for instance:
 ```xml
-      <policy name="myComputation" maxRetries="8" delay="1s" maxDelay="60s" continueOnFailure="false" />
+<policy name="myComputation" maxRetries="8" delay="1s" maxDelay="60s" continueOnFailure="false" />
 ```
 The above configuration defines a retry policy with 8 retries, starting with a delay of 1s that backs off exponentially up to 60s:
 - t: error, wait 1s
@@ -240,34 +238,32 @@ The above configuration defines a retry policy with 8 retries, starting with a d
 - t+183s: retry 7 in error, wait 60s
 - t+243s: retry 8 success!
 
-This policy tolerate a ~4min shortage.
+This policy tolerates a ~4min shortage.
 
 ### Fallback
 
-After applying the retry policy if the computation is still in error the computation use the fallback directive `continueOnFailure`.
+After applying the retry policy if the computation is still in error, the computation uses the fallback directive `continueOnFailure`.
 
 If the computation is not doing something critical setting `continueOnFailure` to `true` will skip the record
 and continue processing records. The failure with the record position is traced.
 
-By default and for critical computation `continueOnFailure` is set to `false`, the computation is in failure and terminates its thread.
+By default and for critical computation `continueOnFailure` is set to `false`, the computation is in failure and terminates its thread.</br>
 This means that the processing is blocked even if upstream computations can continue to append records.
 
-Furthermore when using Kafka, a computation that terminates will trigger a rebalancing and its partitions
-will be re-assigned to another available computation thread, the record will be processed again and if the error
-is permanent all the computation threads on all nodes are going to terminate, blocking completely the downstream computations.
+Furthermore, when using Kafka, a computation that terminates will trigger a rebalancing and its partitions
+will be re-assigned to another available computation thread and the record will be processed again. If the error
+is permanent, all the computation threads on all nodes are going to terminate, blocking the downstream computations completely.
 
-Also, nothing prevent a computation to create a Dead Letter Queue mechanism, in case of failure the record is
-persisted in a dedicated stream and the processing continue. This is the approach taken by the [WorkManager DLQ](https://jira.nuxeo.com/browse/NXP-27148).
+Also, nothing prevents a computation from creating a Dead Letter Queue mechanism. In case of failure, the record is
+persisted in a dedicated stream and the processing continues. This is the approach taken by the [WorkManager DLQ](https://jira.nuxeo.com/browse/NXP-27148).
 
-
-### Recovery after failure
+### Recovery After Failure
 
 A computation in failure on critical processing requires a human intervention to understand the cause and fix it.
 
 There are different possible causes:
 - An infrastructure failure, like a disk full, once fixed, a rolling restart of Nuxeo nodes must be done
-  to restart computations threads. If this is done within the retention period (7 days by default when using Kafka)
-  there is no data loss.
+  to restart computations threads. If this is done within the retention period (7 days by default when using Kafka), there is no data loss.
 
 - A bug in the computation, redeploying a fix within the retention period is the best option,
   if this is not possible we should force the computation to skip the failure, see below
@@ -279,24 +275,27 @@ There are different possible causes:
       Then restart the node, with this option processors will skip the first record in failure instead of terminating.
       Check the `server.log` file that this is the case.
     2. Remove the `nuxeo.stream.recovery.skipFirstFailures=1` option line from `nuxeo.conf`
-    3. Perform a rolling restart of other Nuxeo nodes in order to restore all processor threads.
+    3. Perform a rolling restart of other Nuxeo nodes to restore all processor threads.
 
 
 ### Alerting
 
 A critical Computation in failure requires human intervention, so it is important to be alerted.
 
-The following metric can be monitored on each Nuxeo node, any non 0 value can trigger an alert
-```nuxeo.nuxeo.stream.failure.count```
+The following metric can be monitored on each Nuxeo node, any not 0 value can trigger an alert:
+```
+nuxeo.nuxeo.stream.failure.count
+```
 
-There is also a `streamStatus` Nuxeo probe, that can be checked from the JSF UI Admin center,
-or using the new Management Rest API:
+There is also a `streamStatus` Nuxeo probe, using the new Management REST API:
 ```bash
 curl -XPOST -u Administrator:Administrator http://localhost:8080/nuxeo/site/management/probes/streamStatus
 ```
 
 The probe can be activated to be part of the `runningstatus` Nuxeo health check using the `nuxeo.conf` option:
-```nuxeo.stream.healthCheck.enabled=true```
+```
+nuxeo.stream.healthCheck.enabled=true
+```
 
 ### Monitoring
 
@@ -316,12 +315,12 @@ It is possible to get computation cluster metrics like:
 - the elapsed time between now and the last processed record was submitted, only if there is some lag: `latency`
 
 For instance:
-- A lag of 3 indicates that the computation pool has 3 records to process to catchup with the producer.
+- A lag of 3 indicates that the computation pool has 3 records to process to catch up with the producer.
 - A latency of 5min indicates that the computation is 5 min behind the producer.
 
-If the latency keep growing then it is probable that the computation is in failure.
+If the latency keeps growing, then it is probable that the computation is in failure.
 
-The `stream.sh` script expose the above metrics, it is part of Nuxeo distribution in the `bin` directory.
+The `stream.sh` script exposes the above metrics, it is part of Nuxeo distribution in the `bin` directory.
 
 To get the lag, pos and end for all streams and computations:
 ```bash
@@ -333,14 +332,14 @@ To get the latency in addition:
 ./bin/stream.sh -k latency --codec avro
 ```
 
-To publish periodically this metrics into a graphite:
+To publish these metrics periodically into graphite:
  ```bash
 # publish to graphite all lag and latency for all streams every 30s
  /bin/stream.sh monitor -k --codec avro -l ALL -i 30 --host graphite --port 2003
 ```
 
-Note that this monitoring command can be run on all Nuxeo nodes. It requires very few resource and
-because it relies on Kafka only one command will publish the metrics, the other instances are there for
+Note that this monitoring command can be run on all Nuxeo nodes. It requires very few resources and
+because it relies on Kafka, only one command will publish the metrics, the other instances are there for
 automatic failover.
 
 ## Integration
@@ -349,14 +348,15 @@ The Nuxeo stream service is used in different locations.
 
 ### Stream Audit Writer
 
-Used by default since Nuxeo 9.3. The events that need to be traced in the audit are collected by a sync listener.
+Used by default since Nuxeo 9.3. A sync listener collects the events that need to be traced in the audit.
+
 When the transaction is committed, events are written as JSON into an audit Log.
-A StreamProcessor takes the audit Log as input and send the entries in batch to the Audit backend.
+A `StreamProcessor` takes the audit Log as input and send the entries in batch to the Audit backend.
 
 This brings:
-- Reliability: the entries are first persisted to the log and can be processed later even
+- **Reliability**: the entries are first persisted to the log and can be processed later even
   if the audit backend is not reachable or if the application crash.
-- Performance: the entries are sent to the audit backend at a constant and optimal throughput,
+- **Performance**: the entries are sent to the audit backend at a constant and optimal throughput,
   not tied to the application activity.
 
 The Stream audit writer can be configured with the following options:
@@ -383,18 +383,18 @@ work can be queued into a Log without worries about the memory limits.
 Kafka is required to enable distributed work in cluster mode.
 
 To scale horizontally, so adding Nuxeo node supports more load,
-the number of Log partitions that fix the maximum concurrency must be greater than the thread pool size of a single node.
+the number of Log partitions that fix the maximum concurrency must be higher than the thread pool size of a single node.
 This strategy is called partition over provisioning.
 
-By default there is an over provisioning factor of 3.
-For instance with a work pool of size 4, we have 12 partitions in the Log:
+By default, there is an over-provisioning factor of 3.</br>
+For instance, with a work pool of size 4, we have 12 partitions in the Log:
 
 - For a cluster of 1 node: there are 4 threads, each reading from 3 partitions.
 - For a cluster of 2 nodes: there are 8 threads, some reading from 2 partitions, other reading from 1 partition.
 - For a cluster of 3 nodes: there are 12 threads, each thread reading from one partition.
 - For a cluster of 4 nodes: there are 16 threads, some threads in the work pool will be unused, reducing the overall node load.
 
-Note that work pool of size 1 are not over provisioned because we don't want any concurrency.
+Note that, a work pool of size 1 is not over-provisioned because we don't want any concurrency.
 
 The Stream WorkManager can be configured with the following options:
 ```
@@ -408,14 +408,13 @@ nuxeo.stream.work.over.provisioning.factor=3
 nuxeo.stream.work.log.codec=legacy
 ```
 
-
 The behavior of the Stream WorkManager is slightly different than the default WorkManager:
-* Works are immutable: they can not be used as a storage for result, the repository or the transient store should be used instead
-* Works can not be listed or loaded on demand because this can not scale
-* Works with the same id are executed only once, this make work idempotent for free
-* At the moment the number of Running works is only an estimation, scheduled and completed metrics are reliable
-This requires some work and WorkManager usage adaptations, this is still a work in progress.
+- Works are immutable: they can not be used as a storage for results, the repository or the transient store should be used instead
+- Works cannot be listed or loaded on demand because this can not scale
+- Works with the same id are executed only once, this make work idempotent for free
+- At the moment the number of Running works is only an estimation, scheduled and completed metrics are reliable
 
+This requires some work and WorkManager usage adaptations, this is still a work in progress.
 
 ### Stream PubSub Provider
 
@@ -437,6 +436,6 @@ for more information.
 
 ### Bulk Action Framework
 
-The Bulk Action Framework is leveraging Nuxeo Streams to be able to run resilient bulk actions on documents.
+The Bulk Action Framework is leveraging Nuxeo Stream to be able to run resilient bulk actions on documents.
 Please visit [nuxeo-core-bulk README](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-core/nuxeo-core-bulk)
 for more information.
