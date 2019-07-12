@@ -28,16 +28,18 @@ In this tutorial you will learn how to create a custom workflow tasks layout in 
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Course on Document type layouts](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner).
+Watch the related courses on Nuxeo University:</br>
+[Course on Document type layouts](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner).
 ![]({{file name='university-doc-layout.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
 ## Prerequisites
+
 - A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Studio Modeler.
 - Make sure that the [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
 
 ## Create a Workflow Template
+
 First, we need to create a new workflow template in Studio Modeler. This workflow will be applied to the Contract document type.
 
 {{{multiexcerpt 'quick-switcher' page='web-ui-document-layouts'}}}
