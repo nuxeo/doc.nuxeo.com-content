@@ -1,5 +1,5 @@
 ---
-title: How to Use PDF conversion operations with Nuxeo Studio
+title: 'HOWTO: Use PDF conversion operations with Nuxeo Studio'
 review:
     comment: ''
     date: '2018-01-15'

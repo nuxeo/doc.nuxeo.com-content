@@ -2,12 +2,13 @@
 title: How-To Index
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2019-07-15'
     status: ok
 labels:
     - lts2016-ok
     - migration-sample
     - lts2017-ok
+    - lts2019-ok
     - home
     - mlumeau
 confluence:
@@ -148,6 +149,6 @@ history:
         date: '2014-07-10 11:45'
         message: ''
         version: '1'
-
 ---
+
 {{{table_from_details headings='Excerpt, Topics, Level' spaces='ADMINDOC IDEDOC NXDOC Studio USERDOC' label='howto'}}}

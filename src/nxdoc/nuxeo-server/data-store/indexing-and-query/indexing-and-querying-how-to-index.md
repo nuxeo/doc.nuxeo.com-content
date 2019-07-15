@@ -2,11 +2,13 @@
 title: Indexing and Querying How-To Index
 review:
     comment: ''
-    date: '2016-12-23'
+    date: '2019-07-15'
     status: ok
 labels:
     - lts2016-ok
-    - content-review-lts2017
+    - lts2017-ok
+    - lts2019-ok
+    - mlumeau
 confluence:
     ajs-parent-page-id: '4687860'
     ajs-parent-page-title: Indexing and Query
@@ -35,8 +37,8 @@ history:
         date: '2014-11-19 16:37'
         message: ''
         version: '1'
-
 ---
+
 {{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC Studio' label='howto' filter='Topics=query'}}}
 
 &nbsp;

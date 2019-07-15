@@ -2,11 +2,13 @@
 title: Automation How-To Index
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2019-07-15'
     status: ok
 labels:
     - lts2016-ok
-    - content-review-lts2017
+    - lts2017-ok
+    - lts2019-ok
+    - mlumeau
 confluence:
     ajs-parent-page-id: '18451738'
     ajs-parent-page-title: Automation
@@ -50,6 +52,6 @@ history:
         date: '2014-05-02 17:02'
         message: ''
         version: '1'
-
 ---
+
 {{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC Studio' label='howto' filter='Topics=Automation'}}}

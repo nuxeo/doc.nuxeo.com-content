@@ -1,5 +1,5 @@
 ---
-title: How to Configure a New Default Search Form in the Search Tab
+title: 'HOWTO: Configure a New Default Search Form in the Search Tab'
 review:
     comment: ''
     date: '2017-04-21'

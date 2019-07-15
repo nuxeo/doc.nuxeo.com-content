@@ -1,8 +1,8 @@
 ---
-title: How to Translate a Vocabulary
+title: 'HOWTO: Translate a Vocabulary'
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2019-07-15'
     status: ok
 details:
     howto:
@@ -17,6 +17,7 @@ labels:
     - howto
     - excerpt
     - lts2017-ok
+    - lts2019-ok
 confluence:
     ajs-parent-page-id: '4688939'
     ajs-parent-page-title: Data Lists and Directories
@@ -28,7 +29,7 @@ confluence:
     shortlink: ewQuAQ
     shortlink_source: 'https://doc.nuxeo.com/x/ewQuAQ'
     source_link: /display/NXDOC/How+to+Translate+a+Vocabulary
-tree_item_index: 200
+tree_item_index: 400
 history:
     -
         author: Solen Guitter
@@ -90,12 +91,10 @@ history:
         date: '2014-06-26 16:48'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 Nuxeo Studio allows you to translate the vocabulary values of your application.
-
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
@@ -112,9 +111,9 @@ Check out our [blog on the subject](https://www.nuxeo.com/blog/how-many-language
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Howtos'}}
 
-- [How to Add a New Vocabulary]({{page page='how-to-add-a-new-vocabulary'}})
-- [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
-- [How to Translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxeo-platform'}})
+- [HOWTO: Add a New Vocabulary]({{page page='how-to-add-a-new-vocabulary'}})
+- [HOWTO: Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
+- [HOWTO: Translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxeo-platform'}})
 
 {{/panel}}</div><div class="column medium-6">
 

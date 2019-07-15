@@ -23,7 +23,7 @@ confluence:
     shortlink: yo9kAQ
     shortlink_source: 'https://doc.nuxeo.com/x/yo9kAQ'
     source_link: /display/NXDOC/Directory+and+UI
-tree_item_index: 400
+tree_item_index: 100
 history:
     -
         author: Anahide Tchertchian

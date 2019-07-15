@@ -1,5 +1,5 @@
 ---
-title: How to Contribute Picture Conversions
+title: 'HOWTO: Contribute Picture Conversions'
 review:
     comment: ''
     date: '2017-12-12'
@@ -353,12 +353,12 @@ Let's say we want to execute the previous&nbsp;`Watermark` picture conversion on
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [HOWTO: Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
 
-*   [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
-*   [Conversion]({{page page='conversion'}})
+- [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
+- [Conversion]({{page page='conversion'}})
 
 {{/panel}}</div></div>

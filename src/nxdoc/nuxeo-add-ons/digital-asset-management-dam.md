@@ -294,20 +294,16 @@ history:
         date: '2010-08-03 00:40'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 [The Digital Asset Management addon](http://www.nuxeo.com/en/products/dam) of the Nuxeo Platform provides multimedia files management (pictures, audio and video).
-
 {{! /excerpt}}
 
 ## Installation
 
 {{! multiexcerpt name='MP-installation-easy'}}
-
 This add-on requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin tab]({{page page='installing-a-new-package-on-your-instance'}}).
-
 {{! /multiexcerpt}}
 
 It is also possible to install it from the [Startup wizard]({{page page='configuration-wizard'}}).
@@ -328,8 +324,8 @@ After you installed Nuxeo DAM, you have three new document types available.
 
 #### Schema
 
-*   `picture`: Used to store picture views.
-*   `image_metadata`: Used to store EXIF metadata.
+- `picture`: Used to store picture views.
+- `image_metadata`: Used to store EXIF metadata.
 
 Some IPTC metadata are stored within dublincore. More information [Binary Metadata]({{page page='binary-metadata'}})
 
@@ -337,21 +333,21 @@ See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribut
 
 #### Facets
 
-*   `Picture`: The facet to put on Document Types that should be considered as Picture . This facet comes with the following schemas:&nbsp;`file`&nbsp;(to store the picture file),&nbsp;`picture`, `image_metadata` and `iptc`.
-*   `MultiviewPicture`: The marker facet to be put on document types already having&nbsp;`Picture`&nbsp;facet to instantiate&nbsp;`MultiviewPictureAdapter`.
+- `Picture`: The facet to put on Document Types that should be considered as Picture . This facet comes with the following schemas:&nbsp;`file`&nbsp;(to store the picture file),&nbsp;`picture`, `image_metadata` and `iptc`.
+- `MultiviewPicture`: The marker facet to be put on document types already having&nbsp;`Picture`&nbsp;facet to instantiate&nbsp;`MultiviewPictureAdapter`.
 
 See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype).
 
 #### Document Type
 
-*   `Picture`: This is the default type in Nuxeo that handles picture files. It comes with the&nbsp;`Picture`&nbsp;and `MultiviewPicture` facets.
+- `Picture`: This is the default type in Nuxeo that handles picture files. It comes with the&nbsp;`Picture`&nbsp;and `MultiviewPicture` facets.
 
 See [http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.coreTypes--doctype) .
 
 #### Listeners
 
-*   `pictureChangedListener`: Synchronous listener checking if the main Picture file has changed. If so, pre-fills all the picture views with a placeholder and trigger an event&nbsp;`updatePictureview` to notify asynchronous listeners.
-*   `pictureViewListener`: Asynchronous listener computing the picture views.
+- `pictureChangedListener`: Synchronous listener checking if the main Picture file has changed. If so, pre-fills all the picture views with a placeholder and trigger an event&nbsp;`updatePictureview` to notify asynchronous listeners.
+- `pictureViewListener`: Asynchronous listener computing the picture views.
 
 See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.listeners--listener](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.platform.picture.listeners--listener).
 
@@ -369,35 +365,35 @@ Picture conversions are used to generate the picture views of document having th
 
 The Nuxeo Platform provides an add-on with the following video features:
 
-*   Extract video information
-*   In-browser HTML5 video player (fallback on Flash player if needed)
-*   Storyboard extraction and time based navigation
+- Extract video information
+- In-browser HTML5 video player (fallback on Flash player if needed)
+- Storyboard extraction and time based navigation
 
 #### Schema
 
-*   `video`: Used to store the video info, the transcoded videos and the storyboard.
+- `video`: Used to store the video info, the transcoded videos and the storyboard.
 
 See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--schema](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--schema).
 
 #### Facets
 
-*   `Video`: Facet to put on Document Types that should be considered as Video. This facet comes with the following schemas: `file` (to store the video file), `video` and `picture` (to store the preview screenshot).
-*   `HasStoryboard`: Marker facet to be set on types for which you want to generate Storyboard, types on which you already added the `Video` facet.
-*   `HasVideoPreview`: Marker facet to be set on types for which you want to generate a video preview (screenshot), and on which you already added the&nbsp;`Video`&nbsp;facet.
+- `Video`: Facet to put on Document Types that should be considered as Video. This facet comes with the following schemas: `file` (to store the video file), `video` and `picture` (to store the preview screenshot).
+- `HasStoryboard`: Marker facet to be set on types for which you want to generate Storyboard, types on which you already added the `Video` facet.
+- `HasVideoPreview`: Marker facet to be set on types for which you want to generate a video preview (screenshot), and on which you already added the&nbsp;`Video`&nbsp;facet.
 
 See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype).
 
 #### Document Type
 
-*   `Video`: This is the default type in the Nuxeo Platform that handles video files. It comes with the `Video`,&nbsp;`HasStoryboard` and&nbsp;`HasVideoPreview` facets.
+- `Video`: This is the default type in the Nuxeo Platform that handles video files. It comes with the `Video`,&nbsp;`HasStoryboard` and&nbsp;`HasVideoPreview` facets.
 
 See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.video.doctype--doctype).
 
 #### Listeners
 
-*   `videoChangedListener`: Synchronous listener checking if the main Video file has changed, if so extract the video information (stored in `vid:info`) and trigger and event `videoChanged`&nbsp;to notify asynchronous listeners.
-*   `videoStoryboardListener`: Asynchronous listener generating the preview screenshots (stored as picture views in the `picture` schema) and the storyboard of the video (stored in `vid:storyboard`).
-*   `videoAutomaticConversions`: Asynchronous listener computing the transcoded videos from the video conversions marked as automatic. Transcoded videos are stored in `vid:transcodedVideos`.
+- `videoChangedListener`: Synchronous listener checking if the main Video file has changed, if so extract the video information (stored in `vid:info`) and trigger and event `videoChanged`&nbsp;to notify asynchronous listeners.
+- `videoStoryboardListener`: Asynchronous listener generating the preview screenshots (stored as picture views in the `picture` schema) and the storyboard of the video (stored in `vid:storyboard`).
+- `videoAutomaticConversions`: Asynchronous listener computing the transcoded videos from the video conversions marked as automatic. Transcoded videos are stored in `vid:transcodedVideos`.
 
 See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.platform.video.core.listeners--listener](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.platform.video.core.listeners--listener).
 
@@ -411,10 +407,10 @@ See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribut
 
 More complex conversions can be performed using the video conversion operations:
 
-*   Add Watermark to Video
-*   Concatenate Video
-*   Slice Video
-*   Extract Video Closed Captions
+- Add Watermark to Video
+- Concatenate Video
+- Slice Video
+- Extract Video Closed Captions
 
 Be sure you have both `ffmpeg` and `ccextractor` installed, both of which are required by certain operations.
 
@@ -496,14 +492,13 @@ Creating a separate transcript of a Video document is easily done if the video h
 - WebUI.DownloadFile
 ```
 
-
 #### Exposed Extension Points
 
 The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.video.service.VideoService) exposed two extension points:
 
-*   [`videoConversions`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.9.5/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--videoConversions) : Extension point to contribute video conversions that will be available on the VideoService.
+- [`videoConversions`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.9.5/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--videoConversions) : Extension point to contribute video conversions that will be available on the VideoService.
 
-    {{#> panel type='code' heading='Default conributions'}}
+    {{#> panel type='code' heading='Default contributions'}}
     ```xml
     <extension target="org.nuxeo.ecm.platform.video.service.VideoService"
       point="videoConversions">
@@ -512,9 +507,8 @@ The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/vi
       <videoConversion name="Ogg 480p" converter="convertToOgg" height="480"/>
     </extension>
     ```
-
     {{/panel}}
-*   [`automaticVideoConversions`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.9.5/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--automaticVideoConversions) : Extension point to contribute which video conversion should be done automatically (through the `videoAutomaticConversions` listener).
+- [`automaticVideoConversions`](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-5.9.5/viewExtensionPoint/org.nuxeo.ecm.platform.video.service.VideoService--automaticVideoConversions) : Extension point to contribute which video conversion should be done automatically (through the `videoAutomaticConversions` listener).
 
     {{#> panel type='code' heading='Default contributions'}}
     ```xml
@@ -524,26 +518,25 @@ The [`VideoService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/vi
       <automaticVideoConversion name="WebM 480p" order="10" />
     </extension> 
     ```
-
     {{/panel}}
 
 ### Audio&nbsp;
 
 #### Schema
 
-*   `audio`: Used to store audio related information.
+- `audio`: Used to store audio related information.
 
 See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--schema](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--schema).
 
 #### Facets
 
-*   `Audio`: Facet to put on document types that should be considered as Audio. This facet comes with the following schemas:&nbsp;`file`&nbsp;(to store the audio file), and&nbsp;`audio`.
+- `Audio`: Facet to put on document types that should be considered as Audio. This facet comes with the following schemas:&nbsp;`file`&nbsp;(to store the audio file), and&nbsp;`audio`.
 
 See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype).
 
 #### Document Type
 
-*   `Audio`: This is the default type in the Nuxeo Platform that handles audio files. It comes with the `Audio` facet.
+- `Audio`: This is the default type in the Nuxeo Platform that handles audio files. It comes with the `Audio` facet.
 
 See [http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.nuxeo.ecm.platform.audio.doctype--doctype).
 
@@ -559,9 +552,9 @@ See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribut
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other DAM Documentation'}}
 
-- [How to Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
+- [HOWTO: Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
 - [Supported File Formats]({{page page='supported-file-formats'}})
-- [How to Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
+- [HOWTO: Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 

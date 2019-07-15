@@ -1,5 +1,5 @@
 ---
-title: How to Contribute a New Video Conversion
+title: 'HOWTO: Contribute a New Video Conversion'
 review:
     comment: ''
     date: '2018-01-15'
@@ -209,13 +209,13 @@ To run the "WebM 480p" video conversion automatically:
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
-- [How to Contribute a New Video Conversion]({{page space='NXDOC' page='How to+Contribute+a+New+Video+Conversion'}})
+- [HOWTO: Contribute a New Video Conversion]({{page space='NXDOC' page='How to+Contribute+a+New+Video+Conversion'}})
 - [Conversion]({{page space='NXDOC' page='Conversion'}})
 - [Supported File Formats]({{page space='NXDOC' page='Supported File+Formats'}})
-- [How to Automatically Convert a Document to PDF]({{page space='NXDOC' page='How to+Automatically+Convert+a+Document+to+PDF'}})
-- [How to Contribute a Command Line Converter]({{page space='NXDOC' page='How to+Contribute+a+Command+Line+Converter'}})
-- [How to Contribute Picture Conversions]({{page space='NXDOC' page='How to+Contribute+Picture+Conversions'}})
-- [How to Quickly Generate a PDF Using Document Template]({{page space='NXDOC' page='How to+Quickly+Generate+a+PDF+Using+Document+Template'}})
+- [HOWTO: Automatically Convert a Document to PDF]({{page space='NXDOC' page='How to+Automatically+Convert+a+Document+to+PDF'}})
+- [HOWTO: Contribute a Command Line Converter]({{page space='NXDOC' page='How to+Contribute+a+Command+Line+Converter'}})
+- [HOWTO: Contribute Picture Conversions]({{page space='NXDOC' page='How to+Contribute+Picture+Conversions'}})
+- [HOWTO: Quickly Generate a PDF Using Document Template]({{page space='NXDOC' page='How to+Quickly+Generate+a+PDF+Using+Document+Template'}})
 - [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
 {{/panel}}</div><div class="column medium-6">
 {{#> panel heading='Related pages in other documentation'}}

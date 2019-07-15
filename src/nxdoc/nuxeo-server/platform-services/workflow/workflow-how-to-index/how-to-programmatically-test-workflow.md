@@ -50,7 +50,7 @@ The GitHub repository contains a comprehensive [README](https://github.com/nuxeo
 
 - [HOWTO: Modify a Workflow Variable outside of Workflow Context]({{page page='how-to-modify-a-workflow-variable-outside-of-workflow-context'}})
 - [HOWTO: Set a Default Value on a Date Field of a Task Form]({{page space='nxdoc' page='how-to-set-a-default-value-on-a-date-field-of-a-task-form'}})
-- [HOWTO Index]({{page page='how-to-index'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 

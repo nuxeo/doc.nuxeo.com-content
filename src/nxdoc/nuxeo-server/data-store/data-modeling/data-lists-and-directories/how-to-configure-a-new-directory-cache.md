@@ -1,5 +1,5 @@
 ---
-title: How to Configure a New Directory Cache
+title: 'HOWTO: Configure a New Directory Cache'
 review:
     comment: ''
     date: '2016-12-26'

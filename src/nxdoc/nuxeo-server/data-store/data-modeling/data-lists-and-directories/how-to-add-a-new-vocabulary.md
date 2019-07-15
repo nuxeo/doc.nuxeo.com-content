@@ -2,7 +2,7 @@
 title: 'HOWTO: Add a New Vocabulary'
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2019-07-15'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:
@@ -13,13 +13,14 @@ details:
         topics: Vocabulary
 labels:
     - lts2016-ok
+    - lts2017-ok
+    - lts2019-ok
     - vocabulary
     - tmartins
     - howto
     - studio
     - excerpt
     - multiexcerpt
-    - lts2017-ok
 confluence:
     ajs-parent-page-id: '4688939'
     ajs-parent-page-title: Data Lists and Directories
@@ -31,7 +32,7 @@ confluence:
     shortlink: 7gQ7
     shortlink_source: 'https://doc.nuxeo.com/x/7gQ7'
     source_link: /display/NXDOC/How+to+Add+a+New+Vocabulary
-tree_item_index: 100
+tree_item_index: 300
 history:
     -
         author: Solen Guitter
@@ -238,72 +239,68 @@ history:
         date: '2010-09-23 18:04'
         message: ''
         version: '1'
-
 ---
+
 {{#> callout type='info' heading='Default cache for Studio-created vocabularies'}}
-
 Since [NXS-2504](https://jira.nuxeo.com/browse/NXS-2504), the new vocabulary defined in Studio come along with a default cache configuration. The cache name is based on the vocabulary name. `maxSize` attribute is set to 1000, `concurrencyLevel` to 500 and `ttl` to 60.
-
 In order to set up a cache (or override an existing one), follow the steps described in [How to Configure a New Directory Cache]({{page page='how-to-configure-a-new-directory-cache'}}).
+{{/callout}}
 
-{{/callout}}{{! excerpt}}
-
+{{! excerpt}}
 Studio allows you to declare new vocabularies that can be used in the different document layouts to fill in metadata or in virtual navigations.
-
 {{! /excerpt}}
 
 A vocabulary is a list of labels that are used in the application to populate the various selection lists (drop-down, select or multi-select lists). A vocabulary can be used independently or it can be associated with other vocabularies to compose a multi-level list.
 
 {{! multiexcerpt name='3-types-vocabulary'}}
-
 There are 3 types of vocabularies:
-
-*   Simple vocabulary: one-level vocabulary,
-*   Hierarchical vocabulary: multi-level vocabulary.
-*   Child vocabulary: one-level vocabulary used as the sub-level of simple vocabulary to compose a multi-level selection. To make parent selection easier, available vocabularies values are proposed in a drop down list.
-
-    {{#> callout type='tip' }}
-
-    The association of simple and child vocabularies to compose a multi-level list has been replaced by the hierarchical vocabulary, which we recommend for multi-level lists.
-
-    {{/callout}}
-
+- Simple vocabulary: one-level vocabulary,
+- Hierarchical vocabulary: multi-level vocabulary.
+- Child vocabulary: one-level vocabulary used as the sub-level of simple vocabulary to compose a multi-level selection. To make parent selection easier, available vocabularies values are proposed in a drop down list.
+{{#> callout type='tip' }}
+  The association of simple and child vocabularies to compose a multi-level list has been replaced by the hierarchical vocabulary, which we recommend for multi-level lists.
+{{/callout}}
 {{! /multiexcerpt}}
 
 ## Creating a New Vocabulary
 
-1.  Click on the **Vocabularies** item of the Studio menu.
-
-    {{#> callout type='info' }}
-
-    For an exhaustive presentation of the vocabulary configuration, see the [Vocabularies]({{page space='studio' page='vocabularies'}}) page.
-
-    {{/callout}}
+1.  Click on the [**Vocabularies**]({{page space='studio' page='vocabularies'}}) item of the Studio menu.
 2.  Click on the **New** button.
 3.  Fill in the ID and vocabulary type and click on the **Next** button.
-    ![]({{file name='STUDIO-vocabulary-type-selection.png'}} ?w=350,border=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Add a New Vocabulary/STUDIO-vocabulary-type-selection.png
+      name: STUDIO-vocabulary-type-selection.png
+      studio_modeler#popup#up_to_date
+    --}}
+    ![STUDIO-vocabulary-type-selection.png](nx_asset://01c478ae-9681-40cd-9b77-73c770da62cf ?w=350,border=true)
 4.  Fill in the values as desired.
-    ![]({{file name='STUDIO-vocabulary-form.png'}} ?w=450,h=114,border=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Add a New Vocabulary/STUDIO-vocabulary-form.png
+      name: STUDIO-vocabulary-form.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![STUDIO-vocabulary-form.png](nx_asset://c7589acf-230c-42c8-9e13-82eb1f349dd7 ?w=450,border=true)
 
     {{#> callout type='tip' }}
-
     Click on **Import CSV** to import content from a .csv file instead of typing each entry manually. See example files:[ simple-vocabulary.csv]({{file name='simple-vocabulary.csv' space='studio' version='' page='vocabularies'}}) and [hierarchical-vocabulary.csv]({{file name='hierarchical-vocabulary.csv' space='studio' version='' page='vocabularies'}}).
-
     {{/callout}}
 5.  Click on the **Save** button.
     You can now use the vocabulary on [layouts]({{page page='layout-and-widget-how-to-index'}}) to populate drop-down lists. After you deploy your customization on your Nuxeo Platform, the vocabulary is [available in the Administration Menu]({{page space='userdoc' page='administration'}}#vocabularies) so power users and administrators can easily add new entries to the vocabulary.
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Howtos'}}
-
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Howtos'}}
 - [Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
 - [Translating a Vocabulary]({{page page='how-to-translate-a-vocabulary'}})
-
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Tutorials'}}
-
+{{/panel}}
+</div>
+<div class="column medium-6">
+{{#> panel heading='Related Tutorials'}}
 - [Data Lists and Directories]({{page page='data-lists-and-directories'}})
 - [Declaring Vocabularies]({{page space='studio' page='declaring-vocabularies'}})
 - [Managing Vocabularies]({{page version='' space='userdoc' page='administration'}}#vocabularies)
-
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>

@@ -1,5 +1,5 @@
 ---
-title: How to Configure a Search Filter With Facets and Other Aggregates
+title: 'HOWTO: Configure a Search Filter With Facets and Other Aggregates'
 review:
     comment: ''
     date: '2017-01-17'
@@ -276,7 +276,7 @@ Before starting this how-to you will need to create the following elements in St
 
     {{#> callout type='info' }}
 
-    For more details on vocabularies, see the [Directory and Vocabulary How-tos]({{page page='directory-and-vocabulary-how-to-index'}}).
+    For more details on vocabularies, see the [Data Lists and Directories section]({{page page='data-lists-and-directories'}}).
 
     {{/callout}}
 
