@@ -260,26 +260,6 @@ WARN
 
 </td><td colspan="1">
 
-`org.artofsolving.jodconverter.office.OfficeProcess (org.artofsolving.jodconverter:jodconverter-core)`
-
-`Restarting OOo after code 81 ...`
-
-</td><td colspan="1">See [jodconverter issue 84](http://code.google.com/p/jodconverter/issues/detail?id=84).</td></tr><tr><td colspan="1">
-
-WARN
-
-</td><td colspan="1">
-
-`org.artofsolving.jodconverter.office.StreamGobbler (org.artofsolving.jodconverter:jodconverter-core)`
-
-`StreamGobbler: Fontconfig warning: "/usr/lib/libreoffice/share/fonts/truetype/fc_local.conf", line 13: Having multiple <family> in <alias> isn't supported and may not works as expected`
-
-</td><td colspan="1">&nbsp;</td></tr><tr><td colspan="1">
-
-WARN
-
-</td><td colspan="1">
-
 `org.jboss.seam.init.Initialization (org.jboss.seam:jboss-seam)`
 
 `namespace declared in components.xml does not resolve to a package:`

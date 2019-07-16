@@ -413,7 +413,6 @@ The licenses used are:
 | jna-4.5.1.jar |   | 4.5.1 | AL 2.0 |
 | jna-platform-4.4.0.jar |   | 4.4.0 | AL 2.0, LGPL 2.1 |
 | joda-time-2.8.2.jar | [Joda Time](http://joda-time.sourceforge.net) | 2.8.2 | AL 2.0 |
-| jodconverter-core-3.0-NX10.jar | [JODConverter](http://code.google.com/p/jodconverter/) | 3.0-NX10 | LGPL 3 |
 | jodreports-2.4.0.jar |   | 2.4.0 | LGPL 2.1 |
 | jolokia-core-1.3.3.jar |   | 1.3.3 | AL 2.0 |
 | jopt-simple-5.0.4.jar |   | 5.0.4 | MIT |
