@@ -583,18 +583,7 @@ The minimum version required is LibreOffice 5. The path to the soffice program m
 {{! multiexcerpt name='ooo-libreoffice-configuration'}}
 **Installation location and Path configuration**
 
-For preview to work, the server must start LibreOffice. The Nuxeo Platform looks for LibreOffice at different locations on the system. See [PlatformUtils.java definition](https://github.com/nuxeo/jodconverter/blob/3.0-NX/jodconverter-core/src/main/java/org/artofsolving/jodconverter/util/PlatformUtils.java) for searched locations.
-
-If LibreOffice isn't available at one of these locations, you need to add the path to `soffice` program to your path: Edit the `PATH` environment variable and add `:OFFICE_INSTALL_DIRECTORY/program`.
-
-{{#> callout type='tip' }}
-If not using default install path, you may have to add the path to the executable in your `nuxeo.conf`:
-
-```
-jod.office.home=/path/to/libreoffice
-```
-
-{{/callout}}
+You need to add the path to `soffice` program to your path: Edit the `PATH` environment variable and add `:OFFICE_INSTALL_DIRECTORY/program`.
 
 **Non-latin languages configuration**
 
@@ -713,8 +702,16 @@ $ brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype \
 --with-opus --with-rtmpdump --with-schroedinger --with-speex \
 --with-theora --with-tools --with-x265 --with-faac
 ```
+<<<<<<< HEAD
 
 This installs most libraries. You can of course remove the libraries that are not needed for the video files you will be managing. Use `brew info ffmpeg` for details about each library available.
+=======
+{{#> callout type='note' }}
+Since recent versions, FFmpeg for brew does not allow anymore installing third-party libraries for fine tuning of the compilation/installation of FFmpeg.
+Please, see the [FFmpeg documentation](https://trac.ffmpeg.org/wiki/CompilationGuide/macOS) for alternatives.
+This will be required, for example, if you prefer to install a library like fdk-aac, instead of the internal aac encoder.
+{{/callout}}
+>>>>>>> 363202d1f... NXP-24212: remove JOD references
 
 ### UFRaw
 
@@ -727,7 +724,7 @@ UFRaw is used in association with ImageMagick and Ghostscript to generate RAW do
 To install UFRaw using Homebrew:
 
 ```bash
-$ brew install ufraw  
+$ brew install ufraw
 ```
 
 ### libwpd
@@ -804,18 +801,7 @@ If not already present on the system, you will have the option to automatically 
 
 **Installation location and Path configuration**
 
-For preview to work, the server must start LibreOffice. The Nuxeo Platform looks for LibreOffice at different locations on the system. See [PlatformUtils.java definition](https://github.com/nuxeo/jodconverter/blob/3.0-NX/jodconverter-core/src/main/java/org/artofsolving/jodconverter/util/PlatformUtils.java) for searched locations.
-
-If LibreOffice isn't available at one of these locations, you need to add the path to `soffice` program to your path: Edit the `Path` system variable and add `;OFFICE_INSTALL_DIRECTORY\program`.
-
-{{#> callout type='tip' }}
-If not using default install path, you may have to add the path to the executable in your `nuxeo.conf`:
-
-```
-jod.office.home=disk:\path\to\libreoffice
-```
-
-{{/callout}}
+You need to add the path to `soffice` program to your path: Edit the `Path` system variable and add `;OFFICE_INSTALL_DIRECTORY\program`.
 
 **Non-latin languages configuration**
 

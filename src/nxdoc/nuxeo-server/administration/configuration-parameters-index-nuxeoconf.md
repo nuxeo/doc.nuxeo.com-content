@@ -1684,60 +1684,6 @@ Note: Changing this parameter is not enough. See [How to Change Context Path]({{
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">`jod.connection.protocol`</td>
-<td colspan="1">OpenOffice Connection protocol, either PIPE or SOCKET.</td>
-<td colspan="1">SOCKET</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="1">`jod.max.tasks.per.process`</td>
-<td colspan="1">Maximum task per Office instance before restarting it.</td>
-<td colspan="1">200</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="1">`jod.task.execution.timeout`</td>
-<td colspan="1">Will stop the task if it s not completed after timeout.</td>
-<td colspan="1">120000</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="1">`jod.task.queue.timeout`</td>
-<td colspan="1">Will stop looking for the next task in the queue after timeout.</td>
-<td colspan="1">30000</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="1">`jod.office.home`</td>
-<td colspan="1">Home directory of OpenOffice or LibreOffice.</td>
-<td colspan="1">&nbsp;</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="1">`jod.office.ports`</td>
-<td colspan="1">When running in SOCKET mode, comma-separated list of ports used for the office connection.</td>
-<td colspan="1">2003</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="1">`jod.office.pipes`</td>
-<td colspan="1">When running in PIPE mode, comma-separated list of pipe names used for the office connection.</td>
-<td colspan="1">&nbsp;</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="1">`jod.jpipe.lib.path`</td>
-<td colspan="1">Path to Jpipe library. Only used when connecting to OO through PIPE.</td>
-<td colspan="1">&nbsp;</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="1">`jod.template.profile.dir`</td>
-<td colspan="1">Path to custom OO template directory.</td>
-<td colspan="1">&nbsp;</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
 <td colspan="1">`repository.clustering.enabled`</td>
 <td colspan="1">Activate clustering mode.</td>
 <td colspan="1">false</td>
