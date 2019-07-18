@@ -27,10 +27,10 @@ For your existing configuration, a simple tweak can do the bulk of the work! In 
 </style>
 ```
 
-with the Nuxeo styles instead:
+with the Nuxeo layout styles instead:
 
 ```
-<style include="nuxeo-styles"></style>
+<style include="nuxeo-layout-styles"></style>
 ```
 
 Any custom styling you need can be kept inside the style tag.
