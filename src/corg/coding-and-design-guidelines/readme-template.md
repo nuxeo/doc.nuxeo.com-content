@@ -84,85 +84,110 @@ Except the "Requirements" and "Limitations" which may not be relevant, all secti
 Common content is pre-filled. Sampled advanced content is prefixed by `Sample:`
 
 ```text
-# About / Synopsis
+# Title / Repository Name
+
+## About / Synopsis
 
 * What is it, what does it do / Abstract
 * Project status: working/prototype
 * Nuxeo Support
 
-# Table of contents
+See real examples:
 
-Use for instance https://github.com/ekalinin/github-markdown-toc
+* <https://github.com/nuxeo/nuxeo/blob/master/README.md>
+* <https://github.com/nuxeo/nuxeo-drive/blob/master/README.md>
+* <https://github.com/nuxeo/nuxeo-sdk-ios/blob/master/README.md>
 
-# Installation
+## Table of contents
+
+Use for instance <https://github.com/ekalinin/github-markdown-toc>:
+
+> * [Title / Repository Name](#title--repository-name)
+>   * [About / Synopsis](#about--synopsis)
+>   * [Table of contents](#table-of-contents)
+>   * [Installation](#installation)
+>   * [Usage](#usage)
+>     * [Screenshots](#screenshots)
+>     * [Features](#features)
+>   * [Code](#code)
+>     * [Content](#content)
+>     * [Requirements](#requirements)
+>     * [Limitations](#limitations)
+>     * [Build](#build)
+>     * [Deploy (how to install build product)](#deploy-how-to-install-build-product)
+>   * [Resources (Documentation and other links)](#resources-documentation-and-other-links)
+>   * [Contributing / Reporting issues](#contributing--reporting-issues)
+>   * [License](#license)
+>   * [About Nuxeo](#about-nuxeo)
+
+## Installation
 
 Sample:
-- From the Nuxeo Marketplace: install [the Sample Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample).
-- From the Nuxeo server web UI "Admin / Update Center / Packages from Nuxeo Marketplace"
-- From the command line: `nuxeoctl mp-install nuxeo-sample`
 
-# Usage
-## Screenshots
-## Features
+* From the Nuxeo Marketplace: install [the Sample Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample).
+* From the command line: `nuxeoctl mp-install nuxeo-sample`
 
-# Code
-## QA
+## Usage
 
-[![Build Status](https://qa.nuxeo.org/jenkins/buildStatus/icon?job=addons_nuxeo-sample-project-master)](https://qa.nuxeo.org/jenkins/job/addons_nuxeo-sample-project-master/)
+### Screenshots
 
-If QA resources are included, sample: https://github.com/nuxeo/nuxeo-sdk-ios/blob/master/README.md
+### Features
 
-## Content
+## Code
+
+[![Build Status](https://qa.nuxeo.org/jenkins/buildStatus/icon?job=/nuxeo/addons_nuxeo-sample-project-master)](https://qa.nuxeo.org/jenkins/job/nuxeo/job/addons_nuxeo-sample-project-master/)
+
+### Content
 
 Description, sub-modules organization...
 
-## Requirements
+### Requirements
 
 See [CORG/Compiling Nuxeo from sources](http://doc.nuxeo.com/x/xION)
 
-Sample: https://github.com/nuxeo/nuxeo-distribution
+Sample: <https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/README.md>
 
-## Limitations
+### Limitations
 
-Sample: https://github.com/nuxeo/nuxeo-elasticsearch/blob/master/README.md
+Sample: <https://github.com/nuxeo/nuxeo-elasticsearch/blob/master/README.md>
 
-## Build
+### Build
 
     mvn clean install
 
 Build options:
-- ...
 
-## Deploy (how to install build product)
+* ...
 
-Direct to MP package if any. Otherwise provide steps to deploy on Nuxeo Platform: << Copy the built artifacts into `$NUXEO_HOME/templates/custom/bundles/` and activate the `custom` template. >>.
+### Deploy (how to install build product)
 
-# Resources (Documentation and other links)
+Direct to MP package if any. Otherwise provide steps to deploy on Nuxeo Platform:
 
-# Contributing / Reporting issues
+ > Copy the built artifacts into `$NUXEO_HOME/templates/custom/bundles/` and activate the `custom` template.
 
-Link to JIRA component (or project if there is no component for that project).
-Sample: https://jira.nuxeo.com/browse/NXP/component/14503/
-Sample: https://jira.nuxeo.com/secure/CreateIssue!default.jspa?project=NXP
+## Resources (Documentation and other links)
 
-# License
+## Contributing / Reporting issues
+
+Link to JIRA component (or project if there is no component for that project). Samples:
+
+* <https://jira.nuxeo.com/browse/NXP/component/14503/>
+* <https://jira.nuxeo.com/secure/CreateIssue!default.jspa?project=NXP>
+
+## License
 
 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
-Sample: https://github.com/nuxeo/nuxeo-drive
+## About Nuxeo
 
-# About Nuxeo
+Nuxeo Content Platform is an open source Enterprise Content Management platform, written in Java. Data can be stored in both SQL & NoSQL databases.
 
-The [Nuxeo Platform](http://www.nuxeo.com/products/content-management-platform/) is an open source customizable and extensible content management platform for building business applications. It provides the foundation for developing [document management](http://www.nuxeo.com/solutions/document-management/), [digital asset management](http://www.nuxeo.com/solutions/digital-asset-management/), [case management application](http://www.nuxeo.com/solutions/case-management/) and [knowledge management](http://www.nuxeo.com/solutions/advanced-knowledge-base/). You can easily add features using ready-to-use addons or by extending the platform using its extension point system.
+The development of the Nuxeo Content Platform is mostly done by Nuxeo employees with an open development model.
 
-The Nuxeo Platform is developed and supported by Nuxeo, with contributions from the community.
+The source code, documentation, roadmap, issue tracker, testing, benchmarks are all public.
 
-Nuxeo dramatically improves how content-based applications are built, managed and deployed, making customers more agile, innovative and successful. Nuxeo provides a next generation, enterprise ready platform for building traditional and cutting-edge content oriented applications. Combining a powerful application development environment with
-SaaS-based tools and a modular architecture, the Nuxeo Platform and Products provide clear business value to some of the most recognizable brands including Verizon, Electronic Arts, Sharp, FICO, the U.S. Navy, and Boeing. Nuxeo is headquartered in New York and Paris.
+Typically, Nuxeo users build different types of information management solutions for document management, case management, and digital asset management, use cases. It uses schema-flexible metadata & content models that allows content to be repurposed to fulfill future use cases.
+
 More information is available at [www.nuxeo.com](http://www.nuxeo.com).
-
 ```
 
-&nbsp;
-
-&nbsp;
