@@ -38,7 +38,7 @@ Watch the related courses on Nuxeo University
 
 ## Create an Automation Chain
 
-{{{multiexcerpt 'quick-switcher' page='web-ui-document-layouts'}}}
+{{{multiexcerpt 'quick-switcher' page='generic-multi-excerpts'}}}
 
 On Studio Modeler:
 1. Go on **Configuration** > **Automation** and then on **Automation Chains**.

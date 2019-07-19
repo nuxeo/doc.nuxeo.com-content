@@ -2,7 +2,7 @@
 title: 'HOWTO: Customize Theme'
 review:
   comment: ''
-  date: '2017-12-14'
+  date: '2019-07-18'
   status: ok
 toc: true
 details:
@@ -19,8 +19,8 @@ labels:
   - theme
   - appearance
   - lts2017-ok
+  - lts2019-ok
 tree_item_index: 1050
-
 ---
 
 Nuxeo Web UI provides several themes to change the look and feel of the UI. For the moment, they mostly provide color schemes applied to UI elements and a background image for some themes.
@@ -29,8 +29,8 @@ The available themes are:
 
 - Nuxeo (default)
 - Dark
-- Light
 - Kawaii
+- Light
 
 ## Customization
 

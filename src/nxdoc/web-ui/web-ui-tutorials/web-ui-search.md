@@ -3,7 +3,7 @@ title: 'HOWTO: Configure Searches'
 description: Learn how to create a new search screen with Studio Designer.
 review:
   comment: ''
-  date: '2019-02-18'
+  date: '2019-07-18'
   status: ok
 toc: true
 details:
@@ -20,6 +20,7 @@ labels:
   - university
   - search-tab-component
   - lts2017-ok
+  - lts2019-ok
 tree_item_index: 400
 ---
 
@@ -50,7 +51,12 @@ The first step is to create a [page provider]({{page version='' space='studio' p
 In **Configuration**, go to **Page Providers**, click on **New** and name it `Search`.
 
 **The full text search:**
-![]({{file name='full-text-vd.png'}} ?w=250, border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Configure Searches/full-text-vd.png
+    name: full-text-vd.png
+    1.1.3#screenshot#up_to_date
+--}}
+![full-text-vd.png](nx_asset://6d9c814a-febc-41e9-82b2-7ab55a78ea1c ?w=250,border=true)
 
 1. Next to **Predicates** click on **Add**.</br>
    A popup window appears.
@@ -58,7 +64,12 @@ In **Configuration**, go to **Page Providers**, click on **New** and name it `Se
 1. Save your changes.
 
 **The search by date range:**
-![]({{file name='creation-date-range-vd.png'}} ?w=250, border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Configure Searches/creation-date-range-vd.png
+    name: creation-date-range-vd.png
+    1.1.3#screenshot#up_to_date
+--}}
+![creation-date-range-vd.png](nx_asset://4ce1b16a-6422-4f43-87f2-e6e1f2bea0d0 ?w=250,border=true)
 
 1. Next to **Aggregates** click on **Add**.</br>
    A popup window appears.
@@ -89,7 +100,12 @@ In **Configuration**, go to **Page Providers**, click on **New** and name it `Se
    </div>
 
 **The search by tags:**
-![]({{file name='tags-search-vd.png'}} ?w=250,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Configure Searches/tags-search-vd.png
+    name: tags-search-vd.png
+    1.1.3#screenshot#up_to_date
+--}}
+![tags-search-vd.png](nx_asset://6325dccd-6998-4daa-85e5-b2537e74bc75 ?w=250,border=true)
 
 1. Add another new Predicates.
 1. Click on **Edit binding** and select `schema:system`&nbsp;> `tag[]`.
@@ -108,48 +124,51 @@ You are now in Studio Designer, where you can configure the layouts of your Sear
 
 In the Studio Designer, you are now in the **UI** tab, under **Layouts** > **Page Providers**. You will find the page provider created previously.
 
-{{{multiexcerpt 'quick-switcher' page='web-ui-document-layouts'}}}
+{{{multiexcerpt 'quick-switcher' page='generic-multi-excerpts'}}}
 
 Two layouts are available. Let's edit the **form** layout first.
 
-1. Click on **form**, then **Configure**.
+1. Click on **form**, then **Configure**.</br>
    The form layout is now displayed in bold. On the right, in the properties catalog, the elements that we defined in Studio are displayed.
-1. Expand the first element and drag and drop the **Edit** mode into the editor.</br>
-   Do the same for the three other elements.
-1. Once it's done, click on the **Full text** element on the main view, you can edit the label in the left catalog to display `Full text`. You can do the same with the other elements.
+1. Click on the **System Fulltext** element on the main view, you can edit the label in the left catalog to display `Full text`. You can do the same with the other elements.
 
 Let's configure the **results** layout now.
 
-1. Click on **results**, then **Configure**.
-1. It automatically creates the result view by default. Leave it like this and click on **Save**.
+1. On the left menu, click on **results**, then **Configure**.
+1. It automatically creates the result view by default (grid and table). Leave it like this and click on **Save**.
 
-You now need to add your labels to your translations file to display them correctly in the UI. To do so:
+You now need to add your labels to your translations file to display them correctly in the UI.</br>
+To do so:
 
 1. Click on the **UI** table.
 1. Click on **Translations**.
 1. Use the default `messages.json` or create your own language.
 1. Create a new entry in the JSON file with key `label.ui.aggregate.<label>` and the label as value. Here it's:
-    - `"label.ui.aggregate.from_now-1y_to_now-1M":"Last year"`
-    - `"label.ui.aggregate.from_now-1M_to_now-7d":"Last month"`
-    - `"label.ui.aggregate.from_now-7d_to_now-24H":"Last week"`
-    - `"label.ui.aggregate.from_now-24H_to_now":"Last 24H"`
+  ```
+  {
+  	"label.ui.aggregate.from_now-1y_to_now-1M":"Last year",
+  	"label.ui.aggregate.from_now-1M_to_now-7d":"Last month",
+  	"label.ui.aggregate.from_now-7d_to_now-24H":"Last week",
+  	"label.ui.aggregate.from_now-24H_to_now":"Last 24H"
+  }
+  ```
 
 ## Create a New Drawer Item
 
 The next step is to add a button in the drawer menu to display the search screen.
 
-1. In the same screen, in **Bind more elements**, select **Drawer item search** to create your menu item.
+1. Go back to you `Search` page prodiver.
+1. In the **Bind more elements** section, select **Drawer item search** to create your menu item.
 1. Fill in the page like this:
-
-- Name: Contract
-- Available: enabled
-- Label: `Contracts`
-- Icon: `icons:assignment`
-- provider: `Search`
-- schemas: `dublincore`, `contract`
-- search-name: `search`
-- auto: enabled
-
+  - Name: Contract
+  - Available: enabled
+  - Label: `Contracts`
+  - Icon: `icons:assignment`
+  - provider: `Search`
+  - schemas: `dublincore`, `contract`
+  - search-name: `search`
+1. Click on **Show Advanced Options**:
+  - auto: enabled
 1. Save your changes, deploy your Studio project on your instance and you're done :)
 
 ![]({{file name='result-search-screen-vd.png'}} ?w=350,border=true)

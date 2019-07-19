@@ -3,7 +3,7 @@ title: 'HOWTO: Customize Document Layouts'
 description: Learn how to use document layouts with Web UI and Studio Designer.
 review:
     comment: ''
-    date: '2018-02-21'
+    date: '2019-07-17'
     status: ok
 toc: true
 details:
@@ -22,8 +22,8 @@ labels:
     - layouts
     - university
     - lts2017-ok
+    - lts2019-ok
 tree_item_index: 800
-
 ---
 
 Document type layouts are used to display a document's metadata in Web UI. A document layout is structured with document type properties, assembled with several UI elements such as sections, cards, columns etc.
@@ -33,8 +33,8 @@ A given document type can have multiple layouts: a `create` and `edit` layout to
 In this tutorial you will learn how to create a document type layout with Studio Designer from a document type created in Studio Modeler and how to add a icon to it.
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Course on Document type layouts](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner).
+Watch the related course on Nuxeo University:</br>
+[Course on Document type layouts](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner).
 ![]({{file name='university-doc-layout.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
@@ -46,70 +46,60 @@ The [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) add-on is in
 
 Create a custom document type named "Contract" that will hold specific metadata for a contract: contract owner, starting date, policy.
 
-
-1.  In Studio Modeler, under **Configuration**, click on the **Content Model** section, then **Document Types**. Click on the **New** button.
-1.  Fill in the creation form as follows and click on **Next**:
+1. In Studio Modeler, under **Configuration**, click on the **Content Model** section, then **Document Types**. Click on the **New** button.
+1. Fill in the creation form as follows and click on **Next**:
     - **ID**: Contract
     - **Extends**: File
     - **Label**: Contract
     - **Description**: Contract document type for internal use.
 
     Your document type is created.
-1.  Fill in the [**Definition** tab]({{page space='studio' page='documents'}}):
-![]({{file name='definition_contract.png'}} ?w=600,border=true)
-1.  Select an icon for your contract document type:
+1. Fill in the [**Definition** tab]({{page space='studio' page='documents'}}):
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Document Layouts/definition_contract.png
+      name: definition_contract.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![definition_contract.png](nx_asset://7c4bf823-6a9a-4d53-bc7e-49e9fe175770 ?w=600,border=true)
+1. Select an icon for your contract document type:
     - A .png icon for the **Icon** and **Large Icon** fields
     - An .svg Icon for the **SVG Icon** field.</br>
     From **Select Resource** buttons, you can select any SVG file available in the Studio project resources or upload your own.
-1.  Fill in the [**Schema** tab]({{page space='studio' page='schemas'}}) with the following metadata:
+1. Fill in the [**Schema** tab]({{page space='studio' page='schemas'}}) with the following metadata:
     - A field **owner** as a _String_
     - A field **policy** as a _String_
     - A field **reminder** as a _Date_
     - A field **start** as a _Date_
     - A field **endDate** as a _Date_ </br>
     You should end up with the following screen:
-    ![]({{file name='schema_contract.png'}} ?w=600,border=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Document Layouts/schema_contract.png
+      name: schema_contract.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![schema_contract.png](nx_asset://1ef30ee8-2913-4632-b0a4-f4b3f7d99d9a ?w=600,border=true)
 
-Once you are all set, you can navigate to the Studio Designer to configure your layouts.
+Once you are all set, click on **Configure Layouts** at the top-right of the screen to go the Designer side.
 
 ## Create a New Layout
 
-{{! multiexcerpt name='quick-switcher'}}
-{{#> callout type='tip' }}
-Jump between any Studio feature or menu in a snap by typing its name. This action can be triggered by clicking the **Jump To** option on the bottom left of your Studio project, or using the Ctrl + K / ⌘ + K shortcut.
-{{/callout}}
-{{! /multiexcerpt}}
+When configuring a document type, you need to create all layouts in the Studio Designer in order to display the relevant properties.</br>
+Click on **Configure missing layouts** to create automatically the default layouts based on the document type.
 
-1. In Studio Designer, go to **UI** > **Layouts**.
-1. Under **Local Types**, find your `Contract` document type.
- Five layouts are available for the configuration.
-1. To configure the Create layout,  click on **create** layout, then on the **Configure** button.
-
-  {{#> callout type='tip' }}
-  It automatically creates the `nuxeo-contract-create-layout.html` file, scaffolding:
-    - The title and description fields
-    - Every custom schema property linked to the document type
-  {{/callout}}
-
-1. In CATALOG, on the right, select **File**&nbsp;> **content:blob**&nbsp;> **view** and drag and drop the element in the main view.
+1. Modify and/or delete fields as you need on each layouts to fit your needs.
+1. Go to your **Create** layout. In **CATALOG**, on the right, select **File** > **content:blob** > **view** and drag and drop the element in the main view.</br>
+    You now have an upload button on your document layout.
 1. Click on **Save**.
 
-  {{#> callout type='note' }}
-  When configuring a document type, you need to create all layouts in the Studio Designer in order to display the relevant properties. You can also click **Configure missing layouts** to create automatically default layouts based on the document type.
-  {{/callout}}
+You should end up with something like this:
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Document Layouts/main-view-contract-vd.png
+    name: main-view-contract-vd.png
+    studio_designer#screenshot#up_to_date
+--}}
+![main-view-contract-vd.png](nx_asset://85c40a74-ebcf-4e93-8dd8-c6b75aef4031 ?w=450,border=true)
 
-1. To configure the Edit layout,Click on the **edit** and then on the **Configure** button.
-1. Modify and/or delete fields as you need when editing your document and click on **Save**.
-1. Do the same two last steps with the **Metadata** and **View** layouts and don't forget to save.<br/>
-  You now have an upload button on your document layout.
-1. At the bottom of the editor, switch to code editor.
-    You are now in the HTML mode of the Studio Designer and you can see the element that you just drag and dropped on the other editor.
-1. Find the description's element and delete it.
-1. Click on **Save** to keep your changes.
-
-  You should end up with something like this:
-  ![]({{file name='main-view-contract-vd.png'}} ?w=350,border=true)
-
+<!--
 ### Configure Labels
 
 When configuring a document type, a label is required. If you do not create a translation file, Studio uses this label as a fallback option to show your users something clearer.
@@ -122,6 +112,7 @@ To do so:
 1. Use the default `messages.json` or create your own language;
 1. Create a new entry in the JSON file with key `label.document.type.<document type name>` and the document type name as value. Here it is `"label.document.type.contract":"Contract"`;
 1. Save your changes.
+-->
 
 You now have a document type ready to be used on your Web UI interface!
 
@@ -142,7 +133,7 @@ Each of these regions is defined by a generic layout container element which wil
 
 These specific document layout elements are loaded by convention from a `/nuxeo.war/ui/document/<doctype>` folder and the element naming convention adopted is `nuxeo-<doctype>-<mode>-layout.html` where `mode` describes the use case and matches the layout name (i.e. *create*, *view* , *edit*, *import*, etc):
 
-```text
+```
 /ui
   └──── document
     ├─── <doctype>
@@ -161,9 +152,7 @@ The following table lists layout elements used by Nuxeo Web UI:
 | 5. nuxeo-document-import     | nuxeo-{doctype}-import-layout      | ![]({{file name='document_import.png'}} ?w=100,border=true)      |
 
 {{#> callout type='warning' }}
-
 Nuxeo Web UI relies on the existence of these document layout elements so, for each registered document type, the application will attempt to load its specific layouts. Since there is no layout registry, there is no fallback.
-
 {{/callout}}
 
 When instantiating and stamping these layout elements, a `document` property will be set to the current document and the layout is expected to update accordingly. The importing and stamping of these elements, executed by container, is simply:
@@ -183,10 +172,8 @@ By building these elements with Polymer, developers can simply declare this `doc
 Since these document layouts are regular custom elements, developers have no limitations whatsoever in terms of HTML template, CSS styling or JS logics and are free to leverage any third party libraries or elements when building their own.
 
 {{#> callout type='warning' }}
-
 Nuxeo Web UI is vulcanized for production meaning that shared dependencies are already bundled and loaded in the application and should not be imported again in dynamically loaded elements.
 If your elements have other unshared static dependencies then these should be deployed as well.
-
 {{/callout}}
 
 Layouts created and managed by Nuxeo Studio however will rely on introspection of the HTML and JS in order to provide validation and tooling support and will include some extra metadata, in the form of HTML attributes and/or JSDoc annotations.
@@ -258,17 +245,17 @@ window.nuxeo.importBlacklist = [
  'Workspace', 'Folder', 'OrderedFolder', 'Collection'
 ];
 ```
-
+<!--
 {{#> callout type='warning' }}
 The configuration of document creation in Web UI is subject to change in the upcoming versions.
 {{/callout}}
-
+-->
 
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-- [Customization Tutorial]({{page page='web-ui-customization-tutorial'}}).
+- [Customization Tutorial]({{page page='web-ui-customization-tutorial'}})
 
 {{/panel}}</div><div class="column medium-6">
 </div></div>

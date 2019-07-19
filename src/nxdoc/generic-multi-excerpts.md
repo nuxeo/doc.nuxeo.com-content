@@ -120,6 +120,12 @@ Studio Designer is available as a public Beta version.
 {{/callout}}
 {{! /multiexcerpt}}
 
+{{! multiexcerpt name='quick-switcher'}}
+{{#> callout type='tip' }}
+Jump between any Studio feature or menu in a snap by typing its name. This action can be triggered by clicking the **Jump To** option on the bottom left of your Studio project, or using the Ctrl + K / ⌘ + K shortcut.
+{{/callout}}
+{{! /multiexcerpt}}
+
 &nbsp;
 
 &nbsp;

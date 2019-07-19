@@ -2,7 +2,7 @@
 title: 'HOWTO: Customize Dashboard'
 review:
     comment: ''
-    date: '2017-12-19'
+    date: '2019-07-17'
     status: ok
 toc: true
 details:
@@ -20,6 +20,7 @@ labels:
     - extension
     - dashboard
     - lts2017-ok
+    - lts2019-ok
 tree_item_index: 700
 
 ---
@@ -37,7 +38,6 @@ It is composed of four sections:
 ## Overriding the Dashboard
 
 To use your own dashboard, you can deploy and override `nuxeo-home.html` in your own bundle as described in [How to Deploy Additional Web UI Resources]({{page page='web-ui-deployment'}}#deploy_or_override).
-
 
 * * *
 
