@@ -15,9 +15,10 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ### More Consistent Styling in Layouts
 
-Because it is important to understand what your configuration will look like once deployed and to provide a consistent experience, newly generated layouts will better reflect the Web UI default configuration in terms of styling.
+Newly generated layouts will better reflect the Web UI default configuration, to check how your configuration will look like once deployed and provide a consistent experience.
 
-For your existing configuration, a simple tweak can do the bulk of the work! In a layout, use the `Switch to Code` option and replace the following specific padding from your layout:
+For your existing configuration, a simple tweak can do the bulk of the work!</br>
+ In a layout, use the **Switch to code** option and replace the following specific padding in your layout:
 
 ```
 <style>
@@ -27,7 +28,7 @@ For your existing configuration, a simple tweak can do the bulk of the work! In 
 </style>
 ```
 
-with the Nuxeo layout styles instead:
+By the Nuxeo layout styles instead:
 
 ```
 <style include="nuxeo-layout-styles"></style>
@@ -110,7 +111,7 @@ Compatibility for Nuxeo Studio with Polymer 3 to keep our technical stack up to 
 {{{multiexcerpt 'studio-updates-2019-05-and-06-bugfix' page='studio-updates-2019-05-and-06'}}}
 
 ## Learn More
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.15.0','3.15.1'%29) is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.15.0','3.15.2'%29) is available in our bug tracking tool.
 
 ---
 
