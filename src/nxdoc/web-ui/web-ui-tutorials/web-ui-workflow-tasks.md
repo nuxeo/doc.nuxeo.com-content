@@ -2,7 +2,7 @@
 title: 'HOWTO: Customize Workflow Tasks'
 review:
     comment: ''
-    date: 2017-12-14
+    date: '2019-07-17'
     status: ok
 toc: true
 details:
@@ -20,6 +20,7 @@ labels:
     - university
     - task
     - lts2017-ok
+    - lts2019-ok
 tree_item_index: 1000
 ---
 
@@ -42,11 +43,14 @@ Watch the related courses on Nuxeo University:</br>
 
 First, we need to create a new workflow template in Studio Modeler. This workflow will be applied to the Contract document type.
 
-{{{multiexcerpt 'quick-switcher' page='web-ui-document-layouts'}}}
-
 1. Go to **Workflow** > **Process Definitions** and click on **New**.
-  ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='create-wf-studio.png'}} ?w=350,border=true)
-1. On the **Activation** tab, next to the field **Current document has one of the types**, select the Contract local type and move it from left to right.
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Workflow Tasks/create-wf-studio.png
+      name: create-wf-studio.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![create-wf-studio.png](nx_asset://4d5272f1-a220-4af3-ae76-7bd3d916f446 ?w=450,border=true)
+1. On the **Activation** tab, next to the field **Current document has one of the types**, select the Contract local type and move it from left to right.</br>
 Now we will add a custom workflow variable called **Type** to specify which type of contract you are validating.
 1. On the **Variables** tab, add a field `type` as a string.
 1. On the **Graph** tab, select an **Accept/Reject** user tasks and drag and drop it on the graph.
@@ -57,24 +61,33 @@ Now we will add a custom workflow variable called **Type** to specify which type
       name: general-tab-custom-wf.png
       studio_modeler#screenshot#up_to_date
     --}}
-    ![general-tab-custom-wf.png](nx_asset://905350af-8553-4096-9661-e282f87ece4d ?w=350,border=true)
-1. On the **Variables** tab, activate the custom variable by moving it to the right box.
+    ![general-tab-custom-wf.png](nx_asset://905350af-8553-4096-9661-e282f87ece4d ?w=450,border=true)
+1. On the **Variables** tab, activate the `type` custom variable by moving it to the right box.
 1. Save your changes.
   You should end up with a graph like this:
-  ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='graph-custom-wf.png'}} ?w=350,border=true)
+  {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Workflow Tasks/graph-custom-wf.png
+    name: graph-custom-wf.png
+    studio_modeler#screenshot#up_to_date
+  --}}
+  ![graph-custom-wf.png](nx_asset://dff4bfee-121d-46c1-a4ea-ed2bed5e7f75 ?w=450,border=true)
 
-We will finish our Studio Modeler configuration by creating a vocabulary for the Type variable, to be able to select the type from a drop down list during the workflow process. The vocabulary will be composed of three different types of employment contract.
+We will finish our Studio Modeler configuration by creating a vocabulary for the `type` variable, to be able to select the type from a drop down list during the workflow process. The vocabulary will be composed of three different types of employment contract.
 
 1. Go to **Vocabularies** and click on **New**
-  ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='create-voc-studio.png'}} ?w=350,border=true)
+  {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Workflow Tasks/create-voc-studio.png
+    name: create-voc-studio.png
+    studio_modeler#screenshot#up_to_date
+  --}}
+  ![create-voc-studio.png](nx_asset://24a390bd-bcaf-4556-b604-3f8229281d05 ?w=450,border=true)
 2. Fill in the rows like this:
-
-| Id                              | Label                                 |
-|:--------------------------------|:--------------------------------------|
-| full-time-part-time             | Full-time and part-time               |
-| fixed-terms                     | Fixed-term                            |
-| freelance-consultant-contractor | Freelancers, consultants, contractors |
-
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Workflow Tasks/voc-created-studio.png
+      name: voc-created-studio.png
+      studio_modeler#screenshot#up_to_date
+    --}}
+    ![voc-created-studio.png](nx_asset://a60d0e4e-58d7-44ed-8101-2cf5ca40b4df ?w=450,border=true)
 3. Save your modifications.
 
 ## Create a Task layout
@@ -83,7 +96,12 @@ We can now configure our layout on Studio Designer.
 1. In **UI**, go to the  **Layouts** > **Workflows** menu and click on _Contract Validation task_ and then on **CONFIGURE**.
   The workflow layout works as the document type layout, you can browse the element catalog and switch editors between code and visual.
 1. You can start by reorder the properties on the visual editor to end up with something like this:
-  ![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='workflow-process-VD.png'}} ?w=350,border=true)
+  {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Workflow Tasks/workflow-process-VD.png
+    name: workflow-process-VD.png
+    studio_designer#screenshot#up_to_date
+  --}}
+  ![workflow-process-VD.png](nx_asset://b24e91cb-f932-4164-89c1-8d42334d42b5 ?w=350,border=true)
 1. Switch to editor from visual to code and change the line corresponding to the type field to turn it into a `nuxeo-directory-suggestion` to link the type property to the associated directory:
 ```
 <nuxeo-directory-suggestion role="widget" label="Type"
@@ -96,9 +114,26 @@ We can now configure our layout on Studio Designer.
 1. Save your changes.  
 
 You can now [deploy your project]({{page space='studio' page='deploying-your-project-in-dev-mode'}}) on your instance and see what it looks like!
-![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='contract-validation-process-web-ui.png'}} ?w=350,border=true)
-![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='validation-task-process.png'}} ?w=350,border=true)
-![]({{file version='810' space='nxdoc' page='web-ui-workflow-tasks' name='type-field-web-ui.png'}} ?w=350,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Workflow Tasks/contract-validation-process-web-ui.png
+    name: contract-validation-process-web-ui.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![contract-validation-process-web-ui.png](nx_asset://e3f3a367-21f8-4b70-b306-552ae590220f ?w=350)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Workflow Tasks/validation-task-process.png
+    name: validation-task-process.png
+    1.1.3#screenshot#up_to_date
+--}}
+![validation-task-process.png](nx_asset://3b855158-01e3-499c-b8b6-f3f4b27a4410 ?w=350,border=true)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Workflow Tasks/type-field-web-ui.png
+    name: type-field-web-ui.png
+    1.1.3#screenshot#up_to_date
+--}}
+![type-field-web-ui.png](nx_asset://66f1206c-8515-4487-89a1-da37c1dcfd4f ?w=350,border=true)
 
 For more information about tasks on Web UI, read the [related documentation]({{page version='' space='userdoc' page='task'}}).
 

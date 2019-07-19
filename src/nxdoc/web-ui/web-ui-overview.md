@@ -3,7 +3,7 @@ title: Web UI Overview
 description: 'Nuxeo Web UI is a standard web application for Nuxeo Server, built upon a framework of Web components, that connects via HTTP and displays the platform features to users.'
 review:
     comment: ''
-    date: '2017-12-13'
+    date: '2019-07-19'
     status: ok
 labels:
     - lts2016-ok
@@ -12,6 +12,7 @@ labels:
     - nsilva
     - polymer
     - lts2017-ok
+    - lts2019-ok
     - university
 toc: true
 tree_item_index: 100
@@ -105,26 +106,30 @@ version_override:
 
 ![]({{file name='web_ui_with_side_panel.png'}} ?w=650,border=true)
 
-It leverages the web as a platform and allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full screen suggester and several other features built to provide a rich user experience. Here are the most important topics on getting started with Web UI, customizing it and building new web apps using Nuxeo Elements:
+It leverages the web as a platform and allows enhanced productivity with direct access to last visited documents, collections, easy browsing between previous/next document, full-screen suggester and several other features built to provide a rich user experience. Here are the most important topics on getting started with Web UI, customizing it and building new web apps using Nuxeo Elements:
 
-<div class="row"><div class="column medium-4">{{#> panel type='primary'}}
-
+<div class="row">
+<div class="column medium-4" align="center">
+{{#> panel type='primary'}}
 [Polymer Guide]({{page page='polymer-guide'}})
-
-{{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
-
+{{/panel}}
+</div>
+<div class="column medium-4" align="center">
+{{#> panel type='primary'}}
 [Nuxeo Elements]({{page page='nuxeo-elements'}})
-
-{{/panel}}</div><div class="column medium-4">{{#> panel type='primary'}}
-
+{{/panel}}
+</div>
+<div class="column medium-4" align="center">
+{{#> panel type='primary'}}
 [Customization]({{page page='web-ui-customization'}})
-
-{{/panel}}</div></div>
+{{/panel}}
+</div>
+</div>
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Course on the Web UI Stack](https://university.nuxeo.com/learn/public/course/view/elearning/76/nuxeo-web-ui-stack-introduction).
-- [Course to Start with Web UI](https://university.nuxeo.com/learn/public/course/view/elearning/92/getting-started-with-nuxeo-web-ui).
+Watch the related courses on Nuxeo University:</br>
+[Course on the Web UI Stack](https://university.nuxeo.com/learn/public/course/view/elearning/76/nuxeo-web-ui-stack-introduction).</br>
+[Course to Start with Web UI](https://university.nuxeo.com/learn/public/course/view/elearning/92/getting-started-with-nuxeo-web-ui).
 ![]({{file name='university-webui.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
@@ -134,10 +139,8 @@ Watch the related courses on Nuxeo University
 Nuxeo Web UI and Nuxeo Web UI Elements framework make use of the recent W3C standard Web Components and Google Polymer 2.0 framework (legacy mode). The Google Polymer framework comes with polyfills for Web Components, a library that extends the support of web components standard to more browsers.
 
 {{#> callout type='warning' heading='Polymer 2.0 legacy mode'}}
-
 Previous versions of Nuxeo Web UI (1.x) relied on Polymer 1 so for compatibility reasons and to ensure a simple incremental upgrade the current version of Nuxeo Web UI is running
 Polymer 2 in legacy mode thus using the Polymer factory method, not the ES6 class-based syntax. Most of the 1.0 APIs are thus still available, as are any new 2.x APIs.
-
 {{/callout}}
 
 The following browsers are supported:
@@ -155,116 +158,8 @@ Nevertheless, Nuxeo is committed to using the latest supported version of the Po
 {{! /multiexcerpt}}
 
 
-{{! multiexcerpt name='webui-functional-overview'}}
-## Functional Overview
+{{{multiexcerpt 'webui-functional-overview' space='userdoc' page='web-ui'}}}
 
-Nuxeo Web UI is a responsive application with three main layout regions:
-
-![]({{file name='web_ui.png'}} ?w=650,border=true)
-
-1. [The header toolbar](#header-toolbar-functional-overview)
-2. [The side menu](#side-menu-functional-overview)
-3. [The main view](#main-view-functional-overview)
-
-### {{> anchor 'header-toolbar-functional-overview'}} Header Toolbar
-
-![]({{file name='header_toolbar.png'}} ?w=650,border=true)
-
-1.  **Domain**: The title of the selected page / document.
-2.  **Sub-Views**: The sub-views available.
-3.  **Quick search**: Search by keywords or users.
-
-### {{> anchor 'side-menu-functional-overview'}} Side Menu
-
-The menu displays different tabs. Clicking on one of them will open a side panel with the content of the tab selected: browsing options are on the first left column, content to browse on the second and content to view on the main area. We will see the description of the main area on the last part of this section.
-
-![]({{file name='web_ui_with_side_panel.png'}} ?w=650,border=true)
-
-This new pattern allows to start browsing without changing the context of work.
-
-<div class="table-scroll"><table class="hover"><tbody><tr><td colspan="1">![]({{file name='dashboard_home.png'}})</td><td colspan="1">
-
-**Dashboard:** Displays the dashboard
-
-</td></tr><tr><td colspan="1">![]({{file name='browse.png'}})</td><td colspan="1">
-
-**Browse:** Shows the navigation tree to let you browse your content
-
-</td></tr><tr><td colspan="1">![]({{file name='recently_viewed.png'}})</td><td colspan="1">
-
-**Recently Viewed:** Shows the 10 last documents viewed
-
-</td></tr><tr><td colspan="1">![]({{file name='searches.png'}})</td><td colspan="1">
-
-**Search Filters:** Search content using full text and metadata
-
-</td></tr><tr><td colspan="1">![]({{file name='expired.png'}})</td><td colspan="1">
-
-**Expired Queue:** Queue displaying expired documents
-
-</td></tr><tr><td colspan="1">![]({{file name='tasks.png'}})</td><td colspan="1">
-
-**Assets:**  Search multimedia files (pictures, audio and video). Requires DAM add-on installation.
-
-</td></tr><tr><td colspan="1">![]({{file name='assets.png'}})</td><td colspan="1">
-
-**Tasks:** Shows the list of pending workflow tasks
-
-</td></tr><tr><td colspan="1">![]({{file name='favorites.png'}})</td><td colspan="1">
-
-**Favorites:** The list of documents added to Favorites
-
-</td></tr><tr><td colspan="1">![]({{file name='collections.png'}})</td><td colspan="1">
-
-**Collections:** The list of collections you can access
-
-</td></tr><tr><td colspan="1">![]({{file name='personal_space.png'}})</td><td colspan="1">
-
-**Personal Space:** Access to your personal workspace, which is the default location for your Favorites and Collections folders
-
-</td></tr><tr><td colspan="1">![]({{file name='clipboard.png'}})</td><td colspan="1">
-
-**Clipboard:** Clipboard to copy and move documents
-
-</td>
-</tr>
-<tr><td colspan="1">![]({{file name='trash-side-menu.png'}})</td><td colspan="1">
-
-**Trash:** Search deleted documents using full text and metadata
-
-</td>
-</tr>
-<tr>
-<td colspan="1">![]({{file name='user_menu.png'}})</td>
-<td colspan="1">
-
-**User Settings:** Displays a **Themes** tab to manage branding and possibly other tabs depending on Nuxeo addons installed. For instance when Nuxeo Drive is installed a **Drive** tab is available to manage the user's synchronization roots.
-
-</td></tr><tr><td colspan="1">![]({{file name='administration.png'}})</td><td colspan="1">
-
-**Administration:** Displays the **Administration** tab.
-
-</td></tr></tbody></table></div>
-
-### {{> anchor 'main-view-functional-overview'}} Main View
-
-The main view display depends on what has been selected on the side menu. The main view will usually show lists of documents or a document and its details.
-Lists of documents are presented in a table that proposes different functionalities like infinite scroll instead of pagination, faceted filters in the header, easy columns selection with persistence of the user's choice and a great visibility of selected elements.
-
-At the top of the main view toolbars are displayed according to the content being displayed:
-
-**Document Actions**: Displays actions available for the current document
-
-![]({{file name='document_toolbar.png'}} ?w=650,border=true)
-
-**Results Actions**: Displays actions available for the current result listing
-
-![]({{file name='results_toolbar.png'}} ?w=77,border=true)
-
-A create button ![]({{file name='create_button.png'}} ?w=20) is also permanently displayed at the bottom right corner of the main view the to let you create or import documents from anywhere in the application.
-
-
-{{! /multiexcerpt}}
 ## Technical Overview
 
 Nuxeo Web UI has been built with simplicity and composability in mind. Nuxeo is a content application platform and our goal is to provide tools and components for you to build your own application. With Nuxeo Web UI we wanted to review our approach, make it simpler so anyone familiar with web development couple easily customize it or even just take is as an example of what can be achieved and build their own.

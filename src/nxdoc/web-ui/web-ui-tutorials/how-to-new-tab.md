@@ -3,7 +3,7 @@ title: 'HOWTO: Insert a New Tab'
 description: Learn how to add a new tab to a custom document type.
 review:
   comment: ''
-  date: '2019-02-18'
+  date: '2019-07-18'
   status: ok
 toc: true
 details:
@@ -20,14 +20,14 @@ labels:
   - nuxeo-ui-elements
   - page-provider
   - tab
-  - content-review-lts2017
+  - lts2017-ok
+  - lts2019-ok
 tree_item_index: 1400
 ---
 
 {{! excerpt}}
 In this tutorial you will learn how to add a new tab to your custom document type. This tab will help you to find other contracts created for the same contract owner. To do so, we'll be using a custom page provider linked to the Contract document type.
 {{! /excerpt}}
-
 
 ## Prerequisites
 
@@ -37,8 +37,6 @@ In this tutorial you will learn how to add a new tab to your custom document typ
 Once you are all set, you can navigate to Modeler to start creating your search.
 
 ## Create a Page Provider
-
-{{{multiexcerpt 'quick-switcher' page='web-ui-document-layouts'}}}
 
 1. In Studio Modeler, go to Customization, go to **Page Providers**, click on **New** and name it _otherContracts_.
 1. In the Query filter add the following line `AND ecm:primaryType='Contract'`. This will enable to only search contract documents.</br>

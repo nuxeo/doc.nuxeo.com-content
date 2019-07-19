@@ -74,20 +74,38 @@ history:
 
 ---
 {{! excerpt}}
-{{! multiexcerpt name='unknown'}}
-
 Automation chains and operations calls information is collected during their execution by the Automation Trace feature.
-
-{{! /multiexcerpt}}{{! /excerpt}}
+{{! /excerpt}}
 
 This Automation trace mode can be enabled through the [nuxeo.conf file]({{page page='configuration-parameters-index-nuxeoconf'}}) properties:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Property</th><th colspan="1">Default value</th><th colspan="1">Description</th></tr><tr><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace-default' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace-description' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td></tr><tr><td colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Property</th>
+<th colspan="1">Default value</th>
+<th colspan="1">Description</th>
+</tr>
+<tr>
+<td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td>
+<td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace-default' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td>
+<td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace-description' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td>
+</tr>
+<tr>
+<td colspan="1">
 
 {{{multiexcerpt 'org.nuxeo.automation.trace.printable' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}
 
-</td><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace.printable-default' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td><td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace.printable-description' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td></tr></tbody></table></div>{{#> callout type='info' }}
+</td>
+<td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace.printable-default' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td>
+<td colspan="1">{{{multiexcerpt 'org.nuxeo.automation.trace.printable-description' page='NXDOC:Configuration Parameters Index (nuxeo.conf)'}}}</td>
+</tr>
+</tbody>
+</table>
+</div>
 
+{{#> callout type='info' }}
 To display traces even for executions without errors, this appender is added by default in your `nuxeo-***-tomcat/lib/log4j` configuration file:
 
 ```xml
@@ -95,7 +113,6 @@ To display traces even for executions without errors, this appender is added by 
   <priority value="INFO" />
 </category>
 ```
-
 {{/callout}}
 
 ##### Examples: Simple chain
@@ -123,13 +140,13 @@ Parameters  | Name: message, Value: Message INFO
 Context Variables | Key: ChainParameters, Value: {}
 ```
 
-*   '`chainA`' is executed, produces a document model and runs two operations:  [`Context.FetchDocument`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.FetchDocument) and  [`Seam.AddInfoMessage`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Seam.AddInfoMessage) .
-*   These two operations display the following information during their executions:
+- '`chainA`' is executed, produces a document model and runs two operations:  [`Context.FetchDocument`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.FetchDocument) and  [`Seam.AddInfoMessage`](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Seam.AddInfoMessage) .
+- These two operations display the following information during their executions:
 
-    *   Input Type, Output Type,
-    *   The Input (here the 'default-domain' document),
-    *   Parameters defined into each operation with their values,
-    *   Context Variables (injected during execution).
+    - Input Type, Output Type,
+    - The Input (here the 'default-domain' document),
+    - Parameters defined into each operation with their values,
+    - Context Variables (injected during execution).
 
 ##### Examples: Composite Chains
 
@@ -190,38 +207,34 @@ Parameters  | Name: message, Value: test
 Context Variables | Key: ChainParameters, Value: {} | Key: Seam.AddInfoMessage, Value: Message INFO
 ```
 
-*   '`chainA`' is executed, produces a document model and runs three operations: [Context.FetchDocument](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.FetchDocument), [Context.RunOperation](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.RunOperation) and [Seam.AddInfoMessage](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Seam.AddInfoMessage).
-*   The `Context.RunOperation` runs a second subchain '`chainB`':
+- '`chainA`' is executed, produces a document model and runs three operations: [Context.FetchDocument](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.FetchDocument), [Context.RunOperation](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.RunOperation) and [Seam.AddInfoMessage](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Seam.AddInfoMessage).
+- The `Context.RunOperation` runs a second subchain '`chainB`':
 
-    *   These chain has parent ID attribute to '`chainA`';
-    *   It contains two operations: `Context.FetchDocument` and `Seam.AddInfoMessage`;
-    *   At subchain ending, third `Seam.AddInfoMessage` operation contained into '`chainB`' is executed.
+    - These chain has parent ID attribute to '`chainA`';
+    - It contains two operations: `Context.FetchDocument` and `Seam.AddInfoMessage`;
+    - At subchain ending, third `Seam.AddInfoMessage` operation contained into '`chainB`' is executed.
 
 ##### JMX Automation Trace Activation
 
 The Automation Trace mode can be activated through JMX via `org.nuxeo:TracerFactory` MBean during runtime.
 
 {{#> callout type='tip' }}
-
 You can also activate the traces (and download them for each chain) from the dynamical documentation of Automation module : `http://NUXEO_SERVER/nuxeo/site/automation/doc` (you should adapt server name and port number).
-
 {{/callout}}
 
 Please follow guidelines to activate it:
 
-1.  Install the VisualVM MBean plugin
+1. Install the VisualVM MBean plugin
     ![]({{file name='screenshot_2013-08-29_15-16-23.png'}} ?w=500)
-2.  Run VisualVM and connect it to the Nuxeo server.
+2. Run VisualVM and connect it to the Nuxeo server.
     ![]({{file name='screenshot_2013-08-29_15-41-25.png'}} ?w=500)
-3.  Look for the MBean org.automation.trace.TracerFactory to access to several services.
+3. Look for the MBean org.automation.trace.TracerFactory to access to several services.
     ![]({{file name='screenshot_2013-08-29_15-22-59.png'}} ?w=500)
 
-    *   '`clearTraces`' to clean up traces collected during execution.
-    *   '`toggleRecording`' to enable/disable automation trace mode.
-    *   '`setPrintableTraces`' to filter on several chains to print.
+    - '`clearTraces`' to clean up traces collected during execution.
+    - '`toggleRecording`' to enable/disable automation trace mode.
+    - '`setPrintableTraces`' to filter on several chains to print.
 
 {{#> callout type='note' }}
-
 Traces are collected and cached for one hour.
-
 {{/callout}}
