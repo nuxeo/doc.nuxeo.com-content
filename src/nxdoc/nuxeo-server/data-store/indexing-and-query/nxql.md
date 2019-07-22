@@ -987,19 +987,20 @@ Where:
 *   `<operator>` overrides the NXQL expression operator and is one the following Elasticsearch operators:
     *   [common](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-common-terms-query.html)
     *   [fuzzy](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-fuzzy-query.html)
-    *   [match](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query.html)
-    *   [match_phrase](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query-phrase.html)
-    *   [match_phrase_prefix](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query-phrase-prefix.html)
-    *   [multi_match](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-multi-match-query.html)
-    *   [query_string](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-query-string-query.html)
-    *   [simple_query_string](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-simple-query-string-query.html)
-    *   [regex](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-regexp-query.html)
-    *   [wildcard](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-wildcard-query.html)
     *   [Geo location](https://www.elastic.co/guide/en/elasticsearch/guide/current/geoloc.html) filters:
         *   [geo_bounding_box](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-geo-bounding-box-filter.html)
         *   [geo_distance](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-geo-distance-filter.html)
         *   [geo_distance_range](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-geo-distance-range-filter.html)
         *   [geo_shape](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-geo-shape-filter.html)
+    *   [match](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query.html)
+    *   [match_phrase](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query-phrase.html)
+    *   [match_phrase_prefix](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-match-query-phrase-prefix.html)
+    *   [more_like_this](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-mlt-query.html)
+    *   [multi_match](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-multi-match-query.html)
+    *   [query_string](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-query-string-query.html)
+    *   [regex](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-regexp-query.html)
+    *   [simple_query_string](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-simple-query-string-query.html)
+    *   [wildcard](http://www.elastic.co/guide/en/elasticsearch/reference/5.6/query-dsl-wildcard-query.html)
 
 Here are some examples of NXQL queries using Elasticsearch hints:
 
@@ -1014,6 +1015,7 @@ SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.fulltext^3,dc:description.ful
 SELECT * FROM Document WHERE /*+ES: OPERATOR(regex) */ dc:title = 's.*y'
 SELECT * FROM Document WHERE /*+ES: OPERATOR(fuzzy) */ dc:title = 'zorkspaces'
 SELECT * FROM Document WHERE /*+ES: OPERATOR(common) */ dc:title = 'this is bonsai cool'
+SELECT * FROM Document WHERE /*+ES: OPERATOR(more_like_this) */ ecm:uuid IN ('1234', '4567')
 
 -- Use default ES simple_query_string search on dc:title.fulltext field
 SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.fulltext) OPERATOR(simple_query_string) */ dc:title = '\"fried eggs\" +(eggplant | potato) -frittata'
