@@ -3,13 +3,14 @@ title: Web UI Roadmap
 description: See what evolutions and improvements are planned for Nuxeo Web UI
 review:
     comment: ''
-    date: '2018-01-18'
+    date: '2019-07-22'
     status: ok
 toc: true
 labels:
     - roadmap
     - lts2017-ok
     - tcardoso
+    - lts2019-ok
 tree_item_index: 500
 
 ---
