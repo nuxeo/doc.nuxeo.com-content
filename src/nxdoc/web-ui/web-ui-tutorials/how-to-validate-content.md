@@ -2,7 +2,7 @@
 title: 'HOWTO: Validate a Document Type Layout'
 review:
     comment: ''
-    date: '2018-06-20'
+    date: '2019-07-22'
     status:
 toc: true
 details:
@@ -13,8 +13,11 @@ details:
         topics: Web UI
 labels:
     - lts2017-ok
+    - lts2019-ok
+    - mlumeau
 tree_item_index: 1600
 ---
+
 {{! excerpt}}
 This tutorial will demonstrate how to validate the content of a form in Web UI to apply your own set of rules. In this example, we will see how to ensure that the end date of a contract is ulterior to its start date.
 {{! /excerpt}}
@@ -34,7 +37,7 @@ This tutorial will demonstrate how to validate the content of a form in Web UI t
 1. Add an `id` attribute to the start date and end date elements so you can retrieve them later.</br>
     Result should look like this:
     ```
-      <nuxeo-date-picker id="contractStartDate" role="widget" value="\{{document.properties.contract:startDate}}" label="Start Date"></nuxeo-date-picker>
+      <nuxeo-date-picker id="contractStartDate" role="widget" value="\{{document.properties.contract:start}}" label="Start Date"></nuxeo-date-picker>
       <nuxeo-date-picker id="contractEndDate" role="widget" value="\{{document.properties.contract:endDate}}" label="End Date"></nuxeo-date-picker>
     ```
 1. Add a `validate` function in the `Polymer` object found between the `script` tags.</br>
@@ -63,7 +66,7 @@ This tutorial will demonstrate how to validate the content of a form in Web UI t
   validate: function() {
     // Nuxeo uses Moment.js (https://momentjs.com) to work with dates on the UI side.
     // We'll leverage this library to do the check.
-    if(moment(this.document.properties['contract:endDate']).isBefore(this.document.properties['contract:startDate'])) {
+    if(moment(this.document.properties['contract:endDate']).isBefore(this.document.properties['contract:start'])) {
       // Set the field in error state to alert user
       this.$.contractEndDate.invalid = true;
 
@@ -107,7 +110,7 @@ This tutorial will demonstrate how to validate the content of a form in Web UI t
     validate: function() {
       // Nuxeo uses Moment.js (https://momentjs.com) to work with dates on the UI side.
       // We'll leverage this library to do the check.
-      if(moment(this.document.properties['contract:endDate']).isBefore(this.document.properties['contract:startDate'])) {
+      if(moment(this.document.properties['contract:endDate']).isBefore(this.document.properties['contract:start'])) {
         // Set the field in error state to alert user
         this.$.contractEndDate.invalid = true;
 
