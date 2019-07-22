@@ -3,7 +3,7 @@ title: Web UI Tutorials
 description: Browse the list of tutorials available concerning Nuxeo Web UI.
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2019-07-22'
     status: ok
 toc: true
 labels:
@@ -11,9 +11,10 @@ labels:
     - web-ui-customization
     - nsilva
     - tcardoso
+    - lts2019-ok
 tree_item_index: 400
-
 ---
+
 ## Introduction
 
 Nuxeo Web UI was built with simplicity in mind. The goal was to make it easy and familiar for web developers to understand so they could learn and/or adjust it and make it their own.

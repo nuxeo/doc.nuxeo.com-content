@@ -38,7 +38,7 @@ Once you are all set, you can navigate to Modeler to start creating your search.
 
 ## Create a Page Provider
 
-1. In Studio Modeler, go to Customization, go to **Page Providers**, click on **New** and name it _otherContracts_.
+1. In Studio Modeler, go to Customization, go to **Page Providers**, click on **New** and name it `otherContracts`.
 1. In the Query filter add the following line `AND ecm:primaryType='Contract'`. This will enable to only search contract documents.</br>
    You should end up with something like this:
 
@@ -49,13 +49,23 @@ Once you are all set, you can navigate to Modeler to start creating your search.
 Now we will add aggregates to customize the search.
 
 **The search by owner of the contract:**
-![]({{file version='' space='nxdoc' page='web-ui-search' name='contract-owner-vd.png'}} ?w=250,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Insert a New Tab/contract-owner-vd.png
+    name: contract-owner-vd.png
+    1.1.3#screenshot#up_to_date
+--}}
+![contract-owner-vd.png](nx_asset://b3dac2ef-6a71-49a6-9136-708e52f07b39 ?w=250,border=true)
 
 1. Add another new Predicates
 1. Click on **Edit binding** and select `schema:contract` > `owner`
 
 **The search by date range:**
-![]({{file version='' space='nxdoc' page='web-ui-search' name='creation-date-range-vd.png'}} ?w=250, border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Insert a New Tab/creation-date-range-vd.png
+    name: creation-date-range-vd.png
+    1.1.3#screenshot#up_to_date
+--}}
+![creation-date-range-vd.png](nx_asset://263526ac-16b3-41e3-b45c-5a23c98405b0 ?w=250,border=true)
 
 1. Next to **Aggregates** click on **Add**</br>
    A popup window appears.
@@ -98,12 +108,16 @@ You now need to add your labels to your translations file to display them correc
 
 1. Click on the **UI** table.
 1. Click on **Translations**.
-1. Use the default `messages.json` or create your own language.
+1. Create a new `messages.json` file.
 1. Create a new entry in the JSON file with key `label.ui.aggregate.<label>` and the label as value. Here it's:
-    - `"label.ui.aggregate.from_now-1y_to_now-1M":"Last year"`
-    - `"label.ui.aggregate.from_now-1M_to_now-7d":"Last month"`
-    - `"label.ui.aggregate.from_now-7d_to_now-24H":"Last week"`
-    - `"label.ui.aggregate.from_now-24H_to_now":"Last 24H"`
+  ```
+  {
+    "label.ui.aggregate.from_now-1y_to_now-1M":"Last year",
+    "label.ui.aggregate.from_now-1M_to_now-7d":"Last month",
+    "label.ui.aggregate.from_now-7d_to_now-24H":"Last week",
+    "label.ui.aggregate.from_now-24H_to_now":"Last 24H"
+  }
+  ```
 
 You can now save your changes and go to the Designer.
 
@@ -114,13 +128,28 @@ From the Page Provider screen for **otherContracts**:
 1. In **Bind more elements**, select **Tab**.
 1. Name it `other-contracts`.
 1. Fill in the creation form like this:
-   ![]({{file name='other-contract.png'}} ?w=450,border=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Insert a New Tab/other-contract.png
+      name: other-contract.png
+      studio_designer#screenshot#up_to_date
+    --}}
+    ![other-contract.png](nx_asset://3d8705d7-1e9a-4752-84b7-cdbad6942986 ?w=450,border=true)
 1. Fill in the **Element & Attributes** section like this:
-   ![]({{file name='other-contract-elements-attributes.png'}} ?w=450,border=true)
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Insert a New Tab/other-contract-elements-attributes.png
+      name: other-contract-elements-attributes.png
+      studio_designer#screenshot#up_to_date
+    --}}
+    ![other-contract-elements-attributes.png](nx_asset://209e3f72-ef8e-4fe9-847c-2b9e07a8c0b0 ?w=450,border=true)
 1. Fill in the Filters section like this:
 1. **Current user has one of the permissions**: `Edit`
 1. **Current document has one of the types**: `Contract`
 1. Save your changes.
 
 You can now deploy your project on your instance and see what it looks like!
-![]({{file name='other-contract-result.png'}} ?w=500, border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Insert a New Tab/other-contract-result.png
+    name: other-contract-result.png
+    1.1.3#screenshot#up_to_date
+--}}
+![other-contract-result.png](nx_asset://2409057b-9813-479c-83f5-8d753ad6a8be ?w=500,border=true)
