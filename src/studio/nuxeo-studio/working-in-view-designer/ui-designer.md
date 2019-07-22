@@ -16,7 +16,12 @@ Watch the related course on Nuxeo University:</br>
 
 The UI tab gives you access to several elements to customize the UI section that you want, dashboard, menus, themes, default document view, integrate new custom pages, add new buttons, translations, etc.
 
-![]({{file name='ui-designer.png'}} ?w=300,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/UI Designer/ui-designer.png
+    name: ui-designer.png
+    studio_designer#screenshot#up_to_date
+--}}
+![ui-designer.png](nx_asset://228e28f3-8498-4f5d-b08b-3ea44dc68b8c ?w=300,border=true)
 
 ## Layouts
 
