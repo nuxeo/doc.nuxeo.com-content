@@ -1,5 +1,5 @@
 ---
-title: 'HOWTO: Configure Web UI global settings'
+title: 'HOWTO: Configure Web UI Global Settings'
 description: Learn how to configure global Web UI settings.
 review:
     comment: ''
@@ -18,25 +18,23 @@ labels:
     - customization
     - tutorial
 tree_item_index: 650
-
 ---
 
 {{! excerpt}}
-Nuxeo Web UI provides a simple way to configure global settings in order to have consistent behaviour across the platform. These configurations are handled as a configuration extension.
-
-For more details please take a look at [HOWTO: Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}}).
+Nuxeo Web UI provides a simple way to configure global settings to have consistent behavior across the platform. These configurations are handled as a configuration extension.</br>
+For more details, please take a look at the [HOWTO: Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}}) page.
 {{! /excerpt}}
 
 ## Default Settings
 
-The XML contribution for the configuration extension is located [here](https://github.com/nuxeo/nuxeo-web-ui/blob/master/plugin/web-ui/addon/src/main/resources/OSGI-INF/web-ui-properties.xml) and contains a set predefined default settings using `org.nuxeo.web.ui` namespace.
+The XML contribution for the configuration extension is located [here](https://github.com/nuxeo/nuxeo-web-ui/blob/master/plugin/web-ui/addon/src/main/resources/OSGI-INF/web-ui-properties.xml) and contains a set of predefined default settings using `org.nuxeo.web.ui` namespace.
 
 For the moment, the default settings include:
 
 ### Enrichers
 
-In Nuxeo Platform a concept of Content Enrichers is used for several reasons, such as to optimize the number of requests sent to the server. More details about them could be found here
-[Content Enrichers]({{page page='content-enrichers'}}).
+In Nuxeo Platform, a concept of Content Enrichers is used for several reasons, such as to optimize the number of requests sent to the server. More details about them could be found on the
+[Content Enrichers]({{page page='content-enrichers'}}) documentation.
 
 By default, the following enrichers are being used:
 
@@ -69,10 +67,11 @@ By default, the following enrichers are being used:
 ```
 
 ### Special HTTP Headers
-In a similiar way, Nuxeo also makes use of special HTTP headers with the same general purpose: to have more control on REST API calls.
-Please consider [Special HTTP Headers]({{page page='special-http-headers'}}) in order to learn more about this concept and also to be aware of the available options.
 
-By default, only the `fetch.document` HTTP header is defined in order to ensure that all the properties are being fetched for a given document.
+Similarly, Nuxeo Platform also makes use of special HTTP headers with the same general purpose: to have more control on REST API calls.
+Please consider the [Special HTTP Headers]({{page page='special-http-headers'}}) page to learn more about this concept and be aware of the available options.
+
+By default, only the `fetch.document` HTTP header is defined to ensure that all the properties are being fetched for a given document.
 
 ```xml
 <component name="org.nuxeo.web.ui.properties.contrib">
@@ -80,7 +79,7 @@ By default, only the `fetch.document` HTTP header is defined in order to ensure 
 
      <!-- Properties to be fetched when loading current document, default 'properties' means all -->
     <property name="org.nuxeo.web.ui.fetch.document" list="true">properties</property>
-    
+
   </extension>
 </component>
 ```
@@ -90,10 +89,13 @@ The configurations made on both **Enrichers** and **Special HTTP Headers** may i
 {{/callout}}
 
 ### Date Formats
-Since Nuxeo Web UI is an internationalized and localized application, there is a concern with language and culture. For this reason, it is possible to configure some date and time related formats.
 
-By default, the `dateFormat` and `dateTimeFormat` are defined according to Moment.js syntax (see more [here](https://momentjs.com/)), since it is the library used by Web UI to manage time.
-Also, a `firstDayOfWeek` is considered in order to display a date picker, for example, according to cultural needs. If the variable is not customized, it will default to the most common case which is Sunday. An example of its usage can be found on [Nuxeo Date Picker](https://github.com/nuxeo/nuxeo-elements/blob/master/ui/widgets/nuxeo-date-picker.js#L86-L100).
+Since Nuxeo Web UI is an internationalized and localized application, there is a concern with language and culture. For this reason, it is possible to configure some date and time-related formats.
+
+By default, the `dateFormat` and `dateTimeFormat` are defined according to **Moment.js** syntax (check the [Moment.js](https://momentjs.com/) website for more information), since it is the library used by Web UI to manage time.
+Also, a `firstDayOfWeek` is considered to display a date picker, for example, according to cultural needs. If the variable is not customized, it will default to the most common case, which is Sunday.
+
+An example of its usage can be found on the [Nuxeo Date Picker](https://github.com/nuxeo/nuxeo-elements/blob/master/ui/widgets/nuxeo-date-picker.js#L86-L100).
 
 ```xml
 <component name="org.nuxeo.web.ui.properties.contrib">
@@ -105,14 +107,15 @@ Also, a `firstDayOfWeek` is considered in order to display a date picker, for ex
 
     <!-- First Day Of Week -->
     <property name="org.nuxeo.web.ui.firstDayOfWeek"></property>
-    
+
   </extension>
 </component>
 ```
 
 ### Others
+
 By default, there are also two more settings defined related to [Amazon S3 Direct Upload for Web UI]({{page page='amazon-s3-direct-upload'}}) and [Page Providers]({{page page='page-providers'}}).
-The first defines if the S3 Direct Upload is used and the second will define the maximum number of results displayed by the Page Provider.
+The first defines if the S3 Direct Upload is used, and the second defines the maximum number of results displayed by the Page Provider.
 
 ```xml
 <component name="org.nuxeo.web.ui.properties.contrib">
@@ -123,26 +126,27 @@ The first defines if the S3 Direct Upload is used and the second will define the
 
     <!-- Max Results for Tables, Grids and Lists plugged on a Nuxeo Page Provider. Falls back on elasticsearch max result window by default. -->
     <property name="org.nuxeo.web.ui.listingMaxItems">${org.nuxeo.elasticsearch.provider.maxResultWindow:=10000}</property>
-    
+
   </extension>
 </component>
 ```
 
 ## Customize Settings
-As any other configuration, the best way to create new settings or change/override the default ones, is to contribute a new extension as explained here [HOWTO: Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}}).
+
+As any other configuration, the best way to create new settings or change/override the default ones, is to contribute a new extension as explained [on this tutorial]({{page page='how-to-contribute-to-an-extension'}}).
 
 {{#> callout type='warning' }}
-
-Overriding default settings must be done in a conscious way, since it will change the default/expected behavior of the platform or, at least, of some components, depending on which settings are changed.
-
+Overriding default settings must be done in a conscious way, as it will change the default/expected behavior of the platform or, at least, of some components, depending on which settings are changed.
 {{/callout}}
 
 ## Usage Examples
-When Web UI is build these settings will be available to be used (details [here](https://github.com/nuxeo/nuxeo-web-ui/blob/master/plugin/web-ui/addon/src/main/resources/web/nuxeo.war/ui/index.jsp#L113)).
 
-The recommended way to access and use these settings is through `Nuxeo.UI.config` and several examples can be found in Web UI.
+When Web UI is built, these settings will be available to be used (details [here](https://github.com/nuxeo/nuxeo-web-ui/blob/master/plugin/web-ui/addon/src/main/resources/web/nuxeo.war/ui/index.jsp#L113)).
+
+The recommended way to access and use these settings is through `Nuxeo.UI.config`, and several examples can be found in Web UI.
 
 ### Nuxeo App
+
 ```javascript
  _computeHeaders() {
   const headers = {
@@ -173,6 +177,7 @@ The recommended way to access and use these settings is through `Nuxeo.UI.config
 ```
 
 ### Nuxeo Format Behavior
+
 ```javascript
  /**
   * Formats a date time as a string. Default format is 'MMMM D, YYYY HH:mm'.
