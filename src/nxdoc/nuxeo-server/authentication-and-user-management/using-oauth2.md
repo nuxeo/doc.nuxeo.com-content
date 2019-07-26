@@ -55,7 +55,7 @@ history:
 ---
 OAuth2 is a protocol that allows application request authorization to the Nuxeo Platform without getting user's password.
 
-Nuxeo tries to stay very close to the [OAuth2 RFC](http://tools.ietf.org/html/rfc6749) memorandum to ease client integration. Before going any further, because OAuth2 has to make a lot of secure exchanges with clients using query parameters, you **must ensure** to have [configured Nuxeo in HTTPs]({{page page='http-and-https-reverse-proxy-configuration'}}).
+Nuxeo tries to stay very close to the ["OAuth 2.0 Authorization Framework"](http://tools.ietf.org/html/rfc6749) RFC to ease client integration and be secure. Before going any further, because OAuth 2 has to make a lot of secure exchanges with clients using query parameters, you **must ensure** to have [configured Nuxeo in HTTPS]({{page page='http-and-https-reverse-proxy-configuration'}}).
 
 RFC describes two endpoints:
 
