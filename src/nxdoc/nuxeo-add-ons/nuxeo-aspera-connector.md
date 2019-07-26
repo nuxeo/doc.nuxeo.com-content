@@ -19,7 +19,8 @@ The [Nuxeo Aspera Connector addon](https://connect.nuxeo.com/nuxeo/site/marketpl
 
 ## Requirements
 
-Aspera Desktop Client - [latest version](https://downloads.asperasoft.com/en/downloads/2).
+- Aspera Desktop Client - [latest version](https://downloads.asperasoft.com/en/downloads/2).
+- Nuxeo Server LTS 2019 (10.10) with access to AWS S3 Storage
 
 ## Installation
 
@@ -32,13 +33,14 @@ Installation is made of two steps:
 
 ### Aspera Configuration
 
-We need to configure 2 nodes, one for upload and one for download, each one will bet attached to one S3 bucket in Nuxeo:
-- The main Nuxeo S3 bucket in Nuxeo is going to be used for download purpose
-- While the S3 transient store bucket is used for upload purpose
+We need to configure 2 Aspera nodes; one for upload and one for download. Each node will be attached to one S3 bucket in Nuxeo:
 
-Follow this [documentation](https://aspera.ibmaspera.com/help/transfer_service/managing_transfer_service_with_aspera_apis/adding_a_transfer_service_node_to_the_organization-1) to attach these S3 buckets to Aspera.
+- The main Nuxeo S3 bucket in Nuxeo is used for download purposes
+- The S3 transient store bucket is used for upload purposes
 
-While following the documentation above, pay attention to the fact that for `Download` the IAM role used by Aspera only needs `READ` permissions on the bucket, so the policy attached to this role can be added like this:
+Follow this [documentation](https://aspera.ibmaspera.com/help/admin/nodes/adding_aws_s3_bucket) to attach S3 buckets to Aspera.
+
+NOTE: In the documentation above, for `Download` the IAM role used by Aspera only needs `READ` permissions on the bucket. The policy attached to this role can be added as shown in this sample:
 
 ```
 {
@@ -61,7 +63,7 @@ While following the documentation above, pay attention to the fact that for `Dow
 }
 ```
 
-Then the policy for `Upload` must be able to put and get objects from the S3 bucket:
+The policy for `Upload` must be able to put and get objects from the S3 bucket (see below sample):
 
 ```
 {
@@ -97,7 +99,7 @@ Then the policy for `Upload` must be able to put and get objects from the S3 buc
 
 #### Transient Store on AWS
 
-To be able to use S3 direct upload with Nuxeo, you will need to add another policy to a new role:
+To use S3 direct upload with Nuxeo, you will need to add another policy to a new role (see sample below):
 
 ```
 {
@@ -137,16 +139,16 @@ To be able to use S3 direct upload with Nuxeo, you will need to add another poli
 }
 ```
 
-Make sure to set all configuration values in `nuxeo.conf`:
+Note: Make sure to set all configuration values in `nuxeo.conf`:
 
 ```
-nuxeo.s3storage.useDirectUpload=false
-nuxeo.s3storage.transient.bucket=YOUR_TRANSIENT_BUCKET
-nuxeo.s3storage.transient.roleArn=ROLE_THAT_CAN_WRITE_ON_IT
-nuxeo.s3storage.transient.awsid=
-nuxeo.s3storage.transient.awssecret=
-nuxeo.s3storage.transient.awstoken=
-nuxeo.s3storage.transient.region=
+nuxeo.s3storage.useDirectUpload=true
+nuxeo.s3storage.transient.bucket=
+nuxeo.s3storage.transient.roleArn=
+nuxeo.aws.accessKeyId=
+nuxeo.aws.secretKey=
+nuxeo.aws.region=
+nuxeo.s3storage.bucket=
 ```
 
 #### Aspera Nuxeo Configuration
@@ -171,113 +173,143 @@ aspera.download.acess.key.id=
 aspera.download.acess.key.secret=
 ```
 
-#### Nuxeo Lambda Configuration
+## Usage
 
-- A lambda function is configured on the same region as the S3 bucket:
+The Nuxeo Aspera Connector uses the concept of "Transfers" to add content to the system.  The process is broken down into 2 steps: Upload and Create.  In the first step, the user "Uploads" content to the transfer bucket.  While in this step, users can add files to the bukcet and add properties that will apply to the content.  Properties can be added to all files at once (common metadata), to multiple files at once (bulk edit of metadata) and one at a time.
 
-    - Triggered on PUT Object.
-    - Filter objects with prefix `batchId`.
-    - Returning the url `$NUXEO/site/lambda/success/$batchId` to your Nuxeo.
-    - The lambda function must be configured to filter on prefix `batchId`.
+Once metadata has been edited to suit the user, the transfer can be "completed" and the content is then "Created" in the system.
 
-Set up those two scripts on your AWS Lambda account:
+Transfers have 3 states: Draft (no content added yet), In Progress (content added) and Completed (the transfer has been completed and the content has been created in the system).
 
-`api_caller.js`:
+### Aspera Upload
 
-```
-const request = require('request');
+When logging into Nuxeo, you can access Nuxeo Aspera Upload two different ways:
 
-class Caller {
+- In the User Settings menu located in the bottom left corner of the Nuxeo drawer menu
 
-    constructor(host, cbId) {
-        this.host = host;
-        this.cbId = cbId;
-    }
+![]({{file name='1-aspera.png'}} ?w=450,border=true)
 
-    call(meta, startTime, success=true, error=null) {
-        var json = {};
-        json.time = new Date() - startTime;
-        json.images = meta;
-        json.error = error;
+- By clicking on the Aspera upload button visible on each folderish document (workspace, folder, etc...)
 
-        console.log('JSON:', json);
-        const path = this.buildPath(success);
-        console.log("request:", path);
-        return new Promise(function (resolve, reject) {
-            request.post(path, {
-                json: json,
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            }, function (err, response, _) {
-                if (err) {
-                    console.log('Error on callREST', err);
-                    return;
-                }
-                if (success) {
-                    resolve(response);
-                } else {
-                    resolve(error);
-                }
-            });
-        });
-    }
+![]({{file name='2-aspera.png'}} ?w=450,border=true)
 
-    buildPath(success) {
-        const domain = this.host + '/site/lambda/';
-        if (success) {
-            return domain + 'success/' + this.cbId;
-        } else {
-            return domain + 'error/' + this.cbId;
-        }
-    }
+> The files uploaded by Aspera will be accessible in this folderish document (by default the target location is the user personal workspace)
 
-}
+Once you access to the Aspera Upload screen, You will be able to download the Aspera Desktop client via the following banner at the top:
 
-module.exports = Caller;
-```
+![]({{file name='setup.png'}} ?w=450,border=true)
 
-`lambda_function.js`:
+#### 'Upload To Nuxeo' tab
 
-```
-'use strict';
+In this screen you can:
 
-const Caller = require('api_caller');
-const aws = require('aws-sdk');
-const s3 = new aws.S3({ apiVersion: '2006-03-01' });
+- Drag and drop (or click to select) files to upload with Aspera and follow the status of the uploads (whether you have the Aspera desktop client or not)
 
-exports.handler = async (event, context) => {
-    console.log('Received event:', JSON.stringify(event, null, 2));
-    const bucket = event.Records[0].s3.bucket.name;
-    const key = decodeURIComponent(event.Records[0].s3.object.key.replace(/\+/g, ' '));
-    const params = {
-        Bucket: bucket,
-        Key: key,
-    };
-    let caller = new Caller('NUXEO_URL/nuxeo', key);
-    let result = {};
-    try {
-        return caller.call(result, new Date());
-    } catch (err) {
-        console.log(err);
-        const message = `Error getting object ${key} from bucket ${bucket}. Make sure they exist and your bucket is in the same region as this function.`;
-        console.log(message);
-        throw new Error(message);
-    }
-};
-```
+![]({{file name='0-aspera.png'}} ?w=450,border=true)
 
-- Setup S3 event in the lambda console to trigger the function with event `ObjectCreatedByPut`.
+- Define the common metadata of the current transfer (set of uploaded files)
 
-## Nuxeo UI Implementation
+![]({{file name='5-aspera.png'}} ?w=450,border=true)
 
-When running Nuxeo with the addon installed, you can go to `NUXEO_URL/nuxeo/app/` to get a simple UI example on how to use the Aspera connector:
+![]({{file name='6-aspera.png'}} ?w=450,border=true)
+
+- Modify the permissions to share the transfer with other user(s) (i.e. another user is responsible for modifying the metadata)
+
+![]({{file name='7-aspera.png'}} ?w=450,border=true)
+
+- Edit/Delete each file
+
+![]({{file name='8-aspera.png'}} ?w=450,border=true)
+
+- Bulk edit selected files metadata in once
+
+![]({{file name='9-aspera.png'}} ?w=450,border=true)
+
+![]({{file name='10-aspera.png'}} ?w=450,border=true)
+
+- Complete a transfer to create the related documents in the Nuxeo application (once all files have been uploaded)
+
+NB: When completing a transfer, the "common metadata" will be propagated to all Nuxeo documents (except all single/bulk metadata edits will override them).
+
+#### 'Transfers' tab
+
+This screen shows the status of all current transfers in your Nuxeo application. You can:
+
+- Access the transfer metadata and files properties
+- Complete transfers
+- Share transfers
+- Delete transfers (as long as they have not been completed)
+
+![]({{file name='4-aspera.png'}} ?w=450,border=true)
+
+### Aspera Download
+
+Access the Nuxeo Aspera Download action via a button displayed when selecting one or several documents:
+
+![]({{file name='3-aspera.png'}} ?w=450,border=true)
+
+### Big picture of the processes
+
+Here is a sequence diagram of how works Aspera Upload:
+
+![]({{file name='upload.png'}} ?w=450,border=true)
+
+And here is the diagram for the Aspera download process:
+
+![]({{file name='download.png'}} ?w=450,border=true)
+
+## Customization
+
+### Model
+
+The `Transfer` document type can be overriden in order to edit custom metadata needed for your Nuxeo documents created after Aspera uploads.
+
+Usage:
+
+- Go to Studio `Registries` and add [those schemas](https://github.com/nuxeo/nuxeo-aspera-connector/blob/master/schemas-aspera.json) and [this lifecycle](https://github.com/nuxeo/nuxeo-aspera-connector/blob/master/lifecycle-aspera.json)
+- Create your new document type by naming it `Transfer` (id and label) and extend `File` doc type
+- Check the `Hidden in navigation` facet for this new document type and add the schemas `transfer-dc` and `common-aspera`
+- Select the life cycle `transfer_lifecyle`
+- Save and commit: you will be able now to add different schemas to your new `Transfer` document.
+
+### UI Layouts
+
+After having overriden the `Transfer` document type, you can now override the different UI layouts in the Nuxeo View Designer to be able to edit those metadata:
+
+    - The metadata layout `nuxeo-transfer-metadata-layout.html`
+
+    ![]({{file name='12-aspera.png'}} ?w=450,border=true)
+
+    - The edit layout `nuxeo-transfer-edit-layout.html`
+
+    ![]({{file name='6-aspera.png'}} ?w=450,border=true)
+
+    - The import layout (for single/bulk metadata edition) `nuxeo-transfer-import-layout.html`
+
+    ![]({{file name='10-aspera.png'}} ?w=450,border=true)
+
+    - The view layout `nuxeo-transfer-view-layout.html`
+
+    ![]({{file name='13-aspera.png'}} ?w=450,border=true)
+
+All those layouts can be found [here](https://github.com/nuxeo/nuxeo-aspera-connector/tree/master/nuxeo-aspera-web/src/main/resources/web/nuxeo.war/ui/document/transfer).
+
+Just copy/paste those layouts and you will be able to add or remove (custom) metadata.
+
+> NB: The metadata inside the single/bulk edit layout are related to the `ca:files/*/properties` metadata of the `Transfer` document (the value is a JSON containing the properties you want to set) -> It means that you can add any metadata you want (without creating any additional schemas inside Nuxeo Studio). It will propagates those properties to the different created files (except if those metadata doesn't exist in the schemas of those new created files).
+
+> NB: When overriding, be careful to put back the actions and other html elements that are not related to metadata
+
+## Polymer UI custom example
+
+If you want to develop your custom UI rather than using the Nuxeo addon, you can build and deploy [this maven project](https://github.com/nuxeo/nuxeo-aspera-connector/tree/master/nuxeo-aspera-custom-web) When running your instance, go to `NUXEO_URL/nuxeo/app/` to get a simple UI example on how to use the Aspera connector:
 
 - To upload a file in a given location via the connector
 - To upload and add a file to a given document via the connector
 - To list all documents with binaries and download them via the connector
 
-Here is [the complete example of implementation](https://github.com/nuxeo-sandbox/nuxeo-aspera-web-sample/src).
+Details:
 - `my-app` is the main page containing all `pages` folder pages.
 - In each page, `aspera-connector` is called to set Aspera authentication in place.
 - `aspera-connector.html` is wrapping the Aspera API to be used for upload/download via the connector.
+- All Nuxeo operations used in this sample are used in the [Addon itself](https://github.com/nuxeo/nuxeo-aspera-connector)

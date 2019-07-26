@@ -343,7 +343,7 @@ Registered access
 [Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender)
 </td>
 </tr>
-<!--<tr>
+<tr>
 <td colspan="1">
 Nuxeo Download/Upload with Aspera<br/>
 `nuxeo-aspera-connector`
@@ -355,9 +355,9 @@ Registered access
 [Documentation]({{page page='nuxeo-aspera-connector'}})
 </td>
 <td colspan="1">
-[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera-connector)
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera)
 </td>
-</tr>-->
+</tr>
 <tr>
 <td colspan="1">
 Nuxeo Connect Report Tools Web<br/>
