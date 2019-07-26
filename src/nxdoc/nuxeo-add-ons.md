@@ -593,6 +593,22 @@ Public
 <td colspan="1">
 [Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
 </td>
+</tr>
+<tr>
+<td colspan="1">
+Nuxeo Management REST API<br/>
+`nuxeo-management-rest-api`
+</td>
+<td colspan="1">
+Public
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-management-rest-api'}})
+</td>
+<td colspan="1">
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-management-rest-api)
+</td>
+</tr>
 <tr>
 <td colspan="1">
 Nuxeo Media Publishing<br/>
