@@ -77,8 +77,8 @@ history:
         date: '2015-02-13 13:50'
         message: ''
         version: '1'
-
 ---
+
 Here is a template to be inspired of for&nbsp;`README` files. The [Nuxeo README.md](https://github.com/nuxeo/nuxeo/blob/master/README.md) file is following this template.
 Except the "Requirements" and "Limitations" which may not be relevant, all sections are mandatory.
 Common content is pre-filled. Sampled advanced content is prefixed by `Sample:`
@@ -149,7 +149,7 @@ Sample: <https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/README.md
 
 ### Limitations
 
-Sample: <https://github.com/nuxeo/nuxeo-elasticsearch/blob/master/README.md>
+Sample: <https://github.com/nuxeo-archives/nuxeo-features/tree/master/nuxeo-elasticsearch>
 
 ### Build
 
@@ -171,8 +171,8 @@ Direct to MP package if any. Otherwise provide steps to deploy on Nuxeo Platform
 
 Link to JIRA component (or project if there is no component for that project). Samples:
 
-* <https://jira.nuxeo.com/browse/NXP/component/14503/>
-* <https://jira.nuxeo.com/secure/CreateIssue!default.jspa?project=NXP>
+* [Link to component](https://jira.nuxeo.com/issues/?jql=project%20%3D%20NXP%20AND%20component%20%3D%20Elasticsearch%20AND%20Status%20!%3D%20%22Resolved%22%20ORDER%20BY%20updated%20DESC%2C%20priority%20DESC%2C%20created%20ASC)
+* [Link to project](https://jira.nuxeo.com/secure/CreateIssue!default.jspa?project=NXP)
 
 ## License
 
@@ -186,8 +186,7 @@ The development of the Nuxeo Content Platform is mostly done by Nuxeo employees 
 
 The source code, documentation, roadmap, issue tracker, testing, benchmarks are all public.
 
-Typically, Nuxeo users build different types of information management solutions for document management, case management, and digital asset management, use cases. It uses schema-flexible metadata & content models that allows content to be repurposed to fulfill future use cases.
+Typically, Nuxeo users build different types of information management solutions for [document management](https://www.nuxeo.com/products/document-management/), [case management](https://www.nuxeo.com/products/case-management/), and [digital asset management](https://www.nuxeo.com/products/digital-asset-management/), use cases. It uses schema-flexible metadata & content models that allows content to be repurposed to fulfill future use cases.
 
 More information is available at [www.nuxeo.com](http://www.nuxeo.com).
 ```
-
