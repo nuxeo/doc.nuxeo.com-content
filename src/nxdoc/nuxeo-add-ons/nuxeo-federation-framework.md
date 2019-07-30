@@ -6,7 +6,7 @@ review:
     date: '2019-12-19'
     status: ok
 labels:
-    - simflofy
+    - federation
 toc: true
 tree_item_index: 1510
 ---
@@ -17,7 +17,7 @@ The Nuxeo Federation Framework allows users to search, find and view documents s
 
 {{#> callout type='info'}}
 Watch the related video on Nuxeo University:</br>
-[Product News - Nuxeo Federation Services](https://university.nuxeo.com/learn/course/external/view/elearning/184/NuxeoFederationServices).
+[Product News - Nuxeo Federation Framework](https://university.nuxeo.com/learn/course/external/view/elearning/184/NuxeoFederationServices).
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Content Federation with Simflofy/nuxeo-federation-university.png
     name: nuxeo-federation-university.png
@@ -72,7 +72,7 @@ nuxeo.simflofy.createFromKey.users=user1,user2...
 
 These configuration parameters should be provided in the configuration file `nuxeo.conf`.
 
-### Simflofy Configuration
+### Connector Configuration
 
 #### Authentication Connection
 
@@ -265,7 +265,7 @@ You can view among other metrics:
 
 {{#> callout type='info'}}
 If you need to execute the federation job automatically, then you'll have to set up a **job runner**. This process runs a specific federation job periodically.
-More information on the [Simflofy Documentation Site](http://simflofy.helpdocsonline.com/simflofy-job-runner-2).
+More information on the [Documentation Site](http://simflofy.helpdocsonline.com/simflofy-job-runner-2).
 {{/callout}}
 
 You can view the job report by clicking on the numbers displayed in each column (Read, Written, Errors...) to list the exhaustive list of related documents:
@@ -289,6 +289,8 @@ You can store in Nuxeo a huge variety of document types:
 
 ### Integration Scenario
 
-The Nuxeo Simflofy addon allows you to run two different scenario:
+The Nuxeo Federation Framework addon allows you to run two different scenario:
+
 1. In the main cases, users are willing **to federate** their document repositories within Nuxeo. It means the document remains in the third party applications, but users are able to  search, find and view them in Nuxeo transparently. From a end-user perspective, the federation is totally transparent so a user don't know necessarily if a document is stored in Nuxeo or any other application
+
 2. If the external document repository aims at being decommissioned, then the connector allows you **to migrate** the content into Nuxeo. Technically, it means the binaries are copied in Nuxeo.
