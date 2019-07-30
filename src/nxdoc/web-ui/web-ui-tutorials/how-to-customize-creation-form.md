@@ -1,5 +1,5 @@
 ---
-title: 'HOWTO: Configure the Creation Form'
+title: 'HOWTO: Customize the Creation Form'
 review:
     comment: ''
     date: '2019-07-22'
@@ -21,6 +21,8 @@ tree_item_index: 1300
 In this tutorial you will learn how to configure the creation form in Web UI so that your document type with long labels will be displayed correctly.
 {{! /excerpt}}
 
+<script src="https://fast.wistia.com/embed/medias/18sk3v2r7i.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_embed wistia_async_18sk3v2r7i" style="height:360px;position:relative;width:640px"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/18sk3v2r7i/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div>
+
 ## Prerequisites
 
 - The Nuxeo [Web UI addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-web-ui) installed on your instance.
@@ -30,7 +32,12 @@ In this tutorial you will learn how to configure the creation form in Web UI so 
 
 1. Go to **UI** > **Themes**
 1. Create a new Theme called `default` that will override the default one.
-    SCREENSHOT
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize the Creation Form/new-default-theme.png
+      name: new-default-theme.png
+      studio_designer#screenshot#up_to_date
+    --}}
+    ![new-default-theme.png](nx_asset://05392556-54e9-4eab-acf9-04fe919b36d1 ?w=350,border=true)
 1. Add a new section called `/* Document Creation Window */`.</br>
     It should look like this:
     ```
@@ -55,5 +62,3 @@ In this tutorial you will learn how to configure the creation form in Web UI so 
 
 1. You can now deploy your changes using the hot reload function of the [browser extension]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}})
 1. Click on the **Create** button on your instance, the new creation window is displayed.
-
-  SCREENSHOT
