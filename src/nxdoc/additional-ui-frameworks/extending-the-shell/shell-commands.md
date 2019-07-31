@@ -264,7 +264,7 @@ public class Lst implements Runnable {
 
 Now in the **run** method we can use the **ctx** object to access to the server and to the remote context of the shell.
 
-{{#> callout type='tip' heading='Don\'t Like Injection?'}}
+{{#> callout type='tip' heading="Don't Like Injection?"}}
 
 If you don't like injection you can always lookup yourself the context objects through the shell instance.
 The `@Context protected RemoteContext ctx;` construct is eqiuivalent to
@@ -282,7 +282,7 @@ Now we are ready to implement the **run** method. I will omit the fields declara
         if (doc == null) {
             // get the current document if target doc was not specified.
             doc = ctx.getDocument();
-        }  
+        }
         ShellConsole console = ctx.getShell().getConsole();
         try {
             if (type == null) {
@@ -358,7 +358,7 @@ public class Lst implements Runnable {
         if (doc == null) {
             // get the current document if target doc was not specified.
             doc = ctx.getDocument();
-        }  
+        }
         ShellConsole console = ctx.getShell().getConsole();
         try {
             if (type == null) {
