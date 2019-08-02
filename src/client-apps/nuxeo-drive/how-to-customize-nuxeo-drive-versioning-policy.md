@@ -81,7 +81,7 @@ history:
 
 ## How to Configure the Versioning Delay or Version Increment
 
-You can contribute a new versioning policy and filter thanks to the extension points [policies](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--policies) and [filters](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--filters) to configure the last edit delay until a new version is created and which version increment will occur (minor or major).
+You can contribute a new versioning policy and filter thanks to the extension points [policies](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.versioning.VersioningService--policies) and [filters](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.versioning.VersioningService--filters) to configure the last edit delay until a new version is created and which version increment will occur (minor or major).
 
 For example, to create a major version if the document is modified 30 minutes after the last change, use this contribution:
 
@@ -107,7 +107,7 @@ For example, to create a major version if the document is modified 30 minutes af
 
 ## How to Change Nuxeo Drive Versioning Policy
 
-If you need to make more changes on the versioning mechanism in Nuxeo Drive, you can write your own implementation of the [VersioningPolicyFilter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/versioning/VersioningPolicyFilter.html) interface, and contribute it to the [filters](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.versioning.VersioningService--filters) extension point.
+If you need to make more changes on the versioning mechanism in Nuxeo Drive, you can write your own implementation of the [VersioningPolicyFilter](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/core/versioning/VersioningPolicyFilter.html) interface, and contribute it to the [filters](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.api.versioning.VersioningService--filters) extension point.
 
 
 ```xml
