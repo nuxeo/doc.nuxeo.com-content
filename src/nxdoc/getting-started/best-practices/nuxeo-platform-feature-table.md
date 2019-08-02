@@ -658,7 +658,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [Documentation]({{page version='' space='userdoc' page='document-actions'}}#compare)
+    [Documentation]({{page version='' space='userdoc' page='compare'}})
     </td>
 </tr>
 <tr>
@@ -667,7 +667,7 @@ The tables below use the following notation:
     <td>N/A</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
-    <td colspan="1">[Documentation]({{page space='client-apps' page='nuxeo-drive'}})</td>
+    <td colspan="1">[Documentation]({{page version='' space='userdoc' page='compare'}})</td>
 </tr>
 <tr>
     <td colspan="1">Compare Document</td>
