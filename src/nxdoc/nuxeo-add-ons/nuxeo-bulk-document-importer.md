@@ -564,8 +564,6 @@ Using XML extension points you can also define the different building blocks of 
 *   docType used for folderish Documents
 *   `documentModelFactoryClass`
 
-See [the developer documentation of Nuxeo Bulk Document Importer]({{page version='' space='nxdoc' page='nuxeo-bulk-document-importer'}}) for details.
-
 See [nuxeo-platform-importer Javadoc](http://community.nuxeo.com/api/addons/nuxeo-platform-importer/).
 
 ## Directory Tree and Threading
