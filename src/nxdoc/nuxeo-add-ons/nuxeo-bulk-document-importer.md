@@ -295,7 +295,7 @@ Available for any Nuxeo platform-based application, the [Bulk document importer 
 {{! /multiexcerpt}}
 
 {{! excerpt}}
-The `nuxeo-importer-core` module is designed to offer support for multi-threaded import on a Nuxeo repository.
+This module is designed to offer support for multi-threaded import on a Nuxeo repository.
 {{! /excerpt}}
 
 ## Usage
@@ -822,4 +822,4 @@ This class will be the base class for the import, and the method that instantiat
 
 ## Download
 
-To download `nuxeo-importer-core`, check the [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer) or, if needed, download a more recent version of the JAR (to be installed by hand) from [the Nuxeo Maven repository](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;quick~nuxeo-importer-core).
+To download `nuxeo-platform-importer`, check the [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer) or, if needed, download a more recent version of the JAR (to be installed by hand) from [the Nuxeo Maven repository](https://maven-eu.nuxeo.org/nexus/index.html#nexus-search;quick~nuxeo-platform-importer).
