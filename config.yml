@@ -25,6 +25,9 @@ default:
             -
                 space_path: security
                 space_name: Nuxeo Security Documentation
+            -
+                space_path: retention-management
+                space_name: Nuxeo Retention Management Documentation
         branch: 'static'
 
 development:
