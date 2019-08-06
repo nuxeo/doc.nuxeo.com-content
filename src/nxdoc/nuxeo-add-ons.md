@@ -239,6 +239,21 @@ Public
 </tr>
 <tr>
 <td colspan="1">
+Google Storage<br/>
+`google-storage`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='google-storage'}})
+</td>
+<td colspan="1">
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/google-storage)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Kerberos Authentication<br/>
 `kerberos-authentication`
 </td>
