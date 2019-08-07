@@ -3,18 +3,17 @@ title: Nuxeo Aspera Connector
 description: 'Nuxeo Aspera Connector enables users to download/upload binaries with Aspera.'
 review:
     comment: ''
-    date: '2019-02-05'
+    date: '2019-07-30'
     status: ok
 labels:
     - lts2019-ok
     - vpasquier
 toc: true
-hidden: true
 tree_item_index: 1100
 ---
 
 {{! excerpt}}
-The [Nuxeo Aspera Connector addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera) enables users to download/upload binaries with Aspera.
+The [Nuxeo Aspera Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera) enables users to download/upload binaries with Aspera.
 {{! /excerpt}}
 
 ## Requirements
@@ -33,14 +32,16 @@ Installation is made of two steps:
 
 ### Aspera Configuration
 
-We need to configure 2 Aspera nodes; one for upload and one for download. Each node will be attached to one S3 bucket in Nuxeo:
+We need to configure 2 Aspera nodes: one for upload and one for download. Each node will be attached to one S3 bucket in Nuxeo:
 
-- The main Nuxeo S3 bucket in Nuxeo is used for download purposes
-- The S3 transient store bucket is used for upload purposes
+- The main Nuxeo S3 bucket in Nuxeo for download purpose
+- The S3 transient store bucket for upload purpose
 
-Follow this [documentation](https://aspera.ibmaspera.com/help/admin/nodes/adding_aws_s3_bucket) to attach S3 buckets to Aspera.
+Follow this [Aspera documentation](https://aspera.ibmaspera.com/help/admin/nodes/adding_aws_s3_bucket) to attach S3 buckets to Aspera.
 
-NOTE: In the documentation above, for `Download` the IAM role used by Aspera only needs `READ` permissions on the bucket. The policy attached to this role can be added as shown in this sample:
+Please note that, in the documentation above, for **Download** the IAM role used by Aspera only needs `READ` permissions on the bucket.
+
+The policy attached to this role can be added as shown in this sample:
 
 ```
 {
@@ -63,7 +64,7 @@ NOTE: In the documentation above, for `Download` the IAM role used by Aspera onl
 }
 ```
 
-The policy for `Upload` must be able to put and get objects from the S3 bucket (see below sample):
+The policy for **Upload** must be able to put and get objects from the S3 bucket:
 
 ```
 {
@@ -99,7 +100,7 @@ The policy for `Upload` must be able to put and get objects from the S3 bucket (
 
 #### Transient Store on AWS
 
-To use S3 direct upload with Nuxeo, you will need to add another policy to a new role (see sample below):
+To use S3 direct upload with Nuxeo, you will need to add another policy to a new role:
 
 ```
 {
@@ -139,7 +140,7 @@ To use S3 direct upload with Nuxeo, you will need to add another policy to a new
 }
 ```
 
-Note: Make sure to set all configuration values in `nuxeo.conf`:
+Make sure that all configuration values are set in the `nuxeo.conf`:
 
 ```
 nuxeo.s3storage.useDirectUpload=true
@@ -173,68 +174,50 @@ aspera.download.acess.key.id=
 aspera.download.acess.key.secret=
 ```
 
-## Usage
+## Functional Overview
 
-The Nuxeo Aspera Connector uses the concept of "Transfers" to add content to the system.  The process is broken down into 2 steps: Upload and Create.  In the first step, the user "Uploads" content to the transfer bucket.  While in this step, users can add files to the bukcet and add properties that will apply to the content.  Properties can be added to all files at once (common metadata), to multiple files at once (bulk edit of metadata) and one at a time.
+The Nuxeo Aspera Connector uses "Transfers" to add content to the system.
 
-Once metadata has been edited to suit the user, the transfer can be "completed" and the content is then "Created" in the system.
+The process is divided into 2 steps: Upload and Create.
 
-Transfers have 3 states: Draft (no content added yet), In Progress (content added) and Completed (the transfer has been completed and the content has been created in the system).
+In the first step, the user **uploads** content to the transfer bucket. While in this step, he can add files to the bucket and add properties that will apply to the content. Properties can be added to all files at once (common metadata), to multiple files at once (bulk edit of metadata) and one at a time.
+
+Once the metadata has been edited to fit the user's needs, the transfer can be completed and the content is then **created** in the system.
+
+Transfers have 3 states: **Draft** (no content added yet), **In Progress** (content added) and **Completed** (the transfer has been completed and the content has been created in the system).
 
 ### Aspera Upload
 
-When logging into Nuxeo, you can access Nuxeo Aspera Upload two different ways:
+Once in your instance, Nuxeo Aspera Upload can be accessed from two different ways:
 
-- In the User Settings menu located in the bottom left corner of the Nuxeo drawer menu
+- From the **User Settings** menu located on the left side:
 
-![]({{file name='1-aspera.png'}} ?w=450,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Aspera Connector/1-aspera.png
+    name: 1-aspera.png
+    addins#screenshot#up_to_date
+--}}
+![1-aspera.png](nx_asset://9a876bf6-3d88-4877-8205-9359d95e1cc4 ?w=250,border=true)
 
-- By clicking on the Aspera upload button visible on each folderish document (workspace, folder, etc...)
+- By clicking on the Aspera upload button displayed on every folderish document (workspace, folder, etc.)
 
 ![]({{file name='2-aspera.png'}} ?w=450,border=true)
 
 > The files uploaded by Aspera will be accessible in this folderish document (by default the target location is the user personal workspace)
 
-Once you access to the Aspera Upload screen, You will be able to download the Aspera Desktop client via the following banner at the top:
+Once on the Aspera Upload screen, you will be able to download the Aspera Desktop client via the following banner at the top:
 
 ![]({{file name='setup.png'}} ?w=450,border=true)
 
-#### 'Upload To Nuxeo' tab
+Once on the Aspera menu, 2 tabs are available:
+- [Transfers](#transfers-tab)
+- [Upload to Nuxeo](#upload-to-nuxeo)
 
-In this screen you can:
+#### Transfers Tab
 
-- Drag and drop (or click to select) files to upload with Aspera and follow the status of the uploads (whether you have the Aspera desktop client or not)
+This screen shows the status of all current transfers in your Nuxeo application.</br>
 
-![]({{file name='0-aspera.png'}} ?w=450,border=true)
-
-- Define the common metadata of the current transfer (set of uploaded files)
-
-![]({{file name='5-aspera.png'}} ?w=450,border=true)
-
-![]({{file name='6-aspera.png'}} ?w=450,border=true)
-
-- Modify the permissions to share the transfer with other user(s) (i.e. another user is responsible for modifying the metadata)
-
-![]({{file name='7-aspera.png'}} ?w=450,border=true)
-
-- Edit/Delete each file
-
-![]({{file name='8-aspera.png'}} ?w=450,border=true)
-
-- Bulk edit selected files metadata in once
-
-![]({{file name='9-aspera.png'}} ?w=450,border=true)
-
-![]({{file name='10-aspera.png'}} ?w=450,border=true)
-
-- Complete a transfer to create the related documents in the Nuxeo application (once all files have been uploaded)
-
-NB: When completing a transfer, the "common metadata" will be propagated to all Nuxeo documents (except all single/bulk metadata edits will override them).
-
-#### 'Transfers' tab
-
-This screen shows the status of all current transfers in your Nuxeo application. You can:
-
+You can:
 - Access the transfer metadata and files properties
 - Complete transfers
 - Share transfers
@@ -242,19 +225,53 @@ This screen shows the status of all current transfers in your Nuxeo application.
 
 ![]({{file name='4-aspera.png'}} ?w=450,border=true)
 
+#### Upload To Nuxeo Tab
+
+On this screen, different actions are available; you can:
+
+- Drag and drop (or click to select) file(s) to upload with Aspera and follow the status of the uploads (whether you have the Aspera desktop client or not).
+
+![]({{file name='0-aspera.png'}} ?w=450,border=true)
+
+- Define/edit the common metadata of the current transfer (set of uploaded files) by clicking on the **Edit** button.
+
+![]({{file name='5-aspera.png'}} ?w=450,border=true)
+
+![]({{file name='6-aspera.png'}} ?w=450,border=true)
+
+- Modify the permissions to share the transfer with other user(s) (i.e. another user is responsible for modifying the metadata).
+
+![]({{file name='7-aspera.png'}} ?w=450,border=true)
+
+- Edit/Delete each file.
+
+![]({{file name='8-aspera.png'}} ?w=450,border=true)
+
+- Bulk edit selected files metadata in once.
+
+![]({{file name='9-aspera.png'}} ?w=450,border=true)
+
+![]({{file name='10-aspera.png'}} ?w=450,border=true)
+
+- **Complete transfer** means to create the related documents in the Nuxeo application (once all files have been uploaded).
+
+{{#> callout type='note' }}
+When completing a transfer, the "common metadata" is propagated to all Nuxeo documents (except all single/bulk metadata edits override them).
+{{/callout}}
+
 ### Aspera Download
 
-Access the Nuxeo Aspera Download action via a button displayed when selecting one or several documents:
+The Nuxeo Aspera Download action is accessible via a button displayed when selecting one or several documents:
 
 ![]({{file name='3-aspera.png'}} ?w=450,border=true)
 
-### Big picture of the processes
+### How it Works
 
-Here is a sequence diagram of how works Aspera Upload:
+**Aspera Upload**
 
 ![]({{file name='upload.png'}} ?w=450,border=true)
 
-And here is the diagram for the Aspera download process:
+**Aspera download**
 
 ![]({{file name='download.png'}} ?w=450,border=true)
 
@@ -262,43 +279,48 @@ And here is the diagram for the Aspera download process:
 
 ### Model
 
-The `Transfer` document type can be overriden in order to edit custom metadata needed for your Nuxeo documents created after Aspera uploads.
+The `Transfer` document type can be overridden to edit custom metadata needed for your Nuxeo documents created after Aspera uploads.
 
-Usage:
+To do so:
 
-- Go to Studio `Registries` and add [those schemas](https://github.com/nuxeo/nuxeo-aspera-connector/blob/master/schemas-aspera.json) and [this lifecycle](https://github.com/nuxeo/nuxeo-aspera-connector/blob/master/lifecycle-aspera.json)
-- Create your new document type by naming it `Transfer` (id and label) and extend `File` doc type
-- Check the `Hidden in navigation` facet for this new document type and add the schemas `transfer-dc` and `common-aspera`
-- Select the life cycle `transfer_lifecyle`
-- Save and commit: you will be able now to add different schemas to your new `Transfer` document.
+1. In Nuxeo Studio, go to **Settings** > **Registries** and add [those schemas](https://github.com/nuxeo/nuxeo-aspera-connector/blob/master/schemas-aspera.json) and [this lifecycle](https://github.com/nuxeo/nuxeo-aspera-connector/blob/master/lifecycle-aspera.json).
+1. Create a new document type, name it `Transfer` (id and label) that extends **File** document type.
+1. Check the **Hidden in navigation** facet for this new document type and add the schemas `transfer-dc` and `common-aspera`.
+1. Select the life cycle `transfer_lifecyle`.
+1. Save and commit: you will be able now to add different schemas to your new `Transfer` document.
 
 ### UI Layouts
 
-After having overriden the `Transfer` document type, you can now override the different UI layouts in the Nuxeo View Designer to be able to edit those metadata:
+After having overridden the `Transfer` document type, you can now override the different UI layouts in the Nuxeo View Designer to be able to edit those metadata:
 
-    - The metadata layout `nuxeo-transfer-metadata-layout.html`
+  - The metadata layout `nuxeo-transfer-metadata-layout.html`
 
-    ![]({{file name='12-aspera.png'}} ?w=450,border=true)
+  ![]({{file name='12-aspera.png'}} ?w=450,border=true)
 
-    - The edit layout `nuxeo-transfer-edit-layout.html`
+  - The edit layout `nuxeo-transfer-edit-layout.html`
 
-    ![]({{file name='6-aspera.png'}} ?w=450,border=true)
+  ![]({{file name='6-aspera.png'}} ?w=450,border=true)
 
-    - The import layout (for single/bulk metadata edition) `nuxeo-transfer-import-layout.html`
+  - The import layout (for single/bulk metadata edition) `nuxeo-transfer-import-layout.html`
 
-    ![]({{file name='10-aspera.png'}} ?w=450,border=true)
+  ![]({{file name='10-aspera.png'}} ?w=450,border=true)
 
-    - The view layout `nuxeo-transfer-view-layout.html`
+  - The view layout `nuxeo-transfer-view-layout.html`
 
-    ![]({{file name='13-aspera.png'}} ?w=450,border=true)
+  ![]({{file name='13-aspera.png'}} ?w=450,border=true)
 
 All those layouts can be found [here](https://github.com/nuxeo/nuxeo-aspera-connector/tree/master/nuxeo-aspera-web/src/main/resources/web/nuxeo.war/ui/document/transfer).
 
 Just copy/paste those layouts and you will be able to add or remove (custom) metadata.
 
-> NB: The metadata inside the single/bulk edit layout are related to the `ca:files/*/properties` metadata of the `Transfer` document (the value is a JSON containing the properties you want to set) -> It means that you can add any metadata you want (without creating any additional schemas inside Nuxeo Studio). It will propagates those properties to the different created files (except if those metadata doesn't exist in the schemas of those new created files).
+{{#> callout type='info' }}
+The metadata inside the single/bulk edit layout is related to the `ca:files/*/properties` metadata of the `Transfer` document (the value is a JSON containing the properties you want to set).</br>
+It means that you can add any metadata that you want (without creating any additional schemas inside Nuxeo Studio). It will propagate those properties to the different created files (except if those metadata doesn't exist in the schemas of those newly created files).
+{{/callout}}
 
-> NB: When overriding, be careful to put back the actions and other html elements that are not related to metadata
+{{#> callout type='info' }}
+When overriding, be careful to put back the actions and other HTML elements that are not related to metadata
+{{/callout}}
 
 ## Polymer UI custom example
 
