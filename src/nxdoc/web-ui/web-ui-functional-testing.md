@@ -143,7 +143,7 @@ For an example on how to use the functional test framework, please check
 
 Assuming a server is running with the contributions that need to be tested, you can run the test suite with:
 ```
-npm run tests
+npm run test
 ```
 But, oftentimes all we want is to run a particular subset of feature files, or even a subset of scenarios.
 
@@ -160,8 +160,8 @@ For an example of how to launch a nuxeo server and run the tests using maven, pl
 You can run the previous commands in debug mode by passing the `--debug` parameter:
 
 ```
-npm run tests -- --debug
-npm run tests:watch -- --debug
+npm run test -- --debug
+npm run test:watch -- --debug
 ```
 
 Once you run the tests in debug mode, you can use your favorite debugger to attach and debug the code. This is very easy to do with Google Chrome: a new entry will be available under `chrome://inspect/#devices`, and you just need to click "inspect" to attached the debugger. The execution will stop as soon at it hits a [`debugger`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statement.
