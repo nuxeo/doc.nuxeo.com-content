@@ -360,21 +360,6 @@ Registered access
 </tr>
 <tr>
 <td colspan="1">
-Nuxeo Connect Report Tools Web<br/>
-`nuxeo-connect-tools-report-web`
-</td>
-<td colspan="1">
-Registered access
-</td>
-<td colspan="1">
-[Documentation]({{page page='nuxeo-connect-report-tools'}})
-</td>
-<td colspan="1">
-[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report-web)
-</td>
-</tr>
-<tr>
-<td colspan="1">
 Nuxeo CSV<br/>
 `nuxeo-csv`
 </td>
