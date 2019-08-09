@@ -102,7 +102,7 @@ Each existing marshaller class has a detailed Javadoc. Please read the correspon
       </tr>
       <tr>
         <td class="small-5">
-        [ThumbnailJsonEnricher](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/ui/web/io/ThumbnailJsonEnricher.html)
+        [ThumbnailJsonEnricher](http://community.nuxeo.com/api/nuxeo/latest/javadoc/org/nuxeo/ecm/platform/thumbnail/io/ThumbnailJsonEnricher.html)
         </td>
         <td class="small-7">
         Enriches a document, adding the URL of its thumbnail. Activated with `enrichers.document=thumbnail`.

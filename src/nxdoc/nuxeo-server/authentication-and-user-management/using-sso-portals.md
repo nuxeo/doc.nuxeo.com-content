@@ -56,26 +56,14 @@ To install this authentication plugin:
 
 ## Client-Side Configuration
 
-Portal_SSO is integrated in [Nuxeo Java client](http://nuxeo.github.io/nuxeo-java-client/).
-
-<!-- DELETED ADDON
-**Using Nuxeo HTTP Client**
-
-`nuxeo-http-client` is a sample Java client to do REST calls to Nuxeo. You can configure it connect to a server that uses `nuxeo-platform-login-portal-sso` by doing:
-
-```
-NuxeoServer nxServer = new NuxeoServer("http://127.0.0.1:8080/nuxeo");
-nxServer.setAuthType(NuxeoServer.AUTH_TYPE_SECRET);
-nxServer.setSharedSecretAuthentication("Administrator", "nuxeo5secretkey");
-```
--->
+Portal_SSO is integrated in [Nuxeo Java client]({{page space='client-java' page='authentication'}}#portal-sso-authentication).
 
 **Using Nuxeo Java Client**
 
 Configure it to connect to a server that uses `platform-login-portal-sso` by using an interceptor:
 
 ```java
-client.setAuthenticationMethod( new PortalSSOAuthInterceptor("nuxeo5secretkey", "Administrator") );
+new NuxeoClient.Builder().authentication(new PortalSSOAuthInterceptor("Administrator", "nuxeo5secretkey"));
 ```
 
 **Manual HTTP Calls**

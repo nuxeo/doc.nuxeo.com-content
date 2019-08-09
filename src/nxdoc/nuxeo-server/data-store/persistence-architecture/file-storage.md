@@ -432,7 +432,7 @@ Reads content from Google Drive
 </td><td colspan="1">
 
 - [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
-- [Sources](https://github.com/nuxeo/nuxeo-liveconnect/tree/master/nuxeo-liveconnect-google-drive)
+- [Sources](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-liveconnect/nuxeo-liveconnect-google-drive-core)
 
 </td></tr><tr><td colspan="1">
 
@@ -453,30 +453,7 @@ Reads content from Dropbox
 </td><td colspan="1">
 
 - [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
-- [Sources](https://github.com/nuxeo/nuxeo-liveconnect/tree/master/nuxeo-liveconnect-dropbox)
-
-</td></tr><tr><td colspan="1">
-
-GridFS
-
-</td><td colspan="1">
-
-org.nuxeo.ecm.
-
-core.storage.mongodb.blob.
-
-GridFSBinaryManager
-
-</td><td colspan="1">
-
-Reads and writes content into MongoDB Binary Manager
-
-</td><td colspan="1">
-- [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/mongodb-gridfs-storage)
-- [Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs)
-- [Configuration](https://github.com/nuxeo/nuxeo-core-binarymanager-gridfs/blob/master/ReadMe.md)
-
-&nbsp;
+- [Sources](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-liveconnect/nuxeo-liveconnect-dropbox-core)
 
 </td></tr><tr><td colspan="1">
 

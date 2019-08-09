@@ -117,7 +117,7 @@ history:
 ---
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
-Most of the default application styling is done using "dynamic" SCSS files referring to variables and flavors. These styles can be browsed [on GitHub](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/themes/sass).
+Most of the default application styling is done using "dynamic" SCSS files referring to variables and flavors. These styles can be browsed [on GitHub](https://github.com/nuxeo/nuxeo-jsf-ui/tree/master/code/nuxeo-platform-webapp-core/src/main/resources/themes/sass).
 
 {{! excerpt}}
 

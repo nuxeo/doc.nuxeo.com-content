@@ -486,7 +486,7 @@ The [Workspace page](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-
 
 ### Popup Page Example
 
-The [Popup page](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/popup_page.xhtml) page is the standard popup page, not showing any header or footer:
+The [Popup page](https://github.com/nuxeo/nuxeo-jsf-ui/blob/master/code/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/popup_page.xhtml) page is the standard popup page, not showing any header or footer:
 
 ```xml
 <ui:composition template="basic_page.xhtml"

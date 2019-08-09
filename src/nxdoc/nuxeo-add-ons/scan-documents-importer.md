@@ -160,7 +160,7 @@ The scan import process is composed of several elements:
 
 ## Configuration
 
-The import is triggered by a simple event fired by the scheduler service. The default value is set to fire the event every 30 seconds as you can see on the contribution below. If you are used to good old Unix cron, be careful, the syntax is slightly different since we are using [quartz](http://www.quartz-scheduler.org/documentation/quartz-1.x/tutorials/crontrigger).
+The import is triggered by a simple event fired by the scheduler service. The default value is set to fire the event every 30 seconds as you can see on the contribution below. If you are used to good old Unix cron, be careful, the syntax is slightly different since we are using [quartz](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger).
 
 {{#> panel type='code' heading='Scheduler to trigger the import'}}
 ```xml

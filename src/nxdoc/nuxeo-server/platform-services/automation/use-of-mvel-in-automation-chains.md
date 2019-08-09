@@ -668,7 +668,7 @@ In order to do this you should:
 
 ## MVEL
 
-The scripting language used is MVEL. See the [MVEL language guide](https://en.wikisource.org/wiki/MVEL_Language_Guide). You can use all the features of the scripting language itself.
+The scripting language used is MVEL. See the [MVEL language guide](https://en.wikibooks.org/wiki/Transwiki:MVEL_Language_Guide). You can use all the features of the scripting language itself.
 
 For instance, you can use the substring method, when dealing with paths:
 `expr: Document.path.substring(26)`.
