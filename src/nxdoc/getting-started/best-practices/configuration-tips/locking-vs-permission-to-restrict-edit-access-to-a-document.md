@@ -86,7 +86,7 @@ We will see a few tips to choose between the two.
 
 ## Locking the Document
 
-The locking feature is exposed in the user interface through a lock icon in the action bar of non-folderish documents. It restricts the edit permission to the user who locked the document. The document stays visible for other users. A lock can be removed either by the owner of the document or by a member of the `administrators` group.
+The locking feature is exposed in the user interface through a lock icon in the action bar of non-folderish documents. It restricts the edit permission to the user who locked the document. The document stays visible for other users. A lock can be removed either by the owner of the document or by a member of administrators groups.
 
 ### Pros
 
