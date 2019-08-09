@@ -1714,16 +1714,6 @@ The tables below use the following notation:
     <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-    <td colspan="1">Environment configuration report</td>
-    <td colspan="1">Default distribution<br/>
-    [Nuxeo Connect Report Tools Web](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report)</td>
-    <td>&#10003;</td>
-    <td>&#10003;</td>
-    <td>N/A</td>
-    <td>`nuxeoctl` command in the default distribution<br/>
-    [Nuxeo Connect Report Tools Web documentation]({{page version='' space='nxdoc' page='nuxeo-connect-report-tools'}})</td>
-</tr>
-<tr>
     <td>Statistics</td>
     <td>Default distribution<br/>
     [Nuxeo Quota](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-quota)</td>
