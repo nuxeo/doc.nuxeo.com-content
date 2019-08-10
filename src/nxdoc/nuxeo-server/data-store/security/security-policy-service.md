@@ -86,6 +86,17 @@ The Security Policy Service provides an extension point to plug custom security 
 
 {{! /excerpt}}
 
+{{#> callout type='info'}}
+Watch the related courses on Nuxeo University
+- [Security Policies](https://university.nuxeo.com/learn/course/external/view/elearning/171/SecurityPolicies) on Nuxeo University.
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Security Policy Service/university_security_policies.png
+    name: university_security_policies.png
+    server#screenshot#up_to_date
+--}}
+![university_security_policies.png](nx_asset://02a2134a-3291-4520-a477-f6a674344622 ?w=450,border=true)
+{{/callout}}
+
 ## Security Policy Architecture
 
 A security policy is a class implementing the [`org.nuxeo.ecm.core.security.SecurityPolicy`](http://community.nuxeo.com/api/nuxeo/7.1/javadoc/org/nuxeo/ecm/core/security/SecurityPolicy.html) interface; it is strongly advised to extend `org.nuxeo.ecm.core.security.AbstractSecurityPolicy` for future compatibility.
