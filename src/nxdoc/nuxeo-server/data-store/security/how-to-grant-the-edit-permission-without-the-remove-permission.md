@@ -3,7 +3,7 @@ title: 'HOWTO: Grant the Edit Permission without the Remove Permission'
 description: Learn how to override the default Edit permission so it does not include Remove by default, and set a new ReadWriteAndRemove permission.
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2019-08-11'
     status: ok
 details:
     howto:
@@ -88,18 +88,28 @@ As described on the page [Managing Permissions]({{page space='userdoc' page='per
 
 ## Procedure
 
-1.  [Add a new contribution]({{page page='how-to-contribute-to-an-extension'}}) to remove the `Remove` permission from `Write` permission.
+1.  [Add a new contribution]({{page page='how-to-contribute-to-an-extension'}}) to remove the `Remove` permission from `Write` permission. Check the [Nuxeo Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202019-10.10/viewExtensionPoint/org.nuxeo.ecm.core.security.SecurityService--permissions) page to update the suitable extension point.
 
     ```xml
       <extension target="org.nuxeo.ecm.core.security.SecurityService"
         point="permissions">
         <permission name="Write">
-          <remove>Remove</remove>
+          <include>AddChildren</include>
+          <include>WriteProperties</include>
+          <!-- The next line should be commented -->
+          <!--<include>Remove</include>-->
+          <include>ManageWorkflows</include>
+          <include>WriteLifeCycle</include>
+          <include>WriteVersion</include>
         </permission>
      </extension>
     ```
 
     This change will make the permission `ReadWrite`, displayed under the permission label "Edit" in the UI, act as wanted: it no longer includes the right to remove content.
+
+    {{#> callout type='warning' heading='Negative Permissions' }}
+    Negative permissions are disabled by default, due to Elasticsearch limitations (Check out the [Upgrade Notes to Nuxeo Platform 6.0]({{page space='nxdoc' page='upgrade-from-58-to-60'}}#migrating-negative-permissions))
+    {{/callout}}
 
     If you want users to be able to add and remove content, you must now grant them the Edit permission and the Remove permission. Or you can add a new permission that will behave like the default `ReadWrite` permission used to.
 
