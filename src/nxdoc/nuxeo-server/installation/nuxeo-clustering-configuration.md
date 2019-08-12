@@ -191,6 +191,17 @@ history:
 ---
 Nuxeo can be clustered between several nodes (a.k.a. instances or machines) with the appropriate configuration. In addition, an HTTP load balancer with session affinity must be used in front of the nodes.
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Nuxeo Reference Architecture](https://university.nuxeo.com/learn/course/external/view/elearning/201/NuxeoReferenceArchitecture).
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_reference_architecture.png
+    name: university_reference_architecture.png
+    server#screenshot#up_to_date
+--}}
+![university_reference_architecture.png](nx_asset://2a075e0b-c150-4eeb-b248-b92650771b5a ?w=450,border=true)
+{{/callout}}
+
 ## Requirements
 
 To enable clustering, you must have at least two nodes with:
