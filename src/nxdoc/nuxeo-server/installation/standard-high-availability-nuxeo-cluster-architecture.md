@@ -254,8 +254,14 @@ This page assumes you already are familiar with the different components of a Nu
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
+- [Nuxeo Reference Architecture](https://university.nuxeo.com/learn/course/external/view/elearning/201/NuxeoReferenceArchitecture).
 - [Expert Session on Disaster Recovery](https://university.nuxeo.com/learn/public/course/view/elearning/137/expert-session-disaster-recovery).
-![]({{file name='university_disaster_recovery.png'}} ?w=450,border=true)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_reference_architecture.png
+    name: university_reference_architecture.png
+    server#screenshot#up_to_date
+--}}
+![university_reference_architecture.png](nx_asset://2a075e0b-c150-4eeb-b248-b92650771b5a ?w=450,border=true)
 {{/callout}}
 
 ## High Availability Production Architecture
