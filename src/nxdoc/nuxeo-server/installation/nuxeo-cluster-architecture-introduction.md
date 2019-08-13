@@ -81,6 +81,10 @@ For a high availability cluster, a minimum of two Nuxeo server nodes is required
 
 The database is a core component for your Nuxeo cluster infrastructure, since it will store the document hierarchy, all document properties, and will be used as well for various queries. Nuxeo supports many databases, both NoSQL and relational ones. Among them, MongoDB and PostgreSQL currently provide the best overall performances for Nuxeo usage.
 
+{{#> callout type='note' heading='MongoDB'}}
+Best performances are obtained using MongoDB because it is a document based database. It is built to manage large volumes and is highly scalable. Moreover, using MongoDB allows you to manage key/value stores, and therefore avoid a Redis deployment.
+{{/callout}}
+
 Each database has its own solutions for high availability, therefore we may not recommend a specific option here. You may however refer to our [database configuration]({{page page='database-configuration'}}) documentation for further details.
 
 ## Elasticsearch
@@ -211,6 +215,17 @@ We strongly recommend the usage of Kafka to have a highly reliable Bulk Service.
 </table>
 </div>
 
+### Recommended Architecture
+
+Streams is shipped with Kafka implementations and brings more resilience and a greater distribution capability, for example,  having several different consumer threads for the same queue. **For this reason, deploying Kafka is a must in a Nuxeo reference architecture.**
+
+{{#> callout type='note' heading='Alternatives'}}
+- If you aren’t familiar with Kafka, and it results in a challenging to deployment of a new software component, then you can go with Redis as an alternative. Using Redis causes increased limitations. Typically you would need to rely on Chronical Q implementation: this  is definitely not recommended in production as Chronical Q is running on the same JVM as Nuxeo, and consumes disk space.
+- In this scenario, it would be a better option to consider [Amazon MSK](https://aws.amazon.com/msk/) or [Confluent Cloud for Kafka](https://www.confluent.io/confluent-cloud) as a managed service in ultimate opportunity to go with Kafka.
+{{/callout}}
+
+
+
 ### Redis
 
 As seen above, Redis can be used for the WorkManager, KeyValue Store and PubSub service.
@@ -242,6 +257,8 @@ When the KeyValue store relies on the repository's backend, you don't need a Red
 Kafka requires few resources and it is limited only by the available disk space.
 
 For high availability Kafka needs to be deployed in cluster.
+
+To get high availability, we need a Kafka cluster with 2 Kafka nodes. To orchestrate the log queue, we need **Zookeeper nodes**. Zookeeper nodes do not consume a lot of memory or CPU.
 
 ## File System
 
