@@ -2,7 +2,7 @@
 title: Node Transitions Tab
 review:
     comment: ''
-    date: ''
+    date: '2019-08-13'
     status: ok
 labels:
     - node
@@ -78,12 +78,16 @@ history:
 --}}
 ![Node Transition Tab](nx_asset://4f937076-ee59-4ca1-94f1-59e9d576a634 ?w=500,border=true)
 
-**Follow only first true transition**: If checked, transitions can be ordered and only the first transition for which conditions are true will be followed. If not checked and if several transitions are true, then they will all be followed corresponding to a fork in the workflow. (available from 5.7.2)
-
-** Add a transition:**
-
 When designing the graph, you cannot pull freely arrows from the output of a node to the next one. You first need to declare the transition in this tab. Once you did it, you will see an endpoint on the graph with the name of the transition, from which you will be able to pull the arrow.
-When adding a transition, you need to specify:
+
+The Transitions tab allows you to specify:
+
+*   **Follow only first true transition**: If checked, transitions can be ordered and only the first transition for which conditions are true will be followed. If not checked and if several transitions are true, then they will all be followed corresponding to a fork in the workflow.
+
+  This option could be useful:
+    - When a default transition should be set up in any case.
+    - When the business case clearly states the current task must follow only one transition.
+
 
 *   **Name**: The name is only displayed in the graph, and used by the engine. You won't have to explicitly use this value later.
 *   **Condition**: This is the condition the workflow engine evaluates so as to know where to go after an node is executed. You have access to all [the workflow context variables]({{page space='nxdoc' page='variables-available-in-the-automation-context'}}). If you don't set any condition, it will always be "true". The workflow engine supports having several conditions evaluated to true, in that case, you will have a "fork" on your workflow path.
