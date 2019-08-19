@@ -13,7 +13,8 @@ tree_item_index: 1100
 ---
 
 {{! excerpt}}
-The [Nuxeo Aspera Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera) enables users to download/upload binaries with Aspera.
+The [Nuxeo Aspera](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera) connector
+enables users to download/upload binaries with Aspera.
 {{! /excerpt}}
 
 ## Requirements
@@ -32,8 +33,9 @@ Installation is made of two steps:
 
 ### Aspera Configuration
 
-We need to configure 2 Aspera nodes: one for upload and one for download. Each node will be attached to one S3 bucket in Nuxeo:
+We need to configure 2 Aspera nodes; one for upload and one for download.
 
+Each node will be attached to one S3 bucket in Nuxeo:
 - The main Nuxeo S3 bucket in Nuxeo for download purpose
 - The S3 transient store bucket for upload purpose
 
@@ -220,10 +222,10 @@ Once on the Aspera Upload screen, you will be able to download the Aspera Deskto
 ![aspera-setup.png](nx_asset://f72d1a6e-546b-4333-8898-33a6c4d2275e ?w=450,border=true)
 
 Once on the Aspera menu, 2 tabs are available:
-- [Transfers](#transfers-tab)
+- [Transfers](#transfers)
 - [Upload to Nuxeo](#upload-to-nuxeo)
 
-#### Transfers Tab
+#### Transfers
 
 This screen shows the status of all current transfers in your Nuxeo application.</br>
 
@@ -240,7 +242,7 @@ You can:
 --}}
 ![4-aspera.png](nx_asset://d6df353e-f79a-4041-bf26-23b66ab6253b ?w=450,border=true)
 
-#### Upload To Nuxeo Tab
+#### Upload To Nuxeo
 
 On this screen, different actions are available; you can:
 
