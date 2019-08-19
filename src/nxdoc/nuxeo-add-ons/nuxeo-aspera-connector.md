@@ -14,7 +14,7 @@ tree_item_index: 1100
 ---
 
 {{! excerpt}}
-The [Nuxeo Aspera Connector addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera-connector) enables users to download/upload binaries with Aspera.
+The [Nuxeo Aspera Connector addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera) enables users to download/upload binaries with Aspera.
 {{! /excerpt}}
 
 ## Requirements
@@ -25,7 +25,7 @@ Aspera Desktop Client - [latest version](https://downloads.asperasoft.com/en/dow
 
 Installation is made of two steps:
 
-1.  Install the [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera-connector) available from the marketplace.
+1.  Install the [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera) available from the marketplace.
 1.  Install the [Aspera desktop client](http://d3gcli72yxqn2z.cloudfront.net/connect/v4/bin/IBMAsperaConnectInstaller-3.8.1.161274.dmg).
 
 ## Configuration
