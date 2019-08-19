@@ -346,7 +346,7 @@ Registered access
 <tr>
 <td colspan="1">
 Nuxeo Download/Upload with Aspera<br/>
-`nuxeo-aspera-connector`
+`nuxeo-aspera`
 </td>
 <td colspan="1">
 Registered access
