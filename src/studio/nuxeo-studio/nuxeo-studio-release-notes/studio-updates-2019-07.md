@@ -7,7 +7,6 @@ review:
   date: '2019-08-14'
   status: ok
 toc: true
-hidden: true
 ---
 
 ## Released Changes
