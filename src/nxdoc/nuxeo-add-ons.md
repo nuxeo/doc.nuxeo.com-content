@@ -1032,7 +1032,7 @@ Public
 [Documentation]({{page page='nuxeo-jsf-ui'}})
 </td>
 <td colspan="1">
-[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui)</br>
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui)</br>
 Deprecated since LTS 2019 (10.10)
 </td>
 </tr>
@@ -1072,7 +1072,7 @@ Deprecated since LTS 2019 (10.10)
 [Documentation]({{page page='nuxeo-virtual-navigation'}})
 </td>
 <td colspan="1">
-[Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation?version=1.3.3)<br/>
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation?version=1.3.3)<br/>
 Deprecated since LTS 2016 (8.10)  
 </td>
 </tr>
@@ -1110,7 +1110,7 @@ Deprecated since LTS 2019 (10.10)
 [User documentation]({{page version='810' space='userdoc' page='smart-search'}})
 </td>
 <td colspan="1">
-[Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-smart-search?version=1.9.3)<br/>
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-smart-search?version=1.9.3)<br/>
 Deprecated since LTS 2016 (8.10)
 </td>
 </tr>
