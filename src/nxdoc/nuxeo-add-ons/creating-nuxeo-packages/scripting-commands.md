@@ -230,7 +230,7 @@ Let's now look at a more complex `install.xml` file, which would be used only fo
   <update file="${package.root}/my.properties" todir="${env.config}"
     ignore="Platform.isJBoss()" />
   <copy file="${package.root}/mylib-1.2.jar" tofile="${env.lib}/mylib-{version:.*}.jar"
-    ignore="Version.isGreaterOrEqual(version, \"1.2\")" />
+    ignore="Version.isGreaterOrEqual(version, '1.2')" />
   <deploy file="${env.bundles}/my-plugin.jar"/>
 </install>
 ```
@@ -261,7 +261,7 @@ Let's take each command and see what will be executed.
 
     ```xml
       <copy file="${package.root}/mylib-1.2.jar" tofile="${env.lib}"
-        ignore="Version.isGreaterOrEqual(version, \"1.2\")" />
+        ignore="Version.isGreaterOrEqual(version, '1.2')" />
     ```
 
     You notice the usage of regular expression variables. The `tofile` value is using an expression of the form `{var:regex}`. This is a file pattern that allow to search for an existing file that match the given pattern. If a matching file is found the pattern portion of the file name will be extracted and inserted into the EL context under the 'var' key. If no matching file is found the command will fail.
