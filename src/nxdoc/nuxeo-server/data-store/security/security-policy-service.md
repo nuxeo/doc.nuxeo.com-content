@@ -78,17 +78,15 @@ history:
         date: '2010-12-28 17:15'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 The Security Policy Service provides an extension point to plug custom security policies that do not rely on the standard ACLs for security. For instance, it can be used to define permissions according to the document metadata, or information about the logged in user.
-
 {{! /excerpt}}
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
-- [Security Policies](https://university.nuxeo.com/learn/course/external/view/elearning/171/SecurityPolicies) on Nuxeo University.
+Watch the related course on Nuxeo University:</br>
+[Security Policies](https://university.nuxeo.com/learn/course/external/view/elearning/171/SecurityPolicies) on Nuxeo University.
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Security Policy Service/university_security_policies.png
     name: university_security_policies.png
@@ -105,8 +103,8 @@ The class must be registered through the [`policies`](http://explorer.nuxeo.org/
 
 A security policy has two important aspects, materialized by different methods of the interface:
 
-*   how security is checked on a given document (method `checkPermission`),
-*   how security is applied to NXQL, CMISQL and Elasticsearch Passthrough searches (methods `getQueryTransformer`).
+- how security is checked on a given document (method `checkPermission`),
+- how security is applied to NXQL, CMISQL and Elasticsearch Passthrough searches (methods `getQueryTransformer`).
 
 ### Document Security Check
 
@@ -125,9 +123,7 @@ A security policy can modify this behavior but only by adding new restrictions i
 The `getQueryTransformer(repositoryName)` method returns a `SQLQuery.Transformer` instance, which is a class with one `transform` method taking a NXQL query in the form of a `org.nuxeo.ecm.core.query.sql.model.SQLQuery` abstract syntax tree. It should transform this tree in order to add whatever restrictions are needed. Note that ACL checks will always be applied after this transformation.
 
 {{#> callout type='info' heading='Unrestricted sessions'}}
-
 If the query has been called in the context of an unrestricted session, the principal will be `system`. It is a good practice to check for that username since if the query is run unrestrictedly, it functionally means that you should not restrict anything with the query transformer
-
 {{/callout}}
 
 ### CMISQL Security Check
@@ -142,11 +138,8 @@ The `getQueryTransformer(repositoryName, "CMISQL")` method returns a `SecurityPo
 Nuxeo [Elasticsearch Passthrough]({{page page='elasticsearch-passthrough'}}) adds filters to take in account ACL security and security policy that are expressible in NXQL (`isExpressibleInQuery` returns `true`).
 
 {{#> callout type='warning' }}
-
 If you define a custom security policy that is not expressible in NXQL you should not enable the Nuxeo Elasticsearch passthrough.
-
 {{/callout}}
-
 
 ## Example Security Policy Contribution
 
