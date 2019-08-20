@@ -124,11 +124,9 @@ The `getQueryTransformer(repositoryName)` method returns a `SQLQuery.Transformer
 Note that ACL checks will always be applied after this transformation.
 
 {{#> callout type='info' heading='Memo'}}
-
 To formalize the security policy, we advice to express it using the following pattern:
 *Given* that the current user has these *characteristics*,
 We are searching for documents from the original query that in addition are *filtered* by X *criteria*.
-
 {{/callout}}
 
 {{#> callout type='info' heading='Unrestricted sessions'}}
@@ -140,7 +138,6 @@ If the query has been called in the context of an unrestricted session, the prin
 Since Nuxeo 5.6.0-HF21 and Nuxeo 5.7.2, all CMISQL queries also require implementation of the relevant  `getQueryTransformer` API in order to secure CMIS-based searches.
 
 The `getQueryTransformer(repositoryName, "CMISQL")` method returns a `SecurityPolicy.QueryTransformer` instance, which is a class with one `transform` method taking a query in the form of `String`. It should transform this query in order to add whatever restrictions are needed (this will require parsing the CMISQL and adding whatever clauses are needed). Note that ACL checks will always be applied after this transformation.
-
 
 ### Elasticsearch Passthrough Check
 
@@ -168,11 +165,19 @@ To register a security policy, you need to write a contribution specifying the c
 Here is a sample contributed class:
 
 ```
-import org.nuxeo.ecm.core.query.sql.model.*;
+import static org.nuxeo.ecm.core.query.sql.model.Predicates.noteq;
+import static org.nuxeo.ecm.core.query.sql.model.Predicates.and;
+
+import org.nuxeo.ecm.core.api.NuxeoPrincipal;
+import org.nuxeo.ecm.core.api.security.ACP;
+import org.nuxeo.ecm.core.api.security.Access;
+import org.nuxeo.ecm.core.model.Document;
 import org.nuxeo.ecm.core.query.sql.NXQL;
+import org.nuxeo.ecm.core.query.sql.model.Predicate;
+import org.nuxeo.ecm.core.query.sql.model.SQLQuery;
+import org.nuxeo.ecm.core.query.sql.model.WhereClause;
 import org.nuxeo.ecm.core.security.AbstractSecurityPolicy;
 import org.nuxeo.ecm.core.security.SecurityPolicy;
-import static org.nuxeo.ecm.core.query.sql.model.Predicates;
 
 /**
  * Sample policy that denies access to File objects.
@@ -181,8 +186,8 @@ public class NoFileSecurityPolicy extends AbstractSecurityPolicy implements Secu
 
     @Override
     public Access checkPermission(Document doc, ACP mergedAcp,
-            NuxeoPrincipal principal, String permission,
-            String[] resolvedPermissions, String[] additionalPrincipals) {
+                                  NuxeoPrincipal principal, String permission,
+                                  String[] resolvedPermissions, String[] additionalPrincipals) {
         // Note that doc is NOT a DocumentModel
         if ("File".equals(doc.getType().getName())) {
             return Access.DENY;
@@ -206,7 +211,7 @@ public class NoFileSecurityPolicy extends AbstractSecurityPolicy implements Secu
         return NO_FILE_TRANSFORMER;
     }
 
-    public static final Transformer NO_FILE_TRANSFORMER = new NoFileTransformer();
+    public static final SQLQuery.Transformer NO_FILE_TRANSFORMER = new NoFileTransformer();
 
     /**
      * Sample Transformer that adds {@code AND ecm:primaryType <> 'File'} to the query.
@@ -214,29 +219,28 @@ public class NoFileSecurityPolicy extends AbstractSecurityPolicy implements Secu
     public static class NoFileTransformer implements SQLQuery.Transformer {
 
         /* {@code ecm:primaryType <> 'File'} */
-        public static final Predicate NO_FILE = Predicates.noteq(NXQL.ECM_PRIMARYTYPE, "File");
+        public static final Predicate NO_FILE = noteq(NXQL.ECM_PRIMARYTYPE, "File");
 
         @Override
         public SQLQuery transform(NuxeoPrincipal principal, SQLQuery query) {
             if (!principal.isAdministrator()) {
-              WhereClause where = query.where;
-              Predicate predicate;
-              if (where == null || where.predicate == null) {
-                  predicate = NO_FILE;
-              } else {
-                  // adds an AND ecm:primaryType <> 'File' to the WHERE clause
-                  predicate = Predicates.and(NO_FILE, where.predicate);
-              }
-              // return query with updated WHERE clause
-              return new SQLQuery(query.select, query.from, new WhereClause(predicate),
-                      query.groupBy, query.having, query.orderBy, query.limit, query.offset);
+                WhereClause where = query.where;
+                Predicate predicate;
+                if (where == null || where.predicate == null) {
+                    predicate = NO_FILE;
+                } else {
+                    // adds an AND ecm:primaryType <> 'File' to the WHERE clause
+                    predicate = and(NO_FILE, where.predicate);
+                }
+                // return query with updated WHERE clause
+                return new SQLQuery(query.select, query.from, new WhereClause(predicate),
+                        query.groupBy, query.having, query.orderBy, query.limit, query.offset);
             }
             return query;
         }
     }
 
 }
-
 ```
 
 ### CMISQL Security Checks
