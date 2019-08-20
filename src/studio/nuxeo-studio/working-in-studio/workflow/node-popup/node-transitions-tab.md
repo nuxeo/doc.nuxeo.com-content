@@ -69,8 +69,8 @@ history:
         date: '2012-09-28 10:16'
         message: ''
         version: '1'
-
 ---
+
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Node Transition Tab /Node Transition Tab
     name: Node Transition Tab.png
@@ -82,16 +82,20 @@ When designing the graph, you cannot pull freely arrows from the output of a nod
 
 The Transitions tab allows you to specify:
 
-*   **Follow only first true transition**: If checked, transitions can be ordered and only the first transition for which conditions are true will be followed. If not checked and if several transitions are true, then they will all be followed corresponding to a fork in the workflow.
+- **Follow only first true transition**: If checked, transitions can be ordered and only the first transition for which conditions are true will be followed. If not checked and if several transitions are true, then they will all be followed corresponding to a fork in the workflow.
 
   This option could be useful:
-    - When a default transition should be set up in any case.
-    - When the business case clearly states the current task must follow only one transition.
+  - When a default transition should be set up in any case.
+  - When the business case clearly states the current task must follow only one transition.
 
 
-*   **Name**: The name is only displayed in the graph, and used by the engine. You won't have to explicitly use this value later.
-*   **Condition**: This is the condition the workflow engine evaluates so as to know where to go after an node is executed. You have access to all [the workflow context variables]({{page space='nxdoc' page='variables-available-in-the-automation-context'}}). If you don't set any condition, it will always be "true". The workflow engine supports having several conditions evaluated to true, in that case, you will have a "fork" on your workflow path.
-*   **Chain**: The chain will be executed when the workflow engine goes into this transition. In the context of this chain, you will have access to the Node Variables of the node on which it is declared. For instance, you would like to log in the audit that it was rejected, validated, or requested for update, you could add chains that use the Log Event In Audit  operation and set a different value on each chain. The list of documents bound to the workflow instance will be the input of each chain. If there is only one document, it will still be a list, with one element.
+- **Name**: The name is only displayed in the graph, and used by the engine. You won't have to explicitly use this value later.
+
+
+- **Condition**: This is the condition the workflow engine evaluates so as to know where to go after an node is executed. You have access to all [the workflow context variables]({{page space='nxdoc' page='variables-available-in-the-automation-context'}}). If you don't set any condition, it will always be "true". The workflow engine supports having several conditions evaluated to true, in that case, you will have a "fork" on your workflow path.
+
+
+- **Chain**: The chain will be executed when the workflow engine goes into this transition. In the context of this chain, you will have access to the Node Variables of the node on which it is declared. For instance, you would like to log in the audit that it was rejected, validated, or requested for update, you could add chains that use the Log Event In Audit  operation and set a different value on each chain. The list of documents bound to the workflow instance will be the input of each chain. If there is only one document, it will still be a list, with one element.  
 
 {{#> callout type='info' heading='Automation Chains in Workflows'}}
 When using automation chains in the context of a workflow, some things are important to remember. For more information read the [related documentation page]({{page page='node-general-tab'}}#automation-chains-in-workflows).
