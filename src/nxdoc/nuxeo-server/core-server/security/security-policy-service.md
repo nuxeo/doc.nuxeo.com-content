@@ -86,7 +86,7 @@ The Security Policy Service provides an extension point to plug custom security 
 
 ## Security Policy Architecture
 
-A security policy is a class implementing the [`org.nuxeo.ecm.core.security.SecurityPolicy`](http://community.nuxeo.com/api/nuxeo/7.1/javadoc/org/nuxeo/ecm/core/security/SecurityPolicy.html) interface; it is strongly advised to extend `org.nuxeo.ecm.core.security.AbstractSecurityPolicy` for future compatibility.
+A security policy is a class implementing the [`org.nuxeo.ecm.core.security.SecurityPolicy`](http://community.nuxeo.com/api/nuxeo/10.10/javadoc/org/nuxeo/ecm/core/security/SecurityPolicy.html) interface; it is strongly advised to extend `org.nuxeo.ecm.core.security.AbstractSecurityPolicy` for future compatibility.
 
 The class must be registered through the [`policies`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.security.SecurityService--policies) extension point of the [`org.nuxeo.ecm.core.security.SecurityService`](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.core.security.SecurityService) component.
 
@@ -107,14 +107,19 @@ Note that `checkPermission` receives a document which is a `org.nuxeo.ecm.core.m
 
 All NXQL queries have ACL-based security automatically applied with the `Browser` permission (except for superusers).
 
-A security policy can modify this behavior but only by adding new restrictions in addition to the ACLs. To do so, it can simply implement the `checkPermission` described above, but this gets very costly for big searches. The efficient approach is to make `isExpressibleInQuery` return `true` and implement `getQueryTransformer`.
+A dedicated security policy can modify this behavior by adding new restrictions on top of the ACLs. This is done by overriding `isExpressibleInQuery` (it has to return `true`) and implementing `getQueryTransformer`.
 
-The `getQueryTransformer(repositoryName)` method returns a `SQLQuery.Transformer` instance, which is a class with one `transform` method taking a NXQL query in the form of a `org.nuxeo.ecm.core.query.sql.model.SQLQuery` abstract syntax tree. It should transform this tree in order to add whatever restrictions are needed. Note that ACL checks will always be applied after this transformation.
+The `getQueryTransformer(repositoryName)` method returns a `SQLQuery.Transformer` instance. The custom `SQLQuery.Transformer` has to override the `transform` method, taking as parameter an NXQL query in the form of a `org.nuxeo.ecm.core.query.sql.model.SQLQuery` [Abstract Syntax Tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree) and a `NuxeoPrincipal`. The custom transformer has to manipulate the AST to add new restrictions to implement the security policy.
+Note that ACL checks will always be applied after this transformation.
+
+{{#> callout type='info' heading='Memo'}}
+To formalize the security policy, we advice to express it using the following pattern:
+*Given* that the current user has these *characteristics*,
+We are searching for documents from the original query that in addition are *filtered* by X *criteria*.
+{{/callout}}
 
 {{#> callout type='info' heading='Unrestricted sessions'}}
-
 If the query has been called in the context of an unrestricted session, the principal will be `system`. It is a good practice to check for that username since if the query is run unrestrictedly, it functionally means that you should not restrict anything with the query transformer
-
 {{/callout}}
 
 ### CMISQL Security Check
@@ -123,17 +128,13 @@ Since Nuxeo 5.6.0-HF21 and Nuxeo 5.7.2, all CMISQL queries also require implemen
 
 The `getQueryTransformer(repositoryName, "CMISQL")` method returns a `SecurityPolicy.QueryTransformer` instance, which is a class with one `transform` method taking a query in the form of `String`. It should transform this query in order to add whatever restrictions are needed (this will require parsing the CMISQL and adding whatever clauses are needed). Note that ACL checks will always be applied after this transformation.
 
-
 ### Elasticsearch Passthrough Check
 
 Nuxeo [Elasticsearch Passthrough]({{page page='elasticsearch-passthrough'}}) adds filters to take in account ACL security and security policy that are expressible in NXQL (`isExpressibleInQuery` returns `true`).
 
 {{#> callout type='warning' }}
-
 If you define a custom security policy that is not expressible in NXQL you should not enable the Nuxeo Elasticsearch passthrough.
-
 {{/callout}}
-
 
 ## Example Security Policy Contribution
 
@@ -153,8 +154,17 @@ To register a security policy, you need to write a contribution specifying the c
 Here is a sample contributed class:
 
 ```
-import org.nuxeo.ecm.core.query.sql.model.*;
+import static org.nuxeo.ecm.core.query.sql.model.Predicates.noteq;
+import static org.nuxeo.ecm.core.query.sql.model.Predicates.and;
+
+import org.nuxeo.ecm.core.api.NuxeoPrincipal;
+import org.nuxeo.ecm.core.api.security.ACP;
+import org.nuxeo.ecm.core.api.security.Access;
+import org.nuxeo.ecm.core.model.Document;
 import org.nuxeo.ecm.core.query.sql.NXQL;
+import org.nuxeo.ecm.core.query.sql.model.Predicate;
+import org.nuxeo.ecm.core.query.sql.model.SQLQuery;
+import org.nuxeo.ecm.core.query.sql.model.WhereClause;
 import org.nuxeo.ecm.core.security.AbstractSecurityPolicy;
 import org.nuxeo.ecm.core.security.SecurityPolicy;
 
@@ -165,8 +175,8 @@ public class NoFileSecurityPolicy extends AbstractSecurityPolicy implements Secu
 
     @Override
     public Access checkPermission(Document doc, ACP mergedAcp,
-            NuxeoPrincipal principal, String permission,
-            String[] resolvedPermissions, String[] additionalPrincipals) {
+                                  NuxeoPrincipal principal, String permission,
+                                  String[] resolvedPermissions, String[] additionalPrincipals) {
         // Note that doc is NOT a DocumentModel
         if ("File".equals(doc.getType().getName())) {
             return Access.DENY;
@@ -190,35 +200,36 @@ public class NoFileSecurityPolicy extends AbstractSecurityPolicy implements Secu
         return NO_FILE_TRANSFORMER;
     }
 
-    public static final Transformer NO_FILE_TRANSFORMER = new NoFileTransformer();
+    public static final SQLQuery.Transformer NO_FILE_TRANSFORMER = new NoFileTransformer();
 
     /**
      * Sample Transformer that adds {@code AND ecm:primaryType <> 'File'} to the query.
      */
     public static class NoFileTransformer implements SQLQuery.Transformer {
 
-        /** {@code ecm:primaryType <> 'File'} */
-        public static final Predicate NO_FILE = new Predicate(
-                new Reference(NXQL.ECM_PRIMARYTYPE), Operator.NOTEQ, new StringLiteral("File"));
+        /* {@code ecm:primaryType <> 'File'} */
+        public static final Predicate NO_FILE = noteq(NXQL.ECM_PRIMARYTYPE, "File");
 
         @Override
         public SQLQuery transform(NuxeoPrincipal principal, SQLQuery query) {
-            WhereClause where = query.where;
-            Predicate predicate;
-            if (where == null || where.predicate == null) {
-                predicate = NO_FILE;
-            } else {
-                // adds an AND ecm:primaryType <> 'File' to the WHERE clause
-                predicate = new Predicate(NO_FILE, Operator.AND, where.predicate);
+            if (!principal.isAdministrator()) {
+                WhereClause where = query.where;
+                Predicate predicate;
+                if (where == null || where.predicate == null) {
+                    predicate = NO_FILE;
+                } else {
+                    // adds an AND ecm:primaryType <> 'File' to the WHERE clause
+                    predicate = and(NO_FILE, where.predicate);
+                }
+                // return query with updated WHERE clause
+                return new SQLQuery(query.select, query.from, new WhereClause(predicate),
+                        query.groupBy, query.having, query.orderBy, query.limit, query.offset);
             }
-            // return query with updated WHERE clause
-            return new SQLQuery(query.select, query.from, new WhereClause(predicate),
-                    query.groupBy, query.having, query.orderBy, query.limit, query.offset);
+            return query;
         }
     }
 
 }
-
 ```
 
 ### CMISQL Security Checks
