@@ -32,7 +32,7 @@ To configure the package, you will need to provide values for the configuration 
 
 You can do the configuration using the `nuxeo.conf` properties described below.
 
-### Specifying Your Amazon Credentials and Region
+### Specifying Your Google Credentials and Region
 
 In `nuxeo.conf`, add the following lines:
 
