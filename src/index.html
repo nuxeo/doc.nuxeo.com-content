@@ -574,6 +574,16 @@ news:
   margin: 0 0 1rem;
 }
 
+#news .news-item.heading {
+  background-color: #f8f8f8;
+  padding: 1rem;
+}
+
+#news .news-item.heading h3 {
+  color: #555;
+  margin: 0;
+}
+
 @media (min-width: 1400px) {
   #news {
     position: absolute;
@@ -673,14 +683,13 @@ news:
     </div>
   </div>
 </div>
-<div
-  id="news"
-  class=""
-  style="
-
-"
->
+{{#if news}}
+<div id="news">
+  <div class="news-item heading">
+    <h3 class="">What's New</h3>
+  </div>
   {{#each news}} {{> news_item}} {{/each}}
 </div>
+{{/if}}
 
 {{> footer_standard}}
