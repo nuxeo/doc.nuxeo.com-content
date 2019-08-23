@@ -259,6 +259,10 @@ Those default auditable events match the Nuxeo core base events:
 * `sectionContentPublished`
 * `documentRestored`
 
+{{#> callout type='info'  heading='Full List'}}
+The full list of audit events used in the platform can be found [here](https://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202019-10.10/viewExtensionPoint/org.nuxeo.ecm.platform.audit.service.NXAuditEventsService--event).
+{{/callout}}
+
 If you are sending new Nuxeo core events and want them to be audited, you have to extend the `event` extension point. Here is an example of a contribution to this extension point:
 
 ```xml
