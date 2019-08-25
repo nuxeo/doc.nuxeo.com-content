@@ -18,6 +18,17 @@ tree_item_index: 650
 The [Google Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/google-storage) addon is a Nuxeo Binary Manager for Google. It stores Nuxeo's binaries (the attached documents) in a [Google Storage](https://cloud.google.com/storage/) bucket.
 {{! /excerpt}}
 
+{{#> callout type='info' heading='University'}}
+Watch the related courses on Nuxeo University
+- [Nuxeo Google Storage - Product News](https://university.nuxeo.com/learn/course/external/view/elearning/202/NuxeoGoogleStorage)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Google Storage/university-google-storage.png
+    name: university-google-storage.png
+    addins#screenshot#up_to_date
+--}}
+![university-google-storage.png](nx_asset://e57ee96f-c11e-4a5a-abda-3532ed36bded ?w=450,border=true)
+{{/callout}}
+
 ## Before You Start
 
 You should be familiar with Google Storage and in possession of your credentials.
