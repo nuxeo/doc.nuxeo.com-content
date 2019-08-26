@@ -217,14 +217,13 @@ We strongly recommend the usage of Kafka to have a highly reliable Bulk Service.
 
 ### Recommended Architecture
 
-Streams is shipped with Kafka implementations and brings more resilience and a greater distribution capability, for example,  having several different consumer threads for the same queue. **For this reason, deploying Kafka is a must in a Nuxeo reference architecture.**
+Nuxeo Stream is shipped with Kafka implementations and brings more resilience and a greater distribution capability, for example, having several consumer threads for the same queue. **For this reason, deploying Kafka is a must in a Nuxeo reference architecture.**
 
 {{#> callout type='note' heading='Alternatives'}}
-- If you aren’t familiar with Kafka, and it results in a challenging to deployment of a new software component, then you can go with Redis as an alternative. Using Redis causes increased limitations. Typically you would need to rely on Chronical Q implementation: this  is definitely not recommended in production as Chronical Q is running on the same JVM as Nuxeo, and consumes disk space.
-- In this scenario, it would be a better option to consider [Amazon MSK](https://aws.amazon.com/msk/) or [Confluent Cloud for Kafka](https://www.confluent.io/confluent-cloud) as a managed service in ultimate opportunity to go with Kafka.
+- If you aren’t familiar with Kafka, then you can go with Redis as an alternative.</br>
+  But keep in mind that using Redis causes limitations. Typically you would need to rely on Chronicle Queue implementation: this  is definitely not recommended in production as Chronicle Queue is running on the same JVM as Nuxeo, and consumes disk space.
+- In this scenario, it would be a better option to consider [Amazon MSK](https://aws.amazon.com/msk/) or [Confluent Cloud for Kafka](https://www.confluent.io/confluent-cloud) as a managed service in the last opportunity to go with Kafka.
 {{/callout}}
-
-
 
 ### Redis
 

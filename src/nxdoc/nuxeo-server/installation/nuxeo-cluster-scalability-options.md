@@ -33,7 +33,7 @@ Applications requiring heavy processing like picture or video conversions can ta
 ![]({{file name='dedicated-processing-nodes.png'}} ?border=true)
 <!-- Source: https://www.lucidchart.com/documents/edit/0eb7242e-9a34-4d1f-8568-9682f8ab26a8 -->
 
-Nuxeo worker nodes allow you to manage batch processing nodes and to execute asynchronous work, such as conversions, Nuxeo Drive synchronisation processes, fulltext extraction etc. The number of necessary nodes will vary based on your needs, such as the use of the processing of large volumes of rich media files, the use of Nuxeo add-ons like Nuxeo Drive etc.
+Nuxeo worker nodes allow you to manage batch processing nodes and to execute asynchronous work, such as conversions, Nuxeo Drive synchronisation processes, full-text extraction etc. The number of necessary nodes will vary based on your needs, such as the use of the processing of large volumes of rich media files, the use of Nuxeo add-ons like Nuxeo Drive etc.
 
 The async tasks can be managed in a distributed way using the [WorkManager]({{page page='work-and-workmanager'}}) with Redis or Kafka.
 
