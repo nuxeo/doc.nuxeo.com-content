@@ -154,7 +154,7 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
             <parameter name="name">MyIdP</parameter>
             <!-- The IdP's icon will only be shown if SAML auth is displayed
             as an alternative login option in the login form. -->
-            <!-- <parameter name="icon">nxserver/nuxeo.war/img/idpIcon.png</parameter> -->
+            <!-- <parameter name="icon">/img/idpIcon.png</parameter> -->
             <!-- The metadata parameter can either be a URL or a path to a static file -->
             <parameter name="metadata">nxserver/config/metadata-idp.xml</parameter>
           </parameters>
