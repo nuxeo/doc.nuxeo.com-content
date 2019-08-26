@@ -36,6 +36,6 @@ history:
         version: '1'
 
 ---
-{{{md (file_content url='https://raw.githubusercontent.com/nuxeo/nuxeo-shibboleth-invitation/master/README.md')}}}
+{{{md (file_content url='https://raw.githubusercontent.com/nuxeo/nuxeo/master/addons/nuxeo-shibboleth-invitation/README.md')}}}
 
 * * *
