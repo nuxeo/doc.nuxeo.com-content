@@ -189,11 +189,12 @@ history:
         message: ''
         version: '1'
 ---
+
 Nuxeo can be clustered between several nodes (a.k.a. instances or machines) with the appropriate configuration. In addition, an HTTP load balancer with session affinity must be used in front of the nodes.
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Nuxeo Reference Architecture](https://university.nuxeo.com/learn/course/external/view/elearning/201/NuxeoReferenceArchitecture).
+Watch the related course on Nuxeo University:</br>
+[Nuxeo Reference Architecture](https://university.nuxeo.com/learn/course/external/view/elearning/201/NuxeoReferenceArchitecture).
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_reference_architecture.png
     name: university_reference_architecture.png
@@ -274,9 +275,7 @@ For VCS (SQL databases) the standard configuration is available from Nuxeo templ
 2.  Enable the Quartz-specific cluster templates by adding the template `<database>-quartz-cluster`.
 
 {{#> callout type='note' }}
-
 In cluster mode the schedule contributions (deployed from plugins or configuration files) **must** be the same on all nodes.
-
 {{/callout}}
 
 Any instance using a clustered Quartz configuration tries to get a lock on the next scheduled job execution. Those locks are managed and shared through the database.

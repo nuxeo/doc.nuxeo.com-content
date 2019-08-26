@@ -253,9 +253,9 @@ This page assumes you already are familiar with the different components of a Nu
 {{/callout}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Nuxeo Reference Architecture](https://university.nuxeo.com/learn/course/external/view/elearning/201/NuxeoReferenceArchitecture).
-- [Expert Session on Disaster Recovery](https://university.nuxeo.com/learn/public/course/view/elearning/137/expert-session-disaster-recovery).
+Watch the related courses on Nuxeo University:</br>
+[Nuxeo Reference Architecture](https://university.nuxeo.com/learn/course/external/view/elearning/201/NuxeoReferenceArchitecture)</br>
+[Expert Session on Disaster Recovery](https://university.nuxeo.com/learn/public/course/view/elearning/137/expert-session-disaster-recovery)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university_reference_architecture.png
     name: university_reference_architecture.png
