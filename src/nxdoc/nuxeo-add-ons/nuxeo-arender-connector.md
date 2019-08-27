@@ -408,6 +408,13 @@ The annotations module supports a large number of file formats.
 - **Composite files**: ZIP, EML, MSG
 - **Others**: TXT, OpenDocument (LibreOffice or OpenOffice)
 
+## Roadmap
+
+The Nuxeo Enhanced Viewer is contantly improved. You can monitor its roadmap below. You can also submit some feedaback on the [Nuxeo Server feedback portal](https://portal.prodpad.com/7cdff94a-f166-11e7-93bc-06df22ffaf6f).
+
+<iframe src='https://ext.prodpad.com/ext/roadmap/2be5150d3c6c4f6e5adfcb3c4cd19c6121542326' height='900' width='100%' frameborder='0'></iframe> 
+
+
 ## Going Further
 
 The connector can be customized in many different ways, such as adding new watermark stamps, displaying different actions/tools etc.
