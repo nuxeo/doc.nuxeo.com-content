@@ -10,7 +10,8 @@ labels:
     - jaubenque
     - retention-management
 toc: true
-tree_item_index: 100
+hidden: true
+tree_item_index: 200
 private: true
 ---
 {{! excerpt}}

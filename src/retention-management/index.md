@@ -1,6 +1,6 @@
 ---
 title: Nuxeo Retention Management
-description: The retention management module covers all the necessary aspects of data/retention management to fulfill legal requirements.
+description: The retention management module covers all the necessary aspects of retention management to fulfill legal requirements.
 review:
     comment: ''
     date: '2019-08-05'
@@ -16,17 +16,13 @@ private: true
 ---
 
 {{! excerpt}}
-The retention management module covers all the necessary aspects of data/retention management to fulfill legal requirements. It includes management of records, retention rules, deletion of the document at a specific date and legal case management features, such as putting documents under legal hold and/or retention depending on a specific event or metadata and searching for a retention rules.
+The retention management module covers all the necessary aspects of retention management to fulfill legal requirements. It includes management of records, retention rules, deletion of the document at a specific date and legal case management features, such as putting documents under legal hold and/or retention depending on a specific event or metadata and searching for a retention rules.
 {{! /excerpt}}
 
 ## Concept
 
 **Retention management** refers to the control of a document's lifecycle through the use rules and policies.</br>
 Documents can be kept or deleted depending on a set of rules which may pertain to time, events or specific metadata contained in the document type.
-
-<!--
-Nuxeo Retention Management add-on lets you control documents that need to be retained over time. This module is meant to be used in highly regulated environments and on multiple document types, such as File, Audio, Video and Picture.
--->
 
 ## SEC Rule 17a-4 Compliance
 
@@ -81,7 +77,7 @@ Here are the main differences between **retention** and **legal hold**:
 
 An audit trail (or audit log) provides the full history of a document from its creation until its disposal.
 
-The Nuxeo Retention Management addon provides an audit system for both the original record and associated metadata file to account for:
+The Nuxeo Retention Management add-on provides an audit system for both the original record and associated metadata file to account for:
 
 - Initial capture and storage of the record object and metadata.
 
@@ -95,20 +91,20 @@ The Nuxeo Retention Management addon provides an audit system for both the origi
 </br>
 - Deletion of record object, metadata and audit trail data.
 
-
 ### Secured Storage
 
-As part of the SEC 17a-4 requirement, the Nuxeo Retention Management add-on supports the usage of a secure storage media, Amazon S3 in compliance mode in this case.
+The SEC 17a-4 US regulation involves the usage of a secured storage media as part of the requirements to be compliant.
+The Nuxeo Retention Management add-on is using Amazon S3 in "Compliance mode", to fit with this requirement.
 
-Amazon S3 compliance mode (see **Amazon S3 Object Lock**) guarantees that no one can delete an object which is under retention or legal hold. Amazon S3 is provided with the retention period and/or legal hold information by Nuxeo, and ensures that no changes or deletions can occur during this period.
+Amazon S3 compliance mode (see [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html)) guarantees that no one can delete an object which is under retention or legal hold. Amazon S3 is provided with the retention period and/or legal hold information by Nuxeo, and ensures that no changes or deletions can occur during this period.
 
 ## Limitations
 
 The Nuxeo Retention Management add-on does not support **attachments** or **versioning**.
 
-The attachments features are automatically disabled when the Nuxeo Retention Management add-on is installed on the Nuxeo Server.
+- The attachments features **is automatically disabled** for the full instance when the Nuxeo Retention Management add-on is added to Nuxeo Server. So, once the add-on is installed, there is no way to add an attachment to a document, whatever if they are standard documents or records.
 
-The versioning must be turned off during the [setup](https://doc.nuxeo.com/retention-management/nuxeo-retention-installation).
+- The versioning feature must be turned off during the setup. Which means that there is no way to add a version to a document in the full instance, whatever if they are standard documents or records.
 
 ## Warning
 
@@ -129,9 +125,10 @@ Due to the SEC 17a-4 regulation requirements regarding records preservation, mos
 
 Nuxeo can't guarantee the compliance to SEC 17a-4 in the event that:
 
-- The [installation / configuration](https://doc.nuxeo.com/retention-management/nuxeo-retention-installation) recommendations are not applied.
-- Some specific developments are added to the UI or Retention features.
+- The installation/configuration recommendations are not applied.
+- The developments added by a partner or a customer would interfere with the regulatory requirements and Nuxeo Retention Management add-on behavior (for example: reintroduce disabled features).
 
+<!--
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium">
@@ -148,3 +145,4 @@ Nuxeo can't guarantee the compliance to SEC 17a-4 in the event that:
 </div>
 
 </div>
+-->
