@@ -228,7 +228,7 @@ There are different ways to put a document under retention. You can attach a ret
 #### From a Document View
 
 On the **View** tab of your document:
-1. Click on the **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='icons-index'}} ?w=14) button and select **Attach retention rule**.</br>
+1. Click on the **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='search'}} ?w=14) button and select **Attach retention rule**.</br>
   A popup window is displayed.</br>
   {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-popup
@@ -282,7 +282,7 @@ This is an **irreversible action**: there is no way to shorten a retention perio
 {{/callout}}
 
 On the **View** tab of your document:
-1. Click on the **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='icons-index'}} ?w=14) button and select **Extend retention**.</br>
+1. Click on the **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='search'}} ?w=14) button and select **Extend retention**.</br>
     A popup window is displayed.</br>
   {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-extend
@@ -355,7 +355,7 @@ There are different ways to put a document under a [Legal Hold]({{page page='ind
 #### From a Document View
 
 Once on the **View** tab of your document:
-1. Click on **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='icons-index'}} ?w=14) and select **Apply Legal Hold**.</br>
+1. Click on **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='search'}} ?w=14) and select **Apply Legal Hold**.</br>
   A popup window is displayed.</br>
   {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-legalhold-popup
@@ -397,7 +397,7 @@ There are different ways to remove a Legal Hold. You can remove a Legal Hold for
 #### From a Document View
 
 Once on the **View** tab of your document:
-1. Click on **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='icons-index'}} ?w=14) and select **Remove Legal Hold**.</br>
+1. Click on **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='search'}} ?w=14) and select **Remove Legal Hold**.</br>
   A popup window is displayed.</br>
   {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-legalhold-remove-popup
