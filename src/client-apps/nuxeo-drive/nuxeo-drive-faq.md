@@ -129,8 +129,8 @@ And the minimum required installed Hotfix (HF) is:
 
 Client | 7.10 | 8.10 | 9.10 | 10.10
 --- | --- | --- | --- | ---
-3.x | HF43 | HF33 | HF12 | HF0
-4.x | HF47 | HF39 | HF22 | HF0
+3.x | HF43 | HF33 | HF12 | HF11
+4.x | HF47 | HF39 | HF22 | HF11
 
 ## What Actions Trigger a Synchronization?
 
