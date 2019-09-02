@@ -3,7 +3,7 @@ title: Choosing How to Import Data in the Nuxeo Platform
 description: Discover the tools and APIs that Nuxeo Platform provides to import content.
 review:
   comment: ''
-  date: '2017-12-13'
+  date: '2019-09-02'
   status: ok
 labels:
   - lts2016-ok
@@ -99,12 +99,15 @@ history:
     version: '1'
 ---
 
-{{#> callout type='info'}}
-Watch the related courses on Nuxeo University
-
-- [Data Capture - Import Strategies](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) on Nuxeo University.
-  ![]({{file name='university-data-capture.png' page='nxdoc/university'}} ?w=450,border=true)
-  {{/callout}}
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses: [Data Capture - Import Strategies](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture).
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Choosing How to Import Data in the Nuxeo Platform/university_import_strategies.png
+    name: university_import_strategies.png
+    server#schema#up_to_date
+--}}
+![university_import_strategies.png](nx_asset://cd2f468f-c2d2-49d5-a46f-02eb0b1f0dab ?w=450,border=true)
+{{/callout}}
 
 The Nuxeo Platform provides tools and APIs to import content:
 
@@ -169,28 +172,14 @@ May it be a file system binary store, an S3 binary store or an Azure Object stor
 
 ## Existing Import Tools
 
-### node.js Importer
-
-**Features**
-
-The [node.js importer](https://github.com/nuxeo-sandbox/nuxeo-node-importer) makes use of the REST API and provides you with additional services compared to the bare approach:
-
-- Multi-threading
-- Client-side browsing of a complete hierarchy of content (folders, subfolders and files)
-
-**Customization Language**
-
-JavaScript
-
-**Customization Logic**
-
-Fork and override a specific object implementation. It is quite easy to add a custom logic to start a workflow on the document at the same time, changing its lifecycle, or setting a custom ACL. A [sample fork with custom rules](https://github.com/nuxeo-sandbox/nuxeo-node-custom-importer) is provided on GitHub.
-
-**Limitations**
-
-No out-of-the-box format for metadata values specification. Also not recommended if import rate is the critical factor, since data transit over HTTP/S.
-
 ### Nuxeo Platform Importer
+
+The Nuxeo Platform Importer comes with several implementations:
+- **Nuxeo Bulk importer**, the generic mass document import addon (full, multi-threaded import from the server file system).
+- **Nuxeo Scan importer** (to create documents from XML files).
+- **Nuxeo Stream importer** (to create documents with a producer/consumer pattern logic, and uses the Log features provided by [Nuxeo Stream]({{{page space='nxdoc' page='nuxeo-stream'}}).
+
+#### Nuxeo Bulk Importer
 
 **Features**
 
@@ -208,7 +197,7 @@ The importer framework offers many customization possibilities. You can read the
 
 Files must be available on a file system mounted on the Nuxeo server.
 
-### Nuxeo Scan Importer
+#### Nuxeo Scan Importer
 
 **Features**
 
@@ -221,6 +210,33 @@ Java
 **Customization Logic**
 
 Scan Importer is configurable via XML extensions for the metadata mapping. The documentation provides links to [simple and advanced use cases]({{page page='scan-documents-importer'}})
+
+#### Nuxeo Stream Importer
+
+**Features**
+
+The [Nuxeo Stream Importer](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-platform-importer/nuxeo-importer-stream) defines a producer/consumer pattern and uses the Log features provided by Nuxeo Stream. The Log is used to perform mass import. It decouples the Extraction/Transformation from the Load (using the ETL terminology). The extraction and transformation is done by a document message producer with custom logic. This module comes with a random document and a random blob generator, that does the same job as the random importer of the `nuxeo-importer-core` module. The load into Nuxeo is done with a generic consumer.
+Automation operations are exposed to run producers and consumers.
+
+Two options are offered to perform the import:
+1. Two steps import: Generate and Import documents with blobs.
+1. Four steps import: Generate and Import blobs, then Generate and Import documents.
+
+{{#> callout type='info' heading='Recommended mechanism for big volumes'}}
+The Nuxeo Stream Importer is the recommended way of performing document imports in a Nuxeo repository as it brings fault tolerance, durability, immutability and ordering to a distributed system. Therefore, it provides failover: Any Nuxeo nodes can be restarted during the import, the import can be re-executed from the start, etc.
+{{/callout}}
+
+**Customization Language**
+
+Java
+
+**Customization Logic**
+
+The importer framework offers many customization possibilities. You can read the [Nuxeo Stream Importer README](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-platform-importer/nuxeo-importer-stream) to learn more.
+
+**Limitations**
+
+Files must be available on a file system mounted on the Nuxeo server.
 
 ### Nuxeo CSV Importer
 
@@ -243,3 +259,24 @@ You can straightly use the REST API and implement the importing logic you need f
 ### Using the Bare Java API
 
 You can use the CoreSession object in a server-side deployed custom Java component and implement the importing logic you need from there. We also provide a default [import/export format]({{page page='nuxeo-core-import-export-api'}}) for the repository with piping logic.
+
+### node.js Importer
+
+**Features**
+
+The [node.js importer](https://github.com/nuxeo-sandbox/nuxeo-node-importer) makes use of the REST API and provides you with additional services compared to the bare approach:
+
+- Multi-threading
+- Client-side browsing of a complete hierarchy of content (folders, subfolders and files)
+
+**Customization Language**
+
+JavaScript
+
+**Customization Logic**
+
+Fork and override a specific object implementation. It is quite easy to add a custom logic to start a workflow on the document at the same time, changing its lifecycle, or setting a custom ACL. A [sample fork with custom rules](https://github.com/nuxeo-sandbox/nuxeo-node-custom-importer) is provided on GitHub.
+
+**Limitations**
+
+No out-of-the-box format for metadata values specification. Also not recommended if import rate is the critical factor, since data transit over HTTP/S.
