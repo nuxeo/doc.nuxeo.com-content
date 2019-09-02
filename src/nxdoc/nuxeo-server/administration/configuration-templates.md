@@ -129,10 +129,19 @@ history:
 Nuxeo applications integrate a configuration templates system to ease configuration and maintenance of configuration files.
 Nuxeo comes with default templates which mainly provide database configurations, but the templates can be used for any configuration purpose.
 
+## Principals
+
+Nuxeo templates should be used to deploy specific configurations on your Nuxeo environments.
+- Default Nuxeo templates values shouldn't be directly edited: custom templates should be created if you need to update default values.
+- For production deployment, the user customizations should be stored outside the server filesystem hierarchy.
+- Common template file should be used if the configuration apply for all environments. Consequently, additional specific templates should be created for specific environment configuration.
+
 Properly using that template system ensures your customization of Nuxeo exclusively resides in your nuxeo.conf, custom templates and plug-in modules.
 For instance, users can create templates for development, pre-production, and production environments; each template will include a different set of XML contributions (users, LDAP integration, database used, ...).
 
-Templates are located in the "templates" directory (`$NUXEO_HOME/templates`). To enable a configuration, such as database configuration, you just need to indicate which template to use in the Admin > Setup tab or in the [nuxeo.conf configuration file]({{page page='configuration-parameters-index-nuxeoconf'}}).
+Templates are located in the "templates" directory (`$NUXEO_HOME/templates`). To enable a configuration, such as database configuration, you just need to indicate which template to use in the [nuxeo.conf configuration file]({{page page='configuration-parameters-index-nuxeoconf'}}) or in the Admin > Setup tab if JSF UI addon is deployed.
+
+## Default Nuxeo Templates
 
 Here are the templates provided by default:
 
