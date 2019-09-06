@@ -92,6 +92,85 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 13
+
+### Performance Improvement to Load User Entities
+
+It's possible to configure the Nuxeo Platform so that UserManagerResolver will marshall User entities without fetching their references (by default, only groups are references). User entities are mainly used by the ACL enricher and metadata whose type is User. Enabling this behavior will improve the duration to load the Permissions tab and Content views which display the creator or the contributors (or custom User metadata).
+
+To enable this behavior, use the following code:
+```
+  <require>org.nuxeo.ecm.platform.usermanager.properties</require>
+  <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+    <property name="nuxeo.usermanager.resolver.fetchReferences">false</property>
+  </extension>
+```
+
+### Global Disabling of Facets
+
+To disable a facet, for instance Versionable, use a contribution like:
+```
+  <require>org.nuxeo.ecm.core.CoreExtensions</require>
+  <extension target="org.nuxeo.ecm.core.schema.TypeService" point="doctype">
+    <facet name="Versionable" enabled="false" />
+  </extension>
+```
+The `<require>` line must reflect the actual component that declares the facet that one wants to disable. Use [Platform Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202019-10.10/viewExtensionPoint/org.nuxeo.ecm.core.schema.TypeService--doctype) to find the component which declares the facet you want to disable.
+
+## Hotfix 08
+
+### Underscore Character in LDAP Queries
+
+The `UserManager.searchUsers(pattern)` and` UserManager.searchGroups(pattern)` APIs can now interpret the pattern as a generic string with arbitrary characters that will be matched exactly (depending on the directory substring match style).
+
+The compatibility with previous versions is enabled by default, and a pattern with % and _ is interpreted as LIKE escapes.
+
+To disable the compatibility mode and allow the underscore character, use the following contribution:
+```
+<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+  <property name="nuxeo.usermanager.search.escape.compat">false</property>
+</extension>
+```
+
+## Secured properties
+
+The following dublincore properties are now secured from edition:
+* dc:created
+* dc:modified
+* dc:creator
+* dc:lastContributor
+* dc:contributors
+
+This means you have to be administrator to edit these properties. In tests, you can do the following:
+```
+Framework.doPrivileged(() -> doc.setPropertyValue("dc:creator", "john"));
+```
+or:
+```
+CoreInstance.doPrivileged("default", session -> {
+    DocumentModel doc = session.createDocumentModel("/", "file", "File");
+    doc.setPropertyValue("dc:creator", "john");
+    return session.createDocument(doc);
+});
+```
+In order to declare a property secured you can contribute the following:
+```
+<component name="my.component.name" version="1.0">
+  <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+    <property schema="YOUR_SCHEMA" name="PROP_NAME" secured="true" />
+  </extension>
+</component>
+```
+You can also relax the constraint on a secured property, for example dc:creator with:
+```
+<component name="my.component.name" version="1.0">
+  <require>org.nuxeo.ecm.core.CoreExtensions</require>
+  <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+    <property schema="dublincore" name="created" secured="false" />
+  </extension>
+</component>
+```
+
 ## Hotfix 06
 
 ### Large ACLs with SQL Server
