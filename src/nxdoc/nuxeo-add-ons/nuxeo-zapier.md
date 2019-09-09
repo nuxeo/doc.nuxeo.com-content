@@ -30,29 +30,19 @@ The Nuxeo Zapier integration allows end-user to:
 
 ### From Command Line
 
+First, if it is not done yet, register to Nuxeo Online Services (typicaly, use the `nuxeoctl` command line, `nuxeoctl register` and fill the login and password (or token)
+
 **Linux/Mac**:
 
-1. ```
-    NUXEO_HOME/bin/nuxeoctl mp-init
-   ```
-1. ```
+```
     NUXEO_HOME/bin/nuxeoctl mp-install nuxeo-zapier
-   ```
-1. ```
-    NUXEO_HOME/bin/nuxeoctl start
-   ```
+```
 
 **Windows**:
 
-1. ```
-    NUXEO_HOME\bin\nuxeoctl.bat mp-init
-   ```
-1. ```
+```
     NUXEO_HOME\bin\nuxeoctl.bat mp-install nuxeo-zapier
-   ```
-1. ```
-    NUXEO_HOME\bin\nuxeoctl.bat start
-   ```
+```
 
 ### From the Marketplace
 
@@ -62,17 +52,21 @@ Install [the Nuxeo Zapier Integration Package](https://connect.nuxeo.com/nuxeo/s
 
 ### Nuxeo Setup
 
-1. From your browser, go to `http://localhost:8080/nuxeo`
+1. Check nuxeo-jsf-ui is installed (UI to setup cloud consumers is not yet moved to WebUI), install it if needed. This is done as desribed above for `nuxeo-zapier`: `NUXEO_HOME/bin/nuxeoctl mp-install nuxeo-jsf-ui`
 
-1. Follow Nuxeo Wizard and start your server
+2. Start your server, login as Administrator
 
-1. Check Nuxeo correctly re-started `http://localhost:8080/nuxeo`
-  1. username: Administrator
-  1. password: Administrator
+3. Go to JSF using the url `{server:port}/nuxeo/jsf, and gopt to  **ADMIN** > **Cloud Services** > **Consumers**
 
-1. Go to **Administration** > **Cloud Services** > **Providers**
+3. Click on the **Add** button at the top right and fill in the popup window to configure **nuxeo-zapier**
 
-1. Click on the **Add** button at the top right and fill in the popup window to configure **nuxeo-zapier** entry secret field and set a custom one.
+* Name as you want
+* Client ID: uxeo-zapier
+* Client Secret: Add your custom value (to ve reused Zapier's side)
+* Redirect URIs: Enter the URL provided by Zapier when configuring you _Zap_ (see [Zapier documentaiton](https://platform.zapier.com/docs/oauth)).
+  * Typcally: https://zapier.com/dashboard/auth/oauth/return/App{YOUR_APP_ID}CLIAPI/
+* Check the "Auto-grant" box
+* Check the "Activated" box
 
 ## Usage
 
