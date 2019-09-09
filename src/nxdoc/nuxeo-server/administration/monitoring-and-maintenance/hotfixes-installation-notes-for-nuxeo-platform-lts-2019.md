@@ -96,7 +96,7 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ### Performance Improvement to Load User Entities
 
-It's possible to configure the Nuxeo Platform so that UserManagerResolver will marshall User entities without fetching their references (by default, only groups are references). User entities are mainly used by the ACL enricher and metadata whose type is User. Enabling this behavior will improve the duration to load the Permissions tab and Content views which display the creator or the contributors (or custom User metadata).
+It's possible to configure the Nuxeo Platform so that `UserManagerResolver` will marshal User entities without fetching their references (by default, only groups are referenced). User entities are mainly used by the ACL enricher and metadata whose type is User. Enabling this behavior will improve the duration to load the Permissions tab and Content views which display the creator or the contributors (or custom User metadata).
 
 To enable this behavior, use the following code:
 ```
@@ -108,7 +108,7 @@ To enable this behavior, use the following code:
 
 ### Global Disabling of Facets
 
-To disable a facet, for instance Versionable, use a contribution like:
+To disable a facet, for instance `Versionable`, use a contribution like:
 ```
   <require>org.nuxeo.ecm.core.CoreExtensions</require>
   <extension target="org.nuxeo.ecm.core.schema.TypeService" point="doctype">
