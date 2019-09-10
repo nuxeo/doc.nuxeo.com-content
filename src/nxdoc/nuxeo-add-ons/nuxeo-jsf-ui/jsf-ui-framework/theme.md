@@ -482,7 +482,7 @@ The [Workspace page](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-
 
 *   This template relies on another generic template, [`/pages/basic_page.xhtml`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/pages/basic_page.xhtml) , that defines the global HTML page, and inserts a few templating zones (like `basic body`).
 *   The current page and flavor are retrieved thanks to the themeActions Seam component logics, which rely on _negotiations_ (see below). The corresponding resources will be included in the page head thanks to the [`/incl/page_head.xhtml`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-jsf/nuxeo-platform-webapp-base/src/main/resources/web/nuxeo.war/incl/page_head.xhtml) template.
-*   The template at [`/incl/includes.xhtml`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/incl/includes.xhtml) is also inserted in the page body, and is useful for Drag&Drop features.
+*   The template at [`/incl/includes.xhtml`](https://github.com/nuxeo-archives/nuxeo-dm/blob/master/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/incl/includes.xhtml) is also inserted in the page body, and is useful for Drag&Drop features.
 
 ### Popup Page Example
 
@@ -813,7 +813,7 @@ Here is an example of the default flavor:
     ```
 
 *   `<label>` and `<palettePreview>` are used to display the flavor in the Theme local configuration.
-*   `<logo>` is used to display the current logo associated to current flavor thanks to the template at [`/incl/nuxeo_logo.xhtml`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/incl/nuxeo_logo.xhtml) (included in Nuxeo default header).
+*   `<logo>` is used to display the current logo associated to current flavor thanks to the template at [`/incl/nuxeo_logo.xhtml`](https://github.com/nuxeo/nuxeo/blob/10.10/nuxeo-dm/nuxeo-platform-webapp/src/main/resources/web/nuxeo.war/incl/nuxeo_logo.xhtml) (included in Nuxeo default header).
 
 SCSS resources referencing variables will need to declare the Sass&nbsp;`processor`&nbsp;to be triggered:
 

@@ -97,6 +97,6 @@ Since 5.8, the simple search box is shown thanks to an action. To customize this
 
 ## Suggestions
 
-It takes over the simple search by disabling the action showing the simple search box, and adding the suggester one. See [https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-platform-suggestbox/nuxeo-platform-suggestbox-jsf/src/main/resources/OSGI-INF/suggestbox-actions-contrib.xml](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-platform-suggestbox/nuxeo-platform-suggestbox-jsf/src/main/resources/OSGI-INF/suggestbox-actions-contrib.xml).
+It takes over the simple search by disabling the action showing the simple search box, and adding the suggester one. See [https://github.com/nuxeo/nuxeo-jsf-ui/blob/master/code/nuxeo-platform-suggestbox-jsf/src/main/resources/OSGI-INF/suggestbox-actions-contrib.xml](https://github.com/nuxeo/nuxeo-jsf-ui/blob/master/code/nuxeo-platform-suggestbox-jsf/src/main/resources/OSGI-INF/suggestbox-actions-contrib.xml).
 
 Suggesters can be contributed to this search box. See the contribution at [http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.suggestbox.core.defaultSuggesters--suggesters](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.suggestbox.core.defaultSuggesters--suggesters).

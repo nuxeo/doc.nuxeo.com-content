@@ -28,11 +28,11 @@ tree_item_index: 2550
 
 Related files:
 
-- `Enricher`: [SampleDocumentEnricher.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/src/main/java/org/nuxeo/sample/SampleDocumentEnricher.java)
+- `Enricher`: [SampleDocumentEnricher.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/main/java/org/nuxeo/sample/SampleDocumentEnricher.java)
 
-- `Contribution`: [sample-document-enricher-contrib.xml](https://github.com/nuxeo/nuxeo-sample-project/blob/master/src/main/resources/OSGI-INF/sample-document-enricher-contrib.xml)
+- `Contribution`: [sample-document-enricher-contrib.xml](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/main/resources/OSGI-INF/sample-document-enricher-contrib.xml)
 
-- `Unit Test`: [SampleDocumentEnricherTest.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/src/test/java/org/nuxeo/sample/SampleDocumentEnricherTest.java)
+- `Unit Test`: [SampleDocumentEnricherTest.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/test/java/org/nuxeo/sample/SampleDocumentEnricherTest.java)
 
 ### Asynchronous Listener
 
@@ -40,11 +40,11 @@ Related files:
 
 Related files:
 
-- `Listener`: [SampleAsyncListener.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/src/main/java/org/nuxeo/sample/SampleAsyncListener.java)
+- `Listener`: [SampleAsyncListener.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/main/java/org/nuxeo/sample/SampleAsyncListener.java)
 
-- `Contribution`: [sample-async-listener-contrib.xml](https://github.com/nuxeo/nuxeo-sample-project/blob/master/src/main/resources/OSGI-INF/sample-async-listener-listener-contrib.xml)
+- `Contribution`: [sample-async-listener-contrib.xml](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/main/resources/OSGI-INF/sample-async-listener-listener-contrib.xml)
 
-- `Unit Test`: [TestSampleAsyncListener.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/src/test/java/org/nuxeo/sample/TestSampleAsyncListener.java)
+- `Unit Test`: [TestSampleAsyncListener.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/test/java/org/nuxeo/sample/TestSampleAsyncListener.java)
 
 ### Synchronous Listener
 
@@ -54,9 +54,9 @@ Related files:
 
 - `Listener`: [SampleSyncListener.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/main/java/org/nuxeo/sample/SampleSyncListener.java)
 
-- `Contribution`: [sample-sync-listener-contrib.xml](https://github.com/nuxeo/nuxeo-sample-project/blob/master/src/main/resources/OSGI-INF/sample-sync-listener-listener-contrib.xml)
+- `Contribution`: [sample-sync-listener-contrib.xml](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/main/resources/OSGI-INF/sample-sync-listener-listener-contrib.xml)
 
-- `Unit Test`: [TestSampleSyncListener.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/src/test/java/org/nuxeo/sample/TestSampleSyncListener.java)
+- `Unit Test`: [TestSampleSyncListener.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/test/java/org/nuxeo/sample/TestSampleSyncListener.java)
 
 ### Operation
 
@@ -64,9 +64,9 @@ Related files:
 
 Related files:
 
-- `Operation`: [SampleOperation.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/src/main/java/org/nuxeo/sample/SampleOperation.java)
+- `Operation`: [SampleOperation.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/main/java/org/nuxeo/sample/SampleOperation.java)
 
-- `Contribution`: [sample-operation-contrib.xml](https://github.com/nuxeo/nuxeo-sample-project/blob/master/src/main/resources/OSGI-INF/sample-operation-operation-contrib.xml)
+- `Contribution`: [sample-operation-contrib.xml](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/main/resources/OSGI-INF/sample-operation-operation-contrib.xml)
 
 - `Unit Test`: [TestSampleOperation.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/test/java/org/nuxeo/sample/TestSampleOperation.java)
 
@@ -78,11 +78,11 @@ Related files:
 
 - `Service Interface`: [SampleService.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/main/java/org/nuxeo/sample/SampleService.java)
 
-- `Service Implementation`: [SampleServiceImpl.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/src/main/java/org/nuxeo/sample/SampleServiceImpl.java)
+- `Service Implementation`: [SampleServiceImpl.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/main/java/org/nuxeo/sample/SampleServiceImpl.java)
 
-- `Contribution`: [sample-service.xml](https://github.com/nuxeo/nuxeo-sample-project/blob/master/src/main/resources/OSGI-INF/sample-service-service.xml)
+- `Contribution`: [sample-service.xml](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/main/resources/OSGI-INF/sample-service-service.xml)
 
-- `Unit Test`: [TestSampleService.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/src/test/java/org/nuxeo/sample/TestSampleService.java)
+- `Unit Test`: [TestSampleService.java](https://github.com/nuxeo/nuxeo-sample-project/blob/master/nuxeo-sample/src/test/java/org/nuxeo/sample/TestSampleService.java)
 
 ## To Go Further
 

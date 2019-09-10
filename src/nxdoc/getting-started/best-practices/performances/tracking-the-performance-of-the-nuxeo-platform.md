@@ -558,7 +558,7 @@ Here are the main advantages:
 
     This makes it easy to create new scenarios.
 
-Also to stress heavily the REST API [we use Gatling](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution/nuxeo-jsf-ui-gatling-tests/).
+Also to stress heavily the REST API [we use Gatling](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution/nuxeo-server-gatling-tests).
 
 We also use Nuxeo Platform addon tools like [`nuxeo-platform-importer`](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-platform-importer/README.md) to populate the document base.
 

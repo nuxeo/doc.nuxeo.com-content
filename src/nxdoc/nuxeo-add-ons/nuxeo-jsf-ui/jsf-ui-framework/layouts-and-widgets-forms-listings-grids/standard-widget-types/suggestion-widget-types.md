@@ -332,7 +332,7 @@ This widget type lets the user select an entry among a list of users or groups b
 
 _**Picture 2:** multipleUsersSuggestion_
 
-Previously based on RichFaces suggestion box in Nuxeo Platform 5.6 and earlier versions, these widgets now use select2 to present user suggestions returned by the [`SuggestUserEntries`](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-platform-ui-select2/src/main/java/org/nuxeo/ecm/platform/ui/select2/automation/SuggestUserEntries.java) operation. All previous widget properties are still available.
+Previously based on RichFaces suggestion box in Nuxeo Platform 5.6 and earlier versions, these widgets now use select2 to present user suggestions returned by the [`SuggestUserEntries`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/core/operations/users/SuggestUserEntries.java) operation. All previous widget properties are still available.
 
 However, here are noticeable new properties:
 
@@ -356,7 +356,7 @@ This widget type lets the user select an entry among a list of existing document
 
 _**{{> anchor 'picture3'}}Picture 3:** singleDocumentSuggestion_
 
-Previously based on RichFaces suggestion box for Nuxeo Platform 5.6 and earlier versions, these suggestion widgets now use select2 to present document suggestions returned by the  [`DocumentPageProviderOperation`](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/core/operations/services/DocumentPageProviderOperation.java) operation.
+Previously based on RichFaces suggestion box for Nuxeo Platform 5.6 and earlier versions, these suggestion widgets now use select2 to present document suggestions returned by the  [`DocumentPageProviderOperation`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/core/operations/services/DocumentPageProviderOperation.java) operation.
 
 ##### Modifying the Way of Suggesting Documents
 
@@ -378,7 +378,7 @@ Finally, it is also possible to tell these widgets to use another page provider 
 
 ##### Which Document Properties Are Accessible?
 
-As explained above, the [DocumentPageProviderOperation](https://github.com/nuxeo/nuxeo-features/blob/master/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/core/operations/services/DocumentPageProviderOperation.java) will return documents serialized as JSON objects. By default, the properties of the `dublincore` and `common` schemas are serialized. However, you can extend the list of schemas that must be returned in the document JSON serialization with the `documentSchemas` widget property:
+As explained above, the [DocumentPageProviderOperation](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/core/operations/services/DocumentPageProviderOperation.java) will return documents serialized as JSON objects. By default, the properties of the `dublincore` and `common` schemas are serialized. However, you can extend the list of schemas that must be returned in the document JSON serialization with the `documentSchemas` widget property:
 
 ```xml
 <property name="documentSchemas">dublincore,common</property>
@@ -501,6 +501,6 @@ Finally you can specify the `width` property, it accepts pixel as well as percen
 
 ## {{> anchor 'internationalization'}}Internationalization
 
-Select2 widgets localization is provided by the select2 library and the control labels are therefore not translated in `messages_xx.properties` files but directly in [select2 resources files](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-platform-ui-select2/src/main/resources/META-INF/resources/org.nuxeo.select2). Many locales are provided.
+Select2 widgets localization is provided by the select2 library and the control labels are therefore not translated in `messages_xx.properties` files but directly in [select2 resources files](https://github.com/nuxeo/nuxeo-jsf-ui/tree/master/code/nuxeo-platform-ui-select2/src/main/resources/META-INF/resources/org.nuxeo.select2). Many locales are provided.
 
 However, if you're a missing a locale, you must create your own `select2_locale_xx.js` file and add it to your own bundle. This file must be deployed in `${NUXEO_HOME}/nxserver/nuxeo.war/scripts/select2/` directory.
