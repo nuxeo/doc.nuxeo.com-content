@@ -284,7 +284,17 @@ WARN
 
 `Session invoked in a container without a transaction active: turn on debug logs for more information about the faulty call.`
 
-</td><td colspan="1">See [NXP-7170](https://jira.nuxeo.com/browse/NXP-7170) upgrade notes.</td></tr></tbody></table></div>
+</td><td colspan="1">See [NXP-7170](https://jira.nuxeo.com/browse/NXP-7170) upgrade notes.</td></tr><tr><td colspan="1">
+
+WARN
+
+</td><td colspan="1">
+
+`[PostCommitEventExecutor] Running post commit event listeners: [EventListenerDescriptor [name=myPostCommitListener, className=com.company.MyPostCommitEventListener, isPostCommit=true, isAsync=false]]. Post commit event listener execution will soon be deprecated, see NXP-27986. As explained in NXP-26911, please update your post commit event listener contributions to make the listeners asynchronous with <listener async="true"...>.`
+
+`You can disable this warning by following the instructions provided in NXP-26911.`
+
+</td><td colspan="1">See [NXP-26911](https://jira.nuxeo.com/browse/NXP-26911) upgrade notes.</td></tr></tbody></table></div>
 
 &nbsp;
 
