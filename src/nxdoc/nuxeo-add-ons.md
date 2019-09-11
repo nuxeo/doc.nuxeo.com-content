@@ -473,7 +473,7 @@ Nuxeo Federation Framework<br/>
 Registered access
 </td>
 <td colspan="1">
-[Documentation]({{page page='nuxeo-simflofy-connector'}})
+[Documentation]({{page page='nuxeo-federation-framework'}})
 </td>
 <td colspan="1">
 [Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-simflofy)
