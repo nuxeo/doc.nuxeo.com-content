@@ -48,10 +48,20 @@ You can do the configuration using the `nuxeo.conf` properties described below.
 In `nuxeo.conf`, add the following lines:
 
 ```
+# GCP Bucket ID
 nuxeo.gcp.storage.bucket=
+
+# GCP Bucket prefix
 nuxeo.gcp.storage.bucket_prefix=
+
+# GCP Project ID
 nuxeo.gcp.project=
+
+# JSON GCP Credentials
 nuxeo.gcp.credentials=
+    - absolute JSON GCP credentials file path
+    - file name of credentials in `nxserver/config`
+    - if not set Nuxeo will look into 'gcp-credentials.json' file by default (located in `nxserver/config`)
 ```
 
 If you installed the bundle JAR manually instead of using the Nuxeo Package you will also need:
