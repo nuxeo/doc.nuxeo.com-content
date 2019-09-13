@@ -257,11 +257,12 @@ Nuxeo Automation Scripting allows you to write JavaScript code to use Automation
 
     ```js
     /*Automation operation to create a new version*/
-    input = Document.CreateVersion(input,{
-	/*required:false - type: string*/
-	'increment': 'MAJOR',
-	/*required:false - type: boolean*/
-	'saveDocument': 'true'
+    input = Document.CreateVersion(input, {
+	   /*required:false - type: string*/
+	    'increment': 'MAJOR',
+	     /*required:false - type: boolean*/
+	    'saveDocument': 'true'
+        });
     ```
 
 *   Using `for/if/print` or any other JavaScript feature
@@ -326,26 +327,22 @@ function run(input, params) {
 
  Console.log("Starting property inheritance");
 
-  var parent = Document.GetParent(
-    input, {
+  var parent = Document.GetParent(input, {
       /*required:false - type: string*/
       'type': 'product'
-    }
+      }
   );
 
-  if(parent){
-    input = Document.CopySchema(
-      input, {
+  if (parent) {
+        input = Document.CopySchema(input, {
         /*required:true - type: string*/
         'schema': 'product_catalog',
         /*required:false - type: string*/
         'sourceId': parent.id
-      }
-    );
-
-    Console.log("product_catalog schema copied");
-
-}
+        });
+        Console.log("product_catalog schema copied");
+    }
+  }
 ```
 
 ## Use Cases
@@ -430,10 +427,7 @@ function run(input, params) {
   }
   else {
     Console.log("Now greater than release date");
-      }
-    );
   }
-}
 ```
 
 ### Event Context
@@ -442,11 +436,12 @@ It is possible to access to the event context. This can be really usefull when t
 
 
 ```js
-  function run(input, params) {
+function run(input, params) {
     /* Use parentPath for Empty document created event, and parentRef for About to create event */
     var parentPath = ctx.Event.getProperty("parentPath");
     var parentDoc = Repository.GetDocument(null, {"value": parentPath});
     ...
+}
 ```
 
 It can be also interesting to use it when an automation chain/scripting is common to several event handlers: it helps to identify which event is called for example.
@@ -468,14 +463,12 @@ function run(input, params) {
 	var nowDate = new Date().toISOString();
 	debugger;
 	Console.log(nowDate);
-	  }
-	);
 }
 ```
 
 ### JavaScript Logging
 
-When printing values as follow, you can use the helper "Console" to write logs within `NUXEO_HOME/log/server.log`:
+You can use the helper "Console" to write logs within `NUXEO_HOME/log/server.log` with different log levels:
 
 ```js
 Console.info("Informations");
@@ -564,7 +557,7 @@ print(file);
 
 ### Java Objects in Automation Scripting
 
-It is possible to allow specific Java classes to be used via Automation Scripting:
+It is possible to allow specific Java classes to be used via Automation Scripting. You can find it in [Nuxeo Explorer](http://explorer.nuxeo.com/nuxeo/site/distribution). Here are some examples:
 
 - `java.util.ArrayList`
 - `java.util.Arrays`
@@ -575,7 +568,15 @@ It is possible to allow specific Java classes to be used via Automation Scriptin
 - `org.nuxeo.ecm.core.api.impl.blob.StringBlob`
 - `org.nuxeo.ecm.core.api.impl.blob.JSONBlob`
 
-Other classes can be added and previously-allowed ones denied, through:
+The default contribution now allows scripting code like:
+
+```js
+function run(input, params) {
+    var uuid = java.util.UUID.randomUUID().toString();
+    return org.nuxeo.ecm.core.api.Blobs.createJSONBlob("{'uuid': \"" + uuid + "\"}");
+}
+```
+One can use `<deny>*</deny>` to disallow all previously-allowed classes. Other classes can be added and previously-allowed ones denied, through:
 
 ```
   <require>org.nuxeo.automation.scripting.classfilter</require>
@@ -586,17 +587,6 @@ Other classes can be added and previously-allowed ones denied, through:
       <deny>org.nuxeo.runtime.transaction.TransactionHelper</deny>
     </classFilter>
   </extension>
-```
-
-One can use `<deny>*</deny>` to disallow all previously-allowed classes.
-
-The default contribution now allows scripting code like:
-
-```js
-function run(input, params) {
-    var uuid = java.util.UUID.randomUUID().toString();
-    return org.nuxeo.ecm.core.api.Blobs.createJSONBlob("{'uuid': \"" + uuid + "\"}");
-}
 ```
 
 ### Contributing Automation Scripting Operations
