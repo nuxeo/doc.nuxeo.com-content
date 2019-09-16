@@ -3,14 +3,14 @@ title: Configuration Templates
 description: Nuxeo applications integrate a configuration templates system to ease configuration and maintenance of configuration files.
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2019-08-16'
     status: ok
 labels:
-    - content-review-lts2016
     - templates
     - configuration
     - fdavid
     - lts2017-ok
+    - lts2019-ok
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
@@ -124,45 +124,44 @@ history:
         date: '2011-07-27 10:30'
         message: ''
         version: '1'
-
 ---
+
 Nuxeo applications integrate a configuration templates system to ease configuration and maintenance of configuration files.
 Nuxeo comes with default templates which mainly provide database configurations, but the templates can be used for any configuration purpose.
 
 ## Principles
 
-Nuxeo templates should be used to deploy specific configurations on your Nuxeo environments. Typically, it deals with configuration not exposed in Nuxeo Studio or through the Nuxeo extension system like an Elasticsearch mapping.
+Nuxeo templates should be used to deploy specific configurations on your Nuxeo environments. Typically, it deals with configurations not exposed in Nuxeo Studio or through the Nuxeo extension system like an Elasticsearch mapping.
 
 - Default Nuxeo templates values shouldn't be directly edited: custom templates should be created if you need to update default values.
 - For production deployment, the user customizations should be stored outside the server filesystem hierarchy.
-- Common template file should be used if the configuration apply for all environments. Consequently, additional specific templates should be created for specific environment configuration.
+- The common template file should be used if the configuration applies for all environments. Consequently, additional specific templates should be created for specific environment configuration.
 
-Properly using that template system ensures your customization of Nuxeo exclusively resides in your nuxeo.conf, custom templates and plug-in modules.
+Properly using that template system ensures your customization of Nuxeo exclusively resides in your `nuxeo.conf`, custom templates and plug-in modules.
 
 ## Use Cases
 
-Nuxeo templates allow you to provide a specific config layer to any Nuxeo environment in `nuxeo.conf`:
+Nuxeo templates allow you to provide a specific configuration layer to any Nuxeo environment in `nuxeo.conf`:
 
 - `nuxeo.templates=default,env-one`
 - `nuxeo.templates=default,env-two`
 - `nuxeo.templates=default,env-one,env-two`
 
-Consequently, It is possible to easily enable one layer on a specific Nuxeo instance. In theory, all environments can share the configuration files and then update only the value of templates setting in the local nuxeo.conf.
+It is possible to enable one layer on a specific Nuxeo instance easily. In theory, all environments can share the configuration files and then update only the value of templates setting in the local `nuxeo.conf`.
 
 For instance, users can create templates for development, pre-production, and production environments; each template will include a different set of XML contributions:
-- **Users and Group**: To manage users and group authentication against different authentication systems.
+- **Users and Group**: To manage user and group authentication against different authentication systems.
 - **Database**: To store connection properties for a specific database environment.
-- **Specific needs**: To add any custom configuration, as you can add custom properties to the nuxeo.conf file.
+- **Specific needs**: To add any custom configuration, as you can add custom properties to the `nuxeo.conf` file.
 - ...
 
-Templates are located in the "templates" directory (`$NUXEO_HOME/templates`). To enable a configuration, such as database configuration, you just need to indicate which template to use in the [nuxeo.conf configuration file]({{page page='configuration-parameters-index-nuxeoconf'}}) or in the Admin > Setup tab if JSF UI addon is deployed.
+Templates are located in the "templates" directory (`$NUXEO_HOME/templates`). To enable a configuration, such as database configuration, you need to indicate which template to use in the [`nuxeo.conf` configuration file]({{page page='configuration-parameters-index-nuxeoconf'}}).
 
 ## Default Nuxeo Templates
 
 Here are the templates provided by default:
 
 {{! multiexcerpt name='default-configuration-templates'}}
-
 *   `common`: Common template used by other templates
 *   [`default`]({{page page='connecting-nuxeo-to-the-database'}}): default Nuxeo configuration template for test purpose
 *   [`https`]({{page page='http-and-https-reverse-proxy-configuration'}}): (not recommended) Template to make the server listen to port 443 (HTTPS)
@@ -178,7 +177,6 @@ Here are the templates provided by default:
 *   [`oracle`]({{page page='oracle'}}): Oracle configuration template
 *   `oracle-quartz-cluster`;
 *   `custom`: Sample custom templates. Of course, this template is empty by default. One should copy it outside `$NUXEO_HOME` and adapt to their needs. See related section below.
-
 {{! /multiexcerpt}}
 
 {{#> callout type='tip' }}
@@ -190,20 +188,20 @@ For production environment, it is recommended to define your own custom template
 A server is considered as already configured when it has a "config" directory.
 When the "config" directory doesn't exist, templates will be used to generate all configuration files (config and datasources).
 
-The template files contain defined parameters such as ${sample.parameter}.
+The template files contain defined parameters such as `${sample.parameter}`.
 
 Values for parameters replacement are calculated this way:
 
-*   If nuxeo.conf does not define `nuxeo.templates`, then `nuxeo.templates` equals "default" (the deprecated parameter `nuxeo.template` is still read for backward compatibility).
-*   The `${nuxeo.templates}` value is used for determining the chosen template(s).
-*   For each value "nuxeo.template" of `${nuxeo.templates}` (comma separated values, relative to "templates/" directory or absolute path), the corresponding file `templates/${nuxeo.template}/nuxeo.defaults` is read for defining new default values and maybe including other templates which are recursively parsed.
-*   The file `templates/nuxeo.defaults` is read for default values not already defined.
-*   The file `nuxeo.conf` is read for custom values (overwriting default values).
+- If nuxeo.conf does not define `nuxeo.templates`, then `nuxeo.templates` equals "default" (the deprecated parameter `nuxeo.template` is still read for backward compatibility).
+- The `${nuxeo.templates}` value is used for determining the chosen template(s).
+- For each value "nuxeo.template" of `${nuxeo.templates}` (comma separated values, relative to "templates/" directory or absolute path), the corresponding file `templates/${nuxeo.template}/nuxeo.defaults` is read for defining new default values and maybe including other templates which are recursively parsed.
+- The file `templates/nuxeo.defaults` is read for default values not already defined.
+- The file `nuxeo.conf` is read for custom values (overwriting default values).
 
 Configuration files are then generated by this way:
 
-*   For each comma separated value of `nuxeo.templates` and `nuxeo.template.includes`, the files in the referenced templates are copied using the previously calculated values for replacing parameters.
-*   Every included template will potentially overwrite its precedents.
+- For each comma separated value of `nuxeo.templates` and `nuxeo.template.includes`, the files in the referenced templates are copied using the previously calculated values for replacing parameters.
+- Every included template will potentially overwrite its precedents.
 
 You may want the variable to be resolved at runtime instead. In that case you can escape the variable in the configuration file this way: `$${variable}` instead of `${variable}`.
 
