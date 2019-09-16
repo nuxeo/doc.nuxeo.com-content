@@ -75,10 +75,14 @@ Here are some important properties:
   | --- | ---: |  --- |
   | `acks` | `1` | The number of acknowledgments the producer requires the leader to have received before considering a request complete. |
   | `compression.type` | `none` | Valid values are none, gzip, snappy, or lz4. Compression is of full batches of data, so the efficacy of batching will also impact the compression ratio (more batching means better compression). |
-  | `default.replication.factor` | `1` | Not a Kafka option, used by the module to set the topic replication factor when creating new topic. |
+  | `default.replication.factor` | `1` | Not a Kafka option, used by Nuxeo to set the topic replication factor when creating new topic. |
 
+{{#> callout type='warning' }}
+Make sure that you set properly the `default.replication.factor`, the default value is `1` which means NO replication.
+With replication factor N, Kafka will tolerate up to N-1 server failures without losing record.
+For instance if you have 3 brokers in your cluster a replication factor of 2 will tolerate a server failure.{{/callout}}
 
- Please refer to Kafka document about the [consumer and producer options](https://kafka.apache.org/documentation#configuration) for more information.
+Please refer to Kafka document about the [consumer and producer options](https://kafka.apache.org/documentation#configuration) and [replication](https://kafka.apache.org/documentation/#replication) for more information.
  
  ## {{> anchor 'no-redis'}}"No Redis" Nuxeo cluster
 
