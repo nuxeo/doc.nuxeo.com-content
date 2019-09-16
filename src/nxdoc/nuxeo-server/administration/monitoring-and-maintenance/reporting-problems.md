@@ -192,11 +192,11 @@ You can use GUI tools like Java Mission Control or VisualVM to introspect these 
 
 ```
 # download jmxterm
-wget http://sourceforge.net/projects/cyclops-group/files/jmxterm/1.0-alpha-4/jmxterm-1.0-alpha-4-uber.jar/download -O /tmp/jmxterm-1.0-alpha-4-uber.jar
+wget https://github.com/jiaqi/jmxterm/releases/download/v1.0.1/jmxterm-1.0.1-uber.jar -O /tmp/jmxterm-1.0.1-uber.jar
 # list metrics beans and create a script
-echo -e "domain metrics\nbeans" | java -jar /tmp/jmxterm-1.0-alpha-4-uber.jar -l localhost:1089 -n | sed -e "s,^,get -b ,g" -e "s,$, \*,g" > /tmp/metrics-script.txt
+echo -e "domain metrics\nbeans" | java -jar /tmp/jmxterm-1.0.1-uber.jar -l localhost:1089 -n | sed -e "s,^,get -b ,g" -e "s,$, \*,g" > /tmp/metrics-script.txt
 # get metrics info
-(date +'%Y-%m-%d %H:%M:%S:%3N'; java -jar /tmp/jmxterm-1.0-alpha-4-uber.jar -l localhost:1089 -n -i /tmp/metrics-script.txt)  > /tmp/metrics.txt 2>&1
+(date +'%Y-%m-%d %H:%M:%S:%3N'; java -jar /tmp/jmxterm-1.0.1-uber.jar -l localhost:1089 -n -i /tmp/metrics-script.txt)  > /tmp/metrics.txt 2>&1
 
 ```
 
