@@ -121,7 +121,7 @@ Make sure that you set properly the `default.replication.factor`, the default va
 With replication factor N, Kafka will tolerate up to N-1 server failures without losing record.
 For instance if you have 3 brokers in your cluster a replication factor of 2 will tolerate a server failure.{{/callout}}
 
-Please refer to Kafka document about the [consumer and producer options](https://kafka.apache.org/documentation#configuration) and [replication](https://kafka.apache.org/documentation/#replication) for more information.
+Please refer to the Kafka documentation about the [consumer and producer options](https://kafka.apache.org/documentation#configuration) and [replication](https://kafka.apache.org/documentation/#replication) for more information.
 
 
 When Kafka is used by the PubSub Provider, the **topic retention can be reduced to few hours** because PubSub is used to send instant messages, this can be done at the Kafka level using the following command:
