@@ -134,56 +134,56 @@ There can be several strategies to create documents:
 
 **Use the REST API**
 
-- **Pros**: The simplest strategy. Can be done remotely as long as there is an HTTP access.
-- **Cons**: The less performant, although proven rates of thousands of documents per seconds can be reached
+- **Pros**: The most straightforward strategy. Can be done remotely as long as there is an HTTP access.
+- **Cons**: The less performant, although proven rates of thousands of documents per seconds can be reached.
 
 **Use the Java API server-side**
 
-- **Pros**: Transactional, multi-theaded and highly performant. It provides the ability to disable events processing and to bundle event processing
+- **Pros**: Transactional, multi-threaded and highly performant. It provides the ability to disable events processing and to bundle event processing.
 - **Cons**: A bit more complex to understand logics, requires to deploy a server-side plugin for any customization.
 
 **Fill in the database directly** (SQL Scripts, MongoDB collections, ...)
 
-- **Pros**: The most performant
-- **Cons**: Requires knowledge of Nuxeo Platform internals. May break business logic as listeners are not handled, no event is fired in the repository. For instance, there won't be any audit, unless you fill the table at the same time. You still have to perform some additional tasks manually after that like rebuild full text, rebuild ancestors cache, rebuild read-ACLs
+- **Pros**: The most performant.
+- **Cons**: Requires knowledge of Nuxeo Platform internals. May break business logic as listeners are not handled, no event is fired in the repository. For instance, there won't be any audit unless you fill the table at the same time. You still have to perform some additional tasks manually after that like rebuild full text, rebuild ancestors cache, rebuild read-ACLs.
 
 ### Importing Files
 
-Similarly there can be several strategies to upload the binary content (the files):
+Similarly, there can be several strategies to upload binary content (the files):
 
 **Using the REST API**
 
-The REST API provides the batch endpoint to upload content, with ability to upload binaries by chunks and thus implement resume upload patterns.
+The REST API provides the batch endpoint to upload content, with the ability to upload binaries by chunks and thus implement resume upload patterns.
 
-- **Pros**: Can upload file from anywhere, just need an HTTP access
-- **Cons**: Network becomes a strong limitation to import rates
+- **Pros**: Can upload files from anywhere, only need an HTTP access.
+- **Cons**: Network becomes a strong limitation to import rates.
 
 **Uploading them on a file system accessible from the Nuxeo server**
 
-- **Pros**: No network limitation as files may then be just "moved" to the right place (unless they are then stored on an object store in the cloud)
-- **Cons**: It is not always easy to open access to the folder file system, so this solution cannot be seen as a generic strategy for central repository use case.
+- **Pros**: No network limitation as files may then be just "moved" to the right place (unless they are then stored on an object store in the cloud).
+- **Cons**: It is not always easy to open access to the folder file system. This solution can't be a generic strategy for a central repository use case.
 
 **Moving the file right to the place it will then be stored by Nuxeo**
 
 May it be a file system binary store, an S3 binary store or an Azure Object store, it is always possible to drop the files at the right place to restrict operations.
 
-- **Pros**: Most efficient way to do, especially when import is about very large multi-terabytes files.
-- **Cons**: Not easy to handle as a general integration pattern, requires to compute hash of the file first.
+- **Pros**: Most efficient way to do, especially when the import is about very large multi-terabytes files.
+- **Cons**: Not easy to handle as a general integration pattern, requires to compute the hash of the file first.
 
 ## Existing Import Tools
 
 ### Nuxeo Platform Importer
 
 The Nuxeo Platform Importer comes with several implementations:
-- **Nuxeo Bulk importer**, the generic mass document import addon (full, multi-threaded import from the server file system).
-- **Nuxeo Scan importer** (to create documents from XML files).
-- **Nuxeo Stream importer** (to create documents with a producer/consumer pattern logic, and uses the Log features provided by [Nuxeo Stream]({{{page space='nxdoc' page='nuxeo-stream'}}).
+- **Nuxeo Bulk importer**: the generic mass document import addon (full, multi-threaded import from the server file system).
+- **Nuxeo Scan importer**: to create documents from XML files.
+- **Nuxeo Stream importer**: to create documents with a producer/consumer pattern logic, and uses the Log features provided by [Nuxeo Stream]({{page space='nxdoc' page='nuxeo-stream'}}).
 
 #### Nuxeo Bulk Importer
 
 **Features**
 
-The [Nuxeo Bulk Document Importer](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer) is an importer framework provided as an addon that can be used to build custom importers. It relies on a standard crawler, transformer, writer schema. The Scan importer and CSV importer addons are using that framework (see next sections). It is the de-facto choice when you want to reach hyperscale numbers with importing content (up to 10&nbsp;000s of documents per second). All you need to do is write your own Document Factory that will be in charge of the document creation logic in the repository. You can then easily launch the import controlling how many documents are done in a batch, how many batches per transaction, etc.
+The [Nuxeo Bulk Document Importer](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-importer) is an importer framework provided as an addon that can be used to build custom importers. It relies on a standard crawler, transformer, writer schema. The Scan importer and CSV importer addons are using this framework (see next sections). This is a solution for mass import that can handle thousands of documents per second. You need to write your own Document Factory that will be in charge of the document creation logic in the repository. You can then quickly launch the import controlling how many documents are done in a batch, how many batches per transaction, etc.
 
 **Customization Language**
 
@@ -191,17 +191,17 @@ Java
 
 **Customization Logic**
 
-The importer framework offers many customization possibilities. You can read the [Nuxeo Platform Importer documentation]({{page page='nuxeo-bulk-document-importer'}}) to learn more.
+The importer framework offers many customization possibilities. You can read the [Nuxeo Platform Importer documentation]({{page page='nuxeo-bulk-document-importer'}}) for more information.
 
 **Limitations**
 
-Files must be available on a file system mounted on the Nuxeo server.
+Files must be available on a file system installed on the Nuxeo server.
 
 #### Nuxeo Scan Importer
 
 **Features**
 
-The [Nuxeo Platform Scan Importer](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer) is a submodule of the importer framework and is typically used for the output of a digitalization chain. Nuxeo Platform Scan Importer listens to a given folder and will import all content referenced via XML files, with their metadata, etc. Scan importer also offers very advanced XML <--> documents mapping possibilities, with ability to use some automation processing during the import phase.
+The [Nuxeo Platform Scan Importer](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer) is a submodule of the importer framework and is used for the output of a digitalization chain. Nuxeo Platform Scan Importer listens to a given folder and will import all content referenced via XML files, with their metadata, etc. Scan importer also offers very advanced XML <--> documents mapping possibilities, with ability to use some automation processing during the import phase.
 
 **Customization Language**
 
@@ -215,15 +215,15 @@ Scan Importer is configurable via XML extensions for the metadata mapping. The d
 
 **Features**
 
-The [Nuxeo Stream Importer](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-platform-importer/nuxeo-importer-stream) defines a producer/consumer pattern and uses the Log features provided by Nuxeo Stream. The Log is used to perform mass import. It decouples the Extraction/Transformation from the Load (using the ETL terminology). The extraction and transformation is done by a document message producer with custom logic. This module comes with a random document and a random blob generator, that does the same job as the random importer of the `nuxeo-importer-core` module. The load into Nuxeo is done with a generic consumer.
+The [Nuxeo Stream Importer](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-platform-importer/nuxeo-importer-stream) defines a producer/consumer pattern and uses the Log features provided by Nuxeo Stream. The Log is used to perform mass import. It decouples the Extraction/Transformation from the Load (using the ETL terminology). A document message producer does the extraction and transformation with custom logic. This module comes with a random document and a random blob generator, that does the same job as the random importer of the `nuxeo-importer-core` module. The load into Nuxeo is done with a generic consumer.
 Automation operations are exposed to run producers and consumers.
 
 Two options are offered to perform the import:
-1. Two steps import: Generate and Import documents with blobs.
-1. Four steps import: Generate and Import blobs, then Generate and Import documents.
+- **Two steps import**: Extract the document metadata and blobs then load documents into Nuxeo.
+- **Four steps import**: Extract the blobs, load the blobs into Nuxeo, extract the document metadata then load documents into Nuxeo.
 
 {{#> callout type='info' heading='Recommended mechanism for big volumes'}}
-The Nuxeo Stream Importer is the recommended way of performing document imports in a Nuxeo repository as it brings fault tolerance, durability, immutability and ordering to a distributed system. Therefore, it provides failover: Any Nuxeo nodes can be restarted during the import, the import can be re-executed from the start, etc.
+The Nuxeo Stream Importer is the recommended way of performing mass import with a decoupled extraction and load phases, the import is fault-tolerant, any Nuxeo nodes can be restarted during the import, it is also possible to re-execute an import from the beginning.
 {{/callout}}
 
 **Customization Language**
@@ -242,7 +242,7 @@ Files must be available on a file system mounted on the Nuxeo server.
 
 **Features**
 
-[Nuxeo CSV](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv) makes use of the importer framework and provides a UI to upload a CSV file whose content will be used to map columns values to properties of created documents.
+[Nuxeo CSV](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv) uses the importer framework and provides a UI to upload a CSV file. The content of this file will be used to map columns values to properties of created documents.
 
 **Customization Language**
 
@@ -275,8 +275,8 @@ JavaScript
 
 **Customization Logic**
 
-Fork and override a specific object implementation. It is quite easy to add a custom logic to start a workflow on the document at the same time, changing its lifecycle, or setting a custom ACL. A [sample fork with custom rules](https://github.com/nuxeo-sandbox/nuxeo-node-custom-importer) is provided on GitHub.
+Fork and override a specific object implementation. It is easy to add a custom logic to start a workflow on the document at the same time, changing its lifecycle, or setting a custom ACL. A [sample fork with custom rules](https://github.com/nuxeo-sandbox/nuxeo-node-custom-importer) is provided on GitHub.
 
 **Limitations**
 
-No out-of-the-box format for metadata values specification. Also not recommended if import rate is the critical factor, since data transit over HTTP/S.
+No out-of-the-box format for metadata values specification. Also not recommended if the import rate is the critical factor, since data transit over HTTP/S.
