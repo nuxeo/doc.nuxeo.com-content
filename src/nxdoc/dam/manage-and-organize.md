@@ -2,7 +2,7 @@
 title: Manage & Organize
 review:
     comment: ''
-    date: '2019-06-11'
+    date: '2019-09-18'
     status: ok
 labels:
     - DAM

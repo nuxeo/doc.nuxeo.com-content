@@ -3,7 +3,7 @@ title: Digital Asset Management
 description: Discover how Nuxeo Platform can quickly help you setting up your digital asset management solution.
 review:
     comment: ''
-    date: '2018-01-30'
+    date: '2019-09-18'
     status: ok
 labels:
     - DAM
