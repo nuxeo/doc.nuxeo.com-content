@@ -2,7 +2,7 @@
 title: Nuxeo Diff
 review:
     comment: ''
-    date: '2017-12-12'
+    date: '2019-09-18'
     status: ok
 labels:
     - lts2016-ok
@@ -76,7 +76,6 @@ history:
         date: '2012-06-20 15:50'
         message: ''
         version: '1'
-
 ---
 
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}

@@ -2,7 +2,7 @@
 title: EasyShare
 review:
     comment: ''
-    date: '2017-12-12'
+    date: '20190-09-18'
     status: ok
 labels:
     - lts2016-ok
@@ -58,8 +58,8 @@ history:
         date: '2014-06-11 15:21'
         message: ''
         version: '1'
-
 ---
+
 {{{excerpt space='userdoc' page='EasyShare'}}}
 
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}

@@ -48,21 +48,17 @@ history:
         date: '2015-11-17 13:33'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 The&nbsp;[Microsoft Azure Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage) addon is a Nuxeo Binary Manager that stores binaries in an Azure Storage container.
-
 {{! /excerpt}}
-
-&nbsp;
 
 ## Prerequisites
 
-*   You should be familiar with [Azure](https://azure.microsoft.com/en-us/) and their Management Portal.
-*   You have to create a dedicated Azure blob Container.
-*   You must be in possession of your Storage access keys.
+- You should be familiar with [Azure](https://azure.microsoft.com/en-us/) and their Management Portal.
+- You have to create a dedicated Azure blob Container.
+- You must be in possession of your Storage access keys.
 
 ## Configuration
 

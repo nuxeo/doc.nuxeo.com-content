@@ -2,13 +2,13 @@
 title: Nuxeo Agenda
 review:
     comment: ''
-    date: '2017-01-05'
+    date: '2019-09-18'
     status: ok
 labels:
     - lts2016-ok
     - nuxeo-agenda
     - notassigned
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -43,8 +43,8 @@ history:
         date: '2013-12-10 16:42'
         message: ''
         version: '1'
-
 ---
+
 {{{excerpt space='userdoc' page='nuxeo-agenda'}}}
 
 ## Installation

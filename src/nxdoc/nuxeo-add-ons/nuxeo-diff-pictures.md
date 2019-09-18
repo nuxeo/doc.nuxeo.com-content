@@ -2,12 +2,12 @@
 title: Nuxeo Diff Pictures
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2019-09-18'
     status: ok
 toc: true
 labels:
     - lts2016-ok
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons
@@ -61,14 +61,16 @@ history:
         date: '2015-10-16 15:03'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 The diff capabilities of the Nuxeo Platform now include picture comparison thanks to&nbsp;[Nuxeo Diff Pictures](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-diff-pictures).&nbsp;This addon displays a dialog where the user can spot the differences between two pictures. The compared pictures can be of different formats (JPEG, PNG, ...) or dimensions,&nbsp;leveraging ImageMagick capabilities in this area. When the two pictures have the same format and the same dimensions, the user can also set-up a "Fuzzy" comparison parameter (to remove noise when comparing JPEGs for example), and to choose the colors used for to highlight the differences.
 
 When you compare two documents or versions of a document, the elements below are compared:
 
-*   The metadata (title, coverage, modification date, etc),
-*   The content.
+- The metadata (title, coverage, modification date, etc),
+- The content.
 
 You can compare documents in any space of the Nuxeo Platform: workspaces, sections...&nbsp;
 
@@ -91,8 +93,8 @@ It is also possible to compare two distinct documents.
 
 Select the documents:&nbsp;
 
-*   If the pictures are in the same workspace, use the checkboxes and click on&nbsp;**Compare**.&nbsp;
-*   If the pictures are in two different workspaces, add them to the worklist and click on&nbsp;**Compare**.
+- If the pictures are in the same workspace, use the checkboxes and click on&nbsp;**Compare**.&nbsp;
+- If the pictures are in two different workspaces, add them to the worklist and click on&nbsp;**Compare**.
 
 If you want to visualize the content changes, click on the icon&nbsp;![]({{file name='action_diff.png' space='userdoc' page='nuxeo-diff'}})&nbsp;on the right.&nbsp;A window pops up showing the differences between the two documents.
 

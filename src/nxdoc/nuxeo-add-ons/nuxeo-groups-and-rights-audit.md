@@ -2,7 +2,7 @@
 title: Nuxeo Groups and Rights Audit
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2019-09-18'
     status: ok
 labels:
     - lts2016-ok
@@ -50,6 +50,9 @@ history:
         message: ''
         version: '1'
 ---
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 {{{excerpt space='userdoc' page='Nuxeo Groups and Rights Audit'}}}
 
 ## Installation

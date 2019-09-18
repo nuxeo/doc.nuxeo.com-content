@@ -8,7 +8,8 @@ labels:
     - lts2016-ok
     - excerpt
     - multiexcerpt-include
-    - content-review-lts2017
+    - lts2017-ok
+    - lts2019-ok
 confluence:
     ajs-parent-page-id: '16089349'
     ajs-parent-page-title: Nuxeo Add-Ons
@@ -72,12 +73,10 @@ history:
         date: '2015-07-07 15:10'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 The [Nuxeo Datadog Reporter addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-datadog-reporter) allows to report all the Nuxeo metrics to [Datadog](https://www.datadoghq.com/), a SaaS platform to collect your metrics.
-
 {{! /excerpt}}
 
 ## Installation / Configuration
@@ -100,6 +99,6 @@ The [Nuxeo Datadog Reporter addon](https://connect.nuxeo.com/nuxeo/site/marketpl
 
 ## Exploring Metrics in Datadog
 
-After starting Nuxeo, you should be able to explore your host's metrics :
+After starting Nuxeo, you should be able to explore your host's metrics:
 
 ![]({{file name='datadog_metrics_explorer.png'}} ?w=500,h=478,border=true)

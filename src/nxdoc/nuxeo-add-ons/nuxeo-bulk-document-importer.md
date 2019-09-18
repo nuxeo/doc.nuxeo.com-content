@@ -3,7 +3,7 @@ title: Nuxeo Bulk Document Importer
 description: The Nuxeo Bulk Document Importer is available for any Nuxeo platform-based application and enables mass document import in a Nuxeo repository.
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2019-09-18'
     status: ok
 labels:
     - lts2016-ok
@@ -12,6 +12,7 @@ labels:
     - import
     - platform-importer-addon-component
     - lts2017-ok
+    - lts2019-ok
     - university
 toc: true
 confluence:

@@ -2,7 +2,7 @@
 title: Nuxeo Tree Snapshot
 review:
     comment: ''
-    date: '2017-12-08'
+    date: '2019-09-18'
     status: ok
 labels:
 
@@ -10,10 +10,10 @@ toc: true
 tree_item_index: 2750
 ---
 
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 [Nuxeo Tree Snapshot](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot) enables to snapshot and version a whole folder and its content in a single step. You can then recover the state of a folder for a given version.
-
 {{! /excerpt}}
 
 ## Installation

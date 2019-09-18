@@ -3,7 +3,7 @@ title: Amazon S3 Online Storage
 description: The Amazon S3 Online Storage is a Nuxeo Binary Manager for S3. It stores Nuxeo's binaries (the attached documents) in an Amazon S3 bucket.
 review:
     comment: ''
-    date: '2017-12-13'
+    date: '2019-09-18'
     status: ok
 labels:
     - lts2016-ok
@@ -123,7 +123,7 @@ history:
         version: '1'
 ---
 
-The [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage) is a Nuxeo Binary Manager for S3\. It stores Nuxeo's binaries (the attached documents) in an [Amazon S3](http://aws.amazon.com/s3/) bucket.
+The [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage) is a Nuxeo Binary Manager for S3. It stores Nuxeo's binaries (the attached documents) in an [Amazon S3](http://aws.amazon.com/s3/) bucket.
 
 ## Before You Start
 
@@ -151,15 +151,11 @@ nuxeo.aws.region=your_AWS_REGION
 ```
 
 {{#> callout type='info' }}
-
 If your Nuxeo instance runs on Amazon EC2 or Amazon ECS, you can also transparently use IAM instance roles, in which case you do not need to specify the AWS ID and secret (the credentials will be fetched automatically from the instance metadata). The same applies to the region.
-
 {{/callout}}
 
 {{#> callout type='note' }}
-
 If you used explicit configuration, the file `nuxeo.conf` now contains S3 secret access keys, you should protect it from prying eyes.
-
 {{/callout}}
 
 The region code can be found in the [S3 Region Documentation](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region). The default is `us-east-1`. At the time this documentation was written, the list is:
@@ -194,9 +190,7 @@ nuxeo.s3storage.bucket_prefix=yourfolder/
 ```
 
 {{#> callout type='info' }}
-
 The bucket name is unique across all of Amazon, you should find something original and specific.
-
 {{/callout}}
 
 The optional bucket prefix is used to localize your binaries within a specific S3 folder (the `bucket_prefix` syntax is available since Nuxeo 7.10-HF03).
@@ -240,9 +234,7 @@ The S3 Binary Manager can use a keystore containing a keypair, but there are a f
     If you get&nbsp;`keytool error: java.io.IOException: Incorrect AVA format`, then ensure that the distinguished name parameter has a form such as:&nbsp;`-dname "CN=AWS S3 Key, O=example, DC=com".`
 
 {{#> callout type='warning' }}
-
 Don't forget to **make backups of the `/path/to/keystore/file` file** along with the **store password, key alias and key password**. If you lose them (for instance if the EC2 machine hosting the Nuxeo instance with the original keystore is lost) you will lose the ability to recover any encrypted blob from the S3 bucket.
-
 {{/callout}}
 
 With all that above in mind, here are the crypto options that you can add to `nuxeo.conf` (they are all&nbsp;mandatory once you specify a keystore):
@@ -264,9 +256,7 @@ nuxeo.s3storage.crypt.serverside=true
 ```
 
 {{#> callout type='info' }}
-
 Client-Side Encryption is safer than Server-Side Encryption. With Client-Side Encryption an attacker needs both access to the _AWS credentials and the key_ to be able to access the unencrypted data while Server-Side Encryption will only require the potential attacker to provide the _AWS credentials_.
-
 {{/callout}}
 
 If you want to use [Server-Side Encryption with AWS KMS–Managed Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html), specify your key with:
@@ -299,9 +289,7 @@ nuxeo.s3storage.directdownload.expire=3600
 The expire time is expressed in seconds (the default is one hour) and determines how long the generated S3 URLs are valid. Having short-lived URLs is better for security, but too short an expiration time could be problematic if your server clock is not exactly in sync with the absolute official time use by S3.
 
 {{#> callout type='info' }}
-
 Before Nuxeo 7.10 the configuration was done using property `nuxeo.s3storage.downloadfroms3` instead of `nuxeo.s3storage.directdownload` (same with `expire`). This is still available for backward compatibility after Nuxeo 7.10 but will be removed in a future version, so the `nuxeo.s3storage.directdownload` version above should be preferred.
-
 {{/callout}}
 
 ##### CORS Configuration

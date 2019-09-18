@@ -3,7 +3,7 @@ title: Digital Asset Management (DAM)
 description: The Digital Asset Management addon of the Nuxeo Platform provides multimedia files management (pictures, audio and video).
 review:
     comment: ''
-    date: '2018-01-19'
+    date: '2019-09-18'
     status: ok
 labels:
     - lts2016-ok
@@ -15,6 +15,7 @@ labels:
     - annotation
     - dam-component
     - lts2017-ok
+    - lts2019-ok
 toc: true
 confluence:
     ajs-parent-page-id: '16089349'
@@ -303,16 +304,12 @@ history:
 ## Installation
 
 {{! multiexcerpt name='MP-installation-easy'}}
-This add-on requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin tab]({{page page='installing-a-new-package-on-your-instance'}}).
+This addon requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin tab]({{page page='installing-a-new-package-on-your-instance'}}).
 {{! /multiexcerpt}}
 
 It is also possible to install it from the [Startup wizard]({{page page='configuration-wizard'}}).
 
 However some features depend on external software for conversion and transcoding. See the page [Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}}).
-
-After you installed Nuxeo DAM, you have three new document types available.
-
-![]({{file name='DAM_available_doctypes.png'}} ?w=600,border=true)
 
 ## Functional Overview
 
@@ -363,7 +360,7 @@ Picture conversions are used to generate the picture views of document having th
 
 ### Video
 
-The Nuxeo Platform provides an add-on with the following video features:
+The Nuxeo Platform provides an addon with the following video features:
 
 - Extract video information
 - In-browser HTML5 video player (fallback on Flash player if needed)
@@ -556,7 +553,7 @@ See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribut
 - [Supported File Formats]({{page page='supported-file-formats'}})
 - [HOWTO: Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+{{/panel}}</div><div class="column medium-6">{{#> panel h eading='Related Documentation'}}
 
 - [Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}})
 - [Events and Messages]({{page page='events-and-messages'}})

@@ -2,7 +2,7 @@
 title: Nuxeo Jenkins Report
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-09-18'
     status: ok
 labels:
     - content-review-lts2016
@@ -63,13 +63,15 @@ history:
         date: '2013-08-06 17:44'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 {{{excerpt space='userdoc' page='nuxeo-jenkins-report'}}}
 
 ## Installation
 
-The Nuxeo Jenkins Report addons package requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin Center]({{page page='installing-a-new-package-on-your-instance'}}).
+The Nuxeo Jenkins Report addon requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin Center]({{page page='installing-a-new-package-on-your-instance'}}).
 
 After you installed the package, a new document type is available for creation in workspaces and reports: the Jenkins Reports Container.
 

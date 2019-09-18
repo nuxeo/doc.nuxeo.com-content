@@ -2,7 +2,7 @@
 title: Nuxeo Virtual Navigation
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2019-09-18'
     status: ok
 labels:
     - content-review-lts2016
