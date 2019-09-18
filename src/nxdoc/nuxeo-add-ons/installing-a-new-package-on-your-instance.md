@@ -3,10 +3,9 @@ title: Installing a New Package on Your Instance
 description: Packages can be installed directly using the nuxeoctl script or from the Marketplace. Packages can be addons bringing new features or hotfixes providing corrections or small improvements.
 review:
   comment: ''
-  date: '2017-12-14'
+  date: '2019-09-18'
   status: ok
 labels:
-  - content-review-lts2016
   - admin-center
   - bchauvin
   - update-center
@@ -14,6 +13,7 @@ labels:
   - multiexcerpt-include
   - multiexcerpt
   - lts2017-ok
+  - lts2019-ok
 toc: true
 confluence:
   ajs-parent-page-id: '16089349'
@@ -185,30 +185,30 @@ For Windows users, use `nuxeoctl.bat` instead of `./nuxeoctl` commands below.
     ```
 
 1.  Get the name or ID of the package you want to download. You can get it from the package Marketplace URL.
-    For instance, the ID of the [Nuxeo Drive package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive?version=1.6.6) is `nuxeo-drive-1.6.6`.
+    For instance, the ID of the [Nuxeo Drive package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive) is `nuxeo-drive-1.8.5`.
 
 1.  Install the package.
 
     ```
-    ./nuxeoctl mp-install nuxeo-drive-1.6.6
+    ./nuxeoctl mp-install nuxeo-drive-1.8.5
     ```
 
     The server checks possible dependencies.
 
     ```
     Detected Tomcat server.
-    Nuxeo home:          /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat
-    Nuxeo configuration: /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat/bin/nuxeo.conf
-    Include template: /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat/templates/common-base
-    Include template: /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat/templates/common
-    Include template: /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat/templates/default
+    Nuxeo home:          /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat
+    Nuxeo configuration: /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat/bin/nuxeo.conf
+    Include template: /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat/templates/common-base
+    Include template: /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat/templates/common
+    Include template: /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat/templates/default
 
-    Optional dependencies [nuxeo-jsf-ui] will be ignored for 'nuxeo-drive-1.6.6'.
+    Optional dependencies [nuxeo-jsf-ui] will be ignored for 'nuxeo-drive-1.8.5'.
 
     Dependency resolution:
-    Installation order (1):        nuxeo-drive-1.6.6
-    Unchanged packages (2):        nuxeo-web-ui:1.0.1, nuxeo-spreadsheet:1.2.4
-    Packages to download (1):      nuxeo-drive:1.6.6
+    Installation order (1):        nuxeo-drive-1.8.5
+    Unchanged packages (2):        nuxeo-web-ui:2.4.0, nuxeo-spreadsheet:1.4.3
+    Packages to download (1):      nuxeo-drive:1.8.5
     ```
 
 1.  Confirm installation.
@@ -221,9 +221,9 @@ For Windows users, use `nuxeoctl.bat` instead of `./nuxeoctl` commands below.
 
     ```
     Do you want to continue (yes/no)? [yes]
-    Downloading [nuxeo-drive-1.6.6]...
-    Added nuxeo-drive-1.6.6
-    Installing nuxeo-drive-1.6.6
+    Downloading [nuxeo-drive-1.8.5]...
+    Added nuxeo-drive-1.8.5
+    Installing nuxeo-drive-1.8.5
     ```
 
 1.  Start your server.
@@ -241,9 +241,9 @@ It is possible to ask for installation without specifying a version number. In t
 
   [...]
 
-  Installation order (1):        nuxeo-drive-1.6.6
-  Unchanged packages (2):        nuxeo-web-ui:1.0.1, nuxeo-spreadsheet:1.2.4
-  Packages to download (1):      nuxeo-drive:1.6.6
+  Installation order (1):        nuxeo-drive-1.8.5
+  Unchanged packages (2):        nuxeo-web-ui:2.4.0, nuxeo-spreadsheet:1.4.3
+  Packages to download (1):      nuxeo-drive:1.8.5
 ```
 
 You can also install several packages in a single command. Package names should be separated with a space.
@@ -254,9 +254,9 @@ You can also install several packages in a single command. Package names should 
   [...]
 
   Dependency resolution:
-    Installation order (3):        nuxeo-web-ui-1.0.1/nuxeo-dam-6.2.3/nuxeo-drive-1.6.6
-    Packages to download (2):      nuxeo-web-ui:1.0.1, nuxeo-drive:1.6.6
-    Local packages to install (1): nuxeo-dam:6.2.3
+    Installation order (3):        nuxeo-web-ui-2.4.0/nuxeo-dam-6.4.3/nuxeo-drive-1.8.5
+    Packages to download (2):      nuxeo-web-ui:2.4.0, nuxeo-drive:1.8.5
+    Local packages to install (1): nuxeo-dam:6.4.3
 ```
 
 If for some reason one of the packages requested can't be installed, nuxeoctl will not install any of them.
@@ -293,25 +293,25 @@ It is possible to install packages available on the Nuxeo Marketplace even if yo
 3.  Install the package by providing the path to the downloaded .zip file.
 
     ```
-    ./nuxeoctl mp-install /Users/NUXEO/Downloads/nuxeo-drive-1.6.6.zip
+    ./nuxeoctl mp-install /Users/NUXEO/Downloads/nuxeo-drive-1.8.5.zip
     ```
 
     The server checks possible dependencies.
 
     ```
     Detected Tomcat server.
-    Nuxeo home:          /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat
-    Nuxeo configuration: /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat/bin/nuxeo.conf
-    Include template: /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat/templates/common-base
-    Include template: /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat/templates/common
-    Include template: /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat/templates/default
-    Added /Users/NUXEO/Downloads/nuxeo-drive-1.6.6.zip
+    Nuxeo home:          /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat
+    Nuxeo configuration: /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat/bin/nuxeo.conf
+    Include template: /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat/templates/common-base
+    Include template: /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat/templates/common
+    Include template: /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat/templates/default
+    Added /Users/NUXEO/Downloads/nuxeo-drive-1.8.5.zip
 
-    Optional dependencies [nuxeo-jsf-ui] will be ignored for 'nuxeo-drive-1.6.6'.
+    Optional dependencies [nuxeo-jsf-ui] will be ignored for 'nuxeo-drive-1.8.5'.
 
     Dependency resolution:
-    Installation order (1):        nuxeo-drive-1.6.6
-    Unchanged packages (2):        nuxeo-web-ui:1.0.1, nuxeo-spreadsheet:1.2.4
+    Installation order (1):        nuxeo-drive-1.8.5
+    Unchanged packages (2):        nuxeo-web-ui:2.4.0, nuxeo-spreadsheet:1.4.3
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -327,7 +327,7 @@ It is possible to install packages available on the Nuxeo Marketplace even if yo
     Installation is confirmed.
 
     ```
-    Installing nuxeo-drive-1.6.6
+    Installing nuxeo-drive-1.8.5
     ```
 
 5.  Start the server.
@@ -371,24 +371,24 @@ The instructions below provide the steps to follow to uninstall a package using 
 1.  Run the uninstallation:
 
     ```
-    ./nuxeoctl mp-uninstall nuxeo-dam-6.0.0
+    ./nuxeoctl mp-uninstall nuxeo-dam-6.4.3
     ```
 
     The server checks possible dependencies:
 
     ```
     Detected Tomcat server.
-    Nuxeo home:          /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat
-    Nuxeo configuration: /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat/bin/nuxeo.conf
-    Include template: /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat/templates/common-base
-    Include template: /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat/templates/common
-    Include template: /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat/templates/default
-    Include template: /Users/NUXEO/Downloads/nuxeo-server-8.10-tomcat/templates/drive
+    Nuxeo home:          /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat
+    Nuxeo configuration: /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat/bin/nuxeo.conf
+    Include template: /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat/templates/common-base
+    Include template: /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat/templates/common
+    Include template: /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat/templates/default
+    Include template: /Users/NUXEO/Downloads/nuxeo-server-10.10-tomcat/templates/drive
 
     Dependency resolution:
-      Uninstallation order (1):      nuxeo-dam-6.0.0
-      Unchanged packages (2):        nuxeo-drive:1.4.1, nuxeo-spreadsheet:1.0.0
-      Local packages to remove (1):  nuxeo-dam:6.0.0
+      Uninstallation order (1):      nuxeo-dam-6.4.3
+      Unchanged packages (2):        nuxeo-drive:1.8.5, nuxeo-spreadsheet:1.4.3
+      Local packages to remove (1):  nuxeo-dam:6.4.3
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -402,7 +402,7 @@ The instructions below provide the steps to follow to uninstall a package using 
     Uninstallation is confirmed.
 
     ```
-    Uninstalling nuxeo-dam-6.0.0
+    Uninstalling nuxeo-dam-6.4.3
     ```
 
 1.  Start the server.
@@ -522,7 +522,6 @@ The Admin tab includes a section called **Update Center** from which you can eas
 
 - [nuxeoctl and Control Panel Usage]({{page page='nuxeoctl-and-control-panel-usage'}})
 - [Studio Application Definition ]({{page version='' space='studio' page='application-definition'}})
-- [Admin Tab Overview]({{page page='admin-tab-overview'}})
 
 {{/panel}}</div><div class="column medium-6">
 
