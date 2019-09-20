@@ -3,7 +3,7 @@ title: Web UI Functional Tests
 description: An overview of functional testing on Web UI and it's functional testing framework.
 toc: true
 review:
-  date: '2019-06-06'
+  date: '2019-09-19'
   status: ok
   comment: ''
 ---
@@ -57,11 +57,11 @@ Then('I am logged out', () => driver.isVisible('#username').should.be.true);
 Please check the [step definitions](https://docs.cucumber.io/cucumber/step-definitions/) reference page for more details on how to write tests using this language.
 {{/callout}}
 
-You can check Web UI's plugin repository for more examples on Cucumber [feature](https://github.com/nuxeo/plugin-nuxeo-web-ui/tree/2.4_10.10/ftest/web-ui/webdriver/test) files, [step definitions](https://github.com/nuxeo/plugin-nuxeo-web-ui/tree/2.4_10.10/nuxeo-web-ui-ftest/test/features/step_definitions), and [page helpers](https://github.com/nuxeo/plugin-nuxeo-web-ui/tree/2.4_10.10/nuxeo-web-ui-ftest/test/pages).
+You can check Web UI's plugin repository for more examples on Cucumber [feature](https://github.com/nuxeo/nuxeo-web-ui/tree/master/ftest) files, [step definitions](https://github.com/nuxeo/nuxeo-web-ui/tree/master/packages/nuxeo-web-ui-ftest/features/step_definitions), and [page helpers](https://github.com/nuxeo/nuxeo-web-ui/tree/master/packages/nuxeo-web-ui-ftest/pages).
 
 ## Functional Tests Framework
 
-The [functional tests framework for Web UI](https://github.com/nuxeo/plugin-nuxeo-web-ui/tree/2.4_10.10/nuxeo-web-ui-ftest) exposes a large set of step definitions and page helpers, which is particularly useful for developing functional tests for projects contributing to Web UI. The provided steps were designed to cover most default functionality, but some of them are generic enough to be re-used on other contexts. However, you can create your own step definitions, while still being able to import and use the default page helpers provided by the framework. Should this not be enough, and you can do your own page helpers to wrap the logics of your custom elements.
+The [functional tests framework for Web UI](https://github.com/nuxeo/nuxeo-web-ui/tree/master/packages/nuxeo-web-ui-ftest) exposes a large set of step definitions and page helpers, which is particularly useful for developing functional tests for projects contributing to Web UI. The provided steps were designed to cover most default functionality, but some of them are generic enough to be re-used on other contexts. However, you can create your own step definitions, while still being able to import and use the default page helpers provided by the framework. Should this not be enough, and you can do your own page helpers to wrap the logics of your custom elements.
 
 Shadow DOM is one of the biggest challenges when testing applications powered by custom elements. Only recently did WebDriverIO [introduce support for Shadow DOM](https://github.com/webdriverio/webdriverio/blob/master/CHANGELOG.md#550-2019-02-20), by adding a command that is able to pierce the shadow root of a given element. However, this is not enough most of the time, where several levels of shadow roots need to be pierced. To this end, Web UI's functional tests framework has a Shadow DOM plugin embedded, which allows WebDriverIO commands to work just like they would if no Shadow DOM was being used.
 
@@ -115,13 +115,13 @@ It is also required to have on the root of the project a file named `.babelrc` w
 
 You can then install the project's dependencies, by running `npm install`. From there, you're all set to create your own tests.
 
-The first step is to create on the root of your project a *test* folder, containing a sub folder named *features* and optionally another one named *resources*, if you need to use resources in your tests such as images. If you are doing custom step definitions, you must place them inside `features/step_definitions`. The functional tests framework will load feature files, step definitions and resources by convention, so please make sure to respect this folder structure. It should look as follows:
+The first step is to create on the root of your project a *ftest* folder, containing a sub folder named *features* and optionally another one named *resources*, if you need to use resources in your tests such as images. If you are doing custom step definitions, you must place them inside `features/step_definitions`. The functional tests framework will load feature files, step definitions and resources by convention, so please make sure to respect this folder structure. It should look as follows:
 
 ```
 .
 ├── package.json
 ├── .babelrc
-└── test
+└── ftest
     ├── features
     │   ├── myfeature1.feature
     │   ├── myfeature2.feature
@@ -136,7 +136,7 @@ The first step is to create on the root of your project a *test* folder, contain
 ```
 
 For an example on how to use the functional test framework, please check
-[Nuxeo DAM's functional tests for Web UI](https://github.com/nuxeo/marketplace-dam/tree/6.4_10.10/ftest/web-ui/webdriver).
+[Nuxeo DAM's functional tests for Web UI](https://github.com/nuxeo/nuxeo-web-ui/tree/master/addons/nuxeo-dam/ftest).
 
 
 ### Running Tests
@@ -153,7 +153,7 @@ npm run test:watch
 ```
 
 For an example of how to launch a nuxeo server and run the tests using maven, please check
-[Nuxeo DAM's functional tests for Web UI](https://github.com/nuxeo/marketplace-dam/tree/6.4_10.10/ftest/web-ui/webdriver).
+[Nuxeo Web UI's functional tests](https://github.com/nuxeo/nuxeo-web-ui/tree/master/ftest) or [Nuxeo DAM's functional tests for Web UI on LTS 2019](https://github.com/nuxeo/marketplace-dam/tree/6.4_10.10/ftest/web-ui/webdriver).
 
 ### Debugging
 
