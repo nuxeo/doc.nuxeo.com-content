@@ -87,7 +87,7 @@ You can manage and delete your saved search from the Search tab drop down list, 
 
 ## Trash Search
 
-Trash Search enables you to find all the documents deleted depending on your access rights. For more information, see [Trash Search]({{page page='search'}}#trash-search).
+Trash Search enables you to find all the documents deleted depending on your access rights. For more information, see [Trash Search]({{page page='content-delete'}}#trash-search).
 
 ## Assets Tab
 
