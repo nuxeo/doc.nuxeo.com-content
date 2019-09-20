@@ -181,7 +181,7 @@ To manage a vocabulary or its entries, go to **Administration > Vocabularies** a
 {{{multiexcerpt 'DeprecatedJSF' page='nxdoc/generic-multi-excerpts'}}}
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
-- [Managing Vocabularies]({{page space='userdoc' page='administration'}}consulting-vocabularies)
+- [Managing Vocabularies]({{page space='userdoc' page='administration'}}#vocabularies)
 - [How to Add a New Vocabulary]({{page space='nxdoc' page='how-to-add-a-new-vocabulary'}})
 - [How to Translate a Vocabulary]({{page space='nxdoc' page='how-to-translate-a-vocabulary'}})
 
