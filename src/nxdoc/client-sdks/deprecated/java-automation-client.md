@@ -474,7 +474,7 @@ For a direct download, see [https://maven.nuxeo.org/](https://maven.nuxeo.org/ne
 
 The client library depends on:
 
-*   `net.sf.json-lib:json-lib`, `net.sf.ezmorph:ezmorph` - for JSON support
+*   `com.fasterxml.jackson.core:jackson-*`, `net.sf.ezmorph:ezmorph` - for JSON support
 *   `org.codehaus.jackson:jackson-core-asl`
 *   `org.codehaus.jackson:jackson-mapper-asl`.
 *   `org.apache.httpcomponents:httpcore`, `org.apache.httpcomponents:httpclient` - for HTTP support
