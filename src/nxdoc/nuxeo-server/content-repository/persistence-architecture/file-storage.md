@@ -576,7 +576,7 @@ The root path is a property of the contribution:
   <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
     <blobprovider name="fs">
       <class>org.nuxeo.ecm.core.blob.FilesystemBlobProvider</class>
-      <property name="root">/opt/nuxeo/nxsever/blobs</property>
+      <property name="root">/opt/nuxeo/nxserver/blobs</property>
       <property name="preventUserUpdate">true</property>
  </blobprovider>
   </extension>
