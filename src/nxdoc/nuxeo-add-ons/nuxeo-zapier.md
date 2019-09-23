@@ -16,7 +16,7 @@ tree_item_index: 3000
 
 The [Nuxeo Zapier Integration](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-zapier) addon is a plugin containing all the components to integrate Nuxeo Platform with the Zapier Platform.
 
-[Zapier](https://zapier.com) provides workflows to automate the use of web applications together. It is often described as a translator between Web APIs.
+[Zapier](https://zapier.com) provides workflows to automate the usage of web applications together. It is often described as a translator between Web APIs.
 
 ![]({{file name='dashboard.png'}} ?w=450,border=true)
 
@@ -26,11 +26,15 @@ The Nuxeo Zapier integration allows end-user to:
 - Configure Nuxeo Platform to subscribe to all Nuxeo Notifications (by default and custom)
 - Commands Nuxeo Platform via Nuxeo Automation operations
 
+## Prerequisites
+
+- Make sure to [register to Nuxeo Online Services]({{page version='' space='nxdoc' page='registering-your-nuxeo-instance'}}#registering-online-using-nuxeoctl) using the `nuxeoctl register` command line.
+
+- The `nuxeo-jsf-ui` addon installed on your instance.
+
 ## Installation
 
 ### From Command Line
-
-First, if it is not done yet, register to Nuxeo Online Services (typicaly, use the `nuxeoctl` command line, `nuxeoctl register` and fill the login and password (or token)
 
 **Linux/Mac**:
 
@@ -52,21 +56,19 @@ Install [the Nuxeo Zapier Integration Package](https://connect.nuxeo.com/nuxeo/s
 
 ### Nuxeo Setup
 
-1. Check nuxeo-jsf-ui is installed (UI to setup cloud consumers is not yet moved to WebUI), install it if needed. This is done as desribed above for `nuxeo-zapier`: `NUXEO_HOME/bin/nuxeoctl mp-install nuxeo-jsf-ui`
+1. Start your server, log in as Administrator/Administrator
 
-2. Start your server, login as Administrator
+1. Go to JSF UI using the url `{server:port}/nuxeo/jsf` and go to  **ADMIN** > **Cloud Services** > **Consumers**
 
-3. Go to JSF using the url `{server:port}/nuxeo/jsf, and gopt to  **ADMIN** > **Cloud Services** > **Consumers**
+1. Click on the **Add** button at the top right and fill in the popup window to configure **nuxeo-zapier**
 
-3. Click on the **Add** button at the top right and fill in the popup window to configure **nuxeo-zapier**
-
-* Name as you want
-* Client ID: uxeo-zapier
-* Client Secret: Add your custom value (to ve reused Zapier's side)
-* Redirect URIs: Enter the URL provided by Zapier when configuring you _Zap_ (see [Zapier documentaiton](https://platform.zapier.com/docs/oauth)).
-  * Typcally: https://zapier.com/dashboard/auth/oauth/return/App{YOUR_APP_ID}CLIAPI/
-* Check the "Auto-grant" box
-* Check the "Activated" box
+  - **Name**: as you want
+  - **Client ID**: `nuxeo-zapier`
+  - **Client Secret**: Add your custom value (to be reused on Zapier's side)
+  - **Redirect URIs**: Enter the URL provided by Zapier when configuring you _Zap_ (see [Zapier documentation](https://platform.zapier.com/docs/oauth)).
+    - Typically: `https://zapier.com/dashboard/auth/oauth/return/App<YOUR_APP_ID>CLIAPI/`
+  - Check the **Auto-grant** box
+  - Check the **Activated** box
 
 ## Usage
 
@@ -74,7 +76,7 @@ You have two general ways to use Zapier with Nuxeo:
 
 **By creating triggers**:
 
-This will let Zapier subscribe to Nuxeo notifications (default or custom) for receiving Nuxeo events to forward to different other applications (Gmail, Trello, Youtube, Facebook, Dropbox, Slack, Salesforce...)
+This will let Zapier subscribe to Nuxeo notifications (default or custom) for receiving Nuxeo events to forward to different other applications (Gmail, Trello, Youtube, Facebook, Dropbox, Slack, Salesforce, etc.)
 
 **By creating actions**:
 
@@ -86,7 +88,7 @@ This will let you post data and/or execute processes on Nuxeo Platform after a t
 
 When creating a Nuxeo trigger or action on Zapier, you will need to authenticate via OAuth 2.
 
-On this screen, set the URL of your Nuxeo instance with the secret you set (as mentioned above in the [Nuxeo Setup](#nuxeo-steup) section). You will be invited to type your credentials for authenticating Zapier against Nuxeo.
+On this screen, set the URL of your Nuxeo instance with the secret you set (as mentioned above in the [Nuxeo Setup](#nuxeo-setup) section). You will be invited to type your credentials for authenticating Zapier against Nuxeo.
 
 ![]({{file name='auth.png'}} ?w=450,border=true)
 
@@ -94,8 +96,8 @@ On this screen, set the URL of your Nuxeo instance with the secret you set (as m
 
 Two Nuxeo triggers are available on the Zapier platform:
 
-- A generic trigger that allows you to select the notification you would like to subscribe to
-- A trigger that notify Zapier each time a document is created for given type(s)
+- A generic trigger that allows you to select the notification you would like to subscribe to.
+- A trigger that notifies Zapier each time a document is created for a given type(s).
 
 ![]({{file name='triggers.png'}} ?w=450,border=true)
 
@@ -111,7 +113,7 @@ Five Nuxeo specific Actions are available on the Zapier platform:
 - Create a document in a given location
 - Update a given document
 - Import a document in a given location
-- Start a workflow on given document(s)
+- Start a workflow on the given document(s)
 
 ![]({{file name='actions.png'}} ?w=450,border=true)
 
@@ -122,7 +124,7 @@ Five Nuxeo specific Actions are available on the Zapier platform:
 There is also one generic action to use any Nuxeo Automation operations:
 
 - You select any operations provided by the platform (default or custom)
-- Be careful to set inputs if required (this form won't be validated by Zapier)
+- Be careful to set inputs if required (Zapier won't validate this form)
 - Don't forget to set at least the required parameters
 
 ![]({{file name='genericoperation.png'}} ?w=450,border=true)
