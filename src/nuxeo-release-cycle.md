@@ -15,6 +15,8 @@ confluence:
     shortlink: I4PZ
     shortlink_source: 'https://doc.nuxeo.com/x/I4PZ'
     source_link: /display/MAIN/Nuxeo+Release+Cycle
+hidden: true
+private: true    
 history:
     -
         author: Solen Guitter
@@ -51,7 +53,6 @@ history:
         date: '2013-06-13 11:46'
         message: ''
         version: '1'
-
 ---
 The release cycle consists in providing two kinds of releases: Fast Track releases and LTS releases.
 
