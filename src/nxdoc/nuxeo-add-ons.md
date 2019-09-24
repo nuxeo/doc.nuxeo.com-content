@@ -1,5 +1,5 @@
 ---
-title: Nuxeo Add-Ons
+title: Addons
 review:
     comment: ''
     date: '2018-01-04'
@@ -205,21 +205,6 @@ Registered access
 </tr>
 <tr>
 <td colspan="1">
-Content federation with Simflofy<br/>
-`nuxeo-simflofy`
-</td>
-<td colspan="1">
-Registered access
-</td>
-<td colspan="1">
-[Documentation]({{page page='nuxeo-simflofy-connector'}})
-</td>
-<td colspan="1">
-[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-simflofy)
-</td>
-</tr>
-<tr>
-<td colspan="1">
 Digital Signature<br/>
 `nuxeo-signature`
 </td>
@@ -359,17 +344,17 @@ Registered access
 </tr>
 <tr>
 <td colspan="1">
-Nuxeo Connect Report Tools Web<br/>
-`nuxeo-connect-tools-report-web`
+Nuxeo Download/Upload with Aspera<br/>
+`nuxeo-aspera`
 </td>
 <td colspan="1">
 Registered access
 </td>
 <td colspan="1">
-[Documentation]({{page page='nuxeo-connect-report-tools'}})
+[Documentation]({{page page='nuxeo-aspera-connector'}})
 </td>
 <td colspan="1">
-[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-connect-tools-report-web)
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-aspera)
 </td>
 </tr>
 <tr>
@@ -476,6 +461,21 @@ Public
 </td>
 <td colspan="1">
 [Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-duoweb-authentication)
+</td>
+</tr>
+<tr>
+<td colspan="1">
+Nuxeo Federation Framework<br/>
+`nuxeo-simflofy`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-federation-framework'}})
+</td>
+<td colspan="1">
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-simflofy)
 </td>
 </tr>
 <tr>
@@ -930,6 +930,18 @@ Public
 [Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-template-rendering-samples)
 </td>
 </tr>
+<tr>
+<td colspan="1">Nuxeo Zapier Integration<br/>
+`nuxeo-zapier`
+</td>
+<td colspan="1">Registered Access</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-zapier'}})
+</td>
+<td colspan="1">
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-zapier)
+</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1004,7 +1016,7 @@ Public
 [Documentation]({{page page='nuxeo-jsf-ui'}})
 </td>
 <td colspan="1">
-[Released for 10.3](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui)</br>
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-jsf-ui)</br>
 Deprecated since LTS 2019 (10.10)
 </td>
 </tr>
@@ -1044,7 +1056,7 @@ Deprecated since LTS 2019 (10.10)
 [Documentation]({{page page='nuxeo-virtual-navigation'}})
 </td>
 <td colspan="1">
-[Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation?version=1.3.3)<br/>
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation?version=1.3.3)<br/>
 Deprecated since LTS 2016 (8.10)  
 </td>
 </tr>
@@ -1078,11 +1090,11 @@ Deprecated since LTS 2019 (10.10)
 </td>
 <td colspan="1">Public</td>
 <td colspan="1">
-[Developer documentation]({{page page='smart-search'}})<br/>
-[User documentation]({{page space='userdoc' page='smart-search'}})
+[Developer documentation]({{page version='810' page='smart-search'}})<br/>
+[User documentation]({{page version='810' space='userdoc' page='smart-search'}})
 </td>
 <td colspan="1">
-[Released for 9.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-smart-search?version=1.9.3)<br/>
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-smart-search?version=1.9.3)<br/>
 Deprecated since LTS 2016 (8.10)
 </td>
 </tr>
