@@ -196,7 +196,7 @@ See [NXP-18051](https://jira.nuxeo.com/browse/NXP-18051) for details about the `
 
 ## Examples
 
-### BatchMananager
+### BatchManager
 
 It relies on the `BatchManagerCache` Transient Store which in fact is not registered so it falls back on the default store, this is to allow overriding the configuration if needed.
 
