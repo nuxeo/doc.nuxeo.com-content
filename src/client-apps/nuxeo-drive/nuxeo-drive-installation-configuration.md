@@ -90,7 +90,7 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 2. Installation
 
    ```sh
-   git clone --depth=1 https://github.com/nuxeo/nuxeo-drive.git
+   git clone https://github.com/nuxeo/nuxeo-drive.git
    cd nuxeo-drive
    git checkout release-4.1.0  # Or whatever release you want, starting with 4.0.0 and newer
 
