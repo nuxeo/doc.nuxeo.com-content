@@ -92,7 +92,7 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
    ```sh
    git clone --depth=1 https://github.com/nuxeo/nuxeo-drive.git
    cd nuxeo-drive
-   git checkout "release-4.1.0"  # Or whatever release you want, starting with 4.0.0 and newer
+   git checkout release-4.1.0  # Or whatever release you want, starting with 4.0.0 and newer
 
    export WORKSPACE="$(pwd)"
    ./tools/linux/deploy_jenkins_slave.sh --install
