@@ -196,7 +196,7 @@ The garbage collection:
 
 ## Example Services Using a Transient Store
 
-### BatchMananager
+### BatchManager
 
 It relies on the `BatchManagerCache` transient store which in fact is not registered so it falls back on the `default` transient store, this is to allow overriding the configuration if needed.
 
