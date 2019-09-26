@@ -1,23 +1,26 @@
 root: true
 
 env:
-    node: true
+  node: true
+  es6: true
+
+parserOptions:
+  ecmaVersion: 2018
+  sourceType: module
+  ecmaFeatures:
+    globalReturn: true
+    impliedStrict: true
 
 extends:
-    - "eslint:recommended"
-    - ".eslintdefaults"
+  - "eslint:recommended"
+  - prettier
+
+plugins:
+  - prettier
 
 rules:
-    brace-style: [2, "stroustrup", { allowSingleLine: true }]
-    callback-return: [2, ["cb", "callback", "next"]]
-    camelcase: 0
-    comma-spacing: [2, {"before": false, "after": true}]
-    comma-style: [2, "last"]
-    func-style: [2, "expression"]
-    key-spacing: [2, {align: "colon", beforeColon: false, afterColon: true}]
-    no-console: 1
-    no-multi-spaces: [1, {exceptions: {VariableDeclarator: true}}]
-    no-underscore-dangle: 0
-    quotes: [2, "single", "avoid-escape"]
-    space-before-function-paren: [2, "always"]
-    valid-jsdoc: [1, {requireParamDescription: false, requireReturnDescription: false}]
+  "prettier/prettier": error
+  camelcase: 0
+  no-console: 1
+  quotes: [2, "single", "avoid-escape"]
+  valid-jsdoc: [1, {requireParamDescription: false, requireReturnDescription: false}]
