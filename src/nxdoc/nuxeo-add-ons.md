@@ -330,21 +330,6 @@ Public
 </tr>
 <tr>
 <td colspan="1">
-Nuxeo Annotations with ARender<br/>
-`nuxeo-arender`
-</td>
-<td colspan="1">
-Registered access
-</td>
-<td colspan="1">
-[Documentation]({{page page='nuxeo-arender-connector'}})
-</td>
-<td colspan="1">
-[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender)
-</td>
-</tr>
-<tr>
-<td colspan="1">
 Nuxeo Download/Upload with Aspera<br/>
 `nuxeo-aspera`
 </td>
@@ -462,6 +447,21 @@ Public
 </td>
 <td colspan="1">
 [Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-duoweb-authentication)
+</td>
+</tr>
+<tr>
+<td colspan="1">
+Nuxeo Enhanced Viewer<br/>
+`nuxeo-arender`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-enhanced-viewer'}})
+</td>
+<td colspan="1">
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender)
 </td>
 </tr>
 <tr>
