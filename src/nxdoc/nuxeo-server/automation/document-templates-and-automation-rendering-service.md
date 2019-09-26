@@ -102,4 +102,4 @@ By using MVEL, you also gain access to its whole functionalities. For example, u
 @end{}
 ```
 
-Have a look at the [MVEL manual](http://mvel.codehaus.org/Getting+Started+for+2.0) for more information about it.
+Have a look at the [MVEL Documentation](http://mvel.documentnode.com/#language-guide-for-2.0) for more information about it.
