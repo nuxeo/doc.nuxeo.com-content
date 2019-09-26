@@ -1,6 +1,6 @@
 ---
-title: Nuxeo Annotations with ARender
-description: 'The Nuxeo Annotations addon allows users to preview and annotate any content stored in the Nuxeo repository: Office documents, PDF, images, videos with the ARender previewer, from Arondor.'
+title: Nuxeo Enhanced Viewer
+description: 'Nuxeo Enhanced Viewer addon allows users to preview and annotate any content stored in the Nuxeo repository: Office documents, PDF, images, videos with the ARender previewer, from Arondor.'
 review:
     comment: ''
     date: '2019-01-21'
@@ -8,13 +8,13 @@ review:
 labels:
     - arender-connector
 toc: true
-tree_item_index: 1050
+tree_item_index: 1505
 ---
 
 The more people involved on a document, the more difficult it becomes to collaborate and communicate because every participant has their own device (PC, mobile, tablet, etc.) and their own tools, which means different formats to preview.
 
 {{! excerpt}}
-The Nuxeo Annotations addon allows users to preview and annotate any document stored in the Nuxeo repository: Office documents, PDF, images, videos, etc., on any device with the ARender previewer from [Arondor](https://www.arondor.com/en/).
+The Nuxeo Enhanced Viewer addon allows users to preview and annotate any document stored in the Nuxeo repository: Office documents, PDF, images, videos, etc., on any device with the ARender previewer from [Arondor](https://www.arondor.com/en/).
 {{! /excerpt}}
 
 ARender software comprises two parts:
@@ -102,7 +102,7 @@ POST /arendergwt/weather?format=json
 
 ### Nuxeo Configuration
 
-The ARender connector relies on a [JWT](https://jwt.io/) to request an OAuth2 token for authentication (See [OAuth2]({{page page='using-oauth2'}}) documentation page for more information).
+The Nuxeo Enhanced Viewer relies on a [JWT](https://jwt.io/) to request an OAuth2 token for authentication (See [OAuth2]({{page page='using-oauth2'}}) documentation page for more information).
 You need to define a secret, `nuxeo.jwt.secret` in your `nuxeo.conf`, to enable it.
 
 Authentication from ARender to Nuxeo relies on a shared secret between the two applications. This secret is defined with the property `nuxeo.arender.secret` in your `nuxeo.conf`.
@@ -110,7 +110,6 @@ Authentication from ARender to Nuxeo relies on a shared secret between the two a
 {{#> callout type='info' heading='Shared secret environment variable'}}
 If using the Docker image for the ARender previewer, you can also define this shared secret through an environment variable `nuxeoArenderSecretEnv`.
 {{/callout}}
-
 
 If your ARender rendition server doesn't run on same host as Nuxeo's Tomcat, you can change the ARender rendition URL by setting `arender.server.rendition.hosts` in your `nuxeo.conf` (default value is `http://localhost:8761`).
 
@@ -148,7 +147,7 @@ Examples of possible configurations:
 
 ## Functional Overview
 
-Once the ARender addon is properly installed and configured a new **Annotations** tab is available on each document with the picture or video facet:
+Once the Nuxeo Enhanced Viewer is properly installed and configured a new **Annotations** tab is available on each document with the picture or video facet:
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Annotations with ARender/annotation-tab.png
@@ -207,7 +206,7 @@ Repeat mode available. </td>
     name: annotations-repeat-mode.png
     addins#icon#up_to_date
 --}}
-![annotations-repeat-mode.png](nx_asset://e1db7421-d37e-4e97-be25-cdfdc3483b66 ?w=20) meaning that you can add several annotations is a row. To disable the repeat mode, click on the annotation icon again.
+![annotations-repeat-mode.png](nx_asset://e1db7421-d37e-4e97-be25-cdfdc3483b66 ?w=20) meaning that you can add several annotations in a row. To disable the repeat mode, click on the annotation icon again.
 
 Other buttons are available on the top bar to optimize the visualization of the document: zoom, rotation, full screen, pagination, height and width adjustment, etc.
 
@@ -378,7 +377,7 @@ Once your choice is made, click on “Ok” button, and the page(s) will be prin
 This feature only allows you to compare the **text** of two files.
 {{/callout}}
 
-With the ARender addon, you can compare the text of two different versions of a file. By default, ARender compares the binary stored in the `file:content` property corresponding to the main file. You can access this feature from the [Compare Versions Screen]({{page version='' space='userdoc' page='compare'}}) by clicking on the **eye icon**.
+With the Nuxeo Enhanced Viewer, you can compare the text of two different versions of a file. By default, the addon compares the binary stored in the `file:content` property corresponding to the main file. You can access this feature from the [Compare Versions Screen]({{page version='' space='userdoc' page='compare'}}) by clicking on the **eye icon**.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/compare-arender
