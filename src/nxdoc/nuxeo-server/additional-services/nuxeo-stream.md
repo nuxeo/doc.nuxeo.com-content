@@ -2,24 +2,24 @@
 title: Nuxeo Stream
 review:
     comment: ''
-    date: '2017-12-07'
+    date: '2019-07-11'
     status: ok
 labels:
     - lts2017-ok
+    - lts2019-ok
 toc: true
 tree_item_index: 1100
 ---
-{{! excerpt}}
 
+{{! excerpt}}
 Nuxeo Stream provides a Log storage abstraction and a Stream processing pattern.
+{{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+Watch the related course on Nuxeo University
 - [LTS 2017 New Features](https://university.nuxeo.com/learn/public/course/view/elearning/126/lts-2017-new-features).
 ![]({{file name='university-nuxeo-stream.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
-
-{{! /excerpt}}
 
 ## Log and Stream Processing
 
@@ -71,7 +71,6 @@ This `StreamService` service provides:
 - A way to [register stream processing](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-runtime/nuxeo-runtime-stream#stream-processing).
   By providing a class that define a topology of computations, the service will take care of creating a Pool of thread that run the processing.
 
-
 ### Record Codec
 
 At some point the record object need to be encoded to binary and decoded (aka codec).
@@ -88,7 +87,6 @@ You can choose between different codec:
 
 `avro` and `avroConfluent` refer to a schema fingerprint so they are interoperable format
 that support [forward and backward compatibility](https://docs.confluent.io/current/avro.html).
-
 
 When using the computation pattern the record is always a `org.nuxeo.lib.stream.computation.Record`
 that contains the following information:
@@ -220,12 +218,11 @@ nuxeo.pubsub.provider=stream
 nuxeo.stream.pubsub.log.codec=avroBinary
 ```
 
-
 ### Stream Importer
 
 The `nuxeo-importer-stream` which is part of the `nuxeo-platform-importer` addon use Log to run document importer.
 
-Please visit [nuxeo-importer-stream README](https://github.com/nuxeo/nuxeo-platform-importer/tree/master/nuxeo-importer-stream)
+Please visit [nuxeo-importer-stream README](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-platform-importer/nuxeo-importer-stream)
 for more information.
 
 ### Bulk Action Framework
