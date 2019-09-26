@@ -11,15 +11,19 @@
   },
   "dependencies": {
     "co": "^4.6.0",
-    "lodash.defaultsdeep": "^4.6.0",
-    "node-yaml-config": "0.0.4",
-    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v10.3.0",
+    "lodash.defaultsdeep": "^4.6.1",
+    "node-yaml-config": "0.0.5",
+    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v12.2.4",
     "thenify": "^3.2.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.24.6",
+    "browser-sync": "^2.26.7",
     "bs-fullscreen-message": "^1.1.0",
-    "tap": "^12.0.1"
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "prettier": "^1.14.2",
+    "tap": "^14.6.5"
   },
   "main": "build.js",
   "config": {
@@ -39,7 +43,8 @@
     "metalsmith": "node .",
     "server": "browser-sync start --server site --browser=$npm_package_config_browser",
     "server_reload": "browser-sync reload",
-    "yaml_lint": "js-yaml -t > /dev/null"
+    "yaml_lint": "js-yaml -t > /dev/null",
+    "remove_history": "./node_modules/nuxeo-docs-builder/bin/remove-history"
   },
   "repository": {
     "type": "git",
