@@ -10,9 +10,7 @@ toc: true
 tree_item_index: 1100
 ---
 {{! excerpt}}
-
 Nuxeo Stream provides a Log storage abstraction and a Stream processing pattern.
-
 {{! /excerpt}}
 
 ## Log and Stream Processing
@@ -64,7 +62,6 @@ This `StreamService` service provides:
 
 - A way to [register stream processing](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-runtime/nuxeo-runtime-stream#stream-processing).
   By providing a class that define a topology of computations, the service will take care of creating a Pool of thread that run the processing.
-
 
 ## Integration
 
@@ -142,5 +139,5 @@ This requires some work and WorkManager usage adaptations, this is still a work 
 
 The `nuxeo-importer-stream` which is part of the `nuxeo-platform-importer` addon use Log to run document importer.
 
-Please visit [nuxeo-importer-stream README](https://github.com/nuxeo/nuxeo-platform-importer/tree/master/nuxeo-importer-stream)
+Please visit [nuxeo-importer-stream README](https://github.com/nuxeo/nuxeo/tree/9.10/addons/nuxeo-platform-importer/nuxeo-importer-stream)
 for more information.
