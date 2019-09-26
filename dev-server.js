@@ -1,5 +1,4 @@
 'use strict';
-/* eslint-env es6 */
 
 // Set Debugging up
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
