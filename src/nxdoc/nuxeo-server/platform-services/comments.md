@@ -42,7 +42,7 @@ Comments and annotations can have the facet `ExternalEntity`. When they have thi
 - external entity id
 - external entity
 - external entity origin</br>
-With this facet, it is possible to handle external content such as annotations made in [ARender]({{page space='nxdoc' page='nuxeo-enhanced-viewer'}}) for instance.
+With this facet, it is possible to handle external content such as annotations made in [Nuxeo Enhanced Viewer]({{page space='nxdoc' page='nuxeo-enhanced-viewer'}}) for instance.
 
 Comments and annotations are stored in a `Comments` hidden folder under the domain of commented document. If there's no domain, folder is placed under the root.
 
