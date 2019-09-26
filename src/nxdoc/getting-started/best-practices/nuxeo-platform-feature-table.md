@@ -668,7 +668,7 @@ The tables below use the following notation:
 </tr>
 <tr>
     <td colspan="1">Compare Document</td>
-    <td colspan="1">[Nuxeo ARender Connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender-connector)</td>
+    <td colspan="1">[Nuxeo Enhanced Viewer](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender-connector)</td>
     <td>N/A</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
@@ -1360,7 +1360,7 @@ The tables below use the following notation:
 </tr>
 <tr>
     <td colspan="1">Annotations</td>
-    <td colspan="1">[ARender Connector]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer'}})</td>
+    <td colspan="1">[Nuxeo Enhanced Viewer]({{page version='' space='nxdoc' page='nuxeo-enhanced-viewer'}})</td>
     <td>N/A</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
