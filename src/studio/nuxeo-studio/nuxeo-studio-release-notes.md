@@ -13,36 +13,46 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Upcoming Changes
 
-### More Consistent Styling in Layouts
+### Layout Inheritance
 
-Newly generated layouts will better reflect the Web UI default configuration, to check how your configuration will look like once deployed and provide a consistent experience.
+In Studio Designer, you will generate layouts that mimic the doctype you inherit from. If your document type inherits from File for instance, you will have layouts that look just like a Web UI file instead of a generic one.
 
-For your existing configuration, a simple tweak can do the bulk of the work!</br>
- In a layout, use the **Switch to code** option and replace the following specific padding in your layout:
+We are taking advantage of this work to better manage how default document types are handled too: currently if you try to override a Folderish document, the view layout does not allow to configure the columns to display. With that change you will get a view layout you can actually tweak, just like any other.
 
-```
-<style>
-*[role=widget] {
-  padding: 5px;
-}
-</style>
-```
+### Easier Access to Other Services
+To facilitate access to other services you may need: documentation, university, etc, the Studio header bar will be updated. Here's what to expect:
 
-By the Nuxeo styles instead:
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-release-notes-2019-09/modeler-designer
+    name: modeler designer.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![modeler-designer](nx_asset://cf076a93-fbb8-4ae4-bab4-cad0da17fe85)
 
-```
-<style include="nuxeo-styles"></style>
-```
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-release-notes-2019-09/help-button
+    name: help button.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![help-button](nx_asset://7473bacf-99cf-4e49-9339-7b54f9638a44)
 
-Any custom styling you need can be kept inside the style tag.
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-release-notes-2019-09/app-launcher
+    name: app launcher.png
+    studio_designer#screenshot#up_to_date
+--}}
+![app-launcher](nx_asset://10a33333-2ee6-4e70-b147-9823a718a38f)
 
-{{#> callout type='note' heading='Update'}}
-The tag to use is now `nuxeo-styles` instead of `nuxeo-layout-styles` as previously announced.
-{{/callout}}
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-release-notes-2019-09/user-account
+    name: user account.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![user-account](nx_asset://1dba790e-d966-4c93-9e99-08774bcc6ae5)
 
 ### More Upcoming Changes
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.18.0','3.19.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.21.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
@@ -61,6 +71,7 @@ The tag to use is now `nuxeo-styles` instead of `nuxeo-layout-styles` as previou
 
 | Release Date                                           | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [August / September 2019]({{page page='studio-updates-2019-09'}})      | Package listing performance improvements, automation scripting scrolling bug fixed |
 | [July 2019]({{page page='studio-updates-2019-07'}})      | Configure searches on file type or size, better help for page providers configuration |
 | [May/June 2019]({{page page='studio-updates-2019-05-and-06'}})      | More consistent layouts, new options in page provider screen. |
 | [April 2019]({{page page='studio-updates-2019-04'}})      | Support to select all schemas in page providers, improved support for workflow graph definition. |
