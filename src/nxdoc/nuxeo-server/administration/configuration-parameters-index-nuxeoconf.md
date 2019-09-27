@@ -2400,7 +2400,7 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 <tr>
 <td colspan="1">`kafka.max.poll.records`</td>
 <td colspan="1">Maximum number of records to read per poll</td>
-<td colspan="1">`5`</td>
+<td colspan="1">`2`</td>
 <td colspan="1">Since 9.3</td>
 </tr>
 <tr>
