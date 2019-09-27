@@ -102,7 +102,7 @@ This addon is deprecated since Nuxeo Platform LTS 2019.
 {{! multiexcerpt name='JSF-UI-required'}}
 {{#> callout type='note' heading='JSF UI Deprecation' }}
 This requires to have the JSF UI addon installed on your server that is deprecated since Nuxeo Platform LTS 2019.</br>
-Please refer to the [Web UI documentation]({{page version='' space='nxdoc' page='web-ui'}}).
+Please refer to the [Web UI documentation](https://doc.nuxeo.com/nxdoc/web-ui/).
 {{/callout}}
 {{! /multiexcerpt}}
 
