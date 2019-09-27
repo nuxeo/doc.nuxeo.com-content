@@ -91,7 +91,7 @@ Here are some important properties:
   | `max.poll.interval.ms` | `300000` | Consumers that don't call poll during this delay are removed from the group. |
   | `session.timeout.ms` | `10000` | Consumers that don't send heartbeat during this delay are removed from the group. |
   | `heartbeat.interval.ms` | `3000` | Interval between heartbeats. |
-  | `max.poll.records` | `500` | Can be adjusted to make sure the poll interval is respected. |
+  | `max.poll.records` | `2` | Can be adjusted to make sure the poll interval is respected. |
   | `group.initial.rebalance.delay.ms` | `3000` | Delay for the initial consumer rebalance. |
   | `subscribe.disable` | `false` | Not a Kafka option, used by the module to disable the dynamic assignment, when this option is `true` LogManager will only support static partition assignment. |
 
