@@ -17,38 +17,40 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 In Studio Designer, you will generate layouts that mimic the doctype you inherit from. If your document type inherits from File for instance, you will have layouts that look just like a Web UI file instead of a generic one.
 
-We are taking advantage of this work to better manage how default document types are handled too: currently if you try to override a Folderish document, the view layout does not allow to configure the columns to display. With that change you will get a view layout you can actually tweak, just like any other.
+We are taking advantage of this work to better manage how default document types are handled too: currently if you try to override a folderish document, the view layout does not allow to configure the columns to display. With that change you will get a view layout you can actually tweak, just like any other.
 
 ### Easier Access to Other Services
-To facilitate access to other services you may need: documentation, university, etc, the Studio header bar will be updated. Here's what to expect:
+
+To facilitate navigation to other services you may need access to: documentation, university, etc. </br>
+The Studio header bar will be updated, here's what to expect:
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-release-notes-2019-09/modeler-designer
-    name: modeler designer.png
+    name: modeler-designer.png
     studio_modeler#screenshot#up_to_date
 --}}
-![modeler-designer](nx_asset://cf076a93-fbb8-4ae4-bab4-cad0da17fe85)
+![modeler-designer](nx_asset://cf076a93-fbb8-4ae4-bab4-cad0da17fe85 ?w=20)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-release-notes-2019-09/help-button
-    name: help button.png
+    name: help-button.png
     studio_modeler#screenshot#up_to_date
 --}}
-![help-button](nx_asset://7473bacf-99cf-4e49-9339-7b54f9638a44)
+![help-button](nx_asset://7473bacf-99cf-4e49-9339-7b54f9638a44 ?w=50)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-release-notes-2019-09/app-launcher
-    name: app launcher.png
+    name: app-launcher.png
     studio_designer#screenshot#up_to_date
 --}}
-![app-launcher](nx_asset://10a33333-2ee6-4e70-b147-9823a718a38f)
+![app-launcher](nx_asset://10a33333-2ee6-4e70-b147-9823a718a38f ?w=50)
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-release-notes-2019-09/user-account
-    name: user account.png
+    name: user-account.png
     studio_modeler#screenshot#up_to_date
 --}}
-![user-account](nx_asset://1dba790e-d966-4c93-9e99-08774bcc6ae5)
+![user-account](nx_asset://1dba790e-d966-4c93-9e99-08774bcc6ae5 ?w=50)
 
 ### More Upcoming Changes
 
