@@ -173,7 +173,7 @@ The workflow task layout lets the user edit some of the workflow's variables (ei
         studio_modeler#screenshot#up_to_date
     --}}
     ![technical-validation-layout1.png](nx_asset://a8fceac5-6af1-4647-b501-9a2312cd57b9 ?w=650,border=true)
-3.  Save you work.
+3.  Save your work.
 4.  Click on the **Configure layouts in Designer** button.
     {{!--     ### nx_asset ###
         path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/technical-validation-layout2.png
