@@ -2,7 +2,7 @@
 title: Nuxeo Drive Update Site
 review:
     comment: ''
-    date: '2019-03-15'
+    date: '2019-10-04'
     status: ok
 labels:
     - lts2016-ok
@@ -98,11 +98,9 @@ history:
 We wrote our own auto-update framework knowing:
 
 - The code freeze is done with PyInstaller;
+- The GNU/Linux binary uses AppImageTool commands to generate a `.AppImage`;
 - The macOS installer uses OS-specific commands to generate a `.dmg`;
 - The Windows installer uses the Inno Setup Compiler that outputs a single `.exe`.
-
-Currently, only macOS and Windows are supported.
-There is no built-in support for auto-updater on GNU/Linux.
 
 ## Server
 
@@ -114,12 +112,15 @@ The server side tree is quite simple:
 
     drive-updates/
         alpha/
+            nuxeo-drive-2.0.0.13-x86_64.AppImage
             nuxeo-drive-2.0.0.13.dmg
             nuxeo-drive-2.0.0.13.exe
         beta/
+            nuxeo-drive-3.1.1-x86_64.AppImage
             nuxeo-drive-3.1.1.dmg
             nuxeo-drive-3.1.1.exe
         release/
+            nuxeo-drive-3.1.0-x86_64.AppImage
             nuxeo-drive-3.1.0.dmg
             nuxeo-drive-3.1.0.exe
         nuxeo-drive.dmg
@@ -134,6 +135,7 @@ The server side tree is quite simple:
 
 ### Files
 
+- `nuxeo-drive-x86_64.AppImage`: symbolic link to the latest official release for GNU/Linux;
 - `nuxeo-drive.dmg`: symbolic link to the latest official release for macOS;
 - `nuxeo-drive.exe`: symbolic link to the latest official release for Windows;
 - `versions.yml`: list of available versions and their characteristics (the format used is [YAML](http://yaml.org/)).
@@ -146,6 +148,7 @@ Example of `version.yml` content:
         type: alpha
         checksum:
             also: SHA1
+            appimage: ...
             dmg: ...
             exe: ...
 
@@ -154,6 +157,7 @@ Example of `version.yml` content:
         type: release
         checksum:
             algo: SHA512
+            appimage: ...
             dmg: ...
             exe: ...
 
@@ -162,6 +166,7 @@ Example of `version.yml` content:
         type: beta
         checksum:
             algo: MD5
+            appimage: ...
             dmg: ...
             exe: ...
 
@@ -170,6 +175,7 @@ Example of `version.yml` content:
         type: beta
         checksum:
             algo: MD5
+            appimage: ...
             dmg: ...
             exe: ...
 
@@ -178,6 +184,7 @@ Each entry describes a version with:
 - `type`: the release type, either an `alpha`, a `beta` or a `release`. **Mandatory**.
 - `checksum`: list of checksums for related files. **Mandatory**.
   - `algo`: the algorithm used, it must be one of the [hashlib](https://docs.python.org/2/library/hashlib.html) module (will use SHA256 by default).
+  - `appimage`: the checksum of the file `.AppImage`. **Mandatory** if you provide a GNU/Linux binary.
   - `dmg`: the checksum of the file `.dmg`. **Mandatory** if you provide a macOS installer.
   - `exe`: the checksum of the file `.exe`. **Mandatory** if you provide a Windows installer.
 - `min`: the minimum Nuxeo version required for this release to work with. **Mandatory**.
@@ -207,6 +214,13 @@ Process:
 5. Verify the checksum of the downloaded file.
 
 Then, actions taken are OS-specific.
+
+#### GNU/Linux
+
+The process is quite simple:
+
+1. Move the new `nuxeo-drive-x.y.z-x86_64.AppImage` file next to the current running AppImage file;
+2. Restart Drive using the new executable.
 
 ### macOS
 

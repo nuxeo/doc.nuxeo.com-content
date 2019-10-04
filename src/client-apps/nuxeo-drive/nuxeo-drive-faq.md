@@ -132,6 +132,25 @@ Client | 7.10 | 8.10 | 9.10 | 10.10
 3.x | HF43 | HF33 | HF12 | HF11
 4.x | HF47 | HF39 | HF22 | HF11
 
+## What are the supported OS?
+
+Nuxeo Drive is guaranted to run on:
+
+- GNU/Linux, 64 bits
+- macOS >= 10.11, 64 bits
+- Windows 7, both 32 and 64 bits
+- Windows 8, both 32 and 64 bits
+- Windows 8.1, both 32 and 64 bits
+- Windows 10, both 32 and 64 bits
+
+### Supported GNU/Linux Distributions
+
+This is a table of minimum supported versions.
+
+| Nuxeo Drive | Debian | Ubuntu | Fedora | Manjaro
+|---|---|---|---|---
+| 4.2.0+ | 10 | 16.04 | 29 | 18.1.0
+
 ## What Actions Trigger a Synchronization?
 
 ### Server Actions
