@@ -118,7 +118,7 @@ This page non exhaustively lists frequently asked questions about Nuxeo Drive
 
 ## What are the required Nuxeo versions/hotfixes when using a Drive client version?
 
-In order to be fully compatible with Nuxeo Drive, the  minimum required version of the `nuxeo-drive` server addon is:
+In order to be fully compatible with Nuxeo Drive, the minimum required version of the `nuxeo-drive` server addon is:
 
 - **7.10**: 1.5.7
 - **8.10**: 1.6.6
@@ -134,7 +134,7 @@ Client | 7.10 | 8.10 | 9.10 | 10.10
 
 ## What are the supported OS?
 
-Nuxeo Drive is guaranted to run on:
+Nuxeo Drive is guaranteed to run on:
 
 - GNU/Linux, 64 bits
 - macOS >= 10.11, 64 bits
@@ -145,7 +145,7 @@ Nuxeo Drive is guaranted to run on:
 
 ### Supported GNU/Linux Distributions
 
-This is a table of minimum supported versions.
+Minimum supported versions:
 
 | Nuxeo Drive | Debian | Ubuntu | Fedora | Manjaro
 |---|---|---|---|---
@@ -272,7 +272,7 @@ Currently Nuxeo Drive has some limitations:
 
 - The target use case is not to synchronize a huge tree on a lot of desktops: Nuxeo Drive is not optimized to replicate the Document Repository on each desktop.
 - Complex synchronization cases where you delete files that are being synchronized.
-- Drive will generates errors and will ignore files that are duplicates on the server. Thus, it is not recommended to have an extensive usage of Nuxeo Drive with plateform use cases implying file duplicates.
+- Drive will generates errors and will ignore files that are duplicates on the server. Thus, it is not recommended to have an extensive usage of Nuxeo Drive with platform use cases implying file duplicates.
 
 {{! /multiexcerpt}}
 
