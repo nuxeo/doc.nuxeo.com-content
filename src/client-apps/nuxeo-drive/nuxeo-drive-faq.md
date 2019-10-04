@@ -216,7 +216,7 @@ Since the version `1.3.1216` of Nuxeo Drive client, the synchronization delay is
 
 ## Access Control Popup on macOS
 
-> "Nuxeo Drive" wants access to control "Finder". Allowing control will provide access to documents and data in "Finder", and to perform actions within that app."
+> "Nuxeo Drive" wants access to control "Finder". Allowing control will provide access to documents and data in "Finder", and to perform actions within that app.
 
 ![]({{file name='drive-macos-security-finder.png' page='nuxeo-drive'}})
 
