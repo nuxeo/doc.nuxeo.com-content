@@ -195,6 +195,14 @@ Since the version `1.3.1216` of Nuxeo Drive client, the synchronization delay is
 
 3. Finally, if you want to change the log verbosity for all the Nuxeo Drive clients, you can update the `log_level_file` setting of the [Nuxeo Drive global configuration]({{page page='how-to-configure-nuxeo-drive-globally'}}).
 
+## Access Control Popup on macOS
+
+> "Nuxeo Drive" wants access to control "Finder". Allowing control will provide access to documents and data in "Finder", and to perform actions within that app."
+
+![]({{file name='drive-macos-security-finder.png' page='nuxeo-drive'}})
+
+Starting with macOS Mojave, the security layer has been enforced. And so when an application is trying to use another application or service, this new pop-up appears. Just click on <b>OK</b> and it will not show again.
+
 ## How to Enable Icon Overlays on macOS
 
 They are available since Nuxeo Drive 3.1.0 and should be enabled by default. If not, you can do it manually in **System Preferences** > **Extensions**:
