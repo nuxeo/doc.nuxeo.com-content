@@ -277,6 +277,14 @@ nuxeo.s3storage.cacheminage=3600
 
 `cachecount` and `cacheminage` are available since Nuxeo 7.10-HF03.
 
+#### Digest algorithm
+
+By default the blobs are stored in S3 based on their MD5 digest (hash). The digest algorithm can be changed if required, for instance:
+
+```
+nuxeo.s3storage.digest=SHA-256
+```
+
 #### Download From S3 Options
 
 You can configure downloads to be directly served to the user from S3 without going through Nuxeo. To do so, use:
@@ -403,6 +411,7 @@ The above configuration uses `nuxeo.conf` properties prefixed with `nuxeo.s3stor
     <property name="region">us-west-1</property> <!-- optional -->
     <property name="bucket">your_s3_bucket_name</property>
     <property name="bucket_prefix">myprefix/</property>
+    <property name="digest">SHA-256/</property>
     <property name="directdownload">true</property>
     <property name="directdownload.expire">3600</property>
     <property name="cachesize">100MB</property>
