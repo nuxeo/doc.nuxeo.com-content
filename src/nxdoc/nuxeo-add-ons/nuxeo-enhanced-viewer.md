@@ -3,7 +3,7 @@ title: Nuxeo Enhanced Viewer
 description: 'Nuxeo Enhanced Viewer addon allows users to preview and annotate any content stored in the Nuxeo repository: Office documents, PDF, images, videos with the ARender previewer, from Arondor.'
 review:
     comment: ''
-    date: '2019-01-21'
+    date: '2019-10-08'
     status: ok
 labels:
     - arender-connector
@@ -23,7 +23,7 @@ ARender software comprises two parts:
 
 ARender rendition server needs to be installed on a dedicated host.
 
-ARender previewer is extended by Nuxeo to integrate the ARender previewer with the Nuxeo REST API -- it corresponds to [nuxeo-arender-connector-hmi](https://github.com/nuxeo/nuxeo-arender-connector/tree/master/nuxeo-arender-connector-hmi) in ARender Connector. It is built as a war file to deploy.
+ARender previewer is extended by Nuxeo to integrate the ARender previewer with the Nuxeo REST API, it corresponds to [nuxeo-arender-connector-hmi](https://github.com/nuxeo/nuxeo-arender-connector/tree/master/nuxeo-arender-connector-hmi) in ARender Connector. It is built as a war file to deploy.
 
 Here's a chart illustrating the actions during the first connection to ARender:
 {{!--     ### nx_asset ###
@@ -51,13 +51,13 @@ You should always use the same version for Docker images and marketplace package
 You can also install both parts directly on dedicated hosts by following [ARender Documentation](https://arender.io/doc/current4/documentation/setup/index-setup.html).
 
 All communication is done over HTTP; we recommend using HTTPS for production. Below are the ports for each part:
-- previewer is reachable on port 8080 when exposed directly by Tomcat; we recommend to setup an Apache or Nginx in front of it
-- rendition is reachable on port 8761
+- previewer is reachable on port `8080` when exposed directly by Tomcat; we recommend to setup an Apache or Nginx in front of it.
+- rendition is reachable on port `8761`.
 
 Below are the requirements for firewall rules / Docker network setup:
-- Nuxeo needs to reach ARender previewer
-- ARender previewer needs to reach ARender rendition
-- ARender previewer needs to reach Nuxeo
+- Nuxeo needs to reach ARender previewer,
+- ARender previewer needs to reach ARender rendition,
+- ARender previewer needs to reach Nuxeo.
 
 ### Embedded Installation - Development
 
@@ -65,6 +65,7 @@ For development purposes, run the rendition Docker image and bind its port to lo
 ```
 docker run -p 8761:8761 -it ARENDER_DOCKER_IMAGE_ID
 ```
+
 Then install the [nuxeo-arender-connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender-connector) marketplace package.
 
 It installs the ARender integration inside Nuxeo and the ARender previewer inside Nuxeo's Tomcat.
@@ -79,7 +80,7 @@ Rendition URLs can be passed to ARender previewer with the `renditionHostEnv` en
 
 {{#> callout type='info' heading='ARender previewer behavior'}}
 ARender previewer owns in its cache a session corresponding to the t-uple user, document and blob.</br>
-You'll need to ask for a new session if the previewer crashes (action 1. on [chart](#functional-flow)).
+You'll need to ask for a new session if the previewer crashes (action 1. on the chart above).
 {{/callout}}
 
 {{#> callout type='warning' heading='ARender previewer clustering'}}
@@ -102,7 +103,7 @@ POST /arendergwt/weather?format=json
 
 ### Nuxeo Configuration
 
-The Nuxeo Enhanced Viewer relies on a [JWT](https://jwt.io/) to request an OAuth2 token for authentication (See [OAuth2]({{page page='using-oauth2'}}) documentation page for more information).
+The Nuxeo Enhanced Viewer relies on a [JWT](https://jwt.io/) to request an OAuth 2 token for authentication (See [OAuth 2]({{page page='using-oauth2'}}) documentation page for more information).
 You need to define a secret, `nuxeo.jwt.secret` in your `nuxeo.conf`, to enable it.
 
 Authentication from ARender to Nuxeo relies on a shared secret between the two applications. This secret is defined with the property `nuxeo.arender.secret` in your `nuxeo.conf`.
@@ -117,16 +118,17 @@ You can change the ARender previewer URL used by Nuxeo to open ARender sessions 
 
 ### ARender Previewer Configuration
 
-For an on-host installation, you can follow the [ARender Documentation](https://arender.io/doc/current4/documentation/setup/presentation/configuration.html).
+- For an on-host installation, you can follow the [ARender Documentation](https://arender.io/doc/current4/documentation/setup/presentation/configuration.html).
 
-For an embedded installation, you can modify the `arender-hmi.properties` files under `NUXEO_HOME/nxserver/config/ARenderConfiguration` folder.
+- For an embedded installation, you can modify the `arender-hmi.properties` files under `NUXEO_HOME/nxserver/config/ARenderConfiguration` folder.
 
-For a Docker installation, you can extend our image and copy your properties file to `/docker-entrypoint-init.d/arender.properties`:
-```
-FROM dockerin-arender.nuxeo.com:443/arender-previewer:MP_VERSION
+- For a Docker installation, you can extend our image and copy your properties file to `/docker-entrypoint-init.d/arender.properties`:
 
-COPY arender.properties /docker-entrypoint-init.d/arender.properties
-```
+  ```
+  FROM dockerin-arender.nuxeo.com:443/arender-previewer:MP_VERSION
+
+  COPY arender.properties /docker-entrypoint-init.d/arender.properties
+  ```
 
 You can also modify the `arender-hmi.properties` which is deployed inside the `/ARenderConfiguration` in the previewer Docker container.
 
@@ -134,9 +136,10 @@ These configuration files let you customize the ARender interface to fit specifi
 
 Examples of possible configurations:
 
-- Add or remove buttons from the ARender interface
-- Modify ARender behaviors on specific user actions (like entering a comment when the user clicks on "Enter")
-- Reference a new theme (by creating your custom CSS file)
+- Add or remove buttons from the ARender interface,
+- Modify ARender behaviors on specific user actions (like entering a comment when the user clicks on "Enter"),
+- Reference a new theme (by creating your custom CSS file),
+- etc.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Annotations with ARender/arender-customized.png
@@ -184,18 +187,28 @@ Repeat mode available. </td>
 </tr>
 <tr>
 <td colspan="1">
+![annotations-highlight-rectangle.png](nx_asset://eef983e3-10bd-4d9f-be66-982990bf7aa8 ?w=40)</td>
+<td colspan="1"> Add a highlighted rectangle.</br> Once your rectangle is created you can modify the color and opacity of the highlight.</br> Repeat mode available.</td>
+</tr>
+<tr>
+<td colspan="1">
 ![annotations-draw-circle.png](nx_asset://a12f0162-1971-4a00-8f60-cf71df4c7199 ?w=40)</td>
-<td colspan="1"> Add a circle.</br> Repeat mode available. </td>
+<td colspan="1"> Add a circle.</br> Repeat mode available.</td>
 </tr>
 <tr>
 <td colspan="1">
 ![annotations-highlight-text.png](nx_asset://bad65cf1-4779-459c-9bd6-74283ef88cbd ?w=40)</td>
-<td colspan="1"> Highlight text.</br> Once your text is selected you can modify the color and opacity of the highlight. </td>
+<td colspan="1"> Highlight text.</br> Once your text is selected you can modify the color and opacity of the highlight.</td>
+</tr>
+<tr>
+<td colspan="1">
+![annotations-strikethrough-text.png](nx_asset://463ebd3a-e506-4f3b-b52a-7f122aa48456 ?w=40)</td>
+<td colspan="1"> Add strikethrough text. </td>
 </tr>
 <tr>
 <td colspan="1">
 ![annotations-redact.png](nx_asset://421137dc-2c9f-4c01-88b3-690d12a9fff4 ?w=40)</td>
-<td colspan="1"> Annotate over text, hiding its contents.</br> This annotation is only available on text documents. </td>
+<td colspan="1"> Annotate over text, hiding its contents.</br> This annotation is only available on text documents.</td>
 </tr>
 </tbody>
 </table>
@@ -267,6 +280,13 @@ You can search for and filter any annotation:
     addins#popup#up_to_date
 --}}
 ![annotation-search.png](nx_asset://24fd947d-4c73-47fa-b13b-e714c8466f33 ?w=350,border=true)
+
+**To edit annotation:**
+
+
+
+
+
 
 You can also manage annotations by:
 
