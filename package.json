@@ -38,7 +38,7 @@
     "dev": "node dev-server",
     "dev:no-clean": "node dev-server --no-clean",
     "copy_assets": "npm run copy_assets:default && npm run copy_assets:module",
-    "copy_assets:default": "mkdir -p ./site/assets/`./node_modules/nuxeo-docs-builder/bin/version-path` && cp -r ./assets/* ./site/assets/`./node_modules/nuxeo-docs-builder/bin/version-path`",
+    "copy_assets:default": "mkdir -p ./site/assets/`./node_modules/nuxeo-docs-builder/bin/version-path` && cp -r ./assets/* ./site/assets/`./node_modules/nuxeo-docs-builder/bin/version-path` && ln -sfn `pwd`/nx_assets/ `pwd`/site/nx_assets",
     "copy_assets:module": "cp -r ./node_modules/nuxeo-docs-builder/assets/* ./site/assets/ && cp -r ./node_modules/nuxeo-docs-builder/assets/fonts ./site/assets/css/",
     "metalsmith": "node .",
     "server": "browser-sync start --server site --browser=$npm_package_config_browser",
