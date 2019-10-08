@@ -11,10 +11,9 @@ if (!process.env.DEBUG) {
 const no_clean = !!process.argv.find(val => val === '--no-clean');
 
 // Spawns a dev server with Metalsmith & Webpack live reloading via Browsersync
-const debug_lib = require('debug');
-const debug = debug_lib('docs-server');
-const error = debug_lib('docs-server:error');
-const info = debug_lib('docs-server:info');
+const debug = require('debug')('docs-server');
+const error = debug.extend('error');
+const info = debug.extend('info');
 
 info('no-clean', no_clean);
 
@@ -120,8 +119,8 @@ sync.init(
           path.join(__dirname, 'config.yml')
         ],
         fn: (event, file) => {
+          debug(`File changed: ${file}`);
           if (!file.startsWith('assets/nx_assets')) {
-            debug(`File changed: ${file}`);
             process.env.FILTER = get_filter(file);
 
             build_docs();
