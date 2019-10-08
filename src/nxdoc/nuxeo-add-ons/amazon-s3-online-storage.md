@@ -277,7 +277,7 @@ nuxeo.s3storage.cacheminage=3600
 
 `cachecount` and `cacheminage` are available since Nuxeo 7.10-HF03.
 
-#### Digest algorithm
+#### Digest Algorithm
 
 By default the blobs are stored in S3 based on their MD5 digest (hash). The digest algorithm can be changed if required, for instance:
 
