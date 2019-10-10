@@ -124,3 +124,12 @@ In this chapter we will explain each screen exposed by Studio Modeler. If you ar
 
 </div>
 </div>
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Tips and tricks to implement custom logics within Studio Modeler](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/modeler-tips-tricks)
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>

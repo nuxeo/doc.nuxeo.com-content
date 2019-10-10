@@ -80,11 +80,13 @@ The goal of this section is to provide ready to use examples. They can be follow
 
 {{/panel}}</div></div>
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo University'}}
 
 - [Learning Plan on Nuxeo Studio](https://university.nuxeo.com/learn/public/learning_plan/view/5/nuxeo-studio-foundations)
-  ![]({{file version='' space='nxdoc' page='university' name='university-studio-learning-plan.png'}} ?w=450,border=true)
-  {{/callout}}
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>
 
 {{{multiexcerpt 'license' page='NXDOC:Developer Documentation Center'}}}
