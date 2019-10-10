@@ -9,13 +9,13 @@ toc: true
 tree_item_index: 40
 ---
 {{! excerpt}}
-Document facets can be attached dynamically to implement specific business logics.
+Document facets can be attached dynamically to implement specific business logic.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related content in Nuxeo University:
-- [Course on Content Model Design in Nuxeo Studio](https://university.nuxeo.com/learn/course/external/view/elearning/12/ContentModelDesigninNuxeoStudio)
-- [Expert Session on Content Modeling Options](https://university.nuxeo.com/learn/course/external/view/elearning/203/ExpertSession-ContentModelingOptions)
+Watch the related content in Nuxeo University:</br>
+[Course on Content Model Design in Nuxeo Studio](https://university.nuxeo.com/learn/course/external/view/elearning/12/ContentModelDesigninNuxeoStudio)</br>
+[Expert Session on Content Modeling Options](https://university.nuxeo.com/learn/course/external/view/elearning/203/ExpertSession-ContentModelingOptions)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/doctypes_university.png
     name: doctypes_university.png
@@ -26,25 +26,28 @@ Watch the related content in Nuxeo University:
 
 ## Concept
 
-Enabling a facet enables additional functionality to a Nuxeo Document. Facets can be used to attach a schema to a document. It can be interpreted by Nuxeo Web UI to display additional data or views of the document, like:
+Enabling a facet on a Nuxeo document adds additional functionality. Facets can be used to attach a schema to a document. It can be interpreted by Nuxeo Web UI to display additional data or views of the document, like:
 
-- **Folderish**: Can now be a parent to specified document types.
-- **NXTag**: Can now be tagged, includes the tag schema.
-- **Picture/Video**: Changes how the Document is displayed to show document conversions, multimedia information extraction...
+- **Folderish**: Can be a parent to specified document types.
+- **NXTag**: Can be tagged, includes the tag schema.
+- **Picture/Video**: Changes how the document is displayed to show document conversions, multimedia information extraction.
+- etc.
 
-## Practical Case
+## Use Case
 
 We will create a new facet, entitled `ValidityFacet`, which is applied to any **approved** document. The facet is linked to a custom schema called `validity` which provided information about the validity period of a document.
 
-### Create the validity schema
+### Create the Validity Schema
 
-Create a new external schema in **Nuxeo Studio Modeler** > **CONFIGURATION** > **Content Model** > **Schemas**, called `validity`.
-
-Add two **Date** properties: `ValidityStartFrom` and `ValidityEndsIn`.
+1. In Studio Modeler, create a new external schema in **Configuration** > **Content Model** > **Schemas**, called `validity`.
+1. Add two **Date** properties: `ValidityStartFrom` and `ValidityEndsIn`.
 
 ### Create the Facet to the Studio Registry
 
-The next step is about registering the new built-in document facet. Navigate to **Nuxeo Studio Modeler** > **SETTINGS** > **Registries** > **Document Facets**. Add the new facet using the example provided in the upper section:
+The next step is about registering the new built-in document facet.
+
+1. In Studio Modeler, navigate to **Settings** > **Registries** > **Document Facets**.
+1. Add the new facet using the example provided in the upper section:
 
 ```
 {
@@ -58,12 +61,12 @@ The next step is about registering the new built-in document facet. Navigate to 
 ```
 
 {{#> callout type='note'}}
-At this step, you should see the **ValidityFacet** facet checkbox in the Document Type definition screens.
+At this step, you should see the **ValidityFacet** checkbox in the **Definition** screen of your document type.
 {{/callout}}
 
 ### Link the Facet to the Schema
 
-Create an XML Extension in **Nuxeo Studio Modeler** > **CONFIGURATION** > **Advanced Settings** > **XML Extensions**  to associate the facet with the schema previously created:
+In Studio Modeler, create an XML Extension in **Configuration** > **Advanced Settings** > **XML Extensions** to associate the facet with the schema previously created:
 
 ```
 <extension point="doctype" target="org.nuxeo.ecm.core.schema.TypeService">
@@ -73,13 +76,13 @@ Create an XML Extension in **Nuxeo Studio Modeler** > **CONFIGURATION** > **Adva
 </extension>
 ```
 
-### Add some business logics
+### Add Business Logic
 
 Nuxeo Studio exposes the `Document.AddFacet` automation operation so that you can add the facet dynamically:
 - You can execute it from an **Event Handler** (Like On _Document Created_ event with some criteria, like the document location, or the document lifecycle state in our example).
 - You can also trigger this operation from a **button**, created in **Nuxeo Studio Designer**.
 
-### Design your visual element
+### Design Your Visual Element
 
 There is no default UI component for the facet, so it needs to be created manually, either from the **UI** > **Layout Blocks** menu, or directly in the **Resources** tab.
 
