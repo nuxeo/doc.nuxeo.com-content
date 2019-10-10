@@ -9,43 +9,140 @@ toc: true
 tree_item_index: 390
 ---
 
-## Nuxeo Studio Community Cookbook Introduction
+The [**Nuxeo Studio Community Cookbook**](https://github.com/nuxeo/nuxeo-studio-community-cookbook) is a GitHub repository containing Studio contributions and code samples that you can freely reuse in your Nuxeo Studio project.
 
-A [Nuxeo GitHub repository](https://github.com/nuxeo/nuxeo-studio-community-cookbook), called **Nuxeo Studio Community Cookbook**, contains Studio contributions and code samples you can freely reuse in your Nuxeo Studio project.
-
-There is nothing to build. Each module generally contains:
+There is nothing to build. Each module generally includes:
 
 - XML extension, page providers, automation chain or automation scripting into **Nuxeo Studio Modeler**.
 - Layouts, contributions within the Nuxeo bundle file, HTML resources, medias that should be created in **Nuxeo Studio Designer**.
-You can clone the repository locally:
 
+You can clone the repository locally:
 ```
 git clone https://github.com/nuxeo/nuxeo-studio-community-cookbook.git
 ```
 
 {{#> callout type='info' heading='Contribution'}}
-Feel free to submit your own contribution, following our guidelines and templates.
+Feel free to submit your own contribution, following our [guidelines and templates](https://github.com/nuxeo/nuxeo-studio-community-cookbook#contributing).
 {{/callout}}
 
-## Module listing
+## Module Listing
 
-Module | Description | Contributor | Category
---- | --- | --- | ---
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/dashboard"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/dashboard/dashboard.png" width="120px"/></a> | Visual Dashboard with pictures | Nuxeo | Dashboard
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/document-suggestion"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/document-suggestion/document-suggestion-watermark.png" width="120px"/></a> | Custom Nuxeo Suggestion Display | Nuxeo | Layout
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/collapse"><img src="modules/nuxeo/collapse/nuxeo-se-collapse.png" width="120px"/></a> | Collapsible Element | Nuxeo | Layout
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/modeler-tips-tricks"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/modeler-tips-tricks/modeler.png" width="100px"/></a> | Tips and tricks to design elements within Studio Modeler | Nuxeo | Business Logic
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/designer-tips-tricks"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/designer-tips-tricks/designer.png" width="100px"/></a> | Tips and tricks to design elements within Studio Designer | Nuxeo | Layout
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/video-thumbnail"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/video-thumbnail/video-thumbnail2.png" width="100px"/></a> | Sets the video poster and search thumbnail | Nuxeo | DAM
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/google-vision-ocr"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/google-vision-ocr/ocr.png" width="100px"/></a> | Extract text from an image-based PDF with Google Vision | Nuxeo | AI
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/saml-user-mapping"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/saml-user-mapping/saml.png" width="100px"/></a> | Map SAML user attributes to Nuxeo | Nuxeo | Authentication
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/workflow-status"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/workflow-status/workflow-status.png" width="100px"/></a> | Monitor workflow instances status | Nuxeo | Workflow
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/sensitive-data"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/sensitive-data/sensitive-data1.png" width="100px"/></a> | Display sensitive data details contained in a document | Nuxeo | AI
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/convert-date-to-timestamp"><img src="modules/nuxeo/convert-date-to-timestamp/calendar.png" width="100px"/></a> | Convert Data to Timestamp | Nuxeo | Automation
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/email-templates-nuxeo"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/email-templates-nuxeo/dark.png" width="100px"/></a> | Email templates | Nuxeo | Templates
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/video-conversions"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/video-conversions/movie.png" width="100px"/></a> | Additional video conversions | Nuxeo | DAM
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/toggleable-form"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/toggleable-form/screenshot.png" width="100px"/></a> | Inline card property edition | Nuxeo | Layout
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/salesforce-ui"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/salesforce-ui/sfdc-webui.png" width="100px"/></a> | Display Salesforce metadata | Nuxeo | Salesforce
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/ssn"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/ssn/ssn.jpg" width="100px"/></a> | Show/hide the value of a secret field | Nuxeo | Security
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/kibana"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/kibana/kibana.png" width="100px"/></a> | Display Kibana dashboards in the "Analytics" | Nuxeo | Reporting
-<a href="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/related-documents"><img src="https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/related-documents/nuxeo-related-documents.png" width="150px"/></a> | Display Document Relations | Nuxeo | Relations
+<table>
+  <tr>
+    <th>Module</th>
+    <th>Description</th>
+    <th>Contributor</th>
+    <th>Category</th>
+  </tr>
+  <tr>
+    <td>
+    ![dashboard-cookbook.png](nx_asset://470c956e-ef24-42d2-b768-938e00bbaa2c ?w=200,border=true)
+    </td>
+    <td>[Visual Dashboard with Pictures](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/dashboard)</td>
+    <td>Nuxeo</td>
+    <td>Dashboard</td>
+  </tr>
+  <tr>
+    <td>![document-suggestion-watermark.png](nx_asset://1f5fb898-ded7-46bc-b67e-898c3d9c2430 ?w=200,border=true)</td>
+    <td>[Custom Nuxeo Suggestion Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/document-suggestion)</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td>![nuxeo-se-collapse.png](nx_asset://eda16b01-5183-4879-be1f-f66075d60670 ?w=200,border=true)</td>
+    <td>[Collapsible Element](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/collapse)</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td>![modeler.png](nx_asset://e04f70f2-8394-4330-b64b-3f143af7c64d ?w=200,border=true)</td>
+    <td>[Tips and Tricks to Design Elements Within Studio Modeler](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/modeler-tips-tricks)</td>
+    <td>Nuxeo</td>
+    <td>Business Logic</td>
+  </tr>
+  <tr>
+    <td>![designer.png](nx_asset://d8c9d4e1-a152-4266-a9af-dd19e0a88bea ?w=200,border=true)</td>
+    <td>[Tips and Tricks to Design Elements Within Studio Designer](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/designer-tips-tricks)</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td>![video-thumbnail2.png](nx_asset://036ceb07-af4c-4e3e-9870-e18adfdf7002 ?w=200,border=true)</td>
+    <td>[Sets the Video Poster and Search Thumbnail](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/video-thumbnail)</td>
+    <td>Nuxeo</td>
+    <td>DAM</td>
+  </tr>
+  <tr>
+    <td>![ocr.png](nx_asset://11827a7a-3273-483b-9e1d-2ed226132815 ?w=200,border=true)</td>
+    <td>[Extract Text from an Image-Based PDF with Google Vision](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/google-vision-ocr)</td>
+    <td>Nuxeo</td>
+    <td>AI</td>
+  </tr>
+  <tr>
+    <td>![saml.png](nx_asset://d2996ad4-225b-4652-8ae2-7dd6f733e176 ?w=200,border=true)</td>
+    <td>[Map SAML User Attributes to Nuxeo](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/saml-user-mapping)</td>
+    <td>Nuxeo</td>
+    <td>Authentication</td>
+  </tr>
+  <tr>
+    <td>![workflow-status.png](nx_asset://6d79aff3-72d8-4151-9c9b-dcb0498ffb17 ?w=200,border=true)</td>
+    <td>[Monitor Workflow Instances Status](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/workflow-status)</td>
+    <td>Nuxeo</td>
+    <td>Workflow</td>
+  </tr>
+  <tr>
+    <td>![sensitive-data1.png](nx_asset://c50a02de-fd22-4358-8b29-2cef76b05691 ?w=200,border=true)</td>
+    <td>[Display Sensitive Data Details Contained in a Document](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/sensitive-data)</td>
+    <td>Nuxeo</td>
+    <td>AI</td>
+  </tr>
+  <tr>
+    <td>![calendar.png](nx_asset://1a3013e3-36c6-4fba-bb9f-90ec5111e434 ?w=200,border=true)</td>
+    <td>[Convert Data to Timestamp](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/convert-date-to-timestamp)</td>
+    <td>Nuxeo</td>
+    <td>Automation</td>
+  </tr>
+  <tr>
+    <td>![dark.png](nx_asset://5d0bd1d3-5efb-4ae4-9711-b98f1e8e8c8c ?w=200,border=true)</td>
+    <td>[Email Templates](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/email-templates-nuxeo)</td>
+    <td>Nuxeo</td>
+    <td>Templates</td>
+  </tr>
+  <tr>
+    <td>![movie.png](nx_asset://d2e29345-6175-4565-94a0-32cc5451efc4 ?w=200,border=true)</td>
+    <td>[Additional Video Conversions](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/video-conversions)</td>
+    <td>Nuxeo</td>
+    <td>DAM</td>
+  </tr>
+  <tr>
+    <td>![screenshot.png](nx_asset://e0b815ad-d965-43ce-8de6-04ff3b236ef2 ?w=200,border=true)</td>
+    <td>[Inline Card Property Edition](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/toggleable-form)</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td>![sfdc-webui.png](nx_asset://5213bfbf-47b7-479e-9a27-4550f3704ec1 ?w=200,border=true)</td>
+    <td>[Display Salesforce Metadata](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/salesforce-ui)</td>
+    <td>Nuxeo</td>
+    <td>Salesforce</td>
+  </tr>
+  <tr>
+    <td>![ssn.png](nx_asset://0b564f31-08b7-4929-8b89-c521f7473a1f ?w=200,border=true)</td>
+    <td>[Show/Hide the Value of a Secret Field](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/ssn)</td>
+    <td>Nuxeo</td>
+    <td>Security</td>
+  </tr>
+  <tr>
+    <td>![kibana.png](nx_asset://081d44cd-fa2a-49df-99e3-39b7c55070eb ?w=200,border=true)</td>
+    <td>[Display Kibana dashboards in the "Analytics"](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/kibana)</td>
+    <td>Nuxeo</td>
+    <td>Reporting</td>
+  </tr>
+  <tr>
+    <td>![nuxeo-related-documents.png](nx_asset://8b54fa45-f241-4b56-a1ad-ce59b3507322 ?w=200,border=true)</td>
+    <td>[Display Document Relations](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/related-documents)</td>
+    <td>Nuxeo</td>
+    <td>Relations</td>
+  </tr>
+
+</table>
