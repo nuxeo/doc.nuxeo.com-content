@@ -55,3 +55,12 @@ In this documentation, you will also find [Javascript Expression Examples]({{pag
 
 </div>
 </div>
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Tips and tricks to design elements within Studio Designer](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/designer-tips-tricks)
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>
