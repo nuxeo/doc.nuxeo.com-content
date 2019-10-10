@@ -320,7 +320,7 @@ If one of your Automation chain or operation contains dashes (`-`) in their name
 
 {{/callout}}
 
-The following code example is bound to a simple event (`Document created`), to apply property value inheritance from the parent document, with some logging information messages.
+The following code example is bound to a simple event (Document created), to apply property value inheritance from the parent document, with some logging information messages.
 
 ```js
 function run(input, params) {
@@ -335,13 +335,13 @@ function run(input, params) {
 
   if (parent) {
         input = Document.CopySchema(input, {
-        /*required:true - type: string*/
-        'schema': 'product_catalog',
-        /*required:false - type: string*/
-        'sourceId': parent.id
-        });
+          /*required:true - type: string*/
+          'schema': 'product_catalog',
+          /*required:false - type: string*/
+          'sourceId': parent.id
+          });
         Console.log("product_catalog schema copied");
-    }
+        }
   }
 ```
 
@@ -432,7 +432,7 @@ function run(input, params) {
 
 ### Event Context
 
-It is possible to access to the event context. This can be really usefull when trying to access some repository information before the document is created: Typically, you can't access parent properties on the `About to create` event without `ctx.Event.getProperty`:
+It is possible to access to the event context. This can be really usefull when trying to access some repository information before the document is created: Typically, you can't access parent properties on the "About to create" event without `ctx.Event.getProperty`:
 
 
 ```js
