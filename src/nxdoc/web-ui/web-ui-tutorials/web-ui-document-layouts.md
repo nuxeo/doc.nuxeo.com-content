@@ -257,6 +257,9 @@ The configuration of document creation in Web UI is subject to change in the upc
 
 - [Custom Nuxeo Suggestion Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/document-suggestion)
 - [Collapsible Element](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/collapse)
+- [Inline card property edition](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/toggleable-form)
+- [Show/hide the value of a secret field](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/ssn)
+- [Display Document Relations](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/related-documents)
 
 {{/panel}}</div><div class="column medium-6">
 </div></div>
