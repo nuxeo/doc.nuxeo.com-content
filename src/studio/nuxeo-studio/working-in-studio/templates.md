@@ -42,3 +42,12 @@ When downloading the Nuxeo Platform, users will access some default mail templat
 | `workflowTaskDelegated` | Informs users that a task has been delegated to them or to a group they belong to. |
 
 For more information on Email templates, discover the [available variables in mail templates]({{page version='' space='nxdoc' page='available-variables-in-email-templates'}}) and [how to customize them]({{page version='' space='nxdoc' page='how-to-customize-email-templates'}}).
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Email template Samples](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/email-templates-nuxeo)
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>
