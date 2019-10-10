@@ -46,3 +46,13 @@ In the case of Nuxeo Web UI, we leverage on-demand dynamic imports not only to l
 - [Search Forms]({{page page='web-ui-search'}}).
 - [Workflow Tasks Layouts]({{page page='web-ui-workflow-tasks'}}).
 - [Dashboard]({{page page='web-ui-dashboard'}}).
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Custom Nuxeo Suggestion Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/document-suggestion)
+- [Collapsible Element](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/collapse)
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>

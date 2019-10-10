@@ -103,6 +103,8 @@ For the moment you have a "Validated" checkbox displayed on all your `Contract` 
 
 - [Custom Nuxeo Suggestion Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/document-suggestion)
 - [Collapsible Element](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/collapse)
+- [Sets the video poster and search thumbnail](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/video-thumbnail)
+
 
 {{/panel}}</div><div class="column medium-6">
 </div></div>

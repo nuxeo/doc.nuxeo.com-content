@@ -265,16 +265,20 @@ To go further, read the page [Simple Workflow Example]({{page page='simple-workf
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Workflow How-Tos'}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-4">{{#> panel heading='Workflow How-Tos'}}
 
 - [HOWTO: Query Workflow Objects]({{page page='how-to-query-workflow-objects'}})
 - [HOWTO: Complete a Workflow Task Programmatically]({{page page='how-to-complete-a-workflow-task-programmatically'}})
 - [HOWTO: Set Up a Tasks Dashboard]({{page page='how-to-set-up-a-tasks-dashboard'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading=' Advanced Features and Understanding'}}
+{{/panel}}</div><div class="column medium-4">{{#> panel heading=' Advanced Features and Understanding'}}
 
 - [Escalation Service]({{page page='escalation-service'}})
 - [Workflow Models Packaging]({{page page='workflow-models-packaging'}})
 - [Runtime Instantiation & Execution Logic]({{page page='runtime-instantiation-and-execution-logic'}})
+
+{{/panel}}</div><div class="column medium-4">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Monitor workflow instances status](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/workflow-status)
 
 {{/panel}}</div></div>

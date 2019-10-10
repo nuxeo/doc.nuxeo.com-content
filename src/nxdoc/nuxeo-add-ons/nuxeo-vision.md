@@ -287,3 +287,13 @@ These events are not sent if automatic processing had been disabled, and they ar
 - Amazon Rekognition doesn't provide text-recognition services (OCR). Nuxeo Vision implements only _labels detection_ and _safe search_.
 
 Also, as these are cloud services, these limitations evolve, change, maybe depending on a subscription, etc.
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Extract text from an image-based PDF with Google Vision](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/google-vision-ocr)
+
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>
