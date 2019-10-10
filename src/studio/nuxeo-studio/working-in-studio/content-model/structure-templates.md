@@ -106,13 +106,12 @@ history:
         date: '2012-12-04 08:41'
         message: ''
         version: '1'
-
 ---
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related content in Nuxeo University:
-- [Course on Content Model Design in Nuxeo Studio](https://university.nuxeo.com/learn/course/external/view/elearning/12/ContentModelDesigninNuxeoStudio)
-- [Expert Session on Content Modeling Options](https://university.nuxeo.com/learn/course/external/view/elearning/203/ExpertSession-ContentModelingOptions)
+Watch the related content in Nuxeo University:</br>
+[Course on Content Model Design in Nuxeo Studio](https://university.nuxeo.com/learn/course/external/view/elearning/12/ContentModelDesigninNuxeoStudio)</br>
+[Expert Session on Content Modeling Options](https://university.nuxeo.com/learn/course/external/view/elearning/203/ExpertSession-ContentModelingOptions)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/doctypes_university.png
     name: doctypes_university.png

@@ -44,13 +44,12 @@ history:
         date: '2012-12-04 08:42'
         message: ''
         version: '1'
-
 ---
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related content in Nuxeo University:
-- [Course on Content Model Design in Nuxeo Studio](https://university.nuxeo.com/learn/course/external/view/elearning/12/ContentModelDesigninNuxeoStudio)
-- [Expert Session on Content Modeling Options](https://university.nuxeo.com/learn/course/external/view/elearning/203/ExpertSession-ContentModelingOptions)
+Watch the related content in Nuxeo University:</br>
+[Course on Content Model Design in Nuxeo Studio](https://university.nuxeo.com/learn/course/external/view/elearning/12/ContentModelDesigninNuxeoStudio)</br>
+[Expert Session on Content Modeling Options](https://university.nuxeo.com/learn/course/external/view/elearning/203/ExpertSession-ContentModelingOptions)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/doctypes_university.png
     name: doctypes_university.png
@@ -62,8 +61,6 @@ Watch the related content in Nuxeo University:
 ## Concept
 
 A lifecycle is a set of **states** and transitions that apply to a document. One of the states is marked as being the "initial state" and is the state of the document when it is created. States that the document can hold depend on the transitions that are set between the states. Default lifecycle in Nuxeo contains following states: project, approved, obsolete. One could see lifecycle just as yet another metadata with a controlled list of values, but actually the framework provides API around lifecycle management, such as ability to "reset" the lifecycle of a document, and ability to "[follow](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Document.SetLifeCycle)" a transition.
-
-{{{multiexcerpt 'disabling-feature' page='branding'}}}
 
 ## Editing a Lifecycle
 
@@ -79,6 +76,8 @@ A lifecycle is a set of **states** and transitions that apply to a document. One
 * From one state you can pull an arrow to another state and give a name to the transition by clicking on the edit icon that appear if you let the mouse over.
 * Filling transitions name is not mandatory, the system will automatically name them with the rule : "to_"+state name.
 * It is possible to have several arrows with the same transition name.
+
+{{{multiexcerpt 'disabling-feature' page='branding'}}}
 
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">

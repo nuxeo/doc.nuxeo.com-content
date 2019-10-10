@@ -148,9 +148,9 @@ history:
 ---
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related content in Nuxeo University:
-- [Course on Content Model Design in Nuxeo Studio](https://university.nuxeo.com/learn/course/external/view/elearning/12/ContentModelDesigninNuxeoStudio)
-- [Expert Session on Content Modeling Options](https://university.nuxeo.com/learn/course/external/view/elearning/203/ExpertSession-ContentModelingOptions)
+Watch the related content in Nuxeo University:</br>
+[Course on Content Model Design in Nuxeo Studio](https://university.nuxeo.com/learn/course/external/view/elearning/12/ContentModelDesigninNuxeoStudio)</br>
+[Expert Session on Content Modeling Options](https://university.nuxeo.com/learn/course/external/view/elearning/203/ExpertSession-ContentModelingOptions)
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/doctypes_university.png
     name: doctypes_university.png
@@ -163,9 +163,7 @@ Watch the related content in Nuxeo University:
 
 Read more about documents, properties and schemas in the [Essential Nuxeo Platform Terminology]({{page space='nxdoc' page='essential-nuxeo-platform-terminology'}}).
 
-{{{multiexcerpt 'disabling-feature' page='branding'}}}
-
-## {{> anchor 'creating-a-document-type'}}Creating a Document Type
+## Creating a Document Type
 
 To create a document type, click on button "**New**".
 
@@ -242,9 +240,7 @@ However there are a few differences/additional features:
 
 ![]({{file name='doc_type_tabs_tab.png' space='nxdoc' page='how-to-define-a-document-type'}} ?w=650,border=true)
 
-{{#> callout type='info' heading='Requirement'}}
 {{{multiexcerpt 'tab-jsf-ui-target-package-requirement' page='documents'}}}
-{{/callout}}
 
 Documents in DM are displayed with a series of tabs to display all the actions that can be done on documents. By default, a new document type will hold all the tabs. From this view in Studio, you can disable some of them, for the document type you are configuring. This is a binary activation/inactivation. If you want to refine the tabs display rules, you can [contribute XML extensions to the action service](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.actions.ActionService--actions), so as to override existing contributions (for advanced users).
 
@@ -252,33 +248,34 @@ Documents in DM are displayed with a series of tabs to display all the actions t
 
 ![]({{file name='doc_type_content_view.png'}} ?w=650,border=true)
 
-{{#> callout type='info' heading='Requirement'}}
 {{{multiexcerpt 'tab-jsf-ui-target-package-requirement' page='documents'}}}
-{{/callout}}
 
 Content view tabs are tabs that display a list of documents in a table, that is the result of an [NXQL]({{page space='nxdoc' page='nxql'}}) query (a content view). You configure the content view with the [content view feature]({{page page='content-views'}}) and just reference it here.
 
 - **Main content**: you can choose which content view is used for the document you are configuring. This appears only for document types that are folderish.
 - **Trash content**: you can choose which content view is used for the document that are displayed in the trash. This appears only for document types that are folderish.
 - **Additional tabs configuration**:
-
   - **Label**: The name displayed for this new tab. Can be a translated key.
   - **Content views**: You can reference several content views that will be displayed one after the other.
   - **Order**: The place of the tab on the document . You can put numbers like 0, 5, 10, 40, 150, ...
-  - **Tab Activation**: (TODO: a specific page for this screen that appears in many places on Studio).
+  - **Tab Activation**.
 
 {{#> callout type='info' heading='Using the Tabs feature'}}
 Adding a tab that displays a content view using this feature is easy and straightforward, but you can also use the [Tabs feature]({{page page='tabs'}}) that provides more refinements like the ability to add buttons, other information, wrappers, etc...
 {{/callout}}
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
+* * *
 
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related How-Tos'}}
 - [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
 - [How to Add Complex Fields on Your Document Type]({{page space='nxdoc' page='how-to-add-complex-fields-on-your-document-type'}})
 - [How to Override Existing Document Types]({{page space='nxdoc60' page='how-to-override-existing-document-types'}})
 - [How to Enable Add-Ons Features on Custom Document Type]({{page space='nxdoc' page='how-to-enable-add-ons-features-on-custom-document-type'}})
 - [How-To Index]({{page space='nxdoc' page='how-to-index'}})
-
-{{/panel}}</div><div class="column medium-6">
-
-</div></div>
+{{/panel}}
+</div>
+<div class="column medium-6">
+</div>
+</div>
