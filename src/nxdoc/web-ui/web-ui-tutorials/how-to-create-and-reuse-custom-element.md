@@ -29,8 +29,8 @@ In this tutorial you will learn how to create and reuse custom elements in Studi
 
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University:</br>
-[Expert Session on Nuxeo Elements Creation](https://university.nuxeo.com/learn/public/course/view/elearning/148/expert-session-creating-nuxeo-elements-with-studio-designer)</br>
-[Course on Web UI Stack](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner)
+- [Expert Session on Nuxeo Elements Creation](https://university.nuxeo.com/learn/public/course/view/elearning/148/expert-session-creating-nuxeo-elements-with-studio-designer)</br>
+- [Course on Web UI Stack](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner)
 ![]({{file name='university-new-nuxeo-element.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
 
@@ -96,3 +96,13 @@ Now, go to your `contract` document type, on the **view** layout to use your ele
 ## Going further
 
 For the moment you have a "Validated" checkbox displayed on all your `Contract` document type, but anything happens when you click on it as we didn't add any logic to it. To have more info on how to create an element and bind it to an action, follow the [related tutorial]({{page version='' space='nxdoc' page='how-to-insert-user-action'}}).
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Custom Nuxeo Suggestion Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/document-suggestion)
+- [Collapsible Element](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/collapse)
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>

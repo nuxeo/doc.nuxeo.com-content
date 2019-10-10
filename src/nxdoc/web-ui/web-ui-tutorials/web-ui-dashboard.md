@@ -41,9 +41,9 @@ To use your own dashboard, you can deploy and override `nuxeo-home.html` in your
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
-- [HOWTO: Create Custom Dashboard Entries]({{page version='' space='nxdoc' page='howto-create-custom-dashboard-entries'}})
+- [Visual Dashboard with Pictures](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/dashboard)
 
 {{/panel}}</div><div class="column medium-6">
 </div></div>
