@@ -252,3 +252,12 @@ To delete vocabulary entry, click on the **Delete** button of the entry to erase
 
 </div>
 </div>
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Display Document Relations](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/related-documents)
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>
