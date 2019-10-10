@@ -306,3 +306,13 @@ You can use the [Nuxeo Directory Connector](https://github.com/tiry/nuxeo-direct
 </div>
 
 </div>
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Map SAML user attributes to Nuxeo](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/saml-user-mapping)
+
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>

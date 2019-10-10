@@ -290,3 +290,13 @@ SAML 2.0 has defined several binding options: HTTP redirect, HTTP POST, HTTP art
 ![SAML Web SSO Sequence]({{file name='saml.png'}} ?border=true 'SAML Web SSO Sequence')
 
 For a detailed presentation of SAML V2.0, you should read the [SAML V2.0 Specification](https://wiki.oasis-open.org/security/FrontPage#SAML_V2.0_Standard).
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Map SAML user attributes to Nuxeo](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/saml-user-mapping)
+
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>

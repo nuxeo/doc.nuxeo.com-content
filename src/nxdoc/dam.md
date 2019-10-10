@@ -89,8 +89,20 @@ toc: true
 </div>
 </div>
 
-{{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Nuxeo Digital Asset Management (DAM) Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/97/nuxeo-digital-asset-management-dam-concepts).
-![]({{file name='university-dam.png' page='nxdoc/university'}} ?w=450,border=true)
-{{/callout}}
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium">
+  <div class="column medium-6">{{#> panel heading='Nuxeo University'}}
+
+- Nuxeo Digital Asset Management (DAM) Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/97/nuxeo-digital-asset-management-dam-concepts)
+
+  {{/panel}}
+  </div>
+  <div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+  - [Visual Dashboard with Pictures](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/dashboard)
+  - [Sets the video poster and search thumbnail](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/video-thumbnail)
+
+  {{/panel}}
+  </div>
+</div>
