@@ -279,6 +279,6 @@ To go further, read the page [Simple Workflow Example]({{page page='simple-workf
 
 {{/panel}}</div><div class="column medium-4">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
-- [Monitor workflow instances status](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/workflow-status)
+- [Monitor Workflow Instances Status](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/workflow-status)
 
 {{/panel}}</div></div>

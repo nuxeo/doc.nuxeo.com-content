@@ -280,7 +280,7 @@ You can set these in your `nuxeo.conf`. They are used in combination with the ot
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
-- [Display sensitive data details contained in a document](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/sensitive-data)
+- [Display Sensitive Data Details Contained in a Document](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/sensitive-data)
 
 {{/panel}}</div><div class="column medium-6">
 </div></div>

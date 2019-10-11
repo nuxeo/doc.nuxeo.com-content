@@ -3,7 +3,7 @@ title: Digital Asset Management
 description: Discover how Nuxeo Platform can quickly help you setting up your digital asset management solution.
 review:
     comment: ''
-    date: '2019-09-18'
+    date: '2019-10-11'
     status: ok
 labels:
     - DAM
@@ -94,7 +94,7 @@ toc: true
 <div class="row" data-equalizer data-equalize-on="medium">
   <div class="column medium-6">{{#> panel heading='Nuxeo University'}}
 
-- Nuxeo Digital Asset Management (DAM) Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/97/nuxeo-digital-asset-management-dam-concepts)
+- [Nuxeo Digital Asset Management (DAM) Concepts](https://university.nuxeo.com/learn/public/course/view/elearning/97/nuxeo-digital-asset-management-dam-concepts)
 
   {{/panel}}
   </div>

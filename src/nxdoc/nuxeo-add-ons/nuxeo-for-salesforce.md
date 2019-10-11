@@ -528,7 +528,7 @@ Those two operations can be overridden inside a Nuxeo Studio project easily by c
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
-- [Display Salesforce metadata](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/salesforce-ui)
+- [Display Salesforce Metadata](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/salesforce-ui)
 
 {{/panel}}</div><div class="column medium-6">
 </div></div>
