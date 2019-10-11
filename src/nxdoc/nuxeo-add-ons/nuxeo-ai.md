@@ -140,17 +140,49 @@ See the [GitHub Readme](https://github.com/nuxeo/nuxeo-ai/tree/master/addons/nux
 
 You should be familiar with Amazon Web Services and be in possession of your credentials.
 
-##### Credentials
+#### Big picture
+
+![]({{file name='nuxeo-ai-aws.png' page='nuxeo-ai'}} ?w=450,border=true)
+
+##### Specifying Your Amazon Credentials and Region
+
 Credentials are discovered using `nuxeo-runtime-aws`.  
 The chain searches for credentials in order: Nuxeo's AWSConfigurationService, environment variables, system properties, profile credentials, EC2Container credentials.
 
-If you choose to use `nuxeo.conf`, then the properties are:
+In `nuxeo.conf`, add the following lines:
+
 ```
 nuxeo.aws.accessKeyId=your_AWS_ACCESS_KEY_ID
 nuxeo.aws.secretKey=your_AWS_SECRET_ACCESS_KEY
 nuxeo.aws.sessionToken=your_AWS_SESSION_TOKEN
 nuxeo.aws.region=your_AWS_REGION
+
 ```
+
+{{#> callout type='info' }}
+If your Nuxeo instance runs on Amazon EC2 or Amazon ECS, you can also transparently use IAM instance roles, in which case you do not need to specify the AWS ID and secret (the credentials will be fetched automatically from the instance metadata). The same applies to the region.
+{{/callout}}
+
+The region code can be found in the [S3 Region Documentation](http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region). The default is `us-east-1`. At the time this documentation was written, the list is:
+
+* us-east-1: US East (N. Virginia) (default)
+* us-east-2: US East (Ohio)
+* us-west-1: US West (N. California)
+* us-west-2: US West (Oregon)
+* eu-west-1: EU (Ireland)
+* eu-west-2: EU (London)
+* eu-west-3: EU (Paris)
+* eu-central-1: EU (Frankfurt)
+* ap-south-1: Asia Pacific (Mumbai)
+* ap-southeast-1: Asia Pacific (Singapore)
+* ap-southeast-2: Asia Pacific (Sydney)
+* ap-northeast-1: Asia Pacific (Tokyo)
+* ap-northeast-2: Asia Pacific (Seoul)
+* ap-northeast-3: Asia Pacific (Osaka-Local)
+* sa-east-1: South America (São Paulo)
+* ca-central-1: Canada (Central)
+* cn-north-1: China (Beijing)
+* cn-northwest-1: China (Ningxia)
 
 If you are only using images and an S3 BinaryManager is already being used then it re-uses the image data to pass a reference instead of uploading the binary again.
 
@@ -217,6 +249,10 @@ See the [GitHub Readme](https://github.com/nuxeo/nuxeo-ai/blob/master/addons/nux
 #### Before You Start
 
 Register with [Sightengine](https://sightengine.com/) to obtain your `apiKey` and `apiSecret`.
+
+#### Big picture
+
+![]({{file name='nuxeo-ai-image-quality.png' page='nuxeo-ai'}} ?w=450,border=true)
 
 #### Installation
 
