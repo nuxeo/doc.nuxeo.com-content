@@ -3,7 +3,7 @@ title: Managing Vocabularies
 description: Vocabularies are the lists of labels used in the application, for instance in drop down lists. A vocabulary is composed of several entries, that are the options in the drop down lists.
 review:
     comment: ''
-    date: '2018-03-08'
+    date: '2019-10-11'
     status: ok
 labels:
     - metadata
@@ -11,6 +11,7 @@ labels:
     - vocabulary
     - multiexcerpt
     - lts2017-ok
+    - jsf-ui
 toc: true
 confluence:
     ajs-parent-page-id: '2392402'
