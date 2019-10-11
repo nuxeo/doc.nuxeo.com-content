@@ -33,121 +33,6 @@ Here's a chart illustrating the actions during the first connection to ARender:
 --}}
 ![arender-flow.png](nx_asset://3dfb1d20-3bb0-4124-819f-d6ad274630cb ?w=650,border=true)
 
-## Installation
-
-There are several ways to install ARender software.
-
-For easy deployment, Nuxeo provides two Docker images, one for each part of the ARender software: `arender-previewer` and `arender-rendition`.
-
-{{#> callout type='warning' heading='Private addon'}}
-You should contact your Nuxeo Administrator or your Nuxeo sales representative to get access to these images.
-{{/callout}}
-
-{{#> callout type='info' heading='Docker Images Version'}}
-Docker images have the same versions as marketplace packages.
-You should always use the same version for Docker images and marketplace packages.
-{{/callout}}
-
-You can also install both parts directly on dedicated hosts by following [ARender Documentation](https://arender.io/doc/current4/documentation/setup/index-setup.html).
-
-All communication is done over HTTP; we recommend using HTTPS for production. Below are the ports for each part:
-- previewer is reachable on port `8080` when exposed directly by Tomcat; we recommend to setup an Apache or Nginx in front of it.
-- rendition is reachable on port `8761`.
-
-Below are the requirements for firewall rules / Docker network setup:
-- Nuxeo needs to reach ARender previewer,
-- ARender previewer needs to reach ARender rendition,
-- ARender previewer needs to reach Nuxeo.
-
-### Embedded Installation - Development
-
-For development purposes, run the rendition Docker image and bind its port to localhost:
-```
-docker run -p 8761:8761 -it ARENDER_DOCKER_IMAGE_ID
-```
-
-Then install the [nuxeo-arender-connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender-connector) marketplace package.
-
-It installs the ARender integration inside Nuxeo and the ARender previewer inside Nuxeo's Tomcat.
-
-### Docker Installation - Production
-
-For production, we recommend that each part of ARender software is deployed as a Docker container.
-
-You can deploy several ARender renditions. Their URL needs to be given to ARender previewer. ARender previewer is responsible for renditions loading. ARender renditions don't need to communicate with each other.
-
-Rendition URLs can be passed to ARender previewer with the `renditionHostEnv` environment variable.
-
-{{#> callout type='info' heading='ARender previewer behavior'}}
-ARender previewer owns in its cache a session corresponding to the t-uple user, document and blob.</br>
-You'll need to ask for a new session if the previewer crashes (action 1. on the chart above).
-{{/callout}}
-
-{{#> callout type='warning' heading='ARender previewer clustering'}}
-You can't have a cluster of ARender previewers because previewers don't share sessions.
-{{/callout}}
-
-If you need to change these settings while ARender previewer is running, there is a REST API on ARender previewer.
-
-To get current settings:
-```
-GET /arendergwt/weather?format=json
-```
-To update settings:
-```
-POST /arendergwt/weather?format=json
-["https://rendition1:8761", "https://rendition2:8761"]
-```
-
-## Configuration
-
-### Nuxeo Configuration
-
-The Nuxeo Enhanced Viewer relies on a [JWT](https://jwt.io/) to request an OAuth 2 token for authentication (See [OAuth 2]({{page page='using-oauth2'}}) documentation page for more information).
-You need to define a secret, `nuxeo.jwt.secret` in your `nuxeo.conf`, to enable it.
-
-Authentication from ARender to Nuxeo relies on a shared secret between the two applications. This secret is defined with the property `nuxeo.arender.secret` in your `nuxeo.conf`.
-
-{{#> callout type='info' heading='Shared secret environment variable'}}
-If using the Docker image for the ARender previewer, you can also define this shared secret through an environment variable `nuxeoArenderSecretEnv`.
-{{/callout}}
-
-If your ARender rendition server doesn't run on same host as Nuxeo's Tomcat, you can change the ARender rendition URL by setting `arender.server.rendition.hosts` in your `nuxeo.conf` (default value is `http://localhost:8761`).
-
-You can change the ARender previewer URL used by Nuxeo to open ARender sessions by setting `arender.server.previewer.host` in your `nuxeo.conf` (default value if `http://localhost:8080`).
-
-### ARender Previewer Configuration
-
-- For an on-host installation, you can follow the [ARender Documentation](https://arender.io/doc/current4/documentation/setup/presentation/configuration.html).
-
-- For an embedded installation, you can modify the `arender-hmi.properties` files under `NUXEO_HOME/nxserver/config/ARenderConfiguration` folder.
-
-- For a Docker installation, you can extend our image and copy your properties file to `/docker-entrypoint-init.d/arender.properties`:
-
-  ```
-  FROM dockerin-arender.nuxeo.com:443/arender-previewer:MP_VERSION
-
-  COPY arender.properties /docker-entrypoint-init.d/arender.properties
-  ```
-
-You can also modify the `arender-hmi.properties` which is deployed inside the `/ARenderConfiguration` in the previewer Docker container.
-
-These configuration files let you customize the ARender interface to fit specific UI and UX needs. Please follow the [ARender configuration guide](https://arender.io/doc/current4/documentation/hmi/index-hmi.html) for more information.
-
-Examples of possible configurations:
-
-- Add or remove buttons from the ARender interface,
-- Modify ARender behaviors on specific user actions (like entering a comment when the user clicks on "Enter"),
-- Reference a new theme (by creating your custom CSS file),
-- etc.
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Annotations with ARender/arender-customized.png
-    name: arender-customized.png
-    addins#screenshot#up_to_date
---}}
-![arender-customized.png](nx_asset://a26f7eaf-e268-443f-be33-2c88542e2a13 ?w=600,border=true)
-
 ## Functional Overview
 
 Once the Nuxeo Enhanced Viewer is properly installed and configured a new **Annotations** tab is available on each document with the picture or video facet:
@@ -281,13 +166,6 @@ You can search for and filter any annotation:
 --}}
 ![annotation-search.png](nx_asset://24fd947d-4c73-47fa-b13b-e714c8466f33 ?w=350,border=true)
 
-**To edit annotation:**
-
-
-
-
-
-
 You can also manage annotations by:
 
 - Adding a comment
@@ -416,6 +294,121 @@ A new window is opened with the two documents side-by-side, highlighting text wh
 ![compare_arender_2](nx_asset://7be7595f-3e11-468a-a004-1700e45e3ab3 ?w=650,border=true)
 
 You can see the annotations linked to each version on the same screen, and even annotate one file from this view.
+
+## Installation
+
+There are several ways to install ARender software.
+
+For easy deployment, Nuxeo provides two Docker images, one for each part of the ARender software: `arender-previewer` and `arender-rendition`.
+
+{{#> callout type='warning' heading='Private addon'}}
+You should contact your Nuxeo Administrator or your Nuxeo sales representative to get access to these images.
+{{/callout}}
+
+{{#> callout type='info' heading='Docker Images Version'}}
+Docker images have the same versions as marketplace packages.
+You should always use the same version for Docker images and marketplace packages.
+{{/callout}}
+
+You can also install both parts directly on dedicated hosts by following [ARender Documentation](https://arender.io/doc/current4/documentation/setup/index-setup.html).
+
+All communication is done over HTTP; we recommend using HTTPS for production. Below are the ports for each part:
+- previewer is reachable on port `8080` when exposed directly by Tomcat; we recommend to setup an Apache or Nginx in front of it.
+- rendition is reachable on port `8761`.
+
+Below are the requirements for firewall rules / Docker network setup:
+- Nuxeo needs to reach ARender previewer,
+- ARender previewer needs to reach ARender rendition,
+- ARender previewer needs to reach Nuxeo.
+
+### Embedded Installation - Development
+
+For development purposes, run the rendition Docker image and bind its port to localhost:
+```
+docker run -p 8761:8761 -it ARENDER_DOCKER_IMAGE_ID
+```
+
+Then install the [nuxeo-arender-connector](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender-connector) marketplace package.
+
+It installs the ARender integration inside Nuxeo and the ARender previewer inside Nuxeo's Tomcat.
+
+### Docker Installation - Production
+
+For production, we recommend that each part of ARender software is deployed as a Docker container.
+
+You can deploy several ARender renditions. Their URL needs to be given to ARender previewer. ARender previewer is responsible for renditions loading. ARender renditions don't need to communicate with each other.
+
+Rendition URLs can be passed to ARender previewer with the `renditionHostEnv` environment variable.
+
+{{#> callout type='info' heading='ARender previewer behavior'}}
+ARender previewer owns in its cache a session corresponding to the t-uple user, document and blob.</br>
+You'll need to ask for a new session if the previewer crashes (action 1. on the chart above).
+{{/callout}}
+
+{{#> callout type='warning' heading='ARender previewer clustering'}}
+You can't have a cluster of ARender previewers because previewers don't share sessions.
+{{/callout}}
+
+If you need to change these settings while ARender previewer is running, there is a REST API on ARender previewer.
+
+To get current settings:
+```
+GET /arendergwt/weather?format=json
+```
+To update settings:
+```
+POST /arendergwt/weather?format=json
+["https://rendition1:8761", "https://rendition2:8761"]
+```
+
+## Configuration
+
+### Nuxeo Configuration
+
+The Nuxeo Enhanced Viewer relies on a [JWT](https://jwt.io/) to request an OAuth 2 token for authentication (See [OAuth 2]({{page page='using-oauth2'}}) documentation page for more information).
+You need to define a secret, `nuxeo.jwt.secret` in your `nuxeo.conf`, to enable it.
+
+Authentication from ARender to Nuxeo relies on a shared secret between the two applications. This secret is defined with the property `nuxeo.arender.secret` in your `nuxeo.conf`.
+
+{{#> callout type='info' heading='Shared secret environment variable'}}
+If using the Docker image for the ARender previewer, you can also define this shared secret through an environment variable `nuxeoArenderSecretEnv`.
+{{/callout}}
+
+If your ARender rendition server doesn't run on same host as Nuxeo's Tomcat, you can change the ARender rendition URL by setting `arender.server.rendition.hosts` in your `nuxeo.conf` (default value is `http://localhost:8761`).
+
+You can change the ARender previewer URL used by Nuxeo to open ARender sessions by setting `arender.server.previewer.host` in your `nuxeo.conf` (default value if `http://localhost:8080`).
+
+### ARender Previewer Configuration
+
+- For an on-host installation, you can follow the [ARender Documentation](https://arender.io/doc/current4/documentation/setup/presentation/configuration.html).
+
+- For an embedded installation, you can modify the `arender-hmi.properties` files under `NUXEO_HOME/nxserver/config/ARenderConfiguration` folder.
+
+- For a Docker installation, you can extend our image and copy your properties file to `/docker-entrypoint-init.d/arender.properties`:
+
+  ```
+  FROM dockerin-arender.nuxeo.com:443/arender-previewer:MP_VERSION
+
+  COPY arender.properties /docker-entrypoint-init.d/arender.properties
+  ```
+
+You can also modify the `arender-hmi.properties` which is deployed inside the `/ARenderConfiguration` in the previewer Docker container.
+
+These configuration files let you customize the ARender interface to fit specific UI and UX needs. Please follow the [ARender configuration guide](https://arender.io/doc/current4/documentation/hmi/index-hmi.html) for more information.
+
+Examples of possible configurations:
+
+- Add or remove buttons from the ARender interface,
+- Modify ARender behaviors on specific user actions (like entering a comment when the user clicks on "Enter"),
+- Reference a new theme (by creating your custom CSS file),
+- etc.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Annotations with ARender/arender-customized.png
+    name: arender-customized.png
+    addins#screenshot#up_to_date
+--}}
+![arender-customized.png](nx_asset://a26f7eaf-e268-443f-be33-2c88542e2a13 ?w=600,border=true)
 
 ## Supported File Formats
 
