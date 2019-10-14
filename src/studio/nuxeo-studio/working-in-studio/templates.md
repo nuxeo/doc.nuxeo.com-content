@@ -47,7 +47,7 @@ For more information on Email templates, discover the [available variables in ma
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
-- [Email template Samples](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/email-templates-nuxeo)
+- [Email Template Samples](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/email-templates-nuxeo)
 
 {{/panel}}</div><div class="column medium-6">
 </div></div>

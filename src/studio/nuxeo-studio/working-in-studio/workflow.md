@@ -128,7 +128,7 @@ You should first read the [Workflow pages of the Customization and Development s
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
-- [Monitor workflow instances status](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/workflow-status)
+- [Monitor Workflow Instances Status](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/workflow-status)
 
 {{/panel}}</div><div class="column medium-6">
 </div></div>
