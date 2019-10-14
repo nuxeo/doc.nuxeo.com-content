@@ -256,27 +256,27 @@ Nuxeo Automation Scripting allows you to write JavaScript code to use Automation
 *   Using operations/chains as JavaScript functions within this `run()` function
 
     ```js
-    /*Automation operation to create a new version*/
+    /* Automation operation to create a new version */
     input = Document.CreateVersion(input, {
-	   /*required:false - type: string*/
+	    /* required:false - type: string */
 	    'increment': 'MAJOR',
-	     /*required:false - type: boolean*/
+	    /* required:false - type: boolean */
 	    'saveDocument': 'true'
-        });
+    });
     ```
 
 *   Using `for/if/print` or any other JavaScript feature
 
     ```js
-    if(docs.length > 3){
+    if (docs.length > 3) {
       var index;
       for (index = 0; index < docs.length; ++index) {
         Document.SetProperty(docs[index], {
-          /*required:true - type: string*/
+          /* required:true - type: string */
           'xpath': "dc:title",
-          /*required:false - type: boolean*/
+          /* required:false - type: boolean */
           'save': true,
-          /*required:false - type: serializable*/
+          /* required:false - type: serializable */
           'value': "renamed"
         });
       }
@@ -324,25 +324,22 @@ The following code example is bound to a simple event (Document created), to app
 
 ```js
 function run(input, params) {
-
- Console.log("Starting property inheritance");
-
+  Console.log("Starting property inheritance");
   var parent = Document.GetParent(input, {
-      /*required:false - type: string*/
-      'type': 'product'
-      }
-  );
+    /* required:false - type: string */
+    'type': 'product'
+  });
 
   if (parent) {
-        input = Document.CopySchema(input, {
-          /*required:true - type: string*/
-          'schema': 'product_catalog',
-          /*required:false - type: string*/
-          'sourceId': parent.id
-          });
-        Console.log("product_catalog schema copied");
-        }
+    input = Document.CopySchema(input, {
+      /* required:true - type: string */
+      'schema': 'product_catalog',
+      /* required:false - type: string */
+      'sourceId': parent.id
+    });
+    Console.log("product_catalog schema copied");
   }
+}
 ```
 
 ## Use Cases
@@ -424,23 +421,22 @@ function run(input, params) {
   var compare = (nowDate > releaseDate);
   if (compare) {
     Console.log("Now less than release date");
-  }
-  else {
+  } else {
     Console.log("Now greater than release date");
   }
+}
 ```
 
 ### Event Context
 
 It is possible to access to the event context. This can be really usefull when trying to access some repository information before the document is created: Typically, you can't access parent properties on the "About to create" event without `ctx.Event.getProperty`:
 
-
 ```js
 function run(input, params) {
-    /* Use parentPath for Empty document created event, and parentRef for About to create event */
-    var parentPath = ctx.Event.getProperty("parentPath");
-    var parentDoc = Repository.GetDocument(null, {"value": parentPath});
-    ...
+  /* Use parentPath for Empty document created event, and parentRef for About to create event */
+  var parentPath = ctx.Event.getProperty("parentPath");
+  var parentDoc = Repository.GetDocument(null, {"value": parentPath});
+  ...
 }
 ```
 
@@ -572,13 +568,14 @@ The default contribution now allows scripting code like:
 
 ```js
 function run(input, params) {
-    var uuid = java.util.UUID.randomUUID().toString();
-    return org.nuxeo.ecm.core.api.Blobs.createJSONBlob("{'uuid': \"" + uuid + "\"}");
+  var uuid = java.util.UUID.randomUUID().toString();
+  return org.nuxeo.ecm.core.api.Blobs.createJSONBlob("{'uuid': \"" + uuid + "\"}");
 }
 ```
+
 One can use `<deny>*</deny>` to disallow all previously-allowed classes. Other classes can be added and previously-allowed ones denied, through:
 
-```
+```xml
   <require>org.nuxeo.automation.scripting.classfilter</require>
   <extension target="org.nuxeo.automation.scripting.internals.AutomationScriptingComponent" point="classFilter">
     <classFilter>
