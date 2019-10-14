@@ -302,8 +302,8 @@ history:
         date: '2015-01-05 16:01'
         message: ''
         version: '1'
-
 ---
+
 {{{multiexcerpt 'automated-metadata-extraction-excerpt' page='creating-content'}}}
 
 ## How It Works
@@ -316,11 +316,11 @@ A Nuxeo listener watches for document creation/modification and triggers metadat
     *   If the attached binary has changed and the document metadata also has changed, the listener writes the metadata from the document to the attached binary.
     *   If the attached binary hasn't changed and the document metadata has changed, the listener writes the metadata from the document to the attached binary.
 
-Notice this behavior means that, by default, the _MetadaMapping is a bidirectional_: Values are read from the blob and stored in fields, and if the value of a mapped field is modified and the document is saved, this value is then written into the blob. This behavior is sometimes not desirable and can be controled using the `readonly` property of the `"metadataMappings` extension point. If the value is `readonly="true"`, then modifying a field will not modify the binary. Default value is `readonlmyu="false"` to preserve compatibility with existing configurations.
+This means that the `MetadataMapping` is bidirectional by default: Values are read from the blob and stored in fields, and if the value of a mapped field is modified and the document is saved, this value is then written into the blob. This behavior is sometimes not desirable and can be controlled using the read-only property of the `metadataMappings` extension point. If the value is `readonly="true"`, then modifying a field will not change the binary. The default value is `readonly="false"` to preserve compatibility with existing configurations.
 
-You can contribute your own metadata mapping and choose to have it applied with the same rules and / or through Nuxeo Automation operations.
+You can contribute your metadata mapping and choose to have it applied with the same rules and/or through Nuxeo Automation operations.
 
-By default the Nuxeo Platform uses [ExifTool](http://www.sno.phy.queensu.ca/%7Ephil/exiftool/)&nbsp;which supports many different data formats including [EXIF](http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/EXIF.html)<span style="color: rgb(0,0,0);">,&nbsp;</span>[GPS](http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/GPS.html)<span style="color: rgb(0,0,0);">,&nbsp;</span>[IPTC](http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/IPTC.html)<span style="color: rgb(0,0,0);">,&nbsp;</span>[XMP](http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/XMP.html). You can refer to its documentation for further details and a complete list of formats. Other processors can be added if needed.
+By default, the Nuxeo Platform uses [ExifTool](http://www.sno.phy.queensu.ca/%7Ephil/exiftool/), which supports many different data formats including [EXIF](http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/EXIF.html)<span style="color: rgb(0,0,0);">,&nbsp;</span>[GPS](http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/GPS.html)<span style="color: rgb(0,0,0);">,&nbsp;</span>[IPTC](http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/IPTC.html)<span style="color: rgb(0,0,0);">,&nbsp;</span>[XMP](http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/XMP.html). You can refer to its documentation for further details and a complete list of formats. Other processors can be added if needed.
 
 ## Contributing Metadata Mappings
 
@@ -340,7 +340,7 @@ Metadata mapping is made through an XML contribution on the [`metadataMappings`]
       <metadata name="PDF:Producer" xpath="dc:title"/>
       <metadata name="PDF:Author" xpath="dc:description"/>
     </metadataMapping>
-    
+
     <!-- A metadata mapping with no bidirectional update. Changing the myschema:my_exif_resolution_unit value will not change the EXIF/ResolutionUnit in the binary (readonly="true")-->
     <metadataMapping id="ExampleReadOnly" processor="exifTool" blobXPath="file:content" ignorePrefix="true" readonly="true">
        <metadata name="ResolutionUnit" xpath="myschema:my_exif_resolution_unit" />
@@ -352,9 +352,7 @@ Metadata mapping is made through an XML contribution on the [`metadataMappings`]
 ## Contributing Metadata Rules
 
 {{#> callout type='info' }}
-
 This part is only needed if you plan to use your metadata mapping with the standard listener.
-
 {{/callout}}
 
 Metadata rules are defined through an XML contribution on the&nbsp;[`metadataRules`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.binary.metadata--metadataRules) extension point:
@@ -560,19 +558,3 @@ Here is the default metadata mapping contribution in the Nuxeo Platform:
 </extension>
 ```
 {{/panel}}
-
-* * *
-
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
-
-{{! Please update the label in the Content by Label macro below. }}
-
-&nbsp;
-
-</div><div class="column medium-6">
-
-{{! Please update the label and target spaces in the Content by Label macro below. }}
-
-&nbsp;
-
-</div></div>
