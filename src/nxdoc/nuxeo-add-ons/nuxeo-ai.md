@@ -140,7 +140,7 @@ See the [GitHub Readme](https://github.com/nuxeo/nuxeo-ai/tree/master/addons/nux
 
 You should be familiar with Amazon Web Services and be in possession of your credentials.
 
-#### Big picture
+#### Big Picture
 
 ![]({{file name='nuxeo-ai-aws.png' page='nuxeo-ai'}} ?w=450,border=true)
 
@@ -250,7 +250,7 @@ See the [GitHub Readme](https://github.com/nuxeo/nuxeo-ai/blob/master/addons/nux
 
 Register with [Sightengine](https://sightengine.com/) to obtain your `apiKey` and `apiSecret`.
 
-#### Big picture
+#### Big Picture
 
 ![]({{file name='nuxeo-ai-image-quality.png' page='nuxeo-ai'}} ?w=450,border=true)
 
