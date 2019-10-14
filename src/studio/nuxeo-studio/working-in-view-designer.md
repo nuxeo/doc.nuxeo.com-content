@@ -7,10 +7,10 @@ review:
 description:
 tree_item_index: 250
 ---
+
 {{#> callout type='info' heading='availability'}}
 This feature is available for target platforms Nuxeo Platform LTS 2016 and above.
 {{/ callout}}
-
 
 If you have chosen the Web UI as your default interface you will need to become familiar with the Studio Designer in order to customize your interface to fit your needs.
 
@@ -39,7 +39,9 @@ In this documentation, you will also find [Javascript Expression Examples]({{pag
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
 - [HOWTO: Define a New Document Type Layout in Studio Designer]({{page space='nxdoc' page='web-ui-document-layouts'}})
 - [HOWTO: Create a New Search Screen in Studio Designer]({{page space='nxdoc' page='web-ui-search'}})
@@ -48,19 +50,13 @@ In this documentation, you will also find [Javascript Expression Examples]({{pag
 - [HOWTO: Insert a User Action]({{page version='' space='nxdoc' page='how-to-insert-user-action'}})
 - [HOWTO: Insert a New Tab]({{page version='' space='nxdoc' page='how-to-new-tab'}})
 
-
 {{/panel}}
 </div>
 <div class="column medium-6">
-
-</div>
-</div>
-
-* * *
-
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+{{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
 - [Tips and tricks to design elements within Studio Designer](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/designer-tips-tricks)
 
-{{/panel}}</div><div class="column medium-6">
-</div></div>
+{{/panel}}
+</div>
+</div>
