@@ -99,7 +99,7 @@ This document is part of the [Sub Workflow Example]({{page page='sub-workflow-ex
 
 ## What Will We Do In this Step?
 
-We will create the main workflow that will call a sub-workflow depending on the document's metadata, and pass it variables along the way.
+We will create the main workflow that will call a sub-workflow depending on the document's metadata, and pass its variables along the way.
 
 ## Creating the Workflow
 

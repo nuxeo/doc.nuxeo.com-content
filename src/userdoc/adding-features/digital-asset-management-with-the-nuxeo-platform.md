@@ -139,7 +139,7 @@ Pictures are specific files. To take into account the specificities of pictures,
 *   The picture's EXIF metadata
 *   Additional picture views
 
-Pictures can be [created]({{page page='creating-content'}}) and [edited]({{page page='editing-content'}}) in workspaces and folders like any other document type. You can also classify and organize them in [collections]({{page space='nxdoc' page='collections'}}).
+Pictures can be [created]({{page page='nxdoc/creating-content'}}) and [edited]({{page page='nxdoc/editing-content'}}) in workspaces and folders like any other document type. You can also classify and organize them in [collections]({{page space='nxdoc' page='collections'}}).
 
 When pictures are created, the EXIF metadata of the pictures are automatically extracted and displayed on the **Summary** tab. They cannot be modified. The IPTC legend, copyright and source are used to automatically fill in the description, rights and source metadata. See the page [Binary Metadata]({{page space='nxdoc' page='binary-metadata'}}) for more information.
 
@@ -184,7 +184,7 @@ A user interface is added in the Admin tab so that it is possible to re-compute 
 
 Video is a document type dedicated to the management of videos files. It provides the following specific features: A player to view the video from the application, a storyboard to navigate in the video and alternative video formats.
 
-Video documents can be [created]({{page page='creating-content'}}) and [edited]({{page page='editing-content'}}) like any other document type. See the page&nbsp;[Supported File Formats]({{page space='nxdoc' page='supported-file-formats'}})&nbsp;for supported video files.
+Video documents can be [created]({{page page='nxdoc/creating-content'}}) and [edited]({{page page='nxdoc/editing-content'}}) like any other document type. See the page&nbsp;[Supported File Formats]({{page space='nxdoc' page='supported-file-formats'}})&nbsp;for supported video files.
 
 ![]({{file name='video_document_type.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
 
@@ -213,13 +213,13 @@ When your export a video asset, you get a folder with several files available:
 *   One JPG picture prefixed with "StaticPlayerView_video-screenshot-", which is the picture extracted from the video that is used for the player picture
 *   One JPG picture prefixed with "Thumbnail_video-screenshot-", which is the thumbnail used in folders proposing a thumbnail view (typically in the DAM view)
 
-A video is exported like any other document. See the page [Exporting Documents]({{page page='exporting-documents'}}).
+A video is exported like any other document. See the page [Exporting Documents]({{page page='nxdoc/exporting-documents'}}).
 
 #### Audio
 
 Audio is a document types dedicated to audio files management. It provides a player from the document **Summary** tab to listen to it from the application.
 
-Audio documents can be [created]({{page page='creating-content'}}) and [edited]({{page page='editing-content'}}) like any other document type. They don't have any specific tab or action available.
+Audio documents can be [created]({{page page='nxdoc/creating-content'}}) and [edited]({{page page='nxdoc/editing-content'}}) like any other document type. They don't have any specific tab or action available.
 
 See the page [Supported File Formats]({{page space='nxdoc' page='supported-file-formats'}}) for supported audio files.
 
@@ -231,9 +231,9 @@ See the page [Supported File Formats]({{page space='nxdoc' page='supported-file-
 <div class="column medium-6">
 {{#> panel heading='Related User Documentation'}}
 
-- [Creating Content]({{page page='creating-content'}})
-- [Editing Content]({{page page='editing-content'}})
-- [Collections]({{page page='collections'}})
+- [Creating Content]({{page page='nxdoc/creating-content'}})
+- [Editing Content]({{page page='nxdoc/editing-content'}})
+- [Collections]({{page page='nxdoc/collections'}})
 
 {{/panel}}
 

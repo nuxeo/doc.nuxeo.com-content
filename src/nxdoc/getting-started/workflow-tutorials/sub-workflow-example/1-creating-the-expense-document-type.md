@@ -180,7 +180,7 @@ We will need to add two specific fields: amount and type.
     Our document will now be able to hold a single binary file.
 2.  In the **Add a custom schema** section:
     - Add a field named `amount` of type **Floating point**.
-    - Add a field named `expensetype` of type **Directory** and select the `expenseType` directory created above.
+    - Add a field named `expensetype` of type **Directory** and select the `expenseType` vocabulary created above.
 3.  Save your modifications.
 
 ## Defining the Document Type Layouts

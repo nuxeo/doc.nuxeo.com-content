@@ -280,10 +280,8 @@ CONFIGURE A WORKFLOW
 
 1.  On the Variables tab, ensure that the refundAmount variable is editable in this task.
 
-1.  On the Variables tab, ensure that the refundAmount variable is editable in this task.
-    On the **Transitions** tab, add a `confirmRefund` button, then link the confirm button to the `BCContract_CancelPartialRefund_AC` automation chain.
+1.  On the **Transitions** tab, add a `confirmRefund` button, then link the confirm button to the `BCContract_CancelPartialRefund_AC` automation chain.
 
-1.  On the Variables tab, ensure that the refundAmount variable is editable in this task.
 1.  Finally, reorganize the nodes and transitions to implement our new logic, and save. You should have something like this:
 
 ![workflow]({{file name='workflow-final.png'}} ?w=450)
@@ -320,7 +318,7 @@ CREATE A PAGE PROVIDER FOR A CUSTOM DOCUMENT
     ```
 
     {{#> callout type='tip' }}
-    You can add to the query filter to further tailor your search results. Try filtering out contracts that     haven't been cancelled!
+    You can add the query filter to further tailor your search results. Try filtering out contracts that     haven't been cancelled!
     {{/callout}}
 
 1.  Under **Predicates**, click **Add**. Click on **Edit binding** and select `schema:system` > `fulltext`.

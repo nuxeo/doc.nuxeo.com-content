@@ -175,7 +175,7 @@ It is also possible to compare two distinct documents.
 {{#> panel heading='Related documentation'}}
 
 - [Nuxeo Diff developer documentation]({{page space='nxdoc' page='nuxeo-diff'}})
-- [Traceability]({{page page='traceability'}})
+- [Traceability]({{page page='nxdoc/traceability'}})
 
 {{/panel}}
 </div>

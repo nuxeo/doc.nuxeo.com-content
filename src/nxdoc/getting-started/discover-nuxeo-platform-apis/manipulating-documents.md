@@ -227,7 +227,7 @@ Create a new contract in Nuxeo Platform.
 
 **Prerequisites**
 
-- {{{multiexcerpt 'prerequisite_addon' page='Handling Permissions'}}}
+{{{multiexcerpt 'prerequisite_addon' page='Handling Permissions'}}}
 
 **Procedure**
 
@@ -481,7 +481,7 @@ First we will **trash** the document, then in a second phase restore it from the
     $ node trashContract.js
     ```
 
-**Restore trashed document**
+**Restoring trashed document**
 
 Restore the contract from trash.
 

@@ -49,7 +49,7 @@ This search offers several search criteria, that you can associate to define you
 SELECT * FROM Document WHERE (criterion1 = value1 OR criterion1 = value2) AND (criterion2 = valueA OR criterion2 = valueB) AND criterion 3 = something
 ```
 
-**To search documents using the Search tab**
+**To search documents using the Search tab:**
 
 1. Click on the **Search** menu.
 2. Fill in the form with your criteria.
@@ -68,7 +68,7 @@ You can save searches done using the search tab so as to be able to reuse them a
 {{! multiexcerpt name='saved-searches'}}
 When you save a search, you save its criteria. This means that the results displayed when you reuse the search may be different from the results at the time you saved the search, as the content of the application may (and probably will) have changed. Saved searches also include the results columns and sort criteria selected when the search was saved.
 
-You can save as many searches you need: Click on the **Save as** button when you are satisfied with your query and results. Then give your search a title and confirm save.
+You can save as many searches you need. Click on the **Save as** button when you are satisfied with your query and results. Then give your search a title and save.
 {{! /multiexcerpt}}
 
 ![]({{file name='save-search-popup-web-ui.png'}} ?w=350,border=true)
@@ -83,7 +83,7 @@ Saved searches are private by default. But you can share them by [giving permiss
 
 **Delete a Search**
 
-You can manage and delete your saved search from the Search tab drop down list, select the search that you want to manage, click on the Delete button and confirm deletion. Select the search that you want to delete from the Search tab drop down list, click on the more icon ![]({{file name='more-search-web-ui.png'}} ?w=14) and then on **Delete** and confirm.
+You can manage and delete your saved search from the Search tab drop down list. Select the search that you want to delete from the Search tab drop down list, click on the more icon ![]({{file name='more-search-web-ui.png'}} ?w=14) and then on **Delete** and confirm.
 
 ## Trash Search
 

@@ -54,15 +54,15 @@ The list of collections the document is available from is displayed on its **Vie
 {{! /multiexcerpt}}
 
 ## Creating Collections
-{{! multiexcerpt name='collections-containment-rule'}}
-Collections can be created in workspaces and folders.
-{{! /multiexcerpt}}
+{{! multiexcerpt name='collections-containment-rule'}} Collections can be created in workspaces and folders. {{! /multiexcerpt}}
 
-{{! multiexcerpt name='creating-web-ui'}}
-There are two ways to create a collection:
-- Like any other document, using the button&nbsp;![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30): Just fill in the creation form and the collection is created in the current workspace / folder.
-  ![]({{file name='new-collection-web-ui.png'}} ?w=400,border=true)
-- Directly from the **Add to collection** popup: collections about to be created are displayed with the icon ![]({{file name='add-icon_web-ui.png' page='icons-index'}} ?w=20), while existing collections are displayed in the drop down list. The collection is created in your personal workspaces, in a **My Collections** folder.
+{{! multiexcerpt name='creating-web-ui'}} There are two ways to create a collection:
+
+- Like any other document, using the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=30): Just fill in the creation form and the collection is created in the current workspace / folder. ![]({{file name='new-collection-web-ui.png'}} ?w=400,border=true)
+- Directly from the Add to collection popup: Fill in the label of the collection to be created and hit the **Enter** key on your keyboard: the collection is created, while existing collections are displayed in the drop down list.
+{{#> callout type='info'}}
+The collection is created in your personal workspaces, in a My Collections folder.
+{{/callout}}
 {{! /multiexcerpt}}
 
 ## Sharing Collections
@@ -71,7 +71,7 @@ Sharing a collection means [giving permissions]({{page page='permissions'}}) to 
 
 Collections created in your personal workspace are private by default. You must grant the needed permissions on the collection if you want to share it. Granting permissions to a collection makes the collection available to users from their Home. The list of documents displayed inside the collection depends on the permissions of the user on each of the documents.
 
-Beside the generic permissions, collection have a specific right, called "can collect". When you share a collection, you can choose to:
+Besides the generic permissions, collection have a specific right, called "can collect". When you share a collection, you can choose to:
 
 - **Give read access**: By giving them Read permission, you enable users to see the collection in their Home and the documents inside it depending on their permissions on each document;
 - **Enable users to add documents to the collection**: By giving the permission "Can collect", you enable users to add documents to the collection and remove them;
@@ -89,7 +89,7 @@ To remove several documents from a collection:
 1. Go to the **Collections** tab in your side menu.
 2. Click on the collection name that you want to manage.
 3. Select the documents to remove using the checkboxes.
-4. In the selection header, click on the Remove from collection icon&nbsp;![]({{file name='delete-circle-icon_web-ui.png' page='icons-index'}}).
+4. In the selection header, click on the **Remove from collection** icon&nbsp;![]({{file name='delete-circle-icon_web-ui.png' page='icons-index'}}).
 
 ![]({{file name='remove-from-collection-web-ui.png'}} ?w=600,border=true)
 
@@ -100,7 +100,7 @@ In both ways documents are immediately removed from the collection.
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Collections developer documentation]({{page space='nxdoc' page='collections'}})
-- [Collections in JSF UI]({{page version='' space='userdoc' page='collections'}})
+- [Collections in JSF UI]({{page version='' space='nxdoc' page='collections-jsf-ui'}})
 
 {{/panel}}</div><div class="column medium-6">
 

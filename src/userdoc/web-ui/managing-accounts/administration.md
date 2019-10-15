@@ -43,7 +43,7 @@ Users must at least belong to "members", "administrators" or one of their sub-gr
 {{! /multiexcerpt}}
 {{/callout}}
 
-**Users's Parameters**
+**Users' Parameters**
 
 The whole set of information about users consists of the items below:
 
@@ -58,7 +58,7 @@ The whole set of information about users consists of the items below:
 <td colspan="1">Username</td>
 <td colspan="1">
 
-The name the user will use to log in.
+The name the user will use to log in
 
 </td>
 </tr>
@@ -94,9 +94,9 @@ Email
 </td>
 <td colspan="1">
 
-Email of the user
+Email of the user.
 
-This address is used for [alerts]({{page page='collaborative-features#alerts'}}).
+This address is used for [alerts]({{page page='alerts'}}).
 
 </td>
 </tr>
@@ -258,7 +258,7 @@ Modifying groups most often consists in adding or removing members of the group.
 
  1. Go to the **Administration** menu > **Users & Groups**.
  1. Search a group and click on its name to open its card.
- 1. Click on the **Edit** tab, modify the group's members
+ 1. Click on the **Edit** tab and modify the group's members.
  1. Click on the **Save** button.
 
  The users who are no longer members of the group are denied group's permissions. However they still have their individual permissions.

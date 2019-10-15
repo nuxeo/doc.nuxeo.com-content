@@ -52,14 +52,14 @@ Like in a workspace, you can use drag and drop to create content in a folder.
 **Ordered Folders**
 
 {{! multiexcerpt name='ordered-folders'}}
-In an ordered folder, documents are manually sorted. So, the orders in which documents are listed in the folder doesn't depend on one of its properties (version, author, etc); you decide where it should be displayed in the list. When a document is created, it is added at the end of the list. It is not possible to sort documents automatically by clicking on the columns titles in an ordered folder.
+In an ordered folder, documents are manually sorted. So, the order in which documents are listed in the folder doesn't depend on one of its properties (version, author, etc); you decide where it should be displayed in the list. When a document is created, it is added at the end of the list. It is not possible to sort documents automatically by clicking on the columns titles in an ordered folder.
 
 An ordered folder has the same presentation as a regular folder, but it has some additional buttons below the content table:
 
 - Move up
 - Move down
 
-To change the content's order, select a document using the checkbox on the left and click on the **move** button you need. The document is moved in the list of documents available in the folder.
+To change the content's order, select a document using the checkbox on the left and click on the **Move** button you need. The document is moved in the list of documents available in the folder.
 
 You can move groups of documents. Moving groups of documents up or down joins the group items and positions them one row up or one row down. Moving groups does not affect the rest of the order.
 {{! /multiexcerpt}}
@@ -111,13 +111,13 @@ It is possible to add attachments to [Files](#file) and [Notes](#note) using the
 
 **To add attachments to your document:**
 
-In the **View** tab of the document concerned, drag and drop the attachment in the field or click on **Add a file** and a popup lets you select the attachment from your computer.
+In the **View** tab of the document concerned, drag and drop the attachment in the field or click on **Upload attachment** and a popup lets you select the attachment from your computer.
 
 **To remove attachment:**
 In the **View** tab of the document concerned, click on ![]({{file name='delete_web-ui.png' page='icons-index'}}) next to the attachment concerned. The attachment is immediately deleted.
 
 {{#> callout type='note' heading='Limitations'}}
-- Attached files are not synchronized with [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}).
+- Attached files are not synchronized with [Nuxeo Drive]({{page version='' space='client-apps' page='nuxeo-drive'}}).
 {{/callout}}
 
 ### Picture
@@ -161,14 +161,14 @@ Templates are the easiest way to automate the creation of workspace tree structu
 
 **To create a template:**
 
-1. Click on **Templates** in the navigation tree,
+1. Click on **Templates** in the navigation tree.
 2. From there, you can create a new Template containing any type of document, and even files, with the tree structure you want.
 3. Once a new Template has been created, you can create many workspaces from this template.
 
 {{#> callout type='info' heading='Templates and User Rights Management'}}
 - When you set permissions on the 1st-level workspace of a template - here IT project workspace structure-, it will be inherited in the new workspaces. For example, a user who is not allowed to read "IT project workspace structure" will not be able to see it when creating a workspace.
 
-- When you set permissions on the content of a workspace in a template, it won't be inherited in the new workspaces. For example, a user who can't read a folder like "Meeting reports" in a workspace but have reading access on the 1st-level workspace, will be allowed to see "Meeting reports"
+- When you set permissions on the content of a workspace in a template, it won't be inherited in the new workspaces. For example, a user who can't read a folder like "Meeting reports" in a workspace but have reading access on the 1st-level workspace, will be allowed to see "Meeting reports".
 In a few words, don't try to manage workspaces' permissions with Templates (this can be done other ways, like using [Studio]({{page space='studio'}}) configuration tool).
 {{/callout}}
 
@@ -176,8 +176,8 @@ In a few words, don't try to manage workspaces' permissions with Templates (this
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related User Documentation'}}
 
-- [Creating Content]({{page page='creating-content'}})
-- [Editing Content]({{page page='editing-content'}})
+- [Creating Content]({{page page='nxdoc/creating-content'}})
+- [Editing Content]({{page page='nxdoc/editing-content'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 

@@ -142,7 +142,7 @@ Save your changes and [hot reload your project]({{page version='' space='nxdoc' 
 
 ### Navigating to the New Document
 
-If we need to navigate to the new copy, then we need to add `window.location.href = this.urlFor('browse', result.path);` line. However, it implies that the notification message won't be seen as it will appear between the moment when the user clicks and when the new document will be opened. That's why using `nuxeo-dialog` element would provide a better user experience in this case.
+If we need to navigate to the new copy, then we need to add a `window.location.href = this.urlFor('browse', result.path);` line. However, it implies that the notification message won't be seen as it will appear between the moment when the user clicks and when the new document will be opened. That's why using `nuxeo-dialog` element would provide a better user experience in this case.
 
 ### Opening a Dialog
 
@@ -154,9 +154,8 @@ We want the user to:
 2. Select the destination folder where the document should be copied. This way, the destination path won't be static.
 3. Click on the confirmation button to execute the copy and navigate to it. In case of error, it will raise the problem in the `paper-toast` element.
 
-We need to adapt our layout:
-- First create the `nuxeo-dialog`:
-
+We then need to adapt our layout:
+1. Create the `nuxeo-dialog`:
 ```
 <nuxeo-dialog reparent id="popupRight" modal no-auto-focus>
   <h2>Choose your target folder</h2>
@@ -170,15 +169,15 @@ We need to adapt our layout:
 </nuxeo-dialog>
 ```
 
-- Then, in Nuxeo Studio Modeler, create a page provider called `folderish-suggestions` to list the element where the source document can be copied:
+2. In Nuxeo Studio Modeler, create a page provider called `folderish-suggestions` to list the element where the source document can be copied:
 
 ```
 ecm:primaryType IN ('Folder','Workspace') AND ecm:isTrashed = 0 AND  ecm:isProxy = 0 AND ecm:isCheckedInVersion = 0 AND ecm:fulltext = '?*'
 ```
 
-- In the Advanced Configuration section of the page provider, uncheck the `Quote parameters` option.
+3. In the Advanced Configuration section of the page provider, uncheck the `Quote parameters` option.
 
-- Create the `doChange` function:
+4. Create the `doChange` function:
 
 ```
 doChange: function () {

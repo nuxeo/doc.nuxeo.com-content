@@ -170,7 +170,7 @@ To update a report, click on the **Update from Jenkins** button on the report's 
 
 ### Filling In the Duty Comment
 
-You can now make a summary of the CI status in the Jenkins Duty Comment field. This uses the same editor as a [note]({{page page='document-types'}}), which enables to add links to jobs and format your comment so it's easier to organize and read.
+You can now make a summary of the CI status in the Jenkins Duty Comment field. This uses the same editor as a [note]({{page page='nxdoc/document-types'}}#note), which enables to add links to jobs and format your comment so it's easier to organize and read.
 
 To fill in the Jenkins Duty Comment:
 

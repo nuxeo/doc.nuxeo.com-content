@@ -167,8 +167,8 @@ Watch the related courses on Nuxeo University
 
 The contract validation workflow follows the following steps:
 
-1.  When the workflow starts, the contract state changes to the&nbsp;`approval` and the system verifies that the amount property is filled in. If not, the workflow initiator must fill it in.
-2.  A manager reviews the contract to approve it. If they reject it, the workflow initiator must fix it.
+1.  When the workflow starts, the contract state changes to &nbsp;`approval` and the system verifies that the amount property is filled in. If not, the workflow initiator must fill it in.
+2.  A manager reviews the contract to approve it. If he rejects it, the workflow initiator must fix it.
 3.  When the manager approves the contract, the state changes to&nbsp;`running`.
 
 ## Starting the Workflow
