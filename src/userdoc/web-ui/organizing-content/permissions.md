@@ -118,7 +118,7 @@ External users can also access the **Search** menu, which can be useful when nav
 1. Open the "Permissions" tab.
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Functional Overview.1544549838807/Organizing Content/Managing Permissions - Permissions tab.png
-    name: Managing Permissions - Permissions tab.png
+    name: managing-permissions-permissions-tab.png
     1.1.3#screenshot#up_to_date
 --}}
 ![Managing Permissions - Permissions tab.png](nx_asset://dacb5f5f-de69-406e-a93a-073f7a10c193 ?w=650,border=true)
@@ -144,7 +144,7 @@ When created, the granted access is saved and displays in the "Permissions assig
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Functional Overview.1544549838807/Organizing Content/Managing Permissions - Permission granted.png
-    name: Managing Permissions - Permission granted.png
+    name: managing-permissions-permission-granted.png
     1.1.3#screenshot#up_to_date
 --}}
 ![Managing Permissions - Permission granted.png](nx_asset://2e4970c9-a1e0-45f4-aa1c-991da7713ba0 ?w=650,border=true)
@@ -156,7 +156,7 @@ At this stage, you can click on the: 
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Functional Overview.1544549838807/Organizing Content/Managing Permissions - Actions.png
-    name: Managing Permissions - Actions.png
+    name: managing-permissions-actions.png
     1.1.3#screenshot#up_to_date
 --}}
 ![Managing Permissions - Actions.png](nx_asset://f95b8d04-3786-46fe-90b5-17a82aea105b ?w=650,border=true)
