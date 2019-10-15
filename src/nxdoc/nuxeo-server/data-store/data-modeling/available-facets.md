@@ -303,3 +303,12 @@ This facet should be set on any type if you want to use it as the task document 
 ## WebView
 
 &nbsp;
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-To'}}
+
+- [HOWTO: Create and Use Document Facets]({{page space='studio' page='how-to-create-and-use-document-facets'}})
+
+{{/panel}}</div>
+</div>
