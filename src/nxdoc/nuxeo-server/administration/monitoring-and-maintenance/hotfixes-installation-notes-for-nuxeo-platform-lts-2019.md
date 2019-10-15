@@ -92,6 +92,40 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 15
+
+### Probe from Nuxeo Stream
+
+The stream probe can be added to the health check with the following contribution:
+```
+  <require>org.nuxeo.ecm.core.management.contribs</require>
+  <extension target="org.nuxeo.ecm.core.management.CoreManagementComponent"
+    point="healthCheck">
+    <probe name="streamStatus" enabled="true" />
+  </extension>
+```
+
+### S3 Configurable Digest
+
+The digest algorithm to use to compute a unique key when storing blobs in S3, can now be configured in `nuxeo.conf`:
+```
+nuxeo.s3storage.digest=SHA-256
+```
+
+Or, if a full XML configuration is used (necessary if there are several different S3 blob providers):
+```
+<extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
+  <blobprovider name="default">
+    <class>org.nuxeo.ecm.core.storage.sql.S3BinaryManager</class>
+    ...
+    <property name="digest">SHA-256</property>
+    ...
+  </blobprovider>
+</extension>
+```
+
+The default is MD5. The valid digest algorithms are those available to the Java runtime, the standard ones are listed [here for Java 8](https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#MessageDigest) and [here for Java 11](https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#messagedigest-algorithms).
+
 ## Hotfix 13
 
 ### Performance Improvement to Load User Entities
@@ -132,7 +166,7 @@ To disable the compatibility mode and allow the underscore character, use the fo
 </extension>
 ```
 
-## Secured properties
+### Secured properties
 
 The following dublincore properties are now secured from edition:
 * dc:created
