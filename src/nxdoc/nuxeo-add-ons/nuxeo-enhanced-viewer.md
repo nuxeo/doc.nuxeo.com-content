@@ -35,7 +35,7 @@ Here's a chart illustrating the actions during the first connection to ARender:
 
 ## Functional Overview
 
-Once the Nuxeo Enhanced Viewer is properly installed and configured a new **Annotations** tab is available on each document with the picture or video facet:
+Once the Nuxeo Enhanced Viewer is properly [installed and configured](#installation) a new **Annotations** tab is available on each document with the picture or video facet:
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Annotations with ARender/annotation-tab.png
@@ -155,9 +155,24 @@ Three views are available on the left panel:
 --}}
 ![annotation-browser-navigation.png](nx_asset://d1f71ecc-0afb-4bbf-92d7-e721518e66c3 ?w=20): Advanced Search
 
-From the annotations browser, you can see the list of all the annotations made on the document you are viewing, grouped by document pages.
+From the annotations browser, you can see the list of all the annotations made on the document you are viewing, grouped by document pages.</br>
+From this view, you can **delete annotations** by clicking on the delete icon ![delete-icon-arender.png](nx_asset://927311de-2cdc-497c-9efc-5beb09750968 ?w=15) next to it.
 
-You can search for and filter any annotation:
+Still from the annotations browser view, 2 icons are available on each annotation:
+- {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-target-annotation.png
+    name: annotations-target-annotation.png
+    addins#icon#up_to_date
+--}}
+![annotations-target-annotation.png](nx_asset://56a7f5df-93f1-4423-b12f-4e5a0cc06178 ?w=20): This action will localize the annotation, for example, if you have a PDF of several pages, it will directly lead you to the annotation but won't hide the other annotations.
+- {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotations-show-one-annotation.png
+    name: annotations-show-one-annotation.png
+    addins#icon#up_to_date
+--}}
+![annotations-show-one-annotation.png](nx_asset://4271cd6f-9b4f-4082-94fb-046c879348c6 ?w=20): This action will only display the annotation concerned and hide the others.
+
+Different filters are available, you can search for and **filter any annotation by metadata** (status, document, annotation type, etc.), and also **filter annotation by the current user**, that means that only the annotations that the current user created will be displayed on the left panel.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Arender Connector/annotation-search.png
@@ -166,8 +181,7 @@ You can search for and filter any annotation:
 --}}
 ![annotation-search.png](nx_asset://24fd947d-4c73-47fa-b13b-e714c8466f33 ?w=350,border=true)
 
-You can also manage annotations by:
-
+You can also **manage annotations** by:
 - Adding a comment
 - Replying to a comment
 - Deleting a comment
@@ -245,6 +259,9 @@ Hover over the download icon {{!--     ### nx_asset ###
 - Download current file
 - Download current file as PDF
 - Download current file with annotations
+- Download CSV annotations
+- Open a local file
+- Open an URL
 
 ### Print
 
