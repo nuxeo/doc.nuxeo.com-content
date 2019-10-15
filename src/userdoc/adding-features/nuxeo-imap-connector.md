@@ -330,9 +330,9 @@ Indicate the maximum number of emails to be fetched at the same time.
 The actions available on an email folder are:
 
 *   Edit the folder (see parameters above),
-*   Subscribe to [alerts]({{page page='collaborative-features'}}#alerts),
-*   [Manage the access]({{page page='managing-permissions'}}) to the folder,
-*   [Manage the trash]({{page page='deleting-content'}}) of the folder.
+*   Subscribe to [alerts]({{page page='nxdoc/collaborative-features'}}#alerts),
+*   [Manage the access]({{page page='nxdoc/managing-permissions'}}) to the folder,
+*   [Manage the trash]({{page page='nxdoc/deleting-content'}}) of the folder.
 
 ### Email Folder Parameters for a Gmail Account
 
@@ -461,4 +461,4 @@ Limit of new fetched emails
 4.  To open a mail, click on its subject.
     ![]({{file name='DM-emailFolder-summary.png'}} ?w=650,border=true)
 
-Emails cannot be edited, but you can [comment]({{page page='collaborative-features'}}#comments) and [annotate]({{page page='preview'}}) them, [link]({{page page='editing-content'}}#relations) them to other documents and [follow the email folder's activity]({{page page='collaborative-features'}}#alerts).
+Emails cannot be edited, but you can [comment]({{page page='nxdoc/collaborative-features'}}#comments) and [annotate]({{page page='nxdoc/comments'}}) them, [link]({{page page='nxdoc/editing-content'}}#relations) them to other documents and [follow the email folder's activity]({{page page='nxdoc/collaborative-features'}}#alerts).

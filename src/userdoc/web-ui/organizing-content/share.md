@@ -15,7 +15,7 @@ tree_item_index: 700
 
 The button ![]({{file name='share_web-ui.png' page='icons-index' space='userdoc'}}) gives you the permanent link to the document concerned, in order to easily share it.
 
-You can also use Nuxeo Easyshare add-on which enables sharing files from the repository with external users not requiring a login.
+You can also use Nuxeo Easyshare addon which enables sharing files from the repository with external users not requiring a login.
 For more information, see [EasyShare Documentation]({{page space='userdoc' page='easyshare'}}).
 
 ## Downloading
@@ -26,15 +26,15 @@ Users can download documents on their computer. It is possible to download:
 - An entire workspace, folder, section
 
 **From a Document**
-- Go to the document you want to download
-- Click on the Download button ![]({{file name='download-document-web-ui.png' page='icons-index'}} ?w=25) under the preview of your document.</br>
+1. Go to the document you want to download
+2. Click on the Download button ![]({{file name='download-document-web-ui.png' page='icons-index'}} ?w=25) under the preview of your document.</br>
   Your document is downloaded on your computer.
 
 **From a Folder**
-- Go to the folder/workspace that you want
-- Select several documents
+1. Go to the folder/workspace that you want
+2. Select several documents
   A top bar is displayed with document actions
-- Click on the download button ![]({{file name='download-multiple-documents-web-ui.png' page='icons-index'}} ?w=22)</br>
+3. Click on the download button ![]({{file name='download-multiple-documents-web-ui.png' page='icons-index'}} ?w=22)</br>
   The documents are downloaded as a .zip on your computer.
 
 ## Exporting
@@ -136,7 +136,7 @@ When you publish a document, the following elements are kept from the workspace 
 1. From the View of the document in the workspace, click ![]({{file name='more-three-dots.png'}} ?w=30)in the top action toolbar and select Publish Document. ![]({{file name='publication-popup.png'}} ?w=500,border=true)
 1. Select the rendition that should be published, for example None (same document format as in the workspace) or a PDF version of the document.
 1. Optional: Create a version.
-1. Click Publish.
+1. Click on Publish.
 
 
 {{#> callout type='info' header='Working with Renditions'}}
@@ -158,7 +158,7 @@ Selecting Default rendition implies a format that depends of the document type, 
 
 From the Publication tab of the document in the workspace, click **Unpublish** on the publication you want to revert.
 
-To revert all the publication of this document, click **Unpublish All**.
+To revert all publications of this document, click on **Unpublish All**.
 
 * * *
 

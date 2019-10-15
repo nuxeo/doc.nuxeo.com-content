@@ -31,14 +31,14 @@ In this tutorial you will learn how to add a new tab to your custom document typ
 
 ## Prerequisites
 
-- A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Nuxeo Modeler
+- A [Contract document type]({{page version='' space='nxdoc' page='web-ui-document-layouts'}}#create-a-contract-document-type) created in Nuxeo Modeler.
 - Make sure that the [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
 
 Once you are all set, you can navigate to Modeler to start creating your search.
 
 ## Create a Page Provider
 
-1. In Studio Modeler, go to Customization, go to **Page Providers**, click on **New** and name it `otherContracts`.
+1. In Studio Modeler, open the Configuration > **Page Providers** menu; click on **New** and name it `otherContracts`.
 1. In the Query filter add the following line `AND ecm:primaryType='Contract'`. This will enable to only search contract documents.</br>
    You should end up with something like this:
 
@@ -56,8 +56,8 @@ Now we will add aggregates to customize the search.
 --}}
 ![contract-owner-vd.png](nx_asset://b3dac2ef-6a71-49a6-9136-708e52f07b39 ?w=250,border=true)
 
-1. Add another new Predicates
-1. Click on **Edit binding** and select `schema:contract` > `owner`
+1. Add another new Predicates.
+1. Click on **Edit binding** and select `schema:contract` > `owner`.
 
 **The search by date range:**
 {{!--     ### nx_asset ###
@@ -67,7 +67,7 @@ Now we will add aggregates to customize the search.
 --}}
 ![creation-date-range-vd.png](nx_asset://263526ac-16b3-41e3-b45c-5a23c98405b0 ?w=250,border=true)
 
-1. Next to **Aggregates** click on **Add**</br>
+1. Next to **Aggregates** click on **Add**.</br>
    A popup window appears.
 1. Fill the popup window like this:
    <div class="table-scroll">
@@ -97,8 +97,8 @@ You are now in Studio Designer, where you can configure the layouts of your Sear
 
 ### Configure Layouts
 
-In the Studio Designer, you are now in the **UI** tab, under **Layouts** > **Page Providers**. You will find the page provider created previously.
-
+1. In Studio Designer, open the **UI** > **Layouts** > **Page Providers** menu.<br>
+You will find the page provider created previously.
 1. Click on **form** and then **Configure**, it will automatically create the `nuxeo-othercontracts-search-form` layout.
 1. Click on **result** and then **Configure**, the `nuxeo-othercontracts-search-results` layout is created.
 
@@ -106,8 +106,7 @@ In the Studio Designer, you are now in the **UI** tab, under **Layouts** > **Pag
 
 You now need to add your labels to your translations file to display them correctly in the UI. To do so:
 
-1. Click on the **UI** table.
-1. Click on **Translations**.
+1. In Studio Designer and from the **UI** tab, open the **Translations** menu.
 1. Create a new `messages.json` file.
 1. Create a new entry in the JSON file with key `label.ui.aggregate.<label>` and the label as value. Here it's:
   ```
@@ -142,8 +141,8 @@ From the Page Provider screen for **otherContracts**:
     --}}
     ![other-contract-elements-attributes.png](nx_asset://209e3f72-ef8e-4fe9-847c-2b9e07a8c0b0 ?w=450,border=true)
 1. Fill in the Filters section like this:
-1. **Current user has one of the permissions**: `Edit`
-1. **Current document has one of the types**: `Contract`
+  - **Document has one of the types**: `Contract`
+  - **User has at least one of the permissions**: `ReadWrite`
 1. Save your changes.
 
 You can now deploy your project on your instance and see what it looks like!

@@ -48,14 +48,14 @@ To add a new theme or customize one of the provided ones you can simply deploy a
 
 ## Create a Theme
 
-This example provides an walk-through on how to create a new theme and add it as a contribution to the Web UI.
-We will create our new theme called `new-light` theme, which is base on the provider `light` theme with some customizations.
+This example provides a walk-through on how to create a new theme and add it as a contribution to the Web UI.
+We will create our new theme called `new-light` theme, which is based on the provider `light` theme with some customizations.
 
 {{#> panel type='code' heading='Without any customization the theme looks like this:'}}
 ![]({{file name='light-theme.png'}} ?w=800,border=true)
 {{/panel}}
 
-Make a copy of the `light` folder on `/themes` directory and name it `new-light`. Then make the following changes to it:
+Make a copy of the `light` folder on the `/themes` directory and name it `new-light`. Then make the following changes to it:
 
 Edit the `theme.html`:
 

@@ -165,10 +165,10 @@ This addon is not yet available on Web UI and requires the JSF UI addon to be in
 {{/callout}}
 
 {{! excerpt}}
-[Nuxeo Multi-tenant](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant) enables to have [domains]({{page page='nuxeo-platform-concepts'}}#available-spaces), or tenants, that are independent from each other, with their own users, vocabulary values etc.
+[Nuxeo Multi-tenant](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-multi-tenant) enables to have [domains]({{page page='nxdoc/nuxeo-platform-concepts'}}#available-spaces), or tenants, that are independent from each other, with their own users, vocabulary values etc.
 {{! /excerpt}}
 
-It is possible to have several domains on the default Nuxeo Platform without using Nuxeo Multi-tenant, but they all share the same [vocabularies definition]({{page page='managing-vocabularies'}}) and users. This means that when users [configure the access to a workspace]({{page page='managing-permissions'}}), for instance, and search for users, they can see all the users of the application. Nuxeo Multi-tenant modifies this behavior and enables domains to be completely isolated from each other, including their users and vocabulary values.
+It is possible to have several domains on the default Nuxeo Platform without using Nuxeo Multi-tenant, but they all share the same [vocabularies definition]({{page page='nxdoc/managing-vocabularies'}}) and users. This means that when users [configure the access to a workspace]({{page page='nxdoc/managing-permissions'}}), for instance, and search for users, they can see all the users of the application. Nuxeo Multi-tenant modifies this behavior and enables domains to be completely isolated from each other, including their users and vocabulary values.
 The tenant structure is the same as the default domain on a default Nuxeo Platform application.
 
 ## Isolated Items
@@ -261,13 +261,13 @@ On a default installation of the Nuxeo Platform, permissions are configured so m
 
 Users created by the tenant administrators automatically have "Read" access to the tenant. Indeed, they are automatically members of a virtual group that has "Read" right on the tenant. They don't need to be part of the default "members" group, being a member of the tenant is enough to access content.
 
-Tenant administrators can then [delegate permissions]({{page page='managing-permissions'}}) in the tenant, which will define what the user can do in the tenant.
+Tenant administrators can then [delegate permissions]({{page page='nxdoc/managing-permissions'}}) in the tenant, which will define what the user can do in the tenant.
 
 ## Defining the Tenant Specific Vocabulary Values
 
 The vocabularies I10subjects and I10coverage are isolated and don't display any value by default once you activated tenant isolation. Tenant administrators should edit the vocabularies to customize the metadata values displayed to the tenant users.
 
-See the [Managing Vocabularies]({{page page='managing-vocabularies'}}) page.
+See the [Managing Vocabularies]({{page page='nxdoc/managing-vocabularies'}}) page.
 
 * * *
 
@@ -275,10 +275,10 @@ See the [Managing Vocabularies]({{page page='managing-vocabularies'}}) page.
 <div class="column medium-6">
 {{#> panel heading='Related user documentation'}}
 
-- [Managing Users and Groups]({{page page='managing-users-and-groups'}})
-- [Managing Permissions]({{page page='managing-permissions'}})
-- [Managing Vocabularies]({{page page='managing-vocabularies'}})
-- [Local Configuration]({{page page='local-configuration'}})
+- [Managing Users and Groups]({{page page='nxdoc/managing-users-and-groups'}})
+- [Managing Permissions]({{page page='nxdoc/managing-permissions'}})
+- [Managing Vocabularies]({{page page='nxdoc/managing-vocabularies'}})
+- [Local Configuration]({{page page='nxdoc/local-configuration'}})
 
 {{/panel}}
 </div>

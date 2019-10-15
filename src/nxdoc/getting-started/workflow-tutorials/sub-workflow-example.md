@@ -116,7 +116,7 @@ history:
 ## A Quick Note About The Sub-workflow Concept
 
 {{! excerpt}}
-The sub-workflow functionality is the ability to call a workflow from another workflow (creating inception-like workflows), and to pass it variables along the way. The main workflow is suspended while the sub-workflow runs, and resumes when the sub-workflow ends.
+The sub-workflow functionality is the ability to call a workflow from another workflow (creating inception-like workflows), and to pass its variables along the way. The main workflow is suspended while the sub-workflow runs, and resumes when the sub-workflow ends.
 {{! /excerpt}}
 
 This functionality is a great asset as it allows you to reuse your workflows and imagine powerful combinations. The best point is that you can dynamically choose the sub-workflow that should be called using an [MVEL expression]({{page page='use-of-mvel-in-automation-chains'}}).

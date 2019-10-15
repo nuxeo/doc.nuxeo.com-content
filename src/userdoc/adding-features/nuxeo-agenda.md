@@ -167,8 +167,8 @@ To see the details of an event, click on the event's title from the Agenda gadge
 
 The features below are available on events:
 
-*   [Relations]({{page page='editing-content'}}#relations)
-*   [Comments]({{page page='collaborative-features'}}#comments)
-*   [Tags]({{page page='tags-jsf-ui'}})
+*   [Relations]({{page page='nxdoc/editing-content'}}#relations)
+*   [Comments]({{page page='nxdoc/collaborative-features'}}#comments)
+*   [Tags]({{page page='nxdoc/tagging'}})
 
 {{! /multiexcerpt}}

@@ -13,7 +13,7 @@ description: Web UI User Documentation about Tasks
 ---
 Once a workflow has been started, users added on the workflow can review the document and approve or reject it.
 
-When users have a task on a document, it displays on their [dashboard]({{page page='browse'}}#dashboard) in the **Tasks** gadget and in the **Task** tab.
+When users have a task on a document, it displays on their [dashboard]({{page page='browse'}}#dashboard) in the **Tasks** widget and in the **Task** tab.
 
 ![]({{file name='task-menu-web-ui.png'}} ?w=300,border=true)
 
@@ -29,14 +29,14 @@ Participants can approve the document when it's their turn, after the previous p
 
 **To approve or reject the document**:
 
-1. Click on the **Task** tab, all your pending tasks are displayed.
+1. Click on the **Task** tab: all your pending tasks are displayed.
     ![]({{file name='task-menu-web-ui.png'}} ?w=300,border=true)
 2. Click on the task that you want to process. <br/>
     The document is displayed and a Task resolution section is displayed on the side menu.
-3. Depending on your opinion on the document, click on one of the buttons available:
-    - **Validate**
+3. Depending on your opinion on the document, click on one of the available buttons:
+    - **Validate**:
       The task is not displayed anymore in the Tasks tab. If you originally had read-only access to the document, you can't edit it anymore. The next participant can now review the document and approve or reject it.
-    - **Reject**
+    - **Reject**:
       The task is not displayed anymore in the Tasks tab. If you originally had read-only access to the document, you can't edit it anymore. The document is automatically sent back to the previous reviewer on the workflow, so he can edit it and approve it again.
       When the document is rejected by the first reviewer, the document is sent back to the initiator, who can then either modify the document and resubmit it, or cancel the review.
       ![]({{file name='serial-review-web-ui.png'}} ?w=300,border=true)
@@ -49,7 +49,7 @@ After the workflow initiator has started the parallel workflow, two steps need t
 - The Workflow initiator can then approve or not the document, after seeing the result of the consultation step. That's the Validation step.
 
 **To approve or reject the document**:
-1. Click on the **Task** tab, all your pending tasks are displayed.
+1. Click on the **Task** tab: all your pending tasks are displayed.
     ![]({{file name='task-menu-web-ui.png'}} ?w=300,border=true)
 2. Click on the task that you want to process. The document is displayed and a Task resolution section is displayed on the side menu.
 3. Click on one of the buttons to provide your opinion on the document validation:

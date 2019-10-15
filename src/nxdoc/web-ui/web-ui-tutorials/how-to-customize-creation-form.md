@@ -30,7 +30,7 @@ In this tutorial you will learn how to configure the creation form in Web UI so 
 
 ## Create a New Theme
 
-1. Go to **UI** > **Themes**
+1. In Studio Designer, go to the **UI** > **Themes** menu.
 1. Create a new Theme called `default` that will override the default one.
     {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize the Creation Form/new-default-theme.png
@@ -60,5 +60,5 @@ In this tutorial you will learn how to configure the creation form in Web UI so 
 
 ## Deploy Your Changes
 
-1. You can now deploy your changes using the hot reload function of the [browser extension]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}})
+1. You can now deploy your changes using the hot reload function of the [browser extension]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}).
 1. Click on the **Create** button on your instance, the new creation window is displayed.

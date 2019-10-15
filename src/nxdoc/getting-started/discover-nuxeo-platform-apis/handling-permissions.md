@@ -194,7 +194,7 @@ Verify the permissions that have been set on the document.
 
 **Prerequisites**
 
-*   Assigning Permissions step (above)
+Assigning Permissions step (above)
 
 **Procedure**
 

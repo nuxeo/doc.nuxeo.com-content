@@ -273,7 +273,7 @@ In this section, you will set up your work environment: install Node.js on your 
 
 ## Creating Users and Groups
 
-The goal is to create the `sales` and `managers` group, as well as three users in Nuxeo Platform:
+The goal is to create the `sales` and `managers` groups, as well as three users in Nuxeo Platform:
 
 *   John Doe - a regular user &mdash; username and password: `jdoe`
 *   Alicia Fraser - part of the sales team &mdash; username and password: `afraser`
@@ -282,7 +282,6 @@ The goal is to create the `sales` and `managers` group, as well as three users i
 To create the users:
 
 1.  Using your favorite text editor or IDE, create a file called `usersGroups.js` with the following content:
-
     ```js
     #!/usr/bin/env node
     const Nuxeo = require('nuxeo');
@@ -370,10 +369,7 @@ To create the users:
         }
       });
     ```  
-
-
 2.  Save and run:
-
     ```
     $ node usersGroups.js
     ```

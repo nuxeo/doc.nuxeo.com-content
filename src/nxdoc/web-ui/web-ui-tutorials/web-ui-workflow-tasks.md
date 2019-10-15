@@ -53,7 +53,7 @@ First, we need to create a new workflow template in Studio Modeler. This workflo
 1. On the **Activation** tab, next to the field **Current document has one of the types**, select the Contract local type and move it from left to right.</br>
 Now we will add a custom workflow variable called **Type** to specify which type of contract you are validating.
 1. On the **Variables** tab, add a field `type` as a string.
-1. On the **Graph** tab, select an **Accept/Reject** user tasks and drag and drop it on the graph.
+1. On the **Graph** tab, select an **Accept/Reject** user task and drag and drop it on the graph.
 1. Click on the **Edit** button next to the task.
 1. Fill in the **General** tab as shown below:
     {{!--     ### nx_asset ###
@@ -89,13 +89,15 @@ We will finish our Studio Modeler configuration by creating a vocabulary for the
     --}}
     ![voc-created-studio.png](nx_asset://a60d0e4e-58d7-44ed-8101-2cf5ca40b4df ?w=450,border=true)
 3. Save your modifications.
+4. Go back to the schema of your document type and link the created vocabulary to it (field type: directory > **Edit** button > **Select a vocabulary** button).
+5. Save your modifications.
 
 ## Create a Task layout
 We can now configure our layout on Studio Designer.
 
 1. In **UI**, go to the  **Layouts** > **Workflows** menu and click on _Contract Validation task_ and then on **CONFIGURE**.
   The workflow layout works as the document type layout, you can browse the element catalog and switch editors between code and visual.
-1. You can start by reorder the properties on the visual editor to end up with something like this:
+1. You can start by reordering the properties on the visual editor to end up with something like this:
   {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Workflow Tasks/workflow-process-VD.png
     name: workflow-process-VD.png

@@ -76,7 +76,7 @@ This tutorial gives all the necessary steps to build the custom workflow templat
 
 ### Defining the Workflow's Activation
 
-Workflows can be launched through a dropdown list on the summary screen of every document. Into the **Activation** tab, you can decide for which type of document the workflow you do will be usable, for which group of users, etc.
+Workflows can be launched through a dropdown list on the summary screen of every document. Into the **Activation** tab, you can decide for which type of document the workflow you create will be usable, for which group of users, etc.
 
 1. From the workflow, click on the **Activation** tab.
 2. In the **Current document has one of the types**, select **File**.
@@ -102,34 +102,34 @@ Let's create and configure the technical validation step.
 
 This node will create a task for Jack, the head of operations. He will have to accept or reject the proposal submitted by the salesman or decide that it requires a juridical advice.
 
-Drag the **Accept/Reject** node template from the node template library and drop it on the graph.
-It will already have some of the needed transitions and buttons pre-configured: Validate and Reject. You need another transition (Need juridical advice), which you will add manually in a future step.
-{{!--     ### nx_asset ###
+1. Drag the **Accept/Reject** node template from the node template library and drop it on the graph.
+  It will already have some of the needed transitions and buttons pre-configured: Validate and Reject. You need another transition (Need juridical advice), which you will add manually in a future step.
+  {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple_Workflow_003.png
     name: Simple_Workflow_003.png
     studio_modeler#screenshot#up_to_date
---}}
-![simple_Workflow_003.png](nx_asset://07d27b3a-4105-4e62-a97b-ddfad1af64bb ?w=400,border=true)
+    --}}
+    ![simple_Workflow_003.png](nx_asset://07d27b3a-4105-4e62-a97b-ddfad1af64bb ?w=400,border=true)
 
-1. Hover on the **Accept/Reject** node you just dropped and click on the icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) that appears to open the node properties.
+2. Hover on the **Accept/Reject** node you just dropped and click on the icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) that appears to open the node properties.
 {{!--     ### nx_asset ###
 path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/simple_Workflow_005.png
 name: Simple_Workflow_005.png
 studio_modeler#screenshot#up_to_date
 --}}
 ![simple_Workflow_005.png](nx_asset://cbf4cf4b-c51a-4807-b8ec-edeacf246d14 ?w=150,border=true)
-2. In the **General** tab edit the following properties:
 
-- Title: `Technical validation`
-- Due date expression: `CurrentDate.days(5)`
+3. In the **General** tab edit the following properties:
+  - Title: `Technical validation`
+  - Due date expression: `CurrentDate.days(5)`
 
-3. Update the assignee related fields:
+4. Update the assignee related fields:
+  - Assignees: Add a statical assignee (`Jack`). Click on the "Add" link in front of the "Assignees" field.
+  - Grant permission to task assignees: Leave this field blank.
 
-- Assignees: Add a statical assignee (`Jack`). Click on the "Add" link in front of the "Assignees" field.
-- Grant permission to task assignees: Leave this field blank.
+5. Click on the **Save** button of the popup.
 
-4. Click on the **Save** button of the popup.
-5. Click on the **Save** button of the workflow feature on the bottom left corner.
+6. Click on the **Save** button of the workflow feature on the bottom left corner.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/technical-validation-node.png
@@ -140,7 +140,7 @@ studio_modeler#screenshot#up_to_date
 
 ### Configuring the Workflow Variables
 
-During this task, we want to capture the head of operations' comment. We could use a node variable, but using a workflow variable is more appropriate as it will let us leverage the head of operations' comment value in the other nodes. For example, to display it to the other users in their own task validation form, to know what was the option of the head of operations when taking the decision. Getting the juridical advisor and salesman's comment are needed at a later stage, so that workflow variables are added to their comments as well.
+During this task, we want to record the head of operations' comment. We could use a node variable, but using a workflow variable is more appropriate as it will let us leverage the head of operations' comment value in the other nodes. For example, to display it to the other users in their own task validation form, to know what was the option of the head of operations when taking the decision. Getting the juridical advisor and salesman's comment are needed at a later stage, so that workflow variables are added to their comments as well.
 
 This variable will be named `hoo_comment`.
 
@@ -192,6 +192,7 @@ The workflow task layout lets the user edit some of the workflow's variables (ei
     ![]({{file name='vd_wf_technical_validation_layout3.png'}} ?w=600,border=true)
 7.  Change its label for `Head of Operations Comment`.
     ![]({{file name='vd_wf_technical_validation_layout5.png'}} ?w=600,border=true)
+8. Click on the **Save work in progress** button.    
 
 <!--
 ##### With Studio Modeler and JSF UI
@@ -228,7 +229,7 @@ In Studio Modeler, the buttons that are shown on the form are configured on the 
 
 Each button is automatically associated to a transition to define what should be done when the user clicks on the button. Transitions automatically get a condition, which is a system node variable called "button". This variable is systematically updated with the id of the button used to process the task. It is useful to configure the behavior of the transitions.
 
-1. Finally, click on the **Transition** tab.
+1. Click on the **Transition** tab.
     Note that you could add more terms in the condition if necessary.
     {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/technical-validation-transitions.png
@@ -257,16 +258,15 @@ Now that we have our Technical validation node set up, we need to create the nod
 
 #### Configuring the Node
 
-Drag the **Approve** node from the node template library and drop it on the graph.
-
+1. Drag the **Approve** node from the node template library and drop it on the graph.
 ![](https://www.lucidchart.com/publicSegments/view/54eefcaf-64e8-42a2-ad51-6ed50a00c10c/image.png ?w=300,border=true)
 
 1. Open the node properties.
-2. Rename the node to `Juridical advice`.
-3. Define the assignees.</br>
+1. Rename the node to `Juridical advice`.
+1. Define the assignees.</br>
    This time we would like to ask a member of the &ldquo;Internal\_ Lawyers&rdquo; user group to comment instead of a specific person. Therefore, instead of adding a specific username, you may simply add an assignee and use the prefix `group:` to specify a user group (`group:Internal_Lawyers`).
 
-4. Grant the appropriate rights. The internal lawyers may not have the necessary rights to read and/or edit a sales proposal document. To avoid an exception to be thrown because of this, you need to grant them the appropriate rights on the document that needs juridical advice temporarily. This is what the **Grant permission to task assignees** field is used for. In this case, choose the **Read & Edit** permission to let them modify the document. Keep in mind that these rights will only be granted during the operations made on this node, and reverted to their previous state when following a transition to another node.
+1. Grant the appropriate rights. The internal lawyers may not have the necessary rights to read and/or edit a sales proposal document. To avoid an exception to be thrown because of this, you need to grant them the appropriate rights on the document that needs juridical advice temporarily. This is what the **Grant permission to task assignees** field is used for. In this case, choose the **Read & Edit** permission to let them modify the document. Keep in mind that these rights will only be granted during the operations made on this node, and reverted to their previous state when following a transition to another node.
    {{!--     ### nx_asset ###
      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Simple Workflow Example/juridical-advice-node.png
      name: juridical-advice-node.png
@@ -301,7 +301,7 @@ Drag the **Approve** node from the node template library and drop it on the grap
        studio_designer#screenshot#up_to_date
    --}}
    ![juridical-advice-layout.png](nx_asset://7fa1a583-0ec6-4120-865e-79204af09bd3 ?w=650,border=true)
-8. Click on **Save**.
+8. Click on **Save work in progress**.
 
 <!--
 ##### With Studio Modeler and JSF UI
@@ -353,7 +353,7 @@ The **Approve** node will once again be the most appropriate. Pick it up and dro
     studio_modeler#screenshot#up_to_date
     --}}
     ![proposal-update-general.png](nx_asset://2e6836c7-1769-48aa-bfc3-372df1f513ec ?w=450,border=true)
-6. Calling the task an approval task could lead to confusion for the salesman that wants to submit an updated proposal. Thus, we will call the task button differently:
+6. Calling the task an approval task could lead to confusion for the salesman who wants to submit an updated proposal. Thus, we will call the task button differently:
     1. Click on the **Task Buttons** tab.
     1. Delete the `approve` existing task button.
     1. Click on the **Add task button** link.
@@ -391,6 +391,7 @@ In this scenario, if Jack (Head of Operations) rejects the tasks, it is sent bac
         studio_designer#screenshot#up_to_date
     --}}
     ![proposal-update-layout.png](nx_asset://99a96a40-e0b9-4e3d-b0c4-c50c435bda4c ?w=650,border=true)
+7. Click on the **Save work in progress** button.
 
 <!--
 ##### With Studio Modeler and JSF UI

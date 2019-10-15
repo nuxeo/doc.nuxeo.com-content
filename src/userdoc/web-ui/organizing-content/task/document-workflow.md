@@ -49,7 +49,7 @@ You need to have editing or management permissions to start a workflow on a docu
 5. Type a comment for the reviewers, for instance if you want them to pay attention to a specific section of the document.
 6. Select the due date by when the participants need to have reviewed the document.
     {{#> callout type='tip' }}
-    When the due date is passed, the consultation task is automatically closed to all reviewers that haven't provided their opinion on the document and the workflow goes to the next step: the initiator approval.
+    When the due date is passed, the consultation task is automatically closed to all reviewers who haven't provided their opinion on the document and the workflow goes to the next step: the initiator approval.
     {{/callout}}
     ![]({{file name='participants-parallel-review-web-ui.png'}} ?w=300,border=true)
 7. Click on **Start Review** to let participants give their opinion on the document. <br/>

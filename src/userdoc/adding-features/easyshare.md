@@ -174,7 +174,7 @@ It allows you to create EasyShare folders in which you can either create documen
 
 ## Adding Documents to an EasyShare Folder
 
-The EasyShare folder is a specific type of [collection]({{page page='collections'}}). To add documents to an EasyShare folder, follow the same steps as if you were adding a document to a collection, by clicking the icon ![]({{file name='add_to_collection.png' page='icons-index'}}) on the document or the EasyShare folder or by clicking the **Add to Collection** button from the workspace Content tab.
+The EasyShare folder is a specific type of [collection]({{page page='nxdoc/collections'}}). To add documents to an EasyShare folder, follow the same steps as if you were adding a document to a collection, by clicking the icon ![]({{file name='add_to_collection.png' page='icons-index'}}) on the document or the EasyShare folder or by clicking the **Add to Collection** button from the workspace Content tab.
 
 Depending on the modules you have enabled on your Nuxeo Platform, you can create the following documents in an EasyShare folder:
 

@@ -63,7 +63,7 @@ Create a custom document type named "Contract" that will hold specific metadata 
     ![definition_contract.png](nx_asset://7c4bf823-6a9a-4d53-bc7e-49e9fe175770 ?w=600,border=true)
 1. Select an icon for your contract document type:
     - A .png icon for the **Icon** and **Large Icon** fields
-    - An .svg Icon for the **SVG Icon** field.</br>
+    - A .svg Icon for the **SVG Icon** field.</br>
     From **Select Resource** buttons, you can select any SVG file available in the Studio project resources or upload your own.
 1. Fill in the [**Schema** tab]({{page space='studio' page='schemas'}}) with the following metadata:
     - A field **owner** as a _String_
@@ -84,9 +84,8 @@ Once you are all set, click on **Configure Layouts** at the top-right of the scr
 ## Create a New Layout
 
 When configuring a document type, you need to create all layouts in the Studio Designer in order to display the relevant properties.</br>
-Click on **Configure missing layouts** to create automatically the default layouts based on the document type.
-
-1. Modify and/or delete fields as you need on each layouts to fit your needs.
+1. Click on **Configure missing layouts** to create automatically the default layouts based on the document type.
+1. Modify and/or delete fields as you need on each layout to fit your needs.
 1. Go to your **Create** layout. In **CATALOG**, on the right, select **File** > **content:blob** > **view** and drag and drop the element in the main view.</br>
     You now have an upload button on your document layout.
 1. Click on **Save**.
@@ -224,7 +223,7 @@ The following is a sample definition of what an `edit` layout element for a `MyD
 
 ### Configuring Document Creation
 
-When contributing document types, there are two more contributions that have to be made in order for them to
+When contributing to document types, there are two more contributions that have to be made in order for them to
 be properly displayed in the document creation wizard: add a custom icon and a custom label for each type.
 
 The icon must be contributed to `/nuxeo.war/ui/images/doctypes`, named after the format `{doctype}.svg`. Labels must be added to the message files under the format `label.document.type.{doctype}`. In both cases, `doctype` must be the lower case doctype **id**.
