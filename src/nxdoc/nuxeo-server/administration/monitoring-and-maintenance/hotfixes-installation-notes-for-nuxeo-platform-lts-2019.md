@@ -166,7 +166,7 @@ To disable the compatibility mode and allow the underscore character, use the fo
 </extension>
 ```
 
-### Secured properties
+### Secured Properties
 
 The following dublincore properties are now secured from edition:
 * dc:created
