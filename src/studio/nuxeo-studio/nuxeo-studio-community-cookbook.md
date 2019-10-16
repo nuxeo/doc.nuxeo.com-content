@@ -38,7 +38,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>
     ![html-injection.png](nx_asset://386e91fa-3cc9-4b1b-a2e9-6b6cf0da50b2 ?w=200,border=true)
     </td>
-    <td>[Inject HTML into a page using bound data](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/inject-html)</td>
+    <td>[Inject HTML into a Page Using Bound Data](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/inject-html)</td>
     <td>Nuxeo</td>
     <td>Dashboard</td>
   </tr>
