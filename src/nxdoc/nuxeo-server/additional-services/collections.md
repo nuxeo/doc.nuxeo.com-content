@@ -2,7 +2,7 @@
 title: Collections
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2019-10-17'
     status: ok
 labels:
     - lts2016-ok
@@ -11,6 +11,8 @@ labels:
     - collection-component
     - multiexcerpt-include
     - content-review-lts2017
+    - jsf-ui
+    - web-ui
 toc: true
 confluence:
     ajs-parent-page-id: '16089319'
@@ -155,69 +157,69 @@ history:
         date: '2014-04-04 16:30'
         message: ''
         version: '1'
-
 ---
+
 ## Functional Overview
 
-{{multiexcerpt 'definition-collection' page='USERDOC:collections-web-ui'}}
+{{{multiexcerpt 'definition-collection' space='userdoc' page='collections-web-ui'}}}
 
 Depending on your user interface you can access collections by different means.
 
 **Web UI**
-{{{multiexcerpt 'functional-introduction-web-ui' page='USERDOC:collections-web-ui'}}}
+{{{multiexcerpt 'functional-introduction-web-ui' space='userdoc' page='collections-web-ui'}}}
 
 **JSF UI**
-{{{multiexcerpt 'functional-introduction-jsf-ui' page='USERDOC:Collections'}}}
+{{{multiexcerpt 'functional-introduction-jsf-ui' version='1010' page='USERDOC:Collections'}}}
 
 ### Collecting Documents
 
-{{multiexcerpt 'collecting-rights' page='USERDOC:collections-web-ui'}}
+{{multiexcerpt 'collecting-rights' space='userdoc' page='collections-web-ui'}}
 
 **Collecting documents in Web UI**
-{{{multiexcerpt 'collecting-web-ui' page='USERDOC:collections-web-ui'}}}
+{{{multiexcerpt 'collecting-web-ui' space='userdoc' page='collections-web-ui'}}}
 
 **Collecting documents in JSF UI**
-{{{multiexcerpt 'collecting-jsf-ui' page='USERDOC:Collections'}}}
+{{{multiexcerpt 'collecting-jsf-ui' version='1010' space='userdoc' page='collections'}}}
 
 ### Creating Collections
 
 {{multiexcerpt 'collections-containment-rule' page='collections-web-ui'}}
 
 **Creating collections in Web UI**
-{{{multiexcerpt 'creating-web-ui' page='USERDOC:collections-web-ui'}}}
+{{{multiexcerpt 'creating-web-ui' space='userdoc' page='collections-web-ui'}}}
 
 **Creating collections in JSF UI**
-{{{multiexcerpt 'creating-jsf-ui' page='USERDOC:Collections'}}}
+{{{multiexcerpt 'creating-jsf-ui' version='1010' space='userdoc' page='collections'}}}
 
 ### Sharing a Collection
 
-{{{multiexcerpt 'sharing' page='USERDOC:Collections'}}}
+{{{multiexcerpt 'sharing' space='userdoc' page='collections'}}}
 
 ### Removing Documents from a Collection
 
 **Web UI**
-{{{multiexcerpt 'removing-web-ui' page='USERDOC:collections-web-ui'}}}
+{{{multiexcerpt 'removing-web-ui' space='userdoc' page='collections-web-ui'}}}
 
 **JSF UI**
-{{{multiexcerpt 'removing-jsf-ui' page='USERDOC:Collections'}}}
+{{{multiexcerpt 'removing-jsf-ui' version='1010' space='userdoc' page='collections'}}}
 
 ### Favorites
 
-{{{multiexcerpt 'definition-favorites' page='USERDOC:Favorites'}}}
+{{{multiexcerpt 'definition-favorites' space='userdoc' page='favorites'}}}
 
 **On Web UI**
 
 The list of documents bookmarked as favorites is available:
-{{{multiexcerpt 'favorites-location-web-ui' page='USERDOC:Favorites'}}}
-{{{multiexcerpt 'bookmarking-favorites-web-ui' page='USERDOC:Favorites'}}}
+{{{multiexcerpt 'favorites-location-web-ui' space='userdoc' page='favorites'}}}
+{{{multiexcerpt 'bookmarking-favorites-web-ui' space='userdoc' page='favorites'}}}
 
 **On JSF UI**
 
 The list of documents bookmarked as favorites is available:
-{{{multiexcerpt 'favorites-location-jsf-ui' page='USERDOC:Collections'}}}
-{{{multiexcerpt 'bookmarking-favorites-jsf-ui' page='USERDOC:Collections'}}}
+{{{multiexcerpt 'favorites-location-jsf-ui' version='1010' space='userdoc' page='collections'}}}
+{{{multiexcerpt 'bookmarking-favorites-jsf-ui' version='1010' space='userdoc' page='collections'}}}
 
-## Installation & Configuration
+## Installation and Configuration
 
 The collection module has no specific installation step as it is already included in the default Nuxeo Platform distribution.
 
@@ -274,7 +276,7 @@ The collection reference is available in the event context map. For example, wit
     value: "@{Event.context.getProperty(\"collectionRef\").reference()}"
 ```
 
-### Synchronizing a Collection with Nuxeo Drive in the JSF UI
+### Synchronizing a Collection with Nuxeo Drive in JSF UI
 
 To do so you need to add the following XML contribution with [either Nuxeo Studio or a custom bundle]({{page page='how-to-contribute-to-an-extension'}}):
 
