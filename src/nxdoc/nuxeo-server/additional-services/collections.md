@@ -274,7 +274,7 @@ The collection reference is available in the event context map. For example, wit
     value: "@{Event.context.getProperty(\"collectionRef\").reference()}"
 ```
 
-### Synchronizing a Collection with Nuxeo Drive
+### Synchronizing a Collection with Nuxeo Drive in the JSF UI
 
 To do so you need to add the following XML contribution with [either Nuxeo Studio or a custom bundle]({{page page='how-to-contribute-to-an-extension'}}):
 
