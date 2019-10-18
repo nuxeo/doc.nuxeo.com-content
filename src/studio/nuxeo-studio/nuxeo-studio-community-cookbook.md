@@ -36,6 +36,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
+    ![document-versions.png](nx_asset://ef855414-0914-4045-a8ea-2a4fe78c2251 ?w=200,border=true)
+    </td>
+    <td>[Delete and update document lifecycle state of versioned documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/actions-versioned-documents)</td>
+    <td>Nuxeo</td>
+    <td>Dashboard</td>
+  </tr>
+  <tr>
+    <td>
     ![html-injection.png](nx_asset://386e91fa-3cc9-4b1b-a2e9-6b6cf0da50b2 ?w=200,border=true)
     </td>
     <td>[Inject HTML into a Page Using Bound Data](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/inject-html)</td>

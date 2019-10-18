@@ -121,6 +121,9 @@ The **Parameters** tab to add custom parameters accessible through the `params` 
 - [Content Automation Concepts]({{page space='nxdoc' page='content-automation-concepts'}})
 - [Automation Scripting developer documentation]({{page space='nxdoc' page='automation-scripting'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}</div>
+<div class="column medium-6">
+{{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
+- [Actions on Versioned Documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/actions-versioned-documents)
 </div></div>
