@@ -24,7 +24,7 @@ The retention management module covers all the necessary aspects of retention ma
 **Retention management** refers to the control of a document's lifecycle through the use rules and policies.</br>
 Documents can be kept or deleted depending on a set of rules which may pertain to time, events or specific metadata contained in the document type.
 
-## SEC Rule 17a-4 Compliance
+## {{> anchor 'sec-rule-17a4'}} SEC Rule 17a-4 Compliance
 
 **SEC Rule 17a-4** is a regulation issued by the U.S. Securities and Exchange Commission which is an independent agency of the United States federal government.
 This regulation contains requirements mainly for retention, legal hold, and accessibility of the records for organizations dealing in the trade or brokering of financial securities such as stocks, bonds, and futures.

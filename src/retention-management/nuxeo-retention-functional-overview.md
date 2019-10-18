@@ -81,7 +81,7 @@ Regarding access rights, this add-on includes:
 - A new **Manage record** permission that allows users to create/edit retention rules, apply a retention rule to a document or a list of documents and override the retention of a document already under retention.
 - A new **Manage Legal Hold** permission that allows granted users to apply/remove a Legal Hold to a document or a list of documents.
 
-### Create a Retention Rule
+### {{> anchor 'create-retention-rule'}} Create a Retention Rule
 
 To create a new [retention rule]({{page page='index'}}#retention-rules):
 1. Go to the Retention menu.
