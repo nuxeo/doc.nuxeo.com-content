@@ -2,7 +2,7 @@
 title: Collections
 review:
     comment: ''
-    date: '2017-12-13'
+    date: '2019-10-18'
     status: ok
 labels:
     - lts2016-ok
@@ -194,8 +194,10 @@ history:
         date: '2014-03-27 15:43'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! multiexcerpt name='functional-overview'}}
 {{multiexcerpt 'definition-collection' page='collections-web-ui'}}
 {{! multiexcerpt name='functional-introduction-jsf-ui'}}
@@ -211,6 +213,7 @@ Click on a document to consult it. You are moved out of the collection to be dis
 {{! /multiexcerpt}}
 
 ## Collecting Documents
+
 {{multiexcerpt 'collecting-rights' page='collections-web-ui'}}
 
 {{! multiexcerpt name='collecting-jsf-ui'}}
@@ -230,15 +233,14 @@ In the first two cases you can select the collection by:
 - Typing a new collection name to create it.
 
 {{#> callout type='tip' }}
-
 The Collection list shows all the collection you have access to, even collection in which you cannot collect documents. Collections you only have read access to are grayed.
-
 {{/callout}}
 
 The list of collections the document is available from is displayed on its **Summary** tab.![]({{file name='collections-summary-widget.png'}} ?w=650,border=true)
 {{! /multiexcerpt}}
 
 ## Creating Collections
+
 {{multiexcerpt 'collections-containment-rule' page='collections-web-ui'}}
 
 {{! multiexcerpt name='creating-jsf-ui'}}
@@ -251,6 +253,7 @@ There are two ways to create a collection:
 {{! /multiexcerpt}}
 
 ## Sharing a Collection
+
 {{! multiexcerpt name='sharing'}}
 Sharing a collection means [giving permissions]({{page page='managing-permissions'}}) to users on the collection. Collections created in the default domain in a shared workspace or folder are automatically shared to all the workspace or folder's users, following the [rights inheritance principle]({{page page='permissions'}}#blocking-rights-inheritance).
 
@@ -264,7 +267,8 @@ Beside the generic permissions, collection have a specific right, called "can co
 - **Make them manager for the collection**: By giving them Manage everything permission, you enable users to manage the content of the collection and who can access it.
 {{! /multiexcerpt}}
 
-## Removing Documents from a Collection
+## Removing Documents from a
+
 {{! multiexcerpt name='removing-jsf-ui'}}
 To remove a document from a collection, either click on the <span class="s1">icon ![]({{file space='userdoc' name='delete.png' page='icons-index'}}) of the collection</span> from the **Summary** tab of the document, or select the document in the collection the checkboxes and click on the **Remove from collection** button.
 
@@ -272,6 +276,7 @@ In both ways the document is immediately removed from the collection.
 {{! /multiexcerpt}}
 
 ## Favorites
+
 {{multiexcerpt 'definition-favorites' page='favorites'}}
 
 The list of documents bookmarked as favorites is available:

@@ -2,7 +2,7 @@
 title: Saved Searches
 review:
     comment: ''
-    date: '2018-03-08'
+    date: '2019-10-18'
     status: ok
 labels:
     - search
@@ -63,12 +63,12 @@ history:
         date: '2014-11-19 17:53'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 You can save searches done using the default search form and the quick search form, so as to be able to reuse them at anytime. You can run them from the **Search** tab, and manage them from the **Home** > **Searches** tab.
-
 {{! /excerpt}}
 
 NXQL searches cannot be saved.

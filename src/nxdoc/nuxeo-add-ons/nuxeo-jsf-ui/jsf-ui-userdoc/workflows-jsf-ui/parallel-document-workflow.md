@@ -2,7 +2,7 @@
 title: Parallel Document Workflow
 review:
     comment: ''
-    date: '2018-02-20'
+    date: '2019-10-18'
     status: ok
 labels:
     - lts2016-ok
@@ -69,8 +69,10 @@ history:
         date: '2013-10-25 13:54'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
 **The default parallel workflow**, called "Parallel document review", is an unordered workflow that enables to change the document's state after a consultation step. This means that participants can give their opinion on the document without having to wait for a previous participant to approve it.
 {{! /excerpt}}

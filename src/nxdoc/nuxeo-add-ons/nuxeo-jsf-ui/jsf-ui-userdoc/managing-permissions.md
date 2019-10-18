@@ -3,12 +3,12 @@ title: Managing Permissions
 description: 'Depending on the document you are on, you can be granted different permissions and be allowed different actions on the document.'
 review:
     comment: ''
-    date: '2018-02-26'
+    date: '2019-10-18'
     status: ok
 labels:
     - access-rights
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '11043048'
@@ -293,8 +293,10 @@ history:
         date: '2010-04-23 15:38'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! multiexcerpt name='permissions'}}
 {{! multiexcerpt name='permissions-introduction'}}
 
@@ -397,11 +399,9 @@ Some permissions are granted automatically, for example when you create a workfl
 ### Granting Permissions to the Application Users and Groups
 
 {{! multiexcerpt name='grant-permissions'}}
-
 To add a permission, at the root of a workspace, a folder or a document, click on the **Permission** tab  **New Permission** and fill in the popup form.
 
 The new permission is displayed in the **Permissions defined locally** part of the screen.
-
 {{! /multiexcerpt}}
 
 ![]({{file name='add_permission_popup.png' version='810' space='userdoc' page='managing-permissions'}} ?w=350,border=true)
@@ -409,24 +409,20 @@ The new permission is displayed in the **Permissions defined locally** part of t
 ### Granting Permissions to External Users (Instant Share)
 
 {{! multiexcerpt name='grant-permissions-external-users'}}
-
 You can share documents and folders with people that don't usually have access to the application, using their email.
 
 In the **Permissions Assigned to External Users** part of the screen, click **New** and fill in the popup form. The external user receives an email notification that contains the link to the document or space. They can access the application only by clicking that link.
-
 {{! /multiexcerpt}}
 
 ![]({{file name='permissions_external_share_popup.png' version='810' space='userdoc' page='managing-permissions'}} ?w=300,thumbnail=true)
 
 {{! multiexcerpt name='grant-permissions-external-users-notes'}}
-
 **Notes:**
 
 *   You can only grant a temporary access to external users.
 *   External users have not created a user account on the application. They do not have login / password credentials. They can only use the link that is sent to them to access the application.
 *   External users have access to the content that was shared with them (either documents or workspaces and their content) and the Search tab.
 *   External users do not benefit from the personal workspace, the Home tab and their features (dashboard, alerts, users / groups search, etc.).
-
 {{! /multiexcerpt}}
 
 ### Editing Permissions

@@ -2,14 +2,14 @@
 title: User Home
 review:
     comment: ''
-    date: '2017-01-25'
+    date: '2019-10-18'
     status: ok
 labels:
     - home
     - dashboard
     - profile
     - users-groups
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '11043048'
     ajs-parent-page-title: Nuxeo Platform User Documentation
@@ -218,8 +218,10 @@ history:
         date: '2011-05-31 23:31'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 Every user has a **Home** tab, that offers user-centric tabs.
 
 *   The [dashboard]({{page page='browsing-content#dashboard'}}) provides a quick access to content.

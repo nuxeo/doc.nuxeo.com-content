@@ -2,7 +2,7 @@
 title: Quick Search
 review:
     comment: ''
-    date: '2018-03-08'
+    date: '2019-10-18'
     status: ok
 labels:
     - search
@@ -148,8 +148,10 @@ history:
         date: '2013-06-21 17:44'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 Quick search can be accessed from any site page. At any time, you can search a document by typing keywords in the search box located at the upper right corner of the page.
 
 ![]({{file name='search-box.png'}} ?w=314,h=42,border=true)

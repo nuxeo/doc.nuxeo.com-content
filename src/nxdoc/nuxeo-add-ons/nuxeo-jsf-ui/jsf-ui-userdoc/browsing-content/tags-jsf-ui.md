@@ -2,7 +2,7 @@
 title: Tags
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2019-10-18'
     status: ok
 labels:
     - tag
@@ -177,8 +177,10 @@ history:
         date: '2010-04-14 11:27'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! multiexcerpt name='functional-overview'}}
 
 Unlike subjects in the metadata of the document, you don't have to choose tags in a closed list. You are free to apply the tags that describe the document best. However, tags are proposed as you type them, to enable you to use the same tags as the other users and have a consistent tagging of documents. You can add as many tags on documents as you want.
@@ -202,9 +204,9 @@ To remove a tag from a document, you need to be the user who added the tag on th
 When you [save a document as a new version]({{page page='editing-content'}}#versioning-overview), the tags that user have put on the document are saved with the version. This means that the archived versions of a document and the document in its current version can have different tags. If you restore a previous version of the document, tags are restored with it and replace the tags from the replaced version.
 
 When you [publish a document]({{page page='publishing-content'}}), the tags are copied from the work document to the published document. You can then remove useless tags from either version of the document (work version or published version) without affecting the other one. In case of republication of the document, the tags from the last and previous version are merged so you don't loose any previous or preparatory categorization.
-
 {{! /multiexcerpt}}
 
+* * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More documentation about tags'}}
 

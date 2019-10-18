@@ -2,11 +2,11 @@
 title: User Preferences
 review:
     comment: ''
-    date: '2018-02-27'
+    date: '2019-10-18'
     status: ok
 labels:
     - preferences
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '7536681'
@@ -80,8 +80,10 @@ history:
         date: '2012-07-27 14:01'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 Users can set some preferences that will be used instead of the default browser's default language and the server's time.
 
 User preferences are easily accessible:

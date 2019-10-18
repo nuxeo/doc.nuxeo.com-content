@@ -2,11 +2,11 @@
 title: Attachments
 review:
     comment: ''
-    date: '2018-02-26'
+    date: '2019-10-18'
     status: ok
 labels:
     - attachment
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '2392395'
     ajs-parent-page-title: Document Types
@@ -55,8 +55,10 @@ history:
         date: '2015-02-23 11:04'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 It is possible to add attachments to [Files]({{page page='document-types'}}#file) and [Notes]({{page page='document-types'}}#note) using the **Files** tab. This tab is available to users with at least Edit permission. There is no limit to the number of attachments.
 
 **To add attachments to your document:**
@@ -78,7 +80,7 @@ It is possible to add attachments to [Files]({{page page='document-types'}}#file
 
 **Notes:**
 
-*   Attached files are not synchronized with [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}).
+*   Attached files are not synchronized with [Nuxeo Drive]({{page version='' space='client-apps' page='nuxeo-drive'}}).
 *   There is no versioning option from the **Files** tab by default. This means that you need to edit the document and increment its version manually after you updated attachments to make sure they are saved in a new version of the document.
 
 **How to enable the Files tab on custom document types?**

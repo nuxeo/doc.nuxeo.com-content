@@ -2,13 +2,13 @@
 title: Working with WebDAV
 review:
     comment: ''
-    date: '2018-02-26'
+    date: '2019-10-18'
     status: ok
 labels:
     - webdav
     - editing
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '2392396'
@@ -212,8 +212,10 @@ history:
         date: '2010-04-15 12:14'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! multiexcerpt name='functional-overview'}}
 
 The Nuxeo Platform enables you to create and edit Office documents stored in the Nuxeo Platform directly from your OS desktop, without having to go on your Nuxeo application in a browser. This is possible thanks to the support of the WebDAV (Web-based Distributed Authoring and Versioning) protocol.
@@ -225,15 +227,13 @@ To support this, you don't need to install an extension or configure the Nuxeo P
 *   Move documents and folders
 
 {{#> callout type='info' heading='Nuxeo Drive'}}
-
 There are several known limitations with using the WebDAV protocol on Windows machines to connect to the Nuxeo Platform: temporary files that are stored in the Nuxeo Platform, technical name displayed instead of title of the document. We hardly recommend to mount WebDAV drives on Windows machines but for some specific use cases. The behavior can be different depending on the version of Windows, the version of service pack, etc.
 
-We recommend you to pay attention to [Nuxeo Drive]({{page version='' space='nxdoc' page='nuxeo-drive'}}) that can offer you a file system access style without the above mentioned drawbacks.
+We recommend you to pay attention to [Nuxeo Drive]({{page version='' space='client-apps' page='nuxeo-drive'}}) that can offer you a file system access style without the above mentioned drawbacks.
+{{/callout}}
 
-{{/callout}} {{#> callout type='note' heading='WSS'}}
-
+{{#> callout type='note' heading='WSS'}}
 Since Nuxeo 7.3, Windows SharePoint Service (WSS) is not supported anymore (see [NXP-16972](https://jira.nuxeo.com/browse/NXP-16972)).
-
 {{/callout}}
 
 ### Adding the Nuxeo Platform as an External Drive
@@ -241,9 +241,7 @@ Since Nuxeo 7.3, Windows SharePoint Service (WSS) is not supported anymore (see 
 Depending on your OS, the steps to follow so the Nuxeo Platform is seen by the OS as an external drive are different depending on your OS.
 
 {{#> callout type='note' heading='Requirement'}}
-
 The first time you do the mapping, make sure that you have already logged in to the web interface once. This is required to setup the Windows authentication protocol.
-
 {{/callout}}
 
 #### Mapping a Network Drive from Windows 7 Explorer

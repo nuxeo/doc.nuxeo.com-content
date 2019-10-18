@@ -3,7 +3,7 @@ title: Nuxeo JSF UI
 description: "JSF UI addon offers a user interface for Nuxeo server, extensible and configurable: forms, process, user actions."
 review:
     comment: ''
-    date: '2018-04-03'
+    date: '2019-10-18'
     status: ok
 labels:
     - content-review-lts2016
@@ -159,8 +159,8 @@ history:
         date: '2010-03-01 01:35'
         message: ''
         version: '1'
-
 ---
+
 {{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
 
 ## Requirements

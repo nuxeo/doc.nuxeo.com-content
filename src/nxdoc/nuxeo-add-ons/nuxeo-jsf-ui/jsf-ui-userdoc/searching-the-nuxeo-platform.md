@@ -3,7 +3,7 @@ title: Searching the Nuxeo Platform
 description: The Nuxeo Platform provides a Search tab that enables you to browse and search the content of the Nuxeo Platform.
 review:
     comment: ''
-    date: '2018-02-26'
+    date: '2019-10-18'
     status: ok
 labels:
     - search
@@ -328,8 +328,10 @@ history:
         date: '2010-04-14 11:44'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! multiexcerpt name='nuxeo-search'}}
 
 The Nuxeo Platform provides a Search tab that enables you to browse and search the content of the Nuxeo Platform. This tab gives access to different searches to query the content of the application.

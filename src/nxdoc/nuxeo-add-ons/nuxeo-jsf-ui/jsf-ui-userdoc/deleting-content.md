@@ -2,14 +2,14 @@
 title: Deleting Content
 review:
     comment: ''
-    date: '2018-02-26'
+    date: '2019-10-18'
     status: ok
 labels:
     - delete
     - trash
     - last
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '11043048'
     ajs-parent-page-title: Nuxeo Platform User Documentation
@@ -153,8 +153,10 @@ history:
         date: '2010-04-23 18:04'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! multiexcerpt name='functional-overview'}}
 
 ### Deleting Documents

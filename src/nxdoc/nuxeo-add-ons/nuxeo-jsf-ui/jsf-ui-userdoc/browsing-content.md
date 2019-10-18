@@ -3,7 +3,7 @@ title: Browsing Content
 description: To help you find accurate documents, the Nuxeo Platform features several different ways to access documents.
 review:
     comment: ''
-    date: '2018-02-26'
+    date: '2019-10-18'
     status: ok
 toc: true
 confluence:
@@ -230,9 +230,11 @@ history:
         message: ''
         version: '1'
 labels:
-    - content-review-lts2017
-
+    - lts2017-ok
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
 To help you find accurate documents, the Nuxeo Platform features several different ways to access documents.
 {{! /excerpt}}
@@ -251,30 +253,23 @@ To access your dashboard, click on the **Home** main tab. Your dashboard is the 
 
 {{! multiexcerpt name='dashboard-customization-tip'}}
 {{#> callout type='tip' }}
-
 If you want to customize your dashboard, follow this [HOWTO]({{page space='nxdoc' page='how-to-customize-the-dashboard'}}).
-
 {{/callout}}
 {{! /multiexcerpt}}
 
 ## Navigation Tree
 
 {{! multiexcerpt name='navigation-tree-overview'}}
-
 The default navigation tree displayed on the left hand side of the pages is the folders navigation tree. It displays all the domain structure from the root. It enables you to easily access any space in the application structure. The navigation tree displays folderish documents, i.e. documents in which you can create other documents (workspaces, folders, etc.).
-
 {{! /multiexcerpt}}
 
 ![]({{file name='navigation_tree.png'}} ?w=350,border=true)
 
 {{! multiexcerpt name='virtual-navigation-tip'}}
 {{#> callout type='tip' }}
-
 It is possible to add another type of navigation tree based on metadata instead of folder structure by installing the [Nuxeo Virtual Navigation addon]({{page space='nxdoc' page='nuxeo-virtual-navigation'}}).
-
 {{/callout}}
 {{! /multiexcerpt}}
-
 
 ## Tags
 
@@ -302,9 +297,7 @@ Two views of the content lists are available on the top right corner of **Conten
 Lists of documents, whether in list view or thumbnail view, show some information about the documents, like their title, the last contributor, their lifecycle state, etc. Users can change the information displayed, i.e. the columns for the list view or the information below the document thumbnail in thumbnail view.
 
 {{#> callout type='info' }}
-
 Editing results column is possible from search results and the Content tab of folderish documents. It is not possible from the tag cloud.
-
 {{/callout}}
 
 To change the information displayed in content lists, click on the icon ![]({{file space='userdoc' name='edit_columns.png' page='icons-index'}}). A pop-up is displayed: The right column shows selected information and the left column shows information that are currently not displayed. You can move information from one column to another using the horizontal arrows and reorder columns using the vertical arrows. Once it's done, click on **Save**.
@@ -350,7 +343,7 @@ Some actions or features are accessible using access keys: Press shift-h to see 
 <div class="column medium-6">
 {{#> panel heading='Related User Documentation'}}
 
-- [Tags]({{page page='tags'}})
+- [Tags]({{page page='tags-jsf-ui'}})
 - [Preview]({{page page='preview'}})
 - [Collections]({{page page='collections'}})
 
@@ -359,7 +352,7 @@ Some actions or features are accessible using access keys: Press shift-h to see 
 <div class="column medium-6">
 {{#> panel heading='Other Related Documentation'}}
 
-- [How to Customize the Dashboard]({{page space='nxdoc' page='how-to-customize-the-dashboard'}})
+- [HOWTO: Customize the Dashboard]({{page space='nxdoc' page='how-to-customize-the-dashboard'}})
 - [JSF UI How-To Index]({{page space='nxdoc' page='jsf-ui-how-to-index'}})
 
 {{/panel}}

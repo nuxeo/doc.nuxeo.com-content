@@ -2,7 +2,7 @@
 title: Collaborative Features
 review:
     comment: ''
-    date: '2018-02-26'
+    date: '2019-10-18'
     status: ok
 labels:
     - alert
@@ -12,7 +12,7 @@ labels:
     - excerpt
     - multiexcerpt-include
     - excerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '11043048'
@@ -78,6 +78,9 @@ history:
         message: ''
         version: '1'
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
 The Nuxeo Platform provides you with a set of features that ease collaborative work.
 {{! /excerpt}}
@@ -150,9 +153,7 @@ When you follow a document or a space activity, you get an email when the events
 *   Share: you receive an email when a document has been shared with you by its principal author or by another user.
 
     {{#> callout type='info' }}
-
     The publish event is available in sections only. The other events are available in workspaces only.
-
     {{/callout}}
 
 {{! /multiexcerpt}}
@@ -162,9 +163,7 @@ When you follow a document or a space activity, you get an email when the events
 The icon ![]({{file space='userdoc' name='subscribe.png' page='icons-index'}}) enables you to follow a document or a space by clicking it. The icon becomes ![]({{file space='userdoc' name='unsubscribe.png' page='icons-index'}}). Click on it to stop following the document, meaning you won't get any email notification at all from that document.
 
 {{#> callout type='info' }}
-
 You cannot unfollow a document when your group was subscribed to alerts on it.
-
 {{/callout}}
 
 On your Home **Alerts** tab, you can see all the events you will be alerted of and the associated documents. From there you can unsubscribe from a specific event by clicking the corresponding **Unsubscribe** button. You won't receive email alerts regarding this event but you will still be notified about the other events.

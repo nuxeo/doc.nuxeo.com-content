@@ -2,13 +2,14 @@
 title: User Documentation JSF UI
 review:
     comment: ''
-    date: '2017-01-04'
+    date: '2019-10-18'
     status: ok
 labels:
     - concepts
     - home
     - search
-    - content-review-lts2017
+    - lts2017-ok
+    - mlumeau
 description: JSF UI User Documentation
 tree_item_index: 200
 version_override:
@@ -62,12 +63,12 @@ Administrators can configure some elements directly from the Nuxeo Platform's us
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
 
-### [Adding Features]({{page page='adding-features'}})
+### [Adding Features]({{page space='userdoc' spage='adding-features'}})
 
 You can download and install optional product plugins from the Nuxeo Marketplace.
 
-- [Nuxeo Drive]({{page page='nuxeo-drive'}})
-- [EasyShare]({{page page='easyshare'}})
+- [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}})
+- [EasyShare]({{page space='userdoc' page='easyshare'}})
 
 {{/panel}}
 </div>

@@ -2,7 +2,7 @@
 title: Preview
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2019-10-18'
     status: ok
 labels:
     - lts2016-ok
@@ -209,6 +209,8 @@ history:
         message: ''
         version: '1'
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
 
 {{! multiexcerpt name='preview_functional_overview'}}
 

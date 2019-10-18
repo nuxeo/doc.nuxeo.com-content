@@ -3,7 +3,7 @@ title: Editing Content
 description: Editing a document means modifying its content (i.e. the attached file of a file document, the text of a note, etc.), or simply editing the title, description or any metadata of the document.
 review:
     comment: ''
-    date: '2017-03-29'
+    date: '2019-10-18'
     status: ok
 labels:
     - editing
@@ -16,7 +16,7 @@ labels:
     - drag-and-drop
     - excerpt
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '11043048'
@@ -386,8 +386,10 @@ history:
         date: '2010-04-26 17:59'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
 Editing a document means modifying its content (i.e. the attached file of a [file]({{page space='nxdoc' page='document-types'}}#file) document, the text of a [note]({{page space='nxdoc' page='document-types'}}#note), etc.), or simply editing the title, description or any metadata of the document. You can edit documents individually using an edit form or apply modifications to several documents using the bulk edit form.
 {{! /excerpt}}

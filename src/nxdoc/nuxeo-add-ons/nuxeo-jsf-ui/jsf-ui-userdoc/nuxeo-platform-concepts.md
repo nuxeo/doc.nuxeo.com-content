@@ -2,13 +2,13 @@
 title: Nuxeo Platform Concepts
 review:
     comment: ''
-    date: '2017-01-25'
+    date: '2019-10-18'
     status: ok
 labels:
     - concepts
     - home
     - search
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '11043048'
@@ -450,8 +450,9 @@ history:
         version: '1'
 ---
 
-{{! multiexcerpt name='functional-overview'}}
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
 
+{{! multiexcerpt name='functional-overview'}}
 Nuxeo Platform JSF UI is the Back office view on the content repository. There are three main spaces in Nuxeo Platform:
 
 - The **Home** tab provides a set of dashboards

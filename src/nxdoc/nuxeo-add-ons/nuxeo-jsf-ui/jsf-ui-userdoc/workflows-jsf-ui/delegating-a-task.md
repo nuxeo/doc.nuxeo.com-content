@@ -2,7 +2,7 @@
 title: Delegating a Task
 review:
     comment: ''
-    date: '2018-02-20'
+    date: '2019-10-18'
     status: ok
 labels:
     - lts2016-ok
@@ -47,8 +47,10 @@ history:
         date: '2013-11-03 15:59'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 <span style="color: rgb(51,51,51);">When you know you might not be able to perform a task, you can delegate it to another user or group of users. Delegating means that they can do the task at your place, but you are not unassigned the task. As soon as you or a delegatee reviews the document, the task is closed for you and all the delegatees. On the contrary, if you do the task before the delegatees, the task is considered done for everyone.</span>
 
 {{{multiexcerpt 'delegate-vs-reassign' page='Reassigning a Task'}}}

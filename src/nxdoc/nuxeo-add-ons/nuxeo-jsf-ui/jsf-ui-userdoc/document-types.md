@@ -3,13 +3,13 @@ title: Document Types in JSF UI
 description: This page lists all the available document types by default on Nuxeo Platform.
 review:
     comment: ''
-    date: '2018-02-26'
+    date: '2019-10-18'
     status: ok
 labels:
     - lifecyle
     - multiexcerpt
     - excerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '11043048'
@@ -226,6 +226,8 @@ history:
         version: '1'
 ---
 
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 ## Available Documents
 
 ### Domain
@@ -243,15 +245,12 @@ There are two types of workspaces:
 *   _personal workspaces_ can only be accessed by their owner, by default. You can of course share the access to your personal workspace with other users. Personal workspaces are accessible in the header of the application.
 
 {{#> callout type='tip' heading='Personal workspaces behaviour'}}
-
 Content creation and edition, as well as management, works the same way in personal workspaces as in collaborative workspaces.
-
 {{/callout}}
 
 By default, no workspace is available at workspaces root. Thus, you can create the structure you need for your project, edit it if needed. You can also [set the appropriate permission]({{page page='managing-permissions'}}) for users to be able to collaborate in the workspaces.
 
 Workspaces management also includes setting [alerts]({{page page='collaborative-features'}}#alerts) for users to be informed when content is created or edited in workspaces and handling content deletion.
-
 {{! /multiexcerpt}}
 
 ### Folder
@@ -396,7 +395,7 @@ Pictures are specific files. To take into account the specificities of pictures,
 * The picture's EXIF metadata
 * Additional picture views
 
-For more information about picture document, take a look to the [Digital Asset Management page]({{page page='digital-asset-management-with-the-nuxeo-platform'}}).
+For more information about picture document, take a look to the [Digital Asset Management page]({{page page='digital-asset-management-dam'}}).
 
 ### Video
 
@@ -408,7 +407,7 @@ Audio is a document types dedicated to audio files management. It provides a pla
 
 Audio documents can be [created]({{page page='creating-content'}}) and [edited]({{page page='editing-content'}}) like any other document type. They don't have any specific tab or action available.
 
-For more information about audio document, take a look to the [Digital Asset Management page]({{page page='digital-asset-management-with-the-nuxeo-platform'}}).
+For more information about audio document, take a look to the [Digital Asset Management page]({{page page='digital-asset-management-dam'}}).
 
 ## Documents Evolution
 
@@ -438,7 +437,7 @@ It is possible to implement rules on containers to integrate the business logic 
 
 - [Creating Content]({{page page='creating-content'}})
 - [Editing Content]({{page page='editing-content'}})
-- [Digital Asset Management]({{page page='digital-asset-management-with-the-nuxeo-platform'}})
+- [Digital Asset Management]({{page page='digital-asset-management-dam'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related HOWTOs'}}
 

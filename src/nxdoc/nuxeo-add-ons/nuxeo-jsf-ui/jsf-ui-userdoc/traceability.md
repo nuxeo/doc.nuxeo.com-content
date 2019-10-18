@@ -2,14 +2,14 @@
 title: Traceability
 review:
     comment: ''
-    date: '2018-02-26'
+    date: '2019-10-18'
     status: ok
 labels:
     - editing
     - history
     - versioning
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '11043048'
@@ -179,8 +179,9 @@ history:
         date: '2010-04-23 18:11'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
 
 {{! multiexcerpt name='functional_overview'}}
 

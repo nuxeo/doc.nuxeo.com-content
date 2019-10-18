@@ -2,7 +2,7 @@
 title: Creating Content
 review:
     comment: ''
-    date: '2018-02-26'
+    date: '2019-10-18'
     status: ok
 labels:
     - creation
@@ -11,7 +11,7 @@ labels:
     - multiexcerpt
     - multiexcerpt-include
     - excerpt-include
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '11043048'
@@ -266,13 +266,13 @@ history:
         date: '2010-04-27 11:05'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! multiexcerpt name='intro-creating-content'}}
 {{! excerpt}}
-
 By default, documents can be created in workspaces, templates and folders only. There are several ways to create documents in the Nuxeo Platform, either from the UI using forms, using [drag and drop import](#drag-and-drop) from your desktop, or [creating them directly from MS Office or OpenOffice]({{page version='' space='nxdoc' page='nuxeo-drive'}}#creating-documents). This section presents the different means that are available to you, either by default or using addons.
-
 {{! /excerpt}}
 
 You need to have "edit" or "manage everything" permissions to create documents.
@@ -397,7 +397,7 @@ It is possible to do a drag and drop import of documents with an additional step
 
 {{{excerpt space='nxdoc' page='nuxeo-drive'}}}
 
-You can very easily import document by moving them from a desktop folder to a Nuxeo Drive folder, or creating office files directly in a Nuxeo Drive folder. Read the [Nuxeo Drive documentation]({{page space='nxdoc' page='nuxeo-drive'}}) for more information.
+You can very easily import document by moving them from a desktop folder to a Nuxeo Drive folder, or creating office files directly in a Nuxeo Drive folder. Read the [Nuxeo Drive documentation]({{page space='client-apps' page='nuxeo-drive'}}) for more information.
 
 ## Creating Content using Nuxeo CSV
 
@@ -417,7 +417,7 @@ Read the [Nuxeo Bulk Document Importer documentation]({{page space='nxdoc' page=
 
 {{! multiexcerpt name='automated-metadata-extraction-excerpt'}}
 
-The Nuxeo Platform enables to extract information from the uploaded files attached to a document and automatically fill in the document metadata at creation time. This enables you to leverage metadata existing outside the Nuxeo Platform to automatically categorize documents, preventing users from editing document to report these metadata. Automated metadata extraction is activated by default on [Nuxeo DAM]({{page page='digital-asset-management-with-the-nuxeo-platform'}}): The IPTC legend, copyright and source are used to automatically fill in the description, rights and source metadata of pictures.
+The Nuxeo Platform enables to extract information from the uploaded files attached to a document and automatically fill in the document metadata at creation time. This enables you to leverage metadata existing outside the Nuxeo Platform to automatically categorize documents, preventing users from editing document to report these metadata. Automated metadata extraction is activated by default on [Nuxeo DAM]({{page page='digital-asset-management-dam'}}): The IPTC legend, copyright and source are used to automatically fill in the description, rights and source metadata of pictures.
 
 {{! /multiexcerpt}}
 

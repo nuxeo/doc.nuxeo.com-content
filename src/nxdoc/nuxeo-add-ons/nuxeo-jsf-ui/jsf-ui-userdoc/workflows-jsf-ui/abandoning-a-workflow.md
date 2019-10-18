@@ -2,7 +2,7 @@
 title: Abandoning a Workflow
 review:
     comment: ''
-    date: '2018-02-20'
+    date: '2019-10-18'
     status: ok
 labels:
     - lts2016-ok
@@ -96,8 +96,10 @@ history:
         date: '2010-04-29 18:08'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 Only the workflow initiator and administrators can abandon a workflow.
 
 Abandoning a workflow means canceling it. When you abandon a workflow, the lifecycle state of the document does not change. The modifications made on the document during the workflow are kept.

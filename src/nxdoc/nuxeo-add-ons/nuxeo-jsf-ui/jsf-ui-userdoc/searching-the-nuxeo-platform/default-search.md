@@ -2,12 +2,12 @@
 title: Default Search
 review:
     comment: ''
-    date: '2018-02-26'
+    date: '2019-10-18'
     status: ok
 labels:
     - search
     - elasticsearch
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '2392416'
     ajs-parent-page-title: Searching the Nuxeo Platform
@@ -151,8 +151,10 @@ history:
         date: '2013-06-21 18:54'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 The default search enables you to search a document using documents metadata. You can for instance select metadata of the searched document or the date of specific events such as publication, creation.
 
 The default search leverages Elasticsearch to provide a quicker and more efficient search. The search form uses [Elasticsearch aggregates]({{page space='nxdoc' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}}) for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.

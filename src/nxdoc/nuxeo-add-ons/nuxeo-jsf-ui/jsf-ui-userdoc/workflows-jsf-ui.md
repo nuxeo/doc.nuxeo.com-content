@@ -3,7 +3,7 @@ title: Workflows
 description: 'All the documents evolve according to a defined lifecycle. The default lifecycle is composed of the following states: Project, Approved and Obsolete.'
 review:
     comment: ''
-    date: '2018-03-08'
+    date: '2019-10-18'
     status: ok
 labels:
     - workflow
@@ -121,11 +121,13 @@ history:
         version: '1'
 ---
 
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
 All the documents evolve according to a defined lifecycle. The default lifecycle is composed of the following states: Project, Approved and Obsolete. There are different ways to make documents evolve through this lifecycle. One of the ways is to use a workflow.
 {{! /excerpt}}
 
-Users who are involved in workflows are alerted by email and can have a synthetic view of all their pending tasks on documents in their [dashboard]({{page space='nxdoc' page='Browsing Content'}}#dashboard). The documents they have to review are listed there.
+Users who are involved in workflows are alerted by email and can have a synthetic view of all their pending tasks on documents in their [dashboard]({{page space='nxdoc' page='browsing-content'}}#dashboard). The documents they have to review are listed there.
 
 {{{multiexcerpt 'default-validation-workflows' page='NXDOC:Workflow'}}}
 
