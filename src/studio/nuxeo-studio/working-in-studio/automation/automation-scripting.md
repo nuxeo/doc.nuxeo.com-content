@@ -66,11 +66,9 @@ history:
         date: '2015-05-25 15:38'
         message: ''
         version: '1'
-
 ---
-Automation Scripting is a Nuxeo module which provides ability to create and contribute Automation chain/operation in JavaScript.
 
-{{{multiexcerpt 'disabling-feature' page='branding'}}}
+Automation Scripting is a Nuxeo module which provides ability to create and contribute Automation chain/operation in JavaScript.
 
 {{#> callout type='info' heading='Nuxeo University'}}
 Watch the related courses on Nuxeo University
@@ -79,9 +77,7 @@ Watch the related courses on Nuxeo University
 {{/callout}}
 
 {{#> callout type='note' }}
-
 Automation scripting is still in Beta state: It is subject to frequent improvements or user experience changes that may require you to update your script when going out of the Beta state. One of the improvements that will come in the future is a validation of your script. Currently, Nuxeo Studio does not check whether your script can be correctly interpreted by Nuxeo Platform once it is deployed. Don't forget to wrap your code within the `run` function.
-
 {{/callout}}
 
 ## Scripting Editor
@@ -90,23 +86,23 @@ Automation scripting is still in Beta state: It is subject to frequent improveme
 
 The Scripting Editor tab enables you to add JavaScript code using auto-completion.
 
-*   **Autocompletion**: For instance, start typing `Create` and select the operation `Collection.Create`.
-    ![]({{file name='automation_scripting_autocompletion1.png'}} ?border=true)
+- **Autocompletion**: For instance, start typing `Create` and select the operation `Collection.Create`.</br>
+  ![]({{file name='automation_scripting_autocompletion1.png'}} ?border=true)
 
     The operation function is added to the script.
     ![]({{file name='Screenshot 2015-05-25 18.10.51.png'}} ?w=500,h=408,border=true)
 
-*   **Disable Helper Comment**: The description of the operation is displayed as comments by default. Check the box Disable Helper Comments to stop adding descriptions with operations.
+- **Disable Helper Comment**: The description of the operation is displayed as comments by default. Check the box Disable Helper Comments to stop adding descriptions with operations.
     ![]({{file name='automation_scripting_disable_helpers.png'}} ?w=350,border=true)
 
-*   **Input and Output types**: in order to use Automation scripting into Automation Chains, input and output types of the script can be defined. For Automation Chains scripting injection, please find custom scripts into **Scripting** category as follow:
+- **Input and Output types**: in order to use Automation scripting into Automation Chains, input and output types of the script can be defined. For Automation Chains scripting injection, please find custom scripts into **Scripting** category as follow:
     ![]({{file name='Screenshot 2015-05-25 18.12.19.png'}} ?w=500,h=140,border=true)
     ![]({{file name='Screenshot 2015-05-25 18.16.50.png'}} ?w=500,h=166,border=true)
 
-*   **Javascript editor validator**: to help you debugging and writing JavaScript code, **Studio** Automation scripting editor displays potential code issues:
+- **Javascript editor validator**: to help you debugging and writing JavaScript code, **Studio** Automation scripting editor displays potential code issues:
     ![]({{file name='Screenshot 2015-05-25 18.19.09.png'}} ?w=500,h=230,border=true)
 
-*   **Platform functions**: Platform function helpers are now available in Automation scripting and can be found under 'Fn' object:
+- **Platform functions**: Platform function helpers are now available in Automation scripting and can be found under 'Fn' object:
     ![]({{file name='Screenshot 2015-05-25 20.36.53.png'}} ?w=300,h=227,border=true)
 
 ## Parameters
@@ -115,15 +111,22 @@ The **Parameters** tab to add custom parameters accessible through the `params` 
 
 ![]({{file name='automation_scripting_parameters_tab.png'}} ?w=600,border=true)
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation '}}
 
 - [Automation in Nuxeo Studio]({{page page='automation'}})
 - [Content Automation Concepts]({{page space='nxdoc' page='content-automation-concepts'}})
 - [Automation Scripting developer documentation]({{page space='nxdoc' page='automation-scripting'}})
 
-{{/panel}}</div>
+{{/panel}}
+</div>
 <div class="column medium-6">
 {{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
 - [Actions on Versioned Documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/actions-versioned-documents)
-</div></div>
+{{/panel}}
+</div>
+</div>
