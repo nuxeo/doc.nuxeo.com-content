@@ -42,6 +42,55 @@ In a content view, drag and drop is available to move documents from a folderish
 1. Click on the selected documents and drag them.
 1. Drop them on the folderish document you want.
 
+## Moving Documents using the Clipboard
+
+The clipboard is a feature that makes it possible to easily copy or move content from a location (workspace, folder, etc.) to another. You can add as many documents as needed to the clipboard: adding documents does not replace the previous selection, it only adds more documents to the clipboard list. <br>
+
+{{#> callout type='info'}} Copying or moving content works in batches, meaning that the whole document list is copied or moved. It is therefore not possible to chose which document in the clipboard is to be copied/moved or not. All documents in the clipboard are treated at once. {{/callout}}
+
+**Prerequisite:**
+
+Copying and moving documents requires to have at least Read permission on the original document and Edit permission in the target workspace (see [Permissions]({{page version='' space='userdoc' page='permissions'}}) for more information).
+
+**To copy or move content using the clipboard:**
+
+1. Go to **Browse > Domain** and navigate to the desired source location (workspace, folder, etc.).
+1. Check the content you want to add to the clipboard.
+1. Click on the **Add to Clipboard** button. <br>
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Functional Overview.1544549838807/Editing Content/Moving Documents - Clipboard button
+    name: moving-documents-clipboard-button.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Moving Documents - Clipboard button](nx_asset://1bf6a419-74e9-4916-aaeb-2164850d18a8 ?w=650,border=true)
+
+  The selected content is added to the clipboard and the **Clipboard** menu displays a notification icon {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Functional Overview.1544549838807/Editing Content/Moving Documents - Clipboard Notification
+    name: moving-documents-clipboard-notification.png
+    1.1.3#icon#up_to_date
+--}}
+![Moving Documents - Clipboard Notification](nx_asset://1e43e78d-4fa1-4d8e-8be9-ffb2f333785a ?w=25) showing how much documents are in the clipboard. <br>
+{{#> callout type='info'}} The list of documents in the clipboard persists, even when you log out and log back in to the platform. {{/callout}}
+1. Open again the **Browse > Domain** menu and navigate to the desired target location.
+1. Go to **Clipboard**. <br>
+The list of added documents displays in the left panel.
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Functional Overview.1544549838807/Editing Content/Moving Documents - Clipboard Actions
+    name: moving-documents-clipboard-actions.png
+    1.1.3#screenshot#up_to_date
+--}}
+![Moving Documents - Clipboard Actions](nx_asset://26dc8718-0ed0-4f82-8d33-a0a961b438ff ?w=650,border=true)
+1. Click on the:
+  - **Copy** button to copy documents to the target location <br>
+  Documents are copied and are present in both source and target locations.
+  - **Move** button to move documents to the target location <br>
+  Documents are moved from the source location to the target location. The source location is emptied of the selected documents.
+  {{#> callout type='info'}} Both actions empty the clipboard.{{/callout}}
+
+**Working on copied documents**
+
+Once documents have been copied or moved using the clipboard, please note that they have their own working logic. Applying tags, versions, comments, etc. on a copied document is made on the working document: it is not shared between the source and the target document.
+
 ## Managing Attachments
 
 ![]({{file name='replace.png'}} ?w=300,border=true)
