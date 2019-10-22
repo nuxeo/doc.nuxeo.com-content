@@ -67,7 +67,7 @@ On Studio Modeler:
 
 Now that your automation chain is ready, you will need to bind it to an action.
 
-1. On Studio Designer, go on the **UI** tab.
+1. On Studio Designer, go to the **UI** tab.
 1. In **Buttons**, hover over the **Create** button and select **Button**.
 1. Fill in the creation form as shown below:
     {{!--     ### nx_asset ###

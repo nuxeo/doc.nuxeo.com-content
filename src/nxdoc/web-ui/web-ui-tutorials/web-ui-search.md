@@ -179,7 +179,7 @@ The next step is to add a button in the drawer menu to display the search screen
 
 In Studio Designer's layout tab:
 
-1. Go back to your **Search** page provider > results layouts configuration. ![]({{file name='pp-results-menu.png'}} ?w=122,border=true)
+1. Go back to your **Search** page provider results layout configuration. ![]({{file name='pp-results-menu.png'}} ?w=122,border=true)
 1. Edit the table layout configuration. ![]({{file name='pp-results-table-config.png'}} ?w=344,border=true)
 1. You will be taken to the element's configuration. From there, click on the **Switch to Table Editor** icon at the bottom of the page. ![]({{file name='switch-table-editor.png'}} ?w=155,border=true)
 
@@ -193,7 +193,7 @@ More columns can be added using drag and drop from the catalog on the right side
 
 ![]({{file name='pp-table-editor-layout.png'}} ?w=650,border=true)
 
-Columns can be reordered by dragging and dropping them around.
+Columns can be reordered by drag and dropping them around.
 
 Finally, when hovering on a column, you can use additional icons to configure them:
 
@@ -203,7 +203,7 @@ Finally, when hovering on a column, you can use additional icons to configure th
 
 - ![]({{file name='icon-trash.png'}} ?w=25) The trash icon deletes the column.
 
-When you are finished, click on the **Save work in progress** on the top right side of the screen.
+When you are finished, click on **Save work in progress** at the top right of the screen.
 
 ## Technical Overview
 
@@ -338,7 +338,7 @@ is the key label to be retrieved from [i18n]({{page page='web-ui-managing-transl
 
 #### Meaningful Properties When Defining Your Own Search
 
-As just explained, to create a search, you just need to deploy a new `nuxeo-{searchName}-search.html` element in your `$NUXEO_SERVER/nxserver/nuxeo.war/ui/search/{searchName}` directory and add it as a slot contribution using the `nuxeo-searh-form` element. However, it is important that these elements provide the proper information to perform the search.
+As just explained, to create a search, you just need to deploy a new `nuxeo-{searchName}-search.html` element in your `$NUXEO_SERVER/nxserver/nuxeo.war/ui/search/{searchName}` directory and add it as a slot contribution using the `nuxeo-search-form` element. However, it is important that these elements provide the proper information to perform the search.
 
 | Property                                                                                                   | Description                                                                                                | Example                                                                                                                              |
 | :--------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |

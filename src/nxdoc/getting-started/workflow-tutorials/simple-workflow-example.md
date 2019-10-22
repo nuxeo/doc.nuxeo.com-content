@@ -262,7 +262,7 @@ Now that we have our Technical validation node set up, we need to create the nod
 ![](https://www.lucidchart.com/publicSegments/view/54eefcaf-64e8-42a2-ad51-6ed50a00c10c/image.png ?w=300,border=true)
 
 1. Open the node properties.
-1. Rename the node to `Juridical advice`.
+1. Rename the node `Juridical advice`.
 1. Define the assignees.</br>
    This time we would like to ask a member of the &ldquo;Internal\_ Lawyers&rdquo; user group to comment instead of a specific person. Therefore, instead of adding a specific username, you may simply add an assignee and use the prefix `group:` to specify a user group (`group:Internal_Lawyers`).
 

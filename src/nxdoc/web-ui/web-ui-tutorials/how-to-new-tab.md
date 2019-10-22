@@ -38,7 +38,7 @@ Once you are all set, you can navigate to Modeler to start creating your search.
 
 ## Create a Page Provider
 
-1. In Studio Modeler, open the Configuration > **Page Providers** menu; click on **New** and name it `otherContracts`.
+1. In Studio Modeler, go to **Configuration** > **Page Providers**; click on **New** and name it `otherContracts`.
 1. In the Query filter add the following line `AND ecm:primaryType='Contract'`. This will enable to only search contract documents.</br>
    You should end up with something like this:
 
@@ -97,7 +97,7 @@ You are now in Studio Designer, where you can configure the layouts of your Sear
 
 ### Configure Layouts
 
-1. In Studio Designer, open the **UI** > **Layouts** > **Page Providers** menu.<br>
+1. In Studio Designer, go to **UI** > **Layouts** > **Page Providers**.<br>
 You will find the page provider created previously.
 1. Click on **form** and then **Configure**, it will automatically create the `nuxeo-othercontracts-search-form` layout.
 1. Click on **result** and then **Configure**, the `nuxeo-othercontracts-search-results` layout is created.
