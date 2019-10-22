@@ -99,8 +99,7 @@ In both ways documents are immediately removed from the collection.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-- [Collections developer documentation]({{page space='nxdoc' page='collections'}})
-- [Collections in JSF UI]({{page version='' space='nxdoc' page='collections-jsf-ui'}})
+[Collections developer documentation]({{page space='nxdoc' page='collections'}})
 
 {{/panel}}</div><div class="column medium-6">
 

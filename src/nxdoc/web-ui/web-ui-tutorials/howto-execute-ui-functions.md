@@ -168,17 +168,12 @@ We then need to adapt our layout:
   </div>
 </nuxeo-dialog>
 ```
-
-2. In Nuxeo Studio Modeler, create a page provider called `folderish-suggestions` to list the element where the source document can be copied:
-
+1. In Nuxeo Studio Modeler, create a page provider called `folderish-suggestions` to list the element where the source document can be copied:
 ```
 ecm:primaryType IN ('Folder','Workspace') AND ecm:isTrashed = 0 AND  ecm:isProxy = 0 AND ecm:isCheckedInVersion = 0 AND ecm:fulltext = '?*'
 ```
-
-3. In the Advanced Configuration section of the page provider, uncheck the `Quote parameters` option.
-
-4. Create the `doChange` function:
-
+1. In the Advanced Configuration section of the page provider, uncheck the `Quote parameters` option.
+1. Create the `doChange` function:
 ```
 doChange: function () {
       this.destination = this.document.parentRef;
@@ -191,10 +186,8 @@ doChange: function () {
         alert("Error when creating the copy:\n" + error);
       }.bind(this))}
 ```
-
-The file should [look like this]({{file name='going-further.zip'}}) in the end.
-
-You can now, save your changes and [hot reload your project]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}).
+  The file should [look like this]({{file name='going-further.zip'}}) in the end.
+1. Save your changes and [hot reload your project]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}).
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Execute UI Functions/ui-function-target-folder.png

@@ -89,8 +89,6 @@ We will finish our Studio Modeler configuration by creating a vocabulary for the
     --}}
     ![voc-created-studio.png](nx_asset://a60d0e4e-58d7-44ed-8101-2cf5ca40b4df ?w=450,border=true)
 3. Save your modifications.
-4. Go back to the schema of your document type and link the created vocabulary to it (field type: directory > **Edit** button > **Select a vocabulary** button).
-5. Save your modifications.
 
 ## Create a Task layout
 We can now configure our layout on Studio Designer.
