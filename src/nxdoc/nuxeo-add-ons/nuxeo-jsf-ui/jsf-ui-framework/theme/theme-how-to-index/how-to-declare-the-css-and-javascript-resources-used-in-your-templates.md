@@ -2,7 +2,7 @@
 title: 'HOWTO: Declare the CSS and JavaScript Resources Used in Your Templates - JSF UI'
 review:
     comment: ''
-    date: '2018-01-15'
+    date: '2019-10-21'
     status: ok
 details:
     howto:

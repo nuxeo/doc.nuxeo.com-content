@@ -2,7 +2,7 @@
 title: 'HOWTO: Make the New Button Appear on a Custom Folderish Document - JSF UI'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-10-21'
     status: ok
 details:
     howto:

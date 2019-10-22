@@ -122,6 +122,9 @@ history:
         message: ''
         version: '1'
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! multiexcerpt name='vocabularies-content'}}
 {{multiexcerpt 'vocabularies-intro' page='administration'}}
 ![]({{file name='hierarchical-vocabulary.png'}} ?w=250,border=true)

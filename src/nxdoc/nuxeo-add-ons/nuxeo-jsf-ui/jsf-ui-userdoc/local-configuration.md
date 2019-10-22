@@ -2,7 +2,7 @@
 title: Local Configuration
 review:
     comment: ''
-    date: '2018-03-08'
+    date: '2019-10-21'
     status: ok
 labels:
     - excerpt
@@ -91,12 +91,12 @@ history:
         date: '2015-08-27 15:41'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
 Users with Manage everything permission can configure workspaces from the Nuxeo Platform user interface so they meet users specific needs. From the tab **Manage** > **Local Configuration**, they can set up the workspace colors, which document types are available in the workspace, how lists of documents are presented, if specific search forms re available from the workspace and where documents can be published.
-
 {{! /excerpt}}
 
 The **Local Configuration** tab is available for domains, workspaces and sections.
@@ -108,9 +108,7 @@ Local administrators, i.e. users with Manage permission in the space, can easily
 Two themes, also called flavors, are available by default: the Nuxeo theme and the Rainbow theme. Flavors are sets of colors that determine the look of the space. If you configured other flavors in Nuxeo Studio, they are available here as well.
 
 {{#> callout type='info' }}
-
 The new space's theme is not applied to the sub-spaces, but it is applied to the documents it contains.
-
 {{/callout}}
 
 To **change the theme of a workspace**, click on **Manage**&nbsp;> **Local configuration** and, if needed, click on the **Enable** link of the "Theme Configuration" section. Select the flavor you want to apply and click on the **Save** button. ![]({{file name='theme_configuration.png'}} ?w=600,border=true)

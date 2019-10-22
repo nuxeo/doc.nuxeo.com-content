@@ -2,14 +2,14 @@
 title: Reassigning a Task
 review:
     comment: ''
-    date: '2018-02-20'
+    date: '2019-10-21'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:
     - lts2016-ok
     - reassign
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 confluence:
     ajs-parent-page-id: '2392410'
     ajs-parent-page-title: Workflows
@@ -43,16 +43,18 @@ history:
         date: '2014-02-10 16:41'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 If you feel that you should not be responsible for a task, you can reassign it. Reassignment should not be confused with [delegation]({{page page='delegating-a-task'}}).
 
-{{! multiexcerpt name='delegate-vs-reassign'}} {{#> callout type='info' heading='Reassignment vs Delegation'}}
-
+{{! multiexcerpt name='delegate-vs-reassign'}}
+{{#> callout type='info' heading='Reassignment vs Delegation'}}
 When you delegate a task, you remain responsible for the task. You don't lose your rights on the document: you can still process the task if you want to. <br/>
 On the contrary when you reassign your task on a document, you lose your rights on the task and on the document. The user you reassign the task to becomes responsible for the task and it is as if you never had to review the document.
-
-{{/callout}}{{! /multiexcerpt}}
+{{/callout}}
+{{! /multiexcerpt}}
 
 You can reassign a task from:
 

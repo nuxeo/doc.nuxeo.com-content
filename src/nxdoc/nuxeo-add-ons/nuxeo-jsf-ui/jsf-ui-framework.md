@@ -3,7 +3,7 @@ title: JSF UI Framework
 description: This chapter presents the different ways to customize what is displayed on the JSF UI application.
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2019-10-21'
     status: ok
 labels:
     - content-review-lts2016

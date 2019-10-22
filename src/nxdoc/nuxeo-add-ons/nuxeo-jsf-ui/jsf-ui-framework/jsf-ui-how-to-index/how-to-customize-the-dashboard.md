@@ -3,7 +3,7 @@ title: 'HOWTO: Customize the Dashboard - JSF UI'
 description: Learn how to customize the dashboard by adding new entries or completely override the default dashboard.
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-10-21'
     status: ok
 details:
     howto:

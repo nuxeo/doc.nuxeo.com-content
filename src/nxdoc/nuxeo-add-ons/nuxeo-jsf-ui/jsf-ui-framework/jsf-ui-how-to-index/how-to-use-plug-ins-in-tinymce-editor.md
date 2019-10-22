@@ -3,7 +3,7 @@ title: 'HOWTO: Use Plug-Ins in TinyMCE Editor - JSF UI'
 description: Learn how to customize TinyMCE by adding new plug-ins. We will use the textcolor plug-in as an example.
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-10-21'
     status: ok
 details:
     howto:

@@ -2,7 +2,7 @@
 title: 'HOWTO: Define a New Content View - JSF UI'
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2019-10-21'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:

@@ -2,7 +2,7 @@
 title: 'HOWTO: Hide a Tab, a Link or a Button for a Group or a User - JSF UI'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-10-21'
     status: ok
 details:
     howto:

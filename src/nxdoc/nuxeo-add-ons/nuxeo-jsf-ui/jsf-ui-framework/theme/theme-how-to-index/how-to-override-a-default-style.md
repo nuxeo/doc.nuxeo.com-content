@@ -2,7 +2,7 @@
 title: 'HOWTO: Override a Default Style - JSF UI'
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2019-10-21'
     status: ok
 details:
     howto:
@@ -113,8 +113,8 @@ history:
         date: '2013-12-03 16:30'
         message: ''
         version: '1'
-
 ---
+
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 Most of the default application styling is done using "dynamic" SCSS files referring to variables and flavors. These styles can be browsed [on GitHub](https://github.com/nuxeo/nuxeo-jsf-ui/tree/master/code/nuxeo-platform-webapp-core/src/main/resources/themes/sass).

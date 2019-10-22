@@ -2,7 +2,7 @@
 title: 'HOWTO: Display a Button/a Tab Only When a Workflow Is Started - JSF UI'
 review:
   comment: ''
-  date: '2018-03-27'
+  date: '2019-10-21'
   status: ok
 toc: true
 description: Learn how to display a tab or a button when a workflow is started.

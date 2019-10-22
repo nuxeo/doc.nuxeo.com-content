@@ -2,7 +2,7 @@
 title: JSF and Ajax Tips and How-To Index
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2019-10-21'
     status: ok
 labels:
     - lts2016-ok
@@ -81,6 +81,8 @@ history:
         date: '2012-02-06 17:46'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 {{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC Studio' label='howto' filter='Topics=JSF'}}}

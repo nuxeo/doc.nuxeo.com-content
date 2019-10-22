@@ -1,8 +1,8 @@
 ---
-title: 'HOWTO: Add a New Action Category on a Document Tab - JSF UI' 
+title: 'HOWTO: Add a New Action Category on a Document Tab - JSF UI'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-10-21'
     status: ok
 details:
     howto:

@@ -2,7 +2,7 @@
 title: Managing Your Nuxeo Application
 review:
     comment: ''
-    date: '2018-03-08'
+    date: '2019-10-21'
     status: ok
 confluence:
     ajs-parent-page-id: '11043048'
@@ -109,8 +109,10 @@ history:
         version: '1'
 labels:
     - lts2017-ok
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 Administrators can configure some elements directly from the Nuxeo Platform's user interface.
 
 As an administrator, you are in charge of [managing users and groups]({{page page='managing-users-and-groups'}}). You can create news users and groups, edit their properties, or even delete users or groups. You can also [manage vocabularies]({{page page='managing-vocabularies'}}), i.e. the labels displayed in drop down lists.

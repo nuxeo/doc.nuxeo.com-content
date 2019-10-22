@@ -2,7 +2,7 @@
 title: 'Layouts and Widgets (Forms, Listings, Grids)'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-10-21'
     status: ok
 labels:
     - content-review-lts2016
@@ -327,8 +327,8 @@ history:
         date: '2010-03-01 00:50'
         message: ''
         version: '1'
-
 ---
+
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}

@@ -2,7 +2,7 @@
 title: 'HOWTO: Display Non-Folderish Documents (Files, Note, ...) in the Left Tree - JSF UI'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-10-21'
     status: ok
 details:
     howto:

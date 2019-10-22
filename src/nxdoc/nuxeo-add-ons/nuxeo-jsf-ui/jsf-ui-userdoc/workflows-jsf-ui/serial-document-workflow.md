@@ -2,7 +2,7 @@
 title: Serial Document Workflow
 review:
     comment: ''
-    date: '2018-02-17'
+    date: '2019-10-21'
     status: ok
 labels:
     - lts2016-ok
@@ -10,7 +10,7 @@ labels:
     - excerpt
     - multiexcerpt-include
     - multiexcerpt
-    - content-review-lts2017
+    - lts2017-ok
 toc: true
 confluence:
     ajs-parent-page-id: '2392410'
@@ -85,8 +85,10 @@ history:
         date: '2013-10-25 10:02'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
 **The default serial workflow**, called "Serial document review", is an ordered workflow. This means that participants can review the document only when the previous participant in the list has approved the document. It can be used either to approve the document or simply to review it.
 {{! /excerpt}}
@@ -107,12 +109,14 @@ You need to have editing or management permissions to start a workflow.
 
 **To start a workflow**:
 
-1.  On the **Summary** tab, in the **Workflow process** section, select the workflow type you want to start and click on the **Start** button.
-    The form to select the reviewers and start the workflow is displayed on the **Summary** tab. A **Show graph view** button is also available, that displays the workflow route in a pop-up window.
+1.  On the **Summary** tab, in the **Workflow process** section, select the workflow type you want to start and click on the **Start** button.</br>
+    The form to select the reviewers and start the workflow is displayed on the **Summary** tab. A **Show graph view** button is also available, that displays the workflow route in a pop-up window.</br>
     A **Workflow** tab is now available on the document from which you can select the reviewers, [delegate your task]({{page page='delegating-a-task'}}), show the graph view but also see the current and previous tasks and [abandon the workflow]({{page page='abandoning-a-workflow'}}).
     ![]({{file name='workflow-choose-reviewers-task-workflow-tab.png'}} ?w=650,border=true)
 2.  In the **Participants on the review** field, type the name of a user or a group you want to add on the workflow and select it in the drop down list. Repeat these two steps to add all the participants to the review. Optionally, drag and drop the participants to change their order on the workflow, or the icon ![]({{file space='userdoc' name='action-delete.png' page='icons-index'}}) to remove them. {{{multiexcerpt 'tasks-assigned-to-group' page='Serial Document Workflow'}}}
-3.  Select the type of review you want to do: **Simple review**: the document's state will not change; or the **Validation review**: when all the reviewers have approved the document, it goes to the **Approved** lifecycle state.
+3.  Select the type of review you want to do:
+    - **Simple review**: the document's state will not change;
+    - **Validation review**: when all the reviewers have approved the document, it goes to the **Approved** lifecycle state.
     ![]({{file name='workflow-review-type-selection.png'}} ?w=350,border=true)
 4.  Type a comment, indicating the purpose of the review for instance.
 5.  Click on the **Start the review** button to let participants approve or reject the document.

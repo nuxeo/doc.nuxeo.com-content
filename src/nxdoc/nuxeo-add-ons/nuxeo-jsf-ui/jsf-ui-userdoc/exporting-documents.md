@@ -2,7 +2,7 @@
 title: Exporting Documents
 review:
     comment: ''
-    date: '2018-03-08'
+    date: '2019-10-21'
     status: ok
 labels:
     - export
@@ -163,8 +163,10 @@ history:
         date: '2012-03-20 17:49'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! multiexcerpt name='functional-overview'}}
 
 Users can export documents on their computer. It is possible to export:

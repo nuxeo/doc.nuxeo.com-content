@@ -2,7 +2,7 @@
 title: 'HOWTO: Customize the Versioning and Comment Widget on Document Edit Form - JSF UI'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-10-21'
     status: ok
 details:
     howto:

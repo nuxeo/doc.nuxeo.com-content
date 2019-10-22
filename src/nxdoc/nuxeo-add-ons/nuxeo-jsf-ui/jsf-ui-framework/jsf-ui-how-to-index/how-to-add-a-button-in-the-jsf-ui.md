@@ -2,7 +2,7 @@
 title: 'HOWTO: Add a Button - JSF UI'
 review:
     comment: ''
-    date: '2015-12-0'
+    date: '2019-10-21'
     status: ok
 details:
     howto:

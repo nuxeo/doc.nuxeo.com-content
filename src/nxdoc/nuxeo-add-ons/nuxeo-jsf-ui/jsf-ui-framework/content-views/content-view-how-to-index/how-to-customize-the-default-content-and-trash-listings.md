@@ -2,7 +2,7 @@
 title: 'HOWTO: Customize the Default Content and Trash Listings - JSF UI'
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2019-10-21'
     status: ok
 details:
     howto:

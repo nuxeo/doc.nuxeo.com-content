@@ -2,7 +2,7 @@
 title: 'HOWTO: Control the Display Mode of a Widget - JSF UI'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-10-21'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 details:

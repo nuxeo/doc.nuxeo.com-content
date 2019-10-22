@@ -2,7 +2,7 @@
 title: 'HOWTO: Override a Template - JSF UI'
 review:
     comment: ''
-    date: '2017-03-20'
+    date: '2019-10-21'
     status: ok
 details:
     howto:

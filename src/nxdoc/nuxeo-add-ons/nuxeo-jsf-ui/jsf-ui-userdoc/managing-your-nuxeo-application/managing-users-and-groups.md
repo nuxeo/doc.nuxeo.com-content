@@ -3,7 +3,7 @@ title: Managing Users and Groups
 description: Only administrators and power users can create, edit and delete users and groups. They can create new users and groups, modify their properties or delete them.
 review:
     comment: ''
-    date: '2018-03-08'
+    date: '2019-10-21'
     status: ok
 labels:
     - user-management
@@ -240,8 +240,10 @@ history:
         date: '2010-04-23 15:46'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! multiexcerpt name='functional-overview'}}
 Only administrators and power users can create, edit and delete users and groups. They can create new users and groups, modify their properties or delete them. It is also possible to connect the Platform to an external directory (LDAP directory for instance). Users can only consult users and groups directories.
 

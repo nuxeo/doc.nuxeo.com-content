@@ -2,7 +2,7 @@
 title: Publishing Content
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2019-10-21'
     status: ok
 labels:
     - section
@@ -136,8 +136,10 @@ history:
         date: '2010-04-29 14:52'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 {{! multiexcerpt name='functional-overview'}}
 
 ### Working with Sections
@@ -173,9 +175,7 @@ The following elements are not available on the published document:
 *   The relations
 
     {{#> callout type='info' }}
-
     It is possible to [enable the duplication of relations]({{page space='nxdoc' page='publisher#publication-relations-duplication'}}) when the document is published.
-
     {{/callout}}
 *   The archived versions of the document
 

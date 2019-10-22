@@ -2,7 +2,7 @@
 title: 'HOWTO: Make a Selection Based on the Value of Another Value in a Layout - JSF UI'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-10-21'
     status: ok
 details:
     howto:

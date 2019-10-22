@@ -2,7 +2,7 @@
 title: Aggregate Widget Types
 review:
     comment: ''
-    date: '2017-12-13'
+    date: '2019-10-21'
     status: ok
 labels:
     - lts2016-ok

@@ -2,7 +2,7 @@
 title: Upgrade to JSF2
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-10-21'
     status: ok
 labels:
     - content-review-lts2016
@@ -60,8 +60,8 @@ history:
         date: '2014-12-05 18:17'
         message: ''
         version: '1'
-
 ---
+
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}The Nuxeo Platform has been upgraded to JSF 2 for the 6.0 version. This page provides tools and notes to help you migrate your custom Nuxeo projects to this version.{{! /excerpt}}

@@ -2,7 +2,7 @@
 title: Localization and Translation How-To Index
 review:
     comment: ''
-    date: '2019-02-13'
+    date: '2019-10-21'
     status: ok
 labels:
     - lts2016-ok

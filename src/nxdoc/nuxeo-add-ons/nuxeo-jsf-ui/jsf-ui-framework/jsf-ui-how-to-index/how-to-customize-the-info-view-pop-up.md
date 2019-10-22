@@ -1,8 +1,8 @@
 ---
-title: 'HOWTO: Customize the Info-View Pop-Up - JSF UI' 
+title: 'HOWTO: Customize the Info-View Pop-Up - JSF UI'
 review:
     comment: ''
-    date: '2015-12-01'
+    date: '2019-10-21'
     status: ok
 details:
     howto:

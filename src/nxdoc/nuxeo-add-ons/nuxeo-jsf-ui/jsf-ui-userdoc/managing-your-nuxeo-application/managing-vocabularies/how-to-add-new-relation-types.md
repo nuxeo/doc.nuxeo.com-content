@@ -2,7 +2,7 @@
 title: 'HOWTO: Add New Relation Types'
 review:
     comment: ''
-    date: '2018-03-08'
+    date: '2019-10-21'
     status: ok
 details:
     howto:
@@ -53,8 +53,10 @@ history:
         date: '2014-11-24 18:57'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'DeprecatedAddon_10.10' page='generic-multi-excerpts'}}}
+
 The [relations]({{page page='editing-content'}}#relations) displayed by default in the Nuxeo Platform use two vocabularies to provide the predicates:
 
 *   **predicates**: Provides the values of outgoing relations, which are also the values displayed in the drop down list when the user creates a new relation.
