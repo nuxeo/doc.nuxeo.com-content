@@ -103,26 +103,26 @@ tree_item_index: 400
 ![]({{file name='add_permission_popup_web-ui.png'}} ?w=350,border=true)
 
 ## Granting Permissions to External Users (Instant Share)
-Granting permissions via Instant Share makes it possible to share content with external users who do not have an ID/password access to the Nuxeo Platform. <br>
-A Nuxeo Platform user can give permissions to external users on a workspace, folder, document, etc. Therefore, external users receive an email with a link to access restricted features.
+Granting permissions via Instant Share makes it possible to share content with external users who do not have access to the platform. <br>
+
+An existing user can give permissions to external users on a workspace, folder, document, etc. Therefore, external users receive an email with a link to access a specific document or space.
 When users click the link and access the content that was shared with them, they can act on it depending on the [permissions]({{page space='userdoc' page='permissions'}}#permissions-overview) set for them.
 
 {{#> callout type='note' }}
-External users can also access the **Search** menu, which can be useful when navigating through lots of documents in a whole workspace for example.
+External users can also access the **Search** menu, which can be useful when navigating through lots of documents in a whole workspace, for example.
 {{/callout}}
 
 **To grant permissions to external users via Instant Share:**
 
-1. In Nuxeo Platform, open the **Browse > Domain** menu.
 1. Open the workspace, folder or document you want to share.
-1. Open the "Permissions" tab.
+1. Open the **Permissions** tab.
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Functional Overview.1544549838807/Organizing Content/Managing Permissions - Permissions tab.png
     name: managing-permissions-permissions-tab.png
     1.1.3#screenshot#up_to_date
 --}}
 ![Managing Permissions - Permissions tab.png](nx_asset://dacb5f5f-de69-406e-a93a-073f7a10c193 ?w=650,border=true)
-1. From the "Permissions assigned to external users" area, click on the **New** button. 
+1. From the **Permissions assigned to external users** section, click on the **New** button. 
 {{#> callout type='note' }}
 Permissions already set to external users display in this area.
 {{/callout}}
@@ -131,7 +131,7 @@ Permissions already set to external users display in this area.
   - **Email** of the external user (directly type it over the example)
   - **Right** granted
   - **From/To**: start and end dates of the granting
-  - **Notification** attached to the email (_optional_)
+  - **Notification email**: you can leave the message by default or customize it here. (_optional_)
 {{{multiexcerpt 'grant-permissions-external-users' page='managing-permissions'}}}
 ![]({{file name='permissions_external_share_popup_web-ui.png'}} ?w=350,border=true)
 {{{multiexcerpt 'grant-permissions-external-users-notes' page='managing-permissions'}}}
@@ -140,7 +140,7 @@ Permissions already set to external users display in this area.
   - **Create** icon to grant access to the external user
   - **Create and add another** icon to grant access to the user and directly re-open the popup for granting access to another user
 
-When created, the granted access is saved and displays in the "Permissions assigned to external users" area. The external user you granted permissions to receives an email with a link to access the desired type of content. 
+When created, the granted access is saved and displayed in the **Permissions assigned to external users** section. The external user you granted permissions to receives an email with a link to access the desired document(s). 
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Functional Overview.1544549838807/Organizing Content/Managing Permissions - Permission granted.png
@@ -150,9 +150,9 @@ When created, the granted access is saved and displays in the "Permissions assig
 ![Managing Permissions - Permission granted.png](nx_asset://2e4970c9-a1e0-45f4-aa1c-991da7713ba0 ?w=650,border=true)
 
 At this stage, you can click on the: 
-+ **Modify** icon to display the "Update permission" popup and update the needed information 
-+ **Send again** icon to send the permission again to the external user 
-+ **Delete** icon to remove the already recorded permission of the external user
++ **Edit** icon to display the **Update Permission** popup and update the needed information .
++ **Send again** icon to send the permission again to the external user .
++ **Delete** icon to remove the already recorded permission of the external user.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Functional Overview.1544549838807/Organizing Content/Managing Permissions - Actions.png
@@ -164,7 +164,7 @@ At this stage, you can click on the: 
 **To access the Nuxeo Platform as an external user:**
 
 1. Open your mailbox. <br>
-There you can find an email sent by a Nuxeo user granting you to access the type of content he gave you permission on.
+There you can find an email sent by a Nuxeo user granting you access to a specific document/space.
 
 1. Click on the hyperlink to access the platform and the content.  <br>
 At this stage, your web browser opens on the Nuxeo Platform and directly places you on the content you have permission on. Depending on the set [permissions]({{page space='userdoc' page='permissions'}}#permissions-overview), you can now view and/or act on the content and use the **Search** menu to navigate through the documents you have access to.
