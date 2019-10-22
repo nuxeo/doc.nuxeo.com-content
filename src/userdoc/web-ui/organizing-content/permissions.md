@@ -104,12 +104,12 @@ tree_item_index: 400
 
 ## Granting Permissions to External Users (Instant Share)
 
-Granting permissions via Instant Share makes it possible to share content with external users who do not have access to the platform. <br>
+Granting permissions via Instant Share makes it possible to share content with external users who do not have access to the platform.</br>
 
 An existing user can give permissions to external users on a workspace, folder, document, etc. Therefore, external users receive an email with a link to access a specific document or space.
 When users click the link and access the content that was shared with them, they can act on it depending on the [permissions]({{page space='userdoc' page='permissions'}}#permissions-overview) set for them.
 
-{{#> callout type='note' }}
+{{#> callout type='info' }}
 External users can also access the **Search** menu, which can be useful when navigating through lots of documents in a whole workspace, for example.
 {{/callout}}
 
@@ -124,9 +124,9 @@ External users can also access the **Search** menu, which can be useful when nav
 --}}
 ![Managing Permissions - Permissions tab.png](nx_asset://dacb5f5f-de69-406e-a93a-073f7a10c193 ?w=650,border=true)
 1. From the **Permissions assigned to external users** section, click on the **New** button. 
-{{#> callout type='note' }}
-Permissions already set to external users display in this area.
-{{/callout}}
+  {{#> callout type='info' }}
+  Permissions already set to external users display in this area.
+  {{/callout}}
 
 1. Fill in the following information:
   - **Email** of the external user (directly type it over the example)
