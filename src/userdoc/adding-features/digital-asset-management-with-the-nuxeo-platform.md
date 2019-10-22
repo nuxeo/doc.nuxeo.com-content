@@ -231,9 +231,9 @@ See the page [Supported File Formats]({{page space='nxdoc' page='supported-file-
 <div class="column medium-6">
 {{#> panel heading='Related User Documentation'}}
 
-- [Creating Content]({{page page='nxdoc/creating-content'}})
-- [Editing Content]({{page page='nxdoc/editing-content'}})
-- [Collections]({{page page='nxdoc/collections'}})
+- [Creating Content]({{page page='userdoc/content-create'}})
+- [Editing Content]({{page page='userdoc/content-edit'}})
+- [Collections]({{page page='userdoc/collections-web-ui'}})
 
 {{/panel}}
 

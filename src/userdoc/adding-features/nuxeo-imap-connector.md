@@ -461,4 +461,4 @@ Limit of new fetched emails
 4.  To open a mail, click on its subject.
     ![]({{file name='DM-emailFolder-summary.png'}} ?w=650,border=true)
 
-Emails cannot be edited, but you can [comment]({{page page='nxdoc/collaborative-features'}}#comments) and [annotate]({{page page='nxdoc/comments'}}) them, [link]({{page page='nxdoc/editing-content'}}#relations) them to other documents and [follow the email folder's activity]({{page page='nxdoc/collaborative-features'}}#alerts).
+Emails cannot be edited, but you can [comment]({{page page='nxdoc/collaborative-features'}}#comments) them, [link]({{page page='nxdoc/editing-content'}}#relations) them to other documents and [follow the email folder's activity]({{page page='nxdoc/collaborative-features'}}#alerts).

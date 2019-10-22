@@ -126,11 +126,11 @@ Main components of the Nuxeo Platform are:
 
 - The **Nuxeo Server**, that runs on top of the Java Virtual Machine, with different deployment options. The Nuxeo Server exposes a modular set of features via a REST API. The Nuxeo Package system allows to easily define what bundles are deployed on the Nuxeo Server. Nuxeo Server is often called Nuxeo Platform as a shortcut, and because it is clearly the most important asset of the Nuxeo Platform, embedding a fully featured repository, a content transformation grid and a workflow engine. The Nuxeo Server is [benchmarked](https://benchmarks.nuxeo.com) continuously to guarantee performance expectations
 
-- **Nuxeo Web UI**: a flexible and pluggable content browser that allows users to perform usual content management operations in a highly productive style: browse, search, upload, preview, download, resolve tasks etc... WEB UI's strength is its capability of being heavily customised for taking into account your application's data model and custom business process.
+- **Nuxeo Web UI**: a flexible and pluggable content browser that allows users to perform usual content management operations in a highly productive style: browse, search, upload, preview, download, resolve tasks, etc. Web UI's strength is its capability of being heavily customised for taking into account your application's data model and custom business process.
 
 - **Nuxeo Addons**: as we said above, you can install additional bundles on top of the bare Nuxeo server to enrich its features and capabilities set. Nuxeo Addons compatible with a given version of the Nuxeo Server are distributed through the Nuxeo Marketplace.
 
-- **Client SDKs** and **Nuxeo Elements**: Java, JavaScript, C#, Python, PHP, iOS, DART: several clients are available for quickly start integrating with Nuxeo Server without having to know the details of our REST API. We even  provide a rich set of web components, the "Nuxeo Elements" that brings out-of-the-box features that you can include in your application just by using the good HTML tag.
+- **Client SDKs** and **Nuxeo Elements**: Java, JavaScript, C#, Python, PHP, iOS, DART: several clients are available to quickly start integrating with Nuxeo Server without having to know the details of our REST API. We even provide a rich set of web components, the "Nuxeo Elements" that brings out-of-the-box features that you can include in your application just by using the good HTML tag.
 
 - **Nuxeo Drive**: a desktop application that maps a Nuxeo repository's content to a Desktop's file system, with synchronization logics and offline access and edit capabilities, in the spirit of Enterprise File Sharing Systems like Dropbox or Box.
 
@@ -142,8 +142,8 @@ Main components of the Nuxeo Platform are:
 
 - Additional **Client Integrations**: Some additional client integrations are available: Adobe CC plugin, Salesforce application, AutoCad Plugin, Slack integration and more.
 
-- **PaaS** and **Docker Deployment**: Tooling
-  Nuxeo has strong expertise in deploying Nuxeo Platform instances on docker containers, PaaS style, which you typically want to do if you are building a verticalised application on top of Nuxeo and have multi-tenancy considerations.
+- **PaaS** and **Docker Deployment**: Tooling </br>
+Nuxeo has strong expertise in deploying Nuxeo Platform instances on docker containers, PaaS style, which you typically want to do if you are building a vertical application on top of Nuxeo and have multi-tenancy considerations.
 
 ## Turnkey Application and Headless Repository
 You may be interested in using Nuxeo Platform for you project for different use cases:
@@ -232,7 +232,7 @@ So, if your external application needs to call the Nuxeo Server you can use plai
 ### Calling External Services from the Nuxeo Sever
 
 You can extend the Nuxeo Platform to deploy your own Java Services.
-A standard approach is to wrap your calls to external applications inside a [Nuxeo Automation Operation]({{page page='contributing-an-operation'}}) (or, even better, inside a Nuxeo Service wrapped in an an Automation operation). Once you have this operation, you can use it Nuxeo Studio for deep integration in your business pocesses:
+A standard approach is to wrap your calls to external applications inside a [Nuxeo Automation Operation]({{page page='contributing-an-operation'}}) (or, even better, inside a Nuxeo Service wrapped in an Automation operation). Once you have this operation, you can use it Nuxeo Studio for deep integration in your business processes:
 
 - Use it inside a Workflow.
 - Bind the call to the external service  on new buttons in the UI.

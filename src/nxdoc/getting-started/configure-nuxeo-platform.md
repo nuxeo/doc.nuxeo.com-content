@@ -318,7 +318,7 @@ CREATE A PAGE PROVIDER FOR A CUSTOM DOCUMENT
     ```
 
     {{#> callout type='tip' }}
-    You can add the query filter to further tailor your search results. Try filtering out contracts that     haven't been cancelled!
+    You can modify the query filter to further tailor your search results. Try filtering out contracts that haven't been cancelled!
     {{/callout}}
 
 1.  Under **Predicates**, click **Add**. Click on **Edit binding** and select `schema:system` > `fulltext`.
