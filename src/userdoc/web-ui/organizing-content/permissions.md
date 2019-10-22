@@ -64,7 +64,7 @@ tree_item_index: 400
 </td>
 </tr>
 <tr>
-<td colspan="1">Manage everything</td>
+<td colspan="1">Everything</td>
 <td colspan="1">
 <ul>
 <li>Manage permissions</li>
@@ -103,6 +103,7 @@ tree_item_index: 400
 ![]({{file name='add_permission_popup_web-ui.png'}} ?w=350,border=true)
 
 ## Granting Permissions to External Users (Instant Share)
+
 Granting permissions via Instant Share makes it possible to share content with external users who do not have access to the platform. <br>
 
 An existing user can give permissions to external users on a workspace, folder, document, etc. Therefore, external users receive an email with a link to access a specific document or space.
@@ -129,7 +130,7 @@ Permissions already set to external users display in this area.
 
 1. Fill in the following information:
   - **Email** of the external user (directly type it over the example)
-  - **Right** granted
+  - **Right** granted (Read, ReadWrite or Everything: see [Permissions]({{page space='userdoc' page='permissions'}}#permissions-overview) for more information)
   - **From/To**: start and end dates of the granting
   - **Notification email**: you can leave the message by default or customize it here. (_optional_)
 {{{multiexcerpt 'grant-permissions-external-users' page='managing-permissions'}}}
@@ -141,13 +142,6 @@ Permissions already set to external users display in this area.
   - **Create and add another** icon to grant access to the user and directly re-open the popup for granting access to another user
 
 When created, the granted access is saved and displayed in the **Permissions assigned to external users** section. The external user you granted permissions to receives an email with a link to access the desired document(s). 
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Functional Overview.1544549838807/Organizing Content/Managing Permissions - Permission granted.png
-    name: managing-permissions-permission-granted.png
-    1.1.3#screenshot#up_to_date
---}}
-![Managing Permissions - Permission granted.png](nx_asset://2e4970c9-a1e0-45f4-aa1c-991da7713ba0 ?w=650,border=true)
 
 At this stage, you can click on the: 
 + **Edit** icon to display the **Update Permission** popup and update the needed information .
