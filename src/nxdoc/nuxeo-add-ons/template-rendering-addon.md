@@ -546,3 +546,12 @@ This can be used to :
 ### Templates and Renditions
 
 Template can be used to provide a Rendition. This means that for example, when you publish a document, you can in fact publish the rendering of the document using a template.
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Update the default behaviour of the Template Rendering Output](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/modeler-tips-tricks#update-the-default-behaviour-of-the-template-rendering-output-format)
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>
