@@ -126,7 +126,6 @@ Nuxeo can't guarantee the compliance to SEC 17a-4 in the event that:
 - The installation/configuration recommendations are not applied.
 - The developments added by a partner or a customer would interfere with the regulatory requirements and Nuxeo Retention Management add-on behavior (for example: reintroduce disabled features).
 
-<!--
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium">
@@ -138,9 +137,8 @@ Nuxeo can't guarantee the compliance to SEC 17a-4 in the event that:
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Installation / Configuration &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='retention-management/nuxeo-retention-installation'}})
+### Technical Overview &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='retention-management/nuxeo-retention-technical-overview'}})
 {{/panel}}
 </div>
 
 </div>
--->
