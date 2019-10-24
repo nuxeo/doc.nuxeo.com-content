@@ -1,5 +1,5 @@
 ---
-title: Functional Overview
+title: Retention Functional Overview
 description: Discover how to use the Nuxeo Retention Management add-on once installed.
 review:
     comment: ''

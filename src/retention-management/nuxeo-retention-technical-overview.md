@@ -1,5 +1,5 @@
 ---
-title: Technical Overview
+title: Retention Technical Overview
 description: Discover technical implementation of the Nuxeo Retention Management add-on.
 review:
     comment: ''
@@ -71,11 +71,11 @@ If a legal hold is applied to a document or if a retention rule is applied to a 
   - this information is made available per-document through a security policy,
 
 
-- ecm:isUnderRetentionOrLegalHold is set to true,
+- **ecm:isUnderRetentionOrLegalHold** is set to true,
 
 This applies in all situations, no exception, including for Administrators.
 
-In case of [event-based retention]({{page page='nuxeo-retention-functional-overview'}}#create-retention-rule), the record is put on a temporary hold waiting for the event to occur (cf. [Retention flow]({{page page='nuxeo-retention-technical-overview'}}#retention-flow)). In this case, ecm:retainUntil is "indeterminate", so deletion is prevented as if it was a date far in the future (this is turned into a legal hold at the S3 storage level).
+In case of [event-based retention]({{page page='nuxeo-retention-functional-overview'}}#create-retention-rule), the record is put on a temporary hold waiting for the event to occur (cf. [Retention flow]({{page page='nuxeo-retention-technical-overview'}}#retention-flow)). In this case, **ecm:retainUntil** is "indeterminate" (by setting the field to '9999-01-01T00:00:00.000+00:00'), so deletion is prevented as if it was a date far in the future (this is turned into a legal hold at the S3 storage level).
 
 A copy of a document resets its record, retention and legal hold information. This includes creating a new version (that’s why versioning must be disabled to be compliant).
 Theses fields don't apply to proxies, as proxies are just a convenience to access content stored elsewhere, and are not themselves records.
@@ -88,7 +88,7 @@ Then, depending on the retention rule type (immediate, metadata, or event-based 
 
 A background process checks when the event occurs and then starts the retention period (event-based retention).
 
-Another background process checks the document expiration to change the status and make the record deletable.
+Another background process checks the document expiration to change the status and make the record deletable. This process is run once a day (there may be a short delay for the record to become deletable).
 
 
 {{!--     ### nx_asset ###
