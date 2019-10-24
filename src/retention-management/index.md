@@ -100,11 +100,9 @@ Amazon S3 compliance mode (see [**Amazon S3 Object Lock**](https://docs.aws.amaz
 
 ## Limitations
 
-The Nuxeo Retention Management add-on does not support **attachments** or **versioning**.
+The Nuxeo Retention Management add-on does not support **attachments**, **versioning**, and **comments**.
 
-- The attachments features **is automatically disabled** for the full instance when the Nuxeo Retention Management add-on is added to Nuxeo Server. So, once the add-on is installed, there is no way to add an attachment to a document, whatever if they are standard documents or records.
-
-- The versioning feature must be turned off during the setup. Which means that there is no way to add a version to a document in the full instance, whatever if they are standard documents or records.
+Those features **are automatically disabled** for the full instance when the Nuxeo Retention Management add-on is added to Nuxeo Server (the related facets and the **file** schema are disabled). So, once the add-on is installed, there is no way to add a comment, an attachment or to create a version to a document, whatever if they are standard documents or records.
 
 ## Warning
 
