@@ -219,7 +219,7 @@ The principle of the template rendering feature is the following:
 
 There are two types of Nuxeo templates: the "Template" will have an attached file in which some [values](#variables) are defined to be Nuxeo values. The "Web template" doesn't have an attachment. Its content is defined in a Note field.
 
-#### Creating a template file
+#### Creating a Template File
 
 The template file is the file that will be used to generate the rendering of the Nuxeo document and will be completed automatically with the defined Nuxeo properties. This template file can be:
 
@@ -251,7 +251,7 @@ To create a template file:
 
 {{/callout}}
 
-#### Creating the template document
+#### Creating the Template Document
 
 When the template file is done, you need to create a template document and attach the template file to it.
 Templates can be created in the Templates space, in workspaces and in folders.
@@ -394,13 +394,13 @@ Select the rendition's format. If the chosen format is different from the templa
 
 </td></tr></tbody></table></div>
 
-#### Using template documents
+#### Using Template Documents
 
 A document can use one or several templates. If it is associated with several templates, the first template associated is considered as the main template and is used as content. The other associated templates are used to generate additional renditions of the document.
 When a document is using a template, an additional tab is available on the document, called **Associated templates**.
 There are several ways to associate a template to a document.
 
-##### Creating a document based on a template
+##### Creating a Document Based on a Template
 
 To create a new document based on a template, users need to [use the **New document** button]({{page space='userdoc' page='creating-content'}}#creating-a-document-using-the-new-document-button). If a template is available for the selected document type, an additional option is then available for the **Content** field, allowing users to select which template to use.
 ![]({{file name='select_template.png'}} ?w=500,h=122,border=true)
@@ -412,7 +412,7 @@ Users can then:
 *   [render the document using the template(s)](#rendering-a-document-using-its-template),
 *   [publish the document using the template's available renditions](#publishing-a-documents-rendition).
 
-##### Associating a template to a document
+##### Associating a Template to a Document
 
 It is possible to associate a document with a template after the document's creation.
 
@@ -431,13 +431,13 @@ It is possible to associate a document with a template after the document's crea
         It is also displayed in the **Associated template** tab.
         ![]({{file name='associated_template_tab.png'}} ?w=450,h=221,border=true)
 
-#### Rendering a document using its template
+#### Rendering a Document Using Its Template
 
 When a document has one or several templates associated, it is possible to view or download the document using the rendition(s) defined by the templates. The available renditions depend on the template you chose to use.
 
 To view the document using a rendition, click on the corresponding rendition in the **Renditions** of the **Summary** tab.
 
-#### Publishing a document's rendition
+#### Publishing a Document's Rendition
 
 The Template rendering addon enables to publish a rendition of the document instead of the document itself, as it is the case on a default Platform configuration. Typically, it enables to publish the PDF rendition of an office document.
 
@@ -451,9 +451,7 @@ The Template rendering addon enables to publish a rendition of the document inst
     The document's rendition is submitted to publishing and must approved using the [usual publishing process]({{page space='userdoc' page='publishing-content'}}).
 
 {{#> callout type='info' }}
-
 If you use the multi-tenant add-on at the same time, you should be aware that due to some technical limitations, models bound to a given document type are bound whatever the tenant the model is stored in.
-
 {{/callout}}
 
 ## Technical Overview
@@ -476,9 +474,9 @@ Each template processor has his own logic for rendering a Document from a Templa
 *   raw processing (FreeMarker or XSLT)
 *   merge fields replacement (MS Office / OpenOffice)
 
-### Sample use cases
+### Sample Use Cases
 
-#### Office templating
+#### Office Templating
 
 This is the most direct use case.
 
@@ -501,11 +499,11 @@ The associated document can be any Document that can contain a file. On first as
 
 This means you can continue edit it's content, but this file is dynamic and you can render it to get the final file with all meta-data and presentation stuffs up to date (title, description, author, history...).
 
-### Web rendering
+### Web Rendering
 
 **The Template**
 
-The Template can be for example a FreeMarker template. It can reference any attribute of the target Document, but also history in order to provide a HTML view of it.
+The Template can be for example a FreeMarker template. It can reference any attribute of the target Document, but also history in order to provide an HTML view of it.
 
 **The associated document**
 
@@ -517,11 +515,11 @@ The URL to access the document with the template applied is the following :
 
 `http://NUXEO_SERVER/nuxeo/nxtemplate/**path_to_the_document**@**template_name**`
 
-ex :
+ex:
 
 `http://localhost:8080/nuxeo/nxtemplate/default/default-domain/UserWorkspaces/Administrator/MyDocument@MyTemplate`
 
-or for a published document :
+or for a published document:
 
 `http://localhost:8080/nuxeo/nxtemplate/default/default-domain/sections/MySection/MyDocument@MyTemplate`
 
@@ -539,9 +537,9 @@ The rendering will replace the merge fields but also merge the HTML content of t
 
 This can be used to :
 
-*   render an Html / Markdown note inside an Office Template (i.e. adding a cover page, a TOC, page numbering...)
+- render an HTML / Markdown note inside an Office Template (i.e. adding a cover page, a TOC, page numbering...)
 
-*   fill a mail or form template with formatted text
+- fill a mail or form template with formatted text
 
 ### Templates and Renditions
 
