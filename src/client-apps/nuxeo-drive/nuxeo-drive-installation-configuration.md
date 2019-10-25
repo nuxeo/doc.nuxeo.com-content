@@ -2,7 +2,7 @@
 title: Nuxeo Drive Installation / Configuration
 review:
     comment: ''
-    date: '2019-03-14'
+    date: '2019-10-25'
     status: ok
 labels:
     - lts2017-ok
@@ -67,43 +67,12 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 
 #### Installing Nuxeo Drive on GNU/Linux
 
-1. Extendented Attributes
+1. Download the binary (`.AppImage` file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](https://community.nuxeo.com/static/drive-updates/nuxeo-drive-x86_64.AppImage).
+2. [Make the file executable](https://discourse.appimage.org/t/how-to-run-an-appimage/80).
+3. You now need to start Nuxeo Drive by clicking on the file.
+    A Nuxeo Drive folder will be created by the system at the root of your local home folder (`/home/USER/`). This is the place where synchronized documents will be stored on your computer.
 
-    First note that Nuxeo Drive uses Extended file attributes through the [xattr](https://pypi.python.org/pypi/xattr/) Python wrapper.
-
-    Depending on the distribution, you _may_ need a special mount option (`user_xattr`) to enable them for a given file system.
-
-    Check your current mount, e.g.:
-
-    ```sh
-    grep user_xattr /proc/fs/ext4/sda3/options
-    # "user_xattr" means the file system has xattr already enabled
-    ```
-
-    If the current mount doesn't have xattr, remount the filesystem with xattr. e.g.:
-
-    ```sh
-    sudo mount -o remount,user_xattr /dev/sda3
-    ```
-
-2. Installation
-
-   ```sh
-   git clone https://github.com/nuxeo/nuxeo-drive.git
-   cd nuxeo-drive
-   git checkout release-4.1.0  # Or whatever release you want, starting with 4.0.0 and newer
-
-   export WORKSPACE="$(pwd)"
-   ./tools/linux/deploy_jenkins_slave.sh --install
-   ```
-
-3. You now need to start Nuxeo Drive on your computer.
-
-  ```sh
-  ./tools/linux/deploy_jenkins_slave.sh --start
-  ```
-
-  A `Nuxeo Drive` folder will be created by the system at the root of your local home folder. This is the place where synchronized documents will be stored on your computer.
+If you encounter any error, please check those pages: [Manual Usage](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/gnu_linux.md) and [Troubleshooting](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/gnu_linux_qa.md).
 
 ### Starting Nuxeo Drive
 
