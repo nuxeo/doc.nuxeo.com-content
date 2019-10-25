@@ -24,7 +24,7 @@ Properties of the documents, a.k.a. metadata, ensure that the document is refere
 
 The Nuxeo Platform uses Dublin Core metadata by default, although not all of them are displayed to the user by default. Dublin Core metadata is:
 
-{{{multiexcerpt 'metadata' page='userdoc/editing-content'}}}
+{{{multiexcerpt 'metadata' page='nxdoc/editing-content'}}}
 
 Although properties are not mandatory, filling them in will make your documents easier to find using [Nuxeo search engine]({{page space='userdoc' page='search'}}).
 
