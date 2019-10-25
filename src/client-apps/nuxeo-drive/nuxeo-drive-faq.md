@@ -156,7 +156,7 @@ Minimum supported versions:
 
 | Nuxeo Drive | Debian | Ubuntu | Fedora | Manjaro
 |---|---|---|---|---
-| 4.2.0+ | 10 | 16.04 | 29 | 18.1.0
+| >= 4.2.0 | 10 | 16.04 | 29 | 18.1.0
 
 ## What Actions Trigger a Synchronization?
 
