@@ -80,7 +80,7 @@ Another background process checks the document expiration to change the status a
     name: Retention-sequencing - retention-sequence-application.png
     server#schema#up_to_date
 --}}
-![retention-sequence-application](nx_asset://2fce961d-d9e7-4772-a267-f00ba3c2d6a4 ?w=650,border=true)
+![retention-sequence-application](nx_asset://2fce961d-d9e7-4772-a267-f00ba3c2d6a4 ?w=550,border=true)
 
 ## Legal Hold Flow
 
@@ -99,7 +99,7 @@ There are some specific use cases:
     name: Retention-sequencing - retention-legal-hold.png
     server#schema#up_to_date
 --}}
-![retention-sequencing-legal-hold](nx_asset://970e5649-c2bb-405b-a194-e0b3cc8f735d ?w=450,border=true)
+![retention-sequencing-legal-hold](nx_asset://970e5649-c2bb-405b-a194-e0b3cc8f735d ?w=550,border=true)
 
 ## Deletion Flow
 
@@ -120,7 +120,7 @@ The standard Nuxeo deletion flow is based on the following principles:
     name: Retention-sequencing - standard-deletion.png
       server#schema#up_to_date
 --}}
-![retention-standard-deletion](nx_asset://1105e57b-5aa7-4ec6-abc5-03e9d5c90c95 ?w=450,border=true)
+![retention-standard-deletion](nx_asset://1105e57b-5aa7-4ec6-abc5-03e9d5c90c95 ?w=550,border=true)
 
 ### {{> anchor 'record-deletion-flow'}} Record Deletion Flow
 
@@ -140,4 +140,4 @@ That's why the record deletion flow is done as follow:
     name: Retention-sequencing - retention-deletion.png
     server#schema#up_to_date
 --}}
-![retention-sequencing-deletion](nx_asset://04d8ac4d-5935-495c-a054-bb84dd071663 ?w=650,border=true)
+![retention-sequencing-deletion](nx_asset://04d8ac4d-5935-495c-a054-bb84dd071663 ?w=550,border=true)
