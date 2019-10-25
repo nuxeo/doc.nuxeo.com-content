@@ -2,7 +2,7 @@
 title: Nuxeo Drive FAQ
 review:
   comment: ''
-  date: '2019-03-15'
+  date: '2019-10-25'
   status: ok
 labels:
   - nuxeo-drive
@@ -134,16 +134,23 @@ Client | 7.10 | 8.10 | 9.10 | 10.10
 
 ## What are the supported OS?
 
-Nuxeo Drive is guaranteed to run on:
+Nuxeo Drive is guaranteed to run on ([history changes](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/support.md#client)):
 
 - GNU/Linux, 64 bits
-- macOS >= 10.11, 64 bits
+- macOS >= 10.12, 64 bits
 - Windows 7, both 32 and 64 bits
 - Windows 8, both 32 and 64 bits
 - Windows 8.1, both 32 and 64 bits
 - Windows 10, both 32 and 64 bits
 
 ### Supported GNU/Linux Distributions
+
+{{#> callout type='note' }}
+
+This list is not exhaustive and Nuxeo Drive may work on older versions and on non-listed distributions.
+If you successfully ran Nuxeo Drive on such OS, we would be pleased to update that page (you could [open an issue](https://github.com/nuxeo/doc.nuxeo.com-content/issues) or just drop an line in whatever format you are familiar with).
+
+{{/callout}}
 
 Minimum supported versions:
 
