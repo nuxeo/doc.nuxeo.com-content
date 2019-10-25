@@ -46,7 +46,7 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 
 #### Installing Nuxeo Drive on macOS
 
-1. Download the installer (`.dmg` file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](https://community.nuxeo.com/static/drive-updates/nuxeo-drive.dmg).
+1. Download the installer (`.dmg` file) from the **Nuxeo Drive** tab in the **User Settings** or from the [Nuxeo Drive update site](https://community.nuxeo.com/static/drive-updates/nuxeo-drive.dmg).
 2. Run the installer: drag and drop the Nuxeo Drive icon in the Applications directory.
     ![]({{file name='drive-installer-dmg.png' page='nuxeo-drive'}})
     Nuxeo Drive is now installed on your computer.
@@ -55,7 +55,7 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 
 #### Installing Nuxeo Drive on Windows
 
-1. Download the Windows installer (`.exe` file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](https://community.nuxeo.com/static/drive-updates/nuxeo-drive.exe).
+1. Download the Windows installer (`.exe` file) from the **Nuxeo Drive** tab in the **User Settings** or from the [Nuxeo Drive update site](https://community.nuxeo.com/static/drive-updates/nuxeo-drive.exe).
 2. Run the installer: indicate where Nuxeo Drive should be installed (typically `C:\Program Files (x86)`) and click **Next** until the installation process is done.
     Nuxeo Drive is now installed on your computer.
 
@@ -68,7 +68,7 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 
 #### Installing Nuxeo Drive on GNU/Linux
 
-1. Download the binary (`.AppImage` file) from the **Nuxeo Drive** tab in the **Home** or from the [Nuxeo Drive update site](https://community.nuxeo.com/static/drive-updates/nuxeo-drive-x86_64.AppImage).
+1. Download the binary (`.AppImage` file) from the **Nuxeo Drive** tab in the **User Settings** or from the [Nuxeo Drive update site](https://community.nuxeo.com/static/drive-updates/nuxeo-drive-x86_64.AppImage).
 2. [Make the file executable](https://discourse.appimage.org/t/how-to-run-an-appimage/80).
 3. You now need to start Nuxeo Drive by clicking on the file.
     A Nuxeo Drive folder will be created by the system at the root of your local home folder (`/home/USER/`). This is the place where synchronized documents will be stored on your computer.
