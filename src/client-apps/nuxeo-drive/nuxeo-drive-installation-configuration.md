@@ -24,10 +24,9 @@ See this up-to-date [support page](https://github.com/nuxeo/nuxeo-drive/blob/mas
 
 ### Authentication
 
-Nuxeo Drive uses the same authentication way as any user would do with its browser. So it can handle basic authentications [available in the platform]({{page page='authentication-and-user-management'}}). But it is missing several protocols that require deep changes in Nuxeo Drive itself, as of now those are not available:
+Nuxeo Drive uses the same authentication way as any user would do with its browser. So it can handle basic authentications [available in the platform]({{page page='authentication-and-user-management'}}) and Kerberos. But it is missing several protocols that require deep changes in Nuxeo Drive itself, as of now those are not available:
 
 - OAuth 2
-- Kerberos (tracked with the ticket [NXDRIVE-37](https://jira.nuxeo.com/browse/NXDRIVE-37))
 - NTLM (tracked with the ticket [NXDRIVE-875](https://jira.nuxeo.com/browse/NXDRIVE-875))
 
 ## Installation
