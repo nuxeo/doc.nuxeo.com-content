@@ -40,3 +40,4 @@ To adapt the default addon behaviour, ensure you have selected **Nuxeo Tree Snap
 
 - The **Snapshotable** and **Snapshot** facets.
 - The **`Document.CreateTreeSnapshot`** in your automation chain / scripting, in the `Document` category.
+  - The `versioning option` parameter of the operation is expecting either `MINOR` or `MAJOR` depending on the version which should be applied on all components of the snapshot.
