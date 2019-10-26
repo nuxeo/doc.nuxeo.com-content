@@ -2,9 +2,9 @@
 title: Template Rendering Addon
 description: 'The template rendering addon is a set of two addons available from the Nuxeo Marketplace: Nuxeo Template Rendering and Nuxeo Template Rendering Samples.'
 review:
-    comment: "This page needs to be updated to cover the addon's migration to Web UI and the new simplified process to render documents."
-    date: '2017-12-14'
-    status: requiresUpdates
+    comment: ''
+    date: '2019-10-26'
+    status: ok
 labels:
     - lts2016-ok
     - template-rendering
@@ -174,6 +174,22 @@ history:
         version: '1'
 
 ---
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related courses on Nuxeo University
+- [Expert Session on Template Rendering Addon](https://university.nuxeo.com/learn/course/external/view/elearning/188/ExpertSession-TemplateRendering)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Template Rendering/university-template-rendering.png
+    name: university-template-rendering.png
+    addins#screenshot#up_to_date
+--}}
+![university-template-rendering.png](nx_asset://7cb24a5f-56aa-441c-ab4c-079d984485dc ?w=450,border=true)
+{{/callout}}
+
+{{#> callout type='info' heading='Template Rendering with Nuxeo JSF UI and Nuxeo Web UI'}}
+**Nuxeo JSF UI** is needed to configure the document template. You don't need to execute the template rendering operation as an end-user, i.e. from **Nuxeo Web UI**, because the rendering button is exposed in **Nuxeo Web UI** in the Document Action Toolbar.
+{{/callout}}
+
 ## Installation
 
 {{{multiexcerpt 'mp-installation-easy' page='Generic Multi-Excerpts'}}}
@@ -204,10 +220,20 @@ This addon depends on Nuxeo Template Rendering. It includes:
         *   "Customer reference"
         *   "Statement reference"
 *   Templates with template attachments, leveraging the Template document type, in the "Templates" space,
-    ![]({{file name='template_rendering.png'}} ?w=650,h=339,border=true)
+{{!--     ### nx_asset ###
+path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Template Rendering/template-rendering-webui.png
+name: template-rendering-webui.png
+addins#screenshot#up_to_date
+--}}
+![template-rendering-webui.png](nx_asset://02223567-64f5-4944-9d34-557799915a3c ?w=650,border=true)
 *   Documents based on these templates, showing the result of the different template rendering options, in the "Discover Customization Examples" container.
-    ![]({{file name='template_rednering_1.png'}} ?w=650,h=328,border=true)
-    ![]({{file name='template_rednering_2.png'}} ?w=650,h=352,border=true)
+{{!--     ### nx_asset ###
+path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Template Rendering/template-rendering-webui2.png
+name: template-rendering-webui2.png
+addins#screenshot#up_to_date
+--}}
+![template-rendering-webui2.png](nx_asset://fc91d5dd-6bff-43bf-9a1f-71809946cb13 ?w=650,border=true)
+
 
 ### How Template Rendering Works
 
@@ -227,11 +253,24 @@ The template file is the file that will be used to generate the rendering of the
 *   an HTML file,
 *   a XML file.
 
-To create a template file:
+**The standard steps** to create a template file are:
 
 1.  Create a regular office, HTML or XML file with your favorite tool.
 2.  In the document, put variables in `Input Fields` where you want to use information from Nuxeo (see below). You may want to use [XDocReport](https://github.com/opensagres/xdocreport) for .docx or .odt formats, [JXLS](http://jxls.sourceforge.net/) for .xls and .ods formats (see links below).
 3.  When the template is ready, [create the template document in Nuxeo](#creating-the-template-document) and attach the template to it.
+
+In the case of building a File Template using **Microsoft Office** for example:
+
+1. Click on **Insert > Field**
+2. Select **Mail Merge** in the Category list, and **MergeField** in the Field names list.
+3. Keep the `MERGEFIELD ` value at the beginning of the text input, and add the property you need to render `${doc['dc:title']}` for example.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Template Rendering/template-rendering-template-file.png
+    name: template-rendering-template-file.png
+    addins#screenshot#up_to_date
+--}}
+![template-rendering-template-file.png](nx_asset://0df401bd-a061-42e7-95c6-28577d65803d ?w=650,border=true)
 
 {{> anchor 'variables'}}Here are a few examples of the most common variables:
 
@@ -252,6 +291,10 @@ To create a template file:
 {{/callout}}
 
 #### Creating the Template Document
+
+{{#> callout type='warning' heading='Nuxeo JSF UI'}}
+The template document is configured in Nuxeo JSF UI. Consequently, you need to install `nuxeo-jsf-ui` addon.
+{{/callout}}
 
 When the template file is done, you need to create a template document and attach the template file to it.
 Templates can be created in the Templates space, in workspaces and in folders.
