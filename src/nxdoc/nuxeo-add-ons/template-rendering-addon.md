@@ -253,15 +253,17 @@ The template file is the file that will be used to generate the rendering of the
 *   an HTML file,
 *   a XML file.
 
-**The standard steps** to create a template file are:
+##### Standard steps to create a template file
 
 1.  Create a regular office, HTML or XML file with your favorite tool.
 2.  In the document, put variables in `Input Fields` where you want to use information from Nuxeo (see below). You may want to use [XDocReport](https://github.com/opensagres/xdocreport) for .docx or .odt formats, [JXLS](http://jxls.sourceforge.net/) for .xls and .ods formats (see links below).
 3.  When the template is ready, [create the template document in Nuxeo](#creating-the-template-document) and attach the template to it.
 
-In the case of building a File Template using **Microsoft Office** for example:
+##### Create a template file with MS Office
 
-1. Click on **Insert > Field**
+**To render a document property**:
+
+1. In MS Office, click on **Insert > Field**
 2. Select **Mail Merge** in the Category list, and **MergeField** in the Field names list.
 3. Keep the `MERGEFIELD ` value at the beginning of the text input, and add the property you need to render `${doc['dc:title']}` for example.
 
@@ -271,6 +273,14 @@ In the case of building a File Template using **Microsoft Office** for example:
     addins#screenshot#up_to_date
 --}}
 ![template-rendering-template-file.png](nx_asset://0df401bd-a061-42e7-95c6-28577d65803d ?w=650,border=true)
+
+**To render a picture**:
+
+1. In MS Office, insert a picture as a placeholder
+2. Click on **Insert > Link > Bookmark**
+3. Set a variable, then **Go To** and **Close**
+4. Then, when your template document is created in Nuxeo, in the Templates folder, navigate to the **Template Configuration** and open the **Parameter** section.
+5. Create a parameter with the same name as in Step 3. with **Type = Picture Binding** with the **Property XPath** corresponding to the Nuxeo property holding the binary (picture) which should be inserted in your document (as `file:content` for example)
 
 {{> anchor 'variables'}}Here are a few examples of the most common variables:
 
