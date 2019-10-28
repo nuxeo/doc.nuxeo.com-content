@@ -426,6 +426,7 @@ In the **Permissions Assigned to External Users** part of the screen, click **Ne
 *   External users have not created a user account on the application. They do not have login / password credentials. They can only use the link that is sent to them to access the application.
 *   External users have access to the content that was shared with them (either documents or workspaces and their content) and the Search tab.
 *   External users do not benefit from the personal workspace, the Home tab and their features (dashboard, alerts, users / groups search, etc.).
+*   The *Token Authentication* must be included in the authentication chain. 
 
 {{! /multiexcerpt}}
 
