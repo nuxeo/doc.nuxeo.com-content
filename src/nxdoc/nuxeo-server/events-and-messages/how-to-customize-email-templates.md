@@ -138,7 +138,7 @@ Default templates for mail notifications can be overridden. Just follow those st
     If you want to copy from the default content of the template, you can have a look at it from [GitHub](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-platform-notification/nuxeo-platform-notification-core/src/main/resources/templates).
 3.  Save.
 
-## Making the Document Links in Notification Emails Point to the Web UI
+## Making the Document Links in Notification Emails Point to the JSF UI
 
 {{multiexcerpt 'override-docs-permalinks' page='how-to-make-jsf-ui-the-default-ui'}}
 
