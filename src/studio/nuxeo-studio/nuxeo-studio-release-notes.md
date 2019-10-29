@@ -13,12 +13,6 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Upcoming Changes
 
-### Layout Inheritance
-
-In Studio Designer, you will generate layouts that mimic the doctype you inherit from. If your document type inherits from File for instance, you will have layouts that look just like a Web UI file instead of a generic one.
-
-We are taking advantage of this work to better manage how default document types are handled too: currently if you try to override a folderish document, the view layout does not allow to configure the columns to display. With that change you will get a view layout you can actually tweak, just like any other.
-
 ### Easier Access to Other Services
 
 To facilitate navigation to other services you may need access to: documentation, university, etc. </br>
@@ -52,20 +46,38 @@ The Studio header bar will be updated, here's what to expect:
 --}}
 ![user-account](nx_asset://1dba790e-d966-4c93-9e99-08774bcc6ae5 ?w=50)
 
+### Layout Inheritance
+
+In Studio Designer, layouts mimic the doctype you inherit from. If your document type inherits from File for instance, you will have layouts that look just like a Web UI file instead of a generic one.
+
+We are taking advantage of this work to better manage how default document types are handled too: currently if you try to override a folderish document, the view layout does not allow to configure the columns to display. With that change you will get a view layout you can actually tweak, just like any other.
+
+### Scripts Creation from Business Logic Screens
+
+From a workflow or the event handlers screen, the shortcut to create automation chains allows to create automation scripts as well.
+
+### Prompt for Save Before Leaving
+
+Studio warns before you leave the page in case you have unsaved configuration: when switching from Modeler to Designer and vice versa for instance.
+
+### Vendor Category in the Marketplace
+
+Addons can be filtered by their vendor, so you can filter solutions brought by a particular partner.
+
 ### More Upcoming Changes
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.21.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.21.0','3.22.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2019-07-changes' page='studio-updates-2019-07'}}}
+{{{multiexcerpt 'studio-updates-2019-10-changes' page='studio-updates-2019-10'}}}
 
 ### Other Noteworthy Mentions
 
-{{{multiexcerpt 'studio-updates-2019-07-bugfix' page='studio-updates-2019-07'}}}
+{{{multiexcerpt 'studio-updates-2019-10-bugfix' page='studio-updates-2019-10'}}}
 
 ## Learn More
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.15.0','3.15.2'%29) is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.20.0'%29) is available in our bug tracking tool.
 
 ---
 
