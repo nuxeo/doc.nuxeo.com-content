@@ -12,10 +12,13 @@ toc: true
 ## Released Changes
 
 {{! multiexcerpt name='studio-updates-2019-09-changes'}}
+
 ### Automation Scripting Scrolling
+
 When scrolling in a big automation script, no more cursor jumping!
 
 ### Package Listing Performance Improvements
+
 This release is the first in a series that will aim at making the development experience smoother. Partners working on numerous projects should see a significant reduction on greedy queries, like listing all packages for instance.
 {{! /multiexcerpt}}
 

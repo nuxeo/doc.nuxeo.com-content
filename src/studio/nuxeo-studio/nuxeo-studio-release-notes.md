@@ -54,15 +54,15 @@ We are taking advantage of this work to better manage how default document types
 
 ### Scripts Creation from Business Logic Screens
 
-From a workflow or the event handlers screen, the shortcut to create automation chains allows to create automation scripts as well.
+From the Workflow or the Event Handlers screens, the shortcut to create automation chains allows to create automation scripts as well.
 
-### Prompt for Save Before Leaving
+### Prompt to Save Before Leaving
 
 When you have unsaved configuration (when switching from Modeler to Designer and vice versa for instance), Studio warns you before you leave the page.
 
 ### Vendor Category in the Marketplace
 
-Addons can be filtered per vendor so you can filter solutions brought by a particular partner.
+Addons can be filtered per vendor, so you can filter solutions brought by a particular partner.
 
 ### More Upcoming Changes
 
@@ -70,11 +70,11 @@ Addons can be filtered per vendor so you can filter solutions brought by a parti
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2019-10-changes' page='studio-updates-2019-10'}}}
+{{{multiexcerpt 'studio-updates-2019-09-changes' page='studio-updates-2019-09'}}}
 
 ### Other Noteworthy Mentions
 
-{{{multiexcerpt 'studio-updates-2019-10-bugfix' page='studio-updates-2019-10'}}}
+{{{multiexcerpt 'studio-updates-2019-09-bugfix' page='studio-updates-2019-09''}}}
 
 ## Learn More
 [More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.20.0'%29) is available in our bug tracking tool.
