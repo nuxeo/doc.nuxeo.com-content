@@ -48,7 +48,7 @@ The Studio header bar will be updated, here's what to expect:
 
 ### Layout Inheritance
 
-In Studio Designer, layouts mimic the doctype you inherit from. If your document type inherits from File for instance, you will have layouts that look just like a Web UI file instead of a generic one.
+In Studio Designer, layouts mimic the doctype you inherit from. If your document type inherits from File for instance, layouts will look just like a Web UI file instead of a generic one.
 
 We are taking advantage of this work to better manage how default document types are handled too: currently if you try to override a folderish document, the view layout does not allow to configure the columns to display. With that change you will get a view layout you can actually tweak, just like any other.
 
