@@ -50,7 +50,7 @@ The Studio header bar will be updated, here's what to expect:
 
 In Studio Designer, layouts mimic the doctype you inherit from. If your document type inherits from File for instance, layouts will look just like a Web UI file instead of a generic one.
 
-We are taking advantage of this work to better manage how default document types are handled too: currently if you try to override a folderish document, the view layout does not allow to configure the columns to display. With that change you will get a view layout you can actually tweak, just like any other.
+We are taking advantage of this work to better manage how default document types are handled too: currently if you try to override a folderish document, the view layout does not allow to configure the columns to be displayed. With that change, you will get a view layout you can actually tweak, just like any other.
 
 ### Scripts Creation from Business Logic Screens
 
@@ -58,11 +58,11 @@ From a workflow or the event handlers screen, the shortcut to create automation 
 
 ### Prompt for Save Before Leaving
 
-Studio warns before you leave the page in case you have unsaved configuration: when switching from Modeler to Designer and vice versa for instance.
+When you have unsaved configuration (when switching from Modeler to Designer and vice versa for instance), Studio warns you before you leave the page.
 
 ### Vendor Category in the Marketplace
 
-Addons can be filtered by their vendor, so you can filter solutions brought by a particular partner.
+Addons can be filtered per vendor so you can filter solutions brought by a particular partner.
 
 ### More Upcoming Changes
 
