@@ -36,11 +36,19 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
-    ![document-versions.png](nx_asset://ef855414-0914-4045-a8ea-2a4fe78c2251 ?w=200,border=true)
+    ![task_reassignment.png](nx_asset://b38f325d-a79a-4424-97c3-0ebdd937a932 ?w=200,border=true)
     </td>
-    <td>[Delete and Update Document Lifecycle State of Versioned Documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/actions-versioned-documents)</td>
+    <td>[Bulk Workflow Reassignment](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/actions-versioned-documents)</td>
     <td>Nuxeo</td>
     <td>Dashboard</td>
+  </tr>
+  <tr>
+    <td>
+    ![document-versions.png](nx_asset://ef855414-0914-4045-a8ea-2a4fe78c2251 ?w=200,border=true)
+    </td>
+    <td>[Delete and Update Document Lifecycle State of Versioned Documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/bulk-workflow-reassignment)</td>
+    <td>Nuxeo</td>
+    <td>Workflow</td>
   </tr>
   <tr>
     <td>
