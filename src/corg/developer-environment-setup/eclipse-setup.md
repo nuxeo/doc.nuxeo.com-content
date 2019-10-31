@@ -119,3 +119,7 @@ Now, you can import Nuxeo modules into Eclipse:
 ```
 File -> Import -> General -> Existing Projects into Workspace
 ```
+
+#### Configure Eclipse
+
+See {{page page='java-code-style'}} to configure Eclipse with the Nuxeo conventions on the formatting, code style and other coding preferences.
