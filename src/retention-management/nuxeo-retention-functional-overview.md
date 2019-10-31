@@ -400,9 +400,9 @@ Once on the **View** tab of your document:
 1. Click on **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='search'}} ?w=14) and select **Remove Legal Hold**.</br>
   A popup window is displayed.</br>
   {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-legalhold-remove-popup
-    name: Retention_SCREEN_RemoveLegalHoldPopup.png
-    server#popup#to_be_updated
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-legalhold-remove-popup
+      name: Retention_SCREEN_RemoveLegalHoldPopup-2.png
+      server#popup#to_be_updated
   --}}
   ![retention-screen-legalhold-remove-popup](nx_asset://ea2ffc42-009a-4903-bd06-3d0a3645a29b ?w=350,border=true)
 
