@@ -67,9 +67,9 @@ New actions are displayed on documents and result list:
 A **Retention rule** document type is available, it can only be created under the retention rules menu.
 
 {{!--     ### nx_asset ###
-  path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-rules-menu
-  name: Retention_SCREEN_RetentionRulesMenu.png
-  server#screenshot#to_be_updated
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-rules-menu
+    name: Retention_SCREEN_RetentionRulesMenu.png
+    server#screenshot#up_to_date
 --}}
 ![retention-screen-rules-menu](nx_asset://235e0b69-9c05-4a35-8f62-7532008d7f35 ?w=650,border=true)
 
@@ -231,20 +231,20 @@ On the **View** tab of your document:
 1. Click on the **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='search'}} ?w=14) button and select **Attach retention rule**.</br>
   A popup window is displayed.</br>
   {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-popup
-    name: Retention_SCREEN_ApplyRetentionPopup.png
-    server#popup#to_be_updated
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-popup
+      name: Retention_SCREEN_ApplyRetentionPopup.png
+      server#popup#up_to_date
   --}}
   ![retention-screen-retention-popup](nx_asset://88548927-6e5e-4fd6-87a1-aefd4a5ae998 ?w=350,border=true)
 
 2. Select the retention rule needed from the drop-down list and click on **Attach retention rule**.</br>
     A top bar is displayed at the top of your document to notify users that the document is, or will be, under retention.</br>
-  {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-document
-    name: Retention_SCREEN_document-retention.png
-    server#screenshot#to_be_updated
-  --}}
-  ![retention-screen-retention-document](nx_asset://396babbe-f0db-4a6c-a54f-c071298b6b04 ?w=600,border=true)
+    {{!--     ### nx_asset ###
+        path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-document
+        name: Retention_SCREEN_document-retention.png
+        server#screenshot#up_to_date
+    --}}
+    ![retention-screen-retention-document](nx_asset://396babbe-f0db-4a6c-a54f-c071298b6b04 ?w=600,border=true)
 
 #### From a Result List
 
@@ -294,11 +294,11 @@ On the **View** tab of your document:
 2. Select the new expiration date (end of retention period) and confirm.</br>
   A top bar is displayed at the top of your document to notify users of the new expiration date.</br>
   {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-document
-    name: Retention_SCREEN_document-retention.png
-    server#screenshot#to_be_updated
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-document
+      name: Retention_SCREEN_document-retention.png
+      server#screenshot#up_to_date
   --}}
-  ![retention-screen-retention-document](nx_asset://396babbe-f0db-4a6c-a54f-c071298b6b04 ?w=650,border=true)
+  ![retention-screen-retention-document](nx_asset://396babbe-f0db-4a6c-a54f-c071298b6b04 ?w=600,border=true)
 
 ### Create a Retention Event
 
@@ -409,11 +409,11 @@ Once on the **View** tab of your document:
 2. Click on **Remove Legal Hold**.</br>
   The top bar displayed on top of your document doesn't display the legal hold anymore.</br>
   {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-document
-    name: Retention_SCREEN_document-retention.png
-    server#screenshot#to_be_updated
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-document
+      name: Retention_SCREEN_document-retention.png
+      server#screenshot#up_to_date
   --}}
-  ![retention-screen-retention-document](nx_asset://396babbe-f0db-4a6c-a54f-c071298b6b04 ?w=650,border=true)
+  ![retention-screen-retention-document](nx_asset://396babbe-f0db-4a6c-a54f-c071298b6b04 ?w=600,border=true)
 
 #### From a Result List
 
