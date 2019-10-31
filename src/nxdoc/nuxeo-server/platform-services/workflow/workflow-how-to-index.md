@@ -47,3 +47,12 @@ history:
 ---
 
 {{{table_from_details headings='Excerpt, Topics, Level' spaces='IDEDOC NXDOC Studio' label='howto' filter='Topics=Workflow'}}}
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Bulk Workflow Reassignment](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/bulk-workflow-reassignment)
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>

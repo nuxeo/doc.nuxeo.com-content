@@ -420,3 +420,12 @@ This time a task has been assigned to the `managers` group (represented by Sarah
 
 *   Validating the contract triggered some logic automatically: the contract's expiration date has been set to one year from now, the contract's state is now `running`.
 *   Instead of completing the task programmatically, you could have used direct links instead. Keep in mind that these links need to be sent using a POST call.
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Bulk Workflow Reassignment](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/bulk-workflow-reassignment)
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>
