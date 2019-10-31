@@ -1,5 +1,5 @@
 ---
-title: Eclipse setup
+title: Eclipse Setup
 review:
     comment: ''
     date: ''
@@ -16,6 +16,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/TIeN'
     source_link: /display/CORG/Eclipse+setup
 tree_item_index: 600
+toc: true
 history:
     -
         author: Julien Carsique
@@ -62,12 +63,11 @@ history:
         date: '2012-01-09 15:23'
         message: ''
         version: '1'
-
 ---
 
 ## Install Eclipse
 
-Download and install Eclipse from <https://www.eclipse.org/downloads/>.
+Download and install Eclipse from [Eclipse website](https://www.eclipse.org/downloads/).
 
 ### Import Nuxeo Source Code in Eclipse
 
@@ -90,9 +90,7 @@ mvn eclipse:clean eclipse:eclipse \
 {{/panel}}
 
 {{#> callout type='note' }}
-
 For details, see [Maven Eclipse Plugin documentation](https://maven.apache.org/plugins/maven-eclipse-plugin/eclipse-mojo.html).
-
 {{/callout}}
 
 You should then run the following script to make Eclipse use different build
@@ -122,4 +120,4 @@ File -> Import -> General -> Existing Projects into Workspace
 
 #### Configure Eclipse
 
-See {{page page='java-code-style'}} to configure Eclipse with the Nuxeo conventions on the formatting, code style and other coding preferences.
+See [Java Code Style]({{page page='java-code-style'}}) to configure Eclipse with the Nuxeo conventions on the formatting, code style and other coding preferences.
