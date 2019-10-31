@@ -1,5 +1,6 @@
 ---
 title: 'HOWTO: Refresh the Task Widget on the Summary Tab'
+description: 'Learn how to update the workflow widget data on the Summary tab'
 review:
     comment: ''
     date: '2017-01-20'
@@ -68,11 +69,10 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}
 
 If you start a workflow automatically using the [Workflow > StartWorkflow](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Context.StartWorkflow) operation and that your workflow's first node creates a task to the workflow initiator, you need to use in the input chain the **[User Interface > Raise Seam events](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Seam.RaiseEvents)** operation, with the value <span style="color: rgb(34,34,34);">`workflowNewProcessStarted` for the event name.</span>
 
-{{! /excerpt}}
+If you cancel a workflow automatically using the [Workflow > CancelWorkflow](http://explorer.nuxeo.com/nuxeo/site/distribution/server-10.10/viewOperation/WorkflowInstance.Cancel) operation, you need to use in the input chain the **[User Interface > Raise Seam events](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Seam.RaiseEvents)** operation, with the value <span style="color: rgb(34,34,34);">`WorkflowInstance.Cancel` for the event name.</span>
 
 * * *
 
