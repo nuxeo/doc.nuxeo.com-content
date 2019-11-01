@@ -146,14 +146,14 @@ Nuxeo Drive is guaranteed to run on ([history changes](https://github.com/nuxeo/
 ### Supported GNU/Linux Distributions
 
 {{#> callout type='note' }}
-This list is non-exhaustive, Nuxeo Drive may work on older versions and on non-listed distributions. If you successfully ran Nuxeo Drive on such OS, we would be pleased to update this page (you can [open an issue](https://github.com/nuxeo/doc.nuxeo.com-content/issues) or drop a line in whatever format you are familiar with).
+This list is non-exhaustive, Nuxeo Drive may work on non-listed distributions. If you successfully ran Nuxeo Drive on such OS, we would be pleased to update this page (you can [open an issue](https://github.com/nuxeo/doc.nuxeo.com-content/issues) or drop a line in whatever format you are familiar with).
 {{/callout}}
 
 Minimum supported versions:
 
-| Nuxeo Drive | Debian | Ubuntu | Fedora | Manjaro
+| Nuxeo Drive | Debian | Fedora | Manjaro | Ubuntu
 |---|---|---|---|---
-| >= 4.2.0 | 10 | 16.04 | 29 | 18.1.0
+| >= 4.2.0 | 9.0.0 | 25 | 18.1.0 | 16.04.1
 
 ## What Actions Trigger a Synchronization?
 

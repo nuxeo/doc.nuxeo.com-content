@@ -43,6 +43,15 @@ After Nuxeo Drive has been installed on the server, a Nuxeo Drive tab in the use
 
 If you try to synchronize a folder and you haven't installed the Nuxeo Drive client yet or haven't provided your credentials to the Nuxeo Drive client, you are automatically directed to the Nuxeo Drive home tab to install it.
 
+#### Installing Nuxeo Drive on GNU/Linux
+
+1. Download the binary (`.AppImage` file) from the **Nuxeo Drive** tab in the **User Settings** or from the [Nuxeo Drive update site](https://community.nuxeo.com/static/drive-updates/nuxeo-drive-x86_64.AppImage).
+2. [Make the file executable](https://discourse.appimage.org/t/how-to-run-an-appimage/80).
+3. You now need to start Nuxeo Drive by clicking on the file.
+    A Nuxeo Drive folder will be created by the system at the root of your local home folder (`/home/USER/`). This is the place where synchronized documents will be stored on your computer.
+
+If you encounter any error, please check those pages: [Manual Usage](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/gnu_linux.md) and [Troubleshooting](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/gnu_linux_qa.md).
+
 #### Installing Nuxeo Drive on macOS
 
 1. Download the installer (`.dmg` file) from the **Nuxeo Drive** tab in the **User Settings** or from the [Nuxeo Drive update site](https://community.nuxeo.com/static/drive-updates/nuxeo-drive.dmg).
@@ -64,15 +73,6 @@ If you try to synchronize a folder and you haven't installed the Nuxeo Drive cli
 
 3. You now need to [start Nuxeo Drive](#starting-nuxeo-drive) to use it.
     A new Nuxeo Drive folder will be created by the system in your local Documents folder (`C:\Users\USER\Documents\`). This is the place where synchronized documents will be stored on your computer.
-
-#### Installing Nuxeo Drive on GNU/Linux
-
-1. Download the binary (`.AppImage` file) from the **Nuxeo Drive** tab in the **User Settings** or from the [Nuxeo Drive update site](https://community.nuxeo.com/static/drive-updates/nuxeo-drive-x86_64.AppImage).
-2. [Make the file executable](https://discourse.appimage.org/t/how-to-run-an-appimage/80).
-3. You now need to start Nuxeo Drive by clicking on the file.
-    A Nuxeo Drive folder will be created by the system at the root of your local home folder (`/home/USER/`). This is the place where synchronized documents will be stored on your computer.
-
-If you encounter any error, please check those pages: [Manual Usage](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/gnu_linux.md) and [Troubleshooting](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/gnu_linux_qa.md).
 
 ### Starting Nuxeo Drive
 
@@ -109,15 +109,15 @@ When a new version of Nuxeo Drive is available, a message is displayed at the bo
 
 {{> anchor 'open-drive-settings'}} **Accessing the Settings Window**
 
-#### Windows
-
-1. Right-click on the the icon ![]({{file name='drive-icon-online.png' page='nuxeo-drive'}} ?w=20) (or ![]({{file name='drive-icon-online-old.png' page='nuxeo-drive'}} ?w=14) on old versions) in the systray.
-2. Click on the icon ![]({{file name='drive-icon-settings.png' page='nuxeo-drive'}} ?w=20) and on the **Settings** menu item.</br>
-    The Settings window is displayed.
-
 #### macOS
 
 1. Click on the the icon ![]({{file name='drive-icon-online.png' page='nuxeo-drive'}} ?w=20) (or ![]({{file name='drive-icon-online-old.png' page='nuxeo-drive'}} ?w=14) on old versions) in the systray.
+2. Click on the icon ![]({{file name='drive-icon-settings.png' page='nuxeo-drive'}} ?w=20) and on the **Settings** menu item.</br>
+    The Settings window is displayed.
+
+#### Windows
+
+1. Right-click on the the icon ![]({{file name='drive-icon-online.png' page='nuxeo-drive'}} ?w=20) (or ![]({{file name='drive-icon-online-old.png' page='nuxeo-drive'}} ?w=14) on old versions) in the systray.
 2. Click on the icon ![]({{file name='drive-icon-settings.png' page='nuxeo-drive'}} ?w=20) and on the **Settings** menu item.</br>
     The Settings window is displayed.
 
