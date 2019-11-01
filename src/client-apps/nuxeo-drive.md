@@ -625,9 +625,9 @@ Icon | Old Icon | Status
 
 When you install Nuxeo Drive on your computer, it creates a "Nuxeo Drive" folder on your computer, from where you will be able to access the synchronized documents. This Nuxeo Drive folder is located:
 
-- in `C:\Users\USER\Documents\` on Windows
-- in `/Users/USER/` on macOS
-- in `/home/USER/` on GNU/Linux
+- GNU/Linux: `/home/USER/`
+- macOS: `/Users/USER/`
+- Windows: `C:\Users\USER\Documents\`
 
 Quick access to this folder is possible at any time using the Nuxeo Drive icon:
 
