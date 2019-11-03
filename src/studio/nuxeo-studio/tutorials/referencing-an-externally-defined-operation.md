@@ -1,5 +1,5 @@
 ---
-title: Referencing an Externally Defined Operation
+title: 'HOWTO: Reference an External Operation'
 review:
     comment: ''
     date: ''

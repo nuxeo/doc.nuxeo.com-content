@@ -1,5 +1,5 @@
 ---
-title: 'Is it Possible to Export a Studio Project in Eclipse?'
+title: 'HOWTO: Export a Studio Project in Eclipse'
 description: Discover what we recommend instead of exporting your Studio Project in Eclipse.
 review:
   comment: ''

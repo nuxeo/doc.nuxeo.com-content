@@ -1,5 +1,5 @@
 ---
-title: Maven Integration
+title: 'HOWTO: Work with Maven Integration'
 review:
     comment: ''
     date: '2018-03-29'

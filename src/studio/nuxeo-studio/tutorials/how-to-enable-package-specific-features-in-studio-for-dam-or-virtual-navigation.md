@@ -1,5 +1,5 @@
 ---
-title: 'How to Enable Package Specific Features in Studio for DAM or Virtual
+title: 'HOWTO: Enable Package Specific Features in Studio for DAM or Virtual
     Navigation?'
 review:
     comment: ''
