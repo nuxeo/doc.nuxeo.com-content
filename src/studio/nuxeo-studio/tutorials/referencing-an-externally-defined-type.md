@@ -1,5 +1,5 @@
 ---
-title: Referencing an Externally Defined Type
+title: 'HOWTO: Reference an External Document Type'
 review:
     comment: ''
     date: ''
