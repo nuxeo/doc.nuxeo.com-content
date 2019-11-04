@@ -303,9 +303,9 @@ ERROR [ComputationRunner] Terminate computation: <SOME_COMPUTATION_NAME> due to 
 
 There is also a `streamStatus` Nuxeo probe activated by default on the `runningstatus` endpoint health check.
 
-It is important to understand that this probe will report immediately a computation failure with a message like:
+It is important to understand that this probe will immediately report a computation failure with a message like:
 ```
- 2 computations have been terminated after failure. First failure detected: 2019-10-30 14:57:22Z, probe failure delayed by PT36H. This Nuxeo instance must be restarted within the stream retention period.
+2 computations have been terminated after failure. First failure detected: 2019-10-30 14:57:22Z, probe failure delayed by PT36H. This Nuxeo instance must be restarted within the stream retention period.
 ```
 **but** the probe failure is delayed by 36 hours in order to have time to apply the recovery procedure.
 
