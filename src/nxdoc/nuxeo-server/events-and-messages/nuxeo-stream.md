@@ -240,6 +240,15 @@ The above configuration defines a retry policy with 8 retries, starting with a d
 
 This policy tolerates a ~4min shortage.
 
+Note that the default policy in Nuxeo is:
+```xml
+<policy name="..." maxRetries="20" delay="1s" maxDelay="60s" continueOnFailure="false" />
+```
+which tolerates a 15min shortage.
+
+When using Kafka, the record is reassigned to a valid consumer, the tolerance in this case is:
+15min * number of consumer threads.
+
 ### Fallback
 
 After applying the retry policy if the computation is still in error, the computation uses the fallback directive `continueOnFailure`.
