@@ -487,9 +487,9 @@ The role of the blob dispatcher is to decide, based on a blob and its containing
 
 Without specific configuration, the&nbsp;`DefaultBlobDispatcher`&nbsp;stores a document's blob's binary in a blob provider with the same name as the document's repository name.
 
-Advanced dispatching configuration is possible using properties. Each property name is a list of comma-separated clauses, with each clause consisting of a property, an operator and a value. The property can be a document property XPath, or `ecm:repositoryName`, or, to match the current blob being dispatched, `blob:name`, `blob:mime-type`, `blob:encoding`, `blob:digest`, `blob:length` or `blob:xpath`. Comma-separated clauses are ANDed together. The special property name `default` defines the default provider, and **must** be present.
+Advanced dispatching configuration is possible using properties. Each property name is a list of comma-separated clauses, with each clause consisting of a property, an operator and a value. The property can be a document property XPath, or `ecm:repositoryName`, `ecm:path`, or, to match the current blob being dispatched, `blob:name`, `blob:mime-type`, `blob:encoding`, `blob:digest`, `blob:length` or `blob:xpath`. Comma-separated clauses are ANDed together. The special property name `default` defines the default provider, and **must** be present.
 
-Available operators between property and value are `=`, `!=`, `<`, `>` and `~`. The operators `<` and `>` work with integer values. The operator `~` does glob matching using `?` to match a single arbitrary character, and `*` to match any number of characters (including none).
+Available operators between property and value are `=`, `!=`, `<`, `>`, `~` and `^`. The operators `<` and `>` work with integer values. The operator `~` does glob matching using `?` to match a single arbitrary character, and `*` to match any number of characters (including none). The operator `^` does full regexp matching.
 
 For example, all the videos could be stored somewhere, the attachments in a different area, the documents from a secret source in an encrypted area, and the rest in a default location. To do this, you would need to specify the following:
 
