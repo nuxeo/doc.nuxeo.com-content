@@ -1242,6 +1242,14 @@ See [this commit](https://github.com/nuxeo/nuxeo-platform-audio/commit/1f66c60c3
 See [NXP-26178](https://jira.nuxeo.com/browse/NXP-26178)
 {{! /multiexcerpt}}
 
+#### VersioningService
+
+{{! multiexcerpt name='upgrade-10.3-code.versioningservice'}}
+`org.nuxeo.ecm.core.versioning.VersioningService` has been deprecated, you should now use `org.nuxeo.ecm.core.api.versioning.VersioningService`.
+
+See [NXP-26423](https://jira.nuxeo.com/browse/NXP-26423)
+{{! /multiexcerpt}}
+
 #### Operation Changes
 
 ##### Regenerate Thumbnails on Demand

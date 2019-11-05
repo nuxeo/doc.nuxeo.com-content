@@ -152,6 +152,9 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 ### SAML Icon Displayed on Login Page
 {{{multiexcerpt 'upgrade-10.10-code.saml-icon' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
+### VersioningService
+{{{multiexcerpt 'upgrade-10.3-code.versioningservice' page='Upgrade from LTS 2017 following Fast Tracks'}}}
+
 ### Code Behavior Changes
 
 {{{multiexcerpt 'upgrade-10.1-behavior.field.version.indexed' page='Upgrade from LTS 2017 following Fast Tracks'}}}
@@ -167,7 +170,6 @@ If you had already upgraded to previous 10.x Fast Track versions, check out the 
 {{{multiexcerpt 'upgrade-10.3-code.nuxeooauthfilter' page='Upgrade from LTS 2017 following Fast Tracks'}}}
 
 {{{multiexcerpt 'upgrade-10.3-code.fulltext' page='Upgrade from LTS 2017 following Fast Tracks'}}}
-
 
 ### Operation Changes
 
