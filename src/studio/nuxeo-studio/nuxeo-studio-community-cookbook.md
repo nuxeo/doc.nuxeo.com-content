@@ -36,11 +36,20 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
-    ![task_reassignment.png](nx_asset://b38f325d-a79a-4424-97c3-0ebdd937a932 ?w=200,border=true)
+    ![qrcode.png](nx_asset://b38f325d-a79a-4424-97c3-0ebdd937a932 ?w=200,border=true)
     </td>
     <td>[Bulk Workflow Reassignment](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/actions-versioned-documents)</td>
     <td>Nuxeo</td>
     <td>Dashboard</td>
+  </tr>
+  <tr>
+  <tr>
+    <td>
+    ![qrcode.png](nx_asset://8837b54b-1c29-4d9d-9ff1-bc9766176a6b ?w=200,border=true)
+    </td>
+    <td>[QR Code Generation](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/qr-code)</td>
+    <td>Nuxeo</td>
+    <td>Business Logics</td>
   </tr>
   <tr>
     <td>
