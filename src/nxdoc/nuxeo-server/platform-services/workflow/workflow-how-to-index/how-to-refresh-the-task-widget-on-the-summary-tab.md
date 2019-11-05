@@ -3,7 +3,7 @@ title: 'HOWTO: Refresh the Task Widget on the Summary Tab'
 description: 'Learn how to update the workflow widget data on the Summary tab'
 review:
     comment: ''
-     date: '2019-11-05'
+    date: '2019-11-05'
     status: ok
 details:
     howto:
