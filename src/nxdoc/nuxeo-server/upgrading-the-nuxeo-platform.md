@@ -2,13 +2,14 @@
 title: Upgrading the Nuxeo Platform
 review:
     comment: ''
-    date: '2017-12-11'
+    date: '2019-11-02'
     status: ok
 labels:
     - content-review-lts2016
     - upgrade
     - akervern
     - lts2017-ok
+    - lts2019-ok
 toc: true
 confluence:
     ajs-parent-page-id: '31033314'
