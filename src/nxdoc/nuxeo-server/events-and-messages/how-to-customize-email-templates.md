@@ -137,7 +137,7 @@ Default templates for mail notifications can be updated. Just follow those steps
 1. Update the content of the email that you want to be sent.
     ![]({{file name='studio_mailtemplate_content_2.png'}} ?w=500,border=true)
     If you want to copy from the default content of the template, you can have a look at it from [GitHub](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-platform-notification/nuxeo-platform-notification-core/src/main/resources/templates).
-3.  Save.
+1.  Save.
 
 ## Making the Document Links in Notification Emails Point to the JSF UI
 
