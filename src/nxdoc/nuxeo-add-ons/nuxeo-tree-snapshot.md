@@ -2,19 +2,25 @@
 title: Nuxeo Tree Snapshot
 review:
     comment: ''
-    date: '2017-12-08'
+    date: '2019-09-18'
     status: ok
 labels:
-
+    - jsf-ui-required
+    - tree-snapshot
+    - lts2019-ok
+    - lts2018-ok
+    - lts2016-ok
 toc: true
 tree_item_index: 2750
 ---
 
 {{! excerpt}}
-
 [Nuxeo Tree Snapshot](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-tree-snapshot) enables to snapshot and version a whole folder and its content in a single step. You can then recover the state of a folder for a given version.
-
 {{! /excerpt}}
+
+{{#> callout type='info' heading='Nuxeo Tree Snapshot with Nuxeo Web UI'}}
+The default button to perform a tree snapshot is exposed in Nuxeo JSF UI. You can perfectly use it in Nuxeo Web UI too, by creating a button in **Nuxeo Studio Designer**, linked to the `Document.CreateTreeSnapshot` operation.
+{{/callout}}
 
 ## Installation
 
@@ -30,20 +36,10 @@ In the versionable folder **History**&nbsp;> **Archived versions** tab you can u
 
 ## Customization and Configuration
 
-Although the addon by default adds a versionable folder, most of the time you will want to integrate the feature with your own data model.
+Although the addon adds by default a versionable folder, most of the time you will want to integrate the feature with your own data model, in **Nuxeo Studio**.
 
-1. Add the `Document.CreateTreeSnapshot` to your Studio project:
-  1.  Copy the JSON definition of the operation `Document.CreateTreeSnapshot` from your server's automation doc at http://NUXEO_SERVER/nuxeo/site/automation/Document.CreateTreeSnapshot.
-  1. In Studio, paste the operation definition in **Settings**&nbsp;> **Registries**&nbsp;> **Automation Operations** and save.
-1. Add the `Snapshotable` facet to your Studio project: In **Settings**&nbsp;> **Registries**&nbsp;> **Document Facets**, paste the following facet definition and save.
-  ```
-  {
-    "facets": [
-      {
-        "id": "Snapshotable",
-        "description": "Facet Snapshotable to publish and snapshot folders"
-      }
-    ]
-  }
-  ```
-1. Add the `Snapshotable` facet to your document type and leverage the `Document.CreateTreeSnapshot` operation in your business logic.
+To adapt the default addon behaviour, make sure that you have selected **Nuxeo Tree Snapshot** as target package in **Application Definition** menu. This will automatically expose in Nuxeo Studio:
+
+- The **Snapshotable** and **Snapshot** facets.
+- The `Document.CreateTreeSnapshot` in your automation chain/scripting, in the `Document` category.
+  - The `versioning option` parameter of the operation is expecting either `MINOR` or `MAJOR` depending on the version that should be applied on all components of the snapshot.
