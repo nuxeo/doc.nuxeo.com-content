@@ -124,16 +124,17 @@ An email template defines the content of an email that is sent to users under pr
 5.  When you're done, click **Save**.
     Your mail template is saved and can be used in [automation chains]({{page page='how-to-create-an-automation-chain'}}).
 
-## Overriding Default Alert Emails
+## Updating Default Alert Emails
 
 {{! excerpt}}
 
-Default templates for mail notifications can be overridden. Just follow those steps:
+Default templates for mail notifications can be updated. Just follow those steps:
 
 {{! /excerpt}}
 
-1.  Create a new **Templates** > **Mail Templates** feature in Studio. Choose ID among the ones that are used in the default product, like `subscriptionsUpdated` for instance (see the [list of all alert templates](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewContribution/org.nuxeo.ecm.platform.notification.service.NotificationContrib--templates)).
-2.  Fill in the content of the email that you want to be sent.
+1. Go to **Templates > Mail Templates**.
+1. Click on the line of the mail template to be updated.
+1. Update the content of the email that you want to be sent.
     ![]({{file name='studio_mailtemplate_content_2.png'}} ?w=500,border=true)
     If you want to copy from the default content of the template, you can have a look at it from [GitHub](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-platform-notification/nuxeo-platform-notification-core/src/main/resources/templates).
 3.  Save.
