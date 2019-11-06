@@ -2,7 +2,7 @@
 title: How to Make JSF UI the Default UI
 review:
     comment: ''
-    date: '2017-10-11'
+    date: '2019-11-06'
     status: ok
 details:
     howto:
