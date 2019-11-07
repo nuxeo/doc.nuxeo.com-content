@@ -257,8 +257,8 @@ In our code base we found usage of these methods were not needed or misuse of th
 We know have optimizations flags like:
 - `isIdempotent` to prevent Work with the same identifier to be executed multiple times, only the first Work is executed, others can be skipped.
 - `isCoalescing` when scheduling many times the same Work (same identifier): we care only about the latest execution.
-Theses optimization flags are taken in account with the `StreamWorkManager` implementation.
+These optimization flags are taken into account with the `StreamWorkManager` implementation.
 
 In addition wa have added a way to trigger an action after a group of Works is completed. This is called a `GroupJoin` Work, the work has to set the `isGroupJoin` flag and
 implement a `onGroupJoinCompletion` method, Works will be part of the same group based on the `getPartitionKey`.
-The `GroupJoin` Work is supported by both WorkManager implementations (default and `StreamWorkManager`).
+The `GroupJoin` Work is supported by both `WorkManager` implementations (default and `StreamWorkManager`).
