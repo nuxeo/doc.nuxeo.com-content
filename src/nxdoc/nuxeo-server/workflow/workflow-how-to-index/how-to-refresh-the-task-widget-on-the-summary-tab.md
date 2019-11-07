@@ -2,7 +2,7 @@
 title: How to Refresh the Task Widget on the Summary Tab
 review:
     comment: ''
-    date: '2017-01-20'
+    date: '2019-11-07'
     status: ok
 details:
     howto:
@@ -56,11 +56,10 @@ history:
         version: '1'
 
 ---
-{{! excerpt}}
 
-If you start workflow automatically using the [Workflow > StartWorkflow](http://explorer.nuxeo.org/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewOperation/Context.StartWorkflow) operation and that your workflow's first node creates a task to the workflow initiator, you need to use in the input chain the **[User Interface > Raise Seam events](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewOperation/Seam.RaiseEvents)** operation, with the value "<span style="color: rgb(34,34,34);">`**workflowNewProcessStarted**`" for the event name.</span>
+If you start workflow automatically using the [Workflow > StartWorkflow](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202016-8.10/viewOperation/Context.StartWorkflow) operation and that your workflow's first node creates a task to the workflow initiator, you need to use in the input chain the **[User Interface > Raise Seam events](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform-8.10/viewOperation/Seam.RaiseEvents)** operation, with the value `workflowNewProcessStarted` for the event name.
 
-{{! /excerpt}}
+If you cancel a workflow automatically using the [Workflow > CancelWorkflow](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202016-8.10/viewOperation/WorkflowInstance.Cancel) operation, you need to use in the input chain the **[User Interface > Raise Seam events](http://explorer.nuxeo.com/nuxeo/site/distribution/current/viewOperation/Seam.RaiseEvents)** operation, with the value `WorkflowInstance.Cancel` for the event name.
 
 * * *
 
