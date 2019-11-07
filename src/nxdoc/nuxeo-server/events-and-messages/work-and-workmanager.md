@@ -254,4 +254,11 @@ Another problem with these methods is that they provide a way to manage manually
 
 In our code base we found usage of these methods were not needed or misuse of the WorkManager API that could be better implemented using other ways.
 
-Common misuses are related to work unicity that's now handled using `isIdempotent` Work flag that the StreamWorkManager implementation takes in account in a reliable way.
+We know have optimizations flags like:
+- `isIdempotent` to prevent Work with the same identifier to be executed multiple times, only the first Work is executed, others can be skipped.
+- `isCoalescing` when scheduling many times the same Work (same identifier): we care only about the latest execution.
+Theses optimization flags are taken in account with the `StreamWorkManager` implementation.
+
+In addition wa have added a way to trigger an action after a group of Works is completed. This is called a `GroupJoin` Work, the work has to set the `isGroupJoin` flag and
+implement a `onGroupJoinCompletion` method, Works will be part of the same group based on the `getPartitionKey`.
+The `GroupJoin` Work is supported by both WorkManager implementations (default and `StreamWorkManager`).
