@@ -122,11 +122,11 @@ With replication factor N, Kafka will tolerate up to N-1 server failures without
 For instance if you have 3 brokers in your cluster a replication factor of 2 will tolerate a server failure.{{/callout}}
 
 {{#> callout type='warning' }}
-It is important to adapt the `max.poll.interval.ms` for slow consumers, otherwise you will encounter errors like:
- ```bash
+It is important to adapt the `max.poll.interval.ms` for slow consumers; otherwise, you will encounter errors like:
+```bash
 ERROR [ComputationRunner] compliance: Exception in processLoop: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
 ```
-For instance this will happen when using the `StreamWorkManager` if a Work take more than 1h.
+For instance, this will happen when using the `StreamWorkManager` if a Work takes more than 1h.
 {{/callout}}
 
 Please refer to the Kafka documentation about the [consumer and producer options](https://kafka.apache.org/documentation#configuration) and [replication](https://kafka.apache.org/documentation/#replication) for more information.
