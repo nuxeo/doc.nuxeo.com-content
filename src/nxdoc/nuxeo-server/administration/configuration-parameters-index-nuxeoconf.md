@@ -1138,13 +1138,12 @@ If undefined nuxeoctl script will try to discover it.</td>
 </tr>
 <tr>
 <td colspan="1">`JAVA_OPTS`</td>
-<td colspan="1">Optional values passed to the JVM.<br/>
-Nuxeo requires at least 1024 Mo in JVM heap size and 256Mo as maximum permanent size (512 recommended).<br/>
-Decreasing garbage collector frequency avoid having too much CPU usage (Sun Java specific options, recommended by JBoss).</td>
+<td colspan="1">Optional settings passed to the JVM.<br/>
+Nuxeo requires at least 1024 MB of JVM heap size. By setting the maximum heap size to 25% of the available memory, this requirement is satisfied on a machine with at least 4 GB of RAM.<br/></td>
 <td colspan="1">
-`-Xms512m -Xmx1024m -XX:MaxPermSize=512m`
-`-Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000`
-`-Dfile.encoding=UTF-8`
+`-XX:InitialRAMPercentage=3 -XX:MaxRAMPercentage=25 -Dfile.encoding=UTF-8`<br/>
+`-Dmail.mime.decodeparameters=true -Dnet.sf.ehcache.skipUpdateCheck=true`<br/>
+`-Djava.util.Arrays.useLegacyMergeSort=true -Dsun.net.http.retryPost=false`
 </td>
 <td colspan="1">&nbsp;</td>
 </tr>
