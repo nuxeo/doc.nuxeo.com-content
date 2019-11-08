@@ -268,6 +268,64 @@ The Nuxeo Platform provides a default embedded database for testing and evaluati
 
 Before going live, you should configure one of the production-safe database supported by the Nuxeo Platform. See the [Database]({{page page='database-configuration'}}) section of this documentation.
 
+## Java Virtual Machine Settings
+
+Since Java 10, the JVM has better support for container environments. It offers some new options to control the JVM heap size: `InitialRAMPercentage` and `MaxRAMPercentage.`
+They are respectively equivalent to the `Xms` and `Xmx` options, using a percentage of the Control Group memory limit (`cgroup`), the memory available for the Java process.
+The default values are:
+
+```
+InitialRAMPercentage = 1.5625
+MaxRAMPercentage = 25
+```
+
+The historical requirements for Nuxeo are `-Xms512m -Xmx1024m`.
+
+Let's see how we can satisfy these requirements using the new options.
+
+### Development Settings
+
+By default, in `nuxeo.conf`, we define the following settings:
+
+```
+JAVA_OPTS=-XX:InitialRAMPercentage=3 -XX:MaxRAMPercentage=25
+```
+
+By setting the minimum and maximum heap size to respectively 3% and 25% of the available memory, we get the following equivalent of the `Xms` and `Xmx` options:
+
+| Available memory | Xms | Xmx |
+| ---------------- | --- | ---- |
+| 4 GB             | 128 MB | 1 GB |
+| 8 GB             | 256 MB | 2 GB |
+| 16 GB            | 512 MB | 4 GB |
+| 32 GB            | 1 GB   | 8 GB |
+
+### Production Settings
+
+In production, it is recommended to have the minimum heap size equal to the maximum heap size.
+
+#### Container Environment
+
+When running in a Linux container, the JVM will automatically detect the `cgroup` memory limit with the `UseContainerSupport` option, enabled by default.
+
+When Nuxeo runs in a Docker container, by default, we set the minimum and maximum heap size to 50% of the `cgroup` memory limit.
+
+```
+JAVA_OPTS=-XX:InitialRAMPercentage=50 -XX:MaxRAMPercentage=50
+```
+
+This way:
+- The minimum and maximum are equal, as recommended.
+- We keep 50% of the available memory for other processes.
+
+#### Non Container Environment
+
+At the very least, Nuxeo should run with:
+
+```
+JAVA_OPTS=-Xms1024m -Xmx1024m
+```
+
 &nbsp;
 
 ---
