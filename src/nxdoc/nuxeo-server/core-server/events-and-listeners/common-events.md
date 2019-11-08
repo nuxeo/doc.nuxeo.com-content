@@ -2,7 +2,7 @@
 title: Common Events
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2019-11-08'
     status: ok
 labels:
     - lts2016-ok
@@ -11,6 +11,7 @@ labels:
     - fguillaume
     - excerpt
     - lts2017-ok
+    - lts2019-ok
 toc: true
 confluence:
     ajs-parent-page-id: '950283'
@@ -55,12 +56,10 @@ history:
         date: '2013-09-09 11:40'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 Any Nuxeo code can define its own events, but it's useful to know some of the standard ones that Nuxeo sends by default.
-
 {{! /excerpt}}
 
 ## Basic Events
@@ -108,6 +107,14 @@ The data structure for a document has been created, but nothing is saved yet. Th
 ### lifecycle_transition_event
 
 A transition has been followed on a document.
+
+### documentTrashed
+
+A document has been trashed.
+
+### documentUntrashed
+
+A document has been untrashed.
 
 ### sessionSaved
 
