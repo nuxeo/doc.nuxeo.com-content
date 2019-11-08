@@ -71,13 +71,9 @@ history:
 ---
 ## Java
 
-Supported Java versions: {{! multiexcerpt name='java_requirement'}}**JDK 8** (Oracle's JDK or OpenJDK) and greater{{! /multiexcerpt}}.
+Supported Java versions: {{! multiexcerpt name='java_requirement'}}**JDK 11** (Oracle's JDK or OpenJDK) and greater{{! /multiexcerpt}}.
 
-As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for any given major version, for instance the latest bugfix version of Java 8 was 8u112 (1.8.0_112) at the time of this writing.
-
-{{#> callout type='warning'}}
-Java 7 has been declared EOL (End Of Life) by Oracle and should only be used if there is no other recourse.
-{{/callout}}
+As for any software, we very strongly recommend upgrading to the latest bugfix version of the JDK for any given major version, for instance the latest bugfix version of Java 11 was 11.0.5 at the time of this writing.
 
 More information is available from the [Installation]({{page page='installation'}}) page.
 
