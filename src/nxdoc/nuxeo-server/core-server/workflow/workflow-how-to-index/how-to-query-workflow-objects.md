@@ -1,5 +1,5 @@
 ---
-title: How to Query Workflow Objects
+title: 'HOWTO: Query Workflow Objects'
 review:
     comment: ''
     date: '2017-12-15'

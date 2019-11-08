@@ -1,5 +1,5 @@
 ---
-title: How to Modify a Workflow Variable outside of Workflow Context
+title: 'HOWTO: Modify a Workflow Variable outside of Workflow Context'
 review:
     comment: ''
     date: '2017-12-14'

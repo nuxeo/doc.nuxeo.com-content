@@ -1,5 +1,5 @@
 ---
-title: How to Complete a Workflow Task Programmatically
+title: 'HOWTO: Complete a Workflow Task Programmatically'
 review:
     comment: ''
     date: '2017-12-14'

@@ -1,5 +1,5 @@
 ---
-title: How to Contribute to an Extension
+title: 'HOWTO: Contribute to an Extension'
 review:
   comment: ''
   date: '2017-12-14'

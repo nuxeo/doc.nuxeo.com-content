@@ -1,5 +1,5 @@
 ---
-title: How to Follow a Transition If User Is Member of a Group
+title: 'HOWTO: Follow a Transition If User Is Member of a Group'
 review:
     comment: ''
     date: '2017-12-14'

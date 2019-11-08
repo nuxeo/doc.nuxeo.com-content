@@ -1,5 +1,5 @@
 ---
-title: How to Add a New Vocabulary
+title: 'HOWTO: Add a New Vocabulary'
 review:
     comment: ''
     date: '2017-12-14'

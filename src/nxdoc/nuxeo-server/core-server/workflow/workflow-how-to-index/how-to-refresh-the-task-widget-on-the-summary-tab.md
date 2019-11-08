@@ -1,5 +1,5 @@
 ---
-title: How to Refresh the Task Widget on the Summary Tab
+title: 'HOWTO: Refresh the Task Widget on the Summary Tab'
 review:
     comment: ''
     date: '2019-11-07'

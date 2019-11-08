@@ -1,5 +1,5 @@
 ---
-title: How to Translate a Vocabulary
+title: 'HOWTO: Translate a Vocabulary'
 review:
     comment: ''
     date: '2017-12-14'

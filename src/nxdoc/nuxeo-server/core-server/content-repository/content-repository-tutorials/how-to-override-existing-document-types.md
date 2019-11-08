@@ -1,5 +1,5 @@
 ---
-title: How to Override Existing Document Types
+title: 'HOWTO: Override Existing Document Types'
 review:
     comment: ''
     date: '2017-02-13'

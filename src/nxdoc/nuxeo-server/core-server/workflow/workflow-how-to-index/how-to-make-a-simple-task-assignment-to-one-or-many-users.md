@@ -1,5 +1,5 @@
 ---
-title: How to Make a Simple Task Assignment to One or Many Users
+title: 'HOWTO: Make a Simple Task Assignment to One or Many Users'
 review:
     comment: ''
     date: '2017-12-14'

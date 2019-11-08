@@ -1,5 +1,5 @@
 ---
-title: How to Set a Default Value on a Date Field of a Task Form
+title: 'HOWTO: Set a Default Value on a Date Field of a Task Form'
 review:
     comment: ''
     date: '2017-12-14'

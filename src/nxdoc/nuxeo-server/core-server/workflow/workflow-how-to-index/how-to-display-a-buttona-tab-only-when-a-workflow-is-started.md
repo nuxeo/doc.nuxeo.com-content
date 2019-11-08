@@ -1,5 +1,5 @@
 ---
-title: How to Display a Button/a Tab Only When a Workflow Is Started
+title: 'HOWTO: Display a Button/a Tab Only When a Workflow Is Started'
 review:
     comment: ''
     date: '2017-12-14'

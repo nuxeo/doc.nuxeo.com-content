@@ -1,5 +1,5 @@
 ---
-title: How to Create an Automation Chain
+title: 'HOWTO: Create an Automation Chain'
 review:
     comment: ''
     date: '2017-12-14'

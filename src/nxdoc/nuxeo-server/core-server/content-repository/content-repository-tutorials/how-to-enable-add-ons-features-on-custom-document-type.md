@@ -1,5 +1,5 @@
 ---
-title: How to Enable Add-Ons Features on Custom Document Type
+title: 'HOWTO: Enable Add-Ons Features on Custom Document Type'
 review:
     comment: ''
     date: '2017-12-13'

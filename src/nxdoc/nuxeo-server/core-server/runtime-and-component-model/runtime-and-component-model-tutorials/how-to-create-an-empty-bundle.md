@@ -1,5 +1,5 @@
 ---
-title: How to create an empty bundle
+title: 'HOWTO: Create an Empty Bundle'
 review:
     comment: ''
     date: '2017-12-14'

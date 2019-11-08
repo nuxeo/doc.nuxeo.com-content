@@ -1,5 +1,5 @@
 ---
-title: How to Define a Document Type
+title: 'HOWTO: Define a Document Type'
 review:
     comment: ''
     date: '2017-12-12'

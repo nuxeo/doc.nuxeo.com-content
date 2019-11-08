@@ -1,5 +1,5 @@
 ---
-title: How to Fetch a Document by Its ID or Path
+title: 'HOWTO: Fetch a Document by Its ID or Path'
 review:
     comment: ''
     date: '2017-12-14'

@@ -1,5 +1,5 @@
 ---
-title: How to Set Up a Tasks Dashboard
+title: 'HOWTO: Set Up a Tasks Dashboard'
 review:
     comment: ''
     date: '2017-12-14'
