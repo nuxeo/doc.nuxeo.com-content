@@ -2,7 +2,7 @@
 title: Releases & Tags
 review:
     comment: ''
-    date: '2018-03-29'
+    date: '2019-11-12'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 toc: true
@@ -51,6 +51,10 @@ history:
 The releases and tags tab allows to list each and every releases and tags that were performed on the project. It also allows to download the Nuxeo Package associated to a given release.
 
 {{! /excerpt}}
+
+{{#> callout type='info' heading='recommended reading'}}
+This screen will be populated if you have made a tag or release of your Nuxeo Studio project. We recommend checking our [how to create a tag or release]({{page version='' page='how-to-tag-or-release-your-nuxeo-studio-project'}}) first.
+{{/callout}}
 
 ## Releases Tab
 
