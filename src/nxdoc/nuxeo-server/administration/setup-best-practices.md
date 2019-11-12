@@ -281,7 +281,7 @@ MaxRAMPercentage = 25
 
 The historical requirements for Nuxeo are `-Xms512m -Xmx1024m`.
 
-Let's see how we can satisfy these requirements using the new options.
+Let's see how we satisfy this minimum `Xmx` requirement using the new options.
 
 ### Development Settings
 
@@ -293,37 +293,38 @@ JAVA_OPTS=-XX:InitialRAMPercentage=3 -XX:MaxRAMPercentage=25
 
 By setting the minimum and maximum heap size to respectively 3% and 25% of the available memory, we get the following equivalent of the `Xms` and `Xmx` options:
 
-| Available memory | Xms | Xmx |
-| ---------------- | --- | ---- |
+| Available memory | Xms    | Xmx  |
+| ---------------- | ------ | ---- |
 | 4 GB             | 128 MB | 1 GB |
 | 8 GB             | 256 MB | 2 GB |
 | 16 GB            | 512 MB | 4 GB |
 | 32 GB            | 1 GB   | 8 GB |
 
+Therefore, a server or container with 4 GB of memory satisfies the 1 GB minimum heap size.
+
 ### Production Settings
 
-In production, it is recommended to have the minimum heap size equal to the maximum heap size.
+In production, it is recommended to have the minimum heap size equal to the maximum heap size. This way, the JVM doesn't have to expand the heap size at runtime, which is more efficient and prevents possible out of memory errors.
 
 #### Container Environment
 
 When running in a Linux container, the JVM will automatically detect the `cgroup` memory limit with the `UseContainerSupport` option, enabled by default.
 
-When Nuxeo runs in a Docker container, by default, we set the minimum and maximum heap size to 50% of the `cgroup` memory limit.
+By default, the Nuxeo Docker image overrides the `JAVA_OPTS` property in `nuxeo.conf` to set the heap size to a fixed size, equal to 50% of the `cgroup` memory limit.
+This is achieved by using the same percentage for `InitialRAM` as for `MaxRAM`, resulting in equal `Xms` and `Xmx`.
 
 ```
 JAVA_OPTS=-XX:InitialRAMPercentage=50 -XX:MaxRAMPercentage=50
 ```
 
-This way:
-- The minimum and maximum are equal, as recommended.
-- We keep 50% of the available memory for other processes.
-
 #### Non Container Environment
 
-At the very least, Nuxeo should run with:
+You can either:
+- Use the same settings as for a container environment.
+- Choose the exact heap size with, at the very least:
 
 ```
-JAVA_OPTS=-Xms1024m -Xmx1024m
+JAVA_OPTS=-Xms1g -Xmx1g
 ```
 
 &nbsp;
