@@ -2,7 +2,7 @@
 title: How to Grant the Edit Permission without the Remove Permission
 review:
     comment: ''
-    date: '2017-01-30'
+    date: '2019-11-12'
     status: ok
 details:
     howto:
@@ -70,26 +70,38 @@ history:
         version: '1'
 
 ---
-As described on the page [Managing Permissions]({{page space='userdoc' page='managing-permissions'}}), the Edit permission visible in the UI contains the permission to remove content. This means that you cannot grant the Edit permission and deny the Remove access right at the same level of the repository. So you need to override the [default&nbsp;`Write` permission](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.core.security.defaultPermissions--permissions) to be able to do that.
+As described on the page [Managing Permissions]({{page space='userdoc' page='managing-permissions'}}), the Edit permission visible in the UI contains the permission to remove content. This means that you cannot grant the Edit permission and deny the Remove access right at the same level of the repository. So you need to override the [default&nbsp;`Write` permission](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.core.security.defaultPermissions--permissions) to be able to do that.
 
 ## Procedure
 
 1.  [Add a new contribution]({{page page='how-to-contribute-to-an-extension'}}) to remove the `Remove` permission from `Write` permission.
+Check the [Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/8.10/viewExtensionPoint/org.nuxeo.ecm.core.security.SecurityService--permissions) page to update the suitable extension point.
 
     ```xml
       <extension target="org.nuxeo.ecm.core.security.SecurityService"
         point="permissions">
         <permission name="Write">
-          <remove>Remove</remove>
+          <include>AddChildren</include>
+          <include>WriteProperties</include>
+          <!-- The next line should be commented -->
+          <!--<include>Remove</include>-->
+          <include>ManageWorkflows</include>
+          <include>WriteLifeCycle</include>
+          <include>WriteVersion</include>
         </permission>
      </extension>
     ```
 
     This change will make the permission `ReadWrite`, displayed under the permission label "Edit" in the UI, act as wanted: it no longer includes the right to remove content.
 
+    {{#> callout type='warning' heading='Negative Permissions' }}
+    Negative permissions are disabled by default, due to Elasticsearch limitations. </br>
+    Check out the [Upgrade Notes to Nuxeo Platform 6.0]({{page space='nxdoc' page='upgrade-from-58-to-60'}}#migrating-negative-permissions).
+    {{/callout}}
+
     If you want users to be able to add and remove content, you must now grant them the Edit permission and the Remove permission. Or you can add a new permission that will behave like the default `ReadWrite` permission used to.
 
-2.  Define a new global permission to read, edit and remove content.
+1.  Define a new global permission to read, edit and remove content.
 
     ```
       <extension target="org.nuxeo.ecm.core.security.SecurityService"
@@ -102,7 +114,8 @@ As described on the page [Managing Permissions]({{page space='userdoc' page='man
       </extension>
     ```
 
-3.  Make the new `ReadWriteAndRemove` permission visible in the drop down list in the UI.
+1.  Make the new `ReadWriteAndRemove` permission visible in the drop down list in the UI.
+Check the [Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/8.10/viewExtensionPoint/org.nuxeo.ecm.core.security.SecurityService--permissionsVisibility) page to see how to register permission visibility in user interface.
 
     ```
     <extension point="permissionsVisibility" target="org.nuxeo.ecm.core.security.SecurityService">
@@ -118,8 +131,8 @@ As described on the page [Managing Permissions]({{page space='userdoc' page='man
 
     ![]({{file name='ReadWriteAndRemove_permission_UI.png'}} ?w=400,border=true)
 
-4.  Add the new permission label to [your internationalization files]({{page page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}}).
-5.  [Deploy your customizations]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).
+1.  Add the new permission label to [your internationalization files]({{page page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}}).
+1.  [Deploy your customizations]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).
 
 &nbsp;
 
