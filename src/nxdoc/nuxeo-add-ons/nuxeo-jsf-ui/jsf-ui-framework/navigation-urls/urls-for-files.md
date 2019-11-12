@@ -268,4 +268,8 @@ xmlns:nxu="http://nuxeo.org/nxweb/util"
 - [Default URL Patterns]({{page page='default-url-patterns'}})
 - [Navigation URLs]({{page page='navigation-urls'}})
 
-{{/panel}}</div><div class="column medium-6"></div></div>
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [QR Code Integration](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/qr-code)
+
+{{/panel}}</div><div class="column medium-6"></div>
