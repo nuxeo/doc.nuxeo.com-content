@@ -2,7 +2,7 @@
 title: REST API
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2019-11-12'
     status: ok
 labels:
     - lts2016-ok
@@ -15,17 +15,6 @@ labels:
     - lts2017-ok
 toc: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
-confluence:
-    ajs-parent-page-id: '31033314'
-    ajs-parent-page-title: Nuxeo Server
-    ajs-space-key: NXDOC
-    ajs-space-name: Nuxeo Platform Developer Documentation
-    canonical: REST+API
-    canonical_source: 'https://doc.nuxeo.com/display/NXDOC/REST+API'
-    page_id: '13664833'
-    shortlink: QYLQ
-    shortlink_source: 'https://doc.nuxeo.com/x/QYLQ'
-    source_link: /display/NXDOC/REST+API
 tree_item_index: 300
 history:
     -
@@ -577,12 +566,14 @@ The Nuxeo REST API offers several additional features compared to a standard RES
 
 We provide several client SDKs to make it even easier to use the API integrated with the Nuxeo Platform.
 
-*   [Java client]({{page page='java-automation-client'}})
-*   [JavaScript client]({{page page='javascript-client'}})
-*   [iOS client]({{page page='ios-client'}})
-*   [Android client]({{page page='android-client'}})
-*   [PHP client]({{page page='php-automation-client'}}) (partial implementation)
-*   [DART client](https://github.com/nelsonsilva/nuxeo-dart-client)
+*   [JavaScript Client]({{page page='javascript-client'}})
+*   [Java Client]({{page page='java-client'}})
+*   [Python Client]({{page space='nxdoc' page='python-client'}})
 *   [.NET Client]({{page page='net-client'}})
+*   [iOS Client]({{page page='ios-client'}})
+*   [Android Client]({{page page='android-client'}})
+*   [PHP Automation Client]({{page page='php-automation-client'}}) (partial implementation)
+*   [DART Client](https://github.com/nelsonsilva/nuxeo-dart-client)
+*   [Using cURL]({{page space='nxdoc' page='using-curl'}})
 
 {{! /multiexcerpt}}
