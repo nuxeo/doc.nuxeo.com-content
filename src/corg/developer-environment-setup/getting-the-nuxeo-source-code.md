@@ -253,7 +253,7 @@ After having cloned the Nuxeo repository, you need to run a full build in Maven 
 {{#> panel type='code' heading='Full build Nuxeo without running tests'}}
 
 ```
-export MAVEN_OPTS="-Xmx4096m -Xms1024m"
+export MAVEN_OPTS="-Xmx4096m -Xms1024m"            (or on windows:   set MAVEN_OPTS=-Xmx4096m -Xms1024m )
 mvn -DskipTests install -Paddons,distrib
 ```
 
