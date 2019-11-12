@@ -13,71 +13,26 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Upcoming Changes
 
-### Easier Access to Other Services
-
-To facilitate navigation to other services you may need access to: documentation, university, etc. </br>
-The Studio header bar will be updated, here's what to expect:
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-release-notes-2019-09/modeler-designer
-    name: modeler-designer.png
-    studio_modeler#screenshot#up_to_date
---}}
-![modeler-designer](nx_asset://cf076a93-fbb8-4ae4-bab4-cad0da17fe85 ?w=250)
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-release-notes-2019-09/help-button
-    name: help-button.png
-    studio_modeler#screenshot#up_to_date
---}}
-![help-button](nx_asset://7473bacf-99cf-4e49-9339-7b54f9638a44 ?w=250)
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-release-notes-2019-09/app-launcher
-    name: app-launcher.png
-    studio_designer#screenshot#up_to_date
---}}
-![app-launcher](nx_asset://10a33333-2ee6-4e70-b147-9823a718a38f ?w=250)
-
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-release-notes-2019-09/user-account
-    name: user-account.png
-    studio_modeler#screenshot#up_to_date
---}}
-![user-account](nx_asset://1dba790e-d966-4c93-9e99-08774bcc6ae5 ?w=250)
-
 ### Layout Inheritance
 
-In Studio Designer, layouts mimic the doctype you inherit from. If your document type inherits from File for instance, layouts will look just like a Web UI file instead of a generic one.
+In Studio Designer, layouts will mimic the doctype you inherit from. If your document type inherits from File for instance, layouts will look just like a Web UI file instead of a generic one.
 
 We are taking advantage of this work to better manage how default document types are handled too: currently if you try to override a folderish document, the view layout does not allow to configure the columns to be displayed. With that change, you will get a view layout you can actually tweak, just like any other.
 
-### Scripts Creation from Business Logic Screens
-
-From the Workflow or the Event Handlers screens, the shortcut to create automation chains allows to create automation scripts as well.
-
-### Prompt to Save Before Leaving
-
-When you have unsaved configuration (when switching from Modeler to Designer and vice versa for instance), Studio warns you before you leave the page.
-
-### Vendor Category in the Marketplace
-
-Addons can be filtered per vendor, so you can filter solutions brought by a particular partner.
-
 ### More Upcoming Changes
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.21.0','3.22.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.22.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2019-09-changes' page='studio-updates-2019-09'}}}
+{{{multiexcerpt 'studio-updates-2019-10-11-changes' page='studio-updates-2019-10-11'}}}
 
 ### Other Noteworthy Mentions
 
-{{{multiexcerpt 'studio-updates-2019-09-bugfix' page='studio-updates-2019-09''}}}
+{{{multiexcerpt 'studio-updates-2019-10-11-bugfix' page='studio-updates-2019-10-11''}}}
 
 ## Learn More
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.20.0'%29) is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.21.0'%29) is available in our bug tracking tool.
 
 ---
 
