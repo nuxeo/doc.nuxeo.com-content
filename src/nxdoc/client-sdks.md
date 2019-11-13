@@ -60,4 +60,5 @@ The platform already provides multiple clients for accessing the platform remote
 *   [Client API Test suite (TCK)]({{page space='nxdoc' page='client-api-test-suite-tck'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This chapter provides a test suite that can be used to test the implementation of an automation client library.</span>
 *   [DART Client](https://github.com/nelsonsilva/nuxeo-dart-client)
 *   [Using cURL]({{page space='nxdoc' page='using-curl'}})&nbsp;&mdash;&nbsp;<span class="smalltext">In this example we are using the UNIX curl command line tool to demonstrate how to invoke remote operations.</span>
+
 {{! /multiexcerpt}}
