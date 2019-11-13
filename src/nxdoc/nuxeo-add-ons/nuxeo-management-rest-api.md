@@ -2,13 +2,12 @@
 title: 'Nuxeo Management REST API'
 review:
     comment: ''
-    date: '2019-07-26 16:26'
+    date: '2019-07-26'
     status: ok
 labels:
     - lts2019-ok    
 toc: true
 tree_item_index: 300
-history:
 ---
 
 The Nuxeo Management REST API is a set of endpoints allowing the management of the Nuxeo Platform.
@@ -25,7 +24,7 @@ This page explains these endpoints and their purpose.
 
 The Management REST API is accessible for any administrator user.
 
-Furthermore, a "technical" user can be configured to access the Management REST API in nuxeo.conf:
+Furthermore, a "technical" user can be configured to access the Management REST API in `nuxeo.conf`:
 
 ```
 org.nuxeo.rest.management.user=transient/technical_user
@@ -33,31 +32,31 @@ org.nuxeo.rest.management.user=transient/technical_user
 
 The user does not need to exist in Nuxeo, and **must** start with `transient/` as we are relying on the transient user feature.
 
-Once you have created the user, configure a JWT secret in nuxeo.conf:
+Once you have created the user, configure a JWT secret in `nuxeo.conf`:
 
 ```
 nuxeo.jwt.secret=abracadabra
 ```
 
-Then, to use the Management REST API: 
-- generate a JWT token with the user (`transient/technical_user` here) as claim subject
-- call the API using the `Authorization: Bearer JWT_TOKEN` header
-- share the JWT secret (`abracadabra` here) between the Nuxeo Server and the client calling the Management REST API
+Then, to use the Management REST API:
+- Generate a JWT token with the user (`transient/technical_user` here) as claim subject,
+- Call the API using the `Authorization: Bearer JWT_TOKEN` header,
+- Share the JWT secret (`abracadabra` here) between the Nuxeo Server and the client calling the Management REST API.
 
-### Deploy the Management REST API on a separate HTTP port
+### Deploy the Management REST API on a Separate HTTP Port
 
 For security reasons, it is recommended to deploy the Management REST API on a different port from the regular Nuxeo application one. For instance, see below to configure the HTTP port to `9090`.
 
-#### Configure the Management REST API HTTP port
+#### Configure the Management REST API HTTP Port
 
 In `nuxeo.conf`, add:
 ```
 nuxeo.server.http.managementPort=9090
 ```
 
-#### Add a new Tomcat Connector
+#### Add a New Tomcat Connector
 
-Add a new `Connector` for the Catalina `Service` in `./conf/server.xml` like the one below:
+Add a new `Connector` for the Catalina `Service` in `./conf/server.xml` like this one:
 
 ```xml
 <Connector port="9090" protocol="HTTP/1.1" URIEncoding="UTF-8"
@@ -72,7 +71,7 @@ Add a new `Connector` for the Catalina `Service` in `./conf/server.xml` like the
            connectionUploadTimeout="60000" />
 ```
 
-Here below the Freemarker version using nuxeo.conf properties:
+Here is the FreeMarker version using `nuxeo.conf` properties:
 
 ```xml
 <Connector port="${nuxeo.server.http.managementPort}" protocol="HTTP/1.1" URIEncoding="UTF-8"
@@ -191,7 +190,7 @@ GET http://localhost:8080/nuxeo/site/management/distribution
 
 **Response**
 
-Returns a JSON representation of the distribution information.
+If successful, returns a JSON representation of the distribution information.
 
 **Status Codes**
 
@@ -289,7 +288,8 @@ http://localhost:8080/nuxeo/site/management/elasticsearch/default/reindex
 }
 ```
 
-To reindex a set of documents on a given Nuxeo repository matching the [NXQL]({{page page='nxql'}}) query `SELECT * FROM Document WHERE dc:title LIKE 'My Title%'`:
+To reindex a set of documents on a given Nuxeo repository matching the [NXQL]({{page page='nxql'}}) query:</br>
+`SELECT * FROM Document WHERE dc:title LIKE 'My Title%'`
 
 ```curl
 curl -X POST -u Administrator:Administrator \
@@ -368,7 +368,7 @@ http://localhost:8080/nuxeo/site/management/elasticsearch/default/1fa9d3fa-04cc-
  }
 ```
 
-All the indexing endpoints defined above use the [Bulk Action Framework]({{page page='bulk-action-framework'}}), and can be monitored using the [Bulk Endpoint]({{page page='management-rest-api'}}#bulk-endpoint).
+All the indexing endpoints defined above use the [Bulk Action Framework]({{page page='bulk-action-framework'}}), and can be monitored using the [Bulk Endpoint](#bulk-endpoint).
 
 #### Flush
 
@@ -629,7 +629,11 @@ http://localhost:8080/nuxeo/site/management/renditions/pictures/recompute \
 
 **Default Query**
 
-If no query is provided, the picture views recomputation is launched on the following default query: `SELECT * FROM Document WHERE ecm:mixinType = 'Picture' AND picture:views/*/title IS NULL`.
+If no query is provided, the picture views recomputation is launched on the following default query:
+```
+SELECT * FROM Document
+  WHERE ecm:mixinType = 'Picture' AND picture:views/*/title IS NULL
+```
 
 #### Recompute Thumbnails
 
@@ -687,7 +691,12 @@ http://localhost:8080/nuxeo/site/management/renditions/thumbnails/recompute \
 
 **Default Query**
 
-If no query is provided, the thumbnail recomputation is launched on the following default query: `SELECT * FROM Document WHERE ecm:mixinType = 'Thumbnail' AND thumb:thumbnail/data IS NULL AND ecm:isVersion = 0 AND ecm:isProxy = 0 AND ecm:isTrashed = 0`.
+If no query is provided, the thumbnail recomputation is launched on the following default query:
+```
+SELECT * FROM Document
+  WHERE ecm:mixinType = 'Thumbnail' AND thumb:thumbnail/data IS NULL
+    AND ecm:isVersion = 0 AND ecm:isProxy = 0 AND ecm:isTrashed = 0
+```
 
 ### Running Status Endpoint
 
@@ -723,8 +732,8 @@ http://localhost:8080/nuxeo/site/management/runningStatus
 
 ### WorkManager Endpoint
 
-To repair works in failure.
-When a [Nuxeo Stream]({{page page='nuxeo-stream'}}) work fails it is stored in a [Dead Letter Queue](https://jira.nuxeo.com/browse/NXP-27148) (DLQ). When the cause of the failure requires manual intervention (fix a misconfiguration, restart a service, fix a full disk, re-deployment, ...) a retry policy is not enough. The failing works can be relaunched by using the endpoint as below:
+To repair works in failure.</br>
+When a [Nuxeo Stream]({{page page='nuxeo-stream'}}) work fails, it is stored in a [Dead Letter Queue](https://jira.nuxeo.com/browse/NXP-27148) (DLQ). When the cause of the failure requires manual intervention (fix a misconfiguration, restart a service, fix a full disk, re-deployment, etc.) a retry policy is not enough. The failing works can be relaunched by using the endpoint as below:
 
 ```
 POST http://localhost:8080/nuxeo/site/management/workmanager/runworksinfailure
