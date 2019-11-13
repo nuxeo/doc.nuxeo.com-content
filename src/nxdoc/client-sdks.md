@@ -3,7 +3,7 @@ title: Client SDKs
 description: The platform provides multiple clients for accessing the platform remotely.
 review:
     comment: ''
-    date: '2019-11-12'
+    date: '2019-11-13'
     status: ok
 labels:
     - lts2016-ok
@@ -52,14 +52,16 @@ history:
 The platform already provides multiple clients for accessing the platform remotely.
 
 {{! multiexcerpt name='rest-api-clients'}}
-*   [JavaScript Client]({{page space='NXDOC' page='JavaScript Client'}})
-*   [Java Client]({{page space='NXDOC' page='java-client'}})
-*   [Python Client]({{page space='NXDOC' page='Python Client'}})
-*   [.NET Client]({{page space='NXDOC' page='.NET Client'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Nuxeo .NET Client is a cross-platform client library developed in C# for the Nuxeo Automation and REST API.</span>
-*   [iOS Client]({{page space='NXDOC' page='iOS Client'}})
-*   [Android Client]({{page space='NXDOC' page='android-client'}})
-*   [PHP Automation Client]({{page space='NXDOC' page='PHP Automation+Client'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A PHP automation client is made available on GitHub. You can use it and ask for commit rights on the project if you want to improve it or fix a bug. The project contains the library and some sample use cases.</span>
+
+*   [JavaScript Client]({{page space='nxdoc' page='javascript-client'}})
+*   [Java Client]({{page space='nxdoc' page='java-client'}})
+*   [Python Client]({{page space='nxdoc' page='python-client'}})
+*   [.NET Client]({{page space='nxdoc' page='net-client'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Nuxeo .NET Client is a cross-platform client library developed in C# for the Nuxeo Automation and REST API.</span>
+*   [iOS Client]({{page space='nxdoc' page='ios-client'}})
+*   [Android Client]({{page space='nxdoc' page='android-client'}})
+*   [PHP Automation Client]({{page space='nxdoc' page='php-automation-client'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A PHP automation client is made available on GitHub. You can use it and ask for commit rights on the project if you want to improve it or fix a bug. The project contains the library and some sample use cases.</span>
 *   [Client API Test suite (TCK)]({{page space='nxdoc' page='client-api-test-suite-tck'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This chapter provides a test suite that can be used to test the implementation of an automation client library.</span>
 *   [DART Client](https://github.com/nelsonsilva/nuxeo-dart-client)
-*   [Using cURL]({{page space='NXDOC' page='Using cURL'}})&nbsp;&mdash;&nbsp;<span class="smalltext">In this example we are using the UNIX curl command line tool to demonstrate how to invoke remote operations.</span>
+*   [Using cURL]({{page space='nxdoc' page='using-curl'}})&nbsp;&mdash;&nbsp;<span class="smalltext">In this example we are using the UNIX curl command line tool to demonstrate how to invoke remote operations.</span>
+
 {{! /multiexcerpt}}
