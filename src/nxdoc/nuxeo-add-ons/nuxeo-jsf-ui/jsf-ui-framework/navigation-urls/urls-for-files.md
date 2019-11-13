@@ -263,13 +263,21 @@ xmlns:nxu="http://nuxeo.org/nxweb/util"
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in this documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related topics in this documentation'}}
 
 - [Default URL Patterns]({{page page='default-url-patterns'}})
 - [Navigation URLs]({{page page='navigation-urls'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+  {{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
 - [QR Code Integration](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/qr-code)
 
-{{/panel}}</div><div class="column medium-6"></div>
+{{/panel}}
+</div>
+</div>
