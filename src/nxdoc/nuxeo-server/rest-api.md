@@ -560,15 +560,4 @@ The Nuxeo REST API offers several additional features compared to a standard RES
 
 We provide several client SDKs to make it even easier to use the API integrated with the Nuxeo Platform.
 
-*   [JavaScript Client]({{page page='javascript-client'}})
-*   [Java Client]({{page page='java-client'}})
-*   [Python Client]({{page space='nxdoc' page='Python-Client'}})
-*   [.NET Client]({{page page='net-client'}})
-*   [iOS Client]({{page page='ios-client'}})
-*   [Android Client]({{page page='android-client'}})
-*   [PHP Automation Client]({{page page='php-automation-client'}}) (partial implementation)
-*   [Client API Test suite (TCK)]({{page space='nxdoc' page='client-api-test-suite-tck'}})
-*   [DART Client](https://github.com/nelsonsilva/nuxeo-dart-client)
-*   [Using cURL]({{page space='nxdoc' page='Using cURL'}})
-
-{{! /multiexcerpt}}
+{{{multiexcerpt 'rest-api-clients' page='client-sdks'}}}
