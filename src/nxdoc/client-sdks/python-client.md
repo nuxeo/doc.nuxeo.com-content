@@ -98,4 +98,5 @@ history:
         version: '1'
 
 ---
-{{{md (file_content url='https://raw.githubusercontent.com/nuxeo/nuxeo-python-client/master/README.md')}}}
+
+{{{md (file_content url='https://raw.githubusercontent.com/nuxeo/nuxeo-python-client/master/README.rst')}}}

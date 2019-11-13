@@ -2,7 +2,7 @@
 title: REST API
 review:
     comment: ''
-    date: '2017-01-17'
+    date: '2019-11-13'
     status: ok
 labels:
     - lts2016-ok
@@ -559,12 +559,15 @@ The Nuxeo REST API offers several additional features compared to a standard RES
 
 We provide several client SDKs to make it even easier to use the API integrated with the Nuxeo Platform.
 
-*   [Java client]({{page page='java-automation-client'}})
-*   [JavaScript client]({{page page='javascript-client'}})
-*   [iOS client]({{page page='ios-client'}})
-*   [Android client]({{page page='android-client'}})
-*   [PHP client]({{page page='php-automation-client'}}) (partial implementation)
-*   [DART client](https://github.com/nelsonsilva/nuxeo-dart-client)
+*   [JavaScript Client]({{page page='javascript-client'}})
+*   [Java Client]({{page page='java-client'}})
+*   [Python Client]({{page space='nxdoc' page='python-client'}})
 *   [.NET Client]({{page page='net-client'}})
+*   [iOS Client]({{page page='ios-client'}})
+*   [Android Client]({{page page='android-client'}})
+*   [PHP Automation Client]({{page page='php-automation-client'}}) (partial implementation)
+*   [Client API Test suite (TCK)]({{page space='nxdoc' page='client-api-test-suite-tck'}})
+*   [DART Client](https://github.com/nelsonsilva/nuxeo-dart-client)
+*   [Using cURL]({{page space='nxdoc' page='using-curl'}})
 
 {{! /multiexcerpt}}
