@@ -53,7 +53,7 @@ The platform already provides multiple clients for accessing the platform remote
 {{! multiexcerpt name='rest-api-clients'}}
 
 *   [JavaScript Client]({{page space='nxdoc' page='javaScript-client'}})
-*   [Java Client]({{page space='nxdoc' page='java-client'}})
+*   [Java Client]({{page version='3.2' space='client-java' page='index'}})
 *   [Python Client]({{page space='nxdoc' page='Python-Client'}})
 *   [.NET Client]({{page space='nxdoc' page='net-client'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Nuxeo .NET Client is a cross-platform client library developed in C# for the Nuxeo Automation and REST API.</span>
 *   [iOS Client]({{page space='nxdoc' page='ios-client'}})
