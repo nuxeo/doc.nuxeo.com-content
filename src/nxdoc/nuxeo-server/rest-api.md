@@ -567,6 +567,7 @@ We provide several client SDKs to make it even easier to use the API integrated 
 *   [iOS Client]({{page page='ios-client'}})
 *   [Android Client]({{page page='android-client'}})
 *   [PHP Automation Client]({{page page='php-automation-client'}}) (partial implementation)
+*   [Client API Test suite (TCK)]({{page space='nxdoc' page='client-api-test-suite-tck'}})
 *   [DART Client](https://github.com/nelsonsilva/nuxeo-dart-client)
 *   [Using cURL]({{page space='nxdoc' page='Using cURL'}})
 

@@ -59,6 +59,7 @@ The platform already provides multiple clients for accessing the platform remote
 *   [iOS Client]({{page space='nxdoc' page='ios-client'}})
 *   [Android Client]({{page space='nxdoc' page='android-client'}})
 *   [PHP Automation Client]({{page space='nxdoc' page='php-automation-client'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A PHP automation client is made available on GitHub. You can use it and ask for commit rights on the project if you want to improve it or fix a bug. The project contains the library and some sample use cases.</span>
+*   [Client API Test suite (TCK)]({{page space='nxdoc' page='client-api-test-suite-tck'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This chapter provides a test suite that can be used to test the implementation of an automation client library.</span>
 *   [DART Client](https://github.com/nelsonsilva/nuxeo-dart-client)
 *   [Using cURL]({{page space='nxdoc' page='Using cURL'}})&nbsp;&mdash;&nbsp;<span class="smalltext">In this example we are using the UNIX curl command line tool to demonstrate how to invoke remote operations.</span>
 
