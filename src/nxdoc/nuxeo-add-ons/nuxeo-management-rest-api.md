@@ -5,9 +5,10 @@ review:
     date: '2019-07-26'
     status: ok
 labels:
-    - lts2019-ok    
+    - lts2019-ok
+    - rest-api    
 toc: true
-tree_item_index: 300
+tree_item_index: 2200
 ---
 
 The Nuxeo Management REST API is a set of endpoints allowing the management of the Nuxeo Platform.
