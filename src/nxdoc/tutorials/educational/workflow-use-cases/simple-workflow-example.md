@@ -260,14 +260,12 @@ history:
         date: '2013-04-23 19:08'
         message: ''
         version: '1'
-
 ---
+
 ## Use Case
 
 {{! excerpt}}
-
 Company C has decided to be more rigorous on proposals sent by the sales team. A workflow has to be set up so that each proposal is reviewed by the head of operations, this one being able to decide of an additional juridical control.
-
 {{! /excerpt}}
 
 The graph we want is like this:
@@ -278,11 +276,11 @@ The graph we want is like this:
 
 The following operations have to be done in your Nuxeo Platform before following this tutorial:
 
-*   Create a user having for id "Jack".
-*   Give Jack read and edit access on the domain.
-*   Create a user group having for id "Internal_Lawyers".
-*   Populate the "Internal_Lawyers" group with at least one user.
-*   Create the user that will launch the workflow.
+- Create a user having for id "Jack".
+- Give Jack read and edit access on the domain.
+- Create a user group having for id "Internal_Lawyers".
+- Populate the "Internal_Lawyers" group with at least one user.
+- Create the user that will launch the workflow.
 
 ## Implementation Steps
 
@@ -291,7 +289,7 @@ The following operations have to be done in your Nuxeo Platform before following
 1.  In the Workflow category, click on **Process definitions**.
 2.  Click on the **New** button.
 3.  Give the workflow an id ("`SalesProposalWorkflow`"), a label and a description.
-    ![]({{file page='/nxdox/simple-workflow-example' name='Simple_Workflow_000.png'}} ?w=450,border=true)
+    ![]({{file name='Simple_Workflow_000.png'}} ?w=450,border=true)
 4.  Click on the **Ok** button.
 
 ### Defining the Workflow's Availability
@@ -300,7 +298,7 @@ Workflows can be launched through a drop down list on the summary screen of ever
 
 1.  From the workflow, click on the **Activation** tab.
 2.  In the "Current document has one of the types", select **File**.
-    ![]({{file page='/nxdox/simple-workflow-example' name='Simple_Workflow_002.png'}} ?w=450,h=407,border=true)
+    ![]({{file name='Simple_Workflow_002.png'}} ?w=450,h=407,border=true)
 
 ### Starting the Graph
 
@@ -322,17 +320,17 @@ This node will create a task for the head of operations, named "Jack". Jack will
 
 Drag the **Accept/Reject** node template from the node template library and drop it on the graph.
 It will already have some of the needed transitions and buttons pre-configured: &ldquo;Validate&rdquo; and &ldquo;Reject&rdquo;. You actually need another transition (&ldquo;Need juridical advice&rdquo;), which you will add manually in a future step.
-![]({{file page='/nxdox/simple-workflow-example' name='Simple_Workflow_003.png'}} ?w=400,border=true)
+![]({{file name='Simple_Workflow_003.png'}} ?w=400,border=true)
 
 #### Configuring the Technical Validation Node
 
 1.  Hover on the **Accept/Reject** node you just dropped and click on the **Edit** icon ![]({{file name='editor_area.gif' space='studio' page='studio-icons-index'}}) that appears to open the node properties.
-    ![]({{file page='/nxdox/simple-workflow-example' name='Simple_Workflow_005.png'}} ?w=150,border=true,thumbnail=true)
+    ![]({{file name='Simple_Workflow_005.png'}} ?w=150,border=true,thumbnail=true)
 2.  In the **General** tab, rename the title &ldquo;Accept/Reject&rdquo; by "Technical validation" and add `CurrentDate.days(5)` in front of the Due date expression.
-    ![]({{file page='/nxdox/simple-workflow-example' name='technical-validation-general.png'}} ?w=450,border=true)
+    ![]({{file name='technical-validation-general.png'}} ?w=450,border=true)
 3.  Add a statical assignee ("Jack"): Click on the "Add" link in front of the "Assignees" field. Add the "Assignees expression" `NodeVariables["assignees"]`.
     We will leave aside the &ldquo;Grant permission to task assignees&rdquo; field blank.
-    ![]({{file page='/nxdox/simple-workflow-example' name='technical-validation-assignee.png'}} ?w=450,border=true)
+    ![]({{file name='technical-validation-assignee.png'}} ?w=450,border=true)
 4.  Click on the **Save** button of the popup.
 5.  Click on the **Save** button of the workflow feature on the bottom left corner.
 
@@ -348,7 +346,7 @@ This variable will be named &ldquo;hoo_comment&rdquo;.
 2.  Add the head of operation's comment variable and name it `hoo_comment`. It is like editing a schema.
 3.  Add the juridical advisor's comment variable: `juridical_comment`.
 4.  Add the salesman's comment variable: `sales_comment`.
-    ![]({{file page='/nxdox/simple-workflow-example' name='Simple_Workflow_004.png'}} ?w=600,border=true)
+    ![]({{file name='Simple_Workflow_004.png'}} ?w=600,border=true)
 5.  Click on **Save**.
 
 ### Configuring the Technical Validation step forms and actions
@@ -360,14 +358,14 @@ The form lets the user edit some of the workflow's variables (either at workflow
 1.  Go back to the &ldquo;Technical validation&rdquo; node.
 2. Click on the **Variables** tab.
    Add the hoo_comment to the right collumn.
-   ![]({{file page='/nxdox/simple-workflow-example' name='Simple_Workflow_006_1.png'}} ?w=600,border=true)
+   ![]({{file name='Simple_Workflow_006_1.png'}} ?w=600,border=true)
 3.  Click on the **Form** tab.
     A form like the one to edit a document's layout is displayed.
 4.  Add a field for the comment of the user who validates: Drag the &ldquo;hoo_comment&rdquo; field from the workflow variables schema and drop it on the layout.
 5.  Edit the widget, the same way you edit the form of a document:
     *   Change its title for "Head of operations comment".
     *   Select the widget type "Textarea".
-    ![]({{file page='/nxdox/simple-workflow-example' name='technical-validation-textarea.png'}} ?w=600,border=true)
+    ![]({{file name='technical-validation-textarea.png'}} ?w=600,border=true)
 
 #### Setting up the Tasks Buttons
 
@@ -376,7 +374,7 @@ The buttons that are shown on the form are configured on the **Resolution Action
 1.  Click on **Add task button**.
 2.  Fill in the button id and label.
 3.  Let the box "Generate the condition for the transition" checked.
- ![]({{file page='/nxdox/simple-workflow-example' name='Simple_Workflow_008_1.png'}} ?w=450,h=316, border=true)
+ ![]({{file name='Simple_Workflow_008_1.png'}} ?w=450,h=316, border=true)
 
 #### Check the Transitions
 
@@ -384,7 +382,7 @@ Each button is automatically associated to a transition to define what should be
 
 1.  Finally, click on the **Transition** tab.
     Note that you could add more terms in the condition if necessary.
-    ![]({{file page='/nxdox/simple-workflow-example' name='technical-validation-transitions.png'}} ?w=450,border=true)
+    ![]({{file name='technical-validation-transitions.png'}} ?w=450,border=true)
 2.  Click on **Save**.
 
 #### Connecting the Nodes
@@ -394,7 +392,7 @@ Each button is automatically associated to a transition to define what should be
     Note that you have three transition points on the technical validation node, ready to be pulled to the next nodes.
     ![]({{file name='Simple_Workflow_012.png'}} ?w=200,border=true,thumbnail=true)
 
-### Defining the &ldquo;Juridical Advice&rdquo; Node
+### Defining the "Juridical Advice" Node
 
 Now that we have our &ldquo;Technical validation&rdquo; node set up, we need to create the nodes used for its possible transitions. First comes the &ldquo;Juridical advice&rdquo; node. As most operations have been described before, we will only comment this node&rsquo;s specificities.
 
@@ -404,7 +402,7 @@ Drag the &ldquo;Approve&rdquo; node from the node template library and drop it o
 
 ![](https://www.lucidchart.com/publicSegments/view/54eefcaf-64e8-42a2-ad51-6ed50a00c10c/image.png ?w=300,border=true)
 
-#### Configuring the &ldquo;Juridical Advice&rdquo; Node
+#### Configuring the "Juridical Advice" Node
 
 1.  Open the node properties.
 2.  Rename the node to &ldquo;Juridical advice&rdquo;.
@@ -413,18 +411,19 @@ Drag the &ldquo;Approve&rdquo; node from the node template library and drop it o
 4.  Grant the appropriate rights.
     The internal lawyers may not have the necessary rights to read and/or edit a sales proposal document. To avoid an exception to be thrown because of this, you need to grant them the appropriate rights on the document that needs juridical advice temporarily. This is what the &ldquo;Grant permission to task assignees&rdquo; field is used for. In this case, choose the &ldquo;Read & Edit&rdquo; permission to let them modify the document. Keep in mind that these rights will only be granted during the operations made on this node, and reverted to their previous state when following a transition to another node.
 
-    ![]({{file page='/nxdox/simple-workflow-example' name='juridical-advice-general.png'}} ?w=450,border=true)
+    ![]({{file name='juridical-advice-general.png'}} ?w=450,border=true)
 
 #### Configuring the Form
+
 1. Click on the **Variables** tab and add the "juridical_comment" and "hoo_comment" variables to the right column.
-  ![]({{file page='/nxdox/simple-workflow-example' name='Simple_Workflow_015_1.png'}} ?w=600,border=true)
+  ![]({{file name='Simple_Workflow_015_1.png'}} ?w=600,border=true)
 2.  Click on the **Form** tab.
 3.  Add the &ldquo;juridical_comment&rdquo; field the same way you did with the &ldquo;Technical validation&rdquo; node.
-    ![]({{file page='/nxdox/simple-workflow-example' name='juridical-comment.png'}} ?w=450,border=true)
+    ![]({{file name='juridical-comment.png'}} ?w=450,border=true)
 4.  Add the &ldquo;hoo_comment&rdquo; as well, but make sure to set it as read only.
-    ![]({{file page='/nxdox/simple-workflow-example' name='hoo-comment.png'}} ?w=450,border=true)
+    ![]({{file name='hoo-comment.png'}} ?w=450,border=true)
 5.  Click on **Save**.
-    ![]({{file page='/nxdox/simple-workflow-example' name='juridical-advice-form.png'}}?w=450,border=true)
+    ![]({{file name='juridical-advice-form.png'}}?w=450,border=true)
 
 #### Connecting the Nodes
 
@@ -433,7 +432,7 @@ Drag the &ldquo;Approve&rdquo; node from the node template library and drop it o
 3.  Pull an arrow from there to the juridical advice node&rsquo;s input point.
     ![]({{file name='Simple_Workflow_018.png'}} ?w=200,border=true,thumbnail=true)
 
-### Defining the &ldquo;Proposal Update&rdquo; Node
+### Defining the "Proposal Update" Node
 
 You will now take care of the &ldquo;Proposal update&rdquo; node, which will be used in case Jack refuses the proposal.
 
@@ -441,7 +440,7 @@ You will now take care of the &ldquo;Proposal update&rdquo; node, which will be 
 
 The &ldquo;Approve&rdquo; node will once again be the most appropriate. Pick it up and drop it on the graph.
 
-#### Configuring the &ldquo;Proposal Update&rdquo; Node
+#### Configuring the "Proposal Update" Node
 
 1.  Open the node properties.
 2.  Rename the node to &ldquo;Proposal update&rdquo;.
@@ -451,27 +450,28 @@ The &ldquo;Approve&rdquo; node will once again be the most appropriate. Pick it 
     Here comes another interesting situation: this task may not be assigned to a particular person, neither may it be assigned to a group. It needs to be assigned to the document's creator. To do so, a variable needs to be used instead of a hard coded value. The "Assignees" field may only receive usernames or groups, not variables.
     We will rather use the &ldquo;Assignees expression&rdquo; field and set this variable as value: &ldquo;`@{Document["dc:creator"]}`&rdquo;. This will return the document creator's username.
     Note that there are no specific rights to grant there as in this situation the document will be heading back to its creator.
-    ![]({{file page='/nxdox/simple-workflow-example' name='proposal-update-general.png'}} ?w=450,border=true)
+    ![]({{file name='proposal-update-general.png'}} ?w=450,border=true)
 
 #### Configuring the Form
+
 1. Click on the **Variables** tab and add the "sales_comment" and "hoo_comment" variables to the right column.
-    ![]({{file page='/nxdox/simple-workflow-example' name='Simple_Workflow_020_1.png'}} ?w=450,border=true,thumbnail=true)
+    ![]({{file name='Simple_Workflow_020_1.png'}} ?w=450,border=true,thumbnail=true)
 2.  Click on the **Form** tab.
 3.  Add the &ldquo;sales_comment&rdquo; field as well as the &ldquo;hoo_comment&rdquo; field, the latter still in read only mode.
-    ![]({{file page='/nxdox/simple-workflow-example' name='Simple_Workflow_020_2.png'}} ?w=450,border=true,thumbnail=true)
+    ![]({{file name='Simple_Workflow_020_2.png'}} ?w=450,border=true,thumbnail=true)
 4.  Rename the task.
     Calling the task an approval task could lead to confusion for the salesman that wants to submit an updated proposal. Thus, we will rename it.
     1.  Click on the **Resolution Actions** tab.
     2.  Click on the **Add task button** link.
     3.  We will use &ldquo;submit_updated_proposal&rdquo; as the task button's id and &ldquo;Submit updated proposal&rdquo; as label.    
-    ![]({{file page='/nxdox/simple-workflow-example' name='Simple_Workflow_022_1.png'}} ?w=450,border=true,thumbnail=true)
+    ![]({{file name='Simple_Workflow_022_1.png'}} ?w=450,border=true,thumbnail=true)
 
-#### Removing the &ldquo;Approve&rdquo; Transition
+#### Removing the "Approve" Transition
 
 1.  Click on the **Transitions** tab.
     As you may see, deleting the task button in the previous step does not automatically remove the transition as well. We will do it manually then.
 2.  Click on the icon ![]({{file name='edit_wiz.png'}}) next to the "approve" transition and click on **Remove** in the contextual menu.
-    ![]({{file page='/nxdox/simple-workflow-example' name='proposal-update-transitions.png'}} ?w=450,border=true)
+    ![]({{file name='proposal-update-transitions.png'}} ?w=450,border=true)
 3.  Confirm row deletion on the popup window.
 4.  Click on **Save**.
 
@@ -498,21 +498,21 @@ A document being accepted by the head of operations or the juridical services ha
 3.  In the **General** tab, the "Automation chains" section lets you make use of an existing automation chain, that you may even edit by using the corresponding link. Automation chains can be launched at different moments, fdepending of your needs. The input operation chain will be played when entering the node, the output chain when the node is being left. In this situation the chain needs to be played from the start, but is not existing yet though.
 
     1.  Click on the **Create** link of the "Input operation chain".
-        ![]({{file page='/nxdox/simple-workflow-example' name='empty-end-node.png'}} ?w=450,border=true)
+        ![]({{file name='empty-end-node.png'}} ?w=450,border=true)
     2.  Give an id to your chain : "`SetAsApproved`".
-        ![]({{file page='/nxdox/simple-workflow-example' name='Simple_Workflow_026.png'}} ?w=350,border=true)
+        ![]({{file name='Simple_Workflow_026.png'}} ?w=350,border=true)
     3.  In the editor, add the "Document > Follow Life Cycle Transition" operation using drag and drop.
-        ![]({{file page='/nxdox/simple-workflow-example' name='empty-automation-chain.png'}} ?w=450,border=true)
+        ![]({{file name='empty-automation-chain.png'}} ?w=450,border=true)
 
     4.  Open it and set its value to "approve".
-        ![]({{file page='/nxdox/simple-workflow-example' name='Simple_Workflow_028_1.png'}} ?w=450,border=true)
+        ![]({{file name='Simple_Workflow_028_1.png'}} ?w=450,border=true)
 
     5.  Save the chain and go back to your workflow graph.
 
     6.  Now that the chain is created, you may have a look at your end node properties.
 
         You will see that the input operation chain has been automatically filled in thanks to our previous operation.
-        ![]({{file page='/nxdox/simple-workflow-example' name='end-node-setasapproved.png'}} ?w=450,border=true)
+        ![]({{file name='end-node-setasapproved.png'}} ?w=450,border=true)
 
 ### Connecting the Nodes
 
