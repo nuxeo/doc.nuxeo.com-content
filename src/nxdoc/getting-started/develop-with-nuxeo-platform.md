@@ -424,6 +424,7 @@ Watch the related courses on Nuxeo University
 
 ## Prerequisites
 
+- Generate your [Connect Token] LINK
 - A Contract document type created on this [page]({{page version='' space='nxdoc' page='web-ui-document-layouts'}})
 - An IDE that integrates with Maven.
     We provide instructions for [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars) or IntelliJ IDEA
@@ -650,13 +651,13 @@ From a command line:
   $ nuxeo studio link
     info You are going to link a Studio project to this project.
   ? NOS Username: my-user
-  ? NOS Password: [hidden]
+  ? NOS Token: [hidden]
   ? Studio Project: my-project
   ? Do you want to update your Maven settings.xml file accordingly? Yes
   ```
 
   {{#> callout type='warning' }}
-  At this point, you just added your Nuxeo Connect password in `~/.m2/settings.xml` in clear text. This is not recommended, please read the following [Security Best Practices](#security-best-practices) section.
+  At this point, you just added your Nuxeo Connect token in `~/.m2/settings.xml` in clear text. This is not recommended, please read the following [Security Best Practices](#security-best-practices) section.
   {{/callout}}
 
 3. Export your contributions to Nuxeo Studio
@@ -695,7 +696,7 @@ It is strongly recommended that you encrypt the secrets stored in `~/.m2/setting
   </settingsSecurity>
   ```
 
-1. Encrypt your Nuxeo Studio password:
+1. Encrypt your Nuxeo Studio Token:
 
   ```bash
   $ mvn --encrypt-password
@@ -709,7 +710,7 @@ It is strongly recommended that you encrypt the secrets stored in `~/.m2/setting
     <server>
       <id>nuxeo-studio</id>
       <username>your_studio_username</username>
-      <password>your_new_encrypted_studio_password</password>
+      <password>your_new_encrypted_studio_token</password>
     </server>
     ...
   </servers>
