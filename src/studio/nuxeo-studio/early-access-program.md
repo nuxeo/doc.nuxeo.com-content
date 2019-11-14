@@ -34,11 +34,6 @@ Our goal is to deliver features and get your feedback quickly, so that we can ad
 - [JSF UI to Web UI migration tool]({{page page="migration-services"}}):<br>
 A safe and automated way to create an equivalent Web UI configuration based on your existing JSF UI configuration.
 
-**Coming soon**:
-
-- Designer Live Preview:<br>
-An improvement to our browser extension that provides an instant preview of your Web UI configuration, instead of having to go through a hot reload.
-
 ## Activating the Early Access Program
 
 You can choose to benefit from the Early Access program on each of your project. You can enable and disable Early Access features as you want. When enabled, all Early Access features are available to anyone accessing the project.
