@@ -516,7 +516,7 @@ function(input, params) {
     // do something on doc as system user
     Document.BlockPermissionInheritance(doc, {});
 
-    doc = Auth.Logout(doc);
+    doc = Auth.Logout(doc, {});
     // do something on doc as 'user1'
 }
 ```
