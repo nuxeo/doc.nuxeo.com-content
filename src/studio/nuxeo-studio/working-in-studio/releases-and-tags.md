@@ -53,7 +53,7 @@ The releases and tags tab allows to list each and every releases and tags that w
 {{! /excerpt}}
 
 {{#> callout type='info' heading='recommended reading'}}
-This screen will be populated if you have made a tag or release of your Nuxeo Studio project. We recommend checking our [how to create a tag or release]({{page version='' page='how-to-tag-or-release-your-nuxeo-studio-project'}}) first.
+This screen will be populated if you have made a tag or release of your Nuxeo Studio project. We recommend checking our [How to create a tag or release]({{page space='studio' page='how-to-tag-or-release-your-nuxeo-studio-project'}}) first.
 {{/callout}}
 
 ## Releases Tab
@@ -65,7 +65,7 @@ This screen will be populated if you have made a tag or release of your Nuxeo St
     name: releases-tab.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Release Tab ](nx_asset://e189beb3-48b9-41e5-a4d7-bfdf6c425d70 ?w=650,border=true)
+![Release Tab](nx_asset://e189beb3-48b9-41e5-a4d7-bfdf6c425d70 ?w=650,border=true)
 
 **Delete**: Deletes the release. This operation cannot be reverted.
 

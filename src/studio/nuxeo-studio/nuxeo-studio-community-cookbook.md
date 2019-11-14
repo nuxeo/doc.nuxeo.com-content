@@ -25,7 +25,7 @@ git clone https://github.com/nuxeo/nuxeo-studio-community-cookbook.git
 Feel free to submit your own contribution, following our [guidelines and templates](https://github.com/nuxeo/nuxeo-studio-community-cookbook#contributing).
 {{/callout}}
 
-## Latest Modules
+## Module Listing
 
 <table>
   <tr>
@@ -36,15 +36,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
-    ![qrcode.png](nx_asset://8837b54b-1c29-4d9d-9ff1-bc9766176a6b ?w=150,border=true)
-    </td>
-    <td>[QR Code Generation](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/qr-code)</td>
-    <td>Nuxeo</td>
-    <td>Business Logics</td>
-  </tr>
-  <tr>
-    <td>
-    ![task_reassignment.png](nx_asset://b38f325d-a79a-4424-97c3-0ebdd937a932 ?w=150,border=true)
+    ![task_reassignment.png](nx_asset://b38f325d-a79a-4424-97c3-0ebdd937a932 ?w=200,border=true)
     </td>
     <td>[Bulk Workflow Reassignment](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/actions-versioned-documents)</td>
     <td>Nuxeo</td>
@@ -52,15 +44,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
-    ![progress-bar.png](nx_asset://256e8c13-45fb-4412-a305-2c630ea6a877 ?w=150, border=true)
-    </td>
-    <td>[Add a Progress Bar](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/progress-bar)</td>
-    <td>Nuxeo</td>
-    <td>Layout</td>
-  </tr>
-  <tr>
-    <td>
-    ![document-versions.png](nx_asset://ef855414-0914-4045-a8ea-2a4fe78c2251 ?w=150,border=true)
+    ![document-versions.png](nx_asset://ef855414-0914-4045-a8ea-2a4fe78c2251 ?w=200,border=true)
     </td>
     <td>[Delete and Update Document Lifecycle State of Versioned Documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/bulk-workflow-reassignment)</td>
     <td>Nuxeo</td>
@@ -68,276 +52,121 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
-    ![dashboard-cookbook.png](nx_asset://470c956e-ef24-42d2-b768-938e00bbaa2c ?w=150,border=true)
+    ![html-injection.png](nx_asset://386e91fa-3cc9-4b1b-a2e9-6b6cf0da50b2 ?w=200,border=true)
+    </td>
+    <td>[Inject HTML into a Page Using Bound Data](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/inject-html)</td>
+    <td>Nuxeo</td>
+    <td>Dashboard</td>
+  </tr>
+  <tr>
+    <td>
+    ![dashboard-cookbook.png](nx_asset://470c956e-ef24-42d2-b768-938e00bbaa2c ?w=200,border=true)
     </td>
     <td>[Visual Dashboard with Pictures](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/dashboard)</td>
     <td>Nuxeo</td>
     <td>Dashboard</td>
   </tr>
-</table>
+  <tr>
+    <td>![document-suggestion-watermark.png](nx_asset://1f5fb898-ded7-46bc-b67e-898c3d9c2430 ?w=200,border=true)</td>
+    <td>[Custom Nuxeo Suggestion Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/document-suggestion)</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td>![nuxeo-se-collapse.png](nx_asset://eda16b01-5183-4879-be1f-f66075d60670 ?w=200,border=true)</td>
+    <td>[Collapsible Element](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/collapse)</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td>![modeler.png](nx_asset://e04f70f2-8394-4330-b64b-3f143af7c64d ?w=200,border=true)</td>
+    <td>[Tips and Tricks to Design Elements Within Studio Modeler](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/modeler-tips-tricks)</td>
+    <td>Nuxeo</td>
+    <td>Business Logic</td>
+  </tr>
+  <tr>
+    <td>![designer.png](nx_asset://d8c9d4e1-a152-4266-a9af-dd19e0a88bea ?w=200,border=true)</td>
+    <td>[Tips and Tricks to Design Elements Within Studio Designer](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/designer-tips-tricks)</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td>![video-thumbnail2.png](nx_asset://036ceb07-af4c-4e3e-9870-e18adfdf7002 ?w=200,border=true)</td>
+    <td>[Sets the Video Poster and Search Thumbnail](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/video-thumbnail)</td>
+    <td>Nuxeo</td>
+    <td>DAM</td>
+  </tr>
+  <tr>
+    <td>![ocr.png](nx_asset://11827a7a-3273-483b-9e1d-2ed226132815 ?w=200,border=true)</td>
+    <td>[Extract Text from an Image-Based PDF with Google Vision](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/google-vision-ocr)</td>
+    <td>Nuxeo</td>
+    <td>AI</td>
+  </tr>
+  <tr>
+    <td>![saml.png](nx_asset://d2996ad4-225b-4652-8ae2-7dd6f733e176 ?w=200,border=true)</td>
+    <td>[Map SAML User Attributes to Nuxeo](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/saml-user-mapping)</td>
+    <td>Nuxeo</td>
+    <td>Authentication</td>
+  </tr>
+  <tr>
+    <td>![workflow-status.png](nx_asset://6d79aff3-72d8-4151-9c9b-dcb0498ffb17 ?w=200,border=true)</td>
+    <td>[Monitor Workflow Instances Status](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/workflow-status)</td>
+    <td>Nuxeo</td>
+    <td>Workflow</td>
+  </tr>
+  <tr>
+    <td>![sensitive-data1.png](nx_asset://c50a02de-fd22-4358-8b29-2cef76b05691 ?w=200,border=true)</td>
+    <td>[Display Sensitive Data Details Contained in a Document](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/sensitive-data)</td>
+    <td>Nuxeo</td>
+    <td>AI</td>
+  </tr>
+  <tr>
+    <td>![calendar.png](nx_asset://1a3013e3-36c6-4fba-bb9f-90ec5111e434 ?w=200,border=true)</td>
+    <td>[Convert Data to Timestamp](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/convert-date-to-timestamp)</td>
+    <td>Nuxeo</td>
+    <td>Automation</td>
+  </tr>
+  <tr>
+    <td>![dark.png](nx_asset://5d0bd1d3-5efb-4ae4-9711-b98f1e8e8c8c ?w=200,border=true)</td>
+    <td>[Email Templates](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/email-templates-nuxeo)</td>
+    <td>Nuxeo</td>
+    <td>Templates</td>
+  </tr>
+  <tr>
+    <td>![movie.png](nx_asset://d2e29345-6175-4565-94a0-32cc5451efc4 ?w=200,border=true)</td>
+    <td>[Additional Video Conversions](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/video-conversions)</td>
+    <td>Nuxeo</td>
+    <td>DAM</td>
+  </tr>
+  <tr>
+    <td>![screenshot.png](nx_asset://e0b815ad-d965-43ce-8de6-04ff3b236ef2 ?w=200,border=true)</td>
+    <td>[Inline Card Property Edition](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/toggleable-form)</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td>![sfdc-webui.png](nx_asset://5213bfbf-47b7-479e-9a27-4550f3704ec1 ?w=200,border=true)</td>
+    <td>[Display Salesforce Metadata](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/salesforce-ui)</td>
+    <td>Nuxeo</td>
+    <td>Salesforce</td>
+  </tr>
+  <tr>
+    <td>![ssn.png](nx_asset://0b564f31-08b7-4929-8b89-c521f7473a1f ?w=200,border=true)</td>
+    <td>[Show/Hide the Value of a Secret Field](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/ssn)</td>
+    <td>Nuxeo</td>
+    <td>Security</td>
+  </tr>
+  <tr>
+    <td>![kibana.png](nx_asset://081d44cd-fa2a-49df-99e3-39b7c55070eb ?w=200,border=true)</td>
+    <td>[Display Kibana dashboards in the "Analytics"](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/kibana)</td>
+    <td>Nuxeo</td>
+    <td>Reporting</td>
+  </tr>
+  <tr>
+    <td>![nuxeo-related-documents.png](nx_asset://8b54fa45-f241-4b56-a1ad-ce59b3507322 ?w=200,border=true)</td>
+    <td>[Display Document Relations](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/related-documents)</td>
+    <td>Nuxeo</td>
+    <td>Relations</td>
+  </tr>
 
-## Tips and Tricks
-
-<table>
-<tr>
-  <th>Module</th>
-  <th>Description</th>
-  <th>Contributor</th>
-  <th>Category</th>
-</tr>
-<tr>
-  <td>![modeler.png](nx_asset://e04f70f2-8394-4330-b64b-3f143af7c64d ?w=150,border=true)</td>
-  <td>[Tips and Tricks to Design Elements Within Studio Modeler](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/modeler-tips-tricks)</td>
-  <td>Nuxeo</td>
-  <td>Business Logic</td>
-</tr>
-<tr>
-  <td>![designer.png](nx_asset://d8c9d4e1-a152-4266-a9af-dd19e0a88bea ?w=150,border=true)</td>
-  <td>[Tips and Tricks to Design Elements Within Studio Designer](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/designer-tips-tricks)</td>
-  <td>Nuxeo</td>
-  <td>Layout</td>
-</tr>
-</table>
-
-
-## Layouts
-
-<table>
-<tr>
-  <th>Module</th>
-  <th>Description</th>
-  <th>Contributor</th>
-  <th>Category</th>
-</tr>
-<tr>
-  <td>
-  ![progress-bar.png](nx_asset://256e8c13-45fb-4412-a305-2c630ea6a877 ?w=150, border=true)
-  </td>
-  <td>[Add a Progress Bar](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/progress-bar)</td>
-  <td>Nuxeo</td>
-  <td>Layout</td>
-</tr>
-<tr>
-  <td>
-  ![html-injection.png](nx_asset://386e91fa-3cc9-4b1b-a2e9-6b6cf0da50b2 ?w=150,border=true)
-  </td>
-  <td>[Inject HTML into a Page Using Bound Data](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/inject-html)</td>
-  <td>Nuxeo</td>
-  <td>Dashboard</td>
-</tr>
-<tr>
-  <td>
-  ![dashboard-cookbook.png](nx_asset://470c956e-ef24-42d2-b768-938e00bbaa2c ?w=150,border=true)
-  </td>
-  <td>[Visual Dashboard with Pictures](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/dashboard)</td>
-  <td>Nuxeo</td>
-  <td>Dashboard</td>
-</tr>
-<tr>
-  <td>![document-suggestion-watermark.png](nx_asset://1f5fb898-ded7-46bc-b67e-898c3d9c2430 ?w=150,border=true)</td>
-  <td>[Custom Nuxeo Suggestion Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/document-suggestion)</td>
-  <td>Nuxeo</td>
-  <td>Layout</td>
-</tr>
-<tr>
-  <td>![nuxeo-se-collapse.png](nx_asset://eda16b01-5183-4879-be1f-f66075d60670 ?w=150,border=true)</td>
-  <td>[Collapsible Element](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/collapse)</td>
-  <td>Nuxeo</td>
-  <td>Layout</td>
-</tr>
-<tr>
-  <td>![screenshot.png](nx_asset://e0b815ad-d965-43ce-8de6-04ff3b236ef2 ?w=150,border=true)</td>
-  <td>[Inline Card Property Edition](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/toggleable-form)</td>
-  <td>Nuxeo</td>
-  <td>Layout</td>
-</tr>
-<tr>
-  <td>![sfdc-webui.png](nx_asset://5213bfbf-47b7-479e-9a27-4550f3704ec1 ?w=150,border=true)</td>
-  <td>[Display Salesforce Metadata](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/salesforce-ui)</td>
-  <td>Nuxeo</td>
-  <td>Salesforce</td>
-</tr>
-<tr>
-  <td>![ssn.png](nx_asset://0b564f31-08b7-4929-8b89-c521f7473a1f ?w=150,border=true)</td>
-  <td>[Show/Hide the Value of a Secret Field](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/ssn)</td>
-  <td>Nuxeo</td>
-  <td>Security</td>
-</tr>
-<tr>
-  <td>![nuxeo-related-documents.png](nx_asset://8b54fa45-f241-4b56-a1ad-ce59b3507322 ?w=150,border=true)</td>
-  <td>[Display Document Relations](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/related-documents)</td>
-  <td>Nuxeo</td>
-  <td>Relations</td>
-</tr>
-</table>
-
-## DAM
-
-<table>
-<tr>
-  <th>Module</th>
-  <th>Description</th>
-  <th>Contributor</th>
-  <th>Category</th>
-</tr>
-<tr>
-  <td>![video-thumbnail2.png](nx_asset://036ceb07-af4c-4e3e-9870-e18adfdf7002 ?w=150,border=true)</td>
-  <td>[Sets the Video Poster and Search Thumbnail](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/video-thumbnail)</td>
-  <td>Nuxeo</td>
-  <td>DAM</td>
-</tr>
-<tr>
-  <td>![movie.png](nx_asset://d2e29345-6175-4565-94a0-32cc5451efc4 ?w=150,border=true)</td>
-  <td>[Additional Video Conversions](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/video-conversions)</td>
-  <td>Nuxeo</td>
-  <td>DAM</td>
-</tr>
-</table>
-
-## AI
-
-<table>
-<tr>
-  <th>Module</th>
-  <th>Description</th>
-  <th>Contributor</th>
-  <th>Category</th>
-</tr>
-<tr>
-  <td>![ocr.png](nx_asset://11827a7a-3273-483b-9e1d-2ed226132815 ?w=150,border=true)</td>
-  <td>[Extract Text from an Image-Based PDF with Google Vision](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/google-vision-ocr)</td>
-  <td>Nuxeo</td>
-  <td>AI</td>
-</tr>
-<tr>
-  <td>![sensitive-data1.png](nx_asset://c50a02de-fd22-4358-8b29-2cef76b05691 ?w=150,border=true)</td>
-  <td>[Display Sensitive Data Details Contained in a Document](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/sensitive-data)</td>
-  <td>Nuxeo</td>
-  <td>AI</td>
-</tr>
-</table>
-
-## Security / Authentication / User and Group Management
-
-<table>
-<tr>
-  <th>Module</th>
-  <th>Description</th>
-  <th>Contributor</th>
-  <th>Category</th>
-</tr>
-<tr>
-  <td>
-  ![task_reassignment.png](nx_asset://b38f325d-a79a-4424-97c3-0ebdd937a932 ?w=150,border=true)
-  </td>
-  <td>[Bulk Workflow Reassignment](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/actions-versioned-documents)</td>
-  <td>Nuxeo</td>
-  <td>Dashboard</td>
-</tr>
-<tr>
-  <td>![saml.png](nx_asset://d2996ad4-225b-4652-8ae2-7dd6f733e176 ?w=150,border=true)</td>
-  <td>[Map SAML User Attributes to Nuxeo](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/saml-user-mapping)</td>
-  <td>Nuxeo</td>
-  <td>Authentication</td>
-</tr>
-<tr>
-  <td>![sensitive-data1.png](nx_asset://c50a02de-fd22-4358-8b29-2cef76b05691 ?w=150,border=true)</td>
-  <td>[Display Sensitive Data Details Contained in a Document](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/sensitive-data)</td>
-  <td>Nuxeo</td>
-  <td>AI</td>
-</tr>
-<tr>
-  <td>![ssn.png](nx_asset://0b564f31-08b7-4929-8b89-c521f7473a1f ?w=150,border=true)</td>
-  <td>[Show/Hide the Value of a Secret Field](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/ssn)</td>
-  <td>Nuxeo</td>
-  <td>Security</td>
-</tr>
-</table>
-
-## Reporting
-
-<table>
-<tr>
-  <th>Module</th>
-  <th>Description</th>
-  <th>Contributor</th>
-  <th>Category</th>
-</tr>
-<tr>
-  <td>![workflow-status.png](nx_asset://6d79aff3-72d8-4151-9c9b-dcb0498ffb17 ?w=150,border=true)</td>
-  <td>[Monitor Workflow Instances Status](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/workflow-status)</td>
-  <td>Nuxeo</td>
-  <td>Workflow</td>
-</tr>
-<tr>
-  <td>![kibana.png](nx_asset://081d44cd-fa2a-49df-99e3-39b7c55070eb ?w=150,border=true)</td>
-  <td>[Display Kibana dashboards in the "Analytics"](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/kibana)</td>
-  <td>Nuxeo</td>
-  <td>Reporting</td>
-</tr>
-</table>
-
-## Business Logic
-
-<table>
-<tr>
-  <th>Module</th>
-  <th>Description</th>
-  <th>Contributor</th>
-  <th>Category</th>
-</tr>
-<tr>
-  <td>
-  ![document-versions.png](nx_asset://ef855414-0914-4045-a8ea-2a4fe78c2251 ?w=150,border=true)
-  </td>
-  <td>[Delete and Update Document Lifecycle State of Versioned Documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/bulk-workflow-reassignment)</td>
-  <td>Nuxeo</td>
-  <td>Workflow</td>
-</tr>
-<tr>
-  <td>![calendar.png](nx_asset://1a3013e3-36c6-4fba-bb9f-90ec5111e434 ?w=150,border=true)</td>
-  <td>[Convert Data to Timestamp](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/convert-date-to-timestamp)</td>
-  <td>Nuxeo</td>
-  <td>Automation</td>
-</tr>
-<tr>
-  <td>![nuxeo-related-documents.png](nx_asset://8b54fa45-f241-4b56-a1ad-ce59b3507322 ?w=150,border=true)</td>
-  <td>[Display Document Relations](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/related-documents)</td>
-  <td>Nuxeo</td>
-  <td>Relations</td>
-</tr>
-</table>
-
-## Template
-
-<table>
-<tr>
-  <th>Module</th>
-  <th>Description</th>
-  <th>Contributor</th>
-  <th>Category</th>
-</tr>
-<tr>
-  <td>![dark.png](nx_asset://5d0bd1d3-5efb-4ae4-9711-b98f1e8e8c8c ?w=150,border=true)</td>
-  <td>[Email Templates](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/email-templates-nuxeo)</td>
-  <td>Nuxeo</td>
-  <td>Templates</td>
-</tr>
-</table>
-
-## Integration
-
-<table>
-<tr>
-  <th>Module</th>
-  <th>Description</th>
-  <th>Contributor</th>
-  <th>Category</th>
-</tr>
-<tr>
-  <td>![sfdc-webui.png](nx_asset://5213bfbf-47b7-479e-9a27-4550f3704ec1 ?w=150,border=true)</td>
-  <td>[Display Salesforce Metadata](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/salesforce-ui)</td>
-  <td>Nuxeo</td>
-  <td>Salesforce</td>
-</tr>
 </table>
