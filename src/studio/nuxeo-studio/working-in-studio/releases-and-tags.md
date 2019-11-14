@@ -2,7 +2,7 @@
 title: Releases & Tags
 review:
     comment: ''
-    date: '2018-03-29'
+    date: '2019-11-12'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 toc: true
@@ -44,13 +44,15 @@ history:
         date: '2016-03-21 23:09'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 The releases and tags tab allows to list each and every releases and tags that were performed on the project. It also allows to download the Nuxeo Package associated to a given release.
-
 {{! /excerpt}}
+
+{{#> callout type='info' heading='recommended reading'}}
+This screen will be populated if you have made a tag or release of your Nuxeo Studio project. We recommend checking our [how to create a tag or release]({{page version='' page='how-to-tag-or-release-your-nuxeo-studio-project'}}) first.
+{{/callout}}
 
 ## Releases Tab
 
@@ -61,13 +63,14 @@ The releases and tags tab allows to list each and every releases and tags that w
     name: releases-tab.png
     studio_modeler#screenshot#up_to_date
 --}}
-![Release Tab ](nx_asset://e189beb3-48b9-41e5-a4d7-bfdf6c425d70 ?w=650,border=true)
+![Release Tab](nx_asset://e189beb3-48b9-41e5-a4d7-bfdf6c425d70 ?w=650,border=true)
 
 **Delete**: Deletes the release. This operation cannot be reverted.
 
 **Maven GAV**: Displays the Maven coordinates so that you can add the release as a dependency on your Java project.
 
-**Download Package**: You can download the release package and ask the administrator of the instance to install it using `nuxeoctl`. See the page [Installing a New Package on Your Instance]({{page version='' space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
+**Download Package**: You can download the release package and ask the administrator of the instance to install it using `nuxeoctl`.</br>
+See the page [Installing a New Package on Your Instance]({{page version='' space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
 
 ## Tags Tab
 
@@ -84,10 +87,11 @@ The releases and tags tab allows to list each and every releases and tags that w
 
 **Download JAR:** Download the JAR
 
-**Download Package:** You can download the tag package from this tab and then ask the administrator of the instance to install it using `nuxeoctl`. See the page [Installing a New Package on Your Instance]({{page version='' space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
+**Download Package:** You can download the tag package from this tab and then ask the administrator of the instance to install it using `nuxeoctl`. </br>
+See the page [Installing a New Package on Your Instance]({{page version='' space='nxdoc' page='installing-a-new-package-on-your-instance'}}).
 
 {{#> callout type='warning' }}
 This must not be used for production (a tag package is built on demand).
 {{/callout}}
 
-**Revert to:** [Revert]({{page page='branch-management#review-branch-commit'}}) to the state in history where the tag is.
+**Revert to:** [Revert]({{page page='branch-management'}}#revert) to the state in history where the tag is.
