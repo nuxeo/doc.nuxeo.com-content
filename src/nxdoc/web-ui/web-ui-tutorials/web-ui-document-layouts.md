@@ -2,7 +2,7 @@
 title: 'HOWTO: Customize Document Layouts'
 review:
     comment: ''
-    date: '2017-01-02'
+    date: '2019-11-14'
     status: ok
 toc: true
 details:
@@ -19,10 +19,10 @@ labels:
     - nuxeo-ui-elements
     - extension
     - layouts
-    - content-review-lts2017
+    - lts2017-ok
 tree_item_index: 400
-
 ---
+
 {{#> callout type='tip'}}
 Follow the related [video course and exercises](https://university.nuxeo.com/learn/public/course/view/elearning/80/DocumentandWorkflowTaskLayoutswithNuxeoStudioDesigner) on Nuxeo University.
 {{/callout}}  
@@ -51,9 +51,19 @@ Here we want to create a custom document type named "Contract" that will hold sp
 
     Your document type is created.
 3.  Fill in the [**Definition** tab]({{page space='studio' page='documents'}}):
-![]({{file name='definition_contract.png' page='/nxdoc/web-ui-document-layout'}} ?w=600,border=true)
+  {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Document Layouts/definition_contract.png
+    name: definition_contract.png
+    studio_modeler#screenshot#up_to_date
+  --}}
+  ![definition_contract.png](nx_asset://7c4bf823-6a9a-4d53-bc7e-49e9fe175770 ?w=600,border=true)
 4.  Fill in the [**Schema** tab]({{page space='studio' page='schemas'}}) with the following metadata:
-![]({{file name='schema_contract.png' page='/nxdoc/web-ui-document-layout'}} ?w=600,border=true)
+  {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Document Layouts/schema_contract.png
+    name: schema_contract.png
+    studio_modeler#screenshot#up_to_date
+  --}}
+  ![schema_contract.png](nx_asset://1ef30ee8-2913-4632-b0a4-f4b3f7d99d9a ?w=600,border=true)
 
 Once you are all set, you can navigate to the Studio Designer to customize your layouts, click on **Configure layouts in Designer** button at the top of the page.
 
@@ -64,8 +74,8 @@ Once you are all set, you can navigate to the Studio Designer to customize your 
 1. Five layouts are available for the customization. Let's start with the **Create** layout: Click on the **CUSTOMIZE** button in the editor.
   {{#> callout type='tip' }}
   It automatically creates the `nuxeo-contract-create-layout.html` file, scaffolding:
-    - The title and description fields
-    - Every custom schema property linked to the document type
+  * The title and description fields
+  * Every custom schema property linked to the document type
   {{/callout}}
 1. In the catalog properties on the left, select **File**&nbsp;> **content:blob**&nbsp;> **view** and drag and drop the element in the main view.
 1. Click on Save.
@@ -82,8 +92,12 @@ Once you are all set, you can navigate to the Studio Designer to customize your 
 1. Click on **Save** to keep your changes.
 
   You should end up with something like this:
-  ![]({{file name='main-view-contract-vd.png'}} ?w=350,border=true)
-
+  {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Customize Document Layouts/main-view-contract-vd.png
+      name: main-view-contract-vd.png
+      studio_designer#screenshot#up_to_date
+  --}}
+  ![main-view-contract-vd.png](nx_asset://85c40a74-ebcf-4e93-8dd8-c6b75aef4031 ?w=350,border=true)
 
 ### Configure Labels
 When configuring a document type, a label is required. If you do not create a translation file, Studio uses this label as a fallback option to show your users something clearer.
@@ -153,9 +167,7 @@ The following table lists layout elements used by Nuxeo Web UI:
 | 5. nuxeo-document-import     | nuxeo-{doctype}-import-layout      | ![]({{file name='document_import.png'}} ?w=100,border=true)      |
 
 {{#> callout type='warning' }}
-
 Nuxeo Web UI relies on the existence of these document layout elements so, for each registered document type, the application will attempt to load its specific layouts. Since there is no layout registry, there is no fallback.
-
 {{/callout}}
 
 When instantiating and stamping these layout elements, a `document` property will be set to the current document and the layout is expected to update accordingly. The importing and stamping of these elements, executed by container, is simply:
@@ -175,10 +187,8 @@ By building these elements with Polymer, developers can simply declare this `doc
 Since these document layouts are regular custom elements, developers have no limitations whatsoever in terms of HTML template, CSS styling or JS logics and are free to leverage any third party libraries or elements when building their own.
 
 {{#> callout type='warning' }}
-
 Nuxeo Web UI is vulcanized for production meaning that shared dependencies are already bundled and loaded in the application and should not be imported again in dynamically loaded elements.
 If your elements have other unshared static dependencies then these should be deployed as well.
-
 {{/callout}}
 
 Layouts created and managed by Nuxeo Studio however will rely on introspection of the HTML and JS in order to provide validation and tooling support and will include some extra metadata, in the form of HTML attributes and/or JSDoc annotations.
@@ -254,7 +264,6 @@ window.nuxeo.importBlacklist = [
 {{#> callout type='warning' }}
 The customization of document creation in Web UI is subject to change in the upcoming versions.
 {{/callout}}
-
 
 * * *
 
