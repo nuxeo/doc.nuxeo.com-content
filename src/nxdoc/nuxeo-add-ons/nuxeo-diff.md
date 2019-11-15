@@ -90,4 +90,4 @@ history:
 
 ## Technical Overview
 
-{{{md (file_content url='https://raw.githubusercontent.com/nuxeo/nuxeo-diff/master/README.md')}}}
+Check the [README](https://github.com/nuxeo/nuxeo-jsf-ui/blob/master/code/nuxeo-diff/README.md) for a technical overview. 
