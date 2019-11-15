@@ -22,6 +22,10 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/54D1'
     source_link: /display/NXDOC/Additional+Services
 tree_item_index: 700
+version_override:
+    LTS 2019: nxdoc/1010/additional-services
+    LTS 2017: nxdoc/910/additional-services
+    LTS 2016: nxdoc/810/additional-services
 history:
     -
         author: Manon Lumeau

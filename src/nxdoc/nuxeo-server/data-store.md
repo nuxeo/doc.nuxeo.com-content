@@ -8,6 +8,10 @@ review:
 labels:
     - lts2017-ok
 tree_item_index: 600
+version_override:
+    LTS 2019: nxdoc/1010/content-repository
+    LTS 2017: nxdoc/910/content-repository
+    LTS 2016: nxdoc/810/content-repository
 ---
 <div class="row" data-equalizer data-equalize-on="medium">
 

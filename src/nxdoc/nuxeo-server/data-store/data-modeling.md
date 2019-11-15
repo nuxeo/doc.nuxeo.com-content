@@ -25,6 +25,10 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/HoAO'
     source_link: /display/NXDOC/Repository+Concepts
 tree_item_index: 100
+version_override:
+    LTS 2019: nxdoc/1010/content-repository
+    LTS 2017: nxdoc/910/content-repository
+    LTS 2016: nxdoc/810/content-repository
 history:
     -
         author: Solen Guitter

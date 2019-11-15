@@ -26,6 +26,10 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/C4AO'
     source_link: /display/NXDOC/Events+and+Listeners
 tree_item_index: 650
+version_override:
+    LTS 2019: nxdoc/1010/events-and-listeners
+    LTS 2017: nxdoc/910/events-and-listeners
+    LTS 2016: nxdoc/810/events-and-listeners
 history:
     -
         author: Arnaud Kervern
