@@ -90,5 +90,8 @@ if (!docBlobManager.isBinariesGarbageCollectionInProgress()) {
 - [Trash Service]({{page page='trash-service'}})
 - [How to use Trash Feature]({{page page='how-to-use-trash-feature'}})
 
-{{/panel}}</div><div class="column medium-6">
-</div></div>
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Delete All Trashed Documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/delete-all-trashed-documents)
+
+{{/panel}}</div></div>
