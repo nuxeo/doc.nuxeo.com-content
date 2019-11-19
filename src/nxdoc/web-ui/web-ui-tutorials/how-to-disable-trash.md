@@ -57,3 +57,14 @@ If you wish to disable these trash widgets and recover a simple hard delete acti
   </template>
 </nuxeo-slot-content>
 ```
+
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Delete All Trashed Documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/delete-all-trashed-documents)
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>
+```

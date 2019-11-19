@@ -213,13 +213,19 @@ The trash implementation has changed in 10.2. If you want to keep previous imple
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-To'}}
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-4">{{#> panel heading='Related How-To'}}
 
 - [HOWTO: Use Trash Feature]({{page page='how-to-use-trash-feature'}})
 
-{{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
+{{/panel}}</div><div class="column medium-4">{{#> panel heading='Other Related Documentation'}}
 
 - [Deleting Content]({{page space='userdoc' page='content-delete'}}) (User documentation)
 - [Garbage-Collecting Orphaned Binaries]({{page page='garbage-collecting-orphaned-binaries'}})
 
-{{/panel}}</div></div>
+{{/panel}}</div>
+<div class="column medium-4">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Delete All Trashed Documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/delete-all-trashed-documents)
+
+{{/panel}}</div>
+</div>
