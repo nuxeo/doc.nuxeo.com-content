@@ -91,17 +91,20 @@ The types of relationships are defined in the **predicate** and **inverse_predic
 
 Here is our File document type view layout final result:
 ```
-<!--
-(C) Copyright 2015 Nuxeo SA (http://nuxeo.com/) and others.
+<link rel="import" href="../../relations/nuxeo-se-add-relation-dialog.html">
+<link rel="import" href="../../relations/nuxeo-se-document-relations.html">
+<link rel="import" href="../../relations/nuxeo-se-remove-relation-button.html">
+<!--@license
+(C) Copyright Nuxeo Corp. (http://nuxeo.com/)
 
-Licensed under the Apache License, Version 2.0 (the 'License');
+Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+    http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an 'AS IS' BASIS,
+distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
@@ -112,16 +115,16 @@ limitations under the License.
 @group Nuxeo UI
 @element nuxeo-file-view-layout
 -->
-<link rel="import" href="../../elements/nuxeo-relations/nuxeo-se-document-relations.html">
-
 <dom-module id="nuxeo-file-view-layout">
 
   <template>
+    <style>
+      nuxeo-document-viewer {
+        @apply --paper-card;
+      }
+    </style>
     <nuxeo-document-viewer role="widget" document="[[document]]"></nuxeo-document-viewer>
-    <nuxeo-document-attachments role="widget" document="[[document]]"></nuxeo-document-attachments>
-
     <nuxeo-se-document-relations document="[[document]]"></nuxeo-se-document-relations>
-
   </template>
 
   <script>
