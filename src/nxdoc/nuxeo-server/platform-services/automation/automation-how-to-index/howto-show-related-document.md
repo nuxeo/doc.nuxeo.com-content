@@ -4,9 +4,15 @@ review:
     comment: ''
     date: '2019-09-18'
     status: ok
+details:
+    howto:
+        excerpt: 'Learn how to display relations on a document.'
+        level: Intermediate
+        tool: Studio
+        topics: Automation
 labels:
     - presales-wiki
-    -
+    - howto
 toc: true
 tree_item_index: 90
 ---
