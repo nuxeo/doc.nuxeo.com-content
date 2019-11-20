@@ -102,7 +102,7 @@ It is possible to create custom logic to display a specific document version. Al
             observer: '_valueChanged'
   },
   ```
-
+  
 1. Add the document which needs to be displayed in the properties: `myFirstVersion: Object`.
 1. Add the `_valueChanged` method:
 ```
