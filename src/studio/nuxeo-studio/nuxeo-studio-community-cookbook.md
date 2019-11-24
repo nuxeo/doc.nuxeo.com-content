@@ -36,6 +36,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
+    ![eml-previewer.png](nx_asset://6a5aca58-8d58-4bb6-9df3-a5e8d33bf960 ?w=150,border=true)
+    </td>
+    <td>[EML Previewer](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/eml-previewer)</td>
+    <td>Nuxeo</td>
+    <td>Conversion</td>
+  </tr>
+  <tr>
+    <td>
     ![trash.png](nx_asset://34a54131-4bb4-4066-9e80-6aa1dc1882ce ?w=150,border=true)
     </td>
     <td>[Permanently Delete All Trashed Documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/delete-all-trashed-documents)</td>
