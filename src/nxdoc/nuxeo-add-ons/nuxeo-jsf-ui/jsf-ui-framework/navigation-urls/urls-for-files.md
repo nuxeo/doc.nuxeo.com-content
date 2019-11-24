@@ -276,6 +276,7 @@ xmlns:nxu="http://nuxeo.org/nxweb/util"
 <div class="column medium-6">
 {{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
+- [EML Previewer](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/eml-previewer)
 - [QR Code Integration](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/qr-code)
 
 {{/panel}}

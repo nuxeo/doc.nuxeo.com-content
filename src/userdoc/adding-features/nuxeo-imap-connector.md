@@ -462,3 +462,12 @@ Limit of new fetched emails
     ![]({{file name='DM-emailFolder-summary.png'}} ?w=650,border=true)
 
 Emails cannot be edited, but you can [comment]({{page page='nxdoc/collaborative-features'}}#comments) them, [link]({{page page='nxdoc/editing-content'}}#relations) them to other documents and [follow the email folder's activity]({{page page='nxdoc/collaborative-features'}}#alerts).
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [EML Previewer](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/eml-previewer)
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>
