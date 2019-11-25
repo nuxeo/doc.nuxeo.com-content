@@ -248,7 +248,7 @@ Data returned from Elasticsearch is also processed for simplification and consis
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
-- [Display Kibana dashboards in the "Analytics"](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/kibana)
+- [Display Kibana dashboards in the "Analytics"](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/project-metrics)
 
 {{/panel}}</div><div class="column medium-6">
 </div></div>
