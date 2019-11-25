@@ -287,7 +287,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
 </tr>
 <tr>
   <td>![kibana.png](nx_asset://081d44cd-fa2a-49df-99e3-39b7c55070eb ?w=150,border=true)</td>
-  <td>[Display Kibana dashboards in the "Analytics"](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/kibana)</td>
+  <td>[Display Kibana dashboards in the "Analytics"](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/project-metrics)</td>
   <td>Nuxeo</td>
   <td>Reporting</td>
 </tr>
