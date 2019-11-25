@@ -55,8 +55,8 @@ Adding your credentials allows Maven to be authenticated in Studio while trying 
      ...
        <server>
          <id>nuxeo-studio</id>
-         <username>CONNECT_USERNAME</username>
-         <password>CONNECT_PASSWORD</password>
+         <username>your_nos_username</username>
+         <password>your_nos_token</password>
        </server>
      </servers>
    </settings>
@@ -65,6 +65,8 @@ Adding your credentials allows Maven to be authenticated in Studio while trying 
    {{#> callout type='warning' }}
    It is recommended that you don't leave your password directly in the XML file. You can encrypt it by following the official [password encryption guide](https://maven.apache.org/guides/mini/guide-encryption.html).
    {{/callout}}
+
+   {{{multiexcerpt 'token-management' page='how-to-tag-or-release-your-nuxeo-studio-project'}}}
 
 ## Adding Nuxeo Studio as Maven Repository
 

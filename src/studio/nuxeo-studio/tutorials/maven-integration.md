@@ -201,13 +201,15 @@ Maven can be setup to add a dependency to a specific release, and to do continuo
       ....
       <server>
         <id>nuxeo-studio</id>
-        <username>your_studio_username</username>
-        <password>your_studio_password</password>
+        <username>your_nos_username</username>
+        <password>your_nos_token</password>
       </server>
       ...
     </servers>
 
     ```
+
+{{{multiexcerpt 'token-management' page='how-to-tag-or-release-your-nuxeo-studio-project'}}}
 
 2.  Then in the POM (or a parent POM) where you need to add the dependency to the Studio project you should declare the Studio Maven repository like this:
 

@@ -169,10 +169,10 @@ A REST API is available for automation (such as integrating the upload of the Nu
 
 ```bash
 # Upload a package (owner parameter is required, one of client or project parameter is required)
-curl -i -u login:password -F package=@/path/to/MP.zip "https://connect.nuxeo.com/nuxeo/site/marketplace/upload?batch=true&client=CLIENT_ID&project=PROJECT_ID&owner=OWNER_ID"
+curl -i -u login:token -F package=@/path/to/MP.zip "https://connect.nuxeo.com/nuxeo/site/marketplace/upload?batch=true&client=CLIENT_ID&project=PROJECT_ID&owner=OWNER_ID"
 
 # Delete a package
-curl -i -u login:password -X DELETE "https://connect.nuxeo.com/nuxeo/site/marketplace/delete/PACKAGE_ID"
+curl -i -u login:token -X DELETE "https://connect.nuxeo.com/nuxeo/site/marketplace/delete/PACKAGE_ID"
 ```
 
 {{/panel}}
@@ -182,6 +182,8 @@ with:
 - `CLIENT_ID`: Comma-separated client IDs.
 - `PROJECT_ID`: Comma-separated project IDs and/or names. The parameter can also include comma-separated client IDs prefixed with `client:`.
 - `OWNER_ID`: A unique client ID.
+
+{{{multiexcerpt 'token-management' page='how-to-tag-or-release-your-nuxeo-studio-project'}}}
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More documentation about the Marketplace'}}
 
