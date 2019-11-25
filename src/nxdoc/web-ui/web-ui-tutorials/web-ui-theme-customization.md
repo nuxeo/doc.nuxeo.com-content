@@ -127,12 +127,12 @@ must match the name of the directory we created for the theme.
 
 Furthermore, the `name` property is used to define the `i18n` label for the theme name based on the following convention:
 ```json
-"theme.{themeName}":"name of the theme"
+"themes.{themeName}":"name of the theme"
 ```
 
 For the current example, with `search-name="assets"`, add the following entry to the `messages.json` file:
 ```json
-"theme.new-light":"New Light"
+"themes.new-light":"New Light"
 ```
 
 For more information about `i18n` translations, refer to [Managing Translations]({{page page='web-ui-managing-translations'}})
