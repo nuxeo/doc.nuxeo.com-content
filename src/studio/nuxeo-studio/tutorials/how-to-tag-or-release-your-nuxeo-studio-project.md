@@ -108,7 +108,7 @@ If the version name specified (or computed by Studio) already exists, then the r
 Request:
 
 POST https://connect.nuxeo.com/nuxeo/site/studio/v2/project/{project_id}/releases
-Authorization: Basic base64({username}:{password})
+Authorization: Basic base64({username}:{token})
 Accept: application/json
 Content-Type: application/json
 
@@ -134,6 +134,12 @@ Content-Type: application/json
 curl -X POST \
      -H 'Content-Type: application/json' \
      -d '{ "revision": "master", "versionName": "MINOR" }' \
-     -u 'jdoe:mypassword' \
+     -u 'jdoe:token' \
      'https://connect.nuxeo.com/nuxeo/site/studio/v2/project/my-project/releases'
 ```
+
+{{! multiexcerpt name='token-management'}}
+{{#> callout type='info' heading='related documentation'}}
+Check our [token management]({{page space='studio' page='token-management'}}) page to see how to create a token.
+{{/callout}}
+{{! /multiexcerpt}}
