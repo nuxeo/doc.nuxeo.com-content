@@ -71,7 +71,7 @@ password yourTokenHere
 ```
 
 {{#> callout type='tip' heading='Security management'}}
-If your computer is compromised or stolen, then it is possible to revoke the token access directly from Nuxeo Online Services: Your password remains safe and no one can use the token to launch commands anymore.
+If your computer is compromised or stolen, then it is possible to [revoke the token]({{{page page='token-management'}}#revoking-a-token) access directly from Nuxeo Online Services: Your password remains safe and no one can use the token to launch commands anymore.
 {{/callout}}
 
 
