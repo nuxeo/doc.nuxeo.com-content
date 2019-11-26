@@ -63,7 +63,7 @@ Adding your credentials allows Maven to be authenticated in Studio while trying 
    ```
 
    {{#> callout type='warning' }}
-   It is recommended that you don't leave your password directly in the XML file. You can encrypt it by following the official [password encryption guide](https://maven.apache.org/guides/mini/guide-encryption.html).
+   It is recommended that you don't leave your token directly in the XML file. You can encrypt it by following the official [password encryption guide](https://maven.apache.org/guides/mini/guide-encryption.html).
    {{/callout}}
 
    {{{multiexcerpt 'token-management' page='how-to-tag-or-release-your-nuxeo-studio-project'}}}
