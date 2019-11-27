@@ -96,10 +96,9 @@ Versions in Studio must have the following format: `M.m.p[-q]` where:
 * M is the _major_ number. It should be incremented when new features are added and APIs were broken
 * m is the _minor_ number. It should be incremented when new features are added and no API was broken
 * p is the _patch_ number. It should be incremented when the release contains only bug fixes
-* q is the _qualifier_ string. It qualifies the release, eg: beta, rc1. Must contain only letters, numbers, '_', '-' or '.'
+* q is the _qualifier_ string. It qualifies the release, eg: beta, rc1. Must contain only letters, numbers, '\_', '-' or '.'
 
 For automation purposes it might be preferable to ask Studio to choose the next version type: `MAJOR`, `MINOR` or `PATCH` instead of specifying a version name. Studio will look for the latest release created in the history of the revision commit and try to release the next version as asked.
-
 {{! /multiexcerpt}}
 
 If the version name specified (or computed by Studio) already exists, then the release will not be allowed and will fail.
