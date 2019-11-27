@@ -178,13 +178,13 @@ history:
         date: '2010-06-21 14:59'
         message: ''
         version: '1'
-
 ---
+
 Nuxeo Studio offers a dedicated servlet that provides Maven artifacts for:
 
-* released versions of your project
-* current snapshot of all common branches of your project
-* current snapshot of all branches of each user's workspace (i.e. the work they are doing on a given branch but haven't yet shared by pushing staged commits).
+- released versions of your project
+- current snapshot of all common branches of your project
+- current snapshot of all branches of each user's workspace (i.e. the work they are doing on a given branch but haven't yet shared by pushing staged commits).
 
 You can get all available artifact on the following page: [https://connect.nuxeo.com/nuxeo/site/studio/maven/nuxeo-studio/PROJECT_ID](https://connect.nuxeo.com/nuxeo/site/studio/maven/nuxeo-studio/PPROJECT_ID/)
 
@@ -193,10 +193,10 @@ You can then easily integrate your Studio configuration to your build process. O
 ## Setting up the Maven Client
 
 Maven can be setup to add a dependency to a specific release, and to do continuous integration on a branch. In all cases, to be able to access Studio Maven artifacts:
+{{{multiexcerpt 'token-management' page='how-to-tag-or-release-your-nuxeo-studio-project'}}}  
 
-1.  Configure your Maven client to use authentication when accessing the Studio Maven repository. For this, edit (or create if it does not exist) the `~/.m2/settings.xml` file and add the following entry under the settings tag:
-
-    ```xml
+1. Configure your Maven client to use authentication when accessing the Studio Maven repository. For this, edit (or create if it does not exist) the `~/.m2/settings.xml` file and add the following entry under the settings tag:
+  ```xml
     <servers>
       ....
       <server>
@@ -206,13 +206,8 @@ Maven can be setup to add a dependency to a specific release, and to do continuo
       </server>
       ...
     </servers>
-
     ```
-
-{{{multiexcerpt 'token-management' page='how-to-tag-or-release-your-nuxeo-studio-project'}}}
-
-2.  Then in the POM (or a parent POM) where you need to add the dependency to the Studio project you should declare the Studio Maven repository like this:
-
+1. Then in the POM (or a parent POM) where you need to add the dependency to the Studio project you should declare the Studio Maven repository like this:
     ```xml
     <repositories>
       ...
@@ -229,20 +224,17 @@ Maven can be setup to add a dependency to a specific release, and to do continuo
       </repository>
       ...
     </repositories>
-
     ```
 
     {{#> callout type='tip' }}
-
     You notice we used the same server ID than in the `settings.xml` file. The repository is located under the same root as Studio client (but using the Maven relative path).
-
     {{/callout}}
 
 ### Setting up Continuous Integration on a Branch
 
 To set up a dependency to the latest snapshot of a Studio branch:
 
-1.  Go to the **Branch Management** screen and select a branch.
+1. Go to the **Branch Management** screen and select a branch.
 
 2. Press the `Maven GAV` button. This button is available both for the latest changes only available in your own workspace or for the ones that are shared for all users on the branch.
 
