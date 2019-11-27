@@ -221,7 +221,7 @@ Parameter values are taken as is, except for booleans. In that case, you can spe
 | `chunk_size` | 20 | int | 4.1.2 | Size of the chunks in MiB. Has to be above 0 and lower or equal to 20.
 | `chunk_upload` | True | bool | 4.1.2 | Activate the upload in chunks for files bigger than `chunk_limit`.
 | `client_version` | None | str | 4.2.0 | Force the client version to run when using the centralized update channel (must be >= 4.2.0).
-| `delay` | 30 | int | 2 | Delay in seconds before each remote check (calling the [NuxeoDrive.GetChangeSummary](https://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202019-10.10/viewOperation/NuxeoDrive.GetChangeSummary) operation).
+| `delay` | 30 | int | 2 | Delay in seconds before each remote check (calling the [NuxeoDrive.GetChangeSummary](https://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewOperation/NuxeoDrive.GetChangeSummary) operation).
 | `force-locale` | None | str | 2 | Force the reset to the language.
 | `handshake-timeout` | 60 | int | 2 | Define the handshake timeout in seconds.
 | `ignored-files` | ... | list | 2.4.1 | File names to ignore while syncing.
