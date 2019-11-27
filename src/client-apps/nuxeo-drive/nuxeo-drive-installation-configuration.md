@@ -220,9 +220,10 @@ Parameter values are taken as is, except for booleans. In that case, you can spe
 | `chunk_limit` | 20 | int | 4.1.2 | Size in MiB above which files will be uploaded in chunks (if `chunk_upload` is `True`). Has to be above 0.
 | `chunk_size` | 20 | int | 4.1.2 | Size of the chunks in MiB. Has to be above 0 and lower or equal to 20.
 | `chunk_upload` | True | bool | 4.1.2 | Activate the upload in chunks for files bigger than `chunk_limit`.
-| `delay` | 30 | int | 2 | Define the delay before each remote check.
+| `client_version` | None | str | 4.2.0 | Force the client version to run when using the centralized update channel (must be >= 4.2.0).
+| `delay` | 30 | int | 2 | Delay in seconds before each remote check (calling the [NuxeoDrive.GetChangeSummary](https://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202019-10.10/viewOperation/NuxeoDrive.GetChangeSummary) operation).
 | `force-locale` | None | str | 2 | Force the reset to the language.
-| `handshake-timeout` | 60 | int | 2 | Define the handshake timeout.
+| `handshake-timeout` | 60 | int | 2 | Define the handshake timeout in seconds.
 | `ignored-files` | ... | list | 2.4.1 | File names to ignore while syncing.
 | `ignored-prefixes` | ... | list | 2.4.1 | File prefixes to ignore while syncing.
 | `ignored-suffixes` | ... | list | 2.4.1 | File suffixes to ignore while syncing.
@@ -235,9 +236,9 @@ Parameter values are taken as is, except for booleans. In that case, you can spe
 | `proxy-server` | None | str | 2 | Define the address of the proxy server (e.g. `http://proxy.example.com:3128`). This can also be set up by the user from the Settings window.
 | `ssl-no-verify` | False | bool | 4.0.1 | Define if SSL errors should be ignored. Highly unadvised to enable this option.
 | `sync-and-quit` | False | bool | 4.2.0 | Launch the synchronization and then exit the application.
-| `timeout` | 30 | int | 2 | Define the socket timeout.
+| `timeout` | 30 | int | 2 | Define the socket timeout in seconds.
 | `tmp_file_limit` | 10.0 | float | 4.1.4 | File size in MiB. Files smaller than this limit will be written at once to the file rather than chunk by chunk.
-| `update-check-delay` | 3600 | int | 2 | Define the auto-update check delay. 0 means disabled.
+| `update-check-delay` | 3600 | int | 2 | Define the auto-update check delay in seconds. 0 means disabled.
 | `update-site-url` | [URL](https://community.nuxeo.com/static/drive-updates) | str | 2 | Configure a custom update website. See Nuxeo Drive Update Site for more details.
 | `use-analytics` | False | bool | 4.1.0 | Share anonymous usage analytics to help the developers build the best experience for you.
 | `use-sentry` | True | bool | 4.1.0 | Allow sharing error reports when something unusual happen.
