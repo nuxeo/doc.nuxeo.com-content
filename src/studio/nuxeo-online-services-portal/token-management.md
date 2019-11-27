@@ -8,7 +8,7 @@ review:
 toc: true
 ---
 
-As a commitment to an always improved security, Nuxeo Online Services delegates authentication to Okta. This allows us to secure it in advanced way, and provide additional security options.
+As a commitment to an always improved security, Nuxeo Online Services delegates authentication to Okta. This allows us to secure it in an advanced way, and provide additional security options.
 
 The counterpart is that whenever using commands in our clients and APIs that require authentication, your password can't be used. Nuxeo Online Services needs an alternative way for you to authenticate: that's when you should use a token.
 
