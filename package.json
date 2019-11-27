@@ -13,7 +13,7 @@
     "co": "^4.6.0",
     "lodash.defaultsdeep": "^4.6.1",
     "node-yaml-config": "0.0.5",
-    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v13.0.0-styling-updates.2",
+    "nuxeo-docs-builder": "nuxeo/doc.nuxeo.com#v13.0.0-styling-updates.3",
     "thenify": "^3.2.1"
   },
   "devDependencies": {
