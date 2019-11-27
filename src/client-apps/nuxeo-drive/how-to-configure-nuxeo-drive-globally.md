@@ -34,29 +34,18 @@ Here is what the default `nuxeo-drive-config.json` file looks like:
 
 ```json
 {
+  "channel": "centralized",
   "delay": 30,
   "ignored_prefixes": [".", "icon\r", "thumbs.db", "desktop.ini", "~$"],
   "ignored_suffixes": [".bak", ".crdownload", ".lock", ".nxpart", ".part", ".partial", ".swp", ".tmp", "~", ".dwl", ".dwl2"],
   "ignored_files": ["^atmp\\d+$"],
   "log_level_file": "DEBUG",
-  "timeout": 30,
-  "handshake_timeout": 60,
-  "channel": "release",
-  "update_check_delay": 3600,
-  "ui": "web"
+  "ui": "web",
+  "update_check_delay": 3600
 }
 ```
 
-- `delay`: Period in seconds for polling the remote changes.
-- `ignored_prefixes`: List of file prefixes to be ignored by the synchronization process.
-- `ignored_suffixes`: List of file suffixes to be ignored by the synchronization process.
-- `ignored_files`: List of Python regular expressions matching the file names to be ignored by the synchronization process.
-- `log_level_file`: Logging level of the log file among `ERROR`, `WARNING`, `INFO`, `DEBUG`, `TRACE`.
-- `timeout`: Timeout in seconds for the HTTP requests sent to the Nuxeo server.
-- `handshake_timeout`: Timeout in seconds for the handshaking with the Nuxeo server.
-- `channel`: Update channel.
-- `update_check_delay`: Period in seconds for polling application updates.
-- `ui`: The Nuxeo UI used by default among `web` (Web UI) and `jsf` (JSF UI).
+All available parameters and their description are listed on that page: [Configuration Parameters]({{page page='nuxeo-drive-installation-configuration'}}#configuration-parameters).
 
 * * *
 
@@ -66,6 +55,7 @@ Here is what the default `nuxeo-drive-config.json` file looks like:
 {{#> panel heading='Related Documentation'}}
 
 - [Nuxeo Drive developer documentation]({{page page='nuxeo-drive'}})
+- [Nuxeo Drive Installation / Configuration]({{page page='nuxeo-drive-installation-configuration'}})
 - [Nuxeo Drive FAQ]({{page version='' space='nxdoc' page='nuxeo-drive-faq'}})
 
 {{/panel}}
