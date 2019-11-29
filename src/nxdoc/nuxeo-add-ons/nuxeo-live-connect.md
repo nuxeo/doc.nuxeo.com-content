@@ -3,7 +3,7 @@ title: Nuxeo Live Connect
 description: Live Connect allows you to create a content application that handles cloud files (Dropbox, Google Drive, Box, OneDrive...) as if they were local files. Files remain in the cloud but they are referenced in the Nuxeo repository as if they were stored within it.
 review:
   comment: ''
-  date: '2017-12-15'
+  date: '2019-11-29'
   status: ok
 labels:
   - lts2016-ok

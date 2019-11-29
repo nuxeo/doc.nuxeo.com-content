@@ -207,6 +207,6 @@ The automation chain to configure is finally:
 - [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
 - [Content Automation Concepts]({{page page='content-automation-concepts'}})
 - [Document Templates and Automation Rendering Service]({{page page='document-templates-and-automation-rendering-service'}})
-- [Template Rendering Add-on]({{page page='template-rendering-addon'}})
+- [Template Rendering Addon]({{page page='template-rendering-addon'}})
 
 {{/panel}}</div></div>

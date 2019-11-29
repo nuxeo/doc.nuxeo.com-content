@@ -2,7 +2,7 @@
 title: Nuxeo Datadog Reporter
 review:
     comment: ''
-    date: '2016-12-13'
+    date: '2019-11-29'
     status: ok
 labels:
     - lts2016-ok

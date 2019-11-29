@@ -22,7 +22,7 @@ The [Nuxeo Zapier Integration](https://connect.nuxeo.com/nuxeo/site/marketplace/
 
 The Nuxeo Zapier integration allows end-user to:
 
-- Authenticate against Nuxeo instances with the add-on setup via OAuth 2
+- Authenticate against Nuxeo instances with the addon setup via OAuth 2
 - Configure Nuxeo Platform to subscribe to all Nuxeo Notifications (by default and custom)
 - Commands Nuxeo Platform via Nuxeo Automation operations
 

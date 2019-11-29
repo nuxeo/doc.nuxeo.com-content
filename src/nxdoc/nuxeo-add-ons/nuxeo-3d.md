@@ -99,8 +99,8 @@ history:
         date: '2016-10-07 16:29'
         message: ''
         version: '1'
-
 ---
+
 [Nuxeo Platform 3D](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-3d) provides support for 3D file types.
 
 ## Installation and Configuration

@@ -45,6 +45,8 @@ history:
         version: '1'
 ---
 
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 {{{excerpt space='userdoc' page='nuxeo-agenda'}}}
 
 ## Installation

@@ -2,7 +2,7 @@
 title: Nuxeo File System Exporter
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2019-11-29'
     status: ok
 labels:
     - content-review-lts2016
@@ -23,73 +23,77 @@ confluence:
     source_link: /display/NXDOC/Nuxeo+File+System+Exporter
 tree_item_index: 1700
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-15 11:45'
         message: ix Studio menu labe
         version: '11'
-    - 
+    -
         author: Solen Guitter
         date: '2015-12-14 16:50'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-08 17:34'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-12-08 17:20'
         message: ''
         version: '8'
-    - 
+    -
         author: Anne Jubert
         date: '2015-11-18 13:38'
         message: ''
         version: '7'
-    - 
+    -
         author: Anne Jubert
         date: '2015-11-18 13:37'
         message: ''
         version: '6'
-    - 
+    -
         author: Anne Jubert
         date: '2015-11-10 16:07'
         message: ''
         version: '5'
-    - 
+    -
         author: Anne Jubert
         date: '2015-11-10 16:05'
         message: ''
         version: '4'
-    - 
+    -
         author: Anne Jubert
         date: '2015-11-10 16:04'
         message: ''
         version: '3'
-    - 
+    -
         author: Anne Jubert
         date: '2015-11-10 15:57'
         message: ''
         version: '2'
-    - 
+    -
         author: Anne Jubert
         date: '2015-11-10 15:54'
         message: ''
         version: '1'
-
 ---
+
+{{#> callout type='info' heading='Nuxeo FS Exporter with Nuxeo Web UI'}}
+The default button to perform an export to a File System is exposed in **Nuxeo JSF UI**. You can perfectly use it in Nuxeo **Web UI** too, by creating a button in **Nuxeo Studio Modeler**, using the operation **Services** > **ExportStructureToFS**.
+{{/callout}}
+
 ## Functional Overview
 
-The File System Exporter package is an add-on for the Nuxeo platform to enable users exporting one chosen root structure of documents from their Nuxeo Platform to a specified File System directory.
+The File System Exporter package is an addon for the Nuxeo platform to enable users exporting one chosen root structure of documents from their Nuxeo Platform to a specified File System directory.
 
 The installation of the plugin will add a new operation in "Services" called "ExportStructureToFS". This operation must be added to the registries in Studio and then can be used in an automation chain.
 
 In the user interface, users will now see a new action button that allows them to export the structure with the following parameters defined in Studio:
 
-*   Root Path = `/default-domain/`
-*   File System target = `/tmp`
+- Root Path = `/default-domain/`
+- File System target = `/tmp`
 
 ![]({{file name='Screen Shot 2015-11-18 at 14.27.50.png'}} ?w=650,border=true)
 
@@ -99,9 +103,9 @@ After clicking on the export action, a connected user has now access to the enti
 
 The following rules are implemented by default:
 
-*   All the documents are exported&nbsp;
-*   When an exported document already exists in your File System directory, it will be prefixed with a timestamp. In this way, no document will be deleted&nbsp;
-*   The attached files to a document are exported in the same directory than the document. They are prefixed with the name of the document parent.
+- All the documents are exported&nbsp;
+- When an exported document already exists in your File System directory, it will be prefixed with a timestamp. In this way, no document will be deleted&nbsp;
+- The attached files to a document are exported in the same directory than the document. They are prefixed with the name of the document parent.
 
 ## Installation
 

@@ -154,7 +154,7 @@ This approach exists for a very long time and has the big advantage to provide a
 
 ![](https://www.lucidchart.com/publicSegments/view/544ff14a-9d34-4765-a115-21350a004d3d/image.png)
 
-The `nuxeo-multi-tenants` add-on provides a multi-tenant isolation system that adds to the Nuxeo Platform:
+The `nuxeo-multi-tenants` addon provides a multi-tenant isolation system that adds to the Nuxeo Platform:
 
 *   A configurable notion of tenant: By default a tenant is a domain.
 *   A user isolation at tenant level: Except for main administrators, users and groups and defined and managed at tenant level.

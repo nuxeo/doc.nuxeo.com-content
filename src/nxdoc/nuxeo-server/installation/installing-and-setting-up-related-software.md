@@ -660,7 +660,7 @@ $ brew install poppler
 
 {{! multiexcerpt name='imagemagick-intro'}}
 
-ImageMagick is used in association with Ghostscript to generate the document thumbnails. It is also used by the Nuxeo DAM add-on for the preview and tiling of pictures.
+ImageMagick is used in association with Ghostscript to generate the document thumbnails. It is also used by the Nuxeo DAM addon for the preview and tiling of pictures.
 
 {{! /multiexcerpt}}
 
@@ -736,7 +736,7 @@ $ brew install libwpd
 
 {{! multiexcerpt name='exiftool-intro'}}
 
-ExifTool is required by the Nuxeo Binary Metadata add-on. It is used to extract and override binaries metadata.
+ExifTool is required by the Nuxeo Binary Metadata addon. It is used to extract and override binaries metadata.
 
 {{! /multiexcerpt}}
 

@@ -120,7 +120,7 @@ history:
 {{{multiexcerpt 'JSF-UI-required' page='Generic Multi-Excerpts'}}}
 
 {{! excerpt}}
-The [Nuxeo Platform User Registration add-on](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-user-registration) enables users to invite external users to access a specific space of the Platform or a limited set of spaces. The invitations must be approved by an administrator of the Platform.
+The [Nuxeo Platform User Registration addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-platform-user-registration) enables users to invite external users to access a specific space of the Platform or a limited set of spaces. The invitations must be approved by an administrator of the Platform.
 {{! /excerpt}}
 
 ## Installation
@@ -143,7 +143,7 @@ You also have a new **User Registration** tab in the **Admin** tab.
 
 ### Setting Up Email Sending
 
-The Nuxeo Platform User Registration add-on sends email to the invited user with his credentials. So your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='set-up-email-notification'}}).
+The Nuxeo Platform User Registration addon sends email to the invited user with his credentials. So your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='set-up-email-notification'}}).
 
 ### Global Configuration
 

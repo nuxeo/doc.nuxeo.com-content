@@ -2,7 +2,7 @@
 title: Nuxeo Multi-Tenant
 review:
     comment: ''
-    date: '2017-12-28'
+    date: '2019-11-29'
     status: ok
 labels:
     - lts2016-ok

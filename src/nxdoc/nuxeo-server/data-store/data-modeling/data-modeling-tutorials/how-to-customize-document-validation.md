@@ -1,5 +1,5 @@
 ---
-title: How to Customize Document Validation
+title: 'HOWTO: Customize Document Validation'
 review:
     comment: ''
     date: '2016-12-06'

@@ -2,7 +2,7 @@
 title: Nuxeo Quota
 review:
     comment: ''
-    date: '2016-12-07'
+    date: '2019-11-29'
     status: ok
 labels:
     - lts2016-ok
@@ -160,12 +160,12 @@ history:
         date: '2012-09-11 18:12'
         message: ''
         version: '1'
-
 ---
+
+{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+
 {{! excerpt}}
-
-The [Nuxeo Quota add-on](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-quota) enables users to define a maximum size for the domains and workspaces they manage and provide some statistics about space use in your application.
-
+The [Nuxeo Quota addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-quota) enables users to define a maximum size for the domains and workspaces they manage and provide some statistics about space use in your application.
 {{! /excerpt}}
 
 ## Installation

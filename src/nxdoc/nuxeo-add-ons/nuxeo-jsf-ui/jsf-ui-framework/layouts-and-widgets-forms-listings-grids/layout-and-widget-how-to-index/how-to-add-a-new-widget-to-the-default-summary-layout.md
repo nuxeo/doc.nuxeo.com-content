@@ -126,7 +126,7 @@ Here is the definition of the widget referencing actions for the `SUMMARY_TOP_LE
 
 ```
 
-Default widgets (presenting the document relations, status, publications, etc...) are contributed to one of these zones, with orders separated by 100 (check out the explorer to get a complete overview, beware that add-ons&nbsp;may contribute to these zones already).
+Default widgets (presenting the document relations, status, publications, etc...) are contributed to one of these zones, with orders separated by 100 (check out the explorer to get a complete overview, beware that addons&nbsp;may contribute to these zones already).
 
 Here is a sample contribution to add a widget to the left widget panel:
 

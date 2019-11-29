@@ -363,7 +363,7 @@ This tutorial remains very interesting as it explains many basics of a Nuxeo mod
 
 {{/callout}}
 
-This recipe describes the steps to create the bare structure of a Nuxeo add-on project (aka a bundle).
+This recipe describes the steps to create the bare structure of a Nuxeo addon project (aka a bundle).
 
 This is the very first recipe of this cookbook and it will be the basis for the development of new bundles, of new features, even of new UI elements all along this cookbook. All the other recipes will assume that this recipe has been done.
 
@@ -531,7 +531,7 @@ The content of this file will be completed in a coming recipe.
 
 ### The `MANIFEST.MF` File
 
-As Nuxeo add-ons are OSGi modules, you have a `MANIFEST.MF` file in the `/src/main/resources/META-INF` folder.&nbsp;
+As Nuxeo addons are OSGi modules, you have a `MANIFEST.MF` file in the `/src/main/resources/META-INF` folder.&nbsp;
 
 Here is a sample that a `MANIFEST.MF` file must hold:
 
@@ -568,7 +568,7 @@ Bundle-SymbolicName: org.nuxeo.cookbook.cookbook-core;singleton=true
 The other properties are:
 
 *   `Bundle-Version`: This property is all on your responsibility. The Nuxeo convention is three digits separated by a dot such as "x.y.z";
-*   `Bundle-Vendor`: This is the name of the add-on owner.
+*   `Bundle-Vendor`: This is the name of the addon owner.
 
 Although not used in this recipe, there is one more property you should know of: `Nuxeo-Component:`.
 It contains a list of files used to define various elements of your component. Its use is detailed in [Writing a Bundle Manifest]({{page page='writing-a-bundle-manifest'}}).

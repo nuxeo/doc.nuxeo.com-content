@@ -90,10 +90,10 @@ history:
 {{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
 
 {{! excerpt}}
-The [Digital Signature add-on](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-signature) introduces PDF signing capabilities to the Nuxeo Platform. This add-on also provides generation of user certificates, which are required for document signing.
+The [Digital Signature addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-signature) introduces PDF signing capabilities to the Nuxeo Platform. This addon also provides generation of user certificates, which are required for document signing.
 {{! /excerpt}}
 
-The Nuxeo Platform Digital Signature add-on allows users to:
+The Nuxeo Platform Digital Signature addon allows users to:
 
 *   download the PDF for previewing,
 *   download the root certificate to install inside your PDF viewer for verifying any future certificates,
@@ -119,7 +119,7 @@ Digital signatures uniquely identify the document signer. They provide a similar
 
 ### What Is a Digital Certificate?
 
-Before you sign a document you need a digital certificate. Certificates are attached to documents to verify the identity of the signer, that is to check that the person signing the message is who they claim to be. Certificates are issued by Certificate Authorities (CA, also known as Issuer). To verify that a certificate has not been tampered with, it has to be validated against the CA's public key. If this verification is passed it means that the CA certifies the authenticity of the signer. Digital certificates are formatted using PKI standards, the most common of them is X.509, which is also used in this add-on.
+Before you sign a document you need a digital certificate. Certificates are attached to documents to verify the identity of the signer, that is to check that the person signing the message is who they claim to be. Certificates are issued by Certificate Authorities (CA, also known as Issuer). To verify that a certificate has not been tampered with, it has to be validated against the CA's public key. If this verification is passed it means that the CA certifies the authenticity of the signer. Digital certificates are formatted using PKI standards, the most common of them is X.509, which is also used in this addon.
 
 ![]({{file name='certificate_viewer.png'}} ?w=500,border=true)
 
@@ -359,7 +359,7 @@ Another extension provides general company information used in all certificates,
 
 ## Use
 
-When the Digital Signature add-on is installed on your Nuxeo Platform, you get some new tabs in your Nuxeo interface:
+When the Digital Signature addon is installed on your Nuxeo Platform, you get some new tabs in your Nuxeo interface:
 
 *   Users have a new **Certificates** tab in their **Home**, from which they can [generate their certificate](#generating-certificate) to be able to sign documents.
     ![]({{file name='signature-home-certificate-tab.png'}} ?w=650,border=true)
@@ -368,7 +368,7 @@ When the Digital Signature add-on is installed on your Nuxeo Platform, you get s
 
 ### Top-Level View
 
-From a high-level functional point of view, here is what users need to be able to do using the digital signature add-on:
+From a high-level functional point of view, here is what users need to be able to do using the digital signature addon:
 
 1.  User A creates a certificate.
 2.  User A signs a document.
