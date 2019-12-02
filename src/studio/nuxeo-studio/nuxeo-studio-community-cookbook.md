@@ -36,6 +36,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
+    ![comments.png](nx_asset://38adf904-b98c-4050-96d3-4be11652eab1 ?w=150,border=true)
+    </td>
+    <td>[Comment Indexing](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/comment-indexing)</td>
+    <td>Nuxeo</td>
+    <td>Search</td>
+  </tr>
+  <tr>
+    <td>
     ![eml-previewer.png](nx_asset://6a5aca58-8d58-4bb6-9df3-a5e8d33bf960 ?w=150,border=true)
     </td>
     <td>[EML Previewer](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/eml-previewer)</td>
