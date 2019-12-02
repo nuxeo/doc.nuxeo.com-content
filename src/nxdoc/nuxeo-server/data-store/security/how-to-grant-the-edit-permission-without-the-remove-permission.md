@@ -36,30 +36,31 @@ tree_item_index: 400
 As described on the page [Managing Permissions]({{page space='userdoc' page='permissions'}}), the **Edit** permission, visible in the UI, contains the permission to remove content (`Remove`).</br>
 It means that you cannot grant the **Edit** permission (`Write`) without the `Remove` permission at the same level of the repository.
 
-So if you want to be able to grand the **Edit** permission without the `Remove` one, you need to override the [default `Write` permission](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.core.security.defaultPermissions--permissions).
+So if you want to be able to grand the **Edit** permission without the `Remove` one, you need to override the [default `ReadWrite` permission](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.core.security.defaultPermissions--permissions).
 
-## Procedure
+We will do that in two steps:
+- First, override the default **Edit** permission to remove the `Remove` permission.
+- Then, create a new permission `ReadWriteAndRemove` (equivalent to the default **Edit** permission overridden above).
+
+## Override the Edit Permission
 
 1.  [Add a new contribution]({{page page='how-to-contribute-to-an-extension'}}) to remove the `Remove` permission from `Write` permission.</br>
 Check the [Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202019-10.10/viewExtensionPoint/org.nuxeo.ecm.core.security.SecurityService--permissions) page to update the suitable extension point.
 
-    ```xml
-    <extension target="org.nuxeo.ecm.core.security.SecurityService"
-      point="permissions">
-      <permission name="Write">
-        <remove>Remove</remove>
-      </permission>
-   </extension>
-    ```
+  ```xml
+  <extension target="org.nuxeo.ecm.core.security.SecurityService"
+    point="permissions">
+    <permission name="Write">
+      <remove>Remove</remove>
+    </permission>
+  </extension>
+  ```
 
-    This change will make the permission `ReadWrite`, displayed under the permission label "Edit" in the UI, act as wanted: it no longer includes the right to remove content.
+This change will make the permission `ReadWrite`, displayed under the permission label "Edit" in the UI, act as wanted: it no longer includes the right to remove content.
 
-    {{#> callout type='warning' heading='Negative Permissions' }}
-    Negative permissions are disabled by default, due to Elasticsearch limitations. </br>
-    Check out the [Upgrade Notes to Nuxeo Platform 6.0]({{page space='nxdoc' page='upgrade-from-58-to-60'}}#migrating-negative-permissions).
-    {{/callout}}
+## Create a New Permission
 
-    If you want users to be able to add and remove content, you must now grant them the Edit permission and the Remove permission. Or you can add a new permission that will behave like the default `ReadWrite` permission used to.
+If you want users to be able to add and remove content, you must now grant them the Edit permission and the Remove permission. Or you can add a new permission that will behave like the default `ReadWrite` permission used to.
 
 1.  Define a new global permission to read, edit and remove content.
 
@@ -89,10 +90,14 @@ Check the [Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/10
       </extension>
     ```
 
-    ![]({{file name='ReadWriteAndRemove_permission_UI.png'}} ?w=400,border=true)
+1.  [Deploy your customizations]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}#hot-reload).
 
-1.  Add the new permission label to [your internationalization files]({{page page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}}).
-1.  [Deploy your customizations]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Grant the Edit Permission without the Remove Permission/ReadWriteAndRemove_permission_UI.png
+    name: readwriteandremove-permission-ui.png
+    1.1.3#screenshot#up_to_date
+--}}
+![readwriteandremove-permission-ui.png](nx_asset://5648e7f2-0ccf-4680-af6b-f4ba352ec9e3 ?w=350,border=true)
 
 &nbsp;
 
