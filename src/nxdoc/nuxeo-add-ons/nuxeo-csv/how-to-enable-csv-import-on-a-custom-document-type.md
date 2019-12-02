@@ -6,7 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: "If you installed the Nuxeo CSV add-on from the Nuxeo Marketplace, you'll probably want to enable CSV import on the document types you defined. Here is how to do that."
+        excerpt: "If you installed the Nuxeo CSV addon from the Nuxeo Marketplace, you'll probably want to enable CSV import on the document types you defined. Here is how to do that."
         level: Beginner
         tool: Studio
         topics: 'Document type, Nuxeo CSV'
@@ -122,7 +122,7 @@ Watch the related courses on Nuxeo University
 
 {{! excerpt}}
 
-If you installed the Nuxeo CSV add-on from the Nuxeo Marketplace, you'll probably want to enable CSV import on the document types you defined, either in Studio or with some code. Here is how to do that.
+If you installed the Nuxeo CSV addon from the Nuxeo Marketplace, you'll probably want to enable CSV import on the document types you defined, either in Studio or with some code. Here is how to do that.
 
 {{! /excerpt}}
 

@@ -544,7 +544,7 @@ This mechanism is controlled by an application property, here is a sample contri
 
 ## Branding and Resources
 
-Resources can be inserted directly inside each template.&nbsp;But some add-ons need to add styling and JavaScript to existing pages without changing the global structure of the page, or overriding the original XHTML template: for modularity reasons, these resources are contributed to dedicated runtime extension points that support override and merging.
+Resources can be inserted directly inside each template.&nbsp;But some addons need to add styling and JavaScript to existing pages without changing the global structure of the page, or overriding the original XHTML template: for modularity reasons, these resources are contributed to dedicated runtime extension points that support override and merging.
 
 ### Pages
 

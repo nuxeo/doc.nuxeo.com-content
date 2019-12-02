@@ -2,7 +2,7 @@
 title: Nuxeo Lambda PictureView Conversion
 review:
     comment: ''
-    date: '2018-01-26'
+    date: '2019-11-29'
     status: ok
 labels:
     - gcarlin
@@ -14,7 +14,7 @@ tree_item_index: 2060
 ---
 
 {{#> callout type='info'}}
-Watch the related courses on Nuxeo University
+Watch the related courses on Nuxeo University:
 - [DAM Architecture course](https://university.nuxeo.com/learn/public/course/view/elearning/98/dam-architecture).
 - [LTS 2017 new feature with Nuxeo Stream and the Lambda integration](https://university.nuxeo.com/learn/public/course/view/elearning/126/lts-2017-new-features) *(min 3'00)*
 ![]({{file name='nx_lambda_university.png'}} ?w=600,border=true)

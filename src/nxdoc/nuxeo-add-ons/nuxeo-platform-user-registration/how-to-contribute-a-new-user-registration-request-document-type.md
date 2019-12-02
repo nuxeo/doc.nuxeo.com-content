@@ -6,7 +6,7 @@ review:
     status: ok
 details:
     howto:
-        excerpt: Learn how to contribute new request types to the  add-on.
+        excerpt: Learn how to contribute new request types to the addon.
         level: Intermediate
         tool: Studio
         topics: User registration
@@ -47,7 +47,7 @@ history:
         version: '1'
 
 ---
-If you want to define other request metadata that should be filled in when inviting users to a workspace, you need to contribute a new user registration document type to the [Nuxeo Platform User Registration]({{page page='nuxeo-platform-user-registration'}}) add-on. This can be done [using an XML contribution]({{page page='how-to-contribute-to-an-extension'}}).
+If you want to define other request metadata that should be filled in when inviting users to a workspace, you need to contribute a new user registration document type to the [Nuxeo Platform User Registration]({{page page='nuxeo-platform-user-registration'}}) addon. This can be done [using an XML contribution]({{page page='how-to-contribute-to-an-extension'}}).
 
 ## Pre requisites
 

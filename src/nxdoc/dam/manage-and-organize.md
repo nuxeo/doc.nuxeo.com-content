@@ -16,9 +16,9 @@ Once your assets are uploaded and/or created on your instance you will probably 
 
 ## Bulk Edit
 
-The Nuxeo Spreadsheet add-on allows to bulk edit documents starting from a content view result set, providing a spreadsheet-like user experience.
+The Nuxeo Spreadsheet addon allows to bulk edit documents starting from a content view result set, providing a spreadsheet-like user experience.
 
-This add-on allows you to edit data in your repository as if you were in a spreadsheet-like grid, like copy and paste by dragging the cell's value.
+This addon allows you to edit data in your repository as if you were in a spreadsheet-like grid, like copy and paste by dragging the cell's value.
 
 ![]({{file name='spreadsheet-view.png' page='nuxeo-spreadsheet'}} ?w=450,border=true)
 

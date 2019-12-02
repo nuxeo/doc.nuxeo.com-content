@@ -2,7 +2,7 @@
 title: Scan Documents Importer
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2019-11-29'
     status: ok
 labels:
     - lts2016-ok
@@ -106,7 +106,6 @@ history:
         date: '2014-04-02 12:02'
         message: ''
         version: '1'
-
 ---
 
 The [Scan Documents Importer addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-scan-importer) allows to create documents from XML files located on the file system every time a dedicated event is launched. It can therefore be easily configured to import data on a regular basis.

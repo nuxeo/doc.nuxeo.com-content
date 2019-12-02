@@ -1,5 +1,5 @@
 ---
-title: How to Add Complex Fields on Your Document Type
+title: 'HOWTO: Add Complex Fields on Your Document Type'
 review:
     comment: ''
     date: '2015-12-01'

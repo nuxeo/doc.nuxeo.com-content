@@ -362,7 +362,7 @@ Contribution is welcome both for technical (books and guides, FAQ, tutorials) an
 Testing is always welcome, particularly when Nuxeo submits a new Fast Track version of its products. As our products are easily downloadable, it doesn't require any specific development skill.
 
 1.  Download the version you want to test, set it up.
-2.  Get and read the [user guide]({{page space='userdoc'}}) for the selected distribution and add-ons.
+2.  Get and read the [user guide]({{page space='userdoc'}}) for the selected distribution and addons.
 3.  For any bug you detect, ask for a confirmation on [Nuxeo Answers](https://answers.nuxeo.com/), [create a JIRA ticket](http://jira.nuxeo.com/), specifying the version of the product, the environment (OS, browser, ...), the conditions and the reproduction steps. Before each release every ticket is read and depending on its severity, fixed before the release or postponed.
 
 ## Improvements and Bug Fixes

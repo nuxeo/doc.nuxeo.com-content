@@ -1,12 +1,12 @@
 ---
-title: 'HOWTO: Enable Add-Ons Features on Custom Document Type'
+title: 'HOWTO: Enable Addons Features on Custom Document Type'
 review:
     comment: ''
     date: '2017-12-13'
     status: ok
 details:
     howto:
-        excerpt: Learn how to apply features provided by add-ons on your document type.
+        excerpt: Learn how to apply features provided by addons on your document type.
         level: Intermediate
         tool: Studio
         topics: Document type
@@ -118,7 +118,7 @@ history:
 ---
 
 {{! excerpt}}
-To know how to apply features provided by the Nuxeo Marketplace add-ons on your document types and features defined in Studio, see the documentation of the add-ons.
+To know how to apply features provided by the Nuxeo Marketplace addons on your document types and features defined in Studio, see the documentation of the addons.
 {{! /excerpt}}
 
 - [HOWTO: Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})

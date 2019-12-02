@@ -21,7 +21,7 @@ version_override:
 
 {{{excerpt space='nxdoc' page='data-modeling'}}}
 
-[More <i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page space='nxdoc' page=data-modeling}})
+[More <i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page space='nxdoc' page='data-modeling'}})
 {{/panel}}
 </div>
 

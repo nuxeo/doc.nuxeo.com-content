@@ -206,7 +206,7 @@ This addon includes two new template document types, called "Template" and "Web 
 
 ### Nuxeo Template Rendering Samples
 
-The template rendering samples addon lets you discover through an inspiring demo how the template rendering add-on can improve your everyday business processes. This demo showcases the BigCorp company, generating financial reports for internal use, and case studies demonstrating their expertise for potential new customers. All being achieved by extracting their relevant content into office templates on the fly.
+The template rendering samples addon lets you discover through an inspiring demo how the template rendering addon can improve your everyday business processes. This demo showcases the BigCorp company, generating financial reports for internal use, and case studies demonstrating their expertise for potential new customers. All being achieved by extracting their relevant content into office templates on the fly.
 
 This addon depends on Nuxeo Template Rendering. It includes:
 
@@ -452,7 +452,7 @@ The Template rendering addon enables to publish a rendition of the document inst
     The document's rendition is submitted to publishing and must approved using the [usual publishing process]({{page space='userdoc' page='publishing-content'}}).
 
 {{#> callout type='info' }}
-If you use the multi-tenant add-on at the same time, you should be aware that due to some technical limitations, models bound to a given document type are bound whatever the tenant the model is stored in.
+If you use the multi-tenant addon at the same time, you should be aware that due to some technical limitations, models bound to a given document type are bound whatever the tenant the model is stored in.
 {{/callout}}
 
 ## Technical Overview

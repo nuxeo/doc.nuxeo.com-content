@@ -188,7 +188,7 @@ For simple and automatic GC (garbage collection in the JVM) monitoring, see the 
 
 *   What version of Nuxeo are you using?
     *   What distribution are you using (CAP, DM, DAM, ...)?
-    *   Any specific add-ons that may be relevant (Quotas, Multi-Tenant, custom code)?
+    *   Any specific addons that may be relevant (Quotas, Multi-Tenant, custom code)?
 *   What database server are you using? MSSQL, Oracle, PostgreSQL, other?
 *   What is the hardware you are testing on?
 

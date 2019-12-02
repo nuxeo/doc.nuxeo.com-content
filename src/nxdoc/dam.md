@@ -37,7 +37,7 @@ toc: true
 
 ## [Manage & Organize]({{page page='manage-and-organize'}})
 
-- **Bulk Edit**</br>Nuxeo Spreadsheet add-on allows to bulk edit documents starting from a content view result set, providing a spreadsheet-like user experience. It enables you to add and/or remove metadata (like Nature, Subject, etc.), rename files, add information to a new metadata field, add a description, etc.
+- **Bulk Edit**</br>Nuxeo Spreadsheet addon allows to bulk edit documents starting from a content view result set, providing a spreadsheet-like user experience. It enables you to add and/or remove metadata (like Nature, Subject, etc.), rename files, add information to a new metadata field, add a description, etc.
 
 - **Versioning**</br>The Nuxeo Repository includes a versioning system. At any time, you can ask the repository to create and archive a version of a document. Versioning can be done automatically, according to some versioning policies, or on-demand, through the UI.
 

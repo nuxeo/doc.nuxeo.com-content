@@ -59,7 +59,7 @@ history:
         version: '1'
 
 ---
-This section lists additional services and modules that are part of the default distribution of the Nuxeo Platform. You can also refer to the [Nuxeo add-ons page]({{page page='nuxeo-add-ons'}}) to understand how to integrate features offered by additional plugins.
+This section lists additional services and modules that are part of the default distribution of the Nuxeo Platform. You can also refer to the [Nuxeo addons page]({{page page='nuxeo-add-ons'}}) to understand how to integrate features offered by additional plugins.
 
 <div class="row" data-equalizer data-equalize-on="medium">
 

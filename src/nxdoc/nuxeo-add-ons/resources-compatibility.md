@@ -101,7 +101,7 @@ history:
 ---
 {{! excerpt}}
 
-The&nbsp;[Resources Compatibility add-on](https://connect.nuxeo.com/nuxeo/site/marketplace/package/resources-compat) provides backward compatibility with web resources (icons, JavaScript, ...) that have been removed from the previous LTS release of Nuxeo Platform.
+The&nbsp;[Resources Compatibility addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/resources-compat) provides backward compatibility with web resources (icons, JavaScript, ...) that have been removed from the previous LTS release of Nuxeo Platform.
 
 {{! /excerpt}}
 
@@ -109,6 +109,6 @@ It requires no specific installation steps. It can be installed like any other p
 
 It allows you to keep using elements that we have removed from a version of the Platform to another, like icons, XHTML templates, images, etc, in your customizations. To know which resources it holds, you need to explore the nuxeo-resources-compat JAR from `$NUXEO/nxserver/bundles`.
 
-For each LTS version, we provide a new version of the add-on that holds the resources that have been removed since the previous LTS version.
+For each LTS version, we provide a new version of the addon that holds the resources that have been removed since the previous LTS version.
 
-Once your platform is upgraded, we highly recommend that you take the resources you need and move them into a custom bundle. The resources-compat add-on is meant to help you keep compatibility as the platform and your project evolve, but is not meant to be a permanent solution.
+Once your platform is upgraded, we highly recommend that you take the resources you need and move them into a custom bundle. The resources-compat addon is meant to help you keep compatibility as the platform and your project evolve, but is not meant to be a permanent solution.

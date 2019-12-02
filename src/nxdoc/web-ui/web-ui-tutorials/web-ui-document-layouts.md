@@ -40,7 +40,7 @@ Watch the related course on Nuxeo University:</br>
 
 ## Prerequisites
 
-The [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) add-on is installed on your instance.
+The [Nuxeo Web UI]({{page version='' space='nxdoc' page='web-ui'}}) addon is installed on your instance.
 
 ## Create a Contract Document Type
 

@@ -2,7 +2,7 @@
 title: Nuxeo Spreadsheet
 review:
     comment: ''
-    date: '2017-12-13'
+    date: '2019-11-29'
     status: ok
 labels:
     - lts2016-ok
@@ -110,15 +110,13 @@ history:
         date: '2014-11-06 10:23'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
-The Nuxeo Spreadsheet add-on allows to bulk edit documents starting from a content view result set, providing a spreadsheet-like user experience.
-
+The Nuxeo Spreadsheet addon allows to bulk edit documents starting from a content view result set, providing a spreadsheet-like user experience.
 {{! /excerpt}}
 
-This add-on allows you to edit data in your repository as if you were in a spreadsheet-like grid, like copy and paste by dragging the cell's value.
+This addon allows you to edit data in your repository as if you were in a spreadsheet-like grid, like copy and paste by dragging the cell's value.
 
 ![]({{file name='spreadsheet-view.png'}} ?w=650,border=true)
 
@@ -224,7 +222,7 @@ Note that the spreadsheet expects the enricher's name to match the directory nam
 - The system information in read-only like Modified, Version and State are in grey to disable users to modify them.
 - For more information about the Mapping between listing layouts widgets and the displayed cell types, see [https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/9.10/nuxeo-platform-spreadsheet-web/src/main/js/app/ui/widgets.js#L64](https://github.com/nuxeo/nuxeo-platform-spreadsheet/blob/9.10/nuxeo-platform-spreadsheet-web/src/main/js/app/ui/widgets.js#L64)
 
-The Nuxeo Spreadsheet add-on is done integrating [Handsontable](http://handsontable.com/).
+The Nuxeo Spreadsheet addon is done integrating [Handsontable](http://handsontable.com/).
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 

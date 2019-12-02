@@ -858,6 +858,6 @@ All operations there are around running and managing workflow instances. It is a
 
 {{#> callout type='info' }}
 
-Installing some modules from the [Nuxeo Marketplace](http://marketplace.nuxeo.com/) also deploys new operations. This is for instance the case with the Nuxeo Drive add-on, as well as with Template Rendering add-on. You can always check what operations are available on your Nuxeo Platform instance at the following URL: http://NUXEO_SERVER/nuxeo/site/automation/doc.
+Installing some modules from the [Nuxeo Marketplace](http://marketplace.nuxeo.com/) also deploys new operations. This is for instance the case with the Nuxeo Drive addon, as well as with Template Rendering addon. You can always check what operations are available on your Nuxeo Platform instance at the following URL: http://NUXEO_SERVER/nuxeo/site/automation/doc.
 
 {{/callout}}
