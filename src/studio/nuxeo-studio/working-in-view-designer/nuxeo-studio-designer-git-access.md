@@ -2,14 +2,15 @@
 title: Studio Designer Git Access
 description: Learn how to use direct access to the underlying Git project for Studio Designer.
 review:
-    comment: ''
-    date: ''
-    status: ok
+  comment: ''
+  date: ''
+  status: ok
 toc: false
 tree_item_index: 500
 ---
 
 ## About Studio Designer Git Access
+
 When configuring Web UI, Studio Designer allows to edit the generated files directly and add your custom HTML / JavaScript code. This allows developers to do advanced customization.
 
 {{#> callout type='info' heading='Nuxeo University'}}
@@ -28,13 +29,14 @@ While this is great, the browser is not the right place to do anything beyond si
 
 Studio Designer Git Access is available to any customer benefiting from the branch management feature.
 To activate it, request it through a support ticket by indicating:
+
 - Who should be given access
 - Which access these people should obtain (read or write)
 - On which project(s)
 
 ## Feature Scope and Restrictions
 
- Nuxeo Studio Designer Git access has been designed to allow for productivity while keeping reasonable restrictions for security and ease of use reasons.
+Nuxeo Studio Designer Git access has been designed to allow for productivity while keeping reasonable restrictions for security and ease of use reasons.
 
 ### Scope
 
@@ -58,12 +60,14 @@ To activate it, request it through a support ticket by indicating:
 As a prerequisite, a Git client should be installed on your computer.
 
 Once logged in to Nuxeo Online Services:
+
 1. Generate a [personal access token]({{page page='token-management'}}) in the `My Tokens` tab if you don't have one yet. It will be requested as a password to clone the project.
 1. Visit the `My Applications` tab
 1. Copy the Git URL to clone your project
 1. On your computer, clone your project using your Git client (typically `git clone [project URL]`). When prompted, use your Nuxeo Online Services username and your personal access token.
 
 To avoid having to type your token's content repeatedly, we recommend storing it using Git's standard `.netrc` file mechanism. On Linux operating systems, it is generally created under `~/.netrc`. On Windows machines, you have to create a `_netrc` file in `%HOME%` (More information [here](https://stackoverflow.com/questions/6031214/git-how-to-use-netrc-file-on-windows-to-save-user-and-password#6031266)). The file contains the following lines:
+
 ```
 machine connect.nuxeo.com
 login yourNOSLoginHere
@@ -71,11 +75,11 @@ password yourTokenHere
 ```
 
 {{#> callout type='tip' heading='Security management'}}
-If your computer is compromised or stolen, then it is possible to [revoke the token]({{{page page='token-management'}}#revoking-a-token) access directly from Nuxeo Online Services: Your password remains safe and no one can use the token to launch commands anymore.
+If your computer is compromised or stolen, then it is possible to [revoke the token]({{page page='token-management'}}#revoking-a-token) access directly from Nuxeo Online Services: Your password remains safe and no one can use the token to launch commands anymore.
 {{/callout}}
 
-
 ### Making Changes
+
 The recommended flow is the following:
 
 1. On your computer, create a branch for your changes. It has to start with `feature/`.
@@ -88,11 +92,12 @@ It is also possible to use any existing feature branch (feature branches are all
 {{/callout}}
 
 ### Checking and Integrating the Result
+
 Have a look at your changes in Studio:
 
 1. Check out the `feature/your-branch-name` branch if needed
 1. Pull changes.
-    Studio regularly checks for new commits to pull.
+   Studio regularly checks for new commits to pull.
 1. You can follow the procedure described in the [Studio configuration review how-to]({{page page='how-to-review-nuxeo-studio-configuration'}}) to integrate your changes in the master branch.
 
 <div class="row" data-equalizer data-equalize-on="medium">
@@ -100,8 +105,9 @@ Have a look at your changes in Studio:
 <div class="column medium-6">
 
 {{#> panel heading='Related Documentation'}}
+
 - [How to Develop Faster with Git and Your Nuxeo Studio Project]({{page page='how-to-work-with-git-and-studio-project'}})
-{{/panel}}
+  {{/panel}}
 
 </div>
 
