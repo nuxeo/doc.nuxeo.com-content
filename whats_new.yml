@@ -1,0 +1,11 @@
+default:
+  whats_new:
+    - url: /x
+      date: '2019-12-03'
+      title: New add-on Google Storage
+    - url: /y
+      date: '2019-11-08'
+      title: Great new feature
+    - url: /z
+      date: '2019-10-07'
+      title: You can't live without this
