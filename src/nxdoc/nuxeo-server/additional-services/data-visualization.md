@@ -120,7 +120,6 @@ history:
         date: '2015-09-30 09:27'
         message: ''
         version: '1'
-
 ---
 
 Data Visualization support in Nuxeo leverages Web Components and the Polymer framework in order to allow users to easily build their own custom dashboards, thus helping them understand how data is distributed in the repository as well as monitoring workflow activity.
@@ -201,6 +200,8 @@ Our element would produce a request like this:
             metric: { // metric
               sum: {
                 field : "extended.workflowVariables.amount"
+                  }
+                }
               }
             }
           }
@@ -208,8 +209,7 @@ Our element would produce a request like this:
       }
     }
   }
-}
-```
+  ```
 
 By building a custom element to help users query the Workflow Audit Log, we not only provide a simpler more fluent declarative syntax, but we can also decouple from Elasticsearch's specificities in most use cases.
 
@@ -221,19 +221,21 @@ Data returned from Elasticsearch is also processed for simplification and consis
 
 ### Web UI Workflow Analytics Dashboards
 
-**Source file on GitHub**: [nuxeo-workflow-analytics.html](https://github.com/nuxeo/nuxeo-web-ui/blob/master/elements/nuxeo-admin/nuxeo-workflow-analytics.html)
+**Source file on GitHub**: [nuxeo-workflow-analytics.html](https://github.com/nuxeo/nuxeo-web-ui/blob/10.10/elements/nuxeo-admin/nuxeo-workflow-analytics.html)
 
 ![]({{file name='web_ui_workflows_analytics.png'}} ?w=600)
 
 ### JSF UI Review Workflows Dashboards
 
-**GitHub project**: [https://github.com/nuxeo/nuxeo-review-workflows-dashboards](https://github.com/nuxeo/nuxeo-review-workflows-dashboards)
+**GitHub project**: [https://github.com/nuxeo/nuxeo-review-workflows-dashboards](https://github.com/nuxeo/nuxeo-review-workflows-dashboards/tree/10.10)
 
-**Serial Review Dashboard**: [https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/master/src/main/elements/nx-workflow-dashboard/nx-serial-workflow-dashboard.html](https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/master/src/main/elements/nx-workflow-dashboard/nx-serial-workflow-dashboard.html)
+**Serial Review Dashboard**: [https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/10.10/src/main/elements/nx-workflow-dashboard/nx-serial-workflow-dashboard.html](https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/10.10/src/main/elements/nx-workflow-dashboard/nx-serial-workflow-dashboard.html)
 
-**Parallel Review Dashboard**: [https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/master/src/main/elements/nx-workflow-dashboard/nx-parallel-workflow-dashboard.html](https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/master/src/main/elements/nx-workflow-dashboard/nx-parallel-workflow-dashboard.html) [ ](https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/master/src/main/elements/nx-workflow-dashboard/nx-parallel-workflow-dashboard.html)
+**Parallel Review Dashboard**: [https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/10.10/src/main/elements/nx-workflow-dashboard/nx-parallel-workflow-dashboard.html](https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/10.10/src/main/elements/nx-workflow-dashboard/nx-parallel-workflow-dashboard.html) [ ](https://github.com/nuxeo/nuxeo-review-workflows-dashboards/blob/10.10/src/main/elements/nx-workflow-dashboard/nx-parallel-workflow-dashboard.html)
 
 ![]({{file name='review_workflows_dashboards.png'}} ?w=600)
+
+<!-- Deprecated since 7.10
 
 ### Travel Expenses Sample Dashboard
 
@@ -242,3 +244,4 @@ Data returned from Elasticsearch is also processed for simplification and consis
 **Dashboard**: [https://github.com/nuxeo/nuxeo-travel-expenses/blob/master/src/main/yo/app/elements/nx-workflow-dashboard/nx-workflow-dashboard.html](https://github.com/nuxeo/nuxeo-travel-expenses/blob/master/src/main/yo/app/elements/nx-workflow-dashboard/nx-workflow-dashboard.html)
 
 ![]({{file name='travel_expenses_dashboard.png'}} ?w=600,border=true)
+-->
