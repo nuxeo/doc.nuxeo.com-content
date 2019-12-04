@@ -1,11 +1,17 @@
 default:
   whats_new:
-    - url: /x
+    - url: /nxdoc/howto-manage-relations/
+      date: '2019-11-19'
+      title: HOWTO: Manage Relations on a Document
+    - url: /nxdoc/how-to-set-enhanced-viewer-as-default-document-preview/
+      date: '2019-11-20'
+      title: HOWTO: Make the Enhanced Viewer the Default Previewer
+    - url: /studio/nuxeo-studio-community-cookbook/
       date: '2019-12-03'
-      title: New add-on Google Storage
-    - url: /y
-      date: '2019-11-08'
-      title: Great new feature
-    - url: /z
-      date: '2019-10-07'
-      title: You can't live without this
+      title: Nuxeo Studio Community Cookbook
+    - url: /studio/how-to-create-and-use-document-facets/
+      date: '2019-12-03'
+      title: HOWTO: Create and Use Document Facets
+    - url: /nxdoc/how-to-disable-trash/
+      date: '2019-12-03'
+      title: HOWTO: Disable Trash Actions, Tab and Search
