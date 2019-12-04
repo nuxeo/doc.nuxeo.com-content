@@ -191,3 +191,12 @@ Annotations:
 | Update an annotation by its external entity id | PUT         | `/@annotation/external/{entityId}`                          | Annotation with updates | Updated external annotation       |
 | Delete an annotation                           | DELETE      | `/@annotation/{annotationId}`                               | /                       | /                                 |
 | Delete an annotation by its external entity id | DELETE      | `/@annotation/external/{entityId}`                          | /                       | /                                 |
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Comment Indexing](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/comment-indexing)
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>
