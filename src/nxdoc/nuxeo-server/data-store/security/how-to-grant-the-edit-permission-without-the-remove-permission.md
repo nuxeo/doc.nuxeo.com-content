@@ -60,7 +60,7 @@ This change will make the permission `ReadWrite`, displayed under the permission
 
 ## Create a New Permission
 
-If you want users to be able to add and remove content, you must now grant them the Edit permission and the Remove permission. Or you can add a new permission that will behave like the default `ReadWrite` permission used to.
+If you want users to be able to add and remove content, you must now grant them the `Write` permission and `Remove` permission. Or you can add a new permission that will behave like the default `ReadWrite` permission used to.
 
 1.  Define a new global permission to read, edit and remove content.
 
