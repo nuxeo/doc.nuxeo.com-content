@@ -56,7 +56,7 @@ Check the [Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/Nu
   </extension>
   ```
 
-This change will make the permission `ReadWrite`, displayed under the permission label "Edit" in the UI, act as wanted: it no longer includes the right to remove content.
+This change will make the permission `ReadWrite`, displayed under the permission label **Edit** in the UI, act as wanted: it no longer includes the right to remove content.
 
 ## Create a New Permission
 
