@@ -2,7 +2,7 @@
 title: URLs for Files
 review:
     comment: ''
-    date: '2019-10-21'
+    date: '2019-12-05'
     status: ok
 labels:
     - content-review-lts2016
@@ -163,51 +163,9 @@ history:
         version: '1'
 ---
 
-{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
+## Generic File URLs
 
-## File URLs within JSF Context Only
-
-{{! multiexcerpt name='download_url_pattern'}}
-
-The default URL patterns for downloading files from within the JSF environment are:
-
-- `http://NUXEO_SERVER/nuxeo/nxfile/{repository}/{uuid}/blobholder:{blobIndex}/{fileName}`
-- `http://NUXEO_SERVER/nuxeo/nxfile/{repository}/{uuid}/{propertyXPath}/{fileName}`
-
-Where :
-- `nxfile` is the download servlet.
-    Note that `nxbigfile`&nbsp;is also accepted for compatibility with older versions.
-- `repository`&nbsp;is the identifier of the target repository.
-- `uuid`&nbsp;is the uuid of the target document.
-- `blobIndex`&nbsp;is the index of the Blob inside the&nbsp;`BlobHolder`&nbsp;adapter corresponding to the target Document Type,starting at 0: `blobholder:0`,&nbsp;`blobholder:1`.
-- `propertyXPath`&nbsp;is the xPath of the target Blob property inside the target document. For instance: `file:content` ,&nbsp; `files:files/0/file`.
-- `fileName`&nbsp;is the name of the file as it should be downloaded.
-    This information is optional and is actually not used to do the resolution.
-- `?inline=true` is an optional parameter to force the download to be made with&nbsp;`Content-Disposition: inline`. This means that the content will be displayed in the browser (if possible) instead of being downloaded.
-
-Here are some examples:
-
-- The main file of the document:
-    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496`
-- The main file of the document with a different name:
-    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:0/mydocument.pdf`
-- An attached file of the document:
-    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:1`
-- A file stored in the given property:
-    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/myschema:content`
-- A file stored in the given complex property, downloaded with a specific filename:
-    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/files:files/0/file/myimage.png`
-- The main file of the document inside the browser instead of being downloaded:&nbsp;
-    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496?inline=true`
-
-
-For Picture document type, a similar system is available to be able to get the attachments depending on the view name:
-
-- `http://NUXEO_SERVER/nuxeo/nxpicsfile/{repository}/{uuid}/{viewName}:content/{fileName}`
-
-where, by default,&nbsp;`viewName`&nbsp;can be Original, OriginalJpeg, Medium, Thumbnail.
-
-{{! /multiexcerpt}}
+You can read the [File Storage]({{page space='nxdoc' page='file-storage''}}) page to use all non-UI specific file URLs.
 
 ## Producing File URLs from JSF Templates
 

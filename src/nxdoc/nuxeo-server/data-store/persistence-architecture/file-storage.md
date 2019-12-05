@@ -553,9 +553,45 @@ That can also be view as a sequence diagram to better understand each actor's ro
 
 ![]({{file name='Binary Download Sequence Diagram - New Page.png'}} ?w=600,border=true)
 
-**Download URL format**
+## File URLs / Download URL File Format
 
-{{{multiexcerpt 'download_url_pattern' page='URLs for Files'}}}
+The default URL patterns for downloading files from within the JSF environment are:
+
+- `http://NUXEO_SERVER/nuxeo/nxfile/{repository}/{uuid}/blobholder:{blobIndex}/{fileName}`
+- `http://NUXEO_SERVER/nuxeo/nxfile/{repository}/{uuid}/{propertyXPath}/{fileName}`
+
+Where :
+- `nxfile` is the download servlet.
+    Note that `nxbigfile` is also accepted for compatibility with older versions.
+- `repository` is the identifier of the target repository.
+- `uuid` is the uuid of the target document.
+- `blobIndex` is the index of the Blob inside the `BlobHolder` adapter corresponding to the target Document Type, starting at 0: `blobholder:0`, `blobholder:1`.
+- `propertyXPath` is the xPath of the target Blob property inside the target document. For instance: `file:content`, `files:files/0/file`.
+- `fileName` is the name of the file as it should be downloaded.
+    This information is optional and is actually not used to do the resolution.
+- `?inline=true` is an optional parameter to force the download to be made with `Content-Disposition: inline`. This means that the content will be displayed in the browser (if possible) instead of being downloaded.
+
+Here are some examples:
+
+- The main file of the document:
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496`
+- The main file of the document with a different name:
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:0/mydocument.pdf`
+- An attached file of the document:
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/blobholder:1`
+- A file stored in the given property:
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/myschema:content`
+- A file stored in the given complex property, downloaded with a specific filename:
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496/files:files/0/file/myimage.png`
+- The main file of the document inside the browser instead of being downloaded:&nbsp;
+    `http://127.0.0.1:8080/nuxeo/nxfile/default/776c8640-7f19-4cf3-b4ff-546ea1d3d496?inline=true`
+
+
+For Picture document type, a similar system is available to be able to get the attachments depending on the view name:
+
+- `http://NUXEO_SERVER/nuxeo/nxpicsfile/{repository}/{uuid}/{viewName}:content/{fileName}`
+
+where, by default,&nbsp;`viewName`&nbsp;can be Original, OriginalJpeg, Medium, Thumbnail.
 
 ## Default Blob Provider
 
@@ -632,4 +668,21 @@ In client-side encryption mode, Nuxeo Platform manages the encrypt/decrypt proce
 
 * * *
 
-&nbsp;
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related topics in this documentation'}}
+
+- [Default URL Patterns]({{page page='default-url-patterns'}})
+
+  {{/panel}}
+</div>
+
+<div class="column medium-6">
+{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [EML Previewer](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/eml-previewer)
+- [QR Code Integration](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/qr-code)
+
+{{/panel}}
+</div>
+</div>
