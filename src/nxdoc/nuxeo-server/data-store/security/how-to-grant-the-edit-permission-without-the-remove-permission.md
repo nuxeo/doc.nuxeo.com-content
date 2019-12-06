@@ -3,7 +3,7 @@ title: 'HOWTO: Grant the Edit Permission without the Remove Permission'
 description: Learn how to override the default Edit permission so it does not include Remove by default, and set a new ReadWriteAndRemove permission.
 review:
     comment: ''
-    date: '2017-12-14'
+    date: '2019-11-28'
     status: ok
 details:
     howto:
@@ -18,7 +18,6 @@ labels:
     - permission
     - fguillaume
     - lts2017-ok
-toc: true
 confluence:
     ajs-parent-page-id: '20515363'
     ajs-parent-page-title: Security
@@ -30,80 +29,40 @@ confluence:
     shortlink: swFvAQ
     shortlink_source: 'https://doc.nuxeo.com/x/swFvAQ'
     source_link: /display/NXDOC/How+to+Grant+the+Edit+Permission+without+the+Remove+Permission
+toc: true
 tree_item_index: 400
-history:
-    -
-        author: Manon Lumeau
-        date: '2016-01-18 15:36'
-        message: ''
-        version: '10'
-    -
-        author: Manon Lumeau
-        date: '2016-01-18 14:30'
-        message: ''
-        version: '9'
-    -
-        author: Manon Lumeau
-        date: '2016-01-18 14:09'
-        message: ''
-        version: '8'
-    -
-        author: Manon Lumeau
-        date: '2016-01-18 11:16'
-        message: ''
-        version: '7'
-    -
-        author: Manon Lumeau
-        date: '2016-01-18 11:09'
-        message: ''
-        version: '6'
-    -
-        author: Ronan Daniellou
-        date: '2016-01-11 09:55'
-        message: "Added a 'heading' for the procedure (prevents TOC being empty)"
-        version: '5'
-    -
-        author: Ronan Daniellou
-        date: '2016-01-11 09:51'
-        message: Added Nuxeo TOC panel
-        version: '4'
-    -
-        author: Solen Guitter
-        date: '2015-04-09 13:45'
-        message: ''
-        version: '3'
-    -
-        author: Thierry Martins
-        date: '2015-04-09 09:45'
-        message: ''
-        version: '2'
-    -
-        author: Thierry Martins
-        date: '2015-04-09 09:43'
-        message: ''
-        version: '1'
 ---
 
-As described on the page [Managing Permissions]({{page space='userdoc' page='permissions'}}), the Edit permission visible in the UI contains the permission to remove content. This means that you cannot grant the Edit permission and deny the Remove access right at the same level of the repository. So you need to override the [default `Write` permission](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.core.security.defaultPermissions--permissions) to be able to do that.
+As described on the page [Managing Permissions]({{page space='userdoc' page='permissions'}}), the **Edit** permission, visible in the UI, contains the permission to remove content (`Remove`).</br>
+It means that you cannot grant the **Edit** permission (`Write`) without the `Remove` permission at the same time.
 
-## Procedure
+So if you want to be able to grand the **Edit** permission without the `Remove` one, you need to override the [default `ReadWrite` permission](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewContribution/org.nuxeo.ecm.core.security.defaultPermissions--permissions).
 
-1.  [Add a new contribution]({{page page='how-to-contribute-to-an-extension'}}) to remove the `Remove` permission from `Write` permission.
+We will do that in two steps:
+- First, override the default **Edit** permission to remove the `Remove` permission.
+- Then, create a new permission `ReadWriteAndRemove` (equivalent to the default **Edit** permission overridden above).
 
-    ```xml
-      <extension target="org.nuxeo.ecm.core.security.SecurityService"
-        point="permissions">
-        <permission name="Write">
-          <remove>Remove</remove>
-        </permission>
-     </extension>
-    ```
+## Override the Edit Permission
 
-    This change will make the permission `ReadWrite`, displayed under the permission label "Edit" in the UI, act as wanted: it no longer includes the right to remove content.
+1.  [Add a new contribution]({{page page='how-to-contribute-to-an-extension'}}) to remove the `Remove` permission from `Write` permission.</br>
+Check the [Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202019-10.10/viewExtensionPoint/org.nuxeo.ecm.core.security.SecurityService--permissions) page to update the suitable extension point.
 
-    If you want users to be able to add and remove content, you must now grant them the Edit permission and the Remove permission. Or you can add a new permission that will behave like the default `ReadWrite` permission used to.
+  ```xml
+  <extension target="org.nuxeo.ecm.core.security.SecurityService"
+    point="permissions">
+    <permission name="Write">
+      <remove>Remove</remove>
+    </permission>
+  </extension>
+  ```
 
-2.  Define a new global permission to read, edit and remove content.
+This change will make the permission `ReadWrite`, displayed under the permission label **Edit** in the UI, act as wanted: it no longer includes the right to remove content.
+
+## Create a New Permission
+
+If you want users to be able to add and remove content, you must now grant them the `Write` permission and `Remove` permission. Or you can add a new permission that will behave like the default `ReadWrite` permission used to.
+
+1.  Define a new global permission to read, edit and remove content.
 
     ```
       <extension target="org.nuxeo.ecm.core.security.SecurityService"
@@ -116,7 +75,8 @@ As described on the page [Managing Permissions]({{page space='userdoc' page='per
       </extension>
     ```
 
-3.  Make the new `ReadWriteAndRemove` permission visible in the drop down list in the UI.
+1.  Make the new `ReadWriteAndRemove` permission visible in the drop down list in the UI. </br>
+Check the [Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/10.10/viewExtensionPoint/org.nuxeo.ecm.core.security.SecurityService--permissionsVisibility) page to see how to register permission visibility in user interface.
 
     ```
     <extension point="permissionsVisibility" target="org.nuxeo.ecm.core.security.SecurityService">
@@ -130,10 +90,14 @@ As described on the page [Managing Permissions]({{page space='userdoc' page='per
       </extension>
     ```
 
-    ![]({{file name='ReadWriteAndRemove_permission_UI.png'}} ?w=400,border=true)
+1.  [Deploy your customizations]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}#hot-reload).
 
-4.  Add the new permission label to [your internationalization files]({{page page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}}).
-5.  [Deploy your customizations]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/HOWTO: Grant the Edit Permission without the Remove Permission/ReadWriteAndRemove_permission_UI.png
+    name: readwriteandremove-permission-ui.png
+    1.1.3#screenshot#up_to_date
+--}}
+![readwriteandremove-permission-ui.png](nx_asset://5648e7f2-0ccf-4680-af6b-f4ba352ec9e3 ?w=350,border=true)
 
 &nbsp;
 
