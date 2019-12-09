@@ -182,7 +182,6 @@ history:
         date: '2014-01-28 16:57'
         message: ''
         version: '1'
-
 ---
 
 {{#> callout type='info'  heading='Nuxeo University'}}
@@ -200,10 +199,10 @@ Watch the related courses on Nuxeo University:</br>
 
 A file is what is commonly handled on user's desktop or other file system. It is a binary content managed under a file system, which means with a location (or locations if fragmented), a path and a name. On the Nuxeo Platform, the concept of file system doesn't exist. The content is stored as a binary stream, and the address of that content is stored in the database. The database has the notion of "Blob", that represents the binary stream and a set of metadata:
 
-*   The hash of the binary stream
-*   The length
-*   A name
-*   A mime-type.
+- The hash of the binary stream
+- The length
+- A name
+- A mime-type.
 
 At the Core level, blobs are bound to documents via a property of type `BlobProperty`. So a document can store multiple files that are standalone blob properties, or list of blob properties. When configuring this property, it has to be of type&nbsp;
 
@@ -223,17 +222,17 @@ At lower level, blobs are managed in the Nuxeo Platform by Blob Providers. Most 
 
 A **Blob Provider** is a component that provides an **API to read and write binary streams** as well as additional services such as:
 
-*   Getting associated thumbnail of a binary stream
-*   Getting a download URI
-*   Some version management features
-*   Getting available conversions
-*   Getting registered applications links
+- Getting associated thumbnail of a binary stream
+- Getting a download URI
+- Some version management features
+- Getting available conversions
+- Getting registered applications links
 
 As we will see later in this page, the Nuxeo Platform is shipped with several Blob Provider implementations:
 
-*   File System implementation
-*   S3, Azure, ...
-*   Google Drive, Dropbox
+- File System implementation
+- S3, Azure, ...
+- Google Drive, Dropbox
 
 As a specialization, a Blob Provider can implement the interface `DocumentBlobProvider` if it is capable of dealing with advanced document-related operations like versioning.
 
@@ -256,61 +255,36 @@ Bellow is a sequence diagram of what happens when writing a binary stream.
 
 Without installing any additional addon, you will find several Blob Provider implementations that you can use. &nbsp;
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Name</th><th colspan="1">Class</th><th colspan="1">Description</th><th colspan="1">Resources</th></tr><tr><td colspan="1">
-
-Default
-
-</td><td colspan="1">
-
-org.nuxeo.ecm.core.blob
-
-.binary.DefaultBinaryManager&nbsp;
-
-</td><td colspan="1">
-
-The default implementation. Stores binaries using their MD5 (or other)&nbsp;hash on the local filesystem.
-
-</td><td colspan="1">
-
-[Configuration]({{page page='file-storage-configuration'}}#configuring-the-default-blobprovider)
-
-</td></tr><tr><td colspan="1">
-
-Encrypted
-
-</td><td colspan="1">
-
-org.nuxeo.ecm.core.blob
-
-.binary.AESBinaryManager
-
-</td><td colspan="1">
-
-Stores binaries encrypted using AES form on the local filesystem.
-
-</td><td colspan="1">
-
-[Configuration]({{page page='implementing-encryption'}})
-
-</td></tr><tr><td colspan="1">
-
-External File System
-
-</td><td colspan="1">
-
-org.nuxeo.ecm.core.
-
-blob.FilesystemBlobProvider
-
-</td><td colspan="1">
-
-Reads content stored on an external file system.
-
-</td><td colspan="1">
-
-[Configuration]({{page page='file-storage'}}#external-file-system)
-
-</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Name</th>
+<th colspan="1">Class</th>
+<th colspan="1">Description</th>
+<th colspan="1">Resources</th>
+</tr>
+<tr>
+<td colspan="1">Default</td>
+<td colspan="1">`org.nuxeo.ecm.core.blob.binary.DefaultBinaryManager`</td>
+<td colspan="1">The default implementation. Stores binaries using their MD5 (or other)&nbsp;hash on the local filesystem.</td>
+<td colspan="1">[Configuration]({{page page='file-storage-configuration'}}#configuring-the-default-blobprovider)</td>
+</tr>
+<tr>
+<td colspan="1">Encrypted</td>
+<td colspan="1">`org.nuxeo.ecm.core.blob.binary.AESBinaryManager`</td>
+<td colspan="1">Stores binaries encrypted using AES form on the local filesystem.</td>
+<td colspan="1">[Configuration]({{page page='implementing-encryption'}})</td>
+</tr>
+<tr>
+<td colspan="1">External File System</td>
+<td colspan="1">`org.nuxeo.ecm.core.blob.FilesystemBlobProvider`</td>
+<td colspan="1">Reads content stored on an external file system.</td>
+<td colspan="1">[Configuration]({{page page='file-storage'}}#external-file-system)</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 To register a new Blob Provider, use the [`blobprovider`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.core.blob.BlobManager--configuration)&nbsp;extension point with the Java class for your Blob Provider:
 
@@ -327,149 +301,66 @@ To register a new Blob Provider, use the [`blobprovider`](http://explorer.nuxeo.
 
 In addition to the default ones listed above, the following implementations exist and can be used:
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Name</th><th colspan="1">Class</th><th colspan="1">Description</th><th colspan="1">Resources</th></tr><tr><td colspan="1">
-
-Azure
-
-</td><td colspan="1">
-
-org.nuxeo.ecm.
-
-blob.azure.
-
-AzureBinaryManager
-
-</td><td colspan="1">
-
-Stores Content on Azure Object Store
-
-</td><td colspan="1">
-
-- [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage)
-- [Sources](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-azure)
-- [Configuration](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-azure/README.md)
-
-</td></tr><tr><td colspan="1">
-
-Azure CDN
-
-</td><td colspan="1">
-
-org.nuxeo.ecm.
-
-blob.azure.
-
-AzureCDNBinaryManager
-
-</td><td colspan="1">
-
-Stores content on Azure object store read it through Azure CDN
-
-</td><td colspan="1">
-
-- [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage)
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Name</th>
+<th colspan="1">Class</th>
+<th colspan="1">Description</th>
+<th colspan="1">Resources</th>
+</tr>
+<tr>
+<td colspan="1">Azure</td>
+<td colspan="1">`org.nuxeo.ecm.blob.azure.AzureBinaryManager`</td>
+<td colspan="1">Stores Content on Azure Object Store</td>
+<td colspan="1">[Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage) - [Sources](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-azure)</br>
+- [Configuration](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-azure/README.md)</td>
+</tr>
+<tr>
+<td colspan="1">Azure CDN</td>
+<td colspan="1">`org.nuxeo.ecm.blob.azure.AzureCDNBinaryManager`</td>
+<td colspan="1">Stores content on Azure object store read it through Azure CDN
+</td>
+<td colspan="1">[Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/microsoft-azure-online-storage)
 - [Sources](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-azure)
-- [Configuration](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-azure/README.md)
-
-</td></tr><tr><td colspan="1">
-
-Amazon S3
-
-</td><td colspan="1">
-
-org.nuxeo.ecm.
-
-core.storage.sql.
-
-S3BinaryManager
-
-</td><td colspan="1">
-
-Stores content on Amazon S3
-
-</td><td colspan="1">
-
-- [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage)
-- [Sources](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-s3)
-- [Configuration]({{page page='amazon-s3-online-storage'}})
-
-</td></tr><tr><td colspan="1">
-
-JClouds
-
-</td><td colspan="1">
-
-org.nuxeo.ecm.
-
-blob.jclouds.
-
-JCloudsBinaryManager
-
-</td><td colspan="1">
-
-Stores binaries using the Apache jclouds library into a wide range of possible back ends
-
-</td><td colspan="1">
-
-[Sources](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-jclouds)
-
-</td></tr><tr><td colspan="1">
-
-Google Drive
-
-</td><td colspan="1">
-
-org.nuxeo.ecm.
-
-liveconnect.google.drive.
-
-GoogleDriveBlobProvider
-
-</td><td colspan="1">
-
-Reads content from Google Drive
-
-</td><td colspan="1">
-
-- [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
-- [Sources](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-liveconnect/nuxeo-liveconnect-google-drive-core)
-
-</td></tr><tr><td colspan="1">
-
-Dropbox
-
-</td><td colspan="1">
-
-org.nuxeo.ecm.-
-
-liveconnect.dropbox.
-
-DropboxBlobProvider
-
-</td><td colspan="1">
-
-Reads content from Dropbox
-
-</td><td colspan="1">
-
-- [Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect)
-- [Sources](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-liveconnect/nuxeo-liveconnect-dropbox-core)
-
-</td></tr><tr><td colspan="1">
-
-SQL
-
-</td><td colspan="1">
-
-org.nuxeo.ecm.core.
-
-storage.sql.SQLBinaryManager
-
-</td><td colspan="1">
-
-Stores binaries as SQL BLOB objects in a SQL database.
-
-</td><td colspan="1">[Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-sql)</td></tr></tbody></table></div>
+- [Configuration](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-azure/README.md)</td>
+</tr>
+<tr>
+<td colspan="1">Amazon S3</td>
+<td colspan="1">`org.nuxeo.ecm.core.storage.sql.S3BinaryManager`</td>
+<td colspan="1">Stores content on Amazon S3</td>
+<td colspan="1">[Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage) - [Sources](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-s3)
+- [Configuration]({{page page='amazon-s3-online-storage'}})</td>
+</tr>
+<tr>
+<td colspan="1">JClouds</td>
+<td colspan="1">`org.nuxeo.ecm.blob.jclouds.JCloudsBinaryManager`</td>
+<td colspan="1">Stores binaries using the Apache jclouds library into a wide range of possible back ends</td>
+<td colspan="1">[Sources](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-core-binarymanager-cloud/nuxeo-core-binarymanager-jclouds)
+</td>
+</tr>
+<tr>
+<td colspan="1">Google Drive</td>
+<td colspan="1">`org.nuxeo.ecm.liveconnect.google.drive.GoogleDriveBlobProvider`</td>
+<td colspan="1">Reads content from Google Drive</td>
+<td colspan="1">[Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect) - [Sources](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-liveconnect/nuxeo-liveconnect-google-drive-core)</td>
+</tr>
+<tr>
+<td colspan="1">Dropbox</td>
+<td colspan="1">`org.nuxeo.ecm.-liveconnect.dropbox.DropboxBlobProvider`</td>
+<td colspan="1">Reads content from Dropbox</td>
+<td colspan="1">[Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-liveconnect) - [Sources](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-liveconnect/nuxeo-liveconnect-dropbox-core)</td>
+</tr>
+<tr>
+<td colspan="1">SQL</td>
+<td colspan="1">`org.nuxeo.ecm.core.storage.sql.SQLBinaryManager`</td>
+<td colspan="1">Stores binaries as SQL BLOB objects in a SQL database.</td>
+<td colspan="1">[Sources](https://github.com/nuxeo/nuxeo-core-binarymanager-sql)</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ## Blob Dispatcher and HSM
 
@@ -532,9 +423,7 @@ This assumes that you have four blob providers configured, the default one and t
 ```
 
 {{/panel}}
-
 The default `DefaultBlobDispatcher` class can be replaced by your own implementation.
-
 {{! /multiexcerpt}}
 
 ## Download Service
@@ -560,9 +449,9 @@ The default URL patterns for downloading files from within the JSF environment a
 - `http://NUXEO_SERVER/nuxeo/nxfile/{repository}/{uuid}/blobholder:{blobIndex}/{fileName}`
 - `http://NUXEO_SERVER/nuxeo/nxfile/{repository}/{uuid}/{propertyXPath}/{fileName}`
 
-Where :
-- `nxfile` is the download servlet.
-    Note that `nxbigfile` is also accepted for compatibility with older versions.
+Where:
+- `nxfile` is the download servlet.</br>
+  Note that `nxbigfile` is also accepted for compatibility with older versions.
 - `repository` is the identifier of the target repository.
 - `uuid` is the uuid of the target document.
 - `blobIndex` is the index of the Blob inside the `BlobHolder` adapter corresponding to the target Document Type, starting at 0: `blobholder:0`, `blobholder:1`.
@@ -604,13 +493,13 @@ Binary getBinary(String digest);
 
 As you can see, the methods do not have any document related parameters. This means the binary storage is independent from the documents:
 
-*   Moving a document does not impact the binary stream.
-*   Updating a document does not impact the binary stream.
+- Moving a document does not impact the binary stream.
+- Updating a document does not impact the binary stream.
 
 In addition, the streams are stored using their digest. Thanks to that:
 
-*   `BlobStore` does automatically manage de-duplication.
-*   `BlobStore` can be safely snapshoted&nbsp; (files are never moved or updated, and they are only removed via a `GarbageCollection` process).
+- `BlobStore` does automatically manage de-duplication.
+- `BlobStore` can be safely snapshoted (files are never moved or updated, and they are only removed via a `GarbageCollection` process).
 
 ## External File System
 
@@ -639,7 +528,7 @@ BlobManager blobManager = Framework.getService(BlobManager.class);
 Blob blob = ((FilesystemBlobProvider) blobManager.getBlobProvider("fs")).createBlob(blobInfo);
 ```
 
-Internally the blob will then be stored in the database with a key of `fs:foo/bar.pdf` .
+Internally the blob will then be stored in the database with a key of `fs:foo/bar.pdf`.
 
 ## Encryption
 
@@ -649,8 +538,8 @@ A common question regarding the Blob Manager is the support for encryption.&nbsp
 
 Since Nuxeo Platform 6.0, it's possible to use a Blob Provider that encrypts file using AES. Two modes are possible:
 
-*   A fixed AES key retrieved from a Java KeyStore
-*   An AES key derived from a human-readable password using the industry-standard PBKDF2 mechanism.
+- A fixed AES key retrieved from a Java KeyStore
+- An AES key derived from a human-readable password using the industry-standard PBKDF2 mechanism.
 
 While the files are in use by the application, a temporary file in clear is created. It is removed as soon as possible.
 

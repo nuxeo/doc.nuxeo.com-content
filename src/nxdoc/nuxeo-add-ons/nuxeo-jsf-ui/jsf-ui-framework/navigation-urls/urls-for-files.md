@@ -25,6 +25,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/ugQz'
     source_link: /display/NXDOC/URLs+for+Files
 tree_item_index: 200
+toc: true
 history:
     -
         author: Solen Guitter
@@ -165,7 +166,7 @@ history:
 
 ## Generic File URLs
 
-You can read the [File Storage]({{page space='nxdoc' page='file-storage''}}) page to use all non-UI specific file URLs.
+You can read the [File Storage]({{page space='nxdoc' page='file-storage'}}#file-urls-download-url-file-format) page to use all non-UI specific file URLs.
 
 ## Producing File URLs from JSF Templates
 
