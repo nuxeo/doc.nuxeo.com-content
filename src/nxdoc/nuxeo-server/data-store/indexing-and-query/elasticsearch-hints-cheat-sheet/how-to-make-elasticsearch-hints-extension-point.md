@@ -15,7 +15,7 @@ tree_item_index: 100
 
 ##  Concept
 
-Elasticsearch hints can be exposed as extension point: it is therefore possible to create a **custom hint** in order to use all the possible options offered by the Elasticsearch operators. It provides a good way no to be restricted to the Nuxeo default exposed operators, listed in the [Nuxeo NXQL Hints page]({{page space='nxdoc' page='nxql'}}#elasticsearch-nxql-hints). The idea is to replace the hard coded NXQL hint with contribution system.
+Elasticsearch hints can be exposed as extension point: it is therefore possible to create a **custom hint** in order to use all the possible options offered by the Elasticsearch operators. It provides a good way no to be restricted to the Nuxeo default exposed operators, listed in the [Nuxeo NXQL Hints page]({{page space='nxdoc' page='nxql'}}#elasticsearch-nxql-hints). The idea is to replace the hard coded NXQL hint with a  contribution system.
 
 ## Elasticsearch hint contribution
 
@@ -50,9 +50,7 @@ public class FuzzyESHintQueryBuilder implements ESHintQueryBuilder {
 }
 ```
 
-The idea is to move each case of our switch statement to a new implementation of **ESHintQueryBuilder**. Each contribution lookup is done by his name.
-
-In other hand the contribution is done like below :
+The new way to expose the the ES hints is doing by contribution as below:
 
 - We add new Extension Point to our exiting ESComponent : `org.nuxeo.elasticsearch.ElasticSearchComponent`
 - The name of XP is elasticSearchHints
