@@ -300,6 +300,21 @@ Another way to be alerted is by monitoring the `server.log` file looking for err
 ```
 ERROR [ComputationRunner] Terminate computation: <SOME_COMPUTATION_NAME> due to previous failure
 ```
+There is also a `streamStatus` Nuxeo probe activated by default on the `runningstatus` endpoint health check.
+
+It is important to understand that this probe will report immediately a computation failure with a message like:
+```
+ 2 computations have been terminated after failure. First failure detected: 2019-10-30 14:57:22Z, probe failure delayed by PT36H. This Nuxeo instance must be restarted within the stream retention period.
+```
+**but** the probe failure is delayed by 36 hours in order to have time to apply the recovery procedure.
+
+This delay is necessary because most of the time the Nuxeo health check is used by load balancer and we don't want to interrupt
+the service immediately while we have time to fix the problem during the retention duration without downtime or data loss.
+
+The probe delay is configurable using the `nuxeo.conf` option, keep it under the retention duration (7 days when using Kafka).
+```
+nuxeo.stream.health.check.delay=36h
+```
 
 ### Monitoring
 
