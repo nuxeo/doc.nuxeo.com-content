@@ -16,6 +16,7 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/Ogk7'
     source_link: /display/CORG/Code+Quality+with+IDE+Plugins
 tree_item_index: 600
+hidden: true
 history:
     -
         author: Julien Carsique
