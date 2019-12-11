@@ -97,9 +97,9 @@ The Nuxeo Marketplace also provides a private channel to distribute packages to 
 
 The purpose of the private channel is to enable Nuxeo Platform users who do some customization on the Platform to easily distribute their customization. Here are some examples of how this private channel can be helpful.
 
-For example, if you configure your Nuxeo instance with Nuxeo Studio as well as Nuxeo CLI for additional Java customization, you can create your Nuxeo Package and allow other people (e.g. a sysadmin) to install the whole project using a single package, instead of installing them separately. Once the private package is uploaded on Nuxeo Marketplace, the Application Definition screen in your Nuxeo Studio project lets you bundle them easily.
+For example, if you configure your Nuxeo instance with Nuxeo Studio, or Nuxeo CLI for additional Java customization, you can create your Nuxeo Package and allow other people (e.g. a sysadmin) to install the whole project using a single package, instead of installing them separately. Once the private package is uploaded on Nuxeo Marketplace, the Application Definition screen in your Nuxeo Studio project lets you bundle them easily.
 
-Another example is if you create your own application on top of the Nuxeo Platform and distribute it to your own clients (who may add Studio configurations themselves), you can use this private channel to provide hot fixes of your base application.
+Another example is if you create your own application on top of the Nuxeo Platform and distribute it to your own clients (who may add Studio configurations themselves), you can use this private channel to provide hotfixes of your base application.
 
 ## Who Can Use the Private Marketplace Channel
 
@@ -115,42 +115,38 @@ The Marketplace private channel can be used to provide any type of customization
 
 **To provide customers with a private package:**
 
-1.  After logging in, navigate to [Nuxeo Marketplace upload page](https://connect.nuxeo.com/nuxeo/site/marketplace/upload) page or click on the button **Add your Nuxeo Package to the Marketplace**, located at the bottom of the screen.
-2.  Fill in the form "Upload a Marketplace package" (see below for details).
-3.  Click on the **Submit** button.
-    The package is uploaded. It can be [installed using nuxeoctl]({{page page='installing-a-new-package-on-your-instance' space='nxdoc'}})
+1. After logging in, navigate to [Nuxeo Marketplace upload page](https://connect.nuxeo.com/nuxeo/site/marketplace/upload) page or click on the button **Add your Nuxeo Package to the Marketplace**, located at the bottom of the screen.
+2. Fill in the form "Upload a Marketplace package" (see below for details).
+3. Click on the **Submit** button.</br>
+  The package is uploaded. It can be [installed using nuxeoctl]({{page page='installing-a-new-package-on-your-instance' space='nxdoc'}})
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">Field</th><th colspan="1">Description</th></tr><tr><td colspan="1">
-
-Package ZIP file
-
-</td><td colspan="1">
-
-Select your Nuxeo package. Expected format is ZIP.
-
-See the documentation for [Creating Nuxeo Packages]({{page space='nxdoc' page='creating-nuxeo-packages'}}#create-an-empty-nuxeo-package) and [the Nuxeo Package code samples](https://github.com/nuxeo/nuxeo-marketplace-sample/).
-
-</td></tr><tr><td colspan="1">
-
-Owner organization
-
-</td><td colspan="1">
-
-Select the Nuxeo Online Services client who will have complete control over the package, including write and delete access. In most cases, the owner is your company. But typically, system integrators can act in the name of several clients.
-
-</td></tr><tr><td colspan="1">
-
-Share with
-
-</td><td colspan="1">
-
-Select the organizations for which the package should be available for use, having read-only access. Sharing the package with an organization will make it available for use in all of its projects, on top of the owner's organization. Leave the field blank if you wish to keep the package only available to the owner organization.
-
-</td></tr></tbody></table></div>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Field</th>
+<th colspan="1">Description</th>
+</tr>
+<tr>
+<td colspan="1">Package ZIP file</td>
+<td colspan="1">Select your Nuxeo package. Expected format is ZIP.
+See the documentation for [Creating Nuxeo Packages]({{page space='nxdoc' page='creating-nuxeo-packages'}}#create-an-empty-nuxeo-package) and [the Nuxeo Package code samples](https://github.com/nuxeo/nuxeo-marketplace-sample/).</td>
+</tr>
+<tr>
+<td colspan="1">Owner organization</td>
+<td colspan="1">Select the Nuxeo Online Services client who will have complete control over the package, including write and delete access. In most cases, the owner is your company. But typically, system integrators can act in the name of several clients.</td>
+</tr>
+<tr>
+<td colspan="1">Share with</td>
+<td colspan="1">Select the organizations for which the package should be available for use, having read-only access. Sharing the package with an organization will make it available for use in all of its projects, on top of the owner's organization. Leave the field blank if you wish to keep the package only available to the owner organization.</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 {{! multiexcerpt name='finding-org-id'}}
 {{#> callout type='tip' heading='Finding an Organization ID'}}
-When accessing a Studio project, the organization id is displayed in bold in the header bar, before the project id.
+When accessing a Studio project, the organization id is displayed in bold in the header bar, before the project id.</br>
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/Delivering a Customization Package through the Nuxeo Marketplace/organization-id
     name: organization-id.png
@@ -165,7 +161,6 @@ When accessing a Studio project, the organization id is displayed in bold in the
 A REST API is available for automation (such as integrating the upload of the Nuxeo Package from a release script or from the Continuous Integration).
 
 {{#> panel type='code' heading='Sample calls from command-line with curl'}}
-
 ```bash
 # Upload a package: orgId parameter is required, restrictedToOrgs is optional
 curl -i -u login:token -F package=@/path/to/MP.zip "https://connect.nuxeo.com/nuxeo/site/marketplace/upload?batch=true&orgId=[ownerOrgId]&restrictedToOrgs=[restrictedToOrgIds]"
@@ -173,7 +168,6 @@ curl -i -u login:token -F package=@/path/to/MP.zip "https://connect.nuxeo.com/nu
 # Delete a package
 curl -i -u login:token -X DELETE "https://connect.nuxeo.com/nuxeo/site/marketplace/delete/PACKAGE_ID"
 ```
-
 {{/panel}}
 
 where:
@@ -186,12 +180,15 @@ where:
 
 {{{multiexcerpt 'token-management' page='how-to-tag-or-release-your-nuxeo-studio-project'}}}
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='More documentation about the Marketplace'}}
-
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='More documentation about the Marketplace'}}
 - [Creating Nuxeo Packages]({{page space='nxdoc' page='creating-nuxeo-packages'}})
-
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
+<div class="column medium-6">
 
 &nbsp;
 
-</div></div>
+</div>
+</div>
