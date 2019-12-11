@@ -160,7 +160,7 @@ Metadata Extraction
 
 </th><th colspan="1">
 
-Transcode, delivery, watermarking
+Transcode, watermarking
 
 </th></tr><tr><th colspan="1">
 
