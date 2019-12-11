@@ -2,7 +2,7 @@
 title: Java Automation Client
 review:
     comment: ''
-    date: '2017-12-15'
+    date: '2019-12-11'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:
@@ -425,15 +425,11 @@ history:
 
 ---
 {{#> callout type='warning' }}
-
-Java Automation Client has been deprecated for Nuxeo LTS 2016\. Please use [Nuxeo Java Client](http://nuxeo.github.io/nuxeo-java-client/).
-
+Java Automation Client has been deprecated for Nuxeo LTS 2016\. Please use [Nuxeo Java Client]({{page version='3.2' space='client-java' page='index'}}).
 {{/callout}}
 
 {{! excerpt}}
-
 Nuxeo provides a high level client implementation for Java programmers: Nuxeo Automation Client API simplifies your task since it handles all the protocol level details.
-
 {{! /excerpt}}
 
 ## Dependencies
