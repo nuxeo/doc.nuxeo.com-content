@@ -132,1169 +132,390 @@ history:
         date: '2010-07-20 19:29'
         message: ''
         version: '1'
-
 ---
+
 The Platform Digital Asset Management module supports a large number of file formats.
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
-
-Format
-
-</th><th colspan="1">
-
-Import in DAM
-
-</th><th colspan="1">
-
-Mimetype recognition
-
-</th><th colspan="1">
-
-Thumbnail & preview
-
-</th><th colspan="1">
-
-Metadata Extraction
-
-</th><th colspan="1">
-
-Transcode, delivery, watermarking
-
-</th></tr><tr><th colspan="1">
-
-**Pictures**
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th></tr><tr><td colspan="1">
-
-JPG
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-PNG
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-GIF
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-RAW
-</br>
-(see [ImageMagick supported formats](https://www.imagemagick.org/script/formats.php))
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-JPG2000
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-TIF
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-BMP
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-PSD
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-AI
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-EPS/PS
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-PCX
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-PICT
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-SVG
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-WMF
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-EMF
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-QXD
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-INDD
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><th colspan="1">
-
-**Video**
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th></tr><tr><td colspan="1">
-
-ogg
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (transcode)
-
-</td></tr><tr><td colspan="1">
-
-avi (divx, ...)
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (transcode)
-
-</td></tr><tr><td colspan="1">
-
-mp4
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (transcode)
-
-</td></tr><tr><td colspan="1">
-
-flv/fla
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (transcode)
-
-</td></tr><tr><td colspan="1">
-
-QT/mov
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (transcode)
-
-</td></tr><tr><td colspan="1">
-
-mpeg/mpg/mpe
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (transcode)
-
-</td></tr><tr><td colspan="1">
-
-WMV
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td>
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">Format</th>
+<th colspan="1">Import in DAM</th>
+<th colspan="1">Mimetype recognition</th>
+<th colspan="1">Thumbnail & preview</th>
+<th colspan="1">Metadata Extraction</th>
+<th colspan="1">Transcode, watermarking</th>
 </tr>
 <tr>
-<td colspan="1">
-
-swf
-
-</td>
-<td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td>
+<th colspan="1">**Pictures**</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
 </tr>
 <tr>
-<td colspan="1">
-
-DPX
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-&nbsp;
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
+<td colspan="1">JPG</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+</tr>
 <tr>
-<td colspan="1">
-
-MXF
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-&nbsp;
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
+<td colspan="1">PNG</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+</tr>
 <tr>
-<td colspan="1">
-
-GXF
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
-<td colspan="1">
-
-&nbsp;
-
-</td>
-<td colspan="1">
-
-X
-
-</td>
+<td colspan="1">GIF</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+</tr>
 <tr>
-<th colspan="1">
-
-**Audio**
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th></tr><tr><td colspan="1">
-
-ogg
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-mp3
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-wav
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-m4a/aac
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-ac3
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-aif/aiff/ aifc
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-au/snd
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-asf
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><th colspan="1">
-
-**Office**
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th><th colspan="1">
-
-&nbsp;
-
-</th></tr><tr><td colspan="1">
-
-pdf
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-Microsoft Office (c)
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-Open Office
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X* (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-RTF
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-X (only preview)
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-X
-
-</td></tr><tr><td colspan="1">
-
-Microsoft Access (c)
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-Microsoft publisher (c)
-
-</td><td colspan="1">
-
-X
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr></tbody></table></div>
+<td colspan="1">RAW</br>(see [ImageMagick supported formats](https://www.imagemagick.org/script/formats.php))</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+</tr>
+<tr>
+<td colspan="1">JPG2000</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">TIF</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+</tr>
+<tr>
+<td colspan="1">BMP</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">X</td>
+</tr>
+<tr>
+<td colspan="1">PSD</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+</tr>
+<tr>
+<td colspan="1">AI</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">EPS/PS</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">PCX</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">PICT</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">SVG</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">WMF</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">EMF</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">QXD</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">INDD</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<th colspan="1">**Video**</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
+</tr>
+<tr>
+<td colspan="1">ogg</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X (transcode)</td>
+</tr>
+<tr>
+<td colspan="1">avi (divx, ...)</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X (transcode)</td>
+</tr>
+<tr>
+<td colspan="1">mp4</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X (transcode)</td>
+</tr>
+<tr>
+<td colspan="1">flv/fla</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X (transcode)</td>
+</tr>
+<tr>
+<td colspan="1">QT/mov</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X (transcode)</td>
+</tr>
+<tr>
+<td colspan="1">mpeg/mpg/mpe</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X (transcode)</td>
+</tr>
+<tr>
+<td colspan="1">WMV</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">swf</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">DPX</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">X</td>
+<tr>
+<td colspan="1">MXF</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">X</td>
+<tr>
+<td colspan="1">GXF</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">X</td>
+<tr>
+<th colspan="1">**Audio**</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
+</tr>
+<tr>
+<td colspan="1">ogg</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X (only preview)</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">mp3</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X (only preview)</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">wav</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X (only preview)</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">m4a/aac</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X (only preview)</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">ac3</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">aif/aiff/ aifc</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">au/snd</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;
+</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">asf</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<th colspan="1">**Office**</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
+<th colspan="1">&nbsp;</th>
+</tr>
+<tr>
+<td colspan="1">pdf</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X (only preview)</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">X</td>
+</tr>
+<tr>
+<td colspan="1">Microsoft Office (c)</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X (only preview)</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">X</td>
+</tr>
+<tr>
+<td colspan="1">Open Office</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X* (only preview)</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">X</td>
+</tr>
+<tr>
+<td colspan="1">RTF</td>
+<td colspan="1">X</td>
+<td colspan="1">X</td>
+<td colspan="1">X (only preview)</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">X</td>
+</tr>
+<tr>
+<td colspan="1">Microsoft Access (c)</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">Microsoft publisher (c)</td>
+<td colspan="1">X</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 *Client browser must have the associated plug-in installed
 
