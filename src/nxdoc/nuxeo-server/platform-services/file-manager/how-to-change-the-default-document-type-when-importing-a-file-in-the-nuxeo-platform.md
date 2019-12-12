@@ -1,5 +1,5 @@
 ---
-title: How to Change the Default Document Type When Importing a File in the Nuxeo Platform?
+title: 'HOWTO: Change the Default Document Type When Importing a File in the Nuxeo Platform?'
 review:
     comment: ''
     date: '2019-12-12'
@@ -101,31 +101,30 @@ history:
         date: '2014-03-21 17:20'
         message: ''
         version: '1'
-
 ---
 
 {{! excerpt}}
 In this how-to, [importing a file]({{page version='' space='userdoc' page='content-create'}}) can correspond to using the drag and drop, using the Import button, or adding a file from [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}}) or a [WebDAV drive]({{page space='userdoc' page='working-with-webdav'}}).
 {{! /excerpt}}
 
-When we drag and drop a file on a folder or workspace, a new document of type (File, Image, Picture, Contract...) is automatically created depending on the MIME Type and file extension. For example, dragging a .png file creates a Picture. 
+When we drag and drop a file on a folder or workspace, a new document of type (File, Image, Picture, Contract...) is automatically created depending on the MIME Type and file extension. For example, dragging a .png file creates a Picture.
 
 The mechanism to create a Nuxeo document with an import is tight to the [plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--plugins) extension point from the `FileManager` service.
 
 According to the MIME type of the file you try to import, a specific plugin will be called. And most of the time, it's the `DefaultFileImporter` plugin that will be used.
 
-So, to create a document of your own type, you have to set the `docType` attribute when overwriting the default contribution. In this example, uploading a MS Word or a PDF document (.doc, .docx and .pdf) will automatically create a new **Contrat** document:
+So, to create a document of your own type, you have to set the `docType` attribute when overwriting the default contribution. In this example, uploading a MS Word or a PDF document (.doc, .docx and .pdf) will automatically create a new **Contract** document:
 
 ```xml
 <require>org.nuxeo.ecm.platform.picture.filemanager.contrib</require>
-  
+
 <extension target="org.nuxeo.ecm.platform.filemanager.service.FileManagerService" point="plugins">
   <plugin class="org.nuxeo.ecm.platform.filemanager.service.extension.DefaultFileImporter" name="ContractImporter" order="1" docType="Contract">       
       <filter>application/msword</filter>   
       <filter>application/vnd.openxmlformats-officedocument.wordprocessingml.document</filter>       
       <filter>application/pdf</filter>           
-  </plugin> 
-   
+  </plugin>
+
   <plugin class="org.nuxeo.ecm.platform.filemanager.service.extension.DefaultFileImporter" name="DefaultFileImporter" order="100">
     <filter>.*</filter>
   </plugin>   
@@ -135,7 +134,7 @@ So, to create a document of your own type, you have to set the `docType` attribu
 It is necessary to pay attention to the following settings:
 
 - Order attribute: Indicates the order to load the plugin. Nuxeo starts loading the highest number first. The lowest at the end, so using 1 as order your configuration prevails in case of coincidence.
-- DocType attribute: Indicates the type of document to generate. In this case, a Contrat type document
+- DocType attribute: Indicates the type of document to generate. In this case, a Contract type document
 - Tags filter: Define the types
 
 {{!--     ### nx_asset ###
@@ -145,26 +144,25 @@ It is necessary to pay attention to the following settings:
 --}}
 ![contract.png](nx_asset://644d8570-48ee-4200-b452-ca24a5e604f1 ?w=650,border=true)
 
-{{#> callout type='tip' heading='Go further'}}
+## Going Further
 
 This mechanism is also valid with any document type inherited from File, as Picture, Audio or Video.
 
-{{/callout}}
-
 {{#> callout type='info' heading='Learn more'}}
-
-*   [DAM Configuration](https://university.nuxeo.com/learn/public/course/view/elearning/100/dam-configuration) video on Nuxeo University: Learn how to type a file as Picture according to its file extension.
-
+[DAM Configuration](https://university.nuxeo.com/learn/public/course/view/elearning/100/dam-configuration) video on Nuxeo University: Learn how to type a file as Picture according to its file extension.
 {{/callout}}
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related topics in developer documentation'}}
-
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related topics in developer documentation'}}
 - [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
 - [Nuxeo CSV]({{page page='nuxeo-csv'}})
 - [Drag and Drop Service for Content Capture (HTML5-Based)]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
-
-{{/panel}}</div><div class="column medium-6">
-
-</div></div>
+{{/panel}}
+</div>
+<div class="column medium-6">
+&nbsp;
+</div>
+</div>
