@@ -2,7 +2,7 @@
 title: How to Change the Default Document Type When Importing a File in the Nuxeo Platform?
 review:
     comment: ''
-    date: '2017-12-13'
+    date: '2019-12-12'
     status: ok
 labels:
     - lts2016-ok
@@ -108,19 +108,42 @@ history:
 In this how-to, [importing a file]({{page version='' space='userdoc' page='content-create'}}) can correspond to using the drag and drop, using the Import button, or adding a file from [Nuxeo Drive]({{page space='client-apps' page='nuxeo-drive'}}) or a [WebDAV drive]({{page space='userdoc' page='working-with-webdav'}}).
 {{! /excerpt}}
 
+When we drag and drop a file on a folder or workspace, a new document of type (File, Image, Picture, Contract...) is automatically created depending on the MIME Type and file extension. For example, dragging a .png file creates a Picture. 
+
 The mechanism to create a Nuxeo document with an import is tight to the [plugins](http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.filemanager.service.FileManagerService--plugins) extension point from the `FileManager` service.
 
 According to the MIME type of the file you try to import, a specific plugin will be called. And most of the time, it's the `DefaultFileImporter` plugin that will be used.
 
-So, to create a document of your own type, you have to set the `docType` attribute when overwriting the default contribution:
+So, to create a document of your own type, you have to set the `docType` attribute when overwriting the default contribution. In this example, uploading a MS Word or a PDF document (.doc, .docx and .pdf) will automatically create a new **Contrat** document:
 
 ```xml
-<require>org.nuxeo.ecm.platform.filemanager.service.FileManagerService.Plugins</require>
-
+<require>org.nuxeo.ecm.platform.picture.filemanager.contrib</require>
+  
 <extension target="org.nuxeo.ecm.platform.filemanager.service.FileManagerService" point="plugins">
-    <plugin name="DefaultFileImporter" merge="true" docType="MyCustomFileType" />
+  <plugin class="org.nuxeo.ecm.platform.filemanager.service.extension.DefaultFileImporter" name="ContractImporter" order="1" docType="Contract">       
+      <filter>application/msword</filter>   
+      <filter>application/vnd.openxmlformats-officedocument.wordprocessingml.document</filter>       
+      <filter>application/pdf</filter>           
+  </plugin> 
+   
+  <plugin class="org.nuxeo.ecm.platform.filemanager.service.extension.DefaultFileImporter" name="DefaultFileImporter" order="100">
+    <filter>.*</filter>
+  </plugin>   
 </extension>
 ```
+
+It is necessary to pay attention to the following settings:
+
+- Order attribute: Indicates the order to load the plugin. Nuxeo starts loading the highest number first. The lowest at the end, so using 1 as order your configuration prevails in case of coincidence.
+- DocType attribute: Indicates the type of document to generate. In this case, a Contrat type document
+- Tags filter: Define the types
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/How to Change the Default Document Type When Importing a File in the Nuxeo Platform?/contract.png
+    name: contract.png
+    1.1.3#screenshot#up_to_date
+--}}
+![contract.png](nx_asset://644d8570-48ee-4200-b452-ca24a5e604f1 ?w=650,border=true)
 
 {{#> callout type='tip' heading='Go further'}}
 
