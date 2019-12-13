@@ -56,7 +56,7 @@ To complete this use case, we will use a technical document property to store th
 - Hot Deploy your Nuxeo Studio Project
 - Log in as `jdoe`
 - Create a `File`
-- Trigger the validation Workflow
+- Optionally, log in as another user to trigger the validation workflow
 - Log out and log in as `boss`
 
 User `boss` has a validation task!
