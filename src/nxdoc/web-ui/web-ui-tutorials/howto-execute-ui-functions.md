@@ -160,7 +160,7 @@ We then need to adapt our layout:
 <nuxeo-dialog reparent id="popupRight" modal no-auto-focus>
   <h2>Choose your target folder</h2>
   <div>
-    <nuxeo-document-suggestion label="Target folder" value="{{destination}}" page-provider="folderish-suggestions" min-chars="0" class="input"></nuxeo-document-suggestion>
+    <nuxeo-document-suggestion label="Target folder" value="\{{destination}}" page-provider="folderish-suggestions" min-chars="0" class="input"></nuxeo-document-suggestion>
   </div>
   <div class="buttons">
     <paper-button dialog-dismiss>Cancel</paper-button>

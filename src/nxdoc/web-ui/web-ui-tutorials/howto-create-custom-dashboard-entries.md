@@ -71,7 +71,7 @@ The quickest way to start building a dashboard is to use the [Polymer CLI](https
                             event="afterWorkflowStarted"
                             grouped-by="workflowInitiator"
                             start-date="[[startDate]]" end-date="[[endDate]]"
-                            data="{{initiators}}">
+                            data="\{{initiators}}">
       </nuxeo-workflow-data>
 
       <!-- Display a Pie Chart with out data -->

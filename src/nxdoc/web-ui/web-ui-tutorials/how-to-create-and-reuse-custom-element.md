@@ -77,7 +77,7 @@ To insert the `validation` schema in the Contract document type:
     ```
     <div role="widget">
       <label>Validated</label>
-      <paper-checkbox checked="{{document.properties.validation:validated}}"></paper-checkbox>
+      <paper-checkbox checked="\{{document.properties.validation:validated}}"></paper-checkbox>
     </div>
     ```
 1. Save your changes.

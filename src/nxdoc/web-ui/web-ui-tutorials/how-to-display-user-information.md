@@ -35,7 +35,7 @@ Studio Designer generates the default structure for our web element automaticall
 
 We must recover the user's information. We are going to use the web element `nuxeo-connection`:
 ```
-<nuxeo-connection role="widget" user="{{user}}"></nuxeo-connection>
+<nuxeo-connection role="widget" user="\{{user}}"></nuxeo-connection>
 ```
 
 The User object that retrieves the `nuxeo-connection` has the following properties:
@@ -63,7 +63,7 @@ The final version of our `nuxeo-user-info` element should look like this:
       }
     </style>
 
-    <nuxeo-connection role="widget" user="{{user}}"></nuxeo-connection>
+    <nuxeo-connection role="widget" user="\{{user}}"></nuxeo-connection>
 
     <nuxeo-card role="widget">
       <div role="widget">

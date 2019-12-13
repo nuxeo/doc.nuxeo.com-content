@@ -33,7 +33,7 @@ Its main content is composed of:
 
     <nuxeo-home name="home" tasks="[[tasks]]"></nuxeo-home>
 
-    <nuxeo-browser name="browse" id="browser" document="[[currentDocument]]" selected-tab="{{docAction}}" clipboard="[[clipboard]]"></nuxeo-browser>
+    <nuxeo-browser name="browse" id="browser" document="[[currentDocument]]" selected-tab="\{{docAction}}" clipboard="[[clipboard]]"></nuxeo-browser>
 
     <nuxeo-search-results name="search" id="searchResults" search-form="[[searchForm]]"></nuxeo-search-results>
 
