@@ -21,7 +21,7 @@ We will create a simple workflow template with only one validation task, sent to
 
 ### Create a Document Property to Store the User Manager
 
-To complete this use case, we will use a technical document property to store the manager information. For this tutorial, we will use the `File` schema, and create a `file_schema:manager` property, of type `String` (using the Default Nuxeo Platform Configuration external template)
+To complete this use case, we will use a technical document property to store the manager information. For this tutorial, we will use the `File` schema, and create a `file_schema:manager` property, of type `User/Group`, with a restriction to be exclusively a User.
 
 ### Create the Users
 
@@ -45,7 +45,7 @@ To complete this use case, we will use a technical document property to store th
     value: "@{CurrentUser[\"user:manager\"]}"
 ```
 
-- Create the associated Event Handler, on the `Document Created` event for `File` document type.
+- Create the associated Event Handler, on the `Document Created` event for `File` document type. In our scenario, `CurrentUser` corresponds to the document creator (`dc:creator`)
 
 ### Generate the Workflow Task Layouts
 
