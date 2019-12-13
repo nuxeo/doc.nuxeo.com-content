@@ -17,7 +17,7 @@ This tutorials assumes you have extended the user property schema with a `user:m
 
 ## Use Case
 
-We will create a simple workflow template with only one validation task, sent to the current user manager.
+We will create a simple workflow template with only one validation task, sent to the document creator manager.
 
 ### Create a Document Property to Store the User Manager
 
