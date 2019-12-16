@@ -436,7 +436,7 @@ The base class `org.nuxeo.ecm.platform.convert.plugins.CommandLineBasedConverter
 - [How to Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
 - [How to Contribute a Command Line Converter]({{page page='how-to-contribute-a-command-line-converter'}})
 - [How to Automatically Convert a Document to PDF]({{page page='how-to-automatically-convert-a-document-to-pdf'}})
- [How to Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
+- [How to Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
 
 {{/panel}}</div><div class="column medium-6">
 
