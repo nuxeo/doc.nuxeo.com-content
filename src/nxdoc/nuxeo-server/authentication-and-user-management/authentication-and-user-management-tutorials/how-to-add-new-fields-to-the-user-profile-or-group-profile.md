@@ -130,10 +130,10 @@ by
 You need to reference these new elements in your `*-custom.bundle.html` file. To do so, add the following lines:
 
 ```html
-<link rel="import" href="custom-user-fields/custom-nuxeo-edit-user.html">
-<link rel="import" href="custom-user-fields/custom-nuxeo-create-user.html">
-<link rel="import" href="custom-user-fields/custom-nuxeo-user-group-management.html">
-<link rel="import" href="custom-user-fields/custom-nuxeo-user-group-management-page.html">
+<link rel="import" href="custom-user-fields/nuxeo-edit-user.html">
+<link rel="import" href="custom-user-fields/nuxeo-create-user.html">
+<link rel="import" href="custom-user-fields/nuxeo-user-group-management.html">
+<link rel="import" href="custom-user-fields/nuxeo-user-group-management-page.html">
 <link rel="import" href="nuxeo-user-group-management/nuxeo-view-user.html">
 ```
 
