@@ -10,7 +10,6 @@ labels:
 is_overview: true
 tree_item_index: 350
 section_parent: dam
-toc: true
 ---
 
 <div class="row" data-equalizer data-equalize-on="medium">
