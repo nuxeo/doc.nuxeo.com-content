@@ -12,7 +12,6 @@ labels:
     - nuxeo-drive
     - yachour
     - lts2017-ok
-toc: true
 ---
 
 Below is the list of evolutions and improvements planned for Nuxeo Drive.</br>
