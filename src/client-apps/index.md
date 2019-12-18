@@ -10,7 +10,6 @@ labels:
     - home
     - mlumeau
 is_overview: true
-toc: true
 confluence:
     ajs-parent-page-id: '950332'
     ajs-parent-page-title: Developer Documentation Center
