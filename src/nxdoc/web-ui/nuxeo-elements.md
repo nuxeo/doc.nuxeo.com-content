@@ -5,7 +5,6 @@ review:
     comment: ''
     date: '2017-12-15'
     status: ok
-toc: true
 labels:
     - lts2016-ok
     - nuxeo-elements
