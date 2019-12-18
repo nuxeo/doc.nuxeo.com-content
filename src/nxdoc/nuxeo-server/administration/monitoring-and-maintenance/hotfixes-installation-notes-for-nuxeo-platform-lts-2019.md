@@ -92,6 +92,24 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 19
+
+## Content Model Change for Comments
+
+A migration process is required to benefit from the new content model for Comments where Comments are stored under the commented document. It is mainly required if replies on comments are used in the application.
+
+Note that running this migration will break your application if you were creating comments without using the Comments API.
+
+Before starting the migration process, please make sure you have the JSF UI addon installed on your platform and that your data are backed up by following the link [Backup and Restore](https://doc.nuxeo.com/nxdoc/backup-and-restore/).
+
+Administrator credentials are required to execute the steps below:
+ * Once you are connected with the Admin credentials, click on the ADMIN Tab,
+ * Click on the Migration tab and then under the `Migration of the comment storage model` section, click on `Detect` button
+ * Launch the available migration step, 
+ 
+If the migration succeed the new state will be displayed and the next available step too if any.
+
+
 ## Hotfix 15
 
 ### Probe from Nuxeo Stream
