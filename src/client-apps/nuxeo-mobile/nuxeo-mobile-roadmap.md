@@ -12,7 +12,6 @@ labels:
     - nuxeo-mobile
     - yachour
     - lts2017-ok
-toc: true
 tree_item_index: 300
 ---
 
