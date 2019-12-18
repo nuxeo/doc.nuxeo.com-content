@@ -80,7 +80,7 @@ We can now configure our layout on Studio Designer.
 ```
 <nuxeo-directory-suggestion role="widget" label="Type"
     placeholder="Select the contract type..."
-    value="{{task.variables.type}}"
+    value="\{{task.variables.type}}"
     directory-name="type"
     min-chars="0">
 </nuxeo-directory-suggestion>

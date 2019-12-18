@@ -113,7 +113,7 @@ Example:
     op="Document.Query"
     params="{'query': 'select from Document'}"
     schemas="dublincore"
-    on-response="{{handleResponse}}">
+    on-response="\{{handleResponse}}">
     </nuxeo-operation>
 ```
 
@@ -132,7 +132,7 @@ For example, to get the permanent URL of a document with the Nuxeo resource elem
     op="Document.Query"
     params="{'query': 'select from Document'}"
     schemas="dublincore"
-    on-response="{{handleResponse}}"
+    on-response="\{{handleResponse}}"
     enrichers="documentURL">
     </nuxeo-operation>
 ```

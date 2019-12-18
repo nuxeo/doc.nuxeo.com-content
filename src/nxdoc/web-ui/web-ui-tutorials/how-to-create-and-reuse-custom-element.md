@@ -57,7 +57,7 @@ Go to the Studio Designer on the **Resources** tab.
   ```
   <div role="widget">
       <label>Validated</label>
-      <paper-checkbox checked="{{document.properties.validation:validated}}"></paper-checkbox>
+      <paper-checkbox checked="\{{document.properties.validation:validated}}"></paper-checkbox>
   </div>
   ```
 1. Save your changes.
