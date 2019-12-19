@@ -14,11 +14,13 @@ Discover upcoming and recent changes in Nuxeo Studio.
 ## Upcoming Changes
 
 ### [Breaking Change] Tokens to Become Mandatory
-Whenever using command line tools like nuxeoctl, Nuxeo CLI, Maven, the REST API to trigger Nuxeo Studio releases, Nuxeo Online Services will request a token instead of your password in order to authenticate.
+
+Whenever using command line tools like `nuxeoctl`, Nuxeo CLI, Maven, the REST API to trigger Nuxeo Studio releases, Nuxeo Online Services will request a token instead of your password in order to authenticate.
 
 In order to prevent any issue, we strongly recommend you to do the switch as soon as possible: see our [token management]({{page page='token-management'}}) documentation for details on how to create and apply your token.
 
-### Custom icons support
+### Custom Icons Support
+
 In Studio Designer, a new option will let you upload a custom SVG icon for your buttons and drawer menu entries.
 
 ### More Upcoming Changes
