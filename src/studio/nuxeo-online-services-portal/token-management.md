@@ -12,6 +12,10 @@ As a commitment to an always improved security, Nuxeo Online Services delegates 
 
 The counterpart is that whenever using commands in our clients and APIs that require authentication, your password can't be used. Nuxeo Online Services needs an alternative way for you to authenticate: that's when you should use a token.
 
+{{#> callout type='warning' heading='mandatory change'}}
+Tokens will soon become the mandatory way to authenticate for all our tools and APIs. We strongly recommend doing the switch as soon as possible to prevent any breakage.
+{{/callout}}
+
 ## When to Use a Token
 
 Tokens need to be used as a replacement for your password in Nuxeo Online Services APIs and our command line tools:
