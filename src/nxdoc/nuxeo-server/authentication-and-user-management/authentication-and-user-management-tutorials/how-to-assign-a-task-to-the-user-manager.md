@@ -1,9 +1,15 @@
 ---
 title: 'HOWTO: Assign a Task to the User Manager'
 description: This page provides the instructions to assign a task according to the task performer properties.
+details:
+    howto:
+        excerpt: This page provides the instructions to assign a task according to the task performer properties.
+        level: Intermediate
+        tool: Studio
+        topics: 'LDAP, Workflow'
 review:
     comment: ''
-    date: '2019-12-13'
+    date: '2019-12-19'
     status: ok
 tree_item_index: 410
 toc: true
@@ -13,50 +19,67 @@ This tutorial explains how to dynamically assign a task to the user manager.
 
 ## Prerequisites
 
-This tutorials assumes you have extended the user property schema with a `user:manager` property. All the instructions are provided in the [HOWTO: Add New Fields to the User Profile or Group Profile]({{page version='' space='nxdoc' page='how-to-add-new-fields-to-the-user-profile-or-group-profile'}}) Documentation page.
+- Start by following this [HOWTO: Add New Fields to the User Profile or Group Profile]({{page version='' space='nxdoc' page='how-to-add-new-fields-to-the-user-profile-or-group-profile'}}).
+- On your Studio project, in **Modeler** > **External Templates**, install the **Default Nuxeo Platform Configuration** template.
 
 ## Use Case
 
-We will create a simple workflow template with only one validation task, sent to the document creator manager.
+We create a simple workflow template with only one validation task, sent to the document creator manager.
 
 ### Create a Document Property to Store the User Manager
 
-To complete this use case, we will use a technical document property to store the manager information. For this tutorial, we will use the `File` schema, and create a `file_schema:manager` property, of type `User/Group`, with a restriction to be exclusively a User.
+To complete this use case, we use a technical document property to store the manager information. For this tutorial, we will use the `File` schema, and create a `file_schema:manager` property, of type `User/Group`, with a restriction to be exclusively a User.
 
-### Create the Users
-
-- Create a user with username as `boss`.
-- Create a user with username as `jdoe`, and set `boss` as `jdoe`'s manager
+To do so:
+1. In **Modeler**, go to **Content Model** > **Document Types** and click on **File**.
+1. Go to the **Schema** tab and add a new field `manager`, type `User/Group`.
+1. Save your modifications.
 
 ### Create a Workflow Template
 
-- Create a workflow template with one validation task
-- Assign the task to `jdoe`'s manager (`Assignees expression=Document["file_schema:manager"]`).
+1. In **Modeler**, go to **Workflow** and create a new workflow:
+    - Feature ID: `WF_Automatic_Task_Assignment`
+    - Label: `Automatic Task Assignment`
+1. Click on **Ok**
+1. Go to the **Graph** tab and drag and drop an **Approve** task.
+1. Edit the task, and on the field **Assignees expression** put:
+    ```
+    Document["file_schema:manager"]
+    ```
+1. Click on **Save**
+1. Connect the Start and End points to the approve task and save your modifications.
 
-### Create a Automation Chain
+### Create the Automation Chain
 
-- Create the following Automation chain:
+1. In **Modeler**, go to **Automation** > **Automation Chains** and create a new chain `Set_WorkflowManager`.
+1. Click to **Switch editor** at the top of the page and copy/paste the following chain:
+    ```
+    - Context.FetchDocument
+    - Document.SetProperty:
+        xpath: "file_schema:manager"
+        save: "true"
+        value: "@{CurrentUser[\"user:manager\"]}"
+    ```
+1. Save your modifications.
 
-```
-- Context.FetchDocument
-- Document.SetProperty:
-    xpath: "file_schema:manager"
-    save: "true"
-    value: "@{CurrentUser[\"user:manager\"]}"
-```
+### Create the Event Handler
 
-- Create the associated Event Handler, on the `Document Created` event for `File` document type. In our scenario, `CurrentUser` corresponds to the document creator (`dc:creator`)
+1. In **Modeler**, go to **Automation** > **Event Handlers** and create a new event handler `EH_AC_SetAssigneeTask`:
+    - **Events**: Document created
+    - **Current document has one of the type**: File
+    - **Chain or script**: Set_WorkflowManager
+1. Save your modifications.
 
 ### Generate the Workflow Task Layouts
 
-- Navigate to **Nuxeo Studio Designer** > **UI** > **Layouts** > **Workflows** > **<Workflow Template Name>** and generate the task layout.
+1. Navigate to **Designer** > **UI** > **Layouts** > **Workflows** > **<Workflow Template Name>** and click on **Configure Missing Layouts**.
+1. Save your modifications.
 
-### Deploy your Configuration
+### Deploy and Test your Configuration
 
-- Hot Deploy your Nuxeo Studio Project
-- Log in as `jdoe`
-- Create a `File`
-- Optionally, log in as another user to trigger the validation workflow
-- Log out and log in as `boss`
-
-User `boss` has a validation task!
+1. [Deploy your changes]({{page version='' space='nxdoc' page='nuxeo-dev-tools-extension'}}#hot-reload).
+1. Create a user `boss` and a user `jdoe`, and set `boss` as `jdoe`'s manager
+1. Log in as `jdoe` and create a `File` document type.
+1. Launch the **Automatic Task Assignment** workflow on it.
+1. Log out and log in as `boss`.</br>
+  The user `boss` has a validation task!
