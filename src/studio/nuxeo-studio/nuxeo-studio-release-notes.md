@@ -13,23 +13,25 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Upcoming Changes
 
-### Layout Inheritance
+### [Breaking Change] Tokens to Become Mandatory
+Whenever using command line tools like nuxeoctl, Nuxeo CLI, Maven, the REST API to trigger Nuxeo Studio releases, Nuxeo Online Services will request a token instead of your password in order to authenticate.
 
-In Studio Designer, layouts will mimic the doctype you inherit from. If your document type inherits from File for instance, layouts will look just like a Web UI file instead of a generic one.
+In order to prevent any issue, we strongly recommend you to do the switch as soon as possible: see our [token management]({{page page='token-management'}}) documentation for details on how to create and apply your token.
 
-We are taking advantage of this work to better manage how default document types are handled too: currently if you try to override a folderish document, the view layout does not allow to configure the columns to be displayed. With that change, you will get a view layout you can actually tweak, just like any other.
+### Custom icons support
+In Studio Designer, a new option will let you upload a custom SVG icon for your buttons and drawer menu entries.
 
 ### More Upcoming Changes
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.22.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.24.0','3.24.1','3.25.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2019-10-11-changes' page='studio-updates-2019-10-11'}}}
+{{{multiexcerpt 'studio-updates-2019-12-changes' page='studio-updates-2019-12'}}}
 
 ### Other Noteworthy Mentions
 
-{{{multiexcerpt 'studio-updates-2019-10-11-bugfix' page='studio-updates-2019-10-11''}}}
+{{{multiexcerpt 'studio-updates-2019-12-bugfix' page='studio-updates-2019-12''}}}
 
 ## Learn More
 [More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.21.0'%29) is available in our bug tracking tool.
@@ -40,6 +42,7 @@ We are taking advantage of this work to better manage how default document types
 
 | Release Date                                           | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [October / November 2019]({{page page='studio-updates-2019-10-11'}})     | Easier access to other services, scripts creation from Studio Modeler business logic screens |
 | [August / September 2019]({{page page='studio-updates-2019-09'}})      | Package listing performance improvements, automation scripting scrolling bug fixed |
 | [July 2019]({{page page='studio-updates-2019-07'}})      | Configure searches on file type or size, better help for page providers configuration |
 | [May/June 2019]({{page page='studio-updates-2019-05-and-06'}})      | More consistent layouts, new options in page provider screen. |
