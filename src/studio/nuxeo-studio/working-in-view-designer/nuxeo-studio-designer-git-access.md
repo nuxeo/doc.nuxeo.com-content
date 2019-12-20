@@ -5,7 +5,7 @@ review:
   comment: ''
   date: ''
   status: ok
-toc: false
+toc: true
 tree_item_index: 500
 ---
 
@@ -66,7 +66,7 @@ Once logged in to Nuxeo Online Services:
 1. Copy the Git URL to clone your project
 1. On your computer, clone your project using your Git client (typically `git clone [project URL]`). When prompted, use your Nuxeo Online Services username and your personal access token.
 
-To avoid having to type your token's content repeatedly, we recommend storing it using <a href="https://git-scm.com/docs/gitcredentials">Git's standard credentials mechanisms</a>.
+To avoid having to type your token's content repeatedly, we recommend storing it using [Git's standard credentials mechanisms](https://git-scm.com/docs/gitcredentials).
 
 {{#> callout type='tip' heading='Security management'}}
 If your computer is compromised or stolen, then it is possible to [revoke the token]({{page page='token-management'}}#revoking-a-token) access directly from Nuxeo Online Services: Your password remains safe and no one can use the token to launch commands anymore.

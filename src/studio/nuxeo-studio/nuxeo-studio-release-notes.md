@@ -17,10 +17,10 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 Whenever using command line tools like `nuxeoctl`, Nuxeo CLI, Maven, the REST API to trigger Nuxeo Studio releases, Nuxeo Online Services will request a token instead of your password in order to authenticate.
 
-Passwords can still be used for now, and this change will be rolled out progressively, with communication made beforehand so that you know what to expect. In order to prevent any issue in the future, we strongly recommend you to do the switch to tokens as soon as possible: see our [token management]({{page page='token-management'}}) documentation for details on how to create and apply your token.
+Passwords can still be used for now, and this change will be rolled out progressively, with communication made beforehand so that you know what to expect. To prevent any issue in the future, we strongly recommend you to do the switch to tokens as soon as possible: see our [token management]({{page page='token-management'}}) documentation for details on how to create and apply your token.
 
-{{callout type='info'}}
-This only impacts command line tools and APIs. It doesn't change the way you login to Nuxeo Online Services when using your browser, for instance when accessing Nuxeo Studio.
+{{#> callout type='info'}}
+This only impacts command-line tools and APIs. It doesn't change the way you log in to Nuxeo Online Services when using your browser, for instance when accessing Nuxeo Studio.
 {{/callout}}
 
 ### Custom Icons Support

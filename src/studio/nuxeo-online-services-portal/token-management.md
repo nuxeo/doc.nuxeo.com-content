@@ -23,8 +23,8 @@ Tokens need to be used as a replacement for your password in Nuxeo Online Servic
 - To [trigger a Studio release through the REST API]({{page page='how-to-tag-or-release-your-nuxeo-studio-project'}}#with-the-rest-api),
 - When using our command line tools with options that require a password to be provided. For example, registering an instance using [nuxeoctl]({{page version='' space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}), linking your Studio project to your Java development project in [Nuxeo CLI]({{page page='nuxeo-cli' space='nxdoc'}}).
 
-{{callout type='info'}}
-Tokens are only used for command line tools and APIs. You still need to use your password as usual when you login to Nuxeo Online Services in your browser, for instance when accessing Nuxeo Studio.
+{{#> callout type='info'}}
+Tokens are only used for command-line tools and APIs. You still need to use your password as usual when you log in to Nuxeo Online Services in your browser, for instance when accessing Nuxeo Studio.
 {{/callout}}
 
 ## Creating a Token
@@ -37,7 +37,7 @@ To generate a token:
 
 Your token will only be shown once; be sure to save it in a secure place, for instance a password management tool.
 
-{{#> callout type='info' heading='Info'}}
+{{#> callout type='info'}}
 We recommend using a different token for every tool or service you plan to use: this lessens the impact if you need to revoke it at some point.
 {{/callout}}
 
@@ -49,8 +49,8 @@ In some cases, configuration can help you skip this prompt to make your flow fas
 - [Storing Git credentials]({{page page='nuxeo-studio-designer-git-access'}}#cloning-your-project) when using Git access
 - [Storing the token in your Maven configuration]({{page page='maven-integration'}}#setting-up-the-maven-client) for your CI chain needs
 
-{{callout type='info'}}
-Tokens are only used for command line tools and APIs. You still need to use your password as usual when you login to Nuxeo Online Services in your browser, for instance when accessing Nuxeo Studio.
+{{#> callout type='info'}}
+Tokens are only used for command-line tools and APIs. You still need to use your password as usual when you log in to Nuxeo Online Services in your browser, for instance when accessing Nuxeo Studio.
 {{/callout}}
 
 ## Revoking a Token
