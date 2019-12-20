@@ -12,8 +12,8 @@ As a commitment to an always improved security, Nuxeo Online Services delegates 
 
 The counterpart is that whenever using commands in our clients and APIs that require authentication, your password can't be used. Nuxeo Online Services needs an alternative way for you to authenticate: that's when you should use a token.
 
-{{#> callout type='warning' heading='mandatory change'}}
-Tokens will soon become the mandatory way to authenticate for all our tools and APIs. We strongly recommend doing the switch as soon as possible to prevent any breakage.
+{{#> callout type='warning' heading='Future Change'}}
+Tokens will become the mandatory way to authenticate for all our tools and APIs. We strongly recommend doing the switch as soon as possible to prevent any breakage in the future.
 {{/callout}}
 
 ## When to Use a Token
@@ -22,6 +22,10 @@ Tokens need to be used as a replacement for your password in Nuxeo Online Servic
 - In your continuous integration / continuous delivery chain, to have your software authenticate against our [Maven private repository]({{page version='' space='studio' page='maven-integration'}}),
 - To [trigger a Studio release through the REST API]({{page page='how-to-tag-or-release-your-nuxeo-studio-project'}}#with-the-rest-api),
 - When using our command line tools with options that require a password to be provided. For example, registering an instance using [nuxeoctl]({{page version='' space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}), linking your Studio project to your Java development project in [Nuxeo CLI]({{page page='nuxeo-cli' space='nxdoc'}}).
+
+{{callout type='info'}}
+Tokens are only used for command line tools and APIs. You still need to use your password as usual when you login to Nuxeo Online Services in your browser, for instance when accessing Nuxeo Studio.
+{{/callout}}
 
 ## Creating a Token
 
@@ -42,8 +46,12 @@ We recommend using a different token for every tool or service you plan to use: 
 Using your token consists in entering it when prompted.
 
 In some cases, configuration can help you skip this prompt to make your flow faster:
-- [Using a .netrc file]({{page page='nuxeo-studio-designer-git-access'}}#cloning-your-project) when using Git access
+- [Storing Git credentials]({{page page='nuxeo-studio-designer-git-access'}}#cloning-your-project) when using Git access
 - [Storing the token in your Maven configuration]({{page page='maven-integration'}}#setting-up-the-maven-client) for your CI chain needs
+
+{{callout type='info'}}
+Tokens are only used for command line tools and APIs. You still need to use your password as usual when you login to Nuxeo Online Services in your browser, for instance when accessing Nuxeo Studio.
+{{/callout}}
 
 ## Revoking a Token
 
