@@ -85,7 +85,7 @@ Whenever using command line tools:
 - the REST API to [trigger Nuxeo Studio releases]({{page space='studio' page='how-to-tag-or-release-your-nuxeo-studio-project'}}#with-the-rest-api),
 - [Studio Designer Git Access]({{page space='studio' page='nuxeo-studio-designer-git-access'}})
 
-Nuxeo Online Services will request a token instead of your password in order to authenticate.
+Nuxeo Online Services will request a <a href="#what-is-a-token">token</a> instead of your password in order to authenticate.
 
 {{#> callout type='info'}}
 This only impacts command line tools and APIs. It doesn't change the way you login to Nuxeo Online Services when using your browser, for instance when accessing Nuxeo Studio.
@@ -93,7 +93,7 @@ This only impacts command line tools and APIs. It doesn't change the way you log
 
 #### Preparing for Change
 
-Tokens work already as of today, and will keep working after the change. Although our client tools have been updated to prompt for a token instead of a password, passwords remain as a compatibility option until the change is effective.
+<a href="#what-is-a-token">Ttokens</a> work already as of today, and will keep working after the change. Although our client tools have been updated to prompt for a token instead of a password, passwords remain as a compatibility option until the change is effective.
 
 Switching to tokens will help you to prevent any breakage when the change will happen.
 
