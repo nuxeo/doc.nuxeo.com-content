@@ -108,8 +108,8 @@ There is no impact on older Nuxeo Server versions. Changes made in our clients a
 
 ## Why These Changes
 
-These changes are made as part of our continuous effort to improve security, and bring several benefits:
+Nuxeo is partnering with Okta, an industry leader around authentication security to bring these changes. They are made as part of our continuous effort to improve security, and bring several benefits:
 
-- Storage decoupling: Nuxeo Online Services will not store your password anymore, reducing the risks of information leak if a breach were to happen. Furthermore, delegating this storage to our partner Okta ensures your password benefits from <a href="https://www.okta.com/security/" target="_blank">state of the art protection</a>.
+- Storage decoupling: Nuxeo Online Services will not store your password anymore, reducing the risk of information leak if a breach were to happen. Furthermore, delegating this storage to our partner Okta ensures your password benefits from <a href="https://www.okta.com/security/" target="_blank">state of the art protection</a>.
 - Stronger authentication system: Partnering with Okta allows us to provide new security features in order to secure your account, like multi-factor authentication.
 - Single Sign On: Signing into Your Nuxeo Online Services account will allow you to access our different services seamlessly, without being prompted for credentials again.
