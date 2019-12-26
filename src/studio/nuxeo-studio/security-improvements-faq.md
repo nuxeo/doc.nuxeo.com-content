@@ -25,7 +25,7 @@ Changes will be made in 3 steps:
 
 #### Timeline
 
-//TBD - Doc won't be merged until dates are known
+- Jan. 27, 2020 - New login page is deployed
 
 Communication will be sent out by email to all of our customers prior to the change.
 
@@ -72,7 +72,8 @@ Command line tools will remain compatible after the change, and no change is nee
 
 #### Timeline
 
-//TBD - Doc won't be merged until dates are known
+- Anytime before Feb. 10: tokens can be used as the recommended option, passwords remain compatible
+- Feb. 10, 2020: tokens are enforced as a password replacement in all tools and APIs
 
 Communication will be sent out by email to all of our customers prior to the change.
 
@@ -104,7 +105,8 @@ See our [token management]({{page page='token-management'}}) documentation for d
 
 #### Timeline
 
-//TBD - Doc won't be merged until dates are known
+- Anytime before Feb. 25, 2020: multi-factor authentication can be setup manually and remains optional
+- Feb. 25, 2020: multi-factor authentication is enforced
 
 Communication will be sent out by email to all of our customers prior to the change.
 
