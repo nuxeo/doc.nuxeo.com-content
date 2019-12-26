@@ -12,13 +12,20 @@ tree_item_index: 731
 
 Nuxeo Online Services will undergo changes during the next couple of months in order to improve security. This page will detail what changes will happen, when, how you could be impacted and how to prepare for the change.
 
+## In a Nutshell
+Changes will be made in 3 steps:
+- <a href="#login-page">Login page update</a>: will change its URL, its design, and will ask for your email to authenticate instead of your username
+- <a href="#token-usage">Token usage</a>: <a href="#what-is-a-token">tokens</a> will be required instead of passwords in our command line tools and APIs.
+- <a href="#mfa">Multi-factor authentication</a>: an additional authentication factor will become mandatory to login into Nuxeo Online Services.
+
 ## Upcoming Changes
 
+<a name="login-page"></a>
 ### Step 1 - Login Page Update
 
 #### Timeline
 
-TBD
+//TBD - Doc won't be merged until dates are known
 
 Communication will be sent out by email to all of our customers prior to the change.
 
@@ -49,7 +56,7 @@ A simple way to check is to click on the "Login with Okta" button available in t
 
 Your _email address_ will be requested instead of your _username_ in order to login into Nuxeo Online Services.
 
-Note that when using Okta, you will be requested for a security question as a way to recover your password, and optionally to setup multi-factor authentication: see the <a href="#mfa">multi-factor authentication</a> section below for more details.
+Note that when using Okta, you will be requested for a security question as a way to recover your password, and optionally to setup multi-factor authentication. The <a href="#mfa">multi-factor authentication</a> will become mandatory later on.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/security-improvements-faq/account-setup
@@ -60,11 +67,12 @@ Note that when using Okta, you will be requested for a security question as a wa
 
 Command line tools will remain compatible after the change, and no change is needed on this side. In order to provide consistency and allow you to use your email address everywhere if you prefer to, we will also make sure before the update that our tools and APIs can accept either your username or your email address when being requested for a username.
 
+<a name="token-usage"></a>
 ### Step 2 - Tokens to Become Mandatory
 
 #### Timeline
 
-TBD
+//TBD - Doc won't be merged until dates are known
 
 Communication will be sent out by email to all of our customers prior to the change.
 
@@ -75,6 +83,7 @@ Whenever using command line tools:
 - [Nuxeo CLI]({{page space='nxdoc' page='nuxeo-cli'}}),
 - Maven,
 - the REST API to [trigger Nuxeo Studio releases]({{page space='studio' page='how-to-tag-or-release-your-nuxeo-studio-project'}}#with-the-rest-api),
+- [Studio Designer Git Access]({{page space='studio' page='nuxeo-studio-designer-git-access'}})
 
 Nuxeo Online Services will request a token instead of your password in order to authenticate.
 
@@ -91,11 +100,11 @@ Switching to tokens will help you to prevent any breakage when the change will h
 See our [token management]({{page page='token-management'}}) documentation for details on how to create and apply your token.
 
 <a name="mfa"></a>
-### Multi-Factor Authentication
+### Step 3 - Multi-Factor Authentication
 
 #### Timeline
 
-TBD
+//TBD - Doc won't be merged until dates are known
 
 Communication will be sent out by email to all of our customers prior to the change.
 
@@ -115,13 +124,20 @@ These factors can be one of the following:
 --}}
 ![mfa-setup](nx_asset://64c95f94-e3ac-40b1-a03e-16ce33989d83 ?w=415,border=true)
 
-At first optional, this second authentication factor will be made mandatory at a later stage.
+Optional during the previous steps, this second authentication factor will be enforced at this stage.
 
 #### Preparing for Change
 
 We recommend setting up the multi-factor authentication prior to its enforcement, so that you can get accustomed to it.
 
 ## FAQ
+
+<a name="what-is-a-token"></a>
+### What is a Token?
+
+{{{multiexcerpt 'what-is-a-token' page='token-management'}}}
+
+Feel free to check our [token management]({{page page='token-management'}}) documentation for further details.
 
 ### Do I Need a Particular Hotfix for These Changes?
 
@@ -135,9 +151,9 @@ These changes are only cosmetic ones to clarify how our new authentication syste
 
 ### I'm Using an Unsupported Nuxeo Server Version. Should I be Concerned?
 
-There is no impact on older Nuxeo Server versions. Changes made in our clients are only cosmetic ones to clarify how our new authentication system works.
+The same applies for formerly supported releases: no need for code change. Authentication against Nuxeo Online Services when using our command line tools and APIs will have to be done using tokens instead of passwords.
 
-## Why These Changes
+### Why These Changes?
 
 Nuxeo is partnering with Okta, an industry leader around authentication security to bring these changes. They are made as part of our continuous effort to improve security, and bring several benefits:
 

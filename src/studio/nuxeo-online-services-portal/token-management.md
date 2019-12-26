@@ -8,6 +8,7 @@ review:
 toc: true
 ---
 
+
 As a commitment to an always improved security, Nuxeo Online Services delegates authentication to Okta. This allows us to secure it in an advanced way, and provide additional security options.
 
 The counterpart is that whenever using commands in our clients and APIs that require authentication, your password can't be used. Nuxeo Online Services needs an alternative way for you to authenticate: that's when you should use a token.
@@ -16,12 +17,19 @@ The counterpart is that whenever using commands in our clients and APIs that req
 Tokens will become the mandatory way to authenticate for all our tools and APIs. We strongly recommend doing the switch as soon as possible to prevent any breakage in the future.
 {{/callout}}
 
+## What is a Token
+
+{{! multiexcerpt name='what-is-a-token'}}
+A token is a randomly generated text that can be used as a replacement for your password when authenticating to our services. It is meant to be used as a replacement for your password in all places where you would need to write down your password, but would rather avoid to disclose it: for instance in configuration files.
+{{! /multiexcerpt}}
+
 ## When to Use a Token
 
 Tokens need to be used as a replacement for your password in Nuxeo Online Services APIs and our command line tools:
 - In your continuous integration / continuous delivery chain, to have your software authenticate against our [Maven private repository]({{page version='' space='studio' page='maven-integration'}}),
 - To [trigger a Studio release through the REST API]({{page page='how-to-tag-or-release-your-nuxeo-studio-project'}}#with-the-rest-api),
-- When using our command line tools with options that require a password to be provided. For example, registering an instance using [nuxeoctl]({{page version='' space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}), linking your Studio project to your Java development project in [Nuxeo CLI]({{page page='nuxeo-cli' space='nxdoc'}}).
+- When using our command line tools with options that require a password to be provided. For example, registering an instance using [nuxeoctl]({{page version='' space='nxdoc' page='nuxeoctl-and-control-panel-usage'}}), linking your Studio project to your Java development project in [Nuxeo CLI]({{page page='nuxeo-cli' space='nxdoc'}}),
+- When using [Studio Designer Git Access]({{page page='nuxeo-studio-designer-git-access'}}) for faster development.
 
 {{#> callout type='info'}}
 Tokens are only used for command-line tools and APIs. You still need to use your password as usual when you log in to Nuxeo Online Services in your browser, for instance when accessing Nuxeo Studio.
