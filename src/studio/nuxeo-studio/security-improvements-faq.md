@@ -26,13 +26,37 @@ Communication will be sent out by email to all of our customers prior to the cha
 
 When accessing Nuxeo Online Services, a different login page will be displayed, with a new design and a new URL: https://auth.nuxeo.com instead of https://sso.nuxeo.com
 
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/security-improvements-faq/auth-nuxeo-com
+    name: auth-nuxeo-com.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![auth-nuxeo-com](nx_asset://885d8e2c-1831-4d9d-ac50-6835a7598799 ?border=true)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/security-improvements-faq/okta-login-page
+    name: okta-login-page.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![okta-login-page](nx_asset://e2f6e69c-cc13-4b69-ab4d-ed58adea3828 ?w=650,border=true)
+
+
 #### Preparing for Change
 
 We recommend checking with your system administrator that the new URL is authorized for access.
 
-A simple way to check is to click on the "Login with Okta" button available in the current page, and use it to login with your usual credentials. Note that when using Okta, you will be requested for a security question as a way to recover your password, and optionally to setup multi-factor authentication: see the <a href="#mfa">multi-factor authentication</a> section below for more details.
+A simple way to check is to click on the "Login with Okta" button available in the current page, and use it to login with your usual credentials.
 
 Your _email address_ will be requested instead of your _username_ in order to login into Nuxeo Online Services.
+
+Note that when using Okta, you will be requested for a security question as a way to recover your password, and optionally to setup multi-factor authentication: see the <a href="#mfa">multi-factor authentication</a> section below for more details.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/security-improvements-faq/account-setup
+    name: account-setup.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![account-setup](nx_asset://bc216582-68b8-4858-846d-2bde22123efc ?w=650,border=true)
 
 Command line tools will remain compatible after the change, and no change is needed on this side. In order to provide consistency and allow you to use your email address everywhere if you prefer to, we will also make sure before the update that our tools and APIs can accept either your username or your email address when being requested for a username.
 
@@ -83,6 +107,13 @@ These factors can be one of the following:
 - Code provided by a smartphone application (most secure)
 - Voice call to a phone number
 - SMS message sent to a phone number (less secure)
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/security-improvements-faq/mfa-setup
+    name: mfa-setup.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![mfa-setup](nx_asset://64c95f94-e3ac-40b1-a03e-16ce33989d83 ?w=415,border=true)
 
 At first optional, this second authentication factor will be made mandatory at a later stage.
 
