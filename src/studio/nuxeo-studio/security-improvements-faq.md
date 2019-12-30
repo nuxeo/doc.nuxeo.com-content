@@ -13,19 +13,24 @@ tree_item_index: 731
 Nuxeo Online Services will undergo changes during the next couple of months in order to improve security. This page will detail what changes will happen, when, how you could be impacted and how to prepare for the change.
 
 ## In a Nutshell
-Changes will be made in 3 steps:
+Changes will be made in 2 steps:
+
+### Step 1 - Login page update and token enforcement
 - <a href="#login-page">Login page update</a>: will change its URL, its design, and will ask for your email to authenticate instead of your username
 - <a href="#token-usage">Token usage</a>: <a href="#what-is-a-token">tokens</a> will be required instead of passwords in our command line tools and APIs.
+
+### Step 2 - Multi-factor authentication
 - <a href="#mfa">Multi-factor authentication</a>: an additional authentication factor will become mandatory to login into Nuxeo Online Services.
 
 ## Upcoming Changes
 
 <a name="login-page"></a>
-### Step 1 - Login Page Update
+### Login Page Update
 
 #### Timeline
 
-- Jan. 27, 2020 - New login page is deployed
+- Anytime before Feb. 10: new login page is available as an option to test
+- Feb. 10, 2020: new login page becomes the standard
 
 Communication will be sent out by email to all of our customers prior to the change.
 
@@ -68,7 +73,7 @@ Note that when using Okta, you will be requested for a security question as a wa
 Command line tools will remain compatible after the change, and no change is needed on this side. In order to provide consistency and allow you to use your email address everywhere if you prefer to, we will also make sure before the update that our tools and APIs can accept either your username or your email address when being requested for a username.
 
 <a name="token-usage"></a>
-### Step 2 - Tokens to Become Mandatory
+### Tokens to Become Mandatory
 
 #### Timeline
 
@@ -94,14 +99,14 @@ This only impacts command line tools and APIs. It doesn't change the way you log
 
 #### Preparing for Change
 
-<a href="#what-is-a-token">Ttokens</a> work already as of today, and will keep working after the change. Although our client tools have been updated to prompt for a token instead of a password, passwords remain as a compatibility option until the change is effective.
+<a href="#what-is-a-token">Tokens</a> work already as of today, and will keep working after the change. Although our client tools have been updated to prompt for a token instead of a password, passwords remain as a compatibility option until the change is effective.
 
 Switching to tokens will help you to prevent any breakage when the change will happen.
 
 See our [token management]({{page page='token-management'}}) documentation for details on how to create and apply your token.
 
 <a name="mfa"></a>
-### Step 3 - Multi-Factor Authentication
+### Step 2 - Multi-Factor Authentication
 
 #### Timeline
 
