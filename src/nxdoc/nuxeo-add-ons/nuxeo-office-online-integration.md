@@ -21,6 +21,55 @@ You can find more information on the WOPI protocol for the Office Online integra
 
 <script src="https://fast.wistia.com/embed/medias/qvuc7teh6i.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_qvuc7teh6i popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:250px;position:relative;width:500px">&nbsp;</span>
 
+## Functional Overview
+
+### Office Online Check-In
+
+When an office document (Excel, Word or PowerPoint files) is stored in Nuxeo Platform, whether it’s an attachment or a main file, the office addon enables a new action slot enabling a check in into the Office Online web interface for previewing and editing the document:
+
+SCREENSHOT
+
+### Office Online Authentication
+
+When a user is authenticated to Nuxeo, checking in a new office document for the first time will trigger an authentication attempt to Office Online services in a new window. A work or school account is required:
+
+SCREENSHOT
+
+Once authenticated, the user can choose to keep authenticated to his Microsoft account for future usage.
+
+SCREENSHOT
+
+### Office Online Documents Preview
+
+When the user has only read access or only require to preview the document with the Office online web user interface.
+
+### Office Online Documents Edition
+
+Once in edition mode, every modification done on the Office document will be saved to Nuxeo:
+
+1. Initial State
+
+SCREENSHOT
+
+1. Edition (Office 365 Application Check-in)
+
+SCREENSHOT
+
+{{#> callout type='note' }}
+The mention “Saved to Nuxeo” is automatic (auto-saving feature of Office Online), however modifications are propagated in the server with a delay, see the “Office online limitations” section.
+{{/callout}}
+
+1. The document is updated in Nuxeo for all users, as well as its preview:    
+
+SCREENSHOT
+
+<!-- TODO
+### Office Online Documents Versions Increment
+
+
+### Co-Authoring
+-->
+
 ## Requirements
 
 ### WOPI Domain Allow List
@@ -54,3 +103,39 @@ For instance, if your Nuxeo server public domain is `bar.com` which is not in th
 ```
 nuxeo.wopi.baseURL=https://tech.com/nuxeo
 ```
+
+### Office Online Related Limitations
+
+Editions and co-authoring have inherent auto-save frequencies and priorities.
+The rules are detailed between Word, Excel and PowerPoint:
+
+| Application | Auto-save frequency | PutFile access token |
+
+<table>
+<tr>
+  <th>Application</th>
+  <th>Auto-save frequency</th>
+  <th>PutFile access token used</th>
+  <th>Permissions check frequency</th>
+</tr>
+<tr>
+  <td>Word</td>
+  <td>Every 30 seconds if document is updated.</td>
+  <td>The access token of the user who made the most recent change to the document.</td>
+  <td>At least every 5 minutes.</td>
+</tr>
+<tr>
+  <td>Excel</td>
+  <td>Every 2 minutes.</td>
+  <td>The access token of the user who joined the editing session most recently.</td>
+  <td>At least every 15 minutes.</td>
+</tr>
+<tr>
+  <td>PowerPoint</td>
+  <td>Every 60 seconds if document is updated.</td>
+  <td>The access token of the user who made the most recent change to the document.</td>
+  <td>At least every 5 minutes.</td>
+</tr>
+</table>
+
+Please refer to the [WOPI documentation](https://wopi.readthedocs.io/en/latest/scenarios/coauth.html) for more information.
