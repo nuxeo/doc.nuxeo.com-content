@@ -94,7 +94,7 @@ Whenever using command line tools:
 Nuxeo Online Services will request a <a href="#what-is-a-token">token</a> instead of your password in order to authenticate.
 
 {{#> callout type='info'}}
-This only impacts command line tools and APIs. It doesn't change the way you login to Nuxeo Online Services when using your browser, for instance when accessing Nuxeo Studio.
+This only impacts command line tools and APIs. It doesn't change the way you login to Nuxeo Online Services when using your browser, for instance when accessing Nuxeo Studio. Our tools and APIs can accept either your username or your email address when being requested for a username.
 {{/callout}}
 
 #### Preparing for Change
@@ -164,6 +164,6 @@ The same applies for formerly supported releases: no need for code change. Authe
 
 Nuxeo is partnering with Okta, an industry leader around authentication security to bring these changes. They are made as part of our continuous effort to improve security, and bring several benefits:
 
-- Storage decoupling: Nuxeo Online Services will not store your password anymore, reducing the risk of information leak if a breach were to happen. Furthermore, delegating this storage to our partner Okta ensures your password benefits from <a href="https://www.okta.com/security/" target="_blank">state of the art protection</a>.
+- Storage decoupling: Your password will be stored by our partner Okta. This ensures it benefits from <a href="https://www.okta.com/security/" target="_blank">even better protection</a>.
 - Stronger authentication system: Partnering with Okta allows us to provide new security features in order to secure your account, like multi-factor authentication.
 - Single Sign On: Signing into Your Nuxeo Online Services account will allow you to access our different services seamlessly, without being prompted for credentials again.
