@@ -14,7 +14,7 @@ details:
 labels:
     - tutorial
     - lts2019-ok
-tree_item_index: 1300
+tree_item_index: 1000
 ---
 
 {{! excerpt}}
