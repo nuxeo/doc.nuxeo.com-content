@@ -73,3 +73,12 @@ Watch the related courses on Nuxeo University
 {{/callout}}
 
 {{{multiexcerpt 'AutomationIntroduction' page='Content Automation Concepts'}}}
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Automation Script Utilities](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/automation-script-utils)
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>
