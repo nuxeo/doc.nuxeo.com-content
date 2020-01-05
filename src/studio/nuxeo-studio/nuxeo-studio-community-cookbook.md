@@ -36,6 +36,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
+    ![script-utils-2.png](nx_asset://80bd0887-8105-4c1d-9c40-ad52e753d0ea ?w=150,border=true)
+    </td>
+    <td>[Automation Script Utilities](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/automation-script-utils)</td>
+    <td>Nuxeo</td>
+    <td>Search</td>
+  </tr>
+  <tr>
+    <td>
     ![comments.png](nx_asset://38adf904-b98c-4050-96d3-4be11652eab1 ?w=150,border=true)
     </td>
     <td>[Comment Indexing](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/comment-indexing)</td>
