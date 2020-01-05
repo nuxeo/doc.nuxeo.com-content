@@ -126,6 +126,7 @@ The **Parameters** tab to add custom parameters accessible through the `params` 
 <div class="column medium-6">
 {{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
+- [Automation Script Utilities](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/automation-script-utils)
 - [Actions on Versioned Documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/actions-versioned-documents)
 {{/panel}}
 </div>
