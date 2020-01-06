@@ -13,7 +13,7 @@ Nuxeo Online Services will be improved in the next couple of months to enhance s
 
 ## In Brief
 
-Changes will be made in 2 steps:
+Changes will be done in 2 steps:
 
 ### Step 1 - Login Page Update and Token Enforcement
 - [Login page update](#login-page-update): URL and design will be updated and your email will be asked to authenticate instead of your username.
