@@ -40,7 +40,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
     </td>
     <td>[Automation Script Utilities](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/automation-script-utils)</td>
     <td>Nuxeo</td>
-    <td>Search</td>
+    <td>Business Logics</td>
   </tr>
   <tr>
     <td>
