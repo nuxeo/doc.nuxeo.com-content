@@ -25,47 +25,81 @@ You can find more information on the WOPI protocol for the Office Online integra
 
 ### Office Online Check-In
 
-When an office document (Excel, Word or PowerPoint files) is stored in Nuxeo Platform, whether it’s an attachment or a main file, the office addon enables a new action slot enabling a check in into the Office Online web interface for previewing and editing the document:
+When an office document (Excel, Word or PowerPoint files) is stored in Nuxeo Platform, whether it’s an attachment or the main file, the office addon enables a new action slot enabling a check-in into the Office Online web interface to preview and edit the document:
 
-SCREENSHOT
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Office Online Integration/office-online-checkin.png
+    name: office-online-checkin.png
+    addins#screenshot#up_to_date
+--}}
+![office-online-checkin.png](nx_asset://589b97ec-7f95-495b-a6dc-5c0d57b17f78 ?w=650)
 
 ### Office Online Authentication
 
-When a user is authenticated to Nuxeo, checking in a new office document for the first time will trigger an authentication attempt to Office Online services in a new window. A work or school account is required:
+When a user is authenticated to Nuxeo, checking in a new office document for the first time will trigger an authentication attempt to Office Online services in a new window. </br>
+A work or school account is required:
 
-SCREENSHOT
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Office Online Integration/office-online-authentication.png
+    name: office-online-authentication.png
+    addins#screenshot#up_to_date
+--}}
+![office-online-authentication.png](nx_asset://4e7749bf-1c78-4a0d-a5e4-71b9463527a2 ?w=450)
 
 Once authenticated, the user can choose to keep authenticated to his Microsoft account for future usage.
 
-SCREENSHOT
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Office Online Integration/office-online-sign-in.png
+    name: office-online-sign-in.png
+    addins#screenshot#up_to_date
+--}}
+![office-online-sign-in.png](nx_asset://8bcabfa6-c6ca-47de-b275-e465de680c93 ?w=250)
 
 ### Office Online Documents Preview
 
-When the user has only read access or only require to preview the document with the Office online web user interface.
+When the user has only read access, or only require to preview the document, with the Office online web user interface.
 
 ### Office Online Documents Edition
 
-Once in edition mode, every modification done on the Office document will be saved to Nuxeo:
+Once in edition mode, every modification done on the Office document will be saved to Nuxeo Platform:
 
-1. Initial State
+1. Initial State:
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Office Online Integration/office-online-initial-state.png
+      name: office-online-initial-state.png
+      addins#screenshot#up_to_date
+    --}}
+    ![office-online-initial-state.png](nx_asset://c65cd4ef-351d-4b43-b775-332fa2f2dfbd ?w=650)
+1. Edition (Office 365 Application Check-in):
 
-SCREENSHOT
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Office Online Integration/office-online-edition-mode.png
+      name: office-online-edition-mode.png
+      addins#screenshot#up_to_date
+    --}}
+    ![office-online-edition-mode.png](nx_asset://38bfb820-74c5-46f8-b36f-25b5a73fb0f2 ?w=650)
 
-1. Edition (Office 365 Application Check-in)
+    {{#> callout type='note' }}
+    The mention “Saved to Nuxeo” is automatic (auto-saving feature of Office Online), however modifications are propagated in the server with a delay, see the “Office online limitations” section.
+    {{/callout}}
 
-SCREENSHOT
+1. The document is updated on Nuxeo Platform side for all users, as well as its preview:    
 
-{{#> callout type='note' }}
-The mention “Saved to Nuxeo” is automatic (auto-saving feature of Office Online), however modifications are propagated in the server with a delay, see the “Office online limitations” section.
-{{/callout}}
-
-1. The document is updated in Nuxeo for all users, as well as its preview:    
-
-SCREENSHOT
+    {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Office Online Integration/office-online-preview-updated.png
+      name: office-online-preview-updated.png
+      addins#screenshot#up_to_date
+    --}}
+    ![office-online-preview-updated.png](nx_asset://811c7981-5178-4d9a-89f1-6355a7d2cd39 ?w=650)
 
 <!-- TODO
 ### Office Online Documents Versions Increment
-
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Office Online Integration/office-online-tracked-version.png
+    name: office-online-tracked-version.png
+    addins#screenshot#up_to_date
+--}}
+![office-online-tracked-version.png](nx_asset://a4572e58-6fa2-4a5e-9cd6-235250303a31 ?w=650)
 
 ### Co-Authoring
 -->
@@ -120,7 +154,7 @@ The rules are detailed between Word, Excel and PowerPoint:
 </tr>
 <tr>
   <td>Word</td>
-  <td>Every 30 seconds if document is updated.</td>
+  <td>Every 30 seconds if the document is updated.</td>
   <td>The access token of the user who made the most recent change to the document.</td>
   <td>At least every 5 minutes.</td>
 </tr>
@@ -132,7 +166,7 @@ The rules are detailed between Word, Excel and PowerPoint:
 </tr>
 <tr>
   <td>PowerPoint</td>
-  <td>Every 60 seconds if document is updated.</td>
+  <td>Every 60 seconds if the document is updated.</td>
   <td>The access token of the user who made the most recent change to the document.</td>
   <td>At least every 5 minutes.</td>
 </tr>
