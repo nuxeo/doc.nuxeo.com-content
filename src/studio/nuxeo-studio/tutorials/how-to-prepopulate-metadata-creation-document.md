@@ -1,5 +1,5 @@
 ---
-title: 'Howto: Prepopulate Metadata in the Document Creation Layout'
+title: 'Howto: Prepopulate Metadata at Creation'
 review:
   comment: ''
   date: '2019-12-17'
@@ -69,36 +69,44 @@ We want to initialize the reference at the moment of showing the user the creati
 - `-`: Fixed string
 - `XXXXXX`: Unique reference number
 
+### Create the Document Type
+
+1. In Modeler, go to **Content Model** > **Document Types** and create a new document type:
+    - Feature ID: `TEND`
+    - Label: `Tender`
+1. On the **Schema** tab, add a new field `ref` as a string.
+1. Save your changes.
+
 ### Create the Automation Chain
 
-First of all, we will access the **Nuxeo Studio Modeler** > **Automation** > **Automation Chains** menu and create a new automation chain called `AC_Tender_InitTenderAttributes`, which will include the following operations:
+In **Nuxeo Studio Modeler** > **Automation** > **Automation Chains**, create a new automation chain called `AC_Tender_InitTenderAttributes`, which includes the following operations:
 
 ```
-Fetch> Context.FetchDocument
-Document> Document.SetProperty
-  XPath: tend:ref
-  save: false
-  value: @{Document.type}-@{Fn.getNextId ("TEND")}
+- Context.FetchDocument
+- Document.SetProperty:
+    xpath: "tend:ref"
+    save: "false"
+    value: "@{Document.type}-@{Fn.getNextId (\"TEND\")}"
 ```
 
 ### Create the Event Handler
 
-Next, we will create an Event Handler from the **Nuxeo Studio Modeler** > **Automation** > **Event Handlers** menu that is responsible for executing the automation chain when the document is created as an "Empty Document". We have to establish the following values in the configuration screen:
+Next, create an Event Handler from the **Nuxeo Studio Modeler** > **Automation** > **Event Handlers** that is responsible for executing the automation chain when the document is created as an "Empty Document".</br>
 
+We have to establish the following values in the configuration screen:
 - **Events**: Empty document created
 - **Event handler activation**:
-  - **Current document has one of the types**: Tender
+  - **Current document has one of the types**: TEND
   - **Current document has facet**: Any
 - **Current document is**: Regular Document
 - **Event handler execution**: `AC_Tender_InitTenderAttributes`
 
 ### Document Type Layouts
 
-Generate the Tender layouts in **Nuxeo Studio Designer** > **Layouts** > **Local Document Types**
+Generate the Tender layouts in **Nuxeo Studio Designer** > **Layouts** > **Local Document Types** and click on **Configure Missing Layouts**.
 
-### Deploy your Studio Project
-
-Once the previous steps are completed, we must only deploy our changes in our environment. When we create a new document we will see how the reference field has a default value that varies each time.
+Once the previous steps are completed, you can **deploy your changes**.
+When a new `TEND` document, the reference field has a default value that varies each time.
 
 ### Going Further
 
