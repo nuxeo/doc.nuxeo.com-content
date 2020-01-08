@@ -56,7 +56,7 @@ To install this authentication plugin:
 
 ## Client-Side Configuration
 
-Portal_SSO is integrated in [Nuxeo Java client]({{page space='client-java' page='authentication'}}#portal-sso-authentication).
+Portal_SSO is integrated in [Nuxeo Java client]({{page version='3.2' space='client-java' page='authentication'}}#portal-sso-authentication).
 
 **Using Nuxeo Java Client**
 
