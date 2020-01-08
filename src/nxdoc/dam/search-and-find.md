@@ -10,17 +10,17 @@ tree_item_index: 300
 toc: true
 ---
 
-### Search
+## Search
 
 The Nuxeo Platform provides different way to search your documents. Searches can be saved, shared and deleted.
 
-#### Search with Custom Metadata
+### Search with Custom Metadata
 
 The search enables you to search a document using documents metadata. You can for instance select metadata of the searched document or the date of specific events such as publication, creation.
 
 The Search tab leverages [Elasticsearch]({{page version='' space='nxdoc' page='elasticsearch-setup'}}) to provide a quicker and more efficient search. The search form uses Elasticsearch aggregates for most fields: aggregate fields values are filtered so as to display only relevant values and show the count of matching documents for each value.
 
-#### Assets Search
+### Assets Search
 
 Once assets documents created, a new search type is displayed in the left menu, the Assets search. This search will let you search by assets metadata, such as:
 - Type
@@ -32,7 +32,7 @@ Once assets documents created, a new search type is displayed in the left menu, 
 ![]({{file name='assets-search.png' space='nxdoc' page='digital-asset-management-dam'}} ?w=600,border=true)
 
 
-#### Quick Search
+### Quick Search
 
 Quick search can be accessed from any site page. At any time, you can search a document by typing keywords in the search box located at the upper right corner of the page.
 
@@ -42,7 +42,7 @@ When doing a quick search in the suggestion box, Web UI displays the matched ter
 
 Read the [Search documentation]({{page version='' space='userdoc' page='search'}}) page for more information.
 
-### Preview
+## Preview
 
 The preview enables you to see an insight of your document. A preview is available for all sort of document types:
 - **PDF** and **Office** files: Preview of PDF and Office files is leveraged by [pdf.js by Mozilla](https://mozilla.github.io/pdf.js/).
