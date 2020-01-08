@@ -29,7 +29,7 @@ This page provides guidance on how to optimize your application performance, as 
 
 Managing sizing and performance of any Content Services application is a tricky job, because each application is different and many factors must be taken into account.
 
-[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='nxdoc' page='sub-workflow-example'}})
+[Learn more&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page version='' space='nxdoc' page='tracking-the-performance-of-the-nuxeo-platform'}})
 {{/panel}}
 </div>
 
