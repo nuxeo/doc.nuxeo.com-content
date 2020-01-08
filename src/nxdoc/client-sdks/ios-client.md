@@ -12,7 +12,6 @@ labels:
     - mobile
     - ios-client-component
     - content-review-lts2017
-toc: true
 confluence:
     ajs-parent-page-id: '16091040'
     ajs-parent-page-title: Client SDKs
