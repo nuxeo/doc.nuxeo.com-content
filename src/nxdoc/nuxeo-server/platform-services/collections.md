@@ -323,7 +323,7 @@ Finally, when copying a collection, an asynchronous work will also duplicate its
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
 
 - [Collections user documentation]({{page version='' space='userdoc' page='collections-web-ui'}})
-- [Nuxeo Drive documentation]({{page page='nuxeo-drive'}})
-- [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page version='' space='client-apps' page='index' page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+- [Nuxeo Drive documentation]({{page version='' space='client-apps' page='nuxeo-drive'}})
+- [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page version='' space='client-apps' page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
 
 {{/panel}}</div><div class="column medium-6"></div></div>
