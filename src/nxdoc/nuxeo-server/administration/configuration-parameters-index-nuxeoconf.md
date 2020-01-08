@@ -1707,8 +1707,8 @@ Note: Changing this parameter is not enough. See [How to Change Context Path]({{
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="1">`repository.binary.store`</td>
-<td colspan="1">Defines the folder where binaries are stored. Useful when using clustering or to change the location of binaries to another location.</td>
+<td colspan="1">`nuxeo.binarystores.root`</td>
+<td colspan="1">Defines the root folder where all binaries are stored. Useful when using clustering or to change the location of binaries to another location.</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
