@@ -32,8 +32,8 @@ In Studio Designer, a new option will let you upload a custom SVG icon for your 
 
 ### Other Noteworthy Mentions
 
-{{{multiexcerpt 'studio-updates-2020-01-bugfix' page='studio-updates-2020-01''}}}
-{{{multiexcerpt 'studio-updates-2019-12-bugfix' page='studio-updates-2019-12''}}}
+{{{multiexcerpt 'studio-updates-2020-01-bugfix' page='studio-updates-2020-01'}}}
+{{{multiexcerpt 'studio-updates-2019-12-bugfix' page='studio-updates-2019-12'}}}
 
 ## Learn More
 [More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.25.0'%29) is available in our bug tracking tool.
@@ -42,13 +42,13 @@ In Studio Designer, a new option will let you upload a custom SVG icon for your 
 
 ## Previous Release Notes
 
-| Release Date                                           | Summary                                                                                                                                                                                                                |
+| &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [December 2019]({{page page='studio-updates-2019-12'}})     | Layout Inheritance for faster layout configuration |
 | [October / November 2019]({{page page='studio-updates-2019-10-11'}})     | Easier access to other services, scripts creation from Studio Modeler business logic screens |
 | [August / September 2019]({{page page='studio-updates-2019-09'}})      | Package listing performance improvements, automation scripting scrolling bug fixed |
 | [July 2019]({{page page='studio-updates-2019-07'}})      | Configure searches on file type or size, better help for page providers configuration |
-| [May/June 2019]({{page page='studio-updates-2019-05-and-06'}})      | More consistent layouts, new options in page provider screen. |
+| [May / June 2019]({{page page='studio-updates-2019-05-and-06'}})      | More consistent layouts, new options in page provider screen. |
 | [April 2019]({{page page='studio-updates-2019-04'}})      | Support to select all schemas in page providers, improved support for workflow graph definition. |
 | [March 2019]({{page page='studio-updates-2019-03'}})      | Easier search configuration, override Web UI default configuration, select your default theme in a click. |          
 | [February 2019]({{page page='studio-updates-2019-02'}})      | Introducing the Layout Blocks and Git Status bar as well as an easier folderish documents configuration.                                                                                                                                                                               |
