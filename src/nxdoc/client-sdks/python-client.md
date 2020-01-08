@@ -12,7 +12,6 @@ labels:
     - mschoentgen
     - client
     - python-client-component
-toc: true
 confluence:
     ajs-parent-page-id: '16091040'
     ajs-parent-page-title: Client SDKs
