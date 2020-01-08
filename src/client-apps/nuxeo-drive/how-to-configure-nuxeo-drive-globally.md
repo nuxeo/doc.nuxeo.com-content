@@ -16,7 +16,6 @@ labels:
     - nuxeo-drive-component
     - mschoentgen
     - lklein
-toc: true
 tree_item_index: 500
 
 ---
