@@ -13,15 +13,9 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Upcoming Changes
 
-### [Future Change] Tokens to Become Mandatory - Be Prepared!
+### [Possible Action Required] Security Improvements - Be Prepared!
 
-Whenever using command line tools like `nuxeoctl`, Nuxeo CLI, Maven, the REST API to trigger Nuxeo Studio releases, Nuxeo Online Services will request a token instead of your password in order to authenticate.
-
-Passwords can still be used for now, and this change will be rolled out progressively, with communication made beforehand so that you know what to expect. To prevent any issue in the future, we strongly recommend you to do the switch to tokens as soon as possible: see our [token management]({{page page='token-management'}}) documentation for details on how to create and apply your token.
-
-{{#> callout type='info'}}
-This only impacts command-line tools and APIs. It doesn't change the way you log in to Nuxeo Online Services when using your browser, for instance when accessing Nuxeo Studio.
-{{/callout}}
+Nuxeo Online Services will be improved in the next couple of months to enhance security, and may require actions on your end. Learn how to [get prepared]({{{page page='security-improvements-faq'}}}) for the change.
 
 ### Custom Icons Support
 
@@ -29,18 +23,20 @@ In Studio Designer, a new option will let you upload a custom SVG icon for your 
 
 ### More Upcoming Changes
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.24.0','3.24.1','3.25.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.26.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
+{{{multiexcerpt 'studio-updates-2020-01-changes' page='studio-updates-2020-01'}}}
 {{{multiexcerpt 'studio-updates-2019-12-changes' page='studio-updates-2019-12'}}}
 
 ### Other Noteworthy Mentions
 
+{{{multiexcerpt 'studio-updates-2020-01-bugfix' page='studio-updates-2020-01''}}}
 {{{multiexcerpt 'studio-updates-2019-12-bugfix' page='studio-updates-2019-12''}}}
 
 ## Learn More
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.21.0'%29) is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.25.0'%29) is available in our bug tracking tool.
 
 ---
 
@@ -48,6 +44,7 @@ In Studio Designer, a new option will let you upload a custom SVG icon for your 
 
 | Release Date                                           | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [December 2019]({{page page='studio-updates-2019-12'}})     | Layout Inheritance for faster layout configuration |
 | [October / November 2019]({{page page='studio-updates-2019-10-11'}})     | Easier access to other services, scripts creation from Studio Modeler business logic screens |
 | [August / September 2019]({{page page='studio-updates-2019-09'}})      | Package listing performance improvements, automation scripting scrolling bug fixed |
 | [July 2019]({{page page='studio-updates-2019-07'}})      | Configure searches on file type or size, better help for page providers configuration |
