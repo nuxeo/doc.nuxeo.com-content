@@ -27,33 +27,12 @@ In many cases, it can be convenient to initialize a document with a title, or ot
 
 To achieve this, we can use several useful functions. Here is a _non exhaustive_ list of the recurrent functions:
 
-<table>
-  <tr>
-    <th>Function</th>
-    <th>Use Case</th>
-    <th>Example</th>
-  </tr>
-  <tr>
-    <td>`CurrentDate.*`</td>
-    <td>Set information related to the current date. It can calculates dates before or after the current date</td>
-    <td>`@{CurrentDate.format("ddMMyyyy")}`, `@{CurrentDate.days(7)}`, `@{org.nuxeo.ecm.core.schema.utils.DateParser.formatW3CDateTime(CurrentDate.date)}`</td>
-  </tr>
-  <tr>
-    <td>`CurrentUser.*`</td>
-    <td>Set information related to the current user. It can include the user firstname, lastname or any custom properties</td>
-    <td>`@{CurrentUser.email}`</td>
-  </tr>
-  <tr>
-    <td>`Fn.getNextId(String)`</td>
-    <td>Obtain a unique value for the given key. Each time this function is called using the same key, a different string will be returned</td>
-    <td>`Fn.getNextId("myCustomCounter")`</td>
-  </tr>
-  <tr>
-    <td>`@{Fn.getVocabularyLabel("voc", "key")}`</td>
-    <td>Get the the label associated to the given key from the given vocabulary, instead of its ID.</td>
-    <td>`@{Fn.getVocabularyLabel("status", "in_progress")}`</td>
-  </tr>
-</table>
+| Function               | Use Case                                                                                                                           | Example                                                                                                                                            |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CurrentDate.*`        | Set information related to the current date. It can calculates dates before or after the current date.                              | `@{CurrentDate.format("ddMMyyyy")}`, `@{CurrentDate.days(7)}`, `@{org.nuxeo.ecm.core.schema.utils.DateParser.formatW3CDateTime(CurrentDate.date)}` |
+| `CurrentUser.*`        | Set information related to the current user. It can include the user firstname, lastname or any custom properties.                  | `@{CurrentUser.email}`                                                                                                                             |
+| `Fn.getNextId(String)` | Obtain a unique value for the given key. Each time this function is called using the same key, a different string will be returned. | `Fn.getNextId("myCustomCounter")`                                                                                                                  |
+|  `@{Fn.getVocabularyLabel("voc", "key")}` | Get the the label associated to the given key from the given vocabulary, instead of its ID. | `@{Fn.getVocabularyLabel("status", "in_progress")}` |
 
 ## Configuration Steps
 
