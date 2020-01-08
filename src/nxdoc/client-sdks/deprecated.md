@@ -2,14 +2,13 @@
 title: Deprecated
 review:
     comment: ''
-    date: '2017-01-25'
+    date: '2020-01-08'
     status: ok
 labels:
     - lts2016-ok
     - client
     - deprecated
     - content-review-lts2017
-toc: true
 tree_item_index: 1000
 
 ---
