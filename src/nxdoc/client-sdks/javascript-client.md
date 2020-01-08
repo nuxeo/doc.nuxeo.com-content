@@ -15,7 +15,6 @@ labels:
     - javascript-client-component
     - link-update
     - lts2017-ok
-toc: true
 confluence:
     ajs-parent-page-id: '16091040'
     ajs-parent-page-title: Client SDKs
