@@ -248,7 +248,7 @@ The type of such aggregate is `significant_terms`. The parameter must be of type
 
 ## {{> anchor 'rangeagg'}}Range Aggregate
 
-Here is an example of Range aggregate on the `common:size` document property.
+Here is an example of Range aggregate on the `file:content/length` document property.
 
 ```xml
 <aggregate id="common_size_agg" type="range" parameter="file:content/length">
