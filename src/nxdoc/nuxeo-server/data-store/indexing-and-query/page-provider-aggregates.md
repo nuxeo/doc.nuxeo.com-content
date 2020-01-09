@@ -251,7 +251,7 @@ The type of such aggregate is `significant_terms`. The parameter must be of type
 Here is an example of Range aggregate on the `common:size` document property.
 
 ```xml
-<aggregate id="common_size_agg" type="range" parameter="common:size">
+<aggregate id="common_size_agg" type="range" parameter="file:content/length">
   <field schema="default_search" name="common_size_agg" />
   <ranges>
     <range key="tiny" to="102400"/>
