@@ -147,12 +147,10 @@ history:
         date: '2014-11-06 11:35'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
 When using the Elasticsearch Page Provider, you can define aggregates that will be returned along with the query result.
-
 {{! /excerpt}}
 
 You can define a page provider that will query documents from Elasticsearch. The Nuxeo Platform takes advantage of the Elasticsearch aggregate module and you can define your own aggregates within a page provider definition. Please refer to [Elasticsearch documentation about aggregates](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-aggregations.html) for more information.
@@ -185,13 +183,12 @@ An aggregate is defined inside the page provider definition according to the fol
 ```
 
 where:
+- {{> anchor 'aggid'}} `aggregate_id` is the id of the aggregate. It is used when defining a widget for a given aggregate, see [Aggregate Widget Types]({{page page='aggregate-widget-types'}}).
+- `aggregate_type` is the type of the aggregates. See below for possible value.
 
-*   {{> anchor 'aggid'}} `aggregate_id` is the id of the aggregate. It is used when defining a widget for a given aggregate, see [Aggregate Widget Types]({{page page='aggregate-widget-types'}}).
-*   `aggregate_type` is the type of the aggregates. See below for possible value.
+- `aggregate_parameter` is the field on which the aggregate will be calculated
 
-*   `aggregate_parameter` is the field on which the aggregate will be calculated
-
-*   `agg_field_schema` and `agg_field_name` point to the search document model field which will handle the current selection of the aggregate.
+- `agg_field_schema` and `agg_field_name` point to the search document model field which will handle the current selection of the aggregate.
 
 Here are the type of aggregates currently supported by the Nuxeo Platform.
 
@@ -230,14 +227,14 @@ The type of such aggregate is `terms`. The parameter must be of type `string`.
 
 It has the following properties:
 
-*   `size` property is set to define how many term buckets should be returned out of the overall terms.
-*   `minDocCount` property is set to only return buckets having more document than the defined value (default is 1)
-*   `order` property to order the buckets. Possible values are `count desc`, `count asc`, `term desc`, `term asc`.
+- `size` property is set to define how many term buckets should be returned out of the overall terms.
+- `minDocCount` property is set to only return buckets having more document than the defined value (default is 1)
+- `order` property to order the buckets. Possible values are `count desc`, `count asc`, `term desc`, `term asc`.
 
 Other properties can be:
 
-*   `exclude`: used to filter out values. Use the following syntax to exclude several values: `(value1)|(value2)`.
-*   `include`: used to filter values and show only defined values. Use the following syntax to define the values to show: `(value1)|(value2)`.
+- `exclude`: used to filter out values. Use the following syntax to exclude several values: `(value1)|(value2)`.
+- `include`: used to filter values and show only defined values. Use the following syntax to define the values to show: `(value1)|(value2)`.
 
 Read more on the [terms aggregate Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-terms-aggregation.html).
 
@@ -249,10 +246,10 @@ The type of such aggregate is `significant_terms`. The parameter must be of type
 
 ## {{> anchor 'rangeagg'}}Range Aggregate
 
-Here is an example of Range aggregate on the `common:size` document property.
+Here is an example of Range aggregate on the `file:content/length` document property.
 
 ```xml
-<aggregate id="common_size_agg" type="range" parameter="common:size">
+<aggregate id="common_size_agg" type="range" parameter="file:content/length">
   <field schema="default_search" name="common_size_agg" />
   <ranges>
     <range key="tiny" to="102400"/>
@@ -294,8 +291,8 @@ At least one `dateRange` must be defined. A range must have a `key` and at least
 
 The `fromDate` or a `toDate` accept value which can be:
 
-*   relative. For instance `now`, `now-24H`, `now-1y`, etc.
-*   absolute: For instance `2014-11-06`, `14/02/2014 04:00:45`, etc. But you must define the `format` property accordingly e.g. `yyyy-MM-dd`, `dd/MM/yyyy HH:mm:ss`, etc.
+- relative. For instance `now`, `now-24H`, `now-1y`, etc.
+- absolute: For instance `2014-11-06`, `14/02/2014 04:00:45`, etc. But you must define the `format` property accordingly e.g. `yyyy-MM-dd`, `dd/MM/yyyy HH:mm:ss`, etc.
 
 ## {{> anchor 'histogramagg'}}Histogram Aggregate
 
@@ -303,15 +300,15 @@ The type of such aggregate is `histogram`. The parameter must be a numeric of ty
 
 It has the following properties:
 
-*   `interval`: Defines the interval covered by each returned bucket. It is **required**.
-*   `minDocCount`: Only returns buckets having more document than the defined value (default is 1).
-*   `order`: Orders the buckets. Possible values are `count desc`, `count asc`, `key desc`, `key asc`. Note that the key of the histogram bucket is the `to` value.
-*   `extendedBoundsMin` : Forces the histogram aggregate to return buckets (even if empty) starting from this value.
-*   `extendedBoundsMax`: Forces the histogram aggregate to return buckets (even if empty) up to this value.
+- `interval`: Defines the interval covered by each returned bucket. It is **required**.
+- `minDocCount`: Only returns buckets having more document than the defined value (default is 1).
+- `order`: Orders the buckets. Possible values are `count desc`, `count asc`, `key desc`, `key asc`. Note that the key of the histogram bucket is the `to` value.
+- `extendedBoundsMin` : Forces the histogram aggregate to return buckets (even if empty) starting from this value.
+- `extendedBoundsMax`: Forces the histogram aggregate to return buckets (even if empty) up to this value.
 
 {{#> callout type='warning' }}
 
-The use of `extendedBoundsMin` and `extendedBoundsMax` is strongly recommended. It prevents elasticsearch from scanning the range of all possible values which may affect performance.
+The use of `extendedBoundsMin` and `extendedBoundsMax` is strongly recommended. It prevents Elasticsearch from scanning the range of all possible values which may affect performance.
 
 {{/callout}}
 
@@ -339,7 +336,7 @@ It has the same properties as the `histogram` aggregate except:
 
 {{#> callout type='warning' }}
 
-The use of `extendedBoundsMin` and `extendedBoundsMax` is strongly recommended. It prevents elasticsearch from scanning the range of all possible values which may affect performance.
+The use of `extendedBoundsMin` and `extendedBoundsMax` is strongly recommended. It prevents Elasticsearch from scanning the range of all possible values which may affect performance.
 
 {{/callout}}
 
