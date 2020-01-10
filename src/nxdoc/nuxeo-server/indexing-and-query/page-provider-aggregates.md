@@ -249,10 +249,10 @@ The type of such aggregate is `significant_terms`. The parameter must be of type
 
 ## {{> anchor 'rangeagg'}}Range Aggregate
 
-Here is an example of Range aggregate on the `common:size` document property.
+Here is an example of Range aggregate on the `file:content/length` document property.
 
 ```xml
-<aggregate id="common_size_agg" type="range" parameter="common:size">
+<aggregate id="common_size_agg" type="range" parameter="file:content/length">
   <field schema="default_search" name="common_size_agg" />
   <ranges>
     <range key="tiny" to="102400"/>
@@ -310,9 +310,7 @@ It has the following properties:
 *   `extendedBoundsMax`: Forces the histogram aggregate to return buckets (even if empty) up to this value.
 
 {{#> callout type='warning' }}
-
-The use of `extendedBoundsMin` and `extendedBoundsMax` is strongly recommended. It prevents elasticsearch from scanning the range of all possible values which may affect performance.
-
+The use of `extendedBoundsMin` and `extendedBoundsMax` is strongly recommended. It prevents Elasticsearch from scanning the range of all possible values which may affect performance.
 {{/callout}}
 
 ## {{> anchor 'datehistogramagg'}}Date Histogram Aggregate
@@ -338,9 +336,7 @@ It has the same properties as the `histogram` aggregate except:
 *   `extendedBoundsMin` and `extendedBoundsMax` accept value formatted according to the `format` property.
 
 {{#> callout type='warning' }}
-
 The use of `extendedBoundsMin` and `extendedBoundsMax` is strongly recommended. It prevents elasticsearch from scanning the range of all possible values which may affect performance.
-
 {{/callout}}
 
 
