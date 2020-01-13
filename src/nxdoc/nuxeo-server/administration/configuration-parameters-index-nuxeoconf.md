@@ -1707,8 +1707,14 @@ Note: Changing this parameter is not enough. See [How to Change Context Path]({{
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
+<td colspan="1">`repository.binary.store`</td>
+<td colspan="1">**[Deprecated]** Defines the folder where binaries are stored. Useful when using clustering or to change the location of binaries to another location. This parameter is still in use in existing configurations: for new installation, use `nuxeo.binarystores.root`</td>
+<td colspan="1">default</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr>
 <td colspan="1">`nuxeo.binarystores.root`</td>
-<td colspan="1">Defines the root folder where all binaries are stored. Useful when using clustering or to change the location of binaries to another location.</td>
+<td colspan="1">Defines the root folder where all binaries are stored. Useful when using clustering or to change the location of binaries to another location. It substitutes the `repository.binary.store` parameter and equivalent to `${nuxeo.binarystores.root}/binaries`. With this new variables, it's simpler to move the root of all binaries stores, including the transient ones (that are by default siblings of the default binary store), to a new location. Available since 10.10-HF04 (and backported LTS2019).</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
