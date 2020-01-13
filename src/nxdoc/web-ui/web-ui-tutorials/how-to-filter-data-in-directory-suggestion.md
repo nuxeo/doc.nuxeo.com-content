@@ -18,22 +18,26 @@ tree_item_index: 1255
 ---
 
 {{! excerpt}}
-In this tutorial, you will learn how to filter data from the directory suggestion element, by using different element attributes.
+In this tutorial, learn how to filter data from the directory suggestion element, by using different element attributes.
 {{! /excerpt}}
 
-## Concepts
+## Concept
 
-The web element `nuxeo-directory-suggestion` displays a dropdown list with the values of a defined vocabulary. In some cases, it could be relevant **to restrict the list of values**, only a few ones taking into account some **criteria/filters**.
+The web element `nuxeo-directory-suggestion` displays a dropdown list with the values of a defined vocabulary. In some cases, it could be relevant **to restrict the list of values**, depending on some **criteria/filters**.
 
 As a starting point, it is a good practice to get information on the element we need to configure and inspect all its attributes. You can get it from the [Web Components website](https://www.webcomponents.org/element/nuxeo/nuxeo-ui-elements/elements/nuxeo-directory-suggestion).
 
-It is possible to filter data thanks to different attributes:
+It is possible to filter data, thanks to different attributes:
 
 - `directoryName`: Filter by the name of the vocabulary/directory.
 - `operation`: Filter by the values returned by an automation chain/scripting using the `Directory.SuggestEntries` operation.
 - `queryResultsFilter`: Add additional post-filters on the suggestion.
 
-## Filter Values With the queryResultsFilter Parameter
+There are 2 ways to filter values:
+- [Using the `queryResultsFilter` parameter](#using-the-queryresultsfilter-parameter)
+- [Using the Operation Parameter and the `Directory.SuggestEntries` Operation](#using-the-operation-parameter-and-the-directorysuggestentries-operation)
+
+## Using the queryResultsFilter Parameter
 
 The `queryResultsFilter` allows to filter specific list of values of a vocabulary. Nuxeo Platform provides some vocabularies by default, including `continent` (list of continents) and `country` (list of countries). By default, the same Nuxeo document property is used to display a hierarchical vocabulary (Coverage, or `dc:coverage`).
 
@@ -97,7 +101,7 @@ Now we just have to assign the new function to the `queryResultsFilter` property
 </nuxeo-directory-suggestion>
 ```
 
-This would be the complete code of the element:
+This is be the complete code of the element:
 
 ```html
 <nuxeo-directory-suggestion value="{{document.properties.geo:continent}}"
@@ -120,42 +124,41 @@ This would be the complete code of the element:
 And
 
 ```
-    <script>
-    var gContinent = null;
+<script>
+  var gContinent = null;
 
-    Polymer({
-      is: 'nuxeo-se-geo-schema-edit-layout',
-      behaviors: [Nuxeo.LayoutBehavior],
-      properties: {
-        /**
-         * @schema dublincore
-         * @schema geo        
+  Polymer({
+    is: 'nuxeo-myfile-create-layout',
+    behaviors: [Nuxeo.LayoutBehavior],
+    properties: {
+      /**
+         * @doctype MyFile       
          */
-        document: {
-          type: Object
-        }
-      },
+      document: {
+        type: Object
+      }
+    },
 
-       _continentUpdated: function(event){
-        if(event && event.detail &&event.detail.value){
-          gContinent = event.detail.value;         
-        }
-      },
+    _continentUpdated: function(event){
+      if(event && event.detail &&event.detail.value){
+        gContinent = event.detail.value;         
+      }
+    },
 
-      _filterCountries: function(element, index, array){
-        var isInContinent = false;
+    _filterCountries: function(element, index, array){
+      var isInContinent = false;
 
-        if(element && element.parent && gContinent){
-          isInContinent = (gContinent == element.parent);
-        }
+      if(element && element.parent && gContinent){
+        isInContinent = (gContinent == element.parent);
+      }
 
-        return isInContinent;
-      },               
-    });
-  </script>
-  ```
+      return isInContinent;
+    },               
+  });
+</script>
+```
 
-See the results:
+See the result:
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/HOWTO: Filter the data in a nuxeo-directory-suggestion element/directory-suggestion1.png
@@ -164,7 +167,7 @@ See the results:
 --}}
 ![directory-suggestion1.png](nx_asset://f213719f-1aad-400f-963c-5c10afe9536d ?w=650,border=true)
 
-## Filter Values With the Operation Parameter and the Directory.SuggestEntries Operation
+## Using the Operation Parameter and the Directory.SuggestEntries Operation
 
 Sometimes the number of entries returned by the server can be very high, so it's convenient to apply the filter **server-side** before returning the information.
 
@@ -184,7 +187,7 @@ Therefore, to apply the filter we must only assign the `{“filters” : “pare
  </nuxeo-directory-suggestion>
 ```
 
-See the results:
+See the result:
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/HOWTO: Filter the data in a nuxeo-directory-suggestion element/directory-suggestion2.png
@@ -193,9 +196,11 @@ See the results:
 --}}
 ![directory-suggestion2.png](nx_asset://4a8dae89-b6a7-4b22-8f03-6ec728493ba2 ?w=650,border=true)
 
-## Use Case: Create a Document From a Template
+## Going Further
 
-As an alternative to the [Nuxeo Template Rendering addon]({{page version='' space='nxdoc' page='template-rendering-addon'}}), let's say we want to create a document (file) from a list of document templates, displayed on the creation form. Once again, we will use the same filtering mechanism.
+**Create a Document From a Template**
+
+As an alternative to the [Nuxeo Template Rendering addon]({{page version='' space='nxdoc' page='template-rendering-addon'}}), let's say we want to create a document (File) from a list of document templates, displayed on the creation form. Once again, we will use the same filtering mechanism.
 
 First, we create a document property (`file_schema:template` in our example), to store the document template ID. We assume the document templates are identified by a specific document type, or any document property we can query on.
 
@@ -212,7 +217,7 @@ On the creation form of our document, we use the `operation` filter, pointing to
 </nuxeo-document-suggestion>
 ```
 
-You may have noticed we are also using a **Result Formatter** (see the Nuxeo Studio Cookbook link at the end of the page to get more information).
+You may have noticed that we are also using a **Result Formatter** (see the Nuxeo Studio Cookbook link at the end of the page to get more information).
 
 Then, we create the `AC_SearchTemplates` automation chain:
 
@@ -239,7 +244,7 @@ Blob.AttachOnDocument(
 [...]
 ```
 
-See the results:
+See the result:
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/HOWTO: Filter the data in a nuxeo-directory-suggestion element/directory-suggestion3.png
@@ -250,9 +255,14 @@ See the results:
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
 - [Custom Document Suggestion](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/document-suggestion)
 
-{{/panel}}</div><div class="column medium-6">
-</div></div>
+{{/panel}}
+</div>
+<div class="column medium-6">
+</div>
+</div>
