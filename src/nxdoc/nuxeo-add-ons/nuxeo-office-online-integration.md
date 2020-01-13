@@ -25,7 +25,7 @@ You can find more information on the WOPI protocol for the Office Online integra
 
 ### Office Online Check-In
 
-When an office document (Excel, Word or PowerPoint files) is stored in Nuxeo Platform, whether it’s an attachment or the main file, the office addon enables a new action slot enabling a check-in into the Office Online web interface to preview and edit the document:
+When an office document (Excel, Word or PowerPoint files) is stored in Nuxeo Platform, whether it’s an attachment or the main file, this addon displays a new action slot enabling a check-in into the Office Online web interface to preview and edit the document:
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/Nuxeo Office Online Integration/office-online-checkin.png
@@ -57,7 +57,7 @@ Once authenticated, the user can choose to keep authenticated to his Microsoft a
 
 ### Office Online Documents Preview
 
-When the user has only read access, or only require to preview the document, with the Office online web user interface.
+The preview is available for user who only has read access, or only requires to preview the document, with the Office online web user interface.
 
 ### Office Online Documents Edition
 
