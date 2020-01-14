@@ -90,7 +90,8 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ### S3 Configurable Digest
 
-The digest algorithm to use to compute a unique key when storing blobs in S3, can now be configured in `nuxeo.conf`:
+The digest algorithm to compute a unique key when storing blobs in S3, can now be configured in `nuxeo.conf`:
+
 ```
 nuxeo.s3storage.digest=SHA-256
 ```
@@ -113,9 +114,10 @@ The default is MD5. The valid digest algorithms are those available to the Java 
 
 ### Performance Improvement to Load User Entities
 
-It's possible to configure the Nuxeo Platform so that `UserManagerResolver` will marshal User entities without fetching their references (by default, only groups are referenced). User entities are mainly used by the ACL enricher and metadata whose type is User. Enabling this behavior will improve the duration to load the Permissions tab and Content views which display the creator or the contributors (or custom User metadata).
+It's possible to configure the Nuxeo Platform so that `UserManagerResolver` marshals User entities without fetching their references (by default, only groups are referenced). User entities are mainly used by the ACL enricher and metadata whose type is User. Enabling this behavior improves the duration to load the Permissions tab and Content views which display the creator, or the contributors (or custom User metadata).
 
 To enable this behavior, use the following code:
+
 ```
   <require>org.nuxeo.ecm.platform.usermanager.properties</require>
   <extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
@@ -125,34 +127,40 @@ To enable this behavior, use the following code:
 
 ## Hotfix 35
 
-### Sanitization of HTML fields
+### Sanitization of HTML Fields
 
-Since HF35, any HTML field that is bigger than the configured max input size will be replaced with a message
+Since HF35, any HTML field that is bigger than the configured max input size are replaced with the following message:
+
 ```
 The input was too large. The specified input was 123,456 bytes and the maximum is 100,000 bytes. Please check with the server administrator to increase the maximum input size.
 ```
-To increase the maximum input size for HTML fields, the administrator will need to contribute a new AntiSamy policy file that contains a bigger default than 100K. To do so, override the contribution (HtmlSanitizerService--antisamy)[https://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202017-9.10/viewExtensionPoint/org.nuxeo.ecm.platform.htmlsanitizer.HtmlSanitizerService--antisamy] and provide a new (antisamy-nuxeo-policy.xml)[https://github.com/nuxeo/nuxeo/blob/9.10/nuxeo-services/nuxeo-platform-htmlsanitizer/src/main/resources/antisamy-nuxeo-policy.xml] file (see the default in antisamy-nuxeo-policy.xml) and update the value of maxInputSize.
+
+To increase the maximum input size for HTML fields, the administrator needs to contribute a new AntiSamy policy file that contains a bigger default than 100K. To do so, override the contribution [`HtmlSanitizerService--antisamy`](https://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20Platform%20LTS%202017-9.10/viewExtensionPoint/org.nuxeo.ecm.platform.htmlsanitizer.HtmlSanitizerService--antisamy) and provide a new [`antisamy-nuxeo-policy.xml`](https://github.com/nuxeo/nuxeo/blob/9.10/nuxeo-services/nuxeo-platform-htmlsanitizer/src/main/resources/antisamy-nuxeo-policy.xml) file (see the default in antisamy-nuxeo-policy.xml) and update the value of `maxInputSize`.
 
 ## Hotfix 34
 
 ### New Metric on Works DLQ Usage
 
 The hotfix 34 introduces a new metric `nuxeo.works.dlq.count` that counts the Works in failure that has been put in the Dead Letter Queue (DLQ) stream since the instance is up.
-When the counter is > 0, works in failure could be re-processed using the repair procedure described in NXP-27148.
+When the counter is > 0, works in failure could be re-processed using the repair procedure described in [NXP-27148](https://jira.nuxeo.com/browse/NXP-27148).
 
 ### Repair Work Failure
 
 After retries, works in failure are stored in a Dead Letter Queue (DLQ) stream named `dlq-work`.
 This DLQ is activated by default on both WorkManager implementations (default and StreamWorkManager).
 Works in this DLQ can be re-executed for a repair purpose using the following Automation operation:
+
 ```
 curl -X POST "http://localhost:8080/nuxeo/site/automation/WorkManager.RunWorkInFailure" -u Administrator:Administrator -H 'content-type: application/json+nxrequest' -d '{"params":{},"context":{}}'
 ```
+
 This returns a JSON results with the total number of Works re-executed and the number that were successfully executed:
+
 ```
 {"total":3,"success":3}
 ```
-Note that in cluster mode when NOT using Kafka, you need to run this Automation operation on each Nuxeo node.
+
+Note that, in cluster mode when NOT using Kafka, you need to run this Automation operation on each Nuxeo node.
 
 ## Hotfix 33
 
@@ -165,10 +173,11 @@ The following dublincore properties are now secured from edition:
 * dc:lastContributor
 * dc:contributors
 
-This means you have to be administrator to edit these properties. In tests, you can do the following:
+This means that you have to be administrator to edit these properties. In tests, you can do the following:
 ```
 Framework.doPrivileged(() -> doc.setPropertyValue("dc:creator", "john"));
 ```
+
 or:
 ```
 CoreInstance.doPrivileged("default", session -> {
@@ -177,7 +186,8 @@ CoreInstance.doPrivileged("default", session -> {
     return session.createDocument(doc);
 });
 ```
-In order to declare a property secured you can contribute the following:
+
+To declare a property secured you can contribute the following:
 ```
 <component name="my.component.name" version="1.0">
   <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
@@ -185,7 +195,8 @@ In order to declare a property secured you can contribute the following:
   </extension>
 </component>
 ```
-You can also relax the constraint on a secured property, for example dc:creator with:
+
+You can also relax the constraint on a secured property, for example `dc:creator` with:
 ```
 <component name="my.component.name" version="1.0">
   <require>org.nuxeo.ecm.core.CoreExtensions</require>
