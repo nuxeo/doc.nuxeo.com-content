@@ -9,6 +9,7 @@ labels:
     - lts2016-ok
     - automation
     - ataillefer
+    - mschoentgen
     - blob
     - upload
     - todo
@@ -461,6 +462,123 @@ Chunking is a good idea because:
 *   It allows you to manage upload resumption with enough granularity (restart with chunk x).
 *   It allows multiplexing (upload on multiple TCP streams)
 *   It allows you to overcome the limitations of some reverse proxies (limits the risk of having a POST considered as too big).
+
+### Sequence Diagrams
+
+#### New Upload
+
+This is the sequence diagram of the complete process of uploading a file in chunks:
+
+<!--
+@startuml nxdoc/rest-api/new-upload.png
+scale 4.0
+header New upload
+
+Client -[#green]> Nuxeo: Ask for a batch ID
+Client <[#green]-- Nuxeo: batch ID
+
+loop chunks count
+Client -[#blue]> Nuxeo: Upload chunk N
+Client <[#blue]-- Nuxeo: Chunk N uploaded
+end
+
+Client -> Nuxeo: Attach the blob to the document
+Client <-- Nuxeo: Response OK
+
+@enduml
+-->
+![]({{file name='new-upload.png' page='nxdoc/rest-api'}} ?w=900)
+
+And this is the sequence diagram of the complete process of uploading a file in chunks using a different upload provider (here Amazon S3):
+
+<!--
+@startuml nxdoc/rest-api/new-upload-s3.png
+scale 4.0
+header New S3 upload
+
+Client -[#green]> Nuxeo: Ask for bucket details and a batch ID
+Client <[#green]-- Nuxeo: Bucket details and batch ID
+
+Client -[#orange]> S3: Create a new multipart upload
+note right: API: CreateMultipartUpload\nACL: s3:PutObject
+Client <[#orange]-- S3: Response OK
+
+loop chunks count
+Client -[#blue]> S3: Upload chunk N
+note right: API: UploadPart\nACL: s3:PutObject
+Client <[#blue]-- S3: Chunk N uploaded
+end
+
+Client -[#orange]> S3: Complete the multipart upload
+note right: API: CompleteMultipartUpload\nACL: s3:PutObject
+Client <[#orange]-- S3: Response OK
+
+Client -> Nuxeo: Complete the upload
+Client <-- Nuxeo: Response OK
+
+Client -> Nuxeo: Attach the blob to the document
+Client <-- Nuxeo: Response OK
+
+@enduml
+-->
+![]({{file name='new-upload-s3.png' page='nxdoc/rest-api'}} ?w=900)
+
+#### Resume Upload
+
+This is the sequence diagram of the complete process when resuming a chunked upload:
+
+<!--
+@startuml nxdoc/rest-api/resume-upload.png
+scale 4.0
+header Resume an upload
+
+Client -[#green]> Nuxeo: Ask for uploaded chunks using a given batch ID
+Client <[#green]-- Nuxeo: Uploaded chunks
+Client --[#red]x Nuxeo: No such batch ID:\nstop now and start a new upload
+
+loop missing chunks count
+Client -[#blue]> Nuxeo: Upload chunk N
+Client <[#blue]-- Nuxeo: Chunk N uploaded
+end
+
+Client -> Nuxeo: Attach the blob to the document
+Client <-- Nuxeo: Response OK
+
+@enduml
+-->
+![]({{file name='resume-upload.png' page='nxdoc/rest-api'}} ?w=900)
+
+And this is the sequence diagram of the complete process when resuming a chunked upload using a different upload provider (here Amazon S3):
+
+<!--
+@startuml nxdoc/rest-api/resume-upload-s3.png
+scale 4.0
+header Resume a S3 upload
+
+Client -[#green]> S3: Ask for uploaded chunks using a given multipart upload ID
+note right: API: ListParts\nACL: s3:ListMultipartUploadParts
+Client <[#green]-- S3: Uploaded chunks
+Client --[#red]x S3: No such multipart upload ID or  **no enough ACL**:\nstop now and start a new S3 upload
+
+loop missing chunks count
+Client -[#blue]> S3: Upload chunk N
+note right: API: UploadPart\nACL: s3:PutObject
+Client <[#blue]-- S3: Chunk N uploaded
+end
+
+Client -[#orange]> S3: Complete the multipart upload
+note right: API: CompleteMultipartUpload\nACL: s3:PutObject
+Client <[#orange]-- S3: Response OK
+
+Client -> Nuxeo: Complete the upload
+Client <-- Nuxeo: Response OK
+
+Client -> Nuxeo: Attach the blob to the document
+Client <-- Nuxeo: Response OK
+
+@enduml
+-->
+![]({{file name='resume-upload-s3.png' page='nxdoc/rest-api'}} ?w=900)
 
 ### Uploading a Chunk {{> anchor 'uploading-a-chunk'}}
 
