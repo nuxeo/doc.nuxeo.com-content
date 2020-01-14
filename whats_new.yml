@@ -1,17 +1,17 @@
 default:
   whats_new:
-    - url: /nxdoc/how-to-disable-trash/
-      date: '2019-12-05'
-      title: 'HOWTO: Disable Trash Actions, Tab and Search'
-    - url: /studio/how-to-create-and-use-document-facets/
-      date: '2019-12-04'
-      title: 'HOWTO: Create and Use Document Facets'
+    - url: /nxdoc/how-to-filter-data-in-directory-suggestion/
+      date: '2020-01-13'
+      title: 'HOWTO: Filter Data in Suggestions'
+    - url: /studio/how-to-prepopulate-metadata-creation-document/
+      date: '2020-01-08'
+      title: 'Howto: Prepopulate Metadata at Creation'
+    - url: /nxdoc/how-to-assign-a-task-to-the-user-manager/
+      date: '2019-12-19'
+      title: 'HOWTO: Assign a Task to the User Manager'
+    - url: /nxdoc/how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform/
+      date: '2019-12-12'
+      title: 'HOWTO: Change the Default Document Type When Importing a File in the Nuxeo Platform?'
     - url: /studio/nuxeo-studio-community-cookbook/
-      date: '2019-12-03'
+      date: '2020-01-06'
       title: 'Nuxeo Studio Community Cookbook'
-    - url: /nxdoc/how-to-set-enhanced-viewer-as-default-document-preview/
-      date: '2019-11-20'
-      title: 'HOWTO: Make the Enhanced Viewer the Default Previewer'
-    - url: /nxdoc/howto-manage-relations/
-      date: '2019-11-19'
-      title: 'HOWTO: Manage Relations on a Document'
