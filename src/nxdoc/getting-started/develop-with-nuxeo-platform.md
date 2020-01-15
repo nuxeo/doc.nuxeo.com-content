@@ -424,7 +424,7 @@ Watch the related courses on Nuxeo University
 
 ## Prerequisites
 
-- Generate your [Connect Token] LINK
+- Generate your [Connect Token]({{page version='' space='studio' page='token-management'}})
 - A Contract document type created on this [page]({{page version='' space='nxdoc' page='web-ui-document-layouts'}})
 - An IDE that integrates with Maven.
     We provide instructions for [Eclipse IDE for Java EE Developers](http://www.eclipse.org/downloads) 4.5 (Mars) or IntelliJ IDEA
