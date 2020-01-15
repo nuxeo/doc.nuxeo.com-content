@@ -609,31 +609,31 @@ From a command line:
     import org.nuxeo.ecm.core.api.NuxeoException;
 
     /**
-     *
-     */
-    @Operation(id = ContractUpdater.ID, category = Constants.CAT_DOCUMENT, label = "Contract Updater", description = "On a contract, sets the reminder date to three months after its start date.")
+    *
+    */
+    @Operation(id = ContractUpdater.ID, category = Constants.CAT_DOCUMENT, label = "Contract Updater",  description = "On a contract, sets the reminder date to three months after its start date.")
     public class ContractUpdater {
 
-        public static final String ID = "Document.ContractUpdater";
-        static final String CONTRACT_TYPE = "Contract";
-        static final String CONTRACT_SCHEMA = "contract";
-        static final String CONTRACT_START = CONTRACT_SCHEMA + ":start";
-        static final String CONTRACT_REMINDER = CONTRACT_SCHEMA
-                + ":reminder";
+      public static final String ID = "Sample.ContractUpdater";
+      static final String CONTRACT_TYPE = "contract";
+      static final String CONTRACT_SCHEMA = "contract";
+      static final String CONTRACT_START = CONTRACT_SCHEMA + ":start";
+      static final String CONTRACT_REMINDER = CONTRACT_SCHEMA
+              + ":reminder";
 
-        @OperationMethod(collector = DocumentModelCollector.class)
-        public DocumentModel run(DocumentModel input) throws NuxeoException {
-            if (!(CONTRACT_TYPE.equals(input.getType()))) {
-                throw new NuxeoException("Operation works only with "
-                        + CONTRACT_TYPE + " document type.");
-            }
+      @OperationMethod(collector = DocumentModelCollector.class)
+      public DocumentModel run(DocumentModel input) throws NuxeoException {
+          if (!(CONTRACT_TYPE.equals(input.getType()))) {
+              throw new NuxeoException("Operation works only with "
+                    + CONTRACT_TYPE + " document type.");
+          }
 
-            Calendar start = (Calendar) input.getPropertyValue(CONTRACT_START);
-            Calendar reminder = (Calendar) start.clone();
-            reminder.add(Calendar.MONTH, 3);
-            input.setPropertyValue(CONTRACT_REMINDER, reminder.getTime());
-            return input;
-        }
+          Calendar start = (Calendar) input.getPropertyValue(CONTRACT_START);
+          Calendar reminder = (Calendar) start.clone();
+          reminder.add(Calendar.MONTH, 3);
+          input.setPropertyValue(CONTRACT_REMINDER, reminder.getTime());
+          return input;
+      }
     }
     ```
 
@@ -807,38 +807,34 @@ Nuxeo CLI automatically created a unit test class for the Operation at `contract
     @Deploy({"com.bigcorp.contractmgt.contract-mgt-project-core"})
     @PartialDeploy(bundle = StudioConstant.BUNDLE_NAME, extensions = { TargetExtensions.Automation.class })
     public class TestContractUpdater {
-          @Inject
-          protected CoreSession session;
-          @Test
-          public void shouldCallTheAutomationChain() {
-              // Create a contract, currently stored in memory
-              DocumentModel doc = session.createDocumentModel("/default-domain", "my-test-doc", ContractUpdater.CONTRACT_TYPE);
-              GregorianCalendar now = new GregorianCalendar();
-              doc.setPropertyValue(ContractUpdater.CONTRACT_START, now);
+        @Inject
+        protected CoreSession session;
+        @Test
+        public void shouldCallTheAutomationChain() {
+            // Create a contract, currently stored in memory
+            DocumentModel doc = session.createDocumentModel("/default-domain", "my-test-doc", ContractUpdater.CONTRACT_TYPE);
+            GregorianCalendar now = new GregorianCalendar();
+            doc.setPropertyValue(ContractUpdater.CONTRACT_START, now);
 
-              // At this stage, the reminder date should be empty
-              assertNull(doc.getPropertyValue(ContractUpdater.CONTRACT_REMINDER));
+            // At this stage, the reminder date should be empty
+            assertNull(doc.getPropertyValue(ContractUpdater.CONTRACT_REMINDER));
 
-              // We'll save the document in the database which will
-              // trigger an event handler that sets the reminder date
-              doc = session.createDocument(doc);
-              session.save();
+            // We'll save the document in the database which will
+            // trigger an event handler that sets the reminder date
+            doc = session.createDocument(doc);
+            session.save();
 
-              // Now we'll check that the reminder date is set as expected
-              int currentMonth = now.get(Calendar.MONTH);
-              GregorianCalendar reminder = (GregorianCalendar) doc.getPropertyValue(ContractUpdater.CONTRACT_REMINDER);
-              assertNotNull("Reminder date is not set, check your automation chain.", reminder);
-              assertEquals("Reminder date is not set in three months from now", (((currentMonth + 3) > 12) ? (currentMonth - 9):(currentMonth + 3)), reminder.get(Calendar.MONTH));
-          }
+            // Now we'll check that the reminder date is set as expected
+            int currentMonth = now.get(Calendar.MONTH);
+            GregorianCalendar reminder = (GregorianCalendar) doc.getPropertyValue(ContractUpdater.CONTRACT_REMINDER);
+            assertNotNull("Reminder date is not set, check your automation chain.", reminder);
+            assertEquals("Reminder date is not set in three months from now", (((currentMonth + 3) > 12) ? (currentMonth - 9):(currentMonth + 3)), reminder.get(Calendar.MONTH));
+        }
     }
     ```
 
-If you try running the test (in Eclipse, right-click on your project and choose **Run As, JUnit Test**, or **Run TestContractUpdater** in IntelliJ IDEA), you will notice that the test fails because our Studio project is missing a few things. We need to add them to make the test pass.
-
-### Using Unit Tests
-
-1. Right-click on your unit test class and choose **Run As, JUnit Test** in Eclipse, or **Run TestContractUpdater** in IntelliJ IDEA.
-    The tests should now pass.
+1. Right-click on your unit test class and choose **Run As, JUnit Test** in Eclipse, or **Run TestContractUpdater** in IntelliJ IDEA.</br>
+    The tests should pass.
 
 Using unit tests is the **recommended way** to ensure a feature is working as expected. Unit tests are triggered automatically whenever you build your project using Maven, and as such they help you in maintaining a high quality level.
 
@@ -856,6 +852,6 @@ Using unit tests is the **recommended way** to ensure a feature is working as ex
 That's it! You are ready to develop on the Nuxeo Platform.
 {{/callout}}
 
-## What to do Next
+## Going Further
 
 You should learn to [package and deploy your application](https://university.nuxeo.com/learn/public/course/view/elearning/11/NuxeoPlatformDeveloperBasics) in a Nuxeo Platform instance.
