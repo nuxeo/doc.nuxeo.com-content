@@ -31,10 +31,6 @@ Bookmarking documents in your favorites can be done like when you add documents 
 Once the document is added to your favorites, it will be available in the dashboard and in the Favorites tab.
 {{! /multiexcerpt}}
 
-{{#> callout type='note' }}
-Your Favorites are saved browser-side, which means that if you use another browser you will lost your favorites.
-{{/ callout}}
-
 {{! multiexcerpt name='remove-favorites-web-ui'}}
 **To remove a document from Favorites, you can:**
 - Click on the delete icon ![]({{file name='delete-circle-icon_web-ui.png' space='userdoc' page='icons-index'}} ?w=20) next to it in the **Favorites** tab
