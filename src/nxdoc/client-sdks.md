@@ -58,7 +58,6 @@ The platform already provides multiple clients for accessing the platform remote
 *   [Python Client]({{page space='nxdoc' page='python-client'}})
 *   [.NET Client]({{page space='nxdoc' page='net-client'}})&nbsp;&mdash;&nbsp;<span class="smalltext">Nuxeo .NET Client is a cross-platform client library developed in C# for the Nuxeo Automation and REST API.</span>
 *   [iOS Client]({{page space='nxdoc' page='ios-client'}})
-*   [Android Client]({{page space='nxdoc' page='android-client'}})
 *   [PHP Automation Client]({{page space='nxdoc' page='php-automation-client'}})&nbsp;&mdash;&nbsp;<span class="smalltext">A PHP automation client is made available on GitHub. You can use it and ask for commit rights on the project if you want to improve it or fix a bug. The project contains the library and some sample use cases.</span>
 *   [Client API Test suite (TCK)]({{page space='nxdoc' page='client-api-test-suite-tck'}})&nbsp;&mdash;&nbsp;<span class="smalltext">This chapter provides a test suite that can be used to test the implementation of an automation client library.</span>
 *   [DART Client](https://github.com/nelsonsilva/nuxeo-dart-client)
