@@ -3,7 +3,7 @@ title: Web UI Roadmap
 description: See what evolutions and improvements are planned for Nuxeo Web UI
 review:
     comment: ''
-    date: '2019-07-22'
+    date: '2020-01-17'
     status: ok
 labels:
     - roadmap
