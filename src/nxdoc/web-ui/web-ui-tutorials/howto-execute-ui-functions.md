@@ -1,8 +1,8 @@
 ---
-title: 'HOWTO: Execute UI Functions'
+title: 'HOWTO: Create Custom Buttons'
 review:
     comment: ''
-    date: '2019-08-10'
+    date: '2020-01-20'
     status: ok
 toc: true
 details:
@@ -26,7 +26,7 @@ Let's say we want to copy a document to another folder and to navigate to this n
 
 ## Prerequisites
 
-- Create **two folders** in your Nuxeo platform, under **Domain** > **Workspaces** called:
+- Create **two Workspaces** in your Nuxeo platform, under **Domain** > **Workspaces** called:
   - `source_folder`: where we create the original document
   - `target_folder`: where the copy is created
 - Generate the metadata layout of the File document type in Nuxeo Studio Designer:</br>
