@@ -1708,13 +1708,14 @@ Note: Changing this parameter is not enough. See [How to Change Context Path]({{
 </tr>
 <tr>
 <td colspan="1">`repository.binary.store`</td>
-<td colspan="1">**[Deprecated]** Defines the folder where binaries are stored. Useful when using clustering or to change the location of binaries to another location. This parameter is still in use in existing configurations: for new installation, use `nuxeo.binarystores.root`</td>
+<td colspan="1">DEPRECATED.</br>
+Defines the folder where binaries are stored. Useful when using clustering or to change the location of binaries to another location. This parameter is still in use in existing configurations: for new installation, use `nuxeo.binarystores.root`</td>
 <td colspan="1">default</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.binarystores.root`</td>
-<td colspan="1">Defines the root folder where all binaries are stored. Useful when using clustering or to change the location of binaries to another location. See NXP-27109  for more details</td>
+<td colspan="1">Defines the root folder where all binaries are stored. Useful when using clustering or to change the location of binaries to another location (See [NXP-27109](https://jira.nuxeo.com/browse/NXP-27109) for more details).</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
