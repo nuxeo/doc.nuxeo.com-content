@@ -131,7 +131,7 @@ When contributing a JAR to the Nuxeo application, what's a stake?
 For this you need the `java.io.File` of your bundle, and you can call:
 
 ```java
-  Framework.getLocalService(ReloadService.class).reloadBundles(new ReloadContext().deploy(file));
+  Framework.getService(ReloadService.class).reloadBundles(new ReloadContext().deploy(file));
 ```
 
 Undeploy and deploy to the runtime framework were already possible as of Nuxeo 5.4.1: you can take example on what the `ReloadService` is doing to make it work in your version.
