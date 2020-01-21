@@ -6,6 +6,12 @@ review:
     status: ok
     comment: ''
 toc: true
+details:
+  howto:
+    excerpt: Learn How to Create and Reuse Document Facets in Nuxeo Studio
+    level: Intermediate
+    tool: Nuxeo Studio
+    topics: Facets
 tree_item_index: 40
 ---
 {{! excerpt}}

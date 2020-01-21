@@ -3,9 +3,8 @@ title: 'HOWTO: Export a Studio Project in Eclipse'
 description: Discover what we recommend instead of exporting your Studio Project in Eclipse.
 review:
   comment: ''
-  date: ''
+  date: '2020-01-21'
   status: ok
-toc: true
 tree_item_index: 1300
 ---
 
