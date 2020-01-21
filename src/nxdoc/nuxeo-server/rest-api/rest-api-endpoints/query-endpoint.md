@@ -2,7 +2,7 @@
 title: Query Endpoint (Deprecated)
 review:
     comment: ''
-    date: '2018-01-15'
+    date: '2020-01-21'
     status: ok
 details:
     howto:
@@ -240,15 +240,12 @@ history:
         date: '2014-09-09 18:47'
         message: ''
         version: '1'
-
 ---
 
 The query endpoint allows REST clients to query the Nuxeo repository.
 
 {{#> callout type='warning' }}
-
 Since 8.3 this endpoint has been deprecated in favor of the [Search Resource Endpoint]({{page page='search-endpoints'}}).
-
 {{/callout}}
 
 ## Reminder
@@ -922,7 +919,7 @@ GET http://NUXEO_SERVER/nuxeo/api/v1/query/aggregates_1
 - [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
 - [REST API Entity Types]({{page page='rest-api-entity-types'}})
 - [Page Providers]({{page page='page-providers'}})
-- [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+- [HOWTO: Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 {{/panel}}
 </div>
 
