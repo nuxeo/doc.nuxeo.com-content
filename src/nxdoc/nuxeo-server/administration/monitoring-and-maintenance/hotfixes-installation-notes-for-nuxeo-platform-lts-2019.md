@@ -92,6 +92,51 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 21
+
+### New Implementation for S3 Blob Storage
+
+A new blob provider `org.nuxeo.ecm.blob.s3.S3BlobProvider` is available.
+It has the same configuration properties as the old `org.nuxeo.ecm.core.storage.sql.S3BinaryManager` but in addition:
+- it allows configuration in record or transactional mode (see NXP-28276)
+- it allows direct configuration of CloudFront (without using `CloudFrontBinaryManager`).
+
+The CloudFront properties are:
+- `cloudfront.enabled`: must be `true` to activate CloudFront
+- `cloudfront.privKey`: the path to the private key
+- `cloudfront.privKeyId`: the id of the private key
+- `cloudfront.distribDomain`: the distribution domain
+- `cloudfront.protocol`: the protocol (`http` or `https`)
+
+### New Implementation for the Encrypted (AES) Blob Provider
+
+A new blob provider `org.nuxeo.ecm.core.blob.AESBlobProvider` is available.
+
+It has the same configuration properties as the old `org.nuxeo.ecm.core.blob.binary.AESBinaryManager`.
+
+To encrypt a binary, an AES key is needed. This key can be retrieved from a keystore, or generated from a password using PBKDF2 (in which case each stored file contains a different salt for security reasons).
+
+The blob provider configuration holds the keystore information to retrieve the AES key, or the password that is used to generate a per-file key using PBKDF2. 
+
+For keystore use, the following properties are available:
+
+- keyStoreType: the keystore type, for instance JCEKS
+- keyStoreFile: the path to the keystore, if applicable
+- keyStorePassword: the keystore password
+- keyAlias: the alias (name) of the key in the keystore
+- keyPassword: the key password
+
+And for PBKDF2 use:
+
+- password: the password
+
+In addition, the following property may be specified to define where the encrypted blobs are stored:
+
+- path: the filesystem path for the storage (if relative, under nxserver/data). The default is binaries.
+
+For backward compatibility, the encryption properties can also be included in the <property name="key">prop1=value1,prop2=value2,...</property> of the blob provider configuration.
+
+
 ## Hotfix 19
 
 ### Content Model Change for Comments
