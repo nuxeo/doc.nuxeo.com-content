@@ -177,6 +177,10 @@ Repetitions can be specified using a slash followed by an increment, for instanc
 
 There's actually more but rarely used functionality; the Scheduler's full cron expression syntax is described in detail in the [Quartz CronExpression Javadoc](http://www.quartz-scheduler.org/api/2.2.1/org/quartz/CronExpression.html) and in [the CronTrigger Tutorial](http://www.quartz-scheduler.org/documentation/quartz-2.x/tutorials/crontrigger.html).
 
+{{#> callout type='info' }}
+Check the [Cron Expression Generator & Explainer](https://www.freeformatter.com/cron-expression-generator-quartz.html#cronexpressionexamples) to convert a cron expression into a readable text and visualize the next execution dates of your cron expression.
+{{/callout}}
+
 ### Cron Expression Examples
 
 Every first of the month at 3:15am:
