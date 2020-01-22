@@ -90,11 +90,6 @@ By using hot reload, the modifications done on your Studio project will be visib
 - [CORS config]({{page page='cross-origin-resource-sharing-cors'}}) must be activated in your Nuxeo server in order to connect to your repository on API Playground.
 {{/callout}}
 
-## Roadmap
-
-Planned improvements for the browser extension:
-
-
-<iframe src="https://ext.prodpad.com/ext/roadmap/3cb7ad79a0f9fce3382633f486d40cfa15430ece" height="210" width="100%"></iframe>
+## Feedback
 
 You can also give us your feedback and suggestions through our [feedback portal](https://portal.prodpad.com/40c295d6-739d-11e7-9e52-06df22ffaf6f).
