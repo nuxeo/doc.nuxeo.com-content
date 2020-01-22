@@ -113,8 +113,8 @@ history:
         date: '2010-12-24 15:44'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
 The [Scheduler Service](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewService/org.nuxeo.ecm.core.scheduler.SchedulerService) is a Nuxeo Platform service to schedule events at periodic times. This is the best way in Nuxeo Platform to execute things every night, every hour, every five minutes, or at whatever granularity you require.
 {{! /excerpt}}
@@ -175,6 +175,10 @@ Several values can be specified by separating them with commas, for instance `0,
 Repetitions can be specified using a slash followed by an increment, for instance `0/15` means start at 0 and repeat every 15\. This example means the same as the one above.
 
 There's actually more but rarely used functionality; the Scheduler's full cron expression syntax is described in detail in the [Quartz CronExpression Javadoc](https://static.javadoc.io/org.quartz-scheduler/quartz/2.3.0/index.html?org/quartz/CronExpression.html) and in [the CronTrigger Tutorial](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger).
+
+{{#> callout type='info' }}
+Check the [Cron Expression Generator & Explainer](https://www.freeformatter.com/cron-expression-generator-quartz.html#cronexpressionexamples) to convert a cron expression into a readable text and visualize the next execution dates of your cron expression.
+{{/callout}}
 
 ### Cron Expression Examples
 
