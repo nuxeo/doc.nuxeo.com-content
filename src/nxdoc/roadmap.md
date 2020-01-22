@@ -35,8 +35,6 @@ You can also give us your feedback and suggestions through our [feedback portal]
 ### Developer Tooling
 
 - [Nuxeo Studio]({{page space='studio' page='nuxeo-studio-roadmap'}})
-- [Nuxeo CLI]({{page page='nuxeo-cli-roadmap'}})
-- [Nuxeo Dev Tools Extension]({{page page='nuxeo-dev-tools-extension'}}#roadmap)
 
 {{/panel}}</div>
 
