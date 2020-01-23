@@ -194,17 +194,18 @@ history:
         date: '2013-06-03 19:54'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
 This endpoint allows to upload a batch of files to a Nuxeo server. The uploaded files can then be used as the input of an Automation operation or a property of a document through the REST API.
 {{! /excerpt}}
 
 {{#> callout type='info' heading='Nuxeo University'}}
-Watch the related courses on Nuxeo University
-- [Nuxeo REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/91/nuxeo-rest-api-import).
+Watch the related courses on Nuxeo University:</br>
+[Nuxeo REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/91/nuxeo-rest-api-import).
 ![]({{file name='university-rest-api-importer.png' page='nxdoc/university'}} ?w=450,border=true)
 {{/callout}}
+
 ## Batch Upload Endpoint
 
 <div class="table-scroll">
@@ -294,7 +295,6 @@ Watch the related courses on Nuxeo University
 
 ### Batch Initialization
 
-
 Before uploading any file, you need to initialize a batch, even if there is only one file to upload.
 
 This handshake phase is mandatory to acquire a server-side generated batch ID to be used in subsequent requests as part of the REST resource path.
@@ -331,7 +331,6 @@ POST http://NUXEO_SERVER/nuxeo/api/v1/upload/<provider>
 ```
 
 This will associate all the upload mechanism to this specific provider. We recommend reading documentation regarding the specified provider. To upload several files using different providers, you need to use different batches with different providers.
-
 
 ### Uploading a File {{> anchor 'uploading-a-file'}}
 
@@ -385,7 +384,6 @@ Returns a 201 CREATED status code with the following JSON data:
 ```
 
 The value of the `uploadType` field is `normal` by default, it can be `chunked` if the file was [uploaded in chunks](#uploading-a-file-in-chunks).
-
 
 ### Getting Information about the Batch Files
 
@@ -661,9 +659,9 @@ You need to set the same HTTP headers as for a whole file, adding some extra one
 
 For instance if the file is made of 5 chunks you will send 5 requests with the following headers and `i` between 0 and 4:
 
-*   `X-Upload-Chunk-Index: i`
+- `X-Upload-Chunk-Index: i`
 
-*   `X-Upload-Chunk-Count: 5`
+- `X-Upload-Chunk-Count: 5`
 
 Optionally depending on the HTTP client you are using you might need to add the `Content-Length` header to specify the size of the chunk in bytes.
 
@@ -720,8 +718,8 @@ POST http://NUXEO_SERVER/nuxeo/api/v1/upload/{batchId}/{fileIdx}/execute/{operat
 This way of calling an Automation operation is actually used in the default UI to manage drag and drop:
 
 1.  Files are progressively uploaded to the server:
-    *   You can drop several sets of files,
-    *   There is a maximum number of concurrent uploads.
+    - You can drop several sets of files,
+    - There is a maximum number of concurrent uploads.
 
 2.  When upload is finished you can select the operation or chain to execute.
 
@@ -775,8 +773,8 @@ doc = doc.updateDocument();
 
 ## Learn More
 
-*   Follow the course [Importing Documents / REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) at [Nuxeo University](https://university.nuxeo.com).
-*   Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
+- Follow the course [Importing Documents / REST API Import](https://university.nuxeo.com/learn/public/course/view/elearning/86/DataCapture) at [Nuxeo University](https://university.nuxeo.com).
+- Test these endpoints on your local instance with [Nuxeo API Playground](http://nuxeo.github.io/api-playground/) (see [documentation]({{page version='' space='nxdoc' page='howto-nuxeo-api-playground'}}) to configure your local instance).
 
 * * *
 
