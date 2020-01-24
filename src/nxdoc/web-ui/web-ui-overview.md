@@ -3,7 +3,7 @@ title: Web UI Overview
 description: 'Nuxeo Web UI is a standard web application for Nuxeo Server, built upon a framework of Web components, that connects via HTTP and displays the platform features to users.'
 review:
     comment: ''
-    date: '2017-12-13'
+    date: '2020-01-24'
     status: ok
 labels:
     - lts2016-ok
