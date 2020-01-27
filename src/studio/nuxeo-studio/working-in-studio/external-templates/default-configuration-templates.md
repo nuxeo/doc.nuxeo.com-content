@@ -70,3 +70,11 @@ After modifying a video, the result can be either downloaded, stored in the “a
 This project should be used as a demo and learning tool. It provides a full working example of video operations that can be performed from the UI, via user friendly dialogs (see the elements in the “video-utils” folder, in Studio Designer).
 
 Once installed, in the Automation Scripting section of Studio Modeler you can read the comments in the `videoUtils_README` JavaScript Automation chain for details and usage.
+
+## Image Cropper
+
+Image Cropper is a set of utilities (UI element, automation scripts, etc.) to display a "Crop Image" dialog for documents with the "Picture" facet. The result of the crop can then be downloaded, saved as a new document or added to the renditions. It can be output as jpeg or png.
+
+Also, it uses Google Vision crop suggestions if a Google API key is found in the configuration.
+
+All this behavior can be tuned once the template is imported, to fit your custom business rules. Please, read the ImageCropper_README script for more details.
