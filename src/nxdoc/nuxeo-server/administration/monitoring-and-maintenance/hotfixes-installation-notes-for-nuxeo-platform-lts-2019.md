@@ -100,7 +100,7 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 A new blob provider `org.nuxeo.ecm.blob.s3.S3BlobProvider` is available.
 It has the same configuration properties as the old `org.nuxeo.ecm.core.storage.sql.S3BinaryManager` but in addition:
-- it allows configuration in record or transactional mode (see NXP-28276)
+- it allows configuration in record or transactional mode (see [NXP-28276](https://jira.nuxeo.com/browse/NXP-28276))
 - it allows direct configuration of CloudFront (without using `CloudFrontBinaryManager`).
 
 The CloudFront properties are:
@@ -116,9 +116,9 @@ A new blob provider `org.nuxeo.ecm.core.blob.AESBlobProvider` is available.
 
 It has the same configuration properties as the old `org.nuxeo.ecm.core.blob.binary.AESBinaryManager`.
 
-To encrypt a binary, an AES key is needed. This key can be retrieved from a keystore, or generated from a password using PBKDF2 (in which case each stored file contains a different salt for security reasons).
+An AES key is needed to encrypt a binary. This key can be retrieved from a keystore, or generated from a password using PBKDF2 (in which case each stored file contains a different salt for security reasons).
 
-The blob provider configuration holds the keystore information to retrieve the AES key, or the password that is used to generate a per-file key using PBKDF2. 
+The blob provider configuration holds the keystore information to retrieve the AES key, or the password that is used to generate a per-file key using PBKDF2.
 
 For keystore use, the following properties are available:
 
@@ -129,14 +129,12 @@ For keystore use, the following properties are available:
 - keyPassword: the key password
 
 And for PBKDF2 use:
-
 - password: the password
 
 In addition, the following property may be specified to define where the encrypted blobs are stored:
+- path: the filesystem path for the storage (if relative, under `nxserver/data`). The default is binaries.
 
-- path: the filesystem path for the storage (if relative, under nxserver/data). The default is binaries.
-
-For backward compatibility, the encryption properties can also be included in the <property name="key">prop1=value1,prop2=value2,...</property> of the blob provider configuration.
+For backward compatibility, the encryption properties can also be included in the `<property name="key">prop1=value1,prop2=value2,...</property>` of the blob provider configuration.
 
 ### Retention Capabilities
 
@@ -145,21 +143,21 @@ The notion of a document being a record is added. The notion of retention date a
 When a record has a legal hold or has a retention date in the future, modification or deletion of the main blob (`[file:content|file:///content]`) is prevented, even indirectly through removal of the document or of an ancestor, even for Administrators.
 
 The following APIs are added:
- - `CoreSession.makeRecord(doc)`
- Only for users with permission `MakeRecord`.
- A record can never be set back to non-record (there is no unmakeRecord() API).
+ - `CoreSession.makeRecord(doc)`</br>
+ Only for users with permission `MakeRecord`.</br>
+ A record can never be set back to non-record (there is no unmakeRecord() API).</br>
  When a document is turned into a record, the document blob manager will take care of unsharing the blob and moving it to the record blob provider.
  - `CoreSession.isRecord(doc)`
- - `CoreSession.setRetainUntil(doc, datetime)`
- Only for users with permission `SetRetention`.
- A special `CoreSession.RETAIN_UNTIL_INDETERMINATE` value is also available.
+ - `CoreSession.setRetainUntil(doc, datetime)`</br>
+ Only for users with permission `SetRetention`.</br>
+ A special `CoreSession.RETAIN_UNTIL_INDETERMINATE` value is also available.</br>
  The retention date can only be increased, except if it was indeterminate, in which case it can be set to an actual date.
  - `CoreSession.getRetainUntil(doc)`
- - `CoreSession.setLegalHold(doc, boolean)`
- Only for users with permission `ManageLegalHold`.
+ - `CoreSession.setLegalHold(doc, boolean)`</br>
+ Only for users with permission `ManageLegalHold`.</br>
  If a hold is removed and the retention has expired, a "retention expired" event will be sent (after which the document may be deleted, along with its blob, depending on high-level policies).
  - `CoreSession.hasLegalHold(doc)`
- - `CoreSession.isUnderRetentionOrLegalHold(doc)`
+ - `CoreSession.isUnderRetentionOrLegalHold(doc)`</br>
  Convenience method doing hasLegalHold() OR getRetainUntil() > currentDate()
 
 And for convenience some getters are added:
