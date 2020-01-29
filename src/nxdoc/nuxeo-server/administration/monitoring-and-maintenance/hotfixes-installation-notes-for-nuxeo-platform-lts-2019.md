@@ -94,6 +94,8 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ## Hotfix 21
 
+{{#> callout type='warning' }} This hotfix brings data model changes. To apply it to your database, one node of your Nuxeo cluster *must* be started with the property `nuxeo.vcs.ddlmode` set to `execute`. {{/callout}}
+
 ### New Implementation for S3 Blob Storage
 
 A new blob provider `org.nuxeo.ecm.blob.s3.S3BlobProvider` is available.
