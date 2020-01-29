@@ -136,6 +136,73 @@ In addition, the following property may be specified to define where the encrypt
 
 For backward compatibility, the encryption properties can also be included in the <property name="key">prop1=value1,prop2=value2,...</property> of the blob provider configuration.
 
+### Retention Capabilities
+
+The notion of a document being a record is added. The notion of retention date and legal hold is added to records. Once a document is a record, this is forever. Copies of records (including versions) are not initially records.
+
+When a record has a legal hold or has a retention date in the future, modification or deletion of the main blob (`[file:content|file:///content]`) is prevented, even indirectly through removal of the document or of an ancestor, even for Administrators.
+
+The following APIs are added:
+ - `CoreSession.makeRecord(doc)`
+ Only for users with permission `MakeRecord`.
+ A record can never be set back to non-record (there is no unmakeRecord() API).
+ When a document is turned into a record, the document blob manager will take care of unsharing the blob and moving it to the record blob provider.
+ - `CoreSession.isRecord(doc)`
+ - `CoreSession.setRetainUntil(doc, datetime)`
+ Only for users with permission `SetRetention`.
+ A special `CoreSession.RETAIN_UNTIL_INDETERMINATE` value is also available.
+ The retention date can only be increased, except if it was indeterminate, in which case it can be set to an actual date.
+ - `CoreSession.getRetainUntil(doc)`
+ - `CoreSession.setLegalHold(doc, boolean)`
+ Only for users with permission `ManageLegalHold`.
+ If a hold is removed and the retention has expired, a "retention expired" event will be sent (after which the document may be deleted, along with its blob, depending on high-level policies).
+ - `CoreSession.hasLegalHold(doc)`
+ - `CoreSession.isUnderRetentionOrLegalHold(doc)`
+ Convenience method doing hasLegalHold() OR getRetainUntil() > currentDate()
+
+And for convenience some getters are added:
+ - `DocumentModel.isRecord()`
+ - `DocumentModel.getRetainUntil()`
+ - `DocumentModel.hasLegalHold()`
+ - `DocumentModel.isUnderRetentionOrLegalHold()`
+
+The following APIs, that have never been used, are deprecated:
+ - `CoreSession.setRetentionActive(doc, boolean)`
+ - `CoreSession.isRetentionActive(doc)`
+
+NXQL has the following new special properties:
+ - `ecm:isRecord`
+ - `ecm:retainUntil`
+ - `ecm:hasLegalHold`
+
+Note that NXQL does *not* have `ecm:isUnderRetentionOrLegalHold`, instead one should use `ecm:retainUntil > NOW() OR ecm:hasLegalHold = 1`.
+
+At the storage level, VCS has 3 additional columns in the table `hierarchy`:
+ - `isrecord`
+ - `retainuntil`
+ - `haslegalhold`
+
+Some specific blob providers implementations can now be in "record mode":
+ - `BlobProvider.isRecordMode()`
+
+When in record mode the blob providers behave differently:
+ - They are transactional (blobs aren't actually written/deleted in the underlying storage until the transaction commits, and transaction rollback is possible).
+ - They don't do de-duplication, each blob is stored individually.
+ - They store only one blob per document (the main blob, `[file:content|file:///content]`).
+ - They can replace or delete a document's blob.
+ - They have hooks to store additional metadata alongside the blob (for diagnostics/recovery).
+
+### Tags Configuration
+
+There is a new configuration property `nuxeo.tag.removal.on.trash.enabled` that allows to control the removal of tags when trashing documents. It is set to `true` by default.
+
+To disable the removal of tags when trashing documents, use the following contribution:
+```
+<require>org.nuxeo.tag.service.properties</require>
+<extension target="org.nuxeo.runtime.ConfigurationService" point="configuration">
+  <property name="nuxeo.tag.removal.on.trash.enabled">false</property>
+</extension>
+```
 
 ## Hotfix 19
 
