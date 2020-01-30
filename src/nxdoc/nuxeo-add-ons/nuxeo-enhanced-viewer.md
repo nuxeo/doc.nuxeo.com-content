@@ -17,6 +17,17 @@ The more people involved on a document, the more difficult it becomes to collabo
 The Nuxeo Enhanced Viewer addon allows users to preview and annotate any document stored in the Nuxeo repository: Office documents, PDF, images, videos, etc., on any device with the ARender previewer from [Arondor](https://www.arondor.com/en/).
 {{! /excerpt}}
 
+{{#> callout type='info' heading='University'}}
+Watch the related courses on Nuxeo University:</br>
+[Nuxeo Enhanced Viewer - Product News](https://university.nuxeo.com/learn/course/external/view/elearning/206/EnhancedViewer)
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-nev.png
+    name: Screenshot 2020-01-30 at 16.41.13.png
+    addins#screenshot#up_to_date
+--}}
+![university-nev.png](nx_asset://1f9785fd-83b6-4a98-9579-0871b3c15f04 ?w=450,border=true)
+{{/callout}}
+
 ARender software comprises two parts:
 - previewer
 - rendition
