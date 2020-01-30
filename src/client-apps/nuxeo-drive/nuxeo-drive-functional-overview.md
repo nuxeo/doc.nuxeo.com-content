@@ -780,6 +780,10 @@ Direct Edit enables you to edit any of your document's content from their Summar
 
 The icon looks like ![]({{file name='drive-webui-direct-edit.png' page='nuxeo-drive'}} ?w=20) on Web-UI and ![]({{file name='drive-jsf-direct-edit.png' page='nuxeo-drive'}}) on JSF-UI.
 
+{{#> callout type='note' }}
+In Web UI 10.10, Direct Edit has a new icon: ![]({{file name='directEdit.jpg' page='nuxeo-drive'}} ?w=20)
+{{/callout}}
+
 **To edit a document locally from the web interface:**
 
 1. On the document in the Nuxeo Platform, click on the **Direct Edit icon** on the document **View** on Web UI and on the **Summary** tab on JSF UI.
