@@ -598,7 +598,6 @@ history:
 ---
 
 {{! multiexcerpt name='drive_2_FT_page'}}
-
 {{! excerpt}}
 [Nuxeo Drive](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-drive?version=1.8.5) is a Nuxeo addon that enables the synchronization of folders or workspaces from the Nuxeo Platform with local folder on your computer, providing offline edition capabilities.
 {{! /excerpt}}
@@ -747,12 +746,10 @@ Adding a new document in a Drive-synchronized folder from your computer will cre
 #### Versioning
 
 {{! multiexcerpt name='drive-versioning'}}
-
 When you edit a document, either from your Nuxeo Drive folder or using the online editing, a [new version]({{page space='userdoc' page='version'}}) is automatically created on the Platform and the version number is updated:
 
 - If you are not the last contributor of the document
 - Or if your last edit is more than an hour ago
-
 {{! /multiexcerpt}}
 
 Then, if your document's version was 1.0 before modification for instance, it automatically becomes 1.1+ after you edited it from the Nuxeo Drive folder and the 1.1 is archived as it is created. Otherwise, a simple modification is done on the document and logged in the document's History.
@@ -781,17 +778,21 @@ Direct Edit enables you to edit any of your document's content from their Summar
 The icon looks like ![]({{file name='drive-webui-direct-edit.png' page='nuxeo-drive'}} ?w=20) on Web-UI and ![]({{file name='drive-jsf-direct-edit.png' page='nuxeo-drive'}}) on JSF-UI.
 
 {{#> callout type='note' }}
-In Web UI 10.10, Direct Edit has a new icon: ![]({{file name='directEdit.jpg' page='nuxeo-drive'}} ?w=20)
+In Web UI 10.10, Direct Edit has a new icon:
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/CLIENT-APPS/Nuxeo Drive/Nuxeo Drive /Direct Edit
+    name: directEdit.jpg
+    1.7.2#icon#up_to_date
+--}}
+![Direct Edit](nx_asset://3179306b-0a11-48a6-afbf-f695f9ae3645 ?w=20)
 {{/callout}}
 
 **To edit a document locally from the web interface:**
 
-1. On the document in the Nuxeo Platform, click on the **Direct Edit icon** on the document **View** on Web UI and on the **Summary** tab on JSF UI.
+1. On the document in the Nuxeo Platform, click on the **Direct Edit icon** on the document **View** on Web UI and on the **Summary** tab on JSF UI.</br>
     The document opens in its native application (OpenOffice.org for an .odt file for instance).
-
     {{#> callout type='note' }}
-    If you plan to work on the document for some time, you can easily lock it from the Metadata edit popup (see the section [Metadata Edit](#metadata-edit)).
-
+    If you plan to work on the document for some time, you can easily lock it from the Metadata edit popup (see the section [Metadata Edit](#metadata-edit)).</br>
     Note that depending on your OS and the file format, the document can be automatically locked. This is still a beta feature of Direct Edit, known to currently work on macOS and Windows.
     {{/callout}}
 
@@ -813,12 +814,9 @@ Renaming a document from the Nuxeo Drive folder renames the document and its att
 ### {{> anchor 'metadata-edit'}}Editing Metadata
 
 {{#> callout type='info' }}
-Metadata edit is available starting from Nuxeo Platform 6.0.
-
-With a Drive client version below 4, it will open in a view within the application. Otherwise, it will open directly in the browser.
-
+Metadata edit is available starting from Nuxeo Platform 6.0.</br>
+With a Drive client version below 4, it will open in a view within the application. Otherwise, it will open directly in the browser.</br>
 The custom metadata page is only available with the JSF UI. If using WebUI, it will direct you to the default page of the document.
-
 {{/callout}}
 
 Metadata Edit allows you to edit the metadata of your document from your desktop.
@@ -863,7 +861,6 @@ When you start Nuxeo Drive on your computer for the first time, you need to prov
 
 3. In the window that pops up, click on **OK** to confirm.
     The Nuxeo Drive client cannot communicate with the Nuxeo Platform and switches to offline. When you click on the Drive icon, it says "Update credentials (required)".
-
 {{! /multiexcerpt}}
 
 ## Customization
