@@ -73,7 +73,7 @@ Once installed, in the Automation Scripting section of Studio Modeler you can re
 
 ## Image Cropper
 
-Image Cropper is a set of utilities (UI element, automation scripts, etc.) to display a "Crop Image" dialog for documents with the "Picture" facet. The result of the crop can then be downloaded, saved as a new document or added to the renditions. It can be output as jpeg or png.
+Image Cropper is a set of utilities (UI element, automation scripts, etc.) to display a "Crop Image" dialog for documents with the "Picture" facet. The result of the crop can then be downloaded, saved as a new document or added to the renditions. It can be output as JPEG or PNG.
 
 Also, it uses Google Vision crop suggestions if a Google API key is found in the configuration.
 
