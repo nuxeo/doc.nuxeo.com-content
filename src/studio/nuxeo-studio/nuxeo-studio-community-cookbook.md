@@ -36,6 +36,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
+    ![barcode-widget.png](nx_asset://37549a16-4953-4a6a-ba30-d96784a79f07 ?w=150,border=true)
+    </td>
+    <td>[Barcode Widget](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/barcode-widget)</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td>
     ![script-utils-2.png](nx_asset://80bd0887-8105-4c1d-9c40-ad52e753d0ea ?w=150,border=true)
     </td>
     <td>[Automation Script Utilities](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/automation-script-utils)</td>
@@ -98,14 +106,6 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>Nuxeo</td>
     <td>Workflow</td>
   </tr>
-  <tr>
-    <td>
-    ![dashboard-cookbook.png](nx_asset://470c956e-ef24-42d2-b768-938e00bbaa2c ?w=150,border=true)
-    </td>
-    <td>[Visual Dashboard with Pictures](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/dashboard)</td>
-    <td>Nuxeo</td>
-    <td>Dashboard</td>
-  </tr>
 </table>
 
 ## Tips and Tricks
@@ -167,7 +167,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
 </tr>
 <tr>
   <td>![document-suggestion-watermark.png](nx_asset://1f5fb898-ded7-46bc-b67e-898c3d9c2430 ?w=150,border=true)</td>
-  <td>[Custom Nuxeo Suggestion Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/document-suggestion)</td>
+  <td>[Custom Nuxeo Suggestion Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/document-suggestion-result-formatters)</td>
   <td>Nuxeo</td>
   <td>Layout</td>
 </tr>
