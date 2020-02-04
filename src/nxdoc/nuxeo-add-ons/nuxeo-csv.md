@@ -401,10 +401,10 @@ and to put the binary files in a folder that can be accessed by the server.
 
 It is possible to create documents of type File and to upload their main attachment using Nuxeo CSV.
 
-On your CSV file, use the `file:content` property in the first line and the name of your file on the document definition line.
+On your CSV file, use the `file.content` property in the first line and the name of your file on the document definition line.
 
 ```csv
-"name","type","dc:title","dc:description","file:content"
+"name","type","dc:title","dc:description","file.content"
 "my-file","File","My file with uploaded attachment","This is a file with its attachment, created using Nuxeo CSV","my-file.doc"
 ```
 
