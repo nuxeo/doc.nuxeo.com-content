@@ -2,7 +2,7 @@
 title: Essential Nuxeo Platform Terminology
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2020-02-04'
     status: ok
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
 labels:
