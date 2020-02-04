@@ -16,22 +16,22 @@ confluence:
     shortlink_source: 'https://doc.nuxeo.com/x/GYn1'
     source_link: /display/GLOS/Task
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2014-09-23 17:07'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-07-23 18:21'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2014-07-14 23:21'
         message: ''
         version: '2'
-    - 
+    -
         author: Solen Guitter
         date: '2013-10-21 13:14'
         message: ''
@@ -42,7 +42,7 @@ history:
 
 {{! multiexcerpt name='task-workflow'}}
 
-A task is a persisted object that represents what a workflow instance expects from a user or a group of users. Usually they are expected to give some information through a form and click on a button (like Accept, Reject, Confirm, Notify, Transform, etc.). A task usually has one or several assignees, a title, a directive and an expected date of achievement. A task is either to be done or done. A task is created by a node for which the property of task creation has been activated. The task assignees can be specified directly in the task definition or can be dynamically computed.
+A task is a persisted object that represents what a workflow instance expects from a user or a group of users. They are expected to give some information through a form and click on a button (like Accept, Reject, Confirm, Notify, Transform, etc.). A task usually has one or several assignees, a title, a directive and an expected date of achievement. A task is either to be done or done. A task is created by a node for which the property of task creation has been activated. The task assignees can be specified directly in the task definition or can be dynamically computed.
 
 {{! /multiexcerpt}}
 

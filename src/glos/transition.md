@@ -63,7 +63,7 @@ A transition is what enables a document to go from one state to another in a lif
 
 {{! multiexcerpt name='transition-workflow'}}
 
-In the workflow terminology a transition is what links two nodes in the graph of a workflow model. A transition is always associated to a condition. When there is a transition between nodes n1 and n2, the workflow engine will check if the transition condition is evaluated to true. If yes, it will execute n2 immediately after n1 is processed.
+In the workflow terminology, a transition is what links two nodes in the graph of a workflow model. A transition is always associated to a condition. When there is a transition between nodes n1 and n2, the workflow engine will check if the transition condition is evaluated to true. If yes, it will execute n2 immediately after n1 is processed.
 
 {{! /multiexcerpt}}
 
