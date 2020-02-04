@@ -427,7 +427,7 @@ history:
         version: '1'
 
 ---
-[CMIS](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cmis) is the OASIS specification for content management interoperability. It allows client and servers to talk together in HTTP (REST with JSON or AtomPub) using a unified domain model. The latest published version is [CMIS 1.1](http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html).
+[CMIS](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cmis) is the OASIS specification for content management interoperability. It allows client and servers to talk together in HTTP (REST with JSON or AtomPub) using a unified domain model. The latest published version is [CMIS 1.1](http://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html) and it is the version Nuxeo Platform supports.
 
 Nuxeo supports CMIS through the following modules:
 
