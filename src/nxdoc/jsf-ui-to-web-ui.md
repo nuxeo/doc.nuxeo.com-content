@@ -51,11 +51,8 @@ Tutorials have been created to let you discover the basics of Web UI configurati
 {{/panel}}
 </div>
 
-* * *
-
+<!--
 ### Roadmap
-
 A roadmap has been created to monitor the remaining features from the JSF UI to Web UI. The Product team works closely with the Customer Success and Professional Services departments to monitor priorities and expectations regarding this migration.
-
-
 <iframe src='https://ext.prodpad.com/ext/roadmap/aa5bf250154968a38503c461a2b1db138dcd0bea' height='900' width='100%' frameborder='0'></iframe>
+-->
