@@ -2,7 +2,7 @@
 title: Registering your Nuxeo Instance
 review:
     comment: ''
-    date: '2017-12-13'
+    date: '2020-02-07'
     status: ok
 labels:
     - admin-center
@@ -202,6 +202,10 @@ Registration can be done during the installation steps using the configuration w
 Registration does not require an Internet access. If your server cannot connect to the Internet, follow the [offline registration steps](#offline-registration). Otherwise, follow the [online registration steps](#online-registration).
 
 For development instances on which you may need to remove your data, you may need to [re-register your instance](#re-registration).
+
+{{#> callout type='info' title='Token Management'}}
+Tokens need to be used as a replacement for your password in Nuxeo Online Services APIs and our command line tools, like `nuxeoctl`. For more information, check the [Token Management documentation]({{page version='' space='studio' page='token-management'}}).
+{{/callout}}
 
 ### Creating your Nuxeo Online Services Account {{> anchor 'connect-account-creation'}}
 
