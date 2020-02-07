@@ -175,9 +175,13 @@ Registration does not require an Internet access. If your server cannot connect 
 
 For development instances on which you may need to remove your data, you may need to [re-register your instance](#re-registration).
 
+{{#> callout type='info' title='Token Management'}}
+Tokens need to be used as a replacement for your password in Nuxeo Online Services APIs and our command line tools, like `nuxeoctl`. For more information, check the [Token Management documentation]({{page version='' space='studio' page='token-management'}}).
+{{/callout}}
+
 ### Creating your Nuxeo Online Services Account {{> anchor 'connect-account-creation'}}
 
-If you already have an account for Nuxeo Online Services, either because you are a Nuxeo customer, or because you created a trial account, you can continue to the [Registering Online]({{page page='registering-your-nuxeo-instance'}}#registering-online-through-the-admin-tab) step. If not, follow those steps to get credentials to Online Services.
+If you already have an account for Nuxeo Online Services, either because you are a Nuxeo customer, or because you created a trial account, you can continue to the [Registering Online]({{page page='registering-your-nuxeo-instance'}}#online-registration) step. If not, follow those steps to get credentials to Online Services.
 
 To subscribe to a Nuxeo Online Services trial:
 
