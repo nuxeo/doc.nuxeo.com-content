@@ -1,5 +1,5 @@
 ---
-title: How to Use PDF conversion operations with Nuxeo Studio
+title: 'HOWTO: Use PDF conversion operations with Nuxeo Studio'
 review:
     comment: ''
     date: '2018-01-15'
@@ -44,6 +44,7 @@ This how to requires knowledge about:
 
 {{/callout}}
 
+<!--
 ## Importing PDF Operations in Nuxeo Studio
 
 The PDF conversion operations are not available in Nuxeo Studio "out-of-the-box". You need to import them following these steps:
@@ -140,6 +141,7 @@ The PDF conversion operations are not available in Nuxeo Studio "out-of-the-box"
 6. Save your Nuxeo Studio project.
 
 The operations are now available in the Automation Chain editor, in the Conversion category.
+-->
 
 ## Setting Up the Automation Chain
 
