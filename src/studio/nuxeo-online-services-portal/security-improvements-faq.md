@@ -32,7 +32,7 @@ Changes will be done in 2 steps:
 - Feb. 24, 2020: new login page becomes official
 
 {{#> callout type='info'}}
-Timeline has been pushed back from Feb. 10 to Feb. 24 in order to provide additional preparation time. This date is now the final one and won't be moved further.
+Timeline has been pushed back from Feb. 10 to Feb. 24 in order to provide additional preparation time. This date is the final one and won't be moved further.
 {{/callout}}
 
 Communication will be sent out by email to all of our customers prior to the change.
