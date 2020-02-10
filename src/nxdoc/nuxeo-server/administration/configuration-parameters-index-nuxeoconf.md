@@ -2346,14 +2346,20 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 </tr>
 <tr>
 <td colspan="1">`kafka.request.timeout.ms`</td>
-<td colspan="1">Maximum time to wait for a response</td>
-<td colspan="1">`65000`</td>
+<td colspan="1">Request timeout between Nuxeo and a Kafka broker</td>
+<td colspan="1">`30000`</td>
 <td colspan="1">Since 9.3</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.default.api.timeout.ms`</td>
+<td colspan="1">Default timeout for consumer API related to position</td>
+<td colspan="1">`120000`</td>
+<td colspan="1">Since 11.1, 10.10-HF22</td>
 </tr>
 <tr>
 <td colspan="1">`kafka.max.poll.interval.ms`</td>
 <td colspan="1">Maximum delay between poll invocation</td>
-<td colspan="1">`60000`</td>
+<td colspan="1">`7200000`</td>
 <td colspan="1">Since 9.3</td>
 </tr>
 <tr>
@@ -2364,17 +2370,28 @@ For RestClient protocol a comma separated list of URL. If empty an in JVM embedd
 </tr>
 <tr>
 <td colspan="1">`kafka.session.timeout.ms`</td>
-<td colspan="1">Timeout used to detect worker failures</td>
+<td colspan="1">Consumers that don't send heartbeat during this delay are removed from the group</td>
 <td colspan="1">`50000`</td>
 <td colspan="1">Since 9.3</td>
 </tr>
 <tr>
 <td colspan="1">`kafka.heartbeat.interval.ms`</td>
 <td colspan="1">Heartbeat interval</td>
-<td colspan="1">`2000`</td>
+<td colspan="1">`4000`</td>
 <td colspan="1">Since 9.3</td>
 </tr>
-
+<tr>
+<td colspan="1">`kafka.delivery.timeout.ms`</td>
+<td colspan="1">Timeout for a producer to get an acknowledgement</td>
+<td colspan="1">`120000`</td>
+<td colspan="1">Since 11.1, 10.10-HF22</td>
+</tr>
+<tr>
+<td colspan="1">`kafka.acks`</td>
+<td colspan="1">The number of acknowledgments expected by a producer</td>
+<td colspan="1">`1`</td>
+<td colspan="1">Since 11.1, 10.10-HF22</td>
+</tr>
 <tr>
 <td colspan="1">`kafka.sasl.enabled`</td>
 <td colspan="1">Enable SASL authentication to communicate with Kafka brokers</td>

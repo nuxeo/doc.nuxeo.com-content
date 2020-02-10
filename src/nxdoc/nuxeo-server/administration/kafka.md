@@ -69,11 +69,12 @@ Access, consumer and producer properties are registered using the Nuxeo `KafkaCo
       </producer>
       <consumer>
         <property name="bootstrap.servers">localhost:9092</property>
-        <property name="request.timeout.ms">65000</property>
+        <property name="request.timeout.ms">30000</property>
         <property name="max.poll.interval.ms">60000</property>
-        <property name="session.timeout.ms">20000</property>
-        <property name="heartbeat.interval.ms">1000</property>
-        <property name="max.poll.records">50</property>
+        <property name="session.timeout.ms">50000</property>
+        <property name="heartbeat.interval.ms">4000</property>
+        <property name="max.poll.records">2</property>
+        <property name="max.poll.interval.ms">3600000</property>
       </consumer>
     </kafkaConfig>
   </extension>
@@ -87,19 +88,30 @@ Here are some important properties:
   | `bootstrap.servers` | `localhost:9092` | A list of host/port pairs to use for establishing the initial connection to the Kafka cluster. |
   | `enable.auto.commit` | `false` | The module manages the offset commit this is always set to `false`. |
   | `auto.offset.reset` | `earliest` | This option is always set to `earliest` |
-  | `request.timeout.ms` | `3605000` | Requests timeout between client and Kafka brokers. |
+  | `request.timeout.ms` | `30000` | Requests timeout between client and Kafka brokers. |
+  | `default.api.timeout.ms` | `60000` | Default timeout for consumer API related to position (commit or move to a position). |
   | `max.poll.interval.ms` | `3600000` | Consumers that don't call poll during this delay are removed from the group. |
-  | `session.timeout.ms` | `50000` | Consumers that don't send heartbeat during this delay are removed from the group. |
-  | `heartbeat.interval.ms` | `2000` | Interval between heartbeats. |
   | `max.poll.records` | `2` | Can be adjusted to make sure the poll interval is respected. |
+  | `session.timeout.ms` | `50000` | Consumers that don't send heartbeat during this delay are removed from the group. |
+  | `heartbeat.interval.ms` | `4000` | Interval between heartbeats. |
   | `group.initial.rebalance.delay.ms` | `3000` | Delay for the initial consumer rebalance. |
   | `subscribe.disable` | `false` | Not a Kafka option, used by the module to disable the dynamic assignment, when this option is `true` LogManager will only support static partition assignment. |
 
+A consumer will be removed from the group, if:
+
+ - there is a network outage longer than `session.timeout.ms`
+ - the consumer is too slow to process recordd, see remark about the `max.poll.interval.ms` below. 
+
+
   | Producer options | default | Description |
   | --- | ---: |  --- |
+  | `delivery.timeout.ms` | `120000` | Timout for a producer to get an acknowledgement. |
   | `acks` | `1` | The number of acknowledgments the producer requires the leader to have received before considering a request complete. |
   | `compression.type` | `none` | Valid values are none, gzip, snappy, or lz4. Compression is of full batches of data, so the efficacy of batching will also impact the compression ratio (more batching means better compression). |
   | `default.replication.factor` | `1` | Not a Kafka option, used by Nuxeo to set the topic replication factor when creating new topic. |
+
+A producer will fail to deliver a record if it cannot get an acknowledgement within `delivery.timeout.ms`.
+
 
 Most of the above properties can be tuned directly from [nuxeo.conf file]({{page space='nxdoc' page='configuration-parameters-index-nuxeoconf'}}).
 
@@ -110,11 +122,12 @@ For instance if you have 3 brokers in your cluster a replication factor of 2 wil
 
 {{#> callout type='warning' }}
 It is important to adapt the `max.poll.interval.ms` for slow consumers; otherwise, you will encounter errors like:
-```bash
-ERROR [ComputationRunner] compliance: Exception in processLoop: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
-```
-For instance, this will happen when using the `StreamWorkManager` if a Work takes more than 1h.
-{{/callout}}
+{/callout}}
+  ```bash
+  ERROR [ComputationRunner] compliance: Exception in processLoop: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+  ```
+
+For instance, this will happen when using the `StreamWorkManager` if a Work takes more than 2h.
 
 Please refer to the Kafka documentation about the [consumer and producer options](https://kafka.apache.org/documentation#configuration) and [replication](https://kafka.apache.org/documentation/#replication) for more information.
 
