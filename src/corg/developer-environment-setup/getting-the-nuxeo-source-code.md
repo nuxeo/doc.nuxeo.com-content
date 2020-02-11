@@ -270,12 +270,12 @@ You can now import the Nuxeo source code in Eclipse. See
 ### Getting a Maintenance Branch or a Specific Release
 
 All releases are tagged `release-x.y.z` and maintained on a dedicated branch `x.y.z`.
-Use the same recipe as above, but specify the wanted branch (5.4.1, 5.4.2, 5.5.0, ...) or tag (release-5.4.1, release-5.4.2, release-5.5, ...):
+Use the same recipe as above, but specify the wanted branch (10.10.0, ...) or tag (release-10.10.0, release-10.10.0, release-9.10-HF12, ...):
 
-{{#> panel type='code' heading='Get Nuxeo 5.5 release source code'}}
+{{#> panel type='code' heading='Get Nuxeo 10.10 release source code'}}
 
 ```
-git checkout release-5.5
+git checkout release-10.10
 python clone.py
 
 ```
@@ -336,11 +336,11 @@ gitfa [some Git command]
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
-SCM Branch
+Branch
 
 </th><th colspan="1">
 
-SCM Tag
+Tag
 
 </th><th colspan="1">
 
@@ -368,7 +368,7 @@ development branch where is prepared next x.y[.z]({{page page='z'}}) version
 
 </td></tr><tr><td colspan="1">
 
-5.5.0
+10.10.0
 
 </td><td colspan="1">
 
@@ -376,11 +376,11 @@ development branch where is prepared next x.y[.z]({{page page='z'}}) version
 
 </td><td colspan="1">
 
-5.5.0-HFXX-SNAPSHOT
+10.10-HFNN-SNAPSHOT
 
 </td><td colspan="1">
 
-maintenance branch where bugs are fixed/backported for Nuxeo 5.5
+maintenance branch where bugs are fixed/backported for Nuxeo 10.10
 
 </td></tr><tr><td colspan="1">
 
@@ -388,52 +388,22 @@ maintenance branch where bugs are fixed/backported for Nuxeo 5.5
 
 </td><td colspan="1">
 
-release-5.5
+release-10.10
 
 </td><td colspan="1">
 
-5.5
+10.10
 
 </td><td colspan="1">
 
-release tag for 5.5 version
+release tag for 10.10 version
 
-</td></tr><tr><td colspan="1">
+</td></tr>
 
-5.4.2
+<tr><td colspan="1">
 
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-5.4.2-HFXX-SNAPSHOT
-
-</td><td colspan="1">
-
-maintenance branch where bugs are fixed/backported for Nuxeo 5.4.2
-
-</td></tr><tr><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-release-5.4.2
-
-</td><td colspan="1">
-
-5.4.2
-
-</td><td colspan="1">
-
-release tag for 5.4.2 version
-
-</td></tr><tr><td colspan="1">
-
-fix-NXP-9999-*
-feature-NXP-9999-*
+fix-NXP-9999-\*<br/>
+feature-NXP-9999-\*
 
 </td><td colspan="1">
 
@@ -456,19 +426,19 @@ Maintenance branches are only released for development purpose; the fixes are de
 
 ### Detailed Sample
 
-Development is done on branch _master_ with current version _5.6-SNAPSHOT_.
+Development is done on branch _master_ with current version _10.10-SNAPSHOT_.
 
-Let's say we will release Nuxeo 5.6.
-A branch is created from _master_, named _5.6.0_.
-On branch _5.6.0_, version is updated from _5.6-SNAPSHOT_ to _5.6_ (releasing version).
-On branch _5.6.0_, code is tagged as _release-5.6_.
+Let's say we will release Nuxeo 10.10.
+A branch is created from _master_, named _10.10.0_.
+On branch _10.10.0_, version is updated from _10.10-SNAPSHOT_ to _10.10_ (releasing version).
+On branch _10.10.0_, code is tagged as _release-10.10_.
 If it is an important release (called "final release"), then a maintenance branch will be kept, else it would be deleted after tagging.
-On branch _5.6.0_, version is updated to _5.6.0-HF01-SNAPSHOT_ (future fixes for 5.6 version).
-On branch _master_, version is updated to _5.7-SNAPSHOT_ (next release version).
+On branch _10.10.0_, version is updated to _10.10.0-HF01-SNAPSHOT_ (future fixes for 10.10 version).
+On branch _master_, version is updated to _11.1-SNAPSHOT_ (next release version).
 Release done.
 
-Next development is still done on branch _master_, with version _5.7-SNAPSHOT_.
+Next development is still done on branch _master_, with version _11.1-SNAPSHOT_.
 
-Bugs identified on 5.6 version will be fixed on maintenance branch _5.6.0_ and forward ported to the _master_ branch.
-If we estimate some bug fixes are required on 5.6.x released version, we may back-port them from _master_ branch to _5.6.x_ branch.
-Maintenance branch 5.6.0 is regularly released to deliver 5.6.0-HFxx corrective hot-fixes.
+Bugs identified on 10.10 version will be fixed on maintenance branch _10.10-HFNN_ and forward ported to the _master_ branch.
+If we estimate some bug fixes are required on 10.10-HFNN released version, we may back-port them from _master_ branch to _10.10-HFNN_ branch.
+Maintenance branch 10.10 is regularly released to deliver 10.10-HFxx corrective hot-fixes.
