@@ -198,6 +198,8 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
         <mapperScript>
           searchAttributes.put("username", userObject.getNameID().getValue());
           userAttributes.put("email", userObject.getNameID().getValue());
+          userAttributes.put("firstName", userObject.getAttributeByName("FirstName").getAttributeValues().get(o).value);
+          userAttributes.put("lastName", userObject.getAttributeByName("LastName").getAttributeValues().get(o).value);
         </mapperScript>
       </mapper>
     </extension>
