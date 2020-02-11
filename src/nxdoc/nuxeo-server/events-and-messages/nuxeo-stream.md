@@ -352,11 +352,18 @@ To get the latency in addition:
 ./bin/stream.sh -k latency --codec avro
 ```
 
-To publish these metrics periodically into graphite:
+To publish these metrics periodically into Graphite:
  ```bash
-# publish to graphite all lag and latency for all streams every 30s
+# publish to Graphite lag and latency for all the streams every 30s
  /bin/stream.sh monitor -k --codec avro -l ALL -i 30 --host graphite --port 2003
 ```
+
+To publish metrics periodically into Datadog:
+ ```bash
+# publish to Datadog lag and latency for all the streams every 60s with some additional tags
+ /bin/stream.sh datadog -k --codec avro -l ALL -i 60 --api-key <DATADOG_API_KEY> --tags "staging:foo,project:bar"
+```
+
 
 Note that this monitoring command can be run on all Nuxeo nodes. It requires very few resources and
 because it relies on Kafka, only one command will publish the metrics, the other instances are there for
