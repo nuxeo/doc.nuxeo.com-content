@@ -348,3 +348,12 @@ As just explained, to create a search, you just need to deploy a new `nuxeo-{sea
 | [auto](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/search/nuxeo-search-form.html#L494)        | Boolean property. If `true`, automatically executes the search each time a param is changed.                | [auto](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-web-ui-bundle.html#L366) search                                |
 | [label](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/search/nuxeo-search-form.html#L259)       | String property. The key to the `i18n` label to be shown as the search title                               | [expiredSearch.expiredDocuments](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-web-ui-bundle.html#L379) search      |
 | [search-name](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/search/nuxeo-search-form.html#L479) | String property. The name of the search layout, as explained above                                         | [expired](https://github.com/nuxeo/nuxeo-web-ui/blob/9.10/elements/nuxeo-web-ui-bundle.html#L377) name-search                        |
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Custom Searches with Highlight](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/highlight)
+
+{{/panel}}</div><div class="column medium-6">
+</div></div>
