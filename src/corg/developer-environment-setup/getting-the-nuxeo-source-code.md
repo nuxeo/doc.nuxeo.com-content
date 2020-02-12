@@ -270,7 +270,7 @@ You can now import the Nuxeo source code in Eclipse. See
 ### Getting a Maintenance Branch or a Specific Release
 
 All releases are tagged `release-x.y.z` and maintained on a dedicated branch `x.y.z`.
-Use the same recipe as above, but specify the wanted branch (10.10.0, ...) or tag (release-10.10.0, release-10.10.0, release-9.10-HF12, ...):
+Use the same recipe as above, but specify the wanted branch (10.10, etc.) or tag (release-10.10, release-10.10, release-9.10-HF12, etc.):
 
 {{#> panel type='code' heading='Get Nuxeo 10.10 release source code'}}
 
@@ -368,7 +368,7 @@ development branch where is prepared next x.y[.z]({{page page='z'}}) version
 
 </td></tr><tr><td colspan="1">
 
-10.10.0
+10.10
 
 </td><td colspan="1">
 
@@ -428,17 +428,15 @@ Maintenance branches are only released for development purpose; the fixes are de
 
 Development is done on branch _master_ with current version _10.10-SNAPSHOT_.
 
-Let's say we will release Nuxeo 10.10.
-A branch is created from _master_, named _10.10.0_.
-On branch _10.10.0_, version is updated from _10.10-SNAPSHOT_ to _10.10_ (releasing version).
-On branch _10.10.0_, code is tagged as _release-10.10_.
-If it is an important release (called "final release"), then a maintenance branch will be kept, else it would be deleted after tagging.
-On branch _10.10.0_, version is updated to _10.10.0-HF01-SNAPSHOT_ (future fixes for 10.10 version).
-On branch _master_, version is updated to _11.1-SNAPSHOT_ (next release version).
+Let's say we will release Nuxeo 10.10.</br>
+- A branch is created from _master_, named _10.10_.
+- On branch _10.10_, version is updated from _10.10-SNAPSHOT_ to _10.10_ (releasing version).
+- On branch _10.10_, code is tagged as _release-10.10_.
+- If it is an important release (called "final release"), then a maintenance branch will be kept, else it would be deleted after tagging.
+- On branch _10.10_, version is updated to _10.10-HF01-SNAPSHOT_ (future fixes for 10.10 version).
+- On branch _master_, version is updated to _11.1-SNAPSHOT_ (next release version).
 Release done.
-
-Next development is still done on branch _master_, with version _11.1-SNAPSHOT_.
-
-Bugs identified on 10.10 version will be fixed on maintenance branch _10.10-HFNN_ and forward ported to the _master_ branch.
-If we estimate some bug fixes are required on 10.10-HFNN released version, we may back-port them from _master_ branch to _10.10-HFNN_ branch.
-Maintenance branch 10.10 is regularly released to deliver 10.10-HFxx corrective hot-fixes.
+- Next development is still done on branch _master_, with version _11.1-SNAPSHOT_.
+- Bugs identified on 10.10 version will be fixed on maintenance branch _10.10-HFNN_ and forward ported to the _master_ branch.
+- If we estimate some bug fixes are required on 10.10-HFNN released version, we may back-port them from _master_ branch to _10.10-HFNN_ branch.
+- Maintenance branch 10.10 is regularly released to deliver 10.10-HFxx corrective hot-fixes.
