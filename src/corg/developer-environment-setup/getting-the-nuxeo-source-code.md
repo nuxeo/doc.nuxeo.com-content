@@ -257,9 +257,9 @@ export MAVEN_OPTS="-Xmx4096m -Xms1024m"
 mvn -DskipTests install -Paddons,distrib
 ```
 
-{{#> callout type='note' }
-Depending on the version your are building, you will need a different version of Java. For example, building Nuxeo 10.10 (LTS2019) requires Java 8, while building the master branch (currently 11.0) requires Java 11.
-Please, check the  [Compatibility Matrix]({{page version=‘1010’ space=‘nxdoc’ page=‘compatibility-matrix’}}) for the version you are building.
+{{#> callout type='note' }}
+Depending on the version you are building, you will need a different version of Java. For example, building Nuxeo 10.10 (LTS 2019) requires Java 8, while building the master branch (currently 11.x) requires Java 11.</br>
+Check the [Compatibility Matrix]({{page version=‘1010’ space=‘nxdoc’ page=‘compatibility-matrix’}}) for the version you are building.
 {{/callout}}
 
 {{/panel}}
