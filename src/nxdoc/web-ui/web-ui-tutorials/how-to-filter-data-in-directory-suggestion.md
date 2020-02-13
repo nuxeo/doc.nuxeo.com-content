@@ -259,7 +259,7 @@ See the result:
 <div class="column medium-6">
 {{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
-- [Custom Document Suggestion](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/document-suggestion)
+- [Custom Document Suggestion](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/document-suggestion-result-formatters)
 
 {{/panel}}
 </div>
