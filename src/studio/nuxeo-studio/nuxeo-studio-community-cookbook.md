@@ -34,20 +34,19 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <th>Contributor</th>
     <th>Category</th>
   </tr>
-    <tr>
+  <tr>
     <td>
     ![highlight-logo.png](nx_asset://dde8cbf0-b7c2-4b77-b02a-0bd0416d40ac ?w=150,border=true)
     </td>
-    <td>[Custom Searches with Highlight](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/highlight)     </td>
+    <td>[Custom Searches with Highlight](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/highlight)</td>
     <td>Nuxeo</td>
     <td>Search</td>
   </tr>
   <tr>
-  <tr>
     <td>
     ![barcode-widget.png](nx_asset://37549a16-4953-4a6a-ba30-d96784a79f07 ?w=150,border=true)
     </td>
-    <td>[Barcode Widget](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/barcode-widget)     </td>
+    <td>[Barcode Widget](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/barcode-widget)</td>
     <td>Nuxeo</td>
     <td>Layout</td>
   </tr>
@@ -134,14 +133,6 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>Nuxeo</td>
     <td>Conversion</td>
   </tr>
-<tr>
-  <td>
-  ![progress-bar.png](nx_asset://256e8c13-45fb-4412-a305-2c630ea6a877 ?w=150, border=true)
-  </td>
-  <td>[Add a Progress Bar](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/progress-bar)</td>
-  <td>Nuxeo</td>
-  <td>Layout</td>
-</tr>
 <tr>
   <td>
   ![html-injection.png](nx_asset://386e91fa-3cc9-4b1b-a2e9-6b6cf0da50b2 ?w=150,border=true)
