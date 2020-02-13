@@ -36,6 +36,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
+    ![cascading.png](nx_asset://a44def05-39fe-419b-9fb0-e7687b67c1fb ?w=150,border=true)
+    </td>
+    <td>[Cascading Fields](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/cascading-fields)</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td>
     ![highlight-logo.png](nx_asset://dde8cbf0-b7c2-4b77-b02a-0bd0416d40ac ?w=150,border=true)
     </td>
     <td>[Custom Searches with Highlight](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/highlight)</td>
@@ -101,6 +109,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Contributor</th>
   <th>Category</th>
 </tr>
+  <tr>
+    <td>
+    ![cascading.png](nx_asset://a44def05-39fe-419b-9fb0-e7687b67c1fb ?w=150,border=true)
+    </td>
+    <td>[Cascading Fields](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/cascading-fields)</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
   <tr>
   <td>
   ![highlight-logo.png](nx_asset://dde8cbf0-b7c2-4b77-b02a-0bd0416d40ac ?w=150, border=true)
