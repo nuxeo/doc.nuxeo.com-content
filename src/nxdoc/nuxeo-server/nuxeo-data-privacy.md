@@ -1,31 +1,34 @@
 ---
-title: Nuxeo Platform and GDPR
-description: Discover how Nuxeo, as a Content Services Platform, can help companies comply with the GDPR.
+title: Nuxeo Platform and Data Privacy
+description: Discover how Nuxeo, as a Content Services Platform, can help companies comply with the data privacy regulations and laws, such as GDPR, CCPA and others.
 review:
     comment: ''
-    date: '2019-05-16'
+    date: '2020-02-13'
     status: ok
 toc: true
 tree_item_index: 10100
 labels:
     - gdpr
+    - ccpa
 ---
 
 {{! excerpt}}
 The Nuxeo Platform offers all the necessary capabilities to build an application that ensures the maximum level of compliance with user privacy and security regulations.
 {{! /excerpt}}
 
+The European General Data Protection Regulation was the first one to go into action in 2019, redefining the entire landscape of how online user data is to be handled. New sets of regulations, like the California Consumer Privacy Act (CCPA), are going live: even if they apply to different regions, the main principles remains the same.
+
 {{#> callout type='info' }}
-To get information about how Nuxeo, as a company, is ensuring its compliance with GDPR requirements, please refer to the [corporate website](https://www.nuxeo.com/about/gdpr/).
+To get information about how Nuxeo, as a company, is ensuring its compliance with data protection requirements, please refer to the [corporate website](https://www.nuxeo.com/about/data-privacy/).
 {{/callout}}
 
 ## Concept
 
-The Nuxeo Platform, by itself, cannot ensure GDPR compliance as the GDPR is not about certifying any technical solution; it is about ensuring that the management of personally identifiable information (PII) are satisfying individual rights requirements per GDPR mandates, such as the right to access, the right to erasure, portability, etc.
+The Nuxeo Platform, by itself, cannot ensure GDPR or CCPA compliance as the they are not about certifying any technical solution; it is about ensuring that the management of personally identifiable information (PII) are satisfying individual rights requirements, such as the right to access, the right to erasure, portability, etc.
 
 Indeed, the main concerns are focused on the way personal data is used and stored, the ability to quickly respond to Subject Access Requests, the security controls in place to protect personal data integrity and confidentiality, etc.
 
-## Managing GDPR Requirements with Nuxeo
+## Managing Data Privacy Requirements with Nuxeo
 
 ### Right to Data Portability
 
