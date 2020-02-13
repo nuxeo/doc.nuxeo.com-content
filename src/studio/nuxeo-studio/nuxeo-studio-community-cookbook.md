@@ -110,6 +110,30 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <td>Nuxeo</td>
   <td>Search</td>
 </tr>
+  <tr>
+    <td>
+    ![progress-bar.png](nx_asset://256e8c13-45fb-4412-a305-2c630ea6a877 ?w=150, border=true)
+    </td>
+    <td>[Add a Progress Bar](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/progress-bar)</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td>
+    ![qrcode.png](nx_asset://8837b54b-1c29-4d9d-9ff1-bc9766176a6b ?w=150,border=true)
+    </td>
+    <td>[QR Code Generation](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/qr-code)</td>
+    <td>Nuxeo</td>
+    <td>Business Logics</td>
+  </tr>
+  <tr>
+    <td>
+    ![eml-previewer.png](nx_asset://6a5aca58-8d58-4bb6-9df3-a5e8d33bf960 ?w=150,border=true)
+    </td>
+    <td>[EML Previewer](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/eml-previewer)</td>
+    <td>Nuxeo</td>
+    <td>Conversion</td>
+  </tr>
 <tr>
   <td>
   ![progress-bar.png](nx_asset://256e8c13-45fb-4412-a305-2c630ea6a877 ?w=150, border=true)
@@ -287,6 +311,30 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Contributor</th>
   <th>Category</th>
 </tr>
+  <tr>
+    <td>
+    ![document-versions.png](nx_asset://ef855414-0914-4045-a8ea-2a4fe78c2251 ?w=150,border=true)
+    </td>
+    <td>[Delete and Update Document Lifecycle State of Versioned Documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/bulk-workflow-reassignment)</td>
+    <td>Nuxeo</td>
+    <td>Workflow</td>
+  </tr>
+  <tr>
+    <td>
+    ![task_reassignment.png](nx_asset://b38f325d-a79a-4424-97c3-0ebdd937a932 ?w=150,border=true)
+    </td>
+    <td>[Bulk Workflow Reassignment](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/actions-versioned-documents)</td>
+    <td>Nuxeo</td>
+    <td>Dashboard</td>
+  </tr>
+  <tr>
+    <td>
+    ![trash.png](nx_asset://34a54131-4bb4-4066-9e80-6aa1dc1882ce ?w=150,border=true)
+    </td>
+    <td>[Permanently Delete All Trashed Documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/delete-all-trashed-documents)</td>
+    <td>Nuxeo</td>
+    <td>Automation</td>
+  </tr>
 <tr>
   <td>
   ![document-versions.png](nx_asset://ef855414-0914-4045-a8ea-2a4fe78c2251 ?w=150,border=true)
