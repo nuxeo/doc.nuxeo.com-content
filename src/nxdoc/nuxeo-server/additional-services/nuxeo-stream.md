@@ -363,10 +363,27 @@ To publish metrics periodically into Datadog:
  /bin/stream.sh datadog -k --codec avro -l ALL -i 60 --api-key <DATADOG_API_KEY> --tags "staging:foo,project:bar"
 ```
 
-
 Note that this monitoring command can be run on all Nuxeo nodes. It requires very few resources and
 because it relies on Kafka, only one command will publish the metrics, the other instances are there for
 automatic failover.
+
+### Reporting problems
+
+To get reliable processing applied at scale, the code needs to be sturdy and handle borderline cases like
+documents that don't exist or are not accessible.
+
+It is important to report problems so contributed code can reach the expected production state.
+
+If you encounter a problem here is the needed information to report:
+
+1. Get the [health-check status]({{page page='reporting-problems#health-check'}}).
+
+2. Check for ERROR in the Nuxeo `server.log`. Look for pattern like `Terminate computation` or `Exception in processLoop`.
+
+3. Report the [consumer lag]({{page page='reporting-problems#stream-lag'}}).
+
+4. Report [Nuxeo activity with thread dumps]({{page page='reporting-problems#thread-dump'}}).
+
 
 ## Integration
 
