@@ -254,6 +254,62 @@ nuxeo-drive.exe /VERYSILENT /TARGETDRIVEFOLDER="%USERPROFILE%\Documents\Nuxeo Dr
 
 Even if `username` is wrong, it will allow the customization of the Nuxeo server on all clients. The users will be asked to enter their username and password upon the first connection.
 
+## Deployment Scripts
+
+You can use one of those scripts to automatically deploy a specific version of Nuxeo Drive on a user's machine.
+
+### Script Workflow
+
+1. Kill any eventual running version of Nuxeo Drive.
+2. Uninstall any Nuxeo Drive versions (from version 3.1.0 to the latest currently available).
+3. Download the installer for the desired Nuxeo Drive version.
+4. Install Nuxeo Drive using the previously downloaded installer.
+5. Add a custom local configuration file to set the auto-update `channel` to `centralized`.
+   If the desired version is 4.4.0, then an additionnal parameter will be added: `client_version = 4.4.0`.
+   This is required only for 4.4.0 as newer versions will include the [NXDRIVE-2047](https://jira.nuxeo.com/browse/NXDRIVE-2047) fix.
+
+All those actions are done silently, no user interaction will be needed.
+
+{{#> callout type='note' }}
+The script will only install [official releases](https://community.nuxeo.com/static/drive-updates/release/). No alpha versions, no beta versions.
+{{/callout}}
+
+### Linux
+
+There is currently no script provided for GNU/Linux. But one can be created [on-demand](https://jira.nuxeo.com/projects/SUPNXP).
+
+### Mac
+
+Script: [deploy-nuxeo-drive-mac.sh](https://raw.githubusercontent.com/nuxeo/nuxeo-drive/master/tools/osx/deploy-nuxeo-drive-mac.sh).
+
+Usage:
+
+```sh
+bash deploy-nuxeo-drive-mac.sh VERSION
+```
+
+For example, to deploy Nuxeo Drive 4.4.0, the command line would be:
+
+```sh
+bash deploy-nuxeo-drive-mac.sh 4.4.0
+```
+
+### Windows
+
+Script: [deploy-nuxeo-drive-windows.ps1](https://raw.githubusercontent.com/nuxeo/nuxeo-drive/master/tools/windows/deploy-nuxeo-drive-windows.ps1).
+
+Usage:
+
+```batch
+powershell ".\deploy-nuxeo-drive-windows.ps1" VERSION
+```
+
+For example, to deploy Nuxeo Drive 4.4.0, the command line would be:
+
+```batch
+powershell ".\deploy-nuxeo-drive-windows.ps1" 4.4.0
+```
+
 {{! /multiexcerpt}}
 
 ***
