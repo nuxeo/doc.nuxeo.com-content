@@ -1,5 +1,5 @@
 ---
-title: Nuxeo Drive Roadmap
+title: Roadmap
 description: See what evolutions and improvements are planned on Nuxeo Drive
 review:
     comment: ''
@@ -12,6 +12,7 @@ labels:
     - nuxeo-drive
     - yachour
     - lts2017-ok
+tree_item_index: 600
 ---
 
 Below is the list of evolutions and improvements planned for Nuxeo Drive.</br>

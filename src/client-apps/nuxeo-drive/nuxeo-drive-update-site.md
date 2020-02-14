@@ -1,5 +1,5 @@
 ---
-title: Nuxeo Drive Update Site
+title: Update Site
 review:
     comment: ''
     date: '2019-10-04'

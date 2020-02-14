@@ -1,5 +1,5 @@
 ---
-title: Nuxeo Drive Core Implementation
+title: Core Implementation
 review:
     comment: ''
     date: '2019-03-15'
