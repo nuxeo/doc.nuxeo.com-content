@@ -2,7 +2,7 @@
 title: Set Up Email Notification
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2020-02-14'
     status: ok
 labels:
     - lts2016-ok
@@ -46,25 +46,12 @@ history:
         version: '1'
 
 ---
+
 {{! excerpt}}
-
 The default Nuxeo Platform email configuration is filled in with neutral values that you need to edit to make the platform work with your mail server. Unless you do that, alerts emails won't be sent to users.
-
 {{! /excerpt}}
 
-&nbsp;
-
-**To enable notifications:**
-
-1.  In the **Admin** tab, click on the **Setup** tab of System Information section.
-2.  Edit and fill in the values of the Email information section (see below for expected parameters).
-    {{#> callout type='tip' }}
-    To enable alerts, filling in the SMTP parameters should be sufficient for most mail server configurations.
-    {{/callout}}
-3.  Click the button **Save**.
-    As indicated on top of the page, you need to restart your server so the new configuration is taken into account.
-    
-{{#> callout type='info'}}Properties and values can also be entered directly in your `nuxeo.conf` file. Please refer to the table below for the keys to add or fill in.{{/callout}}
+To enable notifications: edit and fill in the values of the properties in your `nuxeo.conf` file. Please refer to the table below for the keys to add or fill in.{{/callout}}
 
 **Email information configuration**
 
@@ -203,19 +190,25 @@ Indicate if TLS is needed for the mail server.
 Default value is "false". You should change it to "true" if your SMTP requires TLS
 
 </td></tr>
-</tbody></table></div>{{#> callout type='info' }}
+</tbody></table></div>
+
+{{#> callout type='tip' }}
+
+You can use [fakeSMTP](https://answers.nuxeo.com/general/q/8ab0a80dead74dc496589244b7984548/How-can-I-setup-a-SMTP-server) for test purposes.
+
+{{/callout}}
+
+{{#> callout type='info' }}
 
 If you have complex mail server configurations, you may want to check the [Javamail API FAQ](http://www.oracle.com/technetwork/java/faq-135477.html) for more information.
 
 {{/callout}}
 
-{{! Don't put anything here. }}
-
+---
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [How to Customize Email Templates]({{page page='how-to-customize-email-templates'}})
-- [Collaborative Features]({{page space='userdoc' page='collaborative-features'}})
 
 {{/panel}}</div><div class="column medium-6">
 
