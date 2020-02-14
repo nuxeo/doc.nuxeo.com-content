@@ -73,7 +73,14 @@ Create a `manager_user_field.xsd` file with the following content from the defau
 1. Upload the `my_custom_user.xsd` file
 1. Go to **CONFIGURATION** > **Content Model** > **Schemas** and click on **New**. </br>
     Fill in the popup window like this:
-    SCREENSHOT
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/NXDOC/Master/How to Add New Fields to the User Profile or Group Profile/schema_user.png
+    name: schema_user.png
+    studio_modeler#screenshot#up_to_date
+--}}
+![schema_user.png](nx_asset://5b06a0c7-1b0c-4afe-b3cb-74f50dbcb62c ?w=650,border=true)
+
 1. Click on **Ok**.
 1. Go to **CONFIGURATION** > **Advanced Settings** > **XML Extensions** and create a new XML extension (called for example `USER_SCHEMA_EXTENSION`) with the following content:
 ```xml
