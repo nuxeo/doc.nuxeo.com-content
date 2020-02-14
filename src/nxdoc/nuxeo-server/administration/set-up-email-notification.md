@@ -46,8 +46,6 @@ history:
         version: '1'
 ---
 
-{{{multiexcerpt 'JSF-UI-required' page='generic-multi-excerpts'}}}
-
 {{! excerpt}}
 The default Nuxeo Platform email configuration is filled in with neutral values that you need to edit to make the platform work with your mail server. Unless you do that, alerts emails won't be sent to users.
 {{! /excerpt}}
