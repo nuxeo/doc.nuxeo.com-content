@@ -6,7 +6,8 @@ review:
     status: ok
 labels:
     - lts2016-ok
-    - content-review-lts2017
+    - lts2017-ok
+    - lts2019-ok
 confluence:
     ajs-parent-page-id: '31032113'
     ajs-parent-page-title: Administration
@@ -24,22 +25,22 @@ version_override:
     '6.0': 60/admindoc/recommended-configurations
     '5.8': 58/admindoc/recommended-configurations
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-25 07:55'
         message: ''
         version: '4'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-07-22 13:33'
         message: ''
         version: '3'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-07-22 13:31'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-07-22 13:28'
         message: ''
@@ -51,9 +52,12 @@ history:
 The default Nuxeo Platform email configuration is filled in with neutral values that you need to edit to make the platform work with your mail server. Unless you do that, alerts emails won't be sent to users.
 {{! /excerpt}}
 
-To enable notifications: edit and fill in the values of the properties in your `nuxeo.conf` file. Please refer to the table below for the keys to add or fill in.{{/callout}}
+{{#> callout type='info' }}
+**To enable notifications**, modify the values of the properties of your `nuxeo.conf` file.</br>
+Please refer to the table below for the keys to add or edit.
+{{/callout}}
 
-**Email information configuration**
+## Email Information Configuration
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
@@ -193,25 +197,26 @@ Default value is "false". You should change it to "true" if your SMTP requires T
 </tbody></table></div>
 
 {{#> callout type='tip' }}
-
 You can use [fakeSMTP](https://answers.nuxeo.com/general/q/8ab0a80dead74dc496589244b7984548/How-can-I-setup-a-SMTP-server) for test purposes.
-
 {{/callout}}
 
 {{#> callout type='info' }}
-
 If you have complex mail server configurations, you may want to check the [Javamail API FAQ](http://www.oracle.com/technetwork/java/faq-135477.html) for more information.
-
 {{/callout}}
 
----
+* * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
-- [How to Customize Email Templates]({{page page='how-to-customize-email-templates'}})
+- [HOWTO: Customize Email Templates]({{page page='how-to-customize-email-templates'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}
+</div>
+<div class="column medium-6">
 
 &nbsp;
 
-</div></div>
+</div>
+</div>
