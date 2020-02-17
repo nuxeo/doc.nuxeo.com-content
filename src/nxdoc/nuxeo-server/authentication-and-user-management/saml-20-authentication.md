@@ -199,14 +199,20 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
           searchAttributes.put("username", userObject.getNameID().getValue());
           userAttributes.put("email", userObject.getNameID().getValue());
           userAttributes.put("firstName", userObject.getAttributeByName("firstName").getAttributeValues().get(0).value);
-userAttributes.put("lastName", userObject.getAttributeByName("lastName").getAttributeValues().get(0).value);
+          userAttributes.put("lastName", userObject.getAttributeByName("lastName").getAttributeValues().get(0).value);
         </mapperScript>
       </mapper>
     </extension>
     ```
-{{#> callout type='tip' heading='SAML User Mapping' }}
-Ensure the `getAttributeByName` values are correct before deploying your configuration. To do so, we recommend you to install any browser extensions which allows you to read the SAML response and identify those values (like [SAML Chrome Panel](https://chrome.google.com/webstore/detail/saml-chrome-panel/paijfdbeoenhembfhkhllainmocckace?hl=en) on Google Chrome). A good practice is also to write inside the `<mapperScript>` tag `Console.log(userObject.getAttributes().get(0).getName())` and increment the value from `O` progressively to see in your `server.log` the expected values of the `getAttributeByName`. Finally, check the user mapping information are propertly configured on your SAML provider.
-{{/callout}}
+
+    {{#> callout type='tip' heading='SAML User Mapping' }}
+    Ensure the `getAttributeByName` values are correct before deploying your configuration. To do so, we recommend you to install any browser extensions which allows you to read the SAML response and identify those values (like [SAML Chrome Panel](https://chrome.google.com/webstore/detail/saml-chrome-panel/paijfdbeoenhembfhkhllainmocckace?hl=en) on Google Chrome).</br>
+    A good practice is also to write inside the `<mapperScript>` tag
+    ```
+    Console.log(userObject.getAttributes().get(0).getName())
+    ```
+    and increment the value from `0` progressively to see in your `server.log` the expected values of the `getAttributeByName`. Finally, check the user mapping information are properly configured on your SAML provider.
+    {{/callout}}
 
 1.  Use this new authentication plugin in the authentication chain, by [contributing its definition]({{page page='how-to-contribute-to-an-extension'}}) from your Studio project (or in the previous XML component).
 
@@ -237,6 +243,7 @@ Ensure the `getAttributeByName` values are correct before deploying your configu
         *   Or by configuring it manually on the IdP. In that case, you should use as the SAML consumer endpoints:
             - `http://<nuxeo_url>/nuxeo/nxstartup.faces` if you have the JSF UI (or both UIs)
             - `http://<nuxeo_url>/nuxeo/ui` if you are using the web UI alone
+
 1.  Optionally generate a keystore for enabling encryption. If you want to enable signing and/or encryption (not mandatory with some IdP) you have to generate a keystore and add the proper configuration to `nxserver/config` (ex: `saml-keystore-config.xml`):
 
     ```xml
