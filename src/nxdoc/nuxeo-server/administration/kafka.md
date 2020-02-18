@@ -166,9 +166,9 @@ For instance, you can use this list of topics to create them in your target envi
 
 Below is listed common topics used by Nuxeo.
 
-### Default Nuxeo topics
+### Default Nuxeo Topics
 
-#### The audit topic: nuxeo-audit
+#### The Audit Topic: nuxeo-audit
 
 Used to decouple write into the audit backend, it is a single partition topic to get a total ordering.
 The consumer group is `nuxeo-AuditLogWriter`, there is a single consumer in the Nuxeo cluster.
@@ -189,7 +189,7 @@ Or using Kafka scripts:
 -- nuxeo-AuditLogWriter nuxeo-audit  0    1039   1039   0      AuditLogWriter-13-666cc3d2-5a5d-409e-9347-6e1565fab4cc /192.168.16.7   AuditLogWriter-13
 ```
 
-#### The StreamWorkManager topics
+#### The StreamWorkManager Topics
 
 When `nuxeo.stream.work.enabled=true` the WorkManager is based on Nuxeo Stream and each Work Queue is using a topic.
 
@@ -206,8 +206,10 @@ You will find a topic for each Work Queue (prefixed by `nuxeo-`):
 In addition there is a Dead Letter Queue topic to store Work in failure:
 - `dlq-work`
 
-Consumer groups are named from the Work Queue name, for instance:
-For a Work Queue `elasticSearchIndexing`, the topic will be named `nuxeo-elasticSearchIndexing`, the consumer group `nuxeo-elasticSearchIndexing`
+Consumer groups are named from the Work Queue name, for instance:</br>
+For a Work Queue `elasticSearchIndexing`:
+  - the topic will be named `nuxeo-elasticSearchIndexing`
+  - the consumer group `nuxeo-elasticSearchIndexing`
 
 Here is an example to get the lag and latency for the `default` Work Queue:
 ```bash
@@ -231,7 +233,7 @@ Here is an example to get the lag and latency for the `default` Work Queue:
 |        11 |  125 |      6336 | 00:00:06.336 | 1581688116759 | 2020-02-14T13:48:36.759Z | 2020-02-14T13:48:43.095Z |  663 |  788 |       663 |         788 | bf95c693-1591-48d6-88ee-a06b512da235 |
 ```
 
-#### The Bulk Service (Bulk Action Framework) topics
+#### The Bulk Service (Bulk Action Framework) Topics
 
 By default topics are prefixed by `nuxeo-bulk-`.
 
@@ -240,10 +242,10 @@ There are topics part of the Bulk Service:
 - `status`: Any Bulk Command reports its progress into this topic.
 - `done`: This topic contains the status of the completed Bulk Commands.
 
-Each Bulk Action creates its own processor and topics, you can find a [description of the topology]({{page page='bulk-action-framework/#bulk-serice'}})
-and interesting [debugging commands]({{page page='bulk-action-framework/#debugging'}}) in the documentation.
+Each Bulk Action creates its own processor and topics, you can find a [description of the topology]({{page page='bulk-action-framework'}}#bulk-service)
+and interesting [debugging commands]({{page page='bulk-action-framework'}}#debugging) in the related documentation.
 
-#### The PubSub topic
+#### The PubSub Topic
 
 The PubSub service is used to send instant messages to all Nuxeo nodes, mainly to do cache invalidation.
 When it is configured to use Nuxeo Stream (`nuxeo.pubsub.provider=stream`) messages are published in a topic named `nuxeo-pubsub` by default.
