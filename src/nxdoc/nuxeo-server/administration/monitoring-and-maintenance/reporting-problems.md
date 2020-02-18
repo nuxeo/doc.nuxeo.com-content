@@ -165,15 +165,13 @@ history:
         date: '2015-02-04 10:36'
         message: ''
         version: '1'
-
 ---
+
 {{! excerpt}}
-
-Here are listed some procedures to extract information of a running Nuxeo instance.
-Most of these scripts generate files in the `/tmp/` directory.
-These information can be requested by the support team.
+Here are listed some procedures to extract information of a running Nuxeo instance.</br>
+Most of these scripts generate files in the `/tmp/` directory.</br>
+These information can be requested by the Support team.</br>
 Please always compress files before uploading them to your JIRA ticket.
-
 {{! /excerpt}}
 
 &nbsp;
@@ -185,20 +183,20 @@ To dump your server status and configuration:
 ```bash
 ./bin/nuxeoctl showconf > /tmp/nuxeo-showconf-`date +%Y%m%d-%H%M%S`.txt
 ```
-     
-## {{> anchor 'health-check'}}Nuxeo Health Check status
+
+## {{> anchor 'health-check'}}Nuxeo Health Check Status
 
 ```bash
 curl -XGET http://localhost:8080/nuxeo/runningstatus > /tmp/nuxeo-healthcheck-`date +%Y%m%d-%H%M%S`.json
 ```
 
-## {{> anchor 'metrics'}}Nuxeo metrics via JMX
+## {{> anchor 'metrics'}}Nuxeo Metrics via JMX
 
 When JMX is enabled (uncomment JMX related lines in [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}})), the Nuxeo Platform exposes [lots of metrics]({{file name='metrics.odt'}}) accessible in the `"metrics"` domains.
 
 You can use GUI tools like Java Mission Control or VisualVM to introspect these metrics, but if you want to dump all of them to report a problem you can use [jmxterm](http://wiki.cyclopsgroup.org/jmxterm/) (using the same JVM and user as your Nuxeo):
 
-Initialize the script
+Initialize the script:
 ```bash
 # download jmxterm
 wget https://github.com/jiaqi/jmxterm/releases/download/v1.0.1/jmxterm-1.0.1-uber.jar -O /tmp/jmxterm-1.0.1-uber.jar
@@ -221,13 +219,13 @@ In case of problem think to save this file before restarting because the file is
 
 ## {{> anchor 'heap-histo'}}JVM Heap Histo
 
-To see what objects are present in the heap
+To see what objects are present in the heap:
 
 ```
 jcmd Bootstrap GC.class_histogram > /tmp/nuxeo-heap-histo-`date +%Y%m%d-%H%M%S`.txt
 ```
 
-## JVM Thread Dump and CPU activity
+## JVM Thread Dump and CPU Activity
 
 A thread dump is useful to understand what code is running at time `t`.
 
@@ -322,14 +320,14 @@ atop -w /tmp/nuxeo-atop-`date +%Y%m%d-%H%M%S`.log 5 720 >/dev/null 2>&1 &
 
 ## {{> anchor 'postgres'}}PostgreSQL
 
-Follow the [Nuxeo recommendation ]({{page page='postgresql'}}#monitoring)and perform the [reporting problem procedure]({{page page='postgresql'}}#reporting-problems). [Pgbadger](https://github.com/dalibo/pgbadger) and [explain](http://explain.depesz.com/) are your friends.
+Follow the [Nuxeo recommendation]({{page page='postgresql'}}#monitoring) and perform the [reporting problem procedure]({{page page='postgresql'}}#reporting-problems). [Pgbadger](https://github.com/dalibo/pgbadger) and [explain](http://explain.depesz.com/) are your friends.
 
 ## {{> anchor 'elastic'}}Elasticsearch
 
 If the problem is related to Elasticsearch access (initialization or bad health status), please list:
 
-*   the non default `nuxeo.conf` `elasticsearch.*`options
-*   the non default Elasticsearch configuration options (especially the discovery)
+- the non default `nuxeo.conf`, `elasticsearch.*` options
+- the non default Elasticsearch configuration options (especially the discovery)
 
 And report the output of the following commands, assuming that Elasticsearch is on localhost and that the HTTP protocol is open on port 9200:
 
@@ -337,7 +335,7 @@ And report the output of the following commands, assuming that Elasticsearch is 
 (ES="localhost:9200"; curl "$ES"; curl "$ES/_cat/health?v"; curl "$ES/_cat/nodes?v"; curl "$ES/_cat/indices?v") > /tmp/nuxeo-elastic-`date +%Y%m%d-%H%M%S`.txt
 ```
 
-In addition If the problem is related to unexpected search results or errors, follow this procedure: [Reporting Settings and Mapping]({{page page='elasticsearch-setup'}}#reporting-settings-and-mapping)
+In addition if the problem is related to unexpected search results or errors, follow this procedure: [Reporting Settings and Mapping]({{page page='elasticsearch-setup'}}#reporting-settings-and-mapping)
 
 ## {{> anchor 'redis'}}Redis
 
@@ -346,7 +344,7 @@ How much memory is used:
 redis-cli info memory > /tmp/nuxeo-redis-mem-`date +%Y%m%d-%H%M%S`.txt
 ```
 
-Capture activity, hit `Ctrl-C` to stop
+Capture activity, hit `Ctrl-C` to stop:
 ```bash
 redis-cli monitor > /tmp/nuxeo-redis-monitor-`date +%Y%m%d-%H%M%S`.txt
 ```
@@ -369,11 +367,11 @@ You can get low level information using directly Kafka scripts, for instance:
 /opt/kafka/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group nuxeo-AuditLogWriter
 ```
 
-## {{> anchor 'stream-lag'}}Nuxeo Stream consumer lag
+## {{> anchor 'stream-lag'}}Nuxeo Stream Consumer Lag
 
 The `stream.sh` utility is located in the same `bin` directory as `nuxeoctl`.
 
-### {{> anchor 'stream-lag-kafka'}}When using Kafka
+### {{> anchor 'stream-lag-kafka'}}When Using Kafka
 
 ```bash
 # List topics and consumers lag
@@ -383,7 +381,7 @@ The `stream.sh` utility is located in the same `bin` directory as `nuxeoctl`.
 ./bin/stream.sh latency -k --codec avro >  /tmp/nuxeo-stream-lag-`date +%Y%m%d-%H%M%S`.md
 ```
 
-### {{> anchor 'stream-lag-cq'}}When using Chronicle
+### {{> anchor 'stream-lag-cq'}}When Using Chronicle
 
 When not using Kafka, you need to get the consumer activity on each Nuxeo node:
 ```bash
