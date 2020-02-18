@@ -2,7 +2,7 @@
 title: From JSF UI to Web UI
 review:
     comment: ''
-    date: '2018-03-27'
+    date: '2020-02-18'
     status: ok
 toc: true
 description: This documentation page will help you to migrate from JSF UI to Web UI
@@ -46,7 +46,7 @@ The **Summary** tab of the document is displayed.
 On Web UI, the Create button ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=20) is available **from any page** in the bottom right corner of the page.
 ![]({{file name='content-view-create-web-ui.png'}} ?w=400,border=true)
 It enables you to select the type of document you want to create among all Nuxeo Platform's document types.
-![]({{file name='creation-popup-web-ui.png' page='userdoc/browse'}} ?w=400,border=true)
+![]({{file name='creation-popup-web-ui.png' page='content-create'}} ?w=400,border=true)
 To create a document using the **Create** button:</br>
 1. Click on the button ![]({{file name='create_button.png' space='nxdoc' page='web-ui-overview'}} ?w=20) and click on the desired document.</br>
 2. Depending on the location specified, the document types available will change.</br>

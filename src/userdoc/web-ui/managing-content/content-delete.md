@@ -63,7 +63,7 @@ On the side menu on the left a **Trash** menu is available where you can find al
 
 ![]({{file name='trash-search-web-ui.png'}} ?w=600)
 
-From this search you can also restore and/or delete permanently document(s) as explained above.
+From this search you can restore document(s).
 
 ![]({{file name='trash-search-selected-web-ui.png'}} ?w=600)
 

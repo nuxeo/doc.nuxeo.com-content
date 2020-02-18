@@ -2,7 +2,7 @@
 title: Nuxeo Platform User Documentation
 review:
   comment: ''
-  date: '2018-02-27'
+  date: '2020-02-18'
   status: ok
 is_overview: true
 notes: Documentation page used by the Marketing team. Check with Marketing before deleting or moving.
