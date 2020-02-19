@@ -702,16 +702,14 @@ $ brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype \
 --with-opus --with-rtmpdump --with-schroedinger --with-speex \
 --with-theora --with-tools --with-x265 --with-faac
 ```
-<<<<<<< HEAD
 
 This installs most libraries. You can of course remove the libraries that are not needed for the video files you will be managing. Use `brew info ffmpeg` for details about each library available.
-=======
+
 {{#> callout type='note' }}
 Since recent versions, FFmpeg for brew does not allow anymore installing third-party libraries for fine tuning of the compilation/installation of FFmpeg.
 Please, see the [FFmpeg documentation](https://trac.ffmpeg.org/wiki/CompilationGuide/macOS) for alternatives.
 This will be required, for example, if you prefer to install a library like fdk-aac, instead of the internal aac encoder.
 {{/callout}}
->>>>>>> 363202d1f... NXP-24212: remove JOD references
 
 ### UFRaw
 
