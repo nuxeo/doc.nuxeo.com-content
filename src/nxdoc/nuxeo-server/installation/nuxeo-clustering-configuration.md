@@ -208,8 +208,8 @@ The shared filesystem is usually an NFS mount. You **must not** share the whole 
 
 To set up clustering, please update the following parameters in [`nuxeo.conf`]({{page page='configuration-parameters-index-nuxeoconf'}}):
 
-- **`nuxeo.cluster.enabled`** must be `true` to enable clustering.
-- **`nuxeo.cluster.nodeid`**: must be set to a cluster node id. The id should be a string specific to this instance (and therefore all instances must have different cluster node ids).
+- **`repository.clustering.enabled`** must be `true` to enable clustering.
+- **`repository.clustering.id`**: must be set to a cluster node id. The id should be a string specific to this instance (and therefore all instances must have different cluster node ids).
 
 ## Shared Filesystem Configuration
 
