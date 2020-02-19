@@ -118,11 +118,13 @@ Most of the above properties can be tuned directly from [nuxeo.conf file]({{page
 {{#> callout type='warning' }}
 Make sure that you set properly the `default.replication.factor`, the default value is `1` which means NO replication.
 With replication factor N, Kafka will tolerate up to N-1 server failures without losing record.
-For instance if you have 3 brokers in your cluster a replication factor of 2 will tolerate a server failure.{{/callout}}
+For instance if you have 3 brokers in your cluster a replication factor of 2 will tolerate a server failure.
+{{/callout}}
 
 {{#> callout type='warning' }}
 It is important to adapt the `max.poll.interval.ms` for slow consumers; otherwise, you will encounter errors like:
-{/callout}}
+{{/callout}}
+
   ```bash
   ERROR [ComputationRunner] compliance: Exception in processLoop: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
   ```
@@ -245,4 +247,4 @@ When it is configured to use Nuxeo Stream (`nuxeo.pubsub.provider=stream`) messa
 This topic is special because consumers don't need past messages, they start consuming from the end of the topic and they don't need to commit their position.
 As a result, Kafka is not able to list consumer groups for this topic.
 
-Also, because it is instant messages it is recommended to **reduce the topic retention to few hours** in order to save disk storage, see the above Kafka configuration section.
+Also, because it is instant messages, it is recommended to **reduce the topic retention to few hours** in order to save disk storage, see the above Kafka configuration section.
