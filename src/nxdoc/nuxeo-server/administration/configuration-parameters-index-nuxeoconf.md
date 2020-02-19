@@ -1684,13 +1684,13 @@ Note: Changing this parameter is not enough. See [How to Change Context Path]({{
 </tr>
 <tr>
 <td colspan="1">`repository.clustering.enabled`</td>
-<td colspan="1">Activate clustering mode.</td>
+<td colspan="1">DEPRECATED, use `nuxeo.cluster.enabled`</br>Activate clustering mode.</td>
 <td colspan="1">false</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>
 <td colspan="1">`repository.clustering.id`</td>
-<td colspan="1">Since Nuxeo 7.3\. The cluster node id for this Nuxeo instance. The id must be an integer for all databases, unless you are using Oracle which accepts a string (See [NXP-17180](https://jira.nuxeo.com/browse/NXP-17180)).</td>
+<td colspan="1">DEPRECATED, use `nuxeo.cluster.nodeid`</br>Since Nuxeo 7.3\. The cluster node id for this Nuxeo instance. The id must be an integer for all databases, unless you are using Oracle which accepts a string (See [NXP-17180](https://jira.nuxeo.com/browse/NXP-17180)).</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">Since Nuxeo 7.3</td>
 </tr>
@@ -1718,6 +1718,18 @@ Defines the folder where binaries are stored. Useful when using clustering or to
 <td colspan="1">Defines the root folder where all binaries are stored. Useful when using clustering or to change the location of binaries to another location (See [NXP-27109](https://jira.nuxeo.com/browse/NXP-27109) for more details).</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.cluster.enabled`</td>
+<td colspan="1">Activate clustering mode.</td>
+<td colspan="1">false</td>
+<td colspan="1">Since Nuxeo 11.1</td>
+</tr>
+<tr>
+<td colspan="1">`nuxeo.cluster.nodeid`</td>
+<td colspan="1">The cluster node id for this Nuxeo instance.</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">Since Nuxeo 11.1</td>
 </tr>
 <tr>
 <td colspan="1">`nuxeo.core.binarymanager`</td>
