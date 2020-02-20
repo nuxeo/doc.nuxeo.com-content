@@ -231,7 +231,7 @@ Standard ways are based on forms and drag and drop, but you may also have some t
 
 {{#> callout type='info' heading='Related Documentation'}}
 - [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
-- [JavaScript]({{page page='javascript-client'}}) Client & [Java]({{page page='java-automation-client'}}) Client
+- [JavaScript]({{page page='javascript-client'}}) Client & [Java]({{page version='3.2' space='client-java' page='index'}}) Client
 {{/callout}}
 
 ## Document Metadata and Types

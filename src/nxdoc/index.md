@@ -376,7 +376,7 @@ The pages below help you start customizing your content repository:
 The Nuxeo Platform can be integrated with various standards and technologies, including:
 
 - [REST API]({{page page='rest-api'}})
-- Client SDKs: [JavaScript]({{page page='javascript-client'}}), [Java]({{page page='java-automation-client'}}), [iOS]({{page page='ios-client'}}), [PHP]({{page page='php-automation-client'}}), [Python]({{page page='python-client'}}), [Android]({{page page='android-client'}}), [cURL]({{page page='using-curl'}})
+- Client SDKs: [JavaScript]({{page page='javascript-client'}}), [Java]({{page version='3.2' space='client-java' page='index'}}), [PHP]({{page page='php-automation-client'}}), [Python]({{page page='python-client'}}), [cURL]({{page page='using-curl'}})
 - [CMIS]({{page page='cmis'}})
 
 {{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}

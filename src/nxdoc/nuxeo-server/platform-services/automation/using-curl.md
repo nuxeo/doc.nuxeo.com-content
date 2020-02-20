@@ -1,5 +1,5 @@
 ---
-title: Using cURL
+title: Calling Automation Using cURL
 description: On this page we are using the UNIX `curl` command line tool to demonstrate how to invoke remote operations.
 review:
     comment: ''
@@ -25,7 +25,7 @@ confluence:
     shortlink: uwIz
     shortlink_source: 'https://doc.nuxeo.com/x/uwIz'
     source_link: /display/NXDOC/Using+cURL
-tree_item_index: 800
+tree_item_index: 750
 history:
     -
         author: Benoit Delbosc
