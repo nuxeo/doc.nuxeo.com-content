@@ -30,7 +30,7 @@ Changes will be done in 2 steps:
 
 #### Timeline
 
-- Anytime before March 2, 2020: new login page is available to test
+- Anytime before March 2: new login page is available to test
 - March 2, 2020: new login page becomes official
 
 {{#> callout type='info'}}
