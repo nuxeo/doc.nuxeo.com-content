@@ -28,11 +28,11 @@ Changes will be done in 2 steps:
 
 #### Timeline
 
-- Anytime before Feb. 24: new login page is available to test
-- Feb. 24, 2020: new login page becomes official
+- Anytime before March, 2: new login page is available to test
+- March 2, 2020: new login page becomes official
 
 {{#> callout type='info'}}
-Timeline has been pushed back from Feb. 10 to Feb. 24 in order to provide additional preparation time. This date is the final one and won't be moved further.
+Timeline has been pushed back from Feb. 10 to March 2 in order to provide additional preparation time. This date is the final one and won't be moved further.
 {{/callout}}
 
 Communication will be sent out by email to all of our customers prior to the change.
@@ -81,11 +81,11 @@ To provide consistency and allow you to use your email address everywhere if you
 
 #### Timeline
 
-- Anytime before Feb. 24: tokens can be used as the recommended option, passwords remain compatible
-- Feb. 24, 2020: tokens are enforced as a password replacement in all tools and APIs
+- Anytime before March 2: tokens can be used as the recommended option, passwords remain compatible
+- March 2, 2020: tokens are enforced as a password replacement in all tools and APIs
 
 {{#> callout type='info'}}
-Timeline has been pushed back from Feb. 10 to Feb. 24 in order to provide additional preparation time. This date is the final one and won't be moved further.
+Timeline has been pushed back from Feb. 10 to March 2 in order to provide additional preparation time. This date is the final one and won't be moved further.
 {{/callout}}
 
 Communication will be sent out by email to all of our customers prior to the change.
@@ -117,11 +117,11 @@ See our [token management]({{page page='token-management'}}) documentation for d
 
 #### Timeline
 
-- Anytime before March 10, 2020: multi-factor authentication can be set up manually and remains optional
-- March 10, 2020: multi-factor authentication is enforced
+- Anytime before March 24, 2020: multi-factor authentication can be set up manually and remains optional
+- March 24, 2020: multi-factor authentication is enforced
 
 {{#> callout type='info'}}
-Timeline has been pushed back from Feb. 25 to March 10 in order to provide additional preparation time. This date is the final one and won't be moved further.
+Timeline has been pushed back from Feb. 25 to March 24 in order to provide additional preparation time. This date is the final one and won't be moved further.
 {{/callout}}
 
 Communication will be sent out by email to all of our customers before any change.
