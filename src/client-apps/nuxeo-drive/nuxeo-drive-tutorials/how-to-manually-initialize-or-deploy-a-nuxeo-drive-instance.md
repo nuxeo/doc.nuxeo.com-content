@@ -260,18 +260,18 @@ You can use one of those scripts to automatically deploy a specific version of N
 
 ### Script Workflow
 
-1. Kill any eventual running version of Nuxeo Drive.
-2. Uninstall any Nuxeo Drive versions (from version 3.1.0 to the latest currently available).
+1. Stop any running instance of Nuxeo Drive.
+2. Uninstall all Nuxeo Drive versions (from version 3.1.0 to the latest currently available).
 3. Download the installer for the desired Nuxeo Drive version.
 4. Install Nuxeo Drive using the previously downloaded installer.
-5. Add a custom local configuration file to set the auto-update `channel` to `centralized`.
-   If the desired version is 4.4.0, then an additionnal parameter will be added: `client_version = 4.4.0`.
+5. Add a custom local configuration file to set the auto-update `channel` to `centralized`.</br>
+   If the desired version is 4.4.0, then an additional parameter will be added: `client_version = 4.4.0`.</br>
    This is required only for 4.4.0 as newer versions will include the [NXDRIVE-2047](https://jira.nuxeo.com/browse/NXDRIVE-2047) fix.
 
 All those actions are done silently, no user interaction will be needed.
 
 {{#> callout type='note' }}
-The script will only install [official releases](https://community.nuxeo.com/static/drive-updates/release/). No alpha versions, no beta versions.
+The script only install [official release](https://community.nuxeo.com/static/drive-updates/release/). No alpha or beta versions.
 {{/callout}}
 
 ### Linux
@@ -312,12 +312,12 @@ powershell ".\deploy-nuxeo-drive-windows.ps1" 4.4.0
 
 {{! /multiexcerpt}}
 
-***
+* * *
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other documentation about Nuxeo Drive'}}
 
 - [Nuxeo Drive Update Site]({{page page='nuxeo-drive-update-site'}})
-- [Nuxeo Drive documentation]({{page page='nuxeo-drive'}})
+- [Nuxeo Drive Documentation]({{page page='nuxeo-drive'}})
 
 {{/panel}}</div><div class="column medium-6">
 
