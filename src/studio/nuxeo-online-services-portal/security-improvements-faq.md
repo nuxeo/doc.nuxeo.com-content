@@ -16,10 +16,12 @@ Nuxeo Online Services will be improved in the next couple of months to enhance s
 Changes will be done in 2 steps:
 
 ### Step 1 - Login Page Update and Token Enforcement
+
 - [Login page update](#login-page-update): URL and design will be updated and your email will be asked to authenticate instead of your username.
 - [Token usage](#token-usage): [tokens](#what-is-a-token) will be required instead of passwords in our command line tools and APIs.
 
 ### Step 2 - Multi-Factor Authentication
+
 - [Multi-factor authentication](#mfa): an additional authentication factor will become mandatory to log into Nuxeo Online Services.
 
 ## Upcoming Changes
@@ -28,7 +30,7 @@ Changes will be done in 2 steps:
 
 #### Timeline
 
-- Anytime before March, 2: new login page is available to test
+- Anytime before March 2, 2020: new login page is available to test
 - March 2, 2020: new login page becomes official
 
 {{#> callout type='info'}}
