@@ -133,7 +133,7 @@ Allows you to create and edit buttons and links as elements and display them to 
 
 Allows you to customize your own UI themes that users can select. It is based primarily on CSS custom properties, but can include any type of CSS.
 
-For more information, see [Creating Themes with Studio]({{page version='' space='nxdoc' page='how-to-customize-theme-studio'}}).
+For more information, see [Creating Themes with Studio]({{page page='how-to-customize-theme-studio'}}).
 
 ## Translations
 
