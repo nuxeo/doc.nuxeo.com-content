@@ -284,7 +284,6 @@ For example, considering Amazon AWS as a possible cloud infrastructure provider:
 <!-- Source: https://www.lucidchart.com/documents/edit/0eb7242e-9a34-4d1f-8568-9682f8ab26a8 -->
 
 - The AWS ELB would be used for load balancing.
-- EC2 instances can be used for the Nuxeo server nodes. We provide a [Nuxeo server CloudFormation template]({{page page='deploying-nuxeo-on-amazon-aws'}}) to help in that regard.
 - EC2 instances can be used for Elasticsearch cluster nodes too. The Amazon ElasticCache service does not provide the required APIs at this point to allow us to have a completely managed cluster.
 - Amazon ElasticCache can be used for a managed Redis cluster. Another option is to have a cluster hosted and managed by RedisLabs.
 - Amazon Managed Streaming for Kafka ([MSK](https://aws.amazon.com/msk/)) is an option for Kafka if it is available in your AWS region.
