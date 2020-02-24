@@ -36,6 +36,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
+    ![currency2.jpg](nx_asset://e4fbb505-67be-42de-aec6-8421e4cf2259 ?w=150,border=true)
+    </td>
+    <td>[Display a field with Currency format](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/currency)</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
+  <tr>
+    <td>
     ![cascading.png](nx_asset://a44def05-39fe-419b-9fb0-e7687b67c1fb ?w=150,border=true)
     </td>
     <td>[Cascading Fields](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/cascading-fields)</td>
@@ -109,6 +117,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Contributor</th>
   <th>Category</th>
 </tr>
+  <tr>
+    <td>
+    ![currency2.jpg](nx_asset://e4fbb505-67be-42de-aec6-8421e4cf2259 ?w=150,border=true)
+    </td>
+    <td>[Display a field with Currency format](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/currency)</td>
+    <td>Nuxeo</td>
+    <td>Layout</td>
+  </tr>
   <tr>
     <td>
     ![cascading.png](nx_asset://a44def05-39fe-419b-9fb0-e7687b67c1fb ?w=150,border=true)
