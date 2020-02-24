@@ -2,7 +2,7 @@
 title: Installation
 review:
   comment: ''
-  date: '2017-12-14'
+  date: '2020-02-24'
   status: ok
 labels:
   - lts2016-ok
@@ -62,8 +62,6 @@ Installing the Nuxeo Platform requires a few steps:
     - [Installing the Nuxeo Platform on Linux]({{page page='installing-the-nuxeo-platform-on-linux'}})
     - [Installing the Nuxeo Platform on Windows]({{page page='installing-the-nuxeo-platform-on-windows'}})
     - [Installing the Nuxeo Platform on macOS]({{page page='installing-the-nuxeo-platform-on-mac-os'}})
-    - [Deploying Nuxeo on Amazon AWS]({{page page='deploying-nuxeo-on-amazon-aws'}})
-    - [Deploying as a Standard Static WAR]({{page page='deploying-as-a-standard-static-war'}})
 4.  Run the [Configuration Wizard]({{page page='configuration-wizard'}}) (not in the case of a standard static WAR).
 
 ## Available Installers
