@@ -57,6 +57,7 @@ Nuxeo Studio Designer Git access has been designed to allow for productivity whi
 
 ### Cloning Your Project
 
+{{! multiexcerpt name="cloning-git-studio-project"}}
 As a prerequisite, a Git client should be installed on your computer.
 
 Once logged in to Nuxeo Online Services:
@@ -71,6 +72,7 @@ To avoid having to type your token's content repeatedly, we recommend storing it
 {{#> callout type='tip' heading='Security management'}}
 If your computer is compromised or stolen, then it is possible to [revoke the token]({{page page='token-management'}}#revoking-a-token) access directly from Nuxeo Online Services: Your password remains safe and no one can use the token to launch commands anymore.
 {{/callout}}
+{{! /multiexcerpt}}
 
 ### Making Changes
 
