@@ -46,3 +46,24 @@ In the case of Nuxeo Web UI, we leverage on-demand dynamic imports not only to l
 - [Search Forms]({{page page='web-ui-search'}}).
 - [Workflow Tasks Layouts]({{page page='web-ui-workflow-tasks'}}).
 - [Dashboard]({{page page='web-ui-dashboard'}}).
+
+* * *
+
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Display a Field With Currency Format](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/currency)
+- [Barcode Widget](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/barcode-widget)
+- [QR Code](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/qr-code)
+- [Progress Bar](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/progress-bar)
+- [Custom Nuxeo Suggestion Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/document-suggestion-result-formatters)
+- [Collapsible Element](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/collapse)
+- [Inline Card Property Edition](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/toggleable-form)
+- [Show/Hide the Value of a Secret Field](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/ssn)
+- [Display Document Relations](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/related-documents)
+{{/panel}}
+</div>
+<div class="column medium-6">
+</div>
+</div>
