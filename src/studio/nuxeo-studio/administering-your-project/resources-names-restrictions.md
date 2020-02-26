@@ -1,5 +1,5 @@
 ---
-title: Data Model: Restricted Names
+title: Data Model: Reserved Words
 review:
     comment: ''
     date: ''
