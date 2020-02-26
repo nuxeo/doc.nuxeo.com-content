@@ -17,7 +17,7 @@ The following changes apply starting from March 2nd, 2020.
 
 #### From your Browser - What Changes?
 
-1- To access Nuxeo Online Services, you need to enter your _email address_ instead of your username in the login page. If you registered for a trial using Google, use the login with Google button.
+- To access Nuxeo Online Services, you need to enter your _email address_ instead of your username in the login page. If you registered for a trial using Google, use the login with Google button.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/security-improvements-faq/login-as-customer
@@ -26,7 +26,7 @@ The following changes apply starting from March 2nd, 2020.
 --}}
 ![login-as-customer](nx_asset://0cf607da-99c1-469e-a8c4-4524a1437b38 ?w=650,border=true)
 
-2- URL for the login page is changed to https://auth.nuxeo.com (instead of https://sso.nuxeo.com). If you cannot access it, check with your system administrator that the URL is whitelisted.
+- URL for the login page is changed to https://auth.nuxeo.com (instead of https://sso.nuxeo.com). If you cannot access it, check with your system administrator that the URL is whitelisted.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/security-improvements-faq/auth-nuxeo-com
@@ -35,7 +35,7 @@ The following changes apply starting from March 2nd, 2020.
 --}}
 ![auth-nuxeo-com](nx_asset://885d8e2c-1831-4d9d-ac50-6835a7598799 ?border=true)
 
-3- Multi factor authentication can be setup to secure your account. It remains optional, and will be enforced at a later stage. The <a href="#mfa">multi-factor authentication</a> section in this page provides further details.
+- Multi factor authentication can be setup to secure your account. It remains optional, and will be enforced at a later stage. The [multi-factor authentication](#mfa) section in this page provides further details.
 
 #### From the Command Line - What Changes?
 
