@@ -38,7 +38,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>
     ![currency2.jpg](nx_asset://e4fbb505-67be-42de-aec6-8421e4cf2259 ?w=150,border=true)
     </td>
-    <td>[Display a field with Currency format](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/currency)</td>
+    <td>[Display a Field With Currency Format](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/currency)</td>
     <td>Nuxeo</td>
     <td>Layout</td>
   </tr>
@@ -121,7 +121,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>
     ![currency2.jpg](nx_asset://e4fbb505-67be-42de-aec6-8421e4cf2259 ?w=150,border=true)
     </td>
-    <td>[Display a field with Currency format](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/currency)</td>
+    <td>[Display a Field With Currency Format](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/currency)</td>
     <td>Nuxeo</td>
     <td>Layout</td>
   </tr>
