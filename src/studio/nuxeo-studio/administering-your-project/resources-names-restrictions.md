@@ -1,5 +1,5 @@
 ---
-title: Data Model: Restricted Named Resources
+title: Data Model: Restricted Names
 review:
     comment: ''
     date: ''
