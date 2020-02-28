@@ -13,30 +13,50 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Upcoming Changes
 
-### [Possible Action Required] Security Improvements - Be Prepared!
+### Automatic Translations Merge
 
-Nuxeo Online Services will be improved in the next couple of months to enhance security, and may require actions on your end. Learn how to [get prepared]({{{page page='security-improvements-faq'}}}) for the change.
+Currently, configuring translations require to know for each feature whether the translation keys have to be entered in Studio Modeler or Designer, depending on the feature type. Server side features like workflows and vocabularies have to be translated using the Modeler properties files, UI related features using Designer json files.
 
-### Custom Icons Support
+With this change, no need to know where to configure your translation anymore! Whenever you configure a key in Studio Designer, the equivalent key is created in Studio Modeler if it doesn't exist. The reverse is true as well. This merge happens just before you download your studio package (e.g. when doing a hot reload) so that it doesn't interfere with your work.
 
-In Studio Designer, a new option will let you upload a custom SVG icon for your buttons and drawer menu entries.
+### Conflict Management Screen Review
+
+Conflict management screen is updated to provide a better experience:
+- Long lines are nicely wrapped
+- It is easier to understand which file you are picking when doing the selection
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2020-02-03/conflict view summary
+    name: conflict-summary.png
+    studio_designer#screenshot#up_to_date
+--}}
+![conflict view summary](nx_asset://1798fa46-b2cb-4ed9-ade3-271c06b74d3f ?w=650,border=true)
+
+Summary view
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2020-02-03/conflict view detailed
+    name: conflict-detailed-view.png
+    studio_designer#screenshot#up_to_date
+--}}
+![conflict view detailed](nx_asset://58b0c81b-ad1c-45f7-8346-ac7c59010216 ?w=650,border=true)
+
+Detailed view
 
 ### More Upcoming Changes
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.26.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.28.0','3.29.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2020-01-changes' page='studio-updates-2020-01'}}}
-{{{multiexcerpt 'studio-updates-2019-12-changes' page='studio-updates-2019-12'}}}
+{{{multiexcerpt 'studio-updates-2020-02-03-changes' page='studio-updates-2020-02-03'}}}
 
 ### Other Noteworthy Mentions
 
-{{{multiexcerpt 'studio-updates-2020-01-bugfix' page='studio-updates-2020-01'}}}
-{{{multiexcerpt 'studio-updates-2019-12-bugfix' page='studio-updates-2019-12'}}}
+{{{multiexcerpt 'studio-updates-2020-02-03-bugfix' page='studio-updates-2020-02-03'}}}
 
 ## Learn More
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.25.0'%29) is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.27.0','3.27.1','3.27.2'%29) is available in our bug tracking tool.
 
 ---
 
@@ -44,6 +64,8 @@ In Studio Designer, a new option will let you upload a custom SVG icon for your 
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [February / March 2019]({{page page='studio-updates-2020-02-03'}})     | Custom icons support, security improvements |
+| [January 2019]({{page page='studio-updates-2020-01'}})     | Automatically switch to a new branch |
 | [December 2019]({{page page='studio-updates-2019-12'}})     | Layout Inheritance for faster layout configuration |
 | [October / November 2019]({{page page='studio-updates-2019-10-11'}})     | Easier access to other services, scripts creation from Studio Modeler business logic screens |
 | [August / September 2019]({{page page='studio-updates-2019-09'}})      | Package listing performance improvements, automation scripting scrolling bug fixed |
