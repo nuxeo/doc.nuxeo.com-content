@@ -15,16 +15,17 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ### Automatic Translations Merge
 
-Currently, configuring translations require to know for each feature whether the translation keys have to be entered in Studio Modeler or Designer, depending on the feature type. Server side features like workflows and vocabularies have to be translated using the Modeler properties files, UI related features using Designer json files.
+Currently, managing translations require to know for each feature whether the translation keys have to be entered in Studio Modeler or Designer, depending on the feature type. Server-side features like workflows and vocabularies have to be translated using the Modeler properties files, UI related features using Designer JSON files.
 
-With this change, no need to know where to configure your translation anymore! Whenever you configure a key in Studio Designer, the equivalent key is created in Studio Modeler if it doesn't exist. The reverse is true as well. This merge happens just before you download your studio package (e.g. when doing a hot reload) so that it doesn't interfere with your work.
+With this change, no need to know where to configure your translation anymore! Whenever you configure a key in Studio Designer, the equivalent key is created in Studio Modeler if it doesn't exist, and vice versa. This merge happens just before the download of your studio package (e.g. when doing a hot reload) so that it doesn't interfere with your work.
 
-### Conflict Management Screen Review
+### Conflict Management
 
 Conflict management screen is updated to provide a better experience:
-- Long lines are nicely wrapped
+- Long lines are wrapped
 - It is easier to understand which file you are picking when doing the selection
 
+**Summary view**:
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2020-02-03/conflict view summary
     name: conflict-summary.png
@@ -32,16 +33,13 @@ Conflict management screen is updated to provide a better experience:
 --}}
 ![conflict view summary](nx_asset://1798fa46-b2cb-4ed9-ade3-271c06b74d3f ?w=650,border=true)
 
-Summary view
-
+**Detailed view**:
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2020-02-03/conflict view detailed
     name: conflict-detailed-view.png
     studio_designer#screenshot#up_to_date
 --}}
 ![conflict view detailed](nx_asset://58b0c81b-ad1c-45f7-8346-ac7c59010216 ?w=650,border=true)
-
-Detailed view
 
 ### More Upcoming Changes
 
