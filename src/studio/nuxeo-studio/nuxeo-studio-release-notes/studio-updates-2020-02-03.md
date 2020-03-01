@@ -22,7 +22,7 @@ Whenever you work in Studio Modeler and Studio Designer, notifications:
 
 ### Security Improvements
 
-Nuxeo Online Services is improved to enhance security, and may require actions on your end. Learn how to [adapt to the change]({{{page page='security-improvements-faq'}}}).
+Nuxeo Online Services is improved to enhance security and may require actions on your end. Learn how to [adapt to this change]({{{page page='security-improvements-faq'}}}).
 
 ### Custom Icons Support
 
@@ -41,9 +41,9 @@ In Studio Designer, a new option lets you upload a custom SVG icon for your butt
 ### Other Noteworthy Mentions
 
 {{! multiexcerpt name='studio-updates-2020-02-03-bugfix'}}
-- Files in the Studio Designer resources tab can be renamed / moved when the destination name is almost similar ([NXS-5570](https://jira.nuxeo.com/browse/NXS-5570))
+- Files in the Studio Designer resources tab can be renamed/moved when the destination name is almost similar ([NXS-5570](https://jira.nuxeo.com/browse/NXS-5570))
 - Workflow transitions configuration are drawn correctly in all situations ([NXS-4682](https://jira.nuxeo.com/browse/NXS-4682))
-- Canceling changes in a workflow task configuration works correctly ([NXS-5261](https://jira.nuxeo.com/browse/NXS-5261))
+- Cancelling changes in a workflow task configuration works correctly ([NXS-5261](https://jira.nuxeo.com/browse/NXS-5261))
 - Workflow variables are available even if you didn't save the workflow yet ([NXS-5255](https://jira.nuxeo.com/browse/NXS-5255))
 
 
