@@ -101,7 +101,7 @@ These changes are only visual to clarify how our new authentication system works
 
 The same applies for formerly supported releases: no need for code change. Authentication against Nuxeo Online Services when using our command line tools and APIs will have to be done using tokens instead of passwords.
 
-### Why These Changes?
+### Why Make These Changes?
 
 Nuxeo is partnering with Okta, an industry leader around authentication security to bring these changes. They are made as part of our continuous effort to improve security and bring several benefits:
 
