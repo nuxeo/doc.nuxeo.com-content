@@ -20,7 +20,7 @@ Tokens will become the mandatory way to authenticate for all our tools and APIs.
 ## What is a Token
 
 {{! multiexcerpt name='what-is-a-token'}}
-A token is a randomly generated text that can be used as a replacement for your password when authenticating to our services. It is meant to be used as a replacement for your password in all places where you would need to write down your password, but would rather avoid to disclose it: for instance in configuration files.
+A token is a randomly generated string that can be used as a replacement for your password when authenticating to our services. It is meant to be used as a replacement for your password in all places where you would need to write down your password, but would rather avoid to disclose it: for instance in configuration files.
 {{! /multiexcerpt}}
 
 ## When to Use a Token
