@@ -53,7 +53,7 @@ The Nuxeo Platform offers the capability to change the context path, i.e.&nbsp;`
 
 This configuration is done in two steps:
 
-1.  Edit the&nbsp;[configuration file]({{page page='configuration-wizard'}}) `nuxeo.conf`&nbsp;to change the property&nbsp;`org.nuxeo.ecm.contextPath`.
+1.  Edit the&nbsp;configuration file `nuxeo.conf`&nbsp;to change the property&nbsp;`org.nuxeo.ecm.contextPath`.
 
     ```bash
     org.nuxeo.ecm.contextPath=/myapp

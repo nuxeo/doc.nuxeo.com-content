@@ -1775,11 +1775,6 @@ Since Nuxeo 7.1, the ZIP entries names are encoded in UTF8 by default. If you wa
 <td colspan="1">none,minor,major</td>
 <td colspan="1">&nbsp;</td>
 </tr>
-<tr><td colspan="1">`nuxeo.wizard.done`</td>
-<td colspan="1">If set to false, will start a setup wizard before starting Nuxeo.</td>
-<td colspan="1">true or false depending on the package</td>
-<td colspan="1">&nbsp;</td>
-</tr>
 <tr>
 <td colspan="1">`nuxeo.http.proxy.host`</td>
 <td colspan="1">HTTP proxy host.</td>
@@ -1875,18 +1870,6 @@ Otherwise, the `jsessionid` parameter might be appended to some URLs, for instan
 `.NuxeoAuthenticationFilter.isLoginNotSynchronized`</td>
 <td colspan="1">Disables login synchronization.</td>
 <td colspan="1">false (unset)</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="1">`nuxeo.wizard.packages.url`</td>
-<td colspan="1">Defines the base URL used by the Setup Wizard to get the packages.xml file describing the available software packages options.</td>
-<td colspan="1">&nbsp;</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr>
-<td colspan="1">`nuxeo.wizard.skippedpages`</td>
-<td colspan="1">Comma separated list of pages that should be skipped inside the wizard.</td>
-<td colspan="1">null</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr>

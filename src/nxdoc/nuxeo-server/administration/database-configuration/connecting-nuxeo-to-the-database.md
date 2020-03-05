@@ -270,12 +270,6 @@ history:
 ---
 To connect Nuxeo to your database, you need to tell Nuxeo which database template to use and provide the database connection information.
 
-## Connecting Nuxeo to the Database From the Startup Wizard
-
-The first time you start your Nuxeo server, a wizard is displayed to help you setup your application. One of the steps is about the database: select the database you want to use in the drop down list and provide the connection information to the database.
-
-![]({{file name='Startup_wizard.png' page='configuration-wizard'}} ?w=650,border=true)
-
 ## Connecting Nuxeo to the Database From the nuxeo.conf File
 
 By default, the "default" template is enabled on your Nuxeo server (see the [Database templates](#database-templates) section for more information on this template). You need to edit it to change the template to be used.

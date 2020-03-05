@@ -122,7 +122,7 @@ history:
 
 ## The nuxeo-distribution Module Purpose
 
-The `nuxeo-distribution` module is used for the packaging and the high-level testing of the Nuxeo Platform: Nuxeo Server, Nuxeo Static WAR, Nuxeo Shell, Startup Wizard, Functional and Performance Tests...
+The `nuxeo-distribution` module is used for the packaging and the high-level testing of the Nuxeo Platform: Nuxeo Server, Nuxeo Static WAR, Nuxeo Shell, Functional and Performance Tests...
 The key concepts are: [assembly]({{page space='corg' page='creating-your-own-distribution'}}), [ant-assembly-maven-plugin](https://github.com/nuxeo/ant-assembly-maven-plugin), [NXR]({{page space='glos' page='nxr'}}), [WAR]({{page space='glos' page='war'}}), [Nuxeo Package]({{page page='creating-nuxeo-packages'}}), [tools-nuxeo-ftest]({{page space='corg' page='functional-testing'}}), [WebDriver](http://www.seleniumhq.org/projects/webdriver/), [Gatling](http://gatling.io).
 
 {{! excerpt}}
@@ -150,7 +150,7 @@ There are several kinds of products built by the `nuxeo-distribution` module:
 *   Static resources like configuration templates.
 *   The Nuxeo NXR for use in package assemblies.
 *   The Nuxeo Server Tomcat distribution.
-*   Standalone products to embed in a final package like the Launcher (aka [NuxeoCtl]({{page page='understanding-bundles-deployment#nuxeoctl'}})) and the Startup Wizard.
+*   Standalone products to embed in a final package like the Launcher (aka [NuxeoCtl]({{page page='understanding-bundles-deployment#nuxeoctl'}})).
 
 Sample usage:
 

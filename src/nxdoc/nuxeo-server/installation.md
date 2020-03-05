@@ -103,7 +103,6 @@ Installing the Nuxeo Platform requires a few steps:
     - [Installing the Nuxeo Platform on Linux]({{page page='installing-the-nuxeo-platform-on-linux'}})
     - [Installing the Nuxeo Platform on Windows]({{page page='installing-the-nuxeo-platform-on-windows'}})
     - [Installing the Nuxeo Platform on macOS]({{page page='installing-the-nuxeo-platform-on-mac-os'}})
-4.  Run the [Configuration Wizard]({{page page='configuration-wizard'}}).
 
 ## Available Installers
 

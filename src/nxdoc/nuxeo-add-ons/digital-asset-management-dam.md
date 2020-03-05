@@ -307,8 +307,6 @@ history:
 This addon requires no specific installation steps. It can be installed like any other package [from the Marketplace or from the Admin tab]({{page page='installing-a-new-package-on-your-instance'}}).
 {{! /multiexcerpt}}
 
-It is also possible to install it from the [Startup wizard]({{page page='configuration-wizard'}}).
-
 However some features depend on external software for conversion and transcoding. See the page [Installing and Setting Up Related Software]({{page page='installing-and-setting-up-related-software'}}).
 
 ## Functional Overview

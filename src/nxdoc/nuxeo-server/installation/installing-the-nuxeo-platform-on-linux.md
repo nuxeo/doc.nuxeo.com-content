@@ -386,7 +386,6 @@ This requires X11.
     *   The database (a preconfigured PostgreSQL database is suggested by default).
         The platform is installed as a service. It is automatically started and set to automatically start at boot
 6.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
-    The [startup wizard]({{page page='configuration-wizard'}}) is displayed so you can setup your Nuxeo platform and select the module you want to install.
 
 {{! /multiexcerpt}}
 
@@ -447,7 +446,7 @@ sudo apt-get install gnupg
 
     The platform is installed as a service. It is automatically started and set to automatically start at boot.
 
-6.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`. The [startup wizard]({{page page='configuration-wizard'}}) is displayed so you can setup your Nuxeo platform and select the module you want to install.
+6.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
 
 {{! /multiexcerpt}}
 

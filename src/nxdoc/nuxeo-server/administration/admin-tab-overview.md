@@ -228,7 +228,7 @@ You can connect your Nuxeo instance with your [Nuxeo Online Services](http://www
 
 ![]({{file name='Admin-Center-Connect.png'}} ?w=600,border=true)
 
-- The **Nuxeo Online Services Registration Status** tab is where you can register your instance, if you haven't done it earlier from the [setup wizard]({{page page='configuration-wizard'}}). When you have already registered, it displays your contract and instance information.
+- The **Nuxeo Online Services Registration Status** tab is where you can register your instance. When you have already registered, it displays your contract and instance information.
 - The **Nuxeo Support Tickets** tab will display the list of JIRA issues linked to your contract. This feature is not yet available, but you can see all your JIRA issues from the [Nuxeo Connect dashboard](http://connect.nuxeo.com).
 
 ## Update Center

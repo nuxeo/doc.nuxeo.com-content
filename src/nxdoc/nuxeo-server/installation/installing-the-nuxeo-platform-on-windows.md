@@ -254,7 +254,7 @@ The Windows installer requires Administrator privileges.
 
 **Installation path**
 
-On Windows in general, and especially on Windows 7 or later versions, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,... An installation in another folder could provoke restart issues at end of the [startup wizard steps]({{page page='configuration-wizard'}}).
+On Windows in general, and especially on Windows 7 or later versions, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,...
 
 ![]({{file name='DM-Windows_installer.png'}} ?w=300)
 
@@ -287,7 +287,7 @@ Recommended: [7-Zip](http://www.7-zip.org/).
 
 **Installation path**
 
-On Windows in general, and especially on Windows 7 or later versions, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,... An installation in another folder could provoke restart issues at end of the [startup wizard steps]({{page page='configuration-wizard'}}).
+On Windows in general, and especially on Windows 7 or later versions, it is highly recommended to install your Nuxeo application at the root of a disk (`C:\Nuxeo` for instance),&nbsp;because of rights issues, limitations on paths length, 32/64 bits conflicts,...
 
 **What's next?**
 You want to evaluate the application? You can now [start the server]({{page page='server-start-and-stop'}}).
@@ -328,7 +328,6 @@ The Nuxeo Platform is available as ready-to-use 64 bits virtual machine images f
     When the Nuxeo application is started, it displays the address at which it is available.
     ![]({{file name='DM-VM-server-started.png'}} ?w=350)
 3.  In your browser, type the indicated address.
-    The [startup wizard]({{page page='configuration-wizard'}}) is displayed to help you configure your application.
 
     {{#> callout type='info' heading='Shell root access'}}
 

@@ -325,15 +325,13 @@ nuxeoctl help|status|showconf [-d [<categories>]|-q]
 
 nuxeoctl configure [-d [<categories>]|-q|-hdw]
 
-nuxeoctl wizard [-d [<categories>]|-q|--clid <arg>|--gui <true|false|yes|no>]
-
 nuxeoctl stop [-d [<categories>]|-q|--gui <true|false|yes|no>]
 
 nuxeoctl start|restart|console|startbg|restartbg [-d [<categories>]|-q|--clid <arg>|--gui <true|false|yes|no>|--lenient|-hdw]
 
 nuxeoctl mp-show [command parameters] [-d [<categories>]|-q|--clid <arg>|--xml|--json]
 
-nuxeoctl mp-list|mp-listall|mp-init|mp-update [command parameters] [-d [<categories>]|-q|--clid <arg>|--xml|--json]
+nuxeoctl mp-list|mp-listall|mp-update [command parameters] [-d [<categories>]|-q|--clid <arg>|--xml|--json]
 
 nuxeoctl mp-reset|mp-purge|mp-hotfix|mp-upgrade [command parameters] [-d [<categories>]|-q|--clid <arg>|--xml|--json|--accept <true|false|yes|no|ask>]
 
@@ -578,10 +576,6 @@ Useful for batch executions requiring the server being immediately available aft
 <td colspan="1">Configure Nuxeo server with parameters from `nuxeo.conf`.</td>
 </tr>
 <tr>
-<td colspan="1">`wizard`</td>
-<td colspan="1">Start the wizard.</td>
-</tr>
-<tr>
 <td colspan="1">`console`</td>
 <td colspan="1">Start Nuxeo server in a console mode. `Ctrl+C` will stop it.</td>
 </tr>
@@ -617,10 +611,6 @@ Useful for starting Nuxeo as a service.</td>
 <tr>
 <td colspan="1">`mp-listall`</td>
 <td colspan="1">List all Marketplace packages.</td>
-</tr>
-<tr>
-<td colspan="1">`mp-init`</td>
-<td colspan="1">Pre-cache Marketplace packages locally available in the distribution.</td>
 </tr>
 <tr>
 <td colspan="1">`mp-update`</td>
@@ -680,9 +670,9 @@ If uninstalling a package by its ID and other versions of the same package are a
 </table>
 </div>
 
-The following commands are always executed in console/headless mode (no GUI): `configure`, `mp-init`, `mp-purge`, `mp-add`, `mp-install`, `mp-uninstall`, `mp-request`, `mp-remove`, `mp-hotfix`, `mp-upgrade`, `mp-reset`, `mp-list`, `mp-listall`, `mp-update`, `status`, `showconf`, `mp-show`, `mp-set`, `config`, `encrypt`, `decrypt`, `help`.
+The following commands are always executed in console/headless mode (no GUI): `configure`, `mp-purge`, `mp-add`, `mp-install`, `mp-uninstall`, `mp-request`, `mp-remove`, `mp-hotfix`, `mp-upgrade`, `mp-reset`, `mp-list`, `mp-listall`, `mp-update`, `status`, `showconf`, `mp-show`, `mp-set`, `config`, `encrypt`, `decrypt`, `help`.
 
-The following commands cannot be executed on a running server: `pack`, `mp-init`, `mp-purge`, `mp-add`, `mp-install`, `mp-uninstall`, `mp-request`, `mp-remove`, `mp-hotfix`, `mp-upgrade`, `mp-reset`.
+The following commands cannot be executed on a running server: `pack`, `mp-purge`, `mp-add`, `mp-install`, `mp-uninstall`, `mp-request`, `mp-remove`, `mp-hotfix`, `mp-upgrade`, `mp-reset`.
 
 {{#> callout type='tip' }}
 

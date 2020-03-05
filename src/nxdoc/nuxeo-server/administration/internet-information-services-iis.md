@@ -95,7 +95,6 @@ Requirements:
 3.  [Install the Nuxeo Platform]({{page page='installing-the-nuxeo-platform-on-windows'}}).
 4.  [Start the Nuxeo instance]({{page page='server-start-and-stop#start-windows'}}).
 5.  Open the Browser from the Windows Server (firewalls must be configured so as to allow this) at the address `http://NUXEO_SERVER/nuxeo`.
-6.  [Configure the server]({{page page='configuration-wizard'}}): In **General Settings**, replace IP Address 0.0.0.0 by 127.0.0.1 to limit Tomcat to local answers.
 
 ### Enabling Web Server (IIS)
 

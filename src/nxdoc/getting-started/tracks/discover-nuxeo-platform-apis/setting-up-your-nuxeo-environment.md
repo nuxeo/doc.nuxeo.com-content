@@ -338,13 +338,7 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
     $ docker exec mynuxeo bin/nuxeoctl stop
     ```
 
-2.  Initialize local Nuxeo addons.
-
-    ```
-    $ docker exec mynuxeo bin/nuxeoctl mp-init
-    ```
-
-3.  Get the list of local Nuxeo addons.
+1.  Get the list of local Nuxeo addons.
 
     ```
     $ docker exec mynuxeo bin/nuxeoctl mp-list
@@ -352,13 +346,13 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
 
     You get the list of local addons, whose status is downloaded.
 
-4.  Install the addons required for this tutorial.
+1.  Install the addons required for this tutorial.
 
     ```
     $ docker exec -ti mynuxeo bin/nuxeoctl mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
     ```
 
-5.  Validate the dependency resolution step.
+1.  Validate the dependency resolution step.
 
     ```
     Dependency resolution:
@@ -368,7 +362,7 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
     Do you want to continue (yes/no)? [yes]
     ```
 
-6.  Check the Nuxeo addons were correctly installed.
+1.  Check the Nuxeo addons were correctly installed.
 
     ```
     $ docker exec mynuxeo bin/nuxeoctl mp-list
@@ -381,10 +375,10 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
 
     The installed addons now have the status started.
 
-7.  Start the server:
+1.  Start the server:
 
     ```bash
-    $ docker exec mynuxeo bin/nuxeoctl start  
+    $ docker exec mynuxeo bin/nuxeoctl start
     [...]
     Server started with process ID 973.
 
@@ -435,13 +429,7 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
 
 To install a Nuxeo Package:
 
-1.  Initialize local Nuxeo addons.
-
-    ```
-    $ nuxeoctl mp-init
-    ```
-
-2.  Get the list of local Nuxeo addons.
+1.  Get the list of local Nuxeo addons.
 
     ```
     $ nuxeoctl mp-list
@@ -449,13 +437,13 @@ To install a Nuxeo Package:
 
     You get the list of local addons, whose status is downloaded.
 
-3.  Install the addons required for this tutorial.
+2.  Install the addons required for this tutorial.
 
     ```
     $ nuxeoctl mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
     ```
 
-4.  Validate the dependency resolution step.
+3.  Validate the dependency resolution step.
 
     ```
     Dependency resolution:
@@ -465,7 +453,7 @@ To install a Nuxeo Package:
     Do you want to continue (yes/no)? [yes]
     ```
 
-5.  Check the Nuxeo addons were correctly installed.
+4.  Check the Nuxeo addons were correctly installed.
 
     ```
     $ nuxeoctl mp-list
@@ -478,7 +466,7 @@ To install a Nuxeo Package:
 
     The installed addons now have the status started.
 
-6.  Start the server
+5.  Start the server
 
     ```
     $ nuxeoctl console
@@ -532,17 +520,7 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
 
 To install a Nuxeo Package:
 
-1.  Initialize local Nuxeo addons.
-
-    ```
-    # Linux and Mac OS
-    $ ./nuxeoctl mp-init
-
-    # Windows
-    $ .\nuxeoctl.bat mp-init
-    ```
-
-2.  Get the list of local Nuxeo addons.
+1.  Get the list of local Nuxeo addons.
 
     ```
     # Linux and Mac OS
@@ -554,7 +532,7 @@ To install a Nuxeo Package:
 
     You get a list of the local addons that have been downloaded.
 
-3.  Install the addons required for this tutorial.
+2.  Install the addons required for this tutorial.
 
     ```
     # Linux and Mac OS
@@ -564,7 +542,7 @@ To install a Nuxeo Package:
     $ .\nuxeoctl.bat mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
     ```
 
-4.  Validate the dependency resolution step.
+3.  Validate the dependency resolution step.
 
     ```
     Dependency resolution:
@@ -574,7 +552,7 @@ To install a Nuxeo Package:
     Do you want to continue (yes/no)? [yes]
     ```
 
-5.  Check that the Nuxeo addons were correctly installed.
+4.  Check that the Nuxeo addons were correctly installed.
 
     ```
     # Linux and Mac OS
@@ -596,7 +574,7 @@ To install a Nuxeo Package:
 
     The installed addons now have the status 'started'.
 
-6.  Start the server.
+5.  Start the server.
 
     ```
     # Linux and Mac OS
