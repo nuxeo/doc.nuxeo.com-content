@@ -281,7 +281,7 @@ Nuxeo applications are started using scripts.
     Starting the Nuxeo server takes between 30 sec and several minutes, depending on your hardware.
     When the server is started, the **Start** button becomes a **Stop** button.
 4.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
-    If the server is started for the first time after the installation, the [startup wizard]({{page page='configuration-wizard'}}) is displayed so you can select what module you want to install on the platform and help you configure it. Otherwise, the login page is displayed so you can use the application.
+    The login page is displayed so you can use the application.
 
 ### macOS {{> anchor 'start-macos'}}
 
@@ -305,7 +305,7 @@ Nuxeo applications are started using scripts.
     When the server is started, the **Start** button becomes a **Stop** button.
 
 2.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
-    If the server is started for the first time after the installation, the [startup wizard]({{page page='configuration-wizard'}}) is displayed so you can select what module you want to install on the platform and help you configure it. Otherwise, the login page is displayed so you can use the application.
+    The login page is displayed so you can use the application.
 
 #### Using the nuxeoctl Script
 
@@ -335,7 +335,7 @@ Nuxeo applications are started using scripts.
     Starting the Nuxeo server takes between a few seconds and several minutes, depending on your hardware.
     When the server is started, the **Start** button becomes a **Stop** button.
 2.  Open a browser and type the URL `http://NUXEO_SERVER/nuxeo/`.
-    If the server is started for the first time after the installation, the [startup wizard]({{page page='configuration-wizard'}}) is displayed so you can select what module you want to install on the platform and help you configure it. Otherwise, the login page is displayed so you can use the application.
+    The login page is displayed so you can use the application.
 
 {{! multiexcerpt name='infos_windows'}} {{#> callout type='info' }}
 

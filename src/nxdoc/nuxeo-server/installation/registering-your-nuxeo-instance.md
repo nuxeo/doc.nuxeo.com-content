@@ -169,7 +169,7 @@ The instance registration is only valid for your current subscription contract d
 
 To be able to register, you need to have a [Nuxeo Online Services account](#connect-account-creation).
 
-Registration can be done during the installation steps using the configuration wizard or at any time later, using the [`nuxeoctl` script]({{page page='nuxeoctl-and-control-panel-usage'}}) or through the _Admin_ tab if the JSF UI addon is installed.
+Registration can be done using the [`nuxeoctl` script]({{page page='nuxeoctl-and-control-panel-usage'}}) or through the _Admin_ tab if the JSF UI addon is installed.
 
 Registration does not require an Internet access. If your server cannot connect to the Internet, follow the [offline registration steps](#offline-registration). Otherwise, follow the [online registration steps](#online-registration).
 

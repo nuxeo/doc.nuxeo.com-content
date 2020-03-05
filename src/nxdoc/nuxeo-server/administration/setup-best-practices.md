@@ -178,7 +178,7 @@ You must never edit the content of the server but use [the configuration propert
 
 ## Moving Configuration, data and log Directories Outside Nuxeo
 
-The configuration of your application is saved in the `nuxeo.conf` configuration file, whatever the [means you use to configure your application]({{page page='configuration-wizard'}}) (manual edit, Startup Wizard or Admin tab). It is better, although not mandatory, to store your customized configuration outside the Nuxeo Platform. This way, you will be able to easily upgrade the Nuxeo Platform, keeping your configuration safely apart of Nuxeo directory.
+The configuration of your application is saved in the `nuxeo.conf` configuration file, whatever the means you use to configure your application (manual edit or Admin tab). It is better, although not mandatory, to store your customized configuration outside the Nuxeo Platform. This way, you will be able to easily upgrade the Nuxeo Platform, keeping your configuration safely apart of Nuxeo directory.
 
 **To move the configuration file outside the Nuxeo directory:**
 

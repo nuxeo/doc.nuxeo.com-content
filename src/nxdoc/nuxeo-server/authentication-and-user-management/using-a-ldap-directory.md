@@ -235,14 +235,6 @@ But for the most common use case, all you want to do is map the default `userDir
 
 ## Configuration
 
-The Users & Groups step of the [startup wizard]({{page page='configuration-wizard'}}) enables you to set up your LDAP, SQL or multidirectory configuration: Select the kind of "directory" you want (SQL, LDAP, Multi-directory), and fill in the required information.
-
-![]({{file name='nuxeo-wizard-user-and-groups.png'}} ?w=400,border=true)
-
-![]({{file name='wizard-users-groups.png'}} ?w=600,border=true)
-
-The wizard will actually generate a contribution to the `userManager` extension point and some contributions for declaring users and groups directories, and it will copy them in the `nxserver/config` folder (ex: `default-ldap-users-directory-bundle.xml`).
-
 You can find a [full example of contribution to the userManager](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.usermanager.UserService--userManager) extension point on the explorer. Here is a review of the specific useful parts.
 
 Users are defined on the `users` element:
@@ -555,18 +547,18 @@ nuxeo.user.emergency.lastname=
 
 3. Set the correct server:
     - `<ldapUrl>`
-    - `<bindDn>` and `<bindPassword>`  
-    &nbsp;  
+    - `<bindDn>` and `<bindPassword>`
+    &nbsp;
 
 4. Set the correct LDAP config:
     - `<searchBaseDN>`
     - `<searchClass>`
-    - `<fieldMapping>`  
-    &nbsp;  
+    - `<fieldMapping>`
+    &nbsp;
 
 5. If you want Nuxeo to be able to create users in the LDAP directory:
     - Make sure the user you use to access LDAP has write access
-    - Define the `<creationBaseDn>` and associated parameters  
+    - Define the `<creationBaseDn>` and associated parameters
     &nbsp;
 
 6. Define the default mapping:
