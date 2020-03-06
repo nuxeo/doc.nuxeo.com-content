@@ -224,23 +224,6 @@ The properties used in this file come from the ones defined in `bin/nuxeo.conf` 
 
 You may need to access to multiple databases and then require to run the connection in XA mode. In such case, you should enable the XA mode by setting&nbsp;`nuxeo.db.xaMode=true` in `bin/nuxeo.conf`.
 
-## Sharing Connections with Other Applications
-
-When you're deploying Nuxeo as a static WAR, you may want to share the database connections with other applications. You should then configure the datasource server side such as a global resource in Tomcat and instruct Nuxeo to acquire a connection from that pool instead of opening a new JDBC connection.
-
-```xml
-<datasource name="${nuxeo.db.commonds}"
-  datasource="jdbc/your-global-datasource"
-  maxPoolSize="${nuxeo.db["max-pool-size"]}"
-  minPoolSize="${nuxeo.db["min-pool-size"]}"
-  blockingTimeoutMillis="${nuxeo.db["blocking-timeout-millis"]}"
-  idleTimeoutMinutes="${nuxeo.db["idle-timeout-minutes"]}"
-  sqlExceptionSorter="${nuxeo.db["sql-exception-sorter"]}"
-  validationQuery="${nuxeo.db.validationQuery}"
-  accessToUnderlyingConnectionAllowed="true" />
-
-```
-
 ## Managing Idle Connections
 
 By default idle (unused) connections are maintained 5 minutes in the pool. This can be configured by changing the parameter&nbsp;`nuxeo.db.idle-timeout-minutes` in `nuxeo.conf`:
