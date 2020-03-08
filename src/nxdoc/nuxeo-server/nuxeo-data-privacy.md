@@ -135,3 +135,14 @@ Privacy by design concepts, applied to a Nuxeo-based application, require an und
 - Best practices and recommendation on [Nuxeo Security]({{page version='' space='nxdoc' page='security-recommendations'}}).
 - Nuxeo data model: in particular, [document types]({{page version='' space='studio' page='documents'}}) and [schemas]({{page version='' space='studio' page='schemas'}}) concepts.
 - How the [Nuxeo repository security]({{page version='' space='nxdoc' page='nuxeo-security-system'}}) is built
+
+## Cookie Management
+
+**Nuxeo JSF UI** uses a set of cookies which are used exclusively to manage authentication and redirections:
+
+- `JSESSIONID` : Session ID  for the web application to mantain the authentication alive
+- `org.jboss.seam.core.TimeZone`
+- `org.jboss.seam.core.Locale`     
+- `nuxeo.start.url.fragment`
+
+**Nuxeo Web UI** uses a subset of the JSF set of of cookies.
