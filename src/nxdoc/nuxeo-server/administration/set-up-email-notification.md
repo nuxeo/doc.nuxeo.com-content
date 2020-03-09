@@ -211,8 +211,8 @@ If you have complex mail server configurations, you may want to check the [Javam
 
 - [HOWTO: Customize Email Templates]({{page page='how-to-customize-email-templates'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}</div><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
-&nbsp;
+- [Send Emails from Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)
 
-</div></div>
+{{/panel}}</div></div>
