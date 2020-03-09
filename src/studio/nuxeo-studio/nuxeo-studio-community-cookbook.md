@@ -36,6 +36,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
+    ![mail2.png](nx_asset://854e06c0-4e9a-4f9e-82a0-96f02437c16f ?w=150,border=true)
+    </td>
+    <td>[Send emails from Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)</td>
+    <td>Nuxeo</td>
+    <td>Mail, Layouts, Automation, Templates</td>
+  </tr>
+  <tr>
+    <td>
     ![currency2.jpg](nx_asset://e4fbb505-67be-42de-aec6-8421e4cf2259 ?w=150,border=true)
     </td>
     <td>[Display a Field With Currency Format](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/currency)</td>
@@ -117,6 +125,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Contributor</th>
   <th>Category</th>
 </tr>
+  <tr>
+    <td>
+    ![mail2.png](nx_asset://854e06c0-4e9a-4f9e-82a0-96f02437c16f ?w=150,border=true)
+    </td>
+    <td>[Send emails from Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)</td>
+    <td>Nuxeo</td>
+    <td>Mail, Layouts, Automation, Templates</td>
+  </tr>
   <tr>
     <td>
     ![currency2.jpg](nx_asset://e4fbb505-67be-42de-aec6-8421e4cf2259 ?w=150,border=true)
@@ -336,6 +352,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
 </tr>
   <tr>
     <td>
+    ![mail2.png](nx_asset://854e06c0-4e9a-4f9e-82a0-96f02437c16f ?w=150,border=true)
+    </td>
+    <td>[Send emails from Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)</td>
+    <td>Nuxeo</td>
+    <td>Mail, Layouts, Automation, Templates</td>
+  </tr>
+  <tr>
+    <td>
     ![document-versions.png](nx_asset://ef855414-0914-4045-a8ea-2a4fe78c2251 ?w=150,border=true)
     </td>
     <td>[Delete and Update Document Lifecycle State of Versioned Documents](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/bulk-workflow-reassignment)</td>
@@ -389,6 +413,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Contributor</th>
   <th>Category</th>
 </tr>
+  <tr>
+    <td>
+    ![mail2.png](nx_asset://854e06c0-4e9a-4f9e-82a0-96f02437c16f ?w=150,border=true)
+    </td>
+    <td>[Send emails from Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)</td>
+    <td>Nuxeo</td>
+    <td>Mail, Layouts, Automation, Templates</td>
+  </tr>
 <tr>
   <td>![dark.png](nx_asset://5d0bd1d3-5efb-4ae4-9711-b98f1e8e8c8c ?w=150,border=true)</td>
   <td>[Email Templates](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/email-templates-nuxeo)</td>
