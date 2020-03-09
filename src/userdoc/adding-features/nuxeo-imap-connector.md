@@ -467,6 +467,7 @@ Emails cannot be edited, but you can [comment]({{page page='nxdoc/collaborative-
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
+- [Send Emails from Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)
 - [EML Previewer](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/eml-previewer)
 
 {{/panel}}</div><div class="column medium-6">
