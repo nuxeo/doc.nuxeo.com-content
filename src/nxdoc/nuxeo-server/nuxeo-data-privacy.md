@@ -140,7 +140,7 @@ Privacy by design concepts, applied to a Nuxeo-based application, require an und
 
 **Nuxeo JSF UI** uses a set of cookies which are used exclusively to manage authentication and redirections:
 
-- `JSESSIONID` : Session ID  for the web application to mantain the authentication alive
+- `JSESSIONID`: Session ID for the web application to mantain the authentication alive
 - `org.jboss.seam.core.TimeZone`
 - `org.jboss.seam.core.Locale`     
 - `nuxeo.start.url.fragment`
