@@ -78,3 +78,7 @@ Image Cropper is a set of utilities (UI element, automation scripts, etc.) to di
 Also, it uses Google Vision crop suggestions if a Google API key is found in the configuration.
 
 All this behavior can be tuned once the template is imported, to fit your custom business rules. Please, read the ImageCropper_README script for more details.
+
+## Nuxeo Self Registration
+
+This template offers the necessary configuration to allow an anonymous user to request an account in the application, i.e. self-registration, with approval. This project depends on the [nuxeo-labs-user-regiustration](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-labs-user-registration) plugin, so both must be installed. This plugin is available in the Nuxeo Marketplace.
