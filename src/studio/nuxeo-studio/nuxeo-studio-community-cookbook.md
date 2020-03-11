@@ -38,7 +38,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>
     ![mail2.png](nx_asset://854e06c0-4e9a-4f9e-82a0-96f02437c16f ?w=150,border=true)
     </td>
-    <td>[Send emails from Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)</td>
+    <td>[Send Emails From Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)</td>
     <td>Nuxeo</td>
     <td>Mail, Layouts, Automation, Templates</td>
   </tr>
@@ -129,7 +129,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>
     ![mail2.png](nx_asset://854e06c0-4e9a-4f9e-82a0-96f02437c16f ?w=150,border=true)
     </td>
-    <td>[Send emails from Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)</td>
+    <td>[Send Emails From Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)</td>
     <td>Nuxeo</td>
     <td>Mail, Layouts, Automation, Templates</td>
   </tr>
@@ -354,7 +354,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>
     ![mail2.png](nx_asset://854e06c0-4e9a-4f9e-82a0-96f02437c16f ?w=150,border=true)
     </td>
-    <td>[Send emails from Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)</td>
+    <td>[Send Emails From Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)</td>
     <td>Nuxeo</td>
     <td>Mail, Layouts, Automation, Templates</td>
   </tr>
@@ -417,7 +417,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>
     ![mail2.png](nx_asset://854e06c0-4e9a-4f9e-82a0-96f02437c16f ?w=150,border=true)
     </td>
-    <td>[Send emails from Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)</td>
+    <td>[Send Emails From Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)</td>
     <td>Nuxeo</td>
     <td>Mail, Layouts, Automation, Templates</td>
   </tr>
