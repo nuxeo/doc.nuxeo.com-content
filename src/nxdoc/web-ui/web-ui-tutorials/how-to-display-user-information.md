@@ -4,7 +4,7 @@ review:
     comment: ''
     date: '2019-11-21'
     status: ok
-toc: false
+toc: true
 details:
     howto:
         excerpt: Learn how to display user information on Web UI
