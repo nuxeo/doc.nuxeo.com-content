@@ -32,7 +32,9 @@ history:
         date: '2011-09-18 21:16'
         message: ''
         version: '1'
+toc: true        
 ---
+
 {{#> callout type='tip' }}
 To make the discovery of Studio easier, in each newly created project we automatically import the "Default configuration" template that corresponds to your target application (DM, DAM, etc), so that all you have to do is modifying what has been imported. These default configuration templates implement some core elements you see in the Nuxeo application you downloaded.</br>
 If you want to customize those elements, the "Default configuration" templates are what you need!
@@ -81,4 +83,5 @@ All this behavior can be tuned once the template is imported, to fit your custom
 
 ## Nuxeo Self Registration
 
-This template offers the necessary configuration to allow an anonymous user to request an account in the application, i.e. self-registration, with approval. This project depends on the [nuxeo-labs-user-regiustration](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-labs-user-registration) plugin, so both must be installed. This plugin is available in the Nuxeo Marketplace.
+This template offers the necessary configuration to allow an anonymous user to request an account in the application, i.e. self-registration, with approval. This project depends on the [Nuxeo User Self-Registation](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-labs-user-registration) addon, so both must be installed.</br>
+This plugin is available in the Nuxeo Marketplace.
