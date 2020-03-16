@@ -188,34 +188,21 @@ that will trigger an ajax call, it takes a timeout as parameter.
 Sample usage:
 
 ```
-
 <tr>
-
-<td>watchA4jRequests</td>
-
-<td></td>
-
-<td></td>
-     </tr>
-
+  <td>watchA4jRequests</td>
+  <td></td>
+  <td></td>
+</tr>
 <tr>
-
-<td>typeKeys</td>
-
-<td>//input[@name='createUser:nxl_user:nxw_groups_suggest']</td>
-
-<td>members</td>
-     </tr>
-
+  <td>typeKeys</td>
+  <td>//input[@name='createUser:nxl_user:nxw_groups_suggest']</td>
+  <td>members</td>
+</tr>
 <tr>
-
-<td>waitForA4jRequest</td>
-
-<td>10000</td>
-
-<td></td>
-     </tr>
-
+  <td>waitForA4jRequest</td>
+  <td>10000</td>
+  <td></td>
+</tr>
 ```
 
 WARNING: The "typeKeys" command has a bug that simulates the "ALT" key when using the "y" character (see [http://jira.openqa.org/browse/SIDE-309](http://jira.openqa.org/browse/SIDE-309)) so you should avoid this character in suggestion keywords.
@@ -228,16 +215,11 @@ has parameter.
 Sample usage:
 
 ```
-
 <tr>
-
-<td>waitForQueries</td>
-
-<td>100000</td>
-
-<td></td>
-     </tr>
-
+  <td>waitForQueries</td>
+  <td>100000</td>
+  <td></td>
+</tr>
 ```
 
 3\. when triggering any other call (Javascript call with Seam remoting
@@ -250,16 +232,11 @@ Sample usage:
 
 ```
 <!-- wait for table to disappear -->
-
 <tr>
-
-<td>waitForCondition</td>
-
-<td>selenium.browserbot.getCurrentWindow().document.getElementById('editGroup:nxl_group:nxw_members_list:2:nxw_members_listItem') == null</td>
-
-<td>10000</td>
-     </tr>
-
+  <td>waitForCondition</td>
+  <td>selenium.browserbot.getCurrentWindow().document.getElementById('editGroup:nxl_group:nxw_members_list:2:nxw_members_listItem') == null</td>
+  <td>10000</td>
+</tr>
 ```
 
 ### how to get an element when no id is available
@@ -299,25 +276,17 @@ Sample usage:
 ### sometimes this command will succed:
 
 ```
-
 <td>click</td>
-
 <td>dashboardDocumentProcessTable:j_id130</td>
-
 <td></td>
-
 ```
 
 when this one will fail:
 
 ```
-
 <td>click</td>
-
 <td>//input[@id="dashboardDocumentProcessTable:j_id130"]</td>
-
 <td></td>
-
 ```
 
 ### Print out the rendered HTML in the page
@@ -325,23 +294,14 @@ when this one will fail:
 When trying to debug what's happening on the server, it may be useful to print out the rendered HTML in the page. The following command can be used:
 
 ```
-
 <tr>
-
-<td>storeEval</td>
-
-<td>selenium.browserbot.getCurrentWindow().document.body.innerHTML</td>
-
-<td>innerhtml</td>
-  </tr>
-
+  <td>storeEval</td>
+  <td>selenium.browserbot.getCurrentWindow().document.body.innerHTML</td>
+  <td>innerhtml</td>
+</tr>
 <tr>
-
-<td>echo</td>
-
-<td>${innerhtml}</td>
-
-<td></td>
-  </tr>
-
+  <td>echo</td>
+  <td>${innerhtml}</td>
+  <td></td>
+</tr>
 ```
