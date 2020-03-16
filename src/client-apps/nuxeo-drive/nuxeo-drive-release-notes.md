@@ -15,7 +15,7 @@ Welcome to the Release Notes for **Nuxeo Drive 4.5.0**
 
 ### Direct Transfer
 
-The Direct Transfer feature has been disabled by default for the moment. It can be re-enabled by configuration. It is currently being reworked to be more configurable so as to better match our users' use cases.
+The Direct Transfer feature has been disabled by default for the moment. It can be re-enabled by configuration. It is currently being reworked to be more configurable so as to better match our users' use cases. 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-2040](https://jira.nuxeo.com/browse/NXDRIVE-2040) and [NXDRIVE-2082](https://jira.nuxeo.com/browse/NXDRIVE-2082)
 
@@ -23,9 +23,9 @@ The Direct Transfer feature has been disabled by default for the moment. It can 
 
 ### Behaviors and Features Flags
 
-We want to give even more control on features/behaviors to enable or not inside Nuxeo Drive. And so we introduced 2 new parameters that will easily allow one to control the application behavior or features.
+We want to give even more control on features/behaviors to enable or not inside Nuxeo Drive. And so we introduced two new parameters that will easily allow one to control the application behavior or features.
 
-Feature enablement will typically allow you to enable Nuxeo Drive DirectEdit while disabling Synchronisation. Or Direct Edit and Direct Transfer, and not synchronisation. Or only Synchronisation.
+Feature enablement will typically allow you to enable Nuxeo Drive DirectEdit while disabling synchronization. Or Direct Edit and Direct Transfer, and not synchronization. Or only synchronization.
 It is configurable both globally for all users and locally for a specific group of users.
 
 In short, this is a snippet of those parameters inside the server configuration file:
@@ -64,7 +64,7 @@ The default token expiration (TTL) is set to 1 hour by default.
 This is too low for Nuxeo Drive uploads, as an upload can be paused or a transfer can take longer than 1 hour.
 {{/callout}}
 
-To tweak the token TTL, the server admin have to add a new property (integer) in `nuxeo.conf`:
+To tweak the token TTL, the server admin has to add a new property (integer) in `nuxeo.conf`:
 
 ```conf
 # Value in seconds, here 10 hours
@@ -87,7 +87,7 @@ Then, you will have to manually use that property in [s3directupload-config.xml]
 
 ### Direct Edit
 
-Direct Edit can now handle any kind of custom blob metadata, there is no more limitations on the `xpath`.</br>
+Direct Edit can now handle any custom blob metadata; there are no more limitations on the `xpath`.</br>
 
 Those are all valid (given "s" for string and "n" for number):
 - s:s (file:content, foo:bar, note:note)
@@ -101,14 +101,14 @@ Notes handling is stricter, only "note:note" is taken into account, nothing chan
 
 ### Auto-Update
 
-Updates are now unlock on the centralized channel when auto-update is disabled.
+Updates are now unlocked on the centralized channel when auto-update is disabled.
 
 Auto-updates are now allowed/forced when those parameters are met:
 - the `update_check_delay` option is set to `0`;
 - the `channel` option is set to `"centralized"`;
 - the `client_version` option is set.
 
-This is required for IT teams wanting to fully control which version of the application to deploy.
+This is required for IT teams wanting to control which version of the application to deploy.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2047](https://jira.nuxeo.com/browse/NXDRIVE-2047)
 
