@@ -29,7 +29,7 @@ Feature enablement will typically allow you to enable Nuxeo Drive DirectEdit whi
 It is configurable both globally for all users and locally for a specific group of users.
 
 In short, this is a snippet of those parameters inside the server configuration file:
-\```json
+```json
 {
     "behavior": {
         "server-deletion": true
@@ -41,9 +41,10 @@ In short, this is a snippet of those parameters inside the server configuration 
         "s3"             : true,
     }
 }
-\```
+```
+
 To control features from inside the local configuration file:
-\```ini
+```ini
 [DEFAULT]
 env = myFeatures
 [myFeatures]
@@ -51,8 +52,11 @@ feature.auto-update     = true
 feature.direct-edit     = true
 feature.direct-transfer = false
 feature.s3              = true
-\```
+```
+<!--
 Please have a look at the [documentation]().
+-->
+
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2070](https://jira.nuxeo.com/browse/NXDRIVE-2070) and [technical specifications document](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/dep/2020-03%20Features%20flags.md)
 
 ### S3 Direct Upload
