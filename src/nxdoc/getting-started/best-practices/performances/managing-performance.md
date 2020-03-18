@@ -155,7 +155,7 @@ What you are testing, and how you are testing it?  Consider the following elemen
 *   The testing tools are you using, if any:
 
     *   Manual load testing?
-    *   FunkLoad, JMeter, LoadRunner ?
+    *   JMeter, LoadRunner ?
 
 Having this information will help identify the part of the platform you are putting pressure on, and provide insight into how to reproduce the issue, which is an important step in identifying the underlying cause(s), setting up targeted monitoring, and qualifying potential resolutions.
 
@@ -197,8 +197,6 @@ For simple and automatic GC (garbage collection in the JVM) monitoring, see the 
 ### Monitoring is Key
 
 Performing benchmarking and performance tests is only effective when good monitoring is in place &ndash; the metrics you capture from monitoring the various systems and components is crucial when trying to pinpoint bottlenecks, and crucial in determining if a particular modification yields any improvement.
-
-If you use FunkLoad, it includes system monitoring.
 
 For more information on monitoring the Nuxeo Platform, please see [Nuxeo Metrics page]({{page page='metrics-and-monitoring'}}).
 

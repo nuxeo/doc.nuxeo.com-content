@@ -19,6 +19,7 @@ labels:
     - nuxeo-distribution
     - excerpt
     - lts2017-ok
+toc: true
 confluence:
     ajs-parent-page-id: '950333'
     ajs-parent-page-title: Advanced topics
@@ -117,30 +118,26 @@ history:
         date: '2010-03-01 13:29'
         message: ''
         version: '1'
-
 ---
+
 ## The nuxeo-distribution Module Purpose
 
 The `nuxeo-distribution` module is used for the packaging and the high-level testing of the Nuxeo Platform: Nuxeo Server, Nuxeo Static WAR, Nuxeo Shell, Startup Wizard, Functional and Performance Tests...
-The key concepts are: [assembly]({{page space='corg' page='creating-your-own-distribution'}}), [ant-assembly-maven-plugin](https://github.com/nuxeo/ant-assembly-maven-plugin), [NXR]({{page space='glos' page='nxr'}}), [WAR]({{page space='glos' page='war'}}), [Nuxeo Package]({{page page='creating-nuxeo-packages'}}), [tools-nuxeo-ftest]({{page space='corg' page='functional-testing'}}), [WebDriver](http://www.seleniumhq.org/projects/webdriver/), [FunkLoad](http://funkload.nuxeo.org/), [Gatling](http://gatling.io).
+The key concepts are: [assembly]({{page space='corg' page='creating-your-own-distribution'}}), [ant-assembly-maven-plugin](https://github.com/nuxeo/ant-assembly-maven-plugin), [NXR]({{page space='glos' page='nxr'}}), [WAR]({{page space='glos' page='war'}}), [Nuxeo Package]({{page page='creating-nuxeo-packages'}}), [tools-nuxeo-ftest]({{page space='corg' page='functional-testing'}}), [WebDriver](http://www.seleniumhq.org/projects/webdriver/), [Gatling](http://gatling.io).
 
 {{! excerpt}}
-
 With `nuxeo-distribution`, you can [build from Nuxeo sources]({{page space='corg' page='compiling-nuxeo-from-sources'}}), run tests against existing distributions and much more: if you need to [assemble your own distribution]({{page space='corg' page='creating-your-own-distribution'}}), you will find in `nuxeo-distribution` some resources, templates and samples on which to base your packaging.
-
 {{! /excerpt}}
 
 You don't need to use the `nuxeo-distribution` module if:
-
-*   You want a standard Nuxeo distribution: download it manually from [http://www.nuxeo.com/downloads/](http://www.nuxeo.com/downloads/) or with [Maven](http://maven.nuxeo.org/), manually via the online interface or automatically while building.
-*   You want to customize configuration files: use the [Configuration Templates]({{page page='configuration-templates'}}) system.
-*   You want to [build your own distribution]({{page space='corg' page='creating-your-own-distribution'}}): rely on the same tools and principles as `nuxeo-distribution` in your own project, with your own Maven Assembly.
+- You want a standard Nuxeo distribution: download it manually from [http://www.nuxeo.com/downloads/](http://www.nuxeo.com/downloads/) or with [Maven](http://maven.nuxeo.org/), manually via the online interface or automatically while building.
+- You want to customize configuration files: use the [Configuration Templates]({{page page='configuration-templates'}}) system.
+- You want to [build your own distribution]({{page space='corg' page='creating-your-own-distribution'}}): rely on the same tools and principles as `nuxeo-distribution` in your own project, with your own Maven Assembly.
 
 You have to use the `nuxeo-distribution` module if:
-
-*   You want to reproduce the Nuxeo build process.
-*   You are working on the Nuxeo source code and need a quick feedback on your changes.
-*   You want to run the Nuxeo main functional or performance test suites against a given distribution.
+- You want to reproduce the Nuxeo build process.
+- You are working on the Nuxeo source code and need a quick feedback on your changes.
+- You want to run the Nuxeo main functional or performance test suites against a given distribution.
 
 Read the [Nuxeo Core Developer Guide]({{page space='corg' page='working-on-nuxeo-sources'}}) for more information on how to package from sources using or miming `nuxeo-distribution`.
 

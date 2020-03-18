@@ -528,7 +528,7 @@ Nuxeo provides standard benchmarks for both small and big documents repositories
 When needed, you can use these results to interpolate results from your tests.
 
 ## Performance Toolbox Provided by the Nuxeo Platform
-
+<!--
 ### Benchmarking Tools
 
 We use [FunkLoad](http://funkload.nuxeo.org/) for performance testing. This tools enables us to produce quickly new scenarios.
@@ -558,9 +558,10 @@ Here are the main advantages:
 
     This makes it easy to create new scenarios.
 
-Also to stress heavily the REST API [we use Gatling](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution/nuxeo-server-gatling-tests).
+-->
+We use Gatling for [performance testing](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution/nuxeo-server-gatling-tests).
 
-We also use Nuxeo Platform addon tools like [`nuxeo-platform-importer`](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-platform-importer/README.md) to populate the document base.
+Also, we use Nuxeo Platform addon tools like [`nuxeo-platform-importer`](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-platform-importer/README.md) to populate the document base.
 
 ### Metrics to Monitor During a Bench
 
@@ -576,17 +577,18 @@ We also use Nuxeo Platform addon tools like [`nuxeo-platform-importer`](https://
 
 You can also use other tools to get more information:
 
-*   [Oracle flight recording]({{page version='' space='nxdoc' page='reporting-problems'}}#oracle-jvm-flight-recording)
-*   [Nuxeo Slow NXQL Queries]({{page page='monitoring-slow-nxql-queries'}})
-*   [PostgreSQL monitoring]({{page space='ADMINDOC' page='Configuring PostgreSQL'}})
-*   [sysstat sar](http://pagesperso-orange.fr/sebastien.godard/) and [atop](http://www.atoptool.nl/) to monitoring the system activity (CPU, disk, network,&nbsp; memory ...).
+- [Oracle flight recording]({{page version='' space='nxdoc' page='reporting-problems'}}#oracle-jvm-flight-recording)
+- [Nuxeo Slow NXQL Queries]({{page page='monitoring-slow-nxql-queries'}})
+- [PostgreSQL monitoring]({{page space='ADMINDOC' page='Configuring PostgreSQL'}})
+- [sysstat sar](http://pagesperso-orange.fr/sebastien.godard/) and [atop](http://www.atoptool.nl/) to monitoring the system activity (CPU, disk, network,&nbsp; memory ...).
 
+<!--
 ### Nuxeo Metrics Monitoring Tools with Mbeans
 
 In `nuxeo-runtime-management-metric`, Nuxeo provides the infrastructure that can be used to monitor use of services or class through MBeans. The MBean displays access counts on methods and the time spent on it. It can also serialize its results in XML.
 
 As an example, we will first see how to configure and monitor access to the Nuxeo repository `backend` class.
-
+-->
 #### Monitor Nuxeo Core Backend Access
 
 The idea is to plug our monitor class as a proxy of the real Repository class. When a method gets through the proxy, metrics are automatically added and named with interface and method names. All metrics have an operation "Sample" that provides the metrics you are looking for.
