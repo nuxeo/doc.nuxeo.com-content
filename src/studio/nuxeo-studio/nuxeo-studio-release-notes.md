@@ -19,31 +19,9 @@ Currently, managing translations require to know for each feature whether the tr
 
 With this change, no need to know where to configure your translation anymore! Whenever you configure a key in Studio Designer, the equivalent key is created in Studio Modeler if it doesn't exist, and vice versa. This merge happens just before the download of your studio package (e.g. when doing a hot reload) so that it doesn't interfere with your work.
 
-### Conflict Management
-
-Conflict management screen is updated to provide a better experience:
-- Long lines are wrapped
-- It is easier to understand which file you are picking when doing the selection
-
-**Summary view**:
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2020-02-03/conflict view summary
-    name: conflict-summary.png
-    studio_designer#screenshot#up_to_date
---}}
-![conflict view summary](nx_asset://1798fa46-b2cb-4ed9-ade3-271c06b74d3f ?w=650,border=true)
-
-**Detailed view**:
-{{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Studio/studio-updates-2020-02-03/conflict view detailed
-    name: conflict-detailed-view.png
-    studio_designer#screenshot#up_to_date
---}}
-![conflict view detailed](nx_asset://58b0c81b-ad1c-45f7-8346-ac7c59010216 ?w=650,border=true)
-
 ### More Upcoming Changes
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.28.0','3.29.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.29.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
@@ -54,7 +32,7 @@ Conflict management screen is updated to provide a better experience:
 {{{multiexcerpt 'studio-updates-2020-02-03-bugfix' page='studio-updates-2020-02-03'}}}
 
 ## Learn More
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.27.0','3.27.1','3.27.2'%29) is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.28.0'%29) is available in our bug tracking tool.
 
 ---
 
