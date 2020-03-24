@@ -69,11 +69,11 @@ Nothing changes at this stage.
 
 Multi-factor authentication starts being requested, but not in effect yet.
 
-During this transition period, setting up the MFA will be necessary in order to finish authenticating. It will not be requested yet when logging in.
+During this transition period, setting up the MFA will be necessary to finish authenticating. It will not be requested yet when logging in.
 
 ##### Starting From April 14, 2020
 
-Multi-factor authentication comes into effect and needed to authenticate.
+Multi-factor authentication comes into effect and is needed to authenticate.
 
 If you have not set up your MFA yet, you will be able to set it up while logging in. This second factor will be requested once a week to authenticate.
 
@@ -93,10 +93,10 @@ These factors can be one of the following:
 --}}
 ![mfa-setup](nx_asset://64c95f94-e3ac-40b1-a03e-16ce33989d83 ?w=415,border=true)
 
-This factor needs to be set up starting from March 31, but won't come in effect before April 14.
+This factor needs to be set up starting from March 31, but won't come into effect before April 14.
 
 {{#> callout type='info' heading='Info'}}
-MFA is only used in the browser. It is not needed when using command line tools to automate tasks.
+MFA is used only in the browser. It is not needed when using command line tools to automate tasks.
 {{/callout}}
 
 ## FAQ
