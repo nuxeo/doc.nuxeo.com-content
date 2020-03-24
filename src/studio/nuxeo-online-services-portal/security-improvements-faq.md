@@ -55,12 +55,27 @@ When authenticating, you need to provide your username (unchanged), and a _[toke
 
 #### Timeline
 
-- Anytime before March 24, 2020: multi-factor authentication can be set up manually and remains optional
-- March 24, 2020: multi-factor authentication is enforced
+##### Before March 31
+
+No MFA setup is requested.
+
+Nothing changes at this stage.
+
+##### Between March 31 and April 14, 2020
+
+Multi-factor authentication starts being requested, but not in effect yet.
+
+During this transition period, setting up the MFA will be necessary in order to finish authenticating. It will not be requested yet when logging in.
+
+##### Starting From April 14, 2020
+
+Multi-factor authentication comes into effect and needed to authenticate.
+
+If you have not set up your MFA yet, you will be able to set it up while logging in. This second factor will be requested once a week to authenticate.
 
 #### Impacts
 
-When you log into Nuxeo Online Services, a second authentication factor will be requested to enhance your account security.
+When you log into Nuxeo Online Services using the browser, a second authentication factor will be requested to enhance your account security.
 
 These factors can be one of the following:
 - Code provided by a smartphone application (most secure)
@@ -74,9 +89,11 @@ These factors can be one of the following:
 --}}
 ![mfa-setup](nx_asset://64c95f94-e3ac-40b1-a03e-16ce33989d83 ?w=415,border=true)
 
-#### Preparing for Change
+This factor needs to be set up starting from March 31, but won't come in effect before April 14.
 
-We recommend setting up the multi-factor authentication before this enforcement, so that you can get familiar with it.
+{{#> callout type='info' heading='Info'}}
+MFA is only used in the browser. It is not needed when using command line tools to automate tasks.
+{{/callout}}
 
 ## FAQ
 
