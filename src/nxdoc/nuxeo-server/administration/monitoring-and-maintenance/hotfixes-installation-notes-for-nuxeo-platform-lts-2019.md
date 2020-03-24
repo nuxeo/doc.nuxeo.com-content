@@ -96,7 +96,8 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ### Unique Index on ecm:id in MongoDB
 
-NXP-28406 adds the management of duplicates in MongoDB. For already initialized database, tt requires that a unique index is added on the field `ecm:id`. Run this command to find if an index, non unique, is already set for this field
+[NXP-28406](https://jira.nuxeo.com/browse/NXP-28406) adds the management of duplicates in MongoDB. For already initialized database, it requires to add a unique index on the field `ecm:id`.</br>
+Run this command to check if an index, non unique, is already set for this field:
 ```
 db.default.getIndexes().forEach(function(idx) {
   if (idx.key['ecm:id'] && !idx.unique) {
@@ -104,25 +105,27 @@ db.default.getIndexes().forEach(function(idx) {
   }
 })
 ```
-Then remove this index with
+Then remove this index with:
 ```
 db.default.dropIndex({"ecm:id": 1})
 ```
 
-Note that adding the unique index will fail if the database contains duplicates. This command helps to find the duplicates
+Note that, adding the unique index will fail if the database contains duplicates. </br>
+This command helps to find the duplicates:
 ```
 db.default.aggregate(
      {"$group": {"_id": "$ecm:id", "count": {"$sum": 1}, objectids: {$addToSet: "$_id"}}},
-     {"$match": {"count": {"$gt": 1}}}, 
+     {"$match": {"count": {"$gt": 1}}},
      {"$project": {"ecm:id": "$_id", "objectids": "$objectids", "_id": 0}}
 )
 ```
-Run the following command to remove a duplicated document. Caution: you must keep **one** object with a given ecm:id.
+Run the following command to remove a duplicated document:</br>
+(Caution: you must keep **one** object with a given ecm:id)
 ```
 db.default.remove({"_id": ObjectId(".......")})
 ```
 
-To manually create the index, run
+To manually create the index, run:
 ```
 db.default.createIndex({"ecm:id": 1}, {unique: true, background: true})
 ```
@@ -135,7 +138,8 @@ nuxeo.server.ajp.enabled=true
 nuxeo.server.ajp.secretRequired=true
 nuxeo.server.ajp.secret=changeme
 ```
-The secret must also be mentioned in the mod_proxy_ajp configuration, see https://httpd.apache.org/docs/trunk/mod/mod_proxy_ajp.html for more.
+
+The secret must also be mentioned in the `mod_proxy_ajp` configuration, see https://httpd.apache.org/docs/trunk/mod/mod_proxy_ajp.html for more.
 
 If one is sure that the AJP port cannot be accessed by any untrusted hosts, then the following configuration is possible:
 ```
@@ -143,20 +147,26 @@ nuxeo.server.ajp.enabled=true
 nuxeo.server.ajp.secretRequired=false
 ```
 
-### Concurrent repository and direction initialization with multiple Nuxeo nodes
+### Concurrent Repository and Direction Initialization With Multiple Nuxeo Nodes
 
 In cluster mode, the document repository and the directories are initialized non-concurrently in a cluster-wide critical section.
 
-When a cluster node attempts to initialize its repository (or a directory) and another node is already doing the same thing, it will wait for 1 min for the cluster-wide lock to be released and do its own initialization. If this timeout expires, then initialization fails with an exception.
+When a cluster node attempts to initialize its repository (or a directory), and another node is already doing the same thing, it will wait for 1 min for the cluster-wide lock to be released and do its own initialization. If this timeout expires, then initialization fails with an exception.
 
-The following two nuxeo.conf properties can be used to change this timeout:
+The following two `nuxeo.conf` properties can be used to change this timeout:
 ```
 org.nuxeo.repository.cluster.start.duration=1m
 org.nuxeo.directory.cluster.start.duration=1m
 ```
-In case where there is a startup crash while a lock is held, it may be necessary to manually cleanup the key/value store of its locks. The keys corresponding to the locks are visible when using Redis with `KEYS nuxeo:cluster:*` for instance `nuxeo:cluster:start-repository-default` or `nuxeo:cluster:start-directories`. For a MongoDB key/value store, the keys are stored in the collection `kv.cluster`
 
-### Concurrent Scheduler Service initialization with multiple Nuxeo nodes
+In case where there is a startup crash while a lock is held, it may be necessary to manually cleanup the key/value store of its locks. The keys corresponding to the locks are visible when using Redis with `KEYS nuxeo:cluster:*`, for instance:</br>
+`nuxeo:cluster:start-repository-default`</br>
+or</br>
+`nuxeo:cluster:start-directories`.
+
+For a MongoDB key/value store, the keys are stored in the collection `kv.cluster`
+
+### Concurrent Scheduler Service Initialization With Multiple Nuxeo Nodes
 
 In cluster mode, the scheduler service is initialized non-concurrently in a cluster-wide critical section.
 
@@ -166,35 +176,39 @@ The following two `nuxeo.conf` property can be used to change this timeout:
 ```
 org.nuxeo.scheduler.cluster.start.duration=1m
 ```
+
 In case where there is a startup crash while a lock is held, it may be necessary to manually cleanup the key/value store of its locks. The key corresponding to the lock is `nuxeo:cluster:start-scheduler`. For a MongoDB key/value store, the key is stored in the collection `kv.cluster`.
 
 ### S3 Direct Upload Compatible with S3-like Storage
 
 S3 direct upload now has new `nuxeo.conf` parameters to configure a custom S3 endpoint and activate path-style access:
 ```
-    nuxeo.s3storage.transient.endpoint (default empty)
-    nuxeo.s3storage.transient.pathstyleaccess (default false)
+nuxeo.s3storage.transient.endpoint (default empty)
+nuxeo.s3storage.transient.pathstyleaccess (default false)
 ```
+
 For example:
 ```
 nuxeo.s3storage.transient.endpoint=https://s3.us-east-1.amazonaws.com
 nuxeo.s3storage.transient.pathstyleaccess=true
 ```
-Note that path-style access is incompatible with accelerate mode (NXP-27657), see S3 documentation.
+Note that, path-style access is incompatible with accelerate mode ([NXP-27657](https://jira.nuxeo.com/browse/NXP-27657)), see S3 documentation.
 
 ### S3 Transfer Acceleration
 
 The S3 connector now has new `nuxeo.conf` parameters to configure S3 accelerate mode:
 ```
-    nuxeo.s3storage.accelerateMode (default false)
-    nuxeo.s3storage.transient.accelerateMode (default false) (for direct upload)
+nuxeo.s3storage.accelerateMode (default false)
+nuxeo.s3storage.transient.accelerateMode (default false) (for direct upload)
 ```
+
 For example:
 ```
 nuxeo.s3storage.accelerateMode=true
 nuxeo.s3storage.transient.accelerateMode=true
 ```
-Note that accelerate mode is incompatible with path-style access (NXP-28526), see S3 documentation.
+
+Note that, accelerate mode is incompatible with path-style access ([NXP-28526](https://jira.nuxeo.com/browse/NXP-28526)), see S3 documentation.
 
 ### New S3 Blob Provider Implementation
 
@@ -206,14 +220,14 @@ nuxeo.core.binarymanager=org.nuxeo.ecm.blob.s3.S3BlobProvider
 
 ### S3BinaryManager Cleanup
 
-The startup process that cleans up old (> 1 day) S3 multipart uploads can be disabled by setting the `nuxeo.conf` property:
+The startup process that cleans up old (> 1 day) S3 multipart uploads can be disabled by setting this `nuxeo.conf` property:
 ```
 nuxeo.s3storage.multipart.cleanup.disabled=true
 ```
 
-### Nuxeo Stream latency metrics in Datadog
+### Nuxeo Stream Latency Metrics in Datadog
 
-Nuxeo Stream metrics about consumer lags and latencies can now be exposed to Datadog using stream.sh command:
+Nuxeo Stream metrics about consumer lags and latencies can now be exposed to Datadog using `stream.sh` command:
 ```
 ./bin/stream.sh datadog -k --codec avro -l ALL -i 60 --api-key <DATADOG_API_KEY> --tags "staging:foo,project:bar"
 ```
@@ -225,6 +239,7 @@ The list of exposed metrics are:
     nuxeo.streams.pos: the last checkpointed position of the consumer in the stream, in record.
     nuxeo.streams.end: the end offset of a stream, in record.
 ```
+
 The additional Datadog tags are:
 ```
     stream: the name of the stream
@@ -233,20 +248,20 @@ The additional Datadog tags are:
     host: the host name that has reported the metric (should not be useful because metrics are global to the cluster)
 ```
 
-### Glacier low-level implementation
+### Glacier Low-Level Implementation
 
 The hotfix 23 adds new APIs:
 ```
     BlobProvider.updateBlob(BlobUpdateContext) can now use a BlobUpdateContext.withRestoreForDuration(Duration)
-    BlobProvider.getStatus(ManagedBlob) -> BlobStatus 
+    BlobProvider.getStatus(ManagedBlob) -> BlobStatus
         BlobStatus.getStorageClass()
         BlobStatus.isDownloadable()
         BlobStatus.getDownloadableUntil() -> Instant
 ```
 
-### Disable HTTP proxy for S3 connections
+### Disable HTTP Proxy for S3 Connections
 
-To disable usage of the proxy environment variables (nuxeo.http.proxy.*) for the connection to the S3 endpoint, defined the `nuxeo.conf` property:
+To disable usage of the proxy environment variables (nuxeo.http.proxy.\*) for the connection to the S3 endpoint, defined the `nuxeo.conf` property:
 ```
 nuxeo.s3.proxy.disabled=true
 ```
