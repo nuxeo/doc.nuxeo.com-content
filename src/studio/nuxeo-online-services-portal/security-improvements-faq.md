@@ -55,6 +55,10 @@ When authenticating, you need to provide your username (unchanged), and a _[toke
 
 #### Timeline
 
+{{#> callout type='info' heading='Info'}}
+MFA go live has been pushed back due to customers requests for additional preparation time. Updated timeline is available below.
+{{/callout}}
+
 ##### Before March 31
 
 No MFA setup is requested.
