@@ -99,7 +99,21 @@ This factor needs to be set up starting from March 31, but won't come into effec
 MFA is used only in the browser. It is not needed when using command line tools to automate tasks.
 {{/callout}}
 
-## FAQ
+#### Multi-Factor Authentication FAQ
+
+##### Who is Impacted by the Change?
+
+This change only applies to people using Nuxeo Studio and Nuxeo Marketplace (called developers from here on). It won't have any effect on people working every day in your Nuxeo Server instance, even if this instance is hosted in Nuxeo Cloud.
+
+#### Can you Provide a Summary of the Change?
+
+When authenticating into Nuxeo Studio or Nuxeo Marketplace, developers will be requested to setup a second authentication factor using their phone starting from March 31. This second factor will be saved for later use, but won't be requested until April 14. Starting from April 14, the second factor will be requested if it is was not saved yet, then will be asked once a week during authentication.
+
+#### I see an Error 403 When Trying to Setup MFA
+
+MFA can only be setup when this option becomes active for everyone, currently scheduled on March 31. Until then, any attempt will result in an error 403, as our service provider does not provide an option to allow opt-in.
+
+## General FAQ
 
 ### What is a Token?
 
