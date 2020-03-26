@@ -265,7 +265,7 @@ We reference here sample JSON objects expected by the Resources Endpoints, that 
 
 {{/panel}}
 
-A few useful information to understand the data exposed on the document:
+A few useful items to understand the data exposed on the document:
 
 *   **properties** is an object of metadata values. Each property of this object is the XPath of the field ( [`dc:title`](http://dctitle) for example), and the value of the field. For multivalued fields, we have an array of values. Note that the content of this property may vary depending on which schemas you requested using the `X-NXDocumentProperties` header, as well as which properties [you configured on your document type]({{page space='nxdoc60' page='how-to-define-a-document-type'}}), using Nuxeo Studio. See the [data modeling documentation]({{page space='nxdoc' page='data-modeling'}}) for more information.
 *   **facets** lists the [facets]({{page version='' space='nxdoc' page='available-facets'}}) that were declared on your document type.
@@ -287,14 +287,11 @@ When doing a POST request to create a document, you only need to specify a few e
   "name": "myDocumentName",
   "properties": {
     "dc:title": "My Document Title",
-    /* Timezone is not needed for dates, but you can add it if you want to */
-    "myschemaprefix:aDateProperty": "2050-12-25",
-    /* Multivalued properties have to be sent as javascript arrays... */
-    "myschemaprefix:aStringMultivaluedProperty": ["some", "text", "here"],
-    /* Complex properties have to be sent as javascript objects... */
-    "myschemaprefix:aComplexProperty": {"firstName": "Chuck", "lastName": "Norris", "birthDate": "1968-12-25"}
-    /* ...So complex multivalued properties are sent as? Object arrays of course! */
-    "myschemaprefix:aMultivaluedComplexProperty": [
+    "demo:aDateProperty": "2050-12-25",
+    "demo:aStringMultivaluedProperty": ["some", "text", "here"],
+    "demo:aComplexProperty": {"firstName": "Chuck", "lastName": "Norris",
+      "birthDate": "1968-12-25"},
+    "demo:aMultivaluedComplexProperty": [
       {"firstName": "Chuck", "lastName": "Norris", "birthDate": "1968-12-25"},
       {"firstName": "Bruce", "lastName": "Lee", "birthDate": "1965-10-21"}
     ]
@@ -303,6 +300,14 @@ When doing a POST request to create a document, you only need to specify a few e
 ```
 
 {{/panel}}
+
+A few useful items to understand the data exposed on the document:
+
+*   `demo:aDateProperty` - Timezones are not needed for dates, but you can add it if you want to.
+*   `demo:aStringMultivaluedProperty` - Multivalued properties must be sent as JavaScript arrays.
+*   `demo:aComplexProperty` - Complex properties must be sent as JavaScript objects.
+*   `demo:aMultivaluedComplexProperty` - Complex multi-valued properties are sent as arrays of JavaScript objects.
+
 {{! /multiexcerpt}}
 
 ### Body for a PUT Request
@@ -317,13 +322,16 @@ A PUT request is even simpler: you only need to send the entity type and the met
 {
   "entity-type": "document",
   "properties": {
-    /* Update title, don't touch the rest */
     "dc:title": "My Updated Title"
   }
 }
 ```
 
-{{/panel}}{{! /multiexcerpt}}
+{{/panel}}
+
+Partial updates to documents are allowed.  In this case, update `dc:title` but don't touch the rest.
+
+{{! /multiexcerpt}}
 
 ## directoryEntry
 
