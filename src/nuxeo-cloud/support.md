@@ -36,14 +36,16 @@ Our standard maintenance window is 7 days a week:
 - EU customers: 12AM - 2AM CET
 - US customers: 12AM - 2AM EST
 
-Exceptions can be made to accomodate peak user times.
+Exceptions can be made to accommodate peak user times.
 
-### HotFixes
+## Hotfixes, Patches, 3rd Party Updates and LTS releases
 
-Applied the first week of every month
-- Pre-Prod: First Tuesday of the Month
-- Prod:  First Thursday of the Month
+The Cloud team will proactively deploy and manage the following monthly, during the first week of each month.
+- Nuxeo Hotfixes
+- Server Patches
+- 3rd party service updates
+- Infrastructure updates
 
-### Infrastructure/3rd Party Service Updates and Security Patches
-
-Included with our Monthly HotFix updates although some may be done outside of this window
+The LTS upgrade process will be coordinated with customers and the appropriate development team/professional services to identify risks and minimize impact
+- LTS releases are supported up to 3 years after the release has been made public.
+- A non-compliance fee may be imposed for customers who do not upgrade to the new LTS after an LTS release is no longer supported.
