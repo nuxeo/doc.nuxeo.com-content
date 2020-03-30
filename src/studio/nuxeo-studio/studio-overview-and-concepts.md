@@ -164,6 +164,15 @@ Nevertheless, due to browser support to some shadow DOM features and third-party
 Nuxeo Studio supports the latest stable version of the following browsers:
 {{! multiexcerpt name='webui-supported-browsers'}}
  - Google Chrome
- - Firefox
- - <a href="https://www.mozilla.org/en-US/firefox/enterprise/" target="_blank">Firefox ESR</a>
+ - Mozilla Firefox
+ - <a href="https://www.mozilla.org/en-US/firefox/enterprise/" target="_blank">Mozilla Firefox ESR</a>
 {{! /multiexcerpt}}
+
+### Checking for Browser Version
+#### Google Chrome
+
+<a href="https://support.google.com/chrome/answer/95414?co=GENIE.Platform%3DDesktop&hl=en" target ="_blank">Check your current version</a> and compare it to the latest <a href="https://support.google.com/chrome/a/answer/7679408?hl=en" target="_blank">release notes</a>.
+
+#### Mozilla Firefox
+
+<a href="https://support.mozilla.org/en-US/kb/find-what-version-firefox-you-are-using" target ="_blank">Check your current version</a> and compare it to the latest <a href="https://www.mozilla.org/firefox/notes" target="_blank">release notes</a> or <a href="https://www.mozilla.org/en-US/firefox/organizations/notes/" target="_blank">ESR version release notes</a>.
