@@ -161,10 +161,11 @@ When creating a new application, the usual configuration steps are:
 <!--Nuxeo Studio Designer and parts of Modeler use the recent W3C standard Web Components and Google Polymer framework (legacy mode). The [Google Polymer framework](https://www.polymer-project.org/) comes with [polyfills for Web Components](https://www.webcomponents.org/polyfills), a library that extends the support of web components standard to more browsers.
 Nevertheless, due to browser support to some shadow DOM features and third-party libraries used in Nuxeo Studio, some browsers are not supported.-->
 
-Nuxeo Studio supports the following browsers:
+Nuxeo Studio supports the latest stable version of the following browsers:
 {{! multiexcerpt name='webui-supported-browsers'}}
  - Google Chrome
  - Firefox
+ - <a href="https://www.mozilla.org/en-US/firefox/enterprise/" target="_blank">Firefox ESR</a>
 {{! /multiexcerpt}}
 <!--
 {{#> callout type='warning' heading='Exceptions on Firefox'}}
