@@ -329,7 +329,7 @@ A PUT request is even simpler: you only need to send the entity type and the met
 
 {{/panel}}
 
-Partial updates to documents are allowed.  In this case, update `dc:title` but don't touch the rest.
+Partial updates to documents are allowed. In this case, update `dc:title` but not the rest.
 
 {{! /multiexcerpt}}
 
