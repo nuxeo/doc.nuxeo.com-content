@@ -167,8 +167,3 @@ Nuxeo Studio supports the latest stable version of the following browsers:
  - Firefox
  - <a href="https://www.mozilla.org/en-US/firefox/enterprise/" target="_blank">Firefox ESR</a>
 {{! /multiexcerpt}}
-<!--
-{{#> callout type='warning' heading='Exceptions on Firefox'}}
-Firefox is not fully supported on Nuxeo Studio Designer. Currently, view editors - with widget preview on forms - are not supported.
-{{/callout}}
--->
