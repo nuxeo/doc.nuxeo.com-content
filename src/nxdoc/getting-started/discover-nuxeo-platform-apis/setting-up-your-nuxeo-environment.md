@@ -356,15 +356,15 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
 4.  Install the addons required for this tutorial.
 
     ```
-    $ docker exec -ti mynuxeo bin/nuxeoctl mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
+    $ docker exec -ti mynuxeo bin/nuxeoctl mp-install nuxeo-web-ui nuxeo-platform-getting-started
     ```
 
 5.  Validate the dependency resolution step.
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.4.3/nuxeo-web-ui-2.4.0/nuxeo-platform-getting-started-1.3.3
-      Packages to download (3):      nuxeo-web-ui:2.4.0, nuxeo-dam:6.4.3, nuxeo-platform-getting-started:1.3.3
+      Installation order (2):        nuxeo-web-ui-2.4.0/nuxeo-platform-getting-started-1.3.3
+      Packages to download (2):      nuxeo-web-ui:2.4.0, nuxeo-platform-getting-started:1.3.3
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -375,7 +375,6 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
     $ docker exec mynuxeo bin/nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.3)
      addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.4.0)
      addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.3)
     ```
@@ -385,7 +384,7 @@ The addon Getting started with the Nuxeo Platform will add some business logic a
 7.  Start the server:
 
     ```bash
-    $ docker exec mynuxeo bin/nuxeoctl start  
+    $ docker exec mynuxeo bin/nuxeoctl start
     [...]
     Server started with process ID 973.
 
@@ -453,15 +452,15 @@ To install a Nuxeo Package:
 3.  Install the addons required for this tutorial.
 
     ```
-    $ nuxeoctl mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
+    $ nuxeoctl mp-install nuxeo-web-ui nuxeo-platform-getting-started
     ```
 
 4.  Validate the dependency resolution step.
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.4.3/nuxeo-web-ui-2.4.0/nuxeo-platform-getting-started-1.3.3
-      Packages to download (3):      nuxeo-web-ui:2.4.0, nuxeo-dam:6.4.3, nuxeo-platform-getting-started:1.3.3
+      Installation order (2):        nuxeo-web-ui-2.4.0/nuxeo-platform-getting-started-1.3.3
+      Packages to download (2):      nuxeo-web-ui:2.4.0, nuxeo-platform-getting-started:1.3.3
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -472,7 +471,6 @@ To install a Nuxeo Package:
     $ nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.3)
      addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.4.0)
      addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.3)
     ```
@@ -559,18 +557,18 @@ To install a Nuxeo Package:
 
     ```
     # Linux and macOS
-    $ ./nuxeoctl mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
+    $ ./nuxeoctl mp-install nuxeo-web-ui nuxeo-platform-getting-started
 
     # Windows
-    $ .\nuxeoctl.bat mp-install nuxeo-dam nuxeo-web-ui nuxeo-platform-getting-started
+    $ .\nuxeoctl.bat mp-install nuxeo-web-ui nuxeo-platform-getting-started
     ```
 
 4.  Validate the dependency resolution step.
 
     ```
     Dependency resolution:
-      Installation order (3):        nuxeo-dam-6.4.3/nuxeo-web-ui-2.4.0/nuxeo-platform-getting-started-1.3.3
-      Packages to download (3):      nuxeo-web-ui:2.4.0, nuxeo-dam:6.4.3, nuxeo-platform-getting-started:1.3.3
+      Installation order (2):        nuxeo-web-ui-2.4.0/nuxeo-platform-getting-started-1.3.3
+      Packages to download (2):      nuxeo-web-ui:2.4.0, nuxeo-platform-getting-started:1.3.3
 
     Do you want to continue (yes/no)? [yes]
     ```
@@ -582,7 +580,6 @@ To install a Nuxeo Package:
     $ ./nuxeoctl mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.3)
      addon     started	nuxeo-web-ui (id: nuxeo-web-ui-2.4.0)
      addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.3)
 
@@ -590,7 +587,6 @@ To install a Nuxeo Package:
     $ .\nuxeoctl.bat mp-list
     [...]
     Local packages:
-     addon     started	nuxeo-dam (id: nuxeo-dam-6.4.3)
      addon     started  nuxeo-web-ui (id: nuxeo-web-ui-2.4.0)
      addon     started	nuxeo-platform-getting-started (id: nuxeo-platform-getting-started-1.3.3)
     ```
