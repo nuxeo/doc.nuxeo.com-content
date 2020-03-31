@@ -162,17 +162,19 @@ When creating a new application, the usual configuration steps are:
 Nevertheless, due to browser support to some shadow DOM features and third-party libraries used in Nuxeo Studio, some browsers are not supported.-->
 
 Nuxeo Studio supports the latest stable version of the following browsers:
-{{! multiexcerpt name='webui-supported-browsers'}}
+{{! multiexcerpt name='studio-supported-browsers'}}
  - Google Chrome
  - Mozilla Firefox
- - <a href="https://www.mozilla.org/en-US/firefox/enterprise/" target="_blank">Mozilla Firefox ESR</a>
+ - [Mozilla Firefox ESR](https://www.mozilla.org/en-US/firefox/enterprise/)
 {{! /multiexcerpt}}
 
-### Checking for Browser Version
-#### Google Chrome
+### Checking Browser Version
 
-<a href="https://support.google.com/chrome/answer/95414?co=GENIE.Platform%3DDesktop&hl=en" target ="_blank">Check your current version</a> and compare it to the latest <a href="https://support.google.com/chrome/a/answer/7679408?hl=en" target="_blank">release notes</a>.
+**Google Chrome**
 
-#### Mozilla Firefox
+[Check your current version](https://support.google.com/chrome/answer/95414?co=GENIE.Platform%3DDesktop&hl=en) and compare it to the latest [release notes](https://support.google.com/chrome/a/answer/7679408?hl=en).
 
-<a href="https://support.mozilla.org/en-US/kb/find-what-version-firefox-you-are-using" target ="_blank">Check your current version</a> and compare it to the latest <a href="https://www.mozilla.org/firefox/notes" target="_blank">release notes</a> or <a href="https://www.mozilla.org/en-US/firefox/organizations/notes/" target="_blank">ESR version release notes</a>.
+
+**Mozilla Firefox**
+
+[Check your current version](https://support.mozilla.org/en-US/kb/find-what-version-firefox-you-are-using) and compare it to the latest [release notes](https://www.mozilla.org/firefox/notes) or [ESR version release notes](https://www.mozilla.org/en-US/firefox/organizations/notes/).
