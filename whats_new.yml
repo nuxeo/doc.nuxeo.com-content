@@ -1,17 +1,17 @@
 default:
   whats_new:
+    - url: /nxdoc/web-ui-automated-translation-labels/
+      date: '2020-03-30'
+      title: 'HOWTO: Translation Label Conventions'
+    - url: /nxdoc/how-to-create-and-customize-nuxeo-actions-menu/
+      date: '2020-03-31'
+      title: 'HOWTO: Create an Actions Menu'
     - url: /nxdoc/how-to-filter-data-in-directory-suggestion/
       date: '2020-01-13'
       title: 'HOWTO: Filter Data in Suggestions'
     - url: /studio/how-to-prepopulate-metadata-creation-document/
       date: '2020-01-08'
       title: 'Howto: Prepopulate Metadata at Creation'
-    - url: /nxdoc/how-to-assign-a-task-to-the-user-manager/
-      date: '2019-12-19'
-      title: 'HOWTO: Assign a Task to the User Manager'
-    - url: /nxdoc/how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform/
-      date: '2019-12-12'
-      title: 'HOWTO: Change the Default Document Type When Importing a File in the Nuxeo Platform?'
     - url: /studio/nuxeo-studio-community-cookbook/
       date: '2020-01-06'
       title: 'Nuxeo Studio Community Cookbook'
