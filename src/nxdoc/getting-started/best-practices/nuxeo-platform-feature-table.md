@@ -1239,7 +1239,7 @@ The tables below use the following notation:
 </tr>
 <tr>
     <td>Video storyboard</td>
-    <td colspan="1">[Nuxeo DAM](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam)</td>
+    <td colspan="1">Default distribution</td>
     <td>N/A</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
@@ -1263,7 +1263,7 @@ The tables below use the following notation:
 </tr>
 <tr>
     <td>Media specific view of documents</td>
-    <td colspan="1">[Nuxeo DAM](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam)</td>
+    <td colspan="1">Default distribution</td>
     <td>NR</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
@@ -1280,7 +1280,7 @@ The tables below use the following notation:
 </tr>
 <tr>
     <td>Conversion to additional formats</td>
-    <td>[Nuxeo DAM](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam)</td>
+    <td>Default distribution</td>
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>&#10003;</td>

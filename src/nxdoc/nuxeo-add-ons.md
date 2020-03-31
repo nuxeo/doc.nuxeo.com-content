@@ -360,21 +360,6 @@ Public
 </tr>
 <tr>
 <td colspan="1">
-Nuxeo DAM<br/>
-`nuxeo-dam`
-</td>
-<td colspan="1">
-Public
-</td>
-<td colspan="1">
-[Documentation]({{page page='digital-asset-management-dam'}})
-</td>
-<td colspan="1">
-[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-dam)
-</td>
-</tr>
-<tr>
-<td colspan="1">
 Nuxeo Datadog Reporter<br/>
 `nuxeo-datadog-reporter`
 </td>
@@ -1058,7 +1043,7 @@ Deprecated since LTS 2019 (10.10)
 </td>
 <td colspan="1">
 [Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-virtualnavigation?version=1.3.3)<br/>
-Deprecated since LTS 2016 (8.10)  
+Deprecated since LTS 2016 (8.10)
 </td>
 </tr>
 <tr>
