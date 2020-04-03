@@ -465,6 +465,21 @@ Public
 </tr>
 <tr>
 <td colspan="1">
+Nuxeo Enhanced Viewer<br/>
+`nuxeo-arender`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-enhanced-viewer'}})
+</td>
+<td colspan="1">
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-arender)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Nuxeo Federation Framework<br/>
 `nuxeo-simflofy`
 </td>
