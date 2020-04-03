@@ -53,7 +53,7 @@ A new filtering option is available in the event handlers screen. When using the
 
 ### Other Noteworthy Mentions
 
-{{! multiexcerpt name='studio-updates-2020-02-04-bugfix'}}
+{{! multiexcerpt name='studio-updates-2020-04-bugfix'}}
 - In workflows, the "follow only first true transition" option can be checked ([NXS-5806](https://jira.nuxeo.com/browse/NXS-5806))
 
 {{! /multiexcerpt}}
