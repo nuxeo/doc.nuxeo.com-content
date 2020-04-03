@@ -13,26 +13,35 @@ Discover upcoming and recent changes in Nuxeo Studio.
 
 ## Upcoming Changes
 
-### Automatic Translations Merge
+### Default Role Change
+On new Studio projects, developers will get write access by default to the [underlying Studio Git repository]({{page page='nuxeo-studio-designer-git-access'}}) instead of read. It will still be possible to switch back to read access as an option.
 
-Currently, managing translations require to know for each feature whether the translation keys have to be entered in Studio Modeler or Designer, depending on the feature type. Server-side features like workflows and vocabularies have to be translated using the Modeler properties files, UI related features using Designer JSON files.
+### Widgets Drag and Drop Instead of Mode
+When configuring a document type or workflow task layout, each property in the tree will offer a <a href="https://jira.nuxeo.com/browse/NXS-5775" target="_blank">list of available widgets</a> (e.g. text input, text area) you can drag and drop instead of a view and edit mode.
 
-With this change, no need to know where to configure your translation anymore! Whenever you configure a key in Studio Designer, the equivalent key is created in Studio Modeler if it doesn't exist, and vice versa. This merge happens just before the download of your studio package (e.g. when doing a hot reload) so that it doesn't interfere with your work.
+### Properties Filtering in Layouts
+When configuring layouts visually, a quick search will let you filter through the options you can drag and drop.
+
+### Translation Keys in Layouts
+To facilitate translating your application, when saving configuration in Studio Modeler, <a href="https://jira.nuxeo.com/browse/NXS-5826" target="_blank">translation keys will be automatically generated</a> for their content. Studio Designer will <a href="https://jira.nuxeo.com/browse/NXS-5827" target="_blank">use these keys</a> by default instead of generating hardcoded labels.
+
+### Simplified Layout Blocks Experience
+<a href="https://jira.nuxeo.com/browse/NXS-5836" target="_blank">Several improvements</a> will simplify the way you can create and <a href="https://jira.nuxeo.com/browse/NXS-5778" target="_blank">use</a> layout blocks in your configuration.
 
 ### More Upcoming Changes
 
-[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.29.0'%29) is available in our bug tracking tool.
+[More information about upcoming changes](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.30.0'%29) is available in our bug tracking tool.
 
 ## Recently Released Changes
 
-{{{multiexcerpt 'studio-updates-2020-02-03-changes' page='studio-updates-2020-02-03'}}}
+{{{multiexcerpt 'studio-updates-2020-04-changes' page='studio-updates-2020-04'}}}
 
 ### Other Noteworthy Mentions
 
-{{{multiexcerpt 'studio-updates-2020-02-03-bugfix' page='studio-updates-2020-02-03'}}}
+{{{multiexcerpt 'studio-updates-2020-04-bugfix' page='studio-updates-2020-04'}}}
 
 ## Learn More
-[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.28.0'%29) is available in our bug tracking tool.
+[More information about released changes and fixed bugs](https://jira.nuxeo.com/issues/?jql=project %3D NXS AND fixVersion IN %28'3.29.0'%29) is available in our bug tracking tool.
 
 ---
 
@@ -40,8 +49,9 @@ With this change, no need to know where to configure your translation anymore! W
 
 | &nbsp;Release&nbsp;Date&nbsp;                                          | Summary                                                                                                                                                                                                                |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [February / March 2019]({{page page='studio-updates-2020-02-03'}})     | Custom icons support, security improvements |
-| [January 2019]({{page page='studio-updates-2020-01'}})     | Automatically switch to a new branch |
+| [April 2019]({{page page='studio-updates-2020-02-04'}})     | Improved Visual Layout Configuration Experience |
+| [February / March 2020]({{page page='studio-updates-2020-02-03'}})     | Custom icons support, security improvements |
+| [January 2020]({{page page='studio-updates-2020-01'}})     | Automatically switch to a new branch |
 | [December 2019]({{page page='studio-updates-2019-12'}})     | Layout Inheritance for faster layout configuration |
 | [October / November 2019]({{page page='studio-updates-2019-10-11'}})     | Easier access to other services, scripts creation from Studio Modeler business logic screens |
 | [August / September 2019]({{page page='studio-updates-2019-09'}})      | Package listing performance improvements, automation scripting scrolling bug fixed |
