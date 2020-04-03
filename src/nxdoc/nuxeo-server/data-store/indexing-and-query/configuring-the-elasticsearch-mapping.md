@@ -388,7 +388,7 @@ SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.ngram) ANALYZER(lowercase_ana
 
 * * *
 
-<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">
+<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-4">
 
 {{! Please update the label in the Content by Label macro below. }}
 
@@ -398,7 +398,7 @@ SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.ngram) ANALYZER(lowercase_ana
 - [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
 - [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 
-{{/panel}}</div><div class="column medium-6">
+{{/panel}}</div><div class="column medium-4">
 
 {{! Please update the label and target spaces in the Content by Label macro below. }}
 
@@ -407,5 +407,14 @@ SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.ngram) ANALYZER(lowercase_ana
 - [Full-Text Queries]({{page page='full-text-queries'}})
 - [Indexing and Query]({{page page='indexing-and-query'}})
 - [Indexing and Querying How-To Index]({{page page='indexing-and-querying-how-to-index'}})
+
+{{/panel}}</div>
+<div class="column medium-4">
+
+{{! Please update the label and target spaces in the Content by Label macro below. }}
+
+{{#> panel heading='Nuxeo Studio Community Cookbook'}}
+
+- [Geodistance and Google Map Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/geodistance-search-and-google-map)
 
 {{/panel}}</div></div>
