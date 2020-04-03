@@ -36,6 +36,22 @@ Feel free to submit your own contribution, following our [guidelines and templat
   </tr>
   <tr>
     <td>
+    ![geodistance.png](nx_asset://439fd2e0-751c-4387-9603-bc2451589e3e ?w=150,border=true)
+    </td>
+    <td>[Geodistance and Google Map Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/geodistance-search-and-google-map)</td>
+    <td>Nuxeo</td>
+    <td>Layouts, Search, Automation</td>
+  </tr>
+  <tr>
+    <td>
+    ![CreateFromTemplate.png](nx_asset://1d18ff33-5085-45f7-af63-51e3fc2f650f ?w=150,border=true)
+    </td>
+    <td>[Create a new document from a template list](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/create-from-template)</td>
+    <td>Nuxeo</td>
+    <td>Document Templates</td>
+  </tr>
+  <tr>
+    <td>
     ![mail2.png](nx_asset://854e06c0-4e9a-4f9e-82a0-96f02437c16f ?w=150,border=true)
     </td>
     <td>[Send Emails From Nuxeo Web UI](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/send-email-from-webui)</td>
@@ -49,46 +65,6 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>[Display a Field With Currency Format](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/currency)</td>
     <td>Nuxeo</td>
     <td>Layout</td>
-  </tr>
-  <tr>
-    <td>
-    ![cascading.png](nx_asset://a44def05-39fe-419b-9fb0-e7687b67c1fb ?w=150,border=true)
-    </td>
-    <td>[Cascading Fields](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/cascading-fields)</td>
-    <td>Nuxeo</td>
-    <td>Layout</td>
-  </tr>
-  <tr>
-    <td>
-    ![highlight-logo.png](nx_asset://dde8cbf0-b7c2-4b77-b02a-0bd0416d40ac ?w=150,border=true)
-    </td>
-    <td>[Custom Searches with Highlight](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/highlight)</td>
-    <td>Nuxeo</td>
-    <td>Search</td>
-  </tr>
-  <tr>
-    <td>
-    ![barcode-widget.png](nx_asset://37549a16-4953-4a6a-ba30-d96784a79f07 ?w=150,border=true)
-    </td>
-    <td>[Barcode Widget](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/barcode-widget)</td>
-    <td>Nuxeo</td>
-    <td>Layout</td>
-  </tr>
-  <tr>
-    <td>
-    ![script-utils-2.png](nx_asset://80bd0887-8105-4c1d-9c40-ad52e753d0ea ?w=150,border=true)
-    </td>
-    <td>[Automation Script Utilities](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/automation-script-utils)</td>
-    <td>Nuxeo</td>
-    <td>Business Logics</td>
-  </tr>
-  <tr>
-    <td>
-    ![comments.png](nx_asset://38adf904-b98c-4050-96d3-4be11652eab1 ?w=150,border=true)
-    </td>
-    <td>[Comment Indexing](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/comment-indexing)</td>
-    <td>Nuxeo</td>
-    <td>Search</td>
   </tr>
 </table>
 
@@ -125,6 +101,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <th>Contributor</th>
   <th>Category</th>
 </tr>
+    <tr>
+    <td>
+    ![geodistance.png](nx_asset://439fd2e0-751c-4387-9603-bc2451589e3e ?w=150,border=true)
+    </td>
+    <td>[Geodistance and Google Map Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/geodistance-search-and-google-map)</td>
+    <td>Nuxeo</td>
+    <td>Layouts, Search, Automation</td>
+  </tr>
   <tr>
     <td>
     ![mail2.png](nx_asset://854e06c0-4e9a-4f9e-82a0-96f02437c16f ?w=150,border=true)
@@ -425,8 +409,16 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <td>![dark.png](nx_asset://5d0bd1d3-5efb-4ae4-9711-b98f1e8e8c8c ?w=150,border=true)</td>
   <td>[Email Templates](https://github.com/nuxeo/nuxeo-studio-custom-elements/blob/master/modules/nuxeo/email-templates-nuxeo)</td>
   <td>Nuxeo</td>
-  <td>Templates</td>
+  <td>Email Templates</td>
 </tr>
+  <tr>
+    <td>
+    ![CreateFromTemplate.png](nx_asset://1d18ff33-5085-45f7-af63-51e3fc2f650f ?w=150,border=true)
+    </td>
+    <td>[Create a new document from a template list](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/create-from-template)</td>
+    <td>Nuxeo</td>
+    <td>Document Templates</td>
+  </tr>
 </table>
 
 ## Integration
