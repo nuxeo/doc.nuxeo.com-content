@@ -192,7 +192,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <td>
   ![dashboard-cookbook.png](nx_asset://470c956e-ef24-42d2-b768-938e00bbaa2c ?w=150,border=true)
   </td>
-  <td>[Visual Dashboard with Pictures](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/dashboard)</td>
+  <td>[Visual Dashboard with Pictures](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/dashboard) :warning: **DEPRECATED** :warning:</td>
   <td>Nuxeo</td>
   <td>Dashboard</td>
 </tr>
