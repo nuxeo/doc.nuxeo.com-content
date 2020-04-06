@@ -98,8 +98,7 @@ section_parent: dam
   {{/panel}}
   </div>
   <div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
-
-- [Visual Dashboard with Pictures](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/dashboard)
+  
 - [Sets the video poster and search thumbnail](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/video-thumbnail)
 - [Additional video conversions](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/video-conversions)
 
