@@ -9,9 +9,9 @@ default:
     branch: '910'
     dev_browser_path: '910/nxdoc'
     versions:
-      - label: FT
       - label: LTS 2019
-        url_path: '1010'
+      - label: Next
+        url_path: 'next'
       - label: LTS 2017
         url_path: '910'
         is_current_version: true
