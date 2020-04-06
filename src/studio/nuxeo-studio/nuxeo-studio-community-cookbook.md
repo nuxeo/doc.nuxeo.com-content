@@ -46,7 +46,7 @@ Feel free to submit your own contribution, following our [guidelines and templat
     <td>
     ![CreateFromTemplate.png](nx_asset://1d18ff33-5085-45f7-af63-51e3fc2f650f ?w=150,border=true)
     </td>
-    <td>[Create a new document from a template list](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/create-from-template)</td>
+    <td>[Create a New Document From a Template List](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/create-from-template)</td>
     <td>Nuxeo</td>
     <td>Document Templates</td>
   </tr>
@@ -89,8 +89,15 @@ Feel free to submit your own contribution, following our [guidelines and templat
   <td>Nuxeo</td>
   <td>Layout</td>
 </tr>
+<tr>
+  <td>
+  ![script-utils-2.png](nx_asset://80bd0887-8105-4c1d-9c40-ad52e753d0ea ?w=150,border=true)
+  </td>
+  <td>[Automation Script Utilities](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/automation-script-utils)</td>
+  <td>Nuxeo</td>
+  <td>Business Logic</td>
+</tr>
 </table>
-
 
 ## Layouts
 
@@ -138,6 +145,14 @@ Feel free to submit your own contribution, following our [guidelines and templat
   ![highlight-logo.png](nx_asset://dde8cbf0-b7c2-4b77-b02a-0bd0416d40ac ?w=150, border=true)
   </td>
   <td>[Custom Searches with Highlight](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/highlight)</td>
+  <td>Nuxeo</td>
+  <td>Search</td>
+</tr>
+<tr>
+  <td>
+  ![comments.png](nx_asset://38adf904-b98c-4050-96d3-4be11652eab1 ?w=150,border=true)
+  </td>
+  <td>[Comment Indexing](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/comment-indexing)</td>
   <td>Nuxeo</td>
   <td>Search</td>
 </tr>
