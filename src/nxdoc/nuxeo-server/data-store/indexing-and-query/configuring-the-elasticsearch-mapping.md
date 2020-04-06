@@ -408,11 +408,9 @@ SELECT * FROM Document WHERE /*+ES: INDEX(dc:title.ngram) ANALYZER(lowercase_ana
 - [Indexing and Query]({{page page='indexing-and-query'}})
 - [Indexing and Querying How-To Index]({{page page='indexing-and-querying-how-to-index'}})
 
-{{/panel}}</div>
+{{/panel}}
+</div>
 <div class="column medium-4">
-
-{{! Please update the label and target spaces in the Content by Label macro below. }}
-
 {{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
 - [Geodistance and Google Map Display](https://github.com/nuxeo/nuxeo-studio-community-cookbook/tree/master/modules/nuxeo/geodistance-search-and-google-map)
