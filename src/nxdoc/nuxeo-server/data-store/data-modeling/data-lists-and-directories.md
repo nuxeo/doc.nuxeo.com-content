@@ -182,7 +182,36 @@ The following control how data are initially loaded into the directory:
 
 *   `dataFile`: CSV file from which data are read to populate the directory, depending on the other following properties.
 *   `dataFileCharacterSeparator`: The character used to separate entries in the `dataFile`. (Defaults to `,`)
-*   `createTablePolicy`: Indicates how the `dataFile` will be used to populate the directory. Three values are allowed: `never` if the `dataFile` is never used (the default), `on_missing_columns` if the `dataFile` is used to create missing columns (when the directory is created or each time a new column is added, due to a schema change), `always` if the `dataFile` is used to create the directory at each restart of the Nuxeo Platform.
+*   `createTablePolicy`: Indicates how to control the creation/update of underlying table for SQL, or collection for MongoDB. Three values are allowed:
+    *   `never`: if nuxeo must not create/update table structure.
+    *   `on_missing_columns`: if there is a schema change to apply.
+    *   `always`: if nuxeo should **drop** the table and re-create it.
+*   `dataLoadingPolicy`: Indicates how the `dataFile` will be used to populate the directory. Five valuse are allowed:
+    *   `legacy`: (the default).
+    *   `never_load`: `dataFile` is never used.
+    *   `skip_duplicate`: `dataFile` may contain existing entries that will be ignored.
+    *   `reject_duplicate`: `dataFile` must **not** contain existing entries.
+    *   `update_duplicate`: `dataFile` may contains existing entries that will be updated.
+
+See below all the policy combinations and their effects (AD is for autoincrement directory):
+
+| CreateTablePolicy    | DataLoadingPolicy  | Create table | Load data  | AD* support |
+| -------------------- | ------------------ | ------------ | ---------- | ----------- |
+| `never`              | `legacy`           | No           | No         | -           |
+| `never`              | `never_load`       | No           | No         | -           |
+| `never`              | `skip_duplicate`   | No           | Yes        | No          |
+| `never`              | `reject_duplicate` | No           | Yes        | No          |
+| `never`              | `update_duplicate` | No           | Yes        | No          |
+| `on_missing_columns` | `legacy`           | First time   | First time | No          |
+| `on_missing_columns` | `never_load`       | First time   | No         | No          |
+| `on_missing_columns` | `skip_duplicate`   | First time   | Yes        | No          |
+| `on_missing_columns` | `reject_duplicate` | First time   | Yes        | No          |
+| `on_missing_columns` | `update_duplicate` | First time   | Yes        | No          |
+| `always`             | `legacy`           | Yes          | Yes        | Yes         |
+| `always`             | `never_load`       | Yes          | Yes        | Yes         |
+| `always`             | `skip_duplicate`   | Yes          | Yes        | Yes         |
+| `always`             | `reject_duplicate` | Yes          | Yes        | Yes         |
+| `always`             | `update_duplicate` | Yes          | Yes        | Yes         |
 
 The following control how entries are cached:
 
@@ -231,7 +260,7 @@ The following control directory visibility and access:
         <user>Administrator</user>
       </permission>
      </permissions>
-     ```
+    ```
      To disallow any access (except for the system), use the group `__Nobody__`:
     ```
     <permissions>
