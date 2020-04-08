@@ -795,7 +795,7 @@ Content-ID: input
 ```
 
 In both examples you can see that the following `Accept` header is used:
-`Accept: application/json, **/**`.
+`Accept: application/json, */*`.
 
 This header is necessary because it specifies that the client accept as a response either a JSON encoded entity or a blob that may have any type. The `application/json` is the first content type to help the server choose the format of the response when returning an encoded object.
 
