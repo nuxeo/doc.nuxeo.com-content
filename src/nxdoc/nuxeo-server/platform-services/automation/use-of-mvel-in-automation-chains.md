@@ -510,6 +510,8 @@ The expression can return any value, it is not limited to strings. For example, 
 
 ## Scripting Context
 
+Note: The Expression Editor in Nuxeo Studio displays the Browse Context drop down and its related features, which contain all the features explained in this documentation.
+
 *   **Document**: The Document object represents the input document, when the operation takes a document as input. You can use it to get a property value of it:
     `@{Document.path}`, `@{Document["yourschema:yourfiekd"]}`, `@{Document.domain.title}`
     You can also use methods provided by the `DocumentWrapper`, see below.
@@ -529,16 +531,12 @@ The expression can return any value, it is not limited to strings. For example, 
     *   ".." will be replaced by path of parent of input document.
 
 
-*   **CurrentDate**: You can use the `CurrentDate` object, that provides various utility methods, see below.
+*   **CurrentDate**: The `CurrentDate` object provides various utility methods to handle dates (current date, date in one month, format a date, etc.), see "Date Wrapper" below.
+
+*   **CurrentUser**: The `CurrentUser` object provides various utility methods returning information about the current user (login, first/last name, mail, etc.), see "User Wrapper" below.
 
 *   **Context.principal.model.getPropertyValue("schema:field")**: Returns the current user property. By default users implements user.xsd schema. So if you want for instance the company name, `Context.principal.model.getPropertyValue("user:company")`. But if your users implements other schemas, you choose your "schema prefix (or name if don't set) : field name"
-*   **CurrentUser.actingUser**: In a workflow context, all the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). This variable allows you to fetch the current user. This can also be useful when the operation "Users and groups > Login as" has been used in order to retrieve the current username.
 
-    {{#> callout type='info' }}
-
-    Note that `currentUser` is an alias for `CurrentUser`.
-
-    {{/callout}}
 *   **Event:** In an event handler context, the Event object can be used to access some of the event's properties. For instance **`@{Event.getName()}`** will return the event name.
 
 ## {{> anchor 'doc-wrapper'}}Document Wrapper
@@ -596,7 +594,7 @@ Some other methods are provided to display the current date as a string:
 
 - `CurrentDate.hour`: returns the hour of the current time;
 
-- `CurrentDate.minut`: returns the minutes of the current time;
+- `CurrentDate.minute`: returns the minutes of the current time;
 
 - `CurrentDate.second`: returns the seconds of the current time;
 
@@ -624,6 +622,29 @@ Some others can be used when building an NXQL query to express dates relatively 
 
 - To create a date that you can set on a date property from a string, you can use `@{new java.text.SimpleDateFormat("yyyy-MM-dd").parse(date_str)}` where `date_str` is a Context variable containing a value such as "2019-09-26". You must pass to `SimpleDateFormat` the format of this date, so the parse() method work.
 {{/callout}}
+
+
+## {{> anchor 'user-wrapper'}}User Wrapper
+
+The `CurrentUser` objects wraps useful functions to get informations about the current user:
+
+*   **CurrentUser.name**: Returns the user ID (used for loging in)
+
+*   **User information**: `CurrentUser.email`, `CurrentUser.firstName`, `CurrentUser.lastName`, `CurrentUser.company`.
+
+*   **User information - advanced**: There also are accessors to get more advanced information about the current user.
+    *   `CurrentUser["xpath"]` returns the value of a field in the `user` schema
+    *   `CurrentUser.allGroups` returns an array with all the groups the user belongs to. It is a Java `List<String>`. To test if the current user is member of the "marketing" groupt, you can use `CurrentUser.allGroups.contains("marketing")`
+
+*   **CurrentUser.principal** returns the `NuxeoPrincipal` Java object, allowing for getting more tuned/detailed information (see the Source Code on GitHub or the Java Doc). For example: `CurrentUser.principal.isMemberOf("marketing")`, `CurrentUser.principal.isAdministrator()`, `CurrentUser.principal.isAnonymous()`, `CurrentUser.principal.isTransient()`, etc.
+
+*   **CurrentUser.actingUser**: In a workflow context, all the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). This variable allows you to fetch the current user. This can also be useful when the operation "Users and groups > Login as" has been used in order to retrieve the current username.
+
+    {{#> callout type='info' }}
+
+    Note that `currentUser` is an alias for `CurrentUser`.
+
+    {{/callout}}
 
 ## {{> anchor 'fn-object'}}Functions
 
