@@ -482,32 +482,40 @@ history:
 ---
 {{#> callout type='info' }} {{! excerpt}}
 
-This documentation focuses on the MVEL expression language, used in automation chains. For a broader look on that subject, have a look at the [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}}) page.
+This documentation focuses on the MVEL expression language, used in automation chains. For a broader look on that subject, have a look at the [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}}) page. Also, it is very unlikely that you will need to use MVEL from inside an Automation Script.
 
 {{! /excerpt}} {{/callout}}
 
 ## How to Use Scripting Features in Parameters Values
 
-Values you put in operations parameters are provided with scripting capability.
+Values you put in operations parameters are provided with scripting capability. Basically, when the system evaluates the value, it detects wether it is a raw value or an expression to be evaluated/resolved. The syntax used to tell the system you are passing an expression to be evaluated is `@{the_expression}`.
 
-When filling in a parameter value (like "value" parameter of "update property" in the case we want to update the title of the a document), there are three options:
+So, for example, say we want to set the `value` parameter of the `Document.SetProperty` operation to set the `dc:title` field of a document:
 
-*   `Title`: There is no interpretation (default behavior), the parameter is taken "as is", which means that the title will be "Title".
+*   If we pass just `The New Title`, there is no interpretation (default behavior), the parameter is taken "as is", which means that the title will be "The New Title".
 
-*   `expr:Title` starts with a "`expr:`". The system will interpret the value "Title" as a scripting expression. In that case it means that the value of the title will be updated with the content of the variable _Title_
+*   If we pass `@{Title}`, the system will interpret `Title` (inside the brackets) as a scripting expression. In that case it means that the value of the title will be updated with the content of the variable _Title_ (that will have likely be set previously)
 
-*   `expr:The real @{Title}`: When there is the use of `@{my_variable_name}` in a script expression, the expression between bracket is considered as a variable name and resolved as a string, and the whole expression is evaluated as the concatenation of the various substrings (included the one interpreted). In our case, if the `Title` variable contains the string literal "Story", the title value will be "The real Story".
+*   The expression between brackets can be concatenated with a non-interpreted value. `The New @{Title}` will set the title to "The New " plus the content of the variable _Title_.
 
-When the script is evaluated, you can use both contextual objects and embedded functions.
+Notice it is also possible to use the `expr:` prefix: `expr:Title` is the same as `@{Title}` and `expr:The New  @{Title}` is the same as `The New @{Title}`.
+
+The expression between brackets (`@{the_expression}`) is evaluated/calculated and can be contexttual objects or embedded helper functions:
+
+* You can put your own Context Variables (Using `Context.SetVar` previously in your chain)
+* And Nuxeo also provides objects for your convenience. We will discuss these objects below. For example, the `Document`, `CurrentUser`, `CurrentDate` objects, that provide accessors to facilitate getting values from the current context. `@{Document.title}`returns the title of the current document. `@{CurrentUser.mail}` the mail address of the current user ( typically used with the `SendMail` operation). `@{CurrentDate.days(7).calendar}` returns a date "in 7 days" (for example, stored in `dc:expired`).
+
+The expression can return any value, it is not limited to strings. For example, if we have an `order:total_price` floating point field, we can set its value (still using the `Document.SetProperty` operation) with `@{Document["order:quantity"] * Document["order:price"]`.
+
 
 ## Scripting Context
 
 *   **Document**: The Document object represents the input document, when the operation takes a document as input. You can use it to get a property value of it:
-    `expr:Document["dc:title"]`
-    You can also use methods provided by the Document Wrapper, see below.
+    `@{Document.path}`, `@{Document["yourschema:yourfiekd"]}`, `@{Document.domain.title}`
+    You can also use methods provided by the `DocumentWrapper`, see below.
 
-*   **variable_name**: If you set a context variable in a previous operation, you can access it in the parameter value by just referring to its name. In the following sample, if there was a `SetVariable` before in the operation flow that put the path of a document in the variable `path_of_the_workspace`, the parameter's value will be this path.
-    `expr:path_of_the_workspace`
+*   **variable_name**: If you set a context variable in a previous operation, you can access it in the parameter value by just referring to its name. In the following sample, if there was a `Context.SetVar` before in the operation flow that put the path of a document in the variable `path_of_the_workspace`, the parameter's value will be this path.
+    `@{path_of_the_workspace}` (or `expr:path_of_the_workspace`)
 
     {{#> callout type='note' }}
 
@@ -520,7 +528,8 @@ When the script is evaluated, you can use both contextual objects and embedded f
     *   "." will be replaced by path of input document;
     *   ".." will be replaced by path of parent of input document.
 
-*   **CurrentDate**: You can use the `CurrentDate` object, that will provide various utility methods to get the current date value, see below.
+
+*   **CurrentDate**: You can use the `CurrentDate` object, that provides various utility methods, see below.
 
 *   **Context.principal.model.getPropertyValue("schema:field")**: Returns the current user property. By default users implements user.xsd schema. So if you want for instance the company name, `Context.principal.model.getPropertyValue("user:company")`. But if your users implements other schemas, you choose your "schema prefix (or name if don't set) : field name"
 *   **CurrentUser.actingUser**: In a workflow context, all the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). This variable allows you to fetch the current user. This can also be useful when the operation "Users and groups > Login as" has been used in order to retrieve the current username.
