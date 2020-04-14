@@ -624,10 +624,10 @@ Some others can be used when building an NXQL query to express dates relatively 
   For example:
  `@{Fn.calendar(Document["dc:created"]).format("yyyy-MM-dd")}`
 
-- To set a date property based on the current date, use the `CurrentDate` object, and ends the expression with the `calendar` wrapper.</br>
+- To set a date property based on the current date, use the `CurrentDate` object, and ends the expression with the `calendar` or the `date` wrapper.</br>
   For example, to set up a field to:
   - today: `@{CurrentDate.days(0).calendar}`
-  - in 7 days: `@{CurrentDate.days(7).calendar}`
+  - in 7 days: `@{CurrentDate.days(7).date}`
 
 - To create a date that you can set on a date property from a string, you can use `@{new java.text.SimpleDateFormat("yyyy-MM-dd").parse(date_str)}` where `date_str` is a Context variable containing a value such as "2019-09-26". You must pass to `SimpleDateFormat` the format of this date, so the parse() method work.
 {{/callout}}
@@ -730,9 +730,10 @@ Usage of `empty` variable allows user to evaluate expression to empty string. Fo
 
 As MVEL will consider values to be string by default, you can set hard-coded values depending on the type of the field. To set an integer value to ten, write `@{10}`. To reset a field to null: `@{null}`. To set a string field to "" you can use `@{""}`
 
+
 ## Date Management Example
 
-Notice: These examples are for usage in Automation. if you are writing an Automation Script, you also can use the JavaScript native `Date` object.
+Notice: These examples are for usage in Automation. if you are writing an Automation Script, you also can use the JavaScript native `Date` object (while the `CurrentDate`  object is available in Automation Scripting if you need it.).
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
@@ -740,11 +741,11 @@ Operation
 
 </th><th colspan="1">
 
-Destination field
+Parameter
 
 </th><th colspan="1">
 
-Source value
+Expected value
 
 </th><th colspan="1">
 
@@ -752,87 +753,7 @@ Expression Example
 
 </th></tr><tr><td colspan="1">
 
-Services > Task.Create
-
-</td><td colspan="1">
-
-due date
-
-</td><td colspan="1">
-
-Current Date
-
-</td><td colspan="1">
-
-`@{CurrentDate.date}`
-
-</td></tr><tr><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-Next Month
-
-</td><td colspan="1">
-
-`@{CurrentDate.month(1).date}`
-
-</td></tr><tr><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-Given Date
-
-</td><td colspan="1">
-
-2012-03-15T00:00:00Z
-
-</td></tr><tr><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-Date Property from the input Document
-
-</td><td colspan="1">
-
-`@{Document.getProperty("dc:expired")}`
-
-</td></tr><tr><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-Date Property from the input Document
-
-</td><td colspan="1">
-
-`@{Document["dc:expired"]}`
-
-</td></tr><tr><td colspan="1">
-
-Document > Document.SerProperty
+Document > SetProperty
 
 </td><td colspan="1">
 
@@ -840,7 +761,7 @@ value
 
 </td><td colspan="1">
 
-Current Date
+Today, now
 
 </td><td colspan="1">
 
@@ -848,23 +769,7 @@ Current Date
 
 </td></tr><tr><td colspan="1">
 
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-Next Month
-
-</td><td colspan="1">
-
-`@{CurrentDate.month(1).date}`
-
-</td></tr><tr><td colspan="1">
-
-Document > Update property
+Document > SetProperty
 
 </td><td colspan="1">
 
@@ -872,22 +777,59 @@ value
 
 </td><td colspan="1">
 
-Current Date
+In one month
 
 </td><td colspan="1">
 
-`@{CurrentDate.date}`
+`@{CurrentDate.month(1).date}`
+
+</td></tr><tr><td colspan="1">
+
+Document > SetProperty
+
+</td><td colspan="1">
+
+value
+
+</td><td colspan="1">
+
+Hard-coded date
+
+</td><td colspan="1">
+
+2020-07-14T00:00:00Z
+
+</td></tr><tr><td colspan="1">
+
+Document > SetProperty
+
+</td><td colspan="1">
+
+value
+
+</td><td colspan="1">
+
+Date property from the input document
+
+</td><td colspan="1">
+
+`@{Document["achema:aDateField"]}`
 
 </td></tr></tbody></table></div>
 
-If you have an error like that in your logs:
+
+Adding values (days, months, ...) to a date field requires some manipulation (it is easier when using Automation Sc ripting with JavaScripot), please read [this blob](https://www.nuxeo.com/blog/manage-dates-automation-chains/) on the topic.
+
+If you have this error in `server.log`...
 
 ```
 No type adapter found for input: class org.nuxeo.ecm.automation.core.scripting.DateWrapper and output class java.util.Date
 
 ```
 
-This means that you are presenting a DateWrapper value type into a field that waits for a`java.util.Date` object.
+... it means you are presenting a `DateWrapper` value type into a field that waits for a`java.util.Date` object.
+
+
 
 ## User and Group Management Example
 
@@ -897,23 +839,19 @@ Operation
 
 </th><th colspan="1">
 
-Destination field
+Parameter
 
 </th><th colspan="1">
 
-Source value
+Expected value
 
 </th><th colspan="1">
 
 Expression Example
 
-</th><th colspan="1">
-
-Remark
-
 </th></tr><tr><td colspan="1">
 
-Document > Update property
+Document > Document.SetProperty
 
 </td><td colspan="1">
 
@@ -921,19 +859,15 @@ value
 
 </td><td colspan="1">
 
-String
+Hard coded user
 
 </td><td colspan="1">
 
-Administrator
-
-</td><td colspan="1">
-
-&nbsp;
+user:jdoe
 
 </td></tr><tr><td colspan="1">
 
-Document > Update property
+Document > Document.SetProperty
 
 </td><td colspan="1">
 
@@ -941,117 +875,79 @@ value
 
 </td><td colspan="1">
 
-Static value
+Hard coded group
 
 </td><td colspan="1">
 
-Current User
-
-</td><td colspan="1">
-
-&nbsp;
+group:marketing
 
 </td></tr><tr><td colspan="1">
 
-Services > Create task
+Document > Document.SetProperty
 
 </td><td colspan="1">
 
-additional list of actors prefixed ids
+value
 
 </td><td colspan="1">
 
-String
+Current user
 
 </td><td colspan="1">
 
-`user:Administrator`
-
-</td><td colspan="1">
-
-&nbsp;
+`@{CurrentUser.name}`
 
 </td></tr><tr><td colspan="1">
 
-&nbsp;
+Notification > Document.Mail
 
 </td><td colspan="1">
 
-&nbsp;
+from
 
 </td><td colspan="1">
 
-String
+Current user mail
 
 </td><td colspan="1">
 
-`group:administrators`
-
-</td><td colspan="1">
-
-&nbsp;
+`@{CurrentUser.mail}`
 
 </td></tr><tr><td colspan="1">
 
-&nbsp;
+Notification > Document.Mail
 
 </td><td colspan="1">
 
-variable name for actors prefixed ids
+to
 
 </td><td colspan="1">
 
-In Context
+All users of the "ClaimAdjusters" group
 
 </td><td colspan="1">
 
-variable
-
-</td><td colspan="1">
-
-This variable can be set by the "User & Group > Get Users and Groups" with "prefix identifiers" checked.
-
-</td></tr><tr><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-Current User
-
-</td><td colspan="1">
-
-`user:@{CurrentUser.name}`
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td></tr><tr><td colspan="1">
-
-User & Group > Get Users and Groups&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
-
-</td><td colspan="1">
-
-&nbsp;
+`@{Fn.getEmailsFromGroup("marketing")}`
 
 </td></tr></tbody></table></div>
+
+#### using `Auth.Login`/`Auth.Logout`
+During the flow of a chain, we must change the permissions on a document. For example, Alice is creating a MarketingCampaign and assigns Bob as a creative. Now, Bob must be able to upload files to the campaign: We need to change Bob's permissions on the MarketingCampaign to give him ReadWrite access (assuming he only had Read permission). Alice has not enough rights to change the permission: Calling Document.AddPermission will fail. In our chain, we can do the following instead:
+
+```
+. . . previous operations . . .
+Auth.LoginAs
+Document.AddPermission:
+  permission: ReadWrite
+  acl: local
+  blockInheritance: false
+  notify: false
+  username: user:bob
+Auth.Logout
+. . . next operations . . .
+```
+
+
 
 ## Numbers Management example
 
@@ -1061,39 +957,64 @@ Operation
 
 </th><th colspan="1">
 
-Destination field
+Parameter(s)
 
 </th><th colspan="1">
 
-Source value
+Expected value
 
 </th><th colspan="1">
 
 Expression Example
 
-</th><th colspan="1">
-
-Remark
-
 </th></tr><tr><td colspan="1">
 
-Conversion > Resize a picture
+Conversion > Picture.Resize
 
 </td><td colspan="1">
 
-maxHeight/maxWidth
+maxHeight
 
 </td><td colspan="1">
 
-integer
+Hard coded values
 
 </td><td colspan="1">
 
-10
+100
+
+</td></tr><tr><td colspan="1">
+
+Conversion > Picture.Resize
 
 </td><td colspan="1">
 
-&nbsp;
+maxHeight
+
+</td><td colspan="1">
+
+Value from a field of input document
+
+</td><td colspan="1">
+
+`@{Document["aSchema:maxHeightForImages"]}`
+
+</td></tr><tr><td colspan="1">
+
+Document > Document.SetProperty
+
+</td><td colspan="1">
+
+value
+
+</td><td colspan="1">
+
+Add two numeric fields
+
+</td><td colspan="1">
+
+`@{Document["invoice:amount"] + Document["invoice:tax"]}`
+(the `xpath` parameter of the operation would be `@{Document["invoice:total"]}`
 
 </td></tr></tbody></table></div>
 
