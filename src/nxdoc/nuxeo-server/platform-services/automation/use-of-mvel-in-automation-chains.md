@@ -482,19 +482,21 @@ history:
 ---
 {{#> callout type='info' }} {{! excerpt}}
 
-This documentation focuses on the MVEL expression language, used in automation chains. For a broader look on that subject, have a look at the [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}}) page. Also, it is very unlikely that you will need to use MVEL from inside an Automation Script.
+This documentation focuses on the MVEL expression language, used in automation chains. For a broader look on that subject, have a look at the [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}}) page.
+
+Also, it is very unlikely that you will need to use MVEL from inside an Automation Script (using an `@{expression}` value). Still, form Automation Scripting, you have access to very useful objects and helpers (`Document ,  ``CurrentUser`, `Fn`, etc., see below)
 
 {{! /excerpt}} {{/callout}}
 
 ## How to Use Scripting Features in Parameters Values
 
-Values you put in operations parameters are provided with scripting capability. Basically, when the system evaluates the value, it detects wether it is a raw value or an expression to be evaluated/resolved. The syntax used to tell the system you are passing an expression to be evaluated is `@{the_expression}`.
+When using automation, Values you put in operation parameters are provided with scripting capability (when using JavaScript AZutomation, parameters are a JavaScript expression, string, number, function returning a value, etc.). Basically, when the system evaluates the value, it detects wether it is a raw value or an expression to be evaluated/resolved. The syntax used to tell the system you are passing an expression to be evaluated is `@{the_expression}`.
 
 So, for example, say we want to set the `value` parameter of the `Document.SetProperty` operation to set the `dc:title` field of a document:
 
-*   If we pass just `The New Title`, there is no interpretation (default behavior), the parameter is taken "as is", which means that the title will be "The New Title".
+*   If we pass `The New Title`, there is no interpretation (default behavior), the parameter is taken "as is", which means that the title will be "The New Title".
 
-*   If we pass `@{Title}`, the system will interpret `Title` (inside the brackets) as a scripting expression. In that case it means that the value of the title will be updated with the content of the variable _Title_ (that will have likely be set previously)
+*   If we pass `@{Title}`, the system interprets `Title` (inside the brackets) as a scripting expression. In that case it means the value of the title will be updated with the content of the variable _Title_ (that will have be set previously)
 
 *   The expression between brackets can be concatenated with a non-interpreted value. `The New @{Title}` will set the title to "The New " plus the content of the variable _Title_.
 
@@ -503,20 +505,20 @@ Notice it is also possible to use the `expr:` prefix: `expr:Title` is the same a
 The expression between brackets (`@{the_expression}`) is evaluated/calculated and can be contexttual objects or embedded helper functions:
 
 * You can put your own Context Variables (Using `Context.SetVar` previously in your chain)
-* And Nuxeo also provides objects for your convenience. We will discuss these objects below. For example, the `Document`, `CurrentUser`, `CurrentDate` objects, that provide accessors to facilitate getting values from the current context. `@{Document.title}`returns the title of the current document. `@{CurrentUser.mail}` the mail address of the current user ( typically used with the `SendMail` operation). `@{CurrentDate.days(7).calendar}` returns a date "in 7 days" (for example, stored in `dc:expired`).
+* Nuxeo provides objects for your convenience. We will discuss these objects below. For example, the `Document`, `CurrentUser`, `CurrentDate` objects provide accessors to facilitate getting values from the current context. `@{Document.title}`returns the title of the current document. `@{CurrentUser.mail}` the mail address of the current user (typically used with the `SendMail` operation). `@{CurrentDate.days(7).calendar}` returns a date "in 7 days" (for example, stored in `dc:expired`).
 
 The expression can return any value, it is not limited to strings. For example, if we have an `order:total_price` floating point field, we can set its value (still using the `Document.SetProperty` operation) with `@{Document["order:quantity"] * Document["order:price"]`.
 
 
 ## Scripting Context
 
-Note: The Expression Editor in Nuxeo Studio displays the Browse Context drop down and its related features, which contain all the features explained in this documentation.
+Note: The Expression Editor in Nuxeo Studio displays the _Browse Context_ drop down and its related features, which contain all the features explained in this documentation.
 
 *   **Document**: The Document object represents the input document, when the operation takes a document as input. You can use it to get a property value of it:
     `@{Document.path}`, `@{Document["yourschema:yourfiekd"]}`, `@{Document.domain.title}`
     You can also use methods provided by the `DocumentWrapper`, see below.
 
-*   **variable_name**: If you set a context variable in a previous operation, you can access it in the parameter value by just referring to its name. In the following sample, if there was a `Context.SetVar` before in the operation flow that put the path of a document in the variable `path_of_the_workspace`, the parameter's value will be this path.
+*   **variable_name**: If you set a context variable in a previous operation, you can access it in the parameter value by just referring to its name. In the following sample, we previously used `Context.SetVar` to store the path of a document in the `path_of_the_workspace` variable. The parameter's value will be this path:
     `@{path_of_the_workspace}` (or `expr:path_of_the_workspace`)
 
     {{#> callout type='note' }}
@@ -535,9 +537,16 @@ Note: The Expression Editor in Nuxeo Studio displays the Browse Context drop dow
 
 *   **CurrentUser**: The `CurrentUser` object provides various utility methods returning information about the current user (login, first/last name, mail, etc.), see "User Wrapper" below.
 
-*   **Context.principal.model.getPropertyValue("schema:field")**: Returns the current user property. By default users implements user.xsd schema. So if you want for instance the company name, `Context.principal.model.getPropertyValue("user:company")`. But if your users implements other schemas, you choose your "schema prefix (or name if don't set) : field name"
+*   **Event**: In the context of an Automation Chain called from an Event Handler, the `Event` object can be used to access some of the event's properties. For instance **`@{Event.getName()}`** will return the event name.
 
-*   **Event:** In an event handler context, the Event object can be used to access some of the event's properties. For instance **`@{Event.getName()}`** will return the event name.
+*   **Fn**: The `Fn` object provides several utilities to access miscellaneous information (see below): Get the label of a vocabulary given its ID, get all the emails of a group of users, get a sequence number, etc.
+
+*   Other objects are available, less often used:
+
+    *   `Env` allows for getting the value of a configuraiton parameter (see below)
+    *   `WorkflowVariables` and `NodeVariables` allow for retrieving the values of your variables in the context of a workflow
+    *   `Context` is maintained for compatibility reason. All its objects are available in other objects, or can be accessed an easier way. For example, to get the value of a Context variable, you can write `@{Context["the_variable"]}`, but `@{the_variable}` looks more readable. The same would go for
+
 
 ## {{> anchor 'doc-wrapper'}}Document Wrapper
 
@@ -570,7 +579,7 @@ Note that `currentDocument` is an alias for `Document`.
 {{/callout}}
 
 {{#> callout type='info' }}
-Also note that we listed here the main accessors. `Document` is a `DocumentWrapper` and you can also [check the code](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-core/src/main/java/org/nuxeo/ecm/automation/core/scripting/DocumentWrapper.java) to see all the available accessors.</br>
+Also note that we listed here only the main accessors. `Document` is a `DocumentWrapper` and you can also [check the code](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-core/src/main/java/org/nuxeo/ecm/automation/core/scripting/DocumentWrapper.java) to see all the available accessors.</br>
 For example, you can also use `hasFacet(String facet)`, `hasSchema(String schemaName)`, etc. Make sure to select the branch corresponding to the version of Nuxeo you are using.
 {{/callout}}
 
@@ -611,7 +620,7 @@ Some others can be used when building an NXQL query to express dates relatively 
 *   ...
 
 {{#> callout type='tip' }}
-- If you want to work on a date that is held by a property of your document, you first need to get a `DateWrapper` object, by using: `@{Fn.calendar(Document["dc:created"])}`</br>
+- If you want to work on a date stored in a field of your document, you first need to get a `DateWrapper` object, by using: `@{Fn.calendar(Document["dc:created"])}`</br>
   For example:
  `@{Fn.calendar(Document["dc:created"]).format("yyyy-MM-dd")}`
 
@@ -626,15 +635,15 @@ Some others can be used when building an NXQL query to express dates relatively 
 
 ## {{> anchor 'user-wrapper'}}User Wrapper
 
-The `CurrentUser` objects wraps useful functions to get informations about the current user:
+The `CurrentUser` objects wraps useful functions to get information about the current user:
 
-*   **CurrentUser.name**: Returns the user ID (used for loging in)
+*   **CurrentUser.name**: Returns the user ID (used for logging in)
 
 *   **User information**: `CurrentUser.email`, `CurrentUser.firstName`, `CurrentUser.lastName`, `CurrentUser.company`.
 
 *   **User information - advanced**: There also are accessors to get more advanced information about the current user.
     *   `CurrentUser["xpath"]` returns the value of a field in the `user` schema
-    *   `CurrentUser.allGroups` returns an array with all the groups the user belongs to. It is a Java `List<String>`. To test if the current user is member of the "marketing" groupt, you can use `CurrentUser.allGroups.contains("marketing")`
+    *   `CurrentUser.allGroups` returns an array with all the groups the user belongs to. It is a Java `List<String>`. To test if the current user is member of the "marketing" group, you can use `CurrentUser.allGroups.contains("marketing")`
 
 *   **CurrentUser.principal** returns the `NuxeoPrincipal` Java object, allowing for getting more tuned/detailed information (see the Source Code on GitHub or the Java Doc). For example: `CurrentUser.principal.isMemberOf("marketing")`, `CurrentUser.principal.isAdministrator()`, `CurrentUser.principal.isAnonymous()`, `CurrentUser.principal.isTransient()`, etc.
 
@@ -642,7 +651,7 @@ The `CurrentUser` objects wraps useful functions to get informations about the c
 
     {{#> callout type='info' }}
 
-    Note that `currentUser` is an alias for `CurrentUser`.
+    `currentUser` is an alias for `CurrentUser`.
 
     {{/callout}}
 
@@ -701,12 +710,14 @@ In order to do this you should:
 The scripting language used is MVEL. See the [MVEL language guide](https://en.wikibooks.org/wiki/Transwiki:MVEL_Language_Guide). You can use all the features of the scripting language itself.
 
 For instance, you can use the substring method, when dealing with paths:
-`expr: Document.path.substring(26)`.
+`@{Document.path.substring(26)}`.
+
+This is especially useful if you need to change the case of strings: No need to write a Java plugin for this, you can just use `toLowerCase()` or `toUpperCase()`. This expression converts the `order:label` string fieled to all upper case: `@{Document["order:label"].toUpperCase()}`.
 
 Testing if a variable is null:
 
 ```
-@{WorkflowVariables["mail"] == empty?"VoidChain":"MyChain"}
+@{WorkflowVariables["mail"] == empty ? "VoidChain" : "MyChain"}
 ```
 
 Usage of `empty` variable allows user to evaluate expression to empty string. For instance to set a property of a document to "" (empty string), you can define the value with `empty:`
@@ -715,7 +726,13 @@ Usage of `empty` variable allows user to evaluate expression to empty string. Fo
 @{empty}
 ```
 
+(you also can use `@{""}`).
+
+As MVEL will consider values to be string by default, you can set hard-coded values depending on the type of the field. To set an integer value to ten, write `@{10}`. To reset a field to null: `@{null}`. To set a string field to "" you can use `@{""}`
+
 ## Date Management Example
+
+Notice: These examples are for usage in Automation. if you are writing an Automation Script, you also can use the JavaScript native `Date` object.
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
@@ -735,7 +752,7 @@ Expression Example
 
 </th></tr><tr><td colspan="1">
 
-Services > Create Task
+Services > Task.Create
 
 </td><td colspan="1">
 
@@ -811,11 +828,11 @@ Date Property from the input Document
 
 </td><td colspan="1">
 
-`@{Document.getProperty("dc:expired")}`
+`@{Document["dc:expired"]}`
 
 </td></tr><tr><td colspan="1">
 
-Document > Update property
+Document > Document.SerProperty
 
 </td><td colspan="1">
 
