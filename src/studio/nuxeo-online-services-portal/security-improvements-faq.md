@@ -13,8 +13,6 @@ Nuxeo Online Services is being improved to enhance security. This page details w
 
 ## Authenticating Against Nuxeo Online Services
 
-The following changes apply starting from March 2nd, 2020.
-
 #### From your Browser - What Changes?
 
 - To access Nuxeo Online Services, you need to enter your _email address_ instead of your username in the login page. If you registered for a trial using Google, use the login with Google button.
@@ -35,7 +33,7 @@ The following changes apply starting from March 2nd, 2020.
 --}}
 ![auth-nuxeo-com](nx_asset://885d8e2c-1831-4d9d-ac50-6835a7598799 ?border=true)
 
-- Multi factor authentication can be setup to secure your account. It remains optional, and will be enforced at a later stage. The [multi-factor authentication](#mfa) section in this page provides further details.
+- Multi factor authentication is enforced. The [multi-factor authentication](#mfa) section in this page provides further details.
 
 #### From the Command Line - What Changes?
 
@@ -49,31 +47,9 @@ To use our APIs, for instance in the following cases:
 
 When authenticating, you need to provide your username (unchanged), and a _[token](#what-is-a-token)_ instead of a password (new). Refer to our [token management]({{page space='studio' page='token-management'}}) documentation for further details.
 
-## Upcoming Changes
-
 ### {{> anchor 'mfa'}}Multi-Factor Authentication
 
-#### Timeline
-
-{{#> callout type='info' heading='Info'}}
-MFA go live has been pushed back due to customers requests for additional preparation time. Updated timeline is available below.
-{{/callout}}
-
-##### Before March 31
-
-No MFA setup is requested.
-
-Nothing changes at this stage.
-
-##### Between March 31 and April 14, 2020
-
-Multi-factor authentication starts being requested, but not in effect yet.
-
-During this transition period, setting up the MFA will be necessary to finish authenticating. It will not be requested yet when logging in.
-
-##### Starting From April 14, 2020
-
-Multi-factor authentication comes into effect and is needed to authenticate.
+Multi-factor authentication (MFA) is needed to authenticate.
 
 If you have not set up your MFA yet, you will be able to set it up while logging in. This second factor will be requested once a week to authenticate.
 
@@ -93,8 +69,6 @@ These factors can be one of the following:
 --}}
 ![mfa-setup](nx_asset://64c95f94-e3ac-40b1-a03e-16ce33989d83 ?w=415,border=true)
 
-This factor needs to be set up starting from March 31, but won't come into effect before April 14.
-
 {{#> callout type='info' heading='Info'}}
 MFA is used only in the browser. It is not needed when using command line tools to automate tasks.
 {{/callout}}
@@ -107,15 +81,9 @@ This change only applies to people using Nuxeo Studio and Nuxeo Marketplace (cal
 
 #### Can you Provide a Summary of the Change?
 
-When authenticating into Nuxeo Studio or Nuxeo Marketplace, developers will be requested to set up a second authentication factor using their phone starting from March 31.
+When authenticating into Nuxeo Studio or Nuxeo Marketplace, developers are requested to set up a second authentication factor using their phone.
 
-This second factor will be saved for later use, but won't be requested until April 14.
-
-Starting from April 14, the second factor will be requested if it was not saved yet, then will be asked once a week during authentication.
-
-#### I see an Error 403 When Trying to Setup MFA
-
-MFA can only be set up when this option becomes active for everyone, currently scheduled on March 31. Until then, any attempt will result in an error 403, as our service provider does not provide an option to allow opt-in.
+The second factor setup is requested if it is not done yet, then it is asked once a week during authentication.
 
 ## General FAQ
 
