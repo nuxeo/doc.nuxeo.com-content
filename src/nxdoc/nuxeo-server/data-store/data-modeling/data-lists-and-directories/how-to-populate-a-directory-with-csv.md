@@ -1,8 +1,8 @@
 ---
-title: 'HOWTO: Populate a Directory with a CSV File'
+title: 'HOWTO: Populate a Directory With a CSV File'
 review:
     comment: ''
-    date: '2019-07-15'
+    date: '2020-04-14'
     status: ok
 details:
     howto:
@@ -24,7 +24,8 @@ Nuxeo Platform allows you to upload a CSV file through Automation to populate a 
 
 This could be used to load directory entries while Nuxeo is running.
 
-1. Prepare a CSV file representing the data you want to load, let's name it `data.csv`. For example, on a vocabulary, the content should look like below:
+1. Prepare a CSV file representing the data you want to load, let's name it `data.csv`.</br>
+    For example, on a vocabulary, the content should look like below:
 
    ```csv
    id, label, obsolete, ordering
@@ -38,7 +39,7 @@ This could be used to load directory entries while Nuxeo is running.
    curl -XPOST -u Administrator:Administrator -F request='{"params":{"directoryName":"DIRECTORY_NAME", "dataLoadingPolicy":"skip_duplicate"}, "context":{}}' -F 'input=@data.csv' http://NUXEO_SERVER/nuxeo/site/automation/Directory.LoadFromCSV
    ```
 
-   We used the `skip_duplicated` in order to not corrupt existing data, there're [another policies]({{page page='data-lists-and-directories'}}).
+   We used the `skip_duplicated` in order to not corrupt existing data, there're [other policies]({{page page='data-lists-and-directories'}}).
 
 * * *
 
