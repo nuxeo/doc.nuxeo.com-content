@@ -222,19 +222,26 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
     </extension>
     ```
 
-2.  Contribute an XML extension to register a converter that uses our new&nbsp;`watermarkWithText` command line:
+2.  Contribute an XML extension to register a converter that uses our new&nbsp;`watermarkWithText` command line.
 
     ```xml
     <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"
       point="converter">
       <converter name="watermarkWithText"
         class="org.nuxeo.ecm.platform.convert.plugins.CommandLineConverter">
+        <sourceMimeType>image/*</sourceMimeType>
         <parameters>
           <parameter name="CommandLineName">watermarkWithText</parameter>
         </parameters>
       </converter>
     </extension>
     ```
+
+{{#> callout type='info' }}
+
+Since Nuxeo 10.10 (LTS2019), it is required to specify the source mime-type(s) the converter can handle (all the `<sourceMimeType>image/*</sourceMimeType>` in the example, buyt you cazn specify more than one). This can be disabled (not recommanded) by setting the `nuxeo.convert.enforceSourceMimeTypeCheck` configuration parameter to `false`. (See [this ticket](https://jira.nuxeo.com/browse/NXP-25840) for more details)
+
+{{/callout}}
 
 3.  <span style="line-height: 21.58px;">Create a chain that will be used for the picture conversion, getting the text from the&nbsp;</span> `pictureDocument` <span style="line-height: 21.58px;">&nbsp;and call the registered `watermarkWithText` converter to watermark the image. Here, for the example, we watermark the title of the document on the image:</span>
 
