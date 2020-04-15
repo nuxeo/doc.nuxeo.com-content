@@ -482,7 +482,7 @@ history:
 ---
 {{#> callout type='info' }} {{! excerpt}}
 
-This documentation focuses on the MVEL expression language, used in automation chains. For a broader look on that subject, have a look at the [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}}) page.
+This documentation focuses on the [MVEL](https://en.wikibooks.org/wiki/Transwiki:MVEL_Language_Guide) expression language, used in automation chains. For a broader look on that subject, have a look at the [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}}) page.
 
 Also, it is very unlikely that you will need to use MVEL from inside an Automation Script (using an `@{expression}` value). Still, form Automation Scripting, you have access to very useful objects and helpers (`Document ,  ``CurrentUser`, `Fn`, etc., see below)
 
@@ -508,6 +508,42 @@ The expression between brackets (`@{the_expression}`) is evaluated/calculated an
 * Nuxeo provides objects for your convenience. We will discuss these objects below. For example, the `Document`, `CurrentUser`, `CurrentDate` objects provide accessors to facilitate getting values from the current context. `@{Document.title}`returns the title of the current document. `@{CurrentUser.mail}` the mail address of the current user (typically used with the `SendMail` operation). `@{CurrentDate.days(7).calendar}` returns a date "in 7 days" (for example, stored in `dc:expired`).
 
 The expression can return any value, it is not limited to strings. For example, if we have an `order:total_price` floating point field, we can set its value (still using the `Document.SetProperty` operation) with `@{Document["order:quantity"] * Document["order:price"]`.
+
+## MVEL
+
+The scripting language used is MVEL. See the [MVEL language guide](https://en.wikibooks.org/wiki/Transwiki:MVEL_Language_Guide). You can use all the features of the scripting language itself.
+
+*   For instance, you can use the substring method, when dealing with paths:
+`@{Document.path.substring(26)}`.
+
+*   This is especially useful if you manipulate strings inside you expression: No need to write a Java plugin for this, you can just use `toLowerCase()` or `toUpperCase()` for exammple. The following converts the `order:label` string field to all upper case: `@{Document["order:label"].toUpperCase()}` (This expression would be used as the `value  parameter of the ``Document.Setproperty` operation.)
+
+*   It is easy to format a string with padding zeros: Use `String.format()`. Notice the value fo format must be a number: `@{String.format("%06d", 1234)` => "001234".
+
+*   Now, the following example looks more complex: It combines several objects and accessors and returns a unique Claim ID starting with "CLM-", using a sequence number (see below the `Fn` object). We need to convert the _string_ returned by `Fn.getNextId` to a number:
+
+```
+CLM-@{String.format("%06d", Integer.parseInt(Fn.getNextId("claim")))}
+```
+
+=> "CLM-000354", "CLM-000355", etc.
+
+
+*   Testing if a variable is null:
+
+```
+@{WorkflowVariables["mail"] == empty ? "VoidChain" : "MyChain"}
+```
+
+*   Usage of `empty` variable allows user to evaluate expression to empty string. For instance to set a property of a document to "" (empty string), you can define the value with `empty:`
+
+```
+@{empty}
+```
+
+   (you also can use `@{""}`).
+
+*   As MVEL will consider values to be string by default, you can set hard-coded values depending on the type of the field. To set an integer value to ten, write `@{10}`. To reset a field to null: `@{null}`. To set a string field to "" you can use `@{""}`
 
 
 ## Scripting Context
@@ -705,31 +741,6 @@ In order to do this you should:
 2.  And then on the target server to create a property file inside the Nuxeo `conf` directory that defines the variable you are using in the operation chain:
     _automation.document.description = My Description_
 
-## MVEL
-
-The scripting language used is MVEL. See the [MVEL language guide](https://en.wikibooks.org/wiki/Transwiki:MVEL_Language_Guide). You can use all the features of the scripting language itself.
-
-For instance, you can use the substring method, when dealing with paths:
-`@{Document.path.substring(26)}`.
-
-This is especially useful if you need to change the case of strings: No need to write a Java plugin for this, you can just use `toLowerCase()` or `toUpperCase()`. This expression converts the `order:label` string fieled to all upper case: `@{Document["order:label"].toUpperCase()}`.
-
-Testing if a variable is null:
-
-```
-@{WorkflowVariables["mail"] == empty ? "VoidChain" : "MyChain"}
-```
-
-Usage of `empty` variable allows user to evaluate expression to empty string. For instance to set a property of a document to "" (empty string), you can define the value with `empty:`
-
-```
-@{empty}
-```
-
-(you also can use `@{""}`).
-
-As MVEL will consider values to be string by default, you can set hard-coded values depending on the type of the field. To set an integer value to ten, write `@{10}`. To reset a field to null: `@{null}`. To set a string field to "" you can use `@{""}`
-
 
 ## Date Management Example
 
@@ -753,7 +764,7 @@ Expression Example
 
 </th></tr><tr><td colspan="1">
 
-Document > SetProperty
+Document > Document.SetProperty
 
 </td><td colspan="1">
 
@@ -769,7 +780,7 @@ Today, now
 
 </td></tr><tr><td colspan="1">
 
-Document > SetProperty
+Document > Document.SetProperty
 
 </td><td colspan="1">
 
@@ -785,7 +796,7 @@ In one month
 
 </td></tr><tr><td colspan="1">
 
-Document > SetProperty
+Document > Document.SetProperty
 
 </td><td colspan="1">
 
@@ -801,7 +812,7 @@ Hard-coded date
 
 </td></tr><tr><td colspan="1">
 
-Document > SetProperty
+Document > Document.SetProperty
 
 </td><td colspan="1">
 
@@ -948,7 +959,6 @@ Auth.Logout
 ```
 
 
-
 ## Numbers Management example
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
@@ -1020,31 +1030,29 @@ Add two numeric fields
 
 ## Document management example
 
-### Field management
-
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
 Operation
 
 </th><th colspan="1">
 
-Destination field
+Parameter
 
 </th><th colspan="1">
 
-Source value
+Expected value
 
 </th><th colspan="1">
 
-Expression Example
+Expression example
 
 </th><th colspan="1">
 
-Remark
+Note
 
 </th></tr><tr><td colspan="1">
 
-Document > Copy
+Document > Document.Copy
 
 </td><td colspan="1">
 
@@ -1052,7 +1060,7 @@ target
 
 </td><td colspan="1">
 
-String
+Hard coded value
 
 </td><td colspan="1">
 
@@ -1060,31 +1068,31 @@ String
 
 </td><td colspan="1">
 
-Here is specified the path of the container where the document is to be created. The path is given by the names of ancestors of the document (can be different from the title and stored into a different field of the document).
+Here is specified the path of the container where the document is to be copied, assuming this document exists
 
 </td></tr><tr><td colspan="1">
 
-Document > Copy
+Document > Document.Create
 
 </td><td colspan="1">
 
-target
+type
 
 </td><td colspan="1">
 
-from context
+Hard coded value
 
 </td><td colspan="1">
 
-`@{Context["documentStored"].name}`
+File
 
 </td><td colspan="1">
 
-This will work if you have previously added the **Execution Context > Set Context Variable**&nbsp;into your automation chain to store the document into this `documentStored` variable.
+Creating a `File` document type.
 
 </td></tr><tr><td colspan="1">
 
-&nbsp;
+Document > Document.Create
 
 </td><td colspan="1">
 
@@ -1096,43 +1104,27 @@ String
 
 </td><td colspan="1">
 
-name-of-my-document
+node-name-of-my-document
 
 </td><td colspan="1">
 
-This field is a technical one and used to create the notion of path (see above). **This is not the title**. This is also used for URL generation. Look at the URL after navigating to a document and you will see his path based on the names of the document's ancestor and its name.
-
-</td></tr><tr><td colspan="1">
-
-Document > Create
-
-</td><td colspan="1">
-
-type
-
-</td><td colspan="1">
-
-String
-
-</td><td colspan="1">
-
-File
-
-</td><td colspan="1">
-
-Here you must use the name of the document type (not the label).
+This field is a technical one and used to build the URL. **This is not the title**. If you look at the URL after navigating to a document and you will see its path based on the names of the document's ancestor and its name. Typical example with Nuxeo out of the box: The domain's _title_ is "Domain" while its _name_ is "default-domain".
 
 </td></tr></tbody></table></div>
 
 ## Referencing Automation Chain Parameters
 
+It is possible to define parameters to your chain (in Nuxeo Studio, you can use the "Parameters" tab). When the chain is called, you access the values of the parameters with:
+
 ```
-@{ChainParameters['parameterName']}
+@{ChainParameters["parameterName"]}
 ```
 
 ## More Advanced Scripts
 
-In this section, we will gather useful scripts so as to share experience on using scripting in automation, especially in the Run Script operation.
+In this section, we will gather useful scripts so as to share experience on using scripting in automation, especially in the `Scripting > RunScript` operation.
+
+Notice that `RunScript` allows, basically, for using Java APIs (with security restriction. You cannot access a file on the server for example, etc.). When you need this, you may find easier to use Automation Scripting (which also allwos for using Java in JavaScript).
 
 {{#> panel type='code' heading='Working with a list of properties'}}
 
