@@ -9,15 +9,21 @@ review:
 toc: true
 ---
 
-Welcome to the Release Notes for **Nuxeo Drive 4.5.0**
+Welcome to the Release Notes for **Nuxeo Drive 4.4.2**
 
 ## Breaking Changes
 
 ### Direct Transfer
 
-The Direct Transfer feature has been disabled by default for the moment. It can be re-enabled by configuration. It is currently being reworked to be more configurable so as to better match our users' use cases. 
+The Direct Transfer feature has been disabled by default for the moment. It can be re-enabled by configuration. It is currently being reworked to be more configurable so as to better match our users' use cases.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-2040](https://jira.nuxeo.com/browse/NXDRIVE-2040) and [NXDRIVE-2082](https://jira.nuxeo.com/browse/NXDRIVE-2082)
+
+### S3 Direct Upload
+
+The S3 Direct Upload feature has also been disabled by default for the moment. Some improvements are needed server-side before being able to enable it by default.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2103](https://jira.nuxeo.com/browse/NXDRIVE-2103)
 
 ## Improvements
 
@@ -28,34 +34,49 @@ We want to give even more control on features/behaviors to enable or not inside 
 Feature enablement will typically allow you to enable Nuxeo Drive DirectEdit while disabling synchronization. Or Direct Edit and Direct Transfer, and not synchronization. Or only synchronization.
 It is configurable both globally for all users and locally for a specific group of users.
 
-In short, this is a snippet of those parameters inside the server configuration file:
+#### Features
+
+Using configuration files, you can now turn on/off features inside the application, such as the auto-update, Direct Edit, Direct Transfer and S3 Direct Uploads.
+
+Here is a sample for the [local configuration file]({{page version='' space='client-apps' page='nuxeo-drive'}}#configuration-file):
+
+```json
+[DEFAULT]
+env = myFeatures
+
+[myFeatures]
+feature.auto-update     = true
+feature.direct-edit     = true
+feature.direct-transfer = true
+feature.s3              = true
+```
+
+And here is how to set those values for every user connected to a server, via the [server configuration endpoint]({{page version='' space='client-apps' page='how-to-configure-nuxeo-drive-globally'}}):
+
 ```json
 {
-    "behavior": {
-        "server-deletion": true
-    },
     "feature": {
-        "auto-update"    : true,
-        "direct-edit"    : true,
-        "direct-transfer": false,
-        "s3"             : true,
+        "auto-update"     : true,
+        "direct-edit"     : true,
+        "direct-transfer" : true,
+        "s3"              : true
     }
 }
 ```
 
-To control features from inside the local configuration file:
-```ini
-[DEFAULT]
-env = myFeatures
-[myFeatures]
-feature.auto-update     = true
-feature.direct-edit     = true
-feature.direct-transfer = false
-feature.s3              = true
+#### Behaviors
+
+The IT team can tweak behaviors as well. A behavior is a server-side action that can be turned on/off using the [server configuration endpoint]({{page version='' space='client-apps' page='how-to-configure-nuxeo-drive-globally'}}). For now, the only possibility is to deny server deletions completely.
+
+Here is how to set those values for every user connected to a server, via the [server configuration endpoint]({{page version='' space='client-apps' page='how-to-configure-nuxeo-drive-globally'}}):
+
+```json
+{
+    "behavior": {
+        "server-deletion": true
+    }
+}
 ```
-<!--
-Please have a look at the [documentation]().
--->
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2070](https://jira.nuxeo.com/browse/NXDRIVE-2070) and [technical specifications document](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/dep/2020-03%20Features%20flags.md)
 
@@ -103,6 +124,31 @@ Notes handling is stricter, only "note:note" is taken into account, nothing chan
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2027](https://jira.nuxeo.com/browse/NXDRIVE-2027)
 
+### Server Configuration
+
+As the server configuration endpoint can be used to enabled/disable features and tweak parameters impacting all users, it was natural to first wait for it before starting features.
+
+Here is the flow when starting the application:
+1. Launch engines (an engine is an account).
+1. Fetch the server configuration endpoint.
+1. Update options, merge with one from the local configuration file.
+1. Start (or deny) all features.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2091](https://jira.nuxeo.com/browse/NXDRIVE-2091)
+
+### Delay Option
+
+The remote watcher uses the 'delay' option (in seconds) between 2 calls to the NuxeoDrive.GetChangeSummary operation. That value can be tweaked from different locations:
+- from the CLI using the `--delay argument`
+- from the local config file
+- from the server config
+
+The last possibility was not working: if one set the 'delay' option to another value different from the default, the option will effectively be updated but not used by the remote watcher.
+
+A fix has been merged to use the new value as soon as available, making the remote watcher adapting its calls in realtime.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2118](https://jira.nuxeo.com/browse/NXDRIVE-2118)
+
 ### Auto-Update
 
 Updates are now unlocked on the centralized channel when auto-update is disabled.
@@ -115,6 +161,15 @@ Auto-updates are now allowed/forced when those parameters are met:
 This is required for IT teams wanting to control which version of the application to deploy.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2047](https://jira.nuxeo.com/browse/NXDRIVE-2047)
+
+### Local Configuration
+
+When an option was set from both the local configuration file and from the server configuration endpoint, and if the local value was the default value of that option, then there's no impact.
+This is unfortunate as one could not force the value of an option if it was modified from the server configuration endpoint.
+
+As of now, any option set locally, using the default value or not, has the precedence over the options set by the server.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1980](https://jira.nuxeo.com/browse/NXDRIVE-1980)
 
 ### Systray Menu
 
@@ -143,7 +198,7 @@ There's now a free disk space bar displayed at different places.
 ### Notarizing macOS Software
 
 Since February 2020, Apple enforced its security policy for distributed applications.</br>
-Each and every application must be "notarized", this is now done for Nuxeo Drive.
+Every application must be "notarized", this is now done for Nuxeo Drive.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2041](https://jira.nuxeo.com/browse/NXDRIVE-2041)
 
@@ -153,7 +208,30 @@ Incomplete and/or obsolete translations have been cleaned up, and the hard-coded
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-1996](https://jira.nuxeo.com/browse/NXDRIVE-1996) and [NXDRIVE-1893](https://jira.nuxeo.com/browse/NXDRIVE-1893).
 
+### QA/CI
+
+In the global scope of moving out from the legacy QA and having quick PR statuses, we moved quality checks and unit tests to GitHub Actions.
+
+Results are more than satisfying because we now have PR statuses in less than 2 minutes, covering all quality checks (translations, code style, spelling, dead code, lint and type annotations) and unit tests on GNU/Linux, macOS and Windows.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2064](https://jira.nuxeo.com/browse/NXDRIVE-2064)
+
 ## Fixes
+
+### Conflict Management
+
+Conflicts are now even more precisely managed.
+
+The old bug was:
+- A file is in conflict (edited locally and remotely).
+- That file has been renamed remotely, changing its file name locally.
+- When resolving the conflict: the user chose to use its local version of the file.
+
+The fix provides this expected behavior:
+- The remote file is replaced with the local one.
+- the remote file keeps its metadata.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-382](https://jira.nuxeo.com/browse/NXDRIVE-382)
 
 ### Synchronization
 
@@ -164,6 +242,16 @@ When the local folder where data is synchronized was on a different partition th
 The synchronization on Windows has been fixed when one creates a new folder and then renames it very quickly.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1847](https://jira.nuxeo.com/browse/NXDRIVE-1847)
+
+Some non-folderish documents can have zero digest.</br>
+This is sometimes the case with special documents using the LiveConnect addon. It may also happen in very rare cases when a server contribution may be broken.</br>
+In such scenario, Nuxeo Drive cannot synchronize the file as it has no control over the file integrity.</br> Such documents are now ignored instead of generating errors.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1973](https://jira.nuxeo.com/browse/NXDRIVE-1973)
+
+An issue has been fixed about invalid TransferStatus value, it was introduced in the version 4.2.0, it may have broke retro-compatibility between versions 4.1.4 and 4.2.0 in certain conditions. We apologize for the inconvenience.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1901](https://jira.nuxeo.com/browse/NXDRIVE-1901)
 
 ### Direct Transfer
 
@@ -177,8 +265,11 @@ Direct Transfer now handles username containing non-letter characters.
 
 ### Memory
 
-This release brings several fixes around memory issues, Nuxeo Drive is now less resources greedy.  
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-2012](https://jira.nuxeo.com/browse/NXDRIVE-2012), [NXDRIVE-2048](https://jira.nuxeo.com/browse/NXDRIVE-2048) and [NXDRIVE-2052](https://jira.nuxeo.com/browse/NXDRIVE-2052).
+We take some precious time to improve the memory usage of the application. The result is quite enjoying as the application is now slightly faster and consume less RAM & CPU. This is laptop battery savor!
+
+We also identified a memory leak in one the third-party module we are using for metrics, this had caused severe memory errors for some people and we are sorry for the inconvenience.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-1982](https://jira.nuxeo.com/browse/NXDRIVE-1982).
 
 The application is now fully High-DPI aware.  
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1900](https://jira.nuxeo.com/browse/NXDRIVE-1900)
