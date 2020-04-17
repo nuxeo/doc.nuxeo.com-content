@@ -78,7 +78,7 @@ Some features of Nuxeo applications requires to access the Internet. If you have
 
 ### Database Settings {{> anchor 'database-settings'}}
 
-Nuxeo applications embed a database by default, called H2/Derby. This database enables you to fully test and evaluate the application. However it is not recommended to use this embedded database for production and load testing. Select the database you want to use and provide the connection information to the database.
+Nuxeo applications embed a database by default, called H2. This database enables you to fully test and evaluate the application. However it is not recommended to use this embedded database for production and load testing. Select the database you want to use and provide the connection information to the database.
 Possible databases are:
 
 *   [PostgreSQL]({{page page='postgresql'}})

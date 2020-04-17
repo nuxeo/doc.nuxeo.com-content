@@ -264,7 +264,7 @@ Under Windows, the location of the `nuxeo.conf` is defined by that order of prio
 
 ## Changing the Default Embedded Database
 
-The Nuxeo Platform provides a default embedded database for testing and evaluation purpose, called Derby. However, it is not adapted for a production environment (see the [H2 limitations page]({{page page='h2-limitations'}})).
+The Nuxeo Platform provides a default embedded database for testing and evaluation purpose, called H2. However, it is not adapted for a production environment (see the [H2 limitations page]({{page page='h2-limitations'}})).
 
 Before going live, you should configure one of the production-safe database supported by the Nuxeo Platform. See the [Database]({{page page='database-configuration'}}) section of this documentation.
 
