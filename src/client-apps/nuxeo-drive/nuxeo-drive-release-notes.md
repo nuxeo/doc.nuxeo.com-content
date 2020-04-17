@@ -4,7 +4,7 @@ description: .
 tree_item_index: 700
 review:
   comment: ''
-  date: '2020-03-02'
+  date: '2020-04-15'
   status: ok
 toc: true
 ---
@@ -18,12 +18,6 @@ Welcome to the Release Notes for **Nuxeo Drive 4.4.2**
 The Direct Transfer feature has been disabled by default for the moment. It can be re-enabled by configuration. It is currently being reworked to be more configurable so as to better match our users' use cases.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-2040](https://jira.nuxeo.com/browse/NXDRIVE-2040) and [NXDRIVE-2082](https://jira.nuxeo.com/browse/NXDRIVE-2082)
-
-### S3 Direct Upload
-
-The S3 Direct Upload feature has also been disabled by default for the moment. Some improvements are needed server-side before being able to enable it by default.
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2103](https://jira.nuxeo.com/browse/NXDRIVE-2103)
 
 ## Improvements
 
@@ -51,7 +45,7 @@ feature.direct-transfer = true
 feature.s3              = true
 ```
 
-And here is how to set those values for every user connected to a server, via the [server configuration endpoint]({{page version='' space='client-apps' page='how-to-configure-nuxeo-drive-globally'}}):
+And here is how to set those values for every user connected to a server, via the JSON file stored server side and used by Nuxeo Drive:
 
 ```json
 {
@@ -79,36 +73,6 @@ Here is how to set those values for every user connected to a server, via the [s
 ```
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2070](https://jira.nuxeo.com/browse/NXDRIVE-2070) and [technical specifications document](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/dep/2020-03%20Features%20flags.md)
-
-### S3 Direct Upload
-
-When the Amazon S3 addon is installed and configured for Direct Upload, Nuxeo Drive will automatically use it when uploading files to Nuxeo. It's a great improvement as it will lower the load on your Nuxeo server and users will benefit from high-speed transfer capabilities from Amazon.
-
-{{#> callout type='warning' }}
-The default token expiration (TTL) is set to 1 hour by default.
-This is too low for Nuxeo Drive uploads, as an upload can be paused or a transfer can take longer than 1 hour.
-{{/callout}}
-
-To tweak the token TTL, the server admin has to add a new property (integer) in `nuxeo.conf`:
-
-```conf
-# Value in seconds, here 10 hours
-nuxeo.s3storage.transient.expiration=36000
-```
-
-It is used for the duration (in seconds) of the "assume role" of AWS.
-
-The next step is required **if and only if** you are using those versions:
-- Nuxeo Platform LTS 2019 (10.10) with amazon-s3 addon 1.9.6 or older
-- Nuxeo Platform LTS 2017 (9.10) with amazon-s3 addon 1.8.8 or older
-
-Then, you will have to manually use that property in [s3directupload-config.xml](https://github.com/nuxeo/nuxeo/blob/82f835172103dda6f5a28f4660a4bac0ed62be85/packages/nuxeo-amazon-s3-package/src/main/resources/install/templates/s3binaries/nxserver/config/s3directupload-config.xml.nxftl#L70):
-
-```xml
-<property name="expiration">${nuxeo.s3storage.transient.expiration}</property>
-```
-
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-1837](https://jira.nuxeo.com/browse/NXDRIVE-1837) and [NXP-28732](https://jira.nuxeo.com/browse/NXP-28732)
 
 ### Direct Edit
 
@@ -199,6 +163,8 @@ There's now a free disk space bar displayed at different places.
 
 Since February 2020, Apple enforced its security policy for distributed applications.</br>
 Every application must be "notarized", this is now done for Nuxeo Drive.
+
+Another big step is the full support for Catalina and Mojave.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2041](https://jira.nuxeo.com/browse/NXDRIVE-2041)
 
