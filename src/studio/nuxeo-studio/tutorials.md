@@ -76,7 +76,7 @@ The configuration changes you will make in Nuxeo Studio require Development Mode
 
 ## Customization How-Tos Using Nuxeo Studio
 
-{{{table_from_details headings='Excerpt, Topics, Level, Tool' spaces='ADMINDOC IDEDOC NXDOC Studio USERDOC' label='howto'}}}
+{{{table_from_details headings='Excerpt, Topics, Level, Tool' spaces='ADMINDOC NXDOC Studio USERDOC' label='howto'}}}
 
 &nbsp;
 

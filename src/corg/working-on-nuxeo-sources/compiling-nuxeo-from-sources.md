@@ -195,7 +195,6 @@ Profiles for use in nuxeo-distribution:
 *   all-distributions: full build
 *   itest: run integration tests
 *   ftest-dm, ftest-dam, ftest-cmf, ftest-sc, ...: run functional tests against the corresponding application/module
-*   sdk: build SDK distributions for use in [Nuxeo IDE]({{page version='' space='idedoc' page='nuxeo-ide'}})
 
 See [README](https://github.com/nuxeo/nuxeo-distribution/blob/master/README.md) file at root of `nuxeo-distribution` for a short description and common usage examples.
 

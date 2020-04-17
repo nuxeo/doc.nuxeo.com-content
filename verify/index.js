@@ -14,11 +14,6 @@ test('lib assets directory should be generated', assert => {
     void 0,
     'assets directory is present'
   );
-  assert.doesNotThrow(
-    () => fs.accessSync(path.join(site_path, 'idedoc'), fs.F_OK),
-    void 0,
-    'nxdoc space directory is present'
-  );
 
   assert.end();
 });

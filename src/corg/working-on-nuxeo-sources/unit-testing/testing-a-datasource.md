@@ -113,12 +113,6 @@ In your POM, add dependencies to:
 *   org.nuxeo.runtime:nuxeo-runtime-jtajca
 *   org.nuxeo.ecm.core:nuxeo-core-storage-sql-test
 
-{{#> callout type='tip' }}
-
-Use [Nuxeo IDE "Synchronize POM" feature]({{page version='' space='idedoc' page='managing-project-dependencies'}}) to properly update your POM with all required dependencies, without relying on uncertain transitive dependency.
-
-{{/callout}}
-
 ## Contributing a Datasource Definition
 
 You first need to define your datasource. For instance in the file `OSGI-INF/datasource-contrib.xml` add:
