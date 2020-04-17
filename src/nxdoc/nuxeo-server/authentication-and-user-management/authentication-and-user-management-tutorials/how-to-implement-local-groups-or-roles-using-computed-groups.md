@@ -167,8 +167,8 @@ Computed groups let you define a list of groups to which users will be affected 
 Development environment requirements:
 
 - A [Nuxeo Studio]({{page space='studio' page='nuxeo-online-services'}}) project (for the Workspace modification and User action definition),
-- A [Nuxeo SDK]({{page space='idedoc' page='setting-up-a-nuxeo-sdk'}}) instance ready for test,
-- A Java IDE, like [Nuxeo CLI]({{page version='' space='nxdoc' page='develop-with-nuxeo-platform'}}) (for bundle creation and computed group definition).
+- A [Nuxeo Platform]({{page space='nxdoc' page='installation'}}) instance ready for test,
+- [Nuxeo CLI]({{page version='' space='nxdoc' page='develop-with-nuxeo-platform'}}) (for bundle creation and computed group definition).
 
 Examples of uses cases for which you will need computed groups:
 
@@ -342,7 +342,7 @@ nuxeo hotreload configure
 If you don't have this please look errors message into your Java project and into the server console.
 
 {{#> callout type='note' }}
-If you refresh several times your project in the SDK server, you will see `myTestGroup` as many times as you did refresh. This is because the extension point registering your Computer Group adds your contribution with each refresh. But if you stop and restart the server, your contribution will be deployed once, and `myTestGroup` will be displayed once.
+If you refresh several times your project in the Nuxeo server, you will see `myTestGroup` as many times as you did refresh. This is because the extension point registering your Computer Group adds your contribution with each refresh. But if you stop and restart the server, your contribution will be deployed once, and `myTestGroup` will be displayed once.
 {{/callout}}
 
 Now, we need to replace this static result by a dynamic one that will be the list of `$idWorkspace_validator` where the user is referenced. But when the `getGroupsForUser`method is called, no Session on the Core Repository is available as the user is not yet connected. You will need to explicitly switch to a privileged user.
