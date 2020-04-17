@@ -14,7 +14,7 @@ Welcome to the Release Notes for **Nuxeo Drive 4.4.2**
 **Status**: <font color="red">**Beta**</font> </br>
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/4.4.2.md)
 
-## Breaking Changes
+## Important Changes
 
 ### Direct Transfer
 
