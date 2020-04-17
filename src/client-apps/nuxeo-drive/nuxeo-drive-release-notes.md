@@ -20,7 +20,7 @@ Welcome to the Release Notes for **Nuxeo Drive 4.4.2**
 
 The Direct Transfer feature has been disabled by default for the moment. It can be re-enabled by configuration. It is currently being reworked to be more configurable so as to better match our users' use cases.
 
-<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-2040](https://jira.nuxeo.com/browse/NXDRIVE-2040) and [NXDRIVE-2082](https://jira.nuxeo.com/browse/NXDRIVE-2082)
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2082](https://jira.nuxeo.com/browse/NXDRIVE-2082)
 
 ## Improvements
 
@@ -28,7 +28,7 @@ The Direct Transfer feature has been disabled by default for the moment. It can 
 
 We want to give even more control on features/behaviors to enable or not inside Nuxeo Drive. And so we introduced two new parameters that will easily allow one to control the application behavior or features.
 
-Feature enablement will typically allow you to enable Nuxeo Drive DirectEdit while disabling synchronization. Or Direct Edit and Direct Transfer, and not synchronization. Or only synchronization.
+Feature enablement will typically allow you to enable Direct Edit while disabling synchronization. Or Direct Edit and Direct Transfer, and not synchronization. Or only synchronization.
 It is configurable both globally for all users and locally for a specific group of users.
 
 #### Features
@@ -63,9 +63,9 @@ And here is how to set those values for every user connected to a server, via th
 
 #### Behaviors
 
-The IT team can tweak behaviors as well. A behavior is a server-side action that can be turned on/off using the [server configuration endpoint]({{page version='' space='client-apps' page='how-to-configure-nuxeo-drive-globally'}}). For now, the only possibility is to deny server deletions completely.
+The IT team can tweak behaviors as well. A behavior is a server-side action that can be turned on/off using the [server configuration]({{page version='' space='client-apps' page='how-to-configure-nuxeo-drive-globally'}}). For now, the only possibility is to deny server deletions completely.
 
-Here is how to set those values for every user connected to a server, via the [server configuration endpoint]({{page version='' space='client-apps' page='how-to-configure-nuxeo-drive-globally'}}):
+Here is how to set those values for every user connected to a server, via the [server configuration]({{page version='' space='client-apps' page='how-to-configure-nuxeo-drive-globally'}}):
 
 ```json
 {
@@ -82,12 +82,12 @@ Here is how to set those values for every user connected to a server, via the [s
 Direct Edit can now handle any custom blob metadata; there are no more limitations on the `xpath`.</br>
 
 Those are all valid (given "s" for string and "n" for number):
-- s:s (file:content, foo:bar, note:note)
-- s:s/n (files:files/0, foo:bar/0)
-- s:s/n/s (files:files/0/file)
-- s:s/n/n/n/n/s/n/s:s... (foo:baz/0/0/0/0/file/0/real:file...)
+- `s:s` (file:content, foo:bar, note:note)
+- `s:s/n` (files:files/0, foo:bar/0)
+- `s:s/n/s` (files:files/0/file)
+- `s:s/n/n/n/n/s/n/s:s...` (foo:baz/0/0/0/0/file/0/real:file...)
 
-Notes handling is stricter, only "note:note" is taken into account, nothing changed.
+Notes handling is stricter, only `note:note` is taken into account, nothing changed.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-2027](https://jira.nuxeo.com/browse/NXDRIVE-2027)
 
@@ -106,7 +106,7 @@ Here is the flow when starting the application:
 ### Delay Option
 
 The remote watcher uses the 'delay' option (in seconds) between 2 calls to the NuxeoDrive.GetChangeSummary operation. That value can be tweaked from different locations:
-- from the CLI using the `--delay argument`
+- from the CLI using the `--delay` argument
 - from the local config file
 - from the server config
 
@@ -204,7 +204,7 @@ The fix provides this expected behavior:
 
 ### Synchronization
 
-When the local folder where data is synchronized was on a different partition than the standard "C:", there were different errors (in the synchronization process and Direct Edit), this is fixed now.
+When the local folder where data is synchronized was on a different partition than the standard `C:`, there were different errors (in the synchronization process and Direct Edit), this is fixed now.
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1966](https://jira.nuxeo.com/browse/NXDRIVE-1966) and [NXDRIVE-1969](https://jira.nuxeo.com/browse/NXDRIVE-1969).
 
@@ -240,11 +240,15 @@ We also identified a memory leak in one the third-party module we are using for 
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA tickets [NXDRIVE-1982](https://jira.nuxeo.com/browse/NXDRIVE-1982).
 
-The application is now fully High-DPI aware.  
+
+### Hi-DPI
+
+The application is now fully High-DPI aware.
+
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1900](https://jira.nuxeo.com/browse/NXDRIVE-1900)
 
 
-## Download
+## Download Links
 
 - [GNU/Linux](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-4.4.2-x86_64.AppImage)
 - [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-4.4.2.dmg)
