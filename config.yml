@@ -17,9 +17,6 @@ default:
                 space_path: glos
                 space_name: Nuxeo Glossary of Terms
             -
-                space_path: idedoc
-                space_name: Documentation Center for Nuxeo Platform IDEs
-            -
                 space_path: studio
                 space_name: Nuxeo Online Services
             -
