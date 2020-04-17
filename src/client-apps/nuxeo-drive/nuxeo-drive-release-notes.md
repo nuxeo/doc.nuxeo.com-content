@@ -11,6 +11,9 @@ toc: true
 
 Welcome to the Release Notes for **Nuxeo Drive 4.4.2**
 
+**Status**: <font color="red">**Beta**</font> </br>
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i> [Changelog](https://github.com/nuxeo/nuxeo-drive/blob/master/docs/changes/4.4.2.md)
+
 ## Breaking Changes
 
 ### Direct Transfer
@@ -239,3 +242,10 @@ We also identified a memory leak in one the third-party module we are using for 
 
 The application is now fully High-DPI aware.  
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXDRIVE-1900](https://jira.nuxeo.com/browse/NXDRIVE-1900)
+
+
+## Download
+
+- [GNU/Linux](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-4.4.2-x86_64.AppImage)
+- [macOS](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-4.4.2.dmg)
+- [Windows](https://community.nuxeo.com/static/drive-updates/beta/nuxeo-drive-4.4.2.exe)
