@@ -39,3 +39,25 @@ Nuxeo Cloud is a fully hosted and managed offering that uses AWS as our primary 
   - NCO-Customers - Configuration repo
   - NCO-Platform - Platform definitions
 - **Jenkins**: All tasks are defined as Jenkins jobs for deployment, configuration changes, creating new AMI’s, DR restore tasks etc
+
+## Nuxeo Cloud Environments
+
+### Environments
+
+- **Production** – Deployed with a full technology stack and all integrations required
+- **PreProd + Dev Environments** – 1 additional PreProd and Dev Environment until initial go live -(Additional dev environments can be provided if needed)
+- **PreProd Environment** – Used to test and validate custom code and deployments before moving to production
+- **Dev** – Used to develop and unit test new configurations and custom code
+
+### DRP Environment
+
+Backups stored in a separate availability zone with extra replication to another region
+
+## Responsabilities
+
+Nuxeo Cloud has a responsibility to:
+
+- Ensure the Data is protected
+- Secure the systems from un-approved changes
+- Ensure the system is performant based on the SLA
+- Ensure the system is available per the Agreed Hours of Service.
