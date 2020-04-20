@@ -24,7 +24,7 @@ When using visual mode to configure document type or workflow tasks layouts, und
 - editing a property value inside a widget
 - deleting a widget
 
-Note that change history is lost when switching to code or switching to another screen. <a href="https://jira.nuxeo.com/browse/NXS-5771" target="_blank">Detailed behavior</a> is described in the change ticket.
+Note that change history is lost when switching to code or switching to another screen. Detailed behavior is described in the [related ticket]((https://jira.nuxeo.com/browse/NXS-5771).
 
 #### Copy / Delete Widgets
 
@@ -32,7 +32,7 @@ A new copy icon is added to quickly duplicate a widget. Copy, delete, edit resul
 
 #### Keyboard Shortcuts
 
-The following keyboard shortcuts are available (mac users, use cmd instead of ctrl):
+The following keyboard shortcuts are available (mac users, use *cmd* instead of *ctrl*):
 - *Ctrl+z*: undo (visual and code mode, with separate change history)
 - *Ctrl+shift+Z*: redo (visual and code mode, with separate change history)
 - *Ctrl+s*: save (visual and code mode)
@@ -49,7 +49,6 @@ With this change, no need to know where to configure your translation anymore! W
 A new filtering option is available in the event handlers screen. When using the `before document modification` event, it allows you to trigger your logic only if particular properties have been changed.
 
 {{! /multiexcerpt}}
-
 
 ### Other Noteworthy Mentions
 

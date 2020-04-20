@@ -17,16 +17,20 @@ Discover upcoming and recent changes in Nuxeo Studio.
 On new Studio projects, developers will get write access by default to the [underlying Studio Git repository]({{page page='nuxeo-studio-designer-git-access'}}) instead of read. It will still be possible to switch back to read access as an option.
 
 ### Widgets Drag and Drop Instead of Mode
-When configuring a document type or workflow task layout, each property in the tree will offer a <a href="https://jira.nuxeo.com/browse/NXS-5775" target="_blank">list of available widgets</a> (e.g. text input, text area) you can drag and drop instead of a view and edit mode.
+
+When configuring a document type or workflow task layout, each property in the tree will offer a [list of available widgets](https://jira.nuxeo.com/browse/NXS-5775) (e.g. text input, text area) you can drag and drop instead of a view and edit mode.
 
 ### Properties Filtering in Layouts
+
 When configuring layouts visually, a quick search will let you filter through the options you can drag and drop.
 
 ### Translation Keys in Layouts
-To facilitate translating your application, when saving configuration in Studio Modeler, <a href="https://jira.nuxeo.com/browse/NXS-5826" target="_blank">translation keys will be automatically generated</a> for their content. Studio Designer will <a href="https://jira.nuxeo.com/browse/NXS-5827" target="_blank">use these keys</a> by default instead of generating hardcoded labels.
+
+To facilitate translating your application, when saving configuration in Studio Modeler, [translation keys will be automatically generated](https://jira.nuxeo.com/browse/NXS-5826) for their content. Studio Designer will [use these keys](https://jira.nuxeo.com/browse/NXS-5827) by default instead of generating hardcoded labels.
 
 ### Simplified Layout Blocks Experience
-<a href="https://jira.nuxeo.com/browse/NXS-5836" target="_blank">Several improvements</a> will simplify the way you can create and <a href="https://jira.nuxeo.com/browse/NXS-5778" target="_blank">use</a> layout blocks in your configuration.
+
+[Several improvements](https://jira.nuxeo.com/browse/NXS-5836) will simplify the way you can create and [use](https://jira.nuxeo.com/browse/NXS-5778) layout blocks in your configuration.
 
 ### More Upcoming Changes
 
