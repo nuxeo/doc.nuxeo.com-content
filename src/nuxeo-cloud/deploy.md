@@ -22,6 +22,13 @@ toc: true
 
 => **Use Maintenance Windows / Minimize Impact**: Deployments done during standard maintenance windows unless otherwise specified to minimize potential impact to users
 
+## Constraints
+
+On Preproduction and production environments, it is not allowed to:
+
+- Deploy Snapshot versions
+- Perform Hot-Reload
+
 ## Deploy My Configuration
 
 The Nuxeo Cloud Operations (NCO) team will deploy all changes and updates to the pre-prod and prod environments.
