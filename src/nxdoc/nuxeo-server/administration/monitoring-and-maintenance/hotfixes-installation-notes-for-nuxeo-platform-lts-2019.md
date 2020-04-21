@@ -92,6 +92,23 @@ Registration tokens are valid until your current contract's expiration date. Whe
 
 If you have any questions, feel free to contact our support team via a dedicated support ticket.
 
+## Hotfix 25
+
+### Optimized MongoDB ids
+
+[NXP-28763](https://jira.nuxeo.com/browse/NXP-28763) brings the option to use smaller document ids in MongoDB. Such smaller ids will give smaller database size but more importantly smaller index sizes.
+
+Deploy the the following XML configuration to use optimized ids:
+```
+  <require>default-repository-config</require>
+  <extension target="org.nuxeo.ecm.core.storage.mongodb.MongoDBRepositoryService" point="repository">
+    <repository name="default">
+      <idType>sequenceHexRandomized</idType>
+      <nativeId>true</nativeId>
+    </repository>
+  </extension>
+  ```
+
 ## Hotfix 23
 
 ### Unique Index on ecm:id in MongoDB
