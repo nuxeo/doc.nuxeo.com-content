@@ -89,6 +89,7 @@ Now, go to your `contract` document type, on the **view** layout to use your ele
 1. Switch to the Code Editor. On the search available in the elements catalog, search `my-validation-element`.
 1. Drag and drop it from the catalog to the editor.
   ![]({{file name='contract-view-layout-element.png'}} ?w=650,border=true)
+1. Don't forget to add `document="[[document]]"` (view mode) or `document="{{document}}"` (edit mode) to your custom element
 1. Save your changes and deploy your studio project, you're done!
 
   You can now reuse your element as much as you want, for example on the other layouts of your contract document, it will always be available in the **Project Elements** library.
