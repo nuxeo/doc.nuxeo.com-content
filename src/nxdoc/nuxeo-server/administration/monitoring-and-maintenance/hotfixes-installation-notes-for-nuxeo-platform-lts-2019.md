@@ -94,11 +94,11 @@ If you have any questions, feel free to contact our support team via a dedicated
 
 ## Hotfix 25
 
-### Optimized MongoDB ids
+### Optimized MongoDB IDs
 
-[NXP-28763](https://jira.nuxeo.com/browse/NXP-28763) brings the option to use smaller document ids in MongoDB. Such smaller ids will give smaller database size but more importantly smaller index sizes.
+[NXP-28763](https://jira.nuxeo.com/browse/NXP-28763) brings the option to use smaller document IDs in MongoDB. Such smaller IDs will give smaller database size but more importantly, smaller index sizes.
 
-Deploy the the following XML configuration to use optimized ids:
+Deploy the following XML configuration to use optimized IDs:
 ```
   <require>default-repository-config</require>
   <extension target="org.nuxeo.ecm.core.storage.mongodb.MongoDBRepositoryService" point="repository">
