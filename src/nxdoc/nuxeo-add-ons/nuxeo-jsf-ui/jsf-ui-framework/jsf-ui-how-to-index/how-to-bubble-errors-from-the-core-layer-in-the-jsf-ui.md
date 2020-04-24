@@ -130,7 +130,7 @@ Make sure that none of the listeners running before your custom listener modify 
     import org.apache.commons.logging.LogFactory;
     import org.nuxeo.ecm.automation.AutomationService;
     import org.nuxeo.ecm.automation.OperationContext;
-    import org.nuxeo.ecm.core.api.ClientException;
+    import org.nuxeo.ecm.core.api.NuxeoException;
     import org.nuxeo.ecm.core.api.DocumentModel;
     import org.nuxeo.ecm.core.api.RecoverableClientException;
     import org.nuxeo.ecm.core.api.event.DocumentEventTypes;
@@ -145,7 +145,8 @@ Make sure that none of the listeners running before your custom listener modify 
 
     	private static final Log log = LogFactory.getLog(ListenerTest.class);
 
-    	public void handleEvent(Event event) throws ClientException {
+      @Override
+	public void handleEvent(Event event) {
     		String eventName = event.getName();
     		if (!DocumentEventTypes.ABOUT_TO_CREATE.equals(eventName)) {
     			return;
@@ -174,7 +175,7 @@ Make sure that none of the listeners running before your custom listener modify 
     			if (unwrappedException instanceof RecoverableClientException) {
     				event.markBubbleException();
     				event.markRollBack();
-    				throw new ClientException(unwrappedException);
+				throw new NuxeoException(unwrappedException);
     			} else {
     				log.error("Error");
     			}
@@ -192,7 +193,7 @@ Make sure that none of the listeners running before your custom listener modify 
     import org.nuxeo.ecm.automation.core.annotations.Context;
     import org.nuxeo.ecm.automation.core.annotations.Operation;
     import org.nuxeo.ecm.automation.core.annotations.OperationMethod;
-    import org.nuxeo.ecm.core.api.ClientException;
+    import org.nuxeo.ecm.core.api.NuxeoException;
     import org.nuxeo.ecm.core.api.DocumentModel;
     @Operation(id = OperationValidation1.ID, category = Constants.CAT_DOCUMENT, label = "OperationValidation1", description = "")
     public class OperationValidation1 {
@@ -200,7 +201,7 @@ Make sure that none of the listeners running before your custom listener modify 
     	@Context
     	OperationContext ctx;
     	@OperationMethod
-    	public DocumentModel run(DocumentModel input) throws ClientException {
+	public DocumentModel run(DocumentModel input) {
     		if (!input.getTitle().equals("title")) {
     			String value = "- the document title is invalid - <br/>";
     // Collecting different invalidation message in one context variable
@@ -221,7 +222,7 @@ Make sure that none of the listeners running before your custom listener modify 
     import org.nuxeo.ecm.automation.core.annotations.Context;
     import org.nuxeo.ecm.automation.core.annotations.Operation;
     import org.nuxeo.ecm.automation.core.annotations.OperationMethod;
-    import org.nuxeo.ecm.core.api.ClientException;
+    import org.nuxeo.ecm.core.api.NuxeoException;
     import org.nuxeo.ecm.core.api.DocumentModel;
     @Operation(id = OperationValidation2.ID, category = Constants.CAT_DOCUMENT, label = "OperationValidation2", description = "")
     public class OperationValidation2 {
@@ -229,7 +230,7 @@ Make sure that none of the listeners running before your custom listener modify 
     	@Context
     	OperationContext ctx;
     	@OperationMethod
-    	public void run(DocumentModel input) throws ClientException {
+	public void run(DocumentModel input) {
     		if (input.getId() == null) {
     // Collecting different invalidation message in one context variable
     			Object messageError = ctx.get("messageError");
