@@ -1,5 +1,5 @@
 ---
-title: Nuxeo Server
+title: Server
 review:
     comment: ''
     date: '2017-02-06'

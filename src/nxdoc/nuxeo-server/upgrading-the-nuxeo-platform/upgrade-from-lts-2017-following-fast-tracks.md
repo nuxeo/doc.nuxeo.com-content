@@ -220,7 +220,7 @@ The new TrashService fires dedicated events `documentTrashed` and `documentUntra
 
 ##### Trash Migration
 
-{{{multiexcerpt 'trash-migration' page='deleting-documents'}}}
+{{{multiexcerpt 'trash-migration' page='trash-service'}}}
 
 {{#> callout type='info' heading='Migration Note - 10.2'}}
 During migration, documents in state `deleted` will receive the `isTrashed` property set to true but migrator will leave document in `deleted` state.

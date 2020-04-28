@@ -1,5 +1,5 @@
 ---
-title: Upgrading the Nuxeo Platform
+title: Upgrade
 review:
     comment: ''
     date: '2019-11-02'
@@ -22,7 +22,7 @@ confluence:
     shortlink: sgQz
     shortlink_source: 'https://doc.nuxeo.com/x/sgQz'
     source_link: /display/NXDOC/Upgrading+the+Nuxeo+Platform
-tree_item_index: 800
+tree_item_index: 300
 version_override:
     LTS 2015: 710/admindoc/upgrading-the-nuxeo-platform
     '6.0': 60/admindoc/upgrading-the-nuxeo-platform
