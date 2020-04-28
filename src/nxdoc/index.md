@@ -365,7 +365,7 @@ history:
 The pages below help you start customizing your content repository:
 
 - [Data Modeling]({{page page='data-modeling'}})
-- [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
+- [HOWTO: Define a Document Type]({{page page='how-to-define-a-document-type'}})
 - [Indexing and Query]({{page page='indexing-and-query'}})
 - [Understand everything about Nuxeo Runtime components and extensions]({{page page='runtime-and-component-model'}})
 
