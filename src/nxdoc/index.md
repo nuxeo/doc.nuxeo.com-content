@@ -2,7 +2,7 @@
 title: Developer Documentation Center
 review:
     comment: ''
-    date: '2018-01-02'
+    date: '2020-04-22'
     status: ok
 labels:
     - lts2016-ok
@@ -438,16 +438,16 @@ history:
         date: '2010-02-23 14:30'
         message: ''
         version: '1'
-
 ---
+
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
 ### Content Repository Customization
 
 The pages below help you start customizing your content repository:
 
-- [Repository Concepts]({{page page='repository-concepts'}})
-- [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
+- [Data Modeling]({{page page='data-modeling'}})
+- [HOWTO: Define a Document Type]({{page page='how-to-define-a-document-type'}})
 - [Indexing and Query]({{page page='indexing-and-query'}})
 - [Understand everything about Nuxeo Runtime components and extensions]({{page page='runtime-and-component-model'}})
 
@@ -458,18 +458,18 @@ The pages below help you start customizing your content repository:
 The Nuxeo Platform can be integrated with various standards and technologies, including:
 
 - [REST API]({{page page='rest-api'}})
-- Client SDKs: [JavaScript]({{page page='javascript-client'}}), [Java]({{page page='java-automation-client'}}), [iOS]({{page page='ios-client'}}), [PHP]({{page page='php-automation-client'}}), [Python]({{page page='python-client'}}), [Android]({{page page='android-client'}}), [cURL]({{page page='using-curl'}})
+- Client SDKs: [JavaScript]({{page page='javascript-client'}}), [Java]({{page version='3.2' space='client-java' page='index'}}), [PHP]({{page page='php-automation-client'}}), [Python]({{page page='python-client'}}), [cURL]({{page page='using-curl'}})
 - [CMIS]({{page page='cmis'}})
 
 {{/panel}}</div></div><div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel type='secondary' match_height='true'}}
 
-### Web App Customization
+### Web UI Customization
 
-Here are some key pages to customize the back office of the Nuxeo Platform:
+Here are some key pages to start customizing the UI of the Nuxeo Server:
 
-- [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
-- [Layouts and Widgets (Forms, Listings, Grids)]({{page page='layouts-and-widgets-forms-listings-grids'}})
-- [Actions (Links, Buttons, Icons, Tabs and More)]({{page page='actions-links-buttons-icons-tabs-and-more'}})
+- [HOWTO: Configure Searches]({{page page='web-ui-search'}})
+- [HOWTO: Customize Document Layouts]({{page page='web-ui-document-layouts'}})
+- [HOWTO: Insert a User Action]({{page page='how-to-insert-user-action'}})
 
 {{/panel}}
 

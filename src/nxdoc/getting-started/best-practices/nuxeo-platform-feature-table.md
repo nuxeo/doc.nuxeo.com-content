@@ -1402,8 +1402,8 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td colspan="1">
-    [User Documentation]({{page space='userdoc' page='deleting-content'}})<br/>
-    [Developer Documentation]({{page page='deleting-documents'}})
+    [User Documentation]({{page space='userdoc' page='content-delete'}})<br/>
+    [Developer Documentation]({{page page='trash-service'}})
     </td>
 </tr>
 <tr>

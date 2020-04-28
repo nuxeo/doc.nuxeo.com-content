@@ -208,12 +208,10 @@ history:
         version: '1'
 previous_link: nxdoc/setting-up-your-javascript-environment
 next_link: nxdoc/handling-permissions
-
 ---
+
 {{! excerpt}}
-
 Learn how to manipulate documents (creation, update, state change, deletion...) and launch queries through the REST API.
-
 {{! /excerpt}}
 
 The steps below leverage the document types included in the addon Getting started with the Nuxeo Platform:
@@ -313,8 +311,8 @@ Create a new contract in Nuxeo Platform.
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [Creating Content]({{page space='userdoc' page='creating-content'}})
-*   [REST API Entity Types]({{page page='rest-api-entity-types'}})
+- [Creating Content]({{page space='userdoc' page='content-create'}})
+- [REST API Entity Types]({{page page='rest-api-entity-types'}})
 
 {{/callout}}
 
@@ -435,9 +433,7 @@ We will now update the contract to add some custom clauses.
     ```
 
 {{#> callout type='info' heading='Learn more'}}
-
-*   [Repository Concepts]({{page space='nxdoc60' page='repository-concepts'}})
-
+- [Data Modeling]({{page space='nxdoc' page='data-modeling'}})
 {{/callout}}
 
 &nbsp;
@@ -531,8 +527,8 @@ Restore the contract from trash.
 
 {{#> callout type='info' heading='Learn more'}}
 
-*   [How to use Trash Feature]({{page page='how-to-use-trash-feature'}})
-*   [ Repository Concept Lifecycle ]({{page page='repository-concepts'}})
+- [HOWTO: Use Trash Feature]({{page page='how-to-use-trash-feature'}})
+- [Data Modeling]({{page page='data-modeling'}})
 
 {{/callout}}
 

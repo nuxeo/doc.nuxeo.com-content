@@ -237,9 +237,8 @@ Standard ways are based on forms and drag and drop, but you may also have some t
 
 {{#> callout type='info' heading='Related Documentation'}}
 
-*   [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
-*   [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
-*   [JavaScript Client]({{page page='javascript-client'}}) & [Java]({{page page='java-automation-client'}}) Client
+- [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
+- [JavaScript]({{page page='javascript-client'}}) Client & [Java]({{page version='3.2' space='client-java' page='index'}}) Client
 
 {{/callout}}
 
@@ -260,12 +259,10 @@ For metadata, we can split them among the following categories:
 Note that it is possible to extract some of the metadata automatically from a file using the [binary-metadata]({{page page='binary-metadata'}}) module.
 
 {{#> callout type='info' heading='Related Documentation'}}
-
-*   [Repository Concepts]({{page page='repository-concepts'}})
-*   [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
-*   [Several Document Types vs One Document Type with a Nature Metadata]({{page page='several-document-types-vs-one-document-type-with-a-nature-metadata'}})
-*   [Binary Metadata]({{page page='binary-metadata'}})
-
+- [Data Modeling]({{page page='data-modeling'}})
+- [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
+- [Several Document Types vs One Document Type with a Nature Metadata]({{page page='several-document-types-vs-one-document-type-with-a-nature-metadata'}})
+- [Binary Metadata]({{page page='binary-metadata'}})
 {{/callout}}
 
 ## Finding the Documents
