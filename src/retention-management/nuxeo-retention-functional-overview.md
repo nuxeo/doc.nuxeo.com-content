@@ -136,7 +136,7 @@ To create a new [retention rule]({{page page='index'}}#retention-rules):
   </tr>
   <tr>
     <td>Based on an event</td>
-    <td>The retention period will start once the defined event occurs (after the retention rule has been applied to the document).
+    <td>The retention period will start once the defined event occurs (after the retention rule has been applied to the document).</br>
     More details on the [Focus on the retention types section](#retention-types).</td>
   </tr>
   <tr>
@@ -152,7 +152,8 @@ To create a new [retention rule]({{page page='index'}}#retention-rules):
   </tr>
   <tr>
     <td>Based on a metadata</td>
-    <td>More details on the [Focus on the retention types section](#retention-types).
+    <td>The retention period will start based on a defined metadata, once you apply the retention rule to the document.</br>
+    More details on the [Focus on the retention types section](#retention-types).
     </td>
   </tr>
   <tr>
@@ -211,7 +212,7 @@ This retention type is useful when the retention period depends on a past and ex
 ![retention-schema-metadata](nx_asset://b906f7be-83db-4f29-a3db-1b2ce1876742 ?w=600,border=true)
 
 
-##### Baed on a event
+##### Based on a event
 
 The retention period will start once the defined event occurs (after the retention rule has been applied to the document).
 
@@ -492,7 +493,7 @@ The Legal Hold will be removed for **all the documents displayed on the page**.
 ## As a User
 
 {{#> callout type='info' heading='Standard and Compliance mode' }}
-This page describes the user experience depending on the Retention Management addo-on mode among [Standard or Compliance]({{page page='index'}}#configuration-modes).
+This page describes the user experience depending on the Retention Management add-on mode among [Standard or Compliance]({{page page='index'}}#configuration-modes).
 {{/callout}}
 
 As a user, you will see some differences on the **View** tab of your documents:

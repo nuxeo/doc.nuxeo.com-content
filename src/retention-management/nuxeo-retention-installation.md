@@ -71,8 +71,8 @@ Specifically:
 
 ##### Configure the records bucket in [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage)
 
-Once the standard Amazon S3 bucket is installed as described in [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage), you have to add an XML extension file to configure the bucket dedicated to the records and how to dispatch files in each buckets (documents vs records):
-- The file has to added into `$NUXEO_HOME/nxserver/config`
+Once the standard Amazon S3 bucket is installed as described in [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage), you have to add an XML extension file to configure the bucket dedicated to the records and how to dispatch files in each bucket (documents vs records):
+- The file has to be added into `$NUXEO_HOME/nxserver/config`
 - The file name has to be ended with `-config.xml`
 - The file must contain a specific `component name`:
 ```xml
