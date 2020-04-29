@@ -215,7 +215,7 @@ This retention type is useful when the retention period depends on a past and ex
 
 The retention period will start once the defined event occurs (after the retention rule has been applied to the document).
 
-This retention type is useful for all cases where a document needs to be preserved from any deletion or change but the retention starting point is unknown at the beginning. 
+This retention type is useful for all cases where a document needs to be preserved from any deletion or change but the retention starting point is unknown at the beginning.
 
 **Examples:** Contract terminated, Employee left the company, loan repayment, etc.
 
