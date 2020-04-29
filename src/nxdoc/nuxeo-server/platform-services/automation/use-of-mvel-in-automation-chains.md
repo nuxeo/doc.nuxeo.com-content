@@ -3,7 +3,7 @@ title: Use of MVEL in Automation Chains
 description: This documentation focuses on the MVEL expression language, used in automation chains.
 review:
     comment: ''
-    date: '2016-12-19'
+    date: '2020-04-29'
     status: ok
 notes: Documentation page used on Nuxeo Studio. Check with NOS team before deleting or moving.
 labels:
@@ -478,34 +478,34 @@ history:
         date: '2010-04-23 01:23'
         message: ''
         version: '1'
-
 ---
-{{#> callout type='info' }} {{! excerpt}}
 
+{{#> callout type='info' }}
+{{! excerpt}}
 This documentation focuses on the [MVEL](https://en.wikibooks.org/wiki/Transwiki:MVEL_Language_Guide) expression language, used in automation chains. For a broader look on that subject, have a look at the [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}}) page.
 
 Also, it is very unlikely that you will need to use MVEL from inside an Automation Script (using an `@{expression}` value). Still, form Automation Scripting, you have access to very useful objects and helpers (`Document ,  ``CurrentUser`, `Fn`, etc., see below)
-
-{{! /excerpt}} {{/callout}}
+{{! /excerpt}}
+{{/callout}}
 
 ## How to Use Scripting Features in Parameters Values
 
-When using automation, values you put in operation parameters are provided with scripting capability (when using JavaScript Automation, parameters are a JavaScript expression, string, number, function returning a value, etc.). Basically, when the system evaluates the value, it detects wether it is a raw value or an expression to be evaluated/resolved. The syntax used to tell the system you are passing an expression to be evaluated is `@{the_expression}`.
+When using automation, values you put in operation parameters are provided with scripting capability (when using JavaScript Automation, parameters are a JavaScript expression, string, number, function returning a value, etc.). Basically, when the system evaluates the value, it detects whether it is a raw value or an expression to be evaluated/resolved. The syntax used to tell the system you are passing an expression to be evaluated is `@{the_expression}`.
 
 So, for example, say we want to set the `value` parameter of the `Document.SetProperty` operation to set the `dc:title` field of a document:
 
 *   If we pass `The New Title`, there is no interpretation (default behavior), the parameter is taken "as is", which means that the title will be "The New Title".
 
-*   If we pass `@{Title}`, the system interprets `Title` (inside the brackets) as a scripting expression. In that case it means the value of the title will be updated with the content of the variable _Title_ (that will have be set previously)
+*   If we pass `@{Title}`, the system interprets `Title` (inside the brackets) as a scripting expression. In that case, it means the value of the title will be updated with the content of the variable _Title_ (that will have been set previously)
 
 *   The expression between brackets can be concatenated with a non-interpreted value. `The New @{Title}` will set the title to "The New " plus the content of the variable _Title_.
 
 Notice it is also possible to use the `expr:` prefix: `expr:Title` is the same as `@{Title}` and `expr:The New  @{Title}` is the same as `The New @{Title}`.
 
-The expression between brackets (`@{the_expression}`) is evaluated/calculated and can be contexttual objects or embedded helper functions:
+The expression between brackets (`@{the_expression}`) is evaluated/calculated and can be contextual objects or embedded helper functions:
 
-* You can put your own Context Variables (Using `Context.SetVar` previously in your chain)
-* Nuxeo provides objects for your convenience. We will discuss these objects below. For example, the `Document`, `CurrentUser`, `CurrentDate` objects provide accessors to facilitate getting values from the current context. `@{Document.title}`returns the title of the current document. `@{CurrentUser.mail}` the mail address of the current user (typically used with the `SendMail` operation). `@{CurrentDate.days(7).calendar}` returns a date "in 7 days" (for example, stored in `dc:expired`).
+- You can put your own Context Variables (Using `Context.SetVar` previously in your chain)
+- Nuxeo provides objects for your convenience. We will discuss these objects below. For example, the `Document`, `CurrentUser`, `CurrentDate` objects provide accessors to facilitate getting values from the current context. `@{Document.title}`returns the title of the current document. `@{CurrentUser.mail}` the mail address of the current user (typically used with the `SendMail` operation). `@{CurrentDate.days(7).calendar}` returns a date "in 7 days" (for example, stored in `dc:expired`).
 
 The expression can return any value, it is not limited to strings. For example, if we have an `order:total_price` floating point field, we can set its value (still using the `Document.SetProperty` operation) with `@{Document["order:quantity"] * Document["order:price"]`.
 
@@ -513,61 +513,55 @@ The expression can return any value, it is not limited to strings. For example, 
 
 The scripting language used is MVEL. See the [MVEL language guide](https://en.wikibooks.org/wiki/Transwiki:MVEL_Language_Guide). You can use all the features of the scripting language itself.
 
-*   For instance, you can use the substring method, when dealing with paths:
+- For instance, you can use the substring method, when dealing with paths:
 `@{Document.path.substring(26)}`.
 
-*   This is especially useful if you manipulate strings inside your expression: No need to write a Java plugin for this, you can just use `toLowerCase()` or `toUpperCase()` for example. The following converts the `order:label` string field to all upper case: `@{Document["order:label"].toUpperCase()}` (This expression would be used as the `value  parameter of the `Document.SetProperty` operation.)
+- This is especially useful if you manipulate strings inside your expression: No need to write a Java plugin for this, you can just use `toLowerCase()` or `toUpperCase()` for example. The following converts the `order:label` string field to all upper case: `@{Document["order:label"].toUpperCase()}` (This expression would be used as the `value` parameter of the `Document.SetProperty` operation.)
 
-*   It is easy to format a string with padding zeros: Use `String.format()`. Notice the value to pass must be a number: `@{String.format("%06d", 1234)` => "001234".
+- It is easy to format a string with padding zeros: Use `String.format()`. Notice the value to pass must be a number: `@{String.format("%06d", 1234)` => "001234".
 
-*   Now, the following example looks more complex: It combines several objects and accessors and returns a unique Claim ID starting with "CLM-", using a sequence number (see below the `Fn` object). We need to convert the _string_ returned by `Fn.getNextId` to a number:
+- Now, the following example looks more complex: It combines several objects and accessors and returns a unique Claim ID starting with "CLM-", using a sequence number (see below the `Fn` object). We need to convert the _string_ returned by `Fn.getNextId` to a number:
 
-```
-CLM-@{String.format("%06d", Integer.parseInt(Fn.getNextId("claim")))}
-```
+  ```
+  CLM-@{String.format("%06d", Integer.parseInt(Fn.getNextId("claim")))}
+  ```
 
-=> "CLM-000354", "CLM-000355", etc.
+  =>  "CLM-000354", "CLM-000355", etc.
 
+- Testing if a variable is null:
 
-*   Testing if a variable is null:
+  ```
+  @{WorkflowVariables["mail"] == empty ? "VoidChain" : "MyChain"}
+  ```
 
-```
-@{WorkflowVariables["mail"] == empty ? "VoidChain" : "MyChain"}
-```
+- Usage of `empty` variable allows for evaluating the expression to empty string. For instance, to set a property of a document to `""` (empty string), you can define the value with `empty`
 
-*   Usage of `empty` variable allows for evaluating the expression to empty string. For instance, to set a property of a document to "" (empty string), you can define the value with `empty`
+  ```
+  @{empty}
+  ```
+  (you also can use `@{""}`).
 
-```
-@{empty}
-```
-
-   (you also can use `@{""}`).
-
-*   As MVEL will consider values to be string by default, you can set hard-coded values depending on the type of the field. To set an integer value to ten, write `@{10}`. To reset a field to null: `@{null}`. To set a string field to "" you can use `@{""}`
-
+- As MVEL will consider values to be string by default, you can set hard-coded values depending on the type of the field. To set an integer value to ten, write `@{10}`. To reset a field to null: `@{null}`. To set a string field to "" you can use `@{""}`
 
 ## Scripting Context
 
-Note: The Expression Editor in Nuxeo Studio displays the _Browse Context_ drop down and its related features, which contain all the features explained in this documentation.
+The Expression Editor in Nuxeo Studio displays the _Browse Context_ drop down and its related features, which contain all the features explained in this documentation.
 
 *   **Document**: The Document object represents the input document, when the operation takes a document as input. You can use it to get a property value of it:
-    `@{Document.path}`, `@{Document["yourschema:yourfiekd"]}`, `@{Document.domain.title}`
+    `@{Document.path}`, `@{Document["yourschema:yourfield"]}`, `@{Document.domain.title}`
     You can also use methods provided by the `DocumentWrapper`, see below.
 
 *   **variable_name**: If you set a context variable in a previous operation, you can access it in the parameter value by just referring to its name. In the following sample, we previously used `Context.SetVar` to store the path of a document in the `path_of_the_workspace` variable. The parameter's value will be this path:
     `@{path_of_the_workspace}` (or `expr:path_of_the_workspace`)
 
     {{#> callout type='note' }}
-
     Do not use "-" character in the variable name. Prefer the use of `_`.
-
     {{/callout}}
 
 *   **Relative paths**: Each time you need to use a path expression (whether it is as a direct parameter of an operation, such as move, or in a NXQL query, for STARTSWITH operator, you can leverage relative path capability:
 
     *   "." will be replaced with the path of the input document;
     *   ".." will be replaced with the path of the parent of the input document.
-
 
 *   **CurrentDate**: The `CurrentDate` object provides various utility methods to handle dates (current date, date in one month, format a date, etc.), see "Date Wrapper" below.
 
@@ -582,7 +576,6 @@ Note: The Expression Editor in Nuxeo Studio displays the _Browse Context_ drop d
     *   `Env` allows for getting the value of a configuration parameter (see below)
     *   `WorkflowVariables` and `NodeVariables` allow for retrieving the values of your variables in the context of a workflow
     *   `Context` is maintained for compatibility reason. All its objects are available in other objects, or can be accessed an easier way. For example, to get the value of a Context variable, you can write `@{Context["the_variable"]}`, but `@{the_variable}` looks more readable. The same would go for
-
 
 ## {{> anchor 'doc-wrapper'}}Document Wrapper
 
@@ -609,13 +602,11 @@ The Document wrapper, used by the system for any document put in scripting conte
 *   `Document.versionLabel`: Returns the version name of the document (like "1.1"...).
 
 {{#> callout type='info' }}
-
-Note that `currentDocument` is an alias for `Document`.
-
+`currentDocument` is an alias for `Document`.
 {{/callout}}
 
 {{#> callout type='info' }}
-Also note that we listed here only the main accessors. `Document` is a `DocumentWrapper` and you can also [check the code](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-core/src/main/java/org/nuxeo/ecm/automation/core/scripting/DocumentWrapper.java) to see all the available accessors.</br>
+We only listed here the main accessors. `Document` is a `DocumentWrapper` and you can also [check the code](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-core/src/main/java/org/nuxeo/ecm/automation/core/scripting/DocumentWrapper.java) to see all the available accessors.</br>
 For example, you can also use `hasFacet(String facet)`, `hasSchema(String schemaName)`, etc. Make sure to select the branch corresponding to the version of Nuxeo you are using.
 {{/callout}}
 
@@ -668,7 +659,6 @@ Some others can be used when building an NXQL query to express dates relatively 
 - To create a date that you can set on a date property from a string, you can use `@{new java.text.SimpleDateFormat("yyyy-MM-dd").parse(date_str)}` where `date_str` is a Context variable containing a value such as "2019-09-26". You must pass to `SimpleDateFormat` the format of this date, so the parse() method work.
 {{/callout}}
 
-
 ## {{> anchor 'user-wrapper'}}User Wrapper
 
 The `CurrentUser` object wraps useful functions to get information about the current user:
@@ -683,12 +673,10 @@ The `CurrentUser` object wraps useful functions to get information about the cur
 
 *   **CurrentUser.principal** returns the `NuxeoPrincipal` Java object, allowing for getting more tuned/detailed information (see the Source Code on GitHub or the Java Doc). For example: `CurrentUser.principal.isMemberOf("marketing")`, `CurrentUser.principal.isAdministrator()`, `CurrentUser.principal.isAnonymous()`, `CurrentUser.principal.isTransient()`, etc.
 
-*   **CurrentUser.actingUser**: In a workflow context, all the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). This variable allows you to fetch the current user. This can also be useful when the operation "Users and groups > Login as" has been used in order to retrieve the current username.
+*   **CurrentUser.actingUser**: In a workflow context, all the automation operations executed by the workflow engine are executed using a temporary unrestricted session (if the current user is not an administrator, this is a session with the user "system"). This variable allows you to fetch the current user. This can also be useful when the operation "Users and groups > Login as" has been used to retrieve the current username.
 
     {{#> callout type='info' }}
-
     `currentUser` is an alias for `CurrentUser`.
-
     {{/callout}}
 
 ## {{> anchor 'fn-object'}}Functions
@@ -717,7 +705,7 @@ The Functions object is providing a set of useful functions. This object is name
 
 - `Fn.getEmailsFromGroup(String groupName)`: Returns a list of e-mails of all the users of the group.
 
-- `Fn.concatenateIntoList(List<T> list, Object... values)`: Adds the values to the list. If a value is itself an array or a collection, each of its members are added to the list. The list is returned.
+- `Fn.concatenateIntoList(List<T> list, Object... values)`: Adds the values to the list. If a value is itself an array or a collection, each of its members is added to the list. The list is returned.
 
 - `Fn.concatenateValuesAsNewList(Object... values)`: Same as `concatenateIntoList` but using a newly-created list.
 
@@ -731,11 +719,11 @@ The Functions object is providing a set of useful functions. This object is name
 
 ## Nuxeo Environment Properties
 
-Nuxeo environment properties are accessible in scripts using the `Env` map object. All the properties defined in Nuxeo (typically in the nuxeo.conf file) are available through the `Env` map. This is very useful when you want to configure your operations using values that can be modified later on a running server.
+Nuxeo environment properties are accessible in scripts using the `Env` map object. All the properties defined in Nuxeo (typically in the `nuxeo.conf` file) are available through the `Env` map. This is very useful when you want to configure your operations using values that can be modified later on a running server.
 
 For example, let's say you want to make an operation that is creating a document and initialize its description from a Nuxeo property named `automation.document.description`.
 
-In order to do this, you will:
+To do this:
 
 1.  Fetch the property using the `Env` map in your operation parameter: `Env["automation.document.description"]`.
 2.  And then set the configuration parameter in the `nuxeo.conf` file of your Nuxeo Server:
@@ -746,87 +734,122 @@ In order to do this, you will:
 
 Notice: These examples are for usage in Automation. if you are writing an Automation Script, you also can use the JavaScript native `Date` object (while the `CurrentDate`  object is still available in Automation Scripting if you need it.).
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">
 
 Operation
 
-</th><th colspan="1">
+</th>
+<th colspan="1">
 
 Parameter
 
-</th><th colspan="1">
+</th>
+<th colspan="1">
 
 Expected value
 
-</th><th colspan="1">
+</th>
+<th colspan="1">
 
 Expression Example
 
-</th></tr><tr><td colspan="1">
+</th>
+</tr>
+<tr>
+<td colspan="1">
 
 Document > Document.SetProperty
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 value
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Today, now
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 `@{CurrentDate.date}`
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 Document > Document.SetProperty
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 value
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 In one month
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 `@{CurrentDate.month(1).date}`
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 Document > Document.SetProperty
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 value
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Hard-coded date
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 2020-07-14T00:00:00Z
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 Document > Document.SetProperty
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 value
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Date property from the input document
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 `@{Document["achema:aDateField"]}`
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 Adding values (days, months, ...) to a date field requires some manipulation (it is easier when using Automation Scripting with JavaScript), please read [this blob](https://www.nuxeo.com/blog/manage-dates-automation-chains/) on the topic.
@@ -840,110 +863,154 @@ No type adapter found for input: class org.nuxeo.ecm.automation.core.scripting.D
 
 ... it means you are presenting a `DateWrapper` value type into a field that waits for a `java.util.Date` object.
 
-
-
 ## User and Group Management Example
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">
 
 Operation
 
-</th><th colspan="1">
+</th>
+<th colspan="1">
 
 Parameter
 
-</th><th colspan="1">
+</th>
+<th colspan="1">
 
 Expected value
 
-</th><th colspan="1">
+</th>
+<th colspan="1">
 
 Expression Example
 
-</th></tr><tr><td colspan="1">
+</th>
+</tr>
+<tr>
+<td colspan="1">
 
 Document > Document.SetProperty
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 value
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
-Hard coded user
+Hardcoded user
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 user:jdoe
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 Document > Document.SetProperty
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 value
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
-Hard coded group
+Hardcoded group
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 group:marketing
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 Document > Document.SetProperty
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 value
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Current user
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 `@{CurrentUser.name}`
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 Notification > Document.Mail
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 from
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Current user mail
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 `@{CurrentUser.mail}`
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 Notification > Document.Mail
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 to
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 All users of the "ClaimAdjusters" group
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 `@{Fn.getEmailsFromGroup("marketing")}`
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-#### using `Auth.Login`/`Auth.Logout`
-During the flow of a chain, we must change the permissions on a document. For example, Alice is creating a MarketingCampaign and assigns Bob as a creative. Now, Bob must be able to upload files to the campaign: We need to change Bob's permissions on the MarketingCampaign to give him ReadWrite access (assuming he only had Read permission). Alice does not have enough rights to change the permission: Calling `Document.AddPermission` will fail. In our chain, we can do the following instead:
+#### Using `Auth.Login`/`Auth.Logout`
+
+During the flow of a chain, we must change the permissions on a document.
+
+For example, Alice is creating a Marketing Campaign and assigns Bob as a creative. Now, Bob must be able to upload files to the campaign: We need to change Bob's permissions on the Marketing Campaign to give him ReadWrite access (assuming he only had Read permission).
+
+Alice does not have enough rights to change the permission: Calling `Document.AddPermission` will fail. In our chain, we can do the following instead:
 
 ```
 . . . previous operations . . .
@@ -958,8 +1025,7 @@ Auth.Logout
 . . . next operations . . .
 ```
 
-
-## Numbers Management example
+## Numbers Management Example
 
 <div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
 
@@ -987,7 +1053,7 @@ maxHeight
 
 </td><td colspan="1">
 
-Hard coded values
+Hardcoded values
 
 </td><td colspan="1">
 
@@ -1028,89 +1094,122 @@ Add two numeric fields
 
 </td></tr></tbody></table></div>
 
-## Document management example
+## Document Management Example
 
-<div class="table-scroll"><table class="hover"><tbody><tr><th colspan="1">
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+<th colspan="1">
 
 Operation
 
-</th><th colspan="1">
+</th>
+<th colspan="1">
 
 Parameter
 
-</th><th colspan="1">
+</th>
+<th colspan="1">
 
 Expected value
 
-</th><th colspan="1">
+</th>
+<th colspan="1">
 
 Expression example
 
-</th><th colspan="1">
+</th>
+<th colspan="1">
 
 Note
 
-</th></tr><tr><td colspan="1">
+</th>
+</tr>
+<tr>
+<td colspan="1">
 
 Document > Document.Copy
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 target
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
-Hard coded value
+Hardcoded value
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 `/default-domain/workspaces`
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Here is specified the path of the container where the document is to be copied, assuming this document exists
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 Document > Document.Create
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 type
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
-Hard coded value
+Hardcoded value
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 File
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 Creating a `File` document type.
 
-</td></tr><tr><td colspan="1">
+</td>
+</tr>
+<tr>
+<td colspan="1">
 
 Document > Document.Create
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 name
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 String
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 node-name-of-my-document
 
-</td><td colspan="1">
+</td>
+<td colspan="1">
 
 This field is a technical one and used to build the URL. **This is not the title**. If you look at the URL after navigating to a document and you will see its path based on the names of the document's ancestor and its name. Typical example with Nuxeo out of the box: The domain's _title_ is "Domain" while its _name_ is "default-domain".
 
-</td></tr></tbody></table></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 ## Referencing Automation Chain Parameters
 
@@ -1134,17 +1233,24 @@ Context["limitDate"] = bdService.getLimitDate("myRule",CurrentDate.date);
 => You now can use the context variable `limitDate` in other operations.
 
 
-{{#> callout type='info' }} {{! excerpt}}
+{{#> callout type='info' }}
+{{! excerpt}}
+You must limit the usage of Java-in-Automation to very simple calls. If you find yourself writing several lines of Java inside a `RunScript`, then we strongly recommend that you write a Java plugin instead.
+{{! /excerpt}}
+{{/callout}}
 
-You must limit the usage of Java-in-Automation to very simple calls. If you find yourself writting several lines of Java inside a `RunScript`, then we strongly recommand that you write a Java plugin instead.
+* * *
 
-{{! /excerpt}} {{/callout}}
-
-
-{{/panel}}<div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
+<div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel heading='Related Documentation'}}
 
 - [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}})
 - [Automation]({{page page='automation'}})
 - [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
 - [Javascript Expression Examples]({{page space='studio' page='javascript-expression-examples'}})
-{{/panel}}</div><div class="column medium-6"></div></div>
+{{/panel}}
+</div>
+<div class="column medium-6">
+</div>
+</div>
