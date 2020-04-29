@@ -132,17 +132,17 @@ To create a new [retention rule]({{page page='index'}}#retention-rules):
   <tr>
     <td>Immediate</td>
     <td>The retention period will start once you apply the retention rule to the document.</br>
-    **Example:** If I apply a retention rule to a document on January 1st, 2020 with a period of 2 years, then the retention will expire on January 1st, 2022.</td>
+    More details on the [Focus on the retention types section](#retention-types).
   </tr>
   <tr>
     <td>Based on an event</td>
     <td>The retention period will start once the defined event occurs (after the retention rule has been applied to the document).
-    </td>
+    More details on the [Focus on the retention types section](#retention-types).</td>
   </tr>
   <tr>
     <td>Event type</td>
     <td>Select the type of event that will trigger the retention period. The list of available event types is defined using a dedicated vocabulary.</br>
-    **Examples:** Contract terminated, Employee left the company, loan repayment, etc.</td>
+    </td>
   </tr>
   <tr>
     <td>Event field value</td>
@@ -152,13 +152,12 @@ To create a new [retention rule]({{page page='index'}}#retention-rules):
   </tr>
   <tr>
     <td>Based on a metadata</td>
-    <td>The retention period will start based on a defined metadata, once you apply the retention rule to the document.
+    <td>More details on the [Focus on the retention types section](#retention-types).
     </td>
   </tr>
   <tr>
     <td>Metadata</td>
-    <td>The path of the metadata to use. All metadata from all schemas are available (default and local ones): `dc:title`, `contract:number`, `contract:employeeid`, etc.</br>
-    **Example:** If I apply a retention rule to a document on January 1st, 2020 with the metadata "publication date", a retention period of 2 years, and the "publication date" is September 15th, 2019, then the retention will expire on September 15th, 2021.
+    <td>The path of the metadata to use. All date metadata from all schemas are available (default and local ones).</br>
     </td>
   </tr>
   <tr>
@@ -180,6 +179,53 @@ To create a new [retention rule]({{page page='index'}}#retention-rules):
     **Examples:** delete the document, notify specific users, export, etc.</td>
   </tr>
 </table>
+
+#### {{> anchor 'extend-retention'}}Focus on the retention types
+##### Immediate
+
+The retention period will start once you apply the retention rule to the document.
+
+**Example:** If I apply a retention rule to a document on January 1st, 2020 with a period of 2 years, then the retention will expire on January 1st, 2022.</td>
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-schema-immediate
+    name: Retention_SCHEMA_RetentionImmediate.png
+    addins#schema#up_to_date
+--}}
+![retention-schema-immediate](nx_asset://333ea217-fe1f-4a57-afc0-65c695daaaa6 ?w=600,border=true)
+
+
+##### Based on a metadata
+
+The retention period will start based on a defined metadata, once you apply the retention rule to the document.
+
+This retention type is useful when the retention period depends on a past and external event. It can also be used for migration purpose (moving from a legacy records management system to Nuxeo).
+
+**Example:** If I apply a retention rule to a document on January 1st, 2020 with the metadata "publication date", a retention period of 2 years, and the "publication date" is September 15th, 2019, then the retention will expire on September 15th, 2021.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-schema-metadata
+    name: Retention_SCHEMA_RetentionMetadata.png
+    addins#schema#up_to_date
+--}}
+![retention-schema-metadata](nx_asset://b906f7be-83db-4f29-a3db-1b2ce1876742 ?w=600,border=true)
+
+
+##### Baed on a event
+
+The retention period will start once the defined event occurs (after the retention rule has been applied to the document).
+
+This retention type is useful for all cases where a document needs to be preserved from any deletion or change but the retention starting point is unknown at the beginning. 
+
+**Examples:** Contract terminated, Employee left the company, loan repayment, etc.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-schema-event
+    name: Retention_SCHEMA_RetentionEvent.png
+    addins#schema#up_to_date
+--}}
+![retention-schema-event](nx_asset://5a0edde0-6536-4b69-bd2f-f4276bd4a0eb ?w=600,border=true)
+
 
 #### Edit a Retention Rule
 
@@ -248,26 +294,21 @@ On the **View** tab of your document:
 
 #### From a Result List
 
-After having performed a search from the regular search menu, a list of documents is displayed. For example, you only want to retain the documents created in the last 24H, or the ones tagged with a specific tag, etc. From this list of results, you can select the documents that you want and click on **Attach retention rule** at the top-right of the screen.</br>
+After having performed a search from the [retention search menu](#retention-search), a list of documents is displayed. Then, if you click on the **Without attached rule** quick filter, you can click on **Attach retention rule** icon {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-main
+    name: Retention_ICON_RetentionMenu.png
+    server#icon#to_be_updated
+--}}
+![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) at the top-right of the screen.</br>
 
 {{!--     ### nx_asset ###
-  path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-list
-  name: Retention_SCREEN_ApplyRetentionList.png
-  server#screenshot#to_be_updated
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-apply-bulk
+    name: Retention_SCREEN_ApplyRetentionBulk.png
+    addins#screenshot#up_to_date
 --}}
-![retention-screen-retention-list](nx_asset://4b65b80d-fbe1-43bd-91eb-6f8cd2da185b ?w=600,border=true)
+![retention-screen-apply-bulk](nx_asset://0e547a39-a4fd-4eb7-9973-d8cbd9e911a5 ?w=600,border=true)
 
 Select the retention rule that you want from the popup window and confirm.
-
-{{#> callout type='note' }}
-The retention rule will be applied on **all the documents displayed on the page**.
-{{/callout}}
-
-#### From a Folder View
-
-As you can put a whole list of results under retention, you can also attach a retention rule to an entire folder.
-
-Like the previous section, click on the **Attach retention rule** at the top-right of the screen, select the retention rule that you need and confirm.
 
 {{#> callout type='note' }}
 The retention rule will be applied on **all the documents displayed on the page**.
@@ -305,25 +346,21 @@ On the **View** tab of your document:
 To create a new [retention event]({{page page='index'}}#retention-events):
 1. Go to the Retention menu.
 2. Click on **Retention events**.
-3. Click on the **Create** {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/USERDOC/Icons Index/Create Button
-    name: create_button.png
-    1.1.3#screenshot#up_to_date
---}}
-![Create Button](nx_asset://2b093e23-6ed6-4228-943b-9b4655df9273 ?w=20) button. </br>
-  The creation popup is displayed:
-  - **Title**: Title of the event to create.
-  - **Description**: Description of the retention event.
-  - **Event type**: Select the type of event you want to create among a list of available types</br>
-  Examples: Contract terminated, Employee left the company, loan repayment, etc.
-  - **Event field value**: Fill in the value related to the event</br>
-  Examples: Contract number, employee identifier, loan reference, etc.
+3. Fill the fields on the **Fire event** section:
 
-4. Click on **Create**.
+  {{!--     ### nx_asset ###
+      path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-eventmenu
+      name: Retention_SCREEN_RetentionEvent.png
+      addins#screenshot#up_to_date
+  --}}
+  ![retention-screen-eventmenu](nx_asset://6f012bec-ec76-4b58-9efb-a4aa06b8513b ?w=600,border=true)
+
+
+4. Click on **Fire event**.
 
 At this stage, the event is created on Nuxeo Platform, and the retention rules fitting with this event will trigger the retention period for the involved documents.
 
-### Retention Search
+### {{> anchor 'retention-search'}} Retention Search
 
 The **retention search** is a dedicated search with criteria related to the retention management.
 
@@ -332,6 +369,15 @@ This search contains filters on:
 - the attached retention rule.
 - the expiration date (past and future).
 - the retention status (active retention, expired, not under retention).
+- the legal hold status.
+- the full text content.
+
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-search
+    name: Retention_SCREEN_Search.png
+    addins#screenshot#up_to_date
+--}}
+![retention-screen-search](nx_asset://e7de1927-d99b-450e-9117-53b2904fe599 ?w=600,border=true)
 
 ### History Related to Retention Actions
 
@@ -340,6 +386,7 @@ This search contains filters on:
 On the **History** tab of your document, you can see all the events related to the retention including:
 
 - Application of a retention rule to the document.
+- Beginning of the retention perid.
 - Overriding of the retention period.
 - Application of a Legal Hold on the document.
 - Removing of a Legal Hold on the document.
@@ -375,14 +422,19 @@ Once on the **View** tab of your document:
 
 #### From a Result List
 
-After having performed a search from the regular search menu, a list of results is displayed. For example, you only want to apply a Legal Hold to the documents created in the last 24H, or the ones tagged with a specific tag, etc. From this list of results you can click on **Apply Legal Hold** at the top-right of the screen.
+After having performed a search from the [retention search menu](#retention-search), a list of documents is displayed. Then, if you click on the **Not Under legal hold** quick filter, you can click on **Apply Legal Hold** icon {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-legal-hold
+    name: Retention_ICON_LegalHold.png
+    server#icon#to_be_updated
+--}}
+![retention-icon-legal-hold](nx_asset://e73f883d-072a-459b-97f6-81ac7a5946f9 ?w=20) at the top-right of the screen.</br>
 
 {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-list
-    name: Retention_SCREEN_ApplyRetentionList.png
-    server#screenshot#to_be_updated
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-applyhold-bulk
+    name: Retention_SCREEN_ApplyLegalHoldBulk.png
+    addins#screenshot#up_to_date
 --}}
-![retention-screen-retention-list](nx_asset://4b65b80d-fbe1-43bd-91eb-6f8cd2da185b ?w=600,border=true)
+![retention-applyhold-bulk](nx_asset://cc9b9dc7-7fdb-44aa-a9af-af72d5b47b6e ?w=600,border=true)
 
 Fill in the description field from the popup window and confirm.
 
@@ -417,14 +469,19 @@ Once on the **View** tab of your document:
 
 #### From a Result List
 
-After having performed a search from the regular search menu, a list of results is displayed. For example, you only want to remove a Legal Hold to the documents created in the last 24H, or the ones tagged with a specific tag, etc. From this list of results you can click on **Remove Legal Hold** at the top-right of the screen.
+After having performed a search from the [retention search menu](#retention-search), a list of documents is displayed. Then, if you click on the **Under legal hold** quick filter, you can click on **Remove Legal Hold** icon {{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-legal-hold
+    name: Retention_ICON_LegalHold.png
+    server#icon#to_be_updated
+--}}
+![retention-icon-legal-hold](nx_asset://e73f883d-072a-459b-97f6-81ac7a5946f9 ?w=20) at the top-right of the screen.</br>
 
 {{!--     ### nx_asset ###
-    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-list
-    name: Retention_SCREEN_ApplyRetentionList.png
-    server#screenshot#to_be_updated
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-removehold-bulk
+    name: Retention_SCREEN_RemoveLegalHoldBulk.png
+    addins#screenshot#up_to_date
 --}}
-![retention-screen-retention-list](nx_asset://4b65b80d-fbe1-43bd-91eb-6f8cd2da185b ?w=650,border=true)
+![retention-screen-removehold-bulk](nx_asset://8fc57c45-28f7-49ab-8f0e-2ceadaa76ba5 ?w=600,border=true)
 
 Confirm from the popup window.
 
@@ -434,17 +491,172 @@ The Legal Hold will be removed for **all the documents displayed on the page**.
 
 ## As a User
 
+{{#> callout type='info' heading='Standard and Compliance mode' }}
+This page describes the user experience depending on the Retention Management addo-on mode among [Standard or Compliance]({{page page='index'}}#configuration-modes).
+{{/callout}}
+
 As a user, you will see some differences on the **View** tab of your documents:
 
 - There is an info header displaying Retention information or Legal Hold.
 - Some actions can be unavailable due to the nature of a document under retention or legal hold, or due to the functional limitations involved by the Nuxeo Retention Management add-on.
 
-The following table describes the availability of document actions:
+The following tables describe the availability of document actions:
 
 - The action is **available** (depending on the user permissions) as for a standard Nuxeo instance,
 - The action is **disabled for records**, meaning the action is disabled only when the document is under retention or legal hold,
 - The action is **disabled on instance**, meaning it's disabled for all documents on the Nuxeo instance, due to some limitations coming from the Nuxeo Management add-on.
 
+### With Standard mode
+
+
+<div class="table-scroll">
+<table class="hover">
+<tbody>
+<tr>
+    <th rowspan="2">Feature</th>
+</tr>
+<tr>
+    <th>Available</th>
+    <th>Disabled for records</th>
+    <th>Disabled on instance</th>
+</tr>
+<tr>
+    <td colspan="1">Preview</td>
+    <td>&#10003;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Download</td>
+    <td>&#10003;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Export</td>
+    <td>&#10003;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Add to collection</td>
+    <td>&#10003;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Add to favorites</td>
+    <td>&#10003;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Add to clipboard</td>
+    <td>&#10003;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Notify me</td>
+    <td>&#10003;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Share</td>
+    <td>&#10003;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">View permissions</td>
+    <td>&#10003;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Change permissions</td>
+    <td>&#10003;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">View history</td>
+    <td>&#10003;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">View publishing</td>
+    <td></td>
+    <td>&#10003;</td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Add tags</td>
+    <td>&#10003;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Start process</td>
+    <td>&#10003;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Lock</td>
+    <td>&#10003;</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Publish document</td>
+    <td></td>
+    <td>&#10003;</td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Replace main file</td>
+    <td></td>
+    <td>&#10003;</td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Delete main file</td>
+    <td></td>
+    <td>&#10003;</td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Delete document</td>
+    <td></td>
+    <td>&#10003;</td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Comments</td>
+    <td></td>
+    <td>&#10003;</td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Versioning</td>
+    <td></td>
+    <td>&#10003;</td>
+    <td></td>
+</tr>
+<tr>
+    <td colspan="1">Add attachment</td>
+    <td></td>
+    <td>&#10003;</td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+### With Compliance mode
 
 <div class="table-scroll">
 <table class="hover">
@@ -579,6 +791,12 @@ The following table describes the availability of document actions:
 </tr>
 <tr>
     <td colspan="1">Versioning</td>
+    <td></td>
+    <td></td>
+    <td>&#10003;</td>
+</tr>
+<tr>
+    <td colspan="1">Add attachment</td>
     <td></td>
     <td></td>
     <td>&#10003;</td>

@@ -15,33 +15,6 @@ tree_item_index: 100
 private: true
 ---
 
-## Amazon S3 Compliance Mode Integration
-
-### {{> anchor 's3-configuration-requirements'}} Amazon S3 Configuration Requirements
-
-Compliance with [SEC Rule 17a-4]({{page page='index'}}#sec-rule-17a4) requires to configure Nuxeo Platform to use Amazon S3 Compliance Buckets to store records required by regulation, thereby establishing the foundation for meeting the requirements of the Rule.</br>
-
-Specifically:
-
-- Direct writes to the Amazon S3 storage system must be disabled, to ensure all documents transit through Nuxeo Platform for compliant processing.
-
-- The Amazon S3 Object Lock feature must be enabled in Compliance Mode on the bucket intended to store objects that are marked as final records.
-
-- Amazon S3 Versioning must be enabled.
-
-- The default retention value for Amazon S3 Compliance Buckets intended to retain compliant record objects must be set to zero (0).
-
-- No Min/Max range should be established for Amazon S3 Compliance Buckets intended to retain compliant record objects.
-
-- Amazon S3 Lifecycle Policies must not be configured for use within the Nuxeo Platform storage subsystem.
-
-### Amazon S3 Buckets
-
-Nuxeo Platform with Nuxeo Retention Management addon requires the usage of 2 Amazon buckets:
-
-- A standard S3 bucket as for any other standard Nuxeo instance: this bucket is used to store the standard documents.
-
-- An S3 bucket dedicated to the records that is configured on [Compliance mode](#s3-configuration-requirements): this bucket is used to store the records only. Compared to the standard bucket, the Garbage Collector must be disabled as there is a [specific deletion process](#record-deletion-flow).
 
 ## {{> anchor 'dedicated-low-fields'}} Dedicated Low-Level Fields
 
