@@ -2,7 +2,7 @@
 title: 'HOWTO: Contribute Picture Conversions'
 review:
     comment: ''
-    date: '2017-12-12'
+    date: '2020-04-29'
     status: ok
 details:
     howto:
@@ -151,8 +151,8 @@ history:
         date: '2014-11-28 18:24'
         message: ''
         version: '1'
-
 ---
+
 Picture conversions are used to fill the picture views (stored in the `picture:views`&nbsp;field of a document having the&nbsp;`Picture` facet). The default ones are: Thumbnail, Small, Medium, FullHD, OriginalJpeg.
 
 Picture conversions are simple XML contributions done on the&nbsp;[`pictureConversions`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewExtensionPoint/org.nuxeo.ecm.platform.picture.ImagingComponent--pictureConversions) extension point of the&nbsp;[`org.nuxeo.ecm.platform.picture.ImagingComponent`](http://explorer.nuxeo.com/nuxeo/site/distribution/latest/viewComponent/org.nuxeo.ecm.platform.picture.ImagingComponent) component.
@@ -238,9 +238,8 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
     ```
 
 {{#> callout type='info' }}
-
-Since Nuxeo 10.10 (LTS2019), it is required to specify the source mime-type(s) the converter can handle (all the `<sourceMimeType>image/*</sourceMimeType>` in the example, buyt you cazn specify more than one). This can be disabled (not recommanded) by setting the `nuxeo.convert.enforceSourceMimeTypeCheck` configuration parameter to `false`. (See [this ticket](https://jira.nuxeo.com/browse/NXP-25840) for more details)
-
+Since Nuxeo 10.10 (LTS 2019), it is required to specify the source mime-type(s) the converter can handle (all the `<sourceMimeType>image/*</sourceMimeType>` in the example, but you can specify more than one).</br>
+This can be disabled (not recommended) by setting the `nuxeo.convert.enforceSourceMimeTypeCheck` configuration parameter to `false`. (See [this JIRA ticket](https://jira.nuxeo.com/browse/NXP-25840) for more details)
 {{/callout}}
 
 3.  <span style="line-height: 21.58px;">Create a chain that will be used for the picture conversion, getting the text from the&nbsp;</span> `pictureDocument` <span style="line-height: 21.58px;">&nbsp;and call the registered `watermarkWithText` converter to watermark the image. Here, for the example, we watermark the title of the document on the image:</span>
