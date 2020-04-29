@@ -31,6 +31,12 @@ This regulation contains requirements mainly for retention, legal hold, and acce
 
 The Nuxeo Retention Management add-on has been designed to be fully compliant with this regulation.
 
+## {{> anchor 'configuration-modes'}} Configuration modes
+
+The retention management module allows 2 modes:
+ - **standard mode**: this is the default mode when installating the addon. It allows to use all the retention features with all storage media supported by Nuxeo. This mode is not compliant to [SEC Rule 17a-4]({{page page='index'}}#sec-rule-17a4).
+ - **compliance mode**: this mode is required to be compliant with [SEC Rule 17a-4]({{page page='index'}}#sec-rule-17a4). It offers the same features than the standard mode but it requires the usage of Amazon S3 [Compliance mode]({{page page='nuxeo-retention-installation'}}#s3-configuration-requirements). It involves also some functional [limitations]({{page page='index'}}#limitations).
+
 ## Main Principles
 
 ### Record
@@ -91,6 +97,7 @@ The Nuxeo Retention Management add-on provides an audit system for both the orig
 </br>
 - Deletion of record object, metadata and audit trail data.
 
+## Compliance mode specificities
 ### Secured Storage
 
 The SEC 17a-4 US regulation involves the usage of a secured storage media as part of the requirements to be compliant.
@@ -98,13 +105,13 @@ The Nuxeo Retention Management add-on is using Amazon S3 in "Compliance mode", t
 
 Amazon S3 compliance mode (see [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html)) guarantees that no one can delete an object which is under retention or legal hold. Amazon S3 is provided with the retention period and/or legal hold information by Nuxeo, and ensures that no changes or deletions can occur during this period.
 
-## Limitations
+### {{> anchor 'limitations'}}Limitations
 
-The Nuxeo Retention Management add-on does not support **attachments**, **versioning**, and **comments**.
+In Compliance mode, the Nuxeo Retention Management add-on does not support **attachments**, **versioning**, and **comments**.
 
 Those features **are automatically disabled** for the full instance when the Nuxeo Retention Management add-on is added to Nuxeo Server (the related facets and the **file** schema are disabled). So, once the add-on is installed, there is no way to add a comment, an attachment or to create a version to a document, whatever if they are standard documents or records.
 
-## Warning
+## Warnings
 
 ### Irreversibility of Some Actions
 
@@ -129,6 +136,12 @@ Nuxeo can't guarantee the compliance to SEC 17a-4 in the event that:
 * * *
 
 <div class="row" data-equalizer data-equalize-on="medium">
+<div class="column medium-6">
+{{#> panel type='secondary' match_height='true'}}
+### Installation &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='retention-management/nuxeo-retention-installation'}})
+{{/panel}}
+</div>
+
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
 ### Functional Overview &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='retention-management/nuxeo-retention-functional-overview'}})
