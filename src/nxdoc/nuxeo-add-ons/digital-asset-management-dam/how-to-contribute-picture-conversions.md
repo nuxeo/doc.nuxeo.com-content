@@ -222,19 +222,25 @@ As a sample, let's see how we can retrieve a text to use as a watermark from the
     </extension>
     ```
 
-2.  Contribute an XML extension to register a converter that uses our new&nbsp;`watermarkWithText` command line:
+2.  Contribute an XML extension to register a converter that uses our new&nbsp;`watermarkWithText` command line.
 
     ```xml
     <extension target="org.nuxeo.ecm.core.convert.service.ConversionServiceImpl"
       point="converter">
       <converter name="watermarkWithText"
         class="org.nuxeo.ecm.platform.convert.plugins.CommandLineConverter">
+        <sourceMimeType>image/*</sourceMimeType>
         <parameters>
           <parameter name="CommandLineName">watermarkWithText</parameter>
         </parameters>
       </converter>
     </extension>
     ```
+
+{{#> callout type='info' }}
+Since Nuxeo 10.10 (LTS 2019), it is required to specify the source mime-type(s) the converter can handle (all the `<sourceMimeType>image/*</sourceMimeType>` in the example, but you can specify more than one).</br>
+This can be disabled (not recommended) by setting the `nuxeo.convert.enforceSourceMimeTypeCheck` configuration parameter to `false`. (See [this JIRA ticket](https://jira.nuxeo.com/browse/NXP-25840) for more details)
+{{/callout}}
 
 3.  <span style="line-height: 21.58px;">Create a chain that will be used for the picture conversion, getting the text from the&nbsp;</span> `pictureDocument` <span style="line-height: 21.58px;">&nbsp;and call the registered `watermarkWithText` converter to watermark the image. Here, for the example, we watermark the title of the document on the image:</span>
 
@@ -353,10 +359,15 @@ Let's say we want to execute the previous&nbsp;`Watermark` picture conversion on
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
-*   [How-To Index]({{page page='how-to-index'}})
+- [HOWTO: Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
+- [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}
+
+- [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
+- [Conversion]({{page page='conversion'}})
+
+{{/panel}}</div></div>
 
 *   [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
 *   [Conversion]({{page page='conversion'}})
