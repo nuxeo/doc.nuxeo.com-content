@@ -163,11 +163,11 @@ A set of methods allows the user to do common queries quite easily like getting 
 AuditReader reader = Framework.getService(AuditReader.class);
 
 // Getting of the logs for the document 'doc' in 'myRepository'
-List<LogEntry> logEntries = reader.getLogEntriesFor(doc.getId(), 'myRepository');
+List<LogEntry> logEntries = reader.getLogEntriesFor(doc.getId(), "myRepository");
 
 // Same method but with a query builder
 AuditQueryBuilder builder = new AuditQueryBuilder();
-builder.predicates(Predicates.eq("docUUID", doc.getId()), Predicates.eq("repositoryId", 'myRepository'));
+builder.predicate(Predicates.eq("docUUID", doc.getId()), Predicates.eq("repositoryId", "myRepository"));
 List<LogEntry> logEntriesFiltered = reader.queryLogs(builder);
 ```
 
