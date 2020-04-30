@@ -167,7 +167,8 @@ List<LogEntry> logEntries = reader.getLogEntriesFor(doc.getId(), "myRepository")
 
 // Same method but with a query builder
 AuditQueryBuilder builder = new AuditQueryBuilder();
-builder.predicate(Predicates.eq("docUUID", doc.getId()), Predicates.eq("repositoryId", "myRepository"));
+Predicate docIdAndRepo = Predicates.and(Predicates.eq("docUUID", doc.getId()), Predicates.eq("repositoryId", "myRepository"));
+builder.predicate(docIdAndRepo);
 List<LogEntry> logEntriesFiltered = reader.queryLogs(builder);
 ```
 
