@@ -1,14 +1,10 @@
 ---
 title: Release Notes
-description: .
+description: Release notes for Nuxeo Drive. 
 tree_item_index: 700
 review:
   comment: 'release'
   date: '2020-04-30'
-  status: ok
-review:
-  comment: 'beta'
-  date: '2020-04-15'
   status: ok
 toc: true
 ---
