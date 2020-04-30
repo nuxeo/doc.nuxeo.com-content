@@ -11,7 +11,7 @@ labels:
     - mlumeau
     - retention-management
 toc: true
-tree_item_index: 100
+tree_item_index: 200
 private: true
 ---
 
@@ -27,8 +27,8 @@ To provide the required data to Amazon S3 (expiration date and legal hold) and t
 
 If a legal hold is applied to a document or if a retention rule is applied to a document, then:
 
-- modification of the main blob (file:content) is **prevented**: this includes modification through restoring an older version.
-- deletion (including recursive delete) is **prevented**: this is enforced at low-level and this information is made available per-document through a security policy.
+- Modification of the main blob (`file:content`) is **prevented**: this includes modification through restoring an older version.
+- Deletion (including recursive delete) is **prevented**: this is enforced at low-level and this information is made available per-document through a security policy.
 - `ecm:isUnderRetentionOrLegalHold` is set to `true`.
 
 This applies in **all situations**, no exception, including for Administrators.
@@ -97,7 +97,7 @@ The standard Nuxeo deletion flow is based on the following principles:
 
 ### {{> anchor 'record-deletion-flow'}} Record Deletion Flow
 
-For the Retention Management add-on, a specific deletion flow has been added for the following reasons:
+For the Retention Management addon, a specific deletion flow has been added for the following reasons:
 
 - The deduplication feature is turned off for records content as it is not compliant with retention features (ex: it's not possible to handle a case where 2 records referenced the same file content with 2 different retention period and the legal constraint to delete it right after the retention period),
 

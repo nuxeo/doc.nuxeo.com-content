@@ -1,5 +1,6 @@
 ---
-title: Installation / Configuration
+title: Retention Management Addon Installation and Configuration
+description: Learn how to install and configure the Nuxeo Retention addon.
 review:
     comment: ''
     date: '2019-08-05'
@@ -10,21 +11,17 @@ labels:
     - jaubenque
     - retention-management
 toc: true
-hidden: true
-tree_item_index: 200
+tree_item_index: 300
 private: true
 ---
-{{! excerpt}}
 
-{{! /excerpt}}
 
 ## Before You Start
 
-{{#> callout type='info' heading='Standard and Compliance mode' }}
-This page gives all the necessary steps to install the Retention Management add-on with both [Standard and Compliance modes]({{page page='index'}}#configuration-modes).
-{{/callout}}
+This page gives all the necessary steps to install the Retention Management addon with both [Standard and Compliance modes]({{page page='index'}}#configuration-modes).
 
 ## Prerequisites
+
 ### With Compliance mode
 
 - The [Amazon S3 Online Storage]({{page version='' space='nxdoc' page='amazon-s3-online-storage'}}) addon configured on your instance
@@ -34,10 +31,12 @@ This page gives all the necessary steps to install the Retention Management add-
 {{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
 
 ## Configuration
+
 ### With Compliance mode
+
 #### Nuxeo server
 
-In Compliance mode, the Nuxeo Retention Management add-on requires to disable the **attachments**, **versioning**, and **comments** features.
+In Compliance mode, the Nuxeo Retention Management addon requires to disable the **attachments**, **versioning**, and **comments** features.
 
 This is done adding the parameter `nuxeo.retention.compliance.enabled=true` in the server [nuxeo.conf]({{page page='configuration-parameters-index-nuxeoconf'}}).
 
@@ -75,10 +74,12 @@ Once the standard Amazon S3 bucket is installed as described in [Amazon S3 Onlin
 - The file has to be added into `$NUXEO_HOME/nxserver/config`
 - The file name has to be ended with `-config.xml`
 - The file must contain a specific `component name`:
+
 ```xml
 <component name="records-s3-compliance" version="1.0.0">
 ```
 - The file must contain a blob manager extension with the configuration of the S3 bucket dedicated to the records and the following parameters:
+
 ```xml
 <extension target="org.nuxeo.ecm.core.blob.BlobManager" point="configuration">
     <blobprovider name="records">
@@ -86,6 +87,7 @@ Once the standard Amazon S3 bucket is installed as described in [Amazon S3 Onlin
       <property name="record">true</property>
 ```
 - The file must contain a blob dispatcher extension as described here:
+
 ```xml
 <extension target="org.nuxeo.ecm.core.blob.DocumentBlobManager" point="configuration">
     <blobdispatcher>
