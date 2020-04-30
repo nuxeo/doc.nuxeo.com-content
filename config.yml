@@ -7,7 +7,7 @@ default:
       - space_path: userdoc
         space_name: Nuxeo Platform User Documentation
     branch: '1010'
-    dev_browser_path: 1010/nxdoc
+    dev_browser_path: nxdoc
     versions:
       - label: LTS 2019
         is_current_version: true
