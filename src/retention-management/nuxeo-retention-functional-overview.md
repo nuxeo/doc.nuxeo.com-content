@@ -1,6 +1,6 @@
 ---
 title: Retention Functional Overview
-description: Discover how to use the Nuxeo Retention Management add-on once installed.
+description: Discover how to use the Nuxeo Retention Management addon once installed.
 review:
     comment: ''
     date: '2019-08-05'
@@ -31,7 +31,7 @@ A new retention menu {{!--     ### nx_asset ###
 --}}
 ![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) is available on the left side menu, including the following sub-menus:
 
-- A **retention search** that lets you [search through all the documents](#retention-search) under retention and/or Legal Hold.
+- A **retention search** that lets you [search through all the documents](#retention-search) under retention and/or legal hold.
 
 - A **retention rules** menu that displays the list of [retention rules]({{page page='index'}}#retention-rules) defined on your instance.
 
@@ -46,25 +46,25 @@ New actions are displayed on documents and result list:
     name: Retention_ICON_RetentionMenu.png
     server#icon#to_be_updated
 --}}
-![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) apply a retention rule to the document.
+![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) applies a retention rule to the document.
 
 - {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-legal-hold
     name: Retention_ICON_LegalHold.png
     server#icon#to_be_updated
 --}}
-![retention-icon-legal-hold](nx_asset://e73f883d-072a-459b-97f6-81ac7a5946f9 ?w=20) apply/remove a Legal Hold to the document.
+![retention-icon-legal-hold](nx_asset://e73f883d-072a-459b-97f6-81ac7a5946f9 ?w=20) applies/removes a legal hold to the document.
 
 - {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-main
     name: Retention_ICON_RetentionMenu.png
     server#icon#to_be_updated
 --}}
-![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) override the retention of a document already under retention.
+![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) overrides the retention of a document already under retention.
 
 ### Retention Rule Document Type
 
-A **Retention rule** document type is available, it can only be created under the retention rules menu.
+A **retention rule** document type is available, it can only be created under the retention rules menu.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-rules-menu
@@ -75,11 +75,11 @@ A **Retention rule** document type is available, it can only be created under th
 
 ### Permissions
 
-Regarding access rights, this add-on includes:
+Regarding access rights, this addon includes:
 
-- A **RecordManager** group.
-- A new **Manage record** permission that allows users to create/edit retention rules, apply a retention rule to a document or a list of documents and override the retention of a document already under retention.
-- A new **Manage Legal Hold** permission that allows granted users to apply/remove a Legal Hold to a document or a list of documents.
+- A **`RecordManager`** group.
+- A new **`Manage Record`** permission that allows users to create/edit retention rules, apply a retention rule to a document or a list of documents and override the retention of a document already under retention.
+- A new **`Manage legal hold`** permission that allows granted users to apply/remove a legal hold to a document or a list of documents.
 
 ### {{> anchor 'create-retention-rule'}} Create a Retention Rule
 
@@ -202,7 +202,7 @@ The retention period will start based on a defined metadata, once you apply the 
 
 This retention type is useful when the retention period depends on a past and external event. It can also be used for migration purpose (moving from a legacy records management system to Nuxeo).
 
-**Example:** If I apply a retention rule to a document on January 1st, 2020 with the metadata "publication date", a retention period of 2 years, and the "publication date" is September 15th, 2019, then the retention will expire on September 15th, 2021.
+**Example:** If I apply a retention rule to a document on March 15th, 2020 with the metadata "publication date", a retention period of 2 years, and the "publication date" is September 15th, 2019, then the retention will expire on September 15th, 2021.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-schema-metadata
@@ -210,6 +210,10 @@ This retention type is useful when the retention period depends on a past and ex
     addins#schema#up_to_date
 --}}
 ![retention-schema-metadata](nx_asset://b906f7be-83db-4f29-a3db-1b2ce1876742 ?w=600,border=true)
+
+{{#> callout type='warning'}}
+Metadata-based retention rule are designed for **past dates**, not future dates.
+{{/callout}}
 
 
 ##### Based on a event
@@ -261,8 +265,8 @@ On the **View** tab of the retention rule:
 
 To put a document under retention, you have to link the document to a retention rule.</br>
 By doing so:
-- the document will be automatically tagged as a **record**
-- the retention rule's settings will be applied to the document
+- The document will be automatically tagged as a **record**
+- The retention rule's settings will be applied to the document
 
 {{#> callout type='warning' }}
 This is an **irreversible action**, even as an administrator, meaning you can't unlink a retention rule to the document and you can't shorten the retention period.
@@ -367,11 +371,11 @@ The **retention search** is a dedicated search with criteria related to the rete
 
 This search contains filters on:
 
-- the attached retention rule.
-- the expiration date (past and future).
-- the retention status (active retention, expired, not under retention).
-- the legal hold status.
-- the full text content.
+- The attached retention rule.
+- The expiration date (past and future).
+- The retention status (active retention, expired, not under retention).
+- The legal hold status.
+- The full text content.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-search
@@ -389,21 +393,21 @@ On the **History** tab of your document, you can see all the events related to t
 - Application of a retention rule to the document.
 - Beginning of the retention perid.
 - Overriding of the retention period.
-- Application of a Legal Hold on the document.
-- Removing of a Legal Hold on the document.
+- Application of a legal hold on the document.
+- Removing of a legal hold on the document.
 
 #### General History
 
 On the **Administration** > **Audit** page, you can see all the events related to the retention, including the [retention events]({{page page='index'}}#retention-events) that have been created on the platform.
 
-### Put a Document Under Legal Hold
+### Put a Document Under legal hold
 
-There are different ways to put a document under a [Legal Hold]({{page page='index'}}#legal-hold). You can apply a Legal Hold to a single document or to several documents in a row.
+There are different ways to put a document under a [legal hold]({{page page='index'}}#legal-hold). You can apply a legal hold to a single document or to several documents in a row.
 
 #### From a Document View
 
 Once on the **View** tab of your document:
-1. Click on **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='search'}} ?w=14) and select **Apply Legal Hold**.</br>
+1. Click on **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='search'}} ?w=14) and select **Apply legal hold**.</br>
   A popup window is displayed.</br>
   {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-legalhold-popup
@@ -412,8 +416,8 @@ Once on the **View** tab of your document:
     --}}
   ![retention-screen-legalhold-popup](nx_asset://e9bba24c-6edc-44e9-81a4-a46fac55e135 ?w=350,border=true)
 
-2. Fill in the description and click on **Apply Legal Hold**.</br>
-    A bar is displayed at the top of your document to notify users that the document is under a Legal Hold.</br>
+2. Fill in the description and click on **Apply legal hold**.</br>
+    A bar is displayed at the top of your document to notify users that the document is under a legal hold.</br>
   {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-legalhold-document
     name: Retention_SCREEN_document-legalhold.png
@@ -423,7 +427,7 @@ Once on the **View** tab of your document:
 
 #### From a Result List
 
-After having performed a search from the [retention search menu](#retention-search), a list of documents is displayed. Then, if you click on the **Not Under legal hold** quick filter, you can click on **Apply Legal Hold** icon {{!--     ### nx_asset ###
+After having performed a search from the [retention search menu](#retention-search), a list of documents is displayed. Then, if you click on the **Not Under legal hold** quick filter, you can click on **Apply legal hold** icon {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-legal-hold
     name: Retention_ICON_LegalHold.png
     server#icon#to_be_updated
@@ -440,17 +444,17 @@ After having performed a search from the [retention search menu](#retention-sear
 Fill in the description field from the popup window and confirm.
 
 {{#> callout type='note' }}
-The Legal Hold will be applied on **all the documents displayed on the page**.
+The legal hold will be applied on **all the documents displayed on the page**.
 {{/callout}}
 
-### Remove a Legal Hold
+### Remove a legal hold
 
-There are different ways to remove a Legal Hold. You can remove a Legal Hold for a single document or for several documents in a row.
+There are different ways to remove a legal hold. You can remove a legal hold for a single document or for several documents in a row.
 
 #### From a Document View
 
 Once on the **View** tab of your document:
-1. Click on **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='search'}} ?w=14) and select **Remove Legal Hold**.</br>
+1. Click on **More** ![]({{file name='more-search-web-ui.png' space='userdoc' page='search'}} ?w=14) and select **Remove legal hold**.</br>
   A popup window is displayed.</br>
   {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-legalhold-remove-popup
@@ -459,7 +463,7 @@ Once on the **View** tab of your document:
   --}}
   ![retention-screen-legalhold-remove-popup](nx_asset://ea2ffc42-009a-4903-bd06-3d0a3645a29b ?w=350,border=true)
 
-2. Click on **Remove Legal Hold**.</br>
+2. Click on **Remove legal hold**.</br>
   The top bar displayed on top of your document doesn't display the legal hold anymore.</br>
   {{!--     ### nx_asset ###
       path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-retention-document
@@ -470,7 +474,7 @@ Once on the **View** tab of your document:
 
 #### From a Result List
 
-After having performed a search from the [retention search menu](#retention-search), a list of documents is displayed. Then, if you click on the **Under legal hold** quick filter, you can click on **Remove Legal Hold** icon {{!--     ### nx_asset ###
+After having performed a search from the [retention search menu](#retention-search), a list of documents is displayed. Then, if you click on the **Under legal hold** quick filter, you can click on **Remove legal hold** icon {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-legal-hold
     name: Retention_ICON_LegalHold.png
     server#icon#to_be_updated
@@ -487,25 +491,25 @@ After having performed a search from the [retention search menu](#retention-sear
 Confirm from the popup window.
 
 {{#> callout type='note' }}
-The Legal Hold will be removed for **all the documents displayed on the page**.
+The legal hold will be removed for **all the documents displayed on the page**.
 {{/callout}}
 
 ## As a User
 
 {{#> callout type='info' heading='Standard and Compliance mode' }}
-This page describes the user experience depending on the Retention Management add-on mode among [Standard or Compliance]({{page page='index'}}#configuration-modes).
+This page describes the user experience depending on the Retention Management addon mode among [Standard or Compliance]({{page page='index'}}#configuration-modes).
 {{/callout}}
 
 As a user, you will see some differences on the **View** tab of your documents:
 
-- There is an info header displaying Retention information or Legal Hold.
-- Some actions can be unavailable due to the nature of a document under retention or legal hold, or due to the functional limitations involved by the Nuxeo Retention Management add-on.
+- There is an info header displaying Retention information or legal hold.
+- Some actions can be unavailable due to the nature of a document under retention or legal hold, or due to the functional limitations involved by the Nuxeo Retention Management addon.
 
 The following tables describe the availability of document actions:
 
 - The action is **available** (depending on the user permissions) as for a standard Nuxeo instance,
 - The action is **disabled for records**, meaning the action is disabled only when the document is under retention or legal hold,
-- The action is **disabled on instance**, meaning it's disabled for all documents on the Nuxeo instance, due to some limitations coming from the Nuxeo Management add-on.
+- The action is **disabled on instance**, meaning it's disabled for all documents on the Nuxeo instance, due to some limitations coming from the Nuxeo Management addon.
 
 ### With Standard mode
 
@@ -523,134 +527,134 @@ The following tables describe the availability of document actions:
 </tr>
 <tr>
     <td colspan="1">Preview</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Download</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Export</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Add to collection</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Add to favorites</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Add to clipboard</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Notify me</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Share</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">View permissions</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Change permissions</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">View history</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">View publishing</td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Add tags</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Start process</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Lock</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Publish document</td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Replace main file</td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Delete main file</td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Delete document</td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Comments</td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Versioning</td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Add attachment</td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
 </tr>
 </tbody>
@@ -672,67 +676,67 @@ The following tables describe the availability of document actions:
 </tr>
 <tr>
     <td colspan="1">Preview</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Download</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Export</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Add to collection</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Add to favorites</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Add to clipboard</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Notify me</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Share</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">View permissions</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Change permissions</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">View history</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
@@ -740,23 +744,23 @@ The following tables describe the availability of document actions:
     <td colspan="1">View publishing</td>
     <td></td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
 </tr>
 <tr>
     <td colspan="1">Add tags</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Start process</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Lock</td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
     <td></td>
 </tr>
@@ -764,43 +768,43 @@ The following tables describe the availability of document actions:
     <td colspan="1">Publish document</td>
     <td></td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
 </tr>
 <tr>
     <td colspan="1">Replace main file</td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Delete main file</td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Delete document</td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
     <td></td>
 </tr>
 <tr>
     <td colspan="1">Comments</td>
     <td></td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
 </tr>
 <tr>
     <td colspan="1">Versioning</td>
     <td></td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
 </tr>
 <tr>
     <td colspan="1">Add attachment</td>
     <td></td>
     <td></td>
-    <td>&#10003;</td>
+    <td><center>&#10003;</center></td>
 </tr>
 </tbody>
 </table>
