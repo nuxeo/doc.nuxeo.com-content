@@ -851,7 +851,6 @@ Date property from the input document
 </table>
 </div>
 
-
 Adding values (days, months, ...) to a date field requires some manipulation (it is easier when using Automation Scripting with JavaScript), please read [this blob](https://www.nuxeo.com/blog/manage-dates-automation-chains/) on the topic.
 
 If you have this error in `server.log`...
