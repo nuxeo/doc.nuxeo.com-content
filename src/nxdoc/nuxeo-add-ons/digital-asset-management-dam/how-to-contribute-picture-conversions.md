@@ -368,8 +368,3 @@ Let's say we want to execute the previous&nbsp;`Watermark` picture conversion on
 - [Conversion]({{page page='conversion'}})
 
 {{/panel}}</div></div>
-
-*   [Digital Asset Management (DAM)]({{page page='digital-asset-management-dam'}})
-*   [Conversion]({{page page='conversion'}})
-
-{{/panel}}</div></div>
