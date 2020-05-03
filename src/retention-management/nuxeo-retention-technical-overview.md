@@ -1,5 +1,5 @@
 ---
-title: Retention Technical Overview
+title: Technical Overview
 description: Discover technical implementation of the Nuxeo Retention Management addon.
 review:
     comment: ''

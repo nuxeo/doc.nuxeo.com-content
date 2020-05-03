@@ -1,5 +1,5 @@
 ---
-title: Retention Functional Overview
+title: Functional Overview
 description: Discover how to use the Nuxeo Retention Management addon once installed.
 review:
     comment: ''
@@ -46,21 +46,21 @@ New actions are displayed on documents and result list:
     name: Retention_ICON_RetentionMenu.png
     server#icon#to_be_updated
 --}}
-![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) applies a retention rule to the document.
+![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) apply a retention rule to the document.
 
 - {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-legal-hold
     name: Retention_ICON_LegalHold.png
     server#icon#to_be_updated
 --}}
-![retention-icon-legal-hold](nx_asset://e73f883d-072a-459b-97f6-81ac7a5946f9 ?w=20) applies/removes a legal hold to the document.
+![retention-icon-legal-hold](nx_asset://e73f883d-072a-459b-97f6-81ac7a5946f9 ?w=20) apply/remove a legal hold to the document.
 
 - {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-icon-main
     name: Retention_ICON_RetentionMenu.png
     server#icon#to_be_updated
 --}}
-![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) overrides the retention of a document already under retention.
+![retention-icon-main](nx_asset://8d149fc3-fd74-47d6-ac71-da3e076bf397 ?w=20) override the retention of a document already under retention.
 
 ### Retention Rule Document Type
 
@@ -181,7 +181,8 @@ To create a new [retention rule]({{page page='index'}}#retention-rules):
   </tr>
 </table>
 
-#### {{> anchor 'extend-retention'}}Focus on the retention types
+#### {{> anchor 'retention-types'}}Focus on the Retention Types
+
 ##### Immediate
 
 The retention period will start once you apply the retention rule to the document.
@@ -196,7 +197,7 @@ The retention period will start once you apply the retention rule to the documen
 ![retention-schema-immediate](nx_asset://333ea217-fe1f-4a57-afc0-65c695daaaa6 ?w=600,border=true)
 
 
-##### Based on a metadata
+##### Based on a Metadata
 
 The retention period will start based on a defined metadata, once you apply the retention rule to the document.
 
@@ -215,8 +216,7 @@ This retention type is useful when the retention period depends on a past and ex
 Metadata-based retention rule are designed for **past dates**, not future dates.
 {{/callout}}
 
-
-##### Based on a event
+##### Based on an Event
 
 The retention period will start once the defined event occurs (after the retention rule has been applied to the document).
 
@@ -230,7 +230,6 @@ This retention type is useful for all cases where a document needs to be preserv
     addins#schema#up_to_date
 --}}
 ![retention-schema-event](nx_asset://5a0edde0-6536-4b69-bd2f-f4276bd4a0eb ?w=600,border=true)
-
 
 #### Edit a Retention Rule
 
@@ -375,7 +374,7 @@ This search contains filters on:
 - The expiration date (past and future).
 - The retention status (active retention, expired, not under retention).
 - The legal hold status.
-- The full text content.
+- The full-text content.
 
 {{!--     ### nx_asset ###
     path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/Retention Management/Functional Overview/retention-screen-search
@@ -391,7 +390,7 @@ This search contains filters on:
 On the **History** tab of your document, you can see all the events related to the retention including:
 
 - Application of a retention rule to the document.
-- Beginning of the retention perid.
+- Beginning of the retention period.
 - Overriding of the retention period.
 - Application of a legal hold on the document.
 - Removing of a legal hold on the document.
@@ -400,7 +399,7 @@ On the **History** tab of your document, you can see all the events related to t
 
 On the **Administration** > **Audit** page, you can see all the events related to the retention, including the [retention events]({{page page='index'}}#retention-events) that have been created on the platform.
 
-### Put a Document Under legal hold
+### Put a Document Under Legal Hold
 
 There are different ways to put a document under a [legal hold]({{page page='index'}}#legal-hold). You can apply a legal hold to a single document or to several documents in a row.
 
@@ -447,7 +446,7 @@ Fill in the description field from the popup window and confirm.
 The legal hold will be applied on **all the documents displayed on the page**.
 {{/callout}}
 
-### Remove a legal hold
+### Remove a Legal Hold
 
 There are different ways to remove a legal hold. You can remove a legal hold for a single document or for several documents in a row.
 
@@ -511,7 +510,7 @@ The following tables describe the availability of document actions:
 - The action is **disabled for records**, meaning the action is disabled only when the document is under retention or legal hold,
 - The action is **disabled on instance**, meaning it's disabled for all documents on the Nuxeo instance, due to some limitations coming from the Nuxeo Management addon.
 
-### With Standard mode
+### With Standard Mode
 
 
 <div class="table-scroll">
@@ -661,7 +660,7 @@ The following tables describe the availability of document actions:
 </table>
 </div>
 
-### With Compliance mode
+### With Compliance Mode
 
 <div class="table-scroll">
 <table class="hover">
