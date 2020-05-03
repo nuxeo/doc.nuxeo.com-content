@@ -16,12 +16,12 @@ private: true
 ---
 
 {{! excerpt}}
-The Nuxeo Retention Management addon covers all the necessary aspects of retention management to fulfill legal requirements. It includes management of records, retention rules, deletion of the document at a specific date and legal case management features, such as putting documents under legal hold and/or retention depending on a specific event or metadata and searching for a retention rules.
+The Nuxeo Retention Management addon covers all the necessary aspects of retention management to fulfill legal requirements. It includes management of records, retention rules, deletion of the document at a specific date and legal case management features, such as putting documents under legal hold and/or retention depending on a specific event or metadata and searching for a retention rule.
 {{! /excerpt}}
 
 ## Concept
 
-**Retention management** refers to the control of a document's lifecycle through the use rules and policies. Documents can be kept or deleted depending on a set of rules which may pertain to time, events or specific metadata contained in the document type.
+**Retention management** refers to the control of a document's lifecycle through rules and policies. Documents can be kept or deleted depending on a set of rules which may pertain to time, events or specific metadata contained in the document type.
 
 ## {{> anchor 'sec-rule-17a4'}} SEC Rule 17a-4 Compliance
 
@@ -30,11 +30,11 @@ This regulation contains requirements mainly for retention, legal hold, and acce
 
 The Nuxeo Retention Management addon has been designed to be fully compliant with this regulation.
 
-## {{> anchor 'configuration-modes'}} Configuration modes
+## {{> anchor 'configuration-modes'}} Configuration Modes
 
 The Nuxeo Retention Management addon allows 2 modes:
- - **Standard mode**: this is the default mode when installing the addon. It allows to use all the retention features with all storage media supported by Nuxeo Platform. This mode is not compliant to [SEC Rule 17a-4]({{page page='index'}}#sec-rule-17a4).
- - **Compliance mode**: this mode is required to be compliant with [SEC Rule 17a-4]({{page page='index'}}#sec-rule-17a4). It offers the same features than the standard mode but it requires the usage of Amazon S3 [Compliance mode]({{page page='nuxeo-retention-installation'}}#s3-configuration-requirements). It involves also some functional [limitations]({{page page='index'}}#limitations).
+ - **Standard mode**: this is the default mode when installing the addon. It allows using all the retention features with all storage media supported by Nuxeo Platform. This mode is not compliant with [SEC Rule 17a-4]({{page page='index'}}#sec-rule-17a4).
+ - **Compliance mode**: this mode is required to be compliant with [SEC Rule 17a-4]({{page page='index'}}#sec-rule-17a4). It offers the same features than the standard mode but it requires the usage of Amazon S3 [Compliance mode]({{page page='nuxeo-retention-installation'}}#s3-configuration-requirements). It also involves some functional [limitations]({{page page='index'}}#limitations).
 
 ## Main Principles
 
@@ -62,11 +62,11 @@ A retention rule can be applied to one document or a list of documents.
 
 Once a retention rule is applied to a document, it can still be downloaded and exported but it **can't be edited, replaced, or deleted** until the retention has expired.
 
-### {{> anchor 'legal-hold'}}legal hold
+### {{> anchor 'legal-hold'}}Legal Hold
 
-In the event of a litigation, audit or investigation, an organization may have to preserve certain information for an indeterminate period in order to prevent any spoliation of evidence by changing or updating content.
+In the event of litigation, audit or investigation, an organization may have to preserve certain information for an indeterminate period in order to prevent any spoliation of evidence by changing or updating content.
 
-The legal hold acts like a lock action once activated; the main document **can't be deleted**, even at API or storage level.
+The legal hold acts as a lock action once activated; the main document **can't be deleted**, even at API or storage level.
 
 The document can still be downloaded and exported but it **can't be edited, replaced, or deleted**.
 
@@ -86,7 +86,7 @@ The Nuxeo Retention Management addon provides an audit system for both the origi
 
 - Initial capture and storage of the record object and metadata.
 
-- Changes to the index and metadata. 
+- Changes to the index and metadata.
 
 {{#> callout type='info' heading=' '}}
 Note that the record object must be immutable. Specific metadata, such as unique object identifier and creation/storage date and time must also be immutable.
@@ -100,10 +100,12 @@ Note that the record object must be immutable. Specific metadata, such as unique
 </br>
 - Deletion of record object, metadata and audit trail data.
 
-## Compliance mode specificities
+## Compliance Mode Specificities
+
 ### Secured Storage
 
 The SEC 17a-4 US regulation involves the usage of a secured storage media as part of the requirements to be compliant.
+
 The Nuxeo Retention Management addon is using Amazon S3 in "Compliance mode", to fit with this requirement.
 
 Amazon S3 compliance mode (see [**Amazon S3 Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html)) guarantees that no one can delete an object which is under retention or legal hold. Amazon S3 is provided with the retention period and/or legal hold information by Nuxeo, and ensures that no changes or deletions can occur during this period.
@@ -120,7 +122,7 @@ Those features **are automatically disabled** for the full instance when the Nux
 
 Due to the SEC 17a-4 regulation requirements regarding records preservation, most of the actions related to the retention are **not reversible**:
 
-- There is no way to rollback the application of a retention rule to a document, even as an administrator.
+- There is no way to roll back the application of a retention rule to a document, even as an administrator.
 
 - There is no way to shorten a retention duration, even as an administrator.
 
@@ -141,19 +143,19 @@ Nuxeo can't guarantee the compliance to SEC 17a-4 in the event that:
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-### Installation <br/><br/> [Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='retention-management/nuxeo-retention-installation'}})
+### [Installation&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='retention-management/nuxeo-retention-installation'}})
 {{/panel}}
 </div>
 
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-### Functional Overview <br/><br/> [Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='retention-management/nuxeo-retention-functional-overview'}})
+### [Functional Overview&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='retention-management/nuxeo-retention-functional-overview'}})
 {{/panel}}
 </div>
 
 <div class="column medium-4">
 {{#> panel type='secondary' match_height='true'}}
-### Technical Overview <br/><br/> [Discover&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='retention-management/nuxeo-retention-technical-overview'}})
+### [Technical Overview&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='retention-management/nuxeo-retention-technical-overview'}})
 {{/panel}}
 </div>
 

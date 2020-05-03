@@ -1,5 +1,5 @@
 ---
-title: Retention Management Addon Installation and Configuration
+title: Installation and Configuration
 description: Learn how to install and configure the Nuxeo Retention addon.
 review:
     comment: ''
@@ -15,7 +15,6 @@ tree_item_index: 300
 private: true
 ---
 
-
 ## Before You Start
 
 This page gives all the necessary steps to install the Retention Management addon with both [Standard and Compliance modes]({{page page='index'}}#configuration-modes).
@@ -24,17 +23,17 @@ This page gives all the necessary steps to install the Retention Management addo
 
 ### With Compliance mode
 
-- The [Amazon S3 Online Storage]({{page version='' space='nxdoc' page='amazon-s3-online-storage'}}) addon configured on your instance
+- The [Amazon S3 Online Storage]({{page version='' space='nxdoc' page='amazon-s3-online-storage'}}) addon needs to be configured on your instance
 
 ## Installation
 
-{{{multiexcerpt 'MP-installation-easy' page='Generic Multi-Excerpts'}}}
+{{{multiexcerpt 'MP-installation-easy' space='nxdoc' page='Generic Multi-Excerpts'}}}
 
 ## Configuration
 
-### With Compliance mode
+### Compliance Mode
 
-#### Nuxeo server
+#### Nuxeo Server
 
 In Compliance mode, the Nuxeo Retention Management addon requires to disable the **attachments**, **versioning**, and **comments** features.
 
@@ -68,7 +67,7 @@ Specifically:
 
 - Amazon S3 Lifecycle Policies must not be configured for use within the Nuxeo Platform storage subsystem.
 
-##### Configure the records bucket in [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage)
+##### Configure the Records Bucket in [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage)
 
 Once the standard Amazon S3 bucket is installed as described in [Amazon S3 Online Storage](https://connect.nuxeo.com/nuxeo/site/marketplace/package/amazon-s3-online-storage), you have to add an XML extension file to configure the bucket dedicated to the records and how to dispatch files in each bucket (documents vs records):
 - The file has to be added into `$NUXEO_HOME/nxserver/config`
