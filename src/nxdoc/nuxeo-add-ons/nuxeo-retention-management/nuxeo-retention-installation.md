@@ -12,7 +12,6 @@ labels:
     - retention-management
 toc: true
 tree_item_index: 300
-private: true
 ---
 
 ## Before You Start

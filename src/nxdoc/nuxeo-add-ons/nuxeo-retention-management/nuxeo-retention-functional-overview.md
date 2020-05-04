@@ -12,7 +12,6 @@ labels:
     - retention-management
 toc: true
 tree_item_index: 100
-private: true
 ---
 
 ## As a Record Manager
