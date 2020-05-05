@@ -163,7 +163,7 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
     </component>
     ```
 
-    You can find more examples here: [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample).  
+    You can find more examples [here](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/login/nuxeo-platform-login-saml2/sample).  
     {{#> callout type='warning' }}</br>
     Read-only repositories (for instance LDAP) require `userResolverCreateIfNeeded` and `userResolverUpdate` to be set to **false**:
     ```xml
@@ -283,9 +283,9 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 
 ## Sources
 
-Sources of the addon can can be found at [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/).
+Sources of the addon can can be found [here](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/login/nuxeo-platform-login-saml2).
 
-You need to build the JAR and follow the sample at [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2//sample).
+You need to build the JAR and follow the sample [here](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/login/nuxeo-platform-login-saml2/sample).
 
 ## {{> anchor 'saml20_presentation'}}Background on SAML 2.0
 
@@ -308,7 +308,6 @@ For a detailed presentation of SAML V2.0, you should read the [SAML V2.0 Specifi
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Nuxeo Studio Community Cookbook'}}
 
 - [Map SAML user attributes to Nuxeo](https://github.com/nuxeo/nuxeo-studio-community-cookbook/blob/master/modules/nuxeo/saml-user-mapping)
-
 
 {{/panel}}</div><div class="column medium-6">
 </div></div>

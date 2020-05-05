@@ -585,7 +585,7 @@ For a more detailed view about possible configuration, see:
 - [LDAPDirectory and associated extension points](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewComponent/org.nuxeo.ecm.directory.ldap.LDAPDirectoryFactory),
 - [UserManager extension point](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewExtensionPoint/org.nuxeo.ecm.platform.usermanager.UserService--userManager).
 
-The [ldaptools/](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/nuxeo-platform-directory/nuxeo-platform-directory-ldap/ldaptools) folder in source code of the `nuxeo-platform-directory-ldap` module further provides sample LDIF files and OpenLDAP configuration file to help you setup a sample OpenLDAP server you can use as a base setup to build your corporate directory.
+The [ldaptools/](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/nuxeo-platform-directory/nuxeo-platform-directory-ldap/ldaptools) folder in source code of the `nuxeo-platform-directory-ldap` module further provides sample LDIF files and OpenLDAP configuration file to help you setup a sample OpenLDAP server you can use as a base setup to build your corporate directory.
 
 ## Using Active Directory
 
