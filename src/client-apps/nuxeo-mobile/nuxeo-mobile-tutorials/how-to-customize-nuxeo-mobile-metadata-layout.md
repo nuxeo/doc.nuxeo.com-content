@@ -64,7 +64,7 @@ The mobile application tries to retrieve the "metadata" layout for a given docum
 
 The customization can be done in the Studio Designer, but "manually" for now.
 
-Assuming you have a custom document type `SuperFile`, in the **Resources** tab of the Designer, add a new file named `nuxeo-superfile-metadata-layout.json`.
+Assuming you have a custom document type `SuperFile`, in the **Resources** tab of the Designer, add a new file named `nuxeo-superfile-metadata-layout.json` in the `ui/document/superfile` folder.
 
 Fill it with a JSON object defining what metadata you want to display, such as:
 
