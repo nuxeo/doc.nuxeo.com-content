@@ -589,7 +589,7 @@ See [NXP-19194](https://jira.nuxeo.com/browse/NXP-19194) for details.
 #### Nuxeo Server as the Base Distribution and CAP Removal
 
 As stated in the *From 8.2 to 8.3 > UI Dedicated Package* section, the new base distribution is Nuxeo Server, and Nuxeo CAP has been removed.
-Thus the following changes in [nuxeo-distribution](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution):
+Thus the following changes in [nuxeo-distribution](https://github.com/nuxeo/nuxeo/tree/8.10/nuxeo-distribution):
 
 {{! multiexcerpt name='upgrade-8.10-distributionChanges'}}
 ** Renamed Maven Modules **

@@ -251,9 +251,9 @@ docs = ess.query(new NxQueryBuilder(session).nxql(nxql).searchOnAllRepositories(
 
 ### Using the native Elasticsearch HTTP API
 
-The [nuxeo-elasticsearch-http-read-only](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/) addon exposes&nbsp;a limited set of Read Only Elasticsearch HTTP REST API, taking in account the Nuxeo authentication and authorization.
+The [nuxeo-elasticsearch-http-read-only](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/) addon exposes&nbsp;a limited set of Read Only Elasticsearch HTTP REST API, taking in account the Nuxeo authentication and authorization.
 
-See the addon [README](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/) for more information.
+See the addon [README](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/README.md) for more information.
 
 &nbsp;
 

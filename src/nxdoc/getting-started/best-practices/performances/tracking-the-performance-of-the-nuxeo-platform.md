@@ -564,9 +564,9 @@ Here are the main advantages:
     This makes it easy to create new scenarios.
 
 -->
-We use Gatling for [performance testing](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution/nuxeo-server-gatling-tests).
+We use Gatling for [performance testing](https://github.com/nuxeo/nuxeo/tree/master/ftests/nuxeo-server-gatling-tests).
 
-Also, we use Nuxeo Platform addon tools like [`nuxeo-platform-importer`](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-platform-importer/README.md) to populate the document base.
+Also, we use Nuxeo Platform addon tools like [`nuxeo-platform-importer`](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-importer/README.md) to populate the document base.
 
 ### Metrics to Monitor During a Bench
 
@@ -662,7 +662,7 @@ This benchmark was initially run in 2010 against a Nuxeo 5.3.1.
 1.  Tune the database following tips in the Nuxeo PostgreSQL&nbsp;[FAQ](https://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server).
 2.  Tune Nuxeo: for mass import, we disable the full-text indexing (as described in the ["Mass import specific tuning" section of PostgreSQL configuration page]({{page page='postgresql'}}#mass-import-specific-tuning)) and disable the ACL optimization ([NXP-4524](https://jira.nuxeo.com/browse/NXP-4524)).
 3.  Import content: mass import is done using a multi-threaded importer to create File document with an attached text file randomly generated using a French dictionary. Only a percentage of the text file will be indexed for the full text, this ratio simulate the proportion of text in a binary format.
-    [Sources of the nuxeo-platform-importer](https://github.com/nuxeo/nuxeo-platform-importer/blob/master/README.md)
+    [Sources of the nuxeo-platform-importer](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-importer/README.md)
 4.  Rebuild full text as described in the ["Mass import specific tuning" FAQ]({{page version='' space='nxdoc' page='postgresql'}}#mass-import-specific-tuning).
 5.  Generate random ACLs on documents. This can be done with a simple scripts that generate SQL inserts into the ACL table.
 6.  Enable the read ACLs optimization, performing the SQL command:

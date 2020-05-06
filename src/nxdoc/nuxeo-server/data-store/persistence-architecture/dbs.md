@@ -246,7 +246,7 @@ For user-defined schemas (and regular Nuxeo schemas, like `dublincore`), propert
 
 ### System Properties
 
-A number of expected system properties are also present: `ecm:id`, `ecm:parentId`, `ecm:name`, `ecm:pos`, `ecm:primaryType`, `ecm:majorVersion`, etc. You'll find a full list as constants in the [`DBSDocument`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-core/nuxeo-core-storage-dbs/src/main/java/org/nuxeo/ecm/core/storage/dbs/DBSDocument.java#L82) class.
+A number of expected system properties are also present: `ecm:id`, `ecm:parentId`, `ecm:name`, `ecm:pos`, `ecm:primaryType`, `ecm:majorVersion`, etc. You'll find a full list as constants in the [`DBSDocument`](https://github.com/nuxeo/nuxeo/blob/master/modules/core/nuxeo-core-storage-dbs/src/main/java/org/nuxeo/ecm/core/storage/dbs/DBSDocument.java#L82) class.
 
 The `ecm:acp` complex property represents the ACP defined on the document.
 

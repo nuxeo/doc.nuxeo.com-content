@@ -354,7 +354,7 @@ The Nuxeo HTTP session id is retrieved from the portal session context and invok
 
 CAS2 and anonymous authenticators have flows that can interfere with each others, creating some side effects like bad redirections.
 
-To avoid that, the CAS2 plugin provides a replacement for the default Anonymous authenticator : basically this is a _"CAS aware Anonymous authenticator"_. You can see a sample configuration available in: [https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/login/nuxeo-platform-login-cas2/Sample/CAS2-Anonymous-bundle.xml](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/login/nuxeo-platform-login-cas2/Sample/CAS2-Anonymous-bundle.xml).
+To avoid that, the CAS2 plugin provides a replacement for the default Anonymous authenticator : basically this is a _"CAS aware Anonymous authenticator"_. You can see a sample configuration available in: [https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/login/nuxeo-platform-login-cas2/Sample/CAS2-Anonymous-bundle.xml](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/login/nuxeo-platform-login-cas2/Sample/CAS2-Anonymous-bundle.xml).
 
 But, basically, wanting to put together both CAS2 and Anonymous authentication means you have two types of users that will access Nuxeo. So, an alternate approach is to define two separated authentication chains, one for each type of user:
 

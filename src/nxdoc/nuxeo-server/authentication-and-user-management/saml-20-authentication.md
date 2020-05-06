@@ -162,7 +162,7 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
     </component>
     ```
 
-    You can find more examples here: [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample).  
+    You can find more examples [here](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/login/nuxeo-platform-login-saml2/sample).  
     {{#> callout type='warning' }}</br>
     Read-only repositories (for instance LDAP) require `userResolverCreateIfNeeded` and `userResolverUpdate` to be set to **false**:
     ```xml
@@ -270,9 +270,9 @@ The [Nuxeo SAML 2.0 addon](https://connect.nuxeo.com/nuxeo/site/marketplace/pack
 
 ## Sources
 
-Sources of the addon can can be found at [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/).
+Sources of the addon can can be found at [here](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/login/nuxeo-platform-login-saml2/).
 
-You need to build the JAR and follow the sample at [https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2/sample](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-services/login/nuxeo-platform-login-saml2//sample).
+You need to build the JAR and follow the sample at [here](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/login/nuxeo-platform-login-saml2/sample).
 
 ## {{> anchor 'saml20_presentation'}}Background on SAML 2.0
 

@@ -111,7 +111,7 @@ Here is a non-exhaustive list of recommendations to get better performance:
     ```xml
     <proxies enabled="false"/>
     ```
-  - if possible disable the ACL optimization, look at the [perf template](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/perf) for more information.
+  - if possible disable the ACL optimization, look at the [perf template](https://github.com/nuxeo/nuxeo/tree/master/server/nuxeo-nxr-server/src/main/resources/templates/perf) for more information.
 
 
 - If you are doing an NXQL query that involves custom schemas you may need to add custom indexes to make the request efficient. You can trace the slow NXQL queries using [NXP-14845](https://jira.nuxeo.com/browse/NXP-14845).

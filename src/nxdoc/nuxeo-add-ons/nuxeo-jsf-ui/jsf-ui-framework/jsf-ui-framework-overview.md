@@ -96,7 +96,7 @@ The Document Management pages are using a Theme page layout defined [in the docu
 - The first column contains three slots (i.e. `<fragment>`).
 - The second column contains two slots (i.e. `<fragment>`).
 
-The slots themselves (called `view` in NXTheme) are defined in the [theme-contrib](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/theme-contrib.xml):
+The slots themselves (called `view` in NXTheme) are defined in the [theme-contrib](https://github.com/nuxeo/nuxeo-jsf-ui/blob/master/code/nuxeo-platform-webapp-core/src/main/resources/OSGI-INF/theme-contrib.xml):
 
 ```xml
 <view name="nuxeo5 tree explorer" template-engine="jsf-facelets">
