@@ -133,7 +133,7 @@ These bundles provide you with a new service (`org.nuxeo.ecm.platform.importer.x
 
 2.  `attributeMapping` to do the XML parsing and map to the corresponding metadata
 
-A detailed documentation on the advanced XML parsing usage can be found on the [nuxeo-importer-xml-parser GitHub page](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-platform-importer/nuxeo-importer-xml-parser).
+A detailed documentation on the advanced XML parsing usage can be found on the [nuxeo-importer-xml-parser GitHub page](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/nuxeo-platform-importer/nuxeo-importer-xml-parser).
 
 
 ## Import process
@@ -296,7 +296,7 @@ At the end, below is an example of XML file to import, working with the configur
 {{/panel}}
 
 
-A [Java mapper class example](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-platform-importer/nuxeo-importer-scan/src/test/java/org/nuxeo/platform/scanimporter/tests/SampleMapper.java) can be found on GitHub. This allows to create a specific Nuxeo document type depending on the XML source.
+A [Java mapper class example](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-importer/nuxeo-importer-scan/src/test/java/org/nuxeo/platform/scanimporter/tests/SampleMapper.java) can be found on GitHub. This allows to create a specific Nuxeo document type depending on the XML source.
 
 &nbsp;
 

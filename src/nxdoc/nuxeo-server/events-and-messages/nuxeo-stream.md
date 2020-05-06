@@ -52,7 +52,7 @@ But it is much more powerful:
 - Messages exchanged by computations can be validated according to an Avro schema taking care of message evolution and interoperability.
 - Computations are monitored, the lag and latency between producer and consumer are available metrics
 
-Visit the [Nuxeo Stream README](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-runtime/nuxeo-stream) for more details.
+Visit the [Nuxeo Stream README](https://github.com/nuxeo/nuxeo/tree/master/modules/runtime/nuxeo-stream) for more details.
 
 ## Nuxeo Stream Library
 
@@ -164,7 +164,7 @@ The `StreamService` enables to define Log configurations and eventually to initi
     </logConfig>
   ```
 
-It provides a low-level access to the Log using the [LogManager](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-runtime/nuxeo-runtime-stream#using-log-from-nuxeo) that can create Log, create tailer (reader) or appender (writer).
+It provides a low-level access to the Log using the [LogManager](https://github.com/nuxeo/nuxeo/tree/master/modules/runtime/nuxeo-stream) that can create Log, create tailer (reader) or appender (writer).
 
   ```
   StreamService service = Framework.getService(StreamService.class);
@@ -474,11 +474,11 @@ nuxeo.stream.pubsub.log.codec=avroBinary
 
 The `nuxeo-importer-stream` which is part of the `nuxeo-platform-importer` addon use Log to run document importer.
 
-Please visit [nuxeo-importer-stream README](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-platform-importer/nuxeo-importer-stream)
+Please visit [nuxeo-importer-stream README](https://github.com/nuxeo/nuxeo/tree/master/modules/runtime/nuxeo-stream)
 for more information.
 
 ### Bulk Action Framework
 
 The Bulk Action Framework is leveraging Nuxeo Stream to be able to run resilient bulk actions on documents.
-Please visit [nuxeo-core-bulk README](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-core/nuxeo-core-bulk)
+Please visit [nuxeo-core-bulk README](https://github.com/nuxeo/nuxeo/tree/master/modules/core/nuxeo-core-bulk)
 for more information.

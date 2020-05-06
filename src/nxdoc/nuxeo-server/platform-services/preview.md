@@ -163,7 +163,7 @@ When previewing a document, the logic executed goes through several layers (from
 
 ### HtmlPreviewAdapter Details
 
-The [`HtmlPreviewAdapter`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/preview/nuxeo-preview-core/src/main/java/org/nuxeo/ecm/platform/preview/api/HtmlPreviewAdapter.java) is an interface that is in charge of returning the preview blob (or list of blobs).
+  The [`HtmlPreviewAdapter`](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-preview-core/src/main/java/org/nuxeo/ecm/platform/preview/api/HtmlPreviewAdapter.java) is an interface that is in charge of returning the preview blob (or list of blobs).
 
 ```java
 preview = targetDocument.getAdapter(HtmlPreviewAdapter.class);
@@ -196,8 +196,8 @@ if (mtPreviewer != null) {
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation '}}
 
-- [Installing and Setting Up Related Software]({{page version='' space='nxdoc' page='installing-and-setting-up-related-software'}})
-- [How to Customize the Info-View Pop-Up]({{page space='NXDOC' page='How to+Customize+the+Info-View+Pop-Up'}})
+- [Installing and Setting Up Related Software]({{page space='ADMINDOC' page='Installing and+Setting+Up+Related+Software'}})
+- [HOWTO: Customize the Info-View Pop-Up]({{page space='NXDOC' page='How to+Customize+the+Info-View+Pop-Up'}})
 
 {{/panel}}</div><div class="column medium-6">
 

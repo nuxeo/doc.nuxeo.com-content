@@ -89,7 +89,7 @@ The simple search is configured to work in conjunction with a content view. This
 
 ## Simple Search Content View
 
-The simple search content view is named&nbsp;`simple_search` <span class="s">and can be overridden <span class="s">see the contribution at [search-contentviews-contrib.xml](https://github.com/nuxeo/nuxeo-jsf-ui/blob/master/code/nuxeo-search-ui/src/main/resources/OSGI-INF/search-contentviews-contrib.xml).</span></span>
+The simple search content view is named&nbsp;`simple_search` <span class="s">and can be overridden <span class="s">see the contribution at [search-contentviews-contrib.xml](https://github.com/nuxeo/nuxeo-jsf-ui/blob/master/code/nuxeo-platform-rendition-web/src/main/resources/OSGI-INF/search-contentviews-contrib.xml).</span></span>
 
 ## Quick Search Box
 

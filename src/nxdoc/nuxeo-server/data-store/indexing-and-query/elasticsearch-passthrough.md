@@ -104,7 +104,7 @@ The platform allows to use the HTTP REST API provided by the Elasticsearch back 
 
 ## Principle
 
-Elasticsearch exposes a search API to request indexes with HTTP requests (see [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html)). Elasticsearch does not perform authentication or authorization. The purpose of the [Nuxeo Elasticsearch Passthrough](https://github.com/nuxeo/nuxeo/tree/master/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only) is to expose a limited set of Read Only Elasticsearch HTTP REST API, taking in account the Nuxeo authentication and authorization.
+Elasticsearch exposes a search API to request indexes with HTTP requests (see [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-search.html)). Elasticsearch does not perform authentication or authorization. The purpose of the [Nuxeo Elasticsearch Passthrough](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only) is to expose a limited set of Read Only Elasticsearch HTTP REST API, taking in account the Nuxeo authentication and authorization.
 
 Concretely, HTTP requests are not sent to the Elasticsearch back end but addressed to the Nuxeo Platform which will rework the query to add a filter according to a Principal and forward them to the Elasticsearch cluster.
 
@@ -130,7 +130,7 @@ The Elasticsearch index name for the default repository is `nuxeo`. To query the
 curl -XGET -u jdoe:jdoe  'http://localhost:8080/nuxeo/site/es/nuxeo/_search' -d '{ "query": { "match_all":{}}}'
 ```
 
-The platform will use the [DefaultSearchRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/SearchRequestFilter.java) to rework the query applying ACL filtering as follow:
+The platform will use the [DefaultSearchRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/SearchRequestFilter.java) to rework the query applying ACL filtering as follow:
 
 ```js
 {
@@ -169,7 +169,7 @@ The platform only allows Administrator users to query the audit index.
 curl -XGET -u Administrator:Administrator  'http://localhost:8080/nuxeo/site/es/audit/_search' -d '{ "query": { "match_all":{}}}'
 ```
 
-In the same way the [AuditRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/AuditRequestFilter.java) search request filter to only Administrators request the audit index.
+In the same way the [AuditRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/AuditRequestFilter.java) search request filter to only Administrators request the audit index.
 
 ## Contributing a Custom Index View with a SearchRequestFilter
 
@@ -179,9 +179,9 @@ As detailed above, you can directly query Elasticsearch index with the following
 http://localhost:8080/nuxeo/site/es/{es_index_name}/_search
 ```
 
-The repository index and the audit index use by default respectively the [DefaultSearchRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/DefaultSearchRequestFilter.java) and [AuditRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/AuditRequestFilter.java) to make sure the current user only accesses authorized data.
+The repository index and the audit index use by default respectively the [DefaultSearchRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/DefaultSearchRequestFilter.java) and [AuditRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/AuditRequestFilter.java) to make sure the current user only accesses authorized data.
 
-[DefaultSearchRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/DefaultSearchRequestFilter.java) and [AuditRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/AuditRequestFilter.java) are [SearchRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/SearchRequestFilter.java) and you can contribute your own [SearchRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/SearchRequestFilter.java) with the extension point [ `filters`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20DM-8.3/viewExtensionPoint/org.nuxeo.elasticsearch.http.readonly.RequestFilterService--filters).
+[DefaultSearchRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/DefaultSearchRequestFilter.java) and [AuditRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/AuditRequestFilter.java) are [SearchRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/SearchRequestFilter.java) and you can contribute your own [SearchRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-elasticsearch/nuxeo-elasticsearch-http-read-only/src/main/java/org/nuxeo/elasticsearch/http/readonly/filter/SearchRequestFilter.java) with the extension point [ `filters`](http://explorer.nuxeo.com/nuxeo/site/distribution/Nuxeo%20DM-8.3/viewExtensionPoint/org.nuxeo.elasticsearch.http.readonly.RequestFilterService--filters).
 
 ### Worfklow Audit Index Example{{> anchor 'audif_wf'}}
 
@@ -199,9 +199,9 @@ The following contribution:
 </component>
 ```
 
-will tell to apply the [RoutingAuditRequestFilter](https://github.com/nuxeo/nuxeo-platform-document-routing/blob/master/nuxeo-routing-core/src/main/java/org/nuxeo/ecm/platform/routing/core/audit/es/RoutingAuditRequestFilter.java) on each Elasticsearch query addressed to the `audit_wf`. The `audit_wf` index does not really exist, it is somehow a view of the audit index.
+will tell to apply the [RoutingAuditRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-document-routing/nuxeo-routing-core/src/main/java/org/nuxeo/ecm/platform/routing/core/audit/es/RoutingAuditRequestFilter.java) on each Elasticsearch query addressed to the `audit_wf`. The `audit_wf` index does not really exist, it is somehow a view of the audit index.
 
-The [RoutingAuditRequestFilter](https://github.com/nuxeo/nuxeo-platform-document-routing/blob/master/nuxeo-routing-core/src/main/java/org/nuxeo/ecm/platform/routing/core/audit/es/RoutingAuditRequestFilter.java) basically
+The [RoutingAuditRequestFilter](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-document-routing/nuxeo-routing-core/src/main/java/org/nuxeo/ecm/platform/routing/core/audit/es/RoutingAuditRequestFilter.java) basically
 
 1.  Adds filters on the query to:
     *   Restrict to **Routing** audit event only

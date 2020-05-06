@@ -117,7 +117,7 @@ Automation Helpers are stateless tool functions used in MVEL or Javascript Autom
 Two helpers are set by default into Nuxeo Platform: **Fn** and **HTTP**.
 
 *   **Fn**:
-    Functions of **Fn** helper can be retrieved on this [class](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/features/PlatformFunctions.java). (`Fn.getVocabularyLabel(...)`, `Fn.getNextId()`, `Fn.getEmails(...)`, ...)
+    Functions of **Fn** helper can be retrieved on this [class](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/features/PlatformFunctions.java). (`Fn.getVocabularyLabel(...)`, `Fn.getNextId()`, `Fn.getEmails(...)`, ...)
 
 *   **HTTP**:
     Functions of **HTTP** helper can be used to make remote REST Calls.

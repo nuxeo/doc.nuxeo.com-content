@@ -173,7 +173,7 @@ Each identity provider has its own way to handle user identity in its `UserInfo`
 
 You just have to extend the `org.nuxeo.ecm.platform.oauth2.openid.auth.OpenIDUserInfo` class with the expected fields. Do not forget to set it in your provider contribution.
 
-You can take a look to our implementation like [`org.nuxeo.ecm.platform.oauth2.openid.auth.google.GoogleUserInfo`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/login/nuxeo-platform-login-openid/src/main/java/org/nuxeo/ecm/platform/oauth2/openid/auth/google/GoogleUserInfo.java) or [`org.nuxeo.ecm.platform.oauth2.openid.auth.DefaultOpenIDUserInfo`](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-services/login/nuxeo-platform-login-openid/src/main/java/org/nuxeo/ecm/platform/oauth2/openid/auth/DefaultOpenIDUserInfo.java) .
+You can take a look to our implementation like [`org.nuxeo.ecm.platform.oauth2.openid.auth.google.GoogleUserInfo`](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/login/nuxeo-platform-login-openid/src/main/java/org/nuxeo/ecm/platform/oauth2/openid/auth/google/GoogleUserInfo.java) or [`org.nuxeo.ecm.platform.oauth2.openid.auth.DefaultOpenIDUserInfo`](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/login/nuxeo-platform-login-openid/src/main/java/org/nuxeo/ecm/platform/oauth2/openid/auth/DefaultOpenIDUserInfo.java) .
 
 ### Username Resolution
 

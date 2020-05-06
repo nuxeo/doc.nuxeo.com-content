@@ -278,7 +278,7 @@ There are 2 ways to define your LDAP configuration:
 - Set all out-of-the-box LDAP variables in `nuxeo.conf`
 - Providing an XML contribution for your LDAP configuration
 
-The first approach allows you to simply reuse the default LDAP configuration template [here](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common/config/default-ldap-users-directory-bundle.xml.nxftl) by providing values for each variable defined in this template. The advantage of that solution is you don't have to deal with future upgrades config changes as you simply define variables in `nuxeo.conf`. If changes are required then the template will be automatically updated at the future upgrades.
+The first approach allows you to simply reuse the default LDAP configuration template [here](https://github.com/nuxeo/nuxeo/blob/master/server/nuxeo-nxr-server/src/main/resources/templates/common/config/default-ldap-users-directory-bundle.xml.nxftl) by providing values for each variable defined in this template. The advantage of that solution is you don't have to deal with future upgrades config changes as you simply define variables in `nuxeo.conf`. If changes are required then the template will be automatically updated at the future upgrades.
 
 If you need to add other custom setting where the template doesn't define any variable for that config then the second option would be better. You will have to maintain this contribution for future Nuxeo upgrades.
 

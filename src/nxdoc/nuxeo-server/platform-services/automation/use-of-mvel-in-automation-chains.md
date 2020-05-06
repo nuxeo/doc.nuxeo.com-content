@@ -606,7 +606,7 @@ The Document wrapper, used by the system for any document put in scripting conte
 {{/callout}}
 
 {{#> callout type='info' }}
-We only listed here the main accessors. `Document` is a `DocumentWrapper` and you can also [check the code](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-core/src/main/java/org/nuxeo/ecm/automation/core/scripting/DocumentWrapper.java) to see all the available accessors.</br>
+We only listed here the main accessors. `Document` is a `DocumentWrapper` and you can also [check the code](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-automation/nuxeo-automation-core/src/main/java/org/nuxeo/ecm/automation/core/scripting/DocumentWrapper.java) to see all the available accessors.</br>
 For example, you can also use `hasFacet(String facet)`, `hasSchema(String schemaName)`, etc. Make sure to select the branch corresponding to the version of Nuxeo you are using.
 {{/callout}}
 
@@ -681,7 +681,7 @@ The `CurrentUser` object wraps useful functions to get information about the cur
 
 ## {{> anchor 'fn-object'}}Functions
 
-The Functions object is providing a set of useful functions. This object is named `Fn` and it provides the following functions (the full list can also be checked in [the code](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-features/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/features/PlatformFunctions.java), make sure to select the branch of your version):
+The Functions object is providing a set of useful functions. This object is named `Fn` and it provides the following functions (the full list can also be checked in [the code](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-automation/nuxeo-automation-features/src/main/java/org/nuxeo/ecm/automation/features/PlatformFunctions.java), make sure to select the branch of your version):
 
 - `Fn.getNextId(String key)`: Returns a unique value for the given key using the default sequencer. Each time this function is called using the same key a different string will be returned.
 

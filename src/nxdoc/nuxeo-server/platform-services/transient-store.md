@@ -145,7 +145,7 @@ Two additional properties can be defined if the `KeyValueBlobTransientStore` is 
 
 Both of these names default to `transient_` followed by the transient store name.
 
-Have a look at the [default transient store configuration](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common/config/transient-store-config.xml), defined in a template:
+Have a look at the [default transient store configuration](https://github.com/nuxeo/nuxeo/blob/master/server/nuxeo-nxr-server/src/main/resources/templates/common/config/transient-store-config.xml), defined in a template:
 
 {{#> panel type='code' heading='Default Transient Store Configuration'}}
 ```xml

@@ -670,7 +670,7 @@ Where
 - `audit.elasticsearch.indexName` is the name of the Elasticsearch index for audit logs.
 - `seqgen.elasticsearch.indexName` is the name of the Elasticsearch index for the uid sequencer, extensively used for audit logs.
 
-You can find all the available options in the [nuxeo.defaults](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/nuxeo-nxr-server/src/main/resources/templates/common-base/nuxeo.defaults).
+You can find all the available options in the [nuxeo.defaults](https://github.com/nuxeo/nuxeo/blob/master/server/nuxeo-nxr-server/src/main/resources/templates/common-base/nuxeo.defaults).
 
 
 #### Index Aliases

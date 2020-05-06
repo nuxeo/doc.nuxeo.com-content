@@ -630,7 +630,7 @@ Note that when using an Elasticsearch page provider you can use [NXQL hints]({{p
 
 Attributes `escapeParameters` and `quoteParameters` are also accepted on the `pattern` element.
 
-It might be useful to add the ContentViewDisplay facet (this facet includes the [`content_view_display` schema, using the `cvd` prefix](https://github.com/nuxeo/nuxeo/blob/master/nuxeo-dm/nuxeo-platform-webapp-types/src/main/resources/schemas/content_view_display.xsd)) to the definition of the `AdvandedSearch` document type, when configuring one of the elements described below: `pageSizeBinding`, `sortInfosBinding
+It might be useful to add the ContentViewDisplay facet (this facet includes the [`content_view_display` schema, using the `cvd` prefix](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-platform-webapp-types/src/main/resources/schemas/content_view_display.xsd) to the definition of the `AdvandedSearch` document type, when configuring one of the elements described below: `pageSizeBinding`, `sortInfosBinding
 `, `resultColumns` or `resultLayout`.
 
 #### searchDocumentType Element

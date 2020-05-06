@@ -291,10 +291,10 @@ Here are a few examples of the most common variables:
 - `${auditEntries.eventId}`: displays the events listed in the document's history. `${auditEntries.eventDate}` displays the date at which the events took place, `${auditEntries.principalName}` the name of the user who did the action, `${auditEntries.comment}` the comment typed by the user.
 
 {{#> callout type='tip' heading='More resources to help users create the template file'}}
--More information about the variables available (including functions) in the [Quick User Gfuide](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-template-rendering/QuickUserGuide.md) on the Nuxeo GitHub repository.</br>
+-More information about the variables available (including functions) in the [Quick User Guide](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-template-rendering/QuickUserGuide.md) on the Nuxeo GitHub repository.</br>
 -XDocReport [overview](https://github.com/opensagres/xdocreport/wiki/Overview) and [.docx format user guide](https://github.com/opensagres/xdocreport/wiki/DocxDesignReport) / [.odt format user guide](https://github.com/opensagres/xdocreport/wiki/ODTDesignReport): XDocReport is a tool that enables to insert fields in MS Office and OpenOffice/LibreOffice text files.</br>
 -[JXLS website](http://jxls.sourceforge.net): JXLS is a tool that enables to insert fields in MS Office and OpenOffice/LibreOffice spreadsheets.</br>
--[Template Rendering README file](https://github.com/nuxeo/nuxeo/blob/master/addons/nuxeo-template-rendering/ReadMe.md) on the Nuxeo GitHub repository.
+-[Template Rendering README file](https://github.com/nuxeo/nuxeo/blob/master/modules/platform/nuxeo-template-rendering/ReadMe.md) on the Nuxeo GitHub repository.
 {{/callout}}
 
 #### Creating the Template Document
