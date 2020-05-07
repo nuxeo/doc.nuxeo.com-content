@@ -349,7 +349,7 @@ You will find there a lot of "group", "hosted" and "proxy" repositories:
     Those groups deliver everything except Nuxeo artifacts (i.e. thirdparty-releases = public - public-releases).
 *   [.../repositories/vendor-releases/](https://maven.nuxeo.org/nexus/content/repositories/vendor-releases/) and [.../repositories/vendor-snapshots/](https://maven.nuxeo.org/nexus/content/repositories/vendor-snapshots/)
     Here are stored all third-party artifacts which were not available on Internet as Maven artifacts (because their editor does not manage their own public Maven repository, neither publish in available ones; or because Nuxeo has applied some patches on them).
-*   [.../repositories/hotfix-releases/](https://maven.nuxeo.org/nexus/content/groups/hotfix-releases) and [.../repositories/hotfix-snapshots/](https://maven.nuxeo.org/nexus/content/repositories/hotfix-snapshots/)
+*   [.../repositories/hotfix-releases-group/](https://maven.nuxeo.org/nexus/content/groups/hotfix-releases-group) and [.../repositories/hotfix-snapshots/](https://maven.nuxeo.org/nexus/content/repositories/hotfix-snapshots/)
     Here are stored all Nuxeo published Hotfix artifacts. Those are internally hosted Nuxeo repositories. The access is restricted to Nuxeo customers.
 *   Various proxy repositories from which Nuxeo retrieve some artifacts.
     These are public repositories from Apache, Atlassian, Codehaus, Google, ibiblio, JBoss, Maven Central (of course), Sonatype...
@@ -454,7 +454,7 @@ If you are behind an HTTP proxy, see [http://maven.apache.org/settings.html#Prox
 
 ### Configure Hotfix Repositories
 
-Nuxeo customers have access to two additional repositories where the "hotfix" artifacts are deployed: `hotfix-releases` and `hotfix-snapshots`.
+Nuxeo customers have access to two additional repositories where the "hotfix" artifacts are deployed: `hotfix-releases-group` and `hotfix-snapshots`.
 Contact the Nuxeo support to get an account.
 
 Add the repositories in your POM:
@@ -464,7 +464,7 @@ Add the repositories in your POM:
  <!-- Hotfix Repositories For Nuxeo Customers Only -->
   <repository>
     <id>hotfix-releases</id>
-    <url>https://maven.nuxeo.org/nexus/content/groups/hotfix-releases/</url>
+    <url>https://maven.nuxeo.org/nexus/content/groups/hotfix-releases-group/</url>
     <releases>
       <enabled>true</enabled>
     </releases>
@@ -495,7 +495,7 @@ Set your credentials in your `$M2_REPO/settings.xml`:
     <mirror>
       <id>hotfix-releases-eu</id>
       <name>hotfix releases EU</name>
-      <url>https://maven-eu.nuxeo.org/nexus/content/groups/hotfix-releases</url>
+      <url>https://maven-eu.nuxeo.org/nexus/content/groups/hotfix-releases-group</url>
       <mirrorOf>hotfix-releases</mirrorOf>
     </mirror>
     <mirror>
