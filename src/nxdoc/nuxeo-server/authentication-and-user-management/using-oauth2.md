@@ -66,8 +66,8 @@ history:
         date: '2014-02-10 15:54'
         message: ''
         version: '1'
-
 ---
+
 OAuth 2 is a protocol that allows an application to obtain access to the Nuxeo Platform on behalf of a user.
 
 Nuxeo tries to stay very close to the ["OAuth 2.0 Authorization Framework"](http://tools.ietf.org/html/rfc6749) RFC to ease client integration and be secure. Before going any further, because OAuth 2 has to make a lot of secure exchanges with clients using query parameters, you **must ensure** to have [configured Nuxeo in HTTPS]({{page page='http-and-https-reverse-proxy-configuration'}}).
@@ -219,7 +219,6 @@ If `Auto-grant` is not checked for the OAuth 2 client registered on the server, 
 The `code_challenge` and `code_challenge_method` parameters must be used with a public client, according to the ["Proof Key for Code Exchange by OAuth Public Clients "](https://tools.ietf.org/html/rfc7636) RFC. For the `code_challenge_method`, if the client is capable of using "S256", it **must** use "S256", as "S256" is implemented on the server.
 {{/callout}}
 
-
 ## Token Endpoint
 
 ### Requesting an Access Token with an Authorization Code
@@ -296,13 +295,13 @@ Content-Type: application/json;charset=ISO-8859-1
 
 ```
 
-### Configuring Nuxeo for JWT access
+### Configuring Nuxeo for JWT Access
 
-JWT authentication can be enabled on Nuxeo server if you set `nuxeo.jwt.secret` within your `nuxeo.conf` configuration file.  The secret should be protected as a sensitive value.
+JWT authentication can be enabled on Nuxeo server if you set `nuxeo.jwt.secret` within your `nuxeo.conf` configuration file. The secret should be protected as a sensitive value.
 
-### Prepare the JWT assertion
+### Prepare the JWT Assertion
 
-The JWT assertion makes use of the `oauth2Clients` directory entry.  The JWT bearer token must have several required fields in order to generate the OAuth2 token.
+The JWT assertion makes use of the `oauth2Clients` directory entry. The JWT bearer token must have several required fields to generate the OAuth 2 token.
 
 **Payload**
 
@@ -319,7 +318,7 @@ Example payload for JWT assertion:
 
 **Encode JWT**
 
-This example uses a node.js package caled `jsonwebtokencli` to generate the encoded form.  Equivalent functions can be found in the Java, Python, and JavaScript libraries.
+This example uses a `node.js` package called `jsonwebtokencli` to generate the encoded form.  Equivalent functions can be found in the Java, Python, and JavaScript libraries.
 
 The JWT secret value (`nuxeo.jwt.secret`), `timestamp`, and usage of the `HS512` algorithm are required to properly encode a JWT token.
 
@@ -371,7 +370,7 @@ grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&client_id=myApp
 <tr>
 <td>`client_secret`</td>
 <td>string</td>
-<td>**Yes**</td>
+<td>**No**</td>
 <td>The client's secret</td>
 </tr>
 <tr>
@@ -482,8 +481,8 @@ curl https://NUXEO_SERVER/nuxeo/api/v1/path/default-domain?access_token=ACCESS_T
 {{#> panel heading='Related Documentation'}}
 
 - [Authentication and User Management]({{page version='' space='nxdoc' page='authentication-and-user-management'}})
-- [Using OpenID / OAuth2 in Login Screen]({{page version='' space='nxdoc' page='using-openid-oauth2-in-login-screen'}})
-- [OAuth2 Resource Endpoint]({{page version='' space='nxdoc' page='oauth2-endpoint'}})
+- [Using OpenID / OAuth 2 in Login Screen]({{page version='' space='nxdoc' page='using-openid-oauth2-in-login-screen'}})
+- [OAuth 2 Resource Endpoint]({{page version='' space='nxdoc' page='oauth2-endpoint'}})
 
 {{/panel}}
 </div>
