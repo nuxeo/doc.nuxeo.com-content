@@ -70,7 +70,7 @@ Access, consumer and producer properties are registered using the Nuxeo `KafkaCo
       <consumer>
         <property name="bootstrap.servers">localhost:9092</property>
         <property name="request.timeout.ms">30000</property>
-        <property name="max.poll.interval.ms">60000</property>
+        <property name="default.api.timeout.ms">60000</property>
         <property name="session.timeout.ms">50000</property>
         <property name="heartbeat.interval.ms">4000</property>
         <property name="max.poll.records">2</property>
