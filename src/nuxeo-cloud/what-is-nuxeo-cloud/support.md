@@ -30,7 +30,7 @@ In the event issues are encountered that cannot be resolved, we can provide supp
 
 ### Opening a support ticket on Cloud Environments
 
-When [filling a JIRA Ticket]({{page version='' space='studio' page='how-to-fill-a-jira-ticket''}}), there are some aspects you show :
+When [filling a JIRA Ticket]({{page version='' space='studio' page='how-to-fill-a-jira-ticket'}}), there are some aspects you show :
 - Nuxeo logs and config are not required for investigations with Nuxeo Cloud environments, however screenshots and code may be.
 - You don't need to specify the packages and server version deployed on your instance
 

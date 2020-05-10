@@ -1,28 +1,29 @@
 ---
-title: Nuxeo Cloud
+title: What is Nuxeo Cloud
 review:
     comment: ''
     date: '19-03-2020'
     status: ok
 labels:
     - nuxeo-cloud
+tree_item_index: 100
 ---
 
 <div class="row" data-equalizer data-equalize-on="medium">
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### What's Nuxeo Cloud
+### Overview
 
 ...
 
-[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='what-is-nuxeo-cloud'}})
+[Let's go&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>]({{page page='about'}})
 {{/panel}}
 </div>
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### New to Nuxeo Cloud
+### Getting Started
 
 ...
 
@@ -35,7 +36,7 @@ labels:
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Nuxeo Cloud Day-to-day
+### Manage
 
 ...
 
@@ -45,7 +46,7 @@ labels:
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Start Developing an Application
+### Deploy
 
 ...
 
@@ -58,7 +59,7 @@ labels:
 
 <div class="column medium-6">
 {{#> panel type='secondary' match_height='true'}}
-### Additional Modules
+### Support
 
 ...
 
