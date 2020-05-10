@@ -1,5 +1,5 @@
 ---
-title: How to Enable Quotas on Document Types
+title: 'HOWTO: Enable Quotas on Document Types'
 review:
     comment: ''
     date: '2016-12-07'

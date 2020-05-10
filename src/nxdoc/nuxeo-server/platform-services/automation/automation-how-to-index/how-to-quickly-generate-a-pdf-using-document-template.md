@@ -1,5 +1,5 @@
 ---
-title: How to Quickly Generate a PDF Using Document Template
+title: 'HOWTO: Quickly Generate a PDF Using Document Template'
 review:
     comment: ''
     date: '2018-01-15'
@@ -154,7 +154,7 @@ You may want to use [Nuxeo Platform Template Rendering addon]({{page page='templ
     ```
 
 2.  Create a [user action]({{page space='studio' page='user-actions'}}) on the document (in the [category]({{page page='actions-display'}}) you want).
-3.  Create the related automation chain (see [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})) with the following operations:
+3.  Create the related automation chain (see [HOWTO: Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})) with the following operations:
 
     ```
     - Context.FetchDocument

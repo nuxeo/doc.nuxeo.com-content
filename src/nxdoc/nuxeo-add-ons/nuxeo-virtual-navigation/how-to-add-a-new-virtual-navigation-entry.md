@@ -1,5 +1,5 @@
 ---
-title: How to Add a New Virtual Navigation Entry
+title: 'HOWTO: Add a New Virtual Navigation Entry'
 review:
     comment: ''
     date: '2015-12-01'
@@ -300,7 +300,7 @@ This property should always be clicked when you contribute a new virtual navigat
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-tos'}}
 
-- [How to Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
+- [HOWTO: Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

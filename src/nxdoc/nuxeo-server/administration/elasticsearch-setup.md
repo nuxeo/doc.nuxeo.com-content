@@ -901,7 +901,7 @@ This tool is a read-only standalone tool, it requires both access to the databas
 
 - [Configuring the Elasticsearch Mapping]({{page space='NXDOC' page='Configuring the+Elasticsearch+Mapping'}})
 - [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
-- [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+- [HOWTO: Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation '}}
 

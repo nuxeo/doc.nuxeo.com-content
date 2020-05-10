@@ -443,7 +443,7 @@ In order to perform NXQL queries on Elasticsearch repository through the `search
 elasticsearch.override.pageproviders=default_search,REST_API_SEARCH_ADAPTER
 ```
 
-Note that [`default_search`]({{page page='page-provider-aggregates'}}) is the only page provider querying on Elasticsearch by default. When defining `elasticsearch.override.pageproviders` conf property, don't forget to add it or else it won't query Elasticsearch anymore. See also [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}).
+Note that [`default_search`]({{page page='page-provider-aggregates'}}) is the only page provider querying on Elasticsearch by default. When defining `elasticsearch.override.pageproviders` conf property, don't forget to add it or else it won't query Elasticsearch anymore. See also [HOWTO: Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}).
 
 ### Searching by Page Provider
 
@@ -1084,7 +1084,7 @@ GET http://NUXEO_SERVER/nuxeo/api/v1/search/saved/f0c173cc-4bbc-42b1-ac66-51b362
 - [Document Resources Endpoints]({{page page='document-resources-endpoints'}})
 - [REST API Entity Types]({{page page='rest-api-entity-types'}})
 - [Page Providers]({{page page='page-providers'}})
-- [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+- [HOWTO: Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 - [Elasticsearch Highlights]({{page page='elasticsearch-highlights'}})
 
 {{/panel}}</div><div class="column medium-6">

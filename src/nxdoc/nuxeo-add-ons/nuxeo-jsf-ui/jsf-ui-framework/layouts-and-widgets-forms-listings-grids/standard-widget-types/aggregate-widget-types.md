@@ -204,7 +204,7 @@ Range aggregates define a set of ranges for which we can define the label to be 
 
 {{#> panel heading='Related Documentation'}}
 
-- [How to Configure a Search Filter With Facets and Other Aggregates]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
+- [HOWTO: Configure a Search Filter With Facets and Other Aggregates]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
 - [Page Provider Aggregates]({{page page='page-provider-aggregates'}})
 
 {{/panel}}</div><div class="column medium-6">

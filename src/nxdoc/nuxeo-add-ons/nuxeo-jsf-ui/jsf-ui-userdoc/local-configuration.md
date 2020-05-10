@@ -141,7 +141,7 @@ To **define the default document type for import**, click on **Manage**&nbsp;> *
 
 {{#> callout type='tip' heading='Add your own document types'}}
 
-You can leverage this feature when you customize the Nuxeo Platform and create new document types that extend the File document type. Your document type will then be available in the "Default type" drop down list and you can select it instead of the default File. You can read a tutorial showing [how to create a new document type]({{page space='nxdoc' page='how-to-define-a-document-type'}}) using [Nuxeo Studio]({{page space='studio'}}).
+You can leverage this feature when you customize the Nuxeo Platform and create new document types that extend the File document type. Your document type will then be available in the "Default type" drop down list and you can select it instead of the default File. You can read a tutorial showing [HOWTO: create a new document type]({{page space='nxdoc' page='how-to-define-a-document-type'}}) using [Nuxeo Studio]({{page space='studio'}}).
 
 {{/callout}}
 
@@ -163,7 +163,7 @@ You can define what content view will be used for folderish documents (i.e. docu
 
 {{#> callout type='tip' heading='Customized content views'}}
 
-You can leverage this feature when you customize the Nuxeo Platform and create new content views. Your content view will then be available in the drop down list and you can use locally for documents. You can read [How to define a new view]({{page space='nxdoc' page='how-to-define-a-new-content-view'}}) using [Studio]({{page space='studio'}}).
+You can leverage this feature when you customize the Nuxeo Platform and create new content views. Your content view will then be available in the drop down list and you can use locally for documents. You can read [HOWTO: define a new view]({{page space='nxdoc' page='how-to-define-a-new-content-view'}}) using [Studio]({{page space='studio'}}).
 
 {{/callout}}
 
@@ -214,10 +214,10 @@ For more information about Publication Targets, read the page [Publishing Conten
 <div class="column medium-6">
 {{#> panel heading='Related How-Tos'}}
 
-- [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
-- [How to Define a New Content View]({{page space='nxdoc' page='how-to-define-a-new-content-view'}})
-- [How to Brand Your Application]({{page space='nxdoc' page='how-to-brand-your-application'}})
-- [How to Configure a Search Filter With Facets and Other Aggregates]({{page space='nxdoc' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
+- [HOWTO: Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
+- [HOWTO: Define a New Content View]({{page space='nxdoc' page='how-to-define-a-new-content-view'}})
+- [HOWTO: Brand Your Application]({{page space='nxdoc' page='how-to-brand-your-application'}})
+- [HOWTO: Configure a Search Filter With Facets and Other Aggregates]({{page space='nxdoc' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
 
 {{/panel}}
 </div>

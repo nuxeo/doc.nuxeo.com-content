@@ -1,5 +1,5 @@
 ---
-title: How to Declare the CSS and JavaScript Resources Used in Your Templates
+title: 'HOWTO: Declare the CSS and JavaScript Resources Used in Your Templates'
 review:
     comment: ''
     date: '2018-01-15'
@@ -282,7 +282,7 @@ It also inserts additional templating zones to include additional resources, her
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 - [Theme Documentation]({{page page='theme'}})
-- [How to Customize the Login Page]({{page page='how-to-customize-the-login-page'}})
+- [HOWTO: Customize the Login Page]({{page page='how-to-customize-the-login-page'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

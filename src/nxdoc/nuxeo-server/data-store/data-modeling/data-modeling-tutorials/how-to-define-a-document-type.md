@@ -449,9 +449,9 @@ Nuxeo Studio Designer is dedicated to configure Web UI: if you need to a create 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
 - [Customize Document Layouts]({{page page='web-ui-document-layouts'}})
-- [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}})
-- [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}})
-- [How to use Trash Feature]({{page page='how-to-use-trash-feature'}})
+- [HOWTO: Override Existing Document Types]({{page page='how-to-override-existing-document-types'}})
+- [HOWTO: Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}})
+- [HOWTO: use Trash Feature]({{page page='how-to-use-trash-feature'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

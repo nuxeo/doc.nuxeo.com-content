@@ -1,5 +1,5 @@
 ---
-title: How to Customize Startup Redirection
+title: 'HOWTO: Customize Startup Redirection'
 review:
     comment: ''
     date: '2015-12-01'

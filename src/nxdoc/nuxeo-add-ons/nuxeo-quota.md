@@ -343,7 +343,7 @@ The size is expressed in bytes but you can use a suffix like KB, MB, GB or TB.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel }}
 
-*   [How to Enable Quotas on Document Types]({{page page='how-to-enable-quotas-on-document-types'}})
+*   [HOWTO: Enable Quotas on Document Types]({{page page='how-to-enable-quotas-on-document-types'}})
 
 {{/panel}}</div><div class="column medium-6">
 

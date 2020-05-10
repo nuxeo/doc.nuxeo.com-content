@@ -92,7 +92,7 @@ This widget defines a drop zone, used to define a zone where some actions will b
 *   [Actions Overview]({{page page='actions-overview'}})
 *   [Custom Action Types]({{page page='custom-action-types'}})
 *   [Drag and Drop Service for Content Capture (HTML5-Based)]({{page page='drag-and-drop-service-for-content-capture-html5-based'}})
-*   [How to Customize the HTML5 Drag and Drop Import with Metadata Form]({{page page='how-to-customize-the-html5-drag-and-drop-import-with-metadata-form'}})
+*   [HOWTO: Customize the HTML5 Drag and Drop Import with Metadata Form]({{page page='how-to-customize-the-html5-drag-and-drop-import-with-metadata-form'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in Studio documentation'}}
 

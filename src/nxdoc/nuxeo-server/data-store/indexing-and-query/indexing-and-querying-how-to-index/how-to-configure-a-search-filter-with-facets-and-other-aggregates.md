@@ -1,5 +1,5 @@
 ---
-title: How to Configure a Search Filter With Facets and Other Aggregates
+title: 'HOWTO: Configure a Search Filter With Facets and Other Aggregates'
 review:
     comment: ''
     date: '2017-01-17'
@@ -269,7 +269,7 @@ Before starting this how-to you will need to create the following elements in St
 
     {{#> callout type='info' }}
 
-    See the how-to [How to Define a Document Type]({{page page='how-to-define-a-document-type'}}) for more detailed steps.
+    See the how-to [HOWTO: Define a Document Type]({{page page='how-to-define-a-document-type'}}) for more detailed steps.
 
     {{/callout}}
 *   A simple vocabulary **Rating** assigned to the OperationalHealthRating and SCDRelationshipHealthRating elements**:** ![]({{file name='vocabulary_rating.png'}} ?w=450,border=true)
@@ -417,7 +417,7 @@ This aggregate allows you to define a set of ranges and works as the date range 
 - [Elasticsearch Setup]({{page page='elasticsearch-setup'}})
 - [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
 - [Aggregate Widget Types]({{page page='aggregate-widget-types'}})
-- [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+- [HOWTO: Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 
 {{/panel}}</div><div class="column medium-6">
 

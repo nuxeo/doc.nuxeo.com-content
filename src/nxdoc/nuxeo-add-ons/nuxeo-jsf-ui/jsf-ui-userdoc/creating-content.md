@@ -430,7 +430,7 @@ Read the [Binary Metadata]({{page space='nxdoc' page='binary-metadata'}}) docume
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to Customize the Bulk Import Form]({{page space='nxdoc' page='how-to-customize-the-bulk-import-form'}})
-- [How to Enable Drag and Drop and New Button on a Custom Content View]({{page space='nxdoc' page='how-to-enable-drag-and-drop-and-new-button-on-a-custom-content-view'}})
+- [HOWTO: Customize the Bulk Import Form]({{page space='nxdoc' page='how-to-customize-the-bulk-import-form'}})
+- [HOWTO: Enable Drag and Drop and New Button on a Custom Content View]({{page space='nxdoc' page='how-to-enable-drag-and-drop-and-new-button-on-a-custom-content-view'}})
 
 {{/panel}}</div></div>

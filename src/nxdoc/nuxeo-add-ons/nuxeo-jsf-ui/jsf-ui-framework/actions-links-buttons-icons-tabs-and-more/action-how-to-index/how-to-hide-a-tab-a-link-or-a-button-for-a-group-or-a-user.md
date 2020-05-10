@@ -133,12 +133,12 @@ If you are looking for another button or link, you can find all the contribution
 
 In this example, you will define a filter for the action "`New`", which should be hidden for members of a group `Group1`. The id of this action is `newDocument`.
 
-1.  The first thing you must do is to get the id of the action you would like to hide.The easiest way to do this is to activate the development mode in the UI. To get the information of an element in the UI, keep the 'shift' key pressed and mouse over the element you are looking for. A panel will display the information at the bottom of the page. The process to activate this mode is described here: [How to Activate UI Development Mode]({{page page='how-to-activate-ui-development-mode'}})
+1.  The first thing you must do is to get the id of the action you would like to hide.The easiest way to do this is to activate the development mode in the UI. To get the information of an element in the UI, keep the 'shift' key pressed and mouse over the element you are looking for. A panel will display the information at the bottom of the page. The process to activate this mode is described here: [HOWTO: Activate UI Development Mode]({{page page='how-to-activate-ui-development-mode'}})
     Get the id of the action "New"
     ![]({{file name='uidevmode.png'}} ?w=600,border=true)
 2.  Add a contribution in your Studio project to create a filter for the action we would like to hide. This contribution extends the service `org.nuxeo.ecm.platform.actions.ActionService` for the point `actions`. Create also the filter `denyForGroup1`: In the same contribution, you have to extend the service `org.nuxeo.ecm.platform.actions.ActionService` for the point `filters`. Please refer to the section about [Filters and Access Controls]({{page page='filters-and-access-controls'}}).
 
-    If you are not familiar with the contribution of an extension in Studio, please read this documentation: [How to Contribute to an Extension]({{page space='NXDOC' page='How to+Contribute+to+an+Extension#HowtoContributetoanExtension-ContributingUsingNuxeoStudio'}}).
+    If you are not familiar with the contribution of an extension in Studio, please read this documentation: [HOWTO: Contribute to an Extension]({{page version='' space='nxdoc' page='how-to-contribute-to-an-extension'}}#contributing-using-nuxeo-studio).
 
     {{#> panel type='code' heading='src/main/resources/OSGI-INF/actions-contribution.xml'}}
 
@@ -196,9 +196,9 @@ This can be done on any document type, folderish or not.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
-*   [How to Add a Button in the JSF UI]({{page page='how-to-add-a-button-in-the-jsf-ui'}})
-*   [How to Make the New Button Appear on a Custom Folderish Document]({{page page='how-to-make-the-new-button-appear-on-a-custom-folderish-document'}})
+*   [HOWTO: Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
+*   [HOWTO: Add a Button in the JSF UI]({{page page='how-to-add-a-button-in-the-jsf-ui'}})
+*   [HOWTO: Make the New Button Appear on a Custom Folderish Document]({{page page='how-to-make-the-new-button-appear-on-a-custom-folderish-document'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

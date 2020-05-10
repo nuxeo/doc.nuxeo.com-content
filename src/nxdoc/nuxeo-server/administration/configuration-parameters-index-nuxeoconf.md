@@ -1655,7 +1655,7 @@ If not explicitly configured, the loop back URL is generated from `nuxeo.bind.ad
 <tr>
 <td colspan="1">`org.nuxeo.ecm.contextPath`</td>
 <td colspan="1">Application context path.<br/>
-Note: Changing this parameter is not enough. See [How to Change Context Path]({{page page='setup-best-practices'}})</td>
+Note: Changing this parameter is not enough. See [HOWTO: Change Context Path]({{page page='setup-best-practices'}})</td>
 <td colspan="1">/nuxeo</td>
 <td colspan="1">&nbsp;</td>
 </tr>

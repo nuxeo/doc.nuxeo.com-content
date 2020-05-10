@@ -35,7 +35,7 @@ we'll edit a view layout for a popular document type, whereas in the latter we'r
 Before we start customizing the Web UI we need to create an empty Nuxeo bundle. Make sure you go through the following
 resources to understand how to create and deploy a bundle:
 - [Understanding Bundle Deployment]({{page page='understanding-bundles-deployment'}})
-- [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}})
+- [HOWTO: Create an Empty Bundle]({{page page='how-to-create-an-empty-bundle'}})
 
 ### Creating an Empty Bundle
 

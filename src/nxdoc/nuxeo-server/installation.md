@@ -349,7 +349,7 @@ If you have requirements and/or constraints are not reflected below, **do not he
 
 <tr><th colspan="1">Java</th>
 <td colspan="1">{{{multiexcerpt 'java_requirement' page='Compatibility Matrix'}}}</td>
-<td colspan="1">See the following documentation: <ul><li>[Checking your Java Version]({{page page='installation'}}#java-check)</li> <li>[How to Install Java]({{page page='installation'}}#java-install)</li></td>
+<td colspan="1">See the following documentation: <ul><li>[Checking your Java Version]({{page page='installation'}}#java-check)</li> <li>[HOWTO: Install Java]({{page page='installation'}}#java-install)</li></td>
 </tr>
 
 <tr><th colspan="1">Application Server</th>

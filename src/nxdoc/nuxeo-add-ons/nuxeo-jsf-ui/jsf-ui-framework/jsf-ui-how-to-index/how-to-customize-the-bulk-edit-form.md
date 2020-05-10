@@ -1,5 +1,5 @@
 ---
-title: How to Customize the Bulk Edit Form
+title: 'HOWTO: Customize the Bulk Edit Form'
 review:
     comment: ''
     date: '2016-12-19'
@@ -29,257 +29,257 @@ confluence:
     source_link: /display/NXDOC/How+to+Customize+the+Bulk+Edit+Form
 tree_item_index: 1300
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-09-05 09:50'
         message: pdate how-to topic
         version: '51'
-    - 
+    -
         author: Solen Guitter
         date: '2016-04-15 08:31'
         message: ''
         version: '50'
-    - 
+    -
         author: Solen Guitter
         date: '2015-06-22 13:47'
         message: Add TOC
         version: '49'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-11 15:10'
         message: ''
         version: '48'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-02-10 14:26'
         message: ''
         version: '47'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:30'
         message: ''
         version: '46'
-    - 
+    -
         author: Manon Lumeau
         date: '2015-01-13 10:12'
         message: ''
         version: '45'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-24 14:28'
         message: ''
         version: '44'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-24 12:11'
         message: ''
         version: '43'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-21 17:36'
         message: ''
         version: '42'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 17:20'
         message: ''
         version: '41'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 17:19'
         message: ''
         version: '40'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:45'
         message: ''
         version: '39'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:25'
         message: ''
         version: '38'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:25'
         message: ''
         version: '37'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:25'
         message: ''
         version: '36'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:24'
         message: ''
         version: '35'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:23'
         message: ''
         version: '34'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:23'
         message: ''
         version: '33'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:23'
         message: ''
         version: '32'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:22'
         message: ''
         version: '31'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:21'
         message: ''
         version: '30'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-14 16:21'
         message: ''
         version: '29'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-13 18:16'
         message: ''
         version: '28'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-10 16:22'
         message: ''
         version: '27'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 17:36'
         message: ''
         version: '26'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 17:23'
         message: ''
         version: '25'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 16:42'
         message: ''
         version: '24'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 16:40'
         message: ''
         version: '23'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 16:35'
         message: ''
         version: '22'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 16:27'
         message: ''
         version: '21'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 16:01'
         message: ''
         version: '20'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 15:59'
         message: ''
         version: '19'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 15:41'
         message: ''
         version: '18'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 15:31'
         message: ''
         version: '17'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 15:30'
         message: ''
         version: '16'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 15:12'
         message: ''
         version: '15'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 15:11'
         message: ''
         version: '14'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 15:10'
         message: ''
         version: '13'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 11:55'
         message: ''
         version: '12'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-07 11:46'
         message: ''
         version: '11'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 22:55'
         message: ''
         version: '10'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 18:23'
         message: ''
         version: '9'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 18:22'
         message: ''
         version: '8'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 18:11'
         message: ''
         version: '7'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-06 11:49'
         message: ''
         version: '6'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-05 17:50'
         message: ''
         version: '5'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-05 16:54'
         message: ''
         version: '4'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-05 16:27'
         message: ''
         version: '3'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-05 16:09'
         message: ''
         version: '2'
-    - 
+    -
         author: Manon Lumeau
         date: '2014-11-05 15:48'
         message: ''

@@ -1,5 +1,5 @@
 ---
-title: How to Write Reusable Automation Chains
+title: 'HOWTO: Write Reusable Automation Chains'
 review:
     comment: ''
     date: '2016-12-19'

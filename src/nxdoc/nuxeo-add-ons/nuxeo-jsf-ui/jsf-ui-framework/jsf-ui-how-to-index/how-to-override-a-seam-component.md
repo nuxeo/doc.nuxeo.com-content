@@ -1,5 +1,5 @@
 ---
-title: How to Override a Seam Component
+title: 'HOWTO: Override a Seam Component'
 review:
     comment: ''
     date: '2015-12-01'
@@ -80,7 +80,7 @@ history:
 ---
 {{! excerpt}}
 
-This how-to considers you master the creation of the Java plug-in, and you know where to create a Java class. Otherwise please refer to the page [How to create an empty bundle]({{page page='how-to-create-an-empty-bundle'}}) or use [Nuxeo CLI]({{page page='nuxeo-cli'}}).
+This how-to considers you master the creation of the Java plug-in, and you know where to create a Java class. Otherwise please refer to the page [HOWTO: create an empty bundle]({{page page='how-to-create-an-empty-bundle'}}) or use [Nuxeo CLI]({{page page='nuxeo-cli'}}).
 
 {{! /excerpt}}
 

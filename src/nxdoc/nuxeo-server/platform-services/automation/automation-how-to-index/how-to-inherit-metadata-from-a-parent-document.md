@@ -1,5 +1,5 @@
 ---
-title: How to Inherit Metadata from a Parent Document
+title: 'HOWTO: Inherit Metadata from a Parent Document'
 review:
     comment: ''
     date: '2016-12-19'
@@ -201,7 +201,7 @@ To complete this how-to, you need the elements below to be already configured in
 
 **To implement the metadata inheritance listener:**
 
-1.  Create a new **Event Handler** (see [how to bind an automation chain to an event handler]({{page page='how-to-create-an-automation-chain#automation-chain-binding-event-handler'}})).
+1.  Create a new **Event Handler** (see [HOWTO: Bind an Automation Chain to an Event Handler]({{page page='how-to-create-an-automation-chain#automation-chain-binding-event-handler'}})).
 2.  Fill in the filtering information below:
     *   Events: Document created
     *   Current document has one of the types: `DocumentationItem`
@@ -230,9 +230,9 @@ To complete this how-to, you need the elements below to be already configured in
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-- [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
-- [How to Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
-- [How to Set a Default Value on a Date Field of a Task Form]({{page page='how-to-set-a-default-value-on-a-date-field-of-a-task-form'}})
+- [HOWTO: Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
+- [HOWTO: Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
+- [HOWTO: Set a Default Value on a Date Field of a Task Form]({{page page='how-to-set-a-default-value-on-a-date-field-of-a-task-form'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

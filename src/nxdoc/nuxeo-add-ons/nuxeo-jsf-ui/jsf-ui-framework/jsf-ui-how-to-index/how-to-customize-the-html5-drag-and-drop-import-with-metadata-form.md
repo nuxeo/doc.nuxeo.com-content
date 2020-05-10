@@ -1,5 +1,5 @@
 ---
-title: How to Customize the HTML5 Drag and Drop Import with Metadata Form
+title: 'HOWTO: Customize the HTML5 Drag and Drop Import with Metadata Form'
 review:
     comment: ''
     date: '2016-12-19'
@@ -123,8 +123,8 @@ It is currently not possible to use tags, collections or complex types on this f
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
-- [How to Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})
+- [HOWTO: Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
+- [HOWTO: Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})
 - [JSF UI How-To Index]({{page page='jsf-ui-how-to-index'}})
 - [How-To Index]({{page page='how-to-index'}})
 

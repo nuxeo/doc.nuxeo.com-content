@@ -211,7 +211,7 @@ Watch the related courses on Nuxeo University
 The [Nuxeo CSV addon](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-csv) enables users to proceed to a bulk import of documents in the Nuxeo Platform using a CSV file. This addon enables users to create documents with their metadata filled in, to import files with their main attachment or to create a tree structure.
 {{! /excerpt}} {{! multiexcerpt name='nuxeo_csv_functional_introduction'}}
 
-Installing this addon adds a button "Import a CSV file" for all users that have at least the Edit permission on any document in which it is possible to import a file. By default, this means workspaces and folders. If you configured other documents types in which it is possible to import files, then the button "Import a CSV file" can also be available (see the page [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})).
+Installing this addon adds a button "Import a CSV file" for all users that have at least the Edit permission on any document in which it is possible to import a file. By default, this means workspaces and folders. If you configured other documents types in which it is possible to import files, then the button "Import a CSV file" can also be available (see the page [HOWTO: Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})).
 
 {{! /multiexcerpt}}
 
@@ -275,7 +275,7 @@ Here is a simple example of the structure of a CSV file:
 In the example above:
 
 *   `name` is the id of the document (used in the URL)
-*   `type` is the id of document type (see the page [How to Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) for some default types properties)
+*   `type` is the id of document type (see the page [HOWTO: Override Existing Document Types]({{page page='how-to-override-existing-document-types'}}) for some default types properties)
 *   `dc:title` and `dc:description` are the title and description fields of the document from the Dublin Core (dc) schema. They follow the `schema:field` formatting.
 
 To have new lines in a field value (like `dc:description`), just write them as in the following CSV file example:
@@ -519,7 +519,7 @@ Note that the event raised by this CSV import is a **creation event**, not an im
 <div class="column medium-6">
 {{#> panel heading='Related Documentation'}}
 
-- [How to Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})
+- [HOWTO: Enable CSV Import on a Custom Document Type]({{page page='how-to-enable-csv-import-on-a-custom-document-type'}})
 
 {{/panel}}
 </div>

@@ -50,7 +50,7 @@ To activate anonymous authentication:
 {{#> panel heading='Related Documentation'}}
 
 - [CAS2 Authentication]({{page version='' space='nxdoc' page='using-cas2-authentication'}})
-- [How to Define Public Pages (Viewable by Anonymous Users)]({{page version='' space='nxdoc' page='how-to-define-public-pages-viewable-by-anonymous-users'}})
+- [HOWTO: Define Public Pages (Viewable by Anonymous Users)]({{page version='' space='nxdoc' page='how-to-define-public-pages-viewable-by-anonymous-users'}})
 
 {{/panel}}
 </div>

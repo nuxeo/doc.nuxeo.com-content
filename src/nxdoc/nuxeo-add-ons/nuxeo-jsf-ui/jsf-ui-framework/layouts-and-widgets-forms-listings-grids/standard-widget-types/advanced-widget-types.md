@@ -144,10 +144,10 @@ This widget types displays a select2 suggestion for multiple elements selection.
 - [JSF UI Framework]({{page page='jsf-ui-framework'}})
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related How-tos '}}
 
-- [How to Control the Display Mode of a Widget]({{page page='how-to-control-the-display-mode-of-a-widget'}})
-- [How to Use a Generic Widget in Layouts]({{page page='how-to-use-a-generic-widget-in-layouts'}})
-- [How to Refresh the Task Widget on the Summary Tab]({{page page='how-to-refresh-the-task-widget-on-the-summary-tab'}})
-- [How to Add a New Widget to the Default Summary Layout]({{page page='how-to-add-a-new-widget-to-the-default-summary-layout'}})
+- [HOWTO: Control the Display Mode of a Widget]({{page page='how-to-control-the-display-mode-of-a-widget'}})
+- [HOWTO: Use a Generic Widget in Layouts]({{page page='how-to-use-a-generic-widget-in-layouts'}})
+- [HOWTO: Refresh the Task Widget on the Summary Tab]({{page page='how-to-refresh-the-task-widget-on-the-summary-tab'}})
+- [HOWTO: Add a New Widget to the Default Summary Layout]({{page page='how-to-add-a-new-widget-to-the-default-summary-layout'}})
 - [Layout & Widget How-To Index]({{page page='layout-and-widget-how-to-index'}})
 
 {{/panel}}</div></div>

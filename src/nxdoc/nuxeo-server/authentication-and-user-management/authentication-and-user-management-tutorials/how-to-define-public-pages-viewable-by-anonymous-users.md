@@ -1,5 +1,5 @@
 ---
-title: How to Define Public Pages (Viewable by Anonymous Users)
+title: 'HOWTO: Define Public Pages (Viewable by Anonymous Users)'
 review:
     comment: ''
     date: '2016-12-20'
@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to make some pages visible by anonymous users.
         level: Advanced
         tool: Code
-        topics: Access rights, Authentication
+        topics: 'Access rights, Authentication'
 labels:
     - lts2016-ok
     - anonymous
@@ -271,7 +271,7 @@ If you give Write access to the repository to this user, you will let anyone hav
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to Implement Local Groups or Roles Using Computed Groups]({{page page='how-to-implement-local-groups-or-roles-using-computed-groups'}})
+- [HOWTO: Implement Local Groups or Roles Using Computed Groups]({{page page='how-to-implement-local-groups-or-roles-using-computed-groups'}})
 - [How-to index ]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

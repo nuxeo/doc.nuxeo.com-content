@@ -1,5 +1,5 @@
 ---
-title: How to Force Locale
+title: 'HOWTO: Force Locale'
 review:
     comment: ''
     date: '2015-12-01'

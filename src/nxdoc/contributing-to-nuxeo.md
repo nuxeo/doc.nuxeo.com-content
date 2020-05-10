@@ -311,7 +311,7 @@ Before describing this process, here are a few points that are the basis of the 
 
 ## Translations
 
-Nuxeo labels are stored in ASCII files. We use the [UTF-8](http://www.utf8-chartable.de/) encoding for non ASCII files (like `\u00e9` for `&eacute;`). You have two different options. See [How to Translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxeo-platform'}}) for more details.
+Nuxeo labels are stored in ASCII files. We use the [UTF-8](http://www.utf8-chartable.de/) encoding for non ASCII files (like `\u00e9` for `&eacute;`). You have two different options. See [HOWTO: Translate the Nuxeo Platform]({{page page='how-to-translate-the-nuxeo-platform'}}) for more details.
 
 ### With Crowdin (non English translations)
 

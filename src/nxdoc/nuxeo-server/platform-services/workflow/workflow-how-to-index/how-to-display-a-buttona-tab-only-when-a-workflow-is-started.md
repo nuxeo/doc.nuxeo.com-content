@@ -90,27 +90,12 @@ history:
 
 When fetching a document through the [Rest API]({{page page='rest-api'}}), you can use the [runningWorkflows enricher]({{page page='content-enrichers#runningWorkflows'}}) and check that `document.contextParameters.runningWorkflows` is not empty to conditionally display a [Tab]({{page page='how-to-new-tab'}}) or an [Action]({{page page='how-to-insert-user-action'}}).
 
-# JSF UI
-
-{{! excerpt}}
-
-You can use the following custom condition on the user action or the tab filtering conditions, on the field **"Custom EL expression"**:
-
-{{! /excerpt}}
-
-```
-#{routingActions.hasRelatedRoute()}
-```
-
-
 * * *
-
-
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to Modify a Workflow Variable outside of Workflow Context]({{page page='how-to-modify-a-workflow-variable-outside-of-workflow-context'}})
-- [How to Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})
+- [HOWTO: Modify a Workflow Variable outside of Workflow Context]({{page page='how-to-modify-a-workflow-variable-outside-of-workflow-context'}})
+- [HOWTO: Make a Simple Task Assignment to One or Many Users]({{page page='how-to-make-a-simple-task-assignment-to-one-or-many-users'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

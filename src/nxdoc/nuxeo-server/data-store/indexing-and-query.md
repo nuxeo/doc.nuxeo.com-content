@@ -384,8 +384,8 @@ The following table and schema gives an overview of the different ways of queryi
 
     **Related topics**:
     *   [PageProvider Operation definition](http://explorer.nuxeo.org/nuxeo/site/distribution/current/viewOperation/Repository.PageProvider)
-    *   [How to use Operations with the Java Client](https://github.com/nuxeo/nuxeo-java-client#operation-api)
-    *   [How to use Operations with the JavaScript client](https://nuxeo.github.io/nuxeo-js-client/latest/Operation.html)
+    *   [HOWTO: Use Operations with the Java Client](https://github.com/nuxeo/nuxeo-java-client#operation-api)
+    *   [HOWTO: Use Operations with the JavaScript client](https://nuxeo.github.io/nuxeo-js-client/latest/Operation.html)
 3.  **CMIS (Client side & Server side)**
     The Nuxeo Platform is compatible with the CMIS standard. CMIS covers query scope, using CMISQL. It is possible to query the Nuxeo Platform repository using CMISQL in Java server side, or via JSON-based or AtomPub bindings remotely.
 

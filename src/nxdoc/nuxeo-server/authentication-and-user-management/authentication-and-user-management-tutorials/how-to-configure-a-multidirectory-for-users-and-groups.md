@@ -1,5 +1,5 @@
 ---
-title: How to Configure a Multidirectory for Users and Groups
+title: 'HOWTO: Configure a Multidirectory for Users and Groups'
 review:
     comment: ''
     date: '2017-12-15'
@@ -9,7 +9,7 @@ details:
         excerpt: This page provides a turnkey solution to configure a multidirectory.
         level: Intermediate
         tool: XML configuration
-        topics: 'LDAP, Multidirectory'
+        topics: 'LDAP, Multidirectory, Authentication'
 labels:
     - lts2016-ok
     - ldap
@@ -305,7 +305,7 @@ Moreover a virtual administrator is added to let you log in even if the LDAP con
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other LDAP related pages'}}
 
 - [Using a LDAP Directory]({{page page='using-a-ldap-directory'}})
-- [How to Add Custom LDAP Fields to the UI]({{page page='how-to-add-custom-ldap-fields-to-the-ui'}})
+- [HOWTO: Add Custom LDAP Fields to the UI]({{page page='how-to-add-custom-ldap-fields-to-the-ui'}})
 
 {{/panel}}</div><div class="column medium-6">
 

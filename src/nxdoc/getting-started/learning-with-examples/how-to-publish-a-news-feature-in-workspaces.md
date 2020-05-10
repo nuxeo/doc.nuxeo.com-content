@@ -1,5 +1,5 @@
 ---
-title: How to Publish a News Feature in Workspaces
+title: 'HOWTO: Publish a News Feature in Workspaces'
 review:
     comment: ''
     date: '2018-10-31'

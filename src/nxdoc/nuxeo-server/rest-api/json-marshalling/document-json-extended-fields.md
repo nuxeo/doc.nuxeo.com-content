@@ -16,7 +16,7 @@ tree_item_index: 500
 
 ---
 
-Nuxeo Platform 7.2 introduces the concept of Extended fields. See [Field Constraints and Validation]({{page page='field-constraints-and-validation'}}) and [How to Customize Document Validation]({{page page='how-to-customize-document-validation'}}).
+Nuxeo Platform 7.2 introduces the concept of Extended fields. See [Field Constraints and Validation]({{page page='field-constraints-and-validation'}}) and [HOWTO: Customize Document Validation]({{page page='how-to-customize-document-validation'}}).
 
 This kind of document field are defined as reference to external object. For example, in the Dublin Core schema:
 

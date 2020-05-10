@@ -1,5 +1,5 @@
 ---
-title: How to Upload Labels Translations in Nuxeo Studio (i18n)
+title: 'HOWTO: Upload Labels Translations in Nuxeo Studio (i18n)'
 review:
     comment: ''
     date: '2017-12-14'
@@ -151,5 +151,5 @@ There are no naming rules for i18n keys: you can use the key format that is most
     ```
 2.  In Studio Modeler, go to **Resources** and upload the file in the **i18n files** section.
     ![]({{file name='studio-resource-editor-empty.png'}} ?w=650,border=true)
-3.  Repeat as needed with other languages, adding other files: `messages_fr_FR.properties` (French), `messages_es_ES.properties` (Spanish), `messages_ar_SA.properties` (Arabic), ... (take a look at [How to Translate Nuxeo]({{page page='how-to-translate-the-nuxeo-platform'}}) for a list of all the codes available)
+3.  Repeat as needed with other languages, adding other files: `messages_fr_FR.properties` (French), `messages_es_ES.properties` (Spanish), `messages_ar_SA.properties` (Arabic), ... (take a look at [HOWTO: Translate Nuxeo]({{page page='how-to-translate-the-nuxeo-platform'}}) for a list of all the codes available)
 4.  [Update your Nuxeo instance with your Studio customizations]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).

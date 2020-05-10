@@ -1,5 +1,5 @@
 ---
-title: How to Customize the Dashboard
+title: 'HOWTO: Customize the Dashboard'
 review:
     comment: ''
     date: '2015-12-01'

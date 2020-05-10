@@ -175,7 +175,7 @@ The `createdOrUpdate` method returns either a `DocumentModel` object or `null`. 
 
     That's it!
 
-See also the tutorial on [how to change the default document type used when importing files in the Nuxeo Platform]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}}).
+See also the tutorial on [HOWTO: Change the Default Document Type Used When Importing Files in the Nuxeo Platform]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}}).
 
 * * *
 
@@ -184,7 +184,7 @@ See also the tutorial on [how to change the default document type used when impo
 - [REST API]({{page page='rest-api'}})
 - [Automation]({{page page='automation'}})
 - [Versioning]({{page page='versioning'}})
-- [How to Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
+- [HOWTO: Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
 
 {{/panel}}</div><div class="column medium-6">
 

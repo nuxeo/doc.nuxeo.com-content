@@ -191,7 +191,7 @@ TODO: there are better ways to handle this in JSF2
 *   [JSF and Javascript ]()
 *   [Ajax4jsf Best Practices]({{page page='ajax4jsf-best-practices'}})
 *   [Ajax Forms and Actions]({{page page='ajax-forms-and-actions'}})
-*   [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
+*   [HOWTO: Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

@@ -441,7 +441,7 @@ It is possible to implement rules on containers to integrate the business logic 
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related HOWTOs'}}
 
-- [How to Override Existing Document Types]({{page space='nxdoc' page='how-to-override-existing-document-types'}})
-- [How to Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
+- [HOWTO: Override Existing Document Types]({{page space='nxdoc' page='how-to-override-existing-document-types'}})
+- [HOWTO: Define a Document Type]({{page space='nxdoc' page='how-to-define-a-document-type'}})
 
 {{/panel}}</div></div>

@@ -1,5 +1,5 @@
 ---
-title: How to Contribute a Command Line Converter
+title: 'HOWTO: Contribute a Command Line Converter'
 review:
     comment: ''
     date: '2018-01-15'
@@ -138,8 +138,8 @@ The output of this operation will be the converted image.
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-*   [How to Automatically Convert a Document to PDF]({{page page='how-to-automatically-convert-a-document-to-pdf'}})
-*   [How to Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
+*   [HOWTO: Automatically Convert a Document to PDF]({{page page='how-to-automatically-convert-a-document-to-pdf'}})
+*   [HOWTO: Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
 *   [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}

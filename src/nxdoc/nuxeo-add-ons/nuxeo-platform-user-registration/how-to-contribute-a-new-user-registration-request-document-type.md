@@ -51,7 +51,7 @@ If you want to define other request metadata that should be filled in when invit
 
 ## Pre requisites
 
-You have already defined a new user registration document type as described in&nbsp;[How to Define a Document Type]({{page page='how-to-define-a-document-type'}})&nbsp;with the following items and values:
+You have already defined a new user registration document type as described in&nbsp;[HOWTO: Define a Document Type]({{page page='how-to-define-a-document-type'}})&nbsp;with the following items and values:
 
 *   A new schema `custom-userinfo` that must have at least the following attributes:
 
@@ -143,8 +143,8 @@ You're done. All default FreeMarker templates will use dynamically your fields, 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
-- [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
+- [HOWTO: Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
+- [HOWTO: Define a Document Type]({{page page='how-to-define-a-document-type'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

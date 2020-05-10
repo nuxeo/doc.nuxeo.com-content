@@ -216,7 +216,7 @@ The Nuxeo Platform can be plugged to a wide range of directories and authenticat
 {{#> callout type='info' heading='Related Documentation'}}
 
 *   [Authentication and User Management]({{page page='authentication-and-user-management'}})
-*   [How to Add Custom LDAP Fields to the UI]({{page page='how-to-add-custom-ldap-fields-to-the-ui'}})
+*   [HOWTO: Add Custom LDAP Fields to the UI]({{page page='how-to-add-custom-ldap-fields-to-the-ui'}})
 
 {{/callout}}
 
@@ -260,7 +260,7 @@ Note that it is possible to extract some of the metadata automatically from a fi
 
 {{#> callout type='info' heading='Related Documentation'}}
 - [Data Modeling]({{page page='data-modeling'}})
-- [How to Define a Document Type]({{page page='how-to-define-a-document-type'}})
+- [HOWTO: Define a Document Type]({{page page='how-to-define-a-document-type'}})
 - [Several Document Types vs One Document Type with a Nature Metadata]({{page page='several-document-types-vs-one-document-type-with-a-nature-metadata'}})
 - [Binary Metadata]({{page page='binary-metadata'}})
 {{/callout}}
@@ -276,8 +276,8 @@ You can go even deeper in tuning the search requests behavior, using Elasticsear
 {{#> callout type='info' heading='Related Documentation'}}
 
 *   [Indexing and Query]({{page page='indexing-and-query'}})
-*   [How to Configure a New Search Tab]({{page page='indexing-and-query'}})
-*   [How to Configure a Search Filter With Facets and Other Aggregates]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
+*   [HOWTO: Configure a New Search Tab]({{page page='indexing-and-query'}})
+*   [HOWTO: Configure a Search Filter With Facets and Other Aggregates]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
 
 {{/callout}}
 

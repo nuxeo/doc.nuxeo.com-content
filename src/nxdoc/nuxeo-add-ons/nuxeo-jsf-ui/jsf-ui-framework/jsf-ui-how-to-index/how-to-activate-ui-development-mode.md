@@ -1,5 +1,5 @@
 ---
-title: How to Activate UI Development Mode
+title: 'HOWTO: Activate UI Development Mode'
 review:
     comment: ''
     date: '2015-12-01'
@@ -70,8 +70,8 @@ The following steps will allow you to activate the UI development mode. This mod
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to Add a New Action Category on a Document Tab]({{page page='how-to-add-a-new-action-category-on-a-document-tab'}})
-- [How to Hide a Tab, a Link or a Button for a Group or a User]({{page page='how-to-hide-a-tab-a-link-or-a-button-for-a-group-or-a-user'}})
+- [HOWTO: Add a New Action Category on a Document Tab]({{page page='how-to-add-a-new-action-category-on-a-document-tab'}})
+- [HOWTO: Hide a Tab, a Link or a Button for a Group or a User]({{page page='how-to-hide-a-tab-a-link-or-a-button-for-a-group-or-a-user'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

@@ -62,7 +62,7 @@ history:
 
 - [Setup Best Practices]({{page version='' space='nxdoc' page='setup-best-practices'}})
 - [Set up Email Notifications]({{page version='' space='nxdoc' page='set-up-email-notification'}})
-- [How to Change Context Path]({{page version='' space='nxdoc' page='how-to-change-context-path'}})
+- [HOWTO: Change Context Path]({{page version='' space='nxdoc' page='how-to-change-context-path'}})
 {{/panel}}
 </div>
 

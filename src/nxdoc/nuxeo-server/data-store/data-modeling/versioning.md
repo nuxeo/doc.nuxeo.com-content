@@ -289,7 +289,7 @@ We inject the source context parameter value for:
 
 See [the example](#source-based).
 
-For more details about source-based versioning with Nuxeo Drive, check out the page [How to Customize Nuxeo Drive Versioning Policy]({{page space='client-apps' page='how-to-customize-nuxeo-drive-versioning-policy'}}).
+For more details about source-based versioning with Nuxeo Drive, check out the page [HOWTO: Customize Nuxeo Drive Versioning Policy]({{page space='client-apps' page='how-to-customize-nuxeo-drive-versioning-policy'}}).
 
 ### Automatic Versioning Example
 

@@ -473,7 +473,7 @@ To **purge the permission** of a user: go to **Admin**&nbsp;> **Permissions**&nb
 {{#> panel heading='Want to add your own access rights?'}}
 
 - [Add a new Permission in the UI]({{page space='studio' page='add-a-new-permission-in-the-ui'}})
-- [How to Grant the Edit Permission without the Remove Permission]({{page space='nxdoc' page='how-to-grant-the-edit-permission-without-the-remove-permission'}})
+- [HOWTO: Grant the Edit Permission without the Remove Permission]({{page space='nxdoc' page='how-to-grant-the-edit-permission-without-the-remove-permission'}})
 
 {{/panel}}
 </div>

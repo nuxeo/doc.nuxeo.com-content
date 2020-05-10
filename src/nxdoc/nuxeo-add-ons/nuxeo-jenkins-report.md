@@ -77,7 +77,7 @@ After you installed the package, a new document type is available for creation i
 
 ## Configuration
 
-Since this addon enables users to send the report from the Nuxeo Platform, your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='set-up-email-notification'}}).
+Since this addon enables users to send the report from the Nuxeo Platform, your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [HOWTO: enable e-mail alerts]({{page page='set-up-email-notification'}}).
 
 &nbsp;
 

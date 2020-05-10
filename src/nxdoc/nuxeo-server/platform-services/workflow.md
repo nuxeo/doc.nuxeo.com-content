@@ -207,7 +207,7 @@ The workflow engine provides means to implement most of BPMN concepts: Fork, mer
 
 *   [Useful Definitions]({{page page='useful-definitions'}})
 *   [Simple Workflow Example]({{page page='simple-workflow-example'}}) (tutorial)
-*   [How to Assign a Workflow Task to a User Depending on a Metadata]({{page page='validation-workflow-choosing-the-assignee-based-on-a-metadata'}}) (tutorial)
+*   [HOWTO: Assign a Workflow Task to a User Depending on a Metadata]({{page page='validation-workflow-choosing-the-assignee-based-on-a-metadata'}}) (tutorial)
 
 ## Default Available Workflows
 
@@ -268,9 +268,9 @@ To go further, read the page [Simple Workflow Example]({{page page='simple-workf
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Workflow How-Tos'}}
 
-- [How to Query Workflow Objects]({{page page='how-to-query-workflow-objects'}})
-- [How to Complete a Workflow Task Programmatically]({{page page='how-to-complete-a-workflow-task-programmatically'}})
-- [How to Set Up a Tasks Dashboard]({{page page='how-to-set-up-a-tasks-dashboard'}})
+- [HOWTO: Query Workflow Objects]({{page page='how-to-query-workflow-objects'}})
+- [HOWTO: Complete a Workflow Task Programmatically]({{page page='how-to-complete-a-workflow-task-programmatically'}})
+- [HOWTO: Set Up a Tasks Dashboard]({{page page='how-to-set-up-a-tasks-dashboard'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading=' Advanced Features and Understanding'}}
 

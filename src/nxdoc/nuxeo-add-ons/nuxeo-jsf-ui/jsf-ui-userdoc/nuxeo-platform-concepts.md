@@ -547,7 +547,7 @@ Users can change the way content is presented in the result layout. They can als
     Editing results column is possible from search results and the Content tab of folderish documents. It is not possible from the tag cloud.
     {{/callout}}
 
-When you create new search forms, you can adapt the result layout to your own document types so as to display information relevant to your users. See [How to Define a New Content View]({{page space='nxdoc' page='how-to-define-a-new-content-view'}}) for instance.
+When you create new search forms, you can adapt the result layout to your own document types so as to display information relevant to your users. See [HOWTO: Define a New Content View]({{page space='nxdoc' page='how-to-define-a-new-content-view'}}) for instance.
 
 {{! /multiexcerpt}}
 

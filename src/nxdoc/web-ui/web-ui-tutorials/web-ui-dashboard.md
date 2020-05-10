@@ -36,7 +36,7 @@ It is composed of four sections:
 
 ## Overriding the Dashboard
 
-To use your own dashboard, you can deploy and override `nuxeo-home.html` in your own bundle as described in [How to Deploy Additional Web UI Resources]({{page page='web-ui-deployment'}}#deploy_or_override).
+To use your own dashboard, you can deploy and override `nuxeo-home.html` in your own bundle as described in [HOWTO: Deploy Additional Web UI Resources]({{page page='web-ui-deployment'}}#deploy_or_override).
 
 
 * * *

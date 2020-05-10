@@ -44,7 +44,7 @@ All the resources for each theme are located on the `/themes/{name}` folder, whe
 
 - `/themes/{name}/background.png` image used as background (optional, available for some themes only).
 
-To add a new theme or customize one of the provided ones you can simply deploy and override theme resources as described in [How to deploy additional Web UI resources]({{page page='web-ui-deployment#deploy_or_override'}}).
+To add a new theme or customize one of the provided ones you can simply deploy and override theme resources as described in [HOWTO: deploy additional Web UI resources]({{page page='web-ui-deployment#deploy_or_override'}}).
 
 
 ### How to Create a Theme

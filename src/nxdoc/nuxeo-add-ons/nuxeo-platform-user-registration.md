@@ -142,7 +142,7 @@ You also have a new **User Registration** tab in the **Admin** tab.
 
 ### Setting Up Email Sending
 
-The Nuxeo Platform User Registration add-on sends email to the invited user with his credentials. So your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [how to enable e-mail alerts]({{page page='set-up-email-notification'}}).
+The Nuxeo Platform User Registration add-on sends email to the invited user with his credentials. So your Nuxeo server must be able to reach an e-mail server. This is the same configuration that the one required for the email alerts to work. See [HOWTO: enable e-mail alerts]({{page page='set-up-email-notification'}}).
 
 ### Global Configuration
 
@@ -309,7 +309,7 @@ When you have been invited to a workspace, a folder or any type of space in the 
     ![]({{file name='invitation-password-creation.png' space='userdoc' page='managing-users-and-groups'}} ?w=300,border=true,thumbnail=true)
 3.  Log in to the Nuxeo Platform.
 
-Once the invited user has validated the invitation by clicking on the invitation link and setting his password, the administrator can see the invitation in **Accepted** state. 
+Once the invited user has validated the invitation by clicking on the invitation link and setting his password, the administrator can see the invitation in **Accepted** state.
 
 ## Technical Configuration Overview
 
@@ -368,7 +368,7 @@ The invitation UI action uses the `default_registration` name to get the configu
 
 ## How to Contribute a New "User Registration Request" Document Type
 
-See the page [How to Contribute a New "User Registration Request" Document Type]({{page page='how-to-contribute-a-new-user-registration-request-document-type'}}).
+See the page [HOWTO: Contribute a New "User Registration Request" Document Type]({{page page='how-to-contribute-a-new-user-registration-request-document-type'}}).
 
 &nbsp;
 
@@ -377,7 +377,7 @@ See the page [How to Contribute a New "User Registration Request" Document Type]
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Authentication and User Management]({{page page='authentication-and-user-management'}}) (developer documentation)
-- [How to Contribute a New "User Registration Request" Document Type]({{page page='how-to-contribute-a-new-user-registration-request-document-type'}})
+- [HOWTO: Contribute a New "User Registration Request" Document Type]({{page page='how-to-contribute-a-new-user-registration-request-document-type'}})
 - [Managing Users and Groups]({{page space='userdoc' page='managing-users-and-groups'}}) (user documentation)
 - [Setup Best Practices]({{page page='setup-best-practices'}}) (admin documentation)
 

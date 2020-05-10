@@ -139,8 +139,8 @@ Until it is fixed, you will need to use the following contribution as a workarou
 
 You may want to check the following how-tos for customization:
 
-*   [How to Customize the Info-View Pop-Up]({{page page='how-to-customize-the-info-view-pop-up'}})
-*   [How to Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
+*   [HOWTO: Customize the Info-View Pop-Up]({{page page='how-to-customize-the-info-view-pop-up'}})
+*   [HOWTO: Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
 
 ## Core Implementation
 

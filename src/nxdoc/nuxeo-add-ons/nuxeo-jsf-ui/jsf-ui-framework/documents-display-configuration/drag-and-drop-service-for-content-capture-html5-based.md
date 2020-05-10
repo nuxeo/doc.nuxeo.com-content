@@ -345,9 +345,9 @@ In the default JSF web app you can have a look at `DndFormActionBean` and `dndFo
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Pages in This Documentation'}}
 
-- [How to Customize the HTML5 Drag and Drop Import with Metadata Form]({{page page='how-to-customize-the-html5-drag-and-drop-import-with-metadata-form'}})
+- [HOWTO: Customize the HTML5 Drag and Drop Import with Metadata Form]({{page page='how-to-customize-the-html5-drag-and-drop-import-with-metadata-form'}})
 - [Choosing How to Import Data in the Nuxeo Platform]({{page page='choosing-how-to-import-data-in-the-nuxeo-platform'}})
-- [How to Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
+- [HOWTO: Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
 - [Nuxeo Core Import / Export API]({{page page='nuxeo-core-import-export-api'}})
 - [Nuxeo Bulk Document Importer]({{page page='nuxeo-bulk-document-importer'}})
 

@@ -1,5 +1,5 @@
 ---
-title: How to Control the Display Mode of a Widget
+title: 'HOWTO: Control the Display Mode of a Widget'
 review:
     comment: ''
     date: '2015-12-01'
@@ -211,9 +211,9 @@ You can also see the [reference documentation on layouts]({{page page='layout-an
 <div class="column medium-6">
 {{#> panel heading='Related How-Tos'}}
 
-- [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
+- [HOWTO: Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
 - [Customize the Versioning and Comment Widget]({{page page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
-- [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
+- [HOWTO: Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}

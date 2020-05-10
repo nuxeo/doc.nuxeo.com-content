@@ -1,5 +1,5 @@
 ---
-title: How to Automatically Convert a Document to PDF
+title: 'HOWTO: Automatically Convert a Document to PDF'
 review:
     comment: ''
     date: '2017-12-12'

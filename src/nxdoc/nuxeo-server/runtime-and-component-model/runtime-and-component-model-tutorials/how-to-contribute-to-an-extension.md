@@ -135,6 +135,7 @@ history:
     message: ''
     version: '1'
 ---
+
 {{#> callout type='info'}}
 Watch the related courses on Nuxeo University:
 [Course on Handling Service Extension Points](https://university.nuxeo.com/learn/public/course/view/elearning/70/HandlingServiceExtensionPoints)
@@ -146,23 +147,23 @@ Watch the related courses on Nuxeo University:
 Whatever the tools you're using ([Nuxeo Studio](https://www.nuxeo.com/products/studio/) or [Nuxeo CLI]({{page page='nuxeo-cli'}})), your first step is to find the open door configuration where you want to contribute. We call these open doors **Extension points**.
 Nuxeo lists all extension points for a given version [in the Nuxeo Explorer](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/).
 
-1.  Click on `Extension points`.
-2.  Filter what you want using the combobox.
-3.  Click on the extension point you're interested in.
+1. Click on `Extension points`.
+1. Filter what you want using the combobox.
+1. Click on the extension point you're interested in.
     The documentation of this extension point is displayed.
     ![]({{file name='Nuxeo-explorer.png'}} ?w=600,border=true)
-4.  Then, if you click on any link in the **Contributions** section, you will see all the default contributions implemented into your Nuxeo instance.
+1. Then, if you click on any link in the **Contributions** section, you will see all the default contributions implemented into your Nuxeo instance.
     There are [hundreds of configuration possibilities](https://explorer.nuxeo.com/nuxeo/site/distribution/latest/listExtensionPoints).
 
 ## {{> anchor 'xml-extension-studio'}}Contributing Using Nuxeo Studio
 
-1.  In the **Advanced Settings** > **XML extensions**, click on the **New** button.
-2.  Give the extension a name and click on the **Next** button.
+1. In the **Advanced Settings** > **XML extensions**, click on the **New** button.
+1. Give the extension a name and click on the **Next** button.
     ![]({{file name='XMLExtensionEmpty.png'}} ?w=600,border=true)
-3.  Type the content of your extension directly in the area.
+1. Type the content of your extension directly in the area.
     The editor helps you: start typing `<` and it will suggest possible values. While you are typing, some suggestion happens sometimes when typing on space, and you can always call the suggester using the key CTRL+space.
     ![]({{file name='XMLCompletion.png'}} ?w=150,border=true,thumbnail=true) ![]({{file name='XMLCompletionBis.png'}} ?w=150,border=true,thumbnail=true)
-4.  Click on **Save**.
+1. Click on **Save**.
     ![]({{file name='NuxeoStudio-CodeMirrorIntegration.png'}} ?w=560,h=355,border=true)
 
 **Notes**
@@ -209,8 +210,8 @@ Here we assume that you have installed [Nuxeo CLI]({{page page='nuxeo-cli'}}) an
 
 Once you have found the `extension point` you want to contribute to:
 
-1.  Create a file `myproject-servicewhereIcontribute-contribution.xml` into the directory `src/main/resources/OSGI-INF/` of your project.
-2.  Declare an empty component into this file, like that:
+1. Create a file `myproject-servicewhereIcontribute-contribution.xml` into the directory `src/main/resources/OSGI-INF/` of your project.
+1. Declare an empty component into this file, like that:
 
     ```xml
     <?xml version="1.0"?>
@@ -219,12 +220,12 @@ Once you have found the `extension point` you want to contribute to:
     </component>
     ```
 
-    {{#> callout type='note' heading='Naming your component'}}- In Nuxeo, we follow this naming convention `org.mycompany.myproject.extension.point.where.we.contribute.contribution`.
-
-You can follow your way but be careful to avoid conflicts.
-
-- You must give a **unique name** for your component. If the name of your package is not unique it will **not be deployed**.{{/callout}}
-3.  Add your contribution that express the configuration you want in the component XML fragment. You get something like:
+    {{#> callout type='note' heading='Naming your component'}}
+    In Nuxeo, we follow this naming convention `org.mycompany.myproject.extension.point.where.we.contribute.contribution`.</br>
+    You can follow your way but be careful to avoid conflicts.</br>
+    You must give a **unique name** for your component. If the name of your package is not unique it will **not be deployed**.
+    {{/callout}}
+1. Add your contribution that express the configuration you want in the component XML fragment. You get something like:
     ```xml
     <?xml version="1.0"?>
     <component name="org.mycompany.myproject.extension.point.where.we.contribute.contribution" version="1.0">
@@ -242,7 +243,7 @@ You can follow your way but be careful to avoid conflicts.
 
 In the previous section you have created your configuration. You must now declare your component in your bundle so it's deployed in your Nuxeo Server. This declaration is made through the `src/main/resources/META-INF/MANIFEST.MF` file.
 
-1.  Create a new parameter, if it does not exist.
+1. Create a new parameter, if it does not exist.
 
     ```
     Manifest-Version: 1.0
@@ -267,7 +268,7 @@ In the previous section you have created your configuration. You must now declar
 
     ```
 
-2.  If the `Nuxeo-Component` entry already exists with another component declaration, separate them by commas.
+1. If the `Nuxeo-Component` entry already exists with another component declaration, separate them by commas.
 
 {{{multiexcerpt 'manifest-format-warning' page='How to create an empty bundle'}}}
 
@@ -279,10 +280,10 @@ Components deployment is linear, so if you want to override an existing configur
 
 **Follow the steps for your preferred tool (see above) combined the specific steps below.**
 
-1.  Identify this component: using Nuxeo Explorer, go to the extension point definition (see [the first section](#finding-extension-point) ).
-2.  Click on the contribution you want to override.
-3.  Copy the name of the component (value after **In component**).
-4.  Paste it in your component into a `<require>` item.
+1. Identify this component: using Nuxeo Explorer, go to the extension point definition (see [the first section](#finding-extension-point) ).
+1. Click on the contribution you want to override.
+1. Copy the name of the component (value after **In component**).
+1. Paste it in your component into a `<require>` item.
     You will have something like that:
     ```xml
     <?xml version="1.0"?>

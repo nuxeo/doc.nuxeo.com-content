@@ -244,7 +244,7 @@ history:
 
 Since [NXS-2504](https://jira.nuxeo.com/browse/NXS-2504), the new vocabulary defined in Studio come along with a default cache configuration. The cache name is based on the vocabulary name. `maxSize` attribute is set to 1000, `concurrencyLevel` to 500 and `ttl` to 60.
 
-In order to set up a cache (or override an existing one), follow the steps described in [How to Configure a New Directory Cache]({{page page='how-to-configure-a-new-directory-cache'}}).
+In order to set up a cache (or override an existing one), follow the steps described in [HOWTO: Configure a New Directory Cache]({{page page='how-to-configure-a-new-directory-cache'}}).
 
 {{/callout}}{{! excerpt}}
 

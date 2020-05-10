@@ -1,5 +1,5 @@
 ---
-title: How to Make a Page Provider or Content View Query Elasticsearch Index
+title: 'HOWTO: Make a Page Provider or Content View Query Elasticsearch Index'
 review:
     comment: ''
     date: '2017-12-14'
@@ -185,7 +185,7 @@ Elasticsearch indexing is "eventually consistent". This means that depending on 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Indexing related pages'}}
 
 - [Full-Text Queries]({{page page='full-text-queries'}})
-- [How to Configure a New Default Search Form in the Search Tab]({{page page='how-to-configure-a-new-default-search-form-in-the-search-tab'}})
+- [HOWTO: Configure a New Default Search Form in the Search Tab]({{page page='how-to-configure-a-new-default-search-form-in-the-search-tab'}})
 - [Content Views]({{page page='content-views'}})
 - [Page Providers]({{page page='page-providers'}})
 

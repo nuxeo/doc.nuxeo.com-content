@@ -211,7 +211,7 @@ See also chapter about [Layout and Widget Display]({{page page='layout-and-widge
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related sections in this documentation'}}
 
-*   [How to Add a Button in the JSF UI]({{page page='how-to-add-a-button-in-the-jsf-ui'}})
+*   [HOWTO: Add a Button in the JSF UI]({{page page='how-to-add-a-button-in-the-jsf-ui'}})
 *   [Actions Overview]({{page page='actions-overview'}})
 *   [Standard Action Types]({{page page='standard-action-types'}})
 *   [Custom Action Types]({{page page='custom-action-types'}})

@@ -1,5 +1,5 @@
 ---
-title: How to Customize the Login Page
+title: 'HOWTO: Customize the Login Page'
 review:
     comment: ''
     date: '2017-12-11'
@@ -295,8 +295,8 @@ ffmpeg -y -i $IN -vcodec libx264 -f mp4 -threads 0 -b:v 1M -crf 22 -s $SIZE -pas
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel heading='Related How-Tos'}}
-- [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page page='how-to-declare-the-css-and-javascript-resources-used-in-your-templates'}})
-- [How to Customize the Error Pages]({{page page='how-to-customize-the-error-pages'}})
+- [HOWTO: Declare the CSS and JavaScript Resources Used in Your Templates]({{page page='how-to-declare-the-css-and-javascript-resources-used-in-your-templates'}})
+- [HOWTO: Customize the Error Pages]({{page page='how-to-customize-the-error-pages'}})
 - [How-To Index]({{page page='how-to-index'}})
 {{/panel}}
 </div>

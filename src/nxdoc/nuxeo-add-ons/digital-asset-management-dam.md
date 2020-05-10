@@ -558,9 +558,9 @@ See&nbsp;[http://explorer.nuxeo.org/nuxeo/site/distribution/latest/viewContribut
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Other DAM Documentation'}}
 
-- [How to Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
+- [HOWTO: Contribute a New Video Conversion]({{page page='how-to-contribute-a-new-video-conversion'}})
 - [Supported File Formats]({{page page='supported-file-formats'}})
-- [How to Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
+- [HOWTO: Contribute Picture Conversions]({{page page='how-to-contribute-picture-conversions'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 

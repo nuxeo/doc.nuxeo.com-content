@@ -466,7 +466,7 @@ The tables below use the following notation:
     <td>&#10003;<br/>&#10003;<br/>N/A<br/>N/A</td>
     <td colspan="1">
     [Document creation user documentation]({{page space='userdoc' page='creating-content'}})<br/>
-    [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})<br/>
+    [HOWTO: Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})<br/>
     [Nuxeo CSV documentation]({{page version='' space='nxdoc' page='nuxeo-csv'}})<br/>
     [Nuxeo Bulk Document Importer documentation]({{page version='' space='nxdoc' page='nuxeo-bulk-document-importer'}})<br/>
     [Scan Documents Importer documentation]({{page version='' space='nxdoc' page='scan-documents-importer'}})</td>
@@ -547,7 +547,7 @@ The tables below use the following notation:
     <td>LTS&nbsp;2020<br/>&#10003;</td>
     <td colspan="1">
     [Document modification user documentation]({{page space='userdoc' page='editing-content'}})<br/>
-    [How to Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})<br/>
+    [HOWTO: Customize the Bulk Edit Form]({{page page='how-to-customize-the-bulk-edit-form'}})<br/>
     [Nuxeo Spreadsheet documentation]({{page version='' space='nxdoc' page='nuxeo-spreadsheet'}})
     </td>
 </tr>
@@ -795,7 +795,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>[Tasks in the Web UI]({{page version='' space='userdoc' page='task'}})<br/>
-    [How to set up a task dashboard]({{page version='' space='nxdoc' page='how-to-set-up-a-tasks-dashboard'}})</td>
+    [HOWTO: set up a task dashboard]({{page version='' space='nxdoc' page='how-to-set-up-a-tasks-dashboard'}})</td>
 </tr>
 <tr>
     <td colspan="1">Workflow analytics</td>
@@ -909,7 +909,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td colspan="1">
     [User Documentation]({{page space='userdoc' page='browsing-content'}})<br/>
-    [How to Customize the Dashboard]({{page page='how-to-customize-the-dashboard'}})
+    [HOWTO: Customize the Dashboard]({{page page='how-to-customize-the-dashboard'}})
     </td>
 </tr>
 <tr>
@@ -1009,7 +1009,7 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td colspan="1">[JSF UI search documentation]({{page version='' space='userdoc' page='default-search'}})<br/>
     [Web UI search documentation]({{page version='' space='userdoc' page='search'}})<br/>
-    [How to Configure a Search Filter With Facets and Other Aggregates]({{page version='' space='nxdoc' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})</td>
+    [HOWTO: Configure a Search Filter With Facets and Other Aggregates]({{page version='' space='nxdoc' page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})</td>
 </tr>
 <tr>
     <td colspan="1">Full-text search</td>
@@ -1292,8 +1292,8 @@ The tables below use the following notation:
     <td>&#10003;</td>
     <td>&#10003;</td>
     <td>[Nuxeo DAM documentation]({{page version='' space='nxdoc' page='digital-asset-management-dam'}})<br/>
-    [How to contribute a new video conversion]({{page version='' space='nxdoc' page='how-to-contribute-a-new-video-conversion'}})<br/>
-    [How to contribute picture conversions]({{page version='' space='nxdoc' page='how-to-contribute-picture-conversions'}})</td>
+    [HOWTO: contribute a new video conversion]({{page version='' space='nxdoc' page='how-to-contribute-a-new-video-conversion'}})<br/>
+    [HOWTO: contribute picture conversions]({{page version='' space='nxdoc' page='how-to-contribute-picture-conversions'}})</td>
 </tr>
 <tr>
     <td>Integration with Media processing software</td>
@@ -1392,7 +1392,7 @@ The tables below use the following notation:
     <td>LTS&nbsp;2020</td>
     <td colspan="1">
     [User Documentation]({{page space='userdoc' page='editing-content'}}#relations)<br/>
-    [How to Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})
+    [HOWTO: Add New Relation Types]({{page space='userdoc' page='how-to-add-new-relation-types'}})
     </td>
 </tr>
 <tr>

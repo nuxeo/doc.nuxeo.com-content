@@ -467,7 +467,7 @@ _nxu:dataList_
 
 _<span class="pl-ent">nxdir:chainSelect*</span>_
 
-*   This tag (and related subtags) behaviour has changed a little, please read [How to Create a N-Level Select Widget]({{page page='how-to-create-a-n-level-select-widget'}}) again to adapt your custom templates if you defined chain select widget templates for more than two levels. The modification should be simple:
+*   This tag (and related subtags) behaviour has changed a little, please read [HOWTO: Create a N-Level Select Widget]({{page page='how-to-create-a-n-level-select-widget'}}) again to adapt your custom templates if you defined chain select widget templates for more than two levels. The modification should be simple:
 
     ```diff
      <nxdir:chainSelectListbox index="0" size="1"
@@ -507,7 +507,7 @@ _
 *   The call to the method `selectionActions.onClick` must be replaced.
 
 *   The call to the method `selectionActions.selectedValue` must be replaced.
-*   Follow the documentation at [How to Impact Another JSF Component from a Command or Select]({{page page='how-to-impact-another-jsf-component-from-a-command-or-select'}}).
+*   Follow the documentation at [HOWTO: Impact Another JSF Component from a Command or Select]({{page page='how-to-impact-another-jsf-component-from-a-command-or-select'}}).
 *   Sample migration: [https://github.com/nuxeo/nuxeo-features/commit/0d76ae012408951a7f6f2b17787c4bf926918132](https://github.com/nuxeo/nuxeo-features/commit/0d76ae012408951a7f6f2b17787c4bf926918132)
 
 ## Fancy Boxes and Ajax Actions

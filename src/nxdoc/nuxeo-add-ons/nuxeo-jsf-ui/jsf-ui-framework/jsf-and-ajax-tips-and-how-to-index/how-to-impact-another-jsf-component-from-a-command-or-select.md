@@ -1,5 +1,5 @@
 ---
-title: How to Impact Another JSF Component from a Command or Select
+title: 'HOWTO: Impact Another JSF Component from a Command or Select'
 review:
     comment: ''
     date: '2015-12-01'

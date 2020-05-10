@@ -1,5 +1,5 @@
 ---
-title: How to Override a Default Style
+title: 'HOWTO: Override a Default Style'
 review:
     comment: ''
     date: '2016-12-06'
@@ -274,8 +274,8 @@ Here's another example, showing a style using Sass variables:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page page='how-to-declare-the-css-and-javascript-resources-used-in-your-templates'}})
-- [How to Customize the Login Page]({{page page='how-to-customize-the-login-page'}})
+- [HOWTO: Declare the CSS and JavaScript Resources Used in Your Templates]({{page page='how-to-declare-the-css-and-javascript-resources-used-in-your-templates'}})
+- [HOWTO: Customize the Login Page]({{page page='how-to-customize-the-login-page'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

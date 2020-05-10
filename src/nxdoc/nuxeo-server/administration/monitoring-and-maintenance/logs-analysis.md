@@ -151,7 +151,7 @@ You can increase or decrease the logs for specific services. Here are some usefu
 Related pages:
 
 *   [Log4J]({{page space='glos' page='log4j'}})
-*   [How to change the JBoss log files rotation]({{page space='kb' page='how-to-change-the-jboss-log-files-rotation'}})
+*   [HOWTO: change the JBoss log files rotation]({{page space='kb' page='how-to-change-the-jboss-log-files-rotation'}})
 *   [Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)
 
 ### Log Files
@@ -315,7 +315,7 @@ WARN
 
 - [Purging Audit Logs (NXP_LOGS)]({{page page='purging-audit-logs-nxp_logs'}})
 - [Setup Best Practices]({{page page='setup-best-practices'}})
-- [How to Estimate Volume Usage]({{page page='how-to-estimate-volume-usage'}})
+- [HOWTO: Estimate Volume Usage]({{page page='how-to-estimate-volume-usage'}})
 - [Where Are the Log and Configuration Files in Windows?](https://answers.nuxeo.com/general/q/8cf97d8734af40beb5b219c58e9311e4/Logs-and-Configuration-files-in-Windows)
 
 {{/panel}}</div><div class="column medium-6">

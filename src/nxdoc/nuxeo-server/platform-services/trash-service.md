@@ -214,7 +214,7 @@ The trash implementation has changed in 10.2. If you want to keep previous imple
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-To'}}
 
-- [How to use Trash Feature]({{page page='how-to-use-trash-feature'}})
+- [HOWTO: Use Trash Feature]({{page page='how-to-use-trash-feature'}})
 - [Action How-To Index]({{page page='action-how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Other Related Documentation'}}

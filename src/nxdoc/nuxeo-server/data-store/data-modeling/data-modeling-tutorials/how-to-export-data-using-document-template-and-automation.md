@@ -316,9 +316,9 @@ The only step left is to [create a button]({{page page='how-to-create-an-automat
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-- [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
-- [How to Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
-- [How to Quickly Generate a PDF Using Document Template]({{page page='how-to-quickly-generate-a-pdf-using-document-template'}})
+- [HOWTO: Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
+- [HOWTO: Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
+- [HOWTO: Quickly Generate a PDF Using Document Template]({{page page='how-to-quickly-generate-a-pdf-using-document-template'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}
@@ -326,6 +326,6 @@ The only step left is to [create a button]({{page page='how-to-create-an-automat
 - [Automation in Nuxeo Studio]({{page space='studio' page='automation'}})
 - [Document Templates and Automation Rendering Service]({{page page='document-templates-and-automation-rendering-service'}})
 - [NXQL]({{page page='nxql'}})
-- [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
+- [HOWTO: Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
 
 {{/panel}}</div></div>

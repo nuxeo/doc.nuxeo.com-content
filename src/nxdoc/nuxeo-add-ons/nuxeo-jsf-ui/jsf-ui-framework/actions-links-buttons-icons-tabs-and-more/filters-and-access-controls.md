@@ -236,8 +236,8 @@ It can be useful to activate server logs to help debugging filters resolution. L
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Actions and Filters Related Documentation'}}
 
-*   [How to Hide a Tab, a Link or a Button for a Group or a User]({{page page='how-to-hide-a-tab-a-link-or-a-button-for-a-group-or-a-user'}})
-*   [How to Control the Display Mode of a Widget]({{page page='how-to-control-the-display-mode-of-a-widget'}})
+*   [HOWTO: Hide a Tab, a Link or a Button for a Group or a User]({{page page='how-to-hide-a-tab-a-link-or-a-button-for-a-group-or-a-user'}})
+*   [HOWTO: Control the Display Mode of a Widget]({{page page='how-to-control-the-display-mode-of-a-widget'}})
 *   [Filtering Options Reference Page]({{page space='studio' page='filtering-options-reference-page'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='EL and Variables Related Documentation'}}

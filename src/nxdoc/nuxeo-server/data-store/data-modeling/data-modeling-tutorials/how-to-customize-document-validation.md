@@ -235,7 +235,7 @@ Let's suppose you want to make reference to `Product` objects provided by a `Pro
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
+- [HOWTO: Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

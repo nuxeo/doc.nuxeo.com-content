@@ -1,5 +1,5 @@
 ---
-title: How to Create a N-Level Select Widget
+title: 'HOWTO: Create a N-Level Select Widget'
 review:
     comment: ''
     date: '2017-12-01'
@@ -589,9 +589,9 @@ Sample example on 3 levels with widget property `directoryName` filled with the 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
+- [HOWTO: Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
 - [Customize the Versioning and Comment Widget]({{page page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
-- [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
+- [HOWTO: Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

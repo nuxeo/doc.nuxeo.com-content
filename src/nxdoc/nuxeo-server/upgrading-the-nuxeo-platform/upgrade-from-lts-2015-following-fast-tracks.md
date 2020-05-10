@@ -313,7 +313,7 @@ These improvements rely on:
 2. Optimizations of pluggable actions rendering
 3. Optimizations of document listings rendering
 
-Some helpers have also been defined to help analyzing what element is taking time when rendering a page, see [How to Debug Slow Page Rendering]({{page page='how-to-debug-slow-page-rendering'}}).
+Some helpers have also been defined to help analyzing what element is taking time when rendering a page, see [HOWTO: Debug Slow Page Rendering]({{page page='how-to-debug-slow-page-rendering'}}).
 
 Optimizations 1 and 2 should not have any impact on existing templates, maybe except on edge cases. If the misbehavior is affecting a tag `nxu:set`, the boolean attribute `useAlias=true` can be used to get back the old behavior.
 
@@ -712,7 +712,7 @@ The operations used by select2 widgets have been extracted from the nuxeo-platfo
 ### Nuxeo Studio Application Definition
 
  {{! multiexcerpt name='upgrade-8.10-studio-deps'}}
- Make sure your Nuxeo Studio project depends on the **Nuxeo JSF UI** target package. See the pages [How to Update the Version of Your Target Platform in Studio]({{page page='studio/update-the-version-of-your-target-platform'}}) and [Specific Upgrade Instructions]({{page page='studio/specific-upgrade-instructions'}}) for more details.
+ Make sure your Nuxeo Studio project depends on the **Nuxeo JSF UI** target package. See the pages [HOWTO: Update the Version of Your Target Platform in Studio]({{page page='studio/update-the-version-of-your-target-platform'}}) and [Specific Upgrade Instructions]({{page page='studio/specific-upgrade-instructions'}}) for more details.
  {{! /multiexcerpt}}
 
 ### Nuxeo Packages
@@ -753,7 +753,7 @@ The following addons are deprecated with the release of Nuxeo Platform LTS 2016:
 
 - [Upgrade from LTS 2015 to LTS 2016]({{page page='upgrade-from-lts-2015-to-lts-2016'}})
 - [Upgrading the Nuxeo Platform]({{page page='upgrading-the-nuxeo-platform'}})
-- [How to Update the Version of Your Target Platform in Studio]({{page space='studio' page='update-the-version-of-your-target-platform'}})
+- [HOWTO: Update the Version of Your Target Platform in Studio]({{page space='studio' page='update-the-version-of-your-target-platform'}})
 
 {{/panel}}
 </div>

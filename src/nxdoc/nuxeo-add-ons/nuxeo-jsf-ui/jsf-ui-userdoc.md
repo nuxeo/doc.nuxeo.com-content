@@ -40,7 +40,7 @@ This module provides core and advanced document management features.
 It provides browsing and edition features adapted to multimedia content.
 
 - [Digital Asset Management with the Nuxeo Platform]({{page page='digital-asset-management-with-the-nuxeo-platform'}})
-- [How to Contribute Picture Conversions]({{page space='nxdoc' page='how-to-contribute-picture-conversions'}})
+- [HOWTO: Contribute Picture Conversions]({{page space='nxdoc' page='how-to-contribute-picture-conversions'}})
 
 {{/panel}}
 </div>

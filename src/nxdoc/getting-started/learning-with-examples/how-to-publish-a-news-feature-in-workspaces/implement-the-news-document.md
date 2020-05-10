@@ -123,7 +123,7 @@ In this section, we will:
 
 For this section, it is recommended to take a look at the following guides for a step-by-step approach:
 
-- [How to define a document type]({{page page='how-to-define-a-document-type'}})
+- [HOWTO: Define a Document Type]({{page page='how-to-define-a-document-type'}})
 - [Use Content Automation]({{page page='how-to-define-a-new-content-view'}})
 
 {{/callout}}

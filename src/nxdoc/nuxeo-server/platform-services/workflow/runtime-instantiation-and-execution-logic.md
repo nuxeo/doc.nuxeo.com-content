@@ -265,7 +265,7 @@ How tasks are created by the workflow is discussed in the section [About tasks](
 
 {{#> callout type='tip' }}
 
-Since workflows, nodes and task are all documents, the [NXQL]({{page version='' space='nxdoc' page='nxql'}}) query language can be used, like on any other document type. Check the page [How to query workflow objects]({{page page='how-to-query-workflow-objects'}}) to find out more.
+Since workflows, nodes and task are all documents, the [NXQL]({{page version='' space='nxdoc' page='nxql'}}) query language can be used, like on any other document type. Check the page [HOWTO: query workflow objects]({{page page='how-to-query-workflow-objects'}}) to find out more.
 
 {{/callout}}
 

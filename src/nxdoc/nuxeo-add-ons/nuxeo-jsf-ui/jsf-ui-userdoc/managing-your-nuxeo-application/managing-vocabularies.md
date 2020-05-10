@@ -243,9 +243,9 @@ To delete vocabulary entry, click on the **Delete** button of the entry to erase
 {{#> panel heading='Related Documentation'}}
 
 - [Admin Tab Overview]({{page space='nxdoc' page='admin-tab-overview'}})
-- [How to Add a New Vocabulary]({{page space='nxdoc' page='how-to-add-a-new-vocabulary'}})
-- [How to Translate a Vocabulary]({{page space='nxdoc' page='how-to-translate-a-vocabulary'}})
-- [How to Add New Relation Types]({{page space='nxdoc' page='how-to-add-new-relation-types'}})
+- [HOWTO: Add a New Vocabulary]({{page space='nxdoc' page='how-to-add-a-new-vocabulary'}})
+- [HOWTO: Translate a Vocabulary]({{page space='nxdoc' page='how-to-translate-a-vocabulary'}})
+- [HOWTO: Add New Relation Types]({{page space='nxdoc' page='how-to-add-new-relation-types'}})
 
 {{/panel}}
 </div>

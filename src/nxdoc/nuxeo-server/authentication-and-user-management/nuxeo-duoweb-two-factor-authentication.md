@@ -146,8 +146,8 @@ The `YOUR_APPLICATION_KEY` can be generated as followed in [DuoWeb documentation
 
 <div class="column medium-6">
 {{#> panel heading='Related How-tos'}}
-- [How to Customize the Login Page]({{page version='' space='nxdoc' page='how-to-customize-the-login-page'}})
-- [How to Contribute to an Extension]({{page version='' space='nxdoc' page='how-to-contribute-to-an-extension'}})
+- [HOWTO: Customize the Login Page]({{page version='' space='nxdoc' page='how-to-customize-the-login-page'}})
+- [HOWTO: Contribute to an Extension]({{page version='' space='nxdoc' page='how-to-contribute-to-an-extension'}})
 {{/panel}}
 
 </div>

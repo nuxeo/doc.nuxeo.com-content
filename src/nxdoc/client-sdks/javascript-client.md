@@ -109,7 +109,7 @@ history:
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
 - [JSF and JavaScript]({{page page='jsf-and-javascript'}})
-- [How to Declare the CSS and JavaScript Resources Used in Your Templates]({{page page='how-to-declare-the-css-and-javascript-resources-used-in-your-templates'}})
+- [HOWTO: Declare the CSS and JavaScript Resources Used in Your Templates]({{page page='how-to-declare-the-css-and-javascript-resources-used-in-your-templates'}})
 - [Developing with AngularJS]({{page page='developing-with-angularjs'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Blog Posts'}}

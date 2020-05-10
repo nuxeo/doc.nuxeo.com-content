@@ -269,4 +269,4 @@ To enable this duplication of relations, you need to add the following contribut
 </extension>
 ```
 
-See the [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}}) page to add the contribution in Nuxeo Studio.
+See the [HOWTO: Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}}) page to add the contribution in Nuxeo Studio.

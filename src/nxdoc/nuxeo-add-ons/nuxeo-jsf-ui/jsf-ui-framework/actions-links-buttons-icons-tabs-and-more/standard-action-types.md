@@ -134,7 +134,7 @@ View online reference: [http://showcase.nuxeo.com/nuxeo/layoutDemo/templateActio
 
 *   [Actions Overview]({{page page='actions-overview'}})
 *   [Custom Action Types]({{page page='custom-action-types'}})
-*   [How to Add a Button in the JSF UI]({{page page='how-to-add-a-button-in-the-jsf-ui'}})
+*   [HOWTO: Add a Button in the JSF UI]({{page page='how-to-add-a-button-in-the-jsf-ui'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related pages in Studio documentation'}}
 

@@ -349,7 +349,7 @@ The use of `extendedBoundsMin` and `extendedBoundsMax` is strongly recommended. 
 
 {{#> panel heading='Related Documentation'}}
 
-- [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+- [HOWTO: Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 - [Page Providers]({{page page='page-providers'}})
 - [Custom Page Providers]({{page page='custom-page-providers'}})
 - [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})

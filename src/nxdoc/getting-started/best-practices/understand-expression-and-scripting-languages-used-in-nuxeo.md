@@ -634,7 +634,7 @@ You may find more information in these related pages:
 - EL:
 
   - [Field Binding and Expressions]({{page page='field-binding-and-expressions'}})
-  - [How to Control the Display Mode of a Widget]({{page page='how-to-control-the-display-mode-of-a-widget'}})
+  - [HOWTO: Control the Display Mode of a Widget]({{page page='how-to-control-the-display-mode-of-a-widget'}})
 
 - FreeMarker:
 

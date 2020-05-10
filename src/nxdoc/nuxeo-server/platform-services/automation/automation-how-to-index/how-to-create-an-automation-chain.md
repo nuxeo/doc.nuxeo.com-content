@@ -293,8 +293,8 @@ Binding the automation chain to a button, an action or an event handler is done 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{! multiexcerpt name='popular-how-tos'}}{{#> panel heading='Popular How-Tos'}}
 
-- [How to Export Data Using Document Template and Automation]({{page page='how-to-export-data-using-document-template-and-automation'}})
-- [How to Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
+- [HOWTO: Export Data Using Document Template and Automation]({{page page='how-to-export-data-using-document-template-and-automation'}})
+- [HOWTO: Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}{{! /multiexcerpt}}</div><div class="column medium-6">{{! multiexcerpt name='related-documentation'}}{{#> panel heading='Related Documentation'}}

@@ -1,5 +1,5 @@
 ---
-title: How to Customize the Versioning and Comment Widget on Document Edit Form
+title: 'HOWTO: Customize the Versioning and Comment Widget on Document Edit Form'
 review:
     comment: ''
     date: '2015-12-01'
@@ -331,9 +331,9 @@ Or you can play with the&nbsp;`hidden` widget mode:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to Add a New Widget to the Default Summary Layout]({{page page='how-to-add-a-new-widget-to-the-default-summary-layout'}})
-- [How to Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
-- [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
+- [HOWTO: Add a New Widget to the Default Summary Layout]({{page page='how-to-add-a-new-widget-to-the-default-summary-layout'}})
+- [HOWTO: Set a Default Date on a Field at Document Creation]({{page page='how-to-set-a-default-date-on-a-field-at-document-creation'}})
+- [HOWTO: Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

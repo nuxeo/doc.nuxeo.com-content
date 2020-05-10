@@ -369,7 +369,7 @@ Documentation can be found [here](https://doc.nuxeo.com/nxdoc/batch-upload-endpo
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Import how-tos'}}
 
-- [How to Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
-- [How to Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
+- [HOWTO: Change the Default Document Type When Importing a File in the Nuxeo Platform?]({{page page='how-to-change-the-default-document-type-when-importing-a-file-in-the-nuxeo-platform'}})
+- [HOWTO: Customize the Bulk Import Form]({{page page='how-to-customize-the-bulk-import-form'}})
 
 {{/panel}}</div></div>

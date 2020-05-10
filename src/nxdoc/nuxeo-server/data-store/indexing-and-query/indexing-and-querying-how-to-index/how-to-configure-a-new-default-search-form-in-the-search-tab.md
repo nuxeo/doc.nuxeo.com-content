@@ -1,5 +1,5 @@
 ---
-title: How to Configure a New Default Search Form in the Search Tab
+title: 'HOWTO: Configure a New Default Search Form in the Search Tab'
 review:
     comment: ''
     date: '2017-04-21'
@@ -93,7 +93,7 @@ To set a new search form that will replace the Default search form displayed whe
 
 1.  In Studio, click on the **Listings & Views** > [**Search** menu item]({{page space='studio' page='search-advanced-search'}}).
 2.  Click on the **Create** button to create a new default search.
-3.  Configure the base query, the form and the results table, like you would on any other content view (see [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})).
+3.  Configure the base query, the form and the results table, like you would on any other content view (see [HOWTO: Define a New Content View]({{page page='how-to-define-a-new-content-view'}})).
 4.  Save and [deploy]({{page space='studio' page='deploying-your-project-in-dev-mode'}}).
 
 &nbsp;
@@ -102,8 +102,8 @@ To set a new search form that will replace the Default search form displayed whe
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
-- [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
-- [How to Configure a Search Filter With Facets and Other Aggregates]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
+- [HOWTO: Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
+- [HOWTO: Configure a Search Filter With Facets and Other Aggregates]({{page page='how-to-configure-a-search-filter-with-facets-and-other-aggregates'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

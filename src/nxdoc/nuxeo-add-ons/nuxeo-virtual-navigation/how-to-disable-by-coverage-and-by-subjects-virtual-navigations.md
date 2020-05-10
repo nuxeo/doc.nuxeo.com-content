@@ -1,5 +1,5 @@
 ---
-title: How to Disable by Coverage and by Subjects Virtual Navigations
+title: 'HOWTO: Disable by Coverage and by Subjects Virtual Navigations'
 review:
     comment: ''
     date: '2015-12-01'
@@ -248,9 +248,9 @@ When hiding them outside of a Studio contribution, the following requirement is 
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-tos'}}
 
-- [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
-- [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
-- [How to Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
+- [HOWTO: Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
+- [HOWTO: Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
+- [HOWTO: Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">

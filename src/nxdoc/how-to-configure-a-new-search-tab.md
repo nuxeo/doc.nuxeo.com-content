@@ -1,5 +1,5 @@
 ---
-title: How to Configure a New Search Tab
+title: 'HOWTO: Configure a New Search Tab'
 review:
     comment: ''
     date: '2015-12-01'
@@ -22,7 +22,7 @@ confluence:
     source_link: /display/NXDOC/How+to+Configure+a+New+Search+Tab
 hidden: true
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2015-02-24 15:51'
         message: ''

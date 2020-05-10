@@ -247,7 +247,7 @@ A set of properties is stored by default for any user in the Nuxeo Platform:
 *   Company
 *   Email
 
-Those properties can come from the IdM the Nuxeo Platform is integrated to. To extend the list of available fields for a user, see the page [How to Add New Fields to The User Profile or Group Profile]({{page page='how-to-add-new-fields-to-the-user-profile-or-group-profile'}}).
+Those properties can come from the IdM the Nuxeo Platform is integrated to. To extend the list of available fields for a user, see the page [HOWTO: Add New Fields to The User Profile or Group Profile]({{page page='how-to-add-new-fields-to-the-user-profile-or-group-profile'}}).
 
 ## Authentication Chain Configuration
 

@@ -210,7 +210,7 @@ Customization done in this how-to relates to the Nuxeo Platform's JSF UI. Before
 
 The first step is to add date-type properties to our document type. We will use these new properties as a landmark for our future queries. Let's say we want to recall the expiring date 3 months before it happens.
 
-To know more about how to define a document type and add properties check out the page [How to Define a Document Type]({{page page='how-to-define-a-document-type'}}).
+To know more about how to define a document type and add properties check out the page [HOWTO: Define a Document Type]({{page page='how-to-define-a-document-type'}}).
 
 1.  Create a new document type called "mydocumenttype".
 2.  In the **Schema** tab of the document type, add two date-type properties:
@@ -355,9 +355,9 @@ The chain will look like that:
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Popular How-Tos'}}
 
-- [How to Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
+- [HOWTO: Define a New Content View]({{page page='how-to-define-a-new-content-view'}})
 - [Fetch a Document by Its ID or Path]({{page page='how-to-fetch-a-document-by-its-id-or-path'}})
-- [How to Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
+- [HOWTO: Create an Automation Chain]({{page page='how-to-create-an-automation-chain'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

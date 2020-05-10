@@ -97,7 +97,7 @@ It is easy to pinpoint slow queries that need to be migrated from the database t
 
 ## Migrating Content View or Page Provider
 
-This can be done as described in [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}).
+This can be done as described in [HOWTO: Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}}).
 
 Using a page provider to query the repository makes it easy to tune or override queries.
 
@@ -261,7 +261,7 @@ See the addon [README](https://github.com/nuxeo/nuxeo/blob/master/modules/platfo
 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
-- [How to Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
+- [HOWTO: Make a Page Provider or Content View Query Elasticsearch Index]({{page page='how-to-make-a-page-provider-or-content-view-query-elasticsearch-index'}})
 - [Configuring the Elasticsearch Mapping]({{page page='configuring-the-elasticsearch-mapping'}})
 - [Elasticsearch Indexing Logic]({{page page='elasticsearch-indexing-logic'}})
 - [Elasticsearch Setup]({{page page='elasticsearch-setup'}})

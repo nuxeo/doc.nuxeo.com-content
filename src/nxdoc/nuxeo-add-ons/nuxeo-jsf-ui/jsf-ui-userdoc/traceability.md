@@ -229,6 +229,6 @@ For instance, your document's version is currently 0.3\. When you click on the *
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Developer documentation about versioning and history'}}
 
 - [Versioning developer documentation]({{page space='nxdoc' page='versioning'}})
-- [How to Customize the Versioning and Comment Widget on Document Edit Form]({{page space='nxdoc' page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
+- [HOWTO: Customize the Versioning and Comment Widget on Document Edit Form]({{page space='nxdoc' page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
 
 {{/panel}}</div></div>

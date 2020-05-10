@@ -1,5 +1,5 @@
 ---
-title: How to Contribute Picture Conversions
+title: 'HOWTO: Contribute Picture Conversions'
 review:
     comment: ''
     date: '2017-12-12'

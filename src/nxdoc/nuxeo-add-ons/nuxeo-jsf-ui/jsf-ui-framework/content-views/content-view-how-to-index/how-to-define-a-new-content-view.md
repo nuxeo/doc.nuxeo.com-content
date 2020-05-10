@@ -1,5 +1,5 @@
 ---
-title: How to Define a New Content View
+title: 'HOWTO: Define a New Content View'
 review:
     comment: ''
     date: '2016-12-19'
@@ -572,8 +572,8 @@ There are several ways of using the content view you configured in your Nuxeo Pl
 <div class="column medium-6">
 {{#> panel heading='Related How-tos'}}
 
-- [How to Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
-- [How to Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
+- [HOWTO: Add a New Virtual Navigation Entry]({{page page='how-to-add-a-new-virtual-navigation-entry'}})
+- [HOWTO: Customize the Default Content and Trash Listings]({{page page='how-to-customize-the-default-content-and-trash-listings'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}

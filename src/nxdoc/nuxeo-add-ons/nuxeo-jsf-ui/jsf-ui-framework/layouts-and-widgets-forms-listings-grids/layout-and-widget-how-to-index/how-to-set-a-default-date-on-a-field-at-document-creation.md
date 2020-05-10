@@ -1,5 +1,5 @@
 ---
-title: How to Set a Default Date on a Field at Document Creation
+title: 'HOWTO: Set a Default Date on a Field at Document Creation'
 review:
     comment: ''
     date: '2015-12-01'
@@ -170,7 +170,7 @@ And that's it! Note that the previous parameter will set today's date, but you m
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related How-Tos'}}
 
 - [Customize the Versioning and Comment Widget]({{page page='how-to-customize-the-versioning-and-comment-widget-on-document-edit-form'}})
-- [How to Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
+- [HOWTO: Add a JSF Form Validation]({{page page='how-to-add-a-jsf-form-validation'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">{{#> panel heading='Related Documentation'}}

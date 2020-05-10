@@ -1,5 +1,5 @@
 ---
-title: How to Implement Local Groups or Roles Using Computed Groups
+title: 'HOWTO: Implement Local Groups or Roles Using Computed Groups'
 review:
     comment: ''
     date: '2017-12-13'
@@ -9,7 +9,7 @@ details:
         excerpt: Learn how to let managers of a workspace determine who is part of locally defined groups (local to the workspace).
         level: Advanced
         tool: Studio
-        topics: Permissions, Authentication
+        topics: 'Permissions, Authentication'
 labels:
     - lts2016-ok
     - howto

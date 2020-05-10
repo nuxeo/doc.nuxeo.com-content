@@ -325,6 +325,6 @@ Finally, when copying a collection, an asynchronous work will also duplicate its
 
 - [Collections user documentation]({{page space='userdoc' page='collections'}})
 - [Nuxeo Drive documentation]({{page page='nuxeo-drive'}})
-- [How to Manually Initialize or Deploy a Nuxeo Drive Instance]({{page version='' space='client-apps' page='index' page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
+- [HOWTO: Manually Initialize or Deploy a Nuxeo Drive Instance]({{page version='' space='client-apps' page='index' page='how-to-manually-initialize-or-deploy-a-nuxeo-drive-instance'}})
 
 {{/panel}}</div><div class="column medium-6"></div></div>

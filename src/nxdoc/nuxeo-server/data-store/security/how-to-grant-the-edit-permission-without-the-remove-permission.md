@@ -1,5 +1,5 @@
 ---
-title: How to Grant the Edit Permission without the Remove Permission
+title: 'HOWTO: Grant the Edit Permission without the Remove Permission'
 review:
     comment: ''
     date: '2017-12-14'
@@ -141,8 +141,8 @@ As described on the page [Managing Permissions]({{page space='userdoc' page='man
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related Documentation'}}
 
 - [Managing Permissions]({{page space='userdoc' page='managing-permissions'}})
-- [How to Upload Labels Translations in Nuxeo Studio (i18n)]({{page page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}})
-- [How to Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
+- [HOWTO: Upload Labels Translations in Nuxeo Studio (i18n)]({{page page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}})
+- [HOWTO: Contribute to an Extension]({{page page='how-to-contribute-to-an-extension'}})
 - [How-To Index]({{page page='how-to-index'}})
 
 {{/panel}}</div><div class="column medium-6">

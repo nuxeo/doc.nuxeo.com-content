@@ -1,5 +1,5 @@
 ---
-title: How to Add New Fields to the User Profile or Group Profile
+title: 'HOWTO: Add New Fields to the User Profile or Group Profile'
 review:
     comment: ''
     date: '2018-10-10'
@@ -9,7 +9,7 @@ details:
         excerpt: This page provides a turnkey solution to add new fields to the user profile or group.
         level: Intermediate
         tool: XML configuration
-        topics: 'LDAP, Multidirectory'
+        topics: 'LDAP, Multidirectory, authentication'
 tree_item_index: 400
 labels:
     - lts2017-ok
@@ -172,8 +172,8 @@ In a more friendly way, you can add your own schemas using [Nuxeo Studio]({{page
 
 {{#> panel heading='Related How-tos'}}
 
-- [How to Add Custom LDAP Fields to the UI]({{page version='' space='nxdoc' page='how-to-add-custom-ldap-fields-to-the-ui'}})
-- [How to Configure a Multidirectory for Users and Groups]({{page version='' space='nxdoc' page='how-to-configure-a-multidirectory-for-users-and-groups'}})
+- [HOWTO: Add Custom LDAP Fields to the UI]({{page version='' space='nxdoc' page='how-to-add-custom-ldap-fields-to-the-ui'}})
+- [HOWTO: Configure a Multidirectory for Users and Groups]({{page version='' space='nxdoc' page='how-to-configure-a-multidirectory-for-users-and-groups'}})
 - [How-to Index]({{page version='' space='nxdoc' page='how-to-index'}})
 
 {{/panel}}

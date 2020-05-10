@@ -1,5 +1,5 @@
 ---
-title: How to Change Context Path
+title: 'HOWTO: Change Context Path'
 review:
     comment: ''
     date: '2015-12-01'
@@ -30,17 +30,17 @@ version_override:
     LTS 2015: 710/admindoc/how-to-change-context-path
     '6.0': 60/admindoc/how-to-change-context-path
 history:
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-25 07:45'
         message: ''
         version: '3'
-    - 
+    -
         author: Solen Guitter
         date: '2016-07-25 07:45'
         message: ''
         version: '2'
-    - 
+    -
         author: Alain Escaffre
         date: '2016-07-22 13:47'
         message: ''

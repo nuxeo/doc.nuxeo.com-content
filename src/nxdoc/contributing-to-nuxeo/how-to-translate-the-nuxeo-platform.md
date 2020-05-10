@@ -588,8 +588,8 @@ An export of translations files from Crowdin requires the project to be "built" 
 <div class="row" data-equalizer data-equalize-on="medium"><div class="column medium-6">{{#> panel heading='Related pages in current documentation'}}
 
 - [Localization and Translation How-To Index]({{page page='localization-and-translation-how-to-index'}})
-- [How to Upload Labels Translations in Nuxeo Studio (i18n)]({{page page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}})
-- [How to Force Locale]({{page page='how-to-force-locale'}})
+- [HOWTO: Upload Labels Translations in Nuxeo Studio (i18n)]({{page page='how-to-upload-labels-translations-in-nuxeo-studio-i18n'}})
+- [HOWTO: Force Locale]({{page page='how-to-force-locale'}})
 
 &nbsp;
 

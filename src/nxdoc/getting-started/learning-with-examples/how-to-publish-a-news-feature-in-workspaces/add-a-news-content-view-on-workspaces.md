@@ -92,7 +92,7 @@ In the section, we will:
 For this section, it is recommended to take a look at the how-tos for a step-by-step approach:
 
 - [Define a new content view]({{page page='how-to-define-a-new-content-view'}}),
-- [How to Define a Document Type]({{page page='how-to-define-a-document-type'}}).
+- [HOWTO: Define a Document Type]({{page page='how-to-define-a-document-type'}}).
 
 {{/callout}}
 

@@ -1,5 +1,5 @@
 ---
-title: How to Make JSF UI the Default UI
+title: 'HOWTO: Make JSF UI the Default UI'
 review:
     comment: ''
     date: '2017-10-11'

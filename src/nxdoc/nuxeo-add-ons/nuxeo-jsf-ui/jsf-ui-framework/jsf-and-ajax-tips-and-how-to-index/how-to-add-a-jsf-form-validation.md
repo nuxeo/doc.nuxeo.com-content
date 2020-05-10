@@ -1,5 +1,5 @@
 ---
-title: How to Add a JSF Form Validation
+title: 'HOWTO: Add a JSF Form Validation'
 review:
     comment: ''
     date: '2015-12-01'

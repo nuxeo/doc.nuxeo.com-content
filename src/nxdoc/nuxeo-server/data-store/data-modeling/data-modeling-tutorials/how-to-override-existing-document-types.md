@@ -328,8 +328,8 @@ You can also browse the [contributions to the Type extension](http://explorer.nu
 <div class="row" data-equalizer data-equalize-on="medium">
 <div class="column medium-6">
 {{#> panel heading='Popular How-Tos'}}
-- [How to Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}})
-- [How to use Trash Feature]({{page page='how-to-use-trash-feature'}})
+- [HOWTO: Add Complex Fields on Your Document Type]({{page page='how-to-add-complex-fields-on-your-document-type'}})
+- [HOWTO: Use Trash Feature]({{page page='how-to-use-trash-feature'}})
 - [How-To Index]({{page page='how-to-index'}})
 {{/panel}}
 </div>
