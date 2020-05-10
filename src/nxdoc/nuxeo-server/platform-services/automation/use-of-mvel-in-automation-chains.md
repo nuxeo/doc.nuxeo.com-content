@@ -484,7 +484,7 @@ history:
 {{! excerpt}}
 This documentation focuses on the [MVEL](https://en.wikibooks.org/wiki/Transwiki:MVEL_Language_Guide) expression language, used in automation chains. For a broader look on that subject, have a look at the [Understand Expression and Scripting Languages Used in Nuxeo]({{page page='understand-expression-and-scripting-languages-used-in-nuxeo'}}) page.
 
-Also, it is very unlikely that you will need to use MVEL from inside an Automation Script (using an `@{expression}` value). Still, form Automation Scripting, you have access to very useful objects and helpers (`Document ,  ``CurrentUser`, `Fn`, etc., see below)
+Also, it is very unlikely that you will need to use MVEL from inside an Automation Script (using an `@{expression}` value). Still, form Automation Scripting, you have access to very useful objects and helpers (`Document` ,  `CurrentUser`, `Fn`, etc., see below)
 {{! /excerpt}}
 {{/callout}}
 
@@ -507,7 +507,7 @@ The expression between brackets (`@{the_expression}`) is evaluated/calculated an
 - You can put your own Context Variables (Using `Context.SetVar` previously in your chain)
 - Nuxeo provides objects for your convenience. We will discuss these objects below. For example, the `Document`, `CurrentUser`, `CurrentDate` objects provide accessors to facilitate getting values from the current context. `@{Document.title}`returns the title of the current document. `@{CurrentUser.mail}` the mail address of the current user (typically used with the `SendMail` operation). `@{CurrentDate.days(7).calendar}` returns a date "in 7 days" (for example, stored in `dc:expired`).
 
-The expression can return any value, it is not limited to strings. For example, if we have an `order:total_price` floating point field, we can set its value (still using the `Document.SetProperty` operation) with `@{Document["order:quantity"] * Document["order:price"]`.
+The expression can return any value, it is not limited to strings. For example, if we have an `order:total_price` floating point field, we can set its value (still using the `Document.SetProperty` operation) with `@{Document["order:quantity"] * Document["order:price"]}`.
 
 ## MVEL
 
@@ -575,7 +575,7 @@ The Expression Editor in Nuxeo Studio displays the _Browse Context_ drop down an
 
     *   `Env` allows for getting the value of a configuration parameter (see below)
     *   `WorkflowVariables` and `NodeVariables` allow for retrieving the values of your variables in the context of a workflow
-    *   `Context` is maintained for compatibility reason. All its objects are available in other objects, or can be accessed an easier way. For example, to get the value of a Context variable, you can write `@{Context["the_variable"]}`, but `@{the_variable}` looks more readable. The same would go for
+    *   `Context` is maintained for compatibility reason. All its objects are available in other objects, or can be accessed an easier way. For example, to get the value of a Context variable, you can write `@{Context["the_variable"]}`, but `@{the_variable}` looks more readable.
 
 ## {{> anchor 'doc-wrapper'}}Document Wrapper
 
