@@ -15,6 +15,17 @@ tree_item_index: 500
 The Bulk Action Framework provides a service to be able to run resilient bulk actions on a _possibly large_ set of documents.
 {{! /excerpt}}
 
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related course on Nuxeo University:</br>
+[Course on Nuxeo Stream](https://university.nuxeo.com/learn/course/external/view/elearning/207/NuxeoStream).
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-stream.png
+    name: university-stream.png
+    server#diagram#up_to_date
+--}}
+![university-stream.png](nx_asset://1e585980-9b10-4f53-a36e-a5978958ee6f ?w=450,border=true)
+{{/callout}}
+
 This framework introduces several notions:
 
 - **document set**: a list of documents from a repository represented as a list of document identifiers.
@@ -89,7 +100,18 @@ This computation reads from the `status` stream and aggregate status update to b
 
 This `done` stream can be used as an input by custom computation to execute other actions once a command is completed.
 
-### Contributing an Action
+### Building an action with the Bulk Service
+
+#### Edit the MANIFEST file
+
+On your MANIFEST file, add your new contribution:
+
+```
+[...]
+Nuxeo-Component: OSGI-INF/stream-contrib.xml
+```
+
+#### Contribute an action
 
 You need to register a couple action/stream processor:
 
@@ -113,6 +135,72 @@ If your action have some parameters, you can also validate them by adding a vali
 
 It is possible to add several options to the stream processor to tune the way the documents are processed.
 Please visit [nuxeo-runtime-stream README](https://github.com/nuxeo/nuxeo/blob/master/modules/runtime/nuxeo-runtime-stream/README.md) for more information.
+
+#### Create the stream processor
+
+Create a Java Class to declare a standard Stream processor. You should have a topology. It is possible to have as many computations as needed, but, the progress of our process must be reported to status stream. 
+
+```java
+public class MyActionProcessor implements StreamProcessorTopology {
+
+    private static final Log log = LogFactory.getLog(MyActionProcessor.class);
+
+    @Override
+    public Topology getTopology(Map<String, String> options) {
+        return Topology.builder()
+                       .addComputation(MyComputation::new, Arrays.asList(INPUT_1 + ":" + ACTION_NAME, //
+                               OUTPUT_1 + ":" + STATUS_STREAM))
+                       .build();
+    }
+}
+```
+
+In this example, there is a single computation called `MyComputation`. This topology takes as input a stream with the name of the action, and the output stream as output. 
+
+#### Create the computations
+
+The computation presented previously should be defined in another Java class. 
+
+An abstract Java class, `AbstractBulkComputation`, helps to creates all we need for the computation: 
+- A CoreSession
+- The list  of documents which are going to be processed
+- The action properties. 
+
+Everything inside the class is the custom logic to implement. 
+
+```java
+// ...
+public class MyComputation extends AbstractBulkComputation {
+
+    private static final Logger log = LogManager.getLogger(MyComputation.class);
+
+    protected static final String ACTION_NAME = "myAction";
+
+    public MyComputation() {
+        super(ACTION_NAME);
+    }
+
+    @Override
+    protected void compute(CoreSession session, List<String> ids, Map<String, Serializable> properties) {
+        // Custom Logic
+    }
+    // ...
+}
+```
+
+Note that you can load all the batch ids at once with `loadDocument` helper:
+
+```java
+for (DocumentModel doc : loadDocuments(session, ids)) {
+  // ...
+}
+```
+
+#### Invoke the Bulk Service
+
+The Bulk service can be called in different ways. For example:
+- From a **page provider** (`curl -s -X POST "$SERVER_URL/nuxeo/api/v1/search/pp/default_search/bulk/csvExport"`), adding an adapter to invoke our bulk service, with the name of our action, which, in this case, is `csvExport`.
+- From an **automation operation** (`curl -s -X POST "${SERVER_URL}/nuxeo/site/automation/Elasticsearch.BulkIndex"`)
 
 ## Bulk REST API
 

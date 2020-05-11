@@ -7,12 +7,23 @@ review:
 labels:
     - lts2019-ok
 toc: true
-tree_item_index: 1100
+tree_item_index: 100
 ---
 
 {{! excerpt}}
 Kafka configuration and integration with Nuxeo.
 {{! /excerpt}}
+
+{{#> callout type='info' heading='Nuxeo University'}}
+Watch the related course on Nuxeo University:</br>
+[Course on Nuxeo Stream](https://university.nuxeo.com/learn/course/external/view/elearning/207/NuxeoStream).
+{{!--     ### nx_asset ###
+    path: /default-domain/workspaces/Product Management/Documentation/Documentation Screenshots/UNIVERSITY/university-stream.png
+    name: university-stream.png
+    server#diagram#up_to_date
+--}}
+![university-stream.png](nx_asset://1e585980-9b10-4f53-a36e-a5978958ee6f ?w=450,border=true)
+{{/callout}}
 
 ## When to Use Kafka?
 
