@@ -2,7 +2,7 @@
 title: PHP Automation Client
 review:
     comment: ''
-    date: '2016-12-06'
+    date: '2020-05-11'
     status: ok
 labels:
     - lts2016-ok
@@ -110,8 +110,12 @@ history:
         date: '2011-05-09 16:56'
         message: ''
         version: '1'
-
 ---
+
+{{#> callout type='warning' heading='Community'}}
+This addon is maintained by the community, **it is not covered by the Nuxeo subscription**, pull requests are welcomed!
+{{/callout}}
+
 The [Nuxeo Automation PHP Client](https://github.com/nuxeo/nuxeo-automation-php-client) is a PHP client library for Nuxeo Automation API.
 
 It is compatible with Nuxeo Platform LTS 2015, LTS 2016 and latest Fast Tracks.

@@ -301,7 +301,7 @@ history:
 
 ---
 {{! excerpt}}
-Nuxeo offers an API Playground, an interactive way to discover the Nuxeo Platform REST API. This module runs fully client-side in JavaScript. You can use it on any server as long as you deploy a [CORS configuration](#setting-up-cors-configuration) on it.
+Nuxeo offers an [API Playground](http://nuxeo.github.io/api-playground/), an interactive way to discover the Nuxeo Platform REST API. This module runs fully client-side in JavaScript. You can use it on any server as long as you deploy a [CORS configuration](#setting-up-cors-configuration) on it.
 {{! /excerpt}}
 
 ## Functional Overview

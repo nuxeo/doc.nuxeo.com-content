@@ -571,7 +571,7 @@ If you want to migrate comments to the new storage model, follow the [Comment mi
 {{! multiexcerpt name='upgrade-10.3-comments-migration'}}
 To migrate comments to the new storage model:
 
-1. Follow the step from section [Keeping old comments](#keeping-old-comments).
+1. Follow the step from section [Keeping old comments]({{page version='' space='nxdoc' page='upgrade-from-lts-2017-following-fast-tracks'}}#keeping-old-comments).
 2. In the Nuxeo Platform's JSF UI, go to **Admin**&nbsp;> **System Information**&nbsp;> **Migration**, click the button **Migrate comments from relations to the parent id property usage** and wait until migration is completed.
 3. Remove the contribution added at step 1.
 {{! /multiexcerpt}}
