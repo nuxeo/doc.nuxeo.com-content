@@ -747,6 +747,21 @@ Public
 </tr>
 <tr>
 <td colspan="1">
+Nuxeo Retention Management<br/>
+`nuxeo-retention`
+</td>
+<td colspan="1">
+Registered access
+</td>
+<td colspan="1">
+[Documentation]({{page page='nuxeo-retention-management'}})
+</td>
+<td colspan="1">
+[Released for 10.10](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-retention)
+</td>
+</tr>
+<tr>
+<td colspan="1">
 Nuxeo Resources Compatibility<br/>
 `resources-compat`
 </td>
