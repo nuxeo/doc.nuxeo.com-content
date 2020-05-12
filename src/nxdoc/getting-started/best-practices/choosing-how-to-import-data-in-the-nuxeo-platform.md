@@ -215,7 +215,7 @@ Scan Importer is configurable via XML extensions for the metadata mapping. The d
 
 **Features**
 
-The [Nuxeo Stream Importer](https://github.com/nuxeo/nuxeo/tree/master/addons/nuxeo-platform-importer/nuxeo-importer-stream) defines a producer/consumer pattern and uses the Log features provided by Nuxeo Stream. The Log is used to perform mass import. It decouples the Extraction/Transformation from the Load (using the ETL terminology). A document message producer does the extraction and transformation with custom logic. This module comes with a random document and a random blob generator, that does the same job as the random importer of the `nuxeo-importer-core` module. The load into Nuxeo is done with a generic consumer.
+The [Nuxeo Stream Importer](https://github.com/nuxeo/nuxeo/tree/master/modules/platform/nuxeo-platform-importer/nuxeo-importer-stream) defines a producer/consumer pattern and uses the Log features provided by Nuxeo Stream. The Log is used to perform mass import. It decouples the Extraction/Transformation from the Load (using the ETL terminology). A document message producer does the extraction and transformation with custom logic. This module comes with a random document and a random blob generator, that does the same job as the random importer of the `nuxeo-importer-core` module. The load into Nuxeo is done with a generic consumer.
 Automation operations are exposed to run producers and consumers.
 
 Two options are offered to perform the import:
