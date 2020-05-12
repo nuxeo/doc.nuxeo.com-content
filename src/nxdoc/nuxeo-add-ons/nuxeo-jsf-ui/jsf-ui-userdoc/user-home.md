@@ -224,7 +224,7 @@ history:
 
 Every user has a **Home** tab, that offers user-centric tabs.
 
-*   The [dashboard]({{page page='browsing-content#dashboard'}}) provides a quick access to content.
+*   The [dashboard]({{page page='browsing-content'}}#dashboard) provides a quick access to content.
     ![]({{file name='CAP-dashboard.png' page='nuxeo-platform-concepts'}} ?w=650,border=true)
 *   The **Profile** tab enables the user to edit his personal information and his password.
     ![]({{file name='user_profile.png' page='nuxeo-platform-concepts'}} ?w=650,border=true)
@@ -232,7 +232,7 @@ Every user has a **Home** tab, that offers user-centric tabs.
     ![]({{file name='home-workflow-tab.png' page='nuxeo-platform-concepts'}} ?w=650,border=true)
 *   The [Preferences]({{page page='user-preferences'}}) tab enables you to select the language of the platform interface.
     ![]({{file name='users-preferences.png' page='nuxeo-platform-concepts'}} ?w=650,border=true)
-*   A summary of the [alerts]({{page page='collaborative-features#alerts'}}) you have subscribed to is available from the **Alerts** tab.
+*   A summary of the [alerts]({{page page='collaborative-features'}}#alerts) you have subscribed to is available from the **Alerts** tab.
     ![]({{file name='Home-Alerts-tab.png' page='collaborative-features'}} ?w=650,border=true)
 *   The **Users & Groups** tab displays the directory.
     ![]({{file name='user_home_directories.png' page='nuxeo-platform-concepts'}} ?w=650,border=true)

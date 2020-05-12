@@ -129,7 +129,7 @@ All the documents evolve according to a defined lifecycle. The default lifecycle
 
 Users who are involved in workflows are alerted by email and can have a synthetic view of all their pending tasks on documents in their [dashboard]({{page space='nxdoc' page='browsing-content'}}#dashboard). The documents they have to review are listed there.
 
-{{{multiexcerpt 'default-validation-workflows' page='NXDOC:Workflow'}}}
+{{{multiexcerpt 'default-validation-workflows' page='workflow'}}}
 
 Other workflows can be [configured with Nuxeo Studio]({{page space='Studio' page='Workflow'}}), which will then be available in the application.
 

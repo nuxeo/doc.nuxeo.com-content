@@ -215,8 +215,9 @@ The workflow engine provides means to implement most of BPMN concepts: Fork, mer
 
 The Nuxeo Platform offers two default workflows that showcase the possibilities of the Workflow.
 
-* {{{excerpt 'USERDOC:Serial Document Workflow'}}}
-* {{{excerpt 'USERDOC:Parallel Document Workflow'}}}
+* **The default serial workflow**, called "Serial document review", is an ordered workflow. This means that participants can review the document only when the previous participant in the list has approved the document. It can be used either to approve the document or simply to review it.
+
+* **The default parallel workflow**, called "Parallel document review", is an unordered workflow that enables to change the document's state after a consultation step. This means that participants can give their opinion on the document without having to wait for a previous participant to approve it.
 
 {{! /multiexcerpt}}
 
