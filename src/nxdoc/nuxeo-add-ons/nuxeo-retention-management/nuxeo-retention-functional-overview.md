@@ -17,7 +17,7 @@ tree_item_index: 100
 ## As a Record Manager
 
 As a record manager, you are responsible for the proper organization and management of the documents on the platform.
-You have to make sure that the [retention rules]({{page page='index'}}#retention-rules) are properly written, implemented and used.
+You have to make sure that the [retention rules]({{page page='nuxeo-retention-management'}}#retention-rules) are properly written, implemented and used.
 
 Once the module is installed, different menus, sub-menus and actions are available throughout Nuxeo.
 
@@ -32,7 +32,7 @@ A new retention menu {{!--     ### nx_asset ###
 
 - A **retention search** that lets you [search through all the documents](#retention-search) under retention and/or legal hold.
 
-- A **retention rules** menu that displays the list of [retention rules]({{page page='index'}}#retention-rules) defined on your instance.
+- A **retention rules** menu that displays the list of [retention rules]({{page page='nuxeo-retention-management'}}#retention-rules) defined on your instance.
 
 - A **retention events** menu that lets you [create a retention event](#create-a-retention-event).
 
@@ -82,7 +82,7 @@ Regarding access rights, this addon includes:
 
 ### {{> anchor 'create-retention-rule'}} Create a Retention Rule
 
-To create a new [retention rule]({{page page='index'}}#retention-rules):
+To create a new [retention rule]({{page page='nuxeo-retention-management'}}#retention-rules):
 1. Go to the Retention menu.
 2. Click on **Retention rules**.
 3. Click on the **Create** button {{!--     ### nx_asset ###
@@ -346,7 +346,7 @@ On the **View** tab of your document:
 
 ### Create a Retention Event
 
-To create a new [retention event]({{page page='index'}}#retention-events):
+To create a new [retention event]({{page page='nuxeo-retention-management'}}#retention-events):
 1. Go to the Retention menu.
 2. Click on **Retention events**.
 3. Fill the fields on the **Fire event** section:
@@ -396,11 +396,11 @@ On the **History** tab of your document, you can see all the events related to t
 
 #### General History
 
-On the **Administration** > **Audit** page, you can see all the events related to the retention, including the [retention events]({{page page='index'}}#retention-events) that have been created on the platform.
+On the **Administration** > **Audit** page, you can see all the events related to the retention, including the [retention events]({{page page='nuxeo-retention-management'}}#retention-events) that have been created on the platform.
 
 ### Put a Document Under Legal Hold
 
-There are different ways to put a document under a [legal hold]({{page page='index'}}#legal-hold). You can apply a legal hold to a single document or to several documents in a row.
+There are different ways to put a document under a [legal hold]({{page page='nuxeo-retention-management'}}#legal-hold). You can apply a legal hold to a single document or to several documents in a row.
 
 #### From a Document View
 
@@ -495,7 +495,7 @@ The legal hold will be removed for **all the documents displayed on the page**.
 ## As a User
 
 {{#> callout type='info' heading='Standard and Compliance mode' }}
-This page describes the user experience depending on the Retention Management addon mode among [Standard or Compliance]({{page page='index'}}#configuration-modes).
+This page describes the user experience depending on the Retention Management addon mode among [Standard or Compliance]({{page page='nuxeo-retention-management'}}#configuration-modes).
 {{/callout}}
 
 As a user, you will see some differences on the **View** tab of your documents:

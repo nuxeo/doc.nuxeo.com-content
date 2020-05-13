@@ -16,7 +16,7 @@ tree_item_index: 300
 
 ## Before You Start
 
-This page gives all the necessary steps to install the Retention Management addon with both [Standard and Compliance modes]({{page page='index'}}#configuration-modes).
+This page gives all the necessary steps to install the Retention Management addon with both [Standard and Compliance modes]({{page page='nuxeo-retention-management'}}#configuration-modes).
 
 ## Prerequisites
 
@@ -50,7 +50,7 @@ Nuxeo Platform with Nuxeo Retention Management addon requires the usage of 2 Ama
 
 ##### {{> anchor 's3-configuration-requirements'}} Amazon S3 Configuration Requirements
 
-Compliance with [SEC Rule 17a-4]({{page page='index'}}#sec-rule-17a4) requires to configure Nuxeo Platform to use Amazon S3 Compliance Buckets to store records required by regulation, thereby establishing the foundation for meeting the requirements of the Rule.</br>
+Compliance with [SEC Rule 17a-4]({{page page='nuxeo-retention-management'}}#sec-rule-17a4) requires to configure Nuxeo Platform to use Amazon S3 Compliance Buckets to store records required by regulation, thereby establishing the foundation for meeting the requirements of the Rule.</br>
 
 Specifically:
 
