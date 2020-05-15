@@ -982,6 +982,12 @@ Atomic increment:
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-23745](https://jira.nuxeo.com/browse/NXP-23745).
 
+#### SOAP Endpoints Have Been Removed {{since '10.3'}}
+
+All SOAP endpoints have been removed, including the CMIS SOAP endpoints.
+
+<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on JIRA ticket [NXP-24130](https://jira.nuxeo.com/browse/NXP-24130).
+
 ### CSV Export Service {{since '10.3'}}
 
 A new service has been added for performing CSV Exports. It is exposed via the Bulk Action Framework as an action (`csvExport`). It provides the ability to select schemas and/or XPath properties that should be exported, as well as a few of options, zip, sort and the language in which the vocabularies should be translated at export time. Since it relies on the Bulk Action Framework, it is robust enough to export asynchronously hundreds of thousands of lines without any difficulties.
