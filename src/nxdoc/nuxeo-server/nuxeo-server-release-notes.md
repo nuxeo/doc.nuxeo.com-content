@@ -55,7 +55,7 @@ Furthermore, the implementation now makes use of the Bulk Action Framework for m
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on [documentation]({{page page='trash-service'}}) and JIRA tickets [NXP-24850](https://jira.nuxeo.com/browse/NXP-24850) and [NXP-24035](https://jira.nuxeo.com/browse/NXP-24035) and [NXP-25259](https://jira.nuxeo.com/browse/NXP-25259)
 
-### ecm:isTrashed in the JSON {{since '10.2'}}
+#### ecm:isTrashed in the JSON {{since '10.2'}}
 `ecm:isTrashed` is now in the JSON representation of a Nuxeo Document
 
 <i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;More on [documentation]({{page page='nxql'}}#special-nxql-properties) and JIRA ticket [NXP-24741](https://jira.nuxeo.com/browse/NXP-24741)
