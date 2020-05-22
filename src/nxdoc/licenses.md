@@ -595,3 +595,13 @@ The licenses used are:
 | yarfraw-0.92.jar | [YARFRAW](http://yarfraw.sourceforge.net) | 0.92 | AL 2.0 |
 | zkclient-0.10.jar |   | 0.10 | AL 2.0 |
 | zookeeper-3.4.10.jar |   | 3.4.10 | AL 2.0 |
+
+{{#> callout type='info' heading='Update of external libraries'}}
+
+Some external libraries have been modified to fix bugs (The artifact names are different from the original counterparts). The Nuxeo JIRA project [VEND](https://jira.nuxeo.com/projects/VEND?filter=allissues) tracks all the bugs. The following repos / branches track our actual changes from upstream:
+- https://github.com/nuxeo/jboss-seam/tree/Nuxeo_2_3_1
+- https://github.com/nuxeo/sass-compiler/tree/0.9.12-NX
+- https://github.com/nuxeo/geronimo-txmanager/tree/2.2.1-NX
+- https://github.com/nuxeo/h2database/tree/feature-vend-7-xa-prepared-rollback
+ 
+{{/callout}}
